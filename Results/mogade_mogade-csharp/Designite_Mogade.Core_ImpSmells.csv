@@ -1,0 +1,28 @@
+Implementation smell,Namespace,Class,File,Method,Description
+Long Parameter List,Mogade,IDriver,C:\repos\mogade_mogade-csharp\Mogade.Core\IDriver.cs,GetLeaderboard,The method has 5 parameters.
+Long Parameter List,Mogade,IDriver,C:\repos\mogade_mogade-csharp\Mogade.Core\IDriver.cs,GetLeaderboardWithPlayerStats,The method has 7 parameters.
+Long Parameter List,Mogade,IDriver,C:\repos\mogade_mogade-csharp\Mogade.Core\IDriver.cs,GetLeaderboard,The method has 6 parameters.
+Long Parameter List,Mogade,IDriver,C:\repos\mogade_mogade-csharp\Mogade.Core\IDriver.cs,GetLeaderboard,The method has 5 parameters.
+Long Parameter List,Mogade,IDriver,C:\repos\mogade_mogade-csharp\Mogade.Core\IDriver.cs,GetRivals,The method has 5 parameters.
+Long Parameter List,Mogade,IDriver,C:\repos\mogade_mogade-csharp\Mogade.Core\IDriver.cs,GetRank,The method has 5 parameters.
+Long Parameter List,Mogade,IDriver,C:\repos\mogade_mogade-csharp\Mogade.Core\IDriver.cs,GetRanks,The method has 5 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,SaveScore,The method has 5 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetLeaderboard,The method has 5 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetLeaderboardWithPlayerStats,The method has 8 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetLeaderboard,The method has 6 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetLeaderboard,The method has 6 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetRivals,The method has 6 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetRank,The method has 6 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetRanks,The method has 6 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetRank,The method has 5 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,GetRanks,The method has 5 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,AchievementEarned,The method has 5 parameters.
+Long Parameter List,Mogade,Driver,C:\repos\mogade_mogade-csharp\Mogade.Core\Driver.cs,Rename,The method has 5 parameters.
+Magic Number,Mogade,Communicator,C:\repos\mogade_mogade-csharp\Mogade.Core\Components\Communicator.cs,SendPayload,The following statement contains a magic number: request.Timeout = 10000;  
+Magic Number,Mogade,Communicator,C:\repos\mogade_mogade-csharp\Mogade.Core\Components\Communicator.cs,SendPayload,The following statement contains a magic number: request.ReadWriteTimeout = 10000;  
+Magic Number,Mogade,Communicator,C:\repos\mogade_mogade-csharp\Mogade.Core\Components\Communicator.cs,GetSignature,The following statement contains a magic number: using (var hasher = new SHA1Managed ()) {  	var bytes = hasher.ComputeHash (Encoding.UTF8.GetBytes (sb.ToString ()));  	var data = new StringBuilder (bytes.Length * 2);  	for (var i = 0; i < bytes.Length; ++i) {  		data.Append (bytes [i].ToString ("x2"));  	}  	return data.ToString ();  }  
+Magic Number,Mogade,Communicator,C:\repos\mogade_mogade-csharp\Mogade.Core\Components\Communicator.cs,GetResponseBody,The following statement contains a magic number: using (var stream = response.GetResponseStream ()) {  	var sb = new StringBuilder ();  	int read;  	var bufferSize = response.ContentLength == -1 ? 2048 : (int)response.ContentLength;  	if (bufferSize == 0) {  		return null;  	}  	do {  		var buffer = new byte[2048];  		read = stream.Read (buffer' 0' buffer.Length);  		sb.Append (Encoding.UTF8.GetString (buffer' 0' read));  	}  	while (read > 0);  	return sb.ToString ();  }  
+Magic Number,Mogade,Communicator,C:\repos\mogade_mogade-csharp\Mogade.Core\Components\Communicator.cs,GetResponseBody,The following statement contains a magic number: using (var stream = response.GetResponseStream ()) {  	var sb = new StringBuilder ();  	int read;  	var bufferSize = response.ContentLength == -1 ? 2048 : (int)response.ContentLength;  	if (bufferSize == 0) {  		return null;  	}  	do {  		var buffer = new byte[2048];  		read = stream.Read (buffer' 0' buffer.Length);  		sb.Append (Encoding.UTF8.GetString (buffer' 0' read));  	}  	while (read > 0);  	return sb.ToString ();  }  
+Magic Number,Mogade,Communicator,C:\repos\mogade_mogade-csharp\Mogade.Core\Components\Communicator.cs,GetResponseBody,The following statement contains a magic number: do {  	var buffer = new byte[2048];  	read = stream.Read (buffer' 0' buffer.Length);  	sb.Append (Encoding.UTF8.GetString (buffer' 0' read));  }  while (read > 0);  
+Missing Default,Mogade,Highs,C:\repos\mogade_mogade-csharp\Mogade.Core\Models\Highs.cs,GetByScope,The following switch statement is missing a default case: switch (scope) {  case LeaderboardScope.Daily:  	return Daily;  case LeaderboardScope.Overall:  	return Overall;  case LeaderboardScope.Weekly:  	return Weekly;  }  
+Missing Default,Mogade,Ranks,C:\repos\mogade_mogade-csharp\Mogade.Core\Models\Ranks.cs,GetByScope,The following switch statement is missing a default case: switch (scope) {  case LeaderboardScope.Daily:  	return Daily;  case LeaderboardScope.Overall:  	return Overall;  case LeaderboardScope.Weekly:  	return Weekly;  case LeaderboardScope.Yesterday:  	return Yesterday;  }  

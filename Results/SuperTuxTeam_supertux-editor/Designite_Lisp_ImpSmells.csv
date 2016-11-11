@@ -1,0 +1,11 @@
+Implementation smell,Namespace,Class,File,Method,Description
+Complex Method,Lisp,Lexer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Lexer.cs,GetNextToken,Cyclomatic complexity of the method is 33
+Complex Method,Lisp,Parser,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Parser.cs,InternParse,Cyclomatic complexity of the method is 34
+Complex Conditional,Lisp,Lexer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Lexer.cs,GetNextToken,The conditional expression  "!Char.IsWhiteSpace (c) && c != '\"' && c != '(' && c != ')' && c != ';'"  is complex.
+Complex Conditional,Lisp,Lexer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Lexer.cs,GetNextToken,The conditional expression  "!Char.IsWhiteSpace (c) && c != '\"' && c != '(' && c != ')' && c != ';'"  is complex.
+Magic Number,Lisp,Lexer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Lexer.cs,Lexer,The following statement contains a magic number: buffer = new char[1025];  
+Magic Number,Lisp,Lexer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Lexer.cs,NextChar,The following statement contains a magic number: if (bufpos >= buflen) {  	buflen = stream.Read (buffer' 0' 1024);  	if (buflen <= 0)  		throw new EOFException ();  	bufpos = 0;  	// following hack appends an additional ' ' at the end of the file  	// to avoid problems when parsing symbols/elements and a sudden EOF:  	// This way we can avoid the need for an unget function.  	if (stream.Peek () < 0) {  		buffer [buflen] = ' ';  		++buflen;  	}  }  
+Magic Number,Lisp,Lexer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Lexer.cs,NextChar,The following statement contains a magic number: buflen = stream.Read (buffer' 0' 1024);  
+Magic Number,Lisp,Writer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Writer.cs,StartList,The following statement contains a magic number: IndentDepth += 2;  
+Magic Number,Lisp,Writer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Writer.cs,EndList,The following statement contains a magic number: IndentDepth -= 2;  
+Missing Default,Lisp,Lexer,C:\repos\SuperTuxTeam_supertux-editor\Lisp\Lexer.cs,GetNextToken,The following switch statement is missing a default case: switch (c) {  case 'n':  	c = '\n';  	break;  case 't':  	c = '\t';  	break;  }  
