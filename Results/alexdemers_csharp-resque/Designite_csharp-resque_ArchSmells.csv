@@ -1,0 +1,4 @@
+Architecture smell,Project,Namespace,Cause
+Cyclic Dependency,csharp-resque,Resque,The tool detected the smell in this component because this component participates in a cyclic dependency. The participating components in the cycle are: Resque' Resque.Jobs
+Unstable Dependency,csharp-resque,Resque,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): Resque.Failures' Resque.Jobs
+Feature Concentration,csharp-resque,Resque,The tool detected the smell in this component because the component realizes more than one architectural concern/feature. Independent sets of related classes within this component are: [Event' Job' Resque' Stat' Worker' Failure]' [ResqueException]' [NoQueueError]' [NoClassError]. LCC (Lack of Component Cohesion) = 0.44

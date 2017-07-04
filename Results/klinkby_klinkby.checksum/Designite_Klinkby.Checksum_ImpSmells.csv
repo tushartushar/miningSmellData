@@ -1,5 +1,0 @@
-Implementation smell,Namespace,Class,File,Method,Description
-Magic Number,Klinkby.Checkum,Crc32,C:\repos\klinkby_klinkby.checksum\Crc32.cs,ComputeChecksum,The following statement contains a magic number: for (int i = 0; i < bytes.Length; ++i) {  	byte index = (byte)(((crc) & 0xff) ^ bytes [i]);  	crc = (uint)((crc >> 8) ^ Table [index]);  }  
-Magic Number,Klinkby.Checkum,Crc32,C:\repos\klinkby_klinkby.checksum\Crc32.cs,ComputeChecksum,The following statement contains a magic number: crc = (uint)((crc >> 8) ^ Table [index]);  
-Magic Number,Klinkby.Checkum,Crc32,C:\repos\klinkby_klinkby.checksum\Crc32.cs,CreateTable,The following statement contains a magic number: for (uint i = 0; i < table.Length; ++i) {  	temp = i;  	for (int j = 8; j > 0; --j) {  		if ((temp & 1) == 1) {  			temp = (uint)((temp >> 1) ^ poly);  		}  		else {  			temp >>= 1;  		}  	}  	table [i] = temp;  }  
-Magic Number,Klinkby.Checkum,Crc32,C:\repos\klinkby_klinkby.checksum\Crc32.cs,CreateTable,The following statement contains a magic number: for (int j = 8; j > 0; --j) {  	if ((temp & 1) == 1) {  		temp = (uint)((temp >> 1) ^ poly);  	}  	else {  		temp >>= 1;  	}  }  

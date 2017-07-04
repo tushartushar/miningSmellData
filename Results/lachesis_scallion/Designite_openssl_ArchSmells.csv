@@ -1,0 +1,4 @@
+Architecture smell,Project,Namespace,Cause
+Cyclic Dependency,openssl,OpenSSL.Core,The tool detected the smell in this component because this component participates in a cyclic dependency. The participating components in the cycle are: OpenSSL.Core' OpenSSL.Crypto
+Unstable Dependency,openssl,OpenSSL.Core,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): OpenSSL.Crypto
+Feature Concentration,openssl,OpenSSL.Crypto.EC,The tool detected the smell in this component because the component realizes more than one architectural concern/feature. Independent sets of related classes within this component are: [BuiltinCurve]' [DSASignature' Key' Point' Group' Method]. LCC (Lack of Component Cohesion) = 0.33

@@ -1,16 +1,22 @@
 Implementation smell,Namespace,Class,File,Method,Description
-Long Parameter List,ClangSharp,Interop,C:\repos\SimonRichards_clang-sharp\Interop.cs,clang_getInstantiationLocation,The method has 5 parameters.
-Long Parameter List,ClangSharp,Interop,C:\repos\SimonRichards_clang-sharp\Interop.cs,clang_createTranslationUnitFromSourceFile,The method has 6 parameters.
-Long Parameter List,ClangSharp,Interop,C:\repos\SimonRichards_clang-sharp\Interop.cs,clang_parseTranslationUnit,The method has 7 parameters.
-Long Parameter List,ClangSharp,Interop,C:\repos\SimonRichards_clang-sharp\Interop.cs,clang_codeCompleteAt,The method has 7 parameters.
-Long Parameter List,ClangSharp,Index,C:\repos\SimonRichards_clang-sharp\Index.cs,CreateTranslationUnit,The method has 5 parameters.
-Long Parameter List,ClangSharp,Index,C:\repos\SimonRichards_clang-sharp\Index.cs,CreateTranslationUnit,The method has 5 parameters.
-Long Parameter List,ClangSharp,TranslationUnit,C:\repos\SimonRichards_clang-sharp\TranslationUnit.cs,VisitInclusions,The method has 5 parameters.
-Long Parameter List,ClangSharp,TranslationUnit,C:\repos\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The method has 5 parameters.
-Long Parameter List,ClangSharp,TranslationUnit,C:\repos\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The method has 6 parameters.
-Long Statement,ClangSharp,Cursor,C:\repos\SimonRichards_clang-sharp\Cursor.cs,VisitChildren,The length of the statement  "	Interop.clang_visitChildren (Native' (cursor' parent' data) => visitor (new Cursor (cursor)' new Cursor (parent))' IntPtr.Zero); " is 128.
-Long Statement,ClangSharp,Index,C:\repos\SimonRichards_clang-sharp\Index.cs,CreateTranslationUnit,The length of the statement  "	return new TranslationUnit (filename' Interop.clang_parseTranslationUnit (Native' filename' clangArgs' clangArgs.Length' unsavedFiles.Select (f => f.Native).ToArray ()' (uint)unsavedFiles.Length' options)); " is 206.
-Long Statement,ClangSharp,TranslationUnit,C:\repos\SimonRichards_clang-sharp\TranslationUnit.cs,Tokenize,The length of the statement  "			return tokens.Where (t => filter == TokenKind.All || Interop.clang_getTokenKind (t) == filter).Select (token => new Token (token' this)); " is 137.
-Long Statement,ClangSharp,TranslationUnit,C:\repos\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The length of the statement  "	var nativeCompletions = Interop.clang_codeCompleteAt (Native' Spelling' line' column' unsavedFiles.Select (file => file.Native).ToArray ()' (uint)unsavedFiles.Count' options); " is 175.
-Complex Conditional,ClangSharp,TranslationUnit,C:\repos\SimonRichards_clang-sharp\TranslationUnit.cs,TranslationUnit,The conditional expression  "(b == '\n' || b == '\r') && !(b == '\r' && i + 1 < _bytes.Length && _bytes [i + 1] == '\n')"  is complex.
-Magic Number,ClangSharp,Cursor,C:\repos\SimonRichards_clang-sharp\Cursor.cs,GetHashCode,The following statement contains a magic number: return (int)((long)Interop.clang_hashCursor (Native) - UInt32.MaxValue / 2);  
+Complex Method,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,TranslationUnit,Cyclomatic complexity of the method is 7
+Long Parameter List,ClangSharp,Interop,D:\newReposJune17\SimonRichards_clang-sharp\Interop.cs,clang_getLocation,The method has 4 parameters.
+Long Parameter List,ClangSharp,Interop,D:\newReposJune17\SimonRichards_clang-sharp\Interop.cs,clang_getInstantiationLocation,The method has 5 parameters.
+Long Parameter List,ClangSharp,Interop,D:\newReposJune17\SimonRichards_clang-sharp\Interop.cs,clang_createTranslationUnitFromSourceFile,The method has 6 parameters.
+Long Parameter List,ClangSharp,Interop,D:\newReposJune17\SimonRichards_clang-sharp\Interop.cs,clang_parseTranslationUnit,The method has 7 parameters.
+Long Parameter List,ClangSharp,Interop,D:\newReposJune17\SimonRichards_clang-sharp\Interop.cs,clang_tokenize,The method has 4 parameters.
+Long Parameter List,ClangSharp,Interop,D:\newReposJune17\SimonRichards_clang-sharp\Interop.cs,clang_annotateTokens,The method has 4 parameters.
+Long Parameter List,ClangSharp,Interop,D:\newReposJune17\SimonRichards_clang-sharp\Interop.cs,clang_codeCompleteAt,The method has 7 parameters.
+Long Parameter List,ClangSharp,Index,D:\newReposJune17\SimonRichards_clang-sharp\Index.cs,CreateTranslationUnit,The method has 4 parameters.
+Long Parameter List,ClangSharp,Index,D:\newReposJune17\SimonRichards_clang-sharp\Index.cs,CreateTranslationUnit,The method has 4 parameters.
+Long Parameter List,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The method has 4 parameters.
+Long Parameter List,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The method has 4 parameters.
+Long Parameter List,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The method has 5 parameters.
+Long Parameter List,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The method has 5 parameters.
+Long Parameter List,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,GetCharLocations,The method has 4 parameters.
+Long Statement,ClangSharp,Cursor,D:\newReposJune17\SimonRichards_clang-sharp\Cursor.cs,VisitChildren,The length of the statement  "	Interop.clang_visitChildren (Native' (cursor' parent' data) => visitor (new Cursor (cursor)' new Cursor (parent))' IntPtr.Zero); " is 128.
+Long Statement,ClangSharp,Index,D:\newReposJune17\SimonRichards_clang-sharp\Index.cs,CreateTranslationUnit,The length of the statement  "	return new TranslationUnit (filename' Interop.clang_parseTranslationUnit (Native' filename' clangArgs' clangArgs.Length' unsavedFiles.Select (f => f.Native).ToArray ()' (uint)unsavedFiles.Length' options)); " is 206.
+Long Statement,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,Tokenize,The length of the statement  "			return tokens.Where (t => filter == TokenKind.All || Interop.clang_getTokenKind (t) == filter).Select (token => new Token (token' this)); " is 137.
+Long Statement,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,CodeCompleteAt,The length of the statement  "	var nativeCompletions = Interop.clang_codeCompleteAt (Native' Spelling' line' column' unsavedFiles.Select (file => file.Native).ToArray ()' (uint)unsavedFiles.Count' options); " is 175.
+Complex Conditional,ClangSharp,TranslationUnit,D:\newReposJune17\SimonRichards_clang-sharp\TranslationUnit.cs,TranslationUnit,The conditional expression  "(b == '\n' || b == '\r') && !(b == '\r' && i + 1 < _bytes.Length && _bytes [i + 1] == '\n')"  is complex.
+Magic Number,ClangSharp,Cursor,D:\newReposJune17\SimonRichards_clang-sharp\Cursor.cs,GetHashCode,The following statement contains a magic number: return (int)((long)Interop.clang_hashCursor (Native) - UInt32.MaxValue / 2);  
