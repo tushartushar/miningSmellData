@@ -1,25 +1,26 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AutoRefresh,1,2,0,0,1,50,5,0,1,0,2,0
-FollowRedirects,0,2,0,0,1,20,3,0,1,-1,2,0
-IRequestFeature,0,1,0,0,0,4,1,2,0,-1,2,5
-IResponseFeature,0,1,0,0,0,4,1,2,0,-1,2,5
-RetryWhenUnavailable,0,2,0,0,1,14,3,0,1,-1,3,0
-DefaultRequestDispatcher,0,7,0,0,1,64,13,0,1,-1,3,0
-AsynchHelper,1,2,0,0,2,35,4,0,0,1,0,1
-AsynchRequest,2,4,0,0,2,32,5,0,0,0.5,2,0
-IRequestDispatcher,0,1,0,0,0,12,1,1,0,-1,1,4
-Request,2,4,1,0,4,27,4,0,0,0,5,6
-RequestChain,1,2,0,0,2,12,2,0,0,0,2,3
-RequestStack,3,5,0,0,5,27,5,0,1,0.4,6,1
-ResponseChain,2,3,1,0,3,23,3,0,0,0,3,4
-DynamicJsonResource,5,20,3,0,12,190,46,0,1,0,4,1
-DynamicXmlResource,1,13,5,0,8,123,22,0,1,0.46,4,1
-EmptyResource,0,5,2,0,5,32,5,0,1,-1,1,1
-IResource,0,4,2,0,0,37,4,3,0,-1,1,3
-Restfulie,0,6,1,0,3,33,7,0,0,-1,2,0
-EntryPointService,9,19,3,0,13,139,27,0,1,0.16,10,0
-HttpRemoteResponseFactory,0,3,0,0,1,32,4,0,0,-1,1,0
-HttpRemoteResponse,0,3,3,0,3,39,5,0,0,-1,0,13
-IRemoteResourceService,0,12,3,0,0,64,12,1,0,-1,3,8
-RestfulieHttpVerbDiscovery,5,3,0,0,2,36,4,0,0,0,0,1
-StringValueConverter,7,11,0,0,9,77,13,0,0,0,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RestfulieClient.features,AutoRefresh,1,2,0,0,1,44,6,0,1,0,5,1,RestfulieClient.features.Refresh' RestfulieClient.service.IRemoteResourceService' RestfulieClient.request.ResponseChain' RestfulieClient.request.IRequestDispatcher' RestfulieClient.service.HttpRemoteResponse,RestfulieClientTests.features.AutoRefreshTests
+RestfulieClient.features,Refresh,0,0,2,0,0,5,0,0,0,-1,0,1,,RestfulieClient.features.AutoRefresh
+RestfulieClient.features,FollowRedirects,0,2,0,0,1,20,4,0,1,-1,4,1,RestfulieClient.request.ResponseChain' RestfulieClient.service.HttpRemoteResponse' RestfulieClient.request.IRequestDispatcher' RestfulieClient.service.IRemoteResourceService,RestfulieClientTests.features.FollowRedirectsTests
+RestfulieClient.features,IRequestFeature,0,1,0,0,0,4,1,2,0,-1,2,7,RestfulieClient.request.RequestChain' RestfulieClient.request.Request,RestfulieClient.request.Request' RestfulieClient.request.RequestChain' RestfulieClient.request.RequestStack' RestfulieClient.resources.EntryPointService' RestfulieClient.service.IRemoteResourceService' RestfulieClientTests.EntryPointServiceTest' RestfulieClientTests.helpers.TestHelper
+RestfulieClient.features,IResponseFeature,0,1,0,0,0,4,1,2,0,-1,2,7,RestfulieClient.request.ResponseChain' RestfulieClient.service.HttpRemoteResponse,RestfulieClient.request.Request' RestfulieClient.request.RequestStack' RestfulieClient.request.ResponseChain' RestfulieClient.resources.EntryPointService' RestfulieClient.service.IRemoteResourceService' RestfulieClientTests.EntryPointServiceTest' RestfulieClientTests.helpers.TestHelper
+RestfulieClient.features,RetryWhenUnavailable,0,2,0,0,1,12,3,0,1,-1,3,0,RestfulieClient.service.HttpRemoteResponse' RestfulieClient.request.RequestChain' RestfulieClient.request.Request,
+RestfulieClient.http,DefaultRequestDispatcher,0,7,0,0,1,70,12,0,1,-1,3,0,RestfulieClient.request.AsynchHelper' RestfulieClient.service.HttpRemoteResponse' RestfulieClient.service.IRemoteResourceService,
+RestfulieClient.request,AsynchHelper,1,2,0,0,2,34,5,0,0,0,0,1,,RestfulieClient.http.DefaultRequestDispatcher
+RestfulieClient.request,AsynchRequest,2,4,0,0,2,25,5,0,0,0.5,2,1,RestfulieClient.request.Request' RestfulieClient.service.HttpRemoteResponse,RestfulieClient.resources.EntryPointService
+RestfulieClient.request,IRequestDispatcher,0,1,0,0,0,12,1,2,0,-1,1,10,RestfulieClient.service.IRemoteResourceService,RestfulieClient.features.AutoRefresh' RestfulieClient.features.FollowRedirects' RestfulieClient.request.Request' RestfulieClient.request.RequestStack' RestfulieClient.resources.Restfulie' RestfulieClient.resources.EntryPointService' RestfulieClientTests.EntryPointServiceTest' RestfulieClientTests.features.AutoRefreshTests' RestfulieClientTests.features.FollowRedirectsTests' RestfulieClientTests.helpers.TestHelper
+RestfulieClient.request,Request,2,4,1,0,4,21,4,0,0,0,6,6,RestfulieClient.request.IRequestDispatcher' RestfulieClient.request.RequestStack' RestfulieClient.service.IRemoteResourceService' RestfulieClient.features.IRequestFeature' RestfulieClient.features.IResponseFeature' RestfulieClient.service.HttpRemoteResponse,RestfulieClient.features.IRequestFeature' RestfulieClient.features.RetryWhenUnavailable' RestfulieClient.request.AsynchRequest' RestfulieClient.request.RequestChain' RestfulieClient.request.RequestStack' RestfulieClient.resources.EntryPointService
+RestfulieClient.request,RequestChain,1,2,0,0,2,10,2,0,0,0,3,4,RestfulieClient.features.IRequestFeature' RestfulieClient.service.HttpRemoteResponse' RestfulieClient.request.Request,RestfulieClient.features.IRequestFeature' RestfulieClient.features.RetryWhenUnavailable' RestfulieClient.request.RequestStack' RestfulieClientTests.helpers.TestHelper
+RestfulieClient.request,RequestStack,3,5,0,0,5,23,5,0,1,0.4,8,1,RestfulieClient.service.IRemoteResourceService' RestfulieClient.features.IRequestFeature' RestfulieClient.features.IResponseFeature' RestfulieClient.request.RequestChain' RestfulieClient.service.HttpRemoteResponse' RestfulieClient.request.Request' RestfulieClient.request.ResponseChain' RestfulieClient.request.IRequestDispatcher,RestfulieClient.request.Request
+RestfulieClient.request,ResponseChain,2,3,1,0,3,18,3,0,0,0,3,7,RestfulieClient.service.IRemoteResourceService' RestfulieClient.features.IResponseFeature' RestfulieClient.service.HttpRemoteResponse,RestfulieClient.features.AutoRefresh' RestfulieClient.features.FollowRedirects' RestfulieClient.features.IResponseFeature' RestfulieClient.request.RequestStack' RestfulieClientTests.features.AutoRefreshTests' RestfulieClientTests.features.FollowRedirectsTests' RestfulieClientTests.helpers.TestHelper
+RestfulieClient.resources,DynamicJsonResource,5,20,3,0,12,174,43,0,1,0,4,3,RestfulieClient.service.StringValueConverter' RestfulieClient.service.IRemoteResourceService' RestfulieClient.service.HttpRemoteResponse' RestfulieClient.resources.IResource,RestfulieClient.resources.EntryPointService' RestfulieClientTests.DynamicJsonResourceTest' RestfulieClientTests.helpers.TestHelper
+RestfulieClient.resources,DynamicXmlResource,1,13,5,0,8,121,21,0,1,0.46,4,3,RestfulieClient.service.StringValueConverter' RestfulieClient.service.HttpRemoteResponse' RestfulieClient.service.IRemoteResourceService' RestfulieClient.resources.IResource,RestfulieClient.resources.EntryPointService' RestfulieClientTests.DynamicXmlResourceTest' RestfulieClientTests.helpers.TestHelper
+RestfulieClient.resources,EmptyResource,0,5,2,0,5,20,5,0,1,-1,1,2,RestfulieClient.service.HttpRemoteResponse,RestfulieClient.resources.EntryPointService' RestfulieClientTests.EntryPointServiceTest
+RestfulieClient.resources,IResource,0,4,2,0,0,33,4,3,0,-1,0,4,,RestfulieClient.resources.DynamicJsonResource' RestfulieClient.resources.DynamicXmlResource' RestfulieClient.resources.EntryPointService' RestfulieClientTests.EntryPointServiceTest
+RestfulieClient.resources,Restfulie,0,6,1,0,3,29,7,0,0,-1,2,0,RestfulieClient.service.IRemoteResourceService' RestfulieClient.request.IRequestDispatcher,
+RestfulieClient.resources,EntryPointService,9,19,3,0,13,118,29,0,1,0.16,12,1,RestfulieClient.request.IRequestDispatcher' RestfulieClient.service.RestfulieHttpVerbDiscovery' RestfulieClient.resources.DynamicXmlResource' RestfulieClient.resources.DynamicJsonResource' RestfulieClient.service.HttpRemoteResponse' RestfulieClient.resources.IResource' RestfulieClient.resources.EmptyResource' RestfulieClient.request.Request' RestfulieClient.request.AsynchRequest' RestfulieClient.service.IRemoteResourceService' RestfulieClient.features.IRequestFeature' RestfulieClient.features.IResponseFeature,RestfulieClientTests.EntryPointServiceTest
+RestfulieClient.service,HttpRemoteResponseFactory,0,3,0,0,1,35,4,0,0,-1,1,0,RestfulieClient.service.HttpRemoteResponse,
+RestfulieClient.service,HttpRemoteResponse,0,3,3,0,3,32,5,0,0,-1,0,20,,RestfulieClient.features.AutoRefresh' RestfulieClient.features.FollowRedirects' RestfulieClient.features.IResponseFeature' RestfulieClient.features.RetryWhenUnavailable' RestfulieClient.http.DefaultRequestDispatcher' RestfulieClient.request.AsynchRequest' RestfulieClient.request.Request' RestfulieClient.request.RequestChain' RestfulieClient.request.RequestStack' RestfulieClient.request.ResponseChain' RestfulieClient.resources.DynamicJsonResource' RestfulieClient.resources.DynamicXmlResource' RestfulieClient.resources.EmptyResource' RestfulieClient.resources.EntryPointService' RestfulieClient.service.HttpRemoteResponseFactory' RestfulieClientTests.EntryPointServiceTest' RestfulieClientTests.features.AutoRefreshTests' RestfulieClientTests.features.FollowRedirectsTests' RestfulieClientTests.helpers.TestHelper' RestfulieClientTests.helpers.EmbeddedFileRequestDispatcher
+RestfulieClient.service,IRemoteResourceService,0,12,3,0,0,60,12,1,0,-1,2,16,RestfulieClient.features.IRequestFeature' RestfulieClient.features.IResponseFeature,RestfulieClient.features.AutoRefresh' RestfulieClient.features.FollowRedirects' RestfulieClient.http.DefaultRequestDispatcher' RestfulieClient.request.IRequestDispatcher' RestfulieClient.request.Request' RestfulieClient.request.RequestStack' RestfulieClient.request.ResponseChain' RestfulieClient.resources.DynamicJsonResource' RestfulieClient.resources.DynamicXmlResource' RestfulieClient.resources.Restfulie' RestfulieClient.resources.EntryPointService' RestfulieClientTests.EntryPointServiceTest' RestfulieClientTests.features.AutoRefreshTests' RestfulieClientTests.features.FollowRedirectsTests' RestfulieClientTests.helpers.TestHelper' RestfulieClientTests.helpers.EmbeddedFileRequestDispatcher
+RestfulieClient.service,RestfulieHttpVerbDiscovery,5,3,0,0,2,38,4,0,0,0,0,2,,RestfulieClient.resources.EntryPointService' RestfulieClientTests.RestfulieHttpVerbDiscoveryTest
+RestfulieClient.service,StringValueConverter,7,11,0,0,9,76,14,0,0,0,0,3,,RestfulieClient.resources.DynamicJsonResource' RestfulieClient.resources.DynamicXmlResource' RestfulieClientTests.StringValueConverterTest

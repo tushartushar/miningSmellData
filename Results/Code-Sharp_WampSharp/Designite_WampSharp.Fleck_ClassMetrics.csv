@@ -1,10 +1,10 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-FleckTransportDetails,2,1,5,0,1,42,1,0,1,0,0,1
-FleckAuthenticatedWebSocketTransport,0,2,0,0,2,9,2,0,1,-1,1,0
-FleckCookieProvider,0,2,0,0,1,14,3,0,1,-1,0,0
-FleckPinger,1,3,1,0,3,29,3,0,1,0,0,0
-FleckWampBinaryConnection,1,3,0,0,1,19,3,0,1,0,3,1
-FleckWampConnection,3,5,2,0,1,44,6,2,1,0.6,4,1
-FleckWampConnectionListener,7,6,0,0,3,60,8,0,1,0.33,4,0
-FleckWampTextConnection,1,3,0,0,1,19,3,0,2,0,2,1
-FleckWebSocketTransport,1,12,0,0,4,107,21,1,1,0.75,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WampSharp.Fleck,FleckTransportDetails,2,1,5,0,1,54,1,0,1,0,0,1,,WampSharp.Fleck.FleckWampConnection<TMessage>
+WampSharp.Fleck,FleckAuthenticatedWebSocketTransport,0,2,0,0,2,18,2,0,1,-1,1,0,WampSharp.V2.Authentication.ICookieAuthenticatorFactory,
+WampSharp.Fleck,FleckCookieProvider,0,2,0,0,1,16,3,0,1,-1,0,0,,
+WampSharp.Fleck,FleckPinger,1,3,1,0,3,34,3,0,1,0,0,0,,
+WampSharp.Fleck,FleckWampBinaryConnection<TMessage>,1,3,0,0,1,23,3,0,0,0,2,0,WampSharp.V2.Binding.IWampBinaryBinding' WampSharp.V2.Authentication.ICookieAuthenticatorFactory,
+WampSharp.Fleck,FleckWampConnection<TMessage>,3,5,2,0,1,57,6,0,1,0.6,3,0,WampSharp.V2.Transports.PingPongHandler' WampSharp.Fleck.FleckTransportDetails' WampSharp.V2.Authentication.ICookieAuthenticatorFactory,
+WampSharp.Fleck,FleckWampConnectionListener<TMessage>,7,6,0,0,3,75,8,0,1,0.33,1,0,WampSharp.V2.Binding.IWampTextBinding,
+WampSharp.Fleck,FleckWampTextConnection<TMessage>,1,3,0,0,1,23,3,0,0,0,2,0,WampSharp.V2.Binding.IWampTextBinding' WampSharp.V2.Authentication.ICookieAuthenticatorFactory,
+WampSharp.Fleck,FleckWebSocketTransport,1,12,0,0,4,121,15,1,0,0.75,5,0,WampSharp.V2.Authentication.ICookieAuthenticatorFactory' WampSharp.Logging.ILog' WampSharp.Core.Listener.IWampConnection' WampSharp.V2.Binding.IWampBinaryBinding' WampSharp.V2.Binding.IWampTextBinding,

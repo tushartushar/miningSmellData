@@ -1,11 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AboutCommand,0,2,0,0,1,21,4,0,1,-1,0,1
-BaseHttpHandler,2,5,1,0,2,36,6,1,0,0.6,1,0
-CommandHandler,1,3,0,0,2,16,3,7,0,1,0,1
-SitecoreShipHttpHandler,1,2,0,0,2,26,2,0,1,0,8,0
-UnhandledCommand,0,1,0,0,1,7,1,0,1,-1,0,1
-InstallPackageCommand,2,5,0,0,3,42,8,0,1,0.4,4,1
-InstallUploadPackageCommand,3,5,0,0,3,57,9,0,1,0.4,7,1
-LatestVersionCommand,1,4,0,0,3,35,8,0,1,0.5,2,1
-InvokePublishingCommand,1,6,0,0,3,72,14,0,1,0.33,3,1
-PublishingLastCompletedCommand,1,5,0,0,3,39,8,0,1,0.4,2,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Sitecore.Ship.AspNet,AboutCommand,0,2,0,0,1,24,3,0,1,-1,1,1,Sitecore.Ship.AspNet.CommandHandler,Sitecore.Ship.AspNet.SitecoreShipHttpHandler
+Sitecore.Ship.AspNet,BaseHttpHandler,2,5,1,0,2,42,6,2,0,0.6,1,1,Sitecore.Ship.Core.Contracts.IAuthoriser,Sitecore.Ship.AspNet.Test.CouplingTests
+Sitecore.Ship.AspNet,CommandHandler,1,3,0,0,2,16,3,7,0,1,0,8,,Sitecore.Ship.AspNet.AboutCommand' Sitecore.Ship.AspNet.SitecoreShipHttpHandler' Sitecore.Ship.AspNet.Package.InstallPackageCommand' Sitecore.Ship.AspNet.Package.InstallUploadPackageCommand' Sitecore.Ship.AspNet.Package.LatestVersionCommand' Sitecore.Ship.AspNet.Publish.InvokePublishingCommand' Sitecore.Ship.AspNet.Publish.PublishingLastCompletedCommand' Sitecore.Ship.AspNet.Test.AboutCommandBehaviour
+Sitecore.Ship.AspNet,SitecoreShipHttpHandler,1,2,0,0,2,26,2,0,1,0,7,0,Sitecore.Ship.AspNet.CommandHandler' Sitecore.Ship.AspNet.AboutCommand' Sitecore.Ship.AspNet.Package.InstallPackageCommand' Sitecore.Ship.AspNet.Package.InstallUploadPackageCommand' Sitecore.Ship.AspNet.Package.LatestVersionCommand' Sitecore.Ship.AspNet.Publish.InvokePublishingCommand' Sitecore.Ship.AspNet.Publish.PublishingLastCompletedCommand,
+Sitecore.Ship.AspNet,UnhandledCommand,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Sitecore.Ship.AspNet.Package,InstallPackageCommand,2,5,0,0,3,48,6,0,1,0.4,6,1,Sitecore.Ship.Core.Contracts.IPackageRepository' Sitecore.Ship.Core.Contracts.IInstallationRecorder' Sitecore.Ship.Core.Domain.InstallPackage' Sitecore.Ship.Core.Domain.PackageManifest' Sitecore.Ship.Infrastructure.Web.ShipServiceUrl' Sitecore.Ship.AspNet.CommandHandler,Sitecore.Ship.AspNet.SitecoreShipHttpHandler
+Sitecore.Ship.AspNet.Package,InstallUploadPackageCommand,3,5,0,0,3,69,7,0,1,0.4,8,1,Sitecore.Ship.Core.Contracts.IPackageRepository' Sitecore.Ship.Core.Contracts.ITempPackager' Sitecore.Ship.Core.Contracts.IInstallationRecorder' Sitecore.Ship.Core.Domain.InstallUploadPackage' Sitecore.Ship.Core.Domain.PackageManifest' Sitecore.Ship.Core.Domain.InstallPackage' Sitecore.Ship.Infrastructure.Web.ShipServiceUrl' Sitecore.Ship.AspNet.CommandHandler,Sitecore.Ship.AspNet.SitecoreShipHttpHandler
+Sitecore.Ship.AspNet.Package,LatestVersionCommand,1,4,0,0,3,43,6,0,1,0.5,5,1,Sitecore.Ship.Core.Contracts.IInstallationRecorder' Sitecore.Ship.Core.Domain.InstalledPackage' Sitecore.Ship.AspNet.CommandHandler' Sitecore.Ship.Core.Domain.InstalledPackageNotFound' Sitecore.Ship.Infrastructure.Web.ShipServiceUrl,Sitecore.Ship.AspNet.SitecoreShipHttpHandler
+Sitecore.Ship.AspNet.Publish,InvokePublishingCommand,1,6,0,0,3,80,9,0,1,0.33,3,1,Sitecore.Ship.Core.Contracts.IPublishService' Sitecore.Ship.Core.Domain.PublishParameters' Sitecore.Ship.AspNet.CommandHandler,Sitecore.Ship.AspNet.SitecoreShipHttpHandler
+Sitecore.Ship.AspNet.Publish,PublishingLastCompletedCommand,1,5,0,0,3,41,7,0,1,0.4,3,1,Sitecore.Ship.Core.Contracts.IPublishService' Sitecore.Ship.Core.Domain.PublishLastCompleted' Sitecore.Ship.AspNet.CommandHandler,Sitecore.Ship.AspNet.SitecoreShipHttpHandler

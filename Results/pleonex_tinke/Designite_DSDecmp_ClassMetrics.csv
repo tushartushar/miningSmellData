@@ -1,17 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CompressionControl,14,9,0,0,2,246,22,0,0,0.22,4,1
-InputTooLargeException,0,1,0,0,1,6,1,0,0,-1,0,0
-StreamTooShortException,0,1,0,0,1,10,1,0,0,-1,0,0
-TooMuchInputException,0,1,1,0,1,21,1,0,0,-1,0,0
-NotEnoughDataException,2,1,2,0,1,35,1,0,0,0,0,0
-Main,0,13,0,0,6,322,138,0,0,-1,3,6
-IOUtils,0,4,0,0,4,52,4,0,0,-1,0,6
-CompressionFormat,0,6,0,0,6,96,14,2,0,-1,0,1
-LZOvl,1,9,1,0,5,538,51,0,1,0.56,3,0
-Huffman,0,8,1,0,4,633,62,0,1,-1,2,1
-LZ10,1,5,1,0,3,334,31,0,1,0.4,3,0
-LZ11,1,5,1,0,3,437,40,0,1,0.4,3,0
-NitroCFormat,3,2,0,2,2,49,3,4,1,0,1,0
-RLE,0,3,0,0,3,195,40,0,2,-1,2,0
-LZUtil,0,1,0,0,0,42,5,0,0,-1,0,3
-SimpleReversedPrioQueue,2,4,1,0,4,60,10,0,0,0,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DSDecmp,CompressionControl,14,9,0,0,2,255,12,0,0,0.22,8,0,Ekona.IPluginHost' Ekona.FormatCompress' DSDecmp.Main' DSDecmp.Formats.LZOvl' DSDecmp.Formats.Nitro.LZ10' DSDecmp.Formats.Nitro.LZ11' Ekona.sFile' Ekona.sFolder,
+DSDecmp,InputTooLargeException,0,1,0,0,1,5,1,0,0,-1,0,1,,DSDecmp.Main
+DSDecmp,StreamTooShortException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+DSDecmp,TooMuchInputException,0,1,1,0,1,19,1,0,0,-1,0,1,,DSDecmp.Main
+DSDecmp,NotEnoughDataException,2,1,2,0,1,25,1,0,0,0,0,0,,
+DSDecmp,Main,0,13,0,0,6,312,39,0,0,-1,6,8,DSDecmp.Formats.CompressionFormat' Ekona.FormatCompress' DSDecmp.Formats.Nitro.Huffman' DSDecmp.Formats.Nitro.BlockSize' DSDecmp.InputTooLargeException' DSDecmp.TooMuchInputException,DSDecmp.CompressionControl' DSDecmp.Formats.LZOvl' DSDecmp.Formats.Nitro.Huffman' DSDecmp.Formats.Nitro.LZ10' DSDecmp.Formats.Nitro.LZ11' DSDecmp.Formats.Nitro.RLE' Tinke.Acciones' Tinke.PluginHost
+DSDecmp,IOUtils,0,4,0,0,4,57,4,0,0,-1,0,6,,DSDecmp.Formats.LZOvl' DSDecmp.Formats.Nitro.Huffman' DSDecmp.Formats.Nitro.LZ10' DSDecmp.Formats.Nitro.LZ11' DSDecmp.Formats.Nitro.NitroCFormat' DSDecmp.Formats.Nitro.RLE
+DSDecmp.Formats,CompressionFormat,0,6,0,0,6,98,8,2,0,-1,0,1,,DSDecmp.Main
+DSDecmp.Formats,LZOvl,1,9,1,0,5,579,41,0,1,0.33,3,1,DSDecmp.IOUtils' DSDecmp.Main' DSDecmp.Utils.LZUtil,DSDecmp.CompressionControl
+DSDecmp.Formats.Nitro,Huffman,0,8,1,0,4,641,52,0,1,-1,5,1,DSDecmp.Formats.Nitro.BlockSize' DSDecmp.Formats.Nitro.NitroCFormat' DSDecmp.Formats.Nitro.HuffTreeNode' DSDecmp.Main' DSDecmp.IOUtils,DSDecmp.Main
+DSDecmp.Formats.Nitro,BlockSize,0,0,0,0,0,1,0,0,0,-1,0,2,,DSDecmp.Main' DSDecmp.Formats.Nitro.Huffman
+DSDecmp.Formats.Nitro,HuffTreeNode,6,3,8,0,3,165,8,0,0,0,0,1,,DSDecmp.Formats.Nitro.Huffman
+DSDecmp.Formats.Nitro,LZ10,1,5,1,0,3,364,29,0,1,0.4,4,1,DSDecmp.Formats.Nitro.NitroCFormat' DSDecmp.Main' DSDecmp.IOUtils' DSDecmp.Utils.LZUtil,DSDecmp.CompressionControl
+DSDecmp.Formats.Nitro,LZ11,1,5,1,0,3,471,32,0,1,0.4,4,1,DSDecmp.Formats.Nitro.NitroCFormat' DSDecmp.Main' DSDecmp.IOUtils' DSDecmp.Utils.LZUtil,DSDecmp.CompressionControl
+DSDecmp.Formats.Nitro,NitroCFormat,3,2,0,2,2,49,5,4,1,0,1,4,DSDecmp.IOUtils,DSDecmp.Formats.Nitro.Huffman' DSDecmp.Formats.Nitro.LZ10' DSDecmp.Formats.Nitro.LZ11' DSDecmp.Formats.Nitro.RLE
+DSDecmp.Formats.Nitro,RLE,0,3,0,0,3,208,34,0,2,-1,3,0,DSDecmp.Formats.Nitro.NitroCFormat' DSDecmp.Main' DSDecmp.IOUtils,
+DSDecmp.Utils,LZUtil,0,1,0,0,0,45,6,0,0,-1,0,3,,DSDecmp.Formats.LZOvl' DSDecmp.Formats.Nitro.LZ10' DSDecmp.Formats.Nitro.LZ11
+DSDecmp.Utils,SimpleReversedPrioQueue<TPrio;TValue>,2,4,1,0,4,51,10,0,0,0,0,0,,

@@ -1,27 +1,30 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AuthenticationType,0,0,0,0,0,5,0,0,0,-1,0,1
-Asana,2,11,4,0,1,216,28,0,0,0.18,10,4
-SerializationFlags,0,0,0,0,0,7,0,0,0,-1,0,2
-AsanaDataAttribute,0,2,3,0,2,25,2,0,0,-1,1,9
-AsanaDateTime,0,6,1,0,6,83,8,0,0,-1,0,1
-AsanaDateTimeConverter,1,4,0,0,4,27,6,0,0,0.5,1,0
-AsanaFunction,2,3,2,0,3,26,3,0,0,1,1,4
-AsanaFunctionAssociation,0,1,3,0,1,21,1,0,0,-1,1,2
-IAsanaData,0,0,1,0,0,10,0,7,0,-1,0,1
-AsanaObject,1,10,2,0,4,107,16,7,0,0.9,2,3
-IAsanaObjectCollection,0,0,0,0,0,3,0,1,0,-1,0,1
-AsanaObjectCollection,0,0,0,0,0,4,0,0,1,-1,0,1
-IAsanaObjectCollectionExtensions,0,1,0,0,1,13,3,0,0,-1,1,0
-AsanaObjectExtensions,0,6,0,0,6,33,9,0,0,-1,3,0
-AsanaRequest,5,4,0,0,2,78,5,0,0,0,0,1
-AsanaProject,0,6,10,0,5,105,6,0,1,-1,3,1
-AsanaStory,0,4,7,0,3,58,4,0,1,-1,2,0
-AsanaTag,0,3,6,0,2,52,3,0,1,-1,2,1
-AssigneeStatus,0,0,0,0,0,11,0,0,0,-1,0,0
-AsanaTask,0,12,14,0,11,192,16,0,1,-1,6,1
-AsanaUser,0,1,4,0,1,29,1,0,1,-1,1,0
-AsanaWorkspace,0,2,3,0,2,35,2,0,1,-1,1,3
-AsanaTeam,0,1,2,0,1,23,1,0,1,-1,1,1
-Parsing,0,8,0,0,1,206,41,0,0,-1,4,1
-PropertyFormatProvider,0,3,0,0,2,30,4,0,0,-1,0,1
-Json,0,2,0,0,2,414,3,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AsanaNet,AuthenticationType,0,0,0,0,0,5,0,0,0,-1,0,1,,AsanaNet.Asana
+AsanaNet,Asana,2,11,4,0,1,205,24,0,0,0.18,9,5,AsanaNet.AuthenticationType' AsanaNet.AsanaFunction' AsanaNet.AsanaRequest' MiniJSON.Json' AsanaNet.AsanaObjectCollection' AsanaNet.AsanaObject' AsanaNet.Parsing' AsanaNet.IAsanaData' AsanaNet.AsanaFunctionAssociation,AsanaNet.AsanaObjectExtensions' AsanaNet.AsanaProject' AsanaNet.AsanaTask' AsanaNet.AsanaWorkspace' AsanaNet.Parsing
+AsanaNet,SerializationFlags,0,0,0,0,0,7,0,0,0,-1,0,2,,AsanaNet.AsanaDataAttribute' AsanaNet.Parsing
+AsanaNet,AsanaDataAttribute,0,2,3,0,2,17,2,0,0,-1,1,1,AsanaNet.SerializationFlags,AsanaNet.Parsing
+AsanaNet,AsanaDateTime,0,6,1,0,6,91,8,0,0,-1,0,1,,AsanaNet.AsanaDateTimeConverter
+AsanaNet,AsanaDateTimeConverter,1,4,0,0,4,29,6,0,0,0.5,1,0,AsanaNet.AsanaDateTime,
+AsanaNet,AsanaFunction,2,3,2,0,3,20,3,0,0,1,1,4,AsanaNet.AsanaFunctionAssociation,AsanaNet.Asana' AsanaNet.AsanaFunctionAssociation' AsanaNet.AsanaObjectExtensions' AsanaNet.AsanaTask
+AsanaNet,AsanaFunctionAssociation,0,1,3,0,1,12,1,0,0,-1,1,2,AsanaNet.AsanaFunction,AsanaNet.Asana' AsanaNet.AsanaFunction
+AsanaNet,IAsanaData,0,0,1,0,0,5,0,7,0,-1,0,1,,AsanaNet.Asana
+AsanaNet,AsanaObject,1,10,2,0,4,109,15,7,0,0.8,0,3,,AsanaNet.Asana' AsanaNet.AsanaObjectExtensions' AsanaNet.Parsing
+AsanaNet,IAsanaObjectCollection,0,0,0,0,0,3,0,1,0,-1,0,1,,AsanaNet.IAsanaObjectCollectionExtensions
+AsanaNet,AsanaObjectCollection,0,0,0,0,0,4,0,0,1,-1,0,1,,AsanaNet.Asana
+AsanaNet,IAsanaObjectCollectionExtensions,0,1,0,0,1,14,3,0,0,-1,1,0,AsanaNet.IAsanaObjectCollection,
+AsanaNet,AsanaObjectExtensions,0,6,0,0,6,33,9,0,0,-1,3,0,AsanaNet.Asana' AsanaNet.AsanaObject' AsanaNet.AsanaFunction,
+AsanaNet,AsanaRequest,5,4,0,0,2,86,5,0,0,0,0,1,,AsanaNet.Asana
+AsanaNet,AsanaProject,0,6,10,0,5,66,6,0,1,-1,3,1,AsanaNet.AsanaWorkspace' AsanaNet.AsanaTeam' AsanaNet.Asana,AsanaNet.AsanaTask
+AsanaNet,AsanaStory,0,4,7,0,3,36,4,0,1,-1,1,0,AsanaNet.AsanaTask,
+AsanaNet,AsanaTag,0,3,6,0,2,34,3,0,1,-1,1,1,AsanaNet.AsanaWorkspace,AsanaNet.AsanaTask
+AsanaNet,AssigneeStatus,0,0,0,0,0,7,0,0,0,-1,0,0,,
+AsanaNet,AsanaTask,0,12,14,0,11,156,16,0,1,-1,5,1,AsanaNet.AsanaWorkspace' AsanaNet.AsanaProject' AsanaNet.Asana' AsanaNet.AsanaFunction' AsanaNet.AsanaTag,AsanaNet.AsanaStory
+AsanaNet,AsanaUser,0,1,4,0,1,16,1,0,1,-1,0,0,,
+AsanaNet,AsanaWorkspace,0,2,3,0,2,26,2,0,1,-1,1,3,AsanaNet.Asana,AsanaNet.AsanaProject' AsanaNet.AsanaTag' AsanaNet.AsanaTask
+AsanaNet,AsanaTeam,0,1,2,0,1,16,1,0,1,-1,0,1,,AsanaNet.AsanaProject
+AsanaNet,Parsing,0,8,0,0,1,231,30,0,0,-1,4,1,AsanaNet.Asana' AsanaNet.AsanaObject' AsanaNet.AsanaDataAttribute' AsanaNet.SerializationFlags,AsanaNet.Asana
+AsanaNet,PropertyFormatProvider,0,3,0,0,2,29,7,0,0,-1,0,0,,
+MiniJSON,Json,0,2,0,0,2,473,3,0,0,-1,2,1,MiniJSON.Parser' MiniJSON.Serializer,AsanaNet.Asana
+MiniJSON,Parser,3,10,4,0,2,302,21,0,0,0,1,1,MiniJSON.TOKEN,MiniJSON.Json
+MiniJSON,TOKEN,0,0,0,0,0,15,0,0,0,-1,0,1,,MiniJSON.Parser
+MiniJSON,Serializer,1,7,0,0,1,145,15,0,0,0,0,1,,MiniJSON.Json

@@ -1,19 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MongoConfiguration,1,5,1,1,2,92,13,0,0,1,0,4
-MongoDataServiceBase,5,6,0,0,4,54,6,2,1,0.5,2,0
-MongoDSPUpdateProvider,3,9,0,0,6,118,19,0,1,0.33,5,0
-MongoMetadataCache,0,12,3,0,12,65,12,0,0,-1,1,1
-MongoContext,4,5,1,0,4,46,6,0,0,0.4,0,4
-MongoDSPConverter,1,7,0,0,2,144,37,0,0,0.29,2,3
-CollectionProperty,0,2,2,0,2,23,3,0,0,-1,0,1
-MongoMetadata,14,30,3,7,7,335,75,0,0,0.07,4,9
-ExpressionUtils,1,15,0,1,13,191,35,0,0,0.53,1,4
-MongoDSPResourceQueryProvider,0,3,0,0,3,22,5,0,1,-1,1,0
-ProjectionExpressionVisitor,0,2,0,0,2,25,5,0,2,-1,2,1
-ResultExpressionVisitor,0,1,0,0,1,12,3,0,2,-1,2,1
-MongoQueryableDataService,0,6,0,0,2,50,8,1,2,-1,7,0
-MongoQueryableResource,3,4,3,0,3,40,4,0,0,0,3,2
-MongoQueryProvider,5,15,0,0,7,128,21,0,0,0.4,7,1
-QueryExpressionVisitor,3,17,0,0,8,186,39,0,2,0.24,2,0
-DocumentTypeBuilder,2,4,0,0,1,73,7,0,0,0,1,1
-MongoInMemoryDataService,0,4,0,0,2,36,10,0,2,-1,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mongo.Context,MongoConfiguration,1,5,1,1,2,84,13,0,0,0.8,2,4,Mongo.Context.Metadata' Mongo.Context.FetchPosition,Mongo.Context.MongoDataServiceBase<T;Q>' Mongo.Context.MongoMetadata' Mongo.Context.Queryable.MongoQueryableDataService' Mongo.Context.InMemory.MongoInMemoryDataService
+Mongo.Context,FetchPosition,0,0,0,0,0,5,0,0,0,-1,0,2,,Mongo.Context.MongoConfiguration' Mongo.Context.MongoMetadata
+Mongo.Context,Metadata,0,0,5,0,0,20,0,0,0,-1,0,4,,Mongo.Context.MongoConfiguration' Mongo.Context.MongoMetadata' Mongo.Context.Queryable.MongoQueryProvider' Mongo.Context.InMemory.MongoInMemoryDataService
+Mongo.Context,MongoDataServiceBase<T;Q>,5,6,0,0,4,59,6,0,0,0.5,4,0,Mongo.Context.MongoConfiguration' Mongo.Context.MongoMetadata' Mongo.Context.RestoreDataContextDisposable' DataServiceProvider.DSPMetadata,
+Mongo.Context,RestoreDataContextDisposable,1,2,0,0,2,12,2,0,0,0,0,1,,Mongo.Context.MongoDataServiceBase<T;Q>
+Mongo.Context,MongoDSPUpdateProvider,3,9,0,0,6,115,16,0,1,0.33,7,0,Mongo.Context.MongoMetadata' DataServiceProvider.DSPContext' DataServiceProvider.DSPResource' DataServiceProvider.DSPUpdateProvider' Mongo.Context.ResourceChange' Mongo.Context.MongoContext' Mongo.Context.MongoDSPConverter,
+Mongo.Context,ResourceChange,0,1,4,0,1,14,1,0,0,-1,1,1,DataServiceProvider.DSPResource,Mongo.Context.MongoDSPUpdateProvider
+Mongo.Context,MongoMetadataCache,0,12,3,0,12,56,12,0,0,-1,1,1,DataServiceProvider.DSPMetadata,Mongo.Context.MongoMetadata
+Mongo.Context,MongoContext,4,5,1,0,4,47,8,0,0,0.4,0,5,,Mongo.Context.MongoDSPUpdateProvider' Mongo.Context.MongoMetadata' Mongo.Context.Queryable.MongoQueryProvider' Mongo.Context.InMemory.MongoInMemoryDataService' Mongo.DataService.Global
+Mongo.Context,MongoDSPConverter,1,7,0,0,2,187,32,0,0,0.57,2,3,DataServiceProvider.DSPResource' Mongo.Context.MongoMetadata,Mongo.Context.MongoDSPUpdateProvider' Mongo.Context.Queryable.MongoQueryProvider' Mongo.Context.InMemory.MongoInMemoryDataService
+Mongo.Context,CollectionProperty,0,2,2,0,2,18,3,0,0,-1,0,1,,Mongo.Context.MongoMetadata
+Mongo.Context,MongoMetadata,14,30,3,7,7,393,59,0,0,0.07,7,10,Mongo.Context.MongoMetadataCache' Mongo.Context.Metadata' Mongo.Context.MongoConfiguration' DataServiceProvider.DSPMetadata' Mongo.Context.MongoContext' Mongo.Context.CollectionProperty' Mongo.Context.FetchPosition,Mongo.Context.MongoDataServiceBase<T;Q>' Mongo.Context.MongoDSPUpdateProvider' Mongo.Context.MongoDSPConverter' Mongo.Context.Queryable.ExpressionUtils' Mongo.Context.Queryable.MongoQueryableDataService' Mongo.Context.Queryable.MongoQueryableResource' Mongo.Context.Queryable.MongoQueryProvider' Mongo.Context.Queryable.QueryExpressionVisitor' Mongo.Context.Queryable.DocumentTypeBuilder' Mongo.Context.InMemory.MongoInMemoryDataService
+Mongo.Context.Queryable,ExpressionUtils,1,15,0,1,13,197,36,0,0,0.53,1,4,Mongo.Context.MongoMetadata,Mongo.Context.Queryable.ProjectionExpressionVisitor' Mongo.Context.Queryable.ResultExpressionVisitor' Mongo.Context.Queryable.MongoQueryProvider' Mongo.Context.Queryable.QueryExpressionVisitor
+Mongo.Context.Queryable,MongoDSPResourceQueryProvider,0,3,0,0,3,28,5,0,1,-1,1,0,DataServiceProvider.DSPResource,
+Mongo.Context.Queryable,ProjectionExpressionVisitor,0,2,0,0,2,33,5,0,2,-1,3,1,DataServiceProvider.DSPMethodTranslatingVisitor' DataServiceProvider.DSPResource' Mongo.Context.Queryable.ExpressionUtils,Mongo.Context.Queryable.MongoQueryProvider
+Mongo.Context.Queryable,ResultExpressionVisitor,0,1,0,0,1,17,3,0,2,-1,3,0,Mongo.Context.Queryable.ExpressionUtils' DataServiceProvider.DSPMethodTranslatingVisitor' DataServiceProvider.DSPResource,
+Mongo.Context.Queryable,MongoQueryableDataService,0,6,0,0,2,67,8,1,0,-1,5,0,Mongo.Context.MongoConfiguration' DataServiceProvider.DSPQueryableContext' Mongo.Context.MongoMetadata' DataServiceProvider.InterceptingProvider' Mongo.Context.Queryable.DocumentTypeBuilder,
+Mongo.Context.Queryable,MongoQueryableResource,3,4,3,0,3,37,4,0,0,0,2,1,Mongo.Context.MongoMetadata' Mongo.Context.Queryable.MongoQueryProvider,Mongo.Context.Queryable.MongoQueryProvider
+Mongo.Context.Queryable,MongoQueryProvider,5,15,0,0,7,135,21,0,0,0.33,9,1,Mongo.Context.MongoContext' Mongo.Context.MongoMetadata' Mongo.Context.Queryable.ExpressionUtils' Mongo.Context.Queryable.MongoQueryableResource' Mongo.Context.Queryable.QueryExpressionVisitor' DataServiceProvider.DSPResource' Mongo.Context.MongoDSPConverter' Mongo.Context.Metadata' Mongo.Context.Queryable.ProjectionExpressionVisitor,Mongo.Context.Queryable.MongoQueryableResource
+Mongo.Context.Queryable,QueryExpressionVisitor,3,17,0,0,8,244,32,0,2,0.24,4,1,Mongo.Context.MongoMetadata' Mongo.Context.Queryable.ExpressionUtils' DataServiceProvider.DSPMethodTranslatingVisitor' DataServiceProvider.DSPResource,Mongo.Context.Queryable.MongoQueryProvider
+Mongo.Context.Queryable,DocumentTypeBuilder,2,4,0,0,1,89,7,0,0,0,1,1,Mongo.Context.MongoMetadata,Mongo.Context.Queryable.MongoQueryableDataService
+Mongo.Context.InMemory,MongoInMemoryDataService,0,4,0,0,2,42,8,0,0,-1,8,0,Mongo.Context.MongoConfiguration' DataServiceProvider.DSPInMemoryContext' DataServiceProvider.DSPResource' DataServiceProvider.DSPMetadata' Mongo.Context.MongoContext' Mongo.Context.MongoDSPConverter' Mongo.Context.Metadata' Mongo.Context.MongoMetadata,

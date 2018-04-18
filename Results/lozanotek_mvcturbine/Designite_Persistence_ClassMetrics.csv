@@ -1,10 +1,10 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IDatabaseResolver,0,0,1,0,0,12,0,1,0,-1,0,2
-IOkonauPersistence,0,3,1,0,0,27,3,1,0,-1,1,2
-IRepository,0,2,0,0,0,17,2,1,0,-1,0,1
-NHibernateSessionModule,0,7,1,0,5,62,8,0,0,-1,1,0
-OkonauPersistence,3,5,1,0,4,81,6,0,1,0.4,1,0
-GenericRepository,0,7,4,0,5,89,7,0,1,-1,1,0
-SqliteDatabase,0,0,1,0,0,13,0,0,1,-1,0,0
-TaskMapping,0,1,0,0,1,17,1,0,0,-1,0,0
-RepositoryRegistration,0,1,0,0,1,12,1,0,1,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Okonau.Persistence,IDatabaseResolver,0,0,1,0,0,6,0,1,0,-1,0,1,,Okonau.Persistence.OkonauPersistence
+Okonau.Persistence,IOkonauPersistence,0,3,1,0,0,22,3,1,0,-1,0,2,,Okonau.Persistence.NHibernateSessionModule' Okonau.Persistence.GenericRepository<T>
+Okonau.Persistence,IRepository,0,2,0,0,0,12,2,1,0,-1,0,1,,Okonau.Mvc.Services.TaskService
+Okonau.Persistence,NHibernateSessionModule,0,7,1,0,5,48,8,0,0,-1,1,0,Okonau.Persistence.IOkonauPersistence,
+Okonau.Persistence,OkonauPersistence,3,5,1,0,4,79,6,0,1,0.4,1,0,Okonau.Persistence.IDatabaseResolver,
+Okonau.Persistence,GenericRepository<T>,0,7,4,0,5,68,7,0,1,-1,1,0,Okonau.Persistence.IOkonauPersistence,
+Okonau.Persistence,SqliteDatabase,0,0,1,0,0,9,0,0,1,-1,0,0,,
+Okonau.Persistence.Mappings,TaskMapping,0,1,0,0,1,15,1,0,0,-1,1,0,Okonau.Domain.Task,
+Okonau.Persistence.Registration,RepositoryRegistration,0,1,0,0,1,7,1,0,1,-1,1,0,MvcTurbine.ComponentModel.IServiceLocator,

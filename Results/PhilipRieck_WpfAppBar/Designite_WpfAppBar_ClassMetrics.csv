@@ -1,4 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ABEdge,0,0,0,0,0,8,0,0,0,-1,0,2
-AppBarFunctions,1,6,0,0,1,200,14,0,0,0.33,2,1
-Interop,0,3,0,0,0,73,3,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WpfAppBar,ABEdge,0,0,0,0,0,8,0,0,0,-1,0,2,,AppBarExample.MainWindow' WpfAppBar.AppBarFunctions
+WpfAppBar,AppBarFunctions,1,6,0,0,1,201,13,0,0,0.33,8,1,WpfAppBar.RegisterInfo' WpfAppBar.ABEdge' WpfAppBar.APPBARDATA' WpfAppBar.Interop' WpfAppBar.ABMsg' WpfAppBar.DWMNCRenderingPolicy' WpfAppBar.DWMWINDOWATTRIBUTE' WpfAppBar.RECT,AppBarExample.MainWindow
+WpfAppBar,RegisterInfo,0,1,11,0,1,28,3,0,0,-1,2,1,WpfAppBar.ABNotify' WpfAppBar.Interop,WpfAppBar.AppBarFunctions
+WpfAppBar,Interop,0,3,0,0,0,75,3,0,0,-1,1,2,WpfAppBar.APPBARDATA,WpfAppBar.AppBarFunctions' WpfAppBar.RegisterInfo
+WpfAppBar,RECT,4,0,0,4,0,8,0,0,0,-1,0,2,,WpfAppBar.AppBarFunctions' WpfAppBar.APPBARDATA
+WpfAppBar,APPBARDATA,6,0,0,6,0,10,0,0,0,-1,1,2,WpfAppBar.RECT,WpfAppBar.AppBarFunctions' WpfAppBar.Interop
+WpfAppBar,DWMWINDOWATTRIBUTE,0,0,0,0,0,17,0,0,0,-1,0,1,,WpfAppBar.AppBarFunctions
+WpfAppBar,DWMNCRenderingPolicy,0,0,0,0,0,8,0,0,0,-1,0,1,,WpfAppBar.AppBarFunctions
+WpfAppBar,ABMsg,0,0,0,0,0,14,0,0,0,-1,0,1,,WpfAppBar.AppBarFunctions
+WpfAppBar,ABNotify,0,0,0,0,0,7,0,0,0,-1,0,1,,WpfAppBar.RegisterInfo

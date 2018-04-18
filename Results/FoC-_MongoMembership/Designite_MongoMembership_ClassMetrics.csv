@@ -1,11 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IMongoGateway,0,25,0,0,0,28,25,1,0,-1,2,3
-MongoGateway,2,30,0,0,26,195,30,0,1,0,2,0
-MongoMembershipProvider,11,22,12,0,17,337,48,0,0,0,3,0
-MongoProfileProvider,1,13,2,0,11,162,44,0,0,0.15,3,0
-MongoRoleProvider,1,11,2,0,11,77,20,0,0,0.36,3,0
-Role,0,0,3,0,0,16,0,0,0,-1,0,3
-User,0,11,27,0,11,178,13,0,0,-1,0,4
-SecurityExtensions,0,2,0,0,2,11,2,0,0,-1,0,0
-StringExtensions,0,6,0,0,6,27,6,0,0,-1,0,0
-Util,0,2,0,0,2,18,2,0,0,-1,0,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MongoMembership.Mongo,IMongoGateway,0,25,0,0,0,28,25,1,0,-1,2,6,MongoMembership.User' MongoMembership.Role,MongoMembership.Providers.MongoMembershipProvider' MongoMembership.Providers.MongoProfileProvider' MongoMembership.Providers.MongoRoleProvider' MongoMembership.Tests.Mongo.IsRoleExists_when_called_and_search_with_lovercased_role_name' MongoMembership.Tests.Mongo.CreateUser_when_called' MongoMembership.Tests.Mongo.GetById_when_called
+MongoMembership.Mongo,MongoGateway,2,30,0,0,26,240,33,0,1,0,2,1,MongoMembership.User' MongoMembership.Role,MongoMembership.Tests.StubsBase
+MongoMembership.Providers,MongoMembershipProvider,11,22,12,0,17,327,51,0,0,0,3,5,MongoMembership.Mongo.IMongoGateway' MongoMembership.Utils.Util' MongoMembership.User,MongoMembership.Tests.Providers.ProvidersStubs' MongoMembership.Tests.Providers.MembershipProvider.When_CreateUser_is_caled_and_email_is_null' MongoMembership.Tests.Providers.MembershipProvider.When_FindUsersByName_is_called_and_user_exist_in_db' MongoMembership.Tests.Providers.MembershipProvider.When_initilized' MongoMembership.Tests.Providers.RoleProvider.When_IsUserInRole_is_called_and_role_to_compare_different_cases
+MongoMembership.Providers,MongoProfileProvider,1,13,2,0,11,175,26,0,0,0,3,0,MongoMembership.Mongo.IMongoGateway' MongoMembership.Utils.Util' MongoMembership.User,
+MongoMembership.Providers,MongoRoleProvider,1,11,2,0,11,72,21,0,0,0,4,9,MongoMembership.Mongo.IMongoGateway' MongoMembership.Utils.Util' MongoMembership.User' MongoMembership.Role,MongoMembership.Tests.Providers.ProvidersStubs' MongoMembership.Tests.Providers.RoleProvider.When_AddUsersToRoles_is_called' MongoMembership.Tests.Providers.RoleProvider.When_DeleteRole_is_called_and_role_exist' MongoMembership.Tests.Providers.RoleProvider.When_DeleteRole_is_called_and_role_not_exist' MongoMembership.Tests.Providers.RoleProvider.When_GetAllRoles_is_called_and_one_role_created' MongoMembership.Tests.Providers.RoleProvider.When_GetAllRoles_is_called_and_roles__Admin__and__AdmiN__created' MongoMembership.Tests.Providers.RoleProvider.When_GetUsersInRole_is_called_and_two_users_added_to_same_role' MongoMembership.Tests.Providers.RoleProvider.When_CreateRole_is_called' MongoMembership.Tests.Providers.RoleProvider.When_IsUserInRole_is_called_and_role_to_compare_different_cases
+MongoMembership,Role,0,0,3,0,0,7,0,0,0,-1,0,5,,MongoMembership.Mongo.IMongoGateway' MongoMembership.Mongo.MongoGateway' MongoMembership.Providers.MongoRoleProvider' MongoMembership.Tests.Mongo.IsRoleExists_when_called_and_search_with_lovercased_role_name' MongoMembership.Tests.StubsBase
+MongoMembership,User,0,11,27,0,11,101,13,0,0,-1,0,9,,MongoMembership.Mongo.IMongoGateway' MongoMembership.Mongo.MongoGateway' MongoMembership.Providers.MongoMembershipProvider' MongoMembership.Providers.MongoProfileProvider' MongoMembership.Providers.MongoRoleProvider' MongoMembership.Web.Controllers.AccountController' MongoMembership.Tests.Mongo.CreateUser_when_called' MongoMembership.Tests.Mongo.GetById_when_called' MongoMembership.Tests.StubsBase
+MongoMembership.Utils,SecurityExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
+MongoMembership.Utils,StringExtensions,0,6,0,0,6,27,6,0,0,-1,0,0,,
+MongoMembership.Utils,Util,0,2,0,0,2,23,2,0,0,-1,0,3,,MongoMembership.Providers.MongoMembershipProvider' MongoMembership.Providers.MongoProfileProvider' MongoMembership.Providers.MongoRoleProvider

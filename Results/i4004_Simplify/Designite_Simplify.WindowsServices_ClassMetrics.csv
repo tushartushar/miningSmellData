@@ -1,25 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BasicServiceHandler,0,1,0,0,1,16,1,0,1,-1,1,0
-MultitaskServiceHandler,5,12,2,0,5,199,24,2,0,0.33,11,1
-ServiceExceptionArgs,0,1,2,0,1,36,1,0,0,-1,0,0
-ServiceInitializationException,0,1,0,0,1,14,1,0,0,-1,0,0
-ServiceInstallerBase,9,9,0,4,5,133,17,2,0,0,1,0
-SingleTaskServiceHandler,0,1,0,0,1,17,1,0,1,-1,1,0
-CommandLineAction,0,0,0,0,0,18,0,0,0,-1,0,1
-ICommandLineProcessor,0,1,0,0,0,12,1,1,0,-1,0,1
-IInstallationController,0,2,0,0,0,14,2,1,0,-1,0,1
-InstallationController,0,3,0,0,2,38,3,0,1,-1,0,1
-ProcessCommandLineResult,0,0,0,0,0,18,0,0,0,-1,0,2
-CommandLineProcessor,1,2,1,0,2,58,5,0,1,0,4,1
-CrontabProcessor,0,5,2,0,5,80,10,0,1,-1,1,2
-CrontabProcessorFactory,0,1,0,0,1,15,1,0,1,-1,1,1
-ICrontabProcessor,0,4,2,0,0,44,4,1,0,-1,0,2
-ICrontabProcessorFactory,0,1,0,0,0,12,1,1,0,-1,0,1
-IServiceJob,0,2,3,0,0,41,2,2,0,-1,0,1
-ICrontabServiceJob,0,0,2,0,0,32,0,1,1,-1,2,1
-IServiceJobFactory,0,2,0,0,0,21,2,1,0,-1,0,1
-IServiceJobSettings,0,0,3,0,0,30,0,1,0,-1,0,2
-ServiceJob,0,3,3,0,3,63,5,1,1,-1,0,1
-CrontabServiceJob,2,4,2,0,4,92,8,0,2,0.5,4,1
-ServiceJobFactory,0,2,0,0,2,31,3,0,1,-1,4,1
-ServiceJobSettings,0,1,3,0,1,50,3,0,1,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Simplify.WindowsServices,BasicServiceHandler<T>,0,1,0,0,1,14,1,0,1,-1,0,0,,
+Simplify.WindowsServices,MultitaskServiceHandler,5,12,2,0,5,221,20,2,0,0.33,7,2,Simplify.WindowsServices.Jobs.IServiceJobFactory' Simplify.WindowsServices.CommandLine.ICommandLineProcessor' Simplify.WindowsServices.Jobs.ICrontabServiceJob' Simplify.WindowsServices.Jobs.IServiceJob' Simplify.WindowsServices.Jobs.Crontab.ICrontabProcessor' Simplify.WindowsServices.Jobs.IServiceJobSettings' Simplify.WindowsServices.CommandLine.ProcessCommandLineResult,Simplify.WindowsServices.MultitaskExample.Program' Simplify.WindowsServices.IntegrationTests.Program
+Simplify.WindowsServices,ServiceExceptionArgs,0,1,2,0,1,27,1,0,0,-1,0,0,,
+Simplify.WindowsServices,ServiceInitializationException,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Simplify.WindowsServices,ServiceInstallerBase,9,9,0,4,5,137,16,3,0,0.22,0,0,,
+Simplify.WindowsServices,SingleTaskServiceHandler<T>,0,1,0,0,1,14,1,0,1,-1,0,0,,
+Simplify.WindowsServices.CommandLine,CommandLineAction,0,0,0,0,0,19,0,0,0,-1,0,1,,Simplify.WindowsServices.CommandLine.CommandLineProcessor
+Simplify.WindowsServices.CommandLine,ICommandLineProcessor,0,1,0,0,0,9,1,1,0,-1,0,1,,Simplify.WindowsServices.MultitaskServiceHandler
+Simplify.WindowsServices.CommandLine,IInstallationController,0,2,0,0,0,11,2,1,0,-1,0,1,,Simplify.WindowsServices.CommandLine.CommandLineProcessor
+Simplify.WindowsServices.CommandLine,InstallationController,0,3,0,0,2,25,3,0,1,-1,0,0,,
+Simplify.WindowsServices.CommandLine,ProcessCommandLineResult,0,0,0,0,0,19,0,0,0,-1,0,2,,Simplify.WindowsServices.MultitaskServiceHandler' Simplify.WindowsServices.CommandLine.CommandLineProcessor
+Simplify.WindowsServices.CommandLine,CommandLineProcessor,1,2,1,0,2,62,7,0,1,0,3,0,Simplify.WindowsServices.CommandLine.IInstallationController' Simplify.WindowsServices.CommandLine.CommandLineAction' Simplify.WindowsServices.CommandLine.ProcessCommandLineResult,
+Simplify.WindowsServices.Jobs.Crontab,CrontabProcessor,0,5,2,0,5,77,9,0,1,-1,0,1,,Simplify.WindowsServices.Jobs.Crontab.CrontabProcessorFactory
+Simplify.WindowsServices.Jobs.Crontab,CrontabProcessorFactory,0,1,0,0,1,12,1,0,1,-1,1,0,Simplify.WindowsServices.Jobs.Crontab.CrontabProcessor,
+Simplify.WindowsServices.Jobs.Crontab,ICrontabProcessor,0,4,2,0,0,37,4,1,0,-1,0,2,,Simplify.WindowsServices.MultitaskServiceHandler' Simplify.WindowsServices.Jobs.CrontabServiceJob<T>
+Simplify.WindowsServices.Jobs.Crontab,ICrontabProcessorFactory,0,1,0,0,0,9,1,1,0,-1,0,1,,Simplify.WindowsServices.Jobs.CrontabServiceJob<T>
+Simplify.WindowsServices.Jobs,IServiceJob,0,2,3,0,0,32,2,2,0,-1,0,1,,Simplify.WindowsServices.MultitaskServiceHandler
+Simplify.WindowsServices.Jobs,ICrontabServiceJob,0,0,2,0,0,25,0,1,1,-1,0,1,,Simplify.WindowsServices.MultitaskServiceHandler
+Simplify.WindowsServices.Jobs,IServiceJobFactory,0,2,0,0,0,18,2,1,0,-1,0,1,,Simplify.WindowsServices.MultitaskServiceHandler
+Simplify.WindowsServices.Jobs,IServiceJobSettings,0,0,3,0,0,21,0,1,0,-1,0,2,,Simplify.WindowsServices.MultitaskServiceHandler' Simplify.WindowsServices.Jobs.CrontabServiceJob<T>
+Simplify.WindowsServices.Jobs,ServiceJob<T>,0,3,3,0,3,52,5,0,1,-1,0,0,,
+Simplify.WindowsServices.Jobs,CrontabServiceJob<T>,2,4,2,0,4,82,9,0,2,0.5,3,0,Simplify.WindowsServices.Jobs.Crontab.ICrontabProcessorFactory' Simplify.WindowsServices.Jobs.IServiceJobSettings' Simplify.WindowsServices.Jobs.Crontab.ICrontabProcessor,
+Simplify.WindowsServices.Jobs,ServiceJobFactory,0,2,0,0,2,29,3,0,1,-1,0,0,,
+Simplify.WindowsServices.Jobs,ServiceJobSettings,0,1,3,0,1,39,5,0,1,-1,0,0,,

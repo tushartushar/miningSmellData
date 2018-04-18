@@ -1,36 +1,48 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AsyncTaggerSource,2,9,5,0,0,84,10,2,1,0.89,2,0
-Constants,2,0,0,1,0,16,0,0,0,-1,0,0
-Contract,0,3,0,0,0,34,4,0,0,-1,0,5
-EditorHost,14,7,14,0,7,163,9,0,0,0.43,3,1
-EditorHostFactory,5,14,2,0,5,261,36,0,0,0.21,2,1
-EditorUtilsTrace,1,2,1,0,2,21,2,0,0,0,0,2
-EditorVersion,0,0,0,0,0,11,0,0,0,-1,0,2
-Extensions,0,36,0,0,36,276,47,0,0,-1,2,0
-OutliningRegion,3,1,0,3,1,12,1,0,0,0,0,1
-IAdhocOutliner,0,3,1,0,0,29,3,1,0,-1,0,1
-IAsyncTaggerSource,0,3,3,0,0,60,3,1,0,-1,0,3
-IBasicTaggerSource,0,1,0,0,0,11,1,2,0,-1,0,2
-IBasicUndoHistoryRegistry,0,1,1,0,0,25,1,1,0,-1,1,2
-IBasicUndoHistory,0,1,0,0,0,7,1,1,0,-1,0,2
-IProtectedOperations,0,5,0,0,0,35,5,1,0,-1,0,1
-EditorUtilsFactory,0,14,0,0,13,85,14,0,0,-1,10,4
-LineRange,2,10,4,0,10,86,12,0,0,0.6,0,2
-EditorUtilsResources,1,0,0,0,0,4,0,0,0,-1,0,1
-SnapshotLineRange,3,13,13,0,13,173,17,0,0,0.77,3,2
-UsedInBackgroundThreadAttribute,0,0,0,0,0,7,0,0,0,-1,0,0
-BasicUndoHistory,6,11,15,0,0,243,20,0,1,0.18,1,2
-BasicTextUndoHistoryRegistry,1,8,1,0,0,68,11,0,1,0.62,3,1
-BasicUndoTransaction,2,7,10,0,0,99,9,0,0,0.29,1,1
-Classifier,1,5,0,0,0,45,7,0,0,0.4,0,2
-CountedClassifier,1,4,1,0,0,40,4,0,0,0.5,2,1
-CountedValue,4,3,1,0,0,44,6,0,0,0,0,2
-AsyncTagger,7,22,4,0,0,853,68,0,0,0.18,6,1
-BasicTagger,2,7,1,0,0,75,11,0,0,0.57,3,1
-CountedTagger,1,4,1,0,0,47,4,0,0,0.75,1,1
-TaggerUtil,0,1,0,0,0,50,5,0,0,-1,0,2
-AdhocOutliner,6,9,1,0,0,133,15,0,1,0.22,2,1
-ReadOnlyStack,4,8,3,0,1,69,10,0,0,0.88,0,0
-EqualityUtility,0,1,0,0,0,25,1,0,0,-1,0,0
-NormalizedLineRangeCollection,1,11,2,0,0,150,25,0,0,0.18,1,1
-ProtectedOperations,1,11,0,0,0,92,13,0,1,0.45,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+EditorUtils,AsyncTaggerSource<TData;TTag>,2,9,5,0,0,78,10,0,1,0.89,1,0,EditorUtils.Contract,
+EditorUtils,Constants,2,0,0,1,0,16,0,0,0,-1,0,0,,
+EditorUtils,Contract,0,3,0,0,0,30,4,0,0,-1,0,5,,EditorUtils.AsyncTaggerSource<TData;TTag>' EditorUtils.Extensions' EditorUtils.SnapshotLineRange' EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Tagging.BasicTagger<TTag>
+EditorUtils,ContractException,0,4,0,0,0,11,4,0,0,-1,0,0,,
+EditorUtils,EditorHost,14,7,14,0,7,147,9,0,0,0.43,3,2,EditorUtils.IProtectedOperations' EditorUtils.IBasicUndoHistoryRegistry' EditorUtils.EditorUtilsFactory,EditorApp.MainWindow' EditorUtils.EditorHostFactory
+EditorUtils,EditorHostFactory,5,14,2,0,5,286,25,0,0,0,2,1,EditorUtils.EditorVersion' EditorUtils.EditorHost,EditorApp.MainWindow
+EditorUtils,UndoExportProvider,4,2,0,0,0,22,3,0,0,0,2,0,EditorUtils.IBasicUndoHistoryRegistry' EditorUtils.EditorUtilsFactory,
+EditorUtils,EditorUtilsTrace,1,2,1,0,2,18,2,0,0,0,0,2,,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' Cats.CatTaggerProvider
+EditorUtils,EditorVersion,0,0,0,0,0,7,0,0,0,-1,0,2,,EditorApp.MainWindow' EditorUtils.EditorHostFactory
+EditorUtils,Extensions,0,36,0,0,36,295,45,0,0,-1,2,0,EditorUtils.Contract' EditorUtils.SnapshotLineRange,
+EditorUtils,OutliningRegion,3,1,0,3,1,15,1,0,0,0,0,1,,EditorUtils.Implementation.Utilities.AdhocOutliner
+EditorUtils,IAdhocOutliner,0,3,1,0,0,24,3,1,0,-1,0,0,,
+EditorUtils,IAsyncTaggerSource,0,3,3,0,0,50,3,1,0,-1,0,2,,EditorUtils.EditorUtilsFactory' EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>
+EditorUtils,IBasicTaggerSource,0,1,0,0,0,12,1,2,0,-1,0,2,,EditorUtils.EditorUtilsFactory' EditorUtils.Implementation.Tagging.BasicTagger<TTag>
+EditorUtils,IBasicUndoHistoryRegistry,0,1,1,0,0,11,1,1,0,-1,1,2,EditorUtils.IBasicUndoHistory,EditorUtils.EditorHost' EditorUtils.UndoExportProvider
+EditorUtils,IBasicUndoHistory,0,1,0,0,0,7,1,1,0,-1,0,2,,EditorUtils.IBasicUndoHistoryRegistry' EditorUtils.Implementation.BasicUndo.BasicTextUndoHistoryRegistry
+EditorUtils,IProtectedOperations,0,5,0,0,0,29,5,1,0,-1,0,1,,EditorUtils.EditorHost
+EditorUtils,EditorUtilsFactory,0,14,0,0,13,102,14,0,0,-1,7,5,EditorUtils.IAsyncTaggerSource' EditorUtils.IBasicTaggerSource' EditorUtils.Implementation.Tagging.Classifier' EditorUtils.Implementation.Tagging.CountedClassifier' EditorUtils.Implementation.BasicUndo.BasicTextUndoHistoryRegistry' EditorUtils.Implementation.Utilities.ProtectedOperations' EditorUtils.Implementation.Utilities.AdhocOutliner,EditorUtils.EditorHost' EditorUtils.UndoExportProvider' Cats.CatTaggerProvider' Cats.DogClassifierProvider' WordUnderCaret.WordUnderCaretTaggerProvider
+EditorUtils,LineRange,2,10,4,0,10,87,12,0,0,0.6,0,2,,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Utilities.NormalizedLineRangeCollection
+EditorUtils,EditorUtilsResources,1,0,0,0,0,4,0,0,0,-1,0,1,,EditorUtils.SnapshotLineRange
+EditorUtils,SnapshotLineRange,3,13,13,0,13,163,17,0,0,0.77,2,7,EditorUtils.EditorUtilsResources' EditorUtils.Contract,EditorUtils.Extensions' EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Tagging.BackgroundCacheData' EditorUtils.Implementation.Tagging.Channel' EditorUtils.Implementation.Tagging.TextViewLineRange' Cats.BackgroundWorker' WordUnderCaret.BackgroundWorker
+EditorUtils,UsedInBackgroundThreadAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+EditorUtils.Implementation.BasicUndo,BasicUndoHistory,6,11,15,0,0,235,19,0,1,0.18,1,2,EditorUtils.Implementation.BasicUndo.BasicUndoTransaction,EditorUtils.Implementation.BasicUndo.BasicTextUndoHistoryRegistry' EditorUtils.Implementation.BasicUndo.BasicUndoTransaction
+EditorUtils.Implementation.BasicUndo,BasicTextUndoHistoryRegistry,1,8,1,0,0,66,11,0,1,0.38,2,1,EditorUtils.IBasicUndoHistory' EditorUtils.Implementation.BasicUndo.BasicUndoHistory,EditorUtils.EditorUtilsFactory
+EditorUtils.Implementation.BasicUndo,BasicUndoTransaction,2,7,10,0,0,93,9,0,0,0.29,1,1,EditorUtils.Implementation.BasicUndo.BasicUndoHistory,EditorUtils.Implementation.BasicUndo.BasicUndoHistory
+EditorUtils.Implementation.Tagging,Classifier,1,5,0,0,0,47,7,0,0,0.4,0,1,,EditorUtils.EditorUtilsFactory
+EditorUtils.Implementation.Tagging,CountedClassifier,1,4,1,0,0,37,4,0,0,0.5,0,1,,EditorUtils.EditorUtilsFactory
+EditorUtils.Implementation.Tagging,CountedValue<T>,4,3,1,0,0,49,6,0,0,0,0,0,,
+EditorUtils.Implementation.Tagging,AsyncTagger<TData;TTag>,7,22,4,0,0,972,56,0,0,0.18,14,0,EditorUtils.IAsyncTaggerSource' EditorUtils.Implementation.Tagging.TagCache' EditorUtils.Implementation.Tagging.TrackingCacheData' EditorUtils.EditorUtilsTrace' EditorUtils.SnapshotLineRange' EditorUtils.Implementation.Tagging.BackgroundCacheData' EditorUtils.Implementation.Tagging.TagCacheState' EditorUtils.Implementation.Tagging.AsyncBackgroundRequest' EditorUtils.Implementation.Tagging.Channel' EditorUtils.Implementation.Utilities.NormalizedLineRangeCollection' EditorUtils.Contract' EditorUtils.Implementation.Tagging.CompleteReason' EditorUtils.LineRange' EditorUtils.Implementation.Tagging.TaggerUtil,
+EditorUtils.Implementation.Tagging,CompleteReason,0,0,0,0,0,6,0,0,0,-1,0,1,,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>
+EditorUtils.Implementation.Tagging,BackgroundCacheData,3,4,1,0,0,75,5,0,0,0,4,1,EditorUtils.Implementation.Utilities.NormalizedLineRangeCollection' EditorUtils.SnapshotLineRange' EditorUtils.Implementation.Tagging.TagCacheState' EditorUtils.Implementation.Tagging.TrackingCacheData,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>
+EditorUtils.Implementation.Tagging,TrackingCacheData,2,4,0,0,0,78,5,0,0,0,1,2,EditorUtils.Implementation.Utilities.EqualityUtility,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Tagging.BackgroundCacheData
+EditorUtils.Implementation.Tagging,TagCache,2,1,2,0,0,18,1,0,0,0,0,1,,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>
+EditorUtils.Implementation.Tagging,TagCacheState,0,0,0,0,0,6,0,0,0,-1,0,2,,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Tagging.BackgroundCacheData
+EditorUtils.Implementation.Tagging,AsyncBackgroundRequest,4,1,0,0,0,18,1,0,0,0,1,1,EditorUtils.Implementation.Tagging.Channel,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>
+EditorUtils.Implementation.Tagging,Channel,3,6,2,0,0,110,7,0,0,0,2,2,EditorUtils.Implementation.Tagging.TextViewLineRange' EditorUtils.SnapshotLineRange,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Tagging.AsyncBackgroundRequest
+EditorUtils.Implementation.Tagging,TextViewLineRange,1,1,0,1,0,8,1,0,0,0,1,1,EditorUtils.SnapshotLineRange,EditorUtils.Implementation.Tagging.Channel
+EditorUtils.Implementation.Tagging,BasicTagger<TTag>,2,7,1,0,0,76,11,0,0,0.57,3,0,EditorUtils.IBasicTaggerSource' EditorUtils.Contract' EditorUtils.Implementation.Tagging.TaggerUtil,
+EditorUtils.Implementation.Tagging,CountedTagger<TTag>,1,4,1,0,0,37,4,0,0,0.75,0,0,,
+EditorUtils.Implementation.Tagging,TaggerUtil,0,1,0,0,0,54,5,0,0,-1,0,2,,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Tagging.BasicTagger<TTag>
+EditorUtils.Implementation.Utilities,AdhocOutliner,6,9,1,0,0,132,15,0,1,0,2,1,EditorUtils.Implementation.Utilities.OutliningData' EditorUtils.OutliningRegion,EditorUtils.EditorUtilsFactory
+EditorUtils.Implementation.Utilities,OutliningData,3,1,0,0,0,15,1,0,0,0,0,1,,EditorUtils.Implementation.Utilities.AdhocOutliner
+EditorUtils.Implementation.Utilities,ReadOnlyStack<T>,4,8,3,0,1,68,10,0,0,0.88,0,0,,
+EditorUtils.Implementation.Utilities,EqualityUtility,0,1,0,0,0,27,1,0,0,-1,0,1,,EditorUtils.Implementation.Tagging.TrackingCacheData
+EditorUtils.Implementation.Utilities,DelegateComparer<T>,2,3,0,0,0,18,3,0,0,0,0,0,,
+EditorUtils.Implementation.Utilities,NormalizedLineRangeCollection,1,11,2,0,0,162,24,0,0,0.18,1,2,EditorUtils.LineRange,EditorUtils.Implementation.Tagging.AsyncTagger<TData;TTag>' EditorUtils.Implementation.Tagging.BackgroundCacheData
+EditorUtils.Implementation.Utilities,ProtectedOperations,1,11,0,0,0,100,12,0,1,0,0,1,,EditorUtils.EditorUtilsFactory

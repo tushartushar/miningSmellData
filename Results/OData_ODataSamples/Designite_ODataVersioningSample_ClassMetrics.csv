@@ -1,0 +1,23 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ODataVersioningSample.Extensions,ODataHelper,0,3,0,0,3,75,10,0,0,-1,0,0,,
+ODataVersioningSample.Extensions,ODataVersionControllerSelector,1,2,1,0,2,37,5,0,0,1,0,3,,ODataVersioningSample.WebApiApplication' ODataVersioningSample.V1.WebApiConfig' ODataVersioningSample.V2.WebApiConfig
+ODataVersioningSample.Extensions,ODataVersionRouteConstraint,0,2,2,0,2,43,6,0,0,-1,0,1,,System.Web.Http.ODataVersionRouteExtensions
+System.Web.Http,ODataVersionRouteExtensions,0,2,0,0,2,51,3,0,0,-1,1,0,ODataVersioningSample.Extensions.ODataVersionRouteConstraint,
+ODataVersioningSample,WebApiApplication,0,1,0,0,0,12,1,0,0,-1,3,0,ODataVersioningSample.Extensions.ODataVersionControllerSelector' ODataVersioningSample.V1.WebApiConfig' ODataVersioningSample.V2.WebApiConfig,
+ODataVersioningSample.Models,DbAddress,0,0,5,0,0,8,0,0,0,-1,0,0,,
+ODataVersioningSample.Models,DbProduct,0,0,5,0,0,10,0,0,0,-1,0,1,,ODataVersioningSample.V2.Models.ProductRepository
+ODataVersioningSample.Models,DbProductFamily,0,1,5,0,1,12,1,0,0,-1,0,1,,ODataVersioningSample.V2.Models.ProductRepository
+ODataVersioningSample.Models,DbProductsContext,0,2,3,0,1,20,2,0,0,-1,0,3,,ODataVersioningSample.Models.DbProductsContextInitializer' ODataVersioningSample.V2.Models.ProductRepository' ODataVersioningSample.V2.Controller.ProductFamiliesV2Controller
+ODataVersioningSample.Models,DbProductsContextInitializer,0,1,0,0,0,109,1,0,0,-1,2,0,ODataVersioningSample.Models.DbSupplier' ODataVersioningSample.Models.DbProductsContext,
+ODataVersioningSample.Models,DbSupplier,0,1,4,0,1,12,1,0,0,-1,0,1,,ODataVersioningSample.Models.DbProductsContextInitializer
+ODataVersioningSample.V2.Models,ProductRepository,1,9,0,0,9,104,17,0,0,0,4,2,ODataVersioningSample.Models.DbProductsContext' ODataVersioningSample.V2.ViewModels.Product' ODataVersioningSample.Models.DbProduct' ODataVersioningSample.Models.DbProductFamily,ODataVersioningSample.V1.Controller.ProductsV1Controller' ODataVersioningSample.V2.Controller.ProductsV2Controller
+ODataVersioningSample.V1.Controller,ProductsV1Controller,1,6,0,0,6,60,11,0,0,0,3,0,ODataVersioningSample.V2.Models.ProductRepository' ODataVersioningSample.V2.ViewModels.Product' ODataVersioningSample.V1.ViewModels.Product,
+ODataVersioningSample.V1.ViewModels,Product,0,0,4,0,0,7,0,0,0,-1,0,1,,ODataVersioningSample.V1.Controller.ProductsV1Controller
+ODataVersioningSample.V1,WebApiConfig,0,2,0,0,1,49,2,0,0,-1,1,1,ODataVersioningSample.Extensions.ODataVersionControllerSelector,ODataVersioningSample.WebApiApplication
+ODataVersioningSample.V2.Controller,ProductFamiliesV2Controller,1,2,0,0,2,17,3,0,0,0,1,0,ODataVersioningSample.Models.DbProductsContext,
+ODataVersioningSample.V2.Controller,ProductsV2Controller,1,8,0,0,8,59,12,0,0,0,3,0,ODataVersioningSample.V2.Models.ProductRepository' ODataVersioningSample.V2.ViewModels.Product' ODataVersioningSample.V2.ViewModels.ProductFamily,
+ODataVersioningSample.V2.ViewModels,Address,0,0,5,0,0,8,0,0,0,-1,0,0,,
+ODataVersioningSample.V2.ViewModels,Product,0,0,5,0,0,8,0,0,0,-1,0,3,,ODataVersioningSample.V2.Models.ProductRepository' ODataVersioningSample.V1.Controller.ProductsV1Controller' ODataVersioningSample.V2.Controller.ProductsV2Controller
+ODataVersioningSample.V2.ViewModels,ProductFamily,0,1,5,0,1,12,1,0,0,-1,0,1,,ODataVersioningSample.V2.Controller.ProductsV2Controller
+ODataVersioningSample.V2.ViewModels,Supplier,0,1,4,0,1,12,1,0,0,-1,0,0,,
+ODataVersioningSample.V2,WebApiConfig,0,2,0,0,1,57,2,0,0,-1,1,1,ODataVersioningSample.Extensions.ODataVersionControllerSelector,ODataVersioningSample.WebApiApplication

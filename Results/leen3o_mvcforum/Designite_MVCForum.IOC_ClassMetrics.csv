@@ -1,9 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-PreApplicationStartCode,1,1,0,0,1,11,2,0,0,0,0,0
-RequestLifetimeHttpModule,0,2,0,0,2,11,2,0,0,-1,1,0
-UnityDependencyResolver,2,5,1,0,4,53,11,0,0,0.6,0,1
-IocExtensions,0,1,0,0,1,10,1,0,0,-1,0,0
-UnityHelper,0,3,0,0,1,66,3,0,0,-1,0,1
-QuartzUnityExtension,0,1,0,0,0,8,1,0,0,-1,0,0
-UnityJobFactory,2,4,0,0,3,107,6,0,0,0.75,0,1
-UnitySchedulerFactory,1,2,0,0,1,13,2,0,0,0,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MVCForum.IOC,PreApplicationStartCode,1,1,0,0,1,12,2,0,0,0,1,0,MVCForum.IOC.RequestLifetimeHttpModule,
+MVCForum.IOC,RequestLifetimeHttpModule,0,2,0,0,2,11,2,0,0,-1,1,1,MVCForum.IOC.UnityDependencyResolver,MVCForum.IOC.PreApplicationStartCode
+MVCForum.IOC,UnityDependencyResolver,2,5,1,0,4,62,11,0,0,0.6,0,1,,MVCForum.IOC.RequestLifetimeHttpModule
+MVCForum.IOC,IocExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MVCForum.IOC,UnityHelper,0,3,0,0,1,64,3,0,0,-1,0,1,,MVCForum.Website.MvcApplication
+MVCForum.IOC.Quartz,QuartzUnityExtension,0,1,0,0,0,8,1,0,0,-1,0,0,,
+MVCForum.IOC.Quartz,UnityJobFactory,2,4,0,0,3,126,5,0,0,0.75,1,1,MVCForum.IOC.Quartz.JobWrapper,MVCForum.IOC.Quartz.UnitySchedulerFactory
+MVCForum.IOC.Quartz,JobWrapper,2,2,1,0,2,61,4,1,0,0,0,1,,MVCForum.IOC.Quartz.UnityJobFactory
+MVCForum.IOC.Quartz,InterruptableJobWrapper,0,2,0,0,2,16,3,0,1,-1,0,0,,
+MVCForum.IOC.Quartz,UnitySchedulerFactory,1,2,0,0,1,13,2,0,0,0,1,0,MVCForum.IOC.Quartz.UnityJobFactory,

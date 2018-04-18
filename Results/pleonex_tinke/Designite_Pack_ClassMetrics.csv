@@ -1,31 +1,31 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ALAR,0,2,0,0,2,48,5,0,0,-1,2,1
-Arch,4,13,0,0,6,254,32,0,1,0.23,5,0
-Decoder,6,8,0,0,5,141,23,0,0,0.38,0,1
-Main,1,6,0,0,6,58,7,0,1,0.67,7,0
-NARC,2,8,0,0,3,246,35,0,0,0,5,1
-ARC,9,0,0,9,0,17,0,0,0,-1,3,2
-BTAF,4,0,0,4,0,7,0,0,0,-1,1,1
-BTAF_Entry,2,0,0,2,0,6,0,0,0,-1,0,1
-BTNF,3,0,0,3,0,6,0,0,0,-1,1,1
-BTNF_MainEntry,5,0,0,5,0,11,0,0,0,-1,2,3
-GMIF,2,0,0,2,0,6,0,0,0,-1,0,1
-Utility,2,5,0,0,4,166,23,0,0,0,5,1
-_4HEROSLIGHT,2,10,0,0,10,113,12,0,1,0.6,4,0
-AWITCHSTALE,2,7,0,0,7,60,9,0,1,0.86,4,0
-BSIGILBE,2,8,0,0,8,154,23,0,1,0.62,4,0
-DGamerArchive,3,8,0,0,7,113,17,0,1,0.88,6,0
-ARC,2,0,0,2,0,5,0,0,0,-1,2,1
-BTAF,2,0,0,2,0,5,0,0,0,-1,1,1
-BTAF_Entry,2,0,0,2,0,6,0,0,0,-1,0,1
-BTNF,2,0,0,2,0,5,0,0,0,-1,1,1
-BTNF_MainEntry,5,0,0,5,0,11,0,0,0,-1,2,2
-ENDLESS_F,2,7,0,0,7,58,10,0,1,0.86,4,0
-GENSUIKODS,2,9,0,0,7,91,14,0,1,0.67,4,0
-GTACTW,2,8,0,0,8,81,9,0,1,0.62,4,0
-HONZ_Books,2,7,0,0,7,95,13,0,1,0.71,4,0
-ROCKMAN_EXE,2,7,0,0,7,60,9,0,1,0.86,4,0
-RR3BACE,2,9,0,0,9,118,18,0,1,0.67,4,0
-RUNEFACTORY3,2,7,0,0,7,95,10,0,1,0.71,4,0
-SUBARASHIKI,2,7,0,0,7,61,8,0,1,0.86,4,0
-WARIO7,2,8,0,0,7,69,10,0,1,0.62,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Pack,ALAR,0,2,0,0,2,46,5,0,0,-1,0,1,,Pack.Main
+Pack,Arch,4,13,0,0,6,268,28,0,0,0.23,1,0,Pack.Decoder,
+Pack,Decoder,6,8,0,0,5,161,23,0,0,0.38,0,1,,Pack.Arch
+Pack,Main,1,6,0,0,6,59,9,0,0,0.67,3,0,Pack.NARC' Pack.Utility' Pack.ALAR,
+Pack,NARC,2,8,0,0,3,261,32,0,0,0.25,6,1,Pack.ARC' Pack.BTNF_MainEntry' Pack.BTAF' Pack.BTAF_Entry' Pack.BTNF' Pack.GMIF,Pack.Main
+Pack,ARC,9,0,0,9,0,12,0,0,0,-1,3,2,Pack.BTAF' Pack.BTNF' Pack.GMIF,Pack.NARC' Pack.Utility
+Pack,BTAF,4,0,0,4,0,7,0,0,0,-1,1,3,Pack.BTAF_Entry,Pack.NARC' Pack.ARC' Pack.Utility
+Pack,BTAF_Entry,2,0,0,2,0,6,0,0,0,-1,0,3,,Pack.NARC' Pack.BTAF' Pack.Utility
+Pack,BTNF,3,0,0,3,0,6,0,0,0,-1,0,3,,Pack.NARC' Pack.ARC' Pack.Utility
+Pack,BTNF_MainEntry,5,0,0,5,0,8,0,0,0,-1,0,2,,Pack.NARC' Pack.Utility
+Pack,GMIF,2,0,0,2,0,6,0,0,0,-1,0,2,,Pack.NARC' Pack.ARC
+Pack,Utility,2,5,0,0,4,175,17,0,0,0.4,5,1,Pack.ARC' Pack.BTNF_MainEntry' Pack.BTAF' Pack.BTAF_Entry' Pack.BTNF,Pack.Main
+Pack.Games,_4HEROSLIGHT,2,10,0,0,10,115,15,0,0,0.9,0,0,,
+Pack.Games,AWITCHSTALE,2,7,0,0,7,61,11,0,0,0.86,0,0,,
+Pack.Games,BSIGILBE,2,8,0,0,8,170,18,0,0,0.75,0,0,,
+Pack.Games,DGamerArchive,3,8,0,0,7,116,16,0,0,0.88,5,0,Pack.Games.ARC' Pack.Games.BTNF_MainEntry' Pack.Games.BTNF' Pack.Games.BTAF' Pack.Games.BTAF_Entry,
+Pack.Games,ARC,2,0,0,2,0,5,0,0,0,-1,2,1,Pack.Games.BTAF' Pack.Games.BTNF,Pack.Games.DGamerArchive
+Pack.Games,BTAF,2,0,0,2,0,5,0,0,0,-1,1,2,Pack.Games.BTAF_Entry,Pack.Games.DGamerArchive' Pack.Games.ARC
+Pack.Games,BTAF_Entry,2,0,0,2,0,6,0,0,0,-1,0,2,,Pack.Games.DGamerArchive' Pack.Games.BTAF
+Pack.Games,BTNF,2,0,0,2,0,5,0,0,0,-1,0,2,,Pack.Games.DGamerArchive' Pack.Games.ARC
+Pack.Games,BTNF_MainEntry,5,0,0,5,0,8,0,0,0,-1,0,1,,Pack.Games.DGamerArchive
+Pack.Games,ENDLESS_F,2,7,0,0,7,62,12,0,0,0.86,0,0,,
+Pack.Games,GENSUIKODS,2,9,0,0,7,92,18,0,0,0.89,0,0,,
+Pack.Games,GTACTW,2,8,0,0,8,77,14,0,0,0.75,0,0,,
+Pack.Games,HONZ_Books,2,7,0,0,7,99,14,0,0,0.71,0,0,,
+Pack.Games,ROCKMAN_EXE,2,7,0,0,7,61,11,0,0,0.86,0,0,,
+Pack.Games,RR3BACE,2,9,0,0,9,116,20,0,0,0.78,0,0,,
+Pack.Games,RUNEFACTORY3,2,7,0,0,7,94,14,0,0,0.71,0,0,,
+Pack.Games,SUBARASHIKI,2,7,0,0,7,61,10,0,0,0.86,0,0,,
+Pack.Games,WARIO7,2,8,0,0,7,66,10,0,0,0.75,0,0,,

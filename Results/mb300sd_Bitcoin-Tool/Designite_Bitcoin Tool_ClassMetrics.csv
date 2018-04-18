@@ -1,59 +1,62 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ComputeAddressBalances,0,1,0,0,1,25,7,0,0,-1,3,0
-ComputeUnspentTxOuts,0,1,0,0,1,43,14,0,0,-1,5,0
-FindFirstOrphan,0,1,0,0,1,18,3,0,0,-1,3,0
-MakeBootstrap,1,3,0,0,3,124,9,0,0,0,3,0
-BitcoinRPC,5,4,0,1,4,47,5,0,0,0,0,0
-BitcoinRPCError,2,2,0,2,2,13,2,0,0,1,0,1
-BitcoinRPCException,0,2,1,0,2,15,2,0,0,-1,1,0
-ValidationExtensions,0,1,0,0,1,22,3,0,0,-1,4,0
-SigningExtensions,0,2,0,0,2,94,24,0,0,-1,7,0
-HashType,0,0,0,0,0,7,0,0,0,-1,0,2
-OpCode,0,0,0,0,0,131,0,0,0,-1,0,4
-Script,6,10,0,1,8,890,299,0,0,0.2,7,4
-ScriptElement,2,2,6,2,2,56,7,0,0,0,1,2
-ScriptTemplate,0,8,0,0,8,70,14,0,0,-1,5,0
-ScriptVarInt,1,3,1,1,3,45,8,0,0,0,0,1
-Hash,1,3,0,1,3,36,3,0,0,0,0,10
-Block,8,7,2,7,5,80,14,2,1,0.29,3,1
-Block_Disk,2,6,0,2,5,40,9,0,2,0.33,0,4
-ISerialize,0,3,0,0,0,6,3,13,0,-1,0,1
-VarInt,1,8,1,1,8,80,18,0,1,0.25,0,10
-Transaction,5,7,3,4,6,82,18,1,1,0.29,4,4
-TxIn,4,7,1,4,6,57,10,0,1,0.29,2,3
-TxOut,2,7,1,2,6,49,10,0,1,0.29,1,3
-InvType,0,0,0,0,0,6,0,0,0,-1,0,2
-IPayload,0,0,0,0,0,3,0,15,1,-1,0,1
-Addr,1,6,1,1,5,53,11,0,2,0.33,2,1
-Alert,2,6,0,2,5,59,9,0,2,0.33,1,1
-Block,0,3,0,0,2,15,3,0,2,-1,0,1
-EmptyPayload,0,5,0,0,4,24,8,3,2,-1,0,0
-GetAddr,0,1,0,0,1,7,1,0,3,-1,0,2
-GetBlocks,3,6,1,3,5,50,13,0,2,0.33,1,1
-GetData,1,7,1,1,6,46,14,0,2,0.29,2,1
-GetHeaders,3,6,1,3,5,50,13,0,2,0.33,1,1
-Headers,0,3,0,0,2,15,3,0,2,-1,0,1
-Inv,1,7,1,1,6,46,14,0,2,0.29,2,2
-InvVect,2,7,0,2,6,43,10,0,1,0.29,2,3
-Message,5,7,1,5,6,108,52,0,1,0.29,15,1
-NetAddr,3,7,0,3,6,63,11,0,1,0.29,1,3
-Ping,0,1,0,0,1,7,1,0,3,-1,0,1
-Services,0,0,0,0,0,4,0,0,0,-1,0,3
-Tx,0,3,0,0,2,15,3,0,2,-1,0,1
-VarStr,1,8,1,0,7,49,11,0,1,0.25,1,2
-VerAck,0,1,0,0,1,7,1,0,3,-1,1,2
-Version,8,7,0,8,6,71,10,0,2,0.29,4,2
-UnknownPayload,3,6,0,3,5,40,9,0,2,0,0,1
-TxOutId,2,8,0,2,8,52,11,0,1,0,1,2
-UnspentTxOutList,2,10,0,0,9,109,29,0,1,0.2,2,2
-BlockFileReader,1,3,1,0,3,37,6,0,0,0,1,2
-SignMessage,1,1,0,0,1,8,1,0,0,0,1,0
-UnixTimestamp,0,0,1,0,0,8,0,0,0,-1,0,1
-Address,8,8,4,4,6,122,29,0,0,0.38,3,3
-PrivateKey,1,9,1,0,9,72,11,0,0,0.56,4,1
-PublicKey,1,7,1,0,7,44,7,0,0,0.29,3,4
-ECKeyPair,1,7,3,0,4,76,15,0,0,0,0,2
-Base58CheckString,0,3,0,0,3,27,4,0,0,-1,1,2
-Base58String,1,2,0,0,2,41,8,0,0,0,0,1
-HexString,0,4,0,0,4,31,8,0,0,-1,0,5
-Program,0,2,0,0,0,129,31,0,0,-1,10,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bitcoin_Tool.Apps,ComputeAddressBalances,0,1,0,0,1,29,5,0,0,-1,4,0,Bitcoin_Tool.Structs.Other.UnspentTxOutList' Bitcoin_Tool.Structs.Hash' Bitcoin_Tool.Crypto.Address' Bitcoin_Tool.Structs.TxOut,
+Bitcoin_Tool.Apps,ComputeUnspentTxOuts,0,1,0,0,1,50,9,0,0,-1,7,0,Bitcoin_Tool.Structs.Other.UnspentTxOutList' Bitcoin_Tool.Structs.Hash' Bitcoin_Tool.Util.BlockFileReader' Bitcoin_Tool.Structs.Block_Disk' Bitcoin_Tool.Structs.Block' Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Structs.TxIn,
+Bitcoin_Tool.Apps,FindFirstOrphan,0,1,0,0,1,19,3,0,0,-1,3,0,Bitcoin_Tool.Util.BlockFileReader' Bitcoin_Tool.Structs.Block_Disk' Bitcoin_Tool.Structs.Hash,
+Bitcoin_Tool.Apps,MakeBootstrap,1,3,0,0,3,139,6,0,0,0,4,0,Bitcoin_Tool.Apps.BlockQueue' Bitcoin_Tool.Structs.Block_Disk' Bitcoin_Tool.DataConverters.HexString' Bitcoin_Tool.Structs.Hash,
+Bitcoin_Tool.Apps,BlockQueue,2,6,0,0,4,56,10,0,0,0.33,1,1,Bitcoin_Tool.Structs.Block_Disk,Bitcoin_Tool.Apps.MakeBootstrap
+Bitcoin_Tool.RPC,BitcoinRPC,5,4,0,1,4,51,4,0,0,0,0,0,,
+Bitcoin_Tool.RPC,BitcoinRPCError,2,2,0,2,2,13,2,0,0,1,0,1,,Bitcoin_Tool.RPC.BitcoinRPCException
+Bitcoin_Tool.RPC,BitcoinRPCException,0,2,1,0,2,18,2,0,0,-1,1,0,Bitcoin_Tool.RPC.BitcoinRPCError,
+Bitcoin_Tool.Scripts,ValidationExtensions,0,1,0,0,1,29,5,0,0,-1,5,0,Bitcoin_Tool.Structs.TxIn' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Structs.TxOut' Bitcoin_Tool.Scripts.ScriptElement,
+Bitcoin_Tool.Scripts,SigningExtensions,0,2,0,0,2,97,14,0,0,-1,8,0,Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Structs.TxOut' Bitcoin_Tool.Structs.TxIn' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Scripts.HashType' Bitcoin_Tool.Crypto.PrivateKey' Bitcoin_Tool.Crypto.PublicKey' Bitcoin_Tool.Scripts.OpCode,
+Bitcoin_Tool.Scripts,HashType,0,0,0,0,0,7,0,0,0,-1,0,2,,Bitcoin_Tool.Scripts.SigningExtensions' Bitcoin_Tool.Scripts.Script
+Bitcoin_Tool.Scripts,OpCode,0,0,0,0,0,131,0,0,0,-1,0,4,,Bitcoin_Tool.Scripts.SigningExtensions' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Scripts.ScriptElement' Bitcoin_Tool.Scripts.ScriptTemplate
+Bitcoin_Tool.Scripts,Script,6,10,0,1,8,970,20,0,0,0.2,8,4,Bitcoin_Tool.Scripts.OpCode' Bitcoin_Tool.Scripts.ScriptVarInt' Bitcoin_Tool.Scripts.ScriptElement' Bitcoin_Tool.Crypto.PublicKey' Bitcoin_Tool.Scripts.IfElseExec' Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Scripts.HashType' Bitcoin_Tool.DataConverters.HexString,Bitcoin_Tool.Scripts.ValidationExtensions' Bitcoin_Tool.Scripts.SigningExtensions' Bitcoin_Tool.Scripts.ScriptTemplate' Bitcoin_Tool.Crypto.Address
+Bitcoin_Tool.Scripts,IfElseExec,0,0,0,0,0,7,0,0,0,-1,0,1,,Bitcoin_Tool.Scripts.Script
+Bitcoin_Tool.Scripts,ScriptElement,2,2,6,2,2,68,4,0,0,0,2,4,Bitcoin_Tool.Scripts.OpCode' Bitcoin_Tool.Scripts.ScriptVarInt,Bitcoin_Tool.Scripts.ValidationExtensions' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Scripts.ScriptTemplate' Bitcoin_Tool.Crypto.Address
+Bitcoin_Tool.Scripts,ScriptTemplate,0,8,0,0,8,87,14,0,0,-1,5,0,Bitcoin_Tool.Crypto.Address' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Scripts.OpCode' Bitcoin_Tool.Crypto.PublicKey' Bitcoin_Tool.Scripts.ScriptElement,
+Bitcoin_Tool.Scripts,ScriptVarInt,1,3,1,1,3,43,7,0,0,0,0,2,,Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Scripts.ScriptElement
+Bitcoin_Tool.Structs,Hash,1,3,0,1,3,33,5,0,0,0,0,10,,Bitcoin_Tool.Apps.ComputeAddressBalances' Bitcoin_Tool.Apps.ComputeUnspentTxOuts' Bitcoin_Tool.Apps.FindFirstOrphan' Bitcoin_Tool.Apps.MakeBootstrap' Bitcoin_Tool.Structs.Block' Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Structs.TxIn' Bitcoin_Tool.Structs.Net.InvVect' Bitcoin_Tool.Structs.Other.TxOutId' Bitcoin_Tool.Crypto.Address
+Bitcoin_Tool.Structs,Block,8,7,2,7,5,81,9,2,1,0.29,3,2,Bitcoin_Tool.Structs.Hash' Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Apps.ComputeUnspentTxOuts' Bitcoin_Tool.Structs.Block_Disk
+Bitcoin_Tool.Structs,Block_Disk,2,6,0,2,5,41,6,0,2,0.33,1,5,Bitcoin_Tool.Structs.Block,Bitcoin_Tool.Apps.ComputeUnspentTxOuts' Bitcoin_Tool.Apps.FindFirstOrphan' Bitcoin_Tool.Apps.MakeBootstrap' Bitcoin_Tool.Apps.BlockQueue' Bitcoin_Tool.Util.BlockFileReader
+Bitcoin_Tool.Structs,ISerialize,0,3,0,0,0,6,3,13,0,-1,0,1,,Bitcoin_Tool.Program
+Bitcoin_Tool.Structs,VarInt,1,8,1,1,8,84,10,0,1,0.25,0,10,,Bitcoin_Tool.Structs.Block' Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Structs.TxIn' Bitcoin_Tool.Structs.TxOut' Bitcoin_Tool.Structs.Net.Addr' Bitcoin_Tool.Structs.Net.GetBlocks' Bitcoin_Tool.Structs.Net.GetData' Bitcoin_Tool.Structs.Net.GetHeaders' Bitcoin_Tool.Structs.Net.Inv' Bitcoin_Tool.Structs.Net.VarStr
+Bitcoin_Tool.Structs,Transaction,5,7,3,4,6,79,11,1,1,0.29,4,5,Bitcoin_Tool.Structs.TxIn' Bitcoin_Tool.Structs.TxOut' Bitcoin_Tool.Structs.Hash' Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Apps.ComputeUnspentTxOuts' Bitcoin_Tool.Scripts.ValidationExtensions' Bitcoin_Tool.Scripts.SigningExtensions' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Structs.Block
+Bitcoin_Tool.Structs,TxIn,4,7,1,4,6,54,7,0,1,0.29,2,4,Bitcoin_Tool.Structs.Hash' Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Apps.ComputeUnspentTxOuts' Bitcoin_Tool.Scripts.ValidationExtensions' Bitcoin_Tool.Scripts.SigningExtensions' Bitcoin_Tool.Structs.Transaction
+Bitcoin_Tool.Structs,TxOut,2,7,1,2,6,46,7,0,1,0.29,1,5,Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Apps.ComputeAddressBalances' Bitcoin_Tool.Scripts.ValidationExtensions' Bitcoin_Tool.Scripts.SigningExtensions' Bitcoin_Tool.Structs.Transaction' Bitcoin_Tool.Structs.Other.UnspentTxOutList
+Bitcoin_Tool.Structs.Net,InvType,0,0,0,0,0,6,0,0,0,-1,0,2,,Bitcoin_Tool.Structs.Net.InvVect' Bitcoin_Tool.Program
+Bitcoin_Tool.Structs.Net,IPayload,0,0,0,0,0,3,0,15,1,-1,0,1,,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,Addr,1,6,1,1,5,53,8,0,2,0.33,3,1,Bitcoin_Tool.Structs.Net.TimeNetAddr' Bitcoin_Tool.Structs.VarInt' Bitcoin_Tool.Structs.Net.NetAddr,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,TimeNetAddr,2,0,0,2,0,5,0,0,0,-1,1,1,Bitcoin_Tool.Structs.Net.NetAddr,Bitcoin_Tool.Structs.Net.Addr
+Bitcoin_Tool.Structs.Net,Alert,2,6,0,2,5,59,6,0,2,0.33,1,1,Bitcoin_Tool.Structs.Net.VarStr,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,Block,0,3,0,0,2,16,3,0,2,-1,0,1,,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,EmptyPayload,0,5,0,0,4,25,5,3,2,-1,0,0,,
+Bitcoin_Tool.Structs.Net,GetAddr,0,1,0,0,1,6,1,0,3,-1,0,2,,Bitcoin_Tool.Structs.Net.Message' Bitcoin_Tool.Structs.Net.VerAck
+Bitcoin_Tool.Structs.Net,GetBlocks,3,6,1,3,5,47,8,0,2,0.33,1,1,Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,GetData,1,7,1,1,6,43,9,0,2,0.29,2,1,Bitcoin_Tool.Structs.Net.InvVect' Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,GetHeaders,3,6,1,3,5,47,8,0,2,0.33,1,1,Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,Headers,0,3,0,0,2,16,3,0,2,-1,0,1,,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,Inv,1,7,1,1,6,43,9,0,2,0.29,2,2,Bitcoin_Tool.Structs.Net.InvVect' Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Structs.Net.Message' Bitcoin_Tool.Program
+Bitcoin_Tool.Structs.Net,InvVect,2,7,0,2,6,44,7,0,1,0.29,2,2,Bitcoin_Tool.Structs.Net.InvType' Bitcoin_Tool.Structs.Hash,Bitcoin_Tool.Structs.Net.GetData' Bitcoin_Tool.Structs.Net.Inv
+Bitcoin_Tool.Structs.Net,Message,5,7,1,5,6,107,9,0,1,0.29,15,1,Bitcoin_Tool.Structs.Net.IPayload' Bitcoin_Tool.Structs.Net.Addr' Bitcoin_Tool.Structs.Net.Alert' Bitcoin_Tool.Structs.Net.Block' Bitcoin_Tool.Structs.Net.GetAddr' Bitcoin_Tool.Structs.Net.GetBlocks' Bitcoin_Tool.Structs.Net.GetData' Bitcoin_Tool.Structs.Net.GetHeaders' Bitcoin_Tool.Structs.Net.Headers' Bitcoin_Tool.Structs.Net.Inv' Bitcoin_Tool.Structs.Net.Ping' Bitcoin_Tool.Structs.Net.Tx' Bitcoin_Tool.Structs.Net.VerAck' Bitcoin_Tool.Structs.Net.Version' Bitcoin_Tool.Structs.Net.UnknownPayload,Bitcoin_Tool.Program
+Bitcoin_Tool.Structs.Net,NetAddr,3,7,0,3,6,52,8,0,1,0.29,1,4,Bitcoin_Tool.Structs.Net.Services,Bitcoin_Tool.Structs.Net.Addr' Bitcoin_Tool.Structs.Net.TimeNetAddr' Bitcoin_Tool.Structs.Net.Version' Bitcoin_Tool.Program
+Bitcoin_Tool.Structs.Net,Ping,0,1,0,0,1,7,1,0,3,-1,0,1,,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,Services,0,0,0,0,0,4,0,0,0,-1,0,3,,Bitcoin_Tool.Structs.Net.NetAddr' Bitcoin_Tool.Structs.Net.Version' Bitcoin_Tool.Program
+Bitcoin_Tool.Structs.Net,Tx,0,3,0,0,2,16,3,0,2,-1,0,1,,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,VarStr,1,8,1,0,7,46,8,0,1,0.25,1,2,Bitcoin_Tool.Structs.VarInt,Bitcoin_Tool.Structs.Net.Alert' Bitcoin_Tool.Structs.Net.Version
+Bitcoin_Tool.Structs.Net,VerAck,0,1,0,0,1,7,1,0,3,-1,1,1,Bitcoin_Tool.Structs.Net.GetAddr,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Net,Version,8,7,0,8,6,73,7,0,2,0.29,4,2,Bitcoin_Tool.Structs.Net.Services' Bitcoin_Tool.Structs.Net.NetAddr' Bitcoin_Tool.Structs.Net.VarStr' Bitcoin_Tool.Util.UnixTimestamp,Bitcoin_Tool.Structs.Net.Message' Bitcoin_Tool.Program
+Bitcoin_Tool.Structs.Net,UnknownPayload,3,6,0,3,5,41,6,0,2,0,0,1,,Bitcoin_Tool.Structs.Net.Message
+Bitcoin_Tool.Structs.Other,TxOutId,2,8,0,2,8,53,9,0,1,0,1,1,Bitcoin_Tool.Structs.Hash,Bitcoin_Tool.Structs.Other.UnspentTxOutList
+Bitcoin_Tool.Structs.Other,UnspentTxOutList,2,10,0,0,9,120,21,0,1,0.2,2,2,Bitcoin_Tool.Structs.Other.TxOutId' Bitcoin_Tool.Structs.TxOut,Bitcoin_Tool.Apps.ComputeAddressBalances' Bitcoin_Tool.Apps.ComputeUnspentTxOuts
+Bitcoin_Tool.Util,BlockFileReader,1,3,1,0,3,39,5,0,0,0,1,2,Bitcoin_Tool.Structs.Block_Disk,Bitcoin_Tool.Apps.ComputeUnspentTxOuts' Bitcoin_Tool.Apps.FindFirstOrphan
+Bitcoin_Tool.Util,SignMessage,1,1,0,0,1,9,1,0,0,0,1,0,Bitcoin_Tool.Crypto.PublicKey,
+Bitcoin_Tool.Util,UnixTimestamp,0,0,1,0,0,11,0,0,0,-1,0,1,,Bitcoin_Tool.Structs.Net.Version
+Bitcoin_Tool.Crypto,Address,8,8,4,4,6,132,17,0,0,0.38,4,2,Bitcoin_Tool.Structs.Hash' Bitcoin_Tool.DataConverters.Base58CheckString' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Scripts.ScriptElement,Bitcoin_Tool.Apps.ComputeAddressBalances' Bitcoin_Tool.Scripts.ScriptTemplate
+Bitcoin_Tool.Crypto,PrivateKey,1,9,1,0,9,66,12,0,0,0.56,3,1,Bitcoin_Tool.Crypto.ECKeyPair' Bitcoin_Tool.DataConverters.Base58CheckString' Bitcoin_Tool.DataConverters.HexString,Bitcoin_Tool.Scripts.SigningExtensions
+Bitcoin_Tool.Crypto,PublicKey,1,7,1,0,7,41,8,0,0,0.29,2,4,Bitcoin_Tool.Crypto.ECKeyPair' Bitcoin_Tool.DataConverters.HexString,Bitcoin_Tool.Scripts.SigningExtensions' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Scripts.ScriptTemplate' Bitcoin_Tool.Util.SignMessage
+Bitcoin_Tool.Crypto,ECKeyPair,1,7,3,0,4,71,11,0,0,0,0,2,,Bitcoin_Tool.Crypto.PrivateKey' Bitcoin_Tool.Crypto.PublicKey
+Bitcoin_Tool.DataConverters,Base58CheckString,0,3,0,0,3,23,4,0,0,-1,1,2,Bitcoin_Tool.DataConverters.Base58String,Bitcoin_Tool.Crypto.Address' Bitcoin_Tool.Crypto.PrivateKey
+Bitcoin_Tool.DataConverters,Base58String,1,2,0,0,2,41,7,0,0,0,0,1,,Bitcoin_Tool.DataConverters.Base58CheckString
+Bitcoin_Tool.DataConverters,HexString,0,4,0,0,4,37,8,0,0,-1,0,5,,Bitcoin_Tool.Apps.MakeBootstrap' Bitcoin_Tool.Scripts.Script' Bitcoin_Tool.Crypto.PrivateKey' Bitcoin_Tool.Crypto.PublicKey' Bitcoin_Tool.Program
+Bitcoin_Tool,Program,0,2,0,0,0,132,5,0,0,-1,8,0,Bitcoin_Tool.Structs.Net.NetAddr' Bitcoin_Tool.Structs.Net.Inv' Bitcoin_Tool.Structs.Net.Message' Bitcoin_Tool.Structs.ISerialize' Bitcoin_Tool.Structs.Net.Services' Bitcoin_Tool.Structs.Net.Version' Bitcoin_Tool.Structs.Net.InvType' Bitcoin_Tool.DataConverters.HexString,

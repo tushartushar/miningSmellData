@@ -1,7 +1,8 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Agent,0,4,0,0,0,79,16,0,0,-1,4,0
-PNUnitAgent,2,5,0,0,3,88,18,0,1,0.4,2,1
-AgentConfig,4,0,0,4,0,8,0,0,0,-1,0,4
-AgentConfigLoader,0,1,0,0,1,13,1,0,0,-1,1,1
-PNUnitTestRunner,7,15,0,0,3,334,23,0,0,0.2,15,0
-TestConsoleAccess,1,5,0,0,5,31,5,0,1,0.4,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PNUnit.Agent,Agent,0,4,0,0,0,90,14,0,0,-1,4,0,PNUnit.Agent.AgentConfig' PNUnit.Agent.PNUnitAgent' PNUnit.Agent.AgentConfigLoader' NUnit.Util.ServiceManager,
+PNUnit.Agent,PNUnitAgent,2,5,0,0,3,107,9,0,1,0.4,4,1,PNUnit.Agent.AgentConfig' PNUnit.Framework.PNUnitTestInfo' PNUnit.Agent.PNUnitTestRunner' PNUnit.Framework.Names,PNUnit.Agent.Agent
+PNUnit.Agent,AgentConfig,4,0,0,4,0,8,0,0,0,-1,0,4,,PNUnit.Agent.Agent' PNUnit.Agent.PNUnitAgent' PNUnit.Agent.AgentConfigLoader' PNUnit.Agent.PNUnitTestRunner
+PNUnit.Agent,AgentConfigLoader,0,1,0,0,1,16,1,0,0,-1,1,1,PNUnit.Agent.AgentConfig,PNUnit.Agent.Agent
+PNUnit.Agent,PNUnitTestRunner,7,15,0,0,3,403,24,0,0,0.2,16,1,PNUnit.Framework.PNUnitTestInfo' PNUnit.Agent.AgentConfig' NUnit.Core.TestResult' NUnit.Util.TestDomain' PNUnit.Agent.TestConsoleAccess' NUnit.Util.ConsoleWriter' PNUnit.Framework.IPNUnitServices' NUnit.Core.EventListener' NUnit.Core.ITestFilter' NUnit.Core.LoggingThreshold' PNUnit.Framework.PNUnitServices' NUnit.Core.TestName' PNUnit.Framework.PNUnitTestResult' NUnit.Core.ITest' NUnit.Core.TestPackage' NUnit.Core.TestRunner,PNUnit.Agent.PNUnitAgent
+PNUnit.Agent,EventCollector,8,13,0,0,13,129,22,0,1,0.54,8,0,NUnit.Util.ConsoleWriter' NUnit.Core.Test' NUnit.Core.TestResult' NUnit.Core.ITest' NUnit.Util.StackTraceFilter' NUnit.Core.TestName' NUnit.Core.TestMethod' NUnit.Core.TestOutput,
+PNUnit.Agent,TestConsoleAccess,1,5,0,0,5,31,5,0,1,0.4,0,1,,PNUnit.Agent.PNUnitTestRunner

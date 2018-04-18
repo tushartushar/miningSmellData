@@ -1,35 +1,35 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ActivityStatusConverter,0,2,1,0,2,21,2,0,0,-1,1,0
-CrystalQuartzOptions,0,0,2,0,0,11,0,0,0,-1,0,4
-CrystalQuartzPanelApplication,3,1,1,0,1,32,1,0,1,0,4,2
-DateTimeConverter,0,3,1,0,2,34,5,0,0,-1,0,0
-AbstractOperationCommand,0,3,0,0,0,12,3,13,1,-1,3,0
-AbstractSchedulerCommand,2,2,2,0,0,28,3,3,1,1,3,0
-AddTriggerCommand,0,2,0,0,1,31,10,0,2,-1,4,0
-DeleteGroupCommand,0,2,0,0,1,11,2,0,2,-1,3,0
-DeleteJobCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-DeleteTriggerCommand,0,2,0,0,1,11,2,0,2,-1,3,0
-ExecuteNowCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-GetDataCommand,0,2,0,0,1,9,2,0,2,-1,3,0
-GetEnvironmentDataCommand,1,4,0,0,1,33,6,0,1,0,2,0
-GetJobDetailsCommand,0,2,0,0,1,12,2,0,2,-1,4,0
-PauseGroupCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-PauseJobCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-PauseTriggerCommand,0,2,0,0,1,11,2,0,2,-1,3,0
-ResumeGroupCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-ResumeJobCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-ResumeTriggerCommand,0,2,0,0,1,11,2,0,2,-1,3,0
-StartSchedulerCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-StopSchedulerCommand,0,2,0,0,1,10,2,0,2,-1,3,0
-AddTriggerInput,0,0,6,0,0,30,0,0,1,-1,0,1
-GroupInput,0,0,1,0,0,7,0,2,0,-1,0,3
-JobInput,0,0,1,0,0,7,0,1,1,-1,0,5
-NoInput,0,0,0,0,0,3,0,0,0,-1,0,4
-TriggerInput,0,0,1,0,0,7,0,0,1,-1,0,3
-CommandResultWithErrorDetails,0,0,1,0,0,7,0,4,1,-1,1,1
-EnvironmentDataOutput,0,0,4,0,0,19,0,0,2,-1,0,1
-JobDetailsOutput,0,0,2,0,0,11,0,0,2,-1,1,1
-Property,0,1,3,0,1,21,1,0,0,-1,0,2
-SchedulerDataOutput,0,0,12,0,0,51,0,0,2,-1,2,2
-TriggerDataOutput,0,0,1,0,0,7,0,0,2,-1,1,0
-MappingHelper,0,1,0,0,1,18,1,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CrystalQuartz.Application,ActivityStatusConverter,0,2,1,0,2,20,2,0,0,-1,1,0,CrystalQuartz.Core.Domain.ActivityStatus,
+CrystalQuartz.Application,CrystalQuartzOptions,0,0,2,0,0,5,0,0,0,-1,0,3,,CrystalQuartz.Application.CrystalQuartzPanelApplication' CrystalQuartz.Owin.AppBuilderExtensions' CrystalQuartz.Owin.CrystalQuartzPanelMiddleware
+CrystalQuartz.Application,CrystalQuartzPanelApplication,3,1,1,0,1,66,1,0,1,0,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.CrystalQuartzOptions,
+CrystalQuartz.Application,DateTimeConverter,0,3,1,0,2,39,5,0,0,-1,0,0,,
+CrystalQuartz.Application.Comands,AbstractOperationCommand<TInput>,0,3,0,0,0,12,3,0,0,-1,4,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Core.Domain.SchedulerData' CrystalQuartz.Application.Comands.Outputs.SchedulerDataOutput,
+CrystalQuartz.Application.Comands,AbstractSchedulerCommand<TInput;TOutput>,2,2,2,0,0,31,3,0,0,1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Core.SchedulerProviders.SchedulerProviderException,
+CrystalQuartz.Application.Comands,AddTriggerCommand,0,2,0,0,1,41,4,0,0,-1,4,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.AddTriggerInput' CrystalQuartz.Application.Comands.Outputs.CommandResultWithErrorDetails,
+CrystalQuartz.Application.Comands,DeleteGroupCommand,0,2,0,0,1,11,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.GroupInput,
+CrystalQuartz.Application.Comands,DeleteJobCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.JobInput,
+CrystalQuartz.Application.Comands,DeleteTriggerCommand,0,2,0,0,1,11,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.TriggerInput,
+CrystalQuartz.Application.Comands,ExecuteNowCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.JobInput,
+CrystalQuartz.Application.Comands,GetDataCommand,0,2,0,0,1,9,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.NoInput,
+CrystalQuartz.Application.Comands,GetEnvironmentDataCommand,1,4,0,0,1,37,5,0,0,0,2,0,CrystalQuartz.Application.Comands.Outputs.EnvironmentDataOutput' CrystalQuartz.Application.Comands.Inputs.NoInput,
+CrystalQuartz.Application.Comands,GetJobDetailsCommand,0,2,0,0,1,18,2,0,0,-1,5,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Core.Domain.JobDetailsData' CrystalQuartz.Application.Comands.Inputs.JobInput' CrystalQuartz.Application.Comands.Outputs.JobDetailsOutput,
+CrystalQuartz.Application.Comands,PauseGroupCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.GroupInput,
+CrystalQuartz.Application.Comands,PauseJobCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.JobInput,
+CrystalQuartz.Application.Comands,PauseTriggerCommand,0,2,0,0,1,11,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.TriggerInput,
+CrystalQuartz.Application.Comands,ResumeGroupCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.GroupInput,
+CrystalQuartz.Application.Comands,ResumeJobCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.JobInput,
+CrystalQuartz.Application.Comands,ResumeTriggerCommand,0,2,0,0,1,11,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.TriggerInput,
+CrystalQuartz.Application.Comands,StartSchedulerCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.NoInput,
+CrystalQuartz.Application.Comands,StopSchedulerCommand,0,2,0,0,1,10,2,0,0,-1,3,0,CrystalQuartz.Core.SchedulerProviders.ISchedulerProvider' CrystalQuartz.Core.ISchedulerDataProvider' CrystalQuartz.Application.Comands.Inputs.NoInput,
+CrystalQuartz.Application.Comands.Inputs,AddTriggerInput,0,0,6,0,0,12,0,0,1,-1,0,1,,CrystalQuartz.Application.Comands.AddTriggerCommand
+CrystalQuartz.Application.Comands.Inputs,GroupInput,0,0,1,0,0,4,0,2,0,-1,0,3,,CrystalQuartz.Application.Comands.DeleteGroupCommand' CrystalQuartz.Application.Comands.PauseGroupCommand' CrystalQuartz.Application.Comands.ResumeGroupCommand
+CrystalQuartz.Application.Comands.Inputs,JobInput,0,0,1,0,0,4,0,1,1,-1,0,5,,CrystalQuartz.Application.Comands.DeleteJobCommand' CrystalQuartz.Application.Comands.ExecuteNowCommand' CrystalQuartz.Application.Comands.GetJobDetailsCommand' CrystalQuartz.Application.Comands.PauseJobCommand' CrystalQuartz.Application.Comands.ResumeJobCommand
+CrystalQuartz.Application.Comands.Inputs,NoInput,0,0,0,0,0,3,0,0,0,-1,0,4,,CrystalQuartz.Application.Comands.GetDataCommand' CrystalQuartz.Application.Comands.GetEnvironmentDataCommand' CrystalQuartz.Application.Comands.StartSchedulerCommand' CrystalQuartz.Application.Comands.StopSchedulerCommand
+CrystalQuartz.Application.Comands.Inputs,TriggerInput,0,0,1,0,0,4,0,0,1,-1,0,3,,CrystalQuartz.Application.Comands.DeleteTriggerCommand' CrystalQuartz.Application.Comands.PauseTriggerCommand' CrystalQuartz.Application.Comands.ResumeTriggerCommand
+CrystalQuartz.Application.Comands.Outputs,CommandResultWithErrorDetails,0,0,1,0,0,4,0,4,1,-1,0,1,,CrystalQuartz.Application.Comands.AddTriggerCommand
+CrystalQuartz.Application.Comands.Outputs,EnvironmentDataOutput,0,0,4,0,0,7,0,0,2,-1,0,1,,CrystalQuartz.Application.Comands.GetEnvironmentDataCommand
+CrystalQuartz.Application.Comands.Outputs,JobDetailsOutput,0,0,2,0,0,5,0,0,2,-1,0,1,,CrystalQuartz.Application.Comands.GetJobDetailsCommand
+CrystalQuartz.Application.Comands.Outputs,Property,0,1,3,0,1,12,1,0,0,-1,0,0,,
+CrystalQuartz.Application.Comands.Outputs,SchedulerDataOutput,0,0,12,0,0,15,0,0,2,-1,0,2,,CrystalQuartz.Application.Comands.AbstractOperationCommand<TInput>' CrystalQuartz.Application.Helpers.MappingHelper
+CrystalQuartz.Application.Comands.Outputs,TriggerDataOutput,0,0,1,0,0,4,0,0,2,-1,0,0,,
+CrystalQuartz.Application.Helpers,MappingHelper,0,1,0,0,1,18,1,0,0,-1,3,0,CrystalQuartz.Application.Comands.Outputs.SchedulerDataOutput' CrystalQuartz.Core.Domain.SchedulerData' CrystalQuartz.Core.Domain.SchedulerStatus,

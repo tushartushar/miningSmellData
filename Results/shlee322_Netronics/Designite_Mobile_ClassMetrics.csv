@@ -1,12 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AuthProcessor,2,4,0,0,3,29,5,0,0,0.75,1,1
-User,1,0,0,1,0,5,0,0,0,-1,0,2
-ChannelPipe,2,2,0,0,2,23,3,0,0,0,1,1
-Commend,1,4,0,0,4,27,6,0,0,0.5,2,1
-CommendAction,2,0,0,2,0,5,0,0,0,-1,1,1
-Handler,3,4,0,0,4,52,19,0,0,0,2,0
-Mobile,5,4,4,0,4,57,7,0,0,0,5,4
-Client,2,4,1,0,4,50,6,0,0,0,2,4
-Request,0,0,3,0,0,15,0,0,0,-1,1,3
-Push,2,6,0,0,6,71,8,0,0,0.83,3,1
-User,3,0,0,3,0,9,0,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Netronics.Mobile.Auth,AuthProcessor,2,4,0,0,3,28,5,0,0,0.75,1,1,Netronics.Mobile.Auth.User,Netronics.Mobile.Client
+Netronics.Mobile.Auth,User,1,0,0,1,0,4,0,0,0,-1,0,2,,Netronics.Mobile.Auth.AuthProcessor' Netronics.Mobile.Client
+Netronics.Mobile,ChannelPipe,2,2,0,0,2,26,2,0,0,0,1,1,Netronics.Mobile.Mobile,Netronics.Mobile.Mobile
+Netronics.Mobile,Commend,1,4,0,0,4,26,6,0,0,0.5,3,1,Netronics.Mobile.CommendAction' Netronics.Mobile.Client' Netronics.Mobile.Request,Netronics.Mobile.Mobile
+Netronics.Mobile,CommendAction,2,0,0,2,0,5,0,0,0,-1,0,1,,Netronics.Mobile.Commend
+Netronics.Mobile,Handler,3,4,0,0,4,52,5,0,0,0,3,0,Netronics.Mobile.Mobile' Netronics.Mobile.Client' Netronics.Mobile.Push.Push,
+Netronics.Mobile,Mobile,5,4,4,0,4,45,7,0,0,0,4,4,Netronics.Mobile.ChannelPipe' Netronics.Mobile.Push.Push' Netronics.Mobile.Commend' Netronics.Mobile.Request,MobileServer.Program' Netronics.Mobile.ChannelPipe' Netronics.Mobile.Handler' Netronics.Mobile.Push.Push
+Netronics.Mobile,Client,2,4,1,0,4,50,5,0,0,0,2,4,Netronics.Mobile.Auth.User' Netronics.Mobile.Auth.AuthProcessor,MobileServer.Program' Netronics.Mobile.Commend' Netronics.Mobile.Handler' Netronics.Mobile.Push.Push
+Netronics.Mobile,Request,0,0,3,0,0,6,0,0,0,-1,0,3,,MobileServer.Program' Netronics.Mobile.Commend' Netronics.Mobile.Mobile
+Netronics.Mobile.Push,Push,2,6,0,0,6,70,9,0,0,0.83,3,3,Netronics.Mobile.Mobile' Netronics.Mobile.Client' Netronics.Mobile.Push.User,MobileServer.Program' Netronics.Mobile.Handler' Netronics.Mobile.Mobile
+Netronics.Mobile.Push,User,3,0,0,3,0,6,0,0,0,-1,0,1,,Netronics.Mobile.Push.Push

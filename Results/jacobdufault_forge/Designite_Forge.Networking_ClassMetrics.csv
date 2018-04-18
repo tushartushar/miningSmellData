@@ -1,44 +1,48 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AutomaticTurnGame,7,5,3,0,5,148,12,0,0,0,6,0
-GameServerHandler,5,3,2,0,3,111,5,0,1,0,6,2
-GameClientHandler,1,3,4,0,3,52,5,0,1,0.67,5,1
-EndTurnNetworkMessage,2,0,0,2,0,14,0,0,1,-1,1,0
-SubmitCommandsNetworkMessage,2,0,0,2,0,17,0,0,1,-1,1,1
-AdjustTurnDelayNetworkMessage,1,0,0,1,0,12,0,0,1,-1,0,3
-IGameCommand,0,0,0,0,0,9,0,0,0,-1,0,4
-ChatMessageHandler,3,3,1,2,2,56,5,0,1,0,6,1
-ChatNetworkMessage,3,0,0,3,0,23,0,0,1,-1,2,1
-ReceivedChatMessage,3,0,0,3,0,18,0,0,0,-1,1,2
-ChatManager,2,4,2,0,4,78,5,0,0,0,6,0
-Configuration,2,1,0,2,1,28,2,0,0,0,0,2
-ServerDiscoveryFormat,2,0,0,2,0,14,0,0,0,-1,1,2
-DiscoveredServer,3,2,0,3,2,38,3,0,0,0,1,1
-NetworkServerDiscovery,2,4,1,0,3,68,12,0,0,0,5,1
-INetworkConnectionMonitor,0,2,0,0,0,14,2,3,0,-1,1,1
-NetworkMessageRecipient,0,0,0,0,0,29,0,0,0,-1,0,9
-Player,2,4,0,2,4,51,5,0,0,0,0,25
-INetworkMessage,0,0,0,0,0,8,0,14,0,-1,0,12
-INetworkMessageHandler,0,1,1,0,0,19,1,9,0,-1,2,3
-BaseNetworkMessageHandler,0,2,1,0,0,19,2,1,1,-1,3,0
-NetworkContext,6,15,5,0,12,461,71,0,0,0.2,11,13
-NetworkMessageDispatcher,1,5,0,0,4,73,11,0,0,0,4,1
-LobbyHost,2,6,1,0,5,103,10,0,1,0.33,6,1
-LobbyReadyNetworkMessage,0,0,0,0,0,7,0,0,1,-1,0,0
-LobbyNotReadyNetworkMessage,0,0,0,0,0,7,0,0,1,-1,0,1
-LobbyHostPlayerReadinessMessageHandler,3,5,3,0,5,66,7,0,1,0.4,4,1
-LobbyLaunchedHandler,1,1,1,1,1,16,1,0,1,0,4,1
-LobbyLaunchedNetworkMessage,0,0,0,0,0,7,0,0,1,-1,0,1
-LobbyMapVerifyNetworkMessage,1,0,0,1,0,12,0,0,1,-1,0,1
-LobbyMapDownloadRequestedNetworkMessage,0,0,0,0,0,7,0,0,1,-1,0,1
-LobbyMapDownloadNetworkMessage,1,0,0,1,0,10,0,0,1,-1,0,1
-MapDownloadServerMessageHandler,4,5,1,0,5,50,6,0,1,0.4,6,1
-IMapManager,0,3,0,0,0,10,3,1,0,-1,0,4
-MapDownloadClientMessageHandler,2,2,1,0,2,39,4,0,1,0,7,1
-LobbyMember,1,3,0,0,2,53,5,0,1,0.67,5,1
-PlayerJoinedNetworkMessage,1,0,0,1,0,9,0,0,1,-1,1,1
-PlayerLeftNetworkMessage,1,0,0,1,0,9,0,0,1,-1,1,1
-PlayerManager,2,4,2,0,4,55,8,0,1,0,7,1
-LobbyCommon,3,5,2,0,4,75,9,2,0,0,4,0
-PauseManager,2,2,2,0,2,58,3,0,0,0,4,0
-PauseMessageHandler,0,2,2,0,1,34,3,0,2,-1,3,1
-SetPauseStatusNetworkMessage,1,0,0,1,0,9,0,0,1,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Forge.Networking.AutomaticTurnGame,AutomaticTurnGame,7,5,3,0,5,140,12,0,0,0,4,0,Forge.Networking.AutomaticTurnGame.GameServerHandler' Forge.Networking.AutomaticTurnGame.GameClientHandler' Forge.Networking.Core.NetworkContext' Forge.Networking.Core.NetworkMessageRecipient,
+Forge.Networking.AutomaticTurnGame,GameServerHandler,5,3,2,0,3,104,4,0,1,0,7,2,Forge.Networking.AutomaticTurnGame.DelayedMessageAccumulator' Forge.Networking.Core.NetworkContext' Forge.Networking.Core.NetworkMessageRecipient' Forge.Networking.AutomaticTurnGame.SubmitCommandsNetworkMessage' Forge.Networking.AutomaticTurnGame.AdjustTurnDelayNetworkMessage' Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,Forge.Networking.AutomaticTurnGame.AutomaticTurnGame' Forge.Networking.AutomaticTurnGame.GameClientHandler
+Forge.Networking.AutomaticTurnGame,DelayedMessageAccumulator,2,4,0,0,4,42,7,0,0,0,0,1,,Forge.Networking.AutomaticTurnGame.GameServerHandler
+Forge.Networking.AutomaticTurnGame,GameClientHandler,1,3,4,0,3,48,5,0,1,0.67,5,1,Forge.Networking.AutomaticTurnGame.GameServerHandler' Forge.Networking.AutomaticTurnGame.EndTurnNetworkMessage' Forge.Networking.AutomaticTurnGame.AdjustTurnDelayNetworkMessage' Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,Forge.Networking.AutomaticTurnGame.AutomaticTurnGame
+Forge.Networking.AutomaticTurnGame,EndTurnNetworkMessage,2,0,0,2,0,13,0,0,1,-1,0,1,,Forge.Networking.AutomaticTurnGame.GameClientHandler
+Forge.Networking.AutomaticTurnGame,SubmitCommandsNetworkMessage,2,0,0,2,0,13,0,0,1,-1,0,1,,Forge.Networking.AutomaticTurnGame.GameServerHandler
+Forge.Networking.AutomaticTurnGame,AdjustTurnDelayNetworkMessage,1,0,0,1,0,8,0,0,1,-1,0,2,,Forge.Networking.AutomaticTurnGame.GameServerHandler' Forge.Networking.AutomaticTurnGame.GameClientHandler
+Forge.Networking.AutomaticTurnGame,IGameCommand,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Forge.Networking.Chat,ChatMessageHandler,3,3,1,2,2,44,5,0,1,0,6,1,Forge.Networking.Core.Player' Forge.Networking.Core.NetworkContext' Forge.Networking.Chat.ChatNetworkMessage' Forge.Networking.Chat.ReceivedChatMessage' Forge.Networking.Core.INetworkMessage' Forge.Utilities.Maybe,Forge.Networking.Chat.ChatManager
+Forge.Networking.Chat,ChatNetworkMessage,3,0,0,3,0,19,0,0,1,-1,0,1,,Forge.Networking.Chat.ChatMessageHandler
+Forge.Networking.Chat,ReceivedChatMessage,3,0,0,3,0,14,0,0,0,-1,1,1,Forge.Networking.Core.Player,Forge.Networking.Chat.ChatMessageHandler
+Forge.Networking.Chat,ChatManager,2,4,2,0,4,70,5,0,0,0,4,0,Forge.Networking.Core.NetworkContext' Forge.Networking.Chat.ChatMessageHandler' Forge.Networking.Core.NetworkMessageRecipient' Forge.Utilities.Maybe,
+Forge.Networking.Core,Configuration,2,1,0,2,1,23,2,0,0,0,0,2,,Forge.Networking.Core.NetworkServerDiscovery' Forge.Networking.Core.NetworkContext
+Forge.Networking.Core,ServerDiscoveryFormat,2,0,0,2,0,13,0,0,0,-1,0,2,,Forge.Networking.Core.NetworkServerDiscovery' Forge.Networking.Core.NetworkContext
+Forge.Networking.Core,DiscoveredServer,3,2,0,3,2,32,3,0,0,0,1,1,Forge.Networking.Core.Player,NetworkDebug.Form1
+Forge.Networking.Core,NetworkServerDiscovery,2,4,1,0,3,59,6,0,0,0,4,1,Forge.Networking.Core.Configuration' Forge.Networking.Core.ServerDiscoveryFormat' Forge.Utilities.Log' Forge.Utilities.SerializationHelpers,NetworkDebug.Form1
+Forge.Networking.Core,INetworkConnectionMonitor,0,2,0,0,0,10,2,3,0,-1,1,1,Forge.Networking.Core.Player,Forge.Networking.Core.NetworkContext
+Forge.Networking.Core,NetworkMessageRecipient,0,0,0,0,0,25,0,0,0,-1,0,9,,Forge.Networking.AutomaticTurnGame.AutomaticTurnGame' Forge.Networking.AutomaticTurnGame.GameServerHandler' Forge.Networking.Chat.ChatManager' Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.LobbyHost' Forge.Networking.Lobby.MapDownloadServerMessageHandler' Forge.Networking.Lobby.MapDownloadClientMessageHandler' Forge.Networking.Lobby.PlayerManager' NetworkDebug.Form1
+Forge.Networking.Core,Player,2,4,0,2,4,43,5,0,0,0,0,20,,Forge.Networking.AutomaticTurnGame.GameServerHandler' Forge.Networking.AutomaticTurnGame.GameClientHandler' Forge.Networking.Chat.ChatMessageHandler' Forge.Networking.Chat.ReceivedChatMessage' Forge.Networking.Core.DiscoveredServer' Forge.Networking.Core.INetworkConnectionMonitor' Forge.Networking.Core.INetworkMessageHandler' Forge.Networking.Core.BaseNetworkMessageHandler<TNetworkMessage>' Forge.Networking.Core.NetworkContext' Forge.Networking.Core.NetworkMessageDispatcher' Forge.Networking.Lobby.LobbyHost' Forge.Networking.Lobby.LobbyHostPlayerReadinessMessageHandler' Forge.Networking.Lobby.LobbyLaunchedHandler' Forge.Networking.Lobby.MapDownloadServerMessageHandler' Forge.Networking.Lobby.MapDownloadClientMessageHandler' Forge.Networking.Lobby.LobbyMember' Forge.Networking.Lobby.PlayerManager' Forge.Networking.Lobby.LobbyCommon' Forge.Networking.Pausing.PauseMessageHandler' NetworkDebug.Form1
+Forge.Networking.Core,INetworkMessage,0,0,0,0,0,3,0,14,0,-1,0,12,,Forge.Networking.AutomaticTurnGame.GameServerHandler' Forge.Networking.AutomaticTurnGame.GameClientHandler' Forge.Networking.Chat.ChatMessageHandler' Forge.Networking.Core.INetworkMessageHandler' Forge.Networking.Core.BaseNetworkMessageHandler<TNetworkMessage>' Forge.Networking.Core.NetworkContext' Forge.Networking.Core.NetworkMessageDispatcher' Forge.Networking.Lobby.LobbyHostPlayerReadinessMessageHandler' Forge.Networking.Lobby.LobbyLaunchedHandler' Forge.Networking.Lobby.MapDownloadServerMessageHandler' Forge.Networking.Lobby.MapDownloadClientMessageHandler' Forge.Networking.Lobby.PlayerManager
+Forge.Networking.Core,INetworkMessageHandler,0,1,1,0,0,15,1,9,0,-1,2,2,Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,Forge.Networking.Core.NetworkContext' Forge.Networking.Core.NetworkMessageDispatcher
+Forge.Networking.Core,BaseNetworkMessageHandler<TNetworkMessage>,0,2,1,0,0,11,2,0,1,-1,2,0,Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,
+Forge.Networking.Core,NetworkContext,6,15,5,0,12,444,33,0,0,0.13,13,13,Forge.Networking.Core.NetworkMessageDispatcher' Forge.Networking.Core.Player' Forge.Networking.Core.Configuration' Forge.Utilities.Log' Forge.Networking.Core.HailMessageFormat' Forge.Utilities.SerializationHelpers' Forge.Utilities.Maybe' Forge.Networking.Core.INetworkMessageHandler' Forge.Networking.Core.INetworkConnectionMonitor' Forge.Networking.Core.ServerDiscoveryFormat' Forge.Networking.Core.NetworkMessageFormat' Forge.Networking.Core.NetworkMessageRecipient' Forge.Networking.Core.INetworkMessage,Forge.Networking.AutomaticTurnGame.AutomaticTurnGame' Forge.Networking.AutomaticTurnGame.GameServerHandler' Forge.Networking.Chat.ChatMessageHandler' Forge.Networking.Chat.ChatManager' Forge.Networking.Lobby.LobbyHost' Forge.Networking.Lobby.LobbyHostPlayerReadinessMessageHandler' Forge.Networking.Lobby.MapDownloadServerMessageHandler' Forge.Networking.Lobby.MapDownloadClientMessageHandler' Forge.Networking.Lobby.LobbyMember' Forge.Networking.Lobby.PlayerManager' Forge.Networking.Lobby.LobbyCommon' Forge.Networking.Pausing.PauseManager' NetworkDebug.Form1
+Forge.Networking.Core,NetworkMessageFormat,3,0,0,3,0,9,0,0,0,-1,0,1,,Forge.Networking.Core.NetworkContext
+Forge.Networking.Core,HailMessageFormat,2,0,0,2,0,13,0,0,0,-1,0,1,,Forge.Networking.Core.NetworkContext
+Forge.Networking.Core,NetworkMessageDispatcher,1,5,0,0,4,56,11,0,0,0,4,1,Forge.Networking.Core.INetworkMessageHandler' Forge.Networking.Core.INetworkMessage' Forge.Utilities.Log' Forge.Networking.Core.Player,Forge.Networking.Core.NetworkContext
+Forge.Networking.Lobby,LobbyHost,2,6,1,0,5,96,10,0,1,0.33,8,1,Forge.Networking.Lobby.MapDownloadServerMessageHandler' Forge.Networking.Lobby.LobbyHostPlayerReadinessMessageHandler' Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.IMapManager' Forge.Networking.Lobby.LobbyCommon' Forge.Networking.Core.NetworkMessageRecipient' Forge.Networking.Lobby.LobbySettings' Forge.Networking.Core.Player,NetworkDebug.Form1
+Forge.Networking.Lobby,LobbySettings,3,0,0,3,0,15,0,0,0,-1,1,2,Forge.Networking.Lobby.IMapManager,Forge.Networking.Lobby.LobbyHost' NetworkDebug.Form1
+Forge.Networking.Lobby,LobbyReadyNetworkMessage,0,0,0,0,0,2,0,0,1,-1,0,1,,Forge.Networking.Lobby.LobbyHostPlayerReadinessMessageHandler
+Forge.Networking.Lobby,LobbyNotReadyNetworkMessage,0,0,0,0,0,2,0,0,1,-1,0,1,,Forge.Networking.Lobby.LobbyHostPlayerReadinessMessageHandler
+Forge.Networking.Lobby,LobbyHostPlayerReadinessMessageHandler,3,5,3,0,5,58,6,0,1,0.4,5,1,Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.LobbyNotReadyNetworkMessage' Forge.Networking.Lobby.LobbyReadyNetworkMessage' Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,Forge.Networking.Lobby.LobbyHost
+Forge.Networking.Lobby,LobbyLaunchedHandler,1,1,1,1,1,10,1,0,1,0,4,1,Forge.Utilities.Contract' Forge.Networking.Lobby.LobbyLaunchedNetworkMessage' Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,Forge.Networking.Lobby.LobbyCommon
+Forge.Networking.Lobby,LobbyLaunchedNetworkMessage,0,0,0,0,0,3,0,0,1,-1,0,1,,Forge.Networking.Lobby.LobbyLaunchedHandler
+Forge.Networking.Lobby,LobbyMapVerifyNetworkMessage,1,0,0,1,0,8,0,0,1,-1,0,1,,Forge.Networking.Lobby.MapDownloadClientMessageHandler
+Forge.Networking.Lobby,LobbyMapDownloadRequestedNetworkMessage,0,0,0,0,0,3,0,0,1,-1,0,1,,Forge.Networking.Lobby.MapDownloadServerMessageHandler
+Forge.Networking.Lobby,LobbyMapDownloadNetworkMessage,1,0,0,1,0,5,0,0,1,-1,0,1,,Forge.Networking.Lobby.MapDownloadClientMessageHandler
+Forge.Networking.Lobby,MapDownloadServerMessageHandler,4,5,1,0,5,39,6,0,1,0.4,6,1,Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.IMapManager' Forge.Networking.Core.NetworkMessageRecipient' Forge.Networking.Lobby.LobbyMapDownloadRequestedNetworkMessage' Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,Forge.Networking.Lobby.LobbyHost
+Forge.Networking.Lobby,IMapManager,0,3,0,0,0,5,3,1,0,-1,0,5,,Forge.Networking.Lobby.LobbyHost' Forge.Networking.Lobby.LobbySettings' Forge.Networking.Lobby.MapDownloadServerMessageHandler' Forge.Networking.Lobby.MapDownloadClientMessageHandler' Forge.Networking.Lobby.LobbyMember
+Forge.Networking.Lobby,MapDownloadClientMessageHandler,2,2,1,0,2,32,4,0,1,0,7,1,Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.IMapManager' Forge.Networking.Lobby.LobbyMapDownloadNetworkMessage' Forge.Networking.Lobby.LobbyMapVerifyNetworkMessage' Forge.Networking.Core.NetworkMessageRecipient' Forge.Networking.Core.Player' Forge.Networking.Core.INetworkMessage,Forge.Networking.Lobby.LobbyMember
+Forge.Networking.Lobby,LobbyMember,1,3,0,0,2,47,5,0,1,0.67,6,1,Forge.Networking.Lobby.MapDownloadClientMessageHandler' Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.IMapManager' Forge.Networking.Lobby.LobbyCommon' Forge.Utilities.Maybe' Forge.Networking.Core.Player,NetworkDebug.Form1
+Forge.Networking.Lobby,PlayerJoinedNetworkMessage,1,0,0,1,0,5,0,0,1,-1,0,1,,Forge.Networking.Lobby.PlayerManager
+Forge.Networking.Lobby,PlayerLeftNetworkMessage,1,0,0,1,0,5,0,0,1,-1,0,1,,Forge.Networking.Lobby.PlayerManager
+Forge.Networking.Lobby,PlayerManager,2,4,2,0,4,51,7,0,1,0,7,1,Forge.Networking.Core.NetworkContext' Forge.Networking.Core.NetworkMessageRecipient' Forge.Networking.Core.Player' Forge.Utilities.Log' Forge.Networking.Lobby.PlayerJoinedNetworkMessage' Forge.Networking.Lobby.PlayerLeftNetworkMessage' Forge.Networking.Core.INetworkMessage,Forge.Networking.Lobby.LobbyCommon
+Forge.Networking.Lobby,LobbyCommon,3,5,2,0,4,66,9,2,0,0,4,2,Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.LobbyLaunchedHandler' Forge.Networking.Lobby.PlayerManager' Forge.Networking.Core.Player,Forge.Networking.Lobby.LobbyHost' Forge.Networking.Lobby.LobbyMember
+Forge.Networking.Pausing,PauseManager,2,2,2,0,2,52,3,0,0,0,2,0,Forge.Networking.Core.NetworkContext' Forge.Networking.Pausing.PauseMessageHandler,
+Forge.Networking.Pausing,PauseMessageHandler,0,2,2,0,1,30,3,0,0,-1,3,1,Forge.Utilities.Maybe' Forge.Networking.Pausing.SetPauseStatusNetworkMessage' Forge.Networking.Core.Player,Forge.Networking.Pausing.PauseManager
+Forge.Networking.Pausing,SetPauseStatusNetworkMessage,1,0,0,1,0,5,0,0,1,-1,0,1,,Forge.Networking.Pausing.PauseMessageHandler

@@ -1,52 +1,53 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-LinkerPreserve,0,1,0,0,0,8,1,0,0,-1,0,0
-PreserveAttribute,0,0,0,0,0,3,0,0,0,-1,0,0
-App,3,4,8,0,3,85,6,0,0,0.75,13,1
-AppSetup,0,2,0,0,1,38,2,1,0,-1,0,1
-Spike,0,1,0,0,0,26,1,0,0,-1,0,0
-AsyncImageSource,0,3,0,0,3,18,3,0,0,-1,1,1
-NotifyTaskCompletion,1,2,11,0,1,95,7,0,0,1,0,4
-AsyncLazy,0,3,0,0,3,16,3,0,0,-1,0,1
-AnimateSizeBehavior,3,5,2,2,0,67,16,0,0,0.6,0,0
-LogOutCommand,3,3,0,0,3,30,3,0,0,0,2,1
-Category,0,0,2,0,0,11,0,0,0,-1,0,3
-Product,0,0,9,0,0,39,0,0,0,-1,0,7
-User,0,0,2,0,0,11,0,0,0,-1,0,1
-SimpleCommand,4,10,0,0,10,59,12,0,0,0.5,0,1
-AppNavigation,3,6,0,0,6,49,9,0,1,0,6,0
-Cache,0,4,0,0,4,23,5,0,1,-1,0,0
-IAppNavigation,0,5,0,0,0,8,5,1,0,-1,1,5
-ICache,0,3,0,0,0,6,3,3,0,-1,0,1
-MockCache,1,4,0,0,4,24,4,0,1,0,1,0
-ILogger,0,8,0,0,0,11,8,1,0,-1,0,2
-ILoginService,0,3,0,0,0,6,3,1,0,-1,0,3
-INavigationService,0,1,0,0,0,4,1,1,0,-1,0,1
-Pages,0,0,0,0,0,7,0,0,0,-1,0,4
-IPageFactory,0,1,0,0,0,4,1,1,0,-1,1,2
-IProductLoader,0,1,0,0,0,4,1,1,0,-1,0,1
-IProductService,0,4,0,0,0,7,4,1,0,-1,0,1
-IScanner,0,1,0,0,0,4,1,1,0,-1,0,1
-ScanResult,0,0,1,0,0,7,0,0,0,-1,0,1
-IThemer,0,0,1,0,0,6,0,2,0,-1,0,0
-DefaultThemer,0,1,1,0,1,11,1,0,1,-1,0,0
-Messages,1,0,0,1,0,4,0,0,0,-1,0,4
-PageFactory,0,1,0,0,1,18,6,0,1,-1,5,0
-ProductLoader,2,2,0,1,1,1442,3,0,1,0,1,0
-ProductService,2,5,0,0,5,38,5,0,1,0,4,0
-LoginService,1,5,0,0,4,34,5,0,1,0,2,0
-NavigationService,0,6,2,0,6,35,6,0,1,-1,0,2
-AboutViewModel,0,1,3,0,1,21,1,0,1,-1,0,1
-BaseViewModel,1,4,0,0,0,37,5,7,0,0.5,0,0
-CategoryViewModel,1,1,4,0,1,34,3,0,1,0,2,1
-LoginViewModel,2,2,3,0,1,36,2,0,1,0,3,1
-CategoriesListViewModel,5,4,6,0,1,71,4,0,1,0,8,1
-ProductsListViewModel,1,2,2,0,1,30,2,0,1,0,4,1
-ProductViewModel,1,1,3,0,1,26,1,0,1,0,4,2
-WelcomeViewModel,2,2,2,0,1,34,2,0,1,0,2,1
-AboutPage,0,1,0,0,1,12,2,0,0,-1,0,1
-LoginPage,0,1,0,0,1,7,1,0,0,-1,0,1
-CategoriesListPage,0,1,0,0,1,7,1,0,0,-1,0,1
-ProductPage,0,1,0,0,1,7,1,0,0,-1,0,1
-ProductsListPage,0,1,0,0,1,7,1,0,0,-1,0,1
-WelcomePage,0,1,0,0,1,7,1,0,0,-1,0,1
-Page2,0,1,0,0,1,7,1,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ShoppingCart,LinkerPreserve,0,1,0,0,0,8,1,0,0,-1,0,0,,
+ShoppingCart,PreserveAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
+ShoppingCart,App,3,4,8,0,3,62,5,0,0,0.75,10,1,ShoppingCart.Services.NavigationService' ShoppingCart.ViewModels.ProductViewModel' ShoppingCart.Views.ProductPage' ShoppingCart.Models.Product' ShoppingCart.ViewModels.ProductsListViewModel' ShoppingCart.Views.ProductsListPage' ShoppingCart.Services.IPageFactory' ShoppingCart.AppSetup' ShoppingCart.Services.IThemer' ShoppingCart.Services.Pages,ShoppingCart.Services.AppNavigation
+ShoppingCart,AppSetup,0,2,0,0,1,38,2,0,0,-1,0,1,,ShoppingCart.App
+ShoppingCart,Spike,0,1,0,0,0,34,1,0,0,-1,0,0,,
+ShoppingCart.Async,AsyncImageSource,0,3,0,0,3,18,3,0,0,-1,0,1,,ShoppingCart.ViewModels.ProductViewModel
+ShoppingCart.Async,NotifyTaskCompletion<TResult>,1,2,11,0,1,81,5,0,0,1,0,0,,
+ShoppingCart.Async,AsyncLazy<T>,0,3,0,0,3,9,3,0,0,-1,0,0,,
+ShoppingCart.Behaviors,AnimateSizeBehavior,3,5,2,2,0,57,6,0,0,0.6,0,0,,
+ShoppingCart.Commands,LogOutCommand,3,3,0,0,3,32,3,0,0,0,2,1,ShoppingCart.Services.ILoginService' ShoppingCart.Services.IAppNavigation,ShoppingCart.ViewModels.CategoriesListViewModel
+ShoppingCart.Models,Category,0,0,2,0,0,5,0,0,0,-1,0,2,,ShoppingCart.ViewModels.CategoryViewModel' ShoppingCart.ViewModels.CategoriesListViewModel
+ShoppingCart.Models,Product,0,0,9,0,0,12,0,0,0,-1,0,6,,ShoppingCart.App' ShoppingCart.Services.AppNavigation' ShoppingCart.Services.IAppNavigation' ShoppingCart.Services.ProductLoader' ShoppingCart.ViewModels.ProductsListViewModel' ShoppingCart.ViewModels.ProductViewModel
+ShoppingCart.Models,User,0,0,2,0,0,5,0,0,0,-1,0,1,,ShoppingCart.Services.LoginService
+ShoppingCart.Mvvm,SimpleCommand,2,5,0,0,5,30,6,0,0,0.6,0,0,,
+ShoppingCart.Mvvm,SimpleCommand<T>,2,5,0,0,5,30,6,0,0,0.6,0,0,,
+ShoppingCart.Services,AppNavigation,3,6,0,0,6,58,9,0,1,0,6,0,ShoppingCart.Services.ILoginService' ShoppingCart.Services.INavigationService' ShoppingCart.Services.IPageFactory' ShoppingCart.Services.Pages' ShoppingCart.App' ShoppingCart.Models.Product,
+ShoppingCart.Services,Cache,0,4,0,0,4,26,4,0,1,-1,0,0,,
+ShoppingCart.Services,IAppNavigation,0,5,0,0,0,8,5,1,0,-1,1,5,ShoppingCart.Models.Product,ShoppingCart.Commands.LogOutCommand' ShoppingCart.ViewModels.LoginViewModel' ShoppingCart.ViewModels.CategoriesListViewModel' ShoppingCart.ViewModels.ProductsListViewModel' ShoppingCart.ViewModels.WelcomeViewModel
+ShoppingCart.Services,ICache,0,3,0,0,0,6,3,2,0,-1,0,1,,ShoppingCart.Services.LoginService
+ShoppingCart.Services,MockCache,1,4,0,0,4,24,4,0,1,0,1,0,ShoppingCart.Services.ILogger,
+ShoppingCart.Services,ILogger,0,8,0,0,0,11,8,0,0,-1,0,1,,ShoppingCart.Services.MockCache
+ShoppingCart.Services,ILoginService,0,3,0,0,0,6,3,1,0,-1,0,3,,ShoppingCart.Commands.LogOutCommand' ShoppingCart.Services.AppNavigation' ShoppingCart.ViewModels.LoginViewModel
+ShoppingCart.Services,INavigationService,0,1,0,0,0,4,1,1,0,-1,0,1,,ShoppingCart.Services.AppNavigation
+ShoppingCart.Services,Pages,0,0,0,0,0,7,0,0,0,-1,0,4,,ShoppingCart.App' ShoppingCart.Services.AppNavigation' ShoppingCart.Services.IPageFactory' ShoppingCart.Services.PageFactory
+ShoppingCart.Services,IPageFactory,0,1,0,0,0,4,1,1,0,-1,1,2,ShoppingCart.Services.Pages,ShoppingCart.App' ShoppingCart.Services.AppNavigation
+ShoppingCart.Services,IProductLoader,0,1,0,0,0,4,1,1,0,-1,0,1,,ShoppingCart.Services.ProductService
+ShoppingCart.Services,IProductService,0,4,0,0,0,7,4,1,0,-1,0,1,,ShoppingCart.ViewModels.CategoriesListViewModel
+ShoppingCart.Services,IScanner,0,1,0,0,0,4,1,0,0,-1,0,1,,ShoppingCart.ViewModels.CategoriesListViewModel
+ShoppingCart.Services,ScanResult,0,0,1,0,0,4,0,0,0,-1,0,0,,
+ShoppingCart.Services,IThemer,0,0,1,0,0,4,0,1,0,-1,0,1,,ShoppingCart.App
+ShoppingCart.Services,DefaultThemer,0,1,1,0,1,8,1,0,1,-1,0,0,,
+ShoppingCart.Services,Messages,1,0,0,1,0,4,0,0,0,-1,0,4,,ShoppingCart.ViewModels.CategoryViewModel' ShoppingCart.ViewModels.CategoriesListViewModel' ShoppingCart.ViewModels.ProductsListViewModel' ShoppingCart.ViewModels.ProductViewModel
+ShoppingCart.Services,PageFactory,0,1,0,0,1,14,2,0,1,-1,5,0,ShoppingCart.Services.Pages' ShoppingCart.Views.LoginPage' ShoppingCart.Views.WelcomePage' ShoppingCart.Views.CategoriesListPage' ShoppingCart.Views.AboutPage,
+ShoppingCart.Services,ProductLoader,2,2,0,1,1,1444,3,0,1,1,1,0,ShoppingCart.Models.Product,
+ShoppingCart.Services,ProductService,2,5,0,0,5,43,6,0,1,0,1,0,ShoppingCart.Services.IProductLoader,
+ShoppingCart.Services,LoginService,1,5,0,0,4,29,7,0,1,0,2,0,ShoppingCart.Services.ICache' ShoppingCart.Models.User,
+ShoppingCart.Services,NavigationService,0,6,2,0,6,29,6,0,1,-1,0,1,,ShoppingCart.App
+ShoppingCart.ViewModels,AboutViewModel,0,1,3,0,1,10,1,0,1,-1,0,0,,
+ShoppingCart.ViewModels,BaseViewModel,1,4,0,0,0,35,7,7,0,0,0,0,,
+ShoppingCart.ViewModels,CategoryViewModel,1,1,4,0,1,26,2,0,1,0,2,0,ShoppingCart.Models.Category' ShoppingCart.Services.Messages,
+ShoppingCart.ViewModels,LoginViewModel,2,2,3,0,1,26,2,0,1,0,2,0,ShoppingCart.Services.ILoginService' ShoppingCart.Services.IAppNavigation,
+ShoppingCart.ViewModels,CategoriesListViewModel,5,4,6,0,1,59,4,0,1,0,6,0,ShoppingCart.Commands.LogOutCommand' ShoppingCart.Services.IAppNavigation' ShoppingCart.Services.IScanner' ShoppingCart.Services.IProductService' ShoppingCart.Services.Messages' ShoppingCart.Models.Category,
+ShoppingCart.ViewModels,ProductsListViewModel,1,2,2,0,1,24,2,0,1,0,3,1,ShoppingCart.Services.IAppNavigation' ShoppingCart.Services.Messages' ShoppingCart.Models.Product,ShoppingCart.App
+ShoppingCart.ViewModels,ProductViewModel,1,1,3,0,1,17,1,0,1,0,3,1,ShoppingCart.Async.AsyncImageSource' ShoppingCart.Models.Product' ShoppingCart.Services.Messages,ShoppingCart.App
+ShoppingCart.ViewModels,WelcomeViewModel,2,2,2,0,1,31,2,0,1,0,1,0,ShoppingCart.Services.IAppNavigation,
+ShoppingCart.Views,AboutPage,0,1,0,0,1,14,2,0,0,-1,0,1,,ShoppingCart.Services.PageFactory
+ShoppingCart.Views,LoginPage,0,1,0,0,1,7,1,0,0,-1,0,1,,ShoppingCart.Services.PageFactory
+ShoppingCart.Views,CategoriesListPage,0,1,0,0,1,7,1,0,0,-1,0,1,,ShoppingCart.Services.PageFactory
+ShoppingCart.Views,ProductPage,0,1,0,0,1,7,1,0,0,-1,0,1,,ShoppingCart.App
+ShoppingCart.Views,ProductsListPage,0,1,0,0,1,7,1,0,0,-1,0,1,,ShoppingCart.App
+ShoppingCart.Views,WelcomePage,0,1,0,0,1,7,1,0,0,-1,0,1,,ShoppingCart.Services.PageFactory
+ShoppingCart.Views,Page2,0,1,0,0,1,7,1,0,0,-1,0,0,,

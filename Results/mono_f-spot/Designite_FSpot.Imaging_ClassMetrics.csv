@@ -1,0 +1,28 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+FSpot.Imaging,IImageFile,0,4,2,0,0,9,4,1,0,-1,0,15,,FSpot.PhotoLoader' FSpot.PrintOperation' FSpot.Editors.Editor' FSpot.Filters.ResizeFilter' FSpot.Filters.SharpFilter' FSpot.Loaders.GdkImageLoader' FSpot.UI.Dialog.EditTagIconDialog' FSpot.Widgets.ImageInfo' FSpot.Widgets.InfoBox' FSpot.Widgets.SlideShow' FSpot.Imaging.ImageFileFactory' FSpot.Imaging.ImageLoaderThread' FSpot.Thumbnail.ImageThumbnailer' FSpot.Addins.Editors.ResizeEditor' FSpot.Exporters.PicasaWeb.GoogleAccountDialog
+FSpot.Imaging,IOFlags,0,0,0,0,0,9,0,0,0,-1,0,0,,
+FSpot.Imaging,IOStatus,0,0,0,0,0,7,0,0,0,-1,0,1,,FSpot.Imaging.IOChannel
+FSpot.Imaging,IOCondition,0,0,0,0,0,13,0,0,0,-1,0,2,,FSpot.Imaging.DataReadEventArgs' FSpot.Imaging.IOChannel
+FSpot.Imaging,DataReadEventArgs,1,1,1,1,1,10,1,0,0,0,1,1,FSpot.Imaging.IOCondition,FSpot.Imaging.IOChannel
+FSpot.Imaging,IOChannel,4,18,5,0,7,171,27,0,0,0.33,4,2,FSpot.Imaging.IOStatus' Hyena.Log' FSpot.Imaging.IOCondition' FSpot.Imaging.DataReadEventArgs,FSpot.Imaging.InternalProcess' FSpot.Imaging.DCRawImageFile
+FSpot.Imaging,SeekType,0,0,0,0,0,5,0,0,0,-1,0,0,,
+FSpot.Imaging,InternalProcessFlags,0,0,0,0,0,11,0,0,0,-1,0,1,,FSpot.Imaging.InternalProcess
+FSpot.Imaging,InternalProcess,4,2,2,0,1,48,4,0,0,0,2,1,FSpot.Imaging.IOChannel' FSpot.Imaging.InternalProcessFlags,FSpot.Imaging.DCRawImageFile
+FSpot.Imaging,BaseImageFile,1,10,2,0,6,66,14,6,1,0.5,6,4,FSpot.Utils.Metadata' Hyena.SafeUri' Hyena.Log' GLib.File' GLib.FileFactory' GLib.GioStream,FSpot.Imaging.Cr2ImageFile' FSpot.Imaging.DngImageFile' FSpot.Imaging.NefImageFile' FSpot.Imaging.RafImageFile
+FSpot.Imaging,DCRawImageFile,1,3,0,0,2,19,3,0,2,0.67,3,4,Hyena.SafeUri' FSpot.Imaging.InternalProcess' FSpot.Imaging.IOChannel,FSpot.Imaging.CiffImageFile' FSpot.Imaging.DngImageFile' FSpot.Imaging.NefImageFile' FSpot.Imaging.RafImageFile
+FSpot.Imaging,ImageFormatException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+FSpot.Imaging,CiffImageFile,3,5,1,0,2,124,7,0,2,0.6,5,0,FSpot.Imaging.ImageDirectory' Hyena.SafeUri' FSpot.BitConverter' FSpot.Imaging.DCRawImageFile' FSpot.Imaging.Tag,
+FSpot.Imaging,Tag,0,0,0,0,0,3,0,0,0,-1,0,3,,FSpot.Imaging.CiffImageFile' FSpot.Imaging.Entry' FSpot.Imaging.ImageDirectory
+FSpot.Imaging,Entry,3,1,0,0,1,11,1,0,0,0,2,1,FSpot.Imaging.Tag' FSpot.BitConverter,FSpot.Imaging.ImageDirectory
+FSpot.Imaging,ImageDirectory,6,4,0,0,4,60,9,0,0,0,4,1,FSpot.BitConverter' Hyena.Log' FSpot.Imaging.Entry' FSpot.Imaging.Tag,FSpot.Imaging.CiffImageFile
+FSpot.Imaging,Cr2ImageFile,1,3,0,0,2,27,4,0,2,0.67,3,0,Hyena.SafeUri' FSpot.Imaging.BaseImageFile' Hyena.Log,
+FSpot.Imaging,DngImageFile,1,3,0,0,2,33,4,0,2,0.67,4,0,Hyena.SafeUri' FSpot.Imaging.BaseImageFile' Hyena.Log' FSpot.Imaging.DCRawImageFile,
+FSpot.Imaging,NefImageFile,1,3,0,0,2,27,4,0,2,0.67,4,0,Hyena.SafeUri' FSpot.Imaging.BaseImageFile' Hyena.Log' FSpot.Imaging.DCRawImageFile,
+FSpot.Imaging,RafImageFile,0,3,0,0,2,30,3,0,2,-1,4,0,Hyena.SafeUri' FSpot.Imaging.DCRawImageFile' FSpot.Imaging.BaseImageFile' FSpot.BitConverter,
+FSpot.Imaging,ImageFileFactory,5,12,0,0,7,199,23,0,1,0,9,2,FSpot.Utils.TinyIoCContainer' FSpot.FileSystem.IFileSystem' FSpot.Imaging.ImageType' FSpot.Utils.RegisterOptions' Hyena.SafeUri' FSpot.Utils.NamedParameterOverloads' FSpot.FileSystem.IFile' Hyena.Log' FSpot.Imaging.IImageFile,FSpot.Imaging.TestOf_ImageFile' FSpot.Imaging.UnitTest.ImageFileTests
+FSpot.Imaging,ImageType,0,0,0,0,0,5,0,0,0,-1,0,1,,FSpot.Imaging.ImageFileFactory
+FSpot.Imaging,ModuleController,0,1,0,0,1,7,1,0,0,-1,2,1,FSpot.Utils.RegisterOptions' FSpot.Utils.TinyIoCContainer,FSpot.App
+FSpot.Imaging,IImageFileFactory,0,5,0,0,0,8,5,1,0,-1,1,28,Hyena.SafeUri,FSpot.PhotoLoader' FSpot.PrintOperation' FSpot.UriCollection' FSpot.DirectoryLoader' FSpot.Editors.Editor' FSpot.Filters.ResizeFilter' FSpot.Filters.SharpFilter' FSpot.Loaders.GdkImageLoader' FSpot.Loaders.ImageLoader' FSpot.UI.Dialog.EditTagIconDialog' FSpot.Widgets.ImageInfo' FSpot.Widgets.InfoBox' FSpot.Widgets.SlideShow' FSpot.Import.ImportSource' FSpot.Import.MultiImportSource' FSpot.Photo' FSpot.Database.Db' FSpot.Database.PhotoStore' FSpot.Imaging.ImageLoaderThread' FSpot.Import.FileImportSource' FSpot.Import.MultiFileImportSource' FSpot.Thumbnail.ThumbnailerFactory' FSpot.Thumbnail.ImageThumbnailer' FSpot.Thumbnail.ThumbnailLoader' FSpot.Addins.Editors.ResizeEditor' FSpot.Exporters.PicasaWeb.GoogleAccountDialog' FSpot.Tools.DevelopInUFraw.AbstractDevelopInUFRaw' FSpot.Tools.RawPlusJpeg.RawPlusJpeg
+FSpot.Imaging,ImageLoaderThread,11,14,0,0,8,211,24,1,1,0,5,1,FSpot.RequestItem' FSpot.Imaging.IImageFileFactory' Hyena.SafeUri' FSpot.Imaging.IImageFile' Hyena.Log,FSpot.App
+FSpot.Imaging,IImageLoaderThread,0,0,0,0,0,4,0,2,0,-1,0,2,,FSpot.PixbufCache' FSpot.Widgets.Filmstrip
+FSpot,RequestItem,1,1,5,0,1,40,2,0,0,0,1,4,Hyena.SafeUri,FSpot.PixbufCache' FSpot.Widgets.Filmstrip' FSpot.Imaging.ImageLoaderThread' FSpot.Thumbnail.ThumbnailLoader

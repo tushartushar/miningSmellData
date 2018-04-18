@@ -1,35 +1,40 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Application,3,5,0,0,5,51,16,0,0,0.4,3,1
-Configuration,0,1,3,0,1,20,1,0,0,-1,0,2
-Extensions,0,1,0,0,1,7,1,0,0,-1,0,0
-Program,0,4,0,0,0,39,8,0,0,-1,3,0
-StringCoda,0,6,0,0,2,75,18,0,0,-1,0,1
-OptionValueCollection,2,22,5,0,12,152,25,0,0,0,2,2
-OptionContext,5,1,5,0,1,47,1,0,0,0,3,3
-OptionValueType,0,0,0,0,0,6,0,0,0,-1,0,3
-Option,7,10,6,0,4,168,42,0,0,0.4,2,2
-ArgumentSource,0,6,1,0,4,55,14,1,0,-1,0,2
-ResponseFileSource,0,2,1,0,2,23,3,0,1,-1,1,0
-OptionException,1,5,1,0,4,31,5,0,0,0.4,0,0
-OptionSet,7,37,2,0,15,572,125,0,0,0.43,6,2
-FileWriter,2,5,0,0,2,36,8,0,0,0,2,0
-WriteContext,1,1,1,0,1,13,1,0,0,0,0,1
-SqlObject,2,4,9,0,4,62,4,0,0,0.5,3,11
-SqlType,0,0,0,0,0,8,0,0,0,-1,0,7
-FunctionQuery,0,1,3,0,1,28,1,0,1,-1,3,0
-IndexQuery,0,2,3,0,2,122,11,0,1,-1,5,0
-IQueryBase,0,3,3,0,0,15,3,1,0,-1,1,2
-QueryBase,0,5,5,0,4,39,5,3,1,-1,2,0
-ProcedureQuery,0,0,3,0,0,24,0,0,1,-1,1,0
-SequenceQuery,0,2,4,0,2,79,8,0,2,-1,4,0
-SysIndexColumn,0,1,4,0,1,23,1,0,0,-1,0,1
-SysIndex,0,2,8,0,2,42,2,0,0,-1,2,1
-SysObjectQueryBase,0,2,0,0,2,24,7,3,2,-1,2,0
-SysSequence,0,0,10,0,0,45,0,0,0,-1,0,1
-SysTable,0,1,2,0,1,15,1,0,0,-1,0,2
-ViewQuery,0,0,3,0,0,24,0,0,3,-1,1,0
-CreateAlterTemplate,1,3,0,0,3,24,3,0,1,1,1,1
-DropCreateTemplate,0,3,0,0,3,23,3,0,1,-1,1,1
-VoidTemplate,1,3,0,0,3,15,3,0,1,0.67,1,2
-ITemplate,0,1,4,0,0,16,1,1,0,-1,0,2
-TemplateBase,1,3,7,0,2,44,3,3,1,1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Powerup,Application,3,5,0,0,5,61,5,0,0,0.4,3,1,Powerup.Configuration' Powerup.SqlQueries.IQueryBase' Powerup.SqlObjects.SqlObject,Powerup.Program
+Powerup,Configuration,0,1,3,0,1,18,1,0,0,-1,0,2,,Powerup.Application' Powerup.Program
+Powerup,Extensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Powerup,Program,0,4,0,0,0,65,8,0,0,-1,6,0,Powerup.Configuration' Powerup.Commandline.Options.OptionSet' Powerup.Application' Powerup.SqlObjects.SqlObject' Powerup.Output.FileWriter' Powerup.Commandline.Options.OptionException,
+Powerup.Commandline.Options,StringCoda,0,6,0,0,2,82,14,0,0,-1,0,1,,Powerup.Commandline.Options.OptionSet
+Powerup.Commandline.Options,OptionValueCollection,2,22,5,0,12,80,25,0,0,0,4,3,Powerup.Commandline.Options.OptionContext' Powerup.Commandline.Options.Option' Powerup.Commandline.Options.OptionValueType' Powerup.Commandline.Options.OptionSet,Powerup.Commandline.Options.OptionContext' Powerup.Commandline.Options.Option' Powerup.Commandline.Options.OptionSet
+Powerup.Commandline.Options,OptionContext,5,1,5,0,1,36,1,0,0,0,3,7,Powerup.Commandline.Options.Option' Powerup.Commandline.Options.OptionSet' Powerup.Commandline.Options.OptionValueCollection,Powerup.Commandline.Options.OptionValueCollection' Powerup.Commandline.Options.Option' Powerup.Commandline.Options.OptionSet' Powerup.Commandline.Options.Category' Powerup.Commandline.Options.ActionOption' Powerup.Commandline.Options.ActionOption<T>' Powerup.Commandline.Options.ActionOption<TKey;TValue>
+Powerup.Commandline.Options,OptionValueType,0,0,0,0,0,6,0,0,0,-1,0,3,,Powerup.Commandline.Options.OptionValueCollection' Powerup.Commandline.Options.Option' Powerup.Commandline.Options.OptionSet
+Powerup.Commandline.Options,Option,7,10,6,0,4,171,30,4,0,0.4,5,3,Powerup.Commandline.Options.OptionValueType' Powerup.Commandline.Options.Category' Powerup.Commandline.Options.OptionSet' Powerup.Commandline.Options.OptionContext' Powerup.Commandline.Options.OptionValueCollection,Powerup.Commandline.Options.OptionValueCollection' Powerup.Commandline.Options.OptionContext' Powerup.Commandline.Options.OptionSet
+Powerup.Commandline.Options,ArgumentSource,0,6,1,0,4,65,12,1,0,-1,0,2,,Powerup.Commandline.Options.ResponseFileSource' Powerup.Commandline.Options.OptionSet
+Powerup.Commandline.Options,ResponseFileSource,0,2,1,0,2,21,3,0,1,-1,1,0,Powerup.Commandline.Options.ArgumentSource,
+Powerup.Commandline.Options,OptionException,1,5,1,0,4,33,5,0,0,0.4,0,1,,Powerup.Program
+Powerup.Commandline.Options,OptionSet,7,37,2,0,15,635,101,0,0,0.27,8,4,Powerup.Commandline.Options.Option' Powerup.Commandline.Options.ArgumentSource' Powerup.Commandline.Options.OptionContext' Powerup.Commandline.Options.ArgumentEnumerator' Powerup.Commandline.Options.OptionValueCollection' Powerup.Commandline.Options.OptionValueType' Powerup.Commandline.Options.Category' Powerup.Commandline.Options.StringCoda,Powerup.Program' Powerup.Commandline.Options.OptionValueCollection' Powerup.Commandline.Options.OptionContext' Powerup.Commandline.Options.Option
+Powerup.Commandline.Options,Category,0,2,0,0,1,14,2,0,1,-1,1,2,Powerup.Commandline.Options.OptionContext,Powerup.Commandline.Options.Option' Powerup.Commandline.Options.OptionSet
+Powerup.Commandline.Options,ActionOption,1,2,0,0,1,15,3,0,1,0,1,2,Powerup.Commandline.Options.OptionContext,Powerup.Commandline.Options.ActionOption<T>' Powerup.Commandline.Options.ActionOption<TKey;TValue>
+Powerup.Commandline.Options,ActionOption<T>,1,2,0,0,1,15,3,0,1,0,2,0,Powerup.Commandline.Options.ActionOption' Powerup.Commandline.Options.OptionContext,
+Powerup.Commandline.Options,ActionOption<TKey;TValue>,1,2,0,0,1,17,3,0,1,0,2,0,Powerup.Commandline.Options.ActionOption' Powerup.Commandline.Options.OptionContext,
+Powerup.Commandline.Options,ArgumentEnumerator,1,4,0,0,3,30,4,0,0,0,0,1,,Powerup.Commandline.Options.OptionSet
+Powerup.Output,FileWriter,2,5,0,0,2,44,6,0,0,0,2,1,Powerup.Templates.ITemplate' Powerup.Output.WriteContext,Powerup.Program
+Powerup.Output,WriteContext,1,1,1,0,1,10,1,0,0,0,0,1,,Powerup.Output.FileWriter
+Powerup.SqlObjects,SqlObject,2,4,9,0,4,38,4,0,0,0.5,2,13,Powerup.SqlQueries.IQueryBase' Powerup.Templates.ITemplate,Powerup.Application' Powerup.Program' Powerup.SqlQueries.FunctionQuery' Powerup.SqlQueries.IndexQuery' Powerup.SqlQueries.IQueryBase' Powerup.SqlQueries.QueryBase' Powerup.SqlQueries.SequenceQuery' Powerup.SqlQueries.SysObjectQueryBase' Powerup.Templates.CreateAlterTemplate' Powerup.Templates.DropCreateTemplate' Powerup.Templates.VoidTemplate' Powerup.Templates.TemplateBase' Powerup.Tests.BuidlingTheListOfEntitiesToCreate
+Powerup.SqlObjects,SqlType,0,0,0,0,0,8,0,0,0,-1,0,6,,Powerup.Templates.CreateAlterTemplate' Powerup.Templates.DropCreateTemplate' Powerup.Tests.BuidlingTheListOfEntitiesToCreate' Powerup.Tests.BuildTheDefaultRoundouseFolders' Powerup.Tests.RhEntity' Powerup.Tests.TemplateTests
+Powerup.SqlQueries,FunctionQuery,0,1,3,0,1,28,1,0,1,-1,2,1,Powerup.Templates.DropCreateTemplate' Powerup.SqlObjects.SqlObject,Powerup.Tests.Find_all_the_entities_to_create
+Powerup.SqlQueries,IndexQuery,0,2,3,0,2,146,2,0,1,-1,5,0,Powerup.SqlQueries.SysIndex' Powerup.SqlQueries.SysTable' Powerup.SqlObjects.SqlObject' Powerup.SqlQueries.SysIndexColumn' Powerup.Templates.VoidTemplate,
+Powerup.SqlQueries,IQueryBase,0,3,3,0,0,9,3,1,0,-1,1,2,Powerup.SqlObjects.SqlObject,Powerup.Application' Powerup.SqlObjects.SqlObject
+Powerup.SqlQueries,QueryBase,0,5,5,0,4,28,5,3,1,-1,1,0,Powerup.SqlObjects.SqlObject,
+Powerup.SqlQueries,ProcedureQuery,0,0,3,0,0,18,0,0,1,-1,0,0,,
+Powerup.SqlQueries,SequenceQuery,0,2,4,0,2,91,2,0,2,-1,3,0,Powerup.SqlQueries.SysSequence' Powerup.SqlObjects.SqlObject' Powerup.Templates.VoidTemplate,
+Powerup.SqlQueries,SysIndexColumn,0,1,4,0,1,11,1,0,0,-1,0,1,,Powerup.SqlQueries.IndexQuery
+Powerup.SqlQueries,SysIndex,0,2,8,0,2,20,2,0,0,-1,0,1,,Powerup.SqlQueries.IndexQuery
+Powerup.SqlQueries,SysObjectQueryBase,0,2,0,0,2,26,2,3,2,-1,2,0,Powerup.SqlObjects.SqlObject' Powerup.Templates.CreateAlterTemplate,
+Powerup.SqlQueries,SysSequence,0,0,10,0,0,19,0,0,0,-1,0,1,,Powerup.SqlQueries.SequenceQuery
+Powerup.SqlQueries,SysTable,0,1,2,0,1,9,1,0,0,-1,0,1,,Powerup.SqlQueries.IndexQuery
+Powerup.SqlQueries,ViewQuery,0,0,3,0,0,24,0,0,3,-1,0,0,,
+Powerup.Templates,CreateAlterTemplate,1,3,0,0,3,27,3,0,1,1,2,2,Powerup.SqlObjects.SqlObject' Powerup.SqlObjects.SqlType,Powerup.SqlQueries.SysObjectQueryBase' Powerup.Tests.TemplateTests
+Powerup.Templates,DropCreateTemplate,0,3,0,0,3,25,3,0,1,-1,2,1,Powerup.SqlObjects.SqlObject' Powerup.SqlObjects.SqlType,Powerup.SqlQueries.FunctionQuery
+Powerup.Templates,VoidTemplate,1,3,0,0,3,16,3,0,1,0.67,1,2,Powerup.SqlObjects.SqlObject,Powerup.SqlQueries.IndexQuery' Powerup.SqlQueries.SequenceQuery
+Powerup.Templates,ITemplate,0,1,4,0,0,8,1,1,0,-1,0,2,,Powerup.Output.FileWriter' Powerup.SqlObjects.SqlObject
+Powerup.Templates,TemplateBase,1,3,7,0,2,19,3,3,1,1,1,0,Powerup.SqlObjects.SqlObject,

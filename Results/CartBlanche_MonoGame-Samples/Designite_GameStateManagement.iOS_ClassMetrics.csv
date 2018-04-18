@@ -1,17 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-GameStateManagementGame,4,2,0,0,1,52,2,0,0,0,1,1
-Program,1,2,0,0,1,18,2,0,0,1,1,0
-ScreenState,0,0,0,0,0,10,0,0,0,-1,0,4
-GameScreen,10,7,11,0,6,270,15,5,0,0.71,3,2
-InputState,8,9,0,8,9,142,14,0,0,0,0,5
-ScreenManager,8,11,3,0,8,215,27,0,0,0.18,3,10
-BackgroundScreen,2,5,0,0,5,67,6,0,1,0.6,1,0
-GameplayScreen,6,6,0,0,6,134,17,0,1,0.33,2,0
-LoadingScreen,3,4,0,0,3,104,11,0,1,0,3,2
-MainMenuScreen,0,5,0,0,1,60,5,0,1,-1,5,0
-MenuEntry,3,6,2,0,5,134,8,0,0,0.67,2,4
-MenuScreen,3,8,1,0,4,158,18,3,1,0.38,5,1
-MessageBoxScreen,2,5,0,0,5,104,10,0,1,0.4,2,2
-OptionsMenuScreen,9,6,0,0,1,102,7,0,2,0,2,0
-PauseMenuScreen,0,3,0,0,1,45,3,0,2,-1,5,0
-PlayerIndexEventArgs,1,1,1,0,1,23,1,0,0,0,0,4
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GameStateManagement,GameStateManagementGame,4,2,0,0,1,50,2,0,0,0,1,1,GameStateManagement.ScreenManager,GameStateManagement.Program
+GameStateManagement,Program,1,2,0,0,1,18,2,0,0,1,1,0,GameStateManagement.GameStateManagementGame,
+GameStateManagement,ScreenState,0,0,0,0,0,7,0,0,0,-1,0,4,,GameStateManagement.GameScreen' GameStateManagement.ScreenManager' GameStateManagement.LoadingScreen' GameStateManagement.MenuScreen
+GameStateManagement,GameScreen,10,7,11,0,6,276,12,5,0,0.71,3,5,GameStateManagement.ScreenState' GameStateManagement.ScreenManager' GameStateManagement.InputState,GameStateManagement.ScreenManager' GameStateManagement.BackgroundScreen' GameStateManagement.GameplayScreen' GameStateManagement.LoadingScreen' GameStateManagement.MenuScreen
+GameStateManagement,InputState,8,9,0,8,9,179,14,0,0,0.67,0,5,,GameStateManagement.GameScreen' GameStateManagement.ScreenManager' GameStateManagement.GameplayScreen' GameStateManagement.MenuScreen' GameStateManagement.MessageBoxScreen
+GameStateManagement,ScreenManager,8,11,3,0,8,235,25,0,0,0.18,3,10,GameStateManagement.InputState' GameStateManagement.GameScreen' GameStateManagement.ScreenState,GameStateManagement.GameStateManagementGame' GameStateManagement.GameScreen' GameStateManagement.BackgroundScreen' GameStateManagement.GameplayScreen' GameStateManagement.LoadingScreen' GameStateManagement.MainMenuScreen' GameStateManagement.MenuEntry' GameStateManagement.MenuScreen' GameStateManagement.MessageBoxScreen' GameStateManagement.PauseMenuScreen
+GameStateManagement,BackgroundScreen,2,5,0,0,5,71,6,0,1,0.6,2,0,GameStateManagement.ScreenManager' GameStateManagement.GameScreen,
+GameStateManagement,GameplayScreen,6,6,0,0,6,148,12,0,1,0.33,3,0,GameStateManagement.ScreenManager' GameStateManagement.GameScreen' GameStateManagement.InputState,
+GameStateManagement,LoadingScreen,3,4,0,0,3,108,10,0,1,0,3,2,GameStateManagement.GameScreen' GameStateManagement.ScreenManager' GameStateManagement.ScreenState,GameStateManagement.MainMenuScreen' GameStateManagement.PauseMenuScreen
+GameStateManagement,MainMenuScreen,0,5,0,0,1,66,5,0,1,-1,5,0,GameStateManagement.MenuEntry' GameStateManagement.LoadingScreen' GameStateManagement.PlayerIndexEventArgs' GameStateManagement.ScreenManager' GameStateManagement.MessageBoxScreen,
+GameStateManagement,MenuEntry,3,6,2,0,5,137,8,0,0,0.67,2,4,GameStateManagement.MenuScreen' GameStateManagement.ScreenManager,GameStateManagement.MainMenuScreen' GameStateManagement.MenuScreen' GameStateManagement.OptionsMenuScreen' GameStateManagement.PauseMenuScreen
+GameStateManagement,MenuScreen,3,8,1,0,4,177,17,3,1,0,6,1,GameStateManagement.InputState' GameStateManagement.MenuEntry' GameStateManagement.PlayerIndexEventArgs' GameStateManagement.ScreenManager' GameStateManagement.ScreenState' GameStateManagement.GameScreen,GameStateManagement.MenuEntry
+GameStateManagement,MessageBoxScreen,2,5,0,0,5,116,8,0,1,0.4,2,2,GameStateManagement.ScreenManager' GameStateManagement.InputState,GameStateManagement.MainMenuScreen' GameStateManagement.PauseMenuScreen
+GameStateManagement,OptionsMenuScreen,9,6,0,0,1,103,7,0,2,0,3,0,GameStateManagement.MenuEntry' GameStateManagement.Ungulate' GameStateManagement.PlayerIndexEventArgs,
+GameStateManagement,Ungulate,0,0,0,0,0,6,0,0,0,-1,0,1,,GameStateManagement.OptionsMenuScreen
+GameStateManagement,PauseMenuScreen,0,3,0,0,1,49,3,0,2,-1,5,0,GameStateManagement.MenuEntry' GameStateManagement.MessageBoxScreen' GameStateManagement.ScreenManager' GameStateManagement.PlayerIndexEventArgs' GameStateManagement.LoadingScreen,
+GameStateManagement,PlayerIndexEventArgs,1,1,1,0,1,19,1,0,0,0,0,4,,GameStateManagement.MainMenuScreen' GameStateManagement.MenuScreen' GameStateManagement.OptionsMenuScreen' GameStateManagement.PauseMenuScreen

@@ -1,34 +1,34 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ChromeHistory,0,4,0,0,4,48,10,0,1,-1,1,1
-FirefoxConnector,0,2,0,0,2,50,10,0,1,-1,1,1
-SqlLiteConnector,0,2,0,0,1,19,3,2,0,-1,1,1
-AsMarkdown,0,6,0,0,4,119,23,0,0,-1,2,2
-AsMarkdownHtml,0,2,0,0,2,30,5,0,0,-1,2,1
-GitDiffParser,0,7,0,0,6,92,14,0,0,-1,4,1
-UnifiedDiffToMyersDifference,2,5,0,0,5,185,27,0,0,0,4,1
-ParseGitLog,0,3,0,0,2,60,15,0,0,-1,1,1
-Difference,0,0,7,0,0,31,0,0,0,-1,2,2
-DifferenceType,0,0,0,0,0,6,0,0,0,-1,0,2
-Difflet,0,0,0,0,0,4,0,0,0,-1,0,0
-Span,0,1,7,0,1,37,1,0,0,-1,0,2
-Export,0,0,6,0,0,27,0,0,0,-1,0,1
-GitCommit,0,2,8,0,2,61,4,0,0,-1,3,5
-FileDiff,0,0,8,0,0,35,0,0,0,-1,3,3
-GitFileStatus,0,0,4,0,0,19,0,0,0,-1,0,1
-HunkRange,0,1,2,0,1,22,2,0,0,-1,0,2
-HunkRangeInfo,0,1,8,0,1,52,2,0,0,-1,1,3
-WebVisit,0,0,3,0,0,15,0,0,0,-1,0,4
-ChangeHunk,0,0,1,0,0,7,0,0,0,-1,1,1
-FileChangeHunks,0,0,2,0,0,11,0,0,0,-1,1,1
-Program,0,6,0,0,0,254,49,0,0,-1,12,0
-FilterReverts,0,0,0,0,0,20,0,0,0,-1,0,0
-MergeFixOnFix,0,1,0,0,1,34,6,0,0,-1,1,1
-MergeTemporalFuzz,0,0,0,0,0,7,0,0,0,-1,0,0
-Config,0,1,1,0,0,13,1,0,0,-1,0,1
-GitCommands,0,8,0,0,7,58,8,0,0,-1,1,1
-NativeMethods,0,1,0,0,1,5,1,0,0,-1,0,1
-CompatibilityExtensions,0,2,0,0,2,16,2,0,0,-1,0,0
-Operation,0,0,0,0,0,11,0,0,0,-1,0,3
-Diff,2,5,0,2,5,58,8,0,0,0,1,2
-Patch,5,1,0,5,1,51,14,0,0,0,3,1
-diff_match_patch,9,43,0,6,27,1920,334,0,0,0.16,3,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+automark.Connections.Browser,ChromeHistory,0,4,0,0,4,52,4,0,1,-1,0,1,,automark.Program
+automark.Connections.Browser,FirefoxConnector,0,2,0,0,2,55,4,0,1,-1,0,1,,automark.Program
+automark.Connections.Browser,SqlLiteConnector,0,2,0,0,1,22,3,2,0,-1,1,1,automark.Util.NativeMethods,automark.Program
+automark.Generate.Export,AsMarkdown,0,6,0,0,4,140,25,0,0,-1,10,2,DiffMatchPatch.diff_match_patch' automark.Models.GitCommit' automark.Models.WebVisit' automark.Models.FileDiff' automark.Models.HunkRangeInfo' automark.Models.Diff.Difference' automark.Models.Diff.Span' automark.Models.Diff.DifferenceType' DiffMatchPatch.Diff' DiffMatchPatch.Operation,automark.Generate.Export.AsMarkdownHtml' automark.Program
+automark.Generate.Export,AsMarkdownHtml,0,2,0,0,2,36,3,0,0,-1,1,1,automark.Generate.Export.AsMarkdown,automark.Program
+automark.Git,GitDiffParser,0,7,0,0,6,105,16,0,0,-1,3,1,automark.Git.UnifiedDiffToMyersDifference' automark.Models.FileDiff' automark.Models.HunkRangeInfo,automark.Program
+automark.Git,UnifiedDiffToMyersDifference,2,5,0,0,5,255,12,0,0,0,4,1,automark.Models.HunkRangeInfo' automark.Models.HunkRange' automark.Models.Diff.DifferenceType' automark.Models.Diff.Difference,automark.Git.GitDiffParser
+automark.Git,ParseGitLog,0,3,0,0,2,67,5,0,0,-1,1,1,automark.Models.GitCommit,automark.Program
+automark.Models.Diff,Difference,0,0,7,0,0,10,0,0,0,-1,0,3,,automark.Generate.Export.AsMarkdown' automark.Git.UnifiedDiffToMyersDifference' automark.Transformations.Rewrite.MergeFixOnFix
+automark.Models.Diff,DifferenceType,0,0,0,0,0,6,0,0,0,-1,0,3,,automark.Generate.Export.AsMarkdown' automark.Git.UnifiedDiffToMyersDifference' automark.Transformations.Rewrite.MergeFixOnFix
+automark.Models.Diff,Difflet,0,0,0,0,0,4,0,0,0,-1,0,0,,
+automark.Models.Diff,Span,0,1,7,0,1,17,2,0,0,-1,0,2,,automark.Generate.Export.AsMarkdown' automark.Transformations.Rewrite.MergeFixOnFix
+automark.Models,Export,0,0,6,0,0,9,0,0,0,-1,0,1,,automark.Program
+automark.Models,GitCommit,0,2,8,0,2,47,4,0,0,-1,1,3,automark.Models.GitFileStatus,automark.Generate.Export.AsMarkdown' automark.Git.ParseGitLog' automark.Program
+automark.Models,FileDiff,0,0,8,0,0,11,0,0,0,-1,0,4,,automark.Generate.Export.AsMarkdown' automark.Git.GitDiffParser' automark.Program' automark.Transformations.Rewrite.MergeFixOnFix
+automark.Models,GitFileStatus,0,0,4,0,0,7,0,0,0,-1,0,2,,automark.Models.GitCommit' automark.Program
+automark.Models,HunkRange,0,1,2,0,1,19,2,0,0,-1,0,3,,automark.Git.UnifiedDiffToMyersDifference' automark.Models.HunkRangeInfo' automark.Transformations.Rewrite.MergeFixOnFix
+automark.Models,HunkRangeInfo,0,1,8,0,1,29,2,0,0,-1,1,5,automark.Models.HunkRange,automark.Generate.Export.AsMarkdown' automark.Git.GitDiffParser' automark.Git.UnifiedDiffToMyersDifference' automark.Program' automark.Transformations.Rewrite.MergeFixOnFix
+automark.Models,WebVisit,0,0,3,0,0,6,0,0,0,-1,0,2,,automark.Generate.Export.AsMarkdown' automark.Program
+automark.Models.Markdown,ChangeHunk,0,0,1,0,0,4,0,0,0,-1,0,0,,
+automark.Models.Markdown,FileChangeHunks,0,0,2,0,0,5,0,0,0,-1,0,0,,
+automark,Program,0,6,0,0,0,318,39,0,0,-1,15,0,automark.Git.ParseGitLog' automark.Git.GitDiffParser' automark.Models.GitCommit' automark.Generate.Export.AsMarkdownHtml' automark.Generate.Export.AsMarkdown' automark.Util.GitCommands' automark.Models.GitFileStatus' automark.Models.FileDiff' automark.Models.HunkRangeInfo' automark.Models.Export' automark.Connections.Browser.ChromeHistory' automark.Connections.Browser.FirefoxConnector' automark.Models.WebVisit' automark.Transformations.Rewrite.MergeFixOnFix' automark.Connections.Browser.SqlLiteConnector,
+automark.Transformations.Filters,FilterReverts,0,0,0,0,0,20,0,0,0,-1,0,0,,
+automark.Transformations.Rewrite,MergeFixOnFix,0,1,0,0,1,45,7,0,0,-1,6,1,automark.Models.FileDiff' automark.Models.Diff.Span' automark.Models.Diff.Difference' automark.Models.Diff.DifferenceType' automark.Models.HunkRange' automark.Models.HunkRangeInfo,automark.Program
+automark.Transformations.Rewrite,MergeTemporalFuzz,0,0,0,0,0,7,0,0,0,-1,0,0,,
+automark.Util,Config,0,1,1,0,0,10,1,0,0,-1,0,1,,automark.Util.GitCommands
+automark.Util,GitCommands,0,8,0,0,7,58,8,0,0,-1,1,1,automark.Util.Config,automark.Program
+automark.Util,NativeMethods,0,1,0,0,1,5,1,0,0,-1,0,1,,automark.Connections.Browser.SqlLiteConnector
+DiffMatchPatch,CompatibilityExtensions,0,2,0,0,2,14,2,0,0,-1,0,0,,
+DiffMatchPatch,Operation,0,0,0,0,0,3,0,0,0,-1,0,4,,automark.Generate.Export.AsMarkdown' DiffMatchPatch.Diff' DiffMatchPatch.Patch' DiffMatchPatch.diff_match_patch
+DiffMatchPatch,Diff,2,5,0,2,5,53,8,0,0,0,1,3,DiffMatchPatch.Operation,automark.Generate.Export.AsMarkdown' DiffMatchPatch.Patch' DiffMatchPatch.diff_match_patch
+DiffMatchPatch,Patch,5,1,0,5,1,51,5,0,0,0,3,1,DiffMatchPatch.Diff' DiffMatchPatch.Operation' DiffMatchPatch.diff_match_patch,DiffMatchPatch.diff_match_patch
+DiffMatchPatch,diff_match_patch,9,43,0,6,27,2003,196,0,0,0.14,3,2,DiffMatchPatch.Operation' DiffMatchPatch.Diff' DiffMatchPatch.Patch,automark.Generate.Export.AsMarkdown' DiffMatchPatch.Patch

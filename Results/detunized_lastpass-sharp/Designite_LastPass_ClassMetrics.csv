@@ -1,18 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Account,0,1,6,0,1,36,1,0,0,-1,0,2
-Asn1,0,2,0,0,2,47,17,0,0,-1,1,1
-BaseException,0,2,0,0,2,9,2,3,0,-1,0,0
-Blob,0,2,2,0,2,20,2,0,0,-1,1,2
-Extensions,0,8,0,0,8,53,15,0,0,-1,0,0
-Fetcher,0,7,0,0,4,138,29,0,0,-1,7,1
-FetcherHelper,0,2,0,0,2,26,10,0,0,-1,1,2
-FetchException,0,2,1,0,2,20,2,0,1,-1,0,1
-IWebClient,0,2,1,0,0,8,2,1,0,-1,0,1
-LoginException,0,2,1,0,2,32,2,0,1,-1,0,2
-ParseException,0,2,1,0,2,19,2,0,1,-1,0,2
-ParserHelper,1,24,0,0,23,276,50,0,0,0.38,4,2
-Pbkdf2,0,4,0,0,4,55,14,0,0,-1,0,1
-Session,0,1,2,0,1,16,1,0,0,-1,0,1
-SharedFolder,0,1,3,0,1,21,1,0,0,-1,0,2
-Vault,0,6,1,0,3,57,17,0,0,-1,6,1
-WebClient,0,0,0,0,0,4,0,0,1,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+LastPass,Account,0,1,6,0,1,18,1,0,0,-1,0,6,,Example.Program' LastPass.ParserHelper' LastPass.Vault' LastPass.Test.AccountTest' LastPass.Test.ParserHelperTest' LastPass.Test.VaultTest
+LastPass,Asn1,0,2,0,0,2,50,5,0,0,-1,2,2,LastPass.ParserHelper' LastPass.Kind,LastPass.ParserHelper' LastPass.Test.Asn1Test
+LastPass,Kind,0,0,0,0,0,7,0,0,0,-1,0,2,,LastPass.Asn1' LastPass.Test.Asn1Test
+LastPass,BaseException,0,2,0,0,2,10,2,3,0,-1,0,1,,LastPass.Test.ExceptionsTest
+LastPass,Blob,0,2,2,0,2,14,2,0,0,-1,1,4,LastPass.FetcherHelper,LastPass.Fetcher' LastPass.Vault' LastPass.Test.BlobTest' LastPass.Test.FetcherTest
+LastPass,Extensions,0,8,0,0,8,55,13,0,0,-1,0,0,,
+LastPass,Fetcher,0,7,0,0,4,159,14,0,0,-1,7,2,LastPass.Session' LastPass.IWebClient' LastPass.Blob' LastPass.FailureReason' LastPass.FetchException' LastPass.LoginException' LastPass.FetcherHelper,LastPass.Vault' LastPass.Test.FetcherTest
+LastPass,FetcherHelper,0,2,0,0,2,30,6,0,0,-1,1,3,LastPass.Pbkdf2,LastPass.Blob' LastPass.Fetcher' LastPass.Test.FetcherHelperTest
+LastPass,FetchException,0,2,1,0,2,18,2,0,1,-1,1,3,LastPass.FailureReason,LastPass.Fetcher' LastPass.Test.ExceptionsTest' LastPass.Test.FetcherTest
+LastPass,FailureReason,0,0,0,0,0,23,0,0,0,-1,0,11,,Example.Program' LastPass.Fetcher' LastPass.FetchException' LastPass.LoginException' LastPass.ParseException' LastPass.ParserHelper' LastPass.Vault' LastPass.Test.ExceptionsTest' LastPass.Test.FetcherTest' LastPass.Test.ParserHelperTest' LastPass.Test.VaultTest
+LastPass,IWebClient,0,2,1,0,0,6,2,1,0,-1,0,1,,LastPass.Fetcher
+LastPass,LoginException,0,2,1,0,2,29,2,0,1,-1,1,4,LastPass.FailureReason,Example.Program' LastPass.Fetcher' LastPass.Test.ExceptionsTest' LastPass.Test.FetcherTest
+LastPass,ParseException,0,2,1,0,2,17,2,0,1,-1,1,5,LastPass.FailureReason,LastPass.ParserHelper' LastPass.Vault' LastPass.Test.ExceptionsTest' LastPass.Test.ParserHelperTest' LastPass.Test.VaultTest
+LastPass,ParserHelper,1,24,0,0,23,300,32,0,0,0.08,6,3,LastPass.Chunk' LastPass.SharedFolder' LastPass.Account' LastPass.FailureReason' LastPass.ParseException' LastPass.Asn1,LastPass.Asn1' LastPass.Vault' LastPass.Test.ParserHelperTest
+LastPass,Chunk,0,1,2,0,1,10,1,0,0,-1,0,3,,LastPass.ParserHelper' LastPass.Vault' LastPass.Test.ParserHelperTest
+LastPass,Pbkdf2,0,4,0,0,4,59,6,0,0,-1,0,2,,LastPass.FetcherHelper' LastPass.Test.Pbkdf2Test
+LastPass,Session,0,1,2,0,1,10,1,0,0,-1,0,2,,LastPass.Fetcher' LastPass.Test.FetcherTest
+LastPass,SharedFolder,0,1,3,0,1,12,1,0,0,-1,0,4,,LastPass.ParserHelper' LastPass.Vault' LastPass.Test.ParserHelperTest' LastPass.Test.SharedFolderTest
+LastPass,Vault,0,6,1,0,3,58,8,0,0,-1,8,2,LastPass.Blob' LastPass.Fetcher' LastPass.ParserHelper' LastPass.FailureReason' LastPass.ParseException' LastPass.Chunk' LastPass.SharedFolder' LastPass.Account,Example.Program' LastPass.Test.VaultTest
+LastPass,WebClient,0,0,0,0,0,4,0,0,1,-1,0,0,,

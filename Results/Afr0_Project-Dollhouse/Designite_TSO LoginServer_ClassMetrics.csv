@@ -1,11 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Logger,4,4,0,3,4,51,7,0,0,0,0,4
-Program,0,4,0,0,0,101,33,0,0,-1,13,0
-Settings,0,0,1,0,0,21,0,0,0,-1,0,1
-GlobalSettings,1,0,5,0,0,52,0,0,0,-1,0,1
-AppearanceType,0,0,0,0,0,9,0,0,0,-1,0,1
-Sim,12,3,11,2,3,126,3,0,0,0,2,0
-CityServerListener,4,5,0,2,5,74,8,0,1,0,7,1
-CityServerPacketHandlers,0,2,0,0,2,76,17,0,0,-1,8,1
-LoginPacketHandlers,0,8,0,0,7,416,58,0,0,-1,15,1
-NetworkFacade,5,0,0,5,0,9,0,0,0,-1,2,4
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TSO_LoginServer,Logger,4,4,0,3,4,51,7,0,0,0,0,4,,TSO_LoginServer.Program' TSO_LoginServer.Network.CityServerListener' TSO_LoginServer.Network.CityServerPacketHandlers' TSO_LoginServer.Network.LoginPacketHandlers
+TSO_LoginServer,Program,0,4,0,0,0,111,8,0,0,-1,6,0,TSO_LoginServer.Logger' TSO_LoginServer.Network.LoginPacketHandlers' TSO_LoginServer.Settings' TSO_LoginServer.Network.NetworkFacade' TSO_LoginServer.Network.CityServerListener' TSO_LoginServer.Network.CityServerPacketHandlers,
+TSO_LoginServer,Settings,0,0,1,0,0,27,0,0,0,-1,0,1,,TSO_LoginServer.Program
+TSO_LoginServer,GlobalSettings,1,0,5,0,0,57,0,0,0,-1,0,1,,TSO_LoginServer.Network.LoginPacketHandlers
+TSO_LoginServer,AppearanceType,0,0,0,0,0,6,0,0,0,-1,0,0,,
+TSO_LoginServer,Sim,12,3,11,2,3,92,3,0,0,0,0,0,,
+TSO_LoginServer.Network,CityServerListener,4,5,0,2,5,84,7,0,0,0,2,4,TSO_LoginServer.Logger' TSO_LoginServer.Network.NetworkFacade,TSO_LoginServer.Program' TSO_LoginServer.Network.CityServerPacketHandlers' TSO_LoginServer.Network.LoginPacketHandlers' TSO_LoginServer.Network.NetworkFacade
+TSO_LoginServer.Network,CityServerPacketHandlers,0,2,0,0,2,72,4,0,0,-1,3,1,TSO_LoginServer.Logger' TSO_LoginServer.Network.CityServerListener' TSO_LoginServer.Network.NetworkFacade,TSO_LoginServer.Program
+TSO_LoginServer.Network,LoginPacketHandlers,0,8,0,0,7,458,22,0,0,-1,4,1,TSO_LoginServer.Logger' TSO_LoginServer.GlobalSettings' TSO_LoginServer.Network.NetworkFacade' TSO_LoginServer.Network.CityServerListener,TSO_LoginServer.Program
+TSO_LoginServer.Network,NetworkFacade,5,0,0,5,0,8,0,0,0,-1,1,4,TSO_LoginServer.Network.CityServerListener,TSO_LoginServer.Program' TSO_LoginServer.Network.CityServerListener' TSO_LoginServer.Network.CityServerPacketHandlers' TSO_LoginServer.Network.LoginPacketHandlers

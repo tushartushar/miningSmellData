@@ -1,36 +1,37 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-TwitterAuthenticator,2,4,0,0,1,162,21,0,0,0,1,1
-DateTimeExtensions,0,5,0,0,5,46,10,0,0,-1,0,0
-StringExtensions,0,2,0,0,2,33,4,0,0,-1,0,0
-WebResponseExtensions,0,2,0,0,2,15,2,0,0,-1,0,0
-IAnonymousSession,0,1,0,0,0,4,1,1,0,-1,0,1
-ITwitterService,0,2,0,0,0,6,2,1,0,-1,1,0
-IUserSession,0,3,0,0,0,6,3,1,0,-1,0,5
-TwitterService,0,2,0,0,2,13,2,0,1,-1,3,0
-AnonymousSession,0,1,0,0,1,13,2,0,1,-1,0,1
-UserSession,4,5,0,0,4,133,13,0,1,0,1,1
-TwitterMappings,0,5,0,0,3,57,6,0,0,-1,6,0
-Attributes,0,0,0,0,0,3,0,0,0,-1,0,1
-BoundingBox,0,0,2,0,0,11,0,0,0,-1,0,1
-Coordinates,0,0,2,0,0,11,0,0,0,-1,0,1
-DM,0,0,9,0,0,39,0,0,0,-1,1,1
-Entities,0,0,3,0,0,15,0,0,0,-1,1,1
-Geo,0,0,2,0,0,11,0,0,0,-1,0,1
-Metadata,0,0,1,0,0,7,0,0,0,-1,0,1
-Place,0,0,9,0,0,39,0,0,0,-1,2,1
-Result,0,0,18,0,0,75,0,0,0,-1,1,2
-SearchResponse,0,0,11,0,0,47,0,0,0,-1,1,1
-Tweet,0,0,22,0,0,91,0,0,0,-1,5,2
-User,0,0,38,0,0,157,0,0,0,-1,0,3
-UserMention,0,0,5,0,0,23,0,0,0,-1,0,1
-PropertyChangedBase,0,2,0,0,0,20,3,2,0,-1,0,0
-DirectMessage,1,0,1,0,0,12,0,0,1,-1,0,1
-Tweet,5,0,6,0,0,53,0,1,1,-1,1,6
-TwitterCredentials,1,0,6,0,0,39,0,0,0,-1,0,7
-User,2,0,2,0,0,21,0,0,1,-1,0,2
-IUserStream,0,2,2,0,0,11,2,1,0,-1,1,0
-UserStream,6,9,2,0,4,110,22,0,1,0.22,1,1
-UserStreamExtensions,0,1,0,0,1,13,1,0,0,-1,2,0
-DirectMessageExtensions,1,2,0,0,2,31,2,0,0,0,3,0
-TimelineExtensions,0,3,0,0,3,53,3,0,0,-1,1,0
-TweetExtensions,1,3,0,0,3,46,3,0,0,0,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BoxKite.Authentication,TwitterAuthenticator,2,4,0,0,1,179,21,0,0,0.5,1,1,BoxKite.Models.TwitterCredentials,Dodo.Modules.Dashboard.DashboardViewModel
+BoxKite.Extensions,DateTimeExtensions,0,5,0,0,5,55,13,0,0,-1,0,0,,
+BoxKite.Extensions,StringExtensions,0,2,0,0,2,33,4,0,0,-1,0,0,,
+BoxKite.Extensions,WebResponseExtensions,0,2,0,0,2,15,2,0,0,-1,0,0,,
+BoxKite,IAnonymousSession,0,1,0,0,0,4,1,1,0,-1,0,1,,Dodo.Modules.Dashboard.DashboardViewModel
+BoxKite,ITwitterService,0,2,0,0,0,6,2,1,0,-1,1,0,BoxKite.Models.TwitterCredentials,
+BoxKite,IUserSession,0,3,0,0,0,6,3,1,0,-1,0,5,,BoxKite.Modules.UserStreamExtensions' BoxKite.Modules.DirectMessageExtensions' BoxKite.Modules.TimelineExtensions' BoxKite.Modules.Timelines.TweetExtensions' Dodo.Modules.Dashboard.DashboardViewModel
+BoxKite,TwitterService,0,2,0,0,2,13,2,0,1,-1,3,0,BoxKite.UserSession' BoxKite.Models.TwitterCredentials' BoxKite.AnonymousSession,
+BoxKite,AnonymousSession,0,1,0,0,1,16,2,0,1,-1,0,1,,BoxKite.TwitterService
+BoxKite,UserSession,4,5,0,0,4,128,12,0,1,0,2,1,BoxKite.Models.TwitterCredentials' BoxKite.OAuth,BoxKite.TwitterService
+BoxKite,OAuth,8,0,0,8,0,11,0,0,0,-1,0,1,,BoxKite.UserSession
+BoxKite.Mappings,TwitterMappings,0,5,0,0,3,64,6,0,0,-1,4,0,BoxKite.Models.Tweet' BoxKite.Models.Internal.User' BoxKite.Models.User' BoxKite.Models.Internal.Result,
+BoxKite.Models.Internal,Attributes,0,0,0,0,0,3,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,BoundingBox,0,0,2,0,0,5,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,Coordinates,0,0,2,0,0,5,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,DM,0,0,9,0,0,12,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,Entities,0,0,3,0,0,6,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,Geo,0,0,2,0,0,5,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,Metadata,0,0,1,0,0,4,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,Place,0,0,9,0,0,12,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,Result,0,0,18,0,0,21,0,0,0,-1,0,1,,BoxKite.Mappings.TwitterMappings
+BoxKite.Models.Internal,SearchResponse,0,0,11,0,0,14,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,Tweet,0,0,22,0,0,25,0,0,0,-1,0,0,,
+BoxKite.Models.Internal,User,0,0,38,0,0,43,0,0,0,-1,0,1,,BoxKite.Mappings.TwitterMappings
+BoxKite.Models.Internal,UserMention,0,0,5,0,0,8,0,0,0,-1,0,0,,
+BoxKite.Models,PropertyChangedBase,0,2,0,0,0,20,4,2,0,-1,0,0,,
+BoxKite.Models,DirectMessage,1,0,1,0,0,9,0,0,1,-1,0,0,,
+BoxKite.Models,Tweet,5,0,6,0,0,37,0,1,1,-1,1,4,BoxKite.Models.User,BoxKite.Mappings.TwitterMappings' BoxKite.Modules.Streaming.UserStream' BoxKite.Modules.Timelines.TweetExtensions' Dodo.Modules.Dashboard.DashboardViewModel
+BoxKite.Models,TwitterCredentials,1,0,6,0,0,21,0,0,0,-1,0,7,,BoxKite.Authentication.TwitterAuthenticator' BoxKite.ITwitterService' BoxKite.TwitterService' BoxKite.UserSession' Dodo.Modules.Dashboard.DashboardViewModel' Dodo.Logic.Extensions.SettingsExtensions' Dodo.Logic.SettingsExtensions
+BoxKite.Models,User,2,0,2,0,0,15,0,0,1,-1,0,2,,BoxKite.Mappings.TwitterMappings' BoxKite.Models.Tweet
+BoxKite.Modules.Streaming,IUserStream,0,2,2,0,0,7,2,1,0,-1,0,1,,Dodo.Modules.Dashboard.DashboardViewModel
+BoxKite.Modules.Streaming,UserStream,6,9,2,0,4,115,21,0,1,0.22,1,1,BoxKite.Models.Tweet,BoxKite.Modules.UserStreamExtensions
+BoxKite.Modules,UserStreamExtensions,0,1,0,0,1,15,1,0,0,-1,2,0,BoxKite.IUserSession' BoxKite.Modules.Streaming.UserStream,
+BoxKite.Modules,DirectMessageExtensions,1,2,0,0,2,28,2,0,0,0,1,0,BoxKite.IUserSession,
+BoxKite.Modules,TimelineExtensions,0,3,0,0,3,41,3,0,0,-1,1,0,BoxKite.IUserSession,
+BoxKite.Modules.Timelines,TweetExtensions,1,3,0,0,3,42,3,0,0,0,2,0,BoxKite.IUserSession' BoxKite.Models.Tweet,

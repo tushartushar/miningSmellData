@@ -1,0 +1,32 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WebPlayer,Api,1,3,0,0,3,25,4,0,0,0.67,0,2,,WebPlayer.AzureFileManager' WebPlayer.AzureOutputLogger
+WebPlayer,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,WebPlayer.Global
+WebPlayer,RouteConfig,0,1,0,0,1,17,1,0,0,-1,0,1,,WebPlayer.Global
+WebPlayer,AzureFileManager,0,4,0,0,3,45,7,0,1,-1,3,2,WebPlayer.ApiGame' WebPlayer.Api' WebPlayer.SourceFileData,WebPlayer.Play' WebPlayer.Mobile.Play
+WebPlayer,ApiGame,0,0,5,0,0,8,0,0,0,-1,0,4,,WebPlayer.AzureFileManager' WebPlayer.Play' WebPlayer.PlayerHandler' WebPlayer.Mobile.Play
+WebPlayer,LogEventEntity,0,1,8,0,1,17,1,0,0,-1,0,1,,WebPlayer.TableStorageAppender
+WebPlayer,TableStorageAppender,3,2,0,0,1,37,3,0,0,0,1,0,WebPlayer.LogEventEntity,
+WebPlayer,AzureOutputLogger,3,3,3,0,2,37,5,0,0,0,1,1,WebPlayer.Api,WebPlayer.OutputBuffer
+WebPlayer,Config,0,0,1,0,0,8,0,0,0,-1,0,3,,WebPlayer.Play' WebPlayer.PlayerHandler' WebPlayer.Mobile.Play
+WebPlayer,DebugFileManager,0,1,0,0,1,12,1,0,1,-1,1,0,WebPlayer.SourceFileData,
+WebPlayer,FileManagerLoader,2,1,0,0,1,20,2,0,0,0,1,2,WebPlayer.IFileManager,WebPlayer.Play' WebPlayer.Mobile.Play
+WebPlayer,Global,0,6,0,0,0,42,9,0,0,-1,4,0,WebPlayer.FilterConfig' WebPlayer.RouteConfig' WebPlayer.Logging' WebPlayer.PlayerHandler,
+WebPlayer,SourceFileData,0,0,2,0,0,5,0,0,0,-1,0,4,,WebPlayer.AzureFileManager' WebPlayer.DebugFileManager' WebPlayer.Play' WebPlayer.Mobile.Play
+WebPlayer,IFileManager,0,1,0,0,0,4,1,2,0,-1,0,3,,WebPlayer.FileManagerLoader' WebPlayer.Play' WebPlayer.Mobile.Play
+WebPlayer,InterfaceListHandler,3,4,0,0,2,61,10,0,0,0,5,1,WebPlayer.OutputBuffer' WebPlayer.ListDataComparer' TextAdventures.Quest.ListType' TextAdventures.Quest.PlayerHelper' TextAdventures.Quest.ListData,WebPlayer.PlayerHandler
+WebPlayer,ListDataComparer,0,2,0,0,2,14,5,0,0,-1,2,1,TextAdventures.Quest.ListData' TextAdventures.Quest.PlayerHelper,WebPlayer.InterfaceListHandler
+WebPlayer,Logging,1,1,1,0,0,25,4,0,0,0,0,3,,WebPlayer.Global' WebPlayer.PlayerHandler' WebPlayer.Resource
+WebPlayer,KeepAlive,0,1,1,0,1,14,1,0,0,-1,0,0,,
+WebPlayer,OutputBuffer,5,7,1,0,7,68,8,0,0,0.29,2,5,WebPlayer.AzureOutputLogger' TextAdventures.Utility.JSInterop.IJavaScriptParameter,WebPlayer.InterfaceListHandler' WebPlayer.Play' WebPlayer.PlayerHandler' WebPlayer.Controllers.GameSessionController' WebPlayer.Mobile.Play
+WebPlayer,Play,11,24,3,0,1,439,56,0,0,0.25,10,1,WebPlayer.PlayerHandler' WebPlayer.OutputBuffer' WebPlayer.IFileManager' WebPlayer.SourceFileData' WebPlayer.ApiGame' WebPlayer.FileManagerLoader' WebPlayer.AzureFileManager' WebPlayer.Config' WebPlayer.SessionResources' WebPlayer.PlayAudioEventArgs,WebPlayer.Mobile.Play
+WebPlayer,PlayerHandler,6,58,9,0,50,411,83,0,2,0.26,20,3,TextAdventures.Quest.PlayerHelper' WebPlayer.InterfaceListHandler' WebPlayer.OutputBuffer' TextAdventures.Quest.IASL' TextAdventures.Quest.IASLTimer' WebPlayer.Logging' TextAdventures.Quest.GameLauncher' WebPlayer.ApiGame' TextAdventures.Quest.ListType' TextAdventures.Utility.JSInterop.NullParameter' TextAdventures.Utility.JSInterop.StringParameter' TextAdventures.Utility.JSInterop.IntParameter' TextAdventures.Utility.JSInterop.DoubleParameter' TextAdventures.Utility.JSInterop.BooleanParameter' TextAdventures.Utility.JSInterop.DictionaryParameter' TextAdventures.Utility.JSInterop.JSONParameter' TextAdventures.Quest.CommandData' TextAdventures.Quest.MenuData' WebPlayer.Config' TextAdventures.Quest.UIOption,WebPlayer.Global' WebPlayer.Play' WebPlayer.Mobile.Play
+WebPlayer,PlayAudioEventArgs,0,0,4,0,0,7,0,0,0,-1,0,2,,WebPlayer.Play' WebPlayer.Mobile.Play
+WebPlayer,Resource,0,1,1,0,1,43,4,0,0,-1,3,0,WebPlayer.SessionResources' WebPlayer.Logging' TextAdventures.Quest.PlayerHelper,
+WebPlayer,SessionResources,1,2,0,0,2,14,3,0,0,0,1,3,TextAdventures.Quest.IASL,WebPlayer.Play' WebPlayer.Resource' WebPlayer.Mobile.Play
+WebPlayer.Controllers,GameSessionController,0,1,1,0,1,17,2,0,0,-1,1,0,WebPlayer.OutputBuffer,
+WebPlayer.Controllers,HomeController,0,1,0,0,1,7,1,0,0,-1,0,0,,
+WebPlayer.Controllers,RedirectController,0,1,0,0,1,11,2,0,0,-1,0,0,,
+WebPlayer.Controllers,ResumeController,0,2,0,0,2,14,2,0,0,-1,0,0,,
+WebPlayer.Mobile,Default,0,1,0,0,0,28,4,0,0,-1,0,0,,
+WebPlayer.Mobile,KeepAlive,0,1,1,0,1,14,1,0,0,-1,0,0,,
+WebPlayer.Mobile,Play,10,20,3,0,0,387,50,0,0,0.15,11,0,WebPlayer.PlayerHandler' WebPlayer.OutputBuffer' WebPlayer.IFileManager' WebPlayer.SourceFileData' WebPlayer.ApiGame' WebPlayer.FileManagerLoader' WebPlayer.AzureFileManager' WebPlayer.Config' WebPlayer.Play' WebPlayer.SessionResources' WebPlayer.PlayAudioEventArgs,

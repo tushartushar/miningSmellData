@@ -1,22 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CommonResources,2,1,10,0,0,114,1,0,0,0,0,14
-Analytics,0,5,0,0,5,113,5,0,1,-1,1,0
-Bing,3,6,2,0,2,128,8,0,1,0.33,3,0
-Facebook,15,28,9,0,19,823,57,0,1,0.54,6,0
-FileUpload,0,3,0,0,2,173,3,0,1,-1,3,0
-GamerCard,0,2,0,0,2,31,2,0,1,-1,2,0
-LinkShare,3,6,2,0,2,258,20,0,1,0.33,4,0
-Maps,6,11,5,0,5,381,15,0,1,0.18,3,0
-ReCaptcha,5,13,2,0,5,213,29,0,1,0.31,6,0
-Gravatar,1,2,0,0,2,62,14,0,0,0,4,0
-GravatarRating,0,0,0,0,0,11,0,0,0,-1,0,1
-PreApplicationStartCode,1,1,0,0,1,18,2,0,0,0,1,0
-Themes,0,3,5,0,3,48,3,0,0,-1,1,0
-ThemesImplementation,6,8,7,0,4,168,18,0,0,0,2,1
-Twitter,0,8,0,0,7,531,8,0,1,-1,2,0
-Video,12,10,1,0,3,254,39,0,0,0.2,5,0
-VirtualPathUtilityBase,0,2,0,0,2,5,2,1,0,-1,0,3
-VirtualPathUtilityWrapper,0,2,0,0,2,11,2,0,1,-1,0,2
-UrlBuilder,4,14,4,0,10,142,25,0,0,0.5,3,2
-LinkShareSite,0,0,0,0,0,11,0,0,0,-1,0,1
-HelpersToolkitResources,2,1,13,0,0,133,1,0,0,0,0,6
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Microsoft.Internal.Web.Utils,CommonResources,2,1,10,0,0,118,1,0,0,0,0,14,,Microsoft.Web.Helpers.FileUpload' Microsoft.Web.Helpers.GamerCard' Microsoft.Web.Helpers.LinkShare' Microsoft.Web.Helpers.Maps' Microsoft.Web.Helpers.ReCaptcha' Microsoft.Web.Helpers.Gravatar' Microsoft.Web.Helpers.ThemesImplementation' Microsoft.Web.Helpers.Twitter' Microsoft.Web.Helpers.Video' System.Web.Helpers.Chart' System.Web.Helpers.ObjectInfo' System.Web.Helpers.WebCache' System.Web.Helpers.WebGrid' System.Web.Helpers.WebImage
+Microsoft.Web.Helpers,Analytics,0,5,0,0,5,146,5,0,1,-1,1,1,System.Web.WebPages.HelperResult,Microsoft.Web.Helpers.Test.AnalyticsTest
+Microsoft.Web.Helpers,Bing,3,6,2,0,2,149,8,0,1,0.33,3,1,System.Web.WebPages.Scope.ScopeStorage' System.Web.WebPages.HelperResult' Resources.HelpersToolkitResources,Microsoft.Web.Helpers.Test.BingTest
+Microsoft.Web.Helpers,Facebook,15,28,9,0,19,1041,40,0,1,0.54,7,1,Microsoft.Web.Helpers.UserProfile' Microsoft.Web.Helpers.UrlBuilder' System.Web.Helpers.Json' WebMatrix.Data.Database' WebMatrix.WebData.WebSecurity' WebMatrix.WebData.SimpleMembershipProvider' System.Web.WebPages.HelperResult,Microsoft.Web.Helpers.Test.FacebookTest
+Microsoft.Web.Helpers,UserProfile,0,0,11,0,0,13,0,0,0,-1,0,1,,Microsoft.Web.Helpers.Facebook
+Microsoft.Web.Helpers,FileUpload,0,3,0,0,2,210,3,0,1,-1,4,1,System.Web.WebPages.HelperResult' Microsoft.Web.Helpers.FileUploadTracker' Microsoft.Internal.Web.Utils.CommonResources' Resources.HelpersToolkitResources,Microsoft.Web.Helpers.Test.FileUploadTest
+Microsoft.Web.Helpers,FileUploadTracker,3,1,2,0,1,29,1,0,0,0,0,1,,Microsoft.Web.Helpers.FileUpload
+Microsoft.Web.Helpers,GamerCard,0,2,0,0,2,37,2,0,1,-1,2,1,Microsoft.Internal.Web.Utils.CommonResources' System.Web.WebPages.HelperResult,Microsoft.Web.Helpers.Test.GamerCardTest
+Microsoft.Web.Helpers,LinkShare,3,6,2,0,2,300,12,0,1,0.33,4,1,System.Web.Helpers.WebCache' Microsoft.Web.Helpers.LinkShareSite' Microsoft.Internal.Web.Utils.CommonResources' System.Web.WebPages.HelperResult,Microsoft.Web.Helpers.Test.LinkShareTest
+Microsoft.Web.Helpers,Maps,6,11,5,0,5,503,14,0,1,0.18,4,1,System.Web.WebPages.Scope.ScopeStorage' Microsoft.Internal.Web.Utils.CommonResources' Microsoft.Web.Helpers.MapLocation' System.Web.WebPages.HelperResult,Microsoft.Web.Helpers.Test.MapsTest
+Microsoft.Web.Helpers,MapLocation,2,1,2,0,1,14,1,0,0,0,0,1,,Microsoft.Web.Helpers.Maps
+Microsoft.Web.Helpers,ReCaptcha,5,13,2,0,5,225,23,0,1,0.15,6,1,Microsoft.Web.Helpers.UrlBuilder' Microsoft.Internal.Web.Utils.CommonResources' Microsoft.Web.Helpers.VirtualPathUtilityBase' Resources.HelpersToolkitResources' System.Web.WebPages.HelperResult' System.Web.Helpers.Json,Microsoft.Web.Helpers.Test.ReCaptchaTest
+Microsoft.Web.Helpers,Gravatar,1,2,0,0,2,76,14,0,0,0,4,1,Microsoft.Web.Helpers.GravatarRating' Microsoft.Internal.Web.Utils.CommonResources' Resources.HelpersToolkitResources' System.Web.Helpers.Crypto,Microsoft.Web.Helpers.Test.GravatarTest
+Microsoft.Web.Helpers,GravatarRating,0,0,0,0,0,11,0,0,0,-1,0,2,,Microsoft.Web.Helpers.Gravatar' Microsoft.Web.Helpers.Test.GravatarTest
+Microsoft.Web.Helpers,PreApplicationStartCode,1,1,0,0,1,19,2,0,0,0,1,1,System.Web.WebPages.Razor.WebPageRazorHost,Microsoft.Web.Helpers.Test.PreApplicationStartCodeTest
+Microsoft.Web.Helpers,Themes,0,3,5,0,3,41,3,0,0,-1,1,0,Microsoft.Web.Helpers.ThemesImplementation,
+Microsoft.Web.Helpers,ThemesImplementation,6,8,7,0,4,190,18,0,0,0,2,2,Microsoft.Internal.Web.Utils.CommonResources' Resources.HelpersToolkitResources,Microsoft.Web.Helpers.Themes' Microsoft.Web.Helpers.Test.ThemesTest
+Microsoft.Web.Helpers,Twitter,0,8,0,0,7,740,8,0,1,-1,2,1,System.Web.WebPages.HelperResult' Microsoft.Internal.Web.Utils.CommonResources,Microsoft.Web.Helpers.Test.TwitterTest
+Microsoft.Web.Helpers,Video,12,10,1,0,3,303,39,0,0,0,5,1,Microsoft.Web.Helpers.VirtualPathUtilityWrapper' System.Web.WebPages.HelperResult' Microsoft.Web.Helpers.VirtualPathUtilityBase' Microsoft.Internal.Web.Utils.CommonResources' Resources.HelpersToolkitResources,Microsoft.Web.Helpers.Test.VideoTest
+Microsoft.Web.Helpers,VirtualPathUtilityBase,0,2,0,0,2,5,2,2,0,-1,0,4,,Microsoft.Web.Helpers.ReCaptcha' Microsoft.Web.Helpers.Video' Microsoft.Web.Helpers.UrlBuilder' Microsoft.Web.Helpers.Test.ReCaptchaTest
+Microsoft.Web.Helpers,VirtualPathUtilityWrapper,0,2,0,0,2,11,2,0,1,-1,0,3,,Microsoft.Web.Helpers.Video' Microsoft.Web.Helpers.UrlBuilder' Microsoft.Web.Helpers.Test.VideoTest
+Microsoft.Web.Helpers,UrlBuilder,4,14,4,0,10,159,24,0,0,0.43,5,3,Microsoft.Web.Helpers.VirtualPathUtilityWrapper' Microsoft.Web.Helpers.VirtualPathUtilityBase' System.Web.WebPages.ITemplateFile' System.Web.WebPages.TemplateStack' System.Web.WebPages.TemplateFileInfo,Microsoft.Web.Helpers.Facebook' Microsoft.Web.Helpers.ReCaptcha' Microsoft.Web.Helpers.Test.UrlBuilderTest
+Microsoft.Web.Helpers,LinkShareSite,0,0,0,0,0,11,0,0,0,-1,0,2,,Microsoft.Web.Helpers.LinkShare' Microsoft.Web.Helpers.Test.LinkShareTest
+Resources,HelpersToolkitResources,2,1,13,0,0,140,1,0,0,0,0,6,,Microsoft.Web.Helpers.Bing' Microsoft.Web.Helpers.FileUpload' Microsoft.Web.Helpers.ReCaptcha' Microsoft.Web.Helpers.Gravatar' Microsoft.Web.Helpers.ThemesImplementation' Microsoft.Web.Helpers.Video

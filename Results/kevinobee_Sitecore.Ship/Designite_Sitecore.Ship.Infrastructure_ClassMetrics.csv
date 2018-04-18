@@ -1,15 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-GenericConfigurationElementCollection,0,1,0,0,1,10,2,1,0,-1,0,0
-PackageInstallationConfiguration,7,1,6,0,1,51,1,0,0,0,1,1
-WhitelistCollection,0,2,0,0,0,17,2,0,1,-1,1,1
-WhitelistElement,2,0,2,0,0,23,0,0,0,-1,0,1
-PackageInstallationConfigurationProvider,0,1,1,0,1,23,3,0,1,-1,2,0
-PackageHistoryRepository,6,3,0,0,2,48,7,0,1,0,1,0
-Logger,0,1,0,0,1,7,1,0,1,-1,0,0
-PackageManifestReader,0,1,0,0,1,35,7,0,1,-1,2,0
-TempPackager,2,4,0,0,3,29,7,0,1,0,1,0
-HttpRequestChecker,0,0,2,0,0,13,0,0,1,-1,0,0
-ServerTempFile,0,0,1,0,0,8,0,0,1,-1,0,0
-ShipServiceUrl,0,0,1,0,0,8,0,0,0,-1,0,4
-PublishService,1,5,0,0,4,69,14,0,1,0.6,3,0
-UpdatePackageRunner,1,4,0,0,2,77,15,0,1,0,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Sitecore.Ship.Infrastructure.Configuration,GenericConfigurationElementCollection<T>,0,1,0,0,1,12,2,0,0,-1,0,0,,
+Sitecore.Ship.Infrastructure.Configuration,PackageInstallationConfiguration,7,1,6,0,1,31,1,0,0,0,0,1,,Sitecore.Ship.Infrastructure.Configuration.PackageInstallationConfigurationProvider
+Sitecore.Ship.Infrastructure.Configuration,WhitelistCollection,0,2,0,0,0,19,2,0,0,-1,1,1,Sitecore.Ship.Infrastructure.Configuration.WhitelistElement,Sitecore.Ship.Infrastructure.Configuration.PackageInstallationConfigurationProvider
+Sitecore.Ship.Infrastructure.Configuration,WhitelistElement,2,0,2,0,0,29,0,0,0,-1,0,2,,Sitecore.Ship.Infrastructure.Configuration.WhitelistCollection' Sitecore.Ship.Infrastructure.Configuration.PackageInstallationConfigurationProvider
+Sitecore.Ship.Infrastructure.Configuration,PackageInstallationConfigurationProvider,0,1,1,0,1,23,3,0,1,-1,4,1,Sitecore.Ship.Infrastructure.Configuration.PackageInstallationConfiguration' Sitecore.Ship.Infrastructure.Configuration.WhitelistCollection' Sitecore.Ship.Core.Domain.PackageInstallationSettings' Sitecore.Ship.Infrastructure.Configuration.WhitelistElement,Sitecore.Ship.DefaultBootstrapper
+Sitecore.Ship.Infrastructure.DataAccess,PackageHistoryRepository,6,3,0,0,2,55,5,0,1,0,1,1,Sitecore.Ship.Core.Domain.InstalledPackage,Sitecore.Ship.DefaultBootstrapper
+Sitecore.Ship.Infrastructure.Diagnostics,Logger,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Sitecore.Ship.Infrastructure.Install,PackageManifestReader,0,1,0,0,1,45,4,0,1,-1,4,0,Sitecore.Ship.Core.Domain.PackageManifest' Sitecore.Ship.Core.Domain.PackageManifestEntry' Sitecore.Ship.Core.Services.ZipEntryDataParser' Sitecore.Ship.Core.Domain.PackageManifestEntryNotFound,
+Sitecore.Ship.Infrastructure.IO,TempPackager,2,4,0,0,3,31,4,0,1,0,1,0,Sitecore.Ship.Core.Contracts.ITempFile,
+Sitecore.Ship.Infrastructure.Web,HttpRequestChecker,0,0,2,0,0,11,0,0,1,-1,0,0,,
+Sitecore.Ship.Infrastructure.Web,ServerTempFile,0,0,1,0,0,10,0,0,1,-1,0,0,,
+Sitecore.Ship.Infrastructure.Web,ShipServiceUrl,0,0,1,0,0,7,0,0,0,-1,0,4,,Sitecore.Ship.Package.Install.InstallerModule' Sitecore.Ship.AspNet.Package.InstallPackageCommand' Sitecore.Ship.AspNet.Package.InstallUploadPackageCommand' Sitecore.Ship.AspNet.Package.LatestVersionCommand
+Sitecore.Ship.Infrastructure,PublishService,1,5,0,0,4,70,8,0,1,0.6,3,0,Sitecore.Ship.Core.Domain.ItemsToPublish' Sitecore.Ship.Core.Domain.PublishParameters' Sitecore.Ship.Core.Domain.PublishLastCompleted,
+Sitecore.Ship.Infrastructure.Update,UpdatePackageRunner,1,4,0,0,2,107,6,0,1,0,2,0,Sitecore.Ship.Core.Contracts.IPackageManifestRepository' Sitecore.Ship.Core.Domain.PackageManifest,

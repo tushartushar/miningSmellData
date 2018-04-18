@@ -1,19 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-RecipesCommands,3,3,0,0,3,60,9,0,2,0,5,0
-CommandRecipeHandler,2,2,2,0,2,51,5,0,2,0,5,0
-CommandParser,0,4,0,0,1,145,28,0,0,-1,0,1
-DataRecipeHandler,2,4,2,0,2,82,13,0,2,0,7,0
-FeatureRecipeHandler,1,3,2,0,2,59,13,0,2,0,5,0
-MetadataRecipeHandler,2,2,2,0,2,61,14,0,2,0,6,0
-MigrationRecipeHandler,1,3,2,0,2,51,9,0,2,0,5,0
-ModuleRecipeHandler,3,3,2,0,2,75,14,0,2,0,9,0
-SettingsRecipeHandler,1,3,2,0,2,62,12,0,2,0,5,0
-ThemeRecipeHandler,5,3,2,0,2,90,18,0,2,0,12,0
-Routes,0,2,0,0,2,35,4,0,2,-1,1,0
-RecipeHarvester,3,2,2,0,2,37,3,0,2,0,7,0
-RecipeJournalManager,3,12,2,0,7,143,30,0,2,0,7,0
-RecipeManager,4,2,2,0,2,37,3,0,2,0,7,0
-RecipeParser,0,2,2,0,2,71,29,0,2,-1,5,0
-RecipeScheduler,5,3,0,0,3,38,4,0,3,0,5,0
-RecipeStepExecutor,4,2,2,0,2,63,8,0,2,0,8,0
-RecipeStepQueue,2,5,2,0,3,75,11,0,3,0,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coevery.Recipes.Commands,RecipesCommands,3,3,0,0,3,56,9,0,2,0,7,0,Coevery.Recipes.Services.IRecipeHarvester' Coevery.Recipes.Services.IRecipeManager' Coevery.Environment.Extensions.IExtensionManager' Coevery.Environment.Extensions.Models.ExtensionDescriptor' Coevery.Commands.CommandContext' Coevery.Recipes.Models.Recipe' Coevery.Localization.LocalizedString,
+Coevery.Recipes.RecipeHandlers,CommandRecipeHandler,2,2,2,0,2,38,5,0,2,0,7,0,Coevery.Commands.ICommandManager' Coevery.Recipes.RecipeHandlers.CommandParser' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Commands.CommandParameters' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext,
+Coevery.Recipes.RecipeHandlers,CommandParser,0,4,0,0,1,121,14,0,0,-1,2,1,Coevery.Commands.CommandParameters' Coevery.Recipes.RecipeHandlers.State,Coevery.Recipes.RecipeHandlers.CommandRecipeHandler
+Coevery.Recipes.RecipeHandlers,State,4,5,4,0,5,29,6,0,0,0.8,0,1,,Coevery.Recipes.RecipeHandlers.CommandParser
+Coevery.Recipes.RecipeHandlers,DataRecipeHandler,2,4,2,0,2,74,12,0,2,0,9,0,Coevery.ICoeveryServices' Coevery.Data.ITransactionManager' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.ContentManagement.ImportContentSession' Coevery.ContentManagement.ContentIdentity' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.ContentManagement.IContentManager,
+Coevery.Recipes.RecipeHandlers,FeatureRecipeHandler,1,3,2,0,2,54,12,0,2,0,7,0,Coevery.Environment.Features.IFeatureManager' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.Logging.ILogger' Coevery.Environment.Extensions.Models.FeatureDescriptor,
+Coevery.Recipes.RecipeHandlers,MetadataRecipeHandler,2,2,2,0,2,53,5,0,2,0,7,0,Coevery.ContentManagement.MetaData.IContentDefinitionManager' Coevery.ContentManagement.MetaData.IContentDefinitionReader' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.Logging.ILogger,
+Coevery.Recipes.RecipeHandlers,MigrationRecipeHandler,1,3,2,0,2,46,9,0,2,0,6,0,Coevery.Data.Migration.IDataMigrationManager' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.Logging.ILogger,
+Coevery.Recipes.RecipeHandlers,ModuleRecipeHandler,3,3,2,0,2,80,12,0,2,0,13,1,Coevery.Packaging.Services.IPackagingSourceManager' Coevery.Packaging.Services.IPackageManager' Coevery.Environment.Extensions.IExtensionManager' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Packaging.Models.PackagingEntry' Coevery.Packaging.Models.PackagingSource' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.Packaging.GalleryServer.PublishedPackage' Coevery.Environment.Extensions.Models.DefaultExtensionTypes' Coevery.Environment.Extensions.Models.ExtensionDescriptor' Coevery.Packaging.Services.PackagingSourceManager,Coevery.Tests.Modules.Recipes.RecipeHandlers.ModuleRecipeHandlerTest
+Coevery.Recipes.RecipeHandlers,SettingsRecipeHandler,1,3,2,0,2,56,10,0,2,0,9,0,Coevery.Settings.ISiteService' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Settings.ISite' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.ContentManagement.ContentItem' Coevery.ContentManagement.MetaData.Models.ContentPartDefinition' Coevery.ContentManagement.ContentPart,
+Coevery.Recipes.RecipeHandlers,ThemeRecipeHandler,5,3,2,0,2,100,13,0,2,0,16,1,Coevery.Packaging.Services.IPackagingSourceManager' Coevery.Packaging.Services.IPackageManager' Coevery.Environment.Extensions.IExtensionManager' Coevery.Themes.Services.IThemeService' Coevery.Themes.Services.ISiteThemeService' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Packaging.Models.PackagingEntry' Coevery.Packaging.Models.PackagingSource' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.Logging.ILogger' Coevery.Packaging.GalleryServer.PublishedPackage' Coevery.Environment.Extensions.Models.DefaultExtensionTypes' Coevery.Environment.Extensions.Models.ExtensionDescriptor' Coevery.Packaging.Services.PackagingSourceManager,Coevery.Tests.Modules.Recipes.RecipeHandlers.ThemeRecipeHandlerTest
+Coevery.Recipes,Routes,0,2,0,0,2,24,3,0,2,-1,1,0,Coevery.Mvc.Routes.RouteDescriptor,
+Coevery.Recipes.Services,RecipeHarvester,3,2,2,0,2,33,3,0,2,0,7,0,Coevery.Environment.Extensions.IExtensionManager' Coevery.FileSystems.WebSite.IWebSiteFolder' Coevery.Recipes.Services.IRecipeParser' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Environment.Extensions.Models.ExtensionDescriptor' Coevery.Logging.ILogger,
+Coevery.Recipes.Services,RecipeJournalManager,3,12,2,0,7,122,15,0,2,0,6,0,Coevery.FileSystems.Media.IStorageProvider' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.FileSystems.Media.IStorageFile' Coevery.Recipes.Models.RecipeJournal' Coevery.Recipes.Models.RecipeStatus,
+Coevery.Recipes.Services,RecipeManager,4,2,2,0,2,29,4,0,2,0,7,0,Coevery.Recipes.Services.IRecipeStepQueue' Coevery.Recipes.Services.IRecipeScheduler' Coevery.Recipes.Services.IRecipeJournal' Coevery.Recipes.Events.IRecipeExecuteEventHandler' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Recipes.Models.Recipe,
+Coevery.Recipes.Services,RecipeParser,0,2,2,0,2,62,6,0,2,-1,5,0,Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Recipes.Models.Recipe' Coevery.Recipes.Models.RecipeStep' Coevery.Logging.ILogger,
+Coevery.Recipes.Services,RecipeScheduler,5,3,0,0,3,37,4,0,3,0,6,0,Coevery.Environment.State.IProcessingEngine' Coevery.Environment.Configuration.ShellSettings' Coevery.Environment.Descriptor.IShellDescriptorManager' Coevery.Environment.Descriptor.IShellDescriptorManagerEventHandler' Coevery.Environment.Descriptor.Models.ShellDescriptor' Coevery.Recipes.Services.IRecipeStepExecutor,
+Coevery.Recipes.Services,RecipeStepExecutor,4,2,2,0,2,53,6,0,2,0,10,0,Coevery.Recipes.Services.IRecipeStepQueue' Coevery.Recipes.Services.IRecipeJournal' Coevery.Recipes.Events.IRecipeExecuteEventHandler' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Recipes.Models.RecipeStep' Coevery.Recipes.Models.RecipeContext' Coevery.Localization.LocalizedString' Coevery.Recipes.Services.IRecipeHandler' Coevery.Logging.ILogger,
+Coevery.Recipes.Services,RecipeStepQueue,2,5,2,0,3,67,12,0,3,0,4,0,Coevery.FileSystems.AppData.IAppDataFolder' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Recipes.Models.RecipeStep,

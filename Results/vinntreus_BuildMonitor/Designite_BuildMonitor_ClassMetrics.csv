@@ -1,0 +1,28 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BuildMonitor.Domain,Build,1,3,3,0,3,28,4,2,0,0,1,0,BuildMonitor.Domain.ITimer,
+BuildMonitor.Domain,BuildFactory,0,2,0,0,2,11,2,0,1,-1,4,0,BuildMonitor.Domain.SolutionBuild' BuildMonitor.Domain.ISolution' BuildMonitor.Domain.ProjectBuild' BuildMonitor.Domain.IProject,
+BuildMonitor.Domain,BuildRepository,1,4,1,0,4,52,5,0,1,0.75,1,0,BuildMonitor.Domain.IPersistable,
+BuildMonitor.Domain,BuildTimer,1,3,2,0,3,24,3,0,1,0,0,0,,
+BuildMonitor.Domain,IBuildFactory,0,2,0,0,0,5,2,2,0,-1,2,1,BuildMonitor.Domain.ISolution' BuildMonitor.Domain.IProject,BuildMonitor.Domain.Monitor
+BuildMonitor.Domain,IBuildRepository,0,3,1,0,0,7,3,2,0,-1,1,3,BuildMonitor.Domain.IPersistable,BuildMonitor.Domain.Monitor' BuildMonitor.LocalData.DataAdjuster' BuildMonitorPackage.DataAdjusterWithLogging
+BuildMonitor.Domain,IPersistable,0,1,0,0,0,8,1,2,0,-1,0,3,,BuildMonitor.Domain.BuildRepository' BuildMonitor.Domain.IBuildRepository' BuildMonitor.UnitTests.Fakes.BuildRepositoryFake
+BuildMonitor.Domain,IProjectBuild,0,0,2,0,0,5,0,1,1,-1,0,5,,BuildMonitor.Domain.ISolutionBuild' BuildMonitor.Domain.Monitor' BuildMonitor.Domain.ProjectBuildComparer' BuildMonitor.Domain.SolutionBuild' BuildMonitor.UnitTests.Fakes.SolutionBuildFake
+BuildMonitor.Domain,ISolutionBuild,0,1,2,0,0,6,1,2,1,-1,1,3,BuildMonitor.Domain.IProjectBuild,BuildMonitor.Domain.Monitor' BuildMonitor.Domain.SolutionBuildData' BuildMonitor.UnitTests.Fakes.BuildFactoryFake
+BuildMonitor.Domain,ITimer,0,2,2,0,0,7,2,4,0,-1,0,3,,BuildMonitor.Domain.Build' BuildMonitor.Domain.ProjectBuild' BuildMonitor.Domain.SolutionBuild
+BuildMonitor.Domain,Monitor,8,5,0,2,5,51,8,0,0,0,6,2,BuildMonitor.Domain.IBuildFactory' BuildMonitor.Domain.IBuildRepository' BuildMonitor.Domain.ISolutionBuild' BuildMonitor.Domain.ISolution' BuildMonitor.Domain.IProjectBuild' BuildMonitor.Domain.IProject,BuildMonitorPackage.BuildMonitorPackage' BuildMonitor.UnitTests.Domain.MonitorTests
+BuildMonitor.Domain,ProjectBuildComparer,0,2,0,0,2,11,2,0,0,-1,2,0,BuildMonitor.Domain.IProject' BuildMonitor.Domain.IProjectBuild,
+BuildMonitor.Domain,ProjectBuildData,0,1,2,0,1,10,1,0,0,-1,0,0,,
+BuildMonitor.Domain,IProject,0,0,2,0,0,5,0,1,0,-1,0,7,,BuildMonitor.Domain.BuildFactory' BuildMonitor.Domain.IBuildFactory' BuildMonitor.Domain.Monitor' BuildMonitor.Domain.ProjectBuildComparer' BuildMonitor.Domain.ProjectBuild' BuildMonitorPackage.BuildMonitorPackage' BuildMonitor.UnitTests.Fakes.BuildFactoryFake
+BuildMonitor.Domain,Project,0,0,2,0,0,5,0,0,1,-1,0,1,,BuildMonitorPackage.BuildMonitorPackage
+BuildMonitor.Domain,ProjectBuild,0,2,1,0,2,17,2,0,2,-1,2,1,BuildMonitor.Domain.ITimer' BuildMonitor.Domain.IProject,BuildMonitor.Domain.BuildFactory
+BuildMonitor.Domain,ISolution,0,0,1,0,0,4,0,1,0,-1,0,5,,BuildMonitor.Domain.BuildFactory' BuildMonitor.Domain.IBuildFactory' BuildMonitor.Domain.Monitor' BuildMonitor.Domain.SolutionBuild' BuildMonitor.UnitTests.Fakes.BuildFactoryFake
+BuildMonitor.Domain,Solution,0,0,1,0,0,4,0,0,1,-1,0,2,,BuildMonitorPackage.BuildMonitorPackage' BuildMonitor.UnitTests.Domain.MonitorTests
+BuildMonitor.Domain,SolutionBuild,1,3,1,0,3,24,3,0,2,0,3,2,BuildMonitor.Domain.IProjectBuild' BuildMonitor.Domain.ITimer' BuildMonitor.Domain.ISolution,BuildMonitor.Domain.BuildFactory' BuildMonitor.UnitTests.Domain.SolutionBuildTests
+BuildMonitor.Domain,SolutionBuildData,0,1,5,0,1,20,1,0,0,-1,1,1,BuildMonitor.Domain.ISolutionBuild,BuildMonitor.UnitTests.Domain.MonitorTests
+BuildMonitor,IntExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+BuildMonitor.LocalData,DataAdjuster,1,5,3,0,2,49,9,1,0,0,2,1,BuildMonitor.Domain.IBuildRepository' BuildMonitor.LocalData.RawBuildData,BuildMonitor.UnitTests.LocalData.DataAdjusterTests
+BuildMonitor.LocalData,InvalidData,0,0,2,0,0,5,0,0,0,-1,0,1,,BuildMonitor.UnitTests.LocalData.DataAdjusterTests
+BuildMonitor.LocalData,RawBuildData,1,3,2,0,2,43,5,0,0,0,0,2,,BuildMonitor.LocalData.DataAdjuster' BuildMonitor.UnitTests.LocalData.RawBuildDataTests
+BuildMonitor.UI,LongExtensions,0,1,0,0,1,7,1,0,0,-1,2,0,BuildMonitor.UI.TimePresenter' BuildMonitor.UI.Time,
+BuildMonitor.UI,Time,0,2,4,0,2,22,2,0,0,-1,0,3,,BuildMonitor.UI.LongExtensions' BuildMonitor.UI.TimePresenter' BuildMonitor.UnitTests.UI.TimeDisplayTests
+BuildMonitor.UI,TimePresenter,1,3,4,0,2,27,3,0,0,1,1,1,BuildMonitor.UI.Time,BuildMonitor.UI.LongExtensions

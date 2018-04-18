@@ -1,17 +1,17 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Game,1,3,1,0,2,36,3,0,0,0.67,4,1
-GameCenter,2,2,2,1,2,43,2,0,0,1,4,1
-SimulationMoveDemo,4,2,2,0,2,89,5,0,0,0,8,1
-CheckData,6,0,0,6,0,9,0,0,0,-1,1,2
-NpcShipController,2,2,1,0,2,90,6,0,1,0,6,1
-PlayerShipController,0,2,0,0,1,59,14,0,1,-1,1,2
-ShipController,4,8,9,1,5,204,13,2,0,0.5,4,3
-ShipManager,2,3,1,0,3,25,3,0,0,0,1,2
-GameCamera,9,8,1,3,4,124,18,0,0,0,2,1
-GameCameraTarget,0,3,0,0,1,19,4,0,0,-1,1,0
-LagRotation,5,2,0,1,0,21,2,0,0,0,1,0
-ShipCamera,4,2,0,3,0,21,3,0,0,0,3,0
-ShipOrbit,6,2,0,3,0,56,8,0,0,0,2,1
-ShipSail,2,3,0,2,0,44,3,0,0,1,0,0
-FrmPlayerShip,2,3,0,0,1,28,5,0,0,0,2,0
-FrmUtils,0,1,0,0,1,18,1,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Assets.Scripts,Game,1,3,1,0,2,33,3,0,0,0.67,3,1,Assets.Scripts.SimulationMoveDemo' Assets.Scripts.GameCenter' Assets.Scripts.Ship.ShipManager,Assets.Scripts.UI.Form.FrmPlayerShip
+Assets.Scripts,GameCenter,2,2,2,1,2,43,2,0,0,1,0,1,,Assets.Scripts.Game
+Assets.Scripts,SimulationMoveDemo,4,2,2,0,2,96,4,0,0,0,4,1,Assets.Scripts.Ship.NpcShipController' Assets.Scripts.Ship.PlayerShipController' Assets.Scripts.Ship.ShipManager' Assets.Scripts.Ship.CheckData,Assets.Scripts.Game
+Assets.Scripts.Ship,CheckData,6,0,0,6,0,9,0,0,0,-1,0,2,,Assets.Scripts.SimulationMoveDemo' Assets.Scripts.Ship.NpcShipController
+Assets.Scripts.Ship,NpcShipController,2,2,1,0,2,93,7,0,1,0,1,1,Assets.Scripts.Ship.CheckData,Assets.Scripts.SimulationMoveDemo
+Assets.Scripts.Ship,PlayerShipController,0,2,0,0,1,72,6,0,1,-1,1,2,Assets.Scripts.Ship.ShipController,Assets.Scripts.SimulationMoveDemo' Assets.Scripts.UI.Form.FrmPlayerShip
+Assets.Scripts.Ship,ShipController,4,8,9,1,5,177,13,2,0,0.38,0,4,,Assets.Scripts.Ship.PlayerShipController' Assets.Scripts.Ship.ShipManager' Assets.Scripts.Ship.UIUtils.ShipCamera' Assets.Scripts.Ship.UIUtils.ShipOrbit
+Assets.Scripts.Ship,ShipManager,2,3,1,0,3,20,3,0,0,0,1,2,Assets.Scripts.Ship.ShipController,Assets.Scripts.Game' Assets.Scripts.SimulationMoveDemo
+Assets.Scripts.Ship.UIUtils,GameCamera,9,8,1,3,4,131,14,0,0,0,0,1,,Assets.Scripts.Ship.UIUtils.GameCameraTarget
+Assets.Scripts.Ship.UIUtils,GameCameraTarget,0,3,0,0,1,17,4,0,0,-1,1,0,Assets.Scripts.Ship.UIUtils.GameCamera,
+Assets.Scripts.Ship.UIUtils,LagRotation,5,2,0,1,0,21,2,0,0,0,0,0,,
+Assets.Scripts.Ship.UIUtils,ShipCamera,4,2,0,3,0,22,3,0,0,0,1,0,Assets.Scripts.Ship.ShipController,
+Assets.Scripts.Ship.UIUtils,ShipOrbit,6,2,0,3,0,62,7,0,0,0,1,0,Assets.Scripts.Ship.ShipController,
+Assets.Scripts.Ship.UIUtils,ShipSail,2,3,0,2,0,44,3,0,0,1,0,0,,
+Assets.Scripts.UI.Form,FrmPlayerShip,2,3,0,0,1,29,5,0,0,0,3,0,Assets.Scripts.UI.Form.FrmUtils' Assets.Scripts.Ship.PlayerShipController' Assets.Scripts.Game,
+Assets.Scripts.UI.Form,FrmUtils,0,1,0,0,1,15,2,0,0,-1,0,1,,Assets.Scripts.UI.Form.FrmPlayerShip

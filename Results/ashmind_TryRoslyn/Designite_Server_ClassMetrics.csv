@@ -1,0 +1,57 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SharpLab.Server,Startup,0,3,0,0,3,63,4,0,0,-1,0,0,,
+SharpLab.Server,ShutdownMonitor,1,2,0,0,2,18,3,0,0,0,1,0,SharpLab.Server.Monitoring.IMonitor,
+SharpLab.Server,ServerModule,0,1,0,0,0,58,1,0,0,-1,0,0,,
+SharpLab.Server.Common,ILanguageAdapter,0,4,1,0,0,7,4,3,0,-1,0,2,,SharpLab.Server.Execution.Internal.FlowReportingRewriter' SharpLab.Server.MirrorSharp.SetOptionsFromClient
+SharpLab.Server.Common,Optimize,2,0,0,2,0,4,0,0,0,-1,0,3,,SharpLab.Server.Common.Languages.CSharpAdapter' SharpLab.Server.Common.Languages.FSharpAdapter' SharpLab.Server.Common.Languages.VisualBasicAdapter
+SharpLab.Server.Common,PreCachedAssemblyResolver,1,5,1,0,4,31,8,0,0,1,0,2,,SharpLab.Server.Decompilation.AstBasedDecompiler' SharpLab.Server.Execution.Executor
+SharpLab.Server.Common,TargetNames,3,0,0,3,0,5,0,0,0,-1,0,3,,SharpLab.Server.Common.Languages.CSharpAdapter' SharpLab.Server.Common.Languages.VisualBasicAdapter' SharpLab.Server.MirrorSharp.SlowUpdate
+SharpLab.Server.Common.Languages,CSharpAdapter,5,5,1,0,5,63,7,0,1,0.6,7,0,SharpLab.Server.Compilation.Internal.IMetadataReferenceCollector' SharpLab.Server.Compilation.Internal.NetFrameworkRuntime' SharpLab.Server.Compilation.Internal.IFeatureDiscovery' SharpLab.Runtime.JitGenericAttribute' SharpLab.Server.Common.Optimize' SharpLab.Server.Common.TargetNames' SharpLab.Server.Common.Languages.RoslynAdapterHelper,
+SharpLab.Server.Common.Languages,FSharpAdapter,0,4,1,0,4,28,4,0,1,-1,2,0,SharpLab.Runtime.JitGenericAttribute' SharpLab.Server.Common.Optimize,
+SharpLab.Server.Common.Languages,RoslynAdapterHelper,0,1,0,0,1,14,3,0,0,-1,0,2,,SharpLab.Server.Common.Languages.CSharpAdapter' SharpLab.Server.Common.Languages.VisualBasicAdapter
+SharpLab.Server.Common.Languages,VisualBasicAdapter,4,5,1,0,5,58,7,0,1,0.8,7,0,SharpLab.Server.Compilation.Internal.IMetadataReferenceCollector' SharpLab.Server.Compilation.Internal.IFeatureDiscovery' SharpLab.Server.Compilation.Internal.NetFrameworkRuntime' SharpLab.Runtime.JitGenericAttribute' SharpLab.Server.Common.Optimize' SharpLab.Server.Common.TargetNames' SharpLab.Server.Common.Languages.RoslynAdapterHelper,
+SharpLab.Server.Compilation,Compiler,0,2,0,0,1,38,5,0,1,-1,0,0,,
+SharpLab.Server.Compilation,ICompiler,0,1,0,0,0,4,1,1,0,-1,0,1,,SharpLab.Server.MirrorSharp.SlowUpdate
+SharpLab.Server.Compilation.Internal,CSharpFeatureDiscovery,0,1,0,0,1,20,4,0,1,-1,0,0,,
+SharpLab.Server.Compilation.Internal,IFeatureDiscovery,0,1,0,0,0,3,1,2,0,-1,0,2,,SharpLab.Server.Common.Languages.CSharpAdapter' SharpLab.Server.Common.Languages.VisualBasicAdapter
+SharpLab.Server.Compilation.Internal,IMetadataReferenceCollector,0,1,0,0,0,3,1,1,0,-1,0,2,,SharpLab.Server.Common.Languages.CSharpAdapter' SharpLab.Server.Common.Languages.VisualBasicAdapter
+SharpLab.Server.Compilation.Internal,MetadataReferenceCollector,0,3,0,0,1,21,7,0,1,-1,0,0,,
+SharpLab.Server.Compilation.Internal,NetFrameworkRuntime,1,0,1,0,0,5,0,0,0,-1,0,2,,SharpLab.Server.Common.Languages.CSharpAdapter' SharpLab.Server.Common.Languages.VisualBasicAdapter
+SharpLab.Server.Compilation.Internal,VisualBasicFeatureDiscovery,0,1,0,0,1,20,4,0,1,-1,0,0,,
+SharpLab.Server.Decompilation,AstBasedDecompiler,1,2,1,0,1,30,2,2,1,0,1,0,SharpLab.Server.Common.PreCachedAssemblyResolver,
+SharpLab.Server.Decompilation,CSharpDecompiler,0,1,1,0,0,8,1,0,2,-1,0,0,,
+SharpLab.Server.Decompilation,IDecompiler,0,1,1,0,0,4,1,3,0,-1,0,1,,SharpLab.Server.MirrorSharp.SlowUpdate
+SharpLab.Server.Decompilation,ILDecompiler,0,1,1,0,1,14,1,0,1,-1,1,0,SharpLab.Server.Decompilation.Internal.CustomizableIndentPlainTextOutput,
+SharpLab.Server.Decompilation,JitAsmDecompiler,0,7,1,0,1,218,17,0,1,-1,4,0,SharpLab.Server.Decompilation.Internal.CurrentProcess' SharpLab.Server.Decompilation.Remote' SharpLab.Server.Decompilation.MethodJitResult' SharpLab.Server.Decompilation.MethodJitStatus,
+SharpLab.Server.Decompilation,Reference<T>,0,0,1,0,0,3,0,0,0,-1,0,0,,
+SharpLab.Server.Decompilation,Remote,0,7,0,0,1,106,26,0,0,-1,3,1,SharpLab.Runtime.JitGenericAttribute' SharpLab.Server.Decompilation.MethodJitStatus' SharpLab.Server.Decompilation.MethodJitResult,SharpLab.Server.Decompilation.JitAsmDecompiler
+SharpLab.Server.Decompilation,MethodJitResult,0,1,4,0,1,15,1,0,0,-1,1,2,SharpLab.Server.Decompilation.MethodJitStatus,SharpLab.Server.Decompilation.JitAsmDecompiler' SharpLab.Server.Decompilation.Remote
+SharpLab.Server.Decompilation,MethodJitStatus,0,0,0,0,0,5,0,0,0,-1,0,3,,SharpLab.Server.Decompilation.JitAsmDecompiler' SharpLab.Server.Decompilation.Remote' SharpLab.Server.Decompilation.MethodJitResult
+SharpLab.Server.Decompilation,VisualBasicDecompiler,0,1,1,0,0,15,1,0,2,-1,0,0,,
+SharpLab.Server.Decompilation.AstOnly,FSharpAstTarget,5,23,1,0,2,274,49,0,1,0.35,1,0,SharpLab.Server.Decompilation.AstOnly.Methods,
+SharpLab.Server.Decompilation.AstOnly,Methods,5,0,0,5,0,16,0,0,0,-1,0,1,,SharpLab.Server.Decompilation.AstOnly.FSharpAstTarget
+SharpLab.Server.Decompilation.AstOnly,EnumCache<TEnum>,1,0,0,1,0,5,0,0,0,-1,0,0,,
+SharpLab.Server.Decompilation.AstOnly,IAstTarget,0,2,1,0,0,5,2,2,0,-1,0,1,,SharpLab.Server.MirrorSharp.SlowUpdate
+SharpLab.Server.Decompilation.AstOnly,RoslynAstTarget,0,6,1,0,2,82,14,0,1,-1,1,0,SharpLab.Server.Decompilation.Internal.RoslynSyntaxHelper,
+SharpLab.Server.Decompilation.Internal,CurrentProcess,1,0,0,1,0,7,0,0,0,-1,0,1,,SharpLab.Server.Decompilation.JitAsmDecompiler
+SharpLab.Server.Decompilation.Internal,CustomizableIndentPlainTextOutput,5,14,2,0,10,68,17,0,0,0.29,0,1,,SharpLab.Server.Decompilation.ILDecompiler
+SharpLab.Server.Decompilation.Internal,FastJsonWriterExtensions,0,4,0,0,4,34,4,0,0,-1,0,0,,
+SharpLab.Server.Decompilation.Internal,RoslynSyntaxHelper,3,5,0,0,3,58,9,0,0,0.8,0,1,,SharpLab.Server.Decompilation.AstOnly.RoslynAstTarget
+SharpLab.Server.Execution,ExecutionResult,0,1,2,0,1,9,1,0,0,-1,0,3,,SharpLab.Server.Execution.Executor' SharpLab.Server.Execution.ExecutionResultWrapper' SharpLab.Server.MirrorSharp.SlowUpdate
+SharpLab.Server.Execution,Executor,4,6,0,0,3,188,15,0,1,0.5,7,0,SharpLab.Server.Monitoring.IMonitor' SharpLab.Server.Common.PreCachedAssemblyResolver' SharpLab.Server.Execution.Internal.IAssemblyRewriter' SharpLab.Server.Execution.Remote' SharpLab.Server.Execution.ExecutionResult' SharpLab.Runtime.Internal.Step' SharpLab.Runtime.Internal.InspectionResult,
+SharpLab.Server.Execution,Remote,0,3,0,0,1,57,7,0,0,-1,3,1,SharpLab.Runtime.Internal.Output' SharpLab.Runtime.Internal.Flow' SharpLab.Server.Execution.ExecutionResultWrapper,SharpLab.Server.Execution.Executor
+SharpLab.Server.Execution,ExecutionResultWrapper,0,2,2,0,2,13,2,0,0,-1,1,1,SharpLab.Server.Execution.ExecutionResult,SharpLab.Server.Execution.Remote
+SharpLab.Server.Execution,IExecutor,0,2,0,0,0,4,2,1,0,-1,0,1,,SharpLab.Server.MirrorSharp.SlowUpdate
+SharpLab.Server.Execution.Internal,ApiPolicySetup,0,12,0,0,1,208,14,0,0,-1,0,0,,
+SharpLab.Server.Execution.Internal,CecilExtensions,0,8,0,0,7,80,18,0,0,-1,0,0,,
+SharpLab.Server.Execution.Internal,FlowReportingRewriter,5,14,0,0,2,194,42,0,1,0.79,3,0,SharpLab.Server.Common.ILanguageAdapter' SharpLab.Server.Execution.Internal.ReportMethods' SharpLab.Runtime.Internal.Flow,
+SharpLab.Server.Execution.Internal,ReportMethods,0,0,3,0,0,5,0,0,0,-1,0,1,,SharpLab.Server.Execution.Internal.FlowReportingRewriter
+SharpLab.Server.Execution.Internal,FSharpEntryPointRewriter,0,3,0,0,1,49,17,0,1,-1,0,0,,
+SharpLab.Server.Execution.Internal,IAssemblyRewriter,0,1,0,0,0,3,1,2,0,-1,0,1,,SharpLab.Server.Execution.Executor
+SharpLab.Server.Execution.Internal,WarningMemberRewriter,2,3,0,0,1,15,3,0,0,0,0,0,,
+SharpLab.Server.MirrorSharp,SetOptionsFromClient,3,2,0,0,2,22,3,0,0,0,1,0,SharpLab.Server.Common.ILanguageAdapter,
+SharpLab.Server.MirrorSharp,SlowUpdate,5,3,0,0,3,78,12,0,0,0,6,0,SharpLab.Server.Compilation.ICompiler' SharpLab.Server.Execution.IExecutor' SharpLab.Server.Decompilation.IDecompiler' SharpLab.Server.Decompilation.AstOnly.IAstTarget' SharpLab.Server.Common.TargetNames' SharpLab.Server.Execution.ExecutionResult,
+SharpLab.Server.MirrorSharp,WorkSessionExtensions,0,3,0,0,3,16,4,0,0,-1,0,0,,
+SharpLab.Server.Monitoring,DefaultTraceMonitor,0,2,0,0,2,8,2,0,1,-1,0,0,,
+SharpLab.Server.Monitoring,IMonitor,0,2,0,0,0,4,2,2,0,-1,0,3,,SharpLab.Server.ShutdownMonitor' SharpLab.Server.Execution.Executor' SharpLab.Server.Monitoring.MonitorExceptionLogger
+SharpLab.Server.Monitoring,MonitorExceptionLogger,1,2,0,0,2,11,3,0,0,0,1,0,SharpLab.Server.Monitoring.IMonitor,

@@ -1,30 +1,48 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IBayeux,0,3,3,0,0,54,3,1,0,-1,0,0
-IBayeuxListener,0,0,0,0,0,6,0,1,0,-1,0,0
-Channel_Fields,6,0,0,6,0,37,0,0,0,-1,0,3
-IChannel,0,3,7,0,0,59,3,1,0,-1,1,0
-ChannelId,7,14,3,2,14,166,39,0,0,0.21,0,5
-Message_Fields,20,0,0,20,0,34,0,0,0,-1,0,3
-IMessage,0,0,11,0,0,75,0,1,0,-1,1,5
-IMutableMessage,0,3,5,0,0,52,3,1,1,-1,0,11
-ISession,0,7,4,0,0,101,7,1,0,-1,0,0
-ITransport,0,1,3,0,0,72,1,1,0,-1,0,0
-IClientSession,0,5,0,0,0,52,5,1,1,-1,1,4
-IExtension,0,4,0,0,0,44,4,2,0,-1,2,2
-IClientSessionChannel,0,7,1,0,0,46,7,0,1,-1,3,1
-IClientSessionChannelListener,0,0,0,0,0,6,0,1,1,-1,0,1
-IMessageListener,0,1,0,0,0,10,1,0,2,-1,2,1
-BayeuxClient,17,48,12,3,21,889,79,0,1,0.35,11,0
-AckExtension,3,4,0,1,4,57,9,0,1,0.75,5,0
-TimesyncClientExtension,2,4,3,0,4,56,6,0,1,0.75,3,0
-ClientTransport,3,6,1,3,6,21,6,1,1,1,2,2
-HttpClientTransport,2,6,0,0,2,30,7,1,2,0.5,0,1
-LongPollingTransport,5,12,1,0,8,233,31,0,3,0.58,5,0
-TransportException,0,3,0,0,3,17,3,0,0,-1,0,0
-ITransportListener,0,6,0,0,0,11,6,0,0,-1,2,3
-TransportRegistry,2,3,2,0,3,49,8,0,0,0,1,1
-AbstractClientSession,5,21,6,0,14,313,40,1,2,0.38,3,0
-AbstractTransport,3,7,3,0,7,79,9,1,1,0.71,1,0
-DictionaryMessage,2,7,11,0,7,162,15,0,2,1,3,2
-ObjectConverter,0,6,0,0,6,71,15,0,0,-1,2,5
-Print,0,4,0,0,4,53,10,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Cometd.Bayeux,IBayeux,0,3,3,0,0,41,3,1,0,-1,0,0,,
+Cometd.Bayeux,IBayeuxListener,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Cometd.Bayeux,Channel_Fields,6,0,0,6,0,9,0,0,0,-1,0,8,,Cometd.Client.BayeuxClient' Cometd.Client.HandshakeTransportListener' Cometd.Client.ConnectTransportListener' Cometd.Client.DisconnectTransportListener' Cometd.Client.BayeuxClientChannel' Cometd.Client.DisconnectingState' Cometd.Client.Ext.AckExtension' Cometd.Client.Transport.LongPollingTransport
+Cometd.Bayeux,IChannel,0,3,7,0,0,45,3,1,0,-1,0,0,,
+Cometd.Bayeux,ChannelId,7,14,3,2,14,185,35,0,0,0.21,0,4,,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientChannel' Cometd.Common.AbstractClientSession' Cometd.Common.AbstractSessionChannel
+Cometd.Bayeux,Message_Fields,20,0,0,20,0,23,0,0,0,-1,0,4,,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientChannel' Cometd.Client.Ext.AckExtension' Cometd.Common.DictionaryMessage
+Cometd.Bayeux,IMessage,0,0,11,0,0,53,0,1,0,-1,0,3,,Cometd.Bayeux.Client.IMessageListener' Cometd.Client.BayeuxClient' Cometd.Common.AbstractSessionChannel
+Cometd.Bayeux,IMutableMessage,0,3,5,0,0,36,3,1,1,-1,0,13,,Cometd.Bayeux.Client.IExtension' Cometd.Client.BayeuxClient' Cometd.Client.PublishTransportListener' Cometd.Client.HandshakeTransportListener' Cometd.Client.ConnectTransportListener' Cometd.Client.DisconnectTransportListener' Cometd.Client.BayeuxClientChannel' Cometd.Client.BayeuxClientState' Cometd.Client.DisconnectingState' Cometd.Client.Ext.AckExtension' Cometd.Client.Ext.TimesyncClientExtension' Cometd.Client.Transport.LongPollingTransport' Cometd.Common.AbstractClientSession
+Cometd.Bayeux,ISession,0,7,4,0,0,75,7,1,0,-1,0,0,,
+Cometd.Bayeux,ITransport,0,1,3,0,0,26,1,1,0,-1,0,0,,
+Cometd.Bayeux.Client,IClientSession,0,5,0,0,0,44,5,1,1,-1,1,3,Cometd.Bayeux.Client.IExtension,Cometd.Bayeux.Client.IExtension' Cometd.Client.Ext.AckExtension' Cometd.Client.Ext.TimesyncClientExtension
+Cometd.Bayeux.Client,IExtension,0,4,0,0,0,35,4,2,0,-1,2,2,Cometd.Bayeux.Client.IClientSession' Cometd.Bayeux.IMutableMessage,Cometd.Bayeux.Client.IClientSession' Cometd.Common.AbstractClientSession
+Cometd.Bayeux.Client,IClientSessionChannel,0,7,1,0,0,31,7,1,1,-1,2,1,Cometd.Bayeux.Client.IClientSessionChannelListener' Cometd.Bayeux.Client.IMessageListener,Cometd.Bayeux.Client.IMessageListener
+Cometd.Bayeux.Client,IClientSessionChannelListener,0,0,0,0,0,3,0,1,1,-1,0,2,,Cometd.Bayeux.Client.IClientSessionChannel' Cometd.Common.AbstractSessionChannel
+Cometd.Bayeux.Client,IMessageListener,0,1,0,0,0,9,1,0,2,-1,2,2,Cometd.Bayeux.Client.IClientSessionChannel' Cometd.Bayeux.IMessage,Cometd.Bayeux.Client.IClientSessionChannel' Cometd.Common.AbstractSessionChannel
+Cometd.Client,BayeuxClient,17,48,12,3,21,1005,84,0,1,0.23,23,14,Cometd.Client.Transport.TransportRegistry' Cometd.Client.BayeuxClientState' Cometd.Client.Transport.ITransportListener' Cometd.Client.Transport.HttpClientTransport' Cometd.Client.State' Cometd.Client.Transport.ClientTransport' Cometd.Client.HandshakingState' Cometd.Bayeux.IMutableMessage' Cometd.Bayeux.Channel_Fields' Cometd.Bayeux.Message_Fields' Cometd.Common.AbstractSessionChannel' Cometd.Bayeux.ChannelId' Cometd.Client.BayeuxClientChannel' Cometd.Common.ObjectConverter' Cometd.Client.DisconnectingState' Cometd.Client.DisconnectedState' Cometd.Client.AbortedState' Cometd.Client.ConnectingState' Cometd.Client.RehandshakingState' Cometd.Client.ConnectedState' Cometd.Client.UnconnectedState' Cometd.Common.DictionaryMessage' Cometd.Bayeux.IMessage,Cometd.Client.PublishTransportListener' Cometd.Client.HandshakeTransportListener' Cometd.Client.ConnectTransportListener' Cometd.Client.DisconnectTransportListener' Cometd.Client.BayeuxClientChannel' Cometd.Client.BayeuxClientState' Cometd.Client.DisconnectedState' Cometd.Client.AbortedState' Cometd.Client.HandshakingState' Cometd.Client.RehandshakingState' Cometd.Client.ConnectingState' Cometd.Client.ConnectedState' Cometd.Client.UnconnectedState' Cometd.Client.DisconnectingState
+Cometd.Client,State,0,0,0,0,0,4,0,0,0,-1,0,9,,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientState' Cometd.Client.DisconnectedState' Cometd.Client.HandshakingState' Cometd.Client.RehandshakingState' Cometd.Client.ConnectingState' Cometd.Client.ConnectedState' Cometd.Client.UnconnectedState' Cometd.Client.DisconnectingState
+Cometd.Client,PublishTransportListener,1,9,0,0,7,43,10,3,1,0,2,3,Cometd.Client.BayeuxClient' Cometd.Bayeux.IMutableMessage,Cometd.Client.HandshakeTransportListener' Cometd.Client.ConnectTransportListener' Cometd.Client.DisconnectTransportListener
+Cometd.Client,HandshakeTransportListener,0,3,0,0,1,23,4,0,2,-1,6,0,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientState' Cometd.Client.PublishTransportListener' Cometd.Client.RehandshakingState' Cometd.Bayeux.Channel_Fields' Cometd.Bayeux.IMutableMessage,
+Cometd.Client,ConnectTransportListener,0,3,0,0,1,23,4,0,2,-1,6,0,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientState' Cometd.Client.PublishTransportListener' Cometd.Client.UnconnectedState' Cometd.Bayeux.Channel_Fields' Cometd.Bayeux.IMutableMessage,
+Cometd.Client,DisconnectTransportListener,0,3,0,0,1,23,4,0,2,-1,6,0,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientState' Cometd.Client.PublishTransportListener' Cometd.Client.DisconnectedState' Cometd.Bayeux.Channel_Fields' Cometd.Bayeux.IMutableMessage,
+Cometd.Client,BayeuxClientChannel,1,5,1,0,3,44,6,0,1,0,5,1,Cometd.Client.BayeuxClient' Cometd.Bayeux.ChannelId' Cometd.Bayeux.IMutableMessage' Cometd.Bayeux.Channel_Fields' Cometd.Bayeux.Message_Fields,Cometd.Client.BayeuxClient
+Cometd.Client,BayeuxClientState,7,8,2,6,8,73,13,7,0,0.62,5,11,Cometd.Client.State' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClient' Cometd.Client.Transport.ITransportListener' Cometd.Bayeux.IMutableMessage,Cometd.Client.BayeuxClient' Cometd.Client.HandshakeTransportListener' Cometd.Client.ConnectTransportListener' Cometd.Client.DisconnectTransportListener' Cometd.Client.DisconnectedState' Cometd.Client.HandshakingState' Cometd.Client.RehandshakingState' Cometd.Client.ConnectingState' Cometd.Client.ConnectedState' Cometd.Client.UnconnectedState' Cometd.Client.DisconnectingState
+Cometd.Client,DisconnectedState,0,3,0,0,3,16,3,1,1,-1,4,3,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClientState' Cometd.Client.State,Cometd.Client.BayeuxClient' Cometd.Client.DisconnectTransportListener' Cometd.Client.AbortedState
+Cometd.Client,AbortedState,0,2,0,0,2,12,2,0,2,-1,3,1,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.DisconnectedState,Cometd.Client.BayeuxClient
+Cometd.Client,HandshakingState,0,4,0,0,4,25,4,0,1,-1,4,1,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClientState' Cometd.Client.State,Cometd.Client.BayeuxClient
+Cometd.Client,RehandshakingState,0,4,0,0,4,27,5,0,1,-1,4,2,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClientState' Cometd.Client.State,Cometd.Client.BayeuxClient' Cometd.Client.HandshakeTransportListener
+Cometd.Client,ConnectingState,0,3,0,0,3,21,3,0,1,-1,4,1,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClientState' Cometd.Client.State,Cometd.Client.BayeuxClient
+Cometd.Client,ConnectedState,0,3,0,0,3,19,3,0,1,-1,4,1,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClientState' Cometd.Client.State,Cometd.Client.BayeuxClient
+Cometd.Client,UnconnectedState,0,3,0,0,3,18,3,0,1,-1,4,2,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClientState' Cometd.Client.State,Cometd.Client.BayeuxClient' Cometd.Client.ConnectTransportListener
+Cometd.Client,DisconnectingState,0,3,0,0,3,17,3,0,1,-1,6,1,Cometd.Client.BayeuxClient' Cometd.Client.Transport.ClientTransport' Cometd.Client.BayeuxClientState' Cometd.Client.State' Cometd.Bayeux.IMutableMessage' Cometd.Bayeux.Channel_Fields,Cometd.Client.BayeuxClient
+Cometd.Client.Ext,AckExtension,3,4,0,1,4,46,6,0,1,0.75,5,0,Cometd.Bayeux.Client.IClientSession' Cometd.Bayeux.IMutableMessage' Cometd.Bayeux.Channel_Fields' Cometd.Bayeux.Message_Fields' Cometd.Common.ObjectConverter,
+Cometd.Client.Ext,TimesyncClientExtension,2,4,3,0,4,64,6,0,1,0.75,3,0,Cometd.Bayeux.Client.IClientSession' Cometd.Bayeux.IMutableMessage' Cometd.Common.ObjectConverter,
+Cometd.Client.Transport,ClientTransport,3,6,1,3,6,19,6,1,1,1,1,11,Cometd.Client.Transport.ITransportListener,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientState' Cometd.Client.DisconnectedState' Cometd.Client.AbortedState' Cometd.Client.HandshakingState' Cometd.Client.RehandshakingState' Cometd.Client.ConnectingState' Cometd.Client.ConnectedState' Cometd.Client.UnconnectedState' Cometd.Client.DisconnectingState' Cometd.Client.Transport.TransportRegistry
+Cometd.Client.Transport,HttpClientTransport,2,6,0,0,2,31,7,1,2,0.5,0,2,,Cometd.Client.BayeuxClient' Cometd.Client.Transport.LongPollingTransport
+Cometd.Client.Transport,LongPollingTransport,5,12,1,0,8,257,19,0,3,0.58,8,1,Cometd.Client.Transport.HttpClientTransport' Cometd.Client.Transport.TransportExchange' Cometd.Client.Transport.LongPollingRequest' Cometd.Bayeux.IMutableMessage' Cometd.Bayeux.Channel_Fields' Cometd.Common.ObjectConverter' Cometd.Client.Transport.ITransportListener' Cometd.Common.DictionaryMessage,Cometd.Client.Transport.TransportExchange
+Cometd.Client.Transport,LongPollingRequest,4,2,0,1,2,26,2,0,0,0,3,2,Cometd.Client.Transport.ITransportListener' Cometd.Client.Transport.TransportExchange' Cometd.Common.ObjectConverter,Cometd.Client.Transport.LongPollingTransport' Cometd.Client.Transport.TransportExchange
+Cometd.Client.Transport,TransportExchange,7,4,0,6,4,34,5,0,0,0,3,2,Cometd.Client.Transport.LongPollingTransport' Cometd.Client.Transport.ITransportListener' Cometd.Client.Transport.LongPollingRequest,Cometd.Client.Transport.LongPollingTransport' Cometd.Client.Transport.LongPollingRequest
+Cometd.Client.Transport,TransportException,0,3,0,0,3,18,3,0,0,-1,0,0,,
+Cometd.Client.Transport,ITransportListener,0,6,0,0,0,9,6,1,0,-1,0,6,,Cometd.Client.BayeuxClient' Cometd.Client.BayeuxClientState' Cometd.Client.Transport.ClientTransport' Cometd.Client.Transport.LongPollingTransport' Cometd.Client.Transport.LongPollingRequest' Cometd.Client.Transport.TransportExchange
+Cometd.Client.Transport,TransportRegistry,2,3,2,0,3,57,8,0,0,0,1,1,Cometd.Client.Transport.ClientTransport,Cometd.Client.BayeuxClient
+Cometd.Common,AbstractClientSession,5,21,6,0,14,380,36,1,2,0.38,4,0,Cometd.Bayeux.Client.IExtension' Cometd.Bayeux.IMutableMessage' Cometd.Bayeux.ChannelId' Cometd.Common.AbstractSessionChannel,
+Cometd.Common,AbstractSessionChannel,5,16,8,0,14,178,26,1,2,0.31,4,2,Cometd.Bayeux.ChannelId' Cometd.Bayeux.Client.IClientSessionChannelListener' Cometd.Bayeux.Client.IMessageListener' Cometd.Bayeux.IMessage,Cometd.Client.BayeuxClient' Cometd.Common.AbstractClientSession
+Cometd.Common,AbstractTransport,3,7,3,0,7,88,9,1,1,0,1,0,Cometd.Common.ObjectConverter,
+Cometd.Common,DictionaryMessage,2,7,11,0,7,201,14,0,2,1,1,2,Cometd.Bayeux.Message_Fields,Cometd.Client.BayeuxClient' Cometd.Client.Transport.LongPollingTransport
+Cometd.Common,ObjectConverter,0,6,0,0,6,55,12,0,0,-1,0,6,,Cometd.Client.BayeuxClient' Cometd.Client.Ext.AckExtension' Cometd.Client.Ext.TimesyncClientExtension' Cometd.Client.Transport.LongPollingTransport' Cometd.Client.Transport.LongPollingRequest' Cometd.Common.AbstractTransport
+Cometd.Common,Print,0,4,0,0,4,49,15,0,0,-1,0,0,,

@@ -1,0 +1,120 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+de4dot.blocks,BaseBlock,1,0,1,0,0,7,0,2,0,-1,1,8,de4dot.blocks.ScopeBlock,de4dot.blocks.BlockInfo' de4dot.blocks.Sorter' de4dot.blocks.CodeGenerator' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.ForwardScanOrder' de4dot.blocks.BaseBlocksList' de4dot.blocks.BaseBlockInfo' de4dot.blocks.ScopeBlock
+de4dot.blocks,Block,4,33,6,0,28,248,68,0,1,0.09,2,22,de4dot.blocks.Instr' de4dot.blocks.Utils,de4dot.blocks.Blocks' de4dot.blocks.LocalVariableInfo' de4dot.blocks.BlockInfo' de4dot.blocks.Sorter' de4dot.blocks.CodeGenerator' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.ForwardScanOrder' de4dot.blocks.InstructionListParser' de4dot.blocks.ScopeBlock' de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.BlockDeobfuscator' de4dot.blocks.cflow.CflowUtils' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.DeadCodeRemover' de4dot.blocks.cflow.InstructionExpressionFinder' de4dot.blocks.cflow.DeadStoreRemover' de4dot.blocks.cflow.MethodCallInliner' de4dot.blocks.cflow.MethodCallInlinerBase' de4dot.blocks.cflow.InstructionPatcher' de4dot.blocks.cflow.StLdlocFixer' de4dot.blocks.cflow.SwitchCflowDeobfuscator' de4dot.blocks.cflow.BlocksCflowDeobfuscator
+de4dot.blocks,Blocks,3,10,3,0,6,200,36,0,0,0,8,12,de4dot.blocks.MethodBlocks' de4dot.blocks.InstructionListParser' de4dot.blocks.ScopeBlock' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.CodeGenerator' de4dot.blocks.Instr' de4dot.blocks.Block' de4dot.blocks.LocalVariableInfo,de4dot.blocks.cflow.BlockDeobfuscator' de4dot.blocks.cflow.CachedCflowDeobfuscator' de4dot.blocks.cflow.CflowDeobfuscator' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.DeadStoreRemover' de4dot.blocks.cflow.IBlocksDeobfuscator' de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.MethodCallInliner' de4dot.blocks.cflow.MethodCallInlinerBase' de4dot.blocks.cflow.StLdlocFixer' de4dot.blocks.cflow.SwitchCflowDeobfuscator' de4dot.blocks.cflow.BlocksCflowDeobfuscator
+de4dot.blocks,LocalVariableInfo,2,1,0,2,1,8,1,0,0,0,1,1,de4dot.blocks.Block,de4dot.blocks.Blocks
+de4dot.blocks,BlocksSorter,1,2,0,0,2,216,2,0,0,0,3,1,de4dot.blocks.ScopeBlock' de4dot.blocks.Sorter' de4dot.blocks.ForwardScanOrder,de4dot.blocks.ScopeBlock
+de4dot.blocks,BlockInfo,9,6,0,8,6,41,8,0,0,0.5,4,3,de4dot.blocks.BaseBlock' de4dot.blocks.Block' de4dot.blocks.DotNetUtils' de4dot.blocks.Instr,de4dot.blocks.Sorter' de4dot.blocks.CodeGenerator' de4dot.blocks.ForwardScanOrder
+de4dot.blocks,Sorter,8,12,0,0,2,188,48,0,0,0.17,6,1,de4dot.blocks.ScopeBlock' de4dot.blocks.BaseBlock' de4dot.blocks.Block' de4dot.blocks.BlockInfo' de4dot.blocks.TryBlock' de4dot.blocks.TryHandlerBlock,de4dot.blocks.BlocksSorter
+de4dot.blocks,CodeGenerator,6,18,0,0,2,322,54,0,0,0,12,1,de4dot.blocks.MethodBlocks' de4dot.blocks.Block' de4dot.blocks.Instr' de4dot.blocks.BlockInfo' de4dot.blocks.ExceptionInfo' de4dot.blocks.BaseBlock' de4dot.blocks.BlockState' de4dot.blocks.ScopeBlock' de4dot.blocks.TryBlock' de4dot.blocks.FilterHandlerBlock' de4dot.blocks.HandlerBlock' de4dot.blocks.TryHandlerBlock,de4dot.blocks.Blocks
+de4dot.blocks,BlockState,1,1,0,1,1,6,1,0,0,0,1,1,de4dot.blocks.ScopeBlock,de4dot.blocks.CodeGenerator
+de4dot.blocks,ExceptionInfo,7,1,0,7,1,23,2,0,0,0,0,1,,de4dot.blocks.CodeGenerator
+de4dot.blocks,DeadBlocksRemover,5,9,0,0,2,103,21,0,0,0,7,2,de4dot.blocks.MethodBlocks' de4dot.blocks.ScopeBlock' de4dot.blocks.ScopeBlockInfo' de4dot.blocks.BaseBlock' de4dot.blocks.Block' de4dot.blocks.TryBlock' de4dot.blocks.TryHandlerBlock,de4dot.blocks.Blocks' de4dot.blocks.cflow.BlocksCflowDeobfuscator
+de4dot.blocks,ScopeBlockInfo,2,1,0,2,1,7,1,0,0,0,1,1,de4dot.blocks.ScopeBlock,de4dot.blocks.DeadBlocksRemover
+de4dot.blocks,FrameworkType,0,0,0,0,0,8,0,0,0,-1,0,1,,de4dot.blocks.DotNetUtils
+de4dot.blocks,TypeCache,2,3,0,0,2,15,4,0,0,0,0,1,,de4dot.blocks.TypeCaches
+de4dot.blocks,TypeCaches,1,3,0,0,3,22,5,0,0,0,1,1,de4dot.blocks.TypeCache,de4dot.blocks.DotNetUtils
+de4dot.blocks,CallCounter,1,3,0,0,3,25,5,0,0,0,1,0,de4dot.blocks.MethodReferenceAndDeclaringTypeKey,
+de4dot.blocks,MethodCalls,1,4,0,0,4,26,8,0,0,0,0,1,,de4dot.blocks.DotNetUtils
+de4dot.blocks,DotNetUtils,2,97,0,1,91,973,278,0,0,0.52,5,11,de4dot.blocks.TypeCaches' de4dot.blocks.MemberReferenceHelper' de4dot.blocks.MethodCalls' de4dot.blocks.Utils' de4dot.blocks.FrameworkType,de4dot.blocks.BlockInfo' de4dot.blocks.Instr' de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.CachedCflowDeobfuscator' de4dot.blocks.cflow.CflowDeobfuscator' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.DeadCodeRemover' de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.MethodCallInliner' de4dot.blocks.cflow.MethodCallInlinerBase' de4dot.blocks.cflow.InstructionPatcher
+de4dot.blocks,FilterHandlerBlock,0,0,0,0,0,2,0,0,1,-1,0,3,,de4dot.blocks.CodeGenerator' de4dot.blocks.InstructionListParser' de4dot.blocks.TryHandlerBlock
+de4dot.blocks,ForwardScanOrder,5,9,0,0,2,120,27,0,0,0,5,1,de4dot.blocks.ScopeBlock' de4dot.blocks.TryHandlerBlock' de4dot.blocks.Block' de4dot.blocks.BlockInfo' de4dot.blocks.BaseBlock,de4dot.blocks.BlocksSorter
+de4dot.blocks,HandlerBlock,0,0,0,0,0,2,0,0,1,-1,0,3,,de4dot.blocks.CodeGenerator' de4dot.blocks.InstructionListParser' de4dot.blocks.TryHandlerBlock
+de4dot.blocks,Instr,1,21,3,0,21,176,26,0,0,0.38,1,17,de4dot.blocks.DotNetUtils,de4dot.blocks.Block' de4dot.blocks.Blocks' de4dot.blocks.BlockInfo' de4dot.blocks.CodeGenerator' de4dot.blocks.InstructionListParser' de4dot.blocks.ScopeBlock' de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.DeadCodeRemover' de4dot.blocks.cflow.InstructionExpressionFinder' de4dot.blocks.cflow.DeadStoreRemover' de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.MethodCallInliner' de4dot.blocks.cflow.InstructionPatcher' de4dot.blocks.cflow.StLdlocFixer' de4dot.blocks.cflow.SwitchCflowDeobfuscator' de4dot.blocks.cflow.BlocksCflowDeobfuscator
+de4dot.blocks,InstructionListParser,4,13,0,0,2,296,37,0,0,0,8,1,de4dot.blocks.Block' de4dot.blocks.Instr' de4dot.blocks.BaseBlocksList' de4dot.blocks.TryBlock' de4dot.blocks.TryHandlerBlock' de4dot.blocks.FilterHandlerBlock' de4dot.blocks.HandlerBlock' de4dot.blocks.MethodBlocks,de4dot.blocks.Blocks
+de4dot.blocks,EHInfo,1,3,0,1,3,19,5,0,0,0,0,0,,
+de4dot.blocks,BaseBlocksList,1,7,0,0,3,70,19,0,0,0,3,1,de4dot.blocks.BaseBlockInfo' de4dot.blocks.BaseBlock' de4dot.blocks.ScopeBlock,de4dot.blocks.InstructionListParser
+de4dot.blocks,BaseBlockInfo,3,1,0,3,1,9,1,0,0,0,1,1,de4dot.blocks.BaseBlock,de4dot.blocks.BaseBlocksList
+de4dot.blocks,TypeReferenceInstance,4,6,0,0,1,49,9,0,1,0,2,1,de4dot.blocks.MethodReferenceInstance' de4dot.blocks.MemberReferenceHelper,de4dot.blocks.MultiTypeRefInstance
+de4dot.blocks,MultiTypeRefInstance,3,4,0,0,1,21,5,4,0,0,1,0,de4dot.blocks.TypeReferenceInstance,
+de4dot.blocks,MethodReferenceInstance,1,3,0,0,1,31,8,0,1,0,0,1,,de4dot.blocks.TypeReferenceInstance
+de4dot.blocks,FieldReferenceInstance,1,3,0,0,1,16,4,0,1,0,0,0,,
+de4dot.blocks,EventReferenceInstance,1,3,0,0,1,16,4,0,1,0,0,0,,
+de4dot.blocks,PropertyReferenceInstance,1,3,0,0,1,22,6,0,1,0,0,0,,
+de4dot.blocks,CecilType,0,0,0,0,0,21,0,0,0,-1,0,2,,de4dot.blocks.MemberReferenceHelper' de4dot.blocks.TypeReferenceUpdaterBase
+de4dot.blocks,TypeDefinitionDict<TValue>,5,9,1,0,6,67,13,0,0,0.44,2,0,de4dot.blocks.ScopeAndTokenKey' de4dot.blocks.TypeReferenceKey,
+de4dot.blocks,FieldDefinitionDictBase<TValue>,5,9,1,0,6,65,13,0,0,0.44,2,0,de4dot.blocks.ScopeAndTokenKey' de4dot.blocks.IFieldReferenceKey,
+de4dot.blocks,FieldDefinitionDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.FieldReferenceKey,
+de4dot.blocks,FieldDefinitionAndDeclaringTypeDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.FieldReferenceAndDeclaringTypeKey,
+de4dot.blocks,MethodDefinitionDictBase<TValue>,5,9,1,0,6,65,13,0,0,0.44,2,0,de4dot.blocks.ScopeAndTokenKey' de4dot.blocks.IMethodReferenceKey,
+de4dot.blocks,MethodDefinitionDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.MethodReferenceKey,
+de4dot.blocks,MethodDefinitionAndDeclaringTypeDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.MethodReferenceAndDeclaringTypeKey,
+de4dot.blocks,PropertyDefinitionDictBase<TValue>,3,8,1,0,6,45,11,0,0,0.38,2,0,de4dot.blocks.ScopeAndTokenKey' de4dot.blocks.IPropertyReferenceKey,
+de4dot.blocks,PropertyDefinitionDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.PropertyReferenceKey,
+de4dot.blocks,PropertyDefinitionAndDeclaringTypeDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.PropertyReferenceAndDeclaringTypeKey,
+de4dot.blocks,EventDefinitionDictBase<TValue>,3,8,1,0,6,45,11,0,0,0.38,2,0,de4dot.blocks.ScopeAndTokenKey' de4dot.blocks.IEventReferenceKey,
+de4dot.blocks,EventDefinitionDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.EventReferenceKey,
+de4dot.blocks,EventDefinitionAndDeclaringTypeDict<TValue>,0,1,0,0,0,5,1,0,0,-1,1,0,de4dot.blocks.EventReferenceAndDeclaringTypeKey,
+de4dot.blocks,ScopeAndTokenKey,2,9,0,0,9,36,10,0,0,0.67,1,5,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.TypeDefinitionDict<TValue>' de4dot.blocks.FieldDefinitionDictBase<TValue>' de4dot.blocks.MethodDefinitionDictBase<TValue>' de4dot.blocks.PropertyDefinitionDictBase<TValue>' de4dot.blocks.EventDefinitionDictBase<TValue>
+de4dot.blocks,TypeReferenceKey,1,4,1,0,4,21,5,0,0,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.TypeDefinitionDict<TValue>
+de4dot.blocks,TypeReferenceSameVersionKey,1,4,1,0,4,21,5,0,0,0,1,0,de4dot.blocks.MemberReferenceHelper,
+de4dot.blocks,IFieldReferenceKey,0,0,1,0,0,3,0,2,0,-1,0,1,,de4dot.blocks.FieldDefinitionDictBase<TValue>
+de4dot.blocks,IPropertyReferenceKey,0,0,1,0,0,3,0,2,0,-1,0,1,,de4dot.blocks.PropertyDefinitionDictBase<TValue>
+de4dot.blocks,IEventReferenceKey,0,0,1,0,0,3,0,2,0,-1,0,1,,de4dot.blocks.EventDefinitionDictBase<TValue>
+de4dot.blocks,IMethodReferenceKey,0,0,1,0,0,3,0,2,0,-1,0,1,,de4dot.blocks.MethodDefinitionDictBase<TValue>
+de4dot.blocks,FieldReferenceKey,1,4,1,0,4,21,5,0,1,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.FieldDefinitionDict<TValue>
+de4dot.blocks,PropertyReferenceKey,1,4,1,0,4,21,5,0,1,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.PropertyDefinitionDict<TValue>
+de4dot.blocks,EventReferenceKey,1,4,1,0,4,21,5,0,1,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.EventDefinitionDict<TValue>
+de4dot.blocks,MethodReferenceKey,1,4,1,0,4,21,5,0,1,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.MethodDefinitionDict<TValue>
+de4dot.blocks,FieldReferenceAndDeclaringTypeKey,1,4,1,0,4,23,5,0,1,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.FieldDefinitionAndDeclaringTypeDict<TValue>
+de4dot.blocks,PropertyReferenceAndDeclaringTypeKey,1,4,1,0,4,23,5,0,1,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.PropertyDefinitionAndDeclaringTypeDict<TValue>
+de4dot.blocks,EventReferenceAndDeclaringTypeKey,1,4,1,0,4,23,5,0,1,0,1,1,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.EventDefinitionAndDeclaringTypeDict<TValue>
+de4dot.blocks,MethodReferenceAndDeclaringTypeKey,1,4,1,0,4,23,5,0,1,0,1,2,de4dot.blocks.MemberReferenceHelper,de4dot.blocks.CallCounter' de4dot.blocks.MethodDefinitionAndDeclaringTypeDict<TValue>
+de4dot.blocks,MemberReferenceHelper,1,60,0,0,29,533,159,0,0,0.03,1,16,de4dot.blocks.CecilType,de4dot.blocks.DotNetUtils' de4dot.blocks.TypeReferenceInstance' de4dot.blocks.ScopeAndTokenKey' de4dot.blocks.TypeReferenceKey' de4dot.blocks.TypeReferenceSameVersionKey' de4dot.blocks.FieldReferenceKey' de4dot.blocks.PropertyReferenceKey' de4dot.blocks.EventReferenceKey' de4dot.blocks.MethodReferenceKey' de4dot.blocks.FieldReferenceAndDeclaringTypeKey' de4dot.blocks.PropertyReferenceAndDeclaringTypeKey' de4dot.blocks.EventReferenceAndDeclaringTypeKey' de4dot.blocks.MethodReferenceAndDeclaringTypeKey' de4dot.blocks.TypeReferenceUpdaterBase' de4dot.blocks.cflow.MethodCallInliner' de4dot.blocks.cflow.MethodCallInlinerBase
+de4dot.blocks,MethodBlocks,0,0,0,0,0,2,0,0,1,-1,0,5,,de4dot.blocks.Blocks' de4dot.blocks.CodeGenerator' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.InstructionListParser' de4dot.blocks.cflow.BlocksCflowDeobfuscator
+de4dot.blocks,ScopeBlock,1,21,1,0,14,226,70,5,1,0.1,7,11,de4dot.blocks.Block' de4dot.blocks.Instr' de4dot.blocks.BaseBlock' de4dot.blocks.BlocksSorter' de4dot.blocks.TryBlock' de4dot.blocks.TryHandlerBlock' de4dot.blocks.Utils,de4dot.blocks.BaseBlock' de4dot.blocks.Blocks' de4dot.blocks.BlocksSorter' de4dot.blocks.Sorter' de4dot.blocks.CodeGenerator' de4dot.blocks.BlockState' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.ScopeBlockInfo' de4dot.blocks.ForwardScanOrder' de4dot.blocks.BaseBlocksList' de4dot.blocks.cflow.BlocksCflowDeobfuscator
+de4dot.blocks,TryBlock,1,1,1,0,1,12,1,0,2,0,1,5,de4dot.blocks.TryHandlerBlock,de4dot.blocks.Sorter' de4dot.blocks.CodeGenerator' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.InstructionListParser' de4dot.blocks.ScopeBlock
+de4dot.blocks,TryHandlerBlock,4,1,4,0,1,23,1,0,2,0,2,7,de4dot.blocks.FilterHandlerBlock' de4dot.blocks.HandlerBlock,de4dot.blocks.Sorter' de4dot.blocks.CodeGenerator' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.ForwardScanOrder' de4dot.blocks.InstructionListParser' de4dot.blocks.ScopeBlock' de4dot.blocks.TryBlock
+de4dot.blocks,TypeReferenceUpdaterBase,0,13,0,0,1,81,18,1,0,-1,2,0,de4dot.blocks.CecilType' de4dot.blocks.MemberReferenceHelper,
+de4dot.blocks,Tuple<T1;T2>,0,3,2,0,3,16,4,0,0,-1,0,0,,
+de4dot.blocks,Utils,0,3,0,0,3,21,6,0,0,-1,0,3,,de4dot.blocks.Block' de4dot.blocks.DotNetUtils' de4dot.blocks.ScopeBlock
+de4dot.blocks.cflow,BlockCflowDeobfuscator,2,17,0,0,0,205,37,0,1,0,9,0,de4dot.blocks.Block' de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.DotNetUtils' de4dot.blocks.Instr' de4dot.blocks.cflow.Bool3' de4dot.blocks.cflow.Value' de4dot.blocks.cflow.Int32Value' de4dot.blocks.cflow.Int64Value' de4dot.blocks.cflow.CflowUtils,
+de4dot.blocks.cflow,BlockDeobfuscator,2,4,1,0,2,25,5,5,1,0.75,2,2,de4dot.blocks.Blocks' de4dot.blocks.Block,de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.StLdlocFixer
+de4dot.blocks.cflow,CachedCflowDeobfuscator,2,6,0,0,5,38,9,0,0,0.5,4,0,de4dot.blocks.cflow.BlocksCflowDeobfuscator' de4dot.blocks.cflow.IBlocksDeobfuscator' de4dot.blocks.Blocks' de4dot.blocks.DotNetUtils,
+de4dot.blocks.cflow,CflowDeobfuscator,1,5,0,0,3,27,6,0,1,0.4,4,1,de4dot.blocks.cflow.BlocksCflowDeobfuscator' de4dot.blocks.cflow.IBlocksDeobfuscator' de4dot.blocks.Blocks' de4dot.blocks.DotNetUtils,NETDeob.Core.Deobfuscators.Generic.MethodCleaner
+de4dot.blocks.cflow,CflowUtils,0,1,0,0,1,11,3,0,0,-1,2,2,de4dot.blocks.cflow.Int32Value' de4dot.blocks.Block,de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.SwitchCflowDeobfuscator
+de4dot.blocks.cflow,ConstantsFolder,2,3,0,0,0,67,7,0,2,0,9,0,de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.BlockDeobfuscator' de4dot.blocks.DotNetUtils' de4dot.blocks.Blocks' de4dot.blocks.Instr' de4dot.blocks.Block' de4dot.blocks.cflow.Int32Value' de4dot.blocks.cflow.Int64Value' de4dot.blocks.cflow.Value,
+de4dot.blocks.cflow,DeadCodeRemover,2,3,0,0,0,336,8,0,2,0.67,4,0,de4dot.blocks.cflow.InstructionExpressionFinder' de4dot.blocks.Instr' de4dot.blocks.Block' de4dot.blocks.DotNetUtils,
+de4dot.blocks.cflow,InstructionExpressionFinder,3,4,1,0,2,56,14,0,0,0,2,1,de4dot.blocks.Block' de4dot.blocks.Instr,de4dot.blocks.cflow.DeadCodeRemover
+de4dot.blocks.cflow,DeadStoreRemover,4,5,1,0,2,111,19,0,1,0,4,0,de4dot.blocks.Blocks' de4dot.blocks.cflow.AccessFlags' de4dot.blocks.Block' de4dot.blocks.Instr,
+de4dot.blocks.cflow,AccessFlags,0,0,0,0,0,6,0,0,0,-1,0,1,,de4dot.blocks.cflow.DeadStoreRemover
+de4dot.blocks.cflow,IBlocksDeobfuscator,0,2,1,0,0,6,2,3,0,-1,1,3,de4dot.blocks.Blocks,de4dot.blocks.cflow.CachedCflowDeobfuscator' de4dot.blocks.cflow.CflowDeobfuscator' de4dot.blocks.cflow.BlocksCflowDeobfuscator
+de4dot.blocks.cflow,ICflowDeobfuscator,0,1,0,0,0,3,1,1,0,-1,0,0,,
+de4dot.blocks.cflow,InstructionEmulator,11,72,0,0,20,771,124,0,0,0.06,12,3,de4dot.blocks.cflow.ValueStack' de4dot.blocks.Blocks' de4dot.blocks.cflow.Value' de4dot.blocks.cflow.Int32Value' de4dot.blocks.cflow.Int64Value' de4dot.blocks.cflow.UnknownValue' de4dot.blocks.Instr' de4dot.blocks.cflow.NullValue' de4dot.blocks.DotNetUtils' de4dot.blocks.cflow.ValueType' de4dot.blocks.cflow.Real8Value' de4dot.blocks.cflow.BoxedValue,de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.SwitchCflowDeobfuscator
+de4dot.blocks.cflow,Int32Value,5,75,0,4,72,424,145,0,1,0.04,3,5,de4dot.blocks.cflow.Int64Value' de4dot.blocks.cflow.Real8Value' de4dot.blocks.cflow.Bool3,de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.CflowUtils' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.Int64Value
+de4dot.blocks.cflow,Int64Value,5,51,0,4,47,342,118,0,1,0.06,3,4,de4dot.blocks.cflow.Int32Value' de4dot.blocks.cflow.Real8Value' de4dot.blocks.cflow.Bool3,de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.Int32Value
+de4dot.blocks.cflow,MethodCallInliner,1,5,0,0,1,88,19,0,1,0.4,5,0,de4dot.blocks.Block' de4dot.blocks.Instr' de4dot.blocks.MemberReferenceHelper' de4dot.blocks.Blocks' de4dot.blocks.DotNetUtils,
+de4dot.blocks.cflow,MethodCallInlinerBase,4,11,1,0,2,163,34,1,1,0,5,0,de4dot.blocks.Blocks' de4dot.blocks.Block' de4dot.blocks.DotNetUtils' de4dot.blocks.cflow.InstructionPatcher' de4dot.blocks.MemberReferenceHelper,
+de4dot.blocks.cflow,InstructionPatcher,4,2,0,2,2,15,2,0,0,0,3,1,de4dot.blocks.Instr' de4dot.blocks.DotNetUtils' de4dot.blocks.Block,de4dot.blocks.cflow.MethodCallInlinerBase
+de4dot.blocks.cflow,Real8Value,1,7,0,1,7,25,7,0,1,0,0,3,,de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.Int32Value' de4dot.blocks.cflow.Int64Value
+de4dot.blocks.cflow,StLdlocFixer,1,2,0,0,0,40,4,0,2,0,4,0,de4dot.blocks.cflow.BlockDeobfuscator' de4dot.blocks.Blocks' de4dot.blocks.Instr' de4dot.blocks.Block,
+de4dot.blocks.cflow,SwitchCflowDeobfuscator,1,19,0,0,0,249,55,0,2,0,6,0,de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.Instr' de4dot.blocks.Block' de4dot.blocks.Blocks' de4dot.blocks.cflow.Value' de4dot.blocks.cflow.CflowUtils,
+de4dot.blocks.cflow,ValueType,0,0,0,0,0,9,0,0,0,-1,0,2,,de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.Value
+de4dot.blocks.cflow,Bool3,0,0,0,0,0,5,0,0,0,-1,0,3,,de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.Int32Value' de4dot.blocks.cflow.Int64Value
+de4dot.blocks.cflow,Value,1,8,0,1,7,27,8,7,0,0,1,6,de4dot.blocks.cflow.ValueType,de4dot.blocks.cflow.BlockCflowDeobfuscator' de4dot.blocks.cflow.ConstantsFolder' de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.SwitchCflowDeobfuscator' de4dot.blocks.cflow.BoxedValue' de4dot.blocks.cflow.ValueStack
+de4dot.blocks.cflow,UnknownValue,0,2,0,0,2,8,2,0,1,-1,0,2,,de4dot.blocks.cflow.InstructionEmulator' de4dot.blocks.cflow.ValueStack
+de4dot.blocks.cflow,NullValue,1,2,0,1,1,10,2,0,1,1,0,1,,de4dot.blocks.cflow.InstructionEmulator
+de4dot.blocks.cflow,BoxedValue,1,2,0,1,2,10,2,0,1,0,1,1,de4dot.blocks.cflow.Value,de4dot.blocks.cflow.InstructionEmulator
+de4dot.blocks.cflow,StringValue,1,2,0,1,2,10,2,0,1,0,0,0,,
+de4dot.blocks.cflow,ValueStack,1,10,1,0,10,63,21,0,0,0,2,1,de4dot.blocks.cflow.Value' de4dot.blocks.cflow.UnknownValue,de4dot.blocks.cflow.InstructionEmulator
+de4dot.blocks.cflow,BlocksCflowDeobfuscator,4,14,0,0,6,136,34,0,0,0,7,2,de4dot.blocks.Blocks' de4dot.blocks.cflow.IBlocksDeobfuscator' de4dot.blocks.MethodBlocks' de4dot.blocks.Block' de4dot.blocks.Instr' de4dot.blocks.DeadBlocksRemover' de4dot.blocks.ScopeBlock,de4dot.blocks.cflow.CachedCflowDeobfuscator' de4dot.blocks.cflow.CflowDeobfuscator
+de4dot.PE,Cor20Header,15,3,4,13,2,51,3,0,1,0,3,1,de4dot.PE.DataDirectory' de4dot.PE.Metadata' de4dot.PE.MetadataTables,de4dot.PE.PeImage
+de4dot.PE,DataDirectory,2,2,0,2,2,11,2,0,0,0,0,3,,de4dot.PE.Cor20Header' de4dot.PE.OptionalHeader' de4dot.PE.PeImage
+de4dot.PE,DotNetStream,3,2,2,3,2,19,2,0,1,0,0,2,,de4dot.PE.Metadata' de4dot.PE.MetadataTables
+de4dot.PE,Machine,0,0,0,0,0,5,0,0,0,-1,0,1,,de4dot.PE.FileHeader
+de4dot.PE,FileHeader,8,1,2,7,1,26,1,0,1,0,1,1,de4dot.PE.Machine,de4dot.PE.PeImage
+de4dot.PE,IFileLocation,0,0,2,0,0,4,0,6,0,-1,0,1,,de4dot.PE.PeImage
+de4dot.PE,Metadata,10,4,4,0,2,75,12,0,1,0,1,2,de4dot.PE.DotNetStream,de4dot.PE.Cor20Header' de4dot.PE.MetadataTables
+de4dot.PE,MetadataTables,5,4,0,0,2,117,9,0,0,0,6,1,de4dot.PE.Metadata' de4dot.PE.MetadataType' de4dot.PE.MetadataVarType' de4dot.PE.MetadataIndex' de4dot.PE.DotNetStream' de4dot.PE.MetadataTypeBuilder,de4dot.PE.Cor20Header
+de4dot.PE,MetadataIndex,0,0,0,0,0,39,0,0,0,-1,0,2,,de4dot.PE.MetadataTables' de4dot.PE.MetadataTypeBuilder
+de4dot.PE,MetadataType,4,2,0,4,2,15,3,0,0,0,1,2,de4dot.PE.MetadataField,de4dot.PE.MetadataTables' de4dot.PE.MetadataTypeBuilder
+de4dot.PE,MetadataField,2,1,0,2,1,7,1,0,0,0,0,2,,de4dot.PE.MetadataType' de4dot.PE.MetadataTypeBuilder
+de4dot.PE,MetadataVarType,0,0,0,0,0,32,0,0,0,-1,0,2,,de4dot.PE.MetadataTables' de4dot.PE.MetadataTypeBuilder
+de4dot.PE,MetadataTypeBuilder,4,7,0,0,3,138,9,0,0,0,4,1,de4dot.PE.MetadataType' de4dot.PE.MetadataField' de4dot.PE.MetadataVarType' de4dot.PE.MetadataIndex,de4dot.PE.MetadataTables
+de4dot.PE,OptionalHeader,33,4,2,31,3,89,7,0,1,0,1,1,de4dot.PE.DataDirectory,de4dot.PE.PeImage
+de4dot.PE,PeImage,8,33,7,0,25,210,54,0,0,0.06,7,0,de4dot.PE.FileHeader' de4dot.PE.OptionalHeader' de4dot.PE.SectionHeader' de4dot.PE.Cor20Header' de4dot.PE.Resources' de4dot.PE.DataDirectory' de4dot.PE.IFileLocation,
+de4dot.PE,ResourceData,2,3,2,0,3,23,3,0,1,0,0,1,,de4dot.PE.ResourceDirectory
+de4dot.PE,ResourceDirectory,4,9,2,0,7,86,20,0,1,0,2,1,de4dot.PE.Resources' de4dot.PE.ResourceData,de4dot.PE.Resources
+de4dot.PE,ResourceDirectoryEntry,2,5,4,0,2,41,9,2,0,0,0,0,,
+de4dot.PE,Resources,4,9,1,0,9,59,15,0,0,0,1,2,de4dot.PE.ResourceDirectory,de4dot.PE.PeImage' de4dot.PE.ResourceDirectory
+de4dot.PE,SectionHeader,12,3,2,11,3,46,5,0,1,0,0,1,,de4dot.PE.PeImage

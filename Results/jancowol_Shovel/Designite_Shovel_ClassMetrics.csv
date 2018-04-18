@@ -1,35 +1,35 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Arguments,0,4,1,0,1,44,9,0,0,-1,0,1
-UndefinedTaskException,1,1,0,0,1,8,1,0,0,0,0,0
-DuplicateTaskException,0,4,0,0,3,16,4,0,0,-1,0,0
-ShovelRunner,2,3,0,0,3,30,7,0,0,0.67,2,1
-ShovelStaticContext,0,2,1,0,2,15,2,0,0,-1,1,2
-FluentTaskInterface,0,8,0,0,7,36,8,0,0,-1,5,0
-ShovelScriptPack,0,4,0,0,3,23,4,0,0,-1,3,0
-Shovel,0,0,0,0,0,3,0,0,0,-1,0,1
-Program,0,1,0,0,1,9,1,0,0,-1,2,0
-INuGetCommands,0,1,0,0,0,4,1,1,0,-1,1,0
-NuGetCommands,2,4,0,0,2,28,4,0,1,0,3,1
-NuGetPackageBuilder,0,2,0,0,1,15,2,0,0,-1,1,1
-NuGetPackCmdConfigurator,0,1,2,0,1,15,1,0,0,-1,1,2
-NuGetPackSpecification,0,1,2,0,1,16,1,0,0,-1,0,2
-RunProgramActionBuilder,0,3,0,0,1,20,3,0,1,-1,3,2
-RunProgramConfigurator,1,2,1,0,2,17,2,0,0,0,1,6
-XmlTransformActionBuilder,0,1,0,0,1,12,1,0,1,-1,2,1
-XmlTransformConfigurator,0,0,3,0,0,15,0,0,0,-1,0,5
-XmlTransformer,0,3,0,0,1,22,3,0,0,-1,0,1
-ITask,0,7,2,0,0,16,7,1,0,-1,3,5
-ITaskManager,0,3,0,0,0,6,3,1,0,-1,1,2
-Task,2,9,2,0,8,58,12,0,1,0.33,6,1
-TaskManager,1,8,0,0,4,50,13,0,1,0.38,3,0
-EnumerableExtensions,0,1,0,0,1,7,1,0,0,-1,0,0
-IProcessRunner,0,1,0,0,0,4,1,1,0,-1,1,1
-ProcessRunner,0,1,0,0,1,15,1,0,1,-1,1,1
-ProcessProperties,0,0,2,0,0,11,0,0,0,-1,0,5
-TaskActionFactory,0,1,0,0,1,20,4,0,0,-1,6,2
-IActionBuilder,0,1,0,0,0,4,1,3,0,-1,0,0
-IMsBuildRunner,0,1,0,0,0,4,1,1,0,-1,1,1
-MsBuildActionBuilder,1,3,0,0,3,18,3,0,1,0.67,3,1
-MsBuildProperties,3,0,4,0,0,34,0,0,0,-1,0,4
-MsBuildActionConfigurator,1,4,1,0,4,25,4,0,0,0,1,5
-MsBuildRunner,1,4,0,0,3,29,5,0,1,0.5,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ShovelPack,Arguments,0,4,1,0,1,42,8,0,0,-1,0,4,,ShovelPack.ShovelRunner' ShovelPack.Tests.ArgumentsTests' ShovelPack.Tests.ArgumentsTestExtensions' ShovelPack.Tests.ShovelAcceptanceTestsBase
+ShovelPack,UndefinedTaskException,1,1,0,0,1,9,1,0,0,0,0,2,,ShovelPack.ShovelRunner' ShovelPack.Tests.ShovelRunnerUndefinedTaskExceptionHandlingTests
+ShovelPack,DuplicateTaskException,0,4,0,0,3,21,4,0,0,-1,0,0,,
+ShovelPack,ShovelRunner,2,3,0,0,3,36,5,0,0,0.67,3,2,ShovelPack.Tasks.ITaskManager' ShovelPack.Arguments' ShovelPack.UndefinedTaskException,ShovelPack.ShovelScriptPack' ShovelPack.Tests.ShovelAcceptanceTestsBase
+ShovelPack,ShovelStaticContext,0,2,1,0,2,12,2,0,0,-1,1,3,ShovelPack.Tasks.ITaskManager,ShovelPack.FluentTaskInterface' ShovelPack.ShovelScriptPack' ShovelPack.Tests.ShovelAcceptanceTestsBase
+ShovelPack,FluentTaskInterface,0,8,0,0,7,37,8,0,0,-1,3,0,ShovelPack.Tasks.ITask' ShovelPack.Tasks.ITaskManager' ShovelPack.ShovelStaticContext,
+ShovelPack,ShovelScriptPack,0,4,0,0,3,23,4,0,0,-1,3,0,ShovelPack.Shovel' ShovelPack.ShovelStaticContext' ShovelPack.ShovelRunner,
+ShovelPack,Shovel,0,0,0,0,0,3,0,0,0,-1,0,1,,ShovelPack.ShovelScriptPack
+ShovelPack.ScriptExtensions,Program,0,1,0,0,1,9,1,0,0,-1,1,0,ShovelPack.TaskActions.RunProgram.RunProgramActionBuilder,
+ShovelPack.TaskActions.NuGet,INuGetCommands,0,1,0,0,0,4,1,1,0,-1,0,1,,ShovelPack.Tests.Acceptance.NuGet.NuGetPackAcceptanceTests
+ShovelPack.TaskActions.NuGet,NuGetCommands,2,4,0,0,2,30,4,0,1,0,4,1,ShovelPack.Tasks.ITask' ShovelPack.TaskActions.NuGet.NuGetPackageBuilder' ShovelPack.TaskActions.NuGet.NuGetPackSpecification' ShovelPack.TaskActions.NuGet.NuGetPackCmdConfigurator,ShovelPack.Tasks.Task
+ShovelPack.TaskActions.NuGet,NuGetPackageBuilder,0,2,0,0,1,15,2,0,0,-1,1,2,ShovelPack.TaskActions.NuGet.NuGetPackSpecification,ShovelPack.TaskActions.NuGet.NuGetCommands' ShovelPack.Tests.TaskActions.NuGet.NuGetPackageBuilderTests
+ShovelPack.TaskActions.NuGet,NuGetPackCmdConfigurator,0,1,2,0,1,9,1,0,0,-1,1,2,ShovelPack.TaskActions.NuGet.NuGetPackSpecification,ShovelPack.TaskActions.NuGet.NuGetCommands' ShovelPack.Tests.Acceptance.NuGet.NuGetPackAcceptanceTests
+ShovelPack.TaskActions.NuGet,NuGetPackSpecification,0,1,2,0,1,10,1,0,0,-1,0,3,,ShovelPack.TaskActions.NuGet.NuGetCommands' ShovelPack.TaskActions.NuGet.NuGetPackageBuilder' ShovelPack.TaskActions.NuGet.NuGetPackCmdConfigurator
+ShovelPack.TaskActions.RunProgram,RunProgramActionBuilder,0,3,0,0,1,20,3,0,1,-1,3,2,ShovelPack.Utils.ProcessProperties' ShovelPack.TaskActions.RunProgram.RunProgramConfigurator' ShovelPack.Utils.ProcessRunner,ShovelPack.ScriptExtensions.Program' ShovelPack.TaskActionConfig.TaskActionFactory
+ShovelPack.TaskActions.RunProgram,RunProgramConfigurator,1,2,1,0,2,16,2,0,0,0,1,1,ShovelPack.Utils.ProcessProperties,ShovelPack.TaskActions.RunProgram.RunProgramActionBuilder
+ShovelPack.TaskActions.XMLTransformer,XmlTransformActionBuilder,0,1,0,0,1,13,1,0,1,-1,2,1,ShovelPack.TaskActions.XMLTransformer.XmlTransformConfigurator' ShovelPack.TaskActions.XMLTransformer.XmlTransformer,ShovelPack.TaskActionConfig.TaskActionFactory
+ShovelPack.TaskActions.XMLTransformer,XmlTransformConfigurator,0,0,3,0,0,6,0,0,0,-1,0,2,,ShovelPack.TaskActions.XMLTransformer.XmlTransformActionBuilder' ShovelPack.Tests.Acceptance.TransformXml.TransformXmlAcceptanceTests
+ShovelPack.TaskActions.XMLTransformer,XmlTransformer,0,3,0,0,1,20,3,0,0,-1,0,1,,ShovelPack.TaskActions.XMLTransformer.XmlTransformActionBuilder
+ShovelPack.Tasks,ITask,0,7,2,0,0,12,7,1,0,-1,0,9,,ShovelPack.FluentTaskInterface' ShovelPack.TaskActions.NuGet.NuGetCommands' ShovelPack.Tasks.Task' ShovelPack.Tasks.TaskManager' ShovelPack.Tests.Acceptance.NuGet.NuGetPackAcceptanceTests' ShovelPack.Tests.Acceptance.TransformXml.TransformXmlAcceptanceTests' ShovelPack.Tests.FluentTaskBuildingTests' ShovelPack.Tests.AcceptanceTests' ShovelPack.Tests.Tasks.TaskManagerTests
+ShovelPack.Tasks,ITaskManager,0,3,0,0,0,6,3,1,0,-1,0,3,,ShovelPack.ShovelRunner' ShovelPack.ShovelStaticContext' ShovelPack.FluentTaskInterface
+ShovelPack.Tasks,Task,2,9,2,0,8,51,11,0,1,0.33,3,2,ShovelPack.TaskActionConfig.TaskActionFactory' ShovelPack.Tasks.ITask' ShovelPack.TaskActions.NuGet.NuGetCommands,ShovelPack.Tasks.TaskManager' ShovelPack.Tests.TaskTests
+ShovelPack.Tasks,TaskManager,1,8,0,0,4,50,12,0,1,0.25,2,1,ShovelPack.Tasks.ITask' ShovelPack.Tasks.Task,ShovelPack.Tests.Tasks.TaskManagerTests
+ShovelPack.Utils,EnumerableExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+ShovelPack.Utils,IProcessRunner,0,1,0,0,0,4,1,1,0,-1,1,2,ShovelPack.Utils.ProcessProperties,ShovelPack.TaskActions.MsBuild.MsBuildRunner' ShovelPack.Tests.MsBuildRunnerTests
+ShovelPack.Utils,ProcessRunner,0,1,0,0,1,17,1,0,1,-1,1,1,ShovelPack.Utils.ProcessProperties,ShovelPack.TaskActions.RunProgram.RunProgramActionBuilder
+ShovelPack.Utils,ProcessProperties,0,0,2,0,0,5,0,0,0,-1,0,6,,ShovelPack.TaskActions.RunProgram.RunProgramActionBuilder' ShovelPack.TaskActions.RunProgram.RunProgramConfigurator' ShovelPack.Utils.IProcessRunner' ShovelPack.Utils.ProcessRunner' ShovelPack.TaskActions.MsBuild.MsBuildRunner' ShovelPack.Tests.MsBuildRunnerTests
+ShovelPack.TaskActionConfig,TaskActionFactory,0,1,0,0,1,23,4,0,0,-1,3,1,ShovelPack.TaskActions.MsBuild.MsBuildActionBuilder' ShovelPack.TaskActions.RunProgram.RunProgramActionBuilder' ShovelPack.TaskActions.XMLTransformer.XmlTransformActionBuilder,ShovelPack.Tasks.Task
+ShovelPack.TaskActionConfig,IActionBuilder,0,1,0,0,0,4,1,3,0,-1,0,0,,
+ShovelPack.TaskActions.MsBuild,IMsBuildRunner,0,1,0,0,0,4,1,1,0,-1,1,1,ShovelPack.TaskActions.MsBuild.MsBuildProperties,ShovelPack.TaskActions.MsBuild.MsBuildActionBuilder
+ShovelPack.TaskActions.MsBuild,MsBuildActionBuilder,1,3,0,0,3,18,3,0,1,0.67,3,1,ShovelPack.TaskActions.MsBuild.IMsBuildRunner' ShovelPack.TaskActions.MsBuild.MsBuildProperties' ShovelPack.TaskActions.MsBuild.MsBuildActionConfigurator,ShovelPack.TaskActionConfig.TaskActionFactory
+ShovelPack.TaskActions.MsBuild,MsBuildProperties,3,0,4,0,0,22,0,0,0,-1,0,5,,ShovelPack.TaskActions.MsBuild.IMsBuildRunner' ShovelPack.TaskActions.MsBuild.MsBuildActionBuilder' ShovelPack.TaskActions.MsBuild.MsBuildActionConfigurator' ShovelPack.TaskActions.MsBuild.MsBuildRunner' ShovelPack.Tests.MsBuildRunnerTests
+ShovelPack.TaskActions.MsBuild,MsBuildActionConfigurator,1,4,1,0,4,24,4,0,0,0,1,1,ShovelPack.TaskActions.MsBuild.MsBuildProperties,ShovelPack.TaskActions.MsBuild.MsBuildActionBuilder
+ShovelPack.TaskActions.MsBuild,MsBuildRunner,1,4,0,0,3,31,5,0,1,0.5,3,1,ShovelPack.Utils.IProcessRunner' ShovelPack.Utils.ProcessProperties' ShovelPack.TaskActions.MsBuild.MsBuildProperties,ShovelPack.Tests.MsBuildRunnerTests

@@ -1,26 +1,29 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IniFile,1,21,1,0,15,178,43,0,0,0.67,1,1
-AdvancedList,2,15,10,0,9,321,22,0,1,0.87,3,2
-PropertyComparer,2,2,2,0,2,75,3,0,0,0,0,1
-PropertyComparerCollection,2,2,3,0,1,92,6,0,0,0,1,1
-ValueComparer,1,7,1,0,3,314,60,0,0,0.43,0,2
-OrderedDictionary,3,33,14,0,14,1410,52,1,0,0.58,0,1
-EnumerableExtensions,1,4,0,0,4,36,9,0,0,1,0,0
-Extensions,0,3,0,0,3,60,17,0,0,-1,0,3
-ICloneable,0,1,0,0,0,4,1,1,0,-1,0,0
-Pair,2,2,2,2,2,30,2,0,0,0,0,1
-TypeConverter,12,42,0,0,41,598,117,0,0,0.17,2,19
-IPostSerializationCallback,0,1,1,0,0,10,1,1,0,-1,0,2
-PersistAssist,1,21,0,0,11,750,135,0,0,0.62,4,8
-PersistContext,5,8,3,0,7,127,24,0,0,0,4,1
-PersistContextStates,0,0,0,0,0,26,0,0,0,-1,0,3
-PersistObject,0,3,0,0,1,31,3,1,0,-1,1,0
-PersistSurrogate,0,2,0,0,2,12,2,0,0,-1,1,0
-PersistType,0,0,0,0,0,56,0,0,0,-1,0,2
-PersistableAttribute,2,0,4,0,0,71,0,0,0,-1,2,4
-SerializationInfoCache,3,1,0,3,1,12,1,0,0,0,0,2
-SerializationInfoCacheList,0,3,0,0,3,54,3,0,0,-1,1,1
-Settings,1,0,2,0,0,22,0,0,0,-1,0,0
-Encoding,5,3,1,0,2,32,3,0,0,0.67,1,13
-FontLangInfo,4,1,0,4,1,13,1,0,0,0,0,2
-Platform,9,8,0,0,5,75,16,0,0,0.5,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TESVSnip.Framework.IO,IniFile,1,21,1,0,15,225,42,0,0,0.29,0,1,,TESVSnip.Domain.Data.DomainDefinition
+TESVSnip.Framework.Collections,AdvancedList<T>,2,15,10,0,9,348,22,0,1,0.87,1,0,TESVSnip.Framework.Persistence.PersistAssist,
+TESVSnip.Framework.Collections,PropertyComparer<T>,2,2,2,0,2,75,3,0,0,0,0,0,,
+TESVSnip.Framework.Collections,PropertyComparerCollection<T>,2,2,3,0,1,97,6,0,0,0,0,0,,
+TESVSnip.Framework.Collections,ValueComparer,1,7,1,0,3,391,24,0,0,0.29,0,2,,TESVSnip.Domain.Model.BatchElement' TESVSnip.Domain.Model.SearchElement
+TESVSnip.Framework.Collections,OrderedDictionary<TKey;TItem>,3,33,14,0,14,1504,52,0,0,0.58,1,0,TESVSnip.Framework.Collections.Enumerator,
+TESVSnip.Framework.Collections,Enumerator,9,13,9,0,3,302,16,0,0,0.31,0,3,,TESVSnip.Framework.Collections.OrderedDictionary<TKey;TItem>' TESVSnip.Framework.Collections.OrderedKeyCollection' TESVSnip.Framework.Collections.OrderedValueCollection
+TESVSnip.Framework.Collections,OrderedKeyCollection,1,9,5,0,6,267,9,0,0,0.56,1,0,TESVSnip.Framework.Collections.Enumerator,
+TESVSnip.Framework.Collections,OrderedValueCollection,1,9,5,0,6,267,9,0,0,0.56,1,0,TESVSnip.Framework.Collections.Enumerator,
+TESVSnip.Framework,EnumerableExtensions,1,4,0,0,4,41,9,0,0,1,0,0,,
+TESVSnip.Framework,Extensions,0,3,0,0,3,80,9,0,0,-1,0,2,,TESVSnip.Domain.Model.Element' TESVSnip.Framework.TypeConverter
+TESVSnip.Framework,ICloneable,0,1,0,0,0,4,1,1,0,-1,0,0,,
+TESVSnip.Framework,Pair,2,2,2,2,2,36,2,0,0,0,0,2,,TESVSnip.Domain.Model.Plugin' TESVSnip.Domain.Scripts.ScriptCompiler
+TESVSnip.Framework,TypeConverter,12,42,0,0,41,762,75,0,0,0,3,20,TESVSnip.Framework.Extensions' TESVSnip.Framework.Properties.Settings' TESVSnip.Framework.Services.Encoding,TESVSnip.UI.Rendering.HtmlRenderer' TESVSnip.UI.Forms.MainView' TESVSnip.UI.Forms.MediumLevelRecordEditor' TESVSnip.UI.Forms.NewMediumLevelRecordEditor' TESVSnip.UI.Forms.GroupEditor' TESVSnip.UI.Forms.HexDataEdit' TESVSnip.UI.Rendering.Extensions.StringRenderer' TESVSnip.UI.RecordBuilder' TESVSnip.UI.RecordControls.HexElement' TESVSnip.UI.RecordControls.OptionsElement' TESVSnip.UI.RecordControls.FlagsElement' TESVSnip.UI.RecordControls.LStringElement' TESVSnip.UI.RecordControls.FormIDElement' TESVSnip.UI.RecordControls.TextElement' TESVSnip.UI.ObjectControls.RecordSearch' TESVSnip.Domain.Services.Spells' TESVSnip.Domain.Services.CloneTool' TESVSnip.Domain.Model.Element' TESVSnip.Domain.Model.SubRecord' TESVSnip.Domain.Scripts.ScriptCompiler
+TESVSnip.Framework.Persistence,IPostSerializationCallback,0,1,1,0,0,5,1,1,0,-1,0,2,,TESVSnip.Framework.Persistence.PersistAssist' TESVSnip.Framework.Persistence.PersistContext
+TESVSnip.Framework.Persistence,PersistAssist,1,21,0,0,11,900,102,0,0,0.33,5,5,TESVSnip.Framework.Persistence.PersistableAttribute' TESVSnip.Framework.Persistence.PersistType' TESVSnip.Framework.Persistence.PersistContext' TESVSnip.Framework.Persistence.IPostSerializationCallback' TESVSnip.Framework.Persistence.PersistContextStates,BrightIdeasSoftware.OLVColumn' TESVSnip.Domain.Model.Record' TESVSnip.Framework.Collections.AdvancedList<T>' TESVSnip.Framework.Persistence.PersistObject' TESVSnip.Framework.Persistence.PersistSurrogate
+TESVSnip.Framework.Persistence,PersistContext,5,8,3,0,7,147,24,0,0,0,4,1,TESVSnip.Framework.Persistence.PersistContextStates' TESVSnip.Framework.Persistence.IPostSerializationCallback' TESVSnip.Framework.Persistence.SerializationInfoCacheList' TESVSnip.Framework.Persistence.SerializationInfoCache,TESVSnip.Framework.Persistence.PersistAssist
+TESVSnip.Framework.Persistence,PersistContextStates,0,0,0,0,0,20,0,0,0,-1,0,3,,TESVSnip.Framework.Persistence.PersistAssist' TESVSnip.Framework.Persistence.PersistContext' TESVSnip.Framework.Persistence.PersistableAttribute
+TESVSnip.Framework.Persistence,PersistObject,0,3,0,0,1,29,3,1,0,-1,1,0,TESVSnip.Framework.Persistence.PersistAssist,
+TESVSnip.Framework.Persistence,PersistSurrogate,0,2,0,0,2,12,2,0,0,-1,1,0,TESVSnip.Framework.Persistence.PersistAssist,
+TESVSnip.Framework.Persistence,PersistType,0,0,0,0,0,53,0,0,0,-1,0,2,,TESVSnip.Framework.Persistence.PersistAssist' TESVSnip.Framework.Persistence.PersistableAttribute
+TESVSnip.Framework.Persistence,PersistableAttribute,2,0,4,0,0,63,0,0,0,-1,2,6,TESVSnip.Framework.Persistence.PersistContextStates' TESVSnip.Framework.Persistence.PersistType,TESVSnip.Domain.Model.GroupRecord' TESVSnip.Domain.Model.Plugin' TESVSnip.Domain.Model.Rec' TESVSnip.Domain.Model.Record' TESVSnip.Domain.Model.SubRecord' TESVSnip.Framework.Persistence.PersistAssist
+TESVSnip.Framework.Persistence,SerializationInfoCache,3,1,0,3,1,12,1,0,0,0,0,1,,TESVSnip.Framework.Persistence.PersistContext
+TESVSnip.Framework.Persistence,SerializationInfoCacheList,0,3,0,0,3,56,3,0,0,-1,0,1,,TESVSnip.Framework.Persistence.PersistContext
+TESVSnip.Framework.Properties,Settings,1,0,2,0,0,24,0,0,0,-1,0,3,,TESVSnip.UI.Forms.MainView' TESVSnip.Program' TESVSnip.Framework.TypeConverter
+TESVSnip.Framework.Services,Encoding,5,3,1,0,2,34,3,0,0,0.67,1,14,TESVSnip.Framework.Services.FontLangInfo,TESVSnip.UI.Forms.MainView' TESVSnip.UI.Forms.MediumLevelRecordEditor' TESVSnip.UI.Forms.LoadSettings' TESVSnip.UI.Forms.GroupEditor' TESVSnip.UI.Rendering.Extensions.StringRenderer' TESVSnip.UI.RecordControls.TextElement' Be.Windows.Forms.HexBox' TESVSnip.Program' TESVSnip.Domain.Model.GroupRecord' TESVSnip.Domain.Model.Plugin' TESVSnip.Domain.Model.SubRecord' TESVSnip.Domain.Scripts.ScriptCompiler' TESVSnip.Domain.Scripts.Operator' TESVSnip.Framework.TypeConverter
+TESVSnip.Framework.Services,FontLangInfo,4,1,0,4,1,13,1,0,0,0,0,2,,TESVSnip.Domain.Model.Plugin' TESVSnip.Framework.Services.Encoding
+TESVSnip.Framework.Services,Platform,9,8,0,0,5,82,16,0,0,0.5,0,2,,TESVSnip.Program' TESVSnip.Domain.Services.CompressHelper

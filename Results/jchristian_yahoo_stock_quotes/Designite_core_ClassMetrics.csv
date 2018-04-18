@@ -1,41 +1,41 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,1
-HistoricalPrice,0,4,2,0,3,36,4,0,0,-1,0,1
-HistoricalPriceService,2,3,0,0,2,17,3,0,1,0.67,4,1
-IGetHistoricalPrices,0,1,0,0,0,4,1,1,0,-1,1,0
-Period,0,0,0,0,0,6,0,0,0,-1,0,5
-DateParameterBuilder,0,1,0,0,1,7,1,0,0,-1,0,2
-HistoricalPriceRequest,0,1,4,0,1,26,1,0,0,-1,1,4
-HistoricalPriceWebRequestBuilder,5,2,0,0,2,18,2,0,0,0,4,2
-HistoricPriceRequestProcessor,2,2,0,0,2,15,2,0,0,0,4,2
-PeriodParameterBuilder,0,1,0,0,1,14,1,0,0,-1,1,2
-HistoricalPriceResponse,0,1,2,0,1,16,1,0,0,-1,1,2
-HistoricalPriceResponseProcessor,1,2,0,0,2,13,2,0,0,0,3,2
-InitializationFactory,0,4,0,0,4,19,4,0,0,-1,15,0
-CsvResponseParser,0,3,0,0,2,27,12,0,1,-1,2,2
-IParseACsvResponse,0,1,0,0,0,4,1,1,0,-1,0,1
-IProcessAWebRequest,0,1,0,0,0,4,1,1,0,-1,0,2
-ParsedCSVFile,0,2,2,0,1,19,2,0,0,-1,0,1
-WebRequestProcessor,0,1,0,0,1,7,1,0,1,-1,0,1
-IBuildAQuote,0,1,0,0,0,4,1,1,0,-1,0,0
-IBuildQuotes,0,1,0,0,0,4,1,1,0,-1,0,0
-IFindAQuote,0,1,0,0,0,4,1,1,0,-1,1,0
-IFindQuotes,0,1,0,0,0,4,1,1,0,-1,1,0
-QuoteReturnParameter,0,0,0,0,0,85,0,0,0,-1,0,11
-QuoteService,2,6,0,0,3,33,6,0,1,0.33,3,1
-YahooQuote,1,3,0,0,3,32,6,0,0,0,1,1
-IBuildAQuoteRequest,0,2,0,0,0,5,2,1,0,-1,1,1
-QuoteRequest,0,2,2,0,2,19,2,0,0,-1,1,7
-QuoteRequestBuilder,1,2,0,0,2,13,2,0,1,0,2,1
-IBuildAQuoteWebRequest,0,1,0,0,0,4,1,1,0,-1,1,1
-IProcessQuoteRequests,0,1,0,0,0,4,1,1,0,-1,1,1
-YahooQuoteRequestProcessor,3,2,0,0,2,18,2,0,1,0,5,1
-YahooReturnParameterMap,1,1,0,0,1,339,2,0,0,0,1,2
-YahooReturnParametersUrlParameterBuilder,1,3,0,0,2,18,3,0,0,0.67,2,2
-YahooTickersUrlParameterBuilder,0,2,0,0,2,13,2,0,0,-1,0,3
-YahooQuoteWebRequestBuilder,4,2,0,2,2,18,2,0,1,0,3,1
-IParseAYahooQuote,0,1,0,0,0,4,1,1,0,-1,1,1
-IProcessAQuoteResponse,0,1,0,0,0,4,1,1,0,-1,1,1
-YahooQuoteParser,0,2,0,0,1,19,6,0,1,-1,2,1
-YahooQuoteResponseProcessor,2,2,0,0,2,14,2,0,1,0,3,1
-QuoteResponse,0,2,2,0,2,19,2,0,0,-1,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+YSQ.core.Extensions,StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,1,,YSQ.core.Processing.CsvResponseParser
+YSQ.core.Historical,HistoricalPrice,0,4,2,0,3,31,7,0,0,-1,0,1,,YSQ.console_runner.Program
+YSQ.core.Historical,HistoricalPriceService,2,3,0,0,2,15,3,0,1,0.67,3,1,YSQ.core.Historical.Request.HistoricPriceRequestProcessor' YSQ.core.Historical.Response.HistoricalPriceResponseProcessor' YSQ.core.Historical.Period,YSQ.console_runner.Program
+YSQ.core.Historical,IGetHistoricalPrices,0,1,0,0,0,4,1,1,0,-1,1,0,YSQ.core.Historical.Period,
+YSQ.core.Historical,Period,0,0,0,0,0,6,0,0,0,-1,0,5,,YSQ.console_runner.Program' YSQ.core.Historical.HistoricalPriceService' YSQ.core.Historical.IGetHistoricalPrices' YSQ.core.Historical.Request.HistoricalPriceRequest' YSQ.core.Historical.Request.PeriodParameterBuilder
+YSQ.core.Historical.Request,DateParameterBuilder,0,1,0,0,1,7,1,0,0,-1,0,1,,YSQ.core.Historical.Request.HistoricalPriceWebRequestBuilder
+YSQ.core.Historical.Request,HistoricalPriceRequest,0,1,4,0,1,14,1,0,0,-1,1,4,YSQ.core.Historical.Period,YSQ.core.Historical.Request.HistoricalPriceWebRequestBuilder' YSQ.core.Historical.Request.HistoricPriceRequestProcessor' YSQ.core.Historical.Response.HistoricalPriceResponse' YSQ.tests.Historical.Request.when_building_the_historical_price_web_request
+YSQ.core.Historical.Request,HistoricalPriceWebRequestBuilder,5,2,0,0,2,25,2,0,0,0,4,1,YSQ.core.Quotes.Request.Processing.YahooTickersUrlParameterBuilder' YSQ.core.Historical.Request.DateParameterBuilder' YSQ.core.Historical.Request.PeriodParameterBuilder' YSQ.core.Historical.Request.HistoricalPriceRequest,YSQ.core.Historical.Request.HistoricPriceRequestProcessor
+YSQ.core.Historical.Request,HistoricPriceRequestProcessor,2,2,0,0,2,15,2,0,0,0,4,2,YSQ.core.Historical.Request.HistoricalPriceWebRequestBuilder' YSQ.core.Processing.IProcessAWebRequest' YSQ.core.Historical.Response.HistoricalPriceResponse' YSQ.core.Historical.Request.HistoricalPriceRequest,YSQ.core.Historical.HistoricalPriceService' YSQ.core.InitializationFactory
+YSQ.core.Historical.Request,PeriodParameterBuilder,0,1,0,0,1,14,4,0,0,-1,1,1,YSQ.core.Historical.Period,YSQ.core.Historical.Request.HistoricalPriceWebRequestBuilder
+YSQ.core.Historical.Response,HistoricalPriceResponse,0,1,2,0,1,10,1,0,0,-1,1,2,YSQ.core.Historical.Request.HistoricalPriceRequest,YSQ.core.Historical.Request.HistoricPriceRequestProcessor' YSQ.core.Historical.Response.HistoricalPriceResponseProcessor
+YSQ.core.Historical.Response,HistoricalPriceResponseProcessor,1,2,0,0,2,13,2,0,0,0,3,2,YSQ.core.Processing.CsvResponseParser' YSQ.core.Processing.ParsedCSVFile' YSQ.core.Historical.Response.HistoricalPriceResponse,YSQ.core.Historical.HistoricalPriceService' YSQ.core.InitializationFactory
+YSQ.core,InitializationFactory,0,4,0,0,4,31,4,0,0,-1,4,0,YSQ.core.Quotes.Request.QuoteRequestBuilder' YSQ.core.Quotes.Request.Processing.YahooQuoteRequestProcessor' YSQ.core.Historical.Request.HistoricPriceRequestProcessor' YSQ.core.Historical.Response.HistoricalPriceResponseProcessor,
+YSQ.core.Processing,CsvResponseParser,0,3,0,0,2,30,5,0,1,-1,2,1,YSQ.core.Extensions.StringExtensions' YSQ.core.Processing.ParsedCSVFile,YSQ.core.Historical.Response.HistoricalPriceResponseProcessor
+YSQ.core.Processing,IParseACsvResponse,0,1,0,0,0,4,1,1,0,-1,0,1,,YSQ.core.Quotes.Response.Processing.YahooQuoteResponseProcessor
+YSQ.core.Processing,IProcessAWebRequest,0,1,0,0,0,4,1,1,0,-1,0,2,,YSQ.core.Historical.Request.HistoricPriceRequestProcessor' YSQ.core.Quotes.Request.Processing.YahooQuoteRequestProcessor
+YSQ.core.Processing,ParsedCSVFile,0,2,2,0,1,11,2,0,0,-1,0,2,,YSQ.core.Historical.Response.HistoricalPriceResponseProcessor' YSQ.core.Processing.CsvResponseParser
+YSQ.core.Processing,WebRequestProcessor,0,1,0,0,1,7,1,0,1,-1,0,0,,
+YSQ.core.Quotes,IBuildAQuote,0,1,0,0,0,4,1,1,0,-1,0,0,,
+YSQ.core.Quotes,IBuildQuotes,0,1,0,0,0,4,1,1,0,-1,0,0,,
+YSQ.core.Quotes,IFindAQuote,0,1,0,0,0,4,1,1,0,-1,1,1,YSQ.core.Quotes.QuoteReturnParameter,YSQ.console_runner.Program
+YSQ.core.Quotes,IFindQuotes,0,1,0,0,0,4,1,1,0,-1,1,1,YSQ.core.Quotes.QuoteReturnParameter,YSQ.console_runner.Program
+YSQ.core.Quotes,QuoteReturnParameter,0,0,0,0,0,85,0,0,0,-1,0,6,,YSQ.console_runner.Program' YSQ.core.Quotes.IFindAQuote' YSQ.core.Quotes.IFindQuotes' YSQ.core.Quotes.QuoteService' YSQ.core.Quotes.YahooQuote' YSQ.core.Quotes.Request.Processing.YahooReturnParameterMap
+YSQ.core.Quotes,QuoteService,2,6,0,0,3,31,6,0,1,0.33,4,1,YSQ.core.Quotes.Request.IBuildAQuoteRequest' YSQ.core.Quotes.Request.Processing.IProcessQuoteRequests' YSQ.core.Quotes.Request.QuoteRequest' YSQ.core.Quotes.QuoteReturnParameter,YSQ.console_runner.Program
+YSQ.core.Quotes,YahooQuote,1,3,0,0,3,35,6,0,0,0,1,1,YSQ.core.Quotes.QuoteReturnParameter,YSQ.core.Quotes.Response.Processing.YahooQuoteParser
+YSQ.core.Quotes.Request,IBuildAQuoteRequest,0,2,0,0,0,5,2,1,0,-1,0,1,,YSQ.core.Quotes.QuoteService
+YSQ.core.Quotes.Request,QuoteRequest,0,2,2,0,2,11,2,0,0,-1,0,14,,YSQ.core.Quotes.QuoteService' YSQ.core.Quotes.Request.QuoteRequestBuilder' YSQ.core.Quotes.Request.Processing.IBuildAQuoteWebRequest' YSQ.core.Quotes.Request.Processing.IProcessQuoteRequests' YSQ.core.Quotes.Request.Processing.YahooQuoteRequestProcessor' YSQ.core.Quotes.Request.Processing.YahooReturnParametersUrlParameterBuilder' YSQ.core.Quotes.Request.Processing.YahooQuoteWebRequestBuilder' YSQ.core.Quotes.Response.Processing.YahooQuoteResponseProcessor' YSQ.core.Quotes.Response.QuoteResponse' YSQ.tests.Quotes.Request.Processing.when_processing_a_quote_request' YSQ.tests.Quotes.Request.Processing.when_building_the_return_parameters_url_parameter' YSQ.tests.Quotes.Request.Processing.when_building_a_web_request' YSQ.tests.Quotes.Request.when_building_the_ticker_symbol' YSQ.tests.Quotes.Request.when_building_the_data_to_return
+YSQ.core.Quotes.Request,QuoteRequestBuilder,1,2,0,0,2,13,2,0,1,0,1,1,YSQ.core.Quotes.Request.QuoteRequest,YSQ.core.InitializationFactory
+YSQ.core.Quotes.Request.Processing,IBuildAQuoteWebRequest,0,1,0,0,0,4,1,1,0,-1,1,1,YSQ.core.Quotes.Request.QuoteRequest,YSQ.core.Quotes.Request.Processing.YahooQuoteRequestProcessor
+YSQ.core.Quotes.Request.Processing,IProcessQuoteRequests,0,1,0,0,0,4,1,1,0,-1,1,1,YSQ.core.Quotes.Request.QuoteRequest,YSQ.core.Quotes.QuoteService
+YSQ.core.Quotes.Request.Processing,YahooQuoteRequestProcessor,3,2,0,0,2,19,2,0,1,0,4,1,YSQ.core.Quotes.Request.Processing.IBuildAQuoteWebRequest' YSQ.core.Processing.IProcessAWebRequest' YSQ.core.Quotes.Response.Processing.IProcessAQuoteResponse' YSQ.core.Quotes.Request.QuoteRequest,YSQ.core.InitializationFactory
+YSQ.core.Quotes.Request.Processing,YahooReturnParameterMap,1,1,0,0,1,94,2,0,0,0,1,1,YSQ.core.Quotes.QuoteReturnParameter,YSQ.core.Quotes.Request.Processing.YahooReturnParametersUrlParameterBuilder
+YSQ.core.Quotes.Request.Processing,YahooReturnParametersUrlParameterBuilder,1,3,0,0,2,16,4,0,0,0.67,2,1,YSQ.core.Quotes.Request.Processing.YahooReturnParameterMap' YSQ.core.Quotes.Request.QuoteRequest,YSQ.core.Quotes.Request.Processing.YahooQuoteWebRequestBuilder
+YSQ.core.Quotes.Request.Processing,YahooTickersUrlParameterBuilder,0,2,0,0,2,13,3,0,0,-1,0,2,,YSQ.core.Historical.Request.HistoricalPriceWebRequestBuilder' YSQ.core.Quotes.Request.Processing.YahooQuoteWebRequestBuilder
+YSQ.core.Quotes.Request.Processing,YahooQuoteWebRequestBuilder,4,2,0,2,2,18,2,0,1,0,3,0,YSQ.core.Quotes.Request.Processing.YahooTickersUrlParameterBuilder' YSQ.core.Quotes.Request.Processing.YahooReturnParametersUrlParameterBuilder' YSQ.core.Quotes.Request.QuoteRequest,
+YSQ.core.Quotes.Response.Processing,IParseAYahooQuote,0,1,0,0,0,4,1,1,0,-1,0,1,,YSQ.core.Quotes.Response.Processing.YahooQuoteResponseProcessor
+YSQ.core.Quotes.Response.Processing,IProcessAQuoteResponse,0,1,0,0,0,4,1,1,0,-1,1,1,YSQ.core.Quotes.Response.QuoteResponse,YSQ.core.Quotes.Request.Processing.YahooQuoteRequestProcessor
+YSQ.core.Quotes.Response.Processing,YahooQuoteParser,0,2,0,0,1,22,4,0,1,-1,1,0,YSQ.core.Quotes.YahooQuote,
+YSQ.core.Quotes.Response.Processing,YahooQuoteResponseProcessor,2,2,0,0,2,17,2,0,1,0,4,0,YSQ.core.Processing.IParseACsvResponse' YSQ.core.Quotes.Response.Processing.IParseAYahooQuote' YSQ.core.Quotes.Response.QuoteResponse' YSQ.core.Quotes.Request.QuoteRequest,
+YSQ.core.Quotes.Response,QuoteResponse,0,2,2,0,2,11,2,0,0,-1,1,3,YSQ.core.Quotes.Request.QuoteRequest,YSQ.core.Quotes.Response.Processing.IProcessAQuoteResponse' YSQ.core.Quotes.Response.Processing.YahooQuoteResponseProcessor' YSQ.tests.Quotes.Response.Processing.when_processing_a_quote_response

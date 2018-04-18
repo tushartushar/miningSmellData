@@ -1,15 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BucketExtensions,0,2,0,0,2,20,3,0,0,-1,0,1
-EnumerableExtensions,0,1,0,0,1,20,5,0,0,-1,0,0
-BucketFileSystem,5,21,3,0,17,238,41,1,0,0.14,3,0
-CachedBucketFileSystem,0,3,1,0,3,28,4,0,1,-1,1,0
-FileSystemVirtualPathProvider,2,8,1,0,5,62,11,0,0,0.25,1,0
-FileSystemVirtualPathProviderFile,1,2,1,0,2,19,3,0,0,0,0,1
-ICacheProvider,0,3,0,0,0,6,3,1,0,-1,0,1
-IFileSystemWrapper,0,5,0,0,0,8,5,1,0,-1,0,1
-ILogHelper,0,6,0,0,0,9,6,1,0,-1,0,1
-IMimeTypeResolver,0,1,0,0,0,4,1,1,0,-1,0,1
-DefaultMimeTypeResolver,0,1,0,0,1,7,1,0,1,-1,0,0
-FileSystemCacheProvider,3,7,0,0,4,53,11,0,1,0,1,0
-FileSystemWrapper,0,5,0,0,5,26,7,0,1,-1,0,0
-LogHelperWrapper,0,6,0,0,6,27,6,0,1,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Umbraco.Storage.S3.Extensions,BucketExtensions,0,2,0,0,2,24,6,0,0,-1,0,2,,Umbraco.Storage.S3.BucketFileSystem' Umbraco.Storage.S3.Tests.BucketExtensionsTests
+Umbraco.Storage.S3.Extensions,EnumerableExtensions,0,1,0,0,1,21,5,0,0,-1,0,0,,
+Umbraco.Storage.S3,BucketFileSystem,5,21,3,0,17,271,39,1,0,0.1,3,3,Umbraco.Storage.S3.Extensions.BucketExtensions' Umbraco.Storage.S3.Services.ILogHelper' Umbraco.Storage.S3.Services.IMimeTypeResolver,Umbraco.Storage.S3.CachedBucketFileSystem' Umbraco.Storage.S3.Tests.BucketFileSystemAbsoluteTests' Umbraco.Storage.S3.Tests.BucketFileSystemRelativeTests
+Umbraco.Storage.S3,CachedBucketFileSystem,0,3,1,0,3,32,5,0,1,-1,2,0,Umbraco.Storage.S3.Services.ICacheProvider' Umbraco.Storage.S3.BucketFileSystem,
+Umbraco.Storage.S3,FileSystemVirtualPathProvider,2,8,1,0,5,67,13,0,0,0.25,1,1,Umbraco.Storage.S3.FileSystemVirtualPathProviderFile,Umbraco.Storage.S3.Tests.FileSystemVirtualPathProviderTests
+Umbraco.Storage.S3,FileSystemVirtualPathProviderFile,1,2,1,0,2,18,3,0,0,0,0,1,,Umbraco.Storage.S3.FileSystemVirtualPathProvider
+Umbraco.Storage.S3.Services,ICacheProvider,0,3,0,0,0,6,3,1,0,-1,0,1,,Umbraco.Storage.S3.CachedBucketFileSystem
+Umbraco.Storage.S3.Services,IFileSystemWrapper,0,5,0,0,0,8,5,1,0,-1,0,1,,Umbraco.Storage.S3.Services.Impl.FileSystemCacheProvider
+Umbraco.Storage.S3.Services,ILogHelper,0,6,0,0,0,9,6,1,0,-1,0,1,,Umbraco.Storage.S3.BucketFileSystem
+Umbraco.Storage.S3.Services,IMimeTypeResolver,0,1,0,0,0,4,1,1,0,-1,0,1,,Umbraco.Storage.S3.BucketFileSystem
+Umbraco.Storage.S3.Services.Impl,DefaultMimeTypeResolver,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Umbraco.Storage.S3.Services.Impl,FileSystemCacheProvider,3,7,0,0,4,57,9,0,1,0,1,1,Umbraco.Storage.S3.Services.IFileSystemWrapper,Umbraco.Storage.S3.Tests.FileSystemCacheProviderTests
+Umbraco.Storage.S3.Services.Impl,FileSystemWrapper,0,5,0,0,5,26,6,0,1,-1,0,0,,
+Umbraco.Storage.S3.Services.Impl,LogHelperWrapper,0,6,0,0,6,27,6,0,1,-1,0,0,,

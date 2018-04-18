@@ -1,40 +1,42 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-About,0,4,2,0,4,44,10,0,1,-1,3,1
-Agent,1,4,6,1,4,75,14,1,1,1,3,9
-AgentAccount,0,5,2,0,5,47,9,0,1,-1,2,1
-Activity,2,4,3,1,4,56,8,0,1,1,3,6
-ActivityDefinition,0,4,5,0,4,78,14,0,1,-1,4,1
-Context,0,4,9,0,4,113,22,0,1,-1,6,1
-ContextActivities,0,4,4,0,4,89,20,0,1,-1,3,1
-StatementsQueryResultFormat,4,2,0,3,1,15,2,0,0,0,0,1
-StatementsQuery,2,2,11,0,2,96,13,0,0,1,3,2
-SubStatement,1,4,1,1,4,28,4,0,1,1,2,1
-StatementRef,1,5,2,1,5,42,7,0,1,1,2,3
-Result,0,4,6,0,4,81,16,0,1,-1,4,1
-Score,0,4,4,0,4,61,12,0,1,-1,2,1
-Statement,1,5,4,0,5,76,16,0,1,1,4,4
-Group,1,4,2,1,4,44,8,0,2,1,3,1
-StatementBase,1,4,6,0,4,94,22,2,1,1,10,0
-StatementsResult,0,5,2,0,5,36,8,0,0,-1,2,3
-Extensions,1,4,0,0,4,30,6,0,1,0,1,4
-ILRS,0,21,0,0,0,24,21,1,0,-1,8,0
-RemoteLRS,0,33,4,0,26,605,79,0,1,-1,21,0
-LanguageMap,1,7,0,0,7,41,9,0,1,0.29,2,3
-StatementTarget,0,1,1,0,0,7,1,4,0,-1,1,1
-Verb,0,6,2,0,6,49,10,0,1,-1,3,2
-TCAPIVersion,8,5,0,5,4,55,7,0,0,0.4,0,22
-StatementLRSResponse,0,0,1,0,0,7,0,0,1,-1,1,1
-LRSResponse,0,1,3,0,1,19,1,7,0,-1,0,1
-AboutLRSResponse,0,0,1,0,0,7,0,0,1,-1,1,1
-AgentProfileLRSResponse,0,0,1,0,0,7,0,0,1,-1,1,1
-ActivityProfileLRSResponse,0,0,1,0,0,7,0,0,1,-1,1,1
-StatementsResultLRSResponse,0,0,1,0,0,7,0,0,1,-1,1,1
-ProfileKeysLRSResponse,0,0,1,0,0,7,0,0,1,-1,0,1
-StateLRSResponse,0,0,1,0,0,7,0,0,1,-1,1,1
-AgentProfileDocument,0,0,1,0,0,7,0,0,1,-1,1,3
-Document,0,0,5,0,0,23,0,3,0,-1,0,1
-ActivityProfileDocument,0,0,1,0,0,7,0,0,1,-1,1,3
-StateDocument,0,0,3,0,0,15,0,0,1,-1,2,3
-JsonModel,0,4,0,0,4,21,5,14,1,-1,1,0
-IJsonModel,0,4,0,0,0,7,4,1,0,-1,1,0
-StringOfJSON,1,3,0,0,3,19,4,0,0,0,0,17
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TinCan,About,0,4,2,0,4,38,10,0,1,-1,3,0,TinCan.Json.StringOfJSON' TinCan.TCAPIVersion' TinCan.Extensions,
+TinCan,Agent,1,4,6,1,4,65,11,1,1,1,3,11,TinCan.Json.StringOfJSON' TinCan.AgentAccount' TinCan.TCAPIVersion,TinCan.Context' TinCan.StatementsQuery' TinCan.Statement' TinCan.Group' TinCan.StatementBase' TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.AgentTest' TinCanTests.Support' TinCanTests.SubStatementTest' TinCanTests.StatementTest
+TinCan,AgentAccount,0,5,2,0,5,41,9,0,1,-1,2,1,TinCan.Json.StringOfJSON' TinCan.TCAPIVersion,TinCan.Agent
+TinCan,Activity,2,4,3,1,4,49,8,0,1,1,3,7,TinCan.Json.StringOfJSON' TinCan.ActivityDefinition' TinCan.TCAPIVersion,TinCan.ContextActivities' TinCan.StatementBase' TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.ActivityTest' TinCanTests.Support' TinCanTests.RemoteLRSResourceTest
+TinCan,ActivityDefinition,0,4,5,0,4,68,14,0,1,-1,4,2,TinCan.Json.StringOfJSON' TinCan.LanguageMap' TinCan.Extensions' TinCan.TCAPIVersion,TinCan.Activity' TinCanTests.Support
+TinCan,Context,0,4,9,0,4,99,22,0,1,-1,6,2,TinCan.Json.StringOfJSON' TinCan.Agent' TinCan.ContextActivities' TinCan.StatementRef' TinCan.Extensions' TinCan.TCAPIVersion,TinCan.StatementBase' TinCanTests.Support
+TinCan,ContextActivities,0,4,4,0,4,84,20,0,1,-1,3,2,TinCan.Json.StringOfJSON' TinCan.Activity' TinCan.TCAPIVersion,TinCan.Context' TinCanTests.Support
+TinCan,StatementsQueryResultFormat,4,2,0,3,1,15,2,0,0,0,0,2,,TinCan.StatementsQuery' TinCanTests.RemoteLRSResourceTest
+TinCan,StatementsQuery,2,2,11,0,2,74,13,0,0,1,3,3,TinCan.Agent' TinCan.StatementsQueryResultFormat' TinCan.TCAPIVersion,TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan,SubStatement,1,4,1,1,4,17,4,0,1,1,3,4,TinCan.Json.StringOfJSON' TinCan.StatementBase' TinCan.TCAPIVersion,TinCan.Statement' TinCanTests.Support' TinCanTests.SubStatementTest' TinCanTests.StatementTest
+TinCan,StatementRef,1,5,2,1,5,32,7,0,1,1,2,4,TinCan.Json.StringOfJSON' TinCan.TCAPIVersion,TinCan.Context' TinCan.StatementBase' TinCanTests.Support' TinCanTests.RemoteLRSResourceTest
+TinCan,Result,0,4,6,0,4,70,16,0,1,-1,4,3,TinCan.Json.StringOfJSON' TinCan.Score' TinCan.Extensions' TinCan.TCAPIVersion,TinCan.StatementBase' TinCanTests.ResultTest' TinCanTests.Support
+TinCan,Score,0,4,4,0,4,52,12,0,1,-1,2,2,TinCan.Json.StringOfJSON' TinCan.TCAPIVersion,TinCan.Result' TinCanTests.Support
+TinCan,Statement,1,5,4,0,5,70,16,0,1,1,5,4,TinCan.Json.StringOfJSON' TinCan.SubStatement' TinCan.StatementBase' TinCan.Agent' TinCan.TCAPIVersion,TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.StatementTest' TinCanTests.RemoteLRSResourceTest
+TinCan,Group,1,4,2,1,4,37,8,0,2,1,3,1,TinCan.Json.StringOfJSON' TinCan.Agent' TinCan.TCAPIVersion,TinCan.StatementBase
+TinCan,StatementBase,1,4,6,0,4,97,19,2,1,1,10,2,TinCan.Json.StringOfJSON' TinCan.Group' TinCan.Agent' TinCan.Activity' TinCan.StatementRef' TinCan.Verb' TinCan.StatementTarget' TinCan.Result' TinCan.Context' TinCan.TCAPIVersion,TinCan.SubStatement' TinCan.Statement
+TinCan,StatementsResult,0,5,2,0,5,27,8,0,0,-1,1,3,TinCan.Json.StringOfJSON,TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan,Extensions,1,4,0,0,4,32,6,0,1,0,1,4,TinCan.TCAPIVersion,TinCan.About' TinCan.ActivityDefinition' TinCan.Context' TinCan.Result
+TinCan,ILRS,0,21,0,0,0,24,21,1,0,-1,8,0,TinCan.Statement' TinCan.Agent' TinCan.StatementsQuery' TinCan.StatementsResult' TinCan.Activity' TinCan.Documents.StateDocument' TinCan.Documents.ActivityProfileDocument' TinCan.Documents.AgentProfileDocument,
+TinCan,RemoteLRS,0,33,4,0,26,603,72,0,1,-1,22,2,TinCan.TCAPIVersion' TinCan.MyHTTPResponse' TinCan.MyHTTPRequest' TinCan.Documents.Document' TinCan.LRSResponses.ProfileKeysLRSResponse' TinCan.LRSResponses.LRSResponse' TinCan.LRSResponses.StatementLRSResponse' TinCan.LRSResponses.AboutLRSResponse' TinCan.Statement' TinCan.LanguageMap' TinCan.Verb' TinCan.Agent' TinCan.LRSResponses.StatementsResultLRSResponse' TinCan.StatementsQuery' TinCan.StatementsResult' TinCan.Activity' TinCan.LRSResponses.StateLRSResponse' TinCan.Documents.StateDocument' TinCan.LRSResponses.ActivityProfileLRSResponse' TinCan.Documents.ActivityProfileDocument' TinCan.LRSResponses.AgentProfileLRSResponse' TinCan.Documents.AgentProfileDocument,TinCanTests.RemoteLRSResourceTest' TinCanTests.RemoteLRSTest
+TinCan,MyHTTPRequest,0,0,6,0,0,9,0,0,0,-1,0,1,,TinCan.RemoteLRS
+TinCan,MyHTTPResponse,0,2,6,0,2,21,2,0,0,-1,0,1,,TinCan.RemoteLRS
+TinCan,LanguageMap,1,7,0,0,7,39,9,0,1,0.29,2,5,TinCan.Json.StringOfJSON' TinCan.TCAPIVersion,TinCan.ActivityDefinition' TinCan.RemoteLRS' TinCan.Verb' TinCanTests.Support' TinCanTests.LanguageMapTest
+TinCan,StatementTarget,0,1,1,0,0,8,1,4,0,-1,1,1,TinCan.TCAPIVersion,TinCan.StatementBase
+TinCan,Verb,0,6,2,0,6,42,10,0,1,-1,3,7,TinCan.Json.StringOfJSON' TinCan.LanguageMap' TinCan.TCAPIVersion,TinCan.StatementBase' TinCan.RemoteLRS' TinCanTests.Support' TinCanTests.SubStatementTest' TinCanTests.StatementTest' TinCanTests.RemoteLRSResourceTest' TinCanTests.VerbTest
+TinCan,TCAPIVersion,8,5,0,5,4,56,7,0,0,0.4,0,22,,TinCan.About' TinCan.Agent' TinCan.AgentAccount' TinCan.Activity' TinCan.ActivityDefinition' TinCan.Context' TinCan.ContextActivities' TinCan.StatementsQuery' TinCan.SubStatement' TinCan.StatementRef' TinCan.Result' TinCan.Score' TinCan.Statement' TinCan.Group' TinCan.StatementBase' TinCan.Extensions' TinCan.RemoteLRS' TinCan.LanguageMap' TinCan.StatementTarget' TinCan.Verb' TinCan.Json.JsonModel' TinCan.Json.IJsonModel
+TinCan.LRSResponses,StatementLRSResponse,0,0,1,0,0,4,0,0,1,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.LRSResponses,LRSResponse,0,1,3,0,1,10,1,7,0,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.LRSResponses,AboutLRSResponse,0,0,1,0,0,4,0,0,1,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.LRSResponses,AgentProfileLRSResponse,0,0,1,0,0,4,0,0,1,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.LRSResponses,ActivityProfileLRSResponse,0,0,1,0,0,4,0,0,1,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.LRSResponses,StatementsResultLRSResponse,0,0,1,0,0,4,0,0,1,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.LRSResponses,ProfileKeysLRSResponse,0,0,1,0,0,4,0,0,1,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.LRSResponses,StateLRSResponse,0,0,1,0,0,4,0,0,1,-1,0,2,,TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.Documents,AgentProfileDocument,0,0,1,0,0,4,0,0,1,-1,0,3,,TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.Documents,Document,0,0,5,0,0,8,0,3,0,-1,0,1,,TinCan.RemoteLRS
+TinCan.Documents,ActivityProfileDocument,0,0,1,0,0,4,0,0,1,-1,0,3,,TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.Documents,StateDocument,0,0,3,0,0,6,0,0,1,-1,0,3,,TinCan.ILRS' TinCan.RemoteLRS' TinCanTests.RemoteLRSResourceTest
+TinCan.Json,JsonModel,0,4,0,0,4,22,5,14,1,-1,1,0,TinCan.TCAPIVersion,
+TinCan.Json,IJsonModel,0,4,0,0,0,7,4,1,0,-1,1,0,TinCan.TCAPIVersion,
+TinCan.Json,StringOfJSON,1,3,0,0,3,20,4,0,0,0,0,20,,TinCan.About' TinCan.Agent' TinCan.AgentAccount' TinCan.Activity' TinCan.ActivityDefinition' TinCan.Context' TinCan.ContextActivities' TinCan.SubStatement' TinCan.StatementRef' TinCan.Result' TinCan.Score' TinCan.Statement' TinCan.Group' TinCan.StatementBase' TinCan.StatementsResult' TinCan.LanguageMap' TinCan.Verb' TinCanTests.AgentTest' TinCanTests.ResultTest' TinCanTests.VerbTest

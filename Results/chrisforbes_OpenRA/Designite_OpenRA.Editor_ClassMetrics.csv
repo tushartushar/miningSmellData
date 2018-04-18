@@ -1,22 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ActorPropertiesDialog,4,5,0,0,3,108,6,0,0,0.6,2,1
-ActorTemplate,3,0,0,3,0,6,0,0,0,-1,2,4
-BrushTemplate,2,0,0,2,0,5,0,0,0,-1,0,2
-ResourceTemplate,3,0,0,3,0,6,0,0,0,-1,1,4
-ActorTool,1,4,0,0,3,32,5,0,1,0,2,0
-BrushTool,1,5,0,0,3,83,20,0,1,0,6,0
-ErrorListDialog,4,3,0,0,1,85,6,0,0,0.67,0,1
-Form1,50,29,0,0,1,1039,86,0,0,0.14,25,0
-ITool,0,2,0,0,0,5,2,3,0,-1,1,1
-LegacyMapImporter,9,17,0,0,2,523,110,0,0,0,16,1
-MapSelect,26,7,0,24,2,425,13,0,0,0,3,1
-NewMapDialog,14,4,0,7,1,301,5,0,0,0.75,0,1
-Program,0,2,0,0,0,36,4,0,0,-1,5,0
-PropertiesDialog,11,3,0,5,1,168,4,0,0,0.67,0,1
-RenderUtils,0,3,0,0,2,65,11,0,0,-1,10,1
-ResizeDialog,12,3,0,6,1,230,4,0,0,0.67,0,1
-ResourceTool,2,3,0,0,3,25,4,0,1,0,3,0
-Surface,20,30,5,12,14,385,67,0,0,0.2,15,5
-ActorReferenceExts,0,2,0,0,2,15,2,0,0,-1,3,0
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OpenRA.Editor,ActorPropertiesDialog,4,5,0,0,3,110,6,0,0,0.6,2,1,OpenRA.FileFormats.FieldSaver' OpenRA.FileFormats.FieldLoader,OpenRA.Editor.Form1
+OpenRA.Editor,ActorTemplate,3,0,0,3,0,6,0,0,0,-1,2,4,OpenRA.ActorInfo' OpenRA.Traits.EditorAppearanceInfo,OpenRA.Editor.ActorTool' OpenRA.Editor.Form1' OpenRA.Editor.RenderUtils' OpenRA.Editor.Surface
+OpenRA.Editor,BrushTemplate,2,0,0,2,0,5,0,0,0,-1,0,2,,OpenRA.Editor.BrushTool' OpenRA.Editor.Form1
+OpenRA.Editor,ResourceTemplate,3,0,0,3,0,6,0,0,0,-1,1,4,OpenRA.Traits.ResourceTypeInfo,OpenRA.Editor.Form1' OpenRA.Editor.RenderUtils' OpenRA.Editor.ResourceTool' OpenRA.Editor.Surface
+OpenRA.Editor,ActorTool,1,4,0,0,3,31,7,0,1,0,6,0,OpenRA.Editor.ActorTemplate' OpenRA.Editor.Surface' OpenRA.FileFormats.Lazy' OpenRA.Map' OpenRA.FileFormats.ActorReference' OpenRA.ActorInfo,
+OpenRA.Editor,BrushTool,1,5,0,0,3,90,20,0,1,0,11,0,OpenRA.Editor.BrushTemplate' OpenRA.FileFormats.TileTemplate' OpenRA.FileFormats.Terrain' OpenRA.CPos' OpenRA.int2' OpenRA.FileFormats.TileSet' OpenRA.Editor.Surface' OpenRA.Map' OpenRA.FileFormats.Lazy' OpenRA.FileFormats.TileReference' OpenRA.CVec,
+OpenRA.Editor,ErrorListDialog,4,3,0,0,1,89,5,0,0,0.67,0,1,,OpenRA.Editor.Form1
+OpenRA.Editor,Form1,50,29,0,0,1,1046,52,0,0,0.14,37,0,OpenRA.FileFormats.TileSet' OpenRA.Editor.Surface' OpenRA.FileFormats.FileSystem' OpenRA.FileFormats.Mod' OpenRA.Game' OpenRA.ModData' OpenRA.Rules' OpenRA.Graphics.Minimap' OpenRA.FileFormats.MiniYaml' OpenRA.Editor.ActorPropertiesDialog' OpenRA.FileFormats.ActorReference' OpenRA.ActorInfo' OpenRA.FileFormats.Pair' OpenRA.Map' OpenRA.FileFormats.Palette' OpenRA.Editor.BrushTemplate' OpenRA.FileFormats.TileTemplate' OpenRA.Traits.EditorTilesetFilterInfo' OpenRA.Traits.RenderSimpleInfo' OpenRA.Editor.ActorTemplate' OpenRA.Editor.ResourceTemplate' OpenRA.int2' OpenRA.FileFormats.TypeDictionary' OpenRA.Editor.RenderUtils' OpenRA.Traits.ResourceTypeInfo' OpenRA.FileFormats.Manifest' OpenRA.FileFormats.PlayerReference' OpenRA.Editor.ResizeDialog' OpenRA.Editor.MapSelect' OpenRA.Editor.NewMapDialog' OpenRA.Editor.PropertiesDialog' OpenRA.Editor.LegacyMapImporter' OpenRA.Editor.ErrorListDialog' OpenRA.FileFormats.TileReference' OpenRA.FileFormats.Lazy' OpenRA.FileFormats.Terrain' OpenRA.FileFormats.ColorRamp,
+OpenRA.Editor,ITool,0,2,0,0,0,5,2,3,0,-1,1,1,OpenRA.Editor.Surface,OpenRA.Editor.Surface
+OpenRA.Editor,LegacyMapImporter,9,17,0,0,2,413,56,0,0,0,14,1,OpenRA.Map' OpenRA.FileFormats.IniFile' OpenRA.FileFormats.IniSection' OpenRA.Editor.IniMapFormat' OpenRA.FileFormats.ActorReference' OpenRA.FileFormats.FileSystem' OpenRA.int2' OpenRA.FileFormats.Lazy' OpenRA.FileFormats.Pair' OpenRA.FileFormats.Format80' OpenRA.FileFormats.TileReference' OpenRA.CPos' OpenRA.Rules' OpenRA.FileFormats.PlayerReference,OpenRA.Editor.Form1
+OpenRA.Editor,IniMapFormat,0,0,0,0,0,1,0,0,0,-1,0,1,,OpenRA.Editor.LegacyMapImporter
+OpenRA.Editor,MapSelect,26,7,0,24,2,427,13,0,0,0,4,1,OpenRA.Platform' OpenRA.ModData' OpenRA.Map' OpenRA.Graphics.Minimap,OpenRA.Editor.Form1
+OpenRA.Editor,NewMapDialog,14,4,0,7,1,288,5,0,0,0.75,0,1,,OpenRA.Editor.Form1
+OpenRA.Editor,Program,0,2,0,0,0,34,4,0,0,-1,6,0,OpenRA.Game' OpenRA.FileFormats.FileSystem' OpenRA.ModData' OpenRA.Rules' OpenRA.Map' OpenRA.FileFormats.Lazy,
+OpenRA.Editor,PropertiesDialog,11,3,0,5,1,169,4,0,0,0.67,0,1,,OpenRA.Editor.Form1
+OpenRA.Editor,RenderUtils,0,3,0,0,2,70,3,0,0,-1,11,1,OpenRA.FileFormats.ImageHeader' OpenRA.FileFormats.ShpReader' OpenRA.FileFormats.Palette' OpenRA.Traits.RenderSimple' OpenRA.FileFormats.FileSystem' OpenRA.FileFormats.TileSet' OpenRA.FileFormats.TypeDictionary' OpenRA.ActorInfo' OpenRA.Editor.ActorTemplate' OpenRA.Traits.ResourceTypeInfo' OpenRA.Editor.ResourceTemplate,OpenRA.Editor.Form1
+OpenRA.Editor,ResizeDialog,12,3,0,6,1,223,4,0,0,0.67,0,1,,OpenRA.Editor.Form1
+OpenRA.Editor,ResourceTool,2,3,0,0,3,26,4,0,1,0,7,0,OpenRA.Editor.ResourceTemplate' OpenRA.int2' OpenRA.FileFormats.Lazy' OpenRA.Map' OpenRA.Editor.Surface' OpenRA.CPos' OpenRA.Traits.ResourceTypeInfo,
+OpenRA.Editor,Surface,20,30,5,12,14,390,70,0,0,0.2,25,5,OpenRA.int2' OpenRA.Editor.ITool' OpenRA.FileFormats.TileReference' OpenRA.CPos' OpenRA.Map' OpenRA.FileFormats.TileSet' OpenRA.FileFormats.Palette' OpenRA.ActorInfo' OpenRA.Editor.ActorTemplate' OpenRA.Traits.ResourceTypeInfo' OpenRA.Editor.ResourceTemplate' OpenRA.FileFormats.Lazy' OpenRA.FileFormats.ActorReference' OpenRA.FileFormats.Terrain' OpenRA.FileFormats.TileTemplate' OpenRA.Game' OpenRA.Traits.EditorAppearanceInfo' OpenRA.float2' OpenRA.FileFormats.PlayerReference' OpenRA.Traits.PlayerColorPaletteInfo' OpenRA.FileFormats.PlayerColorRemap' OpenRA.FileFormats.TypeDictionary' OpenRA.Rules' OpenRA.OwnerInit' OpenRA.CVec,OpenRA.Editor.ActorTool' OpenRA.Editor.BrushTool' OpenRA.Editor.Form1' OpenRA.Editor.ITool' OpenRA.Editor.ResourceTool
+OpenRA.Editor,ActorReferenceExts,0,2,0,0,2,15,2,0,0,-1,4,0,OpenRA.LocationInit' OpenRA.FileFormats.TypeDictionary' OpenRA.FileFormats.ActorReference' OpenRA.CPos,
+OpenRA.Editor.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+OpenRA.Editor.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

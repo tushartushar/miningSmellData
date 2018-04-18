@@ -1,25 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CoreExtensions,0,1,0,0,1,9,2,0,0,-1,0,0
-ISmtpServer,0,3,0,0,0,6,3,1,0,-1,0,0
-EmbeddedSmtpServer,3,12,3,0,11,107,15,0,1,0.5,7,0
-Wait,0,1,0,0,1,16,2,0,0,-1,0,1
-ISmtpSession,0,3,2,0,0,12,3,1,0,-1,0,7
-SmtpSession,5,6,3,0,6,68,8,0,1,0.5,5,1
-ISocket,0,7,3,0,0,19,7,1,0,-1,0,3
-SocketWrapper,2,9,3,0,9,78,14,0,1,0,1,1
-PortFinder,0,2,0,0,1,24,4,0,0,-1,0,1
-LogLevel,0,0,0,0,0,7,0,0,0,-1,0,1
-SmtpLog,2,4,0,2,4,24,4,0,0,0,1,2
-SmtpToken,2,2,4,2,1,48,4,0,0,0,0,8
-DataHandler,0,2,0,0,2,13,2,0,1,-1,3,0
-HeloHandler,0,2,0,0,2,15,2,0,1,-1,3,0
-ContinueProcessing,0,0,0,0,0,5,0,0,0,-1,0,6
-ISmtpProtocolHandler,0,2,0,0,0,5,2,5,0,-1,2,1
-MessageParser,0,1,0,0,1,36,3,0,0,-1,1,1
-MessageParsingHandler,1,3,1,0,3,35,5,0,1,0,4,0
-ProtocolHandlers,1,4,0,0,3,26,4,0,0,0,2,1
-QuitHandler,0,2,0,0,2,12,2,0,1,-1,3,0
-RegisterAddressesHandler,1,2,0,0,2,21,3,0,1,0,3,0
-SmtpMessage,3,3,2,0,2,76,9,0,0,1,1,1
-SmtpMessagePart,4,1,3,0,1,31,1,0,0,0,0,1
-StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+EmbeddedMail,CoreExtensions,0,1,0,0,1,10,2,0,0,-1,0,0,,
+EmbeddedMail,ISmtpServer,0,3,0,0,0,6,3,1,0,-1,0,0,,
+EmbeddedMail,EmbeddedSmtpServer,3,12,3,0,11,101,17,0,1,0.42,6,2,EmbeddedMail.SmtpLog' EmbeddedMail.Wait' EmbeddedMail.SmtpSession' EmbeddedMail.ISocket' EmbeddedMail.ISmtpSession' EmbeddedMail.PortFinder,EmbeddedMail.Tests.EmbeddedSmtpServerIntegratedTester' EmbeddedMail.Tests.IntegratedSingleMessageTester
+EmbeddedMail,Wait,0,1,0,0,1,15,4,0,0,-1,0,1,,EmbeddedMail.EmbeddedSmtpServer
+EmbeddedMail,ISmtpSession,0,3,2,0,0,8,3,2,0,-1,0,12,,EmbeddedMail.EmbeddedSmtpServer' EmbeddedMail.Handlers.DataHandler' EmbeddedMail.Handlers.HeloHandler' EmbeddedMail.Handlers.ISmtpProtocolHandler' EmbeddedMail.Handlers.MessageParsingHandler' EmbeddedMail.Handlers.QuitHandler' EmbeddedMail.Handlers.RegisterAddressesHandler' EmbeddedMail.Tests.Handlers.DataHandlerTester' EmbeddedMail.Tests.Handlers.HeloHandlerTester' EmbeddedMail.Tests.Handlers.MessageParsingHandlerTester' EmbeddedMail.Tests.Handlers.QuitHandlerTester' EmbeddedMail.Tests.Handlers.RegisterAddressesHandlerTester
+EmbeddedMail,SmtpSession,5,6,3,0,6,63,9,0,1,0.5,6,1,EmbeddedMail.ISocket' EmbeddedMail.SmtpToken' EmbeddedMail.Handlers.ISmtpProtocolHandler' EmbeddedMail.SmtpLog' EmbeddedMail.Handlers.ProtocolHandlers' EmbeddedMail.Handlers.ContinueProcessing,EmbeddedMail.EmbeddedSmtpServer
+EmbeddedMail,ISocket,0,7,3,0,0,13,7,1,0,-1,0,2,,EmbeddedMail.EmbeddedSmtpServer' EmbeddedMail.SmtpSession
+EmbeddedMail,SocketWrapper,2,9,3,0,9,79,14,0,1,0,0,0,,
+EmbeddedMail,PortFinder,0,2,0,0,1,29,4,0,0,-1,0,1,,EmbeddedMail.EmbeddedSmtpServer
+EmbeddedMail,LogLevel,0,0,0,0,0,7,0,0,0,-1,0,1,,EmbeddedMail.SmtpLog
+EmbeddedMail,SmtpLog,2,4,0,2,4,25,4,0,0,0,1,2,EmbeddedMail.LogLevel,EmbeddedMail.EmbeddedSmtpServer' EmbeddedMail.SmtpSession
+EmbeddedMail,SmtpToken,2,2,4,2,1,31,4,0,0,0,0,14,,EmbeddedMail.SmtpSession' EmbeddedMail.Handlers.DataHandler' EmbeddedMail.Handlers.HeloHandler' EmbeddedMail.Handlers.ISmtpProtocolHandler' EmbeddedMail.Handlers.MessageParsingHandler' EmbeddedMail.Handlers.ProtocolHandlers' EmbeddedMail.Handlers.QuitHandler' EmbeddedMail.Handlers.RegisterAddressesHandler' EmbeddedMail.Tests.SmtpTokenTester' EmbeddedMail.Tests.Handlers.DataHandlerTester' EmbeddedMail.Tests.Handlers.HeloHandlerTester' EmbeddedMail.Tests.Handlers.MessageParsingHandlerTester' EmbeddedMail.Tests.Handlers.QuitHandlerTester' EmbeddedMail.Tests.Handlers.RegisterAddressesHandlerTester
+EmbeddedMail.Handlers,DataHandler,0,2,0,0,2,13,2,0,1,-1,3,1,EmbeddedMail.SmtpToken' EmbeddedMail.ISmtpSession' EmbeddedMail.Handlers.ContinueProcessing,EmbeddedMail.Tests.Handlers.DataHandlerTester
+EmbeddedMail.Handlers,HeloHandler,0,2,0,0,2,12,2,0,1,-1,3,1,EmbeddedMail.SmtpToken' EmbeddedMail.ISmtpSession' EmbeddedMail.Handlers.ContinueProcessing,EmbeddedMail.Tests.Handlers.HeloHandlerTester
+EmbeddedMail.Handlers,ContinueProcessing,0,0,0,0,0,5,0,0,0,-1,0,10,,EmbeddedMail.SmtpSession' EmbeddedMail.Handlers.DataHandler' EmbeddedMail.Handlers.HeloHandler' EmbeddedMail.Handlers.MessageParsingHandler' EmbeddedMail.Handlers.QuitHandler' EmbeddedMail.Handlers.RegisterAddressesHandler' EmbeddedMail.Tests.Handlers.DataHandlerTester' EmbeddedMail.Tests.Handlers.HeloHandlerTester' EmbeddedMail.Tests.Handlers.QuitHandlerTester' EmbeddedMail.Tests.Handlers.RegisterAddressesHandlerTester
+EmbeddedMail.Handlers,ISmtpProtocolHandler,0,2,0,0,0,5,2,5,0,-1,2,2,EmbeddedMail.SmtpToken' EmbeddedMail.ISmtpSession,EmbeddedMail.SmtpSession' EmbeddedMail.Handlers.ProtocolHandlers
+EmbeddedMail.Handlers,MessageParser,0,1,0,0,1,39,3,0,0,-1,2,2,EmbeddedMail.Handlers.SmtpMessage' EmbeddedMail.Handlers.SmtpMessagePart,EmbeddedMail.Handlers.MessageParsingHandler' EmbeddedMail.Tests.Handlers.when_parsing_a_simple_text_email
+EmbeddedMail.Handlers,MessageParsingHandler,1,3,1,0,3,38,5,0,1,0,4,1,EmbeddedMail.SmtpToken' EmbeddedMail.ISmtpSession' EmbeddedMail.Handlers.ContinueProcessing' EmbeddedMail.Handlers.MessageParser,EmbeddedMail.Tests.Handlers.MessageParsingHandlerTester
+EmbeddedMail.Handlers,ProtocolHandlers,1,4,0,0,3,26,4,0,0,0,2,1,EmbeddedMail.Handlers.ISmtpProtocolHandler' EmbeddedMail.SmtpToken,EmbeddedMail.SmtpSession
+EmbeddedMail.Handlers,QuitHandler,0,2,0,0,2,12,2,0,1,-1,3,1,EmbeddedMail.SmtpToken' EmbeddedMail.ISmtpSession' EmbeddedMail.Handlers.ContinueProcessing,EmbeddedMail.Tests.Handlers.QuitHandlerTester
+EmbeddedMail.Handlers,RegisterAddressesHandler,1,2,0,0,2,18,3,0,1,0,3,1,EmbeddedMail.SmtpToken' EmbeddedMail.ISmtpSession' EmbeddedMail.Handlers.ContinueProcessing,EmbeddedMail.Tests.Handlers.RegisterAddressesHandlerTester
+EmbeddedMail.Handlers,SmtpMessage,3,3,2,0,2,87,9,0,0,1,1,1,EmbeddedMail.Handlers.SmtpMessagePart,EmbeddedMail.Handlers.MessageParser
+EmbeddedMail.Handlers,SmtpMessagePart,4,1,3,0,1,33,1,0,0,0,0,2,,EmbeddedMail.Handlers.MessageParser' EmbeddedMail.Handlers.SmtpMessage
+EmbeddedMail.Handlers,StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,

@@ -1,9 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-OoXmlStringsStream,4,4,0,4,4,48,11,0,0,0,0,1
-OoXml,5,4,0,2,3,123,20,0,0,0,3,4
-gStream,3,3,0,2,1,50,5,0,0,0,3,2
-gSheet,7,16,0,4,10,179,36,0,0,0,4,5
-Extension,0,1,0,0,1,11,1,0,0,-1,0,0
-Column,3,1,0,0,0,18,4,0,0,0,0,1
-OoXmlDataStream,13,11,0,0,7,186,27,0,0,0,2,1
-ZipStorer,12,27,0,3,15,784,72,0,0,0.11,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MyExcelExport,OoXmlStringsStream,4,4,0,4,4,47,9,0,0,0,0,1,,MyExcelExport.gSheet
+MyExcelExport,OoXml,5,4,0,2,3,80,19,0,0,0,5,4,System.IO.Compression.ZipStorer' MyExcelExport.gStream' System.IO.Compression.ZipFileEntry' System.IO.Compression.Compression' MyExcelExport.gSheet,MyExcelExport.gStream' MyExcelExport.gSheet' MySample.ExcelReader' MySample.ExcelWriter
+MyExcelExport,gStream,3,3,0,2,1,35,5,0,0,0,4,3,System.IO.Compression.ZipFileEntry' MyExcelExport.OoXml' MyExcelExport.gSheet' System.IO.Compression.ZipStorer,MyExcelExport.OoXml' MyExcelExport.gSheet' MyExcelExport.OoXmlDataStream
+MyExcelExport,gSheet,7,16,0,4,10,126,36,0,0,0,6,5,MyExcelExport.OoXml' MyExcelExport.gStream' MyExcelExport.OoXmlStringsStream' MyExcelExport.OoXmlDataStream' System.IO.Compression.ZipStorer' System.IO.Compression.ZipFileEntry,MyExcelExport.OoXml' MyExcelExport.gStream' MyExcelExport.OoXmlDataStream' MySample.ExcelReader' MySample.ExcelWriter
+MyExcelExport,Extension,0,1,0,0,1,8,2,0,0,-1,0,0,,
+MyExcelExport,Column,3,1,0,0,0,13,3,0,0,0,0,1,,MyExcelExport.OoXmlDataStream
+MyExcelExport,OoXmlDataStream,13,11,0,0,7,125,28,0,0,0,3,1,MyExcelExport.gSheet' MyExcelExport.gStream' MyExcelExport.Column,MyExcelExport.gSheet
+System.IO.Compression,ZipStorer,12,27,0,3,15,691,69,0,0,0.07,2,3,System.IO.Compression.Compression' System.IO.Compression.ZipFileEntry,MyExcelExport.OoXml' MyExcelExport.gStream' MyExcelExport.gSheet
+System.IO.Compression,Compression,0,0,0,0,0,7,0,0,0,-1,0,3,,MyExcelExport.OoXml' System.IO.Compression.ZipStorer' System.IO.Compression.ZipFileEntry
+System.IO.Compression,ZipFileEntry,11,1,0,11,1,31,1,0,0,0,1,4,System.IO.Compression.Compression,MyExcelExport.OoXml' MyExcelExport.gStream' MyExcelExport.gSheet' System.IO.Compression.ZipStorer

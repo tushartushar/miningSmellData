@@ -1,8 +1,8 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IReader,0,1,0,0,0,4,1,1,0,-1,0,1
-IWriter,0,4,0,0,0,7,4,1,0,-1,1,1
-ConsoleReader,0,1,0,0,1,8,1,0,1,-1,0,1
-ConsoleWriter,0,4,0,0,4,41,8,0,1,-1,1,1
-MinesGame,15,12,0,0,2,226,57,0,0,0,5,1
-Winner,0,1,2,0,1,16,1,0,0,-1,0,3
-MinesGameDemo,0,1,0,0,1,8,1,0,0,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Games.Interfaces,IReader,0,1,0,0,0,4,1,1,0,-1,0,1,,Games.MinesGame
+Games.Interfaces,IWriter,0,4,0,0,0,7,4,1,0,-1,0,1,,Games.MinesGame
+Games.IOEngines,ConsoleReader,0,1,0,0,1,8,1,0,1,-1,0,0,,
+Games.IOEngines,ConsoleWriter,0,4,0,0,4,47,8,0,1,-1,1,0,Games.Winner,
+Games,MinesGame,15,12,0,0,2,280,43,0,0,0,3,1,Games.Interfaces.IWriter' Games.Interfaces.IReader' Games.Winner,Games.MinesGameDemo
+Games,Winner,0,1,2,0,1,10,1,0,0,-1,0,2,,Games.IOEngines.ConsoleWriter' Games.MinesGame
+Games,MinesGameDemo,0,1,0,0,1,8,1,0,0,-1,1,0,Games.MinesGame,

@@ -1,12 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BasicControl,5,7,0,0,3,114,10,0,0,0.29,1,5
-BMP,2,2,0,0,2,14,2,0,0,0,2,1
-GIF,2,2,0,0,2,14,2,0,0,0,2,1
-JPG,2,2,0,0,2,14,2,0,0,0,2,1
-PNG,2,2,0,0,2,14,2,0,0,0,2,1
-TGA,2,3,0,0,2,172,60,0,0,0,4,1
-Main,1,6,0,0,6,53,7,0,1,0.83,10,0
-RLE,0,2,0,0,2,54,20,0,0,-1,0,1
-iWav,5,6,0,0,1,102,8,0,0,0.33,1,1
-WAV,2,2,0,0,2,14,2,0,0,0,2,1
-Resources,2,1,5,0,0,63,1,0,0,0,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Common,BasicControl,5,7,0,0,3,116,9,0,0,0.29,1,5,Common.Properties.Resources,Common.BMP' Common.GIF' Common.JPG' Common.PNG' Common.TGA
+Common,BMP,2,2,0,0,2,14,2,0,0,0,1,1,Common.BasicControl,Common.Main
+Common,GIF,2,2,0,0,2,15,2,0,0,0,1,1,Common.BasicControl,Common.Main
+Common,JPG,2,2,0,0,2,15,2,0,0,0,1,1,Common.BasicControl,Common.Main
+Common,PNG,2,2,0,0,2,15,2,0,0,0,1,1,Common.BasicControl,Common.Main
+Common,TGA,2,3,0,0,2,187,7,0,0,0,8,1,Common.BasicControl' Common.sTGA' Common.Header' Common.ImageType' Common.ColorMap_Spec' Common.Image_Spec' Common.ImageData' Common.RLE,Common.Main
+Common,sTGA,2,0,0,2,0,5,0,0,0,-1,2,1,Common.Header' Common.ImageData,Common.TGA
+Common,Header,5,0,0,5,0,8,0,0,0,-1,3,2,Common.ImageType' Common.ColorMap_Spec' Common.Image_Spec,Common.TGA' Common.sTGA
+Common,ImageData,3,0,0,3,0,6,0,0,0,-1,0,2,,Common.TGA' Common.sTGA
+Common,ImageType,0,0,0,0,0,11,0,0,0,-1,0,2,,Common.TGA' Common.Header
+Common,ColorMap_Spec,3,0,0,3,0,6,0,0,0,-1,0,2,,Common.TGA' Common.Header
+Common,Image_Spec,6,0,0,6,0,9,0,0,0,-1,0,2,,Common.TGA' Common.Header
+Common,Main,1,6,0,0,6,44,8,0,0,0.83,6,0,Common.TGA' Common.JPG' Common.GIF' Common.PNG' Common.WAV' Common.BMP,
+Common,RLE,0,2,0,0,2,68,11,0,0,-1,0,1,,Common.TGA
+Common,iWav,5,6,0,0,1,104,7,0,0,0.33,1,1,Common.Properties.Resources,Common.WAV
+Common,WAV,2,2,0,0,2,15,2,0,0,0,1,1,Common.iWav,Common.Main
+Common.Properties,Resources,2,1,5,0,0,62,1,0,0,0,0,2,,Common.BasicControl' Common.iWav

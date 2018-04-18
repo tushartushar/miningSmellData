@@ -1,29 +1,37 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Constants,1,0,0,1,0,4,0,0,0,-1,0,2
-CountersAggregator,5,4,0,0,3,73,7,0,2,0.5,2,0
-EnqueuedAndFetchedCountDto,0,0,2,0,0,11,0,0,0,-1,0,2
-ExpirationManager,7,5,0,0,3,96,12,0,2,0.4,3,0
-IPersistentJobQueue,0,2,0,0,0,13,2,2,0,-1,0,1
-IPersistentJobQueueMonitoringApi,0,4,0,0,0,9,4,2,0,-1,0,1
-IPersistentJobQueueProvider,0,2,0,0,0,5,2,2,0,-1,0,1
-PersistentJobQueueProviderCollection,3,5,0,0,4,36,9,0,0,0,1,1
-SqlServerJobQueue,3,3,0,0,3,89,9,0,1,0,3,1
-SqlServerFetchedJob,6,5,2,0,4,78,11,0,1,0,1,1
-SqlServerDistributedLock,12,1,0,0,1,37,1,0,0,0,0,1
-SqlServerDistributedLockException,0,1,0,0,1,6,1,0,0,-1,0,0
-SqlServerJobQueueProvider,2,3,0,0,3,22,5,0,1,0,3,1
-SqlServerMonitoringApi,2,24,0,0,23,228,26,0,1,0.83,20,1
-SqlServerObjectsInstaller,3,4,0,1,2,66,13,0,0,0.5,2,1
-SqlServerJobQueueMonitoringApi,5,6,0,0,5,74,7,0,1,0.33,1,0
-SqlServerStorage,5,20,3,2,8,253,38,0,0,0.3,9,6
-SqlServerStorageOptions,2,1,10,0,1,78,1,0,0,0,1,5
-SqlServerConnection,1,4,0,0,4,19,5,0,2,0.5,0,1
-SqlServerWriteOnlyTransaction,4,32,0,0,27,310,47,0,2,0,3,0
-SqlServerBootstrapperConfigurationExtensions,0,2,0,0,2,32,2,0,0,-1,3,0
-SqlHash,0,0,4,0,0,19,0,0,0,-1,0,0
-JobParameter,0,0,3,0,0,15,0,0,0,-1,0,1
-SqlJob,0,0,9,0,0,39,0,0,0,-1,0,1
-SqlState,0,0,5,0,0,23,0,0,0,-1,0,1
-Server,0,0,3,0,0,15,0,0,0,-1,0,0
-ServerData,0,0,3,0,0,15,0,0,0,-1,0,1
-SqlServerStorageExtensions,0,2,0,0,2,23,7,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Hangfire.SqlServer,Constants,1,0,0,1,0,4,0,0,0,-1,0,2,,Hangfire.SqlServer.SqlServerObjectsInstaller' Hangfire.SqlServer.SqlServerStorageOptions
+Hangfire.SqlServer,CountersAggregator,5,4,0,0,3,72,5,0,2,0.5,2,1,Hangfire.Logging.ILog' Hangfire.SqlServer.SqlServerStorage,Hangfire.SqlServer.Tests.CountersAggregatorFacts
+Hangfire.SqlServer,EnqueuedAndFetchedCountDto,0,0,2,0,0,5,0,0,0,-1,0,4,,Hangfire.SqlServer.SqlServerMonitoringApi' Hangfire.SqlServer.SqlServerJobQueueMonitoringApi' Hangfire.SqlServer.Msmq.MsmqJobQueueMonitoringApi' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueMonitoringApiFacts
+Hangfire.SqlServer,ExpirationManager,7,6,0,0,3,139,8,0,2,0.33,5,2,Hangfire.Logging.ILog' Hangfire.SqlServer.SqlServerStorage' Hangfire.SqlServer.SqlServerDistributedLock' Hangfire.Storage.DistributedLockTimeoutException' Hangfire.Logging.LogLevel,Hangfire.SqlServer.Tests.ExpirationManagerFacts' Hangfire.SqlServer.Tests.SqlServerStorageFacts
+Hangfire.SqlServer,IPersistentJobQueue,0,2,0,0,0,13,2,2,0,-1,0,4,,Hangfire.SqlServer.SqlServerJobQueueProvider' Hangfire.SqlServer.SqlServerConnection' Hangfire.SqlServer.SqlServerWriteOnlyTransaction' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueProviderFacts
+Hangfire.SqlServer,IPersistentJobQueueMonitoringApi,0,4,0,0,0,9,4,2,0,-1,0,3,,Hangfire.SqlServer.SqlServerJobQueueProvider' Hangfire.SqlServer.SqlServerMonitoringApi' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueProviderFacts
+Hangfire.SqlServer,IPersistentJobQueueProvider,0,2,0,0,0,5,2,2,0,-1,0,5,,Hangfire.SqlServer.PersistentJobQueueProviderCollection' Hangfire.SqlServer.SqlServerMonitoringApi' Hangfire.SqlServer.SqlServerConnection' Hangfire.SqlServer.SqlServerWriteOnlyTransaction' Hangfire.SqlServer.Tests.PersistentJobQueueProviderCollectionFacts
+Hangfire.SqlServer,PersistentJobQueueProviderCollection,3,5,0,0,4,38,9,0,0,0,1,9,Hangfire.SqlServer.IPersistentJobQueueProvider,Hangfire.SqlServer.SqlServerMonitoringApi' Hangfire.SqlServer.SqlServerConnection' Hangfire.SqlServer.SqlServerWriteOnlyTransaction' Hangfire.SqlServer.Msmq.MsmqSqlServerStorageExtensions' Hangfire.MsmqExtensions' Hangfire.SqlServer.Tests.PersistentJobQueueProviderCollectionFacts' Hangfire.SqlServer.Tests.SqlServerConnectionFacts' Hangfire.SqlServer.Tests.SqlServerWriteOnlyTransactionFacts' Hangfire.SqlServer.Msmq.Tests.MsmqSqlServerStorageExtensionsFacts
+Hangfire.SqlServer,SqlCommandBatch,3,4,4,0,4,74,12,0,0,0,1,2,Hangfire.SqlServer.SqlCommandSet,Hangfire.SqlServer.SqlServerConnection' Hangfire.SqlServer.SqlServerWriteOnlyTransaction
+Hangfire.SqlServer,SqlCommandSet,9,5,4,1,4,72,8,0,0,0,0,1,,Hangfire.SqlServer.SqlCommandBatch
+Hangfire.SqlServer,SqlServerTimeoutJob,7,5,3,0,4,96,10,0,1,0,3,3,Hangfire.Logging.ILog' Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute,Hangfire.SqlServer.SqlServerJobQueue' Hangfire.SqlServer.Tests.SqlServerJobQueueFacts' Hangfire.SqlServer.Tests.SqlServerTimeoutJobFacts
+Hangfire.SqlServer,SqlServerJobQueue,3,5,0,0,3,132,12,0,1,0,6,2,Hangfire.SqlServer.SqlServerStorage' Hangfire.SqlServer.SqlServerStorageOptions' Hangfire.Annotations.NotNullAttribute' Hangfire.SqlServer.SqlServerTimeoutJob' Hangfire.SqlServer.SqlServerTransactionJob' Hangfire.SqlServer.FetchedJob,Hangfire.SqlServer.SqlServerWriteOnlyTransaction' Hangfire.SqlServer.Tests.SqlServerJobQueueFacts
+Hangfire.SqlServer,FetchedJob,0,0,3,0,0,7,0,0,0,-1,0,1,,Hangfire.SqlServer.SqlServerJobQueue
+Hangfire.SqlServer,SqlServerTransactionJob,6,5,2,0,4,82,11,0,1,0,2,3,Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute,Hangfire.SqlServer.SqlServerJobQueue' Hangfire.SqlServer.Tests.SqlServerJobQueueFacts' Hangfire.SqlServer.Tests.SqlServerTransactionJobFacts
+Hangfire.SqlServer,SqlServerDistributedLock,12,5,0,0,2,179,14,0,0,0,2,3,Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute,Hangfire.SqlServer.ExpirationManager' Hangfire.SqlServer.SqlServerConnection' Hangfire.SqlServer.Tests.SqlServerDistributedLockFacts
+Hangfire.SqlServer,SqlServerDistributedLockException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Hangfire.SqlServer,SqlServerJobQueueProvider,2,3,0,0,3,20,5,0,1,0,3,1,Hangfire.SqlServer.IPersistentJobQueue' Hangfire.SqlServer.IPersistentJobQueueMonitoringApi' Hangfire.Annotations.NotNullAttribute,Hangfire.SqlServer.SqlServerStorage
+Hangfire.SqlServer,SqlServerMonitoringApi,2,34,0,0,23,492,44,0,1,0.06,19,1,Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute' Hangfire.States.ScheduledState' Hangfire.SqlServer.IPersistentJobQueueMonitoringApi' Hangfire.SqlServer.EnqueuedAndFetchedCountDto' Hangfire.States.FailedState' Hangfire.States.ProcessingState' Hangfire.SqlServer.Entities.SqlJob' Hangfire.Common.JobHelper' Hangfire.SqlServer.Entities.ServerData' Hangfire.States.SucceededState' Hangfire.States.DeletedState' Hangfire.SqlServer.PersistentJobQueueProviderCollection' Hangfire.SqlServer.IPersistentJobQueueProvider' Hangfire.Storage.Monitoring.JobDetailsDto' Hangfire.Storage.Monitoring.StatisticsDto' Hangfire.States.EnqueuedState' Hangfire.Storage.InvocationData' Hangfire.Common.Job,Hangfire.SqlServer.SqlServerStorage
+Hangfire.SqlServer,SafeDictionary<TKey;TValue>,0,1,0,0,1,12,1,0,0,-1,0,0,,
+Hangfire.SqlServer,SqlServerObjectsInstaller,3,4,0,1,2,79,7,0,0,0,3,2,Hangfire.Logging.ILog' Hangfire.SqlServer.Constants' Hangfire.SqlServer.SqlEngineEdition,Hangfire.SqlServer.SqlServerStorage' Hangfire.SqlServer.Tests.CleanDatabaseAttribute
+Hangfire.SqlServer,SqlEngineEdition,5,0,0,5,0,11,0,0,0,-1,0,1,,Hangfire.SqlServer.SqlServerObjectsInstaller
+Hangfire.SqlServer,SqlServerJobQueueMonitoringApi,5,5,0,0,5,97,6,0,1,0,3,0,Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute' Hangfire.SqlServer.EnqueuedAndFetchedCountDto,
+Hangfire.SqlServer,JobIdDto,0,0,1,0,0,5,0,0,0,-1,0,0,,
+Hangfire.SqlServer,SqlServerStorage,5,22,5,2,9,281,36,0,1,0.18,9,23,Hangfire.SqlServer.SqlServerStorageOptions' Hangfire.Dashboard.DashboardMetric' Hangfire.Annotations.NotNullAttribute' Hangfire.SqlServer.SqlServerMonitoringApi' Hangfire.SqlServer.SqlServerConnection' Hangfire.Logging.ILog' Hangfire.Annotations.InstantHandleAttribute' Hangfire.SqlServer.SqlServerObjectsInstaller' Hangfire.SqlServer.SqlServerJobQueueProvider,MvcSample.Startup' Hangfire.SqlServer.CountersAggregator' Hangfire.SqlServer.ExpirationManager' Hangfire.SqlServer.SqlServerTimeoutJob' Hangfire.SqlServer.SqlServerJobQueue' Hangfire.SqlServer.SqlServerTransactionJob' Hangfire.SqlServer.SqlServerDistributedLock' Hangfire.SqlServer.SqlServerMonitoringApi' Hangfire.SqlServer.SqlServerJobQueueMonitoringApi' Hangfire.SqlServer.SqlServerConnection' Hangfire.SqlServer.SqlServerWriteOnlyTransaction' Hangfire.SqlServer.SqlServerBootstrapperConfigurationExtensions' Hangfire.SqlServerStorageExtensions' Hangfire.SqlServer.Msmq.MsmqSqlServerStorageExtensions' Hangfire.MsmqExtensions' Hangfire.SqlServer.Tests.CountersAggregatorFacts' Hangfire.SqlServer.Tests.SqlServerConnectionFacts' Hangfire.SqlServer.Tests.ExpirationManagerFacts' Hangfire.SqlServer.Tests.SqlServerJobQueueFacts' Hangfire.SqlServer.Tests.SqlServerTimeoutJobFacts' Hangfire.SqlServer.Tests.SqlServerDistributedLockFacts' Hangfire.SqlServer.Tests.SqlServerStorageFacts' Hangfire.SqlServer.Msmq.Tests.MsmqSqlServerStorageExtensionsFacts
+Hangfire.SqlServer,SqlServerStorageOptions,3,1,12,0,1,72,1,0,0,0,1,5,Hangfire.SqlServer.Constants,Hangfire.SqlServer.SqlServerJobQueue' Hangfire.SqlServer.SqlServerStorage' Hangfire.SqlServer.SqlServerBootstrapperConfigurationExtensions' Hangfire.SqlServer.Tests.SqlServerStorageFacts' Hangfire.SqlServer.Tests.StorageOptionsFacts
+Hangfire.SqlServer,SqlServerConnection,3,31,0,0,29,479,73,0,2,0,18,2,Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute' Hangfire.SqlServer.SqlServerWriteOnlyTransaction' Hangfire.SqlServer.IPersistentJobQueue' Hangfire.SqlServer.PersistentJobQueueProviderCollection' Hangfire.SqlServer.IPersistentJobQueueProvider' Hangfire.Storage.IFetchedJob' Hangfire.Storage.InvocationData' Hangfire.SqlServer.SqlCommandBatch' Hangfire.Common.JobHelper' Hangfire.Common.Job' Hangfire.Common.JobLoadException' Hangfire.Storage.JobData' Hangfire.Storage.StateData' Hangfire.SqlServer.Entities.ServerData' Hangfire.Server.ServerContext' Hangfire.SqlServer.SqlServerDistributedLock' Hangfire.SqlServer.DisposableLock,Hangfire.SqlServer.SqlServerStorage' Hangfire.SqlServer.DisposableLock
+Hangfire.SqlServer,DisposableLock,3,2,0,0,2,16,2,0,0,0,1,1,Hangfire.SqlServer.SqlServerConnection,Hangfire.SqlServer.SqlServerConnection
+Hangfire.SqlServer,SqlServerWriteOnlyTransaction,6,32,0,0,27,309,49,0,2,0,9,2,Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute' Hangfire.SqlServer.SqlCommandBatch' Hangfire.States.IState' Hangfire.Common.JobHelper' Hangfire.SqlServer.IPersistentJobQueueProvider' Hangfire.SqlServer.IPersistentJobQueue' Hangfire.SqlServer.PersistentJobQueueProviderCollection' Hangfire.SqlServer.SqlServerJobQueue,Hangfire.SqlServer.SqlServerConnection' Hangfire.SqlServer.Tests.SqlServerWriteOnlyTransactionFacts
+Hangfire.SqlServer,SqlServerBootstrapperConfigurationExtensions,0,2,0,0,2,37,2,0,0,-1,3,0,Hangfire.SqlServer.SqlServerStorage' Hangfire.IBootstrapperConfiguration' Hangfire.SqlServer.SqlServerStorageOptions,
+Hangfire.SqlServer.Entities,SqlHash,0,0,4,0,0,7,0,0,0,-1,0,0,,
+Hangfire.SqlServer.Entities,JobParameter,0,0,3,0,0,6,0,0,0,-1,0,0,,
+Hangfire.SqlServer.Entities,SqlJob,0,0,9,0,0,12,0,0,0,-1,0,1,,Hangfire.SqlServer.SqlServerMonitoringApi
+Hangfire.SqlServer.Entities,SqlState,0,0,5,0,0,8,0,0,0,-1,0,0,,
+Hangfire.SqlServer.Entities,Server,0,0,3,0,0,6,0,0,0,-1,0,0,,
+Hangfire.SqlServer.Entities,ServerData,0,0,3,0,0,6,0,0,0,-1,0,2,,Hangfire.SqlServer.SqlServerMonitoringApi' Hangfire.SqlServer.SqlServerConnection
+Hangfire,SqlServerStorageExtensions,0,2,0,0,2,23,7,0,0,-1,3,0,Hangfire.SqlServer.SqlServerStorage' Hangfire.IGlobalConfiguration' Hangfire.Annotations.NotNullAttribute,

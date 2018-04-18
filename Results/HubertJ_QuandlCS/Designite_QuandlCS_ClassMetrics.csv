@@ -1,18 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-QuandlConnection,0,3,0,0,1,43,7,0,1,-1,2,1
-Constants,15,0,0,0,0,22,0,0,0,-1,0,6
-TypeConverter,0,9,0,0,9,109,35,0,0,-1,4,9
-IQuandlConnection,0,1,0,0,0,9,1,1,0,-1,1,0
-IQuandlUploadRequest,0,1,0,0,0,8,1,1,1,-1,0,1
-IQuandlRequest,0,2,1,0,0,22,2,6,0,-1,0,8
-QuandlDownloadRequest,1,7,10,0,3,185,16,0,1,0.29,7,1
-QuandlFavouritesRequest,1,5,2,0,3,78,8,0,1,0.4,3,1
-QuandlMetadataRequest,2,5,3,0,3,103,10,0,1,0.4,4,1
-QuandlMultisetRequest,4,7,9,0,5,178,17,0,1,0,7,0
-QuandlSearchRequest,1,5,3,0,3,90,9,0,1,0.4,3,1
-QuandlUploadRequest,0,3,1,0,3,39,4,0,2,-1,1,0
-Datacode,2,7,2,0,5,151,14,0,0,0.43,0,3
-FileFormats,0,0,0,0,0,26,0,0,0,-1,0,6
-Frequencies,0,0,0,0,0,34,0,0,0,-1,0,3
-SortOrders,0,0,0,0,0,18,0,0,0,-1,0,3
-Transformations,0,0,0,0,0,35,0,0,0,-1,0,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+QuandlCS.Connection,QuandlConnection,0,3,0,0,1,46,4,0,1,-1,2,1,QuandlCS.Interfaces.IQuandlRequest' QuandlCS.Interfaces.IQuandlUploadRequest,QuandlCSConsole.Program
+QuandlCS.Helpers,Constants,15,0,0,0,0,22,0,0,0,-1,0,6,,QuandlCS.Requests.QuandlDownloadRequest' QuandlCS.Requests.QuandlFavouritesRequest' QuandlCS.Requests.QuandlMetadataRequest' QuandlCS.Requests.QuandlMultisetRequest' QuandlCS.Requests.QuandlSearchRequest' QuandlCS.Requests.QuandlUploadRequest
+QuandlCS.Helpers,TypeConverter,0,9,0,0,9,150,15,0,0,-1,4,9,QuandlCS.Types.SortOrders' QuandlCS.Types.Frequencies' QuandlCS.Types.Transformations' QuandlCS.Types.FileFormats,QuandlCS.Requests.QuandlDownloadRequest' QuandlCS.Requests.QuandlFavouritesRequest' QuandlCS.Requests.QuandlMetadataRequest' QuandlCS.Requests.QuandlMultisetRequest' QuandlCS.Requests.QuandlSearchRequest' QuandlCSConsole.ProgramArguments.FavouritesVerb' QuandlCSConsole.ProgramArguments.MetadataVerb' QuandlCSConsole.ProgramArguments.DownloadVerb' QuandlCSConsole.ProgramArguments.SearchVerb
+QuandlCS.Interfaces,IQuandlConnection,0,1,0,0,0,9,1,1,0,-1,1,0,QuandlCS.Interfaces.IQuandlRequest,
+QuandlCS.Interfaces,IQuandlUploadRequest,0,1,0,0,0,8,1,1,1,-1,0,1,,QuandlCS.Connection.QuandlConnection
+QuandlCS.Interfaces,IQuandlRequest,0,2,1,0,0,20,2,6,0,-1,0,3,,QuandlCS.Connection.QuandlConnection' QuandlCS.Interfaces.IQuandlConnection' QuandlCSConsole.Program
+QuandlCS.Requests,QuandlDownloadRequest,1,7,10,0,3,230,15,0,1,0.29,6,2,QuandlCS.Types.Frequencies' QuandlCS.Types.Transformations' QuandlCS.Types.FileFormats' QuandlCS.Helpers.Constants' QuandlCS.Types.Datacode' QuandlCS.Helpers.TypeConverter,QuandlCSConsole.ProgramArguments.DownloadVerb' QuandlCSTests.DownloadRequestsTests
+QuandlCS.Requests,QuandlFavouritesRequest,1,5,2,0,3,96,7,0,1,0.4,3,1,QuandlCS.Types.FileFormats' QuandlCS.Helpers.Constants' QuandlCS.Helpers.TypeConverter,QuandlCSConsole.ProgramArguments.FavouritesVerb
+QuandlCS.Requests,QuandlMetadataRequest,2,5,3,0,3,126,9,0,1,0.4,4,1,QuandlCS.Types.Datacode' QuandlCS.Types.FileFormats' QuandlCS.Helpers.Constants' QuandlCS.Helpers.TypeConverter,QuandlCSConsole.ProgramArguments.MetadataVerb
+QuandlCS.Requests,QuandlMultisetRequest,4,7,9,0,5,231,16,0,1,0,4,0,QuandlCS.Types.FileFormats' QuandlCS.Types.Datacode' QuandlCS.Helpers.Constants' QuandlCS.Helpers.TypeConverter,
+QuandlCS.Requests,QuandlSearchRequest,1,5,3,0,3,110,8,0,1,0.4,3,1,QuandlCS.Types.FileFormats' QuandlCS.Helpers.Constants' QuandlCS.Helpers.TypeConverter,QuandlCSConsole.ProgramArguments.SearchVerb
+QuandlCS.Requests,QuandlUploadRequest,0,3,1,0,3,42,4,0,2,-1,1,0,QuandlCS.Helpers.Constants,
+QuandlCS.Types,Datacode,2,7,2,0,5,167,13,0,0,0.43,0,4,,QuandlCS.Requests.QuandlDownloadRequest' QuandlCS.Requests.QuandlMetadataRequest' QuandlCS.Requests.QuandlMultisetRequest' QuandlCSTests.DatacodeTests
+QuandlCS.Types,FileFormats,0,0,0,0,0,19,0,0,0,-1,0,7,,QuandlCS.Helpers.TypeConverter' QuandlCS.Requests.QuandlDownloadRequest' QuandlCS.Requests.QuandlFavouritesRequest' QuandlCS.Requests.QuandlMetadataRequest' QuandlCS.Requests.QuandlMultisetRequest' QuandlCS.Requests.QuandlSearchRequest' QuandlCSTests.DownloadRequestsTests
+QuandlCS.Types,Frequencies,0,0,0,0,0,27,0,0,0,-1,0,2,,QuandlCS.Helpers.TypeConverter' QuandlCS.Requests.QuandlDownloadRequest
+QuandlCS.Types,SortOrders,0,0,0,0,0,11,0,0,0,-1,0,1,,QuandlCS.Helpers.TypeConverter
+QuandlCS.Types,Transformations,0,0,0,0,0,28,0,0,0,-1,0,2,,QuandlCS.Helpers.TypeConverter' QuandlCS.Requests.QuandlDownloadRequest

@@ -1,31 +1,33 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-RedisCache,3,20,4,0,12,239,27,0,0,0.2,7,0
-RedisCacheItem,0,0,9,0,0,42,0,0,0,-1,2,1
-RedisCacheLock,0,5,3,0,3,35,5,0,0,-1,2,0
-FieldMember,0,1,0,0,1,12,2,0,1,-1,1,2
-Member,3,7,10,0,7,88,7,2,0,1,1,3
-Model,1,13,0,1,13,102,19,0,0,0.31,7,3
-PropertyMember,0,1,0,0,1,12,2,0,1,-1,1,2
-RedisCommandLiteral,108,0,0,108,0,111,0,0,0,-1,0,1
-RedisDataFormatUtil,0,7,1,0,7,45,8,0,0,-1,0,4
-RedisValue,4,19,1,4,18,269,35,0,0,0,2,2
-ReflectionUtil,3,23,0,0,23,152,40,0,0,0.65,3,6
-RedisConnection,5,13,8,3,12,296,61,0,0,0.31,3,3
-RedisConnectionPool,4,11,0,2,2,134,17,0,0,0,1,1
-RedisKeyType,0,0,0,0,0,9,0,0,0,-1,0,1
-RedisBinarySerializeAttribute,0,1,0,0,1,7,1,0,0,-1,0,3
-IHashCommands,0,13,0,0,0,16,13,1,0,-1,0,0
-RedisClient,1,152,5,0,150,1071,228,0,1,0.26,7,4
-IListCommands,0,17,0,0,0,20,17,0,0,-1,0,0
-ISortedSetCommands,0,16,0,0,0,19,16,1,0,-1,0,0
-RedisHostInfo,0,1,4,0,1,23,1,0,0,-1,0,1
-RedisKeyAttribute,0,2,1,0,2,15,2,0,0,-1,0,3
-IConnectionCommands,0,5,0,0,0,8,5,1,0,-1,0,0
-IKeyCommands,0,48,0,0,0,51,48,1,0,-1,0,0
-IServerCommands,0,16,0,0,0,19,16,1,0,-1,0,0
-ISetCommands,0,15,0,0,0,18,15,1,0,-1,0,0
-RedisContext,1,3,2,1,3,41,3,0,0,0.67,1,0
-RedisException,0,1,0,0,1,6,1,0,0,-1,0,0
-RedisStoreAttribute,0,3,2,0,3,24,3,0,0,-1,0,1
-RedisSessionStateItem,0,0,10,0,0,48,0,0,0,-1,2,0
-RedisSessionStateStore,1,13,4,0,13,91,17,0,0,1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Destrier.Redis.Cache,RedisCache,3,20,4,0,12,258,27,0,0,0.2,10,1,Destrier.Redis.RedisClient' Destrier.Redis.RedisHostInfo' Destrier.Redis.Core.Model' Destrier.Redis.Cache.Constants' Destrier.Redis.Cache.RedisCacheItem' Destrier.Redis.Core.RedisValue' Destrier.Redis.Core.RedisDataFormatUtil' Destrier.Redis.Core.ReflectionUtil' Destrier.Redis.Core.Member' Destrier.Redis.Cache.CacheEnumerator,Destrier.Redis.Cache.CacheEnumerator
+Destrier.Redis.Cache,Constants,3,0,0,3,0,6,0,0,0,-1,0,1,,Destrier.Redis.Cache.RedisCache
+Destrier.Redis.Cache,CacheEnumerator,1,4,4,0,4,41,5,0,0,0.75,1,1,Destrier.Redis.Cache.RedisCache,Destrier.Redis.Cache.RedisCache
+Destrier.Redis.Cache,RedisCacheItem,0,0,9,0,0,15,0,0,0,-1,0,1,,Destrier.Redis.Cache.RedisCache
+Destrier.Redis.Cache,RedisCacheLock,0,5,3,0,3,26,5,0,0,-1,2,0,Destrier.Redis.Core.RedisConnection' Destrier.Redis.RedisClient,
+Destrier.Redis.Core,FieldMember,0,1,0,0,1,13,2,0,1,-1,1,2,Destrier.Redis.Core.ReflectionUtil,Destrier.Redis.Core.Model' Destrier.Redis.Core.ReflectionUtil
+Destrier.Redis.Core,Member,3,7,10,0,7,62,8,2,0,1,1,4,Destrier.Redis.Core.Model,Destrier.Redis.Cache.RedisCache' Destrier.Redis.Core.Model' Destrier.Redis.Core.ReflectionUtil' Destrier.Redis.RedisClient
+Destrier.Redis.Core,Model,1,13,0,1,13,106,21,0,0,0.31,7,3,Destrier.Redis.Core.ReflectionUtil' Destrier.Redis.Core.Member' Destrier.Redis.RedisKeyAttribute' Destrier.Redis.RedisBinarySerializeAttribute' Destrier.Redis.RedisStoreAttribute' Destrier.Redis.Core.PropertyMember' Destrier.Redis.Core.FieldMember,Destrier.Redis.Cache.RedisCache' Destrier.Redis.Core.Member' Destrier.Redis.RedisClient
+Destrier.Redis.Core,PropertyMember,0,1,0,0,1,12,2,0,1,-1,1,2,Destrier.Redis.Core.ReflectionUtil,Destrier.Redis.Core.Model' Destrier.Redis.Core.ReflectionUtil
+Destrier.Redis.Core,RedisCommandLiteral,108,0,0,108,0,113,0,0,0,-1,0,2,,Destrier.Redis.Core.RedisConnection' Destrier.Redis.RedisClient
+Destrier.Redis.Core,RedisDataFormatUtil,0,7,1,0,7,48,9,0,0,-1,0,4,,Destrier.Redis.Cache.RedisCache' Destrier.Redis.Core.RedisValue' Destrier.Redis.Core.RedisConnection' Destrier.Redis.RedisClient
+Destrier.Redis.Core,RedisValue,4,19,1,4,18,291,27,0,0,0,2,3,Destrier.Redis.Core.RedisDataFormatUtil' Destrier.Redis.Core.ReflectionUtil,Destrier.Redis.Cache.RedisCache' Destrier.Redis.Core.RedisConnection' Destrier.Redis.RedisClient
+Destrier.Redis.Core,ReflectionUtil,3,23,0,0,23,180,38,0,0,0.65,3,6,Destrier.Redis.Core.PropertyMember' Destrier.Redis.Core.FieldMember' Destrier.Redis.Core.Member,Destrier.Redis.Cache.RedisCache' Destrier.Redis.Core.FieldMember' Destrier.Redis.Core.Model' Destrier.Redis.Core.PropertyMember' Destrier.Redis.Core.RedisValue' Destrier.Redis.RedisClient
+Destrier.Redis.Core,RedisConnection,5,13,8,3,12,266,37,0,0,0.31,3,3,Destrier.Redis.Core.RedisCommandLiteral' Destrier.Redis.Core.RedisValue' Destrier.Redis.Core.RedisDataFormatUtil,Destrier.Redis.Cache.RedisCacheLock' Destrier.Redis.Core.RedisConnectionPool' Destrier.Redis.RedisClient
+Destrier.Redis.Core,RedisConnectionPool,4,11,0,2,2,146,17,0,0,0,1,1,Destrier.Redis.Core.RedisConnection,Destrier.Redis.RedisClient
+Destrier.Redis.Core,RedisKeyType,0,0,0,0,0,9,0,0,0,-1,0,1,,Destrier.Redis.RedisClient
+Destrier.Redis,RedisBinarySerializeAttribute,0,1,0,0,1,5,1,0,0,-1,0,1,,Destrier.Redis.Core.Model
+Destrier.Redis,IHashCommands,0,13,0,0,0,16,13,1,0,-1,0,0,,
+Destrier.Redis,RedisClient,1,152,5,0,150,1054,217,0,1,0.01,10,4,Destrier.Redis.Core.RedisConnection' Destrier.Redis.Core.RedisCommandLiteral' Destrier.Redis.Core.RedisValue' Destrier.Redis.Core.RedisKeyType' Destrier.Redis.Core.RedisDataFormatUtil' Destrier.Redis.Core.RedisConnectionPool' Destrier.Redis.RedisHostInfo' Destrier.Redis.Core.Model' Destrier.Redis.Core.ReflectionUtil' Destrier.Redis.Core.Member,Destrier.Redis.Cache.RedisCache' Destrier.Redis.Cache.RedisCacheLock' Destrier.Redis.RedisContext' Destrier.Redis.SessionState.RedisSessionStateStore
+Destrier.Redis,IListCommands,0,17,0,0,0,20,17,0,0,-1,0,0,,
+Destrier.Redis,ISortedSetCommands,0,16,0,0,0,19,16,1,0,-1,0,0,,
+Destrier.Redis,RedisHostInfo,0,1,4,0,1,11,1,0,0,-1,0,2,,Destrier.Redis.Cache.RedisCache' Destrier.Redis.RedisClient
+Destrier.Redis,RedisKeyAttribute,0,2,1,0,2,10,2,0,0,-1,0,1,,Destrier.Redis.Core.Model
+Destrier.Redis,IConnectionCommands,0,5,0,0,0,8,5,1,0,-1,0,0,,
+Destrier.Redis,IKeyCommands,0,48,0,0,0,51,48,1,0,-1,0,0,,
+Destrier.Redis,IServerCommands,0,16,0,0,0,19,16,1,0,-1,0,0,,
+Destrier.Redis,ISetCommands,0,15,0,0,0,18,15,1,0,-1,0,0,,
+Destrier.Redis,RedisContext,1,3,2,1,3,35,5,0,0,0.67,1,0,Destrier.Redis.RedisClient,
+Destrier.Redis,RedisException,0,1,0,0,1,4,1,0,0,-1,0,0,,
+Destrier.Redis,RedisStoreAttribute,0,3,2,0,3,13,3,0,0,-1,0,1,,Destrier.Redis.Core.Model
+Destrier.Redis.SessionState,RedisSessionStateItem,0,0,10,0,0,19,0,0,0,-1,0,1,,Destrier.Redis.SessionState.RedisSessionStateStore
+Destrier.Redis.SessionState,RedisSessionStateStore,1,13,4,0,13,72,13,0,0,1,2,0,Destrier.Redis.SessionState.RedisSessionStateItem' Destrier.Redis.RedisClient,

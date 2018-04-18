@@ -1,18 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-RequireJsConfigAsset,2,6,5,0,6,57,6,0,1,1,6,0
-AlwaysValidAssetCacheValidator,0,1,0,0,1,7,1,0,1,-1,0,1
-ModuleInitializer,2,9,2,0,4,88,15,0,1,0,10,0
-ModuleInitializerExtensions,0,2,0,0,2,17,3,0,0,-1,2,0
-AnonymousModule,0,2,0,0,2,58,2,0,1,-1,2,1
-BundleCollectionExtensions,0,2,1,0,1,25,3,0,0,-1,3,1
-ConfigurationScriptBuilder,3,4,0,0,2,29,4,0,1,0,3,1
-IAmdModule,0,0,4,0,0,32,0,1,0,-1,2,4
-IModuleInitializer,0,2,2,0,0,29,2,1,0,-1,2,4
-Module,0,4,4,0,0,53,8,3,1,-1,2,0
-ModuleDefinitionParser,0,2,2,0,1,31,4,0,0,-1,0,1
-NamedModule,0,1,0,0,1,9,2,0,2,-1,2,1
-PlainScript,2,5,3,0,2,75,7,0,2,0,4,2
-ContainerConfiguration,0,3,0,0,1,22,3,0,1,-1,5,0
-IConfigurationScriptBuilder,0,1,0,0,0,4,1,1,0,-1,1,2
-BundleCollectionExtensionsUtilities,1,2,0,0,2,12,2,0,1,0,2,0
-RequireJs,0,2,0,0,1,16,2,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Cassette.RequireJS,RequireJsConfigAsset,2,6,5,0,6,57,6,0,1,1,3,0,Cassette.RequireJS.IConfigurationScriptBuilder' Cassette.IBundleVisitor' Cassette.IAssetTransformer,
+Cassette.RequireJS,AlwaysValidAssetCacheValidator,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Cassette.RequireJS,ModuleInitializer,2,9,2,0,4,97,15,0,1,0,9,0,Cassette.RequireJS.IConfigurationScriptBuilder' Cassette.Utilities.PathUtilities' Cassette.Scripts.ScriptBundle' Cassette.IAsset' Cassette.RequireJS.ModuleDefinitionParser' Cassette.RequireJS.AnonymousModule' Cassette.RequireJS.NamedModule' Cassette.RequireJS.PlainScript' Cassette.Bundle,
+Cassette.RequireJS,ModuleInitializerExtensions,0,2,0,0,2,20,3,0,0,-1,3,0,Cassette.RequireJS.IAmdModule' Cassette.RequireJS.IModuleInitializer' Cassette.RequireJS.PlainScript,
+Cassette.RequireJS,AnonymousModule,0,2,0,0,2,64,2,0,1,-1,3,1,Cassette.IAsset' Cassette.Bundle' Cassette.RequireJS.ModulePathInserter,Cassette.RequireJS.ModuleInitializer
+Cassette.RequireJS,ModulePathInserter,1,5,0,0,2,42,7,0,0,0,0,1,,Cassette.RequireJS.AnonymousModule
+Cassette.RequireJS,BundleCollectionExtensions,0,2,1,0,1,25,3,0,0,-1,3,1,Cassette.RequireJS.IModuleInitializer' Cassette.Scripts.ScriptBundle' Cassette.BundleCollection,Cassette.RequireJS.BundleCollectionExtensionsUtilities
+Cassette.RequireJS,ConfigurationScriptBuilder,3,4,0,0,2,29,4,0,1,0,3,1,Cassette.IUrlGenerator' Cassette.IJsonSerializer' Cassette.RequireJS.IAmdModule,Cassette.RequireJS.ContainerConfiguration
+Cassette.RequireJS,IAmdModule,0,0,4,0,0,20,0,1,0,-1,0,2,,Cassette.RequireJS.ModuleInitializerExtensions' Cassette.RequireJS.ConfigurationScriptBuilder
+Cassette.RequireJS,IModuleInitializer,0,2,2,0,0,20,2,1,0,-1,1,4,Cassette.Scripts.ScriptBundle,Cassette.RequireJS.ModuleInitializerExtensions' Cassette.RequireJS.BundleCollectionExtensions' Cassette.RequireJS.PlainScript' RequireJsSample.CassetteConfiguration
+Cassette.RequireJS,Module,0,4,4,0,0,39,8,3,1,-1,2,0,Cassette.IAsset' Cassette.Bundle,
+Cassette.RequireJS,ModuleDefinitionParser,0,2,2,0,1,25,4,0,0,-1,0,1,,Cassette.RequireJS.ModuleInitializer
+Cassette.RequireJS,NamedModule,0,1,0,0,1,9,2,0,2,-1,2,1,Cassette.IAsset' Cassette.Bundle,Cassette.RequireJS.ModuleInitializer
+Cassette.RequireJS,PlainScript,2,5,3,0,2,102,7,0,2,0,5,2,Cassette.RequireJS.IModuleInitializer' Cassette.SimpleJsonSerializer' Cassette.IAsset' Cassette.Bundle' Cassette.RequireJS.TopLevelVariableFinder,Cassette.RequireJS.ModuleInitializer' Cassette.RequireJS.ModuleInitializerExtensions
+Cassette.RequireJS,TopLevelVariableFinder,2,3,0,0,2,25,4,0,0,0,0,1,,Cassette.RequireJS.PlainScript
+Cassette.RequireJS,ContainerConfiguration,0,3,0,0,1,29,3,0,1,-1,4,0,Cassette.TinyIoC.TinyIoCContainer' Cassette.TinyIoC.RegisterOptions' Cassette.CassetteSettings' Cassette.RequireJS.ConfigurationScriptBuilder,
+Cassette.RequireJS,IConfigurationScriptBuilder,0,1,0,0,0,4,1,1,0,-1,0,2,,Cassette.RequireJS.RequireJsConfigAsset' Cassette.RequireJS.ModuleInitializer
+Cassette.RequireJS,BundleCollectionExtensionsUtilities,1,2,0,0,2,12,2,0,1,0,1,0,Cassette.RequireJS.BundleCollectionExtensions,
+Cassette.Views,RequireJs,0,2,0,0,1,19,2,0,0,-1,2,0,Cassette.Views.Bundles' Cassette.SimpleJsonSerializer,

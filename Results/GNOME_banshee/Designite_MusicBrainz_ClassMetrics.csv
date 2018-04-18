@@ -1,38 +1,45 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Artist,6,14,4,0,7,143,30,0,1,0.36,5,3
-ArtistType,0,0,0,0,0,6,0,0,0,-1,0,1
-ReleaseArtistType,0,0,0,0,0,5,0,0,0,-1,0,1
-ArtistReleaseType,1,8,0,0,6,52,8,0,0,0.5,4,1
-Disc,2,2,2,0,0,31,2,1,0,1,0,1
-Event,6,1,6,0,0,54,2,0,0,0,2,1
-Label,3,10,1,0,5,75,14,0,1,0.4,3,1
-LabelType,0,0,0,0,0,9,0,0,0,-1,0,1
-LocalDisc,6,6,2,0,2,113,17,3,1,0.5,3,2
-LocalDiscException,0,2,0,0,2,9,2,0,0,-1,0,0
-MusicBrainzEntity,6,13,0,0,7,110,36,2,1,0.23,1,0
-MusicBrainzInvalidParameterException,0,1,0,0,1,6,1,0,0,-1,0,0
-MusicBrainzNotFoundException,0,1,0,0,1,6,1,0,0,-1,0,0
-MusicBrainzUnauthorizedException,0,1,0,0,1,6,1,0,0,-1,0,0
-MusicBrainzItem,2,8,0,0,3,61,19,2,1,0.25,1,0
-ItemQueryParameters,6,3,6,0,1,91,9,2,0,0.67,3,0
-MusicBrainzObject,14,35,5,0,7,388,84,2,0,0.26,9,1
-MusicBrainzService,2,1,3,0,0,34,2,0,0,0,1,3
-Query,8,8,3,0,5,113,12,0,0,0.62,1,6
-QueryableAttribute,1,1,1,0,1,14,1,0,0,0,0,3
-QueryableMemberAttribute,2,1,2,0,1,21,1,0,0,0,0,0
-RelationBase,6,1,6,0,0,48,1,2,0,0,1,0
-Relation,0,1,0,0,0,6,1,0,1,-1,1,1
-UrlRelation,0,1,0,0,0,6,1,0,1,-1,1,2
-RelationDirection,0,0,0,0,0,5,0,0,0,-1,0,4
-Release,11,22,3,0,16,243,70,0,2,0.36,10,5
-ReleaseType,0,0,0,0,0,15,0,0,0,-1,0,3
-ReleaseStatus,0,0,0,0,0,8,0,0,0,-1,0,3
-ReleaseFormat,0,0,0,0,0,17,0,0,0,-1,0,1
-ReleaseQueryParameters,5,1,5,0,0,71,6,0,1,0,1,2
-Track,5,18,2,0,12,185,59,0,2,0.33,5,2
-TrackQueryParameters,5,1,5,0,0,71,6,0,1,0,1,1
-Utils,0,5,0,0,5,44,14,0,0,-1,0,9
-XmlRequestEventArgs,2,1,0,2,0,10,1,0,0,0,0,1
-DiscFreeBsd,5,7,0,0,0,103,12,0,2,0.71,0,1
-DiscLinux,9,12,0,0,0,111,19,0,2,0.58,0,1
-DiscWin32,3,4,0,0,0,44,8,0,2,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MusicBrainz,Artist,6,14,4,0,7,133,19,0,1,0.36,3,3,MusicBrainz.ArtistReleaseType' MusicBrainz.MusicBrainzEntity' MusicBrainz.ArtistType,Banshee.OpticalDisc.AudioCd.AudioCdDiscModel' MusicBrainz.MusicBrainzItem' MusicBrainz.Track
+MusicBrainz,ArtistType,0,0,0,0,0,6,0,0,0,-1,0,1,,MusicBrainz.Artist
+MusicBrainz,ReleaseArtistType,0,0,0,0,0,5,0,0,0,-1,0,1,,MusicBrainz.ArtistReleaseType
+MusicBrainz,ArtistReleaseType,1,8,0,0,6,52,8,0,0,0.5,4,1,MusicBrainz.ReleaseType' MusicBrainz.ReleaseArtistType' MusicBrainz.ReleaseStatus' MusicBrainz.Utils,MusicBrainz.Artist
+MusicBrainz,Disc,2,2,2,0,0,23,2,1,0,1,0,2,,Banshee.OpticalDisc.AudioCd.AudioCdDiscModel' MusicBrainz.Release
+MusicBrainz,Event,6,1,6,0,0,41,2,0,0,0,3,1,MusicBrainz.Label' MusicBrainz.ReleaseFormat' MusicBrainz.Utils,Banshee.OpticalDisc.AudioCd.AudioCdDiscModel
+MusicBrainz,Label,3,10,1,0,5,69,14,0,1,0.4,3,1,MusicBrainz.MusicBrainzEntity' MusicBrainz.Utils' MusicBrainz.LabelType,MusicBrainz.Event
+MusicBrainz,LabelType,0,0,0,0,0,9,0,0,0,-1,0,1,,MusicBrainz.Label
+MusicBrainz,LocalDisc,6,6,2,0,2,111,13,3,1,0.5,3,2,MusicBrainz.DiscLinux' MusicBrainz.DiscFreeBsd' MusicBrainz.DiscWin32,Banshee.OpticalDisc.AudioCd.AudioCdDiscModel' MusicBrainz.Release
+MusicBrainz,LocalDiscException,0,2,0,0,2,9,2,0,0,-1,0,0,,
+MusicBrainz,MusicBrainzEntity,6,13,0,0,7,107,16,2,1,0.23,2,2,MusicBrainz.MusicBrainzObject' MusicBrainz.Utils,MusicBrainz.Artist' MusicBrainz.Label
+MusicBrainz,MusicBrainzInvalidParameterException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MusicBrainz,MusicBrainzNotFoundException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MusicBrainz,MusicBrainzUnauthorizedException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MusicBrainz,MusicBrainzItem,2,8,0,0,3,58,12,2,1,0.25,2,2,MusicBrainz.Artist' MusicBrainz.MusicBrainzObject,MusicBrainz.Release' MusicBrainz.Track
+MusicBrainz,ItemQueryParameters,6,3,6,0,1,67,9,2,0,0.67,1,0,MusicBrainz.Utils,
+MusicBrainz,MusicBrainzObject,14,35,5,0,7,395,58,2,0,0.14,3,3,MusicBrainz.RelationDirection' MusicBrainz.MusicBrainzService' MusicBrainz.Utils,MusicBrainz.MusicBrainzEntity' MusicBrainz.MusicBrainzItem' MusicBrainz.Query<T>
+MusicBrainz,MusicBrainzService,2,1,3,0,0,23,2,0,0,0,0,3,,Banshee.Metadata.MusicBrainz.MusicBrainzQueryJob' Banshee.OpticalDisc.AudioCd.AudioCdDiscModel' MusicBrainz.MusicBrainzObject
+MusicBrainz,Query<T>,8,8,3,0,5,107,11,0,0,0.62,1,0,MusicBrainz.MusicBrainzObject,
+MusicBrainz,QueryableAttribute,1,1,1,0,1,12,1,0,0,0,0,0,,
+MusicBrainz,QueryableMemberAttribute,2,1,2,0,1,17,1,0,0,0,0,0,,
+MusicBrainz,RelationBase<T>,6,1,6,0,0,37,1,0,0,0,1,0,MusicBrainz.RelationDirection,
+MusicBrainz,Relation<T>,0,1,0,0,0,12,1,0,0,-1,1,0,MusicBrainz.RelationDirection,
+MusicBrainz,UrlRelation,0,1,0,0,0,12,1,0,0,-1,1,1,MusicBrainz.RelationDirection,Banshee.Metadata.MusicBrainz.MusicBrainzQueryJob
+MusicBrainz,RelationDirection,0,0,0,0,0,5,0,0,0,-1,0,4,,MusicBrainz.MusicBrainzObject' MusicBrainz.RelationBase<T>' MusicBrainz.Relation<T>' MusicBrainz.UrlRelation
+MusicBrainz,Release,11,22,3,0,16,216,39,0,2,0.27,7,3,MusicBrainz.MusicBrainzItem' MusicBrainz.Utils' MusicBrainz.ReleaseType' MusicBrainz.ReleaseStatus' MusicBrainz.ReleaseQueryParameters' MusicBrainz.Disc' MusicBrainz.LocalDisc,Banshee.Metadata.MusicBrainz.MusicBrainzQueryJob' Banshee.OpticalDisc.AudioCd.AudioCdDiscModel' MusicBrainz.Track
+MusicBrainz,ReleaseType,0,0,0,0,0,15,0,0,0,-1,0,2,,MusicBrainz.ArtistReleaseType' MusicBrainz.Release
+MusicBrainz,ReleaseStatus,0,0,0,0,0,8,0,0,0,-1,0,2,,MusicBrainz.ArtistReleaseType' MusicBrainz.Release
+MusicBrainz,ReleaseFormat,0,0,0,0,0,17,0,0,0,-1,0,1,,MusicBrainz.Event
+MusicBrainz,ReleaseQueryParameters,5,1,5,0,0,51,6,0,1,0,1,2,MusicBrainz.Utils,Banshee.Metadata.MusicBrainz.MusicBrainzQueryJob' MusicBrainz.Release
+MusicBrainz,Track,5,18,2,0,12,163,37,0,2,0.33,4,1,MusicBrainz.Artist' MusicBrainz.MusicBrainzItem' MusicBrainz.Release' MusicBrainz.TrackQueryParameters,Banshee.OpticalDisc.AudioCd.AudioCdDiscModel
+MusicBrainz,TrackQueryParameters,5,1,5,0,0,51,6,0,1,0,1,1,MusicBrainz.Utils,MusicBrainz.Track
+MusicBrainz,Utils,0,5,0,0,5,43,12,0,0,-1,0,9,,MusicBrainz.ArtistReleaseType' MusicBrainz.Event' MusicBrainz.Label' MusicBrainz.MusicBrainzEntity' MusicBrainz.ItemQueryParameters' MusicBrainz.MusicBrainzObject' MusicBrainz.Release' MusicBrainz.ReleaseQueryParameters' MusicBrainz.TrackQueryParameters
+MusicBrainz,XmlRequestEventArgs,2,1,0,2,0,10,1,0,0,0,0,0,,
+MusicBrainz,DiscFreeBsd,5,7,0,0,0,101,12,0,2,0,4,1,MusicBrainz.ioc_toc_header' MusicBrainz.ioc_read_toc_entry' MusicBrainz.msf_lba' MusicBrainz.cd_toc_entry,MusicBrainz.LocalDisc
+MusicBrainz,msf_lba,1,0,0,1,0,4,0,0,0,-1,0,1,,MusicBrainz.DiscFreeBsd
+MusicBrainz,cd_toc_entry,2,0,0,2,0,8,0,0,0,-1,0,1,,MusicBrainz.DiscFreeBsd
+MusicBrainz,ioc_toc_header,3,0,0,3,0,6,0,0,0,-1,0,1,,MusicBrainz.DiscFreeBsd
+MusicBrainz,ioc_read_toc_entry,4,0,0,4,0,7,0,0,0,-1,0,1,,MusicBrainz.DiscFreeBsd
+MusicBrainz,DiscLinux,9,12,0,0,0,105,20,0,2,0,3,1,MusicBrainz.cdrom_tochdr' MusicBrainz.cdrom_multisession' MusicBrainz.cdrom_tocentry,MusicBrainz.LocalDisc
+MusicBrainz,cdrom_tochdr,2,0,0,2,0,5,0,0,0,-1,0,1,,MusicBrainz.DiscLinux
+MusicBrainz,cdrom_tocentry,5,0,0,5,0,8,0,0,0,-1,0,1,,MusicBrainz.DiscLinux
+MusicBrainz,cdrom_multisession,3,0,0,3,0,6,0,0,0,-1,0,1,,MusicBrainz.DiscLinux
+MusicBrainz,DiscWin32,3,4,0,0,0,72,6,0,2,0,0,1,,MusicBrainz.LocalDisc

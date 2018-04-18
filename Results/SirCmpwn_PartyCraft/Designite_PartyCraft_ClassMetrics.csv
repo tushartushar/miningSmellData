@@ -1,25 +1,27 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Command,1,7,4,0,5,90,15,17,0,0.29,1,2
-ConsoleClient,1,4,0,0,3,55,7,0,0,0.5,0,1
-DefaultSettings,1,4,0,0,3,87,13,0,0,0,0,1
-ScriptPluginBase,0,0,1,0,0,7,0,0,0,-1,1,1
-Program,1,4,1,1,1,86,17,0,0,0,6,0
-Server,0,11,3,0,7,160,29,0,1,-1,2,20
-VanillaSettingsProvider,3,9,0,1,7,160,32,0,1,0,1,0
-DeopCommand,0,2,2,0,1,34,4,0,1,-1,1,0
-DifficultyCommand,0,2,2,0,1,42,6,0,1,-1,1,0
-GameModeCommand,0,3,2,0,2,68,12,0,1,-1,1,0
-GenScriptCommand,0,2,2,0,1,27,3,0,1,-1,1,0
-HelpCommand,1,1,2,1,1,47,11,0,1,0,1,0
-KillCommand,0,1,2,0,1,18,1,0,1,-1,1,0
-MeCommand,0,1,2,0,1,17,1,0,1,-1,1,0
-OpCommand,0,2,2,0,1,34,4,0,1,-1,1,0
-ReplCommand,0,4,4,0,1,147,12,0,1,-1,1,0
-SayCommand,0,2,2,0,1,28,3,0,1,-1,1,0
-SeedCommand,0,1,2,0,1,18,1,0,1,-1,1,0
-SpawnPointCommand,0,2,2,0,1,48,8,0,1,-1,1,0
-SpeedCommand,0,2,2,0,1,52,8,0,1,-1,1,0
-StopCommand,0,2,2,0,1,24,2,0,1,-1,1,0
-TellCommand,0,1,2,0,1,27,3,0,1,-1,1,0
-TimeCommand,0,4,2,0,1,103,23,0,1,-1,1,0
-TpCommand,0,2,2,0,1,31,4,0,1,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PartyCraft,Command,1,7,4,0,5,92,19,17,0,0.29,3,3,PartyCraft.API.ISettingsProvider' PartyCraft.Server' PartyCraft.ConsoleClient,PartyCraft.Program' PartyCraft.Server' PartyCraft.Commands.HelpCommand
+PartyCraft,ConsoleClient,1,4,0,0,3,52,7,0,0,0.5,0,1,,PartyCraft.Command
+PartyCraft,DefaultSettings,1,4,0,0,3,91,16,0,0,0,0,1,,PartyCraft.VanillaSettingsProvider
+PartyCraft,ScriptPluginBase,0,0,1,0,0,4,0,0,0,-1,0,1,,PartyCraft.Program
+PartyCraft,Program,1,4,1,1,1,90,14,0,0,0,5,0,PartyCraft.API.ISettingsProvider' PartyCraft.Server' PartyCraft.Command' PartyCraft.API.Plugin' PartyCraft.ScriptPluginBase,
+PartyCraft,Server,0,11,3,0,7,171,29,0,1,-1,2,20,PartyCraft.API.ISettingsProvider' PartyCraft.Command,PartyCraft.Command' PartyCraft.Program' PartyCraft.Commands.DeopCommand' PartyCraft.Commands.DifficultyCommand' PartyCraft.Commands.GameModeCommand' PartyCraft.Commands.GenScriptCommand' PartyCraft.Commands.HelpCommand' PartyCraft.Commands.KillCommand' PartyCraft.Commands.MeCommand' PartyCraft.Commands.OpCommand' PartyCraft.Commands.ReplCommand' PartyCraft.Commands.ReplContext' PartyCraft.Commands.SayCommand' PartyCraft.Commands.SeedCommand' PartyCraft.Commands.SpawnPointCommand' PartyCraft.Commands.SpeedCommand' PartyCraft.Commands.StopCommand' PartyCraft.Commands.TellCommand' PartyCraft.Commands.TimeCommand' PartyCraft.Commands.TpCommand
+PartyCraft,VanillaSettingsProvider,3,9,0,1,7,168,37,0,1,0,1,1,PartyCraft.DefaultSettings,PartyCraft.Test.VanillaSettingsTest
+PartyCraft.Commands,DeopCommand,0,2,2,0,1,37,4,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,DifficultyCommand,0,2,2,0,1,51,5,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,GameModeCommand,0,3,2,0,2,78,11,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,GenScriptCommand,0,2,2,0,1,29,3,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,HelpCommand,1,1,2,1,1,56,9,0,1,0,2,0,PartyCraft.Command' PartyCraft.Server,
+PartyCraft.Commands,KillCommand,0,1,2,0,1,20,1,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,MeCommand,0,1,2,0,1,21,1,0,1,-1,2,0,PartyCraft.Server' PartyCraft.API.ISettingsProvider,
+PartyCraft.Commands,OpCommand,0,2,2,0,1,37,4,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,ReplCommand,0,4,4,0,1,135,12,0,1,-1,3,0,PartyCraft.Commands.ReplContext' PartyCraft.Server' PartyCraft.API.IServer,
+PartyCraft.Commands,MinecraftReportPrinter,0,2,1,0,2,12,2,0,0,-1,0,0,,
+PartyCraft.Commands,ReplContext,0,2,4,0,2,18,2,0,0,-1,2,1,PartyCraft.API.ISettingsProvider' PartyCraft.Server,PartyCraft.Commands.ReplCommand
+PartyCraft.Commands,SayCommand,0,2,2,0,1,29,3,0,1,-1,2,0,PartyCraft.API.ISettingsProvider' PartyCraft.Server,
+PartyCraft.Commands,SeedCommand,0,1,2,0,1,19,1,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,SpawnPointCommand,0,2,2,0,1,60,4,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,SpeedCommand,0,2,2,0,1,63,7,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,StopCommand,0,2,2,0,1,23,2,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,TellCommand,0,1,2,0,1,32,3,0,1,-1,2,0,PartyCraft.Server' PartyCraft.API.ISettingsProvider,
+PartyCraft.Commands,TimeCommand,0,4,2,0,1,117,14,0,1,-1,1,0,PartyCraft.Server,
+PartyCraft.Commands,TpCommand,0,2,2,0,1,35,4,0,1,-1,1,0,PartyCraft.Server,

@@ -1,14 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ExtractCommand,0,1,0,0,1,25,7,0,1,-1,1,1
-LessMsiCommand,0,1,0,0,1,4,1,5,0,-1,0,1
-ListTableCommand,0,1,0,0,1,57,12,0,1,-1,2,1
-OpenGuiCommand,0,2,1,0,2,27,5,0,1,-1,0,1
-Program,0,3,0,0,2,86,9,0,0,-1,7,1
-ShowHelpCommand,0,2,0,0,2,28,3,0,1,-1,0,1
-ShowVersionCommand,0,1,0,0,1,25,8,0,1,-1,1,1
-OptionValueCollection,2,22,5,0,12,152,25,0,0,0,2,2
-OptionContext,5,1,5,0,1,47,1,0,0,0,3,3
-OptionValueType,0,0,0,0,0,6,0,0,0,-1,0,3
-Option,7,10,6,0,4,159,42,0,0,0.4,2,2
-OptionException,1,5,1,0,4,31,5,0,0,0.4,0,0
-OptionSet,3,34,1,0,13,533,123,0,0,0.41,4,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+LessMsi.Cli,ExtractCommand,0,1,0,0,1,28,6,0,1,-1,1,0,LessMsi.Cli.Program,
+LessMsi.Cli,LessMsiCommand,0,1,0,0,1,4,1,5,0,-1,0,1,,LessMsi.Cli.Program
+LessMsi.Cli,ListTableCommand,0,1,0,0,1,57,3,0,1,-1,3,0,NDesk.Options.OptionSet' LessMsi.Msi.ColumnInfo' LessMsi.Msi.ViewWrapper,
+LessMsi.Cli,OpenGuiCommand,0,2,1,0,2,30,5,0,1,-1,0,1,,LessMsi.Cli.Program
+LessMsi.Cli,Program,0,3,0,0,2,80,6,0,0,-1,6,2,LessMsi.Cli.LessMsiCommand' LessMsi.Cli.ConsoleReturnCode' LessMsi.Cli.OpenGuiCommand' LessMsi.Cli.ShowHelpCommand' NDesk.Options.OptionException' LessMsi.Msi.Wixtracts,LessMsi.Cli.ExtractCommand' LessMsi.Tests.TestBase
+LessMsi.Cli,ConsoleReturnCode,0,0,0,0,0,7,0,0,0,-1,0,1,,LessMsi.Cli.Program
+LessMsi.Cli,ShowHelpCommand,0,2,0,0,2,28,3,0,1,-1,0,1,,LessMsi.Cli.Program
+LessMsi.Cli,ShowVersionCommand,0,1,0,0,1,29,2,0,1,-1,1,0,LessMsi.Msi.ViewWrapper,
+NDesk.Options,OptionValueCollection,2,22,5,0,12,76,25,0,0,0,4,3,NDesk.Options.OptionContext' NDesk.Options.Option' NDesk.Options.OptionValueType' NDesk.Options.OptionSet,NDesk.Options.OptionContext' NDesk.Options.Option' NDesk.Options.OptionSet
+NDesk.Options,OptionContext,5,1,5,0,1,30,1,0,0,0,3,6,NDesk.Options.Option' NDesk.Options.OptionSet' NDesk.Options.OptionValueCollection,NDesk.Options.OptionValueCollection' NDesk.Options.Option' NDesk.Options.OptionSet' NDesk.Options.ActionOption' NDesk.Options.ActionOption<T>' NDesk.Options.ActionOption<TKey;TValue>
+NDesk.Options,OptionValueType,0,0,0,0,0,5,0,0,0,-1,0,3,,NDesk.Options.OptionValueCollection' NDesk.Options.Option' NDesk.Options.OptionSet
+NDesk.Options,Option,7,10,6,0,4,153,29,3,0,0.4,4,3,NDesk.Options.OptionValueType' NDesk.Options.OptionSet' NDesk.Options.OptionContext' NDesk.Options.OptionValueCollection,NDesk.Options.OptionValueCollection' NDesk.Options.OptionContext' NDesk.Options.OptionSet
+NDesk.Options,OptionException,1,5,1,0,4,31,5,0,0,0.4,0,1,,LessMsi.Cli.Program
+NDesk.Options,OptionSet,3,34,1,0,13,554,86,0,0,0.21,4,4,NDesk.Options.Option' NDesk.Options.OptionContext' NDesk.Options.OptionValueCollection' NDesk.Options.OptionValueType,LessMsi.Cli.ListTableCommand' NDesk.Options.OptionValueCollection' NDesk.Options.OptionContext' NDesk.Options.Option
+NDesk.Options,ActionOption,1,2,0,0,1,14,3,0,1,0,1,2,NDesk.Options.OptionContext,NDesk.Options.ActionOption<T>' NDesk.Options.ActionOption<TKey;TValue>
+NDesk.Options,ActionOption<T>,1,2,0,0,1,14,3,0,1,0,2,0,NDesk.Options.ActionOption' NDesk.Options.OptionContext,
+NDesk.Options,ActionOption<TKey;TValue>,1,2,0,0,1,16,3,0,1,0,2,0,NDesk.Options.ActionOption' NDesk.Options.OptionContext,

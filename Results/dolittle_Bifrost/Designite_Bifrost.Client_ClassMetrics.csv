@@ -1,0 +1,68 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bifrost,AssemblySpecifier,0,1,0,0,1,15,1,0,0,-1,0,0,,
+Bifrost.Commands,CommandForProxies,3,5,0,0,3,74,6,0,1,0,6,2,Bifrost.Commands.ICommandForProxyInterceptor' Bifrost.Commands.ICommandFor' Bifrost.Commands.IHoldCommandInstance' Bifrost.Commands.CommandProxyInstance' Bifrost.Commands.ICommandProcess' Bifrost.Commands.ICanProcessCommandProcess,Bifrost.Client.Specs.Commands.for_CommandForProxies.when_getting_for_command_instance' Bifrost.Client.Specs.Commands.for_CommandForProxies.when_getting_for_command_type
+Bifrost.Commands,ProxyTypePerCommand<T>,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Bifrost.Commands,CommandForProxyInterceptor,0,3,0,0,2,69,11,0,1,-1,3,1,Bifrost.Reflection.ICanHandleInvocationsFor' Bifrost.Commands.IHoldCommandInstance' Bifrost.Commands.ICanProcessCommandProcess,Bifrost.Client.Specs.Commands.for_CommandForProxyInterceptor.given.a_known_method
+Bifrost.Commands,CommandInvocationHandler,1,3,2,0,3,35,3,0,1,0.67,1,1,Bifrost.Commands.ICanProcessCommandProcess,Bifrost.Client.Specs.Commands.for_CommandInvocationHandler.when_executing
+Bifrost.Commands,CommandProxyInstance,3,6,1,0,4,54,8,0,1,0,0,2,,Bifrost.Commands.CommandForProxies' Bifrost.Client.Specs.Commands.for_CommandProxyInstance.given.callbacks_for_all_conditions
+Bifrost.Commands,CommandNotifyDataErrorInfoHandler,0,1,1,0,1,16,1,0,0,-1,0,0,,
+Bifrost.Commands,CommandProcessHandler,0,3,1,0,3,25,3,0,1,-1,1,0,Bifrost.Commands.ICanProcessCommandProcess,
+Bifrost.Commands,ICanProcessCommandProcess,0,4,0,0,0,27,4,1,0,-1,0,4,,Bifrost.Commands.CommandForProxies' Bifrost.Commands.CommandForProxyInterceptor' Bifrost.Commands.CommandInvocationHandler' Bifrost.Commands.CommandProcessHandler
+Bifrost.Commands,ICommandForProxyInterceptor,0,0,0,0,0,3,0,1,0,-1,0,1,,Bifrost.Commands.CommandForProxies
+Bifrost.Commands,ICommandProcess,0,3,0,0,0,24,3,2,0,-1,0,1,,Bifrost.Commands.CommandForProxies
+Bifrost.Commands,ICommandForProxies,0,2,0,0,0,17,2,1,0,-1,0,0,,
+Bifrost.Commands,IHoldCommandInstance,0,0,1,0,0,7,0,2,0,-1,0,2,,Bifrost.Commands.CommandForProxies' Bifrost.Commands.CommandForProxyInterceptor
+Bifrost.Commands,ICommandFor,0,0,1,0,0,8,0,1,1,-1,0,3,,Bifrost.Commands.CommandForProxies' Bifrost.Configuration.DesktopConfiguration' Bifrost.QuickStart.WPF.MainWindowViewModel
+Bifrost.Interaction,CommandForMethod,6,14,0,0,4,138,27,0,0,0,0,1,,Bifrost.Interaction.FromMethodExtension
+Bifrost.Interaction,Input,1,2,0,1,2,46,2,0,0,0,0,0,,
+Bifrost.Interaction,MissingMethodForCommand,0,1,0,0,1,5,1,0,0,-1,0,0,,
+Bifrost.Interaction,MissingMethodOrPropertyForCanExecute,0,1,0,0,1,5,1,0,0,-1,0,0,,
+Bifrost.Interaction,MoreThanOneParameter,0,1,0,0,1,5,1,0,0,-1,0,0,,
+Bifrost.Interaction,ReturnValueShouldBeBoolean,0,1,0,0,1,5,1,0,0,-1,0,0,,
+Bifrost.Interaction,FromMethodExtension,1,3,2,0,2,72,7,0,0,0,1,0,Bifrost.Interaction.CommandForMethod,
+Bifrost.Interaction,IOperations,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Bifrost.Interaction,Operation,0,4,0,0,4,42,4,0,0,-1,2,0,Bifrost.Interaction.OperationContext' Bifrost.Interaction.OperationState,
+Bifrost.Interaction,OperationContext,0,0,0,0,0,3,0,0,0,-1,0,1,,Bifrost.Interaction.Operation
+Bifrost.Interaction,Operations,0,0,0,0,0,3,0,0,1,-1,0,0,,
+Bifrost.Interaction,OperationState,0,0,0,0,0,3,0,0,0,-1,0,1,,Bifrost.Interaction.Operation
+Bifrost.Interaction,DelegateCommand<T>,0,4,4,0,4,52,6,0,1,-1,0,0,,
+Bifrost.Interaction,DelegateCommand,0,12,4,0,10,98,15,1,0,-1,0,0,,
+Bifrost.Reflection,INeedProxyInstance,0,0,1,0,0,7,0,3,0,-1,0,1,,Bifrost.Reflection.InvocationHandler<TInterface;TImplementation>
+Bifrost.Reflection,INeedTargetInstance,0,0,0,0,0,3,0,3,0,-1,0,1,,Bifrost.Reflection.InvocationHandler<TInterface;TImplementation>
+Bifrost.Reflection,ICanHandleInvocations,0,2,0,0,0,16,2,1,0,-1,0,2,,Bifrost.Reflection.Interceptor' Bifrost.Client.Specs.Reflection.for_Interceptor.InterceptorWithHandler
+Bifrost.Reflection,ICanHandleInvocationsFor,0,0,0,0,0,4,0,1,1,-1,0,2,,Bifrost.Commands.CommandForProxyInterceptor' Bifrost.Configuration.DesktopConfiguration
+Bifrost.Reflection,Interceptor,1,3,0,0,2,29,4,3,0,0,1,2,Bifrost.Reflection.ICanHandleInvocations,Bifrost.Client.Specs.Reflection.for_Interceptor.InterceptorWithHandler' Bifrost.Client.Specs.Reflection.for_Interceptor.InterceptorWithoutHandlers
+Bifrost.Reflection,InvocationHandler<TInterface;TImplementation>,2,4,0,0,3,42,7,0,2,0.75,2,0,Bifrost.Reflection.INeedProxyInstance' Bifrost.Reflection.INeedTargetInstance,
+Bifrost.Reflection,Strings,2,1,3,0,0,50,1,0,0,0,0,0,,
+Bifrost.Reflection,TargetInstanceTypeMismatch,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Bifrost.Configuration,DesktopConfiguration,0,1,0,0,1,20,1,0,0,-1,3,1,Bifrost.Execution.DispatcherManager' Bifrost.Commands.ICommandFor' Bifrost.Reflection.ICanHandleInvocationsFor,Bifrost.Configuration.DesktopConfigurationExtensions
+Bifrost.Configuration,DesktopConfigurationExtensions,0,1,0,0,1,16,2,0,0,-1,1,0,Bifrost.Configuration.DesktopConfiguration,
+Bifrost.Dynamic,BindableExpandoObject,1,16,4,0,14,128,17,0,0,0.19,1,2,Bifrost.Dynamic.BindableExpandoType,Bifrost.Dynamic.CustomPropertyInfo' Bifrost.Dynamic.BindableExpandoType
+Bifrost.Dynamic,CustomPropertyInfo,3,11,8,3,11,108,11,0,0,0.55,1,1,Bifrost.Dynamic.BindableExpandoObject,Bifrost.Dynamic.BindableExpandoType
+Bifrost.Dynamic,BindableExpandoType,2,28,9,0,18,198,29,0,0,0.36,2,1,Bifrost.Dynamic.BindableExpandoObject' Bifrost.Dynamic.CustomPropertyInfo,Bifrost.Dynamic.BindableExpandoObject
+Bifrost.Execution,Promise,6,6,0,0,4,71,10,0,0,0.33,0,7,,Bifrost.Tasks.Tasks' Bifrost.Client.Specs.Execution.for_Promise.when_adding_failed_callback_after_it_has_failed' Bifrost.Client.Specs.Execution.for_Promise.when_adding_continuation_callback_after_it_has_been_signaled' Bifrost.Client.Specs.Execution.for_Promise.when_failing_with_ballback' Bifrost.Client.Specs.Execution.for_Promise.when_signalling_with_continuation_ballback' Bifrost.Client.Specs.Tasks.for_Tasks.when_executing_task_that_finishes' Bifrost.Client.Specs.Tasks.for_Tasks.when_executing_task
+Bifrost.Execution,Dispatcher,1,4,0,0,4,30,4,0,1,0,0,0,,
+Bifrost.Execution,DispatcherManager,1,0,2,0,0,32,0,0,0,-1,1,3,Bifrost.Execution.IDispatcher,Bifrost.Configuration.DesktopConfiguration' Bifrost.Values.NotificationExtensions' Bifrost.Values.NotifyingObjectWeaver
+Bifrost.Execution,IDispatcher,0,3,0,0,0,21,3,1,0,-1,0,4,,Bifrost.Execution.DispatcherManager' Bifrost.Values.NotificationExtensions' Bifrost.Values.NotifyingObjectWeaver' Bifrost.Tasks.Tasks
+Bifrost.Values,NotifyChangesAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Bifrost.Values.NotifyChangesBindingConvention
+Bifrost.Values,NotifyChangesBindingConvention,1,3,0,0,3,30,4,0,0,0.67,2,0,Bifrost.Values.NotifyingObjectWeaver' Bifrost.Values.NotifyChangesAttribute,
+Bifrost.Values,DependencyProperty<T1;T>,0,5,2,0,4,46,5,0,0,-1,1,0,Bifrost.Values.DependencyPropertyHelper,
+Bifrost.Values,DependencyPropertyExtensions,1,5,0,0,5,72,10,0,0,0.8,2,0,Bifrost.Values.IDependencyPropertySubscription' Bifrost.Values.DependencyPropertyHelper,
+Bifrost.Values,DependencyPropertyHelper,2,9,0,2,7,137,13,0,0,0.33,0,2,,Bifrost.Values.DependencyProperty<T1;T>' Bifrost.Values.DependencyPropertyExtensions
+Bifrost.Values,DependencyPropertySubscription<T>,1,1,3,0,1,29,1,0,1,0,0,0,,
+Bifrost.Values,IDependencyPropertySubscription,0,0,1,0,0,4,0,1,0,-1,0,1,,Bifrost.Values.DependencyPropertyExtensions
+Bifrost.Values,IgnoreChangesAttribute,0,0,0,0,0,5,0,0,0,-1,0,1,,Bifrost.Values.NotifyingObjectWeaver
+Bifrost.Values,NotificationExtensions,0,4,0,0,4,79,6,0,0,-1,2,0,Bifrost.Execution.DispatcherManager' Bifrost.Execution.IDispatcher,
+Bifrost.Values,NotifyChangesForAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Bifrost.Values.NotifyingObjectWeaver
+Bifrost.Values,NotifyingObjectWeaver,13,24,0,0,3,457,38,0,0,0,4,1,Bifrost.Execution.IDispatcher' Bifrost.Execution.DispatcherManager' Bifrost.Values.IgnoreChangesAttribute' Bifrost.Values.NotifyChangesForAttribute,Bifrost.Values.NotifyChangesBindingConvention
+Bifrost.ViewModels,ViewModelExtension,1,2,0,0,2,31,4,0,0,0,0,0,,
+Bifrost.ViewModels,ViewModelService,3,3,0,3,2,68,4,0,0,1,0,0,,
+Bifrost.VisualTree,VisualTreeExtensions,0,4,0,0,3,102,17,0,0,-1,0,0,,
+Bifrost.Messaging,IMessenger,0,2,0,0,0,16,2,1,0,-1,0,0,,
+Bifrost.Messaging,Messenger,1,2,0,0,2,44,6,0,1,0,0,2,,Bifrost.Client.Specs.Messaging.for_Messenger.when_publishing_message_with_two_subscribers_for_different_messages' Bifrost.Client.Specs.Messaging.for_Messenger.when_publishing_message_with_two_subscribers
+Bifrost.Tasks,ITask,0,1,0,0,0,9,1,0,0,-1,1,3,Bifrost.Tasks.TaskContext,Bifrost.Tasks.ITasks' Bifrost.Tasks.TaskContext' Bifrost.Tasks.Tasks
+Bifrost.Tasks,ITasks,0,1,3,0,0,24,1,1,0,-1,1,0,Bifrost.Tasks.ITask,
+Bifrost.Tasks,TaskStatus,0,0,0,0,0,8,0,0,0,-1,0,1,,Bifrost.Tasks.TaskContext
+Bifrost.Tasks,TaskContext,1,8,10,0,8,203,12,0,0,1,2,5,Bifrost.Tasks.ITask' Bifrost.Tasks.TaskStatus,Bifrost.Tasks.ITask' Bifrost.Tasks.Tasks' Bifrost.Client.Specs.Tasks.for_TaskContext.given.a_task_context_with_a_task_and_associated_data' Bifrost.Client.Specs.Tasks.for_Tasks.when_executing_task_that_finishes' Bifrost.Client.Specs.Tasks.for_Tasks.when_executing_task
+Bifrost.Tasks,TaskResult,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Bifrost.Tasks,Tasks,4,3,3,0,2,66,3,0,1,0,4,2,Bifrost.Execution.IDispatcher' Bifrost.Tasks.TaskContext' Bifrost.Execution.Promise' Bifrost.Tasks.ITask,Bifrost.Client.Specs.Tasks.for_Tasks.when_executing_task_that_finishes' Bifrost.Client.Specs.Tasks.for_Tasks.when_executing_task

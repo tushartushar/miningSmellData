@@ -1,20 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-SalesforceClient,5,27,3,0,19,475,47,0,0,0.07,8,1
-SalesforceError,0,0,0,0,0,79,0,0,0,-1,0,1
-SalesforceException,0,5,2,0,2,90,6,0,0,-1,1,0
-AuthenticationInfo,0,1,2,0,1,36,1,0,0,-1,0,2
-IAuthenticationFlow,0,1,0,0,0,33,1,1,0,-1,0,1
-UsernamePasswordAuthenticationFlow,5,3,1,0,2,104,4,0,1,0.67,2,1
-DynamicJsonDeserializer,0,1,3,0,1,44,1,0,0,-1,0,2
-GenericJsonDeserializer,1,2,3,0,2,53,3,0,0,0,1,1
-GenericJsonSerializer,1,2,4,0,2,30,2,0,0,0,1,1
-SalesforceQueryResult,0,0,4,0,0,47,0,0,0,-1,0,1
-SalesforceAttribute,0,0,3,0,0,28,0,0,0,-1,0,2
-SalesforceContractResolver,1,3,0,0,1,56,6,0,0,0.67,1,2
-SalesforceChildRelationship,0,0,6,0,0,57,0,0,0,-1,0,1
-SalesforceField,0,0,43,0,0,353,0,0,0,-1,1,1
-SalesforceObject,0,0,28,0,0,230,0,0,0,-1,4,1
-SalesforceObjectUrls,0,0,9,0,0,78,0,0,0,-1,0,1
-SalesforcePickList,0,0,4,0,0,38,0,0,0,-1,0,1
-SalesforceRecordTypeInfo,0,0,5,0,0,47,0,0,0,-1,1,1
-SalesforceRecordTypeInfoLayoutUrl,0,0,1,0,0,14,0,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SalesforceSharp,SalesforceClient,5,27,3,0,19,484,40,0,0,0.15,6,2,SalesforceSharp.Serialization.DynamicJsonDeserializer' SalesforceSharp.Serialization.GenericJsonDeserializer' SalesforceSharp.Serialization.GenericJsonSerializer' SalesforceSharp.Security.AuthenticationInfo' SalesforceSharp.Security.IAuthenticationFlow' SalesforceSharp.Serialization.SalesforceAttribute,SalesforceSharp.UnitTests.SalesforceClientTest' SalesforceSharp.FunctionalTests.SalesforceClientTest
+SalesforceSharp,SalesforceError,0,0,0,0,0,75,0,0,0,-1,0,6,,SalesforceSharp.SalesforceException' SalesforceSharp.UnitTests.SalesforceClientTest' SalesforceSharp.UnitTests.SalesforceExceptionTest' SalesforceSharp.UnitTests.Security.UsernamePasswordAuthenticationFlowTest' SalesforceSharp.FunctionalTests.SalesforceClientTest' SalesforceSharp.FunctionalTests.Security.UsernamePasswordAuthenticationFlowTest
+SalesforceSharp,SalesforceException,0,5,2,0,2,86,6,0,0,-1,1,2,SalesforceSharp.SalesforceError,SalesforceSharp.UnitTests.SalesforceExceptionTest' SalesforceSharp.FunctionalTests.SalesforceClientTest
+SalesforceSharp.Security,AuthenticationInfo,0,1,2,0,1,27,1,0,0,-1,0,4,,SalesforceSharp.SalesforceClient' SalesforceSharp.Security.UsernamePasswordAuthenticationFlow' SalesforceSharp.UnitTests.Security.UsernamePasswordAuthenticationFlowTest' SalesforceSharp.FunctionalTests.Security.UsernamePasswordAuthenticationFlowTest
+SalesforceSharp.Security,IAuthenticationFlow,0,1,0,0,0,11,1,1,0,-1,0,1,,SalesforceSharp.SalesforceClient
+SalesforceSharp.Security,UsernamePasswordAuthenticationFlow,5,4,1,0,3,104,5,0,1,0.75,2,3,SalesforceSharp.Serialization.DynamicJsonDeserializer' SalesforceSharp.Security.AuthenticationInfo,SalesforceSharp.UnitTests.Security.UsernamePasswordAuthenticationFlowTest' SalesforceSharp.FunctionalTests.SalesforceClientTest' SalesforceSharp.FunctionalTests.Security.UsernamePasswordAuthenticationFlowTest
+SalesforceSharp.Serialization,DynamicJsonDeserializer,0,1,3,0,1,30,1,0,0,-1,0,2,,SalesforceSharp.SalesforceClient' SalesforceSharp.Security.UsernamePasswordAuthenticationFlow
+SalesforceSharp.Serialization,GenericJsonDeserializer,1,2,3,0,2,35,3,0,0,0,1,1,SalesforceSharp.Serialization.SalesforceContractResolver,SalesforceSharp.SalesforceClient
+SalesforceSharp.Serialization,GenericJsonSerializer,1,2,4,0,2,16,2,0,0,0,1,1,SalesforceSharp.Serialization.SalesforceContractResolver,SalesforceSharp.SalesforceClient
+SalesforceSharp.Serialization,SalesforceQueryResult<TRecord>,0,0,4,0,0,31,0,0,0,-1,0,0,,
+SalesforceSharp.Serialization,SalesforceAttribute,0,0,3,0,0,16,0,0,0,-1,0,2,,SalesforceSharp.SalesforceClient' SalesforceSharp.Serialization.SalesforceContractResolver
+SalesforceSharp.Serialization,SalesforceContractResolver,1,3,0,0,1,55,7,0,0,0.67,1,2,SalesforceSharp.Serialization.SalesforceAttribute,SalesforceSharp.Serialization.GenericJsonDeserializer' SalesforceSharp.Serialization.GenericJsonSerializer
+SalesforceSharp.Models,SalesforceChildRelationship,0,0,6,0,0,36,0,0,0,-1,0,0,,
+SalesforceSharp.Models,SalesforceField,0,0,43,0,0,220,0,0,0,-1,0,1,,SalesforceSharp.FunctionalTests.SalesforceClientTest
+SalesforceSharp.Models,SalesforceObject,0,0,28,0,0,143,0,0,0,-1,0,1,,SalesforceSharp.FunctionalTests.SalesforceClientTest
+SalesforceSharp.Models,SalesforceObjectUrls,0,0,9,0,0,48,0,0,0,-1,0,0,,
+SalesforceSharp.Models,SalesforcePickList,0,0,4,0,0,23,0,0,0,-1,0,1,,SalesforceSharp.FunctionalTests.SalesforceClientTest
+SalesforceSharp.Models,SalesforceRecordTypeInfo,0,0,5,0,0,29,0,0,0,-1,0,0,,
+SalesforceSharp.Models,SalesforceRecordTypeInfoLayoutUrl,0,0,1,0,0,8,0,0,0,-1,0,0,,

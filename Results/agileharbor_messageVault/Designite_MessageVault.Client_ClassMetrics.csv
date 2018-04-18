@@ -1,21 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CacheManager,5,3,0,2,3,48,8,0,0,0,3,0
-FetchResult,7,0,0,7,0,10,0,0,0,-1,0,2
-CacheFetcher,14,10,0,5,6,163,25,0,0,0,13,4
-HealthCheckException,0,3,0,0,2,19,3,0,0,-1,0,0
-CacheReader,4,5,0,1,5,93,12,0,0,0.6,8,2
-CacheStorage,2,2,0,0,2,44,7,0,0,0,2,2
-ErrorResponse,0,0,2,0,0,11,0,0,0,-1,0,1
-IClient,0,3,0,0,0,6,3,3,0,-1,1,2
-UnpackedMessage,2,1,0,2,1,10,1,0,0,0,0,2
-PublishResult,2,1,0,2,1,10,1,0,0,0,0,1
-NonDisposingLZ4Stream,0,2,0,0,1,10,2,0,0,-1,0,1
-PagedClient,5,3,0,2,3,88,26,0,0,0,10,1
-PostMessagesResponse,0,1,2,0,1,22,2,0,0,-1,1,4
-Protection,0,0,0,0,0,3,0,0,0,-1,0,0
-CloudClient,4,12,1,2,9,110,16,0,1,0,5,6
-GetStreamResponse,0,0,1,0,0,7,0,0,0,-1,0,2
-FileClient,2,5,0,0,5,45,7,0,1,0,4,0
-MemoryClient,1,5,0,0,4,45,5,0,1,0,4,2
-MemoryClientTests,0,4,0,0,4,31,8,0,0,-1,3,0
-PageClientTests,0,2,0,0,1,36,5,0,0,-1,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MessageVault.Api,CacheManager,5,3,0,2,3,48,8,0,0,0,3,0,MessageVault.MemoryPool.IMemoryStreamManager' MessageVault.Api.CacheFetcher' MessageVault.Api.FetchResult,
+MessageVault.Api,FetchResult,7,0,0,7,0,9,0,0,0,-1,0,3,,Cache.Program' MessageVault.Api.CacheManager' MessageVault.Api.CacheFetcher
+MessageVault.Api,CacheFetcher,14,10,0,5,6,171,13,0,0,0,12,4,MessageVault.Cloud.CloudPageReader' MessageVault.Cloud.CloudCheckpointReader' MessageVault.Files.FileCheckpointArrayWriter' MessageVault.MemoryPool.IMemoryStreamManager' MessageVault.Api.CacheReader' MessageVault.Files.FileCheckpointArrayReader' MessageVault.Cloud.CloudSetup' MessageVault.StorageFormat' MessageVault.MessageWithId' MessageVault.Api.FetchResult' MessageVault.Api.CacheStorage' MessageVault.MessageFlags,Cache.Program' CacheRepair.Program' MessageVault.Api.CacheManager' MessageVault.Api.CacheReader
+MessageVault.Api,HealthCheckException,0,3,0,0,2,14,3,0,0,-1,0,0,,
+MessageVault.Api,CacheReader,4,5,0,1,5,94,9,0,0,0.4,8,3,MessageVault.Files.IVolatileCheckpointVectorAccess' MessageVault.Files.FileCheckpointArrayReader' MessageVault.Files.FixedCheckpointArrayReader' MessageVault.Api.CacheFetcher' MessageVault.ReadBulkResult' MessageVault.ReadResult' MessageVault.MessageWithId' MessageVault.Api.CacheStorage,Cache.Program' CacheRepair.Program' MessageVault.Api.CacheFetcher
+MessageVault.Api,CacheStorage,2,2,0,0,2,48,7,0,0,0,2,2,MessageVault.MessageId' MessageVault.MessageWithId,MessageVault.Api.CacheFetcher' MessageVault.Api.CacheReader
+MessageVault.Api,ErrorResponse,0,0,2,0,0,4,0,0,0,-1,0,0,,
+MessageVault.Api,IClient,0,3,0,0,0,5,3,3,0,-1,0,2,,MessageVault.Api.PagedClient' MessageVault.MemoryClientTests
+MessageVault.Api,UnpackedMessage,2,1,0,2,1,8,1,0,0,0,0,2,,MessageVault.Api.PagedClient' MessageVault.Tests.PageClientTests
+MessageVault.Api,PublishResult,2,1,0,2,1,8,1,0,0,0,0,1,,MessageVault.Api.PagedClient
+MessageVault.Api,NonDisposingLZ4Stream,0,2,0,0,1,7,2,0,0,-1,0,1,,MessageVault.Api.PagedClient
+MessageVault.Api,PagedClient,5,3,0,2,3,99,4,0,0,0,12,1,MessageVault.Api.IClient' MessageVault.MemoryPool.IMemoryStreamManager' MessageVault.MessageFlags' MessageVault.Api.PostMessagesResponse' MessageVault.Api.NonDisposingLZ4Stream' MessageVault.Api.UnpackedMessage' MessageVault.Constants' MessageVault.Message' MessageVault.Api.PublishResult' MessageVault.Subscription' MessageVault.MessageWithId' MessageVault.MessageReader,MessageVault.Tests.PageClientTests
+MessageVault.Api,PostMessagesResponse,0,1,2,0,1,14,2,0,0,-1,2,8,MessageVault.AppendResult' MessageVault.MessageId,InteractiveConsole.Program' MessageVault.Api.PagedClient' MessageVault.FileClient' MessageVault.MemoryClient' MessageVault.MemoryClientTests' MessageVault.Server.ApiModule' MessageVault.Server.Election.ApiImplementation' PublisherSample.Program
+MessageVault.Api,Protection,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MessageVault.Api,CloudClient,4,12,1,2,9,98,12,0,1,0,3,8,MessageVault.TransferFormat' MessageVault.MessageReader' MessageVault.Cloud.CloudSetup,Cache.Program' CqrsReplicator.EventStorePublisher' InteractiveConsole.Program' InteractiveConsole.ConsumerSample' MessageVault.Server.Election.ApiImplementation' MessageVault.Server.Election.LeaderInfoPoller' PublisherSample.Program' StressTester.Program
+MessageVault.Api,GetStreamResponse,0,0,1,0,0,4,0,0,0,-1,0,2,,MessageVault.Server.ApiModule' MessageVault.Server.Election.ApiImplementation
+MessageVault,FileClient,2,5,0,0,5,40,7,0,1,0,6,0,MessageVault.MessageWriter' MessageVault.Locked' MessageVault.AppendResult' MessageVault.Api.PostMessagesResponse' MessageVault.Files.FileSetup' MessageVault.MessageReader,
+MessageVault,Locked,2,1,0,1,1,8,1,0,0,0,1,1,MessageVault.MessageWriter,MessageVault.FileClient
+MessageVault,MemoryClient,1,5,0,0,4,40,5,0,1,0,5,2,MessageVault.InMemStream' MessageVault.AppendResult' MessageVault.Api.PostMessagesResponse' MessageVault.MessageWriter' MessageVault.MessageReader,MessageVault.MemoryClientTests' MessageVault.Tests.PageClientTests
+MessageVault,InMemStream,4,1,0,3,1,12,1,0,0,0,3,1,MessageVault.Memory.MemoryPageReaderWriter' MessageVault.Memory.MemoryCheckpointReaderWriter' MessageVault.MessageWriter,MessageVault.MemoryClient
+MessageVault,MemoryClientTests,0,4,0,0,4,28,4,0,0,-1,4,0,MessageVault.MemoryClient' MessageVault.Message' MessageVault.Api.PostMessagesResponse' MessageVault.Api.IClient,
+MessageVault.Tests,PageClientTests,0,2,0,0,1,34,3,0,0,-1,5,0,MessageVault.MemoryClient' MessageVault.Api.PagedClient' MessageVault.Api.UnpackedMessage' MessageVault.Constants' MessageVault.MessageWithId,

@@ -1,23 +1,28 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CommandlineParser,2,5,0,0,3,64,5,0,0,1,0,1
-Flows,0,35,0,0,0,235,84,0,0,-1,0,0
-Disposables,0,3,0,0,1,35,7,0,0,-1,0,0
-Enumerables,0,33,0,0,0,218,55,0,0,-1,0,0
-Arrays,0,9,0,0,0,53,9,0,0,-1,0,3
-Lists,0,10,0,0,0,88,22,0,0,-1,0,0
-Dictionaries,0,5,0,0,0,26,5,0,0,-1,0,0
-Strings,0,11,0,0,0,50,11,0,0,-1,0,0
-BitArray,3,23,1,0,19,401,48,0,0,0.26,0,0
-ConsoleReplInterface,2,8,0,0,3,106,8,0,1,0.75,6,0
-DefaultSandbox,0,4,5,0,3,44,4,0,1,-1,2,0
-ParsedExpression,0,1,3,0,1,22,1,0,0,-1,0,1
-EvaluationContext,6,5,4,0,2,76,8,0,0,0,7,2
-IReplInterface,0,2,0,0,0,5,2,1,0,-1,1,1
-LogEntry,0,2,7,0,1,45,2,0,0,-1,0,1
-Program,2,1,0,0,0,21,1,0,0,0,3,0
-ISandbox,0,2,5,0,0,20,2,2,0,-1,0,2
-RemotingEnumerable,0,1,0,0,0,53,1,0,0,-1,0,0
-ReplSymbols,2,6,1,2,5,55,6,0,0,0.83,2,1
-ReturnedValue,0,1,2,0,1,17,1,0,0,-1,0,1
-Sandbox,0,5,5,0,4,62,6,0,1,-1,2,1
-SandboxManager,2,9,1,0,8,68,10,0,0,0.22,4,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+XSpect,CommandlineParser,2,5,0,0,3,115,5,0,0,1,1,0,XSpect.CommandlineOption,
+XSpect,CommandlineOption,0,2,5,0,1,50,2,0,0,-1,1,2,XSpect.Arrays,XSpect.CommandlineParser' XSpect.Yacq.Repl.Program
+XSpect,Flows,0,35,0,0,0,403,39,0,0,-1,0,0,,
+XSpect,Disposables,0,3,0,0,1,40,3,0,0,-1,1,0,XSpect.AnonymousDisposable,
+XSpect,AnonymousDisposable,1,2,0,0,2,13,2,0,0,0,0,1,,XSpect.Disposables
+XSpect,Enumerables,0,33,0,0,0,277,55,0,0,-1,0,0,,
+XSpect,Arrays,0,9,0,0,0,53,9,0,0,-1,0,4,,XSpect.CommandlineOption' XSpect.Yacq.Repl.ConsoleReplInterface' XSpect.Yacq.Repl.EvaluationContext' XSpect.Yacq.Repl.Program
+XSpect,Lists,0,10,0,0,0,110,15,0,0,-1,0,0,,
+XSpect,Dictionaries,0,5,0,0,0,30,5,0,0,-1,0,0,,
+XSpect,Strings,0,11,0,0,0,50,11,0,0,-1,0,0,,
+XSpect.Collections,BitArray,3,23,1,0,19,476,46,0,0,0.26,1,1,XSpect.Collections.Enumerator,XSpect.Collections.Enumerator
+XSpect.Collections,Enumerator,4,5,2,0,4,63,7,0,0,0.4,1,1,XSpect.Collections.BitArray,XSpect.Collections.BitArray
+XSpect.Yacq.Repl,ConsoleReplInterface,2,8,0,0,3,165,8,0,1,0.88,6,0,XSpect.Yacq.Repl.SandboxManager' XSpect.Yacq.Repl.ISandbox' XSpect.Arrays' XSpect.Yacq.Serialization.TypeRef' XSpect.Yacq.Serialization.Node' XSpect.Yacq.Repl.ReplSymbols,
+XSpect.Yacq.Repl,DefaultSandbox,0,4,5,0,3,56,4,0,1,-1,5,1,XSpect.Yacq.Symbols.SymbolTable' XSpect.Yacq.Repl.ReplSymbols' XSpect.Yacq.Repl.EvaluationContext' XSpect.Yacq.LanguageServices.StandardGrammar' XSpect.Yacq.YacqServices,XSpect.Yacq.Repl.SandboxManager
+XSpect.Yacq.Repl,ParsedExpression,0,1,3,0,1,26,1,0,0,-1,2,0,XSpect.Yacq.Serialization.Node' XSpect.Yacq.Serialization.TypeRef,
+XSpect.Yacq.Repl,EvaluationContext,6,5,4,0,2,118,5,0,0,0,8,2,XSpect.Yacq.Symbols.SymbolTable' XSpect.Arrays' XSpect.Yacq.YacqServices' XSpect.Yacq.Serialization.Node' XSpect.Yacq.Serialization.TypeRef' XSpect.Yacq.Repl.LogEntry' XSpect.Yacq.ParseException' XSpect.Yacq.LanguageServices.State,XSpect.Yacq.Repl.DefaultSandbox' XSpect.Yacq.Repl.Sandbox
+XSpect.Yacq.Repl,IReplInterface,0,2,0,0,0,6,2,1,0,-1,1,1,XSpect.Yacq.Repl.SandboxManager,XSpect.Yacq.Repl.SandboxManager
+XSpect.Yacq.Repl,LogEntry,0,2,7,0,1,53,2,0,0,-1,0,1,,XSpect.Yacq.Repl.EvaluationContext
+XSpect.Yacq.Repl,Program,2,1,0,0,0,41,1,0,0,0,4,0,XSpect.CommandlineOption' XSpect.Yacq.YacqServices' XSpect.Yacq.Repl.SandboxManager' XSpect.Arrays,
+XSpect.Yacq.Repl,ISandbox,0,2,5,0,0,25,2,2,0,-1,0,2,,XSpect.Yacq.Repl.ConsoleReplInterface' XSpect.Yacq.Repl.SandboxManager
+XSpect.Yacq.Repl,RemotingEnumerable,0,1,0,0,0,61,1,0,0,-1,0,0,,
+XSpect.Yacq.Repl,RemotableEnumerable<T>,1,3,0,0,2,18,3,0,0,0.67,0,0,,
+XSpect.Yacq.Repl,RemotableEnumerator<T>,1,4,2,0,4,36,4,0,0,0,0,0,,
+XSpect.Yacq.Repl,ReplSymbols,2,6,1,2,5,75,6,0,0,0.83,5,3,XSpect.Yacq.Symbols.YacqSymbolAttribute' XSpect.Yacq.Expressions.TypeCandidateExpression' XSpect.Yacq.Expressions.YacqExpression' XSpect.Yacq.Expressions.DispatchExpression' XSpect.Yacq.Symbols.SymbolTable,XSpect.Yacq.Repl.ConsoleReplInterface' XSpect.Yacq.Repl.DefaultSandbox' XSpect.Yacq.Repl.Sandbox
+XSpect.Yacq.Repl,ReturnedValue,0,1,2,0,1,20,1,0,0,-1,0,0,,
+XSpect.Yacq.Repl,Sandbox,0,5,5,0,4,115,6,0,1,-1,5,1,XSpect.Yacq.Symbols.SymbolTable' XSpect.Yacq.Repl.ReplSymbols' XSpect.Yacq.Repl.EvaluationContext' XSpect.Yacq.LanguageServices.StandardGrammar' XSpect.Yacq.YacqServices,XSpect.Yacq.Repl.SandboxManager
+XSpect.Yacq.Repl,SandboxManager,2,9,1,0,8,105,10,0,0,0.22,5,3,XSpect.Yacq.Repl.Sandbox' XSpect.Yacq.Repl.ISandbox' XSpect.Yacq.Repl.DefaultSandbox' XSpect.Yacq.Repl.IReplInterface' XSpect.Yacq.YacqServices,XSpect.Yacq.Repl.ConsoleReplInterface' XSpect.Yacq.Repl.IReplInterface' XSpect.Yacq.Repl.Program

@@ -1,11 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BugLoggerDbContext,0,3,1,0,3,19,3,0,1,-1,2,1
-BugLoggerData,2,6,1,0,4,45,10,0,1,0.33,2,1
-BugRepository,0,6,0,0,6,25,6,0,1,-1,2,0
-GenericRepository,0,12,2,0,11,66,14,1,1,-1,1,0
-IBugRepository,0,4,0,0,0,7,4,1,1,-1,1,2
-IGenericRepository,0,9,0,0,0,12,9,2,0,-1,0,1
-IDbContext,0,3,0,0,0,6,3,1,0,-1,0,0
-IBugLoggerData,0,1,1,0,0,7,1,1,0,-1,1,1
-IBugLoggerDbContext,0,0,1,0,0,7,0,1,1,-1,1,2
-Configuration,0,3,0,0,1,28,5,0,0,-1,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BugLogger.Data,BugLoggerDbContext,0,3,1,0,3,17,3,0,1,-1,0,1,,BugLogger.Data.Migrations.Configuration
+BugLogger.Data,BugLoggerData,2,6,1,0,4,52,10,0,1,0.33,3,0,BugLogger.Data.Contracts.IGenericRepository' BugLogger.Models.Bug' BugLogger.Data.Repositories.BugRepository,
+BugLogger.Data.Repositories,BugRepository,0,6,0,0,6,27,6,0,1,-1,2,1,BugLogger.Data.Contracts.IBugLoggerDbContext' BugLogger.Models.BugStatus,BugLogger.Data.BugLoggerData
+BugLogger.Data.Repositories,GenericRepository<T>,0,12,2,0,11,63,14,0,1,-1,1,0,BugLogger.Data.Contracts.IBugLoggerDbContext,
+BugLogger.Data.Contracts,IBugRepository,0,4,0,0,0,7,4,1,1,-1,1,2,BugLogger.Models.BugStatus,BugLogger.ConsoleClient.BugLoggerConsole' BugLogger.Services.Controllers.BugsController
+BugLogger.Data.Contracts,IGenericRepository,0,9,0,0,0,12,9,2,0,-1,0,1,,BugLogger.Data.BugLoggerData
+BugLogger.Data.Contracts,IDbContext,0,3,0,0,0,6,3,1,0,-1,0,0,,
+BugLogger.Data.Contracts,IBugLoggerData,0,1,1,0,0,5,1,1,0,-1,0,3,,BugLogger.ConsoleClient.BugLoggerConsole' BugLogger.Services.Controllers.BaseController' BugLogger.Services.Controllers.BugsController
+BugLogger.Data.Contracts,IBugLoggerDbContext,0,0,1,0,0,4,0,1,1,-1,0,2,,BugLogger.Data.Repositories.BugRepository' BugLogger.Data.Repositories.GenericRepository<T>
+BugLogger.Data.Migrations,Configuration,0,3,0,0,1,31,5,0,0,-1,3,0,BugLogger.Data.BugLoggerDbContext' BugLogger.Models.Bug' BugLogger.Common.RandomDataGenerator,

@@ -1,0 +1,145 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MsgReader.Exceptions,MRCannotRemoveAttachment,0,3,0,0,0,14,3,0,0,-1,0,0,,
+MsgReader.Exceptions,MRFileTypeNotSupported,0,3,0,0,0,14,3,0,0,-1,0,0,,
+MsgReader.Exceptions,MRInvalidSignedFile,0,3,0,0,0,15,3,0,0,-1,0,0,,
+MsgReader.Exceptions,MRInvalidProperty,0,3,0,0,0,12,3,0,0,-1,0,0,,
+MsgReader.Exceptions,MRUnknownAttachmentFormat,0,3,0,0,0,14,3,0,0,-1,0,0,,
+MsgReader.Helpers,DateDifference,0,2,7,0,2,176,39,0,0,-1,1,1,MsgReader.Localization.LanguageConsts,MsgReader.Outlook.Task
+MsgReader.Helpers,EmailAddress,0,2,0,0,2,35,6,0,0,-1,0,4,,MsgReader.Outlook.Message' MsgReader.Outlook.ReceivedBy' MsgReader.Outlook.Recipient' MsgReader.Outlook.RecipientRow
+MsgReader.Helpers,ExceptionHelpers,0,1,0,0,1,17,2,0,0,-1,0,1,,MsgReader.Reader
+MsgReader.Helpers,MimeType,0,1,0,0,1,436,3,0,0,-1,0,1,,MsgReader.Mime.MessagePart
+MsgReader.Helpers,StreamHelpers,0,2,0,0,0,36,2,0,0,-1,0,0,,
+MsgReader.Helpers,StreamUtility,0,2,0,0,2,53,3,0,0,-1,0,2,,MsgReader.Mime.Header.HeaderExtractor' MsgReader.Mime.MessagePart
+MsgReader.Helpers,Strings,0,3,0,0,3,52,5,0,0,-1,0,2,,MsgReader.Outlook.AddressBookEntryId' MsgReader.Outlook.RecipientRow
+MsgReader.Helpers,FileManager,1,8,0,0,8,170,21,0,0,0.38,0,3,,MsgReader.Mime.MessagePart' MsgReader.Outlook.Attachment' MsgReader.Reader
+MsgReader.Helpers,FileTypeFileInfo,1,1,4,0,0,47,1,0,0,0,0,2,,MsgReader.Helpers.FileTypeSelector' MsgReader.Outlook.Attachment
+MsgReader.Helpers,FileTypeSelector,4,8,0,0,1,337,30,0,0,0,1,1,MsgReader.Helpers.FileTypeFileInfo,MsgReader.Outlook.Attachment
+MsgReader.Helpers,FileIcon,0,1,0,0,1,134,1,0,0,-1,3,1,MsgReader.Helpers.ShFileinfo' MsgReader.Helpers.NativeMethods' MsgReader.Helpers.ShGetFileInfoConstants,MsgReader.Reader
+MsgReader.Helpers,NativeMethods,0,1,0,0,0,103,1,0,0,-1,1,1,MsgReader.Helpers.ShFileinfo,MsgReader.Helpers.FileIcon
+MsgReader.Helpers,ShGetFileInfoConstants,0,0,0,0,0,76,0,0,0,-1,0,1,,MsgReader.Helpers.FileIcon
+MsgReader.Helpers,ShFileinfo,5,0,0,5,0,11,0,0,0,-1,0,2,,MsgReader.Helpers.FileIcon' MsgReader.Helpers.NativeMethods
+MsgReader.Localization,LanguageConsts,2,1,130,0,0,1193,1,0,0,0,0,7,,MsgReader.Helpers.DateDifference' MsgReader.Mime.MessagePart' MsgReader.Outlook.Appointment' MsgReader.Outlook.Attachment' MsgReader.Outlook.Message' MsgReader.Outlook.Task' MsgReader.Reader
+MsgReader.Mime.Decode,Base64,0,2,0,0,2,68,4,0,0,-1,0,2,,MsgReader.Mime.Decode.EncodedWord' MsgReader.Mime.MessagePart
+MsgReader.Mime.Decode,EncodedWord,0,1,0,0,1,94,5,0,0,-1,3,4,MsgReader.Mime.Decode.EncodingFinder' MsgReader.Mime.Decode.Base64' MsgReader.Mime.Decode.QuotedPrintable,MsgReader.Mime.Decode.Rfc2231Decoder' MsgReader.Mime.Header.HeaderFieldParser' MsgReader.Mime.Header.MessageHeader' MsgReader.Mime.Header.RfcMailAddress
+MsgReader.Mime.Decode,EncodingFinder,0,4,2,0,1,109,9,0,0,-1,0,2,,MsgReader.Mime.Decode.EncodedWord' MsgReader.Mime.MessagePart
+MsgReader.Mime.Decode,QuotedPrintable,0,8,0,0,2,297,24,0,0,-1,0,2,,MsgReader.Mime.Decode.EncodedWord' MsgReader.Mime.MessagePart
+MsgReader.Mime.Decode,Rfc2231Decoder,0,4,0,0,1,244,18,0,0,-1,2,1,MsgReader.Mime.Decode.Utility' MsgReader.Mime.Decode.EncodedWord,MsgReader.Mime.Header.HeaderFieldParser
+MsgReader.Mime.Decode,Rfc2822DateTime,2,6,1,0,1,384,18,0,0,0.33,0,3,,MsgReader.Mime.Header.HeaderFieldParser' MsgReader.Mime.Header.MessageHeader' MsgReader.Mime.Header.Received
+MsgReader.Mime.Decode,SizeParser,1,5,0,0,1,62,7,0,0,0.4,0,1,,MsgReader.Mime.Header.HeaderFieldParser
+MsgReader.Mime.Decode,Utility,0,2,0,0,2,57,7,0,0,-1,0,4,,MsgReader.Mime.Decode.Rfc2231Decoder' MsgReader.Mime.Header.HeaderFieldParser' MsgReader.Mime.Header.MessageHeader' MsgReader.Mime.Header.RfcMailAddress
+MsgReader.Mime.Header,ContentTransferEncoding,0,0,0,0,0,23,0,0,0,-1,0,3,,MsgReader.Mime.Header.HeaderFieldParser' MsgReader.Mime.Header.MessageHeader' MsgReader.Mime.MessagePart
+MsgReader.Mime.Header,HeaderExtractor,0,6,0,0,3,168,12,0,0,-1,2,3,MsgReader.Mime.Header.MessageHeader' MsgReader.Helpers.StreamUtility,MsgReader.Mime.Message' MsgReader.Mime.MessagePart' MsgReader.Outlook.Message
+MsgReader.Mime.Header,HeaderFieldParser,0,6,0,0,6,221,16,0,0,-1,6,1,MsgReader.Mime.Header.ContentTransferEncoding' MsgReader.Mime.Decode.Rfc2231Decoder' MsgReader.Mime.Decode.Utility' MsgReader.Mime.Decode.EncodedWord' MsgReader.Mime.Decode.Rfc2822DateTime' MsgReader.Mime.Decode.SizeParser,MsgReader.Mime.Header.MessageHeader
+MsgReader.Mime.Header,MessageHeader,0,3,24,0,0,382,11,0,0,-1,6,4,MsgReader.Mime.Header.ContentTransferEncoding' MsgReader.Mime.Header.RfcMailAddress' MsgReader.Mime.Decode.Utility' MsgReader.Mime.Header.HeaderFieldParser' MsgReader.Mime.Decode.EncodedWord' MsgReader.Mime.Decode.Rfc2822DateTime,MsgReader.Mime.Header.HeaderExtractor' MsgReader.Mime.MessagePart' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Mime.Header,Received,0,2,3,0,1,100,8,0,0,-1,1,0,MsgReader.Mime.Decode.Rfc2822DateTime,
+MsgReader.Mime.Header,RfcMailAddress,0,5,5,0,1,198,15,0,0,-1,2,3,MsgReader.Mime.Decode.EncodedWord' MsgReader.Mime.Decode.Utility,MsgReader.Mime.Header.MessageHeader' MsgReader.Mime.Message' MsgReader.Outlook.Message
+MsgReader.Mime,Message,0,7,7,0,7,224,23,0,0,-1,5,7,MsgReader.Mime.Header.HeaderExtractor' MsgReader.Mime.Traverse.FindBodyMessagePartWithMediaType' MsgReader.Mime.MessagePart' MsgReader.Mime.Traverse.AttachmentFinder' MsgReader.Mime.Header.RfcMailAddress,MsgReader.Mime.MessagePart' MsgReader.Mime.Traverse.AnswerMessageTraverser<TAnswer>' MsgReader.Mime.Traverse.FindBodyMessagePartWithMediaType' MsgReader.Mime.Traverse.IAnswerMessageTraverser' MsgReader.Mime.Traverse.IQuestionAnswerMessageTraverser' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Mime,MessagePart,0,12,15,0,3,457,32,0,0,-1,11,9,MsgReader.Mime.Header.MessageHeader' MsgReader.Localization.LanguageConsts' MsgReader.Mime.Decode.EncodingFinder' MsgReader.Mime.Message' MsgReader.Helpers.FileManager' MsgReader.Helpers.MimeType' MsgReader.Mime.Header.HeaderExtractor' MsgReader.Helpers.StreamUtility' MsgReader.Mime.Header.ContentTransferEncoding' MsgReader.Mime.Decode.QuotedPrintable' MsgReader.Mime.Decode.Base64,MsgReader.Mime.Message' MsgReader.Mime.Traverse.AnswerMessageTraverser<TAnswer>' MsgReader.Mime.Traverse.AttachmentFinder' MsgReader.Mime.Traverse.FindBodyMessagePartWithMediaType' MsgReader.Mime.Traverse.IAnswerMessageTraverser' MsgReader.Mime.Traverse.IQuestionAnswerMessageTraverser' MsgReader.Outlook.Attachment' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Mime.Traverse,AnswerMessageTraverser<TAnswer>,0,4,0,0,2,48,7,0,1,-1,2,0,MsgReader.Mime.Message' MsgReader.Mime.MessagePart,
+MsgReader.Mime.Traverse,AttachmentFinder,0,1,0,0,0,15,3,0,1,-1,1,1,MsgReader.Mime.MessagePart,MsgReader.Mime.Message
+MsgReader.Mime.Traverse,FindBodyMessagePartWithMediaType,0,2,0,0,2,43,8,0,1,-1,2,1,MsgReader.Mime.Message' MsgReader.Mime.MessagePart,MsgReader.Mime.Message
+MsgReader.Mime.Traverse,IAnswerMessageTraverser,0,2,0,0,0,15,2,1,0,-1,2,0,MsgReader.Mime.Message' MsgReader.Mime.MessagePart,
+MsgReader.Mime.Traverse,IQuestionAnswerMessageTraverser,0,2,0,0,0,17,2,1,0,-1,2,0,MsgReader.Mime.Message' MsgReader.Mime.MessagePart,
+MsgReader.Mime.Traverse,MultipleMessagePartFinder,0,1,0,0,0,21,3,1,0,-1,0,0,,
+MsgReader.Outlook,AddressBookEntryId,0,1,2,0,0,26,1,0,0,-1,1,0,MsgReader.Helpers.Strings,
+MsgReader.Outlook,Property,0,2,16,0,1,275,2,0,0,-1,1,1,MsgReader.Outlook.PropertyType,MsgReader.Outlook.RecipientRow
+MsgReader.Outlook,Storage,6,21,3,0,1,3986,47,9,0,0.1,10,10,MsgReader.Outlook.IStorage' MsgReader.Outlook.NativeMethods' MsgReader.Outlook.STGM' MsgReader.Outlook.ILockBytes' MsgReader.Outlook.IEnumSTATSTG' MsgReader.Outlook.ReferenceManager' MsgReader.Outlook.MapiTagMapping' MsgReader.Outlook.PropertyType' MsgReader.Outlook.MapiTags' MsgReader.Outlook.UnsendableRecipients,MsgMapper.Reader' MsgReader.Outlook.Appointment' MsgReader.Outlook.Attachment' MsgReader.Outlook.Contact' MsgReader.Outlook.Flag' MsgReader.Outlook.MapiTagMapper' MsgReader.Outlook.Message' MsgReader.Outlook.Recipient' MsgReader.Outlook.Task' MsgReader.Reader
+MsgReader.Outlook,Appointment,0,1,13,0,0,303,3,0,1,-1,5,3,MsgReader.Outlook.Storage' MsgReader.Outlook.MapiTags' MsgReader.Outlook.AppointmentRecurrenceType' MsgReader.Localization.LanguageConsts' MsgReader.Outlook.AppointmentClientIntent,MsgMapper.Reader' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Outlook,AppointmentRecurrenceType,0,0,0,0,0,23,0,0,0,-1,0,2,,MsgMapper.Reader' MsgReader.Outlook.Appointment
+MsgReader.Outlook,AppointmentClientIntent,0,0,0,0,0,55,0,0,0,-1,0,1,,MsgReader.Outlook.Appointment
+MsgReader.Outlook,Attachment,1,4,10,0,0,196,12,0,1,0,7,2,MsgReader.Mime.MessagePart' MsgReader.Helpers.FileManager' MsgReader.Outlook.MapiTags' MsgReader.Localization.LanguageConsts' MsgReader.Helpers.FileTypeSelector' MsgReader.Helpers.FileTypeFileInfo' MsgReader.Outlook.Storage,MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Outlook,Contact,0,1,60,0,0,404,21,0,1,-1,2,3,MsgReader.Outlook.Storage' MsgReader.Outlook.MapiTags,MsgMapper.Reader' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Outlook,Flag,0,1,2,0,0,46,2,0,1,-1,2,3,MsgReader.Outlook.Storage' MsgReader.Outlook.MapiTags,MsgMapper.Reader' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Outlook,FlagStatus,0,0,0,0,0,11,0,0,0,-1,0,0,,
+MsgReader.Outlook,InlineAttachment,0,2,4,0,2,39,2,0,0,-1,0,1,,MsgReader.Reader
+MsgReader.Outlook,MapiTagMapping,0,1,2,0,0,20,1,0,0,-1,0,1,,MsgReader.Outlook.Storage
+MsgReader.Outlook,MapiTagMapper,0,2,0,0,0,75,9,0,1,-1,2,1,MsgReader.Outlook.MapiTags' MsgReader.Outlook.Storage,MsgReader.Outlook.Message
+MsgReader.Outlook,PropertyType,0,0,0,0,0,129,0,0,0,-1,0,3,,MsgReader.Outlook.Property' MsgReader.Outlook.Storage' MsgReader.Outlook.RecipientRow
+MsgReader.Outlook,MapiTags,831,0,0,830,0,1232,0,0,0,-1,0,10,,MsgReader.Outlook.Storage' MsgReader.Outlook.Appointment' MsgReader.Outlook.Attachment' MsgReader.Outlook.Contact' MsgReader.Outlook.Flag' MsgReader.Outlook.MapiTagMapper' MsgReader.Outlook.Message' MsgReader.Outlook.Recipient' MsgReader.Outlook.Task' MsgReader.Outlook.RecipientRow
+MsgReader.Outlook,Message,27,20,38,0,10,1738,83,0,1,0.4,27,3,MsgReader.Outlook.MessageType' MsgReader.Outlook.Flag' MsgReader.Outlook.Task' MsgReader.Outlook.Appointment' MsgReader.Outlook.Contact' MsgReader.Outlook.ReceivedBy' MsgReader.Outlook.MapiTags' MsgReader.Outlook.IStorage' MsgReader.Mime.Header.HeaderExtractor' MsgReader.Outlook.Recipient' MsgReader.Outlook.MapiTagMapper' MsgReader.Outlook.Storage' MsgReader.Outlook.STGM' MsgReader.Outlook.NativeMethods' MsgReader.Mime.Message' MsgReader.Mime.MessagePart' MsgReader.Outlook.Attachment' MsgReader.Outlook.ILockBytes' MsgReader.Mime.Header.MessageHeader' MsgReader.Helpers.EmailAddress' MsgReader.Mime.Header.RfcMailAddress' MsgReader.Outlook.Sender' MsgReader.Outlook.SenderRepresenting' MsgReader.Localization.LanguageConsts' MsgReader.Outlook.RecipientType' MsgReader.Outlook.UnsendableRecipients' MsgReader.Outlook.RecipientPlaceHolder,MsgMapper.Reader' MsgReader.Reader' EmailExtractor.Program
+MsgReader.Outlook,MessageType,0,0,0,0,0,165,0,0,0,-1,0,3,,MsgMapper.Reader' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Outlook,MessageImportance,0,0,0,0,0,15,0,0,0,-1,0,0,,
+MsgReader.Outlook,NativeMethods,0,7,0,0,0,169,7,0,0,-1,4,2,MsgReader.Outlook.ILockBytes' MsgReader.Outlook.STGM' MsgReader.Outlook.IStorage' MsgReader.Outlook.ReferenceManager,MsgReader.Outlook.Storage' MsgReader.Outlook.Message
+MsgReader.Outlook,STGM,0,0,0,0,0,22,0,0,0,-1,0,3,,MsgReader.Outlook.Storage' MsgReader.Outlook.Message' MsgReader.Outlook.NativeMethods
+MsgReader.Outlook,IEnumSTATSTG,0,4,0,0,0,10,4,0,0,-1,0,1,,MsgReader.Outlook.Storage
+MsgReader.Outlook,ILockBytes,0,7,0,0,0,21,7,0,0,-1,0,3,,MsgReader.Outlook.Storage' MsgReader.Outlook.Message' MsgReader.Outlook.NativeMethods
+MsgReader.Outlook,IStorage,0,15,0,0,0,41,15,0,0,-1,0,3,,MsgReader.Outlook.Storage' MsgReader.Outlook.Message' MsgReader.Outlook.NativeMethods
+MsgReader.Outlook,ReceivedBy,0,1,3,0,0,49,3,0,1,-1,1,1,MsgReader.Helpers.EmailAddress,MsgReader.Outlook.Message
+MsgReader.Outlook,Recipient,0,1,4,0,0,127,7,0,1,-1,4,4,MsgReader.Outlook.MapiTags' MsgReader.Helpers.EmailAddress' MsgReader.Outlook.RecipientType' MsgReader.Outlook.Storage,MsgMapper.Reader' MsgReader.Outlook.Message' MsgReader.Reader' EmailExtractor.Program
+MsgReader.Outlook,RecipientType,0,0,0,0,0,28,0,0,0,-1,0,5,,MsgMapper.Reader' MsgReader.Outlook.Message' MsgReader.Outlook.Recipient' MsgReader.Outlook.UnsendableRecipients' MsgReader.Reader
+MsgReader.Outlook,RecipientPlaceHolder,0,1,3,0,0,31,1,0,0,-1,0,1,,MsgReader.Outlook.Message
+MsgReader.Outlook,ReferenceManager,2,2,0,0,2,51,2,0,0,0,0,2,,MsgReader.Outlook.Storage' MsgReader.Outlook.NativeMethods
+MsgReader.Outlook,RtfDecompressor,3,4,0,0,1,206,8,0,0,0,0,0,,
+MsgReader.Outlook,SenderRepresenting,0,1,3,0,0,32,1,0,0,-1,0,1,,MsgReader.Outlook.Message
+MsgReader.Outlook,Sender,0,1,2,0,0,26,1,0,0,-1,0,2,,MsgMapper.Reader' MsgReader.Outlook.Message
+MsgReader.Outlook,Task,0,1,16,0,0,166,5,0,1,-1,5,3,MsgReader.Outlook.Storage' MsgReader.Outlook.MapiTags' MsgReader.Outlook.TaskStatus' MsgReader.Localization.LanguageConsts' MsgReader.Helpers.DateDifference,MsgMapper.Reader' MsgReader.Outlook.Message' MsgReader.Reader
+MsgReader.Outlook,TaskStatus,0,0,0,0,0,19,0,0,0,-1,0,1,,MsgReader.Outlook.Task
+MsgReader.Outlook,AddressType,0,0,0,0,0,35,0,0,0,-1,0,1,,MsgReader.Outlook.RecipientRow
+MsgReader.Outlook,DisplayType,0,0,0,0,0,32,0,0,0,-1,0,0,,
+MsgReader.Outlook,AddressBookEntryIdType,0,0,0,0,0,47,0,0,0,-1,0,0,,
+MsgReader.Outlook,UnsendableRecipients,0,2,9,0,1,102,5,0,0,-1,2,2,MsgReader.Outlook.RecipientRow' MsgReader.Outlook.RecipientType,MsgReader.Outlook.Storage' MsgReader.Outlook.Message
+MsgReader.Outlook,RecipientRow,0,1,16,0,0,341,19,0,0,-1,6,1,MsgReader.Outlook.AddressType' MsgReader.Helpers.Strings' MsgReader.Outlook.PropertyType' MsgReader.Outlook.Property' MsgReader.Outlook.MapiTags' MsgReader.Helpers.EmailAddress,MsgReader.Outlook.UnsendableRecipients
+MsgReader.Outlook,RtfToHtmlConverter,2,2,0,0,1,47,3,0,0,0,3,1,Itenso.Rtf.IRtfDocument' Itenso.Rtf.Converter.Html.RtfHtmlConverter' Itenso.Rtf.Support.RtfInterpreterTool,MsgReader.Reader
+MsgReader,IReader,0,2,0,0,0,19,2,1,0,-1,0,0,,
+MsgReader,Reader,2,30,0,0,11,1875,184,0,1,0,19,1,MsgReader.Mime.Message' MsgReader.Helpers.ExceptionHelpers' MsgReader.Helpers.FileManager' MsgReader.Outlook.Message' MsgReader.Outlook.MessageType' MsgReader.Outlook.Storage' MsgReader.Outlook.Attachment' MsgReader.Localization.LanguageConsts' MsgReader.Outlook.RecipientType' MsgReader.Outlook.Recipient' MsgReader.Outlook.Flag' MsgReader.Outlook.Task' MsgReader.Mime.Header.MessageHeader' MsgReader.Outlook.Appointment' MsgReader.Outlook.Contact' MsgReader.Outlook.RtfToHtmlConverter' MsgReader.Helpers.FileIcon' MsgReader.Outlook.InlineAttachment' MsgReader.Mime.MessagePart,MsgViewer.ViewerForm
+MsgReader.Rtf,Attribute,0,2,2,0,2,29,2,0,0,-1,0,2,,MsgReader.Rtf.AttributeList' MsgReader.Rtf.DomDocument
+MsgReader.Rtf,AttributeList,0,8,0,0,8,94,13,0,0,-1,1,2,MsgReader.Rtf.Attribute,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomElement
+MsgReader.Rtf,BorderStyle,0,2,7,0,2,36,4,0,0,-1,0,0,,
+MsgReader.Rtf,ByteBuffer,2,8,1,0,7,137,14,0,0,0,0,3,,MsgReader.Rtf.DomDocument' MsgReader.Rtf.NodeGroup' MsgReader.Rtf.TextContainer
+MsgReader.Rtf,ColorTable,1,8,2,0,8,150,21,0,0,0.25,2,3,MsgReader.Rtf.Writer' MsgReader.Rtf.Consts,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,Consts,243,0,0,243,0,246,0,0,0,-1,0,6,,MsgReader.Rtf.ColorTable' MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.Table' MsgReader.Rtf.RawDocument' MsgReader.Rtf.TextContainer
+MsgReader.Rtf,DocumentFormatInfo,3,7,37,0,7,417,40,0,0,0.86,1,5,MsgReader.Rtf.RtfAlignment,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomParagraph' MsgReader.Rtf.DomTableCell' MsgReader.Rtf.DomText
+MsgReader.Rtf,DocumentInfo,5,5,23,0,4,295,7,0,0,0,1,2,MsgReader.Rtf.Writer,MsgReader.Rtf.DomDocument' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,DocumentWriter,2,32,9,0,32,840,79,0,0,0.75,12,0,MsgReader.Rtf.DocumentFormatInfo' MsgReader.Rtf.ColorTable' MsgReader.Rtf.Writer' MsgReader.Rtf.Font' MsgReader.Rtf.Table' MsgReader.Rtf.Consts' MsgReader.Rtf.ListTable' MsgReader.Rtf.RtfList' MsgReader.Rtf.RtfLevelNumberType' MsgReader.Rtf.ListOverrideTable' MsgReader.Rtf.ListOverride' MsgReader.Rtf.RtfAlignment,
+MsgReader.Rtf,DomBookmark,0,1,1,0,1,15,1,0,1,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomDocument,8,35,22,0,8,3046,253,0,1,0.14,43,2,MsgReader.Rtf.DocumentFormatInfo' MsgReader.Rtf.ProgressEventArgs' MsgReader.Rtf.Reader' MsgReader.Rtf.DomElementList' MsgReader.Rtf.TextContainer' MsgReader.Rtf.DomElement' MsgReader.Rtf.DomHeader' MsgReader.Rtf.DomFooter' MsgReader.Rtf.DomParagraph' MsgReader.Rtf.DomLineBreak' MsgReader.Rtf.DomTableRow' MsgReader.Rtf.AttributeList' MsgReader.Rtf.DomBookmark' MsgReader.Rtf.DomImage' MsgReader.Rtf.DomShape' MsgReader.Rtf.DomShapeGroup' MsgReader.Rtf.DomTableCell' MsgReader.Rtf.RtfTokenType' MsgReader.Rtf.Consts' MsgReader.Rtf.RtfHeaderFooterStyle' MsgReader.Rtf.RtfAlignment' MsgReader.Rtf.Table' MsgReader.Rtf.Font' MsgReader.Rtf.ColorTable' MsgReader.Rtf.RtfPictureType' MsgReader.Rtf.DomText' MsgReader.Rtf.DomTable' MsgReader.Rtf.DomObject' MsgReader.Rtf.DomField' MsgReader.Rtf.ByteBuffer' MsgReader.Rtf.DomTableColumn' MsgReader.Rtf.Attribute' MsgReader.Rtf.RtfVerticalAlignment' MsgReader.Rtf.DocumentInfo' MsgReader.Rtf.ListOverride' MsgReader.Rtf.Token' MsgReader.Rtf.ListOverrideTable' MsgReader.Rtf.RtfList' MsgReader.Rtf.ListTable' MsgReader.Rtf.RtfLevelNumberType' MsgReader.Rtf.ElementContainer' MsgReader.Rtf.RtfObjectType' MsgReader.Rtf.RtfDomFieldMethod,MsgReader.Rtf.DomElement' MsgReader.Rtf.TextContainer
+MsgReader.Rtf,DomElement,2,9,6,0,6,145,13,18,0,0.67,3,3,MsgReader.Rtf.DomDocument' MsgReader.Rtf.AttributeList' MsgReader.Rtf.DomElementList,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomElementList' MsgReader.Rtf.Util
+MsgReader.Rtf,DomElementList,0,5,1,0,5,74,5,0,0,-1,1,4,MsgReader.Rtf.DomElement,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomElement' MsgReader.Rtf.DomTable' MsgReader.Rtf.Util
+MsgReader.Rtf,DomField,0,2,4,0,2,71,2,0,1,-1,1,1,MsgReader.Rtf.RtfDomFieldMethod,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomHeader,0,2,2,0,2,28,2,0,1,-1,1,1,MsgReader.Rtf.RtfHeaderFooterStyle,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomFooter,0,2,2,0,2,29,2,0,1,-1,1,1,MsgReader.Rtf.RtfHeaderFooterStyle,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomImage,0,2,11,0,2,83,3,0,1,-1,1,1,MsgReader.Rtf.RtfPictureType,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomLineBreak,0,2,1,0,2,24,2,0,1,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomObject,1,2,11,0,2,105,3,0,1,1,1,1,MsgReader.Rtf.RtfObjectType,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomPageBreak,0,2,1,0,2,24,2,0,1,-1,0,0,,
+MsgReader.Rtf,DomParagraph,0,2,3,0,2,41,4,0,1,-1,1,2,MsgReader.Rtf.DocumentFormatInfo,MsgReader.Rtf.DomDocument' MsgReader.Rtf.Util
+MsgReader.Rtf,DomShape,0,2,7,0,2,49,2,0,1,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomShapeGroup,0,2,1,0,2,21,2,0,1,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomTable,0,2,1,0,2,21,2,0,1,-1,1,1,MsgReader.Rtf.DomElementList,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomTableCell,0,2,17,0,2,172,4,0,1,-1,2,1,MsgReader.Rtf.RtfVerticalAlignment' MsgReader.Rtf.DocumentFormatInfo,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomTableColumn,0,1,1,0,1,15,1,0,1,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomTableRow,0,2,12,0,2,78,2,0,1,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,DomText,0,2,3,0,2,45,4,0,1,-1,1,1,MsgReader.Rtf.DocumentFormatInfo,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,ElementContainer,0,1,1,0,1,15,1,0,1,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,RtfAlignment,0,0,0,0,0,22,0,0,0,-1,0,3,,MsgReader.Rtf.DocumentFormatInfo' MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument
+MsgReader.Rtf,RtfPictureType,0,0,0,0,0,44,0,0,0,-1,0,2,,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomImage
+MsgReader.Rtf,RtfObjectType,0,0,0,0,0,11,0,0,0,-1,0,2,,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomObject
+MsgReader.Rtf,RtfTokenType,0,0,0,0,0,11,0,0,0,-1,0,7,,MsgReader.Rtf.DomDocument' MsgReader.Rtf.Lex' MsgReader.Rtf.Node' MsgReader.Rtf.RawDocument' MsgReader.Rtf.Reader' MsgReader.Rtf.TextContainer' MsgReader.Rtf.Token
+MsgReader.Rtf,RtfDomFieldMethod,0,0,0,0,0,8,0,0,0,-1,0,2,,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomField
+MsgReader.Rtf,RtfNodeType,0,0,0,0,0,31,0,0,0,-1,0,3,,MsgReader.Rtf.Node' MsgReader.Rtf.NodeGroup' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,RtfVerticalAlignment,0,0,0,0,0,15,0,0,0,-1,0,2,,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomTableCell
+MsgReader.Rtf,RtfLevelNumberType,0,0,0,0,0,104,0,0,0,-1,0,3,,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.RtfList
+MsgReader.Rtf,RtfHeaderFooterStyle,0,0,0,0,0,7,0,0,0,-1,0,3,,MsgReader.Rtf.DomDocument' MsgReader.Rtf.DomHeader' MsgReader.Rtf.DomFooter
+MsgReader.Rtf,Table,0,10,0,0,10,179,19,0,0,-1,3,3,MsgReader.Rtf.Font' MsgReader.Rtf.Writer' MsgReader.Rtf.Consts,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,Font,2,6,5,0,3,129,11,0,0,0.5,1,4,MsgReader.Rtf.AnsiEncoding,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.Table' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,AnsiEncoding,1,7,0,1,7,36,8,0,0,1,0,1,,MsgReader.Rtf.Font
+MsgReader.Rtf,LayerInfo,2,2,2,0,2,40,2,0,0,1,0,2,,MsgReader.Rtf.Reader' MsgReader.Rtf.TextContainer
+MsgReader.Rtf,Lex,2,6,0,0,3,229,25,0,0,0,2,1,MsgReader.Rtf.RtfTokenType' MsgReader.Rtf.Token,MsgReader.Rtf.Reader
+MsgReader.Rtf,ListOverrideTable,0,1,0,0,1,14,3,0,0,-1,1,2,MsgReader.Rtf.ListOverride,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument
+MsgReader.Rtf,ListOverride,0,2,3,0,2,28,2,0,0,-1,0,3,,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.ListOverrideTable
+MsgReader.Rtf,ListTable,0,1,0,0,1,14,3,0,0,-1,1,2,MsgReader.Rtf.RtfList,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument
+MsgReader.Rtf,RtfList,0,2,12,0,2,53,4,0,0,-1,1,3,MsgReader.Rtf.RtfLevelNumberType,MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.DomDocument' MsgReader.Rtf.ListTable
+MsgReader.Rtf,Node,3,4,10,0,4,173,6,1,0,0.5,6,3,MsgReader.Rtf.RawDocument' MsgReader.Rtf.NodeGroup' MsgReader.Rtf.RtfNodeType' MsgReader.Rtf.Token' MsgReader.Rtf.RtfTokenType' MsgReader.Rtf.Writer,MsgReader.Rtf.NodeGroup' MsgReader.Rtf.NodeList' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,NodeGroup,1,11,6,0,7,287,39,1,1,0.18,6,2,MsgReader.Rtf.NodeList' MsgReader.Rtf.RtfNodeType' MsgReader.Rtf.ByteBuffer' MsgReader.Rtf.Node' MsgReader.Rtf.RawDocument' MsgReader.Rtf.Writer,MsgReader.Rtf.Node' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,NodeList,0,7,1,0,3,133,9,0,0,-1,1,2,MsgReader.Rtf.Node,MsgReader.Rtf.NodeGroup' MsgReader.Rtf.RawDocument
+MsgReader.Rtf,ProgressEventArgs,0,1,4,0,1,30,1,0,0,-1,0,1,,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,RawDocument,6,12,7,0,8,398,31,0,2,0.17,12,2,MsgReader.Rtf.ColorTable' MsgReader.Rtf.Table' MsgReader.Rtf.DocumentInfo' MsgReader.Rtf.Font' MsgReader.Rtf.NodeGroup' MsgReader.Rtf.Node' MsgReader.Rtf.Consts' MsgReader.Rtf.RtfNodeType' MsgReader.Rtf.NodeList' MsgReader.Rtf.Reader' MsgReader.Rtf.RtfTokenType' MsgReader.Rtf.Writer,MsgReader.Rtf.Node' MsgReader.Rtf.NodeGroup
+MsgReader.Rtf,Reader,4,14,15,0,14,303,27,0,0,0.36,4,3,MsgReader.Rtf.Lex' MsgReader.Rtf.RtfTokenType' MsgReader.Rtf.Token' MsgReader.Rtf.LayerInfo,MsgReader.Rtf.DomDocument' MsgReader.Rtf.RawDocument' MsgReader.Rtf.TextContainer
+MsgReader.Rtf,StringAttribute,0,2,2,0,2,26,2,0,0,-1,0,1,,MsgReader.Rtf.StringAttributeCollection
+MsgReader.Rtf,StringAttributeCollection,0,2,0,0,2,57,2,0,0,-1,1,0,MsgReader.Rtf.StringAttribute,
+MsgReader.Rtf,TextContainer,2,5,4,0,4,156,20,0,0,0.4,7,1,MsgReader.Rtf.ByteBuffer' MsgReader.Rtf.DomDocument' MsgReader.Rtf.Token' MsgReader.Rtf.RtfTokenType' MsgReader.Rtf.Reader' MsgReader.Rtf.LayerInfo' MsgReader.Rtf.Consts,MsgReader.Rtf.DomDocument
+MsgReader.Rtf,Token,0,2,7,0,2,64,6,0,0,-1,1,5,MsgReader.Rtf.RtfTokenType,MsgReader.Rtf.DomDocument' MsgReader.Rtf.Lex' MsgReader.Rtf.Node' MsgReader.Rtf.Reader' MsgReader.Rtf.TextContainer
+MsgReader.Rtf,Util,0,2,0,0,2,127,7,0,0,-1,5,0,MsgReader.Rtf.DomParagraph' MsgReader.Rtf.DomElementList' MsgReader.Rtf.DomElement' MsgReader.Rtf.NativeMethods' MsgReader.Rtf.EmfToWmfBitsFlags,
+MsgReader.Rtf,NativeMethods,0,1,0,0,1,26,1,0,0,-1,1,1,MsgReader.Rtf.EmfToWmfBitsFlags,MsgReader.Rtf.Util
+MsgReader.Rtf,EmfToWmfBitsFlags,0,0,0,0,0,15,0,0,0,-1,0,2,,MsgReader.Rtf.Util' MsgReader.Rtf.NativeMethods
+MsgReader.Rtf,Writer,5,21,4,0,16,328,49,0,0,0,0,7,,MsgReader.Rtf.ColorTable' MsgReader.Rtf.DocumentInfo' MsgReader.Rtf.DocumentWriter' MsgReader.Rtf.Table' MsgReader.Rtf.Node' MsgReader.Rtf.NodeGroup' MsgReader.Rtf.RawDocument

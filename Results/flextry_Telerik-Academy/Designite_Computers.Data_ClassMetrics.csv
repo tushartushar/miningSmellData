@@ -1,9 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CommandParser,2,1,0,0,1,18,2,0,1,0,1,0
-CommandProcessor,4,2,1,0,2,27,5,0,1,1,3,1
-ManufacturerFactory,4,1,0,0,1,21,4,0,0,0,1,1
-Store,0,1,3,0,1,21,1,0,1,-1,4,1
-IStore,0,0,3,0,0,15,0,1,0,-1,3,1
-ICommandParser,0,1,0,0,0,4,1,1,0,-1,0,1
-ICommandProcessor,0,1,0,0,0,4,1,1,0,-1,2,1
-ILogger,0,1,0,0,0,4,1,1,0,-1,0,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Computers.Data,CommandParser,2,1,0,0,1,17,2,0,1,0,1,0,Computers.Models.CommandInfo,
+Computers.Data,CommandProcessor,4,2,1,0,2,31,3,0,1,1,6,1,Computers.Data.Contracts.IStore' Computers.Models.Contracts.ICommandInfo' Computers.Models.Contracts.ILaptop' Computers.Models.Contracts.IServer' Computers.Models.Contracts.IComputer' Computers.Data.Contracts.ILogger,Computers.Console.ComputersEntryPoint
+Computers.Data,ManufacturerFactory,4,1,0,0,1,28,2,0,0,0,1,1,Computers.Models.Abstracts.Manufacturer,Computers.Console.ComputersEntryPoint
+Computers.Data,Store,0,1,3,0,1,12,1,0,1,-1,1,1,Computers.Models.Abstracts.Manufacturer,Computers.Console.ComputersEntryPoint
+Computers.Data.Contracts,IStore,0,0,3,0,0,6,0,1,0,-1,0,1,,Computers.Data.CommandProcessor
+Computers.Data.Contracts,ICommandParser,0,1,0,0,0,4,1,1,0,-1,0,1,,Computers.Console.TemplateMethod.CommandExecutor
+Computers.Data.Contracts,ICommandProcessor,0,1,0,0,0,4,1,1,0,-1,2,1,Computers.Models.Contracts.ICommandInfo' Computers.Data.Contracts.ILogger,Computers.Console.TemplateMethod.CommandExecutor
+Computers.Data.Contracts,ILogger,0,1,0,0,0,4,1,1,0,-1,0,3,,Computers.Console.TemplateMethod.CommandExecutor' Computers.Data.CommandProcessor' Computers.Data.Contracts.ICommandProcessor

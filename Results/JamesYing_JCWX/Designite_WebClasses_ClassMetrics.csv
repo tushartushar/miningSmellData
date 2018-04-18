@@ -1,0 +1,16 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WX.Demo.WebClasses,CnBlogsFeed,9,4,0,0,2,93,8,0,0,0,1,1,WX.Model.ArticleMessage,WX.Demo.WebClasses.CnblogsArticleNewsMessageHandler
+WX.Demo.WebClasses,Command,0,0,3,0,0,6,0,0,0,-1,0,0,,
+WX.Demo.WebClasses,CnblogsArticleNewsMessageHandler,0,1,0,0,1,14,1,0,1,-1,3,2,WX.Model.ResponseNewsMessage' WX.Demo.WebClasses.CnBlogsFeed' WX.Model.MiddleMessage,WX.Demo.WebClasses.TextMessageRole' WX.Demo.WebClasses.Roles.VoiceMessageRole
+WX.Demo.WebClasses,CnblogsTextMessageHandler,1,1,0,0,1,14,1,0,1,0,2,2,WX.Model.MiddleMessage' WX.Model.ResponseTextMessage,WX.Demo.WebClasses.TextMessageRole' WX.Demo.WebClasses.Roles.VoiceMessageRole
+WX.Demo.WebClasses,DefaultMessageHandler,1,1,0,0,1,12,1,0,1,0,2,5,WX.Model.MiddleMessage' WX.Model.ResponseTextMessage,WX.Demo.WebClasses.EventMessageRole' WX.Demo.WebClasses.MsgTypeMessageRole' WX.Demo.WebClasses.TextMessageRole' WX.Demo.WebClasses.WebMessageRole' WX.Demo.WebClasses.Roles.VoiceMessageRole
+WX.Demo.WebClasses,SubScribeEventMessageHandler,1,1,0,0,1,8,1,0,1,0,0,1,,WX.Demo.WebClasses.EventMessageRole
+WX.Demo.WebClasses,TextMessageHandler,0,2,1,0,2,16,2,2,1,-1,2,0,WX.Model.MiddleMessage' WX.Model.ResponseTextMessage,
+WX.Demo.WebClasses,UnSubScribeEventMessageHandler,1,1,0,0,1,8,1,0,2,0,0,1,,WX.Demo.WebClasses.EventMessageRole
+WX.Demo.WebClasses,MyLog,2,1,0,0,1,12,1,0,0,0,0,1,,WebDemo.WX
+WX.Demo.WebClasses,EventMessageRole,0,1,0,0,1,15,2,0,1,-1,5,1,WX.Model.Event' WX.Model.MiddleMessage' WX.Demo.WebClasses.SubScribeEventMessageHandler' WX.Demo.WebClasses.UnSubScribeEventMessageHandler' WX.Demo.WebClasses.DefaultMessageHandler,WX.Demo.WebClasses.MsgTypeMessageRole
+WX.Demo.WebClasses,MsgTypeMessageRole,0,1,0,0,1,17,2,0,1,-1,8,1,WX.Model.RequestMessage' WX.Model.MiddleMessage' WX.Model.MsgType' WX.Demo.WebClasses.TextMessageRole' WX.Demo.WebClasses.EventMessageRole' WX.Demo.WebClasses.Roles.VoiceMessageRole' WX.Framework.IMessageHandler' WX.Demo.WebClasses.DefaultMessageHandler,WX.Demo.WebClasses.WebMessageRole
+WX.Demo.WebClasses,TextMessageRole,0,1,0,0,1,16,3,0,1,-1,5,1,WX.Model.RequestTextMessage' WX.Model.MiddleMessage' WX.Demo.WebClasses.CnblogsArticleNewsMessageHandler' WX.Demo.WebClasses.CnblogsTextMessageHandler' WX.Demo.WebClasses.DefaultMessageHandler,WX.Demo.WebClasses.MsgTypeMessageRole
+WX.Demo.WebClasses,WebMessageRole,0,1,0,0,1,14,1,0,1,-1,4,1,WX.Demo.WebClasses.MsgTypeMessageRole' WX.Framework.IMessageHandler' WX.Demo.WebClasses.DefaultMessageHandler' WX.Model.MiddleMessage,WebDemo.WX
+WX.Demo.WebClasses.Handlers,VoiceMessageHandler,0,1,0,0,1,10,1,0,1,-1,2,1,WX.Model.MiddleMessage' WX.Model.ResponseTextMessage,WX.Demo.WebClasses.Roles.VoiceMessageRole
+WX.Demo.WebClasses.Roles,VoiceMessageRole,0,1,0,0,1,31,5,0,1,-1,6,1,WX.Model.RequestVoiceMessage' WX.Model.MiddleMessage' WX.Demo.WebClasses.CnblogsArticleNewsMessageHandler' WX.Demo.WebClasses.CnblogsTextMessageHandler' WX.Demo.WebClasses.DefaultMessageHandler' WX.Demo.WebClasses.Handlers.VoiceMessageHandler,WX.Demo.WebClasses.MsgTypeMessageRole

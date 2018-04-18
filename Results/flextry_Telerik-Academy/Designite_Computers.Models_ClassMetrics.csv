@@ -1,38 +1,38 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Laptop,1,1,1,0,1,13,1,3,1,0,1,0
-Computer,4,1,0,0,1,17,2,3,1,0,0,0
-Machine,1,0,6,0,0,35,0,3,0,-1,6,0
-Server,0,1,0,0,1,8,1,3,1,-1,0,0
-Cpu,4,5,3,0,4,50,7,3,0,0.6,2,1
-Manufacturer,0,3,0,0,3,6,3,3,0,-1,0,2
-CommandInfo,2,1,2,0,1,26,1,0,1,0,0,1
-VideoCardDrawStrategy,0,2,0,0,2,15,2,0,1,-1,0,0
-RandomNumberProvider,1,2,0,0,2,13,2,0,1,0,0,0
-Cpu128Bits,3,3,0,0,3,17,3,0,1,1,2,0
-Cpu32Bits,3,3,0,0,3,17,3,0,1,1,2,0
-Cpu64Bits,3,3,0,0,3,17,3,0,1,1,2,0
-VideoCard,0,2,1,0,2,19,3,0,0,-1,1,2
-HardDriver,1,3,4,0,3,44,3,0,0,0.67,0,4
-LaptopBattery,3,2,1,0,2,31,4,0,0,0,0,1
-Motherboard,1,5,2,0,5,33,5,0,1,0.8,3,5
-RamMemory,2,3,1,0,3,25,3,0,0,0.67,0,2
-IComputer,0,1,0,0,0,4,1,1,0,-1,0,2
-ILaptop,0,1,0,0,0,4,1,1,0,-1,0,2
-IRandomNumberProvider,0,2,0,0,0,5,2,1,0,-1,0,4
-IServer,0,1,0,0,0,4,1,1,0,-1,0,2
-IMotherboard,0,3,0,0,0,18,3,1,0,-1,0,0
-ICommandInfo,0,0,2,0,0,11,0,1,0,-1,0,4
-IDrawStrategy,0,2,0,0,0,5,2,1,0,-1,0,2
-DellLaptop,3,1,0,0,1,18,1,0,2,0,1,1
-DellManufacturer,0,3,0,0,3,18,3,0,1,-1,3,0
-DellPersonalComputer,3,1,0,0,1,17,1,0,2,0,1,1
-DellServer,3,2,0,0,1,27,2,0,2,0,2,1
-HpLaptop,3,1,0,0,1,18,1,0,2,0,1,1
-HpManufacturer,0,3,0,0,3,18,3,0,1,-1,3,0
-HpPersonalComputer,3,1,0,0,1,17,1,0,2,0,1,1
-HpServer,3,2,0,0,1,24,2,0,2,0,2,1
-LenovoLaptop,3,1,0,0,1,18,1,0,2,0,1,1
-LenovoManufacturer,0,3,0,0,3,18,3,0,1,-1,3,0
-LenovoPersonalComputer,3,1,0,0,1,17,1,0,2,0,1,1
-LenovoServer,3,2,0,0,1,24,2,0,2,0,2,1
-ComputerType,0,0,0,0,0,6,0,0,0,-1,0,10
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Computers.Models.Abstracts,Laptop,1,1,1,0,1,12,1,3,1,0,2,0,Computers.Models.Components.LaptopBattery' Computers.Models.Components.Motherboard,
+Computers.Models.Abstracts,Computer,4,1,0,0,1,20,2,3,1,0,2,0,Computers.Models.Abstracts.Cpu' Computers.Models.Components.Motherboard,
+Computers.Models.Abstracts,Machine,1,0,6,0,0,24,0,3,0,-1,1,0,Computers.Models.Components.VideoCard,
+Computers.Models.Abstracts,Server,0,1,0,0,1,8,1,3,1,-1,2,0,Computers.Models.Components.Motherboard' Computers.Models.Abstracts.Cpu,
+Computers.Models.Abstracts,Cpu,4,5,3,0,4,46,6,3,0,0.6,2,2,Computers.Models.Contracts.IRandomNumberProvider' Computers.Models.Components.Motherboard,Computers.Models.Abstracts.Computer' Computers.Models.Abstracts.Server
+Computers.Models.Abstracts,Manufacturer,0,3,0,0,3,6,3,3,0,-1,0,3,,Computers.Console.ComputersEntryPoint' Computers.Data.ManufacturerFactory' Computers.Data.Store
+Computers.Models,CommandInfo,2,1,2,0,1,32,1,0,1,0,0,1,,Computers.Data.CommandParser
+Computers.Models,VideoCardDrawStrategy,0,2,0,0,2,15,2,0,1,-1,0,0,,
+Computers.Models,RandomNumberProvider,1,2,0,0,2,13,2,0,1,0,0,0,,
+Computers.Models.Components,Cpu128Bits,3,3,0,0,3,19,3,0,1,1,2,0,Computers.Models.Components.Motherboard' Computers.Models.Contracts.IRandomNumberProvider,
+Computers.Models.Components,Cpu32Bits,3,3,0,0,3,19,3,0,1,1,2,0,Computers.Models.Components.Motherboard' Computers.Models.Contracts.IRandomNumberProvider,
+Computers.Models.Components,Cpu64Bits,3,3,0,0,3,19,3,0,1,1,2,0,Computers.Models.Components.Motherboard' Computers.Models.Contracts.IRandomNumberProvider,
+Computers.Models.Components,VideoCard,0,2,1,0,2,19,3,0,0,-1,1,2,Computers.Models.Contracts.IDrawStrategy,Computers.Models.Abstracts.Machine' Computers.Models.Components.Motherboard
+Computers.Models.Components,HardDriver,1,3,4,0,3,44,3,0,0,0.67,0,3,,Computers.Models.DellComputers.DellServer' Computers.Models.HpComputers.HpServer' Computers.Models.LenovoComputers.LenovoServer
+Computers.Models.Components,LaptopBattery,3,2,1,0,2,38,3,0,0,0,0,1,,Computers.Models.Abstracts.Laptop
+Computers.Models.Components,Motherboard,1,5,2,0,5,28,5,0,1,0.8,3,7,Computers.Models.Contracts.IDrawStrategy' Computers.Models.Components.RamMemory' Computers.Models.Components.VideoCard,Computers.Models.Abstracts.Laptop' Computers.Models.Abstracts.Computer' Computers.Models.Abstracts.Server' Computers.Models.Abstracts.Cpu' Computers.Models.Components.Cpu128Bits' Computers.Models.Components.Cpu32Bits' Computers.Models.Components.Cpu64Bits
+Computers.Models.Components,RamMemory,2,3,1,0,3,28,3,0,0,0.67,0,1,,Computers.Models.Components.Motherboard
+Computers.Models.Contracts,IComputer,0,1,0,0,0,4,1,1,0,-1,0,1,,Computers.Data.CommandProcessor
+Computers.Models.Contracts,ILaptop,0,1,0,0,0,4,1,1,0,-1,0,1,,Computers.Data.CommandProcessor
+Computers.Models.Contracts,IRandomNumberProvider,0,2,0,0,0,5,2,1,0,-1,0,4,,Computers.Models.Abstracts.Cpu' Computers.Models.Components.Cpu128Bits' Computers.Models.Components.Cpu32Bits' Computers.Models.Components.Cpu64Bits
+Computers.Models.Contracts,IServer,0,1,0,0,0,4,1,1,0,-1,0,1,,Computers.Data.CommandProcessor
+Computers.Models.Contracts,IMotherboard,0,3,0,0,0,18,3,1,0,-1,0,0,,
+Computers.Models.Contracts,ICommandInfo,0,0,2,0,0,5,0,1,0,-1,0,4,,Computers.Console.TemplateMethod.CommandExecutor' Computers.Console.TemplateMethod.CommandExecutorTemplateMethod' Computers.Data.CommandProcessor' Computers.Data.Contracts.ICommandProcessor
+Computers.Models.Contracts,IDrawStrategy,0,2,0,0,0,5,2,1,0,-1,0,2,,Computers.Models.Components.VideoCard' Computers.Models.Components.Motherboard
+Computers.Models.DellComputers,DellLaptop,3,1,0,0,1,16,1,0,2,0,1,1,Computers.Models.Enumerations.ComputerType,Computers.Models.DellComputers.DellManufacturer
+Computers.Models.DellComputers,DellManufacturer,0,3,0,0,3,18,3,0,1,-1,3,0,Computers.Models.DellComputers.DellPersonalComputer' Computers.Models.DellComputers.DellServer' Computers.Models.DellComputers.DellLaptop,
+Computers.Models.DellComputers,DellPersonalComputer,3,1,0,0,1,15,1,0,2,0,1,1,Computers.Models.Enumerations.ComputerType,Computers.Models.DellComputers.DellManufacturer
+Computers.Models.DellComputers,DellServer,3,2,0,0,1,30,2,0,2,0,2,1,Computers.Models.Enumerations.ComputerType' Computers.Models.Components.HardDriver,Computers.Models.DellComputers.DellManufacturer
+Computers.Models.HpComputers,HpLaptop,3,1,0,0,1,16,1,0,2,0,1,1,Computers.Models.Enumerations.ComputerType,Computers.Models.HpComputers.HpManufacturer
+Computers.Models.HpComputers,HpManufacturer,0,3,0,0,3,18,3,0,1,-1,3,0,Computers.Models.HpComputers.HpPersonalComputer' Computers.Models.HpComputers.HpServer' Computers.Models.HpComputers.HpLaptop,
+Computers.Models.HpComputers,HpPersonalComputer,3,1,0,0,1,15,1,0,2,0,1,1,Computers.Models.Enumerations.ComputerType,Computers.Models.HpComputers.HpManufacturer
+Computers.Models.HpComputers,HpServer,3,2,0,0,1,26,2,0,2,0,2,1,Computers.Models.Enumerations.ComputerType' Computers.Models.Components.HardDriver,Computers.Models.HpComputers.HpManufacturer
+Computers.Models.LenovoComputers,LenovoLaptop,3,1,0,0,1,16,1,0,2,0,1,1,Computers.Models.Enumerations.ComputerType,Computers.Models.LenovoComputers.LenovoManufacturer
+Computers.Models.LenovoComputers,LenovoManufacturer,0,3,0,0,3,18,3,0,1,-1,3,0,Computers.Models.LenovoComputers.LenovoPersonalComputer' Computers.Models.LenovoComputers.LenovoServer' Computers.Models.LenovoComputers.LenovoLaptop,
+Computers.Models.LenovoComputers,LenovoPersonalComputer,3,1,0,0,1,15,1,0,2,0,1,1,Computers.Models.Enumerations.ComputerType,Computers.Models.LenovoComputers.LenovoManufacturer
+Computers.Models.LenovoComputers,LenovoServer,3,2,0,0,1,25,2,0,2,0,2,1,Computers.Models.Enumerations.ComputerType' Computers.Models.Components.HardDriver,Computers.Models.LenovoComputers.LenovoManufacturer
+Computers.Models.Enumerations,ComputerType,0,0,0,0,0,6,0,0,0,-1,0,9,,Computers.Models.DellComputers.DellLaptop' Computers.Models.DellComputers.DellPersonalComputer' Computers.Models.DellComputers.DellServer' Computers.Models.HpComputers.HpLaptop' Computers.Models.HpComputers.HpPersonalComputer' Computers.Models.HpComputers.HpServer' Computers.Models.LenovoComputers.LenovoLaptop' Computers.Models.LenovoComputers.LenovoPersonalComputer' Computers.Models.LenovoComputers.LenovoServer

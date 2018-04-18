@@ -1,0 +1,4 @@
+Architecture smell,Project,Namespace,Cause,Responsible Classes
+Cyclic Dependency,cmd,cmd.Commands,The tool detected the smell in this component because this component participates in a cyclic dependency. The participating components in the cycle are: cmd.Commands' cmd.Runner,cmd.Commands.CmdCommando' cmd.Runner.IRunner' cmd.Runner.RunOptions
+Unstable Dependency,cmd,cmd.Runner,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): cmd.Commands,cmd.Runner.ICommando
+Ambiguous Interface,cmd,cmd.Runner.Arguments,The tool detected the smell in this component because the component provides only a single' general entry-point via the following class: ArgumentBuilder,cmd.Runner.Arguments.ArgumentBuilder

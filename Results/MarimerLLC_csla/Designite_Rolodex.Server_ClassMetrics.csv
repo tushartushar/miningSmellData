@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Rolodex.Business.BusinessClasses,Company,5,10,5,5,2,179,12,0,0,0.5,4,3,Rolodex.Business.Data.DataConnection' Rolodex.Business.BusinessClasses.CompanyContactList' Rolodex.Business.BusinessClasses.Ranks' RolodexEF.Companies,Rolodex.Business.BusinessClasses.CompanyContact' Rolodex.Business.BusinessClasses.ReadOnlyCompany' Rolodex.Silverlight.ViewModels.CompaniesListModel
+Rolodex.Business.BusinessClasses,CompanyContact,9,10,9,9,1,213,12,0,0,0.4,6,3,Rolodex.Business.BusinessClasses.CompanyContactPhoneList' RolodexEF.CompanyContacts' RolodexEF.Companies' RolodexEF.Ranks' Rolodex.Business.Data.DataConnection' Rolodex.Business.BusinessClasses.Company,Rolodex.Business.BusinessClasses.CompanyContactList' Rolodex.Business.BusinessClasses.CompanyContactPhone' Rolodex.Silverlight.ViewModels.CompanyEditModel
+Rolodex.Business.BusinessClasses,CompanyContactList,0,4,1,0,0,31,5,0,0,-1,2,1,Rolodex.Business.BusinessClasses.CompanyContact' RolodexEF.Companies,Rolodex.Business.BusinessClasses.Company
+Rolodex.Business.BusinessClasses,CompanyContactPhone,4,10,4,4,1,136,13,0,0,0.4,4,2,RolodexEF.CompanyContactPhones' RolodexEF.CompanyContacts' Rolodex.Business.Data.DataConnection' Rolodex.Business.BusinessClasses.CompanyContact,Rolodex.Business.BusinessClasses.CompanyContactPhoneList' Rolodex.Silverlight.ViewModels.CompanyEditModel
+Rolodex.Business.BusinessClasses,CompanyContactPhoneList,0,4,0,0,0,27,5,0,0,-1,2,2,Rolodex.Business.BusinessClasses.CompanyContactPhone' RolodexEF.CompanyContacts,Rolodex.Business.BusinessClasses.CompanyContact' Rolodex.Silverlight.ViewModels.CompanyEditModel
+Rolodex.Business.BusinessClasses,DuplicateCompanyCommand,3,3,3,3,2,58,3,0,0,1,1,1,Rolodex.Business.Data.DataConnection,Rolodex.Business.Rules.IsDuplicateNameAsync
+Rolodex.Business.BusinessClasses,Rank,2,7,2,2,1,94,8,0,0,0.43,2,1,RolodexEF.Ranks' Rolodex.Business.Data.DataConnection,Rolodex.Business.BusinessClasses.RankList
+Rolodex.Business.BusinessClasses,RankList,0,2,0,0,1,24,2,0,0,-1,2,0,Rolodex.Business.Data.DataConnection' Rolodex.Business.BusinessClasses.Rank,
+Rolodex.Business.BusinessClasses,Ranks,0,3,0,0,2,30,3,0,0,-1,1,2,Rolodex.Business.Data.DataConnection,Rolodex.Business.BusinessClasses.Company' Rolodex.Silverlight.ViewModels.CompanyEditModel
+Rolodex.Business.BusinessClasses,ReadOnlyCompany,2,4,2,2,2,36,4,0,0,1,1,2,Rolodex.Business.BusinessClasses.Company,Rolodex.Business.BusinessClasses.ReadOnlyCompanyList' Rolodex.Silverlight.ViewModels.CompaniesListModel
+Rolodex.Business.BusinessClasses,ReadOnlyCompanyList,0,2,0,0,1,28,2,0,0,-1,2,0,Rolodex.Business.Data.DataConnection' Rolodex.Business.BusinessClasses.ReadOnlyCompany,
+Rolodex.Business.Rules,IsDateValid,0,3,0,0,2,43,6,0,0,-1,0,0,,
+Rolodex.Business.Rules,IsDuplicateNameAsync,0,2,1,0,1,34,2,0,0,-1,1,0,Rolodex.Business.BusinessClasses.DuplicateCompanyCommand,
+Rolodex.Business.Data,DataConnection,0,0,1,0,0,10,0,0,0,-1,0,9,,Rolodex.Business.BusinessClasses.Company' Rolodex.Business.BusinessClasses.CompanyContact' Rolodex.Business.BusinessClasses.CompanyContactPhone' Rolodex.Business.BusinessClasses.DuplicateCompanyCommand' Rolodex.Business.BusinessClasses.Rank' Rolodex.Business.BusinessClasses.RankList' Rolodex.Business.BusinessClasses.Ranks' Rolodex.Business.BusinessClasses.ReadOnlyCompanyList' Rolodex.Business.Security.RolodexIdentity
+Rolodex.Business.Data,EntityExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
+Rolodex.Business.Security,CredentialsCriteria,2,4,2,0,2,39,4,0,0,0.5,0,1,,Rolodex.Business.Security.RolodexIdentity
+Rolodex.Business.Security,RolodexIdentity,1,2,1,1,1,31,2,0,0,1,2,1,Rolodex.Business.Data.DataConnection' Rolodex.Business.Security.CredentialsCriteria,Rolodex.Business.Security.RolodexPrincipal
+Rolodex.Business.Security,RolodexPrincipal,0,6,0,0,4,31,6,0,0,-1,1,1,Rolodex.Business.Security.RolodexIdentity,Rolodex.Silverlight.ViewModels.LoginViewModel

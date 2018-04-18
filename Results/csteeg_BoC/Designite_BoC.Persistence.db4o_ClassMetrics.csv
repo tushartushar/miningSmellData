@@ -1,0 +1,15 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BoC.Persistence.db4o.AutoIncrement,AutoIncrementSupport,1,4,0,0,1,29,5,0,0,0.5,2,1,BoC.Persistence.db4o.AutoIncrement.IdGenerator' BoC.Persistence.IBaseEntity,BoC.Persistence.db4o.Db4oSessionFactory
+BoC.Persistence.db4o.AutoIncrement,IdGenerator,1,5,0,0,2,55,7,0,0,0,1,1,BoC.Persistence.db4o.AutoIncrement.PersistedAutoIncrements,BoC.Persistence.db4o.AutoIncrement.AutoIncrementSupport
+BoC.Persistence.db4o.AutoIncrement,PersistedAutoIncrements,1,1,1,0,1,19,2,0,0,0,0,1,,BoC.Persistence.db4o.AutoIncrement.IdGenerator
+BoC.Persistence.db4o,Db4oSessionFactory,1,4,0,0,3,55,9,0,1,0.5,3,1,BoC.InversionOfControl.IDependencyResolver' BoC.Persistence.db4o.IConfigurationExtender' BoC.Persistence.db4o.AutoIncrement.AutoIncrementSupport,BoC.Persistence.db4o.DefaultSetupTasks.AutoDb4oConfigurator
+BoC.Persistence.db4o,IConfigurationExtender,0,1,0,0,0,4,1,0,0,-1,0,1,,BoC.Persistence.db4o.Db4oSessionFactory
+BoC.Persistence.db4o,ISessionFactory,0,1,0,0,0,4,1,1,0,-1,0,1,,BoC.Persistence.db4o.DataContext.Db4oDataContext
+BoC.Persistence.db4o,ISessionManager,0,0,1,0,0,4,0,1,0,-1,0,2,,BoC.Persistence.db4o.DefaultSetupTasks.AutoDb4oRepositoryGenerator' BoC.Persistence.db4o.Repository.Db4oRepository<T>
+BoC.Persistence.db4o.DefaultSetupTasks,AutoDb4oConfigurator,1,2,0,0,2,27,6,0,1,0,2,0,BoC.InversionOfControl.IDependencyResolver' BoC.Persistence.db4o.Db4oSessionFactory,
+BoC.Persistence.db4o.DefaultSetupTasks,AutoDb4oRepositoryGenerator,2,2,0,0,2,19,3,0,1,0,4,0,BoC.InversionOfControl.IDependencyResolver' BoC.Helpers.IAppDomainHelper' BoC.Persistence.RepositoryGenerator' BoC.Persistence.db4o.ISessionManager,
+BoC.Persistence.db4o.Repository,Db4oEnlist,2,5,0,0,5,33,5,0,0,0.6,0,1,,BoC.Persistence.db4o.Repository.Db4oRepository<T>
+BoC.Persistence.db4o.Repository,Db4oRepository<T>,1,17,0,0,9,134,19,0,1,0.71,2,0,BoC.Persistence.db4o.ISessionManager' BoC.Persistence.db4o.Repository.Db4oEnlist,
+BoC.Persistence.db4o.DataContext,Db4oDataContext,2,2,1,0,1,48,4,0,2,1,1,0,BoC.Persistence.db4o.ISessionFactory,
+BoC.Persistence.db4o.DataContext,Db4oDataContextSessionManager,0,0,1,0,0,14,0,0,1,-1,0,0,,
+BoC.Persistence.db4o.DataContext,DataContextException,0,4,0,0,3,7,4,0,0,-1,0,0,,

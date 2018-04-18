@@ -1,25 +1,35 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ArduinoSTK,1,11,0,0,11,314,45,0,1,0.45,1,0
-ArduinoSTKv2,1,13,0,0,12,351,46,0,1,0.23,1,0
-IArduinoComms,0,11,7,0,0,46,11,2,0,-1,0,0
-Chip,7,5,0,6,5,75,7,0,0,0.4,0,2
-SerialPort,4,9,2,0,5,264,24,1,1,0.22,1,20
-SerialPortFixer,4,9,0,0,2,167,25,0,0,0.22,0,1
-ICommsSerial,0,12,15,0,0,87,12,2,0,-1,0,13
-MAVLinkSerialPort,2,1,0,0,1,11,1,0,2,0,1,0
-CustomMessageBox,4,9,0,0,4,263,62,0,0,0.56,1,102
-MyButton,10,8,7,0,1,188,13,0,0,0.38,0,82
-IHex,3,7,0,1,3,111,17,0,0,0,1,2
-Uploader,8,24,0,3,3,433,56,0,0,0,2,1
-Sikradio,106,28,0,0,4,2181,159,0,0,0.11,8,2
-Common,1,1,0,0,1,50,3,0,0,0,0,1
-MainV2,1,0,0,1,0,4,0,0,0,-1,1,4
-portproxy,1,1,0,1,1,9,1,0,0,0,0,2
-XModem,6,3,0,0,3,86,17,0,0,0,2,1
-Config,17,14,0,0,1,277,16,0,0,0.29,6,0
-Program,1,1,0,0,0,16,1,0,0,0,0,0
-Rssi,11,6,0,0,1,167,13,0,0,0,8,1
-Terminal,8,10,0,1,1,224,22,0,0,0.3,3,2
-ThemeManager,2,4,0,0,2,164,32,0,0,0,2,1
-Resources,2,1,3,0,0,54,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MissionPlanner.Arduino,ArduinoSTK,1,11,0,0,11,314,46,0,1,0.45,2,0,MissionPlanner.Comms.SerialPort' MissionPlanner.Arduino.Chip,
+MissionPlanner.Arduino,ArduinoSTKv2,1,13,0,0,12,348,42,0,1,0.23,2,0,MissionPlanner.Comms.SerialPort' MissionPlanner.Arduino.Chip,
+MissionPlanner.Arduino,IArduinoComms,0,11,7,0,0,23,11,2,0,-1,0,0,,
+MissionPlanner.Arduino,Chip,7,5,0,6,5,60,7,0,0,0.4,0,2,,MissionPlanner.Arduino.ArduinoSTK' MissionPlanner.Arduino.ArduinoSTKv2
+MissionPlanner.Comms,SerialPort,4,9,2,0,5,264,20,3,1,0.22,1,7,MissionPlanner.Comms.SerialPortFixer,MissionPlanner.Arduino.ArduinoSTK' MissionPlanner.Arduino.ArduinoSTKv2' MissionPlanner.Sikradio' MissionPlanner.portproxy' SikRadio.Config' SikRadio.Rssi' SikRadio.Terminal
+MissionPlanner.Comms,SerialPortFixer,4,9,0,0,2,189,22,0,0,0.22,3,1,MissionPlanner.Comms.NativeMethods' MissionPlanner.Comms.Dcb' MissionPlanner.Comms.Comstat,MissionPlanner.Comms.SerialPort
+MissionPlanner.Comms,NativeMethods,0,6,0,0,0,18,6,0,0,-1,2,1,MissionPlanner.Comms.Dcb' MissionPlanner.Comms.Comstat,MissionPlanner.Comms.SerialPortFixer
+MissionPlanner.Comms,Comstat,3,0,0,3,0,7,0,0,0,-1,0,2,,MissionPlanner.Comms.SerialPortFixer' MissionPlanner.Comms.NativeMethods
+MissionPlanner.Comms,Dcb,15,0,0,15,0,19,0,0,0,-1,0,2,,MissionPlanner.Comms.SerialPortFixer' MissionPlanner.Comms.NativeMethods
+MissionPlanner.Comms,ICommsSerial,0,12,15,0,0,46,12,1,0,-1,0,4,,uploader.Uploader' MissionPlanner.Sikradio' MissionPlanner.Radio.XModem' SikRadio.Terminal
+MissionPlanner.Comms,MAVLinkSerialPort,2,1,0,0,1,11,1,0,2,0,1,0,MissionPlanner.portproxy,
+System,CustomMessageBox,4,9,0,0,4,281,24,0,0,0.22,1,4,MissionPlanner.Controls.MyButton,MissionPlanner.Sikradio' MissionPlanner.Radio.XModem' SikRadio.Rssi' SikRadio.Terminal
+MissionPlanner.Controls,MyButton,10,8,7,0,1,139,13,0,0,0.38,0,4,,System.CustomMessageBox' MissionPlanner.Utilities.ThemeManager' MissionPlanner.Sikradio' SikRadio.Rssi
+MissionPlanner.Utilities,DownloadStream,8,10,6,0,6,153,14,0,0,0.4,1,0,MissionPlanner.Utilities.Download,
+MissionPlanner.Utilities,Download,1,7,0,0,6,159,17,0,0,0.43,0,2,,MissionPlanner.Utilities.DownloadStream' MissionPlanner.Sikradio
+MissionPlanner.Utilities,ThemeManager,2,4,0,0,2,187,12,0,0,0,2,1,MissionPlanner.Utilities.Themes' MissionPlanner.Controls.MyButton,SikRadio.Config
+MissionPlanner.Utilities,Themes,0,0,0,0,0,11,0,0,0,-1,0,2,,MissionPlanner.Utilities.ThemeManager' SikRadio.Config
+uploader,IHex,3,7,0,1,3,122,16,0,0,0,0,2,,uploader.Uploader' MissionPlanner.Sikradio
+uploader,Uploader,8,24,0,3,3,456,53,0,0,0,5,1,uploader.Frequency' uploader.Board' MissionPlanner.Comms.ICommsSerial' uploader.IHex' uploader.Code,MissionPlanner.Sikradio
+uploader,Board,0,0,0,0,0,12,0,0,0,-1,0,2,,uploader.Uploader' MissionPlanner.Sikradio
+uploader,Code,0,0,0,0,0,19,0,0,0,-1,0,1,,uploader.Uploader
+uploader,Frequency,0,0,0,0,0,10,0,0,0,-1,0,2,,uploader.Uploader' MissionPlanner.Sikradio
+MissionPlanner,Sikradio,106,28,0,0,4,2382,107,0,0,0.11,13,2,MissionPlanner.Controls.MyButton' MissionPlanner.mavlink_option' uploader.Board' uploader.Uploader' MissionPlanner.Utilities.Download' System.CustomMessageBox' MissionPlanner.Comms.ICommsSerial' MissionPlanner.Comms.SerialPort' MissionPlanner.portproxy' MissionPlanner.MainV2' MissionPlanner.Radio.XModem' uploader.IHex' uploader.Frequency,SikRadio.Config' SikRadio.Rssi
+MissionPlanner,mavlink_option,0,0,0,0,0,6,0,0,0,-1,0,1,,MissionPlanner.Sikradio
+MissionPlanner,Common,1,1,0,0,1,53,3,0,0,0,0,0,,
+MissionPlanner,MainV2,1,0,2,1,0,6,0,0,0,-1,1,4,MissionPlanner.portproxy,MissionPlanner.Sikradio' SikRadio.Config' SikRadio.Rssi' SikRadio.Terminal
+MissionPlanner,portproxy,1,1,0,1,1,9,1,0,0,0,1,6,MissionPlanner.Comms.SerialPort,MissionPlanner.Comms.MAVLinkSerialPort' MissionPlanner.Sikradio' MissionPlanner.MainV2' SikRadio.Config' SikRadio.Rssi' SikRadio.Terminal
+MissionPlanner.Radio,XModem,6,3,0,0,3,96,6,0,0,0,2,1,MissionPlanner.Comms.ICommsSerial' System.CustomMessageBox,MissionPlanner.Sikradio
+SikRadio,Config,17,14,0,0,1,277,16,0,0,0.29,9,0,MissionPlanner.Comms.SerialPort' MissionPlanner.Sikradio' SikRadio.Terminal' MissionPlanner.Utilities.ThemeManager' MissionPlanner.Utilities.Themes' SikRadio.Rssi' MissionPlanner.portproxy' MissionPlanner.MainV2' SikRadio.Properties.Resources,
+SikRadio,Program,1,1,0,0,0,16,1,0,0,0,0,0,,
+SikRadio,Rssi,11,6,0,0,1,181,12,0,0,0,12,1,MissionPlanner.Sikradio' ZedGraph.RollingPointPairList' ZedGraph.ZedGraphControl' MissionPlanner.Controls.MyButton' ZedGraph.GraphPane' ZedGraph.SymbolType' ZedGraph.Label' SikRadio.Terminal' System.CustomMessageBox' MissionPlanner.Comms.SerialPort' MissionPlanner.portproxy' MissionPlanner.MainV2,SikRadio.Config
+SikRadio,Terminal,8,10,0,1,1,266,20,0,0,0.3,5,2,MissionPlanner.Comms.ICommsSerial' MissionPlanner.Comms.SerialPort' MissionPlanner.portproxy' MissionPlanner.MainV2' System.CustomMessageBox,SikRadio.Config' SikRadio.Rssi
+SikRadio.Properties,Resources,2,1,3,0,0,51,1,0,0,0,0,1,,SikRadio.Config
+SikRadio.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

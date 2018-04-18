@@ -1,17 +1,45 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ILog,0,1,0,0,0,26,1,1,0,-1,1,2
-LogLevel,0,0,0,0,0,17,0,0,0,-1,0,3
-LogExtensions,0,35,0,0,31,200,55,0,0,-1,2,0
-ILogProvider,0,3,0,0,0,30,3,1,0,-1,0,1
-LogProvider,4,10,3,0,7,216,14,0,0,0.5,9,0
-LoggerExecutionWrapper,3,2,1,0,1,35,4,0,1,0,1,1
-LogProviderBase,3,6,0,0,3,30,6,5,1,0.5,1,0
-NLogLogProvider,2,7,1,0,3,279,8,0,2,0.43,1,1
-Log4NetLogProvider,2,7,1,0,2,239,8,0,2,0.43,1,1
-EntLibLogProvider,7,7,1,0,2,121,9,0,2,0,1,1
-SerilogLogProvider,2,8,1,0,2,169,9,0,2,0.25,0,1
-LoupeLogProvider,2,5,1,0,3,97,6,0,2,0,0,1
-TraceEventTypeValues,6,1,0,0,0,26,2,0,0,0,0,1
-LogMessageFormatter,1,3,0,0,2,64,10,0,0,0,0,0
-TypeExtensions,0,8,0,0,0,80,8,0,0,-1,0,0
-DisposableAction,1,2,0,0,2,14,3,0,0,0,0,4
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+LibLogAssembly.Logging,ILog,0,1,0,0,0,22,1,4,0,-1,1,4,LibLogAssembly.Logging.LogLevel,LibLogAssembly.Logging.LogExtensions' LibLogAssembly.Logging.LogProvider' LibLogAssembly.Logging.LogProviders.LogExtensions' LibLogAssembly.Logging.LogProviders.LogProvider
+LibLogAssembly.Logging,LogLevel,0,0,0,0,0,11,0,0,0,-1,0,18,,LibLogAssembly.Logging.ILog' LibLogAssembly.Logging.LogExtensions' LibLogAssembly.Logging.NoOpLogger' LibLogAssembly.Logging.LoggerExecutionWrapper' LibLogAssembly.Logging.NLogLogger' LibLogAssembly.Logging.Log4NetLogger' LibLogAssembly.Logging.EntLibLogger' LibLogAssembly.Logging.SerilogLogger' LibLogAssembly.Logging.LoupeLogger' LibLogAssembly.Logging.LogProviders.ILog' LibLogAssembly.Logging.LogProviders.LogExtensions' LibLogAssembly.Logging.LogProviders.NoOpLogger' LibLogAssembly.Logging.LogProviders.LoggerExecutionWrapper' LibLogAssembly.Logging.LogProviders.NLogLogger' LibLogAssembly.Logging.LogProviders.Log4NetLogger' LibLogAssembly.Logging.LogProviders.EntLibLogger' LibLogAssembly.Logging.LogProviders.SerilogLogger' LibLogAssembly.Logging.LogProviders.LoupeLogger
+LibLogAssembly.Logging,LogExtensions,0,35,0,0,31,220,55,0,0,-1,2,2,LibLogAssembly.Logging.ILog' LibLogAssembly.Logging.LogLevel,LibLogAssembly.Logging.NLogLogger' LibLogAssembly.Logging.LogProviders.NLogLogger
+LibLogAssembly.Logging,ILogProvider,0,3,0,0,0,24,3,2,0,-1,0,2,,LibLogAssembly.Logging.LogProvider' LibLogAssembly.Logging.LogProviders.LogProvider
+LibLogAssembly.Logging,LogProvider,4,10,3,0,7,226,13,0,0,0.3,3,1,LibLogAssembly.Logging.ILogProvider' LibLogAssembly.Logging.ILog' LibLogAssembly.Logging.NoOpLogger,LibLogAssembly.Logging.LogProviders.LogProvider
+LibLogAssembly.Logging,NoOpLogger,1,1,0,0,1,8,1,0,1,0,1,3,LibLogAssembly.Logging.LogLevel,LibLogAssembly.Logging.LogProvider' LibLogAssembly.Logging.LogProviders.LogProvider' LibLogAssembly.Logging.LogProviders.NoOpLogger
+LibLogAssembly.Logging,LoggerExecutionWrapper,3,2,1,0,1,40,4,0,1,0,1,2,LibLogAssembly.Logging.LogLevel,LibLogAssembly.Logging.NLogLogger' LibLogAssembly.Logging.LogProviders.NLogLogger
+LibLogAssembly.Logging,LogProviderBase,3,6,0,0,3,32,6,0,1,0.5,0,0,,
+LibLogAssembly.Logging,NLogLogProvider,2,7,1,0,3,316,8,0,1,0.86,2,0,LibLogAssembly.Logging.LogProviders.NLogLogger' LibLogAssembly.Logging.LogProviders.DisposableAction,
+LibLogAssembly.Logging,NLogLogger,8,7,0,0,1,247,23,0,0,0.29,5,0,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogProviders.NLogLogger' LibLogAssembly.Logging.LogLevel' LibLogAssembly.Logging.LoggerExecutionWrapper' LibLogAssembly.Logging.LogExtensions,
+LibLogAssembly.Logging,Log4NetLogProvider,2,7,1,0,2,308,8,0,1,0.86,2,0,LibLogAssembly.Logging.LogProviders.Log4NetLogger' LibLogAssembly.Logging.LogProviders.DisposableAction,
+LibLogAssembly.Logging,Log4NetLogger,12,10,0,0,1,220,19,0,0,0.6,2,0,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogLevel,
+LibLogAssembly.Logging,EntLibLogProvider,7,7,1,0,2,153,9,0,1,0.29,2,0,LibLogAssembly.Logging.LogProviders.TraceEventTypeValues' LibLogAssembly.Logging.LogProviders.EntLibLogger,
+LibLogAssembly.Logging,EntLibLogger,3,4,0,0,2,51,7,0,0,0.5,3,0,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogLevel' LibLogAssembly.Logging.LogProviders.TraceEventTypeValues,
+LibLogAssembly.Logging,SerilogLogProvider,2,8,1,0,2,219,9,0,1,0.88,1,0,LibLogAssembly.Logging.LogProviders.SerilogLogger,
+LibLogAssembly.Logging,SerilogLogger,10,6,0,0,1,136,12,0,0,0,1,0,LibLogAssembly.Logging.LogLevel,
+LibLogAssembly.Logging,LoupeLogProvider,2,5,1,0,3,113,6,0,1,0.8,1,0,LibLogAssembly.Logging.LogProviders.LoupeLogger,
+LibLogAssembly.Logging,LoupeLogger,4,3,0,0,1,49,5,0,0,0.67,3,0,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogLevel' LibLogAssembly.Logging.LogProviders.TraceEventTypeValues,
+LibLogAssembly.Logging,TraceEventTypeValues,6,1,0,0,0,25,3,0,0,0,0,0,,
+LibLogAssembly.Logging,LogMessageFormatter,1,3,0,0,2,75,9,0,0,1,0,0,,
+LibLogAssembly.Logging,TypeExtensions,0,8,0,0,0,79,8,0,0,-1,0,0,,
+LibLogAssembly.Logging,DisposableAction,1,2,0,0,2,15,3,0,0,0,0,0,,
+LibLogAssembly.Logging.LogProviders,ILog,0,1,0,0,0,22,1,0,0,-1,1,0,LibLogAssembly.Logging.LogLevel,
+LibLogAssembly.Logging.LogProviders,LogLevel,0,0,0,0,0,11,0,0,0,-1,0,0,,
+LibLogAssembly.Logging.LogProviders,LogExtensions,0,35,0,0,31,220,55,0,0,-1,2,0,LibLogAssembly.Logging.ILog' LibLogAssembly.Logging.LogLevel,
+LibLogAssembly.Logging.LogProviders,ILogProvider,0,3,0,0,0,24,3,0,0,-1,0,0,,
+LibLogAssembly.Logging.LogProviders,LogProvider,4,10,3,0,7,226,13,0,0,0.9,4,0,LibLogAssembly.Logging.ILogProvider' LibLogAssembly.Logging.ILog' LibLogAssembly.Logging.NoOpLogger' LibLogAssembly.Logging.LogProvider,
+LibLogAssembly.Logging.LogProviders,NoOpLogger,1,1,0,0,1,8,1,0,1,0,2,0,LibLogAssembly.Logging.NoOpLogger' LibLogAssembly.Logging.LogLevel,
+LibLogAssembly.Logging.LogProviders,LoggerExecutionWrapper,3,2,1,0,1,40,4,0,1,0,1,0,LibLogAssembly.Logging.LogLevel,
+LibLogAssembly.Logging.LogProviders,LogProviderBase,3,6,0,0,3,32,6,10,1,0.5,0,0,,
+LibLogAssembly.Logging.LogProviders,NLogLogProvider,2,7,1,0,3,316,8,0,2,0.43,2,0,LibLogAssembly.Logging.LogProviders.NLogLogger' LibLogAssembly.Logging.LogProviders.DisposableAction,
+LibLogAssembly.Logging.LogProviders,NLogLogger,8,7,0,0,1,247,23,0,0,0,4,3,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogLevel' LibLogAssembly.Logging.LoggerExecutionWrapper' LibLogAssembly.Logging.LogExtensions,LibLogAssembly.Logging.NLogLogProvider' LibLogAssembly.Logging.NLogLogger' LibLogAssembly.Logging.LogProviders.NLogLogProvider
+LibLogAssembly.Logging.LogProviders,Log4NetLogProvider,2,7,1,0,2,308,8,0,2,0.43,2,0,LibLogAssembly.Logging.LogProviders.Log4NetLogger' LibLogAssembly.Logging.LogProviders.DisposableAction,
+LibLogAssembly.Logging.LogProviders,Log4NetLogger,12,10,0,0,1,220,19,0,0,0,2,2,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogLevel,LibLogAssembly.Logging.Log4NetLogProvider' LibLogAssembly.Logging.LogProviders.Log4NetLogProvider
+LibLogAssembly.Logging.LogProviders,EntLibLogProvider,7,7,1,0,2,153,9,0,2,0,2,0,LibLogAssembly.Logging.LogProviders.TraceEventTypeValues' LibLogAssembly.Logging.LogProviders.EntLibLogger,
+LibLogAssembly.Logging.LogProviders,EntLibLogger,3,4,0,0,2,51,7,0,0,0,3,2,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogLevel' LibLogAssembly.Logging.LogProviders.TraceEventTypeValues,LibLogAssembly.Logging.EntLibLogProvider' LibLogAssembly.Logging.LogProviders.EntLibLogProvider
+LibLogAssembly.Logging.LogProviders,SerilogLogProvider,2,8,1,0,2,219,9,0,2,0.25,1,0,LibLogAssembly.Logging.LogProviders.SerilogLogger,
+LibLogAssembly.Logging.LogProviders,SerilogLogger,10,6,0,0,1,136,12,0,0,0,1,2,LibLogAssembly.Logging.LogLevel,LibLogAssembly.Logging.SerilogLogProvider' LibLogAssembly.Logging.LogProviders.SerilogLogProvider
+LibLogAssembly.Logging.LogProviders,LoupeLogProvider,2,5,1,0,3,113,6,0,2,0,1,0,LibLogAssembly.Logging.LogProviders.LoupeLogger,
+LibLogAssembly.Logging.LogProviders,LoupeLogger,4,3,0,0,1,49,5,0,0,0,3,2,LibLogAssembly.Logging.LogProviders.LogMessageFormatter' LibLogAssembly.Logging.LogLevel' LibLogAssembly.Logging.LogProviders.TraceEventTypeValues,LibLogAssembly.Logging.LoupeLogProvider' LibLogAssembly.Logging.LogProviders.LoupeLogProvider
+LibLogAssembly.Logging.LogProviders,TraceEventTypeValues,6,1,0,0,0,25,3,0,0,0,0,6,,LibLogAssembly.Logging.EntLibLogProvider' LibLogAssembly.Logging.EntLibLogger' LibLogAssembly.Logging.LoupeLogger' LibLogAssembly.Logging.LogProviders.EntLibLogProvider' LibLogAssembly.Logging.LogProviders.EntLibLogger' LibLogAssembly.Logging.LogProviders.LoupeLogger
+LibLogAssembly.Logging.LogProviders,LogMessageFormatter,1,3,0,0,2,75,9,0,0,0,0,8,,LibLogAssembly.Logging.NLogLogger' LibLogAssembly.Logging.Log4NetLogger' LibLogAssembly.Logging.EntLibLogger' LibLogAssembly.Logging.LoupeLogger' LibLogAssembly.Logging.LogProviders.NLogLogger' LibLogAssembly.Logging.LogProviders.Log4NetLogger' LibLogAssembly.Logging.LogProviders.EntLibLogger' LibLogAssembly.Logging.LogProviders.LoupeLogger
+LibLogAssembly.Logging.LogProviders,TypeExtensions,0,8,0,0,0,79,8,0,0,-1,0,0,,
+LibLogAssembly.Logging.LogProviders,DisposableAction,1,2,0,0,2,15,3,0,0,0,0,4,,LibLogAssembly.Logging.NLogLogProvider' LibLogAssembly.Logging.Log4NetLogProvider' LibLogAssembly.Logging.LogProviders.NLogLogProvider' LibLogAssembly.Logging.LogProviders.Log4NetLogProvider

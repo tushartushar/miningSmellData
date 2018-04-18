@@ -1,0 +1,106 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+kOS,kOSBinding,1,1,0,1,1,5,1,0,0,0,0,1,,kOS.BindingManager
+kOS,BindingManager,4,4,0,4,4,72,13,0,0,0,5,12,kOS.CPU' kOS.kOSBinding' kOS.Binding' kOS.Variable' kOS.BoundVariable,kOS.Binding' kOS.TestBindings' kOS.BindingsFlightStats' kOS.BindingsRoverStats' kOS.BindingsTerminalSettings' kOS.BindingsTest' kOS.BindingTimeWarp' kOS.BindingFlightControls' kOS.LockableControl' kOS.BindingActionGroups' kOS.BindingFlightSettings' kOS.CPU
+kOS,Binding,0,2,0,0,2,5,2,9,0,-1,1,3,kOS.BindingManager,kOS.BindingManager' kOS.BindingsTest' kOS.BindingFlightControls
+kOS,BoundVariable,3,0,1,3,0,17,0,0,1,-1,1,3,kOS.CPU,kOS.BindingManager' kOS.ExecutionContext' kOS.CPU
+kOS,TestBindings,0,1,0,0,1,9,1,0,1,-1,1,0,kOS.BindingManager,
+kOS,BindingsFlightStats,0,4,0,0,1,53,9,0,1,-1,7,0,kOS.BindingManager' kOS.CPU' kOS.VesselUtils' kOS.Node' kOS.VesselTarget' kOS.TimeSpan' kOS.StageValues,
+kOS,BindingsRoverStats,0,1,0,0,1,9,1,0,1,-1,1,0,kOS.BindingManager,
+kOS,BindingsTerminalSettings,0,1,0,0,1,19,1,0,1,-1,5,0,kOS.BindingManager' kOS.CPU' kOS.Core' kOS.VersionInfo' kOS.TerminalButton,
+kOS,BindingsTest,0,2,0,0,2,18,2,0,1,-1,2,0,kOS.BindingManager' kOS.Binding,
+kOS,BindingTimeWarp,0,1,0,0,1,20,2,0,1,-1,2,0,kOS.BindingManager' kOS.Body,
+kOS,Body,2,5,0,2,5,45,7,0,1,0.4,4,4,kOS.ExecutionContext' kOS.Vector' kOS.Atmosphere' kOS.Structure,kOS.BindingTimeWarp' kOS.Expression' kOS.BindingFlightSettings' kOS.Atmosphere
+kOS,CommandAttribute,0,2,1,0,2,9,2,0,0,-1,0,1,,kOS.CommandRegistry
+kOS,CommandRegistry,1,1,0,1,0,18,4,0,0,0,2,1,kOS.CommandAttribute' kOS.Utils,kOS.Command
+kOS,Command,5,11,0,5,11,71,17,34,1,0.55,5,11,kOS.ExecutionContext' kOS.kOSException' kOS.CommandRegistry' kOS.ExecutionState' kOS.Expression,kOS.CommandRunFile' kOS.CommandBlock' kOS.CommandIf' kOS.CommandUntilLoop' kOS.CommandWait' kOS.CommandOnEvent' kOS.CommandWhen' kOS.ContextRunProgram' kOS.ExecutionContext' kOS.ImmediateMode' kOS.kOSException
+kOS,CommandClearScreen,0,2,0,0,2,10,2,0,2,-1,3,0,kOS.ExecutionContext' kOS.SystemMessage' kOS.ExecutionState,
+kOS,CommandShutdown,0,2,0,0,2,10,2,0,2,-1,3,0,kOS.ExecutionContext' kOS.SystemMessage' kOS.ExecutionState,
+kOS,CommandReboot,0,2,0,0,2,10,2,0,2,-1,3,0,kOS.ExecutionContext' kOS.SystemMessage' kOS.ExecutionState,
+kOS,CommandPrintAt,0,2,0,0,2,22,4,0,2,-1,3,0,kOS.ExecutionContext' kOS.Expression' kOS.ExecutionState,
+kOS,CommandPrint,0,2,0,0,2,19,3,0,2,-1,3,0,kOS.ExecutionContext' kOS.Expression' kOS.ExecutionState,
+kOS,CommandTestKegex,0,2,0,0,2,11,2,0,2,-1,3,0,kOS.ExecutionContext' kOS.Expression' kOS.ExecutionState,
+kOS,CommandDeclareVar,0,2,0,0,2,13,3,0,2,-1,3,0,kOS.ExecutionContext' kOS.Variable' kOS.ExecutionState,
+kOS,CommandDeclareParameter,0,2,0,0,2,17,5,0,2,-1,4,0,kOS.ExecutionContext' kOS.Variable' kOS.ContextRunProgram' kOS.ExecutionState,
+kOS,CommandSet,0,2,0,0,2,40,5,0,2,-1,7,0,kOS.ExecutionContext' kOS.Term' kOS.Expression' kOS.Variable' kOS.TermTypes' kOS.Structure' kOS.ExecutionState,
+kOS,CommandToggle,0,2,0,0,2,32,4,0,2,-1,3,0,kOS.ExecutionContext' kOS.Variable' kOS.ExecutionState,
+kOS,CommandSetOn,0,2,0,0,2,39,5,0,2,-1,7,0,kOS.ExecutionContext' kOS.Term' kOS.Variable' kOS.TermTypes' kOS.Expression' kOS.Structure' kOS.ExecutionState,
+kOS,CommandSetOff,0,2,0,0,2,39,5,0,2,-1,7,0,kOS.ExecutionContext' kOS.Term' kOS.Variable' kOS.TermTypes' kOS.Expression' kOS.Structure' kOS.ExecutionState,
+kOS,CommandEditFile,0,2,0,0,2,17,3,0,2,-1,2,0,kOS.ExecutionContext' kOS.ImmediateMode,
+kOS,CommandRunFile,0,5,0,0,5,77,12,0,2,-1,10,0,kOS.ExecutionContext' kOS.File' kOS.Expression' kOS.ContextRunProgram' kOS.Volume' kOS.Utils' kOS.ExecutionState' kOS.Command' kOS.kOSKeys' kOS.ImmediateMode,
+kOS,CommandSwitch,0,2,0,0,2,25,4,0,2,-1,2,0,kOS.ExecutionContext' kOS.ExecutionState,
+kOS,CommandRename,0,2,0,0,2,36,5,0,2,-1,4,0,kOS.ExecutionContext' kOS.Volume' kOS.File' kOS.ExecutionState,
+kOS,CommandLog,0,2,0,0,2,27,4,0,2,-1,4,0,kOS.ExecutionContext' kOS.Volume' kOS.Expression' kOS.ExecutionState,
+kOS,CommandCopy,0,2,0,0,2,27,3,0,2,-1,4,0,kOS.ExecutionContext' kOS.Volume' kOS.File' kOS.ExecutionState,
+kOS,CommandDelete,0,2,0,0,2,26,4,0,2,-1,4,0,kOS.ExecutionContext' kOS.File' kOS.Volume' kOS.ExecutionState,
+kOS,CommandList,0,2,0,0,2,47,4,0,2,-1,4,0,kOS.ExecutionContext' kOS.Volume' kOS.FileInfo' kOS.ExecutionState,
+kOS,CommandBlock,2,7,0,0,7,55,11,0,2,0.57,4,0,kOS.ExecutionContext' kOS.Command' kOS.ExecutionState' kOS.kOSKeys,
+kOS,CommandIf,3,3,0,0,3,33,5,0,2,0.67,5,0,kOS.Expression' kOS.Command' kOS.ExecutionContext' kOS.Utils' kOS.ExecutionState,
+kOS,CommandUntilLoop,3,5,0,0,5,55,8,0,2,0.4,6,0,kOS.Expression' kOS.Command' kOS.ExecutionContext' kOS.Utils' kOS.ExecutionState' kOS.kOSKeys,
+kOS,CommandBreak,0,2,0,0,2,10,2,0,2,-1,2,0,kOS.ExecutionContext' kOS.ExecutionState,
+kOS,CommandCallExternal,0,2,0,0,2,14,2,0,2,-1,3,0,kOS.ExecutionContext' kOS.Expression' kOS.ExecutionState,
+kOS,CommandWait,2,5,0,0,5,56,10,0,2,0.4,5,0,kOS.Expression' kOS.ExecutionContext' kOS.ExecutionState' kOS.kOSKeys' kOS.Command,
+kOS,CommandOnEvent,4,4,0,0,4,52,8,0,2,0.5,5,0,kOS.Variable' kOS.Command' kOS.Expression' kOS.ExecutionContext' kOS.ExecutionState,
+kOS,CommandLock,0,2,0,0,2,13,2,0,2,-1,3,0,kOS.ExecutionContext' kOS.Expression' kOS.ExecutionState,
+kOS,CommandUnlock,0,2,0,0,2,18,3,0,2,-1,2,0,kOS.ExecutionContext' kOS.ExecutionState,
+kOS,CommandWhen,3,3,0,0,3,28,5,0,2,0.67,4,0,kOS.Command' kOS.Expression' kOS.ExecutionContext' kOS.ExecutionState,
+kOS,CommandVesselStage,0,2,0,0,2,10,2,0,2,-1,2,0,kOS.ExecutionContext' kOS.ExecutionState,
+kOS,CommandAddObjectToVessel,0,2,0,0,2,19,3,0,2,-1,4,0,kOS.ExecutionContext' kOS.Expression' kOS.Node' kOS.ExecutionState,
+kOS,CommandRemoveObjectFromVessel,0,2,0,0,2,19,3,0,2,-1,4,0,kOS.ExecutionContext' kOS.Expression' kOS.Node' kOS.ExecutionState,
+kOS,CommandVesselListings,0,2,0,0,2,95,3,0,2,-1,4,0,kOS.ExecutionContext' kOS.VesselTarget' kOS.VesselUtils' kOS.ExecutionState,
+kOS,ContextRunProgram,7,8,0,1,6,155,17,0,1,0,7,3,kOS.File' kOS.ExecutionContext' kOS.ExecutionState' kOS.Command' kOS.kOSException' kOS.Utils' kOS.Expression,kOS.CommandDeclareParameter' kOS.CommandRunFile' kOS.kOSException
+kOS,DebugTools,0,1,0,0,1,37,5,0,0,-1,0,0,,
+kOS,Direction,3,7,3,0,7,89,15,0,1,0.71,2,5,kOS.Structure' kOS.Vector,kOS.Expression' kOS.LockableControl' kOS.SteeringHelper' kOS.Vector' kOS.VesselTarget
+kOS,ExecutionState,0,0,0,0,0,1,0,0,0,-1,0,38,,kOS.Command' kOS.CommandClearScreen' kOS.CommandShutdown' kOS.CommandReboot' kOS.CommandPrintAt' kOS.CommandPrint' kOS.CommandTestKegex' kOS.CommandDeclareVar' kOS.CommandDeclareParameter' kOS.CommandSet' kOS.CommandToggle' kOS.CommandSetOn' kOS.CommandSetOff' kOS.CommandRunFile' kOS.CommandSwitch' kOS.CommandRename' kOS.CommandLog' kOS.CommandCopy' kOS.CommandDelete' kOS.CommandList' kOS.CommandBlock' kOS.CommandIf' kOS.CommandUntilLoop' kOS.CommandBreak' kOS.CommandCallExternal' kOS.CommandWait' kOS.CommandOnEvent' kOS.CommandLock' kOS.CommandUnlock' kOS.CommandWhen' kOS.CommandVesselStage' kOS.CommandAddObjectToVessel' kOS.CommandRemoveObjectFromVessel' kOS.CommandVesselListings' kOS.ContextRunProgram' kOS.ExecutionContext' kOS.InterpreterBootup' kOS.InterpreterEdit
+kOS,SpecialKey,0,0,0,0,0,1,0,0,0,-1,0,0,,
+kOS,SystemMessage,0,0,0,0,0,1,0,0,0,-1,0,6,,kOS.CommandClearScreen' kOS.CommandShutdown' kOS.CommandReboot' kOS.ExecutionContext' kOS.ImmediateMode' kOS.CPU
+kOS,ExecutionContext,12,37,5,12,37,320,71,6,0,0.14,10,46,kOS.CPU' kOS.ExecutionState' kOS.kOSKeys' kOS.Command' kOS.Variable' kOS.Expression' kOS.BoundVariable' kOS.Volume' kOS.Utils' kOS.SystemMessage,kOS.Body' kOS.Command' kOS.CommandClearScreen' kOS.CommandShutdown' kOS.CommandReboot' kOS.CommandPrintAt' kOS.CommandPrint' kOS.CommandTestKegex' kOS.CommandDeclareVar' kOS.CommandDeclareParameter' kOS.CommandSet' kOS.CommandToggle' kOS.CommandSetOn' kOS.CommandSetOff' kOS.CommandEditFile' kOS.CommandRunFile' kOS.CommandSwitch' kOS.CommandRename' kOS.CommandLog' kOS.CommandCopy' kOS.CommandDelete' kOS.CommandList' kOS.CommandBlock' kOS.CommandIf' kOS.CommandUntilLoop' kOS.CommandBreak' kOS.CommandCallExternal' kOS.CommandWait' kOS.CommandOnEvent' kOS.CommandLock' kOS.CommandUnlock' kOS.CommandWhen' kOS.CommandVesselStage' kOS.CommandAddObjectToVessel' kOS.CommandRemoveObjectFromVessel' kOS.CommandVesselListings' kOS.ContextRunProgram' kOS.Expression' kOS.InterpreterBootup' kOS.InterpreterEdit' kOS.ImmediateMode' kOS.kOSException' kOS.LockableControl' kOS.Atmosphere' kOS.VesselTarget' kOS.CPU
+kOS,Expression,2,37,0,0,10,588,159,0,0,0,16,22,kOS.Term' kOS.ExecutionContext' kOS.TermTypes' kOS.Utils' kOS.StatementChunk' kOS.Structure' kOS.kOSExternalFunction' kOS.VesselUtils' kOS.Node' kOS.Vector' kOS.Direction' kOS.TimeSpan' kOS.GeoCoordinates' kOS.VesselTarget' kOS.Body' kOS.Variable,kOS.Command' kOS.CommandPrintAt' kOS.CommandPrint' kOS.CommandTestKegex' kOS.CommandSet' kOS.CommandSetOn' kOS.CommandSetOff' kOS.CommandRunFile' kOS.CommandLog' kOS.CommandIf' kOS.CommandUntilLoop' kOS.CommandCallExternal' kOS.CommandWait' kOS.CommandOnEvent' kOS.CommandLock' kOS.CommandWhen' kOS.CommandAddObjectToVessel' kOS.CommandRemoveObjectFromVessel' kOS.ContextRunProgram' kOS.ExecutionContext' kOS.LockableControl' kOS.CPU
+kOS,StatementChunk,2,1,0,2,1,10,1,0,0,0,0,1,,kOS.Expression
+kOS,Term,11,13,0,4,6,346,45,0,0,0.23,2,4,kOS.TermTypes' kOS.Utils,kOS.CommandSet' kOS.CommandSetOn' kOS.CommandSetOff' kOS.Expression
+kOS,TermTypes,0,0,0,0,0,1,0,0,0,-1,0,5,,kOS.CommandSet' kOS.CommandSetOn' kOS.CommandSetOff' kOS.Expression' kOS.Term
+kOS,GeoCoordinates,4,8,0,4,8,62,13,0,1,0,2,3,kOS.VesselUtils' kOS.Structure,kOS.Expression' kOS.LockableControl' kOS.VesselTarget
+kOS,Harddisk,0,7,0,0,7,70,16,0,1,-1,2,2,kOS.Volume' kOS.File,kOS.kOSProcessor' kOS.CPU
+kOS,InputManager,1,6,0,1,5,76,34,0,0,0.33,2,1,kOS.CPU' kOS.kOSKeys,kOS.kOSInternalDisplay
+kOS,kOSInternalDisplay,5,5,0,3,5,81,13,0,0,0,4,0,kOS.CPU' kOS.ClickHandler' kOS.kOSProcessor' kOS.InputManager,
+kOS,ClickHandler,1,1,0,1,1,8,1,0,0,0,0,1,,kOS.kOSInternalDisplay
+kOS,InterpreterBootup,3,5,0,0,5,54,11,0,1,0,2,0,kOS.ExecutionState' kOS.ExecutionContext,
+kOS,InterpreterEdit,12,19,4,0,12,264,42,0,1,0,5,0,kOS.File' kOS.ExecutionContext' kOS.Volume' kOS.kOSKeys' kOS.ExecutionState,
+kOS,ImmediateMode,11,17,0,0,16,306,47,0,1,0,9,2,kOS.VersionInfo' kOS.Core' kOS.ExecutionContext' kOS.Command' kOS.kOSException' kOS.CPU' kOS.kOSRunType' kOS.SystemMessage' kOS.kOSKeys,kOS.CommandEditFile' kOS.CommandRunFile
+kOS,kOSException,6,2,0,6,2,20,2,1,0,1,3,3,kOS.Command' kOS.ExecutionContext' kOS.ContextRunProgram,kOS.Command' kOS.ContextRunProgram' kOS.ImmediateMode
+kOS,kOSReadOnlyException,0,1,0,0,1,6,1,0,1,-1,0,0,,
+kOS,kOSExternalFunction,5,1,0,5,1,16,1,0,0,0,1,2,kOS.Utils,kOS.Expression' kOS.CPU
+kOS,kOSIDModule,1,0,0,1,0,5,0,0,0,-1,0,0,,
+kOS,kOSProcessor,9,16,0,4,15,206,40,0,0,0.25,5,2,kOS.CPU' kOS.Harddisk' kOS.Core' kOS.Modes' kOS.TermWindow,kOS.kOSInternalDisplay' kOS.CPU
+kOS,BindingFlightControls,3,3,0,0,3,163,8,0,1,0,4,0,kOS.CPU' kOS.BindingManager' kOS.LockableControl' kOS.Binding,
+kOS,LockableControl,6,3,0,5,2,98,14,0,0,0,13,1,kOS.CPU' kOS.BindingManager' kOS.Expression' kOS.ExecutionContext' kOS.TermWindow' kOS.Utils' kOS.SteeringHelper' kOS.Vector' kOS.Node' kOS.VesselUtils' kOS.VesselTarget' kOS.GeoCoordinates' kOS.Direction,kOS.BindingFlightControls
+kOS,BindingActionGroups,0,1,0,0,1,45,1,0,1,-1,3,0,kOS.BindingManager' kOS.CPU' kOS.VesselUtils,
+kOS,BindingFlightSettings,0,1,0,0,1,50,1,0,1,-1,5,0,kOS.BindingManager' kOS.VesselUtils' kOS.VesselTarget' kOS.Body' kOS.CPU,
+kOS,File,1,11,0,1,10,82,18,0,0,0.36,0,10,,kOS.CommandRunFile' kOS.CommandRename' kOS.CommandCopy' kOS.CommandDelete' kOS.ContextRunProgram' kOS.Harddisk' kOS.InterpreterEdit' kOS.CPU' kOS.Volume' kOS.Archive
+kOS,FileInfo,2,1,0,2,1,10,1,0,0,0,0,2,,kOS.CommandList' kOS.Archive
+kOS,Node,7,13,0,5,11,122,21,0,1,0,2,5,kOS.Vector' kOS.Structure,kOS.BindingsFlightStats' kOS.CommandAddObjectToVessel' kOS.CommandRemoveObjectFromVessel' kOS.Expression' kOS.LockableControl
+kOS,OrbitInfo,1,2,0,0,2,27,3,0,1,0,0,1,,kOS.VesselUtils
+kOS,Structure,1,4,0,0,4,46,7,14,0,0.5,1,13,kOS.SuffixBinding,kOS.Body' kOS.CommandSet' kOS.CommandSetOn' kOS.CommandSetOff' kOS.Direction' kOS.Expression' kOS.GeoCoordinates' kOS.Node' kOS.TimeSpan' kOS.Vector' kOS.VesselSensors' kOS.VesselTarget' kOS.VesselVelocity
+kOS,SuffixBinding,2,0,0,2,0,5,0,0,0,-1,0,1,,kOS.Structure
+kOS,StageValues,1,3,0,0,2,17,3,0,1,0,2,1,kOS.VesselUtils' kOS.Utils,kOS.BindingsFlightStats
+kOS,SteeringHelper,3,11,0,2,9,196,22,0,0,0.64,1,1,kOS.Direction,kOS.LockableControl
+kOS,TerminalButton,5,5,0,4,5,37,7,0,1,0,1,3,kOS.CPU,kOS.BindingsTerminalSettings' kOS.TermWindow' kOS.CPU
+kOS,TimeSpan,1,6,0,0,6,93,22,0,1,0.33,1,2,kOS.Structure,kOS.BindingsFlightStats' kOS.Expression
+kOS,Atmosphere,1,3,0,1,3,13,3,0,1,0.67,2,1,kOS.ExecutionContext' kOS.Body,kOS.Body
+kOS,Vector,3,9,0,0,9,107,22,0,1,0.22,2,7,kOS.Direction' kOS.Structure,kOS.Body' kOS.Direction' kOS.Expression' kOS.LockableControl' kOS.Node' kOS.VesselSensors' kOS.VesselVelocity
+kOS,VersionInfo,2,2,0,2,2,17,2,0,1,0,0,3,,kOS.BindingsTerminalSettings' kOS.ImmediateMode' kOS.Core
+kOS,VesselSensors,5,3,0,0,3,56,14,0,1,0.67,2,1,kOS.Vector' kOS.Structure,kOS.VesselTarget
+kOS,VesselTarget,3,9,0,3,8,93,37,0,1,0.22,7,5,kOS.ExecutionContext' kOS.Direction' kOS.VesselUtils' kOS.Structure' kOS.VesselVelocity' kOS.GeoCoordinates' kOS.VesselSensors,kOS.BindingsFlightStats' kOS.CommandVesselListings' kOS.Expression' kOS.LockableControl' kOS.BindingFlightSettings
+kOS,TermWindow,29,22,0,21,7,353,80,0,0,0.23,6,3,kOS.Core' kOS.CPU' kOS.FunctionButtonDrawInfo' kOS.kOSKeys' kOS.TerminalButton' kOS.Modes,kOS.kOSProcessor' kOS.LockableControl' kOS.Core
+kOS,FunctionButtonDrawInfo,5,0,0,5,0,8,0,0,0,-1,0,1,,kOS.TermWindow
+kOS,KeyEvent,2,0,0,2,0,5,0,0,0,-1,0,0,,
+kOS,CPU,15,20,5,11,18,330,58,0,1,0.55,15,16,kOS.Modes' kOS.Archive' kOS.BindingManager' kOS.TerminalButton' kOS.Volume' kOS.kOSRunType' kOS.kOSExternalFunction' kOS.kOSProcessor' kOS.Harddisk' kOS.BoundVariable' kOS.ExecutionContext' kOS.SystemMessage' kOS.File' kOS.Variable' kOS.Expression,kOS.BindingManager' kOS.BoundVariable' kOS.BindingsFlightStats' kOS.BindingsTerminalSettings' kOS.ExecutionContext' kOS.InputManager' kOS.kOSInternalDisplay' kOS.ImmediateMode' kOS.kOSProcessor' kOS.BindingFlightControls' kOS.LockableControl' kOS.BindingActionGroups' kOS.BindingFlightSettings' kOS.TerminalButton' kOS.TermWindow' kOS.Core
+kOS,Modes,0,0,0,0,0,1,0,0,0,-1,0,3,,kOS.kOSProcessor' kOS.TermWindow' kOS.CPU
+kOS,kOSRunType,0,0,0,0,0,1,0,0,0,-1,0,2,,kOS.ImmediateMode' kOS.CPU
+kOS,Core,5,8,0,4,4,82,12,0,0,0.5,3,4,kOS.VersionInfo' kOS.TermWindow' kOS.CPU,kOS.BindingsTerminalSettings' kOS.ImmediateMode' kOS.kOSProcessor' kOS.TermWindow
+kOS,kOSKeys,0,0,0,0,0,8,0,0,0,-1,0,9,,kOS.CommandRunFile' kOS.CommandBlock' kOS.CommandUntilLoop' kOS.CommandWait' kOS.ExecutionContext' kOS.InputManager' kOS.InterpreterEdit' kOS.ImmediateMode' kOS.TermWindow
+kOS,Utils,0,13,0,0,13,257,36,0,0,-1,0,11,,kOS.CommandRegistry' kOS.CommandRunFile' kOS.CommandIf' kOS.CommandUntilLoop' kOS.ContextRunProgram' kOS.ExecutionContext' kOS.Expression' kOS.Term' kOS.kOSExternalFunction' kOS.LockableControl' kOS.StageValues
+kOS,Variable,1,2,1,0,2,22,2,1,0,1,0,11,,kOS.BindingManager' kOS.CommandDeclareVar' kOS.CommandDeclareParameter' kOS.CommandSet' kOS.CommandToggle' kOS.CommandSetOn' kOS.CommandSetOff' kOS.CommandOnEvent' kOS.ExecutionContext' kOS.Expression' kOS.CPU
+kOS,VesselVelocity,3,3,0,0,3,24,6,0,1,0,3,1,kOS.Vector' kOS.VesselUtils' kOS.Structure,kOS.VesselTarget
+kOS,Volume,4,10,0,3,10,59,16,2,0,0.6,1,11,kOS.File,kOS.CommandRunFile' kOS.CommandRename' kOS.CommandLog' kOS.CommandCopy' kOS.CommandDelete' kOS.CommandList' kOS.ExecutionContext' kOS.Harddisk' kOS.InterpreterEdit' kOS.CPU' kOS.Archive
+kOS,Archive,2,8,0,1,7,116,12,0,1,0.25,4,1,kOS.File' kOS.Volume' kOS.FileInfo' kOS.VesselUtils,kOS.CPU
+kOS,VesselUtils,0,26,0,0,25,337,82,0,0,-1,1,11,kOS.OrbitInfo,kOS.BindingsFlightStats' kOS.CommandVesselListings' kOS.Expression' kOS.GeoCoordinates' kOS.LockableControl' kOS.BindingActionGroups' kOS.BindingFlightSettings' kOS.StageValues' kOS.VesselTarget' kOS.VesselVelocity' kOS.Archive

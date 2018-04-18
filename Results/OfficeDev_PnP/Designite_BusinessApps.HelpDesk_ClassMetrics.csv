@@ -1,0 +1,43 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BusinessApps.HelpDesk,BundleConfig,0,1,0,0,1,25,1,0,0,-1,0,1,,BusinessApps.HelpDesk.MvcApplication
+BusinessApps.HelpDesk,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,BusinessApps.HelpDesk.MvcApplication
+BusinessApps.HelpDesk,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,BusinessApps.HelpDesk.MvcApplication
+BusinessApps.HelpDesk,Startup,0,2,0,0,2,44,2,0,0,-1,3,0,BusinessApps.HelpDesk.Models.ApplicationDbContext' BusinessApps.HelpDesk.Helpers.AuthenticationHelper' BusinessApps.HelpDesk.Helpers.SettingsHelper,
+BusinessApps.HelpDesk,SharePointContextFilterAttribute,0,1,0,0,1,22,3,0,0,-1,2,0,BusinessApps.HelpDesk.SharePointContextProvider' BusinessApps.HelpDesk.RedirectionStatus,
+BusinessApps.HelpDesk,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,BusinessApps.HelpDesk.FilterConfig' BusinessApps.HelpDesk.RouteConfig' BusinessApps.HelpDesk.BundleConfig,
+BusinessApps.HelpDesk,SharePointContext,15,10,9,5,7,210,17,2,0,0.5,1,3,BusinessApps.HelpDesk.TokenHelper,BusinessApps.HelpDesk.SharePointContextProvider' BusinessApps.HelpDesk.SharePointAcsContextProvider' BusinessApps.HelpDesk.SharePointHighTrustContextProvider
+BusinessApps.HelpDesk,RedirectionStatus,0,0,0,0,0,6,0,0,0,-1,0,2,,BusinessApps.HelpDesk.SharePointContextFilterAttribute' BusinessApps.HelpDesk.SharePointContextProvider
+BusinessApps.HelpDesk,SharePointContextProvider,1,12,1,0,7,229,29,2,0,0.5,3,1,BusinessApps.HelpDesk.TokenHelper' BusinessApps.HelpDesk.RedirectionStatus' BusinessApps.HelpDesk.SharePointContext,BusinessApps.HelpDesk.SharePointContextFilterAttribute
+BusinessApps.HelpDesk,SharePointAcsContext,2,3,7,0,1,118,7,0,1,0.67,1,1,BusinessApps.HelpDesk.SharePointContextToken,BusinessApps.HelpDesk.SharePointAcsContextProvider
+BusinessApps.HelpDesk,SharePointAcsContextProvider,2,4,0,0,0,63,7,0,1,0.5,4,0,BusinessApps.HelpDesk.SharePointContextToken' BusinessApps.HelpDesk.TokenHelper' BusinessApps.HelpDesk.SharePointAcsContext' BusinessApps.HelpDesk.SharePointContext,
+BusinessApps.HelpDesk,SharePointHighTrustContext,1,3,5,0,1,91,6,0,1,0.67,1,1,BusinessApps.HelpDesk.TokenHelper,BusinessApps.HelpDesk.SharePointHighTrustContextProvider
+BusinessApps.HelpDesk,SharePointHighTrustContextProvider,1,4,0,0,0,36,6,0,1,0.75,2,0,BusinessApps.HelpDesk.SharePointHighTrustContext' BusinessApps.HelpDesk.SharePointContext,
+BusinessApps.HelpDesk,TokenHelper,25,30,0,2,21,785,53,0,0,0.1,2,5,BusinessApps.HelpDesk.SharePointContextToken' BusinessApps.HelpDesk.AcsMetadataParser,BusinessApps.HelpDesk.SharePointContext' BusinessApps.HelpDesk.SharePointContextProvider' BusinessApps.HelpDesk.SharePointAcsContextProvider' BusinessApps.HelpDesk.SharePointHighTrustContext' BusinessApps.HelpDesk.Helpers.SharePointHelper
+BusinessApps.HelpDesk,AcsMetadataParser,0,4,0,0,3,77,9,0,0,-1,4,1,BusinessApps.HelpDesk.JsonMetadataDocument' BusinessApps.HelpDesk.JsonKey' BusinessApps.HelpDesk.JsonKeyValue' BusinessApps.HelpDesk.JsonEndpoint,BusinessApps.HelpDesk.TokenHelper
+BusinessApps.HelpDesk,JsonMetadataDocument,0,0,3,0,0,6,0,0,0,-1,0,1,,BusinessApps.HelpDesk.AcsMetadataParser
+BusinessApps.HelpDesk,JsonEndpoint,0,0,3,0,0,6,0,0,0,-1,0,1,,BusinessApps.HelpDesk.AcsMetadataParser
+BusinessApps.HelpDesk,JsonKeyValue,0,0,2,0,0,5,0,0,0,-1,0,1,,BusinessApps.HelpDesk.AcsMetadataParser
+BusinessApps.HelpDesk,JsonKey,0,0,2,0,0,5,0,0,0,-1,0,1,,BusinessApps.HelpDesk.AcsMetadataParser
+BusinessApps.HelpDesk,SharePointContextToken,0,5,6,0,4,118,8,0,0,-1,0,3,,BusinessApps.HelpDesk.SharePointAcsContext' BusinessApps.HelpDesk.SharePointAcsContextProvider' BusinessApps.HelpDesk.TokenHelper
+BusinessApps.HelpDesk,MultipleSymmetricKeySecurityToken,3,4,4,0,3,112,11,0,0,0.75,0,0,,
+BusinessApps.HelpDesk.Controllers,AccountController,0,3,0,0,3,28,5,0,0,-1,0,0,,
+BusinessApps.HelpDesk.Controllers,AnnouncementController,0,1,0,0,1,10,1,0,0,-1,1,0,BusinessApps.HelpDesk.Helpers.SharePointHelper,
+BusinessApps.HelpDesk.Controllers,EmailController,0,3,0,0,3,25,3,0,0,-1,3,0,BusinessApps.HelpDesk.Helpers.GraphHelper' BusinessApps.HelpDesk.Models.Email.EmailMessage' BusinessApps.HelpDesk.Models.Email.EmailDetailsViewModel,
+BusinessApps.HelpDesk.Controllers,HomeController,0,3,0,0,3,18,3,0,0,-1,0,0,,
+BusinessApps.HelpDesk.Controllers,SupportTicketController,0,4,0,0,4,42,4,0,0,-1,4,0,BusinessApps.HelpDesk.Data.HelpDeskDatabase' BusinessApps.HelpDesk.Models.SupportTicket.SupportTicketViewModel' BusinessApps.HelpDesk.Data.SupportTicket' BusinessApps.HelpDesk.Helpers.GraphHelper,
+BusinessApps.HelpDesk.Controllers,UserProfileController,5,3,0,0,3,56,3,0,0,0.67,1,0,BusinessApps.HelpDesk.Models.ApplicationDbContext,
+BusinessApps.HelpDesk.Data,HelpDeskDatabase,0,2,1,0,1,11,2,0,0,-1,0,1,,BusinessApps.HelpDesk.Controllers.SupportTicketController
+BusinessApps.HelpDesk.Data,SupportTicket,0,0,6,0,0,18,0,0,0,-1,0,1,,BusinessApps.HelpDesk.Controllers.SupportTicketController
+BusinessApps.HelpDesk.Helpers,AuthenticationHelper,0,2,0,0,2,18,2,0,0,-1,1,3,BusinessApps.HelpDesk.Helpers.SettingsHelper,BusinessApps.HelpDesk.Startup' BusinessApps.HelpDesk.Helpers.GraphHelper' BusinessApps.HelpDesk.Helpers.SharePointHelper
+BusinessApps.HelpDesk.Helpers,GraphHelper,1,9,0,0,6,115,15,0,0,0.67,4,2,BusinessApps.HelpDesk.Models.Email.EmailMessage' BusinessApps.HelpDesk.Helpers.SettingsHelper' BusinessApps.HelpDesk.Models.Email.HelpdeskOperator' BusinessApps.HelpDesk.Helpers.AuthenticationHelper,BusinessApps.HelpDesk.Controllers.EmailController' BusinessApps.HelpDesk.Controllers.SupportTicketController
+BusinessApps.HelpDesk.Helpers,SharePointHelper,0,2,0,0,2,21,2,0,0,-1,3,1,BusinessApps.HelpDesk.Helpers.AuthenticationHelper' BusinessApps.HelpDesk.TokenHelper' BusinessApps.HelpDesk.Helpers.SettingsHelper,BusinessApps.HelpDesk.Controllers.AnnouncementController
+BusinessApps.HelpDesk.Helpers,SettingsHelper,0,0,9,0,0,12,0,0,0,-1,0,4,,BusinessApps.HelpDesk.Startup' BusinessApps.HelpDesk.Helpers.AuthenticationHelper' BusinessApps.HelpDesk.Helpers.GraphHelper' BusinessApps.HelpDesk.Helpers.SharePointHelper
+BusinessApps.HelpDesk.Models.Email,EmailMessage,0,0,5,0,0,8,0,0,0,-1,0,2,,BusinessApps.HelpDesk.Controllers.EmailController' BusinessApps.HelpDesk.Helpers.GraphHelper
+BusinessApps.HelpDesk.Models.Email,EmailDetailsViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,BusinessApps.HelpDesk.Controllers.EmailController
+BusinessApps.HelpDesk.Models.Email,HelpdeskOperator,0,0,2,0,0,5,0,0,0,-1,0,1,,BusinessApps.HelpDesk.Helpers.GraphHelper
+BusinessApps.HelpDesk.Models,ADALTokenCache,3,6,0,0,3,80,8,0,0,0.5,2,0,BusinessApps.HelpDesk.Models.ApplicationDbContext' BusinessApps.HelpDesk.Models.UserTokenCache,
+BusinessApps.HelpDesk.Models,Announcement,0,0,2,0,0,5,0,0,0,-1,0,0,,
+BusinessApps.HelpDesk.Models,ApplicationDbContext,0,1,1,0,1,8,1,0,0,-1,0,3,,BusinessApps.HelpDesk.Startup' BusinessApps.HelpDesk.Controllers.UserProfileController' BusinessApps.HelpDesk.Models.ADALTokenCache
+BusinessApps.HelpDesk.Models,UserTokenCache,0,0,4,0,0,8,0,0,0,-1,0,1,,BusinessApps.HelpDesk.Models.ADALTokenCache
+BusinessApps.HelpDesk.Models.Home,IndexViewModel,0,0,0,0,0,3,0,0,0,-1,0,0,,
+BusinessApps.HelpDesk.Models.SupportTicket,SupportTicketViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,BusinessApps.HelpDesk.Controllers.SupportTicketController

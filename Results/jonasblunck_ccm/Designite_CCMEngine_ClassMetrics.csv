@@ -1,19 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ParserSwitchBehavior,0,0,0,0,0,5,0,0,0,-1,0,3
-BlockAnalyzer,5,4,0,0,4,83,21,0,0,0,3,1
-CCCParser,3,13,0,0,7,244,67,0,1,0.15,1,1
-CCCParserSuccessException,2,1,2,0,1,20,1,0,0,0,0,0
-ccMetric,0,3,7,0,3,56,3,0,0,-1,0,10
-ConfigurationFile,11,12,12,0,2,189,36,0,0,0,1,3
-ICCMNotify,0,1,0,0,0,4,1,1,0,-1,1,1
-FileAnalyzer,7,6,0,0,3,77,13,0,0,0,9,2
-IFunctionStream,0,2,0,0,0,5,2,2,0,-1,0,2
-JSParser,3,14,0,0,7,187,41,0,1,0,1,1
-JSParserException,0,1,0,0,1,6,1,0,0,-1,0,0
-LookAheadLangParser,2,12,1,0,8,131,23,0,0,0.25,1,5
-LookAheadTokenParser,4,13,1,0,6,157,39,0,0,0,1,2
-PreprocessorException,0,0,0,0,0,3,0,0,0,-1,0,0
-Preprocessor,3,16,0,0,10,196,54,0,0,0,2,1
-SortedListener,5,4,1,0,3,53,5,0,1,0,1,2
-UnknownStructureException,1,1,1,0,1,13,1,0,0,0,0,0
-PeekableStream,3,3,1,0,3,38,7,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CCMEngine,ParserSwitchBehavior,0,0,0,0,0,1,0,0,0,-1,0,6,,CCMEngine.BlockAnalyzer' CCMEngine.ConfigurationFile' CCMEngine.FileAnalyzer' CCMTests.BlockAnalyzerTests' CCMTests.ConfigFileTests' CCMTests.ProgramTests
+CCMEngine,BlockAnalyzer,5,4,0,0,4,90,12,0,0,0,3,2,CCMEngine.LookAheadLangParser' CCMEngine.IFunctionStream' CCMEngine.ParserSwitchBehavior,CCMEngine.FileAnalyzer' CCMTests.BlockAnalyzerTests
+CCMEngine,CCCParser,3,13,0,0,7,294,50,0,1,0.15,1,4,CCMEngine.LookAheadLangParser,CCMEngine.FileAnalyzer' CCMTests.CCCParserTests' CCMTests.TestContext' CCMTests.FileAnalyzerTests
+CCMEngine,CCCParserSuccessException,2,1,2,0,1,26,1,0,0,0,0,3,,CCMEngine.FileAnalyzer' CCMTests.TestContext' CCMTests.JSParserTests
+CCMEngine,ccMetric,0,3,7,0,3,40,5,0,0,-1,0,13,,CCM.ConsoleOutputter' CCM.CSVOutputter' CCM.TabbedOutputter' CCM.XmlOutputter' CCMEngine.ICCMNotify' CCMEngine.FileAnalyzer' CCMEngine.SortedListener' vsCCM.ccmControl' CCMTests.AnalyzerCollector' CCMTests.DriverTests' CCMTests.FileAnalyzerTests' CCMTests.IntegrationTests' CCMTests.SortedListenerTests
+CCMEngine,ConfigurationFile,11,12,12,0,2,209,30,0,0,0,1,6,CCMEngine.ParserSwitchBehavior,CCM.Driver' CCM.Program' vsCCM.ccmControl' CCMTests.ConfigFileTests' CCMTests.DriverTests' CCMTests.ProgramTests
+CCMEngine,ICCMNotify,0,1,0,0,0,4,1,2,0,-1,1,1,CCMEngine.ccMetric,CCMEngine.FileAnalyzer
+CCMEngine,FileAnalyzer,7,6,0,0,3,89,11,0,0,0,10,4,CCMEngine.ICCMNotify' CCMEngine.LookAheadLangParser' CCMEngine.ParserSwitchBehavior' CCMEngine.Preprocessor' CCMEngine.IFunctionStream' CCMEngine.CCCParserSuccessException' CCMEngine.BlockAnalyzer' CCMEngine.ccMetric' CCMEngine.JSParser' CCMEngine.CCCParser,CCM.Driver' vsCCM.ccmControl' CCMTests.FileAnalyzerTests' CCMTests.IntegrationTests
+CCMEngine,IFunctionStream,0,2,0,0,0,5,2,2,0,-1,0,3,,CCMEngine.BlockAnalyzer' CCMEngine.FileAnalyzer' CCMTests.FileAnalyzerTests
+CCMEngine,JSParser,3,14,0,0,7,196,38,0,1,0,1,3,CCMEngine.LookAheadLangParser,CCMEngine.FileAnalyzer' CCMTests.FileAnalyzerTests' CCMTests.JSParserTests
+CCMEngine,JSParserException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+CCMEngine,LookAheadLangParser,2,12,1,0,8,100,22,0,0,0.25,1,12,CCMEngine.LookAheadTokenParser,CCMEngine.BlockAnalyzer' CCMEngine.CCCParser' CCMEngine.FileAnalyzer' CCMEngine.JSParser' CCMEngine.Preprocessor' CCMTests.BlockAnalyzerTests' CCMTests.CCCParserTests' CCMTests.TestContext' CCMTests.FileAnalyzerTests' CCMTests.JSParserTests' CCMTests.LookAheadLangParserTests' CCMTests.PreprocessorTests
+CCMEngine,LookAheadTokenParser,4,13,1,0,6,169,31,0,0,0,1,2,CCMEngine.PeekableStream,CCMEngine.LookAheadLangParser' CCMTests.LookAheadTokenParserTests
+CCMEngine,PreprocessorException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CCMEngine,Preprocessor,3,16,0,0,10,225,36,0,0,0,1,2,CCMEngine.LookAheadLangParser,CCMEngine.FileAnalyzer' CCMTests.PreprocessorTests
+CCMEngine,SortedListener,5,4,1,0,3,60,7,0,1,0,1,5,CCMEngine.ccMetric,CCM.Driver' vsCCM.ccmControl' CCMTests.FileAnalyzerTests' CCMTests.IntegrationTests' CCMTests.SortedListenerTests
+CCMEngine,UnknownStructureException,1,1,1,0,1,15,1,0,0,0,0,2,,CCM.Driver' CCMTests.LookAheadLangParserTests
+CCMEngine,PeekableStream,3,3,1,0,3,45,7,0,0,0,0,1,,CCMEngine.LookAheadTokenParser

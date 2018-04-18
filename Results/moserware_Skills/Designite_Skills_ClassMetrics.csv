@@ -1,0 +1,69 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Moserware.Skills.Elo,DuellingEloCalculator,1,5,0,0,3,109,15,0,1,0,8,1,Moserware.Skills.Elo.TwoPlayerEloCalculator' Moserware.Skills.PairwiseComparison' Moserware.Skills.RankSorter' Moserware.Skills.Rating' Moserware.Skills.GameInfo' Moserware.Skills.Teams' Moserware.Skills.Elo.EloRating' Moserware.Skills.Team,UnitTests.Elo.DuellingEloTest
+Moserware.Skills.Elo,GaussianKFactor,1,2,0,0,2,13,2,0,1,1,1,0,Moserware.Skills.GameInfo,
+Moserware.Skills.Elo,TwoPlayerEloCalculator,1,6,0,0,2,60,7,2,1,0,6,2,Moserware.Skills.Elo.KFactor' Moserware.Skills.RankSorter' Moserware.Skills.Rating' Moserware.Skills.PairwiseComparison' Moserware.Skills.GameInfo' Moserware.Skills.Elo.EloRating,Moserware.Skills.Elo.DuellingEloCalculator' UnitTests.Elo.EloAssert
+Moserware.Skills.Elo,EloRating,0,1,0,0,1,7,1,0,1,-1,0,2,,Moserware.Skills.Elo.DuellingEloCalculator' Moserware.Skills.Elo.TwoPlayerEloCalculator
+Moserware.Skills.Elo,FideKFactor,0,2,0,0,2,27,3,1,1,-1,0,1,,Moserware.Skills.Elo.FideEloCalculator
+Moserware.Skills.Elo,Provisional,0,2,0,0,2,10,2,0,2,-1,0,0,,
+Moserware.Skills.Elo,GaussianEloCalculator,1,2,0,0,1,19,2,0,2,1,3,1,Moserware.Skills.Elo.KFactor' Moserware.Numerics.GaussianDistribution' Moserware.Skills.GameInfo,UnitTests.Elo.GaussianEloCalculatorTest
+Moserware.Skills.Elo,KFactor,1,3,0,0,2,15,3,2,0,0.67,0,2,,Moserware.Skills.Elo.TwoPlayerEloCalculator' Moserware.Skills.Elo.GaussianEloCalculator
+Moserware.Skills.Elo,FideEloCalculator,0,3,0,0,2,20,3,0,2,-1,2,1,Moserware.Skills.Elo.FideKFactor' Moserware.Skills.GameInfo,UnitTests.Elo.FideEloCalculatorTest
+Moserware.Skills.Numerics,Range<T>,1,6,2,0,4,33,7,0,0,0.67,0,0,,
+Moserware.Skills,PlayersRange,0,3,0,0,1,15,3,0,0,-1,0,1,,Moserware.Skills.SkillCalculator
+Moserware.Skills,TeamsRange,0,3,0,0,1,15,3,0,0,-1,0,1,,Moserware.Skills.SkillCalculator
+Moserware.Skills,GameInfo,5,1,7,0,1,38,1,0,0,0,0,17,,Moserware.Skills.Elo.DuellingEloCalculator' Moserware.Skills.Elo.GaussianKFactor' Moserware.Skills.Elo.TwoPlayerEloCalculator' Moserware.Skills.Elo.GaussianEloCalculator' Moserware.Skills.Elo.FideEloCalculator' Moserware.Skills.SkillCalculator' Moserware.Skills.TrueSkillCalculator' Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator' Moserware.Skills.TrueSkill.TrueSkillFactorGraph<TPlayer>' Moserware.Skills.TrueSkill.TwoPlayerTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoTeamTrueSkillCalculator' Moserware.Skills.TrueSkill.Layers.PlayerPriorValuesToSkillsLayer<TPlayer>' Moserware.Skills.TrueSkill.Layers.PlayerSkillsToPerformancesLayer<TPlayer>' Moserware.Skills.TrueSkill.Layers.TeamDifferencesComparisonLayer<TPlayer>' UnitTests.Elo.DuellingEloTest' UnitTests.Elo.EloAssert' UnitTests.TrueSkill.TrueSkillCalculatorTests
+Moserware.Skills,Guard,0,3,0,0,3,24,6,0,0,-1,0,8,,Moserware.Skills.SkillCalculator' Moserware.Skills.Player<T>' Moserware.Skills.RankSorter' Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoPlayerTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoTeamTrueSkillCalculator' Moserware.Skills.FactorGraphs.Factor<TValue>' Moserware.Skills.TrueSkill.Factors.GaussianWeightedSumFactor
+Moserware.Skills,PartialPlay,0,1,0,0,1,20,3,0,0,-1,1,2,Moserware.Skills.ISupportPartialPlay,Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator' Moserware.Skills.TrueSkill.Layers.PlayerPerformancesToTeamPerformancesLayer<TPlayer>
+Moserware.Skills,SkillCalculator,3,7,0,0,3,76,10,5,0,0.57,5,2,Moserware.Skills.SupportedOptions' Moserware.Skills.PlayersRange' Moserware.Skills.TeamsRange' Moserware.Skills.GameInfo' Moserware.Skills.Guard,Moserware.Skills.TrueSkillCalculator' UnitTests.TrueSkill.TrueSkillCalculatorTests
+Moserware.Skills,SupportedOptions,0,0,0,0,0,7,0,0,0,-1,0,1,,Moserware.Skills.SkillCalculator
+Moserware.Skills,ISupportPartialPlay,0,0,1,0,0,7,0,1,0,-1,0,1,,Moserware.Skills.PartialPlay
+Moserware.Skills,ISupportPartialUpdate,0,0,1,0,0,7,0,1,0,-1,0,0,,
+Moserware.Skills,TrueSkillCalculator,1,2,0,0,2,34,2,0,0,0,2,0,Moserware.Skills.SkillCalculator' Moserware.Skills.GameInfo,
+Moserware.Skills,PairwiseComparison,0,0,0,0,0,6,0,0,0,-1,0,7,,Moserware.Skills.Elo.DuellingEloCalculator' Moserware.Skills.Elo.TwoPlayerEloCalculator' Moserware.Skills.TrueSkill.TwoPlayerTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoTeamTrueSkillCalculator' UnitTests.Elo.EloAssert' UnitTests.Elo.GaussianEloCalculatorTest' UnitTests.Elo.FideEloCalculatorTest
+Moserware.Skills,Player<T>,5,4,3,0,4,73,5,0,1,0.75,1,0,Moserware.Skills.Guard,
+Moserware.Skills,Player,0,3,0,0,3,31,3,0,0,-1,0,4,,Moserware.Skills.Team' UnitTests.Elo.DuellingEloTest' UnitTests.Elo.EloAssert' UnitTests.TrueSkill.TrueSkillCalculatorTests
+Moserware.Skills,Rating,4,4,3,0,4,73,4,1,0,0.75,1,11,Moserware.Numerics.GaussianDistribution,Moserware.Skills.Elo.DuellingEloCalculator' Moserware.Skills.Elo.TwoPlayerEloCalculator' Moserware.Skills.Team<TPlayer>' Moserware.Skills.Team' Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoPlayerTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoTeamTrueSkillCalculator' Moserware.Skills.TrueSkill.Layers.PlayerPriorValuesToSkillsLayer<TPlayer>' UnitTests.Elo.DuellingEloTest' UnitTests.Elo.EloAssert' UnitTests.TrueSkill.TrueSkillCalculatorTests
+Moserware.Skills,Team<TPlayer>,1,4,0,0,4,38,4,0,0,0.75,2,0,Moserware.Skills.Rating' Moserware.Skills.Team,
+Moserware.Skills,Team,0,2,0,0,2,18,2,0,0,-1,2,5,Moserware.Skills.Player' Moserware.Skills.Rating,Moserware.Skills.Elo.DuellingEloCalculator' Moserware.Skills.Team<TPlayer>' Moserware.Skills.Teams' UnitTests.Elo.DuellingEloTest' UnitTests.TrueSkill.TrueSkillCalculatorTests
+Moserware.Skills,Teams,0,1,0,0,1,12,1,0,0,-1,1,4,Moserware.Skills.Team,Moserware.Skills.Elo.DuellingEloCalculator' UnitTests.Elo.DuellingEloTest' UnitTests.Elo.EloAssert' UnitTests.TrueSkill.TrueSkillCalculatorTests
+Moserware.Skills,RankSorter,0,1,0,0,1,56,6,0,0,-1,1,6,Moserware.Skills.Guard,Moserware.Skills.Elo.DuellingEloCalculator' Moserware.Skills.Elo.TwoPlayerEloCalculator' Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoPlayerTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoTeamTrueSkillCalculator' UnitTests.RankSorterTest
+Moserware.Skills.TrueSkill,DrawMargin,0,1,0,0,1,15,1,0,0,-1,1,4,Moserware.Numerics.GaussianDistribution,Moserware.Skills.TrueSkill.TwoPlayerTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoTeamTrueSkillCalculator' Moserware.Skills.TrueSkill.Layers.TeamDifferencesComparisonLayer<TPlayer>' UnitTests.TrueSkill.DrawMarginTest
+Moserware.Skills.TrueSkill,FactorGraphTrueSkillCalculator,0,7,0,0,3,115,12,0,1,-1,8,1,Moserware.Skills.Guard' Moserware.Skills.RankSorter' Moserware.Skills.GameInfo' Moserware.Numerics.Matrix' Moserware.Numerics.Vector' Moserware.Skills.Rating' Moserware.Numerics.DiagonalMatrix' Moserware.Skills.PartialPlay,UnitTests.TrueSkill.FactorGraphTrueSkillCalculatorTests
+Moserware.Skills.TrueSkill,TrueSkillFactorGraph<TPlayer>,2,6,1,0,5,91,16,0,0,0.33,2,0,Moserware.Numerics.GaussianDistribution' Moserware.Skills.GameInfo,
+Moserware.Skills.TrueSkill,TruncatedGaussianCorrectionFunctions,0,8,0,0,8,160,15,0,0,-1,1,4,Moserware.Numerics.GaussianDistribution,Moserware.Skills.TrueSkill.TwoPlayerTrueSkillCalculator' Moserware.Skills.TrueSkill.TwoTeamTrueSkillCalculator' Moserware.Skills.TrueSkill.Factors.GaussianGreaterThanFactor' Moserware.Skills.TrueSkill.Factors.GaussianWithinFactor
+Moserware.Skills.TrueSkill,TwoPlayerTrueSkillCalculator,0,4,0,0,3,110,6,0,1,-1,7,1,Moserware.Skills.Rating' Moserware.Skills.Guard' Moserware.Skills.RankSorter' Moserware.Skills.PairwiseComparison' Moserware.Skills.GameInfo' Moserware.Skills.TrueSkill.DrawMargin' Moserware.Skills.TrueSkill.TruncatedGaussianCorrectionFunctions,UnitTests.TrueSkill.TwoPlayerTrueSkillCalculatorTest
+Moserware.Skills.TrueSkill,TwoTeamTrueSkillCalculator,0,4,0,0,3,126,7,0,1,-1,7,1,Moserware.Skills.Guard' Moserware.Skills.RankSorter' Moserware.Skills.PairwiseComparison' Moserware.Skills.GameInfo' Moserware.Skills.Rating' Moserware.Skills.TrueSkill.DrawMargin' Moserware.Skills.TrueSkill.TruncatedGaussianCorrectionFunctions,UnitTests.TrueSkill.TwoTeamTrueSkillCalculatorTest
+Moserware.Skills.FactorGraphs,FactorGraph<TSelf;TValue;TVariable>,0,0,1,0,0,6,0,0,0,-1,0,0,,
+Moserware.Skills.FactorGraphs,FactorGraphLayerBase<TValue>,0,5,1,0,5,16,5,0,0,-1,0,0,,
+Moserware.Skills.FactorGraphs,FactorGraphLayer<TParentGraph;TValue;TBaseVariable;TInputVariable;TFactor;TOutputVariable>,3,6,5,0,2,66,7,0,0,1,0,0,,
+Moserware.Skills.FactorGraphs,FactorList<TValue>,1,1,2,0,1,34,1,0,0,0,0,0,,
+Moserware.Skills.FactorGraphs,Message<T>,2,3,1,0,3,20,3,0,0,0.67,0,0,,
+Moserware.Skills.FactorGraphs,Schedule<T>,1,4,0,0,3,18,4,0,0,0.75,0,0,,
+Moserware.Skills.FactorGraphs,ScheduleStep<T>,2,2,0,0,2,16,2,0,0,0,0,0,,
+Moserware.Skills.FactorGraphs,ScheduleSequence<TValue>,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Moserware.Skills.FactorGraphs,ScheduleSequence<TValue;TSchedule>,1,2,0,0,2,20,3,0,0,0,0,0,,
+Moserware.Skills.FactorGraphs,ScheduleLoop<T>,2,2,0,0,2,22,3,0,0,0,0,0,,
+Moserware.Skills.FactorGraphs,VariableFactory<TValue>,1,3,0,0,3,25,3,0,0,0,0,0,,
+Moserware.Skills.FactorGraphs,Factor<TValue>,4,9,4,0,5,70,10,0,0,0.56,1,0,Moserware.Skills.Guard,
+Moserware.Skills.FactorGraphs,Variable<TValue>,2,3,1,0,3,20,3,0,0,0,0,0,,
+Moserware.Skills.FactorGraphs,DefaultVariable<TValue>,0,1,1,0,1,12,1,0,0,-1,0,0,,
+Moserware.Skills.FactorGraphs,KeyedVariable<TKey;TValue>,0,1,1,0,1,9,1,0,0,-1,0,0,,
+Moserware.Skills.TrueSkill.Factors,GaussianFactor,0,3,0,0,1,25,3,5,0,-1,1,1,Moserware.Numerics.GaussianDistribution,Moserware.Skills.TrueSkill.Layers.TeamDifferencesComparisonLayer<TPlayer>
+Moserware.Skills.TrueSkill.Factors,GaussianGreaterThanFactor,1,2,1,0,1,50,2,0,1,0,2,0,Moserware.Numerics.GaussianDistribution' Moserware.Skills.TrueSkill.TruncatedGaussianCorrectionFunctions,
+Moserware.Skills.TrueSkill.Factors,GaussianLikelihoodFactor,1,3,1,0,2,49,4,0,1,0,1,1,Moserware.Numerics.GaussianDistribution,Moserware.Skills.TrueSkill.Layers.PlayerSkillsToPerformancesLayer<TPlayer>
+Moserware.Skills.TrueSkill.Factors,GaussianPriorFactor,1,2,0,0,1,26,2,0,1,0,1,1,Moserware.Numerics.GaussianDistribution,Moserware.Skills.TrueSkill.Layers.PlayerPriorValuesToSkillsLayer<TPlayer>
+Moserware.Skills.TrueSkill.Factors,GaussianWeightedSumFactor,3,5,1,0,3,186,17,0,1,0.4,2,2,Moserware.Numerics.GaussianDistribution' Moserware.Skills.Guard,Moserware.Skills.TrueSkill.Layers.PlayerPerformancesToTeamPerformancesLayer<TPlayer>' Moserware.Skills.TrueSkill.Layers.TeamPerformancesToTeamPerformanceDifferencesLayer<TPlayer>
+Moserware.Skills.TrueSkill.Factors,GaussianWithinFactor,1,2,1,0,1,51,2,0,1,0,2,0,Moserware.Numerics.GaussianDistribution' Moserware.Skills.TrueSkill.TruncatedGaussianCorrectionFunctions,
+Moserware.Numerics,GaussianDistribution,0,17,6,0,13,194,23,0,0,-1,0,12,,Moserware.Skills.Elo.GaussianEloCalculator' Moserware.Skills.Rating' Moserware.Skills.TrueSkill.DrawMargin' Moserware.Skills.TrueSkill.TrueSkillFactorGraph<TPlayer>' Moserware.Skills.TrueSkill.TruncatedGaussianCorrectionFunctions' Moserware.Skills.TrueSkill.Factors.GaussianFactor' Moserware.Skills.TrueSkill.Factors.GaussianGreaterThanFactor' Moserware.Skills.TrueSkill.Factors.GaussianLikelihoodFactor' Moserware.Skills.TrueSkill.Factors.GaussianPriorFactor' Moserware.Skills.TrueSkill.Factors.GaussianWeightedSumFactor' Moserware.Skills.TrueSkill.Factors.GaussianWithinFactor' UnitTests.Numerics.GaussianDistributionTests
+Moserware.Numerics,Matrix,3,9,7,0,5,375,22,3,0,0.33,0,2,,Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator' UnitTests.Numerics.MatrixTests
+Moserware.Numerics,DiagonalMatrix,0,1,0,0,1,11,2,1,1,-1,0,1,,Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator
+Moserware.Numerics,Vector,0,1,0,0,1,7,1,0,1,-1,0,1,,Moserware.Skills.TrueSkill.FactorGraphTrueSkillCalculator
+Moserware.Numerics,SquareMatrix,0,1,0,0,1,19,3,0,1,-1,0,1,,UnitTests.Numerics.MatrixTests
+Moserware.Numerics,IdentityMatrix,0,2,0,0,1,16,3,0,2,-1,0,1,,UnitTests.Numerics.MatrixTests
+Moserware.Skills.TrueSkill.Layers,IteratedTeamDifferencesInnerLayer<TPlayer>,2,5,1,0,3,158,8,0,0,0,0,0,,
+Moserware.Skills.TrueSkill.Layers,PlayerPerformancesToTeamPerformancesLayer<TPlayer>,0,6,0,0,4,51,7,0,0,-1,2,0,Moserware.Skills.PartialPlay' Moserware.Skills.TrueSkill.Factors.GaussianWeightedSumFactor,
+Moserware.Skills.TrueSkill.Layers,PlayerPriorValuesToSkillsLayer<TPlayer>,1,5,0,0,3,46,7,0,0,0.8,3,0,Moserware.Skills.Rating' Moserware.Skills.GameInfo' Moserware.Skills.TrueSkill.Factors.GaussianPriorFactor,
+Moserware.Skills.TrueSkill.Layers,PlayerSkillsToPerformancesLayer<TPlayer>,0,6,0,0,4,48,8,0,0,-1,2,0,Moserware.Skills.GameInfo' Moserware.Skills.TrueSkill.Factors.GaussianLikelihoodFactor,
+Moserware.Skills.TrueSkill.Layers,TeamDifferencesComparisonLayer<TPlayer>,2,2,0,0,2,27,3,0,0,0,3,0,Moserware.Skills.TrueSkill.DrawMargin' Moserware.Skills.GameInfo' Moserware.Skills.TrueSkill.Factors.GaussianFactor,
+Moserware.Skills.TrueSkill.Layers,TeamPerformancesToTeamPerformanceDifferencesLayer<TPlayer>,0,4,0,0,2,31,5,0,0,-1,1,0,Moserware.Skills.TrueSkill.Factors.GaussianWeightedSumFactor,
+Moserware.Skills.TrueSkill.Layers,TrueSkillFactorGraphLayer<TPlayer;TInputVariable;TFactor;TOutputVariable>,0,1,0,0,1,14,1,0,0,-1,0,0,,

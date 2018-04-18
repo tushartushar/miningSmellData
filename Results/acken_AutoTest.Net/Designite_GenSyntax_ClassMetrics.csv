@@ -1,7 +1,7 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-GenSpec,8,3,8,0,3,91,10,0,0,0.67,0,1
-CodeGenerator,4,4,0,0,2,58,11,0,0,0,1,1
-Program,4,5,0,0,0,74,14,0,0,0,2,0
-CommandLineError,0,1,0,0,1,6,1,0,0,-1,0,0
-Stanza,6,11,1,0,2,164,38,0,0,0,1,1
-SyntaxInfo,2,1,2,0,1,29,2,0,0,0,1,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GenSyntax,GenSpec,8,3,8,0,3,83,10,0,0,0.67,0,1,,GenSyntax.Stanza
+GenSyntax,CodeGenerator,4,4,0,0,2,61,10,0,0,0,2,1,GenSyntax.SyntaxInfo' GenSyntax.Stanza,GenSyntax.Program
+GenSyntax,Program,4,5,0,0,0,79,11,0,0,0,3,0,GenSyntax.CodeGenerator' GenSyntax.SyntaxInfo' GenSyntax.CommandLineError,
+GenSyntax,CommandLineError,0,1,0,0,1,4,1,0,0,-1,0,1,,GenSyntax.Program
+GenSyntax,Stanza,6,11,1,0,2,178,33,0,0,0,1,2,GenSyntax.GenSpec,GenSyntax.CodeGenerator' GenSyntax.SyntaxInfo
+GenSyntax,SyntaxInfo,2,1,2,0,1,32,2,0,0,0,1,2,GenSyntax.Stanza,GenSyntax.CodeGenerator' GenSyntax.Program

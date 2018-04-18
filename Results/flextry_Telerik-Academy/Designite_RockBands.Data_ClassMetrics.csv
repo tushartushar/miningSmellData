@@ -1,16 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ISongRepository,0,1,0,0,0,4,1,1,1,-1,0,2
-IAlbumRepository,0,1,0,0,0,4,1,1,1,-1,0,2
-IDbContext,0,3,0,0,0,6,3,1,0,-1,0,0
-IGenericRepository,0,9,0,0,0,12,9,4,0,-1,0,2
-IRockBandsData,0,1,4,0,0,16,1,1,0,-1,4,2
-IRockBandsDbContext,0,0,4,0,0,15,0,1,1,-1,4,5
-IBandRepository,0,1,0,0,0,4,1,1,1,-1,0,2
-DatabaseSeeder,1,2,0,0,2,11,2,0,0,1,1,0
-RockBandsDbContext,0,3,4,0,3,31,3,0,2,-1,5,1
-RockBandsData,2,6,4,0,4,64,12,0,1,0.33,4,1
-Configuration,0,5,0,0,1,171,8,0,0,-1,5,0
-SongRepository,0,3,0,0,3,13,3,0,2,-1,2,0
-AlbumRepository,0,3,0,0,3,13,3,0,2,-1,2,0
-BandRepository,0,3,0,0,3,13,3,0,2,-1,2,0
-GenericRepository,0,12,2,0,11,66,14,3,1,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RockBands.Data.Contracts,ISongRepository,0,1,0,0,0,4,1,1,1,-1,0,1,,RockBands.Services.Controllers.SongsController
+RockBands.Data.Contracts,IAlbumRepository,0,1,0,0,0,4,1,1,1,-1,0,1,,RockBands.Services.Controllers.AlbumsController
+RockBands.Data.Contracts,IDbContext,0,3,0,0,0,6,3,1,0,-1,0,0,,
+RockBands.Data.Contracts,IGenericRepository,0,9,0,0,0,12,9,4,0,-1,0,1,,RockBands.Data.RockBandsData
+RockBands.Data.Contracts,IRockBandsData,0,1,4,0,0,8,1,1,0,-1,0,6,,RockBands.ConsoleClient.RockBandsConsoleClient' RockBands.Data.DatabaseSeeder' RockBands.Services.Controllers.AlbumsController' RockBands.Services.Controllers.BandsController' RockBands.Services.Controllers.BaseController' RockBands.Services.Controllers.SongsController
+RockBands.Data.Contracts,IRockBandsDbContext,0,0,4,0,0,7,0,1,1,-1,0,5,,RockBands.Data.Migrations.Configuration' RockBands.Data.Repositories.SongRepository' RockBands.Data.Repositories.AlbumRepository' RockBands.Data.Repositories.BandRepository' RockBands.Data.Repositories.GenericRepository<T>
+RockBands.Data.Contracts,IBandRepository,0,1,0,0,0,4,1,1,1,-1,0,1,,RockBands.Services.Controllers.BandsController
+RockBands.Data,DatabaseSeeder,1,2,0,0,2,11,2,0,0,1,1,0,RockBands.Data.Contracts.IRockBandsData,
+RockBands.Data,RockBandsDbContext,0,3,4,0,3,20,3,0,2,-1,0,1,,RockBands.Data.Migrations.Configuration
+RockBands.Data,RockBandsData,2,6,4,0,4,81,10,0,1,0.33,7,0,RockBands.Data.Contracts.IGenericRepository' RockBands.Models.Band' RockBands.Data.Repositories.BandRepository' RockBands.Models.Album' RockBands.Data.Repositories.AlbumRepository' RockBands.Models.Song' RockBands.Data.Repositories.SongRepository,
+RockBands.Data.Migrations,Configuration,0,5,0,0,1,201,8,0,0,-1,5,0,RockBands.Data.RockBandsDbContext' RockBands.Models.Band' RockBands.Data.Contracts.IRockBandsDbContext' RockBands.Models.Album' RockBands.Models.Song,
+RockBands.Data.Repositories,SongRepository,0,3,0,0,3,15,3,0,2,-1,3,1,RockBands.Data.Contracts.IRockBandsDbContext' RockBands.Models.Song' RockBands.Models.Projections.Cover,RockBands.Data.RockBandsData
+RockBands.Data.Repositories,AlbumRepository,0,3,0,0,3,15,3,0,2,-1,3,1,RockBands.Data.Contracts.IRockBandsDbContext' RockBands.Models.Album' RockBands.Models.Projections.Cover,RockBands.Data.RockBandsData
+RockBands.Data.Repositories,BandRepository,0,3,0,0,3,15,3,0,2,-1,3,1,RockBands.Data.Contracts.IRockBandsDbContext' RockBands.Models.Band' RockBands.Models.Projections.Cover,RockBands.Data.RockBandsData
+RockBands.Data.Repositories,GenericRepository<T>,0,12,2,0,11,63,14,0,1,-1,1,0,RockBands.Data.Contracts.IRockBandsDbContext,

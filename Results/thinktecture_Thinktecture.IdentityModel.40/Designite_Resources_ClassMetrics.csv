@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Resources.Configuration,AuthenticationConfig,0,2,0,0,2,76,2,0,0,-1,1,3,Resources.Constants,SelfHost.Program' WebApiSecurity.RouteConfig' WebApiSecurity.WebApiApplication
+Resources.Configuration,CorsConfig,0,1,0,0,1,9,1,0,0,-1,0,2,,SelfHost.Program' WebApiSecurity.WebApiApplication
+Resources,Constants,14,0,0,14,0,17,0,0,0,-1,0,10,,AcsJSNotifyClient.MainWindow' AcsSamlToSwtClient.Program' AdfsSamlClient.Program' ConsultantsConsoleClient.Program' IdSrvJSNotifyClient.MainWindow' IdSrvOAuth2Client.Program' IdSrvSamlClient.Program' JsonWebTokenClient.Program' Resources.Configuration.AuthenticationConfig' SelfHost.Program
+Resources,ConsultantsController,1,5,0,0,5,55,8,0,0,0,3,0,Resources.IConsultantsRepository' Resources.Consultants' Resources.Consultant,
+Resources,IdentityController,0,1,0,0,1,8,1,0,0,-1,1,0,Resources.Identity,
+Resources,Consultant,0,0,5,0,0,13,0,0,0,-1,0,5,,ConsultantsConsoleClient.Program' Resources.ConsultantsController' Resources.IConsultantsRepository' Resources.InMemoryConsultantsRepository' Resources.Security.ConsultantsAuthorizationManager
+Resources,Consultants,0,0,0,0,0,2,0,0,0,-1,0,3,,Resources.ConsultantsController' Resources.InMemoryConsultantsRepository' Resources.Security.ConsultantsAuthorizationManager
+Resources,IConsultantsRepository,0,3,0,0,0,6,3,1,0,-1,1,3,Resources.Consultant,Resources.ConsultantsController' Resources.Security.AuthorizationDependencyResolver' Resources.Security.ConsultantsAuthorizationManager
+Resources,Identity,0,2,5,0,2,38,5,0,0,-1,1,6,Resources.ClaimsDto,AcsSamlToSwtClient.Program' AdfsSamlClient.Program' IdSrvOAuth2Client.Program' IdSrvSamlClient.Program' Thinktecture.Samples.Helper' Resources.IdentityController
+Resources,ClaimsDto,0,2,0,0,2,8,2,0,0,-1,0,2,,Thinktecture.Samples.Helper' Resources.Identity
+Resources,ClaimDto,0,0,4,0,0,7,0,0,0,-1,0,1,,Thinktecture.Samples.Helper
+Resources,InMemoryConsultantsRepository,1,4,0,0,3,83,4,0,1,0,2,0,Resources.Consultants' Resources.Consultant,
+Resources.Security,AuthorizationDependencyResolver,1,4,0,0,4,28,5,0,0,1,2,0,Resources.IConsultantsRepository' Resources.Security.ConsultantsAuthorizationManager,
+Resources.Security,AppClaimTypes,1,0,0,1,0,4,0,0,0,-1,0,2,,Resources.Security.ConsultantsAuthorizationManager' Resources.Security.ConsultantsClaimsTransformer
+Resources.Security,ConsultantsAuthorizationManager,1,7,0,0,1,59,11,0,0,0.57,4,1,Resources.IConsultantsRepository' Resources.Security.AppClaimTypes' Resources.Consultant' Resources.Consultants,Resources.Security.AuthorizationDependencyResolver
+Resources.Security,ConsultantsClaimsTransformer,0,2,0,0,1,45,5,0,0,-1,1,0,Resources.Security.AppClaimTypes,
+Resources.Security,GlobalAuthorizationManager,0,3,0,0,2,19,3,0,0,-1,0,0,,
+Resources.Security,SecurityExceptionFilter,0,1,0,0,1,14,2,0,0,-1,0,0,,

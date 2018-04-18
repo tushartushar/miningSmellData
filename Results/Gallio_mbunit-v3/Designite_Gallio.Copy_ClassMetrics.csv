@@ -1,0 +1,34 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Gallio.Loader,NamespaceDoc,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Gallio.Loader,LoaderUtils,0,2,0,0,2,21,2,0,0,-1,0,0,,
+Gallio.Loader,LoaderException,0,4,0,0,3,36,4,0,0,-1,0,0,,
+Gallio.Loader,RuntimeLocator,0,5,0,0,5,67,7,2,0,-1,0,1,,Gallio.Loader.LoaderManager
+Gallio.Loader,DefaultRuntimeLocator,0,10,0,0,2,152,18,0,1,-1,0,1,,Gallio.Copy.Controllers.CopyController
+Gallio.Loader,ExplicitRuntimeLocator,1,3,0,0,3,20,3,0,1,0.67,0,0,,
+Gallio.Loader,ILoader,0,4,1,0,0,42,4,1,0,-1,0,1,,Gallio.Loader.LoaderManager
+Gallio.Loader,LoaderManager,1,3,1,0,3,204,6,0,0,0,3,0,Gallio.Loader.ILoader' Gallio.Loader.LoaderImpl' Gallio.Loader.RuntimeLocator,
+Gallio.Loader,LoaderImpl,9,10,1,0,6,153,15,0,1,0,0,1,,Gallio.Loader.LoaderManager
+Gallio.Copy.Commands,CopyCommand,5,3,0,0,2,48,5,0,1,0,3,0,Gallio.Common.IO.IFileSystem' Gallio.UI.Common.Policies.IUnhandledExceptionPolicy' Gallio.Runtime.ProgressMonitoring.IProgressMonitor,
+Gallio.Copy.Commands,UpdatePluginFolderCommand,2,5,2,0,2,57,5,0,1,0,10,1,Gallio.UI.Events.IEventAggregator' Gallio.Copy.Model.PluginTreeModel' Gallio.Runtime.Extensibility.Registry' Gallio.Runtime.Extensibility.PluginLoader' Gallio.Runtime.Extensibility.PluginCatalog' Gallio.Runtime.ProgressMonitoring.IProgressMonitor' Gallio.Copy.Properties.Resources' Gallio.Runtime.Extensibility.IPluginCatalog' Gallio.Runtime.Extensibility.IRegistry' Gallio.Runtime.Extensibility.IPluginLoader,Gallio.Copy.Controllers.CopyController
+Gallio.Copy.Commands,ComparePluginsCommand,2,2,0,0,2,21,2,0,1,0,3,0,Gallio.Copy.Model.PluginTreeModel' Gallio.Runtime.ProgressMonitoring.IProgressMonitor' Gallio.Copy.Properties.Resources,
+Gallio.Copy.Commands,CopyPluginsCommand,5,3,0,0,2,53,4,0,1,0,4,1,Gallio.UI.Common.Policies.IUnhandledExceptionPolicy' Gallio.Common.IO.IFileSystem' Gallio.Runtime.ProgressMonitoring.IProgressMonitor' Gallio.Runtime.Extensibility.IPluginDescriptor,Gallio.Copy.Controllers.CopyController
+Gallio.Copy.Events,PluginFolderUpdated,0,1,1,0,1,8,1,0,1,-1,0,1,,Gallio.Copy.Controllers.CopyController
+Gallio.Copy.Controllers,PluginFolderUpdatedEvent,0,1,1,0,1,8,1,0,0,-1,0,1,,Gallio.Copy.CopyForm
+Gallio.Copy.Controllers,IProgressController,0,1,3,0,0,8,1,1,0,-1,0,2,,Gallio.Copy.CopyForm' Gallio.Copy.CopyProgram
+Gallio.Copy.Controllers,ProgressController,4,7,4,0,5,90,14,0,1,0.29,6,0,Gallio.UI.ProgressMonitoring.ITaskManager' Gallio.Runtime.ProgressMonitoring.ObservableProgressMonitor' Gallio.Common.Policies.EventHandlerPolicy' Gallio.UI.ProgressMonitoring.TaskStarted' Gallio.UI.ProgressMonitoring.TaskCancelled' Gallio.UI.ProgressMonitoring.TaskCompleted,
+Gallio.Copy.Controllers,CopyController,4,9,4,0,7,66,9,0,1,0.22,9,0,Gallio.UI.ProgressMonitoring.ITaskManager' Gallio.UI.Common.Policies.IUnhandledExceptionPolicy' Gallio.UI.Events.IEventAggregator' Gallio.Common.IO.IFileSystem' Gallio.Copy.Commands.CopyPluginsCommand' Gallio.Copy.Model.PluginTreeModel' Gallio.Copy.Commands.UpdatePluginFolderCommand' Gallio.Loader.DefaultRuntimeLocator' Gallio.Copy.Events.PluginFolderUpdated,
+Gallio.Copy.Controllers,ICopyController,0,5,4,0,0,15,5,1,0,-1,0,2,,Gallio.Copy.CopyForm' Gallio.Copy.CopyProgram
+Gallio.Copy.Controls.Tree.NodeControls,NodeTextBox,0,3,0,0,1,22,4,0,0,-1,1,0,Gallio.Copy.Model.FileNode,
+Gallio.Copy.Controls.Tree.NodeControls,NodeCheckBox,0,1,0,0,0,9,2,0,0,-1,2,0,Gallio.UI.Tree.NodeControls.NodeCheckBox' Gallio.Copy.Model.FileNode,
+Gallio.Copy.Controls.Tree,PluginTreeView,0,2,0,0,2,22,3,0,0,-1,0,1,,Gallio.Copy.CopyForm
+Gallio.Copy,ProgressEvent,0,1,1,0,1,8,1,0,0,-1,1,1,Gallio.Runtime.ProgressMonitoring.ObservableProgressMonitor,Gallio.Copy.CopyForm
+Gallio.Copy,CopyArguments,2,0,0,2,0,11,0,0,0,-1,1,1,Gallio.Runtime.ConsoleSupport.CommandLineArgumentAttribute,Gallio.Copy.CopyProgram
+Gallio.Copy,CopyForm,19,11,0,0,1,398,14,0,0,0.18,10,1,Gallio.Copy.Controllers.ICopyController' Gallio.Copy.Controllers.IProgressController' Gallio.UI.ProgressMonitoring.ToolStripProgressBar' Gallio.Copy.Controls.Tree.PluginTreeView' Gallio.Common.Concurrency.Sync' Gallio.UI.ProgressMonitoring.ProgressMonitorDialog' Gallio.Copy.ProgressEvent' Gallio.Copy.Controllers.PluginFolderUpdatedEvent' Gallio.Copy.Properties.Resources' Gallio.UI.Common.Synchronization.SyncContext,Gallio.Copy.CopyProgram
+Gallio.Copy,CopyProgram,0,6,0,0,0,62,8,0,0,-1,18,0,Gallio.Copy.Properties.Resources' Gallio.Runtime.RuntimeSetup' Gallio.Runtime.Logging.FilteredLogger' Gallio.Copy.Runtime.ComponentScanner' Gallio.Copy.Controllers.ICopyController' Gallio.Copy.Controllers.IProgressController' Gallio.Copy.CopyForm' Gallio.Copy.CopyArguments' Gallio.Runtime.Logging.Verbosity' Gallio.Runtime.RuntimeBootstrap' Gallio.Runtime.RuntimeAccessor' Gallio.Runtime.Extensibility.IServiceLocator' Gallio.UI.ErrorReporting.ErrorDialogUnhandledExceptionHandler' Gallio.Runner.ResultCode' Gallio.Common.Collections.GenericCollectionUtils' Gallio.Runtime.ConsoleSupport.CommandLineArgumentParser' Gallio.Common.Policies.UnhandledExceptionPolicy' Gallio.Runtime.ConsoleSupport.NativeConsole,
+Gallio.Copy.Model,RootNode,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Gallio.Copy.Model,FileNode,0,1,2,0,1,12,1,0,1,-1,0,3,,Gallio.Copy.Controls.Tree.NodeControls.NodeTextBox' Gallio.Copy.Controls.Tree.NodeControls.NodeCheckBox' Gallio.Copy.Model.PluginTreeModel
+Gallio.Copy.Model,PluginNode,1,2,2,0,1,37,6,0,1,0,1,1,Gallio.Runtime.Extensibility.IPluginDescriptor,Gallio.Copy.Model.PluginTreeModel
+Gallio.Copy.Model,PluginTreeModel,2,5,1,0,5,64,9,0,0,0.4,5,3,Gallio.Common.IO.IFileSystem' Gallio.Runtime.Extensibility.IRegistry' Gallio.Runtime.Extensibility.IPluginDescriptor' Gallio.Copy.Model.PluginNode' Gallio.Copy.Model.FileNode,Gallio.Copy.Commands.UpdatePluginFolderCommand' Gallio.Copy.Commands.ComparePluginsCommand' Gallio.Copy.Controllers.CopyController
+Gallio.Copy.Properties,Resources,2,1,12,0,0,131,1,0,0,0,0,4,,Gallio.Copy.Commands.UpdatePluginFolderCommand' Gallio.Copy.Commands.ComparePluginsCommand' Gallio.Copy.CopyForm' Gallio.Copy.CopyProgram
+Gallio.Copy.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
+Gallio.Copy.Runtime,ComponentScanner,2,10,0,0,2,103,23,0,0,0,12,1,Gallio.Runtime.Extensibility.IRegistry' Gallio.Runtime.Extensibility.IPluginDescriptor' Gallio.Common.Reflection.TypeName' Gallio.Runtime.Extensibility.IServiceDescriptor' Gallio.UI.ProgressMonitoring.ICommand' Gallio.Runtime.Extensibility.ComponentRegistration' Gallio.Common.Collections.PropertySet' Gallio.UI.Events.Handles' Gallio.Runtime.Extensibility.ServiceRegistration' Gallio.Runtime.Extensibility.IServices' Gallio.Runtime.Extensibility.IComponents' Gallio.Runtime.Extensibility.IComponentDescriptor,Gallio.Copy.CopyProgram

@@ -1,11 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MsmqClient,0,1,1,0,0,20,4,2,0,-1,1,0
-MsmqEndpoint,0,3,1,0,3,32,6,2,1,-1,1,2
-MsmqEndpointManager,1,3,0,0,3,19,4,2,0,0,1,0
-MsmqMessage,1,3,0,0,3,28,5,0,1,0,0,1
-MsmqPublisherClient,0,2,0,0,2,16,3,0,1,-1,1,1
-MsmqPublisherEndpoint,0,2,0,0,2,11,2,0,2,-1,2,2
-MsmqPublisherEndpointManager,0,1,0,0,1,6,1,0,2,-1,1,1
-MsmqSubscriberClient,0,3,0,0,3,31,5,0,1,-1,2,1
-MsmqSubscriberEndpoint,0,2,0,0,2,11,2,0,2,-1,2,2
-MsmqSubscriberEndpointManager,0,2,0,0,2,10,2,0,2,-1,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mantle.Messaging.Msmq,MsmqClient,0,1,1,0,0,22,3,2,0,-1,1,0,Mantle.Messaging.Msmq.MsmqEndpoint,
+Mantle.Messaging.Msmq,MsmqEndpoint,0,3,1,0,3,29,6,2,1,-1,3,2,Mantle.Configuration.IConfigurationMetadata' Mantle.Messaging.Msmq.ConfigurationProperties' Mantle.Messaging.Endpoint,Mantle.Messaging.Msmq.MsmqClient' Mantle.Messaging.Msmq.MsmqEndpointManager
+Mantle.Messaging.Msmq,ConfigurationProperties,1,0,0,1,0,4,0,0,0,-1,0,1,,Mantle.Messaging.Msmq.MsmqEndpoint
+Mantle.Messaging.Msmq,MsmqEndpointManager,1,3,0,0,3,19,4,2,0,0,1,0,Mantle.Messaging.Msmq.MsmqEndpoint,
+Mantle.Messaging.Msmq,MsmqMessage<T>,1,3,0,0,3,37,5,0,1,0,0,0,,
+Mantle.Messaging.Msmq,MsmqPublisherClient,0,2,0,0,2,18,2,0,1,-1,1,1,Mantle.Messaging.Msmq.MsmqPublisherEndpoint,Mantle.Messaging.Msmq.MsmqPublisherEndpoint
+Mantle.Messaging.Msmq,MsmqPublisherEndpoint,0,2,0,0,2,11,2,0,2,-1,2,2,Mantle.Messaging.Msmq.MsmqPublisherClient' Mantle.Messaging.Msmq.MsmqPublisherEndpointManager,Mantle.Messaging.Msmq.MsmqPublisherClient' Mantle.Messaging.Msmq.MsmqPublisherEndpointManager
+Mantle.Messaging.Msmq,MsmqPublisherEndpointManager,0,1,0,0,1,7,1,0,2,-1,1,1,Mantle.Messaging.Msmq.MsmqPublisherEndpoint,Mantle.Messaging.Msmq.MsmqPublisherEndpoint
+Mantle.Messaging.Msmq,MsmqSubscriberClient,0,3,0,0,3,40,4,0,1,-1,1,1,Mantle.Messaging.Msmq.MsmqSubscriberEndpoint,Mantle.Messaging.Msmq.MsmqSubscriberEndpoint
+Mantle.Messaging.Msmq,MsmqSubscriberEndpoint,0,2,0,0,2,11,2,0,2,-1,2,2,Mantle.Messaging.Msmq.MsmqSubscriberClient' Mantle.Messaging.Msmq.MsmqSubscriberEndpointManager,Mantle.Messaging.Msmq.MsmqSubscriberClient' Mantle.Messaging.Msmq.MsmqSubscriberEndpointManager
+Mantle.Messaging.Msmq,MsmqSubscriberEndpointManager,0,2,0,0,2,11,2,0,2,-1,1,1,Mantle.Messaging.Msmq.MsmqSubscriberEndpoint,Mantle.Messaging.Msmq.MsmqSubscriberEndpoint

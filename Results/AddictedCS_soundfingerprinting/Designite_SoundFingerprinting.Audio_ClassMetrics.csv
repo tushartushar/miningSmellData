@@ -1,19 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AudioSamples,0,2,4,0,1,45,2,0,0,-1,0,9
-AudioSamplesNormalizer,2,1,0,0,1,21,4,0,1,0,0,0
-AudioService,0,2,1,0,2,11,2,1,1,-1,0,0
-AudioServiceException,0,1,0,0,1,6,1,0,0,-1,0,0
-ContinuousStreamSamplesProvider,2,2,0,0,2,19,3,0,1,0,1,0
-IAudioSamplesNormalizer,0,1,0,0,0,4,1,1,0,-1,0,1
-IAudioService,0,2,1,0,0,28,2,1,0,-1,0,6
-ISoundCaptureService,0,1,0,0,0,13,1,1,0,-1,0,0
-IPlayAudioFileService,0,2,0,0,0,5,2,1,0,-1,0,0
-ISamplesAggregator,0,1,0,0,0,4,1,1,0,-1,1,2
-ISamplesProvider,0,1,0,0,0,4,1,3,0,-1,0,3
-IStreamingUrlReader,0,1,0,0,0,15,1,1,0,-1,0,0
-ITagService,0,1,0,0,0,4,1,1,0,-1,0,1
-IWaveFileUtility,0,1,0,0,0,13,1,1,0,-1,0,0
-SamplesAggregator,2,8,0,0,1,80,17,0,1,0,1,0
-SamplesConverter,0,1,0,0,1,14,2,0,0,-1,0,1
-TagInfo,0,1,10,0,1,48,1,0,0,-1,0,3
-AudioModuleLoader,0,1,0,0,1,7,1,0,1,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SoundFingerprinting.Audio,AudioSamples,0,2,4,0,1,35,2,0,0,-1,0,19,,SoundFingerprinting.Command.FingerprintCommand' SoundFingerprinting.Command.ISourceFrom' SoundFingerprinting.Command.QueryCommand' SoundFingerprinting.Command.IQuerySource' SoundFingerprinting.FFT.ISpectrumService' SoundFingerprinting.FFT.SpectrumService' SoundFingerprinting.IFingerprintService' SoundFingerprinting.FingerprintService' SoundFingerprinting.Audio.AudioService' SoundFingerprinting.Audio.NAudio.NAudioService' SoundFingerprinting.Tests.Integration.FingerprintCommandBuilderIntTest' SoundFingerprinting.Tests.Integration.FingerprintCommandBuilderNativeIntTest' SoundFingerprinting.Tests.Integration.IntegrationWithSampleFilesTest' SoundFingerprinting.Tests.TestUtilities' SoundFingerprinting.Tests.Unit.Builder.QueryCommandBenchmark' SoundFingerprinting.Tests.Unit.FFT.SpectrumServiceTest' SoundFingerprinting.Tests.Unit.FingerprintServiceTest' SoundFingerprinting.Tests.Unit.Utils.FastFingerprintDescriptorTest' SoundFingerprinting.Audio.NAudio.Test.NAudioServiceTest
+SoundFingerprinting.Audio,AudioSamplesNormalizer,2,1,0,0,1,24,4,0,1,0,0,0,,
+SoundFingerprinting.Audio,AudioService,0,3,1,0,3,10,3,1,1,-1,1,0,SoundFingerprinting.Audio.AudioSamples,
+SoundFingerprinting.Audio,AudioServiceException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+SoundFingerprinting.Audio,ContinuousStreamSamplesProvider,2,2,0,0,2,19,3,0,1,0,1,1,SoundFingerprinting.Audio.ISamplesProvider,SoundFingerprinting.Tests.Unit.Audio.ContinuousStreamSamplesProviderTest
+SoundFingerprinting.Audio,IAudioSamplesNormalizer,0,1,0,0,0,4,1,1,0,-1,0,1,,SoundFingerprinting.Audio.NAudio.NAudioService
+SoundFingerprinting.Audio,IAudioService,0,3,1,0,0,29,3,1,0,-1,0,14,,SoundFingerprinting.Command.IUsingFingerprintServices' SoundFingerprinting.Command.IUsingQueryServices' SoundFingerprinting.Command.FingerprintCommand' SoundFingerprinting.Command.QueryCommand' SoundFingerprinting.Query.QueryResultValidatorService' SoundFingerprinting.Utils.TestRunner' SoundFingerprinting.Tests.Integration.FingerprintCommandBuilderIntTest' SoundFingerprinting.Tests.Integration.FingerprintCommandBuilderNativeIntTest' SoundFingerprinting.Tests.Integration.InMemoryModelServiceSerializationTest' SoundFingerprinting.Tests.Integration.NAudioServiceIntTest' SoundFingerprinting.Tests.Integration.SubFingerprintDaoTest' SoundFingerprinting.Tests.Integration.TestRunnerTest' SoundFingerprinting.Tests.Integration.TrackDaoTest' SoundFingerprinting.Tests.Unit.Builder.QueryCommandBenchmark
+SoundFingerprinting.Audio,ISoundCaptureService,0,1,0,0,0,10,1,1,0,-1,0,0,,
+SoundFingerprinting.Audio,IPlayAudioFileService,0,2,0,0,0,5,2,1,0,-1,0,0,,
+SoundFingerprinting.Audio,ISamplesAggregator,0,1,0,0,0,4,1,1,0,-1,1,3,SoundFingerprinting.Audio.ISamplesProvider,SoundFingerprinting.Audio.NAudio.NAudioSoundCaptureService' SoundFingerprinting.Audio.NAudio.NAudioSourceReader' SoundFingerprinting.Tests.Unit.Audio.SamplesAggregatorTest
+SoundFingerprinting.Audio,ISamplesProvider,0,1,0,0,0,4,1,4,0,-1,0,3,,SoundFingerprinting.Audio.ContinuousStreamSamplesProvider' SoundFingerprinting.Audio.ISamplesAggregator' SoundFingerprinting.Audio.SamplesAggregator
+SoundFingerprinting.Audio,IStreamingUrlReader,0,1,0,0,0,11,1,1,0,-1,0,0,,
+SoundFingerprinting.Audio,ITagService,0,1,0,0,0,4,1,1,0,-1,0,2,,SoundFingerprinting.Utils.TestRunner' SoundFingerprinting.Tests.Integration.FingerprintCommandBuilderIntTest
+SoundFingerprinting.Audio,IWaveFileUtility,0,1,0,0,0,10,1,1,0,-1,0,1,,SoundFingerprinting.Tests.Integration.FingerprintCommandBuilderIntTest
+SoundFingerprinting.Audio,SamplesAggregator,2,8,0,0,1,91,17,0,1,0,1,0,SoundFingerprinting.Audio.ISamplesProvider,
+SoundFingerprinting.Audio,SamplesConverter,0,1,0,0,1,15,2,0,0,-1,0,2,,SoundFingerprinting.Audio.NAudio.NAudioSoundCaptureService' SoundFingerprinting.Audio.NAudio.Test.NAudioWaveFileUtilityTest
+SoundFingerprinting.Audio,TagInfo,0,1,10,0,1,18,1,0,0,-1,0,8,,SoundFingerprinting.DAO.Data.TrackData' SoundFingerprinting.Utils.TestRunner' SoundFingerprinting.Audio.NAudio.NAudioTagService' SoundFingerprinting.Tests.Integration.FingerprintCommandBuilderIntTest' SoundFingerprinting.Tests.Integration.IntegrationWithSampleFilesTest' SoundFingerprinting.Tests.Integration.SubFingerprintDaoTest' SoundFingerprinting.Tests.Integration.TrackDaoTest' SoundFingerprinting.Tests.Unit.Audio.TagInfoTest

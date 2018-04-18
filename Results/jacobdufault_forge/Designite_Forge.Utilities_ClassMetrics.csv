@@ -1,24 +1,32 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AtomicActivation,3,3,1,0,3,55,4,0,0,0,0,3
-Bound,3,5,0,3,5,46,5,0,0,0,3,3
-Contract,0,12,0,0,11,110,14,0,0,-1,0,8
-FastStringFormat,1,10,0,0,10,381,10,0,0,0,1,1
-GameRandom,1,2,0,0,2,12,2,0,0,0,1,0
-RandomExtensionMethods,0,3,0,0,3,44,5,0,0,-1,0,0
-Log,1,57,0,0,56,357,107,0,0,0.04,1,8
-Maybe,3,5,3,1,4,100,6,0,0,0.8,0,15
-MaybeExtensions,0,3,0,0,3,50,6,0,0,-1,1,0
-IContextObject,0,0,0,0,0,6,0,4,0,-1,0,3
-GeneralStreamingContext,1,5,0,0,5,57,9,0,0,0,1,5
-Notifier,3,3,0,0,3,66,5,0,0,0,1,1
-PropertyMetadata,2,7,1,2,7,104,12,0,0,0.43,0,1
-Real,9,26,4,8,22,611,42,0,0,0.12,1,3
-Reference,1,2,0,1,2,15,2,0,0,1,0,0
-SerializationHelpers,2,8,0,0,6,196,9,0,0,0.25,2,5
-Tuple,0,18,3,0,18,123,24,0,0,-1,0,0
-TypeCache,3,6,0,0,2,103,14,0,0,0,1,0
-TypeExtensions,0,2,0,0,2,68,15,0,0,-1,0,0
-TypeMetadata,4,6,4,0,4,252,36,0,0,0,2,1
-UniqueIntGenerator,1,2,0,0,2,29,3,0,0,0,0,5
-Utils,0,1,0,0,1,16,1,0,0,-1,0,2
-Vector2r,2,11,0,2,11,114,14,0,0,0.27,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Forge.Utilities,AtomicActivation,3,3,1,0,3,45,4,0,0,0,0,4,,Forge.Collections.ConcurrentWriterBag<T>' Forge.Entities.Implementation.Runtime.RuntimeEntity' Forge.Entities.Implementation.Runtime.DataContainer' Forge.Utilities.Notifier<ParamType>
+Forge.Utilities,Bound,3,5,0,3,5,40,5,0,0,0,3,5,Forge.Utilities.Contract' Forge.Utilities.Real' Forge.Utilities.Vector2r,Forge.Collections.Rect' Forge.Collections.Node<T>' Forge.Collections.StoredMonitor' Forge.Collections.QuadTree<TItem>' Forge.Utilities.Tests.BoundTests
+Forge.Utilities,Contract,0,12,0,0,11,162,14,0,0,-1,0,9,,Forge.Collections.Bag<T>' Forge.Collections.BufferedItem<T>' Forge.Entities.LevelManager' Forge.Entities.Implementation.Runtime.GameEngine' Forge.Networking.Lobby.LobbyLaunchedHandler' Forge.Utilities.Bound' Forge.Utilities.FastStringFormat' Forge.Utilities.Real' Forge.Utilities.Tests.ContractTests
+Forge.Utilities,FastStringFormat,1,10,0,0,10,278,10,0,0,0,1,2,Forge.Utilities.Contract,Forge.Utilities.Log<T>' Forge.Utilities.Tests.FastStringFormatTests
+Forge.Utilities,GameRandom,1,2,0,0,2,9,2,0,0,0,1,0,Forge.Utilities.Real,
+Forge.Utilities,RandomExtensionMethods,0,3,0,0,3,40,4,0,0,-1,0,0,,
+Forge.Utilities,Log,0,1,0,0,1,8,1,0,0,-1,0,8,,Forge.Entities.GameEngineFactory' Forge.Entities.Implementation.Runtime.GameEngine' Forge.Entities.Implementation.Shared.EventNotifier' Forge.Networking.Core.NetworkServerDiscovery' Forge.Networking.Core.NetworkContext' Forge.Networking.Core.NetworkMessageDispatcher' Forge.Networking.Lobby.PlayerManager' Forge.Utilities.TypeMetadata
+Forge.Utilities,Log<T>,1,56,0,0,55,284,106,0,0,0,1,0,Forge.Utilities.FastStringFormat,
+Forge.Utilities,Maybe,3,5,3,1,4,85,6,0,0,0.8,0,22,,Forge.Collections.SparseArray<T>' Forge.Entities.GameEngineFactory' Forge.Entities.LevelManager' Forge.Entities.Implementation.Content.Converter' Forge.Entities.Implementation.Content.GameSnapshotRestorer' Forge.Entities.Implementation.Content.TemplateContainerConverter' Forge.Entities.Implementation.ContextObjects.GameEngineContext' Forge.Entities.Implementation.ContextObjects.EntityConversionContext' Forge.Entities.Implementation.ContextObjects.TemplateConversionContext' Forge.Entities.Implementation.Runtime.GameEngine' Forge.Entities.Implementation.Shared.RequiredConverters' Forge.Networking.Chat.ChatMessageHandler' Forge.Networking.Chat.ChatManager' Forge.Networking.Core.NetworkContext' Forge.Networking.Lobby.LobbyMember' Forge.Networking.Pausing.PauseMessageHandler' NetworkDebug.Form1' Forge.Utilities.MaybeExtensions' Forge.Entities.Tests.CallOrderTests' Forge.Entities.Tests.EngineTests' Forge.Entities.Tests.GameSnapshotTests' Forge.Utilities.Tests.MaybeTests
+Forge.Utilities,MaybeExtensions,0,3,0,0,3,44,6,0,0,-1,1,0,Forge.Utilities.Maybe,
+Forge.Utilities,IContextObject,0,0,0,0,0,1,0,4,0,-1,0,3,,Forge.Entities.Implementation.Shared.RequiredConverters' Forge.Utilities.GeneralStreamingContext' Forge.Utilities.SerializationHelpers
+Forge.Utilities,GeneralStreamingContext,1,5,0,0,5,48,9,0,0,0,1,5,Forge.Utilities.IContextObject,Forge.Entities.Implementation.Content.Converter' Forge.Entities.Implementation.Content.GameSnapshot' Forge.Entities.Implementation.Content.GameSnapshotRestorer' Forge.Entities.Implementation.Content.TemplateContainerConverter' Forge.Entities.Implementation.Shared.QueryableEntityConverter
+Forge.Utilities,Notifier<ParamType>,3,3,0,0,3,54,5,0,0,0,1,0,Forge.Utilities.AtomicActivation,
+Forge.Utilities,PropertyMetadata,2,7,1,2,7,93,12,0,0,0.43,0,2,,Forge.Utilities.TypeMetadata' Forge.Utilities.Tests.TypeMetadataTests
+Forge.Utilities,Real,9,26,4,8,22,444,48,0,0,0.12,1,7,Forge.Utilities.Contract,Forge.Collections.Rect' Forge.Collections.QuadTree<TItem>' Forge.Utilities.Bound' Forge.Utilities.GameRandom' Forge.Utilities.RealJsonConverter' Forge.Utilities.Vector2r' Forge.Utilities.Tests.RealTests
+Forge.Utilities,RealJsonConverter,0,3,0,0,3,15,4,0,0,-1,1,0,Forge.Utilities.Real,
+Forge.Utilities,Reference<T>,1,2,0,1,2,8,2,0,0,1,0,0,,
+Forge.Utilities,SerializationHelpers,2,8,0,0,6,182,9,0,0,0,2,9,Forge.Utilities.IContextObject' Forge.Utilities.FlexibleBinder,Forge.Entities.LevelManager' Forge.Entities.Implementation.Content.GameSnapshotRestorer' Forge.Entities.Implementation.Runtime.GameEngine' Forge.Networking.Core.NetworkServerDiscovery' Forge.Networking.Core.NetworkContext' CollectionsTests.QuadTreeTests' Forge.Utilities.Tests.MaybeTests' Forge.Utilities.Tests.RealTests' Forge.Utilities.Tests.SerializationTests
+Forge.Utilities,FlexibleTypeConverter,0,3,0,0,3,19,4,0,0,-1,1,0,Forge.Utilities.TypeCache,
+Forge.Utilities,FlexibleBinder,1,1,0,1,1,9,1,0,0,0,1,1,Forge.Utilities.TypeCache,Forge.Utilities.SerializationHelpers
+Forge.Utilities,RequireOptInContractResolver,1,2,0,0,1,32,7,0,0,0,0,0,,
+Forge.Utilities,Tuple<T1>,0,5,1,0,5,26,6,0,0,-1,1,0,Forge.Utilities.Tuple,
+Forge.Utilities,Tuple<T1;T2>,0,5,1,0,5,31,7,0,1,-1,1,0,Forge.Utilities.Tuple,
+Forge.Utilities,Tuple<T1;T2;T3>,0,5,1,0,5,35,8,0,1,-1,1,0,Forge.Utilities.Tuple,
+Forge.Utilities,Tuple,0,3,0,0,3,11,3,2,0,-1,0,3,,Forge.Utilities.Tuple<T1>' Forge.Utilities.Tuple<T1;T2>' Forge.Utilities.Tuple<T1;T2;T3>
+Forge.Utilities,TypeCache,3,6,0,0,2,95,14,0,0,0,1,3,Forge.Utilities.TypeMetadata,Forge.Utilities.FlexibleTypeConverter' Forge.Utilities.FlexibleBinder' Forge.Utilities.Tests.TypeMetadataTests
+Forge.Utilities,TypeExtensions,0,2,0,0,2,66,13,0,0,-1,0,0,,
+Forge.Utilities,TypeMetadata,4,6,4,0,4,252,30,0,0,0,2,2,Forge.Utilities.Log' Forge.Utilities.PropertyMetadata,Forge.Utilities.TypeCache' Forge.Utilities.Tests.TypeMetadataTests
+Forge.Utilities,UniqueIntGenerator,1,2,0,0,2,23,3,0,0,0,0,9,,Forge.Entities.LevelManager' Forge.Entities.Implementation.Content.GameSnapshot' Forge.Entities.Implementation.Content.TemplateGroup' Forge.Entities.Implementation.Runtime.RuntimeTemplate' Forge.Entities.Implementation.Runtime.EntityManagerMetadata' Forge.Entities.Implementation.Runtime.GameEngine' Forge.Entities.Implementation.Shared.DataAccessorFactory' Forge.Entities.Tests.EntityTestHelpers' Forge.Utilities.Tests.UniqueIntGeneratorTests
+Forge.Utilities,Utils,0,1,0,0,1,14,1,0,0,-1,0,2,,Forge.Entities.Implementation.Runtime.RuntimeEntity' Forge.Entities.Implementation.Shared.EventNotifier
+Forge.Utilities,Vector2r,2,11,0,2,11,97,14,0,0,0,1,4,Forge.Utilities.Real,Forge.Collections.Node<T>' Forge.Collections.StoredItem' Forge.Collections.QuadTree<TItem>' Forge.Utilities.Bound

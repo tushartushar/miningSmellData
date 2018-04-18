@@ -1,0 +1,48 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NewsSystem.Web.Account,AddPhoneNumber,2,1,0,0,0,37,2,0,0,0,0,0,,
+NewsSystem.Web.Account,Confirm,3,1,1,0,0,53,3,0,0,0,1,0,NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,ForgotPassword,5,2,0,0,0,74,4,0,0,1,1,0,NewsSystem.Web.Models.ApplicationUser,
+NewsSystem.Web.Account,Lockout,0,1,0,0,0,8,1,0,0,-1,0,0,,
+NewsSystem.Web.Account,Login,7,2,0,0,0,111,5,0,0,1,2,0,NewsSystem.Web.Account.OpenAuthProviders' NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,Manage,4,6,5,0,0,129,12,0,0,1,2,0,NewsSystem.Web.ApplicationUserManager' NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,ManageLogins,1,4,2,0,2,54,5,0,0,1,2,0,NewsSystem.Web.ApplicationUserManager' NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,ManagePassword,10,5,1,0,0,169,13,0,0,0.6,2,0,NewsSystem.Web.ApplicationUserManager' NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,OpenAuthProviders,1,2,1,0,1,40,5,0,0,1,1,1,NewsSystem.Web.IdentityHelper,NewsSystem.Web.Account.Login
+NewsSystem.Web.Account,Register,4,1,0,0,0,59,2,0,0,0,2,0,NewsSystem.Web.Models.ApplicationUser' NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,RegisterExternalLogin,1,5,2,0,0,119,14,0,0,0,2,0,NewsSystem.Web.IdentityHelper' NewsSystem.Web.Models.ApplicationUser,
+NewsSystem.Web.Account,ResetPassword,4,1,1,0,0,68,4,0,0,0,1,0,NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,ResetPasswordConfirmation,1,0,0,0,0,12,0,0,0,-1,0,0,,
+NewsSystem.Web.Account,TwoFactorAuthenticationSignIn,12,4,0,0,1,148,8,0,0,0,3,0,NewsSystem.Web.ApplicationSignInManager' NewsSystem.Web.ApplicationUserManager' NewsSystem.Web.IdentityHelper,
+NewsSystem.Web.Account,VerifyPhoneNumber,3,2,0,0,0,59,5,0,0,0,1,0,NewsSystem.Web.IdentityHelper,
+NewsSystem.Web,BundleConfig,0,1,0,0,1,36,1,0,0,-1,0,1,,NewsSystem.Web.Global
+NewsSystem.Web,EmailService,0,1,0,0,1,8,1,0,0,-1,0,0,,
+NewsSystem.Web,SmsService,0,1,0,0,1,8,1,0,0,-1,0,0,,
+NewsSystem.Web,ApplicationUserManager,0,2,0,0,2,49,3,0,0,-1,0,8,,NewsSystem.Web.Account.Manage' NewsSystem.Web.Account.ManageLogins' NewsSystem.Web.Account.ManagePassword' NewsSystem.Web.Account.TwoFactorAuthenticationSignIn' NewsSystem.Web.ApplicationSignInManager' NewsSystem.Web.Startup' NewsSystem.Web.IdentityHelper' NewsSystem.Web.Models.ApplicationUser
+NewsSystem.Web,ApplicationSignInManager,0,3,0,0,3,15,3,0,0,-1,2,2,NewsSystem.Web.ApplicationUserManager' NewsSystem.Web.Models.ApplicationUser,NewsSystem.Web.Account.TwoFactorAuthenticationSignIn' NewsSystem.Web.Startup
+NewsSystem.Web,RouteConfig,0,1,0,0,1,9,1,0,0,-1,0,1,,NewsSystem.Web.Global
+NewsSystem.Web,Startup,0,2,0,0,2,37,2,0,0,-1,3,0,NewsSystem.Web.Models.ApplicationDbContext' NewsSystem.Web.ApplicationUserManager' NewsSystem.Web.ApplicationSignInManager,
+NewsSystem.Web,_Default,3,4,0,0,2,49,5,0,0,0.75,3,0,NewsSystem.Web.Models.ApplicationDbContext' NewsSystem.Web.Models.ArticleProjection' NewsSystem.Web.Models.CategoryProjection,
+NewsSystem.Web,Global,0,1,0,0,0,9,1,0,0,-1,2,0,NewsSystem.Web.RouteConfig' NewsSystem.Web.BundleConfig,
+NewsSystem.Web,IdentityHelper,4,8,0,4,7,63,9,0,0,0.5,2,11,NewsSystem.Web.ApplicationUserManager' NewsSystem.Web.Models.ApplicationUser,NewsSystem.Web.Account.Confirm' NewsSystem.Web.Account.Login' NewsSystem.Web.Account.Manage' NewsSystem.Web.Account.ManageLogins' NewsSystem.Web.Account.ManagePassword' NewsSystem.Web.Account.OpenAuthProviders' NewsSystem.Web.Account.Register' NewsSystem.Web.Account.RegisterExternalLogin' NewsSystem.Web.Account.ResetPassword' NewsSystem.Web.Account.TwoFactorAuthenticationSignIn' NewsSystem.Web.Account.VerifyPhoneNumber
+NewsSystem.Web,SiteMaster,5,4,0,0,0,79,6,0,0,0.75,1,0,Error_Handler_Control.ErrorSuccessNotifier,
+NewsSystem.Web,Site_Mobile,4,1,0,0,0,43,1,0,0,0,0,0,,
+NewsSystem.Web,ViewArticle,5,5,0,0,1,96,10,0,0,0,4,0,NewsSystem.Web.Models.ApplicationDbContext' NewsSystem.Web.Infrastructure.IUserIdProvider' NewsSystem.Web.Models.ArticleProjection' NewsSystem.Web.Controls.LikeEventArgs,
+NewsSystem.Web,ViewSwitcher,0,1,3,0,0,27,2,0,0,-1,0,0,,
+NewsSystem.Web.Auth,EditArticles,3,7,0,0,5,109,11,0,0,0.29,7,0,NewsSystem.Web.Models.ApplicationDbContext' NewsSystem.Web.Infrastructure.IUserIdProvider' NewsSystem.Web.Models.ArticleProjection' Error_Handler_Control.MessageType' NewsSystem.Web.Models.Article' Error_Handler_Control.ErrorSuccessNotifier' Error_Handler_Control.NotificationMessage,
+NewsSystem.Web.Auth,EditCategories,2,5,0,0,4,130,13,0,0,0,5,0,NewsSystem.Web.Models.ApplicationDbContext' Error_Handler_Control.MessageType' Error_Handler_Control.ErrorSuccessNotifier' NewsSystem.Web.Models.Category' Error_Handler_Control.NotificationMessage,
+Error_Handler_Control,MessageType,0,0,0,0,0,7,0,0,0,-1,0,3,,NewsSystem.Web.Auth.EditArticles' NewsSystem.Web.Auth.EditCategories' Error_Handler_Control.ErrorSuccessNotifier
+Error_Handler_Control,NotificationMessage,0,0,3,0,0,6,0,0,0,-1,0,3,,NewsSystem.Web.Auth.EditArticles' NewsSystem.Web.Auth.EditCategories' Error_Handler_Control.ErrorSuccessNotifier
+Error_Handler_Control,ErrorSuccessNotifier,2,10,2,0,5,151,18,0,0,0,2,3,Error_Handler_Control.NotificationMessage' Error_Handler_Control.MessageType,NewsSystem.Web.SiteMaster' NewsSystem.Web.Auth.EditArticles' NewsSystem.Web.Auth.EditCategories
+NewsSystem.Web.Controls,LikeControl,3,6,6,0,0,93,10,0,0,0.83,0,0,,
+NewsSystem.Web.Controls,LikeEventArgs,0,2,4,0,2,19,2,0,0,-1,0,1,,NewsSystem.Web.ViewArticle
+NewsSystem.Web.Infrastructure,AspNetUserIdProvider,0,1,0,0,1,7,1,0,1,-1,0,0,,
+NewsSystem.Web.Infrastructure,IUserIdProvider,0,1,0,0,0,4,1,1,0,-1,0,2,,NewsSystem.Web.ViewArticle' NewsSystem.Web.Auth.EditArticles
+NewsSystem.Web.Models,ApplicationDbContext,0,2,3,0,2,16,2,0,0,-1,0,6,,NewsSystem.Web.Startup' NewsSystem.Web._Default' NewsSystem.Web.ViewArticle' NewsSystem.Web.Auth.EditArticles' NewsSystem.Web.Auth.EditCategories' NewsSystem.Web.Migrations.Configuration
+NewsSystem.Web.Models,ApplicationUser,0,2,0,0,2,14,2,0,0,-1,1,6,NewsSystem.Web.ApplicationUserManager,NewsSystem.Web.Account.ForgotPassword' NewsSystem.Web.Account.Register' NewsSystem.Web.Account.RegisterExternalLogin' NewsSystem.Web.ApplicationSignInManager' NewsSystem.Web.IdentityHelper' NewsSystem.Web.Migrations.Configuration
+NewsSystem.Web.Models,ArticleProjection,0,0,8,0,0,26,0,0,0,-1,0,3,,NewsSystem.Web._Default' NewsSystem.Web.ViewArticle' NewsSystem.Web.Auth.EditArticles
+NewsSystem.Web.Models,Category,1,1,3,0,1,23,1,0,0,0,0,1,,NewsSystem.Web.Auth.EditCategories
+NewsSystem.Web.Models,Article,1,1,9,0,1,30,1,0,0,0,0,1,,NewsSystem.Web.Auth.EditArticles
+NewsSystem.Web.Models,CategoryProjection,0,0,4,0,0,22,0,0,0,-1,0,1,,NewsSystem.Web._Default
+NewsSystem.Web.Models,Like,0,0,6,0,0,10,0,0,0,-1,0,0,,
+NewsSystem.Web.Migrations,Configuration,3,2,0,3,1,95,5,0,0,1,2,0,NewsSystem.Web.Models.ApplicationUser' NewsSystem.Web.Models.ApplicationDbContext,
+NewsSystem.Web.Utility,StringExtensions,0,1,0,0,1,14,2,0,0,-1,0,0,,

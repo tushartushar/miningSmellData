@@ -1,20 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Card,0,1,2,0,1,16,1,0,0,-1,2,6
-Hand,0,3,1,0,3,21,3,0,0,-1,1,12
-Rank,0,0,0,0,0,16,0,0,0,-1,0,3
-Suit,0,0,0,0,0,7,0,0,0,-1,0,2
-CheckerHelper,4,6,0,0,5,60,12,0,0,0.67,6,11
-FlushChecker,0,1,0,0,1,11,2,0,1,-1,2,1
-FourOfAKindChecker,0,1,0,0,1,11,2,0,1,-1,2,1
-FullHouseChecker,0,1,0,0,1,11,2,0,1,-1,2,1
-HighCardChecker,0,1,0,0,1,7,1,0,1,-1,2,1
-OnePairChecker,0,1,0,0,1,11,2,0,1,-1,2,1
-PokerCombinationChecker,0,3,1,0,2,16,3,9,0,-1,2,0
-StraightChecker,0,1,0,0,1,11,2,0,1,-1,2,1
-StraightFlushChecker,0,1,0,0,1,15,3,0,1,-1,2,1
-ThreeOfAKindChecker,0,1,0,0,1,11,2,0,1,-1,2,1
-TwoPairChecker,0,1,0,0,1,11,2,0,1,-1,2,1
-FullCardComparer,0,2,0,0,2,11,2,0,0,-1,1,1
-RankCardComparer,0,2,0,0,2,11,2,0,0,-1,1,1
-SuitCardComparer,0,2,0,0,2,11,2,0,0,-1,1,1
-Program,0,2,0,0,0,23,2,0,0,-1,14,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ChainOfResponsibility.Cards,Card,0,1,2,0,1,10,1,0,0,-1,2,5,ChainOfResponsibility.Cards.Suit' ChainOfResponsibility.Cards.Rank,ChainOfResponsibility.Cards.Hand' ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Comparers.FullCardComparer' ChainOfResponsibility.Comparers.RankCardComparer' ChainOfResponsibility.Comparers.SuitCardComparer
+ChainOfResponsibility.Cards,Hand,0,3,1,0,3,18,3,0,0,-1,1,12,ChainOfResponsibility.Cards.Card,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.FlushChecker' ChainOfResponsibility.Checkers.FourOfAKindChecker' ChainOfResponsibility.Checkers.FullHouseChecker' ChainOfResponsibility.Checkers.HighCardChecker' ChainOfResponsibility.Checkers.OnePairChecker' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Checkers.StraightChecker' ChainOfResponsibility.Checkers.StraightFlushChecker' ChainOfResponsibility.Checkers.ThreeOfAKindChecker' ChainOfResponsibility.Checkers.TwoPairChecker' ChainOfResponsibility.Program
+ChainOfResponsibility.Cards,Rank,0,0,0,0,0,16,0,0,0,-1,0,5,,ChainOfResponsibility.Cards.Card' ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Comparers.FullCardComparer' ChainOfResponsibility.Comparers.RankCardComparer' ChainOfResponsibility.Program
+ChainOfResponsibility.Cards,Suit,0,0,0,0,0,7,0,0,0,-1,0,3,,ChainOfResponsibility.Cards.Card' ChainOfResponsibility.Comparers.FullCardComparer' ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,CheckerHelper,4,6,0,0,5,81,10,0,0,0.67,3,11,ChainOfResponsibility.Cards.Hand' ChainOfResponsibility.Cards.Card' ChainOfResponsibility.Cards.Rank,ChainOfResponsibility.Checkers.FlushChecker' ChainOfResponsibility.Checkers.FourOfAKindChecker' ChainOfResponsibility.Checkers.FullHouseChecker' ChainOfResponsibility.Checkers.HighCardChecker' ChainOfResponsibility.Checkers.OnePairChecker' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Checkers.StraightChecker' ChainOfResponsibility.Checkers.StraightFlushChecker' ChainOfResponsibility.Checkers.ThreeOfAKindChecker' ChainOfResponsibility.Checkers.TwoPairChecker' ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,FlushChecker,0,1,0,0,1,14,2,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,FourOfAKindChecker,0,1,0,0,1,14,2,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,FullHouseChecker,0,1,0,0,1,14,2,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,HighCardChecker,0,1,0,0,1,7,1,0,1,-1,2,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,OnePairChecker,0,1,0,0,1,14,2,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,PokerCombinationChecker,0,3,1,0,2,11,3,9,0,-1,2,9,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Checkers.FlushChecker' ChainOfResponsibility.Checkers.FourOfAKindChecker' ChainOfResponsibility.Checkers.FullHouseChecker' ChainOfResponsibility.Checkers.OnePairChecker' ChainOfResponsibility.Checkers.StraightChecker' ChainOfResponsibility.Checkers.StraightFlushChecker' ChainOfResponsibility.Checkers.ThreeOfAKindChecker' ChainOfResponsibility.Checkers.TwoPairChecker' ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,StraightChecker,0,1,0,0,1,14,2,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,StraightFlushChecker,0,1,0,0,1,19,3,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,ThreeOfAKindChecker,0,1,0,0,1,14,2,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Checkers,TwoPairChecker,0,1,0,0,1,14,2,0,1,-1,3,1,ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand,ChainOfResponsibility.Program
+ChainOfResponsibility.Comparers,FullCardComparer,0,2,0,0,2,11,2,0,0,-1,3,0,ChainOfResponsibility.Cards.Card' ChainOfResponsibility.Cards.Suit' ChainOfResponsibility.Cards.Rank,
+ChainOfResponsibility.Comparers,RankCardComparer,0,2,0,0,2,11,2,0,0,-1,2,0,ChainOfResponsibility.Cards.Card' ChainOfResponsibility.Cards.Rank,
+ChainOfResponsibility.Comparers,SuitCardComparer,0,2,0,0,2,11,2,0,0,-1,1,0,ChainOfResponsibility.Cards.Card,
+ChainOfResponsibility,Program,0,2,0,0,0,37,2,0,0,-1,14,0,ChainOfResponsibility.Checkers.PokerCombinationChecker' ChainOfResponsibility.Cards.Hand' ChainOfResponsibility.Checkers.CheckerHelper' ChainOfResponsibility.Cards.Suit' ChainOfResponsibility.Cards.Rank' ChainOfResponsibility.Checkers.HighCardChecker' ChainOfResponsibility.Checkers.OnePairChecker' ChainOfResponsibility.Checkers.TwoPairChecker' ChainOfResponsibility.Checkers.ThreeOfAKindChecker' ChainOfResponsibility.Checkers.StraightChecker' ChainOfResponsibility.Checkers.FlushChecker' ChainOfResponsibility.Checkers.FullHouseChecker' ChainOfResponsibility.Checkers.FourOfAKindChecker' ChainOfResponsibility.Checkers.StraightFlushChecker,

@@ -1,25 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-FileType,0,0,0,0,0,48,0,0,0,-1,0,11
-ErrorCode,0,0,0,0,0,20,0,0,0,-1,0,5
-LibMtpException,0,4,0,0,3,27,5,0,0,-1,4,3
-Error,3,1,0,3,1,14,2,0,0,0,1,2
-FileSample,0,3,0,0,3,10,3,0,0,-1,3,1
-FileSampleData,6,0,0,6,0,10,0,0,0,-1,1,3
-Album,1,15,7,0,6,154,20,0,1,0.33,7,2
-AlbumStruct,10,0,0,10,0,18,0,0,0,-1,0,1
-Folder,4,18,3,0,5,158,28,0,0,0.11,5,2
-FolderStruct,6,0,0,6,0,68,0,0,0,-1,0,1
-MtpDevice,12,49,13,0,14,423,85,0,0,0.12,14,9
-DeviceEntry,5,0,0,5,0,11,0,0,0,-1,0,1
-DeviceStorage,11,0,0,11,0,19,0,0,0,-1,0,2
-MtpDeviceHandle,0,3,1,0,0,20,3,0,0,-1,1,8
-MtpDeviceStruct,16,0,0,16,0,25,0,0,0,-1,0,1
-RawDeviceStruct,3,0,0,3,0,7,0,0,0,-1,1,2
-RawMtpDevice,0,1,3,0,0,21,1,0,0,-1,1,2
-Track,2,19,20,0,7,262,27,0,0,0.37,7,4
-TrackStruct,23,0,0,23,0,49,0,0,0,-1,1,2
-AbstractTrackList,3,10,6,0,6,100,20,2,0,0,2,0
-Playlist,1,10,3,0,2,78,11,0,1,0,4,1
-PlaylistStruct,7,0,0,7,0,22,0,0,0,-1,0,1
-File,0,10,0,0,0,30,10,0,0,-1,3,0
-FileStruct,7,0,0,7,0,22,0,0,0,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mtp,FileType,0,0,0,0,0,48,0,0,0,-1,0,9,,Banshee.Dap.Mtp.MtpSource' Mtp.FileSample' Mtp.FileSampleData' Mtp.Album' Mtp.MtpDevice' Mtp.Track' Mtp.TrackStruct' Mtp.File' Mtp.FileStruct
+Mtp,ErrorCode,0,0,0,0,0,21,0,0,0,-1,0,5,,Mtp.LibMtpException' Mtp.Error' Mtp.Folder' Mtp.MtpDevice' Mtp.Track
+Mtp,LibMtpException,0,4,0,0,3,34,6,0,0,-1,4,3,Mtp.ErrorCode' Mtp.Error' Mtp.MtpDevice' Mtp.MtpDeviceHandle,Mtp.Folder' Mtp.MtpDevice' Mtp.Track
+Mtp,Error,3,1,0,3,1,13,2,0,0,0,1,2,Mtp.ErrorCode,Mtp.LibMtpException' Mtp.MtpDevice
+Mtp,FileSample,0,3,0,0,3,9,3,0,0,-1,3,1,Mtp.FileSampleData' Mtp.MtpDeviceHandle' Mtp.FileType,Mtp.Album
+Mtp,FileSampleData,6,0,0,6,0,10,0,0,0,-1,1,3,Mtp.FileType,Mtp.FileSample' Mtp.Album' Mtp.File
+Mtp,Album,1,15,7,0,6,130,20,0,1,0.27,7,2,Mtp.AlbumStruct' Mtp.MtpDevice' Mtp.FileSampleData' Mtp.AbstractTrackList' Mtp.FileType' Mtp.FileSample' Mtp.MtpDeviceHandle,Banshee.Dap.Mtp.MtpSource' Mtp.MtpDevice
+Mtp,AlbumStruct,10,0,0,10,0,18,0,0,0,-1,0,1,,Mtp.Album
+Mtp,Folder,4,18,3,0,5,167,28,0,0,0.11,5,4,Mtp.MtpDevice' Mtp.FolderStruct' Mtp.LibMtpException' Mtp.ErrorCode' Mtp.MtpDeviceHandle,Banshee.Dap.Mtp.MtpSource' Mtp.MtpDevice' Mtp.Track' Mtp.Playlist
+Mtp,FolderStruct,6,0,0,6,0,69,0,0,0,-1,0,1,,Mtp.Folder
+Mtp,MtpDevice,12,49,13,0,14,410,71,0,0,0.08,14,9,Mtp.MtpDeviceHandle' Mtp.MtpDeviceStruct' Mtp.Folder' Mtp.TrackStruct' Mtp.Track' Mtp.Playlist' Mtp.Album' Mtp.DeviceStorage' Mtp.FileType' Mtp.RawDeviceStruct' Mtp.RawMtpDevice' Mtp.LibMtpException' Mtp.ErrorCode' Mtp.Error,Banshee.Dap.Mtp.MtpSource' Banshee.Dap.Mtp.MtpTrackInfo' Mtp.LibMtpException' Mtp.Album' Mtp.Folder' Mtp.MtpDeviceHandle' Mtp.Track' Mtp.AbstractTrackList' Mtp.Playlist
+Mtp,DeviceEntry,5,0,0,5,0,9,0,0,0,-1,0,1,,Mtp.RawDeviceStruct
+Mtp,DeviceStorage,11,0,0,11,0,15,0,0,0,-1,0,1,,Mtp.MtpDevice
+Mtp,MtpDeviceHandle,0,3,1,0,0,24,3,0,0,-1,1,8,Mtp.MtpDevice,Mtp.LibMtpException' Mtp.FileSample' Mtp.Album' Mtp.Folder' Mtp.MtpDevice' Mtp.Track' Mtp.Playlist' Mtp.File
+Mtp,MtpDeviceStruct,16,0,0,16,0,19,0,0,0,-1,0,1,,Mtp.MtpDevice
+Mtp,RawDeviceStruct,3,0,0,3,0,6,0,0,0,-1,1,2,Mtp.DeviceEntry,Mtp.MtpDevice' Mtp.RawMtpDevice
+Mtp,RawMtpDevice,0,1,3,0,0,15,1,0,0,-1,1,2,Mtp.RawDeviceStruct,Banshee.Dap.Mtp.MtpSource' Mtp.MtpDevice
+Mtp,Track,2,19,20,0,7,200,27,0,0,0.26,7,4,Mtp.TrackStruct' Mtp.MtpDevice' Mtp.Folder' Mtp.FileType' Mtp.LibMtpException' Mtp.ErrorCode' Mtp.MtpDeviceHandle,Banshee.Dap.Mtp.MtpSource' Banshee.Dap.Mtp.MtpTrackInfo' Mtp.MtpDevice' Mtp.AbstractTrackList
+Mtp,TrackStruct,23,0,0,23,0,41,0,0,0,-1,1,2,Mtp.FileType,Mtp.MtpDevice' Mtp.Track
+Mtp,AbstractTrackList,3,10,6,0,6,81,18,2,0,0.3,2,1,Mtp.MtpDevice' Mtp.Track,Mtp.Album
+Mtp,Playlist,1,10,3,0,2,65,11,0,1,0,4,2,Mtp.PlaylistStruct' Mtp.MtpDevice' Mtp.Folder' Mtp.MtpDeviceHandle,Banshee.Dap.Mtp.MtpSource' Mtp.MtpDevice
+Mtp,PlaylistStruct,7,0,0,7,0,23,0,0,0,-1,0,1,,Mtp.Playlist
+Mtp,File,0,10,0,0,0,23,10,0,0,-1,3,0,Mtp.FileType' Mtp.MtpDeviceHandle' Mtp.FileSampleData,
+Mtp,FileStruct,7,0,0,7,0,21,0,0,0,-1,1,0,Mtp.FileType,

@@ -1,35 +1,36 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AbstractSyntaxTree,0,1,1,0,1,11,1,0,0,-1,2,3
-ErrorNodeCollector,1,3,0,0,3,20,3,0,1,0,2,1
-AstNode,0,2,1,0,2,20,3,5,0,-1,2,8
-AstVisitor,0,7,0,0,7,31,7,2,0,-1,6,6
-BinaryAstNode,3,2,5,0,2,44,2,0,1,1,2,2
-ConstantAstNode,1,2,2,0,2,22,2,0,1,1,1,3
-ErrorAstNode,2,3,2,0,3,28,3,0,1,1,1,4
-IAstNodeWithToken,0,0,1,0,0,6,0,5,0,-1,0,1
-MethodCallAstNode,2,2,4,0,2,34,2,0,1,1,2,3
-UnaryAstNode,2,2,4,0,2,36,2,0,1,1,2,3
-EvaluationResult,1,4,11,0,4,79,5,0,0,1,1,7
-Error,0,1,2,0,1,15,1,0,0,-1,0,1
-PrimitiveType,0,7,0,0,5,29,7,5,0,-1,6,1
-BooleanPrimitiveType,1,4,1,0,4,31,4,0,1,1,1,1
-IntegerPrimitiveType,1,4,1,0,4,29,4,0,1,1,1,1
-StringPrimitiveType,1,4,1,0,4,27,4,0,1,1,1,1
-NullPrimitiveType,1,4,1,0,4,25,4,0,1,1,1,1
-ErrorPrimitiveType,1,4,1,0,4,25,4,0,1,1,1,1
-Interpreter,0,1,0,0,1,7,1,0,0,-1,2,1
-EvaluationContext,0,0,2,0,0,11,0,0,0,-1,1,3
-InterpreterVisitor,1,17,0,0,7,145,37,0,1,0.12,10,1
-Lexer,3,5,0,0,5,42,6,0,0,0,2,1
-Parser,3,22,0,0,2,265,69,0,0,0,8,1
-Token,0,1,3,0,1,19,1,0,0,-1,1,1
-Tokenizer,4,21,0,0,2,272,78,0,0,0,1,1
-TokenKind,0,0,0,0,0,32,0,0,0,-1,0,4
-IGlobalMethodProvider,0,1,0,0,0,4,1,0,0,-1,1,5
-GlobalMethodContext,0,0,3,0,0,15,0,0,0,-1,0,3
-IScriptExpressionEvaluator,0,1,0,0,0,4,1,2,2,-1,1,2
-ScriptExpressionEvaluator,1,5,1,0,2,57,8,0,3,0.4,8,0
-IActionProvider,0,1,0,0,0,4,1,1,2,-1,0,0
-ConditionActions,1,3,1,0,2,36,6,0,3,0.67,4,0
-IFormProvider,0,1,0,0,0,4,1,1,2,-1,0,0
-ConditionForms,0,2,2,0,2,26,2,0,3,-1,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coevery.Scripting.Ast,AbstractSyntaxTree,0,1,1,0,1,6,1,0,0,-1,1,5,Coevery.Scripting.Ast.ErrorNodeCollector,Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Parser' Coevery.Scripting.ScriptExpressionEvaluator' Coevery.Tests.Modules.Scripting.EvaluatorTests' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Ast,ErrorNodeCollector,1,3,0,0,3,16,3,0,1,0,2,1,Coevery.Scripting.Ast.AstNode' Coevery.Scripting.Ast.ErrorAstNode,Coevery.Scripting.Ast.AbstractSyntaxTree
+Coevery.Scripting.Ast,AstNode,0,2,1,0,2,18,3,5,0,-1,2,7,Coevery.Scripting.Ast.AstVisitor' Coevery.Scripting.Ast.IAstNodeWithToken,Coevery.Scripting.Ast.ErrorNodeCollector' Coevery.Scripting.Ast.AstVisitor' Coevery.Scripting.Ast.BinaryAstNode' Coevery.Scripting.Ast.UnaryAstNode' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Parser' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Ast,AstVisitor,0,7,0,0,7,23,7,2,0,-1,6,6,Coevery.Scripting.Ast.AstNode' Coevery.Scripting.Ast.BinaryAstNode' Coevery.Scripting.Ast.ConstantAstNode' Coevery.Scripting.Ast.ErrorAstNode' Coevery.Scripting.Ast.UnaryAstNode' Coevery.Scripting.Ast.MethodCallAstNode,Coevery.Scripting.Ast.AstNode' Coevery.Scripting.Ast.BinaryAstNode' Coevery.Scripting.Ast.ConstantAstNode' Coevery.Scripting.Ast.ErrorAstNode' Coevery.Scripting.Ast.MethodCallAstNode' Coevery.Scripting.Ast.UnaryAstNode
+Coevery.Scripting.Ast,BinaryAstNode,3,2,5,0,2,26,2,0,1,1,3,3,Coevery.Scripting.Ast.AstNode' Coevery.Scripting.Compiler.Token' Coevery.Scripting.Ast.AstVisitor,Coevery.Scripting.Ast.AstVisitor' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Ast,ConstantAstNode,1,2,2,0,2,13,2,0,1,1,2,4,Coevery.Scripting.Compiler.Token' Coevery.Scripting.Ast.AstVisitor,Coevery.Scripting.Ast.AstVisitor' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Parser' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Ast,ErrorAstNode,2,3,2,0,3,20,3,0,1,1,2,7,Coevery.Scripting.Compiler.Token' Coevery.Scripting.Ast.AstVisitor,Coevery.Scripting.Ast.ErrorNodeCollector' Coevery.Scripting.Ast.AstVisitor' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Parser' Coevery.Scripting.ScriptExpressionEvaluator' Coevery.Tests.Modules.Scripting.EvaluatorTests' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Ast,IAstNodeWithToken,0,0,1,0,0,3,0,5,0,-1,0,1,,Coevery.Scripting.Ast.AstNode
+Coevery.Scripting.Ast,MethodCallAstNode,2,2,4,0,2,17,2,0,1,1,2,4,Coevery.Scripting.Compiler.Token' Coevery.Scripting.Ast.AstVisitor,Coevery.Scripting.Ast.AstVisitor' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Parser' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Ast,UnaryAstNode,2,2,4,0,2,19,2,0,1,1,3,4,Coevery.Scripting.Ast.AstNode' Coevery.Scripting.Compiler.Token' Coevery.Scripting.Ast.AstVisitor,Coevery.Scripting.Ast.AstVisitor' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Parser' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Compiler,EvaluationResult,1,4,11,0,4,28,5,0,0,1,0,12,,Coevery.Scripting.Compiler.PrimitiveType' Coevery.Scripting.Compiler.BooleanPrimitiveType' Coevery.Scripting.Compiler.IntegerPrimitiveType' Coevery.Scripting.Compiler.StringPrimitiveType' Coevery.Scripting.Compiler.NullPrimitiveType' Coevery.Scripting.Compiler.ErrorPrimitiveType' Coevery.Scripting.Compiler.Interpreter' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.ScriptExpressionEvaluator' Coevery.Tests.Modules.Scripting.Dlr.EvaluatorTests' Coevery.Tests.Modules.Scripting.EvaluatorTestsBase' Coevery.Tests.Modules.Scripting.EvaluatorTests
+Coevery.Scripting.Compiler,Error,0,1,2,0,1,7,1,0,0,-1,0,2,,Coevery.Scripting.Compiler.PrimitiveType' Coevery.Scripting.ScriptExpressionEvaluator
+Coevery.Scripting.Compiler,PrimitiveType,0,7,0,0,5,25,12,5,0,-1,7,1,Coevery.Scripting.Compiler.NullPrimitiveType' Coevery.Scripting.Compiler.BooleanPrimitiveType' Coevery.Scripting.Compiler.IntegerPrimitiveType' Coevery.Scripting.Compiler.StringPrimitiveType' Coevery.Scripting.Compiler.ErrorPrimitiveType' Coevery.Scripting.Compiler.Error' Coevery.Scripting.Compiler.EvaluationResult,Coevery.Scripting.Compiler.InterpreterVisitor
+Coevery.Scripting.Compiler,BooleanPrimitiveType,1,4,1,0,4,24,7,0,1,1,1,1,Coevery.Scripting.Compiler.EvaluationResult,Coevery.Scripting.Compiler.PrimitiveType
+Coevery.Scripting.Compiler,IntegerPrimitiveType,1,4,1,0,4,22,6,0,1,1,1,1,Coevery.Scripting.Compiler.EvaluationResult,Coevery.Scripting.Compiler.PrimitiveType
+Coevery.Scripting.Compiler,StringPrimitiveType,1,4,1,0,4,20,5,0,1,1,1,1,Coevery.Scripting.Compiler.EvaluationResult,Coevery.Scripting.Compiler.PrimitiveType
+Coevery.Scripting.Compiler,NullPrimitiveType,1,4,1,0,4,18,4,0,1,1,1,1,Coevery.Scripting.Compiler.EvaluationResult,Coevery.Scripting.Compiler.PrimitiveType
+Coevery.Scripting.Compiler,ErrorPrimitiveType,1,4,1,0,4,18,4,0,1,1,1,1,Coevery.Scripting.Compiler.EvaluationResult,Coevery.Scripting.Compiler.PrimitiveType
+Coevery.Scripting.Compiler,Interpreter,0,1,0,0,1,5,1,0,0,-1,3,2,Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.EvaluationResult' Coevery.Scripting.Compiler.EvaluationContext,Coevery.Scripting.ScriptExpressionEvaluator' Coevery.Tests.Modules.Scripting.EvaluatorTests
+Coevery.Scripting.Compiler,EvaluationContext,0,0,2,0,0,4,0,0,0,-1,0,3,,Coevery.Scripting.Compiler.Interpreter' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.ScriptExpressionEvaluator
+Coevery.Scripting.Compiler,InterpreterVisitor,1,17,0,0,7,128,29,0,1,0,12,1,Coevery.Scripting.Compiler.EvaluationContext' Coevery.Scripting.Ast.AbstractSyntaxTree' Coevery.Scripting.Compiler.EvaluationResult' Coevery.Scripting.Ast.AstNode' Coevery.Scripting.Ast.ConstantAstNode' Coevery.Scripting.Ast.UnaryAstNode' Coevery.Scripting.Compiler.Token' Coevery.Scripting.Compiler.TokenKind' Coevery.Scripting.Ast.BinaryAstNode' Coevery.Scripting.Ast.MethodCallAstNode' Coevery.Scripting.Ast.ErrorAstNode' Coevery.Scripting.Compiler.PrimitiveType,Coevery.Scripting.Compiler.Interpreter
+Coevery.Scripting.Compiler,Lexer,3,5,0,0,5,32,6,0,0,0,3,1,Coevery.Scripting.Compiler.Tokenizer' Coevery.Scripting.Compiler.Token' Coevery.Scripting.Compiler.Marker,Coevery.Scripting.Compiler.Parser
+Coevery.Scripting.Compiler,Marker,1,1,1,0,1,9,1,0,0,0,0,1,,Coevery.Scripting.Compiler.Lexer
+Coevery.Scripting.Compiler,Parser,3,22,0,0,2,244,48,0,0,0,9,3,Coevery.Scripting.Compiler.Lexer' Coevery.Scripting.Ast.AstNode' Coevery.Scripting.Compiler.Token' Coevery.Scripting.Compiler.TokenKind' Coevery.Scripting.Ast.AbstractSyntaxTree' Coevery.Scripting.Ast.UnaryAstNode' Coevery.Scripting.Ast.MethodCallAstNode' Coevery.Scripting.Ast.ConstantAstNode' Coevery.Scripting.Ast.ErrorAstNode,Coevery.Scripting.ScriptExpressionEvaluator' Coevery.Tests.Modules.Scripting.EvaluatorTests' Coevery.Tests.Modules.Scripting.ParserTests
+Coevery.Scripting.Compiler,Token,0,1,3,0,1,8,1,0,0,-1,0,11,,Coevery.Scripting.Ast.BinaryAstNode' Coevery.Scripting.Ast.ConstantAstNode' Coevery.Scripting.Ast.ErrorAstNode' Coevery.Scripting.Ast.MethodCallAstNode' Coevery.Scripting.Ast.UnaryAstNode' Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Lexer' Coevery.Scripting.Compiler.Parser' Coevery.Scripting.Compiler.Tokenizer' Coevery.Tests.Modules.Scripting.ParserTests' Coevery.Tests.Modules.Scripting.TokenizerTests
+Coevery.Scripting.Compiler,Tokenizer,4,21,0,0,2,257,49,0,0,0,2,2,Coevery.Scripting.Compiler.TokenKind' Coevery.Scripting.Compiler.Token,Coevery.Scripting.Compiler.Lexer' Coevery.Tests.Modules.Scripting.TokenizerTests
+Coevery.Scripting.Compiler,TokenKind,0,0,0,0,0,31,0,0,0,-1,0,5,,Coevery.Scripting.Compiler.InterpreterVisitor' Coevery.Scripting.Compiler.Parser' Coevery.Scripting.Compiler.Tokenizer' Coevery.Tests.Modules.Scripting.ParserTests' Coevery.Tests.Modules.Scripting.TokenizerTests
+Coevery.Scripting,IGlobalMethodProvider,0,1,0,0,0,3,1,2,0,-1,1,2,Coevery.Scripting.GlobalMethodContext,Coevery.Scripting.ScriptExpressionEvaluator' Coevery.Scripting.Dlr.Services.RubyScriptExpressionEvaluator
+Coevery.Scripting,GlobalMethodContext,0,0,3,0,0,5,0,0,0,-1,0,5,,Coevery.Scripting.IGlobalMethodProvider' Coevery.Scripting.ScriptExpressionEvaluator' Coevery.Scripting.Dlr.Services.RubyScriptExpressionEvaluator' Coevery.Widgets.RuleEngine.GlobalMethodProvider' Coevery.Tests.Modules.Scripting.Dlr.GlobalMethodProvider
+Coevery.Scripting,IScriptExpressionEvaluator,0,1,0,0,0,3,1,2,2,-1,0,2,,Coevery.Scripting.Rules.ConditionActions' Coevery.Widgets.RuleEngine.RuleManager
+Coevery.Scripting,ScriptExpressionEvaluator,1,5,1,0,2,45,8,0,3,0,11,1,Coevery.Caching.ICacheManager' Coevery.Localization.NullLocalizer' Coevery.Scripting.Ast.AbstractSyntaxTree' Coevery.Scripting.Compiler.EvaluationResult' Coevery.Scripting.Ast.ErrorAstNode' Coevery.Scripting.Compiler.Error' Coevery.Scripting.Compiler.Parser' Coevery.Scripting.Compiler.EvaluationContext' Coevery.Scripting.Compiler.Interpreter' Coevery.Scripting.GlobalMethodContext' Coevery.Scripting.IGlobalMethodProvider,Coevery.Tests.Modules.Scripting.SimpleScriptingTests
+Coevery.Scripting.Rules,IActionProvider,0,1,0,0,0,3,1,1,2,-1,0,0,,
+Coevery.Scripting.Rules,ConditionActions,1,3,1,0,2,30,6,0,3,0.67,2,0,Coevery.Localization.NullLocalizer' Coevery.Scripting.IScriptExpressionEvaluator,
+Coevery.Scripting.Rules,IFormProvider,0,1,0,0,0,3,1,1,2,-1,0,0,,
+Coevery.Scripting.Rules,ConditionForms,0,2,2,0,2,26,2,0,3,-1,2,0,Coevery.Localization.NullLocalizer' Coevery.DisplayManagement.IShapeFactory,

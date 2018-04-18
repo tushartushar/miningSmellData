@@ -1,0 +1,62 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Stacks.Actors,Actor,7,18,10,0,1,170,22,12,1,0.44,7,3,Stacks.IExecutor' Stacks.Actors.ActorContext' Stacks.Actors.ActorSettings' Stacks.Actors.ActorCtorGuardian' Stacks.Actors.ActorSystem' Stacks.Actors.IActor' Stacks.Ensure,Stacks.Actors.ActorSystem' Stacks.Actors.CodeGen.ActorTypeGenerator' Stacks.Actors.CodeGen.ActorWrapperBase
+Stacks.Actors,ActorContext,2,15,4,0,14,72,16,0,1,0.33,2,1,Stacks.IExecutor' Stacks.Actors.ActorContextSettings,Stacks.Actors.Actor
+Stacks.Actors,ActorContextSettings,0,1,2,0,1,12,1,0,0,-1,0,1,,Stacks.Actors.ActorContext
+Stacks.Actors,ActorCtorGuardian,1,3,0,0,3,17,3,0,0,0,0,2,,Stacks.Actors.Actor' Stacks.Actors.ActorSystem
+Stacks.Actors,ActorSettings,0,1,2,0,1,12,1,0,0,-1,0,1,,Stacks.Actors.Actor
+Stacks.Actors,ActorSystem,4,23,4,0,9,302,41,0,0,0.13,9,9,Stacks.Actors.DI.IDependencyResolver' Stacks.Actors.IRootActor' Stacks.Actors.IActor' Stacks.Actors.Actor' Stacks.Actors.PathUtils' Stacks.Ensure' Stacks.Actors.CodeGen.ActorWrapperBase' Stacks.Actors.CodeGen.ActorTypeGenerator' Stacks.Actors.ActorCtorGuardian,ActorSample1.Program' ActorSample2.Program' RemoteActorsSample.Program' Actors.Program' PingPong.Program' Stacks.Actors.Actor' Stacks.Actors.ActorServerProxy' Stacks.Actors.DI.DependencyInjectionHelper' Stacks.Actors.DI.Windsor.WindsorDependencyResolver
+Stacks.Actors,Bit,0,3,0,0,3,15,3,0,0,-1,0,1,,Stacks.Actors.ActorRemoteMessageClient
+Stacks.Actors,ActorStoppedException,0,4,0,0,3,18,4,0,0,-1,0,0,,
+Stacks.Actors,IActor,0,1,6,0,0,10,1,3,0,-1,0,5,,Stacks.Actors.Actor' Stacks.Actors.ActorSystem' Stacks.Actors.PathUtils' Stacks.Actors.CodeGen.ActorTypeGenerator' Stacks.Actors.CodeGen.TypeExtensions
+Stacks.Actors,IActorContext,0,6,2,0,0,11,6,1,0,-1,0,2,,PingPong.Destination' PingPong.PingPongActor
+Stacks.Actors,NoExceptionHandlerAttribute,0,0,0,0,0,4,0,0,0,-1,0,2,,Stacks.Actors.CodeGen.StandardMethodCompiler' Stacks.Actors.CodeGen.StandardPropertiesCompiler
+Stacks.Actors,PathUtils,0,3,0,0,3,37,12,0,0,-1,1,1,Stacks.Actors.IActor,Stacks.Actors.ActorSystem
+Stacks.Actors,ActorClientProxy,1,13,0,0,12,84,13,0,0,0.15,5,2,Stacks.Actors.Remote.CodeGen.ClientActorTypeBuilder' Stacks.Actors.Remote.ActorClientProxyOptions' Stacks.IPHelpers' Stacks.Actors.IActorClientProxy' Stacks.Ensure,RemoteActorsSample.Program' PingPong.Program
+Stacks.Actors,ActorClientProxyTemplate<T>,10,10,2,0,3,129,13,0,1,0.3,6,0,Stacks.Actors.ActorRemoteMessageClient' Stacks.ActionBlockExecutor' Stacks.Actors.Remote.ActorPacketSerializer' Stacks.Actors.Remote.ActorClientProxyOptions' Stacks.Actors.Proto.ActorProtocolFlags' Stacks.Actors.IReplyMessage,
+Stacks.Actors,ActorProtocolFlags,0,0,0,0,0,7,0,0,0,-1,0,0,,
+Stacks.Actors,ActorProtocol,3,0,0,3,0,6,0,0,0,-1,0,0,,
+Stacks.Actors,HandshakeRequest,0,0,1,0,0,6,0,0,0,-1,0,0,,
+Stacks.Actors,HandshakeResponse,0,0,3,0,0,10,0,0,0,-1,0,0,,
+Stacks.Actors,Ping,0,0,1,0,0,6,0,0,0,-1,0,0,,
+Stacks.Actors,InvalidProtocolException,0,4,0,0,3,11,4,0,0,-1,0,0,,
+Stacks.Actors,ActorRemoteMessageClient,6,18,7,0,4,220,20,0,0,0.11,7,1,Stacks.IFramedClient' Stacks.Actors.Remote.ActorPacketSerializer' Stacks.Actors.Proto.ActorProtocol' Stacks.Actors.Proto.HandshakeResponse' Stacks.Actors.Proto.ActorProtocolFlags' Stacks.IExecutor' Stacks.Actors.Bit,Stacks.Actors.ActorClientProxyTemplate<T>
+Stacks.Actors,ActorServerProxy,1,9,0,0,8,53,9,0,0,0.22,5,2,Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder' Stacks.Actors.ActorSystem' Stacks.Actors.ActorServerProxyOptions' Stacks.Actors.IActorServerProxy' Stacks.IPHelpers,RemoteActorsSample.Program' PingPong.Program
+Stacks.Actors,ActorServerProxyOptions,1,1,2,1,1,13,1,0,0,0,0,4,,PingPong.Program' Stacks.Actors.ActorServerProxy' Stacks.Actors.ActorServerProxyTemplate<T>' Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder
+Stacks.Actors,ActorServerProxyTemplate<T>,16,16,3,0,3,349,22,0,1,0.31,14,0,Stacks.Actors.ActorServerProxyOptions' Stacks.IExecutor' Stacks.Actors.Remote.ActorPacketSerializer' Stacks.Tcp.SocketServer' Stacks.Actors.Proto.ActorProtocol' Stacks.Tcp.FramedClient' Stacks.Actors.Proto.ActorProtocolFlags' Stacks.Actors.IActorSession' Stacks.Actors.ActorSession' Stacks.Tcp.SocketClient' Stacks.Actors.Proto.HandshakeRequest' Stacks.Actors.Proto.Ping' Stacks.Actors.IReplyMessage' Stacks.IFramedClient,
+Stacks.Actors,ClientActorDisconnectedData,0,1,2,0,1,10,1,0,0,-1,1,0,Stacks.Actors.IActorSession,
+Stacks.Actors,IActorClientProxy,0,1,2,0,0,8,1,1,0,-1,0,3,,RemoteActorsSample.Program' PingPong.PingPongActor' Stacks.Actors.ActorClientProxy
+Stacks.Actors,IActorServerProxy,0,2,3,0,0,11,2,1,0,-1,0,3,,RemoteActorsSample.Program' PingPong.Program' Stacks.Actors.ActorServerProxy
+Stacks.Actors,IActorSession,0,1,1,0,0,5,1,1,0,-1,0,4,,Stacks.Actors.ActorServerProxyTemplate<T>' Stacks.Actors.ClientActorDisconnectedData' Stacks.Actors.Remote.CodeGen.ActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder
+Stacks.Actors,ActorSession,1,2,2,0,2,14,2,0,1,1,1,1,Stacks.IFramedClient,Stacks.Actors.ActorServerProxyTemplate<T>
+Stacks.Actors,IReplyMessage,0,3,0,0,0,6,3,0,0,-1,0,4,,Stacks.Actors.ActorClientProxyTemplate<T>' Stacks.Actors.ActorServerProxyTemplate<T>' Stacks.Actors.Remote.CodeGen.ActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder
+Stacks.Actors,RootActor,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Stacks.Actors,IRootActor,0,0,0,0,0,4,0,1,1,-1,0,1,,Stacks.Actors.ActorSystem
+Stacks.Actors.CodeGen,ActorTypeGenerator,8,12,0,0,2,144,18,0,0,0,6,1,Stacks.Actors.CodeGen.IActorCompilerStrategy' Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.Actor' Stacks.Actors.CodeGen.ActorWrapperBase' Stacks.Actors.IActor,Stacks.Actors.ActorSystem
+Stacks.Actors.CodeGen,ActorWrapperBase,1,5,7,0,2,45,5,0,1,0,1,7,Stacks.Actors.Actor,Stacks.Actors.ActorSystem' Stacks.Actors.CodeGen.ActorTypeGenerator' Stacks.Actors.CodeGen.ObservableMethodCompiler' Stacks.Actors.CodeGen.ObservablePropertiesCompiler' Stacks.Actors.CodeGen.StandardMethodCompiler' Stacks.Actors.CodeGen.StandardPropertiesCompiler' Stacks.Actors.CodeGen.TaskMethodsCompiler
+Stacks.Actors.CodeGen,FormattingExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
+Stacks.Actors.CodeGen,MethodInfoMappingExtensions,0,1,0,0,1,13,3,0,0,-1,1,0,Stacks.Actors.CodeGen.MethodInfoMapping,
+Stacks.Actors.CodeGen,PropertyInfoMappingExtensions,0,1,0,0,1,14,3,0,0,-1,1,0,Stacks.Actors.CodeGen.PropertyInfoMapping,
+Stacks.Actors.CodeGen,MethodInfoMapping,0,1,4,0,1,15,1,0,0,-1,0,12,,Stacks.Actors.CodeGen.ActorTypeGenerator' Stacks.Actors.CodeGen.MethodInfoMappingExtensions' Stacks.Actors.CodeGen.TypeExtensions' Stacks.Actors.CodeGen.IActorCompilerStrategy' Stacks.Actors.CodeGen.ObservableMethodCompiler' Stacks.Actors.CodeGen.ObservablePropertiesCompiler' Stacks.Actors.CodeGen.StandardMethodCompiler' Stacks.Actors.CodeGen.StandardPropertiesCompiler' Stacks.Actors.CodeGen.TaskMethodsCompiler' Stacks.Actors.Remote.CodeGen.ActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ClientActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder
+Stacks.Actors.CodeGen,PropertyInfoMapping,0,1,4,0,1,16,1,0,0,-1,0,12,,Stacks.Actors.CodeGen.ActorTypeGenerator' Stacks.Actors.CodeGen.PropertyInfoMappingExtensions' Stacks.Actors.CodeGen.TypeExtensions' Stacks.Actors.CodeGen.IActorCompilerStrategy' Stacks.Actors.CodeGen.ObservableMethodCompiler' Stacks.Actors.CodeGen.ObservablePropertiesCompiler' Stacks.Actors.CodeGen.StandardMethodCompiler' Stacks.Actors.CodeGen.StandardPropertiesCompiler' Stacks.Actors.CodeGen.TaskMethodsCompiler' Stacks.Actors.Remote.CodeGen.ActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ClientActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder
+Stacks.Actors.CodeGen,TypeExtensions,0,6,0,0,5,179,21,0,0,-1,3,0,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.IActor' Stacks.Actors.CodeGen.PropertyInfoMapping,
+Stacks.Actors.CodeGen,IActorCompilerStrategy,0,4,0,0,0,7,4,5,0,-1,2,1,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping,Stacks.Actors.CodeGen.ActorTypeGenerator
+Stacks.Actors.CodeGen,ObservableMethodCompiler,0,4,0,0,4,45,6,0,1,-1,3,0,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.CodeGen.ActorWrapperBase,
+Stacks.Actors.CodeGen,ObservablePropertiesCompiler,0,4,0,0,4,34,4,0,1,-1,3,0,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.CodeGen.ActorWrapperBase,
+Stacks.Actors.CodeGen,StandardMethodCompiler,0,6,0,0,4,77,10,0,1,-1,4,0,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.CodeGen.ActorWrapperBase' Stacks.Actors.NoExceptionHandlerAttribute,
+Stacks.Actors.CodeGen,StandardPropertiesCompiler,0,7,0,0,4,111,13,0,1,-1,4,0,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.CodeGen.ActorWrapperBase' Stacks.Actors.NoExceptionHandlerAttribute,
+Stacks.Actors.CodeGen,TaskMethodsCompiler,0,5,0,0,4,58,7,0,1,-1,3,0,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.CodeGen.ActorWrapperBase,
+Stacks.Actors.DI,Args,0,1,0,0,1,12,3,0,0,-1,0,0,,
+Stacks.Actors.DI,DependencyInjectionHelper,1,8,0,0,7,48,9,0,1,0,2,0,Stacks.Actors.ActorSystem' Stacks.Actors.DI.IDependencyResolver,
+Stacks.Actors.DI,IDependencyInjectionHelper,0,6,0,0,0,13,6,1,0,-1,0,0,,
+Stacks.Actors.DI,IDependencyResolver,0,4,0,0,0,12,4,1,0,-1,0,2,,Stacks.Actors.ActorSystem' Stacks.Actors.DI.DependencyInjectionHelper
+Stacks.Actors.Remote,ActorClientProxyOptions,1,1,1,1,1,11,1,0,0,0,0,3,,Stacks.Actors.ActorClientProxy' Stacks.Actors.ActorClientProxyTemplate<T>' Stacks.Actors.Remote.CodeGen.ClientActorTypeBuilder
+Stacks.Actors.Remote,ActorPacketSerializer,1,3,0,0,3,16,3,0,0,0,2,5,Stacks.IStacksSerializer' Stacks.Actors.Proto.ActorProtocolFlags,Stacks.Actors.ActorClientProxyTemplate<T>' Stacks.Actors.ActorRemoteMessageClient' Stacks.Actors.ActorServerProxyTemplate<T>' Stacks.Actors.Remote.CodeGen.ClientActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder
+Stacks.Actors.Proto,ActorProtocolFlags,0,0,0,0,0,7,0,0,0,-1,0,6,,Stacks.Actors.ActorClientProxyTemplate<T>' Stacks.Actors.ActorRemoteMessageClient' Stacks.Actors.ActorServerProxyTemplate<T>' Stacks.Actors.Remote.ActorPacketSerializer' Stacks.Actors.Remote.CodeGen.ClientActorTypeBuilder' Stacks.Actors.Remote.CodeGen.ServerActorTypeBuilder
+Stacks.Actors.Proto,ActorProtocol,3,0,0,3,0,6,0,0,0,-1,0,2,,Stacks.Actors.ActorRemoteMessageClient' Stacks.Actors.ActorServerProxyTemplate<T>
+Stacks.Actors.Proto,HandshakeRequest,0,0,1,0,0,6,0,0,0,-1,0,1,,Stacks.Actors.ActorServerProxyTemplate<T>
+Stacks.Actors.Proto,HandshakeResponse,0,0,3,0,0,10,0,0,0,-1,0,1,,Stacks.Actors.ActorRemoteMessageClient
+Stacks.Actors.Proto,Ping,0,0,1,0,0,6,0,0,0,-1,0,1,,Stacks.Actors.ActorServerProxyTemplate<T>
+Stacks.Actors.Proto,InvalidProtocolException,0,4,0,0,3,11,4,0,0,-1,0,0,,
+Stacks.Actors.Remote.CodeGen,ActorTypeBuilder,6,7,0,0,3,199,16,2,0,0.29,4,0,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.IActorSession' Stacks.Actors.IReplyMessage,
+Stacks.Actors.Remote.CodeGen,ClientActorTypeBuilder,1,7,0,0,2,191,11,0,1,0.29,5,1,Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.Remote.ActorClientProxyOptions' Stacks.Actors.Proto.ActorProtocolFlags' Stacks.Actors.Remote.ActorPacketSerializer,Stacks.Actors.ActorClientProxy
+Stacks.Actors.Remote.CodeGen,ServerActorTypeBuilder,4,8,0,0,2,287,16,0,1,0.25,8,1,Stacks.Actors.CodeGen.PropertyInfoMapping' Stacks.Actors.CodeGen.MethodInfoMapping' Stacks.Actors.ActorServerProxyOptions' Stacks.Tcp.FramedClient' Stacks.Actors.Proto.ActorProtocolFlags' Stacks.Actors.Remote.ActorPacketSerializer' Stacks.Actors.IActorSession' Stacks.Actors.IReplyMessage,Stacks.Actors.ActorServerProxy

@@ -1,17 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ApplicationSettings,7,0,0,7,0,10,0,0,0,-1,0,4
-Helpers,5,11,1,3,11,104,17,0,0,0.82,3,5
-HttpContentExtensions,0,1,0,0,1,22,3,0,0,-1,0,0
-RequireTokenAttribute,0,1,0,0,1,15,5,0,0,-1,1,0
-Program,0,5,0,0,3,78,10,0,0,-1,4,0
-Resources,2,1,3,0,0,54,1,0,0,0,0,0
-Routes,0,1,0,0,1,91,1,0,0,-1,0,1
-FanartController,2,5,0,1,2,150,21,0,0,0.4,2,0
-InfoController,1,11,0,0,11,203,44,0,0,0.18,4,0
-ControlController,1,9,0,0,9,59,10,0,0,0,0,0
-UsersController,0,3,0,0,3,59,16,0,0,-1,2,0
-CorsHandler,6,1,0,0,0,39,5,0,0,0,0,0
-PlayrHub,0,0,0,0,0,4,0,0,0,-1,0,1
-DjInfo,0,1,3,0,1,20,1,0,0,-1,1,1
-Song,0,0,11,0,0,47,0,0,0,-1,0,3
-User,0,1,4,0,1,23,1,0,0,-1,1,4
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Playr.Api,ApplicationSettings,7,0,0,7,0,10,0,0,0,-1,0,4,,Playr.Api.Helpers' Playr.Api.Program' Playr.Api.Controller.FanartController' Playr.Api.Controller.InfoController
+Playr.Api,Helpers,5,11,1,3,11,123,19,0,0,0.55,3,5,Playr.Api.ApplicationSettings' Playr.Api.Models.Song' Playr.Api.Models.User,Playr.Api.RequireTokenAttribute' Playr.Api.Program' Playr.Api.Controller.FanartController' Playr.Api.Controller.InfoController' Playr.Api.Controller.UsersController
+Playr.Api,HttpContentExtensions,0,1,0,0,1,29,2,0,0,-1,0,0,,
+Playr.Api,RequireTokenAttribute,0,1,0,0,1,18,2,0,0,-1,1,0,Playr.Api.Helpers,
+Playr.Api,Program,0,5,0,0,3,85,10,0,0,-1,3,0,Playr.Api.ApplicationSettings' Playr.Api.Routes' Playr.Api.Helpers,
+Playr.Api,Resources,2,1,3,0,0,51,1,0,0,0,0,1,,Playr.Api.Controller.InfoController
+Playr.Api,Routes,0,1,0,0,1,112,1,0,0,-1,0,1,,Playr.Api.Program
+Playr.Api.Controller,FanartController,2,5,0,1,2,154,20,0,0,0.4,2,0,Playr.Api.Helpers' Playr.Api.ApplicationSettings,
+Playr.Api.Controller,SearchResult,0,0,2,0,0,6,0,0,0,-1,0,0,,
+Playr.Api.Controller,artistResults,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Playr.Api.Controller,artist,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Playr.Api.Controller,InfoController,1,11,0,0,11,233,21,0,0,0.18,6,0,Playr.Api.Models.Song' Playr.Api.Models.User' Playr.Api.Helpers' Playr.Api.Models.DjInfo' Playr.Api.ApplicationSettings' Playr.Api.Resources,
+Playr.Api.Controller,ControlController,1,9,0,0,9,58,10,0,0,0,0,0,,
+Playr.Api.Controller,UsersController,0,3,0,0,3,67,6,0,0,-1,2,0,Playr.Api.Models.User' Playr.Api.Helpers,
+Playr.Api.Handelrs,CorsHandler,6,1,0,0,0,48,5,0,0,0,0,0,,
+Playr.Api.Hubs,PlayrHub,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Playr.Api.Models,DjInfo,0,1,3,0,1,11,1,0,0,-1,0,1,,Playr.Api.Controller.InfoController
+Playr.Api.Models,Song,0,0,11,0,0,14,0,0,0,-1,0,2,,Playr.Api.Helpers' Playr.Api.Controller.InfoController
+Playr.Api.Models,User,0,1,4,0,1,11,1,0,0,-1,0,3,,Playr.Api.Helpers' Playr.Api.Controller.InfoController' Playr.Api.Controller.UsersController

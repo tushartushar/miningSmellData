@@ -1,11 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IDataflowGrain,0,3,0,0,0,6,3,3,1,-1,0,0
-ITargetGrain,0,3,0,0,0,6,3,2,2,-1,1,2
-ISourceGrain,0,2,0,0,0,5,2,1,2,-1,0,0
-IProcessor,0,1,0,0,0,4,1,1,0,-1,0,0
-ITargetProcessor,0,1,0,0,0,4,1,0,0,-1,0,1
-ITransformProcessor,0,1,0,0,0,4,1,3,0,-1,0,1
-IPropagatorGrain,0,1,0,0,0,4,1,2,3,-1,0,0
-ITransformGrain,0,0,0,0,0,3,0,1,4,-1,0,1
-IBufferGrain,0,0,0,0,0,3,0,1,4,-1,0,0
-GrainDataflowMessageStatus,0,0,0,0,0,6,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BenchmarkGrainInterfaces.MapReduce,IDataflowGrain,0,3,0,0,0,6,3,3,2,-1,0,0,,
+BenchmarkGrainInterfaces.MapReduce,ITargetGrain,0,3,0,0,0,6,3,2,3,-1,1,3,Orleans.GrainCancellationToken,BenchmarkGrainInterfaces.MapReduce.ISourceGrain' BenchmarkGrains.MapReduce.BufferGrain<T>' BenchmarkGrains.MapReduce.TransformGrain<TInput;TOutput>
+BenchmarkGrainInterfaces.MapReduce,ISourceGrain,0,2,0,0,0,5,2,1,3,-1,1,0,BenchmarkGrainInterfaces.MapReduce.ITargetGrain,
+BenchmarkGrainInterfaces.MapReduce,IProcessor,0,1,0,0,0,4,1,1,0,-1,0,0,,
+BenchmarkGrainInterfaces.MapReduce,ITargetProcessor,0,1,0,0,0,4,1,0,0,-1,0,1,,BenchmarkGrains.MapReduce.TargetGrain<TInput>
+BenchmarkGrainInterfaces.MapReduce,ITransformProcessor,0,1,0,0,0,4,1,3,0,-1,0,1,,BenchmarkGrains.MapReduce.TransformGrain<TInput;TOutput>
+BenchmarkGrainInterfaces.MapReduce,IPropagatorGrain,0,1,0,0,0,4,1,2,4,-1,0,0,,
+BenchmarkGrainInterfaces.MapReduce,ITransformGrain,0,0,0,0,0,3,0,1,5,-1,0,0,,
+BenchmarkGrainInterfaces.MapReduce,IBufferGrain,0,0,0,0,0,3,0,1,5,-1,0,0,,
+BenchmarkGrainInterfaces.MapReduce,GrainDataflowMessageStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
+BenchmarkGrainInterfaces.Ping,Report,0,0,3,0,0,6,0,0,0,-1,0,1,,BenchmarkGrains.Ping.LoadGrain
+BenchmarkGrainInterfaces.Ping,ILoadGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+BenchmarkGrainInterfaces.Ping,IPingGrain,0,1,0,0,0,4,1,1,3,-1,0,1,,BenchmarkGrains.Ping.LoadGrain
+BenchmarkGrainInterfaces.Transaction,Report,0,0,3,0,0,6,0,0,0,-1,0,1,,BenchmarkGrains.Transaction.LoadGrain
+BenchmarkGrainInterfaces.Transaction,ILoadGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+BenchmarkGrainInterfaces.Transaction,ITransactionGrain,0,1,0,0,0,4,1,1,3,-1,0,1,,BenchmarkGrains.Transaction.TransactionRootGrain
+BenchmarkGrainInterfaces.Transaction,ITransactionRootGrain,0,1,0,0,0,5,1,1,3,-1,0,1,,BenchmarkGrains.Transaction.LoadGrain

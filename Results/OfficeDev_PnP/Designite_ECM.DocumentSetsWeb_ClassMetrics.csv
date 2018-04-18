@@ -1,0 +1,29 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ECM.DocumentSetsWeb,BundleConfig,0,1,0,0,1,23,1,0,0,-1,0,1,,ECM.DocumentSetsWeb.MvcApplication
+ECM.DocumentSetsWeb,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,ECM.DocumentSetsWeb.MvcApplication
+ECM.DocumentSetsWeb,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,ECM.DocumentSetsWeb.MvcApplication
+ECM.DocumentSetsWeb,SharePointContextFilterAttribute,0,1,0,0,1,22,3,0,0,-1,2,0,ECM.DocumentSetsWeb.SharePointContextProvider' ECM.DocumentSetsWeb.RedirectionStatus,
+ECM.DocumentSetsWeb,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,ECM.DocumentSetsWeb.FilterConfig' ECM.DocumentSetsWeb.RouteConfig' ECM.DocumentSetsWeb.BundleConfig,
+ECM.DocumentSetsWeb,SharePointContext,15,10,9,5,7,225,18,2,0,0.3,1,4,ECM.DocumentSetsWeb.TokenHelper,ECM.DocumentSetsWeb.SharePointContextProvider' ECM.DocumentSetsWeb.SharePointAcsContextProvider' ECM.DocumentSetsWeb.SharePointHighTrustContextProvider' ECM.DocumentSetsWeb.Controllers.HomeController
+ECM.DocumentSetsWeb,RedirectionStatus,0,0,0,0,0,6,0,0,0,-1,0,2,,ECM.DocumentSetsWeb.SharePointContextFilterAttribute' ECM.DocumentSetsWeb.SharePointContextProvider
+ECM.DocumentSetsWeb,SharePointContextProvider,1,12,1,0,7,221,29,2,0,0.17,3,2,ECM.DocumentSetsWeb.TokenHelper' ECM.DocumentSetsWeb.RedirectionStatus' ECM.DocumentSetsWeb.SharePointContext,ECM.DocumentSetsWeb.SharePointContextFilterAttribute' ECM.DocumentSetsWeb.Controllers.HomeController
+ECM.DocumentSetsWeb,SharePointAcsContext,2,3,7,0,1,118,7,0,1,0.67,1,1,ECM.DocumentSetsWeb.SharePointContextToken,ECM.DocumentSetsWeb.SharePointAcsContextProvider
+ECM.DocumentSetsWeb,SharePointAcsContextProvider,2,4,0,0,0,63,7,0,1,0.5,4,0,ECM.DocumentSetsWeb.SharePointContextToken' ECM.DocumentSetsWeb.TokenHelper' ECM.DocumentSetsWeb.SharePointAcsContext' ECM.DocumentSetsWeb.SharePointContext,
+ECM.DocumentSetsWeb,SharePointHighTrustContext,1,3,5,0,1,91,6,0,1,0.67,1,1,ECM.DocumentSetsWeb.TokenHelper,ECM.DocumentSetsWeb.SharePointHighTrustContextProvider
+ECM.DocumentSetsWeb,SharePointHighTrustContextProvider,1,4,0,0,0,36,6,0,1,0.75,2,0,ECM.DocumentSetsWeb.SharePointHighTrustContext' ECM.DocumentSetsWeb.SharePointContext,
+ECM.DocumentSetsWeb,TokenHelper,25,30,0,2,21,785,53,0,0,0.1,2,4,ECM.DocumentSetsWeb.SharePointContextToken' ECM.DocumentSetsWeb.AcsMetadataParser,ECM.DocumentSetsWeb.SharePointContext' ECM.DocumentSetsWeb.SharePointContextProvider' ECM.DocumentSetsWeb.SharePointAcsContextProvider' ECM.DocumentSetsWeb.SharePointHighTrustContext
+ECM.DocumentSetsWeb,AcsMetadataParser,0,4,0,0,3,77,9,0,0,-1,4,1,ECM.DocumentSetsWeb.JsonMetadataDocument' ECM.DocumentSetsWeb.JsonKey' ECM.DocumentSetsWeb.JsonKeyValue' ECM.DocumentSetsWeb.JsonEndpoint,ECM.DocumentSetsWeb.TokenHelper
+ECM.DocumentSetsWeb,JsonMetadataDocument,0,0,3,0,0,6,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.AcsMetadataParser
+ECM.DocumentSetsWeb,JsonEndpoint,0,0,3,0,0,6,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.AcsMetadataParser
+ECM.DocumentSetsWeb,JsonKeyValue,0,0,2,0,0,5,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.AcsMetadataParser
+ECM.DocumentSetsWeb,JsonKey,0,0,2,0,0,5,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.AcsMetadataParser
+ECM.DocumentSetsWeb,SharePointContextToken,0,5,6,0,4,118,8,0,0,-1,0,3,,ECM.DocumentSetsWeb.SharePointAcsContext' ECM.DocumentSetsWeb.SharePointAcsContextProvider' ECM.DocumentSetsWeb.TokenHelper
+ECM.DocumentSetsWeb,MultipleSymmetricKeySecurityToken,3,4,4,0,3,112,11,0,0,0.75,0,0,,
+ECM.DocumentSetsWeb.Controllers,HomeController,5,22,0,0,17,563,29,0,0,0.32,8,0,ECM.DocumentSetsWeb.Models.HomeViewModel' ECM.DocumentSetsWeb.SharePointContext' ECM.DocumentSetsWeb.SharePointContextProvider' ECM.DocumentSetsWeb.Models.AddAllowedContentTypeViewModel' ECM.DocumentSetsWeb.Models.ContentTypeModel' ECM.DocumentSetsWeb.Models.AddDocumentSetViewModel' ECM.DocumentSetsWeb.Models.AddSharedFieldViewModel' ECM.DocumentSetsWeb.Models.AddWelcomeFieldViewModel,
+ECM.DocumentSetsWeb.Models,AddAllowedContentTypeViewModel,0,2,1,0,2,12,2,0,0,-1,0,1,,ECM.DocumentSetsWeb.Controllers.HomeController
+ECM.DocumentSetsWeb.Models,AddDocumentSetViewModel,1,0,3,0,0,11,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.Controllers.HomeController
+ECM.DocumentSetsWeb.Models,AddSharedFieldViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.Controllers.HomeController
+ECM.DocumentSetsWeb.Models,AddWelcomeFieldViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.Controllers.HomeController
+ECM.DocumentSetsWeb.Models,ContentTypeModel,0,0,3,0,0,6,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.Controllers.HomeController
+ECM.DocumentSetsWeb.Models,FieldModel,0,0,3,0,0,6,0,0,0,-1,0,0,,
+ECM.DocumentSetsWeb.Models,HomeViewModel,3,0,5,0,0,24,0,0,0,-1,0,1,,ECM.DocumentSetsWeb.Controllers.HomeController

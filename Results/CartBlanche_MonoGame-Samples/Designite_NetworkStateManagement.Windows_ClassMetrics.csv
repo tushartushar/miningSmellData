@@ -1,28 +1,32 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-NetworkStateManagementGame,3,3,0,0,1,78,4,0,0,0.67,2,1
-IMessageDisplay,0,1,0,0,0,12,1,1,0,-1,0,2
-MessageDisplayComponent,7,5,0,0,4,137,5,0,1,0.4,0,0
-AvailableSessionMenuEntry,2,3,1,0,2,61,5,0,1,0,1,1
-CreateOrFindSessionScreen,1,6,0,0,1,148,14,0,1,0.5,9,1
-JoinSessionScreen,2,4,0,0,1,88,8,0,1,0.5,9,0
-LobbyScreen,5,9,0,0,5,187,27,0,1,0,8,0
-NetworkBusyScreen,3,4,0,0,4,101,6,0,1,0.5,2,3
-NetworkErrorScreen,0,2,0,0,1,50,7,0,1,-1,1,3
-NetworkSessionComponent,7,15,0,2,7,343,57,0,0,0,9,6
-OperationCompletedEventArgs,1,1,1,0,1,30,1,0,0,0,0,3
-ProfileSignInScreen,3,4,0,0,2,122,10,0,1,0,4,1
-ScreenState,0,0,0,0,0,10,0,0,0,-1,0,5
-GameScreen,10,7,11,0,6,270,15,8,0,0.71,3,5
-InputState,8,9,0,8,9,142,14,0,0,0,0,6
-ScreenManager,8,11,3,0,8,215,27,0,0,0.18,3,16
-BackgroundScreen,2,5,0,0,5,67,6,0,1,0.6,1,0
-GameplayScreen,7,7,1,0,6,187,25,0,1,0,3,0
-LoadingScreen,10,7,0,0,3,218,21,0,1,0,5,5
-MainMenuScreen,0,7,0,0,1,85,7,0,1,-1,9,0
-MenuEntry,3,6,2,0,5,134,8,1,0,0.67,2,5
-MenuScreen,3,8,1,0,4,158,18,4,1,0.38,5,2
-MessageBoxScreen,2,5,0,0,5,103,10,1,1,0.4,3,5
-PauseMenuScreen,1,5,0,0,1,77,8,0,2,0.8,7,0
-PlayerIndexEventArgs,1,1,1,0,1,23,1,0,0,0,0,6
-Program,1,1,0,0,0,13,1,0,0,0,1,0
-Resources,2,1,42,0,0,375,1,0,0,0,0,11
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NetworkStateManagement,NetworkStateManagementGame,3,3,0,0,1,77,4,0,0,0.67,2,1,NetworkStateManagement.ScreenManager' NetworkStateManagement.NetworkSessionComponent,NetworkStateManagement.Program
+NetworkStateManagement,IMessageDisplay,0,1,0,0,0,4,1,1,0,-1,0,3,,NetworkStateManagement.MessageDisplayComponent' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.LoadingScreen
+NetworkStateManagement,MessageDisplayComponent,7,5,0,0,4,161,5,0,1,0.4,2,0,NetworkStateManagement.IMessageDisplay' NetworkStateManagement.NotificationMessage,
+NetworkStateManagement,NotificationMessage,3,1,0,3,1,13,1,0,0,0,0,1,,NetworkStateManagement.MessageDisplayComponent
+NetworkStateManagement,AvailableSessionMenuEntry,2,3,1,0,2,67,5,0,1,0,2,1,NetworkStateManagement.MenuEntry' NetworkStateManagement.MenuScreen,NetworkStateManagement.JoinSessionScreen
+NetworkStateManagement,CreateOrFindSessionScreen,1,6,0,0,1,152,8,0,1,0.5,9,0,NetworkStateManagement.Resources' NetworkStateManagement.MenuEntry' NetworkStateManagement.NetworkBusyScreen' NetworkStateManagement.NetworkErrorScreen' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.ScreenManager' NetworkStateManagement.PlayerIndexEventArgs' NetworkStateManagement.OperationCompletedEventArgs' NetworkStateManagement.GameScreen,
+NetworkStateManagement,SessionProperty,0,0,0,0,0,1,0,0,0,-1,0,0,,
+NetworkStateManagement,GameMode,0,0,0,0,0,1,0,0,0,-1,0,0,,
+NetworkStateManagement,SkillLevel,0,0,0,0,0,1,0,0,0,-1,0,0,,
+NetworkStateManagement,JoinSessionScreen,2,4,0,0,1,92,6,0,1,0.5,9,0,NetworkStateManagement.MenuEntry' NetworkStateManagement.Resources' NetworkStateManagement.AvailableSessionMenuEntry' NetworkStateManagement.NetworkBusyScreen' NetworkStateManagement.NetworkErrorScreen' NetworkStateManagement.ScreenManager' NetworkStateManagement.PlayerIndexEventArgs' NetworkStateManagement.OperationCompletedEventArgs' NetworkStateManagement.NetworkSessionComponent,
+NetworkStateManagement,LobbyScreen,5,9,0,0,5,203,22,0,1,0,9,0,NetworkStateManagement.ScreenManager' NetworkStateManagement.GameScreen' NetworkStateManagement.LoadingScreen' NetworkStateManagement.InputState' NetworkStateManagement.MessageBoxScreen' NetworkStateManagement.Resources' NetworkStateManagement.PlayerIndexEventArgs' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.ScreenState,
+NetworkStateManagement,NetworkBusyScreen,3,4,0,0,4,101,6,0,1,0.5,3,3,NetworkStateManagement.ScreenManager' NetworkStateManagement.GameScreen' NetworkStateManagement.Resources,NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.NetworkSessionComponent
+NetworkStateManagement,NetworkErrorScreen,0,2,0,0,1,56,8,0,1,-1,1,3,NetworkStateManagement.Resources,NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.NetworkSessionComponent
+NetworkStateManagement,NetworkSessionComponent,7,15,0,2,7,377,40,0,0,0.2,10,6,NetworkStateManagement.ScreenManager' NetworkStateManagement.IMessageDisplay' NetworkStateManagement.Resources' NetworkStateManagement.NetworkBusyScreen' NetworkStateManagement.NetworkErrorScreen' NetworkStateManagement.LoadingScreen' NetworkStateManagement.GameScreen' NetworkStateManagement.OperationCompletedEventArgs' NetworkStateManagement.MessageBoxScreen' NetworkStateManagement.MainMenuScreen,NetworkStateManagement.NetworkStateManagementGame' NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.LobbyScreen' NetworkStateManagement.ProfileSignInScreen' NetworkStateManagement.PauseMenuScreen
+NetworkStateManagement,OperationCompletedEventArgs,1,1,1,0,1,28,1,0,0,0,0,3,,NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.NetworkSessionComponent
+NetworkStateManagement,ProfileSignInScreen,3,4,0,0,2,116,10,0,1,0,5,1,NetworkStateManagement.GameScreen' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.MessageBoxScreen' NetworkStateManagement.Resources' NetworkStateManagement.ScreenManager,NetworkStateManagement.MainMenuScreen
+NetworkStateManagement,ScreenState,0,0,0,0,0,7,0,0,0,-1,0,5,,NetworkStateManagement.LobbyScreen' NetworkStateManagement.GameScreen' NetworkStateManagement.ScreenManager' NetworkStateManagement.LoadingScreen' NetworkStateManagement.MenuScreen
+NetworkStateManagement,GameScreen,10,7,11,0,6,254,12,8,0,0.71,3,11,NetworkStateManagement.ScreenState' NetworkStateManagement.ScreenManager' NetworkStateManagement.InputState,NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.LobbyScreen' NetworkStateManagement.NetworkBusyScreen' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.ProfileSignInScreen' NetworkStateManagement.ScreenManager' NetworkStateManagement.BackgroundScreen' NetworkStateManagement.GameplayScreen' NetworkStateManagement.LoadingScreen' NetworkStateManagement.MainMenuScreen' NetworkStateManagement.MenuScreen
+NetworkStateManagement,InputState,8,9,0,8,9,179,14,0,0,0.67,0,6,,NetworkStateManagement.LobbyScreen' NetworkStateManagement.GameScreen' NetworkStateManagement.ScreenManager' NetworkStateManagement.GameplayScreen' NetworkStateManagement.MenuScreen' NetworkStateManagement.MessageBoxScreen
+NetworkStateManagement,ScreenManager,8,11,3,0,8,235,25,0,0,0.18,3,16,NetworkStateManagement.InputState' NetworkStateManagement.GameScreen' NetworkStateManagement.ScreenState,NetworkStateManagement.NetworkStateManagementGame' NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.LobbyScreen' NetworkStateManagement.NetworkBusyScreen' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.ProfileSignInScreen' NetworkStateManagement.GameScreen' NetworkStateManagement.BackgroundScreen' NetworkStateManagement.GameplayScreen' NetworkStateManagement.LoadingScreen' NetworkStateManagement.MainMenuScreen' NetworkStateManagement.MenuEntry' NetworkStateManagement.MenuScreen' NetworkStateManagement.MessageBoxScreen' NetworkStateManagement.PauseMenuScreen
+NetworkStateManagement,BackgroundScreen,2,5,0,0,5,71,6,0,1,0.6,2,0,NetworkStateManagement.ScreenManager' NetworkStateManagement.GameScreen,
+NetworkStateManagement,GameplayScreen,7,7,1,0,6,214,22,0,1,0,4,0,NetworkStateManagement.ScreenManager' NetworkStateManagement.GameScreen' NetworkStateManagement.LoadingScreen' NetworkStateManagement.InputState,
+NetworkStateManagement,LoadingScreen,10,7,0,0,3,225,20,0,1,0,5,5,NetworkStateManagement.GameScreen' NetworkStateManagement.IMessageDisplay' NetworkStateManagement.ScreenManager' NetworkStateManagement.ScreenState' NetworkStateManagement.Resources,NetworkStateManagement.LobbyScreen' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.GameplayScreen' NetworkStateManagement.MainMenuScreen' NetworkStateManagement.PauseMenuScreen
+NetworkStateManagement,MainMenuScreen,0,7,0,0,1,96,7,0,1,-1,8,1,NetworkStateManagement.Resources' NetworkStateManagement.MenuEntry' NetworkStateManagement.LoadingScreen' NetworkStateManagement.PlayerIndexEventArgs' NetworkStateManagement.ProfileSignInScreen' NetworkStateManagement.GameScreen' NetworkStateManagement.ScreenManager' NetworkStateManagement.MessageBoxScreen,NetworkStateManagement.NetworkSessionComponent
+NetworkStateManagement,MenuEntry,3,6,2,0,5,137,8,1,0,0.67,2,6,NetworkStateManagement.MenuScreen' NetworkStateManagement.ScreenManager,NetworkStateManagement.AvailableSessionMenuEntry' NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.MainMenuScreen' NetworkStateManagement.MenuScreen' NetworkStateManagement.PauseMenuScreen
+NetworkStateManagement,MenuScreen,3,8,1,0,4,177,17,4,1,0,6,2,NetworkStateManagement.InputState' NetworkStateManagement.MenuEntry' NetworkStateManagement.PlayerIndexEventArgs' NetworkStateManagement.ScreenManager' NetworkStateManagement.ScreenState' NetworkStateManagement.GameScreen,NetworkStateManagement.AvailableSessionMenuEntry' NetworkStateManagement.MenuEntry
+NetworkStateManagement,MessageBoxScreen,2,5,0,0,5,113,8,1,1,0.4,3,5,NetworkStateManagement.Resources' NetworkStateManagement.ScreenManager' NetworkStateManagement.InputState,NetworkStateManagement.LobbyScreen' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.ProfileSignInScreen' NetworkStateManagement.MainMenuScreen' NetworkStateManagement.PauseMenuScreen
+NetworkStateManagement,PauseMenuScreen,1,5,0,0,1,84,7,0,2,0.8,7,0,NetworkStateManagement.Resources' NetworkStateManagement.MenuEntry' NetworkStateManagement.MessageBoxScreen' NetworkStateManagement.ScreenManager' NetworkStateManagement.PlayerIndexEventArgs' NetworkStateManagement.LoadingScreen' NetworkStateManagement.NetworkSessionComponent,
+NetworkStateManagement,PlayerIndexEventArgs,1,1,1,0,1,19,1,0,0,0,0,6,,NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.LobbyScreen' NetworkStateManagement.MainMenuScreen' NetworkStateManagement.MenuScreen' NetworkStateManagement.PauseMenuScreen
+NetworkStateManagement,Program,1,1,0,0,0,13,1,0,0,0,1,0,NetworkStateManagement.NetworkStateManagementGame,
+NetworkStateManagement,Resources,2,1,42,0,0,411,1,0,0,0,0,11,,NetworkStateManagement.CreateOrFindSessionScreen' NetworkStateManagement.JoinSessionScreen' NetworkStateManagement.LobbyScreen' NetworkStateManagement.NetworkBusyScreen' NetworkStateManagement.NetworkErrorScreen' NetworkStateManagement.NetworkSessionComponent' NetworkStateManagement.ProfileSignInScreen' NetworkStateManagement.LoadingScreen' NetworkStateManagement.MainMenuScreen' NetworkStateManagement.MessageBoxScreen' NetworkStateManagement.PauseMenuScreen

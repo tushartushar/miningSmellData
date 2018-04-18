@@ -1,0 +1,21 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Tamarack.Example.Pipeline.BlogEngine.Filters,CanoncalizeHtml,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.BlogEngine.Post,
+Tamarack.Example.Pipeline.BlogEngine.Filters,GuardAgainstDoublePost,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.BlogEngine.Post,
+Tamarack.Example.Pipeline.BlogEngine.Filters,RemoveJavascript,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.BlogEngine.Post,
+Tamarack.Example.Pipeline.BlogEngine.Filters,RewriteProfanity,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.BlogEngine.Post,
+Tamarack.Example.Pipeline.BlogEngine.Filters,StripMaliciousTags,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.BlogEngine.Post,
+Tamarack.Example.Pipeline.BlogEngine,IBlogRepository,0,1,0,0,0,4,1,0,0,-1,1,1,Tamarack.Example.Pipeline.BlogEngine.Post,Tamarack.Example.Pipeline.BlogEngine.BlogEngine
+Tamarack.Example.Pipeline.BlogEngine,Post,0,0,3,0,0,6,0,0,0,-1,0,7,,Tamarack.Example.Pipeline.BlogEngine.Filters.CanoncalizeHtml' Tamarack.Example.Pipeline.BlogEngine.Filters.GuardAgainstDoublePost' Tamarack.Example.Pipeline.BlogEngine.Filters.RemoveJavascript' Tamarack.Example.Pipeline.BlogEngine.Filters.RewriteProfanity' Tamarack.Example.Pipeline.BlogEngine.Filters.StripMaliciousTags' Tamarack.Example.Pipeline.BlogEngine.IBlogRepository' Tamarack.Example.Pipeline.BlogEngine.BlogEngine
+Tamarack.Example.Pipeline.BlogEngine,BlogEngine,1,2,0,0,2,20,2,0,0,0,2,0,Tamarack.Example.Pipeline.BlogEngine.IBlogRepository' Tamarack.Example.Pipeline.BlogEngine.Post,
+Tamarack.Example.Pipeline.LoginService.Filters,AuthenticateAgainstLdap,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.LoginService.LoginContext,
+Tamarack.Example.Pipeline.LoginService.Filters,AuthenticateAgainstLocalStore,1,2,0,0,2,15,3,0,1,0,3,0,Tamarack.Example.Pipeline.LoginService.Filters.IUserRepository' Tamarack.Example.Pipeline.LoginService.Filters.User' Tamarack.Example.Pipeline.LoginService.LoginContext,
+Tamarack.Example.Pipeline.LoginService.Filters,IUserRepository,0,1,0,0,0,4,1,0,0,-1,0,1,,Tamarack.Example.Pipeline.LoginService.Filters.AuthenticateAgainstLocalStore
+Tamarack.Example.Pipeline.LoginService.Filters,User,0,1,0,0,1,7,1,0,0,-1,0,1,,Tamarack.Example.Pipeline.LoginService.Filters.AuthenticateAgainstLocalStore
+Tamarack.Example.Pipeline.LoginService.Filters,LockoutOnConsecutiveFailures,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.LoginService.LoginContext,
+Tamarack.Example.Pipeline.LoginService.Filters,WriteLoginAttemptToAuditLog,0,1,0,0,1,7,1,0,1,-1,1,0,Tamarack.Example.Pipeline.LoginService.LoginContext,
+Tamarack.Example.Pipeline.LoginService,LoginContext,0,1,2,0,1,10,1,0,0,-1,0,4,,Tamarack.Example.Pipeline.LoginService.Filters.AuthenticateAgainstLdap' Tamarack.Example.Pipeline.LoginService.Filters.AuthenticateAgainstLocalStore' Tamarack.Example.Pipeline.LoginService.Filters.LockoutOnConsecutiveFailures' Tamarack.Example.Pipeline.LoginService.Filters.WriteLoginAttemptToAuditLog
+Tamarack.Example.Pipeline.LoginService,LoginService,1,2,0,0,2,18,2,0,0,0,0,0,,
+Tamarack.Example.Pipeline.SpamScorer.Filters,PerspcriptionDrugFilter,0,1,0,0,1,10,2,0,1,-1,0,0,,
+Tamarack.Example.Pipeline.SpamScorer.Filters,PornographyFilter,0,1,0,0,1,10,2,0,1,-1,0,0,,
+Tamarack.Example.Pipeline.SpamScorer.Filters,SpamCopBlacklistFilter,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Tamarack.Example.Pipeline.SpamScorer,SpamScorer,0,2,0,0,2,20,2,0,0,-1,0,0,,

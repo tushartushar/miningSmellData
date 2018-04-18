@@ -1,30 +1,30 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-RunnerState,0,0,0,0,0,7,0,0,0,-1,0,0
-RunnerResult,0,0,0,0,0,7,0,0,0,-1,0,0
-CloseReason,0,0,0,0,0,8,0,0,0,-1,0,0
-LiveControlState,0,0,0,0,0,5,0,0,0,-1,0,2
-DuplicatiOperation,0,0,0,0,0,15,0,0,0,-1,0,3
-SuggestedStatusIcon,0,0,0,0,0,9,0,0,0,-1,0,4
-UpdatePollerStates,0,0,0,0,0,6,0,0,0,-1,0,4
-NotificationType,0,0,0,0,0,6,0,0,0,-1,0,6
-EnumConverter,0,1,0,0,1,7,1,0,0,-1,0,0
-SerializableStatusCreator,0,1,0,0,1,7,1,0,0,-1,1,0
-SettingsCreator,0,1,0,0,1,7,1,0,0,-1,1,0
-FilterCreator,0,1,0,0,1,7,1,0,0,-1,1,0
-NotificationCreator,0,1,0,0,1,7,1,0,0,-1,1,0
-DayOfWeekConcerter,0,3,0,0,3,69,34,0,0,-1,0,0
-Serializer,2,3,0,0,2,37,7,0,0,0,0,7
-ServerStatus,0,0,14,0,0,59,0,0,1,-1,2,1
-Setting,0,0,4,0,0,28,0,0,1,-1,1,1
-Filter,0,0,3,0,0,15,0,0,1,-1,0,1
-Notification,0,0,8,0,0,35,0,0,1,-1,1,1
-IBackup,0,0,10,0,0,74,0,1,0,-1,2,4
-ISetting,0,0,4,0,0,32,0,1,0,-1,1,5
-IFilter,0,0,3,0,0,28,0,2,0,-1,0,5
-IServerSettings,0,0,6,0,0,42,0,0,0,-1,3,0
-IDynamicModule,0,0,4,0,0,31,0,0,0,-1,1,2
-IServerStatus,0,0,14,0,0,45,0,2,0,-1,2,2
-IProgressEventData,0,0,17,0,0,54,0,0,0,-1,0,2
-ISchedule,0,0,7,0,0,56,0,1,0,-1,0,2
-IQueuedTask,0,0,3,0,0,12,0,0,0,-1,1,0
-INotification,0,0,8,0,0,35,0,2,0,-1,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Duplicati.Server.Serialization,RunnerState,0,0,0,0,0,7,0,0,0,-1,0,0,,
+Duplicati.Server.Serialization,RunnerResult,0,0,0,0,0,7,0,0,0,-1,0,0,,
+Duplicati.Server.Serialization,CloseReason,0,0,0,0,0,8,0,0,0,-1,0,0,,
+Duplicati.Server.Serialization,LiveControlState,0,0,0,0,0,5,0,0,0,-1,0,1,,Duplicati.GUI.TrayIcon.TrayIconBase
+Duplicati.Server.Serialization,DuplicatiOperation,0,0,0,0,0,16,0,0,0,-1,0,4,,Duplicati.Server.Scheduler' Duplicati.Server.Runner' Duplicati.Server.CustomRunnerTask' Duplicati.Server.WebServer.RESTMethods.Backup
+Duplicati.Server.Serialization,SuggestedStatusIcon,0,0,0,0,0,9,0,0,0,-1,0,1,,Duplicati.GUI.TrayIcon.TrayIconBase
+Duplicati.Server.Serialization,UpdatePollerStates,0,0,0,0,0,6,0,0,0,-1,0,1,,Duplicati.Server.UpdatePollThread
+Duplicati.Server.Serialization,NotificationType,0,0,0,0,0,6,0,0,0,-1,0,4,,Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.Server.Runner' Duplicati.Server.UpdatePollThread' Duplicati.Server.Database.Connection
+Duplicati.Server.Serialization,EnumConverter,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Duplicati.Server.Serialization,SerializableStatusCreator,0,1,0,0,1,7,1,0,0,-1,1,0,Duplicati.Server.Serialization.Implementations.ServerStatus,
+Duplicati.Server.Serialization,SettingsCreator,0,1,0,0,1,7,1,0,0,-1,1,0,Duplicati.Server.Serialization.Implementations.Setting,
+Duplicati.Server.Serialization,FilterCreator,0,1,0,0,1,7,1,0,0,-1,1,0,Duplicati.Server.Serialization.Implementations.Filter,
+Duplicati.Server.Serialization,NotificationCreator,0,1,0,0,1,7,1,0,0,-1,1,0,Duplicati.Server.Serialization.Implementations.Notification,
+Duplicati.Server.Serialization,DayOfWeekConcerter,0,3,0,0,3,77,7,0,0,-1,0,0,,
+Duplicati.Server.Serialization,Serializer,2,3,0,0,2,39,3,0,0,0,0,7,,Duplicati.GUI.TrayIcon.HttpServerConnection' Duplicati.Server.Runner' Duplicati.Server.WebServer.BodyWriter' Duplicati.Server.WebServer.RESTMethods.Backups' Duplicati.Server.WebServer.RESTMethods.ServerSettings' Duplicati.Server.WebServer.RESTMethods.Backup' Duplicati.Server.WebServer.RESTMethods.UISettings
+Duplicati.Server.Serialization.Implementations,ServerStatus,0,0,14,0,0,17,0,0,1,-1,0,1,,Duplicati.Server.Serialization.SerializableStatusCreator
+Duplicati.Server.Serialization.Implementations,Setting,0,0,4,0,0,17,0,0,1,-1,0,1,,Duplicati.Server.Serialization.SettingsCreator
+Duplicati.Server.Serialization.Implementations,Filter,0,0,3,0,0,6,0,0,1,-1,0,1,,Duplicati.Server.Serialization.FilterCreator
+Duplicati.Server.Serialization.Implementations,Notification,0,0,8,0,0,11,0,0,1,-1,0,1,,Duplicati.Server.Serialization.NotificationCreator
+Duplicati.Server.Serialization.Interface,IBackup,0,0,10,0,0,48,0,1,0,-1,0,8,,Duplicati.Server.Scheduler' Duplicati.Server.Runner' Duplicati.Server.SpecialFolders' Duplicati.Server.Database.Connection' Duplicati.Server.WebServer.RESTMethods.Backups' Duplicati.Server.WebServer.RESTMethods.Backup' Duplicati.Server.WebServer.RESTMethods.GetResponseData' Duplicati.Server.WebServer.RESTMethods.Tags
+Duplicati.Server.Serialization.Interface,ISetting,0,0,4,0,0,21,0,1,0,-1,0,6,,Duplicati.Server.Runner' Duplicati.Server.Database.Connection' Duplicati.Server.Database.ServerSettings' Duplicati.Server.WebServer.RESTMethods.ServerSettings' Duplicati.Server.WebServer.RESTMethods.Backup' Duplicati.Server.WebServer.RESTMethods.ServerSetting
+Duplicati.Server.Serialization.Interface,IFilter,0,0,3,0,0,18,0,2,0,-1,0,2,,Duplicati.Server.Runner' Duplicati.Server.Database.Connection
+Duplicati.Server.Serialization.Interface,IServerSettings,0,0,6,0,0,28,0,0,0,-1,0,0,,
+Duplicati.Server.Serialization.Interface,IDynamicModule,0,0,4,0,0,20,0,1,0,-1,0,1,,Duplicati.Server.WebServer.RESTMethods.Tags
+Duplicati.Server.Serialization.Interface,IServerStatus,0,0,14,0,0,17,0,2,0,-1,0,2,,Duplicati.GUI.TrayIcon.HttpServerConnection' Duplicati.GUI.TrayIcon.TrayIconBase
+Duplicati.Server.Serialization.Interface,IProgressEventData,0,0,18,0,0,24,0,1,0,-1,0,0,,
+Duplicati.Server.Serialization.Interface,ISchedule,0,0,7,0,0,32,0,1,0,-1,0,5,,Duplicati.Server.Scheduler' Duplicati.Server.Database.Connection' Duplicati.Server.WebServer.RESTMethods.Backups' Duplicati.Server.WebServer.RESTMethods.Backup' Duplicati.Server.WebServer.RESTMethods.GetResponseData
+Duplicati.Server.Serialization.Interface,IQueuedTask,0,0,3,0,0,7,0,1,0,-1,0,0,,
+Duplicati.Server.Serialization.Interface,INotification,0,0,8,0,0,11,0,2,0,-1,0,6,,Duplicati.GUI.TrayIcon.HttpServerConnection' Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.Server.Runner' Duplicati.Server.UpdatePollThread' Duplicati.Server.Database.Connection' Duplicati.Server.WebServer.RESTMethods.Notification

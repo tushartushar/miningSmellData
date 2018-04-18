@@ -1,20 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AdminMenu,0,1,2,0,1,24,1,0,2,-1,3,0
-ResourceManifest,0,1,0,0,1,7,1,0,3,-1,1,0
-Permissions,1,2,1,1,2,28,2,0,2,0,3,2
-DataMigrationNotificationProvider,2,2,1,0,2,37,3,0,2,0,5,0
-IExtensionDisplayEventHandler,0,1,0,0,0,7,1,0,2,-1,1,1
-FeatureCommands,4,4,1,0,4,82,13,0,2,0,5,0
-AdminController,9,6,4,0,6,172,34,0,0,0,28,0
-StringExtensions,0,1,0,0,1,7,1,0,0,-1,1,0
-DoghouseComparer,1,2,0,0,2,20,2,0,0,0,0,0
-ModuleEntry,0,1,4,0,1,41,1,0,0,-1,1,3
-ModuleFeature,0,0,5,0,0,41,0,0,0,-1,1,3
-IModuleService,0,6,0,0,0,36,6,1,1,-1,1,2
-ModuleService,5,10,2,0,7,120,14,0,2,0.4,10,0
-RecipesViewModel,0,0,1,0,0,7,0,0,0,-1,1,1
-ModuleRecipesViewModel,0,0,2,0,0,11,0,0,0,-1,2,1
-FeaturesViewModel,0,0,2,0,0,11,0,0,0,-1,2,1
-FeaturesBulkAction,0,0,0,0,0,8,0,0,0,-1,0,2
-ModulesIndexViewModel,0,0,4,0,0,19,0,0,0,-1,2,1
-ModulesIndexOptions,0,0,1,0,0,7,0,0,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Orchard.Modules,AdminMenu,0,1,2,0,1,14,1,0,2,-1,4,0,Orchard.UI.Navigation.NavigationBuilder' Orchard.UI.Navigation.NavigationItemBuilder' Orchard.Modules.Permissions' Orchard.Security.StandardPermissions,
+Orchard.Modules,ResourceManifest,0,1,0,0,1,5,1,0,3,-1,3,0,Orchard.UI.Resources.ResourceDefinition' Orchard.UI.Resources.ResourceManifest' Orchard.UI.Resources.ResourceManifestBuilder,
+Orchard.Modules,Permissions,1,2,1,1,2,15,2,0,2,0,2,2,Orchard.Security.Permissions.Permission' Orchard.Security.Permissions.PermissionStereotype,Orchard.Modules.AdminMenu' Orchard.Modules.Controllers.AdminController
+Orchard.Modules.Data.Migration,DataMigrationNotificationProvider,2,2,1,0,2,22,3,0,2,0,5,0,Orchard.Data.Migration.IDataMigrationManager' Orchard.WorkContext' Orchard.IWorkContextAccessor' Orchard.Localization.NullLocalizer' Orchard.UI.Notify.NotifyType,
+Orchard.Modules.Events,IExtensionDisplayEventHandler,0,1,0,0,0,6,1,0,2,-1,1,1,Orchard.Environment.Extensions.Models.ExtensionDescriptor,Orchard.Modules.Controllers.AdminController
+Orchard.Modules.Commands,FeatureCommands,4,4,1,0,4,77,11,0,2,0,9,0,Orchard.Modules.Services.IModuleService' Orchard.UI.Notify.INotifier' Orchard.Environment.Features.IFeatureManager' Orchard.Environment.Descriptor.Models.ShellDescriptor' Orchard.Environment.Descriptor.Models.ShellFeature' Orchard.Environment.Extensions.Models.FeatureDescriptor' Orchard.Commands.CommandContext' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.UI.Notify.NotifyEntry,
+Orchard.Modules.Controllers,AdminController,9,6,4,0,6,173,21,0,0,0,32,0,Orchard.Modules.Events.IExtensionDisplayEventHandler' Orchard.Modules.Services.IModuleService' Orchard.Data.Migration.IDataMigrationManager' Orchard.Reports.Services.IReportsCoordinator' Orchard.Environment.Extensions.IExtensionManager' Orchard.Environment.Features.IFeatureManager' Orchard.Recipes.Services.IRecipeHarvester' Orchard.Recipes.Services.IRecipeManager' Orchard.Environment.Descriptor.Models.ShellDescriptor' Orchard.Localization.NullLocalizer' Orchard.Logging.NullLogger' Orchard.IOrchardServices' Orchard.DisplayManagement.IShapeFactory' Orchard.UI.Navigation.Pager' Orchard.Security.IAuthorizer' Orchard.Security.StandardPermissions' Orchard.WorkContext' Orchard.Environment.Extensions.Models.DefaultExtensionTypes' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.Modules.ViewModels.ModulesIndexOptions' Orchard.Modules.Models.ModuleEntry' Orchard.Environment.Extensions.Models.FeatureDescriptor' Orchard.UI.Navigation.PagerParameters' Orchard.Modules.ViewModels.RecipesViewModel' Orchard.Modules.ViewModels.ModuleRecipesViewModel' Orchard.Recipes.Models.Recipe' Orchard.Logging.ILogger' Orchard.UI.Notify.INotifier' Orchard.Modules.Permissions' Orchard.Environment.Descriptor.Models.ShellFeature' Orchard.Modules.Models.ModuleFeature' Orchard.Modules.ViewModels.FeaturesBulkAction,
+Orchard.Modules.Extensions,StringExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Orchard.Localization.LocalizedString,
+Orchard.Modules.Models,DoghouseComparer,1,2,0,0,2,17,6,0,0,0,0,0,,
+Orchard.Modules.Models,ModuleEntry,0,1,4,0,1,24,1,0,0,-1,0,1,,Orchard.Modules.Controllers.AdminController
+Orchard.Modules.Models,ModuleFeature,0,0,5,0,0,22,0,0,0,-1,0,2,,Orchard.Modules.Controllers.AdminController' Orchard.Modules.Services.ModuleService
+Orchard.Modules.Services,IModuleService,0,6,0,0,0,35,6,1,1,-1,1,2,Orchard.Environment.Extensions.Models.ExtensionDescriptor,Orchard.Modules.Commands.FeatureCommands' Orchard.Modules.Controllers.AdminController
+Orchard.Modules.Services,ModuleService,5,10,2,0,7,124,15,0,2,0.2,15,0,Orchard.Environment.Features.IFeatureManager' Orchard.FileSystems.VirtualPath.IVirtualPathProvider' Orchard.Environment.Extensions.IExtensionManager' Orchard.Environment.Descriptor.IShellDescriptorManager' Orchard.Caching.ICacheManager' Orchard.Localization.NullLocalizer' Orchard.IOrchardServices' Orchard.Environment.Descriptor.Models.ShellDescriptor' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.Environment.Descriptor.Models.ShellFeature' Orchard.Environment.Extensions.Models.FeatureDescriptor' Orchard.Environment.Extensions.Models.Feature' Orchard.UI.Notify.INotifier' Orchard.Modules.Models.ModuleFeature' Orchard.Localization.LocalizedString,
+Orchard.Modules.ViewModels,RecipesViewModel,0,0,1,0,0,3,0,0,0,-1,0,1,,Orchard.Modules.Controllers.AdminController
+Orchard.Modules.ViewModels,ModuleRecipesViewModel,0,0,2,0,0,4,0,0,0,-1,0,1,,Orchard.Modules.Controllers.AdminController
+Orchard.Modules.ViewModels,FeaturesViewModel,0,0,2,0,0,4,0,0,0,-1,0,0,,
+Orchard.Modules.ViewModels,FeaturesBulkAction,0,0,0,0,0,7,0,0,0,-1,0,1,,Orchard.Modules.Controllers.AdminController
+Orchard.Modules.ViewModels,ModulesIndexViewModel,0,0,4,0,0,6,0,0,0,-1,0,0,,
+Orchard.Modules.ViewModels,ModulesIndexOptions,0,0,1,0,0,3,0,0,0,-1,0,1,,Orchard.Modules.Controllers.AdminController

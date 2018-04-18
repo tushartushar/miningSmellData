@@ -1,11 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-GlimpseDbCommandDefinition,0,2,1,0,2,15,2,0,0,-1,1,1
-GlimpseDbConnectionFactory,0,2,1,0,2,16,2,0,0,-1,1,0
-GlimpseDbProviderServices,1,11,1,0,2,80,12,0,0,0.91,3,0
-InvariantNameResolver,2,2,1,0,2,46,4,0,0,0,0,0
-Initialize,0,1,0,0,1,7,1,0,0,-1,1,0
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-DbConfigurationExecutionTask,0,1,0,0,1,8,1,0,1,-1,0,0
-DbConnectionFactoriesExecutionTask,0,2,1,0,2,22,3,0,1,-1,1,0
-EntityFrameworkExecutionBlock,1,1,0,1,0,11,1,0,1,0,0,2
-EntityFrameworkInspector,0,1,0,0,1,7,1,0,1,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Glimpse.EF.AlternateType,GlimpseDbCommandDefinition,0,2,1,0,2,13,2,0,0,-1,1,1,Glimpse.Ado.AlternateType.GlimpseDbCommand,Glimpse.EF.AlternateType.GlimpseDbProviderServices
+Glimpse.EF.AlternateType,GlimpseDbConnectionFactory,0,2,1,0,2,13,2,0,0,-1,1,0,Glimpse.Ado.AlternateType.GlimpseDbConnection,
+Glimpse.EF.AlternateType,GlimpseDbProviderServices,1,11,1,0,2,74,12,0,0,0.91,3,1,Glimpse.EF.AlternateType.GlimpseDbCommandDefinition' Glimpse.Ado.AlternateType.GlimpseDbConnection' Glimpse.Ado.AlternateType.GlimpseDbDataReader,Glimpse.EF.Inspector.Core.DbConfigurationExecutionTask
+Glimpse.EF.AlternateType,InvariantNameResolver,2,2,1,0,2,49,4,0,0,0,1,0,Glimpse.EF.AlternateType.ProviderInvariantName,
+Glimpse.EF.AlternateType,ProviderInvariantName,0,1,1,0,1,8,1,0,0,-1,0,1,,Glimpse.EF.AlternateType.InvariantNameResolver
+Glimpse.EF,Initialize,0,1,0,0,1,7,1,0,0,-1,1,0,Glimpse.EF.Inspector.Core.EntityFrameworkExecutionBlock,
+Glimpse.EF,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+Glimpse.EF.Inspector.Core,DbConfigurationExecutionTask,0,1,0,0,1,11,1,0,1,-1,1,0,Glimpse.EF.AlternateType.GlimpseDbProviderServices,
+Glimpse.EF.Inspector.Core,DbConnectionFactoriesExecutionTask,0,2,1,0,2,20,3,0,1,-1,1,0,Glimpse.Core.Extensibility.ILogger,
+Glimpse.EF.Inspector.Core,EntityFrameworkExecutionBlock,1,1,0,1,0,11,1,0,1,0,0,2,,Glimpse.EF.Initialize' Glimpse.EF.Inspector.EntityFrameworkInspector
+Glimpse.EF.Inspector,EntityFrameworkInspector,0,1,0,0,1,7,1,0,1,-1,2,0,Glimpse.EF.Inspector.Core.EntityFrameworkExecutionBlock' Glimpse.Core.Extensibility.IInspectorContext,

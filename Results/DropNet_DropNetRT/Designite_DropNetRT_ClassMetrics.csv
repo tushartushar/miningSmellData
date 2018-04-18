@@ -1,23 +1,24 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-OAuthMessageHandler,2,7,4,0,3,81,10,0,0,0.43,1,1
-DropNetClient,14,79,4,0,63,1118,138,0,0,0.49,13,0
-DropboxException,0,4,2,0,4,25,4,0,0,-1,0,0
-StringExtensions,0,3,0,0,3,15,3,0,0,-1,0,0
-StreamUtils,1,2,0,0,2,22,7,0,0,0,0,0
-QueryParameterComparer,0,1,0,0,1,8,1,0,0,-1,1,0
-HttpParameter,0,2,2,0,2,31,2,0,0,-1,0,2
-HttpRequest,0,3,1,0,3,19,3,0,0,-1,1,2
-AccountInfo,0,0,7,0,0,39,0,0,0,-1,2,1
-QuotaInfo,0,0,3,0,0,18,0,0,0,-1,0,1
-Team,0,0,1,0,0,8,0,0,0,-1,0,1
-ChunkedUploadResponse,0,0,3,0,0,19,0,0,0,-1,0,1
-DeltaPage,0,0,4,0,0,37,0,0,0,-1,1,1
-DeltaEntry,0,0,2,0,0,32,0,0,0,-1,1,2
-LongpollDeltaResult,0,0,2,0,0,18,0,0,0,-1,0,1
-DeltaPageInternal,0,0,4,0,0,19,0,0,0,-1,0,1
-Metadata,0,3,21,0,0,152,5,0,0,-1,1,2
-Modifier,0,0,2,0,0,13,0,0,0,-1,0,1
-OAuth2TokenResponse,0,0,1,0,0,9,0,0,0,-1,0,1
-ShareResponse,0,0,3,0,0,16,0,0,0,-1,0,1
-ThumbnailSize,0,0,0,0,0,24,0,0,0,-1,0,1
-UserLogin,0,0,2,0,0,12,0,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DropNetRT.Authentication,OAuthMessageHandler,2,7,4,0,3,74,10,0,0,0.43,1,1,DropNetRT.HttpHelpers.HttpRequest,DropNetRT.DropNetClient
+DropNetRT,DropNetClient,14,79,4,0,63,1188,115,0,0,0.32,9,2,DropNetRT.Authentication.OAuthMessageHandler' DropNetRT.HttpHelpers.HttpRequest' DropNetRT.ApiType' DropNetRT.Models.ChunkedUploadResponse' DropNetRT.Models.Metadata' DropNetRT.Models.ThumbnailSize' DropNetRT.Models.DeltaPage' DropNetRT.Models.UserLogin' DropNetRT.Models.DeltaEntry,DropNetRTTests.ClientFileTests' DropNetRTTests.ClientUserTests
+DropNetRT,ApiType,0,0,0,0,0,6,0,0,0,-1,0,1,,DropNetRT.DropNetClient
+DropNetRT.Exceptions,DropboxException,0,4,2,0,4,19,4,0,0,-1,0,1,,DropNetRTTests.ClientFileTests
+DropNetRT.Extensions,StringExtensions,0,3,0,0,3,15,3,0,0,-1,0,0,,
+DropNetRT.Helpers,StreamUtils,1,2,0,0,2,18,6,0,0,0,0,0,,
+DropNetRT.HttpHelpers,QueryParameterComparer,0,1,0,0,1,8,1,0,0,-1,1,0,DropNetRT.HttpHelpers.HttpParameter,
+DropNetRT.HttpHelpers,HttpParameter,0,2,2,0,2,25,2,0,0,-1,0,1,,DropNetRT.HttpHelpers.QueryParameterComparer
+DropNetRT.HttpHelpers,HttpRequest,0,3,1,0,3,17,3,0,0,-1,0,2,,DropNetRT.Authentication.OAuthMessageHandler' DropNetRT.DropNetClient
+DropNetRT.Models,AccountInfo,0,0,7,0,0,18,0,0,0,-1,0,0,,
+DropNetRT.Models,QuotaInfo,0,0,3,0,0,9,0,0,0,-1,0,0,,
+DropNetRT.Models,Team,0,0,1,0,0,5,0,0,0,-1,0,0,,
+DropNetRT.Models,ChunkedUploadResponse,0,0,3,0,0,10,0,0,0,-1,0,1,,DropNetRT.DropNetClient
+DropNetRT.Models,DeltaPage,0,0,4,0,0,23,0,0,0,-1,0,1,,DropNetRT.DropNetClient
+DropNetRT.Models,DeltaEntry,0,0,2,0,0,24,0,0,0,-1,0,1,,DropNetRT.DropNetClient
+DropNetRT.Models,LongpollDeltaResult,0,0,2,0,0,12,0,0,0,-1,0,0,,
+DropNetRT.Models,DeltaPageInternal,0,0,4,0,0,7,0,0,0,-1,0,0,,
+DropNetRT.Models,Metadata,0,3,21,0,0,123,5,0,0,-1,0,1,,DropNetRT.DropNetClient
+DropNetRT.Models,Modifier,0,0,2,0,0,7,0,0,0,-1,0,0,,
+DropNetRT.Models,OAuth2TokenResponse,0,0,1,0,0,6,0,0,0,-1,0,0,,
+DropNetRT.Models,ShareResponse,0,0,3,0,0,9,0,0,0,-1,0,0,,
+DropNetRT.Models,ThumbnailSize,0,0,0,0,0,23,0,0,0,-1,0,1,,DropNetRT.DropNetClient
+DropNetRT.Models,UserLogin,0,0,2,0,0,6,0,0,0,-1,0,1,,DropNetRT.DropNetClient

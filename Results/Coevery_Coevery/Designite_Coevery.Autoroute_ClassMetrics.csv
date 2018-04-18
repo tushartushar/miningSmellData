@@ -1,24 +1,24 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Permissions,1,2,1,1,2,34,2,0,2,0,3,1
-ResourceManifest,0,1,0,0,1,8,1,0,3,-1,1,0
-Migrations,0,2,0,0,2,14,2,0,2,-1,2,0
-AutorouteCommands,1,2,0,0,2,14,2,0,2,0,1,0
-AliasResolverSelector,1,3,0,0,2,26,5,0,2,0.67,6,0
-PathResolutionService,1,2,0,0,2,12,2,0,1,0,3,0
-IPathResolutionService,0,1,0,0,0,4,1,1,1,-1,0,0
-IRouteEvents,0,1,0,0,0,4,1,0,2,-1,1,1
-ISlugService,0,2,0,0,0,5,2,1,1,-1,1,1
-AutorouteService,6,14,2,0,11,153,22,0,1,0.14,13,0
-IAutorouteService,0,8,0,0,0,14,8,1,1,-1,1,3
-DefaultSlugService,1,4,0,0,3,34,6,0,2,0.75,4,0
-ISlugEventHandler,0,2,0,0,0,5,2,0,2,-1,1,1
-FillSlugContext,0,1,4,0,1,24,1,0,0,-1,1,2
-AutorouteSettingsHooks,1,3,1,0,3,53,8,0,4,0.67,6,0
-RoutePattern,0,0,3,0,0,18,0,0,0,-1,0,3
-AutorouteSettings,1,2,6,0,2,57,2,0,0,1,2,4
-AutoroutePartDriver,5,5,2,0,1,106,16,0,2,0.8,12,0
-AutoroutePartHandler,2,5,1,0,1,77,12,0,2,0,7,0
-SlugTokens,1,3,1,0,3,50,3,0,1,0.67,6,0
-AutoroutePart,0,0,4,0,0,32,0,0,2,-1,0,7
-AutoroutePartRecord,0,0,3,0,0,17,0,0,2,-1,0,4
-AutoroutePartEditViewModel,0,0,4,0,0,19,0,0,0,-1,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coevery.Autoroute,Permissions,1,2,1,1,2,21,2,0,2,0,2,1,Coevery.Security.Permissions.Permission' Coevery.Security.Permissions.PermissionStereotype,Coevery.Autoroute.Handlers.AutoroutePartHandler
+Coevery.Autoroute,ResourceManifest,0,1,0,0,1,6,1,0,3,-1,3,0,Coevery.UI.Resources.ResourceManifest' Coevery.UI.Resources.ResourceManifestBuilder' Coevery.UI.Resources.ResourceDefinition,
+Coevery.Autoroute,Migrations,0,2,0,0,2,19,2,0,2,-1,5,0,Coevery.Data.Migration.Schema.SchemaBuilder' Coevery.Data.Migration.Schema.CreateTableCommand' Coevery.Data.Migration.Schema.CreateColumnCommand' Coevery.ContentManagement.MetaData.IContentDefinitionManager' Coevery.ContentManagement.MetaData.Builders.ContentPartDefinitionBuilder,
+Coevery.Autoroute.Commands,AutorouteCommands,1,2,0,0,2,12,2,0,2,0,1,0,Coevery.Autoroute.Services.IAutorouteService,
+Coevery.Autoroute.Services,AliasResolverSelector,1,3,0,0,2,25,5,0,2,0.67,5,0,Coevery.ContentManagement.IContentManager' Coevery.ContentManagement.ContentIdentity' Coevery.ContentManagement.IdentityResolverSelectorResult' Coevery.ContentManagement.IContentQuery' Coevery.Autoroute.Models.AutoroutePartRecord,
+Coevery.Autoroute.Services,PathResolutionService,1,2,0,0,2,12,2,0,1,0,4,0,Coevery.ContentManagement.IContentManager' Coevery.ContentManagement.IContentQuery' Coevery.Autoroute.Models.AutoroutePartRecord' Coevery.Autoroute.Models.AutoroutePart,
+Coevery.Autoroute.Services,IPathResolutionService,0,1,0,0,0,3,1,1,1,-1,0,0,,
+Coevery.Autoroute.Services,IRouteEvents,0,1,0,0,0,3,1,0,2,-1,1,1,Coevery.ContentManagement.IContent,Coevery.Autoroute.Services.AutorouteService
+Coevery.Autoroute.Services,ISlugService,0,2,0,0,0,4,2,1,1,-1,1,1,Coevery.ContentManagement.IContent,Coevery.Autoroute.Providers.SlugTokens
+Coevery.Autoroute.Services,AutorouteService,6,14,2,0,11,135,25,0,1,0.14,21,0,Coevery.Alias.IAliasService' Coevery.Tokens.ITokenizer' Coevery.ContentManagement.MetaData.IContentDefinitionManager' Coevery.ContentManagement.IContentManager' Coevery.Autoroute.Services.IRouteEvents' Coevery.Logging.NullLogger' Coevery.Localization.NullLocalizer' Coevery.Autoroute.Settings.RoutePattern' Coevery.ContentManagement.ContentItem' Coevery.Autoroute.Models.AutoroutePart' Coevery.Tokens.ReplaceOptions' Coevery.ContentManagement.ContentItemMetadata' Coevery.ContentManagement.IContent' Coevery.ContentManagement.MetaData.Models.ContentTypeDefinition' Coevery.Autoroute.Settings.AutorouteSettings' Coevery.ContentManagement.MetaData.Models.SettingsDictionary' Coevery.ContentManagement.MetaData.Builders.ContentTypeDefinitionBuilder' Coevery.ContentManagement.MetaData.Models.ContentTypePartDefinition' Coevery.ContentManagement.MetaData.Models.ContentPartDefinition' Coevery.ContentManagement.IContentQuery' Coevery.Autoroute.Models.AutoroutePartRecord,
+Coevery.Autoroute.Services,IAutorouteService,0,8,0,0,0,10,8,1,1,-1,1,3,Coevery.Autoroute.Models.AutoroutePart,Coevery.Autoroute.Commands.AutorouteCommands' Coevery.Autoroute.Drivers.AutoroutePartDriver' Coevery.Autoroute.Handlers.AutoroutePartHandler
+Coevery.Autoroute.Services,DefaultSlugService,1,4,0,0,3,32,7,0,2,0.5,7,1,Coevery.Autoroute.Services.ISlugEventHandler' Coevery.ContentManagement.ContentItemMetadata' Coevery.ContentManagement.IContentManager' Coevery.ContentManagement.ContentItem' Coevery.ContentManagement.IContent' Coevery.Autoroute.Services.FillSlugContext' Coevery.Utility.Extensions.StringExtensions,Coevery.Tests.Modules.Autoroute.DefaultSlugServiceTests
+Coevery.Autoroute.Services,ISlugEventHandler,0,2,0,0,0,4,2,0,2,-1,1,1,Coevery.Autoroute.Services.FillSlugContext,Coevery.Autoroute.Services.DefaultSlugService
+Coevery.Autoroute.Services,FillSlugContext,0,1,4,0,1,10,1,0,0,-1,1,2,Coevery.ContentManagement.IContent,Coevery.Autoroute.Services.DefaultSlugService' Coevery.Autoroute.Services.ISlugEventHandler
+Coevery.Autoroute.Settings,AutorouteSettingsHooks,1,3,1,0,3,46,8,0,4,0.67,8,0,Coevery.UI.Notify.INotifier' Coevery.Autoroute.Settings.AutorouteSettings' Coevery.ContentManagement.MetaData.Models.ContentPartDefinition' Coevery.ContentManagement.MetaData.Models.ContentTypePartDefinition' Coevery.ContentManagement.MetaData.Models.SettingsDictionary' Coevery.Autoroute.Settings.RoutePattern' Coevery.ContentManagement.MetaData.Builders.ContentTypePartDefinitionBuilder' Coevery.ContentManagement.IUpdateModel,
+Coevery.Autoroute.Settings,RoutePattern,0,0,3,0,0,5,0,0,0,-1,0,2,,Coevery.Autoroute.Services.AutorouteService' Coevery.Autoroute.Settings.AutorouteSettingsHooks
+Coevery.Autoroute.Settings,AutorouteSettings,1,2,6,0,2,37,2,0,0,1,1,3,Coevery.ContentManagement.MetaData.Builders.ContentTypePartDefinitionBuilder,Coevery.Autoroute.Services.AutorouteService' Coevery.Autoroute.Settings.AutorouteSettingsHooks' Coevery.Autoroute.Drivers.AutoroutePartDriver
+Coevery.Autoroute.Drivers,AutoroutePartDriver,5,5,2,0,1,95,16,0,0,0.6,18,0,Coevery.Alias.IAliasService' Coevery.ContentManagement.IContentManager' Coevery.Autoroute.Services.IAutorouteService' Coevery.Security.IAuthorizer' Coevery.UI.Notify.INotifier' Coevery.Localization.NullLocalizer' Coevery.Autoroute.Models.AutoroutePart' Coevery.Autoroute.Settings.AutorouteSettings' Coevery.Autoroute.ViewModels.AutoroutePartEditViewModel' Coevery.ContentManagement.MetaData.Models.SettingsDictionary' Coevery.ContentManagement.MetaData.Models.ContentTypePartDefinition' Coevery.ContentManagement.ContentItemMetadata' Coevery.ContentManagement.IUpdateModel' Coevery.ContentManagement.Drivers.ContentShapeResult' Coevery.ContentManagement.Handlers.ImportContentContext' Coevery.ContentManagement.MetaData.Models.ContentPartDefinition' Coevery.ContentManagement.Handlers.ExportContentContext' Coevery.Autoroute.Models.AutoroutePartRecord,
+Coevery.Autoroute.Handlers,AutoroutePartHandler,2,5,1,0,1,71,12,0,2,0,15,0,Coevery.ICoeveryServices' Coevery.ContentManagement.Handlers.StorageFilter' Coevery.ContentManagement.ContentItem' Coevery.Autoroute.Models.AutoroutePart' Coevery.ContentManagement.ContentIdentity' Coevery.ContentManagement.ContentItemMetadata' Coevery.ContentManagement.Handlers.GetContentItemMetadataContext' Coevery.Data.IRepository' Coevery.ContentManagement.IContentQuery' Coevery.ContentManagement.IContentManager' Coevery.Autoroute.Models.AutoroutePartRecord' Coevery.Autoroute.Services.IAutorouteService' Coevery.Security.IAuthorizer' Coevery.Autoroute.Permissions' Coevery.UI.Notify.INotifier,
+Coevery.Autoroute.Providers,SlugTokens,1,3,1,0,3,53,3,0,1,0.67,9,0,Coevery.Autoroute.Services.ISlugService' Coevery.Localization.NullLocalizer' Coevery.Tokens.DescribeFor' Coevery.Tokens.DescribeContext' Coevery.Autoroute.Models.AutoroutePart' Coevery.Core.Common.Models.CommonPart' Coevery.Tokens.EvaluateContext' Coevery.ContentManagement.IContent' Coevery.ContentManagement.MetaData.Models.ContentTypeDefinition,
+Coevery.Autoroute.Models,AutoroutePart,0,0,4,0,0,17,0,0,2,-1,0,6,,Coevery.Autoroute.Services.PathResolutionService' Coevery.Autoroute.Services.AutorouteService' Coevery.Autoroute.Services.IAutorouteService' Coevery.Autoroute.Drivers.AutoroutePartDriver' Coevery.Autoroute.Handlers.AutoroutePartHandler' Coevery.Autoroute.Providers.SlugTokens
+Coevery.Autoroute.Models,AutoroutePartRecord,0,0,3,0,0,9,0,0,2,-1,0,5,,Coevery.Autoroute.Services.AliasResolverSelector' Coevery.Autoroute.Services.PathResolutionService' Coevery.Autoroute.Services.AutorouteService' Coevery.Autoroute.Drivers.AutoroutePartDriver' Coevery.Autoroute.Handlers.AutoroutePartHandler
+Coevery.Autoroute.ViewModels,AutoroutePartEditViewModel,0,0,4,0,0,6,0,0,0,-1,0,1,,Coevery.Autoroute.Drivers.AutoroutePartDriver

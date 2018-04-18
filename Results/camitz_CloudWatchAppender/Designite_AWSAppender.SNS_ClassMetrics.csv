@@ -1,13 +1,13 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BufferingSNSAppender,10,7,6,0,2,112,13,0,1,0.29,5,0
-MessageTooLargeException,0,0,0,0,0,3,0,0,0,-1,0,0
-ISNSAppender,0,0,2,0,0,10,0,2,1,-1,0,0
-SNSAppender,5,4,4,0,2,68,7,0,2,0,3,0
-SNSDatum,0,3,2,0,3,26,3,0,0,-1,0,4
-SNSDatumRenderer,0,2,0,0,1,19,5,0,0,-1,1,0
-ISNSEventMessageParser,0,0,2,0,0,12,0,1,1,-1,0,1
-SNSMessageParser,3,8,4,1,2,95,18,0,2,0.5,2,0
-SNSClientWrapper,2,3,0,0,1,31,4,0,1,0.67,2,2
-PublishRequestWrapper,0,0,3,0,0,18,0,0,0,-1,0,2
-LockObject,1,1,0,0,1,8,1,0,0,0,0,1
-SNSEventProcessor,4,3,1,0,2,33,3,0,1,0,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AWSAppender.SNS,BufferingSNSAppender,10,7,6,0,2,120,12,0,1,0.29,4,0,AWSAppender.Core.Services.EventRateLimiter' AWSAppender.SNS.Services.SNSClientWrapper' AWSAppender.Core.Services.IEventProcessor' AWSAppender.SNS.Model.SNSDatum,
+AWSAppender.SNS,MessageTooLargeException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+AWSAppender.SNS,ISNSAppender,0,0,2,0,0,6,0,2,1,-1,0,0,,
+AWSAppender.SNS,SNSAppender,5,4,4,0,2,64,7,0,2,0,4,0,AWSAppender.SNS.Services.SNSClientWrapper' AWSAppender.Core.Services.IEventProcessor' AWSAppender.SNS.Model.SNSDatum' AWSAppender.Core.Services.EventRateLimiter,
+AWSAppender.SNS.Model,SNSDatum,0,3,2,0,3,20,3,0,0,-1,1,4,AWSAppender.SNS.Model.SNSDatumRenderer,AWSAppender.SNS.BufferingSNSAppender' AWSAppender.SNS.SNSAppender' AWSAppender.SNS.Model.SNSDatumRenderer' AWSAppender.SNS.Parsers.SNSMessageParser
+AWSAppender.SNS.Model,SNSDatumRenderer,0,2,0,0,1,19,5,0,0,-1,1,1,AWSAppender.SNS.Model.SNSDatum,AWSAppender.SNS.Model.SNSDatum
+AWSAppender.SNS.Parsers,ISNSEventMessageParser,0,0,2,0,0,6,0,1,1,-1,0,1,,AWSAppender.SNS.Services.SNSEventProcessor
+AWSAppender.SNS.Parsers,SNSMessageParser,3,8,4,1,2,82,12,0,2,0.5,2,0,AWSAppender.SNS.Model.SNSDatum' AWSAppender.Core.Services.AppenderValue,
+AWSAppender.SNS.Services,SNSClientWrapper,2,3,0,0,1,36,4,0,0,0.67,2,2,AWSAppender.SNS.Services.LockObject' AWSAppender.SNS.Services.PublishRequestWrapper,AWSAppender.SNS.BufferingSNSAppender' AWSAppender.SNS.SNSAppender
+AWSAppender.SNS.Services,PublishRequestWrapper,0,0,3,0,0,15,0,0,0,-1,0,1,,AWSAppender.SNS.Services.SNSClientWrapper
+AWSAppender.SNS.Services,LockObject,1,1,0,0,1,8,1,0,0,0,0,1,,AWSAppender.SNS.Services.SNSClientWrapper
+AWSAppender.SNS.Services,SNSEventProcessor,4,3,1,0,2,35,3,0,1,0,2,0,AWSAppender.SNS.Parsers.ISNSEventMessageParser' AWSAppender.Core.Services.PatternParser,

@@ -1,0 +1,57 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MqttLib,CompleteArgs,1,1,1,0,1,24,1,0,0,0,0,1,,MqttLib.Mqtt
+MqttLib,IMqttConnectDisconnect,0,5,2,0,0,51,5,2,0,-1,2,0,MqttLib.QoS' MqttLib.MqttPayload,
+MqttLib,IMqttPublisher,0,2,0,0,0,22,2,2,0,-1,3,0,MqttLib.MqttPayload' MqttLib.QoS' MqttLib.MqttParcel,
+MqttLib,IMqttShared,0,0,0,0,0,3,0,1,1,-1,0,0,,
+MqttLib,IMqttSharedSubscriber,0,2,0,0,0,17,2,1,0,-1,1,0,MqttLib.Core.Subscription,
+MqttLib,IMqttSubscriber,0,4,0,0,0,40,4,1,0,-1,2,0,MqttLib.Core.Subscription' MqttLib.QoS,
+MqttLib,MessageStore,0,0,0,0,0,5,0,0,0,-1,0,1,,MqttLib.IPersistence
+MqttLib,IPersistence,0,7,0,0,0,41,7,0,0,-1,2,3,MqttLib.Core.Messages.IPersitentMessage' MqttLib.MessageStore,MqttLib.Mqtt' MqttLib.MqttClientFactory' MqttLib.Core.QoSManager
+MqttLib,IMqtt,0,0,1,0,0,7,0,1,1,-1,0,1,,Sample.Program
+MqttLib,Mqtt,10,23,4,0,14,365,41,0,2,0,22,1,MqttLib.Core.StreamManager' MqttLib.Core.QoSManager' MqttLib.IPersistence' MqttLib.Logger.Log' MqttLib.Logger.LogLevel' MqttLib.Core.Messages.MqttConnackMessage' MqttLib.Core.Messages.MqttPubackMessage' MqttLib.Core.Messages.MqttPublishMessage' MqttLib.Core.Messages.MqttPubrelMessage' MqttLib.Core.Messages.MqttSubackMessage' MqttLib.Core.Messages.MqttUnsubackMessage' MqttLib.Core.Messages.MqttMessageReceivedEventArgs' MqttLib.Core.Messages.MqttMessage' MqttLib.Core.Messages.MessageType' MqttLib.Core.Messages.MqttConnectionResponse' MqttLib.MqttPayload' MqttLib.QoS' MqttLib.Core.Messages.MqttConnectMessage' MqttLib.MqttParcel' MqttLib.Core.Subscription' MqttLib.PublishArrivedArgs' MqttLib.CompleteArgs,MqttLib.MqttClientFactory
+MqttLib,MqttBroker,0,1,0,0,0,6,1,0,0,-1,0,0,,
+MqttLib,MqttBrokerUnavailableException,0,3,0,0,3,6,3,0,1,-1,0,0,,
+MqttLib,MqttClientFactory,0,3,0,0,3,15,3,0,0,-1,2,1,MqttLib.Mqtt' MqttLib.IPersistence,Sample.Program
+MqttLib,MqttException,0,3,0,0,3,13,3,2,0,-1,0,0,,
+MqttLib,MqttNotConnectedException,0,3,0,0,3,7,3,0,1,-1,0,0,,
+MqttLib,MqttParcel,4,3,4,0,3,44,3,0,0,0,2,2,MqttLib.MqttPayload' MqttLib.QoS,MqttLib.IMqttPublisher' MqttLib.Mqtt
+MqttLib,MqttPayload,2,3,1,0,3,78,4,0,0,0.67,0,5,,MqttLib.IMqttConnectDisconnect' MqttLib.IMqttPublisher' MqttLib.Mqtt' MqttLib.MqttParcel' MqttLib.PublishArrivedArgs
+MqttLib,PublishArrivedArgs,4,1,4,0,1,66,1,0,0,0,2,2,MqttLib.MqttPayload' MqttLib.QoS,MqttLib.Mqtt' Sample.Program
+MqttLib,QoS,0,0,0,0,0,6,0,0,0,-1,0,15,,MqttLib.IMqttConnectDisconnect' MqttLib.IMqttPublisher' MqttLib.IMqttSubscriber' MqttLib.Mqtt' MqttLib.MqttParcel' MqttLib.PublishArrivedArgs' MqttLib.Core.Messages.MqttConnectMessage' MqttLib.Core.Messages.MqttMessage' MqttLib.Core.Messages.MqttPublishMessage' MqttLib.Core.Messages.MqttPubrecMessage' MqttLib.Core.Messages.MqttSubackMessage' MqttLib.Core.Messages.MqttSubscribeMessage' MqttLib.Core.QoSManager' MqttLib.Core.Subscription' Sample.Program
+MqttLib.Core.Messages,IPersitentMessage,0,1,4,0,0,8,1,1,0,-1,0,1,,MqttLib.IPersistence
+MqttLib.Core.Messages,MessageFactory,0,1,0,0,1,42,2,0,0,-1,11,1,MqttLib.Core.Messages.MessageType' MqttLib.Core.Messages.MqttConnackMessage' MqttLib.Core.Messages.MqttPingReqMessage' MqttLib.Core.Messages.MqttPubackMessage' MqttLib.Core.Messages.MqttPubcompMessage' MqttLib.Core.Messages.MqttPublishMessage' MqttLib.Core.Messages.MqttPubrecMessage' MqttLib.Core.Messages.MqttPubrelMessage' MqttLib.Core.Messages.MqttSubackMessage' MqttLib.Core.Messages.MqttUnsubackMessage' MqttLib.Core.Messages.MqttPingRespMessage,MqttLib.Core.StreamManager
+MqttLib.Core.Messages,MqttAcknowledgeMessage,1,2,1,0,2,17,2,3,1,1,1,1,MqttLib.Core.Messages.MessageType,MqttLib.Core.QoSManager
+MqttLib.Core.Messages,MqttConnectionResponse,0,0,0,0,0,9,0,0,0,-1,0,3,,MqttLib.Mqtt' MqttLib.Core.Messages.MqttConnackEventArgs' MqttLib.Core.Messages.MqttConnackMessage
+MqttLib.Core.Messages,MqttConnackEventArgs,0,1,1,0,1,12,1,0,0,-1,1,0,MqttLib.Core.Messages.MqttConnectionResponse,
+MqttLib.Core.Messages,MqttConnackMessage,1,4,1,0,2,41,4,0,1,0.5,1,2,MqttLib.Core.Messages.MqttConnectionResponse,MqttLib.Mqtt' MqttLib.Core.Messages.MessageFactory
+MqttLib.Core.Messages,MqttConnectMessage,12,5,0,0,2,117,10,0,1,0.4,2,1,MqttLib.Core.Messages.MqttMessage' MqttLib.QoS,MqttLib.Mqtt
+MqttLib.Core.Messages,MqttDisconnectMessage,0,3,0,0,1,15,3,0,1,-1,0,0,,
+MqttLib.Core.Messages,MessageType,0,0,0,0,0,17,0,0,0,-1,0,4,,MqttLib.Mqtt' MqttLib.Core.Messages.MessageFactory' MqttLib.Core.Messages.MqttAcknowledgeMessage' MqttLib.Core.Messages.MqttMessage
+MqttLib.Core.Messages,MqttMessage,8,15,6,0,4,216,19,12,1,0.13,2,7,MqttLib.Core.Messages.MessageType' MqttLib.QoS,MqttLib.Mqtt' MqttLib.Core.Messages.MqttConnectMessage' MqttLib.Core.Messages.MqttMessageReceivedEventArgs' MqttLib.Core.Messages.MqttPublishMessage' MqttLib.Core.Messages.MqttSubscribeMessage' MqttLib.Core.QoSManager' MqttLib.Core.StreamManager
+MqttLib.Core.Messages,MqttMessageReceivedEventArgs,1,1,1,0,1,15,1,0,0,0,1,1,MqttLib.Core.Messages.MqttMessage,MqttLib.Mqtt
+MqttLib.Core.Messages,MqttPingReqMessage,0,3,0,0,1,15,3,0,2,-1,0,1,,MqttLib.Core.Messages.MessageFactory
+MqttLib.Core.Messages,MqttPingRespMessage,0,4,0,0,2,19,4,0,2,-1,0,1,,MqttLib.Core.Messages.MessageFactory
+MqttLib.Core.Messages,MqttPubackMessage,0,4,0,0,2,19,4,0,2,-1,0,2,,MqttLib.Mqtt' MqttLib.Core.Messages.MessageFactory
+MqttLib.Core.Messages,MqttPubcompMessage,1,4,1,0,2,27,4,0,2,0.5,0,2,,MqttLib.Core.Messages.MessageFactory' MqttLib.Core.QoSManager
+MqttLib.Core.Messages,MqttPublishMessage,2,4,2,0,2,51,6,0,2,0.5,2,3,MqttLib.Core.Messages.MqttMessage' MqttLib.QoS,MqttLib.Mqtt' MqttLib.Core.Messages.MessageFactory' MqttLib.Core.QoSManager
+MqttLib.Core.Messages,MqttPubrecMessage,1,4,1,0,2,30,4,0,2,0,1,2,MqttLib.QoS,MqttLib.Core.Messages.MessageFactory' MqttLib.Core.QoSManager
+MqttLib.Core.Messages,MqttPubrelMessage,1,4,1,0,2,27,4,0,2,0.5,0,3,,MqttLib.Mqtt' MqttLib.Core.Messages.MessageFactory' MqttLib.Core.QoSManager
+MqttLib.Core.Messages,MqttSubackMessage,1,2,0,0,1,28,4,0,2,1,1,2,MqttLib.QoS,MqttLib.Mqtt' MqttLib.Core.Messages.MessageFactory
+MqttLib.Core.Messages,MqttSubscribeMessage,1,3,0,0,1,38,5,0,2,0.67,3,0,MqttLib.Core.Subscription' MqttLib.Core.Messages.MqttMessage' MqttLib.QoS,
+MqttLib.Core.Messages,MqttUnsubackMessage,0,2,0,0,1,11,2,0,2,-1,0,2,,MqttLib.Mqtt' MqttLib.Core.Messages.MessageFactory
+MqttLib.Core.Messages,MqttUnsubscribeMessage,1,3,0,0,1,30,5,0,2,0.67,0,0,,
+MqttLib.Core,MalformedConnectionStringException,0,2,0,0,2,9,2,0,0,-1,0,0,,
+MqttLib.Core,UnsupportedProtocolException,0,2,0,0,2,5,2,0,0,-1,0,0,,
+MqttLib.Core,NotConnectedException,0,2,0,0,2,5,2,0,0,-1,0,0,,
+MqttLib.Core,QoSManager,6,8,2,0,5,166,13,0,0,0,11,2,MqttLib.IPersistence' MqttLib.Core.StreamManager' MqttLib.Core.Messages.MqttAcknowledgeMessage' MqttLib.Core.Messages.MqttPubrecMessage' MqttLib.Core.Messages.MqttPubcompMessage' MqttLib.Core.Messages.MqttPubrelMessage' MqttLib.Core.Messages.MqttMessage' MqttLib.QoS' MqttLib.Logger.Log' MqttLib.Logger.LogLevel' MqttLib.Core.Messages.MqttPublishMessage,MqttLib.Mqtt' MqttLib.Core.StreamManager
+MqttLib.Core,StreamFactory,7,4,0,7,1,126,12,0,0,0.5,0,1,,MqttLib.Core.StreamManager
+MqttLib.Core,StreamManager,8,6,1,0,5,94,10,0,0,0,6,2,MqttLib.Core.QoSManager' MqttLib.Core.StreamFactory' MqttLib.Core.Messages.MqttMessage' MqttLib.Core.Messages.MessageFactory' MqttLib.Logger.Log' MqttLib.Logger.LogLevel,MqttLib.Mqtt' MqttLib.Core.QoSManager
+MqttLib.Core,Subscription,2,1,2,0,1,24,1,0,0,0,1,4,MqttLib.QoS,MqttLib.IMqttSharedSubscriber' MqttLib.IMqttSubscriber' MqttLib.Mqtt' MqttLib.Core.Messages.MqttSubscribeMessage
+MqttLib.Logger,LogFileModes,0,0,0,0,0,9,0,0,0,-1,0,1,,MqttLib.Logger.FileLog
+MqttLib.Logger,FileLog,5,8,5,0,5,188,16,0,1,0.38,2,0,MqttLib.Logger.LogFileModes' MqttLib.Logger.LogLevel,
+MqttLib.Logger,LogLevel,0,0,0,0,0,8,0,0,0,-1,0,6,,MqttLib.Mqtt' MqttLib.Core.QoSManager' MqttLib.Core.StreamManager' MqttLib.Logger.FileLog' MqttLib.Logger.ILog' MqttLib.Logger.Log
+MqttLib.Logger,ILog,0,2,1,0,0,6,2,1,0,-1,1,1,MqttLib.Logger.LogLevel,MqttLib.Logger.Log
+MqttLib.Logger,Log,1,4,0,0,4,24,8,0,0,0,2,3,MqttLib.Logger.ILog' MqttLib.Logger.LogLevel,MqttLib.Mqtt' MqttLib.Core.QoSManager' MqttLib.Core.StreamManager
+MqttLib.MatchTree,Topic,4,1,1,3,1,36,1,0,0,0,0,2,,MqttLib.MatchTree.TopicNode<T>' MqttLib.MatchTree.TopicTree<T>
+MqttLib.MatchTree,TopicNode<T>,3,7,2,0,2,169,15,0,0,0,1,0,MqttLib.MatchTree.Topic,
+MqttLib.MatchTree,TopicTree<T>,1,5,0,0,5,53,5,0,0,0,1,0,MqttLib.MatchTree.Topic,

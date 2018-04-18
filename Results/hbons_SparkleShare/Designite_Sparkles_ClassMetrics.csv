@@ -1,31 +1,32 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AuthenticationInfo,0,0,0,0,0,3,0,1,0,-1,0,0
-SparkleFetcherInfo,7,0,0,7,0,12,0,0,0,-1,0,9
-BaseFetcher,8,13,10,3,10,249,24,1,0,0.77,4,3
-DisconnectReason,0,0,0,0,0,6,0,0,0,-1,0,3
-BaseListener,6,15,2,1,9,134,29,1,0,0,3,2
-StorageType,0,0,0,0,0,7,0,0,0,-1,0,11
-StorageTypeInfo,3,1,0,3,1,12,1,0,0,0,1,6
-SyncStatus,0,0,0,0,0,8,0,0,0,-1,0,7
-ErrorStatus,0,0,0,0,0,12,0,0,0,-1,0,4
-BaseRepository,16,22,18,4,12,467,80,1,0,0.23,11,13
-ChangeType,0,0,0,0,0,7,0,0,0,-1,0,6
-ChangeSet,7,1,0,7,1,29,8,0,0,0,4,5
-Change,5,0,0,5,0,8,0,0,0,-1,1,6
-SparkleFolder,2,1,1,2,1,17,1,0,0,0,0,4
-Announcement,2,1,0,2,1,10,1,0,0,0,0,3
-Configuration,7,16,5,6,12,235,34,0,0,0.25,4,12
-Extensions,0,9,0,0,9,119,16,0,0,-1,0,0
-ListenerFactory,1,1,0,0,1,34,5,0,0,0,3,1
-Logger,2,3,0,0,3,54,10,0,0,1,3,33
-InstallationInfo,2,0,2,1,0,35,0,0,0,-1,1,18
-Command,1,8,0,0,7,80,13,1,0,0.5,2,2
-SSHCommand,1,2,1,1,2,15,2,1,1,1,1,3
-SSHFetcher,1,5,0,1,1,99,17,1,1,0.4,3,1
-SSHAuthenticationInfo,2,4,5,1,1,87,10,0,1,0,3,7
-TcpListener,5,7,2,0,3,170,12,0,1,0.29,3,0
-User,3,1,0,3,1,11,1,0,0,0,0,8
-OS,0,0,0,0,0,8,0,0,0,-1,0,10
-Preset,3,3,11,2,2,96,4,0,0,1,0,8
-SparkleInvite,0,3,6,0,2,86,7,0,0,-1,1,6
-Watcher,1,4,0,0,3,31,4,0,0,0.75,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Sparkles,AuthenticationInfo,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Sparkles,SparkleFetcherInfo,7,0,0,7,0,9,0,0,0,-1,0,7,,Sparkles.BaseFetcher' Sparkles.SSHFetcher' Sparkles.Git.GitFetcher' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.BaseController' SparkleShare.SetupController
+Sparkles,BaseFetcher,8,13,10,3,10,194,24,1,0,0.69,3,2,Sparkles.SparkleFetcherInfo' Sparkles.StorageType' Sparkles.Logger,SparkleShare.BaseController' SparkleShare.BaseController
+Sparkles,DisconnectReason,0,0,0,0,0,5,0,0,0,-1,0,3,,Sparkles.BaseListener' Sparkles.BaseRepository' Sparkles.TcpListener
+Sparkles,BaseListener,6,15,2,1,9,144,29,1,0,0,3,3,Sparkles.Announcement' Sparkles.Logger' Sparkles.DisconnectReason,Sparkles.BaseRepository' Sparkles.ListenerFactory' Sparkles.TcpListener
+Sparkles,StorageType,0,0,0,0,0,6,0,0,0,-1,0,9,,Sparkles.BaseFetcher' Sparkles.StorageTypeInfo' Sparkles.BaseRepository' Sparkles.Git.GitFetcher' Sparkles.Git.GitRepository' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.BaseController' SparkleShare.SetupController
+Sparkles,StorageTypeInfo,3,1,0,3,1,12,1,0,0,0,1,1,Sparkles.StorageType,SparkleShare.Setup
+Sparkles,SyncStatus,0,0,0,0,0,7,0,0,0,-1,0,5,,Sparkles.BaseRepository' SparkleShare.BaseController' SparkleShare.StatusIconController' SparkleShare.BaseController' SparkleShare.StatusIconController
+Sparkles,ErrorStatus,0,0,0,0,0,11,0,0,0,-1,0,4,,Sparkles.BaseRepository' Sparkles.Git.GitFetcher' Sparkles.Git.GitCommand' Sparkles.Git.GitRepository
+Sparkles,BaseRepository,16,22,18,4,12,458,69,1,0,0.23,13,11,Sparkles.StorageType' Sparkles.Configuration' Sparkles.BaseListener' Sparkles.Watcher' Sparkles.DisconnectReason' Sparkles.Logger' Sparkles.SyncStatus' Sparkles.ErrorStatus' Sparkles.PollInterval' Sparkles.User' Sparkles.ChangeSet' Sparkles.Change' Sparkles.Announcement,Sparkles.Git.GitRepository' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.NoteController' SparkleShare.ProjectInfo' SparkleShare.StatusIconController' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.NoteController' SparkleShare.ProjectInfo' SparkleShare.StatusIconController
+Sparkles,PollInterval,2,0,0,2,0,4,0,0,0,-1,0,1,,Sparkles.BaseRepository
+Sparkles,ChangeType,0,0,0,0,0,6,0,0,0,-1,0,5,,Sparkles.ChangeSet' Sparkles.Change' Sparkles.Git.GitRepository' SparkleShare.EventLogController' SparkleShare.EventLogController
+Sparkles,ChangeSet,7,1,0,7,1,23,3,0,0,0,4,8,Sparkles.User' Sparkles.SparkleFolder' Sparkles.Change' Sparkles.ChangeType,Sparkles.BaseRepository' Sparkles.Git.GitRepository' SparkleShare.BaseController' SparkleShare.BubblesController' SparkleShare.EventLogController' SparkleShare.BaseController' SparkleShare.BubblesController' SparkleShare.EventLogController
+Sparkles,Change,5,0,0,5,0,8,0,0,0,-1,1,5,Sparkles.ChangeType,Sparkles.BaseRepository' Sparkles.ChangeSet' Sparkles.Git.GitRepository' SparkleShare.EventLogController' SparkleShare.EventLogController
+Sparkles,SparkleFolder,2,1,1,2,1,19,1,0,0,0,0,7,,Sparkles.ChangeSet' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.RevisionInfo' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.RevisionInfo
+Sparkles,Announcement,2,1,0,2,1,10,1,0,0,0,0,3,,Sparkles.BaseListener' Sparkles.BaseRepository' Sparkles.TcpListener
+Sparkles,Configuration,7,16,5,6,12,267,36,0,0,0.25,3,18,Sparkles.InstallationInfo' Sparkles.OS' Sparkles.Logger,Sparkles.BaseRepository' Sparkles.ListenerFactory' Sparkles.Logger' Sparkles.SSHFetcher' Sparkles.SSHAuthenticationInfo' Sparkles.Git.GitFetcher' Sparkles.Git.GitRepository' SparkleShare.Controller' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.NoteController' SparkleShare.SparkleShare' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.NoteController' SparkleShare.SparkleShare' SparkleShare.EventLog' SparkleShare.Controller
+Sparkles,Extensions,0,9,0,0,9,127,14,0,0,-1,0,0,,
+Sparkles,ListenerFactory,1,1,0,0,1,34,5,0,0,0,3,0,Sparkles.Configuration' Sparkles.BaseListener' Sparkles.Logger,
+Sparkles,Logger,2,3,0,0,3,66,10,0,0,0.67,3,27,Sparkles.Configuration' Sparkles.InstallationInfo' Sparkles.OS,Sparkles.BaseFetcher' Sparkles.BaseListener' Sparkles.BaseRepository' Sparkles.Configuration' Sparkles.ListenerFactory' Sparkles.Command' Sparkles.SSHFetcher' Sparkles.SSHAuthenticationInfo' Sparkles.TcpListener' Sparkles.SparkleInvite' Sparkles.Git.GitFetcher' Sparkles.Git.GitCommand' Sparkles.Git.GitRepository' SparkleShare.Controller' SparkleShare.Bubbles' SparkleShare.Avatars' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.SetupController' SparkleShare.SparkleShare' SparkleShare.Avatars' SparkleShare.BaseController' SparkleShare.EventLogController' SparkleShare.SetupController' SparkleShare.SparkleShare' SparkleShare.Controller' SparkleShare.UserInterface
+Sparkles,InstallationInfo,2,1,2,1,1,55,2,0,0,0,2,15,Sparkles.OS' Sparkles.Command,Sparkles.Configuration' Sparkles.Logger' Sparkles.Command' Sparkles.Git.GitFetcher' Sparkles.Git.GitRepository' SparkleShare.Controller' SparkleShare.About' SparkleShare.StatusIcon' SparkleShare.UserInterface' SparkleShare.AboutController' SparkleShare.BaseController' SparkleShare.SparkleShare' SparkleShare.AboutController' SparkleShare.BaseController' SparkleShare.SparkleShare
+Sparkles,Command,1,8,0,0,7,88,13,1,0,0.5,2,4,Sparkles.Logger' Sparkles.InstallationInfo,Sparkles.InstallationInfo' Sparkles.SSHFetcher' Sparkles.Git.GitFetcher' SparkleShare.Controller
+Sparkles,SSHCommand,1,2,1,1,2,18,2,1,1,1,1,3,Sparkles.SSHAuthenticationInfo,Sparkles.SSHAuthenticationInfo' Sparkles.Git.GitCommand' SparkleShare.Controller
+Sparkles,SSHFetcher,1,5,0,1,1,118,18,1,1,0.4,4,2,Sparkles.SparkleFetcherInfo' Sparkles.Logger' Sparkles.Command' Sparkles.Configuration,Sparkles.Git.GitFetcher' SparkleShare.Controller
+Sparkles,SSHAuthenticationInfo,2,4,5,1,1,79,11,0,1,0,3,12,Sparkles.Configuration' Sparkles.SSHCommand' Sparkles.Logger,Sparkles.SSHCommand' Sparkles.Git.GitFetcher' Sparkles.Git.GitCommand' Sparkles.Git.GitRepository' SparkleShare.StatusIcon' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.StatusIconController' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.StatusIconController' SparkleShare.StatusIcon
+Sparkles,TcpListener,5,7,2,0,3,182,10,0,1,0.29,4,0,Sparkles.DisconnectReason' Sparkles.Logger' Sparkles.Announcement' Sparkles.BaseListener,
+Sparkles,User,3,1,0,3,1,11,1,0,0,0,0,13,,Sparkles.BaseRepository' Sparkles.ChangeSet' Sparkles.Git.GitRepository' SparkleShare.Note' SparkleShare.BaseController' SparkleShare.BubblesController' SparkleShare.EventLogController' SparkleShare.NoteController' SparkleShare.BaseController' SparkleShare.BubblesController' SparkleShare.EventLogController' SparkleShare.NoteController' SparkleShare.Note
+Sparkles,OS,0,0,0,0,0,7,0,0,0,-1,0,11,,Sparkles.Configuration' Sparkles.Logger' Sparkles.InstallationInfo' Sparkles.Git.GitFetcher' Sparkles.Git.GitRepository' SparkleShare.StatusIcon' SparkleShare.UserInterface' SparkleShare.BaseController' SparkleShare.SparkleShare' SparkleShare.BaseController' SparkleShare.SparkleShare
+Sparkles,Preset,3,3,11,2,2,85,6,0,0,1,0,6,,SparkleShare.Setup' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.Setup
+Sparkles,SparkleInvite,0,3,6,0,2,73,6,0,0,-1,1,6,Sparkles.Logger,SparkleShare.Setup' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.BaseController' SparkleShare.SetupController' SparkleShare.Setup
+Sparkles,Watcher,1,4,0,0,3,33,4,0,0,0.75,0,1,,Sparkles.BaseRepository

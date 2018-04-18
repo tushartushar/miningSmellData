@@ -1,0 +1,38 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Provisioning.UX.AppWeb.Controllers,AppSettingsController,0,2,0,0,2,32,2,0,0,-1,4,0,Provisioning.Common.Data.AppSettings.IAppSettingsFactory' Provisioning.Common.Data.AppSettings.IAppSettingsManager' Provisioning.Common.Data.AppSettings.AppSettingsFactory' Provisioning.Common.Utilities.Log,
+Provisioning.UX.AppWeb.Controllers,MetadataController,5,13,2,0,13,279,13,0,0,0.92,10,0,Provisioning.Common.Authentication.IAuthentication' Provisioning.Common.SiteEditMetadata' Provisioning.Common.Data.Metadata.IMetadataFactory' Provisioning.Common.Data.Metadata.IMetadataManager' Provisioning.Common.Data.Metadata.MetadataFactory' Provisioning.Common.Utilities.Log' Provisioning.Common.Configuration.ConfigManager' Provisioning.Common.Authentication.AppOnlyAuthenticationTenant' Provisioning.UX.AppWeb.Models.SiteMetadata' Provisioning.UX.AppWeb.ObjectMapper,
+Provisioning.UX.AppWeb.Controllers,ProvisioningController,0,4,0,0,4,83,6,0,0,-1,7,0,Provisioning.Common.Configuration.ConfigManager' Provisioning.Common.AbstractSiteProvisioningService' Provisioning.Common.Authentication.AppOnlyAuthenticationTenant' Provisioning.UX.AppWeb.Models.SitePolicyResults' Provisioning.Common.Office365SiteProvisioningService' Provisioning.Common.Utilities.ReflectionManager' Provisioning.Common.Data.SiteUrl.ISiteUrlProvider,
+Provisioning.UX.AppWeb.Controllers,SiteRequestController,0,4,0,0,4,149,6,0,0,-1,7,0,Provisioning.Common.SiteInformation' Provisioning.Common.Data.SiteRequests.ISiteRequestFactory' Provisioning.Common.Data.SiteRequests.ISiteRequestManager' Provisioning.UX.AppWeb.ObjectMapper' Provisioning.Common.Data.SiteRequests.SiteRequestFactory' Provisioning.Common.Utilities.Log' Provisioning.UX.AppWeb.Models.SiteRequest,
+Provisioning.UX.AppWeb.Controllers,TemplateController,0,2,0,0,2,35,2,0,0,-1,4,0,Provisioning.Common.Data.Templates.ISiteTemplateFactory' Provisioning.Common.Data.Templates.ISiteTemplateManager' Provisioning.Common.Data.Templates.SiteTemplateFactory' Provisioning.Common.Utilities.Log,
+Provisioning.UX.AppWeb,Global,0,1,0,0,0,8,1,0,0,-1,1,0,Provisioning.UX.AppWeb.WebApiConfig,
+Provisioning.UX.AppWeb,Default,0,2,0,0,0,38,4,0,0,-1,3,1,Provisioning.UX.AppWeb.SharePointContextProvider' Provisioning.UX.AppWeb.RedirectionStatus' Provisioning.UX.AppWeb.SharePointContext,Provisioning.UX.AppWeb.Pages.SubSite.newsbweb
+Provisioning.UX.AppWeb,ObjectMapper,0,3,0,0,3,91,6,0,0,-1,5,2,Provisioning.Common.SiteUser' Provisioning.Common.SiteInformation' Provisioning.UX.AppWeb.Models.SiteRequest' Provisioning.Common.SiteEditMetadata' Provisioning.UX.AppWeb.Models.SiteMetadata,Provisioning.UX.AppWeb.Controllers.MetadataController' Provisioning.UX.AppWeb.Controllers.SiteRequestController
+Provisioning.UX.AppWeb,SharePointContext,15,10,9,5,7,210,17,2,0,0.4,1,6,Provisioning.UX.AppWeb.TokenHelper,Provisioning.UX.AppWeb.Default' Provisioning.UX.AppWeb.SharePointContextProvider' Provisioning.UX.AppWeb.SharePointAcsContextProvider' Provisioning.UX.AppWeb.SharePointHighTrustContextProvider' Provisioning.UX.AppWeb.Pages.SiteClassification.SiteEdit' Provisioning.UX.AppWeb.Pages.SubSite.newsbweb
+Provisioning.UX.AppWeb,RedirectionStatus,0,0,0,0,0,6,0,0,0,-1,0,4,,Provisioning.UX.AppWeb.Default' Provisioning.UX.AppWeb.SharePointContextProvider' Provisioning.UX.AppWeb.Pages.SiteClassification.SiteEdit' Provisioning.UX.AppWeb.Pages.SubSite.newsbweb
+Provisioning.UX.AppWeb,SharePointContextProvider,1,12,1,0,7,229,29,2,0,0.17,3,3,Provisioning.UX.AppWeb.TokenHelper' Provisioning.UX.AppWeb.RedirectionStatus' Provisioning.UX.AppWeb.SharePointContext,Provisioning.UX.AppWeb.Default' Provisioning.UX.AppWeb.Pages.SiteClassification.SiteEdit' Provisioning.UX.AppWeb.Pages.SubSite.newsbweb
+Provisioning.UX.AppWeb,SharePointAcsContext,2,3,7,0,1,118,7,0,1,0.67,1,1,Provisioning.UX.AppWeb.SharePointContextToken,Provisioning.UX.AppWeb.SharePointAcsContextProvider
+Provisioning.UX.AppWeb,SharePointAcsContextProvider,2,4,0,0,0,63,7,0,1,0.5,4,0,Provisioning.UX.AppWeb.SharePointContextToken' Provisioning.UX.AppWeb.TokenHelper' Provisioning.UX.AppWeb.SharePointAcsContext' Provisioning.UX.AppWeb.SharePointContext,
+Provisioning.UX.AppWeb,SharePointHighTrustContext,1,3,5,0,1,91,6,0,1,0.67,1,1,Provisioning.UX.AppWeb.TokenHelper,Provisioning.UX.AppWeb.SharePointHighTrustContextProvider
+Provisioning.UX.AppWeb,SharePointHighTrustContextProvider,1,4,0,0,0,36,6,0,1,0.75,2,0,Provisioning.UX.AppWeb.SharePointHighTrustContext' Provisioning.UX.AppWeb.SharePointContext,
+Provisioning.UX.AppWeb,TokenHelper,25,30,0,2,21,785,53,0,0,0.1,2,4,Provisioning.UX.AppWeb.SharePointContextToken' Provisioning.UX.AppWeb.AcsMetadataParser,Provisioning.UX.AppWeb.SharePointContext' Provisioning.UX.AppWeb.SharePointContextProvider' Provisioning.UX.AppWeb.SharePointAcsContextProvider' Provisioning.UX.AppWeb.SharePointHighTrustContext
+Provisioning.UX.AppWeb,AcsMetadataParser,0,4,0,0,3,77,9,0,0,-1,4,1,Provisioning.UX.AppWeb.JsonMetadataDocument' Provisioning.UX.AppWeb.JsonKey' Provisioning.UX.AppWeb.JsonKeyValue' Provisioning.UX.AppWeb.JsonEndpoint,Provisioning.UX.AppWeb.TokenHelper
+Provisioning.UX.AppWeb,JsonMetadataDocument,0,0,3,0,0,6,0,0,0,-1,0,1,,Provisioning.UX.AppWeb.AcsMetadataParser
+Provisioning.UX.AppWeb,JsonEndpoint,0,0,3,0,0,6,0,0,0,-1,0,1,,Provisioning.UX.AppWeb.AcsMetadataParser
+Provisioning.UX.AppWeb,JsonKeyValue,0,0,2,0,0,5,0,0,0,-1,0,1,,Provisioning.UX.AppWeb.AcsMetadataParser
+Provisioning.UX.AppWeb,JsonKey,0,0,2,0,0,5,0,0,0,-1,0,1,,Provisioning.UX.AppWeb.AcsMetadataParser
+Provisioning.UX.AppWeb,SharePointContextToken,0,5,6,0,4,118,8,0,0,-1,0,3,,Provisioning.UX.AppWeb.SharePointAcsContext' Provisioning.UX.AppWeb.SharePointAcsContextProvider' Provisioning.UX.AppWeb.TokenHelper
+Provisioning.UX.AppWeb,MultipleSymmetricKeySecurityToken,3,4,4,0,3,112,11,0,0,0.75,0,0,,
+Provisioning.UX.AppWeb,WebApiConfig,0,1,0,0,1,10,1,0,0,-1,0,1,,Provisioning.UX.AppWeb.Global
+Provisioning.UX.AppWeb.Models,ExternalSharingRequest,0,0,6,0,0,16,0,0,0,-1,0,0,,
+Provisioning.UX.AppWeb.Models,SiteCheckResponse,0,0,1,0,0,6,0,0,0,-1,0,0,,
+Provisioning.UX.AppWeb.Models,PropertyBagRequest,0,0,2,0,0,8,0,0,0,-1,0,0,,
+Provisioning.UX.AppWeb.Models,SitePolicyResults,0,0,2,0,0,8,0,0,0,-1,0,1,,Provisioning.UX.AppWeb.Controllers.ProvisioningController
+Provisioning.UX.AppWeb.Models,SiteMetadata,1,0,22,0,0,51,0,0,0,-1,0,2,,Provisioning.UX.AppWeb.Controllers.MetadataController' Provisioning.UX.AppWeb.ObjectMapper
+Provisioning.UX.AppWeb.Models,SiteRequest,1,0,16,0,0,43,0,0,0,-1,0,2,,Provisioning.UX.AppWeb.Controllers.SiteRequestController' Provisioning.UX.AppWeb.ObjectMapper
+Provisioning.UX.AppWeb.Models,UserPermissionsCheckRequest,0,0,1,0,0,7,0,0,0,-1,0,0,,
+Provisioning.UX.AppWeb.Models,SiteUrlCheckRequest,0,0,1,0,0,7,0,0,0,-1,0,0,,
+Provisioning.UX.AppWeb.Models,TemplateResultResponse,0,0,3,0,0,16,0,0,0,-1,0,0,,
+Provisioning.UX.AppWeb.Pages.SiteClassification,SiteEdit,0,2,0,0,0,39,4,0,0,-1,3,0,Provisioning.UX.AppWeb.SharePointContextProvider' Provisioning.UX.AppWeb.RedirectionStatus' Provisioning.UX.AppWeb.SharePointContext,
+Provisioning.UX.AppWeb.Pages.SubSite,CustomActionEntity,0,0,10,0,0,83,0,0,0,-1,0,0,,
+Provisioning.UX.AppWeb.Pages.SubSite,newsbweb,14,8,0,0,1,236,11,0,0,0.38,5,0,Provisioning.UX.AppWeb.SharePointContextProvider' Provisioning.UX.AppWeb.RedirectionStatus' Provisioning.UX.AppWeb.SharePointContext' Provisioning.UX.AppWeb.Default' Provisioning.UX.AppWeb.Pages.SubSite.subsitehelper,
+Provisioning.UX.AppWeb.Pages.SubSite,subsitehelper,0,10,0,0,5,264,33,0,0,-1,0,1,,Provisioning.UX.AppWeb.Pages.SubSite.newsbweb

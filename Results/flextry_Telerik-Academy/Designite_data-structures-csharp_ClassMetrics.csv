@@ -1,44 +1,85 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AdjacencyList,1,7,2,0,7,70,10,0,0,0.29,0,0
-WeightedAdjacencyList,1,7,2,0,7,93,10,0,0,0,0,0
-AvlTree,2,17,1,0,6,312,42,0,0,0.41,0,0
-BinarySearchTree,2,17,1,0,7,411,57,1,0,0.65,0,0
-BinarySearchTreeTranspose,0,5,0,0,1,72,13,0,1,-1,0,0
-BinomialHeap,1,10,0,0,6,236,25,0,0,0.3,0,0
-BloomFilter,4,9,5,0,5,118,18,0,0,0.67,0,0
-BPlusTree,3,4,0,2,2,111,5,0,0,0.75,0,0
-BTree,2,8,3,0,2,193,22,0,0,0.75,0,0
-CircularBuffer,1,10,5,0,8,74,10,0,0,0.5,0,0
-ConcurrentAdjacencyList,1,4,2,0,4,38,4,0,0,0,0,0
-ConcurrentHashSet,2,4,1,0,4,63,4,0,0,0,0,0
-DoubleHashedDictionary,0,0,0,0,0,4,0,0,0,-1,0,0
-LinearProbingDictionary,5,14,5,0,12,205,27,0,0,0.29,0,0
-LinkedDictionary,3,13,4,0,12,142,16,0,0,0.31,0,0
-Heap,1,7,2,0,3,203,21,0,0,0.43,0,0
-HeapStructuredBinaryTree,1,3,1,0,2,200,18,0,0,0.67,0,0
-CircularQueue,0,0,0,0,0,4,0,0,0,-1,0,0
-SortedList,1,9,3,0,7,80,12,0,0,0.33,0,0
-QuadTree,3,3,1,1,2,248,5,0,0,0,0,0
-Point,2,1,2,0,1,27,1,0,0,0,0,0
-Rectangle,3,4,3,0,4,42,4,0,0,0.5,0,0
-RegionQuadTree,2,2,1,0,2,258,5,0,0,0,0,0
-Point,2,1,2,0,1,27,1,0,0,0,0,0
-Rectangle,3,4,3,0,4,42,4,0,0,0.5,0,0
-RootedTree,0,2,0,0,1,103,4,0,0,-1,0,0
-CompressedTrie,1,4,0,0,3,230,9,0,0,0,0,0
-DirectedAcyclicWordGraph,1,2,0,0,2,133,4,0,0,1,0,0
-IntervalTree,2,7,1,0,4,206,20,0,0,0.43,1,0
-Interval,2,3,3,0,2,41,3,0,0,0,0,3
-StartComparer,0,1,0,0,1,7,1,0,0,-1,1,0
-EndComparer,0,1,0,0,1,7,1,0,0,-1,1,0
-MoveToFrontList,2,9,4,0,7,96,11,0,0,0.33,0,0
-FrequencyList,4,9,1,0,6,187,16,0,0,0.22,0,0
-Deque,1,8,4,0,7,99,10,0,0,0.25,0,0
-RedBlackTree,6,13,1,0,10,276,36,0,0,0.23,0,0
-Rope,0,0,0,0,0,20,0,0,0,-1,0,0
-Rope,0,0,0,0,0,4,0,0,0,-1,0,0
-SkipList,8,10,3,0,6,262,29,0,0,0.3,0,0
-SplayTree,1,3,1,0,3,97,3,0,0,1,0,0
-TransposeList,3,14,2,0,9,196,24,0,0,0.29,0,0
-Trie,1,12,1,0,6,303,28,0,0,0.5,0,0
-StringUtils,0,2,0,0,2,20,4,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DataStructures.AdjacencyList,AdjacencyList<T>,1,7,2,0,7,78,10,0,0,0.29,0,0,,
+DataStructures.AdjacencyList,WeightedAdjacencyList<T>,1,7,2,0,7,107,10,0,0,0,0,0,,
+DataStructures.AdjacencyList,Node<T>,2,5,0,2,5,36,7,0,0,0,0,0,,
+DataStructures.AvlTreeSpace,AvlTree<TKey;TValue>,2,17,1,0,6,344,39,0,0,0.41,0,0,,
+DataStructures.AvlTreeSpace,Node<TKey;TValue>,2,4,6,0,4,66,6,0,0,0,0,0,,
+DataStructures.BinarySearchTreeSpace,BinarySearchTree<TKey;TValue>,2,17,1,0,7,465,48,0,0,0.65,0,0,,
+DataStructures.BinarySearchTreeSpace,BinarySearchTreeTranspose<TKey;TValue>,0,5,0,0,1,85,10,0,0,-1,0,0,,
+DataStructures.BinarySearchTreeSpace,Node<TKey;TValue>,2,4,6,0,4,66,6,0,0,0,0,0,,
+DataStructures.BinomialHeapSpace,BinomialHeap<T>,1,10,0,0,6,256,24,0,0,0.3,0,0,,
+DataStructures.BinomialHeapSpace,Node<T>,1,5,5,0,5,58,7,0,0,0,0,0,,
+DataStructures.BloomFilterSpace,BloomFilter<T>,4,9,5,0,5,125,16,0,0,0.67,0,0,,
+DataStructures.BPlusTreeSpace,BPlusTree<TKey;TValue>,3,4,0,2,2,123,5,0,0,0.75,1,0,DataStructures.BPlusTreeSpace.INode,
+DataStructures.BPlusTreeSpace,IntermediateNode<TKey;TValue>,3,1,0,0,1,28,1,0,1,0,1,0,DataStructures.BPlusTreeSpace.INode,
+DataStructures.BPlusTreeSpace,LeafNode<TKey;TValue>,1,3,0,0,2,31,5,0,1,1,0,0,,
+DataStructures.BPlusTreeSpace,INode,0,1,0,0,0,8,1,2,0,-1,0,2,,DataStructures.BPlusTreeSpace.BPlusTree<TKey;TValue>' DataStructures.BPlusTreeSpace.IntermediateNode<TKey;TValue>
+DataStructures.BPlusTreeSpace,Split,0,0,0,0,0,3,0,0,0,-1,0,0,,
+DataStructures.BTreeSpace,BTree<TKey;TValue>,2,8,3,0,2,202,18,0,0,0.75,0,0,,
+DataStructures.BTreeSpace,Entry<TKey;TValue>,0,1,3,0,1,14,1,0,0,-1,0,0,,
+DataStructures.BTreeSpace,Node<TKey;TValue>,1,1,1,0,1,12,1,0,0,0,0,0,,
+DataStructures.CircularBufferSpace,CircularBuffer<T>,1,10,5,0,8,67,10,0,0,0.5,0,0,,
+DataStructures.ConcurrentAdjacencyList,ConcurrentAdjacencyList<T>,1,4,2,0,4,36,4,0,0,0,0,0,,
+DataStructures.ConcurrentHashSet,ConcurrentHashSet<T>,2,4,1,0,4,85,4,0,0,0,0,0,,
+DataStructures.Hash,DoubleHashedDictionary,0,0,0,0,0,4,0,0,0,-1,0,0,,
+DataStructures.HashSpace,LinearProbingDictionary<Tkey;TValue>,5,14,5,0,12,230,24,0,0,0.29,0,0,,
+DataStructures.HashSpace,Pair<TKey;TValue>,0,3,2,0,3,27,4,0,0,-1,0,0,,
+DataStructures.HashSpace,LinkedDictionary<TKey;TValue>,5,14,4,2,13,126,17,0,0,0.29,0,0,,
+DataStructures.HashSpace,Pair<TKey;Value>,0,0,0,0,0,1,0,0,0,-1,0,0,,
+DataStructures.HashSpace,Value<TKey;TValue>,3,3,0,3,3,25,4,0,0,0,0,0,,
+DataStructures.HeapSpace,Heap<T>,1,7,2,0,3,213,21,0,0,0.43,0,0,,
+DataStructures.HeapSpace,Node<T>,1,4,5,0,4,58,6,0,0,0,0,0,,
+DataStructures.HsbtSpace,HeapStructuredBinaryTree<TKey;TValue>,1,3,1,0,2,207,16,0,0,0.67,0,0,,
+DataStructures.HsbtSpace,Node<TKey;TValue>,2,4,6,0,4,71,7,0,0,0,0,0,,
+DataStructures.ListSpace,CircularQueue<T>,0,0,0,0,0,4,0,0,0,-1,0,0,,
+DataStructures.ListSpace,SortedList<T>,1,9,3,0,7,74,12,0,0,0.33,0,0,,
+DataStructures.QuadTreeSpace,QuadTree<T>,3,3,1,1,2,237,5,0,0,0,2,0,DataStructures.QuadTreeSpace.Rectangle' DataStructures.QuadTreeSpace.Point,
+DataStructures.QuadTreeSpace,Children<T>,0,6,5,0,5,74,8,0,0,-1,2,0,DataStructures.QuadTreeSpace.Rectangle' DataStructures.QuadTreeSpace.Point,
+DataStructures.QuadTreeSpace,Node<T>,3,9,5,1,7,100,12,0,0,0.22,2,0,DataStructures.QuadTreeSpace.Rectangle' DataStructures.QuadTreeSpace.Point,
+DataStructures.QuadTreeSpace,NullChildren<T>,0,2,0,0,2,12,2,0,0,-1,1,0,DataStructures.QuadTreeSpace.Point,
+DataStructures.QuadTreeSpace,Point,2,1,2,0,1,21,1,0,0,0,0,5,,DataStructures.QuadTreeSpace.QuadTree<T>' DataStructures.QuadTreeSpace.Children<T>' DataStructures.QuadTreeSpace.Node<T>' DataStructures.QuadTreeSpace.NullChildren<T>' DataStructures.QuadTreeSpace.Rectangle
+DataStructures.QuadTreeSpace,Rectangle,3,4,3,0,4,44,4,0,0,0.5,1,3,DataStructures.QuadTreeSpace.Point,DataStructures.QuadTreeSpace.QuadTree<T>' DataStructures.QuadTreeSpace.Children<T>' DataStructures.QuadTreeSpace.Node<T>
+DataStructures.RegionQuadTreeSpace,RegionQuadTree<T>,2,2,1,0,2,261,4,0,0,0,2,0,DataStructures.RegionQuadTreeSpace.Rectangle' DataStructures.RegionQuadTreeSpace.Point,
+DataStructures.RegionQuadTreeSpace,Children<T>,0,6,5,0,5,75,8,0,0,-1,2,0,DataStructures.RegionQuadTreeSpace.Rectangle' DataStructures.RegionQuadTreeSpace.Point,
+DataStructures.RegionQuadTreeSpace,Node<T>,2,8,4,0,7,115,11,0,0,0.25,2,0,DataStructures.RegionQuadTreeSpace.Rectangle' DataStructures.RegionQuadTreeSpace.Point,
+DataStructures.RegionQuadTreeSpace,NullChildren<T>,0,2,0,0,2,12,2,0,0,-1,1,0,DataStructures.RegionQuadTreeSpace.Point,
+DataStructures.RegionQuadTreeSpace,Point,2,1,2,0,1,21,1,0,0,0,0,5,,DataStructures.RegionQuadTreeSpace.RegionQuadTree<T>' DataStructures.RegionQuadTreeSpace.Children<T>' DataStructures.RegionQuadTreeSpace.Node<T>' DataStructures.RegionQuadTreeSpace.NullChildren<T>' DataStructures.RegionQuadTreeSpace.Rectangle
+DataStructures.RegionQuadTreeSpace,Rectangle,3,4,3,0,4,44,4,0,0,0.5,1,3,DataStructures.RegionQuadTreeSpace.Point,DataStructures.RegionQuadTreeSpace.RegionQuadTree<T>' DataStructures.RegionQuadTreeSpace.Children<T>' DataStructures.RegionQuadTreeSpace.Node<T>
+DataStructures.RootedTreeSpace,RootedTree<T>,0,2,0,0,1,93,4,0,0,-1,0,0,,
+DataStructures.RootedTreeSpace,Node<T>,1,5,6,1,4,55,7,0,0,0.6,0,0,,
+DataStructures.CompressedTrieSpace,CompressedTrie,1,4,0,0,3,245,9,0,0,0,1,0,DataStructures.CompressedTrieSpace.Node,
+DataStructures.CompressedTrieSpace,Node,4,10,4,0,9,155,15,1,0,0,0,2,,DataStructures.CompressedTrieSpace.CompressedTrie' DataStructures.CompressedTrieSpace.NodeComparare
+DataStructures.CompressedTrieSpace,NodeComparare,0,1,0,0,1,9,1,0,0,-1,1,0,DataStructures.CompressedTrieSpace.Node,
+DataStructures.CompressedTrieSpace,NullNode,0,1,1,0,1,15,1,0,1,-1,0,0,,
+DataStructures.DAWGSpace,DirectedAcyclicWordGraph,1,2,0,0,2,126,4,0,0,1,2,0,DataStructures.DAWGSpace.Node' DataStructures.DAWGSpace.Edge,
+DataStructures.DAWGSpace,Edge,1,3,3,0,3,38,4,0,0,0,1,2,DataStructures.DAWGSpace.Node,DataStructures.DAWGSpace.DirectedAcyclicWordGraph' DataStructures.DAWGSpace.Node
+DataStructures.DAWGSpace,Node,1,5,1,1,4,51,6,0,0,0.6,1,3,DataStructures.DAWGSpace.Edge,DataStructures.DAWGSpace.DirectedAcyclicWordGraph' DataStructures.DAWGSpace.Edge' DataStructures.DAWGSpace.Builder
+DataStructures.DAWGSpace,Builder,0,1,0,0,1,7,1,0,0,-1,1,0,DataStructures.DAWGSpace.Node,
+DataStructures.IntervalTreeSpace,IntervalTree,2,7,1,0,4,231,16,0,0,0.29,2,0,DataStructures.IntervalTreeSpace.Node' DataStructures.IntervalTreeSpace.Interval,
+DataStructures.IntervalTreeSpace,Interval,2,3,3,0,2,35,3,0,0,0,0,4,,DataStructures.IntervalTreeSpace.IntervalTree' DataStructures.IntervalTreeSpace.StartComparer' DataStructures.IntervalTreeSpace.EndComparer' DataStructures.IntervalTreeSpace.Node
+DataStructures.IntervalTreeSpace,StartComparer,0,1,0,0,1,7,1,0,0,-1,1,0,DataStructures.IntervalTreeSpace.Interval,
+DataStructures.IntervalTreeSpace,EndComparer,0,1,0,0,1,7,1,0,0,-1,1,0,DataStructures.IntervalTreeSpace.Interval,
+DataStructures.IntervalTreeSpace,Node,2,8,4,0,8,96,13,0,0,0.62,1,1,DataStructures.IntervalTreeSpace.Interval,DataStructures.IntervalTreeSpace.IntervalTree
+DataStructures.MoveToFrontListSpace,MoveToFrontList<T>,2,9,4,0,7,94,11,0,0,0.33,0,0,,
+DataStructures.FrequencyListSpace,FrequencyList<T>,4,9,1,0,6,183,16,0,0,0.22,0,0,,
+DataStructures.FrequencyListSpace,Node<T>,0,5,4,0,4,40,6,0,0,-1,0,0,,
+DataStructures.QueueSpace,Deque<T>,1,8,4,0,7,95,10,0,0,0.25,0,0,,
+DataStructures.RedBlackTreeSpace,RedBlackTree<TKey;TValue>,6,13,1,0,10,298,33,0,0,0.23,1,0,DataStructures.RedBlackTreeSpace.NodeType,
+DataStructures.RedBlackTreeSpace,Node<TKey;TValue>,0,2,5,0,2,25,2,0,0,-1,1,0,DataStructures.RedBlackTreeSpace.NodeType,
+DataStructures.RedBlackTreeSpace,NodeType,0,0,0,0,0,5,0,0,0,-1,0,2,,DataStructures.RedBlackTreeSpace.RedBlackTree<TKey;TValue>' DataStructures.RedBlackTreeSpace.Node<TKey;TValue>
+DataStructures.RedBlackTreeSpace,NullNode<TKey;TValue>,0,0,0,0,0,5,0,0,0,-1,0,0,,
+DataStructures.Rope,Rope,0,0,0,0,0,11,0,0,0,-1,0,0,,
+DataStructures.Rope,Node,0,0,3,0,0,7,0,0,0,-1,0,0,,
+DataStructures.RopeSpace,Rope,0,0,0,0,0,4,0,0,0,-1,0,0,,
+DataStructures.SkipListSpace,SkipList<TKey;TValue>,8,10,3,0,6,274,26,0,0,0.3,0,0,,
+DataStructures.SkipListSpace,NullSkipNode<TKey;TValue>,0,2,0,0,2,18,3,0,0,-1,0,0,,
+DataStructures.SkipListSpace,SkipNode<TKey;TValue>,0,3,3,0,2,28,3,0,0,-1,0,0,,
+DataStructures.SplayTreeSpace,SplayTree<T>,1,3,1,0,3,81,3,0,0,1,0,0,,
+DataStructures.SplayTreeSpace,Node<T>,1,5,5,1,4,54,7,0,0,0.6,0,0,,
+DataStructures.TransposeListSpace,TransposeList<T>,3,14,2,0,9,199,24,0,0,0.29,0,0,,
+DataStructures.TransposeListSpace,Node<T>,0,6,3,0,6,48,9,0,0,-1,0,0,,
+DataStructures.TrieSpace,Trie,1,12,1,0,6,324,27,0,0,0,2,0,DataStructures.TrieSpace.Node' DataStructures.TrieSpace.NullNode,
+DataStructures.TrieSpace,Node,4,13,5,0,12,129,15,1,0,0.15,0,3,,DataStructures.TrieSpace.Trie' DataStructures.TrieSpace.NodeComparer' DataStructures.TrieSpace.NullNode
+DataStructures.TrieSpace,NodeComparer,0,1,0,0,1,9,1,0,0,-1,1,0,DataStructures.TrieSpace.Node,
+DataStructures.TrieSpace,NullNode,0,1,0,0,1,8,1,0,1,-1,1,1,DataStructures.TrieSpace.Node,DataStructures.TrieSpace.Trie
+DataStructures.Utils,StringUtils,0,2,0,0,2,22,4,0,0,-1,0,0,,

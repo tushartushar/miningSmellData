@@ -1,31 +1,31 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Huobi,6,12,0,5,12,141,20,0,1,0.25,16,3
-WildLog,0,1,0,0,1,14,2,0,0,-1,0,2
-HuobiException,1,1,0,1,1,11,1,0,0,0,1,0
-HuobiSyncWebRequest,0,2,0,0,1,30,4,0,1,-1,1,1
-HuobiMarket,0,0,0,0,0,5,0,0,0,-1,0,7
-HuobiError,3,0,0,3,0,6,0,0,0,-1,0,3
-IOrderBook2,0,4,0,0,0,7,4,2,0,-1,0,0
-BcwMarketDepth,2,6,0,2,4,29,6,0,1,0,0,1
-BcwMarketDepthResult,2,0,0,2,0,5,0,0,0,-1,1,1
-BcwOrderType,0,0,0,0,0,5,0,0,0,-1,0,3
-BcwMarket,0,0,0,0,0,10,0,0,0,-1,0,5
-BcwTrade,5,0,0,5,0,8,0,0,0,-1,1,3
-BcwTicker,3,0,0,3,0,6,0,0,0,-1,0,4
-BcwAllTickers,5,0,0,5,0,8,0,0,0,-1,1,0
-HuobiAccountInfo,11,0,4,11,0,58,0,0,0,-1,0,4
-HuobiOrderType,0,0,0,0,0,5,0,0,0,-1,0,3
-HuobiOrder,6,0,0,6,0,9,0,0,0,-1,1,3
-HuobiOrderResult,2,0,0,2,0,5,0,0,0,-1,0,3
-HuobiDepthItem,3,0,0,3,0,6,0,1,0,-1,0,2
-HuobiDepthItemAccu,1,0,0,1,0,4,0,0,1,-1,0,1
-HuobiTransaction,4,0,0,4,0,7,0,0,0,-1,0,2
-HuobiSimpleResult,1,0,0,1,0,4,0,0,0,-1,0,3
-HuobiMarketSummary,12,4,0,12,4,31,4,0,1,0,3,4
-IMarket,0,10,0,0,0,13,10,1,0,-1,2,3
-MarketBase,5,19,0,0,17,151,19,2,1,0.68,8,1
-Numerical,0,1,0,0,1,15,1,0,0,-1,0,2
-RestHelpers,0,4,0,0,4,57,8,0,0,-1,0,2
-RetryCountExceededException,0,0,0,0,0,3,0,0,0,-1,0,0
-SynchronousJsonWebRequest,13,4,4,2,2,143,14,1,0,0,0,2
-UnixTime,1,3,1,0,2,21,3,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+HuobiApi,Huobi,6,12,0,5,12,151,18,0,1,0.25,13,2,HuobiApi.UnixTime' HuobiApi.RestHelpers' HuobiApi.HuobiError' HuobiApi.HuobiException' HuobiApi.Numerical' HuobiApi.WildLog' HuobiApi.HuobiMarket' HuobiApi.HuobiAccountInfo' HuobiApi.HuobiOrderResult' HuobiApi.HuobiSimpleResult' HuobiApi.HuobiMarketSummary' HuobiApi.BcwTicker' HuobiApi.BcwMarket,bitcoinTradingFramework.Algorithms.NaiveMarketMaker' HuobiApi.MarketBase
+HuobiApi,WildLog,0,1,0,0,1,15,2,0,0,-1,0,2,,HuobiApi.Huobi' HuobiApi.MarketBase
+HuobiApi,HuobiException,1,1,0,1,1,8,1,0,0,0,1,2,HuobiApi.HuobiError,bitcoinTradingFramework.Algorithms.AlgoBase' HuobiApi.Huobi
+HuobiApi,HuobiSyncWebRequest<T>,0,2,0,0,1,31,3,0,0,-1,1,0,HuobiApi.HuobiError,
+HuobiApi,HuobiMarket,0,0,0,0,0,5,0,0,0,-1,0,7,,bitcoinTradingFramework.Algorithms.AlgoBase' bitcoinTradingFramework.Algorithms.NaiveMarketMaker' bitcoinTradingFramework.Program' BtcE.BTCeMarket' HuobiApi.Huobi' HuobiApi.IMarket' HuobiApi.MarketBase
+HuobiApi,HuobiError,3,0,0,3,0,6,0,0,0,-1,0,4,,bitcoinTradingFramework.Algorithms.AlgoBase' HuobiApi.Huobi' HuobiApi.HuobiException' HuobiApi.HuobiSyncWebRequest<T>
+HuobiApi,IOrderBook2,0,4,0,0,0,7,4,2,0,-1,0,0,,
+HuobiApi,BcwMarketDepth,2,6,0,2,4,29,6,0,1,0,0,2,,HuobiApi.BcwMarketDepthResult' HuobiApi.MarketBase
+HuobiApi,BcwMarketDepthResult,2,0,0,2,0,5,0,0,0,-1,1,1,HuobiApi.BcwMarketDepth,HuobiApi.MarketBase
+HuobiApi,BcwOrderType,0,0,0,0,0,5,0,0,0,-1,0,3,,bitcoinTradingFramework.Program' BtcE.BTCeMarket' HuobiApi.BcwTrade
+HuobiApi,BcwMarket,0,0,0,0,0,10,0,0,0,-1,0,5,,bitcoinTradingFramework.Program' BtcE.BTCeMarket' HuobiApi.Huobi' HuobiApi.IMarket' HuobiApi.MarketBase
+HuobiApi,BcwTrade,5,0,0,5,0,8,0,0,0,-1,1,1,HuobiApi.BcwOrderType,bitcoinTradingFramework.Program
+HuobiApi,BcwTicker,3,0,0,3,0,6,0,0,0,-1,0,4,,bitcoinTradingFramework.Program' BtcE.BTCeMarket' HuobiApi.Huobi' HuobiApi.BcwAllTickers
+HuobiApi,BcwAllTickers,5,0,0,5,0,8,0,0,0,-1,1,0,HuobiApi.BcwTicker,
+HuobiApi,HuobiAccountInfo,11,0,4,11,0,30,0,0,0,-1,0,4,,bitcoinTradingFramework.Algorithms.AlgoBase' bitcoinTradingFramework.Algorithms.NaiveMarketMaker' BtcE.BTCeMarket' HuobiApi.Huobi
+HuobiApi,HuobiOrderType,0,0,0,0,0,5,0,0,0,-1,0,3,,bitcoinTradingFramework.Algorithms.AlgoBase' BtcE.BTCeMarket' HuobiApi.HuobiOrder
+HuobiApi,HuobiOrder,6,0,0,6,0,9,0,0,0,-1,1,1,HuobiApi.HuobiOrderType,bitcoinTradingFramework.Algorithms.AlgoBase
+HuobiApi,HuobiOrderResult,2,0,0,2,0,5,0,0,0,-1,0,4,,bitcoinTradingFramework.Algorithms.NaiveMarketMaker' BtcE.BTCeMarket' HuobiApi.Huobi' HuobiApi.MarketBase
+HuobiApi,HuobiDepthItem,3,0,0,3,0,6,0,1,0,-1,0,1,,HuobiApi.HuobiMarketSummary
+HuobiApi,HuobiDepthItemAccu,1,0,0,1,0,4,0,0,1,-1,0,1,,HuobiApi.HuobiMarketSummary
+HuobiApi,HuobiTransaction,4,0,0,4,0,7,0,0,0,-1,0,1,,HuobiApi.HuobiMarketSummary
+HuobiApi,HuobiSimpleResult,1,0,0,1,0,4,0,0,0,-1,0,3,,bitcoinTradingFramework.Algorithms.AlgoBase' BtcE.BTCeMarket' HuobiApi.Huobi
+HuobiApi,HuobiMarketSummary,12,4,0,12,4,31,4,0,1,0,3,4,HuobiApi.HuobiDepthItem' HuobiApi.HuobiTransaction' HuobiApi.HuobiDepthItemAccu,bitcoinTradingFramework.Algorithms.NaiveMarketMaker' bitcoinTradingFramework.Program' BtcE.BTCeMarket' HuobiApi.Huobi
+HuobiApi,IMarket,0,10,0,0,0,13,10,1,0,-1,2,3,HuobiApi.HuobiMarket' HuobiApi.BcwMarket,bitcoinTradingFramework.Algorithms.AlgoBase' bitcoinTradingFramework.Algorithms.NaiveMarketMaker' bitcoinTradingFramework.Program
+HuobiApi,MarketBase,5,19,0,0,17,153,19,2,1,0.68,9,1,HuobiApi.Huobi' HuobiApi.RestHelpers' HuobiApi.BcwMarket' HuobiApi.BcwMarketDepthResult' HuobiApi.BcwMarketDepth' HuobiApi.HuobiMarket' HuobiApi.HuobiOrderResult' HuobiApi.Numerical' HuobiApi.WildLog,bitcoinTradingFramework.Algorithms.NaiveMarketMaker
+HuobiApi,Numerical,0,1,0,0,1,15,1,0,0,-1,0,2,,HuobiApi.Huobi' HuobiApi.MarketBase
+HuobiApi,RestHelpers,0,4,0,0,4,63,8,0,0,-1,0,2,,HuobiApi.Huobi' HuobiApi.MarketBase
+HuobiApi,RetryCountExceededException,0,0,0,0,0,1,0,0,0,-1,0,0,,
+HuobiApi,SynchronousJsonWebRequest<T>,13,4,4,2,2,154,11,0,0,0,0,0,,
+HuobiApi,UnixTime,1,3,1,0,2,11,3,0,0,0,0,4,,bitcoinTradingFramework.Algorithms.AlgoBase' bitcoinTradingFramework.Program' BtcE.BTCeMarket' HuobiApi.Huobi

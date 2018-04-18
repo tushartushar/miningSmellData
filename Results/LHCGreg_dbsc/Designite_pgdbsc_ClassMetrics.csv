@@ -1,15 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-PgCheckoutSettings,0,3,6,0,2,49,4,0,1,-1,3,2
-PgDbscApp,0,1,0,0,1,7,1,0,1,-1,0,1
-PgDbscCommandLineArgs,6,5,0,0,3,67,6,0,1,0,13,0
-PgDbscDbConnection,0,14,2,0,7,169,24,0,1,-1,2,4
-PgDbscEngine,0,8,2,0,3,60,10,0,1,-1,6,0
-PgImportOperation,8,5,0,0,2,165,14,0,0,0,6,1
-PgImportSettings,0,3,2,0,2,30,4,0,1,-1,3,3
-PgImportTableCalculator,1,4,0,0,0,27,5,0,1,0.75,3,1
-PgImportTableListParser,0,2,0,0,2,21,2,0,1,-1,4,1
-PgSourceDBOptionBundle,2,3,5,0,3,70,9,0,1,1,2,1
-PgTable,0,2,2,0,2,24,2,0,1,-1,1,6
-PgTargetDBOptionBundle,3,3,5,0,3,66,6,0,1,1,2,1
-PgUpdateSettings,0,4,4,0,3,47,6,0,1,-1,3,4
-Program,0,1,0,0,0,8,1,0,0,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+dbsc.Postgres,PgCheckoutSettings,0,3,6,0,2,31,4,0,2,-1,3,2,dbsc.Core.Options.DBCreateTemplateOptionBundle' dbsc.Core.DbConnectionInfo' dbsc.Postgres.PgImportSettings,dbsc.Postgres.PgDbscCommandLineArgs' dbsc.Postgres.PgUpdateSettings
+dbsc.Postgres,PgDbscApp,0,1,0,0,1,8,1,0,0,-1,0,1,,dbsc.Postgres.Program
+dbsc.Postgres,PgDbscCommandLineArgs,6,5,0,0,3,83,6,0,1,0,9,0,dbsc.Postgres.PgTargetDBOptionBundle' dbsc.Core.Options.TargetDBPortOptionBundle' dbsc.Core.Options.DBCreateTemplateOptionBundle' dbsc.Postgres.PgSourceDBOptionBundle' dbsc.Core.Options.SourceDBPortOptionBundle' dbsc.Core.DbConnectionInfo' dbsc.Postgres.PgImportSettings' dbsc.Postgres.PgCheckoutSettings' dbsc.Postgres.PgUpdateSettings,
+dbsc.Postgres,PgDbscDbConnection,0,14,2,0,7,176,23,0,0,-1,3,4,dbsc.Core.DbConnectionInfo' dbsc.Postgres.Table' dbsc.Postgres.PgTable,dbsc.Postgres.PgDbscEngine' dbsc.Postgres.PgImportOperation' dbsc.Postgres.PgImportTableCalculator' dbsc.Postgres.PgTable
+dbsc.Postgres,Table,0,0,2,0,0,5,0,0,0,-1,0,1,,dbsc.Postgres.PgDbscDbConnection
+dbsc.Postgres,PgDbscEngine,0,8,2,0,3,60,8,0,0,-1,6,0,dbsc.Core.DbConnectionInfo' dbsc.Postgres.PgDbscDbConnection' dbsc.Postgres.PgImportTableCalculator' dbsc.Postgres.PgUpdateSettings' dbsc.Postgres.PgImportSettings' dbsc.Postgres.PgImportOperation,
+dbsc.Postgres,PgImportOperation,8,5,0,0,2,163,5,0,0,0,8,1,dbsc.Postgres.PgUpdateSettings' dbsc.Postgres.PgDbscDbConnection' dbsc.Postgres.PgImportSettings' dbsc.Core.Utils' dbsc.Postgres.ConstraintInfo' dbsc.Postgres.IndexInfo' dbsc.Core.ImportTableSpecification.TableAndRule' dbsc.Core.ImportTableSpecification.TableWithSchemaSpecificationWithCustomSelect,dbsc.Postgres.PgDbscEngine
+dbsc.Postgres,ConstraintInfo,0,0,5,0,0,8,0,0,0,-1,0,1,,dbsc.Postgres.PgImportOperation
+dbsc.Postgres,IndexInfo,0,0,3,0,0,6,0,0,0,-1,0,1,,dbsc.Postgres.PgImportOperation
+dbsc.Postgres,PgImportSettings,0,3,2,0,2,25,4,0,1,-1,1,5,dbsc.Core.DbConnectionInfo,dbsc.Postgres.PgCheckoutSettings' dbsc.Postgres.PgDbscCommandLineArgs' dbsc.Postgres.PgDbscEngine' dbsc.Postgres.PgImportOperation' dbsc.Postgres.PgUpdateSettings
+dbsc.Postgres,PgImportTableCalculator,1,4,0,0,0,31,5,0,0,0.75,5,1,dbsc.Core.ImportTableSpecification.TableWithSchemaSpecificationWithCustomSelect' dbsc.Postgres.PgDbscDbConnection' dbsc.Core.ImportTableSpecification.StringOrWildcard' dbsc.Core.ImportTableSpecification.TableSpecificationFragment' dbsc.Postgres.PgTable,dbsc.Postgres.PgDbscEngine
+dbsc.Postgres,PgImportTableListParser,0,2,0,0,2,21,2,0,1,-1,2,0,dbsc.Core.Antlr.TableSpecListParser' dbsc.Core.Antlr.IdentifierSyntax,
+dbsc.Postgres,PgSourceDBOptionBundle,2,3,5,0,3,67,9,0,1,1,2,1,dbsc.Core.Options.SourceDBOptionBundle' dbsc.Core.Utils,dbsc.Postgres.PgDbscCommandLineArgs
+dbsc.Postgres,PgTable,0,2,2,0,2,18,2,0,1,-1,1,2,dbsc.Postgres.PgDbscDbConnection,dbsc.Postgres.PgDbscDbConnection' dbsc.Postgres.PgImportTableCalculator
+dbsc.Postgres,PgTargetDBOptionBundle,3,3,5,0,3,55,6,0,1,1,2,1,dbsc.Core.Options.TargetDBOptionBundle' dbsc.Core.Utils,dbsc.Postgres.PgDbscCommandLineArgs
+dbsc.Postgres,PgUpdateSettings,0,4,4,0,3,37,6,0,2,-1,3,3,dbsc.Core.DbConnectionInfo' dbsc.Postgres.PgCheckoutSettings' dbsc.Postgres.PgImportSettings,dbsc.Postgres.PgDbscCommandLineArgs' dbsc.Postgres.PgDbscEngine' dbsc.Postgres.PgImportOperation
+dbsc.Postgres,Program,0,1,0,0,0,8,1,0,0,-1,1,0,dbsc.Postgres.PgDbscApp,

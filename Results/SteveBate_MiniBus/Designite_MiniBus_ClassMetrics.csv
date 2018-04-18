@@ -1,0 +1,39 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MiniBus.Aspects,DiscardFailuresAspect,3,2,0,0,2,30,2,0,1,0,3,1,MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.IHandleMessage,MiniBus.Bus
+MiniBus.Aspects,FailFastAspect,3,2,1,0,2,24,2,0,1,0,3,1,MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.IHandleMessage,MiniBus.Bus
+MiniBus.Aspects,LoggingAspect,3,2,0,0,2,30,2,0,1,0,2,1,MiniBus.Contracts.IHandleMessage' MiniBus.Contracts.ILogMessages,MiniBus.Bus
+MiniBus.Aspects,MoveToErrorQueueAspect,4,2,0,0,2,34,2,0,1,0,5,1,MiniBus.Contracts.IReadMessageContext' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IHandleMessage' MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Aspects,RemoveFromReadQueueAspect,4,2,0,0,2,32,2,0,1,0,5,1,MiniBus.Contracts.IReadMessageContext' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IHandleMessage' MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Aspects,RetryAspect,4,2,0,0,2,36,2,0,1,0,3,1,MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.IHandleMessage,MiniBus.Bus
+MiniBus.Aspects,TransactionAspect,2,2,0,0,2,28,2,0,1,0,2,1,MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IHandleMessage,MiniBus.Bus
+MiniBus,Bus,10,12,0,0,10,233,27,0,1,0,17,4,MiniBus.MessageQueues.WriteQueueManager' MiniBus.Contracts.IMessageQueue' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IHandleMessage' MiniBus.Context.WriteMessageContext' MiniBus.Handlers.SendMessageHandler' MiniBus.Aspects.LoggingAspect' MiniBus.Aspects.TransactionAspect' MiniBus.Context.ReadMessageContext' MiniBus.Aspects.RetryAspect' MiniBus.Aspects.RemoveFromReadQueueAspect' MiniBus.Aspects.MoveToErrorQueueAspect' MiniBus.Aspects.DiscardFailuresAspect' MiniBus.Aspects.FailFastAspect' MiniBus.Handlers.ReturnToSourceHandler' MiniBus.Handlers.CopyMessageHandler,MiniBus.BusBuilder' MiniBus.Tests.BusTests.When_sending_message' MiniBus.Tests.BusTests.When_returning_error_messages' MiniBus.Tests.BusTests.When_receiving_message
+MiniBus,BusBuilder,6,31,0,0,18,264,48,0,0,0,5,2,MiniBus.Contracts.IMessageQueue' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.ILogMessages' MiniBus.Bus' MiniBus.Infrastructure.Msmq,MiniBus.Sample.Program' MiniBus.Tests.BusTests.When_configuring_bus_builder
+MiniBus,BusConfig,0,1,14,0,1,22,1,0,1,-1,0,0,,
+MiniBus.Context,WriteMessageContext,1,1,2,0,1,16,1,0,1,0,1,1,MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Context,ReadMessageContext,2,1,4,0,1,26,1,0,1,0,1,1,MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Contracts,IReadMessageContext,0,0,4,0,0,7,0,2,0,-1,0,3,,MiniBus.Aspects.MoveToErrorQueueAspect' MiniBus.Aspects.RemoveFromReadQueueAspect' MiniBus.Handlers.ReturnToSourceHandler
+MiniBus.Contracts,IHandleMessage,0,1,0,0,0,4,1,18,0,-1,0,9,,MiniBus.Aspects.DiscardFailuresAspect' MiniBus.Aspects.FailFastAspect' MiniBus.Aspects.LoggingAspect' MiniBus.Aspects.MoveToErrorQueueAspect' MiniBus.Aspects.RemoveFromReadQueueAspect' MiniBus.Aspects.RetryAspect' MiniBus.Aspects.TransactionAspect' MiniBus.Bus' MiniBus.Contracts.IBus
+MiniBus.Contracts,IBus,0,8,0,0,0,11,8,1,0,-1,1,1,MiniBus.Contracts.IHandleMessage,MiniBus.Sample.Program
+MiniBus.Contracts,ILogMessages,0,1,0,0,0,4,1,4,0,-1,0,14,,MiniBus.Aspects.DiscardFailuresAspect' MiniBus.Aspects.FailFastAspect' MiniBus.Aspects.LoggingAspect' MiniBus.Aspects.MoveToErrorQueueAspect' MiniBus.Aspects.RemoveFromReadQueueAspect' MiniBus.Aspects.RetryAspect' MiniBus.Aspects.TransactionAspect' MiniBus.Bus' MiniBus.BusBuilder' MiniBus.Handlers.ReceiveMessageHandler<T>' MiniBus.Handlers.CopyMessageHandler' MiniBus.Handlers.ReturnToSourceHandler' MiniBus.Handlers.SendMessageHandler' MiniBus.MessageQueues.MiniBusMessageQueue
+MiniBus.Contracts,IMessageQueue,0,6,2,0,0,11,6,3,0,-1,0,10,,MiniBus.Aspects.MoveToErrorQueueAspect' MiniBus.Aspects.RemoveFromReadQueueAspect' MiniBus.Bus' MiniBus.BusBuilder' MiniBus.Context.WriteMessageContext' MiniBus.Context.ReadMessageContext' MiniBus.Handlers.CopyMessageHandler' MiniBus.Handlers.ReturnToSourceHandler' MiniBus.Handlers.SendMessageHandler' MiniBus.MessageQueues.WriteQueueManager
+MiniBus.Contracts,IWriteMessageContext,0,0,2,0,0,5,0,2,0,-1,0,2,,MiniBus.Handlers.CopyMessageHandler' MiniBus.Handlers.SendMessageHandler
+MiniBus.Contracts,IBusConfig,0,0,14,0,0,17,0,2,0,-1,0,10,,MiniBus.Aspects.DiscardFailuresAspect' MiniBus.Aspects.FailFastAspect' MiniBus.Aspects.MoveToErrorQueueAspect' MiniBus.Aspects.RemoveFromReadQueueAspect' MiniBus.Aspects.RetryAspect' MiniBus.Bus' MiniBus.BusBuilder' MiniBus.Handlers.ReceiveMessageHandler<T>' MiniBus.Handlers.CopyMessageHandler' MiniBus.Handlers.SendMessageHandler
+MiniBus.Handlers,ReceiveMessageHandler<T>,3,3,0,0,2,27,3,0,1,0,2,0,MiniBus.Contracts.IBusConfig' MiniBus.Contracts.ILogMessages,
+MiniBus.Handlers,CopyMessageHandler,3,3,0,0,2,21,3,0,1,0,4,1,MiniBus.Contracts.IWriteMessageContext' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Handlers,ReturnToSourceHandler,2,2,0,0,2,17,2,0,1,0,3,1,MiniBus.Contracts.IReadMessageContext' MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Handlers,SendMessageHandler,3,3,0,0,2,22,3,0,1,0,4,1,MiniBus.Contracts.IWriteMessageContext' MiniBus.Contracts.IBusConfig' MiniBus.Contracts.ILogMessages' MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Exceptions,BusException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MiniBus.Exceptions,QueueNotFoundException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MiniBus.Formatters,JsonFormatter<T>,0,4,0,0,4,49,9,0,0,-1,1,0,MiniBus.Serialization.SimpleJson,
+MiniBus.Logging,NullLogger,0,1,0,0,1,7,1,0,1,-1,0,0,,
+MiniBus.Infrastructure,Msmq,1,3,1,0,1,62,5,0,0,0,0,1,,MiniBus.BusBuilder
+MiniBus.MessageQueues,MiniBusMessageQueue,9,9,2,0,8,113,14,0,1,0,1,0,MiniBus.Contracts.ILogMessages,
+MiniBus.MessageQueues,WriteQueueManager,3,3,1,0,3,38,6,0,0,0,1,1,MiniBus.Contracts.IMessageQueue,MiniBus.Bus
+MiniBus.Serialization,JsonArray,0,3,0,0,3,28,3,0,0,-1,1,1,MiniBus.Serialization.SimpleJson,MiniBus.Serialization.SimpleJson
+MiniBus.Serialization,JsonObject,1,15,4,0,13,348,22,0,0,0.27,1,0,MiniBus.Serialization.SimpleJson,
+MiniBus.Serialization,SimpleJson,15,25,2,0,9,745,79,0,0,0.08,4,3,MiniBus.Serialization.IJsonSerializerStrategy' MiniBus.Serialization.PocoJsonSerializerStrategy' MiniBus.Serialization.ReflectionUtils' MiniBus.Serialization.JsonArray,MiniBus.Formatters.JsonFormatter<T>' MiniBus.Serialization.JsonArray' MiniBus.Serialization.JsonObject
+MiniBus.Serialization,IJsonSerializerStrategy,0,2,0,0,0,12,2,1,0,-1,0,1,,MiniBus.Serialization.SimpleJson
+MiniBus.Serialization,PocoJsonSerializerStrategy,6,10,0,0,3,291,37,0,1,0.2,1,1,MiniBus.Serialization.ReflectionUtils,MiniBus.Serialization.SimpleJson
+MiniBus.Serialization,ReflectionUtils,1,37,0,0,37,462,50,0,0,0.3,0,2,,MiniBus.Serialization.SimpleJson' MiniBus.Serialization.PocoJsonSerializerStrategy
+MiniBus.Serialization,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MiniBus.Serialization,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,113,16,0,0,0.64,0,0,,

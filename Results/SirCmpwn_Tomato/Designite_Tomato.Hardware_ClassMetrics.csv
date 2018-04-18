@@ -1,14 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-GenericClock,1,3,7,0,3,78,14,0,1,0.67,1,0
-GenericKeyboard,0,6,8,0,6,200,49,0,1,-1,1,3
-LEM1802,9,5,10,5,4,278,23,0,1,0.6,1,2
-M35FD,14,6,9,0,6,230,60,0,1,0.33,3,1
-M35FDStateCode,0,0,0,0,0,7,0,0,0,-1,0,1
-M35FDErrorCode,0,0,0,0,0,10,0,0,0,-1,0,1
-SPC2000,0,3,7,0,2,80,17,0,1,-1,1,0
-SPED3State,0,0,0,0,0,6,0,0,0,-1,0,1
-SPED3Error,0,0,0,0,0,5,0,0,0,-1,0,1
-SPED3,2,5,13,0,3,150,28,0,1,0.6,4,1
-SPED3Color,0,0,0,0,0,7,0,0,0,-1,0,2
-SPED3Intensity,0,0,0,0,0,5,0,0,0,-1,0,2
-SPED3Vertex,5,2,0,5,2,20,2,0,0,0,2,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Tomato.Hardware,GenericClock,1,3,7,0,3,67,6,0,1,0.67,2,0,Tomato.DCPU' Tomato.Hardware.Device,
+Tomato.Hardware,GenericKeyboard,0,6,8,0,6,193,11,0,1,-1,1,3,Tomato.DCPU,Lettuce.GenericKeyboardWindow' Lettuce.LEM1802Window' Lettuce.Program
+Tomato.Hardware,LEM1802,9,5,10,5,4,269,9,0,1,0.6,1,3,Tomato.DCPU,Lettuce.LEM1802Window' Lettuce.Program' Pickles.Program
+Tomato.Hardware,UnsafeBitmap,4,8,2,0,8,77,9,0,0,0,1,0,Tomato.Hardware.PixelData,
+Tomato.Hardware,PixelData,3,1,0,3,1,15,1,0,0,0,0,1,,Tomato.Hardware.UnsafeBitmap
+Tomato.Hardware,M35FD,14,6,9,0,6,238,15,0,1,0.33,3,3,Tomato.Hardware.M35FDErrorCode' Tomato.Hardware.M35FDStateCode' Tomato.DCPU,Lettuce.M35FDTypeEditor' Lettuce.M35FDWindow' Lettuce.Program
+Tomato.Hardware,M35FDStateCode,0,0,0,0,0,7,0,0,0,-1,0,1,,Tomato.Hardware.M35FD
+Tomato.Hardware,M35FDErrorCode,0,0,0,0,0,10,0,0,0,-1,0,1,,Tomato.Hardware.M35FD
+Tomato.Hardware,SPC2000,0,3,7,0,2,73,4,0,1,-1,1,0,Tomato.DCPU,
+Tomato.Hardware,SPED3State,0,0,0,0,0,6,0,0,0,-1,0,1,,Tomato.Hardware.SPED3
+Tomato.Hardware,SPED3Error,0,0,0,0,0,5,0,0,0,-1,0,1,,Tomato.Hardware.SPED3
+Tomato.Hardware,SPED3,2,5,13,0,3,133,10,0,1,0.6,3,2,Tomato.Hardware.SPED3State' Tomato.DCPU' Tomato.Hardware.SPED3Error,Lettuce.Program' Lettuce.SPED3Window
+Tomato.Hardware,SPED3Color,0,0,0,0,0,7,0,0,0,-1,0,2,,Lettuce.SPED3Window' Tomato.Hardware.SPED3Vertex
+Tomato.Hardware,SPED3Intensity,0,0,0,0,0,5,0,0,0,-1,0,2,,Lettuce.SPED3Window' Tomato.Hardware.SPED3Vertex
+Tomato.Hardware,SPED3Vertex,5,2,0,5,2,21,2,0,0,0,2,1,Tomato.Hardware.SPED3Color' Tomato.Hardware.SPED3Intensity,Lettuce.SPED3Window

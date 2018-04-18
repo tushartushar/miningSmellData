@@ -1,0 +1,228 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Serenity.Web,ImpersonatingAuthorizationService,2,4,2,0,3,58,7,0,1,0.5,4,0,Serenity.Abstractions.IAuthorizationService' Serenity.Check' Serenity.Abstractions.IRequestContext' Serenity.Dependency,
+Serenity.Web,LogicOperatorPermissionService,5,2,0,0,2,48,10,0,1,0,2,0,Serenity.Abstractions.IPermissionService' Serenity.Check,
+Serenity.Web,TransientGrantingPermissionService,2,6,0,0,5,85,14,0,1,0,4,0,Serenity.Abstractions.IPermissionService' Serenity.Check' Serenity.Abstractions.IRequestContext' Serenity.Dependency,
+Serenity.Web,ImageScaleMode,0,0,0,0,0,22,0,0,0,-1,0,2,,Serenity.ComponentModel.ImageUploadEditorAttribute' Serenity.Web.ThumbnailGenerator
+Serenity.Abstractions,IRequestContext,0,0,1,0,0,7,0,1,0,-1,0,2,,Serenity.Web.ImpersonatingAuthorizationService' Serenity.Web.TransientGrantingPermissionService
+Serenity.Abstractions,ITransientGrantor,0,3,0,0,0,16,3,1,0,-1,0,0,,
+Serenity.Abstractions,IImpersonator,0,2,0,0,0,12,2,1,0,-1,0,0,,
+Serenity.Abstractions,IConfigurationManager,0,2,0,0,0,5,2,2,0,-1,0,3,,Serenity.Configuration.AppSettingsJsonConfigRepository' Serenity.Data.SqlConnections' Serenity.Web.LocalTextScript
+Serenity.Abstractions,DateTimeProvider,2,1,3,1,0,27,1,0,1,0,1,2,Serenity.Abstractions.IDateTimeProvider,Serenity.Logging.FileLogger' Serenity.Caching.DistributedCacheEmulator
+Serenity.Abstractions,IDateTimeProvider,0,0,1,0,0,4,0,1,0,-1,0,2,,Serenity.Abstractions.DateTimeProvider' Serenity.Caching.DistributedCacheEmulator
+Serenity.Abstractions,ILogger,0,1,0,0,0,4,1,2,0,-1,1,3,Serenity.Logging.LoggingLevel,Serenity.Log' Serenity.Logging.FileLogger' Serenity.Logging.SqlLogger
+Serenity.Abstractions,IPermissionService,0,1,0,0,0,8,1,2,0,-1,0,3,,Serenity.Web.LogicOperatorPermissionService' Serenity.Web.TransientGrantingPermissionService' Serenity.Authorization
+Serenity.Abstractions,IAuthenticationService,0,1,0,0,0,7,1,0,0,-1,0,1,,Serenity.WebSecurityHelper
+Serenity.Abstractions,ILocalCache,0,4,0,0,0,26,4,1,0,-1,0,2,,Serenity.LocalCache' Serenity.TwoLevelCache
+Serenity.Abstractions,IDistributedCache,0,4,0,0,0,35,4,3,0,-1,0,2,,Serenity.DistributedCache' Serenity.TwoLevelCache
+Serenity.Abstractions,IAuthorizationService,0,0,2,0,0,11,0,1,0,-1,0,1,,Serenity.Web.ImpersonatingAuthorizationService
+Serenity.Abstractions,IUserRetrieveService,0,2,0,0,0,11,2,0,0,-1,0,0,,
+Serenity.Abstractions,IExceptionLogger,0,1,0,0,0,4,1,0,0,-1,0,1,,Serenity.ExceptionLog
+Serenity.Abstractions,IConfigurationRepository,0,2,0,0,0,15,2,1,0,-1,0,1,,Serenity.Config
+Serenity.Abstractions,ILocalTextRegistry,0,2,0,0,0,18,2,2,0,-1,0,9,,Serenity.EnumMapper' Serenity.LocalText' Serenity.Localization.JsonLocalTextRegistration' Serenity.Localization.FallbackLocalTextRegistry' Serenity.Localization.NestedPermissionKeyRegistration' Serenity.Localization.EnumLocalTextRegistration' Serenity.Localization.NestedLocalTextRegistration' Serenity.Localization.EntityLocalTexts' Serenity.Web.CommonInitialization
+Serenity,Throttler,0,3,4,0,3,62,4,0,0,-1,2,0,Serenity.HitInfo' Serenity.LocalCache,
+Serenity,HitInfo,1,0,0,1,0,4,0,0,0,-1,0,1,,Serenity.Throttler
+Serenity,Check,0,3,0,0,3,33,9,0,0,-1,0,17,,Serenity.Web.ImpersonatingAuthorizationService' Serenity.Web.LogicOperatorPermissionService' Serenity.Web.TransientGrantingPermissionService' Serenity.Localization.FallbackLocalTextRegistry' Serenity.Localization.LocalTextRegistry' Serenity.Data.Mapping.OriginAttribute' Serenity.Data.Mapping.LinkingSetRelationAttribute' Serenity.Data.Mapping.UpdatableExtensionAttribute' Serenity.Data.Mapping.MasterDetailRelationAttribute' Serenity.Data.Mapping.ForeignKeyAttribute' Serenity.Data.OriginPropertyDictionary' Serenity.Data.AliasedFields' Serenity.Web.LookupScript' Serenity.Web.DynamicScriptRegistration' Serenity.Web.DataScript' Serenity.Web.ConcatenatedScript' Serenity.Web.TemplateScript
+Serenity,MunqContainer,1,11,0,0,11,60,12,0,1,0,2,1,Munq.IocContainer' Munq.IRegistration,Serenity.Web.CommonInitialization
+Serenity,IUserDefinition,0,0,5,0,0,23,0,0,0,-1,0,0,,
+Serenity,DistributedCache,1,4,1,1,4,55,4,0,0,1,1,1,Serenity.Abstractions.IDistributedCache,Serenity.TwoLevelCache
+Serenity,LocalCache,1,5,1,1,5,76,7,0,0,0.8,1,4,Serenity.Abstractions.ILocalCache,Serenity.Throttler' Serenity.TwoLevelCache' Serenity.Configuration.AppSettingsJsonConfigRepository' Serenity.Navigation.NavigationHelper
+Serenity,TwoLevelCache,3,11,0,2,7,296,24,0,0,0.18,4,2,Serenity.Abstractions.ILocalCache' Serenity.Abstractions.IDistributedCache' Serenity.LocalCache' Serenity.DistributedCache,Serenity.Services.GenerationUpdater' Serenity.Web.Item
+Serenity,SelfAssemblyAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Serenity,IDependencyRegistrar,0,5,0,0,0,8,5,1,0,-1,0,1,,Serenity.Web.CommonInitialization
+Serenity,ExceptionExtensions,0,1,0,0,1,15,1,0,0,-1,0,0,,
+Serenity,DateElementOrder,0,0,0,0,0,9,0,0,0,-1,0,1,,Serenity.DateHelper
+Serenity,DateHelper,6,5,3,2,5,114,7,0,0,1,1,3,Serenity.DateElementOrder,Serenity.Logging.FileLogger' Serenity.Data.DateTimeField' Serenity.ScriptCulture
+Serenity,Dependency,1,5,2,0,5,94,5,0,0,0.6,1,24,Serenity.IDependencyResolver,Serenity.Web.ImpersonatingAuthorizationService' Serenity.Web.TransientGrantingPermissionService' Serenity.EnumMapper' Serenity.Log' Serenity.Config' Serenity.ExceptionLog' Serenity.Authorization' Serenity.LocalText' Serenity.Configuration.AppSettingsJsonConfigRepository' Serenity.Localization.JsonLocalTextRegistration' Serenity.Localization.LocalTextRegistry' Serenity.Localization.EnumLocalTextRegistration' Serenity.Localization.NestedLocalTextRegistration' Serenity.Logging.FileLogger' Serenity.Data.SqlConnections' Serenity.Logging.SqlLogger' Serenity.Data.CustomFieldCache' Serenity.Localization.EntityLocalTexts' Serenity.Services.AuditLogService' Serenity.Web.CommonInitialization' Serenity.Web.TemplateHelper' Serenity.Web.HtmlScriptExtensions' Serenity.Web.LocalTextScript' Serenity.WebSecurityHelper
+Serenity,IDependencyResolver,0,4,0,0,0,9,4,1,0,-1,0,1,,Serenity.Dependency
+Serenity,EnumMapper,1,9,0,0,7,110,19,0,0,0.33,5,8,Serenity.EnumTypeItem' Serenity.ComponentModel.EnumKeyAttribute' Serenity.LocalText' Serenity.Abstractions.ILocalTextRegistry' Serenity.Dependency,Serenity.Localization.EnumLocalTextRegistration' Serenity.Logging.SqlLogger' Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.PropertyGrid.PropertyItemHelper' Serenity.CodeGeneration.ServerTypingsGenerator' Serenity.CodeGeneration.ScriptDtoGenerator' Serenity.CodeGeneration.ServerImportsGenerator' Serenity.Reporting.EnumDecorator
+Serenity,EnumTypeItem,2,1,0,2,1,10,1,0,0,0,0,1,,Serenity.EnumMapper
+Serenity,CollectionExtensions,0,4,0,0,4,27,8,0,0,-1,0,0,,
+Serenity,Log,1,22,9,0,20,157,24,0,0,0.09,6,3,Serenity.Logging.LoggingLevel' Serenity.Config' Serenity.LogSettings' Serenity.Abstractions.ILogger' Serenity.Dependency' Serenity.Logging.FileLogger,Serenity.IO.TemporaryFileHelper' Serenity.Data.SqlMapper' Serenity.Data.SqlHelper
+Serenity,LogSettings,0,0,1,0,0,5,0,0,0,-1,0,1,,Serenity.Log
+Serenity,Config,0,5,0,0,4,65,5,0,0,-1,3,16,Serenity.ComponentModel.SettingScopeAttribute' Serenity.Abstractions.IConfigurationRepository' Serenity.Dependency,Serenity.CouchbaseDistributedCache' Serenity.Caching.RedisDistributedCache' Serenity.Log' Serenity.ComponentModel.Recaptcha' Serenity.Logging.FileLogger' Serenity.Logging.SqlLogger' Serenity.FilteringTypeRegistry' Serenity.FormatterTypeRegistry' Serenity.DialogTypeRegistry' Serenity.EmailEditor' Serenity.EditorTypeRegistry' Serenity.EnumTypeRegistry' Serenity.Web.CssBundleManager' Serenity.Web.RecaptchaValidation' Serenity.Web.ContentHashCache' Serenity.Web.ScriptBundleManager
+Serenity,UriHelper,0,1,0,0,1,46,6,0,0,-1,0,6,,Serenity.Services.JsonServiceClient' Serenity.CodeGeneration.ServerImportGeneratorBase' Serenity.CodeGeneration.ScriptEndpointGenerator' Serenity.CodeGeneration.ServerImportsGenerator' Serenity.Web.ContentHashCache' Serenity.Navigation.NavigationItemAttribute
+Serenity,INotLoggedException,0,0,1,0,0,4,0,0,0,-1,0,1,,Serenity.ExceptionLog
+Serenity,ExceptionLog,0,1,0,0,1,23,3,0,0,-1,3,0,Serenity.Abstractions.IExceptionLogger' Serenity.INotLoggedException' Serenity.Dependency,
+Serenity,Authorization,0,3,4,0,3,92,8,0,0,-1,4,20,Serenity.Abstractions.IPermissionService' Serenity.Dependency' Serenity.Core.Authorization' Serenity.Core.Texts,Serenity.PropertyItemSlickConverter' Serenity.DataGrid<TItem;TOptions>' Serenity.LookupEditorBase<TOptions;TItem>' Serenity.PropertyGrid' Serenity.Services.UpdateInsertLogBehavior' Serenity.Services.CaptureLogBehavior' Serenity.Services.DeleteRequestHandler<TRow;TDeleteRequest;TDeleteResponse>' Serenity.Services.AuditLogService' Serenity.Services.ListRequestHandler<TRow;TListRequest;TListResponse>' Serenity.Services.RetrieveRequestHandler<TRow;TRetrieveRequest;TRetrieveResponse>' Serenity.Services.SaveRequestHandler<TRow;TSaveRequest;TSaveResponse>' Serenity.Services.UndeleteRequestHandler<TRow;TUndeleteResponse>' Serenity.Services.ServiceAuthorizeAttribute' Serenity.Web.PageAuthorizeAttribute' Serenity.Web.DynamicScript' Serenity.Web.DbLookupScript<TItem>' Serenity.WebSecurityHelper' Serenity.Web.HttpHandlers.DynamicScriptHandler' Serenity.Navigation.NavigationHelper' Serenity.Reporting.ReportRegistry
+Serenity,JSON,0,7,0,0,7,84,7,0,0,-1,1,7,Serenity.JsonSettings,Serenity.Caching.RedisDistributedCache' Serenity.CodeGenerator.GeneratorConfig' Serenity.Configuration.ConfigurationWrapper' Serenity.Services.MultipleImageUploadBehavior' Serenity.Services.EmbeddedMultiFileUploadBehaviourAttribute' Serenity.Web.RecaptchaValidation' Serenity.Configuration.WebConfigurationWrapper
+Serenity,JsonSettings,2,1,0,2,0,26,1,0,0,0,0,8,,Serenity.JSON' Serenity.Configuration.JsonConfigHelper' Serenity.PropertyGrid.PropertyItemHelper' Serenity.Services.JsonServiceClient' Serenity.Services.AuditLogService' Serenity.Services.JsonFilter' Serenity.Services.Result<TResponse>' Serenity.Services.TokenAuthorizeAttribute
+Serenity,Invariants,2,9,0,2,8,91,12,0,0,0.56,0,9,,Serenity.StringHelper' Serenity.Data.SqlConversions' Serenity.Services.CaptureLogHandler<TRow>' Serenity.Services.MultipleImageUploadBehavior' Serenity.Services.ImageUploadBehavior' Serenity.Services.EmbeddedMultiFileUploadBehaviourAttribute' Serenity.Services.EmbeddedFileUploadBehaviourAttribute' Serenity.Web.UploadHelper' Serenity.Web.HttpHandlers.DynamicScriptHandler
+Serenity,LocalText,3,5,1,2,4,74,6,1,0,0.4,2,54,Serenity.Abstractions.ILocalTextRegistry' Serenity.Dependency,Serenity.EnumMapper' Serenity.Localization.NestedPermissionKeyRegistration' Serenity.Localization.LocalTextRegistry' Serenity.Localization.NestedLocalTextRegistration' Serenity.Core.Authorization' Serenity.Core.Shared' Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.Data.CustomFieldExtensions' Serenity.Data.DateTimeOffsetField' Serenity.Data.ListField<TItem>' Serenity.Data.RowField<TForeign>' Serenity.Data.ByteArrayField' Serenity.Data.TimeSpanField' Serenity.Data.SingleField' Serenity.Data.Field' Serenity.Data.BooleanField' Serenity.Data.CustomClassField<TValue>' Serenity.Data.DateTimeField' Serenity.Data.DecimalField' Serenity.Data.DoubleField' Serenity.Data.RowListField<TForeign>' Serenity.Data.GenericClassField<TValue>' Serenity.Data.GenericValueField<TValue>' Serenity.Data.GuidField' Serenity.Data.Int16Field' Serenity.Data.Int32Field' Serenity.Data.Int64Field' Serenity.Data.StreamField' Serenity.Data.StringField' Serenity.Localization.EntityLocalTexts' Serenity.EntityDialog<TEntity;TOptions>' Serenity.EntityGrid<TEntity;TOptions>' Serenity.Services.UniqueFieldSaveBehavior' Serenity.Services.Validation' Serenity.Services.DataValidation' Serenity.Services.ServiceAuthorizeAttribute' Serenity.Web.RecaptchaValidation' Serenity.Web.ColumnPickerDialog' Serenity.Web.CheckTreeEditor' Serenity.Web.ImageUpload' Serenity.Web.EntityDialog' Serenity.Web.EntityGrid' Serenity.Web.FilterPanel' Serenity.Web.OperatorNames' Serenity.Web.OperatorFormats' Serenity.Web.Pager' Serenity.Web.SelectEditor' Serenity.Web.PropertyGrid' Serenity.Web.QuickSearch' Serenity.Web.Dialogs' Serenity.Web.Validation' Serenity.Web.ImageChecker' Serenity.Reporting.ReportRegistry' Serenity.ComponentModel.EmailEditorAttribute
+Serenity,StringHelper,2,17,0,0,17,311,41,0,0,0.41,1,4,Serenity.Invariants,Serenity.CodeGenerator.RowGenerator' Serenity.Data.Schema.FirebirdSchemaProvider' Serenity.Services.ImageUploadBehavior' Serenity.Web.UploadHelper
+Serenity,ReflectionExtensions,0,1,0,0,1,12,3,0,0,-1,0,0,,
+Serenity.ComponentModel,BooleanFilteringAttribute,0,1,2,0,1,17,1,0,1,-1,0,0,,
+Serenity.ComponentModel,DateFilteringAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,DateTimeFilteringAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,LookupFilteringAttribute,0,2,1,0,2,21,3,0,1,-1,1,0,Serenity.ComponentModel.LookupScriptAttribute,
+Serenity.ComponentModel,EditorFilteringAttribute,0,3,3,0,3,32,3,0,1,-1,1,0,Serenity.ComponentModel.EditorTypeAttribute,
+Serenity.ComponentModel,DecimalFilteringAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,IntegerFilteringAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,EnumFilteringAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,FilteringIdFieldAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,QuickFilterOptionAttribute,0,1,2,0,1,11,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,SortableAttribute,0,1,1,0,1,12,1,0,0,-1,0,2,,Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.Services.ListRequestHandler<TRow;TListRequest;TListResponse>
+Serenity.ComponentModel,QuickFilterAttribute,0,1,3,0,1,10,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,NotFilterableAttribute,0,1,1,0,1,12,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,CustomFilteringAttribute,1,4,0,0,2,28,8,8,1,0.5,0,0,,
+Serenity.ComponentModel,FilteringOptionAttribute,0,1,2,0,1,11,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,FilteringTypeAttribute,0,2,1,0,2,11,2,1,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,FilterOnlyAttribute,0,1,1,0,1,12,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,FormWidthAttribute,0,4,6,0,2,102,9,11,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,MediumHalfWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,MediumHalfLargeQuarterWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,MediumHalfLargeThirdWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,MediumQuarterWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,MediumThirdLargeQuarterWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,ResetFormWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,ResetLabelWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,ThreeQuarterWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,TwoThirdWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,OneThirdWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,QuarterWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,LabelWidthAttribute,0,2,2,0,2,13,2,1,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,HiddenAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,CollapsibleAttribute,0,1,2,0,1,9,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,HalfWidthAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,FormCssClassAttribute,0,1,2,0,1,13,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,HeaderCssClassAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,HideOnUpdateAttribute,0,1,1,0,1,16,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,HideOnInsertAttribute,0,1,1,0,1,16,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,VisibleAttribute,0,1,1,0,1,12,1,1,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,ColumnsScriptAttribute,0,1,1,0,1,11,2,0,0,-1,0,1,,Serenity.Web.ColumnsScriptRegistration
+Serenity.ComponentModel,DataScriptAttribute,0,1,0,0,1,8,1,0,1,-1,0,0,,
+Serenity.ComponentModel,EnumKeyAttribute,0,1,1,0,1,9,1,0,0,-1,0,2,,Serenity.EnumMapper' Serenity.ComponentModel.RadioButtonEditorAttribute
+Serenity.ComponentModel,BooleanFormatterAttribute,0,1,2,0,1,17,1,0,1,-1,0,0,,
+Serenity.ComponentModel,CheckboxFormatterAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,DateFormatterAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,DateTimeFormatterAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,EnumFormatterAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,FileDownloadFormatterAttribute,0,1,2,0,1,17,1,0,1,-1,0,0,,
+Serenity.ComponentModel,NumberFormatterAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,MinuteFormatterAttribute,0,1,1,0,1,12,1,0,1,-1,0,0,,
+Serenity.ComponentModel,UrlFormatterAttribute,0,1,5,0,1,33,1,0,1,-1,0,0,,
+Serenity.ComponentModel,AlignRightAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,AlignmentAttribute,0,1,1,0,0,8,1,2,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,AlignCenterAttribute,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Serenity.ComponentModel,DisplayFormatAttribute,0,1,1,0,1,8,1,0,0,-1,0,2,,Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.Reporting.ReportColumnConverter
+Serenity.ComponentModel,FormatterOptionAttribute,0,1,2,0,1,11,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,FormatterTypeAttribute,0,2,1,0,2,11,2,1,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,CustomFormatterAttribute,1,4,0,0,2,28,8,9,1,0.5,0,0,,
+Serenity.ComponentModel,EditLinkAttribute,0,2,4,0,2,15,2,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,LookupScriptAttribute,0,2,4,0,2,50,4,0,0,-1,0,8,,Serenity.ComponentModel.LookupFilteringAttribute' Serenity.ComponentModel.LookupEditorAttribute' Serenity.ComponentModel.AsyncLookupEditorAttribute' Serenity.ComponentModel.RadioButtonEditorAttribute' Serenity.CodeGeneration.ServerTypingsGenerator' Serenity.CodeGeneration.ScriptDtoGenerator' Serenity.CodeGeneration.ServerImportsGenerator' Serenity.Web.LookupScriptRegistration
+Serenity.ComponentModel,RegisterPermissionKeyAttribute,0,3,0,0,3,16,3,0,1,-1,0,0,,
+Serenity.ComponentModel,TabAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,FileUploadEditorAttribute,0,1,0,0,1,8,1,0,1,-1,0,0,,
+Serenity.ComponentModel,ImageUploadEditorAttribute,0,2,20,0,1,156,2,3,1,-1,1,2,Serenity.Web.ImageScaleMode,Serenity.Services.MultipleImageUploadBehavior' Serenity.Services.ImageUploadBehavior
+Serenity.ComponentModel,MultipleFileUploadEditorAttribute,0,1,0,0,1,9,1,0,2,-1,0,0,,
+Serenity.ComponentModel,MultipleImageUploadEditorAttribute,0,1,0,0,1,8,1,0,2,-1,0,0,,
+Serenity.ComponentModel,SortOrderAttribute,0,2,2,0,2,13,2,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,ResizableAttribute,0,2,1,0,2,12,2,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,WidthAttribute,0,1,3,0,1,10,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,DynamicScriptAttribute,0,1,3,0,1,11,1,1,0,-1,0,1,,Serenity.Web.DynamicScriptRegistration
+Serenity.ComponentModel,InsertableAttribute,0,1,1,0,1,17,1,0,0,-1,0,2,,Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.Data.RowFieldsBase
+Serenity.ComponentModel,ScriptIncludeAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Serenity.ComponentModel,UpdatableAttribute,0,1,1,0,1,17,1,0,0,-1,0,2,,Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.Data.RowFieldsBase
+Serenity.ComponentModel,FormScriptAttribute,0,1,1,0,1,11,2,0,0,-1,0,4,,Serenity.CodeGeneration.ServerTypingsGenerator' Serenity.CodeGeneration.ScriptFormGenerator' Serenity.CodeGeneration.ServerImportsGenerator' Serenity.Web.FormScriptRegistration
+Serenity.ComponentModel,RequiredPermissionAttribute,0,3,0,0,3,15,3,0,1,-1,0,1,,Serenity.Reporting.Report
+Serenity.ComponentModel,BasedOnRowAttribute,0,1,1,0,1,9,1,0,0,-1,0,3,,Serenity.PropertyGrid.PropertyItemHelper' Serenity.Web.DistinctValuesRegistration' Serenity.Reporting.ReportColumnConverter
+Serenity.ComponentModel,CssClassAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,CustomEditorAttribute,1,4,0,0,2,28,8,25,1,0.5,0,0,,
+Serenity.ComponentModel,EditorOptionAttribute,0,1,2,0,1,11,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,EditorTypeAttribute,0,2,1,0,2,11,2,1,0,-1,0,2,,Serenity.ComponentModel.EditorFilteringAttribute' Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,BooleanEditorAttribute,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Serenity.ComponentModel,DateEditorAttribute,0,1,3,0,1,22,1,0,2,-1,0,0,,
+Serenity.ComponentModel,DateTimeEditorAttribute,0,1,7,0,1,42,1,0,2,-1,0,0,,
+Serenity.ComponentModel,TimeEditorAttribute,0,1,4,0,1,27,1,0,2,-1,0,0,,
+Serenity.ComponentModel,DateYearEditorAttribute,0,1,2,0,1,17,1,0,2,-1,0,0,,
+Serenity.ComponentModel,DecimalEditorAttribute,0,1,4,0,1,27,1,0,2,-1,0,0,,
+Serenity.ComponentModel,EditorTypeEditorAttribute,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Serenity.ComponentModel,HtmlContentEditorAttribute,0,1,2,0,1,17,1,0,2,-1,0,0,,
+Serenity.ComponentModel,HtmlNoteContentEditor,0,1,2,0,1,17,1,0,2,-1,0,0,,
+Serenity.ComponentModel,HtmlReportContentEditorAttribute,0,1,2,0,1,17,1,0,2,-1,0,0,,
+Serenity.ComponentModel,IntegerEditorAttribute,0,1,2,0,1,17,1,0,2,-1,0,0,,
+Serenity.ComponentModel,EnumEditorAttribute,0,1,1,0,1,12,1,0,2,-1,0,0,,
+Serenity.ComponentModel,LookupEditorBaseAttribute,0,1,14,0,0,133,1,2,2,-1,0,1,,Serenity.CodeGeneration.ClientTypesGenerator
+Serenity.ComponentModel,LookupEditorAttribute,0,2,0,0,2,28,4,0,3,-1,1,1,Serenity.ComponentModel.LookupScriptAttribute,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,AsyncLookupEditorAttribute,0,2,1,0,2,27,4,0,2,-1,1,1,Serenity.ComponentModel.LookupScriptAttribute,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,DistinctValuesEditorAttribute,0,2,4,0,2,35,4,0,3,-1,0,2,,Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.Web.DistinctValuesRegistration
+Serenity.ComponentModel,MaskedEditorAttribute,0,1,2,0,1,17,1,0,2,-1,0,0,,
+Serenity.ComponentModel,PasswordEditorAttribute,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Serenity.ComponentModel,PersonNameEditorAttribute,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Serenity.ComponentModel,StringEditorAttribute,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Serenity.ComponentModel,TextAreaEditorAttribute,0,1,2,0,1,17,1,0,2,-1,0,0,,
+Serenity.ComponentModel,URLEditorAttribute,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Serenity.ComponentModel,RecaptchaSettings,0,0,2,0,0,6,0,0,0,-1,0,2,,Serenity.ComponentModel.Recaptcha' Serenity.Web.RecaptchaValidation
+Serenity.ComponentModel,RadioButtonEditorAttribute,0,2,2,0,2,41,6,0,2,-1,2,0,Serenity.ComponentModel.EnumKeyAttribute' Serenity.ComponentModel.LookupScriptAttribute,
+Serenity.ComponentModel,Recaptcha,0,1,1,0,1,15,2,0,2,-1,2,0,Serenity.Config' Serenity.ComponentModel.RecaptchaSettings,
+Serenity.ComponentModel,IgnoreAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Serenity.ComponentModel,HintAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,MaxLengthAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,OneWayAttribute,0,1,0,0,1,6,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,PlaceholderAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,PropertyItem,0,7,51,0,7,136,7,0,0,-1,0,8,,Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.PropertyGrid.IPropertyProcessor' Serenity.PropertyGrid.PropertyItemHelper' Serenity.PropertyGrid.PropertyProcessor' Serenity.PropertyGrid.LocalizablePropertyProcessor' Serenity.CodeGeneration.ServerTypingsGenerator' Serenity.CodeGeneration.ScriptFormGenerator' Serenity.CodeGeneration.ServerImportsGenerator
+Serenity.ComponentModel,RequiredAttribute,0,2,1,0,2,12,2,0,0,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.ComponentModel,SettingScopeAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.Config
+Serenity.ComponentModel,SettingKeyAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.Configuration.AppSettingsJsonConfigRepository
+Serenity.Extensibility,NestedPermissionKeysAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Serenity.Localization.NestedPermissionKeyRegistration
+Serenity.Extensibility,NestedLocalTextsAttribute,0,1,2,0,1,9,1,0,0,-1,0,1,,Serenity.Localization.NestedLocalTextRegistration
+Serenity.Extensibility,BaseRegistrarAttribute,0,1,1,0,1,9,1,1,0,-1,0,0,,
+Serenity.Extensibility,ScriptRegistrarAttribute,0,1,0,0,1,8,1,0,1,-1,0,0,,
+Serenity.Extensibility,ExtensibilityHelper,1,5,1,0,2,90,16,0,0,0.6,1,12,Serenity.Reflection.AssemblySorter,Serenity.Localization.NestedPermissionKeyRegistration' Serenity.Localization.EnumLocalTextRegistration' Serenity.Localization.NestedLocalTextRegistration' Serenity.Data.RowRegistry' Serenity.Services.DefaultImplicitBehaviorRegistry' Serenity.Web.DistinctValuesRegistration' Serenity.Web.CommonInitialization' Serenity.Web.ColumnsScriptRegistration' Serenity.Web.LookupScriptRegistration' Serenity.Web.FormScriptRegistration' Serenity.Navigation.NavigationHelper' Serenity.Reporting.ReportRegistry
+Serenity.Configuration,AppSettingsJsonConfigRepository,0,2,0,0,2,20,2,0,1,-1,4,0,Serenity.ComponentModel.SettingKeyAttribute' Serenity.Abstractions.IConfigurationManager' Serenity.LocalCache' Serenity.Dependency,
+Serenity.Configuration,JsonLocalTextsHelper,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Serenity.Configuration,JsonConfigHelper,0,1,0,0,1,16,2,0,0,-1,1,2,Serenity.JsonSettings,Serenity.CodeGenerator.GeneratorConfig' Serenity.Localization.JsonLocalTextRegistration
+Serenity.Reflection,AssemblySorter,0,3,0,0,2,52,9,0,0,-1,1,2,Serenity.Reflection.AssemblyItem,Serenity.Extensibility.ExtensibilityHelper' Serenity.Web.CommonInitialization
+Serenity.Reflection,AssemblyItem,0,1,2,0,1,10,1,0,0,-1,0,1,,Serenity.Reflection.AssemblySorter
+Serenity.Reflection,CodeWriter,3,9,1,0,7,64,12,0,0,0,0,13,,Serenity.CodeGeneration.CodeGeneratorBase' Serenity.CodeGeneration.ImportGeneratorBase' Serenity.CodeGeneration.ServerImportGeneratorBase' Serenity.CodeGeneration.ClientTypesGenerator' Serenity.CodeGeneration.ServerTypingsGenerator' Serenity.CodeGeneration.DtoGenerator' Serenity.CodeGeneration.FormatterTypeGenerator' Serenity.CodeGeneration.EditorTypeGenerator' Serenity.CodeGeneration.ScriptDtoGenerator' Serenity.CodeGeneration.ScriptEndpointGenerator' Serenity.CodeGeneration.ScriptFormGenerator' Serenity.CodeGeneration.ServerImportsGenerator' Serenity.Services.DtoActionResult
+Serenity.Reflection,ILGeneration,0,2,0,0,2,40,4,0,0,-1,0,0,,
+Serenity.Reflection,FastReflection,0,2,0,0,2,29,3,0,0,-1,0,4,,Serenity.Services.LocalizationBehavior' Serenity.Services.UpdatableExtensionBehavior' Serenity.Services.LinkingSetRelationBehavior' Serenity.Services.MasterDetailRelationBehavior
+Serenity.Reflection,ObjectAccessor,0,4,1,0,4,82,5,1,0,-1,2,0,Serenity.Reflection.TypeAccessor' Serenity.Reflection.TypeAccessorWrapper,
+Serenity.Reflection,TypeAccessorWrapper,2,1,1,0,1,19,1,0,1,0,1,1,Serenity.Reflection.TypeAccessor,Serenity.Reflection.ObjectAccessor
+Serenity.Reflection,TypeAccessor,5,7,1,0,2,275,22,1,0,0.29,1,3,Serenity.Reflection.DelegateAccessor,Serenity.Reflection.ObjectAccessor' Serenity.Reflection.TypeAccessorWrapper' Serenity.Reflection.DelegateAccessor
+Serenity.Reflection,DelegateAccessor,3,2,1,0,2,22,2,0,1,0,1,1,Serenity.Reflection.TypeAccessor,Serenity.Reflection.TypeAccessor
+Serenity.Reflection,VisitedGraph,0,1,0,0,1,13,2,0,0,-1,0,0,,
+Serenity.Data,BinarySerialization,0,2,0,0,2,33,2,0,0,-1,0,0,,
+Serenity.Data,InsertPermissionAttribute,0,3,0,0,3,15,3,0,1,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.Data,DeletePermissionAttribute,0,3,0,0,3,15,3,0,1,-1,0,0,,
+Serenity.Data,ModifyPermissionAttribute,0,3,0,0,3,15,3,0,1,-1,0,0,,
+Serenity.Data,PermissionAttributeBase,0,3,1,0,3,16,3,7,0,-1,0,6,,Serenity.Data.RowFieldsBase' Serenity.Services.DeleteRequestHandler<TRow;TDeleteRequest;TDeleteResponse>' Serenity.Services.SaveRequestHandler<TRow;TSaveRequest;TSaveResponse>' Serenity.Services.UndeleteRequestHandler<TRow;TUndeleteResponse>' Serenity.Services.ServiceAuthorizeAttribute' Serenity.Web.PageAuthorizeAttribute
+Serenity.Data,ReadPermissionAttribute,0,3,0,0,3,15,3,0,1,-1,0,5,,Serenity.PropertyGrid.BasicPropertyProcessor' Serenity.Services.ListRequestHandler<TRow;TListRequest;TListResponse>' Serenity.Services.RetrieveRequestHandler<TRow;TRetrieveRequest;TRetrieveResponse>' Serenity.Web.DistinctValuesScript<TRow>' Serenity.Web.RowLookupScript<TRow>
+Serenity.Data,UpdatePermissionAttribute,0,3,0,0,3,15,3,0,1,-1,0,1,,Serenity.PropertyGrid.BasicPropertyProcessor
+Serenity.Data,Base32,7,3,0,0,2,279,36,0,0,1,0,2,,Serenity.IO.TemporaryFileHelper' Serenity.Logging.FileLogger
+Serenity.Data,JsonSafeInt64Converter,0,3,2,0,3,66,4,0,0,-1,0,0,,
+Serenity.Data,TypeConversions,0,1,0,0,1,21,5,0,0,-1,0,0,,
+Serenity.IO,GlobFilter,14,7,0,0,5,328,54,0,0,0,0,1,,Serenity.Web.ContentHashCache
+Serenity.IO,DeleteType,0,0,0,0,0,12,0,0,0,-1,0,3,,Serenity.IO.TemporaryFileHelper' Serenity.Web.FilesToDelete' Serenity.Web.UploadHelper
+Serenity.IO,TemporaryFileHelper,4,10,0,3,10,276,33,0,0,0.3,4,4,Serenity.Log' Serenity.IO.DeleteType' Serenity.IO.TempFile' Serenity.Data.Base32,Serenity.Services.ImageUploadBehavior' Serenity.Web.UploadProcessor' Serenity.Web.UploadHelper' Serenity.Reporting.HtmlToPdfConverter
+Serenity.IO,TempFile,3,0,0,3,0,6,0,0,0,-1,0,1,,Serenity.IO.TemporaryFileHelper
+Serenity.Localization,JsonLocalTextRegistration,0,3,0,0,3,72,13,0,0,-1,3,1,Serenity.Dependency' Serenity.Abstractions.ILocalTextRegistry' Serenity.Configuration.JsonConfigHelper,Serenity.Web.CommonInitialization
+Serenity.Localization,InitializedLocalText,1,1,1,0,1,13,1,0,1,0,0,2,,Serenity.Localization.NestedLocalTextRegistration' Serenity.Localization.EntityLocalTexts
+Serenity.Localization,FallbackLocalTextRegistry,1,5,0,0,5,87,14,0,1,0,2,0,Serenity.Abstractions.ILocalTextRegistry' Serenity.Check,
+Serenity.Localization,NestedPermissionKeyRegistration,0,2,0,0,1,66,16,0,0,-1,5,1,Serenity.Extensibility.NestedPermissionKeysAttribute' Serenity.Extensibility.ExtensibilityHelper' Serenity.LocalText' Serenity.Abstractions.ILocalTextRegistry' System.ComponentModel.DisplayNameAttribute,Serenity.Web.CommonInitialization
+Serenity.Localization,ILocalTextContext,0,0,1,0,0,7,0,0,0,-1,0,2,,Serenity.Localization.LocalTextRegistry' Serenity.Web.HtmlScriptExtensions
+Serenity.Localization,LocalTextRegistry,3,8,0,0,7,240,35,0,1,0,4,1,Serenity.Check' Serenity.Localization.ILocalTextContext' Serenity.Dependency' Serenity.LocalText,Serenity.Web.LocalTextScript
+Serenity.Localization,ItemKeyComparer,1,2,0,1,2,14,2,0,0,1,0,0,,
+Serenity.Localization,EnumLocalTextRegistration,0,1,0,0,1,46,8,0,0,-1,4,1,Serenity.Abstractions.ILocalTextRegistry' Serenity.Extensibility.ExtensibilityHelper' Serenity.Dependency' Serenity.EnumMapper,Serenity.Web.CommonInitialization
+Serenity.Localization,NestedLocalTextRegistration,0,2,0,0,1,58,12,0,0,-1,6,1,Serenity.Extensibility.NestedLocalTextsAttribute' Serenity.Extensibility.ExtensibilityHelper' Serenity.LocalText' Serenity.Abstractions.ILocalTextRegistry' Serenity.Localization.InitializedLocalText' Serenity.Dependency,Serenity.Web.CommonInitialization
+Serenity.Logging,FileLogger,8,7,2,0,5,186,11,0,1,0,8,1,Serenity.Abstractions.DateTimeProvider' Serenity.Config' Serenity.Logging.LogSettings' Serenity.Data.Base32' Serenity.Abstractions.ILogger' Serenity.Logging.LoggingLevel' Serenity.DateHelper' Serenity.Dependency,Serenity.Log
+Serenity.Logging,LogSettings,0,0,2,0,0,6,0,0,0,-1,0,1,,Serenity.Logging.FileLogger
+Serenity.Logging,LoggingLevel,0,0,0,0,0,10,0,0,0,-1,0,4,,Serenity.Abstractions.ILogger' Serenity.Log' Serenity.Logging.FileLogger' Serenity.Logging.SqlLogger
+Munq,IocContainer,4,41,1,0,36,317,52,0,1,0.07,6,1,Munq.TypeRegistry' Munq.ILifetimeManager' Munq.IRegistration' Munq.Registration' Munq.CreateInstanceDelegateFactory' Munq.IDependencyResolver,Serenity.MunqContainer
+Munq,CreateInstanceDelegateFactory,1,3,0,0,1,54,6,0,0,0,1,1,Munq.IDependencyResolver,Munq.IocContainer
+Munq,IContainerFluent,0,1,0,0,0,4,1,1,0,-1,1,0,Munq.ILifetimeManager,
+Munq,IDependecyRegistrar,0,19,1,0,0,23,19,1,0,-1,1,0,Munq.IRegistration,
+Munq,IDependencyResolver,0,14,0,0,0,18,14,1,0,-1,0,3,,Munq.IocContainer' Munq.CreateInstanceDelegateFactory' Munq.Registration
+Munq,ILifetimeManager,0,2,0,0,0,21,2,0,0,-1,1,4,Munq.IRegistration,Munq.IocContainer' Munq.IContainerFluent' Munq.IRegistration' Munq.Registration
+Munq,IRegistration,0,3,3,0,0,31,3,1,0,-1,1,5,Munq.ILifetimeManager,Serenity.MunqContainer' Munq.IocContainer' Munq.IDependecyRegistrar' Munq.ILifetimeManager' Munq.TypeRegistry
+Munq,IRegistrationKey,0,3,0,0,0,10,3,2,0,-1,0,1,,Munq.TypeRegistry
+Munq,NamedRegistrationKey,2,4,0,0,4,23,4,0,1,0,0,0,,
+Munq,Registration,8,7,4,1,7,79,9,0,1,0,2,2,Munq.ILifetimeManager' Munq.IDependencyResolver,Munq.IocContainer' Munq.TypeRegistry
+Munq,TypeRegistry,3,10,0,0,8,81,14,0,0,0,3,1,Munq.IRegistrationKey' Munq.Registration' Munq.IRegistration,Munq.IocContainer
+Munq,UnNamedRegistrationKey,1,4,0,0,4,19,4,0,1,0,0,0,,
+Serenity.Caching,DistributedCacheEmulator,3,5,0,0,5,107,5,0,1,0,2,0,Serenity.Abstractions.IDateTimeProvider' Serenity.Abstractions.DateTimeProvider,
+Serenity.Services,ValidationError,0,6,2,0,6,23,6,0,0,-1,0,3,,Serenity.Services.DataValidation' Serenity.Services.EndpointExtensions' Serenity.Services.ServiceEndpointActionInvoker
+Serenity.Services,JsonStringHashSetConverter,0,3,2,0,3,80,9,0,0,-1,0,0,,
+Serenity.Core,Texts,0,0,0,0,0,16,0,0,0,-1,0,1,,Serenity.Authorization
+Serenity.Core,Authorization,2,0,0,2,0,5,0,0,0,-1,1,1,Serenity.LocalText,Serenity.Authorization
+Serenity.Core,Db,0,0,0,0,0,7,0,0,0,-1,0,0,,
+Serenity.Core,Shared,1,0,0,1,0,4,0,0,0,-1,1,0,Serenity.LocalText,

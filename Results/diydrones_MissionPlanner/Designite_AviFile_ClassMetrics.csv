@@ -1,7 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AudioStream,1,6,3,0,5,99,9,0,1,0,1,1
-Avi,18,1,0,18,1,265,1,0,0,0,0,5
-AviManager,2,15,0,0,13,269,31,0,0,0.13,4,2
-AviStream,4,2,3,0,2,36,3,2,0,1,1,1
-EditableVideoStream,1,7,1,0,7,87,12,0,1,0.43,2,0
-VideoStream,9,23,9,0,11,507,47,1,1,0.09,2,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AviFile,AudioStream,1,6,3,0,5,92,9,0,1,0,5,1,AviFile.PCMWAVEFORMAT' AviFile.NativeMethods' AviFile.Avi' AviFile.AVISTREAMINFO' AviFile.AVICOMPRESSOPTIONS_CLASS,AviFile.AviManager
+AviFile,Avi,18,1,0,18,1,335,1,0,0,0,0,5,,AviFile.AudioStream' AviFile.AviManager' AviFile.AviStream' AviFile.EditableVideoStream' AviFile.VideoStream
+AviFile,RECT,4,0,0,4,0,7,0,0,0,-1,0,2,,AviFile.AVISTREAMINFO' AviFile.VideoStream
+AviFile,BITMAPINFOHEADER,11,0,0,11,0,14,0,0,0,-1,0,2,,AviFile.NativeMethods' AviFile.VideoStream
+AviFile,PCMWAVEFORMAT,7,0,0,7,0,10,0,0,0,-1,0,3,,AviFile.AudioStream' AviFile.NativeMethods' AviFile.AviManager
+AviFile,AVISTREAMINFO,18,0,0,18,0,22,0,0,0,-1,1,5,AviFile.RECT,AviFile.AudioStream' AviFile.NativeMethods' AviFile.AviManager' AviFile.EditableVideoStream' AviFile.VideoStream
+AviFile,BITMAPFILEHEADER,5,0,0,5,0,8,0,0,0,-1,0,1,,AviFile.VideoStream
+AviFile,AVIFILEINFO,12,0,0,12,0,16,0,0,0,-1,0,1,,AviFile.NativeMethods
+AviFile,AVICOMPRESSOPTIONS,11,0,0,11,0,14,0,0,0,-1,0,4,,AviFile.AVICOMPRESSOPTIONS_CLASS' AviFile.NativeMethods' AviFile.AviManager' AviFile.VideoStream
+AviFile,AVICOMPRESSOPTIONS_CLASS,11,1,0,11,1,29,1,0,0,0,1,4,AviFile.AVICOMPRESSOPTIONS,AviFile.AudioStream' AviFile.NativeMethods' AviFile.AviManager' AviFile.VideoStream
+AviFile,NativeMethods,0,32,0,0,32,183,32,0,0,-1,6,5,AviFile.AVISTREAMINFO' AviFile.BITMAPINFOHEADER' AviFile.PCMWAVEFORMAT' AviFile.AVICOMPRESSOPTIONS' AviFile.AVICOMPRESSOPTIONS_CLASS' AviFile.AVIFILEINFO,AviFile.AudioStream' AviFile.AviManager' AviFile.AviStream' AviFile.EditableVideoStream' AviFile.VideoStream
+AviFile,AviManager,2,15,0,0,13,269,30,0,0,0.2,9,2,AviFile.NativeMethods' AviFile.Avi' AviFile.VideoStream' AviFile.AudioStream' AviFile.AVICOMPRESSOPTIONS' AviFile.AVISTREAMINFO' AviFile.PCMWAVEFORMAT' AviFile.AviStream' AviFile.AVICOMPRESSOPTIONS_CLASS,MissionPlanner.OSDVideo' AviFile.VideoStream
+AviFile,AviStream,4,2,3,0,2,30,3,2,0,1,2,1,AviFile.NativeMethods' AviFile.Avi,AviFile.AviManager
+AviFile,EditableVideoStream,1,7,1,0,7,81,12,0,1,0.43,4,0,AviFile.NativeMethods' AviFile.Avi' AviFile.VideoStream' AviFile.AVISTREAMINFO,
+AviFile,VideoStream,9,23,9,0,11,482,42,1,1,0.09,9,3,AviFile.AVICOMPRESSOPTIONS' AviFile.NativeMethods' AviFile.Avi' AviFile.AVISTREAMINFO' AviFile.RECT' AviFile.BITMAPINFOHEADER' AviFile.AVICOMPRESSOPTIONS_CLASS' AviFile.BITMAPFILEHEADER' AviFile.AviManager,MissionPlanner.OSDVideo' AviFile.AviManager' AviFile.EditableVideoStream

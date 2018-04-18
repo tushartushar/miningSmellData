@@ -1,9 +1,17 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Array,1,12,1,0,7,240,40,0,1,0.42,2,3
-Document,0,6,0,0,5,94,11,0,1,-1,4,0
-Entry,0,3,8,0,3,118,5,1,0,-1,1,4
-Group,4,14,8,2,10,320,33,1,0,0.36,2,0
-Parser,1,26,0,1,7,902,141,0,0,0.12,2,3
-ParserException,0,2,3,0,2,49,2,0,0,-1,0,0
-Serializer,1,9,0,0,1,172,16,0,0,0.22,0,0
-TypeParsers,1,11,0,0,2,235,23,0,0,0.91,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Toml,Array,1,12,1,0,7,262,36,0,1,0.42,5,5,Toml.Entry' Toml.Tokens' Toml.Parser' Toml.Dimensions' Toml.TomlType,Toml.Document' Toml.Entry' Toml.Parser' Toml.State' TestCLI.Program
+Toml,Dimensions,0,0,2,0,0,5,0,0,0,-1,0,1,,Toml.Array
+Toml,Document,0,6,0,0,5,100,11,0,1,-1,5,1,Toml.Parser' Toml.TypeParsers' Toml.Entry' Toml.Array' Toml.TomlType,TestCLI.Program
+Toml,Entry,0,3,8,0,3,106,5,1,0,-1,2,6,Toml.TomlType' Toml.Array,Toml.Array' Toml.Document' Toml.Group' Toml.Parser' Toml.State' TestCLI.Program
+Toml,TomlType,0,0,0,0,0,10,0,0,0,-1,0,5,,Toml.Array' Toml.Document' Toml.Entry' Toml.Parser' Toml.State
+Toml,Group,4,14,8,2,10,344,33,1,0,0.29,2,0,Toml.Entry' Toml.Parser,
+Toml,Parser,1,26,0,1,7,1020,101,0,0,0.12,7,5,Toml.State' Toml.Errors' Toml.Entry' Toml.Mode' Toml.Tokens' Toml.Array' Toml.TomlType,Toml.Array' Toml.Document' Toml.Group' Toml.State' Toml.Serializer
+Toml,Mode,0,0,0,0,0,12,0,0,0,-1,0,1,,Toml.Parser
+Toml,Errors,13,0,0,13,0,17,0,0,0,-1,0,2,,Toml.Parser' Toml.State
+Toml,Tokens,19,0,0,19,0,22,0,0,0,-1,0,3,,Toml.Array' Toml.Parser' Toml.Serializer
+Toml,State,0,4,11,0,4,132,9,0,0,-1,6,1,Toml.Array' Toml.Entry' Toml.TomlType' Toml.Parser' Toml.Errors' Toml.ParserException,Toml.Parser
+Toml,ParserException,0,2,3,0,2,39,2,0,0,-1,0,1,,Toml.State
+Toml,Serializer,1,9,0,0,1,183,16,0,0,0.22,2,1,Toml.Tokens' Toml.Parser,TestCLI.Program
+Toml,TypeParsers,1,11,0,0,2,261,16,0,0,0.91,1,1,Toml.ParseResultBase,Toml.Document
+Toml,ParseResultBase,0,2,2,0,2,27,2,1,0,-1,0,1,,Toml.TypeParsers
+Toml,ParseResult<T>,1,2,1,0,2,43,2,0,1,1,0,0,,

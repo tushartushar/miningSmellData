@@ -1,17 +1,51 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-TrackedConcurrentQueue,2,15,4,0,11,142,16,0,0,0.4,2,0
-LLStack,1,28,5,0,18,439,45,0,0,0.86,2,0
-ThreadSafeDictionary,9,75,6,0,49,2078,218,0,0,0.65,2,0
-ThreadSafeSet,8,58,2,0,32,1288,196,0,0,0.53,2,0
-UniqueElementProducerConsumer,1,11,3,0,7,88,11,0,0,0.18,1,0
-SlimConcurrentQueue,2,17,1,0,13,457,33,0,0,0.71,1,1
-GroupedProducerConsumer,1,12,3,0,5,138,13,0,0,0.25,1,0
-OffsetInt,1,0,0,1,0,13,0,0,0,-1,0,1
-Counter,3,5,1,0,4,71,5,0,0,0,1,0
-SinglyLinkedNode,2,1,0,2,1,10,1,0,0,0,0,1
-Strings,1,3,10,0,3,66,3,0,0,0,0,3
-Pool,3,18,1,0,17,313,24,0,0,0.72,1,0
-Validation,0,6,0,0,6,43,7,0,0,-1,1,8
-SharedInt32,1,7,1,0,7,66,7,0,0,0.29,0,0
-DictionaryDebugView,1,1,1,0,1,14,1,0,0,0,0,0
-CollectionDebugView,1,1,1,0,1,14,1,0,0,0,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Ariadne.Collections,TrackedConcurrentQueue<T>,2,15,4,0,11,135,16,0,0,0.4,3,0,Ariadne.Validation' Ariadne.Collections.Enumerator' Ariadne.Collections.SnapshotEnumerable,
+Ariadne.Collections,LLStack<T>,1,28,5,0,18,436,39,0,0,0.86,4,0,Ariadne.Validation' Ariadne.Collections.Enumerator' Ariadne.Collections.PopEnumerator' Ariadne.Collections.AtPopEnumerator,
+Ariadne.Collections,AtPopEnumerator,1,7,2,0,2,60,10,0,0,0.86,0,1,,Ariadne.Collections.LLStack<T>
+Ariadne.Collections,PopEnumerator,2,7,2,0,3,52,7,0,0,0.86,0,1,,Ariadne.Collections.LLStack<T>
+Ariadne.Collections,Enumerator,10,28,15,0,15,261,32,0,0,0.32,2,9,Ariadne.Collections.KVEnumerator' Ariadne.Collections.BoxEnumerator,Ariadne.Collections.TrackedConcurrentQueue<T>' Ariadne.Collections.LLStack<T>' Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.ValueCollection' Ariadne.Collections.KeyCollection' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.UniqueElementProducerConsumer<T>' Ariadne.Collections.SlimConcurrentQueue<T>' Ariadne.Collections.GroupedProducerConsumer<T>
+Ariadne.Collections,ThreadSafeDictionary<TKey;TValue>,9,75,6,0,49,2214,192,0,0,0.65,16,0,Ariadne.Collections.TombstoneKV' Ariadne.Collections.Table' Ariadne.Validation' Ariadne.Strings' Ariadne.Collections.Record' Ariadne.Collections.KV' Ariadne.Counter' Ariadne.Collections.PrimeKV' Ariadne.Collections.Producer' Ariadne.Collections.MatchDead' Ariadne.Collections.MatchAll' Ariadne.Collections.MatchLive' Ariadne.Collections.RemovingEnumeration' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.KVEnumerator' Ariadne.Collections.Enumerator,
+Ariadne.Collections,KV,2,2,0,2,2,28,2,2,0,1,1,5,Ariadne.Collections.PrimeKV,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.PrimeKV' Ariadne.Collections.Record' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.KVEnumerator
+Ariadne.Collections,PrimeKV,1,1,0,1,1,10,1,0,1,0,1,4,Ariadne.Collections.KV,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.KV' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.KVEnumerator
+Ariadne.Collections,TombstoneKV,0,1,0,0,1,7,1,0,1,-1,0,3,,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.KVEnumerator
+Ariadne.Collections,ValueMatcher,0,1,1,0,1,5,1,6,0,-1,0,0,,
+Ariadne.Collections,MatchAll,1,2,1,1,1,15,2,0,1,1,0,1,,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>
+Ariadne.Collections,MatchEquality,2,2,1,0,2,18,2,0,1,0,0,0,,
+Ariadne.Collections,PredicateEquality,2,2,1,0,2,18,2,0,1,0,0,0,,
+Ariadne.Collections,MatchEqualityOrDead,2,2,1,0,2,18,2,0,1,0,0,0,,
+Ariadne.Collections,MatchDead,1,2,1,1,1,15,2,0,1,1,0,1,,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>
+Ariadne.Collections,MatchLive,1,2,1,1,1,15,2,0,1,1,0,1,,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>
+Ariadne.Collections,Record,4,0,0,4,0,9,0,0,0,-1,2,6,Ariadne.Collections.KV' Ariadne.Collections.Box,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.Table' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.KVEnumerator' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.BoxEnumerator
+Ariadne.Collections,Table,22,11,2,16,11,101,11,0,0,0.27,2,5,Ariadne.Collections.Record' Ariadne.Counter,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.KVEnumerator' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.BoxEnumerator
+Ariadne.Collections,Producer,3,4,0,0,4,31,5,0,0,0,0,1,,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>
+Ariadne.Collections,RemovingEnumerator,12,8,4,0,4,160,16,0,0,0.38,9,3,Ariadne.Counter' Ariadne.Collections.Table' Ariadne.Collections.KV' Ariadne.Collections.Record' Ariadne.Collections.TombstoneKV' Ariadne.Collections.PrimeKV' Ariadne.Collections.TombstoneBox' Ariadne.Collections.Box' Ariadne.Collections.PrimeBox,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.RemovingEnumeration' Ariadne.Collections.ThreadSafeSet<T>
+Ariadne.Collections,RemovingEnumeration,4,8,0,0,2,48,8,0,0,0,1,2,Ariadne.Collections.RemovingEnumerator,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.ThreadSafeSet<T>
+Ariadne.Collections,KVEnumerator,4,3,1,0,3,48,7,0,0,0,5,2,Ariadne.Collections.Table' Ariadne.Collections.KV' Ariadne.Collections.Record' Ariadne.Collections.TombstoneKV' Ariadne.Collections.PrimeKV,Ariadne.Collections.Enumerator' Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>
+Ariadne.Collections,ValueCollection,1,10,2,0,4,127,14,0,0,0.5,3,3,Ariadne.Validation' Ariadne.Strings' Ariadne.Collections.Enumerator,DictionaryTests.SingleThreaded' Ariadne.NUnitTests.SingleThreaded' MultiThreaded.SingleThreaded
+Ariadne.Collections,KeyCollection,1,9,2,0,3,115,11,0,0,0.44,3,3,Ariadne.Validation' Ariadne.Strings' Ariadne.Collections.Enumerator,DictionaryTests.SingleThreaded' Ariadne.NUnitTests.SingleThreaded' MultiThreaded.SingleThreaded
+Ariadne.Collections,ThreadSafeSet<T>,8,58,2,0,32,1391,188,0,0,0.53,14,0,Ariadne.Collections.TombstoneBox' Ariadne.Collections.Table' Ariadne.Validation' Ariadne.Strings' Ariadne.Collections.Box' Ariadne.Collections.Record' Ariadne.Counter' Ariadne.Collections.PrimeBox' Ariadne.Collections.AddedEnumeration' Ariadne.Collections.AddedEnumerator' Ariadne.Collections.RemovingEnumeration' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.BoxEnumerator' Ariadne.Collections.Enumerator,
+Ariadne.Collections,Box,1,2,0,1,2,13,2,2,0,1,1,5,Ariadne.Collections.PrimeBox,Ariadne.Collections.Record' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.PrimeBox' Ariadne.Collections.BoxEnumerator
+Ariadne.Collections,PrimeBox,1,1,0,1,1,9,1,0,1,0,1,4,Ariadne.Collections.Box,Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.Box' Ariadne.Collections.BoxEnumerator
+Ariadne.Collections,TombstoneBox,0,1,0,0,1,7,1,0,1,-1,0,3,,Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.BoxEnumerator
+Ariadne.Collections,AddedEnumerator,3,4,2,0,3,58,6,0,0,0,1,2,Ariadne.Strings,Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.AddedEnumeration
+Ariadne.Collections,AddedEnumeration,2,4,0,0,1,24,4,0,0,0,1,1,Ariadne.Collections.AddedEnumerator,Ariadne.Collections.ThreadSafeSet<T>
+Ariadne.Collections,BoxEnumerator,4,3,1,0,3,46,7,0,0,0,5,2,Ariadne.Collections.Table' Ariadne.Collections.Box' Ariadne.Collections.Record' Ariadne.Collections.TombstoneBox' Ariadne.Collections.PrimeBox,Ariadne.Collections.Enumerator' Ariadne.Collections.ThreadSafeSet<T>
+Ariadne.Collections,UniqueElementProducerConsumer<T>,1,11,3,0,7,82,11,0,0,0.18,2,0,Ariadne.Validation' Ariadne.Collections.Enumerator,
+Ariadne.Collections,SlimConcurrentQueue<T>,2,17,1,0,13,464,30,0,0,0.71,5,0,Ariadne.Validation' Ariadne.Collections.Enumerator' Ariadne.Collections.DequeuEnumerable' Ariadne.Collections.AtDequeuEnumerable' Ariadne.Collections.SnapshotEnumerable,
+Ariadne.Collections,AtDequeuEnumerable,2,4,1,0,1,33,5,0,0,0,1,3,Ariadne.Collections.AtDequeuEnumerator,Ariadne.Collections.SlimConcurrentQueue<T>' Ariadne.Collections.GroupedProducerConsumer<T>' Ariadne.NUnitTests.QueueTests.SingleThreaded
+Ariadne.Collections,AtDequeuEnumerator,2,4,2,0,1,37,5,0,0,0.75,0,1,,Ariadne.Collections.AtDequeuEnumerable
+Ariadne.Collections,DequeuEnumerable,1,4,0,0,1,22,4,0,0,0,1,2,Ariadne.Collections.DequeuEnumerator,Ariadne.Collections.SlimConcurrentQueue<T>' Ariadne.NUnitTests.QueueTests.SingleThreaded
+Ariadne.Collections,DequeuEnumerator,2,4,2,0,2,38,4,0,0,0.75,0,2,,Ariadne.Collections.DequeuEnumerable' Ariadne.NUnitTests.QueueTests.SingleThreaded
+Ariadne.Collections,SnapshotEnumerator,3,4,2,0,2,40,5,0,0,0.5,0,1,,Ariadne.Collections.SnapshotEnumerable
+Ariadne.Collections,SnapshotEnumerable,2,4,0,0,1,24,4,0,0,0,1,2,Ariadne.Collections.SnapshotEnumerator,Ariadne.Collections.TrackedConcurrentQueue<T>' Ariadne.Collections.SlimConcurrentQueue<T>
+Ariadne.Collections,GroupedProducerConsumer<T>,1,12,3,0,5,130,13,0,0,0.25,3,0,Ariadne.Validation' Ariadne.Collections.AtDequeuEnumerable' Ariadne.Collections.Enumerator,
+Ariadne,OffsetInt,1,0,0,1,0,13,0,0,0,-1,0,1,,Ariadne.Counter
+Ariadne,Counter,3,5,1,0,4,69,5,0,0,0,1,4,Ariadne.OffsetInt,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.Table' Ariadne.Collections.RemovingEnumerator' Ariadne.Collections.ThreadSafeSet<T>
+Ariadne,SinglyLinkedNode<T>,2,1,0,2,1,11,1,0,0,0,0,0,,
+Ariadne,Strings,1,3,10,0,3,56,3,0,0,0,0,6,,Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.ValueCollection' Ariadne.Collections.KeyCollection' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.AddedEnumerator' Ariadne.Validation
+Ariadne,Pool<T>,3,18,1,0,17,309,26,0,0,0.72,2,0,Ariadne.Validation' Ariadne.Handle,
+Ariadne,Handle,2,3,1,0,1,33,4,0,0,0,0,2,,Ariadne.Pool<T>' Ariadne.NUnitTests.PoolTests
+Ariadne,Validation,0,6,0,0,6,44,11,0,0,-1,1,10,Ariadne.Strings,Ariadne.Collections.TrackedConcurrentQueue<T>' Ariadne.Collections.LLStack<T>' Ariadne.Collections.ThreadSafeDictionary<TKey;TValue>' Ariadne.Collections.ValueCollection' Ariadne.Collections.KeyCollection' Ariadne.Collections.ThreadSafeSet<T>' Ariadne.Collections.UniqueElementProducerConsumer<T>' Ariadne.Collections.SlimConcurrentQueue<T>' Ariadne.Collections.GroupedProducerConsumer<T>' Ariadne.Pool<T>
+Ariadne,SharedInt32,1,7,1,0,7,63,7,0,0,0.29,0,0,,
+Ariadne.DebuggerProxies,DictionaryDebugView<TKey;TValue>,1,1,1,0,1,13,1,0,0,0,0,0,,
+Ariadne.DebuggerProxies,CollectionDebugView<T>,1,1,1,0,1,13,1,0,0,0,0,0,,

@@ -1,19 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ChainHandler,0,2,1,0,1,32,2,0,0,-1,0,0
-IDataPreparer,0,1,0,0,0,12,1,0,0,-1,0,1
-IResultingPipelineStage,0,0,1,0,0,18,0,0,1,-1,0,1
-IResultingPipeline,0,1,1,0,0,23,1,1,0,-1,0,0
-ResultingPipeline,1,2,1,0,2,43,5,0,1,0,1,0
-IPipelineProcessor,0,1,0,0,0,10,1,1,0,-1,0,0
-IPipelineStage,0,1,0,0,0,13,1,1,0,-1,0,1
-IPipeline,0,1,0,0,0,13,1,1,0,-1,0,1
-PipelineProcessor,2,2,0,0,2,29,4,0,1,0,2,0
-Pipeline,1,2,0,0,2,30,4,0,1,0,1,0
-DataRule,0,0,1,0,0,20,0,0,1,-1,0,0
-IDataRule,0,0,1,0,0,19,0,1,1,-1,0,0
-Rule,0,2,1,0,2,30,2,1,1,-1,0,0
-ValidationPipelineProcessor,2,2,0,0,2,30,2,0,1,0,1,0
-ValidationPipeline,1,2,0,0,2,27,2,0,1,0,1,0
-IValidationPipelineProcessor,0,1,0,0,0,13,1,1,0,-1,0,0
-IRule,0,2,1,0,0,27,2,2,0,-1,0,1
-IValidationPipeline,0,1,0,0,0,14,1,1,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Simplify.Pipelines,ChainHandler<T>,0,2,1,0,1,26,2,0,0,-1,0,0,,
+Simplify.Pipelines,IDataPreparer,0,1,0,0,0,8,1,0,0,-1,0,2,,Simplify.Pipelines.Processing.PipelineProcessor<T>' Simplify.Pipelines.Validation.ValidationPipelineProcessor<T;TResult>
+Simplify.Pipelines.Processing,IResultingPipelineStage,0,0,1,0,0,10,0,0,1,-1,0,1,,Simplify.Pipelines.Processing.ResultingPipeline<T;TResult>
+Simplify.Pipelines.Processing,IResultingPipeline,0,1,1,0,0,16,1,1,0,-1,0,0,,
+Simplify.Pipelines.Processing,ResultingPipeline<T;TResult>,1,2,1,0,2,35,4,0,1,0,1,0,Simplify.Pipelines.Processing.IResultingPipelineStage,
+Simplify.Pipelines.Processing,IPipelineProcessor,0,1,0,0,0,7,1,1,0,-1,0,0,,
+Simplify.Pipelines.Processing,IPipelineStage,0,1,0,0,0,9,1,1,0,-1,0,1,,Simplify.Pipelines.Processing.Pipeline<T>
+Simplify.Pipelines.Processing,IPipeline,0,1,0,0,0,9,1,1,0,-1,0,1,,Simplify.Pipelines.Processing.PipelineProcessor<T>
+Simplify.Pipelines.Processing,PipelineProcessor<T>,2,2,0,0,2,24,3,0,1,0,2,0,Simplify.Pipelines.Processing.IPipeline' Simplify.Pipelines.IDataPreparer,
+Simplify.Pipelines.Processing,Pipeline<T>,1,2,0,0,2,25,4,0,1,0,1,0,Simplify.Pipelines.Processing.IPipelineStage,
+Simplify.Pipelines.Validation,DataRule<TData;T;TResult>,0,0,1,0,0,10,0,0,1,-1,0,0,,
+Simplify.Pipelines.Validation,IDataRule,0,0,1,0,0,10,0,1,1,-1,0,0,,
+Simplify.Pipelines.Validation,Rule<T;TResult>,0,2,1,0,2,22,2,0,1,-1,0,0,,
+Simplify.Pipelines.Validation,ValidationPipelineProcessor<T;TResult>,2,2,0,0,2,24,2,0,1,0,2,0,Simplify.Pipelines.Validation.IValidationPipeline' Simplify.Pipelines.IDataPreparer,
+Simplify.Pipelines.Validation,ValidationPipeline<T;TResult>,1,2,0,0,2,21,2,0,1,0,1,0,Simplify.Pipelines.Validation.IRule,
+Simplify.Pipelines.Validation,IValidationPipelineProcessor,0,1,0,0,0,8,1,1,0,-1,0,0,,
+Simplify.Pipelines.Validation,IRule,0,2,1,0,0,20,2,2,0,-1,0,1,,Simplify.Pipelines.Validation.ValidationPipeline<T;TResult>
+Simplify.Pipelines.Validation,IValidationPipeline,0,1,0,0,0,9,1,1,0,-1,0,1,,Simplify.Pipelines.Validation.ValidationPipelineProcessor<T;TResult>

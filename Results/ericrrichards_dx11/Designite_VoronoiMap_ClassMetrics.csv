@@ -1,0 +1,22 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+VoronoiMap,BoundsCheck,0,1,0,0,1,26,5,0,0,-1,3,1,VoronoiMap.Sides' VoronoiMap.Site' VoronoiMap.Geometry,VoronoiMap.Site
+VoronoiMap,Sides,0,0,0,0,0,8,0,0,0,-1,0,2,,VoronoiMap.BoundsCheck' VoronoiMap.Site
+VoronoiMap,Edge,1,8,14,1,5,172,21,0,0,0.62,3,7,VoronoiMap.Side' VoronoiMap.Site' Algorithms.CohenSutherland,VoronoiMap.EdgeList' VoronoiMap.EdgeReorderer' VoronoiMap.HalfEdge' VoronoiMap.MainForm' VoronoiMap.Site' VoronoiMap.Voronoi' VoronoiMap.VoronoiGraph
+VoronoiMap,EdgeList,1,6,2,0,6,43,8,0,0,0.67,5,2,VoronoiMap.SiteList' VoronoiMap.Side' VoronoiMap.HalfEdge' VoronoiMap.Site' VoronoiMap.Edge,VoronoiMap.Voronoi' VoronoiMap.VoronoiGraph
+VoronoiMap,Criterion,0,0,0,0,0,3,0,0,0,-1,0,2,,VoronoiMap.EdgeReorderer' VoronoiMap.Site
+VoronoiMap,EdgeReorderer,0,3,2,0,1,73,13,0,0,-1,4,1,VoronoiMap.Criterion' VoronoiMap.Edge' VoronoiMap.Site' VoronoiMap.Side,VoronoiMap.Site
+VoronoiMap,EventQueue,1,4,1,0,4,29,6,0,0,0,3,2,VoronoiMap.HalfEdge' VoronoiMap.Site' VoronoiMap.Geometry,VoronoiMap.Voronoi' VoronoiMap.VoronoiGraph
+VoronoiMap,Geometry,1,0,0,1,0,4,0,0,0,-1,0,4,,VoronoiMap.BoundsCheck' VoronoiMap.EventQueue' VoronoiMap.HalfEdge' VoronoiMap.Site
+VoronoiMap,Segment,0,1,3,0,1,9,1,0,0,-1,1,2,VoronoiMap.Site,VoronoiMap.MainForm' VoronoiMap.VoronoiGraph
+VoronoiMap,Circle,0,2,2,0,2,21,2,0,0,-1,1,1,Core.MathF,VoronoiMap.MainForm
+VoronoiMap,Triangle,0,1,4,0,1,11,1,0,0,-1,1,2,VoronoiMap.Site,VoronoiMap.MainForm' VoronoiMap.VoronoiGraph
+VoronoiMap,WindingDirection,0,0,0,0,0,5,0,0,0,-1,0,1,,VoronoiMap.Site
+VoronoiMap,Polygon,0,1,4,0,1,31,1,0,0,-1,0,1,,VoronoiMap.Site
+VoronoiMap,HalfEdge,0,2,6,0,2,58,8,0,0,-1,4,5,VoronoiMap.Edge' VoronoiMap.Side' VoronoiMap.Site' VoronoiMap.Geometry,VoronoiMap.EdgeList' VoronoiMap.EventQueue' VoronoiMap.Site' VoronoiMap.Voronoi' VoronoiMap.VoronoiGraph
+VoronoiMap,MainForm,37,22,0,0,1,758,59,0,0,0.09,7,1,VoronoiMap.VoronoiGraph' VoronoiMap.Voronoi' VoronoiMap.Site' VoronoiMap.Edge' VoronoiMap.Circle' VoronoiMap.Triangle' VoronoiMap.Segment,VoronoiMap.Program
+VoronoiMap,Program,0,1,0,0,0,12,1,0,0,-1,1,0,VoronoiMap.MainForm,
+VoronoiMap,Side,2,1,1,2,1,10,2,0,0,0,0,7,,VoronoiMap.Edge' VoronoiMap.EdgeList' VoronoiMap.EdgeReorderer' VoronoiMap.HalfEdge' VoronoiMap.Site' VoronoiMap.Voronoi' VoronoiMap.VoronoiGraph
+VoronoiMap,SiteList,1,3,2,0,3,32,6,0,0,1,1,3,VoronoiMap.Site,VoronoiMap.EdgeList' VoronoiMap.Voronoi' VoronoiMap.VoronoiGraph
+VoronoiMap,Site,3,20,7,0,14,247,52,0,0,0.45,11,12,VoronoiMap.Edge' VoronoiMap.Side' VoronoiMap.EdgeReorderer' VoronoiMap.Criterion' Core.MathF' VoronoiMap.Polygon' VoronoiMap.WindingDirection' VoronoiMap.Sides' VoronoiMap.Geometry' VoronoiMap.BoundsCheck' VoronoiMap.HalfEdge,VoronoiMap.BoundsCheck' VoronoiMap.Edge' VoronoiMap.EdgeList' VoronoiMap.EdgeReorderer' VoronoiMap.EventQueue' VoronoiMap.Segment' VoronoiMap.Triangle' VoronoiMap.HalfEdge' VoronoiMap.MainForm' VoronoiMap.SiteList' VoronoiMap.Voronoi' VoronoiMap.VoronoiGraph
+VoronoiMap,Voronoi,7,3,1,0,3,140,13,0,0,0,8,1,VoronoiMap.VoronoiGraph' VoronoiMap.SiteList' VoronoiMap.EdgeList' VoronoiMap.EventQueue' VoronoiMap.Site' VoronoiMap.HalfEdge' VoronoiMap.Edge' VoronoiMap.Side,VoronoiMap.MainForm
+VoronoiMap,VoronoiGraph,6,10,4,5,9,207,32,0,0,0.2,9,2,VoronoiMap.SiteList' VoronoiMap.EdgeList' VoronoiMap.EventQueue' VoronoiMap.Site' VoronoiMap.HalfEdge' VoronoiMap.Edge' VoronoiMap.Side' VoronoiMap.Triangle' VoronoiMap.Segment,VoronoiMap.MainForm' VoronoiMap.Voronoi

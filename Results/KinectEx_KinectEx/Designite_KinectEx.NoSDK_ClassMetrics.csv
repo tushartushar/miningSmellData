@@ -1,0 +1,65 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+KinectEx,BodyExtensions,2,12,1,0,11,357,19,0,0,0.58,4,0,KinectEx.JointTypeEx' KinectEx.BoneTypeEx' KinectEx.IBody' KinectEx.Bone,
+KinectEx,BodyImageExtension,6,10,0,0,4,261,21,0,0,0.4,7,0,KinectEx.IBody' KinectEx.KinectSDK.FrameEdges' KinectEx.KinectSDK.DepthSpacePoint' KinectEx.BoneTypeEx' KinectEx.KinectSDK.TrackingState' KinectEx.IJoint' KinectEx.KinectSDK.CameraSpacePoint,
+KinectEx,Bone,3,1,3,0,1,43,1,0,0,0,2,1,KinectEx.BoneTypeEx' KinectEx.IJoint,KinectEx.BodyExtensions
+KinectEx,BoneTypeEx,0,4,30,0,3,266,5,0,0,-1,1,4,KinectEx.JointTypeEx,KinectEx.BodyExtensions' KinectEx.BodyImageExtension' KinectEx.Bone' KinectEx.Json.BoneTypeExConverter
+KinectEx,ColorFrameBitmap,3,5,1,0,4,155,6,0,0,0,2,1,KinectEx.DVR.ReplayColorFrame' KinectEx.DVR.IColorCodec,KinectEx.DVR.ReplayColorFrame
+KinectEx,CustomBody,15,2,15,0,2,266,5,1,1,0,7,1,KinectEx.KinectSDK.FrameEdges' KinectEx.KinectSDK.TrackingConfidence' KinectEx.KinectSDK.HandState' KinectEx.KinectSDK.PointF' KinectEx.KinectSDK.TrackingState' KinectEx.JointTypeEx' KinectEx.IBody,KinectEx.DVR.ReplayBodyFrame
+KinectEx,CustomJoint,5,2,5,0,2,96,3,2,1,0,6,1,KinectEx.KinectSDK.JointType' KinectEx.KinectSDK.CameraSpacePoint' KinectEx.KinectSDK.DepthSpacePoint' KinectEx.KinectSDK.ColorSpacePoint' KinectEx.KinectSDK.TrackingState' KinectEx.IJoint,KinectEx.DVR.ReplayBodyFrame
+KinectEx,CustomJointOrientation,2,2,2,0,2,54,3,2,1,0,3,0,KinectEx.KinectSDK.JointType' KinectEx.KinectSDK.Vector4' KinectEx.IJointOrientation,
+KinectEx,DepthFrameBitmap,5,7,1,0,5,167,8,0,0,0.29,1,0,KinectEx.DVR.ReplayDepthFrame,
+KinectEx,IBody,0,1,14,0,0,88,1,1,0,-1,0,3,,KinectEx.BodyExtensions' KinectEx.BodyImageExtension' KinectEx.CustomBody
+KinectEx,IJoint,0,1,5,0,0,33,1,1,0,-1,0,5,,KinectEx.BodyImageExtension' KinectEx.Bone' KinectEx.CustomJoint' KinectEx.Smoothing.ExponentialJoint' KinectEx.Smoothing.KalmanJoint
+KinectEx,IJointOrientation,0,1,2,0,0,23,1,1,0,-1,0,3,,KinectEx.CustomJointOrientation' KinectEx.Smoothing.ExponentialJointOrientation' KinectEx.Smoothing.KalmanJointOrientation
+KinectEx,InfraredFrameBitmap,11,7,1,0,5,181,8,0,0,0.29,1,0,KinectEx.DVR.ReplayInfraredFrame,
+KinectEx,JointTypeEx,0,4,33,0,3,325,6,0,0,-1,1,5,KinectEx.KinectSDK.JointType,KinectEx.BodyExtensions' KinectEx.BoneTypeEx' KinectEx.CustomBody' KinectEx.Json.JointTypeExConverter' KinectEx.Smoothing.SmoothedBody<T>
+KinectEx.DVR,ColorCodecs,0,1,2,0,0,19,1,0,0,-1,0,1,,KinectEx.DVR.KinectReplay
+KinectEx.DVR,FileMetadata,0,0,4,0,0,26,0,0,0,-1,0,0,,
+KinectEx.DVR,FrameTypes,0,0,0,0,0,23,0,0,0,-1,0,5,,KinectEx.DVR.KinectReplay' KinectEx.DVR.ReplayBodyFrame' KinectEx.DVR.ReplayColorFrame' KinectEx.DVR.ReplayDepthFrame' KinectEx.DVR.ReplayInfraredFrame
+KinectEx.DVR,IColorCodec,0,3,6,0,0,50,3,2,0,-1,1,4,KinectEx.DVR.ReplayFrame,KinectEx.ColorFrameBitmap' KinectEx.DVR.KinectReplay' KinectEx.DVR.ReplayColorFrame' KinectEx.DVR.ReplayColorSystem
+KinectEx.DVR,JpegColorCodec,3,3,7,0,3,183,4,0,1,1,2,0,KinectEx.DVR.ReplayColorFrame' KinectEx.DVR.ReplayFrame,
+KinectEx.DVR,KinectReplay,17,14,8,4,6,459,42,0,0,0.36,12,0,KinectEx.DVR.ReplayBodySystem' KinectEx.DVR.ReplayColorSystem' KinectEx.DVR.ReplayDepthSystem' KinectEx.DVR.ReplayInfraredSystem' KinectEx.DVR.FrameTypes' KinectEx.DVR.IColorCodec' KinectEx.DVR.ColorCodecs' KinectEx.DVR.ReplayColorFrame' KinectEx.DVR.ReplaySystem' KinectEx.DVR.ReplayBodyFrame' KinectEx.DVR.ReplayDepthFrame' KinectEx.DVR.ReplayInfraredFrame,
+KinectEx.DVR,RawColorCodec,2,3,6,0,3,129,5,0,1,1,2,0,KinectEx.DVR.ReplayColorFrame' KinectEx.DVR.ReplayFrame,
+KinectEx.DVR,ReplayBodyFrame,2,5,3,0,2,321,27,0,1,0.8,11,2,KinectEx.DVR.FrameTypes' KinectEx.DVR.ReplayFrame' KinectEx.CustomBody' KinectEx.KinectSDK.JointType' KinectEx.KinectSDK.JointOrientation' KinectEx.KinectSDK.Vector4' KinectEx.CustomJoint' KinectEx.KinectSDK.CameraSpacePoint' KinectEx.KinectSDK.DepthSpacePoint' KinectEx.KinectSDK.ColorSpacePoint' KinectEx.KinectSDK.PointF,KinectEx.DVR.KinectReplay' KinectEx.DVR.ReplayBodySystem
+KinectEx.DVR,ReplayBodySystem,0,2,0,0,2,29,5,0,1,-1,1,1,KinectEx.DVR.ReplayBodyFrame,KinectEx.DVR.KinectReplay
+KinectEx.DVR,ReplayColorFrame,4,5,4,0,3,172,8,0,1,0.6,4,5,KinectEx.DVR.IColorCodec' KinectEx.ColorFrameBitmap' KinectEx.DVR.FrameTypes' KinectEx.DVR.ReplayFrame,KinectEx.ColorFrameBitmap' KinectEx.DVR.JpegColorCodec' KinectEx.DVR.KinectReplay' KinectEx.DVR.RawColorCodec' KinectEx.DVR.ReplayColorSystem
+KinectEx.DVR,ReplayColorSystem,1,3,0,0,3,37,6,0,1,0.67,2,1,KinectEx.DVR.IColorCodec' KinectEx.DVR.ReplayColorFrame,KinectEx.DVR.KinectReplay
+KinectEx.DVR,ReplayDepthFrame,5,3,6,0,1,145,5,0,1,0.67,2,3,KinectEx.DVR.FrameTypes' KinectEx.DVR.ReplayFrame,KinectEx.DepthFrameBitmap' KinectEx.DVR.KinectReplay' KinectEx.DVR.ReplayDepthSystem
+KinectEx.DVR,ReplayDepthSystem,0,2,0,0,2,28,5,0,1,-1,1,1,KinectEx.DVR.ReplayDepthFrame,KinectEx.DVR.KinectReplay
+KinectEx.DVR,ReplayFrame,2,1,2,0,1,22,2,4,0,0,0,7,,KinectEx.DVR.IColorCodec' KinectEx.DVR.JpegColorCodec' KinectEx.DVR.RawColorCodec' KinectEx.DVR.ReplayBodyFrame' KinectEx.DVR.ReplayColorFrame' KinectEx.DVR.ReplayDepthFrame' KinectEx.DVR.ReplayInfraredFrame
+KinectEx.DVR,ReplayFrameArrivedEventArgs<T>,0,0,1,0,0,7,0,0,0,-1,0,0,,
+KinectEx.DVR,ReplayInfraredFrame,5,3,4,0,1,127,5,0,1,0.67,2,3,KinectEx.DVR.FrameTypes' KinectEx.DVR.ReplayFrame,KinectEx.InfraredFrameBitmap' KinectEx.DVR.KinectReplay' KinectEx.DVR.ReplayInfraredSystem
+KinectEx.DVR,ReplayInfraredSystem,0,2,0,0,2,28,5,0,1,-1,1,1,KinectEx.DVR.ReplayInfraredFrame,KinectEx.DVR.KinectReplay
+KinectEx.DVR,ReplaySystem,7,3,7,1,2,127,4,4,0,1,0,1,,KinectEx.DVR.KinectReplay
+KinectEx.Json,BoneTypeExConverter,0,3,0,0,3,57,8,0,0,-1,1,0,KinectEx.BoneTypeEx,
+KinectEx.Json,JointTypeExConverter,0,3,0,0,3,57,8,0,0,-1,1,0,KinectEx.JointTypeEx,
+KinectEx.Json,KinectTypeBinder,5,4,0,0,3,85,10,0,0,0,1,0,KinectEx.KinectSDK.JointType,
+KinectEx.KinectSDK,Activity,0,0,0,0,0,8,0,0,0,-1,0,0,,
+KinectEx.KinectSDK,Appearance,0,0,0,0,0,4,0,0,0,-1,0,0,,
+KinectEx.KinectSDK,CameraIntrinsics,0,0,7,0,0,31,0,0,0,-1,0,0,,
+KinectEx.KinectSDK,CameraSpacePoint,3,4,3,0,4,55,5,0,0,0.5,0,5,,KinectEx.BodyImageExtension' KinectEx.CustomJoint' KinectEx.DVR.ReplayBodyFrame' KinectEx.Smoothing.ExponentialJoint' KinectEx.Smoothing.KalmanJoint
+KinectEx.KinectSDK,ColorSpacePoint,2,4,2,0,4,47,5,0,0,0.5,0,2,,KinectEx.CustomJoint' KinectEx.DVR.ReplayBodyFrame
+KinectEx.KinectSDK,DepthSpacePoint,2,4,2,0,4,47,5,0,0,0.5,0,3,,KinectEx.BodyImageExtension' KinectEx.CustomJoint' KinectEx.DVR.ReplayBodyFrame
+KinectEx.KinectSDK,DetectionResult,0,0,0,0,0,7,0,0,0,-1,0,0,,
+KinectEx.KinectSDK,Expression,0,0,0,0,0,5,0,0,0,-1,0,0,,
+KinectEx.KinectSDK,FrameEdges,0,0,0,0,0,8,0,0,0,-1,0,2,,KinectEx.BodyImageExtension' KinectEx.CustomBody
+KinectEx.KinectSDK,HandState,0,0,0,0,0,8,0,0,0,-1,0,1,,KinectEx.CustomBody
+KinectEx.KinectSDK,JointOrientation,2,3,2,0,3,42,4,0,0,0.67,2,1,KinectEx.KinectSDK.JointType' KinectEx.KinectSDK.Vector4,KinectEx.DVR.ReplayBodyFrame
+KinectEx.KinectSDK,JointType,0,0,0,0,0,28,0,0,0,-1,0,10,,KinectEx.CustomJoint' KinectEx.CustomJointOrientation' KinectEx.JointTypeEx' KinectEx.DVR.ReplayBodyFrame' KinectEx.Json.KinectTypeBinder' KinectEx.KinectSDK.JointOrientation' KinectEx.Smoothing.ExponentialJoint' KinectEx.Smoothing.ExponentialJointOrientation' KinectEx.Smoothing.KalmanJoint' KinectEx.Smoothing.KalmanJointOrientation
+KinectEx.KinectSDK,PointF,3,4,3,1,4,146,5,0,0,0.5,0,2,,KinectEx.CustomBody' KinectEx.DVR.ReplayBodyFrame
+KinectEx.KinectSDK,TrackingConfidence,0,0,0,0,0,5,0,0,0,-1,0,1,,KinectEx.CustomBody
+KinectEx.KinectSDK,TrackingState,0,0,0,0,0,6,0,0,0,-1,0,5,,KinectEx.BodyImageExtension' KinectEx.CustomBody' KinectEx.CustomJoint' KinectEx.Smoothing.ExponentialJoint' KinectEx.Smoothing.KalmanJoint
+KinectEx.KinectSDK,Vector4,4,4,4,0,4,63,5,0,0,0,0,3,,KinectEx.CustomJointOrientation' KinectEx.DVR.ReplayBodyFrame' KinectEx.KinectSDK.JointOrientation
+KinectEx.Smoothing,ExponentialJoint,6,4,0,0,3,142,10,0,2,0,7,0,KinectEx.Smoothing.FilterDoubleExponentialData' KinectEx.Smoothing.ExponentialSmoothingParameters' KinectEx.KinectSDK.JointType' KinectEx.Smoothing.ISmootherParameters' KinectEx.IJoint' KinectEx.KinectSDK.TrackingState' KinectEx.KinectSDK.CameraSpacePoint,
+KinectEx.Smoothing,FilterDoubleExponentialData,4,0,0,4,0,7,0,0,0,-1,0,1,,KinectEx.Smoothing.ExponentialJoint
+KinectEx.Smoothing,ExponentialJointOrientation,0,4,0,0,3,30,4,0,2,-1,3,0,KinectEx.KinectSDK.JointType' KinectEx.Smoothing.ISmootherParameters' KinectEx.IJointOrientation,
+KinectEx.Smoothing,ExponentialSmoother,0,0,2,0,0,13,0,0,1,-1,0,0,,
+KinectEx.Smoothing,ExponentialSmoothingParameters,5,1,5,0,1,39,1,0,1,0,0,1,,KinectEx.Smoothing.ExponentialJoint
+KinectEx.Smoothing,ISmoother,0,0,2,0,0,13,0,2,0,-1,0,1,,KinectEx.Smoothing.SmoothedBody<T>
+KinectEx.Smoothing,ISmootherParameters,0,0,0,0,0,3,0,2,0,-1,0,6,,KinectEx.Smoothing.ExponentialJoint' KinectEx.Smoothing.ExponentialJointOrientation' KinectEx.Smoothing.KalmanJoint' KinectEx.Smoothing.KalmanJointOrientation' KinectEx.Smoothing.SmoothedBody<T>' KinectEx.Smoothing.SmoothedBodyList<T>
+KinectEx.Smoothing,KalmanJoint,8,3,0,0,3,86,6,0,2,0,6,0,KinectEx.Smoothing.KalmanSmoothingParameters' KinectEx.KinectSDK.JointType' KinectEx.Smoothing.ISmootherParameters' KinectEx.IJoint' KinectEx.KinectSDK.TrackingState' KinectEx.KinectSDK.CameraSpacePoint,
+KinectEx.Smoothing,KalmanJointOrientation,0,3,0,0,3,27,3,0,2,-1,3,0,KinectEx.KinectSDK.JointType' KinectEx.Smoothing.ISmootherParameters' KinectEx.IJointOrientation,
+KinectEx.Smoothing,KalmanSmoother,0,0,2,0,0,13,0,0,1,-1,0,0,,
+KinectEx.Smoothing,KalmanSmoothingParameters,2,1,2,0,1,32,1,0,1,0,0,1,,KinectEx.Smoothing.KalmanJoint
+KinectEx.Smoothing,SmoothedBody<T>,0,2,0,0,2,35,4,0,2,-1,3,0,KinectEx.JointTypeEx' KinectEx.Smoothing.ISmoother' KinectEx.Smoothing.ISmootherParameters,
+KinectEx.Smoothing,SmoothedBodyList<T>,1,3,0,0,3,67,6,0,0,0.67,1,0,KinectEx.Smoothing.ISmootherParameters,

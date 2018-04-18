@@ -1,0 +1,33 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Evade,CollisionObjectTypes,0,0,0,0,0,6,0,0,0,-1,0,4,,Evade.DetectedCollision' Evade.Collision' Evade.SpellData' Evade.SpellDatabase
+Evade,FastPredResult,3,0,0,3,0,6,0,0,0,-1,0,1,,Evade.Collision
+Evade,DetectedCollision,5,0,0,5,0,8,0,0,0,-1,1,1,Evade.CollisionObjectTypes,Evade.Collision
+Evade,Collision,2,4,0,0,3,198,9,0,0,0.75,9,2,Evade.FastPredResult' Evade.Polygon' Evade.Skillshot' Evade.SpellData' Evade.CollisionObjectTypes' Evade.Config' Evade.Rectangle' Evade.SkillShotType' Evade.DetectedCollision,Evade.Program' Evade.Skillshot
+Evade,Config,15,1,0,15,1,94,9,0,0,0,5,7,Evade.EvadeSpellDatabase' Evade.EvadeSpellData' Evade.SpellValidTargets' Evade.SpellDatabase' Evade.SpellData,Evade.Collision' Evade.Program' Evade.FoundIntersection' Evade.Skillshot' Evade.SkillshotDetector' Evade.SpellDatabase' Evade.Evader
+Evade,SpellValidTargets,0,0,0,0,0,9,0,0,0,-1,0,5,,Evade.Config' Evade.EvadeSpellData' Evade.EvadeSpellDatabase' Evade.Program' Evade.Evader
+Evade,EvadeSpellData,21,3,3,21,3,63,3,5,0,0.67,1,3,Evade.SpellValidTargets,Evade.Config' Evade.EvadeSpellDatabase' Evade.Program
+Evade,DashData,0,1,0,0,1,14,1,0,1,-1,0,0,,
+Evade,BlinkData,0,1,0,0,1,18,1,0,1,-1,0,0,,
+Evade,InvulnerabilityData,0,1,0,0,1,11,1,0,1,-1,0,0,,
+Evade,ShieldData,0,1,0,0,1,12,1,0,1,-1,0,0,,
+Evade,MoveBuffData,0,1,0,0,1,12,1,0,1,-1,0,0,,
+Evade,EvadeSpellDatabase,1,2,0,1,1,528,58,0,0,0,2,2,Evade.EvadeSpellData' Evade.SpellValidTargets,Evade.Config' Evade.Program
+Evade,Geometry,1,5,0,0,5,211,10,0,0,0.8,1,1,Evade.Polygon,Evade.Evader
+Evade,Circle,2,2,0,2,2,25,3,0,0,0,1,1,Evade.Polygon,Evade.Skillshot
+Evade,Polygon,1,4,0,1,4,30,6,0,0,0,1,8,Evade.Utils,Evade.Collision' Evade.Geometry' Evade.Circle' Evade.Rectangle' Evade.Ring' Evade.Sector' Evade.Skillshot' Evade.Evader
+Evade,Rectangle,5,2,0,5,2,29,2,0,0,0,1,2,Evade.Polygon,Evade.Collision' Evade.Skillshot
+Evade,Ring,3,2,0,3,2,35,4,0,0,0,1,1,Evade.Polygon,Evade.Skillshot
+Evade,Sector,4,2,0,4,2,27,3,0,0,0,1,1,Evade.Polygon,Evade.Skillshot
+Evade,Program,13,15,2,7,4,1127,153,0,0,0.27,15,2,Evade.SkillshotDetector' Evade.Config' Evade.Collision' Evade.SpellData' Evade.Skillshot' Evade.SpellDatabase' Evade.DetectionType' Evade.IsSafeResult' Evade.SafePathResult' Evade.Utils' Evade.EvadeSpellDatabase' Evade.EvadeSpellData' Evade.FoundIntersection' Evade.Evader' Evade.SpellValidTargets,Evade.SkillshotDetector' Evade.Evader
+Evade,IsSafeResult,2,0,0,2,0,5,0,0,0,-1,0,2,,Evade.Program' Evade.Evader
+Evade,SkillShotType,0,0,0,0,0,9,0,0,0,-1,0,4,,Evade.Collision' Evade.Skillshot' Evade.SpellData' Evade.SpellDatabase
+Evade,DetectionType,0,0,0,0,0,5,0,0,0,-1,0,3,,Evade.Program' Evade.Skillshot' Evade.SkillshotDetector
+Evade,SafePathResult,2,1,0,2,1,10,1,0,0,0,1,3,Evade.FoundIntersection,Evade.Program' Evade.Skillshot' Evade.Evader
+Evade,FoundIntersection,5,1,0,5,1,16,1,0,0,0,1,3,Evade.Config,Evade.Program' Evade.SafePathResult' Evade.Skillshot
+Evade,Skillshot,18,14,5,14,14,450,52,0,0,0,13,4,Evade.Circle' Evade.DetectionType' Evade.Polygon' Evade.Rectangle' Evade.Ring' Evade.Sector' Evade.SpellData' Evade.SkillShotType' Evade.Config' Evade.Collision' Evade.FoundIntersection' Evade.SafePathResult' Evade.Utils,Evade.Collision' Evade.Program' Evade.SkillshotDetector' Evade.Evader
+Evade,SkillshotDetector,0,9,0,0,1,287,44,0,0,-1,6,1,Evade.Config' Evade.DetectionType' Evade.SpellDatabase' Evade.Skillshot' Evade.Program' Evade.SpellData,Evade.Program
+Evade,SpellData,38,2,5,36,2,99,2,0,0,1,2,6,Evade.CollisionObjectTypes' Evade.SkillShotType,Evade.Collision' Evade.Config' Evade.Program' Evade.Skillshot' Evade.SkillshotDetector' Evade.SpellDatabase
+Evade,SpellDatabase,1,4,0,1,3,3263,11,0,0,0,4,3,Evade.Config' Evade.SkillShotType' Evade.CollisionObjectTypes' Evade.SpellData,Evade.Config' Evade.Program' Evade.SkillshotDetector
+Evade,Utils,0,5,0,0,5,56,10,0,0,-1,0,3,,Evade.Polygon' Evade.Program' Evade.Skillshot
+Evade,SpellList<T>,0,1,0,0,1,12,2,0,0,-1,0,0,,
+Evade,Evader,0,2,0,0,2,184,18,0,0,-1,8,1,Evade.Program' Evade.Skillshot' Evade.Geometry' Evade.Polygon' Evade.Config' Evade.SafePathResult' Evade.SpellValidTargets' Evade.IsSafeResult,Evade.Program

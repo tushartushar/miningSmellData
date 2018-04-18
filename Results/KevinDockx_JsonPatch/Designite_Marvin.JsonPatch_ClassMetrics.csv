@@ -1,18 +1,37 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IObjectAdapter,0,6,0,0,0,9,6,1,0,-1,1,1
-ObjectAdapter,0,11,1,0,8,420,41,0,1,-1,6,0
-TypedJsonPatchDocumentConverter,0,3,0,0,3,45,5,0,0,-1,2,0
-JsonPatchException,0,4,3,0,4,30,4,0,0,-1,2,0
-ActualPropertyPathResult,0,1,3,0,1,21,1,0,0,-1,0,2
-ConversionResult,0,1,2,0,1,16,1,0,0,-1,0,1
-ExpressionHelpers,0,4,0,0,1,86,21,0,0,-1,0,1
-GetValueResult,0,1,2,0,1,28,1,0,0,-1,0,1
-JsonPatchProperty,0,1,2,0,1,28,1,0,0,-1,0,1
-ObjectTreeAnalysisResult,0,2,4,0,1,101,12,0,0,-1,1,1
-PropertyHelpers,0,10,0,0,3,219,32,0,0,-1,3,1
-RemovedPropertyTypeResult,0,1,2,0,1,34,1,0,0,-1,0,1
-IJsonPatchDocument,0,1,0,0,0,4,1,1,0,-1,0,1
-JsonPatchError,0,1,3,0,1,39,1,0,0,-1,1,1
-JsonPatchDocument,0,28,2,0,27,349,31,0,1,-1,3,0
-Operation,0,9,5,0,8,86,27,0,0,-1,1,7
-OperationType,0,0,0,0,0,9,0,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Marvin.JsonPatch.Adapters,IObjectAdapter,0,5,0,0,0,8,5,1,0,-1,1,4,Marvin.JsonPatch.Operations.Operation,Marvin.JsonPatch.JsonPatchDocument' Marvin.JsonPatch.JsonPatchDocument<TModel>' Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.Operations.Operation<TModel>
+Marvin.JsonPatch.Adapters,ObjectAdapter,0,11,3,0,6,384,38,0,1,-1,8,2,Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.Internal.ParsedPath' Marvin.JsonPatch.Internal.ObjectVisitor' Marvin.JsonPatch.JsonPatchError' Marvin.JsonPatch.Internal.IAdapter' Marvin.JsonPatch.Internal.ConversionResult' Marvin.JsonPatch.Internal.ConversionResultProvider' Marvin.JsonPatch.Properties.Resources,Marvin.JsonPatch.JsonPatchDocument' Marvin.JsonPatch.JsonPatchDocument<TModel>
+Marvin.JsonPatch.Converters,JsonPatchDocumentConverter,0,3,0,0,3,52,6,0,0,-1,3,0,Marvin.JsonPatch.JsonPatchDocument' Marvin.JsonPatch.Properties.Resources' Marvin.JsonPatch.IJsonPatchDocument,
+Marvin.JsonPatch.Converters,TypedJsonPatchDocumentConverter,0,3,0,0,3,51,5,0,0,-1,2,0,Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.IJsonPatchDocument,
+Marvin.JsonPatch.Exceptions,JsonPatchException,0,4,3,0,4,25,4,0,0,-1,1,1,Marvin.JsonPatch.JsonPatchError,Marvin.JsonPatch.JsonPatchDocument
+Marvin.JsonPatch.Helpers,ActualPropertyPathResult,0,1,3,0,1,15,1,0,0,-1,0,1,,Marvin.JsonPatch.Helpers.PropertyHelpers
+Marvin.JsonPatch.Helpers,CaseTransformType,0,0,0,0,0,7,0,0,0,-1,0,4,,Marvin.JsonPatch.Helpers.ExpressionHelpers' Marvin.JsonPatch.JsonPatchDocument<TModel>' Marvin.JsonPatch.XUnitTest.ExpressionHelpersTests' Marvin.JsonPatch.XUnitTest.CaseTransformTypeTests
+Marvin.JsonPatch.Helpers,ConversionResult,0,1,2,0,1,11,1,0,0,-1,0,1,,Marvin.JsonPatch.Helpers.PropertyHelpers
+Marvin.JsonPatch.Helpers,ExpressionHelpers,0,5,0,0,2,134,9,0,0,-1,1,2,Marvin.JsonPatch.Helpers.CaseTransformType,Marvin.JsonPatch.JsonPatchDocument<TModel>' Marvin.JsonPatch.XUnitTest.ExpressionHelpersTests
+Marvin.JsonPatch.Helpers,GetValueResult,0,1,2,0,1,16,1,0,0,-1,0,0,,
+Marvin.JsonPatch.Helpers,JsonPatchProperty,0,1,2,0,1,19,1,0,0,-1,0,0,,
+Marvin.JsonPatch.Helpers,ObjectTreeAnalysisResult,0,2,4,0,1,113,10,0,0,-1,0,0,,
+Marvin.JsonPatch.Helpers,PropertyHelpers,0,10,0,0,3,279,29,0,0,-1,3,0,Marvin.JsonPatch.Helpers.ConversionResult' Marvin.JsonPatch.Helpers.ActualPropertyPathResult' Marvin.JsonPatch.Operations.OperationBase,
+Marvin.JsonPatch.Helpers,RemovedPropertyTypeResult,0,1,2,0,1,16,1,0,0,-1,0,0,,
+Marvin.JsonPatch,IJsonPatchDocument,0,1,1,0,0,5,1,2,0,-1,0,2,,Marvin.JsonPatch.Converters.JsonPatchDocumentConverter' Marvin.JsonPatch.Converters.TypedJsonPatchDocumentConverter
+Marvin.JsonPatch,JsonPatchDocument,0,11,2,0,10,189,28,0,1,-1,6,7,Marvin.JsonPatch.Internal.PathHelpers' Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.Internal.ErrorReporter' Marvin.JsonPatch.Exceptions.JsonPatchException' Marvin.JsonPatch.Adapters.IObjectAdapter,Marvin.JsonPatch.Converters.JsonPatchDocumentConverter' Marvin.JsonPatch.JsonPatchDocument<TModel>' Marvin.JsonPatch.XUnitTest.JsonPropertyTests' Marvin.JsonPatch.XUnitTest.CaseTransformTypeTests' Marvin.JsonPatch.XUnitTest.ObjectAdapterTestsOnDerived' Marvin.JsonPatch.XUnitTest.ObjectAdapterTestsOnNested' Marvin.JsonPatch.XUnitTest.ObjectAdapterTests
+Marvin.JsonPatch,JsonPatchDocument<TModel>,0,33,3,0,27,675,78,0,1,-1,8,0,Marvin.JsonPatch.Helpers.CaseTransformType' Marvin.JsonPatch.JsonPatchDocument' Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.Internal.ErrorReporter' Marvin.JsonPatch.Adapters.IObjectAdapter' Marvin.JsonPatch.Helpers.ExpressionHelpers' Marvin.JsonPatch.Properties.Resources,
+Marvin.JsonPatch,JsonPatchError,0,1,3,0,1,30,1,0,0,-1,1,2,Marvin.JsonPatch.Operations.OperationBase,Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Exceptions.JsonPatchException
+Marvin.JsonPatch.Internal,ConversionResult,0,1,2,0,1,10,1,0,0,-1,0,5,,Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Internal.ConversionResultProvider' Marvin.JsonPatch.Internal.DictionaryAdapter<TKey;TValue>' Marvin.JsonPatch.Internal.ListAdapter' Marvin.JsonPatch.Internal.PocoAdapter
+Marvin.JsonPatch.Internal,ConversionResultProvider,0,3,0,0,2,62,6,0,0,-1,1,4,Marvin.JsonPatch.Internal.ConversionResult,Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Internal.DictionaryAdapter<TKey;TValue>' Marvin.JsonPatch.Internal.ListAdapter' Marvin.JsonPatch.Internal.PocoAdapter
+Marvin.JsonPatch.Internal,DictionaryAdapter<TKey;TValue>,0,7,0,0,5,162,20,0,1,-1,3,0,Marvin.JsonPatch.Properties.Resources' Marvin.JsonPatch.Internal.ConversionResult' Marvin.JsonPatch.Internal.ConversionResultProvider,
+Marvin.JsonPatch.Internal,ErrorReporter,1,0,0,1,0,4,0,0,0,-1,0,2,,Marvin.JsonPatch.JsonPatchDocument' Marvin.JsonPatch.JsonPatchDocument<TModel>
+Marvin.JsonPatch.Internal,IAdapter,0,5,0,0,0,32,5,3,0,-1,0,2,,Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Internal.ObjectVisitor
+Marvin.JsonPatch.Internal,ListAdapter,0,9,0,0,5,278,33,0,1,-1,6,1,Marvin.JsonPatch.Internal.OperationType' Marvin.JsonPatch.Internal.PositionInfo' Marvin.JsonPatch.Internal.PositionType' Marvin.JsonPatch.Properties.Resources' Marvin.JsonPatch.Internal.ConversionResult' Marvin.JsonPatch.Internal.ConversionResultProvider,Marvin.JsonPatch.Internal.ObjectVisitor
+Marvin.JsonPatch.Internal,PositionInfo,0,1,2,0,1,10,1,0,0,-1,1,1,Marvin.JsonPatch.Internal.PositionType,Marvin.JsonPatch.Internal.ListAdapter
+Marvin.JsonPatch.Internal,PositionType,0,0,0,0,0,7,0,0,0,-1,0,2,,Marvin.JsonPatch.Internal.ListAdapter' Marvin.JsonPatch.Internal.PositionInfo
+Marvin.JsonPatch.Internal,OperationType,0,0,0,0,0,7,0,0,0,-1,0,1,,Marvin.JsonPatch.Internal.ListAdapter
+Marvin.JsonPatch.Internal,ObjectVisitor,2,3,0,0,2,50,7,0,0,0,4,1,Marvin.JsonPatch.Internal.ParsedPath' Marvin.JsonPatch.Internal.IAdapter' Marvin.JsonPatch.Internal.ListAdapter' Marvin.JsonPatch.Internal.PocoAdapter,Marvin.JsonPatch.Adapters.ObjectAdapter
+Marvin.JsonPatch.Internal,ParsedPath,2,2,2,0,1,71,7,0,0,0,1,2,Marvin.JsonPatch.Properties.Resources,Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Internal.ObjectVisitor
+Marvin.JsonPatch.Internal,PathHelpers,0,1,0,0,0,21,3,0,0,-1,1,1,Marvin.JsonPatch.Properties.Resources,Marvin.JsonPatch.JsonPatchDocument
+Marvin.JsonPatch.Internal,PocoAdapter,0,7,0,0,5,161,23,0,1,-1,3,1,Marvin.JsonPatch.Properties.Resources' Marvin.JsonPatch.Internal.ConversionResult' Marvin.JsonPatch.Internal.ConversionResultProvider,Marvin.JsonPatch.Internal.ObjectVisitor
+Marvin.JsonPatch.Operations,OperationBase,0,5,5,0,5,47,5,1,0,-1,1,2,Marvin.JsonPatch.Operations.OperationType,Marvin.JsonPatch.Helpers.PropertyHelpers' Marvin.JsonPatch.JsonPatchError
+Marvin.JsonPatch.Operations,Operation,0,5,0,0,5,54,8,1,1,-1,3,6,Marvin.JsonPatch.Operations.OperationType' Marvin.JsonPatch.Adapters.IObjectAdapter' Marvin.JsonPatch.Properties.Resources,Marvin.JsonPatch.Adapters.IObjectAdapter' Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Converters.TypedJsonPatchDocumentConverter' Marvin.JsonPatch.JsonPatchDocument' Marvin.JsonPatch.JsonPatchDocument<TModel>' Marvin.JsonPatch.Operations.Operation<TModel>
+Marvin.JsonPatch.Operations,Operation<TModel>,0,4,0,0,4,67,11,0,2,-1,4,0,Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.Operations.OperationType' Marvin.JsonPatch.Adapters.IObjectAdapter' Marvin.JsonPatch.Properties.Resources,
+Marvin.JsonPatch.Operations,OperationType,0,0,0,0,0,10,0,0,0,-1,0,3,,Marvin.JsonPatch.Operations.OperationBase' Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.Operations.Operation<TModel>
+Marvin.JsonPatch.Properties,Resources,2,21,21,0,0,285,23,0,0,0.1,0,10,,Marvin.JsonPatch.Adapters.ObjectAdapter' Marvin.JsonPatch.Converters.JsonPatchDocumentConverter' Marvin.JsonPatch.JsonPatchDocument<TModel>' Marvin.JsonPatch.Internal.DictionaryAdapter<TKey;TValue>' Marvin.JsonPatch.Internal.ListAdapter' Marvin.JsonPatch.Internal.ParsedPath' Marvin.JsonPatch.Internal.PathHelpers' Marvin.JsonPatch.Internal.PocoAdapter' Marvin.JsonPatch.Operations.Operation' Marvin.JsonPatch.Operations.Operation<TModel>

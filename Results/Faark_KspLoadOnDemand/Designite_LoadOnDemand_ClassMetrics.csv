@@ -1,48 +1,70 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConfigExtensions,0,1,0,0,1,7,1,0,0,-1,0,0
-ImageSettings,0,4,6,0,4,83,10,0,0,-1,0,4
-ImageConfigItem,0,9,6,0,7,109,16,0,0,-1,1,1
-Config,4,9,9,0,3,207,22,0,0,0.22,2,10
-External,0,17,0,0,1,94,19,0,0,-1,1,0
-NativeBridge,16,15,0,0,6,242,19,0,0,0.4,4,3
-Stuff,2,3,0,0,2,24,3,0,0,1,0,2
-Extensions,0,5,0,0,5,32,9,0,0,-1,0,0
-AggregateException,0,3,1,0,2,27,5,0,0,-1,0,1
-UnmanagedLibrary,1,3,0,0,3,109,8,0,0,0,0,1
-Logger,0,3,0,0,3,87,4,0,0,-1,0,0
-LoadOnDemand,0,1,1,0,0,198,2,0,0,-1,0,0
-ToolbarManager,6,2,2,0,1,55,2,0,1,0,4,0
-IToolbarManager,0,1,0,0,0,17,1,1,0,-1,0,1
-IButton,0,1,10,0,0,179,1,1,0,-1,2,6
-IDrawable,0,2,0,0,0,22,2,1,0,-1,0,2
-ClickEvent,2,1,0,2,0,25,1,0,0,0,1,0
-MouseMoveEvent,1,1,0,1,0,16,1,2,0,0,1,0
-MouseEnterEvent,0,1,0,0,0,11,1,0,1,-1,1,0
-MouseLeaveEvent,0,1,0,0,0,11,1,0,1,-1,1,0
-IVisibility,0,0,1,0,0,14,0,1,0,-1,0,2
-GameScenesVisibility,2,1,1,0,1,28,1,0,1,0,1,0
-PopupMenuDrawable,7,6,0,0,6,71,6,0,1,0,2,0
-Button,7,7,10,0,1,149,10,0,1,0.57,3,2
-ToolbarTypes,4,6,0,0,0,35,6,0,0,0.83,1,5
-ButtonTypes,15,1,0,0,0,36,1,0,0,0,1,1
-LegacyNativeWrapper,5,7,0,0,0,50,7,0,0,1,3,0
-LegacyStuff,8,6,0,0,2,117,17,0,0,0,0,0
-LegacyInterface,3,1,0,3,0,21,2,0,0,0,0,1
-LegacyTextureLoaderBase,0,1,1,0,1,7,1,0,0,-1,0,0
-LegacyLoader,0,1,0,0,1,37,14,0,0,-1,0,0
-ActivityGUI,9,14,0,4,8,160,34,0,0,0,1,3
-Test,0,1,1,0,0,16,2,0,0,-1,0,0
-DevStuff,7,3,0,1,1,404,15,0,0,0,4,0
-EditorUsedParts,1,4,0,0,0,53,13,0,0,0.5,2,0
-EditorPages,4,6,0,0,0,80,15,0,0,0,2,0
-Flight,1,4,0,0,0,84,18,0,0,0.5,2,0
-Startup,3,9,0,0,1,277,37,0,0,0.33,5,0
-StartupDelayed,1,4,0,1,1,105,15,0,0,0,3,1
-WorkQueue,3,3,0,0,1,59,7,0,0,0.67,1,0
-InternalManager,2,3,1,1,3,50,6,0,0,0,2,1
-PartManager,3,4,1,2,4,94,7,0,0,0,4,2
-TextureManager,3,15,1,0,7,480,53,0,0,0.4,5,2
-IResource,0,2,1,0,0,17,2,2,0,-1,0,6
-IResourceExtends,0,1,0,0,1,7,1,0,0,-1,1,0
-ResourceDummy,0,4,1,0,4,29,5,0,1,-1,0,2
-ResourceCollection,1,5,2,0,4,67,10,0,1,0.8,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+LoadOnDemand,ConfigExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+LoadOnDemand,ImageSettings,0,4,6,0,4,70,10,0,0,-1,0,4,,LoadOnDemand.ImageConfigItem' LoadOnDemand.Config' LoadOnDemand.NativeBridge' LoadOnDemand.Managers.TextureManager
+LoadOnDemand,ImageConfigItem,0,9,6,0,7,106,15,0,0,-1,1,3,LoadOnDemand.ImageSettings,LoadOnDemand.Config' LoadOnDemand.Logic.Startup' LoadOnDemand.Managers.TextureManager
+LoadOnDemand,Config,4,9,9,0,3,199,22,0,0,0.22,2,10,LoadOnDemand.ImageSettings' LoadOnDemand.ImageConfigItem,LoadOnDemand.NativeBridge' LoadOnDemand.Logic.ActivityGUI' LoadOnDemand.Logic.DevStuff' LoadOnDemand.Logic.EditorUsedParts' LoadOnDemand.Logic.EditorPages' LoadOnDemand.Logic.Flight' LoadOnDemand.Logic.Startup' LoadOnDemand.Logic.StartupDelayed' LoadOnDemand.Logic.WorkQueue' LoadOnDemand.Managers.TextureManager
+LoadOnDemand,External,0,17,0,0,1,95,19,0,0,-1,4,0,LoadOnDemand.Resources.IResource' LoadOnDemand.Managers.PartManager' LoadOnDemand.Managers.InternalManager' LoadOnDemand.Managers.TextureManager,
+LoadOnDemand,NativeBridge,16,15,0,0,6,298,18,0,0,0.4,9,3,LoadOnDemand.Config' LoadOnDemand.Legacy.LegacyNativeWrapper' LoadOnDemand.UnmanagedLibrary' LoadOnDemand.AggregateException' LoadOnDemand.Logic.ActivityGUI' LoadOnDemand.Logic.WorkQueue' LoadOnDemand.Logic.DevStuff' LoadOnDemand.ImageConfig' LoadOnDemand.ImageSettings,LoadOnDemand.Logic.Startup' LoadOnDemand.Managers.TextureManager' LoadOnDemand.Managers.TextureResource
+LoadOnDemand,PInvokeDelegates,0,0,0,0,0,45,0,0,0,-1,0,0,,
+LoadOnDemand,ImageConfig,5,0,0,5,0,9,0,0,0,-1,0,2,,LoadOnDemand.NativeBridge' LoadOnDemand.Legacy.LegacyNativeWrapper
+LoadOnDemand,Callbacks,0,0,0,0,0,16,0,0,0,-1,0,0,,
+LoadOnDemand,Stuff,2,3,0,0,2,27,3,0,0,1,0,2,,LoadOnDemand.Legacy.LegacyNativeWrapper' LoadOnDemand.Managers.TextureManager
+LoadOnDemand,Extensions,0,5,0,0,5,36,9,0,0,-1,0,0,,
+LoadOnDemand,AggregateException,0,3,1,0,2,25,5,0,0,-1,0,1,,LoadOnDemand.NativeBridge
+LoadOnDemand,UnmanagedLibrary,1,3,0,0,3,108,7,0,0,0,2,1,LoadOnDemand.SafeLibraryHandle' LoadOnDemand.NativeMethods,LoadOnDemand.NativeBridge
+LoadOnDemand,SafeLibraryHandle,0,2,1,0,0,16,2,0,0,-1,1,2,LoadOnDemand.NativeMethods,LoadOnDemand.UnmanagedLibrary' LoadOnDemand.NativeMethods
+LoadOnDemand,NativeMethods,1,3,0,0,3,12,3,0,0,0,1,2,LoadOnDemand.SafeLibraryHandle,LoadOnDemand.UnmanagedLibrary' LoadOnDemand.SafeLibraryHandle
+LoadOnDemand,Logger,0,3,0,0,3,89,4,0,0,-1,0,0,,
+LoadOnDemand.Foreign,LoadOnDemand,0,1,1,0,0,192,2,0,0,-1,1,0,LoadOnDemand.Foreign.Bindings,
+LoadOnDemand.Foreign,Bindings,16,0,0,16,0,19,0,0,0,-1,0,7,,LoadOnDemand.Foreign.LoadOnDemand' LoadOnDemand.Foreign.Resource' LoadOnDemand.Foreign.Internal' LoadOnDemand.Foreign.Internals' LoadOnDemand.Foreign.Part' LoadOnDemand.Foreign.Parts' LoadOnDemand.Foreign.Textures
+LoadOnDemand.Foreign,Urls,0,1,0,0,1,7,1,0,0,-1,0,0,,
+LoadOnDemand.Foreign,Resource,1,3,1,0,3,24,3,0,0,0,1,5,LoadOnDemand.Foreign.Bindings,LoadOnDemand.Foreign.Internal' LoadOnDemand.Foreign.Internals' LoadOnDemand.Foreign.Part' LoadOnDemand.Foreign.Parts' LoadOnDemand.Foreign.Textures
+LoadOnDemand.Foreign,Internal,0,2,2,0,2,23,2,0,0,-1,2,1,LoadOnDemand.Foreign.Bindings' LoadOnDemand.Foreign.Resource,LoadOnDemand.Foreign.Internals
+LoadOnDemand.Foreign,Internals,0,3,0,0,3,15,3,0,0,-1,3,0,LoadOnDemand.Foreign.Internal' LoadOnDemand.Foreign.Bindings' LoadOnDemand.Foreign.Resource,
+LoadOnDemand.Foreign,Part,0,2,3,0,2,34,2,0,0,-1,2,1,LoadOnDemand.Foreign.Bindings' LoadOnDemand.Foreign.Resource,LoadOnDemand.Foreign.Parts
+LoadOnDemand.Foreign,Parts,0,3,0,0,3,15,3,0,0,-1,3,0,LoadOnDemand.Foreign.Part' LoadOnDemand.Foreign.Bindings' LoadOnDemand.Foreign.Resource,
+LoadOnDemand.Foreign,Textures,0,4,0,0,4,19,4,0,0,-1,2,0,LoadOnDemand.Foreign.Bindings' LoadOnDemand.Foreign.Resource,
+ToolbarWrapper,ToolbarManager,6,2,2,0,1,56,2,0,1,0,3,1,ToolbarWrapper.IToolbarManager' ToolbarWrapper.ToolbarTypes' ToolbarWrapper.IButton,LoadOnDemand.Logic.DevStuff
+ToolbarWrapper,IToolbarManager,0,1,0,0,0,14,1,1,0,-1,0,2,,ToolbarWrapper.ToolbarManager' LoadOnDemand.Logic.DevStuff
+ToolbarWrapper,IButton,0,1,10,0,0,186,1,1,0,-1,0,6,,ToolbarWrapper.ToolbarManager' ToolbarWrapper.ClickEvent' ToolbarWrapper.MouseMoveEvent' ToolbarWrapper.MouseEnterEvent' ToolbarWrapper.MouseLeaveEvent' LoadOnDemand.Logic.DevStuff
+ToolbarWrapper,IDrawable,0,2,0,0,0,18,2,1,0,-1,0,1,,ToolbarWrapper.Button
+ToolbarWrapper,ClickEvent,2,1,0,2,0,22,1,0,0,0,1,0,ToolbarWrapper.IButton,
+ToolbarWrapper,MouseMoveEvent,1,1,0,1,0,13,1,2,0,0,1,0,ToolbarWrapper.IButton,
+ToolbarWrapper,MouseEnterEvent,0,1,0,0,0,9,1,0,1,-1,1,0,ToolbarWrapper.IButton,
+ToolbarWrapper,MouseLeaveEvent,0,1,0,0,0,9,1,0,1,-1,1,0,ToolbarWrapper.IButton,
+ToolbarWrapper,IVisibility,0,0,1,0,0,11,0,1,0,-1,0,1,,ToolbarWrapper.Button
+ToolbarWrapper,GameScenesVisibility,2,1,1,0,1,18,1,0,1,0,1,0,ToolbarWrapper.ToolbarTypes,
+ToolbarWrapper,PopupMenuDrawable,7,6,0,0,6,67,6,0,1,0,2,0,ToolbarWrapper.ToolbarTypes' ToolbarWrapper.Button,
+ToolbarWrapper,Button,7,7,10,0,1,181,10,0,1,0.57,4,1,ToolbarWrapper.ToolbarTypes' ToolbarWrapper.IVisibility' ToolbarWrapper.IDrawable' ToolbarWrapper.ButtonTypes,ToolbarWrapper.PopupMenuDrawable
+ToolbarWrapper,ToolbarTypes,4,6,0,0,0,37,6,0,0,0.83,1,5,ToolbarWrapper.ButtonTypes,ToolbarWrapper.ToolbarManager' ToolbarWrapper.GameScenesVisibility' ToolbarWrapper.PopupMenuDrawable' ToolbarWrapper.Button' ToolbarWrapper.ButtonTypes
+ToolbarWrapper,ButtonTypes,15,1,0,0,0,36,1,0,0,0,1,2,ToolbarWrapper.ToolbarTypes,ToolbarWrapper.Button' ToolbarWrapper.ToolbarTypes
+LoadOnDemand.Legacy,LegacyNativeWrapper,5,7,0,0,0,56,7,0,0,1,3,1,LoadOnDemand.Stuff' LoadOnDemand.Legacy.LegacyInterface' LoadOnDemand.ImageConfig,LoadOnDemand.NativeBridge
+LoadOnDemand.Legacy,LegacyStuff,8,6,0,0,2,141,16,0,0,0.33,1,0,LoadOnDemand.Legacy.ThreadData,
+LoadOnDemand.Legacy,ThreadData,2,1,0,2,1,10,1,0,0,0,0,1,,LoadOnDemand.Legacy.LegacyStuff
+LoadOnDemand.Legacy,LegacyInterface,3,1,0,3,0,23,2,0,0,0,0,1,,LoadOnDemand.Legacy.LegacyNativeWrapper
+LoadOnDemand.Legacy,InternalTexture,4,0,0,4,0,6,0,0,0,-1,0,0,,
+LoadOnDemand.Legacy,LegacyTextureLoaderBase,0,1,1,0,1,5,1,0,0,-1,0,0,,
+LoadOnDemand.Legacy,LegacyLoader,0,1,0,0,1,45,3,0,0,-1,0,0,,
+LoadOnDemand.Logic,ActivityGUI,9,14,0,4,8,211,25,0,0,0.21,1,6,LoadOnDemand.Config,LoadOnDemand.NativeBridge' LoadOnDemand.Logic.DevStuff' LoadOnDemand.Logic.Startup' LoadOnDemand.Logic.StartupDelayed' LoadOnDemand.Managers.TextureManager' LoadOnDemand.Managers.TextureResource
+LoadOnDemand.Logic,Test,0,1,1,0,0,16,2,0,0,-1,0,0,,
+LoadOnDemand.Logic,DevStuff,7,3,0,1,1,408,13,0,0,0,7,1,LoadOnDemand.Resources.ResourceCollection' ToolbarWrapper.IButton' LoadOnDemand.Managers.TextureManager' LoadOnDemand.Logic.ActivityGUI' LoadOnDemand.Config' ToolbarWrapper.ToolbarManager' ToolbarWrapper.IToolbarManager,LoadOnDemand.NativeBridge
+LoadOnDemand.Logic,EditorUsedParts,1,4,0,0,0,59,13,0,0,0.75,2,0,LoadOnDemand.Managers.PartManager' LoadOnDemand.Config,
+LoadOnDemand.Logic,EditorPages,4,6,0,0,0,91,15,0,0,0,2,0,LoadOnDemand.Managers.PartManager' LoadOnDemand.Config,
+LoadOnDemand.Logic,Flight,1,4,0,0,0,105,18,0,0,0.5,2,0,LoadOnDemand.Managers.PartManager' LoadOnDemand.Config,
+LoadOnDemand.Logic,Startup,3,9,0,0,1,322,32,0,0,0.67,8,0,LoadOnDemand.Managers.TextureManager' LoadOnDemand.ImageConfigItem' LoadOnDemand.Config' LoadOnDemand.Managers.PartData' LoadOnDemand.NativeBridge' LoadOnDemand.Managers.InternalManager' LoadOnDemand.Logic.StartupDelayed' LoadOnDemand.Logic.ActivityGUI,
+LoadOnDemand.Logic,StartupDelayed,1,4,0,1,1,123,14,0,0,0,5,1,LoadOnDemand.Config' LoadOnDemand.Managers.PartManager' LoadOnDemand.Managers.TextureManager' LoadOnDemand.Logic.ActivityGUI' LoadOnDemand.Managers.InternalManager,LoadOnDemand.Logic.Startup
+LoadOnDemand.Logic,WorkQueue,3,3,0,0,1,66,6,0,0,0.67,1,2,LoadOnDemand.Config,LoadOnDemand.NativeBridge' LoadOnDemand.Managers.TextureManager
+LoadOnDemand.Managers,InternalManager,2,3,1,1,3,61,6,0,0,0,5,4,LoadOnDemand.Managers.TexturesOfObj' LoadOnDemand.Managers.InternalData' LoadOnDemand.Managers.TextureManager' LoadOnDemand.Resources.ResourceCollection' LoadOnDemand.Resources.IResource,LoadOnDemand.External' LoadOnDemand.Logic.Startup' LoadOnDemand.Logic.StartupDelayed' LoadOnDemand.Managers.PartManager
+LoadOnDemand.Managers,InternalData,2,0,0,2,0,5,0,0,0,-1,0,1,,LoadOnDemand.Managers.InternalManager
+LoadOnDemand.Managers,TexturesOfObj,0,0,0,0,0,29,0,0,0,-1,0,2,,LoadOnDemand.Managers.InternalManager' LoadOnDemand.Managers.PartManager
+LoadOnDemand.Managers,PartManager,3,4,1,2,4,113,7,0,0,0,7,5,LoadOnDemand.Managers.TexturesOfObj' LoadOnDemand.Managers.InternalsOfObj' LoadOnDemand.Managers.PartData' LoadOnDemand.Managers.TextureManager' LoadOnDemand.Managers.InternalManager' LoadOnDemand.Resources.ResourceCollection' LoadOnDemand.Resources.IResource,LoadOnDemand.External' LoadOnDemand.Logic.EditorUsedParts' LoadOnDemand.Logic.EditorPages' LoadOnDemand.Logic.Flight' LoadOnDemand.Logic.StartupDelayed
+LoadOnDemand.Managers,PartData,4,0,0,4,0,7,0,0,0,-1,0,2,,LoadOnDemand.Logic.Startup' LoadOnDemand.Managers.PartManager
+LoadOnDemand.Managers,InternalsOfObj,0,0,0,0,0,12,0,0,0,-1,0,1,,LoadOnDemand.Managers.PartManager
+LoadOnDemand.Managers,TextureManager,3,15,1,0,7,551,37,0,0,0.4,12,6,LoadOnDemand.Managers.TextureData' LoadOnDemand.Managers.TextureResource' LoadOnDemand.Resources.ResourceDummy' LoadOnDemand.Managers.TextureReference' LoadOnDemand.Resources.IResource' LoadOnDemand.Logic.WorkQueue' LoadOnDemand.NativeBridge' LoadOnDemand.Logic.ActivityGUI' LoadOnDemand.ImageConfigItem' LoadOnDemand.ImageSettings' LoadOnDemand.Config' LoadOnDemand.Stuff,LoadOnDemand.External' LoadOnDemand.Logic.DevStuff' LoadOnDemand.Logic.Startup' LoadOnDemand.Logic.StartupDelayed' LoadOnDemand.Managers.InternalManager' LoadOnDemand.Managers.PartManager
+LoadOnDemand.Managers,TextureData,6,2,0,6,2,22,2,0,0,0,0,2,,LoadOnDemand.Managers.TextureManager' LoadOnDemand.Managers.TextureResource
+LoadOnDemand.Managers,TextureResource,2,4,2,2,4,96,10,0,0,0.5,4,2,LoadOnDemand.Managers.TextureData' LoadOnDemand.Managers.TextureReference' LoadOnDemand.Logic.ActivityGUI' LoadOnDemand.NativeBridge,LoadOnDemand.Managers.TextureManager' LoadOnDemand.Managers.TextureReference
+LoadOnDemand.Managers,TextureReference,1,4,2,1,4,52,8,0,1,1,1,2,LoadOnDemand.Managers.TextureResource,LoadOnDemand.Managers.TextureManager' LoadOnDemand.Managers.TextureResource
+LoadOnDemand.Resources,IResource,0,2,1,0,0,15,2,3,0,-1,0,5,,LoadOnDemand.External' LoadOnDemand.Managers.InternalManager' LoadOnDemand.Managers.PartManager' LoadOnDemand.Managers.TextureManager' LoadOnDemand.Resources.IResourceExtends
+LoadOnDemand.Resources,IResourceExtends,0,1,0,0,1,7,1,0,0,-1,1,0,LoadOnDemand.Resources.IResource,
+LoadOnDemand.Resources,ResourceDummy,0,4,1,0,4,28,5,0,1,-1,0,1,,LoadOnDemand.Managers.TextureManager
+LoadOnDemand.Resources,ResourceCollection,1,5,2,0,4,74,11,0,1,0.8,0,3,,LoadOnDemand.Logic.DevStuff' LoadOnDemand.Managers.InternalManager' LoadOnDemand.Managers.PartManager

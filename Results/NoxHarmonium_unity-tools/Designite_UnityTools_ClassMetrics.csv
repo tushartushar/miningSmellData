@@ -1,0 +1,41 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+UnityTools.IO,UnityAgent,0,19,0,0,18,183,19,0,0,-1,1,1,UnityTools.IO.UnityAgentRequest,UnityTools.Tests.IOTests
+UnityTools.IO,UnityAgentDataType,1,3,1,0,3,25,3,2,0,1,0,1,,UnityTools.IO.UnityAgentRequest
+UnityTools.IO,UnityAgentFormDataType,2,4,0,0,4,37,5,0,1,0,0,1,,UnityTools.IO.UnityAgentRequest
+UnityTools.IO,UnityAgentRequest,6,9,2,3,9,191,13,0,0,0.22,6,2,UnityTools.IO.UnityAgentDataType' UnityTools.IO.UnityAgentResponse' UnityTools.Threading.UnityTask' UnityTools.IO.UnityAgentFormDataType' UnityTools.IO.UnityAgentJsonDataType' LitJson.JsonData,UnityTools.IO.UnityAgent' UnityTools.Tests.IOTests
+UnityTools.IO,UnityAgentResponse,3,2,5,0,1,68,2,0,0,0,1,2,LitJson.JsonData,UnityTools.IO.UnityAgentRequest' UnityTools.Tests.IOTests
+UnityTools.IO,UnityAgentJsonDataType,2,4,0,0,4,35,5,0,1,0.5,1,1,LitJson.JsonData,UnityTools.IO.UnityAgentRequest
+UnityTools.Shared,IInitialiseOnStartup,0,1,0,0,0,6,1,1,0,-1,0,1,,UnityTools.Shared.UnityToolsSceneObject
+UnityTools.Shared,UnityToolsSceneObject,2,1,1,1,0,32,2,0,1,0,3,1,UnityEngine.GameObject' UnityTools.Utils.ReflectionHelpers' UnityTools.Shared.IInitialiseOnStartup,UnityTools.Threading.UnityDispatcher
+UnityTools.Tests,IOTests,1,13,0,0,10,193,14,0,0,0.31,6,0,UnityTools.IO.UnityAgent' UnityTools.IO.UnityAgentResponse' UnityTools.Threading.UnityTask' UnityTools.IO.UnityAgentRequest' LitJson.JsonData' LitJson.JsonMapper,
+UnityTools.Tests,ThreadingTests,0,9,0,0,9,167,11,0,0,-1,2,0,UnityTools.Threading.UnityTask' UnityTools.Utils.Math,
+UnityTools.Threading,IDispatcher,0,3,0,0,0,23,3,1,0,-1,0,2,,UnityTools.Threading.UnityTask' UnityTools.Threading.UnityTask<T>
+UnityTools.Threading,UnityTask,11,11,2,0,8,396,37,1,0,0,2,5,UnityTools.Threading.IDispatcher' UnityEngine.Debug,UnityTools.IO.UnityAgentRequest' UnityTools.Tests.IOTests' UnityTools.Tests.ThreadingTests' UnityTools.Threading.UnityTask<T>' UnityTools.Utils.Extensions
+UnityTools.Threading,UnityTask<T>,0,6,1,0,6,134,6,0,1,-1,2,0,UnityTools.Threading.IDispatcher' UnityTools.Threading.UnityTask,
+UnityTools.Threading,UnityDispatcher,5,7,1,0,4,115,11,0,1,0.29,3,0,UnityEngine.GameObject' UnityTools.Shared.UnityToolsSceneObject' UnityEngine.Debug,
+UnityTools.Utils,Extensions,0,3,0,0,2,30,3,0,0,-1,1,0,UnityTools.Threading.UnityTask,
+UnityTools.Utils,ReflectionHelpers,0,2,0,0,2,19,2,0,0,-1,1,1,UnityEngine.Component,UnityTools.Shared.UnityToolsSceneObject
+UnityTools.Utils,Math,0,1,0,0,1,24,2,0,0,-1,0,1,,UnityTools.Tests.ThreadingTests
+LitJson,JsonType,0,0,0,0,0,11,0,0,0,-1,0,4,,LitJson.IJsonWrapper' LitJson.JsonData' LitJson.JsonMapper' LitJson.JsonMockWrapper
+LitJson,IJsonWrapper,0,14,7,0,0,24,14,2,0,-1,2,2,LitJson.JsonType' LitJson.JsonWriter,LitJson.JsonData' LitJson.JsonMapper
+LitJson,JsonData,10,49,25,0,15,740,88,0,1,0.14,4,5,LitJson.JsonType' LitJson.JsonWriter' LitJson.OrderedDictionaryEnumerator' LitJson.IJsonWrapper,UnityTools.IO.UnityAgentRequest' UnityTools.IO.UnityAgentResponse' UnityTools.IO.UnityAgentJsonDataType' UnityTools.Tests.IOTests' LitJson.JsonMapper
+LitJson,OrderedDictionaryEnumerator,1,3,4,0,3,35,3,0,0,0,0,1,,LitJson.JsonData
+LitJson,JsonException,0,7,0,0,3,37,7,0,0,-1,1,0,LitJson.ParserToken,
+LitJson,PropertyMetadata,3,0,0,3,0,6,0,0,0,-1,0,1,,LitJson.JsonMapper
+LitJson,ArrayMetadata,3,0,3,0,0,23,0,0,0,-1,0,1,,LitJson.JsonMapper
+LitJson,ObjectMetadata,3,0,3,0,0,23,0,0,0,-1,0,1,,LitJson.JsonMapper
+LitJson,JsonMapper,16,26,0,0,14,644,91,0,0,0,10,1,LitJson.JsonWriter' LitJson.ArrayMetadata' LitJson.ObjectMetadata' LitJson.PropertyMetadata' LitJson.JsonReader' LitJson.JsonToken' LitJson.IJsonWrapper' LitJson.JsonType' LitJson.JsonMockWrapper' LitJson.JsonData,UnityTools.Tests.IOTests
+LitJson,JsonMockWrapper,0,31,16,0,14,69,31,0,1,-1,2,1,LitJson.JsonType' LitJson.JsonWriter,LitJson.JsonMapper
+LitJson,JsonToken,0,0,0,0,0,15,0,0,0,-1,0,2,,LitJson.JsonMapper' LitJson.JsonReader
+LitJson,JsonReader,15,12,7,0,4,342,36,0,0,0.17,3,1,LitJson.Lexer' LitJson.JsonToken' LitJson.ParserToken,LitJson.JsonMapper
+LitJson,Condition,0,0,0,0,0,8,0,0,0,-1,0,1,,LitJson.JsonWriter
+LitJson,WriterContext,5,0,0,5,0,8,0,0,0,-1,0,1,,LitJson.JsonWriter
+LitJson,JsonWriter,11,27,4,0,17,332,52,0,0,0.07,2,4,LitJson.WriterContext' LitJson.Condition,LitJson.IJsonWrapper' LitJson.JsonData' LitJson.JsonMapper' LitJson.JsonMockWrapper
+LitJson,FsmContext,4,0,0,4,0,7,0,0,0,-1,1,1,LitJson.Lexer,LitJson.Lexer
+LitJson,Lexer,14,37,5,0,2,722,97,0,0,0,2,2,LitJson.FsmContext' LitJson.ParserToken,LitJson.JsonReader' LitJson.FsmContext
+LitJson,ParserToken,0,0,0,0,0,27,0,0,0,-1,0,3,,LitJson.JsonException' LitJson.JsonReader' LitJson.Lexer
+UnityTools,SimulatedMonoBehaviour,0,1,0,0,1,8,1,0,0,-1,0,0,,
+UnityEngine,MonoBehaviour,0,0,1,0,0,5,0,2,0,-1,0,0,,
+UnityEngine,Component,0,0,0,0,0,2,0,0,0,-1,0,1,,UnityTools.Utils.ReflectionHelpers
+UnityEngine,GameObject,0,2,0,0,2,6,2,0,0,-1,0,2,,UnityTools.Shared.UnityToolsSceneObject' UnityTools.Threading.UnityDispatcher
+UnityEngine,Debug,0,4,0,0,4,14,4,0,0,-1,0,2,,UnityTools.Threading.UnityTask' UnityTools.Threading.UnityDispatcher

@@ -1,17 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MainClass,2,11,0,0,1,303,53,0,0,0,4,0
-Accredit,2,4,0,0,1,87,19,0,0,0,1,2
-Helper,0,2,0,0,2,30,6,0,0,-1,1,1
-PostgresInterface,1,10,0,0,7,141,35,0,0,0.5,2,1
-PostgresRow,1,6,1,0,6,59,9,0,0,0,0,2
-Logging,1,2,0,0,2,14,3,0,0,0,0,3
-Benchmark,0,4,6,0,4,52,6,0,0,-1,0,1
-Commit,0,2,5,0,2,38,4,0,1,-1,2,1
-Config,3,10,11,0,7,164,29,0,1,0.6,0,1
-Machine,0,3,5,0,3,37,3,0,1,-1,0,1
-RunMetric,0,0,5,0,0,82,0,0,0,-1,0,1
-Run,1,3,3,0,3,38,5,0,1,1,3,1
-RunSet,3,4,14,2,4,190,23,0,1,1,5,1
-Product,0,2,5,0,2,37,4,0,0,-1,0,1
-HttpApi,0,13,1,0,6,113,20,0,0,-1,2,2
-ApiObject,0,1,0,0,0,4,1,5,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DbTool,MainClass,2,11,0,0,1,302,47,0,0,0,5,0,Benchmarker.PostgresRow' Benchmarker.PostgresInterface' Benchmarker.Logging' Benchmarker.Accredit' Benchmarker.Models.HttpApi,
+Benchmarker,Accredit,2,4,0,0,1,92,9,0,0,0,1,2,Benchmarker.Logging,DbTool.MainClass' Benchmarker.PostgresInterface
+Benchmarker,Helper,0,2,0,0,2,28,4,0,0,-1,1,1,Benchmarker.Logging,Benchmarker.Models.HttpApi
+Benchmarker,PostgresInterface,1,10,0,0,7,139,15,0,0,0.3,2,1,Benchmarker.Accredit' Benchmarker.PostgresRow,DbTool.MainClass
+Benchmarker,PostgresRow,1,6,1,0,6,50,12,0,0,0,1,2,Benchmarker.Value,DbTool.MainClass' Benchmarker.PostgresInterface
+Benchmarker,Value,2,0,0,2,0,4,0,0,0,-1,0,1,,Benchmarker.PostgresRow
+Benchmarker,Logging,1,2,0,0,2,14,3,0,0,0,0,3,,DbTool.MainClass' Benchmarker.Accredit' Benchmarker.Helper
+Benchmarker.Models,Benchmark,0,4,6,0,4,34,8,0,0,-1,0,2,,Benchmarker.Models.Run' Benchmarker.Models.RunSet
+Benchmarker.Models,Commit,0,2,5,0,2,23,4,0,1,-1,2,1,Benchmarker.Models.Product' Benchmarker.Models.RunSet,Benchmarker.Models.RunSet
+Benchmarker.Models,Config,3,10,11,0,7,141,33,0,1,0.6,0,1,,Benchmarker.Models.RunSet
+Benchmarker.Models,Machine,0,3,5,0,3,22,3,0,1,-1,0,1,,Benchmarker.Models.RunSet
+Benchmarker.Models,RunMetric,0,0,5,0,0,73,0,0,0,-1,0,1,,Benchmarker.Models.Run
+Benchmarker.Models,MetricType,0,0,0,0,0,14,0,0,0,-1,0,0,,
+Benchmarker.Models,Run,1,3,3,0,3,28,5,0,1,1,3,1,Benchmarker.Models.Benchmark' Benchmarker.Models.RunMetric' Benchmarker.Models.HttpApi,Benchmarker.Models.RunSet
+Benchmarker.Models,RunSet,3,4,14,2,4,138,9,0,1,1,8,1,Benchmarker.Models.HttpApi' Benchmarker.Models.Commit' Benchmarker.Models.Product' Benchmarker.Models.Machine' Benchmarker.Models.Config' Benchmarker.Models.Benchmark' Benchmarker.Models.Run' Benchmarker.Models.UploadResult,Benchmarker.Models.Commit
+Benchmarker.Models,UploadResult,0,1,3,0,1,12,1,0,0,-1,0,1,,Benchmarker.Models.RunSet
+Benchmarker.Models,Product,0,2,5,0,2,28,4,0,0,-1,0,2,,Benchmarker.Models.Commit' Benchmarker.Models.RunSet
+Benchmarker.Models,HttpApi,0,13,1,0,6,105,17,0,0,-1,2,3,Benchmarker.Models.ApiObject' Benchmarker.Helper,DbTool.MainClass' Benchmarker.Models.Run' Benchmarker.Models.RunSet
+Benchmarker.Models,TrustAllCertificatePolicy,0,2,0,0,2,10,2,0,0,-1,0,0,,
+Benchmarker.Models,ApiObject,0,1,0,0,0,4,1,5,0,-1,0,1,,Benchmarker.Models.HttpApi

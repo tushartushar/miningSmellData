@@ -1,19 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MobileServiceSingleSignOnAuthentication,0,2,0,0,1,36,2,0,1,-1,2,1
-MobileServiceUIAuthentication,0,2,0,0,1,29,2,0,1,-1,2,1
-MobileServiceIncrementalLoadingCollection,0,6,2,0,4,125,6,0,1,-1,1,1
-MobileServiceIncrementalLoadingCollectionExtensions,0,2,0,0,2,23,2,0,0,-1,3,0
-SingleSignOnExtensions,0,4,0,0,4,104,5,0,0,-1,3,0
-ExpressionUtility,1,2,1,0,2,52,2,0,1,1,3,0
-PartialEvaluator,0,3,0,0,1,135,3,0,0,-1,1,1
-VisitorHelper,2,5,0,0,3,87,9,0,0,0.6,0,2
-CurrentPlatform,0,1,4,0,1,42,1,0,1,-1,5,0
-ApplicationStorage,1,5,2,0,1,79,7,0,1,1,1,1
-AuthenticationBroker,0,5,0,0,1,171,13,0,0,-1,0,2
-PlatformInformation,1,0,6,0,0,56,0,0,1,-1,1,0
-PushUtility,1,3,1,0,3,27,3,0,1,1,3,0
-Push,2,13,3,0,11,279,23,0,0,0.46,7,1
-WnsRegistration,0,3,1,0,2,39,4,1,1,-1,0,2
-TemplateRegistrationType,0,0,0,0,0,6,0,0,0,-1,0,1
-WnsTemplateRegistration,1,5,4,0,3,116,14,0,2,0.8,2,2
-MobileServiceClientExtensions,0,5,0,0,5,90,5,0,0,-1,5,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Microsoft.WindowsAzure.MobileServices,MobileServiceSingleSignOnAuthentication,0,2,0,0,1,34,2,0,1,-1,2,1,Microsoft.WindowsAzure.MobileServices.IMobileServiceClient' Microsoft.WindowsAzure.MobileServices.AuthenticationBroker,Microsoft.WindowsAzure.MobileServices.SingleSignOnExtensions
+Microsoft.WindowsAzure.MobileServices,MobileServiceUIAuthentication,0,2,0,0,1,30,2,0,1,-1,2,1,Microsoft.WindowsAzure.MobileServices.IMobileServiceClient' Microsoft.WindowsAzure.MobileServices.AuthenticationBroker,Microsoft.WindowsAzure.MobileServices.MobileServiceClientExtensions
+Microsoft.WindowsAzure.MobileServices,MobileServiceIncrementalLoadingCollection<TTable;TCollection>,0,5,2,0,3,94,5,0,0,-1,1,0,Microsoft.WindowsAzure.MobileServices.IMobileServiceTableQuery,
+Microsoft.WindowsAzure.MobileServices,MobileServiceIncrementalLoadingCollection<T>,0,1,0,0,1,13,1,0,0,-1,1,0,Microsoft.WindowsAzure.MobileServices.IMobileServiceTableQuery,
+Microsoft.WindowsAzure.MobileServices,MobileServiceIncrementalLoadingCollectionExtensions,0,2,0,0,2,19,2,0,0,-1,2,0,Microsoft.WindowsAzure.MobileServices.IMobileServiceTableQuery' Microsoft.WindowsAzure.MobileServices.IMobileServiceTable,
+Microsoft.WindowsAzure.MobileServices,SingleSignOnExtensions,0,4,0,0,4,102,5,0,0,-1,3,0,Microsoft.WindowsAzure.MobileServices.IMobileServiceClient' Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider' Microsoft.WindowsAzure.MobileServices.MobileServiceSingleSignOnAuthentication,
+Microsoft.WindowsAzure.MobileServices,ExpressionUtility,1,2,1,0,2,54,2,0,1,1,3,0,Microsoft.WindowsAzure.MobileServices.IExpressionUtility' Microsoft.WindowsAzure.MobileServices.PartialEvaluator' Microsoft.WindowsAzure.MobileServices.VisitorHelper,
+Microsoft.WindowsAzure.MobileServices,PartialEvaluator,0,3,0,0,1,135,3,0,0,-1,1,1,Microsoft.WindowsAzure.MobileServices.VisitorHelper,Microsoft.WindowsAzure.MobileServices.ExpressionUtility
+Microsoft.WindowsAzure.MobileServices,VisitorHelper,2,5,0,0,3,90,7,0,0,0.4,0,2,,Microsoft.WindowsAzure.MobileServices.ExpressionUtility' Microsoft.WindowsAzure.MobileServices.PartialEvaluator
+Microsoft.WindowsAzure.MobileServices,CurrentPlatform,0,1,4,0,1,26,1,0,1,-1,1,0,Microsoft.WindowsAzure.MobileServices.ApplicationStorage,
+Microsoft.WindowsAzure.MobileServices,ApplicationStorage,1,5,2,0,1,75,7,0,1,1,1,1,Microsoft.WindowsAzure.MobileServices.IApplicationStorage,Microsoft.WindowsAzure.MobileServices.CurrentPlatform
+Microsoft.WindowsAzure.MobileServices,AuthenticationBroker,0,5,0,0,1,195,13,0,0,-1,0,2,,Microsoft.WindowsAzure.MobileServices.MobileServiceSingleSignOnAuthentication' Microsoft.WindowsAzure.MobileServices.MobileServiceUIAuthentication
+Microsoft.WindowsAzure.MobileServices,PlatformInformation,1,0,6,0,0,64,0,0,1,-1,1,0,Microsoft.WindowsAzure.MobileServices.IPlatformInformation,
+Microsoft.WindowsAzure.MobileServices,PushUtility,1,3,1,0,3,29,3,0,1,1,3,0,Microsoft.WindowsAzure.MobileServices.IPushUtility' Microsoft.WindowsAzure.MobileServices.WnsRegistration' Microsoft.WindowsAzure.MobileServices.WnsTemplateRegistration,
+Microsoft.WindowsAzure.MobileServices,Push,2,13,3,0,11,280,23,0,0,0.15,6,2,Microsoft.WindowsAzure.MobileServices.RegistrationManager' Microsoft.WindowsAzure.MobileServices.MobileServiceClient' Microsoft.WindowsAzure.MobileServices.SecondaryTilesList' Microsoft.WindowsAzure.MobileServices.WnsRegistration' Microsoft.WindowsAzure.MobileServices.WnsTemplateRegistration' Microsoft.WindowsAzure.MobileServices.Registration,Microsoft.WindowsAzure.MobileServices.SecondaryTilesList' Microsoft.WindowsAzure.MobileServices.MobileServiceClientExtensions
+Microsoft.WindowsAzure.MobileServices,SecondaryTilesList,2,12,4,0,10,98,13,0,0,0.33,1,1,Microsoft.WindowsAzure.MobileServices.Push,Microsoft.WindowsAzure.MobileServices.Push
+Microsoft.WindowsAzure.MobileServices,WnsRegistration,0,3,1,0,2,42,4,1,1,-1,0,2,,Microsoft.WindowsAzure.MobileServices.PushUtility' Microsoft.WindowsAzure.MobileServices.Push
+Microsoft.WindowsAzure.MobileServices,TemplateRegistrationType,0,0,0,0,0,6,0,0,0,-1,0,1,,Microsoft.WindowsAzure.MobileServices.WnsTemplateRegistration
+Microsoft.WindowsAzure.MobileServices,WnsTemplateRegistration,1,5,4,0,3,120,13,0,2,0.8,2,2,Microsoft.WindowsAzure.MobileServices.Registration' Microsoft.WindowsAzure.MobileServices.TemplateRegistrationType,Microsoft.WindowsAzure.MobileServices.PushUtility' Microsoft.WindowsAzure.MobileServices.Push
+Microsoft.WindowsAzure.MobileServices,MobileServiceClientExtensions,0,5,0,0,5,87,5,0,0,-1,5,0,Microsoft.WindowsAzure.MobileServices.IMobileServiceClient' Microsoft.WindowsAzure.MobileServices.MobileServiceAuthenticationProvider' Microsoft.WindowsAzure.MobileServices.MobileServiceUIAuthentication' Microsoft.WindowsAzure.MobileServices.Push' Microsoft.WindowsAzure.MobileServices.MobileServiceClient,

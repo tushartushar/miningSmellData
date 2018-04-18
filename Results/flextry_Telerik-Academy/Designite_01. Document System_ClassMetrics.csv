@@ -1,16 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AudioDocument,0,2,1,0,2,20,3,0,1,-1,0,0
-BinaryDocument,0,2,1,0,2,20,3,2,1,-1,0,0
-Document,0,3,2,0,3,40,7,2,1,-1,0,0
-EncryptableDocument,0,3,1,0,3,23,4,2,2,-1,0,0
-ExcelDocument,0,2,2,0,2,27,4,0,1,-1,0,0
-IDocument,0,3,2,0,0,12,3,1,0,-1,0,1
-IEditable,0,1,0,0,0,4,1,2,0,-1,0,1
-IEncryptable,0,2,1,0,0,8,2,1,0,-1,0,1
-DocumentSystem,1,16,0,0,0,179,48,0,0,0,3,0
-MultimediaDocument,0,2,1,0,2,20,3,2,2,-1,0,0
-OfficeDocument,0,2,1,0,2,20,3,2,3,-1,0,0
-PDFDocument,0,2,1,0,2,20,3,0,3,-1,0,0
-TextDocument,0,3,1,0,3,24,4,0,2,-1,0,0
-VideoDocument,0,2,1,0,2,20,3,0,3,-1,0,0
-WordDocument,0,3,1,0,3,24,4,0,4,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DocumentSystem,AudioDocument,0,2,1,0,2,20,3,0,1,-1,1,0,DocumentSystem.MultimediaDocument,
+DocumentSystem,BinaryDocument,0,2,1,0,2,20,3,2,1,-1,1,2,DocumentSystem.Document,DocumentSystem.EncryptableDocument' DocumentSystem.MultimediaDocument
+DocumentSystem,Document,0,3,2,0,3,39,6,2,1,-1,0,2,,DocumentSystem.BinaryDocument' DocumentSystem.TextDocument
+DocumentSystem,EncryptableDocument,0,3,1,0,3,23,4,2,2,-1,1,2,DocumentSystem.BinaryDocument,DocumentSystem.OfficeDocument' DocumentSystem.PDFDocument
+DocumentSystem,ExcelDocument,0,2,2,0,2,26,3,0,1,-1,1,0,DocumentSystem.OfficeDocument,
+DocumentSystem,IDocument,0,3,2,0,0,8,3,1,0,-1,0,1,,DocumentSystem.DocumentSystem
+DocumentSystem,IEditable,0,1,0,0,0,4,1,2,0,-1,0,1,,DocumentSystem.DocumentSystem
+DocumentSystem,IEncryptable,0,2,1,0,0,6,2,1,0,-1,0,1,,DocumentSystem.DocumentSystem
+DocumentSystem,DocumentSystem,1,16,0,0,0,233,37,0,0,0,3,0,DocumentSystem.IDocument' DocumentSystem.IEncryptable' DocumentSystem.IEditable,
+DocumentSystem,MultimediaDocument,0,2,1,0,2,20,3,2,2,-1,1,2,DocumentSystem.BinaryDocument,DocumentSystem.AudioDocument' DocumentSystem.VideoDocument
+DocumentSystem,OfficeDocument,0,2,1,0,2,20,3,2,3,-1,1,2,DocumentSystem.EncryptableDocument,DocumentSystem.ExcelDocument' DocumentSystem.WordDocument
+DocumentSystem,PDFDocument,0,2,1,0,2,20,3,0,3,-1,1,0,DocumentSystem.EncryptableDocument,
+DocumentSystem,TextDocument,0,3,1,0,3,24,4,0,2,-1,1,0,DocumentSystem.Document,
+DocumentSystem,VideoDocument,0,2,1,0,2,20,3,0,3,-1,1,0,DocumentSystem.MultimediaDocument,
+DocumentSystem,WordDocument,0,3,1,0,3,24,4,0,4,-1,1,0,DocumentSystem.OfficeDocument,

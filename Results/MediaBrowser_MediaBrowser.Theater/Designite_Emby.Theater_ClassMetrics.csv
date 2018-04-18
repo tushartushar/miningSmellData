@@ -1,0 +1,56 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Emby.Theater.AppBase,BaseApplicationPaths,2,1,12,0,0,148,1,1,0,0,0,1,,Emby.Theater.AppBase.BaseConfigurationManager
+Emby.Theater.AppBase,BaseConfigurationManager,7,15,5,1,6,256,21,1,0,0.13,1,0,Emby.Theater.AppBase.BaseApplicationPaths,
+Emby.Theater.AppBase,ConfigurationHelper,0,1,0,0,1,40,1,0,0,-1,0,0,,
+Emby.Theater,AppContext,1,1,0,0,1,9,1,0,0,0,1,0,Emby.Theater.TheaterServer,
+Emby.Theater,ExtensionMethods,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Emby.Theater,NativeWindowMethods,0,1,0,0,1,5,1,0,0,-1,0,0,,
+Emby.Theater,Program,7,14,2,2,3,397,27,0,0,0.21,8,2,Emby.Theater.App.ApplicationPaths' Emby.Theater.Logging.SimpleLogManager' Emby.Theater.App.ApplicationHost' Emby.Theater.IO.ManagedFileSystem' Emby.Theater.App.StartupOptions' Emby.Theater.App.EnvironmentInfo' Emby.Theater.App.ApplicationUpdater' Emby.Theater.Logging.UnhandledExceptionWriter,Emby.Theater.App.ApplicationHost' Emby.Theater.App.ElectronApp
+Emby.Theater,TheaterServer,5,7,0,0,3,159,11,0,0,0,3,1,Emby.Theater.Configuration.ITheaterConfigurationManager' Emby.Theater.DirectShowPlayer.DirectShowPlayerBridge' Emby.Theater.App.ApplicationHost,Emby.Theater.AppContext
+Emby.Theater.App,ApplicationHost,10,48,37,1,24,828,69,0,0,0.48,7,2,Emby.Theater.App.StartupOptions' Emby.Theater.App.DeviceId' Emby.Theater.Configuration.ConfigurationManager' Emby.Theater.Networking.NetworkManager' Emby.Theater.App.ApplicationPaths' Emby.Theater.Serialization.JsonSerializer' Emby.Theater.Program,Emby.Theater.Program' Emby.Theater.TheaterServer
+Emby.Theater.App,ApplicationPaths,0,1,0,0,1,7,1,0,1,-1,0,2,,Emby.Theater.Program' Emby.Theater.App.ApplicationHost
+Emby.Theater.App,ApplicationUpdater,2,1,0,0,1,42,2,0,0,0,0,1,,Emby.Theater.Program
+Emby.Theater.App,DeviceId,5,5,2,0,1,82,7,0,0,0,0,1,,Emby.Theater.App.ApplicationHost
+Emby.Theater.App,EnvironmentInfo,2,3,6,0,3,81,3,0,0,1,0,1,,Emby.Theater.Program
+Emby.Theater.App,MutexHandle,3,2,0,0,2,22,3,0,0,0,0,0,,
+Emby.Theater.App,StartupOptions,1,3,0,0,3,21,4,0,0,0,0,2,,Emby.Theater.Program' Emby.Theater.App.ApplicationHost
+Emby.Theater.App,SystemEvents,1,3,0,0,1,38,5,0,0,0,0,0,,
+Emby.Theater.App,SystemUpdateTask,1,3,6,0,3,115,6,0,0,0.67,0,0,,
+Emby.Theater.App,ElectronApp,5,5,0,0,2,113,8,0,0,0.4,1,0,Emby.Theater.Program,
+Emby.Theater.Archiving,ZipClient,1,10,0,0,10,157,10,0,0,0.6,0,0,,
+Emby.Theater.Configuration,ConfigurationManager,0,1,3,0,1,31,1,0,1,-1,0,1,,Emby.Theater.App.ApplicationHost
+Emby.Theater.Configuration,ITheaterConfigurationManager,0,0,1,0,0,4,0,1,0,-1,0,1,,Emby.Theater.TheaterServer
+Emby.Theater.Cryptography,CryptographyProvider,0,4,0,0,4,28,4,0,0,-1,0,0,,
+Emby.Theater.DirectShowPlayer,DirectShowPlayerBridge,8,25,2,0,15,457,52,0,0,0.12,11,1,Emby.Theater.DirectShow.InternalDirectShowPlayer' Emby.Theater.DirectShow.Configuration.DirectShowPlayerConfiguration' Emby.Theater.DirectShow.PlayState' Emby.Theater.DirectShow.Configuration.VideoConfiguration' Emby.Theater.DirectShow.Configuration.AudioConfiguration' Emby.Theater.DirectShow.Configuration.SubtitleConfiguration' Emby.Theater.DirectShowPlayer.PlayerOptions' Emby.Theater.DirectShow.LAVHWAccel' Emby.Theater.DirectShow.LAVSWDeintModes' Emby.Theater.DirectShow.AudioConfigurationUtils' Emby.Theater.DirectShowPlayer.PlayerState,Emby.Theater.TheaterServer
+Emby.Theater.DirectShowPlayer,PlayerState,0,0,6,0,0,9,0,0,0,-1,0,1,,Emby.Theater.DirectShowPlayer.DirectShowPlayerBridge
+Emby.Theater.DirectShowPlayer,PlayRequest,0,0,8,0,0,11,0,0,0,-1,0,0,,
+Emby.Theater.DirectShowPlayer,PlayerOptions,0,0,7,0,0,10,0,0,0,-1,0,1,,Emby.Theater.DirectShowPlayer.DirectShowPlayerBridge
+Emby.Theater.HttpClientManager,HttpClientInfo,0,0,1,0,0,8,0,0,0,-1,0,1,,Emby.Theater.HttpClientManager.HttpClientManager
+Emby.Theater.HttpClientManager,HttpClientManager,8,34,0,0,12,752,89,0,0,0.32,2,0,Emby.Theater.HttpClientManager.HttpClientInfo' Emby.Theater.HttpClientManager.TaskCallback,
+Emby.Theater.HttpClientManager,TaskCallback,1,2,0,1,2,19,3,0,0,0,0,1,,Emby.Theater.HttpClientManager.HttpClientManager
+Emby.Theater.IO,ManagedFileSystem,8,67,1,0,57,876,148,0,0,0.16,1,1,Emby.Theater.IO.SharpCifsFileSystem,Emby.Theater.Program
+Emby.Theater.IO,MemoryStreamProvider,0,4,0,0,4,20,4,0,0,-1,0,0,,
+Emby.Theater.IO,SharpCifsFileSystem,1,39,0,0,35,262,48,0,0,0.69,0,1,,Emby.Theater.IO.ManagedFileSystem
+Emby.Theater.Logging,ConsoleLogger,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Emby.Theater.Logging,SimpleLogManager,5,8,2,1,8,81,14,0,0,0,2,2,Emby.Theater.Logging.FileLogger' Emby.Theater.Logging.NamedLogger,Emby.Theater.Program' Emby.Theater.Logging.NamedLogger
+Emby.Theater.Logging,FileLogger,4,5,0,0,4,60,10,0,0,0,0,1,,Emby.Theater.Logging.SimpleLogManager
+Emby.Theater.Logging,NamedLogger,1,12,1,0,10,87,18,0,0,0.5,1,1,Emby.Theater.Logging.SimpleLogManager,Emby.Theater.Logging.SimpleLogManager
+Emby.Theater.Logging,UnhandledExceptionWriter,5,2,0,0,2,29,2,0,0,0,0,1,,Emby.Theater.Program
+Emby.Theater.Networking,NetworkManager,5,27,1,0,18,436,58,0,0,0.59,0,4,,Emby.Theater.App.ApplicationHost' Emby.Theater.Net.NetAcceptSocket' Emby.Theater.Net.SocketFactory' Emby.Theater.Net.UdpSocket
+Emby.Theater.Net,DisposableManagedObjectBase,0,3,1,0,1,52,4,1,0,-1,0,0,,
+Emby.Theater.Net,NetAcceptSocket,1,7,4,0,7,73,10,0,0,1,1,1,Emby.Theater.Networking.NetworkManager,Emby.Theater.Net.SocketFactory
+Emby.Theater.Net,SocketFactory,1,8,0,0,8,178,18,0,0,0.88,4,0,Emby.Theater.Net.NetAcceptSocket' Emby.Theater.Net.UdpSocket' Emby.Theater.Networking.NetworkManager' Emby.Theater.Net.SocketStream,
+Emby.Theater.Net,SocketStream,1,10,5,0,10,64,10,0,0,0.4,0,1,,Emby.Theater.Net.SocketFactory
+Emby.Theater.Net,UdpSocket,6,15,2,0,10,195,28,0,1,0.13,1,1,Emby.Theater.Networking.NetworkManager,Emby.Theater.Net.SocketFactory
+Emby.Theater.Serialization,JsonSerializer,2,12,0,0,10,189,26,0,0,0.33,0,1,,Emby.Theater.App.ApplicationHost
+Emby.Theater.Serialization,MyXmlSerializer,3,8,0,0,6,105,8,0,0,0.62,0,0,,
+Emby.Theater.ScheduledTasks,DailyTrigger,0,4,3,0,2,66,6,0,0,-1,0,1,,Emby.Theater.ScheduledTasks.ScheduledTaskWorker
+Emby.Theater.ScheduledTasks,IntervalTrigger,1,4,3,0,2,84,9,0,0,0,0,1,,Emby.Theater.ScheduledTasks.ScheduledTaskWorker
+Emby.Theater.ScheduledTasks,ScheduledTaskWorker,8,22,16,0,6,661,52,0,0,0.32,6,1,Emby.Theater.ScheduledTasks.TaskManager' Emby.Theater.ScheduledTasks.DailyTrigger' Emby.Theater.ScheduledTasks.WeeklyTrigger' Emby.Theater.ScheduledTasks.IntervalTrigger' Emby.Theater.ScheduledTasks.SystemEventTrigger' Emby.Theater.ScheduledTasks.StartupTrigger,Emby.Theater.ScheduledTasks.TaskManager
+Emby.Theater.ScheduledTasks,StartupTrigger,0,4,2,0,3,48,6,0,0,-1,0,1,,Emby.Theater.ScheduledTasks.ScheduledTaskWorker
+Emby.Theater.ScheduledTasks,SystemEventTrigger,1,5,2,0,3,64,8,0,0,0.4,0,1,,Emby.Theater.ScheduledTasks.ScheduledTaskWorker
+Emby.Theater.ScheduledTasks,TaskManager,3,20,4,0,13,267,26,0,0,0.45,1,1,Emby.Theater.ScheduledTasks.ScheduledTaskWorker,Emby.Theater.ScheduledTasks.ScheduledTaskWorker
+Emby.Theater.ScheduledTasks,WeeklyTrigger,0,5,4,0,2,89,9,0,0,-1,0,1,,Emby.Theater.ScheduledTasks.ScheduledTaskWorker
+Emby.Theater.Updates,InstallationManager,11,24,4,0,10,576,48,0,0,0.33,0,0,,
+Emby.Theater.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+Emby.Theater.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

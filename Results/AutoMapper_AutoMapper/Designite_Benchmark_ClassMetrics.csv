@@ -1,39 +1,47 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BenchEngine,2,2,0,0,2,23,3,0,0,0,1,0
-HiPerfTimer,3,5,1,0,3,38,6,0,0,0,0,0
-IObjectToObjectMapper,0,2,1,0,0,8,2,8,0,-1,0,2
-Program,0,1,0,0,1,41,3,0,0,-1,9,0
-DeepTypeMapper,1,2,1,0,2,160,2,0,1,0,0,1
-ManualDeepTypeMapper,1,2,1,0,2,186,4,0,1,0,0,1
-ComplexTypeMapper,1,2,1,0,2,117,2,0,1,0,0,1
-ManualComplexTypeMapper,1,2,1,0,2,138,2,0,1,0,0,1
-CtorMapper,1,2,1,0,2,18,2,0,1,0,2,1
-ManualCtorMapper,1,2,1,0,2,17,2,0,1,0,2,1
-FlatteningMapper,1,2,1,0,2,44,2,0,1,0,2,1
-ManualMapper,1,2,1,0,2,37,2,0,1,0,2,1
-Model1,0,0,1,0,0,7,0,0,0,-1,0,0
-Model2,0,0,1,0,0,7,0,0,0,-1,0,0
-Model3,0,0,1,0,0,7,0,0,0,-1,0,0
-Model4,0,0,1,0,0,7,0,0,0,-1,0,0
-Model5,0,0,1,0,0,7,0,0,0,-1,0,0
-Model6,0,0,1,0,0,7,0,0,0,-1,0,0
-Model7,0,0,1,0,0,7,0,0,0,-1,0,0
-Model8,0,0,1,0,0,7,0,0,0,-1,0,0
-Model9,0,0,1,0,0,7,0,0,0,-1,0,0
-Model10,0,0,1,0,0,7,0,0,0,-1,0,0
-Model11,0,0,1,0,0,7,0,0,0,-1,0,2
-Dto1,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto2,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto3,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto4,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto5,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto6,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto7,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto8,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto9,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto10,0,0,1,0,0,7,0,0,0,-1,0,0
-Dto11,1,1,1,0,1,13,1,0,0,0,0,2
-ModelObject,0,0,4,0,0,19,0,0,0,-1,1,2
-ModelSubObject,0,0,2,0,0,11,0,0,0,-1,1,1
-ModelSubSubObject,0,0,1,0,0,7,0,0,0,-1,0,1
-ModelDto,0,0,5,0,0,23,0,0,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Benchmark,BenchEngine,2,2,0,0,2,24,3,0,0,0,1,1,Benchmark.IObjectToObjectMapper,Benchmark.Program
+Benchmark,HiPerfTimer,3,5,1,0,3,43,6,0,0,0,0,0,,
+Benchmark,IObjectToObjectMapper,0,2,1,0,0,6,2,8,0,-1,0,1,,Benchmark.BenchEngine
+Benchmark,Program,0,1,0,0,1,20,3,0,0,-1,1,0,Benchmark.BenchEngine,
+Benchmark.Flattening,DeepTypeMapper,2,2,1,0,2,72,2,0,1,0,1,0,Benchmark.Flattening.Customer,
+Benchmark.Flattening,Address,0,0,8,0,0,13,0,0,0,-1,0,1,,Benchmark.Flattening.ManualDeepTypeMapper
+Benchmark.Flattening,AddressDTO,0,0,6,0,0,11,0,0,0,-1,0,0,,
+Benchmark.Flattening,Customer,0,0,14,0,0,19,0,0,0,-1,0,2,,Benchmark.Flattening.DeepTypeMapper' Benchmark.Flattening.ManualDeepTypeMapper
+Benchmark.Flattening,CustomerDTO,0,0,14,0,0,19,0,0,0,-1,0,1,,Benchmark.Flattening.ManualDeepTypeMapper
+Benchmark.Flattening,ManualDeepTypeMapper,1,2,1,0,2,79,4,0,1,0,3,0,Benchmark.Flattening.Customer' Benchmark.Flattening.CustomerDTO' Benchmark.Flattening.Address,
+Benchmark.Flattening,ComplexTypeMapper,2,2,1,0,2,23,2,0,1,0,1,0,Benchmark.Flattening.Foo,
+Benchmark.Flattening,Foo,0,1,12,0,1,39,1,0,0,-1,0,2,,Benchmark.Flattening.ComplexTypeMapper' Benchmark.Flattening.ManualComplexTypeMapper
+Benchmark.Flattening,InnerFoo,0,0,4,0,0,7,0,0,0,-1,0,1,,Benchmark.Flattening.ManualComplexTypeMapper
+Benchmark.Flattening,InnerFooDest,0,0,4,0,0,7,0,0,0,-1,0,0,,
+Benchmark.Flattening,FooDest,0,0,12,0,0,15,0,0,0,-1,0,1,,Benchmark.Flattening.ManualComplexTypeMapper
+Benchmark.Flattening,ManualComplexTypeMapper,1,2,1,0,2,38,4,0,1,0,3,0,Benchmark.Flattening.Foo' Benchmark.Flattening.FooDest' Benchmark.Flattening.InnerFoo,
+Benchmark.Flattening,CtorMapper,2,2,1,0,2,17,2,0,1,0,1,0,Benchmark.Flattening.Model11,
+Benchmark.Flattening,ManualCtorMapper,1,2,1,0,2,13,2,0,1,0,2,0,Benchmark.Flattening.Model11' Benchmark.Flattening.Dto11,
+Benchmark.Flattening,FlatteningMapper,2,2,1,0,2,52,2,0,1,0,1,0,Benchmark.Flattening.ModelObject,
+Benchmark.Flattening,ManualMapper,1,2,1,0,2,42,2,0,1,0,4,0,Benchmark.Flattening.ModelObject' Benchmark.Flattening.ModelSubObject' Benchmark.Flattening.ModelSubSubObject' Benchmark.Flattening.ModelDto,
+Benchmark.Flattening,Model1,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model2,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model3,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model4,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model5,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model6,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model7,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model8,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model9,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model10,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Model11,0,0,1,0,0,4,0,0,0,-1,0,2,,Benchmark.Flattening.CtorMapper' Benchmark.Flattening.ManualCtorMapper
+Benchmark.Flattening,Dto1,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto2,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto3,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto4,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto5,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto6,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto7,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto8,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto9,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto10,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Benchmark.Flattening,Dto11,1,1,1,0,1,12,1,0,0,0,0,1,,Benchmark.Flattening.ManualCtorMapper
+Benchmark.Flattening,ModelObject,0,0,4,0,0,7,0,0,0,-1,0,2,,Benchmark.Flattening.FlatteningMapper' Benchmark.Flattening.ManualMapper
+Benchmark.Flattening,ModelSubObject,0,0,2,0,0,5,0,0,0,-1,0,1,,Benchmark.Flattening.ManualMapper
+Benchmark.Flattening,ModelSubSubObject,0,0,1,0,0,4,0,0,0,-1,0,1,,Benchmark.Flattening.ManualMapper
+Benchmark.Flattening,ModelDto,0,0,5,0,0,8,0,0,0,-1,0,1,,Benchmark.Flattening.ManualMapper

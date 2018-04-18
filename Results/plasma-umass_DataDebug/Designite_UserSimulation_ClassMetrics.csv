@@ -1,23 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AnalysisType,0,0,0,0,0,14,0,0,0,-1,0,2
-Classification,2,14,0,0,14,193,32,0,0,0.36,0,5
-CutoffKind,0,1,2,0,1,12,1,3,0,-1,0,2
-NormalCutoff,1,2,1,0,2,51,8,0,1,0,0,0
-QuantileCutoff,1,2,1,0,2,50,7,0,1,0,0,0
-NumberCutoff,1,2,2,0,2,26,2,0,1,0,0,0
-EnumerableExtensions,0,3,0,0,2,24,6,0,0,-1,0,0
-ErrorDB,0,4,1,0,4,39,8,0,0,-1,1,1
-Error,6,1,0,6,1,14,1,0,0,0,0,1
-ErrorCondition,0,0,0,0,0,7,0,0,0,-1,0,1
-ErrorGenerator,3,16,0,0,8,358,40,0,0,0.31,2,3
-NoRangeInputs,0,0,0,0,0,3,0,0,0,-1,0,0
-NoFormulas,0,0,0,0,0,3,0,0,0,-1,0,0
-SimulationNotRunException,0,1,0,0,1,6,1,0,0,-1,0,0
-LogEntry,12,3,0,0,3,68,4,0,0,0,1,1
-PrepData,5,0,0,5,0,8,0,0,0,-1,1,2
-Prep,0,1,0,0,1,37,4,0,0,-1,3,1
-Config,0,4,0,0,4,186,12,0,0,-1,6,0
-Simulation,25,22,0,0,21,434,48,0,0,0.36,11,1
-SimulationStep,0,3,0,0,3,81,15,0,0,-1,6,1
-UserResults,6,0,0,6,0,11,0,0,0,-1,0,2
-Utility,0,17,0,0,17,256,48,0,0,-1,4,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+UserSimulation,AnalysisType,0,0,0,0,0,9,0,0,0,-1,0,3,,UserSimulation.LogEntry' UserSimulation.Config' UserSimulation.Simulation
+UserSimulation,Classification,2,14,0,0,14,229,23,0,0,0.43,0,9,,CheckCell.WorkbookState' CheckCell.RibbonHelper' UserSimulation.ErrorGenerator' UserSimulation.Config' UserSimulation.Simulation' UserSimulation.Utility' CheckCellTests.ErrorGeneratorTests' CheckCellTests.LCSTests' CheckCellTests.ClassificationTests
+UserSimulation,CutoffKind,0,1,2,0,1,11,1,3,0,-1,0,2,,UserSimulation.Simulation' UserSimulation.SimulationStep
+UserSimulation,NormalCutoff,1,2,1,0,2,58,5,0,1,0,0,0,,
+UserSimulation,QuantileCutoff,1,2,1,0,2,54,7,0,1,0,0,0,,
+UserSimulation,NumberCutoff,1,2,2,0,2,24,2,0,1,0,0,0,,
+UserSimulation,EnumerableExtensions,0,3,0,0,2,25,6,0,0,-1,0,0,,
+UserSimulation,ErrorDB,0,4,1,0,4,38,4,0,0,-1,1,1,UserSimulation.Error,UserSimulation.Utility
+UserSimulation,Error,6,1,0,6,1,14,1,0,0,0,0,2,,UserSimulation.ErrorDB' UserSimulation.Utility
+UserSimulation,ErrorCondition,0,0,0,0,0,7,0,0,0,-1,0,1,,UserSimulation.Simulation
+UserSimulation,ErrorGenerator,3,16,0,0,8,410,32,0,0,0.31,2,4,UserSimulation.Classification' UserSimulation.Utility,UserSimulation.Config' UserSimulation.Simulation' UserSimulation.Utility' CheckCellTests.ErrorGeneratorTests
+UserSimulation,NoRangeInputs,0,0,0,0,0,1,0,0,0,-1,0,0,,
+UserSimulation,NoFormulas,0,0,0,0,0,1,0,0,0,-1,0,0,,
+UserSimulation,SimulationNotRunException,0,1,0,0,1,4,1,0,0,-1,0,0,,
+UserSimulation,LogEntry,12,3,0,0,3,80,4,0,0,0,1,1,UserSimulation.AnalysisType,UserSimulation.Simulation
+UserSimulation,PrepData,5,0,0,5,0,8,0,0,0,-1,1,2,DataDebugMethods.DAG,UserSimulation.Prep' UserSimulation.Config
+UserSimulation,Prep,0,1,0,0,1,40,4,0,0,-1,4,1,DataDebugMethods.DAG' DataDebugMethods.ProgBar' UserSimulation.Utility' UserSimulation.PrepData,UserSimulation.Config
+UserSimulation,Config,0,4,0,0,4,200,9,0,0,-1,9,1,UserSimulation.PrepData' DataDebugMethods.ProgBar' UserSimulation.Prep' UserSimulation.Utility' UserSimulation.Classification' UserSimulation.ErrorGenerator' DataDebugMethods.DAG' UserSimulation.Simulation' UserSimulation.AnalysisType,CheckCell.WorkbookState
+UserSimulation,Simulation,25,22,0,0,21,555,35,0,0,0.36,11,2,UserSimulation.ErrorCondition' UserSimulation.UserResults' UserSimulation.AnalysisType' UserSimulation.ErrorGenerator' UserSimulation.Classification' UserSimulation.Utility' DataDebugMethods.DAG' UserSimulation.CutoffKind' DataDebugMethods.ProgBar' UserSimulation.LogEntry' UserSimulation.SimulationStep,UserSimulation.Config' CheckCellTests.SimulationTests
+UserSimulation,SimulationStep,0,3,0,0,3,122,15,0,0,-1,6,1,DataDebugMethods.Analysis' UserSimulation.CutoffKind' UserSimulation.UserResults' DataDebugMethods.DAG' DataDebugMethods.ProgBar' DataDebugMethods.NormalDistribution,UserSimulation.Simulation
+UserSimulation,UserResults,6,0,0,6,0,11,0,0,0,-1,0,2,,UserSimulation.Simulation' UserSimulation.SimulationStep
+UserSimulation,Utility,0,17,0,0,17,318,44,0,0,-1,5,4,UserSimulation.ErrorDB' UserSimulation.Error' DataDebugMethods.DAG' UserSimulation.ErrorGenerator' UserSimulation.Classification,UserSimulation.ErrorGenerator' UserSimulation.Prep' UserSimulation.Config' UserSimulation.Simulation

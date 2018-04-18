@@ -1,11 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Rand,1,1,0,0,0,526,1,0,0,0,0,2
-BZip2InputStream,28,32,5,0,9,994,157,0,0,0.12,3,0
-BZip2,13,1,0,12,0,29,2,0,0,0,0,4
-BZip2Compressor,24,27,4,0,4,1344,230,0,0,0.07,4,2
-BZip2OutputStream,8,14,6,0,10,362,27,0,0,0.29,3,0
-WorkItem,4,1,1,4,1,19,1,0,0,0,2,1
-ParallelBZip2OutputStream,25,17,8,0,10,691,52,0,0,0.24,3,0
-BitWriter,4,7,3,0,7,132,9,0,0,0,0,4
-CRC32,6,17,2,0,11,361,33,0,0,0.12,0,3
-CrcCalculatorStream,5,13,8,0,11,314,22,0,0,0.46,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Ionic.BZip2,Rand,1,1,0,0,0,68,1,0,0,0,0,2,,Ionic.BZip2.BZip2InputStream' Ionic.BZip2.BZip2Compressor
+Ionic.BZip2,BZip2InputStream,28,32,5,0,9,1168,118,0,0,0.12,5,1,Ionic.Crc.CRC32' Ionic.BZip2.CState' Ionic.BZip2.DecompressionState' Ionic.BZip2.BZip2' Ionic.BZip2.Rand,Ionic.BZip2.Tests.UnitTest1
+Ionic.BZip2,CState,0,0,0,0,0,11,0,0,0,-1,0,1,,Ionic.BZip2.BZip2InputStream
+Ionic.BZip2,DecompressionState,15,2,0,15,2,61,3,0,0,1,1,1,Ionic.BZip2.BZip2,Ionic.BZip2.BZip2InputStream
+Ionic.BZip2,BZip2,13,1,0,12,0,32,2,0,0,0,0,6,,Ionic.BZip2.BZip2InputStream' Ionic.BZip2.DecompressionState' Ionic.BZip2.BZip2Compressor' Ionic.BZip2.CompressionState' Ionic.BZip2.BZip2OutputStream' Ionic.BZip2.ParallelBZip2OutputStream
+Ionic.BZip2,BZip2Compressor,24,27,4,0,4,1591,152,0,0,0.07,5,2,Ionic.BZip2.CompressionState' Ionic.Crc.CRC32' Ionic.BZip2.BitWriter' Ionic.BZip2.BZip2' Ionic.BZip2.Rand,Ionic.BZip2.BZip2OutputStream' Ionic.BZip2.ParallelBZip2OutputStream
+Ionic.BZip2,CompressionState,27,1,0,27,1,55,1,0,0,0,1,1,Ionic.BZip2.BZip2,Ionic.BZip2.BZip2Compressor
+Ionic.BZip2,BZip2OutputStream,8,14,6,0,10,394,25,0,0,0.29,4,1,Ionic.BZip2.BZip2Compressor' Ionic.BZip2.BitWriter' Ionic.BZip2.TraceBits' Ionic.BZip2.BZip2,Ionic.BZip2.Tests.UnitTest1
+Ionic.BZip2,TraceBits,0,0,0,0,0,15,0,0,0,-1,0,2,,Ionic.BZip2.BZip2OutputStream' Ionic.BZip2.ParallelBZip2OutputStream
+Ionic.BZip2,WorkItem,4,1,1,4,1,16,1,0,0,0,1,1,Ionic.BZip2.BitWriter,Ionic.BZip2.ParallelBZip2OutputStream
+Ionic.BZip2,ParallelBZip2OutputStream,25,17,8,0,10,725,39,0,0,0.24,5,1,Ionic.BZip2.BitWriter' Ionic.BZip2.TraceBits' Ionic.BZip2.BZip2' Ionic.BZip2.WorkItem' Ionic.BZip2.BZip2Compressor,Ionic.BZip2.Tests.UnitTest1
+Ionic.BZip2,BitWriter,4,7,3,0,7,142,9,0,0,0,0,4,,Ionic.BZip2.BZip2Compressor' Ionic.BZip2.BZip2OutputStream' Ionic.BZip2.WorkItem' Ionic.BZip2.ParallelBZip2OutputStream
+Ionic.Crc,CRC32,6,17,2,0,11,391,29,0,0,0.12,0,5,,Ionic.BZip2.BZip2InputStream' Ionic.BZip2.BZip2Compressor' Ionic.Crc.CrcCalculatorStream' Ionic.BZip2.Tests.UnitTest1' Ionic.Zlib.Tests.UnitTest1
+Ionic.Crc,CrcCalculatorStream,5,13,8,0,11,289,23,0,0,0.46,1,4,Ionic.Crc.CRC32,Ionic.Zlib.Tests.UnitTest1' Ionic.Zip.Tests.Error.ErrorTests' Ionic.Zip.Tests.Streams.StreamsTests' Ionic.Zip.Tests.Update.UpdateTests

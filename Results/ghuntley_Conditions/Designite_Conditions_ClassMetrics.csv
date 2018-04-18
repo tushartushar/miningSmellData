@@ -1,17 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AlternativeExceptionCondition,0,6,0,0,6,122,6,0,0,-1,0,1
-AlternativeExceptionHelper,2,3,0,0,0,58,4,0,0,1,1,2
-CollectionHelpers,0,19,0,0,0,480,79,0,0,-1,0,2
-Condition,0,6,0,0,5,214,7,0,0,-1,4,0
-ConditionValidator,2,10,1,1,6,264,10,2,0,1,1,2
-ConstraintViolationType,0,0,0,0,0,16,0,0,0,-1,0,5
-DefaultComparer,1,0,0,0,0,9,0,0,0,-1,0,1
-EnsuresValidator,0,2,0,0,0,28,3,0,1,-1,2,1
-ExceptionMessages,2,1,87,0,0,725,1,0,0,0,0,0
-PostconditionException,0,3,0,0,3,24,3,0,0,-1,0,0
-RequiresValidator,0,5,0,0,0,54,11,1,1,-1,1,1
-RequiresWithCustomExceptionValidator,0,2,0,0,0,18,2,0,2,-1,2,0
-SR,86,3,0,0,0,112,4,0,0,0,0,3
-StringificationExtensions,1,3,0,0,0,55,9,0,0,0,0,0
-Throw,0,72,0,0,0,505,92,0,0,-1,4,1
-ValidatorExtensions,0,413,0,0,412,7845,789,0,0,-1,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Conditions,AlternativeExceptionCondition,0,6,0,0,6,120,6,1,0,-1,0,3,,Conditions.AlternativeExceptionHelper<TException>' Conditions.Condition' Conditions.Tests.AlternativeExceptionConditionTests
+Conditions,AlternativeExceptionHelper<TException>,2,3,0,0,0,57,4,0,0,1,2,0,Conditions.AlternativeExceptionCondition' Conditions.AlternativeExceptionConditionInternal,
+Conditions,AlternativeExceptionConditionInternal,0,2,0,0,2,28,2,0,1,-1,0,1,,Conditions.AlternativeExceptionHelper<TException>
+Conditions,CollectionHelpers,0,19,0,0,0,583,75,0,0,-1,0,2,,Conditions.Throw' Conditions.ValidatorExtensions
+Conditions,Condition,0,6,0,0,5,216,7,0,0,-1,2,60,Conditions.AlternativeExceptionCondition' Conditions.SR,Conditions.Tests.AlternativeExceptionConditionTests' Conditions.Tests.ExtendabilityTests' Conditions.Tests.CollectionTests.CollectionContainsAllTests' Conditions.Tests.CollectionTests.CollectionContainsAnyTests' Conditions.Tests.CollectionTests.CollectionContainsTests' Conditions.Tests.CollectionTests.CollectionDoesNotContainAllTests' Conditions.Tests.CollectionTests.CollectionDoesNotContainAnyTests' Conditions.Tests.CollectionTests.CollectionDoesNotContainTests' Conditions.Tests.CollectionTests.CollectionDoesNotHaveLengthTests' Conditions.Tests.CollectionTests.CollectionHasLengthTests' Conditions.Tests.CollectionTests.CollectionIsEmptyTests' Conditions.Tests.CollectionTests.CollectionIsLongerOrEqualTests' Conditions.Tests.CollectionTests.CollectionIsLongerThanTests' Conditions.Tests.CollectionTests.CollectionIsNotEmptyTests' Conditions.Tests.CollectionTests.CollectionIsNotLongerOrEqualTests' Conditions.Tests.CollectionTests.CollectionIsNotLongerThanTests' Conditions.Tests.CollectionTests.CollectionIsNotShorterOrEqualTests' Conditions.Tests.CollectionTests.CollectionIsNotShorterThanTests' Conditions.Tests.CollectionTests.CollectionIsShorterOrEqualTests' Conditions.Tests.CollectionTests.CollectionIsShorterThanTests' Conditions.Tests.EntryPointTests.EntryPointEnsuresTests' Conditions.Tests.EntryPointTests.EntryPointRequiresTests' Conditions.Tests.NullTests.NullIsNotNullTests' Conditions.Tests.NullTests.NullIsNullTests' Conditions.Tests.NumericTests.NumericDoubleTests' Conditions.Tests.NumericTests.NumericSingleTests' Conditions.Tests.StringTests.StringContainsTests' Conditions.Tests.StringTests.StringDoesNotContainTests' Conditions.Tests.StringTests.StringDoesNotEndWithTests' Conditions.Tests.StringTests.StringDoesNotHaveLengthTests' Conditions.Tests.StringTests.StringDoesNotStartWithTests' Conditions.Tests.StringTests.StringEndsWithTests' Conditions.Tests.StringTests.StringHasLengthTests' Conditions.Tests.StringTests.StringIsEmptyTests' Conditions.Tests.StringTests.StringIsLongerThanTests' Conditions.Tests.StringTests.StringIsNotEmptyTests' Conditions.Tests.StringTests.StringIsNotNullOrEmptyTests' Conditions.Tests.StringTests.StringIsNotNullOrWhiteSpaceTests' Conditions.Tests.StringTests.StringIsNullOrEmptyTests' Conditions.Tests.StringTests.StringIsNullOrWhiteSpaceTests' Conditions.Tests.StringTests.StringIsShorterOrEqualTests' Conditions.Tests.StringTests.StringIsLongerOrEqualTests' Conditions.Tests.StringTests.StringIsShorterThanTests' Conditions.Tests.StringTests.StringStartsWithTests' Conditions.Tests.TypeTests.TypeIsNotOfTypeTests' Conditions.Tests.TypeTests.TypeIsOfTypeTests' Conditions.Tests.CompareTests.CompareBooleanTests' Conditions.Tests.CompareTests.CompareByteTests' Conditions.Tests.CompareTests.CompareGenericTests' Conditions.Tests.CompareTests.CompareDateTimeTests' Conditions.Tests.CompareTests.CompareDecimalTests' Conditions.Tests.CompareTests.CompareDoubleTests' Conditions.Tests.CompareTests.CompareInt16Tests' Conditions.Tests.CompareTests.CompareInt32Tests' Conditions.Tests.CompareTests.CompareInt64Tests' Conditions.Tests.CompareTests.CompareSingleTests' Conditions.Tests.EvaluationTests.EvaluationEvaluateTests' Conditions.Tests.UseCases.NullTestUseCases' Conditions.Tests.UseCases.TypeTestUseCases' Conditions.Tests.UseCases.UseCaseTestHelper
+Conditions,ConditionValidator<T>,2,10,1,1,6,123,10,0,0,1,1,0,Conditions.ConstraintViolationType,
+Conditions,ConstraintViolationType,0,0,0,0,0,13,0,0,0,-1,0,8,,Conditions.ConditionValidator<T>' Conditions.EnsuresValidator<T>' Conditions.RequiresValidator<T>' Conditions.RequiresWithCustomExceptionValidator<T;TException>' Conditions.Throw' Conditions.Tests.StubConditionValidator<T>' Conditions.Tests.EntryPointTests.EntryPointEnsuresTests' Conditions.Tests.EntryPointTests.EntryPointRequiresTests
+Conditions,DefaultComparer<T>,1,0,0,0,0,4,0,0,0,-1,0,0,,
+Conditions,EnsuresValidator<T>,0,2,0,0,0,26,3,0,0,-1,2,0,Conditions.SR' Conditions.ConstraintViolationType,
+Conditions,ExceptionMessages,2,1,87,0,0,806,1,0,0,0,0,0,,
+Conditions,PostconditionException,0,3,0,0,3,23,3,0,0,-1,0,2,,Conditions.Tests.PostConditionExceptionTests' Conditions.Tests.EntryPointTests.EntryPointEnsuresTests
+Conditions,RequiresValidator<T>,0,5,0,0,0,59,7,0,0,-1,1,0,Conditions.ConstraintViolationType,
+Conditions,RequiresWithCustomExceptionValidator<T;TException>,0,2,0,0,0,14,2,0,0,-1,1,0,Conditions.ConstraintViolationType,
+Conditions,SR,86,3,0,0,0,113,4,0,0,0,0,3,,Conditions.Condition' Conditions.EnsuresValidator<T>' Conditions.Throw
+Conditions,StringificationExtensions,1,3,0,0,0,62,8,0,0,0,0,0,,
+Conditions,Throw,0,72,0,0,0,714,90,0,0,-1,3,1,Conditions.SR' Conditions.ConstraintViolationType' Conditions.CollectionHelpers,Conditions.ValidatorExtensions
+Conditions,ValidatorExtensions,0,413,0,0,412,8761,789,0,0,-1,2,1,Conditions.CollectionHelpers' Conditions.Throw,Conditions.Tests.ExtendabilityTests

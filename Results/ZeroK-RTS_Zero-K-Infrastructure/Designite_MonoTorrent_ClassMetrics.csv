@@ -1,47 +1,62 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MyHttpUtility,0,31,0,0,19,413,82,0,0,-1,0,1
-AsyncResult,6,3,7,0,1,77,4,1,0,0,0,0
-BitField,3,31,6,0,18,334,82,0,0,0.06,0,1
-ListenerStatus,0,0,0,0,0,6,0,0,0,-1,0,0
-PeerStatus,0,0,0,0,0,6,0,0,0,-1,0,0
-Direction,0,0,0,0,0,6,0,0,0,-1,0,0
-TorrentState,0,0,0,0,0,11,0,0,0,-1,0,0
-Priority,0,0,0,0,0,10,0,0,0,-1,0,1
-TrackerState,0,0,0,0,0,6,0,0,0,-1,0,0
-TorrentEvent,0,0,0,0,0,7,0,0,0,-1,0,0
-PeerConnectionEvent,0,0,0,0,0,6,0,0,0,-1,0,0
-PieceEvent,0,0,0,0,0,8,0,0,0,-1,0,0
-PeerListType,0,0,0,0,0,6,0,0,0,-1,0,0
-HashAlgoFactory,1,4,0,0,3,25,4,0,0,0.5,1,1
-Hashes,3,3,1,0,2,56,9,0,0,0,0,1
-MonoTorrentCollection,0,6,0,0,5,26,6,0,0,-1,0,0
-Toolbox,1,8,0,0,8,112,22,0,0,1,0,5
-Torrent,22,19,20,0,13,661,174,0,0,0.42,10,2
-TorrentCreator,6,27,12,0,12,492,75,0,0,0.11,13,3
-TorrentCreatorAsyncResult,1,2,2,0,2,20,2,0,1,1,1,1
-TorrentException,0,4,0,0,4,16,4,0,0,-1,0,0
-TorrentFile,9,8,10,0,7,145,10,0,0,0.38,2,7
-TorrentCreatorEventArgs,4,1,6,0,0,62,1,0,0,0,0,1
-RawReader,1,2,1,0,2,16,2,0,0,1,0,5
-BEncodedDictionary,1,22,4,0,19,253,38,0,1,0.23,3,3
-BEncodedList,1,20,2,0,17,162,35,0,1,0.15,2,2
-BEncodedNumber,1,11,1,0,10,162,31,0,1,0.27,1,0
-BEncodedString,1,12,3,0,11,169,27,0,1,0.42,3,3
-BEncodingException,0,4,0,0,3,16,4,0,0,-1,0,0
-BEncodedValue,0,15,0,0,13,158,46,4,0,-1,1,4
-Message,0,28,1,0,27,141,31,0,0,-1,0,1
-Block,6,4,6,0,2,90,4,0,0,0,1,1
-ClientEngine,1,0,0,0,0,7,0,0,0,-1,1,1
-FileStreamBuffer,2,7,2,0,3,82,15,0,0,0,4,1
-Logger,2,5,0,0,2,49,6,0,0,0.6,0,3
-Piece,6,6,10,0,4,122,12,0,0,0.33,1,2
-SparseFile,5,5,0,0,1,80,10,0,0,0,0,1
-TorrentFileStream,2,1,2,0,1,20,1,0,0,0,1,1
-BufferType,0,0,0,0,0,7,0,0,0,-1,0,1
-BufferManager,8,5,0,1,3,134,20,0,0,0,2,1
-BufferedIO,6,4,10,0,2,87,4,0,0,0,2,3
-PieceWriter,0,13,0,0,7,72,23,1,0,-1,3,1
-DiskWriter,2,11,1,0,9,146,27,0,1,0.18,5,1
-Check,0,34,0,0,30,142,36,0,0,-1,0,5
-DhtState,0,0,0,0,0,6,0,0,0,-1,0,0
-InfoHash,1,12,1,0,12,94,20,0,0,0.67,3,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MonoTorrent.Common,MyHttpUtility,0,31,0,0,19,378,90,0,0,-1,1,1,MonoTorrent.Common.UrlDecoder,MonoTorrent.InfoHash
+MonoTorrent.Common,UrlDecoder,6,5,0,0,0,41,10,0,0,0,0,1,,MonoTorrent.Common.MyHttpUtility
+MonoTorrent.Common,AsyncResult,6,3,7,0,1,38,5,1,0,0,0,0,,
+MonoTorrent.Common,BitField,3,31,6,0,18,282,71,0,0,0,1,1,MonoTorrent.Check,MonoTorrent.Common.TorrentFile
+MonoTorrent.Common,DhtState,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent.Common,ListenerStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent.Common,PeerStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent.Common,Direction,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent.Common,TorrentState,0,0,0,0,0,11,0,0,0,-1,0,0,,
+MonoTorrent.Common,Priority,0,0,0,0,0,10,0,0,0,-1,0,1,,MonoTorrent.Common.TorrentFile
+MonoTorrent.Common,TrackerState,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent.Common,TorrentEvent,0,0,0,0,0,7,0,0,0,-1,0,0,,
+MonoTorrent.Common,PeerConnectionEvent,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent.Common,PieceEvent,0,0,0,0,0,8,0,0,0,-1,0,0,,
+MonoTorrent.Common,PeerListType,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent.Common,HashAlgoFactory,1,4,0,0,3,23,5,0,0,0,1,1,MonoTorrent.Check,MonoTorrent.Common.Torrent
+MonoTorrent.Common,Hashes,3,3,1,0,2,46,9,0,0,0,0,2,,MonoTorrent.Common.Torrent' PlasmaDownloader.WebMultiDownload
+MonoTorrent.Common,MonoTorrentCollection<T>,0,6,0,0,5,20,6,0,0,-1,0,0,,
+MonoTorrent.Common,Toolbox,1,8,0,0,8,98,23,0,0,0.88,0,6,,MonoTorrent.Common.Torrent' MonoTorrent.Common.TorrentCreator' MonoTorrent.BEncoding.BEncodedString' MonoTorrent.Client.Messages.BEncodedString' MonoTorrent.Client.PieceWriters.DiskWriter' MonoTorrent.InfoHash
+MonoTorrent.Common,Torrent,22,19,20,0,13,593,32,0,0,0.11,11,2,MonoTorrent.BEncoding.BEncodedValue' MonoTorrent.BEncoding.BEncodedList' MonoTorrent.Common.Hashes' MonoTorrent.Common.TorrentFile' MonoTorrent.InfoHash' MonoTorrent.Check' MonoTorrent.BEncoding.BEncodedDictionary' MonoTorrent.BEncoding.BEncodedString' MonoTorrent.Common.HashAlgoFactory' MonoTorrent.Common.Toolbox' MonoTorrent.BEncoding.BEncodingException,PlasmaDownloader.WebMultiDownload' PlasmaDownloader.Torrents.TorrentDownloader
+MonoTorrent.Common,TorrentCreator,6,27,12,0,12,435,62,0,0,0.11,12,4,MonoTorrent.BEncoding.BEncodedDictionary' MonoTorrent.Common.TorrentCreatorAsyncResult' MonoTorrent.BEncoding.BEncodedString' MonoTorrent.BEncoding.BEncodedValue' MonoTorrent.Client.PieceWriters.PieceWriter' MonoTorrent.Check' MonoTorrent.Common.TorrentFile' MonoTorrent.Client.Logger' MonoTorrent.BEncoding.BEncodedList' MonoTorrent.Client.BufferedIO' MonoTorrent.Common.Toolbox' MonoTorrent.Common.TorrentCreatorEventArgs,AutoRegistrator.UnitSyncer' PlasmaDownloader.Torrents.TorrentDownloader' ZkData.MissionUpdater' AutoRegistrator.UnitSyncer
+MonoTorrent.Common,TorrentCreatorAsyncResult,1,2,2,0,2,11,2,0,1,1,0,1,,MonoTorrent.Common.TorrentCreator
+MonoTorrent.Common,TorrentException,0,4,0,0,4,8,4,0,0,-1,0,0,,
+MonoTorrent.Common,TorrentFile,9,8,10,0,7,96,10,0,0,0.38,2,8,MonoTorrent.Common.BitField' MonoTorrent.Common.Priority,MonoTorrent.Common.Torrent' MonoTorrent.Common.TorrentCreator' MonoTorrent.Client.FileStreamBuffer' MonoTorrent.Client.TorrentFileStream' MonoTorrent.Client.BufferedIO' MonoTorrent.Client.PieceWriters.PieceWriter' MonoTorrent.Client.PieceWriters.DiskWriter' PlasmaDownloader.Torrents.TorrentDownloader
+MonoTorrent.Common,TorrentCreatorEventArgs,4,1,6,0,0,38,1,0,0,0,0,1,,MonoTorrent.Common.TorrentCreator
+MonoTorrent.BEncoding,RawReader,1,2,1,0,2,10,2,0,0,1,0,6,,MonoTorrent.BEncoding.BEncodedDictionary' MonoTorrent.BEncoding.BEncodedList' MonoTorrent.BEncoding.BEncodedNumber' MonoTorrent.BEncoding.BEncodedString' MonoTorrent.BEncoding.BEncodedValue' MonoTorrent.Client.Messages.BEncodedString
+MonoTorrent.BEncoding,BEncodedDictionary,1,22,4,0,19,226,41,0,1,0.18,3,2,MonoTorrent.BEncoding.BEncodedString' MonoTorrent.BEncoding.BEncodedValue' MonoTorrent.BEncoding.RawReader,MonoTorrent.Common.Torrent' MonoTorrent.Common.TorrentCreator
+MonoTorrent.BEncoding,BEncodedList,1,20,2,0,17,135,30,0,1,0.2,2,2,MonoTorrent.BEncoding.RawReader' MonoTorrent.BEncoding.BEncodedValue,MonoTorrent.Common.Torrent' MonoTorrent.Common.TorrentCreator
+MonoTorrent.BEncoding,BEncodedNumber,1,11,1,0,10,147,28,0,1,0.27,1,0,MonoTorrent.BEncoding.RawReader,
+MonoTorrent.BEncoding,Message,0,28,1,0,27,137,30,0,0,-1,0,0,,
+MonoTorrent.BEncoding,BEncodedString,1,12,3,0,11,131,26,0,1,0.42,4,4,MonoTorrent.BEncoding.RawReader' MonoTorrent.BEncoding.BEncodingException' MonoTorrent.Client.Messages.Message' MonoTorrent.Common.Toolbox,MonoTorrent.Common.Torrent' MonoTorrent.Common.TorrentCreator' MonoTorrent.BEncoding.BEncodedDictionary' MonoTorrent.Client.Messages.BEncodedString
+MonoTorrent.BEncoding,BEncodingException,0,4,0,0,3,8,4,0,0,-1,0,3,,MonoTorrent.Common.Torrent' MonoTorrent.BEncoding.BEncodedString' MonoTorrent.Client.Messages.BEncodedString
+MonoTorrent.BEncoding,BEncodedValue,0,15,0,0,13,151,23,5,0,-1,1,4,MonoTorrent.BEncoding.RawReader,MonoTorrent.Common.Torrent' MonoTorrent.Common.TorrentCreator' MonoTorrent.BEncoding.BEncodedDictionary' MonoTorrent.BEncoding.BEncodedList
+MonoTorrent.Client.Messages,Message,0,28,1,0,27,137,30,0,0,-1,0,2,,MonoTorrent.BEncoding.BEncodedString' MonoTorrent.Client.Messages.BEncodedString
+MonoTorrent.Client.Messages,BEncodedString,1,12,3,0,11,131,26,0,1,0.42,5,0,MonoTorrent.BEncoding.RawReader' MonoTorrent.BEncoding.BEncodingException' MonoTorrent.Client.Messages.Message' MonoTorrent.BEncoding.BEncodedString' MonoTorrent.Common.Toolbox,
+MonoTorrent.Client,Block,6,4,6,0,2,67,6,0,0,0,1,1,MonoTorrent.Client.Piece,MonoTorrent.Client.Piece
+MonoTorrent.Client,ClientEngine,1,0,0,0,0,4,0,0,0,-1,1,1,MonoTorrent.Client.BufferManager,MonoTorrent.Client.PieceWriters.DiskWriter
+MonoTorrent.Client,FileStreamBuffer,2,7,2,0,3,74,15,0,0,0,4,1,MonoTorrent.Client.TorrentFileStream' MonoTorrent.Client.Logger' MonoTorrent.Client.SparseFile' MonoTorrent.Common.TorrentFile,MonoTorrent.Client.PieceWriters.DiskWriter
+MonoTorrent.Client,Logger,2,5,0,0,2,39,6,0,0,0.6,0,3,,MonoTorrent.Common.TorrentCreator' MonoTorrent.Client.FileStreamBuffer' MonoTorrent.Client.BufferManager
+MonoTorrent.Client,Piece,6,6,10,0,4,66,9,0,0,0.33,1,2,MonoTorrent.Client.Block,MonoTorrent.Client.Block' MonoTorrent.Client.BufferedIO
+MonoTorrent.Client,SparseFile,5,5,0,0,1,104,7,0,0,0,1,1,MonoTorrent.Client.FILE_ZERO_DATA_INFORMATION,MonoTorrent.Client.FileStreamBuffer
+MonoTorrent.Client,FILE_ZERO_DATA_INFORMATION,2,1,0,2,1,11,1,0,0,0,0,1,,MonoTorrent.Client.SparseFile
+MonoTorrent.Client,TorrentFileStream,2,1,2,0,1,13,1,0,0,0,1,2,MonoTorrent.Common.TorrentFile,MonoTorrent.Client.FileStreamBuffer' MonoTorrent.Client.PieceWriters.DiskWriter
+MonoTorrent.Client,BufferType,0,0,0,0,0,7,0,0,0,-1,0,1,,MonoTorrent.Client.BufferManager
+MonoTorrent.Client,BufferManager,8,5,0,1,3,117,13,0,0,0,2,2,MonoTorrent.Client.BufferType' MonoTorrent.Client.Logger,MonoTorrent.Client.ClientEngine' MonoTorrent.Client.PieceWriters.DiskWriter
+MonoTorrent.Client,BufferedIO,6,4,10,0,2,59,4,0,0,0,2,3,MonoTorrent.Common.TorrentFile' MonoTorrent.Client.Piece,MonoTorrent.Common.TorrentCreator' MonoTorrent.Client.PieceWriters.PieceWriter' MonoTorrent.Client.PieceWriters.DiskWriter
+MonoTorrent.Client.PieceWriters,PieceWriter,0,13,0,0,7,63,20,1,0,-1,3,2,MonoTorrent.Common.TorrentFile' MonoTorrent.Check' MonoTorrent.Client.BufferedIO,MonoTorrent.Common.TorrentCreator' MonoTorrent.Client.PieceWriters.DiskWriter
+MonoTorrent.Client.PieceWriters,DiskWriter,2,11,1,0,9,122,26,0,1,0.18,8,0,MonoTorrent.Client.FileStreamBuffer' MonoTorrent.Client.PieceWriters.PieceWriter' MonoTorrent.Client.TorrentFileStream' MonoTorrent.Common.TorrentFile' MonoTorrent.Client.BufferedIO' MonoTorrent.Common.Toolbox' MonoTorrent.Client.BufferManager' MonoTorrent.Client.ClientEngine,
+MonoTorrent,Check,0,34,0,0,30,140,36,0,0,-1,0,6,,MonoTorrent.Common.BitField' MonoTorrent.Common.HashAlgoFactory' MonoTorrent.Common.Torrent' MonoTorrent.Common.TorrentCreator' MonoTorrent.Client.PieceWriters.PieceWriter' MonoTorrent.InfoHash
+MonoTorrent,DhtState,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent,ListenerStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent,PeerStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent,Direction,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent,TorrentState,0,0,0,0,0,11,0,0,0,-1,0,0,,
+MonoTorrent,Priority,0,0,0,0,0,10,0,0,0,-1,0,0,,
+MonoTorrent,TrackerState,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent,TorrentEvent,0,0,0,0,0,7,0,0,0,-1,0,0,,
+MonoTorrent,PeerConnectionEvent,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent,PieceEvent,0,0,0,0,0,8,0,0,0,-1,0,0,,
+MonoTorrent,PeerListType,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MonoTorrent,InfoHash,1,12,1,0,12,81,19,0,0,0.58,3,2,MonoTorrent.Check' MonoTorrent.Common.Toolbox' MonoTorrent.Common.MyHttpUtility,MonoTorrent.Common.Torrent' PlasmaDownloader.Torrents.TorrentDownloader

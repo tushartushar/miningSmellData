@@ -1,16 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-App,1,14,1,0,1,222,22,0,0,0.79,2,3
-LocalizedStrings,1,0,1,0,0,12,0,0,0,-1,1,0
-MagnifierPage,19,23,0,0,1,395,56,0,0,0.39,3,0
-PhotoModel,23,14,7,8,11,578,132,0,0,0.64,1,6
-AboutPage,0,2,0,0,1,52,2,0,0,-1,2,0
-CropPage,7,13,0,0,1,219,34,0,0,0.23,2,0
-InfoPage,1,4,0,0,1,33,6,0,0,0.5,1,0
-InfoPageViewModel,0,5,1,0,1,138,24,0,0,-1,2,1
-PhotosPage,6,16,0,0,1,188,39,0,0,0.38,3,0
-PhotosPageViewModel,0,4,1,0,3,115,24,0,0,-1,1,1
-UriMapper,0,1,0,0,1,18,4,0,0,-1,0,0
-ViewfinderPage,11,17,0,0,1,335,60,0,0,0.12,3,0
-AppResources,2,1,63,0,0,539,1,0,0,0,0,8
-Information,0,0,1,0,0,15,0,0,0,-1,0,0
-Mapping,2,4,0,2,4,66,19,0,0,0,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MagnifierApp,App,1,14,1,0,1,224,23,0,0,0.79,2,3,MagnifierApp.Models.PhotoModel' MagnifierApp.Resources.AppResources,MagnifierApp.MagnifierPage' MagnifierApp.Pages.AboutPage' MagnifierApp.Pages.ViewfinderPage
+MagnifierApp,LocalizedStrings,1,0,1,0,0,5,0,0,0,-1,1,0,MagnifierApp.Resources.AppResources,
+MagnifierApp,MagnifierPage,19,23,0,0,1,456,43,0,0,0.48,3,0,MagnifierApp.Models.PhotoModel' MagnifierApp.Resources.AppResources' MagnifierApp.App,
+MagnifierApp.Models,PhotoOrigin,0,0,0,0,0,6,0,0,0,-1,0,3,,MagnifierApp.Models.PhotoModel' MagnifierApp.Pages.CropPage' MagnifierApp.Pages.ViewfinderPage
+MagnifierApp.Models,PhotoModel,19,17,4,7,12,384,27,0,0,0.41,2,7,MagnifierApp.Models.PhotoOrigin' MagnifierApp.Utilities.Mapping,MagnifierApp.App' MagnifierApp.MagnifierPage' MagnifierApp.Pages.CropPage' MagnifierApp.Pages.InfoPageViewModel' MagnifierApp.Pages.PhotosPage' MagnifierApp.Pages.PhotosPageViewModel' MagnifierApp.Pages.ViewfinderPage
+MagnifierApp.Pages,AboutPage,0,2,0,0,1,55,2,0,0,-1,2,0,MagnifierApp.Resources.AppResources' MagnifierApp.App,
+MagnifierApp.Pages,CropPage,7,13,0,0,1,263,26,0,0,0.23,4,0,MagnifierApp.Resources.AppResources' MagnifierApp.Utilities.Mapping' MagnifierApp.Models.PhotoModel' MagnifierApp.Models.PhotoOrigin,
+MagnifierApp.Pages,InfoPage,1,4,0,0,1,37,6,0,0,0.5,1,0,MagnifierApp.Pages.InfoPageViewModel,
+MagnifierApp.Pages,InfoPageViewModel,0,5,1,0,1,163,9,0,0,-1,2,1,MagnifierApp.Models.PhotoModel' MagnifierApp.Resources.AppResources,MagnifierApp.Pages.InfoPage
+MagnifierApp.Pages,Info,0,0,2,0,0,5,0,0,0,-1,0,0,,
+MagnifierApp.Pages,PhotosPage,5,15,0,0,1,189,26,0,0,0.4,4,0,MagnifierApp.Pages.PhotosPageViewModel' MagnifierApp.Resources.AppResources' MagnifierApp.Models.PhotoModel' MagnifierApp.Pages.Photo,
+MagnifierApp.Pages,PhotosPageViewModel,0,3,2,0,2,135,10,0,0,-1,3,1,MagnifierApp.Utilities.Mapping' MagnifierApp.Pages.Photo' MagnifierApp.Models.PhotoModel,MagnifierApp.Pages.PhotosPage
+MagnifierApp.Pages,Photo,2,1,5,0,1,55,1,0,0,0,0,2,,MagnifierApp.Pages.PhotosPage' MagnifierApp.Pages.PhotosPageViewModel
+MagnifierApp.Pages,UriMapper,0,1,0,0,1,23,2,0,0,-1,0,0,,
+MagnifierApp.Pages,ViewfinderPage,11,17,0,0,1,416,46,0,0,0.12,4,0,MagnifierApp.Resources.AppResources' MagnifierApp.Models.PhotoModel' MagnifierApp.App' MagnifierApp.Models.PhotoOrigin,
+MagnifierApp.Resources,AppResources,2,1,60,0,0,569,1,0,0,0,0,8,,MagnifierApp.App' MagnifierApp.LocalizedStrings' MagnifierApp.MagnifierPage' MagnifierApp.Pages.AboutPage' MagnifierApp.Pages.CropPage' MagnifierApp.Pages.InfoPageViewModel' MagnifierApp.Pages.PhotosPage' MagnifierApp.Pages.ViewfinderPage
+MagnifierApp.Utilities,Mapping,2,4,0,2,4,68,9,0,0,1,0,3,,MagnifierApp.Models.PhotoModel' MagnifierApp.Pages.CropPage' MagnifierApp.Pages.PhotosPageViewModel

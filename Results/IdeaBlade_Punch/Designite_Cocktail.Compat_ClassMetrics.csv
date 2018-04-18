@@ -1,21 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AwaiterFns,0,11,0,0,11,94,11,0,0,-1,1,0
-Compatibility,0,32,0,0,30,252,33,0,0,-1,14,0
-CoroutineFns,0,3,0,0,3,45,4,0,0,-1,0,0
-IAwaitable,0,2,0,0,0,21,2,1,0,-1,0,1
-OperationFns,0,28,0,0,28,466,29,0,0,-1,7,0
-OperationResult,4,13,7,0,9,269,13,9,1,0.69,2,2
-CoroutineOperationResult,1,1,1,0,1,13,1,0,2,0,0,1
-EntityQueryOperationResult,3,3,2,0,3,30,3,0,2,0.67,0,1
-EntityRefetchOperationResult,1,1,1,0,1,13,1,0,2,0,0,1
-EntitySaveOperationResult,1,1,1,0,1,13,1,0,2,0,0,1
-EntityScalarQueryOperationResult,2,2,1,0,2,18,2,0,2,1,0,1
-InvokeServerMethodOperationResult,1,1,1,0,1,13,1,0,2,0,0,1
-AlwaysCompleted,1,3,0,0,3,46,3,0,0,0,0,0
-SynchronousOperationResult,1,2,1,0,2,20,2,0,2,0,0,1
-PageOperationResult,2,2,2,0,1,40,3,0,2,0,3,1
-StringResources,2,1,4,0,0,61,1,0,0,0,0,2
-TaskExtensions,0,5,0,0,5,79,5,0,0,-1,1,0
-TaskOperationResult,1,2,1,0,2,18,2,0,2,1,0,1
-TaskNotifyCompleted,2,3,0,0,2,38,4,0,0,0,1,0
-TaskNotifyCompletedArgs,1,1,3,0,1,24,1,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Cocktail,AwaiterFns,0,11,0,0,11,91,11,0,0,-1,2,0,Cocktail.IAwaitable' Cocktail.OperationResult,
+Cocktail,Compatibility,0,32,0,0,30,309,36,0,0,-1,12,0,Cocktail.IAuthenticationService' Cocktail.OperationResult' Cocktail.IDialogManager' Cocktail.DialogManager' Cocktail.IFactory' Cocktail.IEntityManagerProvider' Cocktail.IPager' Cocktail.IRepository' Cocktail.IUnitOfWork' Cocktail.StringResources' Cocktail.INavigator' Cocktail.IFetchOptions,
+Cocktail,CoroutineFns,0,3,0,0,3,43,4,0,0,-1,0,0,,
+Cocktail,IAwaitable,0,2,0,0,0,14,2,2,0,-1,0,1,,Cocktail.AwaiterFns
+Cocktail,OperationFns,0,28,0,0,28,503,30,0,0,-1,4,0,Cocktail.OperationResult' Cocktail.EntityQueryOperationResult' Cocktail.EntityRefetchOperationResult' Cocktail.EntitySaveOperationResult,
+Cocktail,OperationResult,3,11,6,0,8,192,13,12,1,0.73,1,5,Cocktail.EventFns,Cocktail.AwaiterFns' Cocktail.Compatibility' Cocktail.OperationFns' Cocktail.PageOperationResult<T>' Cocktail.TaskExtensions
+Cocktail,OperationResult<T>,1,2,1,0,1,66,3,0,2,1,0,0,,
+Cocktail,CoroutineOperationResult<T>,1,1,1,0,1,13,1,0,2,0,0,0,,
+Cocktail,EntityQueryOperationResult,1,1,1,0,1,13,1,0,2,0,0,1,,Cocktail.OperationFns
+Cocktail,EntityQueryOperationResult<T>,2,2,1,0,2,24,2,0,2,1,0,0,,
+Cocktail,EntityRefetchOperationResult,1,1,1,0,1,13,1,0,2,0,0,1,,Cocktail.OperationFns
+Cocktail,EntitySaveOperationResult,1,1,1,0,1,13,1,0,2,0,0,1,,Cocktail.OperationFns
+Cocktail,EntityScalarQueryOperationResult<T>,2,2,1,0,2,24,2,0,2,1,0,0,,
+Cocktail,InvokeServerMethodOperationResult<T>,1,1,1,0,1,13,1,0,2,0,0,0,,
+Cocktail,AlwaysCompleted,1,3,0,0,3,41,3,0,0,0,0,0,,
+Cocktail,AlwaysCompletedArgs,2,1,3,0,1,21,1,0,0,0,0,0,,
+Cocktail,SynchronousOperationResult<T>,1,2,1,0,2,21,2,0,2,0,0,0,,
+Cocktail,PageOperationResult<T>,2,2,2,0,1,35,3,0,2,0,2,0,Cocktail.OperationResult' Cocktail.StringResources,
+Cocktail,StringResources,2,1,4,0,0,59,1,0,0,0,0,2,,Cocktail.Compatibility' Cocktail.PageOperationResult<T>
+Cocktail,TaskExtensions,0,5,0,0,5,82,5,0,0,-1,2,0,Cocktail.TaskOperationResult' Cocktail.OperationResult,
+Cocktail,TaskOperationResult,0,1,0,0,1,6,1,0,2,-1,0,1,,Cocktail.TaskExtensions
+Cocktail,TaskOperationResult<T>,1,1,1,0,1,12,1,0,2,0,0,0,,
+Cocktail,TaskNotifyCompleted,2,3,0,0,2,36,6,0,0,0,1,0,Cocktail.TaskNotifyCompletedArgs,
+Cocktail,TaskNotifyCompletedArgs,1,1,3,0,1,19,1,0,0,0,0,1,,Cocktail.TaskNotifyCompleted

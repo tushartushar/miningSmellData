@@ -1,24 +1,26 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Settings,0,0,1,0,0,16,0,0,0,-1,0,1
-Broadcasters,1,2,0,0,1,20,5,0,0,0,5,0
-Listeners,1,4,0,0,3,32,7,0,0,0,4,0
-IXDBroadcaster,0,2,1,0,0,8,2,0,0,-1,0,0
-RegisterWithClient,0,4,0,0,4,23,4,0,0,-1,1,0
-XDMessageEventArgs,0,1,1,0,1,10,1,0,0,-1,1,0
-XDTransportMode,0,0,0,0,0,6,0,0,0,-1,0,3
-IXDListener,0,2,1,0,0,9,2,2,0,-1,0,0
-XDMessagingClient,1,2,2,0,1,19,2,0,0,0,1,0
-DataGram,2,3,5,0,2,54,3,0,0,0.67,0,5
-TypedDataGram,2,1,4,0,0,32,1,0,0,0,2,0
-BinaryBase64Serializer,0,5,0,0,2,42,11,0,1,-1,0,0
-JsonSerializer,0,2,0,0,2,24,7,0,1,-1,0,0
-SpecializedSerializer,2,4,0,0,3,26,4,0,1,0,1,0
-ISerializer,0,2,0,0,0,5,2,3,0,-1,0,10
-XDIOStreamBroadcaster,5,9,1,0,3,115,29,0,0,0,2,2
-XDIOStreamListener,5,8,1,0,3,137,22,0,1,0.25,3,1
-WindowsEnum,2,4,0,0,3,29,5,0,0,0.5,1,1
-WindowEnumFilter,1,2,0,0,2,14,3,0,0,0,1,1
-XDWinMsgBroadcaster,1,4,1,0,2,38,7,0,0,0,6,1
-WinMsgDataGram,4,6,3,0,2,84,12,0,0,0,3,2
-Native,1,5,0,1,5,31,5,0,0,1,0,5
-XDWinMsgListener,3,7,1,0,4,102,14,0,1,0.29,3,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+XDMessaging.Config,Settings,0,0,1,0,0,20,0,0,0,-1,0,1,,XDMessaging.Entities.Broadcasters
+XDMessaging.Entities,Broadcasters,1,2,0,0,1,21,3,0,0,0,6,1,XDMessaging.Serialization.ISerializer' XDMessaging.XDMessagingClient' XDMessaging.XDTransportMode' XDMessaging.Config.Settings' XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster' XDMessaging.Transport.IOStream.XDIOStreamBroadcaster,XDMessaging.RegisterWithClient
+XDMessaging.Entities,Listeners,1,4,0,0,3,33,5,0,0,0,6,1,XDMessaging.Serialization.ISerializer' XDMessaging.XDMessagingClient' XDMessaging.XDTransportMode' XDMessaging.IXDListener' XDMessaging.Transport.WindowsMessaging.XDWinMsgListener' XDMessaging.Transport.IOStream.XDIOStreamListener,XDMessaging.RegisterWithClient
+XDMessaging,IXDBroadcaster,0,2,1,0,0,6,2,2,0,-1,0,1,,XDMessaging.RegisterWithClient
+XDMessaging,RegisterWithClient,0,4,0,0,4,25,4,0,0,-1,5,0,XDMessaging.Entities.Broadcasters' XDMessaging.XDTransportMode' XDMessaging.IXDBroadcaster' XDMessaging.Entities.Listeners' XDMessaging.IXDListener,
+XDMessaging,XDMessageEventArgs,0,1,1,0,1,9,1,0,0,-1,1,0,XDMessaging.Messages.DataGram,
+XDMessaging,XDTransportMode,0,0,0,0,0,6,0,0,0,-1,0,3,,XDMessaging.Entities.Broadcasters' XDMessaging.Entities.Listeners' XDMessaging.RegisterWithClient
+XDMessaging,IXDListener,0,2,1,0,0,9,2,2,0,-1,0,2,,XDMessaging.Entities.Listeners' XDMessaging.RegisterWithClient
+XDMessaging,XDMessagingClient,1,2,2,0,1,19,2,0,0,0,1,2,XDMessaging.Serialization.ISerializer,XDMessaging.Entities.Broadcasters' XDMessaging.Entities.Listeners
+XDMessaging.Messages,DataGram,2,3,5,0,2,45,3,0,0,0.67,0,5,,XDMessaging.XDMessageEventArgs' XDMessaging.Messages.TypedDataGram<T>' XDMessaging.Transport.IOStream.XDIOStreamBroadcaster' XDMessaging.Transport.IOStream.XDIOStreamListener' XDMessaging.Transport.WindowsMessaging.WinMsgDataGram
+XDMessaging.Messages,TypedDataGram<T>,2,1,4,0,0,24,1,0,0,0,2,0,XDMessaging.Messages.DataGram' XDMessaging.Serialization.ISerializer,
+XDMessaging.Serialization,BinaryBase64Serializer,0,5,0,0,2,48,6,0,1,-1,0,0,,
+XDMessaging.Serialization,JsonSerializer,0,2,0,0,2,29,2,0,1,-1,0,0,,
+XDMessaging.Serialization,SpecializedSerializer,2,4,0,0,3,30,4,0,1,0,1,0,XDMessaging.Serialization.ISerializer,
+XDMessaging.Serialization,ISerializer,0,2,0,0,0,5,2,3,0,-1,0,10,,XDMessaging.Entities.Broadcasters' XDMessaging.Entities.Listeners' XDMessaging.XDMessagingClient' XDMessaging.Messages.TypedDataGram<T>' XDMessaging.Serialization.SpecializedSerializer' XDMessaging.Transport.IOStream.XDIOStreamBroadcaster' XDMessaging.Transport.IOStream.XDIOStreamListener' XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster' XDMessaging.Transport.WindowsMessaging.WinMsgDataGram' XDMessaging.Transport.WindowsMessaging.XDWinMsgListener
+XDMessaging.Transport.IOStream,XDIOStreamBroadcaster,5,10,1,0,2,179,17,0,1,0,2,2,XDMessaging.Serialization.ISerializer' XDMessaging.Messages.DataGram,XDMessaging.Entities.Broadcasters' XDMessaging.Transport.IOStream.XDIOStreamListener
+XDMessaging.Transport.IOStream,XDIOStreamListener,5,8,1,0,3,170,15,0,1,0.25,3,1,XDMessaging.Serialization.ISerializer' XDMessaging.Transport.IOStream.XDIOStreamBroadcaster' XDMessaging.Messages.DataGram,XDMessaging.Entities.Listeners
+XDMessaging.Transport.WindowsMessaging,WindowsEnum,2,4,0,0,3,30,5,0,0,0.5,1,1,XDMessaging.Transport.WindowsMessaging.Native,XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster
+XDMessaging.Transport.WindowsMessaging,WindowEnumFilter,1,2,0,0,2,15,3,0,0,0,1,1,XDMessaging.Transport.WindowsMessaging.Native,XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster
+XDMessaging.Transport.WindowsMessaging,XDWinMsgBroadcaster,1,4,1,0,2,48,4,0,1,0,8,1,XDMessaging.Serialization.ISerializer' XDMessaging.Transport.WindowsMessaging.COPYDATASTRUCT' XDMessaging.Transport.WindowsMessaging.WindowEnumFilter' XDMessaging.Transport.WindowsMessaging.WindowsEnum' XDMessaging.Transport.WindowsMessaging.WinMsgDataGram' XDMessaging.Transport.WindowsMessaging.XDWinMsgListener' XDMessaging.Transport.WindowsMessaging.Native' XDMessaging.Transport.WindowsMessaging.SendMessageTimeoutFlags,XDMessaging.Entities.Broadcasters
+XDMessaging.Transport.WindowsMessaging,WinMsgDataGram,4,6,3,0,2,82,8,0,0,0,3,2,XDMessaging.Messages.DataGram' XDMessaging.Serialization.ISerializer' XDMessaging.Transport.WindowsMessaging.COPYDATASTRUCT,XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster' XDMessaging.Transport.WindowsMessaging.XDWinMsgListener
+XDMessaging.Transport.WindowsMessaging,Native,1,5,0,1,5,48,5,0,0,1,2,4,XDMessaging.Transport.WindowsMessaging.COPYDATASTRUCT' XDMessaging.Transport.WindowsMessaging.SendMessageTimeoutFlags,XDMessaging.Transport.WindowsMessaging.WindowsEnum' XDMessaging.Transport.WindowsMessaging.WindowEnumFilter' XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster' XDMessaging.Transport.WindowsMessaging.XDWinMsgListener
+XDMessaging.Transport.WindowsMessaging,SendMessageTimeoutFlags,0,0,0,0,0,10,0,0,0,-1,0,2,,XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster' XDMessaging.Transport.WindowsMessaging.Native
+XDMessaging.Transport.WindowsMessaging,COPYDATASTRUCT,3,0,0,3,0,7,0,0,0,-1,0,3,,XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster' XDMessaging.Transport.WindowsMessaging.WinMsgDataGram' XDMessaging.Transport.WindowsMessaging.Native
+XDMessaging.Transport.WindowsMessaging,XDWinMsgListener,3,7,1,0,3,117,11,0,1,0.29,3,2,XDMessaging.Serialization.ISerializer' XDMessaging.Transport.WindowsMessaging.Native' XDMessaging.Transport.WindowsMessaging.WinMsgDataGram,XDMessaging.Entities.Listeners' XDMessaging.Transport.WindowsMessaging.XDWinMsgBroadcaster

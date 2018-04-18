@@ -1,48 +1,48 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DataStore,6,8,5,0,7,72,9,0,1,0.5,6,1
-IElementGroup,0,1,0,0,0,4,1,1,0,-1,0,1
-IFaceGroup,0,1,0,0,0,4,1,2,0,-1,1,1
-IGroupDataStore,0,1,0,0,0,4,1,1,0,-1,0,1
-INormalDataStore,0,1,0,0,0,4,1,1,0,-1,1,1
-ITextureDataStore,0,1,0,0,0,4,1,1,0,-1,1,1
-IVertexDataStore,0,1,0,0,0,4,1,1,0,-1,1,1
-IMaterialLibrary,0,1,0,0,0,4,1,1,0,-1,1,1
-IDataStore,0,0,5,0,0,18,0,1,0,-1,5,1
-Face,1,1,1,0,1,18,1,0,0,0,1,5
-FaceVertex,0,1,3,0,1,21,1,0,0,-1,0,2
-Group,1,2,3,0,2,25,2,0,1,1,2,4
-Material,0,1,15,0,1,67,1,0,0,-1,1,6
-Vec3,0,1,3,0,1,21,1,0,0,-1,0,2
-Normal,0,1,3,0,1,21,1,0,0,-1,0,5
-Texture,0,1,2,0,1,16,1,0,0,-1,0,5
-Vertex,0,1,3,0,1,21,1,0,0,-1,0,5
-IMaterialLibraryLoader,0,1,0,0,0,4,1,1,0,-1,0,1
-IObjLoader,0,1,0,0,0,4,1,1,0,-1,0,0
-IObjLoaderFactory,0,2,0,0,0,5,2,1,0,-1,1,1
-LoaderBase,1,3,0,0,0,23,5,2,0,0,0,0
-MaterialLibraryLoader,4,7,1,0,2,69,8,0,1,0.29,3,1
-MaterialStreamProvider,0,1,0,0,1,7,1,0,1,-1,0,1
-MaterialNullStreamProvider,0,1,0,0,1,7,1,0,1,-1,0,1
-ObjLoader,3,5,0,0,2,43,8,0,1,0,10,1
-IMaterialStreamProvider,0,1,0,0,0,4,1,2,0,-1,0,3
-ObjLoaderFactory,0,2,0,0,2,21,2,0,1,-1,13,0
-LoadResult,0,0,5,0,0,23,0,0,0,-1,5,4
-IMaterialLibraryLoaderFacade,0,1,0,0,0,4,1,1,0,-1,0,1
-MaterialLibraryLoaderFacade,2,2,0,0,2,18,5,0,1,0,2,1
-FaceParser,1,3,1,0,2,42,6,0,1,0,3,1
-GroupParser,1,2,1,0,2,17,2,0,1,0,1,1
-MaterialLibraryParser,1,2,1,0,2,17,2,0,1,0,1,1
-NormalParser,1,2,1,0,2,22,2,0,1,0,2,1
-TextureParser,1,2,1,0,2,21,2,0,1,0,2,1
-TypeParserBase,0,2,1,0,2,11,2,7,1,-1,0,0
-UseMaterialParser,1,2,1,0,2,17,2,0,2,0,1,1
-VertexParser,1,2,1,0,2,24,2,0,2,0,2,1
-IFaceParser,0,0,0,0,0,3,0,1,1,-1,0,1
-IGroupParser,0,0,0,0,0,3,0,1,1,-1,0,1
-IMaterialLibraryParser,0,0,0,0,0,3,0,1,1,-1,0,1
-INormalParser,0,0,0,0,0,3,0,1,1,-1,0,1
-ITextureParser,0,0,0,0,0,3,0,1,1,-1,0,1
-ITypeParser,0,2,0,0,0,5,2,8,0,-1,0,1
-IVertexParser,0,0,0,0,0,3,0,1,1,-1,0,1
-IUseMaterialParser,0,0,0,0,0,3,0,1,1,-1,0,1
-StringExtensions,0,4,0,0,4,19,4,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ObjLoader.Loader.Common,StringExtensions,0,4,0,0,4,19,4,0,0,-1,0,0,,
+ObjLoader.Loader.Data.DataStore,DataStore,6,8,5,0,7,69,9,0,1,0.5,6,2,ObjLoader.Loader.Data.Elements.Group' ObjLoader.Loader.Data.Elements.Face' ObjLoader.Loader.Data.VertexData.Vertex' ObjLoader.Loader.Data.VertexData.Texture' ObjLoader.Loader.Data.VertexData.Normal' ObjLoader.Loader.Data.Material,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests
+ObjLoader.Loader.Data.DataStore,IDataStore,0,0,5,0,0,8,0,1,0,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.Data.DataStore,IElementGroup,0,1,0,0,0,4,1,2,0,-1,0,1,,ObjLoader.Loader.TypeParsers.UseMaterialParser
+ObjLoader.Loader.Data.DataStore,IFaceGroup,0,1,0,0,0,4,1,3,0,-1,1,1,ObjLoader.Loader.Data.Elements.Face,ObjLoader.Loader.TypeParsers.FaceParser
+ObjLoader.Loader.Data.DataStore,IGroupDataStore,0,1,0,0,0,4,1,2,0,-1,0,1,,ObjLoader.Loader.TypeParsers.GroupParser
+ObjLoader.Loader.Data.DataStore,IMaterialLibrary,0,1,0,0,0,4,1,2,0,-1,1,1,ObjLoader.Loader.Data.Material,ObjLoader.Loader.Loaders.MaterialLibraryLoader
+ObjLoader.Loader.Data.DataStore,INormalDataStore,0,1,0,0,0,4,1,2,0,-1,1,1,ObjLoader.Loader.Data.VertexData.Normal,ObjLoader.Loader.TypeParsers.NormalParser
+ObjLoader.Loader.Data.DataStore,ITextureDataStore,0,1,0,0,0,4,1,2,0,-1,1,1,ObjLoader.Loader.Data.VertexData.Texture,ObjLoader.Loader.TypeParsers.TextureParser
+ObjLoader.Loader.Data.DataStore,IVertexDataStore,0,1,0,0,0,4,1,2,0,-1,1,1,ObjLoader.Loader.Data.VertexData.Vertex,ObjLoader.Loader.TypeParsers.VertexParser
+ObjLoader.Loader.Data.Elements,Face,1,1,1,0,1,16,1,0,0,0,1,6,ObjLoader.Loader.Data.Elements.FaceVertex,ObjLoader.Loader.Data.DataStore.DataStore' ObjLoader.Loader.Data.DataStore.IFaceGroup' ObjLoader.Loader.Data.Elements.Group' ObjLoader.Loader.TypeParsers.FaceParser' ObjLoader.Test.TypeParsers.FaceParserTests' ObjLoader.Test.TypeParsers.FaceGroupSpy
+ObjLoader.Loader.Data.Elements,FaceVertex,0,1,3,0,1,12,1,0,0,-1,0,3,,ObjLoader.Loader.Data.Elements.Face' ObjLoader.Loader.TypeParsers.FaceParser' ObjLoader.Test.TypeParsers.FaceParserTests
+ObjLoader.Loader.Data.Elements,Group,1,2,3,0,2,16,2,0,1,1,1,1,ObjLoader.Loader.Data.Elements.Face,ObjLoader.Loader.Data.DataStore.DataStore
+ObjLoader.Loader.Data,Material,0,1,15,0,1,24,1,0,0,-1,0,5,,ObjLoader.Loader.Data.DataStore.DataStore' ObjLoader.Loader.Data.DataStore.IMaterialLibrary' ObjLoader.Loader.Loaders.MaterialLibraryLoader' ObjLoader.Test.Loaders.MaterialLibraryLoaderTests' ObjLoader.Test.Loaders.MaterialLibrarySpy
+ObjLoader.Loader.Data,Vec3,0,1,3,0,1,12,1,0,0,-1,0,2,,ObjLoader.Loader.Loaders.MaterialLibraryLoader' ObjLoader.Test.Loaders.MaterialLibraryLoaderTests
+ObjLoader.Loader.Data.VertexData,Normal,0,1,3,0,1,12,1,0,0,-1,0,5,,ObjLoader.Loader.Data.DataStore.DataStore' ObjLoader.Loader.Data.DataStore.INormalDataStore' ObjLoader.Loader.TypeParsers.NormalParser' ObjLoader.Test.TypeParsers.NormalParserTests' ObjLoader.Test.TypeParsers.NormalDataStoreMock
+ObjLoader.Loader.Data.VertexData,Texture,0,1,2,0,1,10,1,0,0,-1,0,5,,ObjLoader.Loader.Data.DataStore.DataStore' ObjLoader.Loader.Data.DataStore.ITextureDataStore' ObjLoader.Loader.TypeParsers.TextureParser' ObjLoader.Test.TypeParsers.TextureParserTests' ObjLoader.Test.TypeParsers.TextureDataStoreMock
+ObjLoader.Loader.Data.VertexData,Vertex,0,1,3,0,1,12,1,0,0,-1,0,5,,ObjLoader.Loader.Data.DataStore.DataStore' ObjLoader.Loader.Data.DataStore.IVertexDataStore' ObjLoader.Loader.TypeParsers.VertexParser' ObjLoader.Test.TypeParsers.VertexParserTests' ObjLoader.Test.TypeParsers.VertexDataStoreMock
+ObjLoader.Loader.Loaders,IMaterialLibraryLoader,0,1,0,0,0,4,1,1,0,-1,0,1,,ObjLoader.Loader.Loaders.MaterialLibraryLoaderFacade
+ObjLoader.Loader.Loaders,IMaterialLibraryLoaderFacade,0,1,0,0,0,4,1,2,0,-1,0,1,,ObjLoader.Loader.TypeParsers.MaterialLibraryParser
+ObjLoader.Loader.Loaders,IObjLoader,0,1,0,0,0,4,1,1,0,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoaderFactory
+ObjLoader.Loader.Loaders,IObjLoaderFactory,0,2,0,0,0,5,2,1,0,-1,1,0,ObjLoader.Loader.Loaders.IMaterialStreamProvider,
+ObjLoader.Loader.Loaders,LoaderBase,1,3,0,0,0,25,5,2,0,0.67,0,0,,
+ObjLoader.Loader.Loaders,LoadResult,0,0,5,0,0,8,0,0,0,-1,0,2,,ObjLoader.Loader.Loaders.ObjLoader' ObjLoader.Test.Loaders.ObjLoaderTests
+ObjLoader.Loader.Loaders,MaterialLibraryLoader,4,7,1,0,2,67,8,0,1,0.57,3,3,ObjLoader.Loader.Data.DataStore.IMaterialLibrary' ObjLoader.Loader.Data.Material' ObjLoader.Loader.Data.Vec3,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.MaterialLibraryLoaderTests' ObjLoader.Test.Loaders.ObjLoaderTests
+ObjLoader.Loader.Loaders,MaterialLibraryLoaderFacade,2,2,0,0,2,20,2,0,1,0,2,2,ObjLoader.Loader.Loaders.IMaterialLibraryLoader' ObjLoader.Loader.Loaders.IMaterialStreamProvider,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests
+ObjLoader.Loader.Loaders,MaterialStreamProvider,0,1,0,0,1,7,1,0,1,-1,0,0,,
+ObjLoader.Loader.Loaders,MaterialNullStreamProvider,0,1,0,0,1,7,1,0,1,-1,0,0,,
+ObjLoader.Loader.Loaders,ObjLoader,3,5,0,0,2,62,8,0,1,0,10,2,ObjLoader.Loader.Data.DataStore.IDataStore' ObjLoader.Loader.TypeParsers.Interfaces.IFaceParser' ObjLoader.Loader.TypeParsers.Interfaces.IGroupParser' ObjLoader.Loader.TypeParsers.Interfaces.INormalParser' ObjLoader.Loader.TypeParsers.Interfaces.ITextureParser' ObjLoader.Loader.TypeParsers.Interfaces.IVertexParser' ObjLoader.Loader.TypeParsers.Interfaces.IMaterialLibraryParser' ObjLoader.Loader.TypeParsers.Interfaces.IUseMaterialParser' ObjLoader.Loader.TypeParsers.Interfaces.ITypeParser' ObjLoader.Loader.Loaders.LoadResult,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests
+ObjLoader.Loader.Loaders,IMaterialStreamProvider,0,1,0,0,0,4,1,3,0,-1,0,3,,ObjLoader.Loader.Loaders.IObjLoaderFactory' ObjLoader.Loader.Loaders.MaterialLibraryLoaderFacade' ObjLoader.Loader.Loaders.ObjLoaderFactory
+ObjLoader.Loader.Loaders,ObjLoaderFactory,0,2,0,0,2,22,2,0,1,-1,13,0,ObjLoader.Loader.Loaders.IObjLoader' ObjLoader.Loader.Data.DataStore.DataStore' ObjLoader.Loader.TypeParsers.FaceParser' ObjLoader.Loader.TypeParsers.GroupParser' ObjLoader.Loader.TypeParsers.NormalParser' ObjLoader.Loader.TypeParsers.TextureParser' ObjLoader.Loader.TypeParsers.VertexParser' ObjLoader.Loader.Loaders.MaterialLibraryLoader' ObjLoader.Loader.Loaders.MaterialLibraryLoaderFacade' ObjLoader.Loader.TypeParsers.MaterialLibraryParser' ObjLoader.Loader.TypeParsers.UseMaterialParser' ObjLoader.Loader.Loaders.ObjLoader' ObjLoader.Loader.Loaders.IMaterialStreamProvider,
+ObjLoader.Loader.TypeParsers,FaceParser,1,3,1,0,2,40,6,0,1,0.67,3,3,ObjLoader.Loader.Data.DataStore.IFaceGroup' ObjLoader.Loader.Data.Elements.Face' ObjLoader.Loader.Data.Elements.FaceVertex,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests' ObjLoader.Test.TypeParsers.FaceParserTests
+ObjLoader.Loader.TypeParsers,GroupParser,1,2,1,0,2,16,2,0,1,0,1,3,ObjLoader.Loader.Data.DataStore.IGroupDataStore,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests' ObjLoader.Test.TypeParsers.GroupParserTests
+ObjLoader.Loader.TypeParsers,MaterialLibraryParser,1,2,1,0,2,16,2,0,1,0,1,3,ObjLoader.Loader.Loaders.IMaterialLibraryLoaderFacade,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests' ObjLoader.Test.TypeParsers.MaterialLibraryParserTests
+ObjLoader.Loader.TypeParsers,NormalParser,1,2,1,0,2,21,2,0,1,0,2,3,ObjLoader.Loader.Data.DataStore.INormalDataStore' ObjLoader.Loader.Data.VertexData.Normal,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests' ObjLoader.Test.TypeParsers.NormalParserTests
+ObjLoader.Loader.TypeParsers,TextureParser,1,2,1,0,2,20,2,0,1,0,2,3,ObjLoader.Loader.Data.DataStore.ITextureDataStore' ObjLoader.Loader.Data.VertexData.Texture,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests' ObjLoader.Test.TypeParsers.TextureParserTests
+ObjLoader.Loader.TypeParsers,TypeParserBase,0,2,1,0,2,9,2,7,1,-1,0,0,,
+ObjLoader.Loader.TypeParsers,UseMaterialParser,1,2,1,0,2,16,2,0,2,0,1,3,ObjLoader.Loader.Data.DataStore.IElementGroup,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests' ObjLoader.Test.TypeParsers.UseMaterialParserTests
+ObjLoader.Loader.TypeParsers,VertexParser,1,2,1,0,2,21,2,0,2,0,2,3,ObjLoader.Loader.Data.DataStore.IVertexDataStore' ObjLoader.Loader.Data.VertexData.Vertex,ObjLoader.Loader.Loaders.ObjLoaderFactory' ObjLoader.Test.Loaders.ObjLoaderTests' ObjLoader.Test.TypeParsers.VertexParserTests
+ObjLoader.Loader.TypeParsers.Interfaces,IFaceParser,0,0,0,0,0,3,0,1,1,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.TypeParsers.Interfaces,IGroupParser,0,0,0,0,0,3,0,1,1,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.TypeParsers.Interfaces,IMaterialLibraryParser,0,0,0,0,0,3,0,1,1,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.TypeParsers.Interfaces,INormalParser,0,0,0,0,0,3,0,1,1,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.TypeParsers.Interfaces,ITextureParser,0,0,0,0,0,3,0,1,1,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.TypeParsers.Interfaces,ITypeParser,0,2,0,0,0,5,2,8,0,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.TypeParsers.Interfaces,IUseMaterialParser,0,0,0,0,0,3,0,1,1,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader
+ObjLoader.Loader.TypeParsers.Interfaces,IVertexParser,0,0,0,0,0,3,0,1,1,-1,0,1,,ObjLoader.Loader.Loaders.ObjLoader

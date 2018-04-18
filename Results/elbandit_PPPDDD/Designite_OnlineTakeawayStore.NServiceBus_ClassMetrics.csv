@@ -1,11 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConfirmDeliveryOfOrder,1,2,0,0,2,13,2,0,0,0,1,0
-RefundOnDeliveryGuaranteeFailureHandler,0,1,1,0,1,15,1,0,0,-1,1,0
-RefundDueToLateDelivery,0,0,1,0,0,7,0,0,0,-1,0,0
-EndpointConfig,0,1,0,0,1,7,1,0,0,-1,0,0
-DependencyRegistration,0,1,0,0,1,8,1,0,0,-1,0,0
-DeliveryGuaranteeFailed,0,1,1,0,1,11,1,0,0,-1,1,1
-FoodDeliveryOrderSteps,0,0,0,0,0,5,0,0,0,-1,0,1
-IDeliveryGuaranteeOffer,0,1,0,0,0,4,1,0,0,-1,0,1
-IOrderRepository,0,1,0,0,0,4,1,0,0,-1,0,1
-OrderForDelivery,0,2,6,0,2,44,4,0,0,-1,2,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OnlineTakeawayStore.NServiceBusApplication.Application,ConfirmDeliveryOfOrder,1,2,0,0,2,13,2,0,0,0,2,0,OnlineTakeawayStore.NServiceBus.Model.IOrderRepository' OnlineTakeawayStore.NServiceBus.Model.OrderForDelivery,
+OnlineTakeawayStore.NServiceBusApplication.Application,RefundOnDeliveryGuaranteeFailureHandler,0,1,1,0,1,10,1,0,0,-1,2,0,OnlineTakeawayStore.NServiceBus.Model.OrderForDelivery' OnlineTakeawayStore.NServiceBus.Model.Events.DeliveryGuaranteeFailed,
+OnlineTakeawayStore.NativeEvents.Application.Events,RefundDueToLateDelivery,0,0,1,0,0,4,0,0,0,-1,0,0,,
+OnlineTakeawayStore.NServiceBus,EndpointConfig,0,1,0,0,1,10,1,0,0,-1,0,0,,
+OnlineTakeawayStore.NServiceBus,DependencyRegistration,0,1,0,0,1,8,1,0,0,-1,0,0,,
+OnlineTakeawayStore.NServiceBus.Model.Events,DeliveryGuaranteeFailed,0,1,1,0,1,8,1,0,0,-1,1,1,OnlineTakeawayStore.NServiceBus.Model.OrderForDelivery,OnlineTakeawayStore.NServiceBusApplication.Application.RefundOnDeliveryGuaranteeFailureHandler
+OnlineTakeawayStore.NServiceBus.Model,FoodDeliveryOrderSteps,0,0,0,0,0,5,0,0,0,-1,0,1,,OnlineTakeawayStore.NServiceBus.Model.OrderForDelivery
+OnlineTakeawayStore.NServiceBus.Model,IDeliveryGuaranteeOffer,0,1,0,0,0,4,1,0,0,-1,0,1,,OnlineTakeawayStore.NServiceBus.Model.OrderForDelivery
+OnlineTakeawayStore.NServiceBus.Model,IOrderRepository,0,1,0,0,0,4,1,0,0,-1,0,1,,OnlineTakeawayStore.NServiceBusApplication.Application.ConfirmDeliveryOfOrder
+OnlineTakeawayStore.NServiceBus.Model,OrderForDelivery,0,2,6,0,2,28,4,0,0,-1,2,3,OnlineTakeawayStore.NServiceBus.Model.FoodDeliveryOrderSteps' OnlineTakeawayStore.NServiceBus.Model.IDeliveryGuaranteeOffer,OnlineTakeawayStore.NServiceBusApplication.Application.ConfirmDeliveryOfOrder' OnlineTakeawayStore.NServiceBusApplication.Application.RefundOnDeliveryGuaranteeFailureHandler' OnlineTakeawayStore.NServiceBus.Model.Events.DeliveryGuaranteeFailed

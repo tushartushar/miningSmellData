@@ -1,0 +1,28 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Robot,DataConverter,0,5,0,0,5,80,8,0,0,-1,1,2,Robot.int_or_float,Robot.StatusCommand' Robot.MoveCommand
+Robot,int_or_float,2,0,0,2,0,8,0,0,0,-1,0,1,,Robot.DataConverter
+Robot,GrblCommandGenerator,1,11,0,0,10,221,12,0,1,0.91,6,6,Robot.GrblMoveCommand' Robot.GrblStatusCommand' Robot.GrblHomeCommand' Robot.GrblPauseCommand' Robot.GrblResumeCommand' Robot.GrblCancelCommand,Robot.GrblStatusCommand' Robot.GrblMoveCommand' Robot.GrblPauseCommand' Robot.GrblResumeCommand' Robot.GrblCancelCommand' Robot.GrblHomeCommand
+Robot,GrblStatusCommand,5,3,6,0,1,99,5,5,1,0.67,1,1,Robot.GrblCommandGenerator,Robot.GrblCommandGenerator
+Robot,GrblMoveCommand,2,2,0,0,1,19,2,0,2,0,1,1,Robot.GrblCommandGenerator,Robot.GrblCommandGenerator
+Robot,GrblPauseCommand,0,2,0,0,1,8,2,0,2,-1,1,1,Robot.GrblCommandGenerator,Robot.GrblCommandGenerator
+Robot,GrblResumeCommand,0,2,0,0,1,9,2,0,2,-1,1,1,Robot.GrblCommandGenerator,Robot.GrblCommandGenerator
+Robot,GrblCancelCommand,0,2,0,0,1,8,2,0,2,-1,1,1,Robot.GrblCommandGenerator,Robot.GrblCommandGenerator
+Robot,GrblHomeCommand,0,2,0,0,1,8,2,0,2,-1,1,1,Robot.GrblCommandGenerator,Robot.GrblCommandGenerator
+Robot,ICommandGenerator,0,9,0,0,9,12,9,2,0,-1,0,2,,Robot.Robot' Robot.RobotDetectionCommand
+Robot,IRobotCommand,0,2,0,0,0,6,2,2,0,-1,0,2,,Robot.Robot' Robot.RobotDetectionCommand
+Robot,IRobotCommandWithStatus,0,0,6,0,0,10,0,2,1,-1,0,3,,GUI.RobotControl' GUI.RobotGUI' Robot.Robot
+Robot,PacketizedCommandGenerator,0,9,0,0,9,359,9,0,1,-1,9,0,Robot.MoveCommand' Robot.StatusCommand' Robot.ResetCommand' Robot.ZeroCommand' Robot.PauseCommand' Robot.ResumeCommand' Robot.CancelCommand' Robot.StepperEnableCommand' Robot.StepperDisableCommand,
+Robot,SerialPacket,14,4,0,0,3,170,13,0,0,0,1,3,Robot.ReceiveState,Robot.StatusCommand' Robot.MoveCommand' Robot.SingleByteStatusCommand
+Robot,ReceiveState,0,0,0,0,0,8,0,0,0,-1,0,1,,Robot.SerialPacket
+Robot,StatusCommand,9,3,7,0,1,75,4,2,2,1,2,1,Robot.SerialPacket' Robot.DataConverter,Robot.PacketizedCommandGenerator
+Robot,MoveCommand,2,2,1,0,1,25,2,0,3,0,2,1,Robot.DataConverter' Robot.SerialPacket,Robot.PacketizedCommandGenerator
+Robot,SingleByteStatusCommand,0,1,0,0,0,7,1,7,3,-1,1,0,Robot.SerialPacket,
+Robot,StepperDisableCommand,0,1,1,0,1,5,1,0,4,-1,0,1,,Robot.PacketizedCommandGenerator
+Robot,StepperEnableCommand,0,1,1,0,1,5,1,0,4,-1,0,1,,Robot.PacketizedCommandGenerator
+Robot,CancelCommand,0,1,1,0,1,5,1,0,4,-1,0,1,,Robot.PacketizedCommandGenerator
+Robot,PauseCommand,0,1,1,0,1,5,1,0,4,-1,0,1,,Robot.PacketizedCommandGenerator
+Robot,ResumeCommand,0,1,1,0,1,5,1,0,4,-1,0,1,,Robot.PacketizedCommandGenerator
+Robot,ResetCommand,0,1,1,0,1,5,1,0,4,-1,0,1,,Robot.PacketizedCommandGenerator
+Robot,ZeroCommand,0,1,1,0,1,5,1,0,4,-1,0,1,,Robot.PacketizedCommandGenerator
+Robot,Robot,23,15,3,2,10,337,21,1,0,0.13,8,3,Robot.IRobotCommand' Serial.SerialPortWrapper' Robot.ICommandGenerator' Commands.ICommand' Robot.RobotDetectionCommand' Robot.IRobotCommandWithStatus' Commands.MoveTool' Commands.SpeedType,GUI.RobotControl' GUI.RobotGUI' GUI.Settings
+Robot,RobotDetectionCommand,3,4,0,0,0,67,6,0,1,0.5,2,1,Robot.IRobotCommand' Robot.ICommandGenerator,Robot.Robot

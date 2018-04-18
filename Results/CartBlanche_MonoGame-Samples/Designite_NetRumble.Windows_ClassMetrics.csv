@@ -1,52 +1,57 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AudioManager,5,5,0,0,4,103,11,0,0,0.4,1,9
-BatchRemovalCollection,1,3,0,0,3,42,4,1,0,0,0,3
-BloomComponent,10,9,2,0,3,221,13,0,0,0.22,2,1
-BloomSettings,8,1,0,8,1,50,1,0,0,0,0,2
-CollisionMath,0,4,0,0,4,137,15,0,0,-1,0,1
-Asteroid,9,6,2,0,6,167,13,0,1,0.67,5,1
-CollisionManager,6,7,3,0,4,372,54,0,1,0.29,4,4
-GameplayObject,7,7,7,0,6,161,10,4,0,0.86,1,14
-PlayerData,3,3,3,0,3,100,5,0,0,1,1,4
-DoubleLaserPowerUp,1,5,0,0,5,71,7,0,1,0.6,2,1
-PowerUp,5,5,0,1,4,98,7,3,1,0.8,3,1
-RocketPowerUp,1,5,0,0,5,71,7,0,2,0.6,2,1
-TripleLaserPowerUp,1,5,0,0,5,71,7,0,2,0.6,2,1
-LaserProjectile,3,5,0,1,5,95,8,0,1,0.4,4,4
-MineProjectile,5,6,0,1,6,120,10,0,1,0.5,5,2
-Projectile,5,5,1,0,4,130,15,3,1,0.4,3,1
-RocketProjectile,5,6,0,1,6,137,14,0,2,0.5,6,2
-Ship,35,11,12,2,11,652,66,0,1,0.27,11,19
-ShipInput,4,4,1,3,4,147,20,0,0,0,1,2
-DoubleLaserWeapon,1,2,0,0,1,44,2,0,1,0,2,0
-LaserWeapon,0,2,0,0,1,41,10,2,1,-1,3,0
-MineWeapon,1,2,0,0,1,37,2,0,1,0,2,1
-RocketWeapon,0,2,0,0,1,34,3,0,1,-1,3,0
-TripleLaserWeapon,1,2,0,0,1,48,2,0,2,0,2,0
-Weapon,4,4,0,0,2,80,8,3,0,0,2,1
-World,35,18,6,1,7,990,159,0,0,0,17,5
-SpriteBlendMode,0,0,0,0,0,10,0,0,0,-1,0,4
-NetRumbleGame,2,4,0,0,1,130,10,0,0,0,5,1
-OperationCompletedEventArgs,1,1,1,0,1,31,1,0,0,0,0,2
-RandomMath,1,3,1,0,3,57,3,0,0,0,0,7
-Particle,7,1,0,7,1,60,2,0,0,0,0,0
-ParticleCache,2,4,3,1,4,94,8,0,0,0,0,1
-ParticleEffect,5,8,5,0,8,198,19,0,0,0.38,3,2
-ParticleEffectManager,3,8,0,0,8,161,24,0,0,0.38,6,5
-ParticleEffectType,0,0,0,0,0,12,0,0,0,-1,0,6
-ParticleSystem,34,10,27,0,7,585,23,0,0,0.2,3,1
-Starfield,17,7,0,0,6,278,19,0,0,0,1,2
-ScreenState,0,0,0,0,0,10,0,0,0,-1,0,6
-GameScreen,8,8,9,0,7,239,16,6,0,0.75,3,1
-InputState,4,2,10,4,2,119,2,0,0,0,0,6
-LoadingScreen,3,4,0,0,3,97,9,0,1,0.5,2,0
-MenuScreen,2,5,1,0,2,114,14,3,1,0.4,4,0
-MessageBoxScreen,4,5,0,0,5,105,9,0,1,0,2,4
-ScreenManager,12,11,7,1,8,268,29,0,0,0,3,11
-BackgroundScreen,5,7,0,0,6,143,11,0,1,0.43,2,0
-GameplayScreen,10,16,0,0,10,415,62,0,1,0.12,11,1
-LobbyScreen,7,15,0,0,9,384,63,0,2,0.13,7,2
-MainMenuScreen,3,17,1,0,4,484,84,0,2,0.47,7,1
-NetworkBusyScreen,4,4,0,0,4,117,6,0,1,0,1,2
-SearchResultsScreen,3,8,0,0,3,214,31,0,2,0.5,7,1
-Program,0,1,0,0,0,13,3,0,0,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NetRumble,AudioManager,5,5,0,0,4,117,13,0,0,0.4,0,9,,NetRumble.Asteroid' NetRumble.PowerUp' NetRumble.MineProjectile' NetRumble.RocketProjectile' NetRumble.Ship' NetRumble.Weapon' NetRumble.NetRumbleGame' NetRumble.MenuScreen' NetRumble.GameplayScreen
+NetRumble,BatchRemovalCollection<T>,1,3,0,0,3,48,4,0,0,0,0,0,,
+NetRumble,BloomComponent,10,9,2,0,3,239,13,0,0,0.22,2,1,NetRumble.BloomSettings' NetRumble.IntermediateBuffer,NetRumble.GameplayScreen
+NetRumble,IntermediateBuffer,0,0,0,0,0,7,0,0,0,-1,0,1,,NetRumble.BloomComponent
+NetRumble,BloomSettings,8,1,0,8,1,55,1,0,0,0,0,2,,NetRumble.BloomComponent' NetRumble.GameplayScreen
+NetRumble,CollisionMath,0,4,0,0,4,151,14,0,0,-1,1,1,NetRumble.CircleLineCollisionResult,NetRumble.CollisionManager
+NetRumble,CircleLineCollisionResult,4,0,0,4,0,7,0,0,0,-1,0,2,,NetRumble.CollisionMath' NetRumble.CollisionManager
+NetRumble,Asteroid,9,6,2,0,6,203,13,0,1,0.67,5,1,NetRumble.RandomMath' NetRumble.GameplayObject' NetRumble.Ship' NetRumble.AudioManager' NetRumble.Projectile,NetRumble.World
+NetRumble,CollisionManager,6,7,3,0,4,486,53,0,0,0.29,6,4,NetRumble.CircleLineCollisionResult' NetRumble.GameplayObject' NetRumble.CollisionMath' NetRumble.Projectile' NetRumble.CollisionResult' NetRumble.RandomMath,NetRumble.GameplayObject' NetRumble.Projectile' NetRumble.World' NetRumble.LobbyScreen
+NetRumble,CollisionResult,3,1,0,3,1,20,1,0,0,0,1,1,NetRumble.GameplayObject,NetRumble.CollisionManager
+NetRumble,GameplayObject,7,7,7,0,6,176,10,4,0,0.86,1,15,NetRumble.CollisionManager,NetRumble.Asteroid' NetRumble.CollisionManager' NetRumble.CollisionResult' NetRumble.DoubleLaserPowerUp' NetRumble.PowerUp' NetRumble.RocketPowerUp' NetRumble.TripleLaserPowerUp' NetRumble.LaserProjectile' NetRumble.MineProjectile' NetRumble.Projectile' NetRumble.RocketProjectile' NetRumble.Ship' NetRumble.World' NetRumble.ParticleEffect' NetRumble.ParticleEffectManager
+NetRumble,PlayerData,3,3,3,0,3,114,5,0,0,1,1,4,NetRumble.Ship,NetRumble.Ship' NetRumble.World' NetRumble.GameplayScreen' NetRumble.LobbyScreen
+NetRumble,DoubleLaserPowerUp,1,5,0,0,5,84,7,0,1,0.6,3,1,NetRumble.PowerUp' NetRumble.Ship' NetRumble.GameplayObject,NetRumble.World
+NetRumble,PowerUp,5,5,0,1,4,116,7,3,1,0.8,3,5,NetRumble.AudioManager' NetRumble.GameplayObject' NetRumble.Ship,NetRumble.DoubleLaserPowerUp' NetRumble.RocketPowerUp' NetRumble.TripleLaserPowerUp' NetRumble.Projectile' NetRumble.World
+NetRumble,RocketPowerUp,1,5,0,0,5,84,7,0,2,0.6,3,1,NetRumble.PowerUp' NetRumble.Ship' NetRumble.GameplayObject,NetRumble.World
+NetRumble,TripleLaserPowerUp,1,5,0,0,5,84,7,0,2,0.6,3,1,NetRumble.PowerUp' NetRumble.Ship' NetRumble.GameplayObject,NetRumble.World
+NetRumble,LaserProjectile,3,5,0,1,5,117,8,0,1,0.4,5,4,NetRumble.ParticleEffectManager' NetRumble.Ship' NetRumble.Projectile' NetRumble.ParticleEffectType' NetRumble.GameplayObject,NetRumble.DoubleLaserWeapon' NetRumble.LaserWeapon' NetRumble.TripleLaserWeapon' NetRumble.World
+NetRumble,MineProjectile,5,6,0,1,6,144,10,0,1,0.5,6,2,NetRumble.ParticleEffectManager' NetRumble.Ship' NetRumble.Projectile' NetRumble.AudioManager' NetRumble.ParticleEffectType' NetRumble.GameplayObject,NetRumble.MineWeapon' NetRumble.World
+NetRumble,Projectile,5,5,1,0,4,153,15,3,1,0.4,4,6,NetRumble.Ship' NetRumble.GameplayObject' NetRumble.PowerUp' NetRumble.CollisionManager,NetRumble.Asteroid' NetRumble.CollisionManager' NetRumble.LaserProjectile' NetRumble.MineProjectile' NetRumble.RocketProjectile' NetRumble.Ship
+NetRumble,RocketProjectile,5,6,0,1,6,171,14,0,2,0.5,7,2,NetRumble.ParticleEffectManager' NetRumble.ParticleEffect' NetRumble.Ship' NetRumble.AudioManager' NetRumble.ParticleEffectType' NetRumble.Projectile' NetRumble.GameplayObject,NetRumble.RocketWeapon' NetRumble.World
+NetRumble,Ship,35,11,12,2,11,753,57,0,1,0.27,9,19,NetRumble.ParticleEffectManager' NetRumble.Weapon' NetRumble.MineWeapon' NetRumble.GameplayObject' NetRumble.ShipInput' NetRumble.AudioManager' NetRumble.ParticleEffectType' NetRumble.Projectile' NetRumble.PlayerData,NetRumble.Asteroid' NetRumble.PlayerData' NetRumble.DoubleLaserPowerUp' NetRumble.PowerUp' NetRumble.RocketPowerUp' NetRumble.TripleLaserPowerUp' NetRumble.LaserProjectile' NetRumble.MineProjectile' NetRumble.Projectile' NetRumble.RocketProjectile' NetRumble.DoubleLaserWeapon' NetRumble.LaserWeapon' NetRumble.MineWeapon' NetRumble.RocketWeapon' NetRumble.TripleLaserWeapon' NetRumble.Weapon' NetRumble.World' NetRumble.GameplayScreen' NetRumble.LobbyScreen
+NetRumble,ShipInput,4,4,1,3,4,177,20,0,0,0,2,2,NetRumble.PacketTypes' NetRumble.World,NetRumble.Ship' NetRumble.World
+NetRumble,DoubleLaserWeapon,1,2,0,0,1,50,2,0,1,0,2,0,NetRumble.Ship' NetRumble.LaserProjectile,
+NetRumble,LaserWeapon,0,2,0,0,1,44,3,2,1,-1,3,0,NetRumble.RandomMath' NetRumble.Ship' NetRumble.LaserProjectile,
+NetRumble,MineWeapon,1,2,0,0,1,44,2,0,1,0,2,1,NetRumble.Ship' NetRumble.MineProjectile,NetRumble.Ship
+NetRumble,RocketWeapon,0,2,0,0,1,37,3,0,1,-1,3,0,NetRumble.RandomMath' NetRumble.Ship' NetRumble.RocketProjectile,
+NetRumble,TripleLaserWeapon,1,2,0,0,1,61,2,0,2,0,2,0,NetRumble.Ship' NetRumble.LaserProjectile,
+NetRumble,Weapon,4,4,0,0,2,96,8,3,0,0,2,1,NetRumble.Ship' NetRumble.AudioManager,NetRumble.Ship
+NetRumble,World,35,18,6,1,7,1254,83,0,0,0,18,5,NetRumble.Asteroid' NetRumble.PowerUp' NetRumble.ParticleEffectManager' NetRumble.ParticleEffectType' NetRumble.Ship' NetRumble.RocketProjectile' NetRumble.MineProjectile' NetRumble.LaserProjectile' NetRumble.DoubleLaserPowerUp' NetRumble.TripleLaserPowerUp' NetRumble.RocketPowerUp' NetRumble.CollisionManager' NetRumble.PlayerData' NetRumble.PacketTypes' NetRumble.RandomMath' NetRumble.ShipInput' NetRumble.GameplayObject' NetRumble.SpriteBlendMode,NetRumble.ShipInput' NetRumble.GameplayScreen' NetRumble.LobbyScreen' NetRumble.MainMenuScreen' NetRumble.SearchResultsScreen
+NetRumble,PacketTypes,0,0,0,0,0,12,0,0,0,-1,0,3,,NetRumble.ShipInput' NetRumble.World' NetRumble.LobbyScreen
+NetRumble,SpriteBlendMode,0,0,0,0,0,5,0,0,0,-1,0,4,,NetRumble.World' NetRumble.ParticleEffect' NetRumble.ParticleEffectManager' NetRumble.ParticleSystem
+NetRumble,NetRumbleGame,2,4,0,0,1,150,8,0,0,0,6,1,NetRumble.ScreenManager' NetRumble.AudioManager' NetRumble.MessageBoxScreen' NetRumble.MainMenuScreen' NetRumble.GameScreen' NetRumble.BackgroundScreen,NetRumble.Program
+NetRumble,OperationCompletedEventArgs,1,1,1,0,1,28,1,0,0,0,0,2,,NetRumble.MainMenuScreen' NetRumble.SearchResultsScreen
+NetRumble,RandomMath,1,3,1,0,3,65,3,0,0,1,0,7,,NetRumble.Asteroid' NetRumble.CollisionManager' NetRumble.LaserWeapon' NetRumble.RocketWeapon' NetRumble.World' NetRumble.ParticleSystem' NetRumble.Starfield
+NetRumble,Particle,7,1,0,7,1,68,2,0,0,0,0,2,,NetRumble.ParticleCache' NetRumble.ParticleSystem
+NetRumble,ParticleCache,2,4,3,1,4,105,8,0,0,0,1,1,NetRumble.Particle,NetRumble.ParticleSystem
+NetRumble,ParticleEffect,5,8,5,0,8,230,20,0,0,0.38,3,2,NetRumble.GameplayObject' NetRumble.ParticleSystem' NetRumble.SpriteBlendMode,NetRumble.RocketProjectile' NetRumble.ParticleEffectManager
+NetRumble,ParticleEffectManager,3,8,0,0,8,206,24,0,0,0,4,5,NetRumble.ParticleEffect' NetRumble.SpriteBlendMode' NetRumble.ParticleEffectType' NetRumble.GameplayObject,NetRumble.LaserProjectile' NetRumble.MineProjectile' NetRumble.RocketProjectile' NetRumble.Ship' NetRumble.World
+NetRumble,ParticleEffectType,0,0,0,0,0,9,0,0,0,-1,0,6,,NetRumble.LaserProjectile' NetRumble.MineProjectile' NetRumble.RocketProjectile' NetRumble.Ship' NetRumble.World' NetRumble.ParticleEffectManager
+NetRumble,ParticleSystem,34,10,27,0,7,577,24,0,0,0.2,4,1,NetRumble.SpriteBlendMode' NetRumble.ParticleCache' NetRumble.Particle' NetRumble.RandomMath,NetRumble.ParticleEffect
+NetRumble,Starfield,17,7,0,0,6,318,19,0,0,0,1,2,NetRumble.RandomMath,NetRumble.BackgroundScreen' NetRumble.GameplayScreen
+NetRumble,ScreenState,0,0,0,0,0,7,0,0,0,-1,0,6,,NetRumble.GameScreen' NetRumble.LoadingScreen' NetRumble.MenuScreen' NetRumble.ScreenManager' NetRumble.GameplayScreen' NetRumble.SearchResultsScreen
+NetRumble,GameScreen,8,8,9,0,7,243,13,6,0,0.75,3,6,NetRumble.ScreenState' NetRumble.ScreenManager' NetRumble.InputState,NetRumble.NetRumbleGame' NetRumble.LoadingScreen' NetRumble.ScreenManager' NetRumble.BackgroundScreen' NetRumble.GameplayScreen' NetRumble.NetworkBusyScreen
+NetRumble,InputState,4,2,10,4,2,176,2,0,0,0,0,6,,NetRumble.GameScreen' NetRumble.MenuScreen' NetRumble.MessageBoxScreen' NetRumble.ScreenManager' NetRumble.GameplayScreen' NetRumble.LobbyScreen
+NetRumble,LoadingScreen,3,4,0,0,3,96,8,0,1,0.5,3,0,NetRumble.ScreenManager' NetRumble.GameScreen' NetRumble.ScreenState,
+NetRumble,MenuScreen,2,5,1,0,2,125,13,3,1,0.4,4,3,NetRumble.InputState' NetRumble.AudioManager' NetRumble.ScreenManager' NetRumble.ScreenState,NetRumble.LobbyScreen' NetRumble.MainMenuScreen' NetRumble.SearchResultsScreen
+NetRumble,MessageBoxScreen,4,5,0,0,5,122,7,0,1,0,2,4,NetRumble.ScreenManager' NetRumble.InputState,NetRumble.NetRumbleGame' NetRumble.GameplayScreen' NetRumble.MainMenuScreen' NetRumble.SearchResultsScreen
+NetRumble,ScreenManager,12,11,7,1,8,298,26,0,0,0,3,11,NetRumble.InputState' NetRumble.GameScreen' NetRumble.ScreenState,NetRumble.NetRumbleGame' NetRumble.GameScreen' NetRumble.LoadingScreen' NetRumble.MenuScreen' NetRumble.MessageBoxScreen' NetRumble.BackgroundScreen' NetRumble.GameplayScreen' NetRumble.LobbyScreen' NetRumble.MainMenuScreen' NetRumble.NetworkBusyScreen' NetRumble.SearchResultsScreen
+NetRumble,BackgroundScreen,5,7,0,0,6,177,11,0,1,0.43,3,1,NetRumble.Starfield' NetRumble.ScreenManager' NetRumble.GameScreen,NetRumble.NetRumbleGame
+NetRumble,GameplayScreen,10,16,0,0,10,530,59,0,1,0.12,12,1,NetRumble.World' NetRumble.Ship' NetRumble.BloomComponent' NetRumble.Starfield' NetRumble.PlayerData' NetRumble.ScreenManager' NetRumble.BloomSettings' NetRumble.AudioManager' NetRumble.GameScreen' NetRumble.MessageBoxScreen' NetRumble.InputState' NetRumble.ScreenState,NetRumble.LobbyScreen
+NetRumble,LobbyScreen,7,15,0,0,9,513,52,0,2,0.13,9,2,NetRumble.World' NetRumble.MenuScreen' NetRumble.ScreenManager' NetRumble.PlayerData' NetRumble.GameplayScreen' NetRumble.Ship' NetRumble.CollisionManager' NetRumble.InputState' NetRumble.PacketTypes,NetRumble.MainMenuScreen' NetRumble.SearchResultsScreen
+NetRumble,MainMenuScreen,3,17,1,0,4,594,28,0,2,0.59,9,1,NetRumble.MainMenuState' NetRumble.MenuScreen' NetRumble.ScreenManager' NetRumble.NetworkBusyScreen' NetRumble.MessageBoxScreen' NetRumble.World' NetRumble.SearchResultsScreen' NetRumble.OperationCompletedEventArgs' NetRumble.LobbyScreen,NetRumble.NetRumbleGame
+NetRumble,MainMenuState,0,0,0,0,0,7,0,0,0,-1,0,1,,NetRumble.MainMenuScreen
+NetRumble,NetworkBusyScreen,4,4,0,0,4,133,6,0,1,0,2,2,NetRumble.ScreenManager' NetRumble.GameScreen,NetRumble.MainMenuScreen' NetRumble.SearchResultsScreen
+NetRumble,SearchResultsScreen,3,8,0,0,3,287,22,0,2,0.5,8,1,NetRumble.MenuScreen' NetRumble.NetworkBusyScreen' NetRumble.MessageBoxScreen' NetRumble.ScreenManager' NetRumble.ScreenState' NetRumble.OperationCompletedEventArgs' NetRumble.World' NetRumble.LobbyScreen,NetRumble.MainMenuScreen
+NetRumble,Program,0,1,0,0,0,14,1,0,0,-1,1,0,NetRumble.NetRumbleGame,

@@ -1,15 +1,17 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Cache,0,0,0,0,0,135,0,0,0,-1,0,0
-IgnoreAttribute,0,0,0,0,0,4,0,0,0,-1,0,0
-UsePropertyAttribute,1,1,0,0,1,13,1,0,0,0,0,0
-AopCacheConfiguration,3,0,3,0,0,28,0,0,0,-1,0,1
-BTreeCache,3,7,0,0,7,74,11,0,1,0,1,0
-CacheService,4,2,0,4,0,33,4,0,0,0,2,1
-ICache,0,3,0,0,0,14,3,5,0,-1,0,1
-InProcessMemoryCache,1,3,0,0,3,32,3,0,1,0,0,0
-MemoryCache,2,3,0,0,3,31,3,0,1,0,0,0
-KeyBuilder,2,4,5,0,1,96,21,0,0,0,1,0
-CacheSettings,0,0,0,0,0,8,0,0,0,-1,0,1
-NoCache,0,3,0,0,3,24,3,0,1,-1,0,0
-OutOfProcessMemoryCache,2,4,0,1,4,42,5,0,1,0,0,0
-DateWrapper,0,0,2,0,0,14,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CacheAspect.Attributes,Cache,0,0,0,0,0,135,0,0,0,-1,0,0,,
+CacheAspect.Attributes,Cacheable,1,8,1,0,7,84,10,0,0,0.88,4,0,CacheAspect.KeyBuilder' CacheAspect.CacheSettings' CacheAspect.CacheService' CacheAspect.ICache,
+CacheAspect.Attributes,IgnoreAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+CacheAspect.Attributes,UsePropertyAttribute,1,1,0,0,1,13,1,0,0,0,0,0,,
+CacheAspect.Attributes,TriggerInvalidation,1,6,1,0,6,46,7,0,0,1,4,0,CacheAspect.KeyBuilder' CacheAspect.CacheSettings' CacheAspect.ICache' CacheAspect.CacheService,
+CacheAspect.Config,AopCacheConfiguration,3,0,3,0,0,25,0,0,0,-1,0,1,,CacheAspect.CacheService
+CacheAspect,BTreeCache,3,7,0,0,7,84,11,0,1,0,1,0,CacheAspect.CacheService,
+CacheAspect,CacheService,4,2,0,4,0,37,3,0,0,0,2,5,CacheAspect.ICache' CacheAspect.Config.AopCacheConfiguration,CacheAspect.Attributes.Cacheable' CacheAspect.Attributes.TriggerInvalidation' CacheAspect.BTreeCache' TestCache.ConfigBased' TestCache.TestUserRepository
+CacheAspect,ICache,0,3,0,0,0,11,3,5,0,-1,0,5,,CacheAspect.Attributes.Cacheable' CacheAspect.Attributes.TriggerInvalidation' CacheAspect.CacheService' TestCache.ConfigBased' TestCache.TestUserRepository
+CacheAspect,InProcessMemoryCache,1,3,0,0,3,29,3,0,1,0,0,0,,
+CacheAspect,MemoryCache,2,3,0,0,3,28,3,0,1,0,0,1,,TestCache.ConfigBased
+CacheAspect,KeyBuilder,2,4,5,0,1,97,10,0,0,0.5,1,2,CacheAspect.CacheSettings,CacheAspect.Attributes.Cacheable' CacheAspect.Attributes.TriggerInvalidation
+CacheAspect,CacheSettings,0,0,0,0,0,8,0,0,0,-1,0,3,,CacheAspect.Attributes.Cacheable' CacheAspect.Attributes.TriggerInvalidation' CacheAspect.KeyBuilder
+CacheAspect,NoCache,0,3,0,0,3,22,3,0,1,-1,0,0,,
+CacheAspect,OutOfProcessMemoryCache,2,4,0,1,4,40,5,0,1,0,0,0,,
+CacheAspect.Supporting,DateWrapper<T>,0,0,2,0,0,8,0,0,0,-1,0,0,,

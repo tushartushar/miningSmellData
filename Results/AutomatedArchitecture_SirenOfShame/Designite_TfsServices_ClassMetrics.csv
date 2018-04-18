@@ -1,11 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CheckinInfoGetterService,1,6,0,0,1,100,13,0,0,0,3,1
-ConfigureTfs,27,21,0,0,1,517,35,0,1,0.1,6,1
-MyBuildServer,6,10,1,2,4,162,33,0,0,0.5,4,2
-CheckinInfo,0,3,2,0,3,24,3,0,0,-1,0,2
-MyTfsBuildDefinition,5,11,5,0,3,141,18,0,1,0.18,3,4
-MyTfsProject,3,3,4,0,3,40,3,0,0,0.67,3,3
-MyTfsProjectCollection,6,6,6,0,4,112,12,0,0,0.33,2,3
-MyTfsServer,3,7,2,0,6,87,10,0,0,0.29,2,4
-TfsCiEntryPoint,0,2,2,0,2,22,2,0,1,-1,3,2
-TfsWatcher,4,6,0,0,3,68,18,0,1,0,4,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TfsServices.Configuration,CheckinInfoGetterService,1,6,0,0,1,102,12,0,0,0,5,1,TfsServices.Configuration.CheckinInfo' TfsServices.Configuration.MyBuildServer' SirenOfShame.Lib.Watcher.BuildStatus' TfsServices.Configuration.MyTfsBuildDefinition' TfsServices.Configuration.CommentAndHash,TfsServices.Configuration.MyBuildServer
+TfsServices.Configuration,CommentAndHash,0,1,2,0,1,11,1,0,0,-1,1,1,TfsServices.Configuration.CheckinInfo,TfsServices.Configuration.CheckinInfoGetterService
+TfsServices.Configuration,ConfigureTfs,27,21,0,0,1,536,33,0,1,0,10,1,TfsServices.TfsCiEntryPoint' SirenOfShame.Lib.Settings.CiEntryPointSetting' SirenOfShame.Lib.SosButton' SirenOfShame.Lib.Settings.SirenOfShameSettings' TfsServices.Configuration.MyTfsServer' TfsServices.Configuration.MyTfsProjectCollection' SirenOfShame.Lib.Settings.BuildDefinitionSetting' TfsServices.Configuration.MyTfsProject' TfsServices.Configuration.MyTfsBuildDefinition' SirenOfShame.Lib.ServerConfiguration.ConfigureServerBase,TfsServices.TfsCiEntryPoint
+TfsServices.Configuration,MyBuildServer,6,10,1,2,4,156,27,0,0,0.5,6,3,TfsServices.Configuration.MyTfsProject' TfsServices.Configuration.MyTfsBuildDefinition' SirenOfShame.Lib.Watcher.BuildStatusEnum' SirenOfShame.Lib.Watcher.BuildStatus' TfsServices.Configuration.CheckinInfoGetterService' TfsServices.Configuration.CheckinInfo,TfsServices.Configuration.CheckinInfoGetterService' TfsServices.Configuration.MyTfsBuildDefinition' TfsServices.TfsWatcher
+TfsServices.Configuration,CheckinInfo,0,3,2,0,3,16,3,0,0,-1,0,4,,TfsServices.Configuration.CheckinInfoGetterService' TfsServices.Configuration.CommentAndHash' TfsServices.Configuration.MyBuildServer' TfsServices.Configuration.MyTfsBuildDefinition
+TfsServices.Configuration,MyTfsBuildDefinition,5,11,5,0,3,164,16,0,1,0.18,4,4,TfsServices.Configuration.MyTfsProject' TfsServices.Configuration.MyBuildServer' TfsServices.Configuration.CheckinInfo' TfsServices.Configuration.MyTfsProjectCollection,TfsServices.Configuration.CheckinInfoGetterService' TfsServices.Configuration.ConfigureTfs' TfsServices.Configuration.MyBuildServer' TfsServices.TfsWatcher
+TfsServices.Configuration,MyTfsProject,3,3,4,0,3,36,3,0,0,0.67,1,4,TfsServices.Configuration.MyTfsProjectCollection,TfsServices.Configuration.ConfigureTfs' TfsServices.Configuration.MyBuildServer' TfsServices.Configuration.MyTfsBuildDefinition' TfsServices.TfsWatcher
+TfsServices.Configuration,MyTfsProjectCollection,6,6,6,0,4,115,11,0,0,0.33,1,4,TfsServices.Configuration.MyTfsServer,TfsServices.Configuration.ConfigureTfs' TfsServices.Configuration.MyTfsBuildDefinition' TfsServices.Configuration.MyTfsProject' TfsServices.TfsWatcher
+TfsServices.Configuration,MyTfsServer,3,7,2,0,6,94,11,0,0,0.29,1,3,SirenOfShame.Lib.Settings.CiEntryPointSetting,TfsServices.Configuration.ConfigureTfs' TfsServices.Configuration.MyTfsProjectCollection' TfsServices.TfsWatcher
+TfsServices,TfsCiEntryPoint,0,2,2,0,2,20,2,0,1,-1,4,2,TfsServices.Configuration.ConfigureTfs' SirenOfShame.Lib.Settings.SirenOfShameSettings' SirenOfShame.Lib.Settings.CiEntryPointSetting' TfsServices.TfsWatcher,TfsServices.Configuration.ConfigureTfs' TfsServices.TfsWatcher
+TfsServices,TfsWatcher,4,6,0,0,3,91,9,0,1,0,9,1,TfsServices.TfsCiEntryPoint' TfsServices.Configuration.MyTfsServer' TfsServices.Configuration.MyTfsBuildDefinition' SirenOfShame.Lib.Settings.SirenOfShameSettings' TfsServices.Configuration.MyBuildServer' SirenOfShame.Lib.Settings.CiEntryPointSetting' TfsServices.Configuration.MyTfsProjectCollection' TfsServices.Configuration.MyTfsProject' SirenOfShame.Lib.Settings.BuildDefinitionSetting,TfsServices.TfsCiEntryPoint

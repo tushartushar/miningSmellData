@@ -1,9 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IDataService,0,7,0,0,0,54,7,3,0,-1,0,1
-AbstractDBEntityProfile,7,0,1,7,0,41,0,1,0,-1,1,2
-DBEntityProfile,1,1,1,0,1,31,1,1,1,0,2,3
-AccessData,4,0,0,4,0,22,0,0,0,-1,0,1
-EntityProfileManager,3,2,0,0,2,30,3,0,0,0,1,1
-MySqlConnectPool,2,4,1,0,4,82,10,0,1,0.5,1,1
-MySqlService,2,28,1,0,27,552,43,0,1,0.07,5,1
-MySQL,0,0,0,0,0,6,0,0,2,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DogSE.Server.Database,IDataService,0,7,0,0,0,54,7,3,0,-1,0,0,,
+DogSE.Server.Database,AbstractDBEntityProfile,7,0,1,7,0,35,0,1,0,-1,1,5,DogSE.Server.Database.AccessData,DogSE.Server.Database.EntityProfileManager' DogSE.Server.Database.MySQL.MySqlService' DogSE.Server.Database.MongoDB.MongoDBService' DogSE.Server.Database.MongoDB.MongoDBLogService' DogSE.Server.Database.MongoDB.MongodbWriter<T>
+DogSE.Server.Database,DBEntityProfile<T>,1,1,1,0,1,26,1,0,1,0,2,0,DogSE.Server.Database.AccessData' DogSE.Server.Database.EntityProfileManager,
+DogSE.Server.Database,AccessData,4,0,0,4,0,19,0,0,0,-1,0,6,,DogSE.Server.Database.AbstractDBEntityProfile' DogSE.Server.Database.DBEntityProfile<T>' DogSE.Server.Database.MySQL.MySqlService' DogSE.Server.Database.MongoDB.MongoDBService' DogSE.Server.Database.MongoDB.MongoDBLogService' DogSE.Server.Database.MongoDB.MongodbWriter<T>
+DogSE.Server.Database,EntityProfileManager,3,2,0,0,2,28,3,0,0,0,1,1,DogSE.Server.Database.AbstractDBEntityProfile,DogSE.Server.Database.DBEntityProfile<T>
+DogSE.Server.Database.MySQL,MySqlConnectPool,2,4,1,0,4,88,10,0,0,0.5,1,1,DogSE.Library.Log.Logs,DogSE.Server.Database.MySQL.MySqlService
+DogSE.Server.Database.MySQL,MySqlService,2,28,1,0,27,626,30,0,1,0.07,6,1,DogSE.Server.Database.MySQL.MySqlConnectPool' DogSE.Server.Database.AbstractDBEntityProfile' DogSE.Server.Database.AccessData' DogSE.Server.Database.MySQL.MySQL' DogSE.Library.Log.Logs' DogSE.Library.Thread.ThreadQueue,TradeAge.Server.Database.GameDB
+DogSE.Server.Database.MySQL,MySQL,0,0,0,0,0,4,0,0,0,-1,0,1,,DogSE.Server.Database.MySQL.MySqlService

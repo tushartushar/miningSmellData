@@ -1,19 +1,35 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AppDomainContext,3,20,7,0,15,324,29,0,1,0.8,8,0
-LoadMethod,0,0,0,0,0,27,0,0,0,-1,0,8
-AssemblyLoader,0,5,0,0,5,101,27,0,1,-1,1,0
-AssemblyTarget,0,4,4,0,3,116,10,0,1,-1,0,1
-AssemblyTargetLoader,1,6,0,0,6,71,8,0,1,0,4,1
-DisposableAppDomain,1,3,2,0,2,82,7,0,1,0,0,2
-IAppDomainContext,0,7,5,0,0,127,7,1,1,-1,3,0
-IAssemblyLoader,0,5,0,0,0,72,5,1,0,-1,1,2
-IAssemblyResolver,0,3,3,0,0,65,3,1,0,-1,1,2
-IAssemblyTarget,0,0,4,0,0,37,0,1,0,-1,0,3
-IAssemblyTargetLoader,0,5,0,0,0,73,5,1,0,-1,1,0
-IDisposable,0,0,1,0,0,15,0,3,0,-1,0,0
-MarshalableTaskCompletionSource,1,3,1,0,3,25,3,0,0,0,0,1
-PathBasedAssemblyResolver,4,7,3,0,7,146,17,0,1,0.29,2,1
-Remote,2,5,3,0,2,137,10,0,1,0.6,1,4
-RemoteAction,0,15,0,0,15,355,30,0,0,-1,1,1
-RemoteFunc,0,15,0,0,15,428,30,0,0,-1,1,0
-RemoteFuncAsync,0,12,0,0,12,547,36,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AppDomainToolkit,AppDomainContext,0,3,0,0,3,29,3,0,0,-1,0,5,,AppDomainToolkit.AppDomainContext<TAssemblyTargetLoader;TAssemblyResolver>' AppDomainToolkit.UnitTests.AppDomainContextUnitTests' AppDomainToolkit.UnitTests.RemoteActionUnitTests' AppDomainToolkit.UnitTests.RemoteFuncAsyncUnitTests' AppDomainToolkit.UnitTests.RemoteFuncUnitTests
+AppDomainToolkit,AppDomainContext<TAssemblyTargetLoader;TAssemblyResolver>,3,17,7,0,12,307,26,0,1,0.76,6,0,AppDomainToolkit.DisposableAppDomain' AppDomainToolkit.AppDomainContext' AppDomainToolkit.IAssemblyResolver' AppDomainToolkit.RemoteAction' AppDomainToolkit.IAssemblyTarget' AppDomainToolkit.LoadMethod,
+AppDomainToolkit,LoadMethod,0,0,0,0,0,24,0,0,0,-1,0,8,,AppDomainToolkit.AppDomainContext<TAssemblyTargetLoader;TAssemblyResolver>' AppDomainToolkit.AssemblyLoader' AppDomainToolkit.AssemblyTargetLoader' AppDomainToolkit.IAppDomainContext' AppDomainToolkit.IAssemblyLoader' AppDomainToolkit.IAssemblyTargetLoader' AppDomainToolkit.PathBasedAssemblyResolver' AppDomainToolkit.UnitTests.AppDomainContextUnitTests
+AppDomainToolkit,AssemblyLoader,0,5,0,0,5,104,8,0,1,-1,1,0,AppDomainToolkit.LoadMethod,
+AppDomainToolkit,AssemblyTarget,0,4,4,0,3,109,10,0,1,-1,1,3,AppDomainToolkit.IAssemblyTarget,AppDomainToolkit.AssemblyTargetLoader' AppDomainToolkit.UnitTests.AssemblyTargetUnitTests' AppDomainToolkit.UnitTests.AppDomainContextUnitTests
+AppDomainToolkit,AssemblyTargetLoader,1,6,0,0,6,69,8,0,1,0,4,0,AppDomainToolkit.IAssemblyLoader' AppDomainToolkit.IAssemblyTarget' AppDomainToolkit.LoadMethod' AppDomainToolkit.AssemblyTarget,
+AppDomainToolkit,DisposableAppDomain,1,3,2,0,2,80,7,0,1,0,0,3,,AppDomainToolkit.AppDomainContext<TAssemblyTargetLoader;TAssemblyResolver>' AppDomainToolkit.Remote<T>' AppDomainToolkit.UnitTests.DisposableAppDomainUnitTests
+AppDomainToolkit,IAppDomainContext,0,7,5,0,0,114,7,1,1,-1,2,0,AppDomainToolkit.LoadMethod' AppDomainToolkit.IAssemblyTarget,
+AppDomainToolkit,IAssemblyLoader,0,5,0,0,0,67,5,1,0,-1,1,2,AppDomainToolkit.LoadMethod,AppDomainToolkit.AssemblyTargetLoader' AppDomainToolkit.PathBasedAssemblyResolver
+AppDomainToolkit,IAssemblyResolver,0,3,3,0,0,54,3,1,0,-1,0,2,,AppDomainToolkit.AppDomainContext<TAssemblyTargetLoader;TAssemblyResolver>' AppDomainToolkit.UnitTests.AppDomainContextUnitTests
+AppDomainToolkit,IAssemblyTarget,0,0,4,0,0,24,0,1,0,-1,0,6,,AppDomainToolkit.AppDomainContext<TAssemblyTargetLoader;TAssemblyResolver>' AppDomainToolkit.AssemblyTarget' AppDomainToolkit.AssemblyTargetLoader' AppDomainToolkit.IAppDomainContext' AppDomainToolkit.UnitTests.AssemblyTargetUnitTests' AppDomainToolkit.UnitTests.AppDomainContextUnitTests
+AppDomainToolkit,IAssemblyTargetLoader,0,5,0,0,0,67,5,1,0,-1,1,0,AppDomainToolkit.LoadMethod,
+AppDomainToolkit,IDisposable,0,0,1,0,0,9,0,3,0,-1,0,0,,
+AppDomainToolkit,MarshalableTaskCompletionSource<T>,1,3,1,0,3,20,3,0,0,0,0,0,,
+AppDomainToolkit,PathBasedAssemblyResolver,4,7,3,0,7,145,18,0,1,0.29,2,0,AppDomainToolkit.IAssemblyLoader' AppDomainToolkit.LoadMethod,
+AppDomainToolkit,Remote<T>,2,5,3,0,2,147,10,0,1,0.6,1,0,AppDomainToolkit.DisposableAppDomain,
+AppDomainToolkit,RemoteAction,0,7,0,0,7,191,18,0,0,-1,0,2,,AppDomainToolkit.AppDomainContext<TAssemblyTargetLoader;TAssemblyResolver>' AppDomainToolkit.UnitTests.RemoteActionUnitTests
+AppDomainToolkit,RemoteAction<T>,0,2,0,0,2,30,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteAction<T1;T2>,0,2,0,0,2,33,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteAction<T1;T2;T3>,0,2,0,0,2,36,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteAction<T1;T2;T3;T4>,0,2,0,0,2,39,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFunc,0,5,0,0,5,205,15,0,0,-1,0,1,,AppDomainToolkit.UnitTests.RemoteFuncUnitTests
+AppDomainToolkit,RemoteFunc<TResult>,0,2,0,0,2,30,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFunc<T;TResult>,0,2,0,0,2,33,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFunc<T1;T2;TResult>,0,2,0,0,2,36,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFunc<T1;T2;T3;TResult>,0,2,0,0,2,39,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFunc<T1;T2;T3;T4;TResult>,0,2,0,0,2,42,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFuncAsync,0,6,0,0,6,256,18,0,0,-1,0,1,,AppDomainToolkit.UnitTests.RemoteFuncAsyncUnitTests
+AppDomainToolkit,RemoteFuncAsync<TResult>,0,1,0,0,1,29,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFuncAsync<T1;TResult>,0,1,0,0,1,31,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFuncAsync<T1;T2;TResult>,0,1,0,0,1,34,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFuncAsync<T1;T2;T3;TResult>,0,1,0,0,1,37,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFuncAsync<T1;T2;T3;T4;TResult>,0,1,0,0,1,40,3,0,0,-1,0,0,,
+AppDomainToolkit,RemoteFuncAsync<T1;T2;T3;T4;T5;TResult>,0,1,0,0,1,43,3,0,0,-1,0,0,,

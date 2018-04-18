@@ -1,0 +1,12 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CSV_Viewer.buffer,LineBuffer,1,2,0,0,2,13,3,0,0,0,0,1,,CSV_Viewer.flows.Features
+CSV_Viewer.data_model,Page,0,1,2,0,1,10,1,0,0,-1,0,1,,CSV_Viewer.formatter.Formatter
+CSV_Viewer.data_model,PageBuffer,3,6,1,0,6,42,8,0,0,0,0,0,,
+CSV_Viewer.flows,Features,4,1,2,0,1,33,1,0,0,0,4,0,CSV_Viewer.resources.CommandlineParser' CSV_Viewer.resources.TextFileAdapter' CSV_Viewer.buffer.LineBuffer' CSV_Viewer.pager.Pager,
+CSV_Viewer.flows,Main,2,1,2,0,1,25,1,0,0,0,2,0,CSV_Viewer.formatter.Formatter' CSV_Viewer.portals.Frontend,
+CSV_Viewer.resources,CommandlineParser,1,2,0,0,2,13,2,0,0,0,0,1,,CSV_Viewer.flows.Features
+CSV_Viewer.resources,TextFileAdapter,0,1,0,0,1,7,1,0,0,-1,0,1,,CSV_Viewer.flows.Features
+CSV_Viewer.formatter,Formatter,0,1,0,0,1,9,2,0,0,-1,1,1,CSV_Viewer.data_model.Page,CSV_Viewer.flows.Main
+CSV_Viewer.portals,Frontend,0,2,0,0,2,45,4,0,0,-1,0,2,,CSV_Viewer.flows.Main' CSV_Viewer.Program
+CSV_Viewer.pager,Pager,1,5,0,0,5,28,5,0,0,0,0,1,,CSV_Viewer.flows.Features
+CSV_Viewer,Program,0,1,0,0,0,26,1,0,0,-1,1,0,CSV_Viewer.portals.Frontend,

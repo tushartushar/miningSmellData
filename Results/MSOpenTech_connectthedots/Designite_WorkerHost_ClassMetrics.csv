@@ -1,0 +1,12 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WorkerHost,ADResult,0,1,1,0,1,23,3,0,0,-1,1,1,WorkerHost.AnomalyRecord,WorkerHost.Analyzer
+WorkerHost,Analyzer,5,7,0,0,4,114,12,0,0,0.29,3,1,WorkerHost.SensorDataContract' WorkerHost.AnomalyRecord' WorkerHost.ADResult,WorkerHost.WorkerHost
+WorkerHost,AnomalyRecord,0,2,8,0,2,32,3,0,0,-1,0,3,,WorkerHost.ADResult' WorkerHost.Analyzer' WorkerHost.WorkerHost
+WorkerHost,CircularBuffer<T>,2,3,1,0,3,26,4,0,0,0,0,0,,
+WorkerHost,SensorDataContract,0,1,8,0,1,24,1,0,0,-1,0,4,,WorkerHost.Analyzer' WorkerHost.EventHubReader' WorkerHost.WorkerHost' WorkerHost.Data.Outputs.SQLOutputRepository
+WorkerHost,EventHubReader,10,6,0,0,4,181,15,0,0,0,1,1,WorkerHost.SensorDataContract,WorkerHost.WorkerHost
+WorkerHost,WorkerHost,5,6,0,0,3,190,12,0,0,0.33,7,0,WorkerHost.Analyzer' WorkerHost.EventHubReader' WorkerHost.Data.Outputs.BlobWriter' WorkerHost.Data.Outputs.SQLOutputRepository' WorkerHost.Configuration' WorkerHost.AnomalyRecord' WorkerHost.SensorDataContract,
+WorkerHost,Configuration,17,0,0,17,0,20,0,0,0,-1,0,1,,WorkerHost.WorkerHost
+WorkerHost.Data.Outputs,BlobWriter,3,4,0,0,3,55,5,0,0,0,0,1,,WorkerHost.WorkerHost
+WorkerHost.Data.Outputs,SQLOutputRepository,12,2,0,0,2,73,3,0,0,0,1,1,WorkerHost.SensorDataContract,WorkerHost.WorkerHost
+WorkerHost.Data.Outputs.Utils,SqlDBReaderSafeParser,0,2,0,0,2,31,5,0,0,-1,0,0,,

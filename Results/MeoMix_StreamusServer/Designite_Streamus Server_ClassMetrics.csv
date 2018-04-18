@@ -1,0 +1,78 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Streamus.App_Start,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,Streamus.Streamus
+Streamus.App_Start,RouteConfig,0,1,0,0,1,65,1,0,0,-1,0,1,,Streamus.Streamus
+Streamus.App_Start,WebApiConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,Streamus.Streamus
+Streamus.Controllers,JsonNetResult,0,2,1,0,2,29,5,0,0,-1,0,1,,Streamus.Controllers.StreamusController
+Streamus.Controllers,StreamusController,2,2,0,0,0,24,4,7,0,1,1,0,Streamus.Controllers.JsonNetResult,
+Streamus.Controllers,ShareCodeController,2,2,0,0,2,26,3,0,1,0,7,0,Streamus.Domain.Interfaces.IShareCodeManager' Streamus.Domain.Interfaces.IPlaylistManager' Streamus.Domain.Interfaces.IManagerFactory' Streamus.Dto.ShareCodeDto' Streamus.Domain.Playlist' Streamus.Domain.ShareCode' Streamus.Domain.ShareableEntityType,
+Streamus.Controllers,ErrorController,1,2,0,0,2,22,2,0,1,0,4,0,Streamus.Domain.Interfaces.IErrorManager' Streamus.Domain.Interfaces.IManagerFactory' Streamus.Dto.ErrorDto' Streamus.Domain.Error,
+Streamus.Controllers,PlaylistController,3,7,0,0,7,103,7,0,1,0,8,0,Streamus.Domain.Interfaces.IPlaylistManager' Streamus.Domain.Interfaces.IUserManager' Streamus.Domain.Interfaces.IShareCodeManager' Streamus.Domain.Interfaces.IManagerFactory' Streamus.Dto.PlaylistDto' Streamus.Domain.Playlist' Streamus.Domain.User' Streamus.Domain.ShareCode,
+Streamus.Controllers,HomeController,0,2,0,0,2,11,2,0,1,-1,0,0,,
+Streamus.Controllers,PlaylistItemController,2,6,0,0,6,102,8,0,1,0,6,0,Streamus.Domain.Interfaces.IPlaylistManager' Streamus.Domain.Interfaces.IPlaylistItemManager' Streamus.Domain.Interfaces.IManagerFactory' Streamus.Dto.PlaylistItemDto' Streamus.Domain.PlaylistItem' Streamus.Domain.Playlist,
+Streamus.Controllers,ThrottleAttribute,0,1,3,0,1,46,4,0,0,-1,0,0,,
+Streamus.Controllers,VideoController,1,1,0,0,1,9,1,0,1,0,2,0,Streamus.Domain.Interfaces.IVideoManager' Streamus.Domain.Interfaces.IManagerFactory,
+Streamus.Controllers,UserController,1,5,0,0,5,64,5,0,1,0,4,0,Streamus.Domain.Interfaces.IUserManager' Streamus.Domain.Interfaces.IManagerFactory' Streamus.Dto.UserDto' Streamus.Domain.User,
+Streamus.Dao,AutofacRegistrations,0,1,0,0,1,19,1,0,0,-1,1,1,Streamus.Dao.NHibernateConfiguration,Streamus.Streamus
+Streamus.Dao,NHibernateDaoFactory,7,7,0,0,7,39,8,0,1,0,6,0,Streamus.Domain.Interfaces.IErrorDao' Streamus.Domain.Interfaces.IPlaylistDao' Streamus.Domain.Interfaces.IPlaylistItemDao' Streamus.Domain.Interfaces.IShareCodeDao' Streamus.Domain.Interfaces.IUserDao' Streamus.Domain.Interfaces.IVideoDao,
+Streamus.Dao,NHibernateConfiguration,0,2,0,0,1,26,2,0,0,-1,0,1,,Streamus.Dao.AutofacRegistrations
+Streamus.Dao,ShareCodeDao,0,2,0,0,2,17,2,0,1,-1,1,0,Streamus.Domain.ShareCode,
+Streamus.Dao,ErrorDao,0,1,0,0,1,8,1,0,1,-1,0,0,,
+Streamus.Dao,PlaylistItemDao,0,2,0,0,2,17,3,0,1,-1,1,0,Streamus.Domain.PlaylistItem,
+Streamus.Dao,AbstractNHibernateDao<T>,1,7,1,0,7,42,7,0,1,1,0,0,,
+Streamus.Dao,PlaylistDao,0,2,0,0,2,17,3,0,1,-1,1,0,Streamus.Domain.Playlist,
+Streamus.Dao,VideoDao,0,3,0,0,3,25,4,0,1,-1,1,0,Streamus.Domain.Video,
+Streamus.Dao,UserDao,0,4,0,0,4,37,6,0,1,-1,1,0,Streamus.Domain.User,
+Streamus.Dao.Mappings,ErrorMapping,0,1,0,0,1,17,1,0,0,-1,0,0,,
+Streamus.Dao.Mappings,PlaylistItemMapping,0,1,0,0,1,14,1,0,0,-1,0,0,,
+Streamus.Dao.Mappings,PlaylistMapping,0,1,0,0,1,14,1,0,0,-1,0,0,,
+Streamus.Dao.Mappings,ShareCodeMapping,0,1,0,0,1,14,1,0,0,-1,0,0,,
+Streamus.Dao.Mappings,UserMapping,0,1,0,0,1,17,1,0,0,-1,0,0,,
+Streamus.Dao.Mappings,VideoMapping,0,1,0,0,1,16,1,0,0,-1,0,0,,
+Streamus.Domain,AbstractDomainEntity<T>,1,2,1,0,2,33,6,0,1,1,0,0,,
+Streamus.Domain,AbstractShareableDomainEntity,0,4,1,0,4,51,6,1,1,-1,0,0,,
+Streamus.Domain,ShareableEntityType,0,0,0,0,0,5,0,0,0,-1,0,5,,Streamus.Controllers.ShareCodeController' Streamus.Domain.ShareCode' Streamus.Domain.Managers.ShareCodeManager' Streamus.Domain.Validators.ShareCodeValidator' Streamus.Dto.ShareCodeDto
+Streamus.Domain,ShareCode,0,4,4,0,4,43,5,0,0,-1,5,6,Streamus.Domain.ShareableEntityType' Streamus.Domain.Interfaces.IShareableEntity' Streamus.Domain.Playlist' Streamus.Dto.ShareCodeDto' Streamus.Domain.Validators.ShareCodeValidator,Streamus.Controllers.ShareCodeController' Streamus.Controllers.PlaylistController' Streamus.Dao.ShareCodeDao' Streamus.Domain.Interfaces.IShareCodeManager' Streamus.Domain.Managers.ShareCodeManager' Streamus.Dto.ShareCodeDto
+Streamus.Domain,Error,0,3,7,0,3,47,4,0,0,-1,2,4,Streamus.Dto.ErrorDto' Streamus.Domain.Validators.ErrorValidator,Streamus.Controllers.ErrorController' Streamus.Domain.Interfaces.IErrorManager' Streamus.Domain.Managers.ErrorManager' Streamus.Dto.ErrorDto
+Streamus.Domain,PlaylistItem,0,6,5,0,6,50,6,0,0,-1,4,7,Streamus.Domain.Video' Streamus.Dto.PlaylistItemDto' Streamus.Domain.Interfaces.IPlaylistManager' Streamus.Domain.Validators.PlaylistItemValidator,Streamus.Controllers.PlaylistItemController' Streamus.Dao.PlaylistItemDao' Streamus.Domain.Playlist' Streamus.Domain.Interfaces.IPlaylistItemManager' Streamus.Domain.Managers.PlaylistItemManager' Streamus.Domain.Managers.PlaylistManager' Streamus.Dto.PlaylistItemDto
+Streamus.Domain,Playlist,0,10,3,0,10,93,14,0,2,-1,5,10,Streamus.Dto.PlaylistDto' Streamus.Domain.PlaylistItem' Streamus.Domain.Interfaces.IUserManager' Streamus.Domain.Interfaces.IPlaylistManager' Streamus.Domain.Validators.PlaylistValidator,Streamus.Controllers.ShareCodeController' Streamus.Controllers.PlaylistController' Streamus.Controllers.PlaylistItemController' Streamus.Dao.PlaylistDao' Streamus.Domain.ShareCode' Streamus.Domain.User' Streamus.Domain.Interfaces.IPlaylistManager' Streamus.Domain.Managers.PlaylistItemManager' Streamus.Domain.Managers.PlaylistManager' Streamus.Dto.PlaylistDto
+Streamus.Domain,Video,0,6,5,0,6,54,9,0,1,-1,2,7,Streamus.Dto.VideoDto' Streamus.Domain.Validators.VideoValidator,Streamus.Dao.VideoDao' Streamus.Domain.PlaylistItem' Streamus.Domain.Interfaces.IVideoManager' Streamus.Domain.Managers.PlaylistItemManager' Streamus.Domain.Managers.VideoManager' Streamus.Domain.Managers.PlaylistManager' Streamus.Dto.VideoDto
+Streamus.Domain,User,0,5,3,0,5,51,7,0,0,-1,2,7,Streamus.Domain.Playlist' Streamus.Domain.Validators.UserValidator,Streamus.Controllers.PlaylistController' Streamus.Controllers.UserController' Streamus.Dao.UserDao' Streamus.Domain.Interfaces.IUserManager' Streamus.Domain.Managers.PlaylistManager' Streamus.Domain.Managers.UserManager' Streamus.Dto.UserDto
+Streamus.Domain.Interfaces,IVideoManager,0,4,0,0,0,7,4,1,0,-1,1,2,Streamus.Domain.Video,Streamus.Controllers.VideoController' Streamus.Domain.Managers.StreamusManagerFactory
+Streamus.Domain.Interfaces,IUserManager,0,5,0,0,0,13,5,1,0,-1,1,4,Streamus.Domain.User,Streamus.Controllers.PlaylistController' Streamus.Controllers.UserController' Streamus.Domain.Playlist' Streamus.Domain.Managers.StreamusManagerFactory
+Streamus.Domain.Interfaces,IShareCodeManager,0,3,0,0,0,6,3,1,0,-1,2,3,Streamus.Domain.Interfaces.IShareableEntity' Streamus.Domain.ShareCode,Streamus.Controllers.ShareCodeController' Streamus.Controllers.PlaylistController' Streamus.Domain.Managers.StreamusManagerFactory
+Streamus.Domain.Interfaces,IPlaylistManager,0,6,0,0,0,9,6,1,0,-1,1,6,Streamus.Domain.Playlist,Streamus.Controllers.ShareCodeController' Streamus.Controllers.PlaylistController' Streamus.Controllers.PlaylistItemController' Streamus.Domain.PlaylistItem' Streamus.Domain.Playlist' Streamus.Domain.Managers.StreamusManagerFactory
+Streamus.Domain.Interfaces,IPlaylistItemManager,0,6,0,0,0,9,6,1,0,-1,1,2,Streamus.Domain.PlaylistItem,Streamus.Controllers.PlaylistItemController' Streamus.Domain.Managers.StreamusManagerFactory
+Streamus.Domain.Interfaces,IAbstractDomainEntity,0,0,1,0,0,4,0,2,0,-1,0,0,,
+Streamus.Domain.Interfaces,IDaoFactory,0,6,0,0,0,9,6,1,0,-1,0,1,,Streamus.Domain.Managers.StreamusManagerFactory
+Streamus.Domain.Interfaces,IErrorManager,0,1,0,0,0,4,1,1,0,-1,1,2,Streamus.Domain.Error,Streamus.Controllers.ErrorController' Streamus.Domain.Managers.StreamusManagerFactory
+Streamus.Domain.Interfaces,IManagerFactory,0,6,0,0,0,9,6,1,0,-1,0,6,,Streamus.Controllers.ShareCodeController' Streamus.Controllers.ErrorController' Streamus.Controllers.PlaylistController' Streamus.Controllers.PlaylistItemController' Streamus.Controllers.VideoController' Streamus.Controllers.UserController
+Streamus.Domain.Interfaces,IShareableEntity,0,2,1,0,0,6,2,1,0,-1,0,3,,Streamus.Domain.ShareCode' Streamus.Domain.Interfaces.IShareCodeManager' Streamus.Domain.Managers.ShareCodeManager
+Streamus.Domain.Interfaces,IShareCodeDao,0,1,0,0,0,4,1,1,1,-1,0,2,,Streamus.Dao.NHibernateDaoFactory' Streamus.Domain.Managers.ShareCodeManager
+Streamus.Domain.Interfaces,IErrorDao,0,0,0,0,0,3,0,1,1,-1,0,2,,Streamus.Dao.NHibernateDaoFactory' Streamus.Domain.Managers.ErrorManager
+Streamus.Domain.Interfaces,IPlaylistItemDao,0,1,0,0,0,4,1,1,1,-1,0,2,,Streamus.Dao.NHibernateDaoFactory' Streamus.Domain.Managers.PlaylistItemManager
+Streamus.Domain.Interfaces,IUserDao,0,3,0,0,0,6,3,1,1,-1,0,2,,Streamus.Dao.NHibernateDaoFactory' Streamus.Domain.Managers.UserManager
+Streamus.Domain.Interfaces,IPlaylistDao,0,1,0,0,0,4,1,1,1,-1,0,2,,Streamus.Dao.NHibernateDaoFactory' Streamus.Domain.Managers.PlaylistManager
+Streamus.Domain.Interfaces,IVideoDao,0,2,0,0,0,5,2,1,1,-1,0,4,,Streamus.Dao.NHibernateDaoFactory' Streamus.Domain.Managers.PlaylistItemManager' Streamus.Domain.Managers.VideoManager' Streamus.Domain.Managers.PlaylistManager
+Streamus.Domain.Interfaces,IDao,0,6,0,0,0,9,6,7,0,-1,0,0,,
+Streamus.Domain.Managers,StreamusManager,1,1,0,0,0,8,1,6,0,0,0,0,,
+Streamus.Domain.Managers,StreamusManagerFactory,8,7,0,0,7,42,9,0,1,0,7,0,Streamus.Domain.Interfaces.IDaoFactory' Streamus.Domain.Interfaces.IErrorManager' Streamus.Domain.Interfaces.IPlaylistItemManager' Streamus.Domain.Interfaces.IPlaylistManager' Streamus.Domain.Interfaces.IShareCodeManager' Streamus.Domain.Interfaces.IUserManager' Streamus.Domain.Interfaces.IVideoManager,
+Streamus.Domain.Managers,PlaylistItemManager,0,9,2,0,7,116,10,0,1,-1,5,0,Streamus.Domain.Interfaces.IPlaylistItemDao' Streamus.Domain.Interfaces.IVideoDao' Streamus.Domain.PlaylistItem' Streamus.Domain.Playlist' Streamus.Domain.Video,
+Streamus.Domain.Managers,ShareCodeManager,0,5,1,0,4,62,7,0,1,-1,4,0,Streamus.Domain.Interfaces.IShareCodeDao' Streamus.Domain.ShareCode' Streamus.Domain.ShareableEntityType' Streamus.Domain.Interfaces.IShareableEntity,
+Streamus.Domain.Managers,ErrorManager,0,2,1,0,2,22,2,0,1,-1,2,0,Streamus.Domain.Interfaces.IErrorDao' Streamus.Domain.Error,
+Streamus.Domain.Managers,VideoManager,0,6,1,0,5,70,6,0,1,-1,2,0,Streamus.Domain.Interfaces.IVideoDao' Streamus.Domain.Video,
+Streamus.Domain.Managers,PlaylistManager,0,8,2,0,7,130,11,0,1,-1,6,0,Streamus.Domain.Interfaces.IPlaylistDao' Streamus.Domain.Interfaces.IVideoDao' Streamus.Domain.Playlist' Streamus.Domain.User' Streamus.Domain.PlaylistItem' Streamus.Domain.Video,
+Streamus.Domain.Managers,UserManager,0,6,1,0,6,92,7,0,1,-1,2,0,Streamus.Domain.Interfaces.IUserDao' Streamus.Domain.User,
+Streamus.Domain.Validators,ShareCodeValidator,0,1,0,0,1,13,1,0,0,-1,1,1,Streamus.Domain.ShareableEntityType,Streamus.Domain.ShareCode
+Streamus.Domain.Validators,ErrorValidator,0,1,0,0,1,11,1,0,0,-1,0,1,,Streamus.Domain.Error
+Streamus.Domain.Validators,PlaylistItemValidator,0,1,0,0,1,9,1,0,0,-1,0,1,,Streamus.Domain.PlaylistItem
+Streamus.Domain.Validators,PlaylistValidator,0,1,0,0,1,7,1,0,0,-1,0,1,,Streamus.Domain.Playlist
+Streamus.Domain.Validators,UserValidator,0,1,0,0,1,8,1,0,0,-1,0,1,,Streamus.Domain.User
+Streamus.Domain.Validators,VideoValidator,0,1,0,0,1,8,1,0,0,-1,0,1,,Streamus.Domain.Video
+Streamus.Dto,ErrorDto,0,2,8,0,2,35,2,0,0,-1,1,2,Streamus.Domain.Error,Streamus.Controllers.ErrorController' Streamus.Domain.Error
+Streamus.Dto,PlaylistDto,0,2,5,0,2,25,2,0,0,-1,1,2,Streamus.Domain.Playlist,Streamus.Controllers.PlaylistController' Streamus.Domain.Playlist
+Streamus.Dto,PlaylistItemDto,0,3,6,0,3,33,3,0,0,-1,1,2,Streamus.Domain.PlaylistItem,Streamus.Controllers.PlaylistItemController' Streamus.Domain.PlaylistItem
+Streamus.Dto,ShareCodeDto,0,2,5,0,2,27,2,0,0,-1,2,2,Streamus.Domain.ShareableEntityType' Streamus.Domain.ShareCode,Streamus.Controllers.ShareCodeController' Streamus.Domain.ShareCode
+Streamus.Dto,UserDto,0,2,4,0,2,23,2,0,0,-1,1,1,Streamus.Domain.User,Streamus.Controllers.UserController
+Streamus.Dto,VideoDto,0,3,5,0,3,33,3,0,0,-1,1,1,Streamus.Domain.Video,Streamus.Domain.Video
+Streamus,Streamus,0,3,0,0,2,36,3,0,0,-1,4,0,Streamus.App_Start.WebApiConfig' Streamus.App_Start.FilterConfig' Streamus.App_Start.RouteConfig' Streamus.Dao.AutofacRegistrations,
+Streamus,JsonEmptyStringNotNullModelBinder,0,1,0,0,1,13,1,0,0,-1,0,0,,

@@ -1,17 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DownloaderWorker,3,9,1,0,3,108,19,0,1,0.22,1,4
-CrashReport,7,3,11,1,0,118,14,0,0,0,6,3
-CrashReportProcessingProgress,0,0,0,0,0,8,0,0,0,-1,0,2
-Database,14,2,0,0,1,26,4,0,0,1,0,2
-DynamoDbLoader,4,5,1,0,1,140,17,0,1,0,3,1
-WaitDurationProvider,1,2,0,0,2,18,3,0,0,0,0,1
-INotifyThreadStatus,0,0,1,0,0,7,0,2,0,-1,0,2
-StatusChangedEventArgs,0,1,2,0,1,16,2,0,0,-1,0,4
-PersistentState,3,2,5,0,1,39,3,0,0,1,1,4
-CrashReportView,9,6,0,0,0,190,37,0,0,0.33,3,0
-Mainform,19,13,0,0,1,335,29,0,0,0.23,7,0
-CrashReportTimeStampFilter,0,1,0,0,1,7,1,0,0,-1,1,0
-Program,0,1,0,0,0,23,3,0,0,-1,1,0
-SetupForm,13,7,3,0,1,241,12,0,0,0.57,1,1
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ChummerDataViewer.Model,DownloaderWorker,4,11,1,0,4,143,16,0,1,0.18,2,4,ChummerDataViewer.Model.DownloadTask' ChummerDataViewer.Model.StatusChangedEventArgs,ChummerDataViewer.Model.CrashReport' ChummerDataViewer.CrashReportView' ChummerDataViewer.Mainform' ChummerDataViewer.Program
+ChummerDataViewer.Model,DownloadTask,4,1,0,4,1,14,1,0,0,0,0,1,,ChummerDataViewer.Model.DownloaderWorker
+ChummerDataViewer.Model,CrashReport,7,3,11,1,0,112,7,0,0,0,7,4,ChummerDataViewer.Model.DatabasePrivateApi' ChummerDataViewer.Model.DownloaderWorker' ChummerDataViewer.Model.CrashReportProcessingProgress' ChummerDataViewer.Model.Database' ChummerDataViewer.Model.PersistentState' ChummerDataViewer.Model.StatusChangedEventArgs' ChummerDataViewer.Model.INotifyThreadStatus,ChummerDataViewer.Model.Database' ChummerDataViewer.CrashReportView' ChummerDataViewer.Mainform' ChummerDataViewer.CrashReportTimeStampFilter
+ChummerDataViewer.Model,CrashReportProcessingProgress,0,0,0,0,0,8,0,0,0,-1,0,2,,ChummerDataViewer.Model.CrashReport' ChummerDataViewer.CrashReportView
+ChummerDataViewer.Model,Database,15,19,0,0,12,290,22,0,0,0.16,3,5,ChummerDataViewer.Model.DatabasePrivateApi' ChummerDataViewer.Model.PersistentState' ChummerDataViewer.Model.CrashReport,ChummerDataViewer.Model.CrashReport' ChummerDataViewer.Model.DatabasePrivateApi' ChummerDataViewer.Model.DynamoDbLoader' ChummerDataViewer.Model.PersistentState' ChummerDataViewer.Mainform
+ChummerDataViewer.Model,DatabasePrivateApi,1,4,0,0,2,11,4,0,0,0,1,2,ChummerDataViewer.Model.Database,ChummerDataViewer.Model.CrashReport' ChummerDataViewer.Model.Database
+ChummerDataViewer.Model,DynamoDbLoader,5,7,1,0,2,181,15,0,1,0.29,4,1,ChummerDataViewer.Model.WaitDurationProvider' ChummerDataViewer.Model.PersistentState' ChummerDataViewer.Model.Database' ChummerDataViewer.Model.StatusChangedEventArgs,ChummerDataViewer.Mainform
+ChummerDataViewer.Model,WaitDurationProvider,1,2,0,0,2,21,3,0,0,0,0,1,,ChummerDataViewer.Model.DynamoDbLoader
+ChummerDataViewer.Model,INotifyThreadStatus,0,0,1,0,0,5,0,2,0,-1,0,2,,ChummerDataViewer.Model.CrashReport' ChummerDataViewer.Mainform
+ChummerDataViewer.Model,StatusChangedEventArgs,0,1,2,0,1,10,1,0,0,-1,0,4,,ChummerDataViewer.Model.DownloaderWorker' ChummerDataViewer.Model.CrashReport' ChummerDataViewer.Model.DynamoDbLoader' ChummerDataViewer.Mainform
+ChummerDataViewer.Model,PersistentState,3,2,5,0,1,36,4,0,0,1,1,5,ChummerDataViewer.Model.Database,ChummerDataViewer.Model.CrashReport' ChummerDataViewer.Model.Database' ChummerDataViewer.Model.DynamoDbLoader' ChummerDataViewer.Mainform' ChummerDataViewer.SetupForm
+ChummerDataViewer,CrashReportView,9,6,0,0,0,195,13,0,0,0.33,3,0,ChummerDataViewer.Model.CrashReport' ChummerDataViewer.Model.DownloaderWorker' ChummerDataViewer.Model.CrashReportProcessingProgress,
+ChummerDataViewer,Mainform,19,13,0,0,1,345,34,0,0,0.31,8,0,ChummerDataViewer.Model.DynamoDbLoader' ChummerDataViewer.Model.DownloaderWorker' ChummerDataViewer.SetupForm' ChummerDataViewer.Model.PersistentState' ChummerDataViewer.Model.Database' ChummerDataViewer.Model.INotifyThreadStatus' ChummerDataViewer.Model.StatusChangedEventArgs' ChummerDataViewer.Model.CrashReport,
+ChummerDataViewer,CrashReportTimeStampFilter,0,1,0,0,1,7,1,0,0,-1,1,0,ChummerDataViewer.Model.CrashReport,
+ChummerDataViewer,Program,0,1,0,0,0,27,3,0,0,-1,1,0,ChummerDataViewer.Model.DownloaderWorker,
+ChummerDataViewer,SetupForm,13,7,3,0,1,242,12,0,0,0.57,1,1,ChummerDataViewer.Model.PersistentState,ChummerDataViewer.Mainform
+ChummerDataViewer.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+ChummerDataViewer.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

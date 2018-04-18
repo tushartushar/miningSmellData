@@ -1,0 +1,24 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+IdentityManager.Host,User,0,0,2,0,0,5,0,0,0,-1,0,1,,IdentityManager.Host.ClaimsFactory
+IdentityManager.Host,Role,0,0,0,0,0,1,0,0,0,-1,0,0,,
+IdentityManager.Host,Context,0,1,0,0,1,7,1,0,0,-1,0,2,,IdentityManager.Host.UserStore' IdentityManager.Host.RoleStore
+IdentityManager.Host,UserStore,0,1,0,0,1,7,1,1,0,-1,1,1,IdentityManager.Host.Context,IdentityManager.Host.UserManager
+IdentityManager.Host,UserManager,0,1,0,0,1,8,1,1,0,-1,1,2,IdentityManager.Host.UserStore,IdentityManager.Host.ClaimsFactory' IdentityManager.Host.Config.SimpleIdentityManagerService
+IdentityManager.Host,ClaimsFactory,0,2,0,0,2,22,4,0,0,-1,2,0,IdentityManager.Host.User' IdentityManager.Host.UserManager,
+IdentityManager.Host,RoleStore,0,1,0,0,1,7,1,1,0,-1,1,1,IdentityManager.Host.Context,IdentityManager.Host.RoleManager
+IdentityManager.Host,RoleManager,0,1,0,0,1,7,1,1,0,-1,1,1,IdentityManager.Host.RoleStore,IdentityManager.Host.Config.SimpleIdentityManagerService
+IdentityManager.Host,CustomUser,0,0,0,0,0,1,0,0,0,-1,0,0,,
+IdentityManager.Host,CustomUserLogin,0,0,0,0,0,1,0,0,0,-1,0,0,,
+IdentityManager.Host,CustomUserRole,0,0,0,0,0,1,0,0,0,-1,0,0,,
+IdentityManager.Host,CustomUserClaim,0,0,0,0,0,1,0,0,0,-1,0,0,,
+IdentityManager.Host,CustomRole,0,0,0,0,0,1,0,0,0,-1,0,0,,
+IdentityManager.Host,CustomContext,0,1,0,0,1,7,1,0,0,-1,0,2,,IdentityManager.Host.CustomUserStore' IdentityManager.Host.CustomRoleStore
+IdentityManager.Host,CustomUserStore,0,1,0,0,1,7,1,0,1,-1,1,1,IdentityManager.Host.CustomContext,IdentityManager.Host.CustomUserManager
+IdentityManager.Host,CustomUserManager,0,1,0,0,1,7,1,0,1,-1,1,1,IdentityManager.Host.CustomUserStore,IdentityManager.Host.Config.CustomIdentityManagerServiceWithIntKeys
+IdentityManager.Host,CustomRoleStore,0,1,0,0,1,7,1,0,1,-1,1,1,IdentityManager.Host.CustomContext,IdentityManager.Host.CustomRoleManager
+IdentityManager.Host,CustomRoleManager,0,1,0,0,1,7,1,0,1,-1,1,1,IdentityManager.Host.CustomRoleStore,IdentityManager.Host.Config.CustomIdentityManagerServiceWithIntKeys
+IdentityManager.Host,Startup,0,1,0,0,1,15,1,0,0,-1,0,0,,
+IdentityManager.Host.Config,CustomIdentityManagerServiceWithIntKeysExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
+IdentityManager.Host.Config,CustomIdentityManagerServiceWithIntKeys,0,1,0,0,1,7,1,0,0,-1,2,0,IdentityManager.Host.CustomUserManager' IdentityManager.Host.CustomRoleManager,
+IdentityManager.Host.Config,SimpleIdentityManagerServiceExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
+IdentityManager.Host.Config,SimpleIdentityManagerService,0,1,0,0,1,8,1,0,0,-1,2,0,IdentityManager.Host.UserManager' IdentityManager.Host.RoleManager,

@@ -1,11 +1,14 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Filter,0,2,3,0,2,25,2,0,1,-1,0,2
-FilterConfiguration,2,2,0,0,2,16,2,0,1,0,1,1
-FilterConvention,0,17,0,0,16,76,17,0,0,-1,1,2
-FilterDefinition,0,1,2,0,1,16,1,0,0,-1,0,2
-FilterDefinitionFactory,0,3,0,0,2,33,3,0,0,-1,1,2
-FilterExtensions,1,4,1,0,3,40,4,0,0,0.5,3,1
-FilterInterceptor,0,1,0,0,1,16,4,0,0,-1,1,0
-FilterQueryVisitor,2,4,0,0,4,79,10,0,0,0.5,3,1
-IFilter,0,1,1,0,0,7,1,1,0,-1,0,0
-IFilterConfiguration,0,1,0,0,0,4,1,1,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+EntityFramework.Filters,Filter,0,2,3,0,2,16,2,0,1,-1,0,2,,EntityFramework.Filters.FilterExtensions' EntityFramework.Filters.FilterQueryVisitor
+EntityFramework.Filters,FilterConfiguration<TEntity>,2,2,0,0,2,17,2,0,1,0,2,0,EntityFramework.Filters.FilterDefinitionFactory' EntityFramework.Filters.FilterDefinition,
+EntityFramework.Filters,FilterConvention,0,17,0,0,16,79,17,0,0,-1,1,2,EntityFramework.Filters.FilterDefinitionFactory,EntityFramework.Filters.Example.ExampleContextWithMapping' EntityFramework.Filters.Example.ExampleContext
+EntityFramework.Filters,FilterDefinition,0,1,2,0,1,10,1,0,0,-1,0,3,,EntityFramework.Filters.FilterConfiguration<TEntity>' EntityFramework.Filters.FilterDefinitionFactory<TEntity>' EntityFramework.Filters.FilterQueryVisitor
+EntityFramework.Filters,FilterDefinitionFactory<TEntity>,0,2,0,0,1,33,2,0,1,-1,2,0,EntityFramework.Filters.FilterDefinition' EntityFramework.Filters.ParameterReplacer,
+EntityFramework.Filters,ParameterReplacer,1,3,0,0,1,19,3,0,0,0.67,0,1,,EntityFramework.Filters.FilterDefinitionFactory<TEntity>
+EntityFramework.Filters,FilterDefinitionFactory,0,1,0,0,1,4,1,1,0,-1,0,2,,EntityFramework.Filters.FilterConfiguration<TEntity>' EntityFramework.Filters.FilterConvention
+EntityFramework.Filters,FilterExtensions,1,4,1,0,3,45,4,0,0,0.5,1,1,EntityFramework.Filters.Filter,EntityFramework.Filters.FilterQueryVisitor
+EntityFramework.Filters,FilterInterceptor,0,1,0,0,1,21,4,0,0,-1,0,0,,
+EntityFramework.Filters,FilterQueryVisitor,2,4,0,0,4,82,10,0,0,0.5,4,0,EntityFramework.Filters.FilterDefinition' EntityFramework.Filters.Filter' EntityFramework.Filters.BindingNormalizer' EntityFramework.Filters.FilterExtensions,
+EntityFramework.Filters,BindingNormalizer,1,2,0,0,2,12,2,0,0,0,0,1,,EntityFramework.Filters.FilterQueryVisitor
+EntityFramework.Filters,IFilter,0,1,1,0,0,5,1,1,0,-1,0,2,,EntityFramework.Filters.Example.ExamplesWithMapping' EntityFramework.Filters.Example.Examples
+EntityFramework.Filters,IFilterConfiguration,0,1,0,0,0,4,1,1,0,-1,0,0,,

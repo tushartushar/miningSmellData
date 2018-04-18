@@ -1,0 +1,4 @@
+Architecture smell,Project,Namespace,Cause,Responsible Classes
+Cyclic Dependency,WhatTheHeck2,WhatTheHeck2,The tool detected the smell in this component because this component participates in a cyclic dependency. The participating components in the cycle are: WhatTheHeck2' System.Linq,WhatTheHeck2.Demo2' System.Linq.Mystery
+Unstable Dependency,WhatTheHeck2,System.Linq,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): WhatTheHeck2,System.Linq.Static
+Feature Concentration,WhatTheHeck2,WhatTheHeck2,The tool detected the smell in this component because the component realizes more than one architectural concern/feature. Independent sets of related classes within this component are: [Demo2' Mystery' Static' Demo1]' [dynamic]' [Program]. LCC (Lack of Component Cohesion) = 0.5,WhatTheHeck2.dynamic' WhatTheHeck2.Program

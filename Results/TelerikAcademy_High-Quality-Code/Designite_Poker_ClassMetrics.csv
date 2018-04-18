@@ -1,10 +1,10 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Card,0,2,2,0,2,20,2,0,1,-1,2,1
-CardFace,0,0,0,0,0,16,0,0,0,-1,0,3
-CardSuit,0,0,0,0,0,11,0,0,0,-1,0,3
-PokerHandsChecker,0,11,0,0,11,47,11,0,1,-1,1,1
-Hand,0,2,1,0,2,15,2,0,1,-1,1,1
-ICard,0,1,2,0,0,10,1,1,0,-1,2,3
-IHand,0,1,1,0,0,7,1,1,0,-1,1,3
-IPokerHandsChecker,0,11,0,0,0,17,11,1,0,-1,1,1
-PokerExample,0,1,0,0,0,20,1,0,0,-1,8,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Poker,Card,0,2,2,0,2,14,2,0,1,-1,2,0,Poker.CardFace' Poker.CardSuit,
+Poker,CardFace,0,0,0,0,0,16,0,0,0,-1,0,2,,Poker.Card' Poker.PokerExample
+Poker,CardSuit,0,0,0,0,0,7,0,0,0,-1,0,2,,Poker.Card' Poker.PokerExample
+Poker,PokerHandsChecker,0,11,0,0,11,47,11,0,1,-1,1,0,Poker.IHand,
+Poker,Hand,0,2,1,0,2,12,2,0,1,-1,0,0,,
+Poker,ICard,0,1,2,0,0,6,1,1,0,-1,0,1,,Poker.PokerExample
+Poker,IHand,0,1,1,0,0,5,1,1,0,-1,0,3,,Poker.PokerHandsChecker' Poker.IPokerHandsChecker' Poker.PokerExample
+Poker,IPokerHandsChecker,0,11,0,0,0,14,11,1,0,-1,1,1,Poker.IHand,Poker.PokerExample
+Poker,PokerExample,0,1,0,0,0,20,1,0,0,-1,5,0,Poker.ICard' Poker.IHand' Poker.IPokerHandsChecker' Poker.CardFace' Poker.CardSuit,

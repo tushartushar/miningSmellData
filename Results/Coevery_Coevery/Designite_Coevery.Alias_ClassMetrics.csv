@@ -1,26 +1,31 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AliasUpdateCursor,0,0,1,0,0,7,0,0,1,-1,0,0
-IAliasUpdateCursor,0,0,1,0,0,7,0,1,2,-1,0,1
-AliasHolderUpdater,3,5,1,0,2,46,7,0,2,0.4,5,0
-AdminMenu,0,1,2,0,1,19,1,0,2,-1,2,0
-IAliasService,0,13,0,0,0,20,13,1,1,-1,0,3
-Migrations,0,1,0,0,1,8,1,0,2,-1,1,0
-Routes,2,3,0,0,3,24,4,0,2,0,4,0
-AliasRoute,2,3,1,0,3,69,10,0,0,0,2,2
-DefaultAliasService,3,17,0,0,14,104,20,0,2,0.12,5,0
-Utils,0,7,0,0,3,149,14,0,0,-1,2,1
-AdminController,2,10,3,0,8,218,38,0,0,0.2,15,0
-AliasInfo,0,0,3,0,0,15,0,0,0,-1,0,4
-AliasHolder,1,6,0,0,6,37,9,0,1,0,2,0
-IAliasHolder,0,5,0,0,0,26,5,1,2,-1,1,5
-AliasMap,3,12,0,0,7,200,25,0,0,0,1,2
-IAliasStorage,0,8,0,0,0,11,8,1,1,-1,1,2
-AliasStorage,3,10,0,0,9,149,29,0,2,0.3,4,0
-ActionRecord,0,0,4,0,0,19,0,0,0,-1,0,2
-AliasRecord,0,0,5,0,0,23,0,0,0,-1,1,2
-AdminIndexViewModel,0,0,3,0,0,15,0,0,0,-1,2,1
-AliasEntry,0,0,2,0,0,11,0,0,0,-1,1,2
-AdminIndexOptions,0,0,4,0,0,19,0,0,0,-1,3,2
-AliasOrder,0,0,0,0,0,4,0,0,0,-1,0,2
-AliasFilter,0,0,0,0,0,4,0,0,0,-1,0,2
-AliasBulkAction,0,0,0,0,0,5,0,0,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coevery.Alias.Implementation.Updater,AliasUpdateCursor,0,0,1,0,0,3,0,0,1,-1,0,0,,
+Coevery.Alias.Implementation.Updater,IAliasUpdateCursor,0,0,1,0,0,3,0,1,2,-1,0,1,,Coevery.Alias.Implementation.Updater.AliasHolderUpdater
+Coevery.Alias.Implementation.Updater,AliasHolderUpdater,3,5,1,0,2,35,6,0,2,0.4,6,0,Coevery.Alias.Implementation.Holder.IAliasHolder' Coevery.Alias.Implementation.Storage.IAliasStorage' Coevery.Alias.Implementation.Updater.IAliasUpdateCursor' Coevery.Logging.NullLogger' Coevery.Alias.Records.AliasRecord' Coevery.Logging.ILogger,
+Coevery.Alias,AdminMenu,0,1,2,0,1,11,1,0,2,-1,3,0,Coevery.UI.Navigation.NavigationBuilder' Coevery.UI.Navigation.NavigationItemBuilder' Coevery.Security.StandardPermissions,
+Coevery.Alias,IAliasService,0,13,0,0,0,19,13,1,1,-1,0,3,,Coevery.Alias.Controllers.AdminController' Coevery.Autoroute.Services.AutorouteService' Coevery.Autoroute.Drivers.AutoroutePartDriver
+Coevery.Alias,Migrations,0,1,0,0,1,19,1,0,2,-1,3,0,Coevery.Data.Migration.Schema.SchemaBuilder' Coevery.Data.Migration.Schema.CreateTableCommand' Coevery.Data.Migration.Schema.CreateColumnCommand,
+Coevery.Alias,Routes,2,3,0,0,3,24,4,0,2,0,3,0,Coevery.Environment.ShellBuilders.Models.ShellBlueprint' Coevery.Alias.Implementation.Holder.IAliasHolder' Coevery.Environment.ShellBuilders.Models.ControllerBlueprint,
+Coevery.Alias.Implementation,AliasRoute,2,3,1,0,3,62,10,0,0,0,2,1,Coevery.Alias.Implementation.Map.AliasMap' Coevery.Alias.Implementation.Holder.IAliasHolder,Coevery.Alias.Implementation.DefaultAliasService
+Coevery.Alias.Implementation,DefaultAliasService,3,17,0,0,14,94,22,0,2,0.12,5,0,Coevery.Alias.Implementation.Storage.IAliasStorage' Coevery.Alias.Implementation.Utils' Coevery.Mvc.Routes.IRouteProvider' Coevery.Mvc.Routes.RouteDescriptor' Coevery.Alias.Implementation.AliasRoute,
+Coevery.Alias.Implementation,StubHttpContext,0,0,1,0,0,7,0,0,0,-1,0,0,,
+Coevery.Alias.Implementation,StubHttpRequest,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Coevery.Alias.Implementation,Utils,0,7,0,0,3,129,14,0,0,-1,3,1,Coevery.Alias.Implementation.LookupHttpContext' Coevery.Mvc.Routes.RouteDescriptor' Coevery.Logging.NullLogger,Coevery.Alias.Implementation.DefaultAliasService
+Coevery.Alias.Implementation,LookupHttpContext,1,1,1,0,1,44,1,0,1,0,0,1,,Coevery.Alias.Implementation.Utils
+Coevery.Alias.Implementation,LookupHttpRequest,1,1,9,0,1,34,1,0,1,0,0,0,,
+Coevery.Alias.Controllers,AdminController,2,10,3,0,8,200,37,0,0,0.2,22,0,Coevery.Alias.IAliasService' Coevery.Alias.Implementation.Holder.IAliasHolder' Coevery.Localization.NullLocalizer' Coevery.Logging.NullLogger' Coevery.ICoeveryServices' Coevery.UI.Navigation.Pager' Coevery.Alias.ViewModels.AdminIndexViewModel' Coevery.Security.IAuthorizer' Coevery.Security.StandardPermissions' Coevery.WorkContext' Coevery.Alias.ViewModels.AdminIndexOptions' Coevery.Alias.ViewModels.AliasFilter' Coevery.Alias.Implementation.Map.AliasMap' Coevery.Alias.Implementation.Holder.AliasInfo' Coevery.Alias.ViewModels.AliasOrder' Coevery.UI.Navigation.PagerParameters' Coevery.Alias.ViewModels.AliasEntry' Coevery.Alias.ViewModels.AliasBulkAction' Coevery.Localization.LocalizedString' Coevery.Data.ITransactionManager' Coevery.UI.Notify.INotifier' Coevery.Logging.ILogger,
+Coevery.Alias.Implementation.Holder,AliasInfo,0,0,3,0,0,5,0,0,0,-1,0,4,,Coevery.Alias.Controllers.AdminController' Coevery.Alias.Implementation.Holder.AliasHolder' Coevery.Alias.Implementation.Holder.IAliasHolder' Coevery.Alias.Implementation.Map.AliasMap
+Coevery.Alias.Implementation.Holder,AliasHolder,1,6,0,0,6,30,9,0,1,0,2,0,Coevery.Alias.Implementation.Map.AliasMap' Coevery.Alias.Implementation.Holder.AliasInfo,
+Coevery.Alias.Implementation.Holder,IAliasHolder,0,5,0,0,0,23,5,1,2,-1,1,5,Coevery.Alias.Implementation.Holder.AliasInfo,Coevery.Alias.Implementation.Updater.AliasHolderUpdater' Coevery.Alias.Routes' Coevery.Alias.Implementation.AliasRoute' Coevery.Alias.Controllers.AdminController' Coevery.Alias.Implementation.Storage.AliasStorage
+Coevery.Alias.Implementation.Map,AliasMap,3,12,0,0,7,164,25,0,0,0,2,3,Coevery.Alias.Implementation.Map.Node' Coevery.Alias.Implementation.Holder.AliasInfo,Coevery.Alias.Implementation.AliasRoute' Coevery.Alias.Controllers.AdminController' Coevery.Alias.Implementation.Holder.AliasHolder
+Coevery.Alias.Implementation.Map,Node,0,1,2,0,1,8,1,0,0,-1,0,1,,Coevery.Alias.Implementation.Map.AliasMap
+Coevery.Alias.Implementation.Storage,IAliasStorage,0,8,0,0,0,10,8,1,1,-1,0,2,,Coevery.Alias.Implementation.Updater.AliasHolderUpdater' Coevery.Alias.Implementation.DefaultAliasService
+Coevery.Alias.Implementation.Storage,AliasStorage,3,10,0,0,9,127,27,0,2,0,4,0,Coevery.Data.IRepository' Coevery.Alias.Implementation.Holder.IAliasHolder' Coevery.Alias.Records.AliasRecord' Coevery.Alias.Records.ActionRecord,
+Coevery.Alias.Records,ActionRecord,0,0,4,0,0,6,0,0,0,-1,0,1,,Coevery.Alias.Implementation.Storage.AliasStorage
+Coevery.Alias.Records,AliasRecord,0,0,5,0,0,7,0,0,0,-1,0,2,,Coevery.Alias.Implementation.Updater.AliasHolderUpdater' Coevery.Alias.Implementation.Storage.AliasStorage
+Coevery.Alias.ViewModels,AdminIndexViewModel,0,0,3,0,0,5,0,0,0,-1,0,1,,Coevery.Alias.Controllers.AdminController
+Coevery.Alias.ViewModels,AliasEntry,0,0,2,0,0,4,0,0,0,-1,0,1,,Coevery.Alias.Controllers.AdminController
+Coevery.Alias.ViewModels,AdminIndexOptions,0,0,4,0,0,6,0,0,0,-1,0,1,,Coevery.Alias.Controllers.AdminController
+Coevery.Alias.ViewModels,AliasOrder,0,0,0,0,0,3,0,0,0,-1,0,1,,Coevery.Alias.Controllers.AdminController
+Coevery.Alias.ViewModels,AliasFilter,0,0,0,0,0,3,0,0,0,-1,0,1,,Coevery.Alias.Controllers.AdminController
+Coevery.Alias.ViewModels,AliasBulkAction,0,0,0,0,0,4,0,0,0,-1,0,1,,Coevery.Alias.Controllers.AdminController

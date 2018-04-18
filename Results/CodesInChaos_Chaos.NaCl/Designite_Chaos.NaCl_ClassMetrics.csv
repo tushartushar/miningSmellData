@@ -1,28 +1,28 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Array8,8,0,0,8,0,11,0,0,0,-1,0,0
-ByteIntegerConverter,0,8,0,0,8,375,8,0,0,-1,1,6
-InternalAssert,0,1,0,0,1,8,2,0,0,-1,0,2
-Poly1305Donna,0,1,0,0,1,155,8,0,0,-1,2,2
-Sha512Internal,1,2,0,0,0,443,2,0,0,1,1,1
-Array16,16,0,0,16,0,19,0,0,0,-1,0,2
-CryptoBytes,0,14,0,0,11,166,40,0,0,-1,0,7
-MontgomeryCurve25519,5,7,0,3,4,144,20,0,0,0.57,7,1
-Ed25519,5,10,0,5,10,128,36,0,0,0.5,7,0
-OneTimeAuth,1,4,3,0,4,19,4,1,0,1,1,0
-Poly1305,0,4,2,0,4,85,22,0,1,-1,3,1
-Sha512,5,8,0,1,8,111,21,0,0,0.5,3,2
-XSalsa20Poly1305,3,7,0,3,4,215,35,0,0,0,5,0
-FieldOperations,0,21,0,0,5,1403,57,0,0,-1,0,4
-MontgomeryOperations,0,2,0,0,1,68,5,0,0,-1,3,2
-ScalarOperations,0,5,0,0,3,810,5,0,0,-1,0,4
-LookupTables,5,0,0,0,0,347,0,0,0,-1,0,1
-FieldElement,10,1,0,0,0,29,1,0,0,0,1,0
-GroupOperations,0,23,0,0,17,425,48,0,0,-1,2,2
-GroupElementP2,3,0,0,3,0,6,0,0,0,-1,0,0
-GroupElementP3,4,0,0,4,0,7,0,0,0,-1,0,0
-GroupElementP1P1,4,0,0,4,0,7,0,0,0,-1,0,0
-GroupElementPreComp,3,1,0,3,1,12,1,0,0,0,0,0
-GroupElementCached,4,0,0,4,0,7,0,0,0,-1,0,0
-Ed25519Operations,0,3,0,0,3,151,6,0,0,-1,4,1
-Salsa20,4,1,0,4,1,36,1,0,0,0,2,2
-SalsaCore,0,2,0,0,2,238,2,0,0,-1,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Chaos.NaCl.Internal,Array8,8,0,0,8,0,11,0,0,0,-1,0,6,,Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.Internal.Poly1305Donna' Chaos.NaCl.Internal.Sha512Internal' Chaos.NaCl.Poly1305' Chaos.NaCl.Sha512' Chaos.NaCl.XSalsa20Poly1305
+Chaos.NaCl.Internal,ByteIntegerConverter,0,8,0,0,8,391,8,0,0,-1,2,6,Chaos.NaCl.Internal.Array8' Chaos.NaCl.Internal.Array16,Chaos.NaCl.Internal.Poly1305Donna' Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Poly1305' Chaos.NaCl.Sha512' Chaos.NaCl.XSalsa20Poly1305' Chaos.NaCl.Internal.Salsa.Salsa20
+Chaos.NaCl.Internal,InternalAssert,0,1,0,0,1,8,2,0,0,-1,0,2,,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement' Chaos.NaCl.Internal.Salsa.SalsaCore
+Chaos.NaCl.Internal,Poly1305Donna,0,1,0,0,1,126,5,0,0,-1,3,2,Chaos.NaCl.Internal.Array8' Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.CryptoBytes,Chaos.NaCl.Poly1305' Chaos.NaCl.XSalsa20Poly1305
+Chaos.NaCl.Internal,Sha512Internal,1,2,0,0,0,434,2,0,0,1,2,1,Chaos.NaCl.Internal.Array8' Chaos.NaCl.Internal.Array16,Chaos.NaCl.Sha512
+Chaos.NaCl.Internal,Array16,16,0,0,16,0,19,0,0,0,-1,0,7,,Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.Internal.Sha512Internal' Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Sha512' Chaos.NaCl.XSalsa20Poly1305' Chaos.NaCl.Internal.Salsa.Salsa20' Chaos.NaCl.Internal.Salsa.SalsaCore
+Chaos.NaCl,CryptoBytes,0,14,0,0,11,169,43,0,0,-1,0,7,,Chaos.NaCl.Internal.Poly1305Donna' Chaos.NaCl.Ed25519' Chaos.NaCl.Poly1305' Chaos.NaCl.Sha512' Chaos.NaCl.XSalsa20Poly1305' Chaos.NaCl.Internal.Ed25519Ref10.MontgomeryOperations' Chaos.NaCl.Internal.Ed25519Ref10.Ed25519Operations
+Chaos.NaCl,MontgomeryCurve25519,5,7,0,3,4,118,20,0,0,0.43,10,1,Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP3' Chaos.NaCl.Internal.Ed25519Ref10.FieldElement' Chaos.NaCl.Internal.Ed25519Ref10.ScalarOperations' Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations' Chaos.NaCl.Internal.Ed25519Ref10.FieldOperations' Chaos.NaCl.Internal.Array16' Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.Internal.Salsa.SalsaCore' Chaos.NaCl.Internal.Salsa.Salsa20' Chaos.NaCl.Internal.Ed25519Ref10.MontgomeryOperations,Chaos.NaCl.Ed25519
+Chaos.NaCl,Ed25519,5,10,0,5,10,130,36,0,0,0.2,8,0,Chaos.NaCl.Internal.Ed25519Ref10.Ed25519Operations' Chaos.NaCl.CryptoBytes' Chaos.NaCl.Internal.Ed25519Ref10.FieldElement' Chaos.NaCl.Internal.Ed25519Ref10.FieldOperations' Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Sha512' Chaos.NaCl.Internal.Ed25519Ref10.ScalarOperations' Chaos.NaCl.Internal.Ed25519Ref10.MontgomeryOperations,
+Chaos.NaCl,OneTimeAuth,1,4,3,0,4,11,4,1,0,1,1,0,Chaos.NaCl.Poly1305,
+Chaos.NaCl,Poly1305,0,4,2,0,4,81,22,0,1,-1,4,1,Chaos.NaCl.Internal.Array8' Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.Internal.Poly1305Donna' Chaos.NaCl.CryptoBytes,Chaos.NaCl.OneTimeAuth
+Chaos.NaCl,Sha512,5,8,0,1,8,113,21,0,0,0,5,2,Chaos.NaCl.Internal.Array8' Chaos.NaCl.Internal.Sha512Internal' Chaos.NaCl.Internal.Array16' Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.CryptoBytes,Chaos.NaCl.Ed25519' Chaos.NaCl.Internal.Ed25519Ref10.Ed25519Operations
+Chaos.NaCl,XSalsa20Poly1305,3,7,0,3,4,216,32,0,0,0,7,0,Chaos.NaCl.Internal.Array16' Chaos.NaCl.Internal.Salsa.Salsa20' Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.Internal.Salsa.SalsaCore' Chaos.NaCl.Internal.Array8' Chaos.NaCl.Internal.Poly1305Donna' Chaos.NaCl.CryptoBytes,
+Chaos.NaCl.Internal.Ed25519Ref10,FieldOperations,0,21,0,0,5,1411,39,0,0,-1,1,4,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Ed25519' Chaos.NaCl.Internal.Ed25519Ref10.MontgomeryOperations' Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations
+Chaos.NaCl.Internal.Ed25519Ref10,MontgomeryOperations,0,2,0,0,1,153,4,0,0,-1,4,2,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement' Chaos.NaCl.Internal.Ed25519Ref10.FieldOperations' Chaos.NaCl.Internal.Ed25519Ref10.ScalarOperations' Chaos.NaCl.CryptoBytes,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Ed25519
+Chaos.NaCl.Internal.Ed25519Ref10,ScalarOperations,0,5,0,0,3,582,5,0,0,-1,0,4,,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Ed25519' Chaos.NaCl.Internal.Ed25519Ref10.MontgomeryOperations' Chaos.NaCl.Internal.Ed25519Ref10.Ed25519Operations
+Chaos.NaCl.Internal.Ed25519Ref10,LookupTables,5,0,0,0,0,1405,0,0,0,-1,2,1,Chaos.NaCl.Internal.Ed25519Ref10.GroupElementPreComp' Chaos.NaCl.Internal.Ed25519Ref10.FieldElement,Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations
+Chaos.NaCl.Internal.Ed25519Ref10,FieldElement,10,1,0,0,0,29,1,0,0,0,1,11,Chaos.NaCl.Internal.InternalAssert,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Ed25519' Chaos.NaCl.Internal.Ed25519Ref10.FieldOperations' Chaos.NaCl.Internal.Ed25519Ref10.MontgomeryOperations' Chaos.NaCl.Internal.Ed25519Ref10.LookupTables' Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP2' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP3' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP1P1' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementPreComp' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementCached
+Chaos.NaCl.Internal.Ed25519Ref10,GroupOperations,0,23,0,0,17,684,41,0,0,-1,8,2,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement' Chaos.NaCl.Internal.Ed25519Ref10.FieldOperations' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP1P1' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP3' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementCached' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementPreComp' Chaos.NaCl.Internal.Ed25519Ref10.LookupTables' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP2,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Internal.Ed25519Ref10.Ed25519Operations
+Chaos.NaCl.Internal.Ed25519Ref10,GroupElementP2,3,0,0,3,0,6,0,0,0,-1,1,2,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement,Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations' Chaos.NaCl.Internal.Ed25519Ref10.Ed25519Operations
+Chaos.NaCl.Internal.Ed25519Ref10,GroupElementP3,4,0,0,4,0,7,0,0,0,-1,1,3,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations' Chaos.NaCl.Internal.Ed25519Ref10.Ed25519Operations
+Chaos.NaCl.Internal.Ed25519Ref10,GroupElementP1P1,4,0,0,4,0,7,0,0,0,-1,1,1,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement,Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations
+Chaos.NaCl.Internal.Ed25519Ref10,GroupElementPreComp,3,1,0,3,1,12,1,0,0,0,1,2,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement,Chaos.NaCl.Internal.Ed25519Ref10.LookupTables' Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations
+Chaos.NaCl.Internal.Ed25519Ref10,GroupElementCached,4,0,0,4,0,7,0,0,0,-1,1,1,Chaos.NaCl.Internal.Ed25519Ref10.FieldElement,Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations
+Chaos.NaCl.Internal.Ed25519Ref10,Ed25519Operations,0,3,0,0,3,146,6,0,0,-1,6,1,Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP3' Chaos.NaCl.Sha512' Chaos.NaCl.Internal.Ed25519Ref10.ScalarOperations' Chaos.NaCl.Internal.Ed25519Ref10.GroupOperations' Chaos.NaCl.CryptoBytes' Chaos.NaCl.Internal.Ed25519Ref10.GroupElementP2,Chaos.NaCl.Ed25519
+Chaos.NaCl.Internal.Salsa,Salsa20,4,1,0,4,1,36,1,0,0,0,3,2,Chaos.NaCl.Internal.Array16' Chaos.NaCl.Internal.ByteIntegerConverter' Chaos.NaCl.Internal.Salsa.SalsaCore,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.XSalsa20Poly1305
+Chaos.NaCl.Internal.Salsa,SalsaCore,0,2,0,0,2,234,2,0,0,-1,2,3,Chaos.NaCl.Internal.InternalAssert' Chaos.NaCl.Internal.Array16,Chaos.NaCl.MontgomeryCurve25519' Chaos.NaCl.XSalsa20Poly1305' Chaos.NaCl.Internal.Salsa.Salsa20

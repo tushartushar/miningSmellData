@@ -1,17 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Program,0,1,0,0,0,16,1,0,0,-1,2,0
-Listener,1,2,0,0,0,27,5,0,0,1,1,1
-Progress,0,2,1,0,2,15,2,0,0,-1,0,1
-Worker,4,2,0,0,0,33,4,0,0,1,2,1
-CurrentCount,0,2,2,0,2,20,2,0,0,-1,0,0
-Increment,0,2,1,0,2,15,2,0,0,-1,0,0
-ServiceUnavailableException,0,1,0,0,1,6,1,0,0,-1,0,1
-CounterService,6,5,0,0,0,98,15,0,0,0.4,2,1
-UseStorage,0,2,1,0,2,15,2,0,0,-1,0,0
-Counter,4,3,0,0,1,35,7,0,0,0,0,0
-Store,0,2,1,0,2,15,2,0,0,-1,1,1
-Entry,0,2,2,0,2,20,2,0,0,-1,0,2
-Get,0,2,1,0,2,15,2,0,0,-1,0,1
-Storage,0,1,0,0,0,16,3,0,0,-1,3,0
-DummyDB,1,2,0,0,2,21,3,0,0,0,0,1
-StorageException,0,1,0,0,1,6,1,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+FaultTolerance,Program,0,1,0,0,0,16,1,0,0,-1,0,0,,
+FaultTolerance,Listener,1,2,0,0,0,33,4,0,0,1,1,0,FaultTolerance.Progress,
+FaultTolerance,Progress,0,2,1,0,2,12,2,0,0,-1,0,1,,FaultTolerance.Listener
+FaultTolerance,Worker,4,2,0,0,0,41,3,0,0,1,1,0,FaultTolerance.ServiceUnavailableException,
+FaultTolerance,CurrentCount,0,2,2,0,2,14,2,0,0,-1,0,0,,
+FaultTolerance,Increment,0,2,1,0,2,12,2,0,0,-1,0,2,,FaultTolerance.CounterService' FaultTolerance.Counter
+FaultTolerance,ServiceUnavailableException,0,1,0,0,1,6,1,0,0,-1,0,1,,FaultTolerance.Worker
+FaultTolerance,CounterService,6,5,0,0,0,106,11,0,0,0.4,4,0,FaultTolerance.StorageException' FaultTolerance.Entry' FaultTolerance.SenderMessagePair' FaultTolerance.Increment,
+FaultTolerance,SenderMessagePair,0,1,2,0,1,10,1,0,0,-1,0,1,,FaultTolerance.CounterService
+FaultTolerance,UseStorage,0,2,1,0,2,12,2,0,0,-1,0,1,,FaultTolerance.Counter
+FaultTolerance,Counter,4,3,0,0,1,42,5,0,0,0,2,0,FaultTolerance.UseStorage' FaultTolerance.Increment,
+FaultTolerance,Store,0,2,1,0,2,12,2,0,0,-1,1,1,FaultTolerance.Entry,FaultTolerance.Storage
+FaultTolerance,Entry,0,2,2,0,2,14,2,0,0,-1,0,3,,FaultTolerance.CounterService' FaultTolerance.Store' FaultTolerance.Storage
+FaultTolerance,Get,0,2,1,0,2,12,2,0,0,-1,0,1,,FaultTolerance.Storage
+FaultTolerance,Storage,0,1,0,0,0,21,2,0,0,-1,4,0,FaultTolerance.Entry' FaultTolerance.Store' FaultTolerance.DummyDB' FaultTolerance.Get,
+FaultTolerance,DummyDB,1,2,0,0,2,23,3,0,0,0,0,1,,FaultTolerance.Storage
+FaultTolerance,StorageException,0,1,0,0,1,6,1,0,0,-1,0,1,,FaultTolerance.CounterService

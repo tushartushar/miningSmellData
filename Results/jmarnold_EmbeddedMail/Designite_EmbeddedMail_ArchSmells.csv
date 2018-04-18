@@ -1,2 +1,3 @@
-Architecture smell,Project,Namespace,Cause
-Unstable Dependency,EmbeddedMail,EmbeddedMail.Handlers,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): EmbeddedMail
+Architecture smell,Project,Namespace,Cause,Responsible Classes
+Cyclic Dependency,EmbeddedMail,EmbeddedMail,The tool detected the smell in this component because this component participates in a cyclic dependency. The participating components in the cycle are: EmbeddedMail' EmbeddedMail.Handlers,EmbeddedMail.SmtpSession' EmbeddedMail.Handlers.DataHandler
+Unstable Dependency,EmbeddedMail,EmbeddedMail,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): EmbeddedMail.Handlers,EmbeddedMail.ISmtpProtocolHandler' EmbeddedMail.ProtocolHandlers' EmbeddedMail.ContinueProcessing

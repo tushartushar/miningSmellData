@@ -1,12 +1,14 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IMsmqTransaction,0,3,0,0,0,6,3,2,0,-1,0,1
-MsmqInternalTransaction,1,5,0,0,5,25,5,0,1,0,0,1
-MsmqFetchedJob,1,4,1,0,4,28,6,0,1,0,1,1
-MsmqJobQueue,3,5,0,0,3,62,15,0,1,0,4,1
-MsmqJobQueueMonitoringApi,2,5,0,0,5,51,15,0,1,0.4,1,1
-MsmqJobQueueProvider,2,3,0,0,3,18,3,0,1,0,3,2
-MsmqSqlServerStorageExtensions,0,3,0,0,3,24,5,0,0,-1,3,0
-MsmqTransactionType,0,0,0,0,0,13,0,0,0,-1,0,4
-MsmqDtcTransaction,2,5,0,0,5,30,6,0,1,0.4,0,1
-MessageQueueExtensions,12,4,0,0,1,72,6,0,0,1,0,0
-MsmqExtensions,0,2,0,0,2,18,3,0,0,-1,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Hangfire.SqlServer.Msmq,IMsmqTransaction,0,3,0,0,0,6,3,2,0,-1,0,2,,Hangfire.SqlServer.Msmq.MsmqFetchedJob' Hangfire.SqlServer.Msmq.MsmqJobQueue
+Hangfire.SqlServer.Msmq,MsmqInternalTransaction,1,5,0,0,5,25,5,0,1,0,0,1,,Hangfire.SqlServer.Msmq.MsmqJobQueue
+Hangfire.SqlServer.Msmq,MsmqFetchedJob,1,4,1,0,4,24,6,0,1,0,2,1,Hangfire.SqlServer.Msmq.IMsmqTransaction' Hangfire.Annotations.NotNullAttribute,Hangfire.SqlServer.Msmq.MsmqJobQueue
+Hangfire.SqlServer.Msmq,MsmqJobQueue,3,5,0,0,3,72,7,0,1,0,5,2,Hangfire.SqlServer.Msmq.MsmqTransactionType' Hangfire.SqlServer.Msmq.IMsmqTransaction' Hangfire.SqlServer.Msmq.MsmqFetchedJob' Hangfire.SqlServer.Msmq.MsmqInternalTransaction' Hangfire.SqlServer.Msmq.MsmqDtcTransaction,Hangfire.SqlServer.Msmq.MsmqJobQueueProvider' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueFacts
+Hangfire.SqlServer.Msmq,MsmqJobQueueMonitoringApi,2,5,0,0,5,52,7,0,1,0.4,1,2,Hangfire.SqlServer.EnqueuedAndFetchedCountDto,Hangfire.SqlServer.Msmq.MsmqJobQueueProvider' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueMonitoringApiFacts
+Hangfire.SqlServer.Msmq,MsmqJobQueueProvider,2,3,0,0,3,18,3,0,1,0,3,4,Hangfire.SqlServer.Msmq.MsmqJobQueue' Hangfire.SqlServer.Msmq.MsmqJobQueueMonitoringApi' Hangfire.SqlServer.Msmq.MsmqTransactionType,Hangfire.SqlServer.Msmq.MsmqSqlServerStorageExtensions' Hangfire.MsmqExtensions' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueProviderFacts' Hangfire.SqlServer.Msmq.Tests.MsmqSqlServerStorageExtensionsFacts
+Hangfire.SqlServer.Msmq,MsmqSqlServerStorageExtensions,0,3,0,0,3,31,5,0,0,-1,6,1,Hangfire.States.EnqueuedState' Hangfire.SqlServer.SqlServerStorage' Hangfire.Annotations.NotNullAttribute' Hangfire.SqlServer.Msmq.MsmqTransactionType' Hangfire.SqlServer.Msmq.MsmqJobQueueProvider' Hangfire.SqlServer.PersistentJobQueueProviderCollection,Hangfire.SqlServer.Msmq.Tests.MsmqSqlServerStorageExtensionsFacts
+Hangfire.SqlServer.Msmq,MsmqTransactionType,0,0,0,0,0,13,0,0,0,-1,0,6,,Hangfire.SqlServer.Msmq.MsmqJobQueue' Hangfire.SqlServer.Msmq.MsmqJobQueueProvider' Hangfire.SqlServer.Msmq.MsmqSqlServerStorageExtensions' Hangfire.MsmqExtensions' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueFacts' Hangfire.SqlServer.Msmq.Tests.MsmqJobQueueProviderFacts
+Hangfire.SqlServer.Msmq,MsmqDtcTransaction,2,5,0,0,5,31,6,0,1,0.4,0,1,,Hangfire.SqlServer.Msmq.MsmqJobQueue
+MQTools,MessageQueueExtensions,12,5,0,0,1,112,12,0,0,0,2,1,MQTools.MQMGMTPROPS' MQTools.MQPROPVariant,Hangfire.SqlServer.Msmq.Tests.MessageQueueExtensionsFacts
+MQTools,MQPROPVariant,6,0,0,6,0,10,0,0,0,-1,0,1,,MQTools.MessageQueueExtensions
+MQTools,MQMGMTPROPS,4,0,0,4,0,8,0,0,0,-1,0,1,,MQTools.MessageQueueExtensions
+Hangfire,MsmqExtensions,0,2,0,0,2,24,3,0,0,-1,6,0,Hangfire.SqlServer.Msmq.MsmqTransactionType' Hangfire.IGlobalConfiguration' Hangfire.SqlServer.Msmq.MsmqJobQueueProvider' Hangfire.States.EnqueuedState' Hangfire.SqlServer.PersistentJobQueueProviderCollection' Hangfire.SqlServer.SqlServerStorage,

@@ -1,49 +1,57 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ObservableExtensions,0,6,0,0,6,39,10,0,0,-1,1,0
-CommonAssemblyInfo,3,0,0,3,0,6,0,0,0,-1,0,1
-Notification,0,13,4,0,11,250,22,0,0,-1,2,0
-NotificationKind,0,0,0,0,0,6,0,0,0,-1,0,2
-Observer,0,14,0,0,14,113,21,0,0,-1,5,1
-Unit,1,4,1,0,4,35,4,0,0,1,0,0
-WrappedObserver,1,4,0,0,4,20,4,0,0,0,0,1
-DefaultObserver,3,4,0,0,4,24,4,0,0,0,0,1
-ObserverBase,0,9,0,0,4,30,9,1,0,-1,0,0
-ObservableBase,0,3,0,0,1,13,3,1,0,-1,0,0
-AnonymousObservable,1,2,0,0,1,16,3,0,1,0,0,0
-AnonymousObserver,3,7,0,0,4,47,10,0,1,0,0,0
-SynchronizedObservable,2,2,0,0,2,14,2,0,0,0,1,1
-SynchronizedObserver,2,4,0,0,4,25,4,0,0,0,0,2
-Scheduler,4,21,7,0,21,180,23,0,0,1,6,4
-SynchronizationContextScheduler,2,4,0,0,4,59,6,0,1,0.5,1,0
-CurrentThreadScheduler,3,3,3,0,1,99,8,0,1,0.67,2,1
-ImmediateScheduler,1,3,1,0,2,49,3,0,1,1,1,1
-ScheduledItem,1,10,2,0,7,83,12,1,1,0.8,0,0
-ScheduledItemImpl,2,4,0,0,2,24,4,0,2,0,0,0
-Synchronization,0,6,0,0,6,35,8,0,0,-1,1,0
-AsyncLock,0,3,0,0,3,16,3,0,0,-1,0,1
-DefaultScheduler,1,5,1,0,3,30,5,0,1,1,0,1
-IConcurrencyAbstractionLayer,0,6,1,0,0,13,6,0,0,-1,0,0
-SchedulerQueue,0,6,1,0,6,32,6,0,0,-1,0,0
-LocalScheduler,2,7,1,0,4,63,7,4,1,0.71,2,0
-BooleanDisposable,0,1,1,0,1,12,2,0,1,-1,0,0
-CancellationDisposable,1,3,2,0,3,29,5,0,1,0.67,0,0
-CompositeDisposable,2,12,3,0,11,85,22,0,1,0,0,0
-ContextDisposable,1,2,2,0,2,32,4,0,1,0,0,0
-Disposable,1,1,1,0,1,30,2,0,0,0,0,5
-MultipleAssignmentDisposable,1,1,2,0,1,29,2,0,1,0,0,0
-RefCountDisposable,3,3,1,0,3,33,4,0,1,0,1,0
-ScheduledDisposable,0,2,3,0,2,31,4,0,1,-1,2,0
-SerialDisposable,1,1,2,0,1,30,2,0,1,0,1,0
-SingleAssignmentDisposable,1,1,2,0,1,30,2,0,1,0,0,0
-DefaultSystemClock,0,0,1,0,0,9,0,0,1,-1,0,1
-HostLifecycleService,0,2,0,0,2,14,2,0,0,-1,0,0
-HostResumingEventArgs,0,1,0,0,1,7,1,0,0,-1,0,0
-HostSuspendingEventArgs,0,1,0,0,1,7,1,0,0,-1,0,0
-IHostLifecycleNotifications,0,0,0,0,0,6,0,0,0,-1,0,0
-INotifySystemClockChanged,0,0,0,0,0,6,0,1,0,-1,0,0
-IPlatformEnlightenmentProvider,0,1,0,0,0,5,1,0,0,-1,0,1
-ISystemClock,0,0,1,0,0,7,0,1,0,-1,0,0
-PeriodicTimerSystemClockMonitor,3,2,0,0,1,23,3,0,1,0,1,2
-PlatformEnlightenmentProvider,1,1,1,0,0,17,2,0,0,0,2,0
-SystemClock,3,2,1,0,2,28,4,0,0,0,2,1
-SystemClockChangedEventArgs,0,2,2,0,2,21,2,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+System,ObservableExtensions,0,6,0,0,6,43,10,0,0,-1,1,1,System.Reactive.Observer,System.Tests.ObservableExtensionTest
+System,CommonAssemblyInfo,3,0,0,3,0,6,0,0,0,-1,0,1,,System.Reactive.PlatformServices.PlatformEnlightenmentProvider
+System.Reactive,Notification<T>,0,10,4,0,8,218,11,0,0,-1,5,0,System.Reactive.Notification' System.Reactive.Concurrency.IScheduler' System.Reactive.NotificationKind' System.Reactive.Subjects.ISubject' System.Reactive.IObserver,
+System.Reactive,InternalNotification<T>,0,1,0,0,1,11,1,0,1,-1,0,0,,
+System.Reactive,OnCompleted,0,5,4,0,5,41,6,0,0,-1,1,1,System.Reactive.Notification,System.Reactive.Notification
+System.Reactive,OnError,1,6,4,0,6,49,7,0,0,0,1,1,System.Reactive.Notification,System.Reactive.Notification
+System.Reactive,OnNext,1,6,4,0,6,49,7,0,0,0,1,1,System.Reactive.Notification,System.Reactive.Notification
+System.Reactive,Notification,0,3,0,0,3,19,4,1,0,-1,3,17,System.Reactive.OnCompleted' System.Reactive.OnError' System.Reactive.OnNext,System.Reactive.Notification<T>' System.Reactive.OnCompleted' System.Reactive.OnError' System.Reactive.OnNext' System.Reactive.Observer' System.Reactive.NotifiedObserver<T>' System.Reactive.Linq.Observable' System.Reactive.Subjects.AsyncSubject<T>' System.Reactive.Subjects.BehaviorSubject<T>' System.Reactive.Subjects.ReplaySubject<T>' System.Reactive.Linq.Observable' System.Reactive.Subjects.AsyncSubject<T>' System.Reactive.Subjects.BehaviorSubject<T>' System.Reactive.Subjects.ReplaySubject<T>' Mono.Reactive.Testing.ReactiveTest' System.Reactive.Tests.NotificationTest' System.Reactive.Linq.Tests.ObservableTest
+System.Reactive,NotificationKind,0,0,0,0,0,6,0,0,0,-1,0,6,,System.Reactive.Notification<T>' System.Reactive.Observer' System.Reactive.Linq.Observable' System.Reactive.Linq.Observable' System.Reactive.Tests.NotificationTest' System.Reactive.Linq.Tests.ObservableTest
+System.Reactive,Observer,0,14,0,0,14,120,21,0,0,-1,4,35,System.Reactive.Concurrency.AsyncLock' System.Reactive.Notification' System.Reactive.NotificationKind' System.Reactive.Concurrency.IScheduler,System.ObservableExtensions' System.Reactive.Joins.Pattern<TSource1;TSource2>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13;TSource14>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13;TSource14;TSource15>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13;TSource14;TSource15;TSource16>' System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable' System.Reactive.Joins.Pattern<TSource1;TSource2>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13;TSource14>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13;TSource14;TSource15>' System.Reactive.Joins.Pattern<TSource1;TSource2;TSource3;TSource4;TSource5;TSource6;TSource7;TSource8;TSource9;TSource10;TSource11;TSource12;TSource13;TSource14;TSource15;TSource16>' System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable
+System.Reactive,NotifiedObserver<T>,1,4,0,0,4,24,4,0,0,0,1,0,System.Reactive.Notification,
+System.Reactive,Unit,1,4,1,0,4,35,4,0,0,1,0,7,,System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable' System.Reactive.Concurrency.TaskPoolScheduler' System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable' System.Reactive.Concurrency.TaskPoolScheduler' Mono.Reactive.Testing.ReactiveAssert
+System.Reactive,WrappedObserver<T>,1,4,0,0,4,24,4,0,0,0,0,0,,
+System.Reactive,DefaultObserver<T>,3,4,0,0,4,27,4,0,0,0,0,0,,
+System.Reactive,ObserverBase<T>,0,9,0,0,4,32,9,0,0,-1,0,0,,
+System.Reactive,ObservableBase<T>,0,3,0,0,1,13,3,0,0,-1,0,0,,
+System.Reactive,AnonymousObservable<T>,1,2,0,0,1,18,3,0,0,0,0,0,,
+System.Reactive,AnonymousObserver<T>,3,7,0,0,4,50,10,0,0,0,0,0,,
+System.Reactive,SynchronizedObservable<T>,2,2,0,0,2,15,2,0,0,0,0,0,,
+System.Reactive,SynchronizedObserver<T>,2,4,0,0,4,29,4,0,0,0,0,0,,
+System.Reactive.Concurrency,Scheduler,4,21,7,0,21,187,23,0,0,0.71,4,23,System.Reactive.Concurrency.IScheduler' System.Reactive.Disposables.SingleAssignmentDisposable' System.Reactive.Concurrency.ISchedulerLongRunning' System.Reactive.Concurrency.ISchedulerPeriodic,System.Reactive.Concurrency.SynchronizationContextScheduler' System.Reactive.Concurrency.CurrentThreadScheduler' System.Reactive.Concurrency.ImmediateScheduler' System.Reactive.Linq.Observable' System.Reactive.Subjects.Subject' System.Reactive.Concurrency.EventLoopScheduler' System.Reactive.Concurrency.NewThreadScheduler' System.Reactive.Concurrency.TaskPoolScheduler' System.Reactive.Concurrency.ThreadPoolScheduler' System.Reactive.Linq.Observable' System.Reactive.Subjects.Subject' System.Reactive.Concurrency.EventLoopScheduler' System.Reactive.Concurrency.NewThreadScheduler' System.Reactive.Concurrency.TaskPoolScheduler' System.Reactive.Concurrency.ThreadPoolScheduler' System.Reactive.Concurrency.Tests.CurrentThreadSchedulerTest' System.Reactive.Concurrency.Tests.SchedulerTest' System.Reactive.Concurrency.Tests.TaskPoolSchedulerTest' System.Reactive.Concurrency.Tests.ThreadPoolSchedulerTest' System.Reactive.Disposables.Tests.ScheduledDisposableTest' System.Reactive.Linq.Tests.ObservableConnectableTest' System.Reactive.Linq.Tests.ObservableInvalidSubscriptionTest' System.Reactive.Linq.Tests.ObservableTest
+System.Reactive.Concurrency,SynchronizationContextScheduler,2,4,0,0,4,62,6,0,1,0,2,0,System.Reactive.Disposables.SingleAssignmentDisposable' System.Reactive.Concurrency.Scheduler,
+System.Reactive.Concurrency,CurrentThreadScheduler,3,3,3,0,1,97,7,0,1,0.67,2,2,System.Reactive.Disposables.Disposable' System.Reactive.Concurrency.Scheduler,System.Reactive.Concurrency.Tests.CurrentThreadSchedulerTest' System.Reactive.Concurrency.Tests.SchedulerTest
+System.Reactive.Concurrency,ImmediateScheduler,1,3,1,0,2,49,3,0,1,0.67,1,0,System.Reactive.Concurrency.Scheduler,
+System.Reactive.Concurrency,ScheduledItem<TAbsolute>,1,7,2,0,5,72,9,0,1,0.86,0,0,,
+System.Reactive.Concurrency,ScheduledItem<TAbsolute;TValue>,0,3,0,0,2,21,3,0,0,-1,1,0,System.Reactive.Concurrency.IScheduler,
+System.Reactive.Concurrency,ScheduledItemImpl<TAbsolute>,2,4,0,0,2,30,4,0,0,0,1,0,System.Reactive.Disposables.SingleAssignmentDisposable,
+System.Reactive.Concurrency,Synchronization,0,6,0,0,6,40,8,0,0,-1,1,2,System.Reactive.Concurrency.IScheduler,System.Reactive.Linq.Observable' System.Reactive.Linq.Observable
+System.Reactive.Concurrency,AsyncLock,0,3,0,0,3,18,3,0,0,-1,0,1,,System.Reactive.Observer
+System.Reactive.Concurrency,DefaultScheduler,1,5,1,0,3,30,5,0,1,0.8,0,0,,
+System.Reactive.Concurrency,IConcurrencyAbstractionLayer,0,6,1,0,0,11,6,2,0,-1,0,2,,System.Reactive.PlatformServices.CurrentPlatformEnlightenmentProvider' System.Reactive.PlatformServices.CurrentPlatformEnlightenmentProvider
+System.Reactive.Concurrency,SchedulerQueue<TAbsolute>,0,6,1,0,6,37,6,0,0,-1,0,0,,
+System.Reactive.Concurrency,LocalScheduler,2,7,1,0,4,62,9,12,1,0.57,4,0,System.Reactive.PlatformServices.PeriodicTimerSystemClockMonitor' System.Reactive.PlatformServices.SystemClockChangedEventArgs' System.Reactive.Disposables.Disposable' System.Reactive.PlatformServices.INotifySystemClockChanged,
+System.Reactive.Disposables,BooleanDisposable,0,1,1,0,1,10,2,0,1,-1,0,1,,System.Reactive.Disposables.Tests.BooleanDisposableTest
+System.Reactive.Disposables,CancellationDisposable,1,3,2,0,3,29,5,0,1,0.67,0,0,,
+System.Reactive.Disposables,CompositeDisposable,2,12,3,0,11,95,20,0,1,0,0,20,,System.Reactive.Linq.ColdObservableEach<T>' System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable' System.Reactive.Linq.ConnectableObservable<TSource;TIntermediate;TResult>' System.Reactive.Concurrency.HistoricalScheduler' System.Reactive.Concurrency.EventLoopScheduler' System.Reactive.Concurrency.NewThreadScheduler' System.Reactive.Concurrency.ThreadPoolScheduler' System.Reactive.Linq.ColdObservableEach<T>' System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable' System.Reactive.Linq.ConnectableObservable<TSource;TIntermediate;TResult>' System.Reactive.Concurrency.HistoricalScheduler' System.Reactive.Concurrency.EventLoopScheduler' System.Reactive.Concurrency.NewThreadScheduler' System.Reactive.Concurrency.ThreadPoolScheduler' System.Reactive.Concurrency.Tests.TaskPoolSchedulerTest' System.Reactive.Concurrency.Tests.ThreadPoolSchedulerTest' System.Reactive.Disposables.Tests.CompositeDisposableTest' System.Reactive.Linq.Tests.ObservableTest
+System.Reactive.Disposables,ContextDisposable,1,2,2,0,2,31,5,0,1,0,0,1,,System.Reactive.Disposables.Tests.ContextDisposableTest
+System.Reactive.Disposables,Disposable,1,1,1,0,1,32,2,0,0,0,1,53,System.Reactive.Disposables.SimpleActionDisposable,System.Reactive.Concurrency.CurrentThreadScheduler' System.Reactive.Concurrency.LocalScheduler' System.Reactive.Disposables.RefCountDisposable' System.Reactive.Linq.EventObservable<THandlerType;TEventArgs>' System.Reactive.Linq.EventObservable2<THandlerType;T>' System.Reactive.Linq.EventPatternObservableGeneric<TEventArgs>' System.Reactive.Linq.EventPatternObservableNonGeneric' System.Reactive.Linq.EventPatternObservable<TDelegate;TEventArgs>' System.Reactive.Linq.NeverObservable<T>' System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable' System.Reactive.Linq.ConnectableObservable<TSource;TIntermediate;TResult>' System.Reactive.Linq.RefCountObservable<T>' System.Reactive.Subjects.AsyncSubject<T>' System.Reactive.Subjects.BehaviorSubject<T>' System.Reactive.Subjects.ReplaySubject<T>' System.Reactive.Subjects.Subject<T>' System.Reactive.Threading.Tasks.TaskObservable<T>' System.Reactive.Concurrency.HistoricalScheduler' System.Reactive.Concurrency.VirtualTimeScheduler<TAbsolute;TRelative>' System.Reactive.Concurrency.EventLoopScheduler' System.Reactive.Concurrency.NewThreadScheduler' System.Reactive.Concurrency.ThreadPoolScheduler' System.Reactive.Linq.EventObservable<THandlerType;TEventArgs>' System.Reactive.Linq.EventObservable2<THandlerType;T>' System.Reactive.Linq.EventPatternObservableGeneric<TEventArgs>' System.Reactive.Linq.EventPatternObservableNonGeneric' System.Reactive.Linq.EventPatternObservable<TDelegate;TEventArgs>' System.Reactive.Linq.NeverObservable<T>' System.Reactive.Linq.TimeOrCountObservable' System.Reactive.Linq.Observable' System.Reactive.Linq.ConnectableObservable<TSource;TIntermediate;TResult>' System.Reactive.Linq.RefCountObservable<T>' System.Reactive.Subjects.AsyncSubject<T>' System.Reactive.Subjects.BehaviorSubject<T>' System.Reactive.Subjects.ReplaySubject<T>' System.Reactive.Subjects.Subject<T>' System.Reactive.Threading.Tasks.TaskObservable<T>' System.Reactive.Concurrency.HistoricalScheduler' System.Reactive.Concurrency.VirtualTimeScheduler<TAbsolute;TRelative>' System.Reactive.Concurrency.EventLoopScheduler' System.Reactive.Concurrency.NewThreadScheduler' System.Reactive.Concurrency.ThreadPoolScheduler' System.Reactive.Concurrency.Tests.EventSchedulerTest' System.Reactive.Disposables.Tests.CompositeDisposableTest' System.Reactive.Disposables.Tests.ContextDisposableTest' System.Reactive.Disposables.Tests.DisposableTest' System.Reactive.Disposables.Tests.MultipleAssignmentDisposableTest' System.Reactive.Disposables.Tests.RefCountDisposableTest' System.Reactive.Disposables.Tests.ScheduledDisposableTest' System.Reactive.Disposables.Tests.SerialDisposableTest' System.Reactive.Disposables.Tests.SingleAssignmentDisposableTest' System.Reactive.Linq.Tests.ObservableTest
+System.Reactive.Disposables,SimpleActionDisposable,1,2,0,0,2,16,3,0,0,0,0,1,,System.Reactive.Disposables.Disposable
+System.Reactive.Disposables,MultipleAssignmentDisposable,1,1,2,0,1,24,3,0,1,0,0,3,,System.Reactive.Concurrency.TaskPoolScheduler' System.Reactive.Concurrency.TaskPoolScheduler' System.Reactive.Disposables.Tests.MultipleAssignmentDisposableTest
+System.Reactive.Disposables,RefCountDisposable,3,3,1,0,3,35,5,0,1,0,1,1,System.Reactive.Disposables.Disposable,System.Reactive.Disposables.Tests.RefCountDisposableTest
+System.Reactive.Disposables,ScheduledDisposable,0,2,3,0,2,26,5,0,1,-1,1,3,System.Reactive.Concurrency.IScheduler,System.Reactive.Linq.SchedulerBoundObservable<T>' System.Reactive.Linq.SchedulerBoundObservable<T>' System.Reactive.Disposables.Tests.ScheduledDisposableTest
+System.Reactive.Disposables,SerialDisposable,1,1,2,0,1,26,3,0,1,0,0,3,,System.Reactive.Linq.Observable' System.Reactive.Linq.Observable' System.Reactive.Disposables.Tests.SerialDisposableTest
+System.Reactive.Disposables,SingleAssignmentDisposable,1,1,2,0,1,28,3,0,1,0,0,22,,System.Reactive.Concurrency.Scheduler' System.Reactive.Concurrency.SynchronizationContextScheduler' System.Reactive.Concurrency.ScheduledItemImpl<TAbsolute>' System.Reactive.Linq.SchedulerBoundObservable<T>' System.Reactive.Linq.SchedulerBoundSubject<T>' System.Reactive.Linq.Observable' System.Reactive.Linq.ConnectableObservable<TSource;TIntermediate;TResult>' System.Reactive.Subjects.SynchronizedSubject<TSource;TResult>' System.Reactive.Threading.Tasks.TaskObservableExtensions' System.Reactive.Concurrency.ScheduledItemImpl<TAbsolute>' System.Reactive.Concurrency.EventLoopScheduler' System.Reactive.Linq.SchedulerBoundObservable<T>' System.Reactive.Linq.SchedulerBoundSubject<T>' System.Reactive.Linq.Observable' System.Reactive.Linq.ConnectableObservable<TSource;TIntermediate;TResult>' System.Reactive.Subjects.SynchronizedSubject<TSource;TResult>' System.Reactive.Threading.Tasks.TaskObservableExtensions' System.Reactive.Concurrency.ScheduledItemImpl<TAbsolute>' System.Reactive.Concurrency.EventLoopScheduler' Mono.Reactive.Testing.ReactiveAssert' System.Reactive.Disposables.Tests.SingleAssignmentDisposableTest' System.Reactive.Linq.Tests.ObservableTest
+System.Reactive.PlatformServices,DefaultSystemClock,0,0,1,0,0,7,0,0,1,-1,0,1,,System.Reactive.PlatformServices.SystemClock
+System.Reactive.PlatformServices,HostLifecycleService,0,2,0,0,2,14,2,0,0,-1,0,0,,
+System.Reactive.PlatformServices,HostResumingEventArgs,0,1,0,0,1,7,1,0,0,-1,0,0,,
+System.Reactive.PlatformServices,HostSuspendingEventArgs,0,1,0,0,1,7,1,0,0,-1,0,0,,
+System.Reactive.PlatformServices,IHostLifecycleNotifications,0,0,0,0,0,7,0,0,0,-1,0,0,,
+System.Reactive.PlatformServices,INotifySystemClockChanged,0,0,0,0,0,6,0,1,0,-1,0,1,,System.Reactive.Concurrency.LocalScheduler
+System.Reactive.PlatformServices,IPlatformEnlightenmentProvider,0,1,0,0,0,5,1,2,0,-1,0,2,,System.Reactive.PlatformServices.PlatformEnlightenmentProvider' System.Reactive.PlatformServices.Tests.PlatformEnlightenmentProviderTest
+System.Reactive.PlatformServices,ISystemClock,0,0,1,0,0,5,0,1,0,-1,0,0,,
+System.Reactive.PlatformServices,PeriodicTimerSystemClockMonitor,3,2,0,0,1,23,4,0,1,0,1,2,System.Reactive.PlatformServices.SystemClock,System.Reactive.Concurrency.LocalScheduler' System.Reactive.PlatformServices.SystemClock
+System.Reactive.PlatformServices,PlatformEnlightenmentProvider,1,1,1,0,0,17,2,0,0,0,2,1,System.Reactive.PlatformServices.IPlatformEnlightenmentProvider' System.CommonAssemblyInfo,System.Reactive.PlatformServices.Tests.PlatformEnlightenmentProviderTest
+System.Reactive.PlatformServices,SystemClock,3,2,1,0,2,26,4,0,0,0,2,1,System.Reactive.PlatformServices.DefaultSystemClock' System.Reactive.PlatformServices.PeriodicTimerSystemClockMonitor,System.Reactive.PlatformServices.PeriodicTimerSystemClockMonitor
+System.Reactive.PlatformServices,SystemClockChangedEventArgs,0,2,2,0,2,16,2,0,0,-1,0,1,,System.Reactive.Concurrency.LocalScheduler

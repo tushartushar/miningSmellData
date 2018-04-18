@@ -1,18 +1,18 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Builder,0,8,0,0,8,72,12,0,0,-1,7,3
-ReflectionUtils,1,4,0,0,4,60,12,0,0,1,0,2
-TypeShortnameLookup,2,3,0,0,2,47,6,0,0,0,0,2
-ZmqRpcCleaner,1,2,2,0,2,26,4,0,0,0,3,1
-Serialization,1,11,0,0,9,170,25,0,0,0.45,4,2
-LocalInvocationDispatcher,3,5,0,0,3,68,9,0,0,0,2,2
-RemoteRequestService,4,3,0,0,2,62,10,0,0,0,7,1
-ProtoBufSerializationStrategy,0,9,0,0,9,39,9,0,1,-1,5,0
-RemoteRequestInterceptor,2,2,0,0,2,24,3,0,0,0,1,0
-SerializationStrategy,0,9,0,0,9,12,9,1,0,-1,3,5
-ZmqRpcFacility,2,4,0,0,0,43,9,0,0,0,2,0
-RemoteRequestInspector,0,3,0,0,1,18,4,0,0,-1,0,0
-RemoteEndpointRegistry,1,4,1,0,4,53,13,0,0,0,0,2
-AlternativeRouteContext,0,3,0,0,3,20,4,0,0,-1,0,0
-RemoteRequest,4,3,0,1,1,29,4,0,1,0,6,1
-RemoteRequestListener2,4,5,0,0,3,76,8,0,0,0,8,0
-RemoteRequestListener,8,5,0,0,3,73,9,0,0,0,8,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Castle.Facilities.Zmq.Rpc.Internal,Builder,0,8,0,0,8,68,16,0,0,-1,6,5,Castle.Facilities.Zmq.Rpc.Internal.ReflectionUtils' Castle.Facilities.Zmq.Rpc.Internal.Serialization' Castle.Zmq.Rpc.Model.ParamTuple' Castle.Zmq.Rpc.Model.ResponseMessage' Castle.Facilities.Zmq.Rpc.Internal.TypeShortnameLookup' Castle.Zmq.Rpc.Model.RequestMessage,Castle.Facilities.Zmq.Rpc.ProtoBufSerializationStrategy' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequestListener2' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequestListener' Castle.Facilities.Zmq.Rpc.Tests.RemoteRequestServiceTestCase' Castle.Facilities.Zmq.Rpc.Tests.ParameterSerializationTestCase
+Castle.Facilities.Zmq.Rpc.Internal,ReflectionUtils,1,4,0,0,4,55,14,0,0,1,0,3,,Castle.Facilities.Zmq.Rpc.Internal.Builder' Castle.Facilities.Zmq.Rpc.Internal.Serialization' Castle.Facilities.Zmq.Rpc.Tests.ReflectionUtilsTestCase
+Castle.Facilities.Zmq.Rpc.Internal,TypeShortnameLookup,2,3,0,0,2,47,6,0,0,0,0,2,,Castle.Facilities.Zmq.Rpc.Internal.Builder' Castle.Facilities.Zmq.Rpc.Internal.Serialization
+Castle.Facilities.Zmq.Rpc.Internal,ZmqRpcCleaner,1,2,2,0,2,22,4,0,0,0,3,1,Castle.Zmq.IZmqContext' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequestListener' Castle.Zmq.Extensions.RequestPoll,Castle.Facilities.Zmq.Rpc.ZmqRpcFacility
+Castle.Facilities.Zmq.Rpc.Internal,Serialization,1,11,0,0,9,184,42,0,0,0.45,4,5,Castle.Facilities.Zmq.Rpc.Internal.TypeShortnameLookup' Castle.Zmq.Rpc.Model.ParamTuple' Castle.Facilities.Zmq.Rpc.Internal.ReflectionUtils' Castle.Zmq.Rpc.Model.ResponseMessage,Castle.Facilities.Zmq.Rpc.Internal.Builder' Castle.Facilities.Zmq.Rpc.ProtoBufSerializationStrategy' Castle.Facilities.Zmq.Rpc.Tests.LocalInvocationDispatcherTestCase' Castle.Facilities.Zmq.Rpc.Tests.ArraySerializationTestCase' Castle.Facilities.Zmq.Rpc.Tests.ParameterSerializationTestCase
+Castle.Facilities.Zmq.Rpc.Local,LocalInvocationDispatcher,3,5,0,0,3,78,9,0,0,0,2,3,Castle.Facilities.Zmq.Rpc.SerializationStrategy' Castle.Zmq.Rpc.Model.ParamTuple,Castle.Facilities.Zmq.Rpc.Remote.RemoteRequestListener2' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequestListener' Castle.Facilities.Zmq.Rpc.Tests.LocalInvocationDispatcherTestCase
+Castle.Facilities.Zmq.Rpc,RemoteRequestService,4,3,0,0,2,81,10,0,0,0,9,2,Castle.Zmq.IZmqContext' Castle.Facilities.Zmq.Rpc.Remote.RemoteEndpointRegistry' Castle.Facilities.Zmq.Rpc.SerializationStrategy' Castle.Zmq.Extensions.RequestPoll' Castle.Zmq.Rpc.Model.RequestMessage' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequest' Castle.Zmq.Rpc.Model.ResponseMessage' Castle.Zmq.LogAdapter' Castle.Zmq.Rpc.Model.ExceptionInfo,Castle.Facilities.Zmq.Rpc.RemoteRequestInterceptor' Castle.Facilities.Zmq.Rpc.Tests.RemoteRequestServiceTestCase
+Castle.Facilities.Zmq.Rpc,ProtoBufSerializationStrategy,0,9,0,0,9,39,9,0,1,-1,5,0,Castle.Facilities.Zmq.Rpc.Internal.Builder' Castle.Zmq.Rpc.Model.ParamTuple' Castle.Facilities.Zmq.Rpc.Internal.Serialization' Castle.Zmq.Rpc.Model.RequestMessage' Castle.Zmq.Rpc.Model.ResponseMessage,
+Castle.Facilities.Zmq.Rpc,RemoteRequestInterceptor,2,2,0,0,2,30,3,0,0,0,1,1,Castle.Facilities.Zmq.Rpc.RemoteRequestService,Castle.Facilities.Zmq.Rpc.RemoteRequestInspector
+Castle.Facilities.Zmq.Rpc,SerializationStrategy,0,9,0,0,9,12,9,1,0,-1,3,6,Castle.Zmq.Rpc.Model.ParamTuple' Castle.Zmq.Rpc.Model.RequestMessage' Castle.Zmq.Rpc.Model.ResponseMessage,Castle.Facilities.Zmq.Rpc.Local.LocalInvocationDispatcher' Castle.Facilities.Zmq.Rpc.RemoteRequestService' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequest' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequestListener2' Castle.Facilities.Zmq.Rpc.Remote.RemoteRequestListener' Castle.Facilities.Zmq.Rpc.Tests.RemoteRequestServiceTestCase
+Castle.Facilities.Zmq.Rpc,ZmqRpcFacility,2,4,0,0,0,61,9,0,0,0,2,0,Castle.Facilities.Zmq.Rpc.Internal.ZmqRpcCleaner' Castle.Facilities.Zmq.Rpc.Remote.RemoteEndpointRegistry,
+Castle.Facilities.Zmq.Rpc,RemoteRequestInspector,0,3,0,0,1,19,4,0,0,-1,2,0,Castle.Zmq.Rpc.RemoteServiceAttribute' Castle.Facilities.Zmq.Rpc.RemoteRequestInterceptor,
+Castle.Facilities.Zmq.Rpc.Remote,RemoteEndpointRegistry,1,4,1,0,4,48,13,0,0,0.5,0,4,,Castle.Facilities.Zmq.Rpc.RemoteRequestService' Castle.Facilities.Zmq.Rpc.ZmqRpcFacility' Castle.Facilities.Zmq.Rpc.Tests.RemoteEndpointRegistryTestCase' Castle.Facilities.Zmq.Rpc.Tests.RemoteRequestServiceTestCase
+Castle.Facilities.Zmq.Rpc.Remote,AlternativeRouteContext,0,3,0,0,3,16,4,0,0,-1,0,0,,
+Castle.Facilities.Zmq.Rpc.Remote,RemoteRequest,4,3,0,1,1,34,4,0,0,0,5,1,Castle.Zmq.Rpc.Model.RequestMessage' Castle.Facilities.Zmq.Rpc.SerializationStrategy' Castle.Zmq.IZmqContext' Castle.Zmq.IZmqSocket' Castle.Zmq.Rpc.Model.ResponseMessage,Castle.Facilities.Zmq.Rpc.RemoteRequestService
+Castle.Facilities.Zmq.Rpc.Remote,RemoteRequestListener2,4,5,0,0,3,93,6,0,0,0,8,0,Castle.Zmq.IZmqSocket' Castle.Facilities.Zmq.Rpc.Local.LocalInvocationDispatcher' Castle.Facilities.Zmq.Rpc.SerializationStrategy' Castle.Zmq.IZmqContext' Castle.Zmq.LogAdapter' Castle.Zmq.Rpc.Model.RequestMessage' Castle.Zmq.Rpc.Model.ResponseMessage' Castle.Facilities.Zmq.Rpc.Internal.Builder,
+Castle.Facilities.Zmq.Rpc.Remote,RemoteRequestListener,8,5,0,0,3,86,7,0,0,0,9,1,Castle.Zmq.IZmqContext' Castle.Facilities.Zmq.Rpc.Local.LocalInvocationDispatcher' Castle.Facilities.Zmq.Rpc.SerializationStrategy' Castle.Zmq.Extensions.WorkerPool' Castle.Zmq.Rpc.Model.RequestMessage' Castle.Zmq.Rpc.Model.ResponseMessage' Castle.Zmq.IZmqSocket' Castle.Zmq.LogAdapter' Castle.Facilities.Zmq.Rpc.Internal.Builder,Castle.Facilities.Zmq.Rpc.Internal.ZmqRpcCleaner

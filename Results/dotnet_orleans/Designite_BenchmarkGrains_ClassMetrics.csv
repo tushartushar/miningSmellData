@@ -1,8 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BufferGrain,1,6,0,0,6,31,6,0,1,0.83,2,0
-DataflowGrain,0,3,0,0,3,15,3,3,1,-1,0,0
-MapProcessor,1,1,0,0,1,17,1,0,1,0,0,0
-ReduceProcessor,0,1,0,0,1,11,1,0,1,-1,0,0
-EmptyProcessor,0,1,0,0,1,8,1,0,1,-1,0,1
-TransformGrain,7,9,0,0,8,74,11,0,2,0.56,3,0
-TargetGrain,1,4,0,0,4,21,4,0,2,1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BenchmarkGrains.MapReduce,BufferGrain<T>,1,6,0,0,6,31,6,0,6,0.83,2,0,Orleans.GrainCancellationToken' BenchmarkGrainInterfaces.MapReduce.ITargetGrain,
+BenchmarkGrains.MapReduce,DataflowGrain,0,3,0,0,3,15,3,3,3,-1,0,1,,BenchmarkGrains.MapReduce.TransformGrain<TInput;TOutput>
+BenchmarkGrains.MapReduce,MapProcessor,1,1,0,0,1,11,1,0,1,0,0,0,,
+BenchmarkGrains.MapReduce,ReduceProcessor,0,1,0,0,1,12,1,0,1,-1,0,0,,
+BenchmarkGrains.MapReduce,EmptyProcessor,0,1,0,0,1,8,1,0,1,-1,0,0,,
+BenchmarkGrains.MapReduce,TargetGrain<TInput>,1,4,0,0,4,21,4,0,4,1,2,0,BenchmarkGrainInterfaces.MapReduce.ITargetProcessor' Orleans.GrainCancellationToken,
+BenchmarkGrains.MapReduce,TransformGrain<TInput;TOutput>,7,9,0,0,8,79,12,0,6,0.56,4,0,BenchmarkGrainInterfaces.MapReduce.ITransformProcessor' BenchmarkGrainInterfaces.MapReduce.ITargetGrain' Orleans.GrainCancellationToken' BenchmarkGrains.MapReduce.DataflowGrain,
+BenchmarkGrains.Ping,LoadGrain,1,4,0,0,2,65,10,0,4,0,4,0,BenchmarkGrainInterfaces.Ping.Report' Orleans.IGrainFactory' BenchmarkGrains.Ping.Pending' BenchmarkGrainInterfaces.Ping.IPingGrain,
+BenchmarkGrains.Ping,Pending,0,0,2,0,0,5,0,0,0,-1,0,1,,BenchmarkGrains.Ping.LoadGrain
+BenchmarkGrains.Ping,PingGrain,0,1,0,0,1,7,1,0,4,-1,0,0,,
+BenchmarkGrains.Transaction,LoadGrain,1,5,0,0,2,69,11,0,4,0,3,0,BenchmarkGrainInterfaces.Transaction.Report' BenchmarkGrainInterfaces.Transaction.ITransactionRootGrain' Orleans.IGrainFactory,
+BenchmarkGrains.Transaction,Info,0,0,1,0,0,5,0,0,0,-1,0,1,,BenchmarkGrains.Transaction.TransactionGrain
+BenchmarkGrains.Transaction,TransactionGrain,1,2,0,0,2,15,2,0,4,0,3,0,Orleans.Transactions.Abstractions.ITransactionalState' Orleans.Transactions.Abstractions.TransactionalStateAttribute' BenchmarkGrains.Transaction.Info,
+BenchmarkGrains.Transaction,TransactionRootGrain,0,1,0,0,1,9,1,0,4,-1,2,0,BenchmarkGrainInterfaces.Transaction.ITransactionGrain' Orleans.IGrainFactory,

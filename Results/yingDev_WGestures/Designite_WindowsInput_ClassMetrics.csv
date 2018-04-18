@@ -1,0 +1,25 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WindowsInput,IInputSimulator,0,0,4,0,0,22,0,1,0,-1,0,2,,WindowsInput.MouseSimulator' WindowsInput.KeyboardSimulator
+WindowsInput,IMouseSimulator,0,19,1,0,0,98,19,1,0,-1,0,2,,WGestures.Core.Impl.Windows.TouchHook' WindowsInput.InputSimulator
+WindowsInput,InputSimulator,3,2,4,0,2,67,2,0,1,0,3,4,WindowsInput.IKeyboardSimulator' WindowsInput.IMouseSimulator' WindowsInput.IInputDeviceStateAdaptor,WGestures.Common.OsSpecific.Windows.Native' WGestures.Core.Commands.Impl.Sim' WGestures.Core.Impl.Windows.TouchHook' WGestures.Core.Impl.Windows.Win32MousePathTracker2
+WindowsInput,MouseButton,0,0,0,0,0,15,0,0,0,-1,0,2,,WindowsInput.MouseSimulator' WindowsInput.InputBuilder
+WindowsInput,MouseSimulator,3,22,1,0,20,232,25,0,1,0.14,5,0,WindowsInput.IInputSimulator' WindowsInput.IInputMessageDispatcher' WindowsInput.Native.INPUT' WindowsInput.InputBuilder' WindowsInput.MouseButton,
+WindowsInput,IInputDeviceStateAdaptor,0,5,0,0,0,43,5,1,0,-1,1,1,WindowsInput.Native.VirtualKeyCode,WindowsInput.InputSimulator
+WindowsInput,IInputMessageDispatcher,0,2,0,0,0,12,2,1,0,-1,1,2,WindowsInput.Native.INPUT,WindowsInput.MouseSimulator' WindowsInput.KeyboardSimulator
+WindowsInput,IKeyboardSimulator,0,12,1,0,0,76,12,1,0,-1,1,5,WindowsInput.Native.VirtualKeyCode,WGestures.Common.OsSpecific.Windows.Native' WGestures.Core.Commands.Impl.Sim' WGestures.Core.Impl.Windows.TouchHook' WGestures.Core.Impl.Windows.Win32MousePathTracker2' WindowsInput.InputSimulator
+WindowsInput,InputBuilder,1,28,1,0,25,482,33,0,0,0,11,2,WindowsInput.Native.VirtualKeyCode' WindowsInput.Native.INPUT' WindowsInput.Native.NativeMethods' WindowsInput.Native.MAPVK' WindowsInput.Native.InputType' WindowsInput.Native.KeyboardFlag' WindowsInput.Native.KEYBDINPUT' WindowsInput.Native.MOUSEKEYBDHARDWAREINPUT' WindowsInput.Native.MOUSEINPUT' WindowsInput.Native.MouseFlag' WindowsInput.MouseButton,WindowsInput.MouseSimulator' WindowsInput.KeyboardSimulator
+WindowsInput,KeyboardSimulator,2,18,1,0,13,210,28,0,1,0.22,5,0,WindowsInput.IInputSimulator' WindowsInput.IInputMessageDispatcher' WindowsInput.Native.INPUT' WindowsInput.InputBuilder' WindowsInput.Native.VirtualKeyCode,
+WindowsInput,WindowsInputDeviceStateAdaptor,0,5,0,0,5,143,5,0,1,-1,2,0,WindowsInput.Native.NativeMethods' WindowsInput.Native.VirtualKeyCode,
+WindowsInput,WindowsInputMessageDispatcher,0,2,0,0,2,25,6,0,1,-1,2,0,WindowsInput.Native.NativeMethods' WindowsInput.Native.INPUT,
+WindowsInput.Native,NativeMethods,0,6,0,0,6,101,6,0,0,-1,1,3,WindowsInput.Native.INPUT,WindowsInput.InputBuilder' WindowsInput.WindowsInputDeviceStateAdaptor' WindowsInput.WindowsInputMessageDispatcher
+WindowsInput.Native,MAPVK,0,0,0,0,0,7,0,0,0,-1,0,1,,WindowsInput.InputBuilder
+WindowsInput.Native,HARDWAREINPUT,3,0,0,3,0,15,0,0,0,-1,0,0,,
+WindowsInput.Native,INPUT,2,0,0,2,0,14,0,0,0,-1,1,6,WindowsInput.Native.MOUSEKEYBDHARDWAREINPUT,WindowsInput.MouseSimulator' WindowsInput.IInputMessageDispatcher' WindowsInput.InputBuilder' WindowsInput.KeyboardSimulator' WindowsInput.WindowsInputMessageDispatcher' WindowsInput.Native.NativeMethods
+WindowsInput.Native,InputType,0,0,0,0,0,15,0,0,0,-1,0,1,,WindowsInput.InputBuilder
+WindowsInput.Native,KEYBDINPUT,5,0,0,5,0,27,0,0,0,-1,0,1,,WindowsInput.InputBuilder
+WindowsInput.Native,KeyboardFlag,0,0,0,0,0,20,0,0,0,-1,0,1,,WindowsInput.InputBuilder
+WindowsInput.Native,MouseFlag,0,0,0,0,0,56,0,0,0,-1,0,1,,WindowsInput.InputBuilder
+WindowsInput.Native,MOUSEINPUT,6,0,0,6,0,32,0,0,0,-1,0,1,,WindowsInput.InputBuilder
+WindowsInput.Native,MOUSEKEYBDHARDWAREINPUT,3,0,0,3,0,19,0,0,0,-1,0,2,,WindowsInput.InputBuilder' WindowsInput.Native.INPUT
+WindowsInput.Native,VirtualKeyCode,0,0,0,0,0,741,0,0,0,-1,0,15,,WGestures.App.Gui.Windows.CommandViews.HotKeyCommandView' WGestures.App.Gui.Windows.Controls.ShortcutRecordButton' WGestures.App.Gui.Windows.SettingsForm' WGestures.Core.Commands.Impl.ChangeAudioVolumeCommand' WGestures.Core.Commands.Impl.HotKeyCommand' WGestures.Core.Commands.Impl.Sim' WGestures.Core.Commands.Impl.TaskSwitcherCommand' WGestures.Core.Commands.Impl.WebSearchCommand' WGestures.Core.Impl.Windows.TouchHook' WGestures.Core.Impl.Windows.Win32MousePathTracker2' WindowsInput.IInputDeviceStateAdaptor' WindowsInput.IKeyboardSimulator' WindowsInput.InputBuilder' WindowsInput.KeyboardSimulator' WindowsInput.WindowsInputDeviceStateAdaptor
+WindowsInput.Native,XButton,0,0,0,0,0,11,0,0,0,-1,0,0,,

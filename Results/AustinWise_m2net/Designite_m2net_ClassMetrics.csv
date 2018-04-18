@@ -1,8 +1,14 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ByteArrayExtensions,0,12,0,0,12,84,18,0,0,-1,0,0
-Connection,14,20,1,1,15,200,33,0,0,0.5,1,2
-NetString,3,7,0,1,6,96,7,0,0,0.57,0,0
-Request,0,4,7,0,1,115,19,0,0,-1,2,3
-TnetStringType,0,0,0,0,0,10,0,0,0,-1,0,3
-TnetString,7,7,0,7,7,44,7,0,0,0,1,2
-Tnetstring,0,5,0,0,1,121,22,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+m2net,ByteArrayExtensions,0,12,0,0,12,79,17,0,0,-1,0,0,,
+m2net,Connection,14,20,1,1,15,216,32,0,0,0,1,4,m2net.Request,m2net.AspNetHandler.Program' Cassini.Connection' Cassini.Server' m2net.HandlerTest.Program
+m2net,NetString,3,7,0,1,6,102,7,3,0,0.57,3,2,m2net.StringNetString' m2net.ByteNetString' m2net.CompositeNetString,m2net.CompositeNetString' m2net_Tests.NetStringTests
+m2net,CompositeNetString,1,2,0,0,1,19,3,0,1,0,1,1,m2net.NetString,m2net.NetString
+m2net,ByteNetString,1,2,0,0,1,13,2,0,1,0,0,1,,m2net.NetString
+m2net,StringNetString,2,2,0,0,1,17,2,0,1,0,0,1,,m2net.NetString
+m2net,Request,0,4,7,0,1,110,10,0,0,-1,3,5,m2net.TParseResult' m2net.TnetString' m2net.TnetStringType,m2net.Connection' Cassini.Connection' Cassini.Server' m2net.HandlerTest.Program' m2net_Tests.RequestTests
+m2net,TnetStringType,0,0,0,0,0,10,0,0,0,-1,0,3,,m2net.Request' m2net.TnetString' m2net.Tnetstring
+m2net,TnetString,7,7,0,7,7,44,7,0,0,0,1,4,m2net.TnetStringType,m2net.Request' m2net.Tnetstring' m2net.TParseResult' m2net.TPair
+m2net,Tnetstring,0,5,0,0,1,120,13,0,0,-1,5,0,m2net.TnetstringPayload' m2net.TParseResult' m2net.TnetString' m2net.TnetStringType' m2net.TPair,
+m2net,TnetstringPayload,3,1,0,3,1,12,1,0,0,0,0,1,,m2net.Tnetstring
+m2net,TParseResult,2,1,0,2,1,10,1,0,0,0,1,3,m2net.TnetString,m2net.Request' m2net.Tnetstring' m2net_Tests.TNetStringTest
+m2net,TPair,3,0,0,3,0,6,0,0,0,-1,1,1,m2net.TnetString,m2net.Tnetstring

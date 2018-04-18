@@ -1,36 +1,36 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ProcessWRandDelays,3,2,0,0,2,38,2,0,1,0,3,0
-SubstreamSensitiveMerge,3,2,0,0,2,45,9,0,1,0,3,0
-ProcessSlowly,3,2,0,0,2,34,2,0,1,0,3,0
-CleanBlob,5,2,0,0,2,33,2,0,1,0,3,0
-Collate,11,4,0,0,2,113,21,0,1,0,3,0
-Concatenate,3,2,0,0,2,26,4,0,1,0,3,0
-Copy,3,2,0,0,2,34,4,0,1,0,3,0
-DirList,5,2,0,0,2,37,6,0,1,0,3,0
-Discard,2,2,0,0,2,28,2,0,1,0,2,0
-DisplayWords,5,2,0,0,2,43,5,0,1,0,3,0
-FormatConcord,6,2,0,0,2,52,3,0,1,0,3,0
-GenerateTestData,3,2,0,0,2,44,3,0,1,0,3,0
-GenerateSlowly,2,2,0,0,2,29,3,0,1,0,2,0
-GenSS,3,2,0,0,2,58,5,0,1,0,3,0
-GenSubStreams,2,2,0,0,2,31,2,0,1,0,2,0
-Inject,3,2,0,0,2,32,2,0,1,0,3,0
-LoadBalance,3,2,0,0,2,55,8,0,1,0,3,0
-Match,5,2,0,0,2,48,5,0,1,0,4,0
-Output,2,2,0,0,2,40,13,0,1,0,2,0
-Passthru,3,2,0,0,2,33,2,0,1,0,3,0
-ReadFromSocket,7,2,0,0,2,87,8,0,1,0,3,0
-ReadOdbc,7,3,0,0,2,76,10,0,1,0,5,0
-ReadStreamBlob,5,3,0,0,2,58,5,0,1,0,3,0
-ReadText,5,3,0,0,2,70,6,0,1,0,3,0
-ReplString,3,2,0,0,2,46,4,0,1,0,3,0
-RunExe,1,2,0,0,2,30,2,0,1,1,0,0
-Sort,3,2,0,0,2,58,7,0,1,0,3,0
-Splitter1,3,2,0,0,2,39,4,0,1,0,3,0
-Text2IntArray,3,2,0,0,2,42,3,0,1,0,3,0
-TextToWords,4,2,0,0,2,57,7,0,1,0,3,0
-Tune,2,2,0,0,2,40,3,0,1,0,2,0
-WriteText,8,2,0,0,2,108,15,0,1,0,4,0
-WriteTextBox,7,2,0,0,2,77,5,0,1,0,3,0
-WriteToConsole,5,2,0,0,2,43,7,0,1,0,3,0
-WriteToSocket,5,2,0,0,2,78,7,0,1,0,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Components,ProcessWRandDelays,3,2,0,0,2,43,2,0,1,0,3,3,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.MergeAndSort' TestNetworks.Networks.TestLoadBalanceWRandDelay' TestNetworks.Networks.TestPassthrus
+Components,SubstreamSensitiveMerge,3,2,0,0,2,54,6,0,1,0,4,2,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet' FBPLib.Types,TestNetworks.Networks.TestLoadBalanceWithSubstreams' TestNetworks.TestLoadBalanceWithSubstreams
+Components,ProcessSlowly,3,2,0,0,2,39,2,0,1,0,3,3,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.TestLoadBalanceWithSubstreams' TestNetworks.Networks.DropOldest' TestNetworks.TestLoadBalanceWithSubstreams
+Components,CleanBlob,5,2,0,0,2,36,2,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance
+Components,Collate,11,4,0,0,2,134,21,0,1,0,4,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet' FBPLib.Types,TestNetworks.Networks.Update
+Components,Concatenate,3,2,0,0,2,33,4,0,1,0,3,3,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.Deadlock' TestNetworks.Networks.NoDeadlock' TestNetworks.Networks.TestMixedInput
+Components,Copy,3,2,0,0,2,38,3,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.TestPassthrus
+Components,DirList,5,2,0,0,2,46,4,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance
+Components,Discard,2,2,0,0,2,36,2,0,1,0,2,9,FBPLib.IInputPort' FBPLib.Packet,Concord.Concordance' TestNetworks.Networks.Deadlock' TestNetworks.Networks.NoDeadlock' TestNetworks.Networks.SubnetD' TestNetworks.Networks.TestArrayPorts' TestNetworks.Networks.TestNullOutputPort' TestNetworks.Networks.TestPassthrus' TestNetworks.Networks.TestSockets' TestNetworks.Networks.VolumeTest
+Components,DisplayWords,5,2,0,0,2,52,5,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance
+Components,FormatConcord,6,2,0,0,2,61,3,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance
+Components,GenerateTestData,3,2,0,0,2,49,3,0,1,0,3,14,FBPLib.OutputPort' FBPLib.IInputPort' FBPLib.Packet,TestNetworks.MergeAndSort' TestNetworks.Networks.TestLoadBalanceWRandDelay' TestNetworks.Networks.DropOldest' TestNetworks.Networks.Copy1' TestNetworks.Networks.MergeAndSort' TestNetworks.Networks.TestArrayPorts' TestNetworks.Networks.TestInfQueue' TestNetworks.Networks.TestLoadBalancer' TestNetworks.Networks.TestNullOutputPort' TestNetworks.Networks.TestPassthrus' TestNetworks.Networks.TestSockets' TestNetworks.Networks.VolumeTest' TestNetworks.TestLoadBalancer' UnitTests.CanGenerateAndCopy
+Components,GenerateSlowly,2,2,0,0,2,38,3,0,1,0,2,1,FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.TestDeadlockDetection
+Components,GenSS,3,2,0,0,2,64,5,0,1,0,4,3,FBPLib.OutputPort' FBPLib.IInputPort' FBPLib.Packet' FBPLib.Types,TestNetworks.Networks.TestLoadBalanceWithSubstreams' TestNetworks.Networks.TSS' TestNetworks.TestLoadBalanceWithSubstreams
+Components,GenSubStreams,2,2,0,0,2,36,2,0,1,0,3,1,FBPLib.OutputPort' FBPLib.Types' FBPLib.Packet,TestNetworks.Networks.TestNestedSubstreams
+Components,Inject,3,2,0,0,2,37,2,0,1,0,3,0,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,
+Components,LoadBalance,3,2,0,0,2,60,7,0,1,0,4,5,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet' FBPLib.Types,TestNetworks.Networks.TestLoadBalanceWRandDelay' TestNetworks.Networks.TestLoadBalanceWithSubstreams' TestNetworks.Networks.TestLoadBalancer' TestNetworks.TestLoadBalancer' TestNetworks.TestLoadBalanceWithSubstreams
+Components,Match,5,2,0,0,2,59,4,0,1,0,4,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet' FBPLib.FlowError,Concord.Concordance
+Components,Output,2,2,0,0,2,48,4,0,1,0,3,2,FBPLib.IInputPort' FBPLib.Packet' FBPLib.Types,TestNetworks.Networks.DropOldest' TestNetworks.Networks.TestNestedSubstreams
+Components,Passthru,3,2,0,0,2,38,2,0,1,0,3,7,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.MergeAndSort' TestNetworks.Networks.NoDeadlock' TestNetworks.Networks.SubnetX' TestNetworks.Networks.TestLoadBalancer' TestNetworks.Networks.TestPassthrus' TestNetworks.Networks.TestSockets' TestNetworks.TestLoadBalancer
+Components,ReadFromSocket,7,2,0,0,2,97,7,0,1,0,3,2,FBPLib.OutputPort' FBPLib.IInputPort' FBPLib.Packet,TestNetworks.Networks.ReceiveFromSocket' TestNetworks.Networks.TestSockets
+Components,ReadOdbc,7,3,0,0,2,92,6,0,1,0,5,0,FBPLib.OutputPort' FBPLib.IInputPort' FBPLib.Packet' FBPLib.Record' FBPLib.FlowError,
+Components,ReadStreamBlob,5,3,0,0,2,69,5,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance
+Components,ReadText,5,3,0,0,2,77,7,0,1,0,3,9,FBPLib.OutputPort' FBPLib.IInputPort' FBPLib.Packet,CopyFileToConsole.CopyFileToConsole' TestNetworks.Networks.CopyFileToCons' TestNetworks.Networks.Deadlock' TestNetworks.Networks.InfiniteQueue' TestNetworks.Networks.NoDeadlock' TestNetworks.Networks.TestMixedInput' TestNetworks.Networks.TestTune' TestNetworks.Networks.Update' UnitTests.CanReadText
+Components,ReplString,3,2,0,0,2,52,4,0,1,0,3,4,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.Deadlock' TestNetworks.Networks.TestArrayPorts' TestNetworks.Networks.TestNullOutputPort' TestNetworks.Networks.VolumeTest
+Components,RunExe,1,2,0,0,2,37,2,0,1,1,0,1,,TestNetworks.Networks.TestRunExe
+Components,Sort,3,2,0,0,2,69,7,0,1,0,3,3,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance' TestNetworks.MergeAndSort' TestNetworks.Networks.MergeAndSort
+Components,Splitter1,3,2,0,0,2,50,4,0,1,0,2,2,FBPLib.IInputPort' FBPLib.OutputPort,TestNetworks.Networks.NoDeadlock' TestNetworks.Networks.TestMixedInput
+Components,Text2IntArray,3,2,0,0,2,46,3,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.TestTune
+Components,TextToWords,4,2,0,0,2,70,5,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance
+Components,Tune,2,2,0,0,2,46,3,0,1,0,2,1,FBPLib.IInputPort' FBPLib.Packet,TestNetworks.Networks.TestTune
+Components,WriteText,8,2,0,0,2,111,11,0,1,0,5,3,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet' FBPLib.FlowError' FBPLib.Types,TestNetworks.Networks.TestLoadBalanceWithSubstreams' TestNetworks.Networks.InfiniteQueue' TestNetworks.TestLoadBalanceWithSubstreams
+Components,WriteTextBox,7,2,0,0,2,83,6,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,Concord.Concordance
+Components,WriteToConsole,5,2,0,0,2,54,5,0,1,0,4,14,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet' FBPLib.Types,CopyFileToConsole.CopyFileToConsole' TestNetworks.MergeAndSort' TestNetworks.Networks.TestLoadBalanceWRandDelay' TestNetworks.Networks.Copy1' TestNetworks.Networks.CopyFileToCons' TestNetworks.Networks.Deadlock' TestNetworks.Networks.MergeAndSort' TestNetworks.Networks.ReceiveFromSocket' TestNetworks.Networks.TestInfQueue' TestNetworks.Networks.TestLoadBalancer' TestNetworks.Networks.TestMixedInput' TestNetworks.Networks.TSS' TestNetworks.Networks.Update' TestNetworks.TestLoadBalancer
+Components,WriteToSocket,5,2,0,0,2,94,5,0,1,0,3,1,FBPLib.IInputPort' FBPLib.OutputPort' FBPLib.Packet,TestNetworks.Networks.TestSockets

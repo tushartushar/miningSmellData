@@ -1,36 +1,40 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Comfort,11,2,2,7,0,145,9,0,0,1,0,1
-InternalCommunications,1,3,1,0,2,64,9,0,0,0,3,0
-Light,1,2,0,1,0,20,3,0,0,1,0,0
-FeaturesEnumConverter,0,1,0,0,1,30,9,0,0,-1,1,0
-EnglishLocalization,1,0,58,1,0,294,0,1,1,-1,0,1
-Localization,1,3,60,0,2,230,8,2,0,0.67,3,10
-RadioLocalization,1,0,9,1,0,49,0,0,2,-1,0,1
-RussianLocalization,1,0,58,1,0,294,0,0,1,-1,0,1
-BordmonitorMenu,9,13,4,0,2,314,82,0,1,0.46,8,1
-MenuBase,7,24,3,0,7,235,55,2,0,0.54,11,3
-MenuHelpers,0,1,0,0,1,7,1,0,0,-1,4,0
-MenuItemAction,0,0,0,0,0,8,0,0,0,-1,0,7
-MenuItemType,0,0,0,0,0,6,0,0,0,-1,0,7
-MenuItem,3,10,5,0,7,113,18,0,0,0.4,3,6
-MenuScreenUpdateReason,0,0,0,0,0,8,0,0,0,-1,0,7
-MenuScreenUpdateEventArgs,0,1,2,0,1,16,1,0,0,-1,1,3
-MenuScreen,4,17,8,0,11,212,35,4,0,0.59,3,10
-RadioMenu,11,17,5,0,1,373,109,0,1,0.24,12,0
-BordcomputerScreen,8,14,2,0,2,142,19,0,1,0.14,7,2
-HomeScreen,6,2,3,0,0,66,4,0,1,0,7,3
-SettingsScreen,2,3,2,0,0,58,5,0,1,0,4,1
-SpeedLimitScreen,1,6,1,0,2,58,8,0,1,0.33,2,1
-AudioPlayerBase,5,19,7,0,10,138,24,3,1,0.68,4,0
-PhoneContact,0,2,2,0,2,50,5,0,0,-1,0,1
-BluetoothOVC3860,22,21,2,0,11,466,147,0,2,0.1,9,0
-BluetoothWT32,14,24,8,0,14,719,166,0,2,0.5,7,1
-PlayerEvent,0,0,0,0,0,12,0,0,0,-1,0,8
-PlayerHostState,0,0,0,0,0,6,0,0,0,-1,0,6
-IAudioPlayer,0,10,6,0,0,35,10,1,0,-1,2,6
-iPodViaHeadset,9,18,3,0,14,249,61,0,2,0.11,2,1
-BordmonitorAUX,7,7,2,0,1,139,28,0,1,1,3,0
-CDChanger,13,8,0,0,1,147,22,0,1,0.25,2,0
-MediaEmulator,3,17,2,0,1,143,31,2,0,0.65,2,3
-ModelHelpers,0,5,0,0,5,35,9,0,0,-1,3,0
-TrackInfo,0,1,7,0,1,47,1,0,0,-1,0,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+imBMW.Features,Comfort,11,2,2,7,0,170,3,0,0,1,1,1,imBMW.Features.Command,imBMW.Features.Menu.Screens.SettingsScreen
+imBMW.Features,Command,0,0,0,0,0,5,0,0,0,-1,0,1,,imBMW.Features.Comfort
+imBMW.Features,InternalCommunications,1,3,1,0,2,87,6,0,0,0,3,0,imBMW.Multimedia.BluetoothWT32' imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuScreenUpdateReason,
+imBMW.Features,Light,1,2,0,1,0,21,3,0,0,1,1,0,imBMW.iBus.Message,
+imBMW,FeaturesEnumConverter,0,1,0,0,1,23,2,0,0,-1,2,0,imBMW.Multimedia.iPodCommand' imBMW.Multimedia.iPodViaHeadset,
+imBMW.Features.Localizations,EnglishLocalization,1,0,58,1,0,236,0,1,1,-1,0,2,,imBMW.Features.Localizations.Localization' imBMW.Features.Menu.Screens.SettingsScreen
+imBMW.Features.Localizations,Localization,1,3,60,0,2,134,5,2,0,0.67,3,10,imBMW.Features.Localizations.EnglishLocalization' imBMW.Features.Localizations.RussianLocalization' imBMW.Features.Localizations.RadioLocalization,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuHelpers' imBMW.Features.Menu.Screens.BordcomputerScreen' imBMW.Features.Menu.Screens.HomeScreen' imBMW.Features.Menu.Screens.SettingsScreen' imBMW.Features.Menu.Screens.SpeedLimitScreen' imBMW.Multimedia.BluetoothOVC3860' imBMW.Multimedia.BluetoothWT32' imBMW.Multimedia.Models.ModelHelpers
+imBMW.Features.Localizations,RadioLocalization,1,0,9,1,0,40,0,0,2,-1,0,1,,imBMW.Features.Localizations.Localization
+imBMW.Features.Localizations,RussianLocalization,1,0,58,1,0,236,0,0,1,-1,0,1,,imBMW.Features.Localizations.Localization
+imBMW.Features.Menu,BordmonitorMenu,9,13,4,0,2,347,37,0,1,0.62,10,1,imBMW.iBus.Devices.Emulators.MediaEmulator' imBMW.Features.Localizations.Localization' imBMW.Multimedia.IAudioPlayer' imBMW.Multimedia.PlayerEvent' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuScreenUpdateEventArgs' imBMW.Features.Menu.MenuScreenUpdateReason' imBMW.Features.Menu.MenuItem' imBMW.Features.Menu.MenuScreen' imBMW.Features.Menu.Screens.BordcomputerScreen,imBMW.Features.InternalCommunications
+imBMW.Features.Menu,MenuBase,7,24,3,0,7,260,42,2,0,0.33,12,5,imBMW.Features.Menu.MenuScreen' imBMW.iBus.Devices.Emulators.MediaEmulator' imBMW.Features.Menu.Screens.HomeScreen' imBMW.Multimedia.IAudioPlayer' imBMW.Multimedia.PlayerEvent' imBMW.Multimedia.BluetoothWT32' imBMW.Features.Localizations.Localization' imBMW.Tools.StringHelpers' imBMW.Features.Menu.MenuScreenUpdateEventArgs' imBMW.Features.Menu.MenuScreenUpdateReason' imBMW.Features.Menu.MenuItem' imBMW.Features.Menu.MenuItemAction,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuScreen' imBMW.Features.Menu.RadioMenu' imBMW.Features.Menu.Screens.BordcomputerScreen' imBMW.Features.Menu.Screens.SpeedLimitScreen
+imBMW.Features.Menu,MenuHelpers,0,1,0,0,1,7,1,0,0,-1,4,0,imBMW.Features.Menu.MenuScreen' imBMW.Features.Localizations.Localization' imBMW.Features.Menu.MenuItemType' imBMW.Features.Menu.MenuItemAction,
+imBMW.Features.Menu,MenuItemAction,0,0,0,0,0,8,0,0,0,-1,0,7,,imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuHelpers' imBMW.Features.Menu.MenuItem' imBMW.Features.Menu.Screens.BordcomputerScreen' imBMW.Features.Menu.Screens.HomeScreen' imBMW.Features.Menu.Screens.SettingsScreen' imBMW.Multimedia.BluetoothOVC3860
+imBMW.Features.Menu,MenuItemType,0,0,0,0,0,6,0,0,0,-1,0,7,,imBMW.Features.Menu.MenuHelpers' imBMW.Features.Menu.MenuItem' imBMW.Features.Menu.RadioMenu' imBMW.Features.Menu.Screens.BordcomputerScreen' imBMW.Features.Menu.Screens.HomeScreen' imBMW.Features.Menu.Screens.SettingsScreen' imBMW.Multimedia.BluetoothOVC3860
+imBMW.Features.Menu,MenuItem,3,10,5,0,7,119,16,0,0,0.4,2,7,imBMW.Features.Menu.MenuItemType' imBMW.Features.Menu.MenuItemAction,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuScreen' imBMW.Features.Menu.RadioMenu' imBMW.Features.Menu.Screens.BordcomputerScreen' imBMW.Features.Menu.Screens.HomeScreen' imBMW.Features.Menu.Screens.SettingsScreen
+imBMW.Features.Menu,MenuScreenUpdateReason,0,0,0,0,0,8,0,0,0,-1,0,7,,imBMW.Features.InternalCommunications' imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuScreenUpdateEventArgs' imBMW.Features.Menu.MenuScreen' imBMW.Features.Menu.RadioMenu' imBMW.Features.Menu.Screens.BordcomputerScreen
+imBMW.Features.Menu,MenuScreenUpdateEventArgs,0,1,2,0,1,10,1,0,0,-1,1,3,imBMW.Features.Menu.MenuScreenUpdateReason,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.RadioMenu
+imBMW.Features.Menu,MenuScreen,4,17,8,0,11,241,33,4,0,0.59,3,9,imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuItem' imBMW.Features.Menu.MenuScreenUpdateReason,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuHelpers' imBMW.Features.Menu.RadioMenu' imBMW.Features.Menu.Screens.BordcomputerScreen' imBMW.Features.Menu.Screens.SpeedLimitScreen' imBMW.Multimedia.BluetoothOVC3860' imBMW.Multimedia.BluetoothWT32' imBMW.Multimedia.iPodViaHeadset
+imBMW.Features.Menu,RadioMenu,11,17,5,0,1,374,39,0,1,0.24,13,0,imBMW.iBus.Devices.Emulators.MediaEmulator' imBMW.Tools.CharIcons' imBMW.Multimedia.IAudioPlayer' imBMW.Tools.StringHelpers' imBMW.Multimedia.PlayerEvent' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuScreenUpdateReason' imBMW.Features.Menu.MenuItem' imBMW.Features.Menu.Screens.HomeScreen' imBMW.Features.Menu.MenuScreen' imBMW.Tools.TextAlign' imBMW.Features.Menu.MenuScreenUpdateEventArgs' imBMW.Features.Menu.MenuItemType,
+imBMW.Features.Menu.Screens,BordcomputerScreen,8,14,2,0,2,158,19,0,1,0.14,8,2,imBMW.Features.Menu.MenuItem' imBMW.Features.Localizations.Localization' imBMW.Features.Menu.MenuScreen' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.MenuScreenUpdateReason' imBMW.Features.Menu.MenuItemType' imBMW.Features.Menu.MenuItemAction' imBMW.Features.Menu.Screens.SpeedLimitScreen,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.Screens.HomeScreen
+imBMW.Features.Menu.Screens,HomeScreen,6,2,3,0,0,79,4,0,1,0,6,3,imBMW.Features.Menu.MenuItem' imBMW.Features.Localizations.Localization' imBMW.Features.Menu.MenuItemType' imBMW.Features.Menu.MenuItemAction' imBMW.Features.Menu.Screens.BordcomputerScreen' imBMW.Features.Menu.Screens.SettingsScreen,imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.RadioMenu' imBMW.Multimedia.BluetoothOVC3860
+imBMW.Features.Menu.Screens,SettingsScreen,2,3,2,0,0,70,5,0,1,0,6,1,imBMW.Features.Localizations.Localization' imBMW.Features.Menu.MenuItemType' imBMW.Features.Menu.MenuItemAction' imBMW.Features.Comfort' imBMW.Features.Menu.MenuItem' imBMW.Features.Localizations.EnglishLocalization,imBMW.Features.Menu.Screens.HomeScreen
+imBMW.Features.Menu.Screens,SpeedLimitScreen,1,6,1,0,2,67,8,0,1,0.33,3,1,imBMW.Features.Localizations.Localization' imBMW.Features.Menu.MenuScreen' imBMW.Features.Menu.MenuBase,imBMW.Features.Menu.Screens.BordcomputerScreen
+imBMW.Multimedia,AudioPlayerBase,5,19,7,0,10,156,23,3,1,0.74,3,2,imBMW.Multimedia.PlayerHostState' imBMW.Multimedia.Models.TrackInfo' imBMW.Multimedia.PlayerEvent,imBMW.Multimedia.BluetoothOVC3860' imBMW.Multimedia.BluetoothWT32
+imBMW.Multimedia,PhoneContact,0,2,2,0,2,45,5,0,0,-1,0,1,,imBMW.Multimedia.BluetoothOVC3860
+imBMW.Multimedia,BluetoothOVC3860,22,21,2,0,11,499,38,0,2,0.1,10,0,imBMW.Features.Menu.MenuScreen' imBMW.Features.Menu.Screens.HomeScreen' imBMW.Multimedia.PhoneContact' imBMW.Features.Localizations.Localization' imBMW.Features.Menu.MenuItemType' imBMW.Features.Menu.MenuItemAction' imBMW.Multimedia.PlayerEvent' imBMW.Multimedia.AudioPlayerBase' imBMW.Multimedia.PlayerHostState' System.Text.ASCIIEncoding,
+imBMW.Multimedia,BluetoothWT32,14,24,8,0,14,792,74,0,2,0.62,10,2,imBMW.Features.Menu.MenuScreen' imBMW.Multimedia.Link' imBMW.Multimedia.MuxCommand' imBMW.Multimedia.PlayerEvent' imBMW.Multimedia.Models.TrackInfo' imBMW.Multimedia.PlayerHostState' imBMW.Tools.StringHelpers' imBMW.Tools.CharIcons' imBMW.Features.Localizations.Localization' imBMW.Multimedia.AudioPlayerBase,imBMW.Features.InternalCommunications' imBMW.Features.Menu.MenuBase
+imBMW.Multimedia,Link,0,0,0,0,0,12,0,0,0,-1,0,2,,imBMW.Multimedia.BluetoothWT32' imBMW.Multimedia.MuxCommand
+imBMW.Multimedia,MuxCommand,0,3,4,0,3,34,5,0,0,-1,1,1,imBMW.Multimedia.Link,imBMW.Multimedia.BluetoothWT32
+imBMW.Multimedia,PlayerEvent,0,0,0,0,0,12,0,0,0,-1,0,8,,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.RadioMenu' imBMW.Multimedia.AudioPlayerBase' imBMW.Multimedia.BluetoothOVC3860' imBMW.Multimedia.BluetoothWT32' imBMW.Multimedia.iPodViaHeadset' imBMW.iBus.Devices.Emulators.MediaEmulator
+imBMW.Multimedia,PlayerHostState,0,0,0,0,0,6,0,0,0,-1,0,5,,imBMW.Multimedia.AudioPlayerBase' imBMW.Multimedia.BluetoothOVC3860' imBMW.Multimedia.BluetoothWT32' imBMW.iBus.Devices.Emulators.BordmonitorAUX' imBMW.iBus.Devices.Emulators.CDChanger
+imBMW.Multimedia,IAudioPlayer,0,10,6,0,0,21,10,1,0,-1,0,6,,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.RadioMenu' imBMW.iBus.Devices.Emulators.BordmonitorAUX' imBMW.iBus.Devices.Emulators.CDChanger' imBMW.iBus.Devices.Emulators.MediaEmulator
+imBMW.Multimedia,iPodViaHeadset,9,18,3,0,14,263,23,0,2,0.11,3,1,imBMW.Features.Menu.MenuScreen' imBMW.Multimedia.iPodCommand' imBMW.Multimedia.PlayerEvent,imBMW.FeaturesEnumConverter
+imBMW.Multimedia,iPodCommand,0,0,0,0,0,12,0,0,0,-1,0,2,,imBMW.FeaturesEnumConverter' imBMW.Multimedia.iPodViaHeadset
+imBMW.iBus.Devices.Emulators,BordmonitorAUX,7,7,2,0,1,131,15,0,1,1,4,0,imBMW.Multimedia.IAudioPlayer' imBMW.iBus.Devices.Emulators.MediaEmulator' System.Text.ASCIIEncoding' imBMW.Multimedia.PlayerHostState,
+imBMW.iBus.Devices.Emulators,CDChanger,13,8,0,0,1,154,16,0,1,0.25,3,0,imBMW.Multimedia.IAudioPlayer' imBMW.iBus.Devices.Emulators.MediaEmulator' imBMW.Multimedia.PlayerHostState,
+imBMW.iBus.Devices.Emulators,MediaEmulator,3,17,2,0,1,157,25,2,0,0.65,2,5,imBMW.Multimedia.IAudioPlayer' imBMW.Multimedia.PlayerEvent,imBMW.Features.Menu.BordmonitorMenu' imBMW.Features.Menu.MenuBase' imBMW.Features.Menu.RadioMenu' imBMW.iBus.Devices.Emulators.BordmonitorAUX' imBMW.iBus.Devices.Emulators.CDChanger
+imBMW.Multimedia.Models,ModelHelpers,0,5,0,0,5,39,9,0,0,-1,3,0,imBMW.Multimedia.Models.TrackInfo' imBMW.Tools.StringHelpers' imBMW.Features.Localizations.Localization,
+imBMW.Multimedia.Models,TrackInfo,0,1,7,0,1,26,1,0,0,-1,0,3,,imBMW.Multimedia.AudioPlayerBase' imBMW.Multimedia.BluetoothWT32' imBMW.Multimedia.Models.ModelHelpers

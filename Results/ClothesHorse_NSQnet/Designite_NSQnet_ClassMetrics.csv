@@ -1,21 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AgileObject,1,20,4,0,19,319,27,0,0,0.3,1,3
-NSQ,2,8,9,0,6,139,18,0,0,0.5,2,1
-NSQUtil,1,5,0,0,2,50,11,0,0,0,0,1
-FrameType,0,0,0,0,0,6,0,0,0,-1,0,2
-JsonArray,0,1,0,0,1,18,1,0,0,-1,1,1
-JsonSerializer,2,7,2,0,6,166,18,0,0,0.71,2,4
-NSQClient,1,8,8,0,8,88,11,2,0,0.38,1,0
-NSQLookup,0,25,2,0,21,224,29,0,0,-1,3,1
-NSQProducer,0,0,6,0,0,27,0,0,0,-1,0,1
-NSQServerInfo,0,0,1,0,0,7,0,0,0,-1,0,1
-NSQPublisher,0,6,0,0,6,24,6,0,1,-1,0,0
-NSQMessage,0,1,6,0,1,30,1,0,0,-1,1,2
-NSQMessageEventArgs,0,2,1,0,2,14,2,0,0,-1,1,2
-NSQProtocol,10,34,6,0,18,392,56,0,0,0.12,6,1
-NSQProtocolException,0,2,0,0,2,9,2,0,0,-1,0,0
-NSQSubscriber,3,13,4,1,11,168,17,0,1,0.31,1,2
-NSQResponseString,13,0,0,13,0,16,0,0,0,-1,0,1
-StreamExtensions,0,1,0,0,1,9,3,0,0,-1,0,0
-ObjectExtensions,0,1,0,0,1,26,3,0,0,-1,1,0
-Reflection,6,10,0,0,10,75,12,0,0,0.3,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NSQnet,AgileObject,1,20,4,0,19,342,27,0,0,0.3,1,3,NSQnet.JsonSerializer,NSQnet.JsonSerializer' NSQnet.NSQProtocol' NSQnet.Extensions.ObjectExtensions
+NSQnet,NSQ,2,8,9,0,6,120,17,0,0,0.62,2,2,NSQnet.NSQLookup' NSQnet.NSQSubscriber,NSQnet.CLI.Program' NSQnet.Test.NSQProtocol_Tests
+NSQnet,NSQUtil,1,5,0,0,2,54,7,0,0,0,0,1,,NSQnet.Apps.RandomService.RandomService
+NSQnet,FrameType,0,0,0,0,0,6,0,0,0,-1,0,1,,NSQnet.NSQProtocol
+NSQnet,JsonArray,0,1,0,0,1,15,1,0,0,-1,1,1,NSQnet.JsonSerializer,NSQnet.JsonSerializer
+NSQnet,JsonSerializer,2,7,2,0,6,186,16,0,0,0.71,2,4,NSQnet.JsonArray' NSQnet.AgileObject,NSQnet.AgileObject' NSQnet.JsonArray' NSQnet.NSQLookup' NSQnet.NSQProtocol
+NSQnet,NSQClient,1,8,8,0,8,71,10,2,0,0.38,1,2,NSQnet.NSQProtocol,NSQnet.NSQPublisher' NSQnet.NSQSubscriber
+NSQnet,NSQLookup,0,25,2,0,21,183,33,0,0,-1,3,1,NSQnet.Utility.Reflection' NSQnet.NSQServerInfo' NSQnet.JsonSerializer,NSQnet.NSQ
+NSQnet,NSQProducer,0,0,6,0,0,9,0,0,0,-1,0,0,,
+NSQnet,NSQServerInfo,0,0,1,0,0,4,0,0,0,-1,0,1,,NSQnet.NSQLookup
+NSQnet,NSQPublisher,0,6,0,0,6,19,6,0,1,-1,2,2,NSQnet.NSQClient' NSQnet.NSQProtocol,NSQnet.Test.NSQClient_Tests' NSQnet.Test.NSQProtocol_Tests
+NSQnet,NSQMessage,0,1,6,0,1,10,1,0,0,-1,0,3,,NSQnet.NSQMessageEventArgs' NSQnet.NSQProtocol' NSQnet.Test.NSQProtocol_Tests
+NSQnet,NSQMessageEventArgs,0,2,1,0,2,10,2,0,0,-1,1,3,NSQnet.NSQMessage,NSQnet.NSQProtocol' NSQnet.NSQSubscriber' NSQnet.Test.NSQProtocol_Tests
+NSQnet,NSQProtocol,10,34,6,0,18,387,56,0,0,0.29,6,3,NSQnet.NSQMessage' NSQnet.NSQResponseString' NSQnet.FrameType' NSQnet.NSQMessageEventArgs' NSQnet.AgileObject' NSQnet.JsonSerializer,NSQnet.NSQClient' NSQnet.NSQPublisher' NSQnet.NSQSubscriber
+NSQnet,NSQProtocolException,0,2,0,0,2,5,2,0,0,-1,0,0,,
+NSQnet,NSQSubscriber,3,13,4,1,11,148,17,0,1,0.31,3,3,NSQnet.NSQClient' NSQnet.NSQProtocol' NSQnet.NSQMessageEventArgs,NSQnet.NSQ' NSQnet.CLI.Program' NSQnet.Test.NSQProtocol_Tests
+NSQnet,Subscription,0,2,3,0,2,19,3,0,0,-1,0,0,,
+NSQnet,NSQResponseString,13,0,0,13,0,16,0,0,0,-1,0,1,,NSQnet.NSQProtocol
+NSQnet,StreamExtensions,0,1,0,0,1,10,1,0,0,-1,0,0,,
+NSQnet.Extensions,ObjectExtensions,0,1,0,0,1,28,4,0,0,-1,1,0,NSQnet.AgileObject,
+NSQnet.Utility,Reflection,6,10,0,0,10,87,12,0,0,0.7,0,1,,NSQnet.NSQLookup

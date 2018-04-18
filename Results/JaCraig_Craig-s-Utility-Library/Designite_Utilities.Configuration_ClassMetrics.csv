@@ -1,13 +1,13 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConfigurationManager,0,2,1,0,2,44,3,0,0,-1,2,0
-ConfigurationSystem,0,2,2,0,1,49,2,0,0,-1,0,1
-JSONConfig,0,1,0,0,0,14,1,0,1,-1,0,0
-XMLConfig,0,1,0,0,0,14,1,0,1,-1,0,0
-Config,0,6,5,0,2,109,14,2,1,-1,2,0
-ConfigSystem,0,3,2,0,3,51,4,0,1,-1,1,1
-ConnectionString,0,0,2,0,0,20,0,0,0,-1,0,1
-SystemConfig,0,3,3,0,3,83,8,0,1,-1,1,0
-IConfig,0,2,1,0,0,20,2,2,0,-1,0,1
-IConfigSystem,0,1,1,0,0,18,1,1,0,-1,0,1
-Manager,0,4,1,0,3,65,6,0,1,-1,2,1
-ConfigSystemModule,0,1,1,0,1,24,1,0,1,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Utilities.Configuration,ConfigurationManager,0,2,1,0,2,40,3,0,0,-1,5,0,Utilities.IoC.Interfaces.IBootstrapper' Utilities.IoC.Manager' Utilities.Configuration.Manager.Interfaces.IConfigSystem' Utilities.Configuration.Manager.Manager' Utilities.Configuration.ConfigurationSystem,
+Utilities.Configuration,ConfigurationSystem,0,2,2,0,1,39,2,0,0,-1,0,1,,Utilities.Configuration.ConfigurationManager
+Utilities.Configuration,JSONConfig<ClassType>,0,1,0,0,0,12,1,0,0,-1,0,0,,
+Utilities.Configuration,XMLConfig<ClassType>,0,1,0,0,0,11,1,0,0,-1,0,0,,
+Utilities.Configuration.Manager.BaseClasses,Config<ConfigClassType>,0,6,5,0,2,96,13,0,1,-1,2,0,Utilities.IO.SerializationType' Utilities.IO.FileInfo,
+Utilities.Configuration.Manager.Default,ConfigSystem,0,3,2,0,3,42,4,0,1,-1,1,0,Utilities.Configuration.Manager.Interfaces.IConfig,
+Utilities.Configuration.Manager.Default,ConnectionString,0,0,2,0,0,11,0,0,0,-1,0,0,,
+Utilities.Configuration.Manager.Default,SystemConfig,0,3,3,0,3,76,6,0,1,-1,0,0,,
+Utilities.Configuration.Manager.Interfaces,IConfig,0,2,1,0,0,15,2,2,0,-1,0,1,,Utilities.Configuration.Manager.Default.ConfigSystem
+Utilities.Configuration.Manager.Interfaces,IConfigSystem,0,1,1,0,0,14,1,1,0,-1,0,2,,Utilities.Configuration.ConfigurationManager' Utilities.Configuration.Manager.Manager
+Utilities.Configuration.Manager,Manager,0,4,1,0,3,57,6,0,1,-1,1,1,Utilities.Configuration.Manager.Interfaces.IConfigSystem,Utilities.Configuration.ConfigurationManager
+Utilities.Configuration.Manager.Module,ConfigSystemModule,0,1,1,0,1,20,1,0,1,-1,1,0,Utilities.IoC.Interfaces.IBootstrapper,

@@ -1,0 +1,40 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+LogFlow.Builtins.Inputs,ConsoleInput,1,2,0,0,2,32,6,0,1,0,1,0,LogFlow.Result,
+LogFlow.Builtins.Inputs,FileInput,9,16,1,0,7,171,25,0,1,0.12,5,0,LogFlow.LogContext' LogFlow.Storage.IStateStorage' LogFlow.Result' LogFlow.Builtins.Inputs.TextFileLineReader' LogFlow.MetaDataKeys,
+LogFlow.Builtins.Inputs,TextFileLineReader,4,5,2,0,4,103,12,0,0,0.4,0,1,,LogFlow.Builtins.Inputs.FileInput
+LogFlow.Builtins.Outputs,ElasticSearchConfiguration,0,2,6,0,2,31,2,0,0,-1,1,2,LogFlow.Builtins.Outputs.ElasticSearchFields,LogFlow.Builtins.Outputs.ElasticSearchOutput' LogFlow.Examples.RandomDataFlow
+LogFlow.Builtins.Outputs,ElasticSearchFields,6,0,0,6,0,9,0,0,0,-1,0,2,,LogFlow.Builtins.Outputs.ElasticSearchConfiguration' LogFlow.Builtins.Outputs.ElasticSearchOutput
+LogFlow.Builtins.Outputs,ElasticSearchOutput,5,8,0,0,3,127,17,0,1,0,4,0,LogFlow.Builtins.Outputs.ElasticSearchConfiguration' LogFlow.LogContext' LogFlow.Builtins.Outputs.ElasticSearchFields' LogFlow.Result,
+LogFlow.Builtins.Outputs,LineToConsoleOutput,0,1,0,0,1,8,1,0,1,-1,1,0,LogFlow.Result,
+LogFlow.Builtins.Processors.IISLog,Constants,2,0,0,2,0,5,0,0,0,-1,0,2,,LogFlow.Builtins.Processors.IISLog.FieldParser' LogFlow.Builtins.Processors.IISLog.IISLogProcessor
+LogFlow.Builtins.Processors.IISLog,FieldParser,0,1,0,0,1,7,1,0,0,-1,1,1,LogFlow.Builtins.Processors.IISLog.Constants,LogFlow.Builtins.Processors.IISLog.IISLogProcessor
+LogFlow.Builtins.Processors.IISLog,FieldToJToken,1,2,0,0,1,26,3,0,0,0,0,1,,LogFlow.Builtins.Processors.IISLog.IISLogProcessor
+LogFlow.Builtins.Processors.IISLog,IISLogProcessor,1,4,0,0,1,49,7,0,1,0,9,2,LogFlow.Builtins.Processors.IISLog.LogLine' LogFlow.Result' LogFlow.Builtins.Processors.IISLog.Constants' LogFlow.Storage.IStateStorage' LogFlow.LogContext' LogFlow.Builtins.Processors.IISLog.FieldParser' LogFlow.Builtins.Processors.IISLog.FieldToJToken' LogFlow.Builtins.Processors.IISLog.LineParser' LogFlow.MetaDataKeys,LogFlow.Specifications.Processors.When_processing_logs_with_only_comments' LogFlow.Specifications.Processors.When_processing_log_line
+LogFlow.Builtins.Processors.IISLog,LineParser,1,5,0,0,2,36,7,0,0,0,2,1,LogFlow.Builtins.Processors.IISLog.LogLine' LogFlow.Builtins.Processors.IISLog.LogLineFields,LogFlow.Builtins.Processors.IISLog.IISLogProcessor
+LogFlow.Builtins.Processors.IISLog,LogLine,0,0,2,0,0,5,0,0,0,-1,0,2,,LogFlow.Builtins.Processors.IISLog.IISLogProcessor' LogFlow.Builtins.Processors.IISLog.LineParser
+LogFlow.Builtins.Processors.IISLog,LogLineFields,2,0,0,2,0,5,0,0,0,-1,0,1,,LogFlow.Builtins.Processors.IISLog.LineParser
+LogFlow.Builtins.Processors,SetEventTimeStampToNow,0,1,0,0,1,8,1,0,1,-1,1,0,LogFlow.Result,
+LogFlow,Config,0,1,1,0,0,19,2,0,0,-1,0,1,,LogFlow.Storage.BinaryRangeStateStorage
+LogFlow,FlowBuilder,2,1,0,1,1,30,5,0,0,0,3,8,LogFlow.LogFlowStructure' LogFlow.Flow' LogFlow.LogContext,LogFlow.LogFlowEngine' LogFlow.Specifications.Flows.when_starting_simple_flow' LogFlow.Specifications.when_adding_a_working_flow' LogFlow.Specifications.when_adding_an_empty_flow' LogFlow.Specifications.when_adding_a_flow_without_a_name' LogFlow.Specifications.when_adding_a_flow_without_a_input' LogFlow.Specifications.when_adding_a_flow_without_a_process' LogFlow.Specifications.when_adding_a_flow_with_the_same_name
+LogFlow,JSonKeys,2,0,0,2,0,5,0,0,0,-1,0,1,,LogFlow.Result
+LogFlow,LogContext,0,2,2,0,2,11,2,0,0,-1,1,10,LogFlow.Storage.IStateStorage,LogFlow.Builtins.Inputs.FileInput' LogFlow.Builtins.Outputs.ElasticSearchOutput' LogFlow.Builtins.Processors.IISLog.IISLogProcessor' LogFlow.FlowBuilder' LogFlow.LogInput' LogFlow.INeedContext' LogFlow.Flow' LogFlow.LogOutput' LogFlow.LogProcessor' LogFlow.Result
+LogFlow,ILogInput,0,2,0,0,0,5,2,1,1,-1,1,1,LogFlow.Result,LogFlow.Flow
+LogFlow,IStartable,0,2,0,0,0,5,2,1,0,-1,0,1,,LogFlow.LogFlowStructure
+LogFlow,LogInput,0,3,1,0,3,10,3,4,2,-1,2,1,LogFlow.LogContext' LogFlow.Result,LogFlow.LogStructureWithoutInput
+LogFlow,ILogOutput,0,1,0,0,0,4,1,1,1,-1,1,2,LogFlow.Result,LogFlow.Flow' LogFlow.LogStructureWithInput
+LogFlow,ILogProcessor,0,1,0,0,0,4,1,1,1,-1,1,2,LogFlow.Result,LogFlow.Flow' LogFlow.LogStructureWithInput
+LogFlow,INeedContext,0,1,0,0,0,4,1,3,0,-1,1,0,LogFlow.LogContext,
+LogFlow,Flow,6,7,3,0,2,115,15,10,0,0,8,2,LogFlow.LogFlowStructure' LogFlow.LogFlowStatus' LogFlow.LogStructureWithoutInput' LogFlow.LogContext' LogFlow.Result' LogFlow.ILogProcessor' LogFlow.ILogOutput' LogFlow.ILogInput,LogFlow.FlowBuilder' LogFlow.LogFlowEngine
+LogFlow,LogFlowEngine,2,2,0,1,2,44,3,0,0,0,2,0,LogFlow.FlowBuilder' LogFlow.Flow,
+LogFlow,LogFlowStatus,0,0,0,0,0,7,0,0,0,-1,0,1,,LogFlow.Flow
+LogFlow,LogStructureWithoutInput,1,2,0,0,1,14,2,0,0,0,3,9,LogFlow.LogFlowStructure' LogFlow.LogInput' LogFlow.LogStructureWithInput,LogFlow.Flow' LogFlow.Examples.ConsoleToElasticSearch' LogFlow.Examples.FileToConsoleFlow' LogFlow.Examples.FileToElasticSearch' LogFlow.Examples.RandomDataFlow' LogFlow.Specifications.Flows.FlowWithoutName' LogFlow.Specifications.Flows.FlowWithoutProcess' LogFlow.Specifications.Flows.SimpleFlow' LogFlow.Specifications.Flows.WorkingFlow
+LogFlow,LogStructureWithInput,1,3,0,0,2,20,3,0,0,0,3,8,LogFlow.LogFlowStructure' LogFlow.ILogProcessor' LogFlow.ILogOutput,LogFlow.LogStructureWithoutInput' LogFlow.Examples.ConsoleToElasticSearch' LogFlow.Examples.FileToConsoleFlow' LogFlow.Examples.FileToElasticSearch' LogFlow.Examples.RandomDataFlow' LogFlow.Specifications.Flows.FlowWithoutName' LogFlow.Specifications.Flows.SimpleFlow' LogFlow.Specifications.Flows.WorkingFlow
+LogFlow,LogFlowStructure,1,3,3,1,2,24,6,0,0,0,1,4,LogFlow.IStartable,LogFlow.FlowBuilder' LogFlow.Flow' LogFlow.LogStructureWithoutInput' LogFlow.LogStructureWithInput
+LogFlow,LogOutput,0,2,1,0,2,10,2,1,2,-1,2,0,LogFlow.LogContext' LogFlow.Result,
+LogFlow,LogProcessor,0,2,1,0,2,9,2,6,2,-1,2,0,LogFlow.LogContext' LogFlow.Result,
+LogFlow,MetaDataKeys,1,0,0,1,0,4,0,0,0,-1,0,2,,LogFlow.Builtins.Inputs.FileInput' LogFlow.Builtins.Processors.IISLog.IISLogProcessor
+LogFlow,Result,0,1,7,0,1,19,1,0,0,-1,2,20,LogFlow.JSonKeys' LogFlow.LogContext,LogFlow.Builtins.Inputs.ConsoleInput' LogFlow.Builtins.Inputs.FileInput' LogFlow.Builtins.Outputs.ElasticSearchOutput' LogFlow.Builtins.Outputs.LineToConsoleOutput' LogFlow.Builtins.Processors.IISLog.IISLogProcessor' LogFlow.Builtins.Processors.SetEventTimeStampToNow' LogFlow.ILogInput' LogFlow.LogInput' LogFlow.ILogOutput' LogFlow.ILogProcessor' LogFlow.Flow' LogFlow.LogOutput' LogFlow.LogProcessor' LogFlow.Examples.RandomBaconInput' LogFlow.Specifications.Flows.SimpleTagProcessor' LogFlow.Specifications.Helpers.ReportToCurrentResultOutput' LogFlow.Specifications.Helpers.EmptyInput' LogFlow.Specifications.Helpers.TestProcessor' LogFlow.Specifications.Processors.When_processing_logs_with_only_comments' LogFlow.Specifications.Processors.When_processing_log_line
+LogFlow,Program,1,1,0,0,0,28,1,0,0,0,0,0,,
+LogFlow.Storage,InMemoryStateStorage,1,3,0,0,3,21,4,0,1,0,0,0,,
+LogFlow.Storage,IStateStorage,0,2,0,0,0,5,2,2,0,-1,0,3,,LogFlow.Builtins.Inputs.FileInput' LogFlow.Builtins.Processors.IISLog.IISLogProcessor' LogFlow.LogContext
+LogFlow.Storage,BinaryRangeStateStorage,1,5,0,0,3,36,6,0,1,0,1,0,LogFlow.Config,

@@ -1,14 +1,14 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Analyst,1,4,0,1,4,48,12,0,1,0,2,2
-Bisector,0,7,0,0,2,71,13,0,1,-1,3,0
-DataBase,1,3,2,0,3,28,4,0,1,0,0,0
-DbState,0,5,0,0,4,46,12,0,0,-1,3,1
-Executor,2,3,1,0,1,26,4,0,0,0.67,3,0
-IAnalyst,0,1,0,0,0,4,1,1,0,-1,1,1
-IBisector,0,1,0,0,0,4,1,1,0,-1,1,1
-IDataBase,0,2,2,0,0,11,2,1,0,-1,0,6
-IDirectory,0,2,0,0,0,5,2,0,0,-1,0,2
-IProgramFilesFinder,0,1,0,0,0,4,1,1,0,-1,0,1
-NUnitFinder,2,2,0,0,2,17,2,0,0,0,2,0
-Program,0,1,0,0,0,7,1,0,0,-1,0,0
-ProgramFilesFinder,1,2,0,0,2,20,5,0,1,0,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DatabaseBisect,Analyst,1,4,0,1,4,58,13,0,1,0.5,2,7,DatabaseBisect.DbState' DatabaseBisect.IDataBase,DatabaseBisect.Bisector' DatabaseBisect.DbState' DatabaseBisect.Tests.Acceptance.ChooseTableTests' DatabaseBisect.Tests.Acceptance.ClearAndTestAndChooseWithFKs' DatabaseBisect.Tests.Acceptance.ClearAndTestSequence' DatabaseBisect.Tests.Acceptance.DbHelper' DatabaseBisect.Tests.Unit.TransformScriptUnitTests
+DatabaseBisect,Bisector,0,7,0,0,2,72,13,0,1,-1,3,3,DatabaseBisect.IDataBase' DatabaseMigraine.DatabaseElements.Base' DatabaseBisect.Analyst,DatabaseBisect.Tests.Acceptance.ClearAndTestSequence' DatabaseBisect.Tests.Acceptance.DbHelper' DatabaseBisect.Tests.Unit.TransformScriptUnitTests
+DatabaseBisect,DataBase,1,3,2,0,3,26,4,0,1,0,0,1,,DatabaseBisect.Tests.Acceptance.DbHelper
+DatabaseBisect,DbState,0,5,0,0,4,50,12,0,0,-1,3,5,DatabaseBisect.IDataBase' DatabaseMigraine.DatabaseElements.TableElement' DatabaseBisect.Analyst,DatabaseBisect.Analyst' DatabaseBisect.Tests.Acceptance.BisectDatabaseBasic' DatabaseBisect.Tests.Acceptance.ClearAndTestBasic' DatabaseBisect.Tests.Acceptance.ChooseTableTests' DatabaseBisect.Tests.Acceptance.DbHelper
+DatabaseBisect,Executor,2,3,1,0,1,24,4,0,0,0.67,3,1,DatabaseBisect.IAnalyst' DatabaseBisect.IBisector' DatabaseBisect.IDataBase,DatabaseBisect.Tests.Acceptance.BisectDatabaseBasic
+DatabaseBisect,IAnalyst,0,1,0,0,0,4,1,1,0,-1,1,1,DatabaseBisect.IDataBase,DatabaseBisect.Executor
+DatabaseBisect,IBisector,0,1,0,0,0,4,1,1,0,-1,1,1,DatabaseBisect.IDataBase,DatabaseBisect.Executor
+DatabaseBisect,IDataBase,0,2,2,0,0,7,2,1,0,-1,0,13,,DatabaseBisect.Analyst' DatabaseBisect.Bisector' DatabaseBisect.DbState' DatabaseBisect.Executor' DatabaseBisect.IAnalyst' DatabaseBisect.IBisector' DatabaseBisect.Tests.Acceptance.BisectDatabaseBasic' DatabaseBisect.Tests.Acceptance.ClearAndTestBasic' DatabaseBisect.Tests.Acceptance.ChooseTableTests' DatabaseBisect.Tests.Acceptance.ClearAndTestAndChooseWithFKs' DatabaseBisect.Tests.Acceptance.ClearAndTestSequence' DatabaseBisect.Tests.Acceptance.ClearAndTestWithOperationThatInsertsData' DatabaseBisect.Tests.Acceptance.DbHelper
+DatabaseBisect,IDirectory,0,2,0,0,0,5,2,3,0,-1,0,3,,DatabaseBisect.NUnitFinder' DatabaseBisect.ProgramFilesFinder' DatabaseBisect.Tests.Unit.TestLaunch.NUnitFinding
+DatabaseBisect,IProgramFilesFinder,0,1,0,0,0,4,1,2,0,-1,0,2,,DatabaseBisect.NUnitFinder' DatabaseBisect.Tests.Unit.TestLaunch.NUnitFinding
+DatabaseBisect,NUnitFinder,2,2,0,0,2,18,2,0,0,0,2,1,DatabaseBisect.IDirectory' DatabaseBisect.IProgramFilesFinder,DatabaseBisect.Tests.Unit.TestLaunch.NUnitFinding
+DatabaseBisect,Program,0,1,0,0,0,7,1,0,0,-1,0,0,,
+DatabaseBisect,ProgramFilesFinder,1,2,0,0,2,20,5,0,1,0,1,1,DatabaseBisect.IDirectory,DatabaseBisect.Tests.Unit.TestLaunch.ProgramFilesFinding

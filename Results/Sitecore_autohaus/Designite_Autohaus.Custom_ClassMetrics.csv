@@ -1,0 +1,18 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Autohaus.Custom.Indexing.Analyzers,FacetAnalyzer,0,1,0,0,1,11,1,0,0,-1,1,0,Autohaus.Custom.Indexing.Filters.MapCharFilter,
+Autohaus.Custom.Indexing.Analyzers,NGramAnalyzer,0,1,0,0,1,26,1,0,0,-1,0,0,,
+Autohaus.Custom.Bucketing,GuidFolderPath,0,1,0,0,1,14,1,0,0,-1,0,0,,
+Autohaus.Custom.Indexing.ComputedFields,FullModelNameField,0,2,2,0,1,29,4,0,0,-1,0,0,,
+Autohaus.Custom.Indexing.ComputedFields,HasFeaturedImage,0,1,2,0,1,31,6,0,0,-1,0,0,,
+Autohaus.Custom.Indexing.FieldReaders,DelimitedListFieldReader,0,1,0,0,1,30,4,0,0,-1,0,0,,
+Autohaus.Custom.Indexing.FieldReaders,MultiListFieldReader,0,1,0,0,1,23,4,0,0,-1,0,0,,
+Autohaus.Custom.Indexing.FieldReaders,NumericRangeFieldReader,1,1,0,0,1,34,4,0,0,0,0,0,,
+Autohaus.Custom.Indexing.Filters,MapCharFilter,2,2,0,0,2,30,5,0,0,0,0,1,,Autohaus.Custom.Indexing.Analyzers.FacetAnalyzer
+Autohaus.Custom.Links.ResolveShortUrlPipeline,ModelKeyShortUrlProcessor,0,1,0,0,1,31,5,0,1,-1,1,0,Autohaus.Custom.Links.ResolveShortUrlPipeline.ResolveShortUrlArgs,
+Autohaus.Custom.Links.ResolveShortUrlPipeline,ResolveShortUrlArgs,0,1,3,0,1,15,1,0,0,-1,0,3,,Autohaus.Custom.Links.ResolveShortUrlPipeline.ModelKeyShortUrlProcessor' Autohaus.Custom.Links.ResolveShortUrlPipeline.ResolveShortUrlProcessor' Autohaus.Custom.Links.ShortUrlManager
+Autohaus.Custom.Links.ResolveShortUrlPipeline,ResolveShortUrlProcessor,0,1,0,0,1,4,1,1,0,-1,1,0,Autohaus.Custom.Links.ResolveShortUrlPipeline.ResolveShortUrlArgs,
+Autohaus.Custom.Links,ShortUrlManager,1,5,0,1,5,92,14,0,0,0,2,1,Autohaus.Custom.Links.ResolveShortUrlPipeline.ResolveShortUrlArgs' Autohaus.Custom.Links.ShortUrlTable,Autohaus.Custom.Links.ShortUrlResolver
+Autohaus.Custom.Links,ShortUrlProvider,0,1,0,0,1,15,2,0,0,-1,0,0,,
+Autohaus.Custom.Links,ShortUrlResolver,0,1,0,0,1,14,2,0,0,-1,1,0,Autohaus.Custom.Links.ShortUrlManager,
+Autohaus.Custom.Links,ShortUrlTable,0,12,0,0,11,90,13,0,0,-1,0,1,,Autohaus.Custom.Links.ShortUrlManager
+Autohaus.Custom.Pipelines,Initializer,0,1,0,0,1,22,1,0,0,-1,0,0,,

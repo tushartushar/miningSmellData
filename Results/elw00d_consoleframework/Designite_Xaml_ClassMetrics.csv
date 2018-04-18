@@ -1,16 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ContentPropertyAttribute,0,2,1,0,2,20,2,0,0,-1,0,1
-IFactory,0,1,0,0,0,14,1,2,0,-1,0,0
-Primitive,0,1,1,0,1,15,1,0,1,-1,0,0
-ObjectFactory,1,2,2,0,2,94,13,0,1,0,1,0
-ITypeConverter,0,4,0,0,0,24,4,5,0,-1,0,2
-MarkupExtensionAttribute,0,2,1,0,2,19,2,0,0,-1,0,1
-IFixupToken,0,0,0,0,0,7,0,0,0,-1,0,0
-IMarkupExtensionContext,0,2,4,0,0,47,2,0,0,-1,0,6
-IMarkupExtension,0,1,0,0,0,12,1,4,0,-1,1,1
-IMarkupExtensionsResolver,0,1,0,0,0,4,1,0,0,-1,0,1
-MarkupExtensionsParser,3,11,0,0,2,195,40,0,0,0,3,1
-RefMarkupExtension,0,3,1,0,3,39,6,0,1,-1,1,0
-TypeConverterAttribute,0,2,1,0,2,18,2,0,0,-1,0,1
-TypeMarkupExtension,0,3,1,0,3,23,3,0,1,-1,1,0
-XamlParser,8,14,1,0,2,681,90,0,0,0,5,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Xaml,ContentPropertyAttribute,0,2,1,0,2,10,2,0,0,-1,0,1,,Xaml.XamlParser
+Xaml,IFactory,0,1,0,0,0,4,1,2,0,-1,0,1,,Xaml.XamlParser
+Xaml,Primitive<T>,0,1,1,0,1,7,1,0,1,-1,0,0,,
+Xaml,ObjectFactory,1,2,2,0,2,87,13,0,1,0,2,0,Xaml.CtorArg' Xaml.XamlParser,
+Xaml,CtorArg,2,0,0,2,0,5,0,0,0,-1,0,1,,Xaml.ObjectFactory
+Xaml,ITypeConverter,0,4,0,0,0,20,4,5,0,-1,0,2,,ConsoleFramework.Events.KeyGesture' Xaml.XamlParser
+Xaml,MarkupExtensionAttribute,0,2,1,0,2,10,2,0,0,-1,0,1,,Xaml.XamlParser
+Xaml,IFixupToken,0,0,0,0,0,3,0,1,0,-1,0,3,,Xaml.MarkupExtensionsParser' Xaml.RefMarkupExtension' Xaml.XamlParser
+Xaml,IMarkupExtensionContext,0,2,4,0,0,36,2,1,0,-1,0,7,,ConsoleFramework.Xaml.BindingMarkupExtension' ConsoleFramework.Xaml.ConvertMarkupExtension' Xaml.IMarkupExtension' Xaml.MarkupExtensionsParser' Xaml.RefMarkupExtension' Xaml.TypeMarkupExtension' TestProject1.TestExtension
+Xaml,IMarkupExtension,0,1,0,0,0,9,1,5,0,-1,1,1,Xaml.IMarkupExtensionContext,Xaml.MarkupExtensionsParser
+Xaml,IMarkupExtensionsResolver,0,1,0,0,0,4,1,2,0,-1,0,1,,Xaml.MarkupExtensionsParser
+Xaml,MarkupExtensionsParser,3,11,0,0,2,192,32,0,0,0,4,2,Xaml.IMarkupExtensionsResolver' Xaml.IFixupToken' Xaml.IMarkupExtensionContext' Xaml.IMarkupExtension,Xaml.XamlParser' TestProject1.MarkupExtensionsTest
+Xaml,RefMarkupExtension,0,3,1,0,3,27,6,0,1,-1,2,0,Xaml.IMarkupExtensionContext' Xaml.IFixupToken,
+Xaml,TypeConverterAttribute,0,2,1,0,2,11,2,0,0,-1,0,1,,Xaml.XamlParser
+Xaml,TypeMarkupExtension,0,3,1,0,3,13,3,0,1,-1,1,0,Xaml.IMarkupExtensionContext,
+Xaml,XamlParser,8,14,1,0,2,645,59,0,0,0,10,8,Xaml.MarkupExtensionsParser' Xaml.MarkupExtensionContext' Xaml.IFixupToken' Xaml.ObjectInfo' Xaml.ContentPropertyAttribute' Xaml.IFactory' Xaml.FixupToken' Xaml.TypeConverterAttribute' Xaml.ITypeConverter' Xaml.MarkupExtensionAttribute,ConsoleFramework.ConsoleApplication' Examples.Program' Xaml.ObjectFactory' Xaml.MarkupExtensionsResolver' Xaml.MarkupExtensionContext' TestProject1.Xaml.EnumsTest.EnumsTest' TestProject1.Xaml.TypeExtensionTest.Test' TestProject1.Xaml.XamlTest
+Xaml,ObjectInfo,6,0,0,6,0,29,0,0,0,-1,0,1,,Xaml.XamlParser
+Xaml,MarkupExtensionsResolver,1,2,0,0,2,10,2,0,1,0,1,0,Xaml.XamlParser,
+Xaml,FixupToken,5,0,0,5,0,24,0,0,1,-1,0,2,,Xaml.XamlParser' Xaml.MarkupExtensionContext
+Xaml,MarkupExtensionContext,2,3,4,0,3,41,4,0,1,0,2,1,Xaml.XamlParser' Xaml.FixupToken,Xaml.XamlParser

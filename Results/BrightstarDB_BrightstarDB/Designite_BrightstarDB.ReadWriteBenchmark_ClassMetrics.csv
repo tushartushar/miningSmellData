@@ -1,9 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BenchmarkArgs,4,1,0,4,1,16,1,0,0,0,0,2
-BenchmarkLogging,1,6,0,0,5,36,6,0,0,0,0,2
-BenchmarkRunner,6,8,0,1,2,115,28,0,0,0,2,1
-Program,1,1,0,1,0,24,3,0,0,0,3,0
-ArgumentType,0,0,0,0,0,39,0,0,0,-1,0,3
-ArgumentAttribute,5,1,9,0,1,107,1,1,0,0,1,1
-DefaultArgumentAttribute,0,1,0,0,1,15,1,0,1,-1,1,0
-Parser,6,32,1,1,12,828,97,0,0,0.38,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BrightstarDB.ReadWriteBenchmark,BenchmarkArgs,4,1,0,4,1,19,1,0,0,0,1,2,CommandLine.ArgumentAttribute,BrightstarDB.ReadWriteBenchmark.BenchmarkRunner' BrightstarDB.ReadWriteBenchmark.Program
+BrightstarDB.ReadWriteBenchmark,BenchmarkLogging,1,6,0,0,5,37,6,0,0,0,0,2,,BrightstarDB.ReadWriteBenchmark.BenchmarkRunner' BrightstarDB.ReadWriteBenchmark.Program
+BrightstarDB.ReadWriteBenchmark,BenchmarkRunner,6,8,0,1,2,131,23,0,0,0,6,1,BrightstarDB.Client.IBrightstarService' BrightstarDB.ReadWriteBenchmark.BenchmarkArgs' BrightstarDB.ReadWriteBenchmark.BenchmarkLogging' BrightstarDB.Storage.PersistenceType' BrightstarDB.Client.IJobInfo' BrightstarDB.RdfFormat,BrightstarDB.ReadWriteBenchmark.Program
+BrightstarDB.ReadWriteBenchmark,Program,1,1,0,1,0,29,3,0,0,0,5,0,BrightstarDB.ReadWriteBenchmark.BenchmarkArgs' BrightstarDB.ReadWriteBenchmark.BenchmarkRunner' CommandLine.Parser' BrightstarDB.ReadWriteBenchmark.BenchmarkLogging' BrightstarDB.Logging,
+CommandLine,ArgumentType,0,0,0,0,0,36,0,0,0,-1,0,4,,CommandLine.ArgumentAttribute' CommandLine.DefaultArgumentAttribute' CommandLine.Parser' CommandLine.Argument
+CommandLine,ArgumentAttribute,5,1,9,0,1,72,1,1,0,0,1,4,CommandLine.ArgumentType,BrightstarDB.ReadWriteBenchmark.BenchmarkArgs' CommandLine.Parser' CommandLine.HelpArgument' CommandLine.Argument
+CommandLine,DefaultArgumentAttribute,0,1,0,0,1,12,1,0,1,-1,1,2,CommandLine.ArgumentType,CommandLine.Parser' CommandLine.Argument
+CommandLine,Parser,6,32,1,1,12,913,72,0,0,0.34,6,2,CommandLine.Argument' CommandLine.HelpArgument' CommandLine.DefaultArgumentAttribute' CommandLine.ArgumentAttribute' CommandLine.ArgumentHelpStrings' CommandLine.ArgumentType,BrightstarDB.ReadWriteBenchmark.Program' CommandLine.Argument
+CommandLine,HelpArgument,1,0,0,1,0,5,0,0,0,-1,1,1,CommandLine.ArgumentAttribute,CommandLine.Parser
+CommandLine,ArgumentHelpStrings,2,1,0,2,1,10,1,0,0,0,0,1,,CommandLine.Parser
+CommandLine,Argument,13,9,18,0,4,331,21,0,0,0.22,4,1,CommandLine.ArgumentType' CommandLine.Parser' CommandLine.DefaultArgumentAttribute' CommandLine.ArgumentAttribute,CommandLine.Parser

@@ -1,0 +1,20 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GeekQuiz,BundleConfig,0,1,0,0,1,22,1,0,0,-1,0,1,,GeekQuiz.MvcApplication
+GeekQuiz,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,GeekQuiz.MvcApplication
+GeekQuiz,IdentityConfig,0,3,2,0,3,34,5,0,0,-1,1,2,GeekQuiz.Utils.DatabaseIssuerNameRegistry,GeekQuiz.MvcApplication' GeekQuiz.Controllers.AccountController
+GeekQuiz,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,GeekQuiz.MvcApplication
+GeekQuiz,WebApiConfig,0,1,0,0,1,16,1,0,0,-1,0,1,,GeekQuiz.MvcApplication
+GeekQuiz,MvcApplication,0,2,0,0,0,20,3,0,0,-1,5,0,GeekQuiz.IdentityConfig' GeekQuiz.WebApiConfig' GeekQuiz.FilterConfig' GeekQuiz.RouteConfig' GeekQuiz.BundleConfig,
+GeekQuiz.Controllers,AccountController,0,2,0,0,2,22,3,0,0,-1,1,0,GeekQuiz.IdentityConfig,
+GeekQuiz.Controllers,HomeController,6,4,0,0,4,46,4,0,0,1,1,0,GeekQuiz.Models.UserProfile,
+GeekQuiz.Controllers,TriviaController,1,5,0,0,2,59,8,0,0,0.4,3,0,GeekQuiz.Models.TriviaContext' GeekQuiz.Models.TriviaQuestion' GeekQuiz.Models.TriviaAnswer,
+GeekQuiz.Models,UserProfile,0,0,3,0,0,6,0,0,0,-1,0,1,,GeekQuiz.Controllers.HomeController
+GeekQuiz.Models,TenantDbContext,0,1,2,0,1,9,1,0,0,-1,0,1,,GeekQuiz.Utils.DatabaseIssuerNameRegistry
+GeekQuiz.Models,IssuingAuthorityKey,0,0,1,0,0,4,0,0,0,-1,0,0,,
+GeekQuiz.Models,Tenant,0,0,1,0,0,4,0,0,0,-1,0,0,,
+GeekQuiz.Models,TriviaAnswer,0,0,5,0,0,11,0,0,0,-1,0,1,,GeekQuiz.Controllers.TriviaController
+GeekQuiz.Models,TriviaContext,0,1,3,0,1,10,1,0,0,-1,0,2,,GeekQuiz.Controllers.TriviaController' GeekQuiz.Models.TriviaDatabaseInitializer
+GeekQuiz.Models,TriviaDatabaseInitializer,0,1,0,0,0,516,1,0,0,-1,1,0,GeekQuiz.Models.TriviaContext,
+GeekQuiz.Models,TriviaOption,0,0,5,0,0,13,0,0,0,-1,0,0,,
+GeekQuiz.Models,TriviaQuestion,0,0,3,0,0,7,0,0,0,-1,0,1,,GeekQuiz.Controllers.TriviaController
+GeekQuiz.Utils,DatabaseIssuerNameRegistry,0,5,0,0,3,79,10,0,0,-1,1,1,GeekQuiz.Models.TenantDbContext,GeekQuiz.IdentityConfig

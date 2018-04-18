@@ -1,31 +1,38 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-TYPE,0,0,0,0,0,40,0,0,0,-1,0,2
-SaveTypes,0,0,0,0,0,9,0,0,0,-1,0,1
-AlignmentPositions,0,0,0,0,0,6,0,0,0,-1,0,1
-LabelPositions,0,0,0,0,0,9,0,0,0,-1,0,1
-Barcode,15,27,23,0,20,1143,277,0,0,0.56,8,0
-BarcodeCommon,2,2,2,0,1,54,6,22,0,1,0,0
-BarcodeXML,2,14,4,0,3,1131,27,0,0,0.36,0,1
-IBarcode,0,0,3,0,0,19,0,22,0,-1,0,1
-Blank,0,0,1,0,0,14,0,0,1,-1,0,1
-Codabar,1,3,1,0,1,141,28,0,1,0,0,0
-Code11,1,2,1,0,1,92,11,0,1,0,0,0
-Code128,5,9,1,0,2,1068,71,0,1,0,0,1
-Code39,4,8,1,0,3,258,14,0,1,0,0,0
-Code93,1,4,1,0,1,344,12,0,1,0,0,0
-Pharmacode,3,2,1,0,1,74,12,0,1,0,0,0
-FIM,1,2,1,0,2,63,21,0,1,1,0,0
-Telepen,5,8,1,0,1,309,34,0,1,0,0,0
-ITF14,1,3,1,0,1,96,14,0,1,0,0,0
-EAN13,6,4,1,0,1,722,15,0,1,0,0,2
-EAN8,2,3,1,0,1,99,11,0,1,0,0,0
-Interleaved2of5,1,2,1,0,1,77,10,0,1,0,0,0
-ISBN,0,2,1,0,1,47,8,0,1,-1,1,0
-JAN13,0,2,1,0,1,31,4,0,1,-1,1,0
-MSI,2,2,1,0,1,109,21,0,1,0,1,0
-Postnet,1,2,1,0,1,74,11,0,1,0,0,0
-Standard2of5,1,2,1,0,1,48,4,0,1,0,0,0
-UPCA,4,4,1,0,1,256,13,0,1,0,0,0
-UPCE,5,2,1,0,1,169,14,0,1,0,0,0
-UPCSupplement2,3,2,1,0,1,84,9,0,1,0,0,0
-UPCSupplement5,3,2,1,0,1,102,10,0,1,0,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BarcodeLib,TYPE,0,0,0,0,0,1,0,0,0,-1,0,3,,BarcodeLib.Barcode' BarcodeLib.Symbologies.MSI' BarcodeLibTest.TestApp
+BarcodeLib,SaveTypes,0,0,0,0,0,1,0,0,0,-1,0,2,,BarcodeLib.Barcode' BarcodeLibTest.TestApp
+BarcodeLib,AlignmentPositions,0,0,0,0,0,1,0,0,0,-1,0,2,,BarcodeLib.Barcode' BarcodeLibTest.TestApp
+BarcodeLib,LabelPositions,0,0,0,0,0,1,0,0,0,-1,0,2,,BarcodeLib.Barcode' BarcodeLibTest.TestApp
+BarcodeLib,Barcode,15,27,23,0,20,1044,40,0,0,0.19,11,1,BarcodeLib.IBarcode' BarcodeLib.TYPE' BarcodeLib.LabelPositions' BarcodeLib.Symbologies.TYPES' BarcodeLib.Symbologies.Code128' BarcodeLib.AlignmentPositions' BarcodeLib.SaveTypes' BarcodeLib.ImageSize' BarcodeLib.BarcodeRow' BarcodeLib.BarcodeDataTable' BarcodeLib.BarcodeXML,BarcodeLibTest.TestApp
+BarcodeLib,ImageSize,0,1,3,0,1,12,1,0,0,-1,0,1,,BarcodeLib.Barcode
+BarcodeLib,BarcodeCommon,2,2,2,0,1,56,8,22,0,1,0,0,,
+BarcodeLib,BarcodeXML,2,14,4,0,3,1234,27,0,0,0.36,1,3,BarcodeLib.BarcodeDataTable,BarcodeLib.Barcode' BarcodeLib.BarcodeDataTable' BarcodeLibTest.TestApp
+BarcodeLib,BarcodeDataTable,16,19,17,0,8,476,31,0,0,0.79,2,3,BarcodeLib.BarcodeRow' BarcodeLib.BarcodeXML,BarcodeLib.Barcode' BarcodeLib.BarcodeXML' BarcodeLib.BarcodeRow
+BarcodeLib,BarcodeRow,1,33,16,0,32,460,33,0,0,0,1,4,BarcodeLib.BarcodeDataTable,BarcodeLib.Barcode' BarcodeLib.BarcodeDataTable' BarcodeLib.BarcodeRowChangeEvent' BarcodeLibTest.TestApp
+BarcodeLib,BarcodeRowChangeEvent,2,1,2,0,1,30,1,0,0,0,1,0,BarcodeLib.BarcodeRow,
+BarcodeLib,IBarcode,0,0,3,0,0,15,0,22,0,-1,0,1,,BarcodeLib.Barcode
+BarcodeLib.Symbologies,Blank,0,0,1,0,0,10,0,0,1,-1,0,0,,
+BarcodeLib.Symbologies,Codabar,1,3,1,0,1,97,10,0,1,0,0,0,,
+BarcodeLib.Symbologies,Code11,1,2,1,0,1,69,11,0,1,0,0,0,,
+BarcodeLib.Symbologies,Code128,5,9,1,0,2,418,28,0,1,0,1,1,BarcodeLib.Symbologies.TYPES,BarcodeLib.Barcode
+BarcodeLib.Symbologies,TYPES,0,0,0,0,0,1,0,0,0,-1,0,2,,BarcodeLib.Barcode' BarcodeLib.Symbologies.Code128
+BarcodeLib.Symbologies,Code39,4,8,1,0,3,251,12,0,1,0,0,0,,
+BarcodeLib.Symbologies,Code93,1,4,1,0,1,141,11,0,1,0,0,0,,
+BarcodeLib.Symbologies,Pharmacode,3,2,1,0,1,80,10,0,1,0,0,0,,
+BarcodeLib.Symbologies,FIM,1,2,1,0,2,42,4,0,1,1,1,0,BarcodeLib.Symbologies.FIMTypes,
+BarcodeLib.Symbologies,FIMTypes,0,0,0,0,0,1,0,0,0,-1,0,1,,BarcodeLib.Symbologies.FIM
+BarcodeLib.Symbologies,Telepen,5,8,1,0,1,297,17,0,1,0,1,0,BarcodeLib.Symbologies.StartStopCode,
+BarcodeLib.Symbologies,StartStopCode,0,0,0,0,0,1,0,0,0,-1,0,1,,BarcodeLib.Symbologies.Telepen
+BarcodeLib.Symbologies,ITF14,1,3,1,0,1,80,13,0,1,0,0,0,,
+BarcodeLib.Symbologies,EAN13,6,5,1,0,1,249,15,0,1,0,0,2,,BarcodeLib.Symbologies.ISBN' BarcodeLib.Symbologies.JAN13
+BarcodeLib.Symbologies,EAN8,2,3,1,0,1,69,11,0,1,0,0,0,,
+BarcodeLib.Symbologies,Interleaved2of5,1,2,1,0,1,61,9,0,1,0,0,0,,
+BarcodeLib.Symbologies,ISBN,0,2,1,0,1,41,6,0,1,-1,1,0,BarcodeLib.Symbologies.EAN13,
+BarcodeLib.Symbologies,JAN13,0,2,1,0,1,24,4,0,1,-1,1,0,BarcodeLib.Symbologies.EAN13,
+BarcodeLib.Symbologies,MSI,2,2,1,0,1,94,17,0,1,0,1,0,BarcodeLib.TYPE,
+BarcodeLib.Symbologies,Postnet,1,2,1,0,1,55,4,0,1,0,0,0,,
+BarcodeLib.Symbologies,Standard2of5,1,2,1,0,1,30,4,0,1,0,0,0,,
+BarcodeLib.Symbologies,UPCA,4,4,1,0,1,226,11,0,1,0,0,0,,
+BarcodeLib.Symbologies,UPCE,5,2,1,0,1,101,10,0,1,0,0,0,,
+BarcodeLib.Symbologies,UPCSupplement2,3,2,1,0,1,48,7,0,1,0,0,0,,
+BarcodeLib.Symbologies,UPCSupplement5,3,2,1,0,1,61,9,0,1,0,0,0,,

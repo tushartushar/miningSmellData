@@ -1,0 +1,40 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Optimo,NSGA_II,0,7,0,0,4,232,25,0,0,-1,10,0,Optimo.SettingsFactory' Optimo.Settings' Optimo.Algorithm' Optimo.SolutionSet' Optimo.Solution' Optimo.Variable' Optimo.Operator' Optimo.Ranking' Optimo.Distance' Optimo.Problem,
+Optimo,CrowdingDistanceComparator,0,1,0,0,0,14,2,0,0,-1,1,0,Optimo.Solution,
+Optimo,DominanceAndCrowdingDistanceComparator,2,1,0,0,0,14,2,0,0,0,0,0,,
+Optimo,DominanceComparator,0,1,0,0,0,45,7,0,0,-1,1,0,Optimo.Solution,
+Optimo,EqualSolutions,0,1,0,0,0,61,8,0,0,-1,1,0,Optimo.Solution,
+Optimo,ObjectiveComparator,1,2,0,0,1,25,3,0,0,0,1,0,Optimo.Solution,
+Optimo,Crossover,0,1,0,0,1,6,1,2,1,-1,0,2,,Optimo.CrossoverFactory' Optimo.NSGAII_settings
+Optimo,CrossoverFactory,0,1,0,0,1,24,4,0,0,-1,1,1,Optimo.Crossover,Optimo.NSGAII_settings
+Optimo,DifferentialEvolutionCrossover,5,2,4,0,2,65,12,0,2,1,3,0,Optimo.Solution' Optimo.PseudoRandom' Optimo.Variable,
+Optimo,SBXCrossover,5,3,0,1,2,134,18,0,2,0,3,0,Optimo.Solution' Optimo.PseudoRandom' Optimo.Variable,
+Optimo,Algorithm,3,3,4,0,3,56,3,1,0,1,1,2,Optimo.Problem,Optimo.NSGA_II' Optimo.NSGAII_settings
+Optimo,Operator,0,3,2,0,3,39,4,3,0,-1,0,2,,Optimo.NSGA_II' Optimo.NSGAII
+Optimo,Problem,4,4,7,1,4,72,5,1,0,1,1,9,Optimo.Solution,Optimo.NSGA_II' Optimo.Algorithm' Optimo.Solution' Optimo.SolutionType' Optimo.NSGAII' Optimo.ProblemFactory' Optimo.NSGAII_settings' Optimo.BinarySolutionType' Optimo.RealSolutionType
+Optimo,Solution,1,4,9,0,4,119,11,0,0,0.5,2,15,Optimo.Problem' Optimo.SolutionType,Optimo.NSGA_II' Optimo.CrowdingDistanceComparator' Optimo.DominanceComparator' Optimo.EqualSolutions' Optimo.ObjectiveComparator' Optimo.DifferentialEvolutionCrossover' Optimo.SBXCrossover' Optimo.Problem' Optimo.SolutionSet' Optimo.NSGAII' Optimo.PolynomialMutation' Optimo.myTest' Optimo.BinaryTournament' Optimo.Distance' Optimo.Ranking
+Optimo,SolutionSet,2,11,1,0,11,183,26,0,0,0.27,2,6,Optimo.Solution' Optimo.Variable,Optimo.NSGA_II' Optimo.NSGAII' Optimo.BinaryTournament' Optimo.WorstSolutionSelection' Optimo.Distance' Optimo.Ranking
+Optimo,SolutionType,0,3,1,0,3,25,5,2,0,-1,2,2,Optimo.Problem' Optimo.Variable,Optimo.Solution' Optimo.PolynomialMutation
+Optimo,Variable,0,2,4,0,2,31,2,2,0,-1,0,10,,Optimo.NSGA_II' Optimo.DifferentialEvolutionCrossover' Optimo.SBXCrossover' Optimo.SolutionSet' Optimo.SolutionType' Optimo.PolynomialMutation' Optimo.myTest' Optimo.BinarySolutionType' Optimo.RealSolutionType' Optimo.Real
+Optimo,NSGAII,0,2,0,0,2,143,11,0,1,-1,6,0,Optimo.Problem' Optimo.SolutionSet' Optimo.Operator' Optimo.Solution' Optimo.Ranking' Optimo.Distance,
+Optimo,Mutation,0,1,0,0,1,6,1,1,1,-1,0,1,,Optimo.NSGAII_settings
+Optimo,MutationFactory,0,1,0,0,1,13,2,0,0,-1,1,1,Optimo.PolynomialMutation,Optimo.NSGAII_settings
+Optimo,PolynomialMutation,4,3,0,1,2,66,10,0,2,0,4,1,Optimo.Solution' Optimo.SolutionType' Optimo.PseudoRandom' Optimo.Variable,Optimo.MutationFactory
+Optimo,myTest,0,2,0,0,2,54,6,0,1,-1,2,0,Optimo.Variable' Optimo.Solution,
+Optimo,ProblemFactory,0,1,0,0,1,17,1,0,0,-1,1,1,Optimo.Problem,Optimo.NSGAII_settings
+Optimo,BinaryTournament,0,2,0,0,2,132,6,0,1,-1,3,1,Optimo.SolutionSet' Optimo.Solution' Optimo.PseudoRandom,Optimo.SelectionFactory
+Optimo,Selection,1,1,1,0,1,12,1,2,1,0,0,1,,Optimo.NSGAII_settings
+Optimo,SelectionFactory,0,1,0,0,1,13,2,0,0,-1,1,1,Optimo.BinaryTournament,Optimo.NSGAII_settings
+Optimo,WorstSolutionSelection,0,2,0,0,2,39,9,0,2,-1,1,0,Optimo.SolutionSet,
+Optimo,NSGAII_settings,6,2,0,6,2,53,2,0,1,0,9,0,Optimo.ProblemFactory' Optimo.Problem' Optimo.Algorithm' Optimo.Crossover' Optimo.Mutation' Optimo.Selection' Optimo.CrossoverFactory' Optimo.MutationFactory' Optimo.SelectionFactory,
+Optimo,Settings,0,2,7,0,2,21,2,1,0,-1,0,2,,Optimo.NSGA_II' Optimo.SettingsFactory
+Optimo,SettingsFactory,0,1,0,0,1,19,1,0,0,-1,1,1,Optimo.Settings,Optimo.NSGA_II
+Optimo,BinarySolutionType,0,2,0,0,2,26,5,0,1,-1,2,0,Optimo.Problem' Optimo.Variable,
+Optimo,RealSolutionType,0,2,0,0,2,28,5,0,1,-1,2,0,Optimo.Problem' Optimo.Variable,
+Optimo,Distance,0,2,0,0,0,162,14,0,0,-1,2,2,Optimo.SolutionSet' Optimo.Solution,Optimo.NSGA_II' Optimo.NSGAII
+Optimo,MinFastSort,0,1,0,0,1,26,6,0,0,-1,0,0,,
+Optimo,PseudoRandom,2,2,0,0,1,21,3,0,0,1,0,7,,Optimo.DifferentialEvolutionCrossover' Optimo.SBXCrossover' Optimo.PolynomialMutation' Optimo.BinaryTournament' Optimo.RandomPermutation' Optimo.Binary' Optimo.Real
+Optimo,RandomPermutation,0,1,0,0,1,38,8,0,0,-1,1,0,Optimo.PseudoRandom,
+Optimo,Ranking,3,3,0,0,3,147,18,0,0,0,2,2,Optimo.SolutionSet' Optimo.Solution,Optimo.NSGA_II' Optimo.NSGAII
+Optimo,Binary,0,4,2,0,4,46,7,0,1,-1,1,0,Optimo.PseudoRandom,
+Optimo,Real,0,5,3,0,5,53,5,0,1,-1,2,0,Optimo.PseudoRandom' Optimo.Variable,

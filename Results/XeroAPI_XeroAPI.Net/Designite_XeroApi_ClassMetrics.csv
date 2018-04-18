@@ -1,0 +1,198 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+XeroApi,AttachmentRepository,1,6,0,0,5,66,7,0,0,0.5,6,1,XeroApi.Integration.IIntegrationProxy' XeroApi.Model.Attachment' XeroApi.Model.Response' XeroApi.Model.ModelTypeHelper' XeroApi.Model.ModelSerializer' XeroApi.Model.Attachments,XeroApi.ConsoleApp.Program
+XeroApi,IRepository,0,8,0,0,0,67,8,1,0,-1,0,0,,
+XeroApi,MimeTypes,10,2,0,10,2,31,4,0,0,0,0,4,,XeroApi.Integration.IntegrationProxy' XeroApi.Model.Attachment' XeroApi.ConsoleApp.Program' XeroApi.Tests.MimeTypesTests
+XeroApi,ReportRepository,2,3,1,0,2,61,3,0,0,0,6,1,XeroApi.Integration.IIntegrationProxy' XeroApi.Linq.QueryProvider' XeroApi.Model.Reporting.ReportQueryDescription' XeroApi.Model.Response' XeroApi.Model.ModelSerializer' XeroApi.Model.Report,XeroApi.ConsoleApp.Program
+XeroApi,Repository,2,12,21,0,12,175,12,0,1,0.17,10,10,XeroApi.Linq.QueryProvider' XeroApi.Integration.IIntegrationProxy' DevDefined.OAuth.Consumer.IOAuthSession' XeroApi.Linq.LinqQueryDescription' XeroApi.Model.Response' XeroApi.Model.ModelSerializer' XeroApi.Model.IModelList' XeroApi.Model.ModelTypeHelper' XeroApi.Model.Allocation' XeroApi.Model.CreditNote,XeroApi.ConsoleApp.PartnerApplicationRunner' XeroApi.ConsoleApp.PrivateApplicationRunner' XeroApi.ConsoleApp.Program' XeroApi.ConsoleApp.PublicApplicationRunner' Xero.ScreencastWeb.Controllers.ConnectController' Xero.ScreencastWeb.Controllers.ContactsController' Xero.ScreencastWeb.Controllers.InvoicesController' Xero.ScreencastWeb.Services.ServiceProvider' XeroApi.Tests.ApiQueryTests' XeroApi.Tests.RepositoryTests
+XeroApi.Integration,IApiQueryDescription,0,0,4,0,0,23,0,2,0,-1,0,4,,XeroApi.Integration.ThrottlingIntegrationProxy' XeroApi.Integration.IIntegrationProxy' XeroApi.Integration.IntegrationProxy' XeroApi.Tests.Stubs.StubIntegrationProxy
+XeroApi.Integration,IRateLimiter,0,1,0,0,0,8,1,2,0,-1,0,2,,XeroApi.Integration.ThrottlingIntegrationProxy' XeroApi.Tests.ThrottlingIntegrationProxyTests
+XeroApi.Integration,NullRateLimiter,0,1,0,0,1,9,1,0,1,-1,0,0,,
+XeroApi.Integration,IEventTimeline,0,2,0,0,0,5,2,1,0,-1,0,2,,XeroApi.Integration.TrickleRateLimiter' XeroApi.Tests.TrickleRateLimiterTests
+XeroApi.Integration,EventTimeline,1,2,0,0,2,15,3,0,1,0,0,1,,XeroApi.Tests.EventTimelineTests
+XeroApi.Integration,IPauseTime,0,1,0,0,0,4,1,1,0,-1,0,2,,XeroApi.Integration.TrickleRateLimiter' XeroApi.Tests.TrickleRateLimiterTests
+XeroApi.Integration,PauseTime,0,1,0,0,1,7,1,0,1,-1,0,1,,XeroApi.Tests.PauseTimeTests
+XeroApi.Integration,TrickleRateLimiter,1,5,1,0,3,46,7,0,1,0.4,2,1,XeroApi.Integration.IPauseTime' XeroApi.Integration.IEventTimeline,XeroApi.Tests.TrickleRateLimiterTests
+XeroApi.Integration,RateLimitExceededException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Integration,ThrottlingIntegrationProxy,2,11,0,0,10,73,11,0,1,0,5,1,XeroApi.Integration.IIntegrationProxy' XeroApi.Integration.IRateLimiter' XeroApi.Integration.IApiQueryDescription' XeroApi.Model.Attachment' XeroApi.Model.CreditNote,XeroApi.Tests.ThrottlingIntegrationProxyTests
+XeroApi.Integration,IIntegrationProxy,0,9,0,0,0,73,9,3,0,-1,3,6,XeroApi.Integration.IApiQueryDescription' XeroApi.Model.Attachment' XeroApi.Model.CreditNote,XeroApi.AttachmentRepository' XeroApi.ReportRepository' XeroApi.Repository' XeroApi.Integration.ThrottlingIntegrationProxy' XeroApi.Linq.ApiQueryProvider' XeroApi.Tests.ThrottlingIntegrationProxyTests
+XeroApi.Integration,IntegrationProxy,1,13,0,0,12,320,33,0,1,0,12,1,DevDefined.OAuth.Consumer.IOAuthSession' DevDefined.OAuth.Consumer.IConsumerResponse' DevDefined.OAuth.Consumer.IOAuthConsumerContext' XeroApi.Model.ModelTypeHelper' XeroApi.Integration.IApiQueryDescription' DevDefined.OAuth.Consumer.IConsumerRequest' XeroApi.Model.Attachment' XeroApi.MimeTypes' XeroApi.Model.ApiExceptionDetails' XeroApi.Model.CreditNote' XeroApi.Model.ModelSerializer' DevDefined.OAuth.Framework.UriUtility,XeroApi.Tests.IntegrationProxyHelperTests
+XeroApi.Linq,ApiQuery<T>,2,5,3,0,4,55,9,0,0,0,1,0,XeroApi.Linq.QueryProvider,
+XeroApi.Linq,ApiQuerystringName,0,0,0,0,0,7,0,0,0,-1,0,3,,XeroApi.Linq.LinqQueryDescription' XeroApi.Linq.ApiQueryTranslator' XeroApi.Linq.QuerystringScope
+XeroApi.Linq,LinqQueryDescription,4,2,13,0,2,179,9,0,1,1,1,4,XeroApi.Linq.ApiQuerystringName,XeroApi.Repository' XeroApi.Linq.ApiQueryProvider' XeroApi.Linq.ApiQueryTranslator' XeroApi.Tests.ApiQueryTests
+XeroApi.Linq,ApiQueryProvider,1,4,0,0,3,67,6,0,1,0,6,0,XeroApi.Integration.IIntegrationProxy' XeroApi.Linq.LinqQueryDescription' XeroApi.Model.Response' XeroApi.Model.IModelList' XeroApi.Model.ModelSerializer' XeroApi.Linq.ApiQueryTranslator,
+XeroApi.Linq,ApiQueryTranslator,2,16,0,0,0,505,47,0,1,0.12,3,2,XeroApi.Linq.LinqQueryDescription' XeroApi.Linq.ApiQuerystringName' XeroApi.Linq.ExpressionVisitor,XeroApi.Linq.ApiQueryProvider' XeroApi.Linq.QuerystringScope
+XeroApi.Linq,QuerystringScope,2,2,0,0,2,18,2,0,0,0,2,0,XeroApi.Linq.ApiQuerystringName' XeroApi.Linq.ApiQueryTranslator,
+XeroApi.Linq,ExpressionVisitor,0,39,0,0,0,421,71,1,0,-1,0,1,,XeroApi.Linq.ApiQueryTranslator
+XeroApi.Linq,PropertyInfoExtensions,0,3,0,0,3,16,3,0,0,-1,0,0,,
+XeroApi.Linq,QueryProvider,0,6,0,0,2,30,6,1,0,-1,1,3,XeroApi.Linq.TypeSystem,XeroApi.ReportRepository' XeroApi.Repository' XeroApi.Linq.ApiQuery<T>
+XeroApi.Linq,TypeSystem,0,2,0,0,0,42,12,0,0,-1,0,1,,XeroApi.Linq.QueryProvider
+XeroApi.Exceptions,ApiResponseException,0,4,1,0,4,20,4,0,0,-1,1,0,DevDefined.OAuth.Consumer.IConsumerResponse,
+XeroApi.Model,Account,0,1,15,0,1,24,1,0,1,-1,0,2,,XeroApi.Model.Reporting.BankStatementReport' XeroApi.ConsoleApp.Program
+XeroApi.Model,Accounts,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,AccountBase,0,1,2,0,1,9,1,0,0,-1,0,1,,XeroApi.Model.Balances
+XeroApi.Model,Address,0,1,10,0,1,45,10,0,1,-1,0,1,,XeroApi.Tests.ApiQueryTests
+XeroApi.Model,Addresses,0,0,0,0,0,3,0,0,0,-1,0,1,,XeroApi.Model.Organisation
+XeroApi.Model,ApiExceptionDetails,0,0,4,0,0,8,0,0,0,-1,0,2,,XeroApi.Integration.IntegrationProxy' XeroApi.Model.ApiException
+XeroApi.Model,ApiException,0,1,1,0,1,13,1,0,0,-1,1,0,XeroApi.Model.ApiExceptionDetails,
+XeroApi.Model,Attachment,0,4,7,0,4,63,8,0,1,-1,1,6,XeroApi.MimeTypes,XeroApi.AttachmentRepository' XeroApi.Integration.ThrottlingIntegrationProxy' XeroApi.Integration.IIntegrationProxy' XeroApi.Integration.IntegrationProxy' XeroApi.ConsoleApp.Program' XeroApi.Tests.Stubs.StubIntegrationProxy
+XeroApi.Model,Attachments,0,0,0,0,0,3,0,0,0,-1,0,1,,XeroApi.AttachmentRepository
+XeroApi.Model,Balances,0,1,2,0,1,12,1,0,0,-1,1,0,XeroApi.Model.AccountBase,
+XeroApi.Model,BankTransaction,0,0,21,0,0,27,0,0,1,-1,0,0,,
+XeroApi.Model,BankTransactions,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,BatchPayments,0,1,5,0,1,21,1,0,0,-1,0,0,,
+XeroApi.Model,BrandingTheme,0,0,4,0,0,11,0,0,1,-1,0,0,,
+XeroApi.Model,BrandingThemes,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ContactGroup,0,0,4,0,0,7,0,0,1,-1,0,0,,
+XeroApi.Model,ContactGroups,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ContactPerson,0,1,4,0,1,18,4,0,1,-1,0,0,,
+XeroApi.Model,ContactPersons,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,CreditNote,0,0,22,0,0,30,0,0,1,-1,0,5,,XeroApi.Repository' XeroApi.Integration.ThrottlingIntegrationProxy' XeroApi.Integration.IIntegrationProxy' XeroApi.Integration.IntegrationProxy' XeroApi.Tests.Stubs.StubIntegrationProxy
+XeroApi.Model,CreditNotes,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Allocation,0,0,3,0,0,6,0,0,1,-1,0,1,,XeroApi.Repository
+XeroApi.Model,Allocations,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Currency,0,0,2,0,0,5,0,0,1,-1,0,0,,
+XeroApi.Model,Currencies,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Employee,0,0,6,0,0,13,0,0,1,-1,0,0,,
+XeroApi.Model,Employees,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ExpenseClaim,0,0,10,0,0,21,0,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,ExpenseClaims,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ItemPrice,0,0,3,0,0,6,0,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,ItemPrices,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Item,0,1,6,0,1,16,1,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,Items,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,LineAmountType,0,0,0,0,0,6,0,0,0,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,Journal,0,1,6,0,1,15,1,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,Journals,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,JournalLine,0,0,12,0,0,18,0,0,1,-1,0,0,,
+XeroApi.Model,JournalLines,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,LineItem,1,1,10,0,1,18,1,0,1,0,1,0,XeroApi.Model.TrackingCategories,
+XeroApi.Model,LineItems,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Link,0,0,3,0,0,6,0,0,1,-1,0,0,,
+XeroApi.Model,Links,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ManualJournal,0,0,9,0,0,23,0,0,1,-1,0,1,,XeroApi.Tests.ModelSerializationTests
+XeroApi.Model,ManualJournals,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ManualJournalLineItem,0,0,6,0,0,11,0,0,1,-1,0,0,,
+XeroApi.Model,ManualJournalLineItems,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ModelSerializer,0,6,0,0,3,88,8,0,0,-1,2,6,XeroApi.Model.IModelList' XeroApi.Model.ModelTreeNavigator,XeroApi.AttachmentRepository' XeroApi.ReportRepository' XeroApi.Repository' XeroApi.Integration.IntegrationProxy' XeroApi.Linq.ApiQueryProvider' XeroApi.Tests.ModelSerializationTests
+XeroApi.Model,ModelTreeNavigator,2,11,0,0,10,210,25,0,0,0.18,1,1,XeroApi.Model.IModelList,XeroApi.Model.ModelSerializer
+XeroApi.Model,Payment,0,0,11,0,0,17,0,0,1,-1,0,0,,
+XeroApi.Model,Payments,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,PaymentTermBase,0,1,2,0,1,29,2,0,0,-1,0,1,,XeroApi.Model.PaymentTerms
+XeroApi.Model,PaymentTerms,0,1,2,0,1,12,1,0,0,-1,1,0,XeroApi.Model.PaymentTermBase,
+XeroApi.Model,Phone,0,1,4,0,1,24,4,0,1,-1,0,0,,
+XeroApi.Model,Phones,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Receipt,0,0,17,0,0,35,0,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,Receipts,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Report,0,0,9,0,0,18,0,0,1,-1,0,2,,XeroApi.ReportRepository' XeroApi.ConsoleApp.Program
+XeroApi.Model,ReportAttribute,3,0,0,3,0,6,0,0,1,-1,0,0,,
+XeroApi.Model,ReportAttributes,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ReportRow,0,0,4,0,0,12,0,0,0,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,ReportCell,0,0,2,0,0,7,0,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,ReportCellAttribute,0,0,2,0,0,5,0,0,1,-1,0,0,,
+XeroApi.Model,ReportCellAttributes,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ReportField,0,0,4,0,0,7,0,0,1,-1,0,0,,
+XeroApi.Model,ReportFields,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Reports,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,TaxComponent,0,1,3,0,1,10,1,0,1,-1,0,0,,
+XeroApi.Model,TaxComponents,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,TaxRate,0,0,11,0,0,15,0,0,1,-1,0,0,,
+XeroApi.Model,TaxRates,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,TrackingCategory,0,0,5,0,0,8,0,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,Option,0,0,2,0,0,5,0,0,1,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,Options,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,TrackingCategories,0,0,0,0,0,3,0,0,0,-1,0,1,,XeroApi.Model.LineItem
+XeroApi.Model,User,0,0,8,0,0,21,0,0,1,-1,0,2,,XeroApi.ConsoleApp.Program' XeroApi.Tests.ApiQueryTests
+XeroApi.Model,Users,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Contact,0,1,23,0,1,48,1,0,1,-1,0,3,,XeroApi.ConsoleApp.Program' XeroApi.Tests.ApiQueryTests' XeroApi.Tests.ModelSerializationTests
+XeroApi.Model,Contacts,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Invoice,0,1,30,0,1,50,1,0,1,-1,0,2,,XeroApi.ConsoleApp.Program' XeroApi.Tests.ApiQueryTests
+XeroApi.Model,Invoices,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,ItemIdAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,XeroApi.Model.ModelTypeHelper
+XeroApi.Model,ItemNumberAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+XeroApi.Model,ItemUpdatedDateAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+XeroApi.Model,ReadOnlyAttribute,0,0,0,0,0,5,0,0,0,-1,0,0,,
+XeroApi.Model,IAttachmentParent,0,0,0,0,0,3,0,2,0,-1,0,0,,
+XeroApi.Model,EndpointModelBase,0,0,0,0,0,4,0,19,1,-1,0,0,,
+XeroApi.Model,ModelBase,0,0,3,0,0,21,0,18,0,-1,0,0,,
+XeroApi.Model,ValidationStatus,0,0,0,0,0,6,0,0,0,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,Warning,1,0,0,1,0,4,0,0,0,-1,0,0,,
+XeroApi.Model,ValidationError,1,0,0,1,0,4,0,0,0,-1,0,1,,XeroApi.ConsoleApp.Program
+XeroApi.Model,IModelList,0,0,0,0,0,6,0,1,0,-1,0,5,,XeroApi.Repository' XeroApi.Linq.ApiQueryProvider' XeroApi.Model.ModelSerializer' XeroApi.Model.ModelTreeNavigator' XeroApi.Model.Response
+XeroApi.Model,ModelList<TModel>,0,0,0,0,0,4,0,0,1,-1,0,0,,
+XeroApi.Model,ModelTypeHelper,0,3,0,0,3,32,6,0,0,-1,1,3,XeroApi.Model.ItemIdAttribute,XeroApi.AttachmentRepository' XeroApi.Repository' XeroApi.Integration.IntegrationProxy
+XeroApi.Model,Organisation,18,1,0,18,1,27,1,0,2,0,1,3,XeroApi.Model.Addresses,XeroApi.ConsoleApp.Program' Xero.ScreencastWeb.Controllers.ConnectController' XeroApi.Tests.ApiQueryTests
+XeroApi.Model,Organisations,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model,Response,0,2,23,0,2,54,6,0,0,-1,1,4,XeroApi.Model.IModelList,XeroApi.AttachmentRepository' XeroApi.ReportRepository' XeroApi.Repository' XeroApi.Linq.ApiQueryProvider
+XeroApi.Model.Reporting,AgedPayablesByContactReport,4,2,0,0,1,37,5,0,1,0,0,0,,
+XeroApi.Model.Reporting,AgedReceivablesByContactReport,4,2,0,0,1,37,5,0,1,0,0,0,,
+XeroApi.Model.Reporting,BalanceSheetReport,1,2,0,0,1,23,3,0,1,0,0,0,,
+XeroApi.Model.Reporting,BankStatementReport,3,3,0,0,2,46,6,0,1,0,1,0,XeroApi.Model.Account,
+XeroApi.Model.Reporting,BankSummaryReport,2,2,0,0,1,26,4,0,1,0,0,0,,
+XeroApi.Model.Reporting,BudgetSummaryReport,2,2,0,0,1,26,4,0,1,0,0,0,,
+XeroApi.Model.Reporting,DynamicReportBase,2,3,1,0,1,35,3,9,0,0,0,0,,
+XeroApi.Model.Reporting,ExecutiveSummaryReport,1,2,0,0,1,22,3,0,1,0,0,0,,
+XeroApi.Model.Reporting,ProfitAndLossReport,2,2,0,0,1,27,4,0,1,0,0,0,,
+XeroApi.Model.Reporting,PublishedReportBase,0,0,0,0,0,3,0,0,0,-1,0,0,,
+XeroApi.Model.Reporting,ReportQueryDescription,0,0,4,0,0,24,0,0,1,-1,0,1,,XeroApi.ReportRepository
+XeroApi.Model.Reporting,TrialBalanceReport,2,2,0,0,1,23,4,0,1,0,0,0,,
+DevDefined.OAuth.Consumer,IConsumerRequestRunner,0,1,0,0,0,4,1,1,0,-1,1,2,DevDefined.OAuth.Consumer.IConsumerRequest,DevDefined.OAuth.Consumer.OAuthSession' XeroApi.Tests.OAuth.Consumer.ConsumerRequestTests
+DevDefined.OAuth.Consumer,DefaultConsumerRequestRunner,0,2,0,0,1,61,3,0,1,-1,2,1,DevDefined.OAuth.Consumer.IConsumerResponse' DevDefined.OAuth.Consumer.IConsumerRequest,XeroApi.Tests.OAuth.Consumer.ConsumerRequestRunnerTests
+DevDefined.OAuth.Consumer,IMessageLogger,0,1,0,0,0,4,1,1,0,-1,2,1,DevDefined.OAuth.Consumer.IConsumerRequest' DevDefined.OAuth.Consumer.IConsumerResponse,DevDefined.OAuth.Consumer.OAuthSession
+DevDefined.OAuth.Consumer,ConsumerRequest,4,12,5,0,11,191,29,0,1,0,14,2,DevDefined.OAuth.Consumer.IOAuthConsumerContext' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Consumer.ICertificateFactory' DevDefined.OAuth.Consumer.IOAuthSession' DevDefined.OAuth.Consumer.IConsumerResponse' DevDefined.OAuth.Consumer.RequestDescription' DevDefined.OAuth.Framework.Parameters' DevDefined.OAuth.Framework.UriUtility' DevDefined.OAuth.Framework.OAuthException' DevDefined.OAuth.Consumer.WebExceptionHelper' DevDefined.OAuth.Storage.Basic.AccessToken' DevDefined.OAuth.Consumer.IConsumerRequest' DevDefined.OAuth.Framework.IToken' DevDefined.OAuth.Framework.Error,DevDefined.OAuth.Consumer.DefaultConsumerRequestFactory' XeroApi.Tests.OAuth.Consumer.ConsumerRequestTests
+DevDefined.OAuth.Consumer,ConsumerRequestExtensions,0,23,0,0,21,122,25,0,0,-1,4,0,DevDefined.OAuth.Consumer.IConsumerRequest' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Consumer.IConsumerResponse' DevDefined.OAuth.Framework.Error,
+DevDefined.OAuth.Consumer,IConsumerResponse,0,4,15,0,0,23,4,1,0,-1,0,10,,XeroApi.Integration.IntegrationProxy' XeroApi.Exceptions.ApiResponseException' DevDefined.OAuth.Consumer.DefaultConsumerRequestRunner' DevDefined.OAuth.Consumer.IMessageLogger' DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.ConsumerRequestExtensions' DevDefined.OAuth.Consumer.IOAuthSession' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Logging.DebugMessageLogger' DevDefined.OAuth.Framework.OAuthException
+DevDefined.OAuth.Consumer,ConsumerResponse,3,6,16,0,6,136,9,0,1,0.83,3,0,DevDefined.OAuth.Framework.OAuthProblemReport' DevDefined.OAuth.Framework.Parameters' DevDefined.OAuth.Framework.UriUtility,
+DevDefined.OAuth.Consumer,DefaultConsumerRequestFactory,1,3,2,0,3,25,3,0,1,1,6,1,DevDefined.OAuth.Consumer.IConsumerRequestFactory' DevDefined.OAuth.Consumer.ICertificateFactory' DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.IOAuthSession' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Consumer.IOAuthConsumerContext,DevDefined.OAuth.Consumer.OAuthSession
+DevDefined.OAuth.Consumer,ICertificateFactory,0,2,0,0,0,5,2,4,0,-1,0,3,,DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.DefaultConsumerRequestFactory' Xero.ScreencastWeb.Services.CertificateRepository
+DevDefined.OAuth.Consumer,IConsumerRequest,0,7,5,0,0,17,7,1,0,-1,1,10,DevDefined.OAuth.Framework.IToken,XeroApi.Integration.IntegrationProxy' DevDefined.OAuth.Consumer.IConsumerRequestRunner' DevDefined.OAuth.Consumer.DefaultConsumerRequestRunner' DevDefined.OAuth.Consumer.IMessageLogger' DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.ConsumerRequestExtensions' DevDefined.OAuth.Consumer.IOAuthSession' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Logging.DebugMessageLogger' XeroApi.Tests.OAuth.Consumer.ConsumerRequestRunnerTests
+DevDefined.OAuth.Consumer,IConsumerRequestFactory,0,1,0,0,0,4,1,1,0,-1,3,2,DevDefined.OAuth.Consumer.IOAuthSession' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Consumer.IOAuthConsumerContext,DevDefined.OAuth.Consumer.DefaultConsumerRequestFactory' DevDefined.OAuth.Consumer.OAuthSession
+DevDefined.OAuth.Consumer,IOAuthConsumerContext,0,2,12,0,0,17,2,1,0,-1,2,5,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.IToken,XeroApi.Integration.IntegrationProxy' DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.DefaultConsumerRequestFactory' DevDefined.OAuth.Consumer.IConsumerRequestFactory' DevDefined.OAuth.Consumer.OAuthSession
+DevDefined.OAuth.Consumer,IOAuthSession,0,19,5,0,0,35,19,1,0,-1,3,10,DevDefined.OAuth.Framework.IToken' DevDefined.OAuth.Consumer.IConsumerRequest' DevDefined.OAuth.Consumer.IConsumerResponse,XeroApi.Repository' XeroApi.Integration.IntegrationProxy' DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.DefaultConsumerRequestFactory' DevDefined.OAuth.Consumer.IConsumerRequestFactory' XeroApi.ConsoleApp.PartnerApplicationRunner' XeroApi.ConsoleApp.PrivateApplicationRunner' XeroApi.ConsoleApp.PublicApplicationRunner' Xero.ScreencastWeb.Controllers.ConnectController' Xero.ScreencastWeb.Services.ServiceProvider
+DevDefined.OAuth.Consumer,LocalFileCertificateFactory,2,3,0,0,3,53,6,0,1,0,0,0,,
+DevDefined.OAuth.Consumer,LocalMachineCertificateFactory,2,5,0,0,4,57,5,0,1,0.4,0,0,,
+DevDefined.OAuth.Consumer,NullCertificateFactory,0,2,0,0,2,11,2,0,1,-1,0,1,,Xero.ScreencastWeb.Services.CertificateRepository
+DevDefined.OAuth.Consumer,OAuthConsumerContext,2,4,14,0,3,67,8,0,1,0.5,7,5,DevDefined.OAuth.INonceGenerator' DevDefined.OAuth.Framework.Signing.IOAuthContextSigner' DevDefined.OAuth.Framework.SignatureMethod' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.IToken' DevDefined.OAuth.Storage.Basic.AccessToken' DevDefined.OAuth.Framework.Error,XeroApi.OAuth.XeroApiPartnerSession' XeroApi.OAuth.XeroApiPrivateSession' XeroApi.OAuth.XeroApiPublicSession' XeroApi.Tests.SignatureTests' XeroApi.Tests.OAuth.Consumer.ConsumerRequestTests
+DevDefined.OAuth.Consumer,OAuthSession,5,29,8,0,24,327,45,3,1,0.14,16,1,DevDefined.OAuth.Storage.Basic.ITokenRepository' DevDefined.OAuth.Consumer.IOAuthConsumerContext' DevDefined.OAuth.Consumer.DefaultConsumerRequestFactory' DevDefined.OAuth.Consumer.IMessageLogger' DevDefined.OAuth.Consumer.IConsumerResponse' DevDefined.OAuth.Consumer.IConsumerRequest' DevDefined.OAuth.Storage.Basic.AccessToken' DevDefined.OAuth.Framework.OAuthContext' DevDefined.OAuth.Consumer.IConsumerRequestFactory' DevDefined.OAuth.Framework.IToken' DevDefined.OAuth.Storage.Basic.RequestToken' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.Parameters' DevDefined.OAuth.Framework.Error' DevDefined.OAuth.Framework.UriUtility' DevDefined.OAuth.Consumer.IConsumerRequestRunner,XeroApi.Tests.OAuth.Consumer.ConsumerRequestTests
+DevDefined.OAuth.Consumer,RequestDescription,0,1,6,0,1,13,1,0,0,-1,0,1,,DevDefined.OAuth.Consumer.ConsumerRequest
+DevDefined.OAuth.Consumer,SimpleCertificateFactory,1,3,0,0,3,16,3,0,1,0,0,0,,
+DevDefined.OAuth.Consumer,WebExceptionHelper,0,1,0,0,1,29,2,0,0,-1,4,1,DevDefined.OAuth.Framework.OAuthProblemReport' DevDefined.OAuth.Framework.Parameters' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.OAuthException,DevDefined.OAuth.Consumer.ConsumerRequest
+XeroApi.OAuth.Framework,MissingTokenException,0,4,0,0,4,18,4,0,0,-1,0,0,,
+DevDefined.OAuth.Logging,DebugMessageLogger,0,1,0,0,1,13,2,0,1,-1,3,0,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Consumer.IConsumerRequest' DevDefined.OAuth.Consumer.IConsumerResponse,
+DevDefined.OAuth.Storage.Basic,FixedValueTokenRepository,2,5,0,0,5,26,5,0,1,0.6,2,0,DevDefined.OAuth.Storage.Basic.AccessToken' DevDefined.OAuth.Storage.Basic.RequestToken,
+DevDefined.OAuth.Storage.Basic,InMemoryTokenRepository,2,4,0,0,4,21,4,0,1,0.5,2,1,DevDefined.OAuth.Storage.Basic.RequestToken' DevDefined.OAuth.Storage.Basic.AccessToken,XeroApi.Tests.OAuth.Consumer.ConsumerRequestTests
+DevDefined.OAuth.Storage.Basic,ITokenRepository,0,4,0,0,0,7,4,3,0,-1,2,3,DevDefined.OAuth.Storage.Basic.RequestToken' DevDefined.OAuth.Storage.Basic.AccessToken,DevDefined.OAuth.Consumer.OAuthSession' XeroApi.OAuth.XeroApiPartnerSession' XeroApi.OAuth.XeroApiPublicSession
+DevDefined.OAuth.Storage.Basic,AccessToken,0,2,11,0,2,74,3,0,1,-1,0,10,,DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.OAuthConsumerContext' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Storage.Basic.FixedValueTokenRepository' DevDefined.OAuth.Storage.Basic.InMemoryTokenRepository' DevDefined.OAuth.Storage.Basic.ITokenRepository' XeroApi.ConsoleApp.PartnerApplicationRunner' XeroApi.ConsoleApp.PublicApplicationRunner' Xero.ScreencastWeb.Controllers.ConnectController' Xero.ScreencastWeb.Services.SessionStateTokenRepository
+DevDefined.OAuth.Storage.Basic,RequestToken,0,1,5,0,1,16,1,0,1,-1,2,6,DevDefined.OAuth.Framework.TokenBase' DevDefined.OAuth.Framework.Parameters,DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Storage.Basic.FixedValueTokenRepository' DevDefined.OAuth.Storage.Basic.InMemoryTokenRepository' DevDefined.OAuth.Storage.Basic.ITokenRepository' Xero.ScreencastWeb.Controllers.ConnectController' Xero.ScreencastWeb.Services.SessionStateTokenRepository
+DevDefined.OAuth.Utility,StreamExtensions,0,3,0,0,3,33,7,0,0,-1,0,0,,
+DevDefined.OAuth.Utility,ReflectionBasedDictionaryAdapter,1,8,7,0,7,217,11,0,0,0.62,1,0,DevDefined.OAuth.Utility.DictionaryEntryEnumeratorAdapter,
+DevDefined.OAuth.Utility,DictionaryEntryEnumeratorAdapter,2,3,4,0,3,38,4,0,0,0,0,1,,DevDefined.OAuth.Utility.ReflectionBasedDictionaryAdapter
+DevDefined.OAuth.Framework,BoundParameter,2,1,2,0,1,58,1,0,0,0,1,1,DevDefined.OAuth.Framework.OAuthContext,DevDefined.OAuth.Framework.OAuthContext
+DevDefined.OAuth.Framework,DateTimeUtility,0,2,0,0,2,13,2,0,0,-1,0,1,,DevDefined.OAuth.Framework.OAuthProblemReport
+DevDefined.OAuth.Framework,Error,0,24,0,0,24,139,25,0,0,-1,4,8,DevDefined.OAuth.Framework.OAuthException' DevDefined.OAuth.Framework.OAuthProblems' DevDefined.OAuth.Framework.OAuthProblemReport' DevDefined.OAuth.Framework.IOAuthContext,DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.ConsumerRequestExtensions' DevDefined.OAuth.Consumer.OAuthConsumerContext' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Framework.OAuthContext' DevDefined.OAuth.Framework.OAuthProblemReport' DevDefined.OAuth.Framework.Signing.OAuthContextSigner' DevDefined.OAuth.Framework.Signing.RsaSha1SignatureImplementation
+DevDefined.OAuth.Framework,IConsumer,0,0,2,0,0,5,0,1,0,-1,0,0,,
+DevDefined.OAuth.Framework,IOAuthContext,0,6,18,0,0,27,6,1,1,-1,0,19,,DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.ConsumerRequestExtensions' DevDefined.OAuth.Consumer.DefaultConsumerRequestFactory' DevDefined.OAuth.Consumer.IConsumerRequestFactory' DevDefined.OAuth.Consumer.IOAuthConsumerContext' DevDefined.OAuth.Consumer.OAuthConsumerContext' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Consumer.WebExceptionHelper' DevDefined.OAuth.Logging.DebugMessageLogger' DevDefined.OAuth.Framework.Error' DevDefined.OAuth.Framework.OAuthException' DevDefined.OAuth.INonceGenerator' DevDefined.OAuth.GuidNonceGenerator' DevDefined.OAuth.Framework.Signing.HmacSha1SignatureImplementation' DevDefined.OAuth.Framework.Signing.IContextSignatureImplementation' DevDefined.OAuth.Framework.Signing.IOAuthContextSigner' DevDefined.OAuth.Framework.Signing.OAuthContextSigner' DevDefined.OAuth.Framework.Signing.PlainTextSignatureImplementation' DevDefined.OAuth.Framework.Signing.RsaSha1SignatureImplementation
+DevDefined.OAuth.Framework,IToken,0,0,2,0,0,5,0,2,1,-1,0,10,,DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.IConsumerRequest' DevDefined.OAuth.Consumer.IOAuthConsumerContext' DevDefined.OAuth.Consumer.IOAuthSession' DevDefined.OAuth.Consumer.OAuthConsumerContext' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Framework.UriUtility' DevDefined.OAuth.Framework.Signing.HmacSha1SignatureImplementation' XeroApi.ConsoleApp.PartnerApplicationRunner' XeroApi.ConsoleApp.PublicApplicationRunner
+DevDefined.OAuth.Framework,OAuthContext,20,6,23,0,6,244,16,0,2,1,4,4,DevDefined.OAuth.Framework.BoundParameter' DevDefined.OAuth.Framework.Parameters' DevDefined.OAuth.Framework.UriUtility' DevDefined.OAuth.Framework.Error,DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Framework.BoundParameter' XeroApi.Tests.SignatureTests' XeroApi.Tests.OAuth.Consumer.ConsumerRequestTests
+DevDefined.OAuth.Framework,OAuthException,0,6,3,0,6,36,6,0,0,-1,3,5,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Consumer.IConsumerResponse' DevDefined.OAuth.Framework.OAuthProblemReport,DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.WebExceptionHelper' DevDefined.OAuth.Framework.Error' XeroApi.ConsoleApp.PartnerApplicationRunner' XeroApi.ConsoleApp.PublicApplicationRunner
+DevDefined.OAuth.Framework,OAuthProblemReport,0,6,8,0,4,88,16,0,0,-1,4,4,DevDefined.OAuth.Framework.Parameters' DevDefined.OAuth.Framework.DateTimeUtility' DevDefined.OAuth.Framework.Error' DevDefined.OAuth.Framework.UriUtility,DevDefined.OAuth.Consumer.ConsumerResponse' DevDefined.OAuth.Consumer.WebExceptionHelper' DevDefined.OAuth.Framework.Error' DevDefined.OAuth.Framework.OAuthException
+DevDefined.OAuth.Framework,OAuthProblems,18,0,0,18,0,21,0,0,0,-1,0,1,,DevDefined.OAuth.Framework.Error
+DevDefined.OAuth.Framework,Parameters,24,0,0,24,0,27,0,0,0,-1,0,8,,DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.ConsumerResponse' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Consumer.WebExceptionHelper' DevDefined.OAuth.Storage.Basic.RequestToken' DevDefined.OAuth.Framework.OAuthContext' DevDefined.OAuth.Framework.OAuthProblemReport' DevDefined.OAuth.Framework.UriUtility
+DevDefined.OAuth.Framework,SignatureMethod,3,0,0,3,0,6,0,0,0,-1,0,5,,DevDefined.OAuth.Consumer.OAuthConsumerContext' XeroApi.OAuth.XeroApiPartnerSession' XeroApi.OAuth.XeroApiPrivateSession' XeroApi.OAuth.XeroApiPublicSession' XeroApi.Tests.SignatureTests
+DevDefined.OAuth.Framework,SigningContext,0,0,3,0,0,6,0,0,0,-1,0,6,,DevDefined.OAuth.Framework.Signing.HmacSha1SignatureImplementation' DevDefined.OAuth.Framework.Signing.IContextSignatureImplementation' DevDefined.OAuth.Framework.Signing.IOAuthContextSigner' DevDefined.OAuth.Framework.Signing.OAuthContextSigner' DevDefined.OAuth.Framework.Signing.PlainTextSignatureImplementation' DevDefined.OAuth.Framework.Signing.RsaSha1SignatureImplementation
+DevDefined.OAuth.Framework,TokenBase,0,1,4,0,1,12,1,2,2,-1,1,1,DevDefined.OAuth.Framework.UriUtility,DevDefined.OAuth.Storage.Basic.RequestToken
+DevDefined.OAuth.Framework,UriUtility,4,15,0,0,13,290,48,0,0,0.47,2,9,DevDefined.OAuth.Framework.Parameters' DevDefined.OAuth.Framework.IToken,XeroApi.Integration.IntegrationProxy' DevDefined.OAuth.Consumer.ConsumerRequest' DevDefined.OAuth.Consumer.ConsumerResponse' DevDefined.OAuth.Consumer.OAuthSession' DevDefined.OAuth.Framework.OAuthContext' DevDefined.OAuth.Framework.OAuthProblemReport' DevDefined.OAuth.Framework.TokenBase' DevDefined.OAuth.Framework.Signing.HmacSha1SignatureImplementation' DevDefined.OAuth.Framework.Signing.PlainTextSignatureImplementation
+DevDefined.OAuth.Framework,LexicographicalByteValueStringComparer,0,1,0,0,1,7,1,0,0,-1,0,0,,
+DevDefined.OAuth.Framework,With,0,2,0,0,1,14,2,0,0,-1,1,0,DevDefined.OAuth.Framework.DisposableAction,
+DevDefined.OAuth.Framework,DisposableAction,1,2,0,0,2,13,3,0,0,0,0,1,,DevDefined.OAuth.Framework.With
+DevDefined.OAuth,INonceGenerator,0,1,0,0,0,4,1,1,0,-1,1,1,DevDefined.OAuth.Framework.IOAuthContext,DevDefined.OAuth.Consumer.OAuthConsumerContext
+DevDefined.OAuth,GuidNonceGenerator,0,1,0,0,1,7,1,0,1,-1,1,0,DevDefined.OAuth.Framework.IOAuthContext,
+DevDefined.OAuth.Framework.Signing,HmacSha1SignatureImplementation,0,4,1,0,2,41,6,0,1,-1,4,0,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.SigningContext' DevDefined.OAuth.Framework.UriUtility' DevDefined.OAuth.Framework.IToken,
+DevDefined.OAuth.Framework.Signing,IContextSignatureImplementation,0,2,1,0,0,6,2,3,0,-1,2,1,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.SigningContext,DevDefined.OAuth.Framework.Signing.OAuthContextSigner
+DevDefined.OAuth.Framework.Signing,IOAuthContextSigner,0,2,0,0,0,5,2,1,0,-1,2,2,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.SigningContext,DevDefined.OAuth.Consumer.OAuthConsumerContext' XeroApi.Tests.SignatureTests
+DevDefined.OAuth.Framework.Signing,OAuthContextSigner,1,5,0,0,4,32,7,0,1,0.4,4,0,DevDefined.OAuth.Framework.Signing.IContextSignatureImplementation' DevDefined.OAuth.Framework.SigningContext' DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.Error,
+DevDefined.OAuth.Framework.Signing,PlainTextSignatureImplementation,0,3,1,0,2,19,3,0,1,-1,3,0,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.SigningContext' DevDefined.OAuth.Framework.UriUtility,
+DevDefined.OAuth.Framework.Signing,RsaSha1SignatureImplementation,0,4,1,0,2,40,6,0,1,-1,3,0,DevDefined.OAuth.Framework.IOAuthContext' DevDefined.OAuth.Framework.SigningContext' DevDefined.OAuth.Framework.Error,
+XeroApi.OAuth,XeroApiPartnerSession,0,3,0,0,2,35,3,0,2,-1,4,1,DevDefined.OAuth.Storage.Basic.ITokenRepository' DevDefined.OAuth.Framework.SignatureMethod' XeroApi.OAuth.XeroApiEndpoints' DevDefined.OAuth.Consumer.OAuthConsumerContext,Xero.ScreencastWeb.Services.ServiceProvider
+XeroApi.OAuth,XeroApiPrivateSession,0,2,0,0,1,31,2,0,2,-1,3,2,DevDefined.OAuth.Framework.SignatureMethod' XeroApi.OAuth.XeroApiEndpoints' DevDefined.OAuth.Consumer.OAuthConsumerContext,Xero.ScreencastWeb.Controllers.ConnectController' Xero.ScreencastWeb.Services.ServiceProvider
+XeroApi.OAuth,XeroApiEndpoints,7,0,0,7,0,10,0,0,0,-1,0,4,,XeroApi.OAuth.XeroApiPartnerSession' XeroApi.OAuth.XeroApiPrivateSession' XeroApi.OAuth.XeroApiPublicSession' XeroApi.Tests.SignatureTests
+XeroApi.OAuth,XeroApiPublicSession,0,3,0,0,2,32,3,0,2,-1,4,1,DevDefined.OAuth.Storage.Basic.ITokenRepository' DevDefined.OAuth.Framework.SignatureMethod' XeroApi.OAuth.XeroApiEndpoints' DevDefined.OAuth.Consumer.OAuthConsumerContext,Xero.ScreencastWeb.Services.ServiceProvider

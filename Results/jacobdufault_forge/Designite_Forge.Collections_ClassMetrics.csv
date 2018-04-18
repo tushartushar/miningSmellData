@@ -1,13 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Bag,1,16,6,0,10,191,27,0,0,0.31,1,2
-BufferedItem,2,5,0,0,5,67,7,0,0,0,1,0
-ConcurrentWriterBag,3,5,1,0,5,103,8,0,0,0.4,2,4
-IQuadTreeMonitor,0,2,0,0,0,15,2,0,0,-1,0,2
-Rect,4,5,0,4,4,51,5,0,0,0,1,2
-Node,2,8,3,0,8,189,32,0,0,0,5,1
-QuadTree,2,13,2,0,8,242,21,0,0,0.77,6,0
-SparseArray,1,15,4,0,8,201,28,0,0,0.6,1,4
-SwappableItem,3,2,2,0,2,58,2,0,0,1,0,0
-UnorderedListMetadata,0,1,2,0,1,16,1,0,0,-1,0,2
-UnorderedList,1,7,1,0,5,134,15,0,0,0.29,1,1
-WorldIndexCoordinateTransform,0,4,0,0,4,76,6,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Forge.Collections,Bag<T>,1,16,6,0,10,164,27,0,0,0.31,1,0,Forge.Utilities.Contract,
+Forge.Collections,BufferedItem<T>,2,5,0,0,5,57,7,0,0,0,1,0,Forge.Utilities.Contract,
+Forge.Collections,ConcurrentWriterBag<T>,3,5,1,0,5,94,8,0,0,0.4,1,0,Forge.Utilities.AtomicActivation,
+Forge.Collections,IQuadTreeMonitor,0,2,0,0,0,11,2,1,0,-1,0,3,,Forge.Collections.Node<T>' Forge.Collections.StoredMonitor' Forge.Collections.QuadTree<TItem>
+Forge.Collections,Rect,4,5,0,4,4,49,5,0,0,0,2,2,Forge.Utilities.Real' Forge.Utilities.Bound,Forge.Collections.Node<T>' Forge.Collections.QuadTree<TItem>
+Forge.Collections,Node<T>,2,8,3,0,8,178,30,0,0,0,6,0,Forge.Collections.Rect' Forge.Collections.StoredMonitor' Forge.Utilities.Bound' Forge.Collections.IQuadTreeMonitor' Forge.Utilities.Vector2r' Forge.Collections.StoredItem,
+Forge.Collections,StoredMonitor,2,1,0,2,1,11,1,0,0,0,2,1,Forge.Collections.IQuadTreeMonitor' Forge.Utilities.Bound,Forge.Collections.Node<T>
+Forge.Collections,StoredItem,4,1,0,4,1,14,1,0,0,0,2,2,Forge.Collections.UnorderedListMetadata' Forge.Utilities.Vector2r,Forge.Collections.Node<T>' Forge.Collections.UnorderedList<T>
+Forge.Collections,QuadTree<TItem>,2,13,2,0,8,225,21,0,0,0.77,6,0,Forge.Utilities.Real' Forge.Utilities.Vector2r' Forge.Utilities.Bound' Forge.Collections.IQuadTreeMonitor' Forge.Collections.Rect' Forge.Collections.WorldIndexCoordinateTransform,
+Forge.Collections,SparseArray<T>,1,15,4,0,8,180,28,0,0,0.6,1,0,Forge.Utilities.Maybe,
+Forge.Collections,SwappableItem<T>,3,2,2,0,2,51,2,0,0,1,0,0,,
+Forge.Collections,UnorderedListMetadata,0,1,2,0,1,14,1,0,0,-1,0,4,,Forge.Collections.StoredItem' Forge.Collections.UnorderedList<T>' Forge.Entities.Implementation.Runtime.EntityCache' Forge.Entities.Implementation.Runtime.GameEngine
+Forge.Collections,UnorderedList<T>,1,7,1,0,5,118,15,0,0,0.29,2,0,Forge.Collections.StoredItem' Forge.Collections.UnorderedListMetadata,
+Forge.Collections,WorldIndexCoordinateTransform,0,4,0,0,4,68,6,0,0,-1,0,2,,Forge.Collections.QuadTree<TItem>' CollectionsTests.WorldIndexCoordinateTransformTests

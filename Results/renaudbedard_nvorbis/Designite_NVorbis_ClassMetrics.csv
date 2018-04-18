@@ -1,0 +1,45 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NVorbis,BufferedReadStream,8,16,10,0,14,185,32,0,0,0.38,1,2,NVorbis.StreamReadBuffer,NVorbis.VorbisReader' NVorbis.Ogg.ContainerReader
+NVorbis,Huffman,1,2,0,0,0,70,9,0,0,1,1,1,NVorbis.HuffmanListNode,NVorbis.VorbisCodebook
+NVorbis,HuffmanListNode,5,0,0,0,0,8,0,0,0,-1,0,2,,NVorbis.Huffman' NVorbis.VorbisCodebook
+NVorbis,IContainerReader,0,3,4,0,0,40,3,1,0,-1,0,1,,NVorbis.VorbisReader
+NVorbis,IPacketProvider,0,7,3,0,0,63,7,1,0,-1,1,3,NVorbis.DataPacket,NVorbis.NewStreamEventArgs' NVorbis.VorbisReader' NVorbis.VorbisStreamDecoder
+NVorbis,Mdct,12,10,0,0,1,457,27,0,0,0,1,1,NVorbis.Utils,NVorbis.VorbisStreamDecoder
+NVorbis,NewStreamEventArgs,0,1,2,0,1,21,2,0,0,-1,1,2,NVorbis.IPacketProvider,NVorbis.VorbisReader' NVorbis.Ogg.ContainerReader
+NVorbis,DataPacket,10,21,9,0,16,438,34,2,0,0.19,1,19,NVorbis.PacketFlags,NVorbis.IPacketProvider' NVorbis.ParameterChangeEventArgs' NVorbis.VorbisCodebook' NVorbis.VorbisFloor' NVorbis.Floor0' NVorbis.Floor1' NVorbis.VorbisMapping' NVorbis.Mapping0' NVorbis.VorbisMode' NVorbis.VorbisResidue' NVorbis.Residue0' NVorbis.Residue1' NVorbis.Residue2' NVorbis.VorbisStreamDecoder' NVorbis.VorbisTime' NVorbis.Time0' NVorbis.Ogg.Packet' NVorbis.Ogg.PacketReader' UnitTests.TestPacket
+NVorbis,PacketFlags,0,0,0,0,0,37,0,0,0,-1,0,1,,NVorbis.DataPacket
+NVorbis,ParameterChangeEventArgs,0,1,1,0,1,16,1,0,0,-1,1,1,NVorbis.DataPacket,NVorbis.VorbisStreamDecoder
+NVorbis,RingBuffer,5,6,1,0,0,118,21,0,0,0,0,1,,NVorbis.VorbisStreamDecoder
+NVorbis,StreamReadBuffer,10,15,6,0,3,489,52,0,0,0,2,1,NVorbis.StreamWrapper' NVorbis.SavedBuffer,NVorbis.BufferedReadStream
+NVorbis,StreamWrapper,4,0,0,0,0,7,0,0,0,-1,0,1,,NVorbis.StreamReadBuffer
+NVorbis,SavedBuffer,5,0,0,5,0,8,0,0,0,-1,0,1,,NVorbis.StreamReadBuffer
+NVorbis,Utils,0,6,0,0,0,78,9,0,0,-1,1,7,NVorbis.FloatBits,NVorbis.Mdct' NVorbis.VorbisCodebook' NVorbis.Floor0' NVorbis.Mapping0' NVorbis.VorbisReader' NVorbis.Residue0' NVorbis.VorbisStreamDecoder
+NVorbis,FloatBits,2,0,0,2,0,8,0,0,0,-1,0,1,,NVorbis.Utils
+NVorbis,VorbisCodebook,10,9,0,0,0,243,38,0,0,0.22,5,6,NVorbis.HuffmanListNode' NVorbis.VorbisStreamDecoder' NVorbis.DataPacket' NVorbis.Utils' NVorbis.Huffman,NVorbis.Floor0' NVorbis.Floor1' NVorbis.Residue0' NVorbis.Residue1' NVorbis.Residue2' NVorbis.VorbisStreamDecoder
+NVorbis,VorbisFloor,1,5,0,0,0,592,7,2,0,0.8,3,2,NVorbis.VorbisStreamDecoder' NVorbis.DataPacket' NVorbis.PacketData,NVorbis.Submap' NVorbis.VorbisStreamDecoder
+NVorbis,PacketData,1,0,4,0,0,12,0,2,0,-1,0,4,,NVorbis.VorbisFloor' NVorbis.Floor0' NVorbis.Floor1' NVorbis.VorbisStreamDecoder
+NVorbis,Floor0,11,7,0,0,0,178,28,0,1,0.29,6,0,NVorbis.VorbisCodebook' NVorbis.PacketData0' NVorbis.VorbisStreamDecoder' NVorbis.DataPacket' NVorbis.Utils' NVorbis.PacketData,
+NVorbis,PacketData0,2,0,1,0,0,9,0,0,1,-1,0,1,,NVorbis.Floor0
+NVorbis,Floor1,20,7,0,0,0,378,46,0,1,0.29,5,0,NVorbis.VorbisCodebook' NVorbis.PacketData1' NVorbis.VorbisStreamDecoder' NVorbis.DataPacket' NVorbis.PacketData,
+NVorbis,PacketData1,2,0,1,2,0,9,0,0,1,-1,0,1,,NVorbis.Floor1
+NVorbis,VorbisMapping,4,3,0,0,0,93,5,1,0,0.67,4,2,NVorbis.VorbisStreamDecoder' NVorbis.Submap' NVorbis.CouplingStep' NVorbis.DataPacket,NVorbis.VorbisMode' NVorbis.VorbisStreamDecoder
+NVorbis,Mapping0,0,2,0,0,0,57,14,0,1,-1,3,0,NVorbis.VorbisStreamDecoder' NVorbis.DataPacket' NVorbis.Utils,
+NVorbis,Submap,2,1,0,0,0,6,1,0,0,0,2,2,NVorbis.VorbisFloor' NVorbis.VorbisResidue,NVorbis.VorbisMapping' NVorbis.VorbisStreamDecoder
+NVorbis,CouplingStep,2,1,0,0,0,6,1,0,0,0,0,2,,NVorbis.VorbisMapping' NVorbis.VorbisStreamDecoder
+NVorbis,VorbisMode,9,4,0,0,0,98,14,0,0,0,3,1,NVorbis.VorbisStreamDecoder' NVorbis.VorbisMapping' NVorbis.DataPacket,NVorbis.VorbisStreamDecoder
+NVorbis,VorbisReader,4,12,18,0,9,281,30,0,0,0.25,6,3,NVorbis.IContainerReader' NVorbis.BufferedReadStream' NVorbis.NewStreamEventArgs' NVorbis.IPacketProvider' NVorbis.VorbisStreamDecoder' NVorbis.Utils,NVorbis.OpenTKSupport.OggStream' NVorbis.OpenTKSupport.OggStreamer' TestApp.NAudioDecodingTests
+NVorbis,VorbisResidue,2,6,0,0,0,293,12,1,0,0.67,2,2,NVorbis.VorbisStreamDecoder' NVorbis.DataPacket,NVorbis.Submap' NVorbis.VorbisStreamDecoder
+NVorbis,Residue0,11,4,0,0,0,180,33,2,1,0.5,4,1,NVorbis.VorbisCodebook' NVorbis.VorbisStreamDecoder' NVorbis.DataPacket' NVorbis.Utils,NVorbis.Residue2
+NVorbis,Residue1,0,2,0,0,0,21,5,0,2,-1,3,0,NVorbis.VorbisStreamDecoder' NVorbis.VorbisCodebook' NVorbis.DataPacket,
+NVorbis,Residue2,1,3,0,0,0,35,7,0,2,0.67,4,0,NVorbis.VorbisStreamDecoder' NVorbis.Residue0' NVorbis.DataPacket' NVorbis.VorbisCodebook,
+NVorbis,VorbisStreamDecoder,54,21,14,0,2,838,92,0,1,0,15,14,NVorbis.VorbisCodebook' NVorbis.VorbisTime' NVorbis.VorbisFloor' NVorbis.VorbisResidue' NVorbis.VorbisMapping' NVorbis.VorbisMode' NVorbis.IPacketProvider' NVorbis.DataPacket' NVorbis.RingBuffer' NVorbis.PacketData' NVorbis.ParameterChangeEventArgs' NVorbis.Utils' NVorbis.Submap' NVorbis.CouplingStep' NVorbis.Mdct,NVorbis.VorbisCodebook' NVorbis.VorbisFloor' NVorbis.Floor0' NVorbis.Floor1' NVorbis.VorbisMapping' NVorbis.Mapping0' NVorbis.VorbisMode' NVorbis.VorbisReader' NVorbis.VorbisResidue' NVorbis.Residue0' NVorbis.Residue1' NVorbis.Residue2' NVorbis.VorbisTime' NVorbis.Time0
+NVorbis,IVorbisStreamStatus,0,1,10,0,0,47,1,1,0,-1,0,0,,
+NVorbis,VorbisTime,1,3,0,0,0,29,5,1,0,0.67,2,1,NVorbis.VorbisStreamDecoder' NVorbis.DataPacket,NVorbis.VorbisStreamDecoder
+NVorbis,Time0,0,2,0,0,0,8,2,0,1,-1,2,0,NVorbis.VorbisStreamDecoder' NVorbis.DataPacket,
+NVorbis.Ogg,ContainerReader,9,15,4,0,7,438,48,0,1,0.13,7,2,NVorbis.Ogg.Crc' NVorbis.BufferedReadStream' NVorbis.Ogg.PacketReader' NVorbis.Ogg.PageHeader' NVorbis.Ogg.Packet' NVorbis.Ogg.PageFlags' NVorbis.NewStreamEventArgs,NVorbis.Ogg.Packet' NVorbis.Ogg.PacketReader
+NVorbis.Ogg,PageHeader,0,0,8,0,0,11,0,0,0,-1,0,1,,NVorbis.Ogg.ContainerReader
+NVorbis.Ogg,Crc,3,5,0,0,4,34,7,0,0,0,0,1,,NVorbis.Ogg.ContainerReader
+NVorbis.Ogg,Packet,7,5,4,0,1,89,12,0,1,0,2,3,NVorbis.Ogg.ContainerReader' NVorbis.DataPacket,NVorbis.Ogg.ContainerReader' NVorbis.Ogg.PacketReader' NVorbis.Ogg.DebugView
+NVorbis.Ogg,PacketReader,7,16,4,0,8,391,46,0,1,0,3,2,NVorbis.Ogg.ContainerReader' NVorbis.Ogg.Packet' NVorbis.DataPacket,NVorbis.Ogg.ContainerReader' NVorbis.Ogg.DebugView
+NVorbis.Ogg,DebugView,4,1,5,0,1,43,2,0,0,0,2,0,NVorbis.Ogg.PacketReader' NVorbis.Ogg.Packet,
+NVorbis.Ogg,PageFlags,0,0,0,0,0,8,0,0,0,-1,0,1,,NVorbis.Ogg.ContainerReader

@@ -1,29 +1,29 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Application,0,2,1,0,1,13,2,1,1,-1,2,2
-RunningApplication,1,2,0,0,2,18,4,0,0,0,4,3
-AbstractCommand,0,3,0,0,1,21,4,2,1,-1,0,0
-CommandResult,0,0,2,0,0,11,0,1,0,-1,0,0
-ICommand,0,1,0,0,0,4,1,1,0,-1,0,1
-AppContext,3,1,3,0,1,27,1,0,0,0,0,4
-FillerConfig,3,4,0,0,4,26,4,0,0,0,10,1
-IHandlerConfig,0,3,1,0,0,9,3,1,0,-1,1,4
-AbstractHandlerConfig,1,5,2,0,4,32,5,2,1,0,6,0
-EmptyHandlerConfig,0,1,1,0,1,11,1,1,2,-1,2,0
-ConsHandlerConfig,2,1,2,0,1,23,1,0,2,0,3,2
-IRequest,0,0,0,0,0,6,0,2,0,-1,0,14
-IResponseRenderer,0,1,0,0,0,4,1,2,0,-1,1,2
-Response,3,1,3,0,1,27,1,0,0,0,0,7
-AbstractFileRequestHandler,2,6,0,0,2,61,14,2,1,0.33,3,0
-DefaultRequestHandler,2,2,0,0,2,18,3,0,1,0,5,1
-FileRequestHandler,0,2,0,0,1,10,2,0,2,-1,1,0
-RequestHandlingResult,2,1,3,0,1,25,1,0,0,0,1,3
-IRequestHandler,0,1,0,0,0,4,1,2,0,-1,1,5
-SingleFileRequestHandler,1,2,0,0,1,12,2,0,2,0,1,1
-ArgumentAwareResponseFiller,1,3,0,0,2,29,7,0,1,0.67,2,1
-DefaultResponseFiller,0,2,3,0,1,22,2,1,1,-1,2,0
-IResponseFiller,0,1,0,0,0,4,1,2,0,-1,1,3
-JsonResponseFiller,2,2,1,0,1,22,4,0,2,0,1,1
-CatchAllRequestMatcher,0,1,0,0,1,7,1,0,1,-1,1,1
-IRequestMatcher,0,1,0,0,0,4,1,2,0,-1,1,2
-SingleParamRequestMatcher,2,2,0,0,2,18,3,0,1,0,1,1
-ExceptionHelper,0,1,0,0,1,13,2,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CrystalQuartz.WebFramework,Application,0,2,1,0,1,11,2,1,1,-1,2,2,CrystalQuartz.WebFramework.Config.IHandlerConfig' CrystalQuartz.WebFramework.RunningApplication,CrystalQuartz.Owin.CrystalQuartzPanelMiddleware' CrystalQuartz.Web.PagesHandler
+CrystalQuartz.WebFramework,RunningApplication,1,2,0,0,2,20,4,0,0,0,4,3,CrystalQuartz.WebFramework.Request.IRequestHandler' CrystalQuartz.WebFramework.Request.RequestHandlingResult' CrystalQuartz.WebFramework.HttpAbstractions.IResponseRenderer' CrystalQuartz.WebFramework.HttpAbstractions.IRequest,CrystalQuartz.Owin.CrystalQuartzPanelMiddleware' CrystalQuartz.Web.PagesHandler' CrystalQuartz.WebFramework.Application
+CrystalQuartz.WebFramework.Commands,AbstractCommand<TInput;TOutput>,0,3,0,0,1,25,3,0,1,-1,0,0,,
+CrystalQuartz.WebFramework.Commands,CommandResult,0,0,2,0,0,5,0,1,0,-1,0,0,,
+CrystalQuartz.WebFramework.Commands,ICommand,0,1,0,0,0,4,1,1,0,-1,0,1,,CrystalQuartz.WebFramework.Config.FillerConfig
+CrystalQuartz.WebFramework.Config,AppContext,3,1,3,0,1,24,1,0,0,0,0,4,,CrystalQuartz.WebFramework.Config.FillerConfig' CrystalQuartz.WebFramework.Config.AbstractHandlerConfig' CrystalQuartz.WebFramework.Config.EmptyHandlerConfig' CrystalQuartz.WebFramework.Config.ConsHandlerConfig
+CrystalQuartz.WebFramework.Config,FillerConfig,3,4,0,0,4,28,4,0,0,0,7,1,CrystalQuartz.WebFramework.Routing.IRequestMatcher' CrystalQuartz.WebFramework.Config.IHandlerConfig' CrystalQuartz.WebFramework.Config.AppContext' CrystalQuartz.WebFramework.Request.DefaultRequestHandler' CrystalQuartz.WebFramework.Config.ConsHandlerConfig' CrystalQuartz.WebFramework.Commands.ICommand' CrystalQuartz.WebFramework.Request.SingleFileRequestHandler,CrystalQuartz.WebFramework.Config.AbstractHandlerConfig
+CrystalQuartz.WebFramework.Config,IHandlerConfig,0,3,1,0,0,7,3,1,0,-1,0,3,,CrystalQuartz.WebFramework.Application' CrystalQuartz.WebFramework.Config.FillerConfig' CrystalQuartz.WebFramework.Config.ConsHandlerConfig
+CrystalQuartz.WebFramework.Config,AbstractHandlerConfig,1,5,2,0,4,35,5,2,1,0,4,0,CrystalQuartz.WebFramework.Config.AppContext' CrystalQuartz.WebFramework.Config.ConsHandlerConfig' CrystalQuartz.WebFramework.Request.IRequestHandler' CrystalQuartz.WebFramework.Config.FillerConfig,
+CrystalQuartz.WebFramework.Config,EmptyHandlerConfig,0,1,1,0,1,10,1,1,2,-1,1,0,CrystalQuartz.WebFramework.Config.AppContext,
+CrystalQuartz.WebFramework.Config,ConsHandlerConfig,2,1,2,0,1,27,1,0,2,0,3,2,CrystalQuartz.WebFramework.Config.IHandlerConfig' CrystalQuartz.WebFramework.Request.IRequestHandler' CrystalQuartz.WebFramework.Config.AppContext,CrystalQuartz.WebFramework.Config.FillerConfig' CrystalQuartz.WebFramework.Config.AbstractHandlerConfig
+CrystalQuartz.WebFramework.HttpAbstractions,IRequest,0,0,0,0,0,7,0,2,0,-1,0,14,,CrystalQuartz.Owin.CrystalQuartzPanelMiddleware' CrystalQuartz.WebFramework.RunningApplication' CrystalQuartz.WebFramework.Request.AbstractFileRequestHandler' CrystalQuartz.WebFramework.Request.DefaultRequestHandler' CrystalQuartz.WebFramework.Request.FileRequestHandler' CrystalQuartz.WebFramework.Request.IRequestHandler' CrystalQuartz.WebFramework.Request.SingleFileRequestHandler' CrystalQuartz.WebFramework.Response.ArgumentAwareResponseFiller<TForm>' CrystalQuartz.WebFramework.Response.DefaultResponseFiller' CrystalQuartz.WebFramework.Response.IResponseFiller' CrystalQuartz.WebFramework.Response.JsonResponseFiller' CrystalQuartz.WebFramework.Routing.CatchAllRequestMatcher' CrystalQuartz.WebFramework.Routing.IRequestMatcher' CrystalQuartz.WebFramework.Routing.SingleParamRequestMatcher
+CrystalQuartz.WebFramework.HttpAbstractions,IResponseRenderer,0,1,0,0,0,4,1,2,0,-1,1,2,CrystalQuartz.WebFramework.HttpAbstractions.Response,CrystalQuartz.Owin.CrystalQuartzPanelMiddleware' CrystalQuartz.WebFramework.RunningApplication
+CrystalQuartz.WebFramework.HttpAbstractions,Response,3,1,3,0,1,24,1,0,0,0,0,7,,CrystalQuartz.WebFramework.HttpAbstractions.IResponseRenderer' CrystalQuartz.WebFramework.Request.DefaultRequestHandler' CrystalQuartz.WebFramework.Request.RequestHandlingResult' CrystalQuartz.WebFramework.Response.ArgumentAwareResponseFiller<TForm>' CrystalQuartz.WebFramework.Response.DefaultResponseFiller' CrystalQuartz.WebFramework.Owin.OwinResponseRenderer' CrystalQuartz.WebFramework.SystemWeb.SystemWebResponseRenderer
+CrystalQuartz.WebFramework.Request,AbstractFileRequestHandler,2,6,0,0,2,68,9,2,1,0,2,0,CrystalQuartz.WebFramework.Request.RequestHandlingResult' CrystalQuartz.WebFramework.HttpAbstractions.IRequest,
+CrystalQuartz.WebFramework.Request,DefaultRequestHandler,2,2,0,0,2,19,3,0,1,0,5,1,CrystalQuartz.WebFramework.Routing.IRequestMatcher' CrystalQuartz.WebFramework.Response.IResponseFiller' CrystalQuartz.WebFramework.HttpAbstractions.Response' CrystalQuartz.WebFramework.Request.RequestHandlingResult' CrystalQuartz.WebFramework.HttpAbstractions.IRequest,CrystalQuartz.WebFramework.Config.FillerConfig
+CrystalQuartz.WebFramework.Request,FileRequestHandler,0,2,0,0,1,10,2,0,2,-1,1,0,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,
+CrystalQuartz.WebFramework.Request,RequestHandlingResult,2,1,3,0,1,22,1,0,0,0,1,3,CrystalQuartz.WebFramework.HttpAbstractions.Response,CrystalQuartz.WebFramework.RunningApplication' CrystalQuartz.WebFramework.Request.AbstractFileRequestHandler' CrystalQuartz.WebFramework.Request.DefaultRequestHandler
+CrystalQuartz.WebFramework.Request,IRequestHandler,0,1,0,0,0,4,1,2,0,-1,1,3,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,CrystalQuartz.WebFramework.RunningApplication' CrystalQuartz.WebFramework.Config.AbstractHandlerConfig' CrystalQuartz.WebFramework.Config.ConsHandlerConfig
+CrystalQuartz.WebFramework.Request,SingleFileRequestHandler,1,2,0,0,1,12,2,0,2,0,1,1,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,CrystalQuartz.WebFramework.Config.FillerConfig
+CrystalQuartz.WebFramework.Response,ArgumentAwareResponseFiller<TForm>,1,3,0,0,2,35,7,0,1,0.67,3,0,CrystalQuartz.WebFramework.Response.IResponseFiller' CrystalQuartz.WebFramework.HttpAbstractions.Response' CrystalQuartz.WebFramework.HttpAbstractions.IRequest,
+CrystalQuartz.WebFramework.Response,DefaultResponseFiller,0,2,3,0,1,17,2,1,1,-1,2,0,CrystalQuartz.WebFramework.HttpAbstractions.Response' CrystalQuartz.WebFramework.HttpAbstractions.IRequest,
+CrystalQuartz.WebFramework.Response,IResponseFiller,0,1,0,0,0,4,1,2,0,-1,1,2,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,CrystalQuartz.WebFramework.Request.DefaultRequestHandler' CrystalQuartz.WebFramework.Response.ArgumentAwareResponseFiller<TForm>
+CrystalQuartz.WebFramework.Response,JsonResponseFiller,2,2,1,0,1,22,2,0,2,0,1,0,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,
+CrystalQuartz.WebFramework.Routing,CatchAllRequestMatcher,0,1,0,0,1,7,1,0,1,-1,1,0,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,
+CrystalQuartz.WebFramework.Routing,IRequestMatcher,0,1,0,0,0,4,1,2,0,-1,1,2,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,CrystalQuartz.WebFramework.Config.FillerConfig' CrystalQuartz.WebFramework.Request.DefaultRequestHandler
+CrystalQuartz.WebFramework.Routing,SingleParamRequestMatcher,2,2,0,0,2,19,3,0,1,0,1,0,CrystalQuartz.WebFramework.HttpAbstractions.IRequest,
+CrystalQuartz.WebFramework.Utils,ExceptionHelper,0,1,0,0,1,14,2,0,0,-1,0,0,,

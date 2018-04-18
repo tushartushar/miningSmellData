@@ -1,29 +1,29 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AccountController,0,9,0,0,8,128,26,0,0,-1,3,0
-CourseController,1,11,0,0,9,99,16,0,0,0,3,0
-DepartmentController,1,10,0,0,8,128,20,0,0,0,2,0
-HomeController,1,4,0,0,3,32,4,0,0,0.75,2,0
-InstructorController,1,11,0,0,8,141,24,0,0,0,4,0
-StudentController,1,12,0,0,11,148,31,0,0,0.17,2,0
-CourseRepository,0,2,0,0,2,10,2,0,1,-1,1,1
-SortExpression,1,0,0,0,0,4,0,0,0,-1,0,0
-GenericRepository,2,8,0,0,8,56,12,1,0,0,1,1
-IStudentRepository,0,6,0,0,0,9,6,1,0,-1,1,1
-SchoolInitializer,0,1,0,0,0,246,1,0,0,-1,7,0
-StudentRepository,2,9,0,0,8,48,11,0,1,0,2,0
-UnitOfWork,4,3,2,0,2,41,5,0,0,0,4,1
-SchoolContext,0,1,7,0,0,38,1,0,0,-1,7,8
-ChangePasswordModel,0,0,3,0,0,25,0,0,0,-1,0,1
-LogOnModel,0,0,3,0,0,21,0,0,0,-1,0,1
-RegisterModel,0,0,4,0,0,31,0,0,0,-1,0,1
-Course,0,0,9,0,0,47,0,0,0,-1,3,7
-Department,0,0,8,0,0,44,0,0,0,-1,2,6
-Enrollment,0,0,6,0,0,28,0,0,0,-1,2,5
-Instructor,0,0,3,0,0,18,0,0,1,-1,2,7
-OfficeAssignment,0,0,3,0,0,18,0,0,0,-1,1,3
-Person,0,0,4,0,0,28,0,2,0,-1,0,1
-Student,0,0,2,0,0,14,0,0,1,-1,1,6
-MvcApplication,0,3,0,0,2,26,3,0,0,-1,0,0
-AssignedCourseData,0,0,3,0,0,15,0,0,0,-1,0,1
-EnrollmentDateGroup,0,0,2,0,0,12,0,0,0,-1,0,1
-InstructorIndexData,0,0,3,0,0,15,0,0,0,-1,3,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ContosoUniversity.Controllers,AccountController,0,9,0,0,8,148,17,0,0,-1,3,0,ContosoUniversity.Models.LogOnModel' ContosoUniversity.Models.RegisterModel' ContosoUniversity.Models.ChangePasswordModel,
+ContosoUniversity.Controllers,CourseController,1,11,0,0,9,114,14,0,0,0,4,0,ContosoUniversity.DAL.UnitOfWork' ContosoUniversity.Models.Department' ContosoUniversity.DAL.CourseRepository' ContosoUniversity.Models.Course,
+ContosoUniversity.Controllers,DepartmentController,1,10,0,0,8,164,16,0,0,0,2,0,ContosoUniversity.Models.SchoolContext' ContosoUniversity.Models.Department,
+ContosoUniversity.Controllers,HomeController,1,4,0,0,3,35,4,0,0,0.75,1,0,ContosoUniversity.Models.SchoolContext,
+ContosoUniversity.Controllers,InstructorController,1,11,0,0,8,170,22,0,0,0,4,0,ContosoUniversity.Models.SchoolContext' ContosoUniversity.ViewModels.InstructorIndexData' ContosoUniversity.Models.Course' ContosoUniversity.Models.Instructor,
+ContosoUniversity.Controllers,StudentController,1,12,0,0,11,165,18,0,0,0.17,2,0,ContosoUniversity.DAL.IStudentRepository' ContosoUniversity.Models.Student,
+ContosoUniversity.DAL,CourseRepository,0,2,0,0,2,11,2,0,0,-1,1,2,ContosoUniversity.Models.SchoolContext,ContosoUniversity.Controllers.CourseController' ContosoUniversity.DAL.UnitOfWork
+ContosoUniversity.DAL,SortExpression<TEntity;TType>,1,0,0,0,0,4,0,0,0,-1,0,0,,
+ContosoUniversity.DAL,GenericRepository<TEntity>,2,8,0,0,8,64,12,0,0,0,1,0,ContosoUniversity.Models.SchoolContext,
+ContosoUniversity.DAL,IStudentRepository,0,6,0,0,0,9,6,1,0,-1,1,1,ContosoUniversity.Models.Student,ContosoUniversity.Controllers.StudentController
+ContosoUniversity.DAL,SchoolInitializer,0,1,0,0,0,84,1,0,0,-1,2,0,ContosoUniversity.Models.SchoolContext' ContosoUniversity.Models.Course,
+ContosoUniversity.DAL,StudentRepository,2,9,0,0,8,50,11,0,1,0,2,0,ContosoUniversity.Models.SchoolContext' ContosoUniversity.Models.Student,
+ContosoUniversity.DAL,UnitOfWork,4,3,2,0,2,49,5,0,0,0,2,1,ContosoUniversity.Models.SchoolContext' ContosoUniversity.DAL.CourseRepository,ContosoUniversity.Controllers.CourseController
+ContosoUniversity.Models,SchoolContext,0,1,7,0,0,23,1,0,0,-1,0,8,,ContosoUniversity.Controllers.DepartmentController' ContosoUniversity.Controllers.HomeController' ContosoUniversity.Controllers.InstructorController' ContosoUniversity.DAL.CourseRepository' ContosoUniversity.DAL.GenericRepository<TEntity>' ContosoUniversity.DAL.SchoolInitializer' ContosoUniversity.DAL.StudentRepository' ContosoUniversity.DAL.UnitOfWork
+ContosoUniversity.Models,ChangePasswordModel,0,0,3,0,0,16,0,0,0,-1,0,1,,ContosoUniversity.Controllers.AccountController
+ContosoUniversity.Models,LogOnModel,0,0,3,0,0,12,0,0,0,-1,0,1,,ContosoUniversity.Controllers.AccountController
+ContosoUniversity.Models,RegisterModel,0,0,4,0,0,19,0,0,0,-1,0,1,,ContosoUniversity.Controllers.AccountController
+ContosoUniversity.Models,Course,0,0,9,0,0,21,0,0,0,-1,0,3,,ContosoUniversity.Controllers.CourseController' ContosoUniversity.Controllers.InstructorController' ContosoUniversity.DAL.SchoolInitializer
+ContosoUniversity.Models,Department,0,0,8,0,0,21,0,0,0,-1,0,2,,ContosoUniversity.Controllers.CourseController' ContosoUniversity.Controllers.DepartmentController
+ContosoUniversity.Models,Enrollment,0,0,6,0,0,10,0,0,0,-1,0,0,,
+ContosoUniversity.Models,Instructor,0,0,3,0,0,9,0,0,1,-1,0,1,,ContosoUniversity.Controllers.InstructorController
+ContosoUniversity.Models,OfficeAssignment,0,0,3,0,0,9,0,0,0,-1,0,0,,
+ContosoUniversity.Models,Person,0,0,4,0,0,21,0,2,0,-1,0,0,,
+ContosoUniversity.Models,Student,0,0,2,0,0,8,0,0,1,-1,0,3,,ContosoUniversity.Controllers.StudentController' ContosoUniversity.DAL.IStudentRepository' ContosoUniversity.DAL.StudentRepository
+ContosoUniversity,MvcApplication,0,3,0,0,2,23,3,0,0,-1,0,0,,
+ContosoUniversity.ViewModels,AssignedCourseData,0,0,3,0,0,6,0,0,0,-1,0,0,,
+ContosoUniversity.ViewModels,EnrollmentDateGroup,0,0,2,0,0,6,0,0,0,-1,0,0,,
+ContosoUniversity.ViewModels,InstructorIndexData,0,0,3,0,0,6,0,0,0,-1,0,1,,ContosoUniversity.Controllers.InstructorController

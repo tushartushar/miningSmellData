@@ -1,22 +1,26 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AlchemyAPI,2,101,0,0,95,725,126,0,0,0.1,14,0
-AlchemyAPI_BaseParams,5,14,0,0,13,120,37,13,0,0.21,0,1
-AlchemyAPI_CategoryParams,4,9,0,0,9,65,16,0,1,0,0,1
-AlchemyAPI_ConceptParams,6,13,0,0,13,109,26,0,1,0,0,1
-AlchemyAPI_ConstraintQueryParams,1,3,0,0,3,19,4,0,1,0,0,1
-AlchemyAPI_EntityParams,11,23,0,0,23,184,45,0,1,0,0,1
-AlchemyAPI_KeywordParams,8,17,0,0,17,137,32,0,1,0,0,1
-AlchemyAPI_LanguageParams,3,7,0,0,7,60,15,0,1,0,0,1
-AlchemyAPI_RelationParams,13,27,0,0,27,216,53,0,1,0,0,1
-AlchemyAPI_TargetedSentimentParams,2,5,0,0,5,41,8,0,1,0,0,1
-AlchemyAPI_TextParams,2,5,0,0,5,46,9,0,1,0,0,1
-CombinedExtract,0,0,0,0,0,20,0,0,0,-1,0,1
-AlchemyAPI_CombinedDataParams,11,4,11,0,3,168,26,0,1,0,3,1
-TaxSourceText,0,0,0,0,0,8,0,0,0,-1,0,1
-AlchemyAPI_TaxonomyParams,6,2,6,0,1,91,14,0,1,0,1,1
-PageImageMode,0,0,0,0,0,6,0,0,0,-1,0,4
-PageImageModeHelper,0,1,0,0,1,16,5,0,0,-1,1,3
-AlchemyAPI_ImageParams,2,1,2,0,1,30,3,0,1,0,2,1
-ImagePostMode,0,0,0,0,0,5,0,0,0,-1,0,2
-ImagePostModeHelper,0,1,0,0,1,14,4,0,0,-1,1,1
-AlchemyAPI_RankedImageKeywords,1,4,5,1,4,125,20,0,1,0.75,4,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AlchemyAPI,AlchemyAPI,2,101,0,0,95,800,113,0,0,0.02,15,0,AlchemyAPI.AlchemyAPI_BaseParams' AlchemyAPI.AlchemyAPI_EntityParams' AlchemyAPI.AlchemyAPI_ConceptParams' AlchemyAPI.AlchemyAPI_KeywordParams' AlchemyAPI.AlchemyAPI_LanguageParams' AlchemyAPI.AlchemyAPI_CategoryParams' AlchemyAPI.AlchemyAPI_TextParams' AlchemyAPI.AlchemyAPI_ConstraintQueryParams' AlchemyAPI.AlchemyAPI_TargetedSentimentParams' AlchemyAPI.AlchemyAPI_RelationParams' AlchemyAPI.AlchemyAPI_CombinedDataParams' AlchemyAPI.AlchemyAPI_TaxonomyParams' AlchemyAPI.AlchemyAPI_ImageParams' AlchemyAPI.AlchemyAPI_RankedImageKeywords' AlchemyAPI.OutputMode,
+AlchemyAPI,AlchemyAPI_BaseParams,5,14,0,0,13,120,23,13,0,0.21,1,14,AlchemyAPI.OutputMode,AlchemyAPI.AlchemyAPI' AlchemyAPI.AlchemyAPI_CategoryParams' AlchemyAPI.AlchemyAPI_ConceptParams' AlchemyAPI.AlchemyAPI_ConstraintQueryParams' AlchemyAPI.AlchemyAPI_EntityParams' AlchemyAPI.AlchemyAPI_KeywordParams' AlchemyAPI.AlchemyAPI_LanguageParams' AlchemyAPI.AlchemyAPI_RelationParams' AlchemyAPI.AlchemyAPI_TargetedSentimentParams' AlchemyAPI.AlchemyAPI_TextParams' AlchemyAPI.AlchemyAPI_CombinedDataParams' AlchemyAPI.AlchemyAPI_TaxonomyParams' AlchemyAPI.AlchemyAPI_ImageParams' AlchemyAPI.AlchemyAPI_RankedImageKeywords
+AlchemyAPI,OutputMode,0,0,0,0,0,9,0,0,0,-1,0,2,,AlchemyAPI.AlchemyAPI' AlchemyAPI.AlchemyAPI_BaseParams
+AlchemyAPI,AlchemyAPI_CategoryParams,4,9,0,0,9,66,14,0,1,0,2,1,AlchemyAPI.SourceTextMode' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,SourceTextMode,0,0,0,0,0,47,0,0,0,-1,0,6,,AlchemyAPI.AlchemyAPI_CategoryParams' AlchemyAPI.AlchemyAPI_ConceptParams' AlchemyAPI.AlchemyAPI_EntityParams' AlchemyAPI.AlchemyAPI_KeywordParams' AlchemyAPI.AlchemyAPI_LanguageParams' AlchemyAPI.AlchemyAPI_RelationParams
+AlchemyAPI,AlchemyAPI_ConceptParams,6,13,0,0,13,105,24,0,1,0,3,1,AlchemyAPI.SourceTextMode' AlchemyAPI.TBOOL' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,TBOOL,0,0,0,0,0,31,0,0,0,-1,0,6,,AlchemyAPI.AlchemyAPI_ConceptParams' AlchemyAPI.AlchemyAPI_EntityParams' AlchemyAPI.AlchemyAPI_KeywordParams' AlchemyAPI.AlchemyAPI_RelationParams' AlchemyAPI.AlchemyAPI_TargetedSentimentParams' AlchemyAPI.AlchemyAPI_TextParams
+AlchemyAPI,AlchemyAPI_ConstraintQueryParams,1,3,0,0,3,19,4,0,1,0,1,1,AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,AlchemyAPI_EntityParams,11,23,0,0,23,192,47,0,1,0,3,1,AlchemyAPI.TBOOL' AlchemyAPI.SourceTextMode' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,AlchemyAPI_KeywordParams,8,17,0,0,17,146,30,0,1,0,4,1,AlchemyAPI.SourceTextMode' AlchemyAPI.TBOOL' AlchemyAPI.KeywordExtractMode' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,KeywordExtractMode,0,0,0,0,0,6,0,0,0,-1,0,1,,AlchemyAPI.AlchemyAPI_KeywordParams
+AlchemyAPI,AlchemyAPI_LanguageParams,3,7,0,0,7,66,11,0,1,0,2,1,AlchemyAPI.SourceTextMode' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,AlchemyAPI_RelationParams,13,27,0,0,27,227,57,0,1,0,3,1,AlchemyAPI.TBOOL' AlchemyAPI.SourceTextMode' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,AlchemyAPI_TargetedSentimentParams,2,5,0,0,5,46,9,0,1,0,2,1,AlchemyAPI.TBOOL' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,AlchemyAPI_TextParams,2,5,0,0,5,46,11,0,1,0,2,1,AlchemyAPI.TBOOL' AlchemyAPI.AlchemyAPI_BaseParams,AlchemyAPI.AlchemyAPI
+AlchemyAPI,CombinedExtract,0,0,0,0,0,12,0,0,0,-1,0,1,,AlchemyAPI.AlchemyAPI_CombinedDataParams
+AlchemyAPI,AlchemyAPI_CombinedDataParams,11,4,11,0,3,128,26,0,1,0,3,1,AlchemyAPI.CombinedExtract' AlchemyAPI.AlchemyAPI_BaseParams' AlchemyAPI.PageImageModeHelper,AlchemyAPI.AlchemyAPI
+AlchemyAPI,TaxSourceText,0,0,0,0,0,8,0,0,0,-1,0,1,,AlchemyAPI.AlchemyAPI_TaxonomyParams
+AlchemyAPI,AlchemyAPI_TaxonomyParams,6,2,6,0,1,68,9,0,1,0,2,1,AlchemyAPI.AlchemyAPI_BaseParams' AlchemyAPI.TaxSourceText,AlchemyAPI.AlchemyAPI
+AlchemyAPI,PageImageMode,0,0,0,0,0,6,0,0,0,-1,0,1,,AlchemyAPI.PageImageModeHelper
+AlchemyAPI,PageImageModeHelper,0,1,0,0,1,17,2,0,0,-1,1,3,AlchemyAPI.PageImageMode,AlchemyAPI.AlchemyAPI_CombinedDataParams' AlchemyAPI.AlchemyAPI_ImageParams' AlchemyAPI.AlchemyAPI_RankedImageKeywords
+AlchemyAPI,AlchemyAPI_ImageParams,2,1,2,0,1,22,3,0,1,0,2,1,AlchemyAPI.AlchemyAPI_BaseParams' AlchemyAPI.PageImageModeHelper,AlchemyAPI.AlchemyAPI
+AlchemyAPI,ImagePostMode,0,0,0,0,0,5,0,0,0,-1,0,2,,AlchemyAPI.ImagePostModeHelper' AlchemyAPI.AlchemyAPI_RankedImageKeywords
+AlchemyAPI,ImagePostModeHelper,0,1,0,0,1,15,2,0,0,-1,1,1,AlchemyAPI.ImagePostMode,AlchemyAPI.AlchemyAPI_RankedImageKeywords
+AlchemyAPI,AlchemyAPI_RankedImageKeywords,1,4,5,1,4,129,14,0,1,0.75,4,1,AlchemyAPI.ImagePostMode' AlchemyAPI.AlchemyAPI_BaseParams' AlchemyAPI.PageImageModeHelper' AlchemyAPI.ImagePostModeHelper,AlchemyAPI.AlchemyAPI

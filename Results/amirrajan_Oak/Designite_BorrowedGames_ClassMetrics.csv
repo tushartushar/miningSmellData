@@ -1,0 +1,128 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BorrowedGames,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,0,,
+BorrowedGames,MvcApplication,0,4,0,0,3,27,4,0,0,-1,2,0,Oak.DebugBootStrap' Oak.BootStrap,
+BorrowedGames.Controllers,AccountController,0,7,1,0,6,50,9,0,1,-1,2,0,BorrowedGames.Models.Registration' BorrowedGames.Repositories.Users,
+BorrowedGames.Controllers,BaseController,1,5,1,0,5,27,5,5,0,0.4,2,0,BorrowedGames.Repositories.Users' Oak.DynamicJsonResult,
+BorrowedGames.Controllers,FriendsController,0,3,0,0,3,23,5,0,1,-1,1,0,BorrowedGames.Repositories.Users,
+BorrowedGames.Controllers,GamesController,1,17,0,0,17,167,17,0,1,0.47,3,0,BorrowedGames.Repositories.Games' BorrowedGames.Models.RequestedGame' BorrowedGames.Models.LendedGame,
+BorrowedGames.Controllers,HomeController,1,4,0,0,4,32,6,0,1,0.75,2,0,BorrowedGames.Repositories.Library' BorrowedGames.Repositories.Users,
+BorrowedGames.Controllers,LibraryController,4,10,0,0,6,70,15,0,1,0.2,6,0,BorrowedGames.Repositories.Library' BorrowedGames.Repositories.Games' BorrowedGames.Models.FriendAssociations' BorrowedGames.Repositories.EmailHistorys' BorrowedGames.Models.Email' BorrowedGames.Repositories.Users,
+Oak.Controllers,LocalOnly,0,1,0,0,1,10,2,0,0,-1,0,0,,
+Oak.Controllers,Schema,0,23,1,0,16,386,25,0,0,-1,4,1,Oak.Seed' BorrowedGames.Repositories.Games' BorrowedGames.Models.Registration' BorrowedGames.Repositories.Users,Oak.Controllers.SeedController
+Oak.Controllers,SeedController,0,6,2,0,5,52,6,0,0,-1,3,0,Oak.Controllers.Schema' Oak.Seed' Oak.DebugBootStrap,
+BorrowedGames.Models,Email,0,1,3,0,0,11,1,0,1,-1,0,1,,BorrowedGames.Controllers.LibraryController
+BorrowedGames.Models,FriendAssociation,1,2,0,0,1,9,2,0,1,1,1,0,BorrowedGames.Repositories.Users,
+BorrowedGames.Models,FriendAssociations,0,1,0,0,1,7,1,0,1,-1,0,2,,BorrowedGames.Controllers.LibraryController' BorrowedGames.Models.User
+BorrowedGames.Models,Game,1,3,0,0,1,18,3,0,1,0.67,1,0,BorrowedGames.Repositories.FavoritedGames,
+BorrowedGames.Models,LendedGame,0,2,3,0,2,22,2,0,1,-1,0,2,,BorrowedGames.Controllers.GamesController' BorrowedGames.Models.User
+BorrowedGames.Models,LibraryEntry,1,3,0,0,2,16,3,0,1,1,1,0,BorrowedGames.Repositories.Games,
+BorrowedGames.Models,NotInterestedGame,1,2,2,0,2,20,2,0,1,1,1,0,BorrowedGames.Repositories.Games,
+BorrowedGames.Models,ObjectExtensions,0,3,0,0,3,16,5,0,0,-1,0,0,,
+BorrowedGames.Models,PreferredGame,0,1,0,0,1,8,1,0,1,-1,0,1,,BorrowedGames.Models.User
+BorrowedGames.Models,Registration,1,5,0,0,5,40,5,0,1,0.6,1,2,BorrowedGames.Repositories.Users,BorrowedGames.Controllers.AccountController' Oak.Controllers.Schema
+BorrowedGames.Models,Rental,0,1,0,0,1,11,1,2,1,-1,0,0,,
+BorrowedGames.Models,RequestedGame,0,1,0,0,1,6,1,0,2,-1,0,2,,BorrowedGames.Controllers.GamesController' BorrowedGames.Models.User
+BorrowedGames.Models,User,7,34,0,0,27,221,37,0,1,0.21,12,0,BorrowedGames.Repositories.Users' BorrowedGames.Models.FriendAssociations' BorrowedGames.Repositories.Games' BorrowedGames.Repositories.Library' BorrowedGames.Repositories.NotInterestedGames' BorrowedGames.Repositories.WantedGames' BorrowedGames.Repositories.FavoritedGames' BorrowedGames.Models.RequestedGame' BorrowedGames.Models.LendedGame' Oak.DynamicModels' BorrowedGames.Models.PreferredGame' Oak.Gemini,
+BorrowedGames.Models,WantedGame,2,3,2,0,2,21,3,0,1,1,2,0,BorrowedGames.Repositories.Games' BorrowedGames.Repositories.Users,
+Oak,HasMany,0,11,3,0,5,81,11,0,1,-1,4,1,Massive.DynamicRepository' Oak.DynamicModels' Oak.Gemini' Oak.EagerLoadMany,Oak.AssociationByConventions
+Oak,HasManyThrough,3,7,5,0,4,69,7,0,1,0,3,0,Massive.DynamicRepository' Oak.EagerLoadMany' Oak.DynamicModels,
+Oak,HasManyAndBelongsTo,3,6,6,0,4,70,6,0,1,0,3,1,Massive.DynamicRepository' Oak.EagerLoadMany' Oak.DynamicModels,Oak.AssociationByConventions
+Oak,HasOne,0,6,1,0,6,46,8,0,1,-1,3,1,Massive.DynamicRepository' Oak.EagerLoadSingleForAll' Oak.DynamicModels,Oak.AssociationByConventions
+Oak,HasOneThrough,1,6,4,0,5,72,8,0,1,0,3,1,Massive.DynamicRepository' Oak.EagerLoadSingleForAll' Oak.DynamicModels,Oak.AssociationByConventions
+Oak,BelongsTo,0,5,2,0,5,45,7,0,1,-1,3,1,Massive.DynamicRepository' Oak.EagerLoadSingleForAll' Oak.DynamicModels,Oak.AssociationByConventions
+Oak,Association,0,11,4,0,11,81,14,4,1,-1,3,0,Massive.DynamicRepository' Oak.DynamicModels' Oak.Gemini,
+Oak,SingleAssociation,0,0,0,0,0,1,0,3,2,-1,0,1,,Oak.DynamicModels
+Oak,Associations,1,5,0,0,5,34,9,0,0,0,0,1,,Oak.AssociationByConventions
+Oak,AssociationByConventions,4,30,0,3,4,241,45,0,0,0,8,1,Massive.DynamicRepository' Oak.Associations' Oak.HasMany' Oak.HasOne' Oak.BelongsTo' Oak.HasOneThrough' Oak.HasManyAndBelongsTo' Oak.ConnectionProfile,Oak.DynamicDb
+Oak,AssociationByConventionsException,0,1,0,0,1,4,1,0,0,-1,0,1,,Oak.DynamicDbRecommendation
+Oak,EagerLoadSingleForAll,0,2,0,0,1,38,6,0,0,-1,2,3,Massive.DynamicRepository' Oak.DynamicModels,Oak.HasOne' Oak.HasOneThrough' Oak.BelongsTo
+Oak,EagerLoadMany,0,2,1,0,2,34,7,0,0,-1,2,3,Massive.DynamicRepository' Oak.DynamicModels,Oak.HasMany' Oak.HasManyThrough' Oak.HasManyAndBelongsTo
+Oak,BootStrap,0,1,0,0,1,7,1,0,0,-1,0,1,,BorrowedGames.MvcApplication
+Oak,ConsoleOutExceptionFilterAttribute,0,1,0,0,1,25,1,0,0,-1,2,0,Massive.DynamicRepository' Oak.Bullet,
+Oak,ConsoleOutPayloadFilterAttribute,0,5,0,0,1,65,5,0,0,-1,1,0,Massive.DynamicRepository,
+Oak,DebugBootStrap,3,8,0,2,3,163,12,0,0,0,6,2,Massive.DynamicRepository' Oak.Recommendation' Oak.StackTracePreview' Oak.Bullet' Oak.UnAlteredStackTrace' Oak.SqlQueryLog,BorrowedGames.MvcApplication' Oak.Controllers.SeedController
+Oak,Recommendation,0,3,0,0,3,13,3,15,0,-1,0,1,,Oak.DebugBootStrap
+Oak,FirstTimeRecommendation,0,2,0,0,2,106,2,0,1,-1,0,0,,
+Oak,SqlServerNameIsIncorrect,0,2,0,0,2,19,2,0,1,-1,2,0,Oak.ConnectionProfile' Oak.Bullet,
+Oak,LoginFailedRecommendation,0,2,0,0,2,19,2,0,1,-1,2,0,Oak.ConnectionProfile' Oak.Bullet,
+Oak,CreateDbRecommendation,0,2,0,0,2,21,2,0,1,-1,2,0,Oak.ConnectionProfile' Oak.Bullet,
+Oak,TutorialCreateBlogs,0,2,0,0,2,48,2,0,1,-1,0,0,,
+Oak,TutorialCreateComments,0,2,0,0,2,57,2,0,1,-1,0,0,,
+Oak,CreateTableRecommendation,0,3,0,0,3,67,3,0,1,-1,0,1,,Oak.DynamicDbRecommendation
+Oak,TutorialProjectionsRecommendation,0,2,0,0,2,62,2,0,1,-1,0,0,,
+Oak,NoDefinitionOnGeminiRecommendation,0,2,0,0,2,65,2,0,1,-1,0,0,,
+Oak,TutorialBlogIsValid,0,2,0,0,2,33,2,0,1,-1,0,0,,
+Oak,TutorialAddComment,0,2,0,0,2,69,2,0,1,-1,0,0,,
+Oak,ValidationsFailedRecommendation,0,2,0,0,2,33,3,0,1,-1,0,0,,
+Oak,NoDefinitionOnDerivedGeminiRecommendation,0,2,0,0,2,125,4,0,1,-1,0,0,,
+Oak,InvalidColumnRecommendation,0,2,0,0,2,36,2,0,1,-1,0,0,,
+Oak,DynamicDbRecommendation,0,2,0,0,2,40,2,0,1,-1,3,0,Oak.AssociationByConventionsException' Oak.ScaffoldingRecommendationString' Oak.CreateTableRecommendation,
+Oak,ScaffoldingRecommendationString,0,1,0,0,1,35,1,0,0,-1,0,1,,Oak.DynamicDbRecommendation
+Oak,StackTracePreview,0,2,0,0,2,23,2,0,0,-1,0,1,,Oak.DebugBootStrap
+Oak,UnAlteredStackTrace,0,1,0,0,1,12,1,0,0,-1,0,1,,Oak.DebugBootStrap
+Oak,SqlQueryLog,0,1,5,0,1,16,1,0,0,-1,0,2,,Oak.DebugBootStrap' Oak.Bullet
+Oak,Bullet,3,9,0,0,8,130,15,0,0,0.22,2,5,Oak.SqlQueryLog' Oak.DynamicModels,Oak.ConsoleOutExceptionFilterAttribute' Oak.DebugBootStrap' Oak.SqlServerNameIsIncorrect' Oak.LoginFailedRecommendation' Oak.CreateDbRecommendation
+Oak,Changes,1,10,1,0,7,59,16,0,0,0,1,0,Oak.Prototype,
+Oak,ConnectionProfile,1,1,1,0,0,27,1,0,0,0,0,12,,Oak.AssociationByConventions' Oak.SqlServerNameIsIncorrect' Oak.LoginFailedRecommendation' Oak.CreateDbRecommendation' Oak.DynamicDb' Oak.DynamicRepository' Oak.DataAccessHelpers' Oak.Query' Oak.Seed' Massive.DynamicRepository' Massive.DataAccessHelpers' Oak.Extensions.Seed
+Oak,DynamicDb,1,4,0,0,3,31,5,0,1,0.5,3,0,Oak.ConnectionProfile' Massive.DynamicRepository' Oak.AssociationByConventions,
+Oak,Hash,0,0,0,0,0,3,0,0,0,-1,0,1,,Oak.ElementMetaData
+Oak,DynamicForm,1,6,0,0,3,47,12,0,0,0,3,0,Oak.ElementMetaData' Oak.DynamicModel' Oak.Gemini,
+Oak,DynamicJsonResult,0,3,1,0,3,26,4,0,0,-1,1,1,Oak.DynamicToJson,BorrowedGames.Controllers.BaseController
+Oak,DynamicModel,0,3,0,0,2,20,3,6,1,-1,1,3,Oak.Gemini,Oak.DynamicForm' Oak.DynamicRepository' Massive.DynamicRepository
+Oak,DynamicModelExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Oak.DynamicModels,
+Oak,DynamicModels,0,27,1,0,20,161,46,0,1,-1,2,16,Oak.Gemini' Oak.SingleAssociation,BorrowedGames.Models.User' Oak.HasMany' Oak.HasManyThrough' Oak.HasManyAndBelongsTo' Oak.HasOne' Oak.HasOneThrough' Oak.BelongsTo' Oak.Association' Oak.EagerLoadSingleForAll' Oak.EagerLoadMany' Oak.Bullet' Oak.DynamicModelExtensions' Oak.DynamicRepository' Oak.DynamicQuery' Massive.DynamicRepository' Massive.DynamicQuery
+Oak,DeserializationSession,3,0,0,3,0,6,0,0,0,-1,0,2,,Oak.Item' Oak.DynamicToJson
+Oak,Result,2,0,0,2,0,5,0,0,0,-1,0,1,,Oak.Item
+Oak,CicularReference,0,0,0,0,0,1,0,0,0,-1,0,1,,Oak.Item
+Oak,Item,6,15,2,6,9,173,34,0,0,0.13,6,1,Oak.DeserializationSession' Oak.Casing' Oak.CicularReference' Oak.Result' Oak.Prototype' Oak.Gemini,Oak.DynamicToJson
+Oak,Casing,0,1,0,0,1,4,1,2,0,-1,0,2,,Oak.Item' Oak.DynamicToJson
+Oak,NoCasingChange,0,0,0,0,0,1,0,0,1,-1,0,0,,
+Oak,CamelCasing,0,1,0,0,1,7,1,0,1,-1,0,1,,Oak.DynamicToJson
+Oak,DynamicToJson,0,4,0,0,3,34,10,0,0,-1,6,1,Oak.CamelCasing' Oak.DeserializationSession' Oak.Item' Oak.Casing' Oak.Prototype' Oak.Gemini,Oak.DynamicJsonResult
+Oak,ElementMetaData,2,7,1,0,7,50,11,0,0,0.43,1,1,Oak.Hash,Oak.DynamicForm
+Oak,Prototype,1,18,4,0,15,48,20,0,0,0.11,1,10,Oak.GeminiInfo,Oak.Changes' Oak.Item' Oak.DynamicToJson' Oak.Gemini' Oak.GeminiInfo' Oak.MassiveObjectExtensions' Oak.DynamicRepository' Massive.MassiveObjectExtensions' Massive.DynamicRepository' System.DynamicExtensions
+Oak,HelpfulExtensions,0,3,0,0,3,20,5,0,0,-1,0,0,,
+Oak,Gemini,8,70,2,0,51,516,118,11,0,0.1,3,19,Oak.Prototype' Oak.GeminiInfo' System.TypeExtensions,BorrowedGames.Models.User' Oak.HasMany' Oak.Association' Oak.DynamicForm' Oak.DynamicModel' Oak.DynamicModels' Oak.Item' Oak.DynamicToJson' Oak.GeminiInfo' Oak.JsonToDynamic' Oak.MassiveObjectExtensions' Oak.DynamicRepository' Oak.DynamicQuery' Oak.Memoize' Oak.DynamicParams' Massive.MassiveObjectExtensions' Massive.DynamicRepository' Massive.DynamicQuery' System.DynamicExtensions
+Oak,GeminiInfo,0,7,0,0,7,78,15,0,0,-1,2,2,Oak.Gemini' Oak.Prototype,Oak.Prototype' Oak.Gemini
+Oak,JsonToDynamic,0,3,0,0,3,49,8,0,0,-1,1,1,Oak.Gemini,Oak.StreamHelper
+Oak,MassiveObjectExtensions,0,5,0,0,5,77,10,0,0,-1,2,0,Oak.Prototype' Oak.Gemini,
+Oak,DynamicRepository,2,42,7,1,33,561,76,0,1,0.95,6,0,Oak.Gemini' Massive.DynamicRepository' Oak.ConnectionProfile' Oak.DynamicModel' Oak.DynamicModels' Oak.Prototype,
+Oak,DataAccessHelpers,0,1,0,0,1,9,2,0,0,-1,2,0,Massive.DynamicRepository' Oak.ConnectionProfile,
+Oak,DynamicQuery,1,9,0,0,9,103,13,0,0,0,2,1,Oak.DynamicModels' Oak.Gemini,Massive.DynamicQuery
+Oak,MemoizedMethod,0,0,2,0,0,5,0,0,0,-1,0,1,,Oak.Memoize
+Oak,Memoize,3,8,0,0,2,100,21,0,0,0,2,0,Oak.Gemini' Oak.MemoizedMethod,
+Oak,StreamHelper,0,1,0,0,1,7,1,0,0,-1,1,0,Oak.JsonToDynamic,
+Oak,DynamicParams,1,4,0,0,3,44,9,0,1,0,1,1,Oak.Gemini,Oak.ParamsModelBinder
+Oak,ParamsModelBinder,0,2,0,0,2,13,4,0,0,-1,1,0,Oak.DynamicParams,
+Oak,Query,0,3,0,0,3,34,6,0,0,-1,1,0,Oak.ConnectionProfile,
+Oak,Seed,0,31,1,0,23,275,47,0,0,-1,1,2,Oak.ConnectionProfile,Oak.Controllers.Schema' Oak.Controllers.SeedController
+Oak,StringExtensions,0,2,0,0,2,12,2,0,0,-1,0,0,,
+Oak,ColumnExtensions,0,16,0,0,15,81,21,0,0,-1,0,0,,
+Oak,StrongParameters,2,4,0,0,4,29,8,0,0,0,0,0,,
+Oak,Validations,3,9,0,0,9,79,19,0,0,0.22,0,0,,
+Oak,Validation,0,7,6,0,7,40,10,9,0,-1,0,3,,Oak.Confirmation' Oak.Presence' Oak.Uniqueness
+Oak,Acceptance,0,2,1,0,2,13,2,0,1,-1,0,0,,
+Oak,Confirmation,0,3,0,0,3,17,3,0,1,-1,1,0,Oak.Validation,
+Oak,Exclusion,0,2,1,0,2,13,2,0,1,-1,0,0,,
+Oak,Format,0,2,1,0,2,13,2,0,1,-1,0,0,,
+Oak,Inclusion,0,2,1,0,2,13,2,0,1,-1,0,0,,
+Oak,Presence,0,3,0,0,3,18,5,0,1,-1,1,0,Oak.Validation,
+Oak,Uniqueness,0,3,1,0,3,28,7,0,1,-1,2,0,Massive.DynamicRepository' Oak.Validation,
+Oak,Numericality,0,4,8,0,4,42,14,0,1,-1,0,0,,
+Oak,Length,0,2,5,0,2,29,8,0,1,-1,0,0,,
+Massive,MassiveObjectExtensions,0,5,0,0,5,77,10,0,0,-1,2,0,Oak.Prototype' Oak.Gemini,
+Massive,DynamicRepository,2,42,7,1,33,561,76,8,1,0.14,5,20,Oak.Gemini' Oak.ConnectionProfile' Oak.DynamicModel' Oak.DynamicModels' Oak.Prototype,Oak.HasMany' Oak.HasManyThrough' Oak.HasManyAndBelongsTo' Oak.HasOne' Oak.HasOneThrough' Oak.BelongsTo' Oak.Association' Oak.AssociationByConventions' Oak.EagerLoadSingleForAll' Oak.EagerLoadMany' Oak.ConsoleOutExceptionFilterAttribute' Oak.ConsoleOutPayloadFilterAttribute' Oak.DebugBootStrap' Oak.DynamicDb' Oak.DynamicRepository' Oak.DataAccessHelpers' Oak.Uniqueness' Massive.DataAccessHelpers' BorrowedGames.Repositories.NotInterestedGames' BorrowedGames.Repositories.WantedGames
+Massive,DataAccessHelpers,0,1,0,0,1,9,2,0,0,-1,2,0,Massive.DynamicRepository' Oak.ConnectionProfile,
+Massive,DynamicQuery,1,9,0,0,9,103,13,0,0,0.56,3,0,Oak.DynamicQuery' Oak.DynamicModels' Oak.Gemini,
+System,TypeExtensions,0,5,0,0,5,32,7,0,0,-1,0,1,,Oak.Gemini
+System,DynamicExtensions,0,3,0,0,3,39,8,0,0,-1,2,0,Oak.Prototype' Oak.Gemini,
+Oak.Extensions,Seed,0,31,1,0,23,275,47,0,0,-1,1,0,Oak.ConnectionProfile,
+Oak.Extensions,StringExtensions,0,2,0,0,2,12,2,0,0,-1,0,0,,
+Oak.Extensions,ColumnExtensions,0,16,0,0,15,81,21,0,0,-1,0,0,,
+BorrowedGames.Repositories,EmailHistorys,0,1,0,0,1,9,1,0,2,-1,0,1,,BorrowedGames.Controllers.LibraryController
+BorrowedGames.Repositories,FavoritedGames,0,0,0,0,0,3,0,0,2,-1,0,2,,BorrowedGames.Models.Game' BorrowedGames.Models.User
+BorrowedGames.Repositories,Games,0,6,0,0,5,30,6,0,2,-1,0,8,,BorrowedGames.Controllers.GamesController' BorrowedGames.Controllers.LibraryController' Oak.Controllers.Schema' BorrowedGames.Models.LibraryEntry' BorrowedGames.Models.NotInterestedGame' BorrowedGames.Models.User' BorrowedGames.Models.WantedGame' BorrowedGames.Import.Program
+BorrowedGames.Repositories,Library,0,1,0,0,1,7,1,0,2,-1,0,3,,BorrowedGames.Controllers.HomeController' BorrowedGames.Controllers.LibraryController' BorrowedGames.Models.User
+BorrowedGames.Repositories,NotInterestedGames,0,2,0,0,2,11,2,0,2,-1,1,1,Massive.DynamicRepository,BorrowedGames.Models.User
+BorrowedGames.Repositories,Users,0,3,0,0,3,15,3,0,2,-1,0,10,,BorrowedGames.Controllers.AccountController' BorrowedGames.Controllers.BaseController' BorrowedGames.Controllers.FriendsController' BorrowedGames.Controllers.HomeController' BorrowedGames.Controllers.LibraryController' Oak.Controllers.Schema' BorrowedGames.Models.FriendAssociation' BorrowedGames.Models.Registration' BorrowedGames.Models.User' BorrowedGames.Models.WantedGame
+BorrowedGames.Repositories,WantedGames,0,2,0,0,2,11,2,0,2,-1,1,1,Massive.DynamicRepository,BorrowedGames.Models.User

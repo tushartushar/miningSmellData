@@ -1,0 +1,110 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Recurly,Delivery,0,4,8,0,1,107,10,0,1,-1,2,1,Recurly.DeliveryMethod' Recurly.Address,Recurly.GiftCard
+Recurly,DeliveryMethod,0,0,0,0,0,6,0,0,0,-1,0,1,,Recurly.Delivery
+Recurly,GiftCard,3,16,12,0,10,250,22,0,1,0.75,4,2,Recurly.Account' Recurly.Delivery' Recurly.Client' Recurly.HttpRequestMethod,Recurly.GiftCards' Recurly.Purchase
+Recurly,GiftCards,1,2,0,0,2,35,4,0,0,0,5,0,Recurly.GiftCard' Recurly.Client' Recurly.HttpRequestMethod' Recurly.FilterCriteria' Recurly.GiftCardList,
+Recurly,Account,4,31,25,0,23,452,41,0,1,0.45,26,21,Recurly.BillingInfo' Recurly.AccountBalance' Recurly.Client' Recurly.HttpRequestMethod' Recurly.Accounts' Recurly.AccountState' Recurly.Invoice' Recurly.AdjustmentList' Recurly.QueryStringBuilderContext' Recurly.QueryStringBuilder' Recurly.AdjustmentState' Recurly.Adjustment' Recurly.AdjustmentType' Recurly.ShippingAddressList' Recurly.Invoices' Recurly.RecurlyList' Recurly.SubscriptionState' Recurly.Subscription' Recurly.SubscriptionList' Recurly.TransactionState' Recurly.TransactionList' Recurly.TransactionType' Recurly.NoteList' Recurly.CouponRedemption' Recurly.CouponRedemptionList' Recurly.Address,Recurly.GiftCard' Recurly.Accounts' Recurly.Purchase' Recurly.ShippingAddressList' Recurly.BillingInfo' Recurly.Subscription' Recurly.Transaction' Recurly.Test.AccountTest' Recurly.Test.AdjustmentTest' Recurly.Test.BaseTest' Recurly.Test.BillingInfoTest' Recurly.Test.CouponRedemptionTest' Recurly.Test.CouponTest' Recurly.Test.InvoiceTest' Recurly.Test.AccountListTest' Recurly.Test.InvoiceListTest' Recurly.Test.SubscriptionListTest' Recurly.Test.TransactionListTest' Recurly.Test.SubscriptionTest' Recurly.Test.TransactionTest' Recurly.Test.List.SubscriptionAddOnListTest
+Recurly,AccountState,0,0,0,0,0,7,0,0,0,-1,0,6,,Recurly.Account' Recurly.Accounts' Recurly.EnumExtensions' Recurly.Test.AccountTest' Recurly.Test.ExtensionTest' Recurly.Test.AccountListTest
+Recurly,Accounts,1,5,0,0,5,61,5,0,0,0,7,4,Recurly.Account' Recurly.Client' Recurly.HttpRequestMethod' Recurly.RecurlyList' Recurly.AccountState' Recurly.FilterCriteria' Recurly.AccountList,Recurly.Account' Recurly.Test.AccountTest' Recurly.Test.BillingInfoTest' Recurly.Test.AccountListTest
+Recurly,AccountBalance,2,3,1,1,1,45,7,0,1,1,2,2,Recurly.Client' Recurly.HttpRequestMethod,Recurly.Account' Recurly.Test.AccountTest
+Recurly,Address,0,4,7,0,1,60,8,0,1,-1,0,5,,Recurly.Delivery' Recurly.Account' Recurly.Invoice' Recurly.Subscription' Recurly.Test.AccountTest
+Recurly,FilterCriteria,4,6,1,4,5,48,10,0,0,0.33,2,7,Recurly.Sort' Recurly.Order,Recurly.GiftCards' Recurly.Accounts' Recurly.Usages' Recurly.Coupons' Recurly.Plans' Recurly.Subscriptions' Recurly.Transactions
+Recurly,Sort,0,0,0,0,0,9,0,0,0,-1,0,1,,Recurly.FilterCriteria
+Recurly,Order,0,0,0,0,0,9,0,0,0,-1,0,1,,Recurly.FilterCriteria
+Recurly,Purchase,4,9,12,0,5,202,20,0,1,0.67,8,0,Recurly.Account' Recurly.Invoice' Recurly.Client' Recurly.HttpRequestMethod' Recurly.GiftCard' Recurly.Collection' Recurly.Adjustment' Recurly.Subscription,
+Recurly,Errors,0,3,2,0,0,50,9,0,0,-1,0,6,,Recurly.Client' Recurly.RecurlyException' Recurly.InvalidCredentialsException' Recurly.NotFoundException' Recurly.ServerException' Recurly.ValidationException
+Recurly,ExportDate,1,3,1,0,0,30,7,0,1,0.67,0,2,,Recurly.Exports' Recurly.Test.List.ExportListTest
+Recurly,ExportFile,2,4,4,0,1,44,8,0,1,0.75,0,2,,Recurly.Exports' Recurly.Test.List.ExportListTest
+Recurly,Exports,0,3,0,0,3,19,3,0,0,-1,6,1,Recurly.ExportDate' Recurly.List.ExportDateList' Recurly.ExportFile' Recurly.List.ExportFileList' Recurly.Client' Recurly.HttpRequestMethod,Recurly.Test.List.ExportListTest
+Recurly,GiftCardList,0,2,3,0,0,30,5,0,1,-1,0,1,,Recurly.GiftCards
+Recurly,TransactionError,0,3,5,0,1,83,7,0,0,-1,0,0,,
+Recurly,UsageList,0,3,3,0,0,45,6,0,1,-1,0,1,,Recurly.Usages
+Recurly,UsageBillingState,0,0,0,0,0,6,0,0,0,-1,0,1,,Recurly.Usages
+Recurly,UsageDateTimeType,0,0,0,0,0,6,0,0,0,-1,0,1,,Recurly.Usages
+Recurly,ShippingAddressList,1,5,3,0,4,43,8,0,1,0.8,3,1,Recurly.Account' Recurly.RecurlyList' Recurly.ShippingAddress,Recurly.Account
+Recurly,ShippingAddress,0,4,14,0,1,93,8,0,1,-1,0,2,,Recurly.ShippingAddressList' Recurly.Subscription
+Recurly,MeasuredUnitList,0,2,3,0,0,30,5,0,1,-1,0,1,,Recurly.MeasuredUnits
+Recurly,Usage,0,14,13,0,8,165,23,0,1,-1,2,1,Recurly.Client' Recurly.HttpRequestMethod,Recurly.Usages
+Recurly,Type,0,0,0,0,0,9,0,0,0,-1,0,1,,Recurly.AddOn
+Recurly,Usages,0,5,0,0,4,53,7,0,0,-1,7,0,Recurly.UsageList' Recurly.FilterCriteria' Recurly.UsageBillingState' Recurly.UsageDateTimeType' Recurly.Usage' Recurly.Client' Recurly.HttpRequestMethod,
+Recurly,MeasuredUnit,1,13,4,0,8,108,17,0,1,0.69,3,1,Recurly.Client' Recurly.HttpRequestMethod' Recurly.Invoice,Recurly.MeasuredUnits
+Recurly,MeasuredUnits,0,2,0,0,2,23,2,0,0,-1,4,0,Recurly.MeasuredUnitList' Recurly.MeasuredUnit' Recurly.Client' Recurly.HttpRequestMethod,
+Recurly,OpenAmountRefund,1,3,1,0,0,21,3,0,1,0.67,1,1,Recurly.RefundOrderPriority,Recurly.Invoice
+Recurly,EnumerableExtensions,0,1,0,0,1,13,1,0,0,-1,0,0,,
+Recurly,EnumExtensions,0,6,0,0,6,63,6,0,0,-1,2,0,Recurly.AccountState' Recurly.SubscriptionState,
+Recurly,PrimitiveExtensions,0,5,0,0,5,35,5,0,0,-1,0,0,,
+Recurly,AccountList,0,2,3,0,0,30,5,0,1,-1,0,1,,Recurly.Accounts
+Recurly,AddOn,3,12,15,0,6,182,26,0,1,0.67,5,4,Recurly.Client' Recurly.HttpRequestMethod' Recurly.Type' Recurly.RevenueSchedule' Recurly.Plan,Recurly.SubscriptionAddOnList' Recurly.Plan' Recurly.Test.SubscriptionTest' Recurly.Test.List.SubscriptionAddOnListTest
+Recurly,Adjustment,4,10,23,0,3,223,18,0,1,0.6,4,12,Recurly.AdjustmentState' Recurly.Client' Recurly.HttpRequestMethod' Recurly.RevenueSchedule,Recurly.Account' Recurly.Purchase' Recurly.Adjustments' Recurly.Invoice' Recurly.RefundList' Recurly.Refund' Recurly.Test.AccountTest' Recurly.Test.AdjustmentTest' Recurly.Test.InvoiceTest' Recurly.Test.AccountListTest' Recurly.Test.InvoiceListTest' Recurly.Test.TransactionTest
+Recurly,AdjustmentType,0,0,0,0,0,6,0,0,0,-1,0,2,,Recurly.Account' Recurly.Test.AdjustmentTest
+Recurly,AdjustmentState,0,0,0,0,0,6,0,0,0,-1,0,3,,Recurly.Account' Recurly.Adjustment' Recurly.Test.AdjustmentTest
+Recurly,RevenueSchedule,0,0,0,0,0,7,0,0,0,-1,0,5,,Recurly.AddOn' Recurly.Adjustment' Recurly.Plan' Recurly.Subscription' Recurly.SubscriptionAddOn
+Recurly,Adjustments,0,1,0,0,1,11,1,0,0,-1,3,1,Recurly.Adjustment' Recurly.Client' Recurly.HttpRequestMethod,Recurly.Test.AdjustmentTest
+Recurly,AdjustmentList,0,3,3,0,2,33,6,0,1,-1,0,1,,Recurly.Account
+Recurly,BillingInfo,3,13,31,0,8,334,24,0,1,0.77,5,4,Recurly.Account' Recurly.Client' Recurly.HttpRequestMethod' Recurly.BankAccountType' Recurly.HppType,Recurly.Account' Recurly.StringExtensions' Recurly.Test.BaseTest' Recurly.Test.BillingInfoTest
+Recurly,CreditCardType,0,0,0,0,0,15,0,0,0,-1,0,3,,Recurly.StringExtensions' Recurly.Test.BillingInfoTest' Recurly.Test.ExtensionTest
+Recurly,HppType,0,0,0,0,0,4,0,0,0,-1,0,1,,Recurly.BillingInfo
+Recurly,BankAccountType,0,0,0,0,0,5,0,0,0,-1,0,2,,Recurly.BillingInfo' Recurly.Test.BaseTest
+Recurly,Client,1,14,2,0,7,344,21,0,0,0.36,5,29,Recurly.Configuration.Settings' Recurly.HttpRequestMethod' Recurly.Errors' Recurly.Error' Recurly.ValidationException,Recurly.GiftCard' Recurly.GiftCards' Recurly.Account' Recurly.Accounts' Recurly.AccountBalance' Recurly.Purchase' Recurly.Exports' Recurly.Usage' Recurly.Usages' Recurly.MeasuredUnit' Recurly.MeasuredUnits' Recurly.AddOn' Recurly.Adjustment' Recurly.Adjustments' Recurly.BillingInfo' Recurly.Coupon' Recurly.Coupons' Recurly.CouponRedemption' Recurly.Invoice' Recurly.Invoices' Recurly.Plan' Recurly.Plans' Recurly.RecurlyList<T>' Recurly.Subscription' Recurly.Subscriptions' Recurly.Transaction' Recurly.Transactions' Recurly.Test.BaseTest' Recurly.Test.AccountListTest
+Recurly,HttpRequestMethod,0,0,0,0,0,19,0,0,0,-1,0,28,,Recurly.GiftCard' Recurly.GiftCards' Recurly.Account' Recurly.Accounts' Recurly.AccountBalance' Recurly.Purchase' Recurly.Exports' Recurly.Usage' Recurly.Usages' Recurly.MeasuredUnit' Recurly.MeasuredUnits' Recurly.AddOn' Recurly.Adjustment' Recurly.Adjustments' Recurly.BillingInfo' Recurly.Client' Recurly.Coupon' Recurly.Coupons' Recurly.CouponRedemption' Recurly.Invoice' Recurly.Invoices' Recurly.Plan' Recurly.Plans' Recurly.RecurlyList<T>' Recurly.Subscription' Recurly.Subscriptions' Recurly.Transaction' Recurly.Transactions
+Recurly,Coupon,2,22,29,0,14,412,54,0,1,0.59,7,6,Recurly.CouponDiscountType' Recurly.Client' Recurly.HttpRequestMethod' Recurly.CouponList' Recurly.RedemptionResourceType' Recurly.CouponType' Recurly.CouponTemporalUnit,Recurly.Coupons' Recurly.Subscription' Recurly.Test.BaseTest' Recurly.Test.CouponRedemptionTest' Recurly.Test.CouponTest' Recurly.Test.SubscriptionTest
+Recurly,CouponState,0,0,0,0,0,8,0,0,0,-1,0,2,,Recurly.Coupons' Recurly.Test.CouponTest
+Recurly,CouponDiscountType,0,0,0,0,0,6,0,0,0,-1,0,2,,Recurly.Coupon' Recurly.Test.CouponTest
+Recurly,CouponDuration,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Recurly,CouponTemporalUnit,0,0,0,0,0,7,0,0,0,-1,0,1,,Recurly.Coupon
+Recurly,RedemptionResourceType,0,0,0,0,0,5,0,0,0,-1,0,1,,Recurly.Coupon
+Recurly,CouponType,0,0,0,0,0,6,0,0,0,-1,0,1,,Recurly.Coupon
+Recurly,Coupons,0,3,0,0,3,41,4,0,0,-1,7,1,Recurly.Coupon' Recurly.Client' Recurly.HttpRequestMethod' Recurly.RecurlyList' Recurly.CouponState' Recurly.FilterCriteria' Recurly.CouponList,Recurly.Test.CouponTest
+Recurly,CouponRedemption,0,10,10,0,5,127,14,0,1,-1,2,4,Recurly.Client' Recurly.HttpRequestMethod,Recurly.Account' Recurly.Invoice' Recurly.Test.CouponRedemptionTest' Recurly.Test.CouponTest
+Recurly,Error,0,4,5,0,1,101,13,0,0,-1,0,4,,Recurly.Client' Recurly.RecurlyException' Recurly.Test.BillingInfoTest' Recurly.Test.SubscriptionTest
+Recurly,RecurlyException,0,6,2,0,0,37,6,5,0,-1,2,1,Recurly.Errors' Recurly.Error,Recurly.Test.SubscriptionTest
+Recurly,InvalidCredentialsException,0,1,0,0,0,6,1,0,1,-1,1,0,Recurly.Errors,
+Recurly,Invoice,2,23,31,0,19,367,31,0,1,0.43,13,10,Recurly.Address' Recurly.Client' Recurly.SubscriptionList' Recurly.HttpRequestMethod' Recurly.RecurlyList' Recurly.CouponRedemption' Recurly.CouponRedemptionList' Recurly.Invoices' Recurly.Adjustment' Recurly.RefundOrderPriority' Recurly.RefundList' Recurly.OpenAmountRefund' Recurly.Collection,Recurly.Account' Recurly.Purchase' Recurly.MeasuredUnit' Recurly.Invoices' Recurly.Subscription' Recurly.Transaction' Recurly.Test.CouponRedemptionTest' Recurly.Test.InvoiceTest' Recurly.Test.InvoiceListTest' Recurly.Test.TransactionTest
+Recurly,InvoiceState,0,0,0,0,0,9,0,0,0,-1,0,3,,Recurly.Invoices' Recurly.Test.InvoiceTest' Recurly.Test.InvoiceListTest
+Recurly,RefundOrderPriority,0,0,0,0,0,5,0,0,0,-1,0,3,,Recurly.OpenAmountRefund' Recurly.Invoice' Recurly.RefundList
+Recurly,Collection,0,0,0,0,0,5,0,0,0,-1,0,3,,Recurly.Purchase' Recurly.Invoice' Recurly.Test.InvoiceTest
+Recurly,Invoices,0,6,0,0,6,53,6,0,0,-1,6,6,Recurly.InvoiceList' Recurly.Invoice' Recurly.InvoiceState' Recurly.Client' Recurly.HttpRequestMethod' Recurly.ValidationException,Recurly.Account' Recurly.Invoice' Recurly.Transaction' Recurly.Test.CouponRedemptionTest' Recurly.Test.InvoiceTest' Recurly.Test.InvoiceListTest
+Recurly,AddOnList,0,3,3,0,2,34,6,0,1,-1,0,1,,Recurly.Plan
+Recurly,CouponList,0,4,3,0,1,42,7,0,1,-1,0,2,,Recurly.Coupon' Recurly.Coupons
+Recurly,CouponRedemptionList,0,3,3,0,0,33,6,0,1,-1,0,3,,Recurly.Account' Recurly.Invoice' Recurly.Subscription
+Recurly,InvoiceList,0,2,3,0,0,31,5,0,1,-1,0,1,,Recurly.Invoices
+Recurly,NoteList,0,2,3,0,1,31,5,0,1,-1,0,1,,Recurly.Account
+Recurly,PlanList,0,2,3,0,0,30,5,0,1,-1,0,1,,Recurly.Plans
+Recurly,RefundList,2,4,0,0,1,37,6,0,0,0,3,1,Recurly.RefundOrderPriority' Recurly.Adjustment' Recurly.Refund,Recurly.Invoice
+Recurly,SubscriptionAddOnList,1,8,3,0,7,95,12,0,1,0.75,5,3,Recurly.Subscription' Recurly.SubscriptionAddOn' Recurly.AddOn' Recurly.RecurlyList' Recurly.Plan,Recurly.Subscription' Recurly.Test.SubscriptionTest' Recurly.Test.List.SubscriptionAddOnListTest
+Recurly,SubscriptionList,0,2,3,0,0,30,5,0,1,-1,0,3,,Recurly.Account' Recurly.Invoice' Recurly.Subscriptions
+Recurly,Note,0,3,3,0,0,38,7,0,1,-1,0,0,,
+Recurly,NotFoundException,0,1,0,0,0,6,1,0,1,-1,1,1,Recurly.Errors,Recurly.Test.BillingInfoTest
+Recurly,Plan,4,16,28,0,10,316,38,0,1,0.62,6,12,Recurly.AddOnList' Recurly.Client' Recurly.HttpRequestMethod' Recurly.AddOn' Recurly.IntervalUnit' Recurly.RevenueSchedule,Recurly.AddOn' Recurly.SubscriptionAddOnList' Recurly.Plans' Recurly.Subscription' Recurly.Test.BaseTest' Recurly.Test.CouponRedemptionTest' Recurly.Test.CouponTest' Recurly.Test.PlanListTest' Recurly.Test.SubscriptionListTest' Recurly.Test.PlanTest' Recurly.Test.SubscriptionTest' Recurly.Test.List.SubscriptionAddOnListTest
+Recurly,IntervalUnit,0,0,0,0,0,5,0,0,0,-1,0,4,,Recurly.Plan' Recurly.Test.SubscriptionListTest' Recurly.Test.PlanTest' Recurly.Test.SubscriptionTest
+Recurly,Plans,0,3,0,0,3,35,3,0,0,-1,6,3,Recurly.RecurlyList' Recurly.FilterCriteria' Recurly.Plan' Recurly.PlanList' Recurly.Client' Recurly.HttpRequestMethod,Recurly.Test.PlanListTest' Recurly.Test.PlanTest' Recurly.Test.SubscriptionTest
+Recurly,RecurlyList<T>,3,36,9,0,8,191,37,0,0,0.31,3,0,Recurly.HttpRequestMethod' Recurly.Configuration.Settings' Recurly.Client,
+Recurly,RecurlyList,0,1,0,0,1,17,1,18,0,-1,0,22,,Recurly.Account' Recurly.Accounts' Recurly.ShippingAddressList' Recurly.Coupons' Recurly.Invoice' Recurly.SubscriptionAddOnList' Recurly.Plans' Recurly.Subscriptions' Recurly.Transactions' Recurly.XmlWriterExtensions' Recurly.Test.AccountTest' Recurly.Test.AdjustmentTest' Recurly.Test.CouponRedemptionTest' Recurly.Test.CouponTest' Recurly.Test.InvoiceTest' Recurly.Test.AccountListTest' Recurly.Test.InvoiceListTest' Recurly.Test.PlanListTest' Recurly.Test.SubscriptionListTest' Recurly.Test.TransactionListTest' Recurly.Test.TransactionTest' Recurly.Test.List.ExportListTest
+Recurly,EmptyRecurlyList<T>,1,0,1,0,0,8,0,0,0,-1,0,0,,
+Recurly,EmptyRecurlyListImpl<T>,0,2,3,0,1,23,2,0,1,-1,0,0,,
+Recurly,PropertyOutOfRangeException,0,1,1,0,0,8,1,0,1,-1,0,0,,
+Recurly,QueryStringBuilder,0,1,0,0,0,7,1,0,0,-1,1,3,Recurly.QueryStringBuilderContext,Recurly.Account' Recurly.Transactions' Recurly.Test.QueryBuilderTest
+Recurly,QueryStringBuilderContext,2,4,0,0,4,26,6,0,0,0,0,3,,Recurly.Account' Recurly.QueryStringBuilder' Recurly.Test.QueryBuilderTest
+Recurly,RecurlyEntity,0,3,1,0,0,10,3,24,0,-1,0,0,,
+Recurly,Refund,0,3,3,0,0,24,3,0,1,-1,1,1,Recurly.Adjustment,Recurly.RefundList
+Recurly,ServerException,0,2,0,0,0,9,2,1,1,-1,1,0,Recurly.Errors,
+Recurly,StringExtensions,0,15,0,0,15,231,36,0,0,-1,2,0,Recurly.CreditCardType' Recurly.BillingInfo,
+Recurly,Subscription,16,34,46,0,20,764,69,0,1,0.24,13,9,Recurly.Address' Recurly.Account' Recurly.Invoice' Recurly.Plan' Recurly.ShippingAddress' Recurly.Coupon' Recurly.SubscriptionAddOnList' Recurly.Client' Recurly.HttpRequestMethod' Recurly.ChangeTimeframe' Recurly.RefundType' Recurly.CouponRedemptionList' Recurly.RevenueSchedule,Recurly.Account' Recurly.Purchase' Recurly.SubscriptionAddOnList' Recurly.Subscriptions' Recurly.Test.CouponRedemptionTest' Recurly.Test.ExtensionTest' Recurly.Test.SubscriptionListTest' Recurly.Test.SubscriptionTest' Recurly.Test.List.SubscriptionAddOnListTest
+Recurly,SubscriptionState,0,0,0,0,0,16,0,0,0,-1,0,5,,Recurly.Account' Recurly.EnumExtensions' Recurly.Subscriptions' Recurly.Test.SubscriptionListTest' Recurly.Test.SubscriptionTest
+Recurly,ChangeTimeframe,0,0,0,0,0,5,0,0,0,-1,0,2,,Recurly.Subscription' Recurly.Test.SubscriptionTest
+Recurly,RefundType,0,0,0,0,0,6,0,0,0,-1,0,2,,Recurly.Subscription' Recurly.Test.SubscriptionTest
+Recurly,Subscriptions,0,3,0,0,3,37,3,0,0,-1,7,2,Recurly.RecurlyList' Recurly.SubscriptionState' Recurly.FilterCriteria' Recurly.Subscription' Recurly.SubscriptionList' Recurly.Client' Recurly.HttpRequestMethod,Recurly.Test.SubscriptionListTest' Recurly.Test.SubscriptionTest
+Recurly,SubscriptionAddOn,0,4,4,0,2,51,9,0,1,-1,1,3,Recurly.RevenueSchedule,Recurly.SubscriptionAddOnList' Recurly.Test.SubscriptionTest' Recurly.Test.List.SubscriptionAddOnListTest
+Recurly,TemporarilyUnavailableException,0,1,0,0,0,6,1,0,2,-1,0,0,,
+Recurly,Transaction,2,14,31,0,10,287,19,0,1,0.79,6,4,Recurly.Account' Recurly.Client' Recurly.HttpRequestMethod' Recurly.Invoices' Recurly.Invoice' Recurly.TransactionState,Recurly.Transactions' Recurly.Test.InvoiceTest' Recurly.Test.TransactionListTest' Recurly.Test.TransactionTest
+Recurly,TransactionState,0,0,0,0,0,21,0,0,0,-1,0,5,,Recurly.Account' Recurly.Transaction' Recurly.Transactions' Recurly.Test.TransactionListTest' Recurly.Test.TransactionTest
+Recurly,TransactionType,0,0,0,0,0,16,0,0,0,-1,0,3,,Recurly.Account' Recurly.Transactions' Recurly.Test.TransactionListTest
+Recurly,Transactions,1,3,0,0,3,46,5,0,0,0.67,9,2,Recurly.QueryStringBuilder' Recurly.RecurlyList' Recurly.TransactionState' Recurly.TransactionType' Recurly.FilterCriteria' Recurly.TransactionList' Recurly.Transaction' Recurly.Client' Recurly.HttpRequestMethod,Recurly.Test.TransactionListTest' Recurly.Test.TransactionTest
+Recurly,TransactionList,0,3,3,0,0,48,6,0,1,-1,0,3,,Recurly.Account' Recurly.Transactions' Recurly.Test.TransactionListTest
+Recurly,ValidationException,1,2,0,0,0,13,2,0,1,1,1,3,Recurly.Errors,Recurly.Client' Recurly.Invoices' Recurly.Test.List.SubscriptionAddOnListTest
+Recurly,XmlWriterExtensions,0,5,0,0,4,74,11,0,0,-1,1,0,Recurly.RecurlyList,
+Recurly.List,ExportDateList,0,2,3,0,1,29,5,0,1,-1,0,1,,Recurly.Exports
+Recurly.List,ExportFileList,0,2,3,0,1,20,5,0,1,-1,0,1,,Recurly.Exports
+Recurly.Configuration,SettingsManager,0,2,0,0,2,11,2,0,0,-1,1,1,Recurly.Configuration.Settings,Recurly.Test.SettingsManagerTest
+Recurly.Configuration,Settings,8,4,7,1,4,118,5,0,0,0.5,1,5,Recurly.Configuration.Section,Recurly.Client' Recurly.RecurlyList<T>' Recurly.Configuration.SettingsManager' Recurly.Test.AccountListTest' Recurly.Test.SettingsManagerTest
+Recurly.Configuration,Section,0,0,5,0,0,48,0,0,0,-1,0,2,,Recurly.Configuration.Settings' Recurly.Test.SystemTest

@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Fomm,ProductInfo,4,0,0,4,0,7,0,0,0,-1,0,3,,Fomm.Updater.GitHub' Fomm.Updater.Release' Fomm.Updater.UpdateForm
+Fomm.Updater,GitHub,2,3,0,0,2,50,6,0,1,0,3,0,Fomm.ProductInfo' MiniJSON.Json' Fomm.Updater.Release,
+Fomm.Updater,Release,0,4,4,0,3,42,4,0,0,-1,3,3,Fomm.Updater.IReleaseProvider' Fomm.ProductInfo' Fomm.Updater.File,Fomm.Updater.GitHub' Fomm.Updater.IReleaseProvider' Fomm.Updater.UpdateForm
+Fomm.Updater,File,0,1,4,0,1,14,1,0,0,-1,0,2,,Fomm.Updater.Release' Fomm.Updater.UpdateForm
+Fomm.Updater,IReleaseProvider,0,1,0,0,0,4,1,1,0,-1,1,1,Fomm.Updater.Release,Fomm.Updater.Release
+Fomm.Updater,UninstallInfo,21,12,17,0,7,320,14,0,0,0.58,0,3,,Fomm.Updater.UpdateHelper' Fomm.Updater.UpdateForm' Fomm.Updater.Program
+Fomm.Updater,UpdateHelper,8,9,4,1,8,182,13,0,0,0.67,2,2,Fomm.Updater.UninstallInfo' Fomm.Updater.TOKEN_INFORMATION_CLASS,Fomm.Updater.UpdateForm' Fomm.Updater.Program
+Fomm.Updater,TOKEN_INFORMATION_CLASS,0,0,0,0,0,32,0,0,0,-1,0,1,,Fomm.Updater.UpdateHelper
+Fomm.Updater,TOKEN_ELEVATION_TYPE,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Fomm.Updater,UpdateForm,10,13,0,0,1,247,21,0,0,0.23,7,0,System.IO.Compression.ZipStorer' Fomm.ProductInfo' Fomm.Updater.Release' Fomm.Updater.File' System.IO.Compression.ZipFileEntry' Fomm.Updater.UpdateHelper' Fomm.Updater.UninstallInfo,
+Fomm.Updater,Program,0,1,0,0,0,48,3,0,0,-1,2,0,Fomm.Updater.UpdateHelper' Fomm.Updater.UninstallInfo,
+MiniJSON,Json,0,2,0,0,2,471,3,0,0,-1,2,1,MiniJSON.Parser' MiniJSON.Serializer,Fomm.Updater.GitHub
+MiniJSON,Parser,2,11,4,0,3,304,22,0,0,0.18,1,1,MiniJSON.TOKEN,MiniJSON.Json
+MiniJSON,TOKEN,0,0,0,0,0,14,0,0,0,-1,0,1,,MiniJSON.Parser
+MiniJSON,Serializer,1,7,0,0,1,141,15,0,0,0,0,1,,MiniJSON.Json
+System.IO.Compression,ZipStorer,12,24,0,3,13,694,58,0,0,0,2,1,System.IO.Compression.Compression' System.IO.Compression.ZipFileEntry,Fomm.Updater.UpdateForm
+System.IO.Compression,Compression,0,0,0,0,0,7,0,0,0,-1,0,2,,System.IO.Compression.ZipStorer' System.IO.Compression.ZipFileEntry
+System.IO.Compression,ZipFileEntry,11,1,0,11,1,31,1,0,0,0,1,2,System.IO.Compression.Compression,Fomm.Updater.UpdateForm' System.IO.Compression.ZipStorer

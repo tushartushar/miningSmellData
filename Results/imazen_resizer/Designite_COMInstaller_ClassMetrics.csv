@@ -1,12 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Comparer,5,4,0,0,4,88,23,0,0,0,2,2
-Dll,1,11,8,1,9,181,22,0,0,0.27,1,1
-DllCollection,0,1,0,0,1,20,5,0,0,-1,0,4
-Main,9,9,1,0,4,186,14,0,0,0.22,2,0
-Installer,2,2,0,2,2,22,4,0,0,0,1,0
-Program,0,1,0,0,0,13,1,0,0,-1,0,0
-Regasm,3,4,0,3,2,56,9,0,0,0.5,0,1
-RegCleaner,0,2,0,0,2,60,2,0,0,-1,0,0
-Uninstaller,1,2,0,1,2,24,5,0,0,0,1,0
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+COMInstaller,Comparer,5,4,0,0,4,100,23,0,0,0,2,1,COMInstaller.DllCollection' COMInstaller.Dll,COMInstaller.Main
+COMInstaller,Dll,1,11,8,1,9,161,25,0,0,0.27,1,3,COMInstaller.Regasm,COMInstaller.Comparer' COMInstaller.Installer' COMInstaller.Uninstaller
+COMInstaller,DllCollection,0,1,0,0,1,18,5,0,0,-1,0,4,,COMInstaller.Comparer' COMInstaller.Main' COMInstaller.Installer' COMInstaller.Uninstaller
+COMInstaller,Main,9,9,1,0,4,185,15,0,0,0.22,4,0,COMInstaller.DllCollection' COMInstaller.Comparer' COMInstaller.Uninstaller' COMInstaller.Installer,
+COMInstaller,Installer,2,2,0,2,2,21,4,0,0,0,2,1,COMInstaller.DllCollection' COMInstaller.Dll,COMInstaller.Main
+COMInstaller,Program,0,1,0,0,0,11,1,0,0,-1,0,0,,
+COMInstaller,Regasm,3,4,0,3,2,55,9,0,0,0.5,0,1,,COMInstaller.Dll
+COMInstaller,RegCleaner,0,2,0,0,2,64,2,0,0,-1,0,0,,
+COMInstaller,Uninstaller,1,2,0,1,2,23,5,0,0,0,2,1,COMInstaller.DllCollection' COMInstaller.Dll,COMInstaller.Main
+COMInstaller.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+COMInstaller.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

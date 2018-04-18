@@ -1,9 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IStudentSystemData,0,0,4,0,0,15,0,1,0,-1,2,0
-IStudentSystemDbContext,0,3,4,0,0,22,3,1,0,-1,4,3
-StudentsSystemData,2,4,4,0,3,49,6,0,1,0.5,4,1
-StudentSystemDbContext,0,3,4,0,3,31,3,0,1,-1,4,1
-Configuration,0,4,0,0,1,50,6,0,0,-1,1,0
-GenericRepository,2,8,0,0,7,49,9,1,1,0.25,1,1
-IGenericRepository,0,6,0,0,0,9,6,2,0,-1,0,2
-StudentsRepository,0,2,0,0,2,10,2,0,2,-1,1,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+StudentSystem.Data,IStudentSystemData,0,0,4,0,0,7,0,1,0,-1,0,4,,StudentSystem.Services.Controllers.CoursesController' StudentSystem.Services.Controllers.StudentsController' StudentSystem.Services.Controllers.HomeworksController' StudentSystem.Services.Controllers.TestsController
+StudentSystem.Data,IStudentSystemDbContext,0,3,4,0,0,10,3,1,0,-1,0,3,,StudentSystem.Data.StudentsSystemData' StudentSystem.Data.Repositories.GenericRepository<T>' StudentSystem.Data.Repositories.StudentsRepository
+StudentSystem.Data,StudentsSystemData,2,4,4,0,3,60,6,0,1,0.5,4,1,StudentSystem.Data.IStudentSystemDbContext' StudentSystem.Data.Repositories.IGenericRepository' StudentSystem.Models.Student' StudentSystem.Data.Repositories.StudentsRepository,StudentSystem.ConsoleClient.ConsoleClient
+StudentSystem.Data,StudentSystemDbContext,0,3,4,0,3,20,3,0,1,-1,0,1,,StudentSystem.Data.Migrations.Configuration
+StudentSystem.Data.Migrations,Configuration,0,4,0,0,1,57,6,0,0,-1,1,0,StudentSystem.Data.StudentSystemDbContext,
+StudentSystem.Data.Repositories,GenericRepository<T>,2,8,0,0,7,50,9,0,1,0.25,1,0,StudentSystem.Data.IStudentSystemDbContext,
+StudentSystem.Data.Repositories,IGenericRepository,0,6,0,0,0,9,6,2,0,-1,0,5,,StudentSystem.ConsoleClient.ConsoleClient' StudentSystem.Data.StudentsSystemData' StudentSystem.Services.Controllers.CoursesController' StudentSystem.Services.Controllers.HomeworksController' StudentSystem.Services.Controllers.TestsController
+StudentSystem.Data.Repositories,StudentsRepository,0,2,0,0,2,11,2,0,1,-1,2,3,StudentSystem.Data.IStudentSystemDbContext' StudentSystem.Models.Student,StudentSystem.ConsoleClient.ConsoleClient' StudentSystem.Data.StudentsSystemData' StudentSystem.Services.Controllers.StudentsController

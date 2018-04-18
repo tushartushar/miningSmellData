@@ -1,0 +1,83 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NBehave.VS2010.Plugin.Configuration,CodeWindowTask,3,4,0,0,1,39,5,0,1,0,4,0,NBehave.VS2010.Plugin.Contracts.IOutputWindow' NBehave.VS2010.Plugin.Domain.IScenarioRunner' NBehave.Narrator.Framework.Tiny.TinyIoCContainer' NBehave.VS2010.Plugin.Identifiers,
+NBehave.VS2010.Plugin.Configuration,LoggingTask,0,1,0,0,1,16,1,0,1,-1,4,0,NBehave.VS2010.Plugin.Contracts.IOutputWindow' NBehave.VS2010.Plugin.Configuration.OutputWindowTarget' NBehave.VS2010.Plugin.Domain.PluginLogger' NBehave.Narrator.Framework.Tiny.TinyIoCContainer,
+NBehave.VS2010.Plugin.Configuration,OutputWindowTarget,1,5,0,0,1,33,7,0,0,0.8,1,1,NBehave.VS2010.Plugin.Contracts.IOutputWindow,NBehave.VS2010.Plugin.Configuration.LoggingTask
+NBehave.VS2010.Plugin.Configuration,MenuCommandTask,6,7,0,0,2,67,10,0,1,0,5,0,NBehave.VS2010.Plugin.Domain.IPluginConfiguration' NBehave.VS2010.Plugin.Domain.ISolutionEventsListener' NBehave.VS2010.Plugin.Contracts.IVisualStudioService' NBehave.Narrator.Framework.Tiny.TinyIoCContainer' NBehave.VS2010.Plugin.Identifiers,
+NBehave.VS2010.Plugin.Configuration,OutputWindowTask,0,1,0,0,1,14,1,0,1,-1,2,0,NBehave.VS2010.Plugin.Domain.OutputWindow' NBehave.Narrator.Framework.Tiny.TinyIoCContainer,
+NBehave.VS2010.Plugin.Configuration,PublishCrossPackageServicesTask,0,2,0,0,1,22,2,0,1,-1,1,0,NBehave.Narrator.Framework.Tiny.TinyIoCContainer,
+NBehave.VS2010.Plugin.Domain,IPluginConfiguration,0,0,1,0,0,4,0,1,0,-1,0,2,,NBehave.VS2010.Plugin.Configuration.MenuCommandTask' NBehave.VS2010.Plugin.Domain.ScenarioRunner
+NBehave.VS2010.Plugin.Domain,IConsoleRunner,0,1,0,0,0,4,1,1,0,-1,0,1,,NBehave.VS2010.Plugin.Domain.ScenarioRunner
+NBehave.VS2010.Plugin.Domain,ConsoleRunner,2,11,1,0,2,109,21,0,1,0,2,0,NBehave.VS2010.Plugin.Contracts.IVisualStudioService' NBehave.VS2010.Plugin.Domain.INuGet,
+NBehave.VS2010.Plugin.Domain,INuGet,0,4,0,0,0,7,4,1,0,-1,0,1,,NBehave.VS2010.Plugin.Domain.ConsoleRunner
+NBehave.VS2010.Plugin.Domain,NuGet,2,8,0,0,5,71,15,0,1,0,1,0,NBehave.VS2010.Plugin.Contracts.IVisualStudioService,
+NBehave.VS2010.Plugin.Domain,PluginConfiguration,6,11,1,0,2,111,19,0,1,0.27,2,0,NBehave.VS2010.Plugin.Domain.ISolutionEventsListener' NBehave.VS2010.Plugin.Contracts.IVisualStudioService,
+NBehave.VS2010.Plugin.Domain,ISolutionEventsListener,0,0,0,0,0,5,0,1,0,-1,0,2,,NBehave.VS2010.Plugin.Configuration.MenuCommandTask' NBehave.VS2010.Plugin.Domain.PluginConfiguration
+NBehave.VS2010.Plugin.Domain,SolutionEventsListener,2,13,0,0,2,73,15,0,1,0.85,0,0,,
+NBehave.VS2010.Plugin.Domain,PluginLogger,1,5,0,0,4,25,6,0,1,0,0,2,,NBehave.VS2010.Plugin.Configuration.LoggingTask' NBehave.VS2010.Plugin.Specifications.Domain.PluginLoggerSpec
+NBehave.VS2010.Plugin.Domain,VisualStudioService,2,7,4,0,7,91,9,0,1,0.43,0,0,,
+NBehave.VS2010.Plugin.Domain,OutputWindow,2,4,0,0,4,24,4,0,1,0,0,1,,NBehave.VS2010.Plugin.Configuration.OutputWindowTask
+NBehave.VS2010.Plugin.Domain,IScenarioRunner,0,2,0,0,0,7,2,1,0,-1,0,3,,NBehave.VS2010.Plugin.Configuration.CodeWindowTask' NBehave.VS2010.Plugin.Editor.Glyphs.ViewModels.RunOrDebugViewModel' NBehave.VS2010.Plugin.Editor.ServiceRegistrar
+NBehave.VS2010.Plugin.Domain,ScenarioRunner,5,8,1,0,3,111,11,0,1,0,4,0,NBehave.VS2010.Plugin.Contracts.IVisualStudioService' NBehave.VS2010.Plugin.Contracts.IOutputWindow' NBehave.VS2010.Plugin.Domain.IConsoleRunner' NBehave.VS2010.Plugin.Domain.IPluginConfiguration,
+NBehave.VS2010.Plugin.Editor.Domain,FeatureGherkinText,1,1,3,0,1,18,1,0,1,0,1,0,NBehave.Narrator.Framework.Feature,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinErrorTagger,1,3,0,0,2,30,5,0,0,0.67,5,0,NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Tagging.GherkinParseEvent' NBehave.VS2010.Plugin.Tagging.TokenParserEventArgs' NBehave.VS2010.Plugin.Tagging.GherkinTokenType' NBehave.VS2010.Plugin.Tagging.GherkinTokenTag,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinClassifier,3,6,0,0,2,62,9,0,0,0,2,0,NBehave.VS2010.Plugin.Tagging.GherkinTokenType' NBehave.VS2010.Plugin.Tagging.GherkinTokenTag,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTaggerProvider,4,1,0,0,1,23,1,0,0,0,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinFileClassificationDefinitions,18,0,0,0,0,75,0,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,ScenarioGherkinText,1,1,3,0,1,11,1,0,1,0,1,0,NBehave.Narrator.Framework.Scenario,
+NBehave.VS2010.Plugin.Editor.Domain,IGherkinText,0,0,3,0,0,6,0,2,0,-1,0,2,,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphTag' NBehave.VS2010.Plugin.Editor.Glyphs.ViewModels.RunOrDebugViewModel
+NBehave.VS2010.Plugin.Editor.Domain,GherkinErrorTagProvider,3,1,0,0,1,18,1,0,0,0,2,0,NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Tagging.TokenFactory,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTokenTagger,2,3,0,0,2,27,5,0,0,0.67,5,0,NBehave.VS2010.Plugin.Tagging.GherkinStepTagger' NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Tagging.GherkinParseEvent' NBehave.VS2010.Plugin.Tagging.TokenParserEventArgs' NBehave.VS2010.Plugin.Tagging.GherkinTokenType,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTokenTagProvider,3,1,0,0,1,17,1,0,0,0,2,0,NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Tagging.TokenFactory,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinSyntaxErrorClassificationFormat,0,1,0,0,1,12,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinFeatureTitleClassificationFormat,0,1,0,0,1,14,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinFeatureTitleFormat,0,1,0,0,1,15,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinDescriptionClassificationFormat,0,1,0,0,1,14,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinScenarioTitleClassificationFormat,0,1,0,0,1,15,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinScenarioTitleFormat,0,1,0,0,1,14,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinBackgroundTitleClassificationFormat,0,1,0,0,1,15,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinBackgroundTitleFormat,0,1,0,0,1,14,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinCommentClassificationFormat,0,1,0,0,1,14,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTagClassificationFormat,0,1,0,0,1,15,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinDocstringClassificationFormat,0,1,0,0,1,14,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinExamplesClassificationFormat,0,1,0,0,1,15,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinStepClassificationFormat,0,1,0,0,1,16,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinStepTextClassificationFormat,0,1,0,0,1,13,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTableClassificationFormat,0,1,0,0,1,15,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTableHeaderClassificationFormat,0,1,0,0,1,15,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTableCellClassificationFormat,0,1,0,0,1,14,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Domain,GherkinTableCellAltClassificationFormat,0,1,0,0,1,13,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Glyphs,CompositeGherkinListener,1,12,0,0,12,52,12,0,1,0,3,0,NBehave.Gherkin.IListener' NBehave.Gherkin.Token' NBehave.Gherkin.LineInFile,
+NBehave.VS2010.Plugin.Editor.Glyphs,PlayGlyphFactoryProvider,0,1,0,0,1,18,1,0,0,-1,1,0,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphFactory,
+NBehave.VS2010.Plugin.Editor.Glyphs,PlayGlyphFactory,0,1,0,0,1,11,2,0,0,-1,2,1,NBehave.VS2010.Plugin.Editor.Glyphs.Views.PlayGlyph' NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphTag,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphFactoryProvider
+NBehave.VS2010.Plugin.Editor.Glyphs,PlayGlyphMouseProcessorProvider,0,1,1,0,1,13,1,0,0,-1,1,0,NBehave.VS2010.Plugin.Editor.Glyphs.PlayMouseProcessor,
+NBehave.VS2010.Plugin.Editor.Glyphs,PlayMouseProcessor,3,2,0,0,2,26,3,0,0,0,1,1,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphTag,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphMouseProcessorProvider
+NBehave.VS2010.Plugin.Editor.Glyphs,PlayGlyphTag,2,4,0,0,4,28,5,0,0,0,4,3,NBehave.VS2010.Plugin.Editor.Domain.IGherkinText' NBehave.VS2010.Plugin.Editor.Glyphs.ViewModels.RunOrDebugViewModel' NBehave.VS2010.Plugin.Editor.Glyphs.Views.RunOrDebugView' NBehave.VS2010.Plugin.Tagging.WhiteSpaces,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphFactory' NBehave.VS2010.Plugin.Editor.Glyphs.PlayMouseProcessor' NBehave.VS2010.Plugin.Specifications.PlayTaggerSpec
+NBehave.VS2010.Plugin.Editor.Glyphs,PlayTagger,2,5,0,0,2,48,10,0,0,0,6,2,NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Tagging.GherkinParseEvent' NBehave.VS2010.Plugin.Tagging.TokenParserEventArgs' NBehave.VS2010.Plugin.Tagging.GherkinTokenType' NBehave.Narrator.Framework.Feature' NBehave.Narrator.Framework.Scenario,NBehave.VS2010.Plugin.Editor.Glyphs.PlayTaggerProvider' NBehave.VS2010.Plugin.Tagging.TokenFactory
+NBehave.VS2010.Plugin.Editor.Glyphs,PlayTaggerProvider,2,1,0,0,1,15,1,0,0,0,2,0,NBehave.VS2010.Plugin.Editor.Glyphs.PlayTagger' NBehave.VS2010.Plugin.Tagging.TokenFactory,
+NBehave.VS2010.Plugin.Editor.Glyphs.Controls,ContextMenuButton,1,0,1,1,0,10,0,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Glyphs.ViewModels,RunOrDebugViewModel,6,6,10,0,4,126,7,0,0,0.67,3,1,NBehave.VS2010.Plugin.Editor.Domain.IGherkinText' NBehave.VS2010.Plugin.Domain.IScenarioRunner' NBehave.VS2010.Plugin.Editor.Glyphs.Views.IRunOrDebugView,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphTag
+NBehave.VS2010.Plugin.Editor.Glyphs.Views,IRunOrDebugView,0,1,1,0,0,5,1,1,0,-1,0,1,,NBehave.VS2010.Plugin.Editor.Glyphs.ViewModels.RunOrDebugViewModel
+NBehave.VS2010.Plugin.Editor.Glyphs.Views,PlayGlyph,1,3,0,0,2,39,4,0,0,0,0,1,,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphFactory
+NBehave.VS2010.Plugin.Editor.Glyphs.Views,RunOrDebugView,0,2,1,0,2,14,2,0,1,-1,0,1,,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphTag
+NBehave.VS2010.Plugin.Editor,ServiceRegistrar,0,1,2,0,1,24,2,0,0,-1,3,1,NBehave.VS2010.Plugin.Contracts.IPluginLogger' NBehave.VS2010.Plugin.Domain.IScenarioRunner' NBehave.VS2010.Plugin.Tagging.TokenParser,NBehave.VS2010.Plugin.Tagging.TokenFactory
+NBehave.VS2010.Plugin.Editor,VisualStudioRuntimeComposer,0,4,1,0,3,26,4,0,0,-1,0,0,,
+NBehave.VS2010.Plugin,FileExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
+NBehave.VS2010.Plugin,Logo,3,3,0,0,2,65,5,0,0,0,0,0,,
+NBehave.VS2010.Plugin,Identifiers,6,0,0,6,0,12,0,0,0,-1,0,2,,NBehave.VS2010.Plugin.Configuration.CodeWindowTask' NBehave.VS2010.Plugin.Configuration.MenuCommandTask
+NBehave.VS2010.Plugin,NBehaveRunnerPackage,0,1,0,0,0,34,1,0,0,-1,2,0,NBehave.Narrator.Framework.Tiny.TinyIoCContainer' NBehave.Narrator.Framework.Tiny.RegisterOptions,
+NBehave.VS2010.Plugin.Tagging,GherkinEventListener,1,11,1,0,11,70,15,0,1,0,4,2,NBehave.VS2010.Plugin.Tagging.GherkinTokenType' NBehave.Gherkin.Token' NBehave.Gherkin.LineInFile' NBehave.VS2010.Plugin.Tagging.GherkinParseEvent,NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Specifications.GherkinEventListenerSpec
+NBehave.VS2010.Plugin.Tagging,GherkinParseEvent,2,5,0,2,4,46,11,0,0,0,2,10,NBehave.VS2010.Plugin.Tagging.GherkinTokenType' NBehave.Gherkin.Token,NBehave.VS2010.Plugin.Editor.Domain.GherkinErrorTagger' NBehave.VS2010.Plugin.Editor.Domain.GherkinTokenTagger' NBehave.VS2010.Plugin.Editor.Glyphs.PlayTagger' NBehave.VS2010.Plugin.Tagging.GherkinEventListener' NBehave.VS2010.Plugin.Tagging.GherkinStepTagger' NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Tagging.TokenParserEventArgs' NBehave.VS2010.Plugin.Specifications.GherkinEventListenerSpec' NBehave.VS2010.Plugin.Specifications.GherkinParsEventSpec' NBehave.VS2010.Plugin.Specifications.GherkinStepTaggerSpec
+NBehave.VS2010.Plugin.Tagging,WhiteSpaces,1,0,0,1,0,4,0,0,0,-1,0,2,,NBehave.VS2010.Plugin.Editor.Glyphs.PlayGlyphTag' NBehave.VS2010.Plugin.Tagging.GherkinStepTagger
+NBehave.VS2010.Plugin.Tagging,GherkinStepTagger,2,22,0,0,2,248,51,0,0,0.23,5,2,NBehave.VS2010.Plugin.Tagging.GherkinTokenType' NBehave.VS2010.Plugin.Tagging.GherkinParseEvent' NBehave.Gherkin.LineInFile' NBehave.Gherkin.Token' NBehave.VS2010.Plugin.Tagging.WhiteSpaces,NBehave.VS2010.Plugin.Editor.Domain.GherkinTokenTagger' NBehave.VS2010.Plugin.Specifications.GherkinStepTaggerSpec
+NBehave.VS2010.Plugin.Tagging,GherkinTokenTag,0,1,1,0,1,8,1,0,0,-1,1,3,NBehave.VS2010.Plugin.Tagging.GherkinTokenType,NBehave.VS2010.Plugin.Editor.Domain.GherkinErrorTagger' NBehave.VS2010.Plugin.Editor.Domain.GherkinClassifier' NBehave.VS2010.Plugin.Specifications.GherkinStepTaggerSpec
+NBehave.VS2010.Plugin.Tagging,GherkinTokenType,0,0,0,0,0,23,0,0,0,-1,0,12,,NBehave.VS2010.Plugin.Editor.Domain.GherkinErrorTagger' NBehave.VS2010.Plugin.Editor.Domain.GherkinClassifier' NBehave.VS2010.Plugin.Editor.Domain.GherkinTokenTagger' NBehave.VS2010.Plugin.Editor.Glyphs.PlayTagger' NBehave.VS2010.Plugin.Tagging.GherkinEventListener' NBehave.VS2010.Plugin.Tagging.GherkinParseEvent' NBehave.VS2010.Plugin.Tagging.GherkinStepTagger' NBehave.VS2010.Plugin.Tagging.GherkinTokenTag' NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Specifications.GherkinEventListenerSpec' NBehave.VS2010.Plugin.Specifications.GherkinParsEventSpec' NBehave.VS2010.Plugin.Specifications.GherkinStepTaggerSpec
+NBehave.VS2010.Plugin.Tagging,TokenParser,8,11,2,0,4,165,18,0,0,0.18,10,7,NBehave.VS2010.Plugin.Tagging.GherkinParseEvent' NBehave.VS2010.Plugin.Tagging.GherkinTokenType' NBehave.Gherkin.LineInFile' NBehave.Gherkin.Token' NBehave.Narrator.Framework.NBehaveConfiguration' NBehave.Narrator.Framework.TextParsing.GherkinScenarioParser' NBehave.VS2010.Plugin.Tagging.GherkinEventListener' NBehave.Gherkin.IListener' NBehave.Gherkin.Parser' NBehave.Gherkin.ParseException,NBehave.VS2010.Plugin.Editor.Domain.GherkinErrorTagger' NBehave.VS2010.Plugin.Editor.Domain.GherkinErrorTagProvider' NBehave.VS2010.Plugin.Editor.Domain.GherkinTokenTagger' NBehave.VS2010.Plugin.Editor.Domain.GherkinTokenTagProvider' NBehave.VS2010.Plugin.Editor.Glyphs.PlayTagger' NBehave.VS2010.Plugin.Editor.ServiceRegistrar' NBehave.VS2010.Plugin.Tagging.TokenFactory
+NBehave.VS2010.Plugin.Tagging,TokenParserEventArgs,0,1,2,0,1,10,1,0,0,-1,1,3,NBehave.VS2010.Plugin.Tagging.GherkinParseEvent,NBehave.VS2010.Plugin.Editor.Domain.GherkinErrorTagger' NBehave.VS2010.Plugin.Editor.Domain.GherkinTokenTagger' NBehave.VS2010.Plugin.Editor.Glyphs.PlayTagger
+NBehave.VS2010.Plugin.Tagging,TokenFactory,1,2,0,0,2,25,4,0,0,0,3,3,NBehave.VS2010.Plugin.Tagging.TokenParser' NBehave.VS2010.Plugin.Editor.ServiceRegistrar' NBehave.VS2010.Plugin.Editor.Glyphs.PlayTagger,NBehave.VS2010.Plugin.Editor.Domain.GherkinErrorTagProvider' NBehave.VS2010.Plugin.Editor.Domain.GherkinTokenTagProvider' NBehave.VS2010.Plugin.Editor.Glyphs.PlayTaggerProvider
+NBehave.VS2010.Plugin.Tiny,TinyIoCContainerExtension,0,1,0,0,1,8,2,0,0,-1,2,0,NBehave.VS2010.Plugin.Tiny.ITinyIocInstaller' NBehave.Narrator.Framework.Tiny.TinyIoCContainer,
+NBehave.VS2010.Plugin.Tiny,ITinyIocInstaller,0,1,0,0,0,4,1,5,0,-1,1,1,NBehave.Narrator.Framework.Tiny.TinyIoCContainer,NBehave.VS2010.Plugin.Tiny.TinyIoCContainerExtension
+NBehave.VS2010.Plugin.Contracts,IVisualStudioService,0,6,3,0,0,14,6,1,0,-1,0,5,,NBehave.VS2010.Plugin.Configuration.MenuCommandTask' NBehave.VS2010.Plugin.Domain.ConsoleRunner' NBehave.VS2010.Plugin.Domain.NuGet' NBehave.VS2010.Plugin.Domain.PluginConfiguration' NBehave.VS2010.Plugin.Domain.ScenarioRunner
+NBehave.VS2010.Plugin.Contracts,IPluginLogger,0,3,0,0,0,7,3,1,0,-1,0,1,,NBehave.VS2010.Plugin.Editor.ServiceRegistrar
+NBehave.VS2010.Plugin.Contracts,IOutputWindow,0,3,0,0,0,8,3,1,0,-1,0,4,,NBehave.VS2010.Plugin.Configuration.CodeWindowTask' NBehave.VS2010.Plugin.Configuration.LoggingTask' NBehave.VS2010.Plugin.Configuration.OutputWindowTarget' NBehave.VS2010.Plugin.Domain.ScenarioRunner
+NBehave.VS2010.Plugin.Editor.Extensions,NullExtensions,0,5,0,0,5,34,10,0,0,-1,0,0,,
+NBehave.VS2010.Plugin.Editor.Resources,c__projects_nbehave_src_nbehave_vs2010_plugin_editor_resources_colours_xaml,1,2,0,0,1,33,3,0,0,0,0,0,,

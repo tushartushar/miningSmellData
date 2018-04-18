@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GUI,COMPortForm,9,8,0,0,1,225,17,0,0,0.38,1,1,Serial.SerialPortWrapper,GUI.RobotControl
+GUI,RobotControl,16,15,0,0,3,444,22,0,1,0.13,8,1,Router.Router' Robot.Robot' Serial.SerialPortWrapper' GUI.COMPortForm' Robot.IRobotCommandWithStatus' GUI.Polyhedra' Commands.SpeedType' Commands.MoveTool,GUI.PathCAM
+GUI,RobotGUI,3,3,0,0,1,104,5,0,1,0,6,0,Router.Router' Robot.Robot' Serial.SerialPortWrapper' GUI.PreviousPoint' GUI.Polyhedra' Robot.IRobotCommandWithStatus,
+GUI,PreviousPoint,2,1,0,2,1,10,1,0,0,0,0,1,,GUI.RobotGUI
+GUI,IClickable3D,0,5,0,0,0,13,5,3,0,-1,1,1,Geometry.Ray,GUI.Drawing3D
+GUI,IOpenGLDrawable,0,1,0,0,0,4,1,7,0,-1,0,1,,GUI.Drawing3D
+GUI,Polyhedra,0,4,0,0,3,101,8,0,0,-1,0,3,,GUI.RobotControl' GUI.RobotGUI' GUI.TabsGUI
+GUI,RouterGUI,0,2,0,0,1,45,6,0,1,-1,2,1,Commands.MoveTool' Router.Router,GUI.PathCAM
+GUI,PathCAM,19,19,0,0,1,464,42,0,1,0.16,15,0,GUI.RouterGUI' GUI.Settings' GUI.TriangleMeshGUI' GUI.Drawing3D' GUI.RobotControl' Geometry.Plane' Geometry.Ray' Router.GCodeLoader' GUI.LoadMeshData' Geometry.DAE_Loader' Geometry.OBJ_Loader' Geometry.STL_Loader' Router.Paths.PathPlanner' Geometry.LineStrip' Geometry.TriangleMesh,
+GUI,LoadMeshData,3,0,0,3,0,6,0,0,0,-1,1,1,GUI.TriangleMeshGUI,GUI.PathCAM
+GUI,Program,0,1,0,0,0,13,1,0,0,-1,0,0,,
+GUI,Drawing3D,11,20,1,0,2,324,43,0,0,0.3,6,2,GUI.Viewport3d' GUI.IClickable3D' Router.Router' Geometry.Ray' GUI.TriangleMeshGUI' GUI.IOpenGLDrawable,GUI.PathCAM' GUI.Viewport3d
+GUI,Settings,2,1,8,0,1,70,1,0,0,0,2,1,Robot.Robot' Router.Router,GUI.PathCAM
+GUI,TabsGUI,11,7,1,0,2,203,26,0,1,0,8,0,Geometry.Slice' GUI.Polyhedra' Geometry.Plane' Geometry.Triangle' Geometry.LineStrip' Geometry.Ray' Geometry.Type' Geometry.LineSegment,
+GUI,TriangleMeshGUI,12,9,2,1,4,369,18,0,1,0.33,9,3,Geometry.Slice' Geometry.LineType' Geometry.TriangleMesh' Geometry.Plane' Geometry.Triangle' Geometry.Edge' Geometry.LineSegment' Geometry.Ray' Geometry.TriangleRayIntersect,GUI.PathCAM' GUI.LoadMeshData' GUI.Drawing3D
+GUI,Viewport3d,10,18,3,1,6,242,27,0,1,0.22,3,1,GUI.Drawing3D' Geometry.Plane' Geometry.Ray,GUI.Drawing3D
+GUI.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+GUI.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

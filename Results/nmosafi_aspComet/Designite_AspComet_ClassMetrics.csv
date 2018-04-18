@@ -1,0 +1,57 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AspComet,ChannelPattern,3,3,0,0,3,54,8,0,0,0,0,1,,AspComet.Eventing.EventHub
+AspComet,Client,4,13,6,0,11,120,24,0,1,0.23,3,1,AspComet.SystemTime' AspComet.ICometAsyncResult' AspComet.CometHttpHandler,AspComet.ClientFactory
+AspComet,ClientFactory,0,1,0,0,1,7,1,0,1,-1,1,1,AspComet.Client,AspComet.ServiceMetadata
+AspComet,ClientWorkflowManager,1,3,0,0,2,21,3,0,1,0,4,1,AspComet.IClientRepository' AspComet.IClient' AspComet.Eventing.DisconnectedEvent' AspComet.Eventing.EventHub,AspComet.ServiceMetadata
+AspComet,CometAsyncResult,5,3,6,0,3,47,3,0,1,0,1,1,AspComet.ITransport,AspComet.CometHttpHandler
+AspComet,CometHttpHandler,2,5,1,2,4,38,6,0,0,0.8,5,2,AspComet.Message' AspComet.CometAsyncResult' AspComet.MessageConverter' AspComet.IMessageBus' AspComet.ICometAsyncResult,AspComet.Client' AspComet.MessageHandlers.MetaConnectHandler
+AspComet,IClientWorkflowManager,0,1,0,0,0,4,1,1,0,-1,1,4,AspComet.IClient,AspComet.ServiceMetadata' AspComet.DummyServiceLocator' AspComet.MessageHandlerFactory' AspComet.MessageHandlers.MetaHandshakeHandler
+AspComet,ServiceMetadata,0,2,3,0,1,19,2,0,0,-1,14,0,AspComet.IClientRepository' AspComet.InMemoryClientRepository' AspComet.IClientIDGenerator' AspComet.RngUniqueClientIDGenerator' AspComet.IClientFactory' AspComet.ClientFactory' AspComet.IMessageHandlerFactory' AspComet.MessageHandlerFactory' AspComet.IMessagesProcessor' AspComet.MessagesProcessor' AspComet.IMessageBus' AspComet.MessageBus' AspComet.IClientWorkflowManager' AspComet.ClientWorkflowManager,
+AspComet,Setup,0,0,0,0,0,60,0,0,0,-1,0,0,,
+AspComet,AspComet,0,1,0,0,1,57,1,0,0,-1,1,0,AspComet.DummyServiceLocator,
+AspComet,DummyServiceLocator,0,7,6,0,7,43,13,0,0,-1,6,1,AspComet.IMessageBus' AspComet.IClientRepository' AspComet.IClientIDGenerator' AspComet.IClientFactory' AspComet.IClientWorkflowManager' AspComet.IMessageHandlerFactory,AspComet.AspComet
+AspComet,IClient,0,7,4,0,0,15,7,1,0,-1,0,19,,AspComet.ClientWorkflowManager' AspComet.IClientWorkflowManager' AspComet.ClientExtensions' AspComet.InMemoryClientRepository' AspComet.KeyedClientCollection' AspComet.IClientRepository' AspComet.MessageBus' AspComet.Eventing.DisconnectedEvent' AspComet.Eventing.HandshakenEvent' AspComet.Eventing.HandshakingEvent' AspComet.Eventing.SubscribedEvent' AspComet.Eventing.SubscribingEvent' AspComet.Eventing.UnsubscribedEvent' AspComet.MessageHandlers.MetaConnectHandler' AspComet.MessageHandlers.MetaDisconnectHandler' AspComet.MessageHandlers.MetaHandshakeHandler' AspComet.MessageHandlers.MetaSubscribeHandler' AspComet.MessageHandlers.MetaUnsubscribeHandler' AspComet.MessageHandlers.ForwardingHandler
+AspComet,ClientExtensions,0,1,0,0,1,7,1,0,0,-1,2,0,AspComet.IClient' AspComet.Message,
+AspComet,IClientFactory,0,1,0,0,0,9,1,1,0,-1,0,4,,AspComet.ServiceMetadata' AspComet.DummyServiceLocator' AspComet.MessageHandlerFactory' AspComet.MessageHandlers.MetaHandshakeHandler
+AspComet,ICometAsyncResult,0,2,0,0,0,5,2,1,0,-1,0,4,,AspComet.Client' AspComet.CometHttpHandler' AspComet.IMessageBus' AspComet.MessageBus
+AspComet,IMessagesProcessor,0,1,2,0,0,6,1,1,0,-1,0,2,,AspComet.ServiceMetadata' AspComet.MessageBus
+AspComet,Lookup<TKey;TValue>,1,4,2,0,3,48,7,0,0,0.5,0,0,,
+AspComet,IClientIDGenerator,0,1,0,0,0,4,1,1,0,-1,0,4,,AspComet.ServiceMetadata' AspComet.DummyServiceLocator' AspComet.MessageHandlerFactory' AspComet.MessageHandlers.MetaHandshakeHandler
+AspComet,IMessageBus,0,1,0,0,0,4,1,1,0,-1,2,3,AspComet.Message' AspComet.ICometAsyncResult,AspComet.CometHttpHandler' AspComet.ServiceMetadata' AspComet.DummyServiceLocator
+AspComet,InMemoryClientRepository,2,5,0,0,5,47,5,0,1,0,2,1,AspComet.KeyedClientCollection' AspComet.IClient,AspComet.ServiceMetadata
+AspComet,KeyedClientCollection,0,1,0,0,0,7,1,0,0,-1,1,1,AspComet.IClient,AspComet.InMemoryClientRepository
+AspComet,IClientRepository,0,5,0,0,0,8,5,1,0,-1,1,11,AspComet.IClient,AspComet.ClientWorkflowManager' AspComet.ServiceMetadata' AspComet.DummyServiceLocator' AspComet.MessageBus' AspComet.MessageHandlerFactory' AspComet.RngUniqueClientIDGenerator' AspComet.MessageHandlers.MetaConnectHandler' AspComet.MessageHandlers.MetaDisconnectHandler' AspComet.MessageHandlers.MetaSubscribeHandler' AspComet.MessageHandlers.MetaUnsubscribeHandler' AspComet.MessageHandlers.ForwardingHandler
+AspComet,IMessageHandler,0,1,0,0,0,4,1,8,0,-1,1,2,AspComet.Message,AspComet.MessageHandlerFactory' AspComet.MessagesProcessor
+AspComet,ITransport,0,1,0,0,0,4,1,2,0,-1,0,1,,AspComet.CometAsyncResult
+AspComet,Message,0,0,14,0,0,17,0,0,0,-1,0,19,,AspComet.CometHttpHandler' AspComet.ClientExtensions' AspComet.IMessageBus' AspComet.IMessageHandler' AspComet.MessageBus' AspComet.MessageConverter' AspComet.MessageExtensions' AspComet.MessageHandlerResult' AspComet.MessagesProcessor' AspComet.Eventing.HandshakingEvent' AspComet.Eventing.PublishingEvent' AspComet.MessageHandlers.ExceptionHandler' AspComet.MessageHandlers.MetaConnectHandler' AspComet.MessageHandlers.MetaDisconnectHandler' AspComet.MessageHandlers.MetaHandshakeHandler' AspComet.MessageHandlers.MetaSubscribeHandler' AspComet.MessageHandlers.MetaUnsubscribeHandler' AspComet.MessageHandlers.ForwardingHandler' AspComet.MessageHandlers.SwallowHandler
+AspComet,MessageBus,2,4,0,0,2,60,11,0,1,0,5,1,AspComet.IClientRepository' AspComet.IClient' AspComet.IMessagesProcessor' AspComet.ICometAsyncResult' AspComet.Message,AspComet.ServiceMetadata
+AspComet,MessageConverter,3,5,0,0,2,43,6,0,0,0.4,1,3,AspComet.Message,AspComet.CometHttpHandler' AspComet.Transports.CallbackPollingTransport' AspComet.Transports.LongPollingTransport
+AspComet,MessageExtensions,0,6,0,0,6,90,12,0,0,-1,1,0,AspComet.Message,
+AspComet,MessageHandlerResult,2,0,0,2,0,5,0,0,0,-1,1,9,AspComet.Message,AspComet.MessagesProcessor' AspComet.MessageHandlers.ExceptionHandler' AspComet.MessageHandlers.MetaConnectHandler' AspComet.MessageHandlers.MetaDisconnectHandler' AspComet.MessageHandlers.MetaHandshakeHandler' AspComet.MessageHandlers.MetaSubscribeHandler' AspComet.MessageHandlers.MetaUnsubscribeHandler' AspComet.MessageHandlers.ForwardingHandler' AspComet.MessageHandlers.SwallowHandler
+AspComet,IMessageHandlerFactory,0,1,0,0,0,4,1,1,0,-1,0,3,,AspComet.ServiceMetadata' AspComet.DummyServiceLocator' AspComet.MessagesProcessor
+AspComet,MessageHandlerFactory,7,3,0,0,2,48,7,0,1,0,6,1,AspComet.IMessageHandler' AspComet.IClientRepository' AspComet.IClientIDGenerator' AspComet.IClientFactory' AspComet.IClientWorkflowManager' AspComet.MessageHandlers.ExceptionHandler,AspComet.ServiceMetadata
+AspComet,MessagesProcessor,2,3,2,0,2,25,4,0,1,0.67,4,1,AspComet.IMessageHandlerFactory' AspComet.IMessageHandler' AspComet.MessageHandlerResult' AspComet.Message,AspComet.ServiceMetadata
+AspComet,RngUniqueClientIDGenerator,3,2,0,0,2,22,2,0,1,0,1,1,AspComet.IClientRepository,AspComet.ServiceMetadata
+AspComet,SystemTime,1,0,0,1,0,4,0,0,0,-1,0,1,,AspComet.Client
+AspComet.Eventing,IChannelEvent,0,0,1,0,0,4,0,4,1,-1,0,1,,AspComet.Eventing.EventHub
+AspComet.Eventing,CancellableEvent,0,0,2,0,0,11,0,3,1,-1,0,0,,
+AspComet.Eventing,DisconnectedEvent,1,1,1,0,1,19,1,0,1,0,1,1,AspComet.IClient,AspComet.ClientWorkflowManager
+AspComet.Eventing,EventHub,2,5,0,0,4,67,11,0,0,0,2,6,AspComet.Eventing.IChannelEvent' AspComet.ChannelPattern,AspComet.ClientWorkflowManager' AspComet.MessageHandlers.MetaHandshakeHandler' AspComet.MessageHandlers.MetaSubscribeHandler' AspComet.MessageHandlers.MetaUnsubscribeHandler' AspComet.MessageHandlers.ForwardingHandler' AspComet.MessageHandlers.SwallowHandler
+AspComet.Eventing,HandshakenEvent,1,1,1,0,1,19,1,0,1,0,1,1,AspComet.IClient,AspComet.MessageHandlers.MetaHandshakeHandler
+AspComet.Eventing,HandshakingEvent,2,1,3,0,1,33,1,0,2,0,2,1,AspComet.IClient' AspComet.Message,AspComet.MessageHandlers.MetaHandshakeHandler
+AspComet.Eventing,ICancellableEvent,0,0,2,0,0,11,0,1,1,-1,0,1,,AspComet.MessageHandlers.MetaSubscribeHandler
+AspComet.Eventing,IEvent,0,0,0,0,0,3,0,4,0,-1,0,0,,
+AspComet.Eventing,PublishingEvent,1,1,2,0,1,23,1,0,2,0,1,2,AspComet.Message,AspComet.MessageHandlers.ForwardingHandler' AspComet.MessageHandlers.SwallowHandler
+AspComet.Eventing,SubscribedEvent,2,1,2,0,1,29,1,0,2,0,1,1,AspComet.IClient,AspComet.MessageHandlers.MetaSubscribeHandler
+AspComet.Eventing,SubscribingEvent,2,1,2,0,1,29,1,0,2,0,1,1,AspComet.IClient,AspComet.MessageHandlers.MetaSubscribeHandler
+AspComet.Eventing,UnsubscribedEvent,2,1,2,0,1,27,1,0,2,0,1,1,AspComet.IClient,AspComet.MessageHandlers.MetaUnsubscribeHandler
+AspComet.MessageHandlers,ExceptionHandler,0,2,1,0,2,22,2,0,1,-1,2,1,AspComet.Message' AspComet.MessageHandlerResult,AspComet.MessageHandlerFactory
+AspComet.MessageHandlers,MetaConnectHandler,1,4,0,0,2,51,5,0,1,0,5,0,AspComet.IClientRepository' AspComet.IClient' AspComet.Message' AspComet.MessageHandlerResult' AspComet.CometHttpHandler,
+AspComet.MessageHandlers,MetaDisconnectHandler,1,2,0,0,2,27,3,0,1,0,4,0,AspComet.IClientRepository' AspComet.IClient' AspComet.Message' AspComet.MessageHandlerResult,
+AspComet.MessageHandlers,MetaHandshakeHandler,3,5,0,0,2,71,7,0,1,0,9,0,AspComet.IClientIDGenerator' AspComet.IClientFactory' AspComet.IClientWorkflowManager' AspComet.IClient' AspComet.Eventing.HandshakingEvent' AspComet.Eventing.HandshakenEvent' AspComet.Eventing.EventHub' AspComet.MessageHandlerResult' AspComet.Message,
+AspComet.MessageHandlers,MetaSubscribeHandler,1,6,0,0,2,57,7,0,1,0,8,0,AspComet.IClientRepository' AspComet.IClient' AspComet.Eventing.ICancellableEvent' AspComet.Message' AspComet.MessageHandlerResult' AspComet.Eventing.SubscribedEvent' AspComet.Eventing.EventHub' AspComet.Eventing.SubscribingEvent,
+AspComet.MessageHandlers,MetaUnsubscribeHandler,1,3,0,0,2,34,4,0,1,0,6,0,AspComet.IClientRepository' AspComet.Message' AspComet.MessageHandlerResult' AspComet.IClient' AspComet.Eventing.UnsubscribedEvent' AspComet.Eventing.EventHub,
+AspComet.MessageHandlers,ForwardingHandler,1,6,0,0,2,71,9,0,1,0,6,0,AspComet.IClientRepository' AspComet.Eventing.PublishingEvent' AspComet.Message' AspComet.MessageHandlerResult' AspComet.IClient' AspComet.Eventing.EventHub,
+AspComet.MessageHandlers,SwallowHandler,0,1,0,0,1,25,2,0,1,-1,4,0,AspComet.Eventing.PublishingEvent' AspComet.Message' AspComet.Eventing.EventHub' AspComet.MessageHandlerResult,
+AspComet.Transports,CallbackPollingTransport,1,2,0,0,2,16,2,0,1,0,1,0,AspComet.MessageConverter,
+AspComet.Transports,LongPollingTransport,1,1,0,1,1,9,1,0,1,0,1,0,AspComet.MessageConverter,

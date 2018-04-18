@@ -1,17 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AlphaDemo,5,8,0,0,4,157,11,0,1,0.25,3,0
-LightingMode,0,0,0,0,0,10,0,0,0,-1,0,3
-BasicDemo,5,6,0,0,4,115,6,0,1,0,4,0
-DemoGame,8,15,6,0,3,319,47,0,0,0,1,10
-DualDemo,6,5,0,0,3,102,10,0,1,0,2,0
-EnvmapDemo,5,4,0,0,3,89,6,0,1,0,2,0
-MenuComponent,4,11,7,0,5,208,25,7,0,0.45,2,1
-MenuEntry,3,3,6,2,3,62,5,2,0,0.67,1,1
-BoolMenuEntry,0,2,3,0,2,40,2,0,1,-1,0,2
-FloatMenuEntry,0,3,1,0,3,40,3,0,1,-1,0,2
-ParticleDemo,8,7,0,0,4,186,18,0,1,0,2,0
-Program,0,1,0,0,0,12,3,0,0,-1,1,0
-SkinnedDemo,5,6,0,0,4,96,9,0,1,0.33,5,0
-TitleMenu,6,5,1,0,4,145,11,0,1,0.6,1,0
-Sky,2,1,0,2,1,32,3,0,0,0,0,1
-Tank,25,3,5,0,3,199,21,0,0,0.67,1,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+XnaGraphicsDemo,AlphaDemo,5,8,0,0,4,171,11,0,1,0.25,4,0,SimpleAnimation.Tank' XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.MenuComponent' XnaGraphicsDemo.LightingMode,
+XnaGraphicsDemo,LightingMode,0,0,0,0,0,7,0,0,0,-1,0,4,,XnaGraphicsDemo.AlphaDemo' XnaGraphicsDemo.BasicDemo' XnaGraphicsDemo.LightModeMenu' SimpleAnimation.Tank
+XnaGraphicsDemo,BasicDemo,5,6,0,0,4,120,6,0,1,0,6,0,SimpleAnimation.Tank' XnaGraphicsDemo.LightModeMenu' XnaGraphicsDemo.BoolMenuEntry' XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.LightingMode' XnaGraphicsDemo.MenuComponent,
+XnaGraphicsDemo,LightModeMenu,1,1,1,1,1,30,2,0,1,0,2,1,XnaGraphicsDemo.LightingMode' XnaGraphicsDemo.MenuEntry,XnaGraphicsDemo.BasicDemo
+XnaGraphicsDemo,DemoGame,8,15,6,0,3,326,34,0,0,0,2,10,XnaGraphicsDemo.MenuComponent' XnaGraphicsDemo.ZoomyText,XnaGraphicsDemo.AlphaDemo' XnaGraphicsDemo.BasicDemo' XnaGraphicsDemo.DualDemo' XnaGraphicsDemo.EnvmapDemo' XnaGraphicsDemo.MenuComponent' XnaGraphicsDemo.MenuEntry' XnaGraphicsDemo.ParticleDemo' XnaGraphicsDemo.Program' XnaGraphicsDemo.SkinnedDemo' XnaGraphicsDemo.TitleMenu
+XnaGraphicsDemo,ZoomyText,3,0,0,3,0,6,0,0,0,-1,0,1,,XnaGraphicsDemo.DemoGame
+XnaGraphicsDemo,DualDemo,6,5,0,0,3,106,10,0,1,0,3,0,XnaGraphicsDemo.BoolMenuEntry' XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.MenuComponent,
+XnaGraphicsDemo,EnvmapDemo,5,4,0,0,3,89,6,0,1,0,3,0,XnaGraphicsDemo.FloatMenuEntry' XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.MenuComponent,
+XnaGraphicsDemo,MenuComponent,4,11,7,0,5,213,23,7,0,0.55,2,8,XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.MenuEntry,XnaGraphicsDemo.AlphaDemo' XnaGraphicsDemo.BasicDemo' XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.DualDemo' XnaGraphicsDemo.EnvmapDemo' XnaGraphicsDemo.ParticleDemo' XnaGraphicsDemo.SkinnedDemo' XnaGraphicsDemo.TitleMenu
+XnaGraphicsDemo,MenuEntry,3,3,6,2,3,44,5,4,0,0.67,1,6,XnaGraphicsDemo.DemoGame,XnaGraphicsDemo.LightModeMenu' XnaGraphicsDemo.MenuComponent' XnaGraphicsDemo.BoolMenuEntry' XnaGraphicsDemo.FloatMenuEntry' XnaGraphicsDemo.ResolutionMenu' XnaGraphicsDemo.TitleMenu
+XnaGraphicsDemo,BoolMenuEntry,0,2,3,0,2,32,2,0,1,-1,1,2,XnaGraphicsDemo.MenuEntry,XnaGraphicsDemo.BasicDemo' XnaGraphicsDemo.DualDemo
+XnaGraphicsDemo,FloatMenuEntry,0,3,1,0,3,37,3,0,1,-1,1,2,XnaGraphicsDemo.MenuEntry,XnaGraphicsDemo.EnvmapDemo' XnaGraphicsDemo.ParticleDemo
+XnaGraphicsDemo,ParticleDemo,8,7,0,0,4,207,19,0,1,0.29,4,0,XnaGraphicsDemo.Particle' XnaGraphicsDemo.FloatMenuEntry' XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.MenuComponent,
+XnaGraphicsDemo,Particle,6,0,0,6,0,9,0,0,0,-1,0,1,,XnaGraphicsDemo.ParticleDemo
+XnaGraphicsDemo,ResolutionMenu,1,2,1,0,2,36,3,0,1,0,1,0,XnaGraphicsDemo.MenuEntry,
+XnaGraphicsDemo,Program,0,1,0,0,0,13,1,0,0,-1,1,0,XnaGraphicsDemo.DemoGame,
+XnaGraphicsDemo,SkinnedDemo,5,6,0,0,4,105,9,0,1,0.33,6,0,GeneratedGeometry.Sky' SkinnedModel.AnimationPlayer' XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.MenuComponent' SkinnedModel.SkinningData' SkinnedModel.AnimationClip,
+XnaGraphicsDemo,TitleMenu,6,5,1,0,4,115,11,0,1,0.6,4,0,XnaGraphicsDemo.DemoGame' XnaGraphicsDemo.MenuComponent' XnaGraphicsDemo.MenuEntry' XnaGraphicsDemo.FloatingXna,
+XnaGraphicsDemo,FloatingXna,3,0,0,3,0,6,0,0,0,-1,0,1,,XnaGraphicsDemo.TitleMenu
+GeneratedGeometry,Sky,2,1,0,2,1,31,3,0,0,0,0,1,,XnaGraphicsDemo.SkinnedDemo
+SimpleAnimation,Tank,25,3,5,0,3,199,6,0,0,0.67,1,2,XnaGraphicsDemo.LightingMode,XnaGraphicsDemo.AlphaDemo' XnaGraphicsDemo.BasicDemo

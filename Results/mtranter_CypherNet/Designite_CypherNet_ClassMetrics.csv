@@ -1,0 +1,133 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CypherNet.Configuration,Fluently,0,1,0,0,1,7,1,0,0,-1,1,1,CypherNet.Configuration.SessionConfiguration,CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Configuration,SessionConfiguration,1,2,0,0,2,13,2,0,1,0,4,1,CypherNet.Configuration.ConnectionProperties' CypherNet.Configuration.Neo4JConnectionStringParser' CypherNet.Logging.Logger' CypherNet.Transaction.DefaultCypherSessionFactory,CypherNet.Configuration.Fluently
+CypherNet.Configuration,ISessionConfiguration,0,1,0,0,0,4,1,1,0,-1,0,1,,CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Configuration,ConnectionProperties,0,2,3,0,2,15,2,0,0,-1,0,6,,CypherNet.Configuration.SessionConfiguration' CypherNet.Configuration.Neo4JConnectionStringParser' CypherNet.ICypherSessionFactory' CypherNet.Transaction.DefaultCypherSessionFactory' CypherNet.Transaction.CypherSession' CypherNet.Transaction.ConnectionPropertiesExtension
+CypherNet.Configuration,Neo4JConnectionStringParser,1,1,0,0,0,20,2,0,0,0,1,1,CypherNet.Configuration.ConnectionProperties,CypherNet.Configuration.SessionConfiguration
+CypherNet.Dynamic,CachedDictionaryPropertiesProvider,3,3,0,0,1,54,8,0,0,0,0,2,,CypherNet.Dynamic.DynamicEntity<TEntity>' CypherNet.Queries.JsonArgumentEvaluator
+CypherNet.Dynamic,DynamicEntity<TEntity>,5,10,1,0,1,129,14,0,1,0.4,3,0,CypherNet.Dynamic.CachedDictionaryPropertiesProvider' CypherNet.Dynamic.DynamicDictionaryMetaObject' CypherNet.Dynamic.IDynamicMetaData,
+CypherNet.Dynamic,DynamicDictionaryMetaObject,0,3,0,0,2,45,5,0,0,-1,0,1,,CypherNet.Dynamic.DynamicEntity<TEntity>
+CypherNet.Dynamic,DynamicExtensions,0,1,0,0,1,8,1,0,0,-1,0,0,,
+CypherNet.Dynamic,IDynamicMetaData,0,2,1,0,0,6,2,1,0,-1,0,2,,CypherNet.Dynamic.DynamicEntity<TEntity>' CypherNet.Transaction.CypherSession
+CypherNet.Graph,Constraint,0,1,2,0,0,10,1,0,0,-1,0,0,,
+CypherNet.Graph,GraphEntity<TEntity>,0,2,1,0,0,15,2,0,1,-1,0,0,,
+CypherNet.Graph,IGraphEntity,0,0,1,0,0,4,0,1,0,-1,0,6,,CypherNet.IEntityCache' CypherNet.DictionaryEntityCache' CypherNet.Queries.CypherDeleteClauseBuilder' CypherNet.Queries.CypherReturnsClauseBuilder' CypherNet.Queries.InvalidCypherVariableTypeException' CypherNet.Serialization.TransactionalResponseConverter<TCypherResponse>
+CypherNet.Graph,Node,1,2,1,0,0,16,2,0,0,1,0,8,,CypherNet.ICypherSession' CypherNet.Serialization.TransactionalResponseConverter<TCypherResponse>' CypherNet.Transaction.CypherSession' CypherNet.Transaction.SingleNodeResult' CypherNet.UnitTests.CypherSessionTransactionTests' CypherNet.UnitTests.SerializationTests' CypherNet.UnitTests.DeserializationTestClass' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Graph,Relationship,1,2,1,0,0,16,2,0,0,1,0,7,,CypherNet.ICypherSession' CypherNet.Queries.CypherReturnsClauseBuilder' CypherNet.Serialization.TransactionalResponseConverter<TCypherResponse>' CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests' CypherNet.UnitTests.DeserializationTestClass' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Http,BasicAuthCredentials,0,2,1,0,1,15,2,0,0,-1,0,2,,CypherNet.Http.WebClient' CypherNet.Transaction.ConnectionPropertiesExtension
+CypherNet.Http,IWebClient,0,4,0,0,0,7,4,1,0,-1,0,4,,CypherNet.Transaction.CypherClientFactory' CypherNet.Transaction.CypherSession' CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Http,IHttpResponseMessage,0,0,5,0,0,8,0,2,0,-1,0,4,,CypherNet.Http.WebClient' CypherNet.Transaction.CypherSession' CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Http,HttpResponseMessageWrapper,1,1,5,0,1,28,1,0,1,0,0,1,,CypherNet.Http.WebClient
+CypherNet.Http,WebClient,1,8,0,0,6,51,9,0,1,0.25,3,0,CypherNet.Http.BasicAuthCredentials' CypherNet.Http.IHttpResponseMessage' CypherNet.Http.HttpResponseMessageWrapper,
+CypherNet,ICypherSession,0,16,0,0,0,20,16,1,0,-1,2,2,CypherNet.Graph.Node' CypherNet.Graph.Relationship,CypherNet.Transaction.DefaultCypherSessionFactory' CypherNet.IntegrationTests.IntegrationTests
+CypherNet,IEntityCache,0,8,0,0,0,11,8,1,0,-1,1,6,CypherNet.Graph.IGraphEntity,CypherNet.Serialization.CypherResultSetConverterFactoryJsonConverter' CypherNet.Serialization.TransactionalResponseConverter<TCypherResponse>' CypherNet.Serialization.DefaultJsonSerializer' CypherNet.Transaction.CypherClientFactory' CypherNet.Transaction.CypherSession' CypherNet.Transaction.TransactionalCypherClient
+CypherNet,DictionaryEntityCache,1,8,0,0,8,65,13,0,1,0,1,0,CypherNet.Graph.IGraphEntity,
+CypherNet,ServiceRootResponse,0,0,4,0,0,11,0,0,0,-1,0,1,,CypherNet.Transaction.CypherSession
+CypherNet,ICypherSessionFactory,0,2,0,0,0,5,2,1,0,-1,1,1,CypherNet.Configuration.ConnectionProperties,CypherNet.IntegrationTests.IntegrationTests
+CypherNet,ICypherClient,0,2,0,0,0,5,2,2,0,-1,0,3,,CypherNet.Queries.CypherQueryExecute<TOut>' CypherNet.Transaction.CypherClientFactory' CypherNet.Transaction.CypherSession
+CypherNet.Logging,ILogger,0,1,0,0,0,4,1,2,0,-1,1,2,CypherNet.Logging.LogLevel,CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Logging,Logger,0,1,1,0,0,8,1,0,0,-1,0,3,,CypherNet.Configuration.SessionConfiguration' CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Logging,TraceLogger,0,1,0,0,1,7,1,0,1,-1,1,0,CypherNet.Logging.LogLevel,
+CypherNet.Logging,EmptyLogger,0,1,0,0,1,6,1,0,1,-1,1,0,CypherNet.Logging.LogLevel,
+CypherNet.Logging,LogLevel,0,0,0,0,0,7,0,0,0,-1,0,5,,CypherNet.Logging.ILogger' CypherNet.Logging.TraceLogger' CypherNet.Logging.EmptyLogger' CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Queries,CypherDeleteClauseBuilder,0,2,0,0,0,63,11,0,0,-1,4,1,CypherNet.Queries.MethodExpressionArgumentEvaluator' CypherNet.Queries.ParseToCypherAttribute' CypherNet.Queries.ExpressionEvaluator' CypherNet.Graph.IGraphEntity,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,InvalidCypherDeleteExpressionException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,CypherCreateRelationshipClauseBuilder,0,3,0,0,0,31,6,0,0,-1,4,1,CypherNet.Queries.ExpressionEvaluator' CypherNet.Queries.ICreateRelationshipQueryContext' CypherNet.Queries.MethodExpressionArgumentEvaluator' CypherNet.Queries.ParseToCypherAttribute,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,InvalidCypherCreateRelationshipExpressionException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,CypherFunctions,0,3,0,0,3,22,3,0,0,-1,1,0,CypherNet.Queries.ArgumentEvaluatorAttribute,
+CypherNet.Queries,CypherGraphEntityNameAttribute,0,1,1,0,1,9,1,0,0,-1,0,0,,
+CypherNet.Queries,CypherMatchClauseBuilder,0,3,0,0,0,31,6,0,0,-1,3,1,CypherNet.Queries.IMatchQueryContext' CypherNet.Queries.MethodExpressionArgumentEvaluator' CypherNet.Queries.ParseToCypherAttribute,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,InvalidCypherMatchExpressionException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,CypherOrderByClauseBuilder,0,2,0,0,0,32,6,0,0,-1,2,1,CypherNet.Queries.ParseToCypherAttribute' CypherNet.Queries.MethodExpressionArgumentEvaluator,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,InvalidOrderByClauseException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,CypherQueryParameter,0,1,2,0,0,10,1,0,0,-1,0,0,,
+CypherNet.Queries,CypherQueryRequest,2,3,1,0,1,36,4,0,0,0.67,0,2,,CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Queries,CypherQueryStatement,0,1,3,0,1,17,1,0,0,-1,0,0,,
+CypherNet.Queries,FluentCypherQueryBuilder<TIn>,8,10,1,0,8,149,16,0,1,0,1,0,CypherNet.Transaction.ICypherClientFactory,
+CypherNet.Queries,CypherQueryExecute<TOut>,2,7,0,0,5,46,8,0,1,0,2,0,CypherNet.Transaction.ICypherClientFactory' CypherNet.ICypherClient,
+CypherNet.Queries,CypherQueryDefinition<TIn;TOut>,4,6,11,0,0,105,9,0,0,0.5,8,0,CypherNet.Queries.CypherStartClauseBuilder' CypherNet.Queries.CypherMatchClauseBuilder' CypherNet.Queries.CypherCreateRelationshipClauseBuilder' CypherNet.Queries.CypherWhereClauseBuilder' CypherNet.Queries.CypherSetClauseBuilder' CypherNet.Queries.CypherOrderByClauseBuilder' CypherNet.Queries.CypherReturnsClauseBuilder' CypherNet.Queries.CypherDeleteClauseBuilder,
+CypherNet.Queries,ICypherResponse,0,0,1,0,0,4,0,1,0,-1,0,0,,
+CypherNet.Queries,CypherResponse<TResult>,0,1,5,0,1,26,1,0,1,-1,0,0,,
+CypherNet.Queries,TransactionDetails,0,0,1,0,0,6,0,0,0,-1,0,0,,
+CypherNet.Queries,CypherError,0,0,2,0,0,7,0,0,0,-1,0,2,,CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Queries,CypherResultSet<TEnumerable>,1,3,0,0,2,16,3,0,0,0,0,0,,
+CypherNet.Queries,CypherReturnsClauseBuilder,0,3,0,0,0,80,13,0,0,-1,6,1,CypherNet.Serialization.EntityReturnColumns' CypherNet.Graph.Relationship' CypherNet.Queries.MethodExpressionArgumentEvaluator' CypherNet.Queries.ParseToCypherAttribute' CypherNet.Queries.ExpressionEvaluator' CypherNet.Graph.IGraphEntity,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,InvalidCypherReturnsExpressionException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,CypherSetClauseBuilder,0,1,0,0,0,21,3,0,0,-1,2,1,CypherNet.Queries.MethodExpressionArgumentEvaluator' CypherNet.Queries.ParseToCypherAttribute,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,CypherStartClauseBuilder,0,2,0,0,0,34,6,0,0,-1,3,1,CypherNet.Queries.MethodExpressionArgumentEvaluator' CypherNet.Queries.ParseToCypherAttribute' CypherNet.Queries.IStartQueryContext,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,InvalidCypherStartExpressionException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,CypherTypeSystem,1,3,0,0,2,24,5,0,0,0.67,0,0,,
+CypherNet.Queries,CypherWhereClauseBuilder,2,1,0,0,0,115,2,0,0,0,2,1,CypherNet.Queries.WhereClauseVisitor' CypherNet.Queries.ExpressionEvaluator,CypherNet.Queries.CypherQueryDefinition<TIn;TOut>
+CypherNet.Queries,WhereClauseVisitor,1,6,0,0,0,98,10,0,0,0,2,1,CypherNet.Queries.ParseToCypherAttribute' CypherNet.Queries.MethodExpressionArgumentEvaluator,CypherNet.Queries.CypherWhereClauseBuilder
+CypherNet.Queries,InvalidCypherWhereExpressionException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,ExpressionEvaluator,0,3,0,0,3,105,3,0,0,-1,2,5,CypherNet.Queries.SubtreeEvaluator' CypherNet.Queries.Nominator,CypherNet.Queries.CypherDeleteClauseBuilder' CypherNet.Queries.CypherCreateRelationshipClauseBuilder' CypherNet.Queries.CypherReturnsClauseBuilder' CypherNet.Queries.CypherWhereClauseBuilder' CypherNet.Queries.ValueArgumentEvaluator
+CypherNet.Queries,Nominator,3,3,0,0,1,38,6,0,0,0,0,1,,CypherNet.Queries.ExpressionEvaluator
+CypherNet.Queries,SubtreeEvaluator,1,4,0,0,1,34,7,0,0,0,0,1,,CypherNet.Queries.ExpressionEvaluator
+CypherNet.Queries,ExpressionExtensions,0,2,0,0,1,30,4,0,0,-1,0,0,,
+CypherNet.Queries,ExpressionTreeOnlyUsageException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,ParseToCypherAttribute,0,1,1,0,1,9,1,0,0,-1,0,8,,CypherNet.Queries.CypherDeleteClauseBuilder' CypherNet.Queries.CypherCreateRelationshipClauseBuilder' CypherNet.Queries.CypherMatchClauseBuilder' CypherNet.Queries.CypherOrderByClauseBuilder' CypherNet.Queries.CypherReturnsClauseBuilder' CypherNet.Queries.CypherSetClauseBuilder' CypherNet.Queries.CypherStartClauseBuilder' CypherNet.Queries.WhereClauseVisitor
+CypherNet.Queries,GraphEntityExtensions,0,3,0,0,3,22,3,0,0,-1,1,0,CypherNet.Queries.ArgumentEvaluatorAttribute,
+CypherNet.Queries,ICypherQueryOptionalMatchOnly,0,1,0,0,0,5,1,1,1,-1,0,2,,CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,IMatchQueryContext,0,4,0,0,0,13,4,1,1,-1,1,3,CypherNet.Queries.ArgumentEvaluatorAttribute,CypherNet.Queries.CypherMatchClauseBuilder' CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,ICreateRelationshipQueryContext,0,4,0,0,0,27,4,0,1,-1,1,4,CypherNet.Queries.ArgumentEvaluatorAttribute,CypherNet.Queries.CypherCreateRelationshipClauseBuilder' CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,ICypherEntityReference,0,1,0,0,0,4,1,0,0,-1,0,0,,
+CypherNet.Queries,ICypherFetchable,0,1,0,0,0,4,1,1,0,-1,0,1,,CypherNet.UnitTests.CypherQueryTests
+CypherNet.Queries,ICypherExecuteable,0,1,0,0,0,4,1,1,0,-1,0,2,,CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests
+CypherNet.Queries,ICypherOrderBy,0,1,0,0,0,4,1,1,1,-1,0,3,,CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,ICypherSkip,0,1,0,0,0,4,1,1,1,-1,0,1,,CypherNet.UnitTests.CypherQueryTests
+CypherNet.Queries,ICypherLimit,0,1,0,0,0,4,1,1,1,-1,0,1,,CypherNet.UnitTests.CypherQueryTests
+CypherNet.Queries,ICypherQueryBegin,0,2,0,0,0,5,2,0,0,-1,0,0,,
+CypherNet.Queries,ICypherQueryCreateNode,0,1,0,0,0,4,1,0,0,-1,0,0,,
+CypherNet.Queries,ICypherQueryDelete,0,1,0,0,0,4,1,1,0,-1,0,0,,
+CypherNet.Queries,ICypherQueryMatch,0,0,0,0,0,3,0,1,2,-1,0,3,,CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,ICypherQuerySetable,0,1,0,0,0,4,1,2,1,-1,0,0,,
+CypherNet.Queries,ICypherQueryCreate,0,1,0,0,0,4,1,4,0,-1,0,0,,
+CypherNet.Queries,ICreateCypherRelationship,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,ICypherQueryMatchOnly,0,1,0,0,0,5,1,2,0,-1,0,0,,
+CypherNet.Queries,ICypherQueryReturnOnly,0,1,0,0,0,4,1,0,0,-1,0,0,,
+CypherNet.Queries,ICypherQueryReturnOrExecute,0,1,0,0,0,4,1,1,1,-1,0,2,,CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests
+CypherNet.Queries,ICypherQueryReturns,0,1,0,0,0,4,1,2,1,-1,0,3,,CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,ICypherQueryStart,0,1,0,0,0,4,1,1,1,-1,0,2,,CypherNet.Transaction.CypherSession' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,ICypherQueryWhere,0,1,0,0,0,5,1,2,2,-1,0,2,,CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,IDefineCypherToNode,0,4,0,0,0,14,4,0,0,-1,1,2,CypherNet.Queries.ArgumentEvaluatorAttribute,CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,IDefineCypherFromNode,0,4,0,0,0,14,4,0,0,-1,1,2,CypherNet.Queries.ArgumentEvaluatorAttribute,CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,IDefineCypherWithNode,0,4,0,0,0,14,4,0,0,-1,1,0,CypherNet.Queries.ArgumentEvaluatorAttribute,
+CypherNet.Queries,InvalidCypherVariableTypeException,1,2,0,0,1,14,2,0,0,0,1,0,CypherNet.Graph.IGraphEntity,
+CypherNet.Queries,IArgumentEvaluator,0,2,0,0,0,5,2,2,0,-1,0,3,,CypherNet.Queries.ArgumentEvaluatorFactory' CypherNet.Queries.ArgumentEvaluatorAttribute' CypherNet.Queries.MethodExpressionArgumentEvaluator
+CypherNet.Queries,ValueArgumentEvaluator,0,2,0,0,2,12,2,2,1,-1,1,3,CypherNet.Queries.ExpressionEvaluator,CypherNet.Queries.StringWrapperArgumentEvaluator' CypherNet.Queries.JsonArgumentEvaluator' CypherNet.Queries.ArgumentEvaluatorFactory
+CypherNet.Queries,MemberNameArgumentEvaluator,0,2,0,0,2,12,2,0,1,-1,0,0,,
+CypherNet.Queries,StringWrapperArgumentEvaluator,1,2,0,0,1,17,3,0,2,0,1,1,CypherNet.Queries.ValueArgumentEvaluator,CypherNet.Queries.JsonArgumentEvaluator
+CypherNet.Queries,JsonArgumentEvaluator,1,1,0,0,1,21,3,0,2,0,3,0,CypherNet.Queries.ValueArgumentEvaluator' CypherNet.Dynamic.CachedDictionaryPropertiesProvider' CypherNet.Queries.StringWrapperArgumentEvaluator,
+CypherNet.Queries,ArgumentEvaluatorFactory,0,1,0,0,0,12,2,0,0,-1,3,1,CypherNet.Queries.ArgumentEvaluatorAttribute' CypherNet.Queries.ValueArgumentEvaluator' CypherNet.Queries.IArgumentEvaluator,CypherNet.Queries.MethodExpressionArgumentEvaluator
+CypherNet.Queries,ArgumentEvaluatorAttribute,0,1,1,0,1,13,2,0,0,-1,1,12,CypherNet.Queries.IArgumentEvaluator,CypherNet.Queries.CypherFunctions' CypherNet.Queries.GraphEntityExtensions' CypherNet.Queries.IMatchQueryContext' CypherNet.Queries.ICreateRelationshipQueryContext' CypherNet.Queries.IDefineCypherToNode' CypherNet.Queries.IDefineCypherFromNode' CypherNet.Queries.IDefineCypherWithNode' CypherNet.Queries.ArgumentEvaluatorFactory' CypherNet.Queries.IEntityPropertyAccessor' CypherNet.Queries.IUpdateQueryContext' CypherNet.Queries.IDefineCypherRelationship' CypherNet.Queries.IStartQueryContext
+CypherNet.Queries,MethodExpressionArgumentEvaluator,0,1,0,0,0,10,1,0,0,-1,2,8,CypherNet.Queries.IArgumentEvaluator' CypherNet.Queries.ArgumentEvaluatorFactory,CypherNet.Queries.CypherDeleteClauseBuilder' CypherNet.Queries.CypherCreateRelationshipClauseBuilder' CypherNet.Queries.CypherMatchClauseBuilder' CypherNet.Queries.CypherOrderByClauseBuilder' CypherNet.Queries.CypherReturnsClauseBuilder' CypherNet.Queries.CypherSetClauseBuilder' CypherNet.Queries.CypherStartClauseBuilder' CypherNet.Queries.WhereClauseVisitor
+CypherNet.Queries,IQueryContext,0,0,1,0,0,4,0,5,0,-1,0,0,,
+CypherNet.Queries,IReturnQueryContext,0,0,0,0,0,3,0,0,1,-1,0,3,,CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,IWhereQueryContext,0,0,0,0,0,3,0,0,2,-1,0,2,,CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,IEntityPropertyAccessor,0,4,0,0,0,17,4,2,0,-1,1,0,CypherNet.Queries.ArgumentEvaluatorAttribute,
+CypherNet.Queries,IUpdateQueryContext,0,1,0,0,0,8,1,0,1,-1,1,2,CypherNet.Queries.ArgumentEvaluatorAttribute,CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests
+CypherNet.Queries,ISetResult,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CypherNet.Queries,IDefineCypherRelationship,0,18,0,0,0,46,18,0,0,-1,1,2,CypherNet.Queries.ArgumentEvaluatorAttribute,CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,ICypherPrototype,0,0,2,0,0,5,0,0,0,-1,0,2,,CypherNet.Transaction.CypherSession' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Queries,IStartQueryContext,0,6,0,0,0,24,6,0,1,-1,1,4,CypherNet.Queries.ArgumentEvaluatorAttribute,CypherNet.Queries.CypherStartClauseBuilder' CypherNet.Transaction.CypherSession' CypherNet.UnitTests.CypherQueryTests' CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Serialization,CypherColumnNotPresentException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+CypherNet.Serialization,CypherResultSetConverterFactoryJsonConverter,1,5,0,0,3,223,5,0,0,0.6,1,0,CypherNet.IEntityCache,
+CypherNet.Serialization,TransactionalResponseConverter<TCypherResponse>,5,10,1,0,3,195,22,0,0,0.4,5,0,CypherNet.IEntityCache' CypherNet.Graph.IGraphEntity' CypherNet.Serialization.EntityReturnColumns' CypherNet.Graph.Relationship' CypherNet.Graph.Node,
+CypherNet.Serialization,DefaultJsonSerializer,1,4,0,0,3,25,4,0,1,0,1,1,CypherNet.IEntityCache,CypherNet.UnitTests.SerializationTests
+CypherNet.Serialization,DeserializeUsingAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+CypherNet.Serialization,EntityReturnColumns,1,1,4,0,1,25,1,0,0,0,0,3,,CypherNet.Queries.CypherReturnsClauseBuilder' CypherNet.Serialization.TransactionalResponseConverter<TCypherResponse>' CypherNet.Transaction.CypherSession
+CypherNet.Serialization,IWebSerializer,0,2,0,0,0,5,2,1,0,-1,0,4,,CypherNet.Transaction.CypherClientFactory' CypherNet.Transaction.CypherSession' CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient
+CypherNet.Serialization,IsoDateConverter,0,2,0,0,2,14,2,0,0,-1,0,0,,
+CypherNet.Transaction,ICypherClientFactory,0,1,0,0,0,4,1,1,0,-1,0,2,,CypherNet.Queries.FluentCypherQueryBuilder<TIn>' CypherNet.Queries.CypherQueryExecute<TOut>
+CypherNet.Transaction,CypherClientFactory,6,2,0,0,2,93,3,0,1,0,6,1,CypherNet.Http.IWebClient' CypherNet.Serialization.IWebSerializer' CypherNet.IEntityCache' CypherNet.ICypherClient' CypherNet.Transaction.ResourceManager' CypherNet.Transaction.NonTransactionalCypherClient,CypherNet.Transaction.CypherSession
+CypherNet.Transaction,ResourceManager,1,6,0,0,4,45,8,0,0,0.33,1,1,CypherNet.Transaction.ICypherUnitOfWork,CypherNet.Transaction.CypherClientFactory
+CypherNet.Transaction,CypherResponseException,0,1,0,0,1,7,1,0,0,-1,0,1,,CypherNet.IntegrationTests.IntegrationTests
+CypherNet.Transaction,DefaultCypherSessionFactory,1,3,0,0,3,18,3,0,1,0,3,1,CypherNet.Configuration.ConnectionProperties' CypherNet.ICypherSession' CypherNet.Transaction.CypherSession,CypherNet.Configuration.SessionConfiguration
+CypherNet.Transaction,ICypherUnitOfWork,0,3,0,0,0,6,3,1,0,-1,0,1,,CypherNet.Transaction.ResourceManager
+CypherNet.Transaction,CypherSession,14,20,0,0,16,214,26,0,1,0.1,24,2,CypherNet.Serialization.IWebSerializer' CypherNet.IEntityCache' CypherNet.Http.IWebClient' CypherNet.Configuration.ConnectionProperties' CypherNet.Http.IHttpResponseMessage' CypherNet.ServiceRootResponse' CypherNet.Graph.Node' CypherNet.Serialization.EntityReturnColumns' CypherNet.ICypherClient' CypherNet.Transaction.CypherClientFactory' CypherNet.Transaction.SingleNodeResult' CypherNet.Queries.ICypherOrderBy' CypherNet.Queries.ICypherQueryReturns' CypherNet.Queries.ICypherQueryMatch' CypherNet.Queries.ICypherQueryStart' CypherNet.Queries.ICypherPrototype' CypherNet.Queries.IStartQueryContext' CypherNet.Queries.ICreateRelationshipQueryContext' CypherNet.Queries.IReturnQueryContext' CypherNet.Graph.Relationship' CypherNet.Queries.ICypherExecuteable' CypherNet.Dynamic.IDynamicMetaData' CypherNet.Queries.ICypherQueryReturnOrExecute' CypherNet.Queries.IUpdateQueryContext,CypherNet.Transaction.DefaultCypherSessionFactory' CypherNet.UnitTests.CypherSessionTransactionTests
+CypherNet.Transaction,SingleNodeResult,0,1,1,0,1,8,1,0,0,-1,1,1,CypherNet.Graph.Node,CypherNet.Transaction.CypherSession
+CypherNet.Transaction,ConnectionPropertiesExtension,0,1,0,0,1,11,2,0,0,-1,2,0,CypherNet.Configuration.ConnectionProperties' CypherNet.Http.BasicAuthCredentials,
+CypherNet.Transaction,NeoServerUnavalaibleExpcetion,0,1,0,0,1,7,1,0,0,-1,0,0,,
+CypherNet.Transaction,NonTransactionalCypherClient,3,3,0,0,2,36,4,0,1,0,9,1,CypherNet.Http.IWebClient' CypherNet.Serialization.IWebSerializer' CypherNet.Transaction.UriHelper' CypherNet.Queries.CypherQueryRequest' CypherNet.Logging.ILogger' CypherNet.Logging.Logger' CypherNet.Logging.LogLevel' CypherNet.Http.IHttpResponseMessage' CypherNet.Queries.CypherError,CypherNet.Transaction.CypherClientFactory
+CypherNet.Transaction,TransactionalCypherClient,5,6,0,0,5,91,11,0,1,0,10,0,CypherNet.Http.IWebClient' CypherNet.Serialization.IWebSerializer' CypherNet.IEntityCache' CypherNet.Transaction.UriHelper' CypherNet.Queries.CypherQueryRequest' CypherNet.Logging.ILogger' CypherNet.Logging.Logger' CypherNet.Logging.LogLevel' CypherNet.Http.IHttpResponseMessage' CypherNet.Queries.CypherError,
+CypherNet.Transaction,UriHelper,0,1,0,0,1,14,2,0,0,-1,0,2,,CypherNet.Transaction.NonTransactionalCypherClient' CypherNet.Transaction.TransactionalCypherClient

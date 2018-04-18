@@ -1,13 +1,14 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ResponseEncoder,3,2,0,0,2,53,5,0,0,0,3,0
-ContentDecoder,7,4,0,0,2,92,13,0,0,0,5,0
-HeaderDecoder,0,1,0,0,1,35,4,0,0,-1,2,0
-SendResponse,0,1,1,0,1,24,2,0,0,-1,0,1
-ReceivedHeader,0,1,1,0,1,23,2,0,0,-1,1,1
-ReceivedPacket,0,1,1,0,1,23,2,0,0,-1,0,0
-BinaryFormatterCodec,0,2,0,0,2,34,5,0,1,-1,0,0
-ContentMapper,1,3,0,0,3,68,5,0,0,0,0,2
-IContentEncoder,0,1,0,0,0,12,1,1,0,-1,0,1
-IContentDecoder,0,1,0,0,0,13,1,1,0,-1,0,1
-NamespaceDoc,0,0,0,0,0,10,0,0,0,-1,0,0
-SimpleHeader,0,0,3,0,0,38,0,0,0,-1,0,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Griffin.Networking.SimpleBinary.Handlers,ResponseEncoder,3,2,0,0,2,49,5,0,0,0,3,0,Griffin.Networking.SimpleBinary.Services.ContentMapper' Griffin.Networking.SimpleBinary.Services.IContentEncoder' Griffin.Networking.SimpleBinary.Messages.SendResponse,
+Griffin.Networking.SimpleBinary.Handlers,ContentDecoder,7,4,0,0,2,96,12,0,0,0,4,0,Griffin.Networking.SimpleBinary.Services.ContentMapper' Griffin.Networking.SimpleBinary.IContentDecoder' Griffin.Networking.SimpleBinary.SimpleHeader' Griffin.Networking.SimpleBinary.Messages.ReceivedHeader,
+Griffin.Networking.SimpleBinary.Handlers,HeaderDecoder,0,1,0,0,1,35,4,0,0,-1,1,0,Griffin.Networking.SimpleBinary.SimpleHeader,
+Griffin.Networking.SimpleBinary.Messages,SendResponse,0,1,1,0,1,16,2,0,0,-1,0,1,,Griffin.Networking.SimpleBinary.Handlers.ResponseEncoder
+Griffin.Networking.SimpleBinary.Messages,ReceivedHeader,0,1,1,0,1,16,2,0,0,-1,1,1,Griffin.Networking.SimpleBinary.SimpleHeader,Griffin.Networking.SimpleBinary.Handlers.ContentDecoder
+Griffin.Networking.SimpleBinary.Messages,ReceivedPacket,0,1,1,0,1,16,2,0,0,-1,0,0,,
+Griffin.Networking.SimpleBinary.Services,BinaryFormatterCodec,0,2,0,0,2,27,5,0,1,-1,0,0,,
+Griffin.Networking.SimpleBinary.Services,ContentMapper,1,3,0,0,3,59,5,0,0,0,1,2,Griffin.Networking.SimpleBinary.Services.ContentMapping,Griffin.Networking.SimpleBinary.Handlers.ResponseEncoder' Griffin.Networking.SimpleBinary.Handlers.ContentDecoder
+Griffin.Networking.SimpleBinary.Services,ContentMapping,0,0,2,0,0,5,0,0,0,-1,0,1,,Griffin.Networking.SimpleBinary.Services.ContentMapper
+Griffin.Networking.SimpleBinary.Services,IContentEncoder,0,1,0,0,0,9,1,1,0,-1,0,1,,Griffin.Networking.SimpleBinary.Handlers.ResponseEncoder
+Griffin.Networking.SimpleBinary,IContentDecoder,0,1,0,0,0,10,1,1,0,-1,0,1,,Griffin.Networking.SimpleBinary.Handlers.ContentDecoder
+Griffin.Networking.SimpleBinary,NamespaceDoc,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Griffin.Networking.SimpleBinary,SimpleHeader,0,0,3,0,0,19,0,0,0,-1,0,3,,Griffin.Networking.SimpleBinary.Handlers.ContentDecoder' Griffin.Networking.SimpleBinary.Handlers.HeaderDecoder' Griffin.Networking.SimpleBinary.Messages.ReceivedHeader

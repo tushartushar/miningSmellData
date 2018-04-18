@@ -1,0 +1,54 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Cosmos.Core,ACPI,15,13,0,1,5,251,43,0,0,0.15,5,2,Cosmos.Debug.Kernel.Debugger' Cosmos.Core.IOPort' Cosmos.Core.CPU' Cosmos.Core.Global' Cosmos.Core.RSDPtr,Cosmos.HAL.Global' Cosmos.HAL.Power
+Cosmos.Core,RSDPtr,5,0,0,5,0,9,0,0,0,-1,0,1,,Cosmos.Core.ACPI
+Cosmos.Core,FACP,13,0,0,13,0,17,0,0,0,-1,0,0,,
+Cosmos.Core,BaseIOGroups,9,0,0,9,0,15,0,0,0,-1,8,4,Cosmos.Core.IOGroup.Keyboard' Cosmos.Core.IOGroup.Mouse' Cosmos.Core.IOGroup.PCSpeaker' Cosmos.Core.IOGroup.PIT' Cosmos.Core.IOGroup.TextScreen' Cosmos.Core.IOGroup.ATA' Cosmos.Core.IOGroup.RTC' Cosmos.Core.IOGroup.VBE,Cosmos.Core.Global' Cosmos.HAL.Global' Cosmos.HAL.Mouse' Cosmos.HAL.PCSpeaker
+Cosmos.Core,Bootstrap,2,1,0,2,1,31,1,0,0,0,3,1,Cosmos.Core.PIC' Cosmos.Core.CPU' Cosmos.Core.INTs,Cosmos.HAL.Bootstrap
+Cosmos.Core,CosmosRuntimeType,1,29,9,0,18,147,29,0,0,1,0,2,,Cosmos.Core_Plugs.System.ObjectImpl' Cosmos.Core_Plugs.System.TypeImpl
+Cosmos.Core,CPU,1,12,0,1,10,78,13,0,0,0.58,1,9,Cosmos.Core.IOPort,Cosmos.Core.ACPI' Cosmos.Core.Bootstrap' Cosmos.Core.Memory.Old.GlobalSystemInfo' Cosmos.Core.Memory.Old.Heap' Cosmos.Core_Asm.CPUImpl' Cosmos.HAL.Global' Cosmos.HAL.KeyboardBase' Cosmos.HAL.PIT' Cosmos.HAL.Power
+Cosmos.Core,DeviceIDAttribute,2,0,0,2,0,5,0,0,0,-1,0,0,,
+Cosmos.Core,GCImplementation,0,5,0,0,3,33,5,0,0,-1,0,2,,Cosmos.Core_Plugs.System.DelegateImpl' Cosmos.Core_Plugs.System.ObjectImpl
+Cosmos.Core,Global,2,1,2,2,1,27,1,0,0,0,2,8,Cosmos.Debug.Kernel.Debugger' Cosmos.Core.BaseIOGroups,Cosmos.Core.ACPI' Cosmos.Core.INTs' Cosmos.Core.IOGroup.ATA' Cosmos.HAL.Global' Cosmos.HAL.KeyboardBase' Cosmos.HAL.PIT' Cosmos.HAL.Power' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.Core,INTs,3,56,0,1,52,467,64,0,0,0,3,4,Cosmos.Core.IRQContext' Cosmos.Core.PIC' Cosmos.Core.Global,Cosmos.Core.Bootstrap' Cosmos.Core_Asm.CPUUpdateIDTAsm' Cosmos.HAL.Mouse' Cosmos.HAL.PS2Keyboard
+Cosmos.Core,EFlagsEnum,0,0,0,0,0,18,0,0,0,-1,0,0,,
+Cosmos.Core,TSS,26,0,0,26,0,55,0,0,0,-1,0,0,,
+Cosmos.Core,MMXContext,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Cosmos.Core,IRQContext,15,0,0,15,0,33,0,0,0,-1,0,4,,Cosmos.Core.INTs' Cosmos.HAL.Mouse' Cosmos.HAL.PS2Keyboard' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.Core,IOPortBase,1,11,0,1,3,63,14,3,0,0.45,0,0,,
+Cosmos.Core,IOPort,0,3,3,0,3,39,3,0,1,-1,0,28,,Cosmos.Core.ACPI' Cosmos.Core.CPU' Cosmos.Core.PIC' Cosmos.Core.IOGroup.ATA' Cosmos.Core.IOGroup.COM' Cosmos.Core.IOGroup.Keyboard' Cosmos.Core.IOGroup.Mouse' Cosmos.Core.IOGroup.PCI' Cosmos.Core.IOGroup.PCSpeaker' Cosmos.Core.IOGroup.PIC' Cosmos.Core.IOGroup.PIT' Cosmos.Core.IOGroup.RTC' Cosmos.Core.IOGroup.TextScreen' Cosmos.Core.IOGroup.VBE' Cosmos.Core.IOGroup.VGA' Cosmos.Core.IOGroup.Network.AMDPCNetIIIOGroup' Cosmos.Core_Plugs.System.DateTimeImpl' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.VGAScreen' Cosmos.HAL.Mouse' Cosmos.HAL.PCIDevice' Cosmos.HAL.PCSpeaker' Cosmos.HAL.PS2Keyboard' Cosmos.HAL.RTC' Cosmos.HAL.TextScreen' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII' Cosmos.HAL.Drivers.VBEDriver
+Cosmos.Core,IOPortRead,0,2,3,0,2,21,2,0,1,-1,0,6,,Cosmos.Core.IOGroup.ATA' Cosmos.Core.IOGroup.VGA' Cosmos.Core.IOGroup.Network.AMDPCNetIIIOGroup' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.VGAScreen' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.Core,IOPortWrite,0,2,3,0,2,21,2,0,1,-1,0,5,,Cosmos.Core.IOGroup.ATA' Cosmos.Core.IOGroup.PIT' Cosmos.Core.IOGroup.VGA' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.VGAScreen
+Cosmos.Core,ManagedMemoryBlock,3,7,0,2,7,87,13,0,0,0.43,0,1,,Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.Core,MemoryBlock,5,9,0,5,9,89,10,0,0,0.22,4,5,Cosmos.Core.MemoryBlock08' Cosmos.Core.MemoryBlock16' Cosmos.Core.MemoryBlock32' Cosmos.Core.MemoryOperations,Cosmos.Core.IOGroup.TextScreen' Cosmos.Core.IOGroup.VBE' Cosmos.HAL.TextScreen' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII' Cosmos.HAL.Drivers.VBEDriver
+Cosmos.Core,MemoryBlock08,2,1,0,2,0,30,1,0,0,0,0,4,,Cosmos.Core.MemoryBlock' Cosmos.Core.IOGroup.VGA' Cosmos.HAL.VGAScreen' Cosmos.HAL.TextScreen
+Cosmos.Core,MemoryBlock16,2,1,0,2,0,29,1,0,0,0,0,1,,Cosmos.Core.MemoryBlock
+Cosmos.Core,MemoryBlock32,2,1,0,2,0,29,1,0,0,0,0,1,,Cosmos.Core.MemoryBlock
+Cosmos.Core,MemoryOperations,0,14,0,0,14,94,14,0,0,-1,0,2,,Cosmos.Core.MemoryBlock' Cosmos.Core_Plugs.MemoryOperations.MemoryOperationsImpl
+Cosmos.Core,PIC,2,5,0,0,3,111,5,0,0,0.4,3,3,Cosmos.Core.IOGroup.PIC' Cosmos.Core.IOPort' Cosmos.Core.Cmd,Cosmos.Core.Bootstrap' Cosmos.Core.INTs' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.Core,Cmd,0,0,0,0,0,5,0,0,0,-1,0,1,,Cosmos.Core.PIC
+Cosmos.Core,ProcessorInformation,0,5,0,0,3,44,6,0,0,-1,0,1,,Cosmos.Core_Plugs.System.Diagnostics.StopwatchImpl
+Cosmos.Core.IOGroup,ATA,9,3,0,9,0,51,4,0,1,0,5,3,Cosmos.Core.IOPort' Cosmos.Core.IOPortWrite' Cosmos.Core.IOPortRead' Cosmos.Debug.Kernel.Debugger' Cosmos.Core.Global,Cosmos.Core.BaseIOGroups' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.Global
+Cosmos.Core.IOGroup,COM,8,1,0,8,1,46,3,0,1,0,1,0,Cosmos.Core.IOPort,
+Cosmos.Core.IOGroup,IOGroup,0,0,0,0,0,3,0,12,0,-1,0,0,,
+Cosmos.Core.IOGroup,Keyboard,1,0,0,1,0,3,0,0,1,-1,1,2,Cosmos.Core.IOPort,Cosmos.Core.BaseIOGroups' Cosmos.HAL.PS2Keyboard
+Cosmos.Core.IOGroup,Mouse,2,0,0,2,0,5,0,0,1,-1,1,2,Cosmos.Core.IOPort,Cosmos.Core.BaseIOGroups' Cosmos.HAL.Mouse
+Cosmos.Core.IOGroup,PCI,2,0,0,2,0,4,0,0,1,-1,1,1,Cosmos.Core.IOPort,Cosmos.HAL.PCIDevice
+Cosmos.Core.IOGroup,PCSpeaker,3,0,0,3,0,6,0,0,1,-1,1,2,Cosmos.Core.IOPort,Cosmos.Core.BaseIOGroups' Cosmos.HAL.PCSpeaker
+Cosmos.Core.IOGroup,PIC,2,1,0,2,0,11,1,0,1,0,1,1,Cosmos.Core.IOPort,Cosmos.Core.PIC
+Cosmos.Core.IOGroup,PIT,4,0,0,4,0,6,0,0,1,-1,2,2,Cosmos.Core.IOPort' Cosmos.Core.IOPortWrite,Cosmos.Core.BaseIOGroups' Cosmos.HAL.PIT
+Cosmos.Core.IOGroup,RTC,2,0,0,2,0,4,0,0,1,-1,1,2,Cosmos.Core.IOPort,Cosmos.Core.BaseIOGroups' Cosmos.HAL.RTC
+Cosmos.Core.IOGroup,TextScreen,8,0,0,8,0,11,0,0,1,-1,2,2,Cosmos.Core.MemoryBlock' Cosmos.Core.IOPort,Cosmos.Core.BaseIOGroups' Cosmos.HAL.TextScreen
+Cosmos.Core.IOGroup,VBE,3,0,0,3,0,10,0,0,1,-1,2,2,Cosmos.Core.IOPort' Cosmos.Core.MemoryBlock,Cosmos.Core.BaseIOGroups' Cosmos.HAL.Drivers.VBEDriver
+Cosmos.Core.IOGroup,VGA,17,0,0,17,0,29,0,0,1,-1,4,1,Cosmos.Core.IOPortWrite' Cosmos.Core.IOPortRead' Cosmos.Core.IOPort' Cosmos.Core.MemoryBlock08,Cosmos.HAL.VGAScreen
+Cosmos.Core.IOGroup.Network,AMDPCNetIIIOGroup,5,1,0,5,1,16,1,0,0,0,2,1,Cosmos.Core.IOPort' Cosmos.Core.IOPortRead,Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.Core.Memory,Heap,0,3,0,0,3,40,5,0,0,-1,5,1,Cosmos.Core.Memory.HeapSmall' Cosmos.Core.Memory.HeapMedium' Cosmos.Core.Memory.HeapLarge' Cosmos.Core.Memory.RAT' Cosmos.Core.Memory.PageType,Cosmos.Core.Memory.RAT
+Cosmos.Core.Memory,HeapLarge,1,3,0,1,3,20,3,0,0,1,2,3,Cosmos.Core.Memory.RAT' Cosmos.Core.Memory.PageType,Cosmos.Core.Memory.Heap' Cosmos.Core.Memory.HeapMedium' Cosmos.Core.Memory.HeapSmall
+Cosmos.Core.Memory,HeapMedium,2,3,0,2,3,16,3,0,0,1,1,1,Cosmos.Core.Memory.HeapLarge,Cosmos.Core.Memory.Heap
+Cosmos.Core.Memory,HeapSmall,4,5,0,1,3,73,7,0,0,0.6,3,1,Cosmos.Core.Memory.RAT' Cosmos.Core.Memory.PageType' Cosmos.Core.Memory.HeapLarge,Cosmos.Core.Memory.Heap
+Cosmos.Core.Memory,RAT,6,7,0,2,7,149,22,0,0,0,2,3,Cosmos.Core.Memory.PageType' Cosmos.Core.Memory.Heap,Cosmos.Core.Memory.Heap' Cosmos.Core.Memory.HeapLarge' Cosmos.Core.Memory.HeapSmall
+Cosmos.Core.Memory,PageType,6,0,0,6,0,13,0,0,0,-1,0,4,,Cosmos.Core.Memory.Heap' Cosmos.Core.Memory.HeapLarge' Cosmos.Core.Memory.HeapSmall' Cosmos.Core.Memory.RAT
+Cosmos.Core.Memory.Old,DataLookupEntry,3,0,0,3,0,11,0,0,0,-1,0,2,,Cosmos.Core.Memory.Old.DataLookupTable' Cosmos.Core.Memory.Old.Heap
+Cosmos.Core.Memory.Old,DataLookupTable,4,1,0,4,1,25,1,0,0,0,1,1,Cosmos.Core.Memory.Old.DataLookupEntry,Cosmos.Core.Memory.Old.Heap
+Cosmos.Core.Memory.Old,GlobalInformationTable,1,0,0,1,0,6,0,0,0,-1,0,1,,Cosmos.Core.Memory.Old.GlobalSystemInfo
+Cosmos.Core.Memory.Old,GlobalSystemInfo,1,1,2,0,0,36,2,0,0,0,3,2,Cosmos.Core.Memory.Old.GlobalInformationTable' Cosmos.Core.CPU' Cosmos.Debug.Kernel.Debugger,Cosmos.Core.Memory.Old.Heap' Cosmos.Core_Plugs.GCImplementionImpl
+Cosmos.Core.Memory.Old,Heap,5,5,0,0,1,179,23,0,0,0,5,1,Cosmos.Debug.Kernel.Debugger' Cosmos.Core.CPU' Cosmos.Core.Memory.Old.DataLookupTable' Cosmos.Core.Memory.Old.GlobalSystemInfo' Cosmos.Core.Memory.Old.DataLookupEntry,Cosmos.Core_Plugs.GCImplementionImpl

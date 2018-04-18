@@ -1,0 +1,25 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Sgml,SgmlParseException,1,6,1,0,5,73,9,0,0,0.67,1,0,Sgml.Entity,
+Sgml,LiteralType,0,0,0,0,0,18,0,0,0,-1,0,1,,Sgml.Entity
+Sgml,Entity,20,20,15,1,19,749,53,0,0,0.3,3,3,Sgml.LiteralType' Sgml.StringUtilities' Sgml.HtmlStream,Sgml.SgmlParseException' Sgml.SgmlDtd' Sgml.SgmlReader
+Sgml,HtmlStream,11,25,1,0,8,420,89,0,0,0,3,1,Sgml.Ucs4DecoderBigEngian' Sgml.Ucs4DecoderLittleEndian' Sgml.StringUtilities,Sgml.Entity
+Sgml,Ucs4Decoder,2,4,0,0,2,39,8,2,0,0.5,0,0,,
+Sgml,Ucs4DecoderBigEngian,0,1,0,0,0,25,3,0,1,-1,0,1,,Sgml.HtmlStream
+Sgml,Ucs4DecoderLittleEndian,0,1,0,0,0,25,3,0,1,-1,0,1,,Sgml.HtmlStream
+Sgml,ElementDecl,7,4,4,0,4,134,13,0,0,0.5,3,4,Sgml.ContentModel' Sgml.AttDef' Sgml.SgmlDtd,Sgml.Group' Sgml.SgmlDtd' Sgml.Node' Sgml.SgmlReader
+Sgml,DeclaredContent,0,0,0,0,0,25,0,0,0,-1,0,2,,Sgml.ContentModel' Sgml.SgmlReader
+Sgml,ContentModel,3,8,2,0,8,116,11,0,0,0,3,3,Sgml.DeclaredContent' Sgml.Group' Sgml.SgmlDtd,Sgml.ElementDecl' Sgml.SgmlDtd' Sgml.SgmlReader
+Sgml,GroupType,0,0,0,0,0,22,0,0,0,-1,0,1,,Sgml.Group
+Sgml,Occurrence,0,0,0,0,0,22,0,0,0,-1,0,1,,Sgml.Group
+Sgml,Group,5,6,3,0,6,177,20,0,0,0,4,1,Sgml.GroupType' Sgml.Occurrence' Sgml.ElementDecl' Sgml.SgmlDtd,Sgml.ContentModel
+Sgml,AttributeType,0,0,0,0,0,100,0,0,0,-1,0,2,,Sgml.AttDef' Sgml.SgmlDtd
+Sgml,AttributePresence,0,0,0,0,0,20,0,0,0,-1,0,1,,Sgml.AttDef
+Sgml,AttDef,5,4,5,0,4,166,7,0,0,0.75,2,4,Sgml.AttributeType' Sgml.AttributePresence,Sgml.ElementDecl' Sgml.SgmlDtd' Sgml.Attribute' Sgml.SgmlReader
+Sgml,SgmlDtd,11,29,2,0,6,774,88,0,0,0,5,4,Sgml.Entity' Sgml.ElementDecl' Sgml.ContentModel' Sgml.AttDef' Sgml.AttributeType,Sgml.ElementDecl' Sgml.ContentModel' Sgml.Group' Sgml.SgmlReader
+Sgml,StringUtilities,0,1,0,0,1,6,1,0,0,-1,0,3,,Sgml.Entity' Sgml.HtmlStream' Sgml.SgmlReader
+Sgml,CaseFolding,0,0,0,0,0,15,0,0,0,-1,0,4,,NReadability.SgmlDomBuilder' Sgml.CommandLine' Sgml.CommandLine' Sgml.SgmlReader
+Sgml,HWStack,4,4,2,0,4,101,7,0,0,0,0,2,,Sgml.Node' Sgml.SgmlReader
+Sgml,Attribute,4,1,2,0,1,40,1,0,0,0,1,2,Sgml.AttDef,Sgml.Node' Sgml.SgmlReader
+Sgml,Node,10,6,1,0,6,88,15,0,0,0,4,1,Sgml.ElementDecl' Sgml.State' Sgml.HWStack' Sgml.Attribute,Sgml.SgmlReader
+Sgml,State,0,0,0,0,0,15,0,0,0,-1,0,2,,Sgml.Node' Sgml.SgmlReader
+Sgml,SgmlReader,41,50,34,1,21,2136,160,0,0,0.08,12,3,Sgml.SgmlDtd' Sgml.Entity' Sgml.State' Sgml.HWStack' Sgml.Node' Sgml.Attribute' Sgml.CaseFolding' Sgml.StringUtilities' Sgml.ContentModel' Sgml.ElementDecl' Sgml.DeclaredContent' Sgml.AttDef,NReadability.SgmlDomBuilder' Sgml.CommandLine' Sgml.CommandLine

@@ -1,0 +1,18 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Phantom.Core,BooDslFactory,1,3,0,0,3,20,3,0,1,0.67,2,0,Phantom.Core.PhantomBase' Phantom.Core.ScriptModel,
+Phantom.Core,PhantomBase,2,8,1,0,8,35,8,1,0,0.25,1,3,Phantom.Core.ScriptModel,Phantom.Core.BooDslFactory' Phantom.Core.PhantomDslEngine' Phantom.Tests.PhantomBaseTester
+Phantom.Core,PhantomDslEngine,1,6,1,0,3,68,14,0,1,0.5,2,3,Phantom.Core.PhantomBase' Phantom.Core.Builtins.UtilityFunctions,Phantom.Core.Language.ExpressionToCleanupNameStep' Phantom.Core.Language.ExpressionToDependencyNamesStep' Phantom.Core.Language.ExpressionToTargetNameStep
+Phantom.Core.Integration,ITaskImportBuilder,0,1,0,0,0,3,1,1,0,-1,0,1,,Phantom.Core.Integration.TaskImportStep
+Phantom.Core.Integration,TaskImportStep,1,4,0,0,3,31,8,0,0,0.5,1,0,Phantom.Core.Integration.ITaskImportBuilder,
+Phantom.Core.Language,AutoRunAllRunnablesStep,0,4,0,0,2,27,7,0,0,-1,2,0,Phantom.Core.Language.RunnableParser' Phantom.Core.Builtins.WithBinaryExpression,
+Phantom.Core.Language,ExpressionToCleanupNameStep,0,3,0,0,3,15,5,0,0,-1,1,0,Phantom.Core.PhantomDslEngine,
+Phantom.Core.Language,ExpressionToCallTargetNameStep,0,4,0,0,3,22,7,0,0,-1,0,0,,
+Phantom.Core.Language,ExpressionToDependencyNamesStep,0,4,0,0,3,18,6,0,0,-1,1,0,Phantom.Core.PhantomDslEngine,
+Phantom.Core.Language,ExpressionToTargetNameStep,0,3,0,0,3,15,5,0,0,-1,1,0,Phantom.Core.PhantomDslEngine,
+Phantom.Core.Language,IIncludeCompiler,0,1,0,0,0,3,1,1,0,-1,0,1,,Phantom.Core.Language.IncludeSupportStep
+Phantom.Core.Language,IncludeSupportStep,1,4,0,0,3,40,10,0,0,0.5,1,0,Phantom.Core.Language.IIncludeCompiler,
+Phantom.Core.Language,RunnableParser,1,3,0,0,2,25,9,0,0,0.67,1,2,Phantom.Core.Language.IRunnable,Phantom.Core.Language.AutoRunAllRunnablesStep' Phantom.Core.Builtins.WithMacro
+Phantom.Core.Language,UnescapeNamesStep,0,6,0,0,6,25,6,0,0,-1,0,0,,
+Phantom.Core.Builtins,WithMacro,0,3,0,0,1,43,5,0,0,-1,3,0,Phantom.Core.Language.RunnableParser' Phantom.Core.Builtins.OmittedReferenceVisitor' Phantom.Core.Builtins.WithBinaryExpression,
+Phantom.Core.Builtins,OmittedReferenceVisitor,1,2,0,0,2,11,3,0,0,0,0,1,,Phantom.Core.Builtins.WithMacro
+Phantom.Core.Builtins,WithBinaryExpression,0,0,0,0,0,2,0,0,0,-1,0,2,,Phantom.Core.Language.AutoRunAllRunnablesStep' Phantom.Core.Builtins.WithMacro

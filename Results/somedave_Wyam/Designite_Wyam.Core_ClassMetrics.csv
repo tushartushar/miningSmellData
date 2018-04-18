@@ -1,0 +1,106 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Wyam.Core.Caching,Cache<TValue>,1,14,1,0,12,134,27,0,0,0.64,2,0,Wyam.Common.Documents.IDocument' Wyam.Common.Caching.Crc32,
+Wyam.Core.Caching,CacheEntry<TValue>,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Wyam.Core.Caching,ExecutionCache,0,3,0,0,3,26,5,0,1,-1,1,1,Wyam.Common.Documents.IDocument,Wyam.Core.Caching.ExecutionCacheManager
+Wyam.Core.Caching,ExecutionCacheManager,1,3,0,0,3,27,5,0,0,0,5,1,Wyam.Common.Configuration.IReadOnlySettings' Wyam.Common.Meta.Keys' Wyam.Common.Modules.IModule' Wyam.Core.Caching.ExecutionCache' Wyam.Common.Tracing.Trace,Wyam.Core.Execution.Engine
+Wyam.Core.Caching,NoCache,0,12,0,0,12,54,12,0,1,-1,1,0,Wyam.Common.Documents.IDocument,
+Wyam.Core.Configuration,NamespaceCollection,1,5,1,0,4,27,5,0,1,0,1,0,Wyam.Common.Execution.IEngine,
+Wyam.Core.Configuration,RawAssemblyCollection,1,3,1,0,2,14,4,0,1,0,0,0,,
+Wyam.Core.Configuration,Settings,0,1,0,0,1,10,1,0,3,-1,1,1,Wyam.Common.Meta.Keys,Wyam.Core.Execution.Engine
+Wyam.Core.Documents,BlockingStream,3,18,8,0,16,180,19,0,0,0,1,1,Wyam.Core.Documents.Document,Wyam.Core.Documents.Document
+Wyam.Core.Documents,CustomDocument,0,13,9,0,11,54,13,0,2,-1,0,1,,Wyam.Core.Documents.CustomDocumentFactory<T>
+Wyam.Core.Documents,CustomDocumentFactory<T>,1,8,0,0,7,59,9,0,1,0.25,5,0,Wyam.Common.Documents.IDocumentFactory' Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext' Wyam.Core.Documents.CustomDocument' Wyam.Common.IO.FilePath,
+Wyam.Core.Documents,Document,5,22,8,0,12,146,28,0,2,0.14,4,2,Wyam.Core.Meta.MetadataStack' Wyam.Core.Meta.MetadataDictionary' Wyam.Common.IO.FilePath' Wyam.Core.Documents.BlockingStream,Wyam.Core.Documents.BlockingStream' Wyam.Core.Documents.DocumentFactory
+Wyam.Core.Documents,DocumentCollection,1,8,0,0,7,40,8,0,1,0,0,3,,Wyam.Core.Execution.Engine' Wyam.Core.Execution.ExecutionContext' Wyam.Core.Execution.ExecutionPipeline
+Wyam.Core.Documents,DocumentFactory,1,8,0,0,8,79,12,0,1,0.38,6,0,Wyam.Core.Meta.MetadataDictionary' Wyam.Core.Documents.Document' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument' Wyam.Common.IO.FilePath' Wyam.Core.Modules.ModuleExtensions,
+Wyam.Core.Documents,RecyclableMemoryContentStreamFactory,3,1,0,0,1,28,2,0,1,0,1,0,Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Documents,SeekableStream,5,9,5,0,6,148,18,0,0,0.33,0,0,,
+Wyam.Core.Execution,Engine,7,7,12,0,6,256,15,0,1,0.29,16,11,Wyam.Core.IO.FileSystem' Wyam.Core.Configuration.Settings' Wyam.Core.Execution.PipelineCollection' Wyam.Core.Tracing.DiagnosticsTraceListener' Wyam.Common.Documents.IContentStreamFactory' Wyam.Common.Documents.IDocumentFactory' Wyam.Common.IO.IDirectory' Wyam.Common.Tracing.Trace' Wyam.Common.IO.IFileSystem' Wyam.Common.Configuration.ISettings' Wyam.Common.Meta.Keys' Wyam.Common.Tracing.IIndentedTraceEvent' Wyam.Core.Documents.DocumentCollection' Wyam.Core.Caching.ExecutionCacheManager' Wyam.Common.Execution.IPipeline' Wyam.Core.Execution.ExecutionPipeline,Wyam.EngineManager' Wyam.Program' Wyam.Commands.BuildCommand' Wyam.Commands.NewCommand' Wyam.Configuration.Assemblies.AssemblyCollection' Wyam.Configuration.Assemblies.AssemblyLoader' Wyam.Configuration.Configurator' Wyam.Configuration.ConfigScript.ScriptBase' Wyam.Configuration.NuGet.PackageInstaller' Wyam.Core.Execution.ExecutionContext' Wyam.Core.Execution.ExecutionPipeline
+Wyam.Core.Execution,ExecutionContext,2,29,14,0,24,148,34,0,2,0.52,7,1,Wyam.Core.Execution.ExecutionPipeline' Wyam.Core.Execution.Engine' Wyam.Common.Modules.IModule' Wyam.Common.IO.FilePath' Wyam.Common.Documents.IDocument' Wyam.Common.Documents.IDocumentFactory' Wyam.Core.Documents.DocumentCollection,Wyam.Core.Execution.ExecutionPipeline
+Wyam.Core.Execution,ExecutionPipeline,6,29,4,0,26,256,44,0,2,0.17,10,3,Wyam.Common.Modules.IModuleList' Wyam.Common.Modules.IModule' Wyam.Common.Documents.IDocumentFactory' Wyam.Core.Execution.Engine' Wyam.Common.Tracing.Trace' Wyam.Common.Documents.IDocument' Wyam.Core.Documents.DocumentCollection' Wyam.Common.Tracing.IIndentedTraceEvent' Wyam.Core.Execution.ExecutionContext' Wyam.Common.IO.FilePath,Wyam.Core.Execution.Engine' Wyam.Core.Execution.ExecutionContext' Wyam.Core.Execution.PipelineCollection
+Wyam.Core.Execution,PipelineCollection,2,14,4,0,10,85,17,0,1,0,3,1,Wyam.Core.Execution.ExecutionPipeline' Wyam.Common.Modules.IModuleList' Wyam.Common.Execution.IPipeline,Wyam.Core.Execution.Engine
+Wyam.Core.Execution,ReadOnlyPipeline,1,8,3,0,6,20,8,0,2,0,2,0,Wyam.Common.Execution.IPipeline' Wyam.Common.Modules.IModule,
+Wyam.Core.IO,FileProviderCollection,1,5,1,0,5,47,10,0,2,0,2,0,Wyam.Common.IO.NormalizedPath' Wyam.Common.IO.IFileProvider,
+Wyam.Core.IO,FileSystem,3,25,7,0,25,247,45,0,2,0.28,8,2,Wyam.Common.IO.DirectoryPath' Wyam.Common.IO.IFile' Wyam.Common.IO.FilePath' Wyam.Common.IO.NormalizedPath' Wyam.Common.IO.IFileProvider' Wyam.Common.IO.IDirectory' Wyam.Core.IO.Globbing.Globber' Wyam.Common.IO.IFileProviderCollection,Wyam.Core.Execution.Engine' Wyam.Core.IO.VirtualInputDirectory
+Wyam.Core.IO,VirtualInputDirectory,2,8,4,0,7,108,19,0,2,0.38,5,0,Wyam.Core.IO.FileSystem' Wyam.Common.IO.DirectoryPath' Wyam.Common.IO.IDirectory' Wyam.Common.IO.IFile' Wyam.Common.IO.FilePath,
+Wyam.Core.IO.FileProviders.Local,LocalDirectory,2,7,4,0,7,59,13,0,2,0,3,1,Wyam.Common.IO.DirectoryPath' Wyam.Common.IO.FilePath' Wyam.Core.IO.FileProviders.Local.LocalFile,Wyam.Core.IO.FileProviders.Local.LocalFileProvider
+Wyam.Core.IO.FileProviders.Local,LocalFile,2,10,5,0,10,112,21,0,2,0,4,2,Wyam.Common.IO.FilePath' Wyam.Common.IO.IDirectory' Wyam.Common.IO.IFile' Wyam.Core.IO.FileProviders.Local.LocalFileProvider,Wyam.Core.IO.FileProviders.Local.LocalDirectory' Wyam.Core.IO.FileProviders.Local.LocalFileProvider
+Wyam.Core.IO.FileProviders.Local,LocalFileProvider,3,5,0,0,2,47,6,0,1,0.8,4,1,Wyam.Core.IO.FileProviders.Local.LocalFile' Wyam.Common.IO.FilePath' Wyam.Core.IO.FileProviders.Local.LocalDirectory' Wyam.Common.IO.DirectoryPath,Wyam.Core.IO.FileProviders.Local.LocalFile
+Wyam.Core.IO.Globbing,DirectoryInfo,2,4,3,0,4,50,9,0,0,0,1,0,Wyam.Common.IO.IDirectory,
+Wyam.Core.IO.Globbing,FileInfo,1,1,3,0,1,15,2,0,0,0,1,0,Wyam.Common.IO.IFile,
+Wyam.Core.IO.Globbing,Globber,2,3,0,0,3,262,17,0,0,1,1,1,Wyam.Common.IO.IDirectory,Wyam.Core.IO.FileSystem
+Wyam.Core.JavaScript,JsEngine,2,18,2,0,17,113,19,0,1,0,0,1,,Wyam.Core.JavaScript.PooledJsEngine
+Wyam.Core.JavaScript,JsEnginePool,2,6,0,0,5,62,11,0,1,0,2,0,Wyam.Core.JavaScript.PooledJsEngine' Wyam.Common.JavaScript.IJsEngine,
+Wyam.Core.JavaScript,PooledJsEngine,1,18,4,0,17,115,19,0,1,0.11,1,1,Wyam.Core.JavaScript.JsEngine,Wyam.Core.JavaScript.JsEnginePool
+Wyam.Core.Meta,Metadata,0,13,4,0,8,98,19,2,1,-1,1,1,Wyam.Common.Meta.IMetadataValue,Wyam.Core.Meta.MetadataStack
+Wyam.Core.Meta,MetadataAs<T>,1,7,3,0,6,82,8,0,1,0.71,2,0,Wyam.Common.Meta.IMetadata' Wyam.Core.Meta.TypeHelper,
+Wyam.Core.Meta,MetadataDictionary,0,8,5,0,8,30,8,1,2,-1,0,2,,Wyam.Core.Documents.Document' Wyam.Core.Documents.DocumentFactory
+Wyam.Core.Meta,MetadataStack,0,3,0,0,0,25,5,0,2,-1,1,1,Wyam.Core.Meta.Metadata,Wyam.Core.Documents.Document
+Wyam.Core.Meta,MetadataTypeConverter,0,4,0,0,4,7,4,1,0,-1,0,1,,Wyam.Core.Meta.TypeHelper
+Wyam.Core.Meta,MetadataTypeConverter<T>,0,6,0,0,5,34,8,0,1,-1,0,0,,
+Wyam.Core.Meta,TypeHelper,0,3,0,0,1,91,14,0,0,-1,1,3,Wyam.Core.Meta.MetadataTypeConverter,Wyam.Core.Meta.MetadataAs<T>' Wyam.Core.Util.ConvertingComparer<TValue>' Wyam.Core.Util.ConvertingEqualityComparer<TValue>
+Wyam.Core.Modules.Contents,Append,0,5,0,0,4,45,5,0,2,-1,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Contents,Content,0,5,0,0,4,44,5,0,2,-1,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Contents,Join,2,5,0,0,4,92,10,0,1,0.6,3,0,Wyam.Core.Modules.Contents.JoinedMetadata' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Contents,JoinedMetadata,0,0,0,0,0,25,0,0,0,-1,0,1,,Wyam.Core.Modules.Contents.Join
+Wyam.Core.Modules.Contents,Prepend,0,5,0,0,4,44,5,0,2,-1,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Contents,Redirect,4,5,0,0,5,142,12,0,1,0,5,1,Wyam.Common.IO.FilePath' Wyam.Common.Tracing.Trace' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Meta.Keys' Wyam.Common.Documents.IDocument,Wyam.Web.Pipelines.Redirects
+Wyam.Core.Modules.Contents,Replace,4,7,0,0,6,118,12,0,2,0,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Contents,ReplaceIn,3,6,0,0,5,88,8,0,2,0,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Contents,Sitemap,3,4,0,0,4,113,6,0,1,0.75,3,0,Wyam.Common.Modules.Contents.SitemapItem' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Control,Branch,1,4,0,0,4,46,4,0,2,0.75,2,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Combine,0,1,0,0,1,15,1,0,1,-1,2,0,Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Concat,0,3,0,0,3,24,3,0,2,-1,2,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,ConcatBranch,1,4,0,0,4,47,4,0,2,0.75,2,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Documents,4,11,0,0,11,149,16,0,1,0.18,3,1,Wyam.Common.Documents.IDocumentCollection' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Execution.IReadOnlyPipeline,Wyam.Web.Pipelines.Archive
+Wyam.Core.Modules.Control,ForEach,0,3,0,0,3,24,3,0,2,-1,2,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,FrontMatter,3,8,0,0,8,114,8,0,2,0.5,2,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,GroupBy,4,9,0,0,9,139,12,0,2,0.33,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Meta.Keys,
+Wyam.Core.Modules.Control,GroupByMany,4,9,0,0,9,139,12,0,2,0.33,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Meta.Keys,
+Wyam.Core.Modules.Control,If,2,7,0,0,7,142,12,0,1,0,3,0,Wyam.Common.Modules.IModule' Wyam.Core.Modules.Control.Condition' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Condition,0,2,3,0,2,16,2,0,0,-1,1,1,Wyam.Common.Modules.IModule,Wyam.Core.Modules.Control.If
+Wyam.Core.Modules.Control,Merge,1,4,0,0,4,55,6,0,2,0.75,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Modules.IModuleList' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,OrderBy,1,6,0,0,6,98,10,0,1,0,2,0,Wyam.Core.Modules.Control.Order' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Order,0,1,3,0,1,10,1,0,0,-1,0,1,,Wyam.Core.Modules.Control.OrderBy
+Wyam.Core.Modules.Control,Paginate,5,8,0,0,7,172,12,0,2,0.38,5,1,Wyam.Common.Modules.IModule' Wyam.Common.Documents.IDocument' Wyam.Core.Modules.Control.Page' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Meta.Keys,Wyam.Web.Pipelines.Archive
+Wyam.Core.Modules.Control,Page,0,0,2,0,0,5,0,0,0,-1,0,1,,Wyam.Core.Modules.Control.Paginate
+Wyam.Core.Modules.Control,Sidecar,1,7,0,0,7,102,9,0,2,0.71,6,0,Wyam.Common.Modules.IModule' Wyam.Common.Meta.Keys' Wyam.Common.IO.FilePath' Wyam.Common.IO.IFile' Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.IReadOnlyFileSystem,
+Wyam.Core.Modules.Control,Sort,1,2,0,0,2,23,3,0,1,0,2,0,Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Switch,3,4,0,0,4,77,9,0,1,0,2,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Take,1,2,0,0,2,17,2,0,1,0,1,0,Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Control,Where,1,2,0,0,2,18,2,0,1,0,1,0,Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Extensibility,Execute,3,9,0,0,4,130,14,0,1,0.33,3,0,Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument' Wyam.Common.Modules.IModule,
+Wyam.Core.Modules.Extensibility,ModuleCollection,0,3,0,0,3,26,3,0,2,-1,2,1,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext,Wyam.Web.Pipelines.Archive
+Wyam.Core.Modules.Extensibility,Trace,1,6,0,0,5,55,6,0,2,0.83,4,0,Wyam.Common.Modules.IModule' Wyam.Common.Tracing.Trace' Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.IO,CopyFiles,4,7,0,0,6,137,12,0,1,0,8,0,Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.DirectoryPath' Wyam.Common.IO.FilePath' Wyam.Common.IO.IFile' Wyam.Common.IO.IReadOnlyFileSystem' Wyam.Common.Tracing.Trace' Wyam.Common.Meta.Keys' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.IO,Download,4,9,0,0,7,184,16,0,1,0.22,8,0,Wyam.Core.Modules.IO.RequestHeaders' Wyam.Core.Modules.IO.DownloadRequest' Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.PathKind' Wyam.Common.Meta.Keys' Wyam.Common.Tracing.Trace' Wyam.Core.Modules.IO.DownloadResponse,
+Wyam.Core.Modules.IO,DownloadResponse,0,1,3,0,1,12,1,0,0,-1,0,1,,Wyam.Core.Modules.IO.Download
+Wyam.Core.Modules.IO,DownloadRequest,0,9,6,0,9,125,12,0,0,-1,1,1,Wyam.Core.Modules.IO.RequestHeaders,Wyam.Core.Modules.IO.Download
+Wyam.Core.Modules.IO,Include,1,3,0,0,2,83,6,0,1,0.67,6,0,Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.FilePath' Wyam.Common.IO.IFile' Wyam.Common.IO.DirectoryPath' Wyam.Common.IO.IReadOnlyFileSystem' Wyam.Common.Tracing.Trace,
+Wyam.Core.Modules.IO,ReadApplicationInput,0,1,0,0,1,13,2,0,1,-1,2,0,Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.IO,ReadFiles,3,6,0,0,5,100,11,0,1,0,7,0,Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.DirectoryPath' Wyam.Common.IO.FilePath' Wyam.Common.IO.IReadOnlyFileSystem' Wyam.Common.Tracing.Trace' Wyam.Common.Meta.Keys' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.IO,RequestHeaders,1,7,19,0,6,170,28,0,0,0.43,0,2,,Wyam.Core.Modules.IO.Download' Wyam.Core.Modules.IO.DownloadRequest
+Wyam.Core.Modules.IO,UnwrittenFiles,0,4,0,0,4,56,4,0,1,-1,6,0,Wyam.Common.IO.FilePath' Wyam.Common.IO.IFile' Wyam.Common.IO.IDirectory' Wyam.Common.IO.IReadOnlyFileSystem' Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.DirectoryPath,
+Wyam.Core.Modules.IO,WriteFiles,7,12,0,0,9,281,23,1,1,0.25,9,1,Wyam.Common.Meta.Keys' Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.FilePath' Wyam.Common.IO.DirectoryPath' Wyam.Common.Tracing.Trace' Wyam.Common.IO.IFile' Wyam.Common.Meta.MetadataItems' Wyam.Common.IO.IReadOnlyFileSystem,Wyam.Web.Pipelines.Pages
+Wyam.Core.Modules.Metadata,CopyMeta,4,4,0,0,4,87,8,0,1,0,2,0,Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Metadata,DirectoryMeta,2,4,0,0,4,133,4,0,1,0.5,4,0,Wyam.Common.IO.FilePath' Wyam.Common.IO.DirectoryPath' Wyam.Common.IO.IReadOnlyFileSystem' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Metadata,MetaFileEntry,0,1,3,0,1,12,1,0,0,-1,0,0,,
+Wyam.Core.Modules.Metadata,FileName,6,10,0,0,9,205,27,0,1,0.2,5,0,Wyam.Common.IO.FilePath' Wyam.Common.IO.DirectoryPath' Wyam.Common.Meta.Keys' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Metadata,Flatten,1,3,0,0,3,41,7,0,1,0.67,2,0,Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Metadata,Index,0,1,0,0,1,8,1,0,1,-1,2,0,Wyam.Common.Execution.IExecutionContext' Wyam.Common.Meta.Keys,
+Wyam.Core.Modules.Metadata,Meta,6,8,0,0,8,135,15,0,1,0,3,0,Wyam.Common.Modules.IModule' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Documents.IDocument,
+Wyam.Core.Modules.Metadata,Objects,1,2,0,0,1,14,2,0,0,0,1,0,Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Metadata,Sql,2,3,0,0,1,40,5,0,0,0.67,1,0,Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Metadata,Title,3,9,0,0,9,144,16,0,1,0.33,4,2,Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.FilePath' Wyam.Common.Documents.IDocument' Wyam.Common.Meta.Keys,Wyam.BookSite.BookSite' Wyam.Docs.Docs
+Wyam.Core.Modules.Metadata,Tree,13,8,0,0,8,331,17,0,1,0.25,4,2,Wyam.Common.Meta.Keys' Wyam.Core.Modules.Metadata.TreeNodeEqualityComparer' Wyam.Core.Modules.Metadata.TreeNode' Wyam.Common.Execution.IExecutionContext,Wyam.Core.Modules.Metadata.TreeNode' Wyam.Web.Pipelines.Pages
+Wyam.Core.Modules.Metadata,TreeNode,0,8,5,0,4,110,23,0,0,-1,4,2,Wyam.Core.Modules.Metadata.Tree' Wyam.Common.Documents.IDocument' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Meta.MetadataItems,Wyam.Core.Modules.Metadata.Tree' Wyam.Core.Modules.Metadata.TreeNodeEqualityComparer
+Wyam.Core.Modules.Metadata,TreeNodeEqualityComparer,1,2,0,0,2,8,2,0,0,0,2,1,Wyam.Core.Modules.Metadata.TreePathEqualityComparer' Wyam.Core.Modules.Metadata.TreeNode,Wyam.Core.Modules.Metadata.Tree
+Wyam.Core.Modules.Metadata,TreePathEqualityComparer,0,2,0,0,2,6,2,0,0,-1,0,1,,Wyam.Core.Modules.Metadata.TreeNodeEqualityComparer
+Wyam.Core.Modules.Metadata,ValidateMeta<T>,3,5,0,0,4,77,6,0,1,0.4,1,0,Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules.Metadata,Assertion<T>,1,2,1,0,2,14,2,0,0,0,0,0,,
+Wyam.Core.Modules.Metadata,Xml,3,7,0,0,5,151,18,0,0,0.29,1,0,Wyam.Common.Execution.IExecutionContext,
+Wyam.Core.Modules,ModuleExtensions,0,1,1,0,1,9,1,0,0,-1,0,1,,Wyam.Core.Documents.DocumentFactory
+Wyam.Core.Modules.Templates,Xslt,2,4,0,0,4,80,4,0,1,0,7,0,Wyam.Common.Modules.IModule' Wyam.Common.IO.FilePath' Wyam.Common.IO.IFile' Wyam.Common.Documents.IDocument' Wyam.Common.IO.IReadOnlyFileSystem' Wyam.Common.Execution.IExecutionContext' Wyam.Common.Tracing.Trace,
+Wyam.Core.Tracing,DiagnosticsTraceListener,0,10,0,0,10,54,12,0,0,-1,1,1,Wyam.Common.Tracing.Trace,Wyam.Core.Execution.Engine
+Wyam.Core.Util,ConvertingComparer<TValue>,1,2,0,0,2,22,4,0,0,0,1,0,Wyam.Core.Meta.TypeHelper,
+Wyam.Core.Util,ConvertingEqualityComparer<TValue>,1,3,0,0,2,27,5,0,0,0,1,0,Wyam.Core.Meta.TypeHelper,

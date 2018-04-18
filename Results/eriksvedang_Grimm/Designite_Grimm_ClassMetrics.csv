@@ -1,35 +1,36 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-GrimmException,0,1,0,0,1,6,1,0,0,-1,0,0
-GrimmAssertException,0,1,0,0,1,6,1,0,0,-1,0,0
-DialogueRunner,13,58,1,2,46,581,124,0,0,0.17,9,3
-Speech,4,2,0,4,2,21,2,0,0,0,0,1
-Token,4,4,2,0,4,83,4,0,0,0,0,2
-Tokenizer,9,19,0,0,1,257,76,0,0,0,1,1
-BranchingDialogueNode,3,4,3,0,2,77,8,0,1,0.5,0,3
-ConversationEndDialogueNode,0,1,0,0,1,8,1,0,1,-1,0,2
-ConversationStartDialogueNode,0,1,0,0,1,8,1,0,1,-1,0,3
-DialogueNode,9,10,6,1,7,128,11,23,0,0.4,1,6
-TimedDialogueNode,5,6,4,1,5,79,8,0,1,0.83,0,3
-UnifiedEndNodeForScope,0,1,0,0,1,8,1,0,1,-1,0,2
-DialogueScriptLoader,13,40,1,0,4,796,122,0,0,0.05,28,1
-GotoDialogueNode,1,2,1,0,1,28,2,0,1,1,0,2
-IfDialogueNode,3,2,3,0,1,87,7,0,1,1,2,2
-ImmediateNode,0,1,0,0,1,8,1,0,1,-1,0,2
-DialogueScriptPrinter,4,28,0,0,2,324,63,0,0,0,25,0
-StartCommandoDialogueNode,1,2,1,0,1,25,2,0,1,1,0,2
-WaitDialogueNode,7,7,6,0,5,129,13,0,1,0.57,1,3
-CallFunctionDialogueNode,2,3,2,0,2,51,4,0,1,1,0,2
-AssertDialogueNode,0,1,0,0,1,12,2,0,1,-1,0,2
-ExpressionDialogueNode,2,2,2,0,1,41,3,1,1,1,0,4
-ListeningDialogueNode,5,5,5,0,4,87,7,0,1,1,1,3
-SilentDialogueNode,0,1,0,0,1,7,1,0,1,-1,0,2
-BroadcastDialogueNode,1,2,1,0,1,23,2,0,1,1,0,2
-CancelDialogueNode,1,2,1,0,1,25,2,0,1,1,0,2
-FocusDialogueNode,0,1,0,0,1,9,1,0,1,-1,0,2
-DefocusDialogueNode,0,1,0,0,1,9,1,0,1,-1,0,1
-LoopDialogueNode,2,3,1,0,2,31,4,0,1,0.67,1,3
-BreakDialogueNode,1,2,1,0,1,27,3,0,1,1,1,2
-IRegisteredDialogueNode,0,2,5,0,0,25,2,2,0,-1,0,1
-StopDialogueNode,1,2,1,0,1,29,3,0,1,1,0,2
-InterruptDialogueNode,1,3,1,0,2,34,4,0,1,0.67,0,2
-TimedWaitDialogueNode,2,3,2,0,2,44,5,0,1,1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GrimmLib,GrimmException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+GrimmLib,GrimmAssertException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+GrimmLib,DialogueRunner,13,58,1,2,46,633,119,0,0,0.17,9,19,GrimmLib.DialogueNode' GrimmLib.IRegisteredDialogueNode' GrimmLib.BranchingDialogueNode' GrimmLib.TimedDialogueNode' GrimmLib.ConversationStartDialogueNode' GrimmLib.Speech' GrimmLib.DialogueScriptLoader' GrimmLib.ListeningDialogueNode' GrimmLib.WaitDialogueNode,GrimmLib.ConversationEndDialogueNode' GrimmLib.DialogueNode' GrimmLib.TimedDialogueNode' GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter' GrimmLib.StartCommandoDialogueNode' GrimmLib.WaitDialogueNode' GrimmLib.CallFunctionDialogueNode' GrimmLib.AssertDialogueNode' GrimmLib.ExpressionDialogueNode' GrimmLib.ListeningDialogueNode' GrimmLib.BroadcastDialogueNode' GrimmLib.CancelDialogueNode' GrimmLib.FocusDialogueNode' GrimmLib.DefocusDialogueNode' GrimmLib.LoopDialogueNode' GrimmLib.BreakDialogueNode' GrimmLib.StopDialogueNode' GrimmLib.InterruptDialogueNode
+GrimmLib,Speech,4,2,0,4,2,20,2,0,0,0,0,1,,GrimmLib.DialogueRunner
+GrimmLib,Token,4,4,2,0,4,88,4,0,0,0,1,2,GrimmLib.TokenType,GrimmLib.Tokenizer' GrimmLib.DialogueScriptLoader
+GrimmLib,TokenType,0,0,0,0,0,46,0,0,0,-1,0,3,,GrimmLib.Token' GrimmLib.Tokenizer' GrimmLib.DialogueScriptLoader
+GrimmLib,Tokenizer,9,19,0,0,1,313,31,0,0,0,2,1,GrimmLib.Token' GrimmLib.TokenType,GrimmLib.DialogueScriptLoader
+GrimmLib,BranchingDialogueNode,3,4,3,0,2,85,8,0,1,0.5,1,3,GrimmLib.DialogueNode,GrimmLib.DialogueRunner' GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,ConversationEndDialogueNode,0,1,0,0,1,8,1,0,1,-1,1,2,GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,ConversationStartDialogueNode,0,1,0,0,1,8,1,0,1,-1,0,3,,GrimmLib.DialogueRunner' GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,DialogueNode,9,10,6,1,7,141,11,23,0,0.4,1,19,GrimmLib.DialogueRunner,GrimmLib.DialogueRunner' GrimmLib.BranchingDialogueNode' GrimmLib.TimedDialogueNode' GrimmLib.DialogueScriptLoader' GrimmLib.GotoDialogueNode' GrimmLib.IfDialogueNode' GrimmLib.DialogueScriptPrinter' GrimmLib.StartCommandoDialogueNode' GrimmLib.WaitDialogueNode' GrimmLib.CallFunctionDialogueNode' GrimmLib.ExpressionDialogueNode' GrimmLib.ListeningDialogueNode' GrimmLib.BroadcastDialogueNode' GrimmLib.CancelDialogueNode' GrimmLib.LoopDialogueNode' GrimmLib.BreakDialogueNode' GrimmLib.StopDialogueNode' GrimmLib.InterruptDialogueNode' GrimmLib.TimedWaitDialogueNode
+GrimmLib,TimedDialogueNode,5,6,4,1,5,91,8,0,1,0.83,2,3,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueRunner' GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,UnifiedEndNodeForScope,0,1,0,0,1,8,1,0,1,-1,0,2,,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,DialogueScriptLoader,13,40,1,0,4,1074,81,0,0,0.05,29,1,GrimmLib.DialogueRunner' GrimmLib.Token' GrimmLib.Tokenizer' GrimmLib.TokenType' GrimmLib.ConversationStartDialogueNode' GrimmLib.ConversationEndDialogueNode' GrimmLib.DialogueNode' GrimmLib.TimedDialogueNode' GrimmLib.CallFunctionDialogueNode' GrimmLib.GotoDialogueNode' GrimmLib.StartCommandoDialogueNode' GrimmLib.InterruptDialogueNode' GrimmLib.TimedWaitDialogueNode' GrimmLib.WaitDialogueNode' GrimmLib.FocusDialogueNode' GrimmLib.DefocusDialogueNode' GrimmLib.CancelDialogueNode' GrimmLib.BroadcastDialogueNode' GrimmLib.ListeningDialogueNode' GrimmLib.SilentDialogueNode' GrimmLib.ImmediateNode' GrimmLib.StopDialogueNode' GrimmLib.ExpressionDialogueNode' GrimmLib.LoopDialogueNode' GrimmLib.BreakDialogueNode' GrimmLib.AssertDialogueNode' GrimmLib.UnifiedEndNodeForScope' GrimmLib.IfDialogueNode' GrimmLib.BranchingDialogueNode,GrimmLib.DialogueRunner
+GrimmLib,GotoDialogueNode,1,2,1,0,1,33,2,0,1,1,1,2,GrimmLib.DialogueNode,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,IfDialogueNode,3,2,3,0,1,106,7,0,1,1,2,2,GrimmLib.DialogueNode' GrimmLib.ExpressionDialogueNode,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,ImmediateNode,0,1,0,0,1,8,1,0,1,-1,0,2,,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,DialogueScriptPrinter,4,28,0,0,2,444,40,0,0,0,26,0,GrimmLib.DialogueRunner' GrimmLib.DialogueNode' GrimmLib.BranchingDialogueNode' GrimmLib.ConversationEndDialogueNode' GrimmLib.ConversationStartDialogueNode' GrimmLib.TimedDialogueNode' GrimmLib.UnifiedEndNodeForScope' GrimmLib.GotoDialogueNode' GrimmLib.IfDialogueNode' GrimmLib.ImmediateNode' GrimmLib.StartCommandoDialogueNode' GrimmLib.StopDialogueNode' GrimmLib.InterruptDialogueNode' GrimmLib.WaitDialogueNode' GrimmLib.CallFunctionDialogueNode' GrimmLib.AssertDialogueNode' GrimmLib.ListeningDialogueNode' GrimmLib.SilentDialogueNode' GrimmLib.BroadcastDialogueNode' GrimmLib.CancelDialogueNode' GrimmLib.FocusDialogueNode' GrimmLib.DefocusDialogueNode' GrimmLib.LoopDialogueNode' GrimmLib.BreakDialogueNode' GrimmLib.ExpressionDialogueNode' GrimmLib.TimedWaitDialogueNode,
+GrimmLib,StartCommandoDialogueNode,1,2,1,0,1,31,2,0,1,1,2,2,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,WaitDialogueNode,7,7,6,0,5,142,14,0,1,0.57,3,3,GrimmLib.ExpressionDialogueNode' GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueRunner' GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,CallFunctionDialogueNode,2,3,2,0,2,61,3,0,1,1,2,2,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,AssertDialogueNode,0,1,0,0,1,12,2,0,1,-1,1,2,GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,ExpressionDialogueNode,2,2,2,0,1,48,2,1,1,1,2,4,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.IfDialogueNode' GrimmLib.DialogueScriptPrinter' GrimmLib.WaitDialogueNode
+GrimmLib,ListeningDialogueNode,5,5,5,0,4,102,7,0,1,1,2,3,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueRunner' GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,SilentDialogueNode,0,1,0,0,1,7,1,0,1,-1,0,2,,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,BroadcastDialogueNode,1,2,1,0,1,27,2,0,1,1,2,2,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,CancelDialogueNode,1,2,1,0,1,30,2,0,1,1,2,2,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,FocusDialogueNode,0,1,0,0,1,9,1,0,1,-1,1,2,GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,DefocusDialogueNode,0,1,0,0,1,9,1,0,1,-1,1,2,GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,LoopDialogueNode,2,3,1,0,2,36,4,0,1,0.67,2,3,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter' GrimmLib.BreakDialogueNode
+GrimmLib,BreakDialogueNode,1,2,1,0,1,30,3,0,1,1,3,2,GrimmLib.DialogueNode' GrimmLib.LoopDialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,IRegisteredDialogueNode,0,2,5,0,0,10,2,2,0,-1,0,1,,GrimmLib.DialogueRunner
+GrimmLib,StopDialogueNode,1,2,1,0,1,34,3,0,1,1,2,2,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,InterruptDialogueNode,1,3,1,0,2,41,4,0,1,0.67,2,2,GrimmLib.DialogueNode' GrimmLib.DialogueRunner,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter
+GrimmLib,TimedWaitDialogueNode,2,3,2,0,2,52,5,0,1,1,1,2,GrimmLib.DialogueNode,GrimmLib.DialogueScriptLoader' GrimmLib.DialogueScriptPrinter

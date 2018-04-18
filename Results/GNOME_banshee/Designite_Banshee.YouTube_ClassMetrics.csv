@@ -1,9 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ContextPage,1,3,1,0,2,28,4,0,1,1,4,1
-YouTubePane,11,8,2,0,3,150,15,0,0,0.25,4,1
-YouTubeTile,0,1,0,0,1,16,2,0,1,-1,1,0
-YouTubeTileData,0,3,6,0,1,100,12,0,0,-1,3,2
-VideoStreamTile,14,8,7,0,2,167,16,1,0,0.38,5,0
-DataFetch,5,8,0,3,4,96,27,0,0,0.38,2,1
-CacheDuration,0,0,0,0,0,6,0,0,0,-1,0,2
-DataCore,6,2,1,0,2,38,3,0,0,0,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Banshee.YouTube,ContextPage,1,3,1,0,2,24,4,0,1,1,3,1,Banshee.YouTube.YouTubePane' Banshee.ContextPane.ContextState' Banshee.Collection.TrackInfo,Banshee.YouTube.YouTubePane
+Banshee.YouTube,YouTubePane,11,8,2,0,3,146,14,0,0,0.25,3,2,Banshee.YouTube.ContextPage' Banshee.Widgets.TileView' Banshee.ContextPane.ContextState,Banshee.YouTube.ContextPage' Banshee.YouTube.RefreshVideosJob
+Banshee.YouTube,RefreshVideosJob,2,2,0,0,1,20,3,0,0,0,2,0,Banshee.YouTube.YouTubePane' Banshee.YouTube.Data.DataCore,
+Banshee.YouTube.Gui,YouTubeTile,0,1,0,0,1,16,2,0,1,-1,2,0,Banshee.YouTube.Gui.YouTubeTileData' Banshee.Gui.IconThemeUtils,
+Banshee.YouTube.Gui,YouTubeTileData,0,3,6,0,1,80,11,0,0,-1,3,1,Banshee.YouTube.Data.DataFetch' Banshee.YouTube.Data.CacheDuration' Banshee.YouTube.Gui.YouTubeVideoFormat,Banshee.YouTube.Gui.YouTubeTile
+Banshee.YouTube.Gui,YouTubeVideoFormat,0,0,0,0,0,6,0,0,0,-1,0,1,,Banshee.YouTube.Gui.YouTubeTileData
+Banshee.YouTube.Gui,VideoStreamTile,14,8,7,0,2,154,14,1,0,0.38,4,0,Banshee.Collection.TrackInfo' Banshee.MediaEngine.PlayerEngineService' Banshee.ServiceStack.ServiceManager' Banshee.Web.Browser,
+Banshee.YouTube.Data,DataFetch,5,8,0,3,4,99,17,0,0,0.25,4,1,Banshee.YouTube.Data.CacheDuration' Banshee.IO.File' Banshee.IO.StreamAssist' Banshee.IO.Directory,Banshee.YouTube.Gui.YouTubeTileData
+Banshee.YouTube.Data,CacheDuration,0,0,0,0,0,6,0,0,0,-1,0,2,,Banshee.YouTube.Gui.YouTubeTileData' Banshee.YouTube.Data.DataFetch
+Banshee.YouTube.Data,DataCore,6,2,1,0,2,36,3,0,0,0,0,1,,Banshee.YouTube.RefreshVideosJob

@@ -1,30 +1,31 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DeleteConfirmationDialog,0,3,0,0,1,19,3,0,0,-1,0,1
-IntellisenseTextBox,2,10,5,2,5,229,54,0,0,0.3,1,0
-AppendTextDialog,1,4,1,0,2,33,4,0,0,1,1,1
-SetPriorityDialog,0,5,1,0,1,57,9,0,0,-1,0,1
-SetDueDateDialog,0,4,1,0,1,69,9,0,0,-1,0,1
-ExceptionExtensions,0,1,0,0,1,8,1,0,0,-1,1,0
-GroupConverter,0,2,0,0,2,14,2,0,0,-1,0,0
-PortableSettingsProvider,5,11,7,0,7,150,18,0,0,0.64,0,1
-SortType,0,0,0,0,0,14,0,0,0,-1,0,3
-UpdateChecker,3,2,0,2,2,28,2,0,0,0,2,1
-MainWindowViewModel,15,82,9,0,49,1338,265,0,0,0.17,18,3
-PostponeDialog,0,3,1,0,1,28,3,0,0,-1,0,1
-FilterDialog,2,7,10,0,2,145,10,0,0,0.86,1,1
-Help,0,3,0,0,1,24,4,0,0,-1,0,1
-HotKeyWinApi,1,2,0,1,2,8,2,0,0,1,0,1
-HotKey,4,8,2,0,6,75,14,0,0,0.38,1,1
-HotKeyMainWindows,2,3,0,0,2,36,5,0,0,0,2,1
-FileChangeObserver,2,3,0,0,2,51,10,0,0,0.67,2,1
-Options,1,5,1,0,1,72,7,0,0,1,3,1
-Resource,2,1,5,0,0,109,1,0,0,0,0,1
-TrayMainWindows,2,4,0,0,2,51,6,0,0,0,2,1
-UrlService,2,4,0,1,2,60,8,0,0,0.75,0,0
-User,1,3,41,0,1,464,3,0,0,1,0,6
-WindowLocation,0,1,4,0,1,26,1,0,0,-1,1,1
-App,0,4,0,0,0,44,7,0,0,-1,3,0
-MainWindow,3,77,1,0,10,466,91,0,0,0.79,7,4
-ActiveFilterToStatusConvertor,0,2,0,0,2,11,2,0,0,-1,0,0
-SortTypeToDescriptionConvertor,0,2,0,0,2,11,2,0,0,-1,1,0
-EnumExtensions,0,1,0,0,1,26,3,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Client,DeleteConfirmationDialog,4,5,0,0,2,103,7,0,0,0.6,0,1,,Client.MainWindowViewModel
+Client,IntellisenseTextBox,2,10,5,2,5,236,20,0,0,0.3,1,4,ToDoLib.TaskList,Client.AppendTextDialog' Client.MainWindowViewModel' Client.FilterDialog' Client.MainWindow
+Client,AppendTextDialog,5,7,1,0,3,119,9,0,0,0.71,2,1,Client.MainWindowViewModel' Client.IntellisenseTextBox,Client.MainWindowViewModel
+Client,SetPriorityDialog,4,7,1,0,2,155,13,0,0,0.43,0,1,,Client.MainWindowViewModel
+Client,SetDueDateDialog,4,6,1,0,2,158,15,0,0,0.33,0,1,,Client.MainWindowViewModel
+Client,ExceptionExtensions,0,1,0,0,1,9,1,0,0,-1,1,0,ToDoLib.Log,
+Client,GroupConverter,0,2,0,0,2,14,3,0,0,-1,0,0,,
+Client,PortableSettingsProvider,5,11,7,0,7,168,18,0,0,0.64,0,1,,Client.App
+Client,SortType,0,0,0,0,0,15,0,0,0,-1,0,3,,Client.MainWindowViewModel' Client.MainWindow' Client.Converters.SortTypeToDescriptionConvertor
+Client,UpdateChecker,3,2,0,2,2,30,2,0,0,0,2,1,Client.MainWindow' ToDoLib.Log,Client.MainWindow
+Client,MainWindowViewModel,15,82,9,0,49,1596,188,0,0,0.17,20,3,Client.FileChangeObserver' Client.SortType' Client.MainWindow' ToDoLib.Task' ToDoLib.Log' Client.User' ToDoLib.LogLevel' ToDoLib.TaskList' Client.FilterDialog' Client.IntellisenseTextBox' Client.DeleteConfirmationDialog' Client.AppendTextDialog' Client.SetPriorityDialog' Client.SetDueDateDialog' Client.PostponeDialog' Client.Options' ColorFont.FontInfo' Client.Resource' Client.Help' ToDoLib.TaskException,Client.AppendTextDialog' Client.FilterDialog' Client.MainWindow
+Client,PostponeDialog,4,5,1,0,2,106,7,0,0,0.6,0,1,,Client.MainWindowViewModel
+Client,FilterDialog,17,10,10,0,3,322,13,0,0,0.5,2,1,Client.MainWindowViewModel' Client.IntellisenseTextBox,Client.MainWindowViewModel
+Client,Help,7,5,0,0,2,137,8,0,0,0.6,0,2,,Client.MainWindowViewModel' Client.MainWindow
+Client,HotKeyWinApi,1,2,0,1,2,8,2,0,0,1,0,1,,Client.HotKey
+Client,HotKey,4,8,2,0,6,75,15,0,0,0.38,1,1,Client.HotKeyWinApi,Client.HotKeyMainWindows
+Client,HotKeyMainWindows,2,3,0,0,2,40,4,0,0,0,2,1,Client.HotKey' ToDoLib.Log,Client.MainWindow
+Client,FileChangeObserver,2,3,0,0,2,58,9,0,0,0.67,2,1,Client.User' ToDoLib.Log,Client.MainWindowViewModel
+Client,Options,23,7,1,0,2,372,11,0,0,0.57,3,1,ColorFont.FontInfo' Client.User' ColorFont.ColorFontDialog,Client.MainWindowViewModel
+Client,Resource,2,1,5,0,0,107,1,0,0,0,0,1,,Client.MainWindowViewModel
+Client,TrayMainWindows,2,4,0,0,2,52,5,0,0,0,2,1,ToDoLib.Log' Client.MainWindow,Client.MainWindow
+Client,UrlService,2,4,0,1,2,60,10,0,0,0.75,0,0,,
+Client,User,1,3,42,0,1,522,3,0,0,1,0,6,,Client.MainWindowViewModel' Client.FileChangeObserver' Client.Options' Client.WindowLocation' Client.App' Client.MainWindow
+Client,WindowLocation,0,1,4,0,1,14,1,0,0,-1,1,1,Client.User,Client.MainWindow
+Client,App,1,6,0,0,2,82,10,0,0,0.5,3,0,Client.User' Client.MainWindow' Client.PortableSettingsProvider,
+Client,MainWindow,17,80,1,0,11,1423,95,0,0,0.61,9,4,Client.TrayMainWindows' Client.HotKeyMainWindows' Client.WindowLocation' Client.User' Client.UpdateChecker' Client.MainWindowViewModel' Client.Help' Client.IntellisenseTextBox' Client.SortType,Client.UpdateChecker' Client.MainWindowViewModel' Client.TrayMainWindows' Client.App
+Client.Converters,ActiveFilterToStatusConvertor,0,2,0,0,2,11,2,0,0,-1,0,0,,
+Client.Converters,SortTypeToDescriptionConvertor,0,2,0,0,2,11,2,0,0,-1,1,0,Client.SortType,
+Client.Utilities,EnumExtensions,0,1,0,0,1,28,3,0,0,-1,0,0,,
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

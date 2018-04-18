@@ -1,9 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BusManager,0,0,1,0,0,7,0,0,0,-1,0,2
-ContainerManager,0,1,1,0,1,16,2,0,0,-1,0,2
-NServiceBusDispatcher,0,2,1,0,2,15,2,0,1,-1,1,0
-IBusConfigurator,0,1,0,0,0,4,1,0,0,-1,0,1
-IMessageDispatcher,0,1,0,0,0,4,1,1,0,-1,0,1
-ServiceBusBlade,0,4,0,0,4,34,6,0,2,-1,6,0
-ServiceLocatorContainer,0,6,1,0,6,30,6,0,0,-1,1,0
-ServiceLocatorExtension,0,1,0,0,1,8,1,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MvcTurbine.NServiceBus,BusManager,0,0,1,0,0,3,0,0,0,-1,0,2,,MvcTurbine.NServiceBus.NServiceBusDispatcher' MvcTurbine.NServiceBus.ServiceBusBlade
+MvcTurbine.NServiceBus,ContainerManager,0,1,1,0,1,11,2,0,0,-1,0,2,,Mvc.DefaultMvcApplication' MvcTurbine.NServiceBus.ServiceBusBlade
+MvcTurbine.NServiceBus,NServiceBusDispatcher,0,2,1,0,2,9,2,0,1,-1,1,0,MvcTurbine.NServiceBus.BusManager,
+MvcTurbine.NServiceBus,IBusConfigurator,0,1,0,0,0,3,1,0,0,-1,0,1,,MvcTurbine.NServiceBus.ServiceBusBlade
+MvcTurbine.NServiceBus,IMessageDispatcher,0,1,0,0,0,3,1,1,0,-1,0,1,,Mvc.Services.BroadcastService
+MvcTurbine.NServiceBus,ServiceBusBlade,0,4,0,0,4,34,5,0,1,-1,7,0,MvcTurbine.NServiceBus.IBusConfigurator' MvcTurbine.NServiceBus.BusManager' MvcTurbine.ComponentModel.IServiceLocator' MvcTurbine.IRotorContext' MvcTurbine.NServiceBus.ContainerManager' MvcTurbine.ComponentModel.AutoRegistrationList' MvcTurbine.ComponentModel.Registration,
+MvcTurbine.NServiceBus,ServiceLocatorContainer,0,6,1,0,6,20,6,0,0,-1,1,0,MvcTurbine.ComponentModel.IServiceLocator,
+MvcTurbine.NServiceBus,ServiceLocatorExtension,0,1,0,0,1,7,1,0,0,-1,0,0,,

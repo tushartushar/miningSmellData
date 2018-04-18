@@ -1,10 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-LineItem,0,0,4,0,0,19,0,0,0,-1,0,2
-SalesInvoice,0,1,9,0,1,44,1,0,0,-1,1,0
-SalesInvoiceViewRowSchema,7,0,0,7,0,16,0,0,2,-1,0,2
-SalesInvoiceView,0,1,0,0,1,29,1,0,2,-1,1,0
-SalesItemRowsViewRowSchema,4,0,0,4,0,7,0,0,2,-1,0,2
-SalesItemRowsView,0,1,0,0,1,18,1,0,2,-1,0,0
-NewViewRowSchema,4,0,0,4,0,7,0,0,2,-1,0,0
-newview,0,1,0,0,1,19,1,0,2,-1,0,0
-ServerSide,0,2,0,0,2,40,3,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SampleViews,LineItem,0,0,4,0,0,7,0,0,0,-1,0,1,,datagridbinding.frmMain
+SampleViews,SalesInvoice,0,1,9,0,1,17,1,0,0,-1,0,4,,datagridbinding.frmMain' SampleViews.SalesInvoiceView' SampleViews.SalesItemRowsView' SampleViews.newview
+SampleViews,SalesInvoiceViewRowSchema,7,0,0,7,0,14,0,0,2,-1,1,2,RaptorDB.CaseInsensitiveAttribute,datagridbinding.frmMain' SampleViews.SalesInvoiceView
+SampleViews,SalesInvoiceView,0,1,0,0,1,27,1,0,0,-1,3,0,SampleViews.SalesInvoiceViewRowSchema' SampleViews.SalesInvoice' RaptorDB.IMapAPI,
+SampleViews,SalesItemRowsViewRowSchema,4,0,0,4,0,7,0,0,2,-1,0,3,,datagridbinding.frmMain' SampleViews.SalesItemRowsView' Views.ServerSide
+SampleViews,SalesItemRowsView,0,1,0,0,1,19,1,0,0,-1,3,0,SampleViews.SalesInvoice' RaptorDB.IMapAPI' SampleViews.SalesItemRowsViewRowSchema,
+SampleViews,NewViewRowSchema,4,0,0,4,0,7,0,0,2,-1,0,1,,SampleViews.newview
+SampleViews,newview,0,1,0,0,1,20,1,0,0,-1,3,0,SampleViews.SalesInvoice' RaptorDB.IMapAPI' SampleViews.NewViewRowSchema,
+Views,ServerSide,0,2,0,0,2,41,3,0,0,-1,2,1,RaptorDB.Common.IRaptorDB' SampleViews.SalesItemRowsViewRowSchema,datagridbinding.frmMain
+Views,sumtype,3,0,0,3,0,6,0,0,1,-1,0,0,,

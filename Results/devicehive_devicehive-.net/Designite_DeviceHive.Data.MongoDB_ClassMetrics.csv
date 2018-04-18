@@ -1,24 +1,26 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AccessKeyRepository,1,8,0,0,8,51,11,0,2,0,4,0
-DeviceClassRepository,1,6,0,0,6,45,10,0,2,0,3,0
-DeviceCommandRepository,1,7,0,0,7,63,14,0,2,0,4,0
-DeviceEquipmentRepository,1,6,0,0,6,37,8,0,2,0,2,0
-DeviceNotificationRepository,1,8,0,0,7,442,32,0,2,0,6,0
-DeviceRepository,1,11,0,0,11,90,22,0,2,0,3,0
-MongoConnection,9,15,13,0,10,342,30,0,0,0.33,11,14
-NetworkRepository,1,7,0,0,7,49,10,0,2,0,4,0
-OAuthClientRepository,1,6,0,0,6,41,8,0,2,0,3,0
-OAuthGrantRepository,1,6,0,0,6,49,11,0,2,0,3,0
-TimestampRepository,1,2,0,0,2,16,2,0,1,0,1,0
-UserNetworkRepository,1,7,0,0,7,77,14,0,2,0,4,0
-UserRepository,1,9,0,0,9,57,14,0,2,0,3,0
-MigrationAttribute,0,1,1,0,1,28,2,0,0,-1,0,1
-MigrationBase,1,4,2,0,4,57,6,7,0,1,2,1
-Migration_1,0,2,0,0,2,31,2,0,1,-1,2,0
-Migration_2,0,2,0,0,2,22,3,0,1,-1,0,0
-Migration_3,0,2,0,0,2,13,2,0,1,-1,0,0
-Migration_4,0,2,0,0,2,16,2,0,1,-1,0,0
-Migration_5,0,2,0,0,2,12,2,0,1,-1,0,0
-Migration_6,0,2,0,0,2,31,7,0,1,-1,0,0
-Migration_7,0,2,0,0,2,14,2,0,1,-1,0,0
-Migrator,2,8,2,0,5,110,16,0,1,0.25,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DeviceHive.Data.MongoDB,AccessKeyRepository,1,8,0,0,8,63,11,0,2,0,4,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.AccessKeyFilter' DeviceHive.Data.Model.AccessKey' DeviceHive.Data.Model.AccessKeyType,
+DeviceHive.Data.MongoDB,DeviceClassRepository,1,6,0,0,6,46,10,0,2,0,3,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.DeviceClassFilter' DeviceHive.Data.Model.DeviceClass,
+DeviceHive.Data.MongoDB,DeviceCommandRepository,1,7,0,0,7,90,13,0,2,0,4,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.DeviceCommandFilter' DeviceHive.Data.Model.DeviceCommand' DeviceHive.Data.Model.Device,
+DeviceHive.Data.MongoDB,DeviceEquipmentRepository,1,6,0,0,6,39,8,0,2,0,3,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.DeviceEquipment' DeviceHive.Data.Model.Device,
+DeviceHive.Data.MongoDB,DeviceNotificationRepository,1,8,0,0,7,201,26,0,2,0,6,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.DeviceNotificationFilter' DeviceHive.Data.Model.DeviceNotification' DeviceHive.Data.Model.Device' DeviceHive.Data.Model.DeviceNotificationSortField' DeviceHive.Data.SortOrder,
+DeviceHive.Data.MongoDB,DeviceRepository,1,11,0,0,11,113,19,0,2,0,5,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.DeviceFilter' DeviceHive.Data.Model.Device' DeviceHive.Data.Model.Network' DeviceHive.Data.Model.DeviceClass,
+DeviceHive.Data.MongoDB,MongoConnection,9,15,13,0,10,403,31,0,0,0.33,2,21,DeviceHive.Data.MongoDB.IdentityBlockInfo' DeviceHive.Data.MongoDB.RawJsonBsonSerializer,DeviceHive.Data.MongoDB.AccessKeyRepository' DeviceHive.Data.MongoDB.DeviceClassRepository' DeviceHive.Data.MongoDB.DeviceCommandRepository' DeviceHive.Data.MongoDB.DeviceEquipmentRepository' DeviceHive.Data.MongoDB.DeviceNotificationRepository' DeviceHive.Data.MongoDB.DeviceRepository' DeviceHive.Data.MongoDB.NetworkRepository' DeviceHive.Data.MongoDB.OAuthClientRepository' DeviceHive.Data.MongoDB.OAuthGrantRepository' DeviceHive.Data.MongoDB.TimestampRepository' DeviceHive.Data.MongoDB.UserNetworkRepository' DeviceHive.Data.MongoDB.UserRepository' DeviceHive.Data.MongoDB.Migrations.MigrationBase' DeviceHive.Data.MongoDB.Migrations.Migration_1' DeviceHive.Data.MongoDB.Migrations.Migration_2' DeviceHive.Data.MongoDB.Migrations.Migration_3' DeviceHive.Data.MongoDB.Migrations.Migration_4' DeviceHive.Data.MongoDB.Migrations.Migration_5' DeviceHive.Data.MongoDB.Migrations.Migration_6' DeviceHive.Data.MongoDB.Migrations.Migration_7' DeviceHive.Data.MongoDB.Migrations.Migrator
+DeviceHive.Data.MongoDB,IdentityBlockInfo,2,0,0,2,0,5,0,0,0,-1,0,1,,DeviceHive.Data.MongoDB.MongoConnection
+DeviceHive.Data.MongoDB,RawJsonBsonSerializer,0,4,0,0,4,40,6,0,0,-1,0,1,,DeviceHive.Data.MongoDB.MongoConnection
+DeviceHive.Data.MongoDB,NetworkRepository,1,7,0,0,7,48,10,0,2,0,3,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.NetworkFilter' DeviceHive.Data.Model.Network,
+DeviceHive.Data.MongoDB,OAuthClientRepository,1,6,0,0,6,40,8,0,2,0,3,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.OAuthClientFilter' DeviceHive.Data.Model.OAuthClient,
+DeviceHive.Data.MongoDB,OAuthGrantRepository,1,6,0,0,6,55,9,0,2,0,5,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.OAuthGrantFilter' DeviceHive.Data.Model.OAuthGrant' DeviceHive.Data.Model.OAuthClient' DeviceHive.Data.Model.AccessKey,
+DeviceHive.Data.MongoDB,TimestampRepository,1,2,0,0,2,20,2,0,1,0,1,0,DeviceHive.Data.MongoDB.MongoConnection,
+DeviceHive.Data.MongoDB,UserNetworkRepository,1,7,0,0,7,83,18,0,2,0,4,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.UserNetwork' DeviceHive.Data.Model.User' DeviceHive.Data.Model.Network,
+DeviceHive.Data.MongoDB,UserRepository,1,9,0,0,9,57,14,0,2,0,3,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.UserFilter' DeviceHive.Data.Model.User,
+DeviceHive.Data.MongoDB.Migrations,MigrationAttribute,0,1,1,0,1,22,2,0,0,-1,0,1,,DeviceHive.Data.MongoDB.Migrations.MigrationBase
+DeviceHive.Data.MongoDB.Migrations,MigrationBase,1,4,2,0,4,51,6,7,0,1,2,1,DeviceHive.Data.MongoDB.Migrations.MigrationAttribute' DeviceHive.Data.MongoDB.MongoConnection,DeviceHive.Data.MongoDB.Migrations.Migrator
+DeviceHive.Data.MongoDB.Migrations,Migration_1,0,2,0,0,2,33,2,0,1,-1,4,0,DeviceHive.Data.Model.User' DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.Model.UserRole' DeviceHive.Data.Model.UserStatus,
+DeviceHive.Data.MongoDB.Migrations,Migration_2,0,2,0,0,2,22,3,0,1,-1,1,0,DeviceHive.Data.MongoDB.MongoConnection,
+DeviceHive.Data.MongoDB.Migrations,Migration_3,0,2,0,0,2,14,2,0,1,-1,1,0,DeviceHive.Data.MongoDB.MongoConnection,
+DeviceHive.Data.MongoDB.Migrations,Migration_4,0,2,0,0,2,17,2,0,1,-1,1,0,DeviceHive.Data.MongoDB.MongoConnection,
+DeviceHive.Data.MongoDB.Migrations,Migration_5,0,2,0,0,2,13,2,0,1,-1,1,0,DeviceHive.Data.MongoDB.MongoConnection,
+DeviceHive.Data.MongoDB.Migrations,Migration_6,0,2,0,0,2,38,7,0,1,-1,1,0,DeviceHive.Data.MongoDB.MongoConnection,
+DeviceHive.Data.MongoDB.Migrations,Migration_7,0,2,0,0,2,12,2,0,1,-1,1,0,DeviceHive.Data.MongoDB.MongoConnection,
+DeviceHive.Data.MongoDB.Migrations,Migrator,2,8,2,0,5,117,15,0,1,0.25,2,0,DeviceHive.Data.MongoDB.MongoConnection' DeviceHive.Data.MongoDB.Migrations.MigrationBase,

@@ -1,19 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AdminController,1,2,0,0,2,29,4,0,0,0,1,0
-ContentTokens,2,11,1,0,3,123,26,0,1,0.36,7,0
-RequestTokens,1,3,1,0,3,24,4,0,1,0.67,4,0
-DateTokens,5,4,1,0,3,51,4,0,1,0.5,6,0
-TextTokens,0,5,1,0,3,58,9,0,1,-1,3,0
-UserTokens,2,3,1,0,3,47,3,0,1,0.67,5,0
-ReplaceOptions,0,3,3,0,3,30,3,0,0,-1,0,3
-TokenDescriptor,0,0,5,0,0,23,0,0,0,-1,1,2
-TokenTypeDescriptor,0,0,4,0,0,19,0,0,0,-1,2,0
-DescribeContext,0,3,0,0,3,6,3,0,0,-1,1,8
-DescribeFor,0,2,3,0,2,14,2,0,0,-1,2,0
-EvaluateContext,0,3,4,0,3,18,3,0,0,-1,0,8
-EvaluateFor,0,4,1,0,4,10,4,0,0,-1,0,0
-ITokenizer,0,6,0,0,0,9,6,1,1,-1,1,6
-ITokenManager,0,2,0,0,0,5,2,1,1,-1,0,2
-ITokenProvider,0,2,0,0,0,5,2,7,2,-1,2,1
-Tokenizer,1,9,0,0,7,89,21,0,2,0.78,2,0
-TokenManager,1,3,0,0,3,248,5,0,2,0,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coevery.Tokens.Controllers,AdminController,1,2,0,0,2,27,4,0,0,0,4,0,Coevery.Tokens.ITokenManager' Coevery.Localization.LocalizedString' Coevery.Tokens.TokenTypeDescriptor' Coevery.Tokens.TokenDescriptor,
+Coevery.Tokens.Providers,ContentTokens,2,11,1,0,3,159,26,0,1,0.36,20,0,Coevery.ContentManagement.IContentManager' Coevery.Localization.NullLocalizer' Coevery.Tokens.DescribeFor' Coevery.ContentManagement.MetaData.Models.ContentPartFieldDefinition' Coevery.Tokens.DescribeContext' Coevery.ContentManagement.MetaData.Models.ContentTypeDefinition' Coevery.ContentManagement.MetaData.Models.ContentPartDefinition' Coevery.ContentManagement.MetaData.Models.ContentTypePartDefinition' Coevery.Tokens.EvaluateContext' Coevery.ContentManagement.IContent' Coevery.ContentManagement.Aspects.ICommonPart' Coevery.ContentManagement.ContentIdentity' Coevery.ContentManagement.ContentItemMetadata' Coevery.ContentManagement.ContentItem' Coevery.ContentManagement.FieldStorage.IFieldStorage' Coevery.ContentManagement.ContentField' Coevery.ContentManagement.MetaData.Models.ContentFieldDefinition' Coevery.Security.IUser' Coevery.ContentManagement.ContentPart' Coevery.Core.Common.Models.BodyPart,
+Coevery.Tokens.Providers,RequestTokens,1,3,1,0,3,28,4,0,1,0.67,6,0,Coevery.IWorkContextAccessor' Coevery.Localization.NullLocalizer' Coevery.Tokens.DescribeFor' Coevery.Tokens.DescribeContext' Coevery.WorkContext' Coevery.Tokens.EvaluateContext,
+Coevery.Tokens.Providers,DateTokens,5,4,1,0,3,65,9,0,1,0.5,9,0,Coevery.Services.IClock' Coevery.Core.Shapes.Localization.IDateTimeLocalization' Coevery.IWorkContextAccessor' Coevery.WorkContext' Coevery.Localization.NullLocalizer' Coevery.Tokens.DescribeFor' Coevery.Tokens.DescribeContext' Coevery.Tokens.EvaluateContext' Coevery.Localization.LocalizedString,
+Coevery.Tokens.Providers,TextTokens,0,5,1,0,3,69,9,0,1,-1,4,0,Coevery.Localization.NullLocalizer' Coevery.Tokens.DescribeFor' Coevery.Tokens.DescribeContext' Coevery.Tokens.EvaluateContext,
+Coevery.Tokens.Providers,UserTokens,2,3,1,0,3,39,3,0,1,0.67,7,0,Coevery.ICoeveryServices' Coevery.Security.IUser' Coevery.Localization.NullLocalizer' Coevery.Tokens.DescribeFor' Coevery.Tokens.DescribeContext' Coevery.Tokens.EvaluateContext' Coevery.WorkContext,
+Coevery.Tokens.Providers,AnonymousUser,0,0,4,0,0,14,0,0,2,-1,0,0,,
+Coevery.Tokens,ReplaceOptions,0,3,3,0,3,18,3,0,0,-1,0,3,,Coevery.Autoroute.Services.AutorouteService' Coevery.Tokens.ITokenizer' Coevery.Tokens.Implementation.Tokenizer
+Coevery.Tokens,TokenDescriptor,0,0,5,0,0,7,0,0,0,-1,0,1,,Coevery.Tokens.Controllers.AdminController
+Coevery.Tokens,TokenTypeDescriptor,0,0,4,0,0,6,0,0,0,-1,0,1,,Coevery.Tokens.Controllers.AdminController
+Coevery.Tokens,DescribeContext,0,3,0,0,3,5,3,1,0,-1,1,8,Coevery.Localization.LocalizedString,Coevery.Autoroute.Providers.SlugTokens' Coevery.Tokens.Providers.ContentTokens' Coevery.Tokens.Providers.RequestTokens' Coevery.Tokens.Providers.DateTokens' Coevery.Tokens.Providers.TextTokens' Coevery.Tokens.Providers.UserTokens' Coevery.Tokens.ITokenProvider' Coevery.Workflows.Tokens.SignalTokens
+Coevery.Tokens,DescribeFor,0,2,3,0,2,7,2,1,0,-1,1,9,Coevery.Localization.LocalizedString,Coevery.Autoroute.Providers.SlugTokens' Coevery.Tokens.Providers.ContentTokens' Coevery.Tokens.Providers.RequestTokens' Coevery.Tokens.Providers.DateTokens' Coevery.Tokens.Providers.TextTokens' Coevery.Tokens.Providers.UserTokens' Coevery.Tokens.Implementation.DescribeContextImpl' Coevery.Tokens.Implementation.DescribeForImpl' Coevery.Workflows.Tokens.SignalTokens
+Coevery.Tokens,EvaluateContext,0,3,4,0,3,9,3,1,0,-1,0,8,,Coevery.Autoroute.Providers.SlugTokens' Coevery.Tokens.Providers.ContentTokens' Coevery.Tokens.Providers.RequestTokens' Coevery.Tokens.Providers.DateTokens' Coevery.Tokens.Providers.TextTokens' Coevery.Tokens.Providers.UserTokens' Coevery.Tokens.ITokenProvider' Coevery.Workflows.Tokens.SignalTokens
+Coevery.Tokens,EvaluateFor<TData>,0,4,1,0,4,7,4,0,0,-1,0,0,,
+Coevery.Tokens,ITokenizer,0,6,0,0,0,8,6,1,1,-1,1,6,Coevery.Tokens.ReplaceOptions,Coevery.Autoroute.Services.AutorouteService' Coevery.Projections.Controllers.EntityController' Coevery.Projections.Drivers.ProjectionPartDriver' Coevery.Projections.Services.ProjectionManager' Coevery.Projections.Services.PropertyShapes' Coevery.Workflows.Services.WorkflowManager
+Coevery.Tokens,ITokenManager,0,2,0,0,0,4,2,1,1,-1,0,4,,Coevery.Tokens.Controllers.AdminController' Coevery.Tokens.Implementation.Tokenizer' Coevery.Tokens.Implementation.EvaluateContextImpl' Coevery.Tokens.Implementation.EvaluateForImpl<TData>
+Coevery.Tokens,ITokenProvider,0,2,0,0,0,4,2,7,2,-1,2,1,Coevery.Tokens.DescribeContext' Coevery.Tokens.EvaluateContext,Coevery.Tokens.Implementation.TokenManager
+Coevery.Tokens.Implementation,Tokenizer,1,9,0,0,7,89,17,0,2,0.44,2,0,Coevery.Tokens.ITokenManager' Coevery.Tokens.ReplaceOptions,
+Coevery.Tokens.Implementation,TokenManager,1,3,0,0,3,201,5,0,2,0,3,0,Coevery.Tokens.Implementation.DescribeContextImpl' Coevery.Tokens.ITokenProvider' Coevery.Tokens.Implementation.EvaluateContextImpl,
+Coevery.Tokens.Implementation,EvaluateContextImpl,5,5,4,0,5,126,9,0,1,0.6,1,2,Coevery.Tokens.ITokenManager,Coevery.Tokens.Implementation.TokenManager' Coevery.Tokens.Implementation.EvaluateForImpl<TData>
+Coevery.Tokens.Implementation,EvaluateForImpl<TData>,2,5,1,0,5,55,12,0,0,0.4,2,0,Coevery.Tokens.Implementation.EvaluateContextImpl' Coevery.Tokens.ITokenManager,
+Coevery.Tokens.Implementation,EvaluateForSilent<TData>,0,4,1,0,4,17,4,0,0,-1,0,0,,
+Coevery.Tokens.Implementation,DescribeContextImpl,1,3,0,0,3,24,4,0,1,0,2,1,Coevery.Tokens.DescribeFor' Coevery.Localization.LocalizedString,Coevery.Tokens.Implementation.TokenManager
+Coevery.Tokens.Implementation,DescribeForImpl,4,3,3,0,3,31,3,0,1,0,2,0,Coevery.Localization.LocalizedString' Coevery.Tokens.DescribeFor,

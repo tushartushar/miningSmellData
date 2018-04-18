@@ -1,12 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MetricMiddleware,1,2,0,0,0,18,3,5,0,0,0,0
-TimerForEachRequestMiddleware,3,3,0,0,3,35,6,0,1,0,4,1
-PostAndPutRequestSizeHistogramMiddleware,2,3,0,0,3,26,6,0,1,0,4,1
-ActiveRequestCounterMiddleware,2,3,0,0,3,26,4,0,1,0,3,1
-ErrorMeterMiddleware,2,3,0,0,3,25,5,0,1,0,3,1
-RequestTimerMiddleware,3,3,0,0,3,27,6,0,1,0,2,1
-MetricsEndpointMiddleware,4,10,0,0,3,93,17,0,0,0,9,1
-OwinMetrics,0,2,0,0,2,33,2,0,0,-1,2,0
-OwinMetricsConfig,3,5,0,0,5,58,5,0,0,0.6,5,1
-OwinMetricsEndpointConfig,0,6,10,0,6,171,6,0,0,-1,0,2
-OwinRequestMetricsConfig,3,7,0,0,7,81,7,0,0,0,6,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Owin.Metrics.Middleware,MetricMiddleware,1,2,0,0,0,18,4,5,0,0,0,1,,Owin.Metrics.Middleware.RequestTimerMiddleware
+Owin.Metrics.Middleware,TimerForEachRequestMiddleware,3,3,0,0,3,42,6,0,1,0,5,1,Metrics.MetricsContext' Metrics.Utils.Clock' Metrics.Timer' Metrics.Unit' Metrics.TimeUnit,Owin.Metrics.OwinRequestMetricsConfig
+Owin.Metrics.Middleware,PostAndPutRequestSizeHistogramMiddleware,2,3,0,0,3,30,6,0,1,0,4,1,Metrics.Histogram' Metrics.MetricsContext' Metrics.Unit' Metrics.SamplingType,Owin.Metrics.OwinRequestMetricsConfig
+Owin.Metrics.Middleware,ActiveRequestCounterMiddleware,2,3,0,0,3,27,4,0,1,0,3,1,Metrics.Counter' Metrics.MetricsContext' Metrics.Unit,Owin.Metrics.OwinRequestMetricsConfig
+Owin.Metrics.Middleware,ErrorMeterMiddleware,2,3,0,0,3,30,5,0,1,0,3,1,Metrics.Meter' Metrics.MetricsContext' Metrics.Unit,Owin.Metrics.OwinRequestMetricsConfig
+Owin.Metrics.Middleware,RequestTimerMiddleware,3,3,0,0,3,32,4,0,1,0,4,1,Metrics.Timer' Metrics.MetricsContext' Metrics.Unit' Owin.Metrics.Middleware.MetricMiddleware,Owin.Metrics.OwinRequestMetricsConfig
+Owin.Metrics.Middleware,MetricsEndpointMiddleware,4,10,0,0,3,91,17,0,0,0,9,1,Owin.Metrics.OwinMetricsEndpointConfig' Metrics.MetricData.MetricsDataProvider' Metrics.Visualization.FlotWebApp' Metrics.Json.JsonBuilderV1' Metrics.Utils.Clock' Metrics.Json.JsonBuilderV2' Metrics.HealthStatus' Metrics.Json.JsonHealthChecks' Metrics.Reporters.StringReport,Owin.Metrics.OwinMetricsConfig
+Owin.Metrics,OwinMetrics,0,2,0,0,2,32,2,0,0,-1,2,0,Metrics.MetricsConfig' Owin.Metrics.OwinMetricsConfig,
+Owin.Metrics,OwinMetricsConfig,3,5,0,0,5,59,5,0,0,0,4,2,Metrics.MetricsContext' Owin.Metrics.OwinRequestMetricsConfig' Owin.Metrics.OwinMetricsEndpointConfig' Owin.Metrics.Middleware.MetricsEndpointMiddleware,Owin.Sample.Startup' Owin.Metrics.OwinMetrics
+Owin.Metrics,OwinMetricsEndpointConfig,0,6,10,0,6,141,6,0,0,-1,0,2,,Owin.Metrics.Middleware.MetricsEndpointMiddleware' Owin.Metrics.OwinMetricsConfig
+Owin.Metrics,OwinRequestMetricsConfig,3,7,0,0,7,81,7,0,0,0,6,2,Metrics.MetricsContext' Owin.Metrics.Middleware.RequestTimerMiddleware' Owin.Metrics.Middleware.ActiveRequestCounterMiddleware' Owin.Metrics.Middleware.PostAndPutRequestSizeHistogramMiddleware' Owin.Metrics.Middleware.TimerForEachRequestMiddleware' Owin.Metrics.Middleware.ErrorMeterMiddleware,Owin.Sample.Startup' Owin.Metrics.OwinMetricsConfig

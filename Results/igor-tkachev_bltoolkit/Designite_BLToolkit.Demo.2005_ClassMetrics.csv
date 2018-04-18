@@ -1,17 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AccessorBase,0,1,0,0,1,4,1,1,1,-1,0,0
-PersonAccessor,0,0,0,0,0,3,0,0,2,-1,0,2
-ManagerBase,1,5,2,0,5,47,5,1,0,1,3,0
-PersonManager,0,0,0,0,0,3,0,0,1,-1,0,1
-EnumSelector,4,4,2,0,2,99,5,0,0,0,1,1
-BizEntityForm,7,18,0,0,4,268,55,1,0,0.67,5,0
-EditPersonForm,11,4,0,0,1,176,5,0,1,0,3,1
-EditPersonFormBase,0,0,0,0,0,3,0,1,1,-1,0,0
-MainForm,22,9,0,0,1,365,14,0,0,0.22,4,1
-PersonView,1,0,2,0,0,19,0,0,1,-1,2,0
-BizEntity,0,2,1,0,2,20,2,1,1,-1,3,1
-Gender,0,0,0,0,0,11,0,0,0,-1,0,1
-Person,0,0,5,0,0,29,0,0,2,-1,3,3
-Program,0,1,0,0,0,15,1,0,0,-1,1,0
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BLToolkit.Demo.BusinessLogic.DataAccess,AccessorBase<T;A>,0,1,0,0,1,6,1,0,0,-1,0,0,,
+BLToolkit.Demo.BusinessLogic.DataAccess,PersonAccessor,0,0,0,0,0,3,0,0,0,-1,0,0,,
+BLToolkit.Demo.BusinessLogic,ManagerBase<T;A>,1,5,2,0,5,51,5,0,0,1,0,0,,
+BLToolkit.Demo.BusinessLogic,PersonManager,0,0,0,0,0,3,0,0,0,-1,0,1,,BLToolkit.Demo.Forms.MainForm
+BLToolkit.Demo.Controls,EnumSelector,4,4,2,0,2,108,5,0,0,0,0,1,,BLToolkit.Demo.Forms.EditPersonForm
+BLToolkit.Demo.Controls,EnumEditor,0,1,0,0,0,7,1,0,0,-1,0,0,,
+BLToolkit.Demo.Forms,BizEntityForm<F;T>,7,18,0,0,4,298,53,0,0,0.67,2,0,BLToolkit.Demo.ObjectModel.BizEntity' BLToolkit.Demo.Forms.ControlInfo,
+BLToolkit.Demo.Forms,ControlInfo,3,1,0,3,1,12,1,0,0,0,0,1,,BLToolkit.Demo.Forms.BizEntityForm<F;T>
+BLToolkit.Demo.Forms,EditPersonForm,11,4,0,0,1,177,5,0,1,0,5,1,BLToolkit.Demo.Controls.EnumSelector' BLToolkit.Demo.ObjectModel.Person' BLToolkit.Demo.Forms.EditPersonFormBase' BLToolkit.Demo.Forms.ObjectViews.PersonView' BLToolkit.Demo.ObjectModel.Gender,BLToolkit.Demo.Forms.MainForm
+BLToolkit.Demo.Forms,EditPersonFormBase,0,0,0,0,0,1,0,1,0,-1,0,1,,BLToolkit.Demo.Forms.EditPersonForm
+BLToolkit.Demo.Forms,MainForm,22,9,0,0,1,366,13,0,0,0.22,3,1,BLToolkit.Demo.BusinessLogic.PersonManager' BLToolkit.Demo.Forms.EditPersonForm' BLToolkit.Demo.ObjectModel.Person,BLToolkit.Demo.Program
+BLToolkit.Demo.Forms.ObjectViews,PersonView,1,0,2,0,0,15,0,0,0,-1,1,1,BLToolkit.Demo.ObjectModel.Person,BLToolkit.Demo.Forms.EditPersonForm
+BLToolkit.Demo.ObjectModel,BizEntity,0,2,1,0,2,17,2,1,0,-1,0,1,,BLToolkit.Demo.Forms.BizEntityForm<F;T>
+BLToolkit.Demo.ObjectModel,Gender,0,0,0,0,0,7,0,0,0,-1,0,1,,BLToolkit.Demo.Forms.EditPersonForm
+BLToolkit.Demo.ObjectModel,Person,0,0,5,0,0,18,0,0,1,-1,0,3,,BLToolkit.Demo.Forms.EditPersonForm' BLToolkit.Demo.Forms.MainForm' BLToolkit.Demo.Forms.ObjectViews.PersonView
+BLToolkit.Demo,Program,0,1,0,0,0,16,1,0,0,-1,1,0,BLToolkit.Demo.Forms.MainForm,
+BLToolkit.Demo.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+BLToolkit.Demo.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

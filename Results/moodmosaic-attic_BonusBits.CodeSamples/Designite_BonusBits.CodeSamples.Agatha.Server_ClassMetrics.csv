@@ -1,18 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CastleRegistration,1,4,0,0,1,66,4,0,0,0,0,1
-StructureMapRegistration,1,2,0,0,1,19,2,0,0,0,0,1
-Authenticator,3,1,3,0,1,48,1,0,1,0,3,0
-Database,2,4,2,0,3,62,5,0,1,1,2,0
-ErrorHandler,1,1,1,0,1,24,1,0,1,0,1,0
-IAuthenticator,0,0,3,0,0,27,0,1,0,-1,3,2
-IDatabase,0,1,2,0,0,24,1,1,0,-1,2,5
-IErrorHandler,0,0,1,0,0,13,0,1,0,-1,1,6
-ILogger,0,0,0,0,0,6,0,1,0,-1,0,8
-IStockQuote,0,0,3,0,0,27,0,1,0,-1,3,2
-IWebService,0,1,2,0,0,24,1,1,0,-1,2,0
-Logger,0,0,1,0,0,14,0,0,1,-1,0,0
-StockQuote,3,1,3,0,1,48,1,0,1,0,3,0
-WebService,2,2,2,0,2,39,2,0,1,1,2,0
-Program,0,2,0,0,0,36,10,0,0,-1,2,0
-TestHandler,0,2,0,0,2,12,2,0,0,-1,3,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BonusBits.CodeSamples.Agatha.Backend.Composition,CastleRegistration,1,4,0,0,1,78,4,0,0,0,0,1,,BonusBits.CodeSamples.Agatha.Backend.Program
+BonusBits.CodeSamples.Agatha.Backend.Composition,ReleaseComponentInterceptor,2,3,0,0,2,36,4,0,0,0,0,0,,
+BonusBits.CodeSamples.Agatha.Backend.Composition,StructureMapRegistration,1,2,0,0,1,42,2,0,0,0,0,1,,BonusBits.CodeSamples.Agatha.Backend.Program
+BonusBits.CodeSamples.Agatha.Backend.Domain,Authenticator,3,1,3,0,1,33,1,0,1,0,3,0,BonusBits.CodeSamples.Agatha.Backend.Domain.ILogger' BonusBits.CodeSamples.Agatha.Backend.Domain.IErrorHandler' BonusBits.CodeSamples.Agatha.Backend.Domain.IDatabase,
+BonusBits.CodeSamples.Agatha.Backend.Domain,Database,2,4,2,0,3,58,5,0,1,0.5,2,0,BonusBits.CodeSamples.Agatha.Backend.Domain.ILogger' BonusBits.CodeSamples.Agatha.Backend.Domain.IErrorHandler,
+BonusBits.CodeSamples.Agatha.Backend.Domain,ErrorHandler,1,1,1,0,1,17,1,0,1,0,1,0,BonusBits.CodeSamples.Agatha.Backend.Domain.ILogger,
+BonusBits.CodeSamples.Agatha.Backend.Domain,IAuthenticator,0,0,3,0,0,18,0,1,0,-1,0,1,,BonusBits.CodeSamples.Agatha.Backend.Domain.WebService
+BonusBits.CodeSamples.Agatha.Backend.Domain,IDatabase,0,1,2,0,0,17,1,1,0,-1,0,3,,BonusBits.CodeSamples.Agatha.Backend.Domain.Authenticator' BonusBits.CodeSamples.Agatha.Backend.Domain.StockQuote' BonusBits.CodeSamples.Agatha.Backend.TestHandler
+BonusBits.CodeSamples.Agatha.Backend.Domain,IErrorHandler,0,0,1,0,0,8,0,1,0,-1,0,3,,BonusBits.CodeSamples.Agatha.Backend.Domain.Authenticator' BonusBits.CodeSamples.Agatha.Backend.Domain.Database' BonusBits.CodeSamples.Agatha.Backend.Domain.StockQuote
+BonusBits.CodeSamples.Agatha.Backend.Domain,ILogger,0,0,0,0,0,1,0,1,0,-1,0,4,,BonusBits.CodeSamples.Agatha.Backend.Domain.Authenticator' BonusBits.CodeSamples.Agatha.Backend.Domain.Database' BonusBits.CodeSamples.Agatha.Backend.Domain.ErrorHandler' BonusBits.CodeSamples.Agatha.Backend.Domain.StockQuote
+BonusBits.CodeSamples.Agatha.Backend.Domain,IStockQuote,0,0,3,0,0,18,0,1,0,-1,0,1,,BonusBits.CodeSamples.Agatha.Backend.Domain.WebService
+BonusBits.CodeSamples.Agatha.Backend.Domain,IWebService,0,1,2,0,0,17,1,1,0,-1,0,0,,
+BonusBits.CodeSamples.Agatha.Backend.Domain,Logger,0,0,1,0,0,8,0,0,1,-1,0,0,,
+BonusBits.CodeSamples.Agatha.Backend.Domain,StockQuote,3,1,3,0,1,33,1,0,1,0,3,0,BonusBits.CodeSamples.Agatha.Backend.Domain.ILogger' BonusBits.CodeSamples.Agatha.Backend.Domain.IErrorHandler' BonusBits.CodeSamples.Agatha.Backend.Domain.IDatabase,
+BonusBits.CodeSamples.Agatha.Backend.Domain,WebService,2,2,2,0,2,26,2,0,1,1,2,0,BonusBits.CodeSamples.Agatha.Backend.Domain.IAuthenticator' BonusBits.CodeSamples.Agatha.Backend.Domain.IStockQuote,
+BonusBits.CodeSamples.Agatha.Backend,Program,0,2,0,0,0,39,3,0,0,-1,2,0,BonusBits.CodeSamples.Agatha.Backend.Composition.CastleRegistration' BonusBits.CodeSamples.Agatha.Backend.Composition.StructureMapRegistration,
+BonusBits.CodeSamples.Agatha.Backend,TestHandler,0,2,0,0,2,12,2,0,0,-1,3,0,BonusBits.CodeSamples.Agatha.Backend.Domain.IDatabase' BonusBits.CodeSamples.Agatha.Messages.TestResponse' BonusBits.CodeSamples.Agatha.Messages.TestRequest,
+BonusBits.CodeSamples.Agatha.Backend.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

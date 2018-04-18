@@ -1,12 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Logging,2,0,0,2,0,14,0,0,0,-1,1,2
-AzureAD,3,1,0,0,0,51,1,0,0,0,4,0
-Google,3,1,0,0,0,42,1,0,0,0,3,0
-Facebook,3,1,0,0,0,43,1,0,0,0,3,0
-Global,0,5,0,0,0,26,5,0,0,-1,1,0
-SampleWcf2,11,7,1,0,0,209,12,0,0,0,6,0
-TracePage,3,2,0,0,0,44,2,0,0,1,2,0
-WindowsLive,5,1,0,0,0,69,1,0,0,0,3,0
-IDataApi,0,3,0,0,0,11,3,2,0,-1,0,0
-IDataApiChannel,0,0,0,0,0,4,0,0,1,-1,0,0
-DataApiClient,0,8,0,0,8,32,8,0,1,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OAuthClient,Logging,2,0,0,2,0,10,0,0,0,-1,1,2,DotNetOpenAuth.Logging.ILog,OAuthClient.Global' OAuthClient.TracePage
+OAuthClient,AzureAD,3,1,0,0,0,53,1,0,0,0,4,0,DotNetOpenAuth.ApplicationBlock.AzureADClient' DotNetOpenAuth.OAuth2.IAuthorizationState' DotNetOpenAuth.ApplicationBlock.AzureADClaims' DotNetOpenAuth.ApplicationBlock.AzureADGraph,
+OAuthClient,Google,3,1,0,0,0,45,1,0,0,0,3,0,DotNetOpenAuth.ApplicationBlock.GoogleClient' DotNetOpenAuth.OAuth2.IAuthorizationState' DotNetOpenAuth.ApplicationBlock.IOAuth2Graph,
+OAuthClient,Facebook,3,1,0,0,0,46,1,0,0,0,3,0,DotNetOpenAuth.ApplicationBlock.FacebookClient' DotNetOpenAuth.OAuth2.IAuthorizationState' DotNetOpenAuth.ApplicationBlock.IOAuth2Graph,
+OAuthClient,Global,0,5,0,0,0,20,5,0,0,-1,2,0,DotNetOpenAuth.Logging.ILog' OAuthClient.Logging,
+OAuthClient,SampleWcf2,11,7,1,0,0,217,10,0,0,0,5,0,DotNetOpenAuth.OAuth2.WebServerClient' DotNetOpenAuth.OAuth2.AuthorizationServerDescription' DotNetOpenAuth.OAuth2.IAuthorizationState' OAuthClient.SampleResourceServer.DataApiClient' DotNetOpenAuth.OAuth2.ClientBase,
+OAuthClient,TracePage,3,2,0,0,0,38,2,0,0,1,1,0,OAuthClient.Logging,
+OAuthClient,WindowsLive,5,1,0,0,0,73,1,0,0,0,4,0,DotNetOpenAuth.ApplicationBlock.WindowsLiveClient' DotNetOpenAuth.OAuth2.IAuthorizationState' DotNetOpenAuth.ApplicationBlock.IOAuth2Graph' DotNetOpenAuth.ApplicationBlock.Scopes,
+OAuthClient.SampleResourceServer,IDataApi,0,3,0,0,0,13,3,2,0,-1,0,1,,OAuthClient.SampleResourceServer.DataApiClient
+OAuthClient.SampleResourceServer,IDataApiChannel,0,0,0,0,0,3,0,0,1,-1,0,0,,
+OAuthClient.SampleResourceServer,DataApiClient,0,8,0,0,8,35,8,0,1,-1,1,1,OAuthClient.SampleResourceServer.IDataApi,OAuthClient.SampleWcf2

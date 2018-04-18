@@ -1,16 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DeliveryStatus,0,0,0,0,0,7,0,0,0,-1,0,4
-MailAttributes,0,2,19,0,2,181,2,0,0,-1,2,17
-MailSendingContext,2,1,0,2,1,27,1,0,0,0,1,5
-SmtpMailResponse,0,3,4,0,3,31,3,0,1,-1,1,1
-SmtpMailSender,2,10,0,0,7,133,29,0,1,0.3,5,0
-IMailResponse,0,0,2,0,0,9,0,3,0,-1,1,3
-IPostProcessor,0,1,0,0,0,4,1,1,0,-1,1,1
-IEmailResult,0,0,2,0,0,18,0,4,0,-1,1,4
-IMailInterceptor,0,2,0,0,0,21,2,4,0,-1,2,6
-IMailSender,0,4,0,0,0,28,4,3,0,-1,2,7
-InlineCssPostProcessor,0,1,0,0,1,22,5,0,1,-1,1,0
-AlternativeViewCollection,0,1,1,0,1,21,1,0,0,-1,0,0
-AttachmentCollection,0,2,1,0,2,45,4,0,0,-1,1,2
-NoViewsFoundException,0,3,0,0,3,27,3,0,0,-1,0,0
-MimeTypes,0,1,0,0,1,1151,563,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ActionMailerNext,DeliveryStatus,0,0,0,0,0,7,0,0,0,-1,0,2,,ActionMailerNext.Implementations.SMTP.SmtpMailResponse' ActionMailerNext.SendGridSender.SendGridMailResponse
+ActionMailerNext,MailAttributes,0,2,19,0,2,133,2,0,0,-1,0,16,,ActionMailerNext.MailSendingContext' ActionMailerNext.Implementations.SMTP.SmtpMailSender' ActionMailerNext.Interfaces.IPostProcessor' ActionMailerNext.Interfaces.IMailInterceptor' ActionMailerNext.Interfaces.IMailSender' ActionMailerNext.PostProccesors.InlineCssPostProcessor' ActionMailerNext.MandrillMailSender.MandrillMailSender' ActionMailerNext.Mvc5.EmailResult' ActionMailerNext.Mvc5.MailerBase' ActionMailerNext.Mvc5_1.EmailResult' ActionMailerNext.Mvc5_1.MailerBase' ActionMailerNext.Mvc5_2.EmailResult' ActionMailerNext.Mvc5_2.MailerBase' ActionMailerNext.SendGridSender.SendGridMailSender' ActionMailerNext.Standalone.RazorEmailResult' ActionMailerNext.Standalone.RazorMailerBase
+ActionMailerNext,MailSendingContext,2,1,0,2,1,22,1,0,0,0,1,5,ActionMailerNext.MailAttributes,ActionMailerNext.Interfaces.IMailInterceptor' ActionMailerNext.Mvc5.MailerBase' ActionMailerNext.Mvc5_1.MailerBase' ActionMailerNext.Mvc5_2.MailerBase' ActionMailerNext.Standalone.RazorMailerBase
+ActionMailerNext.Implementations.SMTP,SmtpMailResponse,0,3,4,0,3,19,3,0,1,-1,1,1,ActionMailerNext.DeliveryStatus,ActionMailerNext.Implementations.SMTP.SmtpMailSender
+ActionMailerNext.Implementations.SMTP,SmtpMailSender,2,10,0,0,7,139,19,0,1,0.3,5,0,ActionMailerNext.Interfaces.IMailInterceptor' ActionMailerNext.MailAttributes' ActionMailerNext.Utils.AttachmentCollection' ActionMailerNext.Interfaces.IEmailResult' ActionMailerNext.Implementations.SMTP.SmtpMailResponse,
+ActionMailerNext.Interfaces,IMailResponse,0,0,2,0,0,5,0,3,0,-1,0,0,,
+ActionMailerNext.Interfaces,IPostProcessor,0,1,0,0,0,4,1,1,0,-1,1,1,ActionMailerNext.MailAttributes,ActionMailerNext.Standalone.RazorMailerBase
+ActionMailerNext.Interfaces,IEmailResult,0,0,2,0,0,11,0,4,0,-1,0,4,,ActionMailerNext.Implementations.SMTP.SmtpMailSender' ActionMailerNext.Interfaces.IMailSender' ActionMailerNext.MandrillMailSender.MandrillMailSender' ActionMailerNext.SendGridSender.SendGridMailSender
+ActionMailerNext.Interfaces,IMailInterceptor,0,2,0,0,0,17,2,4,0,-1,2,6,ActionMailerNext.MailSendingContext' ActionMailerNext.MailAttributes,ActionMailerNext.Implementations.SMTP.SmtpMailSender' ActionMailerNext.MandrillMailSender.MandrillMailSender' ActionMailerNext.Mvc5.EmailResult' ActionMailerNext.Mvc5_1.EmailResult' ActionMailerNext.Mvc5_2.EmailResult' ActionMailerNext.SendGridSender.SendGridMailSender
+ActionMailerNext.Interfaces,IMailSender,0,4,0,0,0,26,4,3,0,-1,2,7,ActionMailerNext.MailAttributes' ActionMailerNext.Interfaces.IEmailResult,ActionMailerNext.Mvc5.EmailResult' ActionMailerNext.Mvc5.MailerBase' ActionMailerNext.Mvc5_1.EmailResult' ActionMailerNext.Mvc5_1.MailerBase' ActionMailerNext.Mvc5_2.EmailResult' ActionMailerNext.Mvc5_2.MailerBase' ActionMailerNext.Standalone.RazorMailerBase
+ActionMailerNext.PostProccesors,InlineCssPostProcessor,0,1,0,0,1,28,2,0,1,-1,1,0,ActionMailerNext.MailAttributes,
+ActionMailerNext.Utils,AlternativeViewCollection,0,1,1,0,1,15,1,0,0,-1,0,0,,
+ActionMailerNext.Utils,AttachmentCollection,0,2,1,0,2,42,3,0,0,-1,1,3,ActionMailerNext.Utils.MimeTypes,ActionMailerNext.Implementations.SMTP.SmtpMailSender' ActionMailerNext.MandrillMailSender.MandrillMailSender' ActionMailerNext.SendGridSender.SendGridMailSender
+ActionMailerNext.Utils,NoViewsFoundException,0,3,0,0,3,24,3,0,0,-1,0,0,,
+ActionMailerNext.Utils,MimeTypes,0,1,0,0,1,1151,4,0,0,-1,0,1,,ActionMailerNext.Utils.AttachmentCollection

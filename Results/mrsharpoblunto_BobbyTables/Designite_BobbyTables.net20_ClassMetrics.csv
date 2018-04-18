@@ -1,17 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Datastore,2,21,5,0,10,454,67,0,0,0.1,6,3
-DatastoreException,0,1,0,0,1,13,1,0,0,-1,0,0
-DatastoreQueryOptions,0,0,0,0,0,14,0,0,0,-1,0,1
-DatastoreManager,3,31,1,0,16,611,66,0,0,0,6,2
-ApiResponse,0,2,2,0,0,19,2,0,0,-1,0,4
-IApiRequest,0,3,0,0,0,11,3,1,0,-1,1,2
-IApiRequestFactory,0,1,0,0,0,4,1,1,0,-1,0,1
-ApiRequestFactory,0,2,1,0,1,15,2,0,1,-1,2,2
-ApiRequest,3,6,0,1,5,135,16,0,1,0,1,1
-IgnoreAttribute,0,0,0,0,0,8,0,0,0,-1,0,0
-Record,0,0,1,0,0,16,0,0,0,-1,0,0
-RowState,0,0,0,0,0,7,0,0,0,-1,0,2
-Row,2,0,0,2,0,5,0,0,0,-1,1,1
-Table,4,36,6,0,16,922,215,0,0,0.14,5,1
-Transaction,2,4,0,0,2,114,8,0,0,0,1,1
-Utils,0,4,0,0,3,59,17,0,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BobbyTables,Datastore,2,21,5,0,10,501,51,0,0,0.1,7,5,BobbyTables.DatastoreManager' BobbyTables.Table' BobbyTables.IApiRequest' BobbyTables.ApiResponse' BobbyTables.IApiRequestFactory' BobbyTables.ApiRequestFactory' BobbyTables.Transaction,BobbyTables.DatastoreManager' BobbyTables.Table' BobbyTables.Transaction' BobbyTables.Tests.DatastoreManagerTests' BobbyTables.Tests.DatastoreTests
+BobbyTables,DatastoreException,0,1,0,0,1,11,1,0,0,-1,0,1,,BobbyTables.Tests.DatastoreTests
+BobbyTables,DatastoreQueryOptions,0,0,0,0,0,11,0,0,0,-1,0,2,,BobbyTables.DatastoreManager' BobbyTables.Tests.DatastoreManagerTests
+BobbyTables,DatastoreManager,3,31,1,0,16,678,63,0,0,0,7,4,BobbyTables.Datastore' BobbyTables.IApiRequest' BobbyTables.DatastoreQueryOptions' BobbyTables.ApiResponse' BobbyTables.IApiRequestFactory' BobbyTables.ApiRequestFactory' BobbyTables.Utils,BobbyTables.Datastore' BobbyTables.Table' BobbyTables.Tests.DatastoreManagerTests' BobbyTables.Tests.DatastoreTests
+BobbyTables,ApiResponse,0,2,2,0,0,13,2,0,0,-1,0,3,,BobbyTables.Datastore' BobbyTables.DatastoreManager' BobbyTables.ApiRequest
+BobbyTables,IApiRequest,0,3,0,0,0,11,3,1,0,-1,0,4,,BobbyTables.Datastore' BobbyTables.DatastoreManager' BobbyTables.Tests.DatastoreManagerTests' BobbyTables.Tests.DatastoreTests
+BobbyTables,IApiRequestFactory,0,1,0,0,0,4,1,1,0,-1,0,4,,BobbyTables.Datastore' BobbyTables.DatastoreManager' BobbyTables.Tests.DatastoreManagerTests' BobbyTables.Tests.DatastoreTests
+BobbyTables,ApiRequestFactory,0,2,1,0,1,12,2,0,1,-1,1,4,BobbyTables.ApiRequest,BobbyTables.Datastore' BobbyTables.DatastoreManager' BobbyTables.Tests.DatastoreManagerTests' BobbyTables.Tests.DatastoreTests
+BobbyTables,ApiRequest,3,6,0,1,5,148,9,0,1,0,1,1,BobbyTables.ApiResponse,BobbyTables.ApiRequestFactory
+BobbyTables,IgnoreAttribute,0,0,0,0,0,4,0,0,0,-1,0,2,,BobbyTables.Table' BobbyTables.Tests.TestObject
+BobbyTables,Record,0,0,1,0,0,7,0,1,0,-1,0,0,,
+BobbyTables,RowState,0,0,0,0,0,7,0,0,0,-1,0,2,,BobbyTables.Row' BobbyTables.Table
+BobbyTables,Row,2,0,0,2,0,5,0,0,0,-1,1,1,BobbyTables.RowState,BobbyTables.Table
+BobbyTables,Table,3,21,4,0,5,897,69,0,0,0,6,3,BobbyTables.DatastoreManager' BobbyTables.Datastore' BobbyTables.Row' BobbyTables.RowState' BobbyTables.IgnoreAttribute' BobbyTables.Utils,BobbyTables.Datastore' BobbyTables.Table<T>' BobbyTables.Tests.DatastoreTests
+BobbyTables,Table<T>,1,15,2,0,11,221,24,0,0,0.2,1,0,BobbyTables.Table,
+BobbyTables,Transaction,2,4,0,0,2,124,7,0,0,0,2,2,BobbyTables.Datastore' BobbyTables.PushAsyncContext,BobbyTables.Datastore' BobbyTables.Tests.DatastoreTests
+BobbyTables,PushAsyncContext,4,0,0,4,0,6,0,0,0,-1,0,1,,BobbyTables.Transaction
+BobbyTables,Utils,0,4,0,0,3,80,12,0,0,-1,0,3,,BobbyTables.DatastoreManager' BobbyTables.Table' BobbyTables.Tests.LCSTests

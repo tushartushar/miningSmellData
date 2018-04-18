@@ -1,29 +1,30 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DeleteCommand,0,1,0,0,1,6,1,0,1,-1,1,1
-FormPartsBuilder,0,4,0,0,2,80,21,0,0,-1,2,1
-IMailgunClient,0,5,0,0,0,16,5,1,0,-1,3,0
-MailgunCommand,2,7,1,0,3,46,10,3,0,0.71,4,0
-CommandResult,0,2,1,0,2,18,2,2,0,-1,0,1
-IMailgunAccountInfo,0,0,2,0,0,9,0,1,0,-1,0,2
-MailgunClient,0,8,2,0,8,50,8,0,1,-1,8,0
-MailgunQuery,1,4,2,0,2,36,7,2,0,0.75,1,0
-MailgunResource,0,0,1,0,0,7,0,2,0,-1,0,0
-SendMailCommand,2,4,0,0,3,22,4,0,1,0.5,2,1
-SendMailCommandResult,0,1,1,0,1,11,1,0,1,-1,0,1
-MailgunEventTypes,0,0,0,0,0,10,0,0,0,-1,0,4
-MailMessageExtensions,0,2,0,0,2,19,2,0,0,-1,0,0
-MailgunHttpResponse,1,2,3,0,1,31,3,0,0,0,0,1
-AttachmentFormPart,1,2,1,0,2,24,2,0,1,1,0,0
-FormPart,0,1,0,0,1,7,1,2,0,-1,0,1
-SimpleFormPart,0,3,2,0,3,26,3,0,1,-1,0,2
-FormPartExtensions,1,1,0,0,1,13,5,0,0,0,0,0
-MailgunHttpRequest,2,3,0,0,3,29,8,0,0,0,0,2
-ConversionExtensions,0,1,0,0,1,18,3,0,0,-1,3,0
-CreateRouteCommand,4,3,0,0,2,28,3,0,1,0.67,4,1
-CreateRouteCommandResult,0,1,1,0,1,11,1,0,1,-1,1,1
-MailgunRouteQuery,0,2,0,0,2,10,2,0,1,-1,0,1
-Route,0,0,5,0,0,23,0,0,1,-1,2,2
-RouteAction,0,5,1,0,4,27,5,0,0,-1,0,5
-RouteFilter,0,5,1,0,4,27,5,0,0,-1,0,5
-MailgunStatEntry,0,0,3,0,0,18,0,0,1,-1,1,1
-MailgunStatsQuery,1,2,1,0,2,22,2,0,1,1,2,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Typesafe.Mailgun,DeleteCommand,0,1,0,0,1,4,1,0,1,-1,1,1,Typesafe.Mailgun.IMailgunAccountInfo,Typesafe.Mailgun.MailgunClient
+Typesafe.Mailgun,FormPartsBuilder,0,4,0,0,2,90,19,0,0,-1,2,2,Typesafe.Mailgun.Http.FormPart' Typesafe.Mailgun.Http.SimpleFormPart,Typesafe.Mailgun.SendMailCommand' Typesafe.Mailgun.Tests.FormPartsBuilderTests
+Typesafe.Mailgun,IMailgunClient,0,5,0,0,0,13,5,1,0,-1,3,0,Typesafe.Mailgun.Routing.RouteFilter' Typesafe.Mailgun.Routing.RouteAction' Typesafe.Mailgun.MailgunEventTypes,
+Typesafe.Mailgun,MailgunCommand,0,2,0,0,1,8,2,3,0,-1,3,1,Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.Http.MailgunHttpResponse' Typesafe.Mailgun.CommandResult,Typesafe.Mailgun.MailgunCommand<T>
+Typesafe.Mailgun,CommandResult,0,2,1,0,2,9,2,2,0,-1,0,3,,Typesafe.Mailgun.MailgunCommand' Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.Tests.Routing.When_deleting_a_route
+Typesafe.Mailgun,IMailgunAccountInfo,0,0,2,0,0,5,0,1,0,-1,0,9,,Typesafe.Mailgun.DeleteCommand' Typesafe.Mailgun.MailgunCommand' Typesafe.Mailgun.MailgunCommand<T>' Typesafe.Mailgun.MailgunQuery<T>' Typesafe.Mailgun.SendMailCommand' Typesafe.Mailgun.Http.MailgunHttpRequest' Typesafe.Mailgun.Routing.CreateRouteCommand' Typesafe.Mailgun.Routing.MailgunRouteQuery' Typesafe.Mailgun.Statistics.MailgunStatsQuery
+Typesafe.Mailgun,MailgunClient,0,8,2,0,8,48,8,0,1,-1,12,11,Typesafe.Mailgun.SendMailCommand' Typesafe.Mailgun.SendMailCommandResult' Typesafe.Mailgun.Routing.MailgunRouteQuery' Typesafe.Mailgun.Routing.CreateRouteCommandResult' Typesafe.Mailgun.Routing.CreateRouteCommand' Typesafe.Mailgun.Routing.Route' Typesafe.Mailgun.Routing.RouteFilter' Typesafe.Mailgun.Routing.RouteAction' Typesafe.Mailgun.DeleteCommand' Typesafe.Mailgun.CommandResult' Typesafe.Mailgun.Statistics.MailgunStatsQuery' Typesafe.Mailgun.MailgunEventTypes,Typesafe.Mailgun.Tests.MailgunClientBuilder' Typesafe.Mailgun.Tests.When_getting_the_latest_stats' Typesafe.Mailgun.Tests.When_sending_an_email_message' Typesafe.Mailgun.Tests.When_sending_an_email_message_for_a_non_existing_domain' Typesafe.Mailgun.Tests.When_sending_an_email_message_with_an_attachment' Typesafe.Mailgun.Tests.When_sending_an_email_message_with_an_invalid_api_key' Typesafe.Mailgun.Tests.Routing.When_creating_a_route' Typesafe.Mailgun.Tests.Routing.When_creating_a_route_for_another_domain' Typesafe.Mailgun.Tests.Routing.When_creating_a_route_for_a_web_hook' Typesafe.Mailgun.Tests.Routing.When_deleting_a_route' Typesafe.Mailgun.Tests.Routing.When_getting_the_routes
+Typesafe.Mailgun,MailgunCommand<T>,2,5,1,0,2,31,8,0,0,0.8,4,0,Typesafe.Mailgun.MailgunCommand' Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.Http.MailgunHttpRequest' Typesafe.Mailgun.Http.MailgunHttpResponse,
+Typesafe.Mailgun,MailgunQuery<T>,1,4,2,0,2,32,6,0,0,0.75,3,0,Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.Http.MailgunHttpResponse' Typesafe.Mailgun.Http.MailgunHttpRequest,
+Typesafe.Mailgun,MailgunResource,0,0,1,0,0,4,0,2,0,-1,0,0,,
+Typesafe.Mailgun,SendMailCommand,2,4,0,0,3,24,4,0,1,0.5,4,2,Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.FormPartsBuilder' Typesafe.Mailgun.Http.MailgunHttpResponse' Typesafe.Mailgun.SendMailCommandResult,Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.Tests.When_getting_the_form_parts_of_a_mail_message
+Typesafe.Mailgun,SendMailCommandResult,0,1,1,0,1,8,1,0,1,-1,0,3,,Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.SendMailCommand' Typesafe.Mailgun.Tests.When_sending_an_email_message
+Typesafe.Mailgun,MailgunEventTypes,0,0,0,0,0,10,0,0,0,-1,0,4,,Typesafe.Mailgun.IMailgunClient' Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.Statistics.MailgunStatsQuery' Typesafe.Mailgun.Tests.When_getting_the_latest_stats
+Typesafe.Mailgun.Extensions,MailMessageExtensions,0,2,0,0,2,17,2,0,0,-1,0,0,,
+Typesafe.Mailgun.Http,MailgunHttpResponse,1,2,3,0,1,19,3,0,0,0,0,6,,Typesafe.Mailgun.MailgunCommand' Typesafe.Mailgun.MailgunCommand<T>' Typesafe.Mailgun.MailgunQuery<T>' Typesafe.Mailgun.SendMailCommand' Typesafe.Mailgun.Http.MailgunHttpRequest' Typesafe.Mailgun.Routing.CreateRouteCommand
+Typesafe.Mailgun.Http,AttachmentFormPart,1,2,1,0,2,20,2,0,1,1,0,1,,Typesafe.Mailgun.Tests.FormPartsBuilderTestsExtensions
+Typesafe.Mailgun.Http,FormPart,0,1,0,0,1,4,1,2,0,-1,0,3,,Typesafe.Mailgun.FormPartsBuilder' Typesafe.Mailgun.Http.FormPartExtensions' Typesafe.Mailgun.Http.MailgunHttpRequest
+Typesafe.Mailgun.Http,SimpleFormPart,0,3,2,0,3,20,3,0,1,-1,0,3,,Typesafe.Mailgun.FormPartsBuilder' Typesafe.Mailgun.Tests.FormPartsBuilderTestsExtensions' Typesafe.Mailgun.Tests.When_getting_the_form_parts_of_a_mail_message
+Typesafe.Mailgun.Http,FormPartExtensions,1,1,0,0,1,13,1,0,0,0,1,0,Typesafe.Mailgun.Http.FormPart,
+Typesafe.Mailgun.Http,MailgunHttpRequest,2,3,0,0,3,32,3,0,0,0,3,2,Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.Http.MailgunHttpResponse' Typesafe.Mailgun.Http.FormPart,Typesafe.Mailgun.MailgunCommand<T>' Typesafe.Mailgun.MailgunQuery<T>
+Typesafe.Mailgun.Extensions.Json,ConversionExtensions,0,1,0,0,1,18,2,0,0,-1,1,0,Typesafe.Mailgun.Routing.Route,
+Typesafe.Mailgun.Routing,CreateRouteCommand,4,3,0,0,2,30,3,0,1,0.67,5,1,Typesafe.Mailgun.Routing.RouteFilter' Typesafe.Mailgun.Routing.RouteAction' Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.Http.MailgunHttpResponse' Typesafe.Mailgun.Routing.CreateRouteCommandResult,Typesafe.Mailgun.MailgunClient
+Typesafe.Mailgun.Routing,CreateRouteCommandResult,0,1,1,0,1,8,1,0,1,-1,1,2,Typesafe.Mailgun.Routing.Route,Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.Routing.CreateRouteCommand
+Typesafe.Mailgun.Routing,MailgunRouteQuery,0,2,0,0,2,8,2,0,0,-1,2,1,Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.Routing.Route,Typesafe.Mailgun.MailgunClient
+Typesafe.Mailgun.Routing,Route,0,0,5,0,0,8,0,0,1,-1,0,8,,Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.Extensions.Json.ConversionExtensions' Typesafe.Mailgun.Routing.CreateRouteCommandResult' Typesafe.Mailgun.Routing.MailgunRouteQuery' Typesafe.Mailgun.Tests.Routing.When_creating_a_route' Typesafe.Mailgun.Tests.Routing.When_creating_a_route_for_a_web_hook' Typesafe.Mailgun.Tests.Routing.When_deleting_a_route' Typesafe.Mailgun.Tests.Routing.When_getting_the_routes
+Typesafe.Mailgun.Routing,RouteAction,0,5,1,0,4,21,5,0,0,-1,0,7,,Typesafe.Mailgun.IMailgunClient' Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.Routing.CreateRouteCommand' Typesafe.Mailgun.Tests.Routing.When_creating_a_route' Typesafe.Mailgun.Tests.Routing.When_creating_a_route_for_another_domain' Typesafe.Mailgun.Tests.Routing.When_creating_a_route_for_a_web_hook' Typesafe.Mailgun.Tests.Routing.When_deleting_a_route
+Typesafe.Mailgun.Routing,RouteFilter,0,5,1,0,4,21,5,0,0,-1,0,7,,Typesafe.Mailgun.IMailgunClient' Typesafe.Mailgun.MailgunClient' Typesafe.Mailgun.Routing.CreateRouteCommand' Typesafe.Mailgun.Tests.Routing.When_creating_a_route' Typesafe.Mailgun.Tests.Routing.When_creating_a_route_for_another_domain' Typesafe.Mailgun.Tests.Routing.When_creating_a_route_for_a_web_hook' Typesafe.Mailgun.Tests.Routing.When_deleting_a_route
+Typesafe.Mailgun.Statistics,MailgunStatEntry,0,0,3,0,0,6,0,0,1,-1,0,1,,Typesafe.Mailgun.Statistics.MailgunStatsQuery
+Typesafe.Mailgun.Statistics,MailgunStatsQuery,1,2,1,0,2,23,2,0,0,1,3,1,Typesafe.Mailgun.MailgunEventTypes' Typesafe.Mailgun.IMailgunAccountInfo' Typesafe.Mailgun.Statistics.MailgunStatEntry,Typesafe.Mailgun.MailgunClient

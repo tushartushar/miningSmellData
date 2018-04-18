@@ -1,0 +1,79 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Sherpa.Library.API,ITask,0,1,0,0,0,4,1,1,0,-1,1,1,Sherpa.Library.SiteHierarchy.Model.ShWeb,Sherpa.Library.CustomTasks.CustomTasksManager
+Sherpa.Library.ContentTypes,ContentTypeManager,1,7,2,0,4,190,21,0,0,0.29,1,1,Sherpa.Library.ContentTypes.Model.ShContentType,Sherpa.Installer.InstallationManager
+Sherpa.Library.ContentTypes,FieldManager,1,10,2,0,4,256,35,0,0,0,2,1,Sherpa.Library.Taxonomy.TaxonomyManager' Sherpa.Library.ContentTypes.Model.ShField,Sherpa.Installer.InstallationManager
+Sherpa.Library.ContentTypes.Model,ShCalculatedProps,0,0,3,0,0,6,0,0,0,-1,0,1,,Sherpa.Library.ContentTypes.Model.ShField
+Sherpa.Library.ContentTypes.Model,ShContentType,1,2,9,0,2,39,2,0,0,1,0,1,,Sherpa.Library.ContentTypes.ContentTypeManager
+Sherpa.Library.ContentTypes.Model,ShField,0,9,30,0,4,180,15,0,0,-1,2,1,Sherpa.Library.ContentTypes.Model.ShCalculatedProps' Sherpa.Library.ContentTypes.Model.ShFieldRefs,Sherpa.Library.ContentTypes.FieldManager
+Sherpa.Library.ContentTypes.Model,ShFieldRefs,0,0,2,0,0,5,0,0,0,-1,0,1,,Sherpa.Library.ContentTypes.Model.ShField
+Sherpa.Library.ContentTypes.Model,ShResultType,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Sherpa.Library.CustomTasks,CustomTasksManager,1,3,2,0,2,47,7,0,1,0.67,3,1,Sherpa.Library.API.ITask' Sherpa.Library.SiteHierarchy.Model.ShWeb' Sherpa.Library.SiteHierarchy.Model.ShCustomTask,Sherpa.Installer.InstallationManager
+Sherpa.Library.CustomTasks,ICustomTasksManager,0,1,0,0,0,4,1,1,0,-1,1,0,Sherpa.Library.SiteHierarchy.Model.ShWeb,
+Sherpa.Library.Deploy,DeployManager,4,13,0,0,5,190,19,0,1,0.15,1,1,Sherpa.Library.UriUtilities,Sherpa.Installer.InstallationManager
+Sherpa.Library.Deploy,IDeployManager,0,2,0,0,0,5,2,1,0,-1,0,0,,
+Sherpa.Library.Deploy,SearchImportManager,0,1,0,0,1,12,1,0,0,-1,0,1,,Sherpa.Installer.InstallationManager
+Sherpa.Library,FileListenerAndUploader,1,2,3,0,1,58,6,0,0,1,1,1,Sherpa.Library.SiteHierarchy.SiteSetupManager,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library,SharePointContext,15,10,9,5,7,225,18,2,0,0.3,1,3,Sherpa.Library.TokenHelper,Sherpa.Library.SharePointContextProvider' Sherpa.Library.SharePointAcsContextProvider' Sherpa.Library.SharePointHighTrustContextProvider
+Sherpa.Library,RedirectionStatus,0,0,0,0,0,6,0,0,0,-1,0,1,,Sherpa.Library.SharePointContextProvider
+Sherpa.Library,SharePointContextProvider,1,12,1,0,7,221,29,2,0,0.17,3,0,Sherpa.Library.TokenHelper' Sherpa.Library.RedirectionStatus' Sherpa.Library.SharePointContext,
+Sherpa.Library,SharePointAcsContext,2,3,7,0,1,118,7,0,1,0.67,1,1,Sherpa.Library.SharePointContextToken,Sherpa.Library.SharePointAcsContextProvider
+Sherpa.Library,SharePointAcsContextProvider,2,4,0,0,0,63,7,0,1,0.5,4,0,Sherpa.Library.SharePointContextToken' Sherpa.Library.TokenHelper' Sherpa.Library.SharePointAcsContext' Sherpa.Library.SharePointContext,
+Sherpa.Library,SharePointHighTrustContext,1,3,5,0,1,91,6,0,1,0.67,1,1,Sherpa.Library.TokenHelper,Sherpa.Library.SharePointHighTrustContextProvider
+Sherpa.Library,SharePointHighTrustContextProvider,1,4,0,0,0,36,6,0,1,0.75,2,0,Sherpa.Library.SharePointHighTrustContext' Sherpa.Library.SharePointContext,
+Sherpa.Library,FilePersistanceProvider<T>,0,3,1,0,3,26,3,0,1,-1,0,0,,
+Sherpa.Library,IPersistanceProvider,0,2,0,0,0,5,2,1,0,-1,0,0,,
+Sherpa.Library,TokenHelper,25,30,0,2,21,785,53,0,0,0.1,2,4,Sherpa.Library.SharePointContextToken' Sherpa.Library.AcsMetadataParser,Sherpa.Library.SharePointContext' Sherpa.Library.SharePointContextProvider' Sherpa.Library.SharePointAcsContextProvider' Sherpa.Library.SharePointHighTrustContext
+Sherpa.Library,AcsMetadataParser,0,4,0,0,3,77,9,0,0,-1,4,1,Sherpa.Library.JsonMetadataDocument' Sherpa.Library.JsonKey' Sherpa.Library.JsonKeyValue' Sherpa.Library.JsonEndpoint,Sherpa.Library.TokenHelper
+Sherpa.Library,JsonMetadataDocument,0,0,3,0,0,6,0,0,0,-1,0,1,,Sherpa.Library.AcsMetadataParser
+Sherpa.Library,JsonEndpoint,0,0,3,0,0,6,0,0,0,-1,0,1,,Sherpa.Library.AcsMetadataParser
+Sherpa.Library,JsonKeyValue,0,0,2,0,0,5,0,0,0,-1,0,1,,Sherpa.Library.AcsMetadataParser
+Sherpa.Library,JsonKey,0,0,2,0,0,5,0,0,0,-1,0,1,,Sherpa.Library.AcsMetadataParser
+Sherpa.Library,SharePointContextToken,0,5,6,0,4,118,8,0,0,-1,0,3,,Sherpa.Library.SharePointAcsContext' Sherpa.Library.SharePointAcsContextProvider' Sherpa.Library.TokenHelper
+Sherpa.Library,MultipleSymmetricKeySecurityToken,3,4,4,0,3,112,11,0,0,0.75,0,0,,
+Sherpa.Library,UriUtilities,0,3,0,0,3,23,4,0,0,-1,0,3,,Sherpa.Library.Deploy.DeployManager' Sherpa.Library.SiteHierarchy.ComposedLookManager' Sherpa.Library.SiteHierarchy.ListManager
+Sherpa.Library.SiteHierarchy,ComposedLookManager,1,1,0,0,1,77,7,0,0,0,3,1,Sherpa.Library.SiteHierarchy.Model.ShWeb' Sherpa.Library.SiteHierarchy.Model.ShComposedLook' Sherpa.Library.UriUtilities,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,ContentUploadManager,3,13,0,0,6,317,46,0,0,0.23,3,1,Sherpa.Library.SiteHierarchy.Model.ShContentFolder' Sherpa.Library.SiteHierarchy.Model.ShFileProperties' Sherpa.Library.SiteHierarchy.Model.ShWebPartReference,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,CustomActionsManager,1,2,0,0,1,79,10,0,0,0,1,1,Sherpa.Library.SiteHierarchy.Model.ShCustomAction,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,ExportTaskManager,1,4,0,0,2,104,15,0,0,0,5,1,Sherpa.Library.SiteHierarchy.Model.ShWeb' Sherpa.Library.SiteHierarchy.Model.ShTaskListDataItem' Sherpa.Library.SiteHierarchy.Model.ShTaskListData' Sherpa.Library.SiteHierarchy.Model.ShList' Sherpa.Library.SiteHierarchy.Model.ShTaskListDataRoot,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,FeatureManager,1,9,0,0,4,108,19,0,0,0,1,1,Sherpa.Library.SiteHierarchy.Model.ShFeature,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,ImportDataManager,3,5,1,0,5,93,18,0,0,0.4,7,1,Sherpa.Library.SiteHierarchy.Model.ShListData' Sherpa.Library.SiteHierarchy.Model.ShListDataRoot' Sherpa.Library.SiteHierarchy.Model.ShListDataItem' Sherpa.Library.SiteHierarchy.Model.ShFieldValue' Sherpa.Library.SiteHierarchy.Model.ShTaskListData' Sherpa.Library.SiteHierarchy.Model.ShTaskListDataRoot' Sherpa.Library.SiteHierarchy.Model.ShTaskListDataItem,Sherpa.Installer.InstallationManager
+Sherpa.Library.SiteHierarchy,ListManager,1,11,0,0,2,302,43,0,0,0.36,7,1,Sherpa.Library.SiteHierarchy.Model.ShList' Sherpa.Library.SiteHierarchy.Model.ShPermissionScheme' Sherpa.Library.SiteHierarchy.Model.ShGroup' Sherpa.Library.SiteHierarchy.Model.ShRoleAssignment' Sherpa.Library.SiteHierarchy.Model.ShAssociatedGroup' Sherpa.Library.SiteHierarchy.Model.ShView' Sherpa.Library.UriUtilities,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,ISiteSetupManager,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Sherpa.Library.SiteHierarchy,PermissionManager,1,1,0,0,1,28,4,0,0,0,1,1,Sherpa.Library.SiteHierarchy.Model.ShPermissionLevel,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,PropertyManager,0,3,0,0,3,32,5,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,SearchNavigationManager,0,1,0,0,0,26,4,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy,SiteSetupManager,2,15,13,1,7,181,22,0,1,0.2,13,2,Sherpa.Library.SiteHierarchy.Model.ShSiteCollection' Sherpa.Library.SiteHierarchy.CustomActionsManager' Sherpa.Library.SiteHierarchy.PermissionManager' Sherpa.Library.SiteHierarchy.FeatureManager' Sherpa.Library.SiteHierarchy.ExportTaskManager' Sherpa.Library.SiteHierarchy.ListManager' Sherpa.Library.SiteHierarchy.Model.ShWeb' Sherpa.Library.SiteHierarchy.QuicklaunchManager' Sherpa.Library.SiteHierarchy.PropertyManager' Sherpa.Library.SiteHierarchy.ContentUploadManager' Sherpa.Library.SiteHierarchy.ComposedLookManager' Sherpa.Library.SiteHierarchy.SearchNavigationManager' Sherpa.Library.FileListenerAndUploader,Sherpa.Installer.InstallationManager' Sherpa.Library.FileListenerAndUploader
+Sherpa.Library.SiteHierarchy,QuicklaunchManager,0,1,0,0,1,36,7,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy.Model,IShListData,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Sherpa.Library.SiteHierarchy.Model,IShListDataItem,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Sherpa.Library.SiteHierarchy.Model,IShListDataRoot,0,0,0,0,0,3,0,2,0,-1,0,0,,
+Sherpa.Library.SiteHierarchy.Model,ShAssociatedGroup,0,1,2,0,1,8,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ListManager
+Sherpa.Library.SiteHierarchy.Model,ShComposedLook,0,0,7,0,0,10,0,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ComposedLookManager
+Sherpa.Library.SiteHierarchy.Model,ShContentFolder,0,0,6,0,0,10,0,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ContentUploadManager
+Sherpa.Library.SiteHierarchy.Model,ShCustomAction,0,0,14,0,0,17,0,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.CustomActionsManager
+Sherpa.Library.SiteHierarchy.Model,ShFeature,0,0,4,0,0,7,0,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.FeatureManager
+Sherpa.Library.SiteHierarchy.Model,ShFieldValue,0,1,2,0,1,10,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ImportDataManager
+Sherpa.Library.SiteHierarchy.Model,ShFileProperties,0,1,8,0,1,19,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ContentUploadManager
+Sherpa.Library.SiteHierarchy.Model,ShGroup,0,1,2,0,1,10,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ListManager
+Sherpa.Library.SiteHierarchy.Model,ShList,0,1,14,0,1,24,1,0,0,-1,0,2,,Sherpa.Library.SiteHierarchy.ExportTaskManager' Sherpa.Library.SiteHierarchy.ListManager
+Sherpa.Library.SiteHierarchy.Model,ShTaskListData,0,1,1,0,1,8,1,0,1,-1,0,2,,Sherpa.Library.SiteHierarchy.ExportTaskManager' Sherpa.Library.SiteHierarchy.ImportDataManager
+Sherpa.Library.SiteHierarchy.Model,ShTaskListDataRoot,0,1,1,0,1,8,1,0,1,-1,0,2,,Sherpa.Library.SiteHierarchy.ExportTaskManager' Sherpa.Library.SiteHierarchy.ImportDataManager
+Sherpa.Library.SiteHierarchy.Model,ShListData,0,1,3,0,1,10,1,1,1,-1,0,2,,Sherpa.Installer.InstallationManager' Sherpa.Library.SiteHierarchy.ImportDataManager
+Sherpa.Library.SiteHierarchy.Model,ShListDataRoot,0,1,1,0,1,8,1,0,1,-1,0,1,,Sherpa.Library.SiteHierarchy.ImportDataManager
+Sherpa.Library.SiteHierarchy.Model,ShListDataItem,1,1,2,1,1,14,1,1,1,0,0,1,,Sherpa.Library.SiteHierarchy.ImportDataManager
+Sherpa.Library.SiteHierarchy.Model,ShPermissionLevel,0,1,3,0,1,10,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.PermissionManager
+Sherpa.Library.SiteHierarchy.Model,ShPermissionScheme,0,1,3,0,1,10,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ListManager
+Sherpa.Library.SiteHierarchy.Model,ShTaskListDataItem,1,4,2,1,4,28,4,0,2,0,0,2,,Sherpa.Library.SiteHierarchy.ExportTaskManager' Sherpa.Library.SiteHierarchy.ImportDataManager
+Sherpa.Library.SiteHierarchy.Model,ShRoleAssignment,0,1,2,0,1,8,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ListManager
+Sherpa.Library.SiteHierarchy.Model,ShSiteCollection,0,1,11,0,1,21,1,0,0,-1,0,2,,Sherpa.Installer.InstallationManager' Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy.Model,ShCustomTask,0,0,3,0,0,6,0,0,0,-1,0,1,,Sherpa.Library.CustomTasks.CustomTasksManager
+Sherpa.Library.SiteHierarchy.Model,ShWeb,0,1,16,0,1,30,1,0,0,-1,0,7,,Sherpa.ExampleCustomTask.ExampleCustomTask' Sherpa.Library.API.ITask' Sherpa.Library.CustomTasks.CustomTasksManager' Sherpa.Library.CustomTasks.ICustomTasksManager' Sherpa.Library.SiteHierarchy.ComposedLookManager' Sherpa.Library.SiteHierarchy.ExportTaskManager' Sherpa.Library.SiteHierarchy.SiteSetupManager
+Sherpa.Library.SiteHierarchy.Model,ShView,0,1,7,0,1,15,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ListManager
+Sherpa.Library.SiteHierarchy.Model,ShWebPartReference,0,1,5,0,1,13,1,0,0,-1,0,1,,Sherpa.Library.SiteHierarchy.ContentUploadManager
+Sherpa.Library.Taxonomy.Model,ShTaxonomyItem,0,2,2,0,2,13,2,2,0,-1,0,0,,
+Sherpa.Library.Taxonomy.Model,ShTerm,0,3,2,0,3,25,3,0,1,-1,0,1,,Sherpa.Library.Taxonomy.TaxonomyManager
+Sherpa.Library.Taxonomy.Model,ShTermLabel,0,0,3,0,0,9,0,0,0,-1,0,0,,
+Sherpa.Library.Taxonomy.Model,ShTermSetItem,0,4,4,0,2,37,4,2,1,-1,0,1,,Sherpa.Library.Taxonomy.TaxonomyManager
+Sherpa.Library.Taxonomy.Model,ShTermSet,0,2,0,0,2,5,2,0,2,-1,0,1,,Sherpa.Library.Taxonomy.TaxonomyManager
+Sherpa.Library.Taxonomy.Model,ShTermGroup,0,2,1,0,2,13,2,0,1,-1,0,2,,Sherpa.Installer.InstallationManager' Sherpa.Library.Taxonomy.TaxonomyManager
+Sherpa.Library.Taxonomy,TaxonomyManager,2,11,0,0,8,209,34,0,0,0.36,4,2,Sherpa.Library.Taxonomy.Model.ShTermGroup' Sherpa.Library.Taxonomy.Model.ShTermSet' Sherpa.Library.Taxonomy.Model.ShTerm' Sherpa.Library.Taxonomy.Model.ShTermSetItem,Sherpa.Installer.InstallationManager' Sherpa.Library.ContentTypes.FieldManager

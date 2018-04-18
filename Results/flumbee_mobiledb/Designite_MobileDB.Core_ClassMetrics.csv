@@ -1,0 +1,110 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MobileDB.Common.Attributes,JsonAttribute,0,1,0,0,1,6,1,0,1,-1,0,0,,
+MobileDB.Common.Attributes,LazyBsonAttribute,0,1,0,0,1,6,1,0,1,-1,0,0,,
+MobileDB.Common.Attributes,EntityDecoratorAttribute,0,1,1,0,1,9,1,0,0,-1,0,0,,
+MobileDB.Common.Attributes,IdentityAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Common.Attributes,StoreAttribute,0,1,1,0,1,9,1,2,0,-1,0,1,,MobileDB.DbContextBase
+MobileDB.Common.Attributes,ValidationAttribute,0,2,1,0,2,9,2,2,0,-1,1,2,MobileDB.Common.Validation.EntityValidationContext,MobileDB.Common.Validation.EntityValidator' MobileDB.Tests.Common.SimpleEntityValidator
+MobileDB.Common.Attributes,AssertThatAttribute,1,4,3,0,4,44,10,0,1,0.75,3,0,MobileDB.Common.ExpressiveAnnotations.Parser' MobileDB.Common.Validation.EntityValidationContext' MobileDB.Common.Validation.EntityValidationResult,
+MobileDB.Common.Attributes,RequiredIfAttribute,1,4,4,0,4,46,10,0,1,0.75,3,0,MobileDB.Common.ExpressiveAnnotations.Parser' MobileDB.Common.Validation.EntityValidationContext' MobileDB.Common.Validation.EntityValidationResult,
+MobileDB.Common,ConnectionString,2,3,0,0,3,29,4,1,0,0,1,5,MobileDB.Common.ConnectionStringConstants,MobileDB.FileSystem.PhysicalFileSystem' MobileDB.FileSystem.Contracts.FileSystemBase' MobileDB.DbContextBase' MobileDB.FileSystem.MemoryFileSystem' MobileDB.Tests.ConnectionStringTests
+MobileDB.Common,SimpleServiceProvider,1,8,0,0,7,69,13,0,0,0,0,0,,
+MobileDB.Common,ChangeSet,0,0,0,0,0,3,0,0,0,-1,0,6,,MobileDB.DbContextBase' MobileDB.EntitySet<TEntity>' MobileDB.Stores.BsonStore' MobileDB.Stores.StoreBase' MobileDB.Stores.Contracts.IStore' MobileDB.Stores.Json.JsonStore
+MobileDB.Common,ConnectionStringConstants,4,0,0,4,0,7,0,0,0,-1,0,9,,MobileDB.Common.Factory.ContextBuilderExtensions' MobileDB.FileSystem.PhysicalFileSystem' MobileDB.Common.ConnectionString' MobileDB.Common.Utilities.ConnectionStringUtilities' MobileDB.DbContextBase' MobileDB.Common.Factory.BsonContextBuilder<T>' MobileDB.Common.Factory.ContextBuilderExtensions' MobileDB.Tests.Builder.BuilderTests' MobileDB.Tests.ConnectionStringConstantsTests
+MobileDB.Common,ContextConfiguration,0,0,2,0,0,5,0,0,0,-1,0,1,,MobileDB.DbContextBase
+MobileDB.Common,MetadataEntity,0,1,4,0,1,23,2,0,0,-1,0,3,,MobileDB.Stores.BsonStore' MobileDB.Stores.StoreBase' MobileDB.Stores.Json.JsonStore
+MobileDB.Common,EntityConfiguration,0,0,4,0,0,7,0,0,0,-1,0,1,,MobileDB.DbContextBase
+MobileDB.Common,EntityState,0,0,0,0,0,6,0,0,0,-1,0,4,,MobileDB.EntitySet<TEntity>' MobileDB.Stores.BsonStore' MobileDB.Stores.StoreBase' MobileDB.Stores.Json.JsonStore
+MobileDB.Common.Utilities,AwaitExtensions,0,1,0,0,1,51,1,0,0,-1,1,3,MobileDB.Common.Utilities.TaskSchedulerAwaiter,MobileDB.FileSystem.PhysicalFileSystem' MobileDB.Stores.Json.JsonStore' MobileDB.FileSystem.MemoryFileSystem
+MobileDB.Common.Utilities,TaskSchedulerAwaiter,2,4,1,0,3,34,5,0,0,0.5,0,1,,MobileDB.Common.Utilities.AwaitExtensions
+MobileDB.Common.Utilities,LockHelper,0,3,0,0,3,54,3,0,0,-1,3,0,MobileDB.Common.Utilities.ReadLockHelper' MobileDB.Common.Utilities.UpgradeableReadLockHelper' MobileDB.Common.Utilities.WriteLockHelper,
+MobileDB.Common.Utilities,ReadLockHelper,1,2,0,0,2,13,2,0,0,0,0,1,,MobileDB.Common.Utilities.LockHelper
+MobileDB.Common.Utilities,UpgradeableReadLockHelper,1,2,0,0,2,13,2,0,0,0,0,1,,MobileDB.Common.Utilities.LockHelper
+MobileDB.Common.Utilities,WriteLockHelper,1,2,0,0,2,13,2,0,0,0,0,1,,MobileDB.Common.Utilities.LockHelper
+MobileDB.Common.Utilities,ConnectionStringUtilities,0,1,0,0,1,19,2,0,0,-1,1,0,MobileDB.Common.ConnectionStringConstants,
+MobileDB.Common.Utilities,Inflector,3,19,0,0,12,198,24,0,0,0.26,1,0,MobileDB.Common.Utilities.Rule,
+MobileDB.Common.Utilities,Rule,2,2,0,0,2,18,3,0,0,0,0,1,,MobileDB.Common.Utilities.Inflector
+MobileDB.Common.Utilities,EnumerableCollection<T>,1,8,2,0,7,44,8,0,0,0.88,0,0,,
+MobileDB.Common.Utilities,IdentityHelper,0,3,0,0,3,44,5,0,0,-1,0,0,,
+MobileDB.Common.Utilities,TypeHelper,0,2,0,0,2,12,2,0,0,-1,0,0,,
+MobileDB.Contracts,IEntityValidator,0,1,0,0,0,4,1,2,0,-1,0,3,,MobileDB.MobileDB' MobileDB.EntitySet<TEntity>' MobileDB.Tests.MobileDBTests
+MobileDB.Contracts,IDbContext,0,4,0,0,0,7,4,1,0,-1,0,0,,
+MobileDB.Contracts,IEntitySet,0,11,0,0,0,14,11,1,0,-1,0,4,,MobileDB.DbContextBase' MobileDB.Tests.BiggyContextTests' MobileDB.Tests.BsonStoreTests' MobileDB.Tests.JsonStoreTests
+MobileDB.FileSystem.Contracts,FileSystemBase,1,1,0,0,1,9,1,2,0,0,1,4,MobileDB.Common.ConnectionString,MobileDB.DbContextBase' MobileDB.Stores.BsonStore' MobileDB.Stores.StoreBase' MobileDB.Stores.Json.JsonStore
+MobileDB.FileSystem.Contracts,IAsyncFileSystem,0,6,0,0,0,12,6,2,0,-1,2,3,MobileDB.FileSystem.FileSystemPath' MobileDB.FileSystem.Contracts.DesiredFileAccess,MobileDB.Stores.BsonStore' MobileDB.Stores.StoreBase' MobileDB.Stores.Json.JsonStore
+MobileDB.FileSystem.Contracts,DesiredFileAccess,0,0,0,0,0,7,0,0,0,-1,0,7,,MobileDB.Common.FileAccessUtilities' MobileDB.FileSystem.PhysicalFileSystem' MobileDB.FileSystem.Contracts.IAsyncFileSystem' MobileDB.FileSystem.Contracts.IFileSystem' MobileDB.Stores.BsonStore' MobileDB.Stores.Json.JsonStore' MobileDB.FileSystem.MemoryFileSystem
+MobileDB.FileSystem.Contracts,IFileSystem,0,6,0,0,0,9,6,2,0,-1,2,3,MobileDB.FileSystem.FileSystemPath' MobileDB.FileSystem.Contracts.DesiredFileAccess,MobileDB.Stores.BsonStore' MobileDB.Stores.StoreBase' MobileDB.Stores.Json.JsonStore
+MobileDB,MobileDB,3,4,1,0,2,49,4,0,0,0,2,5,MobileDB.Contracts.IEntityValidator' MobileDB.FileSystem.MemoryFileSystem,MobileDB.Common.Factory.ContextBuilderExtensions' MobileDB.DbContextBase' MobileDB.EntitySet<TEntity>' MobileDB.Tests.Builder.BuilderTests' MobileDB.Tests.MobileDBTests
+MobileDB,DbContextBase,4,11,4,0,5,160,17,1,1,0,11,1,MobileDB.Common.ConnectionString' MobileDB.Common.ContextConfiguration' MobileDB.Stores.StoreBase' MobileDB.Common.EntityConfiguration' MobileDB.Common.ChangeSet' MobileDB.Contracts.IEntitySet' MobileDB.FileSystem.Contracts.FileSystemBase' MobileDB.Common.ConnectionStringConstants' MobileDB.MobileDB' MobileDB.Common.Attributes.StoreAttribute' MobileDB.Stores.Json.JsonStore,MobileDB.Tests.Common.ReflectionHelper
+MobileDB,EntitySet<TEntity>,4,13,0,0,12,84,18,0,1,0,7,0,MobileDB.Common.ChangeSet' MobileDB.Stores.StoreBase' MobileDB.Contracts.IEntityValidator' MobileDB.MobileDB' MobileDB.Common.EntityState' MobileDB.Stores.Contracts.IQueryableStore' MobileDB.Stores.Contracts.IStatefulStore,
+MobileDB.Common.ExpressiveAnnotations,Lexer,0,4,4,0,2,98,10,0,0,-1,1,1,MobileDB.Common.ExpressiveAnnotations.TokenType,MobileDB.Common.ExpressiveAnnotations.Parser
+MobileDB.Common.ExpressiveAnnotations,Parser,0,37,6,0,9,483,71,0,0,-1,4,3,MobileDB.Common.ExpressiveAnnotations.Lexer' MobileDB.Common.ExpressiveAnnotations.Token' MobileDB.Common.ExpressiveAnnotations.TokenType' MobileDB.Common.ExpressiveAnnotations.Helper,MobileDB.Common.Attributes.AssertThatAttribute' MobileDB.Common.Attributes.RequiredIfAttribute' MobileDB.Common.ExpressiveAnnotations.Toolchain
+MobileDB.Common.ExpressiveAnnotations,Token,0,1,2,0,1,21,1,0,0,-1,1,1,MobileDB.Common.ExpressiveAnnotations.TokenType,MobileDB.Common.ExpressiveAnnotations.Parser
+MobileDB.Common.ExpressiveAnnotations,TokenType,0,0,0,0,0,95,0,0,0,-1,0,3,,MobileDB.Common.ExpressiveAnnotations.Lexer' MobileDB.Common.ExpressiveAnnotations.Parser' MobileDB.Common.ExpressiveAnnotations.Token
+MobileDB.Common.ExpressiveAnnotations,Toolchain,0,1,0,0,1,58,1,0,0,-1,1,0,MobileDB.Common.ExpressiveAnnotations.Parser,
+MobileDB.Common.ExpressiveAnnotations,Helper,1,4,0,0,4,48,10,0,0,0.5,0,1,,MobileDB.Common.ExpressiveAnnotations.Parser
+MobileDB.Common.Validation,EntityValidationContext,0,0,4,0,0,7,0,0,0,-1,0,5,,MobileDB.Common.Attributes.ValidationAttribute' MobileDB.Common.Attributes.AssertThatAttribute' MobileDB.Common.Attributes.RequiredIfAttribute' MobileDB.Common.Validation.EntityValidator' MobileDB.Tests.Common.SimpleEntityValidator
+MobileDB.Common.Validation,EntityValidationResult,0,3,2,0,3,20,3,0,0,-1,0,4,,MobileDB.Common.Attributes.AssertThatAttribute' MobileDB.Common.Attributes.RequiredIfAttribute' MobileDB.Common.Validation.EntityValidator' MobileDB.Tests.Common.SimpleEntityValidator
+MobileDB.Common.Validation,EntityValidator,0,1,0,0,1,26,4,0,1,-1,3,1,MobileDB.Common.Validation.EntityValidationContext' MobileDB.Common.Validation.EntityValidationResult' MobileDB.Common.Attributes.ValidationAttribute,MobileDB.Tests.EntityValidationTests
+MobileDB.Exceptions,EntityValidationException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Exceptions,EntityTypeException,0,1,1,0,1,9,1,0,0,-1,0,0,,
+MobileDB.Exceptions,IdentityAttributeMismatchException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Exceptions,InvalidConnectionStringException,0,1,1,0,1,8,1,0,0,-1,0,0,,
+MobileDB.Exceptions,InvalidIdentityTypeException,0,1,1,0,1,9,1,0,0,-1,0,0,,
+MobileDB.Exceptions,InvalidProviderException,0,1,1,0,1,9,1,0,0,-1,0,0,,
+MobileDB.Exceptions,ParseException,0,2,2,0,2,17,2,0,0,-1,0,0,,
+MobileDB.Exceptions,DirectoryNotFoundException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+MobileDB.Stores,BsonStore,3,15,1,0,7,176,19,0,1,0,8,0,MobileDB.FileSystem.FileSystemPath' MobileDB.FileSystem.Contracts.FileSystemBase' MobileDB.FileSystem.Contracts.IAsyncFileSystem' MobileDB.FileSystem.Contracts.IFileSystem' MobileDB.Common.MetadataEntity' MobileDB.Common.EntityState' MobileDB.Common.ChangeSet' MobileDB.FileSystem.Contracts.DesiredFileAccess,
+MobileDB.Stores,StoreBase,3,8,4,0,7,67,10,2,1,1,6,2,MobileDB.FileSystem.Contracts.IAsyncFileSystem' MobileDB.FileSystem.Contracts.IFileSystem' MobileDB.FileSystem.Contracts.FileSystemBase' MobileDB.Common.ChangeSet' MobileDB.Common.MetadataEntity' MobileDB.Common.EntityState,MobileDB.DbContextBase' MobileDB.EntitySet<TEntity>
+MobileDB.Stores.Contracts,IStatefulStore,0,3,0,0,0,6,3,1,0,-1,0,1,,MobileDB.EntitySet<TEntity>
+MobileDB.Stores.Contracts,IStore,0,3,1,0,0,7,3,1,0,-1,1,0,MobileDB.Common.ChangeSet,
+MobileDB.Stores.Contracts,IQueryableStore,0,2,0,0,0,5,2,1,0,-1,0,1,,MobileDB.EntitySet<TEntity>
+MobileDB.Stores.Json,SimpleListSerializer,0,3,0,0,3,23,5,0,0,-1,0,1,,MobileDB.Stores.Json.JsonStore
+MobileDB.Stores.Json,JsonStore,7,15,1,0,12,234,18,0,2,0,10,1,MobileDB.Stores.Json.SimpleListSerializer' MobileDB.FileSystem.FileSystemPath' MobileDB.FileSystem.Contracts.FileSystemBase' MobileDB.Common.Utilities.AwaitExtensions' MobileDB.FileSystem.Contracts.IAsyncFileSystem' MobileDB.FileSystem.Contracts.DesiredFileAccess' MobileDB.Common.MetadataEntity' MobileDB.FileSystem.Contracts.IFileSystem' MobileDB.Common.ChangeSet' MobileDB.Common.EntityState,MobileDB.DbContextBase
+MobileDB.Common.Factory,BsonContextBuilder<T>,1,2,0,0,2,13,2,0,0,0,1,0,MobileDB.Common.ConnectionStringConstants,
+MobileDB.Common.Factory,Builder<T>,1,2,1,0,2,25,2,0,0,1,0,0,,
+MobileDB.Common.Factory,ContextBuilder<T>,1,1,0,1,1,8,1,0,0,0,0,0,,
+MobileDB.Common.Factory,ContextBuilderExtensions,0,1,0,0,1,8,1,0,0,-1,2,0,MobileDB.Common.ConnectionStringConstants' MobileDB.FileSystem.MemoryFileSystem,
+MobileDB.Common.Factory,ContextFactory,0,1,0,0,1,7,1,0,0,-1,0,3,,MobileDB.Tests.BiggyContextTests' MobileDB.Tests.BsonStoreTests' MobileDB.Tests.JsonStoreTests
+MobileDB.FileSystem,FileSystemPath,2,20,6,1,18,191,41,0,0,0.15,0,6,,MobileDB.FileSystem.PhysicalFileSystem' MobileDB.FileSystem.Contracts.IAsyncFileSystem' MobileDB.FileSystem.Contracts.IFileSystem' MobileDB.Stores.BsonStore' MobileDB.Stores.Json.JsonStore' MobileDB.FileSystem.MemoryFileSystem
+MobileDB.FileSystem,MemoryFileSystem,2,14,0,0,14,206,32,0,1,0.14,6,3,MobileDB.FileSystem.FileSystemPath' MobileDB.Common.ConnectionString' MobileDB.Common.Utilities.AwaitExtensions' MobileDB.FileSystem.Contracts.DesiredFileAccess' MobileDB.FileSystem.MemoryFileStream' MobileDB.FileSystem.MemoryFile,MobileDB.MobileDB' MobileDB.Common.Factory.ContextBuilderExtensions' MobileDB.Tests.MobileDBTests
+MobileDB.FileSystem,MemoryFile,0,2,1,0,2,12,2,0,0,-1,0,2,,MobileDB.FileSystem.MemoryFileSystem' MobileDB.FileSystem.MemoryFileStream
+MobileDB.FileSystem,MemoryFileStream,1,6,6,0,6,62,9,0,0,0.83,1,1,MobileDB.FileSystem.MemoryFile,MobileDB.FileSystem.MemoryFileSystem
+MobileDB.Properties,CanBeNullAttribute,0,0,0,0,0,7,0,0,0,-1,0,0,,
+MobileDB.Properties,NotNullAttribute,0,0,0,0,0,7,0,0,0,-1,0,8,,MobileDB.Properties.ContractAnnotationAttribute' MobileDB.Properties.BaseTypeRequiredAttribute' MobileDB.Properties.PublicAPIAttribute' MobileDB.Properties.AspMvcActionAttribute' MobileDB.Properties.AspMvcAreaAttribute' MobileDB.Properties.AspMvcControllerAttribute' MobileDB.Properties.HtmlElementAttributesAttribute' MobileDB.Properties.HtmlAttributeValueAttribute
+MobileDB.Properties,StringFormatMethodAttribute,0,1,1,0,1,14,1,0,0,-1,0,0,,
+MobileDB.Properties,InvokerParameterNameAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,NotifyPropertyChangedInvocatorAttribute,0,2,1,0,2,12,2,0,0,-1,0,0,,
+MobileDB.Properties,ContractAnnotationAttribute,0,2,2,0,2,15,2,0,0,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,LocalizationRequiredAttribute,0,2,1,0,2,12,2,0,0,-1,0,0,,
+MobileDB.Properties,CannotApplyEqualityOperatorAttribute,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MobileDB.Properties,BaseTypeRequiredAttribute,0,1,1,0,1,11,1,0,0,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,UsedImplicitlyAttribute,0,4,2,0,4,24,4,0,0,-1,2,0,MobileDB.Properties.ImplicitUseKindFlags' MobileDB.Properties.ImplicitUseTargetFlags,
+MobileDB.Properties,MeansImplicitUseAttribute,0,4,2,0,4,26,4,0,0,-1,2,0,MobileDB.Properties.ImplicitUseKindFlags' MobileDB.Properties.ImplicitUseTargetFlags,
+MobileDB.Properties,ImplicitUseKindFlags,0,0,0,0,0,16,0,0,0,-1,0,2,,MobileDB.Properties.UsedImplicitlyAttribute' MobileDB.Properties.MeansImplicitUseAttribute
+MobileDB.Properties,ImplicitUseTargetFlags,0,0,0,0,0,10,0,0,0,-1,0,2,,MobileDB.Properties.UsedImplicitlyAttribute' MobileDB.Properties.MeansImplicitUseAttribute
+MobileDB.Properties,PublicAPIAttribute,0,2,1,0,2,13,2,0,0,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,InstantHandleAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,PureAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,PathReferenceAttribute,0,2,1,0,2,13,2,3,0,-1,0,0,,
+MobileDB.Properties,AspMvcAreaMasterLocationFormatAttribute,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcAreaPartialViewLocationFormatAttribute,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcAreaViewLocationFormatAttribute,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcMasterLocationFormatAttribute,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcPartialViewLocationFormatAttribute,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcViewLocationFormatAttribute,0,1,0,0,1,7,1,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcActionAttribute,0,2,1,0,2,13,2,0,0,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,AspMvcAreaAttribute,0,2,1,0,2,13,2,0,1,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,AspMvcControllerAttribute,0,2,1,0,2,13,2,0,0,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,AspMvcMasterAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcModelTypeAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcPartialViewAttribute,0,0,0,0,0,4,0,0,1,-1,0,0,,
+MobileDB.Properties,AspMvcSupressViewErrorAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcDisplayTemplateAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcEditorTemplateAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcTemplateAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,AspMvcViewAttribute,0,0,0,0,0,4,0,0,1,-1,0,0,,
+MobileDB.Properties,AspMvcActionSelectorAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MobileDB.Properties,HtmlElementAttributesAttribute,0,2,1,0,2,15,2,0,0,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,HtmlAttributeValueAttribute,0,1,1,0,1,12,1,0,0,-1,1,0,MobileDB.Properties.NotNullAttribute,
+MobileDB.Properties,RazorSectionAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,

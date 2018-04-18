@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GTFS.CLI,Program,0,1,0,0,0,45,5,0,0,-1,3,0,GTFS.CLI.SwitchParser' GTFS.CLI.Switches.Processors.ProcessorBase' GTFS.CLI.Switches.Switch,
+GTFS.CLI,SwitchParser,1,6,0,0,5,141,18,0,0,0.67,1,4,GTFS.CLI.Switches.Switch,GTFS.CLI.Program' GTFS.CLI.Switches.SwitchFilterAddShapes' GTFS.CLI.Switches.SwitchFilterBoundingBox' GTFS.CLI.Switches.SwitchFilterRoutes
+GTFS.CLI,SwitchParserException,1,1,0,0,1,17,1,0,0,0,0,0,,
+GTFS.CLI.Switches.Processors,ProcessorBase,0,2,2,0,2,29,2,3,0,-1,0,1,,GTFS.CLI.Program
+GTFS.CLI.Switches.Processors,ProcessorFeedFilter,0,3,4,0,3,65,8,0,1,-1,1,4,GTFS.CLI.Switches.Processors.ProcessorFeedSource,GTFS.CLI.Switches.SwitchFilterAddShapes' GTFS.CLI.Switches.SwitchFilterBoundingBox' GTFS.CLI.Switches.SwitchFilterBoundingGeoJSON' GTFS.CLI.Switches.SwitchFilterRoutes
+GTFS.CLI.Switches.Processors,ProcessorFeedSource,0,1,0,0,1,8,1,2,1,-1,0,3,,GTFS.CLI.Switches.Processors.ProcessorFeedFilter' GTFS.CLI.Switches.Processors.ProcessorFeedValidation' GTFS.CLI.Switches.Processors.ProcessorWriteFeed
+GTFS.CLI.Switches.Processors,ProcessorFeedValidation,0,3,3,0,3,72,8,0,1,-1,1,1,GTFS.CLI.Switches.Processors.ProcessorFeedSource,GTFS.CLI.Switches.SwitchValidateFeed
+GTFS.CLI.Switches.Processors,ProcessorReadFeed,1,4,2,0,4,55,4,0,2,0.75,0,1,,GTFS.CLI.Switches.SwitchReadFeed
+GTFS.CLI.Switches.Processors,ProcessorWriteFeed,1,3,3,0,3,71,9,0,1,0.67,1,1,GTFS.CLI.Switches.Processors.ProcessorFeedSource,GTFS.CLI.Switches.SwitchWriteFeed
+GTFS.CLI.Switches,Switch,0,5,0,0,5,36,5,7,0,-1,0,9,,GTFS.CLI.Program' GTFS.CLI.SwitchParser' GTFS.CLI.Switches.SwitchFilterAddShapes' GTFS.CLI.Switches.SwitchFilterBoundingBox' GTFS.CLI.Switches.SwitchFilterBoundingGeoJSON' GTFS.CLI.Switches.SwitchFilterRoutes' GTFS.CLI.Switches.SwitchReadFeed' GTFS.CLI.Switches.SwitchValidateFeed' GTFS.CLI.Switches.SwitchWriteFeed
+GTFS.CLI.Switches,SwitchFilterAddShapes,0,4,1,0,4,83,8,0,1,-1,3,0,GTFS.CLI.SwitchParser' GTFS.CLI.Switches.Switch' GTFS.CLI.Switches.Processors.ProcessorFeedFilter,
+GTFS.CLI.Switches,SwitchFilterBoundingBox,0,4,4,0,4,147,10,0,1,-1,3,0,GTFS.CLI.SwitchParser' GTFS.CLI.Switches.Switch' GTFS.CLI.Switches.Processors.ProcessorFeedFilter,
+GTFS.CLI.Switches,SwitchFilterBoundingGeoJSON,0,4,1,0,4,69,5,0,1,-1,2,0,GTFS.CLI.Switches.Switch' GTFS.CLI.Switches.Processors.ProcessorFeedFilter,
+GTFS.CLI.Switches,SwitchFilterRoutes,0,4,2,0,4,114,14,0,1,-1,3,0,GTFS.CLI.SwitchParser' GTFS.CLI.Switches.Switch' GTFS.CLI.Switches.Processors.ProcessorFeedFilter,
+GTFS.CLI.Switches,SwitchParserException,1,1,0,0,1,17,1,0,0,0,0,0,,
+GTFS.CLI.Switches,SwitchReadFeed,0,4,1,0,4,52,5,0,1,-1,2,0,GTFS.CLI.Switches.Switch' GTFS.CLI.Switches.Processors.ProcessorReadFeed,
+GTFS.CLI.Switches,SwitchValidateFeed,0,4,0,0,4,39,4,0,1,-1,2,0,GTFS.CLI.Switches.Switch' GTFS.CLI.Switches.Processors.ProcessorFeedValidation,
+GTFS.CLI.Switches,SwitchWriteFeed,0,4,1,0,4,52,5,0,1,-1,2,0,GTFS.CLI.Switches.Switch' GTFS.CLI.Switches.Processors.ProcessorWriteFeed,

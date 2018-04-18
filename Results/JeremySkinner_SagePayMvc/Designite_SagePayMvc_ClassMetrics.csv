@@ -1,37 +1,37 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MerchantAccountType,0,0,0,0,0,5,0,0,0,-1,0,3
-Address,0,4,9,0,1,78,4,0,0,-1,1,4
-AddressType,0,0,0,0,0,8,0,0,0,-1,0,1
-BasketItem,0,2,6,0,2,42,2,0,0,-1,0,1
-Configuration,24,3,14,13,1,252,5,0,0,0.67,1,3
-DefaultUrlResolver,3,3,0,3,3,44,3,0,1,1,1,1
-PaymentFormProfile,0,0,0,0,0,5,0,0,0,-1,0,3
-HttpRequestSender,0,1,0,0,1,32,5,0,1,-1,0,0
-IHttpRequestSender,0,1,0,0,0,9,1,1,0,-1,0,2
-IRefundRegistrar,0,1,0,0,0,4,1,1,0,-1,0,0
-ITransactionRegistrar,0,1,0,0,0,7,1,1,0,-1,5,1
-IUrlResolver,0,3,0,0,0,18,3,1,0,-1,0,2
-RefundRegistrar,2,3,0,0,3,23,3,0,1,0.67,6,0
-RefundResponse,0,0,6,0,0,27,0,0,0,-1,1,1
-ResponseType,0,0,0,0,0,16,0,0,0,-1,0,7
-SagePayBinder,21,3,0,0,1,66,4,0,0,0,2,0
-SagePayResponse,0,2,22,0,2,136,2,0,0,-1,1,4
-ShoppingBasket,2,6,2,0,5,81,8,0,0,0.33,1,4
-TransactionRegistrar,3,3,0,0,3,35,3,0,1,0.67,12,0
-TransactionRegistrationResponse,0,0,6,0,0,48,0,0,0,-1,1,1
-TxType,0,0,0,0,0,6,0,0,0,-1,0,3
-UrlResolver,1,1,1,0,1,21,2,0,0,0,2,1
-VspServerMode,0,0,0,0,0,9,0,0,0,-1,0,1
-ErrorResult,0,2,0,0,2,16,2,0,1,-1,0,1
-InvalidSignatureResult,0,2,0,0,2,16,2,0,1,-1,0,1
-SagePayResult,1,3,0,0,0,21,3,4,0,0,1,0
-TransactionNotFoundResult,0,2,0,0,2,16,2,0,1,-1,0,1
-ValidOrderResult,1,2,0,0,2,25,4,0,1,0,2,1
-FormatAttribute,0,1,1,0,1,15,1,0,0,-1,0,3
-HttpPostSerializer,0,5,0,0,1,52,10,0,0,-1,3,2
-OptionalAttribute,0,0,0,0,0,7,0,0,0,-1,0,2
-RefundRegistration,0,1,11,0,1,63,1,0,0,-1,1,1
-ResponseSerializer,0,5,0,0,5,95,18,0,0,-1,1,3
-TestHelper,4,1,0,4,1,27,1,0,0,0,2,0
-TransactionRegistration,16,1,32,0,1,218,11,0,0,0,8,1
-UnencodedAttribute,0,0,0,0,0,7,0,0,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SagePayMvc,MerchantAccountType,0,0,0,0,0,5,0,0,0,-1,0,3,,SagePayMvc.ITransactionRegistrar' SagePayMvc.TransactionRegistrar' SagePayMvc.Internal.TransactionRegistration
+SagePayMvc,Address,0,4,9,0,1,43,5,0,0,-1,1,6,SagePayMvc.AddressType,SagePayMvc.Sample.Models.TransactionService' SagePayMvc.ITransactionRegistrar' SagePayMvc.TransactionRegistrar' SagePayMvc.Internal.TransactionRegistration' SagePayMvc.Tests.AddressTester' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,AddressType,0,0,0,0,0,4,0,0,0,-1,0,2,,SagePayMvc.Address' SagePayMvc.Tests.AddressTester
+SagePayMvc,BasketItem,0,2,6,0,2,18,2,0,0,-1,0,2,,SagePayMvc.ShoppingBasket' SagePayMvc.Tests.BasketItemTester
+SagePayMvc,Configuration,24,3,14,13,1,232,5,0,0,0.67,1,9,SagePayMvc.VspServerMode,SagePayMvc.Sample.Controllers.PaymentResponseController' SagePayMvc.Sample.MvcApplication' SagePayMvc.DefaultUrlResolver' SagePayMvc.RefundRegistrar' SagePayMvc.TransactionRegistrar' SagePayMvc.Tests.ConfigurationTester' SagePayMvc.Tests.DefaultUrlResolverTester' SagePayMvc.Tests.RefundRegistrationTester' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,DefaultUrlResolver,3,3,0,3,3,26,3,0,1,1,1,1,SagePayMvc.Configuration,SagePayMvc.Tests.DefaultUrlResolverTester
+SagePayMvc,PaymentFormProfile,0,0,0,0,0,4,0,0,0,-1,0,4,,SagePayMvc.ITransactionRegistrar' SagePayMvc.TransactionRegistrar' SagePayMvc.Internal.TransactionRegistration' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,HttpRequestSender,0,1,0,0,1,26,1,0,1,-1,0,0,,
+SagePayMvc,IHttpRequestSender,0,1,0,0,0,8,1,1,0,-1,0,2,,SagePayMvc.RefundRegistrar' SagePayMvc.TransactionRegistrar
+SagePayMvc,IRefundRegistrar,0,1,0,0,0,4,1,1,0,-1,0,0,,
+SagePayMvc,ITransactionRegistrar,0,1,0,0,0,8,1,1,0,-1,5,2,SagePayMvc.ShoppingBasket' SagePayMvc.Address' SagePayMvc.PaymentFormProfile' SagePayMvc.MerchantAccountType' SagePayMvc.TxType,SagePayMvc.Sample.Models.TransactionService' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,IUrlResolver,0,3,0,0,0,14,3,2,0,-1,0,3,,SagePayMvc.TransactionRegistrar' SagePayMvc.ActionResults.SagePayResult' SagePayMvc.Tests.UrlResolverTester
+SagePayMvc,RefundRegistrar,2,3,0,0,3,27,3,0,1,0.67,6,1,SagePayMvc.Configuration' SagePayMvc.IHttpRequestSender' SagePayMvc.Internal.RefundRegistration' SagePayMvc.Internal.HttpPostSerializer' SagePayMvc.Internal.ResponseSerializer' SagePayMvc.RefundResponse,SagePayMvc.Tests.RefundRegistrationTester
+SagePayMvc,RefundResponse,0,0,6,0,0,8,0,0,0,-1,0,2,,SagePayMvc.RefundRegistrar' SagePayMvc.Tests.RefundRegistrationTester
+SagePayMvc,ResponseType,0,0,0,0,0,12,0,0,0,-1,0,11,,SagePayMvc.Sample.Models.TransactionService' SagePayMvc.SagePayBinder' SagePayMvc.SagePayResponse' SagePayMvc.ActionResults.ValidOrderResult' SagePayMvc.Internal.ResponseSerializer' SagePayMvc.Internal.TestHelper' SagePayMvc.Tests.RefundRegistrationTester' SagePayMvc.Tests.ResponseDeserializerTester' SagePayMvc.Tests.SagePayModelBinderTester' SagePayMvc.Tests.SuccessfulTransactionResultTester' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,SagePayBinder,21,3,0,0,1,59,4,0,0,0,3,1,SagePayMvc.SagePayResponse' SagePayMvc.Internal.ResponseSerializer' SagePayMvc.ResponseType,SagePayMvc.Tests.SagePayModelBinderTester
+SagePayMvc,SagePayResponse,0,2,22,0,2,70,2,0,0,-1,1,7,SagePayMvc.ResponseType,SagePayMvc.Sample.Controllers.PaymentResponseController' SagePayMvc.SagePayBinder' SagePayMvc.ActionResults.ValidOrderResult' SagePayMvc.Internal.TestHelper' SagePayMvc.Tests.SagePayModelBinderTester' SagePayMvc.Tests.SagePayResponseTester' SagePayMvc.Tests.SuccessfulTransactionResultTester
+SagePayMvc,ShoppingBasket,2,6,2,0,5,68,8,0,0,0.33,1,6,SagePayMvc.BasketItem,SagePayMvc.Sample.Models.TransactionService' SagePayMvc.ITransactionRegistrar' SagePayMvc.TransactionRegistrar' SagePayMvc.Internal.TransactionRegistration' SagePayMvc.Tests.BasketTester' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,TransactionRegistrar,3,3,0,0,3,34,3,0,1,0.67,12,0,SagePayMvc.Configuration' SagePayMvc.IUrlResolver' SagePayMvc.IHttpRequestSender' SagePayMvc.Internal.TransactionRegistration' SagePayMvc.Internal.HttpPostSerializer' SagePayMvc.Internal.ResponseSerializer' SagePayMvc.TransactionRegistrationResponse' SagePayMvc.ShoppingBasket' SagePayMvc.Address' SagePayMvc.PaymentFormProfile' SagePayMvc.MerchantAccountType' SagePayMvc.TxType,
+SagePayMvc,TransactionRegistrationResponse,0,0,6,0,0,26,0,0,0,-1,0,4,,SagePayMvc.Sample.Controllers.BasketController' SagePayMvc.Sample.Models.TransactionService' SagePayMvc.TransactionRegistrar' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,TxType,0,0,0,0,0,5,0,0,0,-1,0,4,,SagePayMvc.ITransactionRegistrar' SagePayMvc.TransactionRegistrar' SagePayMvc.Internal.TransactionRegistration' SagePayMvc.Tests.TransactionRegistrationTester
+SagePayMvc,UrlResolver,1,1,1,0,1,13,2,0,0,0,0,6,,SagePayMvc.ActionResults.SagePayResult' SagePayMvc.Tests.ErrorResultTester' SagePayMvc.Tests.InvalidSignatureResultTester' SagePayMvc.Tests.SuccessfulTransactionResultTester' SagePayMvc.Tests.TransactionNotFoundResultTester' SagePayMvc.Tests.UrlResolverTester
+SagePayMvc,VspServerMode,0,0,0,0,0,5,0,0,0,-1,0,2,,SagePayMvc.Configuration' SagePayMvc.Tests.ConfigurationTester
+SagePayMvc.ActionResults,ErrorResult,0,2,0,0,2,10,2,0,1,-1,0,2,,SagePayMvc.Sample.Controllers.PaymentResponseController' SagePayMvc.Tests.ErrorResultTester
+SagePayMvc.ActionResults,InvalidSignatureResult,0,2,0,0,2,10,2,0,1,-1,0,2,,SagePayMvc.Sample.Controllers.PaymentResponseController' SagePayMvc.Tests.InvalidSignatureResultTester
+SagePayMvc.ActionResults,SagePayResult,1,3,0,0,0,14,3,4,0,0,2,0,SagePayMvc.IUrlResolver' SagePayMvc.UrlResolver,
+SagePayMvc.ActionResults,TransactionNotFoundResult,0,2,0,0,2,10,2,0,1,-1,0,2,,SagePayMvc.Sample.Controllers.PaymentResponseController' SagePayMvc.Tests.TransactionNotFoundResultTester
+SagePayMvc.ActionResults,ValidOrderResult,1,2,0,0,2,21,4,0,1,0,2,2,SagePayMvc.SagePayResponse' SagePayMvc.ResponseType,SagePayMvc.Sample.Controllers.PaymentResponseController' SagePayMvc.Tests.SuccessfulTransactionResultTester
+SagePayMvc.Internal,FormatAttribute,0,1,1,0,1,7,1,0,0,-1,0,1,,SagePayMvc.Internal.HttpPostSerializer
+SagePayMvc.Internal,HttpPostSerializer,0,5,0,0,1,41,10,0,0,-1,3,3,SagePayMvc.Internal.FormatAttribute' SagePayMvc.Internal.UnencodedAttribute' SagePayMvc.Internal.OptionalAttribute,SagePayMvc.RefundRegistrar' SagePayMvc.TransactionRegistrar' SagePayMvc.Tests.HttpPostSerializerTester
+SagePayMvc.Internal,OptionalAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,SagePayMvc.Internal.HttpPostSerializer
+SagePayMvc.Internal,RefundRegistration,0,1,11,0,1,32,1,0,0,-1,0,1,,SagePayMvc.RefundRegistrar
+SagePayMvc.Internal,ResponseSerializer,0,5,0,0,5,85,19,0,0,-1,1,4,SagePayMvc.ResponseType,SagePayMvc.RefundRegistrar' SagePayMvc.SagePayBinder' SagePayMvc.TransactionRegistrar' SagePayMvc.Tests.ResponseDeserializerTester
+SagePayMvc.Internal,TestHelper,4,1,0,4,1,22,1,0,0,0,2,1,SagePayMvc.ResponseType' SagePayMvc.SagePayResponse,SagePayMvc.Tests.SagePayResponseTester
+SagePayMvc.Internal,TransactionRegistration,16,1,32,0,1,150,3,0,0,0,5,1,SagePayMvc.ShoppingBasket' SagePayMvc.Address' SagePayMvc.PaymentFormProfile' SagePayMvc.MerchantAccountType' SagePayMvc.TxType,SagePayMvc.TransactionRegistrar
+SagePayMvc.Internal,UnencodedAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,SagePayMvc.Internal.HttpPostSerializer

@@ -1,60 +1,62 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Disposable,1,2,0,0,2,12,2,0,0,0,0,1
-Extensions,0,3,0,0,3,29,5,0,0,-1,0,0
-Trace,0,1,0,0,1,12,1,0,0,-1,0,1
-DefaultKayakScheduler,5,10,1,0,4,99,17,0,1,0.3,1,1
-ISchedulerFactory,0,1,0,0,0,4,1,1,0,-1,1,1
-IScheduler,0,3,0,0,0,6,3,1,0,-1,0,11
-ISchedulerDelegate,0,2,0,0,0,5,2,0,0,-1,1,3
-KayakScheduler,1,0,1,0,0,9,0,0,0,-1,2,2
-DefaultKayakSchedulerFactory,0,1,0,0,1,7,1,0,1,-1,2,1
-IServerFactory,0,1,0,0,0,4,1,1,0,-1,2,3
-IServer,0,1,0,0,0,4,1,1,0,-1,0,2
-IServerDelegate,0,2,0,0,0,5,2,1,0,-1,2,3
-KayakServer,1,0,1,0,0,9,0,0,0,-1,2,2
-DefaultKayakServerFactory,0,1,0,0,1,7,1,0,1,-1,3,1
-ISocketFactory,0,1,0,0,0,4,1,1,0,-1,2,1
-ISocketDelegate,0,5,0,0,0,8,5,1,0,-1,1,3
-ISocket,0,3,1,0,0,9,3,1,0,-1,0,7
-KayakSocket,1,0,1,0,0,9,0,0,0,-1,2,0
-DefaultKayakSocketFactory,0,1,0,0,1,7,1,0,1,-1,3,1
-IDataProducer,0,1,0,0,0,4,1,1,0,-1,1,3
-IDataConsumer,0,3,0,0,0,6,3,2,0,-1,0,2
-DefaultKayakServer,4,8,0,0,2,101,17,0,1,0,6,1
-KayakServerState,2,7,0,0,7,86,7,0,0,0,0,1
-DefaultKayakSocket,9,18,1,1,4,291,44,0,1,0,5,2
-KayakSocketState,1,11,0,0,10,117,28,0,0,0,0,1
-OutputBuffer,2,3,0,2,3,34,6,0,0,0,0,1
-ISocketWrapper,0,7,1,0,0,13,7,1,0,-1,0,1
-SocketWrapper,3,10,1,0,10,60,11,0,1,0.2,0,1
-TransactionExtensions,0,1,0,0,1,11,1,0,0,-1,1,0
-HttpServerTransaction,3,6,1,0,6,34,6,0,1,0.33,4,1
-DataSubject,6,5,0,0,5,56,13,0,1,0,2,0
-DataBuffer,1,4,0,0,4,24,4,0,0,0,0,1
-Extensions,0,3,0,0,2,17,3,0,0,-1,1,0
-HttpRequestHead,7,1,0,7,1,14,1,0,0,0,0,4
-HttpResponseHead,2,1,0,2,1,9,1,0,0,0,0,6
-IHttpServerFactory,0,1,0,0,0,4,1,1,0,-1,2,0
-IHttpRequestDelegate,0,1,0,0,0,4,1,0,0,-1,3,5
-IHttpResponseDelegate,0,1,0,0,0,4,1,0,0,-1,2,1
-IHttpServerTransaction,0,4,1,0,0,10,4,1,0,-1,1,8
-IHttpServerTransactionDelegate,0,6,0,0,0,9,6,1,0,-1,2,2
-ITransactionSegment,0,2,0,0,0,5,2,2,0,-1,1,3
-ResponseSegment,7,9,0,0,7,77,17,0,1,0,4,0
-EndSegment,0,2,0,0,2,10,2,0,1,-1,2,0
-ParserToTransactionTransform,3,5,0,0,5,52,15,0,1,0,5,1
-HttpServerExtensions,0,1,0,0,1,8,1,0,0,-1,4,0
-HttpServerFactory,1,2,0,0,2,12,2,0,1,0,4,1
-HttpServerDelegate,1,3,0,0,3,19,3,0,1,0.67,6,1
-HttpServerSocketDelegate,4,6,0,0,6,52,8,0,1,0.33,6,1
-HttpServerTransactionDelegate,3,9,0,0,7,101,14,0,1,0.22,4,1
-ParserEvent,4,0,0,4,0,7,0,0,0,-1,2,1
-ParserEventType,0,0,0,0,0,6,0,0,0,-1,0,3
-ParserEventQueue,1,5,1,0,5,40,5,0,1,0,3,1
-HttpRequestHeaders,7,0,0,7,0,10,0,0,0,-1,0,5
-IHighLevelParserDelegate,0,3,0,0,0,6,3,2,0,-1,1,1
-ParserDelegate,9,13,0,0,12,83,18,0,1,0,3,0
-IHeaderRenderer,0,1,0,0,0,4,1,1,0,-1,2,1
-HttpResponseHeaderRenderer,0,1,0,0,1,20,6,0,1,-1,2,1
-HttpParser,33,2,4,0,2,4120,169,0,0,0,1,3
-IHttpParserDelegate,0,11,0,0,0,14,11,1,0,-1,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Kayak,Disposable,1,2,0,0,2,12,2,0,0,0,0,2,,Kayak.DefaultKayakServer' Kayak.Http.TransactionContext
+Kayak,Extensions,0,3,0,0,3,30,5,0,0,-1,0,0,,
+Kayak,Trace,0,1,0,0,1,12,1,0,0,-1,0,1,,Kayak.Http.HttpServerSocketDelegate
+Kayak,DefaultKayakScheduler,5,10,1,0,4,100,18,0,1,0.3,1,1,Kayak.ISchedulerDelegate,Kayak.DefaultKayakSchedulerFactory
+Kayak,ISchedulerFactory,0,1,0,0,0,4,1,1,0,-1,1,3,Kayak.ISchedulerDelegate,Elpis.WebInterface' Kayak.KayakScheduler' KayakExamples.Program
+Kayak,IScheduler,0,3,0,0,0,6,3,1,0,-1,0,14,,Elpis.WebInterface' Elpis.SchedulerDelegate' Kayak.ISchedulerDelegate' Kayak.IServerFactory' Kayak.DefaultKayakServerFactory' Kayak.ISocketFactory' Kayak.DefaultKayakSocketFactory' Kayak.DefaultKayakServer' Kayak.DefaultKayakSocket' Kayak.Http.IHttpServerFactory' Kayak.Http.HttpServerExtensions' Kayak.Http.HttpServerFactory' KayakExamples.Program' KayakExamples.SchedulerDelegate
+Kayak,ISchedulerDelegate,0,2,0,0,0,5,2,2,0,-1,1,3,Kayak.IScheduler,Kayak.DefaultKayakScheduler' Kayak.ISchedulerFactory' Kayak.DefaultKayakSchedulerFactory
+Kayak,KayakScheduler,1,0,1,0,0,5,0,0,0,-1,1,2,Kayak.ISchedulerFactory,Elpis.WebInterface' KayakExamples.Program
+Kayak,DefaultKayakSchedulerFactory,0,1,0,0,1,7,1,0,1,-1,2,0,Kayak.DefaultKayakScheduler' Kayak.ISchedulerDelegate,
+Kayak,IServerFactory,0,1,0,0,0,4,1,1,0,-1,2,4,Kayak.IServerDelegate' Kayak.IScheduler,Elpis.WebInterface' Kayak.Http.HttpServerExtensions' Kayak.Http.HttpServerFactory' KayakExamples.Program
+Kayak,IServer,0,1,0,0,0,4,1,1,0,-1,0,6,,Elpis.WebInterface' Kayak.IServerDelegate' Kayak.Http.HttpServerExtensions' Kayak.Http.HttpServerFactory' Kayak.Http.HttpServerDelegate' KayakExamples.Program
+Kayak,IServerDelegate,0,2,0,0,0,5,2,1,0,-1,2,3,Kayak.IServer' Kayak.ISocket,Kayak.IServerFactory' Kayak.DefaultKayakServerFactory' Kayak.DefaultKayakServer
+Kayak,KayakServer,1,0,1,0,0,5,0,0,0,-1,1,3,Kayak.DefaultKayakServerFactory,Elpis.WebInterface' Kayak.KayakServerState' KayakExamples.Program
+Kayak,DefaultKayakServerFactory,0,1,0,0,1,7,1,0,1,-1,3,1,Kayak.DefaultKayakServer' Kayak.IServerDelegate' Kayak.IScheduler,Kayak.KayakServer
+Kayak,ISocketFactory,0,1,0,0,0,4,1,1,0,-1,2,1,Kayak.ISocketDelegate' Kayak.IScheduler,Kayak.KayakSocket
+Kayak,ISocketDelegate,0,5,0,0,0,8,5,1,0,-1,1,4,Kayak.ISocket,Kayak.ISocketFactory' Kayak.DefaultKayakSocketFactory' Kayak.DefaultKayakServer' Kayak.DefaultKayakSocket
+Kayak,ISocket,0,3,1,0,0,7,3,1,0,-1,0,7,,Kayak.IServerDelegate' Kayak.ISocketDelegate' Kayak.Http.HttpServerTransaction' Kayak.Http.HttpServerDelegate' Kayak.Http.HttpServerSocketDelegate' Kayak.Http.IHeaderRenderer' Kayak.Http.HttpResponseHeaderRenderer
+Kayak,KayakSocket,1,0,1,0,0,5,0,0,0,-1,1,1,Kayak.ISocketFactory,Kayak.KayakSocketState
+Kayak,DefaultKayakSocketFactory,0,1,0,0,1,7,1,0,1,-1,3,0,Kayak.DefaultKayakSocket' Kayak.ISocketDelegate' Kayak.IScheduler,
+Kayak,IDataProducer,0,1,0,0,0,4,1,3,0,-1,1,6,Kayak.IDataConsumer,Elpis.RequestDelegate' Kayak.Http.IHttpRequestDelegate' Kayak.Http.IHttpResponseDelegate' Kayak.Http.ResponseSegment' Kayak.Http.TransactionContext' KayakExamples.RequestDelegate
+Kayak,IDataConsumer,0,3,0,0,0,6,3,4,0,-1,0,4,,Elpis.BufferedProducer' Kayak.IDataProducer' Kayak.Http.DataSubject' KayakExamples.BufferedProducer
+Kayak,DefaultKayakServer,4,8,0,0,2,119,14,0,1,0,6,1,Kayak.IServerDelegate' Kayak.IScheduler' Kayak.KayakServerState' Kayak.Disposable' Kayak.DefaultKayakSocket' Kayak.ISocketDelegate,Kayak.DefaultKayakServerFactory
+Kayak,KayakServerState,2,7,0,0,7,96,7,0,0,0,2,1,Kayak.State' Kayak.KayakServer,Kayak.DefaultKayakServer
+Kayak,State,0,0,0,0,0,20,0,0,0,-1,0,2,,Kayak.KayakServerState' Kayak.KayakSocketState
+Kayak,DefaultKayakSocket,9,18,1,1,4,336,43,0,1,0,5,2,Kayak.ISocketDelegate' Kayak.OutputBuffer' Kayak.KayakSocketState' Kayak.ISocketWrapper' Kayak.IScheduler,Kayak.DefaultKayakSocketFactory' Kayak.DefaultKayakServer
+Kayak,KayakSocketState,1,11,0,0,10,124,29,0,0,0,2,1,Kayak.State' Kayak.KayakSocket,Kayak.DefaultKayakSocket
+Kayak,OutputBuffer,2,3,0,2,3,37,6,0,0,0,0,1,,Kayak.DefaultKayakSocket
+Kayak,ISocketWrapper,0,7,1,0,0,11,7,1,0,-1,0,1,,Kayak.DefaultKayakSocket
+Kayak,SocketWrapper,3,10,1,0,10,60,12,0,1,0.2,0,0,,
+Kayak.Http,TransactionExtensions,0,1,0,0,1,9,1,0,0,-1,1,0,Kayak.Http.IHttpServerTransaction,
+Kayak.Http,HttpServerTransaction,3,6,1,0,6,33,6,0,1,0.33,3,1,Kayak.ISocket' Kayak.Http.IHeaderRenderer' Kayak.Http.HttpResponseHead,Kayak.Http.HttpServerDelegate
+Kayak.Http,DataSubject,6,5,0,0,5,60,14,0,1,0,2,2,Kayak.IDataConsumer' Kayak.Http.DataBuffer,Kayak.Http.HttpServerTransactionDelegate' Kayak.Http.TransactionContext
+Kayak.Http,DataBuffer,1,4,0,0,4,24,4,0,0,0,0,1,,Kayak.Http.DataSubject
+Kayak.Http,Extensions,0,3,0,0,2,25,3,0,0,-1,1,0,Kayak.Http.HttpRequestHead,
+Kayak.Http,HttpRequestHead,7,1,0,7,1,17,1,0,0,0,0,6,,Elpis.RequestDelegate' Kayak.Http.Extensions' Kayak.Http.IHttpRequestDelegate' Kayak.Http.IHttpServerTransactionDelegate' Kayak.Http.HttpServerTransactionDelegate' KayakExamples.RequestDelegate
+Kayak.Http,HttpResponseHead,2,1,0,2,1,12,1,0,0,0,0,9,,Elpis.RequestDelegate' Kayak.Http.HttpServerTransaction' Kayak.Http.IHttpResponseDelegate' Kayak.Http.IHttpServerTransaction' Kayak.Http.ResponseSegment' Kayak.Http.TransactionContext' Kayak.Http.IHeaderRenderer' Kayak.Http.HttpResponseHeaderRenderer' KayakExamples.RequestDelegate
+Kayak.Http,IHttpServerFactory,0,1,0,0,0,4,1,1,0,-1,2,0,Kayak.Http.IHttpRequestDelegate' Kayak.IScheduler,
+Kayak.Http,IHttpRequestDelegate,0,1,0,0,0,4,1,2,0,-1,3,5,Kayak.Http.HttpRequestHead' Kayak.IDataProducer' Kayak.Http.IHttpResponseDelegate,Kayak.Http.IHttpServerFactory' Kayak.Http.HttpServerExtensions' Kayak.Http.HttpServerFactory' Kayak.Http.HttpServerDelegate' Kayak.Http.HttpServerTransactionDelegate
+Kayak.Http,IHttpResponseDelegate,0,1,0,0,0,4,1,1,0,-1,2,3,Kayak.Http.HttpResponseHead' Kayak.IDataProducer,Elpis.RequestDelegate' Kayak.Http.IHttpRequestDelegate' KayakExamples.RequestDelegate
+Kayak.Http,IHttpServerTransaction,0,4,1,0,0,8,4,1,0,-1,1,8,Kayak.Http.HttpResponseHead,Kayak.Http.TransactionExtensions' Kayak.Http.IHttpServerTransactionDelegate' Kayak.Http.ITransactionSegment' Kayak.Http.ResponseSegment' Kayak.Http.EndSegment' Kayak.Http.ParserToTransactionTransform' Kayak.Http.HttpServerSocketDelegate' Kayak.Http.HttpServerTransactionDelegate
+Kayak.Http,IHttpServerTransactionDelegate,0,6,0,0,0,9,6,1,0,-1,2,2,Kayak.Http.IHttpServerTransaction' Kayak.Http.HttpRequestHead,Kayak.Http.ParserToTransactionTransform' Kayak.Http.HttpServerSocketDelegate
+Kayak.Http,ITransactionSegment,0,2,0,0,0,5,2,2,0,-1,1,3,Kayak.Http.IHttpServerTransaction,Kayak.Http.ResponseSegment' Kayak.Http.EndSegment' Kayak.Http.HttpServerTransactionDelegate
+Kayak.Http,ResponseSegment,7,9,0,0,7,78,18,0,1,0,4,2,Kayak.Http.IHttpServerTransaction' Kayak.Http.HttpResponseHead' Kayak.IDataProducer' Kayak.Http.ITransactionSegment,Kayak.Http.HttpServerTransactionDelegate' Kayak.Http.TransactionContext
+Kayak.Http,EndSegment,0,2,0,0,2,10,2,0,1,-1,2,0,Kayak.Http.ITransactionSegment' Kayak.Http.IHttpServerTransaction,
+Kayak.Http,ParserToTransactionTransform,3,5,0,0,5,54,7,0,1,0,6,1,Kayak.Http.ParserEventQueue' Kayak.Http.IHttpServerTransaction' Kayak.Http.IHttpServerTransactionDelegate' Kayak.Http.HttpRequestHeaders' Kayak.Http.ParserEvent' Kayak.Http.ParserEventType,Kayak.Http.HttpServerSocketDelegate
+Kayak.Http,HttpServerExtensions,0,1,0,0,1,8,1,0,0,-1,5,0,Kayak.Http.HttpServerFactory' Kayak.IServer' Kayak.IServerFactory' Kayak.Http.IHttpRequestDelegate' Kayak.IScheduler,
+Kayak.Http,HttpServerFactory,1,2,0,0,2,12,2,0,1,0,4,1,Kayak.IServerFactory' Kayak.IServer' Kayak.Http.IHttpRequestDelegate' Kayak.IScheduler,Kayak.Http.HttpServerExtensions
+Kayak.Http,HttpServerDelegate,1,3,0,0,3,19,3,0,1,0.67,6,0,Kayak.Http.IHttpRequestDelegate' Kayak.Http.HttpServerTransaction' Kayak.Http.HttpServerTransactionDelegate' Kayak.Http.HttpServerSocketDelegate' Kayak.IServer' Kayak.ISocket,
+Kayak.Http,HttpServerSocketDelegate,4,6,0,0,6,56,7,0,1,0.33,6,1,HttpMachine.HttpParser' Kayak.Http.ParserToTransactionTransform' Kayak.Http.IHttpServerTransactionDelegate' Kayak.Http.IHttpServerTransaction' Kayak.Trace' Kayak.ISocket,Kayak.Http.HttpServerDelegate
+Kayak.Http,HttpServerTransactionDelegate,3,9,0,0,7,109,14,0,1,0.22,7,1,Kayak.Http.IHttpRequestDelegate' Kayak.Http.TransactionContext' Kayak.Http.ITransactionSegment' Kayak.Http.IHttpServerTransaction' Kayak.Http.HttpRequestHead' Kayak.Http.ResponseSegment' Kayak.Http.DataSubject,Kayak.Http.HttpServerDelegate
+Kayak.Http,TransactionContext,7,3,0,2,2,44,7,0,1,0,5,1,Kayak.Http.DataSubject' Kayak.Http.ResponseSegment' Kayak.Disposable' Kayak.Http.HttpResponseHead' Kayak.IDataProducer,Kayak.Http.HttpServerTransactionDelegate
+Kayak.Http,ParserEvent,4,0,0,4,0,7,0,0,0,-1,2,2,Kayak.Http.ParserEventType' Kayak.Http.HttpRequestHeaders,Kayak.Http.ParserToTransactionTransform' Kayak.Http.ParserEventQueue
+Kayak.Http,ParserEventType,0,0,0,0,0,6,0,0,0,-1,0,3,,Kayak.Http.ParserToTransactionTransform' Kayak.Http.ParserEvent' Kayak.Http.ParserEventQueue
+Kayak.Http,ParserEventQueue,1,5,1,0,5,39,5,0,1,0,3,1,Kayak.Http.ParserEvent' Kayak.Http.ParserEventType' Kayak.Http.HttpRequestHeaders,Kayak.Http.ParserToTransactionTransform
+Kayak.Http,HttpRequestHeaders,7,0,0,7,0,10,0,0,0,-1,0,5,,Kayak.Http.ParserToTransactionTransform' Kayak.Http.ParserEvent' Kayak.Http.ParserEventQueue' Kayak.Http.IHighLevelParserDelegate' Kayak.Http.ParserDelegate
+Kayak.Http,IHighLevelParserDelegate,0,3,0,0,0,6,3,2,0,-1,1,1,Kayak.Http.HttpRequestHeaders,Kayak.Http.ParserDelegate
+Kayak.Http,ParserDelegate,9,13,0,0,12,85,18,0,1,0,3,0,Kayak.Http.IHighLevelParserDelegate' HttpMachine.HttpParser' Kayak.Http.HttpRequestHeaders,
+Kayak.Http,IHeaderRenderer,0,1,0,0,0,4,1,1,0,-1,2,1,Kayak.ISocket' Kayak.Http.HttpResponseHead,Kayak.Http.HttpServerTransaction
+Kayak.Http,HttpResponseHeaderRenderer,0,1,0,0,1,19,4,0,1,-1,2,0,Kayak.Http.HttpResponseHead' Kayak.ISocket,
+HttpMachine,HttpParser,33,2,4,0,2,989,22,0,0,0,1,3,HttpMachine.IHttpParserDelegate,Kayak.Http.HttpServerSocketDelegate' Kayak.Http.ParserDelegate' HttpMachine.IHttpParserDelegate
+HttpMachine,IHttpParserDelegate,0,11,0,0,0,14,11,1,0,-1,1,1,HttpMachine.HttpParser,HttpMachine.HttpParser

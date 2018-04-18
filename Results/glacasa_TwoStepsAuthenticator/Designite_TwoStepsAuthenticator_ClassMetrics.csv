@@ -1,7 +1,8 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Authenticator,2,4,0,0,1,56,9,2,0,0.75,1,0
-Base32Encoding,0,4,0,0,2,91,19,0,0,-1,0,1
-CounterAuthenticator,1,4,0,0,4,58,7,0,1,0.5,0,0
-IUsedCodesManager,0,2,0,0,0,21,2,1,0,-1,0,1
-TimeAuthenticator,4,7,0,0,6,90,9,0,1,0.43,2,0
-UsedCodesManager,4,4,0,0,3,89,5,0,1,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TwoStepsAuthenticator,Authenticator,2,4,0,0,1,53,9,2,0,0.75,1,3,TwoStepsAuthenticator.Base32Encoding,TwoStepsAuthenticatorTestApp.ViewModel' TwoStepsAuthenticator.UnitTests.CounterAuthenticatorTests' TwoStepsAuthenticator.UnitTests.TimeAuthenticatorTests
+TwoStepsAuthenticator,Base32Encoding,0,4,0,0,2,102,18,0,0,-1,0,2,,TwoStepsAuthenticator.Authenticator' TwoStepsAuthenticator.UnitTests.CounterAuthenticatorTests
+TwoStepsAuthenticator,CounterAuthenticator,1,4,0,0,4,55,7,0,1,0,0,1,,TwoStepsAuthenticator.UnitTests.CounterAuthenticatorTests
+TwoStepsAuthenticator,IUsedCodesManager,0,2,0,0,0,17,2,2,0,-1,0,1,,TwoStepsAuthenticator.TimeAuthenticator
+TwoStepsAuthenticator,TimeAuthenticator,4,7,0,0,6,90,9,0,1,0,1,3,TwoStepsAuthenticator.IUsedCodesManager,TwoStepsAuthenticatorTestApp.ViewModel' TwoStepsAuthenticator.TestWebsite.Controllers.HomeController' TwoStepsAuthenticator.UnitTests.TimeAuthenticatorTests
+TwoStepsAuthenticator,UsedCodesManager,4,4,0,0,3,85,5,0,1,0,1,3,TwoStepsAuthenticator.UsedCode,TwoStepsAuthenticator.TestWebsite.Controllers.HomeController' TwoStepsAuthenticator.UnitTests.TimeAuthenticatorTests' TwoStepsAuthenticator.UnitTests.UsedCodesManagerTests
+TwoStepsAuthenticator,UsedCode,0,4,4,0,4,31,5,0,0,-1,0,1,,TwoStepsAuthenticator.UsedCodesManager

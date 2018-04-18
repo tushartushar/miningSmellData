@@ -1,34 +1,43 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-TransException,0,1,0,0,0,11,1,0,0,-1,0,1
-IShielded,0,4,2,0,0,26,4,3,0,-1,1,8
-SideEffect,2,1,0,2,1,14,1,0,0,0,0,1
-Shield,8,23,4,0,13,719,64,0,0,0.39,12,7
-Shielded,5,13,3,1,6,209,22,0,1,0.23,6,3
-ShieldedSeq,2,18,4,0,17,207,19,0,0,0.28,1,1
-ShieldedTree,1,5,2,0,2,56,5,0,1,0.4,0,0
-ShieldedEvent,1,3,0,0,3,42,7,0,0,0,1,1
-Actions,0,2,0,0,2,37,8,0,0,-1,0,0
-SimpleHashSet,6,28,2,0,13,244,72,0,0,0.43,2,4
-WriteStamp,4,3,1,2,3,64,5,0,0,0.67,1,7
-ReadTicket,0,0,1,0,0,16,0,1,0,-1,0,1
-WriteTicket,1,0,0,1,0,15,0,0,1,-1,1,1
-VersionList,3,6,0,0,5,114,8,0,0,0.33,4,1
-TransItems,5,3,0,5,2,31,4,0,0,0,4,2
-CommuteState,0,0,0,0,0,12,0,0,0,-1,0,2
-Commute,3,1,0,3,1,22,1,0,0,0,2,1
-TransactionField,2,1,0,2,1,22,1,0,0,0,0,4
-CommittingSubscription,2,3,0,1,3,35,6,0,0,0,2,1
-CommitSubscription,5,10,2,0,3,147,15,0,1,0.3,7,2
-CommitSubscriptionContext,2,1,0,2,1,21,4,0,0,0,2,2
-ShieldedDictNc,6,21,6,0,9,428,60,0,1,0.33,4,1
-ShieldedDict,2,13,6,0,8,182,15,0,0,0.31,1,0
-ShieldedSeqNc,3,20,2,0,16,347,40,0,0,0.45,2,1
-ShieldedTreeNc,3,29,3,0,13,601,82,1,0,0.66,2,0
-CommitContinuation,2,8,3,0,7,97,12,1,0,0.5,1,1
-TransactionContext,1,0,0,1,0,4,0,0,1,-1,0,3
-TransactionalStorage,2,1,2,0,1,57,3,0,0,0,2,3
-ShieldedLocal,0,1,2,0,1,53,2,0,0,-1,1,0
-Factory,1,6,0,0,5,80,7,0,0,0.5,2,0
-NothingToDo,0,1,0,0,1,7,1,0,0,-1,1,2
-ProxyGen,6,17,0,0,3,211,28,0,0,0.12,1,2
-ProxyGenerationException,0,4,0,0,3,35,4,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Shielded,TransException,0,1,0,0,0,6,1,0,0,-1,0,0,,
+Shielded,IShielded,0,4,2,0,0,19,4,3,0,-1,1,5,Shielded.WriteStamp,Shielded.Shield' Shielded.TransactionContextInternal' Shielded.SimpleHashSet' Shielded.TransItems' Shielded.Commute
+Shielded,SideEffect,2,1,0,2,1,9,1,0,0,0,0,1,,Shielded.TransactionContextInternal
+Shielded,Shield,8,23,4,0,13,785,62,0,0,0.35,14,26,Shielded.TransactionContextInternal' Shielded.TransItems' Shielded.IShielded' Shielded.SimpleHashSet' Shielded.Commute' Shielded.CommuteState' Shielded.CommitSubscriptionContext' Shielded.CommitSubscription' Shielded.TransactionField' Shielded.CommittingSubscription' Shielded.CommitContinuation' Shielded.VersionList' Shielded.ReadTicket' Shielded.WriteStamp,Shielded.TransactionContextInternal' Shielded.Shielded<T>' Shielded.CommitSubscription' Shielded.ShieldedDictNc<TKey;TItem>' Shielded.ShieldedSeqNc<T>' Shielded.ShieldedTreeNc<TKey;TValue>' Shielded.TransactionalStorage<T>' Shielded.ShieldedLocal<T>' ConsoleTests.MainClass' ConsoleTests.BetShop' ConsoleTests.Queue' ConsoleTests.ProcessorSlot' ConsoleTests.SequentialTests' ConsoleTests.ShieldedActor<T>' ShieldedTests.DictionaryTests' ShieldedTests.BasicTests' ShieldedTests.SeqTests' ShieldedTests.TreeTests' ShieldedTests.ProxyTests' ShieldedTests.PreCommitTests' ShieldedTests.WhenCommittingTests' ShieldedTests.CommuteTests' ShieldedTests.RunToCommitTests' ShieldedTests.SyncSideEffectTests' ShieldedTests.ShieldedLocalTests' ShieldedTests.OldStateTests
+Shielded,TransactionContextInternal,8,12,1,5,7,145,18,0,1,0,13,1,Shielded.ReadTicket' Shielded.WriteTicket' Shielded.WriteStamp' Shielded.TransItems' Shielded.TransactionField' Shielded.IShielded' Shielded.VersionList' Shielded.Shield' Shielded.TransactionContext' Shielded.CommittingSubscription' Shielded.SimpleHashSet' Shielded.SideEffect' Shielded.CommitSubscriptionContext,Shielded.Shield
+Shielded,Shielded<T>,5,14,4,0,6,235,26,0,1,0.43,3,0,Shielded.ValueKeeper' Shielded.WriteStamp' Shielded.Shield,
+Shielded,ValueKeeper,3,0,0,3,0,6,0,0,0,-1,0,1,,Shielded.Shielded<T>
+Shielded,ShieldedSeq<T>,2,18,4,0,17,215,19,0,0,0.28,0,0,,
+Shielded,ShieldedTree<TKey;TValue>,1,5,2,0,2,56,5,0,0,0.4,0,0,,
+Shielded,ShieldedEvent<T>,1,3,0,0,3,32,7,0,0,0,0,0,,
+Shielded,Actions,0,2,0,0,2,37,8,0,0,-1,0,0,,
+Shielded,SimpleHashSet,6,28,2,0,13,255,68,0,0,0.43,2,5,Shielded.IShielded' Shielded.WriteStamp,Shielded.Shield' Shielded.TransactionContextInternal' Shielded.VersionList' Shielded.TransItems' Shielded.CommitSubscription
+Shielded,WriteStamp,4,3,1,2,3,68,4,0,0,0.67,1,8,Shielded.TransactionContext,Shielded.IShielded' Shielded.Shield' Shielded.TransactionContextInternal' Shielded.Shielded<T>' Shielded.SimpleHashSet' Shielded.VersionList' Shielded.CommitSubscription' Shielded.ShieldedDictNc<TKey;TItem>
+Shielded,ReadTicket,0,0,1,0,0,7,0,1,0,-1,0,3,,Shielded.Shield' Shielded.TransactionContextInternal' Shielded.VersionList
+Shielded,WriteTicket,1,0,0,1,0,10,0,1,1,-1,0,2,,Shielded.TransactionContextInternal' Shielded.VersionList
+Shielded,VersionList,3,6,0,0,5,117,10,0,0,0.33,5,2,Shielded.VersionEntry' Shielded.ReadTicket' Shielded.SimpleHashSet' Shielded.WriteStamp' Shielded.WriteTicket,Shielded.Shield' Shielded.TransactionContextInternal
+Shielded,VersionEntry,2,1,0,2,1,9,1,0,2,0,0,1,,Shielded.VersionList
+Shielded,TransItems,5,3,0,5,2,34,5,0,0,0,2,3,Shielded.SimpleHashSet' Shielded.IShielded,Shielded.Shield' Shielded.TransactionContextInternal' Shielded.CommittingSubscription
+Shielded,CommuteState,0,0,0,0,0,12,0,0,0,-1,0,2,,Shielded.Shield' Shielded.Commute
+Shielded,Commute,3,1,0,3,1,22,1,0,0,0,2,1,Shielded.IShielded' Shielded.CommuteState,Shielded.Shield
+Shielded,TransactionField,2,1,0,2,1,19,1,0,0,0,0,3,,Shielded.Shield' Shielded.TransactionContextInternal' ShieldedTests.RunToCommitTests
+Shielded,CommittingSubscription,2,3,0,1,3,35,4,0,0,0,1,2,Shielded.TransItems,Shielded.Shield' Shielded.TransactionContextInternal
+Shielded,CommitSubscription,5,10,2,0,3,157,16,0,1,0.3,5,2,Shielded.CommitSubscriptionContext' Shielded.Shield' Shielded.SimpleHashSet' Shielded.Locals' Shielded.WriteStamp,Shielded.Shield' Shielded.CommitSubscriptionContext
+Shielded,Locals,2,0,0,2,0,5,0,0,0,-1,0,1,,Shielded.CommitSubscription
+Shielded,CommitSubscriptionContext,2,1,0,2,1,21,4,0,0,0,1,3,Shielded.CommitSubscription,Shielded.Shield' Shielded.TransactionContextInternal' Shielded.CommitSubscription
+Shielded,ShieldedDictNc<TKey;TItem>,6,21,6,0,9,470,59,0,1,0.33,5,0,Shielded.LocalDict' Shielded.WriteStamp' Shielded.Shield' Shielded.ItemKeeper' Shielded.TransactionContext,
+Shielded,ItemKeeper,6,2,0,6,2,21,2,0,0,0,0,2,,Shielded.ShieldedDictNc<TKey;TItem>' Shielded.ShieldedSeqNc<T>
+Shielded,LocalDict,3,1,0,3,1,10,1,0,0,0,0,1,,Shielded.ShieldedDictNc<TKey;TItem>
+Shielded,ShieldedDict<TKey;TItem>,2,13,6,0,8,188,15,0,0,0.31,0,0,,
+Shielded,ShieldedSeqNc<T>,3,20,2,0,16,362,39,0,0,0.45,2,0,Shielded.ItemKeeper' Shielded.Shield,
+Shielded,ShieldedTreeNc<TKey;TValue>,3,29,3,0,13,685,69,0,0,0.66,3,0,Shielded.Node' Shielded.Shield' Shielded.Color,
+Shielded,Color,0,0,0,0,0,5,0,0,0,-1,0,2,,Shielded.ShieldedTreeNc<TKey;TValue>' Shielded.Node
+Shielded,Node,6,0,0,6,0,9,0,0,0,-1,1,1,Shielded.Color,Shielded.ShieldedTreeNc<TKey;TValue>
+Shielded,CommitContinuation,2,10,3,0,9,117,15,1,0,0.5,0,4,,Shielded.Shield' ShieldedTests.BasicTests' ShieldedTests.RunToCommitTests' ShieldedTests.ShieldedLocalTests
+Shielded,TransactionContext,1,0,0,1,0,4,0,1,1,-1,0,5,,Shielded.TransactionContextInternal' Shielded.WriteStamp' Shielded.ShieldedDictNc<TKey;TItem>' Shielded.TransactionalStorage<T>' Shielded.ShieldedLocal<T>
+Shielded,TransactionalStorage<T>,2,1,2,0,1,67,2,0,0,0,2,0,Shielded.TransactionContext' Shielded.Shield,
+Shielded,ShieldedLocal<T>,0,1,2,0,1,52,2,0,0,-1,2,0,Shielded.TransactionContext' Shielded.Shield,
+Shielded,ContinuationCompletedException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Shielded.ProxyGen,Factory,1,6,0,0,5,79,7,0,0,0.5,2,4,Shielded.ProxyGen.ProxyGen' Shielded.ProxyGen.NothingToDo,ConsoleTests.MainClass' ConsoleTests.BetShop' ShieldedTests.ProxyTests' ShieldedTests.OldStateTests
+Shielded.ProxyGen,NothingToDo,0,1,0,0,1,10,1,0,0,-1,1,2,Shielded.ProxyGen.ProxyGen,Shielded.ProxyGen.Factory' Shielded.ProxyGen.ProxyGen
+Shielded.ProxyGen,ProxyGen,6,17,0,0,3,242,32,0,0,0.12,1,2,Shielded.ProxyGen.NothingToDo,Shielded.ProxyGen.Factory' Shielded.ProxyGen.NothingToDo
+Shielded.ProxyGen,ProxyGenerationException,0,4,0,0,3,27,4,0,0,-1,0,0,,

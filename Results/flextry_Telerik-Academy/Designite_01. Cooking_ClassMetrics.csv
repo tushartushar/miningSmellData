@@ -1,7 +1,7 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Bowl,1,2,0,0,2,12,2,0,0,1,1,1
-CookingTest,0,1,0,0,0,17,4,0,0,-1,2,0
-Chef,0,7,0,0,2,44,8,0,0,-1,4,1
-Carrot,0,0,0,0,0,3,0,0,1,-1,0,1
-NaturalFood,0,0,0,0,0,3,0,2,0,-1,0,2
-Potato,0,0,2,0,0,11,0,0,1,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Cooking,Bowl,1,2,0,0,2,12,2,0,0,1,1,1,Cooking.Food.NaturalFood,Cooking.Chef
+Cooking,CookingTest,0,1,0,0,0,20,3,0,0,-1,2,0,Cooking.Chef' Cooking.Food.Potato,
+Cooking,Chef,0,7,0,0,2,45,8,0,0,-1,4,1,Cooking.Bowl' Cooking.Food.NaturalFood' Cooking.Food.Potato' Cooking.Food.Carrot,Cooking.CookingTest
+Cooking.Food,Carrot,0,0,0,0,0,3,0,0,1,-1,0,1,,Cooking.Chef
+Cooking.Food,NaturalFood,0,0,0,0,0,3,0,2,0,-1,0,2,,Cooking.Bowl' Cooking.Chef
+Cooking.Food,Potato,0,0,2,0,0,5,0,0,1,-1,0,2,,Cooking.CookingTest' Cooking.Chef

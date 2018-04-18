@@ -1,0 +1,15 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Scaffolder.API.Application,AppSettings,2,0,2,2,0,7,0,0,0,-1,0,1,,Scaffolder.API.Startup
+Scaffolder.API.Application,ControllerBase,3,1,2,0,1,31,1,4,0,0,1,0,Scaffolder.Core.Meta.ApplicationContext,
+Scaffolder.API.Application,Executor,1,1,0,0,1,30,3,0,0,0,0,1,,Scaffolder.API.Controllers.SystemController
+Scaffolder.API.Application,FilterModelBinder,0,5,0,0,1,76,5,0,0,-1,1,0,Scaffolder.Core.Meta.Filter,
+Scaffolder.API.Application,Payload,0,0,2,0,0,5,0,0,0,-1,0,1,,Scaffolder.API.Controllers.DataController
+Scaffolder.API.Application.Security,AuthorizationManager,1,5,0,0,3,70,14,0,0,0.4,1,1,Scaffolder.Core.Meta.Configuration,Scaffolder.API.Application.Security.TokenProviderMiddleware
+Scaffolder.API.Application.Security,TokenProviderMiddleware,3,4,0,0,2,80,8,0,0,0,2,0,Scaffolder.API.Application.Security.TokenProviderOptions' Scaffolder.API.Application.Security.AuthorizationManager,
+Scaffolder.API.Application.Security,TokenProviderOptions,0,1,6,0,1,20,1,0,0,-1,0,2,,Scaffolder.API.Application.Security.TokenProviderMiddleware' Scaffolder.API.Startup
+Scaffolder.API.Controllers,DataController,0,5,0,0,5,50,5,0,1,-1,9,0,Scaffolder.Core.Engine.Engine' Scaffolder.Core.Meta.Table' Scaffolder.Core.Data.IRepository' Scaffolder.Core.Meta.Configuration' Scaffolder.Core.Meta.ApplicationContext' Scaffolder.Core.Meta.Schema' Scaffolder.Core.Meta.Filter' Scaffolder.Core.Meta.PagingInfo' Scaffolder.API.Application.Payload,
+Scaffolder.API.Controllers,FilesController,0,2,0,0,2,35,3,0,1,-1,4,0,Scaffolder.Core.Storage.Storage' Scaffolder.Core.Meta.StorageConfiguration' Scaffolder.Core.Meta.Configuration' Scaffolder.Core.Meta.ApplicationContext,
+Scaffolder.API.Controllers,SystemController,0,4,0,0,4,42,5,0,1,-1,6,0,Scaffolder.Core.Meta.Configuration' Scaffolder.Core.Meta.ApplicationContext' Scaffolder.Core.Meta.Schema' Scaffolder.Core.Engine.Engine' Scaffolder.Core.Base.ISchemaBuilder' Scaffolder.API.Application.Executor,
+Scaffolder.API.Controllers,TableController,0,3,0,0,3,25,3,0,1,-1,3,0,Scaffolder.Core.Meta.Schema' Scaffolder.Core.Meta.ApplicationContext' Scaffolder.Core.Meta.Table,
+Scaffolder.API,Program,0,1,0,0,1,18,1,0,0,-1,0,0,,
+Scaffolder.API,Startup,2,3,1,0,3,95,3,0,0,0.67,2,0,Scaffolder.API.Application.Security.TokenProviderOptions' Scaffolder.API.Application.AppSettings,

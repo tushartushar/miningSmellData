@@ -1,20 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-EmptyPipeline,0,1,0,0,1,7,1,0,1,-1,2,0
-JsonController,0,2,1,0,2,23,2,0,1,-1,4,0
-MyController,1,4,0,0,4,21,4,0,0,1,6,0
-MyRequest,0,1,1,0,1,13,2,0,1,-1,1,0
-BaseController,0,2,2,0,2,26,2,1,1,-1,5,0
-DerivedController,0,1,0,0,1,10,1,0,2,-1,2,0
-AboutHandler,0,1,0,0,1,8,1,0,1,-1,3,0
-ErrorHandler,0,1,0,0,1,8,1,0,1,-1,2,0
-ExceptionHandler,0,1,0,0,1,13,3,0,1,-1,2,0
-IndexHandler,2,2,0,0,2,16,2,0,1,0,3,0
-TimingHandler,1,1,0,0,1,10,1,0,1,0,1,0
-HttpException,1,2,1,0,2,17,2,0,0,0,1,1
-Program,0,1,0,0,0,28,3,0,0,-1,5,0
-MySuperHandler,1,2,1,0,2,21,2,0,1,0,3,0
-MyModel,0,0,2,0,0,11,0,0,0,-1,0,1
-MyHandler,0,1,0,0,1,8,1,0,1,-1,4,0
-SessionHandler,3,3,0,0,2,45,4,0,1,0.67,1,0
-SomeRestController,1,5,0,0,5,33,5,0,0,1,3,0
-StringsRestController,1,7,0,0,5,43,9,0,1,0,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+uhttpsharpdemo.Controllers,EmptyPipeline,0,1,0,0,1,7,1,0,1,-1,1,0,uhttpsharp.IHttpContext,
+uhttpsharpdemo.Controllers,JsonController,0,2,1,0,2,19,2,0,1,-1,3,0,uhttpsharp.Handlers.Response' uhttpsharp.HttpResponseCode' uhttpsharp.Attributes.FromBodyAttribute,
+uhttpsharpdemo.Controllers,Question,0,0,1,0,0,4,0,0,0,-1,0,0,,
+uhttpsharpdemo.Controllers,MyController,1,4,0,0,4,21,4,0,0,1,6,0,uhttpsharp.Handlers.Response' uhttpsharp.HttpResponseCode' uhttpsharp.Attributes.FromPostAttribute' uhttpsharp.Attributes.FromHeadersAttribute' uhttpsharp.Attributes.FromQueryAttribute' uhttpsharp.IHttpContext,
+uhttpsharpdemo.Controllers,MyRequest,0,1,1,0,1,11,2,0,1,-1,1,0,uhttpsharp.Controllers.IErrorContainer,
+uhttpsharpdemo.Controllers,BaseController,0,2,2,0,2,20,2,1,1,-1,3,0,uhttpsharp.Handlers.Response' uhttpsharp.HttpResponseCode' uhttpsharp.Attributes.FromBodyAttribute,
+uhttpsharpdemo.Controllers,DerivedController,0,1,0,0,1,8,1,0,2,-1,2,0,uhttpsharp.Handlers.Response' uhttpsharp.HttpResponseCode,
+uhttpsharpdemo.Handlers,AboutHandler,0,1,0,0,1,8,1,0,1,-1,5,0,uhttpsharp.IHttpContext' uhttpsharp.HttpResponse' uhttpsharp.HttpResponseCode' uhttpsharp.Headers.IHttpHeaders' uhttpsharp.IHttpRequest,
+uhttpsharpdemo.Handlers,ErrorHandler,0,1,0,0,1,8,1,0,1,-1,2,0,uhttpsharp.IHttpContext' uhttpsharp.HttpResponseCode,
+uhttpsharpdemo.Handlers,ExceptionHandler,0,1,0,0,1,18,1,0,1,-1,3,0,uhttpsharp.IHttpContext' uhttpsharpdemo.HttpException' uhttpsharp.HttpResponseCode,
+uhttpsharpdemo.Handlers,IndexHandler,2,2,0,0,2,17,2,0,1,0,5,0,uhttpsharp.HttpResponse' uhttpsharp.HttpResponseCode' uhttpsharp.IHttpContext' uhttpsharp.Headers.IHttpHeaders' uhttpsharp.IHttpRequest,
+uhttpsharpdemo.Handlers,TimingHandler,1,1,0,0,1,11,1,0,1,0,2,0,uhttpsharp.IHttpRequest' uhttpsharp.IHttpContext,
+uhttpsharpdemo,HttpException,1,2,1,0,2,16,2,0,0,0,1,2,uhttpsharp.HttpResponseCode,uhttpsharpdemo.Handlers.ExceptionHandler' uhttpsharpdemo.StringsRestController
+uhttpsharpdemo,Program,0,1,0,0,0,34,1,0,0,-1,5,0,uhttpsharp.HttpServer' uhttpsharp.Handlers.Compression.DeflateCompressor' uhttpsharp.Handlers.Compression.GZipCompressor' uhttpsharp.Handlers.HttpRouter' uhttpsharp.Handlers.JsonResponseProvider,
+uhttpsharpdemo,MySuperHandler,1,2,1,0,2,23,2,0,1,0,3,0,uhttpsharp.IHttpContext' uhttpsharp.HttpResponse' uhttpsharp.HttpResponseCode,
+uhttpsharpdemo,MyModel,0,0,2,0,0,13,0,0,0,-1,0,1,,uhttpsharpdemo.MyHandler
+uhttpsharpdemo,MyHandler,0,1,0,0,1,8,1,0,1,-1,4,0,uhttpsharpdemo.MyModel' uhttpsharp.ModelBinders.ModelBinder' uhttpsharp.IHttpRequest' uhttpsharp.IHttpContext,
+uhttpsharpdemo,SessionHandler<TSession>,3,3,0,0,2,50,4,0,1,0.67,2,0,uhttpsharp.ICookiesStorage' uhttpsharp.IHttpContext,
+uhttpsharpdemo,SessionHolder,2,1,2,0,1,24,1,0,0,0,0,0,,
+uhttpsharpdemo,SomeRestController,1,5,0,0,5,28,5,0,0,1,2,0,uhttpsharp.HttpResponseCode' uhttpsharp.IHttpRequest,
+uhttpsharpdemo,StringsRestController,1,7,0,0,5,45,9,0,1,0,3,0,uhttpsharp.IHttpRequest' uhttpsharp.HttpResponseCode' uhttpsharpdemo.HttpException,

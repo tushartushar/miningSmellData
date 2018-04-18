@@ -1,36 +1,54 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BinaryReverseReader,0,15,1,0,14,160,28,0,0,-1,0,19
-BinaryReverseWriter,1,9,0,1,8,91,20,0,0,0.22,0,0
-LengthWriter,3,3,0,0,3,32,4,0,0,0,0,0
-ImageDecoder,0,13,0,0,7,458,80,0,0,-1,2,4
-ResourceIDs,0,0,0,0,0,83,0,0,0,-1,0,3
-ImageResource,4,7,5,0,6,99,11,3,0,0.29,1,4
-AlphaChannels,1,3,1,0,2,39,6,0,1,0.67,2,0
-ResolutionInfo,6,3,6,0,2,114,3,0,1,0.67,3,1
-Thumbnail,1,1,1,0,1,46,7,0,1,0,2,0
-Layer,14,4,15,0,4,820,17,0,0,0,3,10
-IIsDisposed,0,0,1,0,0,7,0,1,0,-1,0,0
-Disposable,1,6,1,0,4,85,6,2,1,0.5,0,0
-WorkerThreadException,1,2,0,0,2,12,2,0,0,1,0,0
-PrivateThreadPool,4,9,5,0,6,129,15,0,2,0.44,1,2
-IWaitableCounter,0,4,0,0,0,8,4,1,0,-1,0,0
-WaitableCounter,3,8,3,0,5,114,17,0,2,0,1,1
-WaitHandleArray,4,8,1,2,7,59,9,0,0,0.38,0,1
-PsdFile,13,21,13,2,5,529,83,0,0,0.24,9,4
-ImageCompression,0,0,0,0,0,30,0,0,0,-1,0,1
-RleHelper,0,2,0,0,2,124,8,0,0,-1,0,1
-DynVal,8,11,1,8,11,271,78,0,0,0.18,3,1
-ReadableBinary,0,3,0,0,2,43,8,0,0,-1,0,2
-EffectBase,5,2,0,5,2,20,2,3,0,1,1,0
-Effects,1,2,0,1,2,27,3,0,0,1,2,0
-Glow,4,2,1,4,2,51,18,0,1,1,2,1
-Bevel,12,2,0,12,2,63,26,0,1,1,2,0
-Shadow,4,2,1,4,2,60,24,0,1,1,2,0
-TdTaParser,3,15,0,0,10,213,33,0,0,0.2,2,3
-TdTaStylesheetReader,1,10,3,0,8,73,14,0,0,0,1,1
-TextLayerRenderer,2,2,1,0,2,212,44,0,0,0,5,1
-TdTaParseException,0,3,0,0,3,12,3,0,0,-1,1,0
-Token,3,6,1,3,6,198,28,0,0,0.5,1,1
-TypeTool,2,1,0,2,1,87,8,0,0,0,2,1
-Matrix2D,6,2,0,6,2,21,2,0,0,1,1,0
-TypeToolObject,6,1,1,6,1,56,2,0,0,0,5,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PhotoshopFile,BinaryReverseReader,0,15,1,0,14,201,26,0,0,-1,0,23,,PhotoshopFile.ImageResource' PhotoshopFile.AlphaChannels' PhotoshopFile.ResolutionInfo' PhotoshopFile.Thumbnail' PhotoshopFile.Layer' PhotoshopFile.Channel' PhotoshopFile.Mask' PhotoshopFile.BlendingRanges' PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.PsdFile' PhotoshopFile.DynVal' PhotoshopFile.Text.EffectBase' PhotoshopFile.Text.Effects' PhotoshopFile.Text.Glow' PhotoshopFile.Text.Bevel' PhotoshopFile.Text.Shadow' PhotoshopFile.Text.TdTaParser' PhotoshopFile.Text.TdTaParseException' PhotoshopFile.Text.Token' PhotoshopFile.Text.TypeTool' PhotoshopFile.Text.FontInfo' PhotoshopFile.Text.Matrix2D' PhotoshopFile.Text.TypeToolObject
+PhotoshopFile,BinaryReverseWriter,1,9,0,1,8,114,20,0,0,0.22,0,10,,PhotoshopFile.LengthWriter' PhotoshopFile.ImageResource' PhotoshopFile.AlphaChannels' PhotoshopFile.ResolutionInfo' PhotoshopFile.Layer' PhotoshopFile.Channel' PhotoshopFile.Mask' PhotoshopFile.BlendingRanges' PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.PsdFile
+PhotoshopFile,LengthWriter,3,3,0,0,3,40,4,0,0,0,1,0,PhotoshopFile.BinaryReverseWriter,
+PhotoshopFile,ImageDecoder,0,13,0,0,7,584,33,0,0,-1,6,5,PhotoshopFile.PixelData' PhotoshopFile.PsdFile' PhotoshopFile.ColorModes' PhotoshopFile.LayerWrapper' PhotoshopFile.Layer' PhotoshopFile.Mask,PhotoshopFile.Channel' PhotoshopFile.Mask' PhotoshopFile.PsdFile' ImageResizer.Plugins.PsdComposer.PsdPluginRenderer' ImageResizer.Plugins.PsdReader.PsdReader
+PhotoshopFile,PixelData,4,0,0,4,0,7,0,0,0,-1,0,2,,PhotoshopFile.ImageDecoder' ImageResizer.Plugins.PsdComposer.PsdComposerPlugin
+PhotoshopFile,LayerWrapper,14,1,0,14,1,34,7,0,0,0,5,1,PhotoshopFile.ColorModes' PhotoshopFile.Mask' PhotoshopFile.PsdFile' PhotoshopFile.Layer' PhotoshopFile.Channel,PhotoshopFile.ImageDecoder
+PhotoshopFile,ResourceIDs,0,0,0,0,0,62,0,0,0,-1,0,2,,PhotoshopFile.ResolutionInfo' PhotoshopFile.PsdFile
+PhotoshopFile,ImageResource,4,7,5,0,6,114,11,3,0,0.29,2,4,PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter,PhotoshopFile.AlphaChannels' PhotoshopFile.ResolutionInfo' PhotoshopFile.Thumbnail' PhotoshopFile.PsdFile
+PhotoshopFile,AlphaChannels,1,3,1,0,2,45,6,0,1,0.67,3,0,PhotoshopFile.ImageResource' PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter,
+PhotoshopFile,ResolutionInfo,6,3,6,0,2,112,3,0,1,0.67,6,0,PhotoshopFile.ResUnit' PhotoshopFile.Unit' PhotoshopFile.ImageResource' PhotoshopFile.ResourceIDs' PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter,
+PhotoshopFile,ResUnit,0,0,0,0,0,5,0,0,0,-1,0,1,,PhotoshopFile.ResolutionInfo
+PhotoshopFile,Unit,0,0,0,0,0,8,0,0,0,-1,0,1,,PhotoshopFile.ResolutionInfo
+PhotoshopFile,Thumbnail,1,1,1,0,1,52,1,0,1,0,2,0,PhotoshopFile.BinaryReverseReader' PhotoshopFile.ImageResource,
+PhotoshopFile,Layer,14,4,15,0,4,1007,10,0,0,0,10,11,PhotoshopFile.PsdFile' PhotoshopFile.BlendingRanges' PhotoshopFile.Mask' PhotoshopFile.BinaryReverseReader' PhotoshopFile.Channel' PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.Text.Effects' PhotoshopFile.CompressChannelContext' PhotoshopFile.PrivateThreadPool' PhotoshopFile.BinaryReverseWriter,PhotoshopFile.ImageDecoder' PhotoshopFile.LayerWrapper' PhotoshopFile.Channel' PhotoshopFile.Mask' PhotoshopFile.BlendingRanges' PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.PsdFile' PhotoshopFile.Text.TextLayerRenderer' ImageResizer.Plugins.PsdComposer.PsdPluginRenderer' ImageResizer.Plugins.PsdComposer.PsdLayer' ImageResizer.Plugins.PsdComposer.PsdComposerPlugin
+PhotoshopFile,Channel,8,7,6,2,2,250,13,0,0,0,7,6,PhotoshopFile.Layer' PhotoshopFile.ImageCompression' PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter' PhotoshopFile.PsdFile' PhotoshopFile.ImageDecoder' PhotoshopFile.RleHelper,PhotoshopFile.LayerWrapper' PhotoshopFile.Layer' PhotoshopFile.Mask' PhotoshopFile.CompressChannelContext' PhotoshopFile.PsdFile' PhotoshopFile.DecompressChannelContext
+PhotoshopFile,Mask,8,4,7,1,1,236,8,0,0,0,8,4,PhotoshopFile.Layer' PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter' PhotoshopFile.Channel' PhotoshopFile.PsdFile' PhotoshopFile.ImageDecoder' PhotoshopFile.ImageCompression' PhotoshopFile.RleHelper,PhotoshopFile.ImageDecoder' PhotoshopFile.LayerWrapper' PhotoshopFile.Layer' PhotoshopFile.PsdFile
+PhotoshopFile,BlendingRanges,2,3,2,0,3,51,4,0,0,0,3,1,PhotoshopFile.Layer' PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter,PhotoshopFile.Layer
+PhotoshopFile,AdjustmentLayerInfo,3,4,4,0,3,77,5,4,0,0.5,3,10,PhotoshopFile.Layer' PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter,PhotoshopFile.Layer' PhotoshopFile.Text.Effects' PhotoshopFile.Text.Glow' PhotoshopFile.Text.Bevel' PhotoshopFile.Text.Shadow' PhotoshopFile.Text.TextLayerRenderer' PhotoshopFile.Text.TypeTool' PhotoshopFile.Text.TypeToolObject' ImageResizer.Plugins.PsdComposer.PsdLayer' ImageResizer.Plugins.PsdComposer.PsdComposerPlugin
+PhotoshopFile,CompressChannelContext,1,2,0,0,2,14,2,0,0,0,1,1,PhotoshopFile.Channel,PhotoshopFile.Layer
+PhotoshopFile,IIsDisposed,0,0,1,0,0,5,0,1,0,-1,0,0,,
+PhotoshopFile,Disposable,1,6,1,0,4,106,6,3,1,0.5,1,3,PhotoshopFile.ActionDisposable,PhotoshopFile.ActionDisposable' PhotoshopFile.PrivateThreadPool' PhotoshopFile.WaitableCounter
+PhotoshopFile,ActionDisposable,1,2,0,0,1,24,4,0,2,0,1,1,PhotoshopFile.Disposable,PhotoshopFile.Disposable
+PhotoshopFile,WorkerThreadException,1,2,0,0,2,16,2,0,0,1,0,0,,
+PhotoshopFile,PrivateThreadPool,4,9,5,0,6,174,14,0,2,0.33,3,2,PhotoshopFile.WaitableCounter' PhotoshopFile.Disposable' PhotoshopFile.ThreadWrapperContext,PhotoshopFile.Layer' PhotoshopFile.PsdFile
+PhotoshopFile,ThreadWrapperContext,4,3,0,0,3,42,3,0,0,0,0,1,,PhotoshopFile.PrivateThreadPool
+PhotoshopFile,IWaitableCounter,0,4,0,0,0,8,4,1,0,-1,0,0,,
+PhotoshopFile,WaitableCounter,3,8,3,0,5,147,17,0,2,0,3,2,PhotoshopFile.WaitHandleArray' PhotoshopFile.CounterToken' PhotoshopFile.Disposable,PhotoshopFile.PrivateThreadPool' PhotoshopFile.CounterToken
+PhotoshopFile,CounterToken,2,2,1,0,2,27,2,0,0,0,1,1,PhotoshopFile.WaitableCounter,PhotoshopFile.WaitableCounter
+PhotoshopFile,WaitHandleArray,4,8,1,2,7,75,9,0,0,0,0,1,,PhotoshopFile.WaitableCounter
+PhotoshopFile,PsdFile,13,21,13,2,5,698,46,0,0,0.24,13,7,PhotoshopFile.ColorModes' PhotoshopFile.ImageCompression' PhotoshopFile.BinaryReverseReader' PhotoshopFile.BinaryReverseWriter' PhotoshopFile.ImageResource' PhotoshopFile.ResourceIDs' PhotoshopFile.PrivateThreadPool' PhotoshopFile.DecompressChannelContext' PhotoshopFile.Layer' PhotoshopFile.Channel' PhotoshopFile.Mask' PhotoshopFile.ImageDecoder' PhotoshopFile.RleHelper,PhotoshopFile.ImageDecoder' PhotoshopFile.LayerWrapper' PhotoshopFile.Layer' PhotoshopFile.Channel' PhotoshopFile.Mask' ImageResizer.Plugins.PsdComposer.PsdPluginRenderer' ImageResizer.Plugins.PsdReader.PsdReader
+PhotoshopFile,ColorModes,0,0,0,0,0,4,0,0,0,-1,0,3,,PhotoshopFile.ImageDecoder' PhotoshopFile.LayerWrapper' PhotoshopFile.PsdFile
+PhotoshopFile,DecompressChannelContext,1,2,0,0,2,15,3,0,0,0,2,1,PhotoshopFile.Channel' PhotoshopFile.ImageCompression,PhotoshopFile.PsdFile
+PhotoshopFile,ImageCompression,0,0,0,0,0,27,0,0,0,-1,0,4,,PhotoshopFile.Channel' PhotoshopFile.Mask' PhotoshopFile.PsdFile' PhotoshopFile.DecompressChannelContext
+PhotoshopFile,RleHelper,0,2,0,0,2,165,5,0,0,-1,1,3,PhotoshopFile.RlePacketStateMachine,PhotoshopFile.Channel' PhotoshopFile.Mask' PhotoshopFile.PsdFile
+PhotoshopFile,RlePacketStateMachine,7,3,0,0,0,103,6,0,0,0,0,1,,PhotoshopFile.RleHelper
+PhotoshopFile,DynVal,8,11,1,8,11,254,32,0,0,0.18,4,1,PhotoshopFile.OSType' PhotoshopFile.ReadableBinary' PhotoshopFile.BinaryReverseReader' PhotoshopFile.Text.TdTaParser,PhotoshopFile.Text.TypeToolObject
+PhotoshopFile,OSType,0,0,0,0,0,4,0,0,0,-1,0,1,,PhotoshopFile.DynVal
+PhotoshopFile,ReadableBinary,0,3,0,0,2,52,8,0,0,-1,0,2,,PhotoshopFile.DynVal' PhotoshopFile.Text.TypeToolObject
+PhotoshopFile.Text,EffectBase,5,2,0,5,2,24,2,3,1,1,1,0,PhotoshopFile.BinaryReverseReader,
+PhotoshopFile.Text,Effects,1,2,0,1,2,32,3,0,1,1,2,1,PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.BinaryReverseReader,PhotoshopFile.Layer
+PhotoshopFile.Text,Glow,4,2,1,4,2,51,3,0,2,1,2,1,PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.BinaryReverseReader,PhotoshopFile.Text.TextLayerRenderer
+PhotoshopFile.Text,Bevel,12,2,0,12,2,82,3,0,2,1,2,0,PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.BinaryReverseReader,
+PhotoshopFile.Text,Shadow,4,2,1,4,2,69,3,0,2,1,2,0,PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.BinaryReverseReader,
+PhotoshopFile.Text,TdTaParser,3,15,0,0,10,214,41,0,0,0.2,3,3,PhotoshopFile.BinaryReverseReader' PhotoshopFile.Text.Token' PhotoshopFile.Text.TokenType,PhotoshopFile.DynVal' PhotoshopFile.Text.TdTaStylesheetReader' PhotoshopFile.Text.TextLayerRenderer
+PhotoshopFile.Text,TdTaStylesheetReader,1,10,3,0,8,62,13,0,0,0,1,2,PhotoshopFile.Text.TdTaParser,PhotoshopFile.Text.TextLayerRenderer' PhotoshopFile.Text.TypeToolObject
+PhotoshopFile.Text,TextLayerRenderer,2,2,1,0,2,228,11,0,0,0,8,1,PhotoshopFile.Layer' PhotoshopFile.Text.Glow' PhotoshopFile.Text.TypeToolObject' PhotoshopFile.Text.TypeTool' PhotoshopFile.Text.Matrix2D' PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.Text.TdTaStylesheetReader' PhotoshopFile.Text.TdTaParser,ImageResizer.Plugins.PsdComposer.PsdComposerPlugin
+PhotoshopFile.Text,TdTaParseException,0,3,0,0,3,10,3,0,0,-1,1,0,PhotoshopFile.BinaryReverseReader,
+PhotoshopFile.Text,Token,3,6,1,3,6,196,29,0,0,0.5,2,1,PhotoshopFile.Text.TokenType' PhotoshopFile.BinaryReverseReader,PhotoshopFile.Text.TdTaParser
+PhotoshopFile.Text,TokenType,0,0,0,0,0,13,0,0,0,-1,0,2,,PhotoshopFile.Text.TdTaParser' PhotoshopFile.Text.Token
+PhotoshopFile.Text,TypeTool,2,1,0,2,1,104,6,0,1,0,3,1,PhotoshopFile.Text.Matrix2D' PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.BinaryReverseReader,PhotoshopFile.Text.TextLayerRenderer
+PhotoshopFile.Text,FontInfo,7,2,0,7,2,27,3,0,0,1,1,0,PhotoshopFile.BinaryReverseReader,
+PhotoshopFile.Text,Matrix2D,6,2,0,6,2,20,2,0,0,1,1,3,PhotoshopFile.BinaryReverseReader,PhotoshopFile.Text.TextLayerRenderer' PhotoshopFile.Text.TypeTool' PhotoshopFile.Text.TypeToolObject
+PhotoshopFile.Text,TypeToolObject,6,1,1,6,1,70,2,0,1,0,6,1,PhotoshopFile.Text.Matrix2D' PhotoshopFile.DynVal' PhotoshopFile.Text.TdTaStylesheetReader' PhotoshopFile.AdjustmentLayerInfo' PhotoshopFile.BinaryReverseReader' PhotoshopFile.ReadableBinary,PhotoshopFile.Text.TextLayerRenderer

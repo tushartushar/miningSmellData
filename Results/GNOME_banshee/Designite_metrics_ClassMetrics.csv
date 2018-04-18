@@ -1,14 +1,14 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MultiUserSample,4,2,2,2,2,47,7,0,0,1,2,3
-SampleModel,1,2,11,0,2,61,2,1,0,1,2,2
-MetricSampleModel,2,2,2,0,2,25,2,0,1,0,3,1
-MetaMetrics,1,2,0,0,1,78,11,0,0,0,4,0
-MainEntry,1,1,0,0,1,26,6,0,0,0,3,0
-Config,3,0,0,3,0,9,0,0,0,-1,0,1
-Database,5,5,5,0,5,156,24,0,0,0.8,5,5
-MedianFunctionLong,0,0,0,0,0,4,0,0,1,-1,0,0
-MedianFunctionDouble,0,0,0,0,0,4,0,0,1,-1,0,0
-MedianFunctionDateTime,0,0,0,0,0,4,0,0,1,-1,0,0
-MedianFunction,0,2,0,0,2,22,3,3,0,-1,0,0
-Metric,4,8,2,0,6,78,14,0,0,0.25,0,3
-User,2,1,0,2,1,10,1,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+metrics,MultiUserSample,4,2,2,2,2,41,6,0,0,1,3,1,metrics.User' metrics.Database' metrics.Metric,metrics.Database
+metrics,SampleModel,1,2,11,0,2,29,2,1,0,1,1,2,metrics.Database,metrics.MetaMetrics' metrics.MainEntry
+metrics,MetricSampleModel,2,2,2,0,2,21,2,0,1,0,2,1,metrics.Metric' metrics.Database,metrics.MetaMetrics
+metrics,MetaMetrics,1,2,0,0,1,76,8,0,0,1,4,0,metrics.SampleModel' metrics.MetricSampleModel' metrics.Database' metrics.Metric,
+metrics,MainEntry,1,1,0,0,1,29,1,0,0,0,3,0,metrics.Metric' metrics.SampleModel' metrics.Database,
+metrics,Config,3,0,0,3,0,9,0,0,0,-1,0,1,,metrics.Database
+metrics,Database,5,5,5,0,5,132,19,0,0,0.8,4,5,metrics.Metric' metrics.User' metrics.Config' metrics.MultiUserSample,metrics.MultiUserSample' metrics.SampleModel' metrics.MetricSampleModel' metrics.MetaMetrics' metrics.MainEntry
+metrics,MedianFunctionLong,0,0,0,0,0,4,0,0,0,-1,0,0,,
+metrics,MedianFunctionDouble,0,0,0,0,0,4,0,0,0,-1,0,0,,
+metrics,MedianFunctionDateTime,0,0,0,0,0,4,0,0,0,-1,0,0,,
+metrics,MedianFunction<T>,0,2,0,0,2,22,4,0,0,-1,0,0,,
+metrics,Metric,4,8,2,0,6,105,13,0,0,0.38,0,5,,metrics.MultiUserSample' metrics.MetricSampleModel' metrics.MetaMetrics' metrics.MainEntry' metrics.Database
+metrics,User,2,1,0,2,1,10,1,0,0,0,0,2,,metrics.MultiUserSample' metrics.Database

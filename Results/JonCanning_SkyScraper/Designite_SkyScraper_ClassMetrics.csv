@@ -1,0 +1,17 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SkyScraper,DateTimeProvider,1,0,1,0,0,9,0,0,0,-1,0,1,,SkyScraper.Scraper
+SkyScraper,HttpClient,2,5,1,0,4,43,5,0,1,0,0,0,,
+SkyScraper,Extensions,0,2,0,0,2,16,4,0,0,-1,0,0,,
+SkyScraper,HtmlDoc,0,0,2,0,0,5,0,0,0,-1,0,3,,SkyScraper.Scraper' SkyScraper.Observers.ConsoleWriter.ConsoleWriterObserver' SkyScraper.Observers.ImageScraper.ImageScraperObserver
+SkyScraper,IHttpClient,0,3,1,0,0,7,3,1,0,-1,0,2,,SkyScraper.Scraper' SkyScraper.Observers.ImageScraper.ImageScraperObserver
+SkyScraper,IScrapedUris,0,1,0,0,0,4,1,1,0,-1,0,1,,SkyScraper.Scraper
+SkyScraper,IScraper,0,2,7,0,0,14,2,1,0,-1,0,0,,
+SkyScraper,Robots,5,6,1,0,2,74,15,0,0,0,1,1,SkyScraper.Rule,SkyScraper.Scraper
+SkyScraper,Rule,0,1,2,0,1,10,1,0,0,-1,0,1,,SkyScraper.Robots
+SkyScraper,ScrapedUrisDictionary,1,1,0,0,1,8,1,0,1,0,0,0,,
+SkyScraper,Scraper,4,7,7,0,3,113,19,0,1,0.29,6,0,SkyScraper.IHttpClient' SkyScraper.IScrapedUris' SkyScraper.Unsubscriber' SkyScraper.Robots' SkyScraper.HtmlDoc' SkyScraper.DateTimeProvider,
+SkyScraper,Unsubscriber,2,2,0,0,2,15,3,0,0,0,0,1,,SkyScraper.Scraper
+SkyScraper.Observers.ConsoleWriter,ConsoleWriterObserver,0,3,0,0,3,9,3,0,0,-1,1,0,SkyScraper.HtmlDoc,
+SkyScraper.Observers.ImageScraper,FileWriter,1,2,0,0,2,20,3,0,1,0,0,0,,
+SkyScraper.Observers.ImageScraper,IFileWriter,0,1,0,0,0,4,1,1,0,-1,0,1,,SkyScraper.Observers.ImageScraper.ImageScraperObserver
+SkyScraper.Observers.ImageScraper,ImageScraperObserver,3,5,0,0,4,40,7,0,0,0.8,3,0,SkyScraper.Observers.ImageScraper.IFileWriter' SkyScraper.IHttpClient' SkyScraper.HtmlDoc,

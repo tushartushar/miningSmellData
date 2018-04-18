@@ -1,11 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BattleBalanceData,11,6,0,1,6,145,29,0,0,0,2,0
-DuplicateFinder,0,5,0,0,5,157,36,0,0,-1,2,0
-NubSimulator,2,2,0,0,2,72,3,0,0,0,3,0
-SentenceGenerator,5,1,0,0,1,43,1,0,0,0,0,1
-WikiPortingMW,2,8,0,1,8,238,22,0,0,0.5,4,0
-WikiPorting,0,3,0,0,3,72,6,0,0,-1,0,0
-PlanetwarsFixer,0,14,0,0,13,418,68,0,0,-1,9,0
-ForumFixer,0,9,0,0,9,123,26,0,0,-1,4,0
-Program,1,40,1,0,28,900,174,0,0,0.82,24,0
-Resources,2,1,4,0,0,166,1,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Fixer,BattleBalanceData,11,6,0,1,6,155,26,0,0,0,4,0,ZkData.ZkDataContext' ZkData.SpringBattle' ZkData.SpringBattlePlayer' ZkData.Account,
+Fixer,DuplicateFinder,0,5,0,0,5,186,28,0,0,-1,6,0,ZkData.ZkDataContext' ZkData.Account' ZkData.ForumPost' ZkData.AccountForumVote' ZkData.SpringBattlePlayer' Fixer.ZKAccount,
+Fixer,ZKAccount,2,0,0,2,0,6,0,0,0,-1,0,1,,Fixer.DuplicateFinder
+Fixer,NubSimulator,2,2,0,0,2,65,3,0,0,0,5,0,Fixer.SentenceGenerator' LobbyClient.TasClient' LobbyClient.Battle' ZkData.GlobalConst' LobbyClient.User,
+Fixer,SentenceGenerator,5,1,0,0,1,20,1,0,0,0,0,1,,Fixer.NubSimulator
+Fixer,WikiPortingMW,3,13,0,2,13,401,33,0,0,0.31,5,0,DotNetWikiBot.Site' ZkData.ZkDataContext' ZkData.ForumThread' DotNetWikiBot.Page' ZkData.ForumPost,
+Fixer,WikiPorting,0,3,0,0,3,69,4,0,0,-1,0,0,,
+Fixer,PlanetwarsFixer,0,14,0,0,13,445,37,0,0,-1,11,0,ZkData.ZkDataContext' ZkData.StructureType' ZkData.UnlockTypes' ZkData.ForumMode' ZkData.MapSupportLevel' ZkData.Planet' ZkData.Account' ZkData.Faction' ZkData.Link' ZkData.PlanetStructure' Fixer.Resources,
+Fixer,ForumFixer,0,9,0,0,9,129,23,0,0,-1,4,0,ZkData.ZkDataContext' ZkData.Account' ZkData.AccountForumVote' ZkData.ForumPost,
+Fixer,Program,1,41,1,0,29,993,137,0,0,0.88,33,0,PlasmaShared.Crc' ZkData.ZkDataContext' ZkData.GlobalConst' ZkData.ModeType' ZkData.ResourceType' ZkData.MapSupportLevel' Fixer.OptionType' ZkData.Account' ZkData.Clan' ZkData.RoleType' ZkData.AccountRole' Fixer.MiniBat' ZkData.DbCloner' ZkData.Mission' ZkData.Unlock' ZkData.UnlockTypes' ZkData.CampaignPlanet' ZkData.AccountCampaignProgress' ZkData.Campaign' ZkData.CampaignVar' ZkData.AccountCampaignVar' ZkData.AccountCampaignJournalProgress' ZkData.CampaignLink' ZkData.CampaignPlanetVar' ZkData.CampaignJournal' ZkData.CampaignJournalVar' ZkData.SpringBattle' ZkData.SpringBattlePlayer' Fixer.EloEntry' ZkData.UnitSyncLib.Map' ZkData.Punishment' ZkData.AccountUserID' ZkData.AccountIP,
+Fixer,OptionType,0,0,0,0,0,9,0,0,0,-1,0,1,,Fixer.Program
+Fixer,MiniBat,4,0,0,4,0,7,0,0,0,-1,0,1,,Fixer.Program
+Fixer,EloEntry,2,0,0,2,0,5,0,0,0,-1,0,1,,Fixer.Program
+Fixer,Resources,2,1,4,0,0,164,1,0,0,0,0,1,,Fixer.PlanetwarsFixer

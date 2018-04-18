@@ -1,0 +1,31 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Banking.Schema,Account,3,3,0,3,3,16,3,0,0,0,3,1,Banking.Schema.AccountId' Banking.Schema.IAccountName' Banking.Schema.Amount,Banking.Schema.Bank
+Banking.Schema,AccountName,1,1,0,1,1,6,1,0,1,0,0,0,,
+Banking.Schema,Bank,5,5,0,5,3,57,5,0,0,0,3,2,Banking.Schema.AccountId' Banking.Schema.Transaction' Banking.Schema.Account,Banking.Core.Interpreter' BankingAppSample.Program
+Banking.Schema,BankingFree,4,8,0,4,8,15,8,13,0,1,3,3,Banking.Schema.PersonName' Banking.Schema.AccountId' Banking.Schema.Amount,Banking.Core.Interpreter' Banking.Schema.BankingFreeExtensions' BankingAppSample.Program
+Banking.Schema,BankingFreeExtensions,0,4,0,0,4,23,4,0,0,-1,1,0,Banking.Schema.BankingFree,
+Banking.Schema,BankingFree<A>,0,0,0,0,0,168,0,0,0,-1,0,0,,
+Banking.Schema,Return,1,1,0,1,1,6,1,0,1,0,0,0,,
+Banking.Schema,CreateAccount,2,1,0,2,1,10,1,0,1,0,1,1,Banking.Schema.PersonName,Banking.Core.Interpreter
+Banking.Schema,AccountDetails,2,1,0,2,1,10,1,0,1,0,1,1,Banking.Schema.AccountId,Banking.Core.Interpreter
+Banking.Schema,WithdrawalAccountDetails,1,1,0,1,1,8,1,0,1,0,0,1,,Banking.Core.Interpreter
+Banking.Schema,DepositAccountDetails,1,1,0,1,1,8,1,0,1,0,0,1,,Banking.Core.Interpreter
+Banking.Schema,BankTransactions,1,1,0,1,1,8,1,0,1,0,0,1,,Banking.Core.Interpreter
+Banking.Schema,Accounts,1,1,0,1,1,6,1,0,1,0,0,1,,Banking.Core.Interpreter
+Banking.Schema,Balance,2,1,0,2,1,10,1,0,1,0,1,1,Banking.Schema.AccountId,Banking.Core.Interpreter
+Banking.Schema,Transfer,4,1,0,4,1,14,1,0,1,0,2,1,Banking.Schema.Amount' Banking.Schema.AccountId,Banking.Core.Interpreter
+Banking.Schema,Withdraw,3,1,0,3,1,12,1,0,1,0,2,1,Banking.Schema.AccountId' Banking.Schema.Amount,Banking.Core.Interpreter
+Banking.Schema,Deposit,3,1,0,3,1,12,1,0,1,0,2,1,Banking.Schema.AccountId' Banking.Schema.Amount,Banking.Core.Interpreter
+Banking.Schema,CreditAccount,3,1,0,3,1,12,1,0,1,0,2,0,Banking.Schema.AccountId' Banking.Schema.Amount,
+Banking.Schema,Show,2,1,0,2,1,10,1,0,1,0,0,1,,Banking.Core.Interpreter
+Banking.Schema,Constructors,0,10,0,0,10,13,10,0,0,-1,6,0,Banking.Schema.AccountId' Banking.Schema.IAccountName' Banking.Schema.Amount' Banking.Schema.Title' Banking.Schema.FirstName' Banking.Schema.Surname,
+Banking.Schema,IAccountName,0,0,0,0,0,3,0,2,0,-1,0,3,,Banking.Schema.Account' Banking.Schema.Constructors' Banking.Schema.IAccountNameExtensions
+Banking.Schema,IAccountNameExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Banking.Schema.IAccountName,
+Banking.Schema,AccountId,0,1,0,0,1,1,1,0,0,-1,0,13,,Banking.Core.Interpreter' Banking.Schema.Account' Banking.Schema.Bank' Banking.Schema.BankingFree' Banking.Schema.AccountDetails' Banking.Schema.Balance' Banking.Schema.Transfer' Banking.Schema.Withdraw' Banking.Schema.Deposit' Banking.Schema.CreditAccount' Banking.Schema.Constructors' Banking.Schema.Transaction' BankingAppSample.Program
+Banking.Schema,Title,0,1,0,0,1,1,1,0,0,-1,0,2,,Banking.Schema.Constructors' Banking.Schema.PersonName
+Banking.Schema,Surname,0,1,0,0,1,1,1,0,0,-1,0,2,,Banking.Schema.Constructors' Banking.Schema.PersonName
+Banking.Schema,FirstName,0,1,0,0,1,1,1,0,0,-1,0,2,,Banking.Schema.Constructors' Banking.Schema.PersonName
+Banking.Schema,Error,0,1,0,0,1,1,1,0,0,-1,0,0,,
+Banking.Schema,Amount,1,1,0,1,1,5,1,0,0,0,0,9,,Banking.Core.Interpreter' Banking.Schema.Account' Banking.Schema.BankingFree' Banking.Schema.Transfer' Banking.Schema.Withdraw' Banking.Schema.Deposit' Banking.Schema.CreditAccount' Banking.Schema.Constructors' Banking.Schema.Transaction
+Banking.Schema,PersonName,3,1,0,3,1,12,1,0,1,0,3,2,Banking.Schema.Title' Banking.Schema.FirstName' Banking.Schema.Surname,Banking.Schema.BankingFree' Banking.Schema.CreateAccount
+Banking.Schema,Transaction,4,1,0,4,1,14,1,0,0,0,2,1,Banking.Schema.AccountId' Banking.Schema.Amount,Banking.Schema.Bank

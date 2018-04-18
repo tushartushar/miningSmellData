@@ -1,15 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-FarmerMessageSerializer,0,3,0,0,2,43,9,0,0,-1,1,2
-FileSystem,0,6,0,0,6,31,7,0,1,-1,0,2
-NetworkConnectionBase,2,5,0,0,3,36,7,2,1,0,0,0
-PeachFarmerProtocol,5,0,0,5,0,14,0,0,0,-1,0,3
-IFarmerNetworkMessage,0,0,1,0,0,6,0,2,0,-1,0,2
-IFileSystem,0,6,0,0,0,9,6,1,0,-1,0,2
-IFolderPacker,0,1,0,0,0,4,1,1,0,-1,0,2
-INetworkConnection,0,2,0,0,0,5,2,2,0,-1,0,1
-AssignWorkResponseMessage,0,1,2,0,1,23,1,0,1,-1,0,0
-ReadRequestMessage,0,3,2,0,3,28,4,0,1,-1,0,2
-ReadResponseMessage,0,1,3,0,1,22,1,0,1,-1,0,2
-RequestMessageBase,0,3,2,0,3,29,4,2,1,-1,0,3
-AssignWorkRequestMessage,0,3,3,0,3,35,5,0,2,-1,0,0
-ResponseMessageBase,0,3,2,0,3,26,4,2,1,-1,0,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PeachFarmerLib,FarmerMessageSerializer,0,3,0,0,2,49,5,0,0,-1,1,5,PeachFarmerLib.Framework.IFarmerNetworkMessage,PeachFarmerClient.FilePuller' RemoteHarvester.RequestListener' PeachFarmerClientTest.FarmerMessageSerializerTest' PeachFarmerClientTest.FilePullerTest' RemoteHarvesterTest.RequestListenerTest
+PeachFarmerLib,FileSystem,0,6,0,0,6,32,7,0,1,-1,0,1,,PeachFarmerClient.RemoteWorkerFactory
+PeachFarmerLib,NetworkConnectionBase,2,5,0,0,3,38,7,2,1,0,0,2,,PeachFarmerClient.NetworkClientConnection' RemoteHarvester.NetworkServerConnection
+PeachFarmerLib,PeachFarmerProtocol,5,0,0,5,0,14,0,0,0,-1,0,3,,PeachFarmerClient.RemoteWorkerFactory' RemoteHarvester.CommandProcessor' RemoteHarvester.RequestListener
+PeachFarmerLib.Framework,IFarmerNetworkMessage,0,0,1,0,0,4,0,2,0,-1,0,2,,PeachFarmerLib.FarmerMessageSerializer' RemoteHarvester.RequestListener
+PeachFarmerLib.Framework,IFileSystem,0,6,0,0,0,9,6,2,0,-1,0,3,,PeachFarmerClient.FolderUnpacker' RemoteHarvester.PeachFolderPackager' RemoteHarvesterTest.FolderPackagerTest
+PeachFarmerLib.Framework,IFolderPacker,0,1,0,0,0,4,1,2,0,-1,0,2,,RemoteHarvester.RequestListener' RemoteHarvester.ReadRequestProcessor
+PeachFarmerLib.Framework,INetworkConnection,0,2,0,0,0,5,2,3,0,-1,0,1,,RemoteHarvester.RequestListener
+PeachFarmerLib.Messages,AssignWorkResponseMessage,0,1,2,0,1,19,1,0,1,-1,1,0,PeachFarmerLib.Messages.AssignmentResult,
+PeachFarmerLib.Messages,AssignmentResult,0,0,0,0,0,6,0,0,0,-1,0,1,,PeachFarmerLib.Messages.AssignWorkResponseMessage
+PeachFarmerLib.Messages,ReadRequestMessage,0,3,2,0,3,26,4,0,1,-1,1,4,PeachFarmerLib.Messages.RequestMessageBase,PeachFarmerClient.FilePuller' RemoteHarvester.ReadRequestProcessor' PeachFarmerClientTest.FarmerMessageSerializerTest' RemoteHarvesterTest.RequestListenerTest
+PeachFarmerLib.Messages,ReadResponseMessage,0,1,3,0,1,15,1,0,1,-1,0,4,,PeachFarmerClient.FilePuller' RemoteHarvester.ReadRequestProcessor' PeachFarmerClientTest.FilePullerTest' RemoteHarvesterTest.RequestListenerTest
+PeachFarmerLib.Messages,RequestMessageBase,0,3,2,0,3,26,4,2,1,-1,0,5,,PeachFarmerLib.Messages.ReadRequestMessage' PeachFarmerLib.Messages.AssignWorkRequestMessage' RemoteHarvester.RequestListener' RemoteHarvester.ReadRequestProcessor' RemoteHarvester.RequestProcessorBase
+PeachFarmerLib.Messages,AssignWorkRequestMessage,0,3,3,0,3,31,5,0,2,-1,1,0,PeachFarmerLib.Messages.RequestMessageBase,
+PeachFarmerLib.Messages,ResponseMessageBase,0,3,2,0,3,22,4,2,1,-1,0,3,,RemoteHarvester.RequestListener' RemoteHarvester.ReadRequestProcessor' RemoteHarvester.RequestProcessorBase

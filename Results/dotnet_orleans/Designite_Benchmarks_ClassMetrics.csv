@@ -1,13 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-SerializationBenchmarkConfig,0,1,0,0,1,7,1,0,0,-1,0,0
-SerializerToUse,0,0,0,0,0,6,0,0,0,-1,0,1
-SerializationBenchmarks,5,6,1,0,4,102,16,0,0,0,7,1
-SomeStruct,1,5,5,1,5,45,5,0,0,1,0,0
-ISomeInterface,0,0,1,0,0,7,0,1,0,-1,0,2
-SomeAbstractClass,1,2,7,0,2,54,2,1,1,1,1,1
-OuterClass,0,2,0,0,2,39,2,0,0,-1,0,1
-AnotherConcreteClass,0,0,2,0,0,12,0,0,2,-1,0,1
-InnerType,0,4,2,0,3,37,4,0,0,-1,0,0
-MapReduceBenchmarkConfig,0,1,0,0,1,11,1,0,0,-1,0,0
-MapReduceBenchmark,6,4,0,0,3,67,10,0,0,0,3,1
-Program,1,2,0,0,0,41,4,0,0,1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Benchmarks.MapReduce,MapReduceBenchmark,6,4,0,0,3,98,6,0,0,0,3,0,Orleans.TestingHost.TestCluster' Orleans.TestingHost.TestClusterOptions' Orleans.IGrainFactory,
+Benchmarks.MapReduce,MapReduceBenchmarkConfig,0,1,0,0,1,14,1,0,0,-1,0,0,,
+Benchmarks.Ping,PingBenchmark,1,5,0,0,4,47,7,0,0,0,2,0,Orleans.TestingHost.TestCluster' Orleans.TestingHost.TestClusterOptions,
+Benchmarks,Program,1,2,0,0,0,103,4,0,0,1,0,0,,
+Benchmarks.Serialization,SerializationBenchmarkConfig,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Benchmarks.Serialization,SerializerToUse,0,0,0,0,0,6,0,0,0,-1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,SerializationBenchmarks,5,6,1,0,4,108,8,0,0,0,10,0,TestExtensions.SerializationTestEnvironment' Benchmarks.Serialization.SomeConcreteClass' UnitTests.GrainInterfaces.LargeTestData' Benchmarks.Serialization.SerializerToUse' Benchmarks.Serialization.OuterClass' Benchmarks.Serialization.SomeEnum' Benchmarks.Serialization.SomeAbstractClass' Benchmarks.Serialization.SomeStruct' UnitTests.GrainInterfaces.TestEnum' UnitTests.GrainInterfaces.CampaignEnemyTestType,
+Benchmarks.Serialization,SomeStruct,1,5,5,1,5,31,5,0,0,1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,ISomeInterface,0,0,1,0,0,1,0,1,0,-1,0,0,,
+Benchmarks.Serialization,SomeAbstractClass,1,2,7,0,2,40,2,2,1,1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,SomeEnum,0,0,0,0,0,7,0,0,0,-1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,OuterClass,0,2,0,0,2,30,2,0,0,-1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,SomeConcreteClass,1,2,3,0,2,16,2,1,2,0,1,1,Benchmarks.Serialization.PrivateConcreteClass,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,PrivateConcreteClass,1,1,0,1,1,9,1,0,3,0,0,1,,Benchmarks.Serialization.SomeConcreteClass
+Benchmarks.Serialization,AnotherConcreteClass,0,0,2,0,0,6,0,0,2,-1,0,0,,
+Benchmarks.Serialization,InnerType,0,4,2,0,3,29,7,0,0,-1,0,0,,
+Benchmarks.TransactionManager,TransactionManagerBenchmarks,5,6,0,0,2,131,12,0,0,0.67,6,0,Orleans.Transactions.Abstractions.ITransactionManager' Orleans.TestingHost.Utils.NullTelemetryProducer' Benchmarks.TransactionManager.NoOpTransactionalResource' TestExtensions.SerializationTestEnvironment' Orleans.Transactions.AzureStorage.AzureTransactionLogStorage' TestExtensions.TestDefaultConfiguration,
+Benchmarks.TransactionManager,NoOpTransactionalResource,0,4,1,0,4,21,4,0,0,-1,0,1,,Benchmarks.TransactionManager.TransactionManagerBenchmarks
+Benchmarks.Transactions,TransactionBenchmark,1,6,0,0,4,65,8,0,0,0,2,0,Orleans.TestingHost.TestCluster' Orleans.TestingHost.TestClusterOptions,
+Benchmarks.Transactions,SiloBuilderFactory,0,1,0,0,1,12,1,0,1,-1,1,0,Orleans.TestingHost.Utils.TestingUtils,

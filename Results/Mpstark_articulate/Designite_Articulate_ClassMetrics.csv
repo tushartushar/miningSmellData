@@ -1,48 +1,56 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AdvancedSettings,1,7,1,0,1,78,12,0,0,0.86,3,0
-CommandChunk,0,2,3,0,1,48,3,3,0,-1,1,0
-DirectObject,3,4,0,2,2,57,7,0,1,0,1,2
-Subject,0,3,0,0,1,167,3,0,1,-1,3,1
-CommandPool,2,4,0,0,2,751,18,0,0,0,6,1
-Command,0,5,1,0,3,57,10,0,1,-1,2,1
-ForegroundProcess,0,7,2,0,0,78,10,0,0,-1,0,1
-KeyMonitor,3,10,2,0,4,111,20,0,0,0.3,3,1
-KeyType,0,0,0,0,0,5,0,0,0,-1,0,1
-CompoundKeyBind,0,5,1,0,4,45,13,0,0,-1,1,4
-KeyBind,0,7,2,0,6,57,11,0,0,-1,2,1
-SoundEffectsPlayer,3,11,2,0,7,212,30,0,0,0.36,4,3
-CommandDetectedEventArgs,0,1,2,0,1,25,1,0,0,-1,0,2
-VoiceRecognizer,3,14,5,1,6,316,35,0,0,0.36,2,2
-Constants,1,0,0,1,0,7,0,0,0,-1,0,0
-Core,1,2,5,0,1,53,4,0,0,1,4,6
-Extensions,0,5,0,0,5,43,15,0,0,-1,0,0
-MOUSEINPUT,6,0,0,6,0,10,0,0,0,-1,0,2
-KEYBOARDINPUT,9,0,0,9,0,13,0,0,0,-1,0,3
-HARDWAREINPUT,3,0,0,3,0,7,0,0,0,-1,0,1
-INPUT,4,0,0,4,0,13,0,0,0,-1,3,3
-DirectInputKeys,0,0,0,0,0,118,0,0,0,-1,0,7
-DirectInputBase,1,6,0,0,2,25,6,2,1,0.5,1,0
-KeyboardOutputBase,0,4,1,0,1,35,4,2,2,-1,3,0
-KeyDown,0,2,0,0,1,10,2,0,3,-1,1,1
-KeyUp,0,3,0,0,1,16,3,0,3,-1,2,1
-KeyPress,0,2,0,0,1,14,2,0,1,-1,2,1
-MouseOutputBase,0,4,1,0,1,55,20,2,2,-1,2,0
-MouseDown,0,2,0,0,1,10,2,0,3,-1,0,1
-MouseUp,0,3,0,0,1,16,3,0,3,-1,0,1
-MouseClick,0,2,0,0,1,14,2,0,1,-1,1,1
-OutputGroup,0,6,1,0,4,38,11,2,1,-1,1,2
-Sleep,0,5,1,0,4,35,8,0,1,-1,0,1
-OutputBase,0,5,2,0,3,37,7,3,0,-1,0,7
-OutputExtensions,0,2,0,0,2,59,15,0,0,-1,2,0
-FileBasedTranslation,0,1,0,0,1,23,1,0,0,-1,0,0
-ListenMode,0,0,0,0,0,7,0,0,0,-1,0,3
-Settings,1,4,11,0,4,116,9,0,0,0.5,3,3
-App,3,3,2,1,2,88,11,0,0,0,0,1
-DirectInputEmulator,0,10,0,0,10,100,16,0,0,-1,11,2
-MainWindow,6,20,5,3,2,360,56,0,0,0.65,9,0
-SoundEffects,2,1,6,0,0,77,1,0,0,0,0,1
-GlobalEventProvider,0,10,1,0,0,279,19,0,0,-1,1,0
-HookManager,42,17,0,0,1,973,93,0,0,0.18,1,1
-MouseEventExtArgs,1,2,1,0,1,37,2,0,0,1,0,2
-Resources,2,1,9,0,0,108,1,0,0,0,0,1
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Articulate,AdvancedSettings,1,7,1,0,1,86,11,0,0,0.86,5,1,Articulate.Core' Articulate.Settings' Articulate.ListenMode' Articulate.VoiceRecognizer' Articulate.KeyMonitor,Articulate.MainWindow
+Articulate,CommandChunk,0,2,3,0,1,41,3,3,0,-1,0,0,,
+Articulate,DirectObject,3,4,0,2,2,63,7,0,1,0,1,2,Articulate.directObjectEntry,Articulate.CommandPool' Articulate.Command
+Articulate,directObjectEntry,3,0,0,3,0,6,0,0,0,-1,0,1,,Articulate.DirectObject
+Articulate,Subject,0,3,0,0,1,102,3,0,1,-1,3,1,Articulate.OutputBase' Articulate.DirectInputEmulator' Articulate.DirectInputKeys,Articulate.CommandPool
+Articulate,CommandPool,2,4,0,0,2,479,18,0,0,0,7,1,Articulate.Subject' Articulate.Command' Articulate.DirectObject' Articulate.DirectInputEmulator' Articulate.DirectInputKeys' Articulate.Settings' Articulate.Core,Articulate.VoiceRecognizer
+Articulate,Command,0,5,1,0,3,59,10,0,1,-1,1,1,Articulate.DirectObject,Articulate.CommandPool
+Articulate,ForegroundProcess,0,7,2,0,0,90,10,0,0,-1,1,1,Articulate.ProcessAccessFlags,Articulate.VoiceRecognizer
+Articulate,ProcessAccessFlags,0,0,0,0,0,15,0,0,0,-1,0,1,,Articulate.ForegroundProcess
+Articulate,KeyMonitor,3,10,2,0,4,103,19,0,0,0.3,3,3,SierraLib.GlobalHooks.HookManager' Articulate.Settings' Articulate.CompoundKeyBind,Articulate.AdvancedSettings' Articulate.Core' Articulate.MainWindow
+Articulate,KeyType,0,0,0,0,0,5,0,0,0,-1,0,1,,Articulate.KeyBind
+Articulate,CompoundKeyBind,0,5,1,0,4,43,12,0,0,-1,1,2,Articulate.KeyBind,Articulate.KeyMonitor' Articulate.MainWindow
+Articulate,KeyBind,0,7,2,0,6,53,10,0,0,-1,2,1,Articulate.KeyType' SierraLib.Translation.TranslationManager,Articulate.CompoundKeyBind
+Articulate,SoundEffectsPlayer,3,11,2,0,7,235,21,0,0,0.18,5,2,Articulate.Settings' Articulate.EffectMode' Articulate.SoundEffects' Articulate.CommandDetectedEventArgs' Articulate.Resources.SoundEffects.SoundEffects,Articulate.Core' Articulate.MainWindow
+Articulate,SoundEffects,0,0,0,0,0,7,0,0,0,-1,0,1,,Articulate.SoundEffectsPlayer
+Articulate,EffectMode,0,0,0,0,0,6,0,0,0,-1,0,2,,Articulate.SoundEffectsPlayer' Articulate.MainWindow
+Articulate,CommandDetectedEventArgs,0,1,2,0,1,17,1,0,0,-1,0,2,,Articulate.SoundEffectsPlayer' Articulate.MainWindow
+Articulate,VoiceRecognizer,3,14,5,1,6,343,28,0,0,0.36,3,3,Articulate.VoiceRecognizerState' Articulate.CommandPool' Articulate.ForegroundProcess,Articulate.AdvancedSettings' Articulate.Core' Articulate.MainWindow
+Articulate,VoiceRecognizerState,0,0,0,0,0,8,0,0,0,-1,0,2,,Articulate.VoiceRecognizer' Articulate.MainWindow
+Articulate,Constants,1,0,0,1,0,7,0,0,0,-1,0,0,,
+Articulate,Core,1,2,5,0,1,49,4,0,0,1,4,6,Articulate.Settings' Articulate.VoiceRecognizer' Articulate.SoundEffectsPlayer' Articulate.KeyMonitor,Articulate.AdvancedSettings' Articulate.CommandPool' Articulate.KeyPress' Articulate.MouseClick' Articulate.DirectInputEmulator' Articulate.MainWindow
+Articulate,Extensions,0,6,0,0,6,47,7,0,0,-1,0,0,,
+Articulate,MOUSEINPUT,6,0,0,6,0,10,0,0,0,-1,0,2,,Articulate.MouseOutputBase' Articulate.MouseUp
+Articulate,KEYBOARDINPUT,9,0,0,9,0,13,0,0,0,-1,0,2,,Articulate.KeyboardOutputBase' Articulate.KeyUp
+Articulate,HARDWAREINPUT,3,0,0,3,0,7,0,0,0,-1,0,0,,
+Articulate,INPUT,4,0,0,4,0,13,0,0,0,-1,0,4,,Articulate.KeyboardOutputBase' Articulate.KeyUp' Articulate.MouseOutputBase' Articulate.MouseUp
+Articulate,DirectInputKeys,0,0,0,0,0,105,0,0,0,-1,0,6,,Articulate.Subject' Articulate.CommandPool' Articulate.KeyDown' Articulate.KeyUp' Articulate.KeyPress' Articulate.DirectInputEmulator
+Articulate,DirectInputBase,1,6,0,0,2,28,6,2,1,0.5,0,2,,Articulate.KeyboardOutputBase' Articulate.MouseOutputBase
+Articulate,KeyboardOutputBase,0,4,1,0,1,34,4,2,2,-1,3,1,Articulate.KEYBOARDINPUT' Articulate.INPUT' Articulate.DirectInputBase,Articulate.KeyUp
+Articulate,KeyDown,0,2,0,0,1,12,2,0,3,-1,1,1,Articulate.DirectInputKeys,Articulate.DirectInputEmulator
+Articulate,KeyUp,0,3,0,0,1,18,3,0,3,-1,4,1,Articulate.DirectInputKeys' Articulate.KeyboardOutputBase' Articulate.KEYBOARDINPUT' Articulate.INPUT,Articulate.DirectInputEmulator
+Articulate,KeyPress,0,2,0,0,1,16,2,0,1,-1,3,1,Articulate.Settings' Articulate.Core' Articulate.DirectInputKeys,Articulate.DirectInputEmulator
+Articulate,MouseOutputBase,0,4,1,0,1,57,5,2,2,-1,3,1,Articulate.INPUT' Articulate.MOUSEINPUT' Articulate.DirectInputBase,Articulate.MouseUp
+Articulate,MouseDown,0,2,0,0,1,12,2,0,3,-1,0,1,,Articulate.DirectInputEmulator
+Articulate,MouseUp,0,3,0,0,1,18,3,0,3,-1,3,1,Articulate.MouseOutputBase' Articulate.MOUSEINPUT' Articulate.INPUT,Articulate.DirectInputEmulator
+Articulate,MouseClick,0,2,0,0,1,16,2,0,1,-1,2,1,Articulate.Settings' Articulate.Core,Articulate.DirectInputEmulator
+Articulate,OutputGroup,0,6,1,0,4,35,9,2,1,-1,1,2,Articulate.OutputBase,Articulate.OutputExtensions' Articulate.DirectInputEmulator
+Articulate,Sleep,0,5,1,0,4,31,8,0,1,-1,1,1,Articulate.OutputBase,Articulate.OutputExtensions
+Articulate,OutputBase,0,5,2,0,3,29,7,3,0,-1,0,4,,Articulate.Subject' Articulate.OutputGroup' Articulate.Sleep' Articulate.DirectInputEmulator
+Articulate,OutputExtensions,0,2,0,0,2,64,2,0,0,-1,2,0,Articulate.OutputGroup' Articulate.Sleep,
+Articulate,FileBasedTranslation,0,1,0,0,1,32,1,0,0,-1,0,0,,
+Articulate,ListenMode,0,0,0,0,0,7,0,0,0,-1,0,3,,Articulate.AdvancedSettings' Articulate.Settings' Articulate.MainWindow
+Articulate,Settings,1,4,11,0,4,108,6,0,0,0.5,1,9,Articulate.ListenMode,Articulate.AdvancedSettings' Articulate.CommandPool' Articulate.KeyMonitor' Articulate.SoundEffectsPlayer' Articulate.Core' Articulate.KeyPress' Articulate.MouseClick' Articulate.DirectInputEmulator' Articulate.MainWindow
+Articulate,App,3,3,2,1,2,97,8,0,0,0,0,1,,Articulate.MainWindow
+Articulate,DirectInputEmulator,0,10,0,0,10,105,20,0,0,-1,11,2,Articulate.OutputBase' Articulate.OutputGroup' Articulate.KeyDown' Articulate.DirectInputKeys' Articulate.KeyUp' Articulate.Settings' Articulate.Core' Articulate.KeyPress' Articulate.MouseDown' Articulate.MouseUp' Articulate.MouseClick,Articulate.Subject' Articulate.CommandPool
+Articulate,MainWindow,6,20,5,3,2,358,41,0,0,0.65,17,0,Articulate.Core' SierraLib.Translation.TranslationManager' Articulate.Settings' Articulate.KeyMonitor' Articulate.VoiceRecognizer' Articulate.Properties.Resources' SierraLib.Translation.TranslationList' Articulate.ListenMode' SierraLib.Translation.TranslationBase' Articulate.EffectMode' Articulate.SoundEffectsPlayer' Articulate.App' Articulate.VoiceRecognizerState' Articulate.CommandDetectedEventArgs' Articulate.AdvancedSettings' Articulate.CompoundKeyBind' SierraLib.Translation.TranslationChangedEventArgs,
+Articulate.Resources.SoundEffects,SoundEffects,2,1,6,0,0,77,1,0,0,0,0,1,,Articulate.SoundEffectsPlayer
+SierraLib.GlobalHooks,GlobalEventProvider,0,10,1,0,0,340,19,0,0,-1,1,0,SierraLib.GlobalHooks.MouseEventExtArgs,
+SierraLib.GlobalHooks,HookManager,42,17,0,0,1,1079,49,0,0,0.18,4,1,SierraLib.GlobalHooks.MouseLLHookStruct' SierraLib.GlobalHooks.MouseEventExtArgs' SierraLib.GlobalHooks.Point' SierraLib.GlobalHooks.KeyboardHookStruct,Articulate.KeyMonitor
+SierraLib.GlobalHooks,Point,2,0,0,2,0,11,0,0,0,-1,0,2,,SierraLib.GlobalHooks.HookManager' SierraLib.GlobalHooks.MouseLLHookStruct
+SierraLib.GlobalHooks,MouseLLHookStruct,5,0,0,5,0,38,0,0,0,-1,1,1,SierraLib.GlobalHooks.Point,SierraLib.GlobalHooks.HookManager
+SierraLib.GlobalHooks,KeyboardHookStruct,5,0,0,5,0,24,0,0,0,-1,0,1,,SierraLib.GlobalHooks.HookManager
+SierraLib.GlobalHooks,MouseEventExtArgs,1,2,1,0,1,29,2,0,0,1,0,2,,SierraLib.GlobalHooks.GlobalEventProvider' SierraLib.GlobalHooks.HookManager
+Articulate.Properties,Resources,2,1,9,0,0,111,1,0,0,0,0,1,,Articulate.MainWindow
+Articulate.Properties,Settings,1,0,1,0,0,13,0,0,0,-1,0,0,,

@@ -1,0 +1,18 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Core.QueueWebJobUsage.Job,Program,0,1,0,0,0,11,1,0,0,-1,0,0,,
+Core.QueueWebJobUsage.Job,Functions,0,1,0,0,1,42,1,0,0,-1,3,0,Core.QueueWebJobUsage.Common.SiteModifyRequest' Core.QueueWebJobUsage.Job.TokenHelper' Core.QueueWebJobUsage.Common.SiteManager,
+Core.QueueWebJobUsage.Job,SharePointContext,15,10,9,5,7,225,18,2,0,0.3,1,3,Core.QueueWebJobUsage.Job.TokenHelper,Core.QueueWebJobUsage.Job.SharePointContextProvider' Core.QueueWebJobUsage.Job.SharePointAcsContextProvider' Core.QueueWebJobUsage.Job.SharePointHighTrustContextProvider
+Core.QueueWebJobUsage.Job,RedirectionStatus,0,0,0,0,0,6,0,0,0,-1,0,1,,Core.QueueWebJobUsage.Job.SharePointContextProvider
+Core.QueueWebJobUsage.Job,SharePointContextProvider,1,12,1,0,7,221,29,2,0,0.17,3,0,Core.QueueWebJobUsage.Job.TokenHelper' Core.QueueWebJobUsage.Job.RedirectionStatus' Core.QueueWebJobUsage.Job.SharePointContext,
+Core.QueueWebJobUsage.Job,SharePointAcsContext,2,3,7,0,1,118,7,0,1,0.67,1,1,Core.QueueWebJobUsage.Job.SharePointContextToken,Core.QueueWebJobUsage.Job.SharePointAcsContextProvider
+Core.QueueWebJobUsage.Job,SharePointAcsContextProvider,2,4,0,0,0,63,7,0,1,0.5,4,0,Core.QueueWebJobUsage.Job.SharePointContextToken' Core.QueueWebJobUsage.Job.TokenHelper' Core.QueueWebJobUsage.Job.SharePointAcsContext' Core.QueueWebJobUsage.Job.SharePointContext,
+Core.QueueWebJobUsage.Job,SharePointHighTrustContext,1,3,5,0,1,91,6,0,1,0.67,1,1,Core.QueueWebJobUsage.Job.TokenHelper,Core.QueueWebJobUsage.Job.SharePointHighTrustContextProvider
+Core.QueueWebJobUsage.Job,SharePointHighTrustContextProvider,1,4,0,0,0,36,6,0,1,0.75,2,0,Core.QueueWebJobUsage.Job.SharePointHighTrustContext' Core.QueueWebJobUsage.Job.SharePointContext,
+Core.QueueWebJobUsage.Job,TokenHelper,25,30,0,2,21,785,53,0,0,0.1,2,5,Core.QueueWebJobUsage.Job.SharePointContextToken' Core.QueueWebJobUsage.Job.AcsMetadataParser,Core.QueueWebJobUsage.Job.Functions' Core.QueueWebJobUsage.Job.SharePointContext' Core.QueueWebJobUsage.Job.SharePointContextProvider' Core.QueueWebJobUsage.Job.SharePointAcsContextProvider' Core.QueueWebJobUsage.Job.SharePointHighTrustContext
+Core.QueueWebJobUsage.Job,AcsMetadataParser,0,4,0,0,3,77,9,0,0,-1,4,1,Core.QueueWebJobUsage.Job.JsonMetadataDocument' Core.QueueWebJobUsage.Job.JsonKey' Core.QueueWebJobUsage.Job.JsonKeyValue' Core.QueueWebJobUsage.Job.JsonEndpoint,Core.QueueWebJobUsage.Job.TokenHelper
+Core.QueueWebJobUsage.Job,JsonMetadataDocument,0,0,3,0,0,6,0,0,0,-1,0,1,,Core.QueueWebJobUsage.Job.AcsMetadataParser
+Core.QueueWebJobUsage.Job,JsonEndpoint,0,0,3,0,0,6,0,0,0,-1,0,1,,Core.QueueWebJobUsage.Job.AcsMetadataParser
+Core.QueueWebJobUsage.Job,JsonKeyValue,0,0,2,0,0,5,0,0,0,-1,0,1,,Core.QueueWebJobUsage.Job.AcsMetadataParser
+Core.QueueWebJobUsage.Job,JsonKey,0,0,2,0,0,5,0,0,0,-1,0,1,,Core.QueueWebJobUsage.Job.AcsMetadataParser
+Core.QueueWebJobUsage.Job,SharePointContextToken,0,5,6,0,4,118,8,0,0,-1,0,3,,Core.QueueWebJobUsage.Job.SharePointAcsContext' Core.QueueWebJobUsage.Job.SharePointAcsContextProvider' Core.QueueWebJobUsage.Job.TokenHelper
+Core.QueueWebJobUsage.Job,MultipleSymmetricKeySecurityToken,3,4,4,0,3,112,11,0,0,0.75,0,0,,

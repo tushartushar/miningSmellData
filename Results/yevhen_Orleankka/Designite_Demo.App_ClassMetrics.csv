@@ -1,0 +1,21 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Demo,Search,1,1,0,1,1,9,1,0,1,0,0,3,,Demo.Api' Demo.ApiFixture' Demo.TopicFixture
+Demo,Subscribe,1,1,0,1,1,9,1,0,1,0,1,1,Orleankka.ObserverRef,Demo.Api
+Demo,AvailabilityChanged,2,1,0,2,1,11,1,0,1,0,1,2,Orleankka.ActorRef,Demo.Client' Demo.ApiFixture
+Demo,ApiUnavailableException,0,2,0,0,1,10,2,0,0,-1,0,0,,
+Demo,Api,5,12,0,0,5,74,13,0,1,0,7,2,Orleankka.IObserverCollection' Demo.ApiWorkerFactory' Orleankka.IActorRuntime' Demo.IApiWorker' Demo.Subscribe' Demo.Search' Orleankka.Services.ITimerService,Demo.Program' Demo.ApiFixture
+Demo,IApiWorker,0,1,0,0,0,4,1,2,0,-1,0,2,,Demo.Api' Demo.ApiWorkerFactory
+Demo,ApiWorkerFactory,1,1,0,0,1,12,1,0,0,0,1,1,Demo.IApiWorker,Demo.Api
+Demo,ApiWorkerBase,0,2,1,0,1,9,2,3,1,-1,0,1,,Demo.Faulty
+Demo,FacebookApiWorker,1,2,0,0,2,11,2,0,2,1,0,0,,
+Demo,TwitterApiWorker,1,2,0,0,2,11,2,0,2,1,0,0,,
+Demo,Faulty,3,2,0,0,2,25,5,0,2,0,1,0,Demo.ApiWorkerBase,
+Demo,Client,2,3,0,0,2,36,4,0,0,0.67,5,1,Orleankka.IActorSystem' Orleankka.ClientObserver' Orleankka.ActorRef' Demo.AvailabilityChanged' Demo.Log,Demo.Program
+Demo,Program,1,1,0,0,1,22,1,0,0,0,8,0,Demo.Client' Orleankka.IActorSystem' Orleankka.Embedded.EmbeddedConfigurator' Orleankka.Playground.PlaygroundConfigurator' Orleankka.IActorSystemConfigurator' Orleankka.ActorSystem' Orleankka.ClientObserver' Demo.Api,
+Demo,ServiceLocator,0,0,1,0,0,18,0,0,0,-1,0,1,,Demo.Topic
+Demo,Bootstrap,1,1,0,0,0,11,2,0,0,0,1,0,Demo.TopicStorage,
+Demo,CreateTopic,2,1,0,2,1,11,1,0,1,0,0,1,,Demo.Topic
+Demo,Topic,6,13,0,0,7,93,15,0,1,0,10,1,Demo.ITopicStorage' Demo.ServiceLocator' Orleankka.IActorRuntime' Demo.CreateTopic' Orleankka.Services.IReminderService' Orleankka.ActorPath' Orleankka.ActorRef' Orleankka.Services.ITimerService' Demo.Log' Orleankka.IActorSystem,Demo.TopicFixture
+Demo,ITopicStorage,0,2,0,0,0,5,2,2,0,-1,0,1,,Demo.Topic
+Demo,TopicStorage,1,5,0,0,3,35,6,0,1,0,0,1,,Demo.Bootstrap
+Demo,Log,1,1,0,0,1,14,1,0,0,0,0,2,,Demo.Client' Demo.Topic

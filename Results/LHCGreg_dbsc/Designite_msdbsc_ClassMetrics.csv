@@ -1,14 +1,19 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-SqlServerImportSettings,0,3,2,0,2,30,4,0,1,-1,3,3
-SqlServerImportTableCalculator,0,4,0,0,0,40,6,0,1,-1,3,1
-SqlServerTable,0,2,2,0,2,24,2,0,1,-1,1,7
-MsDbscApp,0,1,0,0,1,7,1,0,1,-1,0,1
-MsDbscCommandLineArgs,4,5,0,0,3,55,6,0,1,0,11,0
-MsDbscDbConnection,0,10,2,0,7,122,17,0,2,-1,2,4
-MsDbscEngine,0,7,2,0,2,60,11,0,2,-1,7,0
-MsImportOperation,8,5,0,0,2,173,17,0,0,0,6,1
-Program,0,1,0,0,0,8,1,0,0,-1,1,0
-SqlServerCheckoutSettings,0,3,6,0,2,49,4,0,2,-1,3,2
-SqlServerConnectionSettings,0,4,9,0,3,72,4,0,1,-1,0,6
-SqlServerImportTableListParser,0,2,0,0,2,20,2,0,1,-1,4,1
-SqlServerUpdateSettings,0,4,4,0,3,47,6,0,2,-1,3,4
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+dbsc.SqlServer,SqlServerImportSettings,0,3,2,0,2,25,4,0,1,-1,1,5,dbsc.SqlServer.SqlServerConnectionSettings,dbsc.SqlServer.MsDbscCommandLineArgs' dbsc.SqlServer.MsDbscEngine' dbsc.SqlServer.MsImportOperation' dbsc.SqlServer.SqlServerCheckoutSettings' dbsc.SqlServer.SqlServerUpdateSettings
+dbsc.SqlServer,SqlServerImportTableCalculator,0,4,0,0,0,41,6,0,0,-1,6,1,dbsc.Core.ImportTableSpecification.TableWithSchemaSpecificationWithCustomSelect' dbsc.SqlServer.DefaultSchema' dbsc.SqlServer.MsDbscDbConnection' dbsc.Core.ImportTableSpecification.StringOrWildcard' dbsc.Core.ImportTableSpecification.TableSpecificationFragment' dbsc.SqlServer.SqlServerTable,dbsc.SqlServer.MsDbscEngine
+dbsc.SqlServer,DefaultSchema,0,0,1,0,0,4,0,0,0,-1,0,1,,dbsc.SqlServer.SqlServerImportTableCalculator
+dbsc.SqlServer,SqlServerTable,0,2,2,0,2,18,2,0,1,-1,1,2,dbsc.SqlServer.MsDbscDbConnection,dbsc.SqlServer.SqlServerImportTableCalculator' dbsc.SqlServer.MsDbscDbConnection
+dbsc.SqlServer,MsDbscApp,0,1,0,0,1,8,1,0,0,-1,0,1,,dbsc.SqlServer.Program
+dbsc.SqlServer,MsDbscCommandLineArgs,4,5,0,0,3,74,6,0,1,0,7,0,dbsc.Core.Options.TargetDBOptionBundle' dbsc.Core.Options.DBCreateTemplateOptionBundle' dbsc.Core.Options.SourceDBOptionBundle' dbsc.SqlServer.SqlServerConnectionSettings' dbsc.SqlServer.SqlServerImportSettings' dbsc.SqlServer.SqlServerCheckoutSettings' dbsc.SqlServer.SqlServerUpdateSettings,
+dbsc.SqlServer,MsDbscDbConnection,0,10,2,0,7,126,13,0,0,-1,3,4,dbsc.SqlServer.SqlServerConnectionSettings' dbsc.SqlServer.TableName' dbsc.SqlServer.SqlServerTable,dbsc.SqlServer.SqlServerImportTableCalculator' dbsc.SqlServer.SqlServerTable' dbsc.SqlServer.MsDbscEngine' dbsc.SqlServer.MsImportOperation
+dbsc.SqlServer,TableName,0,0,2,0,0,5,0,0,0,-1,0,1,,dbsc.SqlServer.MsDbscDbConnection
+dbsc.SqlServer,MsDbscEngine,0,7,2,0,2,62,7,0,0,-1,6,0,dbsc.SqlServer.SqlServerConnectionSettings' dbsc.SqlServer.MsDbscDbConnection' dbsc.SqlServer.SqlServerImportTableCalculator' dbsc.SqlServer.SqlServerUpdateSettings' dbsc.SqlServer.SqlServerImportSettings' dbsc.SqlServer.MsImportOperation,
+dbsc.SqlServer,MsImportOperation,8,5,0,0,2,176,9,0,0,0,10,1,dbsc.SqlServer.SqlServerUpdateSettings' dbsc.SqlServer.SqlServerImportSettings' dbsc.SqlServer.RecoveryModel' dbsc.Core.Utils' dbsc.SqlServer.MsDbscDbConnection' dbsc.SqlServer.Index' dbsc.Core.ImportTableSpecification.TableAndRule' dbsc.SqlServer.SqlServerConnectionSettings' dbsc.SqlServer.SourceDbInfo' dbsc.Core.ImportTableSpecification.TableWithSchemaSpecificationWithCustomSelect,dbsc.SqlServer.MsDbscEngine
+dbsc.SqlServer,Index,0,0,3,0,0,6,0,0,0,-1,0,1,,dbsc.SqlServer.MsImportOperation
+dbsc.SqlServer,RecoveryModel,0,0,1,0,0,4,0,0,0,-1,0,1,,dbsc.SqlServer.MsImportOperation
+dbsc.SqlServer,SourceDbInfo,0,0,1,0,0,4,0,0,0,-1,0,1,,dbsc.SqlServer.MsImportOperation
+dbsc.SqlServer,Program,0,1,0,0,0,8,1,0,0,-1,1,0,dbsc.SqlServer.MsDbscApp,
+dbsc.SqlServer,SqlServerCheckoutSettings,0,3,6,0,2,32,4,0,2,-1,3,2,dbsc.Core.Options.DBCreateTemplateOptionBundle' dbsc.SqlServer.SqlServerConnectionSettings' dbsc.SqlServer.SqlServerImportSettings,dbsc.SqlServer.MsDbscCommandLineArgs' dbsc.SqlServer.SqlServerUpdateSettings
+dbsc.SqlServer,SqlServerConnectionSettings,0,4,9,0,3,40,4,0,1,-1,0,7,,dbsc.SqlServer.SqlServerImportSettings' dbsc.SqlServer.MsDbscCommandLineArgs' dbsc.SqlServer.MsDbscDbConnection' dbsc.SqlServer.MsDbscEngine' dbsc.SqlServer.MsImportOperation' dbsc.SqlServer.SqlServerCheckoutSettings' dbsc.SqlServer.SqlServerUpdateSettings
+dbsc.SqlServer,SqlServerImportTableListParser,0,2,0,0,2,20,2,0,1,-1,2,0,dbsc.Core.Antlr.TableSpecListParser' dbsc.Core.Antlr.IdentifierSyntax,
+dbsc.SqlServer,SqlServerUpdateSettings,0,4,4,0,3,37,6,0,2,-1,3,3,dbsc.SqlServer.SqlServerConnectionSettings' dbsc.SqlServer.SqlServerCheckoutSettings' dbsc.SqlServer.SqlServerImportSettings,dbsc.SqlServer.MsDbscCommandLineArgs' dbsc.SqlServer.MsDbscEngine' dbsc.SqlServer.MsImportOperation

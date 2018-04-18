@@ -1,7 +1,7 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CommandLineUtil,0,1,0,0,1,26,5,0,0,-1,0,1
-FileUtil,0,1,0,0,1,35,6,0,0,-1,0,1
-PathWatcher,6,5,0,0,3,59,12,0,0,0,2,1
-Program,2,7,0,1,2,71,14,0,0,0,3,2
-LogLevel,0,0,0,0,0,8,0,0,0,-1,0,2
-LogShipper,12,11,0,0,3,173,34,0,0,0,3,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MtLogTailer,CommandLineUtil,0,1,0,0,1,34,4,0,0,-1,0,1,,MtLogTailer.Program
+MtLogTailer,FileUtil,0,1,0,0,1,40,7,0,0,-1,0,1,,MtLogTailer.LogShipper
+MtLogTailer,PathWatcher,6,5,0,0,3,70,9,0,0,0,2,1,MtLogTailer.Program' MtLogTailer.LogShipper,MtLogTailer.Program
+MtLogTailer,Program,2,7,0,1,2,83,10,0,0,0,3,2,MtLogTailer.PathWatcher' MtLogTailer.LogLevel' MtLogTailer.CommandLineUtil,MtLogTailer.PathWatcher' MtLogTailer.LogShipper
+MtLogTailer,LogLevel,0,0,0,0,0,1,0,0,0,-1,0,2,,MtLogTailer.Program' MtLogTailer.LogShipper
+MtLogTailer,LogShipper,12,11,0,0,3,198,31,0,0,0,3,2,MtLogTailer.Program' MtLogTailer.LogLevel' MtLogTailer.FileUtil,MtLogTailer.PathWatcher' LogSearchShipper.Core.Tests.MtLogTailerTests

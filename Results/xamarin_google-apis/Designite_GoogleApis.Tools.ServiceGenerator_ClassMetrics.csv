@@ -1,14 +1,63 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DiscoveryRepository,1,2,0,0,2,34,5,0,0,0,3,1
-Generator,6,8,4,4,5,192,17,0,0,0.62,11,1
-GeneratorFlags,0,0,0,0,0,19,0,0,0,-1,0,2
-ArgumentEnumerator,1,6,3,0,6,69,7,0,0,0.67,0,1
-Program,0,1,0,0,0,122,64,0,0,-1,4,0
-Utils,0,1,0,0,1,15,1,0,0,-1,0,2
-DirectoryList,5,0,5,0,0,216,0,0,1,-1,1,2
-JsonSchema,18,0,18,0,0,218,0,0,0,-1,0,1
-RestDescription,25,0,25,0,0,366,0,0,1,-1,1,0
-RestMethod,10,0,10,0,0,262,0,0,0,-1,0,0
-RestResource,2,0,2,0,0,33,0,0,0,-1,0,0
-DiscoveryService,8,7,6,2,6,79,8,0,1,0.29,8,1
-ApisResource,3,3,0,0,3,186,3,0,0,0,2,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GoogleApis.Tools.ServiceGenerator,DiscoveryRepository,1,2,0,0,2,37,4,0,0,0,4,1,GoogleApis.Tools.ServiceGenerator.Utils' Google.Apis.Discovery.v1.Data.DirectoryList' Google.Apis.Json.NewtonsoftJsonSerializer' Google.Apis.Discovery.v1.Data.ItemsData,GoogleApis.Tools.ServiceGenerator.Program
+GoogleApis.Tools.ServiceGenerator,Generator,6,8,4,4,5,187,15,0,0,0.38,10,1,GoogleApis.Tools.ServiceGenerator.GeneratorFlags' Google.Apis.Tools.CodeGen.GoogleServiceGenerator' Google.Apis.Discovery.v1.Data.ItemsData' Google.Apis.Discovery.IDiscoveryDevice' Google.Apis.Discovery.DiscoveryService' Google.Apis.Discovery.IService' GoogleApis.Tools.ServiceGenerator.Utils' Google.Apis.Discovery.DiscoveryVersion' Google.Apis.Tools.CodeGen.GeneratorUtils' Google.GoogleApiException,GoogleApis.Tools.ServiceGenerator.Program
+GoogleApis.Tools.ServiceGenerator,GeneratorFlags,0,0,0,0,0,16,0,0,0,-1,0,2,,GoogleApis.Tools.ServiceGenerator.Generator' GoogleApis.Tools.ServiceGenerator.Program
+GoogleApis.Tools.ServiceGenerator,ArgumentEnumerator,1,6,3,0,6,68,7,0,0,0.67,0,1,,GoogleApis.Tools.ServiceGenerator.Program
+GoogleApis.Tools.ServiceGenerator,Program,0,1,0,0,0,136,6,0,0,-1,5,0,GoogleApis.Tools.ServiceGenerator.GeneratorFlags' GoogleApis.Tools.ServiceGenerator.ArgumentEnumerator' GoogleApis.Tools.ServiceGenerator.Generator' Google.Apis.Discovery.v1.Data.ItemsData' GoogleApis.Tools.ServiceGenerator.DiscoveryRepository,
+GoogleApis.Tools.ServiceGenerator,Utils,0,1,0,0,1,12,1,0,0,-1,0,2,,GoogleApis.Tools.ServiceGenerator.DiscoveryRepository' GoogleApis.Tools.ServiceGenerator.Generator
+Google.Apis.Discovery.v1.Data,DirectoryList,5,0,5,0,0,253,0,0,1,-1,1,1,Google.Apis.Requests.RequestError,GoogleApis.Tools.ServiceGenerator.DiscoveryRepository
+Google.Apis.Discovery.v1.Data,ItemsData,12,0,12,0,0,188,0,0,0,-1,1,3,Google.Apis.Discovery.v1.Data.IconsData,GoogleApis.Tools.ServiceGenerator.DiscoveryRepository' GoogleApis.Tools.ServiceGenerator.Generator' GoogleApis.Tools.ServiceGenerator.Program
+Google.Apis.Discovery.v1.Data,IconsData,4,0,4,0,0,55,0,0,0,-1,0,4,,Google.Apis.Discovery.v1.Data.ItemsData' Google.Apis.Discovery.v1.Data.RestDescription' Google.Apis.Discovery.v1.ItemsData' Google.Apis.Discovery.v1.RestDescription
+Google.Apis.Discovery.v1.Data,JsonSchema,18,0,18,0,0,255,0,0,0,-1,2,1,Google.Apis.Discovery.v1.Data.AnnotationsData' Google.Apis.Discovery.v1.Data.PropertiesData,Google.Apis.Discovery.v1.JsonSchema
+Google.Apis.Discovery.v1.Data,AnnotationsData,1,0,1,0,0,15,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.JsonSchema' Google.Apis.Discovery.v1.JsonSchema
+Google.Apis.Discovery.v1.Data,PropertiesData,0,0,0,0,0,2,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.JsonSchema' Google.Apis.Discovery.v1.JsonSchema
+Google.Apis.Discovery.v1.Data,RestDescription,25,0,25,0,0,425,0,0,1,-1,7,0,Google.Apis.Discovery.v1.Data.AuthData' Google.Apis.Discovery.v1.Data.IconsData' Google.Apis.Discovery.v1.Data.MethodsData' Google.Apis.Discovery.v1.Data.ParametersData' Google.Apis.Discovery.v1.Data.ResourcesData' Google.Apis.Discovery.v1.Data.SchemasData' Google.Apis.Requests.RequestError,
+Google.Apis.Discovery.v1.Data,AuthData,1,0,1,0,0,53,0,0,0,-1,1,2,Google.Apis.Discovery.v1.Data.Oauth2Data,Google.Apis.Discovery.v1.Data.RestDescription' Google.Apis.Discovery.v1.RestDescription
+Google.Apis.Discovery.v1.Data,Oauth2Data,1,0,1,0,0,36,0,0,0,-1,1,2,Google.Apis.Discovery.v1.Data.ScopesData,Google.Apis.Discovery.v1.Data.AuthData' Google.Apis.Discovery.v1.AuthData
+Google.Apis.Discovery.v1.Data,ScopesData,0,0,0,0,0,19,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.Oauth2Data' Google.Apis.Discovery.v1.Oauth2Data
+Google.Apis.Discovery.v1.Data,ScopesDataSchema,1,0,1,0,0,15,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1.Data,MethodsData,0,0,0,0,0,3,0,0,0,-1,0,4,,Google.Apis.Discovery.v1.Data.RestDescription' Google.Apis.Discovery.v1.Data.RestResource' Google.Apis.Discovery.v1.RestDescription' Google.Apis.Discovery.v1.RestResource
+Google.Apis.Discovery.v1.Data,ParametersData,0,0,0,0,0,3,0,0,0,-1,0,4,,Google.Apis.Discovery.v1.Data.RestDescription' Google.Apis.Discovery.v1.Data.RestMethod' Google.Apis.Discovery.v1.RestDescription' Google.Apis.Discovery.v1.RestMethod
+Google.Apis.Discovery.v1.Data,ResourcesData,0,0,0,0,0,3,0,0,0,-1,0,4,,Google.Apis.Discovery.v1.Data.RestDescription' Google.Apis.Discovery.v1.Data.RestResource' Google.Apis.Discovery.v1.RestDescription' Google.Apis.Discovery.v1.RestResource
+Google.Apis.Discovery.v1.Data,SchemasData,0,0,0,0,0,2,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.RestDescription' Google.Apis.Discovery.v1.RestDescription
+Google.Apis.Discovery.v1.Data,RestMethod,10,0,10,0,0,303,0,0,0,-1,4,0,Google.Apis.Discovery.v1.Data.MediaUploadData' Google.Apis.Discovery.v1.Data.ParametersData' Google.Apis.Discovery.v1.Data.RequestData' Google.Apis.Discovery.v1.Data.ResponseData,
+Google.Apis.Discovery.v1.Data,MediaUploadData,3,0,3,0,0,131,0,0,0,-1,1,2,Google.Apis.Discovery.v1.Data.ProtocolsData,Google.Apis.Discovery.v1.Data.RestMethod' Google.Apis.Discovery.v1.RestMethod
+Google.Apis.Discovery.v1.Data,ProtocolsData,2,0,2,0,0,88,0,0,0,-1,2,2,Google.Apis.Discovery.v1.Data.ResumableData' Google.Apis.Discovery.v1.Data.SimpleData,Google.Apis.Discovery.v1.Data.MediaUploadData' Google.Apis.Discovery.v1.MediaUploadData
+Google.Apis.Discovery.v1.Data,ResumableData,2,0,2,0,0,28,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.ProtocolsData' Google.Apis.Discovery.v1.ProtocolsData
+Google.Apis.Discovery.v1.Data,SimpleData,2,0,2,0,0,28,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.ProtocolsData' Google.Apis.Discovery.v1.ProtocolsData
+Google.Apis.Discovery.v1.Data,RequestData,1,0,1,0,0,15,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.RestMethod' Google.Apis.Discovery.v1.RestMethod
+Google.Apis.Discovery.v1.Data,ResponseData,1,0,1,0,0,15,0,0,0,-1,0,2,,Google.Apis.Discovery.v1.Data.RestMethod' Google.Apis.Discovery.v1.RestMethod
+Google.Apis.Discovery.v1.Data,RestResource,2,0,2,0,0,36,0,0,0,-1,2,0,Google.Apis.Discovery.v1.Data.MethodsData' Google.Apis.Discovery.v1.Data.ResourcesData,
+Google.Apis.Discovery.v1.Data,DiscoveryService,8,7,6,2,6,261,8,0,1,0.29,8,0,Google.Apis.Discovery.IService' Google.Apis.Authentication.IAuthenticator' Google.Apis.Discovery.DiscoveryVersion' Google.Apis.Discovery.v1.ApisResource' Google.Apis.Discovery.v1.DiscoveryService' Google.Apis.Requests.IRequest' Google.Apis.ISerializer' Google.Apis.Requests.IResponse,
+Google.Apis.Discovery.v1.Data,ApisResource,3,3,0,0,3,219,3,0,0,0,5,0,Google.Apis.Discovery.v1.DiscoveryService' Google.Apis.Authentication.IAuthenticator' Google.Apis.Discovery.v1.ApisResource' Google.Apis.Discovery.v1.GetRestRequest' Google.Apis.Discovery.v1.ListRequest,
+Google.Apis.Discovery.v1.Data,Label,0,0,0,0,0,15,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1.Data,GetRestRequest,5,1,7,0,1,79,1,0,0,0,2,0,Google.Apis.Discovery.v1.GetRestRequest' Google.Apis.Discovery.IRequestProvider,
+Google.Apis.Discovery.v1.Data,ListRequest,6,1,8,0,1,96,1,0,0,0,1,0,Google.Apis.Discovery.IRequestProvider,
+Google.Apis.Discovery.v1,DirectoryList,5,0,5,0,0,253,0,0,1,-1,1,0,Google.Apis.Requests.RequestError,
+Google.Apis.Discovery.v1,ItemsData,12,0,12,0,0,188,0,0,0,-1,1,0,Google.Apis.Discovery.v1.Data.IconsData,
+Google.Apis.Discovery.v1,IconsData,4,0,4,0,0,55,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,JsonSchema,18,0,18,0,0,255,0,0,0,-1,3,0,Google.Apis.Discovery.v1.Data.JsonSchema' Google.Apis.Discovery.v1.Data.AnnotationsData' Google.Apis.Discovery.v1.Data.PropertiesData,
+Google.Apis.Discovery.v1,AnnotationsData,1,0,1,0,0,15,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,PropertiesData,0,0,0,0,0,2,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,RestDescription,25,0,25,0,0,425,0,0,1,-1,7,0,Google.Apis.Discovery.v1.Data.AuthData' Google.Apis.Discovery.v1.Data.IconsData' Google.Apis.Discovery.v1.Data.MethodsData' Google.Apis.Discovery.v1.Data.ParametersData' Google.Apis.Discovery.v1.Data.ResourcesData' Google.Apis.Discovery.v1.Data.SchemasData' Google.Apis.Requests.RequestError,
+Google.Apis.Discovery.v1,AuthData,1,0,1,0,0,53,0,0,0,-1,1,0,Google.Apis.Discovery.v1.Data.Oauth2Data,
+Google.Apis.Discovery.v1,Oauth2Data,1,0,1,0,0,36,0,0,0,-1,1,0,Google.Apis.Discovery.v1.Data.ScopesData,
+Google.Apis.Discovery.v1,ScopesData,0,0,0,0,0,19,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,ScopesDataSchema,1,0,1,0,0,15,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,MethodsData,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,ParametersData,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,ResourcesData,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,SchemasData,0,0,0,0,0,2,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,RestMethod,10,0,10,0,0,303,0,0,0,-1,4,0,Google.Apis.Discovery.v1.Data.MediaUploadData' Google.Apis.Discovery.v1.Data.ParametersData' Google.Apis.Discovery.v1.Data.RequestData' Google.Apis.Discovery.v1.Data.ResponseData,
+Google.Apis.Discovery.v1,MediaUploadData,3,0,3,0,0,131,0,0,0,-1,1,0,Google.Apis.Discovery.v1.Data.ProtocolsData,
+Google.Apis.Discovery.v1,ProtocolsData,2,0,2,0,0,88,0,0,0,-1,2,0,Google.Apis.Discovery.v1.Data.ResumableData' Google.Apis.Discovery.v1.Data.SimpleData,
+Google.Apis.Discovery.v1,ResumableData,2,0,2,0,0,28,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,SimpleData,2,0,2,0,0,28,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,RequestData,1,0,1,0,0,15,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,ResponseData,1,0,1,0,0,15,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,RestResource,2,0,2,0,0,36,0,0,0,-1,2,0,Google.Apis.Discovery.v1.Data.MethodsData' Google.Apis.Discovery.v1.Data.ResourcesData,
+Google.Apis.Discovery.v1,DiscoveryService,8,7,6,2,6,261,8,0,1,0.29,7,3,Google.Apis.Discovery.IService' Google.Apis.Authentication.IAuthenticator' Google.Apis.Discovery.DiscoveryVersion' Google.Apis.Discovery.v1.ApisResource' Google.Apis.Requests.IRequest' Google.Apis.ISerializer' Google.Apis.Requests.IResponse,Google.Apis.Discovery.v1.Data.DiscoveryService' Google.Apis.Discovery.v1.Data.ApisResource' Google.Apis.Discovery.v1.ApisResource
+Google.Apis.Discovery.v1,ApisResource,3,3,0,0,3,219,3,0,0,0,4,3,Google.Apis.Discovery.v1.DiscoveryService' Google.Apis.Authentication.IAuthenticator' Google.Apis.Discovery.v1.GetRestRequest' Google.Apis.Discovery.v1.ListRequest,Google.Apis.Discovery.v1.Data.DiscoveryService' Google.Apis.Discovery.v1.Data.ApisResource' Google.Apis.Discovery.v1.DiscoveryService
+Google.Apis.Discovery.v1,Label,0,0,0,0,0,15,0,0,0,-1,0,0,,
+Google.Apis.Discovery.v1,GetRestRequest,5,1,7,0,1,79,1,0,0,0,1,3,Google.Apis.Discovery.IRequestProvider,Google.Apis.Discovery.v1.Data.ApisResource' Google.Apis.Discovery.v1.Data.GetRestRequest' Google.Apis.Discovery.v1.ApisResource
+Google.Apis.Discovery.v1,ListRequest,6,1,8,0,1,96,1,0,0,0,1,2,Google.Apis.Discovery.IRequestProvider,Google.Apis.Discovery.v1.Data.ApisResource' Google.Apis.Discovery.v1.ApisResource

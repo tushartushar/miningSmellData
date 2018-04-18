@@ -1,0 +1,24 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mono.Ssdp,Announcer,5,14,7,0,2,126,15,0,0,0.29,4,1,Mono.Ssdp.Server' Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Internal.TimeoutDispatcher' Mono.Ssdp.Internal.SsdpSocket,Mono.Ssdp.Server
+Mono.Ssdp,Browser,8,9,5,0,3,142,12,0,1,0,8,1,Mono.Ssdp.Internal.SsdpSocket' Mono.Ssdp.Client' Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Internal.TimeoutDispatcher' Mono.Ssdp.Internal.HttpDatagram' Mono.Ssdp.Internal.AsyncReceiveBuffer' Mono.Ssdp.Internal.ServiceCache' Mono.Ssdp.Internal.Log,Mono.Ssdp.Client
+Mono.Ssdp,BrowseService,1,5,0,0,0,112,24,0,1,0.4,3,1,Mono.Ssdp.Internal.HttpDatagram' Mono.Ssdp.Client' Mono.Ssdp.Internal.Protocol,Mono.Ssdp.Internal.ServiceCache
+Mono.Ssdp,Client,7,20,5,0,11,211,24,0,0,0.25,8,5,Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.NetworkInterfaceInfo' Mono.Ssdp.Internal.TimeoutDispatcher' Mono.Ssdp.Internal.ServiceCache' Mono.Ssdp.Browser' Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Service' Mono.Ssdp.ServiceOperation,Mono.Ssdp.Browser' Mono.Ssdp.BrowseService' Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.ServiceCache' Mono.Upnp.Client
+Mono.Ssdp,MulticastReader,0,5,0,0,0,39,6,3,0,-1,2,0,Mono.Ssdp.Internal.SsdpSocket' Mono.Ssdp.Internal.AsyncReceiveBuffer,
+Mono.Ssdp,Server,7,16,6,0,12,181,22,0,0,0.25,7,3,Mono.Ssdp.Internal.RequestListener' Mono.Ssdp.Internal.NetworkInterfaceInfo' Mono.Ssdp.Internal.TimeoutDispatcher' Mono.Ssdp.Announcer' Mono.Ssdp.Internal.SsdpSocket' Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Internal.Request,Mono.Ssdp.Announcer' Mono.Ssdp.Internal.RequestListener' Mono.Upnp.Server
+Mono.Ssdp,Service,5,6,6,0,5,78,6,1,0,0.5,0,4,,Mono.Ssdp.Client' Mono.Ssdp.ServiceArgs' Mono.Ssdp.Internal.ServiceCache' Mono.Upnp.Client
+Mono.Ssdp,ServiceArgs,3,3,3,0,3,33,3,0,0,0,2,1,Mono.Ssdp.ServiceOperation' Mono.Ssdp.Service,Mono.Upnp.Client
+Mono.Ssdp,ServiceOperation,0,0,0,0,0,6,0,0,0,-1,0,2,,Mono.Ssdp.Client' Mono.Ssdp.ServiceArgs
+Mono.Ssdp.Internal,AsyncReceiveBuffer,5,1,4,1,1,38,1,0,0,0,1,5,Mono.Ssdp.Internal.SsdpSocket,Mono.Ssdp.Browser' Mono.Ssdp.MulticastReader' Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.RequestListener' Mono.Ssdp.Internal.SsdpSocket
+Mono.Ssdp.Internal,HttpDatagram,3,6,2,0,2,119,15,0,0,0.33,1,5,Mono.Ssdp.Internal.HttpDatagramType,Mono.Ssdp.Browser' Mono.Ssdp.BrowseService' Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.RequestListener' Mono.Ssdp.Internal.ServiceCache
+Mono.Ssdp.Internal,HttpDatagramType,0,0,0,0,0,7,0,0,0,-1,0,3,,Mono.Ssdp.Internal.HttpDatagram' Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.RequestListener
+Mono.Ssdp.Internal,Log,1,2,1,0,2,25,3,0,0,0,0,3,,Mono.Ssdp.Browser' Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.RequestListener
+Mono.Ssdp.Internal,NotifyListener,3,4,0,0,3,70,9,0,1,0,8,1,Mono.Ssdp.Client' Mono.Ssdp.Internal.SsdpSocket' Mono.Ssdp.Internal.HttpDatagram' Mono.Ssdp.Internal.AsyncReceiveBuffer' Mono.Ssdp.Internal.HttpDatagramType' Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Internal.ServiceCache' Mono.Ssdp.Internal.Log,Mono.Ssdp.Client
+Mono.Ssdp.Internal,Protocol,19,4,0,13,4,78,4,0,0,0,0,9,,Mono.Ssdp.Announcer' Mono.Ssdp.Browser' Mono.Ssdp.BrowseService' Mono.Ssdp.Client' Mono.Ssdp.Server' Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.RequestListener' Mono.Ssdp.Internal.SsdpSocket' Mono.Ssdp.Internal.MulticastSsdpSocket
+Mono.Ssdp.Internal,Request,3,1,0,3,1,13,1,0,0,0,0,1,,Mono.Ssdp.Server
+Mono.Ssdp.Internal,RequestListener,3,5,0,0,4,52,7,0,1,0,7,1,Mono.Ssdp.Server' Mono.Ssdp.Internal.SsdpSocket' Mono.Ssdp.Internal.HttpDatagram' Mono.Ssdp.Internal.AsyncReceiveBuffer' Mono.Ssdp.Internal.HttpDatagramType' Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Internal.Log,Mono.Ssdp.Server
+Mono.Ssdp.Internal,ServiceCache,4,8,1,0,6,94,8,0,0,0.25,5,3,Mono.Ssdp.Client' Mono.Ssdp.Internal.TimeoutDispatcher' Mono.Ssdp.Service' Mono.Ssdp.BrowseService' Mono.Ssdp.Internal.HttpDatagram,Mono.Ssdp.Browser' Mono.Ssdp.Client' Mono.Ssdp.Internal.NotifyListener
+Mono.Ssdp.Internal,SsdpSocket,2,5,0,0,5,34,5,1,0,0.6,2,7,Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Internal.AsyncReceiveBuffer,Mono.Ssdp.Announcer' Mono.Ssdp.Browser' Mono.Ssdp.MulticastReader' Mono.Ssdp.Server' Mono.Ssdp.Internal.AsyncReceiveBuffer' Mono.Ssdp.Internal.NotifyListener' Mono.Ssdp.Internal.RequestListener
+Mono.Ssdp.Internal,TimeoutDispatcher,4,12,0,0,8,136,17,0,0,0.17,1,5,Mono.Ssdp.Internal.TimeoutItem,Mono.Ssdp.Announcer' Mono.Ssdp.Browser' Mono.Ssdp.Client' Mono.Ssdp.Server' Mono.Ssdp.Internal.ServiceCache
+Mono.Ssdp.Internal,TimeoutItem,5,2,0,5,2,16,2,0,0,0,0,1,,Mono.Ssdp.Internal.TimeoutDispatcher
+Mono.Ssdp.Internal,MulticastSsdpSocket,0,1,0,0,1,10,1,0,1,-1,2,0,Mono.Ssdp.Internal.Protocol' Mono.Ssdp.Internal.NetworkInterfaceInfo,
+Mono.Ssdp.Internal,NetworkInterfaceInfo,2,2,0,2,2,36,6,0,0,0,0,3,,Mono.Ssdp.Client' Mono.Ssdp.Server' Mono.Ssdp.Internal.MulticastSsdpSocket

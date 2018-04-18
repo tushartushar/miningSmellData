@@ -1,18 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IBrowserWindow,0,0,2,0,0,9,0,0,0,-1,1,0
-HostedInstanceKeeper,2,2,0,0,2,56,7,0,0,0,0,1
-Program,12,13,7,1,2,305,43,0,0,0.46,9,3
-HttpServerConnection,22,21,2,2,9,333,61,0,0,0,5,1
-AppIndicatorRunner,2,3,1,0,0,48,3,0,1,0,2,1
-MenuIcons,0,0,0,0,0,8,0,0,0,-1,0,6
-TrayIcons,0,0,0,0,0,9,0,0,0,-1,0,6
-WindowIcons,0,0,0,0,0,5,0,0,0,-1,0,2
-NotificationType,0,0,0,0,0,6,0,0,0,-1,0,5
-IMenuItem,0,0,4,0,0,15,0,0,0,-1,1,6
-TrayIconBase,4,23,1,0,4,149,33,4,0,0.3,11,0
-ImageLoader,9,3,4,4,2,67,4,0,0,0.67,0,1
-GtkRunner,4,19,1,0,4,300,61,1,1,0.63,6,1
-CocoaRunner,10,10,1,0,2,185,35,0,1,0.4,4,1
-RumpsRunner,15,16,1,0,3,291,51,0,1,0.19,5,1
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
-WinFormsRunner,3,11,1,1,2,203,28,0,1,0.36,5,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Duplicati.GUI.TrayIcon,IBrowserWindow,0,0,2,0,0,5,0,0,0,-1,0,1,,Duplicati.GUI.TrayIcon.TrayIconBase
+Duplicati.GUI.TrayIcon,HostedInstanceKeeper,2,2,0,0,2,59,6,0,0,0,2,1,Duplicati.Server.WebServer.Server' Duplicati.Server.Program,Duplicati.GUI.TrayIcon.Program
+Duplicati.GUI.TrayIcon,Program,15,11,7,2,2,381,29,0,0,0.55,16,3,Duplicati.GUI.TrayIcon.HttpServerConnection' Duplicati.Server.Database.Connection' Duplicati.Library.Utility.Utility' Duplicati.Library.AutoUpdater.UpdaterManager' Duplicati.Library.AutoUpdater.AutoUpdateStrategy' Duplicati.GUI.TrayIcon.HostedInstanceKeeper' Duplicati.Library.Utility.CommandLineParser' Duplicati.Library.Utility.Win32' Duplicati.Library.Interface.ICommandLineArgument' Duplicati.Server.Program' Duplicati.Server.Database.ServerSettings' Duplicati.Server.SingleInstance' Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.Windows.WinFormsRunner' Duplicati.GUI.TrayIcon.CocoaRunner' Duplicati.GUI.TrayIcon.RumpsRunner,Duplicati.GUI.TrayIcon.HttpServerConnection' Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.Windows.WinFormsRunner
+Duplicati.GUI.TrayIcon,HttpServerConnection,25,21,3,2,9,424,37,0,0,0,12,3,Duplicati.Server.Serialization.Interface.IServerStatus' Duplicati.Server.Serialization.Interface.INotification' Duplicati.GUI.TrayIcon.BackgroundRequest' Duplicati.Library.Modules.Builtin.HttpOptions' Duplicati.Library.Utility.AsyncHttpRequest' Duplicati.Server.Serialization.Serializer' Duplicati.GUI.TrayIcon.SaltAndNonce' Duplicati.Library.Utility.Uri' Duplicati.Server.Database.ServerSettings' Duplicati.Server.Database.Connection' Duplicati.GUI.TrayIcon.Program' Duplicati.Library.Utility.Timeparser,Duplicati.GUI.TrayIcon.Program' Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.Windows.WinFormsRunner
+Duplicati.GUI.TrayIcon,BackgroundRequest,3,2,0,3,2,15,2,0,0,1,0,1,,Duplicati.GUI.TrayIcon.HttpServerConnection
+Duplicati.GUI.TrayIcon,SaltAndNonce,2,0,0,2,0,5,0,0,0,-1,0,1,,Duplicati.GUI.TrayIcon.HttpServerConnection
+Duplicati.GUI.TrayIcon,MenuIcons,0,0,0,0,0,8,0,0,0,-1,0,6,,Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.CocoaRunner' Duplicati.GUI.TrayIcon.MenuItemWrapper' Duplicati.GUI.TrayIcon.RumpsRunner' Duplicati.GUI.TrayIcon.Windows.WinFormsRunner' Duplicati.GUI.TrayIcon.Windows.MenuItemWrapper
+Duplicati.GUI.TrayIcon,TrayIcons,0,0,0,0,0,9,0,0,0,-1,0,3,,Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.CocoaRunner' Duplicati.GUI.TrayIcon.RumpsRunner
+Duplicati.GUI.TrayIcon,WindowIcons,0,0,0,0,0,5,0,0,0,-1,0,1,,Duplicati.GUI.TrayIcon.TrayIconBase
+Duplicati.GUI.TrayIcon,NotificationType,0,0,0,0,0,6,0,0,0,-1,0,4,,Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.CocoaRunner' Duplicati.GUI.TrayIcon.RumpsRunner' Duplicati.GUI.TrayIcon.Windows.WinFormsRunner
+Duplicati.GUI.TrayIcon,IMenuItem,0,0,4,0,0,7,0,2,0,-1,0,1,,Duplicati.GUI.TrayIcon.TrayIconBase
+Duplicati.GUI.TrayIcon,TrayIconBase,4,23,1,0,4,164,26,3,0,0.3,14,4,Duplicati.GUI.TrayIcon.IMenuItem' Duplicati.GUI.TrayIcon.HttpServerConnection' Duplicati.GUI.TrayIcon.Program' Duplicati.GUI.TrayIcon.MenuIcons' Duplicati.GUI.TrayIcon.NotificationType' Duplicati.Server.Serialization.Interface.INotification' Duplicati.Server.Serialization.NotificationType' Duplicati.Library.Utility.UrlUtillity' Duplicati.GUI.TrayIcon.IBrowserWindow' Duplicati.GUI.TrayIcon.WindowIcons' Duplicati.Server.Serialization.Interface.IServerStatus' Duplicati.Server.Serialization.SuggestedStatusIcon' Duplicati.GUI.TrayIcon.TrayIcons' Duplicati.Server.Serialization.LiveControlState,Duplicati.GUI.TrayIcon.Program' Duplicati.GUI.TrayIcon.CocoaRunner' Duplicati.GUI.TrayIcon.RumpsRunner' Duplicati.GUI.TrayIcon.Windows.WinFormsRunner
+Duplicati.GUI.TrayIcon,ImageLoader,9,3,4,4,2,57,6,0,0,0,0,1,,Duplicati.GUI.TrayIcon.Windows.MenuItemWrapper
+Duplicati.GUI.TrayIcon,CocoaRunner,10,10,1,0,2,210,16,0,1,0.4,5,1,Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.TrayIcons' Duplicati.GUI.TrayIcon.MenuItemWrapper' Duplicati.GUI.TrayIcon.MenuIcons' Duplicati.GUI.TrayIcon.NotificationType,Duplicati.GUI.TrayIcon.Program
+Duplicati.GUI.TrayIcon,MenuItemWrapper,7,3,12,0,2,127,6,0,1,0.67,2,2,Duplicati.GUI.TrayIcon.RumpsRunner' Duplicati.GUI.TrayIcon.MenuIcons,Duplicati.GUI.TrayIcon.CocoaRunner' Duplicati.GUI.TrayIcon.RumpsRunner
+Duplicati.GUI.TrayIcon,RumpsRunner,15,16,1,0,3,296,28,0,1,0.25,6,2,Duplicati.GUI.TrayIcon.TrayIcons' Duplicati.Library.Utility.Utility' Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.MenuItemWrapper' Duplicati.GUI.TrayIcon.MenuIcons' Duplicati.GUI.TrayIcon.NotificationType,Duplicati.GUI.TrayIcon.Program' Duplicati.GUI.TrayIcon.MenuItemWrapper
+Duplicati.GUI.TrayIcon.Properties,Settings,1,0,1,0,0,13,0,0,0,-1,0,0,,
+Duplicati.GUI.TrayIcon.Windows,WinFormsRunner,2,11,1,0,2,215,17,0,1,0.36,7,1,Duplicati.Library.AutoUpdater.AutoUpdateSettings' Duplicati.GUI.TrayIcon.TrayIconBase' Duplicati.GUI.TrayIcon.HttpServerConnection' Duplicati.GUI.TrayIcon.Program' Duplicati.GUI.TrayIcon.Windows.MenuItemWrapper' Duplicati.GUI.TrayIcon.MenuIcons' Duplicati.GUI.TrayIcon.NotificationType,Duplicati.GUI.TrayIcon.Program
+Duplicati.GUI.TrayIcon.Windows,MenuItemWrapper,2,3,5,0,1,72,5,0,1,0,2,1,Duplicati.GUI.TrayIcon.MenuIcons' Duplicati.GUI.TrayIcon.ImageLoader,Duplicati.GUI.TrayIcon.Windows.WinFormsRunner

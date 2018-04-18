@@ -1,0 +1,66 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+IoFx.Connections,ConnectionTranslator<T1;T2>,3,4,0,0,4,44,4,0,1,0.5,3,0,IoFx.Connections.IConnection' IoFx.Framing.ITranslator' IoFx.Connections.ConsumerObserver,
+IoFx.Connections,ConsumerObserver,1,2,0,0,2,12,2,0,1,0,0,1,,IoFx.Connections.ConnectionTranslator<T1;T2>
+IoFx.Connections,ContextExtentions,0,1,0,0,1,32,1,0,0,-1,2,0,IoFx.Connections.ContextWrapper' IoFx.Connections.IConnection,
+IoFx.Connections,ContextWrapper,1,3,0,0,3,25,3,0,1,0,2,1,IoFx.Connections.IConnection' IoFx.Connections.Context,IoFx.Connections.ContextExtentions
+IoFx.Connections,IConnection,0,0,0,0,0,5,0,7,1,-1,0,15,,IoFx.Connections.ConnectionTranslator<T1;T2>' IoFx.Connections.ContextExtentions' IoFx.Connections.ContextWrapper' IoFx.Connections.IConnectionTranslator' IoFx.Connections.Composer<TOutputs;TInputs>' IoFx.Connections.ConnectionExtensions' IoFx.Framing.FramingExtensions' IoFx.ServiceModel.ChannelExtensions' Samples.sockets.SocketSeverWithAck' Samples.sockets.SimpleSocketServer' Connect.Sockets.SocketServer' Connect.Sockets.LenghPrefixed.SocketClientWithAck' IoFx.Test.Sockets.Framing.LenghtPrefixed' IoFx.Tests.CustomDispatcher' IoFx.Test.Program
+IoFx.Connections,IConnectionTranslator,0,1,0,0,0,4,1,1,2,-1,1,0,IoFx.Connections.IConnection,
+IoFx.Connections,IDisposableConnection,0,0,0,0,0,4,0,1,2,-1,0,5,,IoFx.Sockets.SocketEvents' Samples.sockets.SocketSeverWithAck' Samples.sockets.SimpleSocketServer' Connect.Sockets.LenghPrefixed.SocketClientWithAck' IoFx.Test.Sockets.Framing.LenghtPrefixed
+IoFx.Connections,IListener,0,1,0,0,0,7,1,3,1,-1,0,9,,IoFx.Connections.ConnectionAcceptor<TConnection;TFrame>' IoFx.Sockets.SocketEvents' Samples.SimpleHttpServer' Connect.Http.HttpListenerServer' Connect.Sockets.SocketServer' IoFx.Test.Http.HttpRequestResponse' IoFx.Test.Sockets.SocketAcceptTest' IoFx.Test.Sockets.SocketReceiverTests' IoFx.Test.Sockets.SocketSenderTests
+IoFx.Connections,ConnectionAcceptor<TConnection;TFrame>,2,4,0,0,4,22,4,0,2,0,1,0,IoFx.Connections.IListener,
+IoFx.Connections,Composer<TOutputs;TInputs>,0,1,2,0,1,10,1,0,0,-1,1,0,IoFx.Connections.IConnection,
+IoFx.Connections,Connection<TResult;TResponse>,2,3,0,0,3,18,3,0,2,0,2,0,IoFx.IConsumer' IoFx.IProducer,
+IoFx.Connections,Connection<T>,0,1,0,0,1,7,1,0,2,-1,2,0,IoFx.IProducer' IoFx.IConsumer,
+IoFx.Connections,ConnectionExtensions,0,4,0,0,4,34,4,0,0,-1,2,0,IoFx.Connections.IConnection' IoFx.IProducer,
+IoFx.Connections,Context,0,1,2,0,1,10,1,0,0,-1,1,4,IoFx.IConsumer,IoFx.Connections.ContextWrapper' IoFx.ServiceModel.ServiceModelExtensions' Connect.Sockets.LenghPrefixed.SocketClientWithAck' SM.Rx.Test.ServiceModel.TypedContracts.ServiceDispatcherExtensions
+IoFx.Connections,DisposableConnection<TRequest;TResponse>,1,2,0,0,1,15,2,0,0,0,2,0,IoFx.IProducer' IoFx.IConsumer,
+IoFx.Connections,DisposableConnection<T>,0,1,0,0,1,9,1,0,3,-1,2,0,IoFx.IProducer' IoFx.IConsumer,
+IoFx.Framing,FramingExtensions,0,1,0,0,1,13,1,0,0,-1,3,0,IoFx.Framing.LengthPrefixed.LengthPrefixOutputTranslator' IoFx.Framing.LengthPrefixed.LengthPrefixedInputTranslator' IoFx.Connections.IConnection,
+IoFx.Framing,ITranslator,0,1,0,0,0,4,1,2,0,-1,1,1,IoFx.IConsumer,IoFx.Connections.ConnectionTranslator<T1;T2>
+IoFx.Framing.LengthPrefixed,BufferedReader,3,2,1,0,2,42,3,0,0,0,0,1,,IoFx.Framing.LengthPrefixed.LengthPrefixedInputTranslator
+IoFx.Framing.LengthPrefixed,LengthPrefixedInputTranslator,5,4,0,0,2,71,9,0,1,0,4,1,IoFx.Framing.LengthPrefixed.BufferedReader' IoFx.Framing.LengthPrefixed.State' IoFx.Framing.LengthPrefixed.Entry' IoFx.IConsumer,IoFx.Framing.FramingExtensions
+IoFx.Framing.LengthPrefixed,State,0,0,0,0,0,5,0,0,0,-1,0,1,,IoFx.Framing.LengthPrefixed.LengthPrefixedInputTranslator
+IoFx.Framing.LengthPrefixed,Entry,2,0,0,2,0,5,0,0,0,-1,0,1,,IoFx.Framing.LengthPrefixed.LengthPrefixedInputTranslator
+IoFx.Framing.LengthPrefixed,LengthPrefixOutputTranslator,0,1,0,0,1,8,1,0,1,-1,1,1,IoFx.IConsumer,IoFx.Framing.FramingExtensions
+IoFx.Http,HttpContextAcceptor,3,5,0,0,4,66,8,0,2,0,0,1,,IoFx.Http.HttpObservable
+IoFx.Http,HttpObservable,0,2,0,0,1,25,5,0,0,-1,1,3,IoFx.Http.HttpContextAcceptor,Samples.SimpleHttpServer' Connect.Http.HttpListenerServer' IoFx.Test.Http.HttpRequestResponse
+IoFx,IDisposableObservable,0,0,0,0,0,3,0,1,0,-1,0,0,,
+IoFx,IHandler,0,1,0,0,0,4,1,0,0,-1,0,1,,IoFx.Runtime.Scheduler
+IoFx,IProducer,0,0,0,0,0,3,0,4,0,-1,0,17,,IoFx.Connections.Connection<TResult;TResponse>' IoFx.Connections.Connection<T>' IoFx.Connections.ConnectionExtensions' IoFx.Connections.DisposableConnection<TRequest;TResponse>' IoFx.Connections.DisposableConnection<T>' IoFx.ServiceModel.ChannelExtensions' IoFx.ServiceModel.IoChannel<T;TChannel>' IoFx.Sockets.SocketConnection' Samples.wcf.NetTcp' Connect.Sockets.SocketServer' Connect.WCF.Channels.NetTcpDC' Connect.WCF.Channels.TcpChannelServer' IoFx.Test.ServiceModel.Channels.MessageTests' IoFx.Test.Sockets.Framing.LenghtPrefixed' IoFx.Test.Sockets.SocketReceiverTests' IoFx.Test.Sockets.SocketSenderTests' IoFx.Test.Program
+IoFx,ProducerConsumerExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,IoFx.IConsumer,
+IoFx,IVisitorAcceptor,0,1,0,0,0,4,1,1,0,-1,0,0,,
+IoFx,IConsumer,0,1,0,0,0,4,1,5,0,-1,0,11,,IoFx.Connections.Connection<TResult;TResponse>' IoFx.Connections.Connection<T>' IoFx.Connections.Context' IoFx.Connections.DisposableConnection<TRequest;TResponse>' IoFx.Connections.DisposableConnection<T>' IoFx.Framing.ITranslator' IoFx.Framing.LengthPrefixed.LengthPrefixedInputTranslator' IoFx.Framing.LengthPrefixed.LengthPrefixOutputTranslator' IoFx.ProducerConsumerExtensions' IoFx.ServiceModel.ChannelExtensions' IoFx.ServiceModel.IoChannel<T;TChannel>
+IoFx,IDisposableConsumer,0,0,0,0,0,3,0,1,1,-1,0,3,,IoFx.Sockets.SocketConnection' IoFx.Test.Sockets.Framing.LenghtPrefixed' IoFx.Test.Sockets.SocketSenderTests
+IoFx,IQueueable,0,1,0,0,0,4,1,0,1,-1,0,1,,IoFx.Sockets.SocketSender
+IoFx,IQueueableConsumer,0,0,0,0,0,3,0,0,1,-1,0,0,,
+IoFx,IResourcePool,0,2,0,0,0,5,2,1,1,-1,0,2,,IoFx.Runtime.BufferManager' IoFx.Sockets.SocketSender
+IoFx,IVisitor,0,1,0,0,0,4,1,2,0,-1,0,0,,
+IoFx.Runtime,AwaitableThrottle,4,3,1,0,3,73,4,0,0,0,1,0,IoFx.Runtime.Awaiter,
+IoFx.Runtime,Awaiter,1,4,1,0,4,21,4,0,0,0.5,0,1,,IoFx.Runtime.AwaitableThrottle
+IoFx.Runtime,BufferManager,2,2,0,1,2,33,2,0,0,0,2,2,IoFx.Runtime.BufferPool' IoFx.IResourcePool,IoFx.Sockets.SocketFactory' IoFx.Sockets.SocketReceiver
+IoFx.Runtime,BufferPool,2,3,0,0,1,19,3,0,0,0,0,1,,IoFx.Runtime.BufferManager
+IoFx.Runtime,DefaultAllocatorPool<T>,1,4,0,0,4,25,5,0,2,0.75,0,0,,
+IoFx.Runtime,FixedSizeCache<T>,3,4,0,0,3,55,6,0,0,0.5,2,0,IoFx.Runtime.IAwaiter' IoFx.Runtime.CacheAwaiter,
+IoFx.Runtime,CacheAwaiter,1,3,1,0,3,20,3,0,1,0.67,0,1,,IoFx.Runtime.FixedSizeCache<T>
+IoFx.Runtime,IAwaiter,0,2,2,0,0,9,2,2,0,-1,0,1,,IoFx.Runtime.FixedSizeCache<T>
+IoFx.Runtime,Scheduler,0,1,0,0,1,6,1,0,0,-1,1,0,IoFx.IHandler,
+IoFx.Runtime,SList,1,3,0,0,1,36,3,0,0,0,1,0,IoFx.Runtime.SListNode,
+IoFx.Runtime,SListNode,1,0,0,0,0,4,0,0,0,-1,0,1,,IoFx.Runtime.SList
+IoFx.ServiceModel,BindingExtensions,0,2,0,0,2,13,2,0,0,-1,0,0,,
+IoFx.ServiceModel,ChannelExtensions,0,8,0,0,7,180,8,0,0,-1,4,0,IoFx.ServiceModel.OutputChannelMessageConsumer' IoFx.IProducer' IoFx.IConsumer' IoFx.Connections.IConnection,
+IoFx.ServiceModel,Acceptor<TChannel>,2,4,0,0,3,54,6,0,1,0,0,0,,
+IoFx.ServiceModel,Receiver<TChannel>,3,4,0,0,3,51,7,0,1,0,0,0,,
+IoFx.ServiceModel,IoChannel<T;TChannel>,0,1,1,0,1,9,1,0,0,-1,2,0,IoFx.IProducer' IoFx.IConsumer,
+IoFx.ServiceModel,OutputChannelMessageConsumer,1,2,0,0,2,13,2,0,1,0,0,1,,IoFx.ServiceModel.ChannelExtensions
+IoFx.ServiceModel,ServiceModelExtensions,0,3,0,0,3,41,3,0,0,-1,1,0,IoFx.Connections.Context,
+IoFx.Sockets,SocketAwaitableEventArgs,3,7,1,0,3,51,11,0,1,0.43,0,5,,IoFx.Sockets.SocketFactory' IoFx.Sockets.SocketUtility' IoFx.Sockets.SocketListener' IoFx.Sockets.SocketOperationsEx' IoFx.Sockets.SocketReceiver
+IoFx.Sockets,SocketConnection,2,4,0,0,2,32,6,0,0,0.5,2,1,IoFx.IProducer' IoFx.IDisposableConsumer,IoFx.Sockets.SocketEvents
+IoFx.Sockets,SocketFactory,3,3,1,1,3,23,3,0,0,0.67,2,3,IoFx.Runtime.BufferManager' IoFx.Sockets.SocketAwaitableEventArgs,IoFx.Sockets.SocketListener' IoFx.Sockets.SocketEvents' IoFx.Sockets.SocketReceiver
+IoFx.Sockets,SocketUtility,0,2,0,0,1,37,2,0,0,-1,1,1,IoFx.Sockets.SocketAwaitableEventArgs,IoFx.Sockets.SocketEvents
+IoFx.Sockets,SocketListener,7,6,1,0,4,102,10,0,2,0,3,1,IoFx.Sockets.SocketFactory' IoFx.Sockets.SocketAwaitableEventArgs' IoFx.Tracing.Events,IoFx.Sockets.SocketEvents
+IoFx.Sockets,SocketOperationsEx,4,6,0,0,5,42,7,0,0,0,1,0,IoFx.Sockets.SocketAwaitableEventArgs,
+IoFx.Sockets,SocketEvents,0,8,0,0,7,51,8,0,0,-1,8,8,IoFx.Sockets.SocketUtility' IoFx.Connections.IDisposableConnection' IoFx.Sockets.SocketSender' IoFx.Sockets.SocketFactory' IoFx.Sockets.SocketListener' IoFx.Connections.IListener' IoFx.Sockets.SocketConnection' IoFx.Sockets.SocketReceiver,Samples.sockets.SocketSeverWithAck' Samples.sockets.SimpleSocketServer' Connect.Sockets.SocketServer' Connect.Sockets.LenghPrefixed.SocketClientWithAck' IoFx.Test.Sockets.Framing.LenghtPrefixed' IoFx.Test.Sockets.SocketAcceptTest' IoFx.Test.Sockets.SocketReceiverTests' IoFx.Test.Sockets.SocketSenderTests
+IoFx.Sockets,SocketReceiver,4,5,0,0,3,78,9,0,1,0,3,1,IoFx.Sockets.SocketFactory' IoFx.Sockets.SocketAwaitableEventArgs' IoFx.Runtime.BufferManager,IoFx.Sockets.SocketEvents
+IoFx.Sockets,SocketSender,7,10,0,0,8,87,12,0,2,0.2,2,1,IoFx.IQueueable' IoFx.IResourcePool,IoFx.Sockets.SocketEvents
+IoFx.Tracing,Events,1,2,0,1,2,16,2,0,0,1,0,1,,IoFx.Sockets.SocketListener
+IoFx.Tracing,Keywords,4,0,0,4,0,7,0,0,0,-1,0,0,,

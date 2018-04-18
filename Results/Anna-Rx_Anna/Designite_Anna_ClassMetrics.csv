@@ -1,15 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ObservableFromFile,4,3,0,0,2,37,5,0,0,0,0,1
-ArgumentsDynamic,1,3,0,0,3,24,3,0,0,0,0,0
-Request,1,3,10,0,2,75,3,0,0,1,0,1
-RequestContext,1,7,1,1,7,75,7,0,0,1,5,7
-BinaryResponse,1,2,0,0,2,12,2,1,1,0,1,1
-EmptyResponse,0,1,0,0,1,7,1,0,1,-1,1,1
-StaticFileResponse,2,2,0,0,2,18,2,0,1,0,2,1
-StringResponse,0,1,0,0,1,6,1,0,2,-1,1,1
-Response,1,4,2,0,4,67,8,3,0,0.5,1,0
-UnhandledRouteObserver,1,4,0,0,4,28,4,0,0,0.75,1,0
-CollectionExtensions,0,2,0,0,2,17,4,0,0,-1,0,0
-HttpServer,5,13,0,0,11,131,13,0,0,0,1,0
-StreamExtensions,0,1,0,0,1,11,1,0,0,-1,0,0
-UriExtensions,0,1,0,0,1,8,1,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Anna.Observables,ObservableFromFile,4,3,0,0,2,42,5,0,0,0,0,2,,Anna.Responses.StaticFileResponse' Anna.Tests.Observables.ObservableFromFileTests
+Anna.Request,ArgumentsDynamic,1,3,0,0,3,26,3,0,0,0,0,0,,
+Anna.Request,Request,1,3,10,0,2,42,3,0,0,1,0,2,,Anna.Observers.UnhandledRouteObserver' Anna.HttpServer
+Anna.Request,RequestContext,1,7,1,1,7,72,7,0,0,0.71,4,7,Anna.Responses.EmptyResponse' Anna.Responses.StringResponse' Anna.Responses.BinaryResponse' Anna.Responses.StaticFileResponse,Anna.Responses.BinaryResponse' Anna.Responses.EmptyResponse' Anna.Responses.StaticFileResponse' Anna.Responses.StringResponse' Anna.Responses.Response' Anna.Observers.UnhandledRouteObserver' Anna.HttpServer
+Anna.Responses,BinaryResponse,1,2,0,0,2,14,2,1,1,0,1,1,Anna.Request.RequestContext,Anna.Request.RequestContext
+Anna.Responses,EmptyResponse,0,1,0,0,1,7,1,0,1,-1,1,2,Anna.Request.RequestContext,Anna.Request.RequestContext' Anna.Observers.UnhandledRouteObserver
+Anna.Responses,StaticFileResponse,2,2,0,0,2,21,2,0,1,0,2,1,Anna.Request.RequestContext' Anna.Observables.ObservableFromFile,Anna.Request.RequestContext
+Anna.Responses,StringResponse,0,1,0,0,1,7,1,0,2,-1,1,1,Anna.Request.RequestContext,Anna.Request.RequestContext
+Anna.Responses,Response,1,4,2,0,4,66,7,3,0,0.5,1,0,Anna.Request.RequestContext,
+Anna.Observers,UnhandledRouteObserver,1,4,0,0,4,25,5,0,0,0.75,3,0,Anna.Request.Request' Anna.Request.RequestContext' Anna.Responses.EmptyResponse,
+AsyncHttp.Server,CollectionExtensions,0,2,0,0,2,19,4,0,0,-1,0,0,,
+Anna,HttpServer,5,13,0,0,11,139,15,0,0,0.15,2,1,Anna.Request.Request' Anna.Request.RequestContext,Anna.Tests.ServerTests
+Anna,StreamExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
+Anna.Util,UriExtensions,0,1,0,0,1,10,1,0,0,-1,0,0,,

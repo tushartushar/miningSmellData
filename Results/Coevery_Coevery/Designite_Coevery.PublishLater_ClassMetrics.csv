@@ -1,12 +1,13 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-PublishLaterPartDriver,5,6,3,0,1,88,13,0,2,0.67,10,0
-PublishingTaskHandler,2,2,1,0,2,23,3,0,2,0,5,0
-PublishLaterPartHandler,1,2,0,0,1,15,2,0,2,0,3,0
-Migrations,0,2,0,0,2,13,2,0,2,-1,1,0
-ResourceManifest,0,1,0,0,1,7,1,0,3,-1,1,0
-PublishLaterPart,1,0,1,0,0,9,0,0,2,-1,1,6
-IPublishLaterService,0,2,0,0,0,5,2,1,1,-1,2,2
-PublishingTaskManager,2,4,0,0,4,23,4,0,2,0,2,0
-PublishLaterService,1,3,2,0,1,29,3,0,2,0,7,0
-XmlRpcHandler,4,8,1,0,3,117,22,0,2,0.25,13,0
-PublishLaterViewModel,1,1,7,0,1,40,1,0,0,0,2,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coevery.PublishLater.Drivers,PublishLaterPartDriver,5,6,3,0,1,93,12,0,0,0.67,14,0,Coevery.Mvc.IHttpContextAccessor' Coevery.PublishLater.Services.IPublishLaterService' Coevery.Services.IClock' Coevery.Localization.NullLocalizer' Coevery.WorkContext' Coevery.ICoeveryServices' Coevery.PublishLater.Models.PublishLaterPart' Coevery.ContentManagement.Drivers.CombinedResult' Coevery.PublishLater.ViewModels.PublishLaterViewModel' Coevery.ContentManagement.Drivers.ContentShapeResult' Coevery.ContentManagement.IUpdateModel' Coevery.ContentManagement.Handlers.ImportContentContext' Coevery.ContentManagement.MetaData.Models.ContentPartDefinition' Coevery.ContentManagement.Handlers.ExportContentContext,
+Coevery.PublishLater.Handlers,PublishingTaskHandler,2,2,1,0,2,20,3,0,2,0,7,0,Coevery.ContentManagement.IContentManager' Coevery.ICoeveryServices' Coevery.Logging.NullLogger' Coevery.Tasks.Scheduling.IScheduledTask' Coevery.Tasks.Scheduling.ScheduledTaskContext' Coevery.Logging.ILogger' Coevery.ContentManagement.ContentItem,
+Coevery.PublishLater.Handlers,PublishLaterPartHandler,1,2,0,0,1,14,2,0,2,0,3,0,Coevery.PublishLater.Services.IPublishLaterService' Coevery.Tasks.Scheduling.IPublishingTaskManager' Coevery.PublishLater.Models.PublishLaterPart,
+Coevery.PublishLater,Migrations,0,2,0,0,2,11,2,0,2,-1,2,0,Coevery.ContentManagement.MetaData.IContentDefinitionManager' Coevery.ContentManagement.MetaData.Builders.ContentPartDefinitionBuilder,
+Coevery.PublishLater,ResourceManifest,0,1,0,0,1,5,1,0,3,-1,3,0,Coevery.UI.Resources.ResourceDefinition' Coevery.UI.Resources.ResourceManifest' Coevery.UI.Resources.ResourceManifestBuilder,
+Coevery.PublishLater.Models,PublishLaterPart,1,0,1,0,0,4,0,0,2,-1,0,6,,Coevery.PublishLater.Drivers.PublishLaterPartDriver' Coevery.PublishLater.Handlers.PublishLaterPartHandler' Coevery.PublishLater.Services.IPublishLaterService' Coevery.PublishLater.Services.PublishLaterService' Coevery.PublishLater.Services.XmlRpcHandler' Coevery.PublishLater.ViewModels.PublishLaterViewModel
+Coevery.PublishLater.Services,IPublishLaterService,0,2,0,0,0,4,2,1,1,-1,2,2,Coevery.PublishLater.Models.PublishLaterPart' Coevery.ContentManagement.ContentItem,Coevery.PublishLater.Drivers.PublishLaterPartDriver' Coevery.PublishLater.Handlers.PublishLaterPartHandler
+Coevery.PublishLater.Services,PublishingTaskManager,2,4,0,0,4,21,4,0,2,0,3,0,Coevery.Tasks.Scheduling.IScheduledTaskManager' Coevery.Tasks.Scheduling.IScheduledTask' Coevery.ContentManagement.ContentItem,
+Coevery.PublishLater.Services,PublishLaterService,1,3,2,0,1,21,4,0,2,0,8,0,Coevery.Tasks.Scheduling.IPublishingTaskManager' Coevery.Localization.NullLocalizer' Coevery.ICoeveryServices' Coevery.Security.IAuthorizer' Coevery.Core.Contents.Permissions' Coevery.ContentManagement.ContentItem' Coevery.Tasks.Scheduling.IScheduledTask' Coevery.PublishLater.Models.PublishLaterPart,
+Coevery.PublishLater.Services,XmlRpcHandler,4,8,1,0,3,132,15,0,2,0.25,16,0,Coevery.ContentManagement.IContentManager' Coevery.Tasks.Scheduling.IPublishingTaskManager' Coevery.Security.IMembershipService' Coevery.Security.IAuthorizationService' Coevery.Localization.NullLocalizer' Coevery.Core.XmlRpc.Models.XRpcMethodCall' Coevery.Core.XmlRpc.XmlRpcContext' Coevery.Core.XmlRpc.Models.XRpcData' Coevery.PublishLater.Services.XmlRpcDriver' Coevery.Core.XmlRpc.Models.XRpcStruct' Coevery.ContentManagement.ContentItem' Coevery.ContentManagement.VersionOptions' Coevery.PublishLater.Models.PublishLaterPart' Coevery.Security.IUser' Coevery.Core.Contents.Permissions' Coevery.Core.XmlRpc.Models.XRpcMethodResponse,
+Coevery.PublishLater.Services,XmlRpcDriver,1,2,0,0,2,9,2,0,1,0,0,1,,Coevery.PublishLater.Services.XmlRpcHandler
+Coevery.PublishLater.ViewModels,PublishLaterViewModel,1,1,7,0,1,24,1,0,0,0,1,1,Coevery.PublishLater.Models.PublishLaterPart,Coevery.PublishLater.Drivers.PublishLaterPartDriver

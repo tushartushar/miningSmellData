@@ -1,13 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AsyncAppender,3,10,3,0,9,130,15,0,1,0.3,5,0
-FastDbAppender,2,7,2,0,4,155,17,0,1,0.43,1,0
-MessageLoggedEventArgs,1,1,1,0,1,13,1,0,0,0,1,1
-FireEventAppender,2,2,2,0,1,44,3,0,1,1,2,1
-MessageBoxAppender,2,4,1,0,3,63,6,0,1,0.5,3,0
-MessageObjectExpanderAppender,2,1,2,0,0,49,7,0,1,0,1,0
-MsmqAppender,3,3,2,0,1,65,9,0,1,0.67,2,0
-PatternFileAppender,3,3,3,0,2,81,11,0,1,0.67,5,0
-PatternLayoutAdoNetAppender,1,3,0,0,2,54,4,0,1,0,3,0
-PatternLayoutAdoNetAppenderParameter,1,0,1,0,0,12,0,0,1,-1,0,1
-SimpleSmtpAppender,4,2,5,0,1,90,7,0,1,1,2,0
-LoggingExample,1,5,0,0,1,87,11,0,0,0.4,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SampleAppendersApp.Appender,AsyncAppender,3,10,3,0,9,140,14,0,0,0.3,0,0,,
+SampleAppendersApp.Appender,FastDbAppender,2,7,2,0,4,137,7,0,0,0.43,0,0,,
+SampleAppendersApp.Appender,MessageLoggedEventArgs,1,1,1,0,1,12,1,0,0,0,0,1,,SampleAppendersApp.LoggingExample
+SampleAppendersApp.Appender,FireEventAppender,2,2,2,0,1,34,3,0,1,1,0,1,,SampleAppendersApp.LoggingExample
+SampleAppendersApp.Appender,MessageBoxAppender,2,4,1,0,3,54,6,0,0,0.5,1,0,SampleAppendersApp.Appender.LevelIcon,
+SampleAppendersApp.Appender,LevelIcon,1,0,1,0,0,9,0,0,0,-1,0,1,,SampleAppendersApp.Appender.MessageBoxAppender
+SampleAppendersApp.Appender,MessageObjectExpanderAppender,2,1,2,0,0,44,7,0,1,0,1,0,log4net.Appender.ForwardingAppender,
+SampleAppendersApp.Appender,MsmqAppender,3,3,2,0,1,57,7,0,1,0.67,1,0,log4net.Appender.AppenderSkeleton,
+SampleAppendersApp.Appender,PatternFileAppender,3,3,3,0,2,69,5,0,0,0.67,0,0,,
+SampleAppendersApp.Appender,PatternLayoutAdoNetAppender,1,3,0,0,2,23,4,0,0,0,1,0,SampleAppendersApp.Appender.PatternLayoutAdoNetAppenderParameter,
+SampleAppendersApp.Appender,PatternLayoutAdoNetAppenderParameter,1,0,1,0,0,9,0,0,0,-1,0,1,,SampleAppendersApp.Appender.PatternLayoutAdoNetAppender
+SampleAppendersApp.Appender,SimpleSmtpAppender,4,2,5,0,1,79,6,0,0,1,0,0,,
+SampleAppendersApp,LoggingExample,1,5,0,0,1,86,9,0,0,0.4,3,0,log4net.ILog' SampleAppendersApp.Appender.FireEventAppender' SampleAppendersApp.Appender.MessageLoggedEventArgs,
+SampleAppendersApp,MsgObj,2,1,2,0,1,18,1,0,0,0,0,0,,

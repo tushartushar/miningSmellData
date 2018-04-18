@@ -1,10 +1,9 @@
 Implementation smell,Namespace,Class,File,Method,Description
-Long Parameter List,Ldtp,ILdtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,LaunchApp,The method has 5 parameters.
-Long Parameter List,Ldtp,ILdtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,SimulateMouseMove,The method has 5 parameters.
-Long Parameter List,Ldtp,ILdtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,SetCellValue,The method has 5 parameters.
-Long Parameter List,Ldtp,ILdtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,ImageCapture,The method has 5 parameters.
-Long Parameter List,Ldtp,Ldtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,LaunchApp,The method has 5 parameters.
-Long Parameter List,Ldtp,Ldtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,SimulateMouseMove,The method has 5 parameters.
-Long Parameter List,Ldtp,Ldtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,ImageCapture,The method has 6 parameters.
-Magic Number,Ldtp,Ldtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,launchLdtpProcess,The following statement contains a magic number: try {  	ProcessStartInfo psi = new ProcessStartInfo ();  	psi.FileName = cmd;  	psi.UseShellExecute = true;  	psi.WindowStyle = ProcessWindowStyle.Hidden;  	ps.StartInfo = psi;  	ps.Start ();  	Thread thread = new Thread (new ParameterizedThreadStart (InternalLaunchProcess));  	// Clean up in different thread  	//thread.Start(ps);  	// Wait 5 seconds after launching  	Thread.Sleep (5000);  } catch (Exception ex) {  	throw new LdtpExecutionError (ex.Message);  }  
-Magic Number,Ldtp,Ldtp,F:\newReposMay17\ldtp_cobra\Ldtp\Ldtp.cs,launchLdtpProcess,The following statement contains a magic number: Thread.Sleep (5000);  
+Long Parameter List,Ldtp,ILdtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,LaunchApp,The method has 5 parameters. Parameters: cmd' args' delay' env' lang
+Long Parameter List,Ldtp,ILdtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,SimulateMouseMove,The method has 5 parameters. Parameters: source_x' source_y' dest_x' dest_y' delay
+Long Parameter List,Ldtp,ILdtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,SetCellValue,The method has 5 parameters. Parameters: windowName' objName' row' column' data
+Long Parameter List,Ldtp,ILdtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,ImageCapture,The method has 5 parameters. Parameters: windowName' x' y' width' height
+Long Parameter List,Ldtp,Ldtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,LaunchApp,The method has 5 parameters. Parameters: cmd' args' delay' env' lang
+Long Parameter List,Ldtp,Ldtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,SimulateMouseMove,The method has 5 parameters. Parameters: source_x' source_y' dest_x' dest_y' delay
+Long Parameter List,Ldtp,Ldtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,ImageCapture,The method has 6 parameters. Parameters: windowName' outFile' x' y' width' height
+Magic Number,Ldtp,Ldtp,C:\repos\ldtp_cobra\Ldtp\Ldtp.cs,launchLdtpProcess,The following statement contains a magic number: try              {                  ProcessStartInfo psi = new ProcessStartInfo();                  psi.FileName = cmd;                  psi.UseShellExecute = true;                  psi.WindowStyle = ProcessWindowStyle.Hidden;                  ps.StartInfo = psi;                  ps.Start();                  Thread thread = new Thread(new ParameterizedThreadStart(                      InternalLaunchProcess));                  // Clean up in different thread                  //thread.Start(ps);                  // Wait 5 seconds after launching                  Thread.Sleep(5000);              }              catch (Exception ex)              {                  throw new LdtpExecutionError(ex.Message);              }

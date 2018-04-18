@@ -1,0 +1,65 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Contoso.Core,ActionCollection,0,2,0,0,2,22,2,0,0,-1,0,1,,Contoso.Core.BulkUserProfileUpdater.Program
+Contoso.Core,BaseAction,0,2,7,0,2,114,3,2,0,-1,2,5,Contoso.Core.LogHelper' Contoso.Core.CsvProcessor,Contoso.Core.PropertyBase' Contoso.Core.UserProfileMapper' Contoso.Core.ProfilePropertyMapper' Contoso.Core.Mappers.LDAPConnector' Contoso.Core.BulkUserProfileUpdater.Program
+Contoso.Core,EmailSender,0,0,4,0,0,23,0,0,0,-1,0,2,,Contoso.Core.CsvLogger' Contoso.Core.TextFileLogger
+Contoso.Core,LoggerBase,0,5,2,0,5,48,5,3,0,-1,0,1,,Contoso.Core.LogHelper
+Contoso.Core,LoggerCollection,0,2,0,0,2,22,2,0,0,-1,0,1,,Contoso.Core.LogHelper
+Contoso.Core,PropertyBase,0,1,3,0,1,56,1,1,0,-1,1,2,Contoso.Core.BaseAction,Contoso.Core.UserProfileMapper' Contoso.Core.Mappers.LDAPConnector
+Contoso.Core,PropertyCollection,0,2,0,0,2,22,2,0,0,-1,0,0,,
+Contoso.Core,PropertyMapper,0,0,3,0,0,38,0,0,0,-1,0,1,,Contoso.Core.BulkUserProfileUpdater.Program
+Contoso.Core,CsvLogger,1,3,1,0,3,67,7,0,1,1,2,0,Contoso.Core.EmailHelper' Contoso.Core.EmailSender,
+Contoso.Core,TextFileLogger,1,4,1,0,4,68,9,0,1,0.75,2,0,Contoso.Core.EmailHelper' Contoso.Core.EmailSender,
+Contoso.Core,UserProfileMapper,4,2,2,0,2,137,6,0,1,0,6,0,Contoso.Core.UserProfileService.UserProfileService' Contoso.Core.UserProfileService.PropertyData' Contoso.Core.PropertyBase' Contoso.Core.LogHelper' Contoso.Core.CsvProcessor' Contoso.Core.BaseAction,
+Contoso.Core,ProfilePropertyMapper,0,1,0,0,1,27,2,0,1,-1,3,0,Contoso.Core.UserProfileService.PropertyData' Contoso.Core.UserProfileService.ValueData' Contoso.Core.BaseAction,
+Contoso.Core,CsvProcessor,1,2,2,0,1,163,13,0,0,0,1,2,Contoso.Core.LogHelper,Contoso.Core.BaseAction' Contoso.Core.UserProfileMapper
+Contoso.Core,EmailHelper,0,1,0,0,1,23,1,0,0,-1,0,2,,Contoso.Core.CsvLogger' Contoso.Core.TextFileLogger
+Contoso.Core,LogHelper,4,7,0,0,5,122,20,0,0,0.29,2,6,Contoso.Core.LoggerCollection' Contoso.Core.LoggerBase,Contoso.Core.BaseAction' Contoso.Core.UserProfileMapper' Contoso.Core.CsvProcessor' Contoso.Core.Mappers.LDAPConnector' Contoso.Core.BulkUserProfileUpdater.Program' Contoso.Core.Utilities.CSVWriter
+Contoso.Core.Logger,EventViewerLogger,0,2,3,0,2,61,4,0,1,-1,0,0,,
+Contoso.Core.Mappers,LDAPConnector,2,13,17,0,5,347,22,0,1,0.31,5,0,Contoso.Core.LogHelper' Contoso.Core.BaseAction' Contoso.Core.Utilities.CSVUserEntry' Contoso.Core.PropertyBase' Contoso.Core.Utilities.CSVWriter,
+Contoso.Core.BulkUserProfileUpdater,Program,3,4,0,0,0,100,8,0,0,0,4,0,Contoso.Core.PropertyMapper' Contoso.Core.LogHelper' Contoso.Core.BaseAction' Contoso.Core.ActionCollection,
+Contoso.Core.Utilities,CSVUserEntry,0,0,1,0,0,8,0,0,0,-1,0,2,,Contoso.Core.Mappers.LDAPConnector' Contoso.Core.Utilities.CSVWriter
+Contoso.Core.Utilities,CSVWriter,0,2,0,0,2,48,6,0,0,-1,2,1,Contoso.Core.Utilities.CSVUserEntry' Contoso.Core.LogHelper,Contoso.Core.Mappers.LDAPConnector
+Contoso.Core.UserProfileService,UserProfileService,44,175,2,0,131,1611,264,0,0,0.75,12,1,Contoso.Core.UserProfileService.GetUserProfileByIndexResult' Contoso.Core.UserProfileService.PropertyData' Contoso.Core.UserProfileService.PropertyInfo' Contoso.Core.UserProfileService.MembershipData' Contoso.Core.UserProfileService.Privacy' Contoso.Core.UserProfileService.OrganizationProfileData' Contoso.Core.UserProfileService.ContactData' Contoso.Core.UserProfileService.QuickLinkData' Contoso.Core.UserProfileService.PinnedLinkData' Contoso.Core.UserProfileService.InCommonData' Contoso.Core.UserProfileService.SuggestionType' Contoso.Core.UserProfileService.Leader,Contoso.Core.UserProfileMapper
+Contoso.Core.UserProfileService,GetUserProfileByIndexResult,6,0,6,0,0,79,0,0,0,-1,5,1,Contoso.Core.UserProfileService.PropertyData' Contoso.Core.UserProfileService.ContactData' Contoso.Core.UserProfileService.QuickLinkData' Contoso.Core.UserProfileService.PinnedLinkData' Contoso.Core.UserProfileService.MembershipData,Contoso.Core.UserProfileService.UserProfileService
+Contoso.Core.UserProfileService,PropertyData,5,0,5,0,0,67,0,0,0,-1,2,4,Contoso.Core.UserProfileService.Privacy' Contoso.Core.UserProfileService.ValueData,Contoso.Core.UserProfileMapper' Contoso.Core.ProfilePropertyMapper' Contoso.Core.UserProfileService.UserProfileService' Contoso.Core.UserProfileService.GetUserProfileByIndexResult
+Contoso.Core.UserProfileService,Privacy,0,0,0,0,0,23,0,0,0,-1,0,6,,Contoso.Core.UserProfileService.UserProfileService' Contoso.Core.UserProfileService.PropertyData' Contoso.Core.UserProfileService.ContactData' Contoso.Core.UserProfileService.MembershipData' Contoso.Core.UserProfileService.PropertyInfo' Contoso.Core.UserProfileService.QuickLinkData
+Contoso.Core.UserProfileService,ValueData,1,0,1,0,0,19,0,0,0,-1,0,2,,Contoso.Core.ProfilePropertyMapper' Contoso.Core.UserProfileService.PropertyData
+Contoso.Core.UserProfileService,Leader,4,0,4,0,0,55,0,0,0,-1,0,1,,Contoso.Core.UserProfileService.UserProfileService
+Contoso.Core.UserProfileService,InCommonData,3,0,3,0,0,43,0,0,0,-1,2,1,Contoso.Core.UserProfileService.ContactData' Contoso.Core.UserProfileService.MembershipData,Contoso.Core.UserProfileService.UserProfileService
+Contoso.Core.UserProfileService,ContactData,10,0,10,0,0,127,0,0,0,-1,1,3,Contoso.Core.UserProfileService.Privacy,Contoso.Core.UserProfileService.UserProfileService' Contoso.Core.UserProfileService.GetUserProfileByIndexResult' Contoso.Core.UserProfileService.InCommonData
+Contoso.Core.UserProfileService,MembershipData,9,0,9,0,0,115,0,0,0,-1,3,3,Contoso.Core.UserProfileService.MembershipSource' Contoso.Core.UserProfileService.MemberGroupData' Contoso.Core.UserProfileService.Privacy,Contoso.Core.UserProfileService.UserProfileService' Contoso.Core.UserProfileService.GetUserProfileByIndexResult' Contoso.Core.UserProfileService.InCommonData
+Contoso.Core.UserProfileService,MembershipSource,0,0,0,0,0,14,0,0,0,-1,0,1,,Contoso.Core.UserProfileService.MembershipData
+Contoso.Core.UserProfileService,MemberGroupData,2,0,2,0,0,31,0,0,0,-1,0,1,,Contoso.Core.UserProfileService.MembershipData
+Contoso.Core.UserProfileService,OrganizationProfileData,2,0,2,0,0,31,0,0,0,-1,0,1,,Contoso.Core.UserProfileService.UserProfileService
+Contoso.Core.UserProfileService,PropertyInfo,25,0,25,0,0,308,0,0,0,-1,2,1,Contoso.Core.UserProfileService.Privacy' Contoso.Core.UserProfileService.ChoiceTypes,Contoso.Core.UserProfileService.UserProfileService
+Contoso.Core.UserProfileService,ChoiceTypes,0,0,0,0,0,17,0,0,0,-1,0,1,,Contoso.Core.UserProfileService.PropertyInfo
+Contoso.Core.UserProfileService,SPTimeZone,1,0,1,0,0,19,0,0,0,-1,0,0,,
+Contoso.Core.UserProfileService,PinnedLinkData,3,0,3,0,0,43,0,0,0,-1,0,2,,Contoso.Core.UserProfileService.UserProfileService' Contoso.Core.UserProfileService.GetUserProfileByIndexResult
+Contoso.Core.UserProfileService,QuickLinkData,5,0,5,0,0,67,0,0,0,-1,1,2,Contoso.Core.UserProfileService.Privacy,Contoso.Core.UserProfileService.UserProfileService' Contoso.Core.UserProfileService.GetUserProfileByIndexResult
+Contoso.Core.UserProfileService,SuggestionType,0,0,0,0,0,11,0,0,0,-1,0,1,,Contoso.Core.UserProfileService.UserProfileService
+Contoso.Core.UserProfileService,GetUserProfileByIndexCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,CreateUserProfileByAccountNameCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserProfileByNameCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserProfileByGuidCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserProfileSchemaCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetProfileSchemaNameByAccountNameCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetPropertyChoiceListCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserPropertyByAccountNameCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,AddMembershipCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserMembershipsCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserOrganizationsCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserColleaguesCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserLinksCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserPinnedLinksCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetInCommonCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetCommonManagerCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetCommonColleaguesCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetCommonMembershipsCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,AddColleagueCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,AddColleagueWithoutEmailNotificationCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,AddPinnedLinkCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,AddLinkCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetUserProfileCountCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetProfileSchemaNamesCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetProfileSchemaCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,
+Contoso.Core.UserProfileService,GetLeadersCompletedEventArgs,1,1,1,0,0,20,1,0,0,0,0,0,,

@@ -1,21 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IEditableView,0,1,1,0,0,7,1,1,1,-1,0,1
-IPluginLoadingContextAction,0,1,0,0,0,8,1,0,0,-1,0,0
-IPluginUnloadingContextAction,0,2,0,0,0,11,2,0,0,-1,0,1
-IView,0,1,0,0,0,4,1,2,0,-1,0,1
-NonUIPluginAction,0,6,1,0,3,42,9,3,1,-1,3,0
-PluginController,5,9,5,0,3,121,21,0,1,0.67,7,1
-PluginHelper,0,1,0,0,0,6,1,0,0,-1,0,0
-PluginHost,3,5,4,0,3,42,5,1,1,0.8,2,0
-PluginManager,3,12,1,0,5,116,25,0,1,0.83,7,0
-PluginServiceProviderAdapter,1,7,0,0,7,48,10,0,1,0,0,0
-FormPluginOverlayBase,1,5,1,0,3,51,6,0,1,0.6,2,0
-UCPluginViewBase,6,11,6,0,4,147,18,1,1,0.82,3,0
-CoreNavigationForm,4,7,4,0,3,128,12,1,1,0.29,12,2
-RibbonExtensionHelper,0,5,0,0,5,88,22,0,0,-1,9,1
-RibbonModulePluginHost,1,9,0,0,2,126,31,1,2,0.56,11,0
-RibbonButtonAlignment,0,0,0,0,0,5,0,0,0,-1,0,5
-RibbonButtonClickStatus,0,0,0,0,0,15,0,0,0,-1,0,3
-RibbonModulePluginItem,0,5,6,0,5,44,5,1,2,-1,3,5
-RibbonModulePluginProvider,3,9,2,1,9,64,9,1,1,0.89,3,1
-UCRibbonPluginViewBase,1,7,1,0,3,64,10,3,2,0.57,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+EApp.Plugin.Generic,IEditableView,0,1,1,0,0,5,1,1,1,-1,0,1,,EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginHost
+EApp.Plugin.Generic,IPluginLoadingContextAction,0,1,0,0,0,10,1,0,0,-1,1,0,EApp.Core.Plugin.IPluginController,
+EApp.Plugin.Generic,IPluginUnloadingContextAction,0,2,0,0,0,11,2,0,0,-1,0,1,,EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginHost
+EApp.Plugin.Generic,IView,0,1,0,0,0,4,1,2,0,-1,0,2,,EApp.Plugin.Generic.PluginController<TPluginItem>' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginHost
+EApp.Plugin.Generic,NonUIPluginAction,0,6,1,0,3,52,8,3,1,-1,1,0,EApp.Core.Plugin.IPluginServiceProvider,
+EApp.Plugin.Generic,PluginController<TPluginItem>,5,9,5,0,3,145,21,0,1,0.67,10,0,EApp.Core.Plugin.IPluginServiceProvider' EApp.Core.Plugin.IPlugin' EApp.Core.Plugin.IPluginManager' EApp.Plugin.Generic.IView' EApp.Core.Plugin.LifetimeMode' EApp.Core.Plugin.IPluginController' EApp.Core.IObjectContainer' EApp.Core.Application.IApp' EApp.Core.Application.EAppRuntime' EApp.Core.Plugin.PluginLoadedEventArgs,
+EApp.Plugin.Generic,PluginHelper,0,1,0,0,0,4,1,0,0,-1,0,0,,
+EApp.Plugin.Generic,PluginHost<TServiceProviderFactory;TPluginItem>,3,5,4,0,3,52,5,0,1,0.8,2,0,EApp.Core.Plugin.IPluginProvider' EApp.Core.Plugin.IPluginManager,
+EApp.Plugin.Generic,PluginManager<TPluginItem>,3,12,1,0,5,134,25,0,1,0.83,4,0,EApp.Core.Plugin.IPluginProvider' EApp.Core.Plugin.IPluginServiceProvider' EApp.Core.Plugin.IPluginManager' EApp.Core.Plugin.IPluginController,
+EApp.Plugin.Generic,PluginServiceProviderAdapter,1,7,0,0,7,54,10,0,1,0,0,0,,
+EApp.Plugin.Generic,FormPluginOverlayBase,1,5,1,0,3,54,6,0,1,0.6,1,0,EApp.Core.Plugin.IPluginServiceProvider,
+EApp.Plugin.Generic,UCPluginViewBase<TPluginItem>,6,11,6,0,4,162,18,0,1,0.82,4,0,EApp.Core.Plugin.IPluginController' EApp.Core.Plugin.IPluginManager' EApp.Core.Plugin.IPluginServiceProvider' EApp.Core.Plugin.LifetimeMode,
+EApp.Plugin.Generic.RibbonStyle,CoreNavigationForm,4,7,4,0,3,142,12,1,1,0.29,17,3,EApp.Core.Plugin.IPluginProvider' EApp.Core.IResourceManager' System.Windows.Forms.Ribbon' System.Windows.Forms.RibbonItem' EApp.UI.Controls.UIHandler.RibbonHelper' System.Windows.Forms.RibbonOrbDropDown' System.Windows.Forms.RibbonPanel' System.Windows.Forms.RibbonButton' System.Windows.Forms.RibbonTab' System.Windows.Forms.RibbonTabCollection' System.Windows.Forms.RibbonQuickAccessToolbarItemCollection' System.Windows.Forms.RibbonQuickAccessToolbar' EApp.Core.Plugin.NavigationNodeItem' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginItem' EApp.Plugin.Generic.RibbonStyle.RibbonButtonAlignment' System.Windows.Forms.RibbonItemCollection' System.Windows.Forms.RibbonPanelCollection,EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginHost' Xpress.UI.XpressAppNav' Xpress.UI.XpressModulePluginHost
+EApp.Plugin.Generic.RibbonStyle,RibbonExtensionHelper,0,5,0,0,5,141,22,0,0,-1,15,1,System.Windows.Forms.RibbonItem' System.Windows.Forms.RibbonTab' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginProvider' EApp.UI.Controls.UIHandler.RibbonHelper' EApp.Plugin.Generic.RibbonStyle.RibbonButtonAlignment' System.Windows.Forms.RibbonItemCollection' System.Windows.Forms.RibbonPanel' System.Windows.Forms.Ribbon' EApp.Core.IResourceManager' EApp.Core.Application.IApp' EApp.Core.Application.EAppRuntime' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginItem' EApp.Core.Plugin.NavigationNodeItem' System.Windows.Forms.RibbonTabCollection' EApp.Plugin.Generic.RibbonStyle.RibbonButtonClickStatus,EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginHost
+EApp.Plugin.Generic.RibbonStyle,RibbonModulePluginHost,1,9,0,0,2,170,26,1,0,0.56,12,0,EApp.Core.Plugin.IPluginController' EApp.Core.Plugin.IPluginProvider' EApp.Plugin.Generic.RibbonStyle.CoreNavigationForm' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginItem' System.Windows.Forms.RibbonButton' EApp.Core.Plugin.IPluginManager' EApp.Plugin.Generic.IView' EApp.Plugin.Generic.IPluginUnloadingContextAction' EApp.Plugin.Generic.IEditableView' EApp.Plugin.Generic.RibbonStyle.RibbonExtensionHelper' EApp.Plugin.Generic.RibbonStyle.RibbonButtonClickStatus' System.Windows.Forms.RibbonTab,
+EApp.Plugin.Generic.RibbonStyle,RibbonButtonAlignment,0,0,0,0,0,5,0,0,0,-1,0,4,,EApp.Plugin.Generic.RibbonStyle.CoreNavigationForm' EApp.Plugin.Generic.RibbonStyle.RibbonExtensionHelper' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginProvider' Xpress.Core.Plugin.XpressModulePluginProvider
+EApp.Plugin.Generic.RibbonStyle,RibbonButtonClickStatus,0,0,0,0,0,15,0,0,0,-1,0,2,,EApp.Plugin.Generic.RibbonStyle.RibbonExtensionHelper' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginHost
+EApp.Plugin.Generic.RibbonStyle,RibbonModulePluginItem,0,5,6,0,5,28,5,1,0,-1,1,4,EApp.Core.Plugin.NavigationNodeItem,EApp.Plugin.Generic.RibbonStyle.CoreNavigationForm' EApp.Plugin.Generic.RibbonStyle.RibbonExtensionHelper' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginHost' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginProvider
+EApp.Plugin.Generic.RibbonStyle,RibbonModulePluginProvider,3,9,2,1,9,109,9,1,1,0.33,3,1,EApp.Core.Plugin.NavigationNodeItem' EApp.Plugin.Generic.RibbonStyle.RibbonModulePluginItem' EApp.Plugin.Generic.RibbonStyle.RibbonButtonAlignment,EApp.Plugin.Generic.RibbonStyle.RibbonExtensionHelper
+EApp.Plugin.Generic.RibbonStyle,UCRibbonPluginViewBase,1,7,1,0,3,66,10,3,0,0.57,2,3,EApp.Core.Plugin.IPluginServiceProvider' System.Windows.Forms.Ribbon,Xpress.UI.Plugins.Cost.UCCostBase<TCostLineItem>' Xpress.UI.Plugins.Price.UCDirectPricing' Xpress.UI.Plugins.Price.UCNonStandardPayment

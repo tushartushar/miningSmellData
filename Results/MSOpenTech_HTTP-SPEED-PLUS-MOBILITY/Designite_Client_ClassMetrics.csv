@@ -1,0 +1,26 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Client.HttpBenchmark,HttpReportLines,0,0,0,0,0,43,0,0,0,-1,0,1,,Client.HttpBenchmark.HttpTrafficLog
+Client.HttpBenchmark,HttpHeaderLogItem,0,2,2,0,2,32,2,0,0,-1,0,1,,Client.HttpBenchmark.HttpTrafficLog
+Client.HttpBenchmark,HttpTrafficLog,4,7,8,0,7,186,10,0,0,0.29,2,3,Client.HttpBenchmark.HttpReportLines' Client.HttpBenchmark.HttpHeaderLogItem,Client.Http.HttpRequest' Client.Benchmark.ProtocolMonitor' Client.Benchmark.StatisticsSnapshot
+Client.Http,RequestPackage,6,0,0,6,0,27,0,0,0,-1,0,1,,Client.Http.HttpRequest
+Client.Http,HttpRequest,13,12,0,0,3,440,35,0,0,0,5,1,Client.HttpBenchmark.HttpTrafficLog' Client.Http.RequestPackage' Client.ContentTypes' Client.Utils.Http2Logger' Client.XHtmlDocument,Client.Program
+Client.Benchmark,FrameLogItem,6,2,0,6,2,72,4,0,0,0,4,1,System.ServiceModel.Http2Protocol.ProtocolFrames.FrameType' System.ServiceModel.Http2Protocol.ProtocolFrames.BaseFrame' System.ServiceModel.Http2Protocol.ProtocolFrames.ControlFrame' System.ServiceModel.Http2Protocol.ProtocolHeaders,Client.Benchmark.ProtocolMonitorLog
+Client.Benchmark,ProtocolMonitor,9,15,6,0,8,371,29,0,0,0.13,13,1,System.ServiceModel.Http2Protocol.ProtocolSession' Client.Benchmark.ProtocolMonitorLog' System.ServiceModel.Http2Protocol.ProtocolFramesMonitor' Client.Benchmark.StreamStats' Client.Benchmark.MonitorState' Client.Benchmark.StreamInfo' Client.Benchmark.StatisticsSnapshot' Client.HttpBenchmark.HttpTrafficLog' Client.Utils.Http2LoggerState' System.ServiceModel.Http2Protocol.ProtocolFrames.ControlFrame' System.ServiceModel.Http2Protocol.ProtocolFrames.FrameType' System.ServiceModel.Http2Protocol.ProtocolFrames.BaseFrame' System.ServiceModel.Http2Protocol.FrameEventArgs,Client.Program
+Client.Benchmark,ProtocolMonitorLog,3,7,13,0,7,221,10,0,0,0.57,2,3,Client.Benchmark.ProtocolReportLines' Client.Benchmark.FrameLogItem,Client.Benchmark.ProtocolMonitor' Client.Benchmark.StatisticsSnapshot' Client.Program
+Client.Benchmark,ProtocolReportLines,0,0,0,0,0,63,0,0,0,-1,0,1,,Client.Benchmark.ProtocolMonitorLog
+Client.Benchmark,StatisticsSnapshot,3,5,1,0,5,106,11,0,0,0,2,1,Client.Benchmark.ProtocolMonitorLog' Client.HttpBenchmark.HttpTrafficLog,Client.Benchmark.ProtocolMonitor
+Client.Benchmark,StreamInfo,0,0,2,0,0,28,0,0,0,-1,0,3,,Client.Benchmark.ProtocolMonitor' Client.Benchmark.StreamStats' Client.Program
+Client.Benchmark,StreamStats,1,6,0,0,5,86,6,0,0,0.83,1,1,Client.Benchmark.StreamInfo,Client.Benchmark.ProtocolMonitor
+Client.Benchmark,MonitorState,0,0,0,0,0,19,0,0,0,-1,0,2,,Client.Benchmark.ProtocolMonitor' Client.Program
+Client,ContentTypes,4,1,0,4,1,39,2,0,0,0,0,2,,Client.Http.HttpRequest' Client.Program
+Client,Program,19,30,0,0,1,1221,102,0,0,0,26,0,System.ServiceModel.Http2Protocol.ProtocolSession' Client.Benchmark.ProtocolMonitor' Client.Utils.PriorityList' Client.Utils.Http2Logger' Client.Utils.Http2LoggerState' Client.Utils.NativeMethods' Client.Utils.ArgPair' System.ServiceModel.Http2Protocol.ProtocolSessionState' Client.Benchmark.MonitorState' System.ServiceModel.Http2Protocol.ProtocolOptions' Client.Utils.PriorityRecord' Client.Benchmark.ProtocolMonitorLog' Client.Utils.PriorityLevel' System.ServiceModel.Http2Protocol.ProtocolHeaders' System.ServiceModel.Http2Protocol.Http2Stream' Client.ContentTypes' Client.XHtmlDocument' Client.Benchmark.StreamInfo' System.ServiceModel.Http2Protocol.StreamDataEventArgs' System.ServiceModel.Http2Protocol.ProtocolData' System.ServiceModel.Http2Protocol.Http2StreamState' System.ServiceModel.Http2Protocol.StatusCode' System.ServiceModel.Http2Protocol.RSTEventArgs' System.ServiceModel.Http2Protocol.StreamEventArgs' System.ServiceModel.Http2Protocol.ProtocolErrorEventArgs' Client.Http.HttpRequest,
+Client,XHtmlDocument,0,2,4,0,1,63,4,0,0,-1,0,2,,Client.Http.HttpRequest' Client.Program
+Client.Utils,ArgPair,0,1,2,0,1,25,1,0,0,-1,0,1,,Client.Program
+Client.Utils,NativeMethods,2,4,0,0,1,45,4,0,0,0,0,1,,Client.Program
+Client.Utils,PriorityComparer,1,2,0,0,2,62,9,0,0,0,2,1,Client.Utils.PrioritySortField' Client.Utils.PriorityRecord,Client.Utils.PriorityList
+Client.Utils,PriorityLevel,0,0,0,0,0,15,0,0,0,-1,0,2,,Client.Program' Client.Utils.PriorityRecord
+Client.Utils,PriorityList,6,8,0,2,8,143,17,0,0,0,3,1,Client.Utils.PriorityRecord' Client.Utils.PrioritySortField' Client.Utils.PriorityComparer,Client.Program
+Client.Utils,PriorityRecord,5,3,0,5,3,64,3,0,0,0,1,3,Client.Utils.PriorityLevel,Client.Program' Client.Utils.PriorityComparer' Client.Utils.PriorityList
+Client.Utils,PrioritySortField,0,0,0,0,0,15,0,0,0,-1,0,2,,Client.Utils.PriorityComparer' Client.Utils.PriorityList
+Client.Utils,Http2Logger,0,4,2,0,4,59,8,0,0,-1,1,2,Client.Utils.Http2LoggerState,Client.Http.HttpRequest' Client.Program
+Client.Utils,Http2LoggerState,0,0,0,0,0,23,0,0,0,-1,0,3,,Client.Benchmark.ProtocolMonitor' Client.Program' Client.Utils.Http2Logger

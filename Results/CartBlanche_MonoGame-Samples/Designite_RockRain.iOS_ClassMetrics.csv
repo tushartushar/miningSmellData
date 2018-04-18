@@ -1,20 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Program,1,2,0,0,1,15,2,0,0,1,1,0
-AudioLibrary,9,1,8,0,1,73,1,0,0,0,0,4
-HelpScene,0,1,0,0,1,10,1,0,1,-1,1,1
-MeteorsManager,6,8,1,0,6,123,15,0,0,0,2,1
-Score,6,2,3,0,2,73,2,0,0,0,0,1
-Meteor,4,4,3,0,4,112,5,0,1,0,0,1
-Player,8,8,3,0,5,139,13,0,0,0,0,1
-PowerSource,2,4,0,0,4,63,5,0,1,0,0,1
-ActionScene,16,7,2,0,5,193,15,0,1,0.29,7,1
-StartScene,12,5,2,0,5,131,10,0,1,0.4,3,1
-Game1,18,10,0,0,1,194,31,0,0,0,6,1
-ExplosionManager,1,5,0,0,5,49,8,0,0,0.4,1,2
-GameScene,1,5,1,0,5,68,9,3,0,0.6,0,1
-ImageComponent,4,2,0,0,2,51,7,0,0,0,0,3
-Sprite,8,4,1,0,4,74,6,2,0,0,0,0
-TextMenuComponent,11,5,7,0,4,174,12,0,0,0,0,1
-ExplosionParticleSystem,0,3,0,0,1,54,3,0,1,-1,1,1
-Particle,9,3,6,3,3,108,3,0,0,0,0,2
-ParticleSystem,23,10,2,2,5,309,18,1,0,0,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RockRainIphone,Program,1,2,0,0,1,16,2,0,0,1,1,0,RockRainIphone.Game1,
+RockRainIphone,AudioLibrary,9,1,8,0,1,91,1,0,0,0,0,4,,RockRainIphone.MeteorsManager' RockRainIphone.ActionScene' RockRainIphone.StartScene' RockRainIphone.Game1
+RockRainIphone,HelpScene,0,1,0,0,1,9,1,0,1,-1,2,1,RockRainIphone.Core.DrawMode' RockRainIphone.Core.ImageComponent,RockRainIphone.Game1
+RockRainIphone,MeteorsManager,6,8,1,0,6,127,15,0,0,0,2,1,RockRainIphone.AudioLibrary' RockRainIphone.Meteor,RockRainIphone.ActionScene
+RockRainIphone,Score,6,2,3,0,2,71,2,0,0,0,0,1,,RockRainIphone.ActionScene
+RockRainIphone,Meteor,4,4,3,0,4,109,5,0,1,0,1,1,RockRainIphone.Core.Sprite,RockRainIphone.MeteorsManager
+RockRainIphone,Player,8,8,3,0,5,149,13,0,0,0,0,1,,RockRainIphone.ActionScene
+RockRainIphone,PowerSource,2,4,0,0,4,65,5,0,1,0,1,1,RockRainIphone.Core.Sprite,RockRainIphone.ActionScene
+RockRainIphone,ActionScene,16,7,2,0,5,217,15,0,1,0.29,9,1,RockRainIphone.AudioLibrary' RockRainIphone.Player' RockRainIphone.MeteorsManager' RockRainIphone.PowerSource' RockRainIphone.Core.ImageComponent' RockRainIphone.Score' RockRainIphone.ExplosionManager' RockRainIphone.Core.DrawMode' RockRainIphone.Core.GameScene,RockRainIphone.Game1
+RockRainIphone,StartScene,12,5,2,0,5,142,9,0,1,0.4,5,1,RockRainIphone.Core.TextMenuComponent' RockRainIphone.AudioLibrary' RockRainIphone.Core.DrawMode' RockRainIphone.Core.ImageComponent' RockRainIphone.Core.GameScene,RockRainIphone.Game1
+RockRainIphone,Game1,18,10,0,0,1,217,17,0,0,0,6,1,RockRainIphone.ExplosionManager' RockRainIphone.HelpScene' RockRainIphone.StartScene' RockRainIphone.ActionScene' RockRainIphone.Core.GameScene' RockRainIphone.AudioLibrary,RockRainIphone.Program
+RockRainIphone,ExplosionManager,1,5,0,0,5,52,8,0,0,0.4,1,2,RockRainIphone.Core.ExplosionParticleSystem,RockRainIphone.ActionScene' RockRainIphone.Game1
+RockRainIphone.Core,GameScene,1,5,1,0,5,70,9,3,0,0.6,0,3,,RockRainIphone.ActionScene' RockRainIphone.StartScene' RockRainIphone.Game1
+RockRainIphone.Core,ImageComponent,4,2,0,0,2,53,3,0,0,0,1,3,RockRainIphone.Core.DrawMode,RockRainIphone.HelpScene' RockRainIphone.ActionScene' RockRainIphone.StartScene
+RockRainIphone.Core,DrawMode,0,0,0,0,0,5,0,0,0,-1,0,4,,RockRainIphone.HelpScene' RockRainIphone.ActionScene' RockRainIphone.StartScene' RockRainIphone.Core.ImageComponent
+RockRainIphone.Core,Sprite,8,4,1,0,4,71,6,2,0,0,0,2,,RockRainIphone.Meteor' RockRainIphone.PowerSource
+RockRainIphone.Core,TextMenuComponent,11,5,7,0,4,171,12,0,0,0,0,1,,RockRainIphone.StartScene
+RockRainIphone.Core,ExplosionParticleSystem,0,3,0,0,1,51,3,0,1,-1,2,1,RockRainIphone.Core.ParticleSystem' RockRainIphone.Core.Particle,RockRainIphone.ExplosionManager
+RockRainIphone.Core,Particle,9,3,6,3,3,89,3,0,0,0,0,2,,RockRainIphone.Core.ExplosionParticleSystem' RockRainIphone.Core.ParticleSystem
+RockRainIphone.Core,ParticleSystem,23,10,2,2,5,327,18,1,0,0,1,1,RockRainIphone.Core.Particle,RockRainIphone.Core.ExplosionParticleSystem

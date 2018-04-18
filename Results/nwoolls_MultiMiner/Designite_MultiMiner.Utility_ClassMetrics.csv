@@ -1,25 +1,33 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-NativeMethods,0,3,0,0,0,15,3,0,0,-1,0,2
-OwnedProcess,0,0,3,0,0,15,0,0,0,-1,0,1
-OwnedProcesses,0,2,0,0,2,35,5,0,0,-1,4,1
-StartupShortcut,0,0,0,0,0,85,0,0,0,-1,0,0
-IdleTimeFinder,0,1,0,0,1,18,2,0,0,-1,1,1
-OSVersionPlatform,0,5,0,0,4,42,8,0,0,-1,1,17
-SimpleAsyncResult,1,0,5,0,0,31,0,0,0,-1,0,1
-SimpleSyncObject,1,3,1,0,3,34,4,0,0,0.67,1,1
-Timers,15,1,0,10,1,28,1,0,0,0,0,1
-ApiWebClient,0,3,0,0,2,28,4,0,0,-1,0,10
-IPInfoTools,3,3,0,0,0,107,16,0,0,0,1,1
-SubnetClass,0,0,0,0,0,7,0,0,0,-1,0,3
-IPRange,2,5,0,0,3,89,21,0,0,0,0,1
-PortScanner,0,2,0,0,1,36,9,0,0,-1,1,1
-LocalNetwork,1,5,0,0,4,122,24,0,0,0.4,6,2
-IPAddressExtensions,0,1,0,0,1,11,1,0,0,-1,1,0
-ConfigurationReaderWriter,1,4,0,0,2,75,14,0,0,0.5,1,11
-ObjectCopier,0,3,0,0,3,51,11,0,0,-1,0,17
-ObjectLogger,3,5,0,0,3,73,15,0,0,0.4,1,1
-SerializableDictionary,0,3,0,0,3,46,5,0,0,-1,0,2
-FileCopier,0,1,0,0,1,14,3,0,0,-1,1,1
-Unzipper,0,3,0,0,1,86,9,0,0,-1,2,3
-IniFileParser,1,4,0,0,2,48,9,0,0,0,0,1
-PlistParser,0,6,0,0,1,60,19,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MultiMiner.Utility.OS,NativeMethods,0,3,0,0,0,16,3,0,0,-1,1,2,MultiMiner.Utility.OS.LASTINPUTINFO,MultiMiner.Utility.OS.IdleTimeFinder' MultiMiner.Utility.OS.OSVersionPlatform
+MultiMiner.Utility.OS,LASTINPUTINFO,2,0,0,2,0,5,0,0,0,-1,0,2,,MultiMiner.Utility.OS.NativeMethods' MultiMiner.Utility.OS.IdleTimeFinder
+MultiMiner.Utility.OS,OwnedProcess,0,0,3,0,0,6,0,0,0,-1,0,1,,MultiMiner.Utility.OS.OwnedProcesses
+MultiMiner.Utility.OS,OwnedProcesses,0,2,0,0,2,47,5,0,0,-1,3,1,MultiMiner.Utility.OS.OwnedProcess' MultiMiner.Utility.OS.OSVersionPlatform' MultiMiner.Utility.Serialization.ConfigurationReaderWriter,MultiMiner.UX.ViewModels.ApplicationViewModel
+MultiMiner.Utility.OS,StartupShortcut,0,4,0,0,2,69,9,0,0,-1,0,1,,MultiMiner.UX.Data.Configuration.Application
+MultiMiner.Utility.OS,IdleTimeFinder,0,1,0,0,1,15,2,0,0,-1,2,1,MultiMiner.Utility.OS.LASTINPUTINFO' MultiMiner.Utility.OS.NativeMethods,MultiMiner.UX.ViewModels.ApplicationViewModel
+MultiMiner.Utility.OS,OSVersionPlatform,0,5,0,0,4,50,8,0,0,-1,1,19,MultiMiner.Utility.OS.NativeMethods,MultiMiner.Engine.MinerFactory' MultiMiner.Engine.MinerPath' MultiMiner.Engine.Installers.AvailableMiners' MultiMiner.Engine.Installers.MinerInstaller' MultiMiner.Remoting.RemotingServer' MultiMiner.Remoting.RemotingService' MultiMiner.Utility.OS.OwnedProcesses' MultiMiner.Utility.Net.IPInfoTools' MultiMiner.Utility.Net.LocalNetwork' MultiMiner.Utility.IO.Unzipper' MultiMiner.UX.Data.Configuration.Application' MultiMiner.UX.ViewModels.ApplicationViewModel' MultiMiner.Win.Forms.HourGlass' MultiMiner.Win.Forms.MinerForm' MultiMiner.Win.Forms.WizardForm' MultiMiner.Win.Forms.Configuration.GPUMinerSettingsForm' MultiMiner.Win.Forms.Configuration.PoolsForm' MultiMiner.Win.Forms.Configuration.SettingsForm' MultiMiner.Win.Program
+MultiMiner.Utility.Async,SimpleAsyncResult,1,0,5,0,0,25,0,0,0,-1,0,1,,MultiMiner.Utility.Async.SimpleSyncObject
+MultiMiner.Utility.Async,SimpleSyncObject,1,3,1,0,3,40,4,0,0,0.67,1,0,MultiMiner.Utility.Async.SimpleAsyncResult,
+MultiMiner.Utility.Timers,Timers,15,1,0,10,1,29,1,0,0,0,0,1,,MultiMiner.UX.ViewModels.ApplicationViewModel
+MultiMiner.Utility.Net,ApiWebClient,0,3,0,0,2,31,3,0,0,-1,0,5,,MultiMiner.Blockchain.ApiContext' MultiMiner.Coinbase.ApiContext' MultiMiner.CoinChoose.ApiContext' MultiMiner.WhatToMine.ApiContext' MultiMiner.CoinChoose.ApiContext
+MultiMiner.Utility.Net,IPInfoTools,3,3,0,0,0,115,8,0,0,0,4,1,MultiMiner.Utility.Net.ifaddrs' MultiMiner.Utility.Net.sockaddr_in' MultiMiner.Utility.Net.sockaddr_ll' MultiMiner.Utility.OS.OSVersionPlatform,MultiMiner.Utility.Net.LocalNetwork
+MultiMiner.Utility.Net,ifa_ifu,2,0,0,2,0,8,0,0,0,-1,0,1,,MultiMiner.Utility.Net.ifaddrs
+MultiMiner.Utility.Net,ifaddrs,7,0,0,7,0,11,0,0,0,-1,1,1,MultiMiner.Utility.Net.ifa_ifu,MultiMiner.Utility.Net.IPInfoTools
+MultiMiner.Utility.Net,sockaddr_in,3,0,0,3,0,7,0,0,0,-1,0,1,,MultiMiner.Utility.Net.IPInfoTools
+MultiMiner.Utility.Net,sockaddr_in6,5,0,0,5,0,9,0,0,0,-1,1,0,MultiMiner.Utility.Net.in6_addr,
+MultiMiner.Utility.Net,in6_addr,1,0,0,1,0,6,0,0,0,-1,0,1,,MultiMiner.Utility.Net.sockaddr_in6
+MultiMiner.Utility.Net,sockaddr_ll,7,0,0,7,0,12,0,0,0,-1,0,1,,MultiMiner.Utility.Net.IPInfoTools
+MultiMiner.Utility.Net,SubnetClass,0,0,0,0,0,7,0,0,0,-1,0,3,,MultiMiner.Utility.Net.LocalNetwork' MultiMiner.Utility.Net.Extensions.IPAddressExtensions' MultiMiner.UX.ViewModels.ApplicationViewModel
+MultiMiner.Utility.Net,IPRange,2,5,0,0,3,87,19,0,0,0,0,1,,MultiMiner.Utility.Net.PortScanner
+MultiMiner.Utility.Net,PortScanner,0,2,0,0,1,42,6,0,0,-1,1,1,MultiMiner.Utility.Net.IPRange,MultiMiner.Xgminer.Discovery.MinerFinder
+MultiMiner.Utility.Net,LocalNetwork,1,5,0,0,4,141,18,0,0,0.4,6,4,MultiMiner.Utility.Net.SubnetClass' MultiMiner.Utility.Net.NetworkInterfaceInfo' MultiMiner.Utility.OS.OSVersionPlatform' MultiMiner.Utility.Net.IPInfoTools' MultiMiner.Utility.Parsers.PlistParser' MultiMiner.Utility.Parsers.IniFileParser,MultiMiner.Discovery.Sender' MultiMiner.Remoting.Broadcast.Sender' MultiMiner.UX.ViewModels.ApplicationViewModel' MultiMiner.Win.Controls.DetailsControl
+MultiMiner.Utility.Net,NetworkInterfaceInfo,5,0,0,5,0,8,0,0,0,-1,0,2,,MultiMiner.Utility.Net.LocalNetwork' MultiMiner.UX.ViewModels.ApplicationViewModel
+MultiMiner.Utility.Net.Extensions,IPAddressExtensions,0,1,0,0,1,11,3,0,0,-1,1,0,MultiMiner.Utility.Net.SubnetClass,
+MultiMiner.Utility.Serialization,ConfigurationReaderWriter,1,4,0,0,2,84,8,0,0,0.5,0,11,,MultiMiner.Engine.MiningEngine' MultiMiner.Engine.Data.Configuration.Engine' MultiMiner.Engine.Data.Configuration.Xgminer' MultiMiner.Utility.OS.OwnedProcesses' MultiMiner.UX.Data.Configuration.Application' MultiMiner.UX.Data.Configuration.Metadata' MultiMiner.UX.Data.Configuration.NetworkDevices' MultiMiner.UX.Data.Configuration.Paths' MultiMiner.UX.Data.Configuration.Perks' MultiMiner.UX.ViewModels.ApplicationViewModel' MultiMiner.Win.Forms.Configuration.PoolsForm
+MultiMiner.Utility.Serialization,ObjectCopier,0,3,0,0,3,58,9,0,0,-1,0,17,,MultiMiner.Engine.MiningEngine' MultiMiner.Engine.Data.Configuration.Xgminer' MultiMiner.UX.Data.Configuration.Application' MultiMiner.UX.Data.Configuration.Paths' MultiMiner.UX.Data.Configuration.Perks' MultiMiner.UX.Extensions.ApplicationConfigurationExtensions' MultiMiner.UX.Extensions.DeviceConfigurationExtensions' MultiMiner.UX.Extensions.EngineConfigurationExtensions' MultiMiner.UX.Extensions.XgminerConfigurationExtensions' MultiMiner.UX.ViewModels.ApplicationViewModel' MultiMiner.UX.ViewModels.MinerFormViewModel' MultiMiner.Win.Forms.MinerForm' MultiMiner.Win.Forms.Configuration.AdvancedSettingsForm' MultiMiner.Win.Forms.Configuration.GPUMinerSettingsForm' MultiMiner.Win.Forms.Configuration.MinerSettingsForm' MultiMiner.Win.Forms.Configuration.PoolsForm' MultiMiner.Win.Forms.Configuration.OnlineSettingsForm
+MultiMiner.Utility.Serialization,ObjectLogger,3,5,0,0,3,85,13,0,0,0.4,0,1,,MultiMiner.UX.ViewModels.ApplicationViewModel
+MultiMiner.Utility.Serialization,SerializableDictionary<TKey;TValue>,0,3,0,0,3,48,6,0,0,-1,0,0,,
+MultiMiner.Utility.IO,FileCopier,0,1,0,0,1,16,3,0,0,-1,0,1,,MultiMiner.Win.Forms.Configuration.AdvancedSettingsForm
+MultiMiner.Utility.IO,Unzipper,0,5,0,0,1,87,12,0,0,-1,1,3,MultiMiner.Utility.OS.OSVersionPlatform,MultiMiner.Engine.Installers.MultiMinerInstaller' MultiMiner.Engine.Installers.MinerInstaller' MultiMiner.Update.Program
+MultiMiner.Utility.Parsers,IniFileParser,1,4,0,0,2,55,8,0,0,0,0,1,,MultiMiner.Utility.Net.LocalNetwork
+MultiMiner.Utility.Parsers,PlistParser,0,6,0,0,1,63,9,0,0,-1,0,1,,MultiMiner.Utility.Net.LocalNetwork

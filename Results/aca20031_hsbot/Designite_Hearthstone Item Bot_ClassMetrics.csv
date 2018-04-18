@@ -1,18 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Card,1,7,12,0,3,293,79,0,0,0.29,0,4
-CardSet,1,4,1,0,3,56,4,0,0,0,1,1
-DebugPaster,1,1,0,0,1,20,1,0,0,0,1,0
-CardParser,0,6,0,0,3,280,101,0,0,-1,1,1
-Config,1,3,18,0,3,134,7,0,0,1,0,2
-IRC,10,19,1,0,3,673,79,0,0,0.26,7,1
-FlowRateEntry,0,1,3,0,1,21,1,0,0,-1,0,1
-Program,0,2,0,0,0,63,10,0,0,-1,2,0
-IrcClient,10,25,16,0,7,1060,62,0,0,0.08,5,4
-Channel,1,4,2,0,3,58,4,0,0,1,1,2
-ChannelUser,1,7,5,0,5,161,11,0,0,0.43,2,3
-mIRCColor,0,0,0,0,0,22,0,0,0,-1,0,0
-IrcReader,4,6,1,0,5,144,21,0,0,0.33,2,1
-IIrcMessageFilter,0,1,0,0,0,13,1,0,0,-1,1,1
-Log,1,1,0,0,1,14,1,0,0,0,0,2
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+HSBot.Cards,Card,1,7,12,0,3,260,24,0,0,0.29,4,4,HSBot.Cards.CardFamily' HSBot.Cards.RarityValues' HSBot.Cards.ClassValues' HSBot.Cards.CardType,HSBot.Cards.CardSet' HSBot.Cards.DebugPaster' HSBot.Cards.CardParser' HSBot.IRC
+HSBot.Cards,RarityValues,0,0,0,0,0,1,0,0,0,-1,0,2,,HSBot.Cards.Card' HSBot.Cards.CardParser
+HSBot.Cards,ClassValues,0,0,0,0,0,1,0,0,0,-1,0,2,,HSBot.Cards.Card' HSBot.Cards.CardParser
+HSBot.Cards,CardType,0,0,0,0,0,1,0,0,0,-1,0,1,,HSBot.Cards.Card
+HSBot.Cards,CardFamily,0,0,0,0,0,1,0,0,0,-1,0,2,,HSBot.Cards.Card' HSBot.Cards.CardParser
+HSBot.Cards,CardSet,1,4,1,0,3,62,4,0,0,0,1,1,HSBot.Cards.Card,HSBot.IRC
+HSBot.Cards,DebugPaster,1,1,0,0,1,23,2,0,0,0,1,0,HSBot.Cards.Card,
+HSBot.Cards,CardParser,0,6,0,0,3,317,26,0,0,-1,5,1,HSBot.Cards.CardTag' HSBot.Cards.Card' HSBot.Cards.ClassValues' HSBot.Cards.RarityValues' HSBot.Cards.CardFamily,HSBot.IRC
+HSBot.Cards,CardTag,0,0,0,0,0,14,0,0,0,-1,0,1,,HSBot.Cards.CardParser
+HSBot,Config,1,3,18,0,3,93,7,0,0,0.67,0,2,,HSBot.IRC' HSBot.Program
+HSBot,IRC,10,19,1,0,3,813,57,0,0,0.26,8,1,benbuzbee.LRTIRC.IrcClient' HSBot.FlowRateEntry' HSBot.Config' benbuzbee.LRTIRC.ChannelUser' HSBot.Cards.CardSet' HSBot.Cards.Card' HSBot.Cards.CardParser' benbuzbee.LRTIRC.Channel,HSBot.Program
+HSBot,MatchResult<MatchItem>,0,2,3,0,2,27,3,0,0,-1,0,0,,
+HSBot,FlowRateEntry,0,1,3,0,1,12,1,0,0,-1,0,1,,HSBot.IRC
+HSBot,Program,0,2,0,0,0,79,8,0,0,-1,3,0,HSBot.IRC' HSBot.Config' benbuzbee.LRTIRC.IrcClient,
+benbuzbee.LRTIRC,IrcClient,10,25,16,0,7,1135,50,0,0,0,6,4,benbuzbee.LRTIRC.IrcReader' benbuzbee.LRTIRC.IIrcMessageFilter' benbuzbee.LRTIRC.ChannelUser' benbuzbee.LRTIRC.Channel' benbuzbee.LRTIRC.ServerInfoType' benbuzbee.LRTIRC.Log,HSBot.IRC' HSBot.Program' benbuzbee.LRTIRC.IrcReader' benbuzbee.LRTIRC.IIrcMessageFilter
+benbuzbee.LRTIRC,ServerInfoType,8,0,2,6,0,37,0,0,0,-1,0,2,,benbuzbee.LRTIRC.IrcClient' benbuzbee.LRTIRC.ChannelUser
+benbuzbee.LRTIRC,Channel,1,4,2,0,3,50,4,0,0,1,1,3,benbuzbee.LRTIRC.ChannelUser,HSBot.IRC' benbuzbee.LRTIRC.IrcClient' benbuzbee.LRTIRC.ChannelUser
+benbuzbee.LRTIRC,ChannelUser,1,7,5,0,5,154,13,0,0,0.43,2,3,benbuzbee.LRTIRC.ServerInfoType' benbuzbee.LRTIRC.Channel,HSBot.IRC' benbuzbee.LRTIRC.IrcClient' benbuzbee.LRTIRC.Channel
+benbuzbee.LRTIRC,mIRCColor,0,0,0,0,0,19,0,0,0,-1,0,0,,
+benbuzbee.LRTIRC,IrcReader,4,6,1,0,5,160,11,0,0,0.33,2,1,benbuzbee.LRTIRC.IrcClient' benbuzbee.LRTIRC.Log,benbuzbee.LRTIRC.IrcClient
+benbuzbee.LRTIRC,IIrcMessageFilter,0,1,0,0,0,10,1,0,0,-1,1,1,benbuzbee.LRTIRC.IrcClient,benbuzbee.LRTIRC.IrcClient
+benbuzbee.LRTIRC,Log,1,1,0,0,1,16,1,0,0,0,0,2,,benbuzbee.LRTIRC.IrcClient' benbuzbee.LRTIRC.IrcReader
+HSBot.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+HSBot.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

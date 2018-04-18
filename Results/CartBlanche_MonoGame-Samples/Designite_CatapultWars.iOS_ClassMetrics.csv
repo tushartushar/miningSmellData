@@ -1,24 +1,24 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CatapultGame,2,3,0,0,1,49,3,0,0,1,2,3
-CatapultState,0,0,0,0,0,12,0,0,0,-1,0,4
-Catapult,19,12,11,0,7,431,99,0,0,0,6,3
-Projectile,15,6,4,0,6,120,7,0,0,0,0,1
-AI,1,4,0,0,4,35,5,0,1,0.75,2,1
-Human,8,8,1,0,8,134,19,0,1,0.25,4,1
-Player,4,5,5,2,5,62,5,2,0,1,2,2
-BackgroundScreen,1,3,0,0,3,29,3,0,1,0.67,1,1
-GameplayScreen,26,16,0,0,6,349,44,0,1,0.19,8,1
-InstructionsScreen,5,6,0,0,5,128,15,0,1,0.33,4,0
-MainMenuScreen,0,4,0,0,1,48,5,0,1,-1,2,0
-PauseScreen,5,4,0,0,1,76,6,0,1,0.75,5,0
-Animation,3,5,5,0,5,116,9,0,0,0.6,0,1
-AudioManager,4,10,0,0,8,177,25,0,0,0.2,0,4
-Program,1,2,0,0,1,18,2,0,0,1,1,0
-ScreenState,0,0,0,0,0,10,0,0,0,-1,0,3
-GameScreen,11,10,12,0,9,312,18,4,0,0.8,3,2
-InputState,19,10,7,10,9,238,23,0,0,0,1,6
-MenuEntry,3,6,2,0,5,135,8,0,0,0.67,2,3
-MenuScreen,4,9,1,0,4,222,29,2,1,0.33,6,1
-MouseGestureType,0,0,0,0,0,9,0,0,0,-1,0,5
-PlayerIndexEventArgs,1,1,1,0,1,23,1,0,0,0,0,1
-ScreenManager,8,14,3,0,10,311,58,0,0,0.14,4,9
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CatapultGame,CatapultGame,2,3,0,0,1,46,3,0,0,1,2,4,GameStateManagement.ScreenManager' CatapultGame.AudioManager,CatapultGame.Catapult' CatapultGame.Human' CatapultGame.Player' CatapultGame.Program
+CatapultGame,CatapultState,0,0,0,0,0,12,0,0,0,-1,0,4,,CatapultGame.Catapult' CatapultGame.AI' CatapultGame.Human' CatapultGame.GameplayScreen
+CatapultGame,Catapult,19,12,11,0,7,481,25,0,0,0,6,5,CatapultGame.CatapultGame' CatapultGame.Projectile' CatapultGame.CatapultState' CatapultGame.Player' CatapultGame.Animation' CatapultGame.AudioManager,CatapultGame.AI' CatapultGame.Human' CatapultGame.Player' CatapultGame.GameplayScreen' CatapultGame.PauseScreen
+CatapultGame,Projectile,15,6,4,0,6,141,7,0,0,0,0,1,,CatapultGame.Catapult
+CatapultGame,AI,1,4,0,0,4,42,5,0,1,0.75,3,1,CatapultGame.Catapult' CatapultGame.Player' CatapultGame.CatapultState,CatapultGame.GameplayScreen
+CatapultGame,Human,8,8,1,0,8,139,15,0,1,0.25,6,2,CatapultGame.CatapultGame' CatapultGame.Catapult' CatapultGame.Player' CatapultGame.CatapultState' GameStateManagement.MouseGestureType' GameStateManagement.InputState,CatapultGame.GameplayScreen' CatapultGame.PauseScreen
+CatapultGame,Player,4,5,5,2,5,54,5,2,0,1,2,4,CatapultGame.CatapultGame' CatapultGame.Catapult,CatapultGame.Catapult' CatapultGame.AI' CatapultGame.Human' CatapultGame.PauseScreen
+CatapultGame,BackgroundScreen,1,3,0,0,3,30,3,0,1,0.67,1,1,GameStateManagement.ScreenManager,CatapultGame.GameplayScreen
+CatapultGame,GameplayScreen,26,16,0,0,6,420,34,0,1,0.19,10,1,CatapultGame.Human' CatapultGame.AI' GameStateManagement.GameScreen' GameStateManagement.ScreenManager' CatapultGame.Catapult' CatapultGame.AudioManager' CatapultGame.CatapultState' GameStateManagement.InputState' GameStateManagement.MouseGestureType' CatapultGame.BackgroundScreen,CatapultGame.InstructionsScreen
+CatapultGame,InstructionsScreen,5,6,0,0,5,136,13,0,1,0.33,5,0,CatapultGame.GameplayScreen' GameStateManagement.ScreenManager' GameStateManagement.GameScreen' GameStateManagement.InputState' GameStateManagement.MouseGestureType,
+CatapultGame,MainMenuScreen,0,4,0,0,1,50,5,0,1,-1,3,0,GameStateManagement.MenuEntry' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager,
+CatapultGame,PauseScreen,5,4,0,0,1,80,6,0,1,0.75,8,0,GameStateManagement.GameScreen' CatapultGame.Player' GameStateManagement.MenuEntry' CatapultGame.Catapult' CatapultGame.AudioManager' GameStateManagement.MenuScreen' CatapultGame.Human' GameStateManagement.ScreenManager,
+CatapultGame,Animation,3,5,5,0,5,123,7,0,0,0.4,0,1,,CatapultGame.Catapult
+CatapultGame,AudioManager,4,10,0,0,8,167,24,0,0,0.2,0,4,,CatapultGame.CatapultGame' CatapultGame.Catapult' CatapultGame.GameplayScreen' CatapultGame.PauseScreen
+CatapultGame,Program,1,2,0,0,1,19,2,0,0,1,1,0,CatapultGame.CatapultGame,
+GameStateManagement,ScreenState,0,0,0,0,0,7,0,0,0,-1,0,3,,GameStateManagement.GameScreen' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager
+GameStateManagement,GameScreen,11,10,12,0,9,309,15,4,0,0.8,3,5,GameStateManagement.ScreenState' GameStateManagement.ScreenManager' GameStateManagement.InputState,CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' CatapultGame.PauseScreen' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager
+GameStateManagement,InputState,19,10,7,10,9,269,23,0,0,0.6,1,6,GameStateManagement.MouseGestureType,CatapultGame.Human' CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' GameStateManagement.GameScreen' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager
+GameStateManagement,MenuEntry,3,6,2,0,5,134,8,0,0,0.67,2,3,GameStateManagement.MenuScreen' GameStateManagement.ScreenManager,CatapultGame.MainMenuScreen' CatapultGame.PauseScreen' GameStateManagement.MenuScreen
+GameStateManagement,MenuScreen,4,9,1,0,4,246,29,2,1,0,7,3,GameStateManagement.MenuEntry' GameStateManagement.ScreenManager' GameStateManagement.InputState' GameStateManagement.MouseGestureType' GameStateManagement.PlayerIndexEventArgs' GameStateManagement.ScreenState' GameStateManagement.GameScreen,CatapultGame.MainMenuScreen' CatapultGame.PauseScreen' GameStateManagement.MenuEntry
+GameStateManagement,MouseGestureType,0,0,0,0,0,9,0,0,0,-1,0,5,,CatapultGame.Human' CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' GameStateManagement.InputState' GameStateManagement.MenuScreen
+GameStateManagement,PlayerIndexEventArgs,1,1,1,0,1,19,1,0,0,0,0,1,,GameStateManagement.MenuScreen
+GameStateManagement,ScreenManager,8,14,3,0,10,356,29,0,0,0.14,3,9,GameStateManagement.InputState' GameStateManagement.GameScreen' GameStateManagement.ScreenState,CatapultGame.CatapultGame' CatapultGame.BackgroundScreen' CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' CatapultGame.MainMenuScreen' CatapultGame.PauseScreen' GameStateManagement.GameScreen' GameStateManagement.MenuEntry' GameStateManagement.MenuScreen

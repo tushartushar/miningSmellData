@@ -1,51 +1,54 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Barcode128b,1,2,0,0,1,168,8,0,0,0,0,1
-QR,0,1,0,0,1,52,8,0,0,-1,0,4
-CoinInsertDense,0,2,0,0,0,134,20,0,1,-1,2,0
-KeyCombiner,17,5,0,0,1,313,16,0,0,0.6,3,2
-Base58Calc,9,7,0,0,1,185,13,0,0,0.29,2,1
-Form1,51,47,1,0,2,1269,114,0,0,0.34,12,1
-KeyComparer,0,1,0,0,1,7,1,0,0,-1,1,0
-MofNcalc,29,10,0,0,2,482,21,0,0,0.5,3,1
-PaperWalletPrinter,24,10,0,0,1,401,32,0,0,0,5,0
-PpecKeygen,9,5,0,0,1,161,8,0,0,0.6,1,1
-Program,8,10,0,8,8,64,11,0,0,0.2,8,2
-QRPrint,15,2,0,7,0,197,34,0,0,1,3,2
-Walletgen,15,7,0,0,1,312,26,0,0,0.29,3,1
-CoinInsert,9,3,0,2,0,129,22,1,0,1,2,1
-Base58,0,2,0,0,2,49,9,0,0,-1,0,3
-Base58CheckString,2,2,2,0,2,65,6,0,0,0,2,0
-Bip38Base,1,0,5,0,0,45,0,2,0,-1,0,0
-Bip38Confirmation,2,3,5,0,3,140,13,0,1,0,4,1
-Bip38Intermediate,5,6,4,0,3,182,24,0,1,0,3,6
-Bip38KeyPair,4,10,2,0,8,404,40,0,1,0,5,2
-EncryptedKeyPair,5,10,2,0,6,148,17,1,0,0.2,3,1
-EscrowCodeSet,4,7,7,0,4,371,51,0,0,0,3,1
-ExtraEntropy,2,2,0,0,2,26,2,0,0,0,1,3
-KeyCollection,1,3,0,1,3,29,8,0,0,0,1,1
-KeyCollectionItem,2,5,2,2,5,70,6,0,0,0.4,3,9
-KeyPair,2,10,4,0,6,252,24,1,1,0.4,2,17
-Util,1,28,0,1,28,385,77,0,0,0.64,2,20
-AddressBase,3,6,4,0,4,117,7,1,0,1,1,5
-MiniKeyPair,1,4,2,0,4,120,14,0,2,0.75,2,6
-MofN,4,6,6,0,5,294,49,0,0,0.33,3,1
-coefficient,2,1,0,2,1,10,1,0,0,0,0,1
-equation,4,7,0,4,7,174,44,0,0,0.29,1,2
-PassphraseKeyPair,0,2,0,0,1,19,2,2,1,-1,0,3
-PublicKey,2,15,3,0,9,165,24,1,1,0.33,1,8
-ShaPassphraseKeyPair,0,3,0,0,3,100,16,0,2,-1,2,1
-StringInterpreter,0,2,0,0,2,119,33,0,0,-1,9,5
-Helper,0,8,0,0,8,54,13,0,0,-1,0,3
-Pbkdf2,10,15,5,0,11,188,34,0,0,0.47,1,1
-Salsa20Core,0,2,0,0,1,107,5,0,0,-1,1,1
-SCrypt,2,8,0,0,3,140,24,0,0,0,3,4
-AddressGen,29,10,0,1,1,495,67,0,0,0,7,1
-AddSingleAddress,7,5,0,1,1,147,11,0,0,0.4,1,1
-Bip38ConfValidator,10,5,0,0,1,288,21,0,0,0.4,6,1
-DecryptKey,6,4,0,0,1,172,18,0,0,0.5,4,1
-EscrowTools,45,10,0,0,1,662,16,0,0,0.3,2,1
-KeyCollectionView,44,34,0,1,1,825,85,0,0,0.35,9,0
-PrintVouchers,17,6,0,2,1,306,18,0,0,0.33,2,1
-PCPrint,3,5,2,0,3,171,10,0,0,0.4,0,1
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BtcAddress,Barcode128b,1,2,0,0,1,68,7,0,0,0,0,1,,BtcAddress.QRPrint
+BtcAddress,QR,0,1,0,0,1,49,4,0,0,-1,0,4,,BtcAddress.CoinInsertDense' BtcAddress.Form1' BtcAddress.QRPrint' BtcAddress.CoinInsert
+BtcAddress,CoinInsertDense,0,2,0,0,0,122,8,0,1,-1,3,0,BtcAddress.CoinInsert' Casascius.Bitcoin.KeyCollectionItem' BtcAddress.QR,
+BtcAddress,KeyCombiner,17,5,0,0,1,319,13,0,0,0.6,3,2,Casascius.Bitcoin.PublicKey' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.Util,BtcAddress.Form1' BtcAddress.Program
+BtcAddress,Base58Calc,9,7,0,0,1,172,14,0,0,0.29,2,2,Casascius.Bitcoin.Util' Casascius.Bitcoin.Base58,BtcAddress.Form1' BtcAddress.Program
+BtcAddress,Form1,51,47,1,0,2,1224,86,0,0,0.34,18,3,Casascius.Bitcoin.AddressBase' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.PublicKey' Casascius.Bitcoin.KeyCollectionItem' Casascius.Bitcoin.EncryptedKeyPair' Casascius.Bitcoin.MiniKeyPair' Casascius.Bitcoin.Util' Casascius.Bitcoin.Bip38KeyPair' Casascius.Bitcoin.PassphraseKeyPair' Casascius.Bitcoin.StringInterpreter' Casascius.Bitcoin.ExtraEntropy' BtcAddress.Walletgen' BtcAddress.Base58Calc' BtcAddress.MofNcalc' BtcAddress.PaperWalletPrinter' BtcAddress.KeyCombiner' BtcAddress.QR' BtcAddress.PpecKeygen,BtcAddress.Program' BtcAddress.Forms.DecryptKey' BtcAddress.Forms.KeyCollectionView
+BtcAddress,KeyComparer,0,1,0,0,1,5,1,0,0,-1,1,0,Casascius.Bitcoin.AddressBase,
+BtcAddress,MofNcalc,29,10,0,0,2,460,20,0,0,0.5,3,2,Casascius.Bitcoin.MofN' Casascius.Bitcoin.equation' Casascius.Bitcoin.KeyPair,BtcAddress.Form1' BtcAddress.Program
+BtcAddress,PaperWalletPrinter,24,10,0,0,1,387,34,0,0,0,5,1,Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.MiniKeyPair' Casascius.Bitcoin.Util' BtcAddress.QRPrint' BtcAddress.PrintModes,BtcAddress.Form1
+BtcAddress,PpecKeygen,9,5,0,0,1,158,7,0,0,0.6,2,2,Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.Interpretation,BtcAddress.Form1' BtcAddress.Program
+BtcAddress,Program,8,10,0,8,8,55,11,0,0,0.2,8,2,BtcAddress.Form1' BtcAddress.Base58Calc' BtcAddress.MofNcalc' BtcAddress.PpecKeygen' BtcAddress.KeyCombiner' BtcAddress.Forms.DecryptKey' BtcAddress.Forms.Bip38ConfValidator' BtcAddress.Forms.EscrowTools,BtcAddress.Forms.DecryptKey' BtcAddress.Forms.KeyCollectionView
+BtcAddress,QRPrint,15,2,0,7,0,219,18,0,0,1,7,2,BtcAddress.PrintModes' Casascius.Bitcoin.KeyCollectionItem' Casascius.Bitcoin.EncryptedKeyPair' Casascius.Bitcoin.KeyPair' BtcAddress.QR' BtcAddress.Barcode128b' Casascius.Bitcoin.MiniKeyPair,BtcAddress.PaperWalletPrinter' BtcAddress.Forms.PrintVouchers
+BtcAddress,PrintModes,0,0,0,0,0,14,0,0,0,-1,0,3,,BtcAddress.PaperWalletPrinter' BtcAddress.QRPrint' BtcAddress.Forms.PrintVouchers
+BtcAddress,Walletgen,15,7,0,0,1,317,21,0,0,0.29,3,1,Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.Util' PC.PCPrint,BtcAddress.Form1
+BtcAddress,CoinInsert,9,3,0,2,0,118,11,1,0,1,3,2,Casascius.Bitcoin.KeyCollectionItem' Casascius.Bitcoin.Bip38KeyPair' BtcAddress.QR,BtcAddress.CoinInsertDense' BtcAddress.Forms.KeyCollectionView
+Casascius.Bitcoin,Base58,0,2,0,0,2,44,9,0,0,-1,0,3,,BtcAddress.Base58Calc' Casascius.Bitcoin.Base58CheckString' Casascius.Bitcoin.Util
+Casascius.Bitcoin,Base58CheckString,2,2,2,0,2,65,6,0,0,0,2,0,Casascius.Bitcoin.Base58' Casascius.Bitcoin.Util,
+Casascius.Bitcoin,Bip38Base,1,0,5,0,0,40,0,2,0,-1,0,0,,
+Casascius.Bitcoin,Bip38Confirmation,2,3,5,0,3,134,11,0,1,0,4,1,Casascius.Bitcoin.Util' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.PublicKey' CryptSharp.Utility.SCrypt,Casascius.Bitcoin.StringInterpreter
+Casascius.Bitcoin,Bip38Intermediate,5,6,4,0,3,199,22,0,1,0,4,6,Casascius.Bitcoin.Interpretation' Casascius.Bitcoin.Util' CryptSharp.Utility.SCrypt' Casascius.Bitcoin.KeyPair,BtcAddress.PpecKeygen' Casascius.Bitcoin.Bip38Confirmation' Casascius.Bitcoin.Bip38KeyPair' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.AddressGen' BtcAddress.Forms.Bip38ConfValidator
+Casascius.Bitcoin,Interpretation,0,0,0,0,0,4,0,0,0,-1,0,4,,BtcAddress.PpecKeygen' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.AddressGen
+Casascius.Bitcoin,Bip38KeyPair,4,10,2,0,8,442,35,0,1,0,5,4,Casascius.Bitcoin.Util' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.Bip38Intermediate' CryptSharp.Utility.SCrypt' Casascius.Bitcoin.PublicKey,BtcAddress.Form1' BtcAddress.CoinInsert' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.AddressGen
+Casascius.Bitcoin,EncryptedKeyPair,5,10,2,0,6,121,24,1,0,0.2,3,5,Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.PublicKey' Casascius.Bitcoin.AddressBase,BtcAddress.Form1' BtcAddress.QRPrint' Casascius.Bitcoin.KeyCollectionItem' BtcAddress.Forms.KeyCollectionView' BtcAddress.Forms.PrintVouchers
+Casascius.Bitcoin,EscrowCodeSet,4,7,7,0,4,342,55,0,0,0,4,1,Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.Util' Casascius.Bitcoin.PublicKey' Casascius.Bitcoin.AddressBase,BtcAddress.Forms.EscrowTools
+Casascius.Bitcoin,ExtraEntropy,2,2,0,0,2,19,2,0,0,0,1,3,Casascius.Bitcoin.Util,BtcAddress.Form1' BtcAddress.Forms.AddressGen' BtcAddress.Forms.KeyCollectionView
+Casascius.Bitcoin,KeyCollection,1,3,0,1,3,25,8,0,0,0,1,1,Casascius.Bitcoin.KeyCollectionItem,BtcAddress.Forms.KeyCollectionView
+Casascius.Bitcoin,KeyCollectionItem,2,5,2,2,5,59,9,0,0,0.4,2,8,Casascius.Bitcoin.EncryptedKeyPair' Casascius.Bitcoin.AddressBase,BtcAddress.CoinInsertDense' BtcAddress.Form1' BtcAddress.QRPrint' BtcAddress.CoinInsert' Casascius.Bitcoin.KeyCollection' BtcAddress.Forms.AddressGen' BtcAddress.Forms.KeyCollectionView' BtcAddress.Forms.PrintVouchers
+Casascius.Bitcoin,KeyPair,2,10,4,0,6,240,21,1,1,0.4,2,17,Casascius.Bitcoin.Util' Casascius.Bitcoin.MiniKeyPair,BtcAddress.KeyCombiner' BtcAddress.Form1' BtcAddress.MofNcalc' BtcAddress.PaperWalletPrinter' BtcAddress.QRPrint' BtcAddress.Walletgen' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.Bip38KeyPair' Casascius.Bitcoin.EncryptedKeyPair' Casascius.Bitcoin.EscrowCodeSet' Casascius.Bitcoin.MiniKeyPair' Casascius.Bitcoin.MofN' Casascius.Bitcoin.ShaPassphraseKeyPair' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.AddressGen' BtcAddress.Forms.DecryptKey' BtcAddress.Forms.KeyCollectionView
+Casascius.Bitcoin,Util,1,28,0,1,28,342,75,0,0,0.46,2,20,Casascius.Bitcoin.Base58' Casascius.Bitcoin.MiniKeyPair,BtcAddress.KeyCombiner' BtcAddress.Base58Calc' BtcAddress.Form1' BtcAddress.PaperWalletPrinter' BtcAddress.Walletgen' Casascius.Bitcoin.Base58CheckString' Casascius.Bitcoin.Bip38Confirmation' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.Bip38KeyPair' Casascius.Bitcoin.EscrowCodeSet' Casascius.Bitcoin.ExtraEntropy' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.AddressBase' Casascius.Bitcoin.MiniKeyPair' Casascius.Bitcoin.MofN' Casascius.Bitcoin.PublicKey' Casascius.Bitcoin.ShaPassphraseKeyPair' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.Bip38ConfValidator' BtcAddress.Forms.EscrowTools
+Casascius.Bitcoin,AddressBase,3,6,4,0,4,105,7,1,0,1,1,8,Casascius.Bitcoin.Util,BtcAddress.Form1' BtcAddress.KeyComparer' Casascius.Bitcoin.EncryptedKeyPair' Casascius.Bitcoin.EscrowCodeSet' Casascius.Bitcoin.KeyCollectionItem' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.Bip38ConfValidator' BtcAddress.Forms.DecryptKey
+Casascius.Bitcoin,MiniKeyPair,1,4,2,0,4,112,13,0,2,0.75,2,7,Casascius.Bitcoin.Util' Casascius.Bitcoin.KeyPair,BtcAddress.Form1' BtcAddress.PaperWalletPrinter' BtcAddress.QRPrint' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.Util' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.AddressGen
+Casascius.Bitcoin,MofN,4,6,6,0,5,288,47,0,0,0,4,1,Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.Util' Casascius.Bitcoin.equation' Casascius.Bitcoin.coefficient,BtcAddress.MofNcalc
+Casascius.Bitcoin,coefficient,2,1,0,2,1,9,1,0,0,0,0,2,,Casascius.Bitcoin.MofN' Casascius.Bitcoin.equation
+Casascius.Bitcoin,equation,4,7,0,4,7,141,39,0,0,0.29,1,2,Casascius.Bitcoin.coefficient,BtcAddress.MofNcalc' Casascius.Bitcoin.MofN
+Casascius.Bitcoin,PassphraseKeyPair,0,2,0,0,1,12,2,2,1,-1,0,3,,BtcAddress.Form1' BtcAddress.Forms.Bip38ConfValidator' BtcAddress.Forms.DecryptKey
+Casascius.Bitcoin,PublicKey,2,15,3,0,9,140,22,1,1,0.33,1,8,Casascius.Bitcoin.Util,BtcAddress.KeyCombiner' BtcAddress.Form1' Casascius.Bitcoin.Bip38Confirmation' Casascius.Bitcoin.Bip38KeyPair' Casascius.Bitcoin.EncryptedKeyPair' Casascius.Bitcoin.EscrowCodeSet' Casascius.Bitcoin.StringInterpreter' BtcAddress.Forms.Bip38ConfValidator
+Casascius.Bitcoin,ShaPassphraseKeyPair,0,3,0,0,3,85,12,0,2,-1,2,1,Casascius.Bitcoin.Util' Casascius.Bitcoin.KeyPair,Casascius.Bitcoin.StringInterpreter
+Casascius.Bitcoin,StringInterpreter,0,2,0,0,2,112,16,0,0,-1,10,5,Casascius.Bitcoin.Util' Casascius.Bitcoin.Interpretation' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.MiniKeyPair' Casascius.Bitcoin.AddressBase' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.ShaPassphraseKeyPair' Casascius.Bitcoin.Bip38KeyPair' Casascius.Bitcoin.Bip38Confirmation' Casascius.Bitcoin.PublicKey,BtcAddress.Form1' BtcAddress.Forms.AddressGen' BtcAddress.Forms.AddSingleAddress' BtcAddress.Forms.Bip38ConfValidator' BtcAddress.Forms.DecryptKey
+CryptSharp.Utility,Helper,0,8,0,0,8,56,13,0,0,-1,0,3,,CryptSharp.Utility.Pbkdf2' CryptSharp.Utility.Salsa20Core' CryptSharp.Utility.SCrypt
+CryptSharp.Utility,Pbkdf2,10,15,5,0,11,137,23,0,0,0.33,1,1,CryptSharp.Utility.Helper,CryptSharp.Utility.SCrypt
+CryptSharp.Utility,Salsa20Core,0,2,0,0,1,99,4,0,0,-1,1,1,CryptSharp.Utility.Helper,CryptSharp.Utility.SCrypt
+CryptSharp.Utility,SCrypt,2,8,0,0,3,104,22,0,0,0,3,4,CryptSharp.Utility.Pbkdf2' CryptSharp.Utility.Helper' CryptSharp.Utility.Salsa20Core,Casascius.Bitcoin.Bip38Confirmation' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.Bip38KeyPair' BtcAddress.Forms.Bip38ConfValidator
+BtcAddress.Forms,AddressGen,29,10,0,1,1,475,36,0,0,0,9,1,BtcAddress.Forms.GenChoices' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.KeyCollectionItem' Casascius.Bitcoin.MiniKeyPair' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.Bip38KeyPair' Casascius.Bitcoin.Interpretation' Casascius.Bitcoin.ExtraEntropy' Casascius.Bitcoin.StringInterpreter,BtcAddress.Forms.KeyCollectionView
+BtcAddress.Forms,GenChoices,0,0,0,0,0,3,0,0,0,-1,0,1,,BtcAddress.Forms.AddressGen
+BtcAddress.Forms,AddSingleAddress,7,5,0,1,1,151,10,0,0,0.4,1,1,Casascius.Bitcoin.StringInterpreter,BtcAddress.Forms.KeyCollectionView
+BtcAddress.Forms,Bip38ConfValidator,10,5,0,0,1,291,19,0,0,0.4,7,1,Casascius.Bitcoin.PassphraseKeyPair' Casascius.Bitcoin.Bip38Intermediate' Casascius.Bitcoin.PublicKey' Casascius.Bitcoin.Util' Casascius.Bitcoin.StringInterpreter' Casascius.Bitcoin.AddressBase' CryptSharp.Utility.SCrypt,BtcAddress.Program
+BtcAddress.Forms,DecryptKey,6,4,0,0,1,176,12,0,0,0.5,6,1,Casascius.Bitcoin.PassphraseKeyPair' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.StringInterpreter' BtcAddress.Program' BtcAddress.Form1' Casascius.Bitcoin.AddressBase,BtcAddress.Program
+BtcAddress.Forms,EscrowTools,45,10,0,0,1,689,13,0,0,0.3,2,1,Casascius.Bitcoin.EscrowCodeSet' Casascius.Bitcoin.Util,BtcAddress.Program
+BtcAddress.Forms,KeyCollectionView,44,34,0,1,1,800,76,0,0,0.35,11,0,Casascius.Bitcoin.KeyCollection' Casascius.Bitcoin.KeyPair' Casascius.Bitcoin.KeyCollectionItem' Casascius.Bitcoin.ExtraEntropy' BtcAddress.Forms.AddressGen' BtcAddress.Forms.PrintVouchers' BtcAddress.Program' BtcAddress.Form1' BtcAddress.Forms.AddSingleAddress' Casascius.Bitcoin.EncryptedKeyPair' BtcAddress.CoinInsert,
+BtcAddress.Forms,PrintVouchers,17,6,0,2,1,288,12,0,0,0.33,4,1,BtcAddress.QRPrint' BtcAddress.PrintModes' Casascius.Bitcoin.KeyCollectionItem' Casascius.Bitcoin.EncryptedKeyPair,BtcAddress.Forms.KeyCollectionView
+PC,PCPrint,3,5,2,0,3,198,9,0,0,0.4,0,1,,BtcAddress.Walletgen
+BtcAddress.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+BtcAddress.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

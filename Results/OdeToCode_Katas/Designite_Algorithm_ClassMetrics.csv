@@ -1,0 +1,15 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Algorithm.Composition,AveragingStrategy,0,1,0,0,1,11,1,0,1,-1,1,0,Algorithm.Measurement,
+Algorithm.Composition,EmptyFilter,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Algorithm.Composition,HighPassFilter,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Algorithm.Composition,IAggregationStrategy,0,1,0,0,0,4,1,2,0,-1,0,1,,Algorithm.Composition.PointsAggregator
+Algorithm.Composition,IMeasurementFilter,0,1,0,0,0,4,1,2,0,-1,0,1,,Algorithm.Composition.PointsAggregator
+Algorithm.Composition,LowPassFilter,0,1,0,0,1,7,1,0,1,-1,1,0,Algorithm.Measurement,
+Algorithm.Composition,PointsAggregator,3,2,0,0,2,21,2,0,0,0,3,1,Algorithm.Composition.IMeasurementFilter' Algorithm.Composition.IAggregationStrategy' Algorithm.Measurement,Algorithm.Tests.Composition.AggregationTests
+Algorithm.Composition,SummingStrategy,0,1,0,0,1,7,1,0,1,-1,1,0,Algorithm.Measurement,
+Algorithm.Inheritance,AveragingAggregator,0,3,0,0,1,19,3,1,1,-1,1,1,Algorithm.Measurement,Algorithm.Tests.Inheritance.AggregationTests
+Algorithm.Inheritance,HighPassSummingAggregator,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Algorithm.Inheritance,LowPassAveragingAggregator,0,2,0,0,1,10,2,0,2,-1,1,1,Algorithm.Measurement,Algorithm.Tests.Inheritance.AggregationTests
+Algorithm.Inheritance,SummingAggregator,0,3,0,0,1,14,3,0,1,-1,1,1,Algorithm.Measurement,Algorithm.Tests.Inheritance.AggregationTests
+Algorithm.Inheritance,PointsAggregator,1,4,0,0,1,17,4,2,0,0,1,0,Algorithm.Measurement,
+Algorithm,Measurement,2,1,0,2,1,10,1,0,0,0,0,10,,Algorithm.Composition.AveragingStrategy' Algorithm.Composition.LowPassFilter' Algorithm.Composition.PointsAggregator' Algorithm.Composition.SummingStrategy' Algorithm.Inheritance.AveragingAggregator' Algorithm.Inheritance.LowPassAveragingAggregator' Algorithm.Inheritance.SummingAggregator' Algorithm.Inheritance.PointsAggregator' Algorithm.Tests.Composition.AggregationTests' Algorithm.Tests.Inheritance.AggregationTests

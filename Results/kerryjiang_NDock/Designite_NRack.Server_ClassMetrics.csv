@@ -1,38 +1,41 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConfigurationWatcher,2,5,0,0,1,77,11,0,0,0,1,1
-ControlCommand,0,0,3,0,0,15,0,0,0,-1,0,1
-DefaultStatusCollector,0,2,0,0,1,26,5,0,1,-1,1,0
-BootstrapBase,1,15,9,0,4,257,39,2,0,0.2,14,0
-BootstrapFactory,0,3,0,0,3,54,7,0,0,-1,5,2
-DefaultBootstrap,0,2,0,0,1,17,2,0,1,-1,3,1
-IRemoteManagedApp,0,1,0,0,0,16,1,2,1,-1,0,1
-MefExtensions,0,1,0,0,1,12,1,0,0,-1,0,0
-Program,2,14,0,0,1,252,52,0,0,0.29,8,0
-ManagedAppGroup,0,8,4,0,8,69,14,0,2,-1,1,0
-RemoteTypeLoadResult,0,0,3,0,0,16,0,0,0,-1,0,1
-RemoteAppTypeValidator,1,2,0,0,2,39,5,0,0,0,4,2
-ProcessLocker,1,4,0,0,4,47,7,0,0,0,1,2
-RemoteBootstrapProxy,2,6,3,0,6,110,8,0,0,1,1,1
-AppAssemblyUpdateState,1,3,3,0,2,40,5,0,0,0,0,2
-AssemblyImport,1,3,0,0,2,44,3,0,0,0.67,0,4
-IsolationAppConst,3,0,0,3,0,6,0,1,0,-1,0,5
-IsolationApp,3,20,10,0,6,228,32,3,2,0.45,8,2
-IsolationBootstrap,2,5,0,0,1,79,12,2,1,0.4,10,0
-MarshalManagedApp,1,8,3,0,8,56,8,0,2,0,1,1
-AppDomainBootstrap,0,2,0,0,1,10,2,0,2,-1,3,1
-AppDomainApp,2,7,0,0,1,95,15,0,3,0.29,7,1
-AssemblyUpdatedRecycleTrigger,3,3,1,0,2,50,4,0,1,0,2,0
-IRecycleTrigger,0,2,1,0,0,8,2,2,0,-1,1,2
-MemoryRecycleTrigger,2,2,1,0,2,25,2,0,1,0,2,0
-PerformanceCounterInfo,0,1,4,0,0,66,1,0,0,-1,1,4
-ProcessPerformanceCounter,4,9,0,0,4,125,24,0,0,0.22,3,3
-ExternalProcessApp,7,10,1,0,2,179,21,0,3,0.3,7,1
-ExternalProcessAppServerMetadata,0,1,3,0,1,21,1,0,1,-1,0,2
-ProcessBootstrap,0,3,0,0,1,18,3,0,2,-1,5,1
-ProcessAppConst,4,0,0,4,0,7,0,0,1,-1,0,3
-ProcessApp,7,11,2,0,2,227,34,0,3,0.27,8,1
-RecycleTriggerConfig,0,1,1,0,1,12,1,0,1,-1,0,0
-RecycleTriggerConfigCollection,0,0,0,0,0,4,0,0,1,-1,0,1
-NRackService,2,6,0,0,1,53,7,0,0,0,1,0
-NRackServiceInstaller,3,3,0,0,1,57,6,0,0,0,0,0
-SelfInstaller,1,2,0,0,2,27,4,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NRack.Server,ConfigurationWatcher,2,5,0,0,1,82,11,0,0,0,4,1,NRack.Base.IBootstrap' NRack.Base.Config.IConfigSource' NRack.Base.IManagedApp' NRack.Base.Config.IServerConfig,NRack.Server.BootstrapBase
+NRack.Server,ControlCommand,0,0,3,0,0,6,0,0,0,-1,0,1,,NRack.Server.Program
+NRack.Server,DefaultStatusCollector,0,2,0,0,1,29,5,0,1,-1,4,0,NRack.Base.AppServerMetadata' NRack.Base.StatusInfoCollection' NRack.Base.AppServerStatus' NRack.Base.Metadata.StatusInfoAttribute,
+NRack.Server,BootstrapBase,1,15,9,0,4,248,35,2,1,0.2,18,0,NRack.Base.Config.IConfigSource' NRack.Server.ConfigurationWatcher' NRack.Base.Config.IServerConfig' NRack.Base.IManagedApp' NRack.Base.StartupType' NRack.Base.ServerState' NRack.Base.AppServerMetadata' NRack.Base.Metadata.StatusInfoAttribute' NRack.Server.StatusCollectState' System.ComponentModel.Composition.Hosting.ExportProvider' NRack.Server.Utils.PerformanceCounterInfo' NRack.Base.IsolationMode' NRack.Base.IStatusCollector' NRack.Base.StatusInfoCollection' NRack.Server.Utils.ProcessPerformanceCounter' NRack.Base.AppServerStatus' NRack.Server.RemoteAppTypeValidator' NRack.Server.RemoteBootstrapProxy,
+NRack.Server,StatusCollectState,0,0,5,0,0,8,0,0,0,-1,0,1,,NRack.Server.BootstrapBase
+NRack.Server,BootstrapFactory,0,3,0,0,3,51,9,0,0,-1,6,3,NRack.Base.Config.IConfigSource' NRack.Base.IsolationMode' NRack.Server.Isolation.AppDomainIsolation.AppDomainBootstrap' NRack.Server.Isolation.ProcessIsolation.ProcessBootstrap' NRack.Server.DefaultBootstrap' NRack.Base.IBootstrap,NRack.Server.Program' NRack.Server.Service.NRackService' NRack.Test.Test
+NRack.Server,DefaultBootstrap,0,2,0,0,1,19,2,0,2,-1,3,1,NRack.Base.Config.IConfigSource' NRack.Base.AppServerMetadata' NRack.Base.IManagedApp,NRack.Server.BootstrapFactory
+NRack.Server,IRemoteManagedApp,0,1,0,0,0,13,1,2,1,-1,1,1,NRack.Base.Config.IServerConfig,NRack.Server.Isolation.ProcessIsolation.ProcessApp
+NRack.Server,MefExtensions,0,1,0,0,1,17,1,0,0,-1,0,0,,
+NRack.Server,Program,2,14,0,0,1,287,40,0,0,0.29,10,0,NRack.Base.NRackEnv' NRack.Server.Service.SelfInstaller' NRack.Server.ControlCommand' NRack.Base.IBootstrap' NRack.Server.BootstrapFactory' NRack.Base.IManagedApp' NRack.Base.ServerState' NRack.Base.Config.IConfigSource' NRack.Base.IsolationMode' NRack.Server.Isolation.IsolationAppConst,
+NRack.Server,ManagedAppGroup,0,8,4,0,8,64,16,0,2,-1,3,0,NRack.Base.IManagedApp' NRack.Base.IBootstrap' NRack.Base.Config.IServerConfig,
+NRack.Server,RemoteTypeLoadResult<T>,0,0,3,0,0,7,0,0,0,-1,0,0,,
+NRack.Server,RemoteAppTypeValidator,1,2,0,0,2,43,3,0,0,0,2,2,NRack.Base.AppServerMetadata' NRack.Base.Metadata.IAppServerMetadata,NRack.Server.BootstrapBase' NRack.Server.Isolation.IsolationBootstrap
+NRack.Server,ProcessLocker,1,4,0,0,4,54,7,0,0,0,1,2,NRack.Base.NRackEnv,NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp' NRack.Server.Isolation.ProcessIsolation.ProcessApp
+NRack.Server,RemoteBootstrapProxy,2,6,3,0,6,116,8,0,1,1,1,1,NRack.Base.IBootstrap,NRack.Server.BootstrapBase
+NRack.Server,ServerProxy,1,9,3,0,9,53,9,0,2,0.33,5,0,NRack.Base.IManagedApp' NRack.Base.IBootstrap' NRack.Base.Config.IServerConfig' NRack.Base.AppServerMetadata' NRack.Base.StatusInfoCollection,
+NRack.Server.Isolation,AppAssemblyUpdateState,1,3,3,0,2,32,6,0,0,0,0,3,,NRack.Server.Isolation.IsolationApp' NRack.Server.Recycle.AssemblyUpdatedRecycleTrigger' NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp
+NRack.Server.Isolation,AssemblyImport,1,3,0,0,2,46,7,0,0,0.67,0,4,,NRack.Server.Isolation.IsolationBootstrap' NRack.Server.Isolation.AppDomainIsolation.AppDomainApp' NRack.Worker.ManagedAppWorker' NRack.Worker.ManagedAppWorker
+NRack.Server.Isolation,IsolationAppConst,3,0,0,3,0,6,0,1,0,-1,0,5,,NRack.Server.Program' NRack.Server.Isolation.IsolationApp' NRack.Server.Isolation.AppDomainIsolation.AppDomainApp' NRack.Worker.Program' NRack.Worker.Program
+NRack.Server.Isolation,IsolationApp,3,20,10,0,6,211,38,3,2,0.4,11,4,NRack.Base.AppServerMetadata' NRack.Base.Config.IServerConfig' NRack.Server.Isolation.IsolationAppConst' NRack.Base.ServerState' NRack.Base.Metadata.StatusInfoAttribute' NRack.Base.StatusInfoCollection' NRack.Base.Metadata.StatusInfoKeys' NRack.Base.IBootstrap' NRack.Server.Isolation.AppAssemblyUpdateState' NRack.Base.IManagedAppBase' NRack.Server.Recycle.IRecycleTrigger,NRack.Server.Isolation.IsolationBootstrap' NRack.Server.Recycle.AssemblyUpdatedRecycleTrigger' NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp' NRack.Server.Isolation.ProcessIsolation.ProcessApp
+NRack.Server.Isolation,IsolationBootstrap,2,5,0,0,1,93,13,2,2,0.4,14,1,NRack.Base.IBootstrap' NRack.Base.Config.IConfigSource' NRack.Base.Config.NRackConfig' NRack.Base.AppServerMetadata' NRack.Server.RemoteAppTypeValidator' NRack.Server.Isolation.IsolationApp' NRack.Server.Isolation.AssemblyImport' NRack.Base.Config.IServerConfig' NRack.Base.IsolationMode' NRack.Server.Config.RecycleTriggerConfigCollection' NRack.Server.Recycle.IRecycleTrigger' NRack.Base.Provider.IProviderMetadata' NRack.Server.Config.RecycleTriggerConfig' NRack.Base.IManagedApp,NRack.Server.Isolation.ProcessIsolation.ProcessBootstrap
+NRack.Server.Isolation,MarshalManagedApp,1,8,3,0,8,49,8,0,2,0,5,1,NRack.Base.IManagedApp' NRack.Base.IBootstrap' NRack.Base.Config.IServerConfig' NRack.Base.AppServerMetadata' NRack.Base.StatusInfoCollection,NRack.Server.Isolation.AppDomainIsolation.AppDomainApp
+NRack.Server.Isolation.AppDomainIsolation,AppDomainBootstrap,0,2,0,0,1,11,2,0,3,-1,3,1,NRack.Base.Config.IConfigSource' NRack.Server.Isolation.AppDomainIsolation.AppDomainApp' NRack.Base.AppServerMetadata,NRack.Server.BootstrapFactory
+NRack.Server.Isolation.AppDomainIsolation,AppDomainApp,2,7,0,0,1,120,14,0,3,0.29,9,1,NRack.Base.AppServerMetadata' NRack.Server.Isolation.IsolationAppConst' NRack.Server.Isolation.AssemblyImport' NRack.Base.IManagedApp' NRack.Base.IsolationMode' NRack.Server.Isolation.MarshalManagedApp' NRack.Base.IManagedAppBase' NRack.Base.StatusInfoCollection' NRack.Base.Metadata.StatusInfoKeys,NRack.Server.Isolation.AppDomainIsolation.AppDomainBootstrap
+NRack.Server.Recycle,AssemblyUpdatedRecycleTrigger,3,3,1,0,2,53,10,0,1,0,4,0,NRack.Server.Isolation.AppAssemblyUpdateState' NRack.Server.Isolation.IsolationApp' NRack.Base.IManagedApp' NRack.Base.StatusInfoCollection,
+NRack.Server.Recycle,IRecycleTrigger,0,2,1,0,0,6,2,2,0,-1,2,2,NRack.Base.IManagedApp' NRack.Base.StatusInfoCollection,NRack.Server.Isolation.IsolationApp' NRack.Server.Isolation.IsolationBootstrap
+NRack.Server.Recycle,MemoryRecycleTrigger,2,2,1,0,2,27,4,0,1,0,3,0,NRack.Base.Metadata.StatusInfoKeys' NRack.Base.IManagedApp' NRack.Base.StatusInfoCollection,
+NRack.Server.Utils,PerformanceCounterInfo,0,1,4,0,0,60,1,0,0,-1,1,4,NRack.Base.Metadata.StatusInfoKeys,NRack.Server.BootstrapBase' NRack.Server.Utils.ProcessPerformanceCounter' NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp' NRack.Server.Isolation.ProcessIsolation.ProcessApp
+NRack.Server.Utils,ProcessPerformanceCounter,4,9,0,0,4,141,21,0,0,0.22,4,3,NRack.Server.Utils.PerformanceCounterInfo' NRack.Base.NRackEnv' NRack.Base.Metadata.StatusInfoKeys' NRack.Base.StatusInfoCollection,NRack.Server.BootstrapBase' NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp' NRack.Server.Isolation.ProcessIsolation.ProcessApp
+NRack.Server.Isolation.ProcessIsolation,ExternalProcessApp,7,10,1,0,2,193,22,0,3,0.3,13,1,NRack.Server.Utils.ProcessPerformanceCounter' NRack.Server.ProcessLocker' NRack.Base.StatusInfoCollection' NRack.Server.Isolation.ProcessIsolation.ExternalProcessAppServerMetadata' NRack.Server.Isolation.IsolationApp' NRack.Base.Config.IServerConfig' NRack.Base.IBootstrap' NRack.Server.Isolation.AppAssemblyUpdateState' NRack.Base.ServerState' NRack.Base.IManagedAppBase' NRack.Server.Utils.PerformanceCounterInfo' NRack.Base.Metadata.StatusInfoKeys' NRack.Server.Isolation.ProcessIsolation.NullManagedApp,NRack.Server.Isolation.ProcessIsolation.ProcessBootstrap
+NRack.Server.Isolation.ProcessIsolation,NullManagedApp,0,6,0,0,6,27,6,0,1,-1,1,1,NRack.Base.Config.IServerConfig,NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp
+NRack.Server.Isolation.ProcessIsolation,ExternalProcessAppServerMetadata,0,1,3,0,1,12,1,0,1,-1,0,2,,NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp' NRack.Server.Isolation.ProcessIsolation.ProcessBootstrap
+NRack.Server.Isolation.ProcessIsolation,ProcessBootstrap,0,3,0,0,1,19,4,0,3,-1,8,1,NRack.Base.Config.IConfigSource' NRack.Server.Isolation.ProcessIsolation.ExternalProcessAppServerMetadata' NRack.Base.Config.IServerConfig' NRack.Server.Isolation.IsolationBootstrap' NRack.Base.IManagedApp' NRack.Server.Isolation.ProcessIsolation.ExternalProcessApp' NRack.Server.Isolation.ProcessIsolation.ProcessApp' NRack.Base.AppServerMetadata,NRack.Server.BootstrapFactory
+NRack.Server.Isolation.ProcessIsolation,ProcessAppConst,4,0,0,4,0,7,0,0,1,-1,0,3,,NRack.Server.Isolation.ProcessIsolation.ProcessApp' NRack.Worker.Program' NRack.Worker.Program
+NRack.Server.Isolation.ProcessIsolation,ProcessApp,7,11,2,0,2,264,34,0,3,0.27,13,1,NRack.Server.Utils.ProcessPerformanceCounter' NRack.Server.ProcessLocker' NRack.Base.AppServerMetadata' NRack.Server.Isolation.IsolationApp' NRack.Base.Config.IServerConfig' NRack.Base.IBootstrap' NRack.Server.IRemoteManagedApp' NRack.Base.NRackEnv' NRack.Server.Isolation.ProcessIsolation.ProcessAppConst' NRack.Server.Utils.PerformanceCounterInfo' NRack.Base.ServerState' NRack.Base.IManagedAppBase' NRack.Base.StatusInfoCollection,NRack.Server.Isolation.ProcessIsolation.ProcessBootstrap
+NRack.Server.Config,RecycleTriggerConfig,0,1,1,0,1,12,1,0,1,-1,0,1,,NRack.Server.Isolation.IsolationBootstrap
+NRack.Server.Config,RecycleTriggerConfigCollection,0,0,0,0,0,4,0,0,0,-1,0,1,,NRack.Server.Isolation.IsolationBootstrap
+NRack.Server.Service,NRackService,2,6,0,0,1,54,8,0,0,0,2,0,NRack.Base.IBootstrap' NRack.Server.BootstrapFactory,
+NRack.Server.Service,NRackServiceInstaller,3,3,0,0,1,53,6,0,0,0,0,0,,
+NRack.Server.Service,SelfInstaller,1,2,0,0,2,28,2,0,0,0,0,1,,NRack.Server.Program

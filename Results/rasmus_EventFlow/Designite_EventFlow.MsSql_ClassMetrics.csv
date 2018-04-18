@@ -1,0 +1,29 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+EventFlow.MsSql.Connections,IMsSqlConnectionFactory,0,0,0,0,0,3,0,1,0,-1,0,1,,EventFlow.MsSql.MsSqlConnection
+EventFlow.MsSql.Connections,MsSqlConnectionFactory,0,1,0,0,1,9,1,0,1,-1,0,0,,
+EventFlow.MsSql.EventStores,EventFlowEventStoresMsSql,0,2,1,0,2,12,2,0,0,-1,1,4,EventFlow.MsSql.IMsSqlDatabaseMigrator,EventFlow.MsSql.Tests.IntegrationTests.EventStores.EventFlowEventStoresMsSqlTests' EventFlow.MsSql.Tests.IntegrationTests.EventStores.MsSqlEventStoreTests' EventFlow.MsSql.Tests.IntegrationTests.EventStores.MsSqlScriptsTests' EventFlow.MsSql.Tests.IntegrationTests.ReadStores.MsSqlReadModelStoreTests
+EventFlow.MsSql.EventStores,MsSqlEventPersistence,2,5,0,0,5,160,6,0,0,0,1,0,EventFlow.MsSql.IMsSqlConnection,
+EventFlow.MsSql.EventStores,EventDataModel,0,0,7,0,0,10,0,0,0,-1,0,0,,
+EventFlow.MsSql.Extensions,EventFlowOptionsMsSqlEventStoreExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+EventFlow.MsSql.Extensions,EventFlowOptionsMsSqlExtensions,0,1,0,0,1,17,1,0,0,-1,1,0,EventFlow.MsSql.IMsSqlConfiguration,
+EventFlow.MsSql.Extensions,EventFlowOptionsMsSqlReadStoreExtensions,0,2,0,0,2,30,2,0,0,-1,0,0,,
+EventFlow.MsSql.Extensions,EventFlowOptionsSnapshotExtensions,0,1,0,0,1,9,1,0,0,-1,0,0,,
+EventFlow.MsSql,IMsSqlConfiguration,0,1,1,0,0,5,1,1,0,-1,0,4,,EventFlow.MsSql.Extensions.EventFlowOptionsMsSqlExtensions' EventFlow.MsSql.MsSqlConnection' EventFlow.MsSql.MsSqlDatabaseMigrator' EventFlow.MsSql.RetryStrategies.MsSqlErrorRetryStrategy
+EventFlow.MsSql,IMsSqlConnection,0,0,0,0,0,3,0,1,0,-1,0,6,,EventFlow.MsSql.EventStores.MsSqlEventPersistence' EventFlow.MsSql.ReadStores.MssqlReadModelStore<TReadModel>' EventFlow.MsSql.SnapshotStores.MsSqlSnapshotPersistence' EventFlow.MsSql.Tests.IntegrationTests.ReadStores.QueryHandlers.MsSqlThingyGetMessagesQueryHandler' EventFlow.MsSql.Tests.IntegrationTests.ReadStores.QueryHandlers.MsSqlThingyGetQueryHandler' EventFlow.MsSql.Tests.IntegrationTests.ReadStores.QueryHandlers.MsSqlThingyGetVersionQueryHandler
+EventFlow.MsSql,IMsSqlDatabaseMigrator,0,0,0,0,0,3,0,1,0,-1,0,2,,EventFlow.MsSql.EventStores.EventFlowEventStoresMsSql' EventFlow.MsSql.SnapshotStores.EventFlowSnapshotStoresMsSql
+EventFlow.MsSql,MsSqlConfiguration,0,2,2,0,1,16,2,0,1,-1,0,3,,EventFlow.MsSql.Tests.IntegrationTests.EventStores.MsSqlEventStoreTests' EventFlow.MsSql.Tests.IntegrationTests.ReadStores.MsSqlReadModelStoreTests' EventFlow.MsSql.Tests.IntegrationTests.SnapshotStores.MsSqlSnapshotStoreTests
+EventFlow.MsSql,MsSqlConnection,0,2,0,0,2,23,2,0,1,-1,2,0,EventFlow.MsSql.IMsSqlConfiguration' EventFlow.MsSql.Connections.IMsSqlConnectionFactory,
+EventFlow.MsSql,MsSqlDatabaseMigrator,0,1,0,0,1,9,1,0,1,-1,1,0,EventFlow.MsSql.IMsSqlConfiguration,
+EventFlow.MsSql.Integrations,TableParameter<TRow>,7,6,0,0,4,94,8,0,0,0.67,0,0,,
+EventFlow.MsSql.ReadStores.Attributes,MsSqlReadModelIdentityColumnAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+EventFlow.MsSql.ReadStores.Attributes,MsSqlReadModelIgnoreColumnAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+EventFlow.MsSql.ReadStores.Attributes,MsSqlReadModelVersionColumnAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+EventFlow.MsSql.ReadStores,IMssqlReadModel,0,0,4,0,0,8,0,1,0,-1,0,1,,EventFlow.MsSql.ReadStores.MssqlReadModelStore<TReadModel>
+EventFlow.MsSql.ReadStores,IMssqlReadModelStore,0,0,0,0,0,4,0,1,0,-1,0,0,,
+EventFlow.MsSql.ReadStores,MssqlReadModel,0,1,4,0,1,16,1,1,1,-1,0,0,,
+EventFlow.MsSql.ReadStores,MssqlReadModelStore<TReadModel>,5,6,0,0,5,147,14,0,1,0,2,0,EventFlow.MsSql.IMsSqlConnection' EventFlow.MsSql.ReadStores.IMssqlReadModel,
+EventFlow.MsSql.RetryStrategies,IMsSqlErrorRetryStrategy,0,0,0,0,0,3,0,1,0,-1,0,0,,
+EventFlow.MsSql.RetryStrategies,MsSqlErrorRetryStrategy,2,4,0,0,2,113,9,0,1,0,1,0,EventFlow.MsSql.IMsSqlConfiguration,
+EventFlow.MsSql.SnapshotStores,EventFlowSnapshotStoresMsSql,0,2,1,0,2,12,2,0,0,-1,1,2,EventFlow.MsSql.IMsSqlDatabaseMigrator,EventFlow.MsSql.Tests.IntegrationTests.SnapshotStores.EventFlowSnapshotStoresMsSqlTests' EventFlow.MsSql.Tests.IntegrationTests.SnapshotStores.MsSqlSnapshotStoreTests
+EventFlow.MsSql.SnapshotStores,MsSqlSnapshotPersistence,1,6,0,0,6,97,7,0,0,0,2,0,EventFlow.MsSql.IMsSqlConnection' EventFlow.MsSql.SnapshotStores.MsSqlSnapshotDataModel,
+EventFlow.MsSql.SnapshotStores,MsSqlSnapshotDataModel,0,0,5,0,0,8,0,0,0,-1,0,1,,EventFlow.MsSql.SnapshotStores.MsSqlSnapshotPersistence

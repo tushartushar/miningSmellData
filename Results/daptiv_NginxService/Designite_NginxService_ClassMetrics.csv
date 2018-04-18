@@ -1,7 +1,7 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Execute,0,1,0,0,1,11,2,0,0,-1,0,1
-NginxController,1,4,0,0,2,28,6,0,0,0,2,1
-NginxExeLocator,0,4,0,0,3,47,5,0,0,-1,0,2
-NginxMasterProcess,2,3,0,0,3,27,5,0,0,0,2,1
-NginxSignalProcess,1,2,0,0,1,17,2,0,0,0,1,1
-Program,0,1,0,0,0,19,1,0,0,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NginxService,Execute,0,1,0,0,1,12,2,0,0,-1,0,1,,NginxService.NginxController
+NginxService,NginxController,1,4,0,0,2,30,6,0,0,0,2,1,NginxService.NginxMasterProcess' NginxService.Execute,NginxService.Program
+NginxService,NginxExeLocator,0,4,0,0,3,48,5,0,0,-1,0,2,,NginxService.NginxMasterProcess' NginxService.NginxSignalProcess
+NginxService,NginxMasterProcess,2,3,0,0,3,29,5,0,0,0,2,1,NginxService.NginxExeLocator' NginxService.NginxSignalProcess,NginxService.NginxController
+NginxService,NginxSignalProcess,1,2,0,0,1,17,2,0,0,0,1,1,NginxService.NginxExeLocator,NginxService.NginxMasterProcess
+NginxService,Program,0,1,0,0,0,22,1,0,0,-1,1,0,NginxService.NginxController,

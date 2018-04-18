@@ -1,6 +1,7 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Battery,4,2,3,0,2,58,4,0,0,1,0,1
-Display,6,2,3,0,2,60,3,0,0,1,0,1
-Gsm,8,2,8,0,2,107,7,0,0,1,3,0
-Call,3,5,4,0,5,67,5,0,0,1,0,1
-CallHistory,1,9,1,0,9,53,11,0,0,0,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GSM.Hardware,Battery,4,2,3,0,2,50,4,0,0,1,1,1,GSM.Hardware.Type,GSM.Hardware.Gsm
+GSM.Hardware,Type,0,0,0,0,0,1,0,0,0,-1,0,1,,GSM.Hardware.Battery
+GSM.Hardware,Display,6,2,3,0,2,59,3,0,0,1,0,1,,GSM.Hardware.Gsm
+GSM.Hardware,Gsm,8,2,8,0,2,101,7,0,0,1,3,0,GSM.Hardware.Display' GSM.Hardware.Battery' GSM.Software.CallHistory,
+GSM.Software,Call,3,5,4,0,5,60,5,0,0,1,0,1,,GSM.Software.CallHistory
+GSM.Software,CallHistory,1,9,1,0,9,54,11,0,0,0,1,1,GSM.Software.Call,GSM.Hardware.Gsm

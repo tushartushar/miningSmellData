@@ -1,42 +1,45 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AuthenticationService,4,9,1,0,4,86,10,0,1,0,4,3
-RoomService,5,22,0,0,9,164,26,0,1,0.41,7,4
-BaseService,1,2,0,0,0,16,3,4,0,0,0,0
-RoomEventArgs,0,2,1,0,2,14,2,2,0,-1,0,0
-MessageProcessedEventArgs,0,1,1,0,1,12,1,0,1,-1,1,0
-UserJoinedEventArgs,0,1,1,0,1,12,1,0,1,-1,1,0
-LoginCompleteEventArgs,0,1,2,0,1,16,1,0,0,-1,1,2
-JoiningRoomEventArgs,0,1,1,0,1,11,1,0,0,-1,1,2
-RoomsRetrievedEventArgs,0,1,1,0,1,11,1,0,0,-1,1,2
-MessageService,4,11,0,0,5,84,12,0,1,0.18,7,1
-UserService,4,10,0,0,4,92,11,0,1,0.2,2,4
-GroupTypeConverter,3,2,0,0,2,42,18,0,0,0,1,0
-MessageItemsToUserConverter,0,2,0,0,2,15,2,0,0,-1,2,0
-ChatMessageGroupView,0,1,0,0,1,10,1,0,0,-1,0,0
-ChatMessageGroupViewModel,4,5,5,0,4,94,6,0,1,0.4,2,1
-IHasBeenSeen,0,0,1,0,0,7,0,1,0,-1,0,1
-ICanHaveUnreadMessages,0,1,2,0,0,10,1,1,0,-1,0,1
-ChatMessageView,0,1,0,0,1,10,1,0,0,-1,0,0
-ChatMessageViewModel,4,1,5,0,1,62,1,0,1,0,1,5
-MessageViewModel,2,2,2,0,0,33,2,2,0,1,0,1
-LoginView,0,1,0,0,1,10,1,0,0,-1,0,0
-LoginViewModel,7,7,6,0,5,118,9,0,0,0.71,1,1
-AutoRefreshCollectionViewSource,0,11,0,0,0,314,30,0,0,-1,0,0
-ServiceLocator,1,2,0,0,2,12,2,0,0,0,0,4
-NinjectBootstrapper,1,4,0,0,0,35,5,0,0,0,0,0
-ShellView,0,3,0,0,1,35,6,0,0,-1,0,0
-ShellViewModel,3,4,0,0,2,30,5,0,0,0.5,4,0
-App,1,4,0,0,0,38,5,0,0,0.5,1,0
-ChatWindowView,0,1,0,0,1,10,1,0,0,-1,0,0
-ChatWindowViewModel,6,7,3,0,4,90,16,0,0,0.57,5,1
-JoinState,0,0,0,0,0,6,0,0,0,-1,0,2
-RoomDescriptionView,0,1,0,0,1,10,1,0,0,-1,0,0
-RoomView,0,1,0,0,1,10,1,0,0,-1,0,0
-RoomViewModel,14,21,10,0,3,310,36,0,0,0.1,11,5
-GroupType,0,0,0,0,0,6,0,0,0,-1,0,2
-MessageUserView,0,1,0,0,1,10,1,0,0,-1,0,0
-RoomUserViewModel,5,5,4,0,1,84,8,0,0,0,2,1
-UserView,0,1,0,0,1,10,1,0,0,-1,0,0
-UserViewModel,6,1,6,0,0,87,3,0,0,0,0,11
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Jabbr.WPF.Infrastructure.Services,AuthenticationService,4,9,1,0,4,94,10,0,1,0,3,3,Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.Services.UserService' Jabbr.WPF.Users.UserViewModel,Jabbr.WPF.Authentication.LoginViewModel' Jabbr.WPF.ShellViewModel' Jabbr.WPF.App
+Jabbr.WPF.Infrastructure.Services,RoomService,5,22,0,0,9,176,28,0,1,0.09,5,4,Jabbr.WPF.Infrastructure.ServiceLocator' Jabbr.WPF.Infrastructure.Services.UserService' Jabbr.WPF.Rooms.RoomViewModel' Jabbr.WPF.Rooms.JoinState' Jabbr.WPF.Users.UserViewModel,Jabbr.WPF.Infrastructure.Services.AuthenticationService' Jabbr.WPF.Infrastructure.Services.MessageService' Jabbr.WPF.Rooms.ChatWindowViewModel' Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Infrastructure.Services,BaseService,1,2,0,0,0,17,3,4,0,0,0,0,,
+Jabbr.WPF.Infrastructure.Services,RoomEventArgs,0,2,1,0,2,11,2,2,0,-1,0,0,,
+Jabbr.WPF.Infrastructure.Services,MessageProcessedEventArgs,0,1,1,0,1,9,1,0,1,-1,1,0,Jabbr.WPF.Messages.ChatMessageViewModel,
+Jabbr.WPF.Infrastructure.Services,UserJoinedEventArgs,0,1,1,0,1,9,1,0,1,-1,1,0,Jabbr.WPF.Users.UserViewModel,
+Jabbr.WPF.Infrastructure.Services,LoginCompleteEventArgs,0,1,2,0,1,10,1,0,0,-1,1,1,Jabbr.WPF.Users.UserViewModel,Jabbr.WPF.ShellViewModel
+Jabbr.WPF.Infrastructure.Services,JoiningRoomEventArgs,0,1,1,0,1,8,1,0,0,-1,1,1,Jabbr.WPF.Rooms.RoomViewModel,Jabbr.WPF.Rooms.ChatWindowViewModel
+Jabbr.WPF.Infrastructure.Services,RoomsRetrievedEventArgs,0,1,1,0,1,8,1,0,0,-1,0,1,,Jabbr.WPF.Rooms.ChatWindowViewModel
+Jabbr.WPF.Infrastructure.Services,MessageService,4,11,0,0,5,93,14,0,1,0.18,7,1,Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.ServiceLocator' Jabbr.WPF.Infrastructure.Services.UserService' Jabbr.WPF.Rooms.RoomViewModel' Jabbr.WPF.Messages.ChatMessageViewModel' Jabbr.WPF.Users.UserViewModel' HtmlToXamlConversion.HtmlToXamlConverter,Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Infrastructure.Services,UserService,4,10,0,0,4,89,18,0,1,0.2,2,4,Jabbr.WPF.Infrastructure.ServiceLocator' Jabbr.WPF.Users.UserViewModel,Jabbr.WPF.Infrastructure.Services.AuthenticationService' Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.Services.MessageService' Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Markup.Converters,GroupTypeConverter,3,2,0,0,2,44,4,0,0,0,1,0,Jabbr.WPF.Users.GroupType,
+Jabbr.WPF.Markup.Converters,MessageItemsToUserConverter,0,2,0,0,2,15,2,0,0,-1,2,0,Jabbr.WPF.Users.UserViewModel' Jabbr.WPF.Messages.ChatMessageViewModel,
+Jabbr.WPF.Messages,ChatMessageGroupView,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Jabbr.WPF.Messages,ChatMessageGroupViewModel,4,5,5,0,4,91,9,0,1,0.4,2,1,Jabbr.WPF.Users.UserViewModel' Jabbr.WPF.Messages.ChatMessageViewModel,Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Messages,IHasBeenSeen,0,0,1,0,0,4,0,1,0,-1,0,1,,Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Messages,ICanHaveUnreadMessages,0,1,2,0,0,6,1,1,0,-1,0,1,,Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Messages,ChatMessageView,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Jabbr.WPF.Messages,ChatMessageViewModel,4,1,5,0,1,62,1,0,1,0,1,5,Jabbr.WPF.Users.UserViewModel,Jabbr.WPF.Infrastructure.Services.MessageProcessedEventArgs' Jabbr.WPF.Infrastructure.Services.MessageService' Jabbr.WPF.Markup.Converters.MessageItemsToUserConverter' Jabbr.WPF.Messages.ChatMessageGroupViewModel' Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Messages,MessageViewModel,2,2,2,0,0,35,2,2,0,1,0,0,,
+Jabbr.WPF.Authentication,LoginView,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Jabbr.WPF.Authentication,LoginViewModel,7,7,6,0,5,120,9,0,0,0.71,1,1,Jabbr.WPF.Infrastructure.Services.AuthenticationService,Jabbr.WPF.ShellViewModel
+Jabbr.WPF.Infrastructure,AutoRefreshCollectionViewSource,0,11,0,0,0,329,28,0,0,-1,2,0,Jabbr.WPF.Infrastructure.NotifyCollectionChangedWeakEventManager' Jabbr.WPF.Infrastructure.NotifyPropertyChangedWeakEventManager,
+Jabbr.WPF.Infrastructure,NotifyCollectionChangedWeakEventManager,0,5,1,0,2,69,7,0,0,-1,0,1,,Jabbr.WPF.Infrastructure.AutoRefreshCollectionViewSource
+Jabbr.WPF.Infrastructure,NotifyPropertyChangedWeakEventManager,0,5,1,0,2,69,7,0,0,-1,0,1,,Jabbr.WPF.Infrastructure.AutoRefreshCollectionViewSource
+Jabbr.WPF.Infrastructure,ServiceLocator,1,2,0,0,2,12,2,0,0,0,0,4,,Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.Services.MessageService' Jabbr.WPF.Infrastructure.Services.UserService' Jabbr.WPF.Rooms.ChatWindowViewModel
+Jabbr.WPF,NinjectBootstrapper,1,4,0,0,0,38,5,0,0,0,0,0,,
+Jabbr.WPF,ShellView,0,3,0,0,1,39,6,0,0,-1,0,0,,
+Jabbr.WPF,ShellViewModel,3,4,0,0,2,33,5,0,0,0.5,4,0,Jabbr.WPF.Infrastructure.Services.AuthenticationService' Jabbr.WPF.Rooms.ChatWindowViewModel' Jabbr.WPF.Authentication.LoginViewModel' Jabbr.WPF.Infrastructure.Services.LoginCompleteEventArgs,
+Jabbr.WPF,App,2,6,0,0,2,72,8,0,0,0.5,1,0,Jabbr.WPF.Infrastructure.Services.AuthenticationService,
+Jabbr.WPF.Rooms,ChatWindowView,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Jabbr.WPF.Rooms,ChatWindowViewModel,6,7,3,0,4,90,11,0,0,0.57,5,1,Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.ServiceLocator' Jabbr.WPF.Rooms.RoomViewModel' Jabbr.WPF.Infrastructure.Services.RoomsRetrievedEventArgs' Jabbr.WPF.Infrastructure.Services.JoiningRoomEventArgs,Jabbr.WPF.ShellViewModel
+Jabbr.WPF.Rooms,JoinState,0,0,0,0,0,6,0,0,0,-1,0,2,,Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Rooms,RoomDescriptionView,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Jabbr.WPF.Rooms,RoomView,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Jabbr.WPF.Rooms,RoomViewModel,14,21,10,0,3,321,44,0,0,0.1,10,4,Jabbr.WPF.Infrastructure.Services.MessageService' Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.Services.UserService' Jabbr.WPF.Rooms.JoinState' Jabbr.WPF.Users.RoomUserViewModel' Jabbr.WPF.Users.UserViewModel' Jabbr.WPF.Messages.ChatMessageGroupViewModel' Jabbr.WPF.Messages.ChatMessageViewModel' Jabbr.WPF.Messages.ICanHaveUnreadMessages' Jabbr.WPF.Messages.IHasBeenSeen,Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.Services.JoiningRoomEventArgs' Jabbr.WPF.Infrastructure.Services.MessageService' Jabbr.WPF.Rooms.ChatWindowViewModel
+Jabbr.WPF.Users,GroupType,0,0,0,0,0,6,0,0,0,-1,0,2,,Jabbr.WPF.Markup.Converters.GroupTypeConverter' Jabbr.WPF.Users.RoomUserViewModel
+Jabbr.WPF.Users,MessageUserView,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Jabbr.WPF.Users,RoomUserViewModel,5,5,4,0,1,84,8,0,0,0,2,1,Jabbr.WPF.Users.UserViewModel' Jabbr.WPF.Users.GroupType,Jabbr.WPF.Rooms.RoomViewModel
+Jabbr.WPF.Users,UserView,2,3,0,0,2,53,5,0,0,0,0,0,,
+Jabbr.WPF.Users,UserViewModel,6,1,6,0,0,89,3,0,0,0,0,11,,Jabbr.WPF.Infrastructure.Services.AuthenticationService' Jabbr.WPF.Infrastructure.Services.RoomService' Jabbr.WPF.Infrastructure.Services.UserJoinedEventArgs' Jabbr.WPF.Infrastructure.Services.LoginCompleteEventArgs' Jabbr.WPF.Infrastructure.Services.MessageService' Jabbr.WPF.Infrastructure.Services.UserService' Jabbr.WPF.Markup.Converters.MessageItemsToUserConverter' Jabbr.WPF.Messages.ChatMessageGroupViewModel' Jabbr.WPF.Messages.ChatMessageViewModel' Jabbr.WPF.Rooms.RoomViewModel' Jabbr.WPF.Users.RoomUserViewModel
+Jabbr.WPF.Properties,Resources,2,1,2,0,0,44,1,0,0,0,0,0,,
+Jabbr.WPF.Properties,Settings,1,0,1,0,0,13,0,0,0,-1,0,0,,
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

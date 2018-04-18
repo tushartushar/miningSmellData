@@ -1,36 +1,45 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AuthConfig,0,1,0,0,1,18,1,0,0,-1,0,1
-BundleConfig,0,1,0,0,1,13,1,0,0,-1,0,1
-FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1
-AppConfig,0,2,0,0,1,21,5,0,0,-1,0,1
-RouteConfig,0,1,0,0,1,13,1,0,0,-1,0,1
-WebApiConfig,0,1,0,0,1,9,1,0,0,-1,0,1
-MvcApplication,0,1,0,0,0,13,1,0,0,-1,6,0
-AccountController,0,17,0,0,14,326,50,0,0,-1,9,0
-AttributeRoutingTestController,0,2,0,0,2,14,2,0,0,-1,0,0
-CheckoutController,2,3,0,0,3,53,6,0,0,0.67,3,0
-FileUploadController,0,3,0,0,3,25,4,0,0,-1,0,0
-HomeController,1,4,0,0,1,49,10,0,0,0,3,0
-ModelBindingTestsController,0,5,0,0,5,121,5,0,0,-1,0,0
-ShoppingCartController,1,5,0,0,4,67,5,0,0,0,4,0
-StoreController,1,5,0,0,4,35,5,0,0,0,1,0
-StoreManagerController,1,9,0,0,8,95,14,0,0,0,2,0
-InitializeSimpleMembershipAttribute,3,1,0,0,1,30,1,0,0,0,0,0
-UsersContext,0,1,1,0,1,10,1,0,0,-1,1,1
-UserProfile,0,0,2,0,0,14,0,0,0,-1,0,2
-RegisterExternalLoginModel,0,0,2,0,0,13,0,0,0,-1,0,1
-LocalPasswordModel,0,0,3,0,0,25,0,0,0,-1,0,1
-LoginModel,0,0,3,0,0,21,0,0,0,-1,0,1
-RegisterModel,0,0,3,0,0,24,0,0,0,-1,0,1
-ExternalLogin,0,0,3,0,0,15,0,0,0,-1,0,1
-Album,0,0,9,0,0,47,0,0,0,-1,3,6
-Artist,0,0,2,0,0,11,0,0,0,-1,0,3
-Cart,0,0,6,0,0,29,0,0,0,-1,1,2
-Genre,0,0,4,0,0,19,0,0,0,-1,1,3
-MusicStoreEntities,0,1,6,0,0,31,1,0,0,-1,6,8
-Order,0,0,14,0,0,88,0,0,0,-1,1,4
-OrderDetail,0,0,7,0,0,31,0,0,0,-1,2,4
-SampleData,0,4,0,0,0,4218,4,0,0,-1,3,0
-ShoppingCart,2,12,1,1,12,135,20,0,0,0.25,4,3
-ShoppingCartRemoveViewModel,0,0,5,0,0,23,0,0,0,-1,0,1
-ShoppingCartViewModel,0,0,2,0,0,11,0,0,0,-1,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MvcMusicStore,AuthConfig,0,1,0,0,1,18,1,0,0,-1,0,1,,MvcMusicStore.MvcApplication
+MvcMusicStore,BundleConfig,0,1,0,0,1,17,1,0,0,-1,0,1,,MvcMusicStore.MvcApplication
+MvcMusicStore,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,MvcMusicStore.MvcApplication
+MvcMusicStore,AppConfig,0,2,0,0,1,21,5,0,0,-1,1,1,MvcMusicStore.Filters.InitializeSimpleMembershipAttribute,MvcMusicStore.MvcApplication
+MvcMusicStore,RouteConfig,0,1,0,0,1,13,1,0,0,-1,0,1,,MvcMusicStore.MvcApplication
+MvcMusicStore,WebApiConfig,0,1,0,0,1,11,1,0,0,-1,0,1,,MvcMusicStore.MvcApplication
+MvcMusicStore,MvcApplication,0,1,0,0,0,13,1,0,0,-1,6,0,MvcMusicStore.WebApiConfig' MvcMusicStore.FilterConfig' MvcMusicStore.RouteConfig' MvcMusicStore.BundleConfig' MvcMusicStore.AuthConfig' MvcMusicStore.AppConfig,
+MvcMusicStore.Controllers,AccountController,0,17,0,0,14,348,31,0,0,-1,10,0,MvcMusicStore.Models.LoginModel' MvcMusicStore.Models.MusicStoreEntities' MvcMusicStore.Models.ShoppingCart' MvcMusicStore.Models.RegisterModel' MvcMusicStore.Controllers.ManageMessageId' MvcMusicStore.Models.LocalPasswordModel' MvcMusicStore.Controllers.ExternalLoginResult' MvcMusicStore.Models.UserProfile' MvcMusicStore.Models.RegisterExternalLoginModel' MvcMusicStore.Models.UsersContext,
+MvcMusicStore.Controllers,ManageMessageId,0,0,0,0,0,6,0,0,0,-1,0,1,,MvcMusicStore.Controllers.AccountController
+MvcMusicStore.Controllers,ExternalLoginResult,0,2,2,0,2,14,2,0,0,-1,0,1,,MvcMusicStore.Controllers.AccountController
+MvcMusicStore.Controllers,AttributeRoutingTestController,0,2,0,0,2,14,2,0,0,-1,0,0,,
+MvcMusicStore.Controllers,CheckoutController,2,3,0,0,3,64,5,0,0,0.67,3,0,MvcMusicStore.Models.MusicStoreEntities' MvcMusicStore.Models.Order' MvcMusicStore.Models.ShoppingCart,
+MvcMusicStore.Controllers,FileUploadController,0,3,0,0,3,26,3,0,0,-1,0,0,,
+MvcMusicStore.Controllers,HomeController,1,4,0,0,1,56,4,0,0,0,1,0,MvcMusicStore.Models.MusicStoreEntities,
+MvcMusicStore.Controllers,ModelBindingTestsController,0,5,0,0,5,75,5,0,0,-1,3,0,MvcMusicStore.Controllers.ComplexType' MvcMusicStore.Controllers.AjaxPostedData' MvcMusicStore.Controllers.HtmlInputAllowedType,
+MvcMusicStore.Controllers,AjaxPostedData,0,0,5,0,0,8,0,0,0,-1,0,1,,MvcMusicStore.Controllers.ModelBindingTestsController
+MvcMusicStore.Controllers,MyComplexObject,0,0,2,0,0,5,0,0,0,-1,0,0,,
+MvcMusicStore.Controllers,ComplexType,0,1,2,0,1,10,1,0,0,-1,0,1,,MvcMusicStore.Controllers.ModelBindingTestsController
+MvcMusicStore.Controllers,SecondLevelComplexType,0,1,2,0,1,10,1,0,0,-1,0,0,,
+MvcMusicStore.Controllers,ThirdLevelComplexType,0,1,2,0,1,10,1,0,0,-1,0,0,,
+MvcMusicStore.Controllers,HtmlInputAllowedType,0,0,1,0,0,5,0,0,0,-1,0,1,,MvcMusicStore.Controllers.ModelBindingTestsController
+MvcMusicStore.Controllers,ShoppingCartController,1,5,0,0,4,75,5,0,0,0,6,0,MvcMusicStore.Models.MusicStoreEntities' MvcMusicStore.Models.ShoppingCart' MvcMusicStore.ViewModels.ShoppingCartViewModel' MvcMusicStore.ViewModels.ShoppingCartRemoveViewModel' MvcMusicStore.Models.Album' MvcMusicStore.Models.Cart,
+MvcMusicStore.Controllers,StoreController,1,5,0,0,4,43,5,0,0,0,1,0,MvcMusicStore.Models.MusicStoreEntities,
+MvcMusicStore.Controllers,StoreManagerController,1,9,0,0,8,101,14,0,0,0,2,0,MvcMusicStore.Models.MusicStoreEntities' MvcMusicStore.Models.Album,
+MvcMusicStore.Filters,InitializeSimpleMembershipAttribute,3,1,0,0,1,35,1,0,0,0,1,1,MvcMusicStore.Filters.SimpleMembershipInitializer,MvcMusicStore.AppConfig
+MvcMusicStore.Filters,SimpleMembershipInitializer,0,1,0,0,1,23,1,0,0,-1,1,1,MvcMusicStore.Models.UsersContext,MvcMusicStore.Filters.InitializeSimpleMembershipAttribute
+MvcMusicStore.Models,UsersContext,0,1,1,0,1,8,1,0,0,-1,0,2,,MvcMusicStore.Controllers.AccountController' MvcMusicStore.Filters.SimpleMembershipInitializer
+MvcMusicStore.Models,UserProfile,0,0,2,0,0,8,0,0,0,-1,0,1,,MvcMusicStore.Controllers.AccountController
+MvcMusicStore.Models,RegisterExternalLoginModel,0,0,2,0,0,7,0,0,0,-1,0,1,,MvcMusicStore.Controllers.AccountController
+MvcMusicStore.Models,LocalPasswordModel,0,0,3,0,0,16,0,0,0,-1,0,1,,MvcMusicStore.Controllers.AccountController
+MvcMusicStore.Models,LoginModel,0,0,3,0,0,12,0,0,0,-1,0,1,,MvcMusicStore.Controllers.AccountController
+MvcMusicStore.Models,RegisterModel,0,0,3,0,0,15,0,0,0,-1,0,1,,MvcMusicStore.Controllers.AccountController
+MvcMusicStore.Models,ExternalLogin,0,0,3,0,0,6,0,0,0,-1,0,0,,
+MvcMusicStore.Models,Album,0,0,9,0,0,20,0,0,0,-1,0,3,,MvcMusicStore.Controllers.ShoppingCartController' MvcMusicStore.Controllers.StoreManagerController' MvcMusicStore.Models.ShoppingCart
+MvcMusicStore.Models,Artist,0,0,2,0,0,5,0,0,0,-1,0,1,,MvcMusicStore.Models.SampleData
+MvcMusicStore.Models,Cart,0,0,6,0,0,11,0,0,0,-1,0,2,,MvcMusicStore.Controllers.ShoppingCartController' MvcMusicStore.Models.ShoppingCart
+MvcMusicStore.Models,Genre,0,0,4,0,0,7,0,0,0,-1,0,1,,MvcMusicStore.Models.SampleData
+MvcMusicStore.Models,MusicStoreEntities,0,1,6,0,0,13,1,0,0,-1,0,8,,MvcMusicStore.Controllers.AccountController' MvcMusicStore.Controllers.CheckoutController' MvcMusicStore.Controllers.HomeController' MvcMusicStore.Controllers.ShoppingCartController' MvcMusicStore.Controllers.StoreController' MvcMusicStore.Controllers.StoreManagerController' MvcMusicStore.Models.SampleData' MvcMusicStore.Models.ShoppingCart
+MvcMusicStore.Models,Order,0,0,14,0,0,47,0,0,0,-1,0,2,,MvcMusicStore.Controllers.CheckoutController' MvcMusicStore.Models.ShoppingCart
+MvcMusicStore.Models,OrderDetail,0,0,7,0,0,10,0,0,0,-1,0,1,,MvcMusicStore.Models.ShoppingCart
+MvcMusicStore.Models,SampleData,0,4,0,0,0,812,4,0,0,-1,3,0,MvcMusicStore.Models.MusicStoreEntities' MvcMusicStore.Models.Genre' MvcMusicStore.Models.Artist,
+MvcMusicStore.Models,ShoppingCart,2,12,1,1,12,152,20,0,0,0.25,5,3,MvcMusicStore.Models.MusicStoreEntities' MvcMusicStore.Models.Album' MvcMusicStore.Models.OrderDetail' MvcMusicStore.Models.Cart' MvcMusicStore.Models.Order,MvcMusicStore.Controllers.AccountController' MvcMusicStore.Controllers.CheckoutController' MvcMusicStore.Controllers.ShoppingCartController
+MvcMusicStore.ViewModels,ShoppingCartRemoveViewModel,0,0,5,0,0,8,0,0,0,-1,0,1,,MvcMusicStore.Controllers.ShoppingCartController
+MvcMusicStore.ViewModels,ShoppingCartViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,MvcMusicStore.Controllers.ShoppingCartController

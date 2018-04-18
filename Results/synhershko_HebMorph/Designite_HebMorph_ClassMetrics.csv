@@ -1,0 +1,31 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+HebMorph.DataStructures,DictHebMorph,3,6,0,0,6,36,7,0,0,0,1,0,HebMorph.MorphData,
+HebMorph.DataStructures,DictRadix<T>,3,11,3,0,8,446,28,0,0,0.73,2,0,HebMorph.DataStructures.DictNode' HebMorph.DataStructures.TolerantLookupCrawler,
+HebMorph.DataStructures,DictNode,3,0,0,3,0,6,0,0,0,-1,0,4,,HebMorph.DataStructures.DictRadix<T>' HebMorph.DataStructures.TolerantLookupCrawler' HebMorph.DataStructures.RadixEnumerator' VisualHebMorph.MainForm
+HebMorph.DataStructures,TolerantLookupCrawler,4,4,0,0,2,101,16,0,0,0,2,1,HebMorph.DataStructures.DictNode' HebMorph.DataStructures.MatchCandidate,HebMorph.DataStructures.DictRadix<T>
+HebMorph.DataStructures,MatchCandidate,3,1,0,3,1,12,1,0,0,0,0,1,,HebMorph.DataStructures.TolerantLookupCrawler
+HebMorph.DataStructures,LookupResult,3,1,0,3,1,12,1,0,0,0,0,1,,HebMorph.Lemmatizer
+HebMorph.DataStructures,RadixEnumerator,2,4,3,0,4,81,10,0,0,0.5,1,1,HebMorph.DataStructures.DictNode,VisualHebMorph.MainForm
+HebMorph.DataStructures,SortOrder,0,0,0,0,0,1,0,0,0,-1,0,1,,HebMorph.DataStructures.RealSortedList<T>
+HebMorph.DataStructures,RealSortedList<T>,1,8,0,0,8,68,13,0,0,0.62,1,0,HebMorph.DataStructures.SortOrder,
+HebMorph,HebrewToken,0,5,5,0,5,50,9,0,1,-1,3,5,HebMorph.HSpell.DMask' HebMorph.Token' HebMorph.HSpell.LingInfo,HebMorph.Lemmatizer' HebMorph.LemmaFilters.BasicLemmaFilter' Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' VisualHebMorph.MainForm
+HebMorph,LookupTolerators,1,3,0,1,3,106,15,0,0,1,0,1,,HebMorph.Lemmatizer
+HebMorph,MorphData,0,4,2,0,4,51,8,0,0,-1,1,3,HebMorph.Entry,HebMorph.DataStructures.DictHebMorph' HebMorph.Lemmatizer' HebMorph.HSpell.Loader
+HebMorph,DescFlag,0,0,0,0,0,9,0,0,0,-1,0,1,,HebMorph.Entry
+HebMorph,Entry,0,1,3,0,1,12,1,0,0,-1,2,2,HebMorph.DescFlag' HebMorph.HSpell.PrefixType,HebMorph.MorphData' HebMorph.Lemmatizer
+HebMorph,StopWords,1,0,0,1,0,8,0,0,0,-1,0,0,,
+HebMorph,Lemmatizer,3,10,1,0,10,185,47,1,0,0.4,8,1,HebMorph.HSpell.LingInfo' HebMorph.Tokenizer' HebMorph.MorphData' HebMorph.Entry' HebMorph.WordType' HebMorph.LookupTolerators' HebMorph.DataStructures.LookupResult' HebMorph.HebrewToken,VisualHebMorph.MainForm
+HebMorph,StreamLemmatizer,4,8,2,1,7,146,21,0,1,0.5,3,5,HebMorph.Tokenizer' HebMorph.TokenType' HebMorph.HSpell.DMask,Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' Lucene.Net.Analysis.Hebrew.MorphAnalyzer' Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' Lucene.Net.Analysis.Hebrew.MorphAnalyzer' VisualHebMorph.MainForm
+HebMorph,Token,2,2,0,2,2,16,2,1,0,1,0,7,,HebMorph.HebrewToken' HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.LemmaFilters.ChainedLemmaFilter' HebMorph.LemmaFilters.LemmaFilterBase' Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' VisualHebMorph.MainForm
+HebMorph,Tokenizer,14,7,2,5,7,200,24,0,0,0.29,1,8,HebMorph.TokenType,HebMorph.Lemmatizer' HebMorph.StreamLemmatizer' Lucene.Net.Analysis.Hebrew.HebrewTokenizer' Lucene.Net.Analysis.Hebrew.SavedStreams' Lucene.Net.Analysis.Hebrew.MorphAnalyzer' Lucene.Net.Analysis.Hebrew.HebrewTokenizer' Lucene.Net.Analysis.Hebrew.SavedStreams' Lucene.Net.Analysis.Hebrew.MorphAnalyzer
+HebMorph,TokenType,0,0,0,0,0,9,0,0,0,-1,0,4,,HebMorph.StreamLemmatizer' HebMorph.Tokenizer' Lucene.Net.Analysis.Hebrew.HebrewTokenizer' Lucene.Net.Analysis.Hebrew.HebrewTokenizer
+HebMorph,WordType,0,0,0,0,0,11,0,0,0,-1,0,1,,HebMorph.Lemmatizer
+HebMorph.LemmaFilters,BasicLemmaFilter,0,2,0,0,2,21,5,0,1,-1,3,0,HebMorph.HebrewToken' HebMorph.HSpell.DMask' HebMorph.Token,
+HebMorph.LemmaFilters,ChainedLemmaFilter,1,3,1,0,3,36,9,0,1,1,2,0,HebMorph.LemmaFilters.LemmaFilterBase' HebMorph.Token,
+HebMorph.LemmaFilters,LemmaFilterBase,0,4,0,0,4,24,8,2,0,-1,1,5,HebMorph.Token,HebMorph.LemmaFilters.ChainedLemmaFilter' Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' Lucene.Net.Analysis.Hebrew.MorphAnalyzer' Lucene.Net.Analysis.Hebrew.StreamLemmasFilter' Lucene.Net.Analysis.Hebrew.MorphAnalyzer
+HebMorph.HSpell,Loader,0,4,0,0,2,296,10,0,0,-1,5,1,HebMorph.HSpell.Constants' HebMorph.MorphData' HebMorph.HSpell.MorphDataLoader' HebMorph.HSpell.PrefixType' HebMorph.HSpell.DMask,VisualHebMorph.MainForm
+HebMorph.HSpell,MorphDataLoader,7,6,0,0,1,121,16,0,0,0,1,1,HebMorph.HSpell.DMask,HebMorph.HSpell.Loader
+HebMorph.HSpell,Constants,11,0,0,11,0,1218,0,0,0,-1,0,2,,HebMorph.HSpell.Loader' HebMorph.HSpell.LingInfo
+HebMorph.HSpell,DMask,0,0,0,0,0,50,0,0,0,-1,0,6,,HebMorph.HebrewToken' HebMorph.StreamLemmatizer' HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.HSpell.Loader' HebMorph.HSpell.MorphDataLoader' HebMorph.HSpell.LingInfo
+HebMorph.HSpell,PrefixType,0,0,0,0,0,13,0,0,0,-1,0,3,,HebMorph.Entry' HebMorph.HSpell.Loader' HebMorph.HSpell.LingInfo
+HebMorph.HSpell,LingInfo,0,4,0,0,4,194,33,0,0,-1,3,4,HebMorph.HSpell.Constants' HebMorph.HSpell.PrefixType' HebMorph.HSpell.DMask,HebMorph.HebrewToken' HebMorph.Lemmatizer' Lucene.Net.Analysis.Hebrew.HebrewTokenizer' Lucene.Net.Analysis.Hebrew.HebrewTokenizer

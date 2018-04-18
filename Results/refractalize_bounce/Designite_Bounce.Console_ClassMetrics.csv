@@ -1,0 +1,20 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bounce.Console,BadExitException,0,5,0,0,4,12,6,0,0,-1,0,0,,
+Bounce.Console,BeforeBounceScriptException,3,2,0,0,2,15,2,0,1,0,0,0,,
+Bounce.Console,BeforeBounceScriptRunner,0,3,0,0,1,39,6,0,0,-1,2,1,Bounce.Console.RedirectedProcessOutputCapturer' Bounce.Console.OptionsAndArguments,Bounce.Console.BounceAssemblyRunner
+Bounce.Console,RedirectedProcessOutputCapturer,1,2,1,0,1,19,2,0,0,0,0,1,,Bounce.Console.BeforeBounceScriptRunner
+Bounce.Console,BounceAssemblyRunner,5,10,0,0,2,123,26,0,0,0,4,1,Bounce.Console.BeforeBounceScriptRunner' Bounce.Console.BounceConsoleException' Bounce.Console.OptionsAndArguments' Bounce.Console.TargetsAssemblyArgumentsParser,Bounce.Console.Program
+Bounce.Console,BounceConsoleException,0,1,0,0,1,3,1,4,0,-1,0,1,,Bounce.Console.BounceAssemblyRunner
+Bounce.Console,BounceDirectoryFinder,0,2,0,0,1,17,4,0,1,-1,0,0,,
+Bounce.Console,FirstNonNullIEnumerableExtension,0,1,0,0,1,12,3,0,0,-1,0,0,,
+Bounce.Console,IBounceDirectoryFinder,0,1,0,0,0,3,1,1,0,-1,0,2,,Bounce.Console.TargetsAssemblyArgumentsParser' Bounce.Console.Tests.TargetsAssemblyArgumentsParserTest
+Bounce.Console,ITargetsAssemblyFinder,0,1,0,0,0,3,1,1,0,-1,0,0,,
+Bounce.Console,Program,0,1,0,0,0,6,1,0,0,-1,1,0,Bounce.Console.BounceAssemblyRunner,
+Bounce.Console,OptionsAndArguments,4,0,0,4,0,6,0,0,0,-1,0,4,,Bounce.Console.BeforeBounceScriptRunner' Bounce.Console.BounceAssemblyRunner' Bounce.Console.TargetsAssemblyArgumentsParser' Bounce.Console.Tests.TargetsAssemblyArgumentsParserTest
+Bounce.Console,TargetsAssemblyArgumentsParser,2,5,0,0,3,65,11,0,0,0.4,2,2,Bounce.Console.IBounceDirectoryFinder' Bounce.Console.OptionsAndArguments,Bounce.Console.BounceAssemblyRunner' Bounce.Console.Tests.TargetsAssemblyArgumentsParserTest
+Bounce.Console,BounceDirectoryExecutable,2,0,0,2,0,4,0,0,0,-1,1,1,Bounce.Console.BounceDirectoryExecutableType,Bounce.Console.TargetsAssemblyFinder
+Bounce.Console,BounceDirectoryExecutableType,0,0,0,0,0,4,0,0,0,-1,0,2,,Bounce.Console.BounceDirectoryExecutable' Bounce.Console.TargetsAssemblyFinder
+Bounce.Console,TargetsAssemblyFinder,1,5,0,1,2,44,10,0,1,0.6,2,1,Bounce.Console.BounceDirectoryExecutable' Bounce.Console.BounceDirectoryExecutableType,Bounce.Console.TargetsAssemblyNotFoundException
+Bounce.Console,TargetsAssemblyNotFoundException,0,1,0,0,1,5,1,0,1,-1,1,1,Bounce.Console.TargetsAssemblyFinder,Bounce.Console.Tests.TargetsAssemblyArgumentsParserTest
+Bounce.Console,TargetsAttributeNotFoundException,0,1,0,0,1,16,1,0,1,-1,0,0,,
+Bounce.Console,TasksNotFoundException,0,3,0,0,2,20,3,0,1,-1,0,0,,

@@ -1,0 +1,17 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Proximo.Cqrs.Server.Aggregates,AggregateVersion,0,2,2,0,2,14,2,0,0,-1,0,2,,Proximo.Cqrs.Server.Eventing.DomainEvent' Proximo.Cqrs.Server.Eventing.IPleaseVersionThisDomainEventAfterInternalStateChange
+Proximo.Cqrs.Server.Commanding,CommandInvoker,1,2,1,1,2,19,2,0,0,0,1,2,Proximo.Cqrs.Core.Commanding.ICommand,Proximo.Cqrs.Server.Commanding.DefaultCommandRouter' Proximo.Cqrs.Server.Impl.CastleFastReflectHandlerCatalog
+Proximo.Cqrs.Server.Commanding,DefaultCommandRouter,2,2,0,0,2,39,2,0,1,0,4,0,Proximo.Cqrs.Server.Commanding.ICommandHandlerCatalog' Proximo.Cqrs.Core.Support.ILogger' Proximo.Cqrs.Server.Commanding.CommandInvoker' Proximo.Cqrs.Core.Commanding.ICommand,
+Proximo.Cqrs.Server.Commanding,ICommandHandler,0,1,0,0,0,6,1,8,0,-1,0,1,,Proximo.Cqrs.Server.Impl.CastleFastReflectHandlerCatalog
+Proximo.Cqrs.Server.Commanding,ICommandHandlerCatalog,0,1,0,0,0,11,1,1,0,-1,0,1,,Proximo.Cqrs.Server.Commanding.DefaultCommandRouter
+Proximo.Cqrs.Server.Eventing,CommitToEventsDispatcher,1,4,0,0,3,23,5,0,0,0.5,1,0,Proximo.Cqrs.Server.Eventing.IDomainEventRouter,
+Proximo.Cqrs.Server.Eventing,DefaultDomainEventRouter,2,2,0,0,2,38,3,0,1,0,3,0,Proximo.Cqrs.Server.Eventing.IDomainEventHandlerCatalog' Proximo.Cqrs.Core.Support.ILogger' Proximo.Cqrs.Server.Eventing.DomainEventInvoker,
+Proximo.Cqrs.Server.Eventing,DomainEvent,0,2,1,0,1,14,2,10,1,-1,1,2,Proximo.Cqrs.Server.Aggregates.AggregateVersion,Sample.Server.CommandHandlers.AskForReplayHandlerReplayCommandHandler' Sample.Server.Core.Initialization.ReplayableDomainEventHandlerInitializer
+Proximo.Cqrs.Server.Eventing,DomainEventInvoker,0,2,3,0,2,23,2,0,0,-1,1,5,Proximo.Cqrs.Server.Eventing.IDomainEvent,Proximo.Cqrs.Server.Eventing.DefaultDomainEventRouter' Sample.QueryModel.Rebuilder.DenormalizerRebuilder' Sample.Server.CommandHandlers.AskForReplayHandlerReplayCommandHandler' Sample.Server.CommandHandlers.DomainEventRouterForQueryModelRebuild' Sample.Server.Core.Initialization.ReplayableDomainEventHandlerInitializer
+Proximo.Cqrs.Server.Eventing,EventHandlerDescriptionAttribute,0,1,1,0,1,15,1,0,0,-1,0,1,,Proximo.Cqrs.Server.Impl.CastleFastReflectHandlerCatalog
+Proximo.Cqrs.Server.Eventing,IDomainEvent,0,0,0,0,0,3,0,1,0,-1,0,4,,Proximo.Cqrs.Server.Eventing.DomainEventInvoker' Proximo.Cqrs.Server.Impl.CastleFastReflectHandlerCatalog' Proximo.Cqrs.Server.Impl.DomainEventHandlerInfo' Sample.Server.Program
+Proximo.Cqrs.Server.Eventing,IVersionedDomainEvent,0,0,1,0,0,4,0,1,1,-1,0,0,,
+Proximo.Cqrs.Server.Eventing,IPleaseVersionThisDomainEventAfterInternalStateChange,0,1,0,0,0,4,1,1,0,-1,1,1,Proximo.Cqrs.Server.Aggregates.AggregateVersion,Proximo.Cqrs.Server.Impl.Aggregates.AutoVersioningConventionEventRouter
+Proximo.Cqrs.Server.Eventing,IDomainEventHandler,0,0,0,0,0,1,0,6,0,-1,0,1,,Proximo.Cqrs.Server.Impl.CastleFastReflectHandlerCatalog
+Proximo.Cqrs.Server.Eventing,IDomainEventHandlerCatalog,0,3,0,0,0,25,3,1,0,-1,0,6,,Proximo.Cqrs.Server.Eventing.DefaultDomainEventRouter' Sample.QueryModel.Rebuilder.DenormalizerRebuilder' Sample.Server.CommandHandlers.AskForReplayHandlerReplayCommandHandler' Sample.Server.CommandHandlers.DomainEventRouterForQueryModelRebuild' Sample.Server.Program' Sample.Server.Core.Initialization.ReplayableDomainEventHandlerInitializer
+Proximo.Cqrs.Server.Eventing,IDomainEventRouter,0,1,0,0,0,8,1,2,0,-1,0,1,,Proximo.Cqrs.Server.Eventing.CommitToEventsDispatcher

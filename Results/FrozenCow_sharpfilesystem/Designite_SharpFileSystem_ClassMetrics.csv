@@ -1,41 +1,48 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Directory,0,2,0,0,2,12,3,0,1,-1,3,2
-EntityCopiers,0,1,1,0,0,11,1,0,0,-1,1,1
-EntityMovers,0,1,1,0,0,11,1,0,0,-1,1,1
-Extensions,0,1,0,0,1,7,1,0,0,-1,0,0
-File,0,2,0,0,2,12,3,0,1,-1,3,4
-FileSystemEntity,0,5,3,0,4,41,5,2,0,-1,4,4
-FileSystemExtensions,0,14,0,0,14,84,24,0,0,-1,10,0
-FileSystemPath,2,20,7,1,18,208,37,0,0,0.65,0,24
-IEntityCopier,0,1,0,0,0,4,1,2,0,-1,2,1
-IEntityMover,0,1,0,0,0,4,1,2,0,-1,2,1
-IFileSystem,0,6,0,0,0,9,6,12,0,-1,1,17
-ITypeDictionary,0,5,0,0,0,15,5,1,0,-1,0,0
-ParseException,0,2,2,0,2,21,2,0,0,-1,0,0
-PhysicalEntityMover,0,1,0,0,1,14,2,0,1,-1,3,0
-PhysicalEntityCopier,0,1,0,0,1,17,4,0,1,-1,3,0
-StandardEntityMover,0,2,1,0,2,36,12,0,1,-1,2,0
-StandardEntityCopier,0,2,1,0,2,34,12,0,1,-1,2,0
-FileSystemMounter,0,10,1,0,9,56,14,0,1,-1,2,0
-FileSystemWrapper,0,8,1,0,8,39,8,0,1,-1,2,0
-MergedFileSystem,0,10,1,0,10,64,21,0,1,-1,2,0
-ReadOnlyFileSystem,0,8,1,0,8,41,9,0,1,-1,2,0
-SealedFileSystem,0,8,1,0,8,39,8,0,1,-1,2,0
-SubFileSystem,0,10,2,0,8,53,10,0,1,-1,3,0
-MemoryFileSystem,2,8,0,0,8,155,20,0,1,0.25,1,0
-SeamlessArchiveFileSystem,3,20,1,1,9,279,39,1,1,0,4,0
-PhysicalFileSystem,0,11,1,0,11,78,20,0,1,-1,2,2
-InverseComparer,0,2,1,0,2,15,2,0,0,-1,0,0
-EnumerableCollection,1,8,2,0,7,52,10,0,0,0.75,0,4
-TypeCombinationDictionary,1,5,0,0,5,51,6,0,0,0.6,0,2
-TypeDictionary,1,24,2,0,16,213,48,0,1,0.58,0,0
-CircularBuffer,6,23,8,0,18,228,40,0,0,0.39,0,0
-ConcatStream,4,7,7,0,7,104,13,0,0,0.71,0,0
-BoundStream,3,7,5,0,7,69,8,0,0,0,0,0
-BranchStream,3,7,5,0,7,72,7,0,0,0,0,0
-CleanCloseStream,1,7,5,0,7,62,8,0,0,0,0,0
-EmptyStream,1,6,6,0,6,56,6,0,0,1,0,1
-NonClosableStream,1,7,5,0,7,59,7,0,0,0.29,0,0
-ReadOnlyStream,1,7,5,0,7,59,7,0,0,0.71,0,0
-StreamExtensions,1,7,0,1,7,42,13,0,0,1,1,0
-ProducerConsumerStream,5,7,7,0,7,114,8,0,0,0.71,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SharpFileSystem,Directory,0,2,0,0,2,12,3,0,1,-1,2,2,SharpFileSystem.FileSystemPath' SharpFileSystem.IFileSystem,SharpFileSystem.FileSystemEntity' SharpFileSystem.FileSystemExtensions
+SharpFileSystem,EntityCopiers,0,1,1,0,0,8,1,0,0,-1,0,1,,SharpFileSystem.FileSystemExtensions
+SharpFileSystem,EntityMovers,0,1,1,0,0,8,1,0,0,-1,0,1,,SharpFileSystem.FileSystemExtensions
+SharpFileSystem,Extensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+SharpFileSystem,File,0,2,0,0,2,12,3,0,1,-1,2,4,SharpFileSystem.FileSystemPath' SharpFileSystem.IFileSystem,SharpFileSystem.FileSystemEntity' SharpFileSystem.FileSystemExtensions' SharpFileSystem.FileSystems.SeamlessArchiveFileSystem' SharpFileSystem.SevenZip.SeamlessSevenZipFileSystem
+SharpFileSystem,FileSystemEntity,0,5,3,0,4,31,6,2,0,-1,4,2,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath' SharpFileSystem.File' SharpFileSystem.Directory,SharpFileSystem.FileSystemExtensions' SharpFileSystem.FileSystems.SeamlessArchiveFileSystem
+SharpFileSystem,FileSystemExtensions,0,14,0,0,14,86,23,0,0,-1,9,0,SharpFileSystem.IFileSystem' SharpFileSystem.File' SharpFileSystem.FileSystemEntity' SharpFileSystem.Directory' SharpFileSystem.FileSystemPath' SharpFileSystem.IEntityMover' SharpFileSystem.EntityMovers' SharpFileSystem.IEntityCopier' SharpFileSystem.EntityCopiers,
+SharpFileSystem,FileSystemPath,2,20,7,1,18,207,41,0,0,0.65,0,28,,SharpFileSystem.Directory' SharpFileSystem.File' SharpFileSystem.FileSystemEntity' SharpFileSystem.FileSystemExtensions' SharpFileSystem.IEntityCopier' SharpFileSystem.IEntityMover' SharpFileSystem.IFileSystem' SharpFileSystem.PhysicalEntityMover' SharpFileSystem.PhysicalEntityCopier' SharpFileSystem.StandardEntityMover' SharpFileSystem.StandardEntityCopier' SharpFileSystem.FileSystems.FileSystemMounter' SharpFileSystem.FileSystems.FileSystemWrapper' SharpFileSystem.FileSystems.MergedFileSystem' SharpFileSystem.FileSystems.ReadOnlyFileSystem' SharpFileSystem.FileSystems.SealedFileSystem' SharpFileSystem.FileSystems.SubFileSystem' SharpFileSystem.FileSystems.MemoryFileSystem' SharpFileSystem.FileSystems.SeamlessArchiveFileSystem' SharpFileSystem.FileSystems.PhysicalFileSystem' SharpFileSystem.Resources.EmbeddedResourceFileSystem' SharpFileSystem.SevenZip.SeamlessSevenZipFileSystem' SharpFileSystem.SevenZip.SevenZipFileSystem' SharpFileSystem.SharpZipLib.SharpZipLibFileSystem' SharpFileSystem.Tests.FileSystemPathTest' SharpFileSystem.Tests.FileSystems.MemoryFileSystemTest' SharpFileSystem.Tests.FileSystems.PhysicalFileSystemTest' SharpFileSystem.Tests.SharpZipLib.SharpZipLibFileSystemTest
+SharpFileSystem,IEntityCopier,0,1,0,0,0,4,1,2,0,-1,2,1,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath,SharpFileSystem.FileSystemExtensions
+SharpFileSystem,IEntityMover,0,1,0,0,0,4,1,2,0,-1,2,2,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath,SharpFileSystem.FileSystemExtensions' SharpFileSystem.Tests.FileSystems.EntityMoverRegistrationTest
+SharpFileSystem,IFileSystem,0,6,0,0,0,9,6,12,0,-1,1,19,SharpFileSystem.FileSystemPath,SharpFileSystem.Directory' SharpFileSystem.File' SharpFileSystem.FileSystemEntity' SharpFileSystem.FileSystemExtensions' SharpFileSystem.IEntityCopier' SharpFileSystem.IEntityMover' SharpFileSystem.PhysicalEntityMover' SharpFileSystem.PhysicalEntityCopier' SharpFileSystem.StandardEntityMover' SharpFileSystem.StandardEntityCopier' SharpFileSystem.FileSystems.FileSystemMounter' SharpFileSystem.FileSystems.FileSystemWrapper' SharpFileSystem.FileSystems.MergedFileSystem' SharpFileSystem.FileSystems.ReadOnlyFileSystem' SharpFileSystem.FileSystems.SealedFileSystem' SharpFileSystem.FileSystems.SubFileSystem' SharpFileSystem.FileSystems.SeamlessArchiveFileSystem' SharpFileSystem.SevenZip.SeamlessSevenZipFileSystem' SharpFileSystem.Tests.FileSystems.EntityMoverRegistrationTest
+SharpFileSystem,ITypeDictionary,0,5,0,0,0,16,5,1,0,-1,0,0,,
+SharpFileSystem,ParseException,0,2,2,0,2,17,2,0,0,-1,0,0,,
+SharpFileSystem,PhysicalEntityMover,0,1,0,0,1,14,2,0,1,-1,3,0,SharpFileSystem.FileSystems.PhysicalFileSystem' SharpFileSystem.FileSystemPath' SharpFileSystem.IFileSystem,
+SharpFileSystem,PhysicalEntityCopier,0,1,0,0,1,18,2,0,1,-1,3,0,SharpFileSystem.FileSystems.PhysicalFileSystem' SharpFileSystem.FileSystemPath' SharpFileSystem.IFileSystem,
+SharpFileSystem,StandardEntityMover,0,2,1,0,2,41,4,0,1,-1,2,0,SharpFileSystem.FileSystemPath' SharpFileSystem.IFileSystem,
+SharpFileSystem,StandardEntityCopier,0,2,1,0,2,39,4,0,1,-1,2,0,SharpFileSystem.FileSystemPath' SharpFileSystem.IFileSystem,
+SharpFileSystem.FileSystems,FileSystemMounter,0,10,1,0,9,54,12,0,1,-1,2,0,SharpFileSystem.FileSystemPath' SharpFileSystem.IFileSystem,
+SharpFileSystem.FileSystems,FileSystemWrapper,0,8,1,0,8,36,8,0,1,-1,2,0,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath,
+SharpFileSystem.FileSystems,MergedFileSystem,0,10,1,0,10,62,18,0,1,-1,2,0,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath,
+SharpFileSystem.FileSystems,ReadOnlyFileSystem,0,8,1,0,8,38,9,0,1,-1,2,0,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath,
+SharpFileSystem.FileSystems,SealedFileSystem,0,8,1,0,8,36,8,0,1,-1,2,0,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath,
+SharpFileSystem.FileSystems,SubFileSystem,0,10,2,0,8,47,10,0,1,-1,2,0,SharpFileSystem.IFileSystem' SharpFileSystem.FileSystemPath,
+SharpFileSystem.FileSystems,MemoryFileSystem,2,8,0,0,8,145,20,0,1,0.25,3,1,SharpFileSystem.FileSystemPath' SharpFileSystem.FileSystems.MemoryFileStream' SharpFileSystem.FileSystems.MemoryFile,SharpFileSystem.Tests.FileSystems.MemoryFileSystemTest
+SharpFileSystem.FileSystems,MemoryFile,0,2,1,0,2,12,2,1,0,-1,0,2,,SharpFileSystem.FileSystems.MemoryFileSystem' SharpFileSystem.FileSystems.MemoryFileStream
+SharpFileSystem.FileSystems,MemoryFileStream,1,6,6,0,6,62,9,0,0,0.83,1,2,SharpFileSystem.FileSystems.MemoryFile,SharpFileSystem.FileSystems.MemoryFileSystem' SharpFileSystem.SharpZipLib.MemoryZipEntry
+SharpFileSystem.FileSystems,SeamlessArchiveFileSystem,3,20,1,1,9,263,31,1,1,0,7,1,SharpFileSystem.FileSystems.FileSystemUsage' SharpFileSystem.IFileSystem' SharpFileSystem.FileSystems.FileSystemReference' SharpFileSystem.FileSystemPath' SharpFileSystem.File' SharpFileSystem.FileSystemEntity' SharpFileSystem.FileSystems.SafeReferenceStream,SharpFileSystem.FileSystems.FileSystemReference
+SharpFileSystem.FileSystems,DummyDisposable,0,1,0,0,1,6,1,0,0,-1,0,0,,
+SharpFileSystem.FileSystems,FileSystemReference,0,2,2,0,2,16,2,0,0,-1,2,2,SharpFileSystem.FileSystems.FileSystemUsage' SharpFileSystem.FileSystems.SeamlessArchiveFileSystem,SharpFileSystem.FileSystems.SeamlessArchiveFileSystem' SharpFileSystem.FileSystems.SafeReferenceStream
+SharpFileSystem.FileSystems,FileSystemUsage,0,1,4,0,1,11,1,0,0,-1,0,2,,SharpFileSystem.FileSystems.SeamlessArchiveFileSystem' SharpFileSystem.FileSystems.FileSystemReference
+SharpFileSystem.FileSystems,SafeReferenceStream,2,7,5,0,7,56,7,0,0,0,1,1,SharpFileSystem.FileSystems.FileSystemReference,SharpFileSystem.FileSystems.SeamlessArchiveFileSystem
+SharpFileSystem.FileSystems,PhysicalFileSystem,0,11,1,0,11,77,20,0,1,-1,1,5,SharpFileSystem.FileSystemPath,SharpFileSystem.PhysicalEntityMover' SharpFileSystem.PhysicalEntityCopier' SharpFileSystem.SevenZip.SeamlessSevenZipFileSystem' SharpFileSystem.Tests.FileSystems.EntityMoverRegistrationTest' SharpFileSystem.Tests.FileSystems.PhysicalFileSystemTest
+SharpFileSystem.Collections,InverseComparer<T>,0,2,1,0,2,12,2,0,0,-1,0,0,,
+SharpFileSystem.Collections,EnumerableCollection<T>,1,8,2,0,7,49,10,0,0,0.75,0,0,,
+SharpFileSystem.Collections,TypeCombinationDictionary<T>,1,5,0,0,5,46,6,0,0,0.6,1,0,SharpFileSystem.Collections.TypeCombinationEntry,
+SharpFileSystem.Collections,TypeCombinationEntry,0,1,3,0,1,12,1,0,0,-1,0,2,,SharpFileSystem.Collections.TypeCombinationDictionary<T>' SharpFileSystem.Tests.FileSystems.EntityMoverRegistrationTest
+SharpFileSystem.Collections,TypeDictionary<T>,1,24,2,0,16,229,53,0,1,0.58,0,0,,
+SharpFileSystem.IO,CircularBuffer<T>,6,23,8,0,18,236,42,0,0,0.39,0,0,,
+SharpFileSystem.IO,ConcatStream,4,7,7,0,7,106,10,0,0,0.71,0,0,,
+SharpFileSystem.IO,BoundStream,3,7,5,0,7,62,9,0,0,0,0,0,,
+SharpFileSystem.IO,BranchStream,3,7,5,0,7,65,7,0,0,0,0,0,,
+SharpFileSystem.IO,CleanCloseStream,1,7,5,0,7,56,8,0,0,0,0,0,,
+SharpFileSystem.IO,EmptyStream,1,6,6,0,6,49,6,0,0,1,0,1,,SharpFileSystem.IO.StreamExtensions
+SharpFileSystem.IO,NonClosableStream,1,7,5,0,7,52,7,0,0,0.29,0,0,,
+SharpFileSystem.IO,ReadOnlyStream,1,7,5,0,7,52,7,0,0,0.71,0,0,,
+SharpFileSystem.IO,StreamExtensions,1,7,0,1,7,44,8,0,0,0.71,1,0,SharpFileSystem.IO.EmptyStream,
+SharpFileSystem.IO,ProducerConsumerStream,5,7,7,0,7,123,8,0,0,0.71,0,0,,

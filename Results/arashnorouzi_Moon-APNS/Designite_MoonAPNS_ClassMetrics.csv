@@ -1,7 +1,7 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Feedback,0,1,2,0,1,28,1,0,0,-1,0,1
-NotificationAlert,0,2,5,0,2,59,2,0,0,-1,0,1
-NotificationPayload,0,7,6,0,7,111,21,0,0,-1,1,2
-Program,0,1,0,0,0,18,2,0,0,-1,2,0
-PushNotification,17,11,2,0,3,282,37,0,0,0.18,3,1
-MyAsyncInfo,0,1,2,0,1,16,1,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MoonAPNS,Feedback,0,1,2,0,1,27,1,0,0,-1,0,1,,MoonAPNS.PushNotification
+MoonAPNS,NotificationAlert,0,2,5,0,2,65,2,0,0,-1,0,1,,MoonAPNS.NotificationPayload
+MoonAPNS,NotificationPayload,0,7,6,0,7,100,16,0,0,-1,1,2,MoonAPNS.NotificationAlert,MoonAPNS.Program' MoonAPNS.PushNotification
+MoonAPNS,Program,0,1,0,0,0,17,2,0,0,-1,2,0,MoonAPNS.NotificationPayload' MoonAPNS.PushNotification,
+MoonAPNS,PushNotification,17,11,2,0,3,315,29,0,0,0.18,3,1,MoonAPNS.NotificationPayload' MoonAPNS.MyAsyncInfo' MoonAPNS.Feedback,MoonAPNS.Program
+MoonAPNS,MyAsyncInfo,0,1,2,0,1,10,1,0,0,-1,0,1,,MoonAPNS.PushNotification

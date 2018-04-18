@@ -1,10 +1,10 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-HttpBuilder,0,2,0,0,2,21,2,0,0,-1,1,1
-HttpProcessor,3,10,0,0,3,171,27,0,0,0.2,4,1
-HttpServer,5,2,0,0,2,33,4,0,0,0,2,2
-HttpRequest,0,2,6,0,2,39,4,0,0,-1,1,5
-HttpStatusCode,0,0,0,0,0,17,0,0,0,-1,0,0
-HttpResponse,0,3,5,0,3,40,4,0,0,-1,0,5
-Route,0,0,4,0,0,20,0,0,0,-1,1,5
-FileSystemRouteHandler,0,3,2,0,1,68,8,0,0,-1,3,0
-QuickMimeTypeMapper,1,1,0,0,1,2261,3,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SimpleHttpServer,HttpBuilder,0,2,0,0,2,23,2,0,0,-1,1,1,SimpleHttpServer.Models.HttpResponse,SimpleHttpServer.HttpProcessor
+SimpleHttpServer,HttpProcessor,3,10,0,0,3,175,28,1,0,0.2,4,2,SimpleHttpServer.Models.HttpRequest' SimpleHttpServer.Models.HttpResponse' SimpleHttpServer.Models.Route' SimpleHttpServer.HttpBuilder,SimpleHttpServer.HttpServer' SimpleHttpServer.Test.Mocks.MockHttpProcessor
+SimpleHttpServer,HttpServer,5,2,0,0,2,36,4,0,0,0,1,2,SimpleHttpServer.HttpProcessor,SimpleHttpServer.App.Program' SimpleHttpServer.WebApp.Program
+SimpleHttpServer.Models,HttpRequest,0,2,6,0,2,20,4,0,0,-1,0,5,,SimpleHttpServer.HttpProcessor' SimpleHttpServer.RouteHandlers.FileSystemRouteHandler' SimpleHttpServer.WebApp.Routes' SimpleHttpServer.Test.HttpProcessorTest' SimpleHttpServer.Test.Mocks.MockHttpProcessor
+SimpleHttpServer.Models,HttpStatusCode,0,0,0,0,0,17,0,0,0,-1,0,0,,
+SimpleHttpServer.Models,HttpResponse,0,3,5,0,3,31,4,0,0,-1,0,7,,SimpleHttpServer.HttpBuilder' SimpleHttpServer.HttpProcessor' SimpleHttpServer.RouteHandlers.FileSystemRouteHandler' SimpleHttpServer.App.Program' SimpleHttpServer.WebApp.Routes' SimpleHttpServer.Test.HttpProcessorTest' SimpleHttpServer.Test.Mocks.MockHttpProcessor
+SimpleHttpServer.Models,Route,0,0,4,0,0,7,0,0,0,-1,0,3,,SimpleHttpServer.HttpProcessor' SimpleHttpServer.RouteHandlers.FileSystemRouteHandler' SimpleHttpServer.Test.Mocks.MockHttpProcessor
+SimpleHttpServer.RouteHandlers,FileSystemRouteHandler,0,3,2,0,1,62,7,0,0,-1,4,0,SimpleHttpServer.Models.HttpRequest' SimpleHttpServer.Models.Route' SimpleHttpServer.Models.HttpResponse' SimpleHttpServer.RouteHandlers.QuickMimeTypeMapper,
+SimpleHttpServer.RouteHandlers,QuickMimeTypeMapper,1,1,0,0,1,582,3,0,0,0,0,1,,SimpleHttpServer.RouteHandlers.FileSystemRouteHandler

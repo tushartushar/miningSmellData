@@ -1,0 +1,61 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Nake.Magic,TaskDeclaration,4,1,5,0,1,50,2,0,0,0,0,5,,Nake.Magic.TaskDeclarationScanner' Nake.Task' Nake.Application' Nake.DuplicateTaskException' Nake.Describing_tasks
+Nake.Magic,TaskDeclarationScanner,2,6,0,0,4,47,9,0,0,0.33,2,2,Nake.Magic.TaskDeclaration' Nake.DuplicateTaskException,Nake.Application' Nake.Describing_tasks
+Nake.Magic,AnalyzerResult,5,8,1,0,8,51,9,0,0,0.5,5,3,Nake.Task' Nake.DuplicateTaskException' Nake.Magic.ProxyInvocation' Nake.Magic.FieldSubstitution' Nake.Magic.StringInterpolation,Nake.Magic.Analyzer' Nake.Magic.Rewriter' Nake.PixieDust
+Nake.Magic,Analyzer,7,12,0,0,9,118,22,0,0,0,4,1,Nake.Task' Nake.Magic.AnalyzerResult' Nake.Magic.FieldSubstitution' Nake.Magic.StringInterpolation,Nake.PixieDust
+Nake.Magic,FieldSubstitution,3,7,0,0,3,60,13,0,0,0,2,3,Nake.Log' Nake.TypeConverter,Nake.Magic.AnalyzerResult' Nake.Magic.Analyzer' Nake.Magic.Rewriter
+Nake.Magic,ProxyInvocation,1,6,0,0,2,37,6,0,0,0.33,1,2,Nake.Task,Nake.Magic.AnalyzerResult' Nake.Magic.Rewriter
+Nake.Magic,Rewriter,5,6,0,1,5,56,8,0,0,0,4,1,Nake.Magic.AnalyzerResult' Nake.Magic.ProxyInvocation' Nake.Magic.StringInterpolation' Nake.Magic.FieldSubstitution,Nake.PixieDust
+Nake.Magic,StringInterpolation,7,11,0,1,3,113,12,0,0,0,1,3,Nake.Env,Nake.Magic.AnalyzerResult' Nake.Magic.Analyzer' Nake.Magic.Rewriter
+Nake.Magic,EnvironmentVariable,2,3,0,2,3,19,3,0,0,0,0,2,,Nake.CacheKey' Nake.BuildResult
+Nake,CachingEngine,4,2,0,0,2,26,4,0,0,0,4,1,Nake.Engine' Nake.Task' Nake.CacheKey' Nake.BuildResult,Nake.Application
+Nake,CacheKey,7,19,5,0,4,150,24,0,0,0.11,5,1,Nake.BuildResult' Nake.Task' Nake.Env' Nake.Scripting.AssemblyReference' Nake.Magic.EnvironmentVariable,Nake.CachingEngine
+Nake,Options,15,6,0,14,2,378,17,0,0,0,4,4,Nake.Runner' Nake.Switch' Nake.Match' Nake.Variable,Nake.Match' Nake.Application' Nake.Program' Nake.Options_parsing
+Nake,Switch,9,11,2,0,8,107,16,0,0,0.18,2,2,Nake.Match' Nake.OptionParseException,Nake.Options' Nake.Match
+Nake,Match,5,6,0,0,6,109,12,0,0,0.33,4,2,Nake.Switch' Nake.Options' Nake.Argument' Nake.Task,Nake.Options' Nake.Switch
+Nake,Variable,2,2,0,2,2,15,2,0,0,1,0,2,,Nake.Options' Nake.Application
+Nake,Task,9,10,5,3,7,211,17,0,0,0.3,4,17,Nake.TaskArgument' Nake.Magic.TaskDeclaration' Nake.TypeConverter' Nake.TaskInvocation,Nake.Magic.AnalyzerResult' Nake.Magic.Analyzer' Nake.Magic.ProxyInvocation' Nake.CachingEngine' Nake.CacheKey' Nake.Match' Nake.Application' Nake.TaskArgumentException' Nake.TaskInvocationException' Nake.DuplicateTaskException' Nake.CyclicDependencyException' Nake.RecursiveTaskCallException' Nake.BuildResult' Nake.TaskInvocation' Nake.TaskRegistry' Nake.CodeFixture' Nake.Options_parsing
+Nake,Argument,2,6,0,0,6,30,7,0,0,0,2,1,Nake.OptionParseException' Nake.TaskArgument,Nake.Match
+Nake,OptionParseException,0,3,0,0,2,14,3,0,0,-1,0,3,,Nake.Switch' Nake.Argument' Nake.Program
+Nake,DictionaryExtensions,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Nake,Application,1,19,0,0,2,161,34,0,0,0,16,1,Nake.Options' Nake.Scripting.PreprocessedScript' Nake.Location' Nake.Env' Nake.Variable' Nake.Engine' Nake.CachingEngine' Nake.BuildResult' Nake.TaskRegistry' Nake.App' Nake.Log' Nake.Magic.TaskDeclaration' Nake.Runner' Nake.Magic.TaskDeclarationScanner' Nake.Scripting.Preprocessor' Nake.Task,Nake.Program
+Nake,NakeException,0,3,0,0,3,12,3,11,0,-1,0,0,,
+Nake,TaskNotFoundException,0,1,0,0,0,6,1,0,1,-1,0,0,,
+Nake,TaskArgumentException,0,2,0,0,2,10,2,0,1,-1,1,0,Nake.Task,
+Nake,TaskArgumentOrderException,0,1,0,0,1,6,1,0,1,-1,0,0,,
+Nake,TaskInvocationException,1,1,1,0,1,13,1,0,1,0,1,1,Nake.Task,Nake.Program
+Nake,DuplicateTaskException,0,4,0,0,2,24,5,0,1,-1,2,2,Nake.Task' Nake.Magic.TaskDeclaration,Nake.Magic.TaskDeclarationScanner' Nake.Magic.AnalyzerResult
+Nake,CyclicDependencyException,0,1,0,0,1,6,1,0,1,-1,1,0,Nake.Task,
+Nake,RecursiveTaskCallException,0,1,0,0,1,6,1,0,1,-1,1,0,Nake.Task,
+Nake,TaskSignatureViolationException,0,1,0,0,1,6,1,0,1,-1,0,0,,
+Nake,ExpressionReturnTypeIsVoidException,0,1,0,0,1,6,1,0,1,-1,0,0,,
+Nake,ExpressionResolutionFailedException,0,1,0,0,1,6,1,0,1,-1,0,0,,
+Nake,ExpressionSyntaxException,0,1,0,0,1,6,1,0,1,-1,0,0,,
+Nake,Program,0,4,0,0,1,52,5,0,0,-1,7,0,Nake.Env' Nake.Log' Nake.App' Nake.Options' Nake.Application' Nake.OptionParseException' Nake.TaskInvocationException,
+Nake,Engine,3,3,0,0,2,31,6,0,0,0,4,3,Nake.PixieDust' Nake.BuildResult' Nake.Scripting.Script' Nake.Scripting.CompiledScript,Nake.CachingEngine' Nake.Application' Nake.CodeFixture
+Nake,PixieDust,1,5,0,0,2,56,8,0,0,0,5,1,Nake.Scripting.CompiledScript' Nake.Magic.Analyzer' Nake.Magic.AnalyzerResult' Nake.Magic.Rewriter' Nake.BuildResult,Nake.Engine
+Nake,BuildResult,6,3,0,6,1,38,5,0,0,0,4,7,Nake.Task' Nake.Scripting.AssemblyReference' Nake.Magic.EnvironmentVariable' Nake.Scripting.AssemblyResolver,Nake.CachingEngine' Nake.CacheKey' Nake.Application' Nake.Engine' Nake.PixieDust' Nake.TaskRegistry' Nake.CodeFixture
+Nake,TaskArgument,2,7,0,2,5,41,8,0,0,0.29,1,6,Nake.TypeConverter,Nake.Task' Nake.Argument' Nake.TaskInvocation' Nake.TaskRegistry' Nake.CodeFixture' Nake.Options_parsing
+Nake,TaskInvocation,4,10,0,0,4,117,15,0,0,0,2,1,Nake.Task' Nake.TaskArgument,Nake.Task
+Nake,TaskRegistry,3,5,1,0,1,41,7,0,0,0.4,3,2,Nake.Task' Nake.TaskArgument' Nake.BuildResult,Nake.Application' Nake.CodeFixture
+Nake,TypeConverter,0,2,0,0,2,11,2,0,0,-1,0,3,,Nake.Magic.FieldSubstitution' Nake.Task' Nake.TaskArgument
+Nake,TypeSymbolExtensions,0,5,0,0,4,24,5,0,0,-1,0,0,,
+Nake,CaseInsensitiveEqualityComparer,0,2,0,0,2,11,2,0,0,-1,0,0,,
+Nake,Runner,1,1,0,1,1,8,1,0,0,0,0,2,,Nake.Options' Nake.Application
+Nake,ParentProcess,2,7,0,1,0,84,11,0,0,0,1,0,Nake.PROCESSENTRY32,
+Nake,PROCESSENTRY32,10,0,0,10,0,15,0,0,0,-1,0,1,,Nake.ParentProcess
+Nake,GacUtil,0,2,0,0,1,46,3,0,0,-1,2,0,Nake.IAssemblyCache' Nake.AssemblyInfo,
+Nake,IAssemblyCache,0,5,0,0,0,15,5,0,0,-1,1,1,Nake.AssemblyInfo,Nake.GacUtil
+Nake,AssemblyInfo,5,0,0,5,0,10,0,0,0,-1,0,2,,Nake.GacUtil' Nake.IAssemblyCache
+Nake.Scripting,AssemblyReference,2,2,0,2,2,14,2,0,0,1,0,3,,Nake.CacheKey' Nake.BuildResult' Nake.Scripting.AssemblyResolver
+Nake.Scripting,AssemblyResolver,1,2,0,0,2,20,2,0,0,0,1,1,Nake.Scripting.AssemblyReference,Nake.BuildResult
+Nake.Scripting,GAC,1,3,0,0,1,35,5,0,0,0,3,1,Nake.Scripting.IAssemblyCache' Nake.Scripting.GacApi' Nake.Scripting.AssemblyInfo,Nake.Scripting.Script
+Nake.Scripting,GacApi,0,1,0,0,0,6,1,0,0,-1,1,1,Nake.Scripting.IAssemblyCache,Nake.Scripting.GAC
+Nake.Scripting,IAssemblyCache,0,5,0,0,0,15,5,0,0,-1,1,2,Nake.Scripting.AssemblyInfo,Nake.Scripting.GAC' Nake.Scripting.GacApi
+Nake.Scripting,AssemblyInfo,5,0,0,5,0,10,0,0,0,-1,0,2,,Nake.Scripting.GAC' Nake.Scripting.IAssemblyCache
+Nake.Scripting,Preprocessor,4,9,0,3,6,107,18,0,0,0,1,1,Nake.Scripting.PreprocessedScript,Nake.Application
+Nake.Scripting,PreprocessedScript,6,4,1,6,2,34,5,0,0,0.5,0,2,,Nake.Application' Nake.Scripting.Preprocessor
+Nake.Scripting,AssemblyAbsoluteReference,2,5,0,2,5,42,6,0,0,0,0,1,,Nake.Scripting.Script
+Nake.Scripting,AssemblyNameReference,2,5,0,2,5,40,6,0,0,0,0,1,,Nake.Scripting.Script
+Nake.Scripting,Script,5,7,0,0,5,88,12,0,0,0.29,4,1,Nake.Scripting.CompiledScript' Nake.Scripting.AssemblyNameReference' Nake.Scripting.GAC' Nake.Scripting.AssemblyAbsoluteReference,Nake.Engine
+Nake.Scripting,CompiledScript,2,1,0,2,1,10,1,0,0,0,0,3,,Nake.Engine' Nake.PixieDust' Nake.Scripting.Script

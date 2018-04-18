@@ -1,3 +1,4 @@
-Architecture smell,Project,Namespace,Cause
-Unstable Dependency,Batman.Core,Batman.Core,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): Batman.Core.Logging
-Unstable Dependency,Batman.Core,Batman.Core.Logging,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): Batman.Core.Logging.NLog
+Architecture smell,Project,Namespace,Cause,Responsible Classes
+Cyclic Dependency,Batman.Core,Batman.Core,The tool detected the smell in this component because this component participates in a cyclic dependency. The participating components in the cycle are: Batman.Core' Batman.Core.Tasks,Batman.Core.BatComputer' Batman.Core.Tasks.TaskManager
+Unstable Dependency,Batman.Core,Batman.Core,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): Batman.Core.Tasks,Batman.Core.TaskManager
+Scattered Functionality,Batman.Core,Batman.Core,The tool detected the smell in this component because a set of two or more components realizes the same high-level architectural concern. Following components realize the same concern: Batman.Core.Bootstrapper.Interfaces' Batman.Core.Tasks,Batman.Core.Bootstrapper.Interfaces.IBootstrapper' Batman.Core.Tasks.TaskManager

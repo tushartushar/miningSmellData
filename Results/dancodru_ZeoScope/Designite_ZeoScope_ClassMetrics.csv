@@ -1,22 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-FTStatusCode,0,0,0,0,0,23,0,0,0,-1,0,1
-FtDevice,0,0,0,0,0,11,0,0,0,-1,0,2
-FTOpenByFlag,0,0,0,0,0,6,0,0,0,-1,0,1
-FTDeviceInfo,6,0,0,6,0,9,0,0,0,-1,1,1
-FTDeviceInfoNode,7,0,0,7,0,13,0,0,0,-1,1,1
-Ftdi,0,7,0,0,1,67,15,0,0,-1,4,1
-SettingsForm,38,14,0,0,1,633,33,0,0,0,2,1
-AlarmState,0,0,2,0,0,11,0,0,0,-1,1,1
-SoundAlarm,14,9,4,1,5,208,48,0,0,0.22,3,3
-MainScreen,41,32,0,0,1,949,83,0,0,0.09,7,0
-VectorColored,4,1,0,4,1,12,1,0,0,0,0,1
-ScopePanel,12,17,17,0,2,470,61,0,0,0.18,2,1
-ZeoException,0,3,0,0,3,12,3,0,0,-1,0,0
-ZeoSettings,1,0,20,0,0,220,0,0,0,-1,0,2
-ZeoDataType,0,0,0,0,0,14,0,0,0,-1,0,1
-Z9DataType,0,0,0,0,0,8,0,0,0,-1,0,1
-ZeoSleepStage,0,0,0,0,0,11,0,0,0,-1,0,3
-ZeoEvent,0,0,0,0,0,13,0,0,0,-1,0,2
-ChannelData,0,1,1,0,1,11,1,0,0,-1,0,2
-ZeoMessage,4,2,10,4,2,82,10,0,0,1,2,3
-ZeoStream,16,23,4,2,8,611,142,0,0,0,6,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ZeoScope,FTStatusCode,0,0,0,0,0,23,0,0,0,-1,0,1,,ZeoScope.Ftdi
+ZeoScope,FtDevice,0,0,0,0,0,11,0,0,0,-1,0,2,,ZeoScope.FTDeviceInfo' ZeoScope.FTDeviceInfoNode
+ZeoScope,FTOpenByFlag,0,0,0,0,0,6,0,0,0,-1,0,1,,ZeoScope.Ftdi
+ZeoScope,FTDeviceInfo,6,0,0,6,0,9,0,0,0,-1,1,1,ZeoScope.FtDevice,ZeoScope.Ftdi
+ZeoScope,FTDeviceInfoNode,7,0,0,7,0,13,0,0,0,-1,1,1,ZeoScope.FtDevice,ZeoScope.Ftdi
+ZeoScope,Ftdi,0,7,0,0,1,80,14,0,0,-1,4,1,ZeoScope.FTStatusCode' ZeoScope.FTDeviceInfoNode' ZeoScope.FTDeviceInfo' ZeoScope.FTOpenByFlag,ZeoScope.MainScreen
+ZeoScope,SettingsForm,38,14,0,0,1,671,32,0,0,0,2,1,ZeoScope.SoundAlarm' ZeoScope.ZeoSettings,ZeoScope.MainScreen
+ZeoScope,AlarmState,0,0,2,0,0,5,0,0,0,-1,0,1,,ZeoScope.SoundAlarm
+ZeoScope,SoundAlarm,14,9,4,1,5,216,30,0,0,0.22,3,3,ZeoScope.ZeoMessage' ZeoScope.AlarmState' ZeoScope.ZeoSleepStage,ZeoScope.SettingsForm' ZeoScope.MainScreen' ZeoScope.ZeoStream
+ZeoScope,MainScreen,41,32,0,0,1,959,74,0,0,0.09,10,0,ZeoScope.ZeoStream' ZeoScope.SoundAlarm' ZeoScope.ScopePanel' ZeoScope.ZeoMessage' ZeoScope.ChannelData' ZeoScope.ZeoSleepStage' ZeoScope.ZeoSettings' ZeoScope.SettingsForm' ZeoScope.Ftdi' ZeoScope.ZeoException,
+ZeoScope,VectorColored,4,1,0,4,1,12,1,0,0,0,0,1,,ZeoScope.ScopePanel
+ZeoScope,ScopePanel,12,17,17,0,2,518,59,0,0,0.18,2,1,ZeoScope.VectorColored' ZeoScope.ChannelData,ZeoScope.MainScreen
+ZeoScope,ZeoException,0,3,0,0,3,15,3,0,0,-1,0,1,,ZeoScope.MainScreen
+ZeoScope,ZeoSettings,1,0,20,0,0,240,0,0,0,-1,0,2,,ZeoScope.SettingsForm' ZeoScope.MainScreen
+ZeoScope,ZeoDataType,0,0,0,0,0,14,0,0,0,-1,0,1,,ZeoScope.ZeoStream
+ZeoScope,Z9DataType,0,0,0,0,0,5,0,0,0,-1,0,1,,ZeoScope.ZeoStream
+ZeoScope,ZeoSleepStage,0,0,0,0,0,10,0,0,0,-1,0,3,,ZeoScope.SoundAlarm' ZeoScope.MainScreen' ZeoScope.ZeoMessage
+ZeoScope,ZeoEvent,0,0,0,0,0,13,0,0,0,-1,0,2,,ZeoScope.ZeoMessage' ZeoScope.ZeoStream
+ZeoScope,ChannelData,0,1,1,0,1,8,1,0,0,-1,0,3,,ZeoScope.MainScreen' ZeoScope.ScopePanel' ZeoScope.ZeoStream
+ZeoScope,ZeoMessage,4,2,10,4,2,60,10,0,0,1,2,3,ZeoScope.ZeoEvent' ZeoScope.ZeoSleepStage,ZeoScope.SoundAlarm' ZeoScope.MainScreen' ZeoScope.ZeoStream
+ZeoScope,ZeoStream,16,23,4,2,8,671,84,0,0,0,6,1,ZeoScope.SoundAlarm' ZeoScope.Z9DataType' ZeoScope.ZeoMessage' ZeoScope.ZeoEvent' ZeoScope.ChannelData' ZeoScope.ZeoDataType,ZeoScope.MainScreen

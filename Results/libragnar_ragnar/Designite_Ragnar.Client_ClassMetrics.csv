@@ -1,15 +1,17 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-FloatToPercentConverter,0,2,0,0,2,11,2,0,0,-1,0,0
-NumberToSpeedConverter,0,2,0,0,2,26,2,0,0,-1,0,0
-NumberToFileSizeConverter,0,2,0,0,2,26,2,0,0,-1,0,0
-AddTorrentMessage,1,1,1,0,1,15,2,0,0,0,0,1
-TorrentAddedMessage,1,1,1,0,1,15,2,0,0,0,1,2
-TorrentUpdatedMessage,1,1,1,0,1,15,2,0,0,0,1,1
-Torrent,8,0,7,0,0,74,0,0,0,-1,0,4
-ISessionService,0,2,0,0,0,5,2,1,0,-1,0,1
-SessionService,4,7,0,0,4,82,16,0,1,0,3,0
-AddTorrentViewModel,2,2,2,0,2,33,3,0,0,0,0,0
-ShellViewModel,4,6,1,0,4,60,10,0,0,0.33,4,0
-RagnarBootstrapper,1,7,0,0,1,50,10,0,0,0.29,0,0
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Ragnar.Client.Data,FloatToPercentConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
+Ragnar.Client.Data,NumberToSpeedConverter,0,2,0,0,2,19,3,0,0,-1,0,0,,
+Ragnar.Client.Data,NumberToFileSizeConverter,0,2,0,0,2,19,3,0,0,-1,0,0,,
+Ragnar.Client.Messages,AddTorrentMessage,1,1,1,0,1,13,2,0,0,0,0,1,,Ragnar.Client.Services.SessionService
+Ragnar.Client.Messages,TorrentAddedMessage,1,1,1,0,1,13,2,0,0,0,1,2,Ragnar.Client.Models.Torrent,Ragnar.Client.Services.SessionService' Ragnar.Client.ViewModels.ShellViewModel
+Ragnar.Client.Messages,TorrentUpdatedMessage,1,1,1,0,1,13,2,0,0,0,1,1,Ragnar.Client.Models.Torrent,Ragnar.Client.ViewModels.ShellViewModel
+Ragnar.Client.Models,Torrent,8,0,7,0,0,74,0,0,0,-1,0,4,,Ragnar.Client.Messages.TorrentAddedMessage' Ragnar.Client.Messages.TorrentUpdatedMessage' Ragnar.Client.Services.SessionService' Ragnar.Client.ViewModels.ShellViewModel
+Ragnar.Client.Services,ISessionService,0,2,0,0,0,5,2,1,0,-1,0,1,,Ragnar.Client.ViewModels.ShellViewModel
+Ragnar.Client.Services,SessionService,4,7,0,0,4,89,15,0,1,0,3,0,Ragnar.Client.Messages.AddTorrentMessage' Ragnar.Client.Messages.TorrentAddedMessage' Ragnar.Client.Models.Torrent,
+Ragnar.Client.ViewModels,AddTorrentViewModel,2,2,2,0,2,29,3,0,0,0,0,0,,
+Ragnar.Client.ViewModels,ShellViewModel,4,6,1,0,4,61,11,0,0,0.33,4,0,Ragnar.Client.Services.ISessionService' Ragnar.Client.Messages.TorrentAddedMessage' Ragnar.Client.Models.Torrent' Ragnar.Client.Messages.TorrentUpdatedMessage,
+Ragnar.Client,RagnarBootstrapper,1,7,0,0,1,54,10,0,0,0.29,0,0,,
+Ragnar.Client.Properties,Resources,2,1,2,0,0,44,1,0,0,0,0,0,,
+Ragnar.Client.Properties,Settings,1,0,1,0,0,13,0,0,0,-1,0,0,,
+XamlGeneratedNamespace,GeneratedApplication,1,2,0,0,2,35,3,0,0,0,0,0,,
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

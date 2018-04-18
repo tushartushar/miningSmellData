@@ -1,16 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConfigurePushBulletDialog,2,5,1,0,1,79,6,0,0,0.6,1,1
-ConfigureSmtpDialog,2,5,1,0,1,79,6,0,0,0.6,1,1
-IdleManager,5,5,2,0,3,113,8,0,0,0.4,0,1
-MessageData,4,1,0,4,1,30,1,0,0,0,1,2
-LogMessageType,0,0,0,0,0,26,0,0,0,-1,0,3
-LogMonitor,6,10,2,0,7,182,23,0,0,0.2,3,1
-Main,28,39,1,0,2,780,94,0,0,0.1,12,1
-Program,0,3,0,0,0,24,5,0,0,-1,0,0
-PushBulletClient,1,2,0,0,2,46,5,0,0,0,1,1
-PushBulletDetails,0,4,4,0,3,93,10,0,0,-1,1,3
-SmtpDetails,2,4,9,0,3,159,13,0,0,0.75,1,2
-WindowFlasher,0,2,0,0,1,51,2,0,0,-1,1,1
-FlashStyle,0,0,0,0,0,28,0,0,0,-1,0,2
-Settings,1,3,16,0,1,195,3,0,0,1,0,3
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PoEWhisperNotifier,ConfigureMessageSettingsDialog,7,7,0,0,1,147,10,0,0,0.43,2,1,PoEWhisperNotifier.MessageSettings' PoEWhisperNotifier.LogMessageType,PoEWhisperNotifier.Main
+PoEWhisperNotifier,ConfigurePushBulletDialog,2,5,1,0,1,68,6,0,0,0.6,1,1,PoEWhisperNotifier.PushBulletDetails,PoEWhisperNotifier.Main
+PoEWhisperNotifier,ConfigureSmtpDialog,2,5,1,0,1,68,6,0,0,0.6,1,1,PoEWhisperNotifier.SmtpDetails,PoEWhisperNotifier.Main
+PoEWhisperNotifier,IdleManager,5,5,2,0,3,103,8,0,0,0.4,1,1,PoEWhisperNotifier.LASTINPUTINFO,PoEWhisperNotifier.Main
+PoEWhisperNotifier,LASTINPUTINFO,3,0,0,3,0,8,0,0,0,-1,0,1,,PoEWhisperNotifier.IdleManager
+PoEWhisperNotifier,MessageData,4,1,3,4,1,38,1,0,0,0,1,2,PoEWhisperNotifier.LogMessageType,PoEWhisperNotifier.LogMonitor' PoEWhisperNotifier.Main
+PoEWhisperNotifier,LogMessageType,0,0,0,0,0,34,0,0,0,-1,0,5,,PoEWhisperNotifier.ConfigureMessageSettingsDialog' PoEWhisperNotifier.MessageData' PoEWhisperNotifier.LogMonitor' PoEWhisperNotifier.Main' PoEWhisperNotifier.MessageSettings
+PoEWhisperNotifier,LogMonitor,6,10,2,0,7,149,22,0,0,0.2,3,1,PoEWhisperNotifier.Main' PoEWhisperNotifier.LogMessageType' PoEWhisperNotifier.MessageData,PoEWhisperNotifier.Main
+PoEWhisperNotifier,Main,28,40,1,0,2,761,83,0,0,0.1,14,1,PoEWhisperNotifier.LogMonitor' PoEWhisperNotifier.MessageSettings' PoEWhisperNotifier.Properties.Settings' PoEWhisperNotifier.LogMessageType' PoEWhisperNotifier.IdleManager' PoEWhisperNotifier.MessageData' PoEWhisperNotifier.SmtpDetails' PoEWhisperNotifier.PushBulletDetails' PoEWhisperNotifier.PushBulletClient' PoEWhisperNotifier.WindowFlasher' PoEWhisperNotifier.FlashStyle' PoEWhisperNotifier.ConfigurePushBulletDialog' PoEWhisperNotifier.ConfigureSmtpDialog' PoEWhisperNotifier.ConfigureMessageSettingsDialog,PoEWhisperNotifier.LogMonitor
+PoEWhisperNotifier,MessageSettings,0,5,6,0,4,119,7,0,0,-1,2,2,PoEWhisperNotifier.LogMessageType' PoEWhisperNotifier.Properties.Settings,PoEWhisperNotifier.ConfigureMessageSettingsDialog' PoEWhisperNotifier.Main
+PoEWhisperNotifier,Program,0,3,0,0,0,21,3,0,0,-1,0,0,,
+PoEWhisperNotifier,PushBulletClient,1,2,0,0,2,40,2,0,0,0,1,1,PoEWhisperNotifier.PushBulletDetails,PoEWhisperNotifier.Main
+PoEWhisperNotifier,PushBulletDetails,0,4,4,0,3,74,6,0,0,-1,1,3,PoEWhisperNotifier.Properties.Settings,PoEWhisperNotifier.ConfigurePushBulletDialog' PoEWhisperNotifier.Main' PoEWhisperNotifier.PushBulletClient
+PoEWhisperNotifier,SmtpDetails,2,4,9,0,3,132,6,0,0,0.75,1,2,PoEWhisperNotifier.Properties.Settings,PoEWhisperNotifier.ConfigureSmtpDialog' PoEWhisperNotifier.Main
+PoEWhisperNotifier,WindowFlasher,0,2,0,0,1,46,2,0,0,-1,2,1,PoEWhisperNotifier.FLASHWINFO' PoEWhisperNotifier.FlashStyle,PoEWhisperNotifier.Main
+PoEWhisperNotifier,FLASHWINFO,5,0,0,5,0,23,0,0,0,-1,0,1,,PoEWhisperNotifier.WindowFlasher
+PoEWhisperNotifier,FlashStyle,0,0,0,0,0,24,0,0,0,-1,0,2,,PoEWhisperNotifier.Main' PoEWhisperNotifier.WindowFlasher
+PoEWhisperNotifier.Converters,StringPipeConverter,0,2,0,0,2,14,4,0,0,-1,0,0,,
+PoEWhisperNotifier.Properties,Settings,1,3,15,0,1,198,3,0,0,1,0,4,,PoEWhisperNotifier.Main' PoEWhisperNotifier.MessageSettings' PoEWhisperNotifier.PushBulletDetails' PoEWhisperNotifier.SmtpDetails
+PoEWhisperNotifier.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,

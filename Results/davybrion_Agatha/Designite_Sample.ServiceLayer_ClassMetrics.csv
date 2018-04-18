@@ -1,17 +1,17 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ComponentRegistration,0,1,0,0,1,18,1,0,0,-1,0,0
-GetAgeHandler,0,1,0,0,1,13,2,0,1,-1,2,0
-GetCacheHandler,0,1,0,0,1,9,1,0,1,-1,3,0
-GetServerDateHandler,0,1,0,0,1,9,1,0,1,-1,1,0
-GetServerStatusHandler,0,0,0,0,0,3,0,0,0,-1,0,0
-HelloWorldCommandHandler,0,1,0,0,1,7,1,0,1,-1,1,0
-HelloWorldHandler,0,1,0,0,1,9,1,0,1,-1,1,0
-ReverseStringHandler,0,1,0,0,1,12,1,0,1,-1,1,0
-FakeCacheStore,2,2,0,0,2,22,2,0,0,0,0,2
-SetServerCacheCommandHandler,0,1,0,0,1,7,1,0,1,-1,2,0
-HelloWorldRequestValidator,0,1,0,0,1,11,1,0,1,-1,2,0
-Validate,0,1,0,0,1,10,2,0,0,-1,2,1
-IValidator,0,1,0,0,0,4,1,1,0,-1,0,1
-ValidationError,1,1,0,1,1,8,1,0,0,0,0,2
-ValidationException,1,1,1,0,1,18,2,0,0,0,1,0
-ValidatingInterceptor,0,4,1,0,3,28,5,0,2,-1,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Sample.ServiceLayer,ComponentRegistration,0,1,0,0,1,18,1,0,0,-1,3,0,Agatha.ServiceLayer.ServiceLayerConfiguration' Sample.Common.RequestsAndResponses.HelloWorldRequest' Agatha.Castle.Container,
+Sample.ServiceLayer.Handlers,GetAgeHandler,0,1,0,0,1,12,2,0,2,-1,2,0,Sample.Common.RequestsAndResponses.GetAgeResponse' Sample.Common.RequestsAndResponses.GetAgeRequest,
+Sample.ServiceLayer.Handlers,GetCacheHandler,0,1,0,0,1,9,1,0,2,-1,3,0,Sample.Common.RequestsAndResponses.GetCacheResponse' Sample.ServiceLayer.Handlers.FakeCacheStore' Sample.Common.RequestsAndResponses.GetCacheRequest,
+Sample.ServiceLayer.Handlers,GetServerDateHandler,0,1,0,0,1,9,1,0,2,-1,2,0,Sample.Common.RequestsAndResponses.GetServerDateResponse' Sample.Common.RequestsAndResponses.GetServerDateRequest,
+Sample.ServiceLayer.Handlers,GetServerStatusHandler,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Sample.ServiceLayer.Handlers,HelloWorldCommandHandler,0,1,0,0,1,7,1,0,2,-1,1,0,Sample.Common.RequestsAndResponses.HelloWorldCommand,
+Sample.ServiceLayer.Handlers,HelloWorldHandler,0,1,0,0,1,9,1,0,2,-1,2,1,Sample.Common.RequestsAndResponses.HelloWorldResponse' Sample.Common.RequestsAndResponses.HelloWorldRequest,Sample.ServiceAndClientInSameProcess.Program
+Sample.ServiceLayer.Handlers,ReverseStringHandler,0,1,0,0,1,12,1,0,2,-1,2,0,Sample.Common.RequestsAndResponses.ReverseStringResponse' Sample.Common.RequestsAndResponses.ReverseStringRequest,
+Sample.ServiceLayer.Handlers,FakeCacheStore,2,2,0,0,2,24,2,0,0,0,0,2,,Sample.ServiceLayer.Handlers.GetCacheHandler' Sample.ServiceLayer.Handlers.SetServerCacheCommandHandler
+Sample.ServiceLayer.Handlers,SetServerCacheCommandHandler,0,1,0,0,1,7,1,0,2,-1,2,0,Sample.ServiceLayer.Handlers.FakeCacheStore' Sample.Common.RequestsAndResponses.SetCacheCommand,
+Sample.ServiceLayer.Interceptors,HelloWorldRequestValidator,0,1,0,0,1,8,2,0,1,-1,2,0,Sample.Common.RequestsAndResponses.HelloWorldRequest' Sample.ServiceLayer.Interceptors.ValidationError,
+Sample.ServiceLayer.Interceptors,Validate,0,1,0,0,1,9,2,0,0,-1,3,1,Sample.ServiceLayer.Interceptors.IValidator' Agatha.Common.InversionOfControl.IContainer' Agatha.Common.InversionOfControl.IoC,Sample.ServiceLayer.Interceptors.ValidatingInterceptor
+Sample.ServiceLayer.Interceptors,IValidator,0,1,0,0,0,4,1,1,0,-1,0,2,,Sample.ServiceAndClientInSameProcess.Program' Sample.ServiceLayer.Interceptors.Validate
+Sample.ServiceLayer.Interceptors,ValidationError,1,1,0,1,1,8,1,0,0,0,0,2,,Sample.ServiceLayer.Interceptors.HelloWorldRequestValidator' Sample.ServiceLayer.Interceptors.ValidationException
+Sample.ServiceLayer.Interceptors,ValidationException,1,1,1,0,1,18,2,0,0,0,1,0,Sample.ServiceLayer.Interceptors.ValidationError,
+Sample.ServiceLayer.Interceptors,ValidatingInterceptor,0,4,1,0,3,28,4,0,2,-1,5,0,Agatha.Common.IConventions' Agatha.Common.Response' Sample.ServiceLayer.Interceptors.Validate' Agatha.Common.RequestProcessingContext' Agatha.Common.ExceptionType,

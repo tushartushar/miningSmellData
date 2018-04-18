@@ -1,26 +1,29 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DepthInfoItem,0,0,5,0,0,23,0,0,0,-1,0,2
-DepthInfoGroup,0,1,2,0,1,16,1,0,0,-1,1,0
-Encryption,0,4,0,0,4,49,8,0,0,-1,0,2
-MtGoxOrderType,0,0,0,0,0,8,0,0,0,-1,0,3
-MtGoxCurrencySymbol,0,0,0,0,0,23,0,0,0,-1,0,11
-MtGoxOrderStatus,0,0,0,0,0,10,0,0,0,-1,0,3
-MtGoxTradeType,0,0,0,0,0,8,0,0,0,-1,0,1
-MtGoxAsk,0,2,2,0,2,19,2,0,0,-1,0,1
-MtGoxBid,0,2,2,0,2,19,2,0,0,-1,0,1
-MtGoxDepthInfo,1,2,4,0,2,103,8,0,0,1,3,17
-MtGoxHistoryItem,0,3,8,0,2,172,25,0,0,-1,4,2
-MtGoxOrder,0,1,13,0,1,100,12,0,0,-1,3,4
-MtGoxTickerItem,0,3,10,0,3,80,3,0,0,-1,0,17
-MtGoxTrade,0,1,10,0,1,75,5,0,0,-1,2,17
-MtGoxWallet,0,3,6,0,3,43,3,0,0,-1,3,2
-MtGoxWalletBalance,4,3,0,4,3,21,3,0,0,1,1,2
-MtGoxWithdrawalLimit,0,3,4,0,3,33,3,0,0,-1,1,2
-Settings,0,1,7,0,1,43,1,0,0,-1,1,2
-AutoTradeSettings,0,1,10,0,1,69,1,0,0,-1,1,4
-RuleSettings,0,0,2,0,0,14,0,0,0,-1,0,2
-StopOrder,1,4,8,1,4,78,4,1,0,1,1,2
-UserInfo,0,4,7,0,4,47,4,0,0,-1,1,3
-MtGoxNetTools,1,2,0,0,1,43,12,0,0,0,0,1
-DynamicJsonConverter,0,2,1,0,2,93,3,0,0,-1,0,0
-MtGoxSocketIOClient,5,9,0,0,6,125,27,0,0,0.22,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MtGoxTrader.Model,DepthInfoItem,0,0,5,0,0,8,0,0,0,-1,0,2,,MtGoxTrader.Model.MtGoxDepthInfo' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,DepthInfoGroup,0,1,2,0,1,10,1,0,0,-1,0,0,,
+MtGoxTrader.Model,Encryption,0,4,0,0,4,61,4,0,0,-1,0,2,,MtGoxTrader.Trader.ConfigHelper' MtGoxTrader.Trader.Utils
+MtGoxTrader.Model,MtGoxOrderType,0,0,0,0,0,5,0,0,0,-1,0,3,,MtGoxTrader.Model.MtGoxOrder' MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxCurrencySymbol,0,0,0,0,0,20,0,0,0,-1,0,9,,MtGoxTrader.Model.MtGoxHistoryItem' MtGoxTrader.Model.MtGoxOrder' MtGoxTrader.Model.MtGoxTrade' MtGoxTrader.Model.MtGoxWallet' MtGoxTrader.Model.MtGoxWalletBalance' MtGoxTrader.Model.MtGoxWithdrawalLimit' MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Configure' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxOrderStatus,0,0,0,0,0,7,0,0,0,-1,0,3,,MtGoxTrader.Model.MtGoxOrder' MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxTradeType,0,0,0,0,0,5,0,0,0,-1,0,2,,MtGoxTrader.Model.MtGoxTrade' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxAsk,0,2,2,0,2,12,2,0,0,-1,0,5,,MtGoxTrader.Model.MtGoxDepthInfo' MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.AutoTradeSellAmountIn10Higher' MtGoxTrader.TradeStrategy.SmpleTradeStrategy' MtGoxTradeTest.AutoTradeTests
+MtGoxTrader.Model,MtGoxBid,0,2,2,0,2,12,2,0,0,-1,0,5,,MtGoxTrader.Model.MtGoxDepthInfo' MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.AutoTradeBuyAmountIn10Higher' MtGoxTrader.TradeStrategy.SmpleTradeStrategy' MtGoxTradeTest.AutoTradeTests
+MtGoxTrader.Model,MtGoxDepthInfo,1,2,4,0,2,94,8,0,0,1,3,18,MtGoxTrader.Model.MtGoxAsk' MtGoxTrader.Model.DepthInfoItem' MtGoxTrader.Model.MtGoxBid,MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.IAutoTradeRule' MtGoxTrader.TradeStrategy.AutoTradePriceHigher' MtGoxTrader.TradeStrategy.AutoTradePriceLower' MtGoxTrader.TradeStrategy.AutoTradeFiveMinIncreaseHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinDropHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinDealAmountHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinAmountPerTradeHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinIncreaseHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinDropHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinDealAmountHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinAmountPerTradeHigher' MtGoxTrader.TradeStrategy.AutoTradeSellAmountIn10Higher' MtGoxTrader.TradeStrategy.AutoTradeBuyAmountIn10Higher' MtGoxTrader.TradeStrategy.ITradeStrategy' MtGoxTrader.TradeStrategy.SmpleTradeStrategy' MtGoxTradeTest.AutoTradeTests
+MtGoxTrader.Model,MtGoxHistoryItem,0,3,8,0,2,184,8,0,0,-1,4,2,MtGoxTrader.Model.MtGoxCurrencySymbol' MtGoxTrader.Model.MtGoxWalletBalance' MtGoxTrader.Model.MtGoxWithdrawalLimit' MtGoxTrader.Model.MtGoxWallet,MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxOrder,0,1,13,0,1,74,4,0,0,-1,3,2,MtGoxTrader.Model.MtGoxOrderType' MtGoxTrader.Model.MtGoxOrderStatus' MtGoxTrader.Model.MtGoxCurrencySymbol,MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxTickerItem,0,3,10,0,3,55,3,0,0,-1,0,18,,MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.IAutoTradeRule' MtGoxTrader.TradeStrategy.AutoTradePriceHigher' MtGoxTrader.TradeStrategy.AutoTradePriceLower' MtGoxTrader.TradeStrategy.AutoTradeFiveMinIncreaseHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinDropHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinDealAmountHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinAmountPerTradeHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinIncreaseHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinDropHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinDealAmountHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinAmountPerTradeHigher' MtGoxTrader.TradeStrategy.AutoTradeSellAmountIn10Higher' MtGoxTrader.TradeStrategy.AutoTradeBuyAmountIn10Higher' MtGoxTrader.TradeStrategy.ITradeStrategy' MtGoxTrader.TradeStrategy.SmpleTradeStrategy' MtGoxTradeTest.AutoTradeTests
+MtGoxTrader.Model,MtGoxTrade,0,1,10,0,1,44,5,0,0,-1,2,11,MtGoxTrader.Model.MtGoxCurrencySymbol' MtGoxTrader.Model.MtGoxTradeType,MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0' MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.AutoTradeFiveMinIncreaseHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinDropHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinDealAmountHigher' MtGoxTrader.TradeStrategy.AutoTradeFiveMinAmountPerTradeHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinIncreaseHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinDropHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinDealAmountHigher' MtGoxTrader.TradeStrategy.AutoTradeOneMinAmountPerTradeHigher' MtGoxTradeTest.AutoTradeTests
+MtGoxTrader.Model,MtGoxWallet,0,3,6,0,3,28,3,0,0,-1,3,2,MtGoxTrader.Model.MtGoxCurrencySymbol' MtGoxTrader.Model.MtGoxWalletBalance' MtGoxTrader.Model.MtGoxWithdrawalLimit,MtGoxTrader.Model.MtGoxHistoryItem' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxWalletBalance,4,3,0,4,3,20,3,0,0,1,1,3,MtGoxTrader.Model.MtGoxCurrencySymbol,MtGoxTrader.Model.MtGoxHistoryItem' MtGoxTrader.Model.MtGoxWallet' MtGoxTrader.Trader.Form1
+MtGoxTrader.Model,MtGoxWithdrawalLimit,0,3,4,0,3,20,3,0,0,-1,1,2,MtGoxTrader.Model.MtGoxCurrencySymbol,MtGoxTrader.Model.MtGoxHistoryItem' MtGoxTrader.Model.MtGoxWallet
+MtGoxTrader.Model,Settings,0,1,7,0,1,22,1,0,0,-1,0,2,,MtGoxTrader.Trader.Form1' MtGoxTrader.Trader.Program
+MtGoxTrader.Model,AutoTradeSettings,0,1,10,0,1,39,1,0,0,-1,0,2,,MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.SmpleTradeStrategy
+MtGoxTrader.Model,OrderStatus,0,0,0,0,0,9,0,0,0,-1,0,3,,MtGoxTrader.Trader.Form1' MtGoxTrader.Trader.SellStopOrder' MtGoxTrader.TradeStrategy.SmpleTradeStrategy
+MtGoxTrader.Model,OrderType,0,0,0,0,0,9,0,0,0,-1,0,2,,MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.SmpleTradeStrategy
+MtGoxTrader.Model,RuleSettings,0,0,2,0,0,8,0,0,0,-1,0,2,,MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.SmpleTradeStrategy
+MtGoxTrader.Model,StopOrder,1,4,8,1,4,54,4,1,0,1,0,2,,MtGoxTrader.Trader.Form1' MtGoxTrader.Trader.SellStopOrder
+MtGoxTrader.Model,UserInfo,0,4,7,0,4,56,4,0,0,-1,0,3,,MtGoxTrader.Trader.Form1' MtGoxTrader.TradeStrategy.ITradeStrategy' MtGoxTrader.TradeStrategy.SmpleTradeStrategy
+MtGoxTrader.Model,MtGoxNetTools,1,2,0,0,1,47,4,0,0,0,0,1,,MtGoxTrader.MtGoxAPIClient.MtGoxAPIV0
+MtGoxTrader.Model,DynamicJsonConverter,0,2,1,0,2,99,3,0,0,-1,1,0,MtGoxTrader.Model.DynamicJsonObject,
+MtGoxTrader.Model,DynamicJsonObject,1,4,0,0,3,82,12,0,0,0,0,1,,MtGoxTrader.Model.DynamicJsonConverter
+MtGoxTrader.Model,MtGoxSocketIOClient,5,9,0,0,6,143,22,0,0,0.22,0,0,,

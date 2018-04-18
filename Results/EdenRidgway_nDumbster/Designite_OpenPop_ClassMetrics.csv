@@ -1,43 +1,43 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-EncodingFinder,0,4,2,0,1,125,9,0,0,-1,0,2
-Rfc2231Decoder,0,4,0,0,1,257,22,0,0,-1,3,1
-Rfc2822DateTime,0,6,0,0,1,234,50,0,0,-1,1,3
-Utility,0,2,0,0,2,55,7,0,0,-1,0,4
-Base64,0,2,0,0,2,36,5,0,0,-1,1,2
-EncodedWord,0,1,0,0,1,106,11,0,0,-1,3,4
-QuotedPrintable,0,8,0,0,2,267,31,0,0,-1,0,2
-Received,0,2,3,0,1,112,8,0,0,-1,1,1
-RfcMailAddress,0,5,5,0,1,207,15,0,0,-1,3,1
-ContentTransferEncoding,0,0,0,0,0,27,0,0,0,-1,0,3
-MessageHeader,0,3,24,0,0,455,81,0,0,-1,7,3
-HeaderFieldParser,0,6,0,0,6,209,69,0,0,-1,6,1
-HeaderExtractor,0,5,0,0,1,138,17,0,0,-1,2,2
-AttachmentFinder,0,1,0,0,0,16,3,0,1,-1,1,1
-FindAllMessagePartsWithMediaType,0,2,0,0,2,51,7,0,1,-1,2,1
-IQuestionAnswerMessageTraverser,0,2,0,0,0,23,2,2,0,-1,2,0
-FindFirstMessagePartWithMediaType,0,2,0,0,2,39,6,0,1,-1,2,1
-MultipleMessagePartFinder,0,1,0,0,0,24,3,2,1,-1,1,0
-TextVersionFinder,0,1,0,0,0,16,3,0,2,-1,1,1
-IAnswerMessageTraverser,0,2,0,0,0,20,2,1,0,-1,2,0
-AnswerMessageTraverser,0,4,0,0,2,53,8,1,1,-1,2,0
-Message,1,13,3,0,13,339,41,0,0,0.62,7,7
-MessagePart,0,12,12,0,3,459,37,0,0,-1,7,9
-AuthenticationMethod,0,0,0,0,0,36,0,0,0,-1,0,1
-CramMd5,2,6,0,0,0,166,23,0,0,0,0,1
-Disposable,0,3,1,0,1,60,5,1,0,-1,0,0
-Apop,0,1,0,0,1,32,5,0,0,-1,0,1
-Pop3Client,0,35,6,0,20,861,100,0,1,-1,8,0
-ConnectionState,0,0,0,0,0,22,0,0,0,-1,0,1
-LoginDelayException,0,1,0,0,1,16,1,0,1,-1,1,0
-PopClientException,0,2,0,0,0,27,5,7,0,-1,0,0
-PopServerException,0,1,0,0,1,14,1,0,1,-1,0,3
-InvalidLoginException,0,1,0,0,1,13,1,0,1,-1,0,0
-InvalidUseException,0,1,0,0,1,14,1,0,1,-1,0,0
-PopServerNotAvailableException,0,1,0,0,1,14,1,0,1,-1,0,0
-PopServerLockedException,0,1,0,0,1,17,1,0,1,-1,1,0
-PopServerNotFoundException,0,1,0,0,1,14,1,0,1,-1,0,0
-DiagnosticsLogger,0,2,0,0,2,27,4,0,1,-1,0,0
-FileLogger,1,4,3,0,2,81,7,0,1,0,0,0
-DefaultLogger,0,2,1,0,1,35,3,0,0,-1,1,6
-ILog,0,2,0,0,0,16,2,2,0,-1,0,1
-StreamUtility,0,2,0,0,2,49,9,0,0,-1,0,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OpenPop.Mime.Decode,EncodingFinder,0,4,2,0,1,100,9,0,0,-1,0,2,,OpenPop.Mime.Decode.EncodedWord' OpenPop.Mime.MessagePart
+OpenPop.Mime.Decode,Rfc2231Decoder,0,4,0,0,1,232,18,0,0,-1,4,1,OpenPop.Mime.Decode.Utility' OpenPop.Common.Logging.ILog' OpenPop.Common.Logging.DefaultLogger' OpenPop.Mime.Decode.EncodedWord,OpenPop.Mime.Header.HeaderFieldParser
+OpenPop.Mime.Decode,Rfc2822DateTime,0,6,0,0,1,208,13,0,0,-1,2,3,OpenPop.Common.Logging.ILog' OpenPop.Common.Logging.DefaultLogger,OpenPop.Mime.Header.Received' OpenPop.Mime.Header.MessageHeader' OpenPop.Mime.Header.HeaderFieldParser
+OpenPop.Mime.Decode,Utility,0,2,0,0,2,55,7,0,0,-1,0,4,,OpenPop.Mime.Decode.Rfc2231Decoder' OpenPop.Mime.Header.RfcMailAddress' OpenPop.Mime.Header.MessageHeader' OpenPop.Mime.Header.HeaderFieldParser
+OpenPop.Mime.Decode,Base64,0,2,0,0,2,35,4,0,0,-1,2,2,OpenPop.Common.Logging.ILog' OpenPop.Common.Logging.DefaultLogger,OpenPop.Mime.Decode.EncodedWord' OpenPop.Mime.MessagePart
+OpenPop.Mime.Decode,EncodedWord,0,1,0,0,1,89,5,0,0,-1,3,4,OpenPop.Mime.Decode.EncodingFinder' OpenPop.Mime.Decode.Base64' OpenPop.Mime.Decode.QuotedPrintable,OpenPop.Mime.Decode.Rfc2231Decoder' OpenPop.Mime.Header.RfcMailAddress' OpenPop.Mime.Header.MessageHeader' OpenPop.Mime.Header.HeaderFieldParser
+OpenPop.Mime.Decode,QuotedPrintable,0,8,0,0,2,275,23,0,0,-1,0,2,,OpenPop.Mime.Decode.EncodedWord' OpenPop.Mime.MessagePart
+OpenPop.Mime.Header,Received,0,2,3,0,1,98,8,0,0,-1,1,0,OpenPop.Mime.Decode.Rfc2822DateTime,
+OpenPop.Mime.Header,RfcMailAddress,0,5,5,0,1,193,16,0,0,-1,4,2,OpenPop.Mime.Decode.EncodedWord' OpenPop.Common.Logging.ILog' OpenPop.Common.Logging.DefaultLogger' OpenPop.Mime.Decode.Utility,OpenPop.Mime.Header.MessageHeader' OpenPop.Mime.Message
+OpenPop.Mime.Header,ContentTransferEncoding,0,0,0,0,0,23,0,0,0,-1,0,3,,OpenPop.Mime.Header.MessageHeader' OpenPop.Mime.Header.HeaderFieldParser' OpenPop.Mime.MessagePart
+OpenPop.Mime.Header,MessageHeader,0,3,24,0,0,380,11,0,0,-1,6,4,OpenPop.Mime.Header.ContentTransferEncoding' OpenPop.Mime.Header.RfcMailAddress' OpenPop.Mime.Decode.Utility' OpenPop.Mime.Header.HeaderFieldParser' OpenPop.Mime.Decode.EncodedWord' OpenPop.Mime.Decode.Rfc2822DateTime,OpenPop.Mime.Header.HeaderExtractor' OpenPop.Mime.Message' OpenPop.Mime.MessagePart' OpenPop.Pop3.Pop3Client
+OpenPop.Mime.Header,HeaderFieldParser,0,6,0,0,6,212,17,0,0,-1,7,1,OpenPop.Mime.Header.ContentTransferEncoding' OpenPop.Common.Logging.ILog' OpenPop.Common.Logging.DefaultLogger' OpenPop.Mime.Decode.Rfc2231Decoder' OpenPop.Mime.Decode.Utility' OpenPop.Mime.Decode.EncodedWord' OpenPop.Mime.Decode.Rfc2822DateTime,OpenPop.Mime.Header.MessageHeader
+OpenPop.Mime.Header,HeaderExtractor,0,5,0,0,1,140,10,0,0,-1,2,2,OpenPop.Common.StreamUtility' OpenPop.Mime.Header.MessageHeader,OpenPop.Mime.Message' OpenPop.Mime.MessagePart
+OpenPop.Mime.Traverse,AttachmentFinder,0,1,0,0,0,13,3,0,1,-1,1,1,OpenPop.Mime.MessagePart,OpenPop.Mime.Message
+OpenPop.Mime.Traverse,FindAllMessagePartsWithMediaType,0,2,0,0,2,50,7,0,1,-1,2,1,OpenPop.Mime.Message' OpenPop.Mime.MessagePart,OpenPop.Mime.Message
+OpenPop.Mime.Traverse,IQuestionAnswerMessageTraverser,0,2,0,0,0,17,2,2,0,-1,2,0,OpenPop.Mime.Message' OpenPop.Mime.MessagePart,
+OpenPop.Mime.Traverse,FindFirstMessagePartWithMediaType,0,2,0,0,2,38,8,0,1,-1,2,1,OpenPop.Mime.Message' OpenPop.Mime.MessagePart,OpenPop.Mime.Message
+OpenPop.Mime.Traverse,MultipleMessagePartFinder,0,1,0,0,0,21,3,2,0,-1,0,0,,
+OpenPop.Mime.Traverse,TextVersionFinder,0,1,0,0,0,13,3,0,1,-1,1,1,OpenPop.Mime.MessagePart,OpenPop.Mime.Message
+OpenPop.Mime.Traverse,IAnswerMessageTraverser,0,2,0,0,0,15,2,1,0,-1,2,0,OpenPop.Mime.Message' OpenPop.Mime.MessagePart,
+OpenPop.Mime.Traverse,AnswerMessageTraverser<TAnswer>,0,4,0,0,2,50,8,0,1,-1,2,0,OpenPop.Mime.Message' OpenPop.Mime.MessagePart,
+OpenPop.Mime,Message,1,13,3,0,13,335,34,0,0,0.62,8,7,OpenPop.Mime.Header.HeaderExtractor' OpenPop.Mime.MessagePart' OpenPop.Mime.Header.MessageHeader' OpenPop.Mime.Header.RfcMailAddress' OpenPop.Mime.Traverse.TextVersionFinder' OpenPop.Mime.Traverse.AttachmentFinder' OpenPop.Mime.Traverse.FindFirstMessagePartWithMediaType' OpenPop.Mime.Traverse.FindAllMessagePartsWithMediaType,nDumbster.Smtp.SimpleSmtpServer' OpenPop.Mime.Traverse.FindAllMessagePartsWithMediaType' OpenPop.Mime.Traverse.IQuestionAnswerMessageTraverser' OpenPop.Mime.Traverse.FindFirstMessagePartWithMediaType' OpenPop.Mime.Traverse.IAnswerMessageTraverser' OpenPop.Mime.Traverse.AnswerMessageTraverser<TAnswer>' OpenPop.Pop3.Pop3Client
+OpenPop.Mime,MessagePart,0,12,12,0,3,379,27,0,0,-1,7,8,OpenPop.Mime.Header.MessageHeader' OpenPop.Mime.Decode.EncodingFinder' OpenPop.Mime.Header.HeaderExtractor' OpenPop.Common.StreamUtility' OpenPop.Mime.Header.ContentTransferEncoding' OpenPop.Mime.Decode.QuotedPrintable' OpenPop.Mime.Decode.Base64,OpenPop.Mime.Traverse.AttachmentFinder' OpenPop.Mime.Traverse.FindAllMessagePartsWithMediaType' OpenPop.Mime.Traverse.IQuestionAnswerMessageTraverser' OpenPop.Mime.Traverse.FindFirstMessagePartWithMediaType' OpenPop.Mime.Traverse.TextVersionFinder' OpenPop.Mime.Traverse.IAnswerMessageTraverser' OpenPop.Mime.Traverse.AnswerMessageTraverser<TAnswer>' OpenPop.Mime.Message
+OpenPop.Pop3,AuthenticationMethod,0,0,0,0,0,33,0,0,0,-1,0,1,,OpenPop.Pop3.Pop3Client
+OpenPop.Pop3,CramMd5,2,6,0,0,0,171,21,0,0,0,0,1,,OpenPop.Pop3.Pop3Client
+OpenPop.Pop3,Disposable,0,3,1,0,1,58,5,1,0,-1,0,1,,OpenPop.Pop3.Pop3Client
+OpenPop.Pop3,Apop,0,1,0,0,1,30,3,0,0,-1,0,1,,OpenPop.Pop3.Pop3Client
+OpenPop.Pop3,Pop3Client,0,35,6,0,20,881,80,0,1,-1,11,0,OpenPop.Pop3.Disposable' OpenPop.Pop3.ConnectionState' OpenPop.Common.StreamUtility' OpenPop.Common.Logging.ILog' OpenPop.Common.Logging.DefaultLogger' OpenPop.Pop3.AuthenticationMethod' OpenPop.Pop3.Apop' OpenPop.Pop3.CramMd5' OpenPop.Mime.Message' OpenPop.Mime.Header.MessageHeader' OpenPop.Pop3.Exceptions.PopServerException,
+OpenPop.Pop3,ConnectionState,0,0,0,0,0,16,0,0,0,-1,0,1,,OpenPop.Pop3.Pop3Client
+OpenPop.Pop3.Exceptions,LoginDelayException,0,1,0,0,1,10,1,0,1,-1,1,0,OpenPop.Pop3.Exceptions.PopServerException,
+OpenPop.Pop3.Exceptions,PopClientException,0,2,0,0,0,26,5,7,0,-1,0,0,,
+OpenPop.Pop3.Exceptions,PopServerException,0,1,0,0,1,10,1,0,1,-1,0,3,,OpenPop.Pop3.Pop3Client' OpenPop.Pop3.Exceptions.LoginDelayException' OpenPop.Pop3.Exceptions.PopServerLockedException
+OpenPop.Pop3.Exceptions,InvalidLoginException,0,1,0,0,1,10,1,0,1,-1,0,0,,
+OpenPop.Pop3.Exceptions,InvalidUseException,0,1,0,0,1,10,1,0,1,-1,0,0,,
+OpenPop.Pop3.Exceptions,PopServerNotAvailableException,0,1,0,0,1,11,1,0,1,-1,0,0,,
+OpenPop.Pop3.Exceptions,PopServerLockedException,0,1,0,0,1,10,1,0,1,-1,1,0,OpenPop.Pop3.Exceptions.PopServerException,
+OpenPop.Pop3.Exceptions,PopServerNotFoundException,0,1,0,0,1,11,1,0,1,-1,0,0,,
+OpenPop.Common.Logging,DiagnosticsLogger,0,2,0,0,2,23,4,0,1,-1,0,0,,
+OpenPop.Common.Logging,FileLogger,1,4,3,0,2,71,7,0,1,0,0,0,,
+OpenPop.Common.Logging,DefaultLogger,0,2,1,0,1,29,3,0,0,-1,1,6,OpenPop.Common.Logging.ILog,OpenPop.Mime.Decode.Rfc2231Decoder' OpenPop.Mime.Decode.Rfc2822DateTime' OpenPop.Mime.Decode.Base64' OpenPop.Mime.Header.RfcMailAddress' OpenPop.Mime.Header.HeaderFieldParser' OpenPop.Pop3.Pop3Client
+OpenPop.Common.Logging,ILog,0,2,0,0,0,13,2,2,0,-1,0,7,,OpenPop.Mime.Decode.Rfc2231Decoder' OpenPop.Mime.Decode.Rfc2822DateTime' OpenPop.Mime.Decode.Base64' OpenPop.Mime.Header.RfcMailAddress' OpenPop.Mime.Header.HeaderFieldParser' OpenPop.Pop3.Pop3Client' OpenPop.Common.Logging.DefaultLogger
+OpenPop.Common,StreamUtility,0,2,0,0,2,48,3,0,0,-1,0,3,,OpenPop.Mime.Header.HeaderExtractor' OpenPop.Mime.MessagePart' OpenPop.Pop3.Pop3Client

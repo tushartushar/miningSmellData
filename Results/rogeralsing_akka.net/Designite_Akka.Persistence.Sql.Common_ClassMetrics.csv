@@ -1,0 +1,27 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Akka.Persistence.Sql.Common,InternalExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Akka.Persistence.Sql.Common,JournalSettings,0,1,6,0,1,37,2,1,0,-1,1,2,Akka.Configuration.Config,Akka.Persistence.Sql.Common.Journal.JournalDbEngine' Akka.Persistence.Sqlite.Journal.SqliteJournalEngine
+Akka.Persistence.Sql.Common,SnapshotStoreSettings,0,1,5,0,1,32,2,1,0,-1,1,1,Akka.Configuration.Config,Akka.Persistence.Sql.Common.Snapshot.SqlSnapshotStore
+Akka.Persistence.Sql.Common.Journal,ITimestampProvider,0,1,0,0,0,7,1,2,0,-1,1,1,Akka.Persistence.IPersistentRepresentation,Akka.Persistence.Sql.Common.Journal.JournalDbEngine
+Akka.Persistence.Sql.Common.Journal,DefaultTimestampProvider,0,1,0,0,1,7,1,0,1,-1,1,0,Akka.Persistence.IPersistentRepresentation,
+Akka.Persistence.Sql.Common.Journal,JournalEntry,6,1,0,6,1,18,1,0,0,0,0,2,,Akka.Persistence.Sql.Common.Journal.JournalDbEngine' Akka.Persistence.Sqlite.Journal.SqliteJournalEngine
+Akka.Persistence.Sql.Common.Journal,JournalDbEngine,4,17,4,1,7,249,20,1,0,0.12,14,1,Akka.Persistence.Sql.Common.JournalSettings' Akka.Persistence.Sql.Common.Journal.ITimestampProvider' Akka.Actor.ActorSystem' Akka.Configuration.Config' Akka.Actor.Settings' Akka.Persistence.Sql.Common.Journal.JournalEntry' Akka.Persistence.IPersistentRepresentation' Akka.Persistence.Sql.Common.Journal.IJournalQueryBuilder' Akka.Persistence.Sql.Common.Journal.IJournalQueryMapper' Akka.Actor.IActorRef' Akka.Persistence.AtomicWrite' Akka.Serialization.Serializer' Akka.Serialization.Serialization' Akka.Event.ILoggingAdapter,Akka.Persistence.Sql.Common.Journal.SqlJournal
+Akka.Persistence.Sql.Common.Journal,IJournalQueryBuilder,0,5,0,0,0,23,5,1,0,-1,1,1,Akka.Persistence.IPersistentRepresentation,Akka.Persistence.Sql.Common.Journal.JournalDbEngine
+Akka.Persistence.Sql.Common.Journal,IJournalQueryMapper,0,1,0,0,0,8,1,1,0,-1,1,1,Akka.Actor.IActorRef,Akka.Persistence.Sql.Common.Journal.JournalDbEngine
+Akka.Persistence.Sql.Common.Journal,DefaultJournalQueryMapper,6,3,0,5,2,30,3,0,1,0,4,0,Akka.Serialization.Serialization' Akka.Persistence.Persistent' Akka.Actor.IActorRef' Akka.Serialization.Serializer,
+Akka.Persistence.Sql.Common.Journal,SqlJournal,1,8,0,0,2,56,10,1,1,0,5,0,Akka.Persistence.Sql.Common.Journal.JournalDbEngine' Akka.Persistence.Journal.AsyncWriteJournal' Akka.Persistence.Sql.Common.Queries.Query' Akka.Actor.IActorRef' Akka.Actor.IActorContext,
+Akka.Persistence.Sql.Common.Queries,IHint,0,0,0,0,0,1,0,3,0,-1,0,2,,Akka.Persistence.Sql.Common.Queries.Query' Akka.Persistence.Sqlite.Journal.SqliteQueryBuilder
+Akka.Persistence.Sql.Common.Queries,Hints,0,5,0,0,5,38,5,0,0,-1,3,1,Akka.Persistence.Sql.Common.Queries.WithManifest' Akka.Persistence.Sql.Common.Queries.PersistenceIdRange' Akka.Persistence.Sql.Common.Queries.TimestampRange,Akka.Persistence.Sql.Common.TestKit.SqlJournalQuerySpec
+Akka.Persistence.Sql.Common.Queries,WithManifest,1,5,0,1,5,26,6,0,1,0,0,2,,Akka.Persistence.Sql.Common.Queries.Hints' Akka.Persistence.Sqlite.Journal.SqliteQueryBuilder
+Akka.Persistence.Sql.Common.Queries,PersistenceIdRange,1,5,0,1,5,28,8,0,1,0,0,2,,Akka.Persistence.Sql.Common.Queries.Hints' Akka.Persistence.Sqlite.Journal.SqliteQueryBuilder
+Akka.Persistence.Sql.Common.Queries,TimestampRange,2,5,0,2,5,38,9,0,1,0,0,2,,Akka.Persistence.Sql.Common.Queries.Hints' Akka.Persistence.Sqlite.Journal.SqliteQueryBuilder
+Akka.Persistence.Sql.Common.Queries,IQueryReply,0,0,0,0,0,1,0,3,0,-1,0,0,,
+Akka.Persistence.Sql.Common.Queries,Query,2,6,0,2,6,36,9,0,0,0.33,1,2,Akka.Persistence.Sql.Common.Queries.IHint,Akka.Persistence.Sql.Common.Journal.SqlJournal' Akka.Persistence.Sql.Common.TestKit.SqlJournalQuerySpec
+Akka.Persistence.Sql.Common.Queries,QueryResponse,2,5,0,2,5,32,7,0,1,0,1,0,Akka.Persistence.IPersistentRepresentation,
+Akka.Persistence.Sql.Common.Queries,QuerySuccess,1,5,0,1,5,27,7,0,1,0,0,0,,
+Akka.Persistence.Sql.Common.Queries,QueryFailure,2,5,0,2,5,35,7,0,1,0,0,0,,
+Akka.Persistence.Sql.Common.Snapshot,SqlSnapshotStore,1,11,3,0,1,122,11,1,1,0,12,0,Akka.Actor.ActorSystem' Akka.Actor.IActorContext' Akka.Persistence.Snapshot.SnapshotStore' Akka.Persistence.Sql.Common.SnapshotStoreSettings' Akka.Persistence.Sql.Common.Snapshot.ISnapshotQueryBuilder' Akka.Persistence.SnapshotSelectionCriteria' Akka.Persistence.Sql.Common.Snapshot.ISnapshotQueryMapper' Akka.Persistence.SelectedSnapshot' Akka.Persistence.Sql.Common.Snapshot.SnapshotEntry' Akka.Persistence.SnapshotMetadata' Akka.Serialization.Serializer' Akka.Serialization.Serialization,
+Akka.Persistence.Sql.Common.Snapshot,SnapshotEntry,5,1,0,5,1,31,1,0,0,0,0,3,,Akka.Persistence.Sql.Common.Snapshot.SqlSnapshotStore' Akka.Persistence.Sql.Common.Snapshot.ISnapshotQueryBuilder' Akka.Persistence.Sqlite.Snapshot.QueryBuilder
+Akka.Persistence.Sql.Common.Snapshot,ISnapshotQueryBuilder,0,4,0,0,0,23,4,1,0,-1,1,1,Akka.Persistence.Sql.Common.Snapshot.SnapshotEntry,Akka.Persistence.Sql.Common.Snapshot.SqlSnapshotStore
+Akka.Persistence.Sql.Common.Snapshot,ISnapshotQueryMapper,0,1,0,0,0,7,1,2,0,-1,0,1,,Akka.Persistence.Sql.Common.Snapshot.SqlSnapshotStore
+Akka.Persistence.Sql.Common.Snapshot,DefaultSnapshotQueryMapper,1,3,0,0,2,25,3,0,1,0,4,0,Akka.Serialization.Serialization' Akka.Persistence.SnapshotMetadata' Akka.Persistence.SelectedSnapshot' Akka.Serialization.Serializer,

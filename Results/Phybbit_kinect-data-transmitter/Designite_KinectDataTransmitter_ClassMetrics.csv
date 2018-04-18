@@ -1,7 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-InteractionDataTracker,6,14,0,0,3,252,32,0,0,0.36,6,1
-KinectDevice,12,14,6,1,3,298,54,0,0,0.14,6,1
-FaceDataTracker,3,5,0,0,2,157,10,0,0,0,0,1
-Program,2,5,0,0,0,78,15,0,0,0,3,0
-SkeletonDataTracker,2,8,0,0,4,100,19,0,0,0.38,4,1
-StreamWriter,4,6,0,0,5,60,16,0,0,0,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+KinectDataTransmitter,InteractionDataTracker,6,14,0,0,3,269,27,0,0,0.29,6,1,KinectDataTransmitter.UIElementInfo' DataConverter.HandPointer' DataConverter.Converter' DataConverter.HandType' DataConverter.PoseType' DataConverter.HandEventType,KinectDataTransmitter.KinectDevice
+KinectDataTransmitter,UIElementInfo,0,0,5,0,0,23,0,0,0,-1,0,1,,KinectDataTransmitter.InteractionDataTracker
+KinectDataTransmitter,KinectDevice,12,14,6,1,3,337,31,0,0,0.14,6,1,KinectDataTransmitter.SkeletonDataTracker' KinectDataTransmitter.FaceDataTracker' KinectDataTransmitter.InteractionDataTracker' KinectDataTransmitter.StreamWriter' DataConverter.Converter' DataConverter.KinectDeviceMode,KinectDataTransmitter.Program
+KinectDataTransmitter,FaceDataTracker,3,5,0,0,2,159,10,0,0,0,1,1,KinectDataTransmitter.SkeletonFaceTracker,KinectDataTransmitter.KinectDevice
+KinectDataTransmitter,SkeletonFaceTracker,2,1,1,0,1,71,1,0,0,0,1,1,DataConverter.BodyTrackingState,KinectDataTransmitter.FaceDataTracker
+KinectDataTransmitter,Program,2,5,0,0,0,96,11,0,0,0,3,0,KinectDataTransmitter.KinectDevice' DataConverter.Converter' DataConverter.KinectDeviceMode,
+KinectDataTransmitter,SkeletonDataTracker,2,8,0,0,4,110,19,0,0,0.5,5,1,DataConverter.BodyData' DataConverter.JointData' DataConverter.JointTrackingState' DataConverter.Converter' DataConverter.JointType,KinectDataTransmitter.KinectDevice
+KinectDataTransmitter,StreamWriter,4,6,0,0,5,70,10,0,0,0,1,1,DataConverter.Converter,KinectDataTransmitter.KinectDevice

@@ -1,20 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DownloadCompletedEventArgs,0,0,3,0,0,15,0,0,0,-1,0,0
-DownloadProgressEventArgs,0,0,2,0,0,11,0,0,0,-1,0,0
-IDownloader,0,0,0,0,0,3,0,0,1,-1,0,0
-IDownloadFormatProvider,0,1,3,0,0,29,1,0,0,-1,1,1
-IDownloadProgressReporter,0,0,0,0,0,7,0,1,0,-1,0,0
-IDownloadProvider,0,2,0,0,0,19,2,1,0,-1,3,0
-IImmediateSearchProvider,0,1,0,0,0,14,1,0,0,-1,0,0
-IPreload,0,1,0,0,0,7,1,0,0,-1,0,0
-IPreview,0,1,0,0,0,8,1,0,0,-1,0,0
-IScraper,0,3,2,0,0,36,3,0,0,-1,1,3
-IScraperFactory,0,1,0,0,0,4,1,0,0,-1,0,0
-IScraperIgnore,0,0,0,0,0,7,0,0,0,-1,0,0
-IChapterRecord,0,0,6,0,0,21,0,1,0,-1,1,5
-IMangaRecord,0,0,4,0,0,15,0,1,0,-1,0,7
-Cache,4,9,2,1,7,146,17,0,0,0.44,0,2
-EventArgs,1,1,1,0,1,13,1,0,0,0,0,0
-FifoSemaphore,3,5,0,0,5,109,5,0,1,0,0,0
-ISemaphore,0,4,0,0,0,7,4,1,0,-1,0,1
-ReflectionHelper,1,14,0,0,14,127,38,0,0,0.79,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Blacker.MangaScraper.Common.Events,DownloadCompletedEventArgs,0,0,3,0,0,7,0,0,0,-1,0,0,,
+Blacker.MangaScraper.Common.Events,DownloadProgressEventArgs,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Blacker.MangaScraper.Common,IDownloader,0,0,0,0,0,1,0,0,1,-1,0,0,,
+Blacker.MangaScraper.Common,IDownloadFormatProvider,0,1,3,0,0,23,1,0,0,-1,1,1,Blacker.MangaScraper.Common.Models.IChapterRecord,Blacker.MangaScraper.Common.IDownloadProvider
+Blacker.MangaScraper.Common,IDownloadProgressReporter,0,0,0,0,0,7,0,1,0,-1,0,0,,
+Blacker.MangaScraper.Common,IDownloadProvider,0,2,0,0,0,19,2,1,0,-1,3,0,Blacker.MangaScraper.Common.Utils.ISemaphore' Blacker.MangaScraper.Common.Models.IChapterRecord' Blacker.MangaScraper.Common.IDownloadFormatProvider,
+Blacker.MangaScraper.Common,IImmediateSearchProvider,0,1,0,0,0,10,1,0,0,-1,0,0,,
+Blacker.MangaScraper.Common,IPreload,0,1,0,0,0,7,1,0,0,-1,0,0,,
+Blacker.MangaScraper.Common,IPreview,0,1,0,0,0,8,1,0,0,-1,0,0,,
+Blacker.MangaScraper.Common,IScraper,0,3,2,0,0,28,3,0,0,-1,1,1,Blacker.MangaScraper.Common.Models.IMangaRecord,Blacker.MangaScraper.Library.DAL.StorageDAL
+Blacker.MangaScraper.Common,IScraperFactory,0,1,0,0,0,4,1,0,0,-1,0,0,,
+Blacker.MangaScraper.Common,IScraperIgnore,0,0,0,0,0,2,0,0,0,-1,0,0,,
+Blacker.MangaScraper.Common.Models,IChapterRecord,0,0,6,0,0,9,0,1,0,-1,0,6,,Blacker.MangaScraper.Common.IDownloadFormatProvider' Blacker.MangaScraper.Common.IDownloadProvider' Blacker.MangaScraper.Library.DAL.StorageDAL' Blacker.MangaScraper.Library.ILibraryManager' Blacker.MangaScraper.Library.LibraryManager' Blacker.MangaScraper.Library.Models.DownloadedChapterInfo
+Blacker.MangaScraper.Common.Models,IMangaRecord,0,0,4,0,0,7,0,1,0,-1,0,5,,Blacker.MangaScraper.Common.IScraper' Blacker.MangaScraper.Library.DAL.StorageDAL' Blacker.MangaScraper.Library.ILibraryManager' Blacker.MangaScraper.Library.LibraryManager' Blacker.MangaScraper.Library.Models.MangaRecord
+Blacker.MangaScraper.Common.Utils,Cache<TKey;TValue>,4,9,2,1,7,142,17,0,0,0.44,0,0,,
+Blacker.MangaScraper.Common.Utils,CachedObject<TVal>,0,1,4,0,1,16,1,0,0,-1,0,0,,
+Blacker.MangaScraper.Common.Utils,EventArgs<T>,1,1,1,0,1,12,1,0,0,0,0,0,,
+Blacker.MangaScraper.Common.Utils,FifoSemaphore,3,5,0,0,5,112,5,0,1,0,1,0,Blacker.MangaScraper.Common.Utils.Waiter,
+Blacker.MangaScraper.Common.Utils,Waiter,2,3,0,0,3,47,3,0,0,0,0,1,,Blacker.MangaScraper.Common.Utils.FifoSemaphore
+Blacker.MangaScraper.Common.Utils,ISemaphore,0,4,0,0,0,7,4,1,0,-1,0,1,,Blacker.MangaScraper.Common.IDownloadProvider
+Blacker.MangaScraper.Common.Utils,ReflectionHelper,1,14,0,0,14,148,35,0,0,0.21,0,1,,Blacker.MangaScraper.Library.SQLite.SchemaManager

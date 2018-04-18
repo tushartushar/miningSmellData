@@ -1,26 +1,30 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ModelBinder,1,1,1,0,1,28,1,0,2,0,2,1
-WebForms,1,3,2,0,2,44,4,0,1,0.67,2,0
-DataBoundControlAdapter,15,20,6,0,1,225,30,0,0,0.9,2,1
-ModelBinderInspector,0,1,0,0,1,13,2,0,1,-1,3,0
-PageLifeCycleMessage,0,0,7,0,0,31,0,0,3,-1,1,5
-PageLifeCycleInspector,0,4,1,0,1,41,7,0,1,-1,6,0
-ViewStatePageAdapter,16,28,4,0,13,205,29,0,0,1,1,1
-ViewStatePageStatePersister,0,4,2,0,3,56,8,0,0,-1,2,1
-WebFormsTimelineCategory,1,0,1,0,0,15,0,0,1,-1,1,1
-DataBindModel,0,1,2,0,1,16,1,0,0,-1,0,2
-DataBindParameter,0,1,2,0,1,16,1,0,1,-1,0,1
-DataBindParameterModel,0,1,2,0,1,16,1,0,0,-1,1,2
-EventParameterModel,0,1,2,0,1,16,1,0,0,-1,1,1
-ExecutionItemModel,0,0,5,0,0,23,0,0,0,-1,0,1
-ModelBindParameter,0,1,3,0,1,21,1,1,0,-1,0,3
-ControlTreeItemModel,0,0,11,0,0,49,0,0,0,-1,1,2
-Resources,2,1,3,0,0,53,1,0,0,0,0,1
-IndexedStringListConverter,0,2,1,0,1,69,12,0,1,-1,1,0
-DataBindParameterConverter,0,1,0,0,1,13,1,0,2,-1,1,0
-IndexedStringListConverterTarget,0,1,1,0,1,11,1,0,0,-1,0,2
-DataBindFormatter,0,2,0,0,1,38,8,0,0,-1,6,1
-ViewStateFormatter,1,4,1,0,1,411,78,0,0,0,3,1
-ControlTree,5,5,3,0,3,175,22,0,3,0.6,9,0
-PageLifeCycle,2,4,3,0,3,61,6,0,3,0.75,3,0
-ControlTreeItemTrackModel,0,1,5,0,1,27,1,0,0,-1,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Glimpse.WebForms.AlternateType,ModelBinder,1,1,1,0,1,33,1,0,0,0,1,1,Glimpse.Core.Extensibility.IProxyFactory,Glimpse.WebForms.Inspector.ModelBinderInspector
+Glimpse.WebForms.AlternateType,BindModel,0,2,0,0,2,15,3,0,2,-1,3,0,Glimpse.WebForms.Model.DataBindParameterModel' Glimpse.Core.Extensibility.IAlternateMethodContext' Glimpse.Core.Extensibility.TimerResult,
+Glimpse.WebForms.Display,WebForms,1,3,2,0,2,40,4,0,1,0.67,4,0,Glimpse.Core.Extensibility.ITabSetupContext' Glimpse.Core.Extensibility.ITabContext' Glimpse.WebForms.Inspector.PageLifeCycleMessage' Glimpse.Core.Extensibility.ILogger,
+Glimpse.WebForms.Inspector,DataBoundControlAdapter,0,5,4,0,0,117,13,1,0,-1,2,1,Glimpse.Core.Framework.GlimpseConfiguration' Glimpse.WebForms.Model.DataBindParameterModel,Glimpse.WebForms.Tab.ControlTree
+Glimpse.WebForms.Inspector,DataBoundControlAdapter<TControlAdapter>,15,15,2,0,1,105,17,0,1,1,1,0,Glimpse.Core.Framework.GlimpseConfiguration,
+Glimpse.WebForms.Inspector,ModelBinderInspector,0,1,0,0,1,14,2,0,1,-1,4,0,Glimpse.WebForms.AlternateType.ModelBinder' Glimpse.Core.Extensibility.IInspectorContext' Glimpse.Core.Extensibility.ILogger' Glimpse.WebForms.Resources,
+Glimpse.WebForms.Inspector,PageLifeCycleMessage,0,0,7,0,0,10,0,0,3,-1,0,4,,Glimpse.WebForms.Display.WebForms' Glimpse.WebForms.Inspector.PageLifeCycleInspector' Glimpse.WebForms.Support.DataBindFormatter' Glimpse.WebForms.Tab.PageLifeCycle
+Glimpse.WebForms.Inspector,PageLifeCycleInspector,0,4,1,0,1,42,6,0,1,-1,5,0,Glimpse.Core.Extensibility.IInspectorContext' Glimpse.Core.Extensibility.IMessageBroker' Glimpse.Core.Message.ITraceMessage' Glimpse.WebForms.Inspector.PageLifeCycleMessage' Glimpse.WebForms.Message.WebFormsTimelineCategory,
+Glimpse.WebForms.Inspector,ViewStatePageAdapter,0,1,0,0,1,7,1,0,0,-1,1,1,Glimpse.WebForms.Inspector.ViewStatePageStatePersister,Glimpse.WebForms.Tab.ControlTree
+Glimpse.WebForms.Inspector,ViewStatePageAdapter<TPageAdapter>,16,27,4,0,12,191,28,0,0,1,1,0,Glimpse.WebForms.Inspector.ViewStatePageStatePersister,
+Glimpse.WebForms.Inspector,ViewStatePageStatePersister,0,4,2,0,3,59,8,0,0,-1,2,2,Glimpse.Core.Framework.GlimpseConfiguration' Glimpse.Core.Extensibility.ILogger,Glimpse.WebForms.Inspector.ViewStatePageAdapter' Glimpse.WebForms.Inspector.ViewStatePageAdapter<TPageAdapter>
+Glimpse.WebForms.Message,WebFormsTimelineCategory,1,0,1,0,0,11,0,0,1,-1,1,1,Glimpse.Core.Message.TimelineCategoryItem,Glimpse.WebForms.Inspector.PageLifeCycleInspector
+Glimpse.WebForms.Model,DataBindModel,0,1,2,0,1,10,1,0,0,-1,0,1,,Glimpse.WebForms.Support.DataBindFormatter
+Glimpse.WebForms.Model,DataBindParameter,0,1,2,0,1,11,1,0,1,-1,0,1,,Glimpse.WebForms.SerializationConverter.DataBindParameterConverter
+Glimpse.WebForms.Model,DataBindParameterModel,0,1,2,0,1,10,1,0,0,-1,0,3,,Glimpse.WebForms.AlternateType.BindModel' Glimpse.WebForms.Inspector.DataBoundControlAdapter' Glimpse.WebForms.Support.DataBindFormatter
+Glimpse.WebForms.Model,EventParameterModel,0,1,2,0,1,10,1,0,0,-1,0,0,,
+Glimpse.WebForms.Model,ExecutionItemModel,0,0,5,0,0,9,0,0,0,-1,0,1,,Glimpse.WebForms.Tab.PageLifeCycle
+Glimpse.WebForms.Model,ModelBindParameter,0,1,3,0,1,12,1,1,0,-1,0,0,,
+Glimpse.WebForms.Model,ControlTreeItemModel,0,0,11,0,0,20,0,0,0,-1,0,3,,Glimpse.WebForms.Support.DataBindFormatter' Glimpse.WebForms.Support.ViewStateFormatter' Glimpse.WebForms.Tab.ControlTree
+Glimpse.WebForms,Resources,2,1,3,0,0,50,1,0,0,0,0,1,,Glimpse.WebForms.Inspector.ModelBinderInspector
+Glimpse.WebForms.SerializationConverter,IndexedStringListConverter,0,2,1,0,1,72,10,0,1,-1,1,0,Glimpse.WebForms.SerializationConverter.IndexedStringListConverterTarget,
+Glimpse.WebForms.SerializationConverter,DataBindParameterConverter,0,1,0,0,1,14,1,0,0,-1,1,0,Glimpse.WebForms.Model.DataBindParameter,
+Glimpse.WebForms.SerializationConverter,IndexedStringListConverterTarget,0,1,1,0,1,8,1,0,0,-1,0,1,,Glimpse.WebForms.SerializationConverter.IndexedStringListConverter
+Glimpse.WebForms.Support,DataBindFormatter,0,2,0,0,1,46,8,0,0,-1,5,1,Glimpse.WebForms.Inspector.PageLifeCycleMessage' Glimpse.WebForms.Tab.ControlTreeItemTrackModel' Glimpse.WebForms.Model.DataBindModel' Glimpse.WebForms.Model.ControlTreeItemModel' Glimpse.WebForms.Model.DataBindParameterModel,Glimpse.WebForms.Tab.ControlTree
+Glimpse.WebForms.Support,ViewStateFormatter,1,4,1,0,1,490,15,0,0,0,4,1,Glimpse.Core.Extensibility.ILogger' Glimpse.WebForms.Tab.ControlTreeItemTrackModel' Glimpse.WebForms.Model.ControlTreeItemModel' Glimpse.WebForms.Support.TempListItem,Glimpse.WebForms.Tab.ControlTree
+Glimpse.WebForms.Support,TempListItem,0,0,2,0,0,5,0,0,0,-1,0,1,,Glimpse.WebForms.Support.ViewStateFormatter
+Glimpse.WebForms.Tab,ControlTree,5,5,3,0,3,194,18,0,2,0.6,10,0,Glimpse.WebForms.Support.ViewStateFormatter' Glimpse.WebForms.Support.DataBindFormatter' Glimpse.Core.Extensibility.ITabSetupContext' Glimpse.Core.Extensibility.IDataStore' Glimpse.Core.Extensibility.ITabContext' Glimpse.Core.Extensibility.ILogger' Glimpse.WebForms.Inspector.ViewStatePageAdapter' Glimpse.WebForms.Inspector.DataBoundControlAdapter' Glimpse.WebForms.Tab.ControlTreeItemTrackModel' Glimpse.WebForms.Model.ControlTreeItemModel,
+Glimpse.WebForms.Tab,PageLifeCycle,2,4,3,0,3,64,6,0,2,0.75,5,0,Glimpse.Core.Extensibility.ITabSetupContext' Glimpse.Core.Extensibility.IDataStore' Glimpse.Core.Extensibility.ITabContext' Glimpse.WebForms.Model.ExecutionItemModel' Glimpse.WebForms.Inspector.PageLifeCycleMessage,
+Glimpse.WebForms.Tab,ControlTreeItemTrackModel,0,1,5,0,1,12,1,0,0,-1,0,3,,Glimpse.WebForms.Support.DataBindFormatter' Glimpse.WebForms.Support.ViewStateFormatter' Glimpse.WebForms.Tab.ControlTree

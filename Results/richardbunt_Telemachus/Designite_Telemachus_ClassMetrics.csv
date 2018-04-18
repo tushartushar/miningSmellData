@@ -1,0 +1,101 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Telemachus.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+Telemachus,DataSourceResultFormatter,0,1,0,0,0,5,1,1,0,-1,0,4,,Telemachus.APIEntry' Telemachus.ActionAPIEntry' Telemachus.PlotableAPIEntry' Telemachus.KSPAPI
+Telemachus,FormatterProvider,0,0,14,0,0,17,0,1,0,-1,0,20,,Telemachus.MechJebDataLinkHandler' Telemachus.FlyByWireDataLinkHandler' Telemachus.FlightDataLinkHandler' Telemachus.TimeWarpDataLinkHandler' Telemachus.TargetDataLinkHandler' Telemachus.DockingDataLinkHandler' Telemachus.MapViewDataLinkHandler' Telemachus.BodyDataLinkHandler' Telemachus.NavBallDataLinkHandler' Telemachus.VesselDataLinkHandler' Telemachus.OrbitDataLinkHandler' Telemachus.SensorDataLinkHandler' Telemachus.ResourceDataLinkHandler' Telemachus.PausedDataLinkHandler' Telemachus.APIDataLinkHandler' Telemachus.CompoundDataLinkHandler' Telemachus.DataLinkHandler' Telemachus.KSPAPI' TelemachusTest.DummyKSPAPI' TelemachusTest.DummyHandler
+Telemachus,JSONFormatterProvider,1,1,1,0,0,330,1,0,1,0,0,2,,Telemachus.TelemachusBehaviour' TelemachusTest.GenerateAPIDocumentation
+Telemachus,JSONFormatter,0,1,0,0,1,4,1,11,1,-1,0,0,,
+Telemachus,DefaultJSONFormatter,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Telemachus,Vector3dJSONFormatter,0,1,0,0,1,9,2,0,2,-1,0,1,,Telemachus.ManeuverNodeJSONFormatter
+Telemachus,APIEntryJSONFormatter,0,1,0,0,1,18,2,0,2,-1,2,0,Telemachus.APIEntry' Telemachus.UnitType,
+Telemachus,APIEntryStringArrayFormatter,0,1,0,0,1,8,1,0,2,-1,0,0,,
+Telemachus,ResourceListJSONFormatter,0,2,0,0,1,28,5,4,2,-1,0,0,,
+Telemachus,CurrentResourceListJSONFormatter,0,1,0,0,1,9,1,0,3,-1,0,0,,
+Telemachus,ActiveResourceListJSONFormatter,0,1,0,0,1,8,1,0,3,-1,1,0,Telemachus.SimplifiedResource,
+Telemachus,ActiveResourceTotalListJSONFormatter,0,1,0,0,1,8,1,0,3,-1,1,0,Telemachus.SimplifiedResource,
+Telemachus,MaxResourceListJSONFormatter,0,1,0,0,1,8,1,0,3,-1,0,0,,
+Telemachus,SensorModuleListJSONFormatter,0,1,0,0,1,45,4,0,2,-1,0,0,,
+Telemachus,MechJebSimulationJSONFormatter,0,2,0,0,1,31,4,0,2,-1,2,0,Telemachus.MechJebSimulation' Telemachus.MechJebStageSimulationStats,
+Telemachus,ManeuverNodeJSONFormatter,2,1,0,0,1,43,4,0,2,0,3,1,Telemachus.Vector3dJSONFormatter' Telemachus.OrbitPatchListJSONFormatter' Telemachus.OrbitPatches,Telemachus.ManeuverNodeListJSONFormatter
+Telemachus,ManeuverNodeListJSONFormatter,1,1,0,0,1,15,2,0,2,0,1,0,Telemachus.ManeuverNodeJSONFormatter,
+Telemachus,OrbitPatchJSONFormatter,0,1,0,0,1,37,3,0,2,-1,0,1,,Telemachus.OrbitPatchListJSONFormatter
+Telemachus,OrbitPatchListJSONFormatter,1,1,0,0,1,15,3,0,2,0,1,1,Telemachus.OrbitPatchJSONFormatter,Telemachus.ManeuverNodeJSONFormatter
+Telemachus,MechJebDataLinkHandler,0,11,0,0,1,371,21,0,1,-1,8,0,Telemachus.TelemachusBehaviour' Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.PluginLogger' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.MechJebSimulation' Telemachus.PausedDataLinkHandler,
+Telemachus,MechJebSimulation,2,2,0,2,1,48,3,0,0,0,2,2,Telemachus.PluginLogger' Telemachus.MechJebStageSimulationStats,Telemachus.MechJebSimulationJSONFormatter' Telemachus.MechJebDataLinkHandler
+Telemachus,MechJebStageSimulationStats,9,0,0,9,0,12,0,0,0,-1,0,2,,Telemachus.MechJebSimulationJSONFormatter' Telemachus.MechJebSimulation
+Telemachus,FlyByWireDataLinkHandler,7,5,0,0,3,95,7,0,1,0.4,3,1,Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.PausedDataLinkHandler,Telemachus.TelemachusPowerDrain
+Telemachus,FlightDataLinkHandler,0,9,0,0,1,213,11,0,1,-1,6,0,Telemachus.TelemachusBehaviour' Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.PausedDataLinkHandler,
+Telemachus,TimeWarpDataLinkHandler,0,1,0,0,1,36,1,0,1,-1,5,0,Telemachus.TelemachusBehaviour' Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry,
+Telemachus,TargetDataLinkHandler,0,2,0,0,2,156,4,0,1,-1,6,0,Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.DataSources' Telemachus.OrbitPatches' Telemachus.DataLinkHandler,
+Telemachus,DockingDataLinkHandler,2,4,0,0,1,107,7,0,1,0.75,4,0,Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.DataSources,
+Telemachus,MapViewDataLinkHandler,5,3,0,0,1,159,5,0,1,0.67,7,0,Telemachus.TelemachusBehaviour' Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.PluginLogger' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.OrbitPatches,
+Telemachus,BodyDataLinkHandler,0,1,0,0,1,131,1,0,1,-1,4,0,Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry,
+Telemachus,NavBallDataLinkHandler,0,2,0,0,1,110,2,0,1,-1,4,0,Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry,
+Telemachus,VesselDataLinkHandler,0,1,0,0,1,106,1,0,1,-1,4,0,Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry,
+Telemachus,OrbitDataLinkHandler,0,1,0,0,1,107,1,0,1,-1,5,0,Telemachus.DataSources' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.OrbitPatches,
+Telemachus,SensorDataLinkHandler,1,2,0,0,1,40,2,0,1,0,6,0,Telemachus.SensorCache' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.DataSources' Telemachus.VesselChangeDetector,
+Telemachus,ResourceDataLinkHandler,2,3,0,0,1,61,3,0,1,0,7,0,Telemachus.ResourceCache' Telemachus.ActiveResourceCache' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.VesselChangeDetector' Telemachus.DataSources,
+Telemachus,ModuleCache<T>,4,2,1,0,1,44,3,0,0,1,1,0,Telemachus.DataSources,
+Telemachus,SimplifiedResource,0,1,2,0,1,10,1,0,0,-1,0,2,,Telemachus.ActiveResourceListJSONFormatter' Telemachus.ActiveResourceTotalListJSONFormatter
+Telemachus,ActiveResourceCache,0,3,0,0,1,54,8,0,0,-1,2,1,Telemachus.VesselChangeDetector' Telemachus.PluginLogger,Telemachus.ResourceDataLinkHandler
+Telemachus,ResourceCache,0,3,0,0,1,49,8,0,0,-1,2,1,Telemachus.VesselChangeDetector' Telemachus.PluginLogger,Telemachus.ResourceDataLinkHandler
+Telemachus,SensorCache,0,3,0,0,1,43,7,0,0,-1,2,1,Telemachus.VesselChangeDetector' Telemachus.PluginLogger,Telemachus.SensorDataLinkHandler
+Telemachus,PausedDataLinkHandler,0,2,0,0,2,54,8,0,1,-1,5,3,Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.TelemachusPowerDrain' Telemachus.VesselChangeDetector,Telemachus.MechJebDataLinkHandler' Telemachus.FlyByWireDataLinkHandler' Telemachus.FlightDataLinkHandler
+Telemachus,APIDataLinkHandler,0,1,0,0,1,44,1,0,1,-1,6,0,Telemachus.IKSPAPI' Telemachus.FormatterProvider' Telemachus.UnitType' Telemachus.APIEntry' Telemachus.ServerConfiguration' Telemachus.DataSources,
+Telemachus,CompoundDataLinkHandler,0,1,0,0,1,16,3,0,1,-1,2,0,Telemachus.DataLinkHandler' Telemachus.FormatterProvider,
+Telemachus,DataLinkHandler,3,5,1,0,3,70,7,17,0,0,3,3,Telemachus.APIEntry' Telemachus.FormatterProvider' Telemachus.UnitType,Telemachus.TargetDataLinkHandler' Telemachus.CompoundDataLinkHandler' Telemachus.IKSPAPI
+Telemachus,APIEntry,0,1,7,0,1,27,1,3,0,-1,2,20,Telemachus.DataSourceResultFormatter' Telemachus.UnitType,Telemachus.APIEntryJSONFormatter' Telemachus.MechJebDataLinkHandler' Telemachus.FlightDataLinkHandler' Telemachus.TimeWarpDataLinkHandler' Telemachus.TargetDataLinkHandler' Telemachus.DockingDataLinkHandler' Telemachus.MapViewDataLinkHandler' Telemachus.BodyDataLinkHandler' Telemachus.NavBallDataLinkHandler' Telemachus.VesselDataLinkHandler' Telemachus.OrbitDataLinkHandler' Telemachus.SensorDataLinkHandler' Telemachus.ResourceDataLinkHandler' Telemachus.PausedDataLinkHandler' Telemachus.APIDataLinkHandler' Telemachus.DataLinkHandler' Telemachus.KSPAPI' Telemachus.IKSPAPI' TelemachusTest.GenerateAPIDocumentation' TelemachusTest.DummyHandler
+Telemachus,UnitType,0,0,0,0,0,1,0,0,0,-1,0,19,,Telemachus.APIEntryJSONFormatter' Telemachus.MechJebDataLinkHandler' Telemachus.FlightDataLinkHandler' Telemachus.TimeWarpDataLinkHandler' Telemachus.TargetDataLinkHandler' Telemachus.DockingDataLinkHandler' Telemachus.MapViewDataLinkHandler' Telemachus.BodyDataLinkHandler' Telemachus.NavBallDataLinkHandler' Telemachus.VesselDataLinkHandler' Telemachus.OrbitDataLinkHandler' Telemachus.SensorDataLinkHandler' Telemachus.ResourceDataLinkHandler' Telemachus.PausedDataLinkHandler' Telemachus.APIDataLinkHandler' Telemachus.DataLinkHandler' Telemachus.APIEntry' Telemachus.PlotableAPIEntry' TelemachusTest.DummyHandler
+Telemachus,OrbitPatches,0,2,0,0,2,28,5,0,0,-1,0,4,,Telemachus.ManeuverNodeJSONFormatter' Telemachus.TargetDataLinkHandler' Telemachus.MapViewDataLinkHandler' Telemachus.OrbitDataLinkHandler
+Telemachus,ActionAPIEntry,0,1,0,0,1,11,1,0,1,-1,1,0,Telemachus.DataSourceResultFormatter,
+Telemachus,PlotableAPIEntry,0,1,0,0,1,11,1,0,1,-1,2,0,Telemachus.DataSourceResultFormatter' Telemachus.UnitType,
+Telemachus,DelayedAPIEntry,1,2,0,0,2,26,2,0,1,0,2,2,Telemachus.DataSources' Telemachus.PluginLogger,Telemachus.TelemachusBehaviour' Telemachus.DelayedAPIRunner
+Telemachus,DataLinkResponsibility,3,4,0,1,2,77,12,0,1,0,3,1,Telemachus.IKSPAPI' Telemachus.UpLinkDownLinkRate' SimpleJson.SimpleJson,Telemachus.TelemachusBehaviour
+Telemachus,DataSources,3,1,0,2,1,15,1,0,0,0,0,18,,Telemachus.MechJebDataLinkHandler' Telemachus.FlyByWireDataLinkHandler' Telemachus.FlightDataLinkHandler' Telemachus.TimeWarpDataLinkHandler' Telemachus.TargetDataLinkHandler' Telemachus.DockingDataLinkHandler' Telemachus.MapViewDataLinkHandler' Telemachus.BodyDataLinkHandler' Telemachus.NavBallDataLinkHandler' Telemachus.VesselDataLinkHandler' Telemachus.OrbitDataLinkHandler' Telemachus.SensorDataLinkHandler' Telemachus.ResourceDataLinkHandler' Telemachus.ModuleCache<T>' Telemachus.APIDataLinkHandler' Telemachus.DelayedAPIEntry' Telemachus.KSPAPI' Telemachus.IKSPAPI
+Telemachus,ElseResponsibility,1,1,0,0,1,25,2,0,1,0,1,0,Telemachus.PluginLogger,
+Telemachus,IOPageResponsibility,2,4,0,0,1,90,9,0,1,0,2,0,Telemachus.HTMLResponseContentType' Telemachus.HTMLContentType,
+Telemachus,HTMLContentType,0,0,0,0,0,5,0,0,0,-1,0,2,,Telemachus.IOPageResponsibility' Telemachus.HTMLResponseContentType
+Telemachus,HTMLResponseContentType,2,0,0,2,0,5,0,0,0,-1,1,1,Telemachus.HTMLContentType,Telemachus.IOPageResponsibility
+Telemachus,IHTTPRequestResponder,0,1,0,0,0,4,1,3,0,-1,0,1,,Telemachus.KSPWebServerDispatcher
+Telemachus,KSPWebServerDispatcher,1,2,0,0,2,25,4,0,0,0,2,1,Telemachus.IHTTPRequestResponder' Telemachus.PluginLogger,Telemachus.TelemachusBehaviour
+Telemachus,PluginLogger,0,4,0,0,4,29,5,0,0,-1,0,15,,Telemachus.MechJebDataLinkHandler' Telemachus.MechJebSimulation' Telemachus.MapViewDataLinkHandler' Telemachus.ActiveResourceCache' Telemachus.ResourceCache' Telemachus.SensorCache' Telemachus.DelayedAPIEntry' Telemachus.ElseResponsibility' Telemachus.KSPWebServerDispatcher' Telemachus.PluginManager' Telemachus.TelemachusBehaviour' Telemachus.IKSPAPI' Telemachus.TelemachusDataLink' Telemachus.VesselChangeDetector' Telemachus.KSPWebSocketService
+Telemachus,PluginRegistration,0,1,1,0,1,9,2,0,0,-1,1,2,Telemachus.PluginManager,Telemachus.PluginManager' Telemachus.TelemachusBehaviour
+Telemachus,IMinimalTelemachusPlugin,0,1,1,0,0,13,1,2,0,-1,0,2,,Telemachus.PluginManager' Telemachus.TelemachusBehaviour
+Telemachus,IDeregisterableTelemachusPlugin,0,0,1,0,0,5,0,0,1,-1,0,1,,Telemachus.PluginManager
+Telemachus,PluginManager,3,5,0,0,3,135,10,0,0,0.4,5,3,Telemachus.PluginRegistration' Telemachus.PluginHandler' Telemachus.PluginLogger' Telemachus.IDeregisterableTelemachusPlugin' Telemachus.IMinimalTelemachusPlugin,Telemachus.PluginRegistration' Telemachus.TelemachusBehaviour' Telemachus.KSPAPI
+Telemachus,PluginHandler,6,0,0,6,0,12,0,0,0,-1,0,1,,Telemachus.PluginManager
+Telemachus,TypeCheckingExtensions,0,4,0,0,4,80,19,0,0,-1,0,0,,
+Telemachus,ServerConfiguration,0,1,5,0,1,16,1,0,0,-1,0,5,,Telemachus.APIDataLinkHandler' Telemachus.TelemachusBehaviour' Telemachus.KSPAPI' TelemachusTest.GenerateAPIDocumentation' TelemachusTest.DummyKSPAPI
+Telemachus,ServerConfigExtensions,0,1,0,0,0,7,1,0,0,-1,0,0,,
+Telemachus,TelemachusBehaviour,11,13,0,1,8,241,35,0,0,0,15,6,Telemachus.DelayedAPIRunner' Telemachus.KSPWebServerDispatcher' Telemachus.IKSPAPI' Telemachus.ServerConfiguration' Telemachus.VesselChangeDetector' Telemachus.PluginManager' Telemachus.UpLinkDownLinkRate' Telemachus.DataLinkResponsibility' Telemachus.PluginLogger' Telemachus.JSONFormatterProvider' SimpleJson.SimpleJson' Telemachus.KSPWebSocketService' Telemachus.PluginRegistration' Telemachus.IMinimalTelemachusPlugin' Telemachus.DelayedAPIEntry,Telemachus.MechJebDataLinkHandler' Telemachus.FlightDataLinkHandler' Telemachus.TimeWarpDataLinkHandler' Telemachus.MapViewDataLinkHandler' Telemachus.TelemachusDataLink' Telemachus.TelemachusPowerDrain
+Telemachus,DelayedAPIRunner,2,2,0,0,2,29,2,0,0,0,1,1,Telemachus.DelayedAPIEntry,Telemachus.TelemachusBehaviour
+Telemachus,KSPAPI,1,3,0,0,3,65,6,0,1,0,7,1,Telemachus.PluginManager' Telemachus.FormatterProvider' Telemachus.VesselChangeDetector' Telemachus.ServerConfiguration' Telemachus.DataSources' Telemachus.APIEntry' Telemachus.DataSourceResultFormatter,TelemachusTest.GenerateAPIDocumentation
+Telemachus,IKSPAPI,1,6,0,0,6,92,14,2,0,0.67,4,4,Telemachus.DataLinkHandler' Telemachus.APIEntry' Telemachus.DataSources' Telemachus.PluginLogger,Telemachus.APIDataLinkHandler' Telemachus.DataLinkResponsibility' Telemachus.TelemachusBehaviour' Telemachus.KSPWebSocketService
+Telemachus,UnknownAPIException,1,3,0,1,3,18,3,0,0,0,0,0,,
+Telemachus,VariableNotEvaluable,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Telemachus,TelemachusDataLink,0,2,0,0,2,30,3,0,0,-1,2,0,Telemachus.TelemachusBehaviour' Telemachus.PluginLogger,
+Telemachus,TelemachusModuleAnimateGeneric,0,1,0,0,1,20,4,0,0,-1,1,0,Telemachus.TelemachusPowerDrain,
+Telemachus,TelemachusPowerDrain,10,6,0,5,3,105,13,0,0,0.33,2,2,Telemachus.FlyByWireDataLinkHandler' Telemachus.TelemachusBehaviour,Telemachus.PausedDataLinkHandler' Telemachus.TelemachusModuleAnimateGeneric
+Telemachus,UpLinkDownLinkRate,6,8,0,1,6,103,8,0,0,0.25,0,3,,Telemachus.DataLinkResponsibility' Telemachus.TelemachusBehaviour' Telemachus.KSPWebSocketService
+Telemachus,VesselChangeDetector,3,3,0,1,2,40,6,0,0,0,1,10,Telemachus.PluginLogger,Telemachus.SensorDataLinkHandler' Telemachus.ResourceDataLinkHandler' Telemachus.ActiveResourceCache' Telemachus.ResourceCache' Telemachus.SensorCache' Telemachus.PausedDataLinkHandler' Telemachus.TelemachusBehaviour' Telemachus.KSPAPI' TelemachusTest.GenerateAPIDocumentation' TelemachusTest.DummyKSPAPI
+Telemachus,KSPWebSocketService,9,4,0,0,3,194,12,0,0,0,6,1,Telemachus.UpLinkDownLinkRate' Telemachus.IKSPAPI' SimpleJson.JsonObject' SimpleJson.SimpleJson' SimpleJson.JsonArray' Telemachus.PluginLogger,Telemachus.TelemachusBehaviour
+Telemachus.Plugins,IdentityEqualityComparer<T>,0,2,0,0,2,12,2,0,0,-1,0,0,,
+Telemachus.Plugins,RasterPropMonitorPlugin,1,2,1,0,1,66,7,0,1,0,1,0,Telemachus.Plugins.RPMVesselComputer,
+Telemachus.Plugins,RPMVesselComputer,1,1,3,0,1,22,1,0,0,0,0,1,,Telemachus.Plugins.RasterPropMonitorPlugin
+SimpleJson,JsonArray,0,6,0,0,6,55,6,0,0,-1,1,3,SimpleJson.SimpleJson,Telemachus.KSPWebSocketService' SimpleJson.SimpleJson' Reflection.SimpleJson
+SimpleJson,JsonObject,2,30,8,0,26,683,44,0,0,0.23,1,1,SimpleJson.SimpleJson,Telemachus.KSPWebSocketService
+SimpleJson,SimpleJson,36,54,4,0,18,1409,172,0,0,0.19,3,7,SimpleJson.IJsonSerializerStrategy' SimpleJson.PocoJsonSerializerStrategy' SimpleJson.JsonArray,Telemachus.DataLinkResponsibility' Telemachus.TelemachusBehaviour' Telemachus.KSPWebSocketService' SimpleJson.JsonArray' SimpleJson.JsonObject' Reflection.JsonArray' Reflection.JsonObject
+SimpleJson,IJsonSerializerStrategy,0,6,0,0,0,25,6,2,0,-1,0,2,,SimpleJson.SimpleJson' Reflection.SimpleJson
+SimpleJson,PocoJsonSerializerStrategy,12,22,0,0,8,515,82,2,1,0.27,0,2,,SimpleJson.SimpleJson' Reflection.SimpleJson
+SimpleJson,InfinityAsStringJsonSerializerStrategy,0,2,0,0,2,13,2,0,2,-1,0,0,,
+SimpleJson,ReflectionUtils,2,74,0,0,74,897,100,0,0,0.99,0,0,,
+SimpleJson,Assigner<T>,0,2,0,0,2,13,2,0,0,-1,0,0,,
+SimpleJson,ThreadSafeDictionary<TKey;TValue>,6,28,8,0,22,213,32,0,0,0.61,0,0,,
+Reflection,JsonArray,0,3,0,0,3,28,3,0,0,-1,1,0,SimpleJson.SimpleJson,
+Reflection,JsonObject,1,15,4,0,13,342,22,0,0,0.27,1,0,SimpleJson.SimpleJson,
+Reflection,SimpleJson,18,27,2,0,9,705,86,0,0,0.81,3,0,SimpleJson.IJsonSerializerStrategy' SimpleJson.PocoJsonSerializerStrategy' SimpleJson.JsonArray,
+Reflection,IJsonSerializerStrategy,0,3,0,0,0,13,3,0,0,-1,0,0,,
+Reflection,PocoJsonSerializerStrategy,6,11,0,0,4,258,41,0,1,0.73,0,0,,
+Reflection,InfinityAsStringJsonSerializerStrategy,0,1,0,0,1,7,1,0,2,-1,0,0,,
+Reflection,ReflectionUtils,1,37,0,0,37,449,50,0,0,1,0,0,,
+Reflection,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Reflection,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,16,0,0,0.64,0,0,,

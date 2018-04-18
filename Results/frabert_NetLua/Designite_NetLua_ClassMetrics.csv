@@ -1,41 +1,42 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BinaryOp,0,0,0,0,0,18,0,0,0,-1,0,3
-UnaryOp,0,0,0,0,0,6,0,0,0,-1,0,3
-IStatement,0,0,0,0,0,3,0,11,0,-1,0,2
-IExpression,0,0,0,0,0,3,0,13,0,-1,0,16
-IAssignable,0,0,0,0,0,3,0,2,1,-1,0,2
-Variable,2,0,0,2,0,6,0,0,2,-1,1,2
-Argument,1,0,0,1,0,4,0,0,0,-1,0,1
-StringLiteral,1,0,0,1,0,4,0,0,1,-1,0,3
-NumberLiteral,1,0,0,1,0,4,0,0,1,-1,0,3
-NilLiteral,0,0,0,0,0,3,0,0,1,-1,0,1
-BoolLiteral,1,0,0,1,0,4,0,0,1,-1,0,2
-VarargsLiteral,0,0,0,0,0,3,0,0,1,-1,0,1
-FunctionCall,2,0,0,2,0,5,0,0,1,-1,1,2
-TableAccess,2,0,0,2,0,6,0,0,2,-1,1,2
-FunctionDefinition,2,0,0,2,0,6,0,0,1,-1,2,3
-BinaryExpression,3,0,0,3,0,5,0,0,1,-1,2,2
-UnaryExpression,2,0,0,2,0,5,0,0,1,-1,2,2
-TableConstructor,1,0,0,1,0,4,0,0,1,-1,1,2
-Assignment,2,0,0,2,0,8,0,0,1,-1,2,2
-ReturnStat,1,0,0,1,0,4,0,0,1,-1,1,2
-BreakStat,0,0,0,0,0,3,0,0,1,-1,0,0
-LocalAssignment,2,0,0,2,0,5,0,0,1,-1,1,2
-Block,1,0,0,1,0,4,0,0,1,-1,1,8
-WhileStat,2,0,0,2,0,5,0,0,1,-1,2,2
-RepeatStat,2,0,0,2,0,5,0,0,1,-1,2,2
-NumericFor,5,0,0,5,0,6,0,0,1,-1,2,2
-GenericFor,3,0,0,3,0,6,0,0,1,-1,2,2
-IfStat,4,0,0,4,0,7,0,0,1,-1,2,2
-IoLibrary,3,18,0,0,1,261,60,0,0,0.11,4,0
-Lua,2,22,2,0,7,256,41,0,0,0.5,8,3
-LuaCompiler,21,29,0,0,1,585,69,0,0,0,27,1
-LuaContext,3,8,1,0,8,90,10,0,0,0.25,2,4
-LuaGrammar,0,1,0,0,1,118,1,0,0,-1,2,1
-LuaException,0,2,0,0,2,19,2,0,0,-1,0,0
-LuaArguments,1,9,1,0,8,76,12,0,0,0,1,7
-LuaType,0,0,0,0,0,14,0,0,0,-1,0,2
-LuaObject,8,29,9,5,26,586,39,0,0,0.14,3,9
-LuaEvents,0,24,0,0,2,317,38,0,0,-1,2,3
-MathLibrary,0,20,0,0,1,112,22,0,0,-1,4,0
-Parser,4,28,0,1,3,714,190,0,0,0,26,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NetLua.Ast,BinaryOp,0,0,0,0,0,18,0,0,0,-1,0,3,,NetLua.Ast.BinaryExpression' NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,UnaryOp,0,0,0,0,0,6,0,0,0,-1,0,3,,NetLua.Ast.UnaryExpression' NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,IStatement,0,0,0,0,0,1,0,11,0,-1,0,1,,NetLua.LuaCompiler
+NetLua.Ast,IExpression,0,0,0,0,0,1,0,13,0,-1,0,11,,NetLua.Ast.Variable' NetLua.Ast.FunctionCall' NetLua.Ast.TableAccess' NetLua.Ast.BinaryExpression' NetLua.Ast.UnaryExpression' NetLua.Ast.WhileStat' NetLua.Ast.RepeatStat' NetLua.Ast.NumericFor' NetLua.Ast.IfStat' NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,IAssignable,0,0,0,0,0,2,0,2,1,-1,0,1,,NetLua.Parser
+NetLua.Ast,Variable,2,0,0,2,0,6,0,0,2,-1,1,2,NetLua.Ast.IExpression,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,Argument,1,0,0,1,0,4,0,0,0,-1,0,1,,NetLua.LuaCompiler
+NetLua.Ast,StringLiteral,1,0,0,1,0,4,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,NumberLiteral,1,0,0,1,0,4,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,NilLiteral,0,0,0,0,0,2,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,BoolLiteral,1,0,0,1,0,4,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,VarargsLiteral,0,0,0,0,0,2,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,FunctionCall,2,0,0,2,0,5,0,0,1,-1,1,2,NetLua.Ast.IExpression,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,TableAccess,2,0,0,2,0,6,0,0,2,-1,1,2,NetLua.Ast.IExpression,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,FunctionDefinition,2,0,0,2,0,6,0,0,1,-1,1,3,NetLua.Ast.Block,NetLua.Lua' NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,BinaryExpression,3,0,0,3,0,5,0,0,1,-1,2,2,NetLua.Ast.IExpression' NetLua.Ast.BinaryOp,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,UnaryExpression,2,0,0,2,0,5,0,0,1,-1,2,2,NetLua.Ast.IExpression' NetLua.Ast.UnaryOp,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,TableConstructor,1,0,0,1,0,4,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,Assignment,2,0,0,2,0,8,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,ReturnStat,1,0,0,1,0,4,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,BreakStat,0,0,0,0,0,1,0,0,1,-1,0,1,,NetLua.LuaCompiler
+NetLua.Ast,LocalAssignment,2,0,0,2,0,5,0,0,1,-1,0,2,,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,Block,1,0,0,1,0,4,0,0,1,-1,0,8,,NetLua.Ast.FunctionDefinition' NetLua.Ast.WhileStat' NetLua.Ast.RepeatStat' NetLua.Ast.NumericFor' NetLua.Ast.GenericFor' NetLua.Ast.IfStat' NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,WhileStat,2,0,0,2,0,5,0,0,1,-1,2,2,NetLua.Ast.IExpression' NetLua.Ast.Block,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,RepeatStat,2,0,0,2,0,5,0,0,1,-1,2,2,NetLua.Ast.Block' NetLua.Ast.IExpression,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,NumericFor,5,0,0,5,0,6,0,0,1,-1,2,2,NetLua.Ast.IExpression' NetLua.Ast.Block,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,GenericFor,3,0,0,3,0,6,0,0,1,-1,1,2,NetLua.Ast.Block,NetLua.LuaCompiler' NetLua.Parser
+NetLua.Ast,IfStat,4,0,0,4,0,7,0,0,1,-1,2,2,NetLua.Ast.IExpression' NetLua.Ast.Block,NetLua.LuaCompiler' NetLua.Parser
+NetLua,IoLibrary,3,18,0,0,1,283,39,0,0,0,5,1,NetLua.LuaObject' NetLua.FileObject' NetLua.LuaContext' NetLua.Lua' NetLua.LuaArguments,LuaTest.Program
+NetLua,FileObject,3,1,0,3,1,14,3,0,0,0,0,1,,NetLua.IoLibrary
+NetLua,Lua,2,22,2,0,7,287,37,0,0,0.14,8,4,NetLua.LuaContext' NetLua.Parser' NetLua.LuaObject' NetLua.Ast.FunctionDefinition' NetLua.LuaCompiler' NetLua.LuaArguments' NetLua.LuaEvents' NetLua.LuaType,LuaUnits.LuaTableTests' NetLua.IoLibrary' NetLua.MathLibrary' LuaTest.Program
+NetLua,LuaCompiler,21,29,0,0,1,586,79,0,0,0,29,1,NetLua.LuaArguments' NetLua.LuaObject' NetLua.Ast.BinaryExpression' NetLua.Ast.BinaryOp' NetLua.Ast.UnaryExpression' NetLua.Ast.UnaryOp' NetLua.Ast.Variable' NetLua.Ast.TableAccess' NetLua.Ast.NumberLiteral' NetLua.Ast.StringLiteral' NetLua.Ast.BoolLiteral' NetLua.Ast.NilLiteral' NetLua.Ast.FunctionCall' NetLua.Ast.FunctionDefinition' NetLua.Ast.VarargsLiteral' NetLua.Ast.TableConstructor' NetLua.Ast.IExpression' NetLua.Ast.Argument' NetLua.Ast.Assignment' NetLua.Ast.LocalAssignment' NetLua.Ast.Block' NetLua.Ast.WhileStat' NetLua.Ast.IfStat' NetLua.Ast.ReturnStat' NetLua.Ast.RepeatStat' NetLua.Ast.NumericFor' NetLua.Ast.GenericFor' NetLua.Ast.BreakStat' NetLua.Ast.IStatement,NetLua.Lua
+NetLua,LuaContext,3,8,1,0,8,90,13,0,0,0.25,2,3,NetLua.LuaArguments' NetLua.LuaObject,NetLua.IoLibrary' NetLua.Lua' NetLua.MathLibrary
+NetLua,LuaGrammar,0,1,0,0,1,171,1,0,0,-1,0,1,,NetLua.Parser
+NetLua,LuaException,0,2,0,0,2,16,2,0,0,-1,0,0,,
+NetLua,LuaArguments,1,9,1,0,8,84,12,0,0,0,1,8,NetLua.LuaObject,NetLua.IoLibrary' NetLua.Lua' NetLua.LuaCompiler' NetLua.LuaContext' NetLua.LuaObject' NetLua.LuaEvents' NetLua.MathLibrary' LuaTest.Program
+NetLua,LuaType,0,0,0,0,0,11,0,0,0,-1,0,3,,NetLua.Lua' NetLua.LuaObject' NetLua.LuaEvents
+NetLua,LuaObject,8,29,9,5,26,545,69,0,0,0.07,3,10,NetLua.LuaType' NetLua.LuaArguments' NetLua.LuaEvents,LuaUnits.LuaObjectTests' LuaUnits.LuaTableTests' NetLua.IoLibrary' NetLua.Lua' NetLua.LuaCompiler' NetLua.LuaContext' NetLua.LuaArguments' NetLua.LuaEvents' NetLua.MathLibrary' LuaTest.Program
+NetLua,LuaEvents,0,24,0,0,2,347,56,0,0,-1,3,2,NetLua.LuaObject' NetLua.LuaArguments' NetLua.LuaType,NetLua.Lua' NetLua.LuaObject
+NetLua,MathLibrary,0,20,0,0,1,114,22,0,0,-1,4,1,NetLua.Lua' NetLua.LuaArguments' NetLua.LuaObject' NetLua.LuaContext,LuaTest.Program
+NetLua,Parser,4,28,0,1,3,726,99,0,0,0,26,1,NetLua.Ast.Block' NetLua.LuaGrammar' NetLua.Ast.IExpression' NetLua.Ast.BinaryOp' NetLua.Ast.BinaryExpression' NetLua.Ast.FunctionCall' NetLua.Ast.Assignment' NetLua.Ast.LocalAssignment' NetLua.Ast.FunctionDefinition' NetLua.Ast.ReturnStat' NetLua.Ast.RepeatStat' NetLua.Ast.WhileStat' NetLua.Ast.IfStat' NetLua.Ast.IAssignable' NetLua.Ast.UnaryOp' NetLua.Ast.UnaryExpression' NetLua.Ast.Variable' NetLua.Ast.TableAccess' NetLua.Ast.TableConstructor' NetLua.Ast.NumberLiteral' NetLua.Ast.StringLiteral' NetLua.Ast.BoolLiteral' NetLua.Ast.NilLiteral' NetLua.Ast.VarargsLiteral' NetLua.Ast.NumericFor' NetLua.Ast.GenericFor,NetLua.Lua

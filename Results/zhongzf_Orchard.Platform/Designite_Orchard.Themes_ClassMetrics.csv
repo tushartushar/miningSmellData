@@ -1,23 +1,24 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AdminMenu,0,1,2,0,1,20,1,0,2,-1,2,0
-ThemesDataMigration,0,1,0,0,1,8,1,0,2,-1,1,0
-ResourceManifest,0,1,0,0,1,8,1,0,3,-1,1,0
-Permissions,1,2,1,1,2,28,2,0,2,0,3,2
-ThemeCommands,5,4,1,0,3,79,8,0,2,0,8,0
-IExtensionDisplayEventHandler,0,1,0,0,0,7,1,0,2,-1,1,1
-ThemeEntry,0,2,8,0,2,78,2,0,0,-1,1,3
-ThemeSiteSettingsPart,0,0,1,0,0,11,0,0,2,-1,0,1
-ThemeSiteSettingsPartRecord,0,0,1,0,0,7,0,0,1,-1,0,1
-AdminController,10,9,3,0,9,184,17,0,0,0,20,0
-ThemeSiteSettingsPartHandler,0,1,0,0,1,9,1,0,2,-1,2,0
-IPreviewTheme,0,2,0,0,0,5,2,1,1,-1,0,3
-PreviewTheme,2,3,0,0,3,28,6,0,2,0,1,0
-PreviewThemeFilter,4,3,0,0,3,33,4,0,3,0.67,5,0
-PreviewThemeSelector,1,2,0,0,2,16,2,0,2,0,2,0
-IThemeService,0,3,0,0,0,6,3,1,1,-1,1,2
-SafeModeThemeSelector,0,1,0,0,1,12,1,0,2,-1,1,0
-SiteThemeSelector,1,2,0,0,2,17,2,0,2,0,2,0
-ISiteThemeService,0,3,0,0,0,6,3,1,1,-1,0,3
-SiteThemeService,6,4,0,1,4,60,6,0,2,0,7,0
-ThemeService,5,9,3,0,6,130,24,0,2,0.22,11,0
-ThemesIndexViewModel,0,0,3,0,0,15,0,0,0,-1,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Orchard.Themes,AdminMenu,0,1,2,0,1,9,1,0,2,-1,3,0,Orchard.UI.Navigation.NavigationBuilder' Orchard.UI.Navigation.NavigationItemBuilder' Orchard.Themes.Permissions,
+Orchard.Themes,ThemesDataMigration,0,1,0,0,1,10,1,0,2,-1,2,0,Orchard.Data.Migration.Schema.SchemaBuilder' Orchard.Data.Migration.Schema.CreateTableCommand,
+Orchard.Themes,ResourceManifest,0,1,0,0,1,6,1,0,3,-1,3,0,Orchard.UI.Resources.ResourceManifest' Orchard.UI.Resources.ResourceManifestBuilder' Orchard.UI.Resources.ResourceDefinition,
+Orchard.Themes,Permissions,1,2,1,1,2,17,2,0,2,0,2,2,Orchard.Security.Permissions.Permission' Orchard.Security.Permissions.PermissionStereotype,Orchard.Themes.AdminMenu' Orchard.Themes.Controllers.AdminController
+Orchard.Themes.Commands,ThemeCommands,5,4,1,0,3,82,8,0,2,0,10,0,Orchard.Data.Migration.IDataMigrationManager' Orchard.Themes.Services.ISiteThemeService' Orchard.Environment.Extensions.IExtensionManager' Orchard.Environment.Descriptor.Models.ShellDescriptor' Orchard.Themes.Services.IThemeService' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.Environment.Extensions.Models.DefaultExtensionTypes' Orchard.Environment.Descriptor.Models.ShellFeature' Orchard.Commands.CommandContext' Orchard.Themes.Models.ThemeEntry,
+Orchard.Themes.Events,IExtensionDisplayEventHandler,0,1,0,0,0,6,1,0,2,-1,1,1,Orchard.Environment.Extensions.Models.ExtensionDescriptor,Orchard.Themes.Controllers.AdminController
+Orchard.Themes.Models,ThemeEntry,0,2,8,0,2,47,2,0,0,-1,1,2,Orchard.Environment.Extensions.Models.ExtensionDescriptor,Orchard.Themes.Commands.ThemeCommands' Orchard.Themes.Controllers.AdminController
+Orchard.Themes.Models,ThemeSiteSettingsPart,0,0,1,0,0,6,0,0,2,-1,0,1,,Orchard.Themes.Services.SiteThemeService
+Orchard.Themes.Models,ThemeSiteSettingsPartRecord,0,0,1,0,0,3,0,0,1,-1,0,1,,Orchard.Themes.Services.SiteThemeService
+Orchard.Themes.Controllers,AdminController,10,9,3,0,9,188,23,0,0,0,24,0,Orchard.Themes.Events.IExtensionDisplayEventHandler' Orchard.Data.Migration.IDataMigrationManager' Orchard.Environment.Features.IFeatureManager' Orchard.Themes.Services.ISiteThemeService' Orchard.Environment.Extensions.IExtensionManager' Orchard.Environment.Descriptor.Models.ShellDescriptor' Orchard.Themes.Preview.IPreviewTheme' Orchard.Themes.Services.IThemeService' Orchard.Reports.Services.IReportsCoordinator' Orchard.Environment.Configuration.ShellSettings' Orchard.Localization.NullLocalizer' Orchard.Logging.NullLogger' Orchard.IOrchardServices' Orchard.Themes.Models.ThemeEntry' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.Environment.Extensions.Models.FeatureDescriptor' Orchard.Environment.Extensions.Models.DefaultExtensionTypes' Orchard.Environment.Descriptor.Models.ShellFeature' Orchard.Security.IAuthorizer' Orchard.Themes.Permissions' Orchard.UI.Notify.INotifier' Orchard.Security.StandardPermissions' Orchard.Logging.ILogger' Orchard.Localization.LocalizedString,
+Orchard.Themes.Controllers,FormValueAbsentAttribute,1,2,0,0,2,11,2,0,0,0,0,0,,
+Orchard.Themes.Handlers,ThemeSiteSettingsPartHandler,0,1,0,0,1,7,1,0,2,-1,2,0,Orchard.ContentManagement.Handlers.StorageFilter' Orchard.Data.IRepository,
+Orchard.Themes.Preview,IPreviewTheme,0,2,0,0,0,4,2,1,1,-1,0,3,,Orchard.Themes.Controllers.AdminController' Orchard.Themes.Preview.PreviewThemeFilter' Orchard.Themes.Preview.PreviewThemeSelector
+Orchard.Themes.Preview,PreviewTheme,2,3,0,0,3,25,6,0,2,0,1,0,Orchard.Mvc.IHttpContextAccessor,
+Orchard.Themes.Preview,PreviewThemeFilter,4,3,0,0,3,37,5,0,3,0.67,8,0,Orchard.Themes.Preview.IPreviewTheme' Orchard.IWorkContextAccessor' Orchard.Environment.Features.IFeatureManager' Orchard.DisplayManagement.IShapeFactory' Orchard.Environment.Extensions.Models.FeatureDescriptor' Orchard.Environment.Extensions.Models.DefaultExtensionTypes' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.WorkContext,
+Orchard.Themes.Preview,PreviewThemeSelector,1,2,0,0,2,10,2,0,2,0,2,0,Orchard.Themes.Preview.IPreviewTheme' Orchard.Themes.ThemeSelectorResult,
+Orchard.Themes.Services,IThemeService,0,3,0,0,0,5,3,1,1,-1,1,2,Orchard.Environment.Extensions.Models.ExtensionDescriptor,Orchard.Themes.Commands.ThemeCommands' Orchard.Themes.Controllers.AdminController
+Orchard.Themes.Services,SafeModeThemeSelector,0,1,0,0,1,8,1,0,2,-1,1,0,Orchard.Themes.ThemeSelectorResult,
+Orchard.Themes.Services,SiteThemeSelector,1,2,0,0,2,11,2,0,2,0,2,0,Orchard.Themes.Services.ISiteThemeService' Orchard.Themes.ThemeSelectorResult,
+Orchard.Themes.Services,ISiteThemeService,0,3,0,0,0,5,3,1,1,-1,0,3,,Orchard.Themes.Commands.ThemeCommands' Orchard.Themes.Controllers.AdminController' Orchard.Themes.Services.SiteThemeSelector
+Orchard.Themes.Services,SiteThemeService,6,4,0,1,4,76,5,0,2,0,10,0,Orchard.Environment.Extensions.IExtensionManager' Orchard.Caching.ICacheManager' Orchard.Caching.ISignals' Orchard.IOrchardServices' Orchard.Data.IRepository' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.Settings.ISite' Orchard.Themes.Models.ThemeSiteSettingsPart' Orchard.Themes.Models.ThemeSiteSettingsPartRecord' Orchard.WorkContext,
+Orchard.Themes.Services,ThemeService,5,9,3,0,6,133,25,0,2,0.22,13,0,Orchard.Environment.Extensions.IExtensionManager' Orchard.Environment.Features.IFeatureManager' Orchard.FileSystems.VirtualPath.IVirtualPathProvider' Orchard.Caching.ICacheManager' Orchard.Logging.NullLogger' Orchard.Localization.NullLocalizer' Orchard.IOrchardServices' Orchard.Environment.Extensions.Models.ExtensionDescriptor' Orchard.Localization.LocalizedString' Orchard.Themes.IThemeSelector' Orchard.Themes.ThemeSelectorResult' Orchard.Environment.Extensions.Models.DefaultExtensionTypes' Orchard.UI.Notify.INotifier,
+Orchard.Themes.ViewModels,ThemesIndexViewModel,0,0,3,0,0,5,0,0,0,-1,0,0,,

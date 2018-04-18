@@ -1,29 +1,30 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AzureServiceBusClient,1,1,0,0,0,15,3,3,0,0,1,0
-AzureServiceBusEndpointManager,1,1,0,0,0,15,3,3,0,0,1,0
-AzureServiceBusMessage,1,6,0,0,6,52,11,0,1,0,0,2
-AzureServiceBusQueueClient,2,1,0,0,0,20,4,2,1,0,2,0
-AzureServiceBusQueueEndpoint,0,3,1,0,3,32,6,2,1,-1,1,2
-AzureServiceBusQueueEndpointManager,1,3,0,0,2,19,4,2,1,0,2,0
-AzureServiceBusQueuePublisherClient,0,2,0,0,2,14,3,0,2,-1,2,1
-AzureServiceBusQueuePublisherEndpoint,1,3,0,0,3,19,4,0,2,0,3,2
-AzureServiceBusQueuePublisherEndpointManager,0,1,0,0,1,6,1,0,2,-1,2,1
-AzureServiceBusQueueSubscriberClient,0,3,0,0,3,27,5,0,2,-1,3,1
-AzureServiceBusQueueSubscriberEndpoint,1,3,0,0,3,19,4,0,2,0,3,2
-AzureServiceBusQueueSubscriberEndpointManager,0,2,0,0,2,10,2,0,2,-1,2,1
-AzureServiceBusSubscriptionSubscriberClient,1,3,0,0,3,41,9,0,1,0.67,3,1
-AzureServiceBusSubscriptionSubscriberEndpoint,1,6,2,0,6,58,12,0,1,0.33,4,2
-AzureServiceBusSubscriptionSubscriberEndpointManager,1,4,0,0,4,23,5,0,2,0,2,1
-AzureServiceBusTopicPublisherClient,1,2,0,0,2,28,6,0,1,0,2,1
-AzureServiceBusTopicPublisherEndpoint,1,6,1,0,6,48,10,0,1,0.33,4,2
-AzureServiceBusTopicPublisherEndpointManager,1,3,0,0,3,19,4,0,2,0,2,1
-AzureStorageQueueSubscriberEndpointManager,0,2,0,0,2,10,2,0,2,-1,2,1
-AzureStorageQueueClient,3,1,0,0,0,17,2,2,0,0,2,0
-AzureStorageQueueEndpoint,1,4,1,0,3,40,8,2,1,0.5,2,2
-AzureStorageQueueEndpointManager,3,3,0,0,2,24,4,2,2,0,2,0
-AzureStorageQueueMessage,2,3,0,0,3,22,5,0,1,0,1,1
-AzureStorageQueuePublisherClient,0,2,0,0,2,14,3,0,1,-1,2,1
-AzureStorageQueuePublisherEndpoint,0,3,0,0,3,14,3,0,2,-1,3,2
-AzureStorageQueuePublisherEndpointManager,0,1,0,0,1,6,1,0,3,-1,2,1
-AzureStorageQueueSubscriberClient,0,4,0,0,4,37,8,0,1,-1,3,2
-AzureStorageQueueSubscriberEndpoint,0,3,0,0,3,14,3,0,2,-1,3,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mantle.Messaging.Azure,AzureServiceBusClient,1,1,0,0,0,20,2,3,0,0,1,0,Mantle.Azure.IAzureServiceBusConfiguration,
+Mantle.Messaging.Azure,AzureServiceBusEndpointManager,1,1,0,0,0,20,2,3,0,0,1,0,Mantle.Azure.IAzureServiceBusConfiguration,
+Mantle.Messaging.Azure,AzureServiceBusMessage<T>,1,6,0,0,6,66,12,0,1,0,0,0,,
+Mantle.Messaging.Azure,AzureServiceBusQueueClient,2,1,0,0,0,30,3,2,1,0,2,0,Mantle.Messaging.Azure.AzureServiceBusQueueEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,
+Mantle.Messaging.Azure,AzureServiceBusQueueEndpoint,0,3,1,0,3,29,6,2,1,-1,3,2,Mantle.Configuration.IConfigurationMetadata' Mantle.Messaging.Azure.ConfigurationProperties' Mantle.Messaging.Endpoint,Mantle.Messaging.Azure.AzureServiceBusQueueClient' Mantle.Messaging.Azure.AzureServiceBusQueueEndpointManager
+Mantle.Messaging.Azure,ConfigurationProperties,5,0,0,5,0,14,0,0,0,-1,0,4,,Mantle.Messaging.Azure.AzureServiceBusQueueEndpoint' Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpoint' Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpoint' Mantle.Messaging.Azure.AzureStorageQueueEndpoint
+Mantle.Messaging.Azure,AzureServiceBusQueueEndpointManager,1,3,0,0,2,21,4,2,1,0,2,0,Mantle.Messaging.Azure.AzureServiceBusQueueEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,
+Mantle.Messaging.Azure,AzureServiceBusQueuePublisherClient,0,2,0,0,2,19,2,0,2,-1,2,1,Mantle.Messaging.Azure.AzureServiceBusQueuePublisherEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusQueuePublisherEndpoint
+Mantle.Messaging.Azure,AzureServiceBusQueuePublisherEndpoint,1,3,0,0,3,19,4,0,2,0,3,2,Mantle.Azure.IAzureServiceBusConfiguration' Mantle.Messaging.Azure.AzureServiceBusQueuePublisherClient' Mantle.Messaging.Azure.AzureServiceBusQueuePublisherEndpointManager,Mantle.Messaging.Azure.AzureServiceBusQueuePublisherClient' Mantle.Messaging.Azure.AzureServiceBusQueuePublisherEndpointManager
+Mantle.Messaging.Azure,AzureServiceBusQueuePublisherEndpointManager,0,1,0,0,1,9,1,0,2,-1,2,1,Mantle.Messaging.Azure.AzureServiceBusQueuePublisherEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusQueuePublisherEndpoint
+Mantle.Messaging.Azure,AzureServiceBusQueueSubscriberClient,0,3,0,0,3,38,4,0,2,-1,2,1,Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberEndpoint
+Mantle.Messaging.Azure,AzureServiceBusQueueSubscriberEndpoint,1,3,0,0,3,19,4,0,2,0,3,2,Mantle.Azure.IAzureServiceBusConfiguration' Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberClient' Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberEndpointManager,Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberClient' Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberEndpointManager
+Mantle.Messaging.Azure,AzureServiceBusQueueSubscriberEndpointManager,0,2,0,0,2,13,2,0,2,-1,2,1,Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusQueueSubscriberEndpoint
+Mantle.Messaging.Azure,AzureServiceBusSubscriptionSubscriberClient,1,3,0,0,3,60,7,0,1,0,2,1,Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpoint
+Mantle.Messaging.Azure,AzureServiceBusSubscriptionSubscriberEndpoint,1,6,2,0,6,52,12,0,1,0.33,6,2,Mantle.Azure.IAzureServiceBusConfiguration' Mantle.Configuration.IConfigurationMetadata' Mantle.Messaging.Azure.ConfigurationProperties' Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberClient' Mantle.Messaging.Endpoint' Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpointManager,Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberClient' Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpointManager
+Mantle.Messaging.Azure,AzureServiceBusSubscriptionSubscriberEndpointManager,1,4,0,0,4,28,5,0,2,0,2,1,Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpoint
+Mantle.Messaging.Azure,AzureServiceBusTopicPublisherClient,1,2,0,0,2,41,4,0,1,0,2,1,Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpoint
+Mantle.Messaging.Azure,AzureServiceBusTopicPublisherEndpoint,1,6,1,0,6,45,10,0,1,0.33,6,2,Mantle.Azure.IAzureServiceBusConfiguration' Mantle.Configuration.IConfigurationMetadata' Mantle.Messaging.Azure.ConfigurationProperties' Mantle.Messaging.Azure.AzureServiceBusTopicPublisherClient' Mantle.Messaging.Endpoint' Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpointManager,Mantle.Messaging.Azure.AzureServiceBusTopicPublisherClient' Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpointManager
+Mantle.Messaging.Azure,AzureServiceBusTopicPublisherEndpointManager,1,3,0,0,3,22,4,0,2,0,2,1,Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpoint' Mantle.Azure.IAzureServiceBusConfiguration,Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpoint
+Mantle.Messaging.Azure,AzureStorageQueueSubscriberEndpointManager,0,2,0,0,2,13,2,0,2,-1,2,1,Mantle.Messaging.Azure.AzureStorageQueueSubscriberEndpoint' Mantle.Azure.IAzureStorageConfiguration,Mantle.Messaging.Azure.AzureStorageQueueSubscriberEndpoint
+Mantle.Messaging.Azure,AzureStorageQueueClient,3,1,0,0,0,18,2,2,0,0,2,0,Mantle.Messaging.Azure.AzureStorageQueueEndpoint' Mantle.Azure.IAzureStorageConfiguration,
+Mantle.Messaging.Azure,AzureStorageQueueEndpoint,1,4,1,0,3,37,8,2,1,0.5,4,2,Mantle.Azure.IAzureStorageConfiguration' Mantle.Configuration.IConfigurationMetadata' Mantle.Messaging.Azure.ConfigurationProperties' Mantle.Messaging.Endpoint,Mantle.Messaging.Azure.AzureStorageQueueClient' Mantle.Messaging.Azure.AzureStorageQueueEndpointManager
+Mantle.Messaging.Azure,AzureStorageQueueEndpointManager,3,3,0,0,2,25,4,2,2,0,2,0,Mantle.Messaging.Azure.AzureStorageQueueEndpoint' Mantle.Azure.IAzureStorageConfiguration,
+Mantle.Messaging.Azure,AzureStorageQueueMessage<T>,2,3,0,0,3,24,5,0,1,0,1,0,Mantle.Messaging.Azure.AzureStorageQueueSubscriberClient,
+Mantle.Messaging.Azure,AzureStorageQueuePublisherClient,0,2,0,0,2,19,2,0,1,-1,2,1,Mantle.Messaging.Azure.AzureStorageQueuePublisherEndpoint' Mantle.Azure.IAzureStorageConfiguration,Mantle.Messaging.Azure.AzureStorageQueuePublisherEndpoint
+Mantle.Messaging.Azure,AzureStorageQueuePublisherEndpoint,0,3,0,0,3,15,3,0,2,-1,3,2,Mantle.Azure.IAzureStorageConfiguration' Mantle.Messaging.Azure.AzureStorageQueuePublisherClient' Mantle.Messaging.Azure.AzureStorageQueuePublisherEndpointManager,Mantle.Messaging.Azure.AzureStorageQueuePublisherClient' Mantle.Messaging.Azure.AzureStorageQueuePublisherEndpointManager
+Mantle.Messaging.Azure,AzureStorageQueuePublisherEndpointManager,0,1,0,0,1,8,1,0,3,-1,2,1,Mantle.Messaging.Azure.AzureStorageQueuePublisherEndpoint' Mantle.Azure.IAzureStorageConfiguration,Mantle.Messaging.Azure.AzureStorageQueuePublisherEndpoint
+Mantle.Messaging.Azure,AzureStorageQueueSubscriberClient,0,4,0,0,4,52,6,0,1,-1,2,2,Mantle.Messaging.Azure.AzureStorageQueueSubscriberEndpoint' Mantle.Azure.IAzureStorageConfiguration,Mantle.Messaging.Azure.AzureStorageQueueMessage<T>' Mantle.Messaging.Azure.AzureStorageQueueSubscriberEndpoint
+Mantle.Messaging.Azure,AzureStorageQueueSubscriberEndpoint,0,3,0,0,3,15,3,0,2,-1,3,2,Mantle.Azure.IAzureStorageConfiguration' Mantle.Messaging.Azure.AzureStorageQueueSubscriberClient' Mantle.Messaging.Azure.AzureStorageQueueSubscriberEndpointManager,Mantle.Messaging.Azure.AzureStorageQueueSubscriberEndpointManager' Mantle.Messaging.Azure.AzureStorageQueueSubscriberClient

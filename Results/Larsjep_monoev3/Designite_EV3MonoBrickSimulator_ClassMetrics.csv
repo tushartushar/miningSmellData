@@ -1,15 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Gui,1,1,0,0,0,10,2,0,0,0,0,0
-ActionGroups,0,2,0,0,2,11,2,0,0,-1,0,0
-MainClass,0,1,0,0,1,10,1,0,0,-1,0,0
-BrickStub,0,4,0,0,4,21,4,0,1,-1,0,0
-LcdStub,2,12,0,0,12,165,21,0,1,0,2,0
-ButtonsStub,2,18,0,0,18,88,21,0,1,0.22,1,0
-ProgramManagerStub,6,10,2,0,7,117,18,0,1,0.4,2,0
-WiFiStub,1,5,2,0,5,57,10,0,1,0,0,0
-UpdateHelperStub,0,6,3,0,2,58,7,0,1,-1,1,0
-SimulatorSettings,0,3,5,0,3,75,7,0,0,-1,4,1
-VersionSettings,3,0,3,0,0,33,0,0,0,-1,0,1
-WiFiSettings,2,0,2,0,0,23,0,0,0,-1,0,1
-BootSettings,3,0,3,0,0,33,0,0,0,-1,0,1
-ProgramManagerSettings,1,0,1,0,0,13,0,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Stetic,Gui,1,1,0,0,0,10,2,0,0,0,0,0,,
+Stetic,ActionGroups,0,2,0,0,2,11,2,0,0,-1,0,0,,
+EV3MonoBrickSimulator,MainClass,0,1,0,0,1,10,1,0,0,-1,0,0,,
+EV3MonoBrickSimulator,BrickStub,0,4,0,0,4,20,4,0,1,-1,0,0,,
+EV3MonoBrickSimulator.Stub,LcdStub,2,12,0,0,12,193,21,0,1,0,4,0,EV3MonoBrickSimulator.Stub.LcdDisplay' MonoBrickFirmware.Display.EV3Lcd' MonoBrickFirmware.Display.Point' MonoBrickFirmware.Display.BitStreamer,
+EV3MonoBrickSimulator.Stub,LcdDisplay,8,10,0,0,9,80,14,0,0,0,0,1,,EV3MonoBrickSimulator.Stub.LcdStub
+EV3MonoBrickSimulator.Stub,ButtonsStub,2,18,0,0,18,89,19,0,1,0.11,2,0,MonoBrickFirmware.UserInput.ButtonStates' MonoBrickFirmware.UserInput.Buttons,
+EV3MonoBrickSimulator.Stub,ProgramManagerStub,6,10,2,0,7,126,17,0,1,0.4,2,0,MonoBrickFirmware.FileSystem.ProgramInformation' MonoBrickFirmware.FileSystem.ProgramLocation,
+EV3MonoBrickSimulator.Stub,WiFiStub,1,5,2,0,5,53,11,0,1,0,0,0,,
+EV3MonoBrickSimulator.Stub,UpdateHelperStub,0,6,3,0,2,51,7,0,1,-1,2,0,EV3MonoBrickSimulator.Settings.SimulatorSettings' EV3MonoBrickSimulator.Settings.BootSettings,
+EV3MonoBrickSimulator.Settings,SimulatorSettings,0,3,5,0,3,65,5,0,0,-1,0,1,,EV3MonoBrickSimulator.Stub.UpdateHelperStub
+EV3MonoBrickSimulator.Settings,VersionSettings,3,0,3,0,0,21,0,0,0,-1,0,0,,
+EV3MonoBrickSimulator.Settings,WiFiSettings,2,0,2,0,0,15,0,0,0,-1,0,0,,
+EV3MonoBrickSimulator.Settings,BootSettings,3,0,3,0,0,23,0,0,0,-1,0,1,,EV3MonoBrickSimulator.Stub.UpdateHelperStub
+EV3MonoBrickSimulator.Settings,ProgramManagerSettings,1,0,1,0,0,9,0,0,0,-1,0,0,,

@@ -1,9 +1,10 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DecomposePlankton,0,4,2,0,1,88,7,0,0,-1,1,0
-GHMeshToPMesh,0,4,3,0,1,64,4,0,0,-1,1,0
-PMeshFromPoints,0,4,2,0,1,61,4,0,0,-1,1,0
-GH_PlanktonMesh,4,17,6,0,17,270,38,0,0,0.59,2,1
-GH_PlanktonMeshParam,1,9,7,0,5,129,23,0,0,0.78,2,0
-RhinoSupport,0,16,0,0,16,326,53,0,0,-1,5,2
-PlanktonAssemblyInfo,0,0,4,0,0,23,0,0,0,-1,0,0
-Resources,2,1,6,0,0,81,1,0,0,0,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PlanktonGh,DecomposePlankton,0,4,2,0,1,96,8,0,0,-1,6,0,Plankton.PlanktonMesh' Plankton.PlanktonVertex' Plankton.PlanktonHalfEdgeList' Plankton.PlanktonHalfedge' Plankton.PlanktonFaceList' Plankton.PlanktonFace,
+PlanktonGh,GHMeshToPMesh,0,4,3,0,1,68,5,0,0,-1,1,0,Plankton.PlanktonMesh,
+PlanktonGh,PMeshFromPoints,0,4,2,0,1,64,5,0,0,-1,1,0,Plankton.PlanktonMesh,
+PlanktonGh,GH_PlanktonMesh,4,17,6,0,17,297,41,0,0,0.59,3,1,Plankton.PlanktonMesh' Plankton.PlanktonVertex' PlanktonGh.RhinoSupport,PlanktonGh.GH_PlanktonMeshParam
+PlanktonGh,GH_PlanktonMeshParam,1,9,7,0,5,142,19,0,0,0.67,3,0,PlanktonGh.GH_PlanktonMesh' Plankton.PlanktonMesh' PlanktonGh.RhinoSupport,
+PlanktonGh,SpecialPolygonsGetObject,0,1,0,0,1,12,2,0,0,-1,0,0,,
+PlanktonGh,RhinoSupport,0,16,0,0,16,370,47,0,0,-1,8,2,Plankton.PlanktonMesh' Plankton.PlanktonHalfedge' Plankton.PlanktonVertexList' Plankton.PlanktonFaceList' Plankton.PlanktonVertex' Plankton.PlanktonHalfEdgeList' Plankton.PlanktonFace' Plankton.PlanktonXYZ,PlanktonGh.GH_PlanktonMesh' PlanktonGh.GH_PlanktonMeshParam
+PlanktonGh,PlanktonAssemblyInfo,0,0,4,0,0,31,0,0,0,-1,0,0,,
+PlanktonGh.Properties,Resources,2,1,6,0,0,81,1,0,0,0,0,0,,

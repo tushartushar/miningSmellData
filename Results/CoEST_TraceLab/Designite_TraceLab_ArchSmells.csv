@@ -1,2 +1,3 @@
-Architecture smell,Project,Namespace,Cause
-Feature Concentration,TraceLab,TraceLab,The tool detected the smell in this component because the component realizes more than one architectural concern/feature. Independent sets of related classes within this component are: [CommandLineProcessor' TraceLabApplication' TraceLabApplicationGUI' KeyValidator' Program]' [InvalidKeyException]. LCC (Lack of Component Cohesion) = 0.33
+Architecture smell,Project,Namespace,Cause,Responsible Classes
+Cyclic Dependency,TraceLab,TraceLab,The tool detected the smell in this component because this component participates in a cyclic dependency. The participating components in the cycle are: TraceLab' Microsoft.Shell,TraceLab.CommandLineProcessor' TraceLab.Program' TraceLab.TraceLabApplication' Microsoft.Shell.IPCRemoteService
+Unstable Dependency,TraceLab,Microsoft.Shell,The tool detected the smell in this component because this component depends on other components that are less stable than itself. This component depends on following less stable component(s): TraceLab,Microsoft.Shell.TraceLabApplicationGUI

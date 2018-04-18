@@ -1,7 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Program,0,1,0,0,0,26,4,0,0,-1,2,0
-ComplexObject,0,1,0,0,1,91,2,0,0,-1,0,0
-Customer,0,32,0,0,32,570,44,0,0,-1,1,2
-Customer2,0,2,0,0,2,28,2,0,0,-1,1,0
-NanoConfigurationHelper,0,1,0,0,1,68,1,0,0,-1,3,1
-Time,0,2,0,0,2,23,2,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Nano.Demo.SelfHost.Console,Program,0,1,0,0,0,29,1,0,0,-1,2,0,Nano.Web.Core.NanoConfiguration' Nano.Demo.NanoConfigurationHelper,
+Nano.Demo,ComplexObject,0,1,0,0,1,64,2,0,0,-1,1,0,Nano.Demo.ComplexModel,
+Nano.Demo,ComplexModel,27,0,8,27,0,39,0,0,0,-1,2,2,Nano.Demo.ChildModel' Nano.Demo.SiblingModel,Nano.Demo.ComplexObject' Nano.Demo.SiblingModel
+Nano.Demo,ChildModel,3,0,0,3,0,6,0,0,0,-1,1,2,Nano.Demo.SiblingModel,Nano.Demo.ComplexModel' Nano.Demo.SiblingModel
+Nano.Demo,SiblingModel,4,0,0,4,0,7,0,0,0,-1,2,2,Nano.Demo.ChildModel' Nano.Demo.ComplexModel,Nano.Demo.ComplexModel' Nano.Demo.ChildModel
+Nano.Demo,Customer,0,32,0,0,32,583,44,0,0,-1,10,0,Nano.Demo.CustomerModel' Nano.Demo.Person' Nano.Web.Core.NanoRequest' Nano.Web.Core.NanoContext' Nano.Web.Core.NanoConfiguration' Nano.Web.Core.BackgroundTask' Nano.Web.Core.BackgroundTaskContext' Nano.Web.Core.EventHandler' Nano.Web.Core.HttpFile' Nano.Web.Core.NanoResponse,
+Nano.Demo,ApiResponse<T>,2,2,0,2,2,26,2,0,0,1,0,0,,
+Nano.Demo,Error,2,0,0,2,0,11,0,0,0,-1,0,0,,
+Nano.Demo,CustomerModel,3,0,0,3,0,15,0,0,0,-1,0,2,,Nano.Demo.Customer' Nano.Demo.Customer2
+Nano.Demo,Person,4,0,0,4,0,19,0,0,0,-1,0,2,,Nano.Demo.Customer' Nano.Demo.NanoConfigurationHelper
+Nano.Demo,Address,6,0,0,6,0,27,0,0,0,-1,0,0,,
+Nano.Demo,Customer2,0,2,0,0,2,26,2,0,0,-1,1,0,Nano.Demo.CustomerModel,
+Nano.Demo,NanoConfigurationHelper,0,1,0,0,1,73,1,0,0,-1,5,1,Nano.Web.Core.NanoConfiguration' Nano.Web.Core.EventHandler' Nano.Demo.Person' Nano.Web.Core.NanoResponse' Nano.Web.Core.NanoContext,Nano.Demo.SelfHost.Console.Program
+Nano.Demo,Time,0,2,0,0,2,19,2,0,0,-1,0,0,,

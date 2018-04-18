@@ -1,4 +1,8 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CertificateGenerator,0,5,0,0,3,224,12,0,0,-1,0,1
-CommandLineOptions,0,1,4,0,1,28,1,0,0,-1,0,1
-Program,0,4,0,0,0,64,15,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CertPairGenerator,CertificateGenerator,0,5,0,0,3,355,12,0,0,-1,4,1,CertPairGenerator.SystemTime' CertPairGenerator.CryptoApiBlob' CertPairGenerator.CryptKeyProviderInformation' CertPairGenerator.NativeMethods,CertPairGenerator.Program
+CertPairGenerator,SystemTime,8,0,0,8,0,12,0,0,0,-1,0,2,,CertPairGenerator.CertificateGenerator' CertPairGenerator.NativeMethods
+CertPairGenerator,CryptoApiBlob,2,1,0,2,1,11,1,0,0,0,0,2,,CertPairGenerator.CertificateGenerator' CertPairGenerator.NativeMethods
+CertPairGenerator,CryptKeyProviderInformation,7,0,0,7,0,13,0,0,0,-1,0,1,,CertPairGenerator.CertificateGenerator
+CertPairGenerator,NativeMethods,0,13,0,0,13,90,13,0,0,-1,2,1,CertPairGenerator.SystemTime' CertPairGenerator.CryptoApiBlob,CertPairGenerator.CertificateGenerator
+CertPairGenerator,CommandLineOptions,0,1,4,0,1,20,1,0,0,-1,0,1,,CertPairGenerator.Program
+CertPairGenerator,Program,0,4,0,0,0,82,10,0,0,-1,2,0,CertPairGenerator.CommandLineOptions' CertPairGenerator.CertificateGenerator,

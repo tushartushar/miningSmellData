@@ -1,7 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Gui,1,1,0,0,0,10,2,0,0,0,0,0
-ActionGroups,0,2,0,0,2,11,2,0,0,-1,0,0
-ManagePackagesDialog,18,6,1,0,3,214,7,0,0,0.83,0,1
-PackageManagerCommands,0,0,0,0,0,4,0,0,0,-1,0,0
-PackageManagerCommandHandler,0,2,0,0,2,25,4,0,0,-1,1,0
-DotNetProjectExtensions,0,1,0,0,1,66,1,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Stetic,Gui,1,1,0,0,0,10,2,0,0,0,0,1,,PackageManagerAddin.Dialogs.ManagePackagesDialog
+Stetic,ActionGroups,0,2,0,0,2,11,2,0,0,-1,0,0,,
+PackageManagerAddin.Dialogs,ManagePackagesDialog,18,6,1,0,3,211,7,0,0,0.67,1,1,Stetic.Gui,PackageManagerAddin.Commands.PackageManagerCommandHandler
+PackageManagerAddin.Commands,PackageManagerCommands,0,0,0,0,0,4,0,0,0,-1,0,0,,
+PackageManagerAddin.Commands,PackageManagerCommandHandler,0,2,0,0,2,25,3,0,0,-1,1,0,PackageManagerAddin.Dialogs.ManagePackagesDialog,
+PackageManagerAddin.Extensions,DotNetProjectExtensions,0,1,0,0,1,66,1,0,0,-1,1,0,PackageManagerAddin.Extensions.ProjectSystemWrapper,
+PackageManagerAddin.Extensions,ProjectSystemWrapper,1,8,2,0,8,46,8,0,0,0.88,0,1,,PackageManagerAddin.Extensions.DotNetProjectExtensions
+PackageManagerAddin.Extensions,Logger,0,1,0,0,1,8,1,0,0,-1,0,0,,

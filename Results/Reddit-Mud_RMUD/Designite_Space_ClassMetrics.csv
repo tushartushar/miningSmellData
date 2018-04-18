@@ -1,0 +1,25 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Space,CargoBayHallway,0,1,0,0,1,10,1,0,1,-1,2,0,Space.AirLevel' RMUD.Direction,
+Space,Common,0,1,0,0,1,9,1,0,1,-1,0,0,,
+Space,ControlPanel,2,2,0,2,2,54,2,0,2,1,9,1,Space.IndicatorState' Space.Room' RMUD.RuleEngine' RMUD.CheckResult' RMUD.MudObject' RMUD.Portal' RMUD.PerformResult' Space.Weight' Space.Hatch,Space.Hatch
+Space,IndicatorState,0,0,0,0,0,5,0,0,0,-1,0,1,,Space.ControlPanel
+Space,Hatch,1,1,0,0,1,75,1,0,3,0,9,1,Space.ControlPanel' RMUD.NounList' RMUD.MudObject' RMUD.CheckResult' RMUD.Portal' RMUD.PerformResult' Space.Game' Space.Room' Space.AirLevel,Space.ControlPanel
+Space,Hit,0,2,0,0,2,44,2,0,1,-1,6,0,RMUD.CommandEntry' RMUD.CommandParser' RMUD.RuleEngine' RMUD.MudObject' RMUD.CheckResult' RMUD.PerformResult,
+Space,Tape,0,2,0,0,2,65,2,0,1,-1,9,0,RMUD.CommandEntry' RMUD.CommandParser' RMUD.RuleEngine' RMUD.MudObject' RMUD.CheckResult' Space.Weight' RMUD.Container' RMUD.RelativeLocations' RMUD.PerformResult,
+Space,Extinquisher,0,1,0,0,1,9,1,0,2,-1,1,0,Space.Weight,
+Space,DuctTape,0,1,0,0,1,9,1,0,2,-1,1,0,Space.Weight,
+Space,Weight,0,0,0,0,0,6,0,0,0,-1,0,5,,Space.ControlPanel' Space.Tape' Space.Extinquisher' Space.DuctTape' Space.Wrench
+Space,Suit,0,1,0,0,1,8,1,0,3,-1,0,0,,
+Space,Wrench,0,1,0,0,1,9,1,0,2,-1,1,0,Space.Weight,
+Space,Locker,0,1,0,0,1,59,1,0,3,-1,4,1,RMUD.NounList' RMUD.CheckResult' RMUD.PerformResult' RMUD.MudObject,Space.Cargo
+Space,Cargo,0,1,0,0,1,17,1,0,1,-1,2,0,Space.Locker' RMUD.Direction,
+Space,CargoRoomBoxes,0,1,0,0,1,16,1,0,2,-1,2,0,RMUD.NounList' RMUD.CheckResult,
+Space,CargoRoomGrate,0,1,0,0,1,8,1,0,2,-1,0,0,,
+Space,DanConversation0,2,2,0,2,1,53,3,0,3,0,6,0,RMUD.CheckResult' RMUD.PerformResult' ConversationModule.Topic' RMUD.Core' Space.Game' RMUD.MudObject,
+Space,CustomMessages,0,1,0,0,1,72,1,0,0,-1,2,0,RMUD.Core' RMUD.RuleEngine,
+Space,Game,3,1,0,0,1,54,1,0,0,0,8,2,RMUD.CommandEntry' RMUD.NPC' RMUD.RuleEngine' RMUD.PerformResult' RMUD.MudObject' RMUD.Core' ConversationModule.Topic' Space.Player,Space.Hatch' Space.DanConversation0
+Space,Player,0,1,0,0,1,22,1,0,0,-1,4,1,RMUD.Container' RMUD.RelativeLocations' RMUD.MudObject' RMUD.PerformResult,Space.Game
+Space,AirLevel,0,0,0,0,0,5,0,0,0,-1,0,3,,Space.CargoBayHallway' Space.Hatch' Space.Room
+Space,Room,3,2,0,3,2,23,2,4,0,1,6,2,Space.AirLevel' RMUD.RuleEngine' RMUD.PossibleMatch' RMUD.Core' RMUD.MudObject' RMUD.PerformResult,Space.ControlPanel' Space.Hatch
+Space,settings,0,1,0,0,1,8,1,0,3,-1,0,0,,
+Space,Start,0,1,0,0,1,11,1,0,1,-1,1,0,RMUD.Direction,

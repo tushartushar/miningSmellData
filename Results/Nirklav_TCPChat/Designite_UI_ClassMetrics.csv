@@ -1,0 +1,49 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+UI.Dialogs,AboutProgramDialog,1,4,0,0,2,54,6,0,0,0.5,0,1,,UI.ViewModel.MainViewModel
+UI.Dialogs,ConnectDialog,9,5,0,0,2,179,9,0,0,0.4,2,1,UI.Infrastructure.Settings' UI.Infrastructure.SavedColor,UI.ViewModel.MainViewModel
+UI.Dialogs,CreateRoomDialog,5,5,2,0,2,115,8,0,0,0.4,1,1,Engine.Model.Common.Entities.RoomType,UI.ViewModel.MainViewModel
+UI.Dialogs,PostedFilesView,1,4,0,0,2,54,6,0,0,0.5,0,1,,UI.ViewModel.MainViewModel
+UI.Dialogs,UsersOperationDialog,4,5,1,0,2,113,8,0,0,0.4,2,1,UI.Infrastructure.Localizer' UI.Dialogs.UserListItem,UI.ViewModel.RoomViewModel
+UI.Dialogs,UserListItem,0,1,2,0,1,10,1,0,0,-1,0,1,,UI.Dialogs.UsersOperationDialog
+UI.Dialogs,ServerDialog,10,5,0,0,2,190,9,0,0,0.4,2,1,UI.Infrastructure.Settings' UI.Infrastructure.SavedColor,UI.ViewModel.MainViewModel
+UI.ViewModel,PostedFilesViewModel,0,2,1,0,2,32,2,0,1,-1,6,1,Engine.Model.Client.ClientModel' Engine.Model.Client.Entities.ClientChat' Engine.Model.Client.ClientGuard' Engine.Model.Common.Entities.PostedFile' UI.ViewModel.PostedFileRoomViewModel' UI.ViewModel.BaseViewModel,UI.ViewModel.PostedFileRoomViewModel
+UI.ViewModel,PostedFileRoomViewModel,1,2,2,0,2,20,3,0,1,0,3,2,UI.ViewModel.PostedFilesViewModel' Engine.Model.Client.ClientGuard' UI.ViewModel.PostedFileViewModel,UI.ViewModel.PostedFilesViewModel' UI.ViewModel.PostedFileViewModel
+UI.ViewModel,PostedFileViewModel,1,2,3,0,1,21,2,0,1,0,6,1,UI.ViewModel.PostedFileRoomViewModel' Engine.Model.Common.Entities.FileDescription' Engine.Model.Common.Entities.PostedFile' Engine.Model.Client.ClientModel' Engine.Model.Client.ClientGuard' Engine.Api.IApi,UI.ViewModel.PostedFileRoomViewModel
+UI.ViewModel,AudioTabViewModel,10,4,8,0,2,129,13,0,1,0.5,10,0,Engine.Audio.IPlayer' Engine.Model.Client.ClientModel' Engine.Audio.IRecorder' UI.Infrastructure.Settings' UI.Infrastructure.Localizer' UI.Infrastructure.KeyBoard' Engine.Model.Common.Entities.AudioQuality' Engine.Exceptions.ModelException' Engine.Exceptions.ErrorCode' UI.ViewModel.MainViewModel,
+UI.ViewModel,ClientTabViewModel,7,2,8,0,2,70,2,0,1,1,3,0,UI.Infrastructure.Settings' UI.Infrastructure.SavedColor' UI.Infrastructure.Localizer,
+UI.ViewModel,ServerTabViewModel,6,2,5,0,2,58,2,0,1,1,1,0,UI.Infrastructure.Settings,
+UI.ViewModel,MessageViewModel,17,10,9,0,3,207,15,0,1,0.3,16,1,UI.ViewModel.RoomViewModel' Engine.MessageType' UI.Infrastructure.Localizer' Engine.Model.Client.ClientModel' Engine.Model.Common.Entities.FileDescription' Engine.Model.Client.IClientEvents' Engine.Model.Common.Entities.FileId' UI.ViewModel.BaseViewModel' UI.ViewModel.UserViewModel' Engine.FileDownloadEventArgs' Engine.Model.Client.Entities.ClientChat' Engine.Model.Client.ClientGuard' UI.ViewModel.MainViewModel' Engine.Api.IApi' Engine.Exceptions.ModelException' Engine.Model.Common.Entities.Room,UI.ViewModel.RoomViewModel
+UI.ViewModel,PluginKindId,0,0,0,0,0,5,0,0,0,-1,0,2,,UI.ViewModel.PluginInfoViewModel' UI.ViewModel.PluginSettingTabViewModel
+UI.ViewModel,PluginInfoViewModel,2,2,3,0,2,31,2,0,1,1,2,1,UI.Infrastructure.PluginSetting' UI.ViewModel.PluginKindId,UI.ViewModel.PluginSettingTabViewModel
+UI.ViewModel,PluginSettingTabViewModel,1,7,4,0,3,81,18,0,1,0.29,8,0,Engine.Model.Client.ClientModel' Engine.Model.Server.ServerModel' Engine.Plugins.Client.ClientPluginManager' UI.ViewModel.PluginKindId' Engine.Plugins.Server.ServerPluginManager' UI.Infrastructure.PluginSetting' UI.Infrastructure.Settings' UI.ViewModel.PluginInfoViewModel,
+UI.ViewModel,PluginViewModel,0,2,3,0,2,36,4,0,1,-1,4,1,Engine.Plugins.Client.ClientPluginManager' Engine.Model.Client.ClientModel' Engine.Plugins.Client.ClientPlugin' Engine.Helpers.Logger,UI.ViewModel.MainViewModel
+UI.ViewModel,SettingsTabCategory,0,0,0,0,0,7,0,0,0,-1,0,1,,UI.ViewModel.SettingsTabViewModel
+UI.ViewModel,SettingsTabViewModel,2,2,2,0,2,25,2,4,1,1,1,1,UI.ViewModel.SettingsTabCategory,UI.ViewModel.SettingsViewModel
+UI.ViewModel,SettingsViewModel,2,2,3,0,1,45,3,0,1,0,2,1,UI.View.SettingsView' UI.ViewModel.SettingsTabViewModel,UI.ViewModel.MainViewModel
+UI.ViewModel,BaseViewModel,3,6,0,0,2,49,11,11,0,0.33,4,5,Engine.Model.Client.IClientEvents' Engine.Model.Common.NotifierGenerator' Engine.Model.Client.IClientNotifier' Engine.Model.Client.ClientModel,UI.ViewModel.PostedFilesViewModel' UI.ViewModel.MessageViewModel' UI.ViewModel.MainViewModel' UI.ViewModel.RoomViewModel' UI.ViewModel.UserViewModel
+UI.ViewModel,MainViewModel,12,26,16,7,2,405,56,0,1,0.54,35,4,UI.View.MainWindow' UI.ViewModel.RoomViewModel' UI.Infrastructure.KeyBoard' Engine.Model.Client.IClientEvents' Engine.Model.Server.ServerModel' Engine.Model.Client.ClientModel' UI.ViewModel.BaseViewModel' UI.Dialogs.ServerDialog' Engine.Model.Server.ServerInitializer' UI.Infrastructure.Settings' UI.Infrastructure.PluginSetting' Engine.Network.AsyncServer' UI.Infrastructure.Localizer' UI.Dialogs.ConnectDialog' Engine.Api.IApi' UI.Dialogs.CreateRoomDialog' UI.Dialogs.PostedFilesView' UI.Dialogs.AboutProgramDialog' UI.ViewModel.SettingsViewModel' UI.View.SettingsView' Engine.ConnectEventArgs' Engine.RegistrationEventArgs' Engine.ReceiveMessageEventArgs' Engine.MessageType' Engine.Network.AsyncClient' Engine.RoomOpenedEventArgs' Engine.RoomClosedEventArgs' Engine.Exceptions.ModelException' Engine.AsyncErrorEventArgs' Engine.Exceptions.ErrorCode' Engine.PluginEventArgs' UI.ViewModel.PluginViewModel' Engine.Model.Client.ClientInitializer' Engine.Audio.IPlayer' Engine.Audio.IRecorder,UI.ViewModel.AudioTabViewModel' UI.ViewModel.MessageViewModel' UI.ViewModel.RoomViewModel' UI.App
+UI.ViewModel,RoomViewModel,19,26,21,0,7,432,50,0,1,0.19,27,3,UI.ViewModel.MainViewModel' UI.ViewModel.UserViewModel' Engine.Model.Server.Entities.ServerChat' Engine.Model.Common.Entities.RoomType' Engine.Model.Client.ClientModel' Engine.Model.Client.Entities.ClientChat' Engine.Model.Client.ClientGuard' Engine.Model.Common.Entities.Room' Engine.Model.Common.Entities.VoiceRoom' Engine.Network.AsyncClient' Engine.Model.Client.IClientEvents' UI.ViewModel.BaseViewModel' UI.ViewModel.MessageViewModel' Engine.Model.Common.Entities.FileId' Engine.Api.Client.Messages.ClientSendMessageAction' Engine.Api.Server.Admin.ServerAdminCommand' Engine.Api.IApi' UI.Infrastructure.Settings' UI.Dialogs.UsersOperationDialog' Engine.Model.Client.Entities.ClientUser' UI.Infrastructure.Localizer' Engine.ReceiveMessageEventArgs' Engine.MessageType' Engine.RoomOpenedEventArgs' Engine.RoomRefreshedEventArgs' Engine.Model.Common.Entities.Message' Engine.Model.Common.Entities.User,UI.ViewModel.MessageViewModel' UI.ViewModel.MainViewModel' UI.ViewModel.UserViewModel
+UI.ViewModel,UserViewModel,4,9,6,0,5,120,16,0,1,0.56,5,2,UI.ViewModel.RoomViewModel' Engine.Model.Client.ClientModel' UI.Infrastructure.Localizer' UI.ViewModel.BaseViewModel' Engine.Api.IApi,UI.ViewModel.MessageViewModel' UI.ViewModel.RoomViewModel
+UI.Infrastructure,BoolToVisibilityConverter,0,2,0,0,2,16,4,0,0,-1,0,0,,
+UI.Infrastructure,Command,2,3,0,0,3,31,4,0,0,0,0,1,,UI.Infrastructure.CommandReference
+UI.Infrastructure,CommandReference,2,4,2,2,2,62,8,0,0,1,1,0,UI.Infrastructure.Command,
+UI.Infrastructure,AttachedHelper,2,6,0,2,4,47,8,0,0,0.5,0,0,,
+UI.Infrastructure,KeyBoard,3,6,0,0,2,83,9,0,0,0,2,3,UI.Infrastructure.HookType' UI.Infrastructure.KeyboardDescription,UI.ViewModel.AudioTabViewModel' UI.ViewModel.MainViewModel' UI.View.MainWindow
+UI.Infrastructure,KeyboardDescription,5,0,0,5,0,9,0,0,0,-1,1,1,UI.Infrastructure.KeyboardFlags,UI.Infrastructure.KeyBoard
+UI.Infrastructure,KeyboardFlags,0,0,0,0,0,7,0,0,0,-1,0,1,,UI.Infrastructure.KeyboardDescription
+UI.Infrastructure,HookType,0,0,0,0,0,18,0,0,0,-1,0,1,,UI.Infrastructure.KeyBoard
+UI.Infrastructure,Localized,1,2,1,0,2,19,2,0,0,0,0,0,,
+UI.Infrastructure,LocalizedBindingSource,1,4,1,0,3,38,6,0,0,0.75,2,0,UI.Infrastructure.LocalizerEventManager' UI.Infrastructure.Localizer,
+UI.Infrastructure,LocalizerEventManager,0,7,1,0,2,53,11,0,0,-1,1,1,UI.Infrastructure.Localizer,UI.Infrastructure.LocalizedBindingSource
+UI.Infrastructure,Localizer,3,6,1,0,4,58,10,0,0,0.33,5,10,UI.Infrastructure.LocalizerStorage' Engine.Helpers.Logger' Engine.Model.Client.ClientModel' Engine.Model.Common.Entities.SystemMessageId' Engine.Exceptions.ErrorCode,UI.Dialogs.UsersOperationDialog' UI.ViewModel.AudioTabViewModel' UI.ViewModel.ClientTabViewModel' UI.ViewModel.MessageViewModel' UI.ViewModel.MainViewModel' UI.ViewModel.RoomViewModel' UI.ViewModel.UserViewModel' UI.Infrastructure.LocalizedBindingSource' UI.Infrastructure.LocalizerEventManager' UI.App
+UI.Infrastructure,LocalizerStorage,4,5,2,0,2,80,6,0,0,0,0,1,,UI.Infrastructure.Localizer
+UI.Infrastructure,PluginSetting,0,2,2,0,2,11,2,0,0,-1,0,3,,UI.ViewModel.PluginInfoViewModel' UI.ViewModel.PluginSettingTabViewModel' UI.ViewModel.MainViewModel
+UI.Infrastructure,Settings,3,2,18,0,1,92,3,0,0,1,0,10,,UI.Dialogs.ConnectDialog' UI.Dialogs.ServerDialog' UI.ViewModel.AudioTabViewModel' UI.ViewModel.ClientTabViewModel' UI.ViewModel.ServerTabViewModel' UI.ViewModel.PluginSettingTabViewModel' UI.ViewModel.MainViewModel' UI.ViewModel.RoomViewModel' UI.View.MainWindow' UI.App
+UI.Infrastructure,SavedColor,0,1,3,0,0,15,1,0,0,-1,0,3,,UI.Dialogs.ConnectDialog' UI.Dialogs.ServerDialog' UI.ViewModel.ClientTabViewModel
+UI.Infrastructure,RgbToColorConverter,0,2,0,0,2,23,4,0,0,-1,0,0,,
+UI.View,SettingsView,2,3,0,0,2,53,5,0,0,0,0,2,,UI.ViewModel.SettingsViewModel' UI.ViewModel.MainViewModel
+UI.View,MainWindow,6,6,0,0,3,114,9,0,0,0.5,2,2,UI.Infrastructure.KeyBoard' UI.Infrastructure.Settings,UI.ViewModel.MainViewModel' UI.App
+UI,App,0,3,0,0,1,36,4,0,0,-1,5,0,UI.View.MainWindow' UI.ViewModel.MainViewModel' UI.Infrastructure.Localizer' UI.Infrastructure.Settings' Engine.Helpers.Logger,
+UI.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+UI.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

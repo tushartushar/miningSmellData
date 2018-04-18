@@ -1,23 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BinHexConverter,0,2,0,0,2,30,7,0,0,-1,0,0
-Batch,3,5,2,0,3,49,6,0,0,0,0,4
-IBatchSender,0,3,0,0,0,6,3,2,0,-1,2,2
-IBatchSenderFactory,0,1,0,0,0,4,1,1,0,-1,0,1
-IEtwEventProvider,0,3,1,0,0,9,3,1,0,-1,0,1
-IEventProcessor,0,3,0,0,0,9,3,1,0,-1,1,1
-IJsonConverter,0,2,0,0,0,5,2,2,0,-1,0,1
-FlatJsonConverter,0,6,0,0,2,65,9,0,1,-1,0,0
-IPartitionKeyGenerator,0,1,0,0,0,4,1,1,0,-1,0,1
-ISendNotify,0,1,0,0,0,4,1,1,0,-1,1,5
-ISettings,0,3,0,0,0,6,3,1,0,-1,0,5
-ITraceSourceProcessor,0,2,0,0,0,8,2,1,0,-1,0,1
-ComplexJsonConverter,0,6,0,0,2,71,9,0,1,-1,0,0
-JsonFormatAttribute,0,0,1,0,0,9,0,0,0,-1,0,0
-TraceParserExtensions,0,1,0,0,1,9,1,0,0,-1,0,0
-AppSettings,0,4,0,0,3,38,8,0,1,-1,0,0
-BasicPartitionKeyGenerator,0,1,0,0,1,14,1,0,1,-1,0,0
-BatchedEventHubSender,6,7,0,0,4,79,14,0,1,0,3,1
-BatchedEventHubSenderFactory,0,1,1,0,1,13,1,0,1,-1,2,0
-EventHubEventProcessor,4,6,1,0,5,57,11,0,1,0.33,6,0
-MultiBatchSender,5,5,0,0,4,53,8,0,1,0,4,0
-TraceSourceProcessor,5,9,0,0,3,80,15,0,1,0.33,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Winterdom.Diagnostics.TraceProcessor,BinHexConverter,0,2,0,0,2,27,7,0,0,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor,Batch<TEntry>,3,5,2,0,3,35,6,0,0,0,0,0,,
+Winterdom.Diagnostics.TraceProcessor,IBatchSender,0,3,0,0,0,5,3,2,0,-1,1,2,Winterdom.Diagnostics.TraceProcessor.ISendNotify,Winterdom.Diagnostics.TraceProcessor.Impl.EventHubEventProcessor' Winterdom.Diagnostics.TraceProcessor.Impl.MultiBatchSender
+Winterdom.Diagnostics.TraceProcessor,IBatchSenderFactory,0,1,0,0,0,3,1,1,0,-1,0,1,,Winterdom.Diagnostics.TraceProcessor.Impl.MultiBatchSender
+Winterdom.Diagnostics.TraceProcessor,IEtwEventProvider,0,3,1,0,0,6,3,1,0,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor,IEventProcessor,0,3,0,0,0,5,3,2,0,-1,1,1,Winterdom.Diagnostics.TraceProcessor.ISendNotify,Winterdom.Diagnostics.TraceProcessor.Impl.TraceSourceProcessor
+Winterdom.Diagnostics.TraceProcessor,IJsonConverter,0,2,0,0,0,4,2,2,0,-1,0,4,,Winterdom.EtwCollector.FlatCompositionContainer' Winterdom.Diagnostics.TraceProcessor.Impl.EventHubEventProcessor' TraceProcessor.Tests.FlatJsonConverterTests' TraceProcessor.Tests.ComplexJsonConverterTests
+Winterdom.Diagnostics.TraceProcessor,FlatJsonConverter,0,6,0,0,2,58,7,0,1,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor,IPartitionKeyGenerator,0,1,0,0,0,3,1,1,0,-1,0,2,,Winterdom.Diagnostics.TraceProcessor.Impl.EventHubEventProcessor' TraceProcessor.Tests.BasicPartitionKeyGeneratorTests
+Winterdom.Diagnostics.TraceProcessor,ISendNotify,0,1,0,0,0,3,1,1,0,-1,0,6,,Winterdom.Diagnostics.TraceProcessor.IBatchSender' Winterdom.Diagnostics.TraceProcessor.IEventProcessor' Winterdom.Diagnostics.TraceProcessor.Impl.BatchedEventHubSender' Winterdom.Diagnostics.TraceProcessor.Impl.EventHubEventProcessor' Winterdom.Diagnostics.TraceProcessor.Impl.MultiBatchSender' TraceProcessor.Tests.CountingProcessor
+Winterdom.Diagnostics.TraceProcessor,ISettings,0,3,0,0,0,5,3,1,0,-1,0,4,,Winterdom.EtwCollector.EtwLogCollector' Winterdom.Diagnostics.TraceProcessor.Impl.BatchedEventHubSender' Winterdom.Diagnostics.TraceProcessor.Impl.EventHubEventProcessor' Winterdom.Diagnostics.TraceProcessor.Impl.MultiBatchSender
+Winterdom.Diagnostics.TraceProcessor,ITraceSourceProcessor,0,2,0,0,0,4,2,1,0,-1,0,1,,Winterdom.EtwCollector.EtwLogCollector
+Winterdom.Diagnostics.TraceProcessor,ComplexJsonConverter,0,6,0,0,2,64,7,0,1,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor,JsonFormatAttribute,0,0,1,0,0,5,0,0,0,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor,TraceParserExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor.Impl,AppSettings,0,4,0,0,3,33,8,0,1,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor.Impl,BasicPartitionKeyGenerator,0,1,0,0,1,9,1,0,1,-1,0,0,,
+Winterdom.Diagnostics.TraceProcessor.Impl,BatchedEventHubSender,6,7,0,0,4,72,12,0,1,0,2,1,Winterdom.Diagnostics.TraceProcessor.ISettings' Winterdom.Diagnostics.TraceProcessor.ISendNotify,Winterdom.Diagnostics.TraceProcessor.Impl.BatchedEventHubSenderFactory
+Winterdom.Diagnostics.TraceProcessor.Impl,BatchedEventHubSenderFactory,0,1,1,0,1,8,1,0,1,-1,1,0,Winterdom.Diagnostics.TraceProcessor.Impl.BatchedEventHubSender,
+Winterdom.Diagnostics.TraceProcessor.Impl,EventHubEventProcessor,4,6,1,0,5,51,7,0,1,0.33,5,0,Winterdom.Diagnostics.TraceProcessor.IPartitionKeyGenerator' Winterdom.Diagnostics.TraceProcessor.IJsonConverter' Winterdom.Diagnostics.TraceProcessor.IBatchSender' Winterdom.Diagnostics.TraceProcessor.ISettings' Winterdom.Diagnostics.TraceProcessor.ISendNotify,
+Winterdom.Diagnostics.TraceProcessor.Impl,MultiBatchSender,5,5,0,0,4,47,8,0,1,0,4,0,Winterdom.Diagnostics.TraceProcessor.IBatchSender' Winterdom.Diagnostics.TraceProcessor.IBatchSenderFactory' Winterdom.Diagnostics.TraceProcessor.ISendNotify' Winterdom.Diagnostics.TraceProcessor.ISettings,
+Winterdom.Diagnostics.TraceProcessor.Impl,TraceSourceProcessor,5,9,0,0,3,71,14,0,1,0.33,1,1,Winterdom.Diagnostics.TraceProcessor.IEventProcessor,TraceProcessor.Tests.TraceSourceProcessorTests

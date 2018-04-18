@@ -1,0 +1,14 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+npantarhei.distribution.wcf.services,ChannelDispenser,4,3,0,0,2,46,5,0,0,0,2,1,npantarhei.distribution.wcf.services.Channel' npantarhei.distribution.wcf.contract.IService,npantarhei.distribution.wcf.transceivers.WcfHostTransceiver
+npantarhei.distribution.wcf.services,Channel,2,0,0,2,0,5,0,0,0,-1,1,1,npantarhei.distribution.wcf.contract.IService,npantarhei.distribution.wcf.services.ChannelDispenser
+npantarhei.distribution.wcf.services,Service<T>,1,2,0,0,2,10,2,0,1,0,0,0,,
+npantarhei.distribution.wcf.services,SingletonServiceHost,0,1,0,0,1,4,1,0,0,-1,0,0,,
+npantarhei.distribution.wcf.contract,IHostService,0,1,0,0,0,6,1,0,0,-1,1,0,npantarhei.distribution.contract.messagetypes.HostInput,
+npantarhei.distribution.wcf.contract,IService,0,1,0,0,0,6,1,1,0,-1,0,4,,npantarhei.distribution.wcf.services.ChannelDispenser' npantarhei.distribution.wcf.services.Channel' npantarhei.distribution.wcf.transceivers.WcfHostTransceiver' npantarhei.distribution.wcf.transceivers.WcfStandInTransceiver
+npantarhei.distribution.wcf.contract,IStandInService,0,1,0,0,0,6,1,0,0,-1,1,0,npantarhei.distribution.contract.messagetypes.HostOutput,
+npantarhei.distribution.wcf.tests,test_Integration,0,1,0,0,1,29,1,0,0,-1,0,0,,
+npantarhei.distribution.wcf.tests,test_Transceivers,0,2,0,0,2,30,2,0,0,-1,4,0,npantarhei.distribution.contract.messagetypes.HostInput' npantarhei.distribution.wcf.transceivers.WcfHostTransceiver' npantarhei.distribution.wcf.transceivers.WcfStandInTransceiver' npantarhei.distribution.contract.messagetypes.HostOutput,
+npantarhei.distribution.wcf.transceivers,WcfHostTransceiver,3,3,1,0,3,34,3,0,1,0.67,2,1,npantarhei.distribution.wcf.services.ChannelDispenser' npantarhei.distribution.wcf.contract.IService,npantarhei.distribution.wcf.tests.test_Transceivers
+npantarhei.distribution.wcf.transceivers,WcfStandInTransceiver,3,3,1,0,3,37,3,0,1,0,2,1,npantarhei.distribution.wcf.contract.IService' npantarhei.distribution.contract.messagetypes.HostInput,npantarhei.distribution.wcf.tests.test_Transceivers
+npantarhei.distribution.wcf,WcfOperationHost,1,2,0,0,2,13,2,0,0,0,1,0,npantarhei.distribution.OperationHost,
+npantarhei.distribution.wcf,WcfStandInOperation,1,3,0,0,2,18,3,0,0,0,1,0,npantarhei.distribution.StandInOperation,

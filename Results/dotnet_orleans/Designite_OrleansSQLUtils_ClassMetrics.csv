@@ -1,37 +1,50 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-SqlMembershipTable,5,11,2,0,10,179,40,0,1,0,8,0
-OrleansRelationalDownloadStream,6,10,6,0,8,248,23,0,0,0.5,0,1
-AdoNetInvariants,5,0,1,5,0,32,0,0,0,-1,0,2
-DbConstantsStore,1,7,0,0,7,87,7,0,0,0.57,3,2
-DbConstants,3,1,0,3,1,21,1,0,0,0,0,1
-DbExtensions,1,10,0,0,10,334,15,0,0,0.7,0,0
-DbConnectionFactory,2,1,0,0,0,28,1,0,0,0,0,1
-IRelationalStorage,0,2,2,0,0,90,2,1,0,-1,0,1
-RelationalStorage,4,8,2,0,3,224,25,0,1,0.5,2,2
-RelationalOrleansQueries,4,7,0,0,0,120,7,0,0,0.29,7,3
-RelationalStorageExtensions,2,7,0,0,7,207,17,0,0,1,3,0
-SqlFormatProvider,1,1,0,0,1,39,1,0,0,0,0,1
-SqlReminderTable,3,8,0,0,8,39,8,0,1,0,6,0
-AdoNetSerializationFormat,0,0,0,0,0,18,0,0,0,-1,0,1
-AdoNetConfigurationExtensions,0,2,0,0,1,46,7,0,0,-1,3,0
-AdoGrainKey,0,6,6,0,5,95,13,0,0,-1,0,0
-IHasher,0,1,1,0,0,20,1,1,0,-1,0,2
-IStorageDeserializer,0,3,2,0,0,39,3,3,0,-1,0,3
-IStorageHasherPicker,0,1,1,0,0,22,1,1,0,-1,3,0
-StorageHasherPicker,0,2,1,0,2,30,3,0,1,-1,3,0
-SerializationChoice,0,1,3,0,1,43,3,0,0,-1,2,1
-IStorageSerializationPicker,0,2,2,0,0,40,2,1,0,-1,4,0
-IStorageSerializer,0,3,2,0,0,38,3,3,0,-1,0,3
-OrleansDefaultHasher,0,1,1,0,1,19,1,0,1,-1,1,0
-OrleansStorageDefaultBinarySerializer,1,4,2,0,4,55,5,0,1,0.75,1,0
-OrleansStorageDefaultBinaryDeserializer,1,4,2,0,4,55,5,0,1,0.75,1,0
-OrleansStorageDefaultJsonDeserializer,0,4,4,0,4,75,12,0,1,-1,0,0
-OrleansStorageDefaultJsonSerializer,0,4,4,0,4,79,12,0,1,-1,0,0
-OrleansStorageDefaultXmlDeserializer,0,4,2,0,4,56,7,0,1,-1,0,0
-OrleansStorageDefaultXmlSerializer,0,4,2,0,4,61,9,0,1,-1,0,0
-RelationalStorageProviderCodes,0,0,0,0,0,22,0,0,0,-1,0,1
-AdoNetStorageProvider,8,9,8,7,5,409,30,0,0,0.89,7,1
-RelationalStorageProviderQueries,0,1,3,0,1,48,4,0,0,-1,0,0
-DefaultRelationalStoragePicker,0,3,2,0,3,57,5,0,1,-1,4,0
-SqlStatisticsPublisher,12,11,1,0,7,182,22,0,1,0.36,11,0
-DbStoredQueries,1,1,0,0,0,9,1,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OrleansSQLUtils.Messaging,LegacySqlGatewayListProviderConfigurator,0,1,0,0,1,11,1,0,0,-1,0,0,,
+OrleansSQLUtils,LegacySqlMembershipConfigurator,0,1,0,0,1,12,1,0,1,-1,0,0,,
+Orleans.Runtime.Membership,SqlGatewayListProvider,6,3,2,0,3,44,5,0,0,0,2,0,OrleansSQLUtils.Options.SqlGatewayListProviderOptions' Orleans.SqlUtils.RelationalOrleansQueries,
+Orleans.Runtime.MembershipService,SqlMembershipTable,5,9,0,0,8,167,28,0,0,0,3,0,Orleans.SqlUtils.RelationalOrleansQueries' OrleansSQLUtils.Configuration.SqlMembershipOptions' Orleans.Runtime.SiloAddress,
+OrleansSQLUtils.Options,SqlGatewayListProviderOptions,0,0,2,0,0,11,0,0,0,-1,0,1,,Orleans.Runtime.Membership.SqlGatewayListProvider
+OrleansSQLUtils.Configuration,SqlMembershipOptions,0,0,2,0,0,11,0,0,0,-1,0,1,,Orleans.Runtime.MembershipService.SqlMembershipTable
+Orleans.SqlUtils,OrleansRelationalDownloadStream,6,10,6,0,8,272,20,0,0,0.6,0,1,,Orleans.SqlUtils.RelationalStorageExtensions
+Orleans.SqlUtils,AdoNetInvariants,5,0,1,5,0,34,0,0,0,-1,0,1,,Orleans.Providers.SqlServer.SqlStatisticsPublisher
+Orleans.SqlUtils,DbConnectionFactory,2,2,0,0,1,92,10,0,0,1,1,1,Orleans.SqlUtils.CachedFactory,Orleans.SqlUtils.RelationalStorage
+Orleans.SqlUtils,CachedFactory,4,1,0,4,1,28,1,0,0,0,0,1,,Orleans.SqlUtils.DbConnectionFactory
+Orleans.SqlUtils,DbConstantsStore,1,8,0,0,8,114,8,0,0,0.5,3,3,Orleans.SqlUtils.IRelationalStorage' Orleans.SqlUtils.DbConstants' OrleansSQLUtils.Storage.ICommandInterceptor,Orleans.SqlUtils.RelationalOrleansQueries' Orleans.SqlUtils.RelationalStorage' Orleans.SqlUtils.RelationalStorageExtensions
+Orleans.SqlUtils,DbConstants,7,1,0,7,1,40,1,0,0,0,1,3,OrleansSQLUtils.Storage.ICommandInterceptor,Orleans.SqlUtils.DbConstantsStore' Orleans.SqlUtils.RelationalOrleansQueries' Orleans.SqlUtils.RelationalStorageExtensions
+Orleans.SqlUtils,DbExtensions,1,12,0,0,12,302,18,0,0,0.83,0,0,,
+Orleans.SqlUtils,IRelationalStorage,0,2,2,0,0,83,2,1,0,-1,0,4,,Orleans.SqlUtils.DbConstantsStore' Orleans.SqlUtils.RelationalOrleansQueries' Orleans.SqlUtils.RelationalStorageExtensions' Orleans.Storage.AdoNetStorageProvider
+Orleans.SqlUtils,RelationalOrleansQueries,4,22,0,0,0,410,27,0,0,0.09,9,4,Orleans.SqlUtils.IRelationalStorage' OrleansSQLUtils.Storage.DbStoredQueries' Orleans.SqlUtils.RelationalStorage' OrleansSQLUtils.Storage.Converters' OrleansSQLUtils.Storage.Columns' Orleans.Runtime.SiloAddress' Orleans.SqlUtils.DbConstants' Orleans.SqlUtils.DbConstantsStore' Orleans.Runtime.GrainReference,Orleans.Runtime.Membership.SqlGatewayListProvider' Orleans.Runtime.MembershipService.SqlMembershipTable' Orleans.Runtime.ReminderService.SqlReminderTable' Orleans.Providers.SqlServer.SqlStatisticsPublisher
+Orleans.SqlUtils,RelationalStorage,5,8,2,0,3,261,16,0,1,0.62,3,2,OrleansSQLUtils.Storage.ICommandInterceptor' Orleans.SqlUtils.DbConstantsStore' Orleans.SqlUtils.DbConnectionFactory,Orleans.SqlUtils.RelationalOrleansQueries' Orleans.Storage.AdoNetStorageProvider
+Orleans.SqlUtils,RelationalStorageExtensions,2,7,0,0,7,231,17,0,0,0.71,5,0,Orleans.SqlUtils.SqlFormatProvider' Orleans.SqlUtils.DbConstants' Orleans.SqlUtils.DbConstantsStore' Orleans.SqlUtils.IRelationalStorage' Orleans.SqlUtils.OrleansRelationalDownloadStream,
+Orleans.SqlUtils,SqlFormatProvider,1,1,0,0,1,42,1,0,0,0,1,1,Orleans.SqlUtils.SqlFormatter,Orleans.SqlUtils.RelationalStorageExtensions
+Orleans.SqlUtils,SqlFormatter,0,1,0,0,1,28,6,0,0,-1,0,1,,Orleans.SqlUtils.SqlFormatProvider
+Orleans.Runtime.ReminderService,SqlReminderTable,3,8,0,0,8,40,8,0,0,0,2,0,Orleans.SqlUtils.RelationalOrleansQueries' Orleans.Runtime.GrainReference,
+Orleans.Hosting,SqlUtilsHostingExtensions,0,8,0,0,8,67,8,0,0,-1,1,0,Orleans.Hosting.ISiloHostBuilder,
+Orleans.Runtime.Configuration,AdoNetSerializationFormat,0,0,0,0,0,15,0,0,0,-1,0,1,,Orleans.Runtime.Configuration.AdoNetConfigurationExtensions
+Orleans.Runtime.Configuration,AdoNetConfigurationExtensions,0,2,0,0,1,51,6,0,0,-1,2,0,Orleans.Storage.AdoNetStorageProvider' Orleans.Runtime.Configuration.AdoNetSerializationFormat,
+OrleansSQLUtils.Storage,DbStoredQueries,2,1,18,0,0,371,2,0,0,0,0,1,,Orleans.SqlUtils.RelationalOrleansQueries
+OrleansSQLUtils.Storage,Converters,0,8,0,0,0,98,12,0,0,-1,2,1,OrleansSQLUtils.Storage.Columns' Orleans.Runtime.SiloAddress,Orleans.SqlUtils.RelationalOrleansQueries
+OrleansSQLUtils.Storage,Columns,4,5,29,0,0,180,5,0,0,0.8,0,2,,Orleans.SqlUtils.RelationalOrleansQueries' OrleansSQLUtils.Storage.Converters
+OrleansSQLUtils.Storage,ICommandInterceptor,0,1,0,0,0,4,1,2,0,-1,0,5,,Orleans.SqlUtils.DbConstantsStore' Orleans.SqlUtils.DbConstants' Orleans.SqlUtils.RelationalStorage' OrleansSQLUtils.Storage.NoOpCommandInterceptor' OrleansSQLUtils.Storage.OracleCommandInterceptor
+OrleansSQLUtils.Storage,NoOpCommandInterceptor,1,2,0,1,1,12,2,0,1,1,1,0,OrleansSQLUtils.Storage.ICommandInterceptor,
+OrleansSQLUtils.Storage,OracleCommandInterceptor,4,4,0,1,1,82,9,0,1,0.5,1,0,OrleansSQLUtils.Storage.ICommandInterceptor,
+Orleans.Storage,AdoGrainKey,0,6,6,0,5,95,11,0,0,-1,0,1,,Orleans.Storage.AdoNetStorageProvider
+Orleans.Storage,RelationalStorageProviderCodes,0,0,0,0,0,18,0,0,0,-1,0,1,,Orleans.Storage.AdoNetStorageProvider
+Orleans.Storage,AdoNetStorageProvider,9,11,8,7,5,476,36,0,0,0.36,12,1,Orleans.Storage.IStorageSerializationPicker' Orleans.SqlUtils.RelationalStorage' Orleans.SqlUtils.IRelationalStorage' Orleans.Storage.RelationalStorageProviderCodes' Orleans.Storage.AdoGrainKey' Orleans.Storage.IHasher' Orleans.Storage.IStorageHasherPicker' Orleans.Storage.RelationalStorageProviderQueries' Orleans.Runtime.GrainReference' Orleans.Storage.SerializationChoice' Orleans.Storage.IStorageDeserializer' Orleans.Storage.IStorageSerializer,Orleans.Runtime.Configuration.AdoNetConfigurationExtensions
+Orleans.Storage,IHasher,0,1,1,0,0,13,1,1,0,-1,0,1,,Orleans.Storage.AdoNetStorageProvider
+Orleans.Storage,IStorageDeserializer,0,3,2,0,0,32,3,3,0,-1,0,2,,Orleans.Storage.AdoNetStorageProvider' Orleans.Storage.SerializationChoice
+Orleans.Storage,IStorageHasherPicker,0,1,1,0,0,16,1,1,0,-1,1,1,Orleans.Runtime.GrainReference,Orleans.Storage.AdoNetStorageProvider
+Orleans.Storage,SerializationChoice,0,1,3,0,1,37,3,0,0,-1,2,2,Orleans.Storage.IStorageDeserializer' Orleans.Storage.IStorageSerializer,Orleans.Storage.AdoNetStorageProvider' Orleans.Storage.DefaultRelationalStoragePicker
+Orleans.Storage,IStorageSerializationPicker,0,2,2,0,0,29,2,1,0,-1,1,1,Orleans.Runtime.GrainReference,Orleans.Storage.AdoNetStorageProvider
+Orleans.Storage,IStorageSerializer,0,3,2,0,0,32,3,3,0,-1,0,2,,Orleans.Storage.AdoNetStorageProvider' Orleans.Storage.SerializationChoice
+Orleans.Storage,OrleansDefaultHasher,0,1,1,0,1,15,1,0,1,-1,1,0,Orleans.JenkinsHash,
+Orleans.Storage,OrleansStorageDefaultBinaryDeserializer,1,4,2,0,4,53,5,0,1,0.75,0,0,,
+Orleans.Storage,OrleansStorageDefaultBinarySerializer,1,4,2,0,4,53,5,0,1,0.75,0,0,,
+Orleans.Storage,OrleansStorageDefaultJsonDeserializer,0,4,4,0,4,73,6,0,1,-1,0,0,,
+Orleans.Storage,OrleansStorageDefaultJsonSerializer,0,4,4,0,4,77,6,0,1,-1,0,0,,
+Orleans.Storage,OrleansStorageDefaultXmlDeserializer,0,4,2,0,4,55,5,0,1,-1,0,0,,
+Orleans.Storage,OrleansStorageDefaultXmlSerializer,0,4,2,0,4,61,5,0,1,-1,0,0,,
+Orleans.Storage,RelationalStorageProviderQueries,0,1,3,0,1,40,4,0,0,-1,0,1,,Orleans.Storage.AdoNetStorageProvider
+Orleans.Storage,StorageHasherPicker,0,2,1,0,2,28,3,0,1,-1,1,0,Orleans.Runtime.GrainReference,
+Orleans.Storage,DefaultRelationalStoragePicker,0,3,2,0,3,51,5,0,1,-1,2,0,Orleans.Storage.SerializationChoice' Orleans.Runtime.GrainReference,
+Orleans.Providers.SqlServer,SqlStatisticsPublisher,12,11,1,0,7,185,19,0,0,0.36,3,0,Orleans.Runtime.SiloAddress' Orleans.SqlUtils.RelationalOrleansQueries' Orleans.SqlUtils.AdoNetInvariants,

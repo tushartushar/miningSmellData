@@ -1,23 +1,26 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Computation,8,7,7,0,4,91,12,0,2,1,11,1
-DomainLookup,5,3,2,0,1,48,3,0,0,1,3,0
-LicenseChain,10,6,9,0,5,138,12,0,1,0.67,2,1
-LicenseEnforcer,7,14,4,0,7,146,23,0,2,0.64,11,0
-WatermarkRenderer,2,1,1,0,1,25,5,0,0,0,0,1
-LicenseFetcher,14,11,3,0,4,282,26,0,0,0.18,5,0
-LicenseManagerSingleton,5,20,8,0,15,238,29,0,2,0.35,14,0
-LicenseBlob,0,2,4,0,2,37,3,0,1,-1,2,3
-LicenseDetails,0,3,5,0,3,60,11,0,1,-1,0,1
-StringIntParseExtensions,0,1,0,0,1,8,1,0,0,-1,0,0
-LicenseDetailsExtensions,0,14,0,0,14,59,17,0,0,-1,1,0
-LicenseBlobExtensions,0,3,0,0,3,32,3,0,0,-1,2,0
-RSADecryptPublic,0,2,3,0,2,32,4,0,0,-1,0,0
-ImazenPublicKeys,0,1,3,0,0,23,1,0,0,-1,0,0
-SignatureTestApp,0,4,0,0,0,50,10,0,0,-1,1,0
-RealClock,0,4,1,0,4,25,6,0,1,-1,1,0
-Blob,0,6,4,0,6,51,6,0,2,-1,2,1
-IBlobMetadata,0,0,2,0,0,11,0,1,0,-1,0,2
-BlobMetadata,0,0,2,0,0,11,0,0,1,-1,0,4
-BlobProviderBase,4,24,10,0,17,310,32,4,2,0.33,9,1
-IMetadataCache,0,2,0,0,0,5,2,1,0,-1,0,1
-StandardMetadataCache,2,3,2,0,3,45,3,0,1,1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ImageResizer.Plugins.LicenseVerifier,Computation,8,24,8,0,13,414,53,0,2,0.08,13,1,ImageResizer.Plugins.Licensing.ILicenseClock' ImageResizer.Plugins.LicenseVerifier.DomainLookup' ImageResizer.Plugins.Licensing.ILicenseManager' ImageResizer.Configuration.Issues.IIssueReceiver' ImageResizer.Configuration.PluginConfig' ImageResizer.Configuration.Config' ImageResizer.Plugins.ILicensedPlugin' ImageResizer.Plugins.ILicenseProvider' ImageResizer.Plugins.Licensing.ILicenseChain' ImageResizer.Configuration.LicenseAccess' ImageResizer.Plugins.Licensing.ILicenseBlob' ImageResizer.Configuration.Issues.IssueSeverity' ImageResizer.Plugins.Licensing.ILicenseDetails,ImageResizer.Plugins.LicenseVerifier.LicenseEnforcer<T>
+ImageResizer.Plugins.LicenseVerifier,DomainLookup,5,6,2,0,4,146,9,0,0,0,8,1,ImageResizer.Configuration.Config' ImageResizer.Configuration.Issues.IIssueReceiver' ImageResizer.Plugins.Licensing.ILicenseChain' ImageResizer.Plugins.Licensing.ILicenseDetails' ImageResizer.Plugins.Licensing.ILicenseBlob' ImageResizer.Configuration.Xml.Node' ImageResizer.Configuration.PluginConfig' ImageResizer.Configuration.Issues.IssueSeverity,ImageResizer.Plugins.LicenseVerifier.Computation
+ImageResizer.Plugins.LicenseVerifier,LicenseChain,10,18,9,0,9,309,33,0,1,0,11,1,ImageResizer.Plugins.LicenseVerifier.LicenseManagerSingleton' ImageResizer.Plugins.LicenseVerifier.LicenseFetcher' ImageResizer.Plugins.LicenseVerifier.LicenseBlob' ImageResizer.Plugins.IPersistentStringCache' ImageResizer.Plugins.Licensing.ILicenseDetails' ImageResizer.Plugins.Licensing.ILicenseBlob' ImageResizer.Plugins.Licensing.ILicenseClock' ImageResizer.Plugins.LicenseVerifier.FetchResult' ImageResizer.Configuration.Issues.IssueSeverity' ImageResizer.Configuration.Performance.IInfoAccumulator' ImageResizer.Configuration.Performance.GlobalPerf,ImageResizer.Plugins.LicenseVerifier.LicenseManagerSingleton
+ImageResizer.Plugins.LicenseVerifier,LicenseEnforcer<T>,7,14,4,0,7,167,23,0,2,0.5,14,0,ImageResizer.Plugins.Licensing.ILicenseManager' ImageResizer.Plugins.LicenseVerifier.WatermarkRenderer' ImageResizer.Configuration.Config' ImageResizer.Plugins.LicenseVerifier.Computation' ImageResizer.Plugins.LicenseVerifier.LicenseManagerSingleton' ImageResizer.Configuration.Issues.IIssueReceiver' ImageResizer.Plugins.Licensing.ILicenseClock' ImageResizer.Configuration.PluginConfig' ImageResizer.Configuration.PipelineConfig' ImageResizer.Configuration.LicenseErrorAction' ImageResizer.Configuration.IUrlEventArgs' ImageResizer.ResizeSettings' ImageResizer.Resizing.ImageState' ImageResizer.Resizing.RequestedAction,
+ImageResizer.Plugins.LicenseVerifier,WatermarkRenderer,2,1,1,0,1,26,5,0,0,0,0,1,,ImageResizer.Plugins.LicenseVerifier.LicenseEnforcer<T>
+ImageResizer.Plugins.LicenseVerifier,LicenseFetcher,14,11,3,0,4,287,16,0,0,0,7,1,ImageResizer.Plugins.Licensing.ILicenseClock' ImageResizer.Plugins.LicenseVerifier.ImperfectDebounce' ImageResizer.Configuration.Issues.IIssueReceiver' ImageResizer.Configuration.Issues.IssueSeverity' ImageResizer.Plugins.LicenseVerifier.FetchResult' ImageResizer.Configuration.Issues.Issue' ImageResizer.Configuration.Performance.IInfoAccumulator,ImageResizer.Plugins.LicenseVerifier.LicenseChain
+ImageResizer.Plugins.LicenseVerifier,FetchResult,0,0,7,0,0,10,0,0,0,-1,0,2,,ImageResizer.Plugins.LicenseVerifier.LicenseChain' ImageResizer.Plugins.LicenseVerifier.LicenseFetcher
+ImageResizer.Plugins.LicenseVerifier,Fnv1a32,2,2,0,0,2,20,3,0,0,1,0,0,,
+ImageResizer.Plugins.LicenseVerifier,ImperfectDebounce,4,2,1,0,2,37,5,0,0,0,1,1,ImageResizer.Plugins.Licensing.ILicenseClock,ImageResizer.Plugins.LicenseVerifier.LicenseFetcher
+ImageResizer.Plugins.LicenseVerifier,LicenseManagerSingleton,5,20,8,0,15,258,28,0,2,0.25,18,2,ImageResizer.Configuration.Issues.IssueSink' ImageResizer.Plugins.Licensing.ILicenseClock' ImageResizer.Plugins.IPersistentStringCache' ImageResizer.Configuration.Issues.IIssueReceiver' ImageResizer.Configuration.Issues.IIssue' ImageResizer.Plugins.LicenseVerifier.LicenseChain' ImageResizer.Configuration.PipelineConfig' ImageResizer.Configuration.Config' ImageResizer.Configuration.PluginConfig' ImageResizer.Configuration.LicenseAccess' ImageResizer.Configuration.Issues.IIssueProvider' ImageResizer.Configuration.IPipelineConfig' ImageResizer.Plugins.ILicenseProvider' ImageResizer.Plugins.LicenseVerifier.LicenseBlob' ImageResizer.Plugins.Licensing.ILicenseDetails' ImageResizer.Plugins.Licensing.ILicenseChain' ImageResizer.Plugins.Basic.WebConfigLicenseReader' ImageResizer.Configuration.Issues.IssueSeverity,ImageResizer.Plugins.LicenseVerifier.LicenseChain' ImageResizer.Plugins.LicenseVerifier.LicenseEnforcer<T>
+ImageResizer.Plugins.LicenseVerifier,LicenseBlob,0,2,4,0,2,30,3,0,1,-1,0,4,,ImageResizer.Plugins.LicenseVerifier.LicenseChain' ImageResizer.Plugins.LicenseVerifier.LicenseManagerSingleton' ImageResizer.Plugins.LicenseVerifier.LicenseBlobExtensions' ImageResizer.Plugins.LicenseVerifier.SignatureTestApp
+ImageResizer.Plugins.LicenseVerifier,LicenseDetails,0,3,5,0,3,56,9,0,1,-1,0,0,,
+ImageResizer.Plugins.LicenseVerifier,StringIntParseExtensions,0,1,0,0,1,8,1,0,0,-1,0,0,,
+ImageResizer.Plugins.LicenseVerifier,LicenseDetailsExtensions,0,14,0,0,14,94,17,0,0,-1,1,0,ImageResizer.Plugins.Licensing.ILicenseDetails,
+ImageResizer.Plugins.LicenseVerifier,LicenseBlobExtensions,0,3,0,0,3,43,3,0,0,-1,4,0,ImageResizer.Plugins.LicenseVerifier.LicenseBlob' ImageResizer.Plugins.Licensing.ILicenseBlob' ImageResizer.Plugins.Licensing.ILicenseDetails' ImageResizer.Plugins.LicenseVerifier.RSADecryptPublic,
+ImageResizer.Plugins.LicenseVerifier,RSADecryptPublic,0,2,3,0,2,36,4,0,0,-1,0,1,,ImageResizer.Plugins.LicenseVerifier.LicenseBlobExtensions
+ImageResizer.Plugins.LicenseVerifier,ImazenPublicKeys,0,1,3,0,0,27,1,0,0,-1,0,0,,
+ImageResizer.Plugins.LicenseVerifier,SignatureTestApp,0,4,0,0,0,59,7,0,0,-1,1,0,ImageResizer.Plugins.LicenseVerifier.LicenseBlob,
+ImageResizer.Plugins.LicenseVerifier,RealClock,0,4,1,0,4,32,4,0,1,-1,1,0,ImageResizer.Util.BuildDateAttribute,
+ImageResizer.Storage,Blob,0,6,4,0,6,56,7,0,2,-1,2,1,ImageResizer.Storage.BlobProviderBase' ImageResizer.Util.AsyncUtils,ImageResizer.Storage.BlobProviderBase
+ImageResizer.Storage,IBlobMetadata,0,0,2,0,0,4,0,1,0,-1,0,1,,ImageResizer.Storage.BlobProviderBase
+ImageResizer.Storage,BlobMetadata,0,0,2,0,0,5,0,0,1,-1,0,3,,ImageResizer.Plugins.AzureReader2.AzureReader2Plugin' ImageResizer.Plugins.S3Reader2.S3Reader2' ImageResizer.Plugins.SqlReader.SqlReaderPlugin
+ImageResizer.Storage,BlobProviderBase,4,24,10,0,17,315,36,4,2,0.33,13,3,ImageResizer.Configuration.Config' ImageResizer.Plugins.VirtualPathProviderShim' ImageResizer.Configuration.Xml.Node' ImageResizer.Storage.IBlobMetadata' ImageResizer.Storage.IMetadataCache' ImageResizer.Util.AsyncUtils' ImageResizer.Storage.Blob' ImageResizer.Configuration.PluginConfig' ImageResizer.Configuration.PipelineConfig' ImageResizer.Configuration.IUrlEventArgs' ImageResizer.ProcessWhen' ImageResizer.ServerCacheMode' ImageResizer.Configuration.Performance.GlobalPerf,ImageResizer.Plugins.AzureReader2.AzureReader2Plugin' ImageResizer.Storage.Blob' ImageResizer.Plugins.S3Reader2.S3Reader2
+ImageResizer.Storage,IMetadataCache,0,2,0,0,0,6,2,1,0,-1,0,1,,ImageResizer.Storage.BlobProviderBase
+ImageResizer.Storage,StandardMetadataCache,2,3,2,0,3,52,3,0,1,1,0,0,,

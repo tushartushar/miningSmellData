@@ -1,11 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IdentityRole,0,3,2,0,3,37,3,0,0,-1,0,1
-IdentityUser,0,2,6,0,2,63,2,0,0,-1,0,3
-PostgreSQLDatabase,1,11,0,0,8,168,24,0,0,0.18,0,7
-RoleStore,1,8,2,0,8,74,12,0,0,0.38,2,0
-RoleTable,1,9,0,0,9,125,13,0,0,0,2,2
-UserClaimsTable,1,5,0,0,5,79,6,0,0,0,2,1
-UserLoginsTable,1,6,0,0,6,92,7,0,0,0,2,1
-UserRolesTable,1,5,0,0,5,80,6,0,0,0,2,1
-UserStore,5,29,2,0,29,431,67,0,0,0.28,6,0
-UserTable,1,14,0,0,13,270,22,0,0,0.14,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AspNet.Identity.PostgreSQL,IdentityRole,0,3,2,0,3,32,3,0,0,-1,0,1,,AspNet.Identity.PostgreSQL.RoleTable
+AspNet.Identity.PostgreSQL,IdentityUser,0,2,6,0,2,44,2,0,0,-1,0,3,,AspNet.Identity.PostgreSQL.UserClaimsTable' AspNet.Identity.PostgreSQL.UserLoginsTable' AspNet.Identity.PostgreSQL.UserRolesTable
+AspNet.Identity.PostgreSQL,PostgreSQLDatabase,1,11,0,0,8,189,19,0,0,0.18,0,7,,AspNet.Identity.PostgreSQL.RoleStore<TRole>' AspNet.Identity.PostgreSQL.RoleTable' AspNet.Identity.PostgreSQL.UserClaimsTable' AspNet.Identity.PostgreSQL.UserLoginsTable' AspNet.Identity.PostgreSQL.UserRolesTable' AspNet.Identity.PostgreSQL.UserStore<TUser>' AspNet.Identity.PostgreSQL.UserTable<TUser>
+AspNet.Identity.PostgreSQL,RoleStore<TRole>,1,8,2,0,8,76,12,0,0,0.38,2,0,AspNet.Identity.PostgreSQL.RoleTable' AspNet.Identity.PostgreSQL.PostgreSQLDatabase,
+AspNet.Identity.PostgreSQL,RoleTable,1,9,0,0,9,121,13,0,0,0,2,2,AspNet.Identity.PostgreSQL.PostgreSQLDatabase' AspNet.Identity.PostgreSQL.IdentityRole,AspNet.Identity.PostgreSQL.RoleStore<TRole>' AspNet.Identity.PostgreSQL.UserStore<TUser>
+AspNet.Identity.PostgreSQL,UserClaimsTable,1,5,0,0,5,72,6,0,0,0,2,1,AspNet.Identity.PostgreSQL.PostgreSQLDatabase' AspNet.Identity.PostgreSQL.IdentityUser,AspNet.Identity.PostgreSQL.UserStore<TUser>
+AspNet.Identity.PostgreSQL,UserLoginsTable,1,6,0,0,6,85,7,0,0,0,2,1,AspNet.Identity.PostgreSQL.PostgreSQLDatabase' AspNet.Identity.PostgreSQL.IdentityUser,AspNet.Identity.PostgreSQL.UserStore<TUser>
+AspNet.Identity.PostgreSQL,UserRolesTable,1,5,0,0,5,78,6,0,0,0,2,1,AspNet.Identity.PostgreSQL.PostgreSQLDatabase' AspNet.Identity.PostgreSQL.IdentityUser,AspNet.Identity.PostgreSQL.UserStore<TUser>
+AspNet.Identity.PostgreSQL,UserStore<TUser>,5,38,2,0,38,520,73,0,0,0.45,5,0,AspNet.Identity.PostgreSQL.RoleTable' AspNet.Identity.PostgreSQL.UserRolesTable' AspNet.Identity.PostgreSQL.UserClaimsTable' AspNet.Identity.PostgreSQL.UserLoginsTable' AspNet.Identity.PostgreSQL.PostgreSQLDatabase,
+AspNet.Identity.PostgreSQL,UserTable<TUser>,1,14,0,0,13,243,22,0,0,0.14,1,0,AspNet.Identity.PostgreSQL.PostgreSQLDatabase,

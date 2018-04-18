@@ -1,30 +1,48 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Buff,0,1,3,0,1,38,1,0,1,-1,0,3
-Chatlog,6,7,0,0,3,396,12,0,1,0.29,1,2
-FFXIVLIB,5,27,0,1,27,406,45,0,0,0.15,14,18
-ActionList,0,1,1,0,1,22,1,0,1,-1,1,1
-Action,0,1,8,0,1,73,1,0,1,-1,0,2
-Item,0,1,7,0,1,88,1,0,1,-1,0,3
-Movement,0,8,18,0,8,199,8,0,1,-1,0,3
-JOB,0,0,0,0,0,38,0,0,0,-1,0,4
-SEX,0,0,0,0,0,5,0,0,0,-1,0,1
-ENTITYSTATUS,0,0,0,0,0,14,0,0,0,-1,0,1
-COMBATSTATUS,0,0,0,0,0,13,0,0,0,-1,0,1
-STATUS,0,0,0,0,0,9,0,0,0,-1,0,1
-TYPE,0,0,0,0,0,12,0,0,0,-1,0,4
-ICON,0,0,0,0,0,38,0,0,0,-1,0,1
-CURRENTTARGET,0,0,0,0,0,9,0,0,0,-1,0,1
-EQUIP_POS,0,0,0,0,0,20,0,0,0,-1,0,0
-BaseObject,0,4,2,0,2,94,7,11,0,-1,1,0
-Inventory,0,9,0,0,1,169,10,0,1,-1,0,1
-Library,0,1,0,0,0,36,8,0,0,-1,0,0
-MemoryReader,3,16,0,0,10,234,23,0,0,0.25,0,4
-Entity,0,2,45,0,2,349,2,0,1,-1,7,9
-MovementHelper,6,13,0,0,5,254,28,0,0,0,3,0
-PartyMember,0,1,16,0,1,127,1,0,1,-1,2,1
-Player,0,3,93,0,1,730,3,0,1,-1,2,2
-ResourceParser,1,28,0,0,24,356,41,0,0,0.07,4,5
-SendKeyInput,11,20,0,5,7,584,24,0,0,0.55,0,1
-Serializer,0,2,0,0,2,50,6,0,0,-1,0,1
-SigScanner,6,6,0,0,2,112,15,0,0,0.33,0,1
-Target,0,1,5,0,1,52,1,0,1,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ffxivlib,Buff,0,1,3,0,1,24,1,0,0,-1,1,1,ffxivlib.BUFFINFO,ffxivlib.ResourceParser
+ffxivlib,BUFFINFO,3,0,0,3,0,7,0,0,0,-1,0,1,,ffxivlib.Buff
+ffxivlib,Chatlog,6,7,0,0,3,408,11,0,0,0.29,3,2,ffxivlib.MemoryReader' ffxivlib.CHATLOGINFO' ffxivlib.Entry,ffxivlib.FFXIVLIB' ChatlogTest.Program
+ffxivlib,CHATLOGINFO,4,0,0,4,0,8,0,0,0,-1,0,1,,ffxivlib.Chatlog
+ffxivlib,FFXIVLIB,5,27,0,1,27,421,44,0,0,0,17,18,ffxivlib.MemoryReader' ffxivlib.SendKeyInput' ffxivlib.SigScanner' ffxivlib.Chatlog' ffxivlib.ActionList' ffxivlib.ACTIONINFO' ffxivlib.Movement' ffxivlib.Inventory' ffxivlib.Item' ffxivlib.ENTITYINFO' ffxivlib.Entity' ffxivlib.TYPE' ffxivlib.MovementHelper' ffxivlib.PartyMember' ffxivlib.PARTYMEMBERINFO' ffxivlib.Player' ffxivlib.Target,ChatlogTest.Program' CurrentTarget.Program' DumpInventory.Program' GetActions.Program' GetCasting.Program' GetGatheringNodes.Program' GetInventory.Program' GetPlayers.Program' GetQuests.Program' GetServer.Program' ModifyIcon.Program' ModifyTarget.Program' MoveSquare.Program' PlayerHeading.Program' PlayWaypoint.Program' RecordWaypoint.Program' Benchmark.Program' ResourcesDumper.Program
+ffxivlib,ActionList,0,1,1,0,1,18,1,0,0,-1,1,1,ffxivlib.ACTIONLIST,ffxivlib.FFXIVLIB
+ffxivlib,ACTIONLIST,1,0,0,1,0,5,0,0,0,-1,0,1,,ffxivlib.ActionList
+ffxivlib,Action,0,1,8,0,1,34,1,0,0,-1,1,1,ffxivlib.ACTIONINFO,GetActions.Program
+ffxivlib,ACTIONINFO,8,0,0,8,0,12,0,0,0,-1,0,2,,ffxivlib.FFXIVLIB' ffxivlib.Action
+ffxivlib,Item,0,1,7,0,1,52,1,0,0,-1,1,4,ffxivlib.ITEMINFO,ffxivlib.FFXIVLIB' ffxivlib.InventoryBuilder' ffxivlib.ResourceParser' DumpInventory.Program
+ffxivlib,ITEMINFO,8,0,0,8,0,28,0,0,0,-1,0,2,,ffxivlib.Item' ffxivlib.InventoryBuilder
+ffxivlib,Movement,0,8,18,0,8,110,8,0,0,-1,1,3,ffxivlib.MOVEMENTINFO,ffxivlib.FFXIVLIB' ffxivlib.MovementHelper' MoveSquare.Program
+ffxivlib,MOVEMENTINFO,18,0,0,18,0,22,0,0,0,-1,0,1,,ffxivlib.Movement
+ffxivlib,Entry,0,10,6,0,1,293,32,0,0,-1,2,2,ffxivlib.ResourceParser' ffxivlib.Library,ffxivlib.Chatlog' ChatlogTest.Program
+ffxivlib,JOB,0,0,0,0,0,35,0,0,0,-1,0,1,,ffxivlib.ResourceParser
+ffxivlib,SEX,0,0,0,0,0,5,0,0,0,-1,0,0,,
+ffxivlib,ENTITYSTATUS,0,0,0,0,0,11,0,0,0,-1,0,0,,
+ffxivlib,COMBATSTATUS,0,0,0,0,0,10,0,0,0,-1,0,0,,
+ffxivlib,STATUS,0,0,0,0,0,6,0,0,0,-1,0,0,,
+ffxivlib,TYPE,0,0,0,0,0,9,0,0,0,-1,0,4,,ffxivlib.FFXIVLIB' GetGatheringNodes.Program' GetPlayers.Program' Benchmark.Program
+ffxivlib,ICON,0,0,0,0,0,35,0,0,0,-1,0,1,,ModifyIcon.Program
+ffxivlib,CURRENTTARGET,0,0,0,0,0,6,0,0,0,-1,0,0,,
+ffxivlib,EQUIP_POS,0,0,0,0,0,17,0,0,0,-1,0,0,,
+ffxivlib,BaseObject<TU>,0,4,2,0,2,89,6,0,0,-1,1,0,ffxivlib.MemoryReader,
+ffxivlib,Inventory,0,9,0,0,1,179,10,0,0,-1,4,1,ffxivlib.INVENTORY' ffxivlib.InventoryBuilder' ffxivlib.INVENTORYCONTAINER' ffxivlib.Type,ffxivlib.FFXIVLIB
+ffxivlib,INVENTORY,1,0,0,1,0,6,0,0,0,-1,0,1,,ffxivlib.Inventory
+ffxivlib,INVENTORYCONTAINER,4,0,0,4,0,8,0,0,0,-1,0,1,,ffxivlib.Inventory
+ffxivlib,InventoryBuilder,0,2,1,0,0,40,4,0,0,-1,3,1,ffxivlib.MemoryReader' ffxivlib.Item' ffxivlib.ITEMINFO,ffxivlib.Inventory
+ffxivlib,Type,0,0,0,0,0,24,0,0,0,-1,0,1,,ffxivlib.Inventory
+ffxivlib,Library,0,1,0,0,0,41,8,0,0,-1,0,1,,ffxivlib.Entry
+ffxivlib,MemoryReader,3,16,0,0,10,242,22,0,0,0.19,1,5,ffxivlib.ProcessAccessFlags,ffxivlib.Chatlog' ffxivlib.FFXIVLIB' ffxivlib.BaseObject<TU>' ffxivlib.InventoryBuilder' ffxivlib.Player
+ffxivlib,ProcessAccessFlags,0,0,0,0,0,30,0,0,0,-1,0,2,,ffxivlib.MemoryReader' ffxivlib.SigScanner
+ffxivlib,Entity,0,2,45,0,2,144,2,0,0,-1,1,11,ffxivlib.ENTITYINFO,ffxivlib.FFXIVLIB' ffxivlib.MovementHelper' ffxivlib.ResourceParser' CurrentTarget.Program' GetCasting.Program' GetGatheringNodes.Program' GetPlayers.Program' ModifyIcon.Program' ModifyTarget.Program' PlayerHeading.Program' ResourcesDumper.Program
+ffxivlib,ENTITYINFO,42,0,0,42,0,47,0,0,0,-1,0,7,,ffxivlib.FFXIVLIB' ffxivlib.Entity' ffxivlib.MovementHelper' ffxivlib.ResourceParser' GetGatheringNodes.Program' ModifyIcon.Program' PlayerHeading.Program
+ffxivlib,MovementHelper,6,13,0,0,5,257,28,0,0,0,5,3,ffxivlib.Entity' ffxivlib.Serializer' ffxivlib.Movement' ffxivlib.ENTITYINFO' ffxivlib.Coords,ffxivlib.FFXIVLIB' PlayWaypoint.Program' RecordWaypoint.Program
+ffxivlib,Coords,0,2,3,0,2,22,2,0,0,-1,0,1,,ffxivlib.MovementHelper
+ffxivlib,PartyMember,0,1,16,0,1,60,1,0,0,-1,1,1,ffxivlib.PARTYMEMBERINFO,ffxivlib.FFXIVLIB
+ffxivlib,PARTYMEMBERINFO,13,0,0,13,0,17,0,0,0,-1,0,2,,ffxivlib.FFXIVLIB' ffxivlib.PartyMember
+ffxivlib,Player,0,3,93,0,1,273,3,0,0,-1,2,2,ffxivlib.PLAYERINFO' ffxivlib.MemoryReader,ffxivlib.FFXIVLIB' GetServer.Program
+ffxivlib,PLAYERINFO,91,0,0,91,0,115,0,0,0,-1,0,1,,ffxivlib.Player
+ffxivlib,ResourceParser,1,28,0,0,24,454,41,0,0,0,5,6,ffxivlib.Item' ffxivlib.Buff' ffxivlib.ENTITYINFO' ffxivlib.Entity' ffxivlib.JOB,ffxivlib.Entry' DumpInventory.Program' GetCasting.Program' GetPlayers.Program' GetQuests.Program' GetServer.Program
+ffxivlib,SendKeyInput,11,20,0,5,7,465,23,0,0,0.45,1,1,ffxivlib.VKKeys,ffxivlib.FFXIVLIB
+ffxivlib,VKKeys,0,0,0,0,0,316,0,0,0,-1,0,1,,ffxivlib.SendKeyInput
+ffxivlib,Serializer,0,2,0,0,2,60,4,0,0,-1,0,1,,ffxivlib.MovementHelper
+ffxivlib,SigScanner,6,6,0,0,2,133,16,0,0,0.33,1,1,ffxivlib.ProcessAccessFlags,ffxivlib.FFXIVLIB
+ffxivlib,Target,0,1,5,0,1,28,1,0,0,-1,1,2,ffxivlib.TARGET,ffxivlib.FFXIVLIB' ModifyTarget.Program
+ffxivlib,TARGET,5,0,0,5,0,9,0,0,0,-1,0,1,,ffxivlib.Target

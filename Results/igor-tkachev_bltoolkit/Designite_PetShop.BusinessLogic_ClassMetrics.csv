@@ -1,10 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Cart,1,6,3,0,6,112,10,0,0,0,4,1
-OrderManager,0,2,1,0,2,43,10,0,0,-1,5,0
-ProfileProvider,5,21,2,0,11,316,74,0,0,0.1,3,0
-ProductManager,0,9,1,0,9,53,9,0,0,-1,2,1
-ProductAccessor,1,6,0,0,6,45,6,0,1,0.67,1,1
-AccessorBase,0,2,1,0,1,80,2,4,1,-1,1,0
-InventoryAccessor,0,1,0,0,1,11,1,0,2,-1,1,1
-OrderAccessor,0,2,0,0,2,21,2,0,2,-1,1,1
-ProfileAccessor,1,13,0,0,13,146,16,0,2,1,3,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PetShop.BusinessLogic,Cart,1,6,3,0,6,115,10,0,0,0,4,1,PetShop.ObjectModel.CartItem' PetShop.ObjectModel.Item' PetShop.BusinessLogic.ProductManager' PetShop.ObjectModel.OrderLineItem,PetShop.BusinessLogic.ProfileProvider
+PetShop.BusinessLogic,OrderManager,0,2,1,0,2,45,2,0,0,-1,5,0,PetShop.BusinessLogic.DataAccess.OrderAccessor' PetShop.ObjectModel.OrderLineItem' PetShop.BusinessLogic.DataAccess.InventoryAccessor' PetShop.ObjectModel.Order' PetShop.BusinessLogic.DataAccess.PetShopQuery,
+PetShop.BusinessLogic,ProfileProvider,5,21,2,0,11,335,44,0,0,0,4,0,PetShop.BusinessLogic.DataAccess.ProfileAccessor' PetShop.ObjectModel.Address' PetShop.BusinessLogic.Cart' PetShop.ObjectModel.CustomProfile,
+PetShop.BusinessLogic,ProductManager,0,9,1,0,9,52,9,0,0,-1,5,1,PetShop.BusinessLogic.DataAccess.PetShopQuery' PetShop.BusinessLogic.DataAccess.ProductAccessor' PetShop.ObjectModel.Product' PetShop.ObjectModel.Item' PetShop.ObjectModel.Category,PetShop.BusinessLogic.Cart
+PetShop.BusinessLogic.DataAccess,ProductAccessor,1,6,0,0,6,40,6,0,0,0.67,2,1,PetShop.BusinessLogic.DataAccess.PetShopQuery' PetShop.ObjectModel.Category,PetShop.BusinessLogic.ProductManager
+PetShop.BusinessLogic.DataAccess,DB,0,4,0,0,4,1,4,0,1,-1,0,0,,
+PetShop.BusinessLogic.DataAccess,AccessorBase<D;A>,0,2,1,0,1,89,2,0,1,-1,1,0,BLToolkit.Reflection.TypeAccessor,
+PetShop.BusinessLogic.DataAccess,PetShopQuery,0,5,0,0,3,64,8,0,1,-1,3,3,BLToolkit.Data.DbManager' BLToolkit.DataAccess.SqlQueryInfo' BLToolkit.DataAccess.SqlQuery,PetShop.BusinessLogic.OrderManager' PetShop.BusinessLogic.ProductManager' PetShop.BusinessLogic.DataAccess.ProductAccessor
+PetShop.BusinessLogic.DataAccess,InventoryAccessor,0,1,0,0,1,6,1,0,0,-1,1,1,BLToolkit.Data.DbManager,PetShop.BusinessLogic.OrderManager
+PetShop.BusinessLogic.DataAccess,OrderAccessor,0,2,0,0,2,16,2,0,0,-1,1,1,BLToolkit.Data.DbManager,PetShop.BusinessLogic.OrderManager
+PetShop.BusinessLogic.DataAccess,ProfileAccessor,1,13,0,0,13,153,13,0,0,1,3,1,PetShop.ObjectModel.Address' BLToolkit.Data.DbManager' PetShop.ObjectModel.CartItem,PetShop.BusinessLogic.ProfileProvider

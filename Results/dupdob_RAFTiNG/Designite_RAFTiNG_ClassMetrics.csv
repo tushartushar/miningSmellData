@@ -1,20 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ErrorStatus,0,0,0,0,0,6,0,0,0,-1,0,0
-ErrorStatusMessage,0,0,0,0,0,3,0,0,0,-1,0,0
-SendCommand,3,1,3,0,1,53,1,0,0,0,0,1
-IMiddleware,0,2,0,0,0,21,2,0,0,-1,0,1
-IStateMachine,0,1,0,0,0,12,1,0,0,-1,0,1
-LogEntry,0,5,2,0,4,94,8,0,0,-1,0,1
-LogExtensions,0,2,0,0,2,27,2,0,0,-1,0,0
-Node,7,16,8,0,5,328,43,0,0,0.38,11,4
-NodeSettings,0,1,4,0,1,56,1,0,0,-1,0,2
-NodeStatus,0,0,0,0,0,22,0,0,0,-1,0,4
-PersistedState,1,6,5,0,6,154,14,0,0,1,1,1
-AppendEntries,6,1,6,0,1,111,1,0,0,0,0,1
-AppendEntriesAck,3,2,3,0,2,70,2,0,0,0,0,5
-GrantVote,0,2,3,0,2,65,2,0,0,-1,0,5
-RequestVote,0,2,4,0,2,70,2,0,0,-1,0,5
-Candidate,1,7,0,0,1,103,16,0,1,0,5,0
-Follower,0,6,0,0,1,99,14,0,1,-1,5,0
-Leader,1,9,0,0,1,204,17,0,1,0.44,5,0
-State,2,10,5,0,0,91,16,3,0,0.9,5,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RAFTiNG.Commands,ErrorStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
+RAFTiNG.Commands,ErrorStatusMessage,0,0,0,0,0,4,0,0,0,-1,0,0,,
+RAFTiNG.Commands,SendCommand<T>,3,1,3,0,1,55,1,0,0,0,0,0,,
+RAFTiNG.Services,IMiddleware,0,2,0,0,0,18,2,1,0,-1,0,1,,RAFTiNG.Node<T>
+RAFTiNG.Services,IStateMachine,0,1,0,0,0,8,1,1,0,-1,0,1,,RAFTiNG.Node<T>
+RAFTiNG,LogEntry<T>,0,5,2,0,4,88,8,0,0,-1,0,0,,
+RAFTiNG,LogExtensions,0,2,0,0,2,25,2,0,0,-1,0,0,,
+RAFTiNG,Node<T>,7,16,8,0,5,341,34,0,0,0.38,7,0,RAFTiNG.Services.IMiddleware' RAFTiNG.Services.IStateMachine' RAFTiNG.NodeSettings' RAFTiNG.NodeStatus' RAFTiNG.Messages.RequestVote' RAFTiNG.Messages.GrantVote' RAFTiNG.Messages.AppendEntriesAck,
+RAFTiNG,NodeSettings,0,1,4,0,1,46,1,0,0,-1,0,11,,RAFTiNG.Node<T>' RAFTiNG.States.Candidate<T>' RAFTiNG.States.Leader<T>' RAFTiNG.States.State<T>' RAFTiNG.Tests.BasicRaftSteps' RAFTiNG.Tests.Helpers' RAFTiNG.Tests.Unit.ClientAPITests' RAFTiNG.Tests.Unit.CommandApiTest' RAFTiNG.Tests.Unit.LogReplicationTest' RAFTiNG.Tests.Unit.BasicNodeTest' RAFTiNG.Tests.Unit.SettingsTest
+RAFTiNG,NodeStatus,0,0,0,0,0,20,0,0,0,-1,0,7,,RAFTiNG.Node<T>' RAFTiNG.States.Candidate<T>' RAFTiNG.States.Follower<T>' RAFTiNG.States.Leader<T>' RAFTiNG.Tests.BasicRaftSteps' RAFTiNG.Tests.Unit.ClientAPITests' RAFTiNG.Tests.Unit.BasicNodeTest
+RAFTiNG,PersistedState<T>,1,6,5,0,6,166,14,0,0,1,0,0,,
+RAFTiNG.Messages,AppendEntries<T>,6,1,6,0,1,133,1,0,0,0,0,0,,
+RAFTiNG.Messages,AppendEntriesAck,3,2,3,0,2,75,2,0,0,0,0,5,,RAFTiNG.Node<T>' RAFTiNG.States.Candidate<T>' RAFTiNG.States.Follower<T>' RAFTiNG.States.Leader<T>' RAFTiNG.States.State<T>
+RAFTiNG.Messages,GrantVote,0,2,3,0,2,59,2,0,0,-1,0,6,,RAFTiNG.Node<T>' RAFTiNG.States.Candidate<T>' RAFTiNG.States.Follower<T>' RAFTiNG.States.Leader<T>' RAFTiNG.States.State<T>' RAFTiNG.Tests.Unit.BasicNodeTest
+RAFTiNG.Messages,RequestVote,0,2,4,0,2,60,2,0,0,-1,0,6,,RAFTiNG.Node<T>' RAFTiNG.States.Candidate<T>' RAFTiNG.States.Follower<T>' RAFTiNG.States.Leader<T>' RAFTiNG.States.State<T>' RAFTiNG.Tests.Unit.LogReplicationTest
+RAFTiNG.States,Candidate<T>,1,7,0,0,1,136,16,0,0,0.43,5,0,RAFTiNG.Messages.RequestVote' RAFTiNG.NodeStatus' RAFTiNG.Messages.GrantVote' RAFTiNG.Messages.AppendEntriesAck' RAFTiNG.NodeSettings,
+RAFTiNG.States,Follower<T>,0,6,0,0,1,129,9,0,0,-1,4,0,RAFTiNG.Messages.RequestVote' RAFTiNG.Messages.GrantVote' RAFTiNG.Messages.AppendEntriesAck' RAFTiNG.NodeStatus,
+RAFTiNG.States,Leader<T>,1,9,0,0,1,245,17,0,0,0.67,6,0,RAFTiNG.NodeSettings' RAFTiNG.Messages.RequestVote' RAFTiNG.NodeStatus' RAFTiNG.Messages.GrantVote' RAFTiNG.Messages.AppendEntriesAck' RAFTiNG.States.LogReplicationAgent,
+RAFTiNG.States,LogReplicationAgent,7,3,2,0,3,119,7,0,0,0,0,1,,RAFTiNG.States.Leader<T>
+RAFTiNG.States,State<T>,2,10,5,0,0,98,14,0,0,0.9,4,0,RAFTiNG.Messages.RequestVote' RAFTiNG.Messages.GrantVote' RAFTiNG.Messages.AppendEntriesAck' RAFTiNG.NodeSettings,

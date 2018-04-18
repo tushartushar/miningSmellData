@@ -1,26 +1,29 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AboutPage,0,1,0,0,1,12,1,0,0,-1,0,0
-App,0,5,1,0,1,161,8,0,0,-1,1,0
-AppUtils,1,6,0,0,6,162,15,0,0,0.67,0,3
-ContinuationManager,0,0,0,0,0,112,0,0,0,-1,0,0
-IFileOpenPickerContinuable,0,0,0,0,0,15,0,1,0,-1,0,0
-IFileSavePickerContinuable,0,0,0,0,0,15,0,1,0,-1,0,0
-DataContext,3,4,6,2,3,81,4,0,0,1,0,3
-FileManager,8,8,2,0,2,221,19,0,0,0.5,2,2
-PreviewPage,5,10,1,0,1,419,22,0,1,0.4,8,0
-ViewfinderPage,8,14,1,0,2,318,36,0,1,0.14,3,0
-NavigationHelper,3,9,4,0,7,304,22,0,0,0.89,2,1
-LoadStateEventArgs,0,1,2,0,1,38,1,0,0,-1,0,1
-SaveStateEventArgs,0,1,1,0,1,21,1,0,0,-1,0,1
-ObservableDictionary,1,12,4,0,10,124,18,0,0,0.17,0,0
-RelayCommand,2,5,0,0,5,68,7,0,0,0.6,0,1
-SuspensionManager,7,7,2,0,5,199,24,0,0,0,0,2
-SuspensionManagerException,0,2,0,0,2,9,2,0,0,-1,0,0
-AbstractFilter,10,7,8,0,3,255,29,5,0,0.29,0,1
-EightiesPopSongFilter,3,5,0,0,1,98,9,0,1,0,0,0
-MarvelFilter,2,5,0,0,1,72,5,0,1,0,0,0
-OriginalImageFilter,0,2,0,0,1,12,2,0,1,-1,0,0
-SadHipsterFilter,4,2,0,0,1,26,2,0,1,0,0,0
-SixthGearFilter,6,8,0,0,1,183,18,1,1,0,0,0
-SurroundedFilter,2,6,0,0,2,93,18,0,1,0.33,1,0
-HdrControl,7,2,3,7,2,69,3,0,0,1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+FilterEffects,AboutPage,0,1,0,0,1,16,1,0,0,-1,0,0,,
+FilterEffects,App,0,5,1,0,1,150,9,0,0,-1,2,0,FilterEffects.ViewfinderPage' FilterEffects.Common.SuspensionManager,
+FilterEffects,AppUtils,1,6,0,0,6,201,12,0,0,0.5,0,3,,FilterEffects.FileManager' FilterEffects.PreviewPage' FilterEffects.ViewfinderPage
+FilterEffects,ContinuationManager,0,0,0,0,0,96,0,0,0,-1,0,0,,
+FilterEffects,IFileOpenPickerContinuable,0,0,0,0,0,11,0,1,0,-1,0,0,,
+FilterEffects,IFileSavePickerContinuable,0,0,0,0,0,11,0,1,0,-1,0,0,,
+FilterEffects,DataContext,3,4,6,2,3,81,4,0,0,1,0,3,,FilterEffects.FileManager' FilterEffects.PreviewPage' FilterEffects.ViewfinderPage
+FilterEffects,FileManager,8,8,2,0,2,235,15,0,0,0.62,2,2,FilterEffects.DataContext' FilterEffects.AppUtils,FilterEffects.PreviewPage' FilterEffects.ViewfinderPage
+FilterEffects,PreviewPage,5,10,1,0,1,415,20,0,1,0.4,8,1,FilterEffects.Common.NavigationHelper' FilterEffects.Common.LoadStateEventArgs' FilterEffects.Common.SaveStateEventArgs' FilterEffects.DataContext' FilterEffects.Filters.AbstractFilter' FilterEffects.Filters.OriginalImageFilter' FilterEffects.FileManager' FilterEffects.AppUtils,FilterEffects.ViewfinderPage
+FilterEffects,ViewfinderPage,8,14,1,0,2,361,29,0,1,0.21,5,1,FilterEffects.DataContext' FilterEffects.CameraStates' FilterEffects.AppUtils' FilterEffects.PreviewPage' FilterEffects.FileManager,FilterEffects.App
+FilterEffects,CameraStates,0,0,0,0,0,8,0,0,0,-1,0,1,,FilterEffects.ViewfinderPage
+FilterEffects.Common,NavigationHelper,3,9,4,0,7,287,21,0,0,0.89,2,1,FilterEffects.Common.RelayCommand' FilterEffects.Common.SuspensionManager,FilterEffects.PreviewPage
+FilterEffects.Common,LoadStateEventArgs,0,1,2,0,1,30,1,0,0,-1,0,1,,FilterEffects.PreviewPage
+FilterEffects.Common,SaveStateEventArgs,0,1,1,0,1,16,1,0,0,-1,0,1,,FilterEffects.PreviewPage
+FilterEffects.Common,ObservableDictionary,1,12,4,0,10,118,18,0,0,0.25,0,0,,
+FilterEffects.Common,ObservableDictionaryChangedEventArgs,0,1,2,0,1,10,1,0,0,-1,0,0,,
+FilterEffects.Common,RelayCommand,2,5,0,0,5,63,7,0,0,0.6,0,1,,FilterEffects.Common.NavigationHelper
+FilterEffects.Common,SuspensionManager,7,7,2,0,5,215,18,0,0,0,0,2,,FilterEffects.App' FilterEffects.Common.NavigationHelper
+FilterEffects.Common,SuspensionManagerException,0,2,0,0,2,10,2,0,0,-1,0,0,,
+FilterEffects.Filters,AbstractFilter,10,7,8,0,3,293,15,5,0,0.29,1,1,FilterEffects.Filters.States,FilterEffects.PreviewPage
+FilterEffects.Filters,States,0,0,0,0,0,6,0,0,0,-1,0,2,,FilterEffects.Filters.AbstractFilter' FilterEffects.Filters.SurroundedFilter
+FilterEffects.Filters,EightiesPopSongFilter,3,5,0,0,1,85,8,0,1,0,0,0,,
+FilterEffects.Filters,MarvelFilter,2,5,0,0,1,53,5,0,1,0,0,0,,
+FilterEffects.Filters,OriginalImageFilter,0,2,0,0,1,12,2,0,1,-1,0,1,,FilterEffects.PreviewPage
+FilterEffects.Filters,SadHipsterFilter,4,2,0,0,1,23,2,0,1,0,0,0,,
+FilterEffects.Filters,SixthGearFilter,6,8,0,0,1,167,11,1,1,0,0,0,,
+FilterEffects.Filters,SurroundedFilter,2,6,0,0,2,114,10,0,1,0.33,2,0,FilterEffects.Filters.States' FilterEffects.Filters.Controls.HdrControl,
+FilterEffects.Filters.Controls,HdrControl,7,2,3,7,2,91,3,0,0,1,0,1,,FilterEffects.Filters.SurroundedFilter

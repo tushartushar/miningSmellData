@@ -1,61 +1,67 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AppendResult,2,1,0,2,1,10,1,0,0,0,1,4
-Constants,14,0,0,14,0,32,0,0,0,-1,0,19
-Crc32Algorithm,6,11,1,2,6,342,17,0,0,0,0,1
-ICheckpointReader,0,2,0,0,0,5,2,3,0,-1,0,4
-ForbiddenException,0,4,0,0,3,22,4,0,0,-1,0,0
-ICheckpointWriter,0,3,0,0,0,6,3,3,0,-1,0,4
-IPageReader,0,2,0,0,0,6,2,3,0,-1,0,5
-IPageWriter,0,7,0,0,0,14,7,3,0,-1,0,3
-MessageWithId,6,2,0,5,2,21,2,0,0,0,1,9
-MessageFlags,0,0,0,0,0,7,0,0,0,-1,0,3
-ReadResult,7,0,0,7,0,10,0,0,0,-1,0,1
-DirectReadResult,4,0,0,4,0,7,0,0,0,-1,0,1
-DirectReadBulkResult,5,0,0,5,0,8,0,0,0,-1,1,1
-MessageHandlerClosure,3,0,0,3,0,6,0,0,0,-1,1,4
-ReadBulkResult,8,0,0,8,0,11,0,0,0,-1,1,1
-StorageFormat,1,4,0,1,4,61,6,0,0,0.5,3,4
-InvalidStorageFormatException,0,3,0,0,2,13,3,0,0,-1,0,0
-NoDataException,0,4,0,0,3,16,4,0,0,-1,0,0
-MessageId,7,20,0,2,15,186,26,0,0,0.2,2,6
-Subscription,1,0,4,1,0,20,0,0,0,-1,1,2
-MessageReader,5,8,0,2,7,129,39,0,0,0,8,4
-MessageResult,2,3,0,2,3,24,3,0,0,0.67,2,1
-Message,5,3,0,5,3,33,5,0,0,1,2,17
-MessageWriter,8,15,0,0,6,150,30,0,0,0,7,4
-PageReadStream,5,7,5,0,6,97,10,0,0,0.57,2,1
-Require,0,4,0,0,4,41,9,0,0,-1,0,13
-Ensure,0,1,0,0,1,11,2,0,0,-1,0,3
-TransferFormat,1,3,0,1,2,72,18,0,0,0,1,3
-CloudCheckpointReader,1,4,0,0,4,51,8,0,1,0.5,3,2
-CloudCheckpointWriter,2,5,0,0,5,41,6,0,1,0.6,4,1
-MessageCopier,8,5,0,3,5,80,10,0,0,0,5,1
-MessageFetcher,5,5,0,2,3,110,18,0,0,0.4,9,2
-CloudPageReader,1,4,0,0,4,50,6,0,1,0.5,1,2
-CloudPageWriter,5,10,0,0,9,96,18,0,1,0.2,2,1
-CloudSetup,2,6,0,2,6,59,6,0,0,0.5,12,9
-Throw,0,1,0,0,1,19,2,0,0,-1,0,2
-NonTransientAppendFailure,0,3,0,0,2,16,3,0,0,-1,0,1
-FileCheckpointArrayReader,5,4,0,0,3,48,12,0,0,0,0,3
-FileCheckpointReader,4,5,0,0,4,52,13,0,1,0,0,2
-FileCheckpointWriter,5,5,0,0,5,54,12,0,1,0,0,2
-IVolatileCheckpointVectorAccess,0,1,0,0,0,4,1,2,0,-1,0,1
-FileCheckpointArrayWriter,6,5,0,0,5,61,15,0,1,0,0,2
-FilePageReader,4,5,0,0,4,58,13,0,1,0,0,2
-FilePageWriter,5,10,0,0,9,79,16,0,1,0.2,1,2
-FileSetup,0,5,0,0,5,49,7,0,0,-1,10,2
-FixedCheckpointArrayReader,1,2,0,1,2,12,2,0,1,0,0,2
-RecyclableMemoryStreamManager,12,18,14,3,7,595,50,0,0,0.78,0,1
-IMemoryStreamManager,0,2,0,0,0,8,2,1,0,-1,0,7
-MemoryStreamFactoryManager,0,2,0,0,2,11,2,0,1,-1,0,3
-RecyclableMemoryStream,13,21,12,0,14,650,76,0,0,0.1,1,0
-MemoryCheckpointReaderWriter,1,6,0,0,6,28,6,0,1,0.33,1,2
-MemoryPageReaderWriter,2,12,0,0,11,71,16,0,1,0,1,1
-MessageIdTests,0,8,0,0,8,81,11,0,0,-1,1,0
-MessageWriterTests,2,9,0,0,8,86,11,0,0,0,3,0
-PageReadStreamTests,3,6,0,0,6,95,20,0,0,0,1,0
-SyntheticFileTests,1,2,0,0,2,30,3,0,1,0,5,0
-SyntheticMemoryTests,0,1,0,0,1,15,1,0,1,-1,2,0
-SyntheticTestBase,4,7,0,0,6,75,9,2,0,0.29,6,0
-TestEnvironment,3,2,0,1,1,17,2,0,0,1,0,1
-TransferFormatTests,0,4,0,0,2,52,11,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MessageVault,AppendResult,2,1,0,2,1,8,1,0,0,0,0,8,,MessageVault.Api.PostMessagesResponse' MessageVault.FileClient' MessageVault.MemoryClient' MessageVault.MessageWriter' MessageVault.Tests.MessageWriterTests' MessageVault.Tests.SyntheticTestBase' MessageVault.Server.Election.ApiImplementation' MessageVault.Server.Election.MessageWriteScheduler
+MessageVault,Constants,14,0,0,14,0,32,0,0,0,-1,0,20,,InteractiveConsole.Program' MessageVault.Api.PagedClient' MessageVault.Tests.PageClientTests' MessageVault.Message' MessageVault.MessageWriter' MessageVault.Cloud.CloudSetup' MessageVault.Files.FileSetup' MessageVault.Tests.SyntheticFileTests' MessageVault.Tests.SyntheticTestBase' MessageVault.Server.App' MessageVault.Server.SingleAccountFactory' MessageVault.Server.MultiAccountFactory' MessageVault.Server.Auth.AuthData' MessageVault.Server.Auth.LoadAuth' MessageVault.Server.Election.BlobLeaseWrapper' MessageVault.Server.Election.LeaderInfo' MessageVault.Server.Election.LeaderInfoPoller' MessageVault.Server.Election.RenewableBlobLease' PublisherSample.Program' StressTester.Program
+MessageVault,Crc32Algorithm,6,11,1,2,6,139,16,0,0,0,0,1,,MessageVault.Message
+MessageVault,ICheckpointReader,0,2,0,0,0,4,2,3,0,-1,0,4,,MessageVault.MessageReader' MessageVault.Cloud.MessageCopier' MessageVault.Cloud.MessageFetcher' MessageVault.Tests.SyntheticTestBase
+MessageVault,ForbiddenException,0,4,0,0,3,15,4,0,0,-1,0,0,,
+MessageVault,ICheckpointWriter,0,3,0,0,0,6,3,3,0,-1,0,4,,CqrsReplicator.EventStorePublisher' InteractiveConsole.ConsumerSample' MessageVault.MessageWriter' MessageVault.Cloud.MessageCopier
+MessageVault,IPageReader,0,2,0,0,0,5,2,4,0,-1,0,5,,MessageVault.MessageReader' MessageVault.PageReadStream' MessageVault.Cloud.MessageCopier' MessageVault.Cloud.MessageFetcher' MessageVault.Tests.PageReadStreamTests
+MessageVault,IPageWriter,0,7,0,0,0,10,7,3,0,-1,0,3,,MessageVault.MessageWriter' MessageVault.Cloud.MessageCopier' MessageVault.Tests.SyntheticTestBase
+MessageVault,MessageWithId,6,2,0,5,2,18,2,0,0,0,1,13,MessageVault.MessageId,CacheRepair.Program' InteractiveConsole.ConsumerSample' MessageVault.Api.CacheFetcher' MessageVault.Api.CacheReader' MessageVault.Api.CacheStorage' MessageVault.Api.PagedClient' MessageVault.Tests.PageClientTests' MessageVault.MessageHandlerClosure' MessageVault.StorageFormat' MessageVault.MessageReader' MessageVault.Cloud.MessageFetcher' MessageVault.Tests.SyntheticTestBase' StressTester.Program
+MessageVault,MessageFlags,0,0,0,0,0,7,0,0,0,-1,0,3,,MessageVault.Api.CacheFetcher' MessageVault.Api.PagedClient' MessageVault.Cloud.MessageFetcher
+MessageVault,ReadResult,7,0,0,7,0,9,0,0,0,-1,0,3,,Cache.Program' CacheRepair.Program' MessageVault.Api.CacheReader
+MessageVault,DirectReadResult,4,0,0,4,0,7,0,0,0,-1,0,1,,MessageVault.Cloud.MessageFetcher
+MessageVault,DirectReadBulkResult,5,0,0,5,0,8,0,0,0,-1,0,1,,MessageVault.Cloud.MessageFetcher
+MessageVault,MessageHandlerClosure,3,0,0,3,0,6,0,0,0,-1,1,1,MessageVault.MessageWithId,CacheRepair.Program
+MessageVault,ReadBulkResult,8,0,0,8,0,11,0,0,0,-1,0,2,,CacheRepair.Program' MessageVault.Api.CacheReader
+MessageVault,StorageFormat,1,4,0,1,4,58,6,0,0,0.5,3,4,MessageVault.Message' MessageVault.MessageId' MessageVault.MessageWithId,MessageVault.Api.CacheFetcher' MessageVault.MessageReader' MessageVault.MessageWriter' MessageVault.Cloud.MessageFetcher
+MessageVault,InvalidStorageFormatException,0,3,0,0,2,9,3,0,0,-1,0,0,,
+MessageVault,NoDataException,0,4,0,0,3,10,4,0,0,-1,0,0,,
+MessageVault,MessageId,7,20,0,2,15,154,26,0,0,0.15,2,9,MessageVault.Ensure' MessageVault.Require,CacheRepair.Program' MessageVault.Api.CacheStorage' MessageVault.Api.PostMessagesResponse' MessageVault.MessageWithId' MessageVault.StorageFormat' MessageVault.MessageWriter' MessageVault.Cloud.MessageFetcher' MessageVault.Tests.MessageIdTests' MessageVault.Tests.SyntheticTestBase
+MessageVault,Subscription,1,0,4,1,0,7,0,0,0,-1,0,2,,MessageVault.Api.PagedClient' MessageVault.MessageReader
+MessageVault,MessageReader,5,8,0,2,7,146,15,0,0,0,8,10,MessageVault.ICheckpointReader' MessageVault.IPageReader' MessageVault.MessageWithId' MessageVault.Require' MessageVault.PageReadStream' MessageVault.StorageFormat' MessageVault.MessageResult' MessageVault.Subscription,InteractiveConsole.ConsumerSample' MessageVault.Api.PagedClient' MessageVault.Api.CloudClient' MessageVault.FileClient' MessageVault.MemoryClient' MessageVault.Cloud.CloudSetup' MessageVault.Files.FileSetup' MessageVault.Tests.SyntheticFileTests' MessageVault.Tests.SyntheticTestBase' StressTester.Program
+MessageVault,MessageResult,2,3,0,2,3,17,3,0,0,0.67,1,4,MessageVault.Require,InteractiveConsole.ConsumerSample' MessageVault.MessageReader' MessageVault.Tests.SyntheticTestBase' StressTester.Program
+MessageVault,Message,5,3,0,5,3,29,5,0,0,0.67,2,13,MessageVault.Constants' MessageVault.Crc32Algorithm,CqrsReplicator.EventStorePublisher' InteractiveConsole.Program' MessageVault.Api.PagedClient' MessageVault.MemoryClientTests' MessageVault.StorageFormat' MessageVault.MessageWriter' MessageVault.TransferFormat' MessageVault.Tests.MessageWriterTests' MessageVault.Tests.SyntheticTestBase' MessageVault.Tests.TransferFormatTests' MessageVault.Server.Election.MessageWriteScheduler' PublisherSample.Program' StressTester.Program
+MessageVault,MessageWriter,8,15,0,0,6,137,25,0,0,0,7,11,MessageVault.IPageWriter' MessageVault.ICheckpointWriter' MessageVault.MessageId' MessageVault.Message' MessageVault.Constants' MessageVault.StorageFormat' MessageVault.AppendResult,MessageVault.FileClient' MessageVault.Locked' MessageVault.MemoryClient' MessageVault.InMemStream' MessageVault.Cloud.CloudSetup' MessageVault.Files.FileSetup' MessageVault.Tests.MessageWriterTests' MessageVault.Tests.SyntheticFileTests' MessageVault.Tests.SyntheticMemoryTests' MessageVault.Tests.SyntheticTestBase' MessageVault.Server.Election.MessageWriteScheduler
+MessageVault,PageReadStream,5,7,5,0,6,82,10,0,0,0.57,2,2,MessageVault.IPageReader' MessageVault.Require,MessageVault.MessageReader' MessageVault.Tests.PageReadStreamTests
+MessageVault,Require,0,4,0,0,4,39,9,0,0,-1,0,13,,MessageVault.MessageId' MessageVault.MessageReader' MessageVault.MessageResult' MessageVault.PageReadStream' MessageVault.Cloud.CloudCheckpointReader' MessageVault.Cloud.CloudCheckpointWriter' MessageVault.Cloud.CloudPageReader' MessageVault.Cloud.CloudPageWriter' MessageVault.Files.FilePageWriter' MessageVault.Memory.MemoryCheckpointReaderWriter' MessageVault.Memory.MemoryPageReaderWriter' MessageVault.Server.Election.LeaderLock' MessageVault.Server.Election.RenewableBlobLease
+MessageVault,Ensure,0,1,0,0,1,9,2,0,0,-1,0,3,,MessageVault.MessageId' MessageVault.Cloud.CloudCheckpointReader' MessageVault.Cloud.CloudCheckpointWriter
+MessageVault,TransferFormat,1,3,0,1,2,66,5,0,0,0,1,3,MessageVault.Message,MessageVault.Api.CloudClient' MessageVault.Tests.TransferFormatTests' MessageVault.Server.ApiModule
+MessageVault.Cloud,CloudCheckpointReader,1,4,0,0,4,54,6,0,1,0.5,3,2,MessageVault.Require' MessageVault.Cloud.CloudSetup' MessageVault.Ensure,MessageVault.Api.CacheFetcher' MessageVault.Cloud.CloudSetup
+MessageVault.Cloud,CloudCheckpointWriter,2,5,0,0,5,35,6,0,1,0.6,4,1,MessageVault.Require' MessageVault.Cloud.CloudSetup' MessageVault.Ensure' MessageVault.Cloud.Throw,MessageVault.Cloud.CloudSetup
+MessageVault.Cloud,MessageCopier,8,5,0,3,5,100,8,0,0,0,6,1,MessageVault.IPageReader' MessageVault.ICheckpointReader' MessageVault.MemoryPool.IMemoryStreamManager' MessageVault.IPageWriter' MessageVault.ICheckpointWriter' MessageVault.Cloud.CopyResult,MessageVault.Cloud.CloudSetup
+MessageVault.Cloud,CopyResult,4,1,0,4,1,13,1,0,0,0,0,1,,MessageVault.Cloud.MessageCopier
+MessageVault.Cloud,MessageFetcher,5,5,0,2,3,133,7,0,0,0,9,2,MessageVault.IPageReader' MessageVault.ICheckpointReader' MessageVault.MemoryPool.IMemoryStreamManager' MessageVault.StorageFormat' MessageVault.MessageWithId' MessageVault.DirectReadBulkResult' MessageVault.DirectReadResult' MessageVault.MessageId' MessageVault.MessageFlags,MessageVault.Cloud.CloudSetup' MessageVault.Files.FileSetup
+MessageVault.Cloud,CloudPageReader,1,4,0,0,4,52,4,0,1,0.5,1,2,MessageVault.Require,MessageVault.Api.CacheFetcher' MessageVault.Cloud.CloudSetup
+MessageVault.Cloud,CloudPageWriter,5,10,0,0,9,95,15,0,1,0.2,2,1,MessageVault.Require' MessageVault.Cloud.Throw,MessageVault.Cloud.CloudSetup
+MessageVault.Cloud,CloudSetup,2,6,0,2,6,56,6,0,0,0.5,11,9,MessageVault.Cloud.CloudPageWriter' MessageVault.Cloud.CloudCheckpointWriter' MessageVault.MessageWriter' MessageVault.Constants' MessageVault.Cloud.CloudCheckpointReader' MessageVault.Cloud.CloudPageReader' MessageVault.MessageReader' MessageVault.MemoryPool.IMemoryStreamManager' MessageVault.Cloud.MessageFetcher' MessageVault.Cloud.MessageCopier' MessageVault.Files.FileSetup,MessageVault.Api.CacheFetcher' MessageVault.Api.CloudClient' MessageVault.Cloud.CloudCheckpointReader' MessageVault.Cloud.CloudCheckpointWriter' MessageVault.Tests.MessageWriterTests' MessageVault.Server.SingleAccountFactory' MessageVault.Server.MultiAccountFactory' MessageVault.Server.Election.ApiImplementation' MessageVault.Server.Election.MessageWriteScheduler
+MessageVault.Cloud,Throw,0,1,0,0,1,18,1,0,0,-1,0,2,,MessageVault.Cloud.CloudCheckpointWriter' MessageVault.Cloud.CloudPageWriter
+MessageVault.Cloud,NonTransientAppendFailure,0,3,0,0,2,9,3,0,0,-1,0,0,,
+MessageVault.Files,FileCheckpointArrayReader,5,4,0,0,3,52,9,0,0,0,0,3,,CacheRepair.Program' MessageVault.Api.CacheFetcher' MessageVault.Api.CacheReader
+MessageVault.Files,FileCheckpointReader,4,5,0,0,4,48,10,0,1,0,0,2,,MessageVault.Files.FileSetup' MessageVault.Tests.SyntheticFileTests
+MessageVault.Files,FileCheckpointWriter,5,5,0,0,5,56,9,0,1,0,0,2,,MessageVault.Files.FileSetup' MessageVault.Tests.SyntheticFileTests
+MessageVault.Files,IVolatileCheckpointVectorAccess,0,1,0,0,0,3,1,2,0,-1,0,1,,MessageVault.Api.CacheReader
+MessageVault.Files,FileCheckpointArrayWriter,6,5,0,0,5,67,9,0,1,0,0,2,,CacheRepair.Program' MessageVault.Api.CacheFetcher
+MessageVault.Files,FilePageReader,4,5,0,0,4,58,11,0,1,0,0,2,,MessageVault.Files.FileSetup' MessageVault.Tests.SyntheticFileTests
+MessageVault.Files,FilePageWriter,5,10,0,0,9,69,14,0,1,0.2,1,2,MessageVault.Require,MessageVault.Files.FileSetup' MessageVault.Tests.SyntheticFileTests
+MessageVault.Files,FileSetup,0,5,0,0,5,47,7,0,0,-1,9,2,MessageVault.MessageWriter' MessageVault.Files.FilePageWriter' MessageVault.Files.FileCheckpointWriter' MessageVault.Constants' MessageVault.MessageReader' MessageVault.Files.FilePageReader' MessageVault.Files.FileCheckpointReader' MessageVault.MemoryPool.IMemoryStreamManager' MessageVault.Cloud.MessageFetcher,MessageVault.FileClient' MessageVault.Cloud.CloudSetup
+MessageVault.Files,FixedCheckpointArrayReader,1,2,0,1,2,9,2,0,1,0,0,1,,MessageVault.Api.CacheReader
+MessageVault.MemoryPool,RecyclableMemoryStreamManager,12,18,14,3,7,624,45,0,0,0.56,4,1,MessageVault.MemoryPool.Events' MessageVault.MemoryPool.MemoryStreamBufferType' MessageVault.MemoryPool.MemoryStreamDiscardReason' MessageVault.MemoryPool.RecyclableMemoryStream,MessageVault.MemoryPool.RecyclableMemoryStream
+MessageVault.MemoryPool,Events,1,11,0,1,11,100,11,0,0,1,2,2,MessageVault.MemoryPool.MemoryStreamBufferType' MessageVault.MemoryPool.MemoryStreamDiscardReason,MessageVault.MemoryPool.RecyclableMemoryStreamManager' MessageVault.MemoryPool.RecyclableMemoryStream
+MessageVault.MemoryPool,MemoryStreamBufferType,0,0,0,0,0,5,0,0,0,-1,0,2,,MessageVault.MemoryPool.RecyclableMemoryStreamManager' MessageVault.MemoryPool.Events
+MessageVault.MemoryPool,MemoryStreamDiscardReason,0,0,0,0,0,5,0,0,0,-1,0,2,,MessageVault.MemoryPool.RecyclableMemoryStreamManager' MessageVault.MemoryPool.Events
+MessageVault.MemoryPool,IMemoryStreamManager,0,2,0,0,0,5,2,1,0,-1,0,7,,MessageVault.Api.CacheManager' MessageVault.Api.CacheFetcher' MessageVault.Api.PagedClient' MessageVault.Cloud.MessageCopier' MessageVault.Cloud.MessageFetcher' MessageVault.Cloud.CloudSetup' MessageVault.Files.FileSetup
+MessageVault.MemoryPool,MemoryStreamFactoryManager,0,2,0,0,2,8,2,0,1,-1,0,0,,
+MessageVault.MemoryPool,RecyclableMemoryStream,13,21,12,0,14,679,64,0,0,0.1,3,1,MessageVault.MemoryPool.RecyclableMemoryStreamManager' MessageVault.MemoryPool.Events' MessageVault.MemoryPool.BlockAndOffset,MessageVault.MemoryPool.RecyclableMemoryStreamManager
+MessageVault.MemoryPool,BlockAndOffset,2,1,0,2,1,10,1,0,0,0,0,1,,MessageVault.MemoryPool.RecyclableMemoryStream
+MessageVault.Memory,MemoryCheckpointReaderWriter,1,6,0,0,6,22,6,0,1,0.33,1,3,MessageVault.Require,InteractiveConsole.Program' MessageVault.InMemStream' MessageVault.Tests.SyntheticMemoryTests
+MessageVault.Memory,MemoryPageReaderWriter,2,12,0,0,11,61,14,0,1,0,1,2,MessageVault.Require,MessageVault.InMemStream' MessageVault.Tests.SyntheticMemoryTests
+MessageVault.Tests,MessageIdTests,0,8,0,0,8,80,11,0,0,-1,1,0,MessageVault.MessageId,
+MessageVault.Tests,MessageWriterTests,2,9,0,0,8,69,11,0,0,0,5,0,MessageVault.Message' MessageVault.Tests.TestEnvironment' MessageVault.Cloud.CloudSetup' MessageVault.MessageWriter' MessageVault.AppendResult,
+MessageVault.Tests,PageReadStreamTests,3,6,0,0,6,84,7,0,0,0,2,0,MessageVault.IPageReader' MessageVault.PageReadStream,
+MessageVault.Tests,MemoryPageReader,1,4,0,0,4,19,4,0,1,0,0,0,,
+MessageVault.Tests,SyntheticFileTests,1,2,0,0,2,28,3,0,1,0,7,0,MessageVault.Files.FilePageWriter' MessageVault.Files.FilePageReader' MessageVault.Files.FileCheckpointReader' MessageVault.Files.FileCheckpointWriter' MessageVault.Constants' MessageVault.MessageWriter' MessageVault.MessageReader,
+MessageVault.Tests,SyntheticMemoryTests,0,1,0,0,1,13,1,0,1,-1,3,0,MessageVault.Memory.MemoryPageReaderWriter' MessageVault.Memory.MemoryCheckpointReaderWriter' MessageVault.MessageWriter,
+MessageVault.Tests,SyntheticTestBase,4,7,0,0,6,75,9,2,0,0.29,10,0,MessageVault.MessageWriter' MessageVault.MessageReader' MessageVault.IPageWriter' MessageVault.ICheckpointReader' MessageVault.Message' MessageVault.AppendResult' MessageVault.MessageResult' MessageVault.MessageWithId' MessageVault.MessageId' MessageVault.Constants,
+MessageVault.Tests,TestEnvironment,3,2,0,1,1,19,2,0,0,1,0,1,,MessageVault.Tests.MessageWriterTests
+MessageVault.Tests,TransferFormatTests,0,4,0,0,2,49,7,0,0,-1,2,0,MessageVault.Message' MessageVault.TransferFormat,

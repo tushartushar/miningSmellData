@@ -1,25 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BufferMessages,3,5,0,0,3,36,6,0,1,0,1,0
-Combiner,1,2,0,0,2,12,2,0,1,0,2,1
-CriticalSection,3,7,0,0,7,39,8,0,1,0.71,0,0
-EventAggregator,2,3,0,0,3,19,3,0,0,0,4,2
-IMessagePublisher,0,1,0,0,0,4,1,1,0,-1,0,0
-InMemQueue,1,3,0,0,3,24,3,0,1,0.67,0,1
-IQueue,0,3,0,0,0,6,3,2,0,-1,0,1
-MessagePublisher,1,2,0,0,2,12,2,0,1,0,0,0
-NullConsumer,0,1,0,0,1,6,1,0,1,-1,0,0
-Produces,0,1,0,0,0,4,1,4,0,-1,0,3
-QueueReader,5,6,0,0,5,63,11,0,1,0,1,1
-QueueWriter,1,2,0,0,2,12,2,0,1,0,0,1
-UnableToAcquireLockException,0,0,0,0,0,3,0,0,0,-1,0,0
-Multiplexor,1,5,0,0,5,23,5,0,1,0.4,1,2
-ThreadBoundary,3,4,0,0,3,44,6,0,1,0,0,0
-ByTypeDispatcher,1,3,0,0,2,29,6,0,1,0.67,2,1
-Message,0,0,0,0,0,3,0,0,0,-1,0,3
-Consumes,0,1,0,0,0,4,1,6,0,-1,0,7
-WideningConsumer,1,3,0,0,3,18,4,0,1,0,1,1
-NarrowingConsumer,1,3,0,0,3,18,4,0,1,0,0,0
-PipeAdapter,2,3,0,0,2,18,3,0,1,0,2,0
-Pipe,0,0,0,0,0,3,0,7,1,-1,0,0
-Extensions,0,4,0,0,4,29,7,0,0,-1,3,0
-ActionWrappingConsumer,1,2,0,0,2,14,3,0,1,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+pvc.Core,BufferMessages<T>,3,5,0,0,3,36,6,0,1,0,1,0,pvc.Core.Consumes,
+pvc.Core,Combiner<TBase>,1,2,0,0,2,12,2,0,1,0,1,0,pvc.Core.Consumes,
+pvc.Core,CriticalSection<T>,3,7,0,0,7,43,8,0,1,0.71,1,0,pvc.Core.Consumes,
+pvc.Core,EventAggregator<TBase>,2,3,0,0,3,19,3,0,0,0,2,0,pvc.Core.Produces' pvc.Core.Consumes,
+pvc.Core,IMessagePublisher,0,1,0,0,0,4,1,1,0,-1,0,0,,
+pvc.Core,InMemQueue<T>,1,3,0,0,3,24,3,0,1,0.67,0,0,,
+pvc.Core,IQueue,0,3,0,0,0,6,3,1,0,-1,0,2,,pvc.Core.QueueReader<T>' pvc.Core.QueueWriter<T>
+pvc.Core,MessagePublisher<T>,1,2,0,0,2,12,2,0,1,0,1,0,pvc.Core.Consumes,
+pvc.Core,NullConsumer<T>,0,1,0,0,1,6,1,0,1,-1,0,0,,
+pvc.Core,Produces,0,1,0,0,0,4,1,4,0,-1,1,3,pvc.Core.Consumes,pvc.Core.EventAggregator<TBase>' pvc.Core.PipeAdapter<TIn;TOut>' pvc.Core.Extensions
+pvc.Core,QueueReader<T>,5,6,0,0,5,69,10,0,1,0,2,0,pvc.Core.IQueue' pvc.Core.Consumes,
+pvc.Core,QueueWriter<T>,1,2,0,0,2,12,2,0,1,0,1,0,pvc.Core.IQueue,
+pvc.Core,UnableToAcquireLockException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+pvc.Core,Multiplexor<T>,1,5,0,0,5,23,5,0,1,0.4,1,0,pvc.Core.Consumes,
+pvc.Core,ThreadBoundary<T>,3,4,0,0,3,47,5,0,1,0,1,0,pvc.Core.Consumes,
+pvc.Core,ByTypeDispatcher<TBaseMessage>,1,3,0,0,2,32,5,0,1,0.67,1,0,pvc.Core.Consumes,
+pvc.Core,Message,0,0,0,0,0,1,0,0,0,-1,0,0,,
+pvc.Core,Consumes,0,1,0,0,0,4,1,5,0,-1,0,15,,pvc.Core.BufferMessages<T>' pvc.Core.Combiner<TBase>' pvc.Core.CriticalSection<T>' pvc.Core.EventAggregator<TBase>' pvc.Core.MessagePublisher<T>' pvc.Core.Produces' pvc.Core.QueueReader<T>' pvc.Core.Multiplexor<T>' pvc.Core.ThreadBoundary<T>' pvc.Core.ByTypeDispatcher<TBaseMessage>' pvc.Core.WideningConsumer<TConsumes;TProduces>' pvc.Core.NarrowingConsumer<TConsumes;TProduces>' pvc.Core.PipeAdapter<TIn;TOut>' pvc.Core.Extensions' pvc.Projections.ProjectionHost
+pvc.Core,WideningConsumer<TConsumes;TProduces>,1,3,0,0,3,19,4,0,1,0,1,0,pvc.Core.Consumes,
+pvc.Core,NarrowingConsumer<TConsumes;TProduces>,1,3,0,0,3,19,4,0,1,0,1,0,pvc.Core.Consumes,
+pvc.Core,PipeAdapter<TIn;TOut>,2,3,0,0,2,18,3,0,1,0,2,0,pvc.Core.Consumes' pvc.Core.Produces,
+pvc.Core,Pipe,0,0,0,0,0,3,0,7,1,-1,0,0,,
+pvc.Core,Extensions,0,4,0,0,4,25,8,0,0,-1,2,0,pvc.Core.Consumes' pvc.Core.Produces,
+pvc.Core,ActionWrappingConsumer<T>,1,2,0,0,2,12,3,0,1,0,0,0,,

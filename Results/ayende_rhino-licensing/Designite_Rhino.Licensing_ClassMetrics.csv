@@ -1,18 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AbstractLicenseValidator,11,19,12,0,4,472,57,2,0,0.11,8,0
-FloatingLicenseNotAvailableException,0,4,0,0,3,35,4,0,1,-1,0,0
-LicenseExpiredException,0,4,0,0,4,35,4,0,1,-1,0,0
-InvalidationType,0,0,0,0,0,14,0,0,0,-1,0,1
-StringLicenseValidator,0,1,1,0,1,22,1,0,1,-1,0,0
-ILicensingService,0,1,0,0,0,16,1,1,0,-1,0,1
-ISubscriptionLicensingService,0,1,0,0,0,14,1,0,0,-1,0,1
-LicenseFileNotFoundException,0,4,0,0,3,37,4,0,1,-1,0,0
-LicenseGenerator,1,6,0,0,4,121,11,0,0,0.33,1,2
-LicenseType,0,0,0,0,0,30,0,0,0,-1,0,5
-LicenseValidator,2,4,1,0,4,63,5,0,1,0,0,2
-LicenseNotFoundException,0,4,0,0,3,36,4,0,1,-1,0,0
-LicensingService,3,9,2,0,2,160,34,0,1,0,3,0
-RhinoLicensingException,0,4,0,0,0,36,4,4,0,-1,0,0
-SntpClient,3,12,0,0,2,168,24,0,0,0,0,1
-DiscoveryClient,3,3,0,0,2,34,3,0,0,0,0,1
-DiscoveryHost,4,7,0,0,2,123,19,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Rhino.Licensing,AbstractLicenseValidator,11,20,12,0,4,535,58,2,0,0.1,9,1,Rhino.Licensing.Discovery.DiscoveryHost' Rhino.Licensing.Discovery.DiscoveryClient' Rhino.Licensing.LicenseType' Rhino.Licensing.InvalidationType' Rhino.Licensing.Discovery.ClientDiscoveredEventArgs' Rhino.Licensing.MultipleLicenseUsage' Rhino.Licensing.ISubscriptionLicensingService' Rhino.Licensing.SntpClient' Rhino.Licensing.ILicensingService,Rhino.Licensing.LicenseValidator
+Rhino.Licensing,MultipleLicenseUsage,0,0,0,0,0,11,0,0,0,-1,0,1,,Rhino.Licensing.AbstractLicenseValidator
+Rhino.Licensing,FloatingLicenseNotAvailableException,0,4,0,0,3,37,4,0,1,-1,0,0,,
+Rhino.Licensing,LicenseExpiredException,0,4,0,0,4,32,4,0,1,-1,0,0,,
+Rhino.Licensing,InvalidationType,0,0,0,0,0,11,0,0,0,-1,0,2,,Rhino.Licensing.AbstractLicenseValidator' Rhino.Licensing.Tests.Duplicate_license
+Rhino.Licensing,StringLicenseValidator,0,1,1,0,1,20,1,0,1,-1,0,1,,Rhino.Licensing.Tests.DummySubscriptionLicensingService
+Rhino.Licensing,ILicensingService,0,1,0,0,0,13,1,1,0,-1,0,2,,Rhino.Licensing.AbstractLicenseValidator' Rhino.Licensing.Tests.Can_use_floating_licenses
+Rhino.Licensing,ISubscriptionLicensingService,0,1,0,0,0,11,1,2,0,-1,0,2,,Rhino.Licensing.AbstractLicenseValidator' Rhino.Licensing.Tests.Can_use_subscription_license
+Rhino.Licensing,LicenseFileNotFoundException,0,4,0,0,3,37,4,0,1,-1,0,0,,
+Rhino.Licensing,LicenseGenerator,1,6,0,0,4,122,7,0,0,0,1,7,Rhino.Licensing.LicenseType,Rhino.Licensing.LicensingService' Rhino.Licensing.AdminTool.Services.ExportService' Rhino.Licensing.Tests.Can_generate_and_validate_key' Rhino.Licensing.Tests.Can_use_floating_licenses' Rhino.Licensing.Tests.Can_use_subscription_license' Rhino.Licensing.Tests.DummySubscriptionLicensingService' Rhino.Licensing.Tests.Duplicate_license
+Rhino.Licensing,LicenseType,0,0,0,0,0,27,0,0,0,-1,0,13,,Rhino.Licensing.AbstractLicenseValidator' Rhino.Licensing.LicenseGenerator' Rhino.Licensing.LicensingService' Rhino.Licensing.AdminTool.Model.License' Rhino.Licensing.AdminTool.ViewModels.IssueLicenseViewModel' Rhino.Licensing.Tests.Can_generate_and_validate_key' Rhino.Licensing.Tests.Can_use_floating_licenses' Rhino.Licensing.Tests.Can_use_subscription_license' Rhino.Licensing.Tests.DummySubscriptionLicensingService' Rhino.Licensing.Tests.Duplicate_license' Rhino.Licensing.AdminTool.Tests.Services.ExportServiceTests' Rhino.Licensing.AdminTool.Tests.Services.ProjectServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests
+Rhino.Licensing,LicenseValidator,2,4,1,0,4,68,5,0,1,0,1,6,Rhino.Licensing.AbstractLicenseValidator,Rhino.Licensing.LicensingService' Rhino.Licensing.Tests.Can_generate_and_validate_key' Rhino.Licensing.Tests.Can_check_trial_date' Rhino.Licensing.Tests.Can_use_floating_licenses' Rhino.Licensing.Tests.Can_use_subscription_license' Rhino.Licensing.Tests.Duplicate_license
+Rhino.Licensing,LicenseNotFoundException,0,4,0,0,3,37,4,0,1,-1,0,0,,
+Rhino.Licensing,LicensingService,3,9,2,0,2,186,18,0,1,0,3,1,Rhino.Licensing.LicenseValidator' Rhino.Licensing.LicenseType' Rhino.Licensing.LicenseGenerator,Rhino.Licensing.Tests.Can_use_floating_licenses
+Rhino.Licensing,RhinoLicensingException,0,4,0,0,0,38,4,4,0,-1,0,0,,
+Rhino.Licensing,SntpClient,3,12,0,0,2,176,20,0,0,0,1,1,Rhino.Licensing.State,Rhino.Licensing.AbstractLicenseValidator
+Rhino.Licensing,State,0,1,4,0,1,14,1,0,0,-1,0,1,,Rhino.Licensing.SntpClient
+Rhino.Licensing.Discovery,DiscoveryClient,3,3,0,0,2,34,3,0,0,0,0,1,,Rhino.Licensing.AbstractLicenseValidator
+Rhino.Licensing.Discovery,DiscoveryHost,5,8,0,0,2,139,11,0,0,0.25,1,1,Rhino.Licensing.Discovery.ClientDiscoveredEventArgs,Rhino.Licensing.AbstractLicenseValidator
+Rhino.Licensing.Discovery,ClientDiscoveredEventArgs,0,0,4,0,0,19,0,0,0,-1,0,2,,Rhino.Licensing.AbstractLicenseValidator' Rhino.Licensing.Discovery.DiscoveryHost

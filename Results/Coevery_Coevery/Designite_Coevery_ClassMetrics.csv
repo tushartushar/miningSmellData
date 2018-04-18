@@ -1,21 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CommandHostContext,0,0,7,0,0,31,0,0,0,-1,4,3
-CommandHostContextProvider,3,7,0,0,3,101,19,0,1,0,3,0
-ICommandHostContextProvider,0,2,0,0,0,5,2,1,0,-1,1,1
-Logger,2,2,0,0,2,17,3,0,0,0,0,91
-CoeveryHost,3,12,0,0,3,229,36,0,0,0,7,1
-ICoeveryParametersParser,0,1,0,0,0,4,1,1,0,-1,1,0
-CoeveryParameters,0,0,7,0,0,31,0,0,0,-1,0,2
-CoeveryParametersParser,0,1,0,0,1,53,26,0,1,-1,1,2
-Program,1,1,0,0,1,9,1,0,0,0,1,0
-ICommandLineParser,0,1,0,0,0,4,1,1,0,-1,0,0
-CommandLineParser,0,4,0,0,1,126,25,0,1,-1,0,2
-ICommandParametersParser,0,1,0,0,0,4,1,1,0,-1,0,0
-CommandParametersParser,0,1,0,0,1,26,4,0,1,-1,0,3
-CommandParameters,0,0,2,0,0,11,0,0,0,-1,0,2
-CommandSwitch,0,0,2,0,0,11,0,0,0,-1,0,0
-CommandReturnCodes,0,0,0,0,0,9,0,0,0,-1,0,4
-CommandHost,1,11,0,0,7,101,14,0,0,0.36,6,2
-ResponseFiles,0,1,0,0,1,11,3,0,0,-1,0,1
-ResponseLine,0,0,4,0,0,19,0,0,0,-1,0,1
-ResponseFileReader,0,1,0,0,1,19,5,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coevery.HostContext,CommandHostContext,0,0,7,0,0,9,0,0,0,-1,0,3,,Coevery.HostContext.CommandHostContextProvider' Coevery.HostContext.ICommandHostContextProvider' Coevery.CoeveryHost
+Coevery.HostContext,CommandHostContextProvider,3,7,0,0,3,93,19,0,1,0,7,0,Coevery.HostContext.CommandHostContext' Coevery.Host.CommandReturnCodes' Coevery.Host.CommandHost' Coevery.CoeveryParametersParser' Coevery.Parameters.CommandParametersParser' Coevery.CoeveryParameters' Coevery.Logger,
+Coevery.HostContext,ICommandHostContextProvider,0,2,0,0,0,4,2,1,0,-1,1,1,Coevery.HostContext.CommandHostContext,Coevery.CoeveryHost
+Coevery,Logger,2,2,0,0,2,14,3,0,0,0,0,2,,Coevery.HostContext.CommandHostContextProvider' Coevery.Host.CommandHost
+Coevery,CoeveryHost,3,12,0,0,3,220,21,0,0,0,9,1,Coevery.HostContext.ICommandHostContextProvider' Coevery.Host.CommandReturnCodes' Coevery.HostContext.CommandHostContext' Coevery.CoeveryParameters' Coevery.Host.CommandHost' Coevery.ResponseFiles.ResponseFiles' Coevery.CoeveryParametersParser' Coevery.Parameters.CommandParametersParser' Coevery.Parameters.CommandLineParser,Coevery.Program
+Coevery,ICoeveryParametersParser,0,1,0,0,0,3,1,1,0,-1,1,0,Coevery.Parameters.CommandParameters,
+Coevery,CoeveryParameters,0,0,7,0,0,9,0,0,0,-1,0,4,,Coevery.HostContext.CommandHostContextProvider' Coevery.CoeveryHost' Coevery.CoeveryParametersParser' Coevery.Host.CommandHost
+Coevery,CoeveryParametersParser,0,1,0,0,1,52,6,0,1,-1,2,3,Coevery.CoeveryParameters' Coevery.Parameters.CommandParameters,Coevery.HostContext.CommandHostContextProvider' Coevery.CoeveryHost' Coevery.Host.CommandHost
+Coevery,Program,1,1,0,0,1,7,1,0,0,0,1,0,Coevery.CoeveryHost,
+Coevery.Parameters,ICommandLineParser,0,1,0,0,0,3,1,1,0,-1,0,0,,
+Coevery.Parameters,CommandLineParser,0,4,0,0,1,100,11,0,1,-1,1,4,Coevery.Parameters.State,Coevery.Specs.Bindings.CommandLine' Coevery.CoeveryHost' Coevery.ResponseFiles.ResponseFileReader' Coevery.Tests.CommandLineParseTests
+Coevery.Parameters,State,4,5,4,0,5,29,6,0,0,0.8,0,1,,Coevery.Parameters.CommandLineParser
+Coevery.Parameters,ICommandParametersParser,0,1,0,0,0,3,1,1,0,-1,0,0,,
+Coevery.Parameters,CommandParametersParser,0,1,0,0,1,25,4,0,1,-1,1,4,Coevery.Parameters.CommandParameters,Coevery.Specs.Bindings.CommandLine' Coevery.HostContext.CommandHostContextProvider' Coevery.CoeveryHost' Coevery.Host.CommandHost
+Coevery.Parameters,CommandParameters,0,0,2,0,0,4,0,0,0,-1,0,4,,Coevery.Specs.Bindings.CommandLine' Coevery.ICoeveryParametersParser' Coevery.CoeveryParametersParser' Coevery.Parameters.CommandParametersParser
+Coevery.Parameters,CommandSwitch,0,0,2,0,0,4,0,0,0,-1,0,0,,
+Coevery.Host,CommandReturnCodes,0,0,0,0,0,5,0,0,0,-1,0,3,,Coevery.HostContext.CommandHostContextProvider' Coevery.CoeveryHost' Coevery.Host.CommandHost
+Coevery.Host,CommandHost,1,11,0,0,7,75,15,0,0,0.36,6,2,Coevery.Host.CommandReturnCodes' Coevery.CoeveryParameters' Coevery.Logger' Coevery.ResponseFiles.ResponseLine' Coevery.CoeveryParametersParser' Coevery.Parameters.CommandParametersParser,Coevery.HostContext.CommandHostContextProvider' Coevery.CoeveryHost
+Coevery.ResponseFiles,ResponseFiles,0,1,0,0,1,10,3,0,0,-1,1,1,Coevery.ResponseFiles.ResponseFileReader,Coevery.CoeveryHost
+Coevery.ResponseFiles,ResponseLine,0,0,4,0,0,6,0,0,0,-1,0,1,,Coevery.Host.CommandHost
+Coevery.ResponseFiles,ResponseFileReader,0,1,0,0,1,17,1,0,0,-1,1,1,Coevery.Parameters.CommandLineParser,Coevery.ResponseFiles.ResponseFiles

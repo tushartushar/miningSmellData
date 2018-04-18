@@ -1,30 +1,34 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AnimatedScrollBehaviour,15,23,0,6,13,186,29,0,1,0.26,1,0
-DragBehaviour,6,16,0,4,8,162,26,0,0,0.19,0,0
-FrameworkElementAttachedBehaviourBase,0,8,1,0,4,60,11,3,0,-1,0,0
-TextBoxCommandTriggers,0,0,0,0,0,8,0,0,0,-1,0,1
-TextBoxCommandBehaviour,5,17,1,4,9,153,52,0,1,0.12,2,0
-TreeViewSelectionBehaviour,4,14,0,3,7,92,18,0,1,0.29,1,0
-WindowSettings,3,10,1,1,2,138,16,0,0,0.3,1,0
-DispatchedObservableCollection,4,7,1,0,4,99,18,0,0,0.86,1,0
-DispatchEvent,1,4,0,0,4,42,7,0,0,0.5,1,2
-DispatchHandler,3,4,3,0,4,72,6,0,0,0.5,0,1
-ReadOnlyDispatchedObservableCollection,2,3,0,0,1,54,3,0,0,1,1,1
-ZoomContentPresenter,1,2,1,0,0,35,2,0,0,1,0,2
-ZoomControl,25,29,18,16,6,548,91,0,0,0.17,3,0
-ZoomControlModes,0,0,0,0,0,15,0,0,0,-1,0,2
-ZoomViewModifierMode,0,0,0,0,0,23,0,0,0,-1,0,2
-BoolToVisibilityConverter,0,2,0,0,2,33,4,0,0,-1,0,0
-DoubleToLog10Converter,0,2,0,0,2,15,2,0,0,-1,0,0
-EqualityToBooleanConverter,0,2,0,0,2,15,2,0,0,-1,0,0
-ExtLogicalTreeHelper,0,3,0,0,3,55,6,0,0,-1,0,0
-ExtVisualTreeHelper,0,2,0,0,1,18,4,0,0,-1,0,0
-TreeViewHelper,0,4,0,0,4,56,9,0,0,-1,0,0
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,1
-ICommandSink,0,2,0,0,0,35,2,2,0,-1,0,1
-ICommandRegister,0,2,0,0,0,5,2,2,0,-1,0,0
-CommandSink,1,5,0,0,4,67,9,2,1,0,0,1
-CommandSinkDependencyObject,1,4,0,0,4,24,4,0,1,0,1,0
-CommandSinkBinding,2,6,1,1,2,147,11,0,0,0.33,1,0
-MapperCommandBinding,1,2,1,0,0,44,4,0,0,1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WPFExtensions.AttachedBehaviours,AnimatedScrollBehaviour,15,23,0,6,13,216,35,0,0,0.26,0,0,,
+WPFExtensions.AttachedBehaviours,DragBehaviour,6,16,0,4,8,178,26,0,0,0.19,0,0,,
+WPFExtensions.AttachedBehaviours,FrameworkElementAttachedBehaviourBase<T>,0,8,1,0,4,62,12,0,0,-1,0,0,,
+WPFExtensions.AttachedBehaviours,TextBoxCommandTriggers,0,0,0,0,0,8,0,0,0,-1,0,1,,WPFExtensions.AttachedBehaviours.TextBoxCommandBehaviour
+WPFExtensions.AttachedBehaviours,TextBoxCommandBehaviour,5,17,1,4,9,168,25,0,0,0.12,1,0,WPFExtensions.AttachedBehaviours.TextBoxCommandTriggers,
+WPFExtensions.AttachedBehaviours,TreeViewSelectionBehaviour,4,14,0,3,7,101,21,0,0,0.29,0,0,,
+WPFExtensions.AttachedBehaviours,WindowSettings,3,10,1,1,2,153,16,0,0,0.3,1,1,WPFExtensions.AttachedBehaviours.WindowApplicationSettings,WPFExtensions.AttachedBehaviours.WindowApplicationSettings
+WPFExtensions.AttachedBehaviours,WindowApplicationSettings,0,1,2,0,1,39,1,0,0,-1,1,1,WPFExtensions.AttachedBehaviours.WindowSettings,WPFExtensions.AttachedBehaviours.WindowSettings
+WPFExtensions.Collections.ObjectModel,DispatchedObservableCollection<T>,4,7,1,0,4,96,18,0,0,0.86,1,0,WPFExtensions.Collections.ObjectModel.DispatchEvent,
+WPFExtensions.Collections.ObjectModel,DispatchEvent,1,4,0,0,4,45,7,0,0,0,1,2,WPFExtensions.Collections.ObjectModel.DispatchHandler,WPFExtensions.Collections.ObjectModel.DispatchedObservableCollection<T>' WPFExtensions.Collections.ObjectModel.ReadOnlyDispatchedObservableCollection<T>
+WPFExtensions.Collections.ObjectModel,DispatchHandler,3,4,3,0,4,86,6,0,0,0.5,0,1,,WPFExtensions.Collections.ObjectModel.DispatchEvent
+WPFExtensions.Collections.ObjectModel,ReadOnlyDispatchedObservableCollection<T>,2,3,0,0,1,42,3,0,0,1,1,0,WPFExtensions.Collections.ObjectModel.DispatchEvent,
+WPFExtensions.Controls,ZoomContentPresenter,1,2,1,0,0,36,3,0,0,1,0,2,,WPFExtensions.Controls.ZoomControl' TraceLab.UI.WPF.Controls.ZoomControl.ZoomControl
+WPFExtensions.Controls,ZoomControl,25,29,18,16,6,571,53,0,0,0.17,3,0,WPFExtensions.Controls.ZoomContentPresenter' WPFExtensions.Controls.ZoomControlModes' WPFExtensions.Controls.ZoomViewModifierMode,
+WPFExtensions.Controls,ZoomControlModes,0,0,0,0,0,15,0,0,0,-1,0,2,,WPFExtensions.Controls.ZoomControl' TraceLab.UI.WPF.Controls.ZoomControl.ZoomControl
+WPFExtensions.Controls,ZoomViewModifierMode,0,0,0,0,0,23,0,0,0,-1,0,2,,WPFExtensions.Controls.ZoomControl' TraceLab.UI.WPF.Controls.ZoomControl.ZoomControl
+WPFExtensions.Converters,BoolToVisibilityConverter,0,2,0,0,2,27,4,0,0,-1,0,0,,
+WPFExtensions.Converters,DoubleToLog10Converter,0,2,0,0,2,15,2,0,0,-1,0,0,,
+WPFExtensions.Converters,EqualityToBooleanConverter,0,2,0,0,2,15,3,0,0,-1,0,0,,
+WPFExtensions.Helpers,ExtLogicalTreeHelper,0,3,0,0,3,61,5,0,0,-1,0,0,,
+WPFExtensions.Helpers,ExtVisualTreeHelper,0,2,0,0,1,18,3,0,0,-1,0,0,,
+WPFExtensions.Helpers,TreeViewHelper,0,4,0,0,4,62,14,0,0,-1,0,0,,
+WPFExtensions.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+WPFExtensions.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
+WPFExtensions.ViewModel.Commanding,ICommandSink,0,2,0,0,0,29,2,2,0,-1,0,1,,WPFExtensions.ViewModel.Commanding.CommandSinkBinding
+WPFExtensions.ViewModel.Commanding,ICommandRegister,0,2,0,0,0,5,2,2,0,-1,0,0,,
+WPFExtensions.ViewModel.Commanding,CommandSink,1,5,0,0,4,65,9,2,1,0,1,1,WPFExtensions.ViewModel.Commanding.CommandCallbacks,WPFExtensions.ViewModel.Commanding.CommandSinkDependencyObject
+WPFExtensions.ViewModel.Commanding,CommandCallbacks,2,1,0,2,1,10,1,0,0,0,0,1,,WPFExtensions.ViewModel.Commanding.CommandSink
+WPFExtensions.ViewModel.Commanding,CommandSinkDependencyObject,1,4,0,0,4,25,4,0,1,0,1,0,WPFExtensions.ViewModel.Commanding.CommandSink,
+WPFExtensions.ViewModel.Commanding,CommandSinkBinding,2,6,1,1,2,154,11,0,0,0.33,2,0,WPFExtensions.ViewModel.Commanding.ICommandSink' WPFExtensions.ViewModel.Commanding.CommonElement,
+WPFExtensions.ViewModel.Commanding,CommonElement,3,2,2,1,1,58,3,0,0,0,0,1,,WPFExtensions.ViewModel.Commanding.CommandSinkBinding
+WPFExtensions.ViewModel.Commanding,MapperCommandBinding,1,2,1,0,0,46,4,0,0,1,0,0,,
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

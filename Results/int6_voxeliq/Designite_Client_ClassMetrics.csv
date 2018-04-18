@@ -1,9 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ICameraService,0,0,6,0,0,42,0,1,0,-1,0,0
-ICameraManService,0,3,0,0,0,18,3,1,0,-1,0,0
-Camera,0,5,6,0,5,57,5,0,1,-1,0,0
-IGraphicsManagerService,0,3,4,0,0,44,3,1,0,-1,0,0
-GraphicsManager,0,4,4,0,4,62,4,0,1,-1,0,0
-ConsoleWindow,0,2,0,0,2,29,2,0,0,-1,0,1
-GameClient,0,3,0,0,1,30,3,0,0,-1,0,1
-Program,0,3,0,0,0,41,6,0,0,-1,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Client.Graphics,ICameraService,0,0,6,0,0,27,0,1,0,-1,0,1,,Client.Graphics.Camera
+Client.Graphics,ICameraManService,0,3,0,0,0,18,3,1,0,-1,0,1,,Client.Graphics.Camera
+Client.Graphics,Camera,0,5,6,0,5,37,5,0,1,-1,2,0,Client.Graphics.ICameraService' Client.Graphics.ICameraManService,
+Client.Services,IGraphicsManagerService,0,3,4,0,0,33,3,1,0,-1,0,1,,Client.Services.GraphicsManager
+Client.Services,GraphicsManager,0,4,4,0,4,42,4,0,1,-1,1,0,Client.Services.IGraphicsManagerService,
+Client.Utility,ConsoleWindow,0,2,0,0,2,26,2,0,0,-1,0,1,,Client.Program
+Client,GameClient,0,3,0,0,1,29,3,0,0,-1,0,1,,Client.Program
+Client,Program,0,3,0,0,0,45,4,0,0,-1,2,0,Client.Utility.ConsoleWindow' Client.GameClient,

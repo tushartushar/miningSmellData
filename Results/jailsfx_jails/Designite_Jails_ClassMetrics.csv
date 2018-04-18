@@ -1,17 +1,17 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DefaultEnvironment,1,4,0,0,3,20,4,1,1,0,1,1
-EnvironmentExtensions,0,1,0,0,1,7,1,0,0,-1,1,0
-IEnvironment,0,3,0,0,0,6,3,1,0,-1,1,5
-IHost,0,1,0,0,0,4,1,1,0,-1,0,1
-IInvocationTarget,0,3,0,0,0,6,3,1,0,-1,0,3
-IIsolator,0,1,0,0,0,4,1,1,0,-1,1,1
-IJail,0,2,0,0,0,5,2,1,0,-1,0,0
-InMemoryAssembly,1,1,1,0,1,16,2,0,0,0,0,3
-Jail,1,5,0,0,4,35,8,0,1,0.6,7,1
-JailExtensions,0,0,0,0,0,3,0,0,0,-1,0,0
-DynamicTargetProxy,1,4,0,0,4,39,8,0,0,0,1,1
-TypedTargetProxy,1,3,0,0,2,25,5,0,0,0,1,1
-AppDomainHost,0,5,0,0,4,28,5,0,1,-1,2,1
-AppDomainOptions,0,2,3,0,2,31,3,0,0,-1,0,1
-AppDomainIsolator,1,2,1,0,1,29,5,0,1,0,4,0
-InvocationTarget,2,5,0,0,4,39,6,0,1,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Jails,DefaultEnvironment,1,4,0,0,3,20,4,1,1,0,1,2,Jails.InMemoryAssembly,Jails.Tests.Integration.TheCalculatorAssembly' Jails.Extensions.Roslyn.Tests.RoslynTests
+Jails,EnvironmentExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Jails.IEnvironment,
+Jails,IEnvironment,0,3,0,0,0,6,3,1,0,-1,1,5,Jails.InMemoryAssembly,Jails.EnvironmentExtensions' Jails.IIsolator' Jails.Jail' Jails.Isolators.AppDomain.AppDomainIsolator' Jails.Extensions.Roslyn.EnvironmentExtensions
+Jails,IHost,0,1,0,0,0,4,1,1,0,-1,0,2,,Jails.Jail' Jails.Tests.Unit.TheResolveMethod
+Jails,IInvocationTarget,0,3,0,0,0,6,3,1,0,-1,0,5,,Jails.Jail' Jails.DynamicTargetProxy' Jails.TypedTargetProxy' Jails.Tests.Unit.TheDynamicMethodBinding' Jails.Tests.Unit.TheDynamicPropertyBinding
+Jails,IIsolator,0,1,0,0,0,4,1,1,0,-1,1,1,Jails.IEnvironment,Jails.Jail
+Jails,IJail,0,2,0,0,0,5,2,1,0,-1,0,3,,Jails.Tests.Integration.TheCalculatorAssembly' Jails.Extensions.Roslyn.Tests.RoslynTests' Jails.Environments.Nancy.Tests.NancyTests
+Jails,InMemoryAssembly,1,1,1,0,1,14,2,0,0,0,0,4,,Jails.DefaultEnvironment' Jails.IEnvironment' Jails.Isolators.AppDomain.AppDomainHost' Jails.Isolators.AppDomain.AppDomainIsolator
+Jails,Jail,1,5,0,0,4,34,8,0,1,0.6,6,6,Jails.IHost' Jails.IInvocationTarget' Jails.DynamicTargetProxy' Jails.TypedTargetProxy' Jails.IIsolator' Jails.IEnvironment,Jails.Isolators.AppDomain.AppDomainIsolator' Jails.Tests.Integration.TheCalculatorAssembly' Jails.Tests.Fixtures.JailFixture' Jails.Tests.Unit.TheResolveMethod' Jails.Extensions.Roslyn.Tests.RoslynTests' Jails.Environments.Nancy.Tests.NancyTests
+Jails,JailExtensions,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Jails,DynamicTargetProxy,1,4,0,0,4,47,5,0,0,0,1,4,Jails.IInvocationTarget,Jails.Jail' Jails.Tests.Fixtures.DynamicTargetProxyFixture' Jails.Tests.Unit.TheDynamicMethodBinding' Jails.Tests.Unit.TheDynamicPropertyBinding
+Jails,TypedTargetProxy,1,3,0,0,2,28,4,0,0,0,1,1,Jails.IInvocationTarget,Jails.Jail
+Jails.Isolators.AppDomain,AppDomainHost,0,5,0,0,4,28,5,0,1,-1,2,1,Jails.InMemoryAssembly' Jails.Isolators.AppDomain.InvocationTarget,Jails.Isolators.AppDomain.AppDomainIsolator
+Jails.Isolators.AppDomain,AppDomainOptions,0,2,3,0,2,24,3,0,0,-1,0,2,,Jails.Isolators.AppDomain.AppDomainIsolator' Jails.Environments.Nancy.Tests.NancyTests
+Jails.Isolators.AppDomain,AppDomainIsolator,1,2,1,0,1,36,4,0,1,0,5,3,Jails.Isolators.AppDomain.AppDomainOptions' Jails.Isolators.AppDomain.AppDomainHost' Jails.IEnvironment' Jails.InMemoryAssembly' Jails.Jail,Jails.Tests.Integration.TheCalculatorAssembly' Jails.Extensions.Roslyn.Tests.RoslynTests' Jails.Environments.Nancy.Tests.NancyTests
+Jails.Isolators.AppDomain,InvocationTarget,2,5,0,0,4,40,6,0,1,0,0,1,,Jails.Isolators.AppDomain.AppDomainHost

@@ -1,11 +1,13 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConsoleCommand,0,16,9,0,16,135,21,7,1,-1,1,4
-ConsoleCommandDispatcher,0,9,0,0,5,106,25,0,0,-1,3,2
-ConsoleHelpAsException,0,1,0,0,1,6,1,0,0,-1,0,0
-ConsoleModeCommand,6,6,0,1,6,80,13,2,2,0,6,1
-ConsoleHelp,0,4,0,0,3,97,18,0,0,-1,1,2
-IConsoleRedirectionDetection,0,3,0,0,0,6,3,1,0,-1,0,1
-ConsoleRedirectionDetection,0,5,0,0,3,33,5,0,1,-1,0,1
-ConsoleUtil,0,1,0,0,1,10,3,1,0,-1,0,1
-RequiredOptionRecord,2,0,0,2,0,5,0,0,0,-1,0,1
-CommandLineParser,0,2,0,0,1,29,4,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ManyConsole,ConsoleCommand,0,18,11,0,18,132,23,22,1,-1,1,7,ManyConsole.Internal.RequiredOptionRecord,ManyConsole.ConsoleCommandDispatcher' ManyConsole.Internal.ConsoleHelp' SampleConsole.StatefulConsoleModeCommand' ManyConsole.Tests.Can_have_required_parameters' ManyConsole.Tests.lets_user_browse_command_help' ManyConsole.Tests.abstract_commands_arent_loaded' ManyConsole.Tests.ConsoleModeCommandSpecs.ConsoleModeCommandSpecification
+ManyConsole,ConsoleCommandDispatcher,0,10,0,0,5,147,22,0,0,-1,3,15,ManyConsole.ConsoleCommand' ManyConsole.Internal.ConsoleHelp' ManyConsole.Internal.ConsoleUtil,ManyConsole.ConsoleModeCommand' SampleConsole.Program' ManyConsole.Tests.Can_modify_command_behavior_after_parsing_and_before_running' ManyConsole.Tests.Can_overwrite_options_property' ManyConsole.Tests.Can_define_commands_with_aliases' ManyConsole.Tests.Can_verify_number_of_arguments_passed_to_command' ManyConsole.Tests.Console_interface_is_simplified_when_there_is_only_one_command' ManyConsole.Tests.Can_have_required_parameters' ManyConsole.Tests.Can_consume_variable_number_of_arguments' ManyConsole.Tests.lets_user_browse_command_help' ManyConsole.Tests.abstract_commands_arent_loaded' ManyConsole.Tests.Multiple_dispatch_calls_dont_interfere_with_each_other' ManyConsole.Tests.Show_useful_error_information' ManyConsole.Tests.show_useful_command_summary' ManyConsole.Tests.ConsoleModeCommandSpecs.ConsoleModeCommandSpecification
+ManyConsole,ConsoleHelpAsException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+ManyConsole,ConsoleModeCommand,6,6,0,1,6,96,12,2,2,0,4,4,ManyConsole.Internal.IConsoleRedirectionDetection' ManyConsole.Internal.ConsoleHelp' ManyConsole.Internal.CommandLineParser' ManyConsole.ConsoleCommandDispatcher,SampleConsole.SimpleConsoleModeCommand' SampleConsole.StatefulConsoleModeCommand' ManyConsole.Tests.ConsoleModeCommandSpecs.ConsoleModeCommandSpecification' ManyConsole.Tests.ConsoleModeCommandSpecs.Should_give_user_prompt_in_interactive_mode
+ManyConsole.Internal,ConsoleHelp,0,4,0,0,3,118,18,0,0,-1,1,2,ManyConsole.ConsoleCommand,ManyConsole.ConsoleCommandDispatcher' ManyConsole.ConsoleModeCommand
+ManyConsole.Internal,IConsoleRedirectionDetection,0,3,0,0,0,6,3,1,0,-1,0,2,,ManyConsole.ConsoleModeCommand' ManyConsole.Tests.ConsoleModeCommandSpecs.ConsoleModeCommandSpecification
+ManyConsole.Internal,ConsoleRedirectionDetection,0,5,0,0,3,22,5,0,1,-1,2,0,ManyConsole.Internal.FileType' ManyConsole.Internal.StdHandle,
+ManyConsole.Internal,FileType,0,0,0,0,0,1,0,0,0,-1,0,1,,ManyConsole.Internal.ConsoleRedirectionDetection
+ManyConsole.Internal,StdHandle,0,0,0,0,0,1,0,0,0,-1,0,1,,ManyConsole.Internal.ConsoleRedirectionDetection
+ManyConsole.Internal,ConsoleUtil,0,1,0,0,1,11,3,1,0,-1,0,1,,ManyConsole.ConsoleCommandDispatcher
+ManyConsole.Internal,RequiredOptionRecord,2,0,0,2,0,5,0,0,0,-1,0,1,,ManyConsole.ConsoleCommand
+ManyConsole.Internal,CommandLineParser,0,2,0,0,1,35,4,0,0,-1,0,1,,ManyConsole.ConsoleModeCommand

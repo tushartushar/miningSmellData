@@ -1,12 +1,12 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AzureHelper,0,1,0,0,1,24,3,0,0,-1,0,0
-CommandArgsParser,0,4,0,0,2,99,14,0,0,-1,2,1
-CommandLineOptions,0,2,9,0,2,70,5,0,0,-1,1,6
-CommandLineArgAttribute,0,0,4,0,0,19,0,0,0,-1,0,2
-CompressorBase,6,8,0,0,2,70,13,2,0,0.25,3,2
-CsvHelper,0,2,0,0,2,20,4,0,0,-1,0,2
-FileHashStore,3,5,0,0,3,75,14,0,0,0,0,1
-Item,2,0,0,2,0,8,0,0,0,-1,0,0
-ICompressorJob,0,2,0,0,0,5,2,2,0,-1,0,0
-Logger,4,8,0,0,5,76,13,0,0,0.5,2,3
-LogItem,0,3,4,0,3,33,3,0,0,-1,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AzureJobs.Common,AzureHelper,0,1,0,0,1,17,2,0,0,-1,0,3,,AzureJobs.Common.CompressorBase' ImageCompressor.Job.Program' TextMinifier.Job.Program
+AzureJobs.Common,CommandArgsParser,0,4,0,0,2,90,11,0,0,-1,2,4,AzureJobs.Common.CommandLineOptions' AzureJobs.Common.CommandLineArgAttribute,ImageCompressor.Job.Program' TextMinifier.Job.Program' AzureJobsTests.TheParseArgsMethod' AzureJobsTests.TheBuildCommandLineOptionsMethod
+AzureJobs.Common,CommandLineOptions,0,2,9,0,2,44,5,0,0,-1,1,8,AzureJobs.Common.CommandLineArgAttribute,AzureJobs.Common.CommandArgsParser' AzureJobs.Common.CompressorBase' ImageCompressor.Job.ImageCompressorManager' ImageCompressor.Job.Program' TextMinifier.Job.MinifierManager' TextMinifier.Job.Program' AzureJobsTests.TheBuildCommandLineOptionsMethod' AzureJobsTests.TheArgsHelpTextMethod
+AzureJobs.Common,CommandLineArgAttribute,0,0,4,0,0,6,0,0,0,-1,0,2,,AzureJobs.Common.CommandArgsParser' AzureJobs.Common.CommandLineOptions
+AzureJobs.Common,CompressorBase,6,8,0,0,2,64,12,2,0,0.25,4,3,AzureJobs.Common.Logger' AzureJobs.Common.FileHashStore' AzureJobs.Common.CommandLineOptions' AzureJobs.Common.AzureHelper,ImageCompressor.Job.Program' TextMinifier.Job.MinifierManager' TextMinifier.Job.Program
+AzureJobs.Common,CsvHelper,0,2,0,0,2,18,4,0,0,-1,0,3,,AzureJobs.Common.Logger' AzureJobs.Common.LogItem' AzureJobsTests.TheCleanMessageForCsvMethod
+AzureJobs.Common,FileHashStore,3,5,0,0,3,70,12,0,0,0,0,3,,AzureJobs.Common.CompressorBase' ImageCompressor.Job.ImageCompressorManager' TextMinifier.Job.MinifierManager
+AzureJobs.Common,Item,2,0,0,2,0,7,0,0,0,-1,0,0,,
+AzureJobs.Common,ICompressorJob,0,2,0,0,0,4,2,2,0,-1,0,0,,
+AzureJobs.Common,Logger,4,8,0,0,5,68,9,0,0,0.5,2,3,AzureJobs.Common.LogItem' AzureJobs.Common.CsvHelper,AzureJobs.Common.CompressorBase' ImageCompressor.Job.ImageCompressorManager' TextMinifier.Job.MinifierManager
+AzureJobs.Common,LogItem,0,3,4,0,3,17,3,0,0,-1,1,3,AzureJobs.Common.CsvHelper,AzureJobs.Common.Logger' ImageCompressor.Job.ImageCompressorManager' TextMinifier.Job.MinifierManager

@@ -1,15 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Account,0,1,3,0,1,22,1,0,0,-1,0,4
-EmailTheAccountHolderAfterNameChanged,1,2,0,0,2,14,2,0,1,0,2,0
-UpdateAccountAfterNameChange,1,2,0,0,2,14,2,0,1,0,2,0
-LogThatNameChanged,0,1,0,0,1,9,1,0,1,-1,1,0
-FakeEmailClient,0,1,0,0,1,9,1,0,1,-1,0,0
-IAccountFetcher,0,1,0,0,0,4,1,1,0,-1,0,1
-IEmailClient,0,1,0,0,0,4,1,1,0,-1,0,1
-InitializedAccountFetcher,2,2,0,0,2,17,2,0,1,0,2,0
-IRepository,0,2,0,0,0,5,2,1,0,-1,0,2
-Bootstrapper,1,2,0,0,2,20,2,0,0,0,0,0
-StandardDomainEventsConfiguration,0,1,0,0,1,9,1,0,0,-1,0,0
-Program,0,1,0,0,0,23,1,0,0,-1,2,0
-StubRepository,0,2,0,0,2,18,2,0,1,-1,1,0
-TheNameChanged,3,1,0,3,1,12,1,0,0,0,1,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BlingBag.SampleConsoleApp.FakeDomainLayer.Entities,Account,0,1,3,0,1,13,1,0,0,-1,0,5,,BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers.EmailTheAccountHolderAfterNameChanged' BlingBag.SampleConsoleApp.FakeDomainLayer.InitializedAccountFetcher' BlingBag.SampleConsoleApp.Program' BlingBag.SampleConsoleApp.FakeDataLayer.StubRepository' BlingBag.SampleConsoleApp.FakeDomainLayer.Events.TheNameChanged
+BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers,EmailTheAccountHolderAfterNameChanged,1,2,0,0,2,16,2,0,1,0,3,0,BlingBag.SampleConsoleApp.FakeDomainLayer.IEmailClient' BlingBag.SampleConsoleApp.FakeDomainLayer.Entities.Account' BlingBag.SampleConsoleApp.FakeDomainLayer.Events.TheNameChanged,
+BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers,UpdateAccountAfterNameChange,1,2,0,0,2,14,2,0,1,0,2,0,BlingBag.SampleConsoleApp.FakeDomainLayer.IRepository' BlingBag.SampleConsoleApp.FakeDomainLayer.Events.TheNameChanged,
+BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers,LogThatNameChanged,0,1,0,0,1,10,1,0,1,-1,1,0,BlingBag.SampleConsoleApp.FakeDomainLayer.Events.TheNameChanged,
+BlingBag.SampleConsoleApp.FakeDomainLayer,FakeEmailClient,0,1,0,0,1,10,1,0,1,-1,0,0,,
+BlingBag.SampleConsoleApp.FakeDomainLayer,IAccountFetcher,0,1,0,0,0,4,1,1,0,-1,0,1,,BlingBag.SampleConsoleApp.Program
+BlingBag.SampleConsoleApp.FakeDomainLayer,IEmailClient,0,1,0,0,0,4,1,1,0,-1,0,1,,BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers.EmailTheAccountHolderAfterNameChanged
+BlingBag.SampleConsoleApp.FakeDomainLayer,InitializedAccountFetcher,2,2,0,0,2,17,2,0,1,0,2,0,BlingBag.SampleConsoleApp.FakeDomainLayer.IRepository' BlingBag.SampleConsoleApp.FakeDomainLayer.Entities.Account,
+BlingBag.SampleConsoleApp.FakeDomainLayer,IRepository,0,2,0,0,0,5,2,1,0,-1,0,2,,BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers.UpdateAccountAfterNameChange' BlingBag.SampleConsoleApp.FakeDomainLayer.InitializedAccountFetcher
+BlingBag.SampleConsoleApp.Infrastructure,Bootstrapper,1,2,0,0,2,21,2,0,0,0,0,1,,BlingBag.SampleConsoleApp.Program
+BlingBag.SampleConsoleApp.Infrastructure,StandardDomainEventsConfiguration,0,1,0,0,1,9,1,0,0,-1,0,0,,
+BlingBag.SampleConsoleApp,Program,0,1,0,0,0,24,1,0,0,-1,3,0,BlingBag.SampleConsoleApp.FakeDomainLayer.IAccountFetcher' BlingBag.SampleConsoleApp.FakeDomainLayer.Entities.Account' BlingBag.SampleConsoleApp.Infrastructure.Bootstrapper,
+BlingBag.SampleConsoleApp.FakeDataLayer,StubRepository,0,2,0,0,2,19,2,0,1,-1,1,0,BlingBag.SampleConsoleApp.FakeDomainLayer.Entities.Account,
+BlingBag.SampleConsoleApp.FakeDomainLayer.Events,TheNameChanged,3,1,0,3,1,12,1,0,0,0,1,3,BlingBag.SampleConsoleApp.FakeDomainLayer.Entities.Account,BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers.EmailTheAccountHolderAfterNameChanged' BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers.UpdateAccountAfterNameChange' BlingBag.SampleConsoleApp.FakeDomainLayer.EventHandlers.LogThatNameChanged

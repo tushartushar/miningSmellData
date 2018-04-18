@@ -1,0 +1,67 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SOVND.Client.Audio,SpotifyTrackDataPipe,8,10,0,0,5,145,23,0,0,0.4,6,1,SpotifyClient.Session' libspotifydotnet.sp_error' libspotifydotnet.sp_availability' libspotifydotnet.libspotify' libspotifydotnet.sp_audio_buffer_stats' libspotifydotnet.sp_audioformat,SOVND.Client.Modules.NowPlayingHandler
+SOVND.Client.Controls,SongControl,1,5,1,1,1,38,9,0,0,1,0,0,,
+SOVND.Client.Controls,TrackControl,1,2,1,1,1,19,3,0,0,1,0,0,,
+SOVND.Client.Models,NewChannelModel,0,0,2,0,0,7,0,0,0,-1,0,1,,SOVND.Client.ViewModels.NewChannelViewModel
+SOVND.Client.Modules,IPlayerFactory,0,1,0,0,0,4,1,0,0,-1,0,1,,SOVND.Client.MainWindow
+SOVND.Client.Modules,NowPlayingHandler,10,5,2,0,2,114,6,0,1,0.4,7,1,SpotifyClient.Track' SOVND.Client.Audio.SpotifyTrackDataPipe' SOVND.Lib.Utils.Time' SOVND.Lib.Models.NowPlaying' SOVND.Client.Util.AuthPair' SOVND.Client.Util.Logging' SOVND.Client.App,SOVND.Client.MainWindow
+SOVND.Client.Modules,SovndClient,5,10,0,1,8,100,17,0,1,0.2,10,2,SOVND.Lib.Handlers.IChannelHandlerFactory' SOVND.Lib.Handlers.ChannelHandler' SOVND.Lib.Settings.SettingsModel' SOVND.Lib.Settings.ISettingsProvider' SOVND.Client.Util.AuthPair' SOVND.Client.Util.Logging' SOVND.Client.Util.ChannelDirectory' SOVND.Lib.Models.Channel' SpotifyClient.Track' SOVND.Lib.Models.Song,SOVND.Client.MainWindow' SOVND.Client.ViewModels.NewChannelViewModel
+SOVND.Client,Program,1,2,0,1,1,48,3,0,0,0,0,0,,
+SOVND.Client,ViewModelLocator,0,0,1,0,0,7,0,0,0,-1,0,0,,
+SOVND.Client,ChannelWindow,1,1,1,0,1,14,1,0,0,0,1,0,SOVND.Client.Util.ChannelDirectory,
+SOVND.Client,SettingsWindow,0,2,0,0,1,11,2,0,0,-1,0,1,,SOVND.Client.Util.CheckSettings
+SOVND.Client,App,0,1,1,0,1,9,1,0,0,-1,0,2,,SOVND.Client.Modules.NowPlayingHandler' SOVND.Client.MainWindow
+SOVND.Client,MainWindow,9,22,0,0,1,264,40,0,0,0.09,18,0,SOVND.Client.Modules.SovndClient' SOVND.Client.Modules.IPlayerFactory' SOVND.Lib.Settings.SettingsModel' SOVND.Client.Modules.NowPlayingHandler' Toastify.Toast' SOVND.Client.Util.Scrobbler' SOVND.Lib.Settings.ISettingsProvider' SOVND.Client.Util.ChannelDirectory' SOVND.Client.App' SOVND.Client.Util.Logging' SpotifyClient.Spotify' SOVND.Lib.Handlers.IObservablePlaylistProvider' SOVND.Lib.Handlers.ChannelHandler' SpotifyClient.Search' SpotifyClient.Track' SOVND.Client.Views.NewChannel' SOVND.Lib.Models.Channel' SOVND.Lib.Models.Song,
+SOVND.Client,MainWindowViewModel,1,2,5,0,1,48,3,0,0,1,2,0,SOVND.Lib.Settings.SettingsModel' SOVND.Lib.Settings.ISettingsProvider,
+SOVND.Client.Settings,AppName,0,0,1,0,0,4,0,0,1,-1,0,0,,
+SOVND.Client.Settings,AppDataLocationProvider,1,5,0,0,5,24,5,0,1,0,1,0,SOVND.Lib.Settings.IAppName,
+SOVND.Client.Settings,SovndMqttSettings,1,1,4,0,1,19,1,0,1,0,1,0,SOVND.Lib.Settings.ISettingsProvider,
+Toastify,Hotkey,12,10,10,0,5,315,20,0,0,0.4,2,3,Toastify.SpotifyAction' Toastify.Toast,Toastify.Settings' Toastify.SettingsXml' Toastify.Toast
+Toastify,ScreenHelper,2,2,0,0,2,30,3,0,0,0,1,2,Toastify.Toast,Toastify.SettingsXml' Toastify.Toast
+Toastify,Settings,4,25,0,1,3,214,43,0,0,0.12,4,1,Toastify.SettingsXml' Toastify.Toast' Toastify.SpotifyAction' Toastify.Hotkey,Toastify.Toast
+Toastify,SettingsXml,28,12,27,1,5,560,26,0,0,0.58,2,3,Toastify.ScreenHelper' Toastify.Hotkey,Toastify.Settings' Toastify.Spotify' Toastify.Toast
+Toastify,PluginDetails,0,0,3,0,0,7,0,0,0,-1,0,0,,
+Toastify,SpotifyAction,0,0,0,0,0,18,0,0,0,-1,0,4,,Toastify.Hotkey' Toastify.Settings' Toastify.Spotify' Toastify.Toast
+Toastify,Spotify,0,2,0,0,1,39,5,0,0,-1,3,1,Toastify.SettingsXml' Toastify.SpotifyAction' Toastify.VolumeHelper,Toastify.Toast
+Toastify,Toast,6,19,2,0,5,350,35,0,0,0.47,10,4,SpotifyClient.Track' Toastify.Hotkey' Toastify.SettingsXml' SOVND.Client.Properties.Resources' Toastify.Settings' Toastify.WinHelper' System.Windows.Media.ImageConverter' Toastify.ScreenHelper' Toastify.SpotifyAction' Toastify.Spotify,SOVND.Client.MainWindow' Toastify.Hotkey' Toastify.ScreenHelper' Toastify.Settings
+Toastify,VolumeHelper,0,9,0,0,7,291,23,0,0,-1,9,1,Toastify.ISimpleAudioVolume' Toastify.IMMDeviceEnumerator' Toastify.IMMDevice' Toastify.IAudioSessionManager2' Toastify.IAudioSessionEnumerator' Toastify.IAudioSessionControl' Toastify.IAudioSessionControl2' Toastify.EDataFlow' Toastify.ERole,Toastify.Spotify
+Toastify,MMDeviceEnumerator,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Toastify,EDataFlow,0,0,0,0,0,7,0,0,0,-1,0,2,,Toastify.VolumeHelper' Toastify.IMMDeviceEnumerator
+Toastify,ERole,0,0,0,0,0,7,0,0,0,-1,0,2,,Toastify.VolumeHelper' Toastify.IMMDeviceEnumerator
+Toastify,IMMDeviceEnumerator,0,2,0,0,0,8,2,0,0,-1,3,1,Toastify.EDataFlow' Toastify.ERole' Toastify.IMMDevice,Toastify.VolumeHelper
+Toastify,IMMDevice,0,1,0,0,0,7,1,0,0,-1,0,2,,Toastify.VolumeHelper' Toastify.IMMDeviceEnumerator
+Toastify,IAudioSessionManager2,0,3,0,0,0,9,3,0,0,-1,1,1,Toastify.IAudioSessionEnumerator,Toastify.VolumeHelper
+Toastify,IAudioSessionEnumerator,0,2,0,0,0,8,2,0,0,-1,1,2,Toastify.IAudioSessionControl,Toastify.VolumeHelper' Toastify.IAudioSessionManager2
+Toastify,IAudioSessionControl,0,2,0,0,0,8,2,0,0,-1,0,2,,Toastify.VolumeHelper' Toastify.IAudioSessionEnumerator
+Toastify,AudioSessionState,0,0,0,0,0,6,0,0,0,-1,0,2,,Toastify.IAudioSessionEvents' Toastify.IAudioSessionControl2
+Toastify,AudioSessionDisconnectReason,0,0,0,0,0,9,0,0,0,-1,0,1,,Toastify.IAudioSessionEvents
+Toastify,IAudioSessionEvents,0,7,0,0,0,18,7,0,0,-1,2,1,Toastify.AudioSessionState' Toastify.AudioSessionDisconnectReason,Toastify.IAudioSessionControl2
+Toastify,IAudioSessionControl2,0,14,0,0,0,32,14,0,0,-1,2,1,Toastify.AudioSessionState' Toastify.IAudioSessionEvents,Toastify.VolumeHelper
+Toastify,ISimpleAudioVolume,0,4,0,0,0,12,4,0,0,-1,0,1,,Toastify.VolumeHelper
+Toastify,WinHelper,0,7,0,0,2,60,9,0,0,-1,2,1,Toastify.GetWindowLongFields' Toastify.ExtendedWindowStyles,Toastify.Toast
+Toastify,ExtendedWindowStyles,0,0,0,0,0,7,0,0,0,-1,0,1,,Toastify.WinHelper
+Toastify,GetWindowLongFields,0,0,0,0,0,6,0,0,0,-1,0,1,,Toastify.WinHelper
+SOVND.Client.Util,AuthPair,0,1,2,0,1,10,1,0,0,-1,2,3,SOVND.Lib.Models.IMQTTSettings' SOVND.Lib.Settings.ISettingsProvider,SOVND.Client.Modules.NowPlayingHandler' SOVND.Client.Modules.SovndClient' SOVND.Client.Util.SOVNDModule
+SOVND.Client.Util,BoolToVisibleConverter,0,2,0,0,2,12,2,0,0,-1,0,0,,
+SOVND.Client.Util,ChannelDirectory,1,1,0,1,1,12,2,0,0,0,1,3,SOVND.Lib.Models.Channel,SOVND.Client.Modules.SovndClient' SOVND.Client.ChannelWindow' SOVND.Client.MainWindow
+SOVND.Client.Util,CheckSettings,0,1,0,0,1,19,2,0,0,-1,2,0,SOVND.Lib.Settings.ISettingsProvider' SOVND.Client.SettingsWindow,
+SOVND.Client.Util,DictionaryFactoryExtension,2,8,10,0,7,96,10,0,0,0.88,0,0,,
+SOVND.Client.Util,EnumerationExtension,1,3,1,0,2,51,4,0,0,1,0,0,,
+SOVND.Client.Util,EnumerationMember,0,0,2,0,0,5,0,0,0,-1,0,0,,
+SOVND.Client.Util,Logging,1,4,1,0,4,58,10,0,0,0.5,0,4,,SOVND.Client.Modules.NowPlayingHandler' SOVND.Client.Modules.SovndClient' SOVND.Client.MainWindow' SOVND.Client.Util.AsyncErrorHandler
+SOVND.Client.Util,AsyncErrorHandler,0,1,0,0,1,15,1,0,0,-1,1,0,SOVND.Client.Util.Logging,
+SOVND.Client.Util,OppositeBoolConverter,0,2,0,0,2,13,2,0,0,-1,0,0,,
+SOVND.Client.Util,OppositeBoolToVisibleConverter,0,2,0,0,2,12,2,0,0,-1,0,0,,
+SOVND.Client.Util,PasswordHelper,3,9,0,2,4,71,13,0,0,0.67,0,0,,
+SOVND.Client.Util,Scrobbler,5,3,0,0,3,64,8,0,0,0,5,1,SOVND.Lib.Settings.SettingsModel' SOVND.Lib.Models.Song' SpotifyClient.Track' SpotifyClient.Album' SOVND.Lib.Settings.ISettingsProvider,SOVND.Client.MainWindow
+SOVND.Client.Util,SOVNDModule,0,1,0,0,1,6,1,2,0,-1,1,0,SOVND.Client.Util.AuthPair,
+SOVND.Client.Util,StartSpotify,0,1,0,0,1,15,4,0,0,-1,4,0,SOVND.Lib.Settings.ISettingsProvider' SpotifyClient.Spotify' SOVND.Lib.Settings.IAppName' SOVND.Lib.Settings.SettingsModel,
+SOVND.Client.Util,Type2Extension,0,3,0,0,3,22,4,0,0,-1,0,0,,
+SOVND.Client.Util,WatermarkAdorner,1,4,2,0,1,85,5,0,0,0,0,1,,SOVND.Client.Util.WatermarkService
+SOVND.Client.Util,WatermarkService,2,10,0,1,2,196,24,0,0,0.5,1,0,SOVND.Client.Util.WatermarkAdorner,
+System.Windows.Media,ImageConverter,0,2,0,0,2,29,4,0,0,-1,0,1,,Toastify.Toast
+System.Windows.Workarounds,ListBox,2,2,0,2,2,24,4,0,0,0,1,0,System.Windows.Workarounds.AutoScrollHandler,
+System.Windows.Workarounds,AutoScrollHandler,2,5,1,1,2,45,8,0,0,0.4,0,1,,System.Windows.Workarounds.ListBox
+SOVND.Client.ViewModels,NewChannelViewModel,2,3,3,0,3,32,3,0,0,0.67,2,1,SOVND.Client.Models.NewChannelModel' SOVND.Client.Modules.SovndClient,SOVND.Client.Views.NewChannel
+SOVND.Client.Views,NewChannel,0,2,1,0,1,17,3,0,0,-1,1,1,SOVND.Client.ViewModels.NewChannelViewModel,SOVND.Client.MainWindow
+SOVND.Client.Properties,Resources,2,1,7,0,0,91,1,0,0,0,0,1,,Toastify.Toast

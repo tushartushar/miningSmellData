@@ -1,21 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-App,1,6,1,0,0,61,14,0,0,1,3,1
-GoToPacketWindow,1,4,1,0,1,38,4,0,0,0.75,2,1
-ParsingHelper,3,5,0,0,4,156,35,0,0,0.4,3,4
-SearchWindow,4,15,0,0,1,142,22,0,0,0.13,7,1
-SearchRequest,4,1,0,4,1,45,3,0,0,0,1,1
-SearchMode,0,0,0,0,0,8,0,0,0,-1,0,2
-Strings,2,1,109,0,0,913,1,0,0,0,0,7
-ViewerImplementation,15,19,8,0,3,367,41,0,1,0,13,2
-ViewerItemCollection,3,25,6,0,12,278,45,0,0,0.56,2,1
-ConsoleWindow,2,7,0,0,1,73,7,0,0,0.71,4,1
-LoadingState,2,2,0,2,2,15,2,0,0,0,1,2
-LoadingWindow,2,4,0,0,3,28,4,0,0,0.5,2,1
-MainWindow,24,69,7,0,1,1286,194,0,1,0.22,35,9
-NetworkLogViewerCommands,0,2,12,0,0,83,2,0,0,-1,0,1
-BinaryContents,1,6,2,0,1,87,14,0,1,0.33,8,1
-ImageContents,1,5,2,0,1,67,11,0,1,0.4,5,1
-PacketContents,0,3,2,0,1,30,4,0,1,-1,3,1
-ParsedText,0,3,2,0,1,33,5,0,1,-1,3,1
-IViewTab,0,2,2,0,0,11,2,5,0,-1,2,6
-TextContents,2,7,3,0,1,147,19,0,1,0.29,8,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NetworkLogViewer,App,1,6,1,0,0,63,14,0,0,1,3,1,NetworkLogViewer.ConsoleWindow' NetworkLogViewer.MainWindow' Kamilla.WPF.WindowBehavior,NetworkLogViewer.MainWindow
+NetworkLogViewer,GoToPacketWindow,1,4,1,0,1,32,4,0,0,0.75,4,1,NetworkLogViewer.MainWindow' Kamilla.Network.Logging.NetworkLog' NetworkLogViewer.ViewerImplementation' NetworkLogViewer.Strings,NetworkLogViewer.MainWindow
+NetworkLogViewer,ParsingHelper,3,5,0,0,4,191,33,0,0,0.4,5,4,Kamilla.ValueTuple' NetworkLogViewer.Strings' Kamilla.Network.Parsing.PacketParser' Kamilla.Network.Viewing.ViewerItem' Kamilla.Network.Protocols.Protocol,NetworkLogViewer.MainWindow' NetworkLogViewer.ViewTabs.BinaryContents' NetworkLogViewer.ViewTabs.ImageContents' NetworkLogViewer.ViewTabs.TextContents
+NetworkLogViewer,SearchWindow,4,15,0,0,1,154,24,0,0,0.13,9,1,NetworkLogViewer.MainWindow' NetworkLogViewer.ViewerImplementation' Kamilla.Network.Protocols.Protocol' Kamilla.Configuration' NetworkLogViewer.SearchMode' Kamilla.Network.SpecialOpcodes' NetworkLogViewer.Strings' Kamilla.Network.Viewing.ViewerItem' Kamilla.WPF.MessageWindow,NetworkLogViewer.MainWindow
+NetworkLogViewer,SearchRequest,4,1,0,4,1,46,3,0,0,0,0,1,,NetworkLogViewer.MainWindow
+NetworkLogViewer,SearchMode,0,0,0,0,0,8,0,0,0,-1,0,2,,NetworkLogViewer.SearchWindow' NetworkLogViewer.MainWindow
+NetworkLogViewer,Strings,2,1,109,0,0,1016,1,0,0,0,0,7,,NetworkLogViewer.GoToPacketWindow' NetworkLogViewer.ParsingHelper' NetworkLogViewer.SearchWindow' NetworkLogViewer.MainWindow' NetworkLogViewer.ViewTabs.BinaryContents' NetworkLogViewer.ViewTabs.ImageContents' NetworkLogViewer.ViewTabs.TextContents
+NetworkLogViewer,ViewerImplementation,15,19,8,0,3,373,44,0,1,0,14,4,Kamilla.Network.Protocols.Protocol' Kamilla.Network.Logging.NetworkLog' NetworkLogViewer.ViewerItemCollection' NetworkLogViewer.MainWindow' Kamilla.Network.Viewing.Plugins.INetworkLogViewerPlugin' Kamilla.Configuration' Kamilla.Network.Viewing.ViewerItem' Kamilla.Network.Logging.PacketAddedEventArgs' Kamilla.Network.Parsing.PacketParser' Kamilla.Network.Viewing.ViewerItemEventArgs' Kamilla.Network.Viewing.NetworkLogViewerBase' Kamilla.Network.Viewing.Plugins.PluginManager' Kamilla.Network.Viewing.Plugins.PluginCommand' Kamilla.UICulture,NetworkLogViewer.GoToPacketWindow' NetworkLogViewer.SearchWindow' NetworkLogViewer.ViewerItemCollection' NetworkLogViewer.MainWindow
+NetworkLogViewer,ViewerItemCollection,3,25,6,0,12,272,52,0,0,0.52,2,2,NetworkLogViewer.ViewerImplementation' Kamilla.Network.Viewing.ViewerItem,NetworkLogViewer.ViewerImplementation' NetworkLogViewer.MainWindow
+NetworkLogViewer,ConsoleWindow,2,7,0,0,1,70,7,0,0,0.71,4,2,NetworkLogViewer.MainWindow' Kamilla.Configuration' Kamilla.ConsoleWriter' Kamilla.ConsoleWriteEventArgs,NetworkLogViewer.App' NetworkLogViewer.MainWindow
+NetworkLogViewer,LoadingState,2,2,0,2,2,15,2,0,0,0,0,2,,NetworkLogViewer.LoadingWindow' NetworkLogViewer.MainWindow
+NetworkLogViewer,LoadingWindow,2,4,0,0,3,28,4,0,0,0.5,2,1,NetworkLogViewer.MainWindow' NetworkLogViewer.LoadingState,NetworkLogViewer.MainWindow
+NetworkLogViewer,MainWindow,50,71,7,0,2,1883,163,0,1,0.17,36,8,NetworkLogViewer.ViewerImplementation' NetworkLogViewer.LoadingWindow' NetworkLogViewer.SearchMode' NetworkLogViewer.SearchWindow' Kamilla.WPF.MessageWindow' NetworkLogViewer.Strings' Kamilla.UICulture' Kamilla.ConsoleWriter' NetworkLogViewer.App' Kamilla.Configuration' NetworkLogViewer.NetworkLogViewerCommands' Kamilla.Network.Protocols.Protocol' NetworkLogViewer.LoadingState' Kamilla.Network.Logging.NetworkLogFactory' NetworkLogViewer.ConsoleWindow' Kamilla.Network.Viewing.Plugins.PluginCommand' Kamilla.Network.Logging.NetworkLog' Kamilla.Network.Protocols.ProtocolWrapper' NetworkLogViewer.ViewerItemCollection' Kamilla.Network.Protocols.ProtocolManager' Kamilla.Network.Protocols.DefaultProtocol' Kamilla.TypeManager' Kamilla.Network.Viewing.Plugins.PluginManager' NetworkLogViewer.ViewTabs.IViewTab' Kamilla.Network.Viewing.ViewerItem' Kamilla.IO.StreamHandler' Kamilla.Network.Parsing.PacketParser' Kamilla.Network.NetworkStrings' NetworkLogViewer.ParsingHelper' Kamilla.ValueTuple' NetworkLogViewer.GoToPacketWindow' Kamilla.Network.Viewing.NetworkLogViewerBase' Kamilla.Network.Parsing.UndefinedPacketParser' Kamilla.Network.IPacketWithOpcode' Kamilla.Network.Packet' NetworkLogViewer.SearchRequest,NetworkLogViewer.App' NetworkLogViewer.GoToPacketWindow' NetworkLogViewer.SearchWindow' NetworkLogViewer.ViewerImplementation' NetworkLogViewer.ConsoleWindow' NetworkLogViewer.LoadingWindow' NetworkLogViewer.ViewTabs.BinaryContents' NetworkLogViewer.ViewTabs.TextContents
+NetworkLogViewer,NetworkLogViewerCommands,0,2,12,0,0,45,2,0,0,-1,0,1,,NetworkLogViewer.MainWindow
+NetworkLogViewer.ViewTabs,BinaryContents,5,8,2,0,2,164,16,0,1,0,9,0,Kamilla.ValueTuple' NetworkLogViewer.Strings' NetworkLogViewer.ViewTabs.IViewTab' NetworkLogViewer.ParsingHelper' Kamilla.Network.Protocols.Protocol' Kamilla.Network.Viewing.ViewerItem' Kamilla.Network.NetworkStrings' NetworkLogViewer.MainWindow' Kamilla.WPF.MessageWindow,
+NetworkLogViewer.ViewTabs,ImageContents,6,7,2,0,2,146,14,0,1,0,6,0,Kamilla.ValueTuple' NetworkLogViewer.Strings' NetworkLogViewer.ViewTabs.IViewTab' NetworkLogViewer.ParsingHelper' Kamilla.Network.Protocols.Protocol' Kamilla.Network.Viewing.ViewerItem,
+NetworkLogViewer.ViewTabs,PacketContents,2,5,2,0,2,69,8,0,1,0,3,0,Kamilla.Network.Protocols.Protocol' Kamilla.Network.Packet' Kamilla.Network.Viewing.ViewerItem,
+NetworkLogViewer.ViewTabs,ParsedText,2,5,2,0,2,73,9,0,1,0,3,0,Kamilla.Network.Parsing.PacketParser' Kamilla.Network.Viewing.ViewerItem' Kamilla.Network.Protocols.Protocol,
+NetworkLogViewer.ViewTabs,IViewTab,0,2,2,0,0,7,2,5,0,-1,2,4,Kamilla.Network.Protocols.Protocol' Kamilla.Network.Viewing.ViewerItem,NetworkLogViewer.MainWindow' NetworkLogViewer.ViewTabs.BinaryContents' NetworkLogViewer.ViewTabs.ImageContents' NetworkLogViewer.ViewTabs.TextContents
+NetworkLogViewer.ViewTabs,TextContents,7,9,3,0,2,254,17,0,1,0,9,0,Kamilla.ValueTuple' NetworkLogViewer.Strings' NetworkLogViewer.ViewTabs.IViewTab' NetworkLogViewer.ParsingHelper' Kamilla.Network.Protocols.Protocol' Kamilla.Network.Viewing.ViewerItem' Kamilla.WPF.MessageWindow' Kamilla.Network.NetworkStrings' NetworkLogViewer.MainWindow,

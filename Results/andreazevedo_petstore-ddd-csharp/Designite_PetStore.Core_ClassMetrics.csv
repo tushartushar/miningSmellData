@@ -1,53 +1,55 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-DomainException,0,4,0,0,0,21,4,3,0,-1,0,0
-DomainObjectsFactory,0,0,0,0,0,35,0,0,0,-1,0,1
-IValidatable,0,1,0,0,0,14,1,1,0,-1,1,0
-IValidator,0,1,0,0,0,14,1,1,0,-1,0,2
-ValidationException,0,6,1,0,5,45,7,1,1,-1,0,0
-Address,0,0,8,0,0,65,0,0,0,-1,1,3
-CartItem,0,0,6,0,0,51,0,0,0,-1,2,0
-OrderItem,0,0,6,0,0,51,0,0,0,-1,2,1
-PhoneNumber,0,0,6,0,0,50,0,0,0,-1,1,1
-PhoneNumberType,0,0,0,0,0,11,0,0,0,-1,0,1
-Supplier,0,0,5,0,0,43,0,0,0,-1,2,0
-Order,0,0,9,0,0,72,0,0,0,-1,4,1
-Category,0,0,3,0,0,29,0,0,0,-1,0,1
-Country,0,0,3,0,0,29,0,0,0,-1,0,1
-Product,0,0,6,0,0,50,0,0,0,-1,1,2
-CreditCard,0,0,3,0,0,26,0,0,0,-1,1,1
-CreditCardAssociation,0,0,2,0,0,22,0,0,0,-1,0,1
-DomainError,0,0,0,0,0,6,0,0,1,-1,0,0
-Error,0,1,7,0,0,64,1,2,1,-1,1,3
-GenericError,0,0,0,0,0,6,0,0,2,-1,0,0
-ErrorValidationException,0,2,0,0,1,14,2,0,2,-1,1,0
-ErrorValidator,1,1,0,1,1,22,4,0,1,0,2,0
-User,0,0,6,0,0,51,0,0,0,-1,1,2
-StringExtension,0,2,0,0,2,26,2,0,0,-1,2,0
-Check,0,0,0,0,0,144,0,0,0,-1,0,8
-DataValidator,2,1,0,1,1,23,1,0,0,0,0,1
-ExceptionManager,0,5,0,0,3,92,12,0,0,-1,3,1
-PagedResult,3,2,4,0,2,66,2,0,0,1,0,1
-Cache,0,8,2,0,8,68,8,0,0,-1,2,0
-ICache,0,8,1,0,0,65,8,1,0,-1,0,1
-IConfigurationSettings,0,0,1,0,0,12,0,1,0,-1,0,0
-ConfigurationSettingsImplementation,0,0,1,0,0,9,0,0,1,-1,0,0
-Cryptography,0,4,1,0,4,30,4,0,0,-1,2,0
-ICryptography,0,4,0,0,0,30,4,1,0,-1,0,1
-CryptographyImplementation,2,6,0,0,4,112,15,0,1,0,1,0
-IDependencyResolver,0,2,0,0,0,19,2,0,0,-1,0,1
-IoC,1,4,0,0,4,48,4,0,0,0.5,1,3
-ILogger,0,5,0,0,0,32,5,1,0,-1,0,1
-Logger,0,5,1,0,5,63,5,0,0,-1,2,1
-EmailSender,0,0,1,0,0,15,0,0,0,-1,1,0
-EmailSendException,0,2,0,0,2,14,2,0,1,-1,0,0
-IEmailSender,0,2,0,0,0,19,2,1,0,-1,0,1
-EmailSenderImplementation,0,2,0,0,2,23,8,0,1,-1,0,0
-IUnitOfWork,0,1,0,0,0,10,1,1,0,-1,0,1
-UnitOfWorkManager,0,1,0,0,1,14,1,0,0,-1,2,0
-AddPersistenceException,0,6,0,0,4,29,6,0,1,-1,1,0
-FindPersistenceException,0,6,0,0,4,29,6,0,1,-1,1,0
-IRepository,0,3,0,0,0,26,3,2,0,-1,0,0
-PersistenceException,0,4,0,0,0,20,4,3,1,-1,0,0
-RemovePersistenceException,0,6,0,0,4,29,6,0,2,-1,1,0
-IErrorRepository,0,3,0,0,0,34,3,1,1,-1,0,1
-ErrorService,2,10,0,1,9,124,15,0,0,0.4,5,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PetStore.Core,DomainException,0,4,0,0,0,21,4,3,0,-1,0,2,,PetStore.Core.DomainObjects.Log' PetStore.Core.Services.Log.ErrorService
+PetStore.Core.DomainObjects,DomainObjectsFactory,0,0,0,0,0,35,0,0,0,-1,0,2,,PetStore.Core.Services.Log.ErrorService' PetStore.Infrastructure.NHibernate.Test.Repository.Log.ErrorRepositoryTest
+PetStore.Core.DomainObjects,Log,0,1,0,0,1,30,2,0,0,-1,5,2,PetStore.Core.DomainObjects.Log.Error' PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check' PetStore.Core.Helper.ExceptionManager' PetStore.Core.DomainException,PetStore.Core.Services.Log.ErrorService' PetStore.Infrastructure.NHibernate.Test.Repository.Log.ErrorRepositoryTest
+PetStore.Core.DomainObjects,IValidatable,0,1,0,0,0,10,1,1,0,-1,1,1,PetStore.Core.DomainObjects.IValidator,PetStore.Core.Services.Log.ErrorService
+PetStore.Core.DomainObjects,IValidator,0,1,0,0,0,10,1,1,0,-1,0,2,,PetStore.Core.DomainObjects.IValidatable' PetStore.Core.DomainObjects.Log.Error
+PetStore.Core.DomainObjects,ValidationException,0,6,1,0,5,45,7,1,1,-1,0,1,,PetStore.Infrastructure.NHibernate.Test.Repository.Log.ErrorRepositoryTest
+PetStore.Core.DomainObjects.Foundation,Address,0,0,8,0,0,37,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,CartItem,0,0,6,0,0,36,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,OrderItem,0,0,6,0,0,36,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,PhoneNumber,0,0,6,0,0,29,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,PhoneNumberType,0,0,0,0,0,8,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,Supplier,0,0,5,0,0,25,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,Order,0,0,9,0,0,43,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,Category,0,0,3,0,0,17,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,Country,0,0,3,0,0,17,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Foundation,Product,0,0,6,0,0,29,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Payment,CreditCard,0,0,3,0,0,17,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Payment,CreditCardAssociation,0,0,2,0,0,13,0,0,0,-1,0,0,,
+PetStore.Core.DomainObjects.Log,DomainError,0,0,0,0,0,3,0,0,1,-1,0,0,,
+PetStore.Core.DomainObjects.Log,Error,0,1,7,0,0,40,1,2,1,-1,1,5,PetStore.Core.DomainObjects.IValidator,PetStore.Core.DomainObjects.Log' PetStore.Core.DomainObjects.Log.Validation.ErrorValidator' PetStore.Core.Services.Log.ErrorService' PetStore.Infrastructure.NHibernate.Repository.Log.ErrorRepository' PetStore.Infrastructure.NHibernate.Test.Repository.Log.ErrorRepositoryTest
+PetStore.Core.DomainObjects.Log,GenericError,0,0,0,0,0,3,0,0,2,-1,0,0,,
+PetStore.Core.DomainObjects.Log.Validation,ErrorValidationException,0,2,0,0,1,15,2,0,2,-1,1,0,PetStore.Resources.DomainObjects.Log.ErrorResources,
+PetStore.Core.DomainObjects.Log.Validation,ErrorValidator,1,1,0,1,1,19,3,0,1,0,2,0,PetStore.Core.DomainObjects.Log.Error' PetStore.Resources.DomainObjects.Log.ErrorResources,
+PetStore.Core.DomainObjects.Security,User,0,0,6,0,0,32,0,0,0,-1,0,0,,
+PetStore.Core.Extension,StringExtension,0,2,0,0,2,23,2,0,0,-1,3,0,PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check' PetStore.Core.Helper.DataValidator,
+PetStore.Core.Helper,Check,0,0,0,0,0,151,0,0,0,-1,0,10,,PetStore.Core.DomainObjects.Log' PetStore.Core.Extension.StringExtension' PetStore.Core.Helper.ExceptionManager' PetStore.Core.Infrastructure.Caching.Cache' PetStore.Core.Infrastructure.Crypt.Cryptography' PetStore.Core.Infrastructure.Crypt.Implementation.CryptographyImplementation' PetStore.Core.Infrastructure.Logging.Logger' PetStore.Core.Services.Log.ErrorService' PetStore.Infrastructure.Foundation.Caching.Cache' PetStore.Core.Test.Helper.ArgumentTest
+PetStore.Core.Helper,Argument,0,10,0,0,10,145,20,0,0,-1,1,10,PetStore.Resources.Helper.CheckResources,PetStore.Core.DomainObjects.Log' PetStore.Core.Extension.StringExtension' PetStore.Core.Helper.ExceptionManager' PetStore.Core.Infrastructure.Caching.Cache' PetStore.Core.Infrastructure.Crypt.Cryptography' PetStore.Core.Infrastructure.Crypt.Implementation.CryptographyImplementation' PetStore.Core.Infrastructure.Logging.Logger' PetStore.Core.Services.Log.ErrorService' PetStore.Infrastructure.Foundation.Caching.Cache' PetStore.Core.Test.Helper.ArgumentTest
+PetStore.Core.Helper,DataValidator,2,1,0,1,1,20,1,0,0,0,0,2,,PetStore.Core.Extension.StringExtension' PetStore.Core.Test.Helper.DataValidatorTest
+PetStore.Core.Helper,ExceptionManager,0,5,0,0,3,98,11,0,0,-1,4,3,PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check' PetStore.Core.Services.Log.ErrorService' PetStore.Core.Infrastructure.InversionOfControl.IoC,PetStore.Core.DomainObjects.Log' PetStore.Infrastructure.Foundation.Logging.EventViewerLogger' PetStore.Core.Test.Helper.ExceptionManagerTest
+PetStore.Core.Helper,PagedResult<T>,3,2,4,0,2,62,2,0,0,1,0,0,,
+PetStore.Core.Infrastructure.Caching,Cache,0,8,2,0,8,72,8,0,0,-1,3,0,PetStore.Core.Infrastructure.Caching.ICache' PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check,
+PetStore.Core.Infrastructure.Caching,ICache,0,8,1,0,0,63,8,1,0,-1,0,1,,PetStore.Core.Infrastructure.Caching.Cache
+PetStore.Core.Infrastructure.Configuration,IConfigurationSettings,0,0,1,0,0,7,0,1,0,-1,0,0,,
+PetStore.Core.Infrastructure.Configuration.Implementation,ConfigurationSettingsImplementation,0,0,1,0,0,8,0,0,1,-1,0,0,,
+PetStore.Core.Infrastructure.Crypt,Cryptography,0,4,1,0,4,32,4,0,0,-1,3,0,PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check' PetStore.Core.Infrastructure.Crypt.ICryptography,
+PetStore.Core.Infrastructure.Crypt,ICryptography,0,4,0,0,0,27,4,2,0,-1,0,1,,PetStore.Core.Infrastructure.Crypt.Cryptography
+PetStore.Core.Infrastructure.Crypt.Implementation,CryptographyImplementation,2,6,0,0,4,122,6,0,1,0,2,1,PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check,PetStore.Core.Test.Infrastructure.Crypt.Implementation.CryptographyImplementationTest
+PetStore.Core.Infrastructure.InversionOfControl,IDependencyResolver,0,2,0,0,0,16,2,0,0,-1,0,2,,PetStore.Core.Infrastructure.InversionOfControl.IoC' PetStore.Core.Test.Infrastructure.InversionOfControl.IoCTest
+PetStore.Core.Infrastructure.InversionOfControl,IoC,1,4,0,0,4,44,4,0,0,0,1,6,PetStore.Core.Infrastructure.InversionOfControl.IDependencyResolver,PetStore.Core.Helper.ExceptionManager' PetStore.Core.Infrastructure.UnitOfWork.UnitOfWorkManager' PetStore.Infrastructure.NHibernate.Database.UnitOfWork' PetStore.Core.Test.Infrastructure.InversionOfControl.IoCTest' PetStore.Core.Test.Infrastructure.Logging.LoggerTest' PetStore.Core.Test.Infrastructure.UnitOfWork.UnitOfWorkManagerTest
+PetStore.Core.Infrastructure.Logging,ILogger,0,5,0,0,0,29,5,2,0,-1,0,2,,PetStore.Core.Infrastructure.Logging.Logger' PetStore.Core.Test.Infrastructure.InversionOfControl.IoCTest
+PetStore.Core.Infrastructure.Logging,Logger,0,5,1,0,5,62,5,0,0,-1,3,2,PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check' PetStore.Core.Infrastructure.Logging.ILogger,PetStore.Core.Services.Log.ErrorService' PetStore.Core.Test.Infrastructure.Logging.LoggerTest
+PetStore.Core.Infrastructure.Mail,EmailSender,0,0,1,0,0,14,0,0,0,-1,0,0,,
+PetStore.Core.Infrastructure.Mail,EmailSendException,0,2,0,0,2,11,2,0,1,-1,0,0,,
+PetStore.Core.Infrastructure.Mail,IEmailSender,0,2,0,0,0,16,2,2,0,-1,0,0,,
+PetStore.Core.Infrastructure.Mail.Implementation,EmailSenderImplementation,0,2,0,0,2,31,2,0,1,-1,0,0,,
+PetStore.Core.Infrastructure.UnitOfWork,IUnitOfWork,0,1,0,0,0,7,1,1,0,-1,0,2,,PetStore.Core.Infrastructure.UnitOfWork.UnitOfWorkManager' PetStore.Core.Test.Infrastructure.UnitOfWork.UnitOfWorkManagerTest
+PetStore.Core.Infrastructure.UnitOfWork,UnitOfWorkManager,0,1,0,0,1,11,1,0,0,-1,2,1,PetStore.Core.Infrastructure.InversionOfControl.IoC' PetStore.Core.Infrastructure.UnitOfWork.IUnitOfWork,PetStore.Core.Test.Infrastructure.UnitOfWork.UnitOfWorkManagerTest
+PetStore.Core.Repository,AddPersistenceException,0,6,0,0,4,19,6,0,1,-1,1,1,PetStore.Resources.GeneralResources,PetStore.Infrastructure.NHibernate.Test.Repository.Log.ErrorRepositoryTest
+PetStore.Core.Repository,FindPersistenceException,0,6,0,0,4,19,6,0,1,-1,1,0,PetStore.Resources.GeneralResources,
+PetStore.Core.Repository,IRepository,0,3,0,0,0,22,3,2,0,-1,0,0,,
+PetStore.Core.Repository,PersistenceException,0,4,0,0,0,21,4,3,1,-1,0,0,,
+PetStore.Core.Repository,RemovePersistenceException,0,6,0,0,4,19,6,0,2,-1,1,0,PetStore.Resources.GeneralResources,
+PetStore.Core.Repository.Log,IErrorRepository,0,3,0,0,0,34,3,1,1,-1,0,1,,PetStore.Core.Services.Log.ErrorService
+PetStore.Core.Services.Log,ErrorService,2,10,0,1,9,129,13,0,0,0,9,1,PetStore.Core.Repository.Log.IErrorRepository' PetStore.Core.Helper.Argument' PetStore.Core.Helper.Check' PetStore.Core.DomainObjects.Log.Error' PetStore.Core.Infrastructure.Logging.Logger' PetStore.Core.DomainObjects.Log' PetStore.Core.DomainObjects.DomainObjectsFactory' PetStore.Core.DomainException' PetStore.Core.DomainObjects.IValidatable,PetStore.Core.Helper.ExceptionManager

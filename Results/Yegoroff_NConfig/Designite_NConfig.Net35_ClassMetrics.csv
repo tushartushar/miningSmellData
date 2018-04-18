@@ -1,0 +1,43 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NConfig,IConfigurationFactory,0,3,2,0,0,9,3,1,0,-1,0,6,,NConfig.NSystemConfigurator' NConfig.NConfigRootReplacement' NConfig.NConfigSystemReplacement' NConfig.NWebSystemConfigurator' NConfig.INSystemConfigurator' NConfig.NConfigurator
+NConfig,IMergeableConfigurationCollection,0,3,1,0,0,20,3,1,0,-1,0,1,,NConfig.DeepSectionMergerImpl
+NConfig,ConfigurationFactory,0,4,2,0,4,34,4,0,1,-1,5,0,NConfig.IConfigurationRepository' NConfig.INSectionMergerRegistry' NConfig.NMultifileConfiguration' NConfig.NSystemReplacementConfiguration' NConfig.NConfigRecordConfiguration,
+NConfig,DeepMerger<TSection>,0,1,0,0,1,19,2,0,1,-1,1,0,NConfig.DeepSectionMergerImpl,
+NConfig,DeepMerger,0,1,0,0,1,19,2,0,1,-1,1,0,NConfig.DeepSectionMergerImpl,
+NConfig,DeepSectionMergerImpl,0,12,0,0,0,213,30,0,0,-1,2,2,NConfig.InheritanceTypes' NConfig.IMergeableConfigurationCollection,NConfig.DeepMerger<TSection>' NConfig.DeepMerger
+NConfig,InheritanceTypes,0,0,0,0,0,6,0,0,0,-1,0,1,,NConfig.DeepSectionMergerImpl
+NConfig,PropertyMerger<TSection>,0,2,0,0,1,33,6,0,1,-1,0,0,,
+NConfig,NSectionMergerRegistry,2,2,0,0,2,17,2,0,1,0,2,1,NConfig.DefaultMerger' NConfig.NSectionMerger,NConfig.NConfigurator
+NConfig,NConfigRecordConfiguration,1,2,0,0,1,15,2,0,1,0,2,1,NConfig.IConfigurationRepository' NConfig.INSectionMergerRegistry,NConfig.ConfigurationFactory
+NConfig,NSystemConfigurator,0,3,1,0,2,32,6,1,1,-1,3,1,NConfig.IConfigurationFactory' NConfig.ReflectionAccessor' NConfig.NSystemReplacementConfiguration,NConfig.NConfigurator
+NConfig,NSystemReplacementConfiguration,1,4,1,0,1,33,4,0,1,0.5,2,2,NConfig.IConfigurationRepository' NConfig.INSectionMergerRegistry,NConfig.ConfigurationFactory' NConfig.NSystemConfigurator
+NConfig,ReflectionAccessor<T>,0,1,0,0,1,4,1,0,1,-1,0,0,,
+NConfig,ReflectionAccessor,8,15,1,0,9,129,28,1,0,0.27,0,2,,NConfig.NSystemConfigurator' NConfig.NWebSystemConfigurator
+NConfig,NConfigRecordReplacement,2,6,3,0,6,56,6,0,0,0,1,1,NConfig.INConfiguration,NConfig.NConfigRootReplacement
+NConfig,NConfigRootReplacement,3,8,1,0,8,83,8,0,0,0,3,2,NConfig.IConfigurationFactory' NConfig.INConfiguration' NConfig.NConfigRecordReplacement,NConfig.NConfigSystemReplacement' NConfig.NWebSystemConfigurator
+NConfig,NConfigSystemReplacement,2,2,2,0,2,30,2,0,0,0,2,1,NConfig.NConfigRootReplacement' NConfig.IConfigurationFactory,NConfig.NWebSystemConfigurator
+NConfig,NWebSystemConfigurator,0,4,0,0,2,93,11,0,2,-1,4,1,NConfig.ReflectionAccessor' NConfig.NConfigSystemReplacement' NConfig.NConfigRootReplacement' NConfig.IConfigurationFactory,NConfig.NConfigurator
+NConfig,INSectionMergerRegistry,0,2,0,0,0,6,2,1,0,-1,1,5,NConfig.NSectionMerger,NConfig.ConfigurationFactory' NConfig.NConfigRecordConfiguration' NConfig.NSystemReplacementConfiguration' NConfig.NMultifileConfiguration' NConfig.NConfigurator
+NConfig,AppSettingsMerger,0,1,0,0,1,14,4,0,1,-1,0,0,,
+NConfig,ConnectionStringsMerger,0,1,0,0,1,14,4,0,1,-1,0,0,,
+NConfig,DefaultMerger,0,1,0,0,1,12,1,0,1,-1,0,1,,NConfig.NSectionMergerRegistry
+NConfig,INSystemConfigurator,0,2,0,0,0,6,2,1,0,-1,1,1,NConfig.IConfigurationFactory,NConfig.NConfigurator
+NConfig,MergeableConfigurationCollection<T>,0,7,0,0,2,71,9,0,1,-1,0,0,,
+NConfig,NSectionMerger,0,1,0,0,1,9,1,7,0,-1,0,4,,NConfig.NSectionMergerRegistry' NConfig.INSectionMergerRegistry' NConfig.NMultifileConfiguration' NConfig.NConfigurator
+NConfig,NSectionMerger<T>,0,2,0,0,2,18,2,0,1,-1,0,0,,
+NConfig,ConfigurationRepositoryWeb,0,1,0,0,0,12,3,0,1,-1,0,1,,NConfig.NConfigurator
+NConfig,ConfigurationExtension,0,2,0,0,2,31,2,0,0,-1,0,0,,
+NConfig,HostMappingConfigurationElement,6,5,3,0,2,90,6,0,0,0.4,0,2,,NConfig.HostMappingConfigurationCollection' NConfig.NConfigSettings
+NConfig,HostMappingConfigurationCollection,1,8,3,0,6,136,9,0,0,0.88,1,1,NConfig.HostMappingConfigurationElement,NConfig.NConfigSettings
+NConfig,IListExtension,0,1,0,0,1,10,3,0,0,-1,0,0,,
+NConfig,ConfigurationRepository,2,4,0,0,2,49,8,1,1,0.5,0,1,,NConfig.NConfigurator
+NConfig,NConfigSettings,5,3,2,0,2,82,9,0,1,0,4,1,NConfig.IConfigurationRepository' NConfig.HostMapSection' NConfig.HostMappingConfigurationCollection' NConfig.HostMappingConfigurationElement,NConfig.NConfigurator
+NConfig,IConfigurationRepository,0,2,0,0,0,13,2,1,0,-1,0,6,,NConfig.ConfigurationFactory' NConfig.NConfigRecordConfiguration' NConfig.NSystemReplacementConfiguration' NConfig.NConfigSettings' NConfig.NMultifileConfiguration' NConfig.NConfigurator
+NConfig,INConfigSettings,0,0,2,0,0,13,0,1,0,-1,0,3,,NConfig.INConfigSettingsExtension' NConfig.NMultifileConfiguration' NConfig.NConfigurator
+NConfig,INConfigSettingsExtension,0,1,0,0,1,8,1,0,0,-1,1,0,NConfig.INConfigSettings,
+NConfig,NMultifileConfiguration,4,14,5,0,4,269,43,2,1,0.21,5,1,NConfig.IConfigurationRepository' NConfig.INSectionMergerRegistry' NConfig.NSectionMerger' NConfig.INConfigSettings' NConfig.NConfigurator,NConfig.ConfigurationFactory
+NConfig,INConfiguration,0,4,3,0,0,58,4,1,0,-1,0,4,,NConfig.NConfigRecordReplacement' NConfig.NConfigRootReplacement' NConfig.INConfigurationExtensions' NConfig.NConfigurator
+NConfig,INConfigurationExtensions,0,5,0,0,5,58,5,0,0,-1,2,0,NConfig.INConfiguration' NConfig.NConfigurator,
+NConfig,HostMapSection,0,0,1,0,0,11,0,0,0,-1,0,1,,NConfig.NConfigSettings
+NConfig,NConfigurator,5,12,6,0,6,151,15,0,0,0.33,13,2,NConfig.INSectionMergerRegistry' NConfig.IConfigurationRepository' NConfig.INConfigSettings' NConfig.IConfigurationFactory' NConfig.INSystemConfigurator' NConfig.INConfiguration' NConfig.NSectionMerger' NConfig.NConfigSettings' NConfig.ConfigurationRepositoryWeb' NConfig.ConfigurationRepository' NConfig.NSectionMergerRegistry' NConfig.NWebSystemConfigurator' NConfig.NSystemConfigurator,NConfig.NMultifileConfiguration' NConfig.INConfigurationExtensions
+NConfig,MemoizeExtensions,0,2,0,0,2,37,2,0,0,-1,0,0,,

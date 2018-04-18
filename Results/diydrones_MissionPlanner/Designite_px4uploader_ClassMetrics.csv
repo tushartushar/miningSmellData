@@ -1,13 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Formatter,1,2,0,1,2,59,32,0,0,0,0,1
-DatasetSchema,2,0,0,2,0,7,0,0,0,-1,0,2
-JSONParameters,10,1,0,10,1,51,3,0,0,0,0,2
-JSON,7,37,1,1,12,752,182,0,0,0.16,7,3
-JsonParser,5,14,0,0,1,322,122,0,0,0,1,1
-JSONSerializer,8,22,0,0,0,393,98,0,0,0.14,5,1
-Getters,2,0,0,2,0,6,0,0,0,-1,1,2
-Reflection,5,9,0,1,0,242,31,0,0,0.78,2,3
-SafeDictionary,2,4,1,0,4,41,4,0,0,0,0,2
-Firmware,14,4,0,11,4,334,11,0,0,0.5,1,3
-Program,0,5,0,0,3,353,31,0,0,-1,2,0
-Uploader,13,36,0,10,32,687,98,0,0,0,2,4
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+fastJSON,Formatter,1,2,0,1,2,63,8,0,0,0,0,1,,fastJSON.JSON
+fastJSON,DatasetSchema,2,0,0,2,0,5,0,0,0,-1,0,2,,fastJSON.JSON' fastJSON.JSONSerializer
+fastJSON,JSONParameters,10,1,0,10,1,50,3,0,0,0,0,2,,fastJSON.JSON' fastJSON.JSONSerializer
+fastJSON,JSON,7,37,1,1,12,763,128,0,0,0.08,9,3,fastJSON.JSONParameters' fastJSON.JSONSerializer' fastJSON.JsonParser' fastJSON.Formatter' fastJSON.myPropInfo' fastJSON.myPropInfoFlags' fastJSON.Reflection' fastJSON.myPropInfoType' fastJSON.DatasetSchema,fastJSON.JsonParser' fastJSON.JSONSerializer' px4uploader.Firmware
+fastJSON,myPropInfoType,0,0,0,0,0,21,0,0,0,-1,0,2,,fastJSON.JSON' fastJSON.myPropInfo
+fastJSON,myPropInfoFlags,0,0,0,0,0,6,0,0,0,-1,0,2,,fastJSON.JSON' fastJSON.myPropInfo
+fastJSON,myPropInfo,12,0,0,12,0,15,0,0,0,-1,2,1,fastJSON.myPropInfoType' fastJSON.myPropInfoFlags,fastJSON.JSON
+fastJSON,JsonParser,5,14,0,0,1,342,35,0,0,0,2,1,fastJSON.Token' fastJSON.JSON,fastJSON.JSON
+fastJSON,Token,0,0,0,0,0,15,0,0,0,-1,0,1,,fastJSON.JsonParser
+fastJSON,JSONSerializer,8,22,0,0,0,417,64,0,0,0,5,1,fastJSON.JSONParameters' fastJSON.JSON' fastJSON.DatasetSchema' fastJSON.Getters' fastJSON.Reflection,fastJSON.JSON
+fastJSON,Getters,2,0,0,2,0,6,0,0,0,-1,0,2,,fastJSON.JSONSerializer' fastJSON.Reflection
+fastJSON,Reflection,5,9,0,1,0,260,30,0,0,0.78,1,2,fastJSON.Getters,fastJSON.JSON' fastJSON.JSONSerializer
+fastJSON,SafeDictionary<TKey;TValue>,2,4,1,0,4,40,4,0,0,0,0,0,,
+px4uploader,Firmware,14,4,0,11,4,101,7,0,0,0.5,1,3,fastJSON.JSON,MissionPlanner.Utilities.Firmware' px4uploader.Program' px4uploader.Uploader
+px4uploader,Program,0,5,0,0,3,369,15,0,0,-1,4,0,px4uploader.Firmware' px4uploader.Uploader' px4uploader.RSAParameterTraits' px4uploader.Helpers,
+px4uploader,Helpers,0,3,0,0,3,92,9,0,0,-1,1,1,px4uploader.PemStringType,px4uploader.Program
+px4uploader,PemStringType,0,0,0,0,0,5,0,0,0,-1,0,1,,px4uploader.Helpers
+px4uploader,RSAParameterTraits,8,1,0,8,1,68,3,0,0,0,0,1,,px4uploader.Program
+px4uploader,Uploader,13,36,0,10,32,615,86,0,0,0,4,4,px4uploader.otp' px4uploader.Code' px4uploader.Info' px4uploader.Firmware,MissionPlanner.GenOTP' MissionPlanner.Utilities.BoardDetect' MissionPlanner.Utilities.Firmware' px4uploader.Program
+px4uploader,Code,0,0,0,0,0,23,0,0,0,-1,0,1,,px4uploader.Uploader
+px4uploader,Info,0,0,0,0,0,7,0,0,0,-1,0,1,,px4uploader.Uploader
+px4uploader,otp,9,0,0,9,0,17,0,0,0,-1,0,1,,px4uploader.Uploader

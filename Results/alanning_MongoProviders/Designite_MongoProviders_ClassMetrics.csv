@@ -1,9 +1,11 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ClientMongo,0,1,0,0,0,15,1,0,0,-1,1,2
-MembershipProvider,28,30,18,10,17,1171,170,0,0,0.13,5,0
-Helper,0,5,0,0,0,83,17,0,0,-1,0,2
-Resources,2,1,115,0,0,949,1,0,0,0,0,3
-RoleProvider,22,11,9,7,11,286,24,0,0,0.18,5,0
-SecUtility,0,3,0,0,0,87,14,0,0,-1,1,2
-User,0,2,24,0,2,109,2,0,0,-1,0,2
-UserClassMap,0,1,0,0,1,37,2,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MongoProviders,ClientMongo,0,1,0,0,0,15,1,0,0,-1,1,2,MongoProviders.UserClassMap,MongoProviders.MembershipProvider' MongoProviders.RoleProvider
+MongoProviders,MembershipProvider,28,30,18,10,17,1242,123,0,0,0.13,6,3,MongoProviders.MembershipElements' MongoProviders.Resources' MongoProviders.Helper' MongoProviders.ClientMongo' MongoProviders.User' MongoProviders.SecUtility,MongoProviders.UnitTests.BaseTest' MongoProviders.UnitTests.MembershipProviderTest' MongoProviders.UnitTests.RoleProviderTest
+MongoProviders,MembershipElements,3,0,0,3,0,6,0,0,0,-1,0,2,,MongoProviders.MembershipProvider' MongoProviders.UnitTests.MembershipProviderTest
+MongoProviders,Helper,0,5,0,0,0,105,20,0,0,-1,0,3,,MongoProviders.MembershipProvider' MongoProviders.RoleProvider' MongoProviders.UnitTests.BaseTest
+MongoProviders,Resources,2,1,115,0,0,1060,1,0,0,0,0,3,,MongoProviders.MembershipProvider' MongoProviders.RoleProvider' MongoProviders.SecUtility
+MongoProviders,RoleProvider,22,11,9,7,11,282,24,0,0,0.18,6,2,MongoProviders.RoleMembershipElements' MongoProviders.Resources' MongoProviders.Helper' MongoProviders.ClientMongo' MongoProviders.User' MongoProviders.SecUtility,MongoProviders.UnitTests.BaseTest' MongoProviders.UnitTests.RoleProviderTest
+MongoProviders,RoleMembershipElements,2,0,0,2,0,5,0,0,0,-1,0,1,,MongoProviders.RoleProvider
+MongoProviders,SecUtility,0,3,0,0,0,101,9,0,0,-1,1,2,MongoProviders.Resources,MongoProviders.MembershipProvider' MongoProviders.RoleProvider
+MongoProviders,User,0,2,24,0,2,36,2,1,0,-1,0,4,,MongoProviders.MembershipProvider' MongoProviders.RoleProvider' MongoProviders.UserClassMap' MongoProviders.UnitTests.MembershipProviderTest
+MongoProviders,UserClassMap,0,1,0,0,1,39,2,0,0,-1,1,1,MongoProviders.User,MongoProviders.ClientMongo

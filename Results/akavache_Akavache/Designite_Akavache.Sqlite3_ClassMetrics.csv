@@ -1,57 +1,64 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AsyncLock,2,2,0,0,2,29,2,0,0,0,0,1
-IProducerConsumerCollection,0,4,0,0,0,7,4,1,0,-1,0,1
-BlockingCollection,10,43,6,0,34,442,88,0,0,0.74,2,1
-AtomicBooleanValue,3,8,1,0,8,59,8,0,0,0.38,0,0
-AtomicBoolean,3,8,1,0,8,59,8,0,0,0.38,0,1
-ConcurrentQueue,4,14,4,0,8,176,35,0,1,0.64,0,0
-SQLiteException,0,2,1,0,2,15,2,1,0,-1,1,8
-NotNullConstraintViolationException,0,5,1,0,3,30,6,0,1,-1,3,3
-SQLiteOpenFlags,0,0,0,0,0,15,0,0,0,-1,0,1
-CreateFlags,0,0,0,0,0,13,0,0,0,-1,0,2
-SQLiteConnection,10,57,8,0,50,1269,123,0,0,0.3,10,18
-NotifyTableChangedEventArgs,0,1,2,0,1,16,1,0,0,-1,2,0
-NotifyTableChangedAction,0,0,0,0,0,6,0,0,0,-1,0,2
-SQLiteConnectionString,0,1,3,0,1,24,1,0,0,-1,0,0
-TableAttribute,0,1,1,0,1,12,1,0,0,-1,0,1
-ColumnAttribute,0,1,1,0,1,12,1,0,0,-1,0,0
-PrimaryKeyAttribute,0,0,0,0,0,4,0,0,0,-1,0,2
-AutoIncrementAttribute,0,0,0,0,0,4,0,0,0,-1,0,1
-IndexedAttribute,0,2,3,0,2,24,2,1,0,-1,0,2
-IgnoreAttribute,0,0,0,0,0,4,0,0,0,-1,0,1
-UniqueAttribute,0,0,1,0,0,11,0,0,1,-1,0,0
-MaxLengthAttribute,0,1,1,0,1,12,1,0,0,-1,0,1
-CollationAttribute,0,1,1,0,1,12,1,0,0,-1,0,1
-NotNullAttribute,0,0,0,0,0,4,0,0,0,-1,0,1
-TableMapping,5,7,8,0,5,220,19,0,0,0.57,5,6
-Orm,3,8,0,3,8,115,23,0,0,0.88,7,1
-SQLiteCommand,3,16,1,0,9,272,66,0,0,0.19,5,2
-PreparedSqlLiteInsertCommand,1,5,4,0,2,85,13,0,0,0.6,5,1
-BaseTableQuery,0,0,0,0,0,14,0,1,0,-1,0,1
-TableQuery,11,27,2,0,18,419,76,0,1,0.7,3,1
-SQLite3,0,32,0,0,32,418,33,0,0,-1,1,14
-SqliteOperationQueue,17,27,0,0,12,506,105,0,0,0.41,20,1
-OperationQueueItem,0,5,8,0,5,80,5,0,0,-1,1,1
-Constants,1,0,0,1,0,4,0,0,0,-1,0,3
-OperationType,0,0,0,0,0,13,0,0,0,-1,0,2
-IPreparedSqliteOperation,0,0,1,0,0,6,0,9,0,-1,1,1
-BulkInsertSqliteOperation,2,3,1,0,3,44,4,0,1,0,2,1
-BulkSelectSqliteOperation,3,3,1,0,3,61,3,1,1,0,4,1
-BulkSelectByTypeSqliteOperation,0,1,0,0,1,6,1,0,2,-1,1,1
-BulkInvalidateSqliteOperation,2,3,1,0,3,46,3,1,1,0,3,1
-BulkInvalidateByTypeSqliteOperation,0,1,0,0,1,6,1,0,2,-1,1,1
-InvalidateAllSqliteOperation,1,3,1,0,3,20,3,0,1,0.67,1,1
-VacuumSqliteOperation,3,3,1,0,3,35,4,0,1,0,2,1
-DeleteExpiredSqliteOperation,3,3,1,0,3,36,4,0,1,0,2,1
-BeginTransactionSqliteOperation,2,3,1,0,3,32,4,0,1,0,2,1
-CommitTransactionSqliteOperation,2,3,1,0,3,32,4,0,1,0,2,1
-GetKeysSqliteOperation,3,3,1,0,3,39,4,0,1,0,2,1
-SqliteOperationMixin,0,1,0,0,1,13,1,0,0,-1,3,0
-Registrations,0,1,0,0,1,27,2,0,1,-1,7,0
-SQLitePersistentBlobCache,6,23,3,0,16,308,28,1,2,0,7,1
-CacheElement,0,0,5,0,0,26,0,0,0,-1,2,2
-SchemaInfo,0,0,1,0,0,7,0,0,0,-1,0,1
-IObjectWrapper,0,0,0,0,0,3,0,1,0,-1,0,0
-ObjectWrapper,0,0,1,0,0,7,0,0,1,-1,0,1
-SQLiteEncryptedBlobCache,1,3,0,0,1,25,6,0,3,0,1,1
-EnumerableEx,0,1,0,0,1,7,1,0,0,-1,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Akavache.Sqlite3.Internal,AsyncLock,2,2,0,0,2,31,3,0,0,0,0,2,,Akavache.Sqlite3.Internal.Releaser' Akavache.Sqlite3.SqliteOperationQueue
+Akavache.Sqlite3.Internal,Releaser,1,2,0,0,1,6,2,0,0,0,1,0,Akavache.Sqlite3.Internal.AsyncLock,
+Akavache.Sqlite3.Internal,SQLiteException,0,2,1,0,2,14,2,1,0,-1,1,6,Akavache.Sqlite3.Internal.Result,Akavache.Sqlite3.Internal.NotNullConstraintViolationException' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.Internal.SQLite3' Akavache.Sqlite3.SqliteOperationMixin
+Akavache.Sqlite3.Internal,NotNullConstraintViolationException,0,5,1,0,3,35,6,0,1,-1,3,3,Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.SQLiteException,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand
+Akavache.Sqlite3.Internal,SQLiteOpenFlags,0,0,0,0,0,10,0,0,0,-1,0,1,,Akavache.Sqlite3.Internal.SQLiteConnection
+Akavache.Sqlite3.Internal,CreateFlags,0,0,0,0,0,10,0,0,0,-1,0,3,,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.Column
+Akavache.Sqlite3.Internal,SQLiteConnection,10,57,8,0,50,1389,117,0,0,0.32,15,18,Akavache.Sqlite3.Internal.SQLite3' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLiteException' Akavache.Sqlite3.Internal.SQLiteOpenFlags' Akavache.Sqlite3.Internal.ColumnInfo' Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.CreateFlags' Akavache.Sqlite3.Internal.IndexInfo' Akavache.Sqlite3.Internal.Orm' Akavache.Sqlite3.Internal.Column' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.Internal.ExtendedResult' Akavache.Sqlite3.Internal.NotNullConstraintViolationException' Akavache.Sqlite3.Internal.NotifyTableChangedAction,Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.Internal.TableQuery<T>' Akavache.Sqlite3.SqliteOperationQueue' Akavache.Sqlite3.BulkInsertSqliteOperation' Akavache.Sqlite3.BulkSelectSqliteOperation' Akavache.Sqlite3.BulkSelectByTypeSqliteOperation' Akavache.Sqlite3.BulkInvalidateSqliteOperation' Akavache.Sqlite3.BulkInvalidateByTypeSqliteOperation' Akavache.Sqlite3.InvalidateAllSqliteOperation' Akavache.Sqlite3.VacuumSqliteOperation' Akavache.Sqlite3.DeleteExpiredSqliteOperation' Akavache.Sqlite3.BeginTransactionSqliteOperation' Akavache.Sqlite3.CommitTransactionSqliteOperation' Akavache.Sqlite3.GetKeysSqliteOperation' Akavache.Sqlite3.SqliteOperationMixin' Akavache.Sqlite3.SQLitePersistentBlobCache
+Akavache.Sqlite3.Internal,IndexedColumn,2,0,0,2,0,5,0,0,0,-1,0,0,,
+Akavache.Sqlite3.Internal,IndexInfo,4,0,0,4,0,7,0,0,0,-1,0,1,,Akavache.Sqlite3.Internal.SQLiteConnection
+Akavache.Sqlite3.Internal,ColumnInfo,0,1,2,0,1,21,1,0,0,-1,0,1,,Akavache.Sqlite3.Internal.SQLiteConnection
+Akavache.Sqlite3.Internal,NotifyTableChangedEventArgs,0,1,2,0,1,11,1,0,0,-1,2,0,Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.NotifyTableChangedAction,
+Akavache.Sqlite3.Internal,NotifyTableChangedAction,0,0,0,0,0,6,0,0,0,-1,0,2,,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.NotifyTableChangedEventArgs
+Akavache.Sqlite3.Internal,SQLiteConnectionString,0,1,3,0,1,13,1,0,0,-1,0,0,,
+Akavache.Sqlite3.Internal,TableAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Akavache.Sqlite3.Internal.TableMapping
+Akavache.Sqlite3.Internal,ColumnAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Akavache.Sqlite3.Internal.Column
+Akavache.Sqlite3.Internal,PrimaryKeyAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Akavache.Sqlite3.Internal.Orm
+Akavache.Sqlite3.Internal,AutoIncrementAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Akavache.Sqlite3.Internal.Orm
+Akavache.Sqlite3.Internal,IndexedAttribute,0,2,3,0,2,17,2,1,0,-1,0,1,,Akavache.Sqlite3.Internal.Orm
+Akavache.Sqlite3.Internal,IgnoreAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Akavache.Sqlite3.Internal.TableMapping
+Akavache.Sqlite3.Internal,UniqueAttribute,0,0,1,0,0,8,0,0,1,-1,0,0,,
+Akavache.Sqlite3.Internal,MaxLengthAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Akavache.Sqlite3.Internal.Orm
+Akavache.Sqlite3.Internal,CollationAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Akavache.Sqlite3.Internal.Orm
+Akavache.Sqlite3.Internal,NotNullAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Akavache.Sqlite3.Internal.Orm
+Akavache.Sqlite3.Internal,TableMapping,5,7,8,0,5,226,17,0,0,0.57,6,5,Akavache.Sqlite3.Internal.Column' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.Internal.TableAttribute' Akavache.Sqlite3.Internal.IgnoreAttribute' Akavache.Sqlite3.Internal.CreateFlags' Akavache.Sqlite3.Internal.SQLiteConnection,Akavache.Sqlite3.Internal.NotNullConstraintViolationException' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.NotifyTableChangedEventArgs' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.TableQuery<T>
+Akavache.Sqlite3.Internal,Column,1,3,10,0,3,64,4,0,0,0,3,5,Akavache.Sqlite3.Internal.ColumnAttribute' Akavache.Sqlite3.Internal.Orm' Akavache.Sqlite3.Internal.CreateFlags,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.Orm' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.TableQuery<T>
+Akavache.Sqlite3.Internal,Orm,3,8,0,3,8,128,15,0,0,0.88,7,2,Akavache.Sqlite3.Internal.Column' Akavache.Sqlite3.Internal.PrimaryKeyAttribute' Akavache.Sqlite3.Internal.CollationAttribute' Akavache.Sqlite3.Internal.AutoIncrementAttribute' Akavache.Sqlite3.Internal.IndexedAttribute' Akavache.Sqlite3.Internal.MaxLengthAttribute' Akavache.Sqlite3.Internal.NotNullAttribute,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Column
+Akavache.Sqlite3.Internal,SQLiteCommand,3,16,1,0,9,303,30,0,0,0.19,9,3,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3' Akavache.Sqlite3.Internal.SQLiteException' Akavache.Sqlite3.Internal.ExtendedResult' Akavache.Sqlite3.Internal.NotNullConstraintViolationException' Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.Column' Akavache.Sqlite3.Internal.ColType,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.Internal.TableQuery<T>
+Akavache.Sqlite3.Internal,Binding,0,0,3,0,0,8,0,0,0,-1,0,0,,
+Akavache.Sqlite3.Internal,PreparedSqlLiteInsertCommand,1,5,4,0,2,83,11,0,0,0.6,7,2,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.SQLiteException' Akavache.Sqlite3.Internal.ExtendedResult' Akavache.Sqlite3.Internal.NotNullConstraintViolationException,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.TableMapping
+Akavache.Sqlite3.Internal,BaseTableQuery,0,0,0,0,0,8,0,1,0,-1,0,1,,Akavache.Sqlite3.Internal.TableQuery<T>
+Akavache.Sqlite3.Internal,Ordering,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Akavache.Sqlite3.Internal,TableQuery<T>,11,27,2,0,18,455,41,0,1,0.67,6,0,Akavache.Sqlite3.Internal.BaseTableQuery' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.TableMapping' Akavache.Sqlite3.Internal.Column' Akavache.Sqlite3.Internal.CompileResult' Akavache.Sqlite3.Internal.SQLiteCommand,
+Akavache.Sqlite3.Internal,CompileResult,0,0,2,0,0,6,0,0,0,-1,0,1,,Akavache.Sqlite3.Internal.TableQuery<T>
+Akavache.Sqlite3.Internal,SQLite3,0,32,0,0,32,454,33,0,0,-1,4,12,Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLiteException' Akavache.Sqlite3.Internal.ColType' Akavache.Sqlite3.Internal.ExtendedResult,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.BulkInsertSqliteOperation' Akavache.Sqlite3.BulkSelectSqliteOperation' Akavache.Sqlite3.BulkInvalidateSqliteOperation' Akavache.Sqlite3.VacuumSqliteOperation' Akavache.Sqlite3.DeleteExpiredSqliteOperation' Akavache.Sqlite3.BeginTransactionSqliteOperation' Akavache.Sqlite3.CommitTransactionSqliteOperation' Akavache.Sqlite3.GetKeysSqliteOperation' Akavache.Sqlite3.SqliteOperationMixin
+Akavache.Sqlite3.Internal,Result,0,0,0,0,0,34,0,0,0,-1,0,16,,Akavache.Sqlite3.Internal.SQLiteException' Akavache.Sqlite3.Internal.NotNullConstraintViolationException' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.Internal.SQLite3' Akavache.Sqlite3.BulkInsertSqliteOperation' Akavache.Sqlite3.BulkSelectSqliteOperation' Akavache.Sqlite3.BulkInvalidateSqliteOperation' Akavache.Sqlite3.InvalidateAllSqliteOperation' Akavache.Sqlite3.VacuumSqliteOperation' Akavache.Sqlite3.DeleteExpiredSqliteOperation' Akavache.Sqlite3.BeginTransactionSqliteOperation' Akavache.Sqlite3.CommitTransactionSqliteOperation' Akavache.Sqlite3.GetKeysSqliteOperation' Akavache.Sqlite3.SqliteOperationMixin
+Akavache.Sqlite3.Internal,ExtendedResult,0,0,0,0,0,48,0,0,0,-1,0,4,,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.PreparedSqlLiteInsertCommand' Akavache.Sqlite3.Internal.SQLite3
+Akavache.Sqlite3.Internal,ConfigOption,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Akavache.Sqlite3.Internal,ColType,0,0,0,0,0,8,0,0,0,-1,0,2,,Akavache.Sqlite3.Internal.SQLiteCommand' Akavache.Sqlite3.Internal.SQLite3
+Akavache.Sqlite3,SqliteOperationQueue,17,27,0,0,12,690,63,0,0,0.41,6,1,Akavache.Sqlite3.Internal.AsyncLock' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.OperationQueueItem' Akavache.Sqlite3.Constants' Akavache.Sqlite3.OperationType' Akavache.Sqlite3.EnumerableEx,Akavache.Sqlite3.SQLitePersistentBlobCache
+Akavache.Sqlite3,OperationQueueItem,0,5,8,0,5,56,5,0,0,-1,1,1,Akavache.Sqlite3.OperationType,Akavache.Sqlite3.SqliteOperationQueue
+Akavache.Sqlite3,EnumerableEx,0,1,0,0,1,7,1,0,0,-1,0,1,,Akavache.Sqlite3.SqliteOperationQueue
+Akavache.Sqlite3,Constants,1,0,0,1,0,4,0,0,0,-1,0,3,,Akavache.Sqlite3.SqliteOperationQueue' Akavache.Sqlite3.BulkSelectSqliteOperation' Akavache.Sqlite3.BulkInvalidateSqliteOperation
+Akavache.Sqlite3,OperationType,0,0,0,0,0,13,0,0,0,-1,0,2,,Akavache.Sqlite3.SqliteOperationQueue' Akavache.Sqlite3.OperationQueueItem
+Akavache.Sqlite3,IPreparedSqliteOperation,0,0,1,0,0,4,0,9,0,-1,0,1,,Akavache.Sqlite3.SqliteOperationMixin
+Akavache.Sqlite3,BulkInsertSqliteOperation,2,3,1,0,3,60,4,0,1,0,3,0,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3,
+Akavache.Sqlite3,BulkSelectSqliteOperation,3,3,1,0,3,77,4,1,1,0,5,0,Akavache.Sqlite3.Constants' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3' Akavache.Sqlite3.CacheElement,
+Akavache.Sqlite3,BulkSelectByTypeSqliteOperation,0,1,0,0,1,4,1,0,2,-1,1,0,Akavache.Sqlite3.Internal.SQLiteConnection,
+Akavache.Sqlite3,BulkInvalidateSqliteOperation,2,3,1,0,3,58,4,1,1,0,4,0,Akavache.Sqlite3.Constants' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3,
+Akavache.Sqlite3,BulkInvalidateByTypeSqliteOperation,0,1,0,0,1,4,1,0,2,-1,1,0,Akavache.Sqlite3.Internal.SQLiteConnection,
+Akavache.Sqlite3,InvalidateAllSqliteOperation,1,3,1,0,3,19,3,0,1,0.67,2,0,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result,
+Akavache.Sqlite3,VacuumSqliteOperation,3,3,1,0,3,44,4,0,1,0,3,0,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3,
+Akavache.Sqlite3,DeleteExpiredSqliteOperation,3,3,1,0,3,45,4,0,1,0,3,0,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3,
+Akavache.Sqlite3,BeginTransactionSqliteOperation,2,3,1,0,3,40,4,0,1,0,3,0,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3,
+Akavache.Sqlite3,CommitTransactionSqliteOperation,2,3,1,0,3,40,4,0,1,0,3,0,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3,
+Akavache.Sqlite3,GetKeysSqliteOperation,3,3,1,0,3,50,4,0,1,0,3,0,Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLite3,
+Akavache.Sqlite3,SqliteOperationMixin,0,1,0,0,1,14,2,0,0,-1,5,0,Akavache.Sqlite3.Internal.Result' Akavache.Sqlite3.Internal.SQLiteException' Akavache.Sqlite3.Internal.SQLite3' Akavache.Sqlite3.Internal.SQLiteConnection' Akavache.Sqlite3.IPreparedSqliteOperation,
+Akavache.Sqlite3,Registrations,0,1,0,0,1,31,2,0,0,-1,2,0,Akavache.Sqlite3.SQLitePersistentBlobCache' Akavache.Sqlite3.SQLiteEncryptedBlobCache,
+Akavache.Sqlite3,SQLiteEncryptedBlobCache,1,3,0,0,1,34,6,0,1,0,0,1,,Akavache.Sqlite3.Registrations
+Akavache.Sqlite3,SQLitePersistentBlobCache,6,23,3,0,16,369,46,1,0,0.09,2,1,Akavache.Sqlite3.SqliteOperationQueue' Akavache.Sqlite3.Internal.SQLiteConnection,Akavache.Sqlite3.Registrations
+Akavache.Sqlite3,CacheElement,0,0,5,0,0,15,0,0,0,-1,0,1,,Akavache.Sqlite3.BulkSelectSqliteOperation
+Akavache.Sqlite3,SchemaInfo,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Akavache.Sqlite3,IObjectWrapper,0,0,0,0,0,1,0,1,0,-1,0,0,,
+Akavache.Sqlite3,ObjectWrapper<T>,0,0,1,0,0,4,0,0,1,-1,0,0,,

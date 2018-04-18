@@ -1,0 +1,48 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Ractor,RedisAsyncDictionary<T>,6,4,5,0,4,121,11,0,1,0,2,0,Ractor.Redis' Ractor.When,
+Ractor,RedisQueue<T>,10,5,5,0,5,191,11,0,1,0,4,0,Ractor.Redis' Ractor.When' Ractor.QueueSendResult' Ractor.QueueReceiveResult,
+Ractor,QueueMessageWithId<T>,0,0,2,0,0,12,0,0,0,-1,0,0,,
+Ractor,FileBlobPersistor,1,17,1,0,17,135,20,0,1,0.12,1,0,Ractor.ISerializer,
+Ractor,BaseDataObject,0,1,3,0,1,12,1,3,1,-1,0,0,,
+Ractor,BaseDistributedDataObject,0,1,0,0,1,8,1,4,2,-1,0,0,,
+Ractor,DatabasePersistor,6,19,2,0,16,390,49,0,1,0.21,7,2,Ractor.SequentialGuidType' Ractor.Config' Ractor.DataContext' Ractor.DistributedDataContext' Ractor.IDataObject' Ractor.IDistributedDataObject' Ractor.GuidGenerator,Ractor.Persistence.Tests.PocoPersistorTests' Ractor.Persistence.Tests.PocoPersistorTests
+Ractor,RedisAttribute,0,1,3,0,1,13,1,0,0,-1,0,2,,Ractor.Redis' Ractor.CacheInfo
+Ractor,RedisKeyAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,Ractor.CacheInfo
+Ractor,CommonExtentions,0,4,0,0,4,49,4,0,0,-1,0,0,,
+Ractor,Config,0,5,0,0,5,57,10,0,0,-1,0,1,,Ractor.DatabasePersistor
+Ractor,DataContext,3,8,0,0,6,109,13,0,0,0.5,2,1,Ractor.IData' Ractor.IDistributedDataObject,Ractor.DatabasePersistor
+Ractor,DistributedDataContext,1,6,0,0,3,94,10,0,0,0.67,1,1,Ractor.IDistributedDataObject,Ractor.DatabasePersistor
+Ractor,SingleTableContext<T>,2,5,1,0,4,63,6,0,0,0.6,0,0,,
+Ractor,SequentialGuidType,0,0,0,0,0,14,0,0,0,-1,0,6,,Ractor.DatabasePersistor' Ractor.GuidGenerator' Ractor.GuidExtensions' Ractor.Persistence.Tests.GuidTests' Ractor.Persistence.Tests.PocoPersistorTests' Ractor.Persistence.Tests.PocoPersistorTests
+Ractor,GuidGenerator,3,8,0,0,5,82,10,0,0,0.38,1,2,Ractor.SequentialGuidType,Ractor.DatabasePersistor' Ractor.Persistence.Tests.GuidTests
+Ractor,GuidExtensions,0,4,0,0,3,47,6,0,0,-1,1,0,Ractor.SequentialGuidType,
+Ractor,IBlobPersistor,0,11,1,0,0,14,11,2,0,-1,0,0,,
+Ractor,QueueSendResult,0,0,2,0,0,10,0,0,0,-1,0,4,,Ractor.Actor<TReq;TResp>' Ractor.RedisQueue<T>' Ractor.Persistence.AWS.AWSQueue<T>' Ractor.Persistence.Tests.RedisQueueTests
+Ractor,QueueReceiveResult,0,0,4,0,0,9,0,0,0,-1,0,5,,Ractor.Actor<TReq;TResp>' Ractor.RedisQueue<T>' Ractor.Persistence.AWS.AWSQueue<T>' Ractor.CS.Tests.Program' Ractor.Persistence.Tests.RedisQueueTests
+Ractor,IQueue,0,3,1,0,0,6,3,2,0,-1,0,0,,
+Ractor,IAsyncDictionary,0,2,1,0,0,5,2,1,0,-1,0,0,,
+Ractor,ISequence,0,2,1,0,0,10,2,0,0,-1,0,0,,
+Ractor,When,0,0,0,0,0,5,0,0,0,-1,0,3,,Ractor.RedisAsyncDictionary<T>' Ractor.RedisQueue<T>' Ractor.Redis
+Ractor,IRedis,0,0,1,0,0,4,0,1,0,-1,0,0,,
+Ractor,IData,0,0,0,0,0,3,0,6,0,-1,0,1,,Ractor.DataContext
+Ractor,IDataObject,0,1,3,0,0,30,1,2,1,-1,0,2,,Ractor.DatabasePersistor' Ractor.CacheInfo
+Ractor,IEncryptedData,0,0,2,0,0,7,0,0,0,-1,0,1,,Ractor.DummyEncryptor
+Ractor,IEncryptor,0,2,0,0,0,4,2,1,0,-1,0,0,,
+Ractor,ProtectedAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,Ractor.DummyEncryptor
+Ractor,DummyEncryptor,0,3,0,0,2,66,11,0,1,-1,3,0,Ractor.IEncryptedData' Ractor.ProtectedAttribute' Ractor.CryptoExtentions,
+Ractor,CryptoExtentions,1,13,0,0,13,120,18,0,0,0.77,0,1,,Ractor.DummyEncryptor
+Ractor,IPocoPersistor,0,12,1,0,0,58,12,1,0,-1,0,0,,
+Ractor,IDistributedData,0,1,0,0,0,8,1,1,1,-1,0,0,,
+Ractor,IDistributedDataObject,0,0,0,0,0,3,0,1,2,-1,0,3,,Ractor.DatabasePersistor' Ractor.DataContext' Ractor.DistributedDataContext
+Ractor,ISerializer,0,3,0,0,0,5,3,1,0,-1,0,4,,Ractor.FileBlobPersistor' Ractor.Redis' Ractor.Persistence.AWS.AWSQueue<T>' Ractor.Persistence.AWS.S3Persistor
+Ractor,JsonSerializer,0,3,0,0,3,23,4,0,1,-1,0,0,,
+Ractor,JsonConvertExtensions,0,3,0,0,3,28,3,0,0,-1,0,0,,
+Ractor,Redis,3,242,4,1,237,1897,254,0,1,0.03,4,7,Ractor.When' Ractor.CacheInfo' Ractor.RedisAttribute' Ractor.ISerializer,Ractor.Actor<TReq;TResp>' Ractor.RedisAsyncDictionary<T>' Ractor.RedisQueue<T>' Ractor.CS.Tests.Program' Ractor.Persistence.Tests.RedisAsyncDictTests' Ractor.Persistence.Tests.RedisQueueTests' Ractor.Persistence.Tests.RedisTests
+Ractor,CacheInfo,0,4,3,0,4,43,9,0,0,-1,3,1,Ractor.RedisAttribute' Ractor.RedisKeyAttribute' Ractor.IDataObject,Ractor.Redis
+Ractor,TablePerHierarchyAttribute,0,1,1,0,1,11,1,0,0,-1,0,0,,
+Ractor,WaitHandleExtensions,0,2,0,0,2,25,2,0,0,-1,0,0,,
+System.Threading.Tasks.Schedulers,QueuedTaskScheduler,9,13,3,0,6,468,29,0,0,0.23,2,4,System.Threading.Tasks.Schedulers.QueueGroup' System.Threading.Tasks.Schedulers.QueuedTaskSchedulerQueue,Ractor.BaseActor' Ractor.Actor<TReq;TResp>' System.Threading.Tasks.Schedulers.QueuedTaskSchedulerDebugView' System.Threading.Tasks.Schedulers.QueuedTaskSchedulerQueue
+System.Threading.Tasks.Schedulers,QueuedTaskSchedulerDebugView,1,1,2,0,1,31,2,0,0,0,1,0,System.Threading.Tasks.Schedulers.QueuedTaskScheduler,
+System.Threading.Tasks.Schedulers,QueueGroup,1,1,0,1,1,10,3,0,0,0,0,1,,System.Threading.Tasks.Schedulers.QueuedTaskScheduler
+System.Threading.Tasks.Schedulers,QueuedTaskSchedulerQueue,4,6,2,0,1,81,8,0,0,0.5,1,2,System.Threading.Tasks.Schedulers.QueuedTaskScheduler,System.Threading.Tasks.Schedulers.QueuedTaskScheduler' System.Threading.Tasks.Schedulers.QueuedTaskSchedulerQueueDebugView
+System.Threading.Tasks.Schedulers,QueuedTaskSchedulerQueueDebugView,1,1,4,0,1,18,2,0,0,0,1,0,System.Threading.Tasks.Schedulers.QueuedTaskSchedulerQueue,

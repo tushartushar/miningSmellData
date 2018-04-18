@@ -1,22 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BetterExpando,3,9,0,0,8,96,16,0,0,0,0,2
-Bootstrap,2,2,0,0,2,29,5,0,0,0,0,0
-Champ,0,2,0,0,2,10,2,0,0,-1,0,0
-ChampTemplateBase,0,8,2,0,8,77,13,0,0,-1,4,1
-Constants,4,0,0,4,0,7,0,0,0,-1,0,2
-Extensions,0,15,0,0,15,131,28,0,0,-1,2,0
-Log,0,3,1,0,2,26,5,0,0,-1,1,5
-LogLevel,0,0,0,0,0,6,0,0,0,-1,0,2
-Options,0,0,9,0,0,49,0,0,0,-1,0,1
-PageList,0,2,1,0,2,22,3,0,0,-1,1,1
-PageListCollection,0,3,0,0,1,19,4,0,0,-1,2,4
-PageModel,0,1,3,0,1,25,1,0,0,-1,2,1
-Program,0,1,0,0,0,48,8,0,0,-1,5,0
-SiteBuilder,7,9,1,0,4,161,18,0,0,0,9,3
-Watcher,7,5,0,0,2,83,9,0,0,0,2,1
-ErrorPageFactory,1,2,0,0,1,77,4,0,0,0,1,1
-DirectoryNode,1,3,1,0,3,25,4,0,1,0.67,0,2
-Node,2,7,4,0,4,79,13,3,0,0.71,1,2
-PageNode,1,5,8,0,4,90,10,0,1,0.4,0,7
-SiteMapFactory,0,2,0,0,1,36,6,0,0,-1,6,1
-SyndicationNode,0,1,0,0,1,6,1,0,1,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+champ,BetterExpando,3,9,0,0,8,110,16,0,0,0,0,2,,champ.ChampTemplateBase' champ.Extensions
+champ,Bootstrap,2,2,0,0,2,33,3,0,0,0,0,1,,champ.Program
+champ,Champ,0,2,0,0,2,11,2,0,0,-1,0,0,,
+champ,ChampTemplateBase,0,8,1,0,8,76,13,1,0,-1,3,0,champ.Map.PageNode' champ.BetterExpando' champ.SiteBuilder,
+champ,ChampTemplateBase<TModel>,0,0,1,0,0,7,0,0,1,-1,0,0,,
+champ,Constants,4,0,0,4,0,7,0,0,0,-1,0,2,,champ.SiteBuilder' champ.Map.SiteMapFactory
+champ,Extensions,0,15,0,0,15,164,26,0,0,-1,2,0,champ.Log' champ.BetterExpando,
+champ,Log,0,3,1,0,2,27,5,0,0,-1,1,5,champ.LogLevel,champ.Extensions' champ.Program' champ.SiteBuilder' champ.Watcher' champ.Map.SiteMapFactory
+champ,LogLevel,0,0,0,0,0,6,0,0,0,-1,0,2,,champ.Log' champ.Program
+champ,Options,0,0,9,0,0,33,0,0,0,-1,0,1,,champ.Program
+champ,PageList,0,2,1,0,2,22,3,0,0,-1,1,1,champ.Map.PageNode,champ.PageListCollection
+champ,PageListCollection,0,3,0,0,1,21,4,0,0,-1,2,3,champ.PageList' champ.Map.PageNode,champ.PageModel' champ.Map.Node' champ.Map.SiteMapFactory
+champ,PageModel,0,1,3,0,1,12,1,0,0,-1,2,1,champ.Map.PageNode' champ.PageListCollection,champ.SiteBuilder
+champ,Program,0,1,0,0,0,58,7,0,0,-1,6,0,champ.Options' champ.Watcher' champ.Log' champ.LogLevel' champ.Bootstrap' champ.SiteBuilder,
+champ,SiteBuilder,7,9,1,0,4,177,15,0,0,0,8,3,champ.Constants' champ.Log' champ.Map.SiteMapFactory' champ.PageModel' champ.Map.PageNode' champ.Map.DirectoryNode' champ.Map.Node' champ.DebugHelper.ErrorPageFactory,champ.ChampTemplateBase' champ.Program' champ.Watcher
+champ,Watcher,7,5,0,0,2,94,8,0,0,0,2,1,champ.Log' champ.SiteBuilder,champ.Program
+champ.DebugHelper,ErrorPageFactory,1,2,0,0,1,88,4,0,0,0,1,1,champ.Map.PageNode,champ.SiteBuilder
+champ.Map,DirectoryNode,1,3,1,0,3,26,4,0,1,0.67,1,2,champ.Map.Node,champ.SiteBuilder' champ.Map.SiteMapFactory
+champ.Map,Node,2,7,4,0,4,81,12,3,0,0.71,1,3,champ.PageListCollection,champ.SiteBuilder' champ.Map.DirectoryNode' champ.Map.SiteMapFactory
+champ.Map,PageNode,1,5,8,0,4,79,10,0,1,0.4,0,7,,champ.ChampTemplateBase' champ.PageList' champ.PageListCollection' champ.PageModel' champ.SiteBuilder' champ.DebugHelper.ErrorPageFactory' champ.Map.SiteMapFactory
+champ.Map,SiteMapFactory,0,2,0,0,1,49,6,0,0,-1,6,1,champ.PageListCollection' champ.Log' champ.Constants' champ.Map.DirectoryNode' champ.Map.PageNode' champ.Map.Node,champ.SiteBuilder
+champ.Map,SyndicationNode,0,1,0,0,1,7,1,0,1,-1,0,0,,

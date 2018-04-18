@@ -1,0 +1,26 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+warmup.commands,AddTemplateFolder,0,2,0,0,2,32,4,0,1,-1,3,0,warmup.infrastructure.settings.WarmupConfiguration' warmup.infrastructure.console.CommandRunner' warmup.infrastructure.CommonHelp,
+warmup.commands,AddTextReplacement,0,2,0,0,2,48,7,0,1,-1,4,0,warmup.infrastructure.settings.WarmupConfiguration' warmup.infrastructure.settings.TextReplaceItem' warmup.infrastructure.settings.TextReplaceCollection' warmup.infrastructure.CommonHelp,
+warmup.commands,GenerateWarmup,0,4,0,0,2,67,11,0,1,-1,9,0,warmup.TargetDir' warmup.infrastructure.exporters.IExporter' warmup.infrastructure.settings.WarmupConfiguration' warmup.SourceControlType' warmup.infrastructure.exporters.GitHub' warmup.infrastructure.exporters.Svn' warmup.infrastructure.exporters.Git' warmup.infrastructure.exporters.Folder' warmup.infrastructure.CommonHelp,
+warmup.commands,ICommand,0,2,0,0,0,5,2,3,0,-1,0,1,,warmup.Program
+warmup.infrastructure.exporters,BaseExporter,0,3,0,0,3,30,9,4,1,-1,3,0,warmup.infrastructure.settings.WarmupConfiguration' warmup.infrastructure.settings.IgnoredFolder' warmup.TargetDir,
+warmup.infrastructure.exporters,Folder,0,1,0,0,1,9,1,0,2,-1,1,1,warmup.TargetDir,warmup.commands.GenerateWarmup
+warmup.infrastructure.exporters,Git,0,2,0,0,2,42,3,0,2,-1,3,1,warmup.infrastructure.extractors.GitTemplateExtractor' warmup.TargetDir' warmup.infrastructure.settings.WarmupConfiguration,warmup.commands.GenerateWarmup
+warmup.infrastructure.exporters,GitHub,0,6,0,0,4,48,8,0,2,-1,1,1,warmup.TargetDir,warmup.commands.GenerateWarmup
+warmup.infrastructure.exporters,IExporter,0,1,0,0,0,4,1,1,0,-1,1,1,warmup.TargetDir,warmup.commands.GenerateWarmup
+warmup.infrastructure.exporters,Svn,0,2,0,0,2,27,2,0,2,-1,2,1,warmup.TargetDir' warmup.infrastructure.settings.WarmupConfiguration,warmup.commands.GenerateWarmup
+warmup.infrastructure.extractors,GitTemplateExtractor,3,7,0,0,2,57,15,0,0,0,1,1,warmup.TargetDir,warmup.infrastructure.exporters.Git
+warmup.infrastructure,CommandAttribute,0,1,1,0,1,8,1,0,0,-1,0,0,,
+warmup.infrastructure,CommonHelp,0,1,0,0,1,20,1,0,0,-1,1,4,warmup.infrastructure.settings.WarmupConfiguration,warmup.commands.AddTemplateFolder' warmup.commands.AddTextReplacement' warmup.commands.GenerateWarmup' warmup.Program
+warmup.infrastructure.console,CommandRunner,0,2,0,0,2,42,2,0,0,-1,0,1,,warmup.commands.AddTemplateFolder
+warmup,Program,0,1,0,0,0,26,3,0,0,-1,2,0,warmup.commands.ICommand' warmup.infrastructure.CommonHelp,
+warmup,SourceControlType,0,0,0,0,0,6,0,0,0,-1,0,1,,warmup.commands.GenerateWarmup
+warmup,TargetDir,4,6,1,0,3,111,16,0,0,0.33,3,8,warmup.infrastructure.settings.WarmupConfiguration' warmup.infrastructure.settings.TextReplaceItem' warmup.TokenReplacement,warmup.commands.GenerateWarmup' warmup.infrastructure.exporters.BaseExporter' warmup.infrastructure.exporters.Folder' warmup.infrastructure.exporters.Git' warmup.infrastructure.exporters.GitHub' warmup.infrastructure.exporters.IExporter' warmup.infrastructure.exporters.Svn' warmup.infrastructure.extractors.GitTemplateExtractor
+warmup,TokenReplacement,0,4,0,0,3,62,15,0,0,-1,2,2,warmup.infrastructure.settings.WarmupConfiguration' warmup.infrastructure.settings.IgnoredFileType,warmup.TargetDir' warmup.Tests.describe_TokenReplacement
+warmup.infrastructure.settings,IgnoredFileTypeCollection,0,5,0,0,3,23,5,0,0,-1,1,0,warmup.infrastructure.settings.IgnoredFileType,
+warmup.infrastructure.settings,IgnoredFileType,0,0,1,0,0,9,0,0,0,-1,0,2,,warmup.TokenReplacement' warmup.infrastructure.settings.IgnoredFileTypeCollection
+warmup.infrastructure.settings,IgnoredFolderCollection,0,5,0,0,3,23,5,0,0,-1,1,0,warmup.infrastructure.settings.IgnoredFolder,
+warmup.infrastructure.settings,IgnoredFolder,0,0,1,0,0,9,0,0,0,-1,0,2,,warmup.infrastructure.exporters.BaseExporter' warmup.infrastructure.settings.IgnoredFolderCollection
+warmup.infrastructure.settings,TextReplaceCollection,0,5,0,0,3,45,5,0,0,-1,1,1,warmup.infrastructure.settings.TextReplaceItem,warmup.commands.AddTextReplacement
+warmup.infrastructure.settings,TextReplaceItem,0,0,2,0,0,23,0,0,0,-1,0,3,,warmup.commands.AddTextReplacement' warmup.TargetDir' warmup.infrastructure.settings.TextReplaceCollection
+warmup.infrastructure.settings,WarmupConfiguration,1,0,8,0,0,69,0,0,0,-1,0,9,,warmup.commands.AddTemplateFolder' warmup.commands.AddTextReplacement' warmup.commands.GenerateWarmup' warmup.infrastructure.exporters.BaseExporter' warmup.infrastructure.exporters.Git' warmup.infrastructure.exporters.Svn' warmup.infrastructure.CommonHelp' warmup.TargetDir' warmup.TokenReplacement

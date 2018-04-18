@@ -1,12 +1,13 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BaseConnectionForm,7,13,5,0,1,327,18,4,1,0.62,2,1
-BaseConnection,2,7,11,0,5,231,9,4,1,0.86,2,0
-BaseProtocol,0,6,4,0,6,106,6,4,1,-1,2,0
-BookmarksFolder,4,9,7,0,7,268,54,0,0,0.78,2,4
-EncryptionType,0,0,0,0,0,14,0,0,0,-1,0,3
-IConnection,0,1,7,0,0,59,1,1,0,-1,1,13
-IConnectionForm,0,1,1,0,0,31,1,1,0,-1,0,0
-IOptionsForm,0,0,3,0,0,33,0,4,0,-1,1,0
-IProtocol,0,4,4,0,0,53,4,1,0,-1,1,2
-ErrorMessageDisplayForm,3,4,1,0,1,101,5,0,0,0.75,0,1
-ConnectionFactory,6,20,2,0,16,340,60,0,0,0.25,5,7
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+EasyConnect.Protocols,BaseConnectionForm<T>,0,0,1,0,0,12,0,0,1,-1,0,0,,
+EasyConnect.Protocols,BaseConnection,2,7,12,0,5,262,11,4,1,0.86,2,4,EasyConnect.Protocols.BookmarksFolder' EasyConnect.Common.SerializationUtilities,EasyConnect.Protocols.PowerShell.PowerShellConnection' EasyConnect.Protocols.Rdp.RdpConnection' EasyConnect.Protocols.Ssh.SshConnection' EasyConnect.Protocols.Vnc.VncConnection
+EasyConnect.Protocols,BaseConnectionForm,7,13,4,0,1,336,20,5,1,0.46,1,6,EasyConnect.Protocols.ErrorMessageDisplayForm,EasyConnect.ConnectionWindow' EasyConnect.Protocols.ConnectionFactory' EasyConnect.Protocols.PowerShell.PowerShellConnectionForm' EasyConnect.Protocols.Rdp.RdpConnectionForm' EasyConnect.Protocols.Ssh.SshConnectionForm' EasyConnect.Protocols.Vnc.VncConnectionForm
+EasyConnect.Protocols,BaseProtocol<TConnection;TOptionsForm;TConnectionForm>,0,6,4,0,6,110,6,0,1,-1,2,0,EasyConnect.Protocols.IConnection' EasyConnect.Protocols.ConnectionFactory,
+EasyConnect.Protocols,BookmarksFolder,4,9,8,0,7,305,27,0,0,0.78,2,4,EasyConnect.Protocols.IConnection' EasyConnect.Protocols.ConnectionFactory,EasyConnect.Bookmarks' EasyConnect.BookmarksWindow' EasyConnect.ConnectionWindow' EasyConnect.Protocols.BaseConnection
+EasyConnect.Protocols,EncryptionType,0,0,0,0,0,11,0,0,0,-1,0,4,,EasyConnect.GlobalOptionsWindow' EasyConnect.MainForm' EasyConnect.EasyConnect' EasyConnect.Protocols.ConnectionFactory
+EasyConnect.Protocols,IConnection,0,1,8,0,0,68,1,1,0,-1,0,11,,EasyConnect.Bookmarks' EasyConnect.BookmarksWindow' EasyConnect.ConnectionWindow' EasyConnect.HistoricalConnection' EasyConnect.History' EasyConnect.HistoryWindow' EasyConnect.MainForm' EasyConnect.Protocols.BaseProtocol<TConnection;TOptionsForm;TConnectionForm>' EasyConnect.Protocols.BookmarksFolder' EasyConnect.Protocols.IProtocol' EasyConnect.Protocols.ConnectionFactory
+EasyConnect.Protocols,IConnectionForm,0,1,1,0,0,26,1,2,0,-1,0,0,,
+EasyConnect.Protocols,IOptionsForm,0,0,3,0,0,30,0,4,0,-1,0,1,,EasyConnect.MainForm
+EasyConnect.Protocols,IProtocol,0,4,4,0,0,54,4,1,0,-1,1,6,EasyConnect.Protocols.IConnection,EasyConnect.BookmarksWindow' EasyConnect.ConnectionWindow' EasyConnect.HistoricalConnection' EasyConnect.HistoryWindow' EasyConnect.MainForm' EasyConnect.Protocols.ConnectionFactory
+EasyConnect.Protocols,ErrorMessageDisplayForm,3,4,1,0,1,109,5,0,0,0.75,0,1,,EasyConnect.Protocols.BaseConnectionForm
+EasyConnect.Protocols,ConnectionFactory,7,20,2,0,16,412,32,0,0,0.15,4,9,EasyConnect.Protocols.EncryptionType' EasyConnect.Protocols.IProtocol' EasyConnect.Protocols.IConnection' EasyConnect.Protocols.BaseConnectionForm,EasyConnect.BookmarksWindow' EasyConnect.ConnectionWindow' EasyConnect.GlobalOptionsWindow' EasyConnect.HistoricalConnection' EasyConnect.HistoryWindow' EasyConnect.MainForm' EasyConnect.EasyConnect' EasyConnect.Protocols.BaseProtocol<TConnection;TOptionsForm;TConnectionForm>' EasyConnect.Protocols.BookmarksFolder

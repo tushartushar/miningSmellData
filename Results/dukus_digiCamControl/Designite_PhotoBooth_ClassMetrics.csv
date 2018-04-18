@@ -1,30 +1,32 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-BooleanConverter,0,3,2,0,3,24,3,1,0,-1,0,0
-BooleanToVisibilityConverter,0,1,0,0,1,6,1,0,1,-1,0,0
-CardDesigner,2,8,1,0,1,97,17,0,0,0.75,2,1
-ColorConversion,0,0,0,0,0,6,0,0,0,-1,0,2
-ColorUtility,0,2,0,0,1,41,9,0,0,-1,1,1
-Constants,7,0,1,7,0,15,0,0,0,-1,0,4
-DocumentUtility,0,1,0,0,1,31,3,0,0,-1,1,1
-NativeMethods,0,1,0,0,1,5,1,0,0,-1,0,1
-PhotoCard,0,2,1,0,2,41,6,3,0,-1,0,2
-PhotoCardTemplate,1,7,5,1,4,75,13,3,0,0.71,2,4
-PhotoCardTemplateInfo,0,3,2,0,3,40,4,0,0,-1,1,1
-RoutedCommands,6,0,0,6,0,9,0,0,0,-1,0,0
-ScreenSaverInhibitor,3,4,0,0,2,35,6,0,0,0.5,2,1
-WindowsMessage,1,3,8,0,2,66,3,0,0,1,1,2
-App,0,0,0,0,0,6,0,0,0,-1,0,0
-PhotoBoothControlWindow,11,19,9,7,1,314,56,0,0,0.21,6,0
-PhotoBoothCamera,4,23,8,0,6,307,57,0,0,0.43,9,2
-PhotoBoothWindow,22,31,12,5,1,437,62,0,0,0.29,7,1
-PhotoCardInformation,0,0,7,0,0,31,0,0,0,-1,0,0
-MirrorCard,0,1,1,0,1,15,1,0,1,-1,0,1
-MirrorCardTemplate,1,4,1,1,2,37,7,0,1,1,1,0
-ThreeSmallOneLargeCard,0,1,1,0,1,15,1,0,1,-1,0,1
-ThreeSmallOneLargeCardTemplate,5,4,5,5,2,87,16,0,1,1,2,0
-ThreeSmallOneLargeDesigner,0,1,0,0,1,10,1,0,0,-1,0,1
-TwoByTwoCardTemplate,7,4,7,7,2,109,16,0,1,1,2,0
-TwoByTwoDesigner,0,1,0,0,1,10,1,0,0,-1,0,1
-TwoByTwoCard,0,1,1,0,1,15,1,0,1,-1,0,1
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,15,0,0,164,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PhotoBooth,BooleanConverter<T>,0,3,2,0,3,18,3,0,0,-1,0,0,,
+PhotoBooth,BooleanToVisibilityConverter,0,1,0,0,1,5,1,0,0,-1,0,0,,
+PhotoBooth,CardDesigner,4,10,1,0,2,180,19,0,0,0.5,2,1,PhotoBooth.PhotoCardTemplate' PhotoBooth.PhotoCard,PhotoBooth.PhotoBoothControlWindow
+PhotoBooth,ColorConversion,0,0,0,0,0,6,0,0,0,-1,0,2,,PhotoBooth.ColorUtility' PhotoBooth.PhotoCardTemplate
+PhotoBooth,ColorUtility,0,2,0,0,1,44,5,0,0,-1,1,1,PhotoBooth.ColorConversion,PhotoBooth.PhotoCardTemplate
+PhotoBooth,Constants,7,0,1,7,0,14,0,0,0,-1,0,4,,PhotoBooth.DocumentUtility' PhotoBooth.ScreenSaverInhibitor' PhotoBooth.WindowsMessage' PhotoBooth.PhotoBoothWindow
+PhotoBooth,DocumentUtility,0,1,0,0,1,34,3,0,0,-1,1,1,PhotoBooth.Constants,PhotoBooth.PhotoBoothWindow
+PhotoBooth,NativeMethods,0,1,0,0,1,5,1,0,0,-1,0,1,,PhotoBooth.ScreenSaverInhibitor
+PhotoBooth,PhotoCard,0,2,1,0,2,44,2,3,0,-1,0,2,,PhotoBooth.CardDesigner' PhotoBooth.PhotoBoothWindow
+PhotoBooth,PhotoCardTemplate,1,6,5,1,3,73,12,4,0,0.67,2,4,PhotoBooth.ColorConversion' PhotoBooth.ColorUtility,PhotoBooth.CardDesigner' PhotoBooth.PhotoCardTemplateInfo' PhotoBooth.PhotoBoothControlWindow' PhotoBooth.PhotoBoothWindow
+PhotoBooth,PhotoCardTemplate<T>,0,1,0,0,1,7,1,0,1,-1,0,0,,
+PhotoBooth,PhotoCardTemplateInfo,0,3,2,0,3,46,4,0,0,-1,4,1,PhotoBooth.PhotoCardTemplate' PhotoBooth.Cards.TwoByTwoCardTemplate' PhotoBooth.Cards.ThreeSmallOneLargeCardTemplate' PhotoBooth.Cards.MirrorCardTemplate,PhotoBooth.PhotoBoothControlWindow
+PhotoBooth,RoutedCommands,6,0,0,6,0,9,0,0,0,-1,0,0,,
+PhotoBooth,ScreenSaverInhibitor,3,4,0,0,2,37,6,0,0,0.5,2,1,PhotoBooth.NativeMethods' PhotoBooth.Constants,PhotoBooth.PhotoBoothWindow
+PhotoBooth,WindowsMessage,1,3,8,0,2,47,3,0,0,1,1,2,PhotoBooth.Constants,PhotoBooth.PhotoBoothControlWindow' PhotoBooth.PhotoBoothWindow
+PhotoBooth,App,1,2,0,0,2,43,3,0,0,0,0,0,,
+PhotoBooth,PhotoBoothControlWindow,22,21,9,7,2,547,43,0,0,0.19,7,0,PhotoBooth.PhotoBoothCamera' PhotoBooth.PhotoCardTemplate' PhotoBooth.Properties.Settings' PhotoBooth.PhotoCardTemplateInfo' PhotoBooth.WindowsMessage' PhotoBooth.CardDesigner' PhotoBooth.PhotoBoothWindow,
+PhotoBooth,PhotoBoothCamera,4,23,8,0,6,343,56,0,0,0.43,14,2,CameraControl.Devices.Log' CameraControl.Core.ServiceProvider' CameraControl.Core.Classes.Branding' CameraControl.Core.Classes.Settings' CameraControl.Devices.CameraDeviceManager' CameraControl.Devices.ICameraDevice' CameraControl.Devices.Classes.PhotoCapturedEventArgs' CameraControl.Devices.Classes.LogEventArgs' CameraControl.Core.Classes.CameraProperty' CameraControl.Core.Classes.PhotoSession' CameraControl.Core.Classes.CameraPropertyEnumerator' CameraControl.Devices.Classes.DeviceObject' CameraControl.Core.Classes.QueueManager' CameraControl.Devices.Classes.CapabilityEnum,PhotoBooth.PhotoBoothControlWindow' PhotoBooth.PhotoBoothWindow
+PhotoBooth,PhotoBoothWindow,30,34,13,5,2,646,68,0,0,0.24,8,1,PhotoBooth.PhotoBoothCamera' PhotoBooth.ScreenSaverInhibitor' PhotoBooth.PhotoCardTemplate' PhotoBooth.Properties.Settings' PhotoBooth.PhotoCard' PhotoBooth.Constants' PhotoBooth.DocumentUtility' PhotoBooth.WindowsMessage,PhotoBooth.PhotoBoothControlWindow
+PhotoBooth,PhotoCardInformation,0,0,7,0,0,10,0,0,0,-1,0,0,,
+PhotoBooth.Cards,MirrorCard,6,4,1,0,2,108,6,0,1,0.5,0,1,,PhotoBooth.Cards.MirrorCardTemplate
+PhotoBooth.Cards,MirrorCardTemplate,1,4,1,1,2,37,5,0,1,1,1,1,PhotoBooth.Cards.MirrorCard,PhotoBooth.PhotoCardTemplateInfo
+PhotoBooth.Cards,ThreeSmallOneLargeCard,7,4,1,0,2,119,6,0,1,0.5,0,1,,PhotoBooth.Cards.ThreeSmallOneLargeCardTemplate
+PhotoBooth.Cards,ThreeSmallOneLargeCardTemplate,5,4,5,5,2,79,5,0,1,1,3,1,PhotoBooth.Properties.Settings' PhotoBooth.Cards.ThreeSmallOneLargeCard' PhotoBooth.Cards.ThreeSmallOneLargeDesigner,PhotoBooth.PhotoCardTemplateInfo
+PhotoBooth.Cards,ThreeSmallOneLargeDesigner,2,3,0,0,2,53,5,0,0,0,0,1,,PhotoBooth.Cards.ThreeSmallOneLargeCardTemplate
+PhotoBooth.Cards,TwoByTwoCardTemplate,7,4,7,7,2,97,5,0,1,1,3,1,PhotoBooth.Properties.Settings' PhotoBooth.Cards.TwoByTwoCard' PhotoBooth.Cards.TwoByTwoDesigner,PhotoBooth.PhotoCardTemplateInfo
+PhotoBooth.Cards,TwoByTwoDesigner,4,3,0,0,2,75,5,0,0,0,0,1,,PhotoBooth.Cards.TwoByTwoCardTemplate
+PhotoBooth.Cards,TwoByTwoCard,9,4,1,0,2,141,6,0,1,0.5,0,1,,PhotoBooth.Cards.TwoByTwoCardTemplate
+PhotoBooth.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+PhotoBooth.Properties,Settings,1,0,15,0,0,179,0,0,0,-1,0,4,,PhotoBooth.PhotoBoothControlWindow' PhotoBooth.PhotoBoothWindow' PhotoBooth.Cards.ThreeSmallOneLargeCardTemplate' PhotoBooth.Cards.TwoByTwoCardTemplate
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

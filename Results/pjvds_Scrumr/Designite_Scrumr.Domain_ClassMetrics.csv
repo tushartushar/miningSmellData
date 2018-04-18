@@ -1,0 +1,10 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Scrumr.Domain,DomainException,0,4,0,0,3,18,4,0,0,-1,0,0,,
+Scrumr.Domain,EmailAddress,1,2,0,0,2,12,2,0,0,0,0,1,,Scrumr.Domain.Member
+Scrumr.Domain,Member,2,2,0,0,0,15,2,0,1,1,2,0,Scrumr.Domain.EmailAddress' Scrumr.Events.Member.NewMemberCreated,
+Scrumr.Domain,Project,4,16,0,0,9,96,19,0,1,0.38,7,4,Scrumr.Domain.Sprint' Scrumr.Events.Project.ProjectRenamed' Scrumr.Events.Project.MemberAddedToProject' Scrumr.Domain.Story' Scrumr.Events.Project.NewProjectCreated' Scrumr.Events.Project.SprintAddedToProject' Scrumr.Events.Project.MemberRemovedFromProject,Scrumr.Domain.Sprint' Scrumr.Domain.Tests.AggregateRoots.When_adding_a_member_to_a_project_that_is_already_added' Scrumr.Domain.Tests.AggregateRoots.When_creating_a_new_Project' Scrumr.Domain.Tests.AggregateRoots.When_renaming_a_Project
+Scrumr.Domain,ScrumrAggregateRoot,0,2,0,0,0,9,2,2,0,-1,0,0,,
+Scrumr.Domain,Sprint,5,9,2,0,5,53,9,0,0,0.78,5,4,Scrumr.Domain.Project' Scrumr.Events.Project.SprintStarted' Scrumr.Events.Project.SprintFinished' Scrumr.Events.Project.NewStageAddedToSprint' Scrumr.Events.Project.AddNewStoryToSprint,Scrumr.Domain.Project' Scrumr.Domain.Stage' Scrumr.Domain.Story' Scrumr.Domain.Task
+Scrumr.Domain,Stage,2,1,0,0,1,10,1,0,0,0,1,0,Scrumr.Domain.Sprint,
+Scrumr.Domain,Story,4,3,0,0,2,21,3,0,0,0,2,1,Scrumr.Domain.Sprint' Scrumr.Events.Project.NewTaskAddedToStory,Scrumr.Domain.Project
+Scrumr.Domain,Task,3,1,0,0,1,13,1,0,0,0,1,0,Scrumr.Domain.Sprint,

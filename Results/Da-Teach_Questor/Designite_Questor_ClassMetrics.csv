@@ -1,24 +1,29 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-frmMain,34,26,0,0,1,730,75,0,0,0.42,7,1
-Program,24,3,3,4,0,373,43,0,0,0,4,2
-Questor,44,6,6,4,4,1817,574,0,0,0,45,1
-QuestorState,0,0,0,0,0,42,0,0,0,-1,0,2
-StringCoda,0,6,0,0,2,75,18,0,0,-1,0,1
-OptionValueCollection,2,22,5,0,12,152,25,0,0,0,2,2
-OptionContext,5,1,5,0,1,47,1,0,0,0,3,3
-OptionValueType,0,0,0,0,0,6,0,0,0,-1,0,3
-Option,7,10,6,0,4,168,42,0,0,0.4,2,2
-ArgumentSource,0,6,1,0,4,55,14,1,0,-1,0,2
-ResponseFileSource,0,2,1,0,2,23,3,0,1,-1,1,0
-OptionException,1,5,1,0,4,31,5,0,0,0.4,0,0
-OptionSet,7,37,2,0,15,572,125,0,0,0.43,6,2
-GenericCombatStoryline,10,7,1,0,4,219,49,0,1,0,22,0
-GenericCombatStorylineState,0,0,0,0,0,6,0,0,0,-1,0,2
-IStoryline,0,3,0,0,0,6,3,3,0,-1,1,1
-MaterialsForWarPreparation,1,4,0,0,4,144,14,0,1,0.75,5,0
-Storyline,7,7,4,0,4,241,64,0,0,0.29,12,5
-StorylineState,0,0,0,0,0,14,0,0,0,-1,0,5
-TransactionDataDelivery,3,6,0,0,4,144,27,0,1,0,8,0
-TransactionDataDeliveryState,0,0,0,0,0,7,0,0,0,-1,0,1
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,5
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Questor,frmMain,34,26,0,0,1,785,67,0,0,0.42,8,1,Questor.Questor' Questor.Modules.DamageType' Questor.QuestorState' Questor.Modules.Logging' Questor.Modules.Settings' Questor.Modules.Cache' Questor.Modules.Statistics' Questor.Program,Questor.Questor
+Questor,Program,24,3,3,4,0,389,34,0,0,0,5,2,Mono.Options.OptionSet' Questor.Modules.CharSchedule' Questor.Modules.Logging' Mono.Options.OptionException' Questor.Modules.Time,Questor.frmMain' Questor.Questor
+Questor,Questor,44,6,6,4,4,2098,49,0,0,0,50,1,Questor.frmMain' Questor.Modules.AgentInteraction' Questor.Modules.Arm' Questor.Modules.SwitchShip' Questor.Modules.Combat' Questor.Modules.CourierMission' Questor.Modules.LocalWatch' Questor.Modules.ScanInteraction' Questor.Modules.Defense' Questor.Modules.Drones' Questor.Modules.MissionController' Questor.Modules.Panic' Questor.Storylines.Storyline' Questor.Modules.Cleanup' Questor.Modules.Statistics' Questor.Modules.Salvage' Questor.Modules.Traveler' Questor.Modules.UnloadLoot' Questor.Modules.Settings' Questor.QuestorState' Questor.Modules.Cache' Questor.Program' Questor.Modules.Ammo' Questor.Modules.DamageType' Questor.Modules.Logging' Questor.Modules.MissionBookmarkDestination' Questor.Modules.EntityCache' Questor.Modules.StationDestination' Questor.Modules.InvType' Questor.Modules.Time' Questor.Storylines.StorylineState' Questor.Storylines.GenericCombatStoryline' Questor.Storylines.GenericCombatStorylineState' Questor.Modules.PanicState' Questor.Modules.TravelerState' Questor.Modules.StatisticsState' Questor.Modules.AgentInteractionState' Questor.Modules.AgentInteractionPurpose' Questor.Modules.SwitchShipState' Questor.Modules.ArmState' Questor.Modules.DroneState' Questor.Modules.MissionControllerState' Questor.Modules.CombatState' Questor.Modules.ScanInteractionState' Questor.Modules.Group' Questor.Modules.Distance' Questor.Modules.MissionState' Questor.Modules.UnloadLootState' Questor.Modules.CourierMissionState' Questor.Modules.TravelerDestination,Questor.frmMain
+Questor,QuestorState,0,0,0,0,0,42,0,0,0,-1,0,2,,Questor.frmMain' Questor.Questor
+Mono.Options,StringCoda,0,6,0,0,2,82,14,0,0,-1,0,1,,Mono.Options.OptionSet
+Mono.Options,OptionValueCollection,2,22,5,0,12,80,25,0,0,0,4,3,Mono.Options.OptionContext' Mono.Options.Option' Mono.Options.OptionValueType' Mono.Options.OptionSet,Mono.Options.OptionContext' Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,OptionContext,5,1,5,0,1,36,1,0,0,0,3,7,Mono.Options.Option' Mono.Options.OptionSet' Mono.Options.OptionValueCollection,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet' Mono.Options.Category' Mono.Options.ActionOption' Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>
+Mono.Options,OptionValueType,0,0,0,0,0,6,0,0,0,-1,0,3,,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,Option,7,10,6,0,4,171,30,4,0,0.4,5,3,Mono.Options.OptionValueType' Mono.Options.Category' Mono.Options.OptionSet' Mono.Options.OptionContext' Mono.Options.OptionValueCollection,Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.OptionSet
+Mono.Options,ArgumentSource,0,6,1,0,4,65,12,1,0,-1,0,2,,Mono.Options.ResponseFileSource' Mono.Options.OptionSet
+Mono.Options,ResponseFileSource,0,2,1,0,2,21,3,0,1,-1,1,0,Mono.Options.ArgumentSource,
+Mono.Options,OptionException,1,5,1,0,4,33,5,0,0,0.4,0,1,,Questor.Program
+Mono.Options,OptionSet,7,37,2,0,15,635,101,0,0,0.27,8,4,Mono.Options.Option' Mono.Options.ArgumentSource' Mono.Options.OptionContext' Mono.Options.ArgumentEnumerator' Mono.Options.OptionValueCollection' Mono.Options.OptionValueType' Mono.Options.Category' Mono.Options.StringCoda,Questor.Program' Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.Option
+Mono.Options,Category,0,2,0,0,1,14,2,0,1,-1,1,2,Mono.Options.OptionContext,Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,ActionOption,1,2,0,0,1,15,3,0,1,0,1,2,Mono.Options.OptionContext,Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>
+Mono.Options,ActionOption<T>,1,2,0,0,1,15,3,0,1,0,2,0,Mono.Options.ActionOption' Mono.Options.OptionContext,
+Mono.Options,ActionOption<TKey;TValue>,1,2,0,0,1,17,3,0,1,0,2,0,Mono.Options.ActionOption' Mono.Options.OptionContext,
+Mono.Options,ArgumentEnumerator,1,4,0,0,3,30,4,0,0,0,0,1,,Mono.Options.OptionSet
+Questor.Storylines,GenericCombatStoryline,10,7,1,0,4,237,20,0,1,0,22,1,Questor.Modules.AgentInteraction' Questor.Modules.Arm' Questor.Modules.Traveler' Questor.Modules.MissionController' Questor.Modules.Combat' Questor.Modules.Drones' Questor.Modules.Salvage' Questor.Storylines.GenericCombatStorylineState' Questor.Modules.Settings' Questor.Storylines.Storyline' Questor.Modules.AgentInteractionState' Questor.Modules.AgentInteractionPurpose' Questor.Modules.ArmState' Questor.Modules.MissionControllerState' Questor.Modules.CombatState' Questor.Modules.DroneState' Questor.Storylines.StorylineState' Questor.Modules.Logging' Questor.Modules.MissionBookmarkDestination' Questor.Modules.Cache' Questor.Modules.TravelerState' Questor.Modules.EntityCache,Questor.Questor
+Questor.Storylines,GenericCombatStorylineState,0,0,0,0,0,6,0,0,0,-1,0,2,,Questor.Questor' Questor.Storylines.GenericCombatStoryline
+Questor.Storylines,IStoryline,0,3,0,0,0,6,3,3,0,-1,1,1,Questor.Storylines.Storyline,Questor.Storylines.Storyline
+Questor.Storylines,MaterialsForWarPreparation,1,4,0,0,4,158,20,0,1,0.75,6,0,Questor.Storylines.StorylineState' Questor.Modules.Cache' Questor.Modules.Logging' Questor.Storylines.Storyline' Questor.Modules.InvType' Questor.Modules.Settings,
+Questor.Storylines,Storyline,7,7,4,0,4,254,24,0,0,0.29,13,5,Questor.Storylines.IStoryline' Questor.Modules.Combat' Questor.Modules.Traveler' Questor.Modules.AgentInteraction' Questor.Storylines.StorylineState' Questor.Modules.AgentInteractionState' Questor.Modules.TravelerState' Questor.Modules.Cache' Questor.Modules.Logging' Questor.Modules.StationDestination' Questor.Modules.EntityCache' Questor.Modules.Settings' Questor.Modules.AgentInteractionPurpose,Questor.Questor' Questor.Storylines.GenericCombatStoryline' Questor.Storylines.IStoryline' Questor.Storylines.MaterialsForWarPreparation' Questor.Storylines.TransactionDataDelivery
+Questor.Storylines,StorylineState,0,0,0,0,0,14,0,0,0,-1,0,5,,Questor.Questor' Questor.Storylines.GenericCombatStoryline' Questor.Storylines.MaterialsForWarPreparation' Questor.Storylines.Storyline' Questor.Storylines.TransactionDataDelivery
+Questor.Storylines,TransactionDataDelivery,3,6,0,0,4,155,22,0,1,0,8,0,Questor.Modules.Traveler' Questor.Storylines.TransactionDataDeliveryState' Questor.Storylines.StorylineState' Questor.Modules.Cache' Questor.Modules.Logging' Questor.Storylines.Storyline' Questor.Modules.TravelerState' Questor.Modules.MissionBookmarkDestination,
+Questor.Storylines,TransactionDataDeliveryState,0,0,0,0,0,7,0,0,0,-1,0,1,,Questor.Storylines.TransactionDataDelivery
+Questor.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+Questor.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

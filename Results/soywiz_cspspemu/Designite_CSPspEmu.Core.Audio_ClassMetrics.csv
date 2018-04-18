@@ -1,0 +1,31 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CSPspEmu.Core.Audio.Impl.Alsa,Alsa,1,24,0,0,0,301,24,0,0,0,4,1,CSPspEmu.Core.Audio.Impl.Alsa.snd_pcm_stream_t' CSPspEmu.Core.Audio.Impl.Alsa.snd_config_t' CSPspEmu.Core.Audio.Impl.Alsa.snd_pcm_format' CSPspEmu.Core.Audio.Impl.Alsa.snd_pcm_access,CSPspEmu.Core.Audio.Impl.Alsa.AudioAlsaImpl
+CSPspEmu.Core.Audio.Impl.Alsa,snd_pcm_stream_t,0,0,0,0,0,5,0,0,0,-1,0,2,,CSPspEmu.Core.Audio.Impl.Alsa.Alsa' CSPspEmu.Core.Audio.Impl.Alsa.AudioAlsaImpl
+CSPspEmu.Core.Audio.Impl.Alsa,snd_config_t,1,0,0,0,0,4,0,0,0,-1,0,1,,CSPspEmu.Core.Audio.Impl.Alsa.Alsa
+CSPspEmu.Core.Audio.Impl.Alsa,snd_pcm_access,0,0,0,0,0,9,0,0,0,-1,0,2,,CSPspEmu.Core.Audio.Impl.Alsa.Alsa' CSPspEmu.Core.Audio.Impl.Alsa.AudioAlsaImpl
+CSPspEmu.Core.Audio.Impl.Alsa,snd_pcm_format,0,0,0,0,0,43,0,0,0,-1,0,2,,CSPspEmu.Core.Audio.Impl.Alsa.Alsa' CSPspEmu.Core.Audio.Impl.Alsa.AudioAlsaImpl
+CSPspEmu.Core.Audio.Impl.Alsa,_snd_pcm_state,0,0,0,0,0,13,0,0,0,-1,0,1,,CSPspEmu.Core.Audio.Impl.Alsa.AudioAlsaImpl
+CSPspEmu.Core.Audio.Impl.Alsa,AudioAlsaImpl,8,4,2,0,3,127,5,0,1,0.5,5,0,CSPspEmu.Core.Audio.Impl.Alsa.Alsa' CSPspEmu.Core.Audio.Impl.Alsa.snd_pcm_stream_t' CSPspEmu.Core.Audio.Impl.Alsa.snd_pcm_access' CSPspEmu.Core.Audio.Impl.Alsa.snd_pcm_format' CSPspEmu.Core.Audio.Impl.Alsa._snd_pcm_state,
+CSPspEmu.Core.Audio.Impl.Null,AudioImplNull,0,2,2,0,2,17,2,0,1,-1,0,1,,CSPspEmu.Runner.PspInjectContext
+CSPspEmu.Core.Audio.Impl.Openal,AudioStream,9,7,1,8,3,131,10,0,0,0.43,1,1,CSharpPlatform.AL.AL,CSPspEmu.Core.Audio.Impl.Openal.PspAudioOpenalImpl
+CSPspEmu.Core.Audio.Impl.Openal,PspAudioOpenalImpl,3,4,2,0,3,54,5,0,1,0.5,2,0,CSPspEmu.Core.Audio.Impl.Openal.AudioStream' CSharpPlatform.AL.AL,
+CSPspEmu.Core.Audio.Impl.WaveOut,PspAudioWaveOutImpl,11,4,2,7,2,85,10,0,1,0.5,2,0,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutPlayer' CSharpUtils.PointerUtils,
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,FifoStream,7,11,5,0,8,142,13,0,0,0.27,0,0,,
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveInHelper,0,1,0,0,1,8,2,0,0,-1,1,2,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInBuffer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInRecorder
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveInBuffer,8,6,2,1,4,79,10,0,0,0,3,1,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveHdr' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInHelper,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInRecorder
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveInRecorder,7,8,1,0,2,125,18,0,0,0,4,0,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInBuffer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInHelper' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveFormat,
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveFormats,0,0,0,0,0,5,0,0,0,-1,0,1,,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveFormat
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveFormat,7,1,0,7,1,21,1,0,0,0,1,4,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveFormats,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInRecorder' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutPlayer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveStream
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveNative,12,21,0,11,21,77,21,0,0,0,2,6,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveHdr' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveFormat,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInHelper' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInBuffer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInRecorder' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutHelper' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutBuffer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutPlayer
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveHdr,8,0,0,8,0,12,0,0,0,-1,0,3,,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveInBuffer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutBuffer
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveOutHelper,0,1,0,0,1,8,2,0,0,-1,1,2,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutBuffer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutPlayer
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveOutBuffer,8,6,2,1,5,82,10,0,0,0,3,1,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveHdr' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutHelper,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutPlayer
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveOutPlayer,9,8,1,1,3,137,15,0,0,0,4,1,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutBuffer' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveFormat' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveOutHelper' CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveNative,CSPspEmu.Core.Audio.Impl.WaveOut.PspAudioWaveOutImpl
+CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib,WaveStream,4,11,6,0,8,100,19,0,0,0.55,1,0,CSPspEmu.Core.Audio.Impl.WaveOut.WaveLib.WaveFormat,
+CSPspEmu.Core.Audio,PspAudio,7,8,0,6,4,154,13,0,0,0.25,3,4,CSPspEmu.Core.Audio.PspAudioChannel' CSPspEmu.Core.Audio.PspAudioImpl' CSPspEmu.Core.Types.StereoShortSoundSample,CSPspEmu.Core.Audio.PspAudioChannel' CSPspEmu.Runner.Components.Audio.AudioComponentThread' CSPspEmu.Hle.Modules.audio.sceAudio' CSPspEmu.Hle.Modules.libatrac3plus.sceAtrac3plus
+CSPspEmu.Core.Audio,FormatEnum,0,0,0,0,0,11,0,0,0,-1,0,3,,CSPspEmu.Core.Audio.PspAudioChannel' CSPspEmu.Hle.Modules.audio.sceAudio' CSPspEmu.Hle.Modules.libatrac3plus.sceAtrac3plus
+CSPspEmu.Core.Audio,InvalidChannelException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CSPspEmu.Core.Audio,NoChannelsAvailableException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CSPspEmu.Core.Audio,PspAudioChannel,13,8,5,6,7,234,16,0,0,0,2,3,CSPspEmu.Core.Audio.PspAudio' CSPspEmu.Core.Audio.FormatEnum,CSPspEmu.Core.Audio.PspAudio' CSPspEmu.Hle.Modules.audio.sceAudio' CSPspEmu.Hle.Modules.audio.sceVaudio
+CSPspEmu.Core.Audio,InvalidAudioFormatException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+CSPspEmu.Core.Audio,PspAudioImpl,0,2,0,0,2,36,2,4,1,-1,0,2,,CSPspEmu.Core.Audio.PspAudio' CSPspEmu.PspEmulator

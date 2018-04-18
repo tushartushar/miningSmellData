@@ -1,15 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CachingImplementationResolver,2,3,0,0,2,30,4,0,1,0,2,1
-ConstructorSelectionStrategy,0,1,0,0,0,4,1,1,0,-1,0,1
-DecoratableByType,0,1,0,0,0,4,1,2,0,-1,0,1
-ImplementationResolver,0,1,0,0,0,4,1,2,0,-1,0,2
-MaxLengthConstructorSelectionStrategy,0,1,0,0,1,17,4,0,1,-1,0,1
-LoadedTypeList,2,4,0,0,3,36,8,0,0,0,0,1
-NMockAwareImplementationResolver,2,6,1,0,1,74,17,0,1,0,1,1
-ObjectionManager,0,7,0,0,0,10,7,1,0,-1,0,1
-ObjectionObject,2,2,2,0,2,24,2,0,1,1,1,1
-ObjectionStore,8,15,0,0,11,156,31,0,1,0.2,5,1
-ObjectionType,2,2,2,0,2,24,2,0,1,0,0,2
-ObjectSource,0,2,0,0,0,5,2,1,0,-1,0,7
-TypeToTypeMap,0,0,0,0,0,7,0,1,0,-1,0,1
-ObjectionNetReflectorInstantiator,1,2,0,0,2,12,2,0,0,0,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Objection,CachingImplementationResolver,2,3,0,0,2,33,4,0,1,0,2,0,Objection.ImplementationResolver' Objection.TypeToTypeMap,
+Objection,ConstructorSelectionStrategy,0,1,0,0,0,4,1,1,0,-1,0,1,,Objection.ObjectionStore
+Objection,DecoratableByType,0,1,0,0,0,4,1,2,0,-1,0,2,,Objection.ObjectionStore' ThoughtWorks.CruiseControl.WebDashboard.Dashboard.CruiseObjectSourceInitializer
+Objection,ImplementationResolver,0,1,0,0,0,4,1,2,0,-1,0,2,,Objection.CachingImplementationResolver' Objection.ObjectionStore
+Objection,MaxLengthConstructorSelectionStrategy,0,1,0,0,1,22,3,0,1,-1,0,0,,
+Objection,LoadedTypeList,2,4,0,0,3,43,8,0,0,0,0,1,,Objection.NMockAwareImplementationResolver
+Objection,NMockAwareImplementationResolver,2,6,1,0,1,88,16,0,1,0,1,0,Objection.LoadedTypeList,
+Objection,ObjectionManager,0,7,0,0,0,10,7,1,0,-1,0,2,,Objection.ObjectionStore' ThoughtWorks.CruiseControl.WebDashboard.Dashboard.CruiseObjectSourceInitializer
+Objection,ObjectionObject,2,2,2,0,2,22,2,0,1,1,1,1,Objection.ObjectionType,Objection.ObjectionStore
+Objection,ObjectionStore,8,15,0,0,11,183,30,0,1,0.13,7,1,Objection.ImplementationResolver' Objection.ConstructorSelectionStrategy' Objection.ObjectSource' Objection.ObjectionManager' Objection.DecoratableByType' Objection.ObjectionObject' Objection.ObjectionType,ThoughtWorks.CruiseControl.WebDashboard.MVC.ASPNET.HttpHandler
+Objection,ObjectionType,2,2,2,0,2,22,2,0,1,0,0,2,,Objection.ObjectionObject' Objection.ObjectionStore
+Objection,ObjectSource,0,2,0,0,0,5,2,1,0,-1,0,8,,Objection.ObjectionStore' Objection.NetReflectorPlugin.ObjectionNetReflectorInstantiator' ThoughtWorks.CruiseControl.WebDashboard.Configuration.CachingDashboardConfigurationLoader' ThoughtWorks.CruiseControl.WebDashboard.Dashboard.ActionInstantiatorWithObjectSource' ThoughtWorks.CruiseControl.WebDashboard.Dashboard.CruiseObjectSourceInitializer' ThoughtWorks.CruiseControl.WebDashboard.Dashboard.ActionDecorators.SiteTemplateActionDecorator' ThoughtWorks.CruiseControl.WebDashboard.MVC.ASPNET.HttpHandler' ThoughtWorks.CruiseControl.WebDashboard.MVC.Cruise.CruiseActionFactory
+Objection,TypeToTypeMap,0,0,0,0,0,4,0,1,0,-1,0,1,,Objection.CachingImplementationResolver
+Objection.NetReflectorPlugin,ObjectionNetReflectorInstantiator,1,2,0,0,2,12,2,0,0,0,1,1,Objection.ObjectSource,ThoughtWorks.CruiseControl.WebDashboard.Configuration.DashboardConfigurationLoader

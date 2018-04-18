@@ -1,39 +1,44 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CatapultGame,3,3,0,0,1,66,3,0,0,1,3,3
-IMessageDisplay,0,1,0,0,0,12,1,1,0,-1,0,2
-MessageDisplayComponent,7,5,0,0,4,138,5,0,1,0.4,0,0
-CatapultState,0,0,0,0,0,12,0,0,0,-1,0,4
-Catapult,19,12,11,0,7,431,99,0,0,0,6,3
-Projectile,15,6,4,0,6,120,7,0,0,0,0,1
-AvailableSessionMenuEntry,2,3,1,0,2,61,5,0,1,0,1,1
-CreateOrFindSessionScreen,1,6,0,0,1,149,14,0,1,0.5,9,1
-JoinSessionScreen,2,4,0,0,1,88,8,0,1,0.5,9,0
-LobbyScreen,5,9,0,0,5,195,30,0,1,0,8,0
-NetworkBusyScreen,3,4,0,0,4,101,6,0,1,0.5,2,3
-NetworkErrorScreen,0,2,0,0,1,50,7,0,1,-1,1,3
-NetworkSessionComponent,7,15,0,2,7,343,57,0,0,0,9,5
-OperationCompletedEventArgs,1,1,1,0,1,30,1,0,0,0,0,3
-ProfileSignInScreen,3,4,0,0,2,122,10,0,1,0,4,1
-AI,1,4,0,0,4,36,5,0,1,0.75,2,0
-PlayerSide,0,0,0,0,0,5,0,0,0,-1,0,2
-Human,10,8,3,0,8,163,21,1,1,0.25,5,1
-Player,4,5,5,2,5,62,5,1,0,1,2,2
-BackgroundScreen,1,4,0,0,4,40,4,0,1,0.75,1,1
-GameplayScreen,29,19,2,0,6,577,96,0,1,0.16,8,1
-InstructionsScreen,5,6,0,0,5,132,15,0,1,0.33,4,0
-LoadingScreen,10,7,0,0,3,218,21,0,1,0,5,2
-MainMenuScreen,0,6,0,0,1,74,7,0,1,-1,6,0
-PauseScreen,5,4,0,0,1,85,8,0,1,0.75,5,0
-Animation,3,5,5,0,5,116,9,0,0,0.6,0,1
-AudioManager,4,10,0,0,8,177,25,0,0,0.2,0,4
-Resources,2,1,42,0,0,535,1,0,0,0,0,9
-Program,1,2,0,0,1,18,2,0,0,1,1,0
-ScreenState,0,0,0,0,0,10,0,0,0,-1,0,5
-GameScreen,11,10,12,0,9,312,18,9,0,0.8,3,6
-InputState,19,10,7,10,9,238,23,0,0,0,1,8
-MenuEntry,3,6,2,0,5,135,8,1,0,0.67,2,5
-MenuScreen,4,9,1,0,4,223,29,4,1,0.33,6,2
-MouseGestureType,0,0,0,0,0,9,0,0,0,-1,0,5
-PlayerIndexEventArgs,1,1,1,0,1,23,1,0,0,0,0,5
-ScreenManager,9,14,3,0,10,312,58,0,0,0.14,4,17
-MessageBoxScreen,2,5,0,0,5,113,14,1,1,0.4,3,3
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CatapultGame,CatapultGame,3,3,0,0,1,66,3,0,0,1,3,4,GameStateManagement.ScreenManager' CatapultGame.NetworkSessionComponent' CatapultGame.AudioManager,CatapultGame.Catapult' CatapultGame.Human' CatapultGame.Player' CatapultGame.Program
+CatapultGame,IMessageDisplay,0,1,0,0,0,4,1,1,0,-1,0,3,,CatapultGame.MessageDisplayComponent' CatapultGame.NetworkSessionComponent' CatapultGame.LoadingScreen
+CatapultGame,MessageDisplayComponent,7,5,0,0,4,162,5,0,1,0.4,2,0,CatapultGame.IMessageDisplay' CatapultGame.NotificationMessage,
+CatapultGame,NotificationMessage,3,1,0,3,1,13,1,0,0,0,0,1,,CatapultGame.MessageDisplayComponent
+CatapultGame,CatapultState,0,0,0,0,0,12,0,0,0,-1,0,4,,CatapultGame.Catapult' CatapultGame.AI' CatapultGame.Human' CatapultGame.GameplayScreen
+CatapultGame,Catapult,19,12,11,0,7,482,25,0,0,0,6,5,CatapultGame.CatapultGame' CatapultGame.Projectile' CatapultGame.CatapultState' CatapultGame.Player' CatapultGame.Animation' CatapultGame.AudioManager,CatapultGame.AI' CatapultGame.Human' CatapultGame.Player' CatapultGame.GameplayScreen' CatapultGame.PauseScreen
+CatapultGame,Projectile,15,6,4,0,6,141,7,0,0,0,0,1,,CatapultGame.Catapult
+CatapultGame,AvailableSessionMenuEntry,2,3,1,0,2,70,5,0,1,0,2,1,GameStateManagement.MenuEntry' GameStateManagement.MenuScreen,CatapultGame.JoinSessionScreen
+CatapultGame,CreateOrFindSessionScreen,1,6,0,0,1,153,8,0,1,0.5,9,0,CatapultGame.Resources' GameStateManagement.MenuEntry' CatapultGame.NetworkBusyScreen' CatapultGame.NetworkErrorScreen' CatapultGame.NetworkSessionComponent' GameStateManagement.ScreenManager' GameStateManagement.PlayerIndexEventArgs' CatapultGame.OperationCompletedEventArgs' GameStateManagement.GameScreen,
+CatapultGame,SessionProperty,0,0,0,0,0,1,0,0,0,-1,0,0,,
+CatapultGame,GameMode,0,0,0,0,0,1,0,0,0,-1,0,0,,
+CatapultGame,SkillLevel,0,0,0,0,0,1,0,0,0,-1,0,0,,
+CatapultGame,JoinSessionScreen,2,4,0,0,1,100,6,0,1,0.5,9,0,GameStateManagement.MenuEntry' CatapultGame.Resources' CatapultGame.AvailableSessionMenuEntry' CatapultGame.NetworkBusyScreen' CatapultGame.NetworkErrorScreen' GameStateManagement.ScreenManager' GameStateManagement.PlayerIndexEventArgs' CatapultGame.OperationCompletedEventArgs' CatapultGame.NetworkSessionComponent,
+CatapultGame,LobbyScreen,5,9,0,0,5,215,25,0,1,0,9,0,GameStateManagement.ScreenManager' GameStateManagement.GameScreen' CatapultGame.LoadingScreen' GameStateManagement.InputState' GameStateManagement.MessageBoxScreen' CatapultGame.Resources' GameStateManagement.PlayerIndexEventArgs' CatapultGame.NetworkSessionComponent' GameStateManagement.ScreenState,
+CatapultGame,NetworkBusyScreen,3,4,0,0,4,101,6,0,1,0.5,3,3,GameStateManagement.ScreenManager' GameStateManagement.GameScreen' CatapultGame.Resources,CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.NetworkSessionComponent
+CatapultGame,NetworkErrorScreen,0,2,0,0,1,56,8,0,1,-1,1,3,CatapultGame.Resources,CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.NetworkSessionComponent
+CatapultGame,NetworkSessionComponent,7,15,0,2,7,377,40,0,0,0.2,10,5,GameStateManagement.ScreenManager' CatapultGame.IMessageDisplay' CatapultGame.Resources' CatapultGame.NetworkBusyScreen' CatapultGame.NetworkErrorScreen' CatapultGame.LoadingScreen' GameStateManagement.GameScreen' CatapultGame.OperationCompletedEventArgs' GameStateManagement.MessageBoxScreen' CatapultGame.MainMenuScreen,CatapultGame.CatapultGame' CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.LobbyScreen' CatapultGame.ProfileSignInScreen
+CatapultGame,OperationCompletedEventArgs,1,1,1,0,1,28,1,0,0,0,0,3,,CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.NetworkSessionComponent
+CatapultGame,ProfileSignInScreen,3,4,0,0,2,116,10,0,1,0,5,1,GameStateManagement.GameScreen' CatapultGame.NetworkSessionComponent' GameStateManagement.MessageBoxScreen' CatapultGame.Resources' GameStateManagement.ScreenManager,CatapultGame.MainMenuScreen
+CatapultGame,AI,1,4,0,0,4,43,5,0,1,0.75,3,0,CatapultGame.Human' CatapultGame.Catapult' CatapultGame.CatapultState,
+CatapultGame,PlayerSide,0,0,0,0,0,5,0,0,0,-1,0,2,,CatapultGame.Human' CatapultGame.GameplayScreen
+CatapultGame,Human,10,8,3,0,8,162,17,1,1,0.25,7,3,CatapultGame.PlayerSide' CatapultGame.CatapultGame' CatapultGame.Catapult' CatapultGame.Player' CatapultGame.CatapultState' GameStateManagement.MouseGestureType' GameStateManagement.InputState,CatapultGame.AI' CatapultGame.GameplayScreen' CatapultGame.PauseScreen
+CatapultGame,Player,4,5,5,2,5,54,5,1,0,1,2,3,CatapultGame.CatapultGame' CatapultGame.Catapult,CatapultGame.Catapult' CatapultGame.Human' CatapultGame.PauseScreen
+CatapultGame,BackgroundScreen,1,4,0,0,4,42,4,0,1,0.75,2,1,GameStateManagement.GameScreen' GameStateManagement.ScreenManager,CatapultGame.GameplayScreen
+CatapultGame,GameplayScreen,29,19,2,0,6,607,61,0,1,0.16,11,1,CatapultGame.Human' GameStateManagement.GameScreen' GameStateManagement.ScreenManager' CatapultGame.PlayerSide' CatapultGame.Catapult' CatapultGame.AudioManager' CatapultGame.CatapultState' GameStateManagement.InputState' GameStateManagement.MouseGestureType' CatapultGame.MessageType' CatapultGame.BackgroundScreen,CatapultGame.InstructionsScreen
+CatapultGame,MessageType,0,0,0,0,0,7,0,0,0,-1,0,1,,CatapultGame.GameplayScreen
+CatapultGame,InstructionsScreen,5,6,0,0,5,141,13,0,1,0.33,5,0,CatapultGame.GameplayScreen' GameStateManagement.ScreenManager' GameStateManagement.GameScreen' GameStateManagement.InputState' GameStateManagement.MouseGestureType,
+CatapultGame,LoadingScreen,10,7,0,0,3,225,20,0,1,0,5,2,GameStateManagement.GameScreen' CatapultGame.IMessageDisplay' GameStateManagement.ScreenManager' GameStateManagement.ScreenState' CatapultGame.Resources,CatapultGame.LobbyScreen' CatapultGame.NetworkSessionComponent
+CatapultGame,MainMenuScreen,0,6,0,0,1,79,7,0,1,-1,6,1,GameStateManagement.MenuEntry' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager' GameStateManagement.PlayerIndexEventArgs' CatapultGame.ProfileSignInScreen' GameStateManagement.GameScreen,CatapultGame.NetworkSessionComponent
+CatapultGame,PauseScreen,5,4,0,0,1,89,8,0,1,0.75,8,0,GameStateManagement.GameScreen' CatapultGame.Player' GameStateManagement.MenuEntry' CatapultGame.Catapult' CatapultGame.AudioManager' GameStateManagement.MenuScreen' CatapultGame.Human' GameStateManagement.ScreenManager,
+CatapultGame,Animation,3,5,5,0,5,123,7,0,0,0.4,0,1,,CatapultGame.Catapult
+CatapultGame,AudioManager,4,10,0,0,8,167,24,0,0,0.2,0,4,,CatapultGame.CatapultGame' CatapultGame.Catapult' CatapultGame.GameplayScreen' CatapultGame.PauseScreen
+CatapultGame,Resources,2,1,42,0,0,572,1,0,0,0,0,9,,CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.LobbyScreen' CatapultGame.NetworkBusyScreen' CatapultGame.NetworkErrorScreen' CatapultGame.NetworkSessionComponent' CatapultGame.ProfileSignInScreen' CatapultGame.LoadingScreen' GameStateManagement.MessageBoxScreen
+CatapultGame,Program,1,2,0,0,1,19,2,0,0,1,1,0,CatapultGame.CatapultGame,
+GameStateManagement,ScreenState,0,0,0,0,0,7,0,0,0,-1,0,5,,CatapultGame.LobbyScreen' CatapultGame.LoadingScreen' GameStateManagement.GameScreen' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager
+GameStateManagement,GameScreen,11,10,12,0,9,308,15,9,0,0.8,3,13,GameStateManagement.ScreenState' GameStateManagement.ScreenManager' GameStateManagement.InputState,CatapultGame.CreateOrFindSessionScreen' CatapultGame.LobbyScreen' CatapultGame.NetworkBusyScreen' CatapultGame.NetworkSessionComponent' CatapultGame.ProfileSignInScreen' CatapultGame.BackgroundScreen' CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' CatapultGame.LoadingScreen' CatapultGame.MainMenuScreen' CatapultGame.PauseScreen' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager
+GameStateManagement,InputState,19,10,7,10,9,269,23,0,0,0.6,1,8,GameStateManagement.MouseGestureType,CatapultGame.LobbyScreen' CatapultGame.Human' CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' GameStateManagement.GameScreen' GameStateManagement.MenuScreen' GameStateManagement.ScreenManager' GameStateManagement.MessageBoxScreen
+GameStateManagement,MenuEntry,3,6,2,0,5,134,8,1,0,0.67,2,6,GameStateManagement.MenuScreen' GameStateManagement.ScreenManager,CatapultGame.AvailableSessionMenuEntry' CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.MainMenuScreen' CatapultGame.PauseScreen' GameStateManagement.MenuScreen
+GameStateManagement,MenuScreen,4,9,1,0,4,247,29,4,1,0,7,4,GameStateManagement.MenuEntry' GameStateManagement.ScreenManager' GameStateManagement.InputState' GameStateManagement.MouseGestureType' GameStateManagement.PlayerIndexEventArgs' GameStateManagement.ScreenState' GameStateManagement.GameScreen,CatapultGame.AvailableSessionMenuEntry' CatapultGame.MainMenuScreen' CatapultGame.PauseScreen' GameStateManagement.MenuEntry
+GameStateManagement,MouseGestureType,0,0,0,0,0,9,0,0,0,-1,0,5,,CatapultGame.Human' CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' GameStateManagement.InputState' GameStateManagement.MenuScreen
+GameStateManagement,PlayerIndexEventArgs,1,1,1,0,1,19,1,0,0,0,0,5,,CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.LobbyScreen' CatapultGame.MainMenuScreen' GameStateManagement.MenuScreen
+GameStateManagement,ScreenManager,9,14,3,0,10,356,29,0,0,0.14,3,17,GameStateManagement.InputState' GameStateManagement.GameScreen' GameStateManagement.ScreenState,CatapultGame.CatapultGame' CatapultGame.CreateOrFindSessionScreen' CatapultGame.JoinSessionScreen' CatapultGame.LobbyScreen' CatapultGame.NetworkBusyScreen' CatapultGame.NetworkSessionComponent' CatapultGame.ProfileSignInScreen' CatapultGame.BackgroundScreen' CatapultGame.GameplayScreen' CatapultGame.InstructionsScreen' CatapultGame.LoadingScreen' CatapultGame.MainMenuScreen' CatapultGame.PauseScreen' GameStateManagement.GameScreen' GameStateManagement.MenuEntry' GameStateManagement.MenuScreen' GameStateManagement.MessageBoxScreen
+GameStateManagement,MessageBoxScreen,2,5,0,0,5,127,12,1,1,0.4,3,3,CatapultGame.Resources' GameStateManagement.ScreenManager' GameStateManagement.InputState,CatapultGame.LobbyScreen' CatapultGame.NetworkSessionComponent' CatapultGame.ProfileSignInScreen

@@ -1,0 +1,61 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DocsExamples,Program,0,1,0,0,0,7,1,0,0,-1,1,0,Tutorials.Tutorial1.IotApp,
+Tutorials.Tutorial1,PrintMyActorRefActor,0,1,0,0,0,13,2,0,0,-1,0,0,,
+Tutorials.Tutorial1,StartStopActor1,0,3,0,0,0,18,4,0,0,-1,0,0,,
+Tutorials.Tutorial1,StartStopActor2,0,3,0,0,0,8,3,0,0,-1,0,0,,
+Tutorials.Tutorial1,SupervisingActor,1,1,0,0,0,13,2,0,0,0,0,0,,
+Tutorials.Tutorial1,SupervisedActor,0,3,0,0,0,14,4,0,0,-1,0,0,,
+Tutorials.Tutorial1,ActorHierarchyExperiments,0,3,0,0,3,28,3,0,0,-1,0,0,,
+Tutorials.Tutorial1,IotApp,0,1,0,0,1,13,1,0,0,-1,0,1,,DocsExamples.Program
+Tutorials.Tutorial1,IotSupervisor,0,4,1,0,1,11,4,0,0,-1,0,0,,
+Tutorials.Tutorial2,MainDevice,0,0,0,0,0,71,0,0,0,-1,0,0,,
+Tutorials.Tutorial2,RecordTemperature,0,2,3,0,2,17,2,0,0,-1,0,1,,Tutorials.Tutorial2.Device
+Tutorials.Tutorial2,TemperatureRecorded,0,1,1,0,1,8,1,0,0,-1,0,0,,
+Tutorials.Tutorial2,ReadTemperature,0,3,3,0,2,19,3,0,0,-1,0,1,,Tutorials.Tutorial2.Device
+Tutorials.Tutorial2,RespondTemperature,0,3,5,0,3,26,3,0,0,-1,0,0,,
+Tutorials.Tutorial2,Device,2,10,6,0,4,54,12,0,0,0.9,2,1,Tutorials.Tutorial2.RecordTemperature' Tutorials.Tutorial2.ReadTemperature,Tutorials.Tutorial2.DeviceSpec
+Tutorials.Tutorial2,DeviceInProgress1,0,0,0,0,0,18,0,0,0,-1,0,0,,
+Tutorials.Tutorial2,DeviceInProgress2,0,0,0,0,0,50,0,0,0,-1,0,0,,
+Tutorials.Tutorial2,DeviceInProgress3,0,0,0,0,0,13,0,0,0,-1,0,0,,
+Tutorials.Tutorial2,DeviceSpec,0,2,0,0,2,35,2,0,0,-1,1,0,Tutorials.Tutorial2.Device,
+Tutorials.Tutorial3,MainDeviceGroup,0,0,0,0,0,343,0,0,0,-1,0,0,,
+Tutorials.Tutorial3,RecordTemperature,0,1,2,0,1,10,1,0,0,-1,0,1,,Tutorials.Tutorial3.Device
+Tutorials.Tutorial3,TemperatureRecorded,0,1,1,0,1,8,1,0,0,-1,0,0,,
+Tutorials.Tutorial3,ReadTemperature,0,1,1,0,1,8,1,0,0,-1,0,1,,Tutorials.Tutorial3.Device
+Tutorials.Tutorial3,RespondTemperature,0,1,2,0,1,10,1,0,0,-1,0,0,,
+Tutorials.Tutorial3,Device,1,5,3,0,2,35,6,0,0,1,4,2,Tutorials.Tutorial3.RequestTrackDevice' Tutorials.Tutorial3.DeviceRegistered' Tutorials.Tutorial3.RecordTemperature' Tutorials.Tutorial3.ReadTemperature,Tutorials.Tutorial3.DeviceGroup' Tutorials.Tutorial3.DeviceSpec
+Tutorials.Tutorial3,RequestDeviceList,0,1,1,0,1,8,1,0,0,-1,0,1,,Tutorials.Tutorial3.DeviceGroup
+Tutorials.Tutorial3,ReplyDeviceList,0,1,2,0,1,10,1,0,0,-1,0,0,,
+Tutorials.Tutorial3,DeviceGroup,5,15,6,0,6,124,18,0,0,0.87,3,2,Tutorials.Tutorial3.RequestTrackDevice' Tutorials.Tutorial3.Device' Tutorials.Tutorial3.RequestDeviceList,Tutorials.Tutorial3.DeviceGroupSpec' Tutorials.Tutorial3.DeviceManager
+Tutorials.Tutorial3,DeviceGroupInProgress,0,0,0,0,0,40,0,0,0,-1,0,0,,
+Tutorials.Tutorial3,DeviceGroupInProgress2,0,0,0,0,0,49,0,0,0,-1,0,0,,
+Tutorials.Tutorial3,DeviceGroupSpec,0,5,0,0,5,87,5,0,0,-1,1,0,Tutorials.Tutorial3.DeviceGroup,
+Tutorials.Tutorial3,RequestTrackDevice,0,1,2,0,1,10,1,0,0,-1,0,3,,Tutorials.Tutorial3.Device' Tutorials.Tutorial3.DeviceGroup' Tutorials.Tutorial3.DeviceManager
+Tutorials.Tutorial3,DeviceRegistered,0,1,1,0,0,5,1,0,0,-1,0,1,,Tutorials.Tutorial3.Device
+Tutorials.Tutorial3,DeviceManager,2,4,1,0,1,36,5,0,0,1,2,0,Tutorials.Tutorial3.RequestTrackDevice' Tutorials.Tutorial3.DeviceGroup,
+Tutorials.Tutorial3,DeviceSpec,0,4,0,0,4,52,4,0,0,-1,1,0,Tutorials.Tutorial3.Device,
+Tutorials.Tutorial4,MainDeviceGroup,0,0,0,0,0,582,0,0,0,-1,0,0,,
+Tutorials.Tutorial4,RecordTemperature,0,1,2,0,1,10,1,0,0,-1,0,1,,Tutorials.Tutorial4.Device
+Tutorials.Tutorial4,TemperatureRecorded,0,1,1,0,1,8,1,0,0,-1,0,0,,
+Tutorials.Tutorial4,ReadTemperature,0,1,1,0,1,8,1,0,0,-1,0,1,,Tutorials.Tutorial4.Device
+Tutorials.Tutorial4,RespondTemperature,0,1,2,0,1,10,1,0,0,-1,0,1,,Tutorials.Tutorial4.DeviceGroupQuery
+Tutorials.Tutorial4,Device,1,5,3,0,2,35,6,0,0,1,4,1,Tutorials.Tutorial4.RequestTrackDevice' Tutorials.Tutorial4.DeviceRegistered' Tutorials.Tutorial4.RecordTemperature' Tutorials.Tutorial4.ReadTemperature,Tutorials.Tutorial4.DeviceGroup
+Tutorials.Tutorial4,RequestDeviceList,0,1,1,0,1,8,1,0,0,-1,0,1,,Tutorials.Tutorial4.DeviceGroup
+Tutorials.Tutorial4,ReplyDeviceList,0,1,2,0,1,10,1,0,0,-1,0,0,,
+Tutorials.Tutorial4,RequestAllTemperatures,0,1,1,0,1,8,1,0,0,-1,0,1,,Tutorials.Tutorial4.DeviceGroup
+Tutorials.Tutorial4,RespondAllTemperatures,0,1,2,0,1,10,1,0,0,-1,0,0,,
+Tutorials.Tutorial4,ITemperatureReading,0,0,0,0,0,3,0,4,0,-1,0,1,,Tutorials.Tutorial4.DeviceGroupQuery
+Tutorials.Tutorial4,Temperature,0,1,1,0,1,8,1,0,1,-1,0,0,,
+Tutorials.Tutorial4,TemperatureNotAvailable,0,1,1,0,0,5,1,0,1,-1,0,2,,Tutorials.Tutorial4.DeviceGroupQuery' Tutorials.Tutorial4.DeviceGroupQuerySpec
+Tutorials.Tutorial4,DeviceNotAvailable,0,1,1,0,0,5,1,0,1,-1,0,2,,Tutorials.Tutorial4.DeviceGroupQuery' Tutorials.Tutorial4.DeviceGroupQuerySpec
+Tutorials.Tutorial4,DeviceTimedOut,0,1,1,0,0,5,1,0,1,-1,0,2,,Tutorials.Tutorial4.DeviceGroupQuery' Tutorials.Tutorial4.DeviceGroupQuerySpec
+Tutorials.Tutorial4,DeviceGroup,6,10,4,0,4,74,12,0,0,0.9,5,2,Tutorials.Tutorial4.RequestTrackDevice' Tutorials.Tutorial4.Device' Tutorials.Tutorial4.RequestDeviceList' Tutorials.Tutorial4.DeviceGroupQuery' Tutorials.Tutorial4.RequestAllTemperatures,Tutorials.Tutorial4.DeviceGroupSpec' Tutorials.Tutorial4.DeviceManager
+Tutorials.Tutorial4,CollectionTimeout,0,1,1,0,0,5,1,0,0,-1,0,1,,Tutorials.Tutorial4.DeviceGroupQuery
+Tutorials.Tutorial4,DeviceGroupQuery,2,12,10,0,6,129,15,0,0,0.58,6,2,Tutorials.Tutorial4.CollectionTimeout' Tutorials.Tutorial4.ITemperatureReading' Tutorials.Tutorial4.RespondTemperature' Tutorials.Tutorial4.TemperatureNotAvailable' Tutorials.Tutorial4.DeviceNotAvailable' Tutorials.Tutorial4.DeviceTimedOut,Tutorials.Tutorial4.DeviceGroup' Tutorials.Tutorial4.DeviceGroupQuerySpec
+Tutorials.Tutorial4,DeviceGroupQueryInProgress,0,0,0,0,0,39,0,0,0,-1,0,0,,
+Tutorials.Tutorial4,DeviceGroupInProgress2,0,0,0,0,0,29,0,0,0,-1,0,0,,
+Tutorials.Tutorial4,DeviceGroupQuerySpec,0,5,0,0,5,118,5,0,0,-1,4,0,Tutorials.Tutorial4.DeviceGroupQuery' Tutorials.Tutorial4.TemperatureNotAvailable' Tutorials.Tutorial4.DeviceNotAvailable' Tutorials.Tutorial4.DeviceTimedOut,
+Tutorials.Tutorial4,DeviceGroupSpec,0,6,0,0,6,110,6,0,0,-1,1,0,Tutorials.Tutorial4.DeviceGroup,
+Tutorials.Tutorial4,RequestTrackDevice,0,1,2,0,1,10,1,0,0,-1,0,3,,Tutorials.Tutorial4.Device' Tutorials.Tutorial4.DeviceGroup' Tutorials.Tutorial4.DeviceManager
+Tutorials.Tutorial4,DeviceRegistered,0,1,1,0,0,5,1,0,0,-1,0,1,,Tutorials.Tutorial4.Device
+Tutorials.Tutorial4,DeviceManager,2,4,1,0,1,36,5,0,0,1,2,0,Tutorials.Tutorial4.RequestTrackDevice' Tutorials.Tutorial4.DeviceGroup,

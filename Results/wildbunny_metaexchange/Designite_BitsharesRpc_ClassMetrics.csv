@@ -1,0 +1,46 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BitsharesRpc,BitsharesDatetimeExtensions,1,2,0,1,2,33,3,0,0,1,0,1,,BitsharesRpc.BitsharesWallet
+BitsharesRpc,BitsharesAuthority,2,0,0,2,0,5,0,0,0,-1,0,1,,BitsharesRpc.BitsharesAsset
+BitsharesRpc,BitsharesAsset,20,4,0,20,4,39,4,0,0,0.5,1,8,BitsharesRpc.BitsharesAuthority,BitsharesRpc.BitsharesWallet' BtsOnrampDaemon.DaemonBase' BtsOnrampDaemon.DaemonMySql' MetaDaemon.MetaDaemonApi' MetaDaemon.Markets.InternalMarket' MetaDaemon.Markets.MarketBase' Pathfinder.AssetNode' Pathfinder.MarketPaths
+BitsharesRpc,BitsharesMarketHistoryPoint,7,0,0,7,0,10,0,0,0,-1,0,0,,
+BitsharesRpc,BitsharesOrderType,0,0,0,0,0,8,0,0,0,-1,0,2,,BitsharesRpc.BitsharesOrder' BitsharesRpc.BitsharesTrade
+BitsharesRpc,BitsharesPrice,3,0,0,3,0,6,0,0,0,-1,0,5,,BitsharesRpc.BitsharesMarketIndex' BitsharesRpc.BitsharesOrderState' BitsharesRpc.BitsharesOrder' BitsharesRpc.BitsharesTrade' BitsharesRpc.MarketStatusResponse
+BitsharesRpc,BitsharesAmount,2,0,0,2,0,5,0,0,0,-1,0,8,,BitsharesRpc.BitsharesTrade' BitsharesRpc.BitsharesLedgerEntry' BitsharesRpc.BitsharesWalletTransaction' BitsharesRpc.BitsharesTransaction' BitsharesRpc.BitsharesTransactionResponse' BtsOnrampDaemon.DaemonBase' MetaDaemon.MetaDaemonApi' MetaDaemon.Markets.InternalMarket
+BitsharesRpc,BitsharesMarketIndex,2,0,0,2,0,5,0,0,0,-1,1,1,BitsharesRpc.BitsharesPrice,BitsharesRpc.BitsharesOrder
+BitsharesRpc,BitsharesOrderState,3,0,0,3,0,6,0,0,0,-1,1,1,BitsharesRpc.BitsharesPrice,BitsharesRpc.BitsharesOrder
+BitsharesRpc,BitsharesOrder,6,2,0,6,2,65,4,0,0,0,4,0,BitsharesRpc.BitsharesOrderType' BitsharesRpc.BitsharesMarketIndex' BitsharesRpc.BitsharesOrderState' BitsharesRpc.BitsharesPrice,
+BitsharesRpc,BitsharesTrade,13,0,0,13,0,17,0,0,0,-1,3,0,BitsharesRpc.BitsharesPrice' BitsharesRpc.BitsharesAmount' BitsharesRpc.BitsharesOrderType,
+BitsharesRpc,BitsharesLedgerEntry,4,0,0,4,0,7,0,0,0,-1,1,8,BitsharesRpc.BitsharesAmount,BitsharesRpc.BitsharesWalletTransaction' BitsharesRpc.BitsharesTransactionResponse' BtsOnrampDaemon.DaemonApi' BtsOnrampDaemon.DaemonBase' MetaDaemon.MetaDaemonApi' MetaDaemon.DaemonBase' MetaDaemon.Markets.InternalMarket' MetaDaemon.Markets.MarketBase
+BitsharesRpc,BitsharesWalletTransaction,11,0,0,11,0,14,0,0,0,-1,2,2,BitsharesRpc.BitsharesLedgerEntry' BitsharesRpc.BitsharesAmount,BtsOnrampDaemon.DaemonBase' MetaDaemon.DaemonBase
+BitsharesRpc,BitsharesTransactionOp,0,0,0,0,0,35,0,0,0,-1,0,2,,BitsharesRpc.BitsharesOperation' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesWithdrawCondition,0,0,0,0,0,12,0,0,0,-1,0,1,,BitsharesRpc.BitsharesOpCondition
+BitsharesRpc,BitsharesTransactionMemo,2,0,0,2,0,5,0,0,0,-1,0,1,,BitsharesRpc.BitsharesMemoOwner
+BitsharesRpc,BitsharesMemoOwner,2,0,0,2,0,5,0,0,0,-1,1,2,BitsharesRpc.BitsharesTransactionMemo,BitsharesRpc.BitsharesOpCondition' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesOpCondition,4,0,0,4,0,7,0,0,0,-1,2,3,BitsharesRpc.BitsharesWithdrawCondition' BitsharesRpc.BitsharesMemoOwner,BitsharesRpc.BitsharesOpData' BitsharesRpc.BitsharesBalanceRecord' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesOpData,4,0,0,4,0,7,0,0,0,-1,1,2,BitsharesRpc.BitsharesOpCondition,BitsharesRpc.BitsharesOperation' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesOperation,2,0,0,2,0,5,0,0,0,-1,2,2,BitsharesRpc.BitsharesTransactionOp' BitsharesRpc.BitsharesOpData,BitsharesRpc.BitsharesTrx' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesChainPos,2,0,0,2,0,5,0,0,0,-1,0,1,,BitsharesRpc.BitsharesTransaction
+BitsharesRpc,BitsharesVoteAmount,2,0,0,2,0,5,0,0,0,-1,0,0,,
+BitsharesRpc,BitsharesTrx,4,0,0,4,0,7,0,0,0,-1,1,3,BitsharesRpc.BitsharesOperation,BitsharesRpc.BitsharesTransaction' BitsharesRpc.BitsharesTransactionResponse' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesTransaction,13,0,0,13,0,16,0,0,0,-1,3,3,BitsharesRpc.BitsharesTrx' BitsharesRpc.BitsharesAmount' BitsharesRpc.BitsharesChainPos,BitsharesRpc.BitsharesWallet' BtsOnrampDaemon.DaemonApi' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesDelegateInfo,10,0,0,10,0,13,0,0,0,-1,0,1,,BitsharesRpc.BitsharesAccount
+BitsharesRpc,BitsharesAccount,9,0,0,9,0,12,0,0,0,-1,1,6,BitsharesRpc.BitsharesDelegateInfo,BitsharesRpc.BitsharesWallet' BtsOnrampDaemon.DaemonApi' BtsOnrampDaemon.DaemonBase' MetaDaemon.DaemonBase' MetaDaemon.Markets.InternalMarket' MetaDaemon.Markets.MarketBase
+BitsharesRpc,BitsharesErrorContext,7,0,0,7,0,11,0,0,0,-1,0,1,,BitsharesRpc.BitsharesErrorStackLevel
+BitsharesRpc,BitsharesErrorStackLevel,3,0,0,3,0,6,0,0,0,-1,1,1,BitsharesRpc.BitsharesErrorContext,BitsharesRpc.BitsharesError
+BitsharesRpc,BitsharesError,5,0,0,5,0,8,0,0,0,-1,1,3,BitsharesRpc.BitsharesErrorStackLevel,BitsharesRpc.BitsharesMarket' BitsharesRpc.BitsharesRpcException' BitsharesRpc.BitsharesErrorResponse
+BitsharesRpc,BitsharesBalanceRecord,6,0,0,6,0,9,0,0,0,-1,1,2,BitsharesRpc.BitsharesOpCondition,BitsharesRpc.BitsharesWallet' BtsOnrampDaemon.DaemonBase
+BitsharesRpc,BitsharesMarket,7,0,0,7,0,10,0,0,0,-1,1,2,BitsharesRpc.BitsharesError,MetaDaemon.MetaDaemonApi' Pathfinder.MarketPaths
+BitsharesRpc,BitsharesRpcException,1,1,1,1,1,9,1,0,0,0,1,0,BitsharesRpc.BitsharesError,
+BitsharesRpc,BitsharesWallet,6,27,0,3,25,419,33,0,0,0,14,6,BitsharesRpc.BitsharesDatetimeExtensions' BitsharesRpc.BitsharesErrorResponse' RestLib.Rest' BitsharesRpc.BitsharesRequest' BitsharesRpc.BitsharesBatchRequest' BitsharesRpc.BitsharesMethods' BitsharesRpc.GetInfoResponse' BitsharesRpc.BitsharesAccount' BitsharesRpc.BitsharesTransaction' BitsharesRpc.BitsharesBalanceRecord' BitsharesRpc.BitsharesAsset' BitsharesRpc.BitsharesTransactionResponse' BitsharesRpc.VoteMethod' BitsharesRpc.BurnForOrAgainst,BtsOnrampDaemon.DaemonApi' BtsOnrampDaemon.DaemonBase' MetaDaemon.MetaDaemonApi' MetaDaemon.DaemonBase' MetaDaemon.Markets.InternalMarket' MetaDaemon.Markets.MarketBase
+BitsharesRpc,BitsharesMethods,0,0,0,0,0,158,0,0,0,-1,0,3,,BitsharesRpc.BitsharesWallet' BitsharesRpc.BitsharesRequest' BitsharesRpc.BitsharesBatchRequest
+BitsharesRpc,RequestGranulatity,0,0,0,0,0,6,0,0,0,-1,0,0,,
+BitsharesRpc,VoteMethod,0,0,0,0,0,7,0,0,0,-1,0,1,,BitsharesRpc.BitsharesWallet
+BitsharesRpc,BurnForOrAgainst,0,0,0,0,0,5,0,0,0,-1,0,2,,BitsharesRpc.BitsharesWallet' MetaDaemon.Markets.MarketBase
+BitsharesRpc,BitsharesRequest,4,1,0,4,1,14,1,1,0,0,1,1,BitsharesRpc.BitsharesMethods,BitsharesRpc.BitsharesWallet
+BitsharesRpc,BitsharesBatchRequest,0,1,0,0,1,5,1,0,1,-1,1,1,BitsharesRpc.BitsharesMethods,BitsharesRpc.BitsharesWallet
+BitsharesRpc,BitsharesResponse<T>,2,0,0,2,0,5,0,0,0,-1,0,0,,
+BitsharesRpc,BitsharesErrorResponse,2,0,0,2,0,5,0,0,0,-1,1,1,BitsharesRpc.BitsharesError,BitsharesRpc.BitsharesWallet
+BitsharesRpc,MarketStatusResponse,7,0,0,7,0,10,0,0,0,-1,1,0,BitsharesRpc.BitsharesPrice,
+BitsharesRpc,GetInfoResponse,26,0,0,26,0,29,0,0,0,-1,0,4,,BitsharesRpc.BitsharesWallet' BtsOnrampDaemon.DaemonBase' MetaDaemon.MetaDaemonApi' MetaDaemon.DaemonBase
+BitsharesRpc,BitsharesTransactionResponse,12,0,0,12,0,15,0,0,0,-1,3,5,BitsharesRpc.BitsharesTrx' BitsharesRpc.BitsharesLedgerEntry' BitsharesRpc.BitsharesAmount,BitsharesRpc.BitsharesWallet' BtsOnrampDaemon.DaemonBase' MetaDaemon.MetaDaemonApi' MetaDaemon.Markets.InternalMarket' MetaDaemon.Markets.MarketBase
+BitsharesRpc,RpcConfig,4,0,0,4,0,7,0,0,0,-1,0,6,,BtsOnrampDaemon.DaemonApi' BtsOnrampDaemon.DaemonBase' BtsOnrampDaemon.DaemonMySql' MetaDaemon.MetaDaemonApi' MetaDaemon.DaemonBase' MetaDaemon.DaemonMySql

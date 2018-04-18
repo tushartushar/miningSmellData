@@ -1,20 +1,20 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Adaptive,0,1,0,0,1,9,1,0,0,-1,0,1
-AttributeBasedTasks,0,4,0,0,4,27,4,0,0,-1,0,0
-Backoff,0,1,0,0,1,9,1,0,0,-1,0,1
-Configuration,0,0,8,0,0,35,0,0,0,-1,0,6
-Coordinated,0,2,0,0,2,10,2,0,0,-1,0,1
-DataGenerationFactory,0,1,0,0,1,14,1,0,0,-1,3,1
-Factory,0,1,0,0,1,45,1,0,0,-1,9,2
-InitTask,0,1,0,0,1,7,1,0,0,-1,0,1
-OnceDaily,0,2,0,0,2,10,2,0,0,-1,0,1
-Recurring,0,1,0,0,1,7,1,0,0,-1,0,1
-WorkerRole,1,3,0,0,3,44,3,0,0,0,3,0
-CompanyDequeuer,0,1,0,0,1,9,1,0,0,-1,0,1
-CompanyModel,0,0,2,0,0,15,0,0,0,-1,0,1
-CompanyProcessor,0,1,0,0,1,11,1,0,0,-1,1,0
-CompanyQueuer,2,2,0,0,2,22,2,0,0,0,0,1
-CompanyQueuerSharded,2,2,0,0,2,19,2,0,0,0,0,1
-DynamicScaler,0,2,0,0,2,12,2,0,0,-1,1,1
-ScalableQueue,0,2,0,0,2,10,2,0,0,-1,1,0
-ScalableTask,0,1,2,0,1,20,1,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+King.Service.CloudService.Role,Adaptive,0,1,0,0,1,9,1,0,0,-1,0,0,,
+King.Service.CloudService.Role,AttributeBasedTasks,0,4,0,0,4,27,4,0,0,-1,0,0,,
+King.Service.CloudService.Role,Backoff,0,1,0,0,1,9,1,0,0,-1,0,0,,
+King.Service.CloudService.Role,Configuration,0,0,8,0,0,43,0,0,0,-1,0,6,,King.Service.CloudService.Role.DataGenerationFactory' King.Service.CloudService.Role.Factory' King.Service.CloudService.Role.WorkerRole' King.Service.CloudService.Role.Scalable.DynamicScaler' King.Service.CloudService.Role.Scalable.ScalableQueue' King.Service.WebJob.Program
+King.Service.CloudService.Role,Coordinated,0,2,0,0,2,11,2,0,0,-1,0,1,,King.Service.CloudService.Role.Factory
+King.Service.CloudService.Role,DataGenerationFactory,0,1,0,0,1,14,1,0,0,-1,1,0,King.Service.CloudService.Role.Configuration,
+King.Service.CloudService.Role,Factory,0,1,0,0,1,47,1,0,0,-1,2,0,King.Service.CloudService.Role.Coordinated' King.Service.CloudService.Role.Configuration,
+King.Service.CloudService.Role,InitTask,0,1,0,0,1,7,1,0,0,-1,0,0,,
+King.Service.CloudService.Role,OnceDaily,0,2,0,0,2,11,2,0,0,-1,0,0,,
+King.Service.CloudService.Role,Recurring,0,1,0,0,1,7,1,0,0,-1,0,0,,
+King.Service.CloudService.Role,WorkerRole,1,3,0,0,3,46,3,0,0,0,1,0,King.Service.CloudService.Role.Configuration,
+King.Service.CloudService.Role.Queue,CompanyDequeuer,0,1,0,0,1,7,1,0,0,-1,0,0,,
+King.Service.CloudService.Role.Queue,CompanyModel,0,0,2,0,0,14,0,0,0,-1,0,3,,King.Service.CloudService.Role.Queue.CompanyProcessor' King.Service.CloudService.Role.Queue.CompanyQueuer' King.Service.CloudService.Role.Queue.CompanyQueuerSharded
+King.Service.CloudService.Role.Queue,CompanyProcessor,0,1,0,0,1,8,1,0,0,-1,1,0,King.Service.CloudService.Role.Queue.CompanyModel,
+King.Service.CloudService.Role.Queue,CompanyQueuer,2,2,0,0,2,21,2,0,0,0,1,0,King.Service.CloudService.Role.Queue.CompanyModel,
+King.Service.CloudService.Role.Queue,CompanyQueuerSharded,2,2,0,0,2,21,2,0,0,0,1,0,King.Service.CloudService.Role.Queue.CompanyModel,
+King.Service.CloudService.Role.Scalable,DynamicScaler,0,2,0,0,2,13,2,0,0,-1,1,0,King.Service.CloudService.Role.Configuration,
+King.Service.CloudService.Role.Scalable,ScalableQueue,0,2,0,0,2,11,2,0,0,-1,1,0,King.Service.CloudService.Role.Configuration,
+King.Service.CloudService.Role.Scalable,ScalableTask,0,1,2,0,1,24,1,0,0,-1,0,0,,

@@ -1,23 +1,28 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CustomWaypointGUI,28,13,1,2,8,523,71,0,0,0,4,4
-CustomWaypoints,1,11,2,0,9,145,22,0,0,0.82,1,3
-WaypointManagerGameEvents,1,2,0,1,0,16,2,0,0,1,1,0
-ToolbarManager,6,2,2,0,1,55,2,0,1,0,4,2
-IToolbarManager,0,1,0,0,0,17,1,1,0,-1,0,1
-IButton,0,1,10,0,0,179,1,1,0,-1,2,6
-IDrawable,0,2,0,0,0,22,2,1,0,-1,0,2
-ClickEvent,2,1,0,2,0,25,1,0,0,0,1,0
-MouseMoveEvent,1,1,0,1,0,16,1,2,0,0,1,0
-MouseEnterEvent,0,1,0,0,0,11,1,0,1,-1,1,0
-MouseLeaveEvent,0,1,0,0,0,11,1,0,1,-1,1,0
-IVisibility,0,0,1,0,0,14,0,1,0,-1,0,2
-GameScenesVisibility,2,1,1,0,1,28,1,0,1,0,1,0
-PopupMenuDrawable,7,6,0,0,6,71,6,0,1,0,2,0
-Button,7,7,10,0,1,149,10,0,1,0.57,3,2
-ToolbarTypes,4,6,0,0,0,40,6,0,0,0.83,1,5
-ButtonTypes,15,1,0,0,0,36,1,0,0,0,1,1
-Util,3,11,0,0,11,244,33,0,0,0.82,2,4
-Config,17,3,2,17,2,118,7,0,0,0,1,5
-WaypointData,12,3,3,7,3,179,22,0,0,0,2,3
-WaypointFlightRenderer,14,13,0,0,6,358,62,0,0,0.23,5,0
-WaypointManager,21,22,0,3,1,475,91,0,0,0.09,7,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WaypointManager,CustomWaypointGUI,28,13,1,2,8,570,67,0,0,0,5,4,WaypointManager.WindowMode' WaypointManager.Util' WaypointManager.WaypointManager' WaypointManager.Config' WaypointManager.CustomWaypoints,WaypointManager.CustomWaypoints' WaypointManager.WaypointManagerGameEvents' WaypointManager.WaypointFlightRenderer' WaypointManager.WaypointManager
+WaypointManager,WindowMode,0,0,0,0,0,7,0,0,0,-1,0,1,,WaypointManager.CustomWaypointGUI
+WaypointManager,CustomWaypoints,1,11,2,0,9,157,22,0,0,0.82,1,3,WaypointManager.CustomWaypointGUI,WaypointManager.CustomWaypointGUI' WaypointManager.WaypointFlightRenderer' WaypointManager.WaypointManager
+WaypointManager,WaypointManagerGameEvents,1,2,0,1,0,16,2,0,0,1,1,0,WaypointManager.CustomWaypointGUI,
+WaypointManager,ToolbarManager,6,2,2,0,1,56,2,0,1,0,3,2,WaypointManager.IToolbarManager' WaypointManager.ToolbarTypes' WaypointManager.IButton,WaypointManager.Config' WaypointManager.WaypointManager
+WaypointManager,IToolbarManager,0,1,0,0,0,14,1,1,0,-1,0,2,,WaypointManager.ToolbarManager' WaypointManager.WaypointManager
+WaypointManager,IButton,0,1,10,0,0,186,1,1,0,-1,0,6,,WaypointManager.ToolbarManager' WaypointManager.ClickEvent' WaypointManager.MouseMoveEvent' WaypointManager.MouseEnterEvent' WaypointManager.MouseLeaveEvent' WaypointManager.WaypointManager
+WaypointManager,IDrawable,0,2,0,0,0,18,2,1,0,-1,0,1,,WaypointManager.Button
+WaypointManager,ClickEvent,2,1,0,2,0,22,1,0,0,0,1,0,WaypointManager.IButton,
+WaypointManager,MouseMoveEvent,1,1,0,1,0,13,1,2,0,0,1,0,WaypointManager.IButton,
+WaypointManager,MouseEnterEvent,0,1,0,0,0,9,1,0,1,-1,1,0,WaypointManager.IButton,
+WaypointManager,MouseLeaveEvent,0,1,0,0,0,9,1,0,1,-1,1,0,WaypointManager.IButton,
+WaypointManager,IVisibility,0,0,1,0,0,11,0,1,0,-1,0,1,,WaypointManager.Button
+WaypointManager,GameScenesVisibility,2,1,1,0,1,18,1,0,1,0,1,0,WaypointManager.ToolbarTypes,
+WaypointManager,PopupMenuDrawable,7,6,0,0,6,67,6,0,1,0,2,0,WaypointManager.ToolbarTypes' WaypointManager.Button,
+WaypointManager,Button,7,7,10,0,1,181,10,0,1,0.57,4,1,WaypointManager.ToolbarTypes' WaypointManager.IVisibility' WaypointManager.IDrawable' WaypointManager.ButtonTypes,WaypointManager.PopupMenuDrawable
+WaypointManager,ToolbarTypes,4,6,0,0,0,41,6,0,0,0.83,1,5,WaypointManager.ButtonTypes,WaypointManager.ToolbarManager' WaypointManager.GameScenesVisibility' WaypointManager.PopupMenuDrawable' WaypointManager.Button' WaypointManager.ButtonTypes
+WaypointManager,ButtonTypes,15,1,0,0,0,36,1,0,0,0,1,2,WaypointManager.ToolbarTypes,WaypointManager.Button' WaypointManager.ToolbarTypes
+WaypointManager,Util,3,11,0,0,11,278,25,0,0,0.91,3,4,WaypointManager.WaypointData' WaypointManager.Config' WaypointManager.DistanceCalcMethod,WaypointManager.CustomWaypointGUI' WaypointManager.WaypointData' WaypointManager.WaypointFlightRenderer' WaypointManager.WaypointManager
+WaypointManager,Config,17,3,2,17,2,119,7,0,0,0,4,5,WaypointManager.DisplayMode' WaypointManager.DistanceCalcMethod' WaypointManager.WaypointDisplay' WaypointManager.ToolbarManager,WaypointManager.CustomWaypointGUI' WaypointManager.Util' WaypointManager.WaypointData' WaypointManager.WaypointFlightRenderer' WaypointManager.WaypointManager
+WaypointManager,DisplayMode,0,0,0,0,0,5,0,0,0,-1,0,2,,WaypointManager.Config' WaypointManager.WaypointManager
+WaypointManager,DistanceCalcMethod,0,0,0,0,0,6,0,0,0,-1,0,3,,WaypointManager.Util' WaypointManager.Config' WaypointManager.WaypointManager
+WaypointManager,WaypointDisplay,0,0,0,0,0,6,0,0,0,-1,0,3,,WaypointManager.Config' WaypointManager.WaypointFlightRenderer' WaypointManager.WaypointManager
+WaypointManager,WaypointData,12,3,3,7,3,198,21,0,0,0.67,3,3,WaypointManager.ContractContainer' WaypointManager.Util' WaypointManager.Config,WaypointManager.Util' WaypointManager.WaypointFlightRenderer' WaypointManager.WaypointManager
+WaypointManager,ContractContainer,3,1,0,3,1,10,1,0,0,0,0,2,,WaypointManager.WaypointData' WaypointManager.WaypointManager
+WaypointManager,WaypointFlightRenderer,14,13,0,0,6,411,51,0,0,0.23,6,0,WaypointManager.CustomWaypointGUI' WaypointManager.WaypointData' WaypointManager.Util' WaypointManager.Config' WaypointManager.WaypointDisplay' WaypointManager.CustomWaypoints,
+WaypointManager,WaypointManager,21,22,0,3,1,575,86,0,0,0.09,12,1,WaypointManager.IButton' WaypointManager.Config' WaypointManager.ToolbarManager' WaypointManager.IToolbarManager' WaypointManager.WaypointData' WaypointManager.CustomWaypointGUI' WaypointManager.DisplayMode' WaypointManager.ContractContainer' WaypointManager.Util' WaypointManager.CustomWaypoints' WaypointManager.DistanceCalcMethod' WaypointManager.WaypointDisplay,WaypointManager.CustomWaypointGUI

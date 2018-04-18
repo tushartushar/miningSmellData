@@ -1,41 +1,44 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AutorunEntry,5,4,5,0,1,119,10,0,0,0.5,0,1
-FanControllerViewModelCollection,0,1,0,0,1,6,1,0,0,-1,0,0
-CloseSelectConfigDialogMessage,0,2,2,0,2,19,2,0,0,-1,0,2
-OpenSettingsDialogMessage,0,0,0,0,0,3,0,0,0,-1,0,1
-ReloadFanControlInfoMessage,0,2,1,0,2,14,2,0,0,-1,0,4
-OpenSelectConfigDialogMessage,0,0,0,0,0,3,0,0,0,-1,0,1
-FanControlClient,4,14,2,0,10,139,22,0,1,0.14,2,0
-FanControlStatusChangedEventArgs,0,2,1,0,2,18,2,0,0,-1,1,2
-IFanControlClient,0,0,1,0,0,7,0,1,1,-1,1,3
-TrayIconRenderer,11,3,6,0,2,106,4,0,0,0,0,1
-App,0,1,0,0,1,15,2,0,0,-1,1,0
-BindableTaskbarIcon,1,1,1,1,0,48,7,0,0,0,0,0
-FanController,0,1,0,0,1,10,1,0,0,-1,0,0
-ToolTipFanInfo,0,1,0,0,1,10,1,0,0,-1,0,0
-TrayToolTip,0,1,0,0,1,10,1,0,0,-1,0,0
-AddOneConverter,0,2,0,0,2,12,2,0,0,-1,0,0
-BooleanToInverseConverter,0,2,0,0,2,12,2,0,0,-1,0,0
-BooleanToVisibilityConverter,0,2,0,0,2,26,5,0,0,-1,0,0
-ColorToBrushConverter,0,2,0,0,2,13,2,0,0,-1,0,0
-ColorToContrastingBrushConverter,2,3,0,0,2,25,3,0,0,0.67,0,0
-ColorToStringConverter,1,3,0,0,2,28,6,0,0,0.67,0,0
-FanSpeedSliderValueToTextConverter,2,2,0,0,2,26,3,0,0,1,0,0
-TargetFanSpeedToTextConverter,3,2,0,0,2,31,4,0,0,1,0,0
-TemperatureToTextConverter,1,2,0,0,2,26,3,0,0,1,0,0
-FanControllerViewModel,9,6,8,0,1,139,9,0,0,0,5,1
-SelectConfigViewModel,13,8,7,0,1,160,10,0,0,0.25,3,1
-SettingsViewModel,7,1,4,0,1,65,1,0,0,0,3,1
-ViewModelLocator,0,1,3,0,0,29,2,0,0,-1,4,0
-MainViewModel,13,9,11,0,1,194,13,0,0,0.44,7,1
-ComboBoxItemTemplateSelector,0,2,2,0,1,29,4,0,0,-1,0,0
-SelectConfigWindow,0,2,0,0,1,15,2,0,0,-1,1,1
-SettingsWindow,0,1,0,0,1,10,1,0,0,-1,0,1
-MainWindow,6,13,0,0,1,132,20,0,0,0.62,5,0
-FanControlInfo,7,1,7,0,0,110,2,0,0,0,1,5
-FanStatus,7,1,7,0,0,110,2,0,0,0,0,2
-IFanControlService,0,7,0,0,0,19,7,3,0,-1,0,0
-IFanControlServiceChannel,0,0,0,0,0,4,0,0,1,-1,0,0
-FanControlServiceClient,0,12,0,0,12,48,12,0,1,-1,0,1
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,6,0,0,71,0,0,0,-1,0,4
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NbfcClient,AppSettings,0,1,4,0,1,15,1,0,1,-1,0,3,,NbfcClient.ViewModels.SettingsViewModel' NbfcClient.ViewModels.MainViewModel' NbfcClient.Windows.MainWindow
+NbfcClient,TrayIconRenderer,11,3,6,0,2,133,4,0,0,0,0,1,,NbfcClient.ViewModels.MainViewModel
+NbfcClient,App,2,3,0,0,3,64,4,0,0,0.67,0,0,,
+StagWare.Windows,AutorunEntry,5,4,5,0,1,152,4,0,0,0.5,0,1,,NbfcClient.ViewModels.SettingsViewModel
+NbfcClient.DesignData,FanControllerViewModelCollection,0,1,0,0,1,7,1,0,0,-1,0,0,,
+NbfcClient.Messages,CloseSelectConfigDialogMessage,0,2,2,0,2,13,2,0,0,-1,0,2,,NbfcClient.ViewModels.SelectConfigViewModel' NbfcClient.Windows.SelectConfigWindow
+NbfcClient.Messages,OpenSettingsDialogMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,NbfcClient.Windows.MainWindow
+NbfcClient.Messages,ReloadFanControlInfoMessage,0,2,1,0,2,11,2,0,0,-1,0,3,,NbfcClient.ViewModels.FanControllerViewModel' NbfcClient.ViewModels.SelectConfigViewModel' NbfcClient.ViewModels.MainViewModel
+NbfcClient.Messages,OpenSelectConfigDialogMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,NbfcClient.Windows.MainWindow
+NbfcClient.Services,FanControlClient,5,14,2,0,10,152,20,0,1,0.14,2,0,NbfcClient.NbfcService.FanControlServiceClient' NbfcClient.NbfcService.FanControlInfo,
+NbfcClient.Services,FanControlStatusChangedEventArgs,0,2,1,0,2,15,2,0,0,-1,1,2,NbfcClient.NbfcService.FanControlInfo,NbfcClient.ViewModels.FanControllerViewModel' NbfcClient.ViewModels.MainViewModel
+NbfcClient.Services,IFanControlClient,0,0,1,0,0,5,0,1,1,-1,0,3,,NbfcClient.ViewModels.FanControllerViewModel' NbfcClient.ViewModels.SelectConfigViewModel' NbfcClient.ViewModels.MainViewModel
+NbfcClient.Properties,Settings,0,3,0,0,1,19,3,0,0,-1,0,0,,
+NbfcClient.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+NbfcClient.UserControls,BindableTaskbarIcon,2,3,1,1,0,90,8,0,0,0.67,1,0,NbfcClient.UserControls.NativeMethods,
+NbfcClient.UserControls,NativeMethods,0,1,0,0,1,5,1,0,0,-1,0,1,,NbfcClient.UserControls.BindableTaskbarIcon
+NbfcClient.UserControls,FanController,2,3,0,0,2,53,5,0,0,0,0,0,,
+NbfcClient.UserControls,ToolTipFanInfo,2,3,0,0,2,53,5,0,0,0,0,0,,
+NbfcClient.UserControls,TrayToolTip,1,3,0,0,2,39,4,0,0,0,0,0,,
+NbfcClient.ValueConverters,AddOneConverter,0,2,0,0,2,12,2,0,0,-1,0,0,,
+NbfcClient.ValueConverters,BooleanToInverseConverter,0,2,0,0,2,12,2,0,0,-1,0,0,,
+NbfcClient.ValueConverters,BooleanToVisibilityConverter,0,2,0,0,2,30,5,0,0,-1,0,0,,
+NbfcClient.ValueConverters,ColorToBrushConverter,0,2,0,0,2,13,2,0,0,-1,0,0,,
+NbfcClient.ValueConverters,ColorToContrastingBrushConverter,2,3,0,0,2,27,3,0,0,0.67,0,0,,
+NbfcClient.ValueConverters,ColorToStringConverter,1,3,0,0,2,31,6,0,0,0.67,0,0,,
+NbfcClient.ValueConverters,FanSpeedSliderValueToTextConverter,2,2,0,0,2,26,3,0,0,1,0,0,,
+NbfcClient.ValueConverters,TargetFanSpeedToTextConverter,3,2,0,0,2,30,3,0,0,1,0,0,,
+NbfcClient.ValueConverters,TemperatureToTextConverter,1,2,0,0,2,26,3,0,0,1,0,0,,
+NbfcClient.ViewModels,FanControllerViewModel,9,6,8,0,1,130,9,0,0,0,5,0,NbfcClient.Services.IFanControlClient' NbfcClient.Messages.ReloadFanControlInfoMessage' NbfcClient.NbfcService.FanControlInfo' NbfcClient.NbfcService.FanStatus' NbfcClient.Services.FanControlStatusChangedEventArgs,
+NbfcClient.ViewModels,SelectConfigViewModel,13,8,7,0,1,175,10,0,0,0.25,3,0,NbfcClient.Services.IFanControlClient' NbfcClient.Messages.ReloadFanControlInfoMessage' NbfcClient.Messages.CloseSelectConfigDialogMessage,
+NbfcClient.ViewModels,SettingsViewModel,7,1,4,0,1,65,1,0,0,0,2,0,StagWare.Windows.AutorunEntry' NbfcClient.AppSettings,
+NbfcClient.ViewModels,ViewModelLocator,0,1,3,0,0,38,2,0,0,-1,0,0,,
+NbfcClient.ViewModels,MainViewModel,13,9,11,0,1,202,11,0,0,0.44,6,0,NbfcClient.TrayIconRenderer' NbfcClient.Services.IFanControlClient' NbfcClient.AppSettings' NbfcClient.Messages.ReloadFanControlInfoMessage' NbfcClient.NbfcService.FanControlInfo' NbfcClient.Services.FanControlStatusChangedEventArgs,
+NbfcClient.Views,ComboBoxItemTemplateSelector,0,2,2,0,1,27,4,0,0,-1,0,0,,
+NbfcClient.Windows,SelectConfigWindow,1,4,0,0,2,44,5,0,0,0.5,1,1,NbfcClient.Messages.CloseSelectConfigDialogMessage,NbfcClient.Windows.MainWindow
+NbfcClient.Windows,SettingsWindow,2,3,0,0,2,53,5,0,0,0,0,1,,NbfcClient.Windows.MainWindow
+NbfcClient.Windows,MainWindow,9,16,0,0,2,238,25,0,0,0.56,5,0,NbfcClient.AppSettings' NbfcClient.Windows.SelectConfigWindow' NbfcClient.Messages.OpenSelectConfigDialogMessage' NbfcClient.Windows.SettingsWindow' NbfcClient.Messages.OpenSettingsDialogMessage,
+NbfcClient.NbfcService,FanControlInfo,7,1,7,0,0,124,2,0,0,0,0,5,,NbfcClient.Services.FanControlClient' NbfcClient.Services.FanControlStatusChangedEventArgs' NbfcClient.ViewModels.FanControllerViewModel' NbfcClient.ViewModels.MainViewModel' NbfcClient.NbfcService.FanControlServiceClient
+NbfcClient.NbfcService,FanStatus,7,1,7,0,0,124,2,0,0,0,0,1,,NbfcClient.ViewModels.FanControllerViewModel
+NbfcClient.NbfcService,IFanControlService,0,7,0,0,0,25,7,3,0,-1,0,1,,NbfcClient.NbfcService.FanControlServiceClient
+NbfcClient.NbfcService,IFanControlServiceChannel,0,0,0,0,0,3,0,0,1,-1,0,0,,
+NbfcClient.NbfcService,FanControlServiceClient,0,12,0,0,12,51,12,0,1,-1,2,1,NbfcClient.NbfcService.IFanControlService' NbfcClient.NbfcService.FanControlInfo,NbfcClient.Services.FanControlClient
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

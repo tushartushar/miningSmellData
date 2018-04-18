@@ -1,26 +1,27 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CompositePublisherClient,1,2,0,0,2,18,7,0,1,0,2,1
-CompositePublisherEndpoint,1,6,1,0,6,55,15,0,1,0.5,4,1
-Endpoint,0,1,1,0,1,12,2,11,0,-1,0,1
-ICanBeAbandoned,0,1,0,0,0,4,1,3,0,-1,0,0
-ICanBeCompleted,0,1,0,0,0,4,1,5,0,-1,0,0
-ICanBeKilled,0,1,0,0,0,4,1,2,0,-1,0,0
-ICanRenewLock,0,1,0,0,0,4,1,2,0,-1,0,0
-IEndpointManager,0,2,0,0,0,5,2,5,0,-1,0,0
-IHaveADeliveryCount,0,1,0,0,0,4,1,3,0,-1,0,0
-IPublisherClient,0,1,0,0,0,4,1,9,0,-1,0,3
-IPublisherEndpoint,0,3,1,0,0,9,3,9,0,-1,0,2
-IPublisherEndpointDirectory,0,0,0,0,0,3,0,1,0,-1,0,3
-IPublisherEndpointManager,0,0,0,0,0,3,0,8,1,-1,0,0
-ISubscriberClient,0,2,0,0,0,5,2,7,0,-1,0,1
-ISubscriberClientExtensions,0,2,0,0,2,13,3,0,0,-1,2,0
-ISubscriberEndpoint,0,3,1,0,0,9,3,7,0,-1,0,1
-ISubscriberEndpointDirectory,0,0,0,0,0,3,0,1,0,-1,0,0
-ISubscriberEndpointManager,0,1,0,0,0,4,1,7,1,-1,0,0
-Message,0,1,1,0,0,11,1,5,0,-1,0,3
-MessageDeserializationException,0,4,1,0,3,29,4,0,0,-1,1,0
-MessageExtensions,0,5,0,0,5,67,18,0,0,-1,1,0
-MessageScope,0,2,1,0,2,16,3,0,0,-1,1,1
-MessagingException,0,4,0,0,3,22,4,0,0,-1,0,0
-PublisherEndpointDirectory,0,2,0,0,1,16,4,0,1,-1,1,0
-SubscriberEndpointDirectory,0,2,0,0,1,18,5,0,1,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mantle.Messaging,CompositePublisherClient,1,2,0,0,2,18,5,0,1,0,3,1,Mantle.Messaging.CompositePublisherEndpoint' Mantle.Messaging.IPublisherEndpoint' Mantle.Messaging.IPublisherClient,Mantle.Messaging.CompositePublisherEndpoint
+Mantle.Messaging,CompositePublisherEndpoint,1,6,1,0,6,60,14,0,1,0.5,6,1,Mantle.Messaging.IPublisherEndpointDirectory' Mantle.Configuration.IConfigurationMetadata' Mantle.Messaging.ConfigurationProperties' Mantle.Messaging.CompositePublisherClient' Mantle.Messaging.Endpoint' Mantle.Messaging.IPublisherEndpoint,Mantle.Messaging.CompositePublisherClient
+Mantle.Messaging,ConfigurationProperties,1,0,0,1,0,4,0,0,0,-1,0,1,,Mantle.Messaging.CompositePublisherEndpoint
+Mantle.Messaging,Endpoint,0,1,1,0,1,9,2,11,0,-1,0,11,,Mantle.Messaging.CompositePublisherEndpoint' Mantle.Messaging.Aws.SnsPublisherEndpoint' Mantle.Messaging.Aws.SqsEndpoint' Mantle.Messaging.Azure.AzureServiceBusQueueEndpoint' Mantle.Messaging.Azure.AzureServiceBusSubscriptionSubscriberEndpoint' Mantle.Messaging.Azure.AzureServiceBusTopicPublisherEndpoint' Mantle.Messaging.Azure.AzureStorageQueueEndpoint' Mantle.Messaging.Msmq.MsmqEndpoint' Mantle.Messaging.WindowsServiceBus.WindowsServiceBusQueueEndpoint' Mantle.Messaging.WindowsServiceBus.WindowsServiceBusSubscriptionSubscriberEndpoint' Mantle.Messaging.WindowsServiceBus.WindowsServiceBusTopicPublisherEndpoint
+Mantle.Messaging,ICanBeAbandoned,0,1,0,0,0,4,1,3,0,-1,0,1,,Mantle.Messaging.MessageExtensions
+Mantle.Messaging,ICanBeCompleted,0,1,0,0,0,4,1,5,0,-1,0,2,,Mantle.Messaging.MessageExtensions' Mantle.Messaging.MessageScope<T>
+Mantle.Messaging,ICanBeKilled,0,1,0,0,0,4,1,2,0,-1,0,1,,Mantle.Messaging.MessageExtensions
+Mantle.Messaging,ICanRenewLock,0,1,0,0,0,4,1,2,0,-1,0,1,,Mantle.Messaging.MessageExtensions
+Mantle.Messaging,IEndpointManager,0,2,0,0,0,5,2,5,0,-1,0,0,,
+Mantle.Messaging,IHaveADeliveryCount,0,1,0,0,0,4,1,3,0,-1,0,1,,Mantle.Messaging.MessageExtensions
+Mantle.Messaging,IPublisherClient,0,1,0,0,0,4,1,9,0,-1,0,2,,Mantle.Logging.MessagingAdapter.MessagingLogAdapter' Mantle.Messaging.CompositePublisherClient
+Mantle.Messaging,IPublisherEndpoint,0,3,1,0,0,7,3,9,0,-1,0,4,,Mantle.Logging.MessagingAdapter.MessagingLogAdapter' Mantle.Messaging.CompositePublisherClient' Mantle.Messaging.CompositePublisherEndpoint' Mantle.Messaging.PublisherEndpointDirectory
+Mantle.Messaging,IPublisherEndpointDirectory,0,0,0,0,0,3,0,1,0,-1,0,2,,Mantle.Logging.MessagingAdapter.MessagingLogAdapter' Mantle.Messaging.CompositePublisherEndpoint
+Mantle.Messaging,IPublisherEndpointManager,0,0,0,0,0,3,0,8,1,-1,0,0,,
+Mantle.Messaging,ISubscriberClient,0,2,0,0,0,5,2,7,0,-1,0,1,,Mantle.Messaging.ISubscriberClientExtensions
+Mantle.Messaging,ISubscriberClientExtensions,0,2,0,0,2,13,3,0,0,-1,1,0,Mantle.Messaging.ISubscriberClient,
+Mantle.Messaging,ISubscriberEndpoint,0,3,1,0,0,7,3,7,0,-1,0,1,,Mantle.Messaging.SubscriberEndpointDirectory
+Mantle.Messaging,ISubscriberEndpointDirectory,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Mantle.Messaging,ISubscriberEndpointManager,0,1,0,0,0,4,1,7,1,-1,0,0,,
+Mantle.Messaging,Message<T>,0,1,1,0,0,8,1,0,0,-1,0,0,,
+Mantle.Messaging,MessageDeserializationException<T>,0,4,1,0,3,29,4,0,0,-1,0,0,,
+Mantle.Messaging,MessageExtensions,0,5,0,0,5,85,15,0,0,-1,5,0,Mantle.Messaging.ICanBeAbandoned' Mantle.Messaging.ICanBeCompleted' Mantle.Messaging.ICanRenewLock' Mantle.Messaging.ICanBeKilled' Mantle.Messaging.IHaveADeliveryCount,
+Mantle.Messaging,MessageScope<T>,0,2,1,0,2,13,3,0,0,-1,1,0,Mantle.Messaging.ICanBeCompleted,
+Mantle.Messaging,MessagingException,0,4,0,0,3,24,4,0,0,-1,0,0,,
+Mantle.Messaging,PublisherEndpointDirectory,0,2,0,0,1,19,4,0,1,-1,1,0,Mantle.Messaging.IPublisherEndpoint,
+Mantle.Messaging,SubscriberEndpointDirectory,0,2,0,0,1,21,5,0,1,-1,1,0,Mantle.Messaging.ISubscriberEndpoint,

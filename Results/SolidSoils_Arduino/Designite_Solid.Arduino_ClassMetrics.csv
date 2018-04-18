@@ -1,37 +1,43 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-EnhancedSerialPort,3,14,1,0,8,124,23,1,0,0.57,0,0
-ArduinoSession,20,75,2,0,54,1081,210,0,1,0.09,20,3
-ISerialConnection,0,6,5,0,0,74,6,2,0,-1,0,2
-IStringProtocol,0,9,1,0,0,70,9,1,0,-1,0,1
-Messages,2,1,26,0,0,237,1,0,0,0,0,5
-ObservableEventTracker,3,3,0,0,2,30,6,4,0,0.67,0,0
-ReceivedStringTracker,0,3,0,0,1,24,4,0,1,-1,2,1
-SerialBaudRate,0,0,0,0,0,19,0,0,0,-1,0,4
-EnhancedSerialConnection,0,6,0,0,5,60,7,0,1,-1,2,2
-SerialConnection,3,9,0,0,7,203,20,0,1,0.67,6,3
-StringEventArgs,1,1,1,0,0,21,1,0,0,0,0,1
-StringExtensions,0,2,0,0,2,62,10,0,0,-1,1,0
-AnalogPinMapping,0,0,2,0,0,20,0,0,0,-1,0,2
-AnalogState,0,0,2,0,0,23,0,0,0,-1,0,1
-AnalogStateTracker,1,3,0,0,1,30,4,0,1,0,2,1
-BoardCapability,0,0,1,0,0,13,0,0,0,-1,1,2
-BoardAnalogMapping,0,0,1,0,0,13,0,0,0,-1,1,1
-ByteArrayExtensions,0,2,0,0,1,40,7,0,0,-1,1,0
-DigitalPortState,0,1,2,0,1,31,2,0,0,-1,1,1
-DigitalStateTracker,1,3,0,0,1,30,4,0,1,0,2,1
-FirmataMessage,3,3,3,0,0,60,3,0,0,1,1,2
-MessageType,0,0,0,0,0,15,0,0,0,-1,0,3
-FirmataMessageEventArgs,1,1,1,0,0,20,1,0,0,0,1,1
-FirmataEventArgs,1,1,1,0,0,25,1,0,0,0,0,3
-Firmware,0,0,3,0,0,27,0,0,0,-1,0,3
-ProtocolVersion,0,0,2,0,0,20,0,0,0,-1,0,2
-StringData,0,0,1,0,0,13,0,0,0,-1,0,1
-PinMode,0,0,0,0,0,16,0,0,0,-1,0,4
-IFirmataProtocol,0,28,0,0,0,252,28,1,0,-1,1,3
-PinCapability,0,0,12,0,0,90,0,0,0,-1,0,2
-PinState,0,0,3,0,0,30,0,0,0,-1,1,2
-IServoProtocol,0,1,0,0,0,17,1,1,0,-1,0,0
-I2CEventArgs,1,1,1,0,0,19,1,0,0,0,1,1
-I2CReply,0,0,3,0,0,27,0,0,0,-1,0,2
-I2CReplyTracker,0,3,0,0,1,24,4,0,1,-1,2,1
-II2CProtocol,0,12,0,0,0,109,12,1,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Solid.Arduino,EnhancedSerialPort,3,15,1,0,8,138,23,1,0,0.53,1,1,Solid.Arduino.SerialPortFixer,Solid.Arduino.EnhancedSerialConnection
+Solid.Arduino,ArduinoSession,20,75,2,0,54,1081,144,0,1,0.09,22,8,Solid.Arduino.ISerialConnection' Solid.Arduino.StringRequest' Solid.Arduino.ReceivedStringTracker' Solid.Arduino.Messages' Solid.Arduino.Firmata.DigitalStateTracker' Solid.Arduino.Firmata.AnalogStateTracker' Solid.Arduino.Firmata.PinMode' Solid.Arduino.Firmata.FirmataMessage' Solid.Arduino.Firmata.MessageType' Solid.Arduino.Firmata.Firmware' Solid.Arduino.Firmata.ProtocolVersion' Solid.Arduino.Firmata.BoardCapability' Solid.Arduino.Firmata.BoardAnalogMapping' Solid.Arduino.Firmata.PinState' Solid.Arduino.I2C.I2CReplyTracker' Solid.Arduino.I2C.I2CReply' Solid.Arduino.StringReadMode' Solid.Arduino.MessageHeader' Solid.Arduino.Firmata.AnalogState' Solid.Arduino.Firmata.DigitalPortState' Solid.Arduino.Firmata.PinCapability' Solid.Arduino.Firmata.StringData,Solid.Arduino.SerialConnection' Solid.Arduino.Run.Program' Solid.Arduino.Test.I2CProtocolTester' Solid.Arduino.Test.IFirmataProtocolTester' Solid.Arduino.Test.IServoProtocolTester' Solid.Arduino.Test.IStringProtocolTester' Solid.Arduino.Test.ArduinoSessionTester' Solid.Arduino.Test.ObservableArduinoSessionTester
+Solid.Arduino,MessageHeader,0,0,0,0,0,7,0,0,0,-1,0,1,,Solid.Arduino.ArduinoSession
+Solid.Arduino,StringReadMode,0,0,0,0,0,5,0,0,0,-1,0,2,,Solid.Arduino.ArduinoSession' Solid.Arduino.StringRequest
+Solid.Arduino,StringRequest,3,4,3,0,3,27,4,0,0,1,1,1,Solid.Arduino.StringReadMode,Solid.Arduino.ArduinoSession
+Solid.Arduino,ISerialConnection,0,6,5,0,0,57,6,3,0,-1,0,8,,Solid.Arduino.ArduinoSession' Solid.Arduino.EnhancedSerialConnection' Solid.Arduino.SerialConnection' Solid.Arduino.Run.Program' Solid.Arduino.Test.I2CProtocolTester' Solid.Arduino.Test.IFirmataProtocolTester' Solid.Arduino.Test.IServoProtocolTester' Solid.Arduino.Test.IStringProtocolTester
+Solid.Arduino,IStringProtocol,0,9,1,0,0,64,9,1,0,-1,0,2,,Solid.Arduino.ReceivedStringTracker' Solid.Arduino.Test.IStringProtocolTester
+Solid.Arduino,Messages,2,1,26,0,0,257,1,0,0,0,0,5,,Solid.Arduino.ArduinoSession' Solid.Arduino.SerialConnection' Solid.Arduino.StringExtensions' Solid.Arduino.Firmata.ByteArrayExtensions' Solid.Arduino.Firmata.DigitalPortState
+Solid.Arduino,ObservableEventTracker<TSource;TTracked>,3,3,0,0,2,31,5,0,0,0.67,0,0,,
+Solid.Arduino,ReceivedStringTracker,0,3,0,0,1,26,4,0,0,-1,2,1,Solid.Arduino.IStringProtocol' Solid.Arduino.StringEventArgs,Solid.Arduino.ArduinoSession
+Solid.Arduino,SerialBaudRate,0,0,0,0,0,16,0,0,0,-1,0,5,,Solid.Arduino.EnhancedSerialConnection' Solid.Arduino.SerialConnection' Solid.Arduino.Run.Program' Solid.Arduino.Test.SerialConnectionTester' Solid.Arduino.Test.EnhancedSerialConnectionTester
+Solid.Arduino,EnhancedSerialConnection,0,6,0,0,5,58,7,0,1,-1,4,3,Solid.Arduino.SerialBaudRate' Solid.Arduino.SerialConnection' Solid.Arduino.ISerialConnection' Solid.Arduino.EnhancedSerialPort,Solid.Arduino.SerialConnection' Solid.Arduino.Run.Program' Solid.Arduino.Test.EnhancedSerialConnectionTester
+Solid.Arduino,SerialConnection,3,9,0,0,7,224,17,0,1,0.67,6,3,Solid.Arduino.SerialBaudRate' Solid.Arduino.Firmata.Firmware' Solid.Arduino.ISerialConnection' Solid.Arduino.ArduinoSession' Solid.Arduino.Messages' Solid.Arduino.EnhancedSerialConnection,Solid.Arduino.EnhancedSerialConnection' Solid.Arduino.Test.SerialConnectionTester' Solid.Arduino.IntegrationTest.SerialConnectionTester
+Solid.Arduino,SerialPortFixer,2,9,0,0,1,90,16,0,0,0,2,1,Solid.Arduino.Dcb' Solid.Arduino.Comstat,Solid.Arduino.EnhancedSerialPort
+Solid.Arduino,Comstat,3,0,0,3,0,7,0,0,0,-1,0,1,,Solid.Arduino.SerialPortFixer
+Solid.Arduino,Dcb,15,0,0,15,0,19,0,0,0,-1,0,1,,Solid.Arduino.SerialPortFixer
+Solid.Arduino,StringEventArgs,1,1,1,0,0,12,1,0,0,0,0,2,,Solid.Arduino.ReceivedStringTracker' Solid.Arduino.Test.IStringProtocolTester
+Solid.Arduino,StringExtensions,0,2,0,0,2,65,11,0,0,-1,1,0,Solid.Arduino.Messages,
+Solid.Arduino.Firmata,AnalogPinMapping,0,0,2,0,0,11,0,0,0,-1,0,2,,Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,AnalogState,0,0,2,0,0,14,0,0,0,-1,0,4,,Solid.Arduino.ArduinoSession' Solid.Arduino.Firmata.AnalogStateTracker' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,AnalogStateTracker,1,3,0,0,1,31,5,0,0,0.67,2,1,Solid.Arduino.Firmata.IFirmataProtocol' Solid.Arduino.Firmata.AnalogState,Solid.Arduino.ArduinoSession
+Solid.Arduino.Firmata,BoardCapability,0,0,1,0,0,7,0,0,0,-1,0,3,,Solid.Arduino.ArduinoSession' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,BoardAnalogMapping,0,0,1,0,0,7,0,0,0,-1,0,3,,Solid.Arduino.ArduinoSession' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,ByteArrayExtensions,0,2,0,0,1,42,7,0,0,-1,1,0,Solid.Arduino.Messages,
+Solid.Arduino.Firmata,DigitalPortState,0,1,2,0,1,22,2,0,0,-1,1,5,Solid.Arduino.Messages,Solid.Arduino.ArduinoSession' Solid.Arduino.Firmata.DigitalStateTracker' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester' Solid.Arduino.Test.DigitalPortStateTester
+Solid.Arduino.Firmata,DigitalStateTracker,1,3,0,0,1,32,5,0,0,0.67,2,1,Solid.Arduino.Firmata.IFirmataProtocol' Solid.Arduino.Firmata.DigitalPortState,Solid.Arduino.ArduinoSession
+Solid.Arduino.Firmata,FirmataMessage,3,3,3,0,0,45,3,0,0,1,1,4,Solid.Arduino.Firmata.MessageType,Solid.Arduino.ArduinoSession' Solid.Arduino.Firmata.FirmataMessageEventArgs' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,MessageType,0,0,0,0,0,12,0,0,0,-1,0,4,,Solid.Arduino.ArduinoSession' Solid.Arduino.Firmata.FirmataMessage' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,FirmataMessageEventArgs,1,1,1,0,0,12,1,0,0,0,1,5,Solid.Arduino.Firmata.FirmataMessage,Solid.Arduino.Run.Program' Solid.Arduino.Test.I2CProtocolTester' Solid.Arduino.Test.IFirmataProtocolTester' Solid.Arduino.Test.IServoProtocolTester' Solid.Arduino.Test.ArduinoSessionTester
+Solid.Arduino.Firmata,FirmataEventArgs<T>,1,1,1,0,0,13,1,0,0,0,0,0,,
+Solid.Arduino.Firmata,Firmware,0,0,3,0,0,15,0,0,0,-1,0,4,,Solid.Arduino.ArduinoSession' Solid.Arduino.SerialConnection' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,ProtocolVersion,0,0,2,0,0,11,0,0,0,-1,0,3,,Solid.Arduino.ArduinoSession' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,StringData,0,0,1,0,0,7,0,0,0,-1,0,3,,Solid.Arduino.ArduinoSession' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,PinMode,0,0,0,0,0,15,0,0,0,-1,0,4,,Solid.Arduino.ArduinoSession' Solid.Arduino.Firmata.IFirmataProtocol' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,IFirmataProtocol,0,28,0,0,0,245,28,1,0,-1,1,4,Solid.Arduino.Firmata.PinMode,Solid.Arduino.Firmata.AnalogStateTracker' Solid.Arduino.Firmata.DigitalStateTracker' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,PinCapability,0,0,16,0,0,67,0,0,0,-1,0,3,,Solid.Arduino.ArduinoSession' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata,PinState,0,0,3,0,0,18,0,0,0,-1,0,3,,Solid.Arduino.ArduinoSession' Solid.Arduino.Run.Program' Solid.Arduino.Test.IFirmataProtocolTester
+Solid.Arduino.Firmata.Servo,IServoProtocol,0,1,0,0,0,10,1,1,0,-1,0,1,,Solid.Arduino.Test.IServoProtocolTester
+Solid.Arduino.I2C,I2CEventArgs,1,1,1,0,0,12,1,0,0,0,1,2,Solid.Arduino.I2C.I2CReply,Solid.Arduino.I2C.I2CReplyTracker' Solid.Arduino.Test.I2CProtocolTester
+Solid.Arduino.I2C,I2CReply,0,0,3,0,0,15,0,0,0,-1,0,4,,Solid.Arduino.ArduinoSession' Solid.Arduino.I2C.I2CEventArgs' Solid.Arduino.Run.Program' Solid.Arduino.Test.I2CProtocolTester
+Solid.Arduino.I2C,I2CReplyTracker,0,3,0,0,1,25,4,0,0,-1,2,1,Solid.Arduino.I2C.II2CProtocol' Solid.Arduino.I2C.I2CEventArgs,Solid.Arduino.ArduinoSession
+Solid.Arduino.I2C,II2CProtocol,0,12,0,0,0,103,12,1,0,-1,0,3,,Solid.Arduino.I2C.I2CReplyTracker' Solid.Arduino.Run.Program' Solid.Arduino.Test.I2CProtocolTester

@@ -1,0 +1,31 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Geometry,AnalyzedTriangleMesh,0,5,0,0,5,160,17,0,1,-1,5,0,Geometry.TriangleMesh' Geometry.TriangleIndices' Geometry.Edge' Geometry.Triangle' Geometry.Plane,
+Geometry,LineSegmentCircleIntersect,4,1,2,0,1,70,7,0,0,0,3,1,Geometry.LineSegment' Geometry.IntersectType' Geometry.Plane,Router.Paths.Tabs
+Geometry,IntersectType,0,0,0,0,0,5,0,0,0,-1,0,2,,Geometry.LineSegmentCircleIntersect' Router.Paths.Tabs
+Geometry,TrianglePlaneIntersect,4,1,3,1,1,111,10,0,0,0,2,1,Geometry.Triangle' Geometry.Plane,Geometry.Slice
+Geometry,TriangleRayIntersect,2,1,2,0,1,37,4,0,0,0,3,1,Geometry.Plane' Geometry.Triangle' Geometry.Ray,GUI.TriangleMeshGUI
+Geometry,LineSegment,2,4,4,0,4,107,12,0,0,0,1,6,Geometry.Plane,Geometry.LineSegmentCircleIntersect' Geometry.LineStrip' Geometry.TriangleMesh' GUI.TabsGUI' GUI.TriangleMeshGUI' Router.Paths.Tabs
+Geometry,LineStrip,1,6,1,0,6,86,15,0,0,0.33,2,9,Geometry.Type' Geometry.LineSegment,Geometry.Slice' Geometry.LineHandler' GUI.PathCAM' GUI.TabsGUI' Router.Router' Router.Paths.PathPlanner' Router.Paths.Hole' Router.Paths.PathTree' Router.Paths.Tabs
+Geometry,Type,0,0,0,0,0,5,0,0,0,-1,0,4,,Geometry.LineStrip' Geometry.Slice' GUI.TabsGUI' Router.Paths.Tabs
+Geometry,Source,0,0,2,0,0,8,0,0,0,-1,0,1,,Geometry.Mesh
+Geometry,Input,0,0,3,0,0,10,0,0,0,-1,0,1,,Geometry.Mesh
+Geometry,Vertices,0,0,1,0,0,6,0,0,0,-1,0,1,,Geometry.Mesh
+Geometry,Triangles,0,0,2,0,0,8,0,0,0,-1,0,1,,Geometry.Mesh
+Geometry,Mesh,0,4,3,0,4,59,11,0,0,-1,4,1,Geometry.Input' Geometry.Source' Geometry.Vertices' Geometry.Triangles,Geometry.DAE_Loader
+Geometry,Geometry,0,0,1,0,0,6,0,0,0,-1,0,1,,Geometry.DAE_Loader
+Geometry,Collada,0,0,1,0,0,8,0,0,0,-1,0,1,,Geometry.DAE_Loader
+Geometry,DAE_Loader,0,1,0,0,1,27,1,0,0,-1,4,1,Geometry.Collada' Geometry.Mesh' Geometry.Geometry' Geometry.TriangleMesh,GUI.PathCAM
+Geometry,OBJ_Loader,0,1,0,0,1,78,3,0,0,-1,2,1,Geometry.Polygon' Geometry.TriangleMesh,GUI.PathCAM
+Geometry,STL_Loader,0,1,0,0,1,22,3,0,0,-1,1,1,Geometry.TriangleMesh,GUI.PathCAM
+Geometry,Plane,2,4,2,0,4,65,6,0,0,0.5,1,14,Geometry.Ray,Geometry.AnalyzedTriangleMesh' Geometry.LineSegmentCircleIntersect' Geometry.TrianglePlaneIntersect' Geometry.TriangleRayIntersect' Geometry.LineSegment' Geometry.Polygon' Geometry.Slice' Geometry.Triangle' GUI.PathCAM' GUI.TabsGUI' GUI.TriangleMeshGUI' GUI.Viewport3d' Router.Paths.PathPlanner' Router.Paths.Segment
+Geometry,Polygon,1,3,2,0,3,95,10,0,0,0,2,1,Geometry.Plane' Geometry.Triangle,Geometry.OBJ_Loader
+Geometry,Ray,2,1,2,0,1,21,1,0,0,0,0,8,,Geometry.TriangleRayIntersect' Geometry.Plane' GUI.IClickable3D' GUI.PathCAM' GUI.Drawing3D' GUI.TabsGUI' GUI.TriangleMeshGUI' GUI.Viewport3d
+Geometry,Slice,5,27,1,0,18,679,67,0,0,0,23,6,Geometry.Plane' ClipperLib.PolyTree' Geometry.TriangleMesh' Geometry.TrianglePlaneIntersect' Geometry.LineHandler' Geometry.Triangle' ClipperLib.ClipperOffset' ClipperLib.JoinType' ClipperLib.EndType' Geometry.LineStrip' ClipperLib.PolyFillType' ClipperLib.Clipper' ClipperLib.PolyType' ClipperLib.ClipType' ClipperLib.PolyNode' Geometry.LineType' TriangleNet.Behavior' TriangleNet.Geometry.InputGeometry' ClipperLib.IntPoint' TriangleNet.Mesh' TriangleNet.Data.Vertex' TriangleNet.Data.Triangle' Geometry.Type,GUI.TabsGUI' GUI.TriangleMeshGUI' Router.Paths.PathPlanner' Router.Paths.Hole' Router.Paths.PathTree' Router.Paths.Tabs
+Geometry,LineType,0,0,0,0,0,6,0,0,0,-1,0,6,,Geometry.Slice' GUI.TriangleMeshGUI' Router.Paths.PathPlanner' Router.Paths.Hole' Router.Paths.PathTree' Router.Paths.Tabs
+Geometry,LineHandler,3,6,0,0,3,190,17,0,0,0.33,3,1,Geometry.VectorWrapper' Geometry.Segment' Geometry.LineStrip,Geometry.Slice
+Geometry,VectorWrapper,3,2,0,3,2,14,2,0,0,0,0,2,,Geometry.LineHandler' Geometry.Segment
+Geometry,Segment,4,1,1,0,1,24,1,0,0,0,1,1,Geometry.VectorWrapper,Geometry.LineHandler
+Geometry,Triangle,5,3,6,0,2,88,5,0,0,1,1,9,Geometry.Plane,Geometry.AnalyzedTriangleMesh' Geometry.TrianglePlaneIntersect' Geometry.TriangleRayIntersect' Geometry.Polygon' Geometry.Slice' Geometry.TriangleMesh' GUI.TabsGUI' GUI.TriangleMeshGUI' Router.Paths.PathPlanner
+Geometry,TriangleMesh,6,7,6,0,4,245,15,2,0,0,4,9,Geometry.TriangleIndices' Geometry.Edge' Geometry.LineSegment' Geometry.Triangle,Geometry.AnalyzedTriangleMesh' Geometry.DAE_Loader' Geometry.OBJ_Loader' Geometry.STL_Loader' Geometry.Slice' Geometry.Edge' GUI.PathCAM' GUI.TriangleMeshGUI' Router.Paths.PathPlanner
+Geometry,TriangleIndices,4,2,0,4,2,24,4,0,0,1,1,2,Geometry.Edge,Geometry.AnalyzedTriangleMesh' Geometry.TriangleMesh
+Geometry,Edge,4,3,3,0,1,45,3,0,0,0,1,4,Geometry.TriangleMesh,Geometry.AnalyzedTriangleMesh' Geometry.TriangleMesh' Geometry.TriangleIndices' GUI.TriangleMeshGUI

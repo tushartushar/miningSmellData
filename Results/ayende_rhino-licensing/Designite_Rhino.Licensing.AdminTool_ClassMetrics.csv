@@ -1,56 +1,57 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-App,2,7,0,0,1,43,7,0,0,0,1,0
-FXPopup,2,3,0,2,0,20,3,0,0,0,0,0
-FileDialog,1,5,2,0,2,53,9,2,0,0.8,0,0
-OpenFileDialog,1,2,1,0,1,26,2,0,1,0,0,1
-SaveFileDialog,1,2,1,0,1,28,2,0,1,0,0,1
-ContainerExtensions,0,1,0,0,1,13,1,0,0,-1,0,0
-ReflectionExtensions,0,2,0,0,2,12,2,0,0,-1,0,0
-StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,0
-IDialogFactory,0,2,0,0,0,15,2,0,0,-1,0,1
-IViewModelFactory,0,2,0,0,0,17,2,0,0,-1,0,2
-WindowManager,0,2,0,0,2,15,2,0,0,-1,0,0
-License,5,1,5,0,1,64,1,0,0,0,2,8
-Product,6,1,5,0,1,68,1,0,0,0,1,3
-Project,1,1,1,0,1,19,1,0,0,0,1,3
-UserData,2,0,2,0,0,26,0,0,0,-1,0,2
-DialogService,1,3,0,0,3,22,3,0,1,0,5,0
-ExportService,0,1,0,0,1,10,1,0,1,-1,3,0
-IDialogService,0,2,0,0,0,13,2,1,0,-1,2,1
-IExportService,0,1,0,0,0,10,1,1,0,-1,2,1
-IProjectService,0,3,0,0,0,20,3,1,0,-1,1,2
-IStatusService,0,2,0,0,0,14,2,1,0,-1,0,1
-ProjectService,0,3,0,0,3,41,5,0,1,-1,1,0
-Settings,1,0,2,0,0,19,0,0,0,-1,0,1
-FactoryRegistration,0,1,0,0,1,10,1,0,0,-1,0,0
-GuyWire,0,6,2,0,5,58,8,0,0,-1,2,1
-ServiceRegistration,0,1,0,0,1,7,1,0,0,-1,0,0
-ViewModelRegistration,0,1,2,0,1,19,1,0,0,-1,1,0
-ViewRegistration,0,1,0,0,1,7,1,0,0,-1,0,1
-BoolToVisibilityCollapsedConverter,0,2,1,0,2,23,4,0,0,-1,0,0
-ExpirationDateConverter,0,2,0,0,2,16,3,0,0,-1,0,0
-AboutViewModel,0,0,2,0,0,13,0,0,0,-1,0,0
-FileDialogViewModel,10,0,10,0,0,103,0,2,1,-1,0,0
-IFileDialogViewModel,0,0,10,0,0,43,0,3,0,-1,0,0
-ILicenseHolder,0,0,1,0,0,7,0,2,0,-1,1,0
-ILicenseInfoViewModel,0,0,0,0,0,3,0,1,1,-1,0,1
-IssueLicenseViewModel,1,3,4,0,2,49,4,0,0,1,5,1
-IUserDataViewModel,0,0,0,0,0,3,0,1,1,-1,0,1
-LicenseInfoViewModel,1,0,1,0,0,13,0,0,2,-1,1,0
-IOpenFileDialogViewModel,0,0,1,0,0,7,0,1,1,-1,0,3
-OpenFileDialogViewModel,1,0,1,0,0,13,0,0,2,-1,0,0
-ProjectViewModel,11,10,2,2,9,117,18,0,0,0.5,10,1
-ISaveFileDialogViewModel,0,0,2,0,0,11,0,1,1,-1,0,3
-SaveFileDialogViewModel,2,0,2,0,0,23,0,0,2,-1,0,0
-IShellViewModel,0,2,1,0,0,19,2,1,0,-1,0,1
-ShellViewModel,4,7,1,0,6,58,9,0,1,0.29,3,1
-UserDataViewModel,4,2,6,0,2,68,3,0,2,1,2,0
-IAboutView,0,0,0,0,0,3,0,1,0,-1,0,0
-AboutView,0,1,0,0,1,10,1,0,1,-1,0,0
-IssueLicenseView,0,1,0,0,1,10,1,0,0,-1,0,0
-LicenseInfoView,0,1,0,0,1,10,1,0,0,-1,0,0
-IProjectView,0,0,0,0,0,3,0,1,0,-1,0,0
-ProjectView,0,1,0,0,1,10,1,0,1,-1,0,0
-IShellView,0,0,0,0,0,3,0,1,0,-1,0,0
-ShellView,0,1,0,0,1,10,1,0,1,-1,0,0
-UserDataView,0,1,0,0,1,10,1,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Rhino.Licensing.AdminTool,App,3,9,0,0,3,77,10,0,0,0.22,1,0,Rhino.Licensing.AdminTool.Startup.GuyWire,
+Rhino.Licensing.AdminTool.Controls,FXPopup,2,3,0,2,0,20,3,0,0,0,0,0,,
+Rhino.Licensing.AdminTool.Dialogs,FileDialog<T>,1,5,2,0,2,59,9,0,0,1,0,0,,
+Rhino.Licensing.AdminTool.Dialogs,OpenFileDialog,1,2,1,0,1,25,2,2,0,0,1,2,Rhino.Licensing.AdminTool.ViewModels.IOpenFileDialogViewModel,Rhino.Licensing.AdminTool.Services.DialogService' Rhino.Licensing.AdminTool.Tests.Dialogs.OpenFileDialogStub
+Rhino.Licensing.AdminTool.Dialogs,SaveFileDialog,1,2,1,0,1,27,2,1,0,0,1,2,Rhino.Licensing.AdminTool.ViewModels.ISaveFileDialogViewModel,Rhino.Licensing.AdminTool.Services.DialogService' Rhino.Licensing.AdminTool.Tests.Dialogs.SaveFileDialogStub
+Rhino.Licensing.AdminTool.Extensions,ContainerExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
+Rhino.Licensing.AdminTool.Extensions,ReflectionExtensions,0,2,0,0,2,14,2,0,0,-1,0,0,,
+Rhino.Licensing.AdminTool.Extensions,StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Rhino.Licensing.AdminTool.Factories,IDialogFactory,0,2,0,0,0,18,2,0,0,-1,0,1,,Rhino.Licensing.AdminTool.Services.DialogService
+Rhino.Licensing.AdminTool.Factories,IViewModelFactory,0,2,0,0,0,17,2,0,0,-1,0,4,,Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.ViewModels.ShellViewModel' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.Infrastructure,WindowManager,0,2,0,0,2,17,2,0,0,-1,0,0,,
+Rhino.Licensing.AdminTool.Model,License,5,1,5,0,1,64,1,0,0,0,1,11,Rhino.Licensing.LicenseType,Rhino.Licensing.AdminTool.Services.ExportService' Rhino.Licensing.AdminTool.Services.IExportService' Rhino.Licensing.AdminTool.ViewModels.IssueLicenseViewModel' Rhino.Licensing.AdminTool.ViewModels.LicenseInfoViewModel' Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.ViewModels.UserDataViewModel' Rhino.Licensing.AdminTool.Tests.Models.LicenseModelTests' Rhino.Licensing.AdminTool.Tests.Services.ExportServiceTests' Rhino.Licensing.AdminTool.Tests.Services.ProjectServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.IssueLicenseViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.UserDataViewModelTests
+Rhino.Licensing.AdminTool.Model,Product,6,1,5,0,1,68,1,0,0,0,0,8,,Rhino.Licensing.AdminTool.Model.Project' Rhino.Licensing.AdminTool.Services.ExportService' Rhino.Licensing.AdminTool.Services.IExportService' Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Tests.Models.ProductModelTests' Rhino.Licensing.AdminTool.Tests.Services.ExportServiceTests' Rhino.Licensing.AdminTool.Tests.Services.ProjectServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests
+Rhino.Licensing.AdminTool.Model,Project,1,1,1,0,1,19,1,0,0,0,1,7,Rhino.Licensing.AdminTool.Model.Product,Rhino.Licensing.AdminTool.Services.IProjectService' Rhino.Licensing.AdminTool.Services.ProjectService' Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.ViewModels.ShellViewModel' Rhino.Licensing.AdminTool.Tests.Models.ProjectModelTests' Rhino.Licensing.AdminTool.Tests.Services.ProjectServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests
+Rhino.Licensing.AdminTool.Model,UserData,2,0,2,0,0,26,0,0,0,-1,0,3,,Rhino.Licensing.AdminTool.Services.ExportService' Rhino.Licensing.AdminTool.ViewModels.UserDataViewModel' Rhino.Licensing.AdminTool.Tests.ViewModels.UserDataViewModelTests
+Rhino.Licensing.AdminTool.Services,DialogService,1,3,0,0,3,28,3,0,1,0,5,1,Rhino.Licensing.AdminTool.Factories.IDialogFactory' Rhino.Licensing.AdminTool.Dialogs.OpenFileDialog' Rhino.Licensing.AdminTool.ViewModels.IOpenFileDialogViewModel' Rhino.Licensing.AdminTool.Dialogs.SaveFileDialog' Rhino.Licensing.AdminTool.ViewModels.ISaveFileDialogViewModel,Rhino.Licensing.AdminTool.Tests.Services.DialogServiceTests
+Rhino.Licensing.AdminTool.Services,ExportService,0,1,0,0,1,10,1,0,1,-1,4,0,Rhino.Licensing.LicenseGenerator' Rhino.Licensing.AdminTool.Model.Product' Rhino.Licensing.AdminTool.Model.License' Rhino.Licensing.AdminTool.Model.UserData,
+Rhino.Licensing.AdminTool.Services,IDialogService,0,2,0,0,0,13,2,1,0,-1,2,4,Rhino.Licensing.AdminTool.ViewModels.IOpenFileDialogViewModel' Rhino.Licensing.AdminTool.ViewModels.ISaveFileDialogViewModel,Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Tests.Services.DialogServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.Services,IExportService,0,1,0,0,0,10,1,1,0,-1,2,4,Rhino.Licensing.AdminTool.Model.Product' Rhino.Licensing.AdminTool.Model.License,Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Tests.Services.ExportServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.Services,IProjectService,0,3,0,0,0,20,3,1,0,-1,1,5,Rhino.Licensing.AdminTool.Model.Project,Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.ViewModels.ShellViewModel' Rhino.Licensing.AdminTool.Tests.Services.ProjectServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.Services,IStatusService,0,2,0,0,0,14,2,1,0,-1,0,4,,Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Tests.Services.StatusServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.Services,ProjectService,0,3,0,0,3,50,3,0,1,-1,1,0,Rhino.Licensing.AdminTool.Model.Project,
+Rhino.Licensing.AdminTool.Properties,Settings,1,0,2,0,0,21,0,0,0,-1,0,1,,Rhino.Licensing.AdminTool.ViewModels.IssueLicenseViewModel
+Rhino.Licensing.AdminTool.Startup,FactoryRegistration,0,1,0,0,1,12,1,0,0,-1,0,1,,Rhino.Licensing.AdminTool.Tests.Startup.InstallersTests
+Rhino.Licensing.AdminTool.Startup,GuyWire,0,6,2,0,5,62,8,1,0,-1,1,3,Rhino.Licensing.AdminTool.ViewModels.IShellViewModel,Rhino.Licensing.AdminTool.App' Rhino.Licensing.AdminTool.Tests.Startup.GuyWireTests' Rhino.Licensing.AdminTool.Tests.Startup.InstallersTests
+Rhino.Licensing.AdminTool.Startup,ServiceRegistration,0,1,0,0,1,10,1,0,0,-1,0,1,,Rhino.Licensing.AdminTool.Tests.Startup.InstallersTests
+Rhino.Licensing.AdminTool.Startup,ViewModelRegistration,0,1,2,0,1,32,1,0,0,-1,0,1,,Rhino.Licensing.AdminTool.Tests.Startup.InstallersTests
+Rhino.Licensing.AdminTool.Startup,ViewRegistration,0,1,0,0,1,11,1,0,0,-1,0,1,,Rhino.Licensing.AdminTool.Tests.Startup.InstallersTests
+Rhino.Licensing.AdminTool.ValueConverters,BoolToVisibilityCollapsedConverter,0,2,1,0,2,24,4,0,0,-1,0,1,,Rhino.Licensing.AdminTool.Tests.Services.BoolToVisibilityConverterTests
+Rhino.Licensing.AdminTool.ValueConverters,ExpirationDateConverter,0,2,0,0,2,17,4,0,0,-1,0,1,,Rhino.Licensing.AdminTool.Tests.Services.ExpirationDateConverterTests
+Rhino.Licensing.AdminTool.ViewModels,AboutViewModel,0,0,2,0,0,11,0,0,0,-1,0,2,,Rhino.Licensing.AdminTool.Tests.ViewModels.AboutViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.ViewModels,FileDialogViewModel,10,0,10,0,0,103,0,2,1,-1,0,0,,
+Rhino.Licensing.AdminTool.ViewModels,IFileDialogViewModel,0,0,10,0,0,13,0,3,0,-1,0,0,,
+Rhino.Licensing.AdminTool.ViewModels,ILicenseHolder,0,0,1,0,0,4,0,2,0,-1,0,1,,Rhino.Licensing.AdminTool.ViewModels.IssueLicenseViewModel
+Rhino.Licensing.AdminTool.ViewModels,ILicenseInfoViewModel,0,0,0,0,0,3,0,1,1,-1,0,3,,Rhino.Licensing.AdminTool.ViewModels.IssueLicenseViewModel' Rhino.Licensing.AdminTool.Tests.ViewModels.IssueLicenseViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.TestableIssueLicenseViewModel
+Rhino.Licensing.AdminTool.ViewModels,IssueLicenseViewModel,1,3,4,0,2,54,4,1,0,1,6,3,Rhino.Licensing.AdminTool.Model.License' Rhino.Licensing.LicenseType' Rhino.Licensing.AdminTool.Properties.Settings' Rhino.Licensing.AdminTool.ViewModels.IUserDataViewModel' Rhino.Licensing.AdminTool.ViewModels.ILicenseInfoViewModel' Rhino.Licensing.AdminTool.ViewModels.ILicenseHolder,Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Tests.ViewModels.IssueLicenseViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests
+Rhino.Licensing.AdminTool.ViewModels,IUserDataViewModel,0,0,0,0,0,3,0,1,1,-1,0,3,,Rhino.Licensing.AdminTool.ViewModels.IssueLicenseViewModel' Rhino.Licensing.AdminTool.Tests.ViewModels.IssueLicenseViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.TestableIssueLicenseViewModel
+Rhino.Licensing.AdminTool.ViewModels,LicenseInfoViewModel,1,0,1,0,0,13,0,0,2,-1,1,0,Rhino.Licensing.AdminTool.Model.License,
+Rhino.Licensing.AdminTool.ViewModels,IOpenFileDialogViewModel,0,0,1,0,0,4,0,1,1,-1,0,7,,Rhino.Licensing.AdminTool.Dialogs.OpenFileDialog' Rhino.Licensing.AdminTool.Services.DialogService' Rhino.Licensing.AdminTool.Services.IDialogService' Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Tests.Dialogs.OpenFileDialogTests' Rhino.Licensing.AdminTool.Tests.Dialogs.OpenFileDialogStub' Rhino.Licensing.AdminTool.Tests.Services.DialogServiceTests
+Rhino.Licensing.AdminTool.ViewModels,OpenFileDialogViewModel,1,0,1,0,0,13,0,0,2,-1,0,5,,Rhino.Licensing.AdminTool.Tests.Dialogs.FileDialogTests' Rhino.Licensing.AdminTool.Tests.Dialogs.OpenFileDialogTests' Rhino.Licensing.AdminTool.Tests.Services.DialogServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.DialogViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests
+Rhino.Licensing.AdminTool.ViewModels,ProjectViewModel,11,10,2,2,9,138,17,0,0,0.5,11,3,Rhino.Licensing.AdminTool.Services.IProjectService' Rhino.Licensing.AdminTool.Services.IDialogService' Rhino.Licensing.AdminTool.Services.IStatusService' Rhino.Licensing.AdminTool.Services.IExportService' Rhino.Licensing.AdminTool.Factories.IViewModelFactory' Rhino.Licensing.AdminTool.Model.Project' Rhino.Licensing.AdminTool.Model.License' Rhino.Licensing.AdminTool.Model.Product' Rhino.Licensing.AdminTool.ViewModels.ISaveFileDialogViewModel' Rhino.Licensing.AdminTool.ViewModels.IOpenFileDialogViewModel' Rhino.Licensing.AdminTool.ViewModels.IssueLicenseViewModel,Rhino.Licensing.AdminTool.ViewModels.ShellViewModel' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.ViewModels,ISaveFileDialogViewModel,0,0,2,0,0,5,0,1,1,-1,0,7,,Rhino.Licensing.AdminTool.Dialogs.SaveFileDialog' Rhino.Licensing.AdminTool.Services.DialogService' Rhino.Licensing.AdminTool.Services.IDialogService' Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Tests.Dialogs.SaveFileDialogTests' Rhino.Licensing.AdminTool.Tests.Dialogs.SaveFileDialogStub' Rhino.Licensing.AdminTool.Tests.Services.DialogServiceTests
+Rhino.Licensing.AdminTool.ViewModels,SaveFileDialogViewModel,2,0,2,0,0,23,0,0,2,-1,0,4,,Rhino.Licensing.AdminTool.Tests.Dialogs.SaveFileDialogTests' Rhino.Licensing.AdminTool.Tests.Services.DialogServiceTests' Rhino.Licensing.AdminTool.Tests.ViewModels.DialogViewModelTests' Rhino.Licensing.AdminTool.Tests.ViewModels.ProjectViewModelTests
+Rhino.Licensing.AdminTool.ViewModels,IShellViewModel,0,2,1,0,0,16,2,1,0,-1,0,2,,Rhino.Licensing.AdminTool.Startup.GuyWire' Rhino.Licensing.AdminTool.Tests.Services.StatusServiceTests
+Rhino.Licensing.AdminTool.ViewModels,ShellViewModel,4,7,1,0,6,63,9,0,1,0.29,4,1,Rhino.Licensing.AdminTool.Factories.IViewModelFactory' Rhino.Licensing.AdminTool.Services.IProjectService' Rhino.Licensing.AdminTool.ViewModels.ProjectViewModel' Rhino.Licensing.AdminTool.Model.Project,Rhino.Licensing.AdminTool.Tests.ViewModels.ShellViewModelTests
+Rhino.Licensing.AdminTool.ViewModels,UserDataViewModel,4,2,6,0,2,69,3,0,2,1,2,1,Rhino.Licensing.AdminTool.Model.License' Rhino.Licensing.AdminTool.Model.UserData,Rhino.Licensing.AdminTool.Tests.ViewModels.UserDataViewModelTests
+Rhino.Licensing.AdminTool.Views,IAboutView,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Rhino.Licensing.AdminTool.Views,AboutView,1,3,0,0,2,39,4,0,1,0,0,0,,
+Rhino.Licensing.AdminTool.Views,IssueLicenseView,1,4,0,0,2,46,5,0,0,0.5,0,0,,
+Rhino.Licensing.AdminTool.Views,LicenseInfoView,5,3,0,0,2,86,5,0,0,0,0,0,,
+Rhino.Licensing.AdminTool.Views,IProjectView,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Rhino.Licensing.AdminTool.Views,ProjectView,4,3,0,0,2,75,5,0,1,0,0,0,,
+Rhino.Licensing.AdminTool.Views,IShellView,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Rhino.Licensing.AdminTool.Views,ShellView,1,3,0,0,2,39,4,0,1,0,0,0,,
+Rhino.Licensing.AdminTool.Views,UserDataView,1,3,0,0,2,39,4,0,0,0,0,0,,
+XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

@@ -1,36 +1,40 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-WinEventWatchCollection,0,2,0,0,0,22,2,0,0,-1,1,1
-WinEventWatchElement,1,1,5,0,1,52,1,0,1,0,1,2
-FileWatchElement,1,1,9,0,1,88,1,0,1,0,4,5
-CustomNxlogConfig,1,1,1,0,0,16,1,0,0,0,0,2
-TailerType,0,0,0,0,0,5,0,0,0,-1,0,3
-MultilineRuleType,0,0,0,0,0,5,0,0,0,-1,0,2
-IWatchElement,0,0,2,0,0,10,0,2,0,-1,1,1
-OverrideConfig,0,0,6,0,0,55,0,0,0,-1,4,1
-OverrideConfigCollection,0,3,0,0,1,18,4,0,0,-1,1,1
-FieldElement,0,1,2,0,1,25,1,0,0,-1,0,2
-FieldCollection,0,10,2,0,7,73,12,0,0,-1,1,6
-LogSearchShipperSection,0,0,13,0,0,111,0,0,0,-1,3,1
-EnvironmentWatchElement,0,0,10,0,0,100,0,0,0,-1,2,3
-EDBFileWatchCollection,0,2,0,0,0,32,2,0,0,-1,1,1
-FileWatchCollection,0,2,0,0,0,32,2,0,0,-1,1,1
-ConfigWatcher,5,4,1,1,3,51,5,0,0,0,0,1
-ISO8601DatePatternConverter,1,1,0,1,0,8,1,0,0,0,0,0
-JSONFragmentPatternConverter,0,1,0,0,0,22,4,0,0,-1,0,0
-EdbDataFormatter,0,1,0,0,1,57,7,0,0,-1,2,1
-ProcessUtils,0,3,0,0,2,43,5,0,0,-1,0,1
-LogSearchShipperProcessManager,6,12,2,1,5,159,23,0,0,0.17,8,1
-EDBEnvironment,0,0,2,0,0,11,0,0,0,-1,1,4
-EDBServerGroup,2,0,0,2,0,5,0,0,0,-1,1,2
-EdbServer,7,0,0,7,0,10,0,0,0,-1,0,1
-EdbService,18,2,0,18,1,54,4,0,0,0,0,1
-EDBEnvironmentComparer,0,2,0,0,2,11,2,0,0,-1,1,0
-SearchExtensionMethods,0,1,0,0,1,9,1,0,0,-1,0,0
-EDBFileWatchParser,2,6,0,0,3,140,18,0,0,0,6,1
-NativeMethods,1,5,0,1,5,59,5,0,0,1,0,1
-INxLogProcessManager,0,3,12,0,0,48,3,1,0,-1,2,0
-NxLogProcessManager,18,29,17,0,7,722,67,0,1,0,7,1
-NxLogStartException,0,1,0,0,1,6,1,0,0,-1,0,0
-SyslogEndpoint,2,1,2,0,1,20,1,0,0,0,0,2
-ServiceControllerEx,4,5,0,0,5,99,15,0,0,0.8,2,1
-Resource,2,1,3,0,0,54,1,0,0,0,0,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+LogSearchShipper.Core.ConfigurationSections,WinEventWatchCollection,0,2,0,0,0,20,2,0,0,-1,1,1,LogSearchShipper.Core.ConfigurationSections.WinEventWatchElement,LogSearchShipper.Core.LogSearchShipperProcessManager
+LogSearchShipper.Core.ConfigurationSections,WinEventWatchElement,1,1,5,0,1,40,1,0,1,0,1,2,LogSearchShipper.Core.ConfigurationSections.FieldCollection,LogSearchShipper.Core.ConfigurationSections.WinEventWatchCollection' LogSearchShipper.Core.NxLog.NxLogProcessManager
+LogSearchShipper.Core.ConfigurationSections,FileWatchElement,1,1,9,0,1,67,1,0,1,0,1,6,LogSearchShipper.Core.ConfigurationSections.FieldCollection,LogSearchShipper.Core.ConfigurationSections.FileWatchCollection' LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.NxLog.NxLogProcessManager' IntegrationTests.LogSearchShipperProcessManagerTests' LogSearchShipper.Core.Tests.LogSearchShipperSectionTests' LogSearchShipper.Core.Tests.EDBFileWatchParserTests
+LogSearchShipper.Core.ConfigurationSections,CustomNxlogConfig,1,1,1,0,0,13,1,0,0,0,0,3,,LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.NxLog.NxLogProcessManager' LogSearchShipper.Core.Tests.EDBFileWatchParserTests
+LogSearchShipper.Core.ConfigurationSections,TailerType,0,0,0,0,0,1,0,0,0,-1,0,2,,LogSearchShipper.Core.NxLog.NxLogProcessManager' LogSearchShipper.Core.Tests.EDBFileWatchParserTests
+LogSearchShipper.Core.ConfigurationSections,MultilineRuleType,0,0,0,0,0,1,0,0,0,-1,0,0,,
+LogSearchShipper.Core.ConfigurationSections,IWatchElement,0,0,2,0,0,5,0,2,0,-1,0,1,,LogSearchShipper.Core.NxLog.NxLogProcessManager
+LogSearchShipper.Core.ConfigurationSections,OverrideConfig,0,0,6,0,0,42,0,0,0,-1,0,3,,LogSearchShipper.Core.ConfigurationSections.OverrideConfigCollection' LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.Tests.EDBFileWatchParserTests
+LogSearchShipper.Core.ConfigurationSections,OverrideConfigCollection,0,3,0,0,1,19,4,0,0,-1,1,2,LogSearchShipper.Core.ConfigurationSections.OverrideConfig,LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.Tests.EDBFileWatchParserTests
+LogSearchShipper.Core.ConfigurationSections,FieldElement,0,1,2,0,1,19,1,0,0,-1,0,5,,LogSearchShipper.Core.ConfigurationSections.FieldCollection' LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.NxLog.NxLogProcessManager' LogSearchShipper.Core.Tests.LogSearchShipperSectionTests' LogSearchShipper.Core.Tests.EDBFileWatchParserTests
+LogSearchShipper.Core.ConfigurationSections,FieldCollection,0,10,2,0,7,72,12,0,0,-1,1,5,LogSearchShipper.Core.ConfigurationSections.FieldElement,LogSearchShipper.Core.ConfigurationSections.WinEventWatchElement' LogSearchShipper.Core.ConfigurationSections.FileWatchElement' LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.NxLog.NxLogProcessManager' LogSearchShipper.Core.Tests.LogSearchShipperSectionTests
+LogSearchShipper.Core.ConfigurationSections,LogSearchShipperSection,0,0,13,0,0,78,0,0,0,-1,0,4,,LogSearchShipper.Core.LogSearchShipperProcessManager' LogSearchShipper.Core.Tests.LogSearchShipperSectionTests' LogSearchShipper.Core.Tests.EDBFileWatchParserTests' LogSearchShipper.Core.Tests.NxLog.NxlogRestartingTest
+LogSearchShipper.Core.ConfigurationSections,EnvironmentWatchElement,0,0,10,0,0,93,0,0,0,-1,0,6,,LogSearchShipper.Core.ConfigurationSections.EDBFileWatchCollection' LogSearchShipper.Core.LogSearchShipperProcessManager' LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.Tests.LogSearchShipperSectionTests' LogSearchShipper.Core.Tests.EDBFileWatchParserTests' LogSearchShipper.Core.Tests.NxLog.NxlogRestartingTest
+LogSearchShipper.Core.ConfigurationSections,EDBFileWatchCollection,0,2,0,0,0,30,2,0,0,-1,1,2,LogSearchShipper.Core.ConfigurationSections.EnvironmentWatchElement,LogSearchShipper.Core.LogSearchShipperProcessManager' LogSearchShipper.Core.Tests.LogSearchShipperSectionTests
+LogSearchShipper.Core.ConfigurationSections,FileWatchCollection,0,2,0,0,0,30,2,0,0,-1,1,2,LogSearchShipper.Core.ConfigurationSections.FileWatchElement,LogSearchShipper.Core.LogSearchShipperProcessManager' LogSearchShipper.Core.Tests.LogSearchShipperSectionTests
+LogSearchShipper.Core,ConfigWatcher,5,4,1,1,3,57,4,0,0,0,0,1,,LogSearchShipper.Core.LogSearchShipperProcessManager
+LogSearchShipper.Core,ISO8601DatePatternConverter,1,1,0,1,0,8,1,0,0,0,0,1,,LogSearchShipper.Log4net.JsonLayout
+LogSearchShipper.Core,JSONFragmentPatternConverter,0,1,0,0,0,31,3,0,0,-1,0,2,,LogSearchShipper.Log4net.JsonLayout' LogSearchShipper.Core.Tests.JSONFragmentPatternLayout
+LogSearchShipper.Core,EdbDataFormatter,0,1,0,0,1,67,7,0,0,-1,4,1,LogSearchShipper.Core.EdbService' LogSearchShipper.Core.EDBEnvironment' LogSearchShipper.Core.EDBServerGroup' LogSearchShipper.Core.EdbServer,LogSearchShipper.Core.LogSearchShipperProcessManager
+LogSearchShipper.Core,ProcessUtils,0,3,0,0,2,50,5,0,0,-1,0,5,,LogSearchShipper.Core.NxLog.ServiceControllerEx' IntegrationTests.IntegrationTestBase' IntegrationTests.SimpleTests' IntegrationTests.UnicodeCharacterTests' IntegrationTests.LogFileRollingTests
+LogSearchShipper.Core,LogSearchShipperProcessManager,6,12,2,1,5,180,23,0,0,0.17,10,3,LogSearchShipper.Core.ConfigurationSections.LogSearchShipperSection' LogSearchShipper.Core.NxLog.NxLogProcessManager' LogSearchShipper.Core.ConfigWatcher' LogSearchShipper.Core.ConfigurationSections.WinEventWatchCollection' LogSearchShipper.Core.ConfigurationSections.FileWatchCollection' LogSearchShipper.Core.ConfigurationSections.EnvironmentWatchElement' LogSearchShipper.Core.EDBFileWatchParser' LogSearchShipper.Core.ConfigurationSections.EDBFileWatchCollection' LogSearchShipper.Core.EDBEnvironment' LogSearchShipper.Core.EdbDataFormatter,LogSearchShipper.LogSearchShipperService' IntegrationTests.LogSearchShipperProcessManagerTests' LogSearchShipper.Core.Tests.NxLog.NxlogRestartingTest
+LogSearchShipper.Core,EDBEnvironment,0,0,2,0,0,5,0,0,0,-1,0,3,,LogSearchShipper.Core.EdbDataFormatter' LogSearchShipper.Core.LogSearchShipperProcessManager' LogSearchShipper.Core.EDBEnvironmentComparer
+LogSearchShipper.Core,EDBServerGroup,2,0,0,2,0,5,0,0,0,-1,0,1,,LogSearchShipper.Core.EdbDataFormatter
+LogSearchShipper.Core,EdbServer,7,0,0,7,0,10,0,0,0,-1,0,2,,LogSearchShipper.Core.EdbDataFormatter' LogSearchShipper.Core.EDBFileWatchParser
+LogSearchShipper.Core,EdbService,18,2,0,18,1,55,4,0,0,0,0,1,,LogSearchShipper.Core.EdbDataFormatter
+LogSearchShipper.Core,EDBEnvironmentComparer,0,2,0,0,2,11,2,0,0,-1,1,0,LogSearchShipper.Core.EDBEnvironment,
+LogSearchShipper.Core,SearchExtensionMethods,0,1,0,0,1,9,2,0,0,-1,0,0,,
+LogSearchShipper.Core,EDBFileWatchParser,2,6,0,0,3,170,16,0,0,0,8,2,LogSearchShipper.Core.ConfigurationSections.EnvironmentWatchElement' LogSearchShipper.Core.ConfigurationSections.FieldCollection' LogSearchShipper.Core.ConfigurationSections.FileWatchElement' LogSearchShipper.Core.ConfigurationSections.OverrideConfig' LogSearchShipper.Core.ConfigurationSections.CustomNxlogConfig' LogSearchShipper.Core.ConfigurationSections.FieldElement' LogSearchShipper.Core.EdbServer' LogSearchShipper.Core.ConfigurationSections.OverrideConfigCollection,LogSearchShipper.Core.LogSearchShipperProcessManager' LogSearchShipper.Core.Tests.EDBFileWatchParserTests
+LogSearchShipper.Core.NxLog,NativeMethods,1,5,0,1,5,65,5,0,0,1,3,1,LogSearchShipper.Core.NxLog.ServiceAccessRights' LogSearchShipper.Core.NxLog.ServiceBootFlag' LogSearchShipper.Core.NxLog.ServiceError,LogSearchShipper.Core.NxLog.ServiceControllerEx
+LogSearchShipper.Core.NxLog,ScmAccessRights,0,0,0,0,0,13,0,0,0,-1,0,1,,LogSearchShipper.Core.NxLog.ServiceControllerEx
+LogSearchShipper.Core.NxLog,ServiceAccessRights,0,0,0,0,0,18,0,0,0,-1,0,2,,LogSearchShipper.Core.NxLog.NativeMethods' LogSearchShipper.Core.NxLog.ServiceControllerEx
+LogSearchShipper.Core.NxLog,ServiceBootFlag,0,0,0,0,0,8,0,0,0,-1,0,2,,LogSearchShipper.Core.NxLog.NativeMethods' LogSearchShipper.Core.NxLog.ServiceControllerEx
+LogSearchShipper.Core.NxLog,ServiceError,0,0,0,0,0,7,0,0,0,-1,0,2,,LogSearchShipper.Core.NxLog.NativeMethods' LogSearchShipper.Core.NxLog.ServiceControllerEx
+LogSearchShipper.Core.NxLog,INxLogProcessManager,0,3,12,0,0,18,3,1,0,-1,0,0,,
+LogSearchShipper.Core.NxLog,NxLogProcessManager,18,29,17,0,7,749,62,0,1,0,10,6,LogSearchShipper.Core.NxLog.ServiceControllerEx' LogSearchShipper.Core.NxLog.SyslogEndpoint' LogSearchShipper.Core.Resources.Resource' LogSearchShipper.Core.ConfigurationSections.FileWatchElement' LogSearchShipper.Core.ConfigurationSections.TailerType' LogSearchShipper.Core.ConfigurationSections.CustomNxlogConfig' LogSearchShipper.Core.ConfigurationSections.FieldCollection' LogSearchShipper.Core.ConfigurationSections.IWatchElement' LogSearchShipper.Core.ConfigurationSections.FieldElement' LogSearchShipper.Core.ConfigurationSections.WinEventWatchElement,LogSearchShipper.Core.LogSearchShipperProcessManager' IntegrationTests.LogSearchShipperProcessManagerTests' IntegrationTests.MultilineTests' LogSearchShipper.Core.Tests.NxLog.NxLogProcessManagerTests2' LogSearchShipper.Core.Tests.NxLog.NxLogProcessManagerTests' LogSearchShipper.Core.Tests.NxLog.NxlogRestartingTest
+LogSearchShipper.Core.NxLog,NxLogStartException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+LogSearchShipper.Core.NxLog,SyslogEndpoint,2,1,2,0,1,18,1,0,0,0,0,3,,LogSearchShipper.Core.NxLog.NxLogProcessManager' IntegrationTests.LogSearchShipperProcessManagerTests' IntegrationTests.MultilineTests
+LogSearchShipper.Core.NxLog,ServiceControllerEx,4,5,0,0,5,117,14,0,0,0.8,6,1,LogSearchShipper.Core.NxLog.NativeMethods' LogSearchShipper.Core.NxLog.ScmAccessRights' LogSearchShipper.Core.NxLog.ServiceAccessRights' LogSearchShipper.Core.NxLog.ServiceBootFlag' LogSearchShipper.Core.NxLog.ServiceError' LogSearchShipper.Core.ProcessUtils,LogSearchShipper.Core.NxLog.NxLogProcessManager
+LogSearchShipper.Core.Resources,Resource,2,1,3,0,0,51,1,0,0,0,0,1,,LogSearchShipper.Core.NxLog.NxLogProcessManager

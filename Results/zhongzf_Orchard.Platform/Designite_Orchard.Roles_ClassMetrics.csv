@@ -1,27 +1,29 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AdminMenu,0,1,2,0,1,18,1,0,2,-1,2,0
-RolesDataMigration,1,3,0,0,3,23,3,0,2,0.67,2,0
-DefaultRoleUpdater,2,10,1,0,2,77,16,0,2,0.8,6,0
-AdminController,2,9,3,0,9,149,22,0,0,0,12,0
-ICustomExportStep,0,1,0,0,0,4,1,1,2,-1,0,0
-RolesCustomExportStep,0,1,0,0,1,7,1,0,3,-1,0,0
-IExportEventHandler,0,2,0,0,0,5,2,1,2,-1,0,0
-RolesExportEventHandler,1,3,0,0,3,26,6,0,3,0.67,2,0
-RolesRecipeHandler,3,2,2,0,2,45,5,0,2,0,8,0
-UserRolesPartDriver,6,6,2,0,1,109,13,0,2,0.33,15,0
-IUserRoles,0,0,1,0,0,6,0,1,1,-1,0,1
-UserSimulation,0,1,0,0,1,32,1,0,0,-1,3,1
-PermissionRecord,0,0,4,0,0,19,0,0,0,-1,0,3
-RoleRecord,0,1,3,0,1,20,1,0,0,-1,1,6
-UserRolesPart,1,0,1,0,0,9,0,0,2,-1,0,1
-RolesPermissionsRecord,0,0,3,0,0,15,0,0,0,-1,2,0
-UserRolesPartRecord,0,0,3,0,0,15,0,0,0,-1,1,3
-UserRolesPartHandler,1,1,0,0,1,11,1,0,2,0,1,0
-IRoleService,0,11,0,0,0,19,11,1,1,-1,0,6
-RolesBasedAuthorizationService,5,4,2,0,3,113,22,0,2,0,11,0
-RoleService,7,17,2,0,12,182,31,0,2,0,11,0
-RoleCreateViewModel,0,0,2,0,0,12,0,0,0,-1,1,1
-RoleEditViewModel,0,0,5,0,0,24,0,0,0,-1,1,1
-RolesIndexViewModel,0,0,1,0,0,7,0,0,0,-1,1,1
-UserRolesViewModel,0,1,3,0,1,19,1,0,0,-1,3,1
-UserRoleEntry,0,0,3,0,0,15,0,0,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Orchard.Roles,AdminMenu,0,1,2,0,1,9,1,0,2,-1,3,0,Orchard.UI.Navigation.NavigationBuilder' Orchard.UI.Navigation.NavigationItemBuilder' Orchard.Security.StandardPermissions,
+Orchard.Roles,RolesDataMigration,1,3,0,0,3,40,3,0,2,0.67,6,0,Orchard.Roles.Services.IRoleService' Orchard.Data.Migration.Schema.SchemaBuilder' Orchard.Data.Migration.Schema.CreateTableCommand' Orchard.Data.Migration.Schema.CreateColumnCommand' Orchard.Security.Permissions.Permission' Orchard.Core.Contents.Permissions,
+Orchard.Roles,DefaultRoleUpdater,2,10,1,0,2,69,16,0,2,0.8,11,0,Orchard.Roles.Services.IRoleService' Orchard.Logging.NullLogger' Orchard.Environment.Extensions.Models.Feature' Orchard.Roles.Models.RoleRecord' Orchard.Environment.Extensions.Models.FeatureDescriptor' Orchard.Security.Permissions.IPermissionProvider' Orchard.Logging.ILogger' Orchard.Security.Permissions.PermissionStereotype' Orchard.Security.Permissions.Permission' Orchard.Roles.Models.PermissionRecord' Orchard.Roles.Models.RolesPermissionsRecord,
+Orchard.Roles.Controllers,AdminController,2,9,3,0,9,131,29,0,0,0,15,0,Orchard.Roles.Services.IRoleService' Orchard.Security.IAuthorizationService' Orchard.Localization.NullLocalizer' Orchard.Logging.NullLogger' Orchard.IOrchardServices' Orchard.UI.Notify.INotifier' Orchard.Roles.ViewModels.RolesIndexViewModel' Orchard.Security.IAuthorizer' Orchard.Security.StandardPermissions' Orchard.Roles.Models.RoleRecord' Orchard.Roles.ViewModels.RoleCreateViewModel' Orchard.Roles.ViewModels.RoleEditViewModel' Orchard.Security.IUser' Orchard.Roles.Models.UserSimulation' Orchard.Security.Permissions.Permission,
+Orchard.Roles.ImportExport,ICustomExportStep,0,1,0,0,0,3,1,1,2,-1,0,0,,
+Orchard.Roles.ImportExport,RolesCustomExportStep,0,1,0,0,1,5,1,0,3,-1,0,0,,
+Orchard.Roles.ImportExport,IExportEventHandler,0,2,0,0,0,4,2,1,2,-1,0,0,,
+Orchard.Roles.ImportExport,RolesExportEventHandler,1,3,0,0,3,23,6,0,3,0.67,4,0,Orchard.Data.IRepository' Orchard.Roles.Models.RoleRecord' Orchard.Roles.Models.PermissionRecord' Orchard.Roles.Models.RolesPermissionsRecord,
+Orchard.Roles.ImportExport,RolesRecipeHandler,3,2,2,0,2,36,5,0,2,0,10,0,Orchard.Roles.Services.IRoleService' Orchard.Data.IRepository' Orchard.Logging.NullLogger' Orchard.Localization.NullLocalizer' Orchard.Roles.Models.RoleRecord' Orchard.Recipes.Models.RecipeStep' Orchard.Recipes.Models.RecipeContext' Orchard.Security.Permissions.Permission' Orchard.Roles.Models.PermissionRecord' Orchard.Roles.Models.RolesPermissionsRecord,
+Orchard.Roles.Drivers,UserRolesPartDriver,6,6,2,0,1,94,15,0,0,0.33,19,0,Orchard.Data.IRepository' Orchard.Roles.Services.IRoleService' Orchard.UI.Notify.INotifier' Orchard.Security.IAuthenticationService' Orchard.Security.IAuthorizationService' Orchard.Localization.NullLocalizer' Orchard.Roles.ViewModels.UserRolesViewModel' Orchard.Security.StandardPermissions' Orchard.Roles.Models.RoleRecord' Orchard.Roles.Models.UserRolesPart' Orchard.ContentManagement.Drivers.ContentShapeResult' Orchard.ContentManagement.IUpdateModel' Orchard.Roles.Models.UserRolesPartRecord' Orchard.Security.IUser' Orchard.Roles.ViewModels.UserRoleEntry' Orchard.ContentManagement.Handlers.ImportContentContext' Orchard.ContentManagement.MetaData.Models.ContentPartDefinition' Orchard.ContentManagement.ContentItem' Orchard.ContentManagement.Handlers.ExportContentContext,
+Orchard.Roles.Models,IUserRoles,0,0,1,0,0,3,0,2,1,-1,0,1,,Orchard.Roles.Services.RolesBasedAuthorizationService
+Orchard.Roles.Models,UserSimulation,0,1,0,0,1,18,1,0,0,-1,6,1,Orchard.ContentManagement.MetaData.Models.ContentTypeDefinition' Orchard.ContentManagement.ContentItem' Orchard.ContentManagement.MetaData.Builders.ContentTypeDefinitionBuilder' Orchard.ContentManagement.Handlers.ContentItemBuilder' Orchard.Roles.Models.SimulatedUserRoles' Orchard.Security.IUser,Orchard.Roles.Controllers.AdminController
+Orchard.Roles.Models,SimulatedUser,0,0,2,0,0,4,0,0,2,-1,0,0,,
+Orchard.Roles.Models,SimulatedUserRoles,0,0,1,0,0,3,0,0,2,-1,0,1,,Orchard.Roles.Models.UserSimulation
+Orchard.Roles.Models,PermissionRecord,0,0,4,0,0,6,0,0,0,-1,0,4,,Orchard.Roles.DefaultRoleUpdater' Orchard.Roles.ImportExport.RolesExportEventHandler' Orchard.Roles.ImportExport.RolesRecipeHandler' Orchard.Roles.Services.RoleService
+Orchard.Roles.Models,RoleRecord,0,1,3,0,1,9,1,0,0,-1,0,7,,Orchard.Roles.DefaultRoleUpdater' Orchard.Roles.Controllers.AdminController' Orchard.Roles.ImportExport.RolesExportEventHandler' Orchard.Roles.ImportExport.RolesRecipeHandler' Orchard.Roles.Drivers.UserRolesPartDriver' Orchard.Roles.Handlers.UserRolesPartHandler' Orchard.Roles.Services.RoleService
+Orchard.Roles.Models,UserRolesPart,1,0,1,0,0,6,0,0,2,-1,0,2,,Orchard.Roles.Drivers.UserRolesPartDriver' Orchard.Roles.Handlers.UserRolesPartHandler
+Orchard.Roles.Models,RolesPermissionsRecord,0,0,3,0,0,5,0,0,0,-1,0,4,,Orchard.Roles.DefaultRoleUpdater' Orchard.Roles.ImportExport.RolesExportEventHandler' Orchard.Roles.ImportExport.RolesRecipeHandler' Orchard.Roles.Services.RoleService
+Orchard.Roles.Models,UserRolesPartRecord,0,0,3,0,0,5,0,0,0,-1,0,3,,Orchard.Roles.Drivers.UserRolesPartDriver' Orchard.Roles.Handlers.UserRolesPartHandler' Orchard.Roles.Services.RoleService
+Orchard.Roles.Handlers,UserRolesPartHandler,1,1,0,0,1,11,1,0,2,0,6,0,Orchard.Data.IRepository' Orchard.Roles.Models.UserRolesPart' Orchard.Roles.Models.UserRolesPartRecord' Orchard.ContentManagement.ContentItem' Orchard.ContentManagement.Handlers.InitializingContentContext' Orchard.Roles.Models.RoleRecord,
+Orchard.Roles.Services,IRoleService,0,11,0,0,0,19,11,1,1,-1,0,6,,Orchard.Roles.RolesDataMigration' Orchard.Roles.DefaultRoleUpdater' Orchard.Roles.Controllers.AdminController' Orchard.Roles.ImportExport.RolesRecipeHandler' Orchard.Roles.Drivers.UserRolesPartDriver' Orchard.Roles.Services.RolesBasedAuthorizationService
+Orchard.Roles.Services,RolesBasedAuthorizationService,5,4,2,0,3,96,20,0,2,0,13,0,Orchard.Roles.Services.IRoleService' Orchard.IWorkContextAccessor' Orchard.Security.IAuthorizationServiceEventHandler' Orchard.Localization.NullLocalizer' Orchard.Logging.NullLogger' Orchard.Security.Permissions.Permission' Orchard.Security.IUser' Orchard.ContentManagement.IContent' Orchard.Security.CheckAccessContext' Orchard.Settings.ISite' Orchard.WorkContext' Orchard.Roles.Models.IUserRoles' Orchard.Security.StandardPermissions,
+Orchard.Roles.Services,RoleService,7,17,2,0,12,154,32,0,2,0,14,0,Orchard.Data.IRepository' Orchard.Caching.ICacheManager' Orchard.Caching.ISignals' Orchard.Logging.NullLogger' Orchard.Localization.NullLocalizer' Orchard.Roles.Models.RoleRecord' Orchard.Roles.Models.PermissionRecord' Orchard.Security.Permissions.IPermissionProvider' Orchard.Security.Permissions.Permission' Orchard.Environment.Extensions.Models.FeatureDescriptor' Orchard.Environment.Extensions.Models.Feature' Orchard.Localization.LocalizedString' Orchard.Roles.Models.UserRolesPartRecord' Orchard.Roles.Models.RolesPermissionsRecord,
+Orchard.Roles.ViewModels,RoleCreateViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,Orchard.Roles.Controllers.AdminController
+Orchard.Roles.ViewModels,RoleEditViewModel,0,0,5,0,0,8,0,0,0,-1,0,1,,Orchard.Roles.Controllers.AdminController
+Orchard.Roles.ViewModels,RolesIndexViewModel,0,0,1,0,0,3,0,0,0,-1,0,1,,Orchard.Roles.Controllers.AdminController
+Orchard.Roles.ViewModels,UserRolesViewModel,0,1,3,0,1,8,1,0,0,-1,0,1,,Orchard.Roles.Drivers.UserRolesPartDriver
+Orchard.Roles.ViewModels,UserRoleEntry,0,0,3,0,0,5,0,0,0,-1,0,1,,Orchard.Roles.Drivers.UserRolesPartDriver

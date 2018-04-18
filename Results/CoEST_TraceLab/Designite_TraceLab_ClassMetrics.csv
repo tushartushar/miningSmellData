@@ -1,12 +1,13 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CommandLineProcessor,1,2,2,0,1,50,9,0,0,1,0,2
-InvalidKeyException,0,3,0,0,3,15,3,0,0,-1,0,0
-KeyValidator,3,6,0,0,0,129,14,0,0,0,1,1
-Program,1,1,0,0,1,50,5,0,0,0,5,0
-TraceLabApplication,3,22,16,0,1,490,77,2,0,0.5,16,0
-TraceLabApplicationGUI,2,8,0,0,1,175,17,0,1,0,3,1
-WM,0,0,0,0,0,104,0,0,0,-1,0,0
-NativeMethods,0,3,0,0,1,33,5,0,0,-1,0,1
-SingleInstance,7,5,1,0,2,197,15,0,0,0,2,1
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TraceLab,CommandLineProcessor,1,2,2,0,1,63,9,0,0,1,1,2,TraceLabSDK.RuntimeInfo,TraceLab.TraceLabApplication' TraceLab.TraceLabApplicationGUI
+TraceLab,InvalidKeyException,0,3,0,0,3,6,3,0,0,-1,0,1,,TraceLab.Program
+TraceLab,KeyValidator,3,6,0,0,0,137,10,0,0,0,0,1,,TraceLab.TraceLabApplication
+TraceLab,Program,1,1,0,0,1,71,3,0,0,0,5,0,TraceLab.TraceLabApplicationGUI' TraceLabSDK.RuntimeInfo' Microsoft.Shell.SingleInstance' TraceLab.Core.Utilities.ThreadFactory' TraceLab.InvalidKeyException,
+TraceLab,TraceLabApplication,3,22,16,0,1,573,67,2,0,0.5,21,0,TraceLab.Core.ViewModels.LogViewModel' TraceLab.Core.ViewModels.ApplicationViewModel' TraceLab.KeyValidator' TraceLab.CommandLineProcessor' TraceLabSDK.RuntimeInfo' TraceLabSDK.OS' TraceLab.Core.Settings.Settings' TraceLab.Core.Settings.SettingsPath' TraceLab.Core.ViewModels.ComponentLibraryViewModel' TraceLab.Core.PackageSystem.PackageManager' TraceLab.Core.Workspaces.Workspace' TraceLab.Core.Components.ComponentsLibrary' TraceLab.Core.Experiments.ExperimentManager' TraceLab.Core.Experiments.RecentExperimentsHelper' TraceLab.Core.Exceptions.ExperimentLoadException' TraceLab.Core.Workspaces.WorkspaceManager' TraceLabSDK.IWorkspace' TraceLab.Core.Decisions.DecisionCompilationRunner' TraceLab.Core.Experiments.Experiment' TraceLab.Core.Experiments.ExperimentInfo' TraceLab.Core.PackageSystem.Package,
+TraceLab,TraceLabApplicationGUI,2,8,0,0,1,177,15,0,1,0,2,2,TraceLabSDK.RuntimeInfo' TraceLab.CommandLineProcessor,TraceLab.Program' Microsoft.Shell.IPCRemoteService
+Microsoft.Shell,WM,0,0,0,0,0,104,0,0,0,-1,0,0,,
+Microsoft.Shell,NativeMethods,0,3,0,0,1,40,5,0,0,-1,0,1,,Microsoft.Shell.SingleInstance
+Microsoft.Shell,SingleInstance,7,5,1,0,2,201,11,0,0,0,2,1,Microsoft.Shell.NativeMethods' Microsoft.Shell.IPCRemoteService,TraceLab.Program
+Microsoft.Shell,IPCRemoteService,0,2,0,0,2,20,2,0,0,-1,1,1,TraceLab.TraceLabApplicationGUI,Microsoft.Shell.SingleInstance
+TraceLab.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+TraceLab.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

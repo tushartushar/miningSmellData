@@ -1,27 +1,28 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-MobileRedirectModule,3,5,1,0,3,76,12,0,0,0.4,5,0
-UrlRewriteModule,2,2,1,0,2,35,11,0,0,1,3,0
-OutputCacheModule,4,5,0,0,2,166,34,0,0,0.4,6,0
-ExceptionModule,1,3,1,0,3,65,8,0,0,1,3,0
-MembershipModule,2,6,2,0,4,154,25,0,0,0.83,13,2
-PersonalizationModule,0,3,1,0,3,33,5,0,0,-1,3,0
-ServicesModule,1,4,0,1,2,34,6,0,0,1,1,2
-BasicUrlRewriter,3,4,0,2,0,513,102,0,1,0.5,18,1
-UsersOnlineModule,0,3,1,0,3,33,5,0,0,-1,2,0
-AnalyticsModule,1,4,1,0,2,102,15,0,0,0.75,8,0
-AnalyticsEngineConfiguration,2,1,1,0,1,76,5,0,0,0,7,1
-AnalyticsEngine,4,0,4,0,0,40,0,0,0,-1,0,2
-AnalyticsEngineCollection,0,1,0,0,1,16,1,0,0,-1,1,1
-CompressionModule,0,2,0,0,2,27,2,0,0,-1,0,0
-Algorithms,0,0,0,0,0,10,0,0,0,-1,0,1
-Settings,2,3,2,0,2,75,11,0,0,0,3,4
-CompressingFilter,1,2,2,0,0,50,2,2,1,1,0,0
-DeflateFilter,1,4,1,0,4,31,5,0,2,0,0,0
-GZipFilter,1,4,1,0,4,31,5,0,2,0,0,0
-HttpOutputFilter,1,6,6,0,5,61,6,1,0,0.67,0,0
-RequestFilterModule,1,3,0,0,2,69,16,0,0,1,4,0
-RequestFilterRule,5,5,6,0,5,122,22,0,0,0.8,2,1
-RequestFilterRuleType,0,0,0,0,0,6,0,0,0,-1,0,2
-RequestFilterOperatorType,0,0,0,0,0,6,0,0,0,-1,0,2
-RequestFilterSettings,2,2,2,0,2,91,13,0,0,1,5,1
-DNNFriendlyUrlProvider,6,5,2,0,5,69,24,0,1,0,4,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DotNetNuke.HttpModules,MobileRedirectModule,3,5,1,0,3,81,12,0,0,0.4,8,0,DotNetNuke.Services.Mobile.IRedirectionController' DotNetNuke.Entities.Portals.PortalSettings' DotNetNuke.Entities.Portals.IPortalController' DotNetNuke.Entities.Portals.PortalController' DotNetNuke.Common.Initialize' DotNetNuke.HttpModules.Services.ServicesModule' DotNetNuke.Entities.Urls.UrlAction' DotNetNuke.Entities.Portals.PortalAliasInfo,
+DotNetNuke.HttpModules,UrlRewriteModule,2,2,1,0,2,35,3,0,0,1,4,0,DotNetNuke.Entities.Urls.UrlRewriterBase' DotNetNuke.Entities.Urls.AdvancedUrlRewriter' DotNetNuke.HttpModules.UrlRewrite.BasicUrlRewriter' DotNetNuke.Common.Utilities.Config,
+DotNetNuke.HttpModules.OutputCaching,OutputCacheModule,4,5,0,0,2,207,34,0,0,0.4,12,0,DotNetNuke.Services.Installer.Blocker.IInstallBlocker' DotNetNuke.Services.Installer.Blocker.InstallBlocker' DotNetNuke.Entities.Portals.PortalSettings' DotNetNuke.HttpModules.OutputCaching.IncludeExcludeType' DotNetNuke.Services.OutputCache.OutputCacheResponseFilter' DotNetNuke.Common.Globals' DotNetNuke.Entities.Tabs.TabInfo' DotNetNuke.Entities.Tabs.ITabController' DotNetNuke.Entities.Tabs.TabController' DotNetNuke.Services.Localization.Localization' DotNetNuke.Entities.Portals.PortalAliasInfo' DotNetNuke.Services.OutputCache.OutputCachingProvider,
+DotNetNuke.HttpModules.OutputCaching,IncludeExcludeType,0,0,0,0,0,5,0,0,0,-1,0,1,,DotNetNuke.HttpModules.OutputCaching.OutputCacheModule
+DotNetNuke.HttpModules.Exceptions,ExceptionModule,1,3,1,0,3,73,6,0,0,1,2,0,DotNetNuke.Services.Log.EventLog.ExceptionLogController' DotNetNuke.Common.Initialize,
+DotNetNuke.HttpModules.Membership,MembershipModule,2,6,2,0,4,181,25,0,0,0.83,25,1,DotNetNuke.Entities.Portals.PortalSettings' DotNetNuke.Entities.Portals.IPortalController' DotNetNuke.Entities.Portals.PortalController' DotNetNuke.Security.PortalSecurity' DotNetNuke.Entities.Users.IUserController' DotNetNuke.Entities.Users.UserController' DotNetNuke.Services.Localization.Localization' DotNetNuke.UI.Skins.Skin' DotNetNuke.UI.Skins.EventListeners.SkinEventArgs' DotNetNuke.UI.Skins.Controls.ModuleMessageType' DotNetNuke.UI.Skins.Controls.ModuleMessage' DotNetNuke.Entities.Users.UserInfo' DotNetNuke.Common.Initialize' DotNetNuke.Entities.Users.UserMembership' DotNetNuke.Common.Utilities.DataCache' DotNetNuke.Entities.Host.Host' DotNetNuke.Services.UserRequest.IUserRequestIPAddressController' DotNetNuke.Services.UserRequest.UserRequestIPAddressController' DotNetNuke.Security.Roles.IRoleController' DotNetNuke.Security.Roles.RoleController' DotNetNuke.Security.Roles.RoleInfo' DotNetNuke.Security.Roles.SecurityMode' DotNetNuke.Security.Roles.RoleStatus' DotNetNuke.HttpModules.Services.ServicesModule' DotNetNuke.Entities.Users.UserProfile,DotNetNuke.Web.Mvc.DnnMvcHandler
+DotNetNuke.HttpModules.Personalization,PersonalizationModule,0,3,1,0,3,38,5,0,0,-1,6,0,DotNetNuke.Entities.Portals.PortalSettings' DotNetNuke.Entities.Users.UserInfo' DotNetNuke.Services.Personalization.PersonalizationController' DotNetNuke.Common.Initialize' DotNetNuke.Entities.Users.IUserController' DotNetNuke.Entities.Users.UserController,
+DotNetNuke.HttpModules.Services,ServicesModule,1,4,0,1,2,36,6,0,0,1,1,2,DotNetNuke.Common.Initialize,DotNetNuke.HttpModules.MobileRedirectModule' DotNetNuke.HttpModules.Membership.MembershipModule
+DotNetNuke.HttpModules.UrlRewrite,BasicUrlRewriter,3,4,0,2,0,709,66,0,1,0.5,26,1,DotNetNuke.Entities.Portals.PortalAliasInfo' DotNetNuke.Entities.Portals.PortalSettings' DotNetNuke.Entities.Urls.RewriterUtils' DotNetNuke.Common.Initialize' DotNetNuke.Common.Globals' DotNetNuke.Services.Exceptions.Exceptions' DotNetNuke.Common.Utilities.Null' DotNetNuke.Entities.Portals.IPortalAliasController' DotNetNuke.Entities.Portals.PortalAliasController' DotNetNuke.Entities.Portals.IPortalController' DotNetNuke.Entities.Portals.PortalController' DotNetNuke.Entities.Controllers.IHostController' DotNetNuke.Entities.Controllers.HostController' DotNetNuke.Entities.Portals.PortalAliasMapping' DotNetNuke.Entities.Tabs.TabInfo' DotNetNuke.Services.EventQueue.EventQueueController' DotNetNuke.Entities.Urls.Config.RewriterRuleCollection' DotNetNuke.Entities.Portals.PortalInfo' DotNetNuke.Entities.Tabs.TabCollection' DotNetNuke.Entities.Urls.Config.RewriterConfiguration' DotNetNuke.Entities.Urls.Config.RewriterRule' DotNetNuke.Services.Localization.ILocaleController' DotNetNuke.Services.Localization.LocaleController' DotNetNuke.Services.Localization.Locale' DotNetNuke.Entities.Tabs.TabController' DotNetNuke.Entities.Tabs.ITabController,DotNetNuke.HttpModules.UrlRewriteModule
+DotNetNuke.HttpModules.UsersOnline,UsersOnlineModule,0,3,1,0,3,37,5,0,0,-1,2,0,DotNetNuke.Entities.Users.UserOnlineController' DotNetNuke.Common.Initialize,
+DotNetNuke.HttpModules.Analytics,AnalyticsModule,1,4,1,0,2,102,19,0,0,0.75,11,0,DotNetNuke.Framework.CDefault' DotNetNuke.Services.Log.EventLog.LogInfo' DotNetNuke.Common.Initialize' DotNetNuke.Services.Log.EventLog.EventLogType' DotNetNuke.Services.Log.EventLog.EventLogController' DotNetNuke.Services.Log.EventLog.ILogController' DotNetNuke.Services.Log.EventLog.LogController' DotNetNuke.HttpModules.Config.AnalyticsEngineCollection' DotNetNuke.Services.Analytics.AnalyticsEngineBase' DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration' DotNetNuke.HttpModules.Config.AnalyticsEngine,
+DotNetNuke.HttpModules.Config,AnalyticsEngineConfiguration,2,1,1,0,1,72,4,0,0,0,10,1,DotNetNuke.HttpModules.Config.AnalyticsEngineCollection' DotNetNuke.HttpModules.Config.AnalyticsEngine' DotNetNuke.Services.Log.EventLog.LogInfo' DotNetNuke.Common.Utilities.DataCache' DotNetNuke.Common.Utilities.Config' DotNetNuke.Common.Utilities.ConfigFileType' DotNetNuke.Services.Log.EventLog.EventLogType' DotNetNuke.Services.Log.EventLog.EventLogController' DotNetNuke.Services.Log.EventLog.ILogController' DotNetNuke.Services.Log.EventLog.LogController,DotNetNuke.HttpModules.Analytics.AnalyticsModule
+DotNetNuke.HttpModules.Config,AnalyticsEngine,4,0,4,0,0,52,0,0,0,-1,0,3,,DotNetNuke.HttpModules.Analytics.AnalyticsModule' DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration' DotNetNuke.HttpModules.Config.AnalyticsEngineCollection
+DotNetNuke.HttpModules.Config,AnalyticsEngineCollection,0,1,0,0,1,19,1,0,0,-1,1,2,DotNetNuke.HttpModules.Config.AnalyticsEngine,DotNetNuke.HttpModules.Analytics.AnalyticsModule' DotNetNuke.HttpModules.Config.AnalyticsEngineConfiguration
+DotNetNuke.HttpModules.Compression,CompressionModule,0,2,0,0,2,27,2,0,0,-1,0,0,,
+DotNetNuke.HttpModules.Compression,Algorithms,0,0,0,0,0,7,0,0,0,-1,0,1,,DotNetNuke.HttpModules.Compression.Settings
+DotNetNuke.HttpModules.Compression,Settings,2,3,2,0,2,85,7,0,0,0,6,0,DotNetNuke.HttpModules.Compression.Algorithms' DotNetNuke.Common.Utilities.DataCache' DotNetNuke.Entities.Host.Host' DotNetNuke.Services.Exceptions.Exceptions' DotNetNuke.Common.Utilities.Config' DotNetNuke.Common.Utilities.ConfigFileType,
+DotNetNuke.HttpModules.Compression,CompressingFilter,1,2,2,0,0,41,2,2,1,1,0,0,,
+DotNetNuke.HttpModules.Compression,DeflateFilter,1,4,1,0,4,31,5,0,2,0,0,0,,
+DotNetNuke.HttpModules.Compression,GZipFilter,1,4,1,0,4,31,5,0,2,0,0,0,,
+DotNetNuke.HttpModules.Compression,HttpOutputFilter,1,6,6,0,5,74,6,1,0,0.67,0,0,,
+DotNetNuke.HttpModules.RequestFilter,RequestFilterModule,1,3,0,0,2,79,12,0,0,1,5,0,DotNetNuke.HttpModules.RequestFilter.RequestFilterSettings' DotNetNuke.Common.Initialize' DotNetNuke.HttpModules.RequestFilter.RequestFilterRule' DotNetNuke.Common.Utils.NetworkUtils' DotNetNuke.Common.Utils.AddressType,
+DotNetNuke.HttpModules.RequestFilter,RequestFilterRule,5,5,6,0,5,143,9,0,0,0.8,2,2,DotNetNuke.HttpModules.RequestFilter.RequestFilterRuleType' DotNetNuke.HttpModules.RequestFilter.RequestFilterOperatorType,DotNetNuke.HttpModules.RequestFilter.RequestFilterModule' DotNetNuke.HttpModules.RequestFilter.RequestFilterSettings
+DotNetNuke.HttpModules.RequestFilter,RequestFilterRuleType,0,0,0,0,0,6,0,0,0,-1,0,2,,DotNetNuke.HttpModules.RequestFilter.RequestFilterRule' DotNetNuke.HttpModules.RequestFilter.RequestFilterSettings
+DotNetNuke.HttpModules.RequestFilter,RequestFilterOperatorType,0,0,0,0,0,6,0,0,0,-1,0,2,,DotNetNuke.HttpModules.RequestFilter.RequestFilterRule' DotNetNuke.HttpModules.RequestFilter.RequestFilterSettings
+DotNetNuke.HttpModules.RequestFilter,RequestFilterSettings,2,2,2,0,2,107,7,0,0,1,8,1,DotNetNuke.HttpModules.RequestFilter.RequestFilterRuleType' DotNetNuke.HttpModules.RequestFilter.RequestFilterOperatorType' DotNetNuke.HttpModules.RequestFilter.RequestFilterRule' DotNetNuke.Common.Utilities.DataCache' DotNetNuke.Common.Utilities.Config' DotNetNuke.Common.Utilities.ConfigFileType' DotNetNuke.Services.Exceptions.Exceptions' DotNetNuke.Common.Globals,DotNetNuke.HttpModules.RequestFilter.RequestFilterModule
+DotNetNuke.Services.Url.FriendlyUrl,DNNFriendlyUrlProvider,6,5,2,0,5,70,8,0,1,0,6,0,DotNetNuke.Framework.Providers.ProviderConfiguration' DotNetNuke.Entities.Urls.FriendlyUrlProviderBase' DotNetNuke.Entities.Urls.UrlFormatType' DotNetNuke.Framework.Providers.Provider' DotNetNuke.Entities.Tabs.TabInfo' DotNetNuke.Entities.Portals.PortalSettings,

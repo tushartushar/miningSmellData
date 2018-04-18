@@ -1,0 +1,23 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PiCam.Web,BundleConfig,0,1,0,0,1,8,1,0,0,-1,0,1,,PiCam.Web.WebApiApplication
+PiCam.Web,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,PiCam.Web.WebApiApplication
+PiCam.Web,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,PiCam.Web.WebApiApplication
+PiCam.Web,WebApiConfig,0,1,0,0,1,18,1,0,0,-1,0,1,,PiCam.Web.WebApiApplication
+PiCam.Web,WebApiApplication,0,3,0,0,0,64,4,0,0,-1,5,0,PiCam.Web.WebApiConfig' PiCam.Web.FilterConfig' PiCam.Web.RouteConfig' PiCam.Web.BundleConfig' PiCam.Web.Controllers.PiBroker,
+PiCam.Web,Startup,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Web.App_Start,WebModule,0,1,0,0,0,15,1,0,0,-1,0,0,,
+Web,CameraClient,1,5,0,0,5,25,5,0,1,0,3,0,PiCamCV.Common.PiSettings' PiCamCV.ConsoleApp.Runners.PanTilt.PanTiltSettingCommand' PiCamCV.Common.PanTilt.Controllers.ProcessingMode,
+Web,BrowserClient,1,6,0,0,6,30,6,0,1,0,1,0,PiCam.Web.Models.ServerSettings,
+Web,BrowserHub,1,7,0,0,7,38,7,0,0,0.29,6,0,PiCam.Web.Controllers.PiBroker' PiCamCV.Common.PiSettings' PiCam.Web.Models.PiSettingsModel' PiCam.Web.Models.ServerSettings' PiCamCV.Common.PanTilt.Controllers.ProcessingMode' PiCamCV.ConsoleApp.Runners.PanTilt.PanTiltSettingCommand,
+Web,CameraHub,1,7,0,0,7,35,7,0,0,0.29,2,0,PiCam.Web.Controllers.PiBroker' Web.IBrowserClient,
+Web,ICameraClient,0,4,0,0,0,8,4,1,0,-1,3,1,PiCamCV.Common.PiSettings' PiCamCV.ConsoleApp.Runners.PanTilt.PanTiltSettingCommand' PiCamCV.Common.PanTilt.Controllers.ProcessingMode,PiCam.Web.Controllers.PiBroker
+Web,IBrowserClient,0,5,0,0,0,8,5,1,0,-1,1,2,PiCam.Web.Models.ServerSettings,Web.CameraHub' PiCam.Web.Controllers.PiBroker
+PiCam.Web.Configs,SignalRContractResolver,3,2,0,0,2,20,3,0,0,0,0,0,,
+PiCam.Web.Controllers,HomeController,0,1,0,0,1,7,1,0,0,-1,0,0,,
+PiCam.Web.Controllers,ImageController,1,2,0,0,2,17,3,0,0,0,1,0,PiCam.Web.Models.ImageCache,
+PiCam.Web.Controllers,PiBroker,5,13,8,0,11,135,18,0,0,0.46,7,4,Web.ICameraClient' Web.IBrowserClient' PiCam.Web.Models.ServerSettings' PiCam.Web.Models.ImageCache' PiCamCV.Common.PiSettings' PiCamCV.ConsoleApp.Runners.PanTilt.PanTiltSettingCommand' PiCamCV.Common.PanTilt.Controllers.ProcessingMode,PiCam.Web.WebApiApplication' Web.BrowserHub' Web.CameraHub' PiCam.Web.Controllers.PiController
+PiCam.Web.Controllers,PiController,1,2,0,0,2,23,4,0,0,1,1,0,PiCam.Web.Controllers.PiBroker,
+PiCam.Web.Controllers,TestService,0,0,0,0,0,3,0,0,0,-1,0,0,,
+PiCam.Web.Models,PiSettingsModel,0,0,3,0,0,6,0,0,0,-1,0,1,,Web.BrowserHub
+PiCam.Web.Models,ServerSettings,0,0,4,0,0,14,0,0,0,-1,0,4,,Web.BrowserClient' Web.BrowserHub' Web.IBrowserClient' PiCam.Web.Controllers.PiBroker
+PiCam.Web.Models,ImageCache,0,0,3,0,0,6,0,0,0,-1,0,2,,PiCam.Web.Controllers.ImageController' PiCam.Web.Controllers.PiBroker

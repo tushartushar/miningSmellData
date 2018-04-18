@@ -1,12 +1,14 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CopyPhoto,0,2,3,0,2,26,2,0,1,-1,1,0
-SavePhoto,0,2,2,0,2,20,2,0,1,-1,1,0
-PhotoSources,2,0,0,2,0,5,0,0,0,-1,0,0
-PhotoStorageClientNames,0,0,0,0,0,13,0,0,0,-1,0,1
-IPhotoCopyService,0,1,0,0,0,4,1,1,0,-1,1,1
-IPhotoMetadataRepository,0,5,0,0,0,8,5,1,0,-1,1,1
-IPhotoThumbnailService,0,1,0,0,0,4,1,1,0,-1,0,1
-PhotoMetadata,0,1,8,0,1,40,1,0,0,-1,0,6
-PhotoMetadataRepository,2,6,0,0,6,34,6,0,1,0,2,0
-PhotoCopyService,1,2,0,0,2,19,2,0,1,0,3,0
-PhotoThumbnailService,0,3,2,0,2,66,11,0,1,-1,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mantle.PhotoGallery.PhotoProcessing.Commands,CopyPhoto,0,2,3,0,2,18,2,0,1,-1,1,1,Mantle.PhotoGallery.PhotoProcessing.Models.PhotoMetadata,Mantle.PhotoGallery.Processor.Worker.Subscribers.CopyPhotoSubscriber
+Mantle.PhotoGallery.PhotoProcessing.Commands,SavePhoto,0,2,2,0,2,15,2,0,1,-1,1,1,Mantle.PhotoGallery.PhotoProcessing.Models.PhotoMetadata,Mantle.PhotoGallery.Processor.Worker.Subscribers.SavePhotoSubscriber
+Mantle.PhotoGallery.PhotoProcessing.Constants,PhotoSources,2,0,0,2,0,5,0,0,0,-1,0,0,,
+Mantle.PhotoGallery.PhotoProcessing.Constants,PhotoStorageClientNames,0,0,0,0,0,13,0,0,0,-1,0,1,,Mantle.PhotoGallery.Processor.Console.Mantle.Profiles.Default.BlobStorageModule
+Mantle.PhotoGallery.PhotoProcessing.Constants,Aws,2,0,0,2,0,5,0,0,0,-1,0,1,,Mantle.PhotoGallery.Processor.Console.Mantle.Profiles.Default.BlobStorageModule
+Mantle.PhotoGallery.PhotoProcessing.Constants,Azure,2,0,0,2,0,5,0,0,0,-1,0,1,,Mantle.PhotoGallery.Processor.Console.Mantle.Profiles.Default.BlobStorageModule
+Mantle.PhotoGallery.PhotoProcessing.Interfaces,IPhotoCopyService,0,1,0,0,0,4,1,1,0,-1,1,1,Mantle.PhotoGallery.PhotoProcessing.Models.PhotoMetadata,Mantle.PhotoGallery.Processor.Worker.Subscribers.CopyPhotoSubscriber
+Mantle.PhotoGallery.PhotoProcessing.Interfaces,IPhotoMetadataRepository,0,5,0,0,0,8,5,1,0,-1,1,2,Mantle.PhotoGallery.PhotoProcessing.Models.PhotoMetadata,Mantle.PhotoGallery.Processor.Worker.Subscribers.SavePhotoSubscriber' Mantle.PhotoGallery.Web.Controllers.PhotosController
+Mantle.PhotoGallery.PhotoProcessing.Interfaces,IPhotoThumbnailService,0,1,0,0,0,4,1,1,0,-1,0,1,,Mantle.PhotoGallery.Processor.Worker.Subscribers.SavePhotoSubscriber
+Mantle.PhotoGallery.PhotoProcessing.Models,PhotoMetadata,0,1,8,0,1,16,1,0,0,-1,0,9,,Mantle.PhotoGallery.PhotoProcessing.Commands.CopyPhoto' Mantle.PhotoGallery.PhotoProcessing.Commands.SavePhoto' Mantle.PhotoGallery.PhotoProcessing.Interfaces.IPhotoCopyService' Mantle.PhotoGallery.PhotoProcessing.Interfaces.IPhotoMetadataRepository' Mantle.PhotoGallery.PhotoProcessing.Repositories.PhotoMetadataRepository' Mantle.PhotoGallery.PhotoProcessing.Services.PhotoCopyService' Mantle.PhotoGallery.Processor.Worker.Subscribers.CopyPhotoSubscriber' Mantle.PhotoGallery.Processor.Worker.Subscribers.SavePhotoSubscriber' Mantle.PhotoGallery.Web.Controllers.PhotosController
+Mantle.PhotoGallery.PhotoProcessing.Repositories,PhotoMetadataRepository,2,6,0,0,6,35,6,0,1,0,2,0,Mantle.DictionaryStorage.Interfaces.IDictionaryStorageClient' Mantle.PhotoGallery.PhotoProcessing.Models.PhotoMetadata,
+Mantle.PhotoGallery.PhotoProcessing.Services,PhotoCopyService,1,2,0,0,2,19,2,0,1,0,3,0,Mantle.Interfaces.IDirectory' Mantle.BlobStorage.Interfaces.IBlobStorageClient' Mantle.PhotoGallery.PhotoProcessing.Models.PhotoMetadata,
+Mantle.PhotoGallery.PhotoProcessing.Services,PhotoThumbnailService,0,3,2,0,2,69,6,0,1,-1,0,0,,

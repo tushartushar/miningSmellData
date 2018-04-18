@@ -1,18 +1,25 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-OAuth2SectionGroup,1,1,0,0,0,16,1,0,0,0,0,0
-AccessToken,0,7,2,0,1,117,9,0,1,-1,4,1
-IScopeSatisfiedCheck,0,1,0,0,0,28,1,1,0,-1,0,4
-OAuthUtilities,6,10,0,1,2,168,16,0,0,0.4,3,13
-StandardScopeSatisfiedCheck,0,1,0,0,1,29,1,0,1,-1,0,2
-ProtocolVersion,0,0,0,0,0,10,0,0,0,-1,0,4
-Protocol,25,1,2,0,0,276,3,0,0,0,1,37
-OAuthStrings,2,1,11,0,0,117,1,0,0,0,0,12
-AuthorizationDataBag,0,1,4,0,0,46,1,3,1,-1,2,0
-ClientAuthenticationResult,0,0,0,0,0,22,0,0,0,-1,0,4
-IAccessTokenCarryingRequest,0,0,2,0,0,20,0,2,1,-1,0,4
-ScopeEncoder,0,3,0,0,3,37,3,0,1,-1,3,0
-IAuthorizationDescription,0,0,4,0,0,31,0,3,0,-1,0,14
-IAuthorizationCarryingRequest,0,0,1,0,0,12,0,5,1,-1,1,4
-AccessProtectedResourceRequest,0,1,5,0,0,69,1,0,2,-1,4,2
-UnauthorizedResponse,1,8,8,0,0,197,14,0,1,0.62,5,3
-MessageBase,4,5,13,0,0,227,5,8,1,0.6,5,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DotNetOpenAuth.Configuration,OAuth2SectionGroup,1,1,0,0,0,11,1,0,0,0,0,0,,
+DotNetOpenAuth.OAuth2,AccessToken,0,7,2,0,1,103,9,1,1,-1,3,3,DotNetOpenAuth.Messaging.Bindings.ICryptoKeyStore' DotNetOpenAuth.OAuth2.ChannelElements.IAuthorizationDescription' DotNetOpenAuth.OAuth2.ChannelElements.AuthorizationDataBag,DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement' DotNetOpenAuth.OAuth2.ResourceServer' DotNetOpenAuth.OAuth2.StandardAccessTokenAnalyzer
+DotNetOpenAuth.OAuth2,IScopeSatisfiedCheck,0,1,0,0,0,20,1,1,0,-1,0,3,,DotNetOpenAuth.OAuth2.AuthorizationServer' DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement' DotNetOpenAuth.OAuth2.ResourceServer
+DotNetOpenAuth.OAuth2,OAuthUtilities,6,10,0,1,2,156,16,0,0,0.4,3,14,DotNetOpenAuth.Messaging.ErrorUtilities' DotNetOpenAuth.OAuth2.OAuthStrings' DotNetOpenAuth.OAuth2.Protocol,OAuthAuthorizationServer.Code.OAuth2AuthorizationServer' OAuthAuthorizationServer.Controllers.OAuthController' DotNetOpenAuth.Samples.OAuthConsumerWpf.MainWindow' DotNetOpenAuth.OAuth2.ChannelElements.AuthorizationDataBag' DotNetOpenAuth.OAuth2.ChannelElements.ScopeEncoder' DotNetOpenAuth.OAuth2.ChannelElements.ClientCredentialHttpBasicReader' DotNetOpenAuth.OAuth2.AuthorizationState' DotNetOpenAuth.OAuth2.NetworkCredentialApplicator' DotNetOpenAuth.OAuth2.ClientBase' DotNetOpenAuth.OAuth2.Messages.AccessTokenSuccessResponse' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationSuccessResponseBase' DotNetOpenAuth.OAuth2.Messages.ScopedAccessTokenRequest' DotNetOpenAuth.OAuth2.ResourceServer
+DotNetOpenAuth.OAuth2,StandardScopeSatisfiedCheck,0,1,0,0,1,24,1,0,1,-1,0,0,,
+DotNetOpenAuth.OAuth2,ProtocolVersion,0,0,0,0,0,6,0,0,0,-1,0,1,,DotNetOpenAuth.OAuth2.Protocol
+DotNetOpenAuth.OAuth2,Protocol,25,1,2,0,0,258,2,0,0,0,1,18,DotNetOpenAuth.OAuth2.ProtocolVersion,OAuth2ProtectedWebApi.Controllers.UserController' DotNetOpenAuth.OAuth2.OAuthUtilities' DotNetOpenAuth.OAuth2.Messages.UnauthorizedResponse' DotNetOpenAuth.OAuth2.AuthorizationServer' DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement' DotNetOpenAuth.OAuth2.ChannelElements.AuthorizationCode' DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement' DotNetOpenAuth.OAuth2.AuthorizationServerDescription' DotNetOpenAuth.OAuth2.BearerTokenHttpMessageHandler' DotNetOpenAuth.OAuth2.WebServerClient' DotNetOpenAuth.OAuth2.ChannelElements.EndUserAuthorizationResponseTypeEncoder' DotNetOpenAuth.OAuth2.ChannelElements.GrantTypeEncoder' DotNetOpenAuth.OAuth2.TokenEndpointProtocolException' DotNetOpenAuth.OAuth2.Messages.AccessTokenSuccessResponse' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationSuccessAccessTokenResponse' DotNetOpenAuth.OAuth2.ChannelElements.OAuth2ResourceServerChannel' DotNetOpenAuth.OAuth2.StandardAccessTokenAnalyzer
+DotNetOpenAuth.OAuth2,EndUserAuthorizationRequestErrorCodes,7,0,0,7,0,31,0,0,0,-1,0,2,,OAuth2ProtectedWebApi.Controllers.UserController' DotNetOpenAuth.OAuth2.AuthorizationServer
+DotNetOpenAuth.OAuth2,ResponseTypes,2,0,0,0,0,11,0,0,0,-1,0,1,,DotNetOpenAuth.OAuth2.ChannelElements.EndUserAuthorizationResponseTypeEncoder
+DotNetOpenAuth.OAuth2,GrantTypes,5,0,0,0,0,8,0,0,0,-1,0,1,,DotNetOpenAuth.OAuth2.ChannelElements.GrantTypeEncoder
+DotNetOpenAuth.OAuth2,AccessTokenRequestErrorCodes,6,0,0,0,0,33,0,0,0,-1,0,3,,DotNetOpenAuth.OAuth2.AuthorizationServer' DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement' DotNetOpenAuth.OAuth2.TokenEndpointProtocolException
+DotNetOpenAuth.OAuth2,AccessTokenTypes,1,0,0,0,0,6,0,0,0,-1,0,3,,DotNetOpenAuth.OAuth2.Messages.AccessTokenSuccessResponse' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationSuccessAccessTokenResponse' DotNetOpenAuth.OAuth2.ChannelElements.OAuth2ResourceServerChannel
+DotNetOpenAuth.OAuth2,BearerTokenUnauthorizedResponseParameters,5,0,0,0,0,7,0,0,0,-1,0,1,,DotNetOpenAuth.OAuth2.Messages.UnauthorizedResponse
+DotNetOpenAuth.OAuth2,BearerTokenErrorCodes,3,0,0,0,0,20,0,0,0,-1,0,1,,DotNetOpenAuth.OAuth2.Messages.UnauthorizedResponse
+DotNetOpenAuth.OAuth2,OAuthStrings,2,1,11,0,0,122,1,0,0,0,0,8,,DotNetOpenAuth.OAuth2.OAuthUtilities' DotNetOpenAuth.OAuth2.ChannelElements.ScopeEncoder' DotNetOpenAuth.OAuth2.Messages.UnauthorizedResponse' DotNetOpenAuth.OAuth2.AuthServerUtilities' DotNetOpenAuth.OAuth2.ChannelElements.AuthorizationCode' DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement' DotNetOpenAuth.OAuth2.Messages.AccessTokenRequestBase' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest
+DotNetOpenAuth.OAuth2.ChannelElements,AuthorizationDataBag,0,1,4,0,0,30,1,3,2,-1,1,1,DotNetOpenAuth.OAuth2.OAuthUtilities,DotNetOpenAuth.OAuth2.AccessToken
+DotNetOpenAuth.OAuth2.ChannelElements,ClientAuthenticationResult,0,0,0,0,0,18,0,0,0,-1,0,5,,DotNetOpenAuth.OAuth2.ChannelElements.AggregatingClientCredentialReader' DotNetOpenAuth.OAuth2.ChannelElements.ClientCredentialHttpBasicReader' DotNetOpenAuth.OAuth2.ChannelElements.ClientCredentialMessagePartReader' DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement' DotNetOpenAuth.OAuth2.ChannelElements.ClientAuthenticationModule
+DotNetOpenAuth.OAuth2.ChannelElements,IAccessTokenCarryingRequest,0,0,2,0,0,10,0,2,1,-1,0,1,,DotNetOpenAuth.OAuth2.AuthorizationServer
+DotNetOpenAuth.OAuth2.ChannelElements,ScopeEncoder,0,3,0,0,3,30,3,0,1,-1,3,0,DotNetOpenAuth.Messaging.ErrorUtilities' DotNetOpenAuth.OAuth2.OAuthStrings' DotNetOpenAuth.OAuth2.OAuthUtilities,
+DotNetOpenAuth.OAuth2.ChannelElements,IAuthorizationDescription,0,0,4,0,0,19,0,3,0,-1,0,7,,OAuth2ProtectedWebApi.Code.AuthorizationServerHost' OAuthAuthorizationServer.Code.OAuth2AuthorizationServer' DotNetOpenAuth.OAuth2.AccessToken' DotNetOpenAuth.OAuth2.AuthorizationServer' DotNetOpenAuth.OAuth2.IAuthorizationServerHost' DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement' DotNetOpenAuth.OAuth2.ChannelElements.RefreshToken
+DotNetOpenAuth.OAuth2.ChannelElements,IAuthorizationCarryingRequest,0,0,1,0,0,6,0,5,2,-1,0,3,,DotNetOpenAuth.OAuth2.AuthorizationServer' DotNetOpenAuth.OAuth2.ChannelElements.TokenCodeSerializationBindingElement' DotNetOpenAuth.OAuth2.ChannelElements.MessageValidationBindingElement
+DotNetOpenAuth.OAuth2.Messages,AccessProtectedResourceRequest,0,1,5,0,0,46,1,0,2,-1,1,1,DotNetOpenAuth.Messaging.HttpDeliveryMethods,DotNetOpenAuth.OAuth2.ResourceServer
+DotNetOpenAuth.OAuth2.Messages,UnauthorizedResponse,1,8,8,0,0,164,14,0,1,0.62,8,2,DotNetOpenAuth.Messaging.IDirectedProtocolMessage' DotNetOpenAuth.OAuth2.BearerTokenErrorCodes' DotNetOpenAuth.OAuth2.Protocol' DotNetOpenAuth.Messaging.ProtocolException' DotNetOpenAuth.OAuth2.Messages.MessageBase' DotNetOpenAuth.OAuth2.BearerTokenUnauthorizedResponseParameters' DotNetOpenAuth.Messaging.ErrorUtilities' DotNetOpenAuth.OAuth2.OAuthStrings,DotNetOpenAuth.OAuth2.ChannelElements.OAuth2ResourceServerChannel' DotNetOpenAuth.OAuth2.ResourceServer
+DotNetOpenAuth.OAuth2.Messages,MessageBase,4,5,13,0,0,190,5,8,2,0.6,3,3,DotNetOpenAuth.Messaging.IDirectedProtocolMessage' DotNetOpenAuth.Messaging.MessageTransport' DotNetOpenAuth.Messaging.HttpDeliveryMethods,DotNetOpenAuth.OAuth2.Messages.UnauthorizedResponse' DotNetOpenAuth.OAuth2.Messages.AccessTokenSuccessResponse' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest

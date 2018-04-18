@@ -1,21 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IConsole,0,20,4,0,0,39,20,1,1,-1,1,1
-Console,0,24,5,0,21,222,42,0,2,-1,3,7
-Verbosity,0,0,0,0,0,6,0,0,0,-1,0,2
-ConsoleCredentialProvider,0,2,1,0,2,30,5,0,1,-1,4,1
-LocalizedResourceManager,1,1,0,0,1,9,1,0,0,0,0,3
-ILogger,0,1,0,0,0,4,1,1,0,-1,1,0
-MessageLevel,0,0,0,0,0,7,0,0,0,-1,0,21
-CredentialProviderExtensions,1,2,0,0,0,36,6,0,0,1,2,0
-CredentialStore,2,3,1,0,2,29,4,0,1,0,0,1
-ICredentialCache,0,2,0,0,0,5,2,1,0,-1,0,1
-ICredentialProvider,0,1,0,0,0,15,1,3,0,-1,1,2
-IHttpWebResponse,0,0,4,0,0,15,0,0,0,-1,0,2
-IProxyCache,0,2,0,0,0,5,2,1,0,-1,0,1
-CredentialType,0,0,0,0,0,5,0,0,0,-1,0,6
-RequestHelper,0,4,0,0,0,152,15,0,0,-1,6,1
-EncryptionUtility,1,2,0,0,0,17,2,0,0,0,0,1
-HttpClient,0,2,0,0,1,19,6,0,0,-1,5,4
-ProxyCache,7,7,0,0,3,125,21,0,1,0,1,2
-STSAuthHelper,0,2,0,0,2,11,2,0,0,-1,1,1
-Program,0,7,0,0,1,99,18,0,0,-1,3,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NuGet.Common,IConsole,0,20,4,0,0,27,20,2,1,-1,0,4,,NuGet.ConsoleCredentialProvider' NuGet.ServerExtensions.MirrorCommand' NuGet.Test.ConsoleInfo' NuGet.Test.NuGetCommandLine.Commands.ListCommandTests
+NuGet.Common,Console,0,24,5,0,21,261,34,0,2,-1,2,0,NuGet.LocalizedResourceManager' NuGet.MessageLevel,
+NuGet,Verbosity,0,0,0,0,0,6,0,0,0,-1,0,0,,
+NuGet,ConsoleCredentialProvider,0,2,1,0,2,32,3,0,1,-1,3,0,NuGet.Common.IConsole' NuGet.CredentialType' NuGet.LocalizedResourceManager,
+NuGet,LocalizedResourceManager,1,1,0,0,1,10,1,0,0,0,0,4,,NuGet.Common.Console' NuGet.ConsoleCredentialProvider' Bootstrapper.Program' NuGet.Test.LocalizedResourceManagerTest
+NuGet,ILogger,0,1,0,0,0,4,1,5,0,-1,1,14,NuGet.MessageLevel,NuGet.Commands.ProjectFactory' NuGet.ServerExtensions.PackageMirrorer' NuGet.ServerExtensions.PackageServerRepository' NuGet.VisualStudio.DeleteOnRestartManager' NuGet.VisualStudio.ScriptExecutorExtensions' NuGet.VisualStudio.IScriptExecutor' NuGet.VisualStudio.FSharpProjectSystem' NuGet.VisualStudio.PSScriptExecutor' NuGet.VisualStudio.IVsPackageManager' NuGet.VisualStudio.VsPackageManager' NuGet.VisualStudio.WebSiteProjectSystem' NuGet.VisualStudio.VsProjectSystem' NuGet.Test.Mocks.MockFileSystem' NuGet.PowerShell.Commands.Test.MockVsPackageManager
+NuGet,MessageLevel,0,0,0,0,0,7,0,0,0,-1,0,25,,NuGet.Common.Console' NuGet.ILogger' NuGet.Commands.ProjectFactory' NuGet.Common.Console' NuGet.ServerExtensions.MirrorCommand' NuGet.ServerExtensions.PackageMirrorer' NuGet.ServerExtensions.PackageServerRepository' NuGet.Dialog.Providers.PackagesProviderBase' NuGet.Dialog.Providers.PackagesProviderBase' NuGet.Dialog.PackageManagerUI.IProgressWindowOpener' NuGet.Dialog.PackageManagerUI.ProgressWindowOpener' NuGet.VisualStudio.DeleteOnRestartManager' NuGet.VisualStudio.FSharpProjectSystem' NuGet.VisualStudio.PSScriptExecutor' NuGet.VisualStudio.VsPackageManager' NuGet.VisualStudio.WebSiteProjectSystem' NuGet.VisualStudio.VsProjectSystem' NuGet.PowerShell.Commands.FindPackageCommand' NuGet.PowerShell.Commands.GetPackageCommand' NuGet.PowerShell.Commands.NuGetBaseCommand' NuGet.PowerShell.Commands.ProcessPackageBaseCommand' NuGet.Test.MockConsole' NuGet.Test.NuGetCommandLine.Commands.InstallCommandTest' NuGet.Test.ServerExtensions.MirrorCommandTest' NuGet.VisualStudio.Test.VsPackageManagerTest
+NuGet,CredentialProviderExtensions,1,2,0,0,0,37,6,0,0,1,2,0,NuGet.ICredentialProvider' NuGet.CredentialType,
+NuGet,CredentialStore,2,3,1,0,2,33,4,0,1,0,0,1,,NuGet.HttpClient
+NuGet,ICredentialCache,0,2,0,0,0,5,2,1,0,-1,0,1,,NuGet.RequestHelper
+NuGet,ICredentialProvider,0,1,0,0,0,11,1,3,0,-1,1,3,NuGet.CredentialType,NuGet.CredentialProviderExtensions' NuGet.RequestHelper' NuGet.Test.NuGetCommandLine.Commands.InstallCommandTest
+NuGet,IHttpWebResponse,0,0,4,0,0,7,0,1,0,-1,0,2,,NuGet.RequestHelper' NuGet.STSAuthHelper
+NuGet,IProxyCache,0,2,0,0,0,5,2,1,0,-1,0,1,,NuGet.RequestHelper
+NuGet,CredentialType,0,0,0,0,0,5,0,0,0,-1,0,8,,NuGet.ConsoleCredentialProvider' NuGet.CredentialProviderExtensions' NuGet.ICredentialProvider' NuGet.RequestHelper' NuGet.ConsoleCredentialProvider' NuGet.VisualStudio.VisualStudioCredentialProvider' NuGet.Test.NuGetCommandLine.Commands.InstallCommandTest' NuGet.Test.SettingsCredentialProviderTest
+NuGet,RequestHelper,0,4,0,0,0,195,12,0,0,-1,7,1,NuGet.IHttpWebResponse' NuGet.IProxyCache' NuGet.ICredentialCache' NuGet.ICredentialProvider' NuGet.CredentialType' NuGet.STSAuthHelper' NuGet.HttpWebResponseWrapper,NuGet.HttpClient
+NuGet,HttpWebResponseWrapper,1,2,4,0,2,43,3,0,1,0,0,1,,NuGet.RequestHelper
+NuGet,EncryptionUtility,1,2,0,0,0,17,2,0,0,0,0,4,,NuGet.ProxyCache' NuGet.Test.NuGetCommandLine.Commands.InstallCommandTest' NuGet.Test.PackageSourceProviderTest' NuGet.Test.SettingsTests
+NuGet,HttpClient,0,2,0,0,1,25,2,0,0,-1,3,6,NuGet.RequestHelper' NuGet.ProxyCache' NuGet.CredentialStore,Bootstrapper.Program' NuGet.Program' NuGet.Commands.InstallCommand' NuGet.PowerShell.Commands.JsonApiCommandBase<T>' NuGet.Tools.NuGetPackage' NuGet.Test.NuGetCommandLine.Commands.InstallCommandTest
+NuGet,ProxyCache,7,7,0,0,3,139,21,0,1,0,1,3,NuGet.EncryptionUtility,NuGet.HttpClient' Bootstrapper.Program' NuGet.Test.ProxyCacheTest
+NuGet,STSAuthHelper,0,2,0,0,2,11,2,0,0,-1,1,1,NuGet.IHttpWebResponse,NuGet.RequestHelper
+Bootstrapper,Program,0,7,0,0,1,121,11,0,0,-1,3,0,NuGet.ProxyCache' NuGet.HttpClient' NuGet.LocalizedResourceManager,

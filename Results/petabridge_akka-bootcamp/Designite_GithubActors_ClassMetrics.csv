@@ -1,0 +1,41 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GithubActors,ActorPaths,5,0,0,5,0,8,0,0,0,-1,1,5,GithubActors.ActorMetaData,GithubActors.GithubAuth' GithubActors.LauncherForm' GithubActors.Actors.GithubCommanderActor' GithubActors.Actors.GithubValidatorActor' GithubActors.Actors.MainFormActor
+GithubActors,ActorMetaData,0,1,2,0,1,10,1,0,0,-1,0,6,,GithubActors.ActorPaths' GithubActors.GithubAuth' GithubActors.LauncherForm' GithubActors.Actors.GithubCommanderActor' GithubActors.Actors.GithubValidatorActor' GithubActors.Actors.MainFormActor
+GithubActors,GithubAuth,7,6,0,0,1,132,8,0,0,0.5,3,1,GithubActors.Program' GithubActors.ActorMetaData' GithubActors.ActorPaths,GithubActors.Actors.GithubAuthenticationActor
+GithubActors,SimilarRepo,0,2,2,0,2,13,2,0,0,-1,0,1,,GithubActors.Actors.GithubCoordinatorActor
+GithubActors,GithubProgressStats,0,7,7,0,6,68,7,0,0,-1,0,1,,GithubActors.Actors.GithubCoordinatorActor
+GithubActors,ProcessRepo,0,1,1,0,1,8,1,0,0,-1,0,0,,
+GithubActors,RepoKey,0,1,2,0,1,10,1,0,0,-1,0,10,,GithubActors.RepoResultsForm' GithubActors.Actors.CanAcceptJob' GithubActors.Actors.AbleToAcceptJob' GithubActors.Actors.UnableToAcceptJob' GithubActors.Actors.GithubCoordinatorActor' GithubActors.Actors.BeginJob' GithubActors.Actors.JobFailed' GithubActors.Actors.GithubWorkerActor' GithubActors.Actors.QueryStarrers' GithubActors.Actors.LaunchRepoResultsWindow
+GithubActors,RetryableQuery,0,3,5,0,2,22,3,0,0,-1,0,0,,
+GithubActors,GithubClientFactory,0,2,1,0,2,16,2,0,0,-1,0,3,,GithubActors.LauncherForm' GithubActors.Actors.GithubAuthenticationActor' GithubActors.Actors.GithubCoordinatorActor
+GithubActors,LauncherForm,6,6,0,0,1,116,7,0,0,0.5,4,1,GithubActors.Program' GithubActors.ActorMetaData' GithubActors.ActorPaths' GithubActors.GithubClientFactory,GithubActors.Actors.GithubAuthenticationActor
+GithubActors,Program,1,1,0,1,0,19,1,0,0,0,0,3,,GithubActors.GithubAuth' GithubActors.LauncherForm' GithubActors.RepoResultsForm
+GithubActors,RepoResultsForm,15,5,0,0,1,174,6,0,0,0.4,2,1,GithubActors.RepoKey' GithubActors.Program,GithubActors.Actors.MainFormActor
+GithubActors.Actors,GithubAuthenticationActor,2,5,0,0,1,67,5,0,0,0,6,0,GithubActors.GithubAuth' GithubActors.GithubClientFactory' GithubActors.Actors.AuthenticationFailed' GithubActors.Actors.AuthenticationCancelled' GithubActors.Actors.AuthenticationSuccess' GithubActors.LauncherForm,
+GithubActors.Actors,Authenticate,0,1,1,0,1,8,1,0,0,-1,0,0,,
+GithubActors.Actors,AuthenticationFailed,0,0,0,0,0,1,0,0,0,-1,0,1,,GithubActors.Actors.GithubAuthenticationActor
+GithubActors.Actors,AuthenticationCancelled,0,0,0,0,0,1,0,0,0,-1,0,1,,GithubActors.Actors.GithubAuthenticationActor
+GithubActors.Actors,AuthenticationSuccess,0,0,0,0,0,1,0,0,0,-1,0,1,,GithubActors.Actors.GithubAuthenticationActor
+GithubActors.Actors,GithubCommanderActor,2,3,0,0,1,62,3,0,0,0,2,0,GithubActors.ActorMetaData' GithubActors.ActorPaths,
+GithubActors.Actors,CanAcceptJob,0,1,1,0,1,8,1,0,0,-1,1,0,GithubActors.RepoKey,
+GithubActors.Actors,AbleToAcceptJob,0,1,1,0,1,8,1,0,0,-1,1,0,GithubActors.RepoKey,
+GithubActors.Actors,UnableToAcceptJob,0,1,1,0,1,8,1,0,0,-1,1,0,GithubActors.RepoKey,
+GithubActors.Actors,GithubCoordinatorActor,7,6,0,0,1,153,6,0,0,0,7,0,GithubActors.RepoKey' GithubActors.GithubProgressStats' GithubActors.GithubClientFactory' GithubActors.SimilarRepo' GithubActors.Actors.PublishUpdate' GithubActors.Actors.QueryStarrers' GithubActors.Actors.QueryStarrer,
+GithubActors.Actors,BeginJob,0,1,1,0,1,8,1,0,0,-1,1,0,GithubActors.RepoKey,
+GithubActors.Actors,SubscribeToProgressUpdates,0,1,1,0,1,8,1,0,0,-1,0,0,,
+GithubActors.Actors,PublishUpdate,1,1,1,0,0,9,1,0,0,0,0,1,,GithubActors.Actors.GithubCoordinatorActor
+GithubActors.Actors,JobFailed,0,1,1,0,1,8,1,0,0,-1,1,0,GithubActors.RepoKey,
+GithubActors.Actors,RepoResultsActor,4,2,0,0,1,63,2,0,0,0,0,0,,
+GithubActors.Actors,GithubValidatorActor,1,3,0,0,2,95,3,0,0,0.67,3,0,GithubActors.ActorMetaData' GithubActors.ActorPaths' GithubActors.Actors.InvalidRepo,
+GithubActors.Actors,ValidateRepo,0,1,1,0,1,8,1,0,0,-1,0,0,,
+GithubActors.Actors,InvalidRepo,0,1,2,0,1,10,1,0,0,-1,0,1,,GithubActors.Actors.GithubValidatorActor
+GithubActors.Actors,SystemBusy,0,0,0,0,0,1,0,0,0,-1,0,0,,
+GithubActors.Actors,RepoIsValid,1,1,1,0,0,12,1,0,0,0,0,0,,
+GithubActors.Actors,GithubWorkerActor,2,3,0,0,1,86,3,0,0,0,3,0,GithubActors.RepoKey' GithubActors.Actors.QueryStarrer' GithubActors.Actors.QueryStarrers,
+GithubActors.Actors,QueryStarrers,0,1,1,0,1,8,1,0,0,-1,1,2,GithubActors.RepoKey,GithubActors.Actors.GithubCoordinatorActor' GithubActors.Actors.GithubWorkerActor
+GithubActors.Actors,QueryStarrer,0,1,1,0,1,8,1,0,0,-1,0,2,,GithubActors.Actors.GithubCoordinatorActor' GithubActors.Actors.GithubWorkerActor
+GithubActors.Actors,StarredReposForUser,0,1,2,0,1,10,1,0,0,-1,0,0,,
+GithubActors.Actors,MainFormActor,1,5,1,0,1,69,5,0,0,0,3,0,GithubActors.RepoResultsForm' GithubActors.ActorMetaData' GithubActors.ActorPaths,
+GithubActors.Actors,LaunchRepoResultsWindow,0,1,2,0,1,10,1,0,0,-1,1,0,GithubActors.RepoKey,
+GithubActors.Properties,Resources,2,1,2,0,0,44,1,0,0,0,0,0,,
+GithubActors.Properties,Settings,1,0,1,0,0,13,0,0,0,-1,0,0,,

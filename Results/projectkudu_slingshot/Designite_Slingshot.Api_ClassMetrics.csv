@@ -1,0 +1,34 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Slingshot.Abstract,Repository,13,16,5,0,12,210,23,2,0,0.94,6,1,Slingshot.Models.SourceControlInfo' Slingshot.Models.IPullRequestInfo' Slingshot.Helpers.CustomTemplateProperties' Slingshot.Helpers.Constants' Slingshot.Concrete.GitHubRepository' Slingshot.Concrete.BitbucketRepository,Slingshot.Controllers.ARMController
+Slingshot,WebApiConfig,0,1,0,0,1,30,1,0,0,-1,0,1,,Slingshot.WebApiApplication
+Slingshot,WebApiApplication,0,1,0,0,0,8,1,0,0,-1,1,0,Slingshot.WebApiConfig,
+Slingshot.Concrete,BitbucketRepository,0,15,1,0,11,292,29,0,1,-1,7,1,Slingshot.Helpers.Repository' Slingshot.Helpers.Constants' Slingshot.Models.IPullRequestInfo' Slingshot.Helpers.Utils' Slingshot.Models.SourceControlInfo' Slingshot.Concrete.BitBucketPullRequest' Slingshot.Helpers.Path,Slingshot.Abstract.Repository
+Slingshot.Concrete,BitBucketPullRequest,0,2,3,0,2,40,2,0,1,-1,0,1,,Slingshot.Concrete.BitbucketRepository
+Slingshot.Concrete,GitHubRepository,0,5,1,0,5,107,16,0,1,-1,3,1,Slingshot.Helpers.Repository' Slingshot.Helpers.Constants' Slingshot.Helpers.Path,Slingshot.Abstract.Repository
+Slingshot.Concrete,Telemetry,1,2,0,0,1,12,2,0,0,0,0,1,,Slingshot.Concrete.UnhandledExceptionFilter
+Slingshot.Concrete,UnhandledExceptionFilter,0,1,0,0,1,11,1,0,0,-1,1,0,Slingshot.Concrete.Telemetry,
+Slingshot.Controllers,ARMController,5,31,0,0,9,663,57,0,0,0.13,14,0,Slingshot.Helpers.Headers' Slingshot.Helpers.Constants' Slingshot.Helpers.Utils' Slingshot.Models.DeployInputs' Slingshot.Models.ResourceGroupInfo' Slingshot.Models.CreateDeploymentResponse' Slingshot.Helpers.CSM' Slingshot.Abstract.Repository' Slingshot.Models.SubscriptionInfo' Slingshot.Models.IPullRequestInfo' Slingshot.Models.DeploymentNotificationInputs' Slingshot.Helpers.Path' Slingshot.Helpers.Repository' Slingshot.Helpers.CustomTemplateProperties,
+Slingshot.Helpers,Constants,0,0,0,0,0,43,0,0,0,-1,0,5,,Slingshot.Abstract.Repository' Slingshot.Concrete.BitbucketRepository' Slingshot.Concrete.GitHubRepository' Slingshot.Controllers.ARMController' Slingshot.Helpers.Utils
+Slingshot.Helpers,Path,2,0,0,2,0,5,0,0,0,-1,0,3,,Slingshot.Concrete.BitbucketRepository' Slingshot.Concrete.GitHubRepository' Slingshot.Controllers.ARMController
+Slingshot.Helpers,Repository,11,0,0,11,0,14,0,0,0,-1,0,3,,Slingshot.Concrete.BitbucketRepository' Slingshot.Concrete.GitHubRepository' Slingshot.Controllers.ARMController
+Slingshot.Helpers,Headers,4,0,0,4,0,7,0,0,0,-1,0,2,,Slingshot.Controllers.ARMController' Slingshot.Helpers.Utils
+Slingshot.Helpers,CSM,4,0,0,4,0,7,0,0,0,-1,0,2,,Slingshot.Controllers.ARMController' Slingshot.Helpers.Utils
+Slingshot.Helpers,CustomTemplateProperties,1,0,0,1,0,4,0,0,0,-1,0,2,,Slingshot.Abstract.Repository' Slingshot.Controllers.ARMController
+Slingshot.Helpers,HttpClientUtils,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Slingshot.Helpers,Utils,0,8,0,0,5,151,13,0,0,-1,5,2,Slingshot.Helpers.CSM' Slingshot.Helpers.Constants' Slingshot.Models.SourceControlInfo' Slingshot.Models.SubscriptionInfo' Slingshot.Helpers.Headers,Slingshot.Concrete.BitbucketRepository' Slingshot.Controllers.ARMController
+Slingshot.Helpers,ResultOf<T>,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Slingshot.Helpers,ArmResource<T>,0,0,8,0,0,11,0,0,0,-1,0,0,,
+Slingshot.Helpers,AzureEnvs,0,0,0,0,0,7,0,0,0,-1,0,0,,
+Slingshot.Models,CreateDeploymentResponse,0,0,2,0,0,7,0,0,0,-1,0,1,,Slingshot.Controllers.ARMController
+Slingshot.Models,DeploymentNotificationInputs,0,0,2,0,0,5,0,0,0,-1,0,1,,Slingshot.Controllers.ARMController
+Slingshot.Models,DeployInputs,0,0,5,0,0,8,0,0,0,-1,0,1,,Slingshot.Controllers.ARMController
+Slingshot.Models,IPullRequestInfo,0,1,1,0,0,5,1,1,0,-1,0,3,,Slingshot.Abstract.Repository' Slingshot.Concrete.BitbucketRepository' Slingshot.Controllers.ARMController
+Slingshot.Models,SourceControlInfo,0,0,5,0,0,8,0,0,0,-1,0,3,,Slingshot.Abstract.Repository' Slingshot.Concrete.BitbucketRepository' Slingshot.Helpers.Utils
+Slingshot.Models,SubscriptionInfo,0,0,5,0,0,8,0,0,0,-1,0,2,,Slingshot.Controllers.ARMController' Slingshot.Helpers.Utils
+Slingshot.Models,ResourceGroupInfo,0,0,2,0,0,6,0,0,0,-1,0,1,,Slingshot.Controllers.ARMController
+Slingshot.Modules,AADOAuth2AccessToken,1,6,5,1,5,109,8,0,0,0.67,2,1,Slingshot.Modules.OpenIdConfiguration' Slingshot.Modules.ARMOAuthModule,Slingshot.Modules.ARMOAuthModule
+Slingshot.Modules,AADOAuth2Error,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Slingshot.Modules,ARMOAuthModule,6,14,2,6,14,307,40,0,0,0.21,4,1,Slingshot.Modules.AADOAuth2AccessToken' Slingshot.Modules.OpenIdConfiguration' Slingshot.Modules.OpenIdIssuerKeys' Slingshot.Modules.OpenIdIssuerKey,Slingshot.Modules.AADOAuth2AccessToken
+Slingshot.Modules,OpenIdConfiguration,6,3,13,0,3,111,5,0,0,1,1,2,Slingshot.Modules.OpenIdIssuerKeys,Slingshot.Modules.AADOAuth2AccessToken' Slingshot.Modules.ARMOAuthModule
+Slingshot.Modules,OpenIdIssuerKeys,1,1,1,0,1,15,1,0,0,0,0,2,,Slingshot.Modules.ARMOAuthModule' Slingshot.Modules.OpenIdConfiguration
+Slingshot.Modules,OpenIdIssuerKey,1,1,4,0,1,27,3,0,0,0,0,1,,Slingshot.Modules.ARMOAuthModule

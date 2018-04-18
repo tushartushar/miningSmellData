@@ -1,8 +1,10 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConfigNameResolver,0,1,0,0,1,14,2,0,0,-1,0,1
-CustomMessagingProvider,1,4,0,0,4,46,4,0,0,0.75,0,0
-CustomQueueProcessorFactory,0,1,0,0,1,48,2,0,0,-1,0,0
-CustomTraceWriter,0,2,0,0,2,14,2,0,0,-1,0,0
-WorkItem,0,0,5,0,0,23,0,0,0,-1,0,1
-Functions,2,7,1,1,7,108,8,0,0,1,1,1
-Program,3,7,0,0,0,100,11,0,0,0,2,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MiscOperations,ConfigNameResolver,0,1,0,0,1,12,2,0,0,-1,0,0,,
+MiscOperations,CustomMessagingProvider,1,4,0,0,4,44,4,0,0,0.75,1,0,MiscOperations.CustomMessageProcessor,
+MiscOperations,CustomMessageProcessor,0,3,0,0,3,17,3,0,0,-1,0,1,,MiscOperations.CustomMessagingProvider
+MiscOperations,CustomQueueProcessorFactory,0,1,0,0,1,46,2,0,0,-1,1,0,MiscOperations.CustomQueueProcessor,
+MiscOperations,CustomQueueProcessor,0,4,0,0,3,22,4,0,0,-1,0,1,,MiscOperations.CustomQueueProcessorFactory
+MiscOperations,CustomTraceWriter,0,2,0,0,2,11,2,0,0,-1,0,0,,
+MiscOperations,WorkItem,0,0,5,0,0,8,0,0,0,-1,0,0,,
+MiscOperations,Functions,2,7,1,1,7,124,8,0,0,1,0,1,,MiscOperations.Program
+MiscOperations,Program,3,7,0,0,0,106,8,0,0,0,1,0,MiscOperations.Functions,

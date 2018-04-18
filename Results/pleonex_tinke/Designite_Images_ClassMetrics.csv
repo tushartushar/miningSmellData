@@ -1,19 +1,62 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-AnimationControl,29,20,0,0,3,504,33,0,0,0,5,1
-DSIG,2,4,1,0,4,53,6,0,1,0.5,5,0
-NANR,4,2,2,0,2,180,14,0,0,0,1,2
-NCCG,1,3,0,0,3,86,4,0,1,0.67,3,1
-NCCL,1,3,0,0,3,69,5,0,1,0.67,1,1
-NCE,0,0,0,0,0,44,0,0,0,-1,0,0
-NCER,1,8,0,0,3,376,49,0,1,0.5,5,1
-NCGR,1,4,0,0,3,144,11,0,1,0,3,1
-NCLR,1,4,0,0,3,118,14,0,1,0,2,1
-NCOB,2,3,1,0,3,197,25,0,1,0.67,6,1
-NCSC,0,3,0,0,3,139,44,0,1,-1,4,1
-NSCR,1,4,0,0,3,88,8,0,1,0,3,1
-Main,2,7,0,0,7,178,29,0,1,0.57,23,0
-NARUTO_POTN,2,7,0,0,7,58,10,0,1,0.71,14,0
-Naruto_ASC,0,3,0,0,3,22,4,0,1,-1,4,1
-PCT,2,7,0,0,7,40,7,0,1,0.71,5,0
-STD,1,3,0,0,3,71,10,0,1,0.67,9,0
-Resources,2,1,3,0,0,51,1,0,0,0,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Images,AnimationControl,29,20,0,0,3,510,33,0,0,0,6,1,Images.NANR' Images.ABNK' Images.sNANR' Images.Animation' Images.Frame_Data' Images.Frame,Images.Main
+Images,DSIG,2,4,1,0,4,47,6,0,0,1,1,0,Images.sDSIG,
+Images,sDSIG,7,0,0,7,0,10,0,0,0,-1,0,1,,Images.DSIG
+Images,NANR,4,2,2,0,2,182,11,0,0,0,7,2,Images.sNANR' Images.Animation' Images.Frame' Images.ABNK' Images.Frame_Data' Images.LABL' Images.UEXT,Images.AnimationControl' Images.Main
+Images,sNANR,4,0,0,4,0,59,0,0,0,-1,3,2,Images.ABNK' Images.LABL' Images.UEXT,Images.AnimationControl' Images.NANR
+Images,ABNK,9,0,0,9,0,12,0,0,0,-1,1,3,Images.Animation,Images.AnimationControl' Images.NANR' Images.sNANR
+Images,Animation,7,0,0,7,0,10,0,0,0,-1,1,3,Images.Frame,Images.AnimationControl' Images.NANR' Images.ABNK
+Images,Frame,4,0,0,4,0,7,0,0,0,-1,1,3,Images.Frame_Data,Images.AnimationControl' Images.NANR' Images.Animation
+Images,Frame_Data,5,0,0,5,0,10,0,0,0,-1,0,3,,Images.AnimationControl' Images.NANR' Images.Frame
+Images,LABL,12,0,0,12,0,19,0,0,0,-1,0,5,,Images.NANR' Images.sNANR' Images.NCER' Images.sNCER' Images.sNCOB
+Images,UEXT,6,0,0,6,0,11,0,0,0,-1,0,4,,Images.NANR' Images.sNANR' Images.NCER' Images.sNCER
+Images,NCCG,1,3,0,0,3,87,4,0,0,1,5,1,Images.sNCCG' Images.CHAR' Images.ATTR' Images.LINK' Images.CMNT,Images.Main
+Images,sNCCG,5,0,0,5,0,36,0,0,0,-1,4,1,Images.CHAR' Images.ATTR' Images.LINK' Images.CMNT,Images.NCCG
+Images,CHAR,10,0,0,10,0,15,0,0,0,-1,0,4,,Images.NCCG' Images.sNCCG' Images.NCOB' Images.sNCOB
+Images,ATTR,5,0,0,5,0,8,0,0,0,-1,0,2,,Images.NCCG' Images.sNCCG
+Images,LINK,9,0,0,9,0,16,0,0,0,-1,0,5,,Images.NCCG' Images.sNCCG' Images.sNCOB' Images.NCSC' Images.sNCSC
+Images,CMNT,12,0,0,12,0,21,0,0,0,-1,0,7,,Images.NCCG' Images.sNCCG' Images.NCCL' Images.sNCCL' Images.sNCOB' Images.NCSC' Images.sNCSC
+Images,NCCL,1,3,0,0,3,64,5,0,0,1,3,1,Images.sNCCL' Images.PALT' Images.CMNT,Images.Main
+Images,sNCCL,3,0,0,3,0,19,0,0,0,-1,2,1,Images.PALT' Images.CMNT,Images.NCCL
+Images,PALT,4,0,0,4,0,7,0,0,0,-1,0,2,,Images.NCCL' Images.sNCCL
+Images,NCE,0,0,0,0,0,45,0,0,0,-1,0,0,,
+Images,NCER,1,8,0,0,3,386,45,0,0,0.62,5,1,Images.sNCER' Images.CEBK' Images.Bank' Images.LABL' Images.UEXT,Images.Main
+Images,sNCER,4,0,0,4,0,48,0,0,0,-1,3,1,Images.CEBK' Images.LABL' Images.UEXT,Images.NCER
+Images,CEBK,11,0,0,11,0,14,0,0,0,-1,1,2,Images.Bank,Images.NCER' Images.sNCER
+Images,Bank,10,0,0,10,0,14,0,0,0,-1,0,2,,Images.NCER' Images.CEBK
+Images,NCGR,1,4,0,0,3,140,11,0,0,0.5,3,1,Images.sNCGR' Images.RAHC' Images.SOPC,Images.Main
+Images,sNCGR,6,0,0,6,0,9,0,0,0,-1,2,1,Images.RAHC' Images.SOPC,Images.NCGR
+Images,RAHC,11,0,0,11,0,14,0,0,0,-1,0,2,,Images.NCGR' Images.sNCGR
+Images,SOPC,5,0,0,5,0,8,0,0,0,-1,0,2,,Images.NCGR' Images.sNCGR
+Images,NCLR,1,4,0,0,3,110,11,0,0,0.5,3,0,Images.sNCLR' Images.TTLP' Images.PMCP,
+Images,sNCLR,3,0,0,3,0,6,0,0,0,-1,2,1,Images.TTLP' Images.PMCP,Images.NCLR
+Images,TTLP,8,0,0,8,0,11,0,0,0,-1,0,2,,Images.NCLR' Images.sNCLR
+Images,PMCP,6,0,0,6,0,9,0,0,0,-1,0,2,,Images.NCLR' Images.sNCLR
+Images,NCOB,2,3,1,0,3,196,5,0,0,1,3,1,Images.sNCOB' Images.CELL' Images.CHAR,Images.Main
+Images,sNCOB,15,0,0,15,0,114,0,0,0,-1,14,1,Images.CELL' Images.CHAR' Images.GRP' Images.ANIM' Images.ACTL' Images.MODE' Images.LABL' Images.CMNT' Images.CCMT' Images.ECMT' Images.FCMT' Images.CLBL' Images.EXTR' Images.LINK,Images.NCOB
+Images,CELL,4,0,0,4,0,7,0,0,0,-1,0,2,,Images.NCOB' Images.sNCOB
+Images,GRP,5,0,0,5,0,8,0,0,0,-1,0,1,,Images.sNCOB
+Images,ANIM,3,0,0,3,0,6,0,0,0,-1,0,1,,Images.sNCOB
+Images,ACTL,4,0,0,4,0,7,0,0,0,-1,0,1,,Images.sNCOB
+Images,MODE,4,0,0,4,0,7,0,0,0,-1,0,1,,Images.sNCOB
+Images,CCMT,4,0,0,4,0,7,0,0,0,-1,0,1,,Images.sNCOB
+Images,ECMT,5,0,0,5,0,8,0,0,0,-1,0,1,,Images.sNCOB
+Images,FCMT,3,0,0,3,0,6,0,0,0,-1,0,1,,Images.sNCOB
+Images,CLBL,4,0,0,4,0,7,0,0,0,-1,0,1,,Images.sNCOB
+Images,EXTR,3,0,0,3,0,6,0,0,0,-1,0,1,,Images.sNCOB
+Images,NCSC,0,3,0,0,3,139,6,0,0,-1,8,1,Images.sNCSC' Images.SCRN' Images.ESCR' Images.CLRF' Images.CLRC' Images.GRID' Images.LINK' Images.CMNT,Images.Main
+Images,sNCSC,8,0,0,8,0,62,0,0,0,-1,7,1,Images.SCRN' Images.ESCR' Images.CLRF' Images.CLRC' Images.GRID' Images.LINK' Images.CMNT,Images.NCSC
+Images,SCRN,6,0,0,6,0,9,0,0,0,-1,0,2,,Images.NCSC' Images.sNCSC
+Images,ESCR,7,0,0,7,0,10,0,0,0,-1,0,2,,Images.NCSC' Images.sNCSC
+Images,CLRF,5,0,0,5,0,8,0,0,0,-1,0,2,,Images.NCSC' Images.sNCSC
+Images,CLRC,3,0,0,3,0,6,0,0,0,-1,0,2,,Images.NCSC' Images.sNCSC
+Images,GRID,3,0,0,3,0,6,0,0,0,-1,0,2,,Images.NCSC' Images.sNCSC
+Images,NSCR,1,4,0,0,3,84,7,0,0,0.5,2,1,Images.sNSCR' Images.NRCS,Images.Main
+Images,sNSCR,2,0,0,2,0,15,0,0,0,-1,1,1,Images.NRCS,Images.NSCR
+Images,NRCS,7,0,0,7,0,10,0,0,0,-1,0,2,,Images.NSCR' Images.sNSCR
+Images,Main,2,7,0,0,7,206,38,0,0,0.57,9,0,Images.NANR' Images.AnimationControl' Images.NCCL' Images.NCGR' Images.NCCG' Images.NSCR' Images.NCSC' Images.NCOB' Images.NCER,
+Images.Games,NARUTO_POTN,2,7,0,0,7,61,12,0,0,0.71,0,0,,
+Images.Games,Naruto_ASC,0,3,0,0,3,21,4,0,0,-1,0,0,,
+Images.Games,PCT,2,7,0,0,7,40,9,0,0,0.71,0,0,,
+Images.Games,STD,1,3,0,0,3,67,8,0,0,0.67,0,0,,
+Images.Properties,Resources,2,1,3,0,0,48,1,0,0,0,0,0,,

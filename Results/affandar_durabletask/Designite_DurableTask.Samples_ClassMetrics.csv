@@ -1,0 +1,31 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DurableTask.Samples.AverageCalculator,AverageCalculatorOrchestration,0,1,0,0,1,35,5,0,0,-1,1,1,DurableTask.Samples.AverageCalculator.ComputeSumTask,DurableTask.Samples.Program
+DurableTask.Samples.AverageCalculator,ComputeSumTask,0,2,0,0,1,23,4,0,0,-1,0,1,,DurableTask.Samples.AverageCalculator.AverageCalculatorOrchestration
+DurableTask.Samples.Common.WorkItems,EmailInput,4,0,0,4,0,7,0,0,0,-1,0,1,,DurableTask.Samples.Common.WorkItems.EmailTask
+DurableTask.Samples.Common.WorkItems,EmailTask,2,2,0,0,1,30,2,0,0,1,1,0,DurableTask.Samples.Common.WorkItems.EmailInput,
+DurableTask.Samples.Cron,CronOrchestration,0,1,0,0,1,33,4,0,0,-1,1,1,DurableTask.Samples.Cron.CronTask,DurableTask.Samples.Program
+DurableTask.Samples.Cron,CronTask,0,2,0,0,1,14,2,0,0,-1,0,1,,DurableTask.Samples.Cron.CronOrchestration
+DurableTask.Samples.ErrorHandling,ErrorHandlingOrchestration,0,1,0,0,1,41,2,0,0,-1,3,1,DurableTask.Samples.ErrorHandling.GoodTask' DurableTask.Samples.ErrorHandling.BadTask' DurableTask.Samples.ErrorHandling.CleanupTask,DurableTask.Samples.Program
+DurableTask.Samples.ErrorHandling,GoodTask,0,2,0,0,1,11,2,0,0,-1,0,1,,DurableTask.Samples.ErrorHandling.ErrorHandlingOrchestration
+DurableTask.Samples.ErrorHandling,BadTask,0,2,0,0,1,11,2,0,0,-1,0,1,,DurableTask.Samples.ErrorHandling.ErrorHandlingOrchestration
+DurableTask.Samples.ErrorHandling,CleanupTask,0,2,0,0,1,11,2,0,0,-1,0,1,,DurableTask.Samples.ErrorHandling.ErrorHandlingOrchestration
+DurableTask.Samples.Greetings2,GreetingsOrchestration2,0,1,0,0,1,11,1,0,0,-1,0,1,,DurableTask.Samples.Program
+DurableTaskSamples.Greetings,GetUserName,4,3,1,0,1,85,4,0,0,0.67,0,1,,DurableTask.Samples.Greetings.GetUserTask
+DurableTask.Samples.Greetings,GetUserTask,0,2,0,0,1,19,3,0,0,-1,1,1,DurableTaskSamples.Greetings.GetUserName,DurableTask.Samples.Greetings.GreetingsOrchestration
+DurableTask.Samples.Greetings,GreetingsOrchestration,0,1,0,0,1,9,1,0,0,-1,2,1,DurableTask.Samples.Greetings.GetUserTask' DurableTask.Samples.Greetings.SendGreetingTask,DurableTask.Samples.Program
+DurableTask.Samples.Greetings,SendGreetingTask,0,2,0,0,1,23,3,0,0,-1,0,1,,DurableTask.Samples.Greetings.GreetingsOrchestration
+DurableTask.Samples,Options,0,1,6,0,1,44,1,0,0,-1,0,1,,DurableTask.Samples.Program
+DurableTask.Samples,OrchestrationConsoleTraceListener,0,1,0,0,1,38,2,0,0,-1,0,0,,
+DurableTask.Samples,Program,2,2,0,0,1,164,8,0,0,0,10,0,DurableTask.Samples.Options' DurableTask.ServiceBus.ServiceBusOrchestrationService' DurableTask.Samples.Greetings.GreetingsOrchestration' DurableTask.Samples.Greetings2.GreetingsOrchestration2' DurableTask.Samples.Cron.CronOrchestration' DurableTask.Samples.AverageCalculator.AverageCalculatorOrchestration' DurableTask.Samples.ErrorHandling.ErrorHandlingOrchestration' DurableTask.Samples.Signal.SignalOrchestration' DurableTask.Samples.Replat.MigrateOrchestration' DurableTask.Samples.SumOfSquares.SumOfSquaresOrchestration,
+DurableTask.Samples.Replat,Application,0,0,4,0,0,17,0,0,0,-1,0,4,,DurableTask.Samples.Replat.ManagementSqlOrchestrationTasks' DurableTask.Samples.Replat.MigrateOrchestration' DurableTask.Samples.Replat.IMigrationTasks' DurableTask.Samples.Replat.MigrationTasks
+DurableTask.Samples.Replat,RuntimePlatform,0,0,0,0,0,11,0,0,0,-1,0,1,,DurableTask.Samples.Replat.ManagementSqlOrchestrationTasks
+DurableTask.Samples.Replat,IManagementSqlOrchestrationTasks,0,2,0,0,0,5,2,1,0,-1,0,1,,DurableTask.Samples.Replat.MigrateOrchestration
+DurableTask.Samples.Replat,ManagementSqlOrchestrationTasks,0,2,0,0,2,36,2,0,1,-1,2,0,DurableTask.Samples.Replat.Application' DurableTask.Samples.Replat.RuntimePlatform,
+DurableTask.Samples.Replat,MigrateOrchestration,4,9,1,0,3,182,24,0,0,0.22,5,1,DurableTask.Samples.Replat.MigrateOrchestrationStatus' DurableTask.Samples.Replat.IMigrationTasks' DurableTask.Samples.Replat.IManagementSqlOrchestrationTasks' DurableTask.Samples.Replat.Application' DurableTask.Samples.Replat.MigrateOrchestrationData,DurableTask.Samples.Program
+DurableTask.Samples.Replat,MigrateOrchestrationData,0,1,2,0,1,8,1,0,0,-1,0,1,,DurableTask.Samples.Replat.MigrateOrchestration
+DurableTask.Samples.Replat,MigrateOrchestrationStatus,0,1,10,0,1,24,1,0,0,-1,0,1,,DurableTask.Samples.Replat.MigrateOrchestration
+DurableTask.Samples.Replat,IMigrationTasks,0,9,0,0,0,12,9,1,0,-1,1,1,DurableTask.Samples.Replat.Application,DurableTask.Samples.Replat.MigrateOrchestration
+DurableTask.Samples.Replat,MigrationTasks,0,9,0,0,9,53,9,0,1,-1,1,0,DurableTask.Samples.Replat.Application,
+DurableTask.Samples.Signal,SignalOrchestration,1,3,0,0,2,24,4,0,0,0,0,1,,DurableTask.Samples.Program
+DurableTask.Samples.SumOfSquares,SumOfSquaresOrchestration,0,1,0,0,1,50,7,0,0,-1,1,1,DurableTask.Samples.SumOfSquares.SumOfSquaresTask,DurableTask.Samples.Program
+DurableTask.Samples.SumOfSquares,SumOfSquaresTask,0,2,0,0,1,11,2,0,0,-1,0,1,,DurableTask.Samples.SumOfSquares.SumOfSquaresOrchestration

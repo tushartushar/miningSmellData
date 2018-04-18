@@ -1,0 +1,56 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+System,AssemblyVersionInformation,2,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts.Availability,Heartbeat,0,0,4,0,0,19,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts.Availability,Node,0,0,2,0,0,11,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts.Availability,RequestVote,0,0,4,0,0,13,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts.Availability,VoteAgainst,0,0,1,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts.Availability,VoteFor,0,0,2,0,0,5,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,CancelDispatch,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,DisableResource,0,0,2,0,0,6,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,DispatchAccepted,0,0,7,0,0,31,0,1,0,-1,0,0,,
+MassTransit.Steward.Contracts,DispatchCanceled,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,DispatchDelayed,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,DispatchDiscarded,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,DispatchMessage,0,0,6,0,0,30,0,1,0,-1,0,2,,MassTransit.Steward.Core.Consumers.ConsumerDispatchContext' MassTransit.Steward.Core.Consumers.DispatchMessageConsumer
+MassTransit.Steward.Contracts,DispatchRefused,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,DispatchRejected,0,0,7,0,0,31,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,EnableResource,0,0,2,0,0,5,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,ResourceDisabled,0,0,4,0,0,7,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,ResourceImpaired,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,ResourceRestored,0,0,0,0,0,4,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts,ResourceUsageFailed,0,0,7,0,0,31,0,1,0,-1,0,0,,
+MassTransit.Steward.Contracts,UnavailableResource,0,0,3,0,0,15,0,0,0,-1,0,0,,
+MassTransit.Steward.Contracts.Events,ResourceUsageCompleted,0,0,5,0,0,23,0,1,0,-1,0,0,,
+MassTransit.Steward.Core.Agents,MessageDispatchAgent,1,3,0,0,0,97,3,0,1,0,8,0,MassTransit.Logging.ILog' MassTransit.ISendEndpoint' MassTransit.Pipeline.IPipe' MassTransit.Steward.Core.Agents.Dispatched' MassTransit.Steward.Core.DispatchContext' MassTransit.Steward.Core.Agents.DispatchAcceptedEvent' MassTransit.SendContext' MassTransit.ReceiveContext,
+MassTransit.Steward.Core.Agents,DispatchAcceptedEvent,1,1,7,0,1,33,1,0,1,0,1,1,MassTransit.Steward.Core.DispatchContext,MassTransit.Steward.Core.Agents.MessageDispatchAgent
+MassTransit.Steward.Core.Agents,DispatchBodySerializer,2,2,1,0,2,20,2,0,1,0,1,0,MassTransit.SendContext,
+MassTransit.Steward.Core.Agents,Dispatched,0,0,0,0,0,3,0,0,0,-1,0,1,,MassTransit.Steward.Core.Agents.MessageDispatchAgent
+MassTransit.Steward.Core.Consumers,ConsumerDispatchContext,1,7,6,0,7,44,7,0,3,1,8,1,MassTransit.Steward.Contracts.DispatchMessage' MassTransit.ConsumeContext' MassTransit.Steward.Core.Results.AcceptDispatchResult' MassTransit.Steward.Core.Results.DelayDispatchResult' MassTransit.Steward.Core.Results.DiscardDispatchResult' MassTransit.Steward.Core.Results.RefuseDispatchResult' MassTransit.Steward.Core.Results.RejectDispatchResult' MassTransit.Steward.Core.MessageDispatchContext,MassTransit.Steward.Core.Consumers.DispatchMessageConsumer
+MassTransit.Steward.Core.Consumers,DispatchMessageConsumer,2,4,0,0,2,67,6,0,1,0,8,0,MassTransit.Logging.ILog' MassTransit.Steward.Core.DispatchAgent' MassTransit.Steward.Core.Consumers.ConsumerDispatchContext' MassTransit.Steward.Contracts.DispatchMessage' MassTransit.ConsumeContext' MassTransit.ReceiveContext' MassTransit.Serialization.JsonMessageSerializer' MassTransit.Serialization.XmlMessageSerializer,
+MassTransit.Steward.Core,DispatchAgent,0,1,0,0,0,4,1,1,0,-1,1,1,MassTransit.Steward.Core.DispatchContext,MassTransit.Steward.Core.Consumers.DispatchMessageConsumer
+MassTransit.Steward.Core,DispatchContext,0,6,6,0,0,62,6,2,2,-1,1,6,MassTransit.Steward.Core.MessageDispatchContext,MassTransit.Steward.Core.Agents.MessageDispatchAgent' MassTransit.Steward.Core.Agents.DispatchAcceptedEvent' MassTransit.Steward.Core.DispatchAgent' MassTransit.Steward.Core.DispatchPolicy' MassTransit.Steward.Core.Policies.AcceptDispatchPolicy' MassTransit.Steward.Core.Policies.DelegateMessageDispatchPolicy<T>
+MassTransit.Steward.Core,DispatchPolicy,0,1,0,0,0,9,1,2,0,-1,1,0,MassTransit.Steward.Core.DispatchContext,
+MassTransit.Steward.Core,DispatchResult,0,0,0,0,0,3,0,5,0,-1,0,2,,MassTransit.Steward.Core.Policies.AcceptDispatchPolicy' MassTransit.Steward.Core.Policies.DelegateMessageDispatchPolicy<T>
+MassTransit.Steward.Core,MessageDispatchContext,0,0,1,0,0,6,0,0,3,-1,0,4,,MassTransit.Steward.Core.Consumers.ConsumerDispatchContext' MassTransit.Steward.Core.DispatchContext' MassTransit.Steward.Core.MessageDispatchPolicy' MassTransit.Steward.Core.Policies.DelegateMessageDispatchPolicy<T>
+MassTransit.Steward.Core,MessageDispatchPolicy,0,1,0,0,0,5,1,0,0,-1,1,0,MassTransit.Steward.Core.MessageDispatchContext,
+MassTransit.Steward.Core.Distribution.ConsistentHashing,ConsistentHashDistributionStrategy<T>,7,9,0,0,5,119,17,0,1,0.22,1,0,MassTransit.Steward.Core.Distribution.ConsistentHashing.HashGenerator,
+MassTransit.Steward.Core.Distribution.ConsistentHashing,HashGenerator,0,3,0,0,0,6,3,1,0,-1,0,1,,MassTransit.Steward.Core.Distribution.ConsistentHashing.ConsistentHashDistributionStrategy<T>
+MassTransit.Steward.Core.Distribution.ConsistentHashing,Murmur3AUnsafe,3,5,0,0,3,79,9,0,1,0,0,0,,
+MassTransit.Steward.Core.Distribution,DistributionStrategy,0,4,0,0,0,24,4,1,0,-1,0,0,,
+MassTransit.Steward.Core.Policies,AcceptDispatchPolicy,0,1,0,0,1,8,1,0,1,-1,2,0,MassTransit.Steward.Core.DispatchContext' MassTransit.Steward.Core.DispatchResult,
+MassTransit.Steward.Core.Policies,DelegateMessageDispatchPolicy<T>,1,2,0,0,2,17,3,0,1,0,3,0,MassTransit.Steward.Core.MessageDispatchContext' MassTransit.Steward.Core.DispatchContext' MassTransit.Steward.Core.DispatchResult,
+MassTransit.Steward.Core.Results,RefuseDispatchResult,1,1,0,0,1,9,1,0,1,0,0,1,,MassTransit.Steward.Core.Consumers.ConsumerDispatchContext
+MassTransit.Steward.Core.Results,AcceptDispatchResult,0,0,0,0,0,4,0,0,1,-1,0,1,,MassTransit.Steward.Core.Consumers.ConsumerDispatchContext
+MassTransit.Steward.Core.Results,DelayDispatchResult,2,1,0,0,1,11,1,0,1,0,0,1,,MassTransit.Steward.Core.Consumers.ConsumerDispatchContext
+MassTransit.Steward.Core.Results,DiscardDispatchResult,1,1,0,0,1,9,1,0,1,0,0,1,,MassTransit.Steward.Core.Consumers.ConsumerDispatchContext
+MassTransit.Steward.Core.Results,RejectDispatchResult,1,1,0,0,1,9,1,0,1,0,0,1,,MassTransit.Steward.Core.Consumers.ConsumerDispatchContext
+MassTransit.Steward,DispatchCommandExtensions,0,1,0,0,1,64,1,0,0,-1,1,0,MassTransit.ISendEndpoint,
+MassTransit.Steward,DispatchCommandMessage<T>,0,1,6,0,1,26,4,0,1,-1,1,0,MassTransit.Util.TypeMetadataCache,
+MassTransit.Steward,DispatchedMessageHandle<T>,0,1,4,0,1,16,1,0,1,-1,0,0,,
+MassTransit.Steward,DispatchConsumerFactory<TConsumer>,1,3,0,0,1,31,3,0,2,0,5,0,MassTransit.IConsumerFactory' MassTransit.ConsumeContext' MassTransit.ReceiveContext' MassTransit.Pipeline.IPipe' MassTransit.ProbeContext,
+MassTransit.Steward,DispatchException,0,4,0,0,3,20,4,0,1,-1,0,0,,
+MassTransit.Steward,DispatchHandle,0,0,3,0,0,15,0,1,0,-1,0,0,,
+MassTransit.Steward,DispatchMessageHandle,0,0,1,0,0,8,0,1,1,-1,0,0,,
+MassTransit.Steward,ResourceUsageExtensions,0,5,0,0,5,38,8,0,0,-1,4,0,MassTransit.Steward.Messages.ResourceUsageFailedEvent' MassTransit.ConsumeContext' MassTransit.Steward.Messages.ResourceUsageCompletedEvent' MassTransit.Headers,
+MassTransit.Steward.Messages,ResourceUsageCompletedEvent,0,2,5,0,2,21,2,0,1,-1,0,1,,MassTransit.Steward.ResourceUsageExtensions
+MassTransit.Steward.Messages,ResourceUsageFailedEvent,0,1,7,0,1,21,1,0,1,-1,0,1,,MassTransit.Steward.ResourceUsageExtensions

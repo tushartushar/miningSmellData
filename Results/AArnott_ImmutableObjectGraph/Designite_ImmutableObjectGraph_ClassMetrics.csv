@@ -1,20 +1,26 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Adapter,0,2,0,0,2,11,2,0,0,-1,2,0
-ChangeKind,0,0,0,0,0,15,0,0,0,-1,0,0
-CollectionExtensions,0,11,0,0,11,52,11,0,0,-1,0,0
-Comparers,0,2,1,0,2,75,2,0,0,-1,0,1
-ImmutableDeque,2,13,2,0,11,77,13,0,0,0.31,0,0
-IRecursiveType,0,0,1,0,0,6,0,2,0,-1,0,1
-IRecursiveParent,0,1,2,0,0,12,1,3,1,-1,0,1
-IRecursiveParentWithChildReplacement,0,1,0,0,0,4,1,0,2,-1,0,0
-IRecursiveParentWithOrderedChildren,0,1,1,0,0,7,1,1,2,-1,0,1
-IRecursiveParentWithSortedChildren,0,1,0,0,0,4,1,0,3,-1,0,1
-IRecursiveParentWithLookupTable,0,0,3,0,0,12,0,0,2,-1,0,1
-IRecursiveDiffingType,0,6,2,0,0,15,6,0,1,-1,0,1
-ParentedRecursiveType,0,1,2,0,1,16,1,0,0,-1,0,1
-Optional,2,3,3,0,3,72,3,0,0,0,0,0
-RecursiveChildNotUniqueException,0,1,1,0,1,11,1,0,0,-1,0,0
-RecursiveTypeExtensions,1,19,0,1,18,620,84,0,0,0.53,8,0
-IImmutableCollectionAdapter,0,0,1,0,0,6,0,2,0,-1,0,2
-ImmutableListRootAdapter,4,20,3,0,17,129,27,0,1,0,1,1
-ImmutableSetRootAdapter,4,19,3,0,16,108,21,0,1,0,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ImmutableObjectGraph,Adapter,0,2,0,0,2,14,2,0,0,-1,0,1,,ImmutableObjectGraph.Generation.RootedStructGen
+ImmutableObjectGraph,ChangeKind,0,0,0,0,0,14,0,0,0,-1,0,6,,ImmutableObjectGraph.LookupTable<TRecursiveType;TRecursiveParent>' ImmutableObjectGraph.Generation.DeltaGen' ImmutableObjectGraph.Generation.Tests.TestSources.MSBuildTests' ImmutableObjectGraph.Generation.Tests.TestSources.UnattachedProjectTreeNodeTest' ImmutableObjectGraph.Generation.Tests.TestSources.ProjectTreeTests' ImmutableObjectGraph.Generation.Tests.TestSources.FileSystemTests
+ImmutableObjectGraph,CollectionExtensions,0,11,0,0,11,36,11,0,0,-1,0,2,,ImmutableObjectGraph.Generation.CollectionHelpersGen' ImmutableObjectGraph.Generation.FastSpineGen
+ImmutableObjectGraph,Comparers,0,2,1,0,2,62,2,0,0,-1,0,2,,ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.Generation.DeltaGen
+ImmutableObjectGraph,IdentityEqualityComparer,1,3,0,0,2,11,3,0,0,1,1,0,ImmutableObjectGraph.IRecursiveType,
+ImmutableObjectGraph,ParentedIdentityEqualityComparer<TRecursiveParent;TRecursiveType>,1,3,0,0,2,13,3,0,0,1,1,0,ImmutableObjectGraph.ParentedRecursiveType,
+ImmutableObjectGraph,ValueEqualityComparer<TPropertiesEnum;TDiffGram>,3,3,0,0,2,23,6,0,0,0.67,1,0,ImmutableObjectGraph.IRecursiveDiffingType,
+ImmutableObjectGraph,ImmutableDeque,0,3,0,0,3,11,3,0,0,-1,0,3,,ImmutableObjectGraph.ImmutableDeque<T>' ImmutableObjectGraph.LookupTable<TRecursiveType;TRecursiveParent>' ImmutableObjectGraph.Generation.FastSpineGen
+ImmutableObjectGraph,ImmutableDeque<T>,2,10,2,0,8,41,10,0,0,0.3,1,0,ImmutableObjectGraph.ImmutableDeque,
+ImmutableObjectGraph,IRecursiveType,0,0,1,0,0,3,0,2,0,-1,0,11,,ImmutableObjectGraph.IdentityEqualityComparer' ImmutableObjectGraph.IRecursiveParentWithOrderedChildren' ImmutableObjectGraph.IRecursiveParentWithSortedChildren' ImmutableObjectGraph.IRecursiveDiffingType' ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.LookupTable<TRecursiveType;TRecursiveParent>' ImmutableObjectGraph.Generation.DeepMutationGen' ImmutableObjectGraph.Generation.DeltaGen' ImmutableObjectGraph.Generation.EnumerableRecursiveParentGen' ImmutableObjectGraph.Generation.RecursiveTypeGen' ImmutableObjectGraph.Generation.RootedStructGen
+ImmutableObjectGraph,IRecursiveParent,0,1,2,0,0,7,1,3,1,-1,0,4,,ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.Generation.EnumerableRecursiveParentGen' ImmutableObjectGraph.Generation.RootedStructGen' ImmutableObjectGraph.Generation.Tests.TestSources.ProjectTreeTests
+ImmutableObjectGraph,IRecursiveParentWithChildReplacement,0,1,0,0,0,5,1,0,2,-1,0,1,,ImmutableObjectGraph.Generation.FastSpineGen
+ImmutableObjectGraph,IRecursiveParentWithOrderedChildren,0,1,1,0,0,4,1,1,2,-1,1,2,ImmutableObjectGraph.IRecursiveType,ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.Generation.EnumerableRecursiveParentGen
+ImmutableObjectGraph,IRecursiveParentWithSortedChildren,0,1,0,0,0,3,1,0,3,-1,1,2,ImmutableObjectGraph.IRecursiveType,ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.Generation.EnumerableRecursiveParentGen
+ImmutableObjectGraph,IRecursiveParentWithLookupTable,0,0,3,0,0,7,0,0,2,-1,0,2,,ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.Generation.FastSpineGen
+ImmutableObjectGraph,IRecursiveDiffingType,0,6,2,0,0,10,6,0,1,-1,1,3,ImmutableObjectGraph.IRecursiveType,ImmutableObjectGraph.ValueEqualityComparer<TPropertiesEnum;TDiffGram>' ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.Generation.DeltaGen
+ImmutableObjectGraph,ParentedRecursiveType,0,1,2,0,1,11,1,0,0,-1,0,4,,ImmutableObjectGraph.ParentedIdentityEqualityComparer<TRecursiveParent;TRecursiveType>' ImmutableObjectGraph.RecursiveTypeExtensions' ImmutableObjectGraph.Generation.EnumerableRecursiveParentGen' ImmutableObjectGraph.Generation.RootedStructGen
+ImmutableObjectGraph,Optional,2,3,3,0,3,56,3,0,0,0,0,4,,ImmutableObjectGraph.LookupTable<TRecursiveType;TRecursiveParent>' ImmutableObjectGraph.Generation.BuilderGen' ImmutableObjectGraph.Generation.Syntax' ImmutableObjectGraph.Generation.Tests.CodeGenTests
+ImmutableObjectGraph,RecursiveChildNotUniqueException,0,1,1,0,1,6,1,0,0,-1,0,0,,
+ImmutableObjectGraph,RecursiveTypeExtensions,1,19,0,1,18,772,68,0,0,0.37,8,5,ImmutableObjectGraph.IRecursiveType' ImmutableObjectGraph.IRecursiveParent' ImmutableObjectGraph.IRecursiveParentWithLookupTable' ImmutableObjectGraph.ParentedRecursiveType' ImmutableObjectGraph.IRecursiveDiffingType' ImmutableObjectGraph.Comparers' ImmutableObjectGraph.IRecursiveParentWithOrderedChildren' ImmutableObjectGraph.IRecursiveParentWithSortedChildren,ImmutableObjectGraph.Generation.CollectionHelpersGen' ImmutableObjectGraph.Generation.EnumerableRecursiveParentGen' ImmutableObjectGraph.Generation.FastSpineGen' ImmutableObjectGraph.Generation.RootedStructGen' ImmutableObjectGraph.Generation.Tests.TestSources.UnattachedProjectTreeNodeTest2
+ImmutableObjectGraph,LookupTable<TRecursiveType;TRecursiveParent>,1,7,0,1,5,234,24,0,0,0.71,5,0,ImmutableObjectGraph.InitializeLookupResult' ImmutableObjectGraph.Optional' ImmutableObjectGraph.ChangeKind' ImmutableObjectGraph.ImmutableDeque' ImmutableObjectGraph.IRecursiveType,
+ImmutableObjectGraph,InitializeLookupResult,0,0,2,0,0,5,0,0,0,-1,0,2,,ImmutableObjectGraph.LookupTable<TRecursiveType;TRecursiveParent>' ImmutableObjectGraph.Generation.FastSpineGen
+ImmutableObjectGraph.Adapters,IImmutableCollectionAdapter,0,0,1,0,0,3,0,2,0,-1,0,0,,
+ImmutableObjectGraph.Adapters,ImmutableListRootAdapter<TUnrooted;TRooted;TRoot>,4,20,3,0,17,105,27,0,1,0,0,0,,
+ImmutableObjectGraph.Adapters,ImmutableSetRootAdapter<TUnrooted;TRooted;TRoot>,4,19,3,0,16,87,21,0,1,0,0,0,,

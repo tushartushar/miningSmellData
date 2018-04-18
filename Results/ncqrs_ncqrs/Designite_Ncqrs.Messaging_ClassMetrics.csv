@@ -1,0 +1,33 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Ncqrs.Messaging,ConditionalReceivingStrategy,2,2,0,0,2,18,3,0,0,0,2,1,Ncqrs.Messaging.IReceivingStrategy' Ncqrs.Messaging.IncomingMessage,Ncqrs.Messaging.MessageService
+Ncqrs.Messaging,ConditionalSendingStrategy,2,2,0,0,2,19,3,0,0,0,2,1,Ncqrs.Messaging.ISendingStrategy' Ncqrs.Messaging.OutgoingMessage,Ncqrs.Messaging.MessageSendingEventHandler
+Ncqrs.Messaging,Destination,2,1,2,0,1,18,1,0,0,0,0,4,,Ncqrs.Messaging.IAddressing' Ncqrs.Messaging.LocalReceivingStrategy' Ncqrs.Messaging.UrlAddressing' Ncqrs.Messaging.NServiceBus.NsbInternalSendingStrategy
+Ncqrs.Messaging,IAcceptExisting,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Ncqrs.Messaging,IAddressing,0,2,0,0,0,5,2,1,0,-1,1,4,Ncqrs.Messaging.Destination,Ncqrs.Messaging.LocalReceivingStrategy' Ncqrs.Messaging.SetInternalMessageDestination' Ncqrs.Messaging.NServiceBus.NsbInternalReceivingStrategy' Ncqrs.Messaging.NServiceBus.NsbInternalSendingStrategy
+Ncqrs.Messaging,ICreateNew,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Ncqrs.Messaging,IMessageHandler,0,1,0,0,0,8,1,4,0,-1,0,1,,Ncqrs.Messaging.MessageProcessor<T>
+Ncqrs.Messaging,IMessageService,0,1,0,0,0,8,1,1,0,-1,0,1,,NServiceBus.ConfigNcqrs
+Ncqrs.Messaging,IMessagingAggregateRoot,0,1,0,0,0,4,1,1,0,-1,1,2,Ncqrs.Messaging.IncomingMessage,Ncqrs.Messaging.MessageService' Ncqrs.Messaging.Tests.MessagingAggregateRootTests
+Ncqrs.Messaging,IReceivingStrategy,0,1,0,0,0,4,1,3,0,-1,0,3,,Ncqrs.Messaging.ConditionalReceivingStrategy' NServiceBus.ConfigNcqrs' Ncqrs.Messaging.Tests.MessageServiceTests
+Ncqrs.Messaging,ISendingStrategy,0,1,0,0,0,4,1,3,0,-1,1,1,Ncqrs.Messaging.OutgoingMessage,Ncqrs.Messaging.ConditionalSendingStrategy
+Ncqrs.Messaging,ISendMessages,0,1,0,0,0,4,1,1,0,-1,0,2,,Ncqrs.Messaging.Tests.TestMessagingAggregateRoot' Ncqrs.Messaging.Tests.HandlingEvent
+Ncqrs.Messaging,ISetMessageDestination,0,1,0,0,0,4,1,1,0,-1,0,3,,Ncqrs.Messaging.SetInternalMessageDestination' Ncqrs.Messaging.Tests.TestMessagingAggregateRoot' Ncqrs.Messaging.Tests.HandlingEvent
+Ncqrs.Messaging,ISetMessageRequirements,0,1,0,0,0,4,1,1,1,-1,1,3,Ncqrs.Messaging.MessageProcessingRequirements,Ncqrs.Messaging.SetInternalMessageDestination' Ncqrs.Messaging.Tests.TestMessagingAggregateRoot' Ncqrs.Messaging.Tests.HandlingEvent
+Ncqrs.Messaging,LocalReceivingStrategy,1,1,0,0,1,19,1,0,1,0,4,0,Ncqrs.Messaging.IAddressing' Ncqrs.Messaging.OutgoingMessage' Ncqrs.Messaging.Destination' Ncqrs.Messaging.IncomingMessage,
+Ncqrs.Messaging,IncomingMessage,0,0,7,0,0,10,0,1,0,-1,0,13,,Ncqrs.Messaging.ConditionalReceivingStrategy' Ncqrs.Messaging.IMessagingAggregateRoot' Ncqrs.Messaging.LocalReceivingStrategy' Ncqrs.Messaging.MappingReceivingStrategy<T>' Ncqrs.Messaging.MessageProcessingRequirementsViolationException' Ncqrs.Messaging.MessageReceivedEvent' Ncqrs.Messaging.MessageService' Ncqrs.Messaging.MessagingAggregateRoot' Ncqrs.Messaging.IMessageProcessor' Ncqrs.Messaging.MessageProcessor<T>' Ncqrs.Messaging.MessagingContext' Ncqrs.Messaging.NServiceBus.NsbInternalReceivingStrategy' Ncqrs.Messaging.Tests.MessagingAggregateRootTests
+Ncqrs.Messaging,MappingReceivingStrategy<T>,1,2,0,0,2,12,2,0,1,0,1,0,Ncqrs.Messaging.IncomingMessage,
+Ncqrs.Messaging,MessageMappingException,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Ncqrs.Messaging,MessageProcessingRequirements,0,0,0,0,0,16,0,0,0,-1,0,8,,Ncqrs.Messaging.ISetMessageRequirements' Ncqrs.Messaging.MessageProcessingRequirementsViolationException' Ncqrs.Messaging.MessageService' Ncqrs.Messaging.FluentMessageSender' Ncqrs.Messaging.Tests.MessageServiceTests' Ncqrs.Messaging.Tests.TestMessagingAggregateRoot' Ncqrs.Messaging.Tests.ScenarioTest' Ncqrs.Messaging.Tests.HandlingEvent
+Ncqrs.Messaging,MessageProcessingRequirementsViolationException,0,2,0,0,1,15,2,0,0,-1,2,0,Ncqrs.Messaging.IncomingMessage' Ncqrs.Messaging.MessageProcessingRequirements,
+Ncqrs.Messaging,MessageReceivedEvent,0,2,2,0,2,14,2,0,0,-1,1,2,Ncqrs.Messaging.IncomingMessage,Ncqrs.Messaging.MessagingAggregateRoot' Ncqrs.Messaging.MessagingContext
+Ncqrs.Messaging,MessageSendingEventHandler,1,2,0,0,2,16,3,0,0,0,1,2,Ncqrs.Messaging.ConditionalSendingStrategy,NServiceBus.ConfigNcqrs' Ncqrs.Messaging.Tests.ScenarioTest
+Ncqrs.Messaging,MessageSentEvent,0,2,2,0,2,14,2,0,0,-1,1,2,Ncqrs.Messaging.OutgoingMessage,Ncqrs.Messaging.MessagingAggregateRoot' Ncqrs.Messaging.MessagingContext
+Ncqrs.Messaging,MessageService,1,9,0,0,3,55,10,0,1,0.22,4,3,Ncqrs.Messaging.ConditionalReceivingStrategy' Ncqrs.Messaging.IncomingMessage' Ncqrs.Messaging.IMessagingAggregateRoot' Ncqrs.Messaging.MessageProcessingRequirements,NServiceBus.ConfigNcqrs' Ncqrs.Messaging.Tests.MessageServiceTests' Ncqrs.Messaging.Tests.ScenarioTest
+Ncqrs.Messaging,MessagingAggregateRoot,1,8,1,0,2,108,9,5,1,0.88,7,0,Ncqrs.Messaging.MessagingContext' Ncqrs.Messaging.IMessageProcessor' Ncqrs.Messaging.IncomingMessage' Ncqrs.Messaging.OutgoingMessage' Ncqrs.Messaging.FluentMessageSender' Ncqrs.Messaging.MessageReceivedEvent' Ncqrs.Messaging.MessageSentEvent,
+Ncqrs.Messaging,IMessageProcessor,0,1,0,0,0,4,1,1,0,-1,1,1,Ncqrs.Messaging.IncomingMessage,Ncqrs.Messaging.MessagingAggregateRoot
+Ncqrs.Messaging,MessageProcessor<T>,0,1,0,0,1,12,2,0,1,-1,2,0,Ncqrs.Messaging.IMessageHandler' Ncqrs.Messaging.IncomingMessage,
+Ncqrs.Messaging,FluentMessageSender,3,4,0,0,4,30,4,0,2,0,2,1,Ncqrs.Messaging.OutgoingMessage' Ncqrs.Messaging.MessageProcessingRequirements,Ncqrs.Messaging.MessagingAggregateRoot
+Ncqrs.Messaging,MessagingContext,3,6,1,0,6,49,7,0,0,0.5,4,1,Ncqrs.Messaging.IncomingMessage' Ncqrs.Messaging.MessageReceivedEvent' Ncqrs.Messaging.MessageSentEvent' Ncqrs.Messaging.OutgoingMessage,Ncqrs.Messaging.MessagingAggregateRoot
+Ncqrs.Messaging,OutgoingMessage,0,0,7,0,0,26,0,0,0,-1,0,10,,Ncqrs.Messaging.ConditionalSendingStrategy' Ncqrs.Messaging.ISendingStrategy' Ncqrs.Messaging.LocalReceivingStrategy' Ncqrs.Messaging.MessageSentEvent' Ncqrs.Messaging.MessagingAggregateRoot' Ncqrs.Messaging.FluentMessageSender' Ncqrs.Messaging.MessagingContext' Ncqrs.Messaging.NServiceBus.NsbInternalSendingStrategy' Ncqrs.Messaging.NServiceBus.NsbExternalSendingStrategy<TIn;TOut>' Ncqrs.Messaging.Tests.FakeSendingStrategy
+Ncqrs.Messaging,SetInternalMessageDestination,1,1,0,0,1,9,1,0,0,0,3,0,Ncqrs.Messaging.IAddressing' Ncqrs.Messaging.ISetMessageDestination' Ncqrs.Messaging.ISetMessageRequirements,
+Ncqrs.Messaging,UrlAddressing,2,2,0,0,2,22,3,0,1,1,1,0,Ncqrs.Messaging.Destination,

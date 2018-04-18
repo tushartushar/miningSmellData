@@ -1,15 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ConnectivityException,0,3,0,0,3,14,3,0,0,-1,0,0
-Deployer,3,12,3,0,9,121,18,0,1,0.58,5,1
-DeployerFactory,0,1,0,0,1,9,1,0,0,-1,1,0
-Devices,1,4,2,0,3,45,5,0,0,0.75,2,1
-IDeployer,0,8,1,0,0,18,8,1,0,-1,0,1
-Retry,0,1,0,0,1,22,3,0,0,-1,1,1
-FlickGesture,1,5,3,0,3,64,6,0,1,0,0,0
-IGesture,0,1,1,0,0,12,1,3,0,-1,0,1
-ScrollGesture,0,3,4,0,2,57,5,0,1,-1,0,0
-TapGesture,0,2,2,0,2,29,2,0,1,-1,0,0
-EmulatorController,4,12,3,0,10,156,28,0,0,0,3,1
-EmulatorFactory,3,3,1,0,2,57,8,0,0,0,2,1
-VirtualMachine,1,8,2,0,8,54,8,0,0,0,0,2
-VirtualMachineException,0,3,0,0,2,15,3,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Winium.Mobile.Connectivity,ConnectivityException,0,3,0,0,3,16,3,0,0,-1,0,0,,
+Winium.Mobile.Connectivity,Deployer,3,12,3,0,9,124,18,0,1,0.58,5,1,Microsoft.Phone.Tools.Deploy.Patched.DeviceInfo' Winium.Mobile.Connectivity.Devices' Winium.StoreApps.Logging.Logger' Microsoft.Phone.Tools.Deploy.Patched.Utils' Winium.Mobile.Connectivity.Retry,Winium.Mobile.Connectivity.DeployerFactory
+Winium.Mobile.Connectivity,DeployerFactory,0,1,0,0,1,9,1,0,0,-1,1,0,Winium.Mobile.Connectivity.Deployer,
+Winium.Mobile.Connectivity,Devices,1,4,2,0,3,49,5,0,0,0.75,2,1,Microsoft.Phone.Tools.Deploy.Patched.Utils' Microsoft.Phone.Tools.Deploy.Patched.DeviceInfo,Winium.Mobile.Connectivity.Deployer
+Winium.Mobile.Connectivity,IDeployer,0,8,1,0,0,16,8,1,0,-1,0,5,,WindowsPhoneDriver.OuterDriver.CommandExecutors.PullFileExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.PushFileExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.QuitExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.CloseExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.NewSessionExecutor
+Winium.Mobile.Connectivity,Retry,0,1,0,0,1,33,2,0,0,-1,1,1,Winium.StoreApps.Logging.Logger,Winium.Mobile.Connectivity.Deployer
+Winium.Mobile.Connectivity.Gestures,FlickGesture,1,5,3,0,3,59,6,0,1,0,0,0,,
+Winium.Mobile.Connectivity.Gestures,IGesture,0,1,1,0,0,9,1,3,0,-1,0,1,,Winium.Mobile.Connectivity.Emulator.EmulatorController
+Winium.Mobile.Connectivity.Gestures,ScrollGesture,0,3,4,0,2,46,5,0,1,-1,0,0,,
+Winium.Mobile.Connectivity.Gestures,TapGesture,0,2,2,0,2,20,2,0,1,-1,0,0,,
+Winium.Mobile.Connectivity.Emulator,EmulatorController,4,12,3,0,10,184,19,0,0,0,3,17,Winium.Mobile.Connectivity.Emulator.VirtualMachine' Winium.Mobile.Connectivity.Emulator.EmulatorFactory' Winium.Mobile.Connectivity.Gestures.IGesture,WindowsPhoneDriver.OuterDriver.Automator.Automator' WindowsPhoneDriver.OuterDriver.CommandExecutors.ExecuteScriptExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.GoBackExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.GetWindowSizeExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.MouseMoveToExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.MouseClickExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.ClickElementExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.MouseUpExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.MouseDownExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.QuitExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.TouchSingleTapExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.TouchScrollExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.TouchFlickExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.SendKeysToElementExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.ScreenshotExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.CloseExecutor' WindowsPhoneDriver.OuterDriver.CommandExecutors.NewSessionExecutor
+Winium.Mobile.Connectivity.Emulator,PhoneOrientation,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Winium.Mobile.Connectivity.Emulator,EmulatorFactory,3,3,1,0,2,67,8,0,0,0,2,1,Winium.StoreApps.Logging.Logger' Winium.Mobile.Connectivity.Emulator.VirtualMachine,Winium.Mobile.Connectivity.Emulator.EmulatorController
+Winium.Mobile.Connectivity.Emulator,VirtualMachine,1,8,2,0,8,58,8,0,0,0,0,2,,Winium.Mobile.Connectivity.Emulator.EmulatorController' Winium.Mobile.Connectivity.Emulator.EmulatorFactory
+Winium.Mobile.Connectivity.Emulator,VirtualMachineException,0,3,0,0,2,18,3,0,0,-1,0,0,,

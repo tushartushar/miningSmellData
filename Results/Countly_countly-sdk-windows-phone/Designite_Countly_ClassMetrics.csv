@@ -1,21 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Countly,18,28,5,0,13,557,51,0,0,0.14,9,7
-Segmentation,0,2,1,0,2,25,2,0,0,-1,1,4
-SegmentationItem,0,1,2,0,1,30,1,0,0,-1,0,1
-Api,0,11,0,0,8,118,17,0,0,-1,6,1
-BeginSession,0,2,0,0,2,18,2,0,1,-1,2,0
-CountlyEvent,0,2,5,0,1,74,4,0,0,-1,1,2
-CountlyUserDetails,9,4,12,0,3,226,6,0,0,1,2,2
-CustomInfo,0,5,1,0,4,88,12,0,0,-1,1,1
-CustomInfoItem,0,1,2,0,1,30,1,0,0,-1,0,1
-EndSession,0,2,0,0,2,16,2,0,1,-1,1,0
-ExceptionEvent,0,1,15,0,1,140,1,0,0,-1,0,2
-Metrics,0,2,5,0,2,75,2,0,0,-1,0,1
-SessionEvent,0,0,1,0,0,12,0,3,0,-1,0,2
-UpdateSession,0,1,0,0,1,14,1,0,1,-1,1,0
-Device,2,0,8,0,0,90,0,0,0,-1,0,1
-OpenUDID,3,3,2,1,2,59,6,0,0,0.67,0,0
-OSInfo,0,1,2,0,0,31,2,0,0,-1,0,0
-Storage,2,5,1,0,3,92,7,0,0,0,1,1
-TimeHelper,0,1,0,0,1,12,1,0,0,-1,0,3
-ResultResponse,0,0,2,0,0,22,0,0,0,-1,0,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CountlySDK.Entities,BeginSession,0,2,0,0,2,20,2,0,1,-1,3,0,CountlySDK.Helpers.TimeHelper' CountlySDK.Helpers.UtilityHelper' CountlySDK.Entities.Metrics,
+CountlySDK.Entities,CountlyEvent,0,2,5,0,1,64,4,0,0,-1,2,1,CountlySDK.Helpers.UtilityHelper' CountlySDK.Segmentation,CountlySDK.Countly
+CountlySDK.Entities,CustomInfo,0,5,1,0,4,94,13,0,0,-1,1,1,CountlySDK.Entities.CustomInfoItem,CountlySDK.Entities.CountlyUserDetails
+CountlySDK.Entities,CustomInfoItem,0,1,2,0,1,24,1,0,0,-1,0,1,,CountlySDK.Entities.CustomInfo
+CountlySDK.Entities,EndSession,0,2,0,0,2,16,2,0,1,-1,1,0,CountlySDK.Helpers.TimeHelper,
+CountlySDK.Entities,SessionEvent,0,0,1,0,0,9,0,3,0,-1,0,2,,CountlySDK.Countly' CountlySDK.Api
+CountlySDK.Entities,UpdateSession,0,2,0,0,2,17,2,0,1,-1,1,0,CountlySDK.Helpers.TimeHelper,
+CountlySDK.Entities,CountlyUserDetails,9,4,12,0,3,259,6,0,0,1,2,4,CountlySDK.Entities.CustomInfo' CountlySDK.Countly,CountlySDK.Countly' CountlySDK.Api' CountlySample.MainPage' CountlySample.MainPage
+CountlySDK.Entities,Device,2,0,8,0,0,115,0,0,0,-1,0,2,,CountlySDK.Entities.ExceptionEvent' CountlySDK.Countly
+CountlySDK.Entities,ExceptionEvent,0,1,15,0,1,105,1,0,0,-1,1,1,CountlySDK.Entities.Device,CountlySDK.Api
+CountlySDK.Entities,Metrics,0,2,5,0,2,57,2,0,0,-1,0,1,,CountlySDK.Entities.BeginSession
+CountlySDK,Segmentation,0,2,1,0,2,22,2,0,0,-1,0,2,,CountlySDK.Entities.CountlyEvent' CountlySDK.Countly
+CountlySDK,SegmentationItem,0,1,2,0,1,24,1,0,0,-1,0,0,,
+CountlySDK,Countly,18,28,5,0,13,636,50,0,0,0,8,8,CountlySDK.Entities.CountlyUserDetails' CountlySDK.Helpers.Storage' CountlySDK.Entities.Device' CountlySDK.Entities.SessionEvent' CountlySDK.Server.Responses.ResultResponse' CountlySDK.Api' CountlySDK.Segmentation' CountlySDK.Entities.CountlyEvent,CountlySDK.Entities.CountlyUserDetails' CountlySDK.Api' CountlySDK.Helpers.Storage' CountlySample.Program' CountlySample.App' CountlySample.MainPage' CountlySample.App' CountlySample.MainPage
+CountlySDK,Api,0,11,0,0,8,138,16,0,0,-1,5,1,CountlySDK.Helpers.UtilityHelper' CountlySDK.Entities.SessionEvent' CountlySDK.Entities.CountlyUserDetails' CountlySDK.Entities.ExceptionEvent' CountlySDK.Countly,CountlySDK.Countly
+CountlySDK.Helpers,TimeHelper,0,1,0,0,1,12,1,0,0,-1,0,3,,CountlySDK.Entities.BeginSession' CountlySDK.Entities.EndSession' CountlySDK.Entities.UpdateSession
+CountlySDK.Helpers,UtilityHelper,0,2,0,0,2,29,5,0,0,-1,0,3,,CountlySDK.Entities.BeginSession' CountlySDK.Entities.CountlyEvent' CountlySDK.Api
+CountlySDK.Helpers,OpenUDID,3,3,2,1,2,66,6,0,0,0.67,1,0,CountlySDK.Helpers.OpenUDIDErrors,
+CountlySDK.Helpers,OpenUDIDErrors,0,0,0,0,0,6,0,0,0,-1,0,1,,CountlySDK.Helpers.OpenUDID
+CountlySDK.Helpers,OSInfo,0,1,2,0,0,36,2,0,0,-1,0,0,,
+CountlySDK.Helpers,Storage,2,5,1,0,3,111,8,0,0,0,1,1,CountlySDK.Countly,CountlySDK.Countly
+CountlySDK.Server.Responses,ResultResponse,0,0,2,0,0,18,0,0,0,-1,0,1,,CountlySDK.Countly

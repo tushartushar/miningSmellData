@@ -1,10 +1,10 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-RollingWindowThrottler,6,4,3,0,3,105,8,0,0,0.5,1,0
-SystemTime,3,0,3,3,0,22,0,0,0,-1,0,5
-FixedTokenBucket,0,2,0,0,1,14,2,0,1,-1,1,0
-IThrottleStrategy,0,3,1,0,0,9,3,1,0,-1,0,1
-LeakyTokenBucket,2,1,0,0,0,16,4,2,1,0,0,0
-StepDownTokenBucket,0,2,0,0,1,25,5,0,2,-1,1,0
-StepUpLeakyTokenBucket,1,2,0,0,1,24,4,0,2,0,1,0
-Throttler,1,2,0,0,2,14,3,0,0,0,1,0
-TokenBucket,5,5,1,0,3,56,9,2,1,0.8,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bert.RateLimiters,RollingWindowThrottler,6,4,3,0,3,108,9,0,0,0,1,1,Bert.RateLimiters.SystemTime,Bert.RateLimiters.Tests.RollingWindowThrottlerTests
+Bert.RateLimiters,SystemTime,3,0,3,3,0,25,0,0,0,-1,0,7,,Bert.RateLimiters.RollingWindowThrottler' Bert.RateLimiters.FixedTokenBucket' Bert.RateLimiters.StepDownTokenBucket' Bert.RateLimiters.StepUpLeakyTokenBucket' Bert.RateLimiters.TokenBucket' Bert.RateLimiters.Tests.FixedTokenBucketTests' Bert.RateLimiters.Tests.RollingWindowThrottlerTests
+Bert.RateLimiters,FixedTokenBucket,0,2,0,0,1,13,3,0,1,-1,1,1,Bert.RateLimiters.SystemTime,Bert.RateLimiters.Tests.FixedTokenBucketTests
+Bert.RateLimiters,IThrottleStrategy,0,3,1,0,0,7,3,1,0,-1,0,1,,Bert.RateLimiters.Throttler
+Bert.RateLimiters,LeakyTokenBucket,2,1,0,0,0,14,4,2,1,0,0,0,,
+Bert.RateLimiters,StepDownTokenBucket,0,2,0,0,1,24,5,0,2,-1,1,0,Bert.RateLimiters.SystemTime,
+Bert.RateLimiters,StepUpLeakyTokenBucket,1,2,0,0,1,24,4,0,2,0,1,0,Bert.RateLimiters.SystemTime,
+Bert.RateLimiters,Throttler,1,2,0,0,2,13,3,0,0,0,1,0,Bert.RateLimiters.IThrottleStrategy,
+Bert.RateLimiters,TokenBucket,5,5,1,0,3,58,9,2,1,0.4,1,0,Bert.RateLimiters.SystemTime,

@@ -1,9 +1,9 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ListenerService,2,5,0,0,3,26,5,0,0,0.4,4,1
-ListenerTopology,0,1,0,0,1,12,1,0,1,-1,3,0
-MoveToNextWorkflowStateMessage,0,0,1,0,0,7,0,0,0,-1,0,1
-ProcessingJobUpdatedMessage,0,0,3,0,0,15,0,0,0,-1,0,2
-ProcessorService,3,4,0,0,3,32,4,0,0,0,5,1
-Program,0,1,0,0,1,13,3,0,0,-1,2,0
-WorkflowSample,3,2,0,0,2,25,3,0,0,0,3,1
-ReceiverService,2,3,0,0,3,27,6,0,0,0,3,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Chinchilla.Sample.Workflow.Listener,ListenerService,2,5,0,0,3,30,5,0,0,0.4,1,1,Chinchilla.Sample.Workflow.Messages.ProcessingJobUpdatedMessage,Chinchilla.Sample.Workflow.WorkflowSample
+Chinchilla.Sample.Workflow.Listener,ListenerTopology,0,1,0,0,1,12,1,0,0,-1,0,0,,
+Chinchilla.Sample.Workflow.Messages,MoveToNextWorkflowStateMessage,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Chinchilla.Sample.Workflow.Messages,ProcessingJobUpdatedMessage,0,0,3,0,0,6,0,0,0,-1,0,1,,Chinchilla.Sample.Workflow.Listener.ListenerService
+Chinchilla.Sample.Workflow.Processor,ProcessorService,3,4,0,0,3,34,4,0,0,0,0,1,,Chinchilla.Sample.Workflow.WorkflowSample
+Chinchilla.Sample.Workflow,Program,0,1,0,0,1,14,1,0,0,-1,1,0,Chinchilla.Sample.Workflow.WorkflowSample,
+Chinchilla.Sample.Workflow,WorkflowSample,3,2,0,0,2,26,3,0,0,0,3,1,Chinchilla.Sample.Workflow.Receiver.ReceiverService' Chinchilla.Sample.Workflow.Processor.ProcessorService' Chinchilla.Sample.Workflow.Listener.ListenerService,Chinchilla.Sample.Workflow.Program
+Chinchilla.Sample.Workflow.Receiver,ReceiverService,2,3,0,0,3,27,3,0,0,0,0,1,,Chinchilla.Sample.Workflow.WorkflowSample

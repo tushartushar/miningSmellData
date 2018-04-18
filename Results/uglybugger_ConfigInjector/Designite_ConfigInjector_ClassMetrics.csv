@@ -1,43 +1,43 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-CollectionExtensions,0,1,0,0,1,11,4,0,0,-1,0,0
-ExceptionExtensions,0,1,0,0,1,9,1,0,0,-1,0,0
-TypeExtensions,0,2,0,0,0,17,2,0,0,-1,0,0
-ConsoleLogger,0,2,0,0,2,12,2,0,1,-1,0,0
-NullLogger,0,2,0,0,2,9,2,0,1,-1,0,1
-IConfigInjectorLogger,0,2,0,0,0,5,2,2,0,-1,0,3
-EnvironmentVariableSettingsOverrider,2,2,0,1,2,15,2,0,1,0,0,1
-NoOpSettingsOverrider,0,1,0,0,1,8,1,0,1,-1,0,1
-ISettingsOverrider,0,1,0,0,0,4,1,2,0,-1,0,2
-AppSettingsReader,2,4,2,0,1,30,4,0,1,0.5,0,1
-IEnumeratingSettingsReader,0,0,1,0,0,6,0,2,1,-1,0,1
-ObjectSettingsReader,2,4,1,0,2,39,10,0,2,0,0,0
-ISettingsReader,0,1,0,0,0,4,1,1,0,-1,0,2
-ConfigurationConfigurator,0,4,0,0,3,18,4,0,0,-1,3,4
-DoYourThingConfigurationConfigurator,9,10,0,0,9,80,12,0,0,0,14,1
-RegisterWithContainerConfigurationConfigurator,1,2,0,0,1,12,2,0,0,0,3,1
-SettingParsingException,0,4,0,0,3,16,4,0,0,-1,0,0
-AmbiguousSettingException,0,2,0,0,1,16,3,0,1,-1,0,0
-ConfigurationException,0,4,0,0,3,16,4,4,0,-1,0,0
-ConfigurationSettingValidationException,1,4,1,0,2,25,4,0,1,0.75,0,0
-ExtraneousSettingsException,0,2,0,0,1,13,2,0,1,-1,0,0
-MissingSettingException,0,1,0,0,1,8,1,0,1,-1,0,0
-DefaultSettingsReader,1,4,1,0,3,25,4,0,0,0.5,2,1
-DefaultStaticSettingReaderStrategy,0,4,0,0,1,37,5,0,1,-1,5,0
-IStaticSettingReaderStrategy,0,1,0,0,0,4,1,1,0,-1,0,1
-ConfigurationSetting,2,3,3,0,1,43,4,2,1,1,0,0
-IConfigurationSetting,0,0,2,0,0,9,0,1,0,-1,0,4
-DefaultSettingKeyConvention,0,1,0,0,1,7,1,0,1,-1,0,0
-ISettingKeyConvention,0,1,0,0,0,4,1,2,0,-1,0,3
-SettingKeyConventions,0,0,1,0,0,9,0,0,0,-1,1,1
-WithSuffixSettingKeyConvention,1,1,0,0,1,9,1,0,1,0,0,0
-AssemblyScanningTypeProvider,1,2,0,0,2,12,2,0,1,0,0,1
-ExplicitTypeProvider,1,2,0,0,2,12,2,0,1,0,0,1
-FilteredAssemblyScanningTypeProvider,2,2,0,0,2,14,2,0,1,0,0,0
-ITypeProvider,0,1,0,0,0,4,1,3,0,-1,0,4
-YoloValueParser,0,2,1,0,2,17,2,0,1,-1,0,0
-EnumValueParser,0,2,1,0,2,16,2,0,1,-1,0,0
-IValueParser,0,2,1,0,0,8,2,4,0,-1,0,3
-AnyOldParseMethodValueParser,0,3,1,0,2,29,3,0,1,-1,0,0
-UriValueParser,0,2,1,0,2,16,2,0,1,-1,0,0
-SettingsRegistrationService,9,8,0,0,2,103,21,0,0,0,8,1
-SettingValueConverter,1,3,0,0,2,30,5,0,0,0,1,2
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ConfigInjector.Extensions,CollectionExtensions,0,1,0,0,1,11,3,0,0,-1,0,0,,
+ConfigInjector.Extensions,ExceptionExtensions,0,1,0,0,1,8,1,0,0,-1,0,0,,
+ConfigInjector.Extensions,TypeExtensions,0,2,0,0,0,14,5,0,0,-1,0,0,,
+ConfigInjector.Infrastructure.Logging,ConsoleLogger,0,2,0,0,2,12,2,0,1,-1,0,0,,
+ConfigInjector.Infrastructure.Logging,NullLogger,0,2,0,0,2,9,2,0,1,-1,0,0,,
+ConfigInjector.Infrastructure.Logging,IConfigInjectorLogger,0,2,0,0,0,5,2,3,0,-1,0,4,,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.QuickAndDirty.DefaultSettingsReader' ConfigInjector.QuickAndDirty.DefaultStaticSettingReaderStrategy' ConfigInjector.Infrastructure.SettingsRegistrationService
+ConfigInjector.Infrastructure.SettingsOverriders,EnvironmentVariableSettingsOverrider,2,2,0,1,2,15,2,0,1,0,0,2,,ConfigInjector.UnitTests.Tests.InstrumentationTests.WhenLoggingAnOverridenSetting' ConfigInjector.UnitTests.Tests.OverriddenSettingsTests.WhenOverridingASettingViaAnEnvironmentVariable
+ConfigInjector.Infrastructure.SettingsOverriders,NoOpSettingsOverrider,0,1,0,0,1,8,1,0,1,-1,0,2,,ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingNestedSettingsFromAnObjectSettingsReader' ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingSettingsUsingAnObjectSettingsReader
+ConfigInjector.Infrastructure.SettingsOverriders,ISettingsOverrider,0,1,0,0,0,4,1,3,0,-1,0,2,,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.Infrastructure.SettingsRegistrationService
+ConfigInjector.Infrastructure.SettingsReaders,AppSettingsReader,2,4,2,0,2,29,4,0,1,0.5,0,1,,ConfigInjector.UnitTests.Tests.AppSettingsReaderTests.WhenSpecifyingKeysToIgnoreViaARuleset
+ConfigInjector.Infrastructure.SettingsReaders,IEnumeratingSettingsReader,0,0,1,0,0,4,0,3,1,-1,0,1,,ConfigInjector.Infrastructure.SettingsRegistrationService
+ConfigInjector.Infrastructure.SettingsReaders,ObjectSettingsReader,2,4,1,0,2,39,8,0,2,0,0,2,,ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingNestedSettingsFromAnObjectSettingsReader' ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingSettingsUsingAnObjectSettingsReader
+ConfigInjector.Infrastructure.SettingsReaders,ISettingsReader,0,1,0,0,0,4,1,4,0,-1,0,2,,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.Infrastructure.SettingsRegistrationService
+ConfigInjector.Configuration,ConfigurationConfigurator,0,4,0,0,3,18,4,0,0,-1,2,6,ConfigInjector.Configuration.RegisterWithContainerConfigurationConfigurator' ConfigInjector.Infrastructure.TypeProviders.ITypeProvider,ConfigInjector.QuickAndDirty.DefaultStaticSettingReaderStrategy' Sample.WithAutofac.Program' Sample.WithNinject.Program' Sample.WithWindsor.Program' Sample.IntegrationTests.WhenConstructingSomePerson' Sample.IntegrationTests.WhenConstructingSomePersonWithExclusionRules
+ConfigInjector.Configuration,DoYourThingConfigurationConfigurator,9,10,0,0,9,88,12,0,0,0,9,7,ConfigInjector.Infrastructure.TypeProviders.ITypeProvider' ConfigInjector.Infrastructure.Logging.IConfigInjectorLogger' ConfigInjector.Infrastructure.SettingsOverriders.ISettingsOverrider' ConfigInjector.Infrastructure.SettingsReaders.ISettingsReader' ConfigInjector.Infrastructure.SettingsConventions.SettingKeyConventions' ConfigInjector.Infrastructure.ValueParsers.IValueParser' ConfigInjector.Infrastructure.SettingsConventions.ISettingKeyConvention' ConfigInjector.Infrastructure.SettingValueConverter' ConfigInjector.Infrastructure.SettingsRegistrationService,ConfigInjector.Configuration.RegisterWithContainerConfigurationConfigurator' ConfigInjector.QuickAndDirty.DefaultStaticSettingReaderStrategy' Sample.WithAutofac.Program' Sample.WithNinject.Program' Sample.WithWindsor.Program' Sample.IntegrationTests.WhenConstructingSomePerson' Sample.IntegrationTests.WhenConstructingSomePersonWithExclusionRules
+ConfigInjector.Configuration,RegisterWithContainerConfigurationConfigurator,1,2,0,0,1,12,2,0,0,0,2,7,ConfigInjector.Infrastructure.TypeProviders.ITypeProvider' ConfigInjector.Configuration.DoYourThingConfigurationConfigurator,ConfigInjector.Configuration.ConfigurationConfigurator' ConfigInjector.QuickAndDirty.DefaultStaticSettingReaderStrategy' Sample.WithAutofac.Program' Sample.WithNinject.Program' Sample.WithWindsor.Program' Sample.IntegrationTests.WhenConstructingSomePerson' Sample.IntegrationTests.WhenConstructingSomePersonWithExclusionRules
+ConfigInjector.Exceptions,SettingParsingException,0,4,0,0,3,16,4,0,0,-1,0,1,,ConfigInjector.Infrastructure.SettingValueConverter
+ConfigInjector.Exceptions,AmbiguousSettingException,0,2,0,0,1,18,3,0,1,-1,0,0,,
+ConfigInjector.Exceptions,ConfigurationException,0,4,0,0,3,16,4,4,0,-1,0,0,,
+ConfigInjector.Exceptions,ConfigurationSettingValidationException,1,4,1,0,2,24,4,0,1,0.75,0,0,,
+ConfigInjector.Exceptions,ExtraneousSettingsException,0,2,0,0,1,13,2,0,1,-1,0,0,,
+ConfigInjector.Exceptions,MissingSettingException,0,1,0,0,1,8,1,0,1,-1,0,0,,
+ConfigInjector.QuickAndDirty,DefaultSettingsReader,1,4,1,0,3,22,4,0,0,0.5,2,3,ConfigInjector.QuickAndDirty.IStaticSettingReaderStrategy' ConfigInjector.Infrastructure.Logging.IConfigInjectorLogger,ConfigInjector.QuickAndDirty.DefaultStaticSettingReaderStrategy' Sample.IntegrationTests.WhenReadingAnOverriddenSettingUsingTheStaticSettingsReader' Sample.IntegrationTests.WhenReadingASettingUsingTheStaticSettingsReader
+ConfigInjector.QuickAndDirty,DefaultStaticSettingReaderStrategy,0,4,0,0,1,53,4,0,1,-1,7,0,ConfigInjector.Infrastructure.TypeProviders.ExplicitTypeProvider' ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.Configuration.RegisterWithContainerConfigurationConfigurator' ConfigInjector.Configuration.ConfigurationConfigurator' ConfigInjector.Infrastructure.ValueParsers.IValueParser' ConfigInjector.Infrastructure.Logging.IConfigInjectorLogger' ConfigInjector.QuickAndDirty.DefaultSettingsReader,
+ConfigInjector.QuickAndDirty,IStaticSettingReaderStrategy,0,1,0,0,0,4,1,1,0,-1,0,1,,ConfigInjector.QuickAndDirty.DefaultSettingsReader
+ConfigInjector,ConfigurationSetting<T>,2,3,3,0,1,39,4,0,1,1,0,0,,
+ConfigInjector,IConfigurationSetting,0,0,2,0,0,5,0,1,0,-1,0,3,,ConfigInjector.Infrastructure.SettingsRegistrationService' Sample.WithNinject.Program' Sample.WithWindsor.Program
+ConfigInjector.Infrastructure.SettingsConventions,DefaultSettingKeyConvention,0,1,0,0,1,7,1,0,1,-1,0,0,,
+ConfigInjector.Infrastructure.SettingsConventions,ISettingKeyConvention,0,1,0,0,0,4,1,2,0,-1,0,2,,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.Infrastructure.SettingsRegistrationService
+ConfigInjector.Infrastructure.SettingsConventions,SettingKeyConventions,0,0,1,0,0,17,0,0,0,-1,0,9,,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.UnitTests.Tests.InstrumentationTests.WhenLoggingAnOverridenSetting' ConfigInjector.UnitTests.Tests.InstrumentationTests.WhenLoggingASetting' ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingNestedSettingsFromAnObjectSettingsReader' ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingSettingsUsingAnObjectSettingsReader' ConfigInjector.UnitTests.Tests.OverriddenSettingsTests.WhenThereAreSettingsThatAreOverridden' ConfigInjector.UnitTests.Tests.MissingSettingsTests.WhenReadingTheValueForASettingThatDoesNotExist' ConfigInjector.UnitTests.Tests.ExtraneousSettingsTests.WhenThereAreSettingsThatExistInWebConfigButAreNotAccountedFor' ConfigInjector.UnitTests.Tests.AmbiguousMatchTests.WhenThereAreSettingsThatHaveAmbiguousMatchesInWebConfig
+ConfigInjector.Infrastructure.SettingsConventions,WithSuffixSettingKeyConvention,1,1,0,0,1,11,1,0,1,0,0,0,,
+ConfigInjector.Infrastructure.TypeProviders,AssemblyScanningTypeProvider,1,2,0,0,2,12,2,0,1,0,0,0,,
+ConfigInjector.Infrastructure.TypeProviders,ExplicitTypeProvider,1,2,0,0,2,12,2,0,1,0,0,1,,ConfigInjector.QuickAndDirty.DefaultStaticSettingReaderStrategy
+ConfigInjector.Infrastructure.TypeProviders,FilteredAssemblyScanningTypeProvider,2,2,0,0,2,16,2,0,1,0,0,0,,
+ConfigInjector.Infrastructure.TypeProviders,ITypeProvider,0,1,0,0,0,4,1,4,0,-1,0,4,,ConfigInjector.Configuration.ConfigurationConfigurator' ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.Configuration.RegisterWithContainerConfigurationConfigurator' ConfigInjector.Infrastructure.SettingsRegistrationService
+ConfigInjector.Infrastructure.ValueParsers,YoloValueParser,0,2,1,0,2,15,2,0,1,-1,0,0,,
+ConfigInjector.Infrastructure.ValueParsers,EnumValueParser,0,2,1,0,2,15,2,0,1,-1,0,0,,
+ConfigInjector.Infrastructure.ValueParsers,IValueParser,0,2,1,0,0,6,2,5,0,-1,0,3,,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.QuickAndDirty.DefaultStaticSettingReaderStrategy' ConfigInjector.Infrastructure.SettingValueConverter
+ConfigInjector.Infrastructure.ValueParsers,AnyOldParseMethodValueParser,0,3,1,0,2,22,3,0,1,-1,0,0,,
+ConfigInjector.Infrastructure.ValueParsers,UriValueParser,0,2,1,0,2,15,2,0,1,-1,0,0,,
+ConfigInjector.Infrastructure,SettingsRegistrationService,9,8,0,0,2,116,22,0,0,0,8,9,ConfigInjector.Infrastructure.Logging.IConfigInjectorLogger' ConfigInjector.Infrastructure.SettingsConventions.ISettingKeyConvention' ConfigInjector.Infrastructure.SettingsOverriders.ISettingsOverrider' ConfigInjector.Infrastructure.SettingsReaders.ISettingsReader' ConfigInjector.Infrastructure.SettingValueConverter' ConfigInjector.Infrastructure.TypeProviders.ITypeProvider' ConfigInjector.IConfigurationSetting' ConfigInjector.Infrastructure.SettingsReaders.IEnumeratingSettingsReader,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.UnitTests.Tests.InstrumentationTests.WhenLoggingAnOverridenSetting' ConfigInjector.UnitTests.Tests.InstrumentationTests.WhenLoggingASetting' ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingNestedSettingsFromAnObjectSettingsReader' ConfigInjector.UnitTests.Tests.ObjectSettingsReaderTests.WhenReadingSettingsUsingAnObjectSettingsReader' ConfigInjector.UnitTests.Tests.OverriddenSettingsTests.WhenThereAreSettingsThatAreOverridden' ConfigInjector.UnitTests.Tests.MissingSettingsTests.WhenReadingTheValueForASettingThatDoesNotExist' ConfigInjector.UnitTests.Tests.ExtraneousSettingsTests.WhenThereAreSettingsThatExistInWebConfigButAreNotAccountedFor' ConfigInjector.UnitTests.Tests.AmbiguousMatchTests.WhenThereAreSettingsThatHaveAmbiguousMatchesInWebConfig
+ConfigInjector.Infrastructure,SettingValueConverter,1,3,0,0,2,44,5,0,0,0,2,4,ConfigInjector.Infrastructure.ValueParsers.IValueParser' ConfigInjector.Exceptions.SettingParsingException,ConfigInjector.Configuration.DoYourThingConfigurationConfigurator' ConfigInjector.Infrastructure.SettingsRegistrationService' ConfigInjector.UnitTests.Tests.ValueConversionTests.WhenConvertingConfigurationSettingValues' ConfigInjector.UnitTests.Tests.ValueConversionTests.WhenParsingASettingThatHasAnInvalidValue

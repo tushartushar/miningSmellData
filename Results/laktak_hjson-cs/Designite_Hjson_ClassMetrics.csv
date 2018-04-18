@@ -1,23 +1,23 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-IHjsonDsfProvider,0,2,2,0,0,18,2,3,0,-1,1,4
-HjsonDsf,0,6,0,0,3,54,12,0,0,-1,5,2
-DsfMath,1,3,2,0,2,52,11,0,1,0.67,2,1
-DsfHex,2,3,2,0,3,34,4,0,1,0.67,2,1
-DsfDate,2,2,2,0,2,31,3,0,1,1,2,1
-HjsonOptions,1,1,3,0,1,31,1,0,0,0,1,6
-HjsonValue,0,20,0,0,16,144,31,0,0,-1,5,5
-WscJsonObject,0,1,3,0,1,25,1,0,1,-1,0,3
-WscJsonArray,0,1,1,0,1,14,1,0,1,-1,0,2
-IJsonReader,0,3,0,0,0,10,3,0,0,-1,1,5
-JsonArray,1,13,3,0,11,99,15,1,1,0,2,3
-JsonObject,1,17,6,0,10,146,25,1,1,0.24,2,3
-JsonPrimitive,1,13,2,0,11,106,21,0,1,0.15,1,1
-HjsonReader,2,12,0,0,3,430,134,0,1,0,10,2
-BaseReader,6,14,5,0,12,273,86,2,0,0,1,1
-HjsonWriter,4,14,0,0,2,254,88,0,0,0.14,11,0
-JsonUtil,1,25,0,0,23,271,37,0,0,0.28,4,0
-JsonWriter,1,6,0,0,2,126,55,0,0,0,2,1
-JsonType,0,0,0,0,0,17,0,0,0,-1,0,10
-Stringify,0,0,0,0,0,10,0,0,0,-1,0,3
-JsonValue,1,14,3,0,13,260,23,3,0,1,7,15
-JsonReader,0,3,0,0,2,89,36,0,1,-1,4,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Hjson,BaseReader,6,14,5,0,12,243,57,2,0,0,1,2,Hjson.IJsonReader,Hjson.HjsonReader' Hjson.HjsonWriter
+Hjson,IHjsonDsfProvider,0,2,2,0,0,11,2,3,0,-1,1,1,Hjson.JsonValue,Hjson.HjsonOptions
+Hjson,HjsonDsf,0,6,0,0,3,50,11,0,0,-1,4,2,Hjson.DsfMath' Hjson.DsfHex' Hjson.DsfDate' Hjson.JsonValue,Hjson.HjsonReader' Hjson.HjsonWriter
+Hjson,DsfMath,1,3,2,0,2,39,6,0,1,0.67,2,1,Hjson.JsonValue' Hjson.JsonType,Hjson.HjsonDsf
+Hjson,DsfHex,2,3,2,0,3,28,5,0,1,0.67,2,1,Hjson.JsonValue' Hjson.JsonType,Hjson.HjsonDsf
+Hjson,DsfDate,2,2,2,0,2,26,4,0,1,1,2,1,Hjson.JsonValue' Hjson.JsonType,Hjson.HjsonDsf
+Hjson,HjsonOptions,1,1,3,0,1,21,1,0,0,0,1,4,Hjson.IHjsonDsfProvider,Hjson.HjsonReader' Hjson.HjsonValue' Hjson.HjsonWriter' Hjson.JsonValue
+Hjson,HjsonReader,2,12,0,0,3,384,76,0,1,0.25,10,2,Hjson.HjsonOptions' Hjson.IJsonReader' Hjson.JsonValue' Hjson.BaseReader' Hjson.JsonArray' Hjson.WscJsonArray' Hjson.JsonObject' Hjson.WscJsonObject' Hjson.HjsonValue' Hjson.HjsonDsf,Hjson.HjsonValue' Hjson.HjsonWriter
+Hjson,HjsonValue,0,20,0,0,16,122,29,0,0,-1,6,6,Hjson.JsonValue' Hjson.HjsonOptions' Hjson.IJsonReader' Hjson.HjsonReader' Hjson.Stringify' Hjson.HjsonWriter,HjsonCli.Program' Hjson.HjsonReader' Hjson.HjsonWriter' Hjson.JsonValue' HjsonCli.Program' HjsonSample.Program
+Hjson,HjsonWriter,4,14,0,0,2,239,33,0,0,0.29,12,1,Hjson.HjsonOptions' Hjson.JsonValue' Hjson.JsonObject' Hjson.WscJsonObject' Hjson.WscJsonArray' Hjson.HjsonDsf' Hjson.JsonType' Hjson.JsonPrimitive' Hjson.JsonWriter' Hjson.BaseReader' Hjson.HjsonValue' Hjson.HjsonReader,Hjson.HjsonValue
+Hjson,WscJsonObject,0,1,3,0,1,15,1,0,1,-1,0,3,,Hjson.HjsonReader' Hjson.HjsonWriter' HjsonSample.Program
+Hjson,WscJsonArray,0,1,1,0,1,10,1,0,1,-1,0,2,,Hjson.HjsonReader' Hjson.HjsonWriter
+Hjson,IJsonReader,0,3,0,0,0,9,3,0,0,-1,1,5,Hjson.JsonValue,Hjson.BaseReader' Hjson.HjsonReader' Hjson.HjsonValue' Hjson.JsonReader' Hjson.JsonValue
+Hjson,JsonArray,1,13,3,0,11,90,15,1,1,0,1,3,Hjson.JsonValue,Hjson.HjsonReader' Hjson.JsonReader' Hjson.JsonUtil
+Hjson,JsonObject,1,17,6,0,10,128,24,1,1,0.12,1,5,Hjson.JsonValue,Hjson.HjsonReader' Hjson.HjsonWriter' Hjson.JsonReader' Hjson.JsonUtil' HjsonSample.Program
+Hjson,JsonPrimitive,1,13,2,0,11,75,14,0,1,0.15,1,3,Hjson.JsonType,Hjson.HjsonWriter' Hjson.JsonValue' Hjson.JsonWriter
+Hjson,JsonReader,0,3,0,0,2,85,6,0,1,-1,4,1,Hjson.IJsonReader' Hjson.JsonValue' Hjson.JsonArray' Hjson.JsonObject,Hjson.JsonValue
+Hjson,JsonType,0,0,0,0,0,15,0,0,0,-1,0,7,,Hjson.DsfMath' Hjson.DsfHex' Hjson.DsfDate' Hjson.HjsonWriter' Hjson.JsonPrimitive' Hjson.JsonUtil' Hjson.JsonWriter
+Hjson,JsonUtil,1,25,0,0,23,209,50,0,0,0.28,4,0,Hjson.JsonType' Hjson.JsonValue' Hjson.JsonObject' Hjson.JsonArray,
+Hjson,Stringify,0,0,0,0,0,9,0,0,0,-1,0,4,,HjsonCli.Program' Hjson.HjsonValue' Hjson.JsonValue' HjsonCli.Program
+Hjson,JsonValue,1,14,3,0,13,197,21,3,0,0.93,7,17,Hjson.Stringify' Hjson.HjsonValue' Hjson.JsonWriter' Hjson.HjsonOptions' Hjson.JsonPrimitive' Hjson.JsonReader' Hjson.IJsonReader,HjsonCli.Program' Hjson.IHjsonDsfProvider' Hjson.HjsonDsf' Hjson.DsfMath' Hjson.DsfHex' Hjson.DsfDate' Hjson.HjsonReader' Hjson.HjsonValue' Hjson.HjsonWriter' Hjson.IJsonReader' Hjson.JsonArray' Hjson.JsonObject' Hjson.JsonReader' Hjson.JsonUtil' Hjson.JsonWriter' HjsonCli.Program' HjsonSample.Program
+Hjson,JsonWriter,1,6,0,0,2,118,15,0,0,0.33,3,2,Hjson.JsonValue' Hjson.JsonType' Hjson.JsonPrimitive,Hjson.HjsonWriter' Hjson.JsonValue

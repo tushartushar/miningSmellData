@@ -1,17 +1,22 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-Category,0,3,3,0,3,27,3,0,0,-1,0,3
-Comment,3,0,0,3,0,6,0,0,0,-1,0,1
-FileInfo,5,0,0,5,0,8,0,0,0,-1,0,0
-MyHttpUtility,0,31,0,0,19,413,82,0,0,-1,0,1
-ModInfoDb,6,0,0,6,0,13,0,0,0,-1,1,3
-SimpleLuaParser,4,16,0,0,6,326,43,0,0,0,2,0
-Utils,0,7,0,0,5,47,8,0,0,-1,1,24
-WidgetBrowser,2,49,0,0,43,479,77,1,0,0.22,6,1
-WidgetBrowserVcs,0,5,0,0,3,86,14,0,1,-1,4,1
-WidgetState,0,0,0,0,0,8,0,0,0,-1,0,1
-WidgetInfo,33,3,0,33,3,80,3,0,0,0,1,4
-WidgetList,0,12,0,0,12,207,34,0,0,-1,1,5
-WidgetName,11,0,0,11,0,14,0,0,0,-1,0,4
-WidgetBrowserAdmin,4,29,0,0,27,217,34,1,1,0,3,1
-Md5Cached,1,5,0,0,5,59,9,0,0,0.6,0,0
-MultiplatformIni,5,9,0,0,7,180,19,0,0,0.22,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+LuaManagerLib,Category,0,3,3,0,3,16,3,0,0,-1,0,2,,LuaAdmin.WidgetAdmin' LuaManagerLib.WidgetBrowser
+LuaManagerLib,Comment,3,0,0,3,0,6,0,0,0,-1,0,1,,LuaManagerLib.WidgetBrowser
+LuaManagerLib,FileInfo,5,0,0,5,0,8,0,0,0,-1,0,4,,LuaAdmin.WidgetAdmin' LuaManagerLib.WidgetBrowser' LuaManagerLib.WidgetBrowserVcs' LuaManagerLib.WidgetList
+LuaManagerLib,MyHttpUtility,0,31,0,0,19,378,90,0,0,-1,1,1,LuaManagerLib.UrlDecoder,LuaManagerLib.Utils
+LuaManagerLib,UrlDecoder,6,5,0,0,0,41,10,0,0,0,0,1,,LuaManagerLib.MyHttpUtility
+LuaManagerLib,ModInfoDb,6,0,0,6,0,11,0,0,0,-1,1,2,LuaManagerLib.WidgetList,LuaAdmin.WidgetAdmin' LuaManagerLib.WidgetBrowser
+LuaManagerLib,SimpleLuaParser,4,16,0,0,6,388,37,0,0,0,4,0,LuaSharp.Lua' LuaSharp.LuaTable' LuaManagerLib.CachedWidgetInfo' LuaManagerLib.CachedOrderInfo,
+LuaManagerLib,CachedWidgetInfo,3,0,0,3,0,6,0,0,0,-1,0,1,,LuaManagerLib.SimpleLuaParser
+LuaManagerLib,CachedOrderInfo,2,0,0,2,0,5,0,0,0,-1,0,1,,LuaManagerLib.SimpleLuaParser
+LuaManagerLib,Utils,0,7,0,0,5,47,8,0,0,-1,1,5,LuaManagerLib.MyHttpUtility,LuaAdmin.WidgetAdmin' LuaAdminCmd.Program' LuaManagerLib.WidgetBrowser' LuaManagerLib.WidgetBrowserVcs' LuaManagerLib.WidgetBrowserAdmin
+LuaManagerLib,WidgetBrowser,2,49,0,0,43,515,75,1,0,0,7,1,LuaManagerLib.WidgetList' LuaManagerLib.ModInfoDb' LuaManagerLib.WidgetInfo' LuaManagerLib.Utils' LuaManagerLib.FileInfo' LuaManagerLib.Category' LuaManagerLib.Comment,LuaManagerLib.WidgetBrowserAdmin
+LuaManagerLib,WidgetBrowserVcs,0,5,0,0,3,100,14,0,1,-1,5,1,LuaManagerLib.FileInfo' LuaManagerLib.Utils' LuaManagerLib.WidgetList' LuaManagerLib.WidgetInfo' LuaManagerLib.WidgetName,LuaAdminCmd.Program
+LuaManagerLib,WidgetState,0,0,0,0,0,8,0,0,0,-1,0,1,,LuaManagerLib.WidgetInfo
+LuaManagerLib,WidgetInfo,33,3,0,33,3,81,3,0,0,0,1,4,LuaManagerLib.WidgetState,LuaAdmin.WidgetAdmin' LuaManagerLib.WidgetBrowser' LuaManagerLib.WidgetBrowserVcs' LuaManagerLib.WidgetList
+LuaManagerLib,WidgetList,0,12,0,0,12,229,34,0,0,-1,2,6,LuaManagerLib.WidgetInfo' LuaManagerLib.FileInfo,LuaAdmin.WidgetAdmin' LuaAdmin.Program' LuaManagerLib.ModInfoDb' LuaManagerLib.WidgetBrowser' LuaManagerLib.WidgetBrowserVcs' LuaManagerLib.WidgetBrowserAdmin
+LuaManagerLib,WidgetName,11,0,0,11,0,14,0,0,0,-1,0,3,,LuaAdmin.WidgetAdmin' LuaManagerLib.WidgetBrowserVcs' LuaManagerLib.WidgetBrowserAdmin
+LuaManagerLib,WidgetBrowserAdmin,4,29,0,0,27,229,33,1,1,0,5,4,LuaManagerLib.Tools.Md5Cached' LuaManagerLib.WidgetName' LuaManagerLib.Utils' LuaManagerLib.WidgetBrowser' LuaManagerLib.WidgetList,LuaAdmin.AddImageForm' LuaAdmin.WidgetAdmin' LuaAdmin.LuaFileUploadDlg' LuaAdmin.Program
+LuaManagerLib.Tools,Md5Cached,1,5,0,0,5,56,7,0,0,0.6,1,1,LuaManagerLib.Tools.CacheInfo,LuaManagerLib.WidgetBrowserAdmin
+LuaManagerLib.Tools,CacheInfo,3,0,0,3,0,6,0,0,0,-1,0,1,,LuaManagerLib.Tools.Md5Cached
+MPIniReadWrite,MultiplatformIni,5,9,0,0,7,196,17,0,0,0.22,1,0,MPIniReadWrite.sectKeyVal,
+MPIniReadWrite,sectKeyVal,3,1,0,3,1,10,1,0,0,0,0,1,,MPIniReadWrite.MultiplatformIni

@@ -1,14 +1,15 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-App,1,1,1,0,1,25,1,0,0,0,1,4
-TodoListPage,3,2,0,0,1,89,2,0,0,0,6,0
-BasePage,0,0,0,0,0,3,0,1,0,-1,0,0
-TodoItemPage,0,1,0,0,1,96,1,0,1,-1,3,1
-TodoItem,0,1,5,0,1,29,1,0,0,-1,0,5
-TodoItemDatabase,2,6,0,0,6,54,6,0,0,0,1,1
-TodoItemCell,0,1,0,0,1,29,1,0,0,-1,0,0
-ITextToSpeech,0,1,0,0,0,4,1,0,0,-1,0,1
-ISQLite,0,1,0,0,0,4,1,0,0,-1,0,0
-AccessibilityTrait,0,0,0,0,0,10,0,0,0,-1,0,2
-AccessibilityEffect,5,16,0,5,10,125,21,0,0,0.38,1,2
-TodoListXaml,0,3,0,0,2,46,4,0,0,-1,3,0
-TodoItemXaml,0,5,0,0,1,28,5,0,0,-1,2,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Todo,App,1,1,1,0,1,19,1,0,0,0,1,4,Todo.TodoItemDatabase,Todo.TodoListPage' Todo.TodoItemPage' Todo.TodoListXaml' Todo.TodoItemXaml
+Todo,TodoListPage,3,2,0,0,1,89,2,0,0,0,7,0,Todo.TodoItemPage' Todo.AccessibilityEffect' Todo.AccessibilityTrait' Todo.TodoItemDatabase' Todo.App' Todo.TodoItem' Todo.TodoItemCell,
+Todo,BasePage,0,0,0,0,0,3,0,1,0,-1,0,0,,
+Todo,TodoItemPage,0,1,0,0,1,75,1,0,1,-1,4,1,Todo.AccessibilityEffect' Todo.TodoItemDatabase' Todo.App' Todo.TodoItem,Todo.TodoListPage
+Todo,TodoItem,0,1,5,0,1,16,1,0,0,-1,0,5,,Todo.TodoListPage' Todo.TodoItemPage' Todo.TodoItemDatabase' Todo.TodoListXaml' Todo.TodoItemXaml
+Todo,TodoItemDatabase,2,6,0,0,6,53,6,0,0,0,1,5,Todo.TodoItem,Todo.App' Todo.TodoListPage' Todo.TodoItemPage' Todo.TodoListXaml' Todo.TodoItemXaml
+Todo,TodoItemCell,0,1,0,0,1,26,1,0,0,-1,0,1,,Todo.TodoListPage
+Todo,ITextToSpeech,0,1,0,0,0,4,1,0,0,-1,0,0,,
+Todo,ISQLite,0,1,0,0,0,4,1,0,0,-1,0,0,,
+Todo,AccessibilityTrait,0,0,0,0,0,6,0,0,0,-1,0,2,,Todo.TodoListPage' Todo.AccessibilityEffect
+Todo,AccessibilityEffect,5,16,0,5,10,139,19,0,0,0.38,2,2,Todo.AccessibilityTrait' Todo.AddAccessibilityEffect,Todo.TodoListPage' Todo.TodoItemPage
+Todo,AddAccessibilityEffect,0,1,0,0,1,6,1,0,0,-1,0,1,,Todo.AccessibilityEffect
+Todo,TodoListXaml,0,3,0,0,2,44,4,0,0,-1,4,0,Todo.TodoItemXaml' Todo.TodoItemDatabase' Todo.App' Todo.TodoItem,
+Todo,TodoItemXaml,0,5,0,0,1,28,5,0,0,-1,3,1,Todo.TodoItem' Todo.TodoItemDatabase' Todo.App,Todo.TodoListXaml

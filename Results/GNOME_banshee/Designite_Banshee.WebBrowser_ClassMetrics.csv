@@ -1,37 +1,45 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-OssiferWebView,2,38,8,0,8,231,40,1,0,0.21,5,2
-OssiferNavigationResponse,0,0,0,0,0,8,0,0,0,-1,0,5
-OssiferDownloadStatus,0,0,0,0,0,8,0,0,0,-1,0,4
-NavigationControl,7,5,1,0,4,113,10,0,0,0,5,3
-OssiferLoadStatus,0,0,0,0,0,8,0,0,0,-1,0,5
-OssiferCookie,0,3,6,0,2,55,3,0,0,-1,0,1
-OssiferSession,3,11,0,0,4,91,14,0,0,0.18,1,3
-OssiferSecurityLevel,0,0,0,0,0,7,0,0,0,-1,0,2
-WebBrowserShell,7,2,3,0,1,75,4,2,1,0,5,2
-WebSource,3,3,1,0,2,82,4,3,0,0,2,0
-WebView,3,10,3,0,6,110,16,3,1,0.5,4,3
-JSString,1,13,3,0,5,81,17,0,0,0.46,0,9
-JSObject,0,22,3,0,11,138,23,2,1,-1,7,8
-JSValue,0,54,13,0,30,252,56,1,0,-1,6,9
-JSType,0,0,0,0,0,9,0,0,0,-1,0,4
-JSContext,1,12,2,1,8,63,12,0,0,0.42,5,13
-JSClass,0,1,1,0,1,11,1,0,0,-1,0,5
-JSException,0,4,2,0,0,29,5,0,0,-1,2,4
-JSClassDefinition,4,23,2,0,2,198,37,1,0,0.39,8,0
-JSClassAttribute,0,0,0,0,0,6,0,0,0,-1,0,0
-JSPropertyAttribute,0,0,0,0,0,8,0,0,0,-1,0,5
-ManagedPropertyBagClass,1,7,0,0,0,39,9,0,1,0,3,0
-JSPropertyNameAccumulator,1,2,0,0,1,12,2,0,0,0,1,2
-JSPropertyNameArray,1,8,2,0,4,45,8,0,0,0.62,1,1
-JSFunction,2,3,0,0,1,21,3,0,2,0,4,1
-JSError,0,2,0,0,1,17,4,0,2,-1,2,1
-JSErrorException,0,1,1,0,1,11,1,0,0,-1,2,0
-JSStaticFunction,3,0,0,3,0,7,0,0,0,-1,2,1
-JSStaticFunctionAttribute,0,3,2,0,3,22,3,0,0,-1,1,1
-JSValueTests,1,14,0,0,14,176,14,0,0,0,4,0
-JSStringTests,0,2,0,0,2,26,2,0,0,-1,1,0
-JSObjectTests,1,9,0,0,9,131,9,0,0,0,4,0
-JSFunctionTests,1,6,0,0,4,73,8,0,0,0.33,5,0
-JSClassTests,3,10,0,0,10,120,10,0,0,0,2,0
-Runtime,2,2,0,0,1,38,3,0,0,0,3,0
-RuntimeTests,1,3,0,0,3,26,4,0,0,0,1,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Banshee.WebBrowser,OssiferWebView,2,38,8,0,8,231,40,1,0,0.53,5,3,Banshee.WebBrowser.Callbacks' Banshee.WebBrowser.OssiferSession' Banshee.WebBrowser.OssiferNavigationResponse' Banshee.WebBrowser.OssiferLoadStatus' Banshee.WebBrowser.OssiferDownloadStatus,Banshee.WebBrowser.NavigationControl' Banshee.WebSource.WebView' Banshee.Wikipedia.WikipediaView
+Banshee.WebBrowser,Callbacks,6,0,0,6,0,10,0,0,0,-1,0,1,,Banshee.WebBrowser.OssiferWebView
+Banshee.WebBrowser,OssiferNavigationResponse,0,0,0,0,0,8,0,0,0,-1,0,4,,Banshee.WebBrowser.OssiferWebView' Banshee.WebSource.WebView' Banshee.AmazonMp3.Store.StoreView' Banshee.Emusic.Store.StoreView
+Banshee.WebBrowser,OssiferDownloadStatus,0,0,0,0,0,8,0,0,0,-1,0,3,,Banshee.WebBrowser.OssiferWebView' Banshee.AmazonMp3.Store.StoreView' Banshee.Emusic.Store.StoreView
+Banshee.WebBrowser,NavigationControl,7,5,1,0,4,106,10,0,0,0,3,3,Banshee.WebBrowser.OssiferWebView' Banshee.WebBrowser.OssiferLoadStatus' Banshee.WebBrowser.OssiferSecurityLevel,Banshee.WebSource.WebBrowserShell' Banshee.AmazonMp3.Store.StoreWebBrowserShell' Banshee.Emusic.Store.StoreWebBrowserShell
+Banshee.WebBrowser,OssiferLoadStatus,0,0,0,0,0,8,0,0,0,-1,0,5,,Banshee.WebBrowser.OssiferWebView' Banshee.WebBrowser.NavigationControl' Banshee.WebSource.WebBrowserShell' Banshee.WebSource.WebView' Banshee.Wikipedia.WikipediaView
+Banshee.WebBrowser,OssiferCookie,0,3,6,0,2,37,3,0,0,-1,1,1,Banshee.WebBrowser.NativeSoupCookie,Banshee.WebBrowser.OssiferSession
+Banshee.WebBrowser,NativeSoupCookie,7,0,0,7,0,11,0,0,0,-1,0,1,,Banshee.WebBrowser.OssiferCookie
+Banshee.WebBrowser,OssiferSession,3,11,0,0,4,107,14,0,0,0.18,1,3,Banshee.WebBrowser.OssiferCookie,Banshee.WebBrowser.OssiferWebView' Banshee.AmazonMp3.Store.StoreView' Banshee.Emusic.Store.StoreView
+Banshee.WebBrowser,OssiferSecurityLevel,0,0,0,0,0,7,0,0,0,-1,0,1,,Banshee.WebBrowser.NavigationControl
+Banshee.WebSource,WebBrowserShell,7,2,3,0,1,75,4,2,1,0,4,1,Banshee.WebSource.WebView' Banshee.WebBrowser.NavigationControl' Banshee.Widgets.SearchEntry' Banshee.WebBrowser.OssiferLoadStatus,Banshee.WebSource.WebSource
+Banshee.WebSource,WebSource,3,3,1,0,2,86,4,2,2,0,6,1,Banshee.WebSource.WebSourceContents' Banshee.WebSource.WebView' Banshee.Gui.BansheeActionGroup' Banshee.WebSource.WebBrowserShell' Banshee.Configuration.SchemaEntry' Banshee.Sources.Source,Banshee.WebSource.WebSourceContents
+Banshee.WebSource,WebSourceContents,2,3,2,0,3,23,3,0,1,1,2,1,Banshee.WebSource.WebSource' Banshee.Sources.ISource,Banshee.WebSource.WebSource
+Banshee.WebSource,WebView,3,10,3,0,6,100,15,2,1,0.5,4,4,Banshee.WebBrowser.OssiferWebView' Banshee.WebBrowser.OssiferLoadStatus' Banshee.WebBrowser.OssiferNavigationResponse' Banshee.Base.AssemblyResource,Banshee.WebSource.WebBrowserShell' Banshee.WebSource.WebSource' Banshee.AmazonMp3.Store.StoreView' Banshee.Emusic.Store.StoreView
+JavaScriptCore,JSString,1,13,3,0,5,77,17,0,0,0.46,0,9,,JavaScriptCore.JSObject' JavaScriptCore.JSValue' JavaScriptCore.JSContext' JavaScriptCore.JSClassDefinition' JavaScriptCore.JSPropertyNameAccumulator' JavaScriptCore.JSPropertyNameArray' JavaScriptCore.JSFunction' JavaScriptCore.Tests.JSValueTests' JavaScriptCore.Tests.JSStringTests
+JavaScriptCore,JSObject,0,22,3,0,11,154,23,2,1,-1,7,13,JavaScriptCore.JSContext' JavaScriptCore.JSClass' JavaScriptCore.JSString' JavaScriptCore.JSException' JavaScriptCore.JSValue' JavaScriptCore.JSPropertyAttribute' JavaScriptCore.JSPropertyNameArray,JavaScriptCore.JSValue' JavaScriptCore.JSContext' JavaScriptCore.JSClassDefinition' JavaScriptCore.ManagedPropertyBagClass' JavaScriptCore.Tests.JSObjectTests' JavaScriptCore.Tests.GetPropertyClassTest' JavaScriptCore.Tests.JSFunctionTests' JavaScriptCore.Tests.JSClassTests' JavaScriptCore.Tests.JSTestStaticClass' JavaScriptCore.Tests.JSTestInstanceClass' JavaScriptCore.Bridge.Runtime' JavaScriptCore.Bridge.RuntimeClassDefinition' JavaScriptCore.Bridge.Tests.RuntimeTests
+JavaScriptCore,JSValue,0,54,13,0,30,204,56,1,0,-1,5,15,JavaScriptCore.JSContext' JavaScriptCore.JSString' JavaScriptCore.JSClass' JavaScriptCore.JSException' JavaScriptCore.JSObject,JavaScriptCore.JSObject' JavaScriptCore.JSContext' JavaScriptCore.JSException' JavaScriptCore.JSClassDefinition' JavaScriptCore.ManagedPropertyBagClass' JavaScriptCore.JSFunction' JavaScriptCore.Tests.JSValueTests' JavaScriptCore.Tests.JSObjectTests' JavaScriptCore.Tests.GetPropertyClassTest' JavaScriptCore.Tests.JSFunctionTests' JavaScriptCore.Tests.JSClassTests' JavaScriptCore.Tests.JSTestStaticClass' JavaScriptCore.Tests.JSTestInstanceClass' JavaScriptCore.Bridge.RuntimeClassDefinition' JavaScriptCore.Bridge.Tests.RuntimeTests
+JavaScriptCore,JSType,0,0,0,0,0,9,0,0,0,-1,0,4,,JavaScriptCore.Tests.JSValueTests' JavaScriptCore.Tests.JSFunctionTests' JavaScriptCore.Tests.JSClassTests' JavaScriptCore.Tests.JSTestStaticClass
+JavaScriptCore,JSContext,1,12,2,1,8,62,12,0,0,0.17,5,13,JavaScriptCore.JSClass' JavaScriptCore.JSString' JavaScriptCore.JSObject' JavaScriptCore.JSException' JavaScriptCore.JSValue,JavaScriptCore.JSObject' JavaScriptCore.JSValue' JavaScriptCore.JSException' JavaScriptCore.JSClassDefinition' JavaScriptCore.JSFunction' JavaScriptCore.JSError' JavaScriptCore.JSErrorException' JavaScriptCore.Tests.JSValueTests' JavaScriptCore.Tests.JSObjectTests' JavaScriptCore.Tests.JSFunctionTests' JavaScriptCore.Tests.JSClassTests' JavaScriptCore.Bridge.Runtime' JavaScriptCore.Bridge.Tests.RuntimeTests
+JavaScriptCore,JSClass,0,1,1,0,1,8,1,0,0,-1,0,5,,JavaScriptCore.JSObject' JavaScriptCore.JSValue' JavaScriptCore.JSContext' JavaScriptCore.JSClassDefinition' JavaScriptCore.Bridge.Runtime
+JavaScriptCore,JSException,0,4,2,0,0,25,5,0,0,-1,2,5,JavaScriptCore.JSContext' JavaScriptCore.JSValue,JavaScriptCore.JSObject' JavaScriptCore.JSValue' JavaScriptCore.JSContext' JavaScriptCore.JSError' JavaScriptCore.Bridge.Tests.RuntimeTests
+JavaScriptCore,JSClassDefinition,4,23,2,0,2,212,35,5,0,0.39,11,0,JavaScriptCore.JSClassDefinitionNative' JavaScriptCore.JSClass' JavaScriptCore.JSStaticFunctionAttribute' JavaScriptCore.JSValue' JavaScriptCore.JSObject' JavaScriptCore.JSStaticFunction' JavaScriptCore.JSContext' JavaScriptCore.JSString' JavaScriptCore.JSError' JavaScriptCore.JSErrorException' JavaScriptCore.JSPropertyNameAccumulator,
+JavaScriptCore,JSClassDefinitionNative,17,0,0,17,0,20,0,0,0,-1,1,1,JavaScriptCore.JSClassAttribute,JavaScriptCore.JSClassDefinition
+JavaScriptCore,JSClassAttribute,0,0,0,0,0,6,0,0,0,-1,0,1,,JavaScriptCore.JSClassDefinitionNative
+JavaScriptCore,JSPropertyAttribute,0,0,0,0,0,8,0,0,0,-1,0,5,,JavaScriptCore.JSObject' JavaScriptCore.JSStaticFunction' JavaScriptCore.JSStaticFunctionAttribute' JavaScriptCore.Tests.JSObjectTests' JavaScriptCore.Bridge.Runtime
+JavaScriptCore,ManagedPropertyBagClass,1,7,0,0,0,40,9,0,1,0,3,0,JavaScriptCore.JSObject' JavaScriptCore.JSValue' JavaScriptCore.JSPropertyNameAccumulator,
+JavaScriptCore,JSPropertyNameAccumulator,1,2,0,0,1,13,2,0,0,0,1,2,JavaScriptCore.JSString,JavaScriptCore.JSClassDefinition' JavaScriptCore.ManagedPropertyBagClass
+JavaScriptCore,JSPropertyNameArray,1,8,2,0,4,39,8,0,0,0.62,1,1,JavaScriptCore.JSString,JavaScriptCore.JSObject
+JavaScriptCore,JSFunction,2,3,0,0,1,27,3,0,2,0,3,1,JavaScriptCore.JSString' JavaScriptCore.JSContext' JavaScriptCore.JSValue,JavaScriptCore.Tests.JSFunctionTests
+JavaScriptCore,JSError,0,2,0,0,1,18,4,0,2,-1,2,1,JavaScriptCore.JSContext' JavaScriptCore.JSException,JavaScriptCore.JSClassDefinition
+JavaScriptCore,JSErrorException,0,1,1,0,1,8,1,0,0,-1,1,1,JavaScriptCore.JSContext,JavaScriptCore.JSClassDefinition
+JavaScriptCore,JSStaticFunction,3,0,0,3,0,7,0,0,0,-1,1,1,JavaScriptCore.JSPropertyAttribute,JavaScriptCore.JSClassDefinition
+JavaScriptCore,JSStaticFunctionAttribute,0,3,2,0,3,17,3,0,0,-1,1,1,JavaScriptCore.JSPropertyAttribute,JavaScriptCore.JSClassDefinition
+JavaScriptCore.Tests,JSValueTests,1,14,0,0,14,177,14,0,0,0,4,0,JavaScriptCore.JSContext' JavaScriptCore.JSValue' JavaScriptCore.JSType' JavaScriptCore.JSString,
+JavaScriptCore.Tests,JSStringTests,0,2,0,0,2,26,2,0,0,-1,1,0,JavaScriptCore.JSString,
+JavaScriptCore.Tests,JSObjectTests,1,9,0,0,9,135,9,0,0,0,5,0,JavaScriptCore.JSContext' JavaScriptCore.JSObject' JavaScriptCore.Tests.GetPropertyClassTest' JavaScriptCore.JSValue' JavaScriptCore.JSPropertyAttribute,
+JavaScriptCore.Tests,GetPropertyClassTest,0,1,0,0,0,7,1,0,1,-1,2,1,JavaScriptCore.JSObject' JavaScriptCore.JSValue,JavaScriptCore.Tests.JSObjectTests
+JavaScriptCore.Tests,JSFunctionTests,1,6,0,0,4,70,8,0,0,0.33,5,0,JavaScriptCore.JSContext' JavaScriptCore.JSValue' JavaScriptCore.JSObject' JavaScriptCore.JSType' JavaScriptCore.JSFunction,
+JavaScriptCore.Tests,JSClassTests,3,10,0,0,10,120,10,0,0,0,6,0,JavaScriptCore.JSContext' JavaScriptCore.Tests.JSTestStaticClass' JavaScriptCore.Tests.JSTestInstanceClass' JavaScriptCore.JSObject' JavaScriptCore.JSType' JavaScriptCore.JSValue,
+JavaScriptCore.Tests,JSTestStaticClass,0,7,0,0,0,50,7,0,1,-1,3,1,JavaScriptCore.JSObject' JavaScriptCore.JSValue' JavaScriptCore.JSType,JavaScriptCore.Tests.JSClassTests
+JavaScriptCore.Tests,JSTestInstanceClass,0,1,0,0,0,9,1,0,1,-1,2,1,JavaScriptCore.JSObject' JavaScriptCore.JSValue,JavaScriptCore.Tests.JSClassTests
+JavaScriptCore.Bridge,Runtime,2,2,0,0,1,40,3,0,0,0,5,0,JavaScriptCore.Bridge.RuntimeClassDefinition' JavaScriptCore.JSClass' JavaScriptCore.JSObject' JavaScriptCore.JSContext' JavaScriptCore.JSPropertyAttribute,
+JavaScriptCore.Bridge,RuntimeClassDefinition,0,3,1,0,1,21,3,0,1,-1,2,1,JavaScriptCore.JSObject' JavaScriptCore.JSValue,JavaScriptCore.Bridge.Runtime
+JavaScriptCore.Bridge.Tests,RuntimeTests,1,3,0,0,3,28,3,0,0,0,4,0,JavaScriptCore.JSContext' JavaScriptCore.JSValue' JavaScriptCore.JSObject' JavaScriptCore.JSException,

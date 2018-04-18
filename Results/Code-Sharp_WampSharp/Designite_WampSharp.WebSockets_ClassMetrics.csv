@@ -1,16 +1,16 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-ControlledTextWebSocketConnection,0,3,0,0,3,13,3,0,1,-1,0,1
-ControlledBinaryWebSocketConnection,0,3,0,0,3,13,3,0,1,-1,0,1
-TextWebSocketConnection,0,2,0,0,1,9,2,1,1,-1,2,1
-BinaryWebSocketConnection,0,2,0,0,1,9,2,1,1,-1,2,1
-BinaryWebSocketWrapperConnection,1,3,1,0,1,22,3,1,1,0,4,1
-TextWebSocketWrapperConnection,1,3,1,0,1,23,3,1,1,0,4,1
-WebSocketWrapperConnection,5,10,3,0,2,115,17,2,3,0.2,4,1
-ClientWebSocketWrapper,1,2,1,0,2,17,2,0,1,0,0,0
-IClientWebSocketWrapper,0,1,1,0,0,7,1,1,1,-1,0,3
-IWebSocketWrapper,0,3,1,0,0,9,3,3,0,-1,0,3
-WebSocketWrapper,1,4,1,0,4,25,4,1,1,0,0,0
-IWebSocketTransportSyntax,0,1,0,0,0,4,1,1,0,-1,0,0
-WebSocketActivator,1,6,2,0,2,51,9,0,1,0,2,1
-WebSocketChannelFactoryExtensions,0,3,0,0,2,22,3,0,0,-1,5,0
-WebSocketTransportSyntax,1,2,1,0,2,18,2,0,1,1,1,1
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+WampSharp.WebSockets,ControlledTextWebSocketConnection<TMessage>,0,3,0,0,3,13,3,0,2,-1,1,0,WampSharp.V2.Binding.IWampTextBinding,
+WampSharp.WebSockets,ControlledBinaryWebSocketConnection<TMessage>,0,3,0,0,3,15,3,0,2,-1,1,0,WampSharp.V2.Binding.IWampBinaryBinding,
+WampSharp.WebSockets,TextWebSocketConnection<TMessage>,0,2,0,0,1,9,2,0,0,-1,3,0,WampSharp.V2.Binding.IWampTextBinding' WampSharp.V2.Authentication.ICookieProvider' WampSharp.V2.Authentication.ICookieAuthenticatorFactory,
+WampSharp.WebSockets,BinaryWebSocketConnection<TMessage>,0,2,0,0,1,10,2,0,0,-1,3,0,WampSharp.V2.Binding.IWampBinaryBinding' WampSharp.V2.Authentication.ICookieProvider' WampSharp.V2.Authentication.ICookieAuthenticatorFactory,
+WampSharp.WebSockets,BinaryWebSocketWrapperConnection<TMessage>,1,3,1,0,1,26,3,0,0,0,5,0,WampSharp.V2.Binding.IWampBinaryBinding' WampSharp.WebSockets.IWebSocketWrapper' WampSharp.V2.Authentication.ICookieProvider' WampSharp.V2.Authentication.ICookieAuthenticatorFactory' WampSharp.WebSockets.IClientWebSocketWrapper,
+WampSharp.WebSockets,TextWebSocketWrapperConnection<TMessage>,1,3,1,0,1,27,3,0,0,0,5,0,WampSharp.V2.Binding.IWampTextBinding' WampSharp.WebSockets.IWebSocketWrapper' WampSharp.V2.Authentication.ICookieProvider' WampSharp.V2.Authentication.ICookieAuthenticatorFactory' WampSharp.WebSockets.IClientWebSocketWrapper,
+WampSharp.WebSockets,WebSocketWrapperConnection<TMessage>,5,10,3,0,2,148,13,0,0,0.2,6,0,WampSharp.V2.Binding.Parsers.IWampStreamingMessageParser' WampSharp.WebSockets.IWebSocketWrapper' WampSharp.V2.Authentication.ICookieProvider' WampSharp.V2.Authentication.ICookieAuthenticatorFactory' WampSharp.WebSockets.IClientWebSocketWrapper' WampSharp.Logging.ILog,
+WampSharp.WebSockets,ClientWebSocketWrapper,1,2,1,0,2,20,2,0,1,0,0,0,,
+WampSharp.WebSockets,IClientWebSocketWrapper,0,1,1,0,0,5,1,1,1,-1,0,3,,WampSharp.WebSockets.BinaryWebSocketWrapperConnection<TMessage>' WampSharp.WebSockets.TextWebSocketWrapperConnection<TMessage>' WampSharp.WebSockets.WebSocketWrapperConnection<TMessage>
+WampSharp.WebSockets,IWebSocketWrapper,0,3,1,0,0,7,3,3,0,-1,0,3,,WampSharp.WebSockets.BinaryWebSocketWrapperConnection<TMessage>' WampSharp.WebSockets.TextWebSocketWrapperConnection<TMessage>' WampSharp.WebSockets.WebSocketWrapperConnection<TMessage>
+WampSharp.WebSockets,WebSocketWrapper,1,4,1,0,4,24,4,1,1,0,0,0,,
+WampSharp.V2.Fluent,IWebSocketTransportSyntax,0,1,0,0,0,5,1,1,2,-1,0,1,,WampSharp.V2.Fluent.WebSocketChannelFactoryExtensions
+WampSharp.V2.Fluent,WebSocketActivator,1,6,2,0,2,50,9,0,1,0,4,2,WampSharp.V2.Binding.IWampBinding' WampSharp.V2.Binding.IWampTextBinding' WampSharp.V2.Binding.IWampBinaryBinding' WampSharp.Core.Listener.IControlledWampConnection,WampSharp.V2.Fluent.WebSocketChannelFactoryExtensions' WampSharp.V2.Fluent.WebSocketTransportSyntax
+WampSharp.V2.Fluent,WebSocketChannelFactoryExtensions,0,3,0,0,2,24,3,0,0,-1,6,0,WampSharp.V2.Fluent.IWampConnectionActivator' WampSharp.V2.Fluent.IWebSocketTransportSyntax' WampSharp.V2.Fluent.IRealmSyntax' WampSharp.V2.Fluent.WebSocketActivator' WampSharp.V2.Fluent.ChannelState' WampSharp.V2.Fluent.WebSocketTransportSyntax,
+WampSharp.V2.Fluent,WebSocketTransportSyntax,1,2,1,0,2,20,2,0,3,1,2,1,WampSharp.V2.Fluent.ChannelState' WampSharp.V2.Fluent.WebSocketActivator,WampSharp.V2.Fluent.WebSocketChannelFactoryExtensions

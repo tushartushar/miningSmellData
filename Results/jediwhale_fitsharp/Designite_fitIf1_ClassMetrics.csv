@@ -1,18 +1,21 @@
-Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In
-EmptyFolder,0,1,3,0,1,38,1,0,1,-1,1,1
-FileFolder,0,1,3,0,1,65,1,0,1,-1,1,0
-FilePage,1,1,2,0,1,18,1,0,1,0,0,0
-Folder,0,0,3,0,0,12,0,2,0,-1,1,4
-Collection,0,1,1,0,0,10,1,0,0,-1,0,3
-Page,0,0,2,0,0,9,0,1,0,-1,0,2
-FolderExtension,0,4,0,0,4,21,6,0,0,-1,4,0
-StoryTestSuite,2,5,0,0,3,31,5,0,0,0.6,4,1
-TestFile,4,0,2,4,0,17,0,0,0,-1,0,3
-TestFiles,3,2,1,0,1,43,4,0,0,0,7,0
-TestResult,3,1,2,0,1,47,5,0,0,0,5,1
-App,0,0,0,0,0,6,0,0,0,-1,0,0
-MainController,2,4,0,0,3,27,4,0,0,0,10,1
-MainView,0,2,0,0,0,5,2,1,0,-1,1,1
-MainWindow,1,6,0,0,3,61,9,0,1,0.5,3,0
-Resources,2,1,2,0,0,45,1,0,0,0,0,0
-Settings,1,0,1,0,0,11,0,0,0,-1,0,0
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+fitIf,EmptyFolder,0,1,3,0,1,11,1,0,1,-1,0,0,,
+fitIf,EmptyCollection<T>,0,1,1,0,1,5,1,0,1,-1,0,0,,
+fitIf,FileFolder,0,1,3,0,1,40,1,0,1,-1,0,0,,
+fitIf,FolderItems,1,2,1,0,2,15,2,0,1,0,0,0,,
+fitIf,PageItems,1,2,1,0,2,15,2,0,1,0,0,0,,
+fitIf,FilePage,1,1,2,0,1,8,1,0,1,0,0,0,,
+fitIf,Folder,0,0,3,0,0,5,0,2,0,-1,0,4,,fitIf.FolderExtension' fitIf.StoryTestSuite' fitIf.TestFiles' fitIf.TestResult
+fitIf,Collection,0,1,1,0,0,5,1,3,0,-1,0,3,,fitIf.FolderExtension' fitIf.StoryTestSuite' fitIf.TestResult
+fitIf,Page,0,0,2,0,0,4,0,1,0,-1,0,3,,fitIf.FolderExtension' fitIf.StoryTestSuite' fitIf.TestResult
+fitIf,FolderExtension,0,4,0,0,4,18,4,0,0,-1,3,0,fitIf.Folder' fitIf.Collection' fitIf.Page,
+fitIf,StoryTestSuite,2,5,0,0,3,23,7,0,0,0.6,5,1,fitSharp.Fit.Application.FileExclusions' fitIf.Collection' fitIf.Folder' fitIf.Page' fitSharp.Fit.Runner.StoryFileName,fitIf.TestFiles
+fitIf,TestFile,4,0,2,4,0,12,0,0,0,-1,0,4,,fitIf.TestFiles' fitIf.TestResult' fitIf.MainController' fitIf.MainWindow
+fitIf,TestFiles,3,2,1,0,1,32,4,0,0,0,4,1,fitIf.Folder' fitIf.StoryTestSuite' fitIf.TestFile' fitIf.TestResult,fitIf.MainController
+fitIf,TestResult,3,1,2,0,1,44,3,0,0,0,8,1,fitIf.TestFile' fitSharp.Fit.Model.TestCounts' fitIf.Collection' fitIf.Folder' fitIf.Page' fitSharp.Parser.Scanner' fitSharp.Parser.Substring' fitSharp.Fit.Model.TestStatus,fitIf.TestFiles
+fitIf,App,0,2,0,0,2,29,2,0,0,-1,0,0,,
+fitIf,MainController,2,4,0,0,3,26,4,0,0,0,11,1,fitIf.MainView' fitSharp.Machine.Engine.Memory' fitSharp.IO.FileSystemModel' fitSharp.Fit.Service.CellProcessorBase' fitSharp.Machine.Application.SuiteConfiguration' fitSharp.Machine.Application.Settings' fitIf.TestFiles' fitIf.TestFile' fitSharp.Machine.Model.Tree' fitSharp.Fit.Engine.CellProcessor' fitSharp.Machine.Model.ReadList,fitIf.MainWindow
+fitIf,MainView,0,2,0,0,0,4,2,1,0,-1,1,1,fitSharp.Machine.Model.Tree,fitIf.MainController
+fitIf,MainWindow,4,8,0,0,4,118,13,0,1,0,4,0,fitIf.MainController' fitSharp.Machine.Model.Tree' fitIf.TestFile' fitSharp.Fit.Model.TestStatus,
+fitIf.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+fitIf.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
