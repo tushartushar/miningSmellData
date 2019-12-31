@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SimplSockets,BlockingQueue<T>,2,4,0,0,4,60,5,0,0,0,0,0,,
+SimplSockets,BlockingQueue<T>,2,4,0,0,4,60,6,0,0,0,0,2,,SimplSockets.SimplSocketServer' SimplSockets.SimplSocketClient
 SimplSockets,ProtocolHelper,1,3,0,1,3,34,3,0,0,0.67,0,2,,SimplSockets.SimplSocketClient' SimplSockets.SimplSocketServer
-SimplSockets,SocketErrorArgs,0,1,1,0,0,11,1,0,0,-1,0,2,,SimplSockets.SimplSocketClient' SimplSockets.SimplSocketServer
-SimplSockets,ISimplSocketClient,0,4,0,0,0,32,4,1,0,-1,0,0,,
-SimplSockets,MessageReceivedArgs,0,1,1,0,0,11,1,0,0,-1,0,2,,SimplSockets.SimplSocketClient' SimplSockets.SimplSocketServer
+SimplSockets,SocketErrorArgs,0,1,1,0,0,11,1,0,0,-1,0,4,,SimplSockets.ISimplSocketClient' SimplSockets.ISimplSocketServer' SimplSockets.SimplSocketServer' SimplSockets.SimplSocketClient
+SimplSockets,ISimplSocketClient,0,4,0,0,0,32,4,1,0,-1,2,1,SimplSockets.SocketErrorArgs' SimplSockets.MessageReceivedArgs,SimplSockets.SimplSocketClient
+SimplSockets,MessageReceivedArgs,0,1,1,0,0,11,1,0,0,-1,1,4,SimplSockets.ReceivedMessage,SimplSockets.ISimplSocketServer' SimplSockets.ISimplSocketClient' SimplSockets.SimplSocketClient' SimplSockets.SimplSocketServer
 SimplSockets,MultiplexerData,0,0,2,0,0,5,0,0,0,-1,0,1,,SimplSockets.SimplSocketClient
-SimplSockets,ReceivedMessage,3,0,0,1,0,9,0,0,0,-1,0,3,,SimplSockets.SimplSocketClient' SimplSockets.ISimplSocketServer' SimplSockets.SimplSocketServer
-SimplSockets,SimplSocketClient,23,19,0,0,6,596,54,0,1,0,5,0,SimplSockets.MultiplexerData' SimplSockets.ProtocolHelper' SimplSockets.ReceivedMessage' SimplSockets.MessageReceivedArgs' SimplSockets.SocketErrorArgs,
-SimplSockets,ISimplSocketServer,0,4,1,0,0,39,4,1,0,-1,1,0,SimplSockets.ReceivedMessage,
-SimplSockets,Pool<T>,4,3,0,0,3,82,9,0,0,0,0,0,,
-SimplSockets,SimplSocketServer,20,15,1,0,6,701,64,0,1,0,5,0,SimplSockets.ProtocolHelper' SimplSockets.ReceivedMessage' SimplSockets.MessageReceivedArgs' SimplSockets.SocketErrorArgs' SimplSockets.ConnectedClient,
+SimplSockets,ReceivedMessage,3,0,0,1,0,9,0,0,0,-1,0,4,,SimplSockets.ISimplSocketServer' SimplSockets.MessageReceivedArgs' SimplSockets.SimplSocketServer' SimplSockets.SimplSocketClient
+SimplSockets,SimplSocketClient,23,19,0,0,6,596,59,0,1,0,8,0,SimplSockets.BlockingQueue<T>' SimplSockets.ProtocolHelper' SimplSockets.SocketErrorArgs' SimplSockets.ISimplSocketClient' SimplSockets.MessageReceivedArgs' SimplSockets.MultiplexerData' SimplSockets.ReceivedMessage' SimplSockets.Pool<T>,
+SimplSockets,ISimplSocketServer,0,4,1,0,0,39,4,1,0,-1,3,1,SimplSockets.SocketErrorArgs' SimplSockets.MessageReceivedArgs' SimplSockets.ReceivedMessage,SimplSockets.SimplSocketServer
+SimplSockets,Pool<T>,4,3,0,0,3,82,12,0,0,0,0,2,,SimplSockets.SimplSocketServer' SimplSockets.SimplSocketClient
+SimplSockets,SimplSocketServer,20,15,1,0,6,701,70,0,1,0,8,0,SimplSockets.BlockingQueue<T>' SimplSockets.ProtocolHelper' SimplSockets.SocketErrorArgs' SimplSockets.MessageReceivedArgs' SimplSockets.ReceivedMessage' SimplSockets.ISimplSocketServer' SimplSockets.Pool<T>' SimplSockets.ConnectedClient,
 SimplSockets,ConnectedClient,0,1,2,0,1,11,2,0,0,-1,0,1,,SimplSockets.SimplSocketServer

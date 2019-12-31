@@ -1,0 +1,31 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Fleck,ConnectionNotAvailableException,0,3,0,0,3,13,3,0,0,-1,0,1,,Fleck.WebSocketConnection
+Fleck,LogLevel,0,0,0,0,0,7,0,0,0,-1,0,1,,Fleck.FleckLog
+Fleck,FleckLog,2,4,0,2,4,25,4,0,0,0,1,5,Fleck.LogLevel,Fleck.Handlers.FlashSocketPolicyRequestHandler' Fleck.Handlers.Draft76Handler' Fleck.Handlers.Hybi13Handler' Fleck.WebSocketConnection' Fleck.WebSocketServer
+Fleck,FrameType,0,0,0,0,0,9,0,0,0,-1,0,2,,Fleck.ReadState' Fleck.Handlers.Hybi13Handler
+Fleck,HandlerFactory,0,2,0,0,2,38,8,0,0,-1,7,1,Fleck.IHandler' Fleck.WebSocketException' Fleck.WebSocketHttpRequest' Fleck.WebSocketStatusCodes' Fleck.Handlers.Draft76Handler' Fleck.Handlers.FlashSocketPolicyRequestHandler' Fleck.Handlers.Hybi13Handler,Fleck.WebSocketServer
+Fleck,IHandler,0,7,0,0,0,10,7,1,0,-1,0,6,,Fleck.Handlers.ComposableHandler' Fleck.Handlers.Draft76Handler' Fleck.HandlerFactory' Fleck.Handlers.FlashSocketPolicyRequestHandler' Fleck.Handlers.Hybi13Handler' Fleck.WebSocketConnection
+Fleck,ISocket,0,8,6,0,0,17,8,1,0,-1,0,3,,Fleck.WebSocketServer' Fleck.WebSocketConnection' Fleck.SocketWrapper
+Fleck,IWebSocketConnection,0,5,9,0,0,17,5,1,0,-1,1,3,Fleck.IWebSocketConnectionInfo,Fleck.IWebSocketServer' Fleck.WebSocketServer' Fleck.WebSocketConnection
+Fleck,IWebSocketConnectionInfo,0,0,10,0,0,13,0,1,0,-1,0,3,,Fleck.IWebSocketConnection' Fleck.WebSocketConnection' Fleck.WebSocketConnectionInfo
+Fleck,IWebSocketServer,0,1,0,0,0,4,1,1,0,-1,1,1,Fleck.IWebSocketConnection,Fleck.WebSocketServer
+Fleck,IntExtensions,0,2,0,0,2,31,9,0,0,-1,0,0,,
+Fleck,QueuedStream,4,13,5,0,11,199,19,0,0,0.23,2,1,Fleck.WriteData' Fleck.QueuedWriteResult,Fleck.SocketWrapper
+Fleck,WriteData,6,1,0,6,1,18,1,0,0,0,0,1,,Fleck.QueuedStream
+Fleck,QueuedWriteResult,1,1,6,0,1,26,1,0,0,0,0,1,,Fleck.QueuedStream
+Fleck,ReadState,0,2,2,0,2,14,2,0,0,-1,1,1,Fleck.FrameType,Fleck.Handlers.Hybi13Handler
+Fleck,RequestParser,4,2,0,0,2,55,5,0,0,0,1,1,Fleck.WebSocketHttpRequest,Fleck.WebSocketServer
+Fleck,SocketWrapper,6,11,6,2,11,152,18,0,1,0,3,1,Fleck.ISocket' Fleck.QueuedStream' Fleck.Helpers.FleckRuntime,Fleck.WebSocketServer
+Fleck,SubProtocolNegotiationFailureException,0,3,0,0,3,8,3,0,0,-1,0,2,,Fleck.SubProtocolNegotiator' Fleck.WebSocketConnection
+Fleck,SubProtocolNegotiator,0,1,0,0,1,14,3,0,0,-1,1,1,Fleck.SubProtocolNegotiationFailureException,Fleck.WebSocketServer
+Fleck,WebSocketConnection,7,14,11,0,9,185,27,0,1,0,11,1,Fleck.ConnectionNotAvailableException' Fleck.FleckLog' Fleck.IHandler' Fleck.ISocket' Fleck.IWebSocketConnection' Fleck.IWebSocketConnectionInfo' Fleck.SubProtocolNegotiationFailureException' Fleck.WebSocketConnectionInfo' Fleck.WebSocketException' Fleck.WebSocketHttpRequest' Fleck.WebSocketStatusCodes,Fleck.WebSocketServer
+Fleck,WebSocketConnectionInfo,2,2,10,0,1,49,4,0,1,1,2,1,Fleck.IWebSocketConnectionInfo' Fleck.WebSocketHttpRequest,Fleck.WebSocketConnection
+Fleck,WebSocketException,0,3,1,0,3,19,3,0,0,-1,0,4,,Fleck.HandlerFactory' Fleck.Handlers.Draft76Handler' Fleck.WebSocketConnection' Fleck.Handlers.Hybi13Handler
+Fleck,WebSocketHttpRequest,1,0,7,0,0,34,0,0,0,-1,0,7,,Fleck.WebSocketConnectionInfo' Fleck.HandlerFactory' Fleck.Handlers.Draft76Handler' Fleck.Handlers.FlashSocketPolicyRequestHandler' Fleck.Handlers.Hybi13Handler' Fleck.WebSocketConnection' Fleck.RequestParser
+Fleck,WebSocketServer,3,6,9,0,3,133,15,0,1,0.33,10,0,Fleck.FleckLog' Fleck.HandlerFactory' Fleck.ISocket' Fleck.IWebSocketConnection' Fleck.IWebSocketServer' Fleck.RequestParser' Fleck.SocketWrapper' Fleck.SubProtocolNegotiator' Fleck.WebSocketConnection' Fleck.Helpers.FleckRuntime,
+Fleck,WebSocketStatusCodes,14,0,0,14,0,23,0,0,0,-1,0,4,,Fleck.HandlerFactory' Fleck.Handlers.Draft76Handler' Fleck.WebSocketConnection' Fleck.Handlers.Hybi13Handler
+Fleck.Handlers,ComposableHandler,8,7,0,7,7,47,7,0,1,1,1,3,Fleck.IHandler,Fleck.Handlers.FlashSocketPolicyRequestHandler' Fleck.Handlers.Draft76Handler' Fleck.Handlers.Hybi13Handler
+Fleck.Handlers,Draft76Handler,3,6,0,0,5,101,12,0,0,0,6,1,Fleck.FleckLog' Fleck.IHandler' Fleck.WebSocketException' Fleck.WebSocketHttpRequest' Fleck.WebSocketStatusCodes' Fleck.Handlers.ComposableHandler,Fleck.HandlerFactory
+Fleck.Handlers,FlashSocketPolicyRequestHandler,1,2,0,1,2,23,2,0,0,0,4,1,Fleck.FleckLog' Fleck.IHandler' Fleck.WebSocketHttpRequest' Fleck.Handlers.ComposableHandler,Fleck.HandlerFactory
+Fleck.Handlers,Hybi13Handler,1,7,0,0,6,188,30,0,0,0,8,1,Fleck.FleckLog' Fleck.FrameType' Fleck.IHandler' Fleck.ReadState' Fleck.WebSocketException' Fleck.WebSocketHttpRequest' Fleck.WebSocketStatusCodes' Fleck.Handlers.ComposableHandler,Fleck.HandlerFactory
+Fleck.Helpers,FleckRuntime,0,2,0,0,2,15,2,0,0,-1,0,2,,Fleck.WebSocketServer' Fleck.SocketWrapper

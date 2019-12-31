@@ -1,0 +1,21 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Destrier.Test.Postgres,DatabaseContext,0,7,5,0,7,53,12,2,0,-1,0,2,,Destrier.Test.Postgres.TestObjectContext' Destrier.Test.Postgres.LibraryContext
+Destrier.Test.Postgres,TestObjectContext,0,5,0,0,5,90,6,0,1,-1,1,1,Destrier.Test.Postgres.DatabaseContext,Destrier.Test.Postgres.IndexedSqlDataReaderTests
+Destrier.Test.Postgres,LibraryContext,0,5,0,0,5,135,8,0,1,-1,1,2,Destrier.Test.Postgres.DatabaseContext,Destrier.Test.Postgres.QueryTests' Destrier.Test.Postgres.DatabaseTests
+Destrier.Test.Postgres,DatabaseTests,0,10,0,0,10,87,10,0,0,-1,3,0,Destrier.Test.Postgres.LibraryContext' Destrier.Test.Postgres.Book' Destrier.Test.Postgres.Person,
+Destrier.Test.Postgres,IndexedSqlDataReaderTests,2,15,0,2,15,195,15,0,0,0.47,3,0,Destrier.Test.Postgres.TestObjectContext' Destrier.Test.Postgres.TestObjectTypeId' Destrier.Test.Postgres.TestObject,
+Destrier.Test.Postgres,SubObjectTypeId,0,0,0,0,0,6,0,0,0,-1,0,1,,Destrier.Test.Postgres.SubObject
+Destrier.Test.Postgres,TestObjectTypeId,0,0,0,0,0,6,0,0,0,-1,0,2,,Destrier.Test.Postgres.TestObject' Destrier.Test.Postgres.IndexedSqlDataReaderTests
+Destrier.Test.Postgres,TestObject,0,0,16,0,0,36,0,0,0,-1,1,1,Destrier.Test.Postgres.TestObjectTypeId,Destrier.Test.Postgres.IndexedSqlDataReaderTests
+Destrier.Test.Postgres,Ids,0,0,1,0,0,6,0,0,0,-1,0,0,,
+Destrier.Test.Postgres,MockObject,0,0,14,0,0,32,0,0,0,-1,4,1,Destrier.Test.Postgres.SubObject' Destrier.Test.Postgres.ReferenceLoopObject' Destrier.Test.Postgres.AlwaysIncludeCollectionObject' Destrier.Test.Postgres.CollectionObject,Destrier.Test.Postgres.ReferenceLoopObject
+Destrier.Test.Postgres,SubObject,0,0,3,0,0,10,0,0,0,-1,1,1,Destrier.Test.Postgres.SubObjectTypeId,Destrier.Test.Postgres.MockObject
+Destrier.Test.Postgres,ReferenceLoopObject,0,0,4,0,0,13,0,0,0,-1,1,1,Destrier.Test.Postgres.MockObject,Destrier.Test.Postgres.MockObject
+Destrier.Test.Postgres,AlwaysIncludeCollectionObject,0,0,3,0,0,10,0,0,0,-1,0,1,,Destrier.Test.Postgres.MockObject
+Destrier.Test.Postgres,CollectionObject,0,0,4,0,0,12,0,0,0,-1,1,1,Destrier.Test.Postgres.SubCollectionObject,Destrier.Test.Postgres.MockObject
+Destrier.Test.Postgres,SubCollectionObject,0,0,3,0,0,10,0,0,0,-1,0,1,,Destrier.Test.Postgres.CollectionObject
+Destrier.Test.Postgres,Book,0,3,7,0,3,33,4,0,1,-1,3,3,Destrier.Test.Postgres.Person' Destrier.Test.Postgres.Chapter' Destrier.Test.Postgres.Page,Destrier.Test.Postgres.Page' Destrier.Test.Postgres.DatabaseTests' Destrier.Test.Postgres.QueryTests
+Destrier.Test.Postgres,Person,0,0,2,0,0,8,0,0,0,-1,0,3,,Destrier.Test.Postgres.Book' Destrier.Test.Postgres.QueryTests' Destrier.Test.Postgres.DatabaseTests
+Destrier.Test.Postgres,Chapter,0,0,5,0,0,14,0,0,0,-1,1,3,Destrier.Test.Postgres.Page,Destrier.Test.Postgres.Book' Destrier.Test.Postgres.Page' Destrier.Test.Postgres.QueryTests
+Destrier.Test.Postgres,Page,0,0,7,0,0,18,0,0,0,-1,2,3,Destrier.Test.Postgres.Book' Destrier.Test.Postgres.Chapter,Destrier.Test.Postgres.QueryTests' Destrier.Test.Postgres.Book' Destrier.Test.Postgres.Chapter
+Destrier.Test.Postgres,QueryTests,0,25,0,0,25,234,25,0,0,-1,5,0,Destrier.Test.Postgres.LibraryContext' Destrier.Test.Postgres.Book' Destrier.Test.Postgres.Person' Destrier.Test.Postgres.Chapter' Destrier.Test.Postgres.Page,

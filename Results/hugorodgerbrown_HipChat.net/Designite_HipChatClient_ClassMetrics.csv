@@ -1,15 +1,15 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 HipChat.Entities,File,0,2,3,0,2,25,2,0,0,-1,0,1,,HipChat.Entities.Message
-HipChat.Entities,Message,0,2,5,0,2,43,2,0,0,-1,2,0,HipChat.Entities.User' HipChat.Entities.File,
-HipChat.Entities,Messages,0,0,1,0,0,10,0,0,0,-1,0,1,,HipChat.HipChatClient
-HipChat.Entities,Room,0,3,7,0,3,59,3,0,0,-1,0,0,,
-HipChat.Entities,Rooms,0,0,1,0,0,10,0,0,0,-1,0,1,,HipChat.HipChatClient
+HipChat.Entities,Message,0,2,5,0,2,43,2,0,0,-1,2,4,HipChat.Entities.File' HipChat.Entities.User,HipChat.Entities.Messages' HipChat.HipChatClient' HipChat.IHipChatAPI' HipChat.HipChatAPI
+HipChat.Entities,Messages,0,0,1,0,0,10,0,0,0,-1,1,1,HipChat.Entities.Message,HipChat.HipChatClient
+HipChat.Entities,Room,0,3,7,0,3,59,3,0,0,-1,1,4,HipChat.HttpUtils,HipChat.Entities.Rooms' HipChat.IHipChatAPI' HipChat.HipChatAPI' HipChat.HipChatClient
+HipChat.Entities,Rooms,0,0,1,0,0,10,0,0,0,-1,1,1,HipChat.Entities.Room,HipChat.HipChatClient
 HipChat.Entities,User,0,2,2,0,2,19,2,0,0,-1,0,1,,HipChat.Entities.Message
-HipChat,HipChatClient,8,43,10,0,39,551,56,0,0,0.05,6,3,HipChat.ApiResponseFormat' HipChat.BackgroundColor' HipChat.MessageFormat' HipChat.HttpUtils' HipChat.Entities.Rooms' HipChat.Entities.Messages,hipchat.notification.Program' HipChat.HipChatAPI' HipChatClientTests.TestHipChatClient
-HipChat,MessageFormat,0,0,0,0,0,1,0,0,0,-1,0,2,,HipChat.HipChatClient' HipChatClientTests.TestHipChatClient
-HipChat,BackgroundColor,0,0,0,0,0,1,0,0,0,-1,0,2,,HipChat.HipChatClient' HipChatClientTests.TestHipChatClient
-HipChat,ApiResponseFormat,0,0,0,0,0,1,0,0,0,-1,0,2,,HipChat.HipChatClient' HipChatClientTests.TestHipChatClient
-HipChat,HipChatApiWebException,0,1,1,0,1,20,2,0,0,-1,0,0,,
-HipChat,HttpUtils,0,4,0,0,0,67,4,0,0,-1,0,1,,HipChat.HipChatClient
-HipChat,IHipChatAPI,0,4,0,0,0,16,4,1,0,-1,0,0,,
-HipChat,HipChatAPI,1,5,0,0,5,27,5,0,1,0,1,0,HipChat.HipChatClient,
+HipChat,HipChatClient,8,43,10,0,39,551,56,0,0,0.26,8,1,HipChat.Entities.Message' HipChat.Entities.Messages' HipChat.Entities.Room' HipChat.Entities.Rooms' HipChat.MessageFormat' HipChat.BackgroundColor' HipChat.ApiResponseFormat' HipChat.HttpUtils,HipChat.HipChatAPI
+HipChat,MessageFormat,0,0,0,0,0,1,0,0,0,-1,0,1,,HipChat.HipChatClient
+HipChat,BackgroundColor,0,0,0,0,0,1,0,0,0,-1,0,1,,HipChat.HipChatClient
+HipChat,ApiResponseFormat,0,0,0,0,0,1,0,0,0,-1,0,1,,HipChat.HipChatClient
+HipChat,HipChatApiWebException,0,1,1,0,1,20,2,0,0,-1,1,1,HipChat.HttpUtils,HipChat.HttpUtils
+HipChat,HttpUtils,0,4,0,0,0,67,4,0,0,-1,1,3,HipChat.HipChatApiWebException,HipChat.HipChatApiWebException' HipChat.Entities.Room' HipChat.HipChatClient
+HipChat,IHipChatAPI,0,4,0,0,0,16,4,1,0,-1,2,1,HipChat.Entities.Message' HipChat.Entities.Room,HipChat.HipChatAPI
+HipChat,HipChatAPI,1,5,0,0,5,27,5,0,1,0,4,0,HipChat.Entities.Message' HipChat.Entities.Room' HipChat.HipChatClient' HipChat.IHipChatAPI,

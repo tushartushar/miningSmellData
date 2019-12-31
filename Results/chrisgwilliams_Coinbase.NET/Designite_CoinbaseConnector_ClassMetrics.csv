@@ -1,87 +1,87 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-CoinbaseConnector,APIKeys,2,0,0,2,0,5,0,0,0,-1,0,0,,
-CoinbaseConnector,Connector,7,52,0,0,48,566,128,0,0,0,0,1,,TestApp.Program
-CoinbaseConnector,GenerateReceiveAddress_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,ReceiveAddress_Result,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,AccountChanges_Result,0,0,7,0,0,10,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Accounts_Result,0,0,4,0,0,7,0,0,0,-1,0,0,,
-CoinbaseConnector,CreateAccount_Result,0,0,2,0,0,5,0,0,0,-1,0,0,,
-CoinbaseConnector,UpdateAccount_Result,0,0,2,0,0,5,0,0,0,-1,0,0,,
+CoinbaseConnector,APIKeys,2,0,0,2,0,5,0,0,0,-1,0,1,,CoinbaseConnector.Connector
+CoinbaseConnector,Connector,7,52,0,0,48,566,128,0,0,0,1,0,CoinbaseConnector.APIKeys,
+CoinbaseConnector,GenerateReceiveAddress_Result,0,0,4,0,0,7,0,0,0,-1,0,0,,
+CoinbaseConnector,ReceiveAddress_Result,0,0,3,0,0,6,0,0,0,-1,0,0,,
+CoinbaseConnector,AccountChanges_Result,0,0,7,0,0,10,0,0,0,-1,3,0,CoinbaseConnector.AccountChanges' CoinbaseConnector.Amount' CoinbaseConnector.CurrentUser,
+CoinbaseConnector,Accounts_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.Account,
+CoinbaseConnector,CreateAccount_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Account,
+CoinbaseConnector,UpdateAccount_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Account,
 CoinbaseConnector,AccountPrimary_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
 CoinbaseConnector,DeleteAccount_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
-CoinbaseConnector,Addresses_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CreateOAuthApp_Result,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,GetOauthApp_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
-CoinbaseConnector,OAuthApps_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,AccountAccess_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CreateButton_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CreateButtonOrder_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,PurchaseBitcoin_Result,0,0,2,0,0,5,0,0,0,-1,0,0,,
-CoinbaseConnector,Contacts_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,MerchantOrders_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CreateOrder_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,MerchantOrder_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,RefundOrder_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
-CoinbaseConnector,PaymentMethods_Result,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,BuyPrice_Result,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,SellPrice_Result,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,SpotPrice_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
+CoinbaseConnector,Addresses_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.NestedAddress,
+CoinbaseConnector,CreateOAuthApp_Result,0,0,3,0,0,6,0,0,0,-1,1,0,CoinbaseConnector.OAuthApplication,
+CoinbaseConnector,GetOauthApp_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.OAuthApplication,
+CoinbaseConnector,OAuthApps_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.Application,
+CoinbaseConnector,AccountAccess_Result,0,0,2,0,0,5,0,0,0,-1,0,0,,
+CoinbaseConnector,CreateButton_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Button,
+CoinbaseConnector,CreateButtonOrder_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Order,
+CoinbaseConnector,PurchaseBitcoin_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Transfer,
+CoinbaseConnector,Contacts_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.Contact,
+CoinbaseConnector,MerchantOrders_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.NestedOrder,
+CoinbaseConnector,CreateOrder_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Order,
+CoinbaseConnector,MerchantOrder_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.Order,
+CoinbaseConnector,RefundOrder_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.Refund,
+CoinbaseConnector,PaymentMethods_Result,0,0,3,0,0,6,0,0,0,-1,1,0,CoinbaseConnector.NestedPaymentMethod,
+CoinbaseConnector,BuyPrice_Result,0,0,3,0,0,6,0,0,0,-1,2,0,CoinbaseConnector.Amount' CoinbaseConnector.Fees,
+CoinbaseConnector,SellPrice_Result,0,0,3,0,0,6,0,0,0,-1,2,0,CoinbaseConnector.Amount' CoinbaseConnector.Fees,
+CoinbaseConnector,SpotPrice_Result,0,0,2,0,0,5,0,0,0,-1,0,0,,
 CoinbaseConnector,HistoricalPrice_Result,0,0,0,0,0,4,0,0,0,-1,0,0,,
-CoinbaseConnector,RecurringPayments_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,RecurringPayment_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
-CoinbaseConnector,Reports_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,GenerateReport_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,ReportDetails_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,SellBitcoin_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,SubscribersList_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Subscriber_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CreateToken_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,RedeemToken_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,GetTransactionList_Result,0,0,7,0,0,10,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,TransactionDetails_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,SendMoney_Result,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CreateInvoice_Result,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,ResendInvoice_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CancelRequest_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CompleteRequest_Result,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Transfers_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CreateUser_Result,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,AccountSettings_Result,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,UpdateAccountSettings_Result,0,0,3,0,0,6,0,0,0,-1,0,0,,
-CoinbaseConnector,Account,0,0,7,0,0,10,0,0,0,-1,0,0,,
-CoinbaseConnector,AccountChanges,0,0,6,0,0,9,0,0,0,-1,0,0,,
-CoinbaseConnector,Address,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Amount,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Application,0,0,5,0,0,8,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Button,0,0,9,0,0,12,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,ButtonShortResponse,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Cache,0,0,3,0,0,6,0,0,0,-1,0,0,,
-CoinbaseConnector,Contact,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,CurrentUser,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
+CoinbaseConnector,RecurringPayments_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.RecurringPaymentAsCustomer,
+CoinbaseConnector,RecurringPayment_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.RecurringPaymentAsCustomer,
+CoinbaseConnector,Reports_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.NestedReport,
+CoinbaseConnector,GenerateReport_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Report,
+CoinbaseConnector,ReportDetails_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.Report,
+CoinbaseConnector,SellBitcoin_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Transfer,
+CoinbaseConnector,SubscribersList_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.RecurringPaymentAsMerchant,
+CoinbaseConnector,Subscriber_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.RecurringPaymentAsMerchant,
+CoinbaseConnector,CreateToken_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Token,
+CoinbaseConnector,RedeemToken_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
+CoinbaseConnector,GetTransactionList_Result,0,0,7,0,0,10,0,0,0,-1,3,0,CoinbaseConnector.Amount' CoinbaseConnector.CurrentUser' CoinbaseConnector.NestedTransaction,
+CoinbaseConnector,TransactionDetails_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.Transaction,
+CoinbaseConnector,SendMoney_Result,0,0,2,0,0,5,0,0,0,-1,1,0,CoinbaseConnector.Transaction,
+CoinbaseConnector,CreateInvoice_Result,0,0,3,0,0,6,0,0,0,-1,1,0,CoinbaseConnector.Transaction,
+CoinbaseConnector,ResendInvoice_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
+CoinbaseConnector,CancelRequest_Result,0,0,1,0,0,4,0,0,0,-1,0,0,,
+CoinbaseConnector,CompleteRequest_Result,0,0,3,0,0,6,0,0,0,-1,1,0,CoinbaseConnector.Transaction,
+CoinbaseConnector,Transfers_Result,0,0,4,0,0,7,0,0,0,-1,1,0,CoinbaseConnector.NestedTransfer,
+CoinbaseConnector,CreateUser_Result,0,0,4,0,0,7,0,0,0,-1,2,0,CoinbaseConnector.OAuth' CoinbaseConnector.User,
+CoinbaseConnector,AccountSettings_Result,0,0,1,0,0,4,0,0,0,-1,1,0,CoinbaseConnector.User,
+CoinbaseConnector,UpdateAccountSettings_Result,0,0,3,0,0,6,0,0,0,-1,1,0,CoinbaseConnector.User,
+CoinbaseConnector,Account,0,0,7,0,0,10,0,0,0,-1,1,3,CoinbaseConnector.Amount,CoinbaseConnector.Accounts_Result' CoinbaseConnector.CreateAccount_Result' CoinbaseConnector.UpdateAccount_Result
+CoinbaseConnector,AccountChanges,0,0,6,0,0,9,0,0,0,-1,2,1,CoinbaseConnector.Amount' CoinbaseConnector.Cache,CoinbaseConnector.AccountChanges_Result
+CoinbaseConnector,Address,0,0,4,0,0,7,0,0,0,-1,0,1,,CoinbaseConnector.NestedAddress
+CoinbaseConnector,Amount,0,0,2,0,0,5,0,0,0,-1,0,9,,CoinbaseConnector.AccountChanges_Result' CoinbaseConnector.BuyPrice_Result' CoinbaseConnector.SellPrice_Result' CoinbaseConnector.GetTransactionList_Result' CoinbaseConnector.Account' CoinbaseConnector.AccountChanges' CoinbaseConnector.RecurringPaymentAsCustomer' CoinbaseConnector.Transaction' CoinbaseConnector.User
+CoinbaseConnector,Application,0,0,5,0,0,8,0,0,0,-1,0,1,,CoinbaseConnector.OAuthApps_Result
+CoinbaseConnector,Button,0,0,9,0,0,12,0,0,0,-1,1,1,CoinbaseConnector.Price,CoinbaseConnector.CreateButton_Result
+CoinbaseConnector,ButtonShortResponse,0,0,4,0,0,7,0,0,0,-1,0,3,,CoinbaseConnector.Order' CoinbaseConnector.RecurringPaymentAsMerchant' CoinbaseConnector.Refund
+CoinbaseConnector,Cache,0,0,3,0,0,6,0,0,0,-1,1,1,CoinbaseConnector.OtherUser,CoinbaseConnector.AccountChanges
+CoinbaseConnector,Contact,0,0,1,0,0,4,0,0,0,-1,0,1,,CoinbaseConnector.Contacts_Result
+CoinbaseConnector,CurrentUser,0,0,3,0,0,6,0,0,0,-1,0,2,,CoinbaseConnector.AccountChanges_Result' CoinbaseConnector.GetTransactionList_Result
 CoinbaseConnector,ExchangeRate,0,0,2,0,0,5,0,0,0,-1,0,0,,
-CoinbaseConnector,Error,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Fee,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Fees,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,NestedAddress,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,NestedOrder,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,NestedPaymentMethod,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,NestedReport,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,NestedTransaction,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,NestedTransfer,0,0,1,0,0,4,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,OAuth,0,0,5,0,0,8,0,0,0,-1,0,0,,
-CoinbaseConnector,OAuthApplication,0,0,7,0,0,10,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Order,0,0,11,0,0,14,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,OtherUser,0,0,2,0,0,5,0,0,0,-1,0,0,,
-CoinbaseConnector,Party,0,0,3,0,0,6,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,PaymentMethod,0,0,4,0,0,7,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Price,0,0,2,0,0,5,0,0,0,-1,0,0,,
-CoinbaseConnector,RecurringPaymentAsCustomer,0,0,15,0,0,18,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,RecurringPaymentAsMerchant,0,0,5,0,0,8,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Refund,0,0,13,0,0,16,0,0,0,-1,0,0,,
-CoinbaseConnector,Report,0,0,13,0,0,16,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Token,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,TotalMoney,0,0,2,0,0,5,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,Transaction,0,0,10,0,0,13,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,TransactionShortResponse,0,0,3,0,0,6,0,0,0,-1,0,0,,
-CoinbaseConnector,Transfer,0,0,11,0,0,14,0,0,0,-1,0,1,,TestApp.Program
-CoinbaseConnector,User,0,0,11,0,0,14,0,0,0,-1,0,1,,TestApp.Program
+CoinbaseConnector,Error,0,0,2,0,0,5,0,0,0,-1,0,0,,
+CoinbaseConnector,Fee,0,0,2,0,0,5,0,0,0,-1,0,1,,CoinbaseConnector.Fees
+CoinbaseConnector,Fees,0,0,2,0,0,5,0,0,0,-1,1,3,CoinbaseConnector.Fee,CoinbaseConnector.BuyPrice_Result' CoinbaseConnector.SellPrice_Result' CoinbaseConnector.Transfer
+CoinbaseConnector,NestedAddress,0,0,1,0,0,4,0,0,0,-1,1,1,CoinbaseConnector.Address,CoinbaseConnector.Addresses_Result
+CoinbaseConnector,NestedOrder,0,0,1,0,0,4,0,0,0,-1,1,1,CoinbaseConnector.Order,CoinbaseConnector.MerchantOrders_Result
+CoinbaseConnector,NestedPaymentMethod,0,0,1,0,0,4,0,0,0,-1,1,1,CoinbaseConnector.PaymentMethod,CoinbaseConnector.PaymentMethods_Result
+CoinbaseConnector,NestedReport,0,0,1,0,0,4,0,0,0,-1,1,1,CoinbaseConnector.Report,CoinbaseConnector.Reports_Result
+CoinbaseConnector,NestedTransaction,0,0,1,0,0,4,0,0,0,-1,1,1,CoinbaseConnector.Transaction,CoinbaseConnector.GetTransactionList_Result
+CoinbaseConnector,NestedTransfer,0,0,1,0,0,4,0,0,0,-1,1,1,CoinbaseConnector.Transfer,CoinbaseConnector.Transfers_Result
+CoinbaseConnector,OAuth,0,0,5,0,0,8,0,0,0,-1,0,1,,CoinbaseConnector.CreateUser_Result
+CoinbaseConnector,OAuthApplication,0,0,7,0,0,10,0,0,0,-1,0,2,,CoinbaseConnector.CreateOAuthApp_Result' CoinbaseConnector.GetOauthApp_Result
+CoinbaseConnector,Order,0,0,11,0,0,14,0,0,0,-1,2,4,CoinbaseConnector.ButtonShortResponse' CoinbaseConnector.TotalMoney,CoinbaseConnector.CreateButtonOrder_Result' CoinbaseConnector.CreateOrder_Result' CoinbaseConnector.MerchantOrder_Result' CoinbaseConnector.NestedOrder
+CoinbaseConnector,OtherUser,0,0,2,0,0,5,0,0,0,-1,0,1,,CoinbaseConnector.Cache
+CoinbaseConnector,Party,0,0,3,0,0,6,0,0,0,-1,0,1,,CoinbaseConnector.Transaction
+CoinbaseConnector,PaymentMethod,0,0,4,0,0,7,0,0,0,-1,0,1,,CoinbaseConnector.NestedPaymentMethod
+CoinbaseConnector,Price,0,0,2,0,0,5,0,0,0,-1,0,1,,CoinbaseConnector.Button
+CoinbaseConnector,RecurringPaymentAsCustomer,0,0,15,0,0,18,0,0,0,-1,1,2,CoinbaseConnector.Amount,CoinbaseConnector.RecurringPayments_Result' CoinbaseConnector.RecurringPayment_Result
+CoinbaseConnector,RecurringPaymentAsMerchant,0,0,5,0,0,8,0,0,0,-1,1,2,CoinbaseConnector.ButtonShortResponse,CoinbaseConnector.SubscribersList_Result' CoinbaseConnector.Subscriber_Result
+CoinbaseConnector,Refund,0,0,13,0,0,16,0,0,0,-1,3,1,CoinbaseConnector.ButtonShortResponse' CoinbaseConnector.TotalMoney' CoinbaseConnector.TransactionShortResponse,CoinbaseConnector.RefundOrder_Result
+CoinbaseConnector,Report,0,0,13,0,0,16,0,0,0,-1,0,3,,CoinbaseConnector.GenerateReport_Result' CoinbaseConnector.ReportDetails_Result' CoinbaseConnector.NestedReport
+CoinbaseConnector,Token,0,0,2,0,0,5,0,0,0,-1,0,1,,CoinbaseConnector.CreateToken_Result
+CoinbaseConnector,TotalMoney,0,0,2,0,0,5,0,0,0,-1,0,3,,CoinbaseConnector.Order' CoinbaseConnector.Refund' CoinbaseConnector.Transfer
+CoinbaseConnector,Transaction,0,0,10,0,0,13,0,0,0,-1,2,5,CoinbaseConnector.Amount' CoinbaseConnector.Party,CoinbaseConnector.TransactionDetails_Result' CoinbaseConnector.SendMoney_Result' CoinbaseConnector.CreateInvoice_Result' CoinbaseConnector.CompleteRequest_Result' CoinbaseConnector.NestedTransaction
+CoinbaseConnector,TransactionShortResponse,0,0,3,0,0,6,0,0,0,-1,0,1,,CoinbaseConnector.Refund
+CoinbaseConnector,Transfer,0,0,11,0,0,14,0,0,0,-1,2,3,CoinbaseConnector.Fees' CoinbaseConnector.TotalMoney,CoinbaseConnector.PurchaseBitcoin_Result' CoinbaseConnector.SellBitcoin_Result' CoinbaseConnector.NestedTransfer
+CoinbaseConnector,User,0,0,11,0,0,14,0,0,0,-1,1,3,CoinbaseConnector.Amount,CoinbaseConnector.CreateUser_Result' CoinbaseConnector.AccountSettings_Result' CoinbaseConnector.UpdateAccountSettings_Result

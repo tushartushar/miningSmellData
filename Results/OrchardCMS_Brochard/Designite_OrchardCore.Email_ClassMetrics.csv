@@ -1,0 +1,13 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OrchardCore.Email,AdminMenu,1,2,0,0,2,22,3,0,1,0,2,1,OrchardCore.Email.Permissions' OrchardCore.Email.Drivers.SmtpSettingsDisplayDriver,OrchardCore.Email.Startup
+OrchardCore.Email,Permissions,1,2,0,1,2,23,2,0,0,0,0,4,,OrchardCore.Email.Controllers.AdminController' OrchardCore.Email.Startup' OrchardCore.Email.AdminMenu' OrchardCore.Email.Drivers.SmtpSettingsDisplayDriver
+OrchardCore.Email,Startup,1,3,0,0,3,25,3,0,0,0.67,6,0,OrchardCore.Email.AdminMenu' OrchardCore.Email.Permissions' OrchardCore.Email.Controllers.AdminController' OrchardCore.Email.Drivers.SmtpSettingsDisplayDriver' OrchardCore.Email.Services.SmtpService' OrchardCore.Email.Services.SmtpSettingsConfiguration,
+OrchardCore.Email.Controllers,AdminController,4,5,1,0,3,88,13,0,0,0.4,3,1,OrchardCore.Email.Permissions' OrchardCore.Email.Drivers.SmtpSettingsDisplayDriver' OrchardCore.Email.ViewModels.SmtpSettingsViewModel,OrchardCore.Email.Startup
+OrchardCore.Email.Drivers,SmtpSettingsDisplayDriver,6,3,0,1,3,79,8,0,0,0,2,3,OrchardCore.Email.Permissions' OrchardCore.Email.Services.SmtpSettingsConfiguration,OrchardCore.Email.Startup' OrchardCore.Email.Controllers.AdminController' OrchardCore.Email.AdminMenu
+OrchardCore.Email.Services,SmtpService,4,7,1,0,2,174,30,0,1,0,0,1,,OrchardCore.Email.Startup
+OrchardCore.Email.Services,SmtpSettingsConfiguration,3,2,0,0,2,44,3,0,0,0,0,2,,OrchardCore.Email.Startup' OrchardCore.Email.Drivers.SmtpSettingsDisplayDriver
+OrchardCore.Email.ViewModels,SmtpSettingsViewModel,0,0,6,0,0,10,0,0,0,-1,0,1,,OrchardCore.Email.Controllers.AdminController
+OrchardCore.Email.Workflows.Activities,EmailTask,3,3,9,0,3,78,5,0,3,0.67,0,2,,OrchardCore.Email.Workflows.Drivers.EmailTaskDisplay' OrchardCore.Email.Workflows.Startup
+OrchardCore.Email.Workflows.Drivers,EmailTaskDisplay,0,2,0,0,0,19,2,0,0,-1,2,1,OrchardCore.Email.Workflows.Activities.EmailTask' OrchardCore.Email.Workflows.ViewModels.EmailTaskViewModel,OrchardCore.Email.Workflows.Startup
+OrchardCore.Email.Workflows,Startup,0,1,0,0,1,8,1,0,0,-1,2,0,OrchardCore.Email.Workflows.Activities.EmailTask' OrchardCore.Email.Workflows.Drivers.EmailTaskDisplay,
+OrchardCore.Email.Workflows.ViewModels,EmailTaskViewModel,0,0,5,0,0,9,0,0,0,-1,0,1,,OrchardCore.Email.Workflows.Drivers.EmailTaskDisplay

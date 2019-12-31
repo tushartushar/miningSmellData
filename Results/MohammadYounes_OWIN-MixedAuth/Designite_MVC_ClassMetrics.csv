@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 MVC,BundleConfig,0,1,0,0,1,24,1,0,0,-1,0,1,,MVC.MvcApplication
 MVC,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,MVC.MvcApplication
-MVC,EmailService,0,1,0,0,1,8,1,0,0,-1,0,0,,
-MVC,SmsService,0,1,0,0,1,8,1,0,0,-1,0,0,,
-MVC,ApplicationUserManager,0,2,0,0,2,50,3,0,0,-1,0,4,,MVC.ApplicationSignInManager' MVC.Startup' MVC.Controllers.AccountController' MVC.Controllers.ManageController
+MVC,EmailService,0,1,0,0,1,8,1,0,0,-1,0,1,,MVC.ApplicationUserManager
+MVC,SmsService,0,1,0,0,1,8,1,0,0,-1,0,1,,MVC.ApplicationUserManager
+MVC,ApplicationUserManager,0,2,0,0,2,50,3,0,0,-1,4,4,MVC.EmailService' MVC.SmsService' MVC.Models.ApplicationUser' MVC.Models.ApplicationDbContext,MVC.Controllers.ManageController' MVC.Startup' MVC.Controllers.AccountController' MVC.ApplicationSignInManager
 MVC,ApplicationSignInManager,0,3,0,0,3,15,3,0,0,-1,2,2,MVC.ApplicationUserManager' MVC.Models.ApplicationUser,MVC.Startup' MVC.Controllers.AccountController
 MVC,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,MVC.MvcApplication
-MVC,Startup,0,2,0,0,2,84,2,0,0,-1,3,0,MVC.Models.ApplicationDbContext' MVC.ApplicationUserManager' MVC.ApplicationSignInManager,
-MVC,MvcApplication,0,2,0,0,1,14,2,0,0,-1,3,0,MVC.FilterConfig' MVC.RouteConfig' MVC.BundleConfig,
-MVC.Controllers,AccountController,3,24,3,0,22,410,50,0,0,0.83,11,0,MVC.ApplicationUserManager' MVC.ApplicationSignInManager' MVC.Models.LoginViewModel' MVC.Models.VerifyCodeViewModel' MVC.Models.ApplicationUser' MVC.Models.RegisterViewModel' MVC.Models.ForgotPasswordViewModel' MVC.Models.ResetPasswordViewModel' MVC.Controllers.ChallengeResult' MVC.Models.SendCodeViewModel' MVC.Models.ExternalLoginConfirmationViewModel,
-MVC.Controllers,ChallengeResult,0,3,3,0,3,25,4,0,0,-1,0,2,,MVC.Controllers.AccountController' MVC.Controllers.ManageController
+MVC,Startup,0,2,0,0,2,84,2,0,0,-1,4,0,MVC.ApplicationUserManager' MVC.ApplicationSignInManager' MVC.Models.ApplicationUser' MVC.Models.ApplicationDbContext,
+MVC,MvcApplication,0,2,0,0,1,14,2,0,0,-1,3,0,MVC.BundleConfig' MVC.FilterConfig' MVC.RouteConfig,
+MVC.Controllers,AccountController,3,24,3,0,22,410,55,0,0,0.83,11,1,MVC.ApplicationUserManager' MVC.ApplicationSignInManager' MVC.Controllers.ChallengeResult' MVC.Models.ExternalLoginConfirmationViewModel' MVC.Models.SendCodeViewModel' MVC.Models.VerifyCodeViewModel' MVC.Models.LoginViewModel' MVC.Models.RegisterViewModel' MVC.Models.ResetPasswordViewModel' MVC.Models.ForgotPasswordViewModel' MVC.Models.ApplicationUser,MVC.Controllers.ManageController
+MVC.Controllers,ChallengeResult,0,3,3,0,3,25,4,0,0,-1,0,2,,MVC.Controllers.ManageController' MVC.Controllers.AccountController
 MVC.Controllers,HomeController,0,3,0,0,3,17,3,0,0,-1,0,0,,
-MVC.Controllers,ManageController,2,23,2,0,19,331,45,0,0,0.91,9,0,MVC.ApplicationUserManager' MVC.Models.IndexViewModel' MVC.Controllers.ManageMessageId' MVC.Models.AddPhoneNumberViewModel' MVC.Models.VerifyPhoneNumberViewModel' MVC.Models.ChangePasswordViewModel' MVC.Models.SetPasswordViewModel' MVC.Controllers.ChallengeResult' MVC.Models.ApplicationUser,
+MVC.Controllers,ManageController,2,23,2,0,19,331,45,0,0,0.91,11,0,MVC.ApplicationUserManager' MVC.Controllers.AccountController' MVC.Controllers.ChallengeResult' MVC.Controllers.ManageMessageId' MVC.Models.ApplicationUser' MVC.Models.IndexViewModel' MVC.Models.ManageLoginsViewModel' MVC.Models.SetPasswordViewModel' MVC.Models.ChangePasswordViewModel' MVC.Models.AddPhoneNumberViewModel' MVC.Models.VerifyPhoneNumberViewModel,
 MVC.Controllers,ManageMessageId,0,0,0,0,0,10,0,0,0,-1,0,1,,MVC.Controllers.ManageController
 MVC.Models,ExternalLoginConfirmationViewModel,0,0,1,0,0,6,0,0,0,-1,0,1,,MVC.Controllers.AccountController
 MVC.Models,ExternalLoginListViewModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
@@ -22,10 +22,10 @@ MVC.Models,LoginViewModel,0,0,3,0,0,13,0,0,0,-1,0,1,,MVC.Controllers.AccountCont
 MVC.Models,RegisterViewModel,0,0,3,0,0,16,0,0,0,-1,0,1,,MVC.Controllers.AccountController
 MVC.Models,ResetPasswordViewModel,0,0,4,0,0,17,0,0,0,-1,0,1,,MVC.Controllers.AccountController
 MVC.Models,ForgotPasswordViewModel,0,0,1,0,0,7,0,0,0,-1,0,1,,MVC.Controllers.AccountController
-MVC.Models,ApplicationUser,0,1,0,0,1,10,1,0,0,-1,0,3,,MVC.ApplicationSignInManager' MVC.Controllers.AccountController' MVC.Controllers.ManageController
-MVC.Models,ApplicationDbContext,0,2,0,0,2,11,2,0,0,-1,0,1,,MVC.Startup
+MVC.Models,ApplicationUser,0,1,0,0,1,10,1,0,0,-1,0,6,,MVC.Controllers.ManageController' MVC.Models.ApplicationDbContext' MVC.Startup' MVC.Controllers.AccountController' MVC.ApplicationUserManager' MVC.ApplicationSignInManager
+MVC.Models,ApplicationDbContext,0,2,0,0,2,11,2,0,0,-1,1,2,MVC.Models.ApplicationUser,MVC.Startup' MVC.ApplicationUserManager
 MVC.Models,IndexViewModel,0,0,5,0,0,8,0,0,0,-1,0,1,,MVC.Controllers.ManageController
-MVC.Models,ManageLoginsViewModel,0,0,2,0,0,5,0,0,0,-1,0,0,,
+MVC.Models,ManageLoginsViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,MVC.Controllers.ManageController
 MVC.Models,FactorViewModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
 MVC.Models,SetPasswordViewModel,0,0,2,0,0,12,0,0,0,-1,0,1,,MVC.Controllers.ManageController
 MVC.Models,ChangePasswordViewModel,0,0,3,0,0,16,0,0,0,-1,0,1,,MVC.Controllers.ManageController

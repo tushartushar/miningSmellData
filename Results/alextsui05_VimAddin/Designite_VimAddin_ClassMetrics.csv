@@ -1,37 +1,37 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Stetic,Gui,1,1,0,0,0,10,2,0,0,0,0,1,,VimAddin.VimAddinOptionsPanelWidget
-Stetic,BinContainer,2,6,0,0,2,46,10,0,0,0.33,0,1,,VimAddin.VimAddinOptionsPanelWidget
+Stetic,Gui,1,1,0,0,0,10,2,0,0,0,0,0,,
+Stetic,BinContainer,2,6,0,0,2,46,10,0,0,0.33,0,0,,
 Stetic,ActionGroups,0,2,0,0,2,11,2,0,0,-1,0,0,,
-VimAddin,NewIdeViMode,0,2,0,0,1,13,2,0,1,-1,2,0,VimAddin.NewViEditMode' VimAddin.ViEditor,
-VimAddin,IdeViMode,2,5,0,0,1,111,11,0,1,0.6,3,3,VimAddin.ViMark' VimAddin.ViEditMode' VimAddin.State,VimAddin.VimAddinCommandHandler' VimAddin.PageUpHandler' VimAddin.PageDownHandler
+VimAddin,NewIdeViMode,0,2,0,0,1,13,2,0,1,-1,1,0,VimAddin.NewViEditMode,
+VimAddin,IdeViMode,2,5,0,0,1,111,21,0,1,0.8,3,4,VimAddin.ViMark' VimAddin.ViEditMode' VimAddin.State,VimAddin.VimTextEditorExtension' VimAddin.VimAddinCommandHandler' VimAddin.PageUpHandler' VimAddin.PageDownHandler
 VimAddin,VimAddinCommands,0,0,0,0,0,5,0,0,0,-1,0,0,,
-VimAddin,VimTextEditorExtension,1,5,1,0,5,41,6,0,0,0.4,0,0,,
-VimAddin,VimAddinCommandHandler,0,2,0,0,0,18,3,2,0,-1,1,0,VimAddin.IdeViMode,
-VimAddin,PageUpHandler,0,1,0,0,0,11,1,0,1,-1,1,0,VimAddin.IdeViMode,
-VimAddin,PageDownHandler,0,1,0,0,0,37,1,0,1,-1,1,0,VimAddin.IdeViMode,
-VimAddin,NewViEditMode,2,8,4,0,3,77,11,1,0,0.5,4,2,VimAddin.ViStatusArea' VimAddin.ViEditor' VimAddin.ViEditorMode' VimAddin.ViActions,VimAddin.NewIdeViMode' VimAddin.ViEditor
-VimAddin,ViActionMaps,0,6,0,0,6,250,15,0,0,-1,2,1,VimAddin.Motion' VimAddin.ViActions,VimAddin.ViEditMode
-VimAddin,ViActions,2,29,0,0,23,421,60,0,0,0.69,2,5,VimAddin.ViWordFindStrategy' VimAddin.SymbolBlock,VimAddin.NewViEditMode' VimAddin.ViActionMaps' VimAddin.ViBuilderContext' VimAddin.ViEditor' VimAddin.ViEditMode
+VimAddin,VimTextEditorExtension,1,5,1,0,5,41,6,0,0,0.4,1,0,VimAddin.IdeViMode,
+VimAddin,VimAddinCommandHandler,0,2,0,0,0,18,3,2,0,-1,1,2,VimAddin.IdeViMode,VimAddin.PageUpHandler' VimAddin.PageDownHandler
+VimAddin,PageUpHandler,0,1,0,0,0,11,1,0,1,-1,2,0,VimAddin.IdeViMode' VimAddin.VimAddinCommandHandler,
+VimAddin,PageDownHandler,0,1,0,0,0,37,1,0,1,-1,2,0,VimAddin.IdeViMode' VimAddin.VimAddinCommandHandler,
+VimAddin,NewViEditMode,2,8,4,0,3,77,11,1,0,0.5,4,2,VimAddin.ViActions' VimAddin.ViEditor' VimAddin.ViEditorMode' VimAddin.ViStatusArea,VimAddin.NewIdeViMode' VimAddin.ViEditor
+VimAddin,ViActionMaps,0,6,0,0,6,250,59,0,0,-1,2,1,VimAddin.ViActions' VimAddin.Motion,VimAddin.ViEditMode
+VimAddin,ViActions,2,29,0,0,23,421,67,0,0,0.69,3,5,VimAddin.SymbolBlock' VimAddin.ViModeAbortException' VimAddin.ViWordFindStrategy,VimAddin.ViEditor' VimAddin.NewViEditMode' VimAddin.ViActionMaps' VimAddin.ViEditMode' VimAddin.ViBuilderContext
 VimAddin,SymbolBlock,4,2,1,4,2,15,2,0,0,0,0,1,,VimAddin.ViActions
-VimAddin,ViBuilderContext,9,13,10,0,6,278,24,0,0,0.23,7,3,VimAddin.ViEditor' VimAddin.ViCommandMap' VimAddin.ViKey' VimAddin.ViBuilders' VimAddin.ViEditorMode' VimAddin.ViActions' VimAddin.ViEditorActions,VimAddin.ViBuilders' VimAddin.ViCommandMap' VimAddin.ViEditor
-VimAddin,ViBuilders,0,9,0,0,7,179,13,0,0,-1,5,1,VimAddin.ViMark' VimAddin.ViKey' VimAddin.ViBuilderContext' VimAddin.ViEditor' VimAddin.ViEditorMode,VimAddin.ViBuilderContext
-VimAddin,ViCommandMap,2,8,0,0,7,70,9,0,0,0.25,4,1,VimAddin.BuilderAction' VimAddin.ViBuilderContext' VimAddin.ViKey' VimAddin.ViEditor,VimAddin.ViBuilderContext
+VimAddin,ViBuilderContext,9,13,10,0,6,278,24,0,0,0.31,7,3,VimAddin.ViActions' VimAddin.ViBuilders' VimAddin.ViCommandMap' VimAddin.ViEditor' VimAddin.ViEditorMode' VimAddin.ViEditorActions' VimAddin.ViKey,VimAddin.ViCommandMap' VimAddin.ViEditor' VimAddin.ViBuilders
+VimAddin,ViBuilders,0,9,0,0,7,179,13,0,0,-1,4,1,VimAddin.ViBuilderContext' VimAddin.ViEditor' VimAddin.ViEditorMode' VimAddin.ViMark,VimAddin.ViBuilderContext
+VimAddin,ViCommandMap,2,8,0,0,7,70,11,0,0,0.25,4,1,VimAddin.ViBuilderContext' VimAddin.BuilderAction' VimAddin.ViEditor' VimAddin.ViKey,VimAddin.ViBuilderContext
 VimAddin,BuilderAction,2,1,0,2,1,11,1,0,0,0,0,1,,VimAddin.ViCommandMap
-VimAddin,ViEditor,25,10,12,0,10,245,21,0,0,0.6,4,6,VimAddin.NewViEditMode' VimAddin.ViEditorMode' VimAddin.ViBuilderContext' VimAddin.ViActions,VimAddin.NewIdeViMode' VimAddin.NewViEditMode' VimAddin.ViBuilderContext' VimAddin.ViBuilders' VimAddin.ViCommandMap' VimAddin.ViEditorActions
-VimAddin,ViEditorMode,0,0,0,0,0,10,0,0,0,-1,0,4,,VimAddin.NewViEditMode' VimAddin.ViBuilderContext' VimAddin.ViBuilders' VimAddin.ViEditor
+VimAddin,ViEditor,25,10,12,0,10,245,34,0,0,0.6,5,5,VimAddin.NewViEditMode' VimAddin.ViActions' VimAddin.ViBuilderContext' VimAddin.ViEditorMode' VimAddin.ViMark,VimAddin.ViEditorActions' VimAddin.ViCommandMap' VimAddin.NewViEditMode' VimAddin.ViBuilderContext' VimAddin.ViBuilders
+VimAddin,ViEditorMode,0,0,0,0,0,10,0,0,0,-1,0,4,,VimAddin.ViBuilderContext' VimAddin.ViBuilders' VimAddin.NewViEditMode' VimAddin.ViEditor
 VimAddin,ViEditorActions,0,4,0,0,4,28,6,0,0,-1,1,1,VimAddin.ViEditor,VimAddin.ViBuilderContext
-VimAddin,ViKey,4,9,3,0,8,74,12,0,0,0.22,1,4,VimAddin.ViKeyNotation,VimAddin.ViBuilderContext' VimAddin.ViBuilders' VimAddin.ViCommandMap' VimAddin.ViKeyNotation
-VimAddin,ViKeyNotation,5,11,0,0,4,312,34,0,0,0.18,1,1,VimAddin.ViKey,VimAddin.ViKey
-VimAddin,ViMacro,0,1,2,0,1,25,1,0,0,-1,0,1,,VimAddin.ViEditMode
-VimAddin,KeySet,0,0,3,0,0,5,0,0,0,-1,0,1,,VimAddin.ViEditMode
-VimAddin,ViMark,0,4,3,0,4,70,8,0,0,-1,0,3,,VimAddin.IdeViMode' VimAddin.ViBuilders' VimAddin.ViEditMode
+VimAddin,ViKey,4,9,3,0,8,74,12,0,0,0.78,1,3,VimAddin.ViKeyNotation,VimAddin.ViCommandMap' VimAddin.ViKeyNotation' VimAddin.ViBuilderContext
+VimAddin,ViKeyNotation,5,11,0,0,4,312,37,0,0,0.18,1,1,VimAddin.ViKey,VimAddin.ViKey
+VimAddin,ViMacro,0,1,2,0,1,25,1,0,0,-1,1,1,VimAddin.KeySet,VimAddin.ViEditMode
+VimAddin,KeySet,0,0,3,0,0,5,0,0,0,-1,0,2,,VimAddin.ViMacro' VimAddin.ViEditMode
+VimAddin,ViMark,0,4,3,0,4,70,8,0,0,-1,0,4,,VimAddin.IdeViMode' VimAddin.ViEditor' VimAddin.ViBuilders' VimAddin.ViEditMode
 VimAddin,Keystroke,3,1,3,0,1,15,1,0,0,0,0,1,,VimAddin.ViEditMode
-VimAddin,ViEditMode,22,36,6,0,7,1637,75,1,0,0.19,9,1,VimAddin.State' VimAddin.Motion' VimAddin.ViMacro' VimAddin.ViStatusArea' VimAddin.ViActions' VimAddin.ViMark' VimAddin.ViActionMaps' VimAddin.Keystroke' VimAddin.KeySet,VimAddin.IdeViMode
+VimAddin,ViEditMode,22,36,6,0,7,1637,265,1,0,0.19,9,1,VimAddin.ViActionMaps' VimAddin.ViActions' VimAddin.ViMacro' VimAddin.KeySet' VimAddin.ViMark' VimAddin.Keystroke' VimAddin.State' VimAddin.Motion' VimAddin.ViStatusArea,VimAddin.IdeViMode
 VimAddin,State,0,0,0,0,0,22,0,0,0,-1,0,2,,VimAddin.IdeViMode' VimAddin.ViEditMode
-VimAddin,Motion,0,0,0,0,0,5,0,0,0,-1,0,2,,VimAddin.ViActionMaps' VimAddin.ViEditMode
-VimAddin,ViModeAbortException,0,2,0,0,2,18,2,0,0,-1,0,0,,
-VimAddin,ViStatusArea,4,7,2,0,3,120,11,0,0,0.43,0,2,,VimAddin.NewViEditMode' VimAddin.ViEditMode
-VimAddin,ViWordFindStrategy,0,8,0,0,6,150,29,0,0,-1,1,1,VimAddin.CharacterClass,VimAddin.ViActions
+VimAddin,Motion,0,0,0,0,0,5,0,0,0,-1,0,2,,VimAddin.ViEditMode' VimAddin.ViActionMaps
+VimAddin,ViModeAbortException,0,2,0,0,2,18,2,0,0,-1,0,1,,VimAddin.ViActions
+VimAddin,ViStatusArea,4,7,2,0,3,120,13,0,0,0.57,0,2,,VimAddin.NewViEditMode' VimAddin.ViEditMode
+VimAddin,ViWordFindStrategy,0,8,0,0,6,150,30,0,0,-1,1,1,VimAddin.CharacterClass,VimAddin.ViActions
 VimAddin,CharacterClass,0,0,0,0,0,6,0,0,0,-1,0,1,,VimAddin.ViWordFindStrategy
-VimAddin,VimAddinOptionsPanelWidget,3,3,0,0,2,61,4,0,0,0,2,1,Stetic.Gui' Stetic.BinContainer,VimAddin.VimAddinOptionsPanel
-VimAddin,VimAddinOptionsPanel,1,2,0,0,2,13,2,0,0,0,1,0,VimAddin.VimAddinOptionsPanelWidget,
+VimAddin,VimAddinOptionsPanelWidget,3,3,0,0,2,61,4,0,0,0,0,0,,
+VimAddin,VimAddinOptionsPanel,1,2,0,0,2,13,2,0,0,0,0,0,,

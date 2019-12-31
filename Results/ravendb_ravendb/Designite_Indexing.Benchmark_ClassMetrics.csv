@@ -1,26 +1,26 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Indexing.Benchmark.Entities,Address,0,0,5,0,0,8,0,0,0,-1,0,0,,
-Indexing.Benchmark.Entities,Company,0,0,12,0,0,20,0,0,0,-1,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark.Entities,CompanyType,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Indexing.Benchmark.Entities,Contact,0,0,4,0,0,7,0,0,0,-1,0,0,,
-Indexing.Benchmark.Entities,Employee,0,0,11,0,0,14,0,0,0,-1,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark.Entities,Order,0,0,10,0,0,13,0,0,0,-1,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark.Entities,OrderLine,0,0,5,0,0,8,0,0,0,-1,0,0,,
-Indexing.Benchmark,IndexingBenchmark,1,2,1,0,1,65,4,2,0,0,1,0,Indexing.Benchmark.IndexingTestRun,
-Indexing.Benchmark,IndexingTestRun,0,0,2,0,0,5,0,0,0,-1,0,1,,Indexing.Benchmark.IndexingBenchmark
-Indexing.Benchmark,MapIndexesBench,1,1,1,0,1,125,1,0,1,0,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark,Orders_Totals,0,1,1,0,1,29,1,0,0,-1,0,0,,
+Indexing.Benchmark.Entities,Address,0,0,5,0,0,8,0,0,0,-1,0,3,,Indexing.Benchmark.Entities.Employee' Indexing.Benchmark.Entities.Order' Indexing.Benchmark.Program
+Indexing.Benchmark.Entities,Company,0,0,12,0,0,20,0,0,0,-1,2,2,Indexing.Benchmark.Entities.CompanyType' Indexing.Benchmark.Entities.Contact,Indexing.Benchmark.Program' Indexing.Benchmark.MapIndexesBench
+Indexing.Benchmark.Entities,CompanyType,0,0,0,0,0,5,0,0,0,-1,0,1,,Indexing.Benchmark.Entities.Company
+Indexing.Benchmark.Entities,Contact,0,0,4,0,0,7,0,0,0,-1,0,2,,Indexing.Benchmark.Entities.Company' Indexing.Benchmark.Program
+Indexing.Benchmark.Entities,Employee,0,0,11,0,0,14,0,0,0,-1,1,3,Indexing.Benchmark.Entities.Address,Indexing.Benchmark.MapIndexesBench' Indexing.Benchmark.Program' Indexing.Benchmark.MapReduceIndexesBench
+Indexing.Benchmark.Entities,Order,0,0,10,0,0,13,0,0,0,-1,2,3,Indexing.Benchmark.Entities.Address' Indexing.Benchmark.Entities.OrderLine,Indexing.Benchmark.MapReduceIndexesBench' Indexing.Benchmark.MapIndexesBench' Indexing.Benchmark.Program
+Indexing.Benchmark.Entities,OrderLine,0,0,5,0,0,8,0,0,0,-1,0,2,,Indexing.Benchmark.Entities.Order' Indexing.Benchmark.Program
+Indexing.Benchmark,IndexingBenchmark,1,2,1,0,1,64,4,2,0,0,1,2,Indexing.Benchmark.IndexingTestRun,Indexing.Benchmark.MapReduceIndexesBench' Indexing.Benchmark.MapIndexesBench
+Indexing.Benchmark,IndexingTestRun,0,0,2,0,0,5,0,0,0,-1,0,3,,Indexing.Benchmark.IndexingBenchmark' Indexing.Benchmark.MapIndexesBench' Indexing.Benchmark.MapReduceIndexesBench
+Indexing.Benchmark,MapIndexesBench,1,1,1,0,1,125,1,0,1,0,8,1,Indexing.Benchmark.Entities.Company' Indexing.Benchmark.Entities.Employee' Indexing.Benchmark.Entities.Order' Indexing.Benchmark.IndexingBenchmark' Indexing.Benchmark.IndexingTestRun' Indexing.Benchmark.Orders_Totals' Indexing.Benchmark.Orders_ByCompanyNameAndEmploeeFirstName_LoadDocument' Indexing.Benchmark.Orders_ByProducts_Fanout,Indexing.Benchmark.Program
+Indexing.Benchmark,Orders_Totals,0,1,1,0,1,29,1,0,1,-1,0,1,,Indexing.Benchmark.MapIndexesBench
 Indexing.Benchmark,Result,0,0,9,0,0,16,0,0,0,-1,0,0,,
-Indexing.Benchmark,Orders_ByCompanyNameAndEmploeeFirstName_LoadDocument,0,1,0,0,1,12,1,0,0,-1,0,0,,
-Indexing.Benchmark,Orders_ByProducts_Fanout,0,1,0,0,1,13,1,0,0,-1,0,0,,
-Indexing.Benchmark,Employees_ByNameAndAddress,1,1,1,0,1,23,1,0,0,0,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark,Companies_ByNameAndEmail,1,1,1,0,1,22,1,0,0,0,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark,MapReduceIndexesBench,1,1,1,0,1,162,1,0,1,0,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark,Orders_ByCompany,0,1,1,0,1,32,1,0,0,-1,0,0,,
-Indexing.Benchmark,Orders_ByCompany_Fanout,0,1,1,0,1,33,1,0,0,-1,0,0,,
-Indexing.Benchmark,Orders_GroupByMultipleFields,0,1,0,0,1,36,1,0,0,-1,0,0,,
-Indexing.Benchmark,ReduceResults,0,0,4,0,0,7,0,0,0,-1,0,0,,
-Indexing.Benchmark,Employees_GroupByCountry,1,1,1,0,1,35,1,0,0,0,0,1,,Indexing.Benchmark.Program
-Indexing.Benchmark,ReduceResult,0,0,2,0,0,5,0,0,0,-1,0,0,,
-Indexing.Benchmark,Program,6,7,0,0,4,211,13,0,0,0,9,0,Indexing.Benchmark.MapIndexesBench' Indexing.Benchmark.MapReduceIndexesBench' Indexing.Benchmark.Employees_ByNameAndAddress' Indexing.Benchmark.Companies_ByNameAndEmail' Indexing.Benchmark.Employees_GroupByCountry' Indexing.Benchmark.Entities.Order' Indexing.Benchmark.Entities.Company' Indexing.Benchmark.Entities.Employee' Indexing.Benchmark.ProgressBar,
-Indexing.Benchmark,ProgressBar,8,6,0,0,3,79,9,0,0,0,0,1,,Indexing.Benchmark.Program
+Indexing.Benchmark,Orders_ByCompanyNameAndEmploeeFirstName_LoadDocument,0,1,0,0,1,12,1,0,1,-1,0,1,,Indexing.Benchmark.MapIndexesBench
+Indexing.Benchmark,Orders_ByProducts_Fanout,0,1,0,0,1,13,1,0,1,-1,0,1,,Indexing.Benchmark.MapIndexesBench
+Indexing.Benchmark,Employees_ByNameAndAddress,1,1,1,0,1,23,1,0,1,0,0,1,,Indexing.Benchmark.Program
+Indexing.Benchmark,Companies_ByNameAndEmail,1,1,1,0,1,22,1,0,1,0,0,1,,Indexing.Benchmark.Program
+Indexing.Benchmark,MapReduceIndexesBench,1,1,1,0,1,162,1,0,1,0,10,1,Indexing.Benchmark.Entities.Employee' Indexing.Benchmark.Entities.Order' Indexing.Benchmark.IndexingBenchmark' Indexing.Benchmark.IndexingTestRun' Indexing.Benchmark.Orders_ByCompany' Indexing.Benchmark.Orders_ByCompany_Fanout' Indexing.Benchmark.Orders_GroupByMultipleFields' Indexing.Benchmark.ReduceResults' Indexing.Benchmark.Employees_GroupByCountry' Indexing.Benchmark.ReduceResult,Indexing.Benchmark.Program
+Indexing.Benchmark,Orders_ByCompany,0,1,1,0,1,32,1,0,1,-1,0,1,,Indexing.Benchmark.MapReduceIndexesBench
+Indexing.Benchmark,Orders_ByCompany_Fanout,0,1,1,0,1,33,1,0,1,-1,0,1,,Indexing.Benchmark.MapReduceIndexesBench
+Indexing.Benchmark,Orders_GroupByMultipleFields,0,1,0,0,1,36,1,0,1,-1,0,1,,Indexing.Benchmark.MapReduceIndexesBench
+Indexing.Benchmark,ReduceResults,0,0,4,0,0,7,0,0,0,-1,0,1,,Indexing.Benchmark.MapReduceIndexesBench
+Indexing.Benchmark,Employees_GroupByCountry,1,1,1,0,1,35,1,0,1,0,0,2,,Indexing.Benchmark.MapReduceIndexesBench' Indexing.Benchmark.Program
+Indexing.Benchmark,ReduceResult,0,0,2,0,0,5,0,0,0,-1,0,1,,Indexing.Benchmark.MapReduceIndexesBench
+Indexing.Benchmark,Program,6,7,0,0,4,211,17,0,0,0,12,0,Indexing.Benchmark.Entities.Address' Indexing.Benchmark.Entities.Company' Indexing.Benchmark.Entities.Contact' Indexing.Benchmark.Entities.Employee' Indexing.Benchmark.Entities.Order' Indexing.Benchmark.Entities.OrderLine' Indexing.Benchmark.MapIndexesBench' Indexing.Benchmark.Employees_ByNameAndAddress' Indexing.Benchmark.Companies_ByNameAndEmail' Indexing.Benchmark.MapReduceIndexesBench' Indexing.Benchmark.Employees_GroupByCountry' Indexing.Benchmark.ProgressBar,
+Indexing.Benchmark,ProgressBar,8,6,0,0,3,79,10,0,0,0,0,1,,Indexing.Benchmark.Program

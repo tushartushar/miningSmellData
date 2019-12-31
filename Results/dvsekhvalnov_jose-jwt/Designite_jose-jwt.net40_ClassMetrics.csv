@@ -1,54 +1,57 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Jose,DeflateCompression,0,2,0,0,2,28,2,1,1,-1,0,1,,UnitTests.MockCompression
-Jose,ICompression,0,2,0,0,0,5,2,2,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
-Jose,AesGcm,0,6,0,0,2,113,11,0,0,-1,3,3,Jose.native.BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO' Jose.native.BCrypt' Jose.Arrays,Jose.AesGcmKeyWrapManagement' Jose.AesGcmEncryption' UnitTests.AesGcmTest
-Jose,AesKeyWrap,1,4,0,0,2,150,11,0,0,0,2,2,Jose.Ensure' Jose.Arrays,Jose.AesKeyWrapManagement' UnitTests.AesKeyWrapTest
-Jose,ConcatKDF,0,1,0,0,1,34,1,0,0,-1,3,2,Jose.native.NCrypt' Jose.native.BCrypt' Jose.Arrays,Jose.EcdhKeyManagement' UnitTests.ConcatKDFTest
-Jose,PBKDF2,0,2,0,0,1,40,4,0,0,-1,2,2,Jose.Ensure' Jose.Arrays,Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' UnitTests.PBKDF2Test
-Jose,RsaOaep,0,2,0,0,2,29,6,0,0,-1,3,1,Jose.native.BCRYPT_OAEP_PADDING_INFO' Jose.native.NCrypt' Jose.native.BCrypt,Jose.RsaOaep256KeyManagement
-Jose,RsaPss,0,5,0,0,2,58,12,0,0,-1,3,1,Jose.native.BCRYPT_PSS_PADDING_INFO' Jose.native.NCrypt' Jose.native.BCrypt,Jose.RsaPssUsingSha
-Jose,IJsonMapper,0,2,0,0,0,5,2,2,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
-Jose,JSSerializerMapper,1,2,1,0,2,16,2,1,1,1,0,1,,UnitTests.MockJsonMapper
-Jose,AesGcmKeyWrapManagement,1,3,0,0,3,31,3,0,1,0,4,0,Jose.Ensure' Jose.Arrays' Jose.AesGcm' Jose.Base64Url,
-Jose,AesKeyWrapManagement,1,3,0,0,3,22,3,0,1,0,3,2,Jose.Ensure' Jose.Arrays' Jose.AesKeyWrap,Jose.EcdhKeyManagementWithAesKeyWrap' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap
-Jose,DirectKeyManagement,0,2,0,0,2,12,2,1,1,-1,2,1,Jose.Ensure' Jose.Arrays,UnitTests.MockKeyManagement
-Jose,EcdhKeyManagement,1,7,0,0,4,62,10,1,1,0,5,1,Security.Cryptography.EccKey' Jose.Ensure' Jose.Base64Url' Jose.Arrays' Jose.ConcatKDF,Jose.EcdhKeyManagementWithAesKeyWrap
-Jose,EcdhKeyManagementWithAesKeyWrap,2,3,0,0,3,21,3,0,2,0,3,0,Jose.AesKeyWrapManagement' Jose.EcdhKeyManagement' Jose.Arrays,
-Jose,IKeyManagement,0,2,0,0,0,20,2,8,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
-Jose,Pbse2HmacShaKeyManagementWithAesKeyWrap,2,3,1,0,3,57,3,0,1,0,5,0,Jose.AesKeyWrapManagement' Jose.Ensure' Jose.Arrays' Jose.Base64Url' Jose.PBKDF2,
-Jose,RsaKeyManagement,1,3,0,0,3,76,3,0,1,0,2,0,Jose.Arrays' Jose.Ensure,
-Jose,RsaOaep256KeyManagement,0,2,0,0,2,85,6,0,1,-1,4,0,Jose.Arrays' Jose.Ensure' Jose.RsaOaep' Security.Cryptography.RsaKey,
-Jose,AesCbcHmacEncryption,2,4,1,0,3,91,5,0,1,0,3,1,Jose.IJwsAlgorithm' Jose.Ensure' Jose.Arrays,UnitTests.SecurityVulnerabilitiesTest
-Jose,AesGcmEncryption,1,3,1,0,3,38,3,1,1,0,3,1,Jose.Ensure' Jose.Arrays' Jose.AesGcm,UnitTests.MockJweAlgorithm
-Jose,EcdsaUsingSha,1,3,1,0,3,56,3,0,1,0,1,0,Jose.Ensure,
-Jose,HmacUsingSha,1,4,0,0,3,31,7,0,1,0,2,0,Jose.Ensure' Jose.Arrays,
-Jose,IJwsAlgorithm,0,2,0,0,0,5,2,6,0,-1,0,3,,Jose.AesCbcHmacEncryption' Jose.JWT' Jose.JwtSettings
-Jose,Plaintext,0,2,0,0,2,12,2,1,1,-1,2,1,Jose.Arrays' Jose.Ensure,UnitTests.MockJwsAlgorithm
-Jose,RsaPssUsingSha,1,3,1,0,3,173,6,0,1,0,2,0,Jose.RsaPss' Security.Cryptography.RsaKey,
-Jose,RsaUsingSha,1,3,1,0,3,72,3,0,1,0,1,0,Jose.Ensure,
-Jose,JwsAlgorithm,0,0,0,0,0,16,0,0,0,-1,0,4,,Jose.JWT' Jose.JwtSettings' UnitTests.SettingsTest' UnitTests.TestSuite
-Jose,JweAlgorithm,0,0,0,0,0,20,0,0,0,-1,0,4,,Jose.JWT' Jose.JwtSettings' UnitTests.SettingsTest' UnitTests.TestSuite
-Jose,JweEncryption,0,0,0,0,0,9,0,0,0,-1,0,4,,Jose.JWT' Jose.JwtSettings' UnitTests.SettingsTest' UnitTests.TestSuite
-Jose,JweCompression,0,0,0,0,0,4,0,0,0,-1,0,3,,Jose.JwtSettings' UnitTests.SettingsTest' UnitTests.TestSuite
-Jose,JWT,1,25,2,0,20,443,40,0,0,0.16,12,3,Jose.JwtSettings' Jose.Compact' Jose.IJsonMapper' Jose.JweAlgorithm' Jose.JweEncryption' Jose.Ensure' Jose.IKeyManagement' Jose.jwe.IJweAlgorithm' Jose.Dictionaries' Jose.ICompression' Jose.JwsAlgorithm' Jose.IJwsAlgorithm,UnitTests.SecurityVulnerabilitiesTest' UnitTests.SettingsTest' UnitTests.TestSuite
-Jose,JoseException,0,2,0,0,2,5,2,3,0,-1,0,0,,
-Jose,IntegrityException,0,2,0,0,2,5,2,0,1,-1,0,0,,
-Jose,EncryptionException,0,2,0,0,2,5,2,0,1,-1,0,0,,
-Jose,InvalidAlgorithmException,0,2,0,0,2,5,2,0,1,-1,0,0,,
-Jose,JwtSettings,13,22,1,0,22,286,34,0,0,0.36,9,2,Jose.IJsonMapper' Jose.JweAlgorithm' Jose.IKeyManagement' Jose.JweEncryption' Jose.jwe.IJweAlgorithm' Jose.JweCompression' Jose.ICompression' Jose.JwsAlgorithm' Jose.IJwsAlgorithm,Jose.JWT' UnitTests.SettingsTest
-Jose,Arrays,3,14,1,2,14,147,23,0,0,0.93,2,21,Jose.Ensure' Jose.Base64Url,Jose.AesGcm' Jose.AesKeyWrap' Jose.ConcatKDF' Jose.PBKDF2' Jose.AesGcmKeyWrapManagement' Jose.AesKeyWrapManagement' Jose.DirectKeyManagement' Jose.EcdhKeyManagement' Jose.EcdhKeyManagementWithAesKeyWrap' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.RsaKeyManagement' Jose.RsaOaep256KeyManagement' Jose.AesCbcHmacEncryption' Jose.AesGcmEncryption' Jose.HmacUsingSha' Jose.Plaintext' Security.Cryptography.EccKey' Security.Cryptography.RsaKey' UnitTests.ArraysTest' UnitTests.SecurityVulnerabilitiesTest' UnitTests.TestSuite
-Jose,Base64Url,0,2,0,0,2,26,3,0,0,-1,0,8,,Jose.AesGcmKeyWrapManagement' Jose.EcdhKeyManagement' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.Arrays' Jose.Compact' UnitTests.Base64UrlTest' UnitTests.ConcatKDFTest' UnitTests.SecurityVulnerabilitiesTest
-Jose,Compact,0,2,0,0,2,23,4,0,0,-1,1,2,Jose.Base64Url,Jose.JWT' UnitTests.CompactTest
-Jose,Dictionaries,0,1,0,0,1,17,3,0,0,-1,0,2,,Jose.JWT' UnitTests.DictionariesTest
-Jose,Ensure,0,12,0,0,12,63,23,0,0,-1,0,17,,Jose.AesKeyWrap' Jose.PBKDF2' Jose.AesGcmKeyWrapManagement' Jose.AesKeyWrapManagement' Jose.DirectKeyManagement' Jose.EcdhKeyManagement' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.RsaKeyManagement' Jose.RsaOaep256KeyManagement' Jose.AesCbcHmacEncryption' Jose.AesGcmEncryption' Jose.EcdsaUsingSha' Jose.HmacUsingSha' Jose.Plaintext' Jose.RsaUsingSha' Jose.JWT' Jose.Arrays
-Jose.jwe,IJweAlgorithm,0,2,1,0,0,16,2,3,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
-Jose.native,BCrypt,14,8,0,14,6,145,8,0,0,1,1,4,Jose.native.BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO,Jose.AesGcm' Jose.ConcatKDF' Jose.RsaOaep' Jose.RsaPss
-Jose.native,BCRYPT_PSS_PADDING_INFO,2,1,0,2,1,12,1,0,0,0,0,2,,Jose.RsaPss' Jose.native.NCrypt
+Jose,DeflateCompression,0,2,0,0,2,28,2,2,1,-1,2,1,Jose.ICompression' Jose.ICompression,Jose.JwtSettings
+Jose,ICompression,0,2,0,0,0,5,2,3,0,-1,0,2,,Jose.DeflateCompression' Jose.JwtSettings
+Jose,AesGcm,0,6,0,0,2,113,16,0,0,-1,6,2,Jose.Arrays' Jose.native.BCrypt' Jose.native.BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO' Jose.Arrays' Jose.native.BCrypt' Jose.native.BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO,Jose.AesGcmEncryption' Jose.AesGcmKeyWrapManagement
+Jose,AesKeyWrap,1,4,0,0,2,150,11,0,0,0,6,1,Jose.IntegrityException' Jose.Arrays' Jose.Ensure' Jose.IntegrityException' Jose.Arrays' Jose.Ensure,Jose.AesKeyWrapManagement
+Jose,ConcatKDF,0,1,0,0,1,34,3,0,0,-1,10,1,Jose.Arrays' Jose.native.BCrypt' Jose.native.NCrypt' Jose.native.NCryptBufferDesc' Jose.native.NCryptBuffer' Jose.Arrays' Jose.native.BCrypt' Jose.native.NCrypt' Jose.native.NCryptBufferDesc' Jose.native.NCryptBuffer,Jose.EcdhKeyManagement
+Jose,PBKDF2,0,2,0,0,1,40,4,0,0,-1,4,1,Jose.Arrays' Jose.Ensure' Jose.Arrays' Jose.Ensure,Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap
+Jose,RsaOaep,0,2,0,0,2,29,6,0,0,-1,6,1,Jose.native.BCrypt' Jose.native.BCRYPT_OAEP_PADDING_INFO' Jose.native.NCrypt' Jose.native.BCrypt' Jose.native.BCRYPT_OAEP_PADDING_INFO' Jose.native.NCrypt,Jose.RsaOaep256KeyManagement
+Jose,RsaPss,0,5,0,0,2,58,12,0,0,-1,6,1,Jose.native.BCrypt' Jose.native.BCRYPT_PSS_PADDING_INFO' Jose.native.NCrypt' Jose.native.BCrypt' Jose.native.BCRYPT_PSS_PADDING_INFO' Jose.native.NCrypt,Jose.RsaPssUsingSha
+Jose,IJsonMapper,0,2,0,0,0,5,2,3,0,-1,0,3,,Jose.JWT' Jose.JSSerializerMapper' Jose.JwtSettings
+Jose,JSSerializerMapper,1,2,1,0,2,16,2,2,1,1,2,1,Jose.IJsonMapper' Jose.IJsonMapper,Jose.JwtSettings
+Jose,AesGcmKeyWrapManagement,1,3,0,0,3,31,3,0,1,0.67,10,1,Jose.AesGcm' Jose.IKeyManagement' Jose.Arrays' Jose.Base64Url' Jose.Ensure' Jose.AesGcm' Jose.IKeyManagement' Jose.Arrays' Jose.Base64Url' Jose.Ensure,Jose.JwtSettings
+Jose,AesKeyWrapManagement,1,3,0,0,3,22,3,0,1,0.67,8,3,Jose.AesKeyWrap' Jose.IKeyManagement' Jose.Arrays' Jose.Ensure' Jose.AesKeyWrap' Jose.IKeyManagement' Jose.Arrays' Jose.Ensure,Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.EcdhKeyManagementWithAesKeyWrap' Jose.JwtSettings
+Jose,DirectKeyManagement,0,2,0,0,2,12,2,2,1,-1,6,1,Jose.IKeyManagement' Jose.Arrays' Jose.Ensure' Jose.IKeyManagement' Jose.Arrays' Jose.Ensure,Jose.JwtSettings
+Jose,EcdhKeyManagement,1,7,0,0,4,62,10,1,1,0,12,2,Jose.ConcatKDF' Jose.IKeyManagement' Jose.Arrays' Jose.Base64Url' Jose.Ensure' Security.Cryptography.EccKey' Jose.ConcatKDF' Jose.IKeyManagement' Jose.Arrays' Jose.Base64Url' Jose.Ensure' Security.Cryptography.EccKey,Jose.JwtSettings' Jose.EcdhKeyManagementWithAesKeyWrap
+Jose,EcdhKeyManagementWithAesKeyWrap,2,3,0,0,3,21,3,0,2,0,6,1,Jose.AesKeyWrapManagement' Jose.EcdhKeyManagement' Jose.Arrays' Jose.AesKeyWrapManagement' Jose.EcdhKeyManagement' Jose.Arrays,Jose.JwtSettings
+Jose,IKeyManagement,0,2,0,0,0,20,2,9,0,-1,0,9,,Jose.DirectKeyManagement' Jose.EcdhKeyManagement' Jose.RsaKeyManagement' Jose.AesGcmKeyWrapManagement' Jose.AesKeyWrapManagement' Jose.RsaOaep256KeyManagement' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.JWT' Jose.JwtSettings
+Jose,Pbse2HmacShaKeyManagementWithAesKeyWrap,2,3,1,0,3,57,3,0,1,0,12,1,Jose.PBKDF2' Jose.AesKeyWrapManagement' Jose.IKeyManagement' Jose.Arrays' Jose.Base64Url' Jose.Ensure' Jose.PBKDF2' Jose.AesKeyWrapManagement' Jose.IKeyManagement' Jose.Arrays' Jose.Base64Url' Jose.Ensure,Jose.JwtSettings
+Jose,RsaKeyManagement,1,3,0,0,3,76,3,0,1,0.67,5,1,Jose.IKeyManagement' Jose.Arrays' Jose.Ensure' Jose.IKeyManagement' Jose.Arrays,Jose.JwtSettings
+Jose,RsaOaep256KeyManagement,0,2,0,0,2,85,6,0,1,-1,9,1,Jose.RsaOaep' Jose.IKeyManagement' Jose.Arrays' Jose.Ensure' Security.Cryptography.RsaKey' Jose.RsaOaep' Jose.IKeyManagement' Jose.Arrays' Security.Cryptography.RsaKey,Jose.JwtSettings
+Jose,AesCbcHmacEncryption,2,4,1,0,3,91,5,0,1,0.5,12,1,Jose.IJwsAlgorithm' Jose.IntegrityException' Jose.EncryptionException' Jose.Arrays' Jose.Ensure' Jose.jwe.IJweAlgorithm' Jose.IJwsAlgorithm' Jose.IntegrityException' Jose.EncryptionException' Jose.Arrays' Jose.Ensure' Jose.jwe.IJweAlgorithm,Jose.JwtSettings
+Jose,AesGcmEncryption,1,3,1,0,3,38,3,2,1,0.67,10,1,Jose.AesGcm' Jose.EncryptionException' Jose.Arrays' Jose.Ensure' Jose.jwe.IJweAlgorithm' Jose.AesGcm' Jose.EncryptionException' Jose.Arrays' Jose.Ensure' Jose.jwe.IJweAlgorithm,Jose.JwtSettings
+Jose,EcdsaUsingSha,1,3,1,0,3,56,3,0,1,0.67,3,1,Jose.IJwsAlgorithm' Jose.JoseException' Jose.Ensure,Jose.JwtSettings
+Jose,HmacUsingSha,1,4,0,0,3,31,7,0,1,0.5,6,1,Jose.IJwsAlgorithm' Jose.Arrays' Jose.Ensure' Jose.IJwsAlgorithm' Jose.Arrays' Jose.Ensure,Jose.JwtSettings
+Jose,IJwsAlgorithm,0,2,0,0,0,5,2,7,0,-1,0,7,,Jose.Plaintext' Jose.EcdsaUsingSha' Jose.RsaUsingSha' Jose.RsaPssUsingSha' Jose.HmacUsingSha' Jose.AesCbcHmacEncryption' Jose.JwtSettings
+Jose,Plaintext,0,2,0,0,2,12,2,2,1,-1,6,1,Jose.IJwsAlgorithm' Jose.Arrays' Jose.Ensure' Jose.IJwsAlgorithm' Jose.Arrays' Jose.Ensure,Jose.JwtSettings
+Jose,RsaPssUsingSha,1,3,1,0,3,173,7,0,1,0.67,8,1,Jose.RsaPss' Jose.IJwsAlgorithm' Jose.JoseException' Security.Cryptography.RsaKey' Jose.RsaPss' Jose.IJwsAlgorithm' Jose.JoseException' Security.Cryptography.RsaKey,Jose.JwtSettings
+Jose,RsaUsingSha,1,3,1,0,3,72,3,0,1,0.67,4,1,Jose.IJwsAlgorithm' Jose.Ensure' Jose.IJwsAlgorithm' Jose.Ensure,Jose.JwtSettings
+Jose,JwsAlgorithm,0,0,0,0,0,16,0,0,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
+Jose,JweAlgorithm,0,0,0,0,0,20,0,0,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
+Jose,JweEncryption,0,0,0,0,0,9,0,0,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
+Jose,JweCompression,0,0,0,0,0,4,0,0,0,-1,0,2,,Jose.JWT' Jose.JwtSettings
+Jose,JWT,1,26,2,0,20,493,46,0,0,0.19,38,0,Jose.IJsonMapper' Jose.IKeyManagement' Jose.JwsAlgorithm' Jose.JweAlgorithm' Jose.JweEncryption' Jose.JweCompression' Jose.JoseException' Jose.IntegrityException' Jose.EncryptionException' Jose.InvalidAlgorithmException' Jose.JwtOptions' Jose.JwtSettings' Jose.Arrays' Jose.Collections' Jose.Compact' Jose.Iterator' Jose.Dictionaries' Jose.Ensure' Jose.jwe.IJweAlgorithm' Jose.IJsonMapper' Jose.IKeyManagement' Jose.JwsAlgorithm' Jose.JweAlgorithm' Jose.JweEncryption' Jose.JweCompression' Jose.JoseException' Jose.IntegrityException' Jose.EncryptionException' Jose.InvalidAlgorithmException' Jose.JwtOptions' Jose.JwtSettings' Jose.Arrays' Jose.Collections' Jose.Compact' Jose.Iterator' Jose.Dictionaries' Jose.Ensure' Jose.jwe.IJweAlgorithm,
+Jose,JoseException,0,2,0,0,2,5,2,3,0,-1,0,6,,Jose.EcdsaUsingSha' Jose.RsaPssUsingSha' Jose.JWT' Jose.IntegrityException' Jose.EncryptionException' Jose.InvalidAlgorithmException
+Jose,IntegrityException,0,2,0,0,2,5,2,0,1,-1,2,3,Jose.JoseException' Jose.JoseException,Jose.AesCbcHmacEncryption' Jose.AesKeyWrap' Jose.JWT
+Jose,EncryptionException,0,2,0,0,2,5,2,0,1,-1,2,3,Jose.JoseException' Jose.JoseException,Jose.JWT' Jose.AesCbcHmacEncryption' Jose.AesGcmEncryption
+Jose,InvalidAlgorithmException,0,2,0,0,2,5,2,0,1,-1,2,2,Jose.JoseException' Jose.JoseException,Jose.JWT' Jose.JwtSettings
+Jose,JwtOptions,1,0,2,1,0,14,0,0,0,-1,1,1,Jose.JwtOptions,Jose.JWT
+Jose,JwtSettings,13,22,1,0,22,286,34,0,0,0.36,55,1,Jose.DeflateCompression' Jose.ICompression' Jose.IJsonMapper' Jose.JSSerializerMapper' Jose.AesGcmKeyWrapManagement' Jose.AesKeyWrapManagement' Jose.DirectKeyManagement' Jose.EcdhKeyManagement' Jose.EcdhKeyManagementWithAesKeyWrap' Jose.IKeyManagement' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.RsaKeyManagement' Jose.RsaOaep256KeyManagement' Jose.AesCbcHmacEncryption' Jose.AesGcmEncryption' Jose.EcdsaUsingSha' Jose.HmacUsingSha' Jose.IJwsAlgorithm' Jose.Plaintext' Jose.RsaPssUsingSha' Jose.RsaUsingSha' Jose.JwsAlgorithm' Jose.JweAlgorithm' Jose.JweEncryption' Jose.JweCompression' Jose.InvalidAlgorithmException' Jose.jwe.IJweAlgorithm' Jose.DeflateCompression' Jose.ICompression' Jose.IJsonMapper' Jose.JSSerializerMapper' Jose.AesGcmKeyWrapManagement' Jose.AesKeyWrapManagement' Jose.DirectKeyManagement' Jose.EcdhKeyManagement' Jose.EcdhKeyManagementWithAesKeyWrap' Jose.IKeyManagement' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.RsaKeyManagement' Jose.RsaOaep256KeyManagement' Jose.AesCbcHmacEncryption' Jose.AesGcmEncryption' Jose.HmacUsingSha' Jose.IJwsAlgorithm' Jose.Plaintext' Jose.RsaPssUsingSha' Jose.RsaUsingSha' Jose.JwsAlgorithm' Jose.JweAlgorithm' Jose.JweEncryption' Jose.JweCompression' Jose.InvalidAlgorithmException' Jose.JwtSettings' Jose.jwe.IJweAlgorithm' Jose.netstandard1_4.EcdsaUsingSha,Jose.JWT
+Jose,Arrays,3,14,1,2,14,147,23,0,0,0.93,4,19,Jose.Base64Url' Jose.Ensure' Jose.Base64Url' Jose.Ensure,Jose.RsaKeyManagement' Jose.AesKeyWrapManagement' Jose.AesGcm' Jose.ConcatKDF' Jose.AesGcmKeyWrapManagement' Jose.Plaintext' Jose.AesGcmEncryption' Jose.HmacUsingSha' Jose.EcdhKeyManagementWithAesKeyWrap' Jose.RsaOaep256KeyManagement' Security.Cryptography.RsaKey' Jose.PBKDF2' Jose.EcdhKeyManagement' Jose.DirectKeyManagement' Jose.JWT' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Security.Cryptography.EccKey' Jose.AesKeyWrap' Jose.AesCbcHmacEncryption
+Jose,Base64Url,0,2,0,0,2,26,5,0,0,-1,0,5,,Jose.Arrays' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.AesGcmKeyWrapManagement' Jose.EcdhKeyManagement' Jose.Compact
+Jose,Collections,0,1,0,0,1,27,3,0,0,-1,0,1,,Jose.JWT
+Jose,Compact,0,4,0,0,4,69,9,0,0,-1,4,1,Jose.Base64Url' Jose.Iterator' Jose.Base64Url' Jose.Iterator,Jose.JWT
+Jose,Iterator,2,2,1,0,2,24,3,0,0,0,0,2,,Jose.Compact' Jose.JWT
+Jose,Dictionaries,0,2,0,0,2,26,4,0,0,-1,0,1,,Jose.JWT
+Jose,Ensure,0,12,0,0,12,63,23,0,0,-1,0,17,,Jose.RsaOaep256KeyManagement' Jose.PBKDF2' Jose.DirectKeyManagement' Jose.AesGcmEncryption' Jose.AesCbcHmacEncryption' Jose.Pbse2HmacShaKeyManagementWithAesKeyWrap' Jose.AesKeyWrap' Jose.HmacUsingSha' Jose.Plaintext' Jose.AesKeyWrapManagement' Jose.EcdhKeyManagement' Jose.RsaUsingSha' Jose.RsaKeyManagement' Jose.AesGcmKeyWrapManagement' Jose.JWT' Jose.EcdsaUsingSha' Jose.Arrays
+Jose.jwe,IJweAlgorithm,0,2,1,0,0,16,2,4,0,-1,0,4,,Jose.AesCbcHmacEncryption' Jose.AesGcmEncryption' Jose.JWT' Jose.JwtSettings
+Jose.native,BCrypt,14,8,0,14,6,145,8,0,0,1,2,5,Jose.native.BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO' Jose.native.BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO,Jose.ConcatKDF' Jose.native.NCrypt' Jose.RsaPss' Jose.RsaOaep' Jose.AesGcm
+Jose.native,BCRYPT_PSS_PADDING_INFO,2,1,0,2,1,12,1,0,0,0,0,2,,Jose.native.NCrypt' Jose.RsaPss
 Jose.native,BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO,13,2,0,13,2,49,9,0,0,0,0,2,,Jose.AesGcm' Jose.native.BCrypt
 Jose.native,BCRYPT_KEY_LENGTHS_STRUCT,3,0,0,3,0,7,0,0,0,-1,0,0,,
-Jose.native,BCRYPT_OAEP_PADDING_INFO,3,1,0,3,1,14,1,0,0,0,0,2,,Jose.RsaOaep' Jose.native.NCrypt
-Jose.native,NCrypt,6,6,0,6,2,118,6,0,0,1,3,3,Jose.native.NCryptBufferDesc' Jose.native.BCRYPT_PSS_PADDING_INFO' Jose.native.BCRYPT_OAEP_PADDING_INFO,Jose.ConcatKDF' Jose.RsaOaep' Jose.RsaPss
-Jose.native,NCryptBufferDesc,3,2,0,3,2,26,3,0,0,0,1,1,Jose.native.NCryptBuffer,Jose.native.NCrypt
-Jose.native,NCryptBuffer,3,3,0,3,3,28,3,0,0,0,0,1,,Jose.native.NCryptBufferDesc
-Security.Cryptography,EccKey,16,4,4,12,3,121,9,0,0,0,1,4,Jose.Arrays,Jose.EcdhKeyManagement' UnitTests.ConcatKDFTest' UnitTests.SecurityVulnerabilitiesTest' UnitTests.TestSuite
-Security.Cryptography,RsaKey,2,2,0,2,2,24,2,0,0,1,1,3,Jose.Arrays,Jose.RsaOaep256KeyManagement' Jose.RsaPssUsingSha' UnitTests.TestSuite
+Jose.native,BCRYPT_OAEP_PADDING_INFO,3,1,0,3,1,14,1,0,0,0,0,2,,Jose.native.NCrypt' Jose.RsaOaep
+Jose.native,NCrypt,6,6,0,6,2,118,6,0,0,1,10,3,Jose.native.BCrypt' Jose.native.BCRYPT_PSS_PADDING_INFO' Jose.native.BCRYPT_OAEP_PADDING_INFO' Jose.native.NCryptBufferDesc' Jose.native.NCryptBuffer' Jose.native.BCrypt' Jose.native.BCRYPT_PSS_PADDING_INFO' Jose.native.BCRYPT_OAEP_PADDING_INFO' Jose.native.NCryptBufferDesc' Jose.native.NCryptBuffer,Jose.RsaPss' Jose.RsaOaep' Jose.ConcatKDF
+Jose.native,NCryptBufferDesc,3,2,0,3,2,26,3,0,0,0,0,2,,Jose.native.NCrypt' Jose.ConcatKDF
+Jose.native,NCryptBuffer,3,3,0,3,3,28,3,0,0,0,0,2,,Jose.native.NCrypt' Jose.ConcatKDF
+Security.Cryptography,EccKey,16,4,4,12,3,121,11,0,0,0.5,3,1,Jose.Arrays' Jose.Arrays' Security.Cryptography.EccKey,Jose.EcdhKeyManagement
+Security.Cryptography,RsaKey,2,2,0,2,2,24,2,0,0,1,2,2,Jose.Arrays' Jose.Arrays,Jose.RsaOaep256KeyManagement' Jose.RsaPssUsingSha

@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Chinook.DomainModel,Album,0,0,3,0,0,9,0,0,0,-1,0,7,,Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.MusicRepository' WebApp.Controllers.AlbumController' WebApp.ViewModels.AlbumEditViewModel' WebApp.ViewModels.AlbumInputModel' WebApp.ViewModels.AlbumIndexViewModel' WebApp.ViewModels.AlbumSearchViewModel
-Chinook.DomainModel,AlbumCover,0,0,2,0,0,6,0,1,0,-1,0,1,,Chinook.Repository.InMemory.MusicRepository
-Chinook.DomainModel,AlbumCoverImage,0,0,1,0,0,4,0,0,1,-1,0,3,,Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.MusicRepository' WebApp.Controllers.AlbumController
-Chinook.DomainModel,Artist,0,0,2,0,0,5,0,0,0,-1,0,3,,Chinook.Repository.InMemory.MusicRepository' WebApp.ViewModels.AlbumIndexViewModel' WebApp.ViewModels.AlbumSearchViewModel
-Chinook.DomainModel,Genre,0,0,2,0,0,5,0,0,0,-1,0,2,,Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.MusicRepository
-Chinook.DomainModel,Track,0,1,5,0,1,27,1,0,0,-1,0,4,,Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.MusicRepository' WebApp.Controllers.TrackController' WebApp.Models.TrackEditViewModel
-Chinook.Repository,IClaimsRepository,0,1,0,0,0,4,1,1,0,-1,0,1,,WebApp.Controllers.AccountController
-Chinook.Repository,IMusicRepository,0,15,0,0,0,18,15,1,0,-1,4,7,Chinook.DomainModel.Album' Chinook.DomainModel.AlbumCoverImage' Chinook.DomainModel.Genre' Chinook.DomainModel.Track,WebApp.Controllers.AlbumController' WebApp.Controllers.SearchController' WebApp.Controllers.TrackController' WebApp.ViewModels.AlbumEditViewModel' WebApp.ViewModels.AlbumIndexViewModel' WebApp.ViewModels.AlbumSearchViewModel' WebApp.Models.TrackEditViewModel
-Chinook.Repository.InMemory,InMemoryCache,1,4,5,0,0,45,5,0,0,0,0,1,,Chinook.Repository.InMemory.MusicRepository
-Chinook.Repository.InMemory,InMemoryClaimsRepository,0,1,0,0,1,23,4,0,1,-1,0,0,,
-Chinook.Repository.InMemory,MusicRepository,0,15,0,0,15,134,23,0,1,-1,7,0,Chinook.Repository.InMemory.InMemoryCache' Chinook.DomainModel.Album' Chinook.DomainModel.Artist' Chinook.DomainModel.AlbumCoverImage' Chinook.DomainModel.AlbumCover' Chinook.DomainModel.Genre' Chinook.DomainModel.Track,
+Chinook.DomainModel,Album,0,0,3,0,0,9,0,0,0,-1,0,3,,Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.InMemoryCache' Chinook.Repository.InMemory.MusicRepository
+Chinook.DomainModel,AlbumCover,0,0,2,0,0,6,0,1,0,-1,0,3,,Chinook.DomainModel.AlbumCoverImage' Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.MusicRepository
+Chinook.DomainModel,AlbumCoverImage,0,0,1,0,0,4,0,0,1,-1,1,3,Chinook.DomainModel.AlbumCover,Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.InMemoryCache' Chinook.Repository.InMemory.MusicRepository
+Chinook.DomainModel,Artist,0,0,2,0,0,5,0,0,0,-1,0,3,,Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.InMemoryCache' Chinook.Repository.InMemory.MusicRepository
+Chinook.DomainModel,Genre,0,0,2,0,0,5,0,0,0,-1,0,3,,Chinook.Repository.InMemory.InMemoryCache' Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.MusicRepository
+Chinook.DomainModel,Track,0,1,5,0,1,27,1,0,0,-1,0,3,,Chinook.Repository.InMemory.InMemoryCache' Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.MusicRepository
+Chinook.Repository,IClaimsRepository,0,1,0,0,0,4,1,1,0,-1,0,1,,Chinook.Repository.InMemory.InMemoryClaimsRepository
+Chinook.Repository,IMusicRepository,0,15,0,0,0,18,15,1,0,-1,6,1,Chinook.DomainModel.Album' Chinook.DomainModel.AlbumCover' Chinook.DomainModel.AlbumCoverImage' Chinook.DomainModel.Artist' Chinook.DomainModel.Genre' Chinook.DomainModel.Track,Chinook.Repository.InMemory.MusicRepository
+Chinook.Repository.InMemory,InMemoryCache,1,4,5,0,0,45,6,0,0,0,5,1,Chinook.DomainModel.Album' Chinook.DomainModel.AlbumCoverImage' Chinook.DomainModel.Artist' Chinook.DomainModel.Genre' Chinook.DomainModel.Track,Chinook.Repository.InMemory.MusicRepository
+Chinook.Repository.InMemory,InMemoryClaimsRepository,0,1,0,0,1,23,4,0,1,-1,1,0,Chinook.Repository.IClaimsRepository,
+Chinook.Repository.InMemory,MusicRepository,0,15,0,0,15,134,23,0,1,-1,8,0,Chinook.DomainModel.Album' Chinook.DomainModel.AlbumCover' Chinook.DomainModel.AlbumCoverImage' Chinook.DomainModel.Artist' Chinook.DomainModel.Genre' Chinook.DomainModel.Track' Chinook.Repository.IMusicRepository' Chinook.Repository.InMemory.InMemoryCache,
 Chinook,CheckArgument,1,13,0,0,13,59,26,0,0,1,0,0,,
 Chinook.Utility,EmailAttribute,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Chinook.Utility,FileLogWriter,2,3,0,0,3,28,3,0,1,0,0,0,,
-Chinook.Utility,ILogWriter,0,2,0,0,0,5,2,1,0,-1,0,0,,
+Chinook.Utility,FileLogWriter,2,3,0,0,3,28,4,0,1,0,1,0,Chinook.Utility.ILogWriter,
+Chinook.Utility,ILogWriter,0,2,0,0,0,5,2,1,0,-1,0,1,,Chinook.Utility.FileLogWriter

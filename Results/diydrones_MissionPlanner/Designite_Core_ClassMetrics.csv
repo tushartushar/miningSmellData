@@ -1,1 +1,40 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Core.CommonObjects,IIdItem,0,0,1,0,0,4,0,3,0,-1,0,3,,Core.CommonObjects.IIdNameItem' Core.CommonObjects.AIdItem' Core.Xml.XmlIdDictionary<T>
+Core.CommonObjects,INameItem,0,0,1,0,0,4,0,1,0,-1,0,1,,Core.CommonObjects.IIdNameItem
+Core.CommonObjects,IDisplayNameItem,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Core.CommonObjects,IIdNameItem,0,0,0,0,0,3,0,2,1,-1,2,2,Core.CommonObjects.IIdItem' Core.CommonObjects.INameItem,Core.CommonObjects.IIdNameColorItem' Core.CommonObjects.AIdNameItem
+Core.CommonObjects,IIdNameColorItem,0,0,1,0,0,4,0,1,2,-1,1,1,Core.CommonObjects.IIdNameItem,Core.CommonObjects.AIdNameColorItem
+Core.CommonObjects,AIdItem,1,2,1,0,2,25,2,1,1,1,1,1,Core.CommonObjects.IIdItem,Core.CommonObjects.AIdNameItem
+Core.CommonObjects,AIdNameItem,1,3,2,0,2,44,5,1,2,1,2,1,Core.CommonObjects.IIdNameItem' Core.CommonObjects.AIdItem,Core.CommonObjects.AIdNameColorItem
+Core.CommonObjects,AIdNameColorItem,1,3,2,0,3,54,3,0,3,0.67,4,0,Core.CommonObjects.IIdNameColorItem' Core.CommonObjects.AIdNameItem' Core.Utils.ColorUtils' Core.Utils.ColorTranslator,
+Core,GenericEventArgs<T>,1,1,0,1,1,8,1,0,0,0,0,1,,Core.ExtendedObjects.EventList<T>
+Core,GenericEventArgs<A;B>,2,1,0,2,1,10,1,0,0,0,0,0,,
+Core.ExtendedObjects,EventList<T>,0,12,0,0,9,61,17,0,0,-1,1,1,Core.GenericEventArgs<T>,Core.Xml.XmlList<T>
+Core.FileHandling,LoadSave,8,17,2,4,14,192,26,0,0,0.12,1,0,Core.FileHandling.FileFilter,
+Core.FileHandling,FileFilter,3,3,1,0,0,44,7,0,0,0,0,1,,Core.FileHandling.LoadSave
+Core.Geometry,IShapeE,0,4,2,0,0,10,4,1,0,-1,2,5,Core.Geometry.PointE' Core.Geometry.RectangleE,Core.Geometry.PointE' Core.Geometry.RectangleE' Core.Geometry.IShapeEUpdateable' Core.Geometry.ShapeUpdateEventArgs' Core.Geometry.AShapeE
+Core.Geometry,IShapeEUpdateable,0,1,0,0,0,5,1,1,1,-1,1,1,Core.Geometry.IShapeE,Core.Geometry.AShapeE
+Core.Geometry,ShapeUpdateEventArgs,2,1,0,2,1,10,1,0,0,0,1,1,Core.Geometry.IShapeE,Core.Geometry.AShapeE
+Core.Geometry,AShapeE,1,8,2,0,7,60,13,2,2,0.88,5,2,Core.Geometry.IShapeE' Core.Geometry.IShapeEUpdateable' Core.Geometry.ShapeUpdateEventArgs' Core.Geometry.PointE' Core.Geometry.RectangleE,Core.Geometry.RectangleE' Core.Geometry.PointE
+Core.Geometry,Calc,0,1,0,0,1,6,1,0,0,-1,1,1,Core.Geometry.PointE,Core.Geometry.RectangleE
+Core.Geometry,IntervalE,2,9,4,0,9,104,11,0,0,0.89,0,1,,Core.Geometry.RectangleE
+Core.Geometry,Point3D,3,10,3,0,10,90,10,0,0,0.2,1,0,Core.Utils.StringUtils,
+Core.Geometry,IPoint,0,3,2,0,0,8,3,1,0,-1,0,1,,Core.Geometry.PointE
+Core.Geometry,PointE,2,23,5,0,23,200,28,0,3,0.7,6,5,Core.Geometry.IShapeE' Core.Geometry.AShapeE' Core.Geometry.IPoint' Core.Geometry.RectangleE' Core.Geometry.SizeE' Core.Utils.StringUtils,Core.Geometry.SizeE' Core.Geometry.IShapeE' Core.Geometry.AShapeE' Core.Geometry.Calc' Core.Geometry.RectangleE
+Core.Geometry,RectangleE,4,31,20,0,31,341,39,0,3,0.35,6,3,Core.Geometry.IShapeE' Core.Geometry.AShapeE' Core.Geometry.Calc' Core.Geometry.IntervalE' Core.Geometry.PointE' Core.Geometry.SizeE,Core.Geometry.IShapeE' Core.Geometry.AShapeE' Core.Geometry.PointE
+Core.Geometry,SizeE,2,14,3,0,14,182,16,0,0,0.36,3,3,Core.Geometry.PointE' Core.Geometry.SizeEExpandableConverter' Core.Utils.StringUtils,Core.Geometry.PointE' Core.Geometry.RectangleE' Core.Geometry.SizeEExpandableConverter
+Core.Geometry,SizeEExpandableConverter,0,4,0,0,4,39,9,0,0,-1,1,1,Core.Geometry.SizeE,Core.Geometry.SizeE
+Core.Utils,ColorUtils,1,8,0,0,7,303,16,0,0,0.88,2,1,Core.Utils.CIELAB' Core.Utils.ColorTranslator,Core.CommonObjects.AIdNameColorItem
+Core.Utils,CIELAB,3,2,0,3,2,15,2,0,0,0,0,1,,Core.Utils.ColorUtils
+Core.Utils,ColorTranslator,0,2,0,0,2,35,6,0,0,-1,0,2,,Core.CommonObjects.AIdNameColorItem' Core.Utils.ColorUtils
+Core.Utils,MathUtils,0,5,0,0,5,49,11,0,0,-1,0,0,,
+Core.Utils,MiscUtils,0,2,0,0,2,11,2,0,0,-1,0,0,,
+Core.Utils,StringUtils,2,26,0,0,24,324,85,0,0,0.5,0,3,,Core.Geometry.PointE' Core.Geometry.SizeE' Core.Geometry.Point3D
+Core.Xml,AXmlHandler,2,6,1,0,4,36,6,0,0,0.33,0,0,,
+Core.Xml,XmlDictionary<TKey;TValue>,0,5,0,0,3,74,9,0,0,-1,3,0,Core.Xml.XMLSerializeManager' Core.Xml.XmlSerializer<T>' Core.Xml.XmlTypeAssociator<T>,
+Core.Xml,XmlIdDictionary<T>,1,7,1,0,7,91,13,0,1,1,4,0,Core.CommonObjects.IIdItem' Core.Xml.XMLSerializeManager' Core.Xml.XmlSerializer<T>' Core.Xml.XmlTypeAssociator<T>,
+Core.Xml,XmlItem<T>,1,5,1,0,5,45,7,0,0,0.6,3,0,Core.Xml.XMLSerializeManager' Core.Xml.XmlSerializer<T>' Core.Xml.XmlTypeAssociator<T>,
+Core.Xml,XmlList<T>,0,6,0,0,6,40,10,0,0,-1,4,0,Core.ExtendedObjects.EventList<T>' Core.Xml.XMLSerializeManager' Core.Xml.XmlSerializer<T>' Core.Xml.XmlTypeAssociator<T>,
+Core.Xml,XMLSerializeManager,4,12,2,1,9,154,16,0,0,0.25,1,6,Core.Xml.XmlSerializer<T>,Core.Xml.XmlTypeAssociator<T>' Core.Xml.XmlItem<T>' Core.Xml.XmlIdDictionary<T>' Core.Xml.XmlList<T>' Core.Xml.XmlDictionary<TKey;TValue>' Core.Xml.XmlSerializer<T>
+Core.Xml,XmlSerializer<T>,0,7,0,0,7,36,7,0,0,-1,1,6,Core.Xml.XMLSerializeManager,Core.Xml.XmlTypeAssociator<T>' Core.Xml.XmlItem<T>' Core.Xml.XmlDictionary<TKey;TValue>' Core.Xml.XmlList<T>' Core.Xml.XmlIdDictionary<T>' Core.Xml.XMLSerializeManager
+Core.Xml,XmlTypeAssociator<T>,1,10,0,0,9,65,15,0,0,0.7,2,4,Core.Xml.XMLSerializeManager' Core.Xml.XmlSerializer<T>,Core.Xml.XmlList<T>' Core.Xml.XmlIdDictionary<T>' Core.Xml.XmlItem<T>' Core.Xml.XmlDictionary<TKey;TValue>

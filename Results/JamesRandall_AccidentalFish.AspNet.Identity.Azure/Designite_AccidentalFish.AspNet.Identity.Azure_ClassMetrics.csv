@@ -1,73 +1,48 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-AccidentalFish.AspNet.Identity.Azure,DuplicateEmailException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-AccidentalFish.AspNet.Identity.Azure,DuplicateUsernameException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-AccidentalFish.AspNet.Identity.Azure,GenericApplicationOAuthProvider<T>,2,6,0,0,6,78,12,0,0,0.67,0,0,,
-AccidentalFish.AspNet.Identity.Azure,GraphRoleClaimsAuthenticationManager,5,2,0,0,2,55,8,0,0,0,5,0,Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.AADJWTToken' Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Microsoft.WindowsAzure.ActiveDirectory.User' AccidentalFish.AspNet.Identity.Azure.GraphAPIHelper.DirectoryDataServiceAuthorizationHelper' Microsoft.WindowsAzure.ActiveDirectory.Group,
+AccidentalFish.AspNet.Identity.Azure,DuplicateEmailException,0,0,0,0,0,3,0,0,0,-1,0,1,,AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
+AccidentalFish.AspNet.Identity.Azure,DuplicateUsernameException,0,0,0,0,0,3,0,0,0,-1,0,1,,AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
+AccidentalFish.AspNet.Identity.Azure,GenericApplicationOAuthProvider<T>,2,6,0,0,6,78,13,0,0,0.67,0,0,,
+AccidentalFish.AspNet.Identity.Azure,GraphRoleClaimsAuthenticationManager,5,2,0,0,2,55,8,0,0,0,5,0,Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.AADJWTToken' AccidentalFish.AspNet.Identity.Azure.GraphAPIHelper.DirectoryDataServiceAuthorizationHelper' Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.Group,
 AccidentalFish.AspNet.Identity.Azure,NonSerializedTableStoreAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,AccidentalFish.AspNet.Identity.Azure.TableUser
-AccidentalFish.AspNet.Identity.Azure,TableUser,3,4,18,0,4,111,5,2,0,0.5,1,2,AccidentalFish.AspNet.Identity.Azure.NonSerializedTableStoreAttribute,AccidentalFish.AspNet.Identity.Azure.TableUserIndexBuilder' WebAPI2AuthenticationExample.Web.Controllers.AccountController
-AccidentalFish.AspNet.Identity.Azure,TableUserClaim,0,3,3,0,3,22,3,0,0,-1,0,1,,AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
+AccidentalFish.AspNet.Identity.Azure,TableUser,3,4,18,0,4,111,5,2,0,0.5,4,2,AccidentalFish.AspNet.Identity.Azure.NonSerializedTableStoreAttribute' AccidentalFish.AspNet.Identity.Azure.TableUserClaim' AccidentalFish.AspNet.Identity.Azure.TableUserLogin' AccidentalFish.AspNet.Identity.Azure.TableUserRole,AccidentalFish.AspNet.Identity.Azure.TableUserIndexBuilder' AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
+AccidentalFish.AspNet.Identity.Azure,TableUserClaim,0,3,3,0,3,22,3,0,0,-1,0,2,,AccidentalFish.AspNet.Identity.Azure.TableUser' AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
 AccidentalFish.AspNet.Identity.Azure,TableUserEmailIndex,0,2,1,0,2,14,2,0,0,-1,0,1,,AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
-AccidentalFish.AspNet.Identity.Azure,TableUserIndexBuilder,2,3,0,0,3,41,7,0,0,0.67,2,0,AccidentalFish.AspNet.Identity.Azure.TableUserIdIndex' AccidentalFish.AspNet.Identity.Azure.TableUser,
-AccidentalFish.AspNet.Identity.Azure,TableUserLogin,0,3,3,0,3,22,3,0,0,-1,0,2,,AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>' WebAPI2AuthenticationExample.Web.Controllers.AccountController
+AccidentalFish.AspNet.Identity.Azure,TableUserIndexBuilder,2,3,0,0,3,41,7,0,0,0.67,2,0,AccidentalFish.AspNet.Identity.Azure.TableUser' AccidentalFish.AspNet.Identity.Azure.TableUserIdIndex,
+AccidentalFish.AspNet.Identity.Azure,TableUserLogin,0,3,3,0,3,22,3,0,0,-1,0,2,,AccidentalFish.AspNet.Identity.Azure.TableUser' AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
 AccidentalFish.AspNet.Identity.Azure,TableUserIdIndex,0,2,1,0,2,14,2,0,0,-1,0,2,,AccidentalFish.AspNet.Identity.Azure.TableUserIndexBuilder' AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
 AccidentalFish.AspNet.Identity.Azure,TableUserLoginProviderKeyIndex,0,4,1,0,4,21,4,0,0,-1,0,1,,AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
-AccidentalFish.AspNet.Identity.Azure,TableUserRole,0,3,3,0,3,21,3,0,0,-1,0,1,,AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
-AccidentalFish.AspNet.Identity.Azure,TableUserStore<T>,8,48,0,0,47,765,132,0,0,0.54,6,0,AccidentalFish.AspNet.Identity.Azure.TableUserIdIndex' AccidentalFish.AspNet.Identity.Azure.TableUserEmailIndex' AccidentalFish.AspNet.Identity.Azure.TableUserLoginProviderKeyIndex' AccidentalFish.AspNet.Identity.Azure.TableUserLogin' AccidentalFish.AspNet.Identity.Azure.TableUserClaim' AccidentalFish.AspNet.Identity.Azure.TableUserRole,
+AccidentalFish.AspNet.Identity.Azure,TableUserRole,0,3,3,0,3,21,3,0,0,-1,0,2,,AccidentalFish.AspNet.Identity.Azure.TableUser' AccidentalFish.AspNet.Identity.Azure.TableUserStore<T>
+AccidentalFish.AspNet.Identity.Azure,TableUserStore<T>,8,48,0,0,47,765,132,0,0,0.54,9,0,AccidentalFish.AspNet.Identity.Azure.DuplicateEmailException' AccidentalFish.AspNet.Identity.Azure.DuplicateUsernameException' AccidentalFish.AspNet.Identity.Azure.TableUser' AccidentalFish.AspNet.Identity.Azure.TableUserClaim' AccidentalFish.AspNet.Identity.Azure.TableUserEmailIndex' AccidentalFish.AspNet.Identity.Azure.TableUserLogin' AccidentalFish.AspNet.Identity.Azure.TableUserIdIndex' AccidentalFish.AspNet.Identity.Azure.TableUserLoginProviderKeyIndex' AccidentalFish.AspNet.Identity.Azure.TableUserRole,
 AccidentalFish.AspNet.Identity.Azure.Extensions,StringExtensions,0,2,0,0,2,13,2,0,0,-1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory.GraphHelper,AADJWTToken,0,2,6,0,1,44,2,0,0,-1,0,3,,AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager' AccidentalFish.AspNet.Identity.Azure.GraphAPIHelper.DirectoryDataServiceAuthorizationHelper' Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory.GraphHelper,AADJWTToken,0,2,6,0,1,44,2,0,0,-1,0,3,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager' AccidentalFish.AspNet.Identity.Azure.GraphAPIHelper.DirectoryDataServiceAuthorizationHelper
 Microsoft.WindowsAzure.ActiveDirectory.GraphHelper,StringConstants,4,0,0,0,0,9,0,0,0,-1,0,2,,AccidentalFish.AspNet.Identity.Azure.GraphAPIHelper.DirectoryDataServiceAuthorizationHelper' Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
 AccidentalFish.AspNet.Identity.Azure.GraphAPIHelper,DirectoryDataServiceAuthorizationHelper,0,1,0,0,1,32,1,0,0,-1,2,1,Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.AADJWTToken' Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.StringConstants,AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager
-Microsoft.WindowsAzure.ActiveDirectory,DirectoryDataService,4,15,12,0,11,587,16,0,0,0.8,12,2,Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.AADJWTToken' Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.StringConstants' Microsoft.WindowsAzure.ActiveDirectory.Group' Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.Contact' Microsoft.WindowsAzure.ActiveDirectory.Role' Microsoft.WindowsAzure.ActiveDirectory.ServicePrincipal' Microsoft.WindowsAzure.ActiveDirectory.TenantDetail' Microsoft.WindowsAzure.ActiveDirectory.GeneratedEdmModel' Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.Permission' Microsoft.WindowsAzure.ActiveDirectory.SubscribedSku,AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager' Graph.Extensions.Service.DirectoryDataService
-Microsoft.WindowsAzure.ActiveDirectory,DataSource,0,3,0,0,2,336,3,0,0,-1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,GeneratedEdmModel,8,8,0,0,2,621,8,0,0,0.5,0,2,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.DirectoryDataService
-Microsoft.WindowsAzure.ActiveDirectory,DirectoryObject,6,5,6,0,1,134,5,18,0,1,0,3,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.DirectoryDataService' Graph.Extensions.Service.DirectoryObject
-Microsoft.WindowsAzure.ActiveDirectory,AssignedLicense,2,5,2,0,1,60,6,0,0,1,0,1,,Graph.Extensions.Service.AssignedLicense
-Microsoft.WindowsAzure.ActiveDirectory,AssignedPlan,4,8,4,0,0,87,8,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,PasswordProfile,2,4,2,0,0,45,4,0,0,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.User' Graph.Extensions.Service.User
-Microsoft.WindowsAzure.ActiveDirectory,ProvisionedPlan,3,6,3,0,0,66,6,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,ProvisioningError,4,8,4,0,0,87,8,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,User,35,63,34,0,1,773,69,0,1,1,1,3,Microsoft.WindowsAzure.ActiveDirectory.PasswordProfile,AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager' Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.User
-Microsoft.WindowsAzure.ActiveDirectory,KeyCredential,7,14,7,0,0,164,14,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,PasswordCredential,5,10,5,0,0,115,10,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,Application,13,27,13,0,1,314,31,0,1,1,0,1,,Graph.Extensions.Service.Application
-Microsoft.WindowsAzure.ActiveDirectory,Contact,21,43,21,0,1,470,45,0,1,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.Contact
-Microsoft.WindowsAzure.ActiveDirectory,AlternativeSecurityId,3,6,3,0,0,73,6,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,Device,13,23,13,0,1,298,25,0,1,1,0,1,,Graph.Extensions.Service.Device
-Microsoft.WindowsAzure.ActiveDirectory,DirectoryLinkChange,7,15,7,0,1,162,15,0,1,1,0,1,,Graph.Extensions.Service.DirectoryLinkChange
-Microsoft.WindowsAzure.ActiveDirectory,Group,10,21,10,0,1,237,23,0,1,1,0,3,,AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager' Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.Group
-Microsoft.WindowsAzure.ActiveDirectory,Role,4,9,4,0,1,99,9,0,1,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.Role
-Microsoft.WindowsAzure.ActiveDirectory,ServicePrincipal,14,27,14,0,1,338,32,0,1,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.ServicePrincipal
-Microsoft.WindowsAzure.ActiveDirectory,VerifiedDomain,6,12,6,0,0,129,12,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,TenantDetail,18,37,18,0,1,429,43,0,1,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.TenantDetail
-Microsoft.WindowsAzure.ActiveDirectory,Permission,8,17,8,0,1,183,17,0,0,1,0,3,,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.DirectoryDataService' Graph.Extensions.Service.Permission
-Microsoft.WindowsAzure.ActiveDirectory,LicenseUnitsDetail,3,6,3,0,0,66,6,0,0,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.SubscribedSku' Graph.Extensions.Service.SubscribedSku
-Microsoft.WindowsAzure.ActiveDirectory,ServicePlanInfo,2,4,2,0,0,45,4,0,0,1,0,0,,
-Microsoft.WindowsAzure.ActiveDirectory,SubscribedSku,8,15,7,0,1,177,16,0,0,1,1,3,Microsoft.WindowsAzure.ActiveDirectory.LicenseUnitsDetail,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Graph.Extensions.Service.DirectoryDataService' Graph.Extensions.Service.SubscribedSku
-Microsoft.WindowsAzure.ActiveDirectory,ExtensionAttribute,1,2,1,0,0,24,2,0,0,1,0,0,,
+Microsoft.WindowsAzure.ActiveDirectory,DirectoryDataService,4,15,12,0,11,587,16,0,0,0.8,10,1,Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.AADJWTToken' Microsoft.WindowsAzure.ActiveDirectory.GraphHelper.StringConstants' Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.Application' Microsoft.WindowsAzure.ActiveDirectory.Contact' Microsoft.WindowsAzure.ActiveDirectory.Device' Microsoft.WindowsAzure.ActiveDirectory.Group' Microsoft.WindowsAzure.ActiveDirectory.Role' Microsoft.WindowsAzure.ActiveDirectory.ServicePrincipal' Microsoft.WindowsAzure.ActiveDirectory.TenantDetail,AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager
+Microsoft.WindowsAzure.ActiveDirectory,DataSource,0,3,0,0,2,336,3,0,0,-1,2,0,Microsoft.WindowsAzure.ActiveDirectory.GeneratedEdmModel' Graph.Extensions.Service.GeneratedEdmModel,
+Microsoft.WindowsAzure.ActiveDirectory,GeneratedEdmModel,8,8,0,0,2,621,8,0,0,0.5,0,1,,Microsoft.WindowsAzure.ActiveDirectory.DataSource
+Microsoft.WindowsAzure.ActiveDirectory,DirectoryObject,6,5,6,0,1,134,5,9,0,1,0,9,,Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.Application' Microsoft.WindowsAzure.ActiveDirectory.Contact' Microsoft.WindowsAzure.ActiveDirectory.Device' Microsoft.WindowsAzure.ActiveDirectory.DirectoryLinkChange' Microsoft.WindowsAzure.ActiveDirectory.Group' Microsoft.WindowsAzure.ActiveDirectory.Role' Microsoft.WindowsAzure.ActiveDirectory.ServicePrincipal' Microsoft.WindowsAzure.ActiveDirectory.TenantDetail
+Microsoft.WindowsAzure.ActiveDirectory,AssignedLicense,2,5,2,0,1,60,6,0,0,1,0,1,,Microsoft.WindowsAzure.ActiveDirectory.User
+Microsoft.WindowsAzure.ActiveDirectory,AssignedPlan,4,8,4,0,0,87,8,0,0,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.TenantDetail
+Microsoft.WindowsAzure.ActiveDirectory,PasswordProfile,2,4,2,0,0,45,4,0,0,1,0,1,,Microsoft.WindowsAzure.ActiveDirectory.User
+Microsoft.WindowsAzure.ActiveDirectory,ProvisionedPlan,3,6,3,0,0,66,6,0,0,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.TenantDetail
+Microsoft.WindowsAzure.ActiveDirectory,ProvisioningError,4,8,4,0,0,87,8,0,0,1,0,4,,Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.Contact' Microsoft.WindowsAzure.ActiveDirectory.Group' Microsoft.WindowsAzure.ActiveDirectory.TenantDetail
+Microsoft.WindowsAzure.ActiveDirectory,User,35,63,34,0,1,773,69,0,1,1,7,2,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.AssignedLicense' Microsoft.WindowsAzure.ActiveDirectory.AssignedPlan' Microsoft.WindowsAzure.ActiveDirectory.PasswordProfile' Microsoft.WindowsAzure.ActiveDirectory.ProvisionedPlan' Microsoft.WindowsAzure.ActiveDirectory.ProvisioningError' Microsoft.WindowsAzure.ActiveDirectory.Permission,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager
+Microsoft.WindowsAzure.ActiveDirectory,KeyCredential,7,14,7,0,0,164,14,0,0,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.Application' Microsoft.WindowsAzure.ActiveDirectory.ServicePrincipal
+Microsoft.WindowsAzure.ActiveDirectory,PasswordCredential,5,10,5,0,0,115,10,0,0,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.Application' Microsoft.WindowsAzure.ActiveDirectory.ServicePrincipal
+Microsoft.WindowsAzure.ActiveDirectory,Application,13,27,13,0,1,314,31,0,1,1,3,1,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.KeyCredential' Microsoft.WindowsAzure.ActiveDirectory.PasswordCredential,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory,Contact,21,43,21,0,1,470,45,0,1,1,2,1,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.ProvisioningError,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory,AlternativeSecurityId,3,6,3,0,0,73,6,0,0,1,0,1,,Microsoft.WindowsAzure.ActiveDirectory.Device
+Microsoft.WindowsAzure.ActiveDirectory,Device,13,23,13,0,1,298,25,0,1,1,2,1,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.AlternativeSecurityId,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory,DirectoryLinkChange,7,15,7,0,1,162,15,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject,
+Microsoft.WindowsAzure.ActiveDirectory,Group,10,21,10,0,1,237,23,0,1,1,2,2,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.ProvisioningError,AccidentalFish.AspNet.Identity.Azure.GraphRoleClaimsAuthenticationManager' Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory,Role,4,9,4,0,1,99,9,0,1,1,1,1,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory,ServicePrincipal,14,27,14,0,1,338,32,0,1,1,4,1,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.KeyCredential' Microsoft.WindowsAzure.ActiveDirectory.PasswordCredential' Microsoft.WindowsAzure.ActiveDirectory.Permission,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory,VerifiedDomain,6,12,6,0,0,129,12,0,0,1,0,1,,Microsoft.WindowsAzure.ActiveDirectory.TenantDetail
+Microsoft.WindowsAzure.ActiveDirectory,TenantDetail,18,37,18,0,1,429,43,0,1,1,5,1,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.AssignedPlan' Microsoft.WindowsAzure.ActiveDirectory.ProvisionedPlan' Microsoft.WindowsAzure.ActiveDirectory.ProvisioningError' Microsoft.WindowsAzure.ActiveDirectory.VerifiedDomain,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService
+Microsoft.WindowsAzure.ActiveDirectory,Permission,8,17,8,0,1,183,17,0,0,1,0,2,,Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.ServicePrincipal
+Microsoft.WindowsAzure.ActiveDirectory,LicenseUnitsDetail,3,6,3,0,0,66,6,0,0,1,0,1,,Microsoft.WindowsAzure.ActiveDirectory.SubscribedSku
+Microsoft.WindowsAzure.ActiveDirectory,ServicePlanInfo,2,4,2,0,0,45,4,0,0,1,0,1,,Microsoft.WindowsAzure.ActiveDirectory.SubscribedSku
+Microsoft.WindowsAzure.ActiveDirectory,SubscribedSku,8,15,7,0,1,177,16,0,0,1,2,0,Microsoft.WindowsAzure.ActiveDirectory.LicenseUnitsDetail' Microsoft.WindowsAzure.ActiveDirectory.ServicePlanInfo,
 Graph.Extensions.Service,DataSource,0,3,0,0,2,336,3,0,0,-1,0,0,,
-Graph.Extensions.Service,GeneratedEdmModel,8,8,0,0,2,621,8,0,0,0.75,0,0,,
-Graph.Extensions.Service,DirectoryDataService,3,6,3,0,4,412,6,0,0,1,5,0,Microsoft.WindowsAzure.ActiveDirectory.DirectoryDataService' Microsoft.WindowsAzure.ActiveDirectory.GeneratedEdmModel' Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject' Microsoft.WindowsAzure.ActiveDirectory.Permission' Microsoft.WindowsAzure.ActiveDirectory.SubscribedSku,
-Graph.Extensions.Service,DirectoryObject,6,5,6,0,1,134,5,0,0,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.DirectoryObject,
-Graph.Extensions.Service,AssignedLicense,2,5,2,0,1,60,6,0,0,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.AssignedLicense,
-Graph.Extensions.Service,AssignedPlan,4,8,4,0,0,87,8,0,0,1,0,0,,
-Graph.Extensions.Service,PasswordProfile,2,4,2,0,0,45,4,0,0,1,0,0,,
-Graph.Extensions.Service,ProvisionedPlan,3,6,3,0,0,66,6,0,0,1,0,0,,
-Graph.Extensions.Service,ProvisioningError,4,8,4,0,0,87,8,0,0,1,0,0,,
-Graph.Extensions.Service,User,35,63,34,0,1,773,69,0,1,1,2,0,Microsoft.WindowsAzure.ActiveDirectory.User' Microsoft.WindowsAzure.ActiveDirectory.PasswordProfile,
-Graph.Extensions.Service,KeyCredential,7,14,7,0,0,164,14,0,0,1,0,0,,
-Graph.Extensions.Service,PasswordCredential,5,10,5,0,0,115,10,0,0,1,0,0,,
-Graph.Extensions.Service,Application,13,27,13,0,1,314,31,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.Application,
-Graph.Extensions.Service,Contact,21,43,21,0,1,470,45,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.Contact,
-Graph.Extensions.Service,AlternativeSecurityId,3,6,3,0,0,73,6,0,0,1,0,0,,
-Graph.Extensions.Service,Device,13,23,13,0,1,298,25,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.Device,
-Graph.Extensions.Service,DirectoryLinkChange,7,15,7,0,1,162,15,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.DirectoryLinkChange,
-Graph.Extensions.Service,Group,10,21,10,0,1,237,23,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.Group,
-Graph.Extensions.Service,Role,4,9,4,0,1,99,9,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.Role,
-Graph.Extensions.Service,ServicePrincipal,14,27,14,0,1,338,32,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.ServicePrincipal,
-Graph.Extensions.Service,VerifiedDomain,6,12,6,0,0,129,12,0,0,1,0,0,,
-Graph.Extensions.Service,TenantDetail,18,37,18,0,1,429,43,0,1,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.TenantDetail,
-Graph.Extensions.Service,Permission,8,17,8,0,1,183,17,0,0,1,1,0,Microsoft.WindowsAzure.ActiveDirectory.Permission,
-Graph.Extensions.Service,LicenseUnitsDetail,3,6,3,0,0,66,6,0,0,1,0,0,,
-Graph.Extensions.Service,ServicePlanInfo,2,4,2,0,0,45,4,0,0,1,0,0,,
-Graph.Extensions.Service,SubscribedSku,8,15,7,0,1,177,16,0,0,1,2,0,Microsoft.WindowsAzure.ActiveDirectory.SubscribedSku' Microsoft.WindowsAzure.ActiveDirectory.LicenseUnitsDetail,
+Graph.Extensions.Service,GeneratedEdmModel,8,8,0,0,2,621,8,0,0,0.75,0,1,,Microsoft.WindowsAzure.ActiveDirectory.DataSource
 Graph.Extensions.Service,ExtensionAttribute,1,2,1,0,0,24,2,0,0,1,0,0,,

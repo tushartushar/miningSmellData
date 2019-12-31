@@ -1,0 +1,14 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+protoc,MyReflection,1,1,1,0,0,37,1,0,0,0,6,3,protoc.Database' protoc.Order' protoc.OrderLine' protoc.Database' protoc.Order' protoc.OrderLine,protoc.Database' protoc.Order' protoc.OrderLine
+protoc,Database,5,12,4,1,11,128,21,0,0,0.42,5,3,protoc.MyReflection' protoc.Order' protoc.MyReflection' protoc.Database' protoc.Order,Benchmark.SerializeBenchmarks' Benchmark.DeserializeBenchmarks' protoc.MyReflection
+protoc,Order,33,12,18,15,11,614,111,0,0,0.42,5,2,protoc.MyReflection' protoc.OrderLine' protoc.MyReflection' protoc.Order' protoc.OrderLine,protoc.MyReflection' protoc.Database
+protoc,OrderLine,12,12,8,5,11,272,49,0,0,0.42,3,2,protoc.MyReflection' protoc.MyReflection' protoc.OrderLine,protoc.MyReflection' protoc.Order
+protogen,Database,1,1,1,0,0,9,1,0,1,0,2,3,protogen.Order' protogen.Order,Benchmark.SpanPerformance' Benchmark.SerializeBenchmarks' Benchmark.DeserializeBenchmarks
+protogen,Order,1,1,15,0,0,44,1,0,1,0,2,3,protogen.OrderLine' protogen.OrderLine,Benchmark.SerializeBenchmarks' Benchmark.DeserializeBenchmarks' protogen.Database
+protogen,OrderLine,1,1,5,0,0,17,1,0,1,0,0,3,,Benchmark.SerializeBenchmarks' Benchmark.DeserializeBenchmarks' protogen.Order
+Benchmark,DeserializeBenchmarks,6,30,1,0,20,305,61,0,0,0.23,8,0,protoc.Database' protogen.Database' protogen.Order' protogen.OrderLine' protoc.Database' protogen.Database' protogen.Order' protogen.OrderLine,
+Benchmark,ParseVarint,2,13,1,0,5,194,37,0,0,0,0,0,,
+Benchmark,Program,0,1,0,0,0,21,1,0,0,-1,1,0,Benchmark.Program,
+Benchmark,SerializeBenchmarks,8,17,0,0,11,184,23,0,0,0,8,0,protoc.Database' protogen.Database' protogen.Order' protogen.OrderLine' protoc.Database' protogen.Database' protogen.Order' protogen.OrderLine,
+Benchmark,FakeBufferWriter,1,7,1,0,6,33,11,0,0,0.43,0,0,,
+Benchmark,SpanPerformance,2,7,1,0,7,45,8,0,0,0,1,0,protogen.Database,

@@ -1,27 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NDCPortable,BusinessEntityBase,0,1,1,0,1,11,1,0,1,-1,0,0,,
-NDCPortable,IBusinessEntity,0,0,1,0,0,3,0,2,0,-1,0,0,,
-NDCPortable,PrimaryKeyAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-NDCPortable,AutoIncrementAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
+NDCPortable,BusinessEntityBase,0,1,1,0,1,11,1,0,1,-1,3,0,NDCPortable.IBusinessEntity' NDCPortable.PrimaryKeyAttribute' NDCPortable.AutoIncrementAttribute,
+NDCPortable,IBusinessEntity,0,0,1,0,0,3,0,2,0,-1,0,3,,NDCPortable.TodoItem' NDCPortable.BusinessEntityBase' NDCPortable.TodoItemDatabase
+NDCPortable,PrimaryKeyAttribute,0,0,0,0,0,2,0,0,0,-1,0,2,,NDCPortable.TodoItem' NDCPortable.BusinessEntityBase
+NDCPortable,AutoIncrementAttribute,0,0,0,0,0,2,0,0,0,-1,0,2,,NDCPortable.TodoItem' NDCPortable.BusinessEntityBase
 NDCPortable,IndexedAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 NDCPortable,IgnoreAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 NDCPortable,MaxLengthAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
 NDCPortable,CollationAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
-NDCPortable,SQLiteConnection,0,24,4,0,24,56,24,0,0,-1,1,0,NDCPortable.SQLiteBase.TableMapping,
-NDCPortable,TableMapping,0,0,0,0,0,1,0,0,0,-1,0,0,,
-NDCPortable,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,0,,
-NDCPortable,TableQuery<T>,0,2,0,0,1,10,2,0,0,-1,0,0,,
-NDCPortable,TodoItem,0,1,4,0,1,12,1,0,1,-1,0,2,,NDCPortable.TodoItemRepository' NDCPortable.TodoItemManager
-NDCPortable,TodoItemDatabase,2,5,0,0,5,53,5,0,0,0,1,1,NDCPortable.SQLiteBase.SQLiteConnection,NDCPortable.TodoItemRepository
-NDCPortable,TodoItemRepository,2,5,0,0,5,27,5,0,0,0,3,1,NDCPortable.TodoItemDatabase' NDCPortable.SQLiteBase.SQLiteConnection' NDCPortable.TodoItem,NDCPortable.TodoItemManager
-NDCPortable,TodoItemManager,1,5,0,0,5,28,5,0,0,0,3,0,NDCPortable.TodoItemRepository' NDCPortable.SQLiteBase.SQLiteConnection' NDCPortable.TodoItem,
-NDCPortable.SQLiteBase,PrimaryKeyAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-NDCPortable.SQLiteBase,AutoIncrementAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-NDCPortable.SQLiteBase,IndexedAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-NDCPortable.SQLiteBase,IgnoreAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-NDCPortable.SQLiteBase,MaxLengthAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
-NDCPortable.SQLiteBase,CollationAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
-NDCPortable.SQLiteBase,SQLiteConnection,0,24,4,0,24,56,24,0,0,-1,1,3,NDCPortable.SQLiteBase.TableMapping,NDCPortable.TodoItemDatabase' NDCPortable.TodoItemRepository' NDCPortable.TodoItemManager
-NDCPortable.SQLiteBase,TableMapping,0,0,0,0,0,1,0,0,0,-1,0,2,,NDCPortable.SQLiteConnection' NDCPortable.SQLiteBase.SQLiteConnection
-NDCPortable.SQLiteBase,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,0,,
-NDCPortable.SQLiteBase,TableQuery<T>,0,2,0,0,1,10,2,0,0,-1,0,0,,
+NDCPortable,TodoItem,0,1,4,0,1,12,1,0,1,-1,3,3,NDCPortable.IBusinessEntity' NDCPortable.PrimaryKeyAttribute' NDCPortable.AutoIncrementAttribute,NDCPortable.TodoItemDatabase' NDCPortable.TodoItemManager' NDCPortable.TodoItemRepository
+NDCPortable,TodoItemDatabase,2,5,0,0,5,53,6,0,0,0,3,1,NDCPortable.IBusinessEntity' NDCPortable.TodoItem' NDCPortable.SQLiteBase.SQLiteConnection,NDCPortable.TodoItemRepository
+NDCPortable,TodoItemRepository,2,5,0,0,5,27,5,0,0,0,3,1,NDCPortable.TodoItem' NDCPortable.TodoItemDatabase' NDCPortable.SQLiteBase.SQLiteConnection,NDCPortable.TodoItemManager
+NDCPortable,TodoItemManager,1,5,0,0,5,28,5,0,0,0,3,0,NDCPortable.TodoItem' NDCPortable.TodoItemRepository' NDCPortable.SQLiteBase.SQLiteConnection,
+NDCPortable.SQLiteBase,SQLiteConnection,0,24,4,0,24,56,24,0,0,-1,3,3,NDCPortable.SQLiteBase.TableMapping' NDCPortable.SQLiteBase.SQLiteCommand' NDCPortable.SQLiteBase.TableQuery<T>,NDCPortable.TodoItemManager' NDCPortable.TodoItemRepository' NDCPortable.TodoItemDatabase
+NDCPortable.SQLiteBase,TableMapping,0,0,0,0,0,1,0,0,0,-1,0,1,,NDCPortable.SQLiteBase.SQLiteConnection
+NDCPortable.SQLiteBase,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,1,,NDCPortable.SQLiteBase.SQLiteConnection
+NDCPortable.SQLiteBase,TableQuery<T>,0,2,0,0,1,10,2,0,0,-1,0,1,,NDCPortable.SQLiteBase.SQLiteConnection

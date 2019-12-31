@@ -1,121 +1,174 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Snoop,AdornerContainer,1,3,2,0,1,32,5,0,0,0.67,0,1,,Snoop.VisualItem
-Snoop,ApplicationTreeItem,1,2,2,0,1,47,6,0,1,0,2,0,Snoop.VisualTreeItem' Snoop.ResourceContainerItem,
+Snoop,ApplicationTreeItem,1,2,2,0,1,40,6,0,1,1,2,1,Snoop.ResourceContainerItem' Snoop.VisualTreeItem,Snoop.VisualTreeItem
+Snoop,BindingDisplayHelper,0,3,0,0,3,40,6,0,0,-1,0,2,,Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.TriggerActionItem
 Snoop,BringIntoViewBehavior,1,3,0,1,2,41,5,0,0,0,0,0,,
-Snoop,DelayedCall,3,3,0,0,2,31,5,0,0,0,1,2,Snoop.Infrastructure.SnoopModes,Snoop.PropertyGrid2' Snoop.SnoopUI
+Snoop,DelayedCall,3,3,0,0,2,31,5,0,0,0.67,1,2,Snoop.Infrastructure.SnoopModes,Snoop.SnoopUI' Snoop.PropertyGrid2
 Snoop,EditTextBox,0,2,0,0,0,25,4,0,0,-1,0,0,,
-Snoop,EditUserFilters,7,12,2,0,2,252,22,0,0,0.33,1,0,Snoop.PropertyFilterSet,
-Snoop,ErrorDialog,4,12,1,0,2,187,18,0,0,0.25,2,1,Snoop.Infrastructure.SnoopPartsRegistry' Snoop.Infrastructure.SnoopModes,Snoop.SnoopUI
-Snoop,EventsListener,5,3,2,1,2,59,10,0,0,0,0,1,,Snoop.SnoopUI
-Snoop,EventInformation,1,2,1,0,2,16,2,0,0,0,0,0,,
+Snoop,EditUserFilters,7,12,2,0,2,252,27,0,0,0.33,1,1,Snoop.PropertyFilterSet,Snoop.PropertyInspector
+Snoop,ErrorDialog,8,15,2,0,4,269,27,0,0,0.2,3,5,Snoop.Infrastructure.ClipboardHelper' Snoop.Infrastructure.SnoopModes' Snoop.Infrastructure.SnoopPartsRegistry,Snoop.Infrastructure.ClipboardHelper' Snoop.AttachFailedHandler' Snoop.SnoopUI' Snoop.PropertyInspector' Snoop.MethodsTab.MethodsControl
+Snoop,EventsListener,5,3,2,1,2,59,10,0,0,0,1,1,Snoop.EventInformation,Snoop.SnoopUI
+Snoop,EventInformation,1,2,1,0,2,16,2,0,0,1,1,1,Snoop.PropertyInformation,Snoop.EventsListener
 Snoop,EventTracker,5,4,4,0,2,85,9,0,0,1,2,1,Snoop.TrackedEvent' Snoop.EventEntry,Snoop.EventsView
 Snoop,TrackedEvent,4,3,5,0,2,64,5,0,0,0.67,1,2,Snoop.EventEntry,Snoop.EventTracker' Snoop.EventsView
-Snoop,EventEntry,2,1,2,0,1,18,1,0,0,0,0,3,,Snoop.EventTracker' Snoop.TrackedEvent' Snoop.EventsView
-Snoop,Injector,0,2,0,0,0,51,7,0,0,-1,2,1,Snoop.WindowInfo' Snoop.MODULEENTRY32,Snoop.WindowInfo
-Snoop,Inspector,1,1,1,0,0,15,1,1,0,0,1,2,Snoop.PropertyFilter,Snoop.PropertyGrid2' Snoop.PropertyInspector
-Snoop,NativeMethods,0,16,1,0,10,132,18,0,0,-1,5,4,Snoop.SnapshotFlags' Snoop.ToolHelpHandle' Snoop.MODULEENTRY32' Snoop.POINT' Snoop.RECT,Snoop.ToolHelpHandle' Snoop.AppChooser' Snoop.WindowInfo' Snoop.WindowFinder
-Snoop,MODULEENTRY32,10,0,0,8,0,16,0,0,0,-1,0,3,,Snoop.Injector' Snoop.NativeMethods' Snoop.WindowInfo
-Snoop,ToolHelpHandle,0,2,0,0,0,12,2,0,0,-1,1,2,Snoop.NativeMethods,Snoop.NativeMethods' Snoop.WindowInfo
+Snoop,EventEntry,2,1,2,0,1,18,1,0,0,0,0,3,,Snoop.EventsView' Snoop.EventTracker' Snoop.TrackedEvent
+Snoop,CrossAppDomainSnoop,2,4,0,0,1,127,14,0,0,0,5,1,Snoop.SnoopUI' Snoop.Data.TransientSettingsData' Snoop.Data.MultipleAppDomainMode' Snoop.Infrastructure.SnoopModes' Snoop.mscoree.CorRuntimeHost,Snoop.SnoopUI
+Snoop,Injector,0,2,0,0,0,45,4,0,0,-1,1,1,Snoop.WindowInfo,Snoop.WindowInfo
+Snoop,Inspector,1,1,1,0,0,15,1,1,0,0,1,1,Snoop.PropertyFilter,Snoop.PropertyInspector
+Snoop,NativeMethods,1,28,1,1,18,210,31,0,0,0.64,7,3,Snoop.MODULEENTRY32' Snoop.ToolHelpHandle' Snoop.ProcessHandle' Snoop.SnapshotFlags' Snoop.ProcessAccessFlags' Snoop.RECT' Snoop.POINT,Snoop.WindowFinder' Snoop.AppChooser' Snoop.WindowInfo
+Snoop,MODULEENTRY32,10,0,0,8,0,16,0,0,0,-1,0,2,,Snoop.NativeMethods' Snoop.WindowInfo
+Snoop,ToolHelpHandle,0,2,0,0,0,12,2,0,0,-1,0,1,,Snoop.NativeMethods
+Snoop,ProcessHandle,0,2,0,0,0,12,2,0,0,-1,0,1,,Snoop.NativeMethods
 Snoop,SnapshotFlags,0,0,0,0,0,11,0,0,0,-1,0,2,,Snoop.NativeMethods' Snoop.WindowInfo
+Snoop,ProcessAccessFlags,0,0,0,0,0,17,0,0,0,-1,0,2,,Snoop.NativeMethods' Snoop.WindowInfo
 Snoop,ObjectToStringConverter,0,2,0,0,2,19,5,0,0,-1,0,0,,
-Snoop,PertinentPropertyFilter,2,2,0,0,2,58,6,0,0,0,0,1,,Snoop.PropertyInformation
-Snoop,ZoomerControl,11,12,3,1,3,269,18,0,0,0,1,2,Snoop.Infrastructure.ZoomerUtilities,Snoop.SnoopUI' Snoop.Previewer
-Snoop,AppChooser,11,16,1,4,3,226,23,0,0,0.44,5,1,Snoop.WindowInfo' Snoop.NativeMethods' Snoop.WINDOWPLACEMENT' Snoop.Properties.Settings' Snoop.Win32,Snoop.AttachFailedHandler
-Snoop,WindowInfo,3,7,5,0,5,164,9,0,0,0.57,7,4,Snoop.MODULEENTRY32' Snoop.ToolHelpHandle' Snoop.NativeMethods' Snoop.SnapshotFlags' Snoop.Injector' Snoop.SnoopUI' Snoop.Zoomer,Snoop.Injector' Snoop.AppChooser' Snoop.AttachFailedHandler' Snoop.WindowFinder
-Snoop,AttachFailedEventArgs,0,1,2,0,1,10,1,0,0,-1,0,1,,Snoop.AttachFailedHandler
-Snoop,AttachFailedHandler,1,2,0,0,1,28,3,0,0,0,3,0,Snoop.AppChooser' Snoop.WindowInfo' Snoop.AttachFailedEventArgs,
-Snoop,ProperTreeView,4,4,0,0,1,108,16,0,0,0,4,2,Snoop.SnoopUI' Snoop.ProperTreeViewItem' Snoop.VisualTreeItem' Snoop.VisualTreeHelper2,Snoop.ProperTreeViewItem' Snoop.SnoopUI
+Snoop,PertinentPropertyFilter,2,2,0,0,2,58,11,0,0,1,0,1,,Snoop.PropertyInformation
+Snoop,WindowInfo,7,9,9,0,6,220,15,0,0,0.78,10,4,Snoop.Injector' Snoop.NativeMethods' Snoop.MODULEENTRY32' Snoop.SnapshotFlags' Snoop.ProcessAccessFlags' Snoop.AttachFailedEventArgs' Snoop.SnoopUI' Snoop.Zoomer' Snoop.Data.TransientSettingsData' Snoop.Properties.Settings,Snoop.Injector' Snoop.WindowFinder' Snoop.AppChooser' Snoop.AttachFailedHandler
+Snoop,WindowInfoControl,2,4,0,0,2,60,5,0,0,0,0,1,,Snoop.WindowFinder
+Snoop,ZoomerControl,11,12,3,1,3,269,19,0,0,0,1,0,Snoop.Infrastructure.ZoomerUtilities,
+Snoop,AppChooser,11,17,1,5,3,233,25,0,0,0.65,6,1,Snoop.NativeMethods' Snoop.WindowInfo' Snoop.AttachFailedHandler' Snoop.SnoopWindowUtils' Snoop.Views.SettingsView' Snoop.Properties.Settings,Snoop.AttachFailedHandler
+Snoop,AttachFailedEventArgs,0,1,2,0,1,10,1,0,0,-1,0,2,,Snoop.AttachFailedHandler' Snoop.WindowInfo
+Snoop,AttachFailedHandler,1,2,0,0,1,16,2,0,0,1,4,2,Snoop.ErrorDialog' Snoop.WindowInfo' Snoop.AppChooser' Snoop.AttachFailedEventArgs,Snoop.AppChooser' Snoop.WindowFinder
+Snoop,ProperTreeView,4,4,0,0,1,108,16,0,0,0,4,1,Snoop.ProperTreeViewItem' Snoop.SnoopUI' Snoop.VisualTreeHelper2' Snoop.VisualTreeItem,Snoop.ProperTreeViewItem
 Snoop,ProperTreeViewItem,2,5,1,1,1,64,7,0,0,0.4,1,1,Snoop.ProperTreeView,Snoop.ProperTreeView
 Snoop,IndentToMarginConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Snoop,PropertyFilter,3,2,4,0,2,79,3,0,0,1,2,3,Snoop.PropertyInformation' Snoop.PropertyFilterSet,Snoop.Inspector' Snoop.PropertyInformation' Snoop.PropertyInspector
-Snoop,PropertyFilterSet,0,1,4,0,1,36,3,0,0,-1,0,3,,Snoop.EditUserFilters' Snoop.PropertyFilter' Snoop.PropertyInspector
-Snoop,PropertyInformation,18,21,27,1,11,715,53,0,0,0.14,4,10,Snoop.PropertyFilter' Snoop.Infrastructure.SnoopModes' Snoop.PertinentPropertyFilter' Snoop.Infrastructure.ResourceKeyCache,Snoop.PropertyFilter' Snoop.BoolValueEditor' Snoop.EnumValueEditor' Snoop.StandardValueEditor' Snoop.ValueEditorTemplateSelector' Snoop.PropertyGrid2' Snoop.PropertyInspector' Snoop.SnoopUI' Snoop.EditedPropertiesHelper' Snoop.ValueEditors.MouseWheelValueEditor
+Snoop,PropertyFilter,3,2,4,0,2,79,9,0,0,1,2,3,Snoop.PropertyFilterSet' Snoop.PropertyInformation,Snoop.Inspector' Snoop.PropertyInformation' Snoop.PropertyInspector
+Snoop,PropertyFilterSet,0,1,4,0,1,36,3,0,0,-1,0,4,,Snoop.PropertyFilter' Snoop.Properties.Settings' Snoop.EditUserFilters' Snoop.PropertyInspector
+Snoop,PropertyInformation,17,22,27,1,12,748,54,0,0,0.27,5,11,Snoop.PertinentPropertyFilter' Snoop.PropertyFilter' Snoop.Infrastructure.ResourceDictionaryKeyHelpers' Snoop.Infrastructure.SnoopModes' Snoop.Infrastructure.ResourceKeyCache,Snoop.PropertyFilter' Snoop.EventInformation' Snoop.ValueEditorTemplateSelector' Snoop.ValueEditors.MouseWheelValueEditor' Snoop.SnoopUI' Snoop.EditedPropertiesHelper' Snoop.ValueEditor' Snoop.PropertyInspector' Snoop.TriggersTab.Triggers.SetterItem' Snoop.Views.SettingsView' Snoop.PropertyGrid2
 Snoop,ResourceContainerItem,0,2,1,0,1,28,6,2,1,-1,1,2,Snoop.VisualTreeItem,Snoop.ApplicationTreeItem' Snoop.VisualItem
-Snoop,ResourceDictionaryItem,1,3,0,0,2,50,8,0,1,0.67,1,0,Snoop.VisualTreeItem,
-Snoop,ResourceItem,1,2,0,0,2,12,2,0,1,0,1,0,Snoop.VisualTreeItem,
-Snoop,ScreenshotDialog,5,6,1,3,2,107,10,0,0,0.5,1,1,Snoop.VisualCaptureUtil,Snoop.Previewer
+Snoop,ResourceDictionaryItem,1,3,0,0,2,50,8,0,1,1,2,1,Snoop.ResourceItem' Snoop.VisualTreeItem,Snoop.VisualTreeItem
+Snoop,ResourceItem,1,2,0,0,2,12,2,0,1,1,1,1,Snoop.VisualTreeItem,Snoop.ResourceDictionaryItem
+Snoop,ScreenshotDialog,5,6,1,3,2,107,9,0,0,0.5,1,1,Snoop.VisualCaptureUtil,Snoop.Previewer
 Snoop,SettingBindingExtension,0,3,0,0,2,14,3,0,0,-1,1,0,Snoop.Properties.Settings,
-Snoop,SnoopabilityFeedbackWindow,4,3,1,0,2,80,5,0,0,0,0,1,,Snoop.WindowFinder
-Snoop,SnoopWindowUtils,0,1,0,0,1,60,7,0,0,-1,1,2,Snoop.Infrastructure.SnoopModes,Snoop.SnoopUI' Snoop.Zoomer
-Snoop,TrackballBehavior,8,9,0,0,2,139,15,0,0,0,0,1,,Snoop.VisualTree3DView
-Snoop,BoolValueEditor,0,2,0,0,1,19,4,0,1,-1,2,0,Snoop.ValueEditor' Snoop.PropertyInformation,
-Snoop,BrushValueEditor,0,1,0,0,1,6,1,0,1,-1,0,0,,
-Snoop,EnumValueEditor,3,4,1,0,1,56,10,0,1,0,2,0,Snoop.ValueEditor' Snoop.PropertyInformation,
-Snoop,StandardValueEditor,2,5,1,1,1,79,11,1,1,0.4,1,0,Snoop.PropertyInformation,
-Snoop,ValueEditor,6,6,6,6,0,100,6,3,0,0.5,0,2,,Snoop.BoolValueEditor' Snoop.EnumValueEditor
-Snoop,ValueEditorTemplateSelector,4,1,4,0,1,42,2,0,0,0,1,0,Snoop.PropertyInformation,
-Snoop,VisualCaptureUtil,1,2,0,0,1,48,4,0,0,0,0,1,,Snoop.ScreenshotDialog
-Snoop,VisualItem,2,3,6,0,1,127,13,0,2,1,3,1,Snoop.AdornerContainer' Snoop.VisualTreeItem' Snoop.ResourceContainerItem,Snoop.VisualTreeItem
-Snoop,EventsView,8,8,2,1,2,192,18,0,0,0.5,4,0,Snoop.EventTracker' Snoop.EventEntry' Snoop.TrackedEvent' Snoop.SnoopUI,
+Snoop,SnoopWindowUtils,0,4,0,0,3,113,20,0,0,-1,5,3,Snoop.RECT' Snoop.WINDOWPLACEMENT' Snoop.Win32' Snoop.Data.TransientSettingsData' Snoop.Infrastructure.SnoopModes,Snoop.AppChooser' Snoop.SnoopUI' Snoop.Zoomer
+Snoop,TrackballBehavior,8,9,0,0,2,139,18,0,0,0,0,1,,Snoop.VisualTree3DView
+Snoop,BoolValueEditor,0,2,0,0,1,19,4,0,1,-1,1,0,Snoop.ValueEditor,
+Snoop,BrushValueEditor,0,1,0,0,1,6,1,0,1,-1,1,0,Snoop.StandardValueEditor,
+Snoop,EnumValueEditor,3,4,1,0,1,56,10,0,1,0,1,0,Snoop.ValueEditor,
+Snoop,StandardValueEditor,2,5,1,1,1,91,12,1,1,0.4,1,1,Snoop.ValueEditor,Snoop.BrushValueEditor
+Snoop,ValueEditor,6,6,6,6,0,100,6,3,0,0.5,1,3,Snoop.PropertyInformation,Snoop.StandardValueEditor' Snoop.BoolValueEditor' Snoop.EnumValueEditor
+Snoop,ValueEditorTemplateSelector,4,1,4,0,1,42,5,0,0,0,1,0,Snoop.PropertyInformation,
+Snoop,VisualCaptureUtil,1,4,0,0,3,61,7,0,0,0,0,3,,Snoop.Infrastructure.ZoomerUtilities' Snoop.VisualItem' Snoop.ScreenshotDialog
+Snoop,VisualItem,2,3,6,0,1,147,18,0,2,1,4,2,Snoop.AdornerContainer' Snoop.ResourceContainerItem' Snoop.VisualCaptureUtil' Snoop.VisualTreeItem,Snoop.VisualTreeItem' Snoop.SnoopUI
+Snoop,EventsView,8,8,2,1,2,192,20,0,0,0.5,4,0,Snoop.EventTracker' Snoop.TrackedEvent' Snoop.EventEntry' Snoop.SnoopUI,
 Snoop,InterestingEvent,3,1,4,0,1,32,1,0,0,0,0,0,,
-Snoop,PropertyGrid2,19,29,5,4,2,449,62,0,1,0.34,5,1,Snoop.PropertyInformation' Snoop.DelayedCall' Snoop.Inspector' Snoop.Infrastructure.SnoopPartsRegistry' Snoop.PropertyInspector,Snoop.SnoopUI
-Snoop,PropertyInspector,22,27,11,7,5,611,50,0,0,0.33,6,4,Snoop.PropertyFilter' Snoop.PropertyFilterSet' Snoop.Inspector' Snoop.Properties.Settings' Snoop.PropertyInformation' Snoop.Infrastructure.ISkipDelve,Snoop.PropertyGrid2' Snoop.SnoopUI' Snoop.MethodsTab.MethodsControl' Snoop.MethodsTab.ParameterCreator
-Snoop,SnoopUI,31,39,7,8,7,909,90,0,0,0.1,19,4,Snoop.VisualTreeItem' Snoop.DelayedCall' Snoop.ProperTreeView' Snoop.Shell.EmbeddedShellView' Snoop.Shell.ShellConstants' Snoop.Infrastructure.SnoopModes' Snoop.SnoopWindowUtils' Snoop.Infrastructure.SnoopPartsRegistry' Snoop.ErrorDialog' Snoop.PropertyGrid2' Snoop.PropertyInspector' Snoop.PropertyInformation' Snoop.EditedPropertiesHelper' Snoop.WINDOWPLACEMENT' Snoop.Properties.Settings' Snoop.Win32' Snoop.Previewer' Snoop.EventsListener' Snoop.ZoomerControl,Snoop.WindowInfo' Snoop.ProperTreeView' Snoop.EventsView' Snoop.Shell.EmbeddedShellView
+Snoop,PropertyGrid2,19,29,5,4,2,449,65,0,1,0.38,4,0,Snoop.DelayedCall' Snoop.PropertyInformation' Snoop.PropertyInspector' Snoop.Infrastructure.SnoopPartsRegistry,
+Snoop,PropertyInspector,23,29,12,8,5,652,57,0,0,0.38,9,1,Snoop.EditUserFilters' Snoop.ErrorDialog' Snoop.Inspector' Snoop.PropertyFilter' Snoop.PropertyFilterSet' Snoop.PropertyInformation' Snoop.Infrastructure.ClipboardHelper' Snoop.Infrastructure.ISkipDelve' Snoop.Properties.Settings,Snoop.PropertyGrid2
+Snoop,SnoopUI,31,40,7,8,8,916,103,0,0,0.12,16,6,Snoop.DelayedCall' Snoop.ErrorDialog' Snoop.EventsListener' Snoop.CrossAppDomainSnoop' Snoop.PropertyInformation' Snoop.SnoopWindowUtils' Snoop.VisualItem' Snoop.EditedPropertiesHelper' Snoop.VisualTreeItem' Snoop.Data.TransientSettingsData' Snoop.Data.MultipleDispatcherMode' Snoop.Infrastructure.SnoopModes' Snoop.Infrastructure.SnoopPartsRegistry' Snoop.Shell.ShellConstants' Snoop.Shell.EmbeddedShellView' Snoop.Properties.Settings,Snoop.Shell.EmbeddedShellView' Snoop.Previewer' Snoop.EventsView' Snoop.CrossAppDomainSnoop' Snoop.WindowInfo' Snoop.ProperTreeView
 Snoop,NoFocusHyperlink,0,2,0,0,0,11,2,0,0,-1,0,0,,
 Snoop,PropertyValueInfo,0,0,2,0,0,5,0,0,0,-1,0,1,,Snoop.EditedPropertiesHelper
-Snoop,EditedPropertiesHelper,2,2,0,0,2,81,8,0,0,0,3,1,Snoop.PropertyValueInfo' Snoop.PropertyInformation' Snoop.VisualTreeItem,Snoop.SnoopUI
-Snoop,VisualTreeHelper2,0,8,0,0,7,90,14,0,0,-1,0,1,,Snoop.ProperTreeView
-Snoop,VisualTreeItem,10,11,10,0,5,217,26,3,0,0.27,1,11,Snoop.VisualItem,Snoop.ApplicationTreeItem' Snoop.ProperTreeView' Snoop.ResourceContainerItem' Snoop.ResourceDictionaryItem' Snoop.ResourceItem' Snoop.VisualItem' Snoop.SnoopUI' Snoop.EditedPropertiesHelper' Snoop.Shell.EmbeddedShellView' Snoop.Shell.VisualTreeProvider' Snoop.Shell.VisualTreeProviderExtensions
+Snoop,EditedPropertiesHelper,2,2,0,0,2,80,11,0,0,0,4,1,Snoop.PropertyInformation' Snoop.PropertyValueInfo' Snoop.VisualTreeItem' Snoop.Infrastructure.ClipboardHelper,Snoop.SnoopUI
+Snoop,VisualTreeHelper2,0,8,0,0,7,90,17,0,0,-1,0,1,,Snoop.ProperTreeView
+Snoop,VisualTreeItem,10,11,10,0,5,225,31,3,0,0.45,3,12,Snoop.ApplicationTreeItem' Snoop.ResourceDictionaryItem' Snoop.VisualItem,Snoop.ApplicationTreeItem' Snoop.ResourceDictionaryItem' Snoop.ResourceItem' Snoop.ResourceContainerItem' Snoop.ProperTreeView' Snoop.Shell.EmbeddedShellView' Snoop.Shell.VisualTreeProvider' Snoop.Shell.VisualTreeProviderExtensions' Snoop.VisualItem' Snoop.Shell.ShellConstants' Snoop.SnoopUI' Snoop.EditedPropertiesHelper
 Snoop,App,1,3,0,0,2,53,4,0,0,0.67,1,0,Snoop.Properties.Settings,
-Snoop,WindowFinderType,0,0,0,0,0,1,0,0,0,-1,0,1,,Snoop.WindowFinder
-Snoop,WindowFinder,7,14,2,0,2,199,29,0,0,0,4,0,Snoop.WindowInfo' Snoop.SnoopabilityFeedbackWindow' Snoop.NativeMethods' Snoop.WindowFinderType,
-Snoop,RECT,4,1,0,4,1,16,1,0,0,0,0,2,,Snoop.NativeMethods' Snoop.WINDOWPLACEMENT
-Snoop,POINT,2,1,0,2,1,12,1,0,0,0,0,2,,Snoop.NativeMethods' Snoop.WINDOWPLACEMENT
-Snoop,WINDOWPLACEMENT,6,0,0,6,0,11,0,0,0,-1,2,4,Snoop.POINT' Snoop.RECT,Snoop.AppChooser' Snoop.SnoopUI' Snoop.Win32' Snoop.Zoomer
-Snoop,Win32,2,2,0,2,2,9,2,0,0,1,1,3,Snoop.WINDOWPLACEMENT,Snoop.AppChooser' Snoop.SnoopUI' Snoop.Zoomer
-Snoop,Zoomer,21,29,1,9,5,551,54,0,0,0.21,8,2,Snoop.VisualTree3DView' Snoop.Infrastructure.SnoopModes' Snoop.SnoopWindowUtils' Snoop.Infrastructure.SnoopPartsRegistry' Snoop.WINDOWPLACEMENT' Snoop.Properties.Settings' Snoop.Win32' Snoop.Infrastructure.ZoomerUtilities,Snoop.WindowInfo' Snoop.Previewer
+Snoop,WindowFinderType,0,0,0,0,0,5,0,0,0,-1,0,1,,Snoop.WindowFinder
+Snoop,WindowFinder,10,14,2,0,2,270,24,0,0,0,7,0,Snoop.NativeMethods' Snoop.WindowInfo' Snoop.WindowInfoControl' Snoop.AttachFailedHandler' Snoop.WindowFinderType' Snoop.Infrastructure.LowLevelMouseHook' Snoop.Infrastructure.LowLevelMouseMoveEventArgs,
+Snoop,RECT,4,1,2,4,1,18,1,0,0,0,0,3,,Snoop.WINDOWPLACEMENT' Snoop.SnoopWindowUtils' Snoop.NativeMethods
+Snoop,POINT,2,1,0,2,1,12,1,0,0,0,0,3,,Snoop.Infrastructure.LowLevelMouseHook' Snoop.WINDOWPLACEMENT' Snoop.NativeMethods
+Snoop,WINDOWPLACEMENT,6,0,0,6,0,11,0,0,0,-1,2,3,Snoop.RECT' Snoop.POINT,Snoop.Win32' Snoop.SnoopWindowUtils' Snoop.Properties.Settings
+Snoop,Win32,2,2,0,2,2,9,2,0,0,1,1,1,Snoop.WINDOWPLACEMENT,Snoop.SnoopWindowUtils
+Snoop,Zoomer,21,28,1,9,5,479,52,0,0,0.21,7,2,Snoop.SnoopWindowUtils' Snoop.VisualTree3DView' Snoop.Data.TransientSettingsData' Snoop.Infrastructure.SnoopModes' Snoop.Infrastructure.SnoopPartsRegistry' Snoop.Infrastructure.ZoomerUtilities' Snoop.Properties.Settings,Snoop.WindowInfo' Snoop.Previewer
 Snoop,DoubleToWhitenessConverter,0,2,0,0,2,17,2,0,0,-1,0,0,,
-Snoop,Previewer,7,12,2,4,2,187,15,0,0,0.33,3,1,Snoop.ZoomerControl' Snoop.Zoomer' Snoop.ScreenshotDialog,Snoop.SnoopUI
+Snoop,Previewer,7,12,2,4,2,189,15,0,0,0.33,3,0,Snoop.ScreenshotDialog' Snoop.SnoopUI' Snoop.Zoomer,
 Snoop,VisualTree3DView,5,4,1,0,2,162,18,0,0,0,1,1,Snoop.TrackballBehavior,Snoop.Zoomer
 Snoop.Converters,ArgbToPartsConverter,1,2,0,1,2,28,4,0,0,1,0,0,,
+Snoop.Converters,BoolToVisibilityConverter,1,2,0,1,2,23,4,0,0,1,0,0,,
+Snoop.Converters,DynamicResourceToValueConverter,1,5,0,0,3,101,20,0,0,0.6,1,1,Snoop.Converters.Resource,Snoop.TriggersTab.Triggers.SetterItem
+Snoop.Converters,Resource,0,1,3,0,1,12,1,0,0,-1,0,1,,Snoop.Converters.DynamicResourceToValueConverter
 Snoop.Converters,FilterTypeToIntConverter,1,2,0,1,2,18,4,0,0,1,1,0,Snoop.DebugListenerTab.FilterType,
 Snoop.Converters,IsPowerShellInstalledToVisibilityConverter,0,2,0,0,2,11,2,0,0,-1,1,0,Snoop.Shell.ShellConstants,
 Snoop.Converters,CsvStringToArrayConverter,1,2,0,1,2,24,4,0,0,1,0,0,,
 Snoop.Converters,IsSupportedRuntimeTypeConverter,2,2,0,1,2,26,5,0,0,1,0,0,,
 Snoop.Converters,SnoopParameterInfoConverter,1,2,0,1,2,19,3,0,0,1,1,0,Snoop.MethodsTab.SnoopParameterInformation,
-Snoop.Converters,SnoopDependencyPropertiesConverter,1,2,0,1,2,26,4,0,0,1,1,0,Snoop.MethodsTab.SnoopParameterInformation,
-Snoop.Converters,DependencyPropertyNameValuePair,0,2,2,0,2,16,2,0,0,-1,0,1,,Snoop.MethodsTab.MethodsControl
+Snoop.Converters,SnoopDependencyPropertiesConverter,1,2,0,1,2,26,4,0,0,1,2,0,Snoop.Converters.DependencyPropertyNameValuePair' Snoop.MethodsTab.SnoopParameterInformation,
+Snoop.Converters,DependencyPropertyNameValuePair,0,2,2,0,2,16,2,0,0,-1,0,2,,Snoop.MethodsTab.MethodsControl' Snoop.Converters.SnoopDependencyPropertiesConverter
 Snoop.Converters,SnoopEnumValuesConverter,1,2,0,1,2,22,4,0,0,1,0,0,,
-Snoop.DebugListenerTab,DebugListenerControl,12,11,0,0,3,237,19,0,1,0,4,0,Snoop.DebugListenerTab.FiltersViewModel' Snoop.DebugListenerTab.SnoopDebugListener' Snoop.Properties.Settings' Snoop.DebugListenerTab.SetFiltersWindow,
-Snoop.DebugListenerTab,FiltersViewModel,5,14,4,0,10,193,36,0,0,0.14,3,2,Snoop.DebugListenerTab.SnoopFilter' Snoop.DebugListenerTab.SnoopMultipleFilter' Snoop.DebugListenerTab.SnoopSingleFilter,Snoop.DebugListenerTab.DebugListenerControl' Snoop.DebugListenerTab.SetFiltersWindow
+Snoop.Converters,SystemIconToImageSourceConverter,1,2,0,1,2,17,2,0,0,1,2,0,Snoop.Infrastructure.SystemIcon' Snoop.Infrastructure.SystemIconHelper,
+Snoop.Converters,BrushStop,0,1,3,0,1,12,1,0,0,-1,0,1,,Snoop.Converters.BrushStopsConverter
+Snoop.Converters,BrushStopsConverter,1,3,0,1,2,32,6,0,0,0.67,1,0,Snoop.Converters.BrushStop,
+Snoop.Data,TransientSettingsData,1,5,4,0,4,46,6,0,0,0.6,3,5,Snoop.Data.MultipleAppDomainMode' Snoop.Data.MultipleDispatcherMode' Snoop.Properties.Settings,Snoop.Zoomer' Snoop.SnoopWindowUtils' Snoop.WindowInfo' Snoop.SnoopUI' Snoop.CrossAppDomainSnoop
+Snoop.Data,MultipleAppDomainMode,0,0,0,0,0,6,0,0,0,-1,0,3,,Snoop.Data.TransientSettingsData' Snoop.Properties.Settings' Snoop.CrossAppDomainSnoop
+Snoop.Data,MultipleDispatcherMode,0,0,0,0,0,6,0,0,0,-1,0,3,,Snoop.Data.TransientSettingsData' Snoop.Properties.Settings' Snoop.SnoopUI
+Snoop.DebugListenerTab,DebugListenerControl,12,11,0,0,3,235,25,0,1,0,5,0,Snoop.DebugListenerTab.FiltersViewModel' Snoop.DebugListenerTab.IListener' Snoop.DebugListenerTab.SetFiltersWindow' Snoop.DebugListenerTab.SnoopDebugListener' Snoop.Properties.Settings,
+Snoop.DebugListenerTab,FiltersViewModel,5,14,4,0,10,193,36,0,0,0.14,3,2,Snoop.DebugListenerTab.SnoopFilter' Snoop.DebugListenerTab.SnoopMultipleFilter' Snoop.DebugListenerTab.SnoopSingleFilter,Snoop.DebugListenerTab.SetFiltersWindow' Snoop.DebugListenerTab.DebugListenerControl
 Snoop.DebugListenerTab,FilterType,0,0,0,0,0,7,0,0,0,-1,0,2,,Snoop.Converters.FilterTypeToIntConverter' Snoop.DebugListenerTab.SnoopSingleFilter
-Snoop.DebugListenerTab,IListener,0,1,0,0,0,4,1,1,0,-1,0,1,,Snoop.DebugListenerTab.SnoopDebugListener
-Snoop.DebugListenerTab,SetFiltersWindow,9,15,1,0,2,300,32,0,0,0.4,5,1,Snoop.DebugListenerTab.FiltersViewModel' Snoop.Infrastructure.SnoopPartsRegistry' Snoop.DebugListenerTab.SnoopFilter' Snoop.Properties.Settings' Snoop.DebugListenerTab.SnoopSingleFilter,Snoop.DebugListenerTab.DebugListenerControl
+Snoop.DebugListenerTab,IListener,0,1,0,0,0,4,1,1,0,-1,0,2,,Snoop.DebugListenerTab.DebugListenerControl' Snoop.DebugListenerTab.SnoopDebugListener
+Snoop.DebugListenerTab,SetFiltersWindow,9,15,1,0,2,300,36,0,0,0.4,5,1,Snoop.DebugListenerTab.FiltersViewModel' Snoop.DebugListenerTab.SnoopFilter' Snoop.DebugListenerTab.SnoopSingleFilter' Snoop.Infrastructure.SnoopPartsRegistry' Snoop.Properties.Settings,Snoop.DebugListenerTab.DebugListenerControl
 Snoop.DebugListenerTab,SnoopDebugListener,2,19,0,1,18,85,20,0,0,0.68,1,1,Snoop.DebugListenerTab.IListener,Snoop.DebugListenerTab.DebugListenerControl
-Snoop.DebugListenerTab,SnoopFilter,4,3,6,0,2,84,4,2,0,0.67,0,3,,Snoop.DebugListenerTab.FiltersViewModel' Snoop.DebugListenerTab.SetFiltersWindow' Snoop.DebugListenerTab.SnoopMultipleFilter
+Snoop.DebugListenerTab,SnoopFilter,4,3,6,0,2,84,4,2,0,0.67,0,4,,Snoop.DebugListenerTab.SnoopSingleFilter' Snoop.DebugListenerTab.SnoopMultipleFilter' Snoop.DebugListenerTab.FiltersViewModel' Snoop.DebugListenerTab.SetFiltersWindow
 Snoop.DebugListenerTab,SnoopMultipleFilter,1,6,3,0,6,73,12,0,1,0,2,1,Snoop.DebugListenerTab.SnoopFilter' Snoop.DebugListenerTab.SnoopSingleFilter,Snoop.DebugListenerTab.FiltersViewModel
-Snoop.DebugListenerTab,SnoopSingleFilter,1,4,2,0,3,70,6,0,1,0.75,1,3,Snoop.DebugListenerTab.FilterType,Snoop.DebugListenerTab.FiltersViewModel' Snoop.DebugListenerTab.SetFiltersWindow' Snoop.DebugListenerTab.SnoopMultipleFilter
+Snoop.DebugListenerTab,SnoopSingleFilter,1,4,2,0,3,70,8,0,1,0.75,2,4,Snoop.DebugListenerTab.FilterType' Snoop.DebugListenerTab.SnoopFilter,Snoop.DebugListenerTab.SnoopMultipleFilter' Snoop.Properties.Settings' Snoop.DebugListenerTab.FiltersViewModel' Snoop.DebugListenerTab.SetFiltersWindow
+Snoop.Infrastructure,AttachedPropertyManager,1,3,0,0,1,32,6,0,0,0,1,2,Snoop.Infrastructure.AttachedPropertySlot,Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.ConditionItem
+Snoop.Infrastructure,AttachedPropertySlot,0,2,3,0,2,18,2,0,0,-1,0,3,,Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.Infrastructure.AttachedPropertyManager
+Snoop.Infrastructure,ClipboardHelper,0,1,0,0,1,14,1,0,0,-1,1,3,Snoop.ErrorDialog,Snoop.ErrorDialog' Snoop.PropertyInspector' Snoop.EditedPropertiesHelper
 Snoop.Infrastructure,ComboBoxSettings,2,9,0,1,2,101,15,0,0,0.44,1,0,Snoop.Infrastructure.SnoopPartsRegistry,
 Snoop.Infrastructure,ExtensionMethods,0,2,0,0,2,18,3,0,0,-1,0,0,,
+Snoop.Infrastructure,LowLevelMouseHook,3,9,1,0,3,93,13,0,0,0,4,1,Snoop.POINT' Snoop.Infrastructure.LowLevelMouseMoveEventArgs' Snoop.Infrastructure.MouseMessages' Snoop.Infrastructure.MSLLHOOKSTRUCT,Snoop.WindowFinder
+Snoop.Infrastructure,LowLevelMouseMoveEventArgs,0,1,1,0,1,8,1,0,0,-1,0,2,,Snoop.WindowFinder' Snoop.Infrastructure.LowLevelMouseHook
+Snoop.Infrastructure,MouseMessages,0,0,0,0,0,9,0,0,0,-1,0,1,,Snoop.Infrastructure.LowLevelMouseHook
+Snoop.Infrastructure,MSLLHOOKSTRUCT,5,0,0,5,0,9,0,0,0,-1,0,1,,Snoop.Infrastructure.LowLevelMouseHook
 Snoop.Infrastructure,ISkipDelve,0,0,2,0,0,5,0,0,0,-1,0,1,,Snoop.PropertyInspector
 Snoop.Infrastructure,ObservableCollectionExtensions,0,8,0,0,6,155,28,0,0,-1,0,0,,
-Snoop.Infrastructure,RelayCommand,2,4,0,0,4,36,5,0,0,0.5,0,0,,
-Snoop.Infrastructure,ResourceDictionaryKeyHelpers,0,2,0,0,2,62,14,0,0,-1,0,0,,
-Snoop.Infrastructure,SnoopModes,0,0,3,0,0,10,0,0,0,-1,0,6,,Snoop.DelayedCall' Snoop.ErrorDialog' Snoop.PropertyInformation' Snoop.SnoopWindowUtils' Snoop.SnoopUI' Snoop.Zoomer
-Snoop.Infrastructure,SnoopPartsRegistry,1,3,0,0,1,45,7,0,0,0,0,6,,Snoop.ErrorDialog' Snoop.PropertyGrid2' Snoop.SnoopUI' Snoop.Zoomer' Snoop.DebugListenerTab.SetFiltersWindow' Snoop.Infrastructure.ComboBoxSettings
+Snoop.Infrastructure,RelayCommand,2,4,0,0,4,36,5,0,0,0.5,0,1,,Snoop.MethodsTab.SnoopParameterInformation
+Snoop.Infrastructure,ResourceDictionaryKeyHelpers,0,2,0,0,2,61,13,0,0,-1,0,1,,Snoop.PropertyInformation
+Snoop.Infrastructure,SnoopModes,0,0,4,0,0,15,0,0,0,-1,0,8,,Snoop.TriggersTab.Triggers.ConditionItem' Snoop.ErrorDialog' Snoop.DelayedCall' Snoop.CrossAppDomainSnoop' Snoop.PropertyInformation' Snoop.SnoopWindowUtils' Snoop.Zoomer' Snoop.SnoopUI
+Snoop.Infrastructure,SnoopPartsRegistry,1,3,0,0,1,45,7,0,0,0,0,6,,Snoop.Zoomer' Snoop.ErrorDialog' Snoop.DebugListenerTab.SetFiltersWindow' Snoop.Infrastructure.ComboBoxSettings' Snoop.SnoopUI' Snoop.PropertyGrid2
 Snoop.Infrastructure,ResourceKeyCache,1,3,0,0,3,22,5,0,0,0,0,1,,Snoop.PropertyInformation
-Snoop.Infrastructure,WhenLoaded,2,3,0,0,1,27,4,0,0,0,0,0,,
-Snoop.Infrastructure,WhenLoadedExtension,0,1,0,0,1,18,1,0,0,-1,0,0,,
-Snoop.Infrastructure,ZoomerUtilities,0,3,0,0,1,72,6,0,0,-1,0,2,,Snoop.ZoomerControl' Snoop.Zoomer
+Snoop.Infrastructure,SystemIcon,3,1,2,3,1,14,1,0,0,0,0,2,,Snoop.Converters.SystemIconToImageSourceConverter' Snoop.Infrastructure.SystemIconHelper
+Snoop.Infrastructure,SystemIconHelper,0,4,0,0,1,27,5,0,0,-1,1,1,Snoop.Infrastructure.SystemIcon,Snoop.Converters.SystemIconToImageSourceConverter
+Snoop.Infrastructure,TemplateHelper,0,1,0,0,1,17,3,0,0,-1,0,3,,Snoop.TriggersTab.Triggers.TriggerItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.MultiTriggerItem
+Snoop.Infrastructure,WhenLoaded,2,3,0,0,1,27,4,0,0,0,0,1,,Snoop.Infrastructure.WhenLoadedExtension
+Snoop.Infrastructure,WhenLoadedExtension,0,1,0,0,1,18,1,0,0,-1,1,0,Snoop.Infrastructure.WhenLoaded,
+Snoop.Infrastructure,WindowExtensions,0,1,0,0,1,14,2,0,0,-1,0,0,,
+Snoop.Infrastructure,ZoomerUtilities,0,3,0,0,1,74,13,0,0,-1,1,2,Snoop.VisualCaptureUtil,Snoop.Zoomer' Snoop.ZoomerControl
 Snoop.MethodsTab,AssemblyNamePair,0,2,2,0,2,15,2,0,0,-1,0,1,,Snoop.MethodsTab.FullTypeSelector
-Snoop.MethodsTab,FullTypeSelector,9,6,1,0,2,203,12,0,1,0.33,2,0,Snoop.MethodsTab.AssemblyNamePair' Snoop.MethodsTab.TypeNamePair,
-Snoop.MethodsTab,ITypeSelector,0,1,4,0,0,8,1,2,0,-1,0,1,,Snoop.MethodsTab.SnoopParameterInformation
-Snoop.MethodsTab,MethodsControl,14,19,3,3,3,411,44,0,0,0.16,5,0,Snoop.MethodsTab.SnoopMethodInformation' Snoop.MethodsTab.SnoopParameterInformation' Snoop.Converters.DependencyPropertyNameValuePair' Snoop.PropertyInspector' Snoop.MethodsTab.ParameterCreator,
-Snoop.MethodsTab,ParameterCreator,6,6,2,2,2,134,8,0,0,0.5,1,2,Snoop.PropertyInspector,Snoop.MethodsTab.MethodsControl' Snoop.MethodsTab.SnoopParameterInformation
+Snoop.MethodsTab,FullTypeSelector,9,6,1,0,2,203,18,0,1,0.33,3,1,Snoop.MethodsTab.AssemblyNamePair' Snoop.MethodsTab.ITypeSelector' Snoop.MethodsTab.TypeNamePair,Snoop.MethodsTab.SnoopParameterInformation
+Snoop.MethodsTab,ITypeSelector,0,1,4,0,0,8,1,2,0,-1,0,3,,Snoop.MethodsTab.FullTypeSelector' Snoop.MethodsTab.TypeSelector' Snoop.MethodsTab.SnoopParameterInformation
+Snoop.MethodsTab,MethodsControl,14,19,3,3,3,410,54,0,0,0.16,5,0,Snoop.ErrorDialog' Snoop.Converters.DependencyPropertyNameValuePair' Snoop.MethodsTab.ParameterCreator' Snoop.MethodsTab.SnoopMethodInformation' Snoop.MethodsTab.SnoopParameterInformation,
+Snoop.MethodsTab,ParameterCreator,6,6,2,2,2,134,10,0,0,0.5,0,2,,Snoop.MethodsTab.SnoopParameterInformation' Snoop.MethodsTab.MethodsControl
 Snoop.MethodsTab,SnoopMethodInformation,1,6,2,0,5,76,16,0,0,0.67,1,1,Snoop.MethodsTab.SnoopParameterInformation,Snoop.MethodsTab.MethodsControl
-Snoop.MethodsTab,SnoopParameterInformation,4,3,9,1,2,112,9,0,0,0.67,2,5,Snoop.MethodsTab.ITypeSelector' Snoop.MethodsTab.ParameterCreator,Snoop.Converters.SnoopParameterInfoConverter' Snoop.Converters.SnoopDependencyPropertiesConverter' Snoop.MethodsTab.MethodsControl' Snoop.MethodsTab.SnoopMethodInformation' Snoop.MethodsTab.SnoopParameterInformationTemplateSelector
+Snoop.MethodsTab,SnoopParameterInformation,4,3,9,1,2,111,9,0,0,0.67,5,5,Snoop.Infrastructure.RelayCommand' Snoop.MethodsTab.FullTypeSelector' Snoop.MethodsTab.ITypeSelector' Snoop.MethodsTab.ParameterCreator' Snoop.MethodsTab.TypeSelector,Snoop.MethodsTab.SnoopParameterInformationTemplateSelector' Snoop.MethodsTab.MethodsControl' Snoop.Converters.SnoopParameterInfoConverter' Snoop.Converters.SnoopDependencyPropertiesConverter' Snoop.MethodsTab.SnoopMethodInformation
 Snoop.MethodsTab,SnoopParameterInformationTemplateSelector,0,1,0,0,1,27,5,0,0,-1,1,0,Snoop.MethodsTab.SnoopParameterInformation,
-Snoop.MethodsTab,TypeComparerByName,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Snoop.MethodsTab,TypeComparerByName,0,1,0,0,1,9,1,0,0,-1,0,1,,Snoop.MethodsTab.TypeSelector
 Snoop.MethodsTab,TypeNamePair,0,2,2,0,2,15,2,0,0,-1,0,1,,Snoop.MethodsTab.FullTypeSelector
-Snoop.MethodsTab,TypeSelector,4,7,3,0,3,137,14,0,1,0.29,0,0,,
-Snoop.Shell,ShellConstants,7,0,1,7,0,50,0,0,0,-1,0,4,,Snoop.SnoopUI' Snoop.Converters.IsPowerShellInstalledToVisibilityConverter' Snoop.Shell.EmbeddedShellView' Snoop.Shell.VisualTreeProvider
-Snoop.Shell,EmbeddedShellView,7,14,0,0,5,260,23,0,0,0,5,1,Snoop.Shell.SnoopPSHost' Snoop.Shell.ShellConstants' Snoop.Shell.VisualTreeProvider' Snoop.SnoopUI' Snoop.VisualTreeItem,Snoop.SnoopUI
+Snoop.MethodsTab,TypeSelector,4,7,3,0,3,137,15,0,1,0.29,2,1,Snoop.MethodsTab.ITypeSelector' Snoop.MethodsTab.TypeComparerByName,Snoop.MethodsTab.SnoopParameterInformation
+Snoop.mscoree,CorRuntimeHost,0,0,0,0,0,6,0,1,1,-1,2,2,Snoop.mscoree.CorRuntimeHostClass' Snoop.mscoree.ICorRuntimeHost,Snoop.mscoree.CorRuntimeHostClass' Snoop.CrossAppDomainSnoop
+Snoop.mscoree,CorRuntimeHostClass,0,31,0,0,31,82,31,0,2,-1,13,1,Snoop.mscoree.CorRuntimeHost' Snoop.mscoree.ICorConfiguration' Snoop.mscoree.ICorRuntimeHost' Snoop.mscoree.IDebuggerInfo' Snoop.mscoree.IDebuggerThreadControl' Snoop.mscoree.IGCHost' Snoop.mscoree.IGCHostControl' Snoop.mscoree.IGCThreadControl' Snoop.mscoree.IValidator' Snoop.mscoree.IVEHandler' Snoop.mscoree.tag_VerError' Snoop.mscoree._COR_GC_STATS' Snoop.mscoree._COR_GC_THREAD_STATS,Snoop.mscoree.CorRuntimeHost
+Snoop.mscoree,ICorConfiguration,0,4,0,0,0,14,4,1,0,-1,3,2,Snoop.mscoree.IDebuggerThreadControl' Snoop.mscoree.IGCHostControl' Snoop.mscoree.IGCThreadControl,Snoop.mscoree.ICorRuntimeHost' Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,ICorRuntimeHost,0,19,0,0,0,49,19,2,0,-1,1,2,Snoop.mscoree.ICorConfiguration,Snoop.mscoree.CorRuntimeHostClass' Snoop.mscoree.CorRuntimeHost
+Snoop.mscoree,IDebuggerInfo,0,1,0,0,0,8,1,1,0,-1,0,1,,Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,IDebuggerThreadControl,0,3,0,0,0,12,3,0,0,-1,0,2,,Snoop.mscoree.ICorConfiguration' Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,IGCHost,0,5,0,0,0,16,5,1,0,-1,2,1,Snoop.mscoree._COR_GC_STATS' Snoop.mscoree._COR_GC_THREAD_STATS,Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,IGCHostControl,0,1,0,0,0,8,1,0,0,-1,0,2,,Snoop.mscoree.ICorConfiguration' Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,IGCThreadControl,0,3,0,0,0,12,3,0,0,-1,0,2,,Snoop.mscoree.ICorConfiguration' Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,IValidator,0,2,0,0,0,14,2,1,0,-1,2,1,Snoop.mscoree.IVEHandler' Snoop.mscoree.tag_VerError,Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,IVEHandler,0,2,0,0,0,11,2,0,0,-1,1,2,Snoop.mscoree.tag_VerError,Snoop.mscoree.IValidator' Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,tag_VerError,8,0,0,8,0,15,0,0,0,-1,0,3,,Snoop.mscoree.IVEHandler' Snoop.mscoree.IValidator' Snoop.mscoree.CorRuntimeHostClass
+Snoop.mscoree,_COR_GC_STATS,11,0,0,11,0,25,0,0,0,-1,0,2,,Snoop.mscoree.CorRuntimeHostClass' Snoop.mscoree.IGCHost
+Snoop.mscoree,_COR_GC_THREAD_STATS,2,0,0,2,0,6,0,0,0,-1,0,2,,Snoop.mscoree.IGCHost' Snoop.mscoree.CorRuntimeHostClass
+Snoop.TriggersTab.Triggers,ConditionItem,7,12,9,1,5,208,15,0,0,0.33,4,6,Snoop.BindingDisplayHelper' Snoop.Infrastructure.AttachedPropertyManager' Snoop.Infrastructure.AttachedPropertySlot' Snoop.Infrastructure.SnoopModes,Snoop.TriggersTab.Triggers.TriggerItem' Snoop.TriggersTab.Triggers.MultiDataTriggerItem' Snoop.TriggersTab.Triggers.DataTriggerItem' Snoop.TriggersTab.Triggers.EventTriggerItem' Snoop.TriggersTab.Triggers.TriggerItemBase' Snoop.TriggersTab.Triggers.MultiTriggerItem
+Snoop.TriggersTab.Triggers,DataTriggerItem,2,3,0,0,1,22,3,0,1,0,5,1,Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.TriggerType' Snoop.TriggersTab.Triggers.TriggerSource' Snoop.TriggersTab.Triggers.TriggerItemBase,Snoop.TriggersTab.Triggers.TriggerItemFactory
+Snoop.TriggersTab.Triggers,EventTriggerItem,1,5,0,0,1,29,5,0,1,0.6,7,1,Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.TriggerActionItem' Snoop.TriggersTab.Triggers.TriggerActionItemFactory' Snoop.TriggersTab.Triggers.TriggerType' Snoop.TriggersTab.Triggers.TriggerSource' Snoop.TriggersTab.Triggers.TriggerItemBase,Snoop.TriggersTab.Triggers.TriggerItemFactory
+Snoop.TriggersTab.Triggers,MultiDataTriggerItem,2,3,0,0,1,22,4,0,1,0.67,5,1,Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.TriggerType' Snoop.TriggersTab.Triggers.TriggerSource' Snoop.TriggersTab.Triggers.TriggerItemBase,Snoop.TriggersTab.Triggers.TriggerItemFactory
+Snoop.TriggersTab.Triggers,MultiTriggerItem,2,3,0,0,1,42,6,0,1,0.67,6,1,Snoop.Infrastructure.TemplateHelper' Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.TriggerType' Snoop.TriggersTab.Triggers.TriggerSource' Snoop.TriggersTab.Triggers.TriggerItemBase,Snoop.TriggersTab.Triggers.TriggerItemFactory
+Snoop.TriggersTab.Triggers,SetterItem,1,4,4,0,2,85,9,0,0,0,5,7,Snoop.PropertyInformation' Snoop.Converters.DynamicResourceToValueConverter' Snoop.Infrastructure.AttachedPropertyManager' Snoop.Infrastructure.AttachedPropertySlot' Snoop.Infrastructure.TemplateHelper,Snoop.TriggersTab.Triggers.EventTriggerItem' Snoop.TriggersTab.Triggers.DataTriggerItem' Snoop.TriggersTab.TriggersView' Snoop.TriggersTab.Triggers.TriggerItemBase' Snoop.TriggersTab.Triggers.MultiTriggerItem' Snoop.TriggersTab.Triggers.TriggerItem' Snoop.TriggersTab.Triggers.MultiDataTriggerItem
+Snoop.TriggersTab.Triggers,TriggerActionItem,0,2,4,0,2,18,2,0,0,-1,1,3,Snoop.BindingDisplayHelper,Snoop.TriggersTab.Triggers.EventTriggerItem' Snoop.TriggersTab.Triggers.TriggerActionItemFactory' Snoop.TriggersTab.Triggers.TriggerItemBase
+Snoop.TriggersTab.Triggers,TriggerActionItemFactory,0,1,0,0,1,10,1,0,0,-1,2,2,Snoop.TriggersTab.Triggers.TriggerActionItem' Snoop.TriggersTab.Triggers.TriggerSource,Snoop.TriggersTab.Triggers.TriggerItemBase' Snoop.TriggersTab.Triggers.EventTriggerItem
+Snoop.TriggersTab.Triggers,TriggerItem,2,3,0,0,1,23,3,0,1,0.67,6,1,Snoop.Infrastructure.TemplateHelper' Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.TriggerType' Snoop.TriggersTab.Triggers.TriggerSource' Snoop.TriggersTab.Triggers.TriggerItemBase,Snoop.TriggersTab.Triggers.TriggerItemFactory
+Snoop.TriggersTab.Triggers,TriggerType,0,0,0,0,0,8,0,0,0,-1,0,6,,Snoop.TriggersTab.Triggers.DataTriggerItem' Snoop.TriggersTab.Triggers.MultiDataTriggerItem' Snoop.TriggersTab.Triggers.TriggerItem' Snoop.TriggersTab.Triggers.MultiTriggerItem' Snoop.TriggersTab.Triggers.EventTriggerItem' Snoop.TriggersTab.Triggers.TriggerItemBase
+Snoop.TriggersTab.Triggers,TriggerSource,0,0,0,0,0,7,0,0,0,-1,0,9,,Snoop.TriggersTab.Triggers.TriggerItemFactory' Snoop.TriggersTab.Triggers.DataTriggerItem' Snoop.TriggersTab.Triggers.MultiDataTriggerItem' Snoop.TriggersTab.Triggers.TriggerItem' Snoop.TriggersTab.Triggers.TriggerActionItemFactory' Snoop.TriggersTab.Triggers.TriggerItemBase' Snoop.TriggersTab.Triggers.EventTriggerItem' Snoop.TriggersTab.TriggersView' Snoop.TriggersTab.Triggers.MultiTriggerItem
+Snoop.TriggersTab.Triggers,TriggerItemBase,6,8,8,0,2,117,12,5,0,0.25,6,7,Snoop.TriggersTab.Triggers.ConditionItem' Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.TriggerActionItem' Snoop.TriggersTab.Triggers.TriggerActionItemFactory' Snoop.TriggersTab.Triggers.TriggerType' Snoop.TriggersTab.Triggers.TriggerSource,Snoop.TriggersTab.Triggers.MultiTriggerItem' Snoop.TriggersTab.Triggers.DataTriggerItem' Snoop.TriggersTab.Triggers.EventTriggerItem' Snoop.TriggersTab.Triggers.MultiDataTriggerItem' Snoop.TriggersTab.Triggers.TriggerItemFactory' Snoop.TriggersTab.Triggers.TriggerItem' Snoop.TriggersTab.TriggersView
+Snoop.TriggersTab.Triggers,TriggerItemFactory,0,1,0,0,1,33,6,0,0,-1,7,1,Snoop.TriggersTab.Triggers.DataTriggerItem' Snoop.TriggersTab.Triggers.EventTriggerItem' Snoop.TriggersTab.Triggers.MultiDataTriggerItem' Snoop.TriggersTab.Triggers.MultiTriggerItem' Snoop.TriggersTab.Triggers.TriggerItem' Snoop.TriggersTab.Triggers.TriggerSource' Snoop.TriggersTab.Triggers.TriggerItemBase,Snoop.TriggersTab.TriggersView
+Snoop.Shell,ShellConstants,7,0,1,7,0,50,0,0,0,-1,1,4,Snoop.VisualTreeItem,Snoop.Converters.IsPowerShellInstalledToVisibilityConverter' Snoop.Shell.EmbeddedShellView' Snoop.Shell.VisualTreeProvider' Snoop.SnoopUI
+Snoop.Shell,EmbeddedShellView,7,14,0,0,5,260,29,0,0,0,5,1,Snoop.SnoopUI' Snoop.VisualTreeItem' Snoop.Shell.ShellConstants' Snoop.Shell.SnoopPSHost' Snoop.Shell.VisualTreeProvider,Snoop.SnoopUI
 Snoop.Shell,SnoopPSHost,4,6,7,0,6,66,6,0,0,1,1,1,Snoop.Shell.SnoopPSHostUserInterface,Snoop.Shell.EmbeddedShellView
-Snoop.Shell,SnoopPSHostRawUserInterface,0,6,11,0,6,47,6,0,0,-1,0,0,,
-Snoop.Shell,SnoopPSHostUserInterface,1,14,1,0,14,70,14,0,0,1,0,1,,Snoop.Shell.SnoopPSHost
+Snoop.Shell,SnoopPSHostRawUserInterface,0,6,11,0,6,47,6,0,0,-1,0,1,,Snoop.Shell.SnoopPSHostUserInterface
+Snoop.Shell,SnoopPSHostUserInterface,1,14,1,0,14,70,14,0,0,1,1,1,Snoop.Shell.SnoopPSHostRawUserInterface,Snoop.Shell.SnoopPSHost
 Snoop.Shell,VisualTreeProvider,3,13,1,0,2,152,28,0,0,0.23,2,1,Snoop.VisualTreeItem' Snoop.Shell.ShellConstants,Snoop.Shell.EmbeddedShellView
 Snoop.Shell,VisualTreeProviderExtensions,0,3,0,0,2,34,6,0,0,-1,1,0,Snoop.VisualTreeItem,
-Snoop.Properties,Settings,1,3,9,0,1,218,3,0,0,1,0,8,,Snoop.AppChooser' Snoop.SettingBindingExtension' Snoop.PropertyInspector' Snoop.SnoopUI' Snoop.App' Snoop.Zoomer' Snoop.DebugListenerTab.DebugListenerControl' Snoop.DebugListenerTab.SetFiltersWindow
-Snoop.ValueEditors,MouseWheelValueEditor,1,10,1,0,2,229,27,0,0,0.2,1,0,Snoop.PropertyInformation,
+Snoop.TriggersTab,TriggersView,10,11,5,5,2,170,22,0,0,0,4,0,Snoop.TriggersTab.Triggers.SetterItem' Snoop.TriggersTab.Triggers.TriggerSource' Snoop.TriggersTab.Triggers.TriggerItemBase' Snoop.TriggersTab.Triggers.TriggerItemFactory,
+Snoop.Views,SettingsView,8,6,1,1,2,142,11,0,0,0.67,2,1,Snoop.PropertyInformation' Snoop.Properties.Settings,Snoop.AppChooser
+Snoop.Properties,Settings,1,3,12,0,1,187,3,0,0,1,5,11,Snoop.PropertyFilterSet' Snoop.WINDOWPLACEMENT' Snoop.Data.MultipleAppDomainMode' Snoop.Data.MultipleDispatcherMode' Snoop.DebugListenerTab.SnoopSingleFilter,Snoop.Data.TransientSettingsData' Snoop.SettingBindingExtension' Snoop.DebugListenerTab.SetFiltersWindow' Snoop.DebugListenerTab.DebugListenerControl' Snoop.App' Snoop.Zoomer' Snoop.WindowInfo' Snoop.AppChooser' Snoop.PropertyInspector' Snoop.SnoopUI' Snoop.Views.SettingsView
+Snoop.ValueEditors,MouseWheelValueEditor,1,10,1,0,2,229,34,0,0,0.2,1,0,Snoop.PropertyInformation,
 Snoop.SampleData,ScreenshotVisualSample,1,2,0,0,1,33,3,0,0,0,0,0,,
 XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

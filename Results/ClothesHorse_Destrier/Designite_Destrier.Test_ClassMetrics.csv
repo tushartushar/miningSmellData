@@ -1,0 +1,34 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Destrier.Test,DatabaseContext,0,3,3,0,3,33,5,2,0,-1,0,2,,Destrier.Test.TestObjectContext' Destrier.Test.LibraryContext
+Destrier.Test,TestObjectContext,0,6,0,0,6,123,7,0,1,-1,1,1,Destrier.Test.DatabaseContext,Destrier.Test.IndexedSqlDataReaderTests
+Destrier.Test,LibraryContext,0,6,0,0,6,147,7,0,1,-1,1,2,Destrier.Test.DatabaseContext,Destrier.Test.QueryTests' Destrier.Test.DatabaseTests
+Destrier.Test,CommandBuilderTests,0,9,0,0,9,90,9,0,0,-1,1,0,Destrier.Test.MockObject,
+Destrier.Test,DatabaseTests,0,11,0,0,11,96,11,0,0,-1,5,0,Destrier.Test.LibraryContext' Destrier.Test.Book' Destrier.Test.Person' Destrier.Test.Chapter' Destrier.Test.Page,
+Destrier.Test,IndexedSqlDataReaderTests,2,22,0,2,22,289,22,0,0,0.45,4,0,Destrier.Test.TestObjectContext' Destrier.Test.TestObjectTypeId' Destrier.Test.TestObject' Destrier.Test.Ids,
+Destrier.Test,ModelCacheTests,0,1,0,0,1,16,1,0,0,-1,1,0,Destrier.Test.Mapping,
+Destrier.Test,SubObjectTypeId,0,0,0,0,0,6,0,0,0,-1,0,2,,Destrier.Test.SubObject' Destrier.Test.SqlExpressionVisitorTests
+Destrier.Test,TestObjectTypeId,0,0,0,0,0,6,0,0,0,-1,0,2,,Destrier.Test.TestObject' Destrier.Test.IndexedSqlDataReaderTests
+Destrier.Test,TestObject,0,0,16,0,0,36,0,0,0,-1,1,1,Destrier.Test.TestObjectTypeId,Destrier.Test.IndexedSqlDataReaderTests
+Destrier.Test,Ids,0,0,1,0,0,6,0,0,0,-1,0,2,,Destrier.Test.ReflectionTests' Destrier.Test.IndexedSqlDataReaderTests
+Destrier.Test,MockObject,0,0,14,0,0,32,0,0,0,-1,4,4,Destrier.Test.SubObject' Destrier.Test.ReferenceLoopObject' Destrier.Test.AlwaysIncludeCollectionObject' Destrier.Test.CollectionObject,Destrier.Test.ReferenceLoopObject' Destrier.Test.ReflectionTests' Destrier.Test.CommandBuilderTests' Destrier.Test.SqlExpressionVisitorTests
+Destrier.Test,SubObject,0,0,3,0,0,10,0,0,0,-1,1,2,Destrier.Test.SubObjectTypeId,Destrier.Test.MockObject' Destrier.Test.SqlExpressionVisitorTests
+Destrier.Test,ReferenceLoopObject,0,0,4,0,0,13,0,0,0,-1,1,1,Destrier.Test.MockObject,Destrier.Test.MockObject
+Destrier.Test,AlwaysIncludeCollectionObject,0,0,3,0,0,10,0,0,0,-1,0,1,,Destrier.Test.MockObject
+Destrier.Test,CollectionObject,0,0,4,0,0,12,0,0,0,-1,1,1,Destrier.Test.SubCollectionObject,Destrier.Test.MockObject
+Destrier.Test,SubCollectionObject,0,0,3,0,0,10,0,0,0,-1,0,1,,Destrier.Test.CollectionObject
+Destrier.Test,Mapping,0,0,4,0,0,11,0,0,0,-1,2,1,Destrier.Test.MappingShallowCollectionItem' Destrier.Test.MappingCollectionItem,Destrier.Test.ModelCacheTests
+Destrier.Test,MappingShallowCollectionItem,0,0,2,0,0,8,0,0,0,-1,0,1,,Destrier.Test.Mapping
+Destrier.Test,MappingCollectionItem,0,0,4,0,0,12,0,0,0,-1,1,1,Destrier.Test.MappingReferencedItem,Destrier.Test.Mapping
+Destrier.Test,MappingReferencedItem,0,0,2,0,0,8,0,0,0,-1,1,1,Destrier.Test.MappingInnerCollectionItem,Destrier.Test.MappingCollectionItem
+Destrier.Test,MappingInnerCollectionItem,0,0,2,0,0,8,0,0,0,-1,0,1,,Destrier.Test.MappingReferencedItem
+Destrier.Test,Book,0,3,7,0,3,33,4,0,1,-1,3,5,Destrier.Test.Person' Destrier.Test.Chapter' Destrier.Test.Page,Destrier.Test.Page' Destrier.Test.LazyPage' Destrier.Test.UtilityTests' Destrier.Test.DatabaseTests' Destrier.Test.QueryTests
+Destrier.Test,Person,0,0,2,0,0,8,0,0,0,-1,0,4,,Destrier.Test.Book' Destrier.Test.LazyBook' Destrier.Test.DatabaseTests' Destrier.Test.QueryTests
+Destrier.Test,Chapter,0,0,5,0,0,14,0,0,0,-1,1,6,Destrier.Test.Page,Destrier.Test.DatabaseTests' Destrier.Test.Book' Destrier.Test.Page' Destrier.Test.LazyPage' Destrier.Test.LazyBook' Destrier.Test.QueryTests
+Destrier.Test,Page,0,0,7,0,0,18,0,0,0,-1,2,4,Destrier.Test.Book' Destrier.Test.Chapter,Destrier.Test.DatabaseTests' Destrier.Test.QueryTests' Destrier.Test.Book' Destrier.Test.Chapter
+Destrier.Test,LazyPage,0,0,7,0,0,18,0,0,0,-1,2,1,Destrier.Test.Book' Destrier.Test.Chapter,Destrier.Test.QueryTests
+Destrier.Test,LazyBook,0,0,7,0,0,18,0,0,0,-1,2,1,Destrier.Test.Person' Destrier.Test.Chapter,Destrier.Test.QueryTests
+Destrier.Test,QueryTests,0,28,0,0,28,269,28,0,0,-1,7,0,Destrier.Test.LibraryContext' Destrier.Test.Book' Destrier.Test.Person' Destrier.Test.Chapter' Destrier.Test.Page' Destrier.Test.LazyPage' Destrier.Test.LazyBook,
+Destrier.Test,PropertyTestClass,0,0,5,0,0,8,0,0,0,-1,0,1,,Destrier.Test.ReflectionTests
+Destrier.Test,ReflectionTests,0,5,0,0,5,65,6,0,0,-1,3,0,Destrier.Test.Ids' Destrier.Test.MockObject' Destrier.Test.PropertyTestClass,
+Destrier.Test,SqlExpressionVisitorTests,0,3,0,0,3,191,3,0,0,-1,3,0,Destrier.Test.SubObjectTypeId' Destrier.Test.MockObject' Destrier.Test.SubObject,
+Destrier.Test,UtilityTests,0,11,0,0,11,145,17,0,0,-1,1,0,Destrier.Test.Book,

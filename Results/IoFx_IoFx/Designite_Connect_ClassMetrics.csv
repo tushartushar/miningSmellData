@@ -1,25 +1,25 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Connect.Http,HttpListenerServer,3,3,0,0,2,35,3,0,1,0.67,3,0,Connect.ConnectionRateMonitor' IoFx.Connections.IListener' IoFx.Http.HttpObservable,
-Connect.Sockets,SocketClientManager,2,2,0,0,2,139,3,0,1,0,4,0,Connect.ConnectArgs' Connect.Sockets.SocketCommandArgs' Connect.Sockets.LenghPrefixed.SocketClientWithAck' Connect.Sockets.RawSocketClientManager,
-Connect.Sockets,RawSocketClientManager,4,4,0,0,2,119,5,0,0,0,3,1,Connect.ConnectArgs' Connect.Sockets.SocketCommandArgs' Connect.Sockets.SocketClient,Connect.Sockets.SocketClientManager
-Connect.Sockets,SocketServer,2,5,0,0,2,65,6,0,1,0.4,6,1,Connect.Sockets.SocketCommandArgs' IoFx.Connections.IListener' Connect.ConnectionRateMonitor' IoFx.Sockets.SocketEvents' IoFx.Connections.IConnection' IoFx.IProducer,Connect.Sockets.socket
-Connect.Sockets,SocketClient,6,6,2,4,2,100,13,0,0,0,0,1,,Connect.Sockets.RawSocketClientManager
-Connect.Sockets,socket,3,1,0,0,1,52,2,0,1,0,4,0,Connect.IClientManager' Connect.Sockets.SocketServer' Connect.Sockets.SocketCommandArgs' Connect.ConnectArgs,
-Connect.Sockets,CommandEnvironment,3,3,2,0,2,31,4,0,0,0,0,0,,
-Connect.Sockets,SocketCommandArgs,0,0,2,0,0,8,0,0,0,-1,0,5,,Connect.Sockets.SocketClientManager' Connect.Sockets.RawSocketClientManager' Connect.Sockets.SocketServer' Connect.Sockets.socket' Connect.Sockets.LenghPrefixed.SocketClientWithAck
+Connect.Http,HttpListenerServer,3,3,0,0,2,35,3,0,1,0.67,2,0,Connect.IServer' Connect.ConnectionRateMonitor,
+Connect.Sockets,SocketClientManager,2,2,0,0,2,139,3,0,1,0,6,1,Connect.Sockets.RawSocketClientManager' Connect.Sockets.SocketClient' Connect.Sockets.SocketCommandArgs' Connect.ConnectArgs' Connect.IClientManager' Connect.Sockets.LenghPrefixed.SocketClientWithAck,Connect.Sockets.socket
+Connect.Sockets,RawSocketClientManager,4,4,0,0,2,119,6,0,0,0.5,0,1,,Connect.Sockets.SocketClientManager
+Connect.Sockets,SocketServer,2,5,0,0,2,65,6,0,1,0.4,2,1,Connect.IServer' Connect.ConnectionRateMonitor,Connect.Sockets.socket
+Connect.Sockets,SocketClient,6,6,2,4,2,100,18,0,0,0,0,1,,Connect.Sockets.SocketClientManager
+Connect.Sockets,socket,3,1,0,0,1,52,2,0,1,0,6,0,Connect.Sockets.SocketClientManager' Connect.Sockets.SocketServer' Connect.Sockets.CommandEnvironment' Connect.Sockets.SocketCommandArgs' Connect.IClientManager' Connect.TestScenario,
+Connect.Sockets,CommandEnvironment,3,3,2,0,2,31,4,0,0,0,0,1,,Connect.Sockets.socket
+Connect.Sockets,SocketCommandArgs,0,0,2,0,0,8,0,0,0,-1,0,3,,Connect.Sockets.LenghPrefixed.SocketClientWithAck' Connect.Sockets.socket' Connect.Sockets.SocketClientManager
 Connect.Sockets,Utility,0,2,0,0,2,21,3,0,0,-1,0,0,,
-Connect,ConnectionType,0,0,0,0,0,7,0,0,0,-1,0,0,,
-Connect,ConnectArgs,0,0,9,0,0,33,0,0,0,-1,0,8,,Connect.Sockets.SocketClientManager' Connect.Sockets.RawSocketClientManager' Connect.Sockets.socket' Connect.ConnectArgsExtension' Connect.TestScenario' Connect.Sockets.LenghPrefixed.SocketClientWithAck' Connect.WCF.Channels.NetTcpDC' Connect.WCF.Channels.WCF
+Connect,ConnectionType,0,0,0,0,0,7,0,0,0,-1,0,1,,Connect.ConnectArgs
+Connect,ConnectArgs,0,0,9,0,0,33,0,0,0,-1,1,5,Connect.ConnectionType,Connect.TestScenario' Connect.Sockets.LenghPrefixed.SocketClientWithAck' Connect.ConnectArgsExtension' Connect.Sockets.SocketClientManager' Connect.Program
 Connect,ConnectArgsExtension,0,2,0,0,2,11,2,0,0,-1,1,0,Connect.ConnectArgs,
-Connect,IClientManager,0,1,0,0,0,4,1,3,0,-1,0,1,,Connect.Sockets.socket
-Connect,IServer,0,1,0,0,0,4,1,3,0,-1,0,0,,
-Connect,Program,0,2,0,0,0,30,3,0,0,-1,1,0,Connect.TestScenario,
-Connect,ConnectionRateMonitor,5,6,1,0,6,53,6,0,0,0,0,6,,Connect.Http.HttpListenerServer' Connect.Sockets.SocketServer' Connect.Sockets.LenghPrefixed.SocketClientWithAck' Connect.WCF.Channels.DuplexChannelManager' Connect.WCF.Channels.NetTcpDC' Connect.WCF.Channels.TcpChannelServer
-Connect,TestScenario,0,3,1,0,3,42,6,4,0,-1,1,1,Connect.ConnectArgs,Connect.Program
+Connect,IClientManager,0,1,0,0,0,4,1,3,0,-1,0,4,,Connect.Sockets.socket' Connect.Sockets.SocketClientManager' Connect.Sockets.LenghPrefixed.SocketClientWithAck' Connect.WCF.Channels.DuplexChannelManager
+Connect,IServer,0,1,0,0,0,4,1,3,0,-1,0,3,,Connect.WCF.Channels.TcpChannelServer' Connect.Http.HttpListenerServer' Connect.Sockets.SocketServer
+Connect,Program,0,2,0,0,0,30,3,0,0,-1,2,0,Connect.ConnectArgs' Connect.TestScenario,
+Connect,ConnectionRateMonitor,5,6,1,0,6,53,6,0,0,0,0,6,,Connect.Sockets.SocketServer' Connect.WCF.Channels.NetTcpDC' Connect.WCF.Channels.TcpChannelServer' Connect.Http.HttpListenerServer' Connect.Sockets.LenghPrefixed.SocketClientWithAck' Connect.WCF.Channels.DuplexChannelManager
+Connect,TestScenario,0,3,1,0,3,42,6,4,0,-1,1,4,Connect.ConnectArgs,Connect.Sockets.socket' Connect.WCF.Channels.NetTcpDC' Connect.WCF.Channels.WCF' Connect.Program
 Connect,none,0,1,0,0,1,6,1,0,1,-1,0,0,,
-Connect.Sockets.LenghPrefixed,SocketClientWithAck,5,7,0,0,2,102,11,0,1,0,7,1,Connect.ConnectArgs' Connect.ConnectionRateMonitor' Connect.Sockets.SocketCommandArgs' IoFx.Connections.IDisposableConnection' IoFx.Connections.IConnection' IoFx.Sockets.SocketEvents' IoFx.Connections.Context,Connect.Sockets.SocketClientManager
-Connect.WCF.Channels,DuplexChannelManager,7,3,1,0,3,99,4,0,1,0,1,2,Connect.ConnectionRateMonitor,Connect.WCF.Channels.NetTcpDC' Connect.WCF.Channels.WCF
-Connect.WCF.Channels,NetTcpDC,0,4,0,0,3,59,5,0,1,-1,5,0,Connect.WCF.Channels.SimpleObject' Connect.ConnectArgs' Connect.WCF.Channels.DuplexChannelManager' Connect.ConnectionRateMonitor' IoFx.IProducer,
+Connect.Sockets.LenghPrefixed,SocketClientWithAck,5,7,0,0,2,102,11,0,1,0,4,1,Connect.Sockets.SocketCommandArgs' Connect.ConnectArgs' Connect.IClientManager' Connect.ConnectionRateMonitor,Connect.Sockets.SocketClientManager
+Connect.WCF.Channels,DuplexChannelManager,7,3,1,0,3,99,4,0,1,0,2,2,Connect.IClientManager' Connect.ConnectionRateMonitor,Connect.WCF.Channels.NetTcpDC' Connect.WCF.Channels.WCF
+Connect.WCF.Channels,NetTcpDC,0,4,0,0,3,59,5,0,1,-1,4,0,Connect.ConnectionRateMonitor' Connect.TestScenario' Connect.WCF.Channels.DuplexChannelManager' Connect.WCF.Channels.SimpleObject,
 Connect.WCF.Channels,SimpleObject,0,0,2,0,0,8,0,0,0,-1,0,1,,Connect.WCF.Channels.NetTcpDC
-Connect.WCF.Channels,TcpChannelServer,1,2,0,0,2,28,2,0,1,0,2,1,Connect.ConnectionRateMonitor' IoFx.IProducer,Connect.WCF.Channels.WCF
-Connect.WCF.Channels,WCF,2,1,0,0,1,21,2,0,1,0,3,0,Connect.WCF.Channels.TcpChannelServer' Connect.WCF.Channels.DuplexChannelManager' Connect.ConnectArgs,
+Connect.WCF.Channels,TcpChannelServer,1,2,0,0,2,28,2,0,1,0,2,1,Connect.IServer' Connect.ConnectionRateMonitor,Connect.WCF.Channels.WCF
+Connect.WCF.Channels,WCF,2,1,0,0,1,21,2,0,1,0,3,0,Connect.TestScenario' Connect.WCF.Channels.DuplexChannelManager' Connect.WCF.Channels.TcpChannelServer,

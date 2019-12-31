@@ -1,20 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WebApiBook.Security.AuthN,BasicAuthenticationDelegatingHandler,2,2,0,0,1,37,4,0,0,0,0,0,,
-WebApiBook.Security.AuthN,BasicAuthenticationFilter,2,3,1,0,3,42,5,0,0,0,0,0,,
-WebApiBook.Security.AuthN,BasicAuthenticationOptions,0,1,2,0,1,11,1,0,0,-1,0,4,,WebApiBook.Security.AuthN.BasicAuthnMiddleware' WebApiBook.Security.AuthN.BasicAuthenticationHandler' WebApiBook.Security.AuthN.BasicAuthnMiddlewareExtensions' WebApiBook.Security.Tests.AuthN.BasicAuthenticationOwinMiddlewareTests
+WebApiBook.Security.AuthN,BasicAuthenticationDelegatingHandler,2,2,0,0,1,37,5,0,0,0,0,0,,
+WebApiBook.Security.AuthN,BasicAuthenticationFilter,2,3,1,0,3,42,5,0,0,0,1,0,WebApiBook.Security.Common.ActionResultDelegate,
+WebApiBook.Security.AuthN,BasicAuthenticationOptions,0,1,2,0,1,11,1,0,0,-1,0,3,,WebApiBook.Security.AuthN.BasicAuthnMiddleware' WebApiBook.Security.AuthN.BasicAuthenticationHandler' WebApiBook.Security.AuthN.BasicAuthnMiddlewareExtensions
 WebApiBook.Security.AuthN,BasicAuthnMiddleware,0,2,0,0,1,10,2,0,0,-1,2,1,WebApiBook.Security.AuthN.BasicAuthenticationOptions' WebApiBook.Security.AuthN.BasicAuthenticationHandler,WebApiBook.Security.AuthN.BasicAuthnMiddlewareExtensions
 WebApiBook.Security.AuthN,BasicAuthenticationHandler,1,3,0,0,1,30,6,0,0,0.67,1,1,WebApiBook.Security.AuthN.BasicAuthenticationOptions,WebApiBook.Security.AuthN.BasicAuthnMiddleware
-WebApiBook.Security.AuthN,BasicAuthnMiddlewareExtensions,0,1,0,0,1,7,1,0,0,-1,2,0,WebApiBook.Security.AuthN.BasicAuthnMiddleware' WebApiBook.Security.AuthN.BasicAuthenticationOptions,
+WebApiBook.Security.AuthN,BasicAuthnMiddlewareExtensions,0,1,0,0,1,7,1,0,0,-1,2,0,WebApiBook.Security.AuthN.BasicAuthenticationOptions' WebApiBook.Security.AuthN.BasicAuthnMiddleware,
 WebApiBook.Security.AuthN,JwtAuthnMiddleware,0,2,0,0,1,11,2,0,0,-1,2,1,WebApiBook.Security.AuthN.JwtAuthenticationOptions' WebApiBook.Security.AuthN.JwtAuthenticationHandler,WebApiBook.Security.AuthN.JwtAuthnMiddlewareExtensions
-WebApiBook.Security.AuthN,JwtAuthenticationOptions,0,5,5,0,4,62,5,0,0,-1,0,3,,WebApiBook.Security.AuthN.JwtAuthnMiddleware' WebApiBook.Security.AuthN.JwtAuthnMiddlewareExtensions' WebApiBook.Security.Tests.AuthN.JwtAuthenticationOwinMiddlewareTests
+WebApiBook.Security.AuthN,JwtAuthenticationOptions,0,5,5,0,4,62,5,0,0,-1,0,3,,WebApiBook.Security.AuthN.JwtAuthnMiddleware' WebApiBook.Security.AuthN.JwtAuthnMiddlewareExtensions' WebApiBook.Security.AuthN.JwtAuthenticationHandler
 WebApiBook.Security.AuthN,JwtAuthnMiddlewareExtensions,0,1,0,0,1,7,1,0,0,-1,2,0,WebApiBook.Security.AuthN.JwtAuthnMiddleware' WebApiBook.Security.AuthN.JwtAuthenticationOptions,
-WebApiBook.Security.AuthN,JwtAuthenticationHandler,0,2,0,0,0,21,4,0,0,-1,0,1,,WebApiBook.Security.AuthN.JwtAuthnMiddleware
-WebApiBook.Security.Common,ActionResultDelegate,2,2,0,0,2,16,2,0,0,0,0,0,,
-WebApiBook.Security.Common,CertThumbprintSet,0,1,0,0,1,6,1,0,0,-1,0,2,,WebApiBook.Security.Common.AtLeastOneThumbprintInCertChain' WebApiBook.Security.Facts.CertPinningFacts
-WebApiBook.Security.Common,CertValidateInfo,0,3,4,0,3,27,3,0,0,-1,0,2,,WebApiBook.Security.Common.AtLeastOneThumbprintInCertChain' WebApiBook.Security.Facts.CertPinningFacts
-WebApiBook.Security.Common,AtLeastOneThumbprintInCertChain,1,2,0,0,2,15,2,0,0,0,2,1,WebApiBook.Security.Common.CertThumbprintSet' WebApiBook.Security.Common.CertValidateInfo,WebApiBook.Security.Facts.CertPinningFacts
+WebApiBook.Security.AuthN,JwtAuthenticationHandler,0,2,0,0,0,21,4,0,0,-1,1,1,WebApiBook.Security.AuthN.JwtAuthenticationOptions,WebApiBook.Security.AuthN.JwtAuthnMiddleware
+WebApiBook.Security.Common,ActionResultDelegate,2,2,0,0,2,16,2,0,0,0,0,1,,WebApiBook.Security.AuthN.BasicAuthenticationFilter
+WebApiBook.Security.Common,CertThumbprintSet,0,1,0,0,1,6,1,0,0,-1,0,1,,WebApiBook.Security.Common.AtLeastOneThumbprintInCertChain
+WebApiBook.Security.Common,CertValidateInfo,0,3,4,0,3,27,3,0,0,-1,0,2,,WebApiBook.Security.Common.AtLeastOneThumbprintInCertChain' WebApiBook.Security.Common.WebRequestHandlerExtensions
+WebApiBook.Security.Common,AtLeastOneThumbprintInCertChain,1,2,0,0,2,15,2,0,0,0,2,0,WebApiBook.Security.Common.CertThumbprintSet' WebApiBook.Security.Common.CertValidateInfo,
 WebApiBook.Security.Common,SimpleIssuerNameRegistry,0,1,0,0,1,8,1,0,0,-1,0,0,,
 WebApiBook.Security.Common,BasicAuthenticationExtensions,0,3,0,0,3,37,4,0,0,-1,0,0,,
-WebApiBook.Security.Common,IssuerMapper,0,2,0,0,2,25,2,0,0,-1,0,1,,WebApiBook.Security.Facts.ClientTlsAuthnFacts
-WebApiBook.Security.Common,WebRequestHandlerExtensions,0,1,0,0,1,13,1,0,0,-1,0,0,,
+WebApiBook.Security.Common,IssuerMapper,0,2,0,0,2,25,2,0,0,-1,0,0,,
+WebApiBook.Security.Common,WebRequestHandlerExtensions,0,1,0,0,1,13,1,0,0,-1,1,0,WebApiBook.Security.Common.CertValidateInfo,
 WebApiBook.Security.Common,X509CertificateMessageHandler,3,4,0,0,1,72,8,0,0,0,0,0,,

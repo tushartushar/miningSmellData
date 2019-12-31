@@ -1,9 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Flickr.FlickrClient,IFlickrService,0,1,0,0,0,3,1,2,0,-1,2,0,System.String' System.Int32,
-Flickr.FlickrClient,FlickrService,1,1,0,0,1,15,1,0,1,0,5,0,System.String' Flickr.FlickrClient.PhotoCollection' Flickr.FlickrClient.PhotoSearchResponse' System.Delegate' System.Int32,
-Flickr.FlickrClient,PhotoSearchResponse,1,0,0,1,0,5,0,0,0,-1,0,2,,Flickr.FlickrClient.FlickrService' Flickr.FlickrPhotoService
-Flickr.FlickrClient,PhotoCollection,1,0,0,1,0,5,0,0,0,-1,0,2,,Flickr.FlickrClient.FlickrService' Flickr.FlickrPhotoService
-Flickr.FlickrClient,PhotoResult,10,0,0,10,0,13,0,0,0,-1,1,1,System.String,Flickr.FlickrPhotoService
-Flickr,IPhotoService,0,1,0,0,0,3,1,1,0,-1,2,0,System.String' System.Int32,
-Flickr,FlickrPhotoService,3,3,0,0,2,41,4,0,1,0,6,0,System.String' System.Int32' Flickr.FlickrClient.PhotoCollection' Flickr.FlickrClient.PhotoSearchResponse' Flickr.FlickrClient.PhotoResult' Flickr.Photo,
-Flickr,Photo,10,1,0,10,1,25,1,0,0,0,2,1,System.String' System.Int32,Flickr.FlickrPhotoService
+Flickr.FlickrClient,IFlickrService,0,1,0,0,0,3,1,2,0,-1,0,1,,Flickr.FlickrClient.FlickrService
+Flickr.FlickrClient,FlickrService,1,1,0,0,1,15,1,0,1,0,2,0,Flickr.FlickrClient.IFlickrService' Flickr.FlickrClient.PhotoSearchResponse,
+Flickr.FlickrClient,PhotoSearchResponse,1,0,0,1,0,5,0,0,0,-1,1,2,Flickr.FlickrClient.PhotoCollection,Flickr.FlickrClient.FlickrService' Flickr.FlickrPhotoService
+Flickr.FlickrClient,PhotoCollection,1,0,0,1,0,5,0,0,0,-1,1,1,Flickr.FlickrClient.PhotoResult,Flickr.FlickrClient.PhotoSearchResponse
+Flickr.FlickrClient,PhotoResult,10,0,0,10,0,13,0,0,0,-1,0,2,,Flickr.FlickrClient.PhotoCollection' Flickr.FlickrPhotoService
+Flickr,IPhotoService,0,1,0,0,0,3,1,1,0,-1,1,1,Flickr.Photo,Flickr.FlickrPhotoService
+Flickr,FlickrPhotoService,3,3,0,0,2,41,4,0,1,0,4,0,Flickr.FlickrClient.PhotoSearchResponse' Flickr.FlickrClient.PhotoResult' Flickr.IPhotoService' Flickr.Photo,
+Flickr,Photo,10,1,0,10,1,25,1,0,0,0,0,2,,Flickr.IPhotoService' Flickr.FlickrPhotoService

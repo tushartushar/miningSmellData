@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Yushko.Commands,Kstati,0,1,2,0,1,45,3,0,1,-1,2,0,HelloBotModuleHelper.HtmlReaderManager' HelloBotCommunication.AnswerBehaviourType,
-Yushko.Commands,Moon,0,1,2,0,1,40,3,0,1,-1,2,0,HelloBotModuleHelper.HtmlReaderManager' HelloBotCommunication.AnswerBehaviourType,
-Yushko.Commands,Horoscope,2,1,2,0,1,119,9,0,1,0,2,0,HelloBotModuleHelper.HtmlReaderManager' HelloBotCommunication.AnswerBehaviourType,
-Yushko.Commands,SlugPost,0,1,9,0,1,12,1,0,0,-1,0,2,,Yushko.Commands.Slug' Yushko.Commands.Sorry
+Yushko.Commands,Kstati,0,1,2,0,1,47,3,0,1,-1,0,1,,Yushko.HandlerRegister
+Yushko.Commands,Moon,0,1,2,0,1,41,3,0,1,-1,0,1,,Yushko.HandlerRegister
+Yushko.Commands,Horoscope,2,1,2,0,1,128,12,0,1,0,0,0,,
+Yushko.Commands,SlugPost,0,1,9,0,1,12,1,0,0,-1,0,1,,Yushko.Commands.Slug
 Yushko.Commands,Slug,1,0,2,1,0,5,0,0,0,-1,1,1,Yushko.Commands.SlugPost,Yushko.Commands.Sorry
-Yushko.Commands,Sorry,1,2,2,0,2,75,2,0,1,0,3,0,Yushko.Commands.Slug' Yushko.Commands.SlugPost' HelloBotCommunication.AnswerBehaviourType,
-Yushko.Commands,ExchangeRate,9,9,5,3,1,256,37,0,1,0.22,2,0,Yushko.ExRates.ExRatesSoapClient' HelloBotCommunication.AnswerBehaviourType,
-Yushko,HandlerRegister,0,1,0,0,1,14,1,0,1,-1,0,0,,
-Yushko.ExRates,ExRatesSoap,0,36,0,0,0,130,36,2,0,-1,0,1,,Yushko.ExRates.ExRatesSoapClient
-Yushko.ExRates,ExRatesSoapChannel,0,0,0,0,0,3,0,0,1,-1,0,0,,
+Yushko.Commands,Sorry,1,2,2,0,2,79,2,0,1,0,1,1,Yushko.Commands.Slug,Yushko.HandlerRegister
+Yushko.Commands,ExchangeRate,9,9,5,3,1,279,42,0,1,0.22,1,1,Yushko.ExRates.ExRatesSoapClient,Yushko.HandlerRegister
+Yushko,HandlerRegister,0,1,0,0,1,14,1,0,1,-1,4,0,Yushko.Commands.Kstati' Yushko.Commands.Moon' Yushko.Commands.Sorry' Yushko.Commands.ExchangeRate,
+Yushko.ExRates,ExRatesSoap,0,36,0,0,0,130,36,2,0,-1,0,2,,Yushko.ExRates.ExRatesSoapChannel' Yushko.ExRates.ExRatesSoapClient
+Yushko.ExRates,ExRatesSoapChannel,0,0,0,0,0,3,0,0,1,-1,1,0,Yushko.ExRates.ExRatesSoap,
 Yushko.ExRates,ExRatesSoapClient,0,41,0,0,41,167,41,0,1,-1,1,1,Yushko.ExRates.ExRatesSoap,Yushko.Commands.ExchangeRate

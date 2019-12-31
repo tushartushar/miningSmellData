@@ -1,31 +1,35 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Cosmos.Core_Asm,ArrayImpl,0,2,0,0,2,14,2,0,0,-1,0,0,,
-Cosmos.Core_Asm,ArrayGetLengthAsm,0,1,0,0,1,10,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,ArrayInternalCopyAsm,5,1,0,0,1,74,1,0,0,0,0,0,,
-Cosmos.Core_Asm,BufferImpl,0,1,0,0,1,9,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,BufferBlockCopyAsm,5,1,0,0,1,33,1,0,0,0,0,0,,
-Cosmos.Core_Asm,CPUImpl,0,9,0,0,9,43,9,0,0,-1,1,1,Cosmos.Core.CPU,Cosmos.Core_Asm.ProcessorInformationImpl
-Cosmos.Core_Asm,CPUDisableINTsAsm,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,CPUEnableINTsAsm,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,CPUGetAmountOfRAMAsm,0,1,0,0,1,12,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,CPUGetEndOfKernelAsm,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,CPUHaltAsm,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,CPUInitFloatAsm,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,CPUInitSSEAsm,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,CPUUpdateIDTAsm,0,3,0,0,1,104,11,0,0,-1,1,0,Cosmos.Core.INTs,
-Cosmos.Core_Asm,CPUZeroFillAsm,0,1,0,0,1,20,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,DelegateImpl,0,4,0,0,4,23,4,0,0,-1,0,0,,
-Cosmos.Core_Asm,DelegateCtorAsm,0,1,0,0,1,35,2,0,0,-1,0,0,,
-Cosmos.Core_Asm,DelegateGetMulticastInvokeAsm,0,1,0,0,1,11,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,DelegateInvokeAsm,0,1,0,0,1,88,2,0,0,-1,0,0,,
-Cosmos.Core_Asm,IOPortImpl,0,6,0,0,6,104,6,0,0,-1,0,0,,
-Cosmos.Core_Asm,Write8Assembler,0,1,0,0,1,12,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,Write16Assembler,0,1,0,0,1,9,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,Write32Assembler,0,1,0,0,1,9,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,Read8Assembler,0,1,0,0,1,12,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,Read16Assembler,0,1,0,0,1,10,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,Read32Assembler,0,1,0,0,1,9,1,0,0,-1,0,0,,
-Cosmos.Core_Asm,ProcessorInformationImpl,4,7,0,0,2,176,8,0,0,0.57,1,0,Cosmos.Core_Asm.CPUImpl,
+Cosmos.Core_Asm,ArrayImpl,0,2,0,0,2,14,2,0,0,-1,2,0,Cosmos.Core_Asm.ArrayGetLengthAsm' Cosmos.Core_Asm.ArrayInternalCopyAsm,
+Cosmos.Core_Asm,ArrayGetLengthAsm,0,1,0,0,1,10,1,0,0,-1,0,1,,Cosmos.Core_Asm.ArrayImpl
+Cosmos.Core_Asm,ArrayInternalCopyAsm,5,1,0,0,1,74,1,0,0,0,0,1,,Cosmos.Core_Asm.ArrayImpl
+Cosmos.Core_Asm,BufferImpl,0,1,0,0,1,9,1,0,0,-1,1,0,Cosmos.Core_Asm.BufferBlockCopyAsm,
+Cosmos.Core_Asm,BufferBlockCopyAsm,5,1,0,0,1,33,1,0,0,0,0,1,,Cosmos.Core_Asm.BufferImpl
+Cosmos.Core_Asm,CPUImpl,0,9,0,0,9,23,9,0,0,-1,9,1,Cosmos.Core_Asm.CPUDisableINTsAsm' Cosmos.Core_Asm.CPUEnableINTsAsm' Cosmos.Core_Asm.CPUGetAmountOfRAMAsm' Cosmos.Core_Asm.CPUGetEndOfKernelAsm' Cosmos.Core_Asm.CPUHaltAsm' Cosmos.Core_Asm.CPUInitFloatAsm' Cosmos.Core_Asm.CPUInitSSEAsm' Cosmos.Core_Asm.CPUUpdateIDTAsm' Cosmos.Core_Asm.CPUZeroFillAsm,Cosmos.Core_Asm.ProcessorInformationImpl
+Cosmos.Core_Asm,CPUDisableINTsAsm,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUEnableINTsAsm,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUGetAmountOfRAMAsm,0,1,0,0,1,12,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUGetEndOfKernelAsm,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUHaltAsm,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUInitFloatAsm,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUInitSSEAsm,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUUpdateIDTAsm,0,3,0,0,1,104,11,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,CPUZeroFillAsm,0,1,0,0,1,20,1,0,0,-1,0,1,,Cosmos.Core_Asm.CPUImpl
+Cosmos.Core_Asm,DelegateImpl,0,4,0,0,4,23,4,0,0,-1,3,0,Cosmos.Core_Asm.DelegateCtorAsm' Cosmos.Core_Asm.DelegateGetMulticastInvokeAsm' Cosmos.Core_Asm.DelegateInvokeAsm,
+Cosmos.Core_Asm,DelegateCtorAsm,0,1,0,0,1,35,2,0,0,-1,0,1,,Cosmos.Core_Asm.DelegateImpl
+Cosmos.Core_Asm,DelegateGetMulticastInvokeAsm,0,1,0,0,1,11,1,0,0,-1,0,1,,Cosmos.Core_Asm.DelegateImpl
+Cosmos.Core_Asm,DelegateInvokeAsm,0,1,0,0,1,88,2,0,0,-1,0,1,,Cosmos.Core_Asm.DelegateImpl
+Cosmos.Core_Asm,IOPortImpl,0,6,0,0,6,89,6,0,0,-1,6,0,Cosmos.Core_Asm.Write8Assembler' Cosmos.Core_Asm.Write16Assembler' Cosmos.Core_Asm.Write32Assembler' Cosmos.Core_Asm.Read8Assembler' Cosmos.Core_Asm.Read16Assembler' Cosmos.Core_Asm.Read32Assembler,
+Cosmos.Core_Asm,Write8Assembler,0,1,0,0,1,12,1,0,0,-1,0,1,,Cosmos.Core_Asm.IOPortImpl
+Cosmos.Core_Asm,Write16Assembler,0,1,0,0,1,9,1,0,0,-1,0,1,,Cosmos.Core_Asm.IOPortImpl
+Cosmos.Core_Asm,Write32Assembler,0,1,0,0,1,9,1,0,0,-1,0,1,,Cosmos.Core_Asm.IOPortImpl
+Cosmos.Core_Asm,Read8Assembler,0,1,0,0,1,12,1,0,0,-1,0,1,,Cosmos.Core_Asm.IOPortImpl
+Cosmos.Core_Asm,Read16Assembler,0,1,0,0,1,10,1,0,0,-1,0,1,,Cosmos.Core_Asm.IOPortImpl
+Cosmos.Core_Asm,Read32Assembler,0,1,0,0,1,9,1,0,0,-1,0,1,,Cosmos.Core_Asm.IOPortImpl
+Cosmos.Core_Asm,ProcessorInformationImpl,4,7,0,0,2,180,8,0,0,0.57,1,0,Cosmos.Core_Asm.CPUImpl,
 Cosmos.Core_Asm,RuntimeHelpersImpl,0,1,0,0,1,32,1,0,0,-1,0,0,,
-Cosmos.Core_Plugs.MemoryOperations,MemoryOperationsImpl,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Cosmos.Core_Asm.MemoryOperations,MemoryOperationsCopy128BlocksAsm,3,1,0,0,1,42,1,0,0,0,0,0,,
+Cosmos.Core_Asm.MemoryOperations,MemoryOperationsCopy128BytesAsm,2,1,0,0,1,36,1,0,0,0,0,0,,
+Cosmos.Core_Asm.MemoryOperations,MemoryOperationsCopy16BytesAsm,2,1,0,0,1,17,1,0,0,0,0,0,,
+Cosmos.Core_Asm.MemoryOperations,MemoryOperationsCopy32BytesAsm,2,1,0,0,1,21,1,0,0,0,0,0,,
+Cosmos.Core_Asm.MemoryOperations,MemoryOperationsCopy64BytesAsm,2,1,0,0,1,28,1,0,0,0,0,0,,
 Cosmos.Core_Asm.MemoryOperations,MemoryOperationsFill16BlocksAsm,3,1,0,0,1,42,1,0,0,0,0,0,,

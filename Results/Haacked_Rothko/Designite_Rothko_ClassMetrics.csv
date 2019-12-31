@@ -1,70 +1,70 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 System,AssemblyVersionInformation,1,0,0,0,0,3,0,0,0,-1,0,0,,
-Rothko,AssemblyFacade,0,3,0,0,3,17,3,0,1,-1,0,0,,
-Rothko,DependencyRegistrationHelper,1,2,1,0,0,31,2,0,0,1,1,0,Rothko.OperatingSystemFacade,
-Rothko,DependencyInfo,0,1,2,0,1,10,1,0,0,-1,0,0,,
-Rothko,DirectoryInfo,1,22,3,0,19,156,25,0,1,0.14,1,2,Rothko.FileInfo,Rothko.FileSystemInfo' Rothko.DirectoryFacade
-Rothko,Environment,0,15,19,0,15,143,15,0,1,-1,0,1,,Tests.NullGuardTest
-Rothko,FileInfo,1,22,4,0,20,143,22,0,1,0.14,0,3,,Rothko.DirectoryInfo' Rothko.FileSystemInfo' Rothko.FileFacade
-Rothko,FileSystemInfo,1,5,11,0,3,122,7,2,1,0.4,4,0,Rothko.DirectoryInfo' Rothko.FileInfo' Rothko.IDirectoryInfo' Rothko.IFileInfo,
-Rothko,FileSystemWatcher,1,15,7,0,7,309,26,0,1,0.4,0,0,,
-Rothko,BrowseDirectoryResult,3,3,2,1,3,43,5,0,0,0.67,0,1,,Rothko.DialogFacade
-Rothko,DialogFacade,0,8,0,0,8,101,8,0,1,-1,3,0,Rothko.SaveDialogResult' Rothko.OpenDialogResult' Rothko.BrowseDirectoryResult,
-Rothko,DirectoryFacade,0,15,0,0,15,71,16,0,1,-1,2,0,Rothko.DirectoryInfo' Rothko.IDirectoryInfo,
+Rothko,AssemblyFacade,0,3,0,0,3,17,3,0,1,-1,1,1,Rothko.IAssemblyFacade,Rothko.OperatingSystemFacade
+Rothko,DependencyRegistrationHelper,1,2,1,0,0,31,2,0,0,1,3,0,Rothko.DependencyInfo' Rothko.IOperatingSystem' Rothko.OperatingSystemFacade,
+Rothko,DependencyInfo,0,1,2,0,1,10,1,0,0,-1,0,1,,Rothko.DependencyRegistrationHelper
+Rothko,DirectoryInfo,1,22,3,0,19,156,25,0,1,0.18,5,3,Rothko.FileInfo' Rothko.FileSystemInfo' Rothko.IDirectoryInfo' Rothko.IFileInfo' Rothko.IFileSystemInfo,Rothko.DirectoryFacade' Rothko.FileInfo' Rothko.FileSystemInfo
+Rothko,Environment,0,15,19,0,15,143,15,0,1,-1,3,1,Rothko.IEnvironment' Rothko.IOperatingSystemInfo' Rothko.OperatingSystemInfo,Rothko.OperatingSystemFacade
+Rothko,FileInfo,1,22,4,0,20,143,22,0,1,0.18,4,3,Rothko.DirectoryInfo' Rothko.FileSystemInfo' Rothko.IDirectoryInfo' Rothko.IFileInfo,Rothko.FileSystemInfo' Rothko.FileFacade' Rothko.DirectoryInfo
+Rothko,FileSystemInfo,1,5,11,0,3,122,7,2,1,0.6,3,2,Rothko.DirectoryInfo' Rothko.FileInfo' Rothko.IFileSystemInfo,Rothko.FileInfo' Rothko.DirectoryInfo
+Rothko,FileSystemWatcher,1,15,7,0,7,309,26,0,1,0.4,1,0,Rothko.IFileSystemWatcher,
+Rothko,BrowseDirectoryResult,3,3,2,1,3,43,5,0,0,0.67,0,2,,Rothko.IDialogFacade' Rothko.DialogFacade
+Rothko,DialogFacade,0,8,0,0,8,101,9,0,1,-1,4,1,Rothko.BrowseDirectoryResult' Rothko.IDialogFacade' Rothko.OpenDialogResult' Rothko.SaveDialogResult,Rothko.OperatingSystemFacade
+Rothko,DirectoryFacade,0,15,0,0,15,71,16,0,1,-1,3,1,Rothko.DirectoryInfo' Rothko.IDirectoryFacade' Rothko.IDirectoryInfo,Rothko.OperatingSystemFacade
 Rothko,EnumerableExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
 Rothko,ExceptionExtensions,0,2,0,0,2,39,4,0,0,-1,0,0,,
-Rothko,FileFacade,0,12,0,0,12,51,12,0,1,-1,2,0,Rothko.FileInfo' Rothko.IFileInfo,
-Rothko,IAssemblyFacade,0,3,0,0,0,6,3,1,0,-1,0,0,,
-Rothko,IBrowser,0,2,0,0,0,13,2,1,0,-1,0,0,,
-Rothko,IDialogFacade,0,8,0,0,0,156,8,1,0,-1,0,1,,Rothko.Extensions.DialogFacadeExtensions
-Rothko,IDirectoryFacade,0,15,0,0,0,448,15,1,0,-1,0,0,,
-Rothko,IDirectoryInfo,0,18,3,0,0,450,18,1,1,-1,0,2,,Rothko.FileSystemInfo' Rothko.DirectoryFacade
-Rothko,IEnvironment,0,14,19,0,0,40,14,1,0,-1,0,1,,Rothko.Infrastructure.Browser
-Rothko,IFileSystemWatcher,0,1,7,0,0,116,1,1,0,-1,0,0,,
-Rothko,IFileFacade,0,12,0,0,0,404,12,1,0,-1,0,0,,
-Rothko,IOperatingSystem,0,0,11,0,0,14,0,1,0,-1,0,0,,
-Rothko,IFileInfo,0,19,4,0,0,520,19,1,1,-1,0,2,,Rothko.FileSystemInfo' Rothko.FileFacade
-Rothko,IFileSystemInfo,0,2,11,0,0,186,2,3,0,-1,0,0,,
-Rothko,IOperatingSystemInfo,0,0,4,0,0,24,0,1,0,-1,0,1,,Tests.NullGuardTest
-Rothko,IRegistry,0,8,6,0,0,18,8,1,0,-1,0,0,,
-Rothko,IRegistryKey,0,28,5,0,0,39,28,1,0,-1,0,3,,Rothko.RegistryExtensions' Rothko.Registry' Rothko.RegistryKey
-Rothko,OpenDialogResult,3,3,2,1,3,39,4,0,0,0.67,0,1,,Rothko.DialogFacade
-Rothko,RegistryExtensions,0,1,0,0,1,13,2,0,0,-1,1,0,Rothko.IRegistryKey,
-Rothko,SaveDialogResult,3,3,2,1,3,39,4,0,0,0.67,0,1,,Rothko.DialogFacade
-Rothko,HttpListenerContextWrapper,1,7,3,0,6,42,8,0,1,0.29,1,1,Rothko.IHttpListenerResponse,Rothko.HttpListenerWrapper
-Rothko,HttpListenerRequestWrapper,1,5,29,0,5,53,5,0,1,0,0,0,,
-Rothko,HttpListenerResponseWrapper,1,13,12,0,12,86,14,0,1,0,0,0,,
-Rothko,HttpListenerWrapper,1,9,11,0,9,64,9,0,1,0,1,1,Rothko.HttpListenerContextWrapper,Rothko.NetFactory
-Rothko,IHttpListener,0,8,11,0,0,267,8,1,0,-1,0,0,,
-Rothko,IHttpListenerContext,0,4,3,0,0,140,4,1,0,-1,0,0,,
-Rothko,IHttpListenerRequest,0,4,29,0,0,287,4,1,0,-1,0,0,,
-Rothko,IHttpListenerResponse,0,10,12,0,0,268,10,1,0,-1,0,1,,Rothko.HttpListenerContextWrapper
-Rothko,INetFactory,0,1,0,0,0,4,1,1,0,-1,0,0,,
-Rothko,NetFactory,0,1,0,0,1,7,1,0,1,-1,1,0,Rothko.HttpListenerWrapper,
-Rothko,OperatingSystemInfo,1,4,4,0,4,73,4,0,1,0,0,0,,
-Rothko,OperatingSystemFacade,0,1,11,0,1,28,1,0,1,-1,0,1,,Rothko.DependencyRegistrationHelper
-Rothko,IProcess,0,8,8,0,0,24,8,2,0,-1,0,1,,Rothko.ProcessLocator
-Rothko,IProcessLocator,0,3,0,0,0,22,3,1,0,-1,0,0,,
-Rothko,IProcessStarter,0,2,0,0,0,16,2,1,0,-1,0,1,,Rothko.Infrastructure.Browser
-Rothko,NullProcess,0,11,8,0,11,72,11,0,1,-1,0,0,,
-Rothko,ProcessLocator,1,3,1,0,3,41,4,0,1,1,2,0,Rothko.IProcess' Rothko.ProcessWrapper,
-Rothko,ProcessStarter,0,2,0,0,2,23,3,0,1,-1,1,0,Rothko.ProcessWrapper,
-Rothko,ProcessWrapper,2,22,8,0,12,233,29,0,1,0.23,5,2,Rothko.SafeDisposable' Rothko.NativeMethods' Rothko.ShowWindowOption' Rothko.PROCESS_BASIC_INFORMATION' Rothko.UnsafeNativeMethods,Rothko.ProcessLocator' Rothko.ProcessStarter
-Rothko,SafeDisposable,2,2,0,0,2,19,3,0,0,0,0,1,,Rothko.ProcessWrapper
-Rothko,Registry,0,8,6,0,8,59,8,0,1,-1,2,0,Rothko.RegistryKey' Rothko.IRegistryKey,
-Rothko,RegistryKey,1,31,5,0,29,156,31,0,1,0,1,1,Rothko.IRegistryKey,Rothko.Registry
-Rothko,IMemoryMappedFile,0,3,0,0,0,6,3,1,0,-1,0,0,,
-Rothko,ISemaphore,0,2,0,0,0,5,2,1,0,-1,0,0,,
-Rothko,ISystemSemaphore,0,0,1,0,0,4,0,1,1,-1,0,0,,
-Rothko,MemoryMappedFileWrapper,1,5,0,0,5,26,6,0,1,0,0,1,,Rothko.MemoryMappedFileFactory
-Rothko,IMemoryMappedFileFactory,0,12,0,0,0,15,12,1,0,-1,0,0,,
-Rothko,MemoryMappedFileFactory,0,12,0,0,12,81,12,0,1,-1,1,0,Rothko.MemoryMappedFileWrapper,
-Rothko,SystemSemaphore,1,4,1,0,4,27,5,0,2,0,0,0,,
+Rothko,FileFacade,0,13,0,0,13,55,13,0,1,-1,3,1,Rothko.FileInfo' Rothko.IFileFacade' Rothko.IFileInfo,Rothko.OperatingSystemFacade
+Rothko,IAssemblyFacade,0,3,0,0,0,6,3,1,0,-1,0,3,,Rothko.OperatingSystemFacade' Rothko.AssemblyFacade' Rothko.IOperatingSystem
+Rothko,IBrowser,0,2,0,0,0,13,2,1,0,-1,0,3,,Rothko.OperatingSystemFacade' Rothko.IOperatingSystem' Rothko.Infrastructure.Browser
+Rothko,IDialogFacade,0,8,0,0,0,156,8,1,0,-1,3,4,Rothko.BrowseDirectoryResult' Rothko.OpenDialogResult' Rothko.SaveDialogResult,Rothko.IOperatingSystem' Rothko.OperatingSystemFacade' Rothko.DialogFacade' Rothko.Extensions.DialogFacadeExtensions
+Rothko,IDirectoryFacade,0,15,0,0,0,448,15,1,0,-1,1,3,Rothko.IDirectoryInfo,Rothko.OperatingSystemFacade' Rothko.IOperatingSystem' Rothko.DirectoryFacade
+Rothko,IDirectoryInfo,0,18,3,0,0,450,18,1,1,-1,2,5,Rothko.IFileInfo' Rothko.IFileSystemInfo,Rothko.IFileInfo' Rothko.IDirectoryFacade' Rothko.FileInfo' Rothko.DirectoryFacade' Rothko.DirectoryInfo
+Rothko,IEnvironment,0,14,19,0,0,40,14,1,0,-1,1,4,Rothko.IOperatingSystemInfo,Rothko.IOperatingSystem' Rothko.Environment' Rothko.OperatingSystemFacade' Rothko.Infrastructure.Browser
+Rothko,IFileSystemWatcher,0,1,7,0,0,116,1,1,0,-1,0,1,,Rothko.FileSystemWatcher
+Rothko,IFileFacade,0,13,0,0,0,437,13,1,0,-1,1,3,Rothko.IFileInfo,Rothko.FileFacade' Rothko.IOperatingSystem' Rothko.OperatingSystemFacade
+Rothko,IOperatingSystem,0,0,11,0,0,14,0,1,0,-1,11,2,Rothko.IAssemblyFacade' Rothko.IBrowser' Rothko.IDialogFacade' Rothko.IDirectoryFacade' Rothko.IEnvironment' Rothko.IFileFacade' Rothko.IRegistry' Rothko.INetFactory' Rothko.IProcessLocator' Rothko.IProcessStarter' Rothko.IMemoryMappedFileFactory,Rothko.OperatingSystemFacade' Rothko.DependencyRegistrationHelper
+Rothko,IFileInfo,0,19,4,0,0,520,19,1,1,-1,2,5,Rothko.IDirectoryInfo' Rothko.IFileSystemInfo,Rothko.IFileFacade' Rothko.IDirectoryInfo' Rothko.FileFacade' Rothko.FileInfo' Rothko.DirectoryInfo
+Rothko,IFileSystemInfo,0,2,11,0,0,186,2,3,0,-1,0,4,,Rothko.IFileInfo' Rothko.IDirectoryInfo' Rothko.FileSystemInfo' Rothko.DirectoryInfo
+Rothko,IOperatingSystemInfo,0,0,4,0,0,24,0,1,0,-1,0,3,,Rothko.OperatingSystemInfo' Rothko.Environment' Rothko.IEnvironment
+Rothko,IRegistry,0,8,6,0,0,18,8,1,0,-1,1,3,Rothko.IRegistryKey,Rothko.OperatingSystemFacade' Rothko.Registry' Rothko.IOperatingSystem
+Rothko,IRegistryKey,0,28,5,0,0,39,28,1,0,-1,0,4,,Rothko.RegistryKey' Rothko.Registry' Rothko.RegistryExtensions' Rothko.IRegistry
+Rothko,OpenDialogResult,3,3,2,1,3,39,4,0,0,0.67,0,2,,Rothko.IDialogFacade' Rothko.DialogFacade
+Rothko,RegistryExtensions,0,1,0,0,1,13,3,0,0,-1,1,0,Rothko.IRegistryKey,
+Rothko,SaveDialogResult,3,3,2,1,3,39,4,0,0,0.67,0,2,,Rothko.IDialogFacade' Rothko.DialogFacade
+Rothko,HttpListenerContextWrapper,1,7,3,0,6,42,8,0,1,0.43,5,1,Rothko.HttpListenerRequestWrapper' Rothko.HttpListenerResponseWrapper' Rothko.IHttpListenerContext' Rothko.IHttpListenerRequest' Rothko.IHttpListenerResponse,Rothko.HttpListenerWrapper
+Rothko,HttpListenerRequestWrapper,1,5,29,0,5,53,5,0,1,0.4,1,1,Rothko.IHttpListenerRequest,Rothko.HttpListenerContextWrapper
+Rothko,HttpListenerResponseWrapper,1,13,12,0,12,86,14,0,1,0.15,1,1,Rothko.IHttpListenerResponse,Rothko.HttpListenerContextWrapper
+Rothko,HttpListenerWrapper,1,9,11,0,9,64,9,0,1,0.22,3,1,Rothko.HttpListenerContextWrapper' Rothko.IHttpListener' Rothko.IHttpListenerContext,Rothko.NetFactory
+Rothko,IHttpListener,0,8,11,0,0,267,8,1,0,-1,1,4,Rothko.IHttpListenerContext,Rothko.NetFactory' Rothko.HttpListenerWrapper' Rothko.INetFactory' Rothko.IHttpListenerRequest
+Rothko,IHttpListenerContext,0,4,3,0,0,140,4,1,0,-1,2,3,Rothko.IHttpListenerRequest' Rothko.IHttpListenerResponse,Rothko.HttpListenerContextWrapper' Rothko.HttpListenerWrapper' Rothko.IHttpListener
+Rothko,IHttpListenerRequest,0,4,29,0,0,287,4,1,0,-1,1,3,Rothko.IHttpListener,Rothko.HttpListenerContextWrapper' Rothko.HttpListenerRequestWrapper' Rothko.IHttpListenerContext
+Rothko,IHttpListenerResponse,0,10,12,0,0,268,10,1,0,-1,0,3,,Rothko.HttpListenerContextWrapper' Rothko.HttpListenerResponseWrapper' Rothko.IHttpListenerContext
+Rothko,INetFactory,0,1,0,0,0,4,1,1,0,-1,1,3,Rothko.IHttpListener,Rothko.OperatingSystemFacade' Rothko.NetFactory' Rothko.IOperatingSystem
+Rothko,NetFactory,0,1,0,0,1,7,1,0,1,-1,3,1,Rothko.HttpListenerWrapper' Rothko.IHttpListener' Rothko.INetFactory,Rothko.OperatingSystemFacade
+Rothko,OperatingSystemInfo,1,4,4,0,4,73,4,0,1,0,1,1,Rothko.IOperatingSystemInfo,Rothko.Environment
+Rothko,OperatingSystemFacade,0,1,11,0,1,28,1,0,1,-1,23,1,Rothko.AssemblyFacade' Rothko.Environment' Rothko.DialogFacade' Rothko.DirectoryFacade' Rothko.FileFacade' Rothko.IAssemblyFacade' Rothko.IBrowser' Rothko.IDialogFacade' Rothko.IDirectoryFacade' Rothko.IEnvironment' Rothko.IFileFacade' Rothko.IOperatingSystem' Rothko.IRegistry' Rothko.INetFactory' Rothko.NetFactory' Rothko.IProcessLocator' Rothko.IProcessStarter' Rothko.ProcessLocator' Rothko.ProcessStarter' Rothko.Registry' Rothko.IMemoryMappedFileFactory' Rothko.MemoryMappedFileFactory' Rothko.Infrastructure.Browser,Rothko.DependencyRegistrationHelper
+Rothko,IProcess,0,8,8,0,0,24,8,2,0,-1,0,6,,Rothko.ProcessWrapper' Rothko.IProcessStarter' Rothko.NullProcess' Rothko.IProcessLocator' Rothko.ProcessLocator' Rothko.ProcessStarter
+Rothko,IProcessLocator,0,3,0,0,0,22,3,1,0,-1,2,3,Rothko.IProcess' Rothko.NullProcess,Rothko.OperatingSystemFacade' Rothko.IOperatingSystem' Rothko.ProcessLocator
+Rothko,IProcessStarter,0,2,0,0,0,16,2,1,0,-1,1,4,Rothko.IProcess,Rothko.ProcessStarter' Rothko.IOperatingSystem' Rothko.OperatingSystemFacade' Rothko.Infrastructure.Browser
+Rothko,NullProcess,0,11,8,0,11,72,11,0,1,-1,1,3,Rothko.IProcess,Rothko.IProcessLocator' Rothko.ProcessLocator' Rothko.ProcessStarter
+Rothko,ProcessLocator,1,3,1,0,3,41,4,0,1,1,4,1,Rothko.IProcess' Rothko.IProcessLocator' Rothko.NullProcess' Rothko.ProcessWrapper,Rothko.OperatingSystemFacade
+Rothko,ProcessStarter,0,2,0,0,2,23,3,0,1,-1,4,1,Rothko.IProcess' Rothko.IProcessStarter' Rothko.NullProcess' Rothko.ProcessWrapper,Rothko.OperatingSystemFacade
+Rothko,ProcessWrapper,2,22,8,0,12,233,29,0,1,0.41,6,2,Rothko.IProcess' Rothko.SafeDisposable' Rothko.NativeMethods' Rothko.PROCESS_BASIC_INFORMATION' Rothko.ShowWindowOption' Rothko.UnsafeNativeMethods,Rothko.ProcessStarter' Rothko.ProcessLocator
+Rothko,SafeDisposable,2,2,0,0,2,19,3,0,0,1,0,1,,Rothko.ProcessWrapper
+Rothko,Registry,0,8,6,0,8,59,8,0,1,-1,3,1,Rothko.IRegistry' Rothko.IRegistryKey' Rothko.RegistryKey,Rothko.OperatingSystemFacade
+Rothko,RegistryKey,1,31,5,0,29,156,31,0,1,0.1,1,1,Rothko.IRegistryKey,Rothko.Registry
+Rothko,IMemoryMappedFile,0,3,0,0,0,6,3,1,0,-1,0,3,,Rothko.MemoryMappedFileWrapper' Rothko.MemoryMappedFileFactory' Rothko.IMemoryMappedFileFactory
+Rothko,ISemaphore,0,2,0,0,0,5,2,1,0,-1,0,1,,Rothko.ISystemSemaphore
+Rothko,ISystemSemaphore,0,0,1,0,0,4,0,1,1,-1,1,1,Rothko.ISemaphore,Rothko.SystemSemaphore
+Rothko,MemoryMappedFileWrapper,1,5,0,0,5,26,6,0,1,0.4,1,1,Rothko.IMemoryMappedFile,Rothko.MemoryMappedFileFactory
+Rothko,IMemoryMappedFileFactory,0,12,0,0,0,15,12,1,0,-1,1,3,Rothko.IMemoryMappedFile,Rothko.MemoryMappedFileFactory' Rothko.OperatingSystemFacade' Rothko.IOperatingSystem
+Rothko,MemoryMappedFileFactory,0,12,0,0,12,81,12,0,1,-1,3,1,Rothko.IMemoryMappedFile' Rothko.MemoryMappedFileWrapper' Rothko.IMemoryMappedFileFactory,Rothko.OperatingSystemFacade
+Rothko,SystemSemaphore,1,4,1,0,4,27,5,0,2,0,1,0,Rothko.ISystemSemaphore,
 Rothko,NativeMethods,0,3,0,0,1,11,3,0,0,-1,1,1,Rothko.ShowWindowOption,Rothko.ProcessWrapper
-Rothko,PROCESS_BASIC_INFORMATION,6,0,0,6,0,10,0,0,0,-1,0,2,,Rothko.ProcessWrapper' Rothko.UnsafeNativeMethods
+Rothko,PROCESS_BASIC_INFORMATION,6,0,0,6,0,10,0,0,0,-1,0,2,,Rothko.UnsafeNativeMethods' Rothko.ProcessWrapper
 Rothko,SafeNativeMethods,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Rothko,ShowWindowOption,0,0,0,0,0,58,0,0,0,-1,0,2,,Rothko.ProcessWrapper' Rothko.NativeMethods
+Rothko,ShowWindowOption,0,0,0,0,0,58,0,0,0,-1,0,2,,Rothko.NativeMethods' Rothko.ProcessWrapper
 Rothko,UnsafeNativeMethods,0,1,0,0,0,11,1,0,0,-1,1,1,Rothko.PROCESS_BASIC_INFORMATION,Rothko.ProcessWrapper
-Rothko.Infrastructure,Browser,2,3,0,0,3,47,4,0,1,0,2,0,Rothko.IProcessStarter' Rothko.IEnvironment,
+Rothko.Infrastructure,Browser,2,3,0,0,3,47,4,0,1,0.67,3,1,Rothko.IBrowser' Rothko.IEnvironment' Rothko.IProcessStarter,Rothko.OperatingSystemFacade
 Rothko.Extensions,DialogFacadeExtensions,6,5,0,0,5,124,5,0,0,0,1,0,Rothko.IDialogFacade,
 Rothko.Win32,SystemMetric,0,0,0,0,0,23,0,0,0,-1,0,0,,

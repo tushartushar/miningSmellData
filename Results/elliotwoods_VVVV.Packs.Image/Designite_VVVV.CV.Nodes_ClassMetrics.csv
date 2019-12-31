@@ -1,105 +1,105 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 VVVV.CV.Nodes,ManageDependencies,0,2,0,0,2,16,2,0,0,-1,0,0,,
-VVVV.CV.Nodes,Extrinsics,1,1,1,1,1,21,1,0,0,0,0,2,,VVVV.CV.Nodes.StereoCalibrateNode' VVVV.CV.Nodes.Calibration.CalibrateCameraNode
+VVVV.CV.Nodes,Extrinsics,1,1,1,1,1,21,1,0,0,0,0,4,,VVVV.CV.Nodes.ExtrinsicsSplitNode' VVVV.CV.Nodes.StereoCalibrateNode' VVVV.CV.Nodes.SolvePnPNode' VVVV.CV.Nodes.Calibration.CalibrateCameraNode
 VVVV.CV.Nodes,Homography,5,1,0,0,1,57,5,0,0,0,0,0,,
-VVVV.CV.Nodes,Intrinsics,1,1,3,1,1,47,1,0,0,0,0,1,,VVVV.CV.Nodes.Calibration.CalibrateCameraNode
-VVVV.CV.Nodes,StereoCalibrateNode,12,3,0,0,3,82,6,0,0,1,2,0,VVVV.CV.Nodes.Extrinsics' VVVV.CV.Core.MatrixUtils,
-VVVV.CV.Nodes,ExtrinsicsSplitNode,3,3,0,0,3,39,4,0,0,1,0,0,,
-VVVV.CV.Nodes,FindBoardInstance,13,5,0,4,4,134,21,0,2,0.4,4,1,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat,VVVV.CV.Nodes.FindBoardNode
+VVVV.CV.Nodes,Intrinsics,1,1,3,1,1,47,1,0,0,0,0,7,,VVVV.CV.Nodes.IntrinsicsSplitNode' VVVV.CV.Nodes.Calibration.IntrinsicsWriterNode' VVVV.CV.Nodes.SolvePnPNode' VVVV.CV.Nodes.StereoCalibrateNode' VVVV.CV.Nodes.Calibration.IntrinsicsReaderNode' VVVV.CV.Nodes.IntrinsicsJoinNode' VVVV.CV.Nodes.Calibration.CalibrateCameraNode
+VVVV.CV.Nodes,StereoCalibrateNode,12,3,0,0,3,82,6,0,0,1,2,0,VVVV.CV.Nodes.Extrinsics' VVVV.CV.Nodes.Intrinsics,
+VVVV.CV.Nodes,ExtrinsicsSplitNode,3,3,0,0,3,39,5,0,0,1,1,0,VVVV.CV.Nodes.Extrinsics,
+VVVV.CV.Nodes,FindBoardInstance,13,5,0,4,4,134,23,0,2,0.4,0,1,,VVVV.CV.Nodes.FindBoardNode
 VVVV.CV.Nodes,FindBoardNode,7,3,0,0,0,64,10,0,0,0,1,0,VVVV.CV.Nodes.FindBoardInstance,
-VVVV.CV.Nodes,IntrinsicsSplitNode,7,3,0,0,3,66,4,0,0,1,0,0,,
-VVVV.CV.Nodes,IntrinsicsJoinNode,5,3,0,0,3,50,4,0,0,1,0,0,,
+VVVV.CV.Nodes,IntrinsicsSplitNode,7,3,0,0,3,66,8,0,0,1,1,0,VVVV.CV.Nodes.Intrinsics,
+VVVV.CV.Nodes,IntrinsicsJoinNode,5,3,0,0,3,50,5,0,0,1,1,0,VVVV.CV.Nodes.Intrinsics,
 VVVV.CV.Nodes,ProjectPointsNode,5,3,0,0,3,41,5,0,0,1,0,0,,
-VVVV.CV.Nodes,TransformInstance,3,2,1,1,2,60,4,0,2,0,4,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImageAttributes,
-VVVV.CV.Nodes,RotateStepInstance,1,2,0,1,2,70,4,0,2,1,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImageOutput,
-VVVV.CV.Nodes,UnsharpMaskInstance,4,2,0,4,2,31,3,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,WithinRangeHsvInstance,6,2,0,3,2,42,4,0,2,0,5,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.CVImageOutput,
-VVVV.CV.Nodes,AsImageRawInstance,5,3,4,0,3,88,9,0,3,0.67,3,1,VVVV.CV.Core.TColorFormat' VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput,VVVV.CV.Nodes.AsImageRawNode
+VVVV.CV.Nodes,TransformInstance,3,2,1,1,2,60,5,0,2,0,0,0,,
+VVVV.CV.Nodes,RotateStepInstance,1,2,0,1,2,70,9,0,2,1,0,0,,
+VVVV.CV.Nodes,UnsharpMaskInstance,4,2,0,4,2,31,3,0,2,0,0,0,,
+VVVV.CV.Nodes,WithinRangeHsvInstance,6,2,0,3,2,42,4,0,2,0,0,0,,
+VVVV.CV.Nodes,AsImageRawInstance,5,3,4,0,3,88,9,0,3,0.67,0,1,,VVVV.CV.Nodes.AsImageRawNode
 VVVV.CV.Nodes,AsImageRawNode,5,2,0,0,1,48,11,0,0,1,1,0,VVVV.CV.Nodes.AsImageRawInstance,
-VVVV.CV.Nodes,Lena,4,2,0,0,2,28,3,0,0,0,2,0,VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImage,
-VVVV.CV.Nodes,VideoPlayerInstance,6,4,4,0,3,92,10,0,2,0.5,2,1,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput,VVVV.CV.Nodes.VideoPlayerNode
+VVVV.CV.Nodes,Lena,4,2,0,0,2,28,3,0,0,0,0,0,,
+VVVV.CV.Nodes,VideoPlayerInstance,6,4,4,0,3,92,10,0,2,0.5,0,1,,VVVV.CV.Nodes.VideoPlayerNode
 VVVV.CV.Nodes,VideoPlayerNode,5,1,0,0,0,38,5,0,0,0,1,0,VVVV.CV.Nodes.VideoPlayerInstance,
 VVVV.CV.Nodes,TCoordinateSystem,0,0,0,0,0,1,0,0,0,-1,0,1,,VVVV.CV.Nodes.SolvePnPNode
-VVVV.CV.Nodes,SolvePnPNode,9,3,0,0,3,68,10,0,0,1,2,0,VVVV.CV.Nodes.TCoordinateSystem' VVVV.CV.Core.MatrixUtils,
-VVVV.CV.Nodes,AsTextureInstance,7,4,4,1,4,202,6,0,2,0,6,1,VVVV.CV.Core.CVImageDoubleBuffer' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.ImageUtils' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImage,VVVV.CV.Nodes.AsTextureNode
+VVVV.CV.Nodes,SolvePnPNode,9,3,0,0,3,68,10,0,0,1,3,0,VVVV.CV.Nodes.Extrinsics' VVVV.CV.Nodes.Intrinsics' VVVV.CV.Nodes.TCoordinateSystem,
+VVVV.CV.Nodes,AsTextureInstance,7,4,4,1,4,202,19,0,2,0,0,1,,VVVV.CV.Nodes.AsTextureNode
 VVVV.CV.Nodes,AsTextureNode,3,5,0,0,3,78,13,0,0,0.4,1,0,VVVV.CV.Nodes.AsTextureInstance,
-VVVV.CV.Nodes,AverageInstance,3,2,2,0,2,60,3,0,2,1,3,1,VVVV.CV.Core.ImageUtils' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput,VVVV.CV.Nodes.AverageNode
+VVVV.CV.Nodes,AverageInstance,3,2,2,0,2,60,3,0,2,1,0,1,,VVVV.CV.Nodes.AverageNode
 VVVV.CV.Nodes,AverageNode,2,1,0,0,0,22,2,0,0,0,1,0,VVVV.CV.Nodes.AverageInstance,
 VVVV.CV.Nodes,ChangeInstance,1,2,1,0,2,20,2,0,2,1,0,1,,VVVV.CV.Nodes.ChangeNode
 VVVV.CV.Nodes,ChangeNode,1,1,0,0,0,15,2,0,0,0,1,0,VVVV.CV.Nodes.ChangeInstance,
-VVVV.CV.Nodes,FramerateNodeMode,0,0,0,0,0,1,0,0,0,-1,0,1,,VVVV.CV.Nodes.FramerateInstance
+VVVV.CV.Nodes,FramerateNodeMode,0,0,0,0,0,1,0,0,0,-1,0,2,,VVVV.CV.Nodes.FramerateInstance' VVVV.CV.Nodes.FramerateNode
 VVVV.CV.Nodes,FramerateInstance,4,2,0,2,2,27,4,0,2,1,1,1,VVVV.CV.Nodes.FramerateNodeMode,VVVV.CV.Nodes.FramerateNode
-VVVV.CV.Nodes,FramerateNode,2,1,0,0,0,18,2,0,0,0,1,0,VVVV.CV.Nodes.FramerateInstance,
-VVVV.CV.Nodes,RendererNode,8,11,0,0,2,124,17,0,0,0,4,0,VVVV.CV.Core.CVImageLink' VVVV.CV.Core.CVImage' VVVV.CV.Core.ImageAttributesChangedEventArgs' VVVV.CV.Core.CVImageAttributes,
-VVVV.CV.Nodes,InfoNode,8,3,0,0,2,76,6,0,0,0.67,4,0,VVVV.CV.Core.CVImageInputSpread' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.ImageUtils,
-VVVV.CV.Nodes,PipetInstance,3,2,3,0,2,44,3,0,2,1,3,1,VVVV.CV.Core.ImageUtils' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput,VVVV.CV.Nodes.PipetNode
+VVVV.CV.Nodes,FramerateNode,2,1,0,0,0,18,2,0,0,0,2,0,VVVV.CV.Nodes.FramerateNodeMode' VVVV.CV.Nodes.FramerateInstance,
+VVVV.CV.Nodes,RendererNode,8,11,0,0,2,124,17,0,0,0,0,0,,
+VVVV.CV.Nodes,InfoNode,8,3,0,0,2,76,6,0,0,0.67,0,0,,
+VVVV.CV.Nodes,PipetInstance,3,2,3,0,2,44,4,0,2,1,0,1,,VVVV.CV.Nodes.PipetNode
 VVVV.CV.Nodes,PipetNode,2,3,0,0,0,51,9,0,0,0.67,1,0,VVVV.CV.Nodes.PipetInstance,
-VVVV.CV.Nodes,WriterInstance,3,3,1,1,3,49,4,0,2,0.67,2,1,VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImage,VVVV.CV.Nodes.WriterImageNode
+VVVV.CV.Nodes,WriterInstance,3,3,1,1,3,49,4,0,2,0.67,0,1,,VVVV.CV.Nodes.WriterImageNode
 VVVV.CV.Nodes,WriterImageNode,4,1,0,0,0,33,6,0,0,0,1,0,VVVV.CV.Nodes.WriterInstance,
-VVVV.CV.Nodes,AdaptiveThresholdInstance,5,2,5,0,2,78,3,0,2,0,5,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat,
-VVVV.CV.Nodes,BackgroundSubtractInstance,5,3,2,3,3,57,6,0,2,0,6,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Nodes.TDifferenceMode,
-VVVV.CV.Nodes,CannyInstance,5,2,1,2,2,61,4,0,2,0,6,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.TypeUtils' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImageOutput,
-VVVV.CV.Nodes,ConvertScaleInstance,2,2,0,2,2,25,2,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,SobelInstance,3,2,3,0,2,61,2,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,S_HInstance,1,2,1,0,2,27,3,0,2,1,2,0,VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,NOTInstance,0,2,0,0,2,16,3,0,2,-1,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,GrayscaleInstance,1,2,0,0,2,21,3,0,2,0,6,0,VVVV.CV.Core.TColorFormat' VVVV.CV.Core.ImageUtils' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput,
-VVVV.CV.Nodes,TemporalAverageInstance,2,2,1,0,2,39,4,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,DilateInstance,1,2,1,0,2,29,3,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,ErodeInstance,1,2,1,0,2,29,3,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,FrameDelayInstance,1,2,0,0,2,25,4,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImageOutput,
+VVVV.CV.Nodes,AdaptiveThresholdInstance,5,2,5,0,2,78,3,0,2,0,0,0,,
+VVVV.CV.Nodes,BackgroundSubtractInstance,5,3,2,3,3,57,6,0,2,0,1,0,VVVV.CV.Nodes.TDifferenceMode,
+VVVV.CV.Nodes,CannyInstance,5,2,1,2,2,61,4,0,2,0,0,0,,
+VVVV.CV.Nodes,ConvertScaleInstance,2,2,0,2,2,25,2,0,2,0,0,0,,
+VVVV.CV.Nodes,SobelInstance,3,2,3,0,2,61,2,0,2,0,0,0,,
+VVVV.CV.Nodes,S_HInstance,1,2,1,0,2,27,3,0,2,1,0,0,,
+VVVV.CV.Nodes,NOTInstance,0,2,0,0,2,16,3,0,2,-1,0,0,,
+VVVV.CV.Nodes,GrayscaleInstance,1,2,0,0,2,21,3,0,2,0,0,0,,
+VVVV.CV.Nodes,TemporalAverageInstance,2,2,1,0,2,39,4,0,2,0,0,0,,
+VVVV.CV.Nodes,DilateInstance,1,2,1,0,2,29,3,0,2,0,0,0,,
+VVVV.CV.Nodes,ErodeInstance,1,2,1,0,2,29,3,0,2,0,0,0,,
+VVVV.CV.Nodes,FrameDelayInstance,1,2,0,0,2,25,4,0,2,0,0,0,,
 VVVV.CV.Nodes,TDifferenceMode,0,0,0,0,0,6,0,0,0,-1,0,2,,VVVV.CV.Nodes.BackgroundSubtractInstance' VVVV.CV.Nodes.FrameDifferenceInstance
-VVVV.CV.Nodes,FrameDifferenceInstance,4,2,1,2,2,66,5,0,2,0,6,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput' VVVV.CV.Nodes.TDifferenceMode' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.TColorFormat,
-VVVV.CV.Nodes,GaussianBlurInstance,1,2,0,1,2,24,3,0,2,0,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageInput,
-VVVV.CV.Nodes,CMPInstance,3,3,1,1,2,51,7,3,2,0.67,5,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.CVImageOutput,
-VVVV.CV.Nodes,GTInstance,0,1,0,0,0,8,1,0,3,-1,1,0,VVVV.CV.Core.CVImage,
-VVVV.CV.Nodes,LTInstance,0,1,0,0,0,8,1,0,3,-1,1,0,VVVV.CV.Core.CVImage,
-VVVV.CV.Nodes,EQInstance,0,1,0,0,0,8,1,0,3,-1,1,0,VVVV.CV.Core.CVImage,
-VVVV.CV.Nodes,ResizeInstance,1,2,2,0,2,54,2,0,2,0,5,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.ImageUtils,
-VVVV.CV.Nodes,OpticalFlowHSInstance,8,3,2,1,2,71,4,0,2,0,5,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.TColorFormat,
-VVVV.CV.Nodes,OpticalFlowLKInstance,6,3,1,0,2,63,4,0,2,0,5,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.TColorFormat,
-VVVV.CV.Nodes,TemplateInstance,1,3,1,0,2,80,6,0,2,0,5,0,VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.TColorFormat,
-VVVV.CV.Nodes,WithinRangeInstance,4,2,0,2,2,26,3,0,2,0,5,0,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.CVImageOutput,
+VVVV.CV.Nodes,FrameDifferenceInstance,4,2,1,2,2,66,6,0,2,0,1,0,VVVV.CV.Nodes.TDifferenceMode,
+VVVV.CV.Nodes,GaussianBlurInstance,1,2,0,1,2,24,4,0,2,0,0,0,,
+VVVV.CV.Nodes,CMPInstance,3,3,1,1,2,51,7,3,2,0.67,0,3,,VVVV.CV.Nodes.GTInstance' VVVV.CV.Nodes.LTInstance' VVVV.CV.Nodes.EQInstance
+VVVV.CV.Nodes,GTInstance,0,1,0,0,0,8,1,0,3,-1,1,0,VVVV.CV.Nodes.CMPInstance,
+VVVV.CV.Nodes,LTInstance,0,1,0,0,0,8,1,0,3,-1,1,0,VVVV.CV.Nodes.CMPInstance,
+VVVV.CV.Nodes,EQInstance,0,1,0,0,0,8,1,0,3,-1,1,0,VVVV.CV.Nodes.CMPInstance,
+VVVV.CV.Nodes,ResizeInstance,1,2,2,0,2,54,2,0,2,0,0,0,,
+VVVV.CV.Nodes,OpticalFlowHSInstance,8,3,2,1,2,71,4,0,2,0,0,0,,
+VVVV.CV.Nodes,OpticalFlowLKInstance,6,3,1,0,2,63,4,0,2,0,0,0,,
+VVVV.CV.Nodes,TemplateInstance,1,3,1,0,2,80,6,0,2,0,0,0,,
+VVVV.CV.Nodes,WithinRangeInstance,4,2,0,2,2,26,3,0,2,0,0,0,,
 VVVV.CV.Nodes,ConsNode,0,0,0,0,0,5,0,0,0,-1,0,0,,
-VVVV.CV.Nodes,FileImageInstance,1,3,1,0,2,37,3,0,3,0.67,2,1,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput,VVVV.CV.Nodes.FileImageNode
+VVVV.CV.Nodes,FileImageInstance,1,3,1,0,2,37,3,0,3,0.67,0,1,,VVVV.CV.Nodes.FileImageNode
 VVVV.CV.Nodes,FileImageNode,3,1,0,0,0,24,5,0,0,0,1,0,VVVV.CV.Nodes.FileImageInstance,
-VVVV.CV.Nodes,NoiseInstance,4,3,1,0,2,45,4,0,3,0.67,3,1,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.TColorFormat,VVVV.CV.Nodes.NoiseNode
+VVVV.CV.Nodes,NoiseInstance,4,3,1,0,2,45,4,0,3,0.67,0,1,,VVVV.CV.Nodes.NoiseNode
 VVVV.CV.Nodes,NoiseNode,3,2,0,0,1,26,6,0,0,1,1,0,VVVV.CV.Nodes.NoiseInstance,
-VVVV.CV.Nodes,CaptureVideoInstance,7,4,4,0,3,103,6,0,2,0,4,1,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.ImageUtils,VVVV.CV.Nodes.CaptureVideoNode
+VVVV.CV.Nodes,CaptureVideoInstance,7,4,4,0,3,103,6,0,2,0,0,1,,VVVV.CV.Nodes.CaptureVideoNode
 VVVV.CV.Nodes,CaptureVideoNode,4,2,0,0,1,36,8,0,0,1,1,0,VVVV.CV.Nodes.CaptureVideoInstance,
-VVVV.CV.Nodes,ContourDelauneyNode,13,4,0,0,4,130,11,0,0,0.5,0,0,,
-VVVV.CV.Nodes,ContourApproximation,0,0,0,0,0,1,0,0,0,-1,0,1,,VVVV.CV.Nodes.ContourInstance
-VVVV.CV.Nodes,ContourPerimeter,3,3,0,3,3,29,4,0,0,0.67,0,1,,VVVV.CV.Nodes.ContourTempData
-VVVV.CV.Nodes,ContourInstance,9,2,5,3,2,144,7,0,2,0,6,1,VVVV.CV.Nodes.ContourApproximation' VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Nodes.ContourTempData,VVVV.CV.Nodes.ContourNode
-VVVV.CV.Nodes,ContourTempData,3,0,0,3,0,6,0,0,0,-1,1,1,VVVV.CV.Nodes.ContourPerimeter,VVVV.CV.Nodes.ContourInstance
-VVVV.CV.Nodes,ContourNode,7,3,0,0,0,53,10,0,0,0,1,0,VVVV.CV.Nodes.ContourInstance,
-VVVV.CV.Nodes,ContourPerimeterSplitNode,4,3,0,0,3,43,6,0,0,1,0,0,,
+VVVV.CV.Nodes,ContourDelauneyNode,13,4,0,0,4,130,17,0,0,0.5,1,0,VVVV.CV.Nodes.ContourPerimeter,
+VVVV.CV.Nodes,ContourApproximation,0,0,0,0,0,1,0,0,0,-1,0,2,,VVVV.CV.Nodes.ContourInstance' VVVV.CV.Nodes.ContourNode
+VVVV.CV.Nodes,ContourPerimeter,3,3,0,3,3,29,4,0,0,0.67,0,4,,VVVV.CV.Nodes.ContourPerimeterSplitNode' VVVV.CV.Nodes.ContourDelauneyNode' VVVV.CV.Nodes.ContourInstance' VVVV.CV.Nodes.ContourNode
+VVVV.CV.Nodes,ContourInstance,9,2,5,3,2,144,11,0,2,0,3,1,VVVV.CV.Nodes.ContourApproximation' VVVV.CV.Nodes.ContourPerimeter' VVVV.CV.Nodes.ContourTempData,VVVV.CV.Nodes.ContourNode
+VVVV.CV.Nodes,ContourTempData,3,0,0,3,0,6,0,0,0,-1,0,1,,VVVV.CV.Nodes.ContourInstance
+VVVV.CV.Nodes,ContourNode,7,3,0,0,0,53,10,0,0,0,3,0,VVVV.CV.Nodes.ContourApproximation' VVVV.CV.Nodes.ContourPerimeter' VVVV.CV.Nodes.ContourInstance,
+VVVV.CV.Nodes,ContourPerimeterSplitNode,4,3,0,0,3,43,6,0,0,1,1,0,VVVV.CV.Nodes.ContourPerimeter,
 VVVV.CV.Nodes.Calibration,TCoordinateSystem,0,0,0,0,0,1,0,0,0,-1,0,1,,VVVV.CV.Nodes.Calibration.CalibrateCameraNode
-VVVV.CV.Nodes.Calibration,CalibrateCameraNode,15,4,0,0,3,121,13,0,0,0.75,4,0,VVVV.CV.Nodes.Intrinsics' VVVV.CV.Nodes.Extrinsics' VVVV.CV.Nodes.Calibration.TCoordinateSystem' VVVV.CV.Core.MatrixUtils,
-VVVV.CV.Nodes.Calibration,IntrinsicsReaderNode,5,1,0,0,1,40,3,0,0,0,0,0,,
-VVVV.CV.Nodes.Calibration,IntrinsicsWriterNode,5,1,0,0,1,40,3,0,0,0,0,0,,
-VVVV.CV.Nodes.Features.Criteria,ImageRegion,2,2,0,0,2,16,2,0,1,0,1,0,VVVV.CV.Nodes.Features.FeatureSet,
-VVVV.CV.Nodes.Features.Criteria,ImageRegionNode,3,1,0,0,1,22,3,0,0,0,0,0,,
-VVVV.CV.Nodes.Features.Criteria,ICriteria,0,2,0,0,2,12,3,1,0,-1,1,1,VVVV.CV.Nodes.Features.FeatureSet,VVVV.CV.Nodes.Features.FeatureSet
-VVVV.CV.Nodes.Features,DetectFeaturesInstance,2,3,2,1,3,33,3,0,2,0.67,4,1,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Nodes.Features.FeatureSet,VVVV.CV.Nodes.Features.DetectFeaturesNode
-VVVV.CV.Nodes.Features,DetectFeaturesNode,2,1,0,0,0,27,5,0,0,0,1,0,VVVV.CV.Nodes.Features.DetectFeaturesInstance,
-VVVV.CV.Nodes.Features,FeatureSet,4,4,1,4,4,66,10,0,0,0.75,1,3,VVVV.CV.Nodes.Features.Criteria.ICriteria,VVVV.CV.Nodes.Features.Criteria.ImageRegion' VVVV.CV.Nodes.Features.Criteria.ICriteria' VVVV.CV.Nodes.Features.DetectFeaturesInstance
-VVVV.CV.Nodes.Features,FeatureSetSplit,4,2,0,0,1,63,11,0,0,0,0,0,,
-VVVV.CV.Nodes.Features,MatchFeatures,7,1,0,0,1,64,7,0,0,0,0,0,,
-VVVV.CV.Nodes.StructuredLight,TDataSet,0,0,0,0,0,1,0,0,0,-1,0,1,,VVVV.CV.Nodes.StructuredLight.SpaceInstance
-VVVV.CV.Nodes.StructuredLight,SpaceInstance,3,11,4,0,3,218,13,0,3,0.18,6,1,VVVV.CV.Nodes.StructuredLight.ScanSet' VVVV.CV.Nodes.StructuredLight.TDataSet' VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.CVImageAttributes,VVVV.CV.Nodes.StructuredLight.SpaceNode
-VVVV.CV.Nodes.StructuredLight,SpaceNode,10,2,0,0,1,54,12,0,0,1,3,0,VVVV.CV.Core.CVImage' VVVV.CV.Nodes.StructuredLight.ScanSet' VVVV.CV.Nodes.StructuredLight.SpaceInstance,
-VVVV.CV.Nodes.StructuredLight,DecodeInstance,11,6,4,3,3,144,15,0,2,0,7,1,VVVV.CV.Core.CVImage' VVVV.CV.Nodes.StructuredLight.ScanSet' VVVV.CV.Nodes.StructuredLight.TimestampRegister' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Nodes.StructuredLight.IPayload,VVVV.CV.Nodes.StructuredLight.DecodeNode
-VVVV.CV.Nodes.StructuredLight,DecodeNode,9,2,0,0,1,56,15,0,0,1,1,0,VVVV.CV.Nodes.StructuredLight.DecodeInstance,
-VVVV.CV.Nodes.StructuredLight,EncodeInstance,4,3,2,3,1,83,5,0,3,0,6,1,VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.TimestampRegister' VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageOutput' VVVV.CV.Core.TColorFormat' VVVV.CV.Core.CVImageAttributes,VVVV.CV.Nodes.StructuredLight.EncodeNode
-VVVV.CV.Nodes.StructuredLight,EncodeNode,5,2,0,0,1,33,8,0,0,1,2,0,VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.EncodeInstance,
-VVVV.CV.Nodes.StructuredLight,IPayload,1,3,11,1,2,71,5,1,0,0,0,5,,VVVV.CV.Nodes.StructuredLight.DecodeInstance' VVVV.CV.Nodes.StructuredLight.EncodeInstance' VVVV.CV.Nodes.StructuredLight.EncodeNode' VVVV.CV.Nodes.StructuredLight.ScanSet' VVVV.CV.Nodes.StructuredLight.Payload.PayloadNode
-VVVV.CV.Nodes.StructuredLight,PayloadGraycode,0,3,0,0,2,23,5,0,1,-1,0,0,,
-VVVV.CV.Nodes.StructuredLight,ScanSet,9,7,5,7,6,155,9,0,0,0.29,1,3,VVVV.CV.Nodes.StructuredLight.IPayload,VVVV.CV.Nodes.StructuredLight.SpaceInstance' VVVV.CV.Nodes.StructuredLight.SpaceNode' VVVV.CV.Nodes.StructuredLight.DecodeInstance
-VVVV.CV.Nodes.StructuredLight,TimestampRegister,2,5,0,0,5,67,6,0,0,0.6,0,2,,VVVV.CV.Nodes.StructuredLight.DecodeInstance' VVVV.CV.Nodes.StructuredLight.EncodeInstance
-VVVV.CV.Nodes.StructuredLight,TimingNode,11,4,0,0,1,120,11,0,0,0,0,0,,
+VVVV.CV.Nodes.Calibration,CalibrateCameraNode,15,4,0,0,3,121,13,0,0,0.75,3,0,VVVV.CV.Nodes.Extrinsics' VVVV.CV.Nodes.Intrinsics' VVVV.CV.Nodes.Calibration.TCoordinateSystem,
+VVVV.CV.Nodes.Calibration,IntrinsicsReaderNode,5,1,0,0,1,40,3,0,0,0,1,0,VVVV.CV.Nodes.Intrinsics,
+VVVV.CV.Nodes.Calibration,IntrinsicsWriterNode,5,1,0,0,1,40,3,0,0,0,1,0,VVVV.CV.Nodes.Intrinsics,
+VVVV.CV.Nodes.Features.Criteria,ImageRegion,2,2,0,0,2,16,2,0,1,1,2,1,VVVV.CV.Nodes.Features.Criteria.ICriteria' VVVV.CV.Nodes.Features.FeatureSet,VVVV.CV.Nodes.Features.Criteria.ImageRegionNode
+VVVV.CV.Nodes.Features.Criteria,ImageRegionNode,3,1,0,0,1,22,3,0,0,0,2,0,VVVV.CV.Nodes.Features.Criteria.ImageRegion' VVVV.CV.Nodes.Features.Criteria.ICriteria,
+VVVV.CV.Nodes.Features.Criteria,ICriteria,0,2,0,0,2,12,3,1,0,-1,1,3,VVVV.CV.Nodes.Features.FeatureSet,VVVV.CV.Nodes.Features.FeatureSet' VVVV.CV.Nodes.Features.Criteria.ImageRegion' VVVV.CV.Nodes.Features.Criteria.ImageRegionNode
+VVVV.CV.Nodes.Features,DetectFeaturesInstance,2,3,2,1,3,33,3,0,2,0.67,1,1,VVVV.CV.Nodes.Features.FeatureSet,VVVV.CV.Nodes.Features.DetectFeaturesNode
+VVVV.CV.Nodes.Features,DetectFeaturesNode,2,1,0,0,0,27,5,0,0,0,2,0,VVVV.CV.Nodes.Features.DetectFeaturesInstance' VVVV.CV.Nodes.Features.FeatureSet,
+VVVV.CV.Nodes.Features,FeatureSet,4,4,1,4,4,66,10,0,0,0.75,1,6,VVVV.CV.Nodes.Features.Criteria.ICriteria,VVVV.CV.Nodes.Features.MatchFeatures' VVVV.CV.Nodes.Features.Criteria.ICriteria' VVVV.CV.Nodes.Features.FeatureSetSplit' VVVV.CV.Nodes.Features.DetectFeaturesInstance' VVVV.CV.Nodes.Features.DetectFeaturesNode' VVVV.CV.Nodes.Features.Criteria.ImageRegion
+VVVV.CV.Nodes.Features,FeatureSetSplit,4,2,0,0,1,63,11,0,0,0,1,0,VVVV.CV.Nodes.Features.FeatureSet,
+VVVV.CV.Nodes.Features,MatchFeatures,7,1,0,0,1,64,7,0,0,0,1,0,VVVV.CV.Nodes.Features.FeatureSet,
+VVVV.CV.Nodes.StructuredLight,TDataSet,0,0,0,0,0,1,0,0,0,-1,0,2,,VVVV.CV.Nodes.StructuredLight.SpaceInstance' VVVV.CV.Nodes.StructuredLight.SpaceNode
+VVVV.CV.Nodes.StructuredLight,SpaceInstance,3,11,4,0,3,218,17,0,3,0.18,2,1,VVVV.CV.Nodes.StructuredLight.TDataSet' VVVV.CV.Nodes.StructuredLight.ScanSet,VVVV.CV.Nodes.StructuredLight.SpaceNode
+VVVV.CV.Nodes.StructuredLight,SpaceNode,10,2,0,0,1,54,12,0,0,1,3,0,VVVV.CV.Nodes.StructuredLight.TDataSet' VVVV.CV.Nodes.StructuredLight.SpaceInstance' VVVV.CV.Nodes.StructuredLight.ScanSet,
+VVVV.CV.Nodes.StructuredLight,DecodeInstance,11,6,4,3,3,144,15,0,2,0,3,1,VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.ScanSet' VVVV.CV.Nodes.StructuredLight.TimestampRegister,VVVV.CV.Nodes.StructuredLight.DecodeNode
+VVVV.CV.Nodes.StructuredLight,DecodeNode,9,2,0,0,1,56,15,0,0,1,4,0,VVVV.CV.Nodes.StructuredLight.DecodeInstance' VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.ScanSet' VVVV.CV.Nodes.StructuredLight.TimestampRegister,
+VVVV.CV.Nodes.StructuredLight,EncodeInstance,4,3,2,3,1,83,6,0,3,0,2,1,VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.TimestampRegister,VVVV.CV.Nodes.StructuredLight.EncodeNode
+VVVV.CV.Nodes.StructuredLight,EncodeNode,5,2,0,0,1,33,8,0,0,1,3,0,VVVV.CV.Nodes.StructuredLight.EncodeInstance' VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.TimestampRegister,
+VVVV.CV.Nodes.StructuredLight,IPayload,1,3,11,1,2,71,5,1,0,0,0,8,,VVVV.CV.Nodes.StructuredLight.TimingNode' VVVV.CV.Nodes.StructuredLight.ScanSet' VVVV.CV.Nodes.StructuredLight.PayloadGraycode' VVVV.CV.Nodes.StructuredLight.DecodeInstance' VVVV.CV.Nodes.StructuredLight.DecodeNode' VVVV.CV.Nodes.StructuredLight.Payload.PayloadNode' VVVV.CV.Nodes.StructuredLight.EncodeInstance' VVVV.CV.Nodes.StructuredLight.EncodeNode
+VVVV.CV.Nodes.StructuredLight,PayloadGraycode,0,3,0,0,2,23,5,0,1,-1,1,1,VVVV.CV.Nodes.StructuredLight.IPayload,VVVV.CV.Nodes.StructuredLight.Payload.PayloadNode
+VVVV.CV.Nodes.StructuredLight,ScanSet,9,7,5,7,6,155,12,0,0,0.29,1,4,VVVV.CV.Nodes.StructuredLight.IPayload,VVVV.CV.Nodes.StructuredLight.SpaceInstance' VVVV.CV.Nodes.StructuredLight.SpaceNode' VVVV.CV.Nodes.StructuredLight.DecodeInstance' VVVV.CV.Nodes.StructuredLight.DecodeNode
+VVVV.CV.Nodes.StructuredLight,TimestampRegister,2,5,0,0,5,67,10,0,0,0.6,0,4,,VVVV.CV.Nodes.StructuredLight.EncodeInstance' VVVV.CV.Nodes.StructuredLight.EncodeNode' VVVV.CV.Nodes.StructuredLight.DecodeInstance' VVVV.CV.Nodes.StructuredLight.DecodeNode
+VVVV.CV.Nodes.StructuredLight,TimingNode,11,4,0,0,1,120,11,0,0,0,1,0,VVVV.CV.Nodes.StructuredLight.IPayload,
 VVVV.CV.Nodes.StructuredLight.Payload,PayloadMode,0,0,0,0,0,1,0,0,0,-1,0,1,,VVVV.CV.Nodes.StructuredLight.Payload.PayloadNode
-VVVV.CV.Nodes.StructuredLight.Payload,PayloadNode,7,1,0,0,1,36,3,0,0,0,2,0,VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.Payload.PayloadMode,
+VVVV.CV.Nodes.StructuredLight.Payload,PayloadNode,7,1,0,0,1,36,2,0,0,0,3,0,VVVV.CV.Nodes.StructuredLight.IPayload' VVVV.CV.Nodes.StructuredLight.PayloadGraycode' VVVV.CV.Nodes.StructuredLight.Payload.PayloadMode,
 VVVV.CV.Nodes.Tracking,TrackingObject,2,0,0,2,0,5,0,0,0,-1,0,1,,VVVV.CV.Nodes.Tracking.TrackingInstance
-VVVV.CV.Nodes.Tracking,TrackingInstance,7,6,6,0,4,93,11,0,2,0.33,5,1,VVVV.CV.Core.CVImage' VVVV.CV.Core.CVImageAttributes' VVVV.CV.Core.CVImageInput' VVVV.CV.Core.TColorFormat' VVVV.CV.Nodes.Tracking.TrackingObject,VVVV.CV.Nodes.Tracking.ObjectTrackingNode
+VVVV.CV.Nodes.Tracking,TrackingInstance,7,6,6,0,4,93,11,0,2,0.33,1,1,VVVV.CV.Nodes.Tracking.TrackingObject,VVVV.CV.Nodes.Tracking.ObjectTrackingNode
 VVVV.CV.Nodes.Tracking,ObjectTrackingNode,10,3,0,0,0,76,7,0,0,0,1,0,VVVV.CV.Nodes.Tracking.TrackingInstance,

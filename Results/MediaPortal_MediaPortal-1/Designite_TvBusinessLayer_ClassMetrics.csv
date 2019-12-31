@@ -1,0 +1,13 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TvDatabase,DeleteBeforeImportOption,0,0,0,0,0,7,0,0,0,-1,0,1,,TvDatabase.TvBusinessLayer
+TvDatabase,ChannelType,0,0,0,0,0,7,0,0,0,-1,0,1,,TvDatabase.TvBusinessLayer
+TvDatabase,TvBusinessLayer,4,98,3,0,81,3044,309,0,0,0.47,6,1,TvDatabase.DeleteBeforeImportOption' TvDatabase.ChannelType' TvDatabase.ImportParams' TvDatabase.NowAndNext' TvDatabase.ProgramListPartition' TvDatabase.ProgramList,TvDatabase.EpgDBUpdater
+TvDatabase,ImportParams,5,0,0,5,0,8,0,0,0,-1,0,1,,TvDatabase.TvBusinessLayer
+TvDatabase,EpgHole,2,2,0,2,2,14,2,0,0,1,0,2,,TvDatabase.EpgHoleCollection' TvDatabase.EpgDBUpdater
+TvDatabase,EpgHoleCollection,0,1,0,0,1,14,3,0,0,-1,1,1,TvDatabase.EpgHole,TvDatabase.EpgDBUpdater
+TvDatabase,EpgDBUpdater,12,9,0,0,3,376,53,0,0,0,3,0,TvDatabase.TvBusinessLayer' TvDatabase.EpgHole' TvDatabase.EpgHoleCollection,
+TvDatabase,MatroskaTagInfo,10,0,0,10,0,13,0,0,0,-1,0,1,,TvDatabase.MatroskaTagHandler
+TvDatabase,MatroskaTagHandler,0,5,0,0,3,188,22,0,0,-1,1,0,TvDatabase.MatroskaTagInfo,
+TvDatabase,NowAndNext,17,1,17,0,1,129,1,0,0,0,0,1,,TvDatabase.TvBusinessLayer
+TvDatabase,ProgramListPartition,3,1,0,3,1,12,1,0,0,0,0,2,,TvDatabase.ProgramList' TvDatabase.TvBusinessLayer
+TvDatabase,ProgramList,1,20,1,0,19,382,66,0,0,0.25,1,1,TvDatabase.ProgramListPartition,TvDatabase.TvBusinessLayer

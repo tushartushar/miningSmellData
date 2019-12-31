@@ -1,11 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Deployment,DeploymentPlan,0,0,3,0,0,6,0,0,0,-1,0,2,,OrchardCore.Deployment.Services.IDeploymentManager' OrchardCore.Deployment.Core.Services.DeploymentManager
-OrchardCore.Deployment,DeploymentPlanResult,0,2,3,0,2,26,2,0,0,-1,1,5,OrchardCore.Deployment.IFileBuilder,OrchardCore.Deployment.IDeploymentSource' OrchardCore.Deployment.Services.IDeploymentManager' OrchardCore.Deployment.Core.Services.DeploymentManager' OrchardCore.ContentTypes.Deployment.ContentDefinitionDeploymentSource' OrchardCore.Features.Deployment.AllFeaturesDeploymentSource
-OrchardCore.Deployment,DeploymentStep,0,0,2,0,0,5,0,2,0,-1,0,3,,OrchardCore.Deployment.IDeploymentSource' OrchardCore.ContentTypes.Deployment.ContentDefinitionDeploymentSource' OrchardCore.Features.Deployment.AllFeaturesDeploymentSource
-OrchardCore.Deployment,DeploymentTarget,0,1,3,0,1,12,1,0,0,-1,0,0,,
-OrchardCore.Deployment,IDeploymentSource,0,1,0,0,0,4,1,2,0,-1,2,0,OrchardCore.Deployment.DeploymentStep' OrchardCore.Deployment.DeploymentPlanResult,
-OrchardCore.Deployment,IDeploymentStepFactory,0,1,1,0,0,5,1,1,0,-1,0,0,,
-OrchardCore.Deployment,DeploymentStepFactory<TStep>,1,1,1,0,1,9,1,0,1,0,0,0,,
-OrchardCore.Deployment,IDeploymentTargetProvider,0,1,0,0,0,4,1,0,0,-1,0,0,,
-OrchardCore.Deployment,IFileBuilder,0,1,0,0,0,4,1,1,0,-1,0,1,,OrchardCore.Deployment.DeploymentPlanResult
-OrchardCore.Deployment.Services,IDeploymentManager,0,2,0,0,0,5,2,1,0,-1,2,0,OrchardCore.Deployment.DeploymentPlan' OrchardCore.Deployment.DeploymentPlanResult,
+OrchardCore.Deployment,DeploymentPlan,0,0,3,0,0,6,0,0,0,-1,1,1,OrchardCore.Deployment.DeploymentStep,OrchardCore.Deployment.Services.IDeploymentManager
+OrchardCore.Deployment,DeploymentPlanResult,0,2,3,0,2,26,2,0,0,-1,1,2,OrchardCore.Deployment.IFileBuilder,OrchardCore.Deployment.Services.IDeploymentManager' OrchardCore.Deployment.IDeploymentSource
+OrchardCore.Deployment,DeploymentStep,0,0,2,0,0,5,0,16,0,-1,0,4,,OrchardCore.Deployment.IDeploymentSource' OrchardCore.Deployment.IDeploymentStepFactory' OrchardCore.Deployment.DeploymentStepFactory<TStep>' OrchardCore.Deployment.DeploymentPlan
+OrchardCore.Deployment,DeploymentTarget,0,1,3,0,1,12,1,0,0,-1,0,2,,OrchardCore.Deployment.Services.IDeploymentManager' OrchardCore.Deployment.IDeploymentTargetProvider
+OrchardCore.Deployment,IDeploymentSource,0,1,0,0,0,4,1,16,0,-1,2,0,OrchardCore.Deployment.DeploymentPlanResult' OrchardCore.Deployment.DeploymentStep,
+OrchardCore.Deployment,IDeploymentStepFactory,0,1,1,0,0,5,1,1,0,-1,1,1,OrchardCore.Deployment.DeploymentStep,OrchardCore.Deployment.DeploymentStepFactory<TStep>
+OrchardCore.Deployment,DeploymentStepFactory<TStep>,1,1,1,0,1,9,1,0,1,0,2,0,OrchardCore.Deployment.DeploymentStep' OrchardCore.Deployment.IDeploymentStepFactory,
+OrchardCore.Deployment,IDeploymentTargetHandler,0,1,0,0,0,4,1,0,0,-1,0,1,,OrchardCore.Deployment.ServiceCollectionExtensions
+OrchardCore.Deployment,IDeploymentTargetProvider,0,1,0,0,0,4,1,0,0,-1,1,0,OrchardCore.Deployment.DeploymentTarget,
+OrchardCore.Deployment,IFileBuilder,0,1,0,0,0,4,1,1,0,-1,0,2,,OrchardCore.Deployment.IFileBuilderExtensions' OrchardCore.Deployment.DeploymentPlanResult
+OrchardCore.Deployment,IFileBuilderExtensions,0,1,0,0,1,10,1,0,0,-1,1,0,OrchardCore.Deployment.IFileBuilder,
+OrchardCore.Deployment,ServiceCollectionExtensions,0,1,0,0,1,10,1,0,0,-1,1,0,OrchardCore.Deployment.IDeploymentTargetHandler,
+OrchardCore.Deployment.Services,IDeploymentManager,0,3,0,0,0,6,3,1,0,-1,3,0,OrchardCore.Deployment.DeploymentPlan' OrchardCore.Deployment.DeploymentPlanResult' OrchardCore.Deployment.DeploymentTarget,

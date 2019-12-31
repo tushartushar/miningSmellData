@@ -1,75 +1,47 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Effects,EnumValue,0,2,2,0,2,16,2,0,0,-1,0,0,,
-Effects,EnumValues,1,1,3,1,1,19,1,0,0,0,0,0,,
-Effects,UsageType,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Effects,Property,0,2,19,0,2,36,2,0,0,-1,0,0,,
-Effects,Input,0,0,3,0,0,9,0,0,0,-1,0,0,,
-Effects,Inputs,0,0,3,0,0,9,0,0,0,-1,0,0,,
-Effects,Effect,0,0,6,0,0,13,0,0,0,-1,0,0,,
+Effects,EnumValue,0,2,2,0,2,16,2,0,0,-1,0,1,,Effects.EnumValues
+Effects,EnumValues,1,1,3,1,1,19,1,0,0,0,4,3,Effects.EnumValue' Effects.UsageType' CodeGen.Enum' XmlBindings.Enum,CodeGen.OutputEffectType' Effects.Property' CodeGen.EffectGenerator
+Effects,UsageType,0,0,0,0,0,5,0,0,0,-1,0,3,,CodeGen.OutputEffectType' Effects.EnumValues' CodeGen.EffectGenerator
+Effects,Property,0,2,19,0,2,36,2,0,0,-1,1,3,Effects.EnumValues,CodeGen.OutputEffectType' Effects.Effect' CodeGen.EffectGenerator
+Effects,Input,0,0,3,0,0,9,0,0,0,-1,0,1,,Effects.Inputs
+Effects,Inputs,0,0,3,0,0,9,0,0,0,-1,1,1,Effects.Input,Effects.Effect
+Effects,Effect,0,0,6,0,0,13,0,0,0,-1,3,2,Effects.Property' Effects.Inputs' XmlBindings.Effect,CodeGen.OutputEffectType' CodeGen.EffectGenerator
 Effects,D2DEnum,0,1,2,0,1,9,1,0,0,-1,0,0,,
-Effects,EffectGenerator,0,19,0,0,3,522,84,0,0,-1,4,0,CodeGen.UuidHelper' CodeGen.Enum' CodeGen.EnumValue' CodeGen.OutputEffectType,
-CodeGen,EnumValue,14,7,5,9,6,127,13,0,0,0,1,7,CodeGen.Formatter,Effects.EffectGenerator' CodeGen.EffectGenerator' CodeGen.Enum' CodeGen.EnumValueComparer' CodeGen.OutputEffectType' XmlBindings.Enum' XmlBindings.EnumValueComparer
-CodeGen,EnumValues,1,1,3,1,1,19,1,0,0,0,0,0,,
-CodeGen,UsageType,0,0,0,0,0,5,0,0,0,-1,0,0,,
-CodeGen,Property,0,2,19,0,2,36,2,0,0,-1,0,0,,
-CodeGen,Input,0,0,3,0,0,9,0,0,0,-1,0,0,,
-CodeGen,Inputs,0,0,3,0,0,9,0,0,0,-1,0,0,,
-CodeGen,Effect,5,0,10,5,0,33,0,0,0,-1,0,0,,
-CodeGen,D2DEnum,0,1,2,0,1,9,1,0,0,-1,0,0,,
-CodeGen,EffectGenerator,0,19,0,0,3,522,84,0,0,-1,4,2,CodeGen.UuidHelper' CodeGen.Enum' CodeGen.EnumValue' CodeGen.OutputEffectType,CodeGen.OutputEffectType' CodeGen.Program
-CodeGen,Formatter,4,10,0,1,10,91,16,0,0,0.3,0,15,,CodeGen.EnumValue' CodeGen.Enum' CodeGen.Interface' CodeGen.OutputEffectType' CodeGen.OutputtableType' CodeGen.Struct' CodeGen.StructField' CodeGen.OutputDataTypes' CodeGen.Program' XmlBindings.EnumValue' XmlBindings.Enum' XmlBindings.Interface' XmlBindings.Struct' XmlBindings.StructField' Mock.Program
-CodeGen,D2DTypes,3,1,5,0,1,48,7,0,0,0,1,0,CodeGen.OutputDataTypes,
-CodeGen,Enum,12,4,6,8,4,157,14,0,1,0,4,5,CodeGen.Formatter' CodeGen.Namespace' CodeGen.OutputDataTypes' CodeGen.EnumValue,Effects.EffectGenerator' CodeGen.EffectGenerator' CodeGen.OutputEffectType' CodeGen.OutputDataTypes' Mock.Program
-CodeGen,EnumValueComparer,0,2,0,0,1,21,4,0,0,-1,1,0,CodeGen.EnumValue,
-CodeGen,UuidHelper,0,3,0,0,1,54,4,0,0,-1,0,2,,Effects.EffectGenerator' CodeGen.EffectGenerator
-CodeGen,Parameter,9,1,4,5,1,30,1,0,0,0,0,1,,Mock.Program
-CodeGen,Method,9,2,6,4,2,60,3,0,0,0,0,1,,Mock.Program
-CodeGen,Interface,8,1,8,4,1,114,3,0,1,0,2,3,CodeGen.Formatter' CodeGen.Namespace,CodeGen.Struct' XmlBindings.Struct' Mock.Program
-CodeGen,Namespace,8,1,10,3,1,91,9,0,0,0,1,6,CodeGen.OutputDataTypes,CodeGen.Enum' CodeGen.Interface' CodeGen.Struct' XmlBindings.Enum' XmlBindings.Interface' XmlBindings.Struct
-CodeGen,OutputEffectType,1,25,0,0,6,750,90,0,0,0.12,5,2,CodeGen.Formatter' CodeGen.OutputDataTypes' CodeGen.EffectGenerator' CodeGen.Enum' CodeGen.EnumValue,Effects.EffectGenerator' CodeGen.EffectGenerator
-CodeGen,Primitive,5,1,3,3,1,37,2,0,1,0,0,1,,Mock.Program
-CodeGen,QualifiableType,0,0,6,0,0,13,0,5,0,-1,0,3,,CodeGen.Struct' XmlBindings.Struct' Mock.Program
-CodeGen,OutputtableType,0,1,1,0,1,5,1,4,1,-1,1,1,CodeGen.Formatter,CodeGen.OutputDataTypes
-CodeGen,Struct,14,5,7,7,3,149,17,0,2,0,6,3,CodeGen.Namespace' CodeGen.Formatter' CodeGen.OutputDataTypes' CodeGen.QualifiableType' CodeGen.StructField' CodeGen.Interface,CodeGen.OutputDataTypes' XmlBindings.Struct' Mock.Program
-CodeGen,EffectProperty,7,0,0,7,0,17,0,0,0,-1,0,0,,
-CodeGen,PrefixNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-CodeGen,FilenameBaseNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-CodeGen,RootNamespaceNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-CodeGen,Settings,3,0,3,3,0,16,0,0,0,-1,0,0,,
-CodeGen,StructField,5,1,3,2,1,31,2,0,0,0,1,2,CodeGen.Formatter,CodeGen.Struct' XmlBindings.Struct
-CodeGen,OutputDataTypes,1,6,0,0,6,57,10,0,0,0,4,12,CodeGen.Enum' CodeGen.Struct' CodeGen.OutputtableType' CodeGen.Formatter,CodeGen.D2DTypes' CodeGen.Enum' CodeGen.Namespace' CodeGen.OutputEffectType' CodeGen.Struct' CodeGen.Program' CodeGen.ProcessedInputFiles' XmlBindings.D2DTypes' XmlBindings.Enum' XmlBindings.Namespace' XmlBindings.Struct' Mock.Program
-CodeGen,Program,0,9,0,0,7,91,12,0,0,-1,4,1,CodeGen.ProcessedInputFiles' CodeGen.EffectGenerator' CodeGen.Formatter' CodeGen.OutputDataTypes,Mock.Program
-CodeGen,ProcessedInputFiles,3,0,0,3,0,6,0,0,0,-1,1,2,CodeGen.OutputDataTypes,CodeGen.Program' Mock.Program
-CodeGen,Typedef,2,0,0,2,0,7,0,0,0,-1,0,0,,
-CodeGen,Utilities,0,1,0,0,1,12,1,0,0,-1,0,0,,
-XmlBindings,D2DTypes,3,1,5,0,1,48,7,0,0,0,1,0,CodeGen.OutputDataTypes,
-XmlBindings,EnumValue,23,9,6,13,7,207,21,0,0,0.22,1,0,CodeGen.Formatter,
-XmlBindings,Enum,19,7,11,11,7,295,27,0,2,0,4,0,CodeGen.Formatter' CodeGen.Namespace' CodeGen.OutputDataTypes' CodeGen.EnumValue,
-XmlBindings,EnumValueComparer,0,4,0,0,2,41,8,0,0,-1,1,0,CodeGen.EnumValue,
-XmlBindings,Parameter,9,1,4,5,1,30,1,0,0,0,0,0,,
-XmlBindings,Method,9,2,6,4,2,60,3,0,0,0,0,0,,
-XmlBindings,Interface,8,1,8,4,1,114,3,0,1,0,2,0,CodeGen.Formatter' CodeGen.Namespace,
-XmlBindings,Namespace,8,1,10,3,1,91,9,0,0,0,1,0,CodeGen.OutputDataTypes,
-XmlBindings,Primitive,5,1,3,3,1,37,2,0,1,0,0,0,,
-XmlBindings,Struct,23,9,14,9,5,281,33,0,2,0.33,7,0,CodeGen.Namespace' CodeGen.Formatter' CodeGen.Struct' CodeGen.OutputDataTypes' CodeGen.QualifiableType' CodeGen.StructField' CodeGen.Interface,
-XmlBindings,EffectProperty,7,0,0,7,0,17,0,0,0,-1,0,0,,
-XmlBindings,Effect,5,0,4,5,0,21,0,0,0,-1,0,0,,
-XmlBindings,PrefixNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-XmlBindings,FilenameBaseNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-XmlBindings,RootNamespaceNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-XmlBindings,Settings,3,0,3,3,0,16,0,0,0,-1,0,0,,
-XmlBindings,StructField,10,2,6,4,2,61,4,0,0,0,1,0,CodeGen.Formatter,
-XmlBindings,Typedef,2,0,0,2,0,7,0,0,0,-1,0,0,,
-XmlBindings,Utilities,0,1,0,0,1,12,1,0,0,-1,0,0,,
-Overrides,Struct,5,1,0,5,1,17,1,0,0,0,0,0,,
-Overrides,EnumValue,5,1,0,5,1,17,1,0,0,0,0,0,,
-Overrides,Enum,5,1,1,5,1,19,1,0,0,0,0,0,,
-Overrides,Interface,2,0,0,2,0,7,0,0,0,-1,0,0,,
-Overrides,EffectProperty,7,0,0,7,0,17,0,0,0,-1,0,0,,
-Overrides,Effect,5,0,4,5,0,21,0,0,0,-1,0,0,,
-Overrides,Namespace,2,0,4,2,0,15,0,0,0,-1,0,0,,
-Overrides,Primitive,2,0,0,2,0,7,0,0,0,-1,0,0,,
-Overrides,PrefixNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-Overrides,FilenameBaseNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-Overrides,RootNamespaceNode,1,0,0,1,0,5,0,0,0,-1,0,0,,
-Overrides,Settings,3,0,3,3,0,16,0,0,0,-1,0,0,,
+CodeGen,EffectGenerator,0,19,0,0,3,522,91,0,0,-1,15,2,Effects.EnumValues' Effects.UsageType' Effects.Property' Effects.Effect' CodeGen.Formatter' CodeGen.EnumValue' CodeGen.Enum' CodeGen.UuidHelper' CodeGen.OutputEffectType' CodeGen.QualifiableType' XmlBindings.EnumValue' XmlBindings.Enum' XmlBindings.Effect' XmlBindings.Settings' XmlBindings.Utilities,CodeGen.Program' CodeGen.OutputEffectType
+CodeGen,Formatter,4,10,0,1,10,91,16,0,0,0.3,0,10,,CodeGen.OutputtableType' CodeGen.Interface' CodeGen.StructField' CodeGen.Struct' CodeGen.OutputDataTypes' CodeGen.Program' CodeGen.OutputEffectType' CodeGen.EnumValue' CodeGen.Enum' CodeGen.EffectGenerator
+CodeGen,D2DTypes,3,1,0,0,1,31,7,0,0,0,10,1,CodeGen.Namespace' CodeGen.Primitive' CodeGen.QualifiableType' CodeGen.Struct' CodeGen.OutputDataTypes' XmlBindings.D2DTypes' XmlBindings.Namespace' XmlBindings.Primitive' XmlBindings.Struct' XmlBindings.Settings,CodeGen.Program
+CodeGen,EnumValue,10,5,3,5,4,101,11,0,0,0,2,4,CodeGen.Formatter' XmlBindings.EnumValue,CodeGen.OutputEffectType' CodeGen.Enum' CodeGen.EffectGenerator' XmlBindings.Struct
+CodeGen,Enum,9,4,5,5,4,146,14,0,1,0,10,5,CodeGen.Formatter' CodeGen.EnumValue' CodeGen.EnumValueComparer' CodeGen.Namespace' CodeGen.QualifiableType' CodeGen.OutputtableType' CodeGen.OutputDataTypes' XmlBindings.EnumValue' XmlBindings.Enum' XmlBindings.Namespace,CodeGen.OutputDataTypes' CodeGen.Namespace' Effects.EnumValues' CodeGen.EffectGenerator' XmlBindings.Struct
+CodeGen,EnumValueComparer,0,2,0,0,1,21,5,0,0,-1,0,1,,CodeGen.Enum
+CodeGen,UuidHelper,0,3,0,0,1,54,4,0,0,-1,0,1,,CodeGen.EffectGenerator
+CodeGen,Interface,6,1,7,2,1,106,3,0,1,0,9,3,CodeGen.Formatter' CodeGen.Method' CodeGen.Parameter' CodeGen.Namespace' CodeGen.QualifiableType' XmlBindings.Parameter' XmlBindings.Method' XmlBindings.Interface' XmlBindings.Namespace,CodeGen.Struct' CodeGen.Namespace' XmlBindings.Struct
+CodeGen,Method,5,2,5,0,2,48,3,0,0,0,0,1,,CodeGen.Interface
+CodeGen,Parameter,4,1,4,0,1,18,1,0,0,0,0,1,,CodeGen.Interface
+CodeGen,Namespace,7,1,6,2,1,79,9,0,0,0,10,5,CodeGen.Enum' CodeGen.Interface' CodeGen.QualifiableType' CodeGen.Struct' CodeGen.OutputDataTypes' XmlBindings.Enum' XmlBindings.Interface' XmlBindings.Namespace' XmlBindings.Struct' XmlBindings.Typedef,CodeGen.Interface' CodeGen.Struct' CodeGen.Enum' CodeGen.D2DTypes' XmlBindings.Struct
+CodeGen,OutputEffectType,1,25,0,0,6,750,109,0,0,0.12,9,1,Effects.EnumValues' Effects.UsageType' Effects.Property' Effects.Effect' CodeGen.EffectGenerator' CodeGen.Formatter' CodeGen.EnumValue' CodeGen.OutputDataTypes' XmlBindings.EnumValue,CodeGen.EffectGenerator
+CodeGen,Primitive,4,1,3,2,1,33,2,0,1,0,2,2,CodeGen.QualifiableType' XmlBindings.Primitive,CodeGen.D2DTypes' XmlBindings.Struct
+CodeGen,QualifiableType,0,0,6,0,0,13,0,5,0,-1,0,10,,CodeGen.D2DTypes' CodeGen.Primitive' CodeGen.OutputtableType' CodeGen.Interface' CodeGen.Namespace' CodeGen.Enum' CodeGen.EffectGenerator' CodeGen.OutputDataTypes' CodeGen.Program' CodeGen.Struct
+CodeGen,OutputtableType,0,1,1,0,1,5,1,4,1,-1,2,3,CodeGen.Formatter' CodeGen.QualifiableType,CodeGen.Struct' CodeGen.Enum' CodeGen.OutputDataTypes
+CodeGen,StructField,3,1,3,0,1,24,2,0,0,0,2,1,CodeGen.Formatter' XmlBindings.StructField,CodeGen.Struct
+CodeGen,Struct,7,4,6,0,2,124,16,0,2,0,11,3,CodeGen.Formatter' CodeGen.Interface' CodeGen.Namespace' CodeGen.QualifiableType' CodeGen.OutputtableType' CodeGen.StructField' CodeGen.OutputDataTypes' XmlBindings.Interface' XmlBindings.Namespace' XmlBindings.Struct' XmlBindings.StructField,CodeGen.OutputDataTypes' CodeGen.D2DTypes' CodeGen.Namespace
+CodeGen,OutputDataTypes,1,6,0,0,6,57,10,0,0,0,7,6,CodeGen.Formatter' CodeGen.Enum' CodeGen.QualifiableType' CodeGen.OutputtableType' CodeGen.Struct' XmlBindings.Enum' XmlBindings.Struct,CodeGen.Program' CodeGen.D2DTypes' CodeGen.Namespace' CodeGen.Struct' CodeGen.Enum' CodeGen.OutputEffectType
+CodeGen,Program,0,9,0,0,7,91,12,0,0,-1,9,0,CodeGen.EffectGenerator' CodeGen.Formatter' CodeGen.D2DTypes' CodeGen.QualifiableType' CodeGen.OutputDataTypes' CodeGen.ProcessedInputFiles' XmlBindings.D2DTypes' XmlBindings.Settings' XmlBindings.Utilities,
+CodeGen,ProcessedInputFiles,3,0,0,3,0,6,0,0,0,-1,0,1,,CodeGen.Program
+XmlBindings,D2DTypes,3,1,5,0,1,48,7,0,0,0,5,2,XmlBindings.Enum' XmlBindings.Interface' XmlBindings.Namespace' XmlBindings.Primitive' XmlBindings.Struct,CodeGen.D2DTypes' CodeGen.Program
+XmlBindings,EnumValue,23,9,6,13,7,207,21,0,0,0.22,0,6,,CodeGen.EnumValue' XmlBindings.Enum' CodeGen.Enum' CodeGen.OutputEffectType' CodeGen.EffectGenerator' XmlBindings.Struct
+XmlBindings,Enum,19,7,11,11,7,295,27,0,2,0,1,8,XmlBindings.EnumValue,XmlBindings.D2DTypes' CodeGen.Enum' XmlBindings.Namespace' CodeGen.Namespace' CodeGen.OutputDataTypes' Effects.EnumValues' CodeGen.EffectGenerator' XmlBindings.Struct
+XmlBindings,Parameter,9,1,4,5,1,30,1,0,0,0,0,2,,XmlBindings.Method' CodeGen.Interface
+XmlBindings,Method,9,2,6,4,2,60,3,0,0,0,1,2,XmlBindings.Parameter,XmlBindings.Interface' CodeGen.Interface
+XmlBindings,Interface,8,1,8,4,1,114,3,0,1,0,1,6,XmlBindings.Method,XmlBindings.D2DTypes' CodeGen.Interface' XmlBindings.Namespace' CodeGen.Namespace' CodeGen.Struct' XmlBindings.Struct
+XmlBindings,Namespace,8,1,10,3,1,91,9,0,0,0,4,7,XmlBindings.Enum' XmlBindings.Interface' XmlBindings.Struct' XmlBindings.Typedef,CodeGen.Namespace' XmlBindings.D2DTypes' CodeGen.D2DTypes' CodeGen.Interface' CodeGen.Struct' CodeGen.Enum' XmlBindings.Struct
+XmlBindings,Primitive,5,1,3,3,1,37,2,0,1,0,0,4,,CodeGen.Primitive' XmlBindings.D2DTypes' CodeGen.D2DTypes' XmlBindings.Struct
+XmlBindings,Struct,23,9,14,9,5,281,33,0,2,0.33,15,6,CodeGen.EnumValue' CodeGen.Enum' CodeGen.Interface' CodeGen.Namespace' CodeGen.Primitive' XmlBindings.EnumValue' XmlBindings.Enum' XmlBindings.Interface' XmlBindings.Namespace' XmlBindings.Primitive' XmlBindings.EffectProperty' XmlBindings.Effect' XmlBindings.PrefixNode' XmlBindings.FilenameBaseNode' XmlBindings.RootNamespaceNode,CodeGen.Struct' CodeGen.Namespace' CodeGen.D2DTypes' XmlBindings.Namespace' XmlBindings.D2DTypes' CodeGen.OutputDataTypes
+XmlBindings,EffectProperty,7,0,0,7,0,17,0,0,0,-1,0,1,,XmlBindings.Struct
+XmlBindings,Effect,5,0,4,5,0,21,0,0,0,-1,0,3,,XmlBindings.Struct' Effects.Effect' CodeGen.EffectGenerator
+XmlBindings,PrefixNode,1,0,0,1,0,5,0,0,0,-1,0,1,,XmlBindings.Struct
+XmlBindings,FilenameBaseNode,1,0,0,1,0,5,0,0,0,-1,0,1,,XmlBindings.Struct
+XmlBindings,RootNamespaceNode,1,0,0,1,0,5,0,0,0,-1,0,1,,XmlBindings.Struct
+XmlBindings,Settings,3,0,3,3,0,16,0,0,0,-1,0,3,,CodeGen.D2DTypes' CodeGen.Program' CodeGen.EffectGenerator
+XmlBindings,StructField,10,2,6,4,2,61,4,0,0,0,0,2,,CodeGen.StructField' CodeGen.Struct
+XmlBindings,Typedef,2,0,0,2,0,7,0,0,0,-1,0,2,,XmlBindings.Namespace' CodeGen.Namespace
+XmlBindings,Utilities,0,1,0,0,1,12,1,0,0,-1,0,2,,CodeGen.Program' CodeGen.EffectGenerator

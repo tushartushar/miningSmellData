@@ -1,0 +1,42 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Clide,CompositionSpec,2,3,1,0,3,44,4,0,0,0.67,5,0,Clide.MockServiceProvider' Clide.MockComponent' Clide.ExportProviderProvider' Clide.IComponent' Clide.IService,
+Clide,TestJoinableTaskContext,0,1,1,0,1,12,1,0,0,-1,0,0,,
+Clide,MockObservable,0,1,0,0,1,6,1,0,0,-1,0,0,,
+Clide,MockServiceProvider,0,1,2,0,1,34,1,0,0,-1,2,1,Microsoft.Internal.VisualStudio.Shell.Interop.IVsFeatureFlags' Microsoft.Internal.VisualStudio.Shell.Interop.SVsFeatureFlags,Clide.CompositionSpec
+Clide,MockAsyncServiceProvider,0,1,1,0,1,17,1,0,0,-1,0,0,,
+Clide,MockHierarchyItemManager,0,1,2,0,1,12,1,0,0,-1,0,0,,
+Clide,MockComponent,0,0,0,0,0,6,0,0,1,-1,2,1,Clide.IComponent' Clide.IService,Clide.CompositionSpec
+Clide,ExportProviderProvider,1,1,1,0,1,11,1,0,0,0,0,1,,Clide.CompositionSpec
+Clide,CpsProvider,0,0,1,0,0,6,0,0,0,-1,0,0,,
+Clide,MockCommandBusProvider,0,0,1,0,0,5,0,0,0,-1,0,0,,
+Clide,MockEventStreamProvider,0,0,1,0,0,5,0,0,0,-1,0,0,,
+Clide,IComponent,0,0,0,0,0,1,0,1,0,-1,0,2,,Clide.CompositionSpec' Clide.MockComponent
+Clide,IService,0,0,0,0,0,1,0,1,0,-1,0,2,,Clide.CompositionSpec' Clide.MockComponent
+Clide,ServiceLocatorExtensionsSpec,0,13,0,0,13,99,13,0,0,-1,2,0,Clide.Foo' Clide.IFooMetadata,
+Clide,ServiceProviderExtensionsSpec,0,4,0,0,4,31,4,0,0,-1,2,0,Clide.IFoo' Clide.IFooReg,
+Clide,IFoo,0,0,0,0,0,1,0,0,1,-1,0,1,,Clide.ServiceProviderExtensionsSpec
+Clide,IFooReg,0,0,0,0,0,1,0,1,0,-1,0,1,,Clide.ServiceProviderExtensionsSpec
+Clide,SolutionExtensionsSpec,1,8,0,0,8,103,8,0,0,0,6,0,Clide.FakeSolutionExplorer' Clide.FakeSolution' Clide.FakeSolutionFolder' Clide.FakeSolutionItem' Clide.FakeProject' Clide.FakeItem,
+Clide,FakeSolutionExplorer,0,2,3,0,2,16,3,0,2,-1,0,1,,Clide.SolutionExtensionsSpec
+Clide,FakeSolution,0,8,6,0,8,46,9,0,2,-1,2,1,Clide.FakeSolutionFolder' Clide.FakeSolutionExplorerNode,Clide.SolutionExtensionsSpec
+Clide,FakeSolutionFolder,0,3,1,0,3,18,3,0,2,-1,1,2,Clide.FakeSolutionExplorerNode,Clide.FakeSolution' Clide.SolutionExtensionsSpec
+Clide,FakeSolutionItem,0,2,4,0,2,18,2,0,2,-1,1,1,Clide.FakeSolutionExplorerNode,Clide.SolutionExtensionsSpec
+Clide,FakeProject,4,9,5,0,9,42,9,0,2,1,2,1,Clide.FakeFolder' Clide.FakeSolutionExplorerNode,Clide.SolutionExtensionsSpec
+Clide,FakeFolder,0,3,2,0,3,22,3,0,2,-1,1,1,Clide.FakeSolutionExplorerNode,Clide.FakeProject
+Clide,FakeItem,0,2,5,0,2,23,2,0,2,-1,1,1,Clide.FakeSolutionExplorerNode,Clide.SolutionExtensionsSpec
+Clide,FakeSolutionExplorerNode,1,7,11,0,6,70,8,6,1,1,0,6,,Clide.FakeSolution' Clide.FakeSolutionFolder' Clide.FakeSolutionItem' Clide.FakeProject' Clide.FakeFolder' Clide.FakeItem
+Clide,GuardSpec,0,11,0,0,10,73,11,0,0,-1,0,0,,
+Clide,ServiceLocatorSpec,0,11,0,0,11,97,11,0,0,-1,2,0,Clide.Foo' Clide.IFooMetadata,
+Clide,Foo,0,0,0,0,0,2,0,0,0,-1,1,2,Clide.FooExportAttribute,Clide.ServiceLocatorExtensionsSpec' Clide.ServiceLocatorSpec
+Clide,IFooMetadata,0,0,1,0,0,4,0,1,0,-1,0,3,,Clide.ServiceLocatorExtensionsSpec' Clide.ServiceLocatorSpec' Clide.FooExportAttribute
+Clide,FooExportAttribute,0,1,1,0,1,10,1,0,1,-1,1,1,Clide.IFooMetadata,Clide.Foo
+Clide,StaFactDiscoverer,1,2,0,0,2,13,2,0,0,0,1,0,Clide.StaTestCase,
+Clide,StaFactAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Clide,StaTestCase,1,6,8,0,5,112,11,0,0,0.67,0,1,,Clide.StaFactDiscoverer
+Clide,StartableServiceSpec,0,6,0,0,6,151,6,0,0,-1,1,0,Clide.CancellationComponent,
+Clide,CancellationComponent,1,2,0,0,2,13,2,0,1,1,0,1,,Clide.StartableServiceSpec
+Clide,TestContainer,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Clide,VsCommandExtensionAdapterSpec,1,6,0,0,6,61,6,0,0,0,0,0,,
+Clide.Events,ShellInitializedObservableSpec,1,2,0,0,2,49,2,0,0,0,0,0,,
+Microsoft.Internal.VisualStudio.Shell.Interop,IVsFeatureFlags,0,1,0,0,0,6,1,0,0,-1,0,2,,Clide.MockServiceProvider' Clide.DiagnosticsLogging
+Microsoft.Internal.VisualStudio.Shell.Interop,SVsFeatureFlags,0,0,0,0,0,4,0,0,0,-1,0,2,,Clide.MockServiceProvider' Clide.DiagnosticsLogging

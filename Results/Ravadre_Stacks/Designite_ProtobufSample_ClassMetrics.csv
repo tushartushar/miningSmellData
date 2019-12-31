@@ -1,10 +1,10 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-ProtobufSample,Client,1,2,0,0,2,25,2,0,0,1,1,1,Stacks.Tcp.MessageClient,ProtobufSample.Program
-ProtobufSample,ClientMessageHandler,0,2,0,0,2,13,2,0,1,-1,3,0,ProtobufSample.TemperatureResponse' Stacks.IMessageClient' ProtobufSample.TemperatureChanged,
-ProtobufSample,TemperatureChanged,0,0,2,0,0,9,0,0,0,-1,0,1,,ProtobufSample.ClientMessageHandler
-ProtobufSample,TemperatureRequest,0,0,1,0,0,7,0,0,0,-1,0,1,,ProtobufSample.ServerMessageHandler
-ProtobufSample,TemperatureResponse,0,0,2,0,0,9,0,0,0,-1,0,1,,ProtobufSample.ClientMessageHandler
-ProtobufSample,Program,0,1,0,0,0,12,1,0,0,-1,2,0,ProtobufSample.Server' ProtobufSample.Client,
-ProtobufSample,Server,3,4,1,0,2,38,5,0,0,0.5,4,1,Stacks.Tcp.SocketServer' Stacks.Tcp.MessageClient' ProtobufSample.TemperatureService' Stacks.Tcp.SocketClient,ProtobufSample.Program
-ProtobufSample,ServerMessageHandler,1,2,0,0,2,18,2,0,1,0,3,0,ProtobufSample.TemperatureService' ProtobufSample.TemperatureRequest' Stacks.IMessageClient,
+ProtobufSample,Client,1,2,0,0,2,25,2,0,0,1,0,1,,ProtobufSample.Program
+ProtobufSample,ClientMessageHandler,0,2,0,0,2,13,2,0,1,-1,0,1,,ProtobufSample.Client
+ProtobufSample,TemperatureChanged,0,0,2,0,0,9,0,0,0,-1,0,2,,ProtobufSample.ClientMessageHandler' ProtobufSample.Server
+ProtobufSample,TemperatureRequest,0,0,1,0,0,7,0,0,0,-1,0,2,,ProtobufSample.ServerMessageHandler' ProtobufSample.Client
+ProtobufSample,TemperatureResponse,0,0,2,0,0,9,0,0,0,-1,0,3,,ProtobufSample.Client' ProtobufSample.ClientMessageHandler' ProtobufSample.ServerMessageHandler
+ProtobufSample,Program,0,1,0,0,0,12,1,0,0,-1,0,0,,
+ProtobufSample,Server,3,4,1,0,2,38,5,0,0,0.75,0,1,,ProtobufSample.Program
+ProtobufSample,ServerMessageHandler,1,2,0,0,2,18,2,0,1,1,0,1,,ProtobufSample.Server
 ProtobufSample,TemperatureService,2,2,0,0,2,37,3,0,1,0,0,2,,ProtobufSample.Server' ProtobufSample.ServerMessageHandler

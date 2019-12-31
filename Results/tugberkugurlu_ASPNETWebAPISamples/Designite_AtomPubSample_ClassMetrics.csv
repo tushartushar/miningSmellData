@@ -1,40 +1,40 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 AtomPubSample,AtomPubServiceDocumentContext,0,0,1,0,0,3,0,0,0,-1,0,0,,
-AtomPubSample,EditLink,1,1,0,1,1,6,1,0,1,0,0,0,,
-AtomPubSample,HttpConfiguartionExtensions,0,3,0,0,3,22,4,0,0,-1,1,0,AtomPubSample.Hypermedia.IResponseEnricher,
-AtomPubSample,Global,0,1,0,0,0,13,1,0,0,-1,0,0,,
-AtomPubSample,AtopPubSampleConfigExtensions,0,4,0,0,0,22,4,0,0,-1,0,0,,
-AtomPubSample,Link,0,2,3,0,2,16,2,2,0,-1,0,1,,AtomPubSample.Models.Resource
-AtomPubSample,SelfLink,1,1,0,1,1,6,1,0,1,0,0,0,,
+AtomPubSample,EditLink,1,1,0,1,1,6,1,0,1,0,1,2,AtomPubSample.Link,AtomPubSample.Hypermedia.MediaResponseEnricher' AtomPubSample.Hypermedia.PostResponseEnricher
+AtomPubSample,HttpConfiguartionExtensions,0,3,0,0,3,22,4,0,0,-1,2,0,AtomPubSample.Dispatchers.AtomPubServiceDocumentDispatcher' AtomPubSample.Hypermedia.IResponseEnricher,
+AtomPubSample,Global,0,1,0,0,0,13,1,0,0,-1,2,0,AtomPubSample.Hypermedia.MediaResponseEnricher' AtomPubSample.Hypermedia.PostResponseEnricher,
+AtomPubSample,AtopPubSampleConfigExtensions,0,4,0,0,0,22,4,0,0,-1,5,0,AtomPubSample.Formatters.AtomPubCategoryMediaTypeFormatter' AtomPubSample.Formatters.AtomPubMediaFormatter' AtomPubSample.MessageHandlers.BasicAuthHandler' AtomPubSample.MessageHandlers.EnrichingHandler' AtomPubSample.MessageHandlers.WLWMessageHandler,
+AtomPubSample,Link,0,2,3,0,2,16,2,2,0,-1,0,6,,AtomPubSample.AtomPub.IPublicationFeed' AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.IPublicationMedia' AtomPubSample.EditLink' AtomPubSample.SelfLink' AtomPubSample.Models.Resource
+AtomPubSample,SelfLink,1,1,0,1,1,6,1,0,1,0,1,3,AtomPubSample.Link,AtomPubSample.Hypermedia.MediaResponseEnricher' AtomPubSample.Hypermedia.PostResponseEnricher' AtomPubSample.Models.PostModel
 AtomPubSample,StringExtensions,0,3,0,0,0,22,5,0,0,-1,0,0,,
-AtomPubSample.AtomPub,AtomExtensions,0,6,0,0,5,67,12,0,0,-1,3,0,AtomPubSample.AtomPub.IPublicationFeed' AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.IPublicationMedia,
-AtomPubSample.AtomPub,IPublication,0,0,10,0,0,42,0,1,0,-1,0,2,,AtomPubSample.AtomPub.AtomExtensions' AtomPubSample.Formatters.AtomPubMediaFormatter
-AtomPubSample.AtomPub,IPublicationCategoriesDocument,0,0,3,0,0,14,0,1,0,-1,0,1,,AtomPubSample.Formatters.AtomPubCategoryMediaTypeFormatter
-AtomPubSample.AtomPub,IPublicationCategory,0,0,2,0,0,10,0,2,0,-1,0,0,,
-AtomPubSample.AtomPub,IPublicationFeed,0,0,5,0,0,22,0,1,0,-1,0,2,,AtomPubSample.AtomPub.AtomExtensions' AtomPubSample.Formatters.AtomPubMediaFormatter
-AtomPubSample.AtomPub,IPublicationMedia,0,0,8,0,0,10,0,1,0,-1,0,2,,AtomPubSample.AtomPub.AtomExtensions' AtomPubSample.Formatters.AtomPubMediaFormatter
-AtomPubSample.AtomPub,PublicationCategoriesDocument,0,1,3,0,1,10,1,0,1,-1,0,1,,AtomPubSample.Controllers.TagsController
-AtomPubSample.AtomPub,PublicationCategory,0,1,2,0,1,9,1,0,1,-1,0,0,,
-AtomPubSample.AtomPub,IPublicationCommand,0,0,6,0,0,26,0,1,0,-1,0,1,,AtomPubSample.Formatters.AtomPubMediaFormatter
-AtomPubSample.Controllers,BaseApiController,2,0,0,0,0,4,0,3,0,-1,0,0,,
-AtomPubSample.Controllers,MediaController,1,4,0,0,3,67,8,0,1,0,1,0,AtomPubSample.Models.MediaModel,
-AtomPubSample.Controllers,PostsController,0,8,0,0,5,66,9,0,1,-1,5,0,AtomPubSample.Models.PostFeed' AtomPubSample.Models.PostModel' AtomPubSample.Models.Post' AtomPubSample.Models.AddPostCommand' AtomPubSample.Models.UpdatePostCommand,
-AtomPubSample.Controllers,TagsController,0,1,0,0,1,13,1,0,1,-1,1,0,AtomPubSample.AtomPub.PublicationCategoriesDocument,
-AtomPubSample.Dispatchers,AtomPubServiceDocumentDispatcher,0,3,0,0,0,48,3,0,0,-1,0,0,,
-AtomPubSample.Formatters,AtomPubCategoryMediaTypeFormatter,1,4,0,0,4,27,4,0,0,1,1,0,AtomPubSample.AtomPub.IPublicationCategoriesDocument,
-AtomPubSample.Formatters,AtomPubMediaFormatter,1,8,0,0,5,75,9,0,0,0.62,4,0,AtomPubSample.AtomPub.IPublicationCommand' AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.IPublicationFeed' AtomPubSample.AtomPub.IPublicationMedia,
-AtomPubSample.Hypermedia,IResponseEnricher,0,2,0,0,0,4,2,2,0,-1,0,1,,AtomPubSample.HttpConfiguartionExtensions
-AtomPubSample.Hypermedia,MediaResponseEnricher,0,3,0,0,2,20,4,0,1,-1,1,0,AtomPubSample.Models.MediaModel,
-AtomPubSample.Hypermedia,PostResponseEnricher,0,3,0,0,2,29,6,0,1,-1,2,0,AtomPubSample.Models.PostModel' AtomPubSample.Models.PostFeed,
-AtomPubSample.MessageHandlers,BasicAuthHandler,0,1,0,0,0,10,2,0,0,-1,0,0,,
-AtomPubSample.MessageHandlers,EnrichingHandler,0,1,0,0,0,9,1,0,0,-1,0,0,,
-AtomPubSample.MessageHandlers,WLWMessageHandler,1,1,0,0,0,13,2,0,0,0,0,0,,
-AtomPubSample.Models,AddPostCommand,0,0,0,0,0,2,0,0,1,-1,0,1,,AtomPubSample.Controllers.PostsController
-AtomPubSample.Models,MediaModel,0,0,7,0,0,9,0,0,1,-1,0,2,,AtomPubSample.Controllers.MediaController' AtomPubSample.Hypermedia.MediaResponseEnricher
-AtomPubSample.Models,PostModel,0,2,13,0,2,38,2,0,1,-1,1,2,AtomPubSample.Models.Post,AtomPubSample.Controllers.PostsController' AtomPubSample.Hypermedia.PostResponseEnricher
-AtomPubSample.Models,Post,0,1,9,0,1,14,1,0,0,-1,0,2,,AtomPubSample.Controllers.PostsController' AtomPubSample.Models.PostModel
-AtomPubSample.Models,PostFeed,0,0,5,0,0,9,0,0,1,-1,0,2,,AtomPubSample.Controllers.PostsController' AtomPubSample.Hypermedia.PostResponseEnricher
-AtomPubSample.Models,Resource,1,2,1,0,2,11,2,3,0,0,1,0,AtomPubSample.Link,
-AtomPubSample.Models,SafeCollection<T>,1,7,2,0,6,33,7,0,0,0.29,0,0,,
-AtomPubSample.Models,UpdatePostCommand,0,1,8,0,1,18,1,1,1,-1,0,1,,AtomPubSample.Controllers.PostsController
-AtomPubSample.Models,TagModel,0,0,3,0,0,7,0,0,1,-1,0,0,,
+AtomPubSample.AtomPub,AtomExtensions,0,6,0,0,5,67,12,0,0,-1,4,0,AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.IPublicationFeed' AtomPubSample.AtomPub.IPublicationMedia' AtomPubSample.AtomPub.IPublicationCommand,
+AtomPubSample.AtomPub,IPublication,0,0,10,0,0,42,0,1,0,-1,2,5,AtomPubSample.Link' AtomPubSample.AtomPub.IPublicationCategory,AtomPubSample.AtomPub.IPublicationFeed' AtomPubSample.AtomPub.AtomExtensions' AtomPubSample.Models.PostFeed' AtomPubSample.Formatters.AtomPubMediaFormatter' AtomPubSample.Models.PostModel
+AtomPubSample.AtomPub,IPublicationCategoriesDocument,0,0,3,0,0,14,0,1,0,-1,1,2,AtomPubSample.AtomPub.IPublicationCategory,AtomPubSample.AtomPub.PublicationCategoriesDocument' AtomPubSample.Formatters.AtomPubCategoryMediaTypeFormatter
+AtomPubSample.AtomPub,IPublicationCategory,0,0,2,0,0,10,0,2,0,-1,0,6,,AtomPubSample.AtomPub.IPublicationCategoriesDocument' AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.PublicationCategory' AtomPubSample.Models.PostModel' AtomPubSample.Models.TagModel' AtomPubSample.AtomPub.PublicationCategoriesDocument
+AtomPubSample.AtomPub,IPublicationFeed,0,0,5,0,0,22,0,1,0,-1,2,3,AtomPubSample.Link' AtomPubSample.AtomPub.IPublication,AtomPubSample.Models.PostFeed' AtomPubSample.AtomPub.AtomExtensions' AtomPubSample.Formatters.AtomPubMediaFormatter
+AtomPubSample.AtomPub,IPublicationMedia,0,0,8,0,0,10,0,1,0,-1,1,3,AtomPubSample.Link,AtomPubSample.Models.MediaModel' AtomPubSample.AtomPub.AtomExtensions' AtomPubSample.Formatters.AtomPubMediaFormatter
+AtomPubSample.AtomPub,PublicationCategoriesDocument,0,1,3,0,1,10,1,0,1,-1,2,1,AtomPubSample.AtomPub.IPublicationCategoriesDocument' AtomPubSample.AtomPub.IPublicationCategory,AtomPubSample.Controllers.TagsController
+AtomPubSample.AtomPub,PublicationCategory,0,1,2,0,1,9,1,0,1,-1,1,1,AtomPubSample.AtomPub.IPublicationCategory,AtomPubSample.Models.PostModel
+AtomPubSample.AtomPub,IPublicationCommand,0,0,6,0,0,26,0,1,0,-1,0,3,,AtomPubSample.Models.UpdatePostCommand' AtomPubSample.Formatters.AtomPubMediaFormatter' AtomPubSample.AtomPub.AtomExtensions
+AtomPubSample.Controllers,BaseApiController,2,0,0,0,0,4,0,3,0,-1,3,3,AtomPubSample.Models.MediaModel' AtomPubSample.Models.Post' AtomPubSample.Models.SafeCollection<T>,AtomPubSample.Controllers.PostsController' AtomPubSample.Controllers.MediaController' AtomPubSample.Controllers.TagsController
+AtomPubSample.Controllers,MediaController,1,4,0,0,3,67,8,0,1,0,2,0,AtomPubSample.Controllers.BaseApiController' AtomPubSample.Models.MediaModel,
+AtomPubSample.Controllers,PostsController,0,8,0,0,5,66,9,0,1,-1,6,0,AtomPubSample.Controllers.BaseApiController' AtomPubSample.Models.AddPostCommand' AtomPubSample.Models.PostModel' AtomPubSample.Models.Post' AtomPubSample.Models.PostFeed' AtomPubSample.Models.UpdatePostCommand,
+AtomPubSample.Controllers,TagsController,0,1,0,0,1,13,1,0,1,-1,3,0,AtomPubSample.AtomPub.PublicationCategoriesDocument' AtomPubSample.Controllers.BaseApiController' AtomPubSample.Models.TagModel,
+AtomPubSample.Dispatchers,AtomPubServiceDocumentDispatcher,0,3,0,0,0,48,3,0,0,-1,0,1,,AtomPubSample.HttpConfiguartionExtensions
+AtomPubSample.Formatters,AtomPubCategoryMediaTypeFormatter,1,4,0,0,4,27,4,0,0,1,1,1,AtomPubSample.AtomPub.IPublicationCategoriesDocument,AtomPubSample.AtopPubSampleConfigExtensions
+AtomPubSample.Formatters,AtomPubMediaFormatter,1,8,0,0,5,75,11,0,0,0.62,4,1,AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.IPublicationFeed' AtomPubSample.AtomPub.IPublicationMedia' AtomPubSample.AtomPub.IPublicationCommand,AtomPubSample.AtopPubSampleConfigExtensions
+AtomPubSample.Hypermedia,IResponseEnricher,0,2,0,0,0,4,2,2,0,-1,0,4,,AtomPubSample.Hypermedia.PostResponseEnricher' AtomPubSample.Hypermedia.MediaResponseEnricher' AtomPubSample.MessageHandlers.EnrichingHandler' AtomPubSample.HttpConfiguartionExtensions
+AtomPubSample.Hypermedia,MediaResponseEnricher,0,3,0,0,2,20,4,0,1,-1,4,1,AtomPubSample.EditLink' AtomPubSample.SelfLink' AtomPubSample.Hypermedia.IResponseEnricher' AtomPubSample.Models.MediaModel,AtomPubSample.Global
+AtomPubSample.Hypermedia,PostResponseEnricher,0,3,0,0,2,29,6,0,1,-1,5,1,AtomPubSample.EditLink' AtomPubSample.SelfLink' AtomPubSample.Hypermedia.IResponseEnricher' AtomPubSample.Models.PostModel' AtomPubSample.Models.PostFeed,AtomPubSample.Global
+AtomPubSample.MessageHandlers,BasicAuthHandler,0,1,0,0,0,10,2,0,0,-1,0,1,,AtomPubSample.AtopPubSampleConfigExtensions
+AtomPubSample.MessageHandlers,EnrichingHandler,0,1,0,0,0,9,1,0,0,-1,1,1,AtomPubSample.Hypermedia.IResponseEnricher,AtomPubSample.AtopPubSampleConfigExtensions
+AtomPubSample.MessageHandlers,WLWMessageHandler,1,1,0,0,0,13,2,0,0,0,0,1,,AtomPubSample.AtopPubSampleConfigExtensions
+AtomPubSample.Models,AddPostCommand,0,0,0,0,0,2,0,0,1,-1,1,1,AtomPubSample.Models.UpdatePostCommand,AtomPubSample.Controllers.PostsController
+AtomPubSample.Models,MediaModel,0,0,7,0,0,9,0,0,1,-1,2,3,AtomPubSample.AtomPub.IPublicationMedia' AtomPubSample.Models.Resource,AtomPubSample.Controllers.BaseApiController' AtomPubSample.Hypermedia.MediaResponseEnricher' AtomPubSample.Controllers.MediaController
+AtomPubSample.Models,PostModel,0,2,13,0,2,38,2,0,1,-1,6,3,AtomPubSample.SelfLink' AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.IPublicationCategory' AtomPubSample.AtomPub.PublicationCategory' AtomPubSample.Models.Post' AtomPubSample.Models.Resource,AtomPubSample.Models.PostFeed' AtomPubSample.Hypermedia.PostResponseEnricher' AtomPubSample.Controllers.PostsController
+AtomPubSample.Models,Post,0,1,9,0,1,14,1,0,0,-1,0,3,,AtomPubSample.Models.PostModel' AtomPubSample.Controllers.BaseApiController' AtomPubSample.Controllers.PostsController
+AtomPubSample.Models,PostFeed,0,0,5,0,0,9,0,0,1,-1,4,2,AtomPubSample.AtomPub.IPublication' AtomPubSample.AtomPub.IPublicationFeed' AtomPubSample.Models.PostModel' AtomPubSample.Models.Resource,AtomPubSample.Hypermedia.PostResponseEnricher' AtomPubSample.Controllers.PostsController
+AtomPubSample.Models,Resource,1,2,1,0,2,11,2,3,0,0,1,3,AtomPubSample.Link,AtomPubSample.Models.MediaModel' AtomPubSample.Models.PostModel' AtomPubSample.Models.PostFeed
+AtomPubSample.Models,SafeCollection<T>,1,7,2,0,6,33,7,0,0,0.29,0,1,,AtomPubSample.Controllers.BaseApiController
+AtomPubSample.Models,UpdatePostCommand,0,1,8,0,1,18,1,1,1,-1,1,2,AtomPubSample.AtomPub.IPublicationCommand,AtomPubSample.Models.AddPostCommand' AtomPubSample.Controllers.PostsController
+AtomPubSample.Models,TagModel,0,0,3,0,0,7,0,0,1,-1,1,1,AtomPubSample.AtomPub.IPublicationCategory,AtomPubSample.Controllers.TagsController

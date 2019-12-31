@@ -1,0 +1,45 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Gentle.Common,CacheContentType,0,0,0,0,0,11,0,0,0,-1,0,1,,Gentle.Common.CacheManager
+Gentle.Common,CacheManager,3,21,2,0,16,400,42,0,0,0.14,14,1,Gentle.Common.CacheContentType' Gentle.Common.CacheStrategy' Gentle.Common.ICacheKeyProvider' Gentle.Common.CacheEntry' Gentle.Common.CacheStore' Gentle.Common.UniqingScope' Gentle.Common.ConfigKeyPresence' Gentle.Common.ConfigurationAttribute' Gentle.Common.Configurator' Gentle.Common.SystemSettings' Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.GentleStatistics' Gentle.Common.LogCategories,Gentle.Common.GentleStatistics
+Gentle.Common,CacheStrategy,0,0,0,0,0,22,0,0,0,-1,0,3,,Gentle.Common.CacheEntry' Gentle.Common.CacheManager' Gentle.Common.CacheStore
+Gentle.Common,ICacheKeyProvider,0,0,1,0,0,7,0,2,0,-1,0,1,,Gentle.Common.CacheManager
+Gentle.Common,CacheEntry,3,1,4,0,1,36,2,0,0,0,1,2,Gentle.Common.CacheStrategy,Gentle.Common.CacheManager' Gentle.Common.CacheStore
+Gentle.Common,CacheStore,2,10,2,0,9,186,21,0,0,0,4,1,Gentle.Common.CacheStrategy' Gentle.Common.CacheEntry' Gentle.Common.Check' Gentle.Common.Error,Gentle.Common.CacheManager
+Gentle.Common,UniqingScope,0,0,0,0,0,18,0,0,0,-1,0,1,,Gentle.Common.CacheManager
+Gentle.Common,ConfigKeyPresence,0,0,0,0,0,13,0,0,0,-1,0,5,,Gentle.Common.ElementTarget' Gentle.Common.ConfigurationAttribute' Gentle.Common.CacheManager' Gentle.Common.Check' Gentle.Common.ConfigurationMap
+Gentle.Common,ConfigurationAttribute,3,2,3,0,2,79,2,0,0,1,1,7,Gentle.Common.ConfigKeyPresence,Gentle.Common.ElementTarget' Gentle.Common.FieldTarget' Gentle.Common.CallbackTarget' Gentle.Common.PropertyTarget' Gentle.Common.CacheManager' Gentle.Common.Check' Gentle.Common.ConfigurationMap
+Gentle.Common,ConfigurationMap,4,3,0,0,2,140,21,0,0,0,12,1,Gentle.Common.ConfigKeyPresence' Gentle.Common.ConfigurationAttribute' Gentle.Common.ConfigurationHandler' Gentle.Common.CallbackTarget' Gentle.Common.ElementTarget' Gentle.Common.FieldTarget' Gentle.Common.PropertyTarget' Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.LogCategories' Gentle.Common.MemberAttributeInfo' Gentle.Common.Reflector,Gentle.Common.Configurator
+Gentle.Common,Configurator,9,19,2,0,13,416,33,0,0,0.11,8,2,Gentle.Common.ConfigurationMap' Gentle.Common.ConfigurationHandler' Gentle.Common.FileHandler' Gentle.Common.GentleSectionHandler' Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.GentleException' Gentle.Common.TypeConverter,Gentle.Common.Check' Gentle.Common.CacheManager
+Gentle.Common,ConfigurationHandler,1,3,2,0,2,48,3,2,0,0.67,0,4,,Gentle.Common.FileHandler' Gentle.Common.GentleSectionHandler' Gentle.Common.ConfigurationMap' Gentle.Common.Configurator
+Gentle.Common,FileHandler,5,8,0,1,2,183,18,0,1,0.25,6,1,Gentle.Common.ConfigurationHandler' Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.GentleException' Gentle.Common.LogCategories' Gentle.Common.FileSystemUtil,Gentle.Common.Configurator
+Gentle.Common,GentleSectionHandler,0,2,0,0,2,20,2,0,1,-1,1,2,Gentle.Common.ConfigurationHandler,Gentle.Common.Error' Gentle.Common.Configurator
+Gentle.Common,SystemSettings,1,6,8,0,0,191,9,0,0,0.33,1,3,Gentle.Common.Info,Gentle.Common.CacheManager' Gentle.Common.ElementTarget' Gentle.Common.CallbackTarget
+Gentle.Common,Info,0,0,0,0,0,11,0,0,0,-1,0,1,,Gentle.Common.SystemSettings
+Gentle.Common,CallbackTarget,2,5,0,0,4,63,9,0,1,0,5,1,Gentle.Common.ConfigurationAttribute' Gentle.Common.SystemSettings' Gentle.Common.ElementTarget' Gentle.Common.MethodDispatcher' Gentle.Common.MethodInvoker,Gentle.Common.ConfigurationMap
+Gentle.Common,ElementTarget,2,5,0,0,3,69,11,3,0,0.4,3,4,Gentle.Common.ConfigKeyPresence' Gentle.Common.ConfigurationAttribute' Gentle.Common.SystemSettings,Gentle.Common.PropertyTarget' Gentle.Common.CallbackTarget' Gentle.Common.FieldTarget' Gentle.Common.ConfigurationMap
+Gentle.Common,FieldTarget,1,2,0,1,2,21,2,0,1,0,4,1,Gentle.Common.ConfigurationAttribute' Gentle.Common.ElementTarget' Gentle.Common.Reflector' Gentle.Common.TypeConverter,Gentle.Common.ConfigurationMap
+Gentle.Common,PropertyTarget,1,2,0,1,2,21,2,0,1,0,4,1,Gentle.Common.ConfigurationAttribute' Gentle.Common.ElementTarget' Gentle.Common.Reflector' Gentle.Common.TypeConverter,Gentle.Common.ConfigurationMap
+Gentle.Common,LevelAttribute,1,1,1,0,1,20,1,0,0,0,1,3,Gentle.Common.Severity,Gentle.Common.GentleException' Gentle.Common.Check' Gentle.Common.Error
+Gentle.Common,MessageAttribute,2,1,2,0,1,32,1,0,0,0,1,2,Gentle.Common.Messages,Gentle.Common.Messages' Gentle.Common.Error
+Gentle.Common,Check,5,39,0,1,28,508,64,0,0,0.15,10,10,Gentle.Common.ConfigKeyPresence' Gentle.Common.ConfigurationAttribute' Gentle.Common.Configurator' Gentle.Common.LevelAttribute' Gentle.Common.Error' Gentle.Common.GentleException' Gentle.Common.LogCategories' Gentle.Common.Messages' Gentle.Common.Severity' Gentle.Common.Reflector,Gentle.Common.MethodDispatcher' Gentle.Common.Reflector' Gentle.Common.FileHandler' Gentle.Common.CacheStore' Gentle.Common.ConfigurationMap' Gentle.Common.MethodInvoker' Gentle.Common.Configurator' Gentle.Common.TypedArrayList' Gentle.Common.CacheManager' Gentle.Common.GentleStatistics
+Gentle.Common,Error,0,0,0,0,0,311,0,0,0,-1,4,12,Gentle.Common.GentleSectionHandler' Gentle.Common.LevelAttribute' Gentle.Common.MessageAttribute' Gentle.Common.Severity,Gentle.Common.ConfigurationMap' Gentle.Common.MethodDispatcher' Gentle.Common.Reflector' Gentle.Common.MethodInvoker' Gentle.Common.CacheStore' Gentle.Common.TypedArrayList' Gentle.Common.CacheManager' Gentle.Common.GentleException' Gentle.Common.FileHandler' Gentle.Common.Configurator' Gentle.Common.Messages' Gentle.Common.Check
+Gentle.Common,GentleException,2,6,2,0,5,103,11,1,0,0.5,3,4,Gentle.Common.LevelAttribute' Gentle.Common.Error' Gentle.Common.Severity,Gentle.Common.FileHandler' Gentle.Common.Messages' Gentle.Common.Check' Gentle.Common.Configurator
+Gentle.Common,GentleStatistics,5,3,5,0,2,149,6,0,0,0.67,3,1,Gentle.Common.CacheManager' Gentle.Common.Check' Gentle.Common.LogCategories,Gentle.Common.CacheManager
+Gentle.Common,LogCategories,0,0,0,0,0,45,0,0,0,-1,0,6,,Gentle.Common.FileHandler' Gentle.Common.MethodInvoker' Gentle.Common.ConfigurationMap' Gentle.Common.CacheManager' Gentle.Common.GentleStatistics' Gentle.Common.Check
+Gentle.Common,Messages,4,7,0,0,1,138,18,0,0,0,4,2,Gentle.Common.MessageAttribute' Gentle.Common.Error' Gentle.Common.GentleException' Gentle.Common.Reflector,Gentle.Common.MessageAttribute' Gentle.Common.Check
+Gentle.Common,Severity,0,0,0,0,0,28,0,0,0,-1,0,4,,Gentle.Common.LevelAttribute' Gentle.Common.GentleException' Gentle.Common.Error' Gentle.Common.Check
+Gentle.Common,NamespaceDoc,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Gentle.Common,MemberAttributeInfo,2,1,0,2,1,27,1,0,0,0,0,2,,Gentle.Common.Reflector' Gentle.Common.ConfigurationMap
+Gentle.Common,MethodDispatcher,3,4,0,0,3,61,6,0,0,0,4,2,Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.MethodInvokable' Gentle.Common.MethodInvoker,Gentle.Common.MethodInvokable' Gentle.Common.CallbackTarget
+Gentle.Common,MethodInvokable,3,2,0,3,2,41,2,0,0,0,2,2,Gentle.Common.MethodDispatcher' Gentle.Common.MethodInvoker,Gentle.Common.MethodDispatcher' Gentle.Common.MethodInvoker
+Gentle.Common,MethodInvoker,4,6,2,0,5,180,19,0,0,0,6,3,Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.LogCategories' Gentle.Common.MethodInvokable' Gentle.Common.Reflector' Gentle.Common.TypeConverter,Gentle.Common.MethodInvokable' Gentle.Common.MethodDispatcher' Gentle.Common.CallbackTarget
+Gentle.Common,Reflector,4,9,0,4,7,176,21,0,0,0.44,3,6,Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.MemberAttributeInfo,Gentle.Common.MethodInvoker' Gentle.Common.Check' Gentle.Common.FieldTarget' Gentle.Common.Messages' Gentle.Common.PropertyTarget' Gentle.Common.ConfigurationMap
+Gentle.Common,TypeConverter,0,10,0,0,9,174,21,0,0,-1,0,4,,Gentle.Common.FieldTarget' Gentle.Common.PropertyTarget' Gentle.Common.Configurator' Gentle.Common.MethodInvoker
+Gentle.Common,IBindable,0,0,0,0,0,8,0,1,0,-1,0,0,,
+Gentle.Common,TypedArrayList,7,26,13,0,18,505,47,0,0,0.08,5,0,Gentle.Common.Check' Gentle.Common.Error' Gentle.Common.Attributes.VisibleAttribute' Gentle.Common.Util.CaptionPropertyDescriptor' Gentle.Common.Util.ObjectPropertyComparer,
+Gentle.Common,FileSystemUtil,0,7,0,0,6,99,12,0,0,-1,0,1,,Gentle.Common.FileHandler
+Gentle.Common.Attributes,AllowSortAttribute,1,1,1,0,1,37,1,0,0,0,0,1,,Gentle.Common.Util.CaptionPropertyDescriptor
+Gentle.Common.Attributes,CaptionAttribute,1,1,1,0,1,25,1,0,0,0,0,1,,Gentle.Common.Util.CaptionPropertyDescriptor
+Gentle.Common.Attributes,VisibleAttribute,1,1,1,0,1,34,1,0,0,0,0,1,,Gentle.Common.TypedArrayList
+Gentle.Common.Util,CaptionPropertyDescriptor,2,7,9,0,5,241,9,0,0,0,2,1,Gentle.Common.Attributes.AllowSortAttribute' Gentle.Common.Attributes.CaptionAttribute,Gentle.Common.TypedArrayList
+Gentle.Common.Util,ObjectPropertyComparer,1,2,0,0,1,57,5,0,0,1,0,1,,Gentle.Common.TypedArrayList

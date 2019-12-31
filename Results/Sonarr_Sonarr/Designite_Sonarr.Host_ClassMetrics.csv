@@ -1,0 +1,40 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NzbDrone.Host.AccessControl,IFirewallAdapter,0,1,0,0,0,4,1,1,0,-1,0,2,,NzbDrone.Host.AccessControl.FirewallAdapter' NzbDrone.Host.AccessControl.RemoteAccessAdapter
+NzbDrone.Host.AccessControl,FirewallAdapter,3,5,0,0,2,77,9,0,1,0,1,0,NzbDrone.Host.AccessControl.IFirewallAdapter,
+NzbDrone.Host.AccessControl,INetshProvider,0,1,0,0,0,4,1,1,0,-1,0,3,,NzbDrone.Host.AccessControl.NetshProvider' NzbDrone.Host.AccessControl.UrlAclAdapter' NzbDrone.Host.AccessControl.SslAdapter
+NzbDrone.Host.AccessControl,NetshProvider,2,2,0,0,2,23,2,0,1,0,1,0,NzbDrone.Host.AccessControl.INetshProvider,
+NzbDrone.Host.AccessControl,IRemoteAccessAdapter,0,1,0,0,0,4,1,1,0,-1,0,3,,NzbDrone.Host.AccessControl.RemoteAccessAdapter' NzbDrone.Host.Owin.OwinHostController' NzbDrone.Host.Router
+NzbDrone.Host.AccessControl,RemoteAccessAdapter,4,2,0,0,2,33,5,0,1,0,5,0,NzbDrone.Host.AccessControl.IFirewallAdapter' NzbDrone.Host.AccessControl.IRemoteAccessAdapter' NzbDrone.Host.AccessControl.RemoteAccessException' NzbDrone.Host.AccessControl.ISslAdapter' NzbDrone.Host.AccessControl.IUrlAclAdapter,
+NzbDrone.Host.AccessControl,RemoteAccessException,0,4,0,0,4,15,4,0,0,-1,0,1,,NzbDrone.Host.AccessControl.RemoteAccessAdapter
+NzbDrone.Host.AccessControl,ISslAdapter,0,1,0,0,0,4,1,1,0,-1,0,2,,NzbDrone.Host.AccessControl.RemoteAccessAdapter' NzbDrone.Host.AccessControl.SslAdapter
+NzbDrone.Host.AccessControl,SslAdapter,5,4,0,0,2,57,11,0,1,0,2,0,NzbDrone.Host.AccessControl.INetshProvider' NzbDrone.Host.AccessControl.ISslAdapter,
+NzbDrone.Host.AccessControl,UrlAcl,0,0,5,0,0,8,0,0,0,-1,0,1,,NzbDrone.Host.AccessControl.UrlAclAdapter
+NzbDrone.Host.AccessControl,IUrlAclAdapter,0,1,1,0,0,5,1,1,0,-1,0,3,,NzbDrone.Host.AccessControl.UrlAclAdapter' NzbDrone.Host.AccessControl.RemoteAccessAdapter' NzbDrone.Host.Owin.OwinHostController
+NzbDrone.Host.AccessControl,UrlAclAdapter,6,9,3,0,2,181,26,0,1,0.33,3,0,NzbDrone.Host.AccessControl.INetshProvider' NzbDrone.Host.AccessControl.UrlAcl' NzbDrone.Host.AccessControl.IUrlAclAdapter,
+NzbDrone.Host,ApplicationModes,0,0,0,0,0,9,0,0,0,-1,0,2,,NzbDrone.Host.Bootstrap' NzbDrone.Host.Router
+NzbDrone.Host,INzbDroneServiceFactory,0,2,0,0,0,5,2,1,0,-1,0,2,,NzbDrone.Host.NzbDroneServiceFactory' NzbDrone.Host.Router
+NzbDrone.Host,NzbDroneServiceFactory,7,7,0,0,4,73,11,0,2,0.29,3,0,NzbDrone.Host.INzbDroneServiceFactory' NzbDrone.Host.IBrowserService' NzbDrone.Host.Owin.IHostController,
+NzbDrone.Host,Bootstrap,2,6,0,0,1,122,20,0,0,0,8,0,NzbDrone.Host.ApplicationModes' NzbDrone.Host.IUserAlert' NzbDrone.Host.MainAppContainerBuilder' NzbDrone.Host.PlatformValidation' NzbDrone.Host.Router' NzbDrone.Host.ISingleInstancePolicy' NzbDrone.Host.IWaitForExit' NzbDrone.Host.TerminateApplicationException,
+NzbDrone.Host,IBrowserService,0,1,0,0,0,4,1,1,0,-1,0,3,,NzbDrone.Host.BrowserService' NzbDrone.Host.NzbDroneServiceFactory' NzbDrone.Host.SingleInstancePolicy
+NzbDrone.Host,BrowserService,4,2,0,0,2,34,3,0,1,0,1,0,NzbDrone.Host.IBrowserService,
+NzbDrone.Host,IUserAlert,0,1,0,0,0,4,1,2,0,-1,0,2,,NzbDrone.Host.PlatformValidation' NzbDrone.Host.Bootstrap
+NzbDrone.Host,MainAppContainerBuilder,0,2,0,0,1,22,2,0,0,-1,0,1,,NzbDrone.Host.Bootstrap
+NzbDrone.Host,PlatformValidation,2,2,0,0,1,40,4,0,0,0,1,1,NzbDrone.Host.IUserAlert,NzbDrone.Host.Bootstrap
+NzbDrone.Host,Router,7,2,0,0,2,88,9,0,0,0,3,1,NzbDrone.Host.AccessControl.IRemoteAccessAdapter' NzbDrone.Host.ApplicationModes' NzbDrone.Host.INzbDroneServiceFactory,NzbDrone.Host.Bootstrap
+NzbDrone.Host,ISingleInstancePolicy,0,3,0,0,0,6,3,1,0,-1,0,2,,NzbDrone.Host.SingleInstancePolicy' NzbDrone.Host.Bootstrap
+NzbDrone.Host,SingleInstancePolicy,3,6,0,0,4,63,10,0,1,0,3,0,NzbDrone.Host.IBrowserService' NzbDrone.Host.ISingleInstancePolicy' NzbDrone.Host.TerminateApplicationException,
+NzbDrone.Host,IWaitForExit,0,1,0,0,0,4,1,1,0,-1,0,2,,NzbDrone.Host.Bootstrap' NzbDrone.Host.SpinService
+NzbDrone.Host,SpinService,4,3,0,0,2,38,6,0,1,0,1,0,NzbDrone.Host.IWaitForExit,
+NzbDrone.Host,TerminateApplicationException,0,1,0,0,1,7,1,0,0,-1,0,2,,NzbDrone.Host.SingleInstancePolicy' NzbDrone.Host.Bootstrap
+NzbDrone.Host.Owin,IHostController,0,2,0,0,0,5,2,1,0,-1,0,2,,NzbDrone.Host.Owin.OwinHostController' NzbDrone.Host.NzbDroneServiceFactory
+NzbDrone.Host.Owin,NlogTextWriter,1,6,1,0,5,58,13,0,0,0.33,0,1,,NzbDrone.Host.Owin.OwinTraceOutputFactory
+NzbDrone.Host.Owin,OwinHostController,5,3,0,0,3,37,5,0,1,0,4,0,NzbDrone.Host.AccessControl.IRemoteAccessAdapter' NzbDrone.Host.AccessControl.IUrlAclAdapter' NzbDrone.Host.Owin.IHostController' NzbDrone.Host.Owin.IOwinAppFactory,
+NzbDrone.Host.Owin,IOwinAppFactory,0,1,0,0,0,4,1,1,0,-1,0,2,,NzbDrone.Host.Owin.OwinAppFactory' NzbDrone.Host.Owin.OwinHostController
+NzbDrone.Host.Owin,OwinAppFactory,3,4,0,0,2,57,5,0,1,0,4,0,NzbDrone.Host.Owin.IOwinAppFactory' NzbDrone.Host.Owin.OwinTraceOutputFactory' NzbDrone.Host.Owin.PortInUseException' NzbDrone.Host.Owin.MiddleWare.IOwinMiddleWare,
+NzbDrone.Host.Owin,OwinTraceOutputFactory,1,1,0,0,1,8,1,0,0,0,1,1,NzbDrone.Host.Owin.NlogTextWriter,NzbDrone.Host.Owin.OwinAppFactory
+NzbDrone.Host.Owin,PortInUseException,0,1,0,0,1,6,1,0,0,-1,0,1,,NzbDrone.Host.Owin.OwinAppFactory
+NzbDrone.Host.Owin.MiddleWare,IOwinMiddleWare,0,1,1,0,0,5,1,3,0,-1,0,4,,NzbDrone.Host.Owin.MiddleWare.NancyMiddleWare' NzbDrone.Host.Owin.MiddleWare.NzbDroneVersionMiddleWare' NzbDrone.Host.Owin.MiddleWare.SignalRMiddleWare' NzbDrone.Host.Owin.OwinAppFactory
+NzbDrone.Host.Owin.MiddleWare,NancyMiddleWare,1,2,1,0,2,18,2,0,1,0,1,0,NzbDrone.Host.Owin.MiddleWare.IOwinMiddleWare,
+NzbDrone.Host.Owin.MiddleWare,NzbDroneVersionMiddleWare,0,1,1,0,1,8,1,0,1,-1,2,0,NzbDrone.Host.Owin.MiddleWare.IOwinMiddleWare' NzbDrone.Host.Owin.MiddleWare.AddApplicationVersionHeader,
+NzbDrone.Host.Owin.MiddleWare,AddApplicationVersionHeader,2,2,0,0,2,22,2,0,0,0,0,1,,NzbDrone.Host.Owin.MiddleWare.NzbDroneVersionMiddleWare
+NzbDrone.Host.Owin.MiddleWare,SignalRMiddleWare,0,2,1,0,2,21,2,0,1,-1,1,0,NzbDrone.Host.Owin.MiddleWare.IOwinMiddleWare,

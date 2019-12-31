@@ -1,46 +1,46 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Nowin,ChunkedDecoder,3,3,1,0,3,108,4,0,0,0,2,1,Nowin.State' Nowin.Transport2HttpHandler,Nowin.ReqRespStream
+Nowin,ChunkedDecoder,3,3,1,0,3,108,18,0,0,0,2,1,Nowin.State' Nowin.Transport2HttpHandler,Nowin.ReqRespStream
 Nowin,State,0,0,0,0,0,21,0,0,0,-1,0,2,,Nowin.ChunkedDecoder' Nowin.SaeaLayerCallback
-Nowin,ConnectionAllocationStrategy,4,2,0,0,2,24,5,0,1,0,0,0,,
-Nowin,ConnectionBlock,1,2,0,0,0,28,5,0,0,0,4,1,Nowin.SaeaLayerCallback' Nowin.ILayerFactory' Nowin.Server' Nowin.ITransportLayerHandler,Nowin.Server
-Nowin,IUpdateCertificate,0,1,0,0,0,4,1,1,0,-1,0,1,,NowinAcmeSample.AcmeCfg
-Nowin,TimeBasedService,4,3,1,0,2,25,3,0,1,0,0,0,,
-Nowin,ExecutionContextFlow,0,0,0,0,0,6,0,0,0,-1,0,6,,Nowin.ExecutionContextFlowSuppresser' Nowin.ServerBuilder' Nowin.SaeaLayerCallback' NowinAcmeSample.Program' NowinSample.Program' NowinTests.ExecutionContext_Tests.ExecutionContextFlowing
-Nowin,ExecutionContextFlowSuppresser,3,3,0,0,1,32,5,0,0,1,2,1,Nowin.ExecutionContextFlow' Nowin.NullDisposable,Nowin.SaeaLayerCallback
-Nowin,ITimeBasedService,0,0,1,0,0,4,0,1,0,-1,0,2,,Nowin.Transport2HttpFactory' Nowin.Transport2HttpHandler
-Nowin,IHttpLayerCallback,0,8,24,0,0,35,8,1,1,-1,0,2,,Nowin.OwinEnvironment' Nowin.OwinHandler
-Nowin,IHttpLayerHandler,0,7,1,0,0,11,7,1,1,-1,0,2,,Nowin.Transport2HttpFactory' Nowin.Transport2HttpHandler
-Nowin,IIpIsLocalChecker,0,1,0,0,0,4,1,1,0,-1,0,3,,Nowin.Transport2HttpFactory' Nowin.Transport2HttpHandler' Nowin.Server
-Nowin,INowinServer,0,1,2,0,0,6,1,1,0,-1,0,4,,Nowin.OwinServerFactory' NowinAcmeSample.Program' NowinSample.Program' NowinTests.ExecutionContext_Tests.ExecutionContextFlowing
-Nowin,IpIsLocalChecker,1,2,0,0,2,36,6,0,1,0,0,0,,
-Nowin,IServerParameters,0,0,11,0,0,14,0,1,0,-1,0,3,,Nowin.SslTransportFactory' Nowin.SslTransportHandler' Nowin.Server
+Nowin,ConnectionAllocationStrategy,4,2,0,0,2,24,5,0,1,0,1,1,Nowin.IConnectionAllocationStrategy,Nowin.ServerBuilder
+Nowin,ConnectionBlock,1,2,0,0,0,28,5,0,0,0,4,1,Nowin.ILayerFactory' Nowin.ITransportLayerHandler' Nowin.SaeaLayerCallback' Nowin.Server,Nowin.Server
+Nowin,IUpdateCertificate,0,1,0,0,0,4,1,1,0,-1,0,1,,Nowin.ServerBuilder
+Nowin,TimeBasedService,4,3,1,0,2,25,3,0,1,0,1,1,Nowin.ITimeBasedService,Nowin.Transport2HttpFactory
+Nowin,ExecutionContextFlow,0,0,0,0,0,6,0,0,0,-1,0,5,,Nowin.IServerParameters' Nowin.Server' Nowin.SaeaLayerCallback' Nowin.ServerBuilder' Nowin.ExecutionContextFlowSuppresser
+Nowin,ExecutionContextFlowSuppresser,3,3,0,0,1,32,7,0,0,1,2,1,Nowin.ExecutionContextFlow' Nowin.NullDisposable,Nowin.SaeaLayerCallback
+Nowin,ITimeBasedService,0,0,1,0,0,4,0,1,0,-1,0,3,,Nowin.Transport2HttpFactory' Nowin.TimeBasedService' Nowin.Transport2HttpHandler
+Nowin,IHttpLayerCallback,0,8,24,0,0,35,8,1,1,-1,1,4,Nowin.ILayerCallback,Nowin.OwinEnvironment' Nowin.IHttpLayerHandler' Nowin.Transport2HttpHandler' Nowin.OwinHandler
+Nowin,IHttpLayerHandler,0,7,1,0,0,11,7,1,1,-1,2,3,Nowin.IHttpLayerCallback' Nowin.ILayerHandler,Nowin.OwinHandler' Nowin.Transport2HttpFactory' Nowin.Transport2HttpHandler
+Nowin,IIpIsLocalChecker,0,1,0,0,0,4,1,1,0,-1,0,4,,Nowin.Server' Nowin.IpIsLocalChecker' Nowin.Transport2HttpFactory' Nowin.Transport2HttpHandler
+Nowin,INowinServer,0,1,2,0,0,6,1,1,0,-1,0,3,,Nowin.Server' Nowin.OwinServerFactory' Nowin.ServerBuilder
+Nowin,IpIsLocalChecker,1,2,0,0,2,36,6,0,1,0,1,1,Nowin.IIpIsLocalChecker,Nowin.Server
+Nowin,IServerParameters,0,0,11,0,0,14,0,1,0,-1,2,4,Nowin.ExecutionContextFlow' Nowin.IConnectionAllocationStrategy,Nowin.SslTransportFactory' Nowin.SslTransportHandler' Nowin.Server' Nowin.ServerBuilder
 Nowin,NullDisposable,1,2,0,1,1,10,2,0,0,1,0,1,,Nowin.ExecutionContextFlowSuppresser
-Nowin,TraceSources,2,0,0,2,0,5,0,0,0,-1,2,3,Nowin.ReleaseTraceSource' Nowin.DebugTraceSource,Nowin.OwinHandler' Nowin.Transport2HttpHandler' Nowin.SaeaLayerCallback
+Nowin,TraceSources,2,0,0,2,0,5,0,0,0,-1,2,3,Nowin.ReleaseTraceSource' Nowin.DebugTraceSource,Nowin.Transport2HttpHandler' Nowin.SaeaLayerCallback' Nowin.OwinHandler
 Nowin,ReleaseTraceSource,0,6,0,0,6,31,6,0,0,-1,0,1,,Nowin.TraceSources
-Nowin,DebugTraceSource,0,8,0,0,8,44,8,0,0,-1,0,4,,Nowin.TraceSources' Nowin.OwinHandler' Nowin.Transport2HttpHandler' Nowin.SaeaLayerCallback
-Nowin,OwinEnvironment,30,45,31,0,12,1641,123,0,0,0.04,2,1,Nowin.OwinHandler' Nowin.IHttpLayerCallback,Nowin.OwinHandler
-Nowin,NilDictionary,3,11,4,0,10,58,11,0,0,0.91,0,0,,
-Nowin,OwinHandler,32,24,3,2,10,585,77,0,2,0.08,5,2,Nowin.OwinEnvironment' Nowin.WebSocketReceiveState' Nowin.IHttpLayerCallback' Nowin.DebugTraceSource' Nowin.TraceSources,Nowin.OwinEnvironment' Nowin.OwinHandlerFactory
+Nowin,DebugTraceSource,0,8,0,0,8,44,8,0,0,-1,0,1,,Nowin.TraceSources
+Nowin,OwinEnvironment,30,45,31,0,12,1641,255,0,0,0.04,3,1,Nowin.IHttpLayerCallback' Nowin.NilDictionary' Nowin.OwinHandler,Nowin.OwinHandler
+Nowin,NilDictionary,3,11,4,0,10,58,11,0,0,0.91,0,1,,Nowin.OwinEnvironment
+Nowin,OwinHandler,32,24,3,2,10,585,85,0,2,0.08,5,2,Nowin.IHttpLayerCallback' Nowin.IHttpLayerHandler' Nowin.TraceSources' Nowin.OwinEnvironment' Nowin.WebSocketReceiveState,Nowin.OwinEnvironment' Nowin.OwinHandlerFactory
 Nowin,WebSocketReceiveState,0,0,0,0,0,8,0,0,0,-1,0,1,,Nowin.OwinHandler
-Nowin,OwinHandlerFactory,2,3,2,0,3,19,3,0,1,0.67,1,0,Nowin.OwinHandler,
-Nowin,ServerBuilder,11,18,11,0,17,132,21,0,1,0.72,3,6,Nowin.IConnectionAllocationStrategy' Nowin.ExecutionContextFlow' Nowin.Server,Nowin.OwinServerFactory' NowinAcmeSample.Program' NowinSample.Program' NowinTests.ExecutionContext_Tests.ExecutionContextFlowing' NowinTests.NowinTestsSecure' NowinTests.NowinTestsPlain
-Nowin,OwinServerFactory,0,2,0,0,2,103,12,0,0,-1,4,1,Nowin.OwinKeys' Nowin.ServerBuilder' Nowin.Disposer' Nowin.INowinServer,NowinSample.Program
+Nowin,OwinHandlerFactory,2,3,2,0,3,19,3,0,1,0.67,3,1,Nowin.OwinHandler' Nowin.ILayerFactory' Nowin.ILayerHandler,Nowin.Server
+Nowin,ServerBuilder,11,18,11,0,17,132,21,0,1,0.72,7,1,Nowin.ConnectionAllocationStrategy' Nowin.IUpdateCertificate' Nowin.ExecutionContextFlow' Nowin.INowinServer' Nowin.IServerParameters' Nowin.IConnectionAllocationStrategy' Nowin.Server,Nowin.OwinServerFactory
+Nowin,OwinServerFactory,0,2,0,0,2,103,13,0,0,-1,4,0,Nowin.INowinServer' Nowin.ServerBuilder' Nowin.Disposer' Nowin.OwinKeys,
 Nowin,Disposer,1,2,0,0,2,15,3,0,0,0,0,1,,Nowin.OwinServerFactory
-Nowin,SslTransportFactory,2,3,2,0,2,22,3,0,1,0,4,0,Nowin.IServerParameters' Nowin.ILayerFactory' Nowin.ITransportLayerHandler' Nowin.SslTransportHandler,
-Nowin,SslTransportHandler,8,11,1,0,11,273,14,0,1,0.27,4,2,Nowin.ITransportLayerHandler' Nowin.IServerParameters' Nowin.InputStream' Nowin.ITransportLayerCallback,Nowin.SslTransportFactory' Nowin.InputStream
-Nowin,InputStream,5,15,5,0,14,112,18,0,0,0.4,2,1,Nowin.SslTransportHandler' Nowin.ITransportLayerCallback,Nowin.SslTransportHandler
-Nowin,Transport2HttpFactory,8,5,2,0,3,41,5,0,1,0,6,0,Nowin.IIpIsLocalChecker' Nowin.ILayerFactory' Nowin.ITimeBasedService' Nowin.Server' Nowin.IHttpLayerHandler' Nowin.Transport2HttpHandler,
-Nowin,Transport2HttpHandler,59,55,25,7,19,1397,165,0,2,0.05,9,3,Nowin.IHttpLayerHandler' Nowin.ITimeBasedService' Nowin.IIpIsLocalChecker' Nowin.ReqRespStream' Nowin.WebSocketReqConditions' Nowin.ITransportLayerCallback' Nowin.Server' Nowin.DebugTraceSource' Nowin.TraceSources,Nowin.ChunkedDecoder' Nowin.Transport2HttpFactory' Nowin.ReqRespStream
+Nowin,SslTransportFactory,2,3,2,0,2,22,3,0,1,0,5,1,Nowin.IServerParameters' Nowin.SslTransportHandler' Nowin.ILayerFactory' Nowin.ILayerHandler' Nowin.ITransportLayerHandler,Nowin.Server
+Nowin,SslTransportHandler,8,11,1,0,11,273,14,0,1,0.27,4,1,Nowin.IServerParameters' Nowin.InputStream' Nowin.ITransportLayerCallback' Nowin.ITransportLayerHandler,Nowin.SslTransportFactory
+Nowin,InputStream,5,15,5,0,14,112,18,0,0,0.4,0,1,,Nowin.SslTransportHandler
+Nowin,Transport2HttpFactory,8,5,2,0,3,41,5,0,1,0,8,2,Nowin.TimeBasedService' Nowin.ITimeBasedService' Nowin.IHttpLayerHandler' Nowin.IIpIsLocalChecker' Nowin.Transport2HttpHandler' Nowin.ILayerFactory' Nowin.ILayerHandler' Nowin.Server,Nowin.Server' Nowin.Transport2HttpHandler
+Nowin,Transport2HttpHandler,59,55,25,7,19,1397,227,0,2,0.05,11,3,Nowin.ITimeBasedService' Nowin.IHttpLayerCallback' Nowin.IHttpLayerHandler' Nowin.IIpIsLocalChecker' Nowin.TraceSources' Nowin.Transport2HttpFactory' Nowin.WebSocketReqConditions' Nowin.ITransportLayerCallback' Nowin.ITransportLayerHandler' Nowin.ReqRespStream' Nowin.Server,Nowin.ChunkedDecoder' Nowin.ReqRespStream' Nowin.Transport2HttpFactory
 Nowin,WebSocketReqConditions,0,0,0,0,0,11,0,0,0,-1,0,1,,Nowin.Transport2HttpHandler
-Nowin,IConnectionAllocationStrategy,0,1,0,0,0,4,1,2,0,-1,0,2,,Nowin.ServerBuilder' Nowin.Server
-Nowin,ILayerCallback,0,0,0,0,0,3,0,2,0,-1,0,0,,
-Nowin,ILayerFactory,0,2,2,0,0,7,2,3,0,-1,0,4,,Nowin.ConnectionBlock' Nowin.SslTransportFactory' Nowin.Transport2HttpFactory' Nowin.Server
-Nowin,ILayerHandler,0,0,0,0,0,3,0,2,0,-1,0,0,,
-Nowin,ITransportLayerCallback,0,4,0,0,0,7,4,2,1,-1,0,3,,Nowin.SslTransportHandler' Nowin.InputStream' Nowin.Transport2HttpHandler
-Nowin,ITransportLayerHandler,0,5,1,0,0,10,5,2,1,-1,0,4,,Nowin.ConnectionBlock' Nowin.SslTransportFactory' Nowin.SslTransportHandler' Nowin.SaeaLayerCallback
-Nowin,OwinKeys,24,0,0,24,0,27,0,0,0,-1,0,2,,Nowin.OwinServerFactory' NowinSample.Program
-Nowin,ReqRespStream,13,18,6,0,12,221,32,0,0,0.17,2,1,Nowin.Transport2HttpHandler' Nowin.ChunkedDecoder,Nowin.Transport2HttpHandler
-Nowin,SaeaLayerCallback,12,15,0,0,6,326,27,0,2,0,7,1,Nowin.ITransportLayerHandler' Nowin.Server' Nowin.ExecutionContextFlowSuppresser' Nowin.ExecutionContextFlow' Nowin.DebugTraceSource' Nowin.TraceSources' Nowin.State,Nowin.ConnectionBlock
-Nowin,Server,10,5,3,0,2,91,9,0,1,0,5,5,Nowin.IServerParameters' Nowin.ILayerFactory' Nowin.IConnectionAllocationStrategy' Nowin.IIpIsLocalChecker' Nowin.ConnectionBlock,Nowin.ConnectionBlock' Nowin.ServerBuilder' Nowin.Transport2HttpFactory' Nowin.Transport2HttpHandler' Nowin.SaeaLayerCallback
-Nowin,FinishingAllocationStrategy,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Nowin,IConnectionAllocationStrategy,0,1,0,0,0,4,1,2,0,-1,0,4,,Nowin.IServerParameters' Nowin.ConnectionAllocationStrategy' Nowin.ServerBuilder' Nowin.Server
+Nowin,ILayerCallback,0,0,0,0,0,3,0,2,0,-1,0,2,,Nowin.IHttpLayerCallback' Nowin.ITransportLayerCallback
+Nowin,ILayerFactory,0,2,2,0,0,7,2,3,0,-1,1,5,Nowin.ILayerHandler,Nowin.ConnectionBlock' Nowin.OwinHandlerFactory' Nowin.Server' Nowin.SslTransportFactory' Nowin.Transport2HttpFactory
+Nowin,ILayerHandler,0,0,0,0,0,3,0,2,0,-1,0,6,,Nowin.OwinHandlerFactory' Nowin.IHttpLayerHandler' Nowin.Transport2HttpFactory' Nowin.SslTransportFactory' Nowin.ILayerFactory' Nowin.ITransportLayerHandler
+Nowin,ITransportLayerCallback,0,4,0,0,0,7,4,2,1,-1,1,4,Nowin.ILayerCallback,Nowin.ITransportLayerHandler' Nowin.SaeaLayerCallback' Nowin.SslTransportHandler' Nowin.Transport2HttpHandler
+Nowin,ITransportLayerHandler,0,5,1,0,0,10,5,2,1,-1,2,5,Nowin.ILayerHandler' Nowin.ITransportLayerCallback,Nowin.SaeaLayerCallback' Nowin.SslTransportFactory' Nowin.ConnectionBlock' Nowin.SslTransportHandler' Nowin.Transport2HttpHandler
+Nowin,OwinKeys,24,0,0,24,0,27,0,0,0,-1,0,1,,Nowin.OwinServerFactory
+Nowin,ReqRespStream,13,18,6,0,12,221,34,0,0,0.17,2,1,Nowin.ChunkedDecoder' Nowin.Transport2HttpHandler,Nowin.Transport2HttpHandler
+Nowin,SaeaLayerCallback,12,15,0,0,6,326,32,0,2,0,7,1,Nowin.State' Nowin.ExecutionContextFlow' Nowin.ExecutionContextFlowSuppresser' Nowin.TraceSources' Nowin.ITransportLayerCallback' Nowin.ITransportLayerHandler' Nowin.Server,Nowin.ConnectionBlock
+Nowin,Server,10,5,3,0,2,91,9,0,1,0,12,5,Nowin.ConnectionBlock' Nowin.ExecutionContextFlow' Nowin.IIpIsLocalChecker' Nowin.INowinServer' Nowin.IpIsLocalChecker' Nowin.IServerParameters' Nowin.OwinHandlerFactory' Nowin.SslTransportFactory' Nowin.Transport2HttpFactory' Nowin.IConnectionAllocationStrategy' Nowin.ILayerFactory' Nowin.FinishingAllocationStrategy,Nowin.ConnectionBlock' Nowin.SaeaLayerCallback' Nowin.Transport2HttpFactory' Nowin.ServerBuilder' Nowin.Transport2HttpHandler
+Nowin,FinishingAllocationStrategy,0,1,0,0,1,7,1,0,1,-1,0,1,,Nowin.Server
 System.Collections.Generic,DictionaryExtensions,0,2,0,0,0,18,3,0,0,-1,0,0,,

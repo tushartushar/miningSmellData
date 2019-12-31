@@ -1,0 +1,39 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Recipes.DataDefinition,CreateSchema,0,0,0,0,0,3,0,0,0,-1,0,1,,Recipes.DataDefinition.Usage
+Recipes.DataDefinition,DeleteData,0,0,0,0,0,3,0,0,0,-1,0,1,,Recipes.DataDefinition.Usage
+Recipes.DataDefinition,DropSchema,0,0,0,0,0,3,0,0,0,-1,0,1,,Recipes.DataDefinition.Usage
+Recipes.DataDefinition,SetCheckpoint,1,1,0,1,1,15,1,0,0,0,0,1,,Recipes.DataDefinition.Usage
+Recipes.DataDefinition,Usage,1,1,0,0,0,63,1,0,0,0,5,0,Recipes.DataDefinition.CreateSchema' Recipes.DataDefinition.DeleteData' Recipes.DataDefinition.DropSchema' Recipes.DataDefinition.SetCheckpoint' Recipes.DataDefinition.SqlClientProjection,
+Recipes.DataDefinition,SampleUsingProjection,0,1,0,0,1,23,1,0,1,-1,0,0,,
+Recipes.DataDefinition,SqlClientProjection,1,0,1,0,0,8,0,1,1,-1,0,1,,Recipes.DataDefinition.Usage
+Recipes.DataDefinition,SampleUsingBuilder,2,0,0,1,0,23,0,0,0,-1,0,0,,
+Recipes.ElasticsearchIntegration,Usage,1,1,0,1,1,49,1,0,0,0,3,0,Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed,
+Recipes.Enveloping,Usage,0,1,0,0,1,129,1,0,0,-1,7,0,Recipes.Enveloping.Envelope<TMessage>' Recipes.Enveloping.Envelope' Recipes.Enveloping.Projection' Recipes.Enveloping.PortfolioModel' Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed,
+Recipes.Enveloping,Envelope<TMessage>,1,1,2,0,1,12,2,0,0,0,0,1,,Recipes.Enveloping.Usage
+Recipes.Enveloping,Envelope,1,2,2,0,2,37,4,0,0,1,0,1,,Recipes.Enveloping.Usage
+Recipes.Enveloping,Projection,0,1,0,0,1,38,1,0,0,-1,0,1,,Recipes.Enveloping.Usage
+Recipes.Enveloping,PortfolioModel,0,0,3,0,0,6,0,0,0,-1,0,1,,Recipes.Enveloping.Usage
+Recipes.MemoryCacheIntegration,ProjectionUsage,1,1,0,1,1,55,1,0,0,0,4,0,Recipes.MemoryCacheIntegration.PortfolioModel' Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed,
+Recipes.MemoryCacheIntegration,PortfolioModel,0,0,4,0,0,9,0,0,0,-1,0,2,,Recipes.MemoryCacheIntegration.ProjectionUsage' Recipes.MemoryCacheIntegration.TestingUsage
+Recipes.MemoryCacheIntegration,TestingUsage,1,2,0,1,2,68,2,0,0,0,5,0,Recipes.MemoryCacheIntegration.PortfolioModel' Recipes.MemoryCacheIntegration.MemoryCacheProjection' Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed,
+Recipes.MemoryCacheIntegration,MemoryCacheProjection,0,4,0,0,4,88,8,0,0,-1,1,1,Recipes.MemoryCacheIntegration.CacheItemEqualityComparer,Recipes.MemoryCacheIntegration.TestingUsage
+Recipes.MemoryCacheIntegration,CacheItemEqualityComparer,0,2,0,0,2,14,4,0,0,-1,0,1,,Recipes.MemoryCacheIntegration.MemoryCacheProjection
+Recipes.RavenDBIntegration,ProjectionUsage,1,1,0,1,1,50,1,0,0,0,4,0,Recipes.RavenDBIntegration.PortfolioDocument' Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed,
+Recipes.RavenDBIntegration,PortfolioDocument,0,0,4,0,0,9,0,0,0,-1,0,2,,Recipes.RavenDBIntegration.ProjectionUsage' Recipes.RavenDBIntegration.TestingUsage
+Recipes.RavenDBIntegration,TestingUsage,1,2,0,1,2,54,2,0,0,0,5,0,Recipes.RavenDBIntegration.PortfolioDocument' Recipes.RavenDBIntegration.RavenProjectionScenario' Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed,
+Recipes.RavenDBIntegration,RavenProjectionScenario,0,4,0,0,4,115,9,0,0,-1,0,1,,Recipes.RavenDBIntegration.TestingUsage
+Recipes.RedisIntegration,Usage,1,1,0,1,1,40,1,0,0,0,3,0,Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed,
+Recipes.Shared,PortfolioAdded,0,0,2,0,0,5,0,0,0,-1,0,10,,Recipes.Syntax.Usage' Recipes.SQLiteIntegration.Usage' Recipes.Enveloping.Usage' Recipes.RavenDBIntegration.TestingUsage' Recipes.MemoryCacheIntegration.ProjectionUsage' Recipes.RedisIntegration.Usage' Recipes.MemoryCacheIntegration.TestingUsage' Recipes.RavenDBIntegration.ProjectionUsage' Recipes.ElasticsearchIntegration.Usage' Recipes.WindowsAzureStorageIntegration.Usage
+Recipes.Shared,PortfolioRemoved,0,0,1,0,0,4,0,0,0,-1,0,10,,Recipes.Syntax.Usage' Recipes.SQLiteIntegration.Usage' Recipes.Enveloping.Usage' Recipes.RavenDBIntegration.TestingUsage' Recipes.WindowsAzureStorageIntegration.Usage' Recipes.MemoryCacheIntegration.TestingUsage' Recipes.RavenDBIntegration.ProjectionUsage' Recipes.MemoryCacheIntegration.ProjectionUsage' Recipes.RedisIntegration.Usage' Recipes.ElasticsearchIntegration.Usage
+Recipes.Shared,PortfolioRenamed,0,0,2,0,0,5,0,0,0,-1,0,10,,Recipes.Syntax.Usage' Recipes.SQLiteIntegration.Usage' Recipes.MemoryCacheIntegration.ProjectionUsage' Recipes.RedisIntegration.Usage' Recipes.RavenDBIntegration.TestingUsage' Recipes.RavenDBIntegration.ProjectionUsage' Recipes.MemoryCacheIntegration.TestingUsage' Recipes.Enveloping.Usage' Recipes.ElasticsearchIntegration.Usage' Recipes.WindowsAzureStorageIntegration.Usage
+Recipes.SQLiteIntegration,Usage,1,3,0,0,3,164,4,0,0,0,7,0,Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed' Recipes.SQLiteIntegration.PortfolioProjection' Recipes.SQLiteIntegration.SQLiteProjection' Recipes.SQLiteIntegration.CreateSchema' Recipes.SQLiteIntegration.SQLiteExecutor,
+Recipes.SQLiteIntegration,PortfolioProjection,0,1,0,0,1,27,1,0,1,-1,0,1,,Recipes.SQLiteIntegration.Usage
+Recipes.SQLiteIntegration,SQLiteProjection,1,0,1,0,0,8,0,1,1,-1,0,1,,Recipes.SQLiteIntegration.Usage
+Recipes.SQLiteIntegration,CreateSchema,0,0,0,0,0,3,0,0,0,-1,0,1,,Recipes.SQLiteIntegration.Usage
+Recipes.SQLiteIntegration,SQLiteExecutor,2,5,0,0,5,81,11,0,1,0,0,1,,Recipes.SQLiteIntegration.Usage
+Recipes.Syntax,Usage,0,0,0,0,0,36,0,0,0,-1,4,0,Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed' Recipes.Syntax.SqlProjection<TSyntax>,
+Recipes.Syntax,SampleUsingProjection,0,1,0,0,1,15,1,0,0,-1,0,0,,
+Recipes.Syntax,SqlProjection<TSyntax>,1,0,1,0,0,15,0,0,1,-1,0,1,,Recipes.Syntax.Usage
+Recipes.WindowsAzureStorageIntegration,PortfolioModel,0,1,1,0,1,9,1,0,0,-1,0,1,,Recipes.WindowsAzureStorageIntegration.Usage
+Recipes.WindowsAzureStorageIntegration,RebuildProjection,0,0,0,0,0,1,0,0,0,-1,0,1,,Recipes.WindowsAzureStorageIntegration.Usage
+Recipes.WindowsAzureStorageIntegration,Usage,1,1,0,1,1,55,1,0,0,0,5,0,Recipes.Shared.PortfolioAdded' Recipes.Shared.PortfolioRemoved' Recipes.Shared.PortfolioRenamed' Recipes.WindowsAzureStorageIntegration.PortfolioModel' Recipes.WindowsAzureStorageIntegration.RebuildProjection,

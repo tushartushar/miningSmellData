@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-MVC.Utilities.Authentication,IFormsAuthenticationService,0,3,0,0,0,6,3,1,0,-1,0,0,,
-MVC.Utilities.Authentication,FormsAuthenticationService,0,3,0,0,3,16,4,0,1,-1,0,0,,
-MVC.Utilities.Caching,CacheServiceBase,1,12,0,0,7,55,12,3,1,0.42,0,0,,
-MVC.Utilities.Caching,ICacheService,0,7,0,0,0,53,7,1,0,-1,0,0,,
-MVC.Utilities.Caching,RuntimeCacheService,1,7,0,0,6,56,9,0,2,0.29,0,0,,
-MVC.Utilities.Encryption,ICryptoService,0,4,0,0,0,32,4,2,0,-1,0,0,,
-MVC.Utilities.Encryption,HMACSHA1Service,1,7,0,0,7,41,8,0,1,0.43,0,0,,
+MVC.Utilities.Authentication,IFormsAuthenticationService,0,3,0,0,0,6,3,1,0,-1,0,1,,MVC.Utilities.Authentication.FormsAuthenticationService
+MVC.Utilities.Authentication,FormsAuthenticationService,0,3,0,0,3,16,4,0,1,-1,1,0,MVC.Utilities.Authentication.IFormsAuthenticationService,
+MVC.Utilities.Caching,CacheServiceBase,1,12,0,0,7,55,12,3,1,0.42,1,1,MVC.Utilities.Caching.ICacheService,MVC.Utilities.Caching.RuntimeCacheService
+MVC.Utilities.Caching,ICacheService,0,7,0,0,0,53,7,1,0,-1,0,1,,MVC.Utilities.Caching.CacheServiceBase
+MVC.Utilities.Caching,RuntimeCacheService,1,7,0,0,6,56,9,0,2,0.29,1,0,MVC.Utilities.Caching.CacheServiceBase,
+MVC.Utilities.Encryption,ICryptoService,0,4,0,0,0,32,4,2,0,-1,0,1,,MVC.Utilities.Encryption.HMACSHA1Service
+MVC.Utilities.Encryption,HMACSHA1Service,1,7,0,0,7,41,8,0,1,0.43,1,0,MVC.Utilities.Encryption.ICryptoService,
 MVC.Utilities.Logging,ExceptionHelpers,0,1,0,0,1,12,1,0,0,-1,0,0,,
-MVC.Utilities.Logging,ILoggingService,0,4,0,0,0,7,4,1,0,-1,1,0,MVC.Utilities.Logging.LogEntryType,
+MVC.Utilities.Logging,ILoggingService,0,4,0,0,0,7,4,1,0,-1,1,1,MVC.Utilities.Logging.LogEntryType,MVC.Utilities.Logging.TraceLoggingService
 MVC.Utilities.Logging,LogEntryType,0,0,0,0,0,4,0,0,0,-1,0,2,,MVC.Utilities.Logging.ILoggingService' MVC.Utilities.Logging.TraceLoggingService
-MVC.Utilities.Logging,TraceLoggingService,0,5,0,0,4,41,6,0,1,-1,1,0,MVC.Utilities.Logging.LogEntryType,
+MVC.Utilities.Logging,TraceLoggingService,0,5,0,0,4,41,8,0,1,-1,2,0,MVC.Utilities.Logging.ILoggingService' MVC.Utilities.Logging.LogEntryType,
 MVC.Utilities.Routing,LowerCaseRoute,0,5,0,0,5,14,6,0,0,-1,0,0,,
-MVC.Utilities.Routing,SlugHelper,0,4,0,0,4,48,6,0,0,-1,0,0,,
+MVC.Utilities.Routing,SlugHelper,0,4,0,0,4,48,7,0,0,-1,0,0,,
 MVC.Utilities.Security,UploadedImageValidator,0,2,0,0,2,25,3,0,0,-1,0,0,,
 MVC.Utilities.Display,DateTimeLocalizationHelper,0,2,0,0,2,50,6,0,0,-1,0,0,,

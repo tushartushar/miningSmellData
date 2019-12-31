@@ -1,0 +1,24 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TestExtensions,BaseTestClusterFixture,1,9,4,0,5,60,11,29,0,0.67,1,0,TestExtensions.TestDefaultConfiguration,
+TestExtensions,DefaultClusterFixture,0,5,4,0,4,52,7,0,0,-1,2,1,TestExtensions.SiloHostConfigurator' TestExtensions.TestDefaultConfiguration,TestExtensions.HostedTestClusterEnsureDefaultStarted
+TestExtensions,SiloHostConfigurator,0,1,0,0,1,10,1,0,1,-1,0,1,,TestExtensions.DefaultClusterFixture
+TestExtensions,HostedTestClusterEnsureDefaultStarted,0,1,5,0,0,13,1,36,1,-1,2,0,TestExtensions.DefaultClusterFixture' TestExtensions.OrleansTestingBase,
+TestExtensions,OrleansTestingBase,2,1,0,0,1,9,1,38,0,0,0,2,,TestExtensions.TestClusterPerTest' TestExtensions.HostedTestClusterEnsureDefaultStarted
+TestExtensions,SerializationTestEnvironment,0,5,6,0,5,45,5,1,0,-1,0,1,,TestExtensions.TestEnvironmentFixture
+TestExtensions,SiloAddressUtils,1,1,0,0,1,8,1,0,0,0,0,0,,
+TestExtensions,TestClusterPerTest,2,8,5,0,4,60,10,30,1,0.62,2,0,TestExtensions.OrleansTestingBase' TestExtensions.TestDefaultConfiguration,
+TestExtensions,TestConstants,2,0,0,2,0,7,0,0,0,-1,0,0,,
+TestExtensions,TestDefaultConfiguration,2,7,3,0,4,86,9,0,0,0.43,1,4,TestExtensions.SerializablePhysicalFileProvider,TestExtensions.TestClusterPerTest' TestExtensions.DefaultClusterFixture' TestExtensions.BaseTestClusterFixture' Tester.TestUtils
+TestExtensions,SerializablePhysicalFileProvider,1,4,1,0,3,23,4,0,0,0,0,1,,TestExtensions.TestDefaultConfiguration
+TestExtensions,TestEnvironmentFixture,1,0,0,1,0,4,0,1,1,-1,1,0,TestExtensions.SerializationTestEnvironment,
+TestExtensions,XunitLoggerProvider,1,3,0,0,3,30,3,0,0,1,1,0,TestExtensions.XunitLogger,
+TestExtensions,XunitLogger,2,5,0,0,5,18,5,0,0,1,0,1,,TestExtensions.XunitLoggerProvider
+UnitTests.StorageTests,SiloBuilderExtensions,0,2,0,0,2,22,2,0,0,-1,0,0,,
+UnitTests.StorageTests,MockStorageProvider,12,17,3,0,13,205,24,0,0,0.24,3,0,UnitTests.StorageTests.Commands' UnitTests.StorageTests.StateForTest' UnitTests.StorageTests.SetValueArgs,
+UnitTests.StorageTests,Commands,0,0,0,0,0,9,0,0,0,-1,0,1,,UnitTests.StorageTests.MockStorageProvider
+UnitTests.StorageTests,StateForTest,0,0,5,0,0,9,0,0,0,-1,0,1,,UnitTests.StorageTests.MockStorageProvider
+UnitTests.StorageTests,SetValueArgs,0,0,5,0,0,9,0,0,0,-1,0,1,,UnitTests.StorageTests.MockStorageProvider
+TestExtensions.Runners,GoldenPathLeaseProviderTestRunner,3,7,0,0,6,120,12,2,0,0.29,0,0,,
+Xunit.Abstractions,TestOutputHelperExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Tester,TestUtils,1,7,0,1,7,91,15,0,0,1,1,0,TestExtensions.TestDefaultConfiguration,
+Tester,RequestContextTestUtils,0,3,0,0,3,16,3,0,0,-1,0,0,,

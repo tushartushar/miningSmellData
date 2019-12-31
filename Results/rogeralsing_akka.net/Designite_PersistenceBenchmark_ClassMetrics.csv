@@ -1,11 +1,11 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 PersistenceBenchmark,StopMeasure,1,1,0,1,0,8,1,0,0,0,0,2,,PersistenceBenchmark.PerformanceTestActorBase' PersistenceBenchmark.Program
-PersistenceBenchmark,FailAt,1,1,0,1,1,9,1,0,0,0,0,1,,PersistenceBenchmark.PerformanceTestActorBase
+PersistenceBenchmark,FailAt,1,1,0,1,1,9,1,0,0,0,0,2,,PersistenceBenchmark.Program' PersistenceBenchmark.PerformanceTestActorBase
 PersistenceBenchmark,Measure,1,3,2,1,3,20,3,0,0,0.67,0,1,,PersistenceBenchmark.Program
-PersistenceBenchmark,PerformanceTestException,0,4,0,0,3,15,4,0,0,-1,0,0,,
-PersistenceBenchmark,PerformanceTestActorBase,1,3,2,0,0,23,5,4,1,1,3,0,Akka.Actor.IActorRef' PersistenceBenchmark.StopMeasure' PersistenceBenchmark.FailAt,
-PersistenceBenchmark,CommandsourcedPersistentActor,0,2,0,0,1,18,3,0,2,-1,0,0,,
-PersistenceBenchmark,EventsourcedPersistentActor,0,2,0,0,1,18,3,0,2,-1,0,0,,
-PersistenceBenchmark,MixedPersistentActor,1,3,0,0,1,22,7,0,2,1,0,0,,
-PersistenceBenchmark,StashingEventsourcedPersistentActor,0,4,0,0,1,37,8,0,2,-1,2,0,Akka.Actor.IActorContext' Akka.Actor.IStash,
-PersistenceBenchmark,Program,2,6,0,1,0,53,9,0,0,0,6,0,Akka.Configuration.Config' Akka.Actor.ActorSystem' Akka.Actor.IActorRef' Akka.Actor.Props' PersistenceBenchmark.Measure' PersistenceBenchmark.StopMeasure,
+PersistenceBenchmark,PerformanceTestException,0,4,0,0,3,15,4,0,0,-1,0,3,,PersistenceBenchmark.CommandsourcedPersistentActor' PersistenceBenchmark.EventsourcedPersistentActor' PersistenceBenchmark.MixedPersistentActor
+PersistenceBenchmark,PerformanceTestActorBase,1,3,2,0,0,23,6,4,1,1,2,4,PersistenceBenchmark.StopMeasure' PersistenceBenchmark.FailAt,PersistenceBenchmark.CommandsourcedPersistentActor' PersistenceBenchmark.EventsourcedPersistentActor' PersistenceBenchmark.MixedPersistentActor' PersistenceBenchmark.StashingEventsourcedPersistentActor
+PersistenceBenchmark,CommandsourcedPersistentActor,0,2,0,0,1,18,3,0,2,-1,2,1,PersistenceBenchmark.PerformanceTestException' PersistenceBenchmark.PerformanceTestActorBase,PersistenceBenchmark.Program
+PersistenceBenchmark,EventsourcedPersistentActor,0,2,0,0,1,18,3,0,2,-1,2,1,PersistenceBenchmark.PerformanceTestException' PersistenceBenchmark.PerformanceTestActorBase,PersistenceBenchmark.Program
+PersistenceBenchmark,MixedPersistentActor,1,3,0,0,1,22,7,0,2,1,2,1,PersistenceBenchmark.PerformanceTestException' PersistenceBenchmark.PerformanceTestActorBase,PersistenceBenchmark.Program
+PersistenceBenchmark,StashingEventsourcedPersistentActor,0,4,0,0,1,37,9,0,2,-1,1,1,PersistenceBenchmark.PerformanceTestActorBase,PersistenceBenchmark.Program
+PersistenceBenchmark,Program,2,6,0,1,0,53,9,0,0,0,7,0,PersistenceBenchmark.StopMeasure' PersistenceBenchmark.FailAt' PersistenceBenchmark.Measure' PersistenceBenchmark.CommandsourcedPersistentActor' PersistenceBenchmark.EventsourcedPersistentActor' PersistenceBenchmark.MixedPersistentActor' PersistenceBenchmark.StashingEventsourcedPersistentActor,

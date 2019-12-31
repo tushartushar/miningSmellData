@@ -1,70 +1,77 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NAudioDemo.AcmDemo,AcmPanel,9,20,0,0,1,381,32,0,0,0.15,10,1,NAudio.Wave.Compression.AcmDriver' NAudio.Wave.WaveFormat' NAudio.Wave.Compression.AcmFormatEnumFlags' NAudio.Wave.WaveFileReader' NAudio.Wave.WaveFormatEncoding' NAudio.Wave.WaveFileWriter' NAudio.Wave.WaveFormatConversionStream' NAudio.Wave.Compression.AcmFormatTag' NAudio.Wave.WaveFormatExtraData' NAudio.Wave.Compression.AcmFormat,NAudioDemo.AcmDemo.AcmPanelPlugin
-NAudioDemo.AcmDemo,AcmPanelPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.AcmDemo.AcmPanel,
-NAudioDemo.AsioDirectDemo,AsioDirectPanel,11,13,0,0,1,241,22,0,0,0,3,1,NAudio.Wave.AudioFileReader' NAudio.Wave.AsioOut' NAudio.Wave.PlaybackState,NAudioDemo.AsioDirectDemo.AsioDirectPanelPlugin
-NAudioDemo.AsioDirectDemo,AsioDirectPanelPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.AsioDirectDemo.AsioDirectPanel,
-NAudioDemo.AsioRecordingDemo,AsioRecordingPanel,19,17,1,0,1,368,28,0,0,0.12,5,1,NAudio.Wave.WaveFileWriter' NAudio.Wave.AsioOut' NAudio.Wave.AsioAudioAvailableEventArgs' NAudio.Wave.PlaybackState' NAudio.Wave.WaveFormat,NAudioDemo.AsioRecordingDemo.AsioRecordingPanelPlugin
-NAudioDemo.AsioRecordingDemo,AsioRecordingPanelPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.AsioRecordingDemo.AsioRecordingPanel,
-NAudioDemo.AudioPlaybackDemo,AsioOutPlugin,1,2,3,0,2,25,2,0,1,0,2,0,NAudioDemo.AudioPlaybackDemo.AsioOutSettingsPanel' NAudio.Wave.AsioOut,
-NAudioDemo.AudioPlaybackDemo,AsioOutSettingsPanel,3,5,1,0,1,94,7,0,0,0.6,1,1,NAudio.Wave.AsioOut,NAudioDemo.AudioPlaybackDemo.AsioOutPlugin
-NAudioDemo.AudioPlaybackDemo,AudioPlaybackPanel,28,19,1,0,1,566,39,0,0,0,14,1,NAudio.Wave.IWavePlayer' NAudio.Wave.AudioFileReader' NAudio.Gui.VolumeSlider' NAudio.Gui.VolumeMeter' NAudio.Gui.WaveformPainter' NAudioDemo.Utils.ReflectionHelper' NAudioDemo.AudioPlaybackDemo.IOutputDevicePlugin' NAudio.Wave.ISampleProvider' NAudio.Wave.PlaybackState' NAudio.Wave.SampleProviders.SampleChannel' NAudio.Wave.SampleProviders.MeteringSampleProvider' NAudio.Wave.SampleProviders.StreamVolumeEventArgs' NAudio.Wave.StoppedEventArgs' NAudioDemo.Images,NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanelPlugin
-NAudioDemo.AudioPlaybackDemo,AudioPlaybackPanelPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanel,
-NAudioDemo.AudioPlaybackDemo,DirectSoundOutSettingsPanel,2,4,1,0,1,66,5,0,0,0.5,1,1,NAudio.Wave.DirectSoundOut,NAudioDemo.AudioPlaybackDemo.DirectSoundOutPlugin
-NAudioDemo.AudioPlaybackDemo,DirectSoundOutPlugin,2,3,3,0,3,30,3,0,1,0.67,2,0,NAudioDemo.AudioPlaybackDemo.DirectSoundOutSettingsPanel' NAudio.Wave.DirectSoundOut,
-NAudioDemo.AudioPlaybackDemo,IOutputDevicePlugin,0,2,3,0,0,8,2,4,0,-1,0,1,,NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanel
-NAudioDemo.AudioPlaybackDemo,WasapiOutPlugin,1,2,3,0,2,31,2,0,1,0,2,0,NAudioDemo.AudioPlaybackDemo.WasapiOutSettingsPanel' NAudio.Wave.WasapiOut,
-NAudioDemo.AudioPlaybackDemo,WasapiOutSettingsPanel,4,4,3,0,1,115,6,0,0,0.5,6,1,NAudio.CoreAudioApi.MMDeviceEnumerator' NAudio.CoreAudioApi.MMDeviceCollection' NAudioDemo.AudioPlaybackDemo.WasapiDeviceComboItem' NAudio.CoreAudioApi.DataFlow' NAudio.CoreAudioApi.DeviceState' NAudio.CoreAudioApi.MMDevice,NAudioDemo.AudioPlaybackDemo.WasapiOutPlugin
+NAudioDemo.AcmDemo,AcmPanel,9,20,0,0,1,381,39,0,0,0.3,0,1,,NAudioDemo.AcmDemo.AcmPanelPlugin
+NAudioDemo.AcmDemo,AcmPanelPlugin,0,1,1,0,1,11,1,0,1,-1,2,0,NAudioDemo.AcmDemo.AcmPanel' NAudioDemo.INAudioDemoPlugin,
+NAudioDemo.AsioDirectDemo,AsioDirectPanel,11,13,0,0,1,241,22,0,0,0,1,0,NAudioDemo.INAudioDemoPlugin,
+NAudioDemo.AsioDirectDemo,AsioDirectPanelPlugin,0,1,1,0,1,11,1,0,1,-1,0,0,,
+NAudioDemo.AsioRecordingDemo,AsioRecordingPanel,19,17,1,0,1,368,28,0,0,0.12,1,0,NAudioDemo.INAudioDemoPlugin,
+NAudioDemo.AsioRecordingDemo,AsioRecordingPanelPlugin,0,1,1,0,1,11,1,0,1,-1,0,0,,
+NAudioDemo.AudioPlaybackDemo,AsioOutPlugin,1,2,3,0,2,25,2,0,1,0,2,0,NAudioDemo.AudioPlaybackDemo.AsioOutSettingsPanel' NAudioDemo.AudioPlaybackDemo.IOutputDevicePlugin,
+NAudioDemo.AudioPlaybackDemo,AsioOutSettingsPanel,3,5,1,0,1,94,7,0,0,0.6,0,1,,NAudioDemo.AudioPlaybackDemo.AsioOutPlugin
+NAudioDemo.AudioPlaybackDemo,AudioPlaybackPanel,28,19,1,0,1,557,38,0,0,0,2,1,NAudioDemo.AudioPlaybackDemo.IOutputDevicePlugin' NAudioDemo.Utils.ReflectionHelper,NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanelPlugin
+NAudioDemo.AudioPlaybackDemo,AudioPlaybackPanelPlugin,0,1,1,0,1,11,1,0,1,-1,2,0,NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanel' NAudioDemo.INAudioDemoPlugin,
+NAudioDemo.AudioPlaybackDemo,DirectSoundOutSettingsPanel,2,4,1,0,1,66,5,0,0,0.5,0,1,,NAudioDemo.AudioPlaybackDemo.DirectSoundOutPlugin
+NAudioDemo.AudioPlaybackDemo,DirectSoundOutPlugin,2,3,3,0,3,30,3,0,1,0.67,2,0,NAudioDemo.AudioPlaybackDemo.DirectSoundOutSettingsPanel' NAudioDemo.AudioPlaybackDemo.IOutputDevicePlugin,
+NAudioDemo.AudioPlaybackDemo,IOutputDevicePlugin,0,2,3,0,0,8,2,4,0,-1,0,5,,NAudioDemo.AudioPlaybackDemo.AsioOutPlugin' NAudioDemo.AudioPlaybackDemo.DirectSoundOutPlugin' NAudioDemo.AudioPlaybackDemo.WasapiOutPlugin' NAudioDemo.AudioPlaybackDemo.WaveOutPlugin' NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanel
+NAudioDemo.AudioPlaybackDemo,WasapiOutPlugin,1,2,3,0,2,31,2,0,1,0,2,0,NAudioDemo.AudioPlaybackDemo.IOutputDevicePlugin' NAudioDemo.AudioPlaybackDemo.WasapiOutSettingsPanel,
+NAudioDemo.AudioPlaybackDemo,WasapiOutSettingsPanel,4,4,3,0,1,115,6,0,0,0.5,1,1,NAudioDemo.AudioPlaybackDemo.WasapiDeviceComboItem,NAudioDemo.AudioPlaybackDemo.WasapiOutPlugin
 NAudioDemo.AudioPlaybackDemo,WasapiDeviceComboItem,0,0,2,0,0,5,0,0,0,-1,0,1,,NAudioDemo.AudioPlaybackDemo.WasapiOutSettingsPanel
-NAudioDemo.AudioPlaybackDemo,WaveOutPlugin,1,2,3,0,2,43,3,0,1,0,6,0,NAudioDemo.AudioPlaybackDemo.WaveOutSettingsPanel' NAudio.Wave.IWavePlayer' NAudio.Wave.WaveCallbackStrategy' NAudio.Wave.WaveOutEvent' NAudio.Wave.WaveCallbackInfo' NAudio.Wave.WaveOut,
-NAudioDemo.AudioPlaybackDemo,WaveOutSettingsPanel,4,5,2,0,1,113,8,0,0,0.4,3,1,NAudio.Wave.WaveOutCapabilities' NAudio.Wave.WaveOut' NAudio.Wave.WaveCallbackStrategy,NAudioDemo.AudioPlaybackDemo.WaveOutPlugin
-NAudioDemo.AudioPlaybackDemo,CallbackComboItem,0,1,2,0,1,10,1,0,0,-1,1,0,NAudio.Wave.WaveCallbackStrategy,
-NAudioDemo.FadeInOutDemo,FadeInOutPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.FadeInOutDemo.FadeInOutPanel,
-NAudioDemo.FadeInOutDemo,FadeInOutPanel,17,18,0,0,1,307,28,0,0,0,5,1,NAudio.Wave.IWavePlayer' NAudio.Wave.AudioFileReader' NAudio.Wave.SampleProviders.FadeInOutSampleProvider' NAudio.Gui.VolumeSlider' NAudio.Wave.StoppedEventArgs,NAudioDemo.FadeInOutDemo.FadeInOutPlugin
-NAudioDemo,Images,2,1,11,0,0,131,1,0,0,0,0,1,,NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanel
-NAudioDemo,INAudioDemoPlugin,0,1,1,0,0,5,1,13,0,-1,0,1,,NAudioDemo.MainForm
-NAudioDemo,LoopStream,1,4,3,0,3,56,7,0,2,0.5,1,0,NAudio.Wave.WaveStream,
+NAudioDemo.AudioPlaybackDemo,WaveOutPlugin,1,2,3,0,2,43,3,0,1,0,2,0,NAudioDemo.AudioPlaybackDemo.IOutputDevicePlugin' NAudioDemo.AudioPlaybackDemo.WaveOutSettingsPanel,
+NAudioDemo.AudioPlaybackDemo,WaveOutSettingsPanel,4,5,2,0,1,113,8,0,0,0.4,1,1,NAudioDemo.AudioPlaybackDemo.CallbackComboItem,NAudioDemo.AudioPlaybackDemo.WaveOutPlugin
+NAudioDemo.AudioPlaybackDemo,CallbackComboItem,0,1,2,0,1,10,1,0,0,-1,0,1,,NAudioDemo.AudioPlaybackDemo.WaveOutSettingsPanel
+NAudioDemo.FadeInOutDemo,FadeInOutPlugin,0,1,1,0,1,11,1,0,1,-1,2,0,NAudioDemo.FadeInOutDemo.FadeInOutPanel' NAudioDemo.INAudioDemoPlugin,
+NAudioDemo.FadeInOutDemo,FadeInOutPanel,17,18,0,0,1,307,28,0,0,0.11,0,1,,NAudioDemo.FadeInOutDemo.FadeInOutPlugin
+NAudioDemo,Images,2,1,11,0,0,131,1,0,0,0,0,0,,
+NAudioDemo,INAudioDemoPlugin,0,1,1,0,0,5,1,13,0,-1,0,14,,NAudioDemo.AsioDirectDemo.AsioDirectPanel' NAudioDemo.AsioRecordingDemo.AsioRecordingPanel' NAudioDemo.MediaFoundationDemo.MediaFoundationDemoPanel' NAudioDemo.RecordingDemo.RecordingPanel' NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanelPlugin' NAudioDemo.SignalGeneratorDemo.GeneratorPlugin' NAudioDemo.VolumeMixerDemo.VolumeMixerPlugin' NAudioDemo.MidiInDemo.MidiInPanel' NAudioDemo.NetworkChatDemo.NetworkChatPanel' NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanelPlugin' NAudioDemo.AcmDemo.AcmPanelPlugin' NAudioDemo.FadeInOutDemo.FadeInOutPlugin' NAudioDemo.SimplePlaybackDemo.SimplePlaybackPlugin' NAudioDemo.MainForm
+NAudioDemo,LoopStream,1,4,3,0,3,56,7,0,0,0.5,0,0,,
 NAudioDemo,MainForm,6,7,0,0,1,132,11,0,0,0.29,2,1,NAudioDemo.INAudioDemoPlugin' NAudioDemo.Utils.ReflectionHelper,NAudioDemo.Program
 NAudioDemo,Program,0,1,0,0,0,14,1,0,0,-1,1,0,NAudioDemo.MainForm,
-NAudioDemo.MediaFoundationDemo,MediaFoundationDemoPanel,13,12,0,0,1,273,27,0,0,0,3,1,NAudio.Wave.IWavePlayer' NAudio.Wave.WaveStream' NAudio.Wave.StoppedEventArgs,NAudioDemo.MediaFoundationDemo.MediaFoundationDemoPlugin
-NAudioDemo.MediaFoundationDemo,MediaFoundationDemoPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.MediaFoundationDemo.MediaFoundationDemoPanel,
-NAudioDemo.MediaFoundationDemo,WasapiOutGuiThread,12,12,2,0,7,268,28,0,1,0.17,14,0,NAudio.CoreAudioApi.AudioClientShareMode' NAudio.CoreAudioApi.AudioClient' NAudio.CoreAudioApi.AudioRenderClient' NAudio.Wave.IWaveProvider' NAudio.Wave.PlaybackState' NAudio.Wave.WaveFormat' NAudio.Wave.ResamplerDmoStream' NAudio.CoreAudioApi.MMDevice' NAudio.CoreAudioApi.MMDeviceEnumerator' NAudio.CoreAudioApi.DataFlow' NAudio.CoreAudioApi.Role' NAudio.CoreAudioApi.AudioClientBufferFlags' NAudio.Wave.WaveFormatExtensible' NAudio.CoreAudioApi.AudioClientStreamFlags,
-NAudioDemo.MidiInDemo,MidiInPanel,16,14,0,0,1,312,31,0,0,0,9,1,NAudio.Midi.MidiIn' NAudio.Midi.MidiOut' NAudio.Utils.ProgressLog' NAudio.Midi.MidiInCapabilities' NAudio.Midi.MidiOutCapabilities' NAudio.Midi.NoteOnEvent' NAudio.Midi.MidiInMessageEventArgs' NAudio.Midi.MidiEvent' NAudio.Midi.MidiCommandCode,NAudioDemo.MidiInDemo.MidiInPanelPlugin
-NAudioDemo.MidiInDemo,MidiInPanelPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.MidiInDemo.MidiInPanel,
-NAudioDemo.Mp3StreamingDemo,Mp3StreamingPanel,18,18,1,0,1,423,29,0,0,0.11,13,1,NAudio.Wave.BufferedWaveProvider' NAudio.Wave.IWavePlayer' NAudioDemo.Mp3StreamingDemo.StreamingPlaybackState' NAudio.Wave.VolumeWaveProvider16' NAudio.Gui.VolumeSlider' NAudio.Wave.IMp3FrameDecompressor' NAudioDemo.Mp3StreamingDemo.ReadFullyStream' NAudio.Wave.Mp3Frame' NAudio.Wave.WaveFormat' NAudio.Wave.ChannelMode' NAudio.Wave.AcmMp3FrameDecompressor' NAudio.Wave.WaveOut' NAudio.Wave.StoppedEventArgs,NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanelPlugin
+NAudioDemo.MediaFoundationDemo,MediaFoundationDemoPanel,13,12,0,0,1,273,27,0,0,0,2,0,NAudioDemo.INAudioDemoPlugin' NAudioDemo.MediaFoundationDemo.WasapiOutGuiThread,
+NAudioDemo.MediaFoundationDemo,MediaFoundationDemoPlugin,0,1,1,0,1,11,1,0,1,-1,0,0,,
+NAudioDemo.MediaFoundationDemo,WasapiOutGuiThread,12,12,2,0,7,268,30,0,0,0.17,0,1,,NAudioDemo.MediaFoundationDemo.MediaFoundationDemoPanel
+NAudioDemo.MidiInDemo,MidiInPanel,16,14,0,0,1,312,31,0,0,0,1,0,NAudioDemo.INAudioDemoPlugin,
+NAudioDemo.MidiInDemo,MidiInPanelPlugin,0,1,1,0,1,11,1,0,1,-1,0,0,,
+NAudioDemo.Mp3StreamingDemo,Mp3StreamingPanel,18,18,1,0,1,423,34,0,0,0.11,2,1,NAudioDemo.Mp3StreamingDemo.StreamingPlaybackState' NAudioDemo.Mp3StreamingDemo.ReadFullyStream,NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanelPlugin
 NAudioDemo.Mp3StreamingDemo,StreamingPlaybackState,0,0,0,0,0,7,0,0,0,-1,0,1,,NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanel
-NAudioDemo.Mp3StreamingDemo,Mp3StreamingPanelPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanel,
-NAudioDemo.Mp3StreamingDemo,ReadFullyStream,5,6,5,0,6,85,8,0,0,0.83,0,1,,NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanel
-NAudioDemo.NetworkChatDemo,AcmChatCodec,5,5,4,0,3,88,10,5,1,0,2,0,NAudio.Wave.WaveFormat' NAudio.Wave.Compression.AcmStream,
-NAudioDemo.NetworkChatDemo,AcmALawChatCodec,0,1,1,0,1,11,1,0,2,-1,0,0,,
-NAudioDemo.NetworkChatDemo,ALawChatCodec,0,3,4,0,3,42,5,0,1,-1,2,0,NAudio.Codecs.ALawEncoder' NAudio.Codecs.ALawDecoder,
-NAudioDemo.NetworkChatDemo,G722ChatCodec,5,4,4,0,4,59,6,0,1,0.5,5,0,NAudio.Codecs.G722CodecState' NAudio.Wave.WaveFormat' NAudio.Codecs.G722Codec' NAudio.Codecs.G722Flags' NAudio.Wave.WaveBuffer,
-NAudioDemo.NetworkChatDemo,Gsm610ChatCodec,0,1,1,0,1,8,1,0,2,-1,0,0,,
-NAudioDemo.NetworkChatDemo,INetworkChatCodec,0,2,4,0,0,27,2,6,0,-1,0,1,,NAudioDemo.NetworkChatDemo.NetworkChatPanel
-NAudioDemo.NetworkChatDemo,MicrosoftAdpcmChatCodec,0,1,1,0,1,8,1,0,2,-1,0,0,,
-NAudioDemo.NetworkChatDemo,AcmMuLawChatCodec,0,1,1,0,1,11,1,0,2,-1,0,0,,
-NAudioDemo.NetworkChatDemo,MuLawChatCodec,0,3,4,0,3,42,5,0,1,-1,2,0,NAudio.Codecs.MuLawEncoder' NAudio.Codecs.MuLawDecoder,
-NAudioDemo.NetworkChatDemo,NetworkChatPanel,17,11,0,0,1,289,18,0,0,0.18,9,1,NAudio.Wave.WaveIn' NAudio.Wave.IWavePlayer' NAudio.Wave.BufferedWaveProvider' NAudioDemo.NetworkChatDemo.INetworkChatCodec' NAudioDemo.Utils.ReflectionHelper' NAudio.Wave.WaveInCapabilities' NAudioDemo.NetworkChatDemo.CodecComboItem' NAudioDemo.NetworkChatDemo.ListenerThreadState' NAudio.Wave.WaveInEventArgs,NAudioDemo.NetworkChatDemo.NetworkChatPanelPlugin
+NAudioDemo.Mp3StreamingDemo,Mp3StreamingPanelPlugin,0,1,1,0,1,11,1,0,1,-1,2,0,NAudioDemo.INAudioDemoPlugin' NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanel,
+NAudioDemo.Mp3StreamingDemo,ReadFullyStream,5,6,5,0,6,85,9,0,0,0.83,0,1,,NAudioDemo.Mp3StreamingDemo.Mp3StreamingPanel
+NAudioDemo.NetworkChatDemo,AcmChatCodec,5,5,4,0,3,81,10,5,1,0.4,1,5,NAudioDemo.NetworkChatDemo.INetworkChatCodec,NAudioDemo.NetworkChatDemo.TrueSpeechChatCodec' NAudioDemo.NetworkChatDemo.Gsm610ChatCodec' NAudioDemo.NetworkChatDemo.AcmALawChatCodec' NAudioDemo.NetworkChatDemo.MicrosoftAdpcmChatCodec' NAudioDemo.NetworkChatDemo.AcmMuLawChatCodec
+NAudioDemo.NetworkChatDemo,AcmALawChatCodec,0,1,1,0,1,8,1,0,2,-1,1,0,NAudioDemo.NetworkChatDemo.AcmChatCodec,
+NAudioDemo.NetworkChatDemo,ALawChatCodec,0,3,4,0,3,33,5,0,1,-1,1,0,NAudioDemo.NetworkChatDemo.INetworkChatCodec,
+NAudioDemo.NetworkChatDemo,G722ChatCodec,4,4,4,0,4,49,6,0,1,0.5,1,0,NAudioDemo.NetworkChatDemo.INetworkChatCodec,
+NAudioDemo.NetworkChatDemo,Gsm610ChatCodec,0,1,1,0,1,8,1,0,2,-1,1,0,NAudioDemo.NetworkChatDemo.AcmChatCodec,
+NAudioDemo.NetworkChatDemo,IAudioReceiver,0,1,0,0,0,4,1,2,0,-1,0,4,,NAudioDemo.NetworkChatDemo.TcpAudioReceiver' NAudioDemo.NetworkChatDemo.UdpAudioReceiver' NAudioDemo.NetworkChatDemo.NetworkAudioPlayer' NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,IAudioSender,0,1,0,0,0,4,1,2,0,-1,0,4,,NAudioDemo.NetworkChatDemo.UdpAudioSender' NAudioDemo.NetworkChatDemo.TcpAudioSender' NAudioDemo.NetworkChatDemo.NetworkAudioSender' NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,INetworkChatCodec,0,2,4,0,0,27,2,6,0,-1,0,9,,NAudioDemo.NetworkChatDemo.ALawChatCodec' NAudioDemo.NetworkChatDemo.G722ChatCodec' NAudioDemo.NetworkChatDemo.UncompressedPcmChatCodec' NAudioDemo.NetworkChatDemo.NetworkAudioPlayer' NAudioDemo.NetworkChatDemo.AcmChatCodec' NAudioDemo.NetworkChatDemo.NetworkAudioSender' NAudioDemo.NetworkChatDemo.MuLawChatCodec' NAudioDemo.NetworkChatDemo.SpeexChatCodec' NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,MicrosoftAdpcmChatCodec,0,1,1,0,1,8,1,0,2,-1,1,0,NAudioDemo.NetworkChatDemo.AcmChatCodec,
+NAudioDemo.NetworkChatDemo,AcmMuLawChatCodec,0,1,1,0,1,8,1,0,2,-1,1,0,NAudioDemo.NetworkChatDemo.AcmChatCodec,
+NAudioDemo.NetworkChatDemo,MuLawChatCodec,0,3,4,0,3,33,5,0,1,-1,1,0,NAudioDemo.NetworkChatDemo.INetworkChatCodec,
+NAudioDemo.NetworkChatDemo,NetworkAudioPlayer,4,3,0,0,2,31,3,0,0,0,2,1,NAudioDemo.NetworkChatDemo.IAudioReceiver' NAudioDemo.NetworkChatDemo.INetworkChatCodec,NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,NetworkAudioSender,3,3,0,0,2,33,3,0,0,0,2,1,NAudioDemo.NetworkChatDemo.IAudioSender' NAudioDemo.NetworkChatDemo.INetworkChatCodec,NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,NetworkChatPanel,16,9,0,0,1,279,15,0,0,0.22,12,0,NAudioDemo.INAudioDemoPlugin' NAudioDemo.NetworkChatDemo.IAudioReceiver' NAudioDemo.NetworkChatDemo.IAudioSender' NAudioDemo.NetworkChatDemo.INetworkChatCodec' NAudioDemo.NetworkChatDemo.NetworkAudioPlayer' NAudioDemo.NetworkChatDemo.NetworkAudioSender' NAudioDemo.NetworkChatDemo.CodecComboItem' NAudioDemo.NetworkChatDemo.TcpAudioReceiver' NAudioDemo.NetworkChatDemo.TcpAudioSender' NAudioDemo.NetworkChatDemo.UdpAudioReceiver' NAudioDemo.NetworkChatDemo.UdpAudioSender' NAudioDemo.Utils.ReflectionHelper,
 NAudioDemo.NetworkChatDemo,CodecComboItem,0,1,2,0,1,9,1,0,0,-1,0,1,,NAudioDemo.NetworkChatDemo.NetworkChatPanel
-NAudioDemo.NetworkChatDemo,ListenerThreadState,0,0,2,0,0,5,0,0,0,-1,0,1,,NAudioDemo.NetworkChatDemo.NetworkChatPanel
-NAudioDemo.NetworkChatDemo,NetworkChatPanelPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.NetworkChatDemo.NetworkChatPanel,
-NAudioDemo.NetworkChatDemo,NarrowBandSpeexCodec,0,1,0,0,1,8,1,0,1,-1,0,0,,
-NAudioDemo.NetworkChatDemo,WideBandSpeexCodec,0,1,0,0,1,7,1,0,1,-1,0,0,,
-NAudioDemo.NetworkChatDemo,UltraWideBandSpeexCodec,0,1,0,0,1,7,1,0,1,-1,0,0,,
-NAudioDemo.NetworkChatDemo,SpeexChatCodec,5,6,4,0,3,71,7,3,1,0.33,2,0,NAudio.Wave.WaveFormat' NAudio.Wave.WaveBuffer,
-NAudioDemo.NetworkChatDemo,TrueSpeechChatCodec,0,1,1,0,1,12,1,0,2,-1,0,0,,
-NAudioDemo.NetworkChatDemo,UncompressedPcmChatCodec,0,4,4,0,4,31,4,0,1,-1,0,0,,
-NAudioDemo.SignalGeneratorDemo,GeneratorPanel,40,29,0,0,1,857,38,0,0,0.07,8,1,NAudio.Wave.IWavePlayer' NAudio.Wave.SampleProviders.SignalGenerator' NAudio.Wave.SampleProviders.SignalGeneratorType' NAudio.Wave.PlaybackState' NAudio.Utils.Decibels' NAudio.Wave.SampleProviders.OffsetSampleProvider' NAudio.Wave.WaveFormat' NAudio.Wave.WaveFileWriter,NAudioDemo.SignalGeneratorDemo.GeneratorPlugin
-NAudioDemo.SignalGeneratorDemo,GeneratorPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.SignalGeneratorDemo.GeneratorPanel,
-NAudioDemo.SimplePlaybackDemo,SimplePlaybackPanel,15,18,0,0,1,313,29,0,0,0,7,1,NAudio.Wave.IWavePlayer' NAudio.Wave.AudioFileReader' NAudio.Gui.VolumeSlider' NAudio.Wave.WaveCallbackInfo' NAudio.Wave.WaveOutEvent' NAudio.Wave.WaveOut' NAudio.Wave.StoppedEventArgs,NAudioDemo.SimplePlaybackDemo.SimplePlaybackPlugin
-NAudioDemo.SimplePlaybackDemo,SimplePlaybackPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.SimplePlaybackDemo.SimplePlaybackPanel,
-NAudioDemo.Utils,ReflectionHelper,0,1,0,0,1,10,1,0,0,-1,0,3,,NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanel' NAudioDemo.MainForm' NAudioDemo.NetworkChatDemo.NetworkChatPanel
-NAudioDemo.VolumeMixerDemo,IconExtractor,0,2,0,0,1,19,2,0,0,-1,0,1,,NAudioDemo.VolumeMixerDemo.VolumePanel
-NAudioDemo.VolumeMixerDemo,VolumeMixerPanel,8,9,0,0,1,177,17,0,0,0.22,7,1,NAudioDemo.VolumeMixerDemo.VolumePanel' NAudioDemo.VolumeMixerDemo.VolumeEventArgs' NAudioDemo.VolumeMixerDemo.MuteEventArgs' NAudio.CoreAudioApi.MMDevice' NAudio.CoreAudioApi.SessionCollection' NAudio.CoreAudioApi.AudioSessionControl' NAudio.CoreAudioApi.AudioSessionManager,NAudioDemo.VolumeMixerDemo.VolumeMixerPlugin
-NAudioDemo.VolumeMixerDemo,VolumeMixerPlugin,0,1,1,0,1,11,1,0,1,-1,1,0,NAudioDemo.VolumeMixerDemo.VolumeMixerPanel,
-NAudioDemo.VolumeMixerDemo,VolumePanel,12,20,1,0,11,368,39,0,1,0.3,13,1,NAudio.CoreAudioApi.MMDevice' NAudio.CoreAudioApi.AudioSessionControl' NAudio.CoreAudioApi.MMDeviceEnumerator' NAudio.CoreAudioApi.DataFlow' NAudio.CoreAudioApi.Role' NAudioDemo.VolumeMixerDemo.IconExtractor' NAudio.CoreAudioApi.DeviceState' NAudio.CoreAudioApi.AudioEndpointVolume' NAudio.CoreAudioApi.SimpleAudioVolume' NAudio.CoreAudioApi.AudioVolumeNotificationData' NAudio.CoreAudioApi.Interfaces.AudioSessionState' NAudio.CoreAudioApi.Interfaces.AudioSessionDisconnectReason' NAudioDemo.Properties.Resources,NAudioDemo.VolumeMixerDemo.VolumeMixerPanel
-NAudioDemo.VolumeMixerDemo,MuteEventArgs,0,1,1,0,1,8,1,0,0,-1,0,1,,NAudioDemo.VolumeMixerDemo.VolumeMixerPanel
-NAudioDemo.VolumeMixerDemo,VolumeEventArgs,0,1,1,0,1,8,1,0,0,-1,0,1,,NAudioDemo.VolumeMixerDemo.VolumeMixerPanel
-NAudioDemo.Properties,Resources,2,1,3,0,0,51,1,0,0,0,0,1,,NAudioDemo.VolumeMixerDemo.VolumePanel
+NAudioDemo.NetworkChatDemo,NetworkChatPanelPlugin,0,1,1,0,1,8,1,0,1,-1,0,0,,
+NAudioDemo.NetworkChatDemo,NarrowBandSpeexCodec,0,1,0,0,1,8,1,0,1,-1,1,0,NAudioDemo.NetworkChatDemo.SpeexChatCodec,
+NAudioDemo.NetworkChatDemo,WideBandSpeexCodec,0,1,0,0,1,7,1,0,1,-1,1,0,NAudioDemo.NetworkChatDemo.SpeexChatCodec,
+NAudioDemo.NetworkChatDemo,UltraWideBandSpeexCodec,0,1,0,0,1,7,1,0,1,-1,1,0,NAudioDemo.NetworkChatDemo.SpeexChatCodec,
+NAudioDemo.NetworkChatDemo,SpeexChatCodec,5,6,4,0,3,64,7,3,1,0.33,1,3,NAudioDemo.NetworkChatDemo.INetworkChatCodec,NAudioDemo.NetworkChatDemo.NarrowBandSpeexCodec' NAudioDemo.NetworkChatDemo.WideBandSpeexCodec' NAudioDemo.NetworkChatDemo.UltraWideBandSpeexCodec
+NAudioDemo.NetworkChatDemo,TcpAudioReceiver,3,4,0,0,3,51,6,0,1,0,1,1,NAudioDemo.NetworkChatDemo.IAudioReceiver,NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,TcpAudioSender,1,3,0,0,3,19,3,0,1,0,1,1,NAudioDemo.NetworkChatDemo.IAudioSender,NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,TrueSpeechChatCodec,0,1,1,0,1,9,1,0,2,-1,1,0,NAudioDemo.NetworkChatDemo.AcmChatCodec,
+NAudioDemo.NetworkChatDemo,UdpAudioReceiver,3,4,0,0,3,49,5,0,1,0,1,1,NAudioDemo.NetworkChatDemo.IAudioReceiver,NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,UdpAudioSender,1,3,0,0,3,19,3,0,1,0,1,1,NAudioDemo.NetworkChatDemo.IAudioSender,NAudioDemo.NetworkChatDemo.NetworkChatPanel
+NAudioDemo.NetworkChatDemo,UncompressedPcmChatCodec,0,4,4,0,4,29,4,0,1,-1,1,0,NAudioDemo.NetworkChatDemo.INetworkChatCodec,
+NAudioDemo.SignalGeneratorDemo,GeneratorPanel,40,29,0,0,1,857,38,0,0,0.07,0,1,,NAudioDemo.SignalGeneratorDemo.GeneratorPlugin
+NAudioDemo.SignalGeneratorDemo,GeneratorPlugin,0,1,1,0,1,11,1,0,1,-1,2,0,NAudioDemo.INAudioDemoPlugin' NAudioDemo.SignalGeneratorDemo.GeneratorPanel,
+NAudioDemo.SimplePlaybackDemo,SimplePlaybackPanel,15,18,0,0,1,313,30,0,0,0.11,0,1,,NAudioDemo.SimplePlaybackDemo.SimplePlaybackPlugin
+NAudioDemo.SimplePlaybackDemo,SimplePlaybackPlugin,0,1,1,0,1,11,1,0,1,-1,2,0,NAudioDemo.INAudioDemoPlugin' NAudioDemo.SimplePlaybackDemo.SimplePlaybackPanel,
+NAudioDemo.Utils,ReflectionHelper,0,1,0,0,1,10,1,0,0,-1,0,3,,NAudioDemo.NetworkChatDemo.NetworkChatPanel' NAudioDemo.AudioPlaybackDemo.AudioPlaybackPanel' NAudioDemo.MainForm
+NAudioDemo.VolumeMixerDemo,IconExtractor,0,2,0,0,1,20,2,0,0,-1,0,1,,NAudioDemo.VolumeMixerDemo.VolumePanel
+NAudioDemo.VolumeMixerDemo,VolumeMixerPanel,8,9,0,0,1,192,17,0,0,0.33,3,1,NAudioDemo.VolumeMixerDemo.VolumePanel' NAudioDemo.VolumeMixerDemo.MuteEventArgs' NAudioDemo.VolumeMixerDemo.VolumeEventArgs,NAudioDemo.VolumeMixerDemo.VolumeMixerPlugin
+NAudioDemo.VolumeMixerDemo,VolumeMixerPlugin,0,1,1,0,1,12,1,0,1,-1,2,0,NAudioDemo.INAudioDemoPlugin' NAudioDemo.VolumeMixerDemo.VolumeMixerPanel,
+NAudioDemo.VolumeMixerDemo,VolumePanel,12,20,1,0,11,398,41,0,0,0.3,3,1,NAudioDemo.VolumeMixerDemo.IconExtractor' NAudioDemo.VolumeMixerDemo.MuteEventArgs' NAudioDemo.VolumeMixerDemo.VolumeEventArgs,NAudioDemo.VolumeMixerDemo.VolumeMixerPanel
+NAudioDemo.VolumeMixerDemo,MuteEventArgs,0,1,1,0,1,9,1,0,0,-1,0,2,,NAudioDemo.VolumeMixerDemo.VolumeMixerPanel' NAudioDemo.VolumeMixerDemo.VolumePanel
+NAudioDemo.VolumeMixerDemo,VolumeEventArgs,0,1,1,0,1,9,1,0,0,-1,0,2,,NAudioDemo.VolumeMixerDemo.VolumeMixerPanel' NAudioDemo.VolumeMixerDemo.VolumePanel
+NAudioDemo.Properties,Resources,2,1,3,0,0,51,1,0,0,0,0,0,,
 NAudioDemo.Properties,Settings,1,0,2,0,0,24,0,0,0,-1,0,0,,
-NAudioDemo.RecordingDemo,RecordingPanel,24,19,0,0,1,500,31,0,0,0.11,12,1,NAudio.Wave.IWaveIn' NAudio.Wave.WaveFileWriter' NAudio.CoreAudioApi.MMDeviceEnumerator' NAudio.CoreAudioApi.MMDeviceCollection' NAudio.CoreAudioApi.DataFlow' NAudio.CoreAudioApi.DeviceState' NAudio.Wave.WaveIn' NAudio.CoreAudioApi.MMDevice' NAudio.CoreAudioApi.AudioEndpointVolume' NAudio.Wave.WaveFormat' NAudio.Wave.StoppedEventArgs' NAudio.Wave.WaveInEventArgs,NAudioDemo.RecordingDemo.RecordingPanelPlugin
-NAudioDemo.RecordingDemo,RecordingPanelPlugin,0,1,1,0,1,8,1,0,1,-1,1,0,NAudioDemo.RecordingDemo.RecordingPanel,
+NAudioDemo.RecordingDemo,RecordingPanel,24,19,0,0,1,500,34,0,0,0.11,1,0,NAudioDemo.INAudioDemoPlugin,
+NAudioDemo.RecordingDemo,RecordingPanelPlugin,0,1,1,0,1,8,1,0,1,-1,0,0,,

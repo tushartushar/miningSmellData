@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-ToyStore.Data,ConnectionStrings,1,0,2,0,0,25,0,0,0,-1,0,0,,
-ToyStore.Data,ToyStoreContext,0,3,4,0,1,22,3,0,1,-1,0,1,,ToyStore.ConsoleClient.ToyStoreEntryPoint
-ToyStore.Data.Contracts,IToyStoreContext,0,1,4,0,0,8,1,1,0,-1,0,6,,ToyStore.DatabaseSeeder.DatabaseSeederWithRandomValues' ToyStore.DataGenerators.AgeRangeGenerator' ToyStore.DataGenerators.ToyGenerator' ToyStore.DataGenerators.CategoryGenerator' ToyStore.DataGenerators.ManufacturerGenerator' ToyStore.DataGenerators.Abstracts.DataGeneratorAbstract
-ToyStore.Data.Models,AgeRange,0,1,4,0,1,11,1,0,0,-1,0,1,,ToyStore.DataGenerators.AgeRangeGenerator
-ToyStore.Data.Models,Category,0,1,3,0,1,10,1,0,0,-1,0,1,,ToyStore.DataGenerators.CategoryGenerator
-ToyStore.Data.Models,Manufacturer,0,1,4,0,1,11,1,0,0,-1,0,1,,ToyStore.DataGenerators.ManufacturerGenerator
-ToyStore.Data.Models,Toy,0,1,10,0,1,17,1,0,0,-1,0,1,,ToyStore.DataGenerators.ToyGenerator
-ToyStore.Data.Models.Mapping,AgeRangeMap,0,1,0,0,1,14,1,0,0,-1,0,0,,
-ToyStore.Data.Models.Mapping,CategoryMap,0,1,0,0,1,25,1,0,0,-1,0,0,,
-ToyStore.Data.Models.Mapping,ManufacturerMap,0,1,0,0,1,20,1,0,0,-1,0,0,,
-ToyStore.Data.Models.Mapping,ToyMap,0,1,0,0,1,33,1,0,0,-1,0,0,,
+ToyStore.Data,ConnectionStrings,1,0,2,0,0,25,0,0,0,-1,0,1,,ToyStore.Data.ToyStoreContext
+ToyStore.Data,ToyStoreContext,0,3,4,0,1,22,3,0,1,-1,10,0,ToyStore.Data.ConnectionStrings' ToyStore.Data.Contracts.IToyStoreContext' ToyStore.Data.Models.AgeRange' ToyStore.Data.Models.Category' ToyStore.Data.Models.Manufacturer' ToyStore.Data.Models.Toy' ToyStore.Data.Models.Mapping.AgeRangeMap' ToyStore.Data.Models.Mapping.CategoryMap' ToyStore.Data.Models.Mapping.ManufacturerMap' ToyStore.Data.Models.Mapping.ToyMap,
+ToyStore.Data.Contracts,IToyStoreContext,0,1,4,0,0,8,1,1,0,-1,4,1,ToyStore.Data.Models.AgeRange' ToyStore.Data.Models.Category' ToyStore.Data.Models.Manufacturer' ToyStore.Data.Models.Toy,ToyStore.Data.ToyStoreContext
+ToyStore.Data.Models,AgeRange,0,1,4,0,1,11,1,0,0,-1,1,4,ToyStore.Data.Models.Toy,ToyStore.Data.Models.Mapping.AgeRangeMap' ToyStore.Data.Models.Toy' ToyStore.Data.Contracts.IToyStoreContext' ToyStore.Data.ToyStoreContext
+ToyStore.Data.Models,Category,0,1,3,0,1,10,1,0,0,-1,1,4,ToyStore.Data.Models.Toy,ToyStore.Data.ToyStoreContext' ToyStore.Data.Contracts.IToyStoreContext' ToyStore.Data.Models.Mapping.CategoryMap' ToyStore.Data.Models.Toy
+ToyStore.Data.Models,Manufacturer,0,1,4,0,1,11,1,0,0,-1,1,4,ToyStore.Data.Models.Toy,ToyStore.Data.Models.Mapping.ManufacturerMap' ToyStore.Data.Models.Toy' ToyStore.Data.Contracts.IToyStoreContext' ToyStore.Data.ToyStoreContext
+ToyStore.Data.Models,Toy,0,1,10,0,1,17,1,0,0,-1,3,6,ToyStore.Data.Models.AgeRange' ToyStore.Data.Models.Category' ToyStore.Data.Models.Manufacturer,ToyStore.Data.Models.Mapping.ToyMap' ToyStore.Data.Contracts.IToyStoreContext' ToyStore.Data.Models.Manufacturer' ToyStore.Data.Models.Category' ToyStore.Data.Models.AgeRange' ToyStore.Data.ToyStoreContext
+ToyStore.Data.Models.Mapping,AgeRangeMap,0,1,0,0,1,14,1,0,0,-1,1,1,ToyStore.Data.Models.AgeRange,ToyStore.Data.ToyStoreContext
+ToyStore.Data.Models.Mapping,CategoryMap,0,1,0,0,1,25,1,0,0,-1,1,1,ToyStore.Data.Models.Category,ToyStore.Data.ToyStoreContext
+ToyStore.Data.Models.Mapping,ManufacturerMap,0,1,0,0,1,20,1,0,0,-1,1,1,ToyStore.Data.Models.Manufacturer,ToyStore.Data.ToyStoreContext
+ToyStore.Data.Models.Mapping,ToyMap,0,1,0,0,1,33,1,0,0,-1,1,1,ToyStore.Data.Models.Toy,ToyStore.Data.ToyStoreContext

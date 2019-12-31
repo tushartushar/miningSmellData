@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Owin.StatelessAuthExample,Bootstrapper,0,1,0,0,0,18,2,0,0,-1,0,0,,
-Owin.StatelessAuthExample,ConfigProvider,0,3,0,0,2,30,5,0,1,-1,0,0,,
-Owin.StatelessAuthExample,DemoUserIdentity,0,0,2,0,0,5,0,0,0,-1,0,0,,
-Owin.StatelessAuthExample,HomeModule,0,1,0,0,1,32,1,0,0,-1,2,0,Owin.StatelessAuthExample.IJwtWrapper' Owin.StatelessAuthExample.IConfigProvider,
-Owin.StatelessAuthExample,UserCredentials,0,0,2,0,0,5,0,0,0,-1,0,0,,
-Owin.StatelessAuthExample,IConfigProvider,0,2,0,0,0,5,2,1,0,-1,0,2,,Owin.StatelessAuthExample.HomeModule' Owin.StatelessAuthExample.MySecureTokenValidator
-Owin.StatelessAuthExample,IJwtWrapper,0,1,0,0,0,4,1,1,0,-1,0,1,,Owin.StatelessAuthExample.HomeModule
-Owin.StatelessAuthExample,JwtToken,0,0,4,0,0,7,0,0,0,-1,0,1,,Owin.StatelessAuthExample.MySecureTokenValidator
-Owin.StatelessAuthExample,JwtWrapper,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Owin.StatelessAuthExample,MySecureTokenValidator,1,2,0,0,2,49,5,0,1,0,2,0,Owin.StatelessAuthExample.IConfigProvider' Owin.StatelessAuthExample.JwtToken,
-Owin.StatelessAuthExample,Program,0,1,0,0,0,13,1,0,0,-1,0,0,,
-Owin.StatelessAuthExample,Startup,0,1,0,0,1,8,1,0,0,-1,0,1,,Owin.StatelessAuthExample.Tests.HomeModuleTests
+Owin.StatelessAuthExample,Bootstrapper,0,1,0,0,0,18,2,0,0,-1,1,0,Owin.StatelessAuthExample.DemoUserIdentity,
+Owin.StatelessAuthExample,ConfigProvider,0,3,0,0,2,30,5,0,1,-1,1,1,Owin.StatelessAuthExample.IConfigProvider,Owin.StatelessAuthExample.Startup
+Owin.StatelessAuthExample,DemoUserIdentity,0,0,2,0,0,5,0,0,0,-1,0,1,,Owin.StatelessAuthExample.Bootstrapper
+Owin.StatelessAuthExample,HomeModule,0,1,0,0,1,32,1,0,0,-1,4,0,Owin.StatelessAuthExample.UserCredentials' Owin.StatelessAuthExample.IConfigProvider' Owin.StatelessAuthExample.IJwtWrapper' Owin.StatelessAuthExample.JwtToken,
+Owin.StatelessAuthExample,UserCredentials,0,0,2,0,0,5,0,0,0,-1,0,1,,Owin.StatelessAuthExample.HomeModule
+Owin.StatelessAuthExample,IConfigProvider,0,2,0,0,0,5,2,1,0,-1,0,3,,Owin.StatelessAuthExample.ConfigProvider' Owin.StatelessAuthExample.HomeModule' Owin.StatelessAuthExample.MySecureTokenValidator
+Owin.StatelessAuthExample,IJwtWrapper,0,1,0,0,0,4,1,1,0,-1,0,2,,Owin.StatelessAuthExample.HomeModule' Owin.StatelessAuthExample.JwtWrapper
+Owin.StatelessAuthExample,JwtToken,0,0,4,0,0,7,0,0,0,-1,0,2,,Owin.StatelessAuthExample.HomeModule' Owin.StatelessAuthExample.MySecureTokenValidator
+Owin.StatelessAuthExample,JwtWrapper,0,1,0,0,1,7,1,0,1,-1,1,0,Owin.StatelessAuthExample.IJwtWrapper,
+Owin.StatelessAuthExample,MySecureTokenValidator,1,2,0,0,2,49,5,0,1,1,2,1,Owin.StatelessAuthExample.IConfigProvider' Owin.StatelessAuthExample.JwtToken,Owin.StatelessAuthExample.Startup
+Owin.StatelessAuthExample,Program,0,1,0,0,0,13,1,0,0,-1,1,0,Owin.StatelessAuthExample.Startup,
+Owin.StatelessAuthExample,Startup,0,1,0,0,1,8,1,0,0,-1,2,1,Owin.StatelessAuthExample.ConfigProvider' Owin.StatelessAuthExample.MySecureTokenValidator,Owin.StatelessAuthExample.Program

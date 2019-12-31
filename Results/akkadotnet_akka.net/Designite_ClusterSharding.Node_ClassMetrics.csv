@@ -1,1 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ClusterSharding.Node.AutomaticJoin,AutomaticCluster,4,3,0,0,3,40,4,0,0,0,1,1,ClusterSharding.Node.AutomaticJoin.DbHelper,ClusterSharding.Node.Program
+ClusterSharding.Node.AutomaticJoin,DbHelper,1,5,0,0,5,60,6,0,0,0,0,1,,ClusterSharding.Node.AutomaticJoin.AutomaticCluster
+ClusterSharding.Node,Customer,1,1,1,1,1,39,1,0,0,0,2,1,ClusterSharding.Node.PurchaseItem' ClusterSharding.Node.ItemPurchased,ClusterSharding.Node.Program
+ClusterSharding.Node,PurchaseItem,1,1,0,1,1,8,1,0,0,0,0,2,,ClusterSharding.Node.Program' ClusterSharding.Node.Customer
+ClusterSharding.Node,ItemPurchased,1,1,0,1,1,8,1,0,0,0,0,1,,ClusterSharding.Node.Customer
+ClusterSharding.Node,ShardEnvelope,2,1,0,2,1,10,1,0,0,0,0,2,,ClusterSharding.Node.MessageExtractor' ClusterSharding.Node.Program
+ClusterSharding.Node,MessageExtractor,0,3,0,0,3,6,3,0,2,-1,1,1,ClusterSharding.Node.ShardEnvelope,ClusterSharding.Node.Program
+ClusterSharding.Node,Program,0,4,0,0,0,88,4,0,0,-1,5,0,ClusterSharding.Node.AutomaticJoin.AutomaticCluster' ClusterSharding.Node.Customer' ClusterSharding.Node.PurchaseItem' ClusterSharding.Node.ShardEnvelope' ClusterSharding.Node.MessageExtractor,

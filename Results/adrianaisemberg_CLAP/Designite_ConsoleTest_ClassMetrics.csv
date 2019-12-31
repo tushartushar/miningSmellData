@@ -1,0 +1,24 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ConsoleTest,Program,0,1,0,0,0,13,1,0,0,-1,3,0,ConsoleTest.SomeApp' ConsoleTest.ClapApp' ConsoleTest.TheApp,
+ConsoleTest,DefaultApp,0,1,0,0,1,12,2,0,0,-1,0,0,,
+ConsoleTest,SomeApp,0,4,0,0,0,24,4,0,0,-1,0,1,,ConsoleTest.Program
+ConsoleTest,EmptyApp,0,2,0,0,0,13,2,0,0,-1,0,0,,
+ConsoleTest,ClapApp,0,10,0,0,9,92,12,0,0,-1,4,1,ConsoleTest.MyDefaultProvider1' ConsoleTest.MyDefaultProvider2' ConsoleTest.SameLengthAttribute' ConsoleTest.Person,ConsoleTest.Program
+ConsoleTest,MyDefaultProvider1,0,1,0,0,1,7,1,0,1,-1,0,1,,ConsoleTest.ClapApp
+ConsoleTest,MyDefaultProvider2,0,1,1,0,1,14,1,0,1,-1,0,1,,ConsoleTest.ClapApp
+ConsoleTest,BaseApp,0,3,0,0,3,21,3,1,0,-1,0,1,,ConsoleTest.TheNewApp
+ConsoleTest,TheApp,0,2,0,0,2,40,4,0,0,-1,1,1,ConsoleTest.Alignment,ConsoleTest.Program
+ConsoleTest,Alignment,0,0,0,0,0,5,0,0,0,-1,0,1,,ConsoleTest.TheApp
+ConsoleTest,TheNewApp,0,1,0,0,1,7,1,0,1,-1,1,0,ConsoleTest.BaseApp,
+ConsoleTest,AnotherApp,0,2,0,0,2,11,2,0,0,-1,0,0,,
+ConsoleTest,MyAppp,0,3,0,0,3,18,3,0,0,-1,0,0,,
+ConsoleTest,MyApp,0,5,0,0,5,58,6,0,0,-1,1,0,ConsoleTest.OptionEnum,
+ConsoleTest,OptionEnum,0,0,0,0,0,5,0,0,0,-1,0,1,,ConsoleTest.MyApp
+ConsoleTest,LengthValidationAttribute,0,2,2,0,2,40,2,0,1,-1,1,0,ConsoleTest.LengthValidator,
+ConsoleTest,LengthValidator,0,2,1,0,2,19,3,0,1,-1,0,1,,ConsoleTest.LengthValidationAttribute
+ConsoleTest,SameLengthAttribute,0,1,1,0,1,35,1,0,2,-1,1,1,ConsoleTest.SameLengthValidator,ConsoleTest.ClapApp
+ConsoleTest,SameLengthValidator,0,1,0,0,1,24,2,0,1,-1,0,1,,ConsoleTest.SameLengthAttribute
+ConsoleTest,Person,0,0,4,0,0,7,0,0,0,-1,1,1,ConsoleTest.PhoneNumber,ConsoleTest.ClapApp
+ConsoleTest,PhoneNumber,0,0,2,0,0,5,0,0,0,-1,0,1,,ConsoleTest.Person
+ConsoleTest,Product,0,0,4,0,0,14,0,0,0,-1,1,0,ConsoleTest.ProductReview,
+ConsoleTest,ProductReview,0,0,2,0,0,7,0,0,0,-1,0,1,,ConsoleTest.Product

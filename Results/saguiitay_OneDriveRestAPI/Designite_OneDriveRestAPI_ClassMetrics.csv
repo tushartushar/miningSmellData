@@ -1,51 +1,51 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OneDriveRestAPI.Http,HttpClientFactory,0,1,0,0,1,28,6,0,1,-1,2,0,OneDriveRestAPI.Util.TimeSpanSemaphore' OneDriveRestAPI.Http.HttpClientOptions,
-OneDriveRestAPI.Http,HttpClientOptions,0,0,5,0,0,9,0,0,0,-1,0,2,,OneDriveRestAPI.Http.HttpClientFactory' OneDriveRestAPI.Http.IHttpClientFactory
-OneDriveRestAPI.Http,IHttpClientFactory,0,1,0,0,0,4,1,1,0,-1,1,1,OneDriveRestAPI.Http.HttpClientOptions,OneDriveRestAPI.Client
-OneDriveRestAPI.Http,ThrottlingMessageHandler,2,3,0,0,2,28,6,0,0,0.67,1,0,OneDriveRestAPI.Util.TimeSpanSemaphore,
-OneDriveRestAPI.Http,AccessTokenAuthenticator,1,2,0,0,1,21,3,0,0,0,0,0,,
-OneDriveRestAPI.Util,TimeSpanSemaphore,4,8,0,0,6,132,11,0,0,0,0,2,,OneDriveRestAPI.Http.HttpClientFactory' OneDriveRestAPI.Http.ThrottlingMessageHandler
+OneDriveRestAPI.Http,HttpClientFactory,0,1,0,0,1,28,6,0,1,-1,5,1,OneDriveRestAPI.Http.HttpClientOptions' OneDriveRestAPI.Http.IHttpClientFactory' OneDriveRestAPI.Http.ThrottlingMessageHandler' OneDriveRestAPI.Http.AccessTokenAuthenticator' OneDriveRestAPI.Util.TimeSpanSemaphore,OneDriveRestAPI.Client
+OneDriveRestAPI.Http,HttpClientOptions,0,0,5,0,0,9,0,0,0,-1,0,3,,OneDriveRestAPI.Client' OneDriveRestAPI.Http.IHttpClientFactory' OneDriveRestAPI.Http.HttpClientFactory
+OneDriveRestAPI.Http,IHttpClientFactory,0,1,0,0,0,4,1,1,0,-1,1,2,OneDriveRestAPI.Http.HttpClientOptions,OneDriveRestAPI.Http.HttpClientFactory' OneDriveRestAPI.Client
+OneDriveRestAPI.Http,ThrottlingMessageHandler,2,3,0,0,2,28,6,0,0,0.67,1,1,OneDriveRestAPI.Util.TimeSpanSemaphore,OneDriveRestAPI.Http.HttpClientFactory
+OneDriveRestAPI.Http,AccessTokenAuthenticator,1,2,0,0,1,21,3,0,0,0,0,1,,OneDriveRestAPI.Http.HttpClientFactory
+OneDriveRestAPI.Util,TimeSpanSemaphore,4,8,0,0,6,132,11,0,0,0,0,2,,OneDriveRestAPI.Http.ThrottlingMessageHandler' OneDriveRestAPI.Http.HttpClientFactory
 OneDriveRestAPI.Util,HttpClientExtensions,0,1,0,0,1,17,4,0,0,-1,1,0,OneDriveRestAPI.Util.IRequest,
-OneDriveRestAPI.Util,CompressedContent,2,3,0,0,1,51,8,0,0,0.67,0,0,,
+OneDriveRestAPI.Util,CompressedContent,2,3,0,0,1,51,9,0,0,0.67,0,1,,OneDriveRestAPI.RequestGenerator
 OneDriveRestAPI.Util,EnumExtensions,0,1,0,0,1,9,1,0,0,-1,0,0,,
 OneDriveRestAPI.Util,HttpServerException,0,8,1,0,7,28,8,0,0,-1,0,0,,
-OneDriveRestAPI.Util,JsonContent,0,1,0,0,1,7,1,0,0,-1,0,0,,
+OneDriveRestAPI.Util,JsonContent,0,1,0,0,1,7,1,0,0,-1,0,1,,OneDriveRestAPI.RequestGenerator
 OneDriveRestAPI.Util,NameValueCollectionExtensions,0,2,0,0,2,21,3,0,0,-1,0,0,,
-OneDriveRestAPI.Util,IRequest,0,1,5,0,0,11,1,1,0,-1,0,2,,OneDriveRestAPI.Util.HttpClientExtensions' OneDriveRestAPI.Client
-OneDriveRestAPI.Util,Request,1,4,5,0,4,37,5,0,1,0.5,0,1,,OneDriveRestAPI.RequestGenerator
-OneDriveRestAPI,IClient,0,18,3,0,0,25,18,1,0,-1,2,0,OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.OverwriteOption,
-OneDriveRestAPI,Options,0,0,9,0,0,13,0,0,0,-1,0,2,,OneDriveRestAPI.Client' Samples.Program
-OneDriveRestAPI,IRequestGenerator,0,16,0,0,0,19,16,1,0,-1,2,1,OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.OverwriteOption,OneDriveRestAPI.Client
-OneDriveRestAPI,Client,4,25,3,0,21,234,42,0,1,0.6,6,1,OneDriveRestAPI.Options' OneDriveRestAPI.Http.IHttpClientFactory' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.Util.IRequest' OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.OverwriteOption,Samples.Program
-OneDriveRestAPI,RequestGenerator,5,19,0,0,16,159,22,0,1,0.11,3,0,OneDriveRestAPI.Util.Request' OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.OverwriteOption,
-OneDriveRestAPI.Model,Address,0,0,6,0,0,27,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Addresses,0,0,2,0,0,11,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Album,1,0,0,1,0,4,0,0,1,-1,0,0,,
-OneDriveRestAPI.Model,Audio,1,0,7,1,0,32,0,0,1,-1,0,0,,
-OneDriveRestAPI.Model,Emails,0,0,5,0,0,23,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Employer,0,0,1,0,0,7,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Error,0,0,2,0,0,11,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,ErrorInfo,0,0,1,0,0,7,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,File,1,0,14,1,0,63,0,4,1,-1,0,1,,Samples.Program
-OneDriveRestAPI.Model,FileInfo,0,0,3,0,0,15,0,1,0,-1,0,0,,
+OneDriveRestAPI.Util,IRequest,0,1,5,0,0,11,1,1,0,-1,0,4,,OneDriveRestAPI.Util.Request' OneDriveRestAPI.Util.HttpClientExtensions' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.RequestGenerator
+OneDriveRestAPI.Util,Request,1,4,5,0,4,37,6,0,1,0.5,1,1,OneDriveRestAPI.Util.IRequest,OneDriveRestAPI.RequestGenerator
+OneDriveRestAPI,IClient,0,18,3,0,0,25,18,1,0,-1,10,1,OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.Model.File' OneDriveRestAPI.Model.FileInfo' OneDriveRestAPI.Model.Folder' OneDriveRestAPI.Model.OverwriteOption' OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.Scope' OneDriveRestAPI.Model.User' OneDriveRestAPI.Model.UserQuota' OneDriveRestAPI.Model.UserToken,OneDriveRestAPI.Client
+OneDriveRestAPI,Options,0,0,9,0,0,13,0,0,0,-1,0,1,,OneDriveRestAPI.Client
+OneDriveRestAPI,IRequestGenerator,0,16,0,0,0,19,16,1,0,-1,4,3,OneDriveRestAPI.Util.IRequest' OneDriveRestAPI.Model.OverwriteOption' OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.Scope,OneDriveRestAPI.RequestGenerator' OneDriveRestAPI.IClient' OneDriveRestAPI.Client
+OneDriveRestAPI,Client,4,25,3,0,21,234,42,0,1,0.6,17,0,OneDriveRestAPI.Http.HttpClientFactory' OneDriveRestAPI.Http.HttpClientOptions' OneDriveRestAPI.Http.IHttpClientFactory' OneDriveRestAPI.IClient' OneDriveRestAPI.Options' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.RequestGenerator' OneDriveRestAPI.Model.File' OneDriveRestAPI.Model.FileInfo' OneDriveRestAPI.Model.Folder' OneDriveRestAPI.Model.OverwriteOption' OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.Scope' OneDriveRestAPI.Model.User' OneDriveRestAPI.Model.UserQuota' OneDriveRestAPI.Model.UserToken' OneDriveRestAPI.Model.Exceptions.NotEnoughQuotaException,
+OneDriveRestAPI,RequestGenerator,5,19,0,0,16,159,23,0,1,0.11,8,1,OneDriveRestAPI.Util.CompressedContent' OneDriveRestAPI.Util.JsonContent' OneDriveRestAPI.Util.IRequest' OneDriveRestAPI.Util.Request' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.Model.OverwriteOption' OneDriveRestAPI.Model.PictureSize' OneDriveRestAPI.Model.Scope,OneDriveRestAPI.Client
+OneDriveRestAPI.Model,Address,0,0,6,0,0,27,0,0,0,-1,0,1,,OneDriveRestAPI.Model.Addresses
+OneDriveRestAPI.Model,Addresses,0,0,2,0,0,11,0,0,0,-1,1,1,OneDriveRestAPI.Model.Address,OneDriveRestAPI.Model.User
+OneDriveRestAPI.Model,Album,1,0,0,1,0,4,0,0,1,-1,1,0,OneDriveRestAPI.Model.Folder,
+OneDriveRestAPI.Model,Audio,1,0,7,1,0,32,0,0,1,-1,1,0,OneDriveRestAPI.Model.File,
+OneDriveRestAPI.Model,Emails,0,0,5,0,0,23,0,0,0,-1,0,1,,OneDriveRestAPI.Model.User
+OneDriveRestAPI.Model,Employer,0,0,1,0,0,7,0,0,0,-1,0,1,,OneDriveRestAPI.Model.Work
+OneDriveRestAPI.Model,Error,0,0,2,0,0,11,0,0,0,-1,0,1,,OneDriveRestAPI.Model.ErrorInfo
+OneDriveRestAPI.Model,ErrorInfo,0,0,1,0,0,7,0,0,0,-1,1,0,OneDriveRestAPI.Model.Error,
+OneDriveRestAPI.Model,File,1,0,14,1,0,63,0,4,1,-1,3,6,OneDriveRestAPI.Model.FileInfo' OneDriveRestAPI.Model.From' OneDriveRestAPI.Model.SharedWith,OneDriveRestAPI.Model.Audio' OneDriveRestAPI.Model.Folder' OneDriveRestAPI.Model.Video' OneDriveRestAPI.Model.Photo' OneDriveRestAPI.IClient' OneDriveRestAPI.Client
+OneDriveRestAPI.Model,FileInfo,0,0,3,0,0,15,0,1,0,-1,0,3,,OneDriveRestAPI.Model.File' OneDriveRestAPI.IClient' OneDriveRestAPI.Client
 OneDriveRestAPI.Model,FileLocation,0,0,1,0,0,7,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Folder,2,0,1,2,0,9,0,1,2,-1,0,0,,
-OneDriveRestAPI.Model,From,0,0,2,0,0,11,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Image,0,0,4,0,0,23,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Location,0,0,2,0,0,11,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,OverwriteOption,0,0,0,0,0,18,0,0,0,-1,0,4,,OneDriveRestAPI.IClient' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.Client' OneDriveRestAPI.RequestGenerator
-OneDriveRestAPI.Model,Phones,0,0,3,0,0,15,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Photo,1,0,5,1,0,24,0,0,2,-1,0,0,,
-OneDriveRestAPI.Model,PictureSize,0,0,0,0,0,9,0,0,0,-1,0,5,,OneDriveRestAPI.IClient' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.Client' OneDriveRestAPI.RequestGenerator' Samples.Program
-OneDriveRestAPI.Model,Position,0,0,1,0,0,7,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Scope,0,0,0,0,0,26,0,0,0,-1,0,1,,Samples.Program
-OneDriveRestAPI.Model,SharedWith,0,0,1,0,0,14,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,User,0,0,14,0,0,59,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,UserQuota,0,0,2,0,0,11,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,UserToken,2,0,6,0,0,19,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model,Video,1,0,5,1,0,25,0,0,2,-1,0,0,,
-OneDriveRestAPI.Model,Work,0,0,2,0,0,11,0,0,0,-1,0,0,,
-OneDriveRestAPI.Model.Exceptions,NotEnoughQuotaException,0,4,0,0,3,18,4,0,0,-1,0,0,,
+OneDriveRestAPI.Model,Folder,2,0,1,2,0,9,0,1,2,-1,1,3,OneDriveRestAPI.Model.File,OneDriveRestAPI.Model.Album' OneDriveRestAPI.IClient' OneDriveRestAPI.Client
+OneDriveRestAPI.Model,From,0,0,2,0,0,11,0,0,0,-1,0,1,,OneDriveRestAPI.Model.File
+OneDriveRestAPI.Model,Image,0,0,4,0,0,23,0,0,0,-1,0,1,,OneDriveRestAPI.Model.Photo
+OneDriveRestAPI.Model,Location,0,0,2,0,0,11,0,0,0,-1,0,1,,OneDriveRestAPI.Model.Photo
+OneDriveRestAPI.Model,OverwriteOption,0,0,0,0,0,18,0,0,0,-1,0,4,,OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.RequestGenerator' OneDriveRestAPI.Client' OneDriveRestAPI.IClient
+OneDriveRestAPI.Model,Phones,0,0,3,0,0,15,0,0,0,-1,0,1,,OneDriveRestAPI.Model.User
+OneDriveRestAPI.Model,Photo,1,0,5,1,0,24,0,0,2,-1,3,0,OneDriveRestAPI.Model.File' OneDriveRestAPI.Model.Image' OneDriveRestAPI.Model.Location,
+OneDriveRestAPI.Model,PictureSize,0,0,0,0,0,9,0,0,0,-1,0,4,,OneDriveRestAPI.IClient' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.RequestGenerator' OneDriveRestAPI.Client
+OneDriveRestAPI.Model,Position,0,0,1,0,0,7,0,0,0,-1,0,1,,OneDriveRestAPI.Model.Work
+OneDriveRestAPI.Model,Scope,0,0,0,0,0,26,0,0,0,-1,0,4,,OneDriveRestAPI.IClient' OneDriveRestAPI.IRequestGenerator' OneDriveRestAPI.Client' OneDriveRestAPI.RequestGenerator
+OneDriveRestAPI.Model,SharedWith,0,0,1,0,0,14,0,0,0,-1,0,1,,OneDriveRestAPI.Model.File
+OneDriveRestAPI.Model,User,0,0,14,0,0,59,0,0,0,-1,4,2,OneDriveRestAPI.Model.Addresses' OneDriveRestAPI.Model.Emails' OneDriveRestAPI.Model.Phones' OneDriveRestAPI.Model.Work,OneDriveRestAPI.IClient' OneDriveRestAPI.Client
+OneDriveRestAPI.Model,UserQuota,0,0,2,0,0,11,0,0,0,-1,0,2,,OneDriveRestAPI.IClient' OneDriveRestAPI.Client
+OneDriveRestAPI.Model,UserToken,2,0,6,0,0,19,0,0,0,-1,0,2,,OneDriveRestAPI.IClient' OneDriveRestAPI.Client
+OneDriveRestAPI.Model,Video,1,0,5,1,0,25,0,0,2,-1,1,0,OneDriveRestAPI.Model.File,
+OneDriveRestAPI.Model,Work,0,0,2,0,0,11,0,0,0,-1,2,1,OneDriveRestAPI.Model.Employer' OneDriveRestAPI.Model.Position,OneDriveRestAPI.Model.User
+OneDriveRestAPI.Model.Exceptions,NotEnoughQuotaException,0,4,0,0,3,18,4,0,0,-1,0,1,,OneDriveRestAPI.Client
 OneDriveRestAPI.Model.Exceptions,RetryLaterException,0,4,1,0,3,19,4,0,0,-1,0,0,,
 OneDriveRestAPI.Model.Exceptions,ServiceErrorException,0,5,1,0,4,25,5,0,0,-1,0,0,,
 OneDriveRestAPI.Model.Exceptions,TokenExpiredException,0,4,0,0,3,15,4,0,0,-1,0,0,,

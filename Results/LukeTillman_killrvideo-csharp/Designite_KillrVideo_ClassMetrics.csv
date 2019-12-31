@@ -1,15 +1,15 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-KillrVideo.Cassandra,BootstrapDataStaxEnterprise,4,3,0,0,2,60,7,0,0,0.67,1,0,KillrVideo.Host.ServiceDiscovery.IFindServices,
+KillrVideo.Cassandra,BootstrapDataStaxEnterprise,4,3,0,0,2,60,7,0,0,0.67,0,1,,KillrVideo.Program
 KillrVideo.Listeners,BroadcastOptions,0,0,2,0,0,11,0,0,0,-1,0,2,,KillrVideo.Listeners.RegisterWithEtcdListener' KillrVideo.Configuration.HostConfigurationFactory
-KillrVideo.Listeners,RegisterWithEtcdListener,3,4,0,0,3,43,9,0,1,0,3,0,KillrVideo.Listeners.BroadcastOptions' KillrVideo.Host.HostOptions' KillrVideo.Protobuf.Services.IGrpcServerService,
-KillrVideo.Listeners,LogServicesListener,1,2,0,0,2,17,3,0,1,1,1,0,KillrVideo.Protobuf.Services.IGrpcServerService,
-KillrVideo.Configuration,CommandLineArgs,0,1,1,0,1,8,1,0,0,-1,0,1,,KillrVideo.Configuration.HostConfigurationFactory
-KillrVideo.Configuration,EnvironmentFileProvider,2,2,0,0,2,43,4,0,0,0,0,1,,KillrVideo.Configuration.EnvironmentFileSource
-KillrVideo.Configuration,EnvironmentFileSource,0,2,1,0,2,13,3,0,0,-1,1,0,KillrVideo.Configuration.EnvironmentFileProvider,
-KillrVideo.Configuration,HostConfigurationFactory,0,9,0,0,8,92,9,0,0,-1,8,0,KillrVideo.Configuration.CommandLineArgs' KillrVideo.Host.HostOptions' KillrVideo.Protobuf.ListenOptions' KillrVideo.Search.SearchOptions' KillrVideo.SuggestedVideos.SuggestionsOptions' KillrVideo.UserManagement.UserManagementOptions' KillrVideo.Listeners.BroadcastOptions' KillrVideo.ServiceDiscovery.EtcdOptions,
+KillrVideo.Listeners,RegisterWithEtcdListener,3,4,0,0,3,43,9,0,1,0,1,0,KillrVideo.Listeners.BroadcastOptions,
+KillrVideo.Listeners,LogServicesListener,1,2,0,0,2,17,3,0,1,1,0,0,,
+KillrVideo.Configuration,CommandLineArgs,0,1,1,0,1,8,1,0,0,-1,0,2,,KillrVideo.Configuration.HostConfigurationFactory' KillrVideo.Program
+KillrVideo.Configuration,EnvironmentFileProvider,2,2,0,0,2,43,8,0,0,0,0,1,,KillrVideo.Configuration.EnvironmentFileSource
+KillrVideo.Configuration,EnvironmentFileSource,0,2,1,0,2,13,3,0,0,-1,1,1,KillrVideo.Configuration.EnvironmentFileProvider,KillrVideo.Configuration.HostConfigurationFactory
+KillrVideo.Configuration,HostConfigurationFactory,0,9,0,0,8,92,9,0,0,-1,4,0,KillrVideo.Listeners.BroadcastOptions' KillrVideo.Configuration.CommandLineArgs' KillrVideo.Configuration.EnvironmentFileSource' KillrVideo.ServiceDiscovery.EtcdOptions,
 KillrVideo.MessageBus,ContainerHandlerFactory,1,4,0,0,4,26,5,0,1,0.5,0,0,,
 KillrVideo.MessageBus,TransportFactory,1,0,0,1,0,9,0,0,0,-1,0,0,,
-KillrVideo,Program,1,2,0,0,0,68,2,0,0,0,0,0,,
+KillrVideo,Program,1,2,0,0,0,68,2,0,0,0,2,0,KillrVideo.Cassandra.BootstrapDataStaxEnterprise' KillrVideo.Configuration.CommandLineArgs,
 KillrVideo.ServiceDiscovery,EtcdClientFactory,0,1,0,0,1,13,1,0,0,-1,1,0,KillrVideo.ServiceDiscovery.EtcdOptions,
-KillrVideo.ServiceDiscovery,EtcdOptions,0,0,2,0,0,11,0,0,0,-1,0,2,,KillrVideo.Configuration.HostConfigurationFactory' KillrVideo.ServiceDiscovery.EtcdClientFactory
+KillrVideo.ServiceDiscovery,EtcdOptions,0,0,2,0,0,11,0,0,0,-1,0,2,,KillrVideo.ServiceDiscovery.EtcdClientFactory' KillrVideo.Configuration.HostConfigurationFactory
 KillrVideo.ServiceDiscovery,EtcdServiceDiscovery,1,2,0,0,2,17,4,0,1,0,0,0,,

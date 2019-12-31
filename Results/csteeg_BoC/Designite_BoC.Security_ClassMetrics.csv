@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-BoC.Security.DefaultSetupTasks,RegisterDefaultUserServices,1,2,0,0,2,15,3,0,1,0,1,0,BoC.InversionOfControl.IDependencyResolver,
-BoC.Security,EmailInUseException,0,1,0,0,1,4,1,0,1,-1,0,0,,
-BoC.Security,LoginInUseException,0,1,0,0,1,4,1,0,1,-1,0,0,,
-BoC.Security,RoleExistsException,0,1,0,0,1,4,1,0,1,-1,0,0,,
-BoC.Security,RoleInUseException,0,1,0,0,1,4,1,0,1,-1,0,0,,
-BoC.Security,RoleNotFoundException,0,2,0,0,2,5,2,0,1,-1,0,0,,
+BoC.Security.DefaultSetupTasks,RegisterDefaultUserServices,1,2,0,0,2,15,3,0,1,1,2,0,BoC.Security.Services.DefaultUserService' BoC.Security.Services.IUserService,
+BoC.Security,EmailInUseException,0,1,0,0,1,4,1,0,1,-1,1,1,BoC.Security.UserServiceException,BoC.Security.Services.DefaultUserService
+BoC.Security,LoginInUseException,0,1,0,0,1,4,1,0,1,-1,1,1,BoC.Security.UserServiceException,BoC.Security.Services.DefaultUserService
+BoC.Security,RoleExistsException,0,1,0,0,1,4,1,0,1,-1,1,1,BoC.Security.UserServiceException,BoC.Security.Services.DefaultUserService
+BoC.Security,RoleInUseException,0,1,0,0,1,4,1,0,1,-1,1,1,BoC.Security.UserServiceException,BoC.Security.Services.DefaultUserService
+BoC.Security,RoleNotFoundException,0,2,0,0,2,5,2,0,1,-1,1,1,BoC.Security.UserServiceException,BoC.Security.Services.DefaultUserService
 BoC.Security,Roles,1,0,0,1,0,4,0,0,0,-1,0,0,,
-BoC.Security,UserNotFoundException,0,2,0,0,2,5,2,0,1,-1,0,0,,
-BoC.Security,UserServiceException,0,3,0,0,3,6,3,6,1,-1,0,0,,
-BoC.Security.Model,AuthenticationToken,0,0,4,0,0,7,0,0,0,-1,0,1,,BoC.Security.Mvc.Controllers.AuthController
-BoC.Security.Model,Role,1,3,2,0,3,21,3,0,0,1,0,3,,BoC.Security.Model.User' BoC.Security.Services.DefaultUserService' BoC.Security.Services.IUserService
-BoC.Security.Model,User,2,9,21,0,9,155,17,0,0,1,1,4,BoC.Security.Model.Role,BoC.Security.Services.DefaultUserService' BoC.Security.Services.IUserService' BoC.Security.Mvc.Controllers.AccountController' BoC.Security.Mvc.Controllers.AuthController
-BoC.Security.Services,DefaultUserService,4,40,8,0,34,587,74,0,1,0.05,6,0,BoC.Persistence.IRepository' BoC.Validation.IModelValidator' BoC.Security.Services.PasswordFormat' BoC.EventAggregator.IEventAggregator' BoC.Security.Model.User' BoC.Security.Model.Role,
-BoC.Security.Services,PasswordFormat,0,0,0,0,0,6,0,0,0,-1,0,1,,BoC.Security.Services.DefaultUserService
-BoC.Security.Services,IUserService,0,30,7,0,0,44,30,1,1,-1,2,2,BoC.Security.Model.User' BoC.Security.Model.Role,BoC.Security.Mvc.Controllers.AccountController' BoC.Security.Mvc.Controllers.AuthController
+BoC.Security,UserNotFoundException,0,2,0,0,2,5,2,0,1,-1,1,1,BoC.Security.UserServiceException,BoC.Security.Services.DefaultUserService
+BoC.Security,UserServiceException,0,3,0,0,3,6,3,6,1,-1,0,7,,BoC.Security.EmailInUseException' BoC.Security.RoleInUseException' BoC.Security.LoginInUseException' BoC.Security.UserNotFoundException' BoC.Security.RoleNotFoundException' BoC.Security.RoleExistsException' BoC.Security.Services.DefaultUserService
+BoC.Security.Model,AuthenticationToken,0,0,4,0,0,7,0,0,0,-1,1,1,BoC.Security.Model.User,BoC.Security.Model.User
+BoC.Security.Model,Role,1,3,2,0,3,21,3,0,0,1,1,3,BoC.Security.Model.User,BoC.Security.Model.User' BoC.Security.Services.IUserService' BoC.Security.Services.DefaultUserService
+BoC.Security.Model,User,2,9,21,0,9,155,17,0,0,1,2,4,BoC.Security.Model.AuthenticationToken' BoC.Security.Model.Role,BoC.Security.Model.AuthenticationToken' BoC.Security.Model.Role' BoC.Security.Services.IUserService' BoC.Security.Services.DefaultUserService
+BoC.Security.Services,DefaultUserService,4,40,8,0,34,587,90,0,1,0.08,11,1,BoC.Security.EmailInUseException' BoC.Security.LoginInUseException' BoC.Security.RoleExistsException' BoC.Security.RoleInUseException' BoC.Security.RoleNotFoundException' BoC.Security.UserNotFoundException' BoC.Security.UserServiceException' BoC.Security.Model.Role' BoC.Security.Model.User' BoC.Security.Services.PasswordFormat' BoC.Security.Services.IUserService,BoC.Security.DefaultSetupTasks.RegisterDefaultUserServices
+BoC.Security.Services,PasswordFormat,0,0,0,0,0,6,0,0,0,-1,0,2,,BoC.Security.Services.IUserService' BoC.Security.Services.DefaultUserService
+BoC.Security.Services,IUserService,0,30,7,0,0,44,30,1,1,-1,3,2,BoC.Security.Model.Role' BoC.Security.Model.User' BoC.Security.Services.PasswordFormat,BoC.Security.Services.DefaultUserService' BoC.Security.DefaultSetupTasks.RegisterDefaultUserServices

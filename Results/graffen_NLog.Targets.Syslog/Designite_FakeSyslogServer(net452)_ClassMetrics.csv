@@ -1,0 +1,10 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+FakeSyslogServer,ServerMsgSet,2,5,4,0,2,56,9,0,0,0,1,1,FakeSyslogServer.TcpState,FakeSyslogServer.TcpState
+FakeSyslogServer,ServerSocket,1,6,4,0,3,41,10,2,0,0,0,2,,FakeSyslogServer.TcpServer' FakeSyslogServer.UdpServer
+FakeSyslogServer,StateObject,3,8,1,0,3,41,9,2,0,0,0,2,,FakeSyslogServer.TcpState' FakeSyslogServer.UdpState
+FakeSyslogServer,SyslogServer,5,5,2,0,4,57,7,0,0,0.4,2,1,FakeSyslogServer.TcpServer' FakeSyslogServer.UdpServer,FakeSyslogServer.TestAppHelper
+FakeSyslogServer,TcpServer,3,6,0,0,1,52,10,0,1,0,2,1,FakeSyslogServer.ServerSocket' FakeSyslogServer.TcpState,FakeSyslogServer.SyslogServer
+FakeSyslogServer,TcpState,2,5,2,0,1,52,11,0,1,0.4,2,2,FakeSyslogServer.ServerMsgSet' FakeSyslogServer.StateObject,FakeSyslogServer.TcpServer' FakeSyslogServer.ServerMsgSet
+FakeSyslogServer,TestAppHelper,5,13,0,0,3,184,29,0,0,0.15,1,0,FakeSyslogServer.SyslogServer,
+FakeSyslogServer,UdpServer,1,4,0,0,1,36,7,0,1,0,2,1,FakeSyslogServer.ServerSocket' FakeSyslogServer.UdpState,FakeSyslogServer.SyslogServer
+FakeSyslogServer,UdpState,0,3,0,0,1,14,3,0,1,-1,1,1,FakeSyslogServer.StateObject,FakeSyslogServer.UdpServer

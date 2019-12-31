@@ -1,0 +1,25 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Wyam.Testing.Attributes,NonWindowsTestAttribute,0,2,1,0,2,15,3,0,0,-1,0,0,,
+Wyam.Testing.Attributes,NonWindowsTestCaseAttribute,0,4,0,0,4,35,8,0,0,-1,0,0,,
+Wyam.Testing.Attributes,WindowsTestAttribute,0,2,1,0,2,15,3,0,0,-1,0,0,,
+Wyam.Testing.Attributes,WindowsTestCaseAttribute,0,4,0,0,4,35,8,0,0,-1,0,0,,
+Wyam.Testing,BaseFixture,1,5,1,0,5,38,7,95,0,0.8,1,0,Wyam.Testing.Tracing.TestTraceListener,
+Wyam.Testing,StringExtensions,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Wyam.Testing.Caching,TestExecutionCache,0,12,0,0,12,66,12,0,1,-1,0,1,,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Configuration,TestSettings,1,20,9,0,17,82,20,0,3,0,1,1,Wyam.Testing.Meta.TestMetadata,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Documents,TestDocument,1,21,10,0,20,105,22,0,2,0.43,2,1,Wyam.Testing.Meta.ITypeConversions' Wyam.Testing.Meta.TestMetadata,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Execution,TestExecutionContext,1,37,19,0,34,274,42,0,2,0.51,9,0,Wyam.Testing.Caching.TestExecutionCache' Wyam.Testing.Configuration.TestSettings' Wyam.Testing.Documents.TestDocument' Wyam.Testing.Execution.ShortcodeResult' Wyam.Testing.Execution.TestJsEnginePool' Wyam.Testing.Execution.TestHttpMessageHandler' Wyam.Testing.IO.TestFileSystem' Wyam.Testing.Meta.ITypeConversions' Wyam.Testing.Shortcodes.TestShortcodeCollection,
+Wyam.Testing.Execution,ShortcodeResult,0,1,2,0,1,10,1,0,1,-1,0,1,,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Execution,TestJsEnginePool,2,5,0,0,5,27,5,0,1,0.8,0,1,,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Execution,TestHttpMessageHandler,2,2,0,0,1,14,2,0,0,0,0,1,,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.IO,StringBuilderStream,4,9,5,0,8,66,9,0,0,0.33,0,1,,Wyam.Testing.IO.TestFile
+Wyam.Testing.IO,TestDirectory,2,7,5,0,7,85,13,0,2,0,2,3,Wyam.Testing.IO.TestFile' Wyam.Testing.IO.TestFileProvider,Wyam.Testing.IO.TestFile' Wyam.Testing.IO.TestFileProvider' Wyam.Testing.IO.TestFileSystem
+Wyam.Testing.IO,TestFile,2,11,5,0,10,97,18,0,2,0,3,2,Wyam.Testing.IO.StringBuilderStream' Wyam.Testing.IO.TestDirectory' Wyam.Testing.IO.TestFileProvider,Wyam.Testing.IO.TestFileProvider' Wyam.Testing.IO.TestDirectory
+Wyam.Testing.IO,TestFileProvider,0,4,2,0,4,11,4,0,1,-1,2,3,Wyam.Testing.IO.TestDirectory' Wyam.Testing.IO.TestFile,Wyam.Testing.IO.TestFile' Wyam.Testing.IO.TestFileSystem' Wyam.Testing.IO.TestDirectory
+Wyam.Testing.IO,TestFileSystem,0,24,8,0,24,194,39,0,2,-1,2,1,Wyam.Testing.IO.TestDirectory' Wyam.Testing.IO.TestFileProvider,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Meta,ITypeConversions,0,1,1,0,0,5,1,3,0,-1,0,3,,Wyam.Testing.Documents.TestDocument' Wyam.Testing.Meta.TestMetadata' Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Meta,TestMetadata,1,23,7,0,20,159,30,0,1,0.17,2,2,Wyam.Testing.Meta.ITypeConversions' Wyam.Testing.Meta.TestMetadataAs<T>,Wyam.Testing.Configuration.TestSettings' Wyam.Testing.Documents.TestDocument
+Wyam.Testing.Meta,TestMetadataAs<T>,0,4,0,0,4,12,4,0,1,-1,0,1,,Wyam.Testing.Meta.TestMetadata
+Wyam.Testing.Modules,CountModule,0,2,7,0,2,44,5,1,1,-1,0,0,,
+Wyam.Testing.Shortcodes,TestShortcodeCollection,0,20,0,0,19,44,20,0,2,-1,0,1,,Wyam.Testing.Execution.TestExecutionContext
+Wyam.Testing.Tracing,TestTraceListener,0,4,3,0,3,34,7,0,0,-1,0,1,,Wyam.Testing.BaseFixture

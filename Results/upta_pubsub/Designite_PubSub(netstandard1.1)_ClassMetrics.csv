@@ -1,0 +1,9 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PubSub,Hub,3,17,1,0,14,175,30,0,0,0.35,1,3,PubSub.Handler,PubSub.Publisher' PubSub.Subscriber' PubSub.PubSubPipelineFactory
+PubSub,Handler,0,0,3,0,0,6,0,0,0,-1,0,1,,PubSub.Hub
+PubSub,Publisher,1,2,0,0,2,9,2,0,1,1,2,1,PubSub.Hub' PubSub.IPublisher,PubSub.PubSubPipelineFactory
+PubSub,PubSubPipelineFactory,1,3,0,0,3,10,3,0,1,0,6,0,PubSub.Hub' PubSub.Publisher' PubSub.Subscriber' PubSub.IPublisher' PubSub.IPubSubPipelineFactory' PubSub.ISubscriber,
+PubSub,Subscriber,1,7,0,0,7,14,7,0,1,0.29,2,1,PubSub.Hub' PubSub.ISubscriber,PubSub.PubSubPipelineFactory
+PubSub,IPublisher,0,1,0,0,0,4,1,1,0,-1,0,3,,PubSub.PubSubPipelineFactory' PubSub.Publisher' PubSub.IPubSubPipelineFactory
+PubSub,IPubSubPipelineFactory,0,2,0,0,0,5,2,1,0,-1,2,1,PubSub.IPublisher' PubSub.ISubscriber,PubSub.PubSubPipelineFactory
+PubSub,ISubscriber,0,6,0,0,0,9,6,1,0,-1,0,3,,PubSub.IPubSubPipelineFactory' PubSub.Subscriber' PubSub.PubSubPipelineFactory

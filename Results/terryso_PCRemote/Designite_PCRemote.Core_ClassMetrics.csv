@@ -1,70 +1,70 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PCRemote.Core.Commands,AbortShutdownCommand,0,1,0,0,1,10,1,0,1,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,CommandBase,0,1,0,0,0,22,3,17,0,-1,4,0,PCRemote.Core.Contracts.IWeiboService' PCRemote.Core.Entities.CommandContext' PCRemote.Core.SinaWeiboService' PCRemote.Core.QQWeiboService,
-PCRemote.Core.Commands,GetFileListCommand,0,2,0,0,1,46,7,0,1,-1,3,0,PCRemote.Core.Entities.EmailAccount' PCRemote.Core.Contracts.IMailUtility' PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,InstagramCommand,0,2,0,0,1,68,9,0,1,-1,5,0,PCRemote.Core.Utilities.InstagramGraber' PCRemote.Core.Utilities.DownloadParameter' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Utilities.NetworkUtility' PCRemote.Core.Contracts.IMailUtility,
-PCRemote.Core.Commands,MediaNextTrackCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard' PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,MediaPauseCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard' PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,MediaPreviousTrackCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard' PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,MediaStopCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard' PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,MediaPlayCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard' PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,Mp3Command,0,2,0,0,1,53,7,0,1,-1,6,0,PCRemote.Core.Utilities.BaiduMp3Graber' PCRemote.Core.Entities.BaiduResult' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Entities.BaiduLink' PCRemote.Core.Utilities.DownloadParameter' PCRemote.Core.Utilities.NetworkUtility,
-PCRemote.Core.Commands,VolUnMuteCommand,0,1,0,0,1,10,1,0,1,-1,1,0,PCRemote.Core.Entities.CommandContext,
+PCRemote.Core.Commands,AbortShutdownCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,CommandBase,0,1,0,0,0,22,4,17,0,-1,3,17,PCRemote.Core.Entities.CommandContext' PCRemote.Core.QQWeiboService' PCRemote.Core.SinaWeiboService,PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.AbortShutdownCommand' PCRemote.Core.Commands.Mp3Command' PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.LockCommand' PCRemote.Core.Commands.MediaPlayCommand' PCRemote.Core.Commands.ScreenshotCommand' PCRemote.Core.Commands.ShutdownCommand' PCRemote.Core.Commands.RestartCommand' PCRemote.Core.Commands.LogoffCommand' PCRemote.Core.Commands.PhotoCommand' PCRemote.Core.Commands.VolCommandBase' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.DarkScreenCommand' PCRemote.Core.Commands.GetFileListCommand' PCRemote.Core.Commands.MediaPauseCommand
+PCRemote.Core.Commands,GetFileListCommand,0,2,0,0,1,46,7,0,1,-1,3,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,InstagramCommand,0,2,0,0,1,68,11,0,1,-1,6,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.InstagramGraber' PCRemote.Core.Utilities.NetworkUtility' PCRemote.Core.Utilities.DownloadParameter,
+PCRemote.Core.Commands,MediaNextTrackCommand,0,1,0,0,1,10,1,0,1,-1,5,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard,
+PCRemote.Core.Commands,MediaPauseCommand,0,1,0,0,1,10,1,0,1,-1,5,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard,
+PCRemote.Core.Commands,MediaPreviousTrackCommand,0,1,0,0,1,10,1,0,1,-1,5,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard,
+PCRemote.Core.Commands,MediaStopCommand,0,1,0,0,1,10,1,0,1,-1,5,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard,
+PCRemote.Core.Commands,MediaPlayCommand,0,1,0,0,1,10,1,0,1,-1,5,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.Keyboard,
+PCRemote.Core.Commands,Mp3Command,0,2,0,0,1,53,7,0,1,-1,6,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.BaiduMp3Graber' PCRemote.Core.Utilities.NetworkUtility' PCRemote.Core.Utilities.DownloadParameter,
+PCRemote.Core.Commands,VolUnMuteCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Commands.VolCommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
 PCRemote.Core.Commands,MediaKey,0,0,0,0,0,10,0,0,0,-1,0,0,,
-PCRemote.Core.Commands,DarkScreenCommand,0,2,0,0,1,12,2,0,1,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,LockCommand,0,1,0,0,1,10,1,0,1,-1,1,1,PCRemote.Core.Entities.CommandContext,PCRemote.Tests.IoCTests
-PCRemote.Core.Commands,LogoffCommand,0,1,0,0,1,10,1,0,1,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,PhotoCommand,0,3,0,0,1,58,4,0,1,-1,5,0,PCRemote.Core.Utilities.WebCamUtility' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.IWeiboService' PCRemote.Core.Entities.EmailAccount' PCRemote.Core.Contracts.IMailUtility,
-PCRemote.Core.Commands,ProcessListCommand,0,1,0,0,1,9,1,0,1,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,RestartCommand,0,1,0,0,1,10,1,0,1,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,ScreenshotCommand,0,2,0,0,1,29,3,0,1,-1,4,0,PCRemote.Core.Utilities.ImageUtility' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.IWeiboService' PCRemote.Core.Contracts.IMailUtility,
-PCRemote.Core.Commands,ShutdownCommand,0,1,0,0,1,10,1,0,1,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,VolCommandBase,4,1,0,0,1,9,1,4,1,0,0,0,,
-PCRemote.Core.Commands,VolDecCommand,0,1,0,0,1,13,2,0,2,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,VolIncCommand,0,1,0,0,1,13,2,0,2,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Commands,VolMuteCommand,0,1,0,0,1,10,1,0,2,-1,1,0,PCRemote.Core.Entities.CommandContext,
-PCRemote.Core.Entities,BaiduResult,0,1,3,0,1,16,1,0,0,-1,0,2,,PCRemote.Core.Commands.Mp3Command' PCRemote.Tests.BaiduMp3GraberTests
-PCRemote.Core.Entities,BaiduLink,0,0,6,0,0,23,0,0,0,-1,0,1,,PCRemote.Core.Commands.Mp3Command
-PCRemote.Core.Entities,EmailAccount,1,0,6,0,0,14,0,0,0,-1,0,5,,PCRemote.Core.Commands.GetFileListCommand' PCRemote.Core.Commands.PhotoCommand' PCRemote.Core.Utilities.MailUtility' PCRemote.UI.Main' PCRemote.Tests.EmailUtilityTests
-PCRemote.Core.Entities,CommandContext,0,0,8,0,0,11,0,0,0,-1,0,24,,PCRemote.Core.Commands.AbortShutdownCommand' PCRemote.Core.Commands.CommandBase' PCRemote.Core.Commands.GetFileListCommand' PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.MediaPauseCommand' PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.MediaPlayCommand' PCRemote.Core.Commands.Mp3Command' PCRemote.Core.Commands.VolUnMuteCommand' PCRemote.Core.Commands.DarkScreenCommand' PCRemote.Core.Commands.LockCommand' PCRemote.Core.Commands.LogoffCommand' PCRemote.Core.Commands.PhotoCommand' PCRemote.Core.Commands.ProcessListCommand' PCRemote.Core.Commands.RestartCommand' PCRemote.Core.Commands.ScreenshotCommand' PCRemote.Core.Commands.ShutdownCommand' PCRemote.Core.Commands.VolDecCommand' PCRemote.Core.Commands.VolIncCommand' PCRemote.Core.Commands.VolMuteCommand' PCRemote.Core.Contracts.ICommand' PCRemote.UI.Main
-PCRemote.Core.Entities,WeiboUser,0,0,3,0,0,6,0,0,0,-1,0,2,,PCRemote.Core.QQWeiboService' PCRemote.Core.SinaWeiboService
-PCRemote.Core.Entities,Weibo,0,0,2,0,0,5,0,0,0,-1,0,3,,PCRemote.Core.QQWeiboService' PCRemote.Core.SinaWeiboService' PCRemote.UI.Main
-PCRemote.Core.Contracts,IMailUtility,0,1,1,0,0,5,1,1,0,-1,0,5,,PCRemote.Core.Commands.GetFileListCommand' PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.PhotoCommand' PCRemote.Core.Commands.ScreenshotCommand' PCRemote.Tests.EmailUtilityTests
-PCRemote.Core.Contracts,IWeiboService,0,6,0,0,0,35,6,2,0,-1,0,6,,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Commands.PhotoCommand' PCRemote.Core.Commands.ScreenshotCommand' PCRemote.UI.Main' PCRemote.UI.Recommend' PCRemote.UI.Factories.WeiboServiceFactory
-PCRemote.Core.Contracts,ICommand,0,1,0,0,0,4,1,21,0,-1,1,3,PCRemote.Core.Entities.CommandContext,PCRemote.Core.Configuration.CommandConfiguration' PCRemote.UI.Main' PCRemote.Tests.IoCTests
-PCRemote.Core.Configuration,CommandConfiguration,1,2,1,0,1,75,5,0,1,1,1,2,PCRemote.Core.Contracts.ICommand,PCRemote.UI.Main' PCRemote.Tests.ConfigurationTests
-PCRemote.Core.Configuration,ConfigurationBase,0,10,0,0,3,135,20,1,0,-1,1,0,PCRemote.Core.Configuration.PCRemoteConfiguration,
+PCRemote.Core.Commands,DarkScreenCommand,0,2,0,0,1,12,2,0,1,-1,3,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,LockCommand,0,1,0,0,1,10,1,0,1,-1,3,1,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,PCRemote.Core.NinjectModules.CommandModule
+PCRemote.Core.Commands,LogoffCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,PhotoCommand,0,3,0,0,1,58,4,0,1,-1,4,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.WebCamUtility,
+PCRemote.Core.Commands,ProcessListCommand,0,1,0,0,1,9,1,0,1,-1,2,0,PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,RestartCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,ScreenshotCommand,0,2,0,0,1,29,3,0,1,-1,4,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Utilities.ImageUtility,
+PCRemote.Core.Commands,ShutdownCommand,0,1,0,0,1,10,1,0,1,-1,3,0,PCRemote.Core.Commands.CommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,VolCommandBase,4,1,0,0,1,9,1,4,1,0,1,4,PCRemote.Core.Commands.CommandBase,PCRemote.Core.Commands.VolIncCommand' PCRemote.Core.Commands.VolMuteCommand' PCRemote.Core.Commands.VolDecCommand' PCRemote.Core.Commands.VolUnMuteCommand
+PCRemote.Core.Commands,VolDecCommand,0,1,0,0,1,13,2,0,2,-1,3,0,PCRemote.Core.Commands.VolCommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,VolIncCommand,0,1,0,0,1,13,2,0,2,-1,3,0,PCRemote.Core.Commands.VolCommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Commands,VolMuteCommand,0,1,0,0,1,10,1,0,2,-1,3,0,PCRemote.Core.Commands.VolCommandBase' PCRemote.Core.Entities.CommandContext' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core.Entities,BaiduResult,0,1,3,0,1,16,1,0,0,-1,1,1,PCRemote.Core.Entities.BaiduLink,PCRemote.Core.Utilities.BaiduMp3Graber
+PCRemote.Core.Entities,BaiduLink,0,0,6,0,0,23,0,0,0,-1,0,1,,PCRemote.Core.Entities.BaiduResult
+PCRemote.Core.Entities,EmailAccount,1,0,6,0,0,14,0,0,0,-1,0,2,,PCRemote.Core.Utilities.MailUtility' PCRemote.Core.Contracts.IMailUtility
+PCRemote.Core.Entities,CommandContext,0,0,8,0,0,11,0,0,0,-1,2,23,PCRemote.Core.Contracts.IMailUtility' PCRemote.Core.Contracts.IWeiboService,PCRemote.Core.Commands.AbortShutdownCommand' PCRemote.Core.Commands.CommandBase' PCRemote.Core.Commands.VolMuteCommand' PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.GetFileListCommand' PCRemote.Core.Commands.Mp3Command' PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.MediaPauseCommand' PCRemote.Core.Commands.MediaPlayCommand' PCRemote.Core.Commands.VolUnMuteCommand' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.VolIncCommand' PCRemote.Core.Commands.DarkScreenCommand' PCRemote.Core.Commands.ShutdownCommand' PCRemote.Core.Commands.VolDecCommand' PCRemote.Core.Commands.RestartCommand' PCRemote.Core.Commands.LockCommand' PCRemote.Core.Contracts.ICommand' PCRemote.Core.Commands.LogoffCommand' PCRemote.Core.Commands.ProcessListCommand' PCRemote.Core.Commands.PhotoCommand' PCRemote.Core.Commands.ScreenshotCommand
+PCRemote.Core.Entities,WeiboUser,0,0,3,0,0,6,0,0,0,-1,0,3,,PCRemote.Core.SinaWeiboService' PCRemote.Core.QQWeiboService' PCRemote.Core.Contracts.IWeiboService
+PCRemote.Core.Entities,Weibo,0,0,2,0,0,5,0,0,0,-1,0,3,,PCRemote.Core.Contracts.IWeiboService' PCRemote.Core.SinaWeiboService' PCRemote.Core.QQWeiboService
+PCRemote.Core.Contracts,IMailUtility,0,1,1,0,0,5,1,1,0,-1,1,2,PCRemote.Core.Entities.EmailAccount,PCRemote.Core.Utilities.MailUtility' PCRemote.Core.Entities.CommandContext
+PCRemote.Core.Contracts,IWeiboService,0,6,0,0,0,35,6,2,0,-1,2,3,PCRemote.Core.Entities.WeiboUser' PCRemote.Core.Entities.Weibo,PCRemote.Core.QQWeiboService' PCRemote.Core.SinaWeiboService' PCRemote.Core.Entities.CommandContext
+PCRemote.Core.Contracts,ICommand,0,1,0,0,0,4,1,21,0,-1,1,23,PCRemote.Core.Entities.CommandContext,PCRemote.Core.Commands.Mp3Command' PCRemote.Core.Commands.MediaPauseCommand' PCRemote.Core.Commands.GetFileListCommand' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.VolMuteCommand' PCRemote.Core.Commands.MediaPlayCommand' PCRemote.Core.Commands.VolUnMuteCommand' PCRemote.Core.Commands.AbortShutdownCommand' PCRemote.Core.Commands.LogoffCommand' PCRemote.Core.Commands.LockCommand' PCRemote.Core.Commands.RestartCommand' PCRemote.Core.Commands.VolIncCommand' PCRemote.Core.Commands.DarkScreenCommand' PCRemote.Core.Commands.ProcessListCommand' PCRemote.Core.Commands.ShutdownCommand' PCRemote.Core.Commands.VolDecCommand' PCRemote.Core.Commands.ScreenshotCommand' PCRemote.Core.Commands.PhotoCommand' PCRemote.Core.NinjectModules.CommandModule' PCRemote.Core.Configuration.CommandConfiguration
+PCRemote.Core.Configuration,CommandConfiguration,1,2,1,0,1,75,15,0,1,1,2,0,PCRemote.Core.Contracts.ICommand' PCRemote.Core.Configuration.ConfigurationBase,
+PCRemote.Core.Configuration,ConfigurationBase,0,10,0,0,3,135,27,1,0,-1,1,1,PCRemote.Core.Configuration.PCRemoteConfiguration,PCRemote.Core.Configuration.CommandConfiguration
 PCRemote.Core.Configuration,PCRemoteConfigurationHandler,0,1,0,0,1,11,1,0,0,-1,1,0,PCRemote.Core.Configuration.PCRemoteConfiguration,
-PCRemote.Core.Configuration,PCRemoteConfiguration,1,3,0,0,3,16,3,0,0,0.67,0,2,,PCRemote.Core.Configuration.ConfigurationBase' PCRemote.Core.Configuration.PCRemoteConfigurationHandler
+PCRemote.Core.Configuration,PCRemoteConfiguration,1,3,0,0,3,16,3,0,0,0.67,0,2,,PCRemote.Core.Configuration.PCRemoteConfigurationHandler' PCRemote.Core.Configuration.ConfigurationBase
 PCRemote.Core.Configuration,GlobalSettings,1,2,2,0,1,24,2,0,0,0,0,1,,PCRemote.Core.Utilities.NetworkUtility
-PCRemote.Core.NinjectModules,CommandModule,0,1,0,0,1,11,1,0,0,-1,0,0,,
-PCRemote.Core,QQWeiboService,1,7,0,0,7,87,10,0,1,0.29,2,1,PCRemote.Core.Entities.Weibo' PCRemote.Core.Entities.WeiboUser,PCRemote.Core.Commands.CommandBase
-PCRemote.Core,Global,0,0,1,0,0,11,0,0,0,-1,0,2,,PCRemote.UI.CustomCommands' PCRemote.UI.Main
-PCRemote.Core,SinaWeiboService,1,8,0,0,8,92,11,0,1,0.25,2,1,PCRemote.Core.Entities.Weibo' PCRemote.Core.Entities.WeiboUser,PCRemote.Core.Commands.CommandBase
+PCRemote.Core.NinjectModules,CommandModule,0,1,0,0,1,11,1,0,0,-1,2,0,PCRemote.Core.Commands.LockCommand' PCRemote.Core.Contracts.ICommand,
+PCRemote.Core,QQWeiboService,1,7,0,0,7,87,10,0,1,0.29,3,1,PCRemote.Core.Entities.WeiboUser' PCRemote.Core.Entities.Weibo' PCRemote.Core.Contracts.IWeiboService,PCRemote.Core.Commands.CommandBase
+PCRemote.Core,Global,0,0,1,0,0,11,0,0,0,-1,0,0,,
+PCRemote.Core,SinaWeiboService,1,8,0,0,8,92,11,0,1,0.25,3,1,PCRemote.Core.Entities.WeiboUser' PCRemote.Core.Entities.Weibo' PCRemote.Core.Contracts.IWeiboService,PCRemote.Core.Commands.CommandBase
 PCRemote.Core.Enums,EmailPriorityEnum,0,0,0,0,0,17,0,0,0,-1,0,1,,PCRemote.Core.Utilities.MailUtility
-PCRemote.Core.Utilities,BaiduMp3Graber,1,2,0,0,2,16,2,0,0,0,0,2,,PCRemote.Core.Commands.Mp3Command' PCRemote.Tests.BaiduMp3GraberTests
-PCRemote.Core.Utilities,InstagramGraber,0,1,0,0,1,40,1,0,0,-1,0,2,,PCRemote.Core.Commands.InstagramCommand' PCRemote.Tests.InstagramGraberTests
-PCRemote.Core.Utilities,ThunderUtility,3,17,0,0,6,192,20,0,0,0.18,3,1,PCRemote.Core.Utilities.XL_SUCCESS' PCRemote.Core.Utilities.TaskInfo' PCRemote.Core.Utilities.TaskStatus,PCRemote.Tests.ThunderTests
-PCRemote.Core.Utilities,TaskStatus,0,0,0,0,0,8,0,0,0,-1,0,2,,PCRemote.Core.Utilities.ThunderUtility' PCRemote.Core.Utilities.TaskInfo
+PCRemote.Core.Utilities,BaiduMp3Graber,1,2,0,0,2,16,2,0,0,0,1,1,PCRemote.Core.Entities.BaiduResult,PCRemote.Core.Commands.Mp3Command
+PCRemote.Core.Utilities,InstagramGraber,0,1,0,0,1,40,1,0,0,-1,0,1,,PCRemote.Core.Commands.InstagramCommand
+PCRemote.Core.Utilities,ThunderUtility,3,17,0,0,6,192,20,0,0,0.18,3,0,PCRemote.Core.Utilities.TaskStatus' PCRemote.Core.Utilities.XL_SUCCESS' PCRemote.Core.Utilities.TaskInfo,
+PCRemote.Core.Utilities,TaskStatus,0,0,0,0,0,8,0,0,0,-1,0,1,,PCRemote.Core.Utilities.ThunderUtility
 PCRemote.Core.Utilities,XL_SUCCESS,0,0,0,0,0,58,0,0,0,-1,0,1,,PCRemote.Core.Utilities.ThunderUtility
-PCRemote.Core.Utilities,TaskInfo,3,0,0,3,0,6,0,0,0,-1,1,1,PCRemote.Core.Utilities.TaskStatus,PCRemote.Core.Utilities.ThunderUtility
-PCRemote.Core.Utilities,CryptUtility,3,10,0,3,10,203,30,0,0,0,2,0,PCRemote.Core.Utilities.Operation' PCRemote.Core.Utilities.Constants,
+PCRemote.Core.Utilities,TaskInfo,3,0,0,3,0,6,0,0,0,-1,0,1,,PCRemote.Core.Utilities.ThunderUtility
+PCRemote.Core.Utilities,CryptUtility,3,10,0,3,10,203,31,0,0,0,2,0,PCRemote.Core.Utilities.Constants' PCRemote.Core.Utilities.Operation,
 PCRemote.Core.Utilities,Constants,0,0,0,0,0,9,0,0,0,-1,0,1,,PCRemote.Core.Utilities.CryptUtility
 PCRemote.Core.Utilities,Operation,3,0,0,3,0,6,0,0,0,-1,0,1,,PCRemote.Core.Utilities.CryptUtility
-PCRemote.Core.Utilities,DosCommandUtility,0,1,0,0,1,24,1,0,0,-1,0,1,,PCRemote.Tests.CommandTests
-PCRemote.Core.Utilities,MailUtility,1,3,1,0,2,84,8,0,1,0,2,0,PCRemote.Core.Entities.EmailAccount' PCRemote.Core.Enums.EmailPriorityEnum,
+PCRemote.Core.Utilities,DosCommandUtility,0,1,0,0,1,24,1,0,0,-1,0,0,,
+PCRemote.Core.Utilities,MailUtility,1,3,1,0,2,84,9,0,1,0,3,0,PCRemote.Core.Entities.EmailAccount' PCRemote.Core.Contracts.IMailUtility' PCRemote.Core.Enums.EmailPriorityEnum,
 PCRemote.Core.Utilities,TernaryRasterOperations,0,0,0,0,0,18,0,0,0,-1,0,1,,PCRemote.Core.Utilities.ImageUtility
 PCRemote.Core.Utilities,ImageUtility,0,3,0,0,3,26,3,0,0,-1,1,1,PCRemote.Core.Utilities.TernaryRasterOperations,PCRemote.Core.Commands.ScreenshotCommand
-PCRemote.Core.Utilities,InputUtility,1,3,0,0,1,297,3,0,0,0.67,5,5,PCRemote.Core.Utilities.INPUT' PCRemote.Core.Utilities.InputType' PCRemote.Core.Utilities.MOUSEKEYBDHARDWAREINPUT' PCRemote.Core.Utilities.KEYBDINPUT' PCRemote.Core.Utilities.Keyboard,PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.MediaPauseCommand' PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.MediaPlayCommand
+PCRemote.Core.Utilities,InputUtility,1,3,0,0,1,297,3,0,0,0.67,7,5,PCRemote.Core.Utilities.Keyboard' PCRemote.Core.Utilities.MOUSEINPUT' PCRemote.Core.Utilities.KEYBDINPUT' PCRemote.Core.Utilities.HARDWAREINPUT' PCRemote.Core.Utilities.MOUSEKEYBDHARDWAREINPUT' PCRemote.Core.Utilities.INPUT' PCRemote.Core.Utilities.InputType,PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.MediaPauseCommand' PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.MediaPlayCommand
 PCRemote.Core.Utilities,Mouse,0,0,0,0,0,8,0,0,0,-1,0,0,,
-PCRemote.Core.Utilities,Keyboard,0,0,0,0,0,184,0,0,0,-1,0,6,,PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.MediaPauseCommand' PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.MediaPlayCommand' PCRemote.Core.Utilities.InputUtility
-PCRemote.Core.Utilities,MOUSEINPUT,6,0,1,6,0,20,0,0,0,-1,0,0,,
+PCRemote.Core.Utilities,Keyboard,0,0,0,0,0,184,0,0,0,-1,0,6,,PCRemote.Core.Commands.MediaPauseCommand' PCRemote.Core.Commands.MediaNextTrackCommand' PCRemote.Core.Commands.MediaPreviousTrackCommand' PCRemote.Core.Commands.MediaStopCommand' PCRemote.Core.Commands.MediaPlayCommand' PCRemote.Core.Utilities.InputUtility
+PCRemote.Core.Utilities,MOUSEINPUT,6,0,1,6,0,20,0,0,0,-1,0,1,,PCRemote.Core.Utilities.InputUtility
 PCRemote.Core.Utilities,KEYBDINPUT,5,0,1,5,0,19,0,0,0,-1,0,1,,PCRemote.Core.Utilities.InputUtility
-PCRemote.Core.Utilities,HARDWAREINPUT,3,0,1,3,0,16,0,0,0,-1,0,0,,
-PCRemote.Core.Utilities,MOUSEKEYBDHARDWAREINPUT,3,0,0,3,0,10,0,0,0,-1,0,2,,PCRemote.Core.Utilities.InputUtility' PCRemote.Core.Utilities.INPUT
-PCRemote.Core.Utilities,INPUT,2,0,0,2,0,5,0,0,0,-1,1,1,PCRemote.Core.Utilities.MOUSEKEYBDHARDWAREINPUT,PCRemote.Core.Utilities.InputUtility
+PCRemote.Core.Utilities,HARDWAREINPUT,3,0,1,3,0,16,0,0,0,-1,0,1,,PCRemote.Core.Utilities.InputUtility
+PCRemote.Core.Utilities,MOUSEKEYBDHARDWAREINPUT,3,0,0,3,0,10,0,0,0,-1,0,1,,PCRemote.Core.Utilities.InputUtility
+PCRemote.Core.Utilities,INPUT,2,0,0,2,0,5,0,0,0,-1,0,1,,PCRemote.Core.Utilities.InputUtility
 PCRemote.Core.Utilities,InputType,0,0,0,0,0,6,0,0,0,-1,0,1,,PCRemote.Core.Utilities.InputUtility
-PCRemote.Core.Utilities,NetworkUtility,0,4,0,0,4,164,8,0,0,-1,2,3,PCRemote.Core.Utilities.DownloadParameter' PCRemote.Core.Configuration.GlobalSettings,PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.Mp3Command' PCRemote.Tests.NetworkUtilityTests
-PCRemote.Core.Utilities,DownloadParameter,0,0,7,0,0,31,0,0,0,-1,0,4,,PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.Mp3Command' PCRemote.Core.Utilities.NetworkUtility' PCRemote.Tests.NetworkUtilityTests
+PCRemote.Core.Utilities,NetworkUtility,0,4,0,0,4,164,14,0,0,-1,2,2,PCRemote.Core.Configuration.GlobalSettings' PCRemote.Core.Utilities.DownloadParameter,PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.Mp3Command
+PCRemote.Core.Utilities,DownloadParameter,0,0,7,0,0,31,0,0,0,-1,0,3,,PCRemote.Core.Utilities.NetworkUtility' PCRemote.Core.Commands.InstagramCommand' PCRemote.Core.Commands.Mp3Command
 PCRemote.Core.Utilities,Tools,0,1,0,0,1,16,2,0,0,-1,0,0,,
 PCRemote.Core.Utilities,WebCamUtility,17,8,0,13,8,54,9,0,0,0.25,0,1,,PCRemote.Core.Commands.PhotoCommand

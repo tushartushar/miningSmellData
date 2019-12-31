@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 ContactManager,BundleConfig,0,1,0,0,1,21,1,0,0,-1,0,1,,ContactManager.MvcApplication
 ContactManager,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,ContactManager.MvcApplication
-ContactManager,EmailService,0,1,0,0,1,8,1,0,0,-1,0,0,,
-ContactManager,SmsService,0,1,0,0,1,8,1,0,0,-1,0,0,,
-ContactManager,ApplicationUserManager,0,2,0,0,2,50,3,0,0,-1,0,4,,ContactManager.ApplicationSignInManager' ContactManager.Startup' ContactManager.Controllers.AccountController' ContactManager.Controllers.ManageController
+ContactManager,EmailService,0,1,0,0,1,8,1,0,0,-1,0,1,,ContactManager.ApplicationUserManager
+ContactManager,SmsService,0,1,0,0,1,8,1,0,0,-1,0,1,,ContactManager.ApplicationUserManager
+ContactManager,ApplicationUserManager,0,2,0,0,2,50,3,0,0,-1,4,4,ContactManager.EmailService' ContactManager.SmsService' ContactManager.Models.ApplicationUser' ContactManager.Models.ApplicationDbContext,ContactManager.Startup' ContactManager.Controllers.AccountController' ContactManager.Controllers.ManageController' ContactManager.ApplicationSignInManager
 ContactManager,ApplicationSignInManager,0,3,0,0,3,15,3,0,0,-1,2,3,ContactManager.ApplicationUserManager' ContactManager.Models.ApplicationUser,ContactManager.Startup' ContactManager.Controllers.AccountController' ContactManager.Controllers.ManageController
 ContactManager,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,ContactManager.MvcApplication
-ContactManager,Startup,0,2,0,0,2,55,2,0,0,-1,3,0,ContactManager.Models.ApplicationDbContext' ContactManager.ApplicationUserManager' ContactManager.ApplicationSignInManager,
-ContactManager,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,ContactManager.FilterConfig' ContactManager.RouteConfig' ContactManager.BundleConfig,
-ContactManager.Controllers,AccountController,3,25,3,0,22,425,53,0,0,0.84,11,0,ContactManager.ApplicationSignInManager' ContactManager.ApplicationUserManager' ContactManager.Models.LoginViewModel' ContactManager.Models.VerifyCodeViewModel' ContactManager.Models.ApplicationUser' ContactManager.Models.RegisterViewModel' ContactManager.Models.ForgotPasswordViewModel' ContactManager.Models.ResetPasswordViewModel' ContactManager.Controllers.ChallengeResult' ContactManager.Models.SendCodeViewModel' ContactManager.Models.ExternalLoginConfirmationViewModel,
-ContactManager.Controllers,ChallengeResult,0,3,3,0,3,25,4,0,0,-1,0,2,,ContactManager.Controllers.AccountController' ContactManager.Controllers.ManageController
+ContactManager,Startup,0,2,0,0,2,55,2,0,0,-1,4,0,ContactManager.ApplicationUserManager' ContactManager.ApplicationSignInManager' ContactManager.Models.ApplicationUser' ContactManager.Models.ApplicationDbContext,
+ContactManager,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,ContactManager.BundleConfig' ContactManager.FilterConfig' ContactManager.RouteConfig,
+ContactManager.Controllers,AccountController,3,25,3,0,22,425,58,0,0,0.84,11,1,ContactManager.ApplicationUserManager' ContactManager.ApplicationSignInManager' ContactManager.Controllers.ChallengeResult' ContactManager.Models.ExternalLoginConfirmationViewModel' ContactManager.Models.SendCodeViewModel' ContactManager.Models.VerifyCodeViewModel' ContactManager.Models.LoginViewModel' ContactManager.Models.RegisterViewModel' ContactManager.Models.ResetPasswordViewModel' ContactManager.Models.ForgotPasswordViewModel' ContactManager.Models.ApplicationUser,ContactManager.Controllers.ManageController
+ContactManager.Controllers,ChallengeResult,0,3,3,0,3,25,4,0,0,-1,0,2,,ContactManager.Controllers.ManageController' ContactManager.Controllers.AccountController
 ContactManager.Controllers,HomeController,0,3,0,0,3,17,3,0,0,-1,0,0,,
-ContactManager.Controllers,ManageController,3,22,3,0,18,343,45,0,0,0.95,9,0,ContactManager.ApplicationSignInManager' ContactManager.ApplicationUserManager' ContactManager.Models.IndexViewModel' ContactManager.Controllers.ManageMessageId' ContactManager.Models.AddPhoneNumberViewModel' ContactManager.Models.VerifyPhoneNumberViewModel' ContactManager.Models.ChangePasswordViewModel' ContactManager.Models.SetPasswordViewModel' ContactManager.Controllers.ChallengeResult,
+ContactManager.Controllers,ManageController,3,22,3,0,18,343,45,0,0,0.95,11,0,ContactManager.ApplicationUserManager' ContactManager.ApplicationSignInManager' ContactManager.Controllers.AccountController' ContactManager.Controllers.ChallengeResult' ContactManager.Controllers.ManageMessageId' ContactManager.Models.IndexViewModel' ContactManager.Models.ManageLoginsViewModel' ContactManager.Models.SetPasswordViewModel' ContactManager.Models.ChangePasswordViewModel' ContactManager.Models.AddPhoneNumberViewModel' ContactManager.Models.VerifyPhoneNumberViewModel,
 ContactManager.Controllers,ManageMessageId,0,0,0,0,0,10,0,0,0,-1,0,1,,ContactManager.Controllers.ManageController
 ContactManager.Models,ExternalLoginConfirmationViewModel,0,0,1,0,0,6,0,0,0,-1,0,1,,ContactManager.Controllers.AccountController
 ContactManager.Models,ExternalLoginListViewModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
@@ -22,10 +22,10 @@ ContactManager.Models,LoginViewModel,0,0,3,0,0,13,0,0,0,-1,0,1,,ContactManager.C
 ContactManager.Models,RegisterViewModel,0,0,3,0,0,16,0,0,0,-1,0,1,,ContactManager.Controllers.AccountController
 ContactManager.Models,ResetPasswordViewModel,0,0,4,0,0,17,0,0,0,-1,0,1,,ContactManager.Controllers.AccountController
 ContactManager.Models,ForgotPasswordViewModel,0,0,1,0,0,7,0,0,0,-1,0,1,,ContactManager.Controllers.AccountController
-ContactManager.Models,ApplicationUser,0,1,0,0,1,10,1,0,0,-1,0,2,,ContactManager.ApplicationSignInManager' ContactManager.Controllers.AccountController
-ContactManager.Models,ApplicationDbContext,0,2,0,0,2,11,2,0,0,-1,0,1,,ContactManager.Startup
+ContactManager.Models,ApplicationUser,0,1,0,0,1,10,1,0,0,-1,0,5,,ContactManager.Startup' ContactManager.Models.ApplicationDbContext' ContactManager.Controllers.AccountController' ContactManager.ApplicationUserManager' ContactManager.ApplicationSignInManager
+ContactManager.Models,ApplicationDbContext,0,2,0,0,2,11,2,0,0,-1,1,2,ContactManager.Models.ApplicationUser,ContactManager.Startup' ContactManager.ApplicationUserManager
 ContactManager.Models,IndexViewModel,0,0,5,0,0,8,0,0,0,-1,0,1,,ContactManager.Controllers.ManageController
-ContactManager.Models,ManageLoginsViewModel,0,0,2,0,0,5,0,0,0,-1,0,0,,
+ContactManager.Models,ManageLoginsViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,ContactManager.Controllers.ManageController
 ContactManager.Models,FactorViewModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
 ContactManager.Models,SetPasswordViewModel,0,0,2,0,0,12,0,0,0,-1,0,1,,ContactManager.Controllers.ManageController
 ContactManager.Models,ChangePasswordViewModel,0,0,3,0,0,16,0,0,0,-1,0,1,,ContactManager.Controllers.ManageController

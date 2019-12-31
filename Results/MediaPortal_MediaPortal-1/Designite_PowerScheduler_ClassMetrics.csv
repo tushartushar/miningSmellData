@@ -1,0 +1,38 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TvEngine.PowerScheduler.Handlers,NetworkAdapter,8,2,3,0,0,56,2,0,0,0,0,1,,TvEngine.PowerScheduler.Handlers.ActiveNetworkStandbyHandler
+TvEngine.PowerScheduler.Handlers,ActiveNetworkStandbyHandler,4,5,3,0,2,144,14,0,2,0.6,1,1,TvEngine.PowerScheduler.Handlers.NetworkAdapter,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,ActivePortsHandler,2,4,3,0,2,53,5,0,2,1,0,0,,
+TvEngine.PowerScheduler.Handlers,ActiveSharesStandbyHandler,3,4,3,0,2,269,14,0,2,1,3,1,TvEngine.PowerScheduler.Handlers.ShareMonitor' TvEngine.PowerScheduler.Handlers.ShareType' TvEngine.PowerScheduler.Handlers.ServerConnection,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,ShareMonitor,4,2,0,0,0,119,23,0,0,0,0,1,,TvEngine.PowerScheduler.Handlers.ActiveSharesStandbyHandler
+TvEngine.PowerScheduler.Handlers,ShareType,0,0,0,0,0,11,0,0,0,-1,0,1,,TvEngine.PowerScheduler.Handlers.ActiveSharesStandbyHandler
+TvEngine.PowerScheduler.Handlers,ServerConnection,4,1,0,4,1,14,1,0,0,0,0,1,,TvEngine.PowerScheduler.Handlers.ActiveSharesStandbyHandler
+TvEngine.PowerScheduler.Handlers,ActiveStreamsStandbyHandler,1,2,2,0,2,23,2,0,1,1,0,1,,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,PingStandbyHandler,5,4,3,0,2,131,7,0,2,1,0,1,,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,ControllerActiveStandbyHandler,2,3,4,0,2,127,5,0,2,1,0,1,,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,ProcessActiveStandbyHandler,4,4,3,0,2,144,16,0,2,0.75,0,1,,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,RebootWakeupHandler,0,7,1,0,3,228,34,0,1,-1,1,1,TvEngine.PowerScheduler.RestartOptions,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,RemoteClientStandbyHandler,3,2,3,0,2,63,2,0,2,1,0,1,,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler.Handlers,XmlTvImportWakeupHandler,1,2,1,0,2,50,5,0,1,1,0,1,,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,EpgGrabbingStandbyWakeupHandler,4,12,3,0,7,452,54,0,2,0.17,1,1,TvEngine.PowerScheduler.Handlers.GrabberSource,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler.Handlers,GrabberSource,4,2,4,0,2,36,2,0,0,0,0,1,,TvEngine.PowerScheduler.Handlers.EpgGrabbingStandbyWakeupHandler
+TvEngine.PowerScheduler.Handlers,PowerControllerStandbyHandler,4,3,2,0,2,65,5,0,1,1,0,1,,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler.Handlers,PowerControllerWakeupHandler,2,2,1,0,2,24,2,0,1,0,0,1,,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler.Handlers,LocalClientStandbyHandler,3,3,2,1,3,78,4,0,1,0,0,1,,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler.Handlers,LocalClientWakeupHandler,3,3,1,1,3,61,4,0,1,0,0,1,,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler.Handlers,ScheduledRecordingsWakeupHandler,1,4,1,0,2,186,27,0,1,0.75,0,1,,TvEngine.PowerScheduler.PowerSchedulerFactory
+TvEngine.PowerScheduler,PowerScheduler,35,41,7,0,18,1442,141,0,1,0.07,9,1,TvEngine.PowerScheduler.Handlers.RemoteClientStandbyHandler' TvEngine.PowerScheduler.Handlers.PowerControllerStandbyHandler' TvEngine.PowerScheduler.Handlers.PowerControllerWakeupHandler' TvEngine.PowerScheduler.Handlers.LocalClientStandbyHandler' TvEngine.PowerScheduler.Handlers.LocalClientWakeupHandler' TvEngine.PowerScheduler.SuspendSystemThreadEnv' TvEngine.PowerScheduler.PowerSchedulerFactory' TvEngine.PowerScheduler.RestartOptions' TvEngine.PowerScheduler.WindowsController,TvEngine.PowerScheduler.PowerSchedulerPlugin
+TvEngine.PowerScheduler,SuspendSystemThreadEnv,4,0,0,4,0,7,0,0,0,-1,0,1,,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler,PowerSchedulerFactory,2,3,0,0,3,76,7,0,0,0,10,1,TvEngine.PowerScheduler.Handlers.ActiveNetworkStandbyHandler' TvEngine.PowerScheduler.Handlers.ActiveSharesStandbyHandler' TvEngine.PowerScheduler.Handlers.ActiveStreamsStandbyHandler' TvEngine.PowerScheduler.Handlers.PingStandbyHandler' TvEngine.PowerScheduler.Handlers.ControllerActiveStandbyHandler' TvEngine.PowerScheduler.Handlers.ProcessActiveStandbyHandler' TvEngine.PowerScheduler.Handlers.RebootWakeupHandler' TvEngine.PowerScheduler.Handlers.XmlTvImportWakeupHandler' TvEngine.PowerScheduler.Handlers.EpgGrabbingStandbyWakeupHandler' TvEngine.PowerScheduler.Handlers.ScheduledRecordingsWakeupHandler,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler,PowerSchedulerPlugin,1,3,5,0,3,78,3,0,1,1,2,0,TvEngine.PowerScheduler.PowerScheduler' PowerScheduler.Setup.PowerSchedulerSetup,
+TvEngine.PowerScheduler,RestartOptions,0,0,0,0,0,27,0,0,0,-1,0,3,,TvEngine.PowerScheduler.Handlers.RebootWakeupHandler' TvEngine.PowerScheduler.WindowsController' TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler,LUID,2,0,0,2,0,12,0,0,0,-1,0,2,,TvEngine.PowerScheduler.LUID_AND_ATTRIBUTES' TvEngine.PowerScheduler.WindowsController
+TvEngine.PowerScheduler,LUID_AND_ATTRIBUTES,2,0,0,2,0,12,0,0,0,-1,1,1,TvEngine.PowerScheduler.LUID,TvEngine.PowerScheduler.TOKEN_PRIVILEGES
+TvEngine.PowerScheduler,TOKEN_PRIVILEGES,2,0,0,2,0,12,0,0,0,-1,1,1,TvEngine.PowerScheduler.LUID_AND_ATTRIBUTES,TvEngine.PowerScheduler.WindowsController
+TvEngine.PowerScheduler,WindowsController,6,18,0,0,3,260,28,0,0,0.22,5,1,TvEngine.PowerScheduler.RestartOptions' TvEngine.PowerScheduler.LUID' TvEngine.PowerScheduler.TOKEN_PRIVILEGES' TvEngine.PowerScheduler.ExitWindowsDefaultEnv' TvEngine.PowerScheduler.PrivilegeException,TvEngine.PowerScheduler.PowerScheduler
+TvEngine.PowerScheduler,ExitWindowsDefaultEnv,3,0,0,3,0,6,0,0,0,-1,0,1,,TvEngine.PowerScheduler.WindowsController
+TvEngine.PowerScheduler,PrivilegeException,0,2,0,0,2,12,2,0,0,-1,0,1,,TvEngine.PowerScheduler.WindowsController
+PowerScheduler.Setup,PowerSettingsForm,48,11,0,0,1,1190,65,0,0,0.27,1,1,PowerScheduler.Setup.PowerSettings,PowerScheduler.Setup.PowerSchedulerSetup
+PowerScheduler.Setup,PowerSettings,10,0,0,10,0,13,0,0,0,-1,0,2,,PowerScheduler.Setup.PowerSettingsForm' PowerScheduler.Setup.PowerSchedulerSetup
+PowerScheduler.Setup,PowerSchedulerSetup,139,36,0,0,3,3164,121,0,1,0,4,1,PowerScheduler.Setup.PowerSettingsForm' PowerScheduler.Setup.PowerSettings' PowerScheduler.Setup.SelectProcessForm' PowerScheduler.Setup.SelectShareForm,TvEngine.PowerScheduler.PowerSchedulerPlugin
+PowerScheduler.Setup,SelectProcessForm,6,5,1,0,1,129,8,0,0,0.4,0,1,,PowerScheduler.Setup.PowerSchedulerSetup
+PowerScheduler.Setup,SelectShareForm,6,5,1,0,1,130,8,0,0,0.4,0,1,,PowerScheduler.Setup.PowerSchedulerSetup

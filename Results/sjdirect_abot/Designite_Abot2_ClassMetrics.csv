@@ -1,0 +1,58 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Abot2.Tests.Unit,AssemblyDirectives,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Abot2,Constants,1,0,0,1,0,4,0,0,0,-1,0,0,,
+Abot2.Core,AngleSharpHyperlinkParser,0,7,1,0,2,58,11,0,1,-1,3,1,Abot2.Core.HyperLinkParser' Abot2.Poco.CrawlConfiguration' Abot2.Poco.CrawledPage,Abot2.Crawler.WebCrawler
+Abot2.Core,BloomFilterCrawledUrlRepository,0,5,1,0,5,33,8,0,1,-1,3,0,Abot2.Core.ICrawledUrlRepository' Abot2.Util.IBloomFilter' Abot2.Util.BloomFilter<T>,
+Abot2.Core,CompactCrawledUrlRepository,1,3,0,0,3,19,3,0,1,0,1,1,Abot2.Core.ICrawledUrlRepository,Abot2.Core.Scheduler
+Abot2.Core,ICrawlDecisionMaker,0,4,0,0,0,19,4,1,0,-1,4,3,Abot2.Poco.CrawlContext' Abot2.Poco.CrawlDecision' Abot2.Poco.CrawledPage' Abot2.Poco.PageToCrawl,Abot2.Core.CrawlDecisionMaker' Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Core,CrawlDecisionMaker,0,4,0,0,4,97,31,0,1,-1,5,1,Abot2.Core.ICrawlDecisionMaker' Abot2.Poco.CrawlContext' Abot2.Poco.CrawlDecision' Abot2.Poco.CrawledPage' Abot2.Poco.PageToCrawl,Abot2.Crawler.WebCrawler
+Abot2.Core,IDomainRateLimiter,0,4,0,0,0,19,4,1,0,-1,0,2,,Abot2.Core.DomainRateLimiter' Abot2.Crawler.PoliteWebCrawler
+Abot2.Core,DomainRateLimiter,2,6,0,0,5,66,18,0,1,0,3,1,Abot2.Core.IDomainRateLimiter' Abot2.Util.IRateLimiter' Abot2.Util.RateLimiter,Abot2.Crawler.PoliteWebCrawler
+Abot2.Core,IPagesToCrawlRepository,0,4,0,0,0,7,4,1,0,-1,1,2,Abot2.Poco.PageToCrawl,Abot2.Core.FifoPagesToCrawlRepository' Abot2.Core.Scheduler
+Abot2.Core,FifoPagesToCrawlRepository,1,5,0,0,5,26,5,0,1,0,2,1,Abot2.Core.IPagesToCrawlRepository' Abot2.Poco.PageToCrawl,Abot2.Core.Scheduler
+Abot2.Core,IHtmlParser,0,1,0,0,0,7,1,1,0,-1,2,3,Abot2.Poco.CrawledPage' Abot2.Poco.HyperLink,Abot2.Crawler.PoliteWebCrawler' Abot2.Core.HyperLinkParser' Abot2.Crawler.WebCrawler
+Abot2.Core,HyperLinkParser,2,9,1,0,1,118,21,1,1,0.22,4,1,Abot2.Core.IHtmlParser' Abot2.Poco.CrawlConfiguration' Abot2.Poco.CrawledPage' Abot2.Poco.HyperLink,Abot2.Core.AngleSharpHyperlinkParser
+Abot2.Core,ICrawledUrlRepository,0,2,0,0,0,5,2,3,0,-1,0,4,,Abot2.Core.BloomFilterCrawledUrlRepository' Abot2.Core.CompactCrawledUrlRepository' Abot2.Core.InMemoryCrawledUrlRepository' Abot2.Core.Scheduler
+Abot2.Core,InMemoryCrawledUrlRepository,1,3,0,0,3,16,3,0,1,0,1,0,Abot2.Core.ICrawledUrlRepository,
+Abot2.Core,IPageRequester,0,2,0,0,0,11,2,1,0,-1,2,4,Abot2.Poco.CrawlDecision' Abot2.Poco.CrawledPage,Abot2.Core.PageRequester' Abot2.Core.RobotsDotTextFinder' Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Core,PageRequester,5,8,0,0,4,160,21,0,1,0.25,6,2,Abot2.Core.IPageRequester' Abot2.Core.IWebContentExtractor' Abot2.Poco.CrawlConfiguration' Abot2.Poco.CrawlDecision' Abot2.Poco.CrawledPage' Abot2.Poco.HttpProtocolVersion,Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Core,IRobotsDotText,0,3,1,0,0,19,3,1,0,-1,0,4,,Abot2.Core.RobotsDotText' Abot2.Crawler.PoliteWebCrawler' Abot2.Core.IRobotsDotTextFinder' Abot2.Core.RobotsDotTextFinder
+Abot2.Core,RobotsDotText,2,5,1,0,4,32,7,0,1,0,1,1,Abot2.Core.IRobotsDotText,Abot2.Core.RobotsDotTextFinder
+Abot2.Core,IRobotsDotTextFinder,0,1,0,0,0,11,1,1,0,-1,1,2,Abot2.Core.IRobotsDotText,Abot2.Crawler.PoliteWebCrawler' Abot2.Core.RobotsDotTextFinder
+Abot2.Core,RobotsDotTextFinder,1,2,0,0,2,25,4,0,1,0,4,1,Abot2.Core.IPageRequester' Abot2.Core.IRobotsDotText' Abot2.Core.RobotsDotText' Abot2.Core.IRobotsDotTextFinder,Abot2.Crawler.PoliteWebCrawler
+Abot2.Core,IScheduler,0,6,1,0,0,33,6,1,0,-1,1,4,Abot2.Poco.PageToCrawl,Abot2.Poco.CrawlContext' Abot2.Core.Scheduler' Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Core,Scheduler,3,9,1,0,9,68,16,0,1,0.33,6,1,Abot2.Core.CompactCrawledUrlRepository' Abot2.Core.IPagesToCrawlRepository' Abot2.Core.FifoPagesToCrawlRepository' Abot2.Core.ICrawledUrlRepository' Abot2.Core.IScheduler' Abot2.Poco.PageToCrawl,Abot2.Crawler.WebCrawler
+Abot2.Core,IWebContentExtractor,0,1,0,0,0,4,1,1,0,-1,1,2,Abot2.Poco.PageContent,Abot2.Core.WebContentExtractor' Abot2.Core.PageRequester
+Abot2.Core,WebContentExtractor,0,7,0,0,2,76,14,0,1,-1,2,2,Abot2.Core.IWebContentExtractor' Abot2.Poco.PageContent,Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Crawler,CrawlArgs,0,1,1,0,1,8,1,3,0,-1,1,3,Abot2.Poco.CrawlContext,Abot2.Crawler.PageCrawlCompletedArgs' Abot2.Crawler.PageCrawlStartingArgs' Abot2.Crawler.RobotsDotTextParseCompletedArgs
+Abot2.Crawler,PageCrawlCompletedArgs,0,1,1,0,1,9,1,1,1,-1,3,3,Abot2.Crawler.CrawlArgs' Abot2.Poco.CrawlContext' Abot2.Poco.CrawledPage,Abot2.Crawler.PageLinksCrawlDisallowedArgs' Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Crawler,PageCrawlDisallowedArgs,0,1,1,0,1,11,2,0,1,-1,3,2,Abot2.Crawler.PageCrawlStartingArgs' Abot2.Poco.CrawlContext' Abot2.Poco.PageToCrawl,Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Crawler,PageCrawlStartingArgs,0,1,1,0,1,9,1,1,1,-1,3,3,Abot2.Crawler.CrawlArgs' Abot2.Poco.CrawlContext' Abot2.Poco.PageToCrawl,Abot2.Crawler.PageCrawlDisallowedArgs' Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Crawler,PageLinksCrawlDisallowedArgs,0,1,1,0,1,11,2,0,2,-1,3,2,Abot2.Crawler.PageCrawlCompletedArgs' Abot2.Poco.CrawlContext' Abot2.Poco.CrawledPage,Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Crawler,IPoliteWebCrawler,0,0,0,0,0,7,0,1,1,-1,2,1,Abot2.Crawler.RobotsDotTextParseCompletedArgs' Abot2.Crawler.IWebCrawler,Abot2.Crawler.PoliteWebCrawler
+Abot2.Crawler,PoliteWebCrawler,3,6,0,0,4,117,17,0,2,0.5,19,0,Abot2.Core.ICrawlDecisionMaker' Abot2.Core.IDomainRateLimiter' Abot2.Core.DomainRateLimiter' Abot2.Core.IHtmlParser' Abot2.Core.IPageRequester' Abot2.Core.PageRequester' Abot2.Core.IRobotsDotText' Abot2.Core.IRobotsDotTextFinder' Abot2.Core.RobotsDotTextFinder' Abot2.Core.IScheduler' Abot2.Core.WebContentExtractor' Abot2.Crawler.IPoliteWebCrawler' Abot2.Crawler.RobotsDotTextParseCompletedArgs' Abot2.Crawler.WebCrawler' Abot2.Poco.CrawlConfiguration' Abot2.Poco.CrawlResult' Abot2.Poco.PageToCrawl' Abot2.Util.IMemoryManager' Abot2.Util.IThreadManager,
+Abot2.Crawler,RobotsDotTextParseCompletedArgs,0,1,1,0,1,14,1,0,1,-1,2,2,Abot2.Crawler.CrawlArgs' Abot2.Poco.CrawlContext,Abot2.Crawler.IPoliteWebCrawler' Abot2.Crawler.PoliteWebCrawler
+Abot2.Crawler,IWebCrawler,0,2,7,0,0,57,2,2,0,-1,9,2,Abot2.Crawler.PageCrawlCompletedArgs' Abot2.Crawler.PageCrawlDisallowedArgs' Abot2.Crawler.PageCrawlStartingArgs' Abot2.Crawler.PageLinksCrawlDisallowedArgs' Abot2.Poco.CrawlContext' Abot2.Poco.CrawlDecision' Abot2.Poco.CrawledPage' Abot2.Poco.CrawlResult' Abot2.Poco.PageToCrawl,Abot2.Crawler.IPoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Crawler,WebCrawler,15,40,7,0,5,715,108,1,1,0.08,26,1,Abot2.Core.AngleSharpHyperlinkParser' Abot2.Core.ICrawlDecisionMaker' Abot2.Core.CrawlDecisionMaker' Abot2.Core.IHtmlParser' Abot2.Core.IPageRequester' Abot2.Core.PageRequester' Abot2.Core.IScheduler' Abot2.Core.Scheduler' Abot2.Core.WebContentExtractor' Abot2.Crawler.PageCrawlCompletedArgs' Abot2.Crawler.PageCrawlDisallowedArgs' Abot2.Crawler.PageCrawlStartingArgs' Abot2.Crawler.PageLinksCrawlDisallowedArgs' Abot2.Crawler.IWebCrawler' Abot2.Poco.CrawlConfiguration' Abot2.Poco.CrawlContext' Abot2.Poco.CrawlDecision' Abot2.Poco.CrawledPage' Abot2.Poco.CrawlResult' Abot2.Poco.PageToCrawl' Abot2.Util.CachedMemoryMonitor' Abot2.Util.GcMemoryMonitor' Abot2.Util.IMemoryManager' Abot2.Util.MemoryManager' Abot2.Util.TaskThreadManager' Abot2.Util.IThreadManager,Abot2.Crawler.PoliteWebCrawler
+Abot2.Poco,CrawlConfiguration,0,1,40,0,1,201,1,0,0,-1,1,6,Abot2.Poco.HttpProtocolVersion,Abot2.Poco.CrawlContext' Abot2.Core.PageRequester' Abot2.Core.AngleSharpHyperlinkParser' Abot2.Core.HyperLinkParser' Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Poco,CrawlContext,1,1,12,1,1,63,1,0,0,0,2,11,Abot2.Core.IScheduler' Abot2.Poco.CrawlConfiguration,Abot2.Crawler.PageCrawlDisallowedArgs' Abot2.Crawler.PageCrawlCompletedArgs' Abot2.Crawler.PageCrawlStartingArgs' Abot2.Crawler.RobotsDotTextParseCompletedArgs' Abot2.Crawler.PageLinksCrawlDisallowedArgs' Abot2.Poco.CrawlResult' Abot2.Crawler.CrawlArgs' Abot2.Core.ICrawlDecisionMaker' Abot2.Core.CrawlDecisionMaker' Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Poco,CrawlDecision,0,1,4,0,1,23,1,0,0,-1,0,6,,Abot2.Core.IPageRequester' Abot2.Core.PageRequester' Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler' Abot2.Core.ICrawlDecisionMaker' Abot2.Core.CrawlDecisionMaker
+Abot2.Poco,CrawledPage,2,3,13,0,2,88,5,0,1,1,3,12,Abot2.Poco.HyperLink' Abot2.Poco.PageContent' Abot2.Poco.PageToCrawl,Abot2.Crawler.PageLinksCrawlDisallowedArgs' Abot2.Core.AngleSharpHyperlinkParser' Abot2.Poco.PageToCrawl' Abot2.Core.ICrawlDecisionMaker' Abot2.Core.CrawlDecisionMaker' Abot2.Crawler.PageCrawlCompletedArgs' Abot2.Core.IHtmlParser' Abot2.Core.HyperLinkParser' Abot2.Core.IPageRequester' Abot2.Core.PageRequester' Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Poco,CrawlResult,0,1,5,0,1,32,1,0,0,-1,1,3,Abot2.Poco.CrawlContext,Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Poco,HttpProtocolVersion,0,0,0,0,0,6,0,0,0,-1,0,2,,Abot2.Poco.CrawlConfiguration' Abot2.Core.PageRequester
+Abot2.Poco,HyperLink,0,0,1,0,0,4,0,0,0,-1,0,3,,Abot2.Poco.CrawledPage' Abot2.Core.IHtmlParser' Abot2.Core.HyperLinkParser
+Abot2.Poco,PageContent,0,1,4,0,1,23,1,0,0,-1,0,3,,Abot2.Poco.CrawledPage' Abot2.Core.IWebContentExtractor' Abot2.Core.WebContentExtractor
+Abot2.Poco,PageToCrawl,0,3,12,0,3,65,3,1,0,-1,1,12,Abot2.Poco.CrawledPage,Abot2.Crawler.PageCrawlDisallowedArgs' Abot2.Core.ICrawlDecisionMaker' Abot2.Core.CrawlDecisionMaker' Abot2.Crawler.PageCrawlStartingArgs' Abot2.Poco.CrawledPage' Abot2.Crawler.PoliteWebCrawler' Abot2.Core.IScheduler' Abot2.Core.Scheduler' Abot2.Core.IPagesToCrawlRepository' Abot2.Core.FifoPagesToCrawlRepository' Abot2.Crawler.IWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Util,IBloomFilter,0,2,0,0,0,5,2,1,0,-1,0,2,,Abot2.Util.BloomFilter<T>' Abot2.Core.BloomFilterCrawledUrlRepository
+Abot2.Util,BloomFilter<T>,3,14,1,0,7,271,27,0,1,0.71,1,1,Abot2.Util.IBloomFilter,Abot2.Core.BloomFilterCrawledUrlRepository
+Abot2.Util,CachedMemoryMonitor,3,4,0,0,3,33,6,0,1,0,1,1,Abot2.Util.IMemoryMonitor,Abot2.Crawler.WebCrawler
+Abot2.Util,IMemoryMonitor,0,1,0,0,0,4,1,3,0,-1,0,4,,Abot2.Util.GcMemoryMonitor' Abot2.Util.CachedMemoryMonitor' Abot2.Util.IMemoryManager' Abot2.Util.MemoryManager
+Abot2.Util,GcMemoryMonitor,0,2,0,0,2,15,2,0,1,-1,1,1,Abot2.Util.IMemoryMonitor,Abot2.Crawler.WebCrawler
+Abot2.Util,ManualThreadManager,0,2,0,0,1,11,2,0,1,-1,1,0,Abot2.Util.ThreadManager,
+Abot2.Util,IMemoryManager,0,2,0,0,0,11,2,1,1,-1,1,3,Abot2.Util.IMemoryMonitor,Abot2.Util.MemoryManager' Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Util,MemoryManager,1,5,0,0,5,47,7,0,2,0.4,2,1,Abot2.Util.IMemoryMonitor' Abot2.Util.IMemoryManager,Abot2.Crawler.WebCrawler
+Abot2.Util,IRateLimiter,0,1,0,0,0,4,1,1,0,-1,0,2,,Abot2.Util.RateLimiter' Abot2.Core.DomainRateLimiter
+Abot2.Util,RateLimiter,4,8,2,0,5,143,18,0,1,0.25,1,1,Abot2.Util.IRateLimiter,Abot2.Core.DomainRateLimiter
+Abot2.Util,TaskThreadManager,1,6,0,0,4,47,10,0,1,0.33,1,1,Abot2.Util.ThreadManager,Abot2.Crawler.WebCrawler
+Abot2.Util,IThreadManager,0,3,1,0,0,19,3,1,0,-1,0,3,,Abot2.Util.ThreadManager' Abot2.Crawler.PoliteWebCrawler' Abot2.Crawler.WebCrawler
+Abot2.Util,ThreadManager,5,7,1,0,4,103,12,2,1,0.29,1,2,Abot2.Util.IThreadManager,Abot2.Util.ManualThreadManager' Abot2.Util.TaskThreadManager

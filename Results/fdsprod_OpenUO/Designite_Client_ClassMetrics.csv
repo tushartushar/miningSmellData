@@ -1,143 +1,143 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Client,ViewportExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
 Client,EngineTimers,1,0,0,1,0,4,0,0,0,-1,0,1,,Client.Engine
-Client,IAttach,0,0,1,0,0,4,0,0,0,-1,0,0,,
-Client,IAttachable,0,0,1,0,0,5,0,1,0,-1,0,0,,
-Client,LifetimeCounters,6,0,0,6,0,9,0,0,0,-1,0,3,,Client.Engine' Client.Graphics.DeviceRenderState' Client.Graphics.TextureBase
-Client,IUpdate,0,1,0,0,0,4,1,1,0,-1,1,0,Client.UpdateState,
-Client,MathHelper,7,8,0,7,8,52,9,0,0,1,0,1,,Client.Graphics.Camera2D
+Client,IAttach,0,0,1,0,0,4,0,0,0,-1,1,0,Client.IAttachable,
+Client,IAttachable,0,0,1,0,0,5,0,1,0,-1,0,2,,Client.Ultima.Mobile' Client.IAttach
+Client,LifetimeCounters,6,0,0,6,0,9,0,0,0,-1,0,3,,Client.Engine' Client.Graphics.TextureBase' Client.Graphics.DeviceRenderState
+Client,IUpdate,0,1,0,0,0,4,1,1,0,-1,1,1,Client.UpdateState,Client.Ultima.World
+Client,MathHelper,7,8,0,7,8,52,10,0,0,1,0,2,,Client.Graphics.Projection' Client.Graphics.Camera2D
 Client,NativeMethods,0,1,0,0,1,5,1,0,0,-1,0,1,,Client.EngineModule
-Client,Engine,15,13,0,0,4,210,20,0,0,0,17,1,Client.Graphics.DeviceContext' Client.GameTime' Client.UpdateState' Client.Configuration.IConfiguration' Client.Ultima.World' Client.Patterns.Chaining.IWorldRenderChain' Client.Patterns.Chaining.IUIRenderChain' Client.Graphics.DrawState' Client.Graphics.DrawScreenTarget' Client.Graphics.IDeviceContextService' Client.Resources' Client.Diagnostics.PerformanceMonitor' Client.LifetimeCounters' Client.Graphics.DeviceTimers' Client.EngineTimers' Client.Configuration.ConfigSections' Client.Configuration.ConfigKeys,Client.Program
-Client,EngineModule,0,2,1,0,0,71,6,0,1,-1,8,0,Client.Configuration.IConfiguration' Client.Graphics.IDeviceContextService' Client.Graphics.IShaderManager' Client.Configuration.ConfigSections' Client.Configuration.ConfigKeys' Client.NativeMethods' OpenUO.Ultima.InstallLocation' OpenUO.Ultima.InstallationLocator,
+Client,Engine,15,13,0,0,4,210,20,0,0,0,17,1,Client.EngineTimers' Client.LifetimeCounters' Client.GameTime' Client.Resources' Client.UpdateState' Client.Graphics.DrawScreenTarget' Client.Graphics.DeviceTimers' Client.Graphics.DeviceContext' Client.Graphics.IDeviceContextService' Client.Graphics.DrawState' Client.Patterns.Chaining.IUIRenderChain' Client.Patterns.Chaining.IWorldRenderChain' Client.Components.IConsole' Client.Configuration.ConfigKeys' Client.Configuration.ConfigSections' Client.Configuration.IConfiguration' Client.Ultima.World,Client.Program
+Client,EngineModule,0,2,1,0,0,71,6,0,1,-1,25,1,Client.NativeMethods' Client.ModuleBase' Client.UpdateChain' Client.UpdateState' Client.Graphics.CombineShader' Client.Graphics.SimpleTextureEffect' Client.Graphics.IShaderManager' Client.Graphics.ShaderManager' Client.Graphics.DeviceContextManager' Client.Graphics.IDeviceContextService' Client.Patterns.Chaining.UIRenderChain' Client.Patterns.Chaining.WorldRenderChain' Client.Patterns.Chaining.IUIRenderChain' Client.Patterns.Chaining.IWorldRenderChain' Client.Components.IConsole' Client.Configuration.ConfigKeys' Client.Configuration.ConfigSections' Client.Configuration.ConfigurationManager' Client.Configuration.IConfiguration' Client.Diagnostics.Tracer.GameConsoleTracer' Client.Network.INetwork' Client.Network.NetworkManager' Client.Input.IInput' Client.Input.InputManager' Client.Testing.TestRendering,Client.EngineBootstrapper
 Client,GameTime,11,4,5,1,0,74,7,0,0,0,2,1,Client.Diagnostics.PerfTime' Client.Diagnostics.PerfTimeSpan,Client.Engine
-Client,ModuleBase,1,3,2,0,2,20,3,1,0,0.67,0,0,,
-Client,Program,0,1,0,0,0,15,2,0,0,-1,3,0,Client.EngineBootstrapper' Client.Configuration.IConfiguration' Client.Engine,
-Client,EngineBootstrapper,0,3,1,0,1,17,3,0,0,-1,0,1,,Client.Program
-Client,Resources,2,1,5,0,0,62,1,0,0,0,0,1,,Client.Engine
-Client,State,0,0,4,0,0,23,0,2,0,-1,0,0,,
-Client,UpdateChain,0,1,0,0,1,4,1,0,0,-1,0,0,,
-Client,UpdateState,0,0,0,0,0,3,0,0,1,-1,0,4,,Client.IUpdate' Client.Engine' Client.Patterns.Chaining.UpdateDelegateChainStep' Client.Ultima.World
-Client.Graphics,BoundingFrustum,3,8,6,0,5,152,10,0,0,0,0,3,,Client.Graphics.ElementCamera' Client.Graphics.Projection' Client.Graphics.Camera2D
-Client.Graphics,Buffer<DataType>,7,13,7,0,7,276,36,0,0,0.38,3,0,Client.Graphics.DirtyRange' Client.Graphics.DrawState' Client.Graphics.GeometryBuffer,
+Client,ModuleBase,1,3,2,0,2,20,3,1,0,0.67,0,1,,Client.EngineModule
+Client,Program,0,1,0,0,0,15,2,0,0,-1,3,0,Client.Engine' Client.EngineBootstrapper' Client.Configuration.IConfiguration,
+Client,EngineBootstrapper,0,3,1,0,1,17,3,0,0,-1,1,1,Client.EngineModule,Client.Program
+Client,Resources,2,1,5,0,0,62,1,0,0,0,0,3,,Client.Graphics.SimpleTextureEffect' Client.Graphics.CombineShader' Client.Engine
+Client,State,0,0,4,0,0,23,0,2,0,-1,0,2,,Client.UpdateState' Client.Graphics.DrawState
+Client,UpdateChain,0,1,0,0,1,4,1,0,0,-1,2,1,Client.UpdateState' Client.Patterns.EngineChainBase<T>,Client.EngineModule
+Client,UpdateState,0,0,0,0,0,3,0,0,1,-1,1,6,Client.State,Client.IUpdate' Client.Ultima.World' Client.EngineModule' Client.UpdateChain' Client.Patterns.Chaining.UpdateDelegateChainStep' Client.Engine
+Client.Graphics,BoundingFrustum,3,8,6,0,5,152,10,0,0,0,0,3,,Client.Graphics.Camera2D' Client.Graphics.ElementCamera' Client.Graphics.Projection
+Client.Graphics,Buffer<DataType>,7,13,7,0,7,276,49,0,0,0.38,3,2,Client.Graphics.GeometryBuffer' Client.Graphics.DirtyRange' Client.Graphics.DrawState,Client.Graphics.Indices<TIndexType>' Client.Graphics.Vertices<TVertexType>
 Client.Graphics,GeometryBuffer,2,0,0,1,0,5,0,0,0,-1,0,1,,Client.Graphics.Buffer<DataType>
 Client.Graphics,DirtyRange,2,2,0,2,2,22,3,0,0,0,0,1,,Client.Graphics.Buffer<DataType>
-Client.Graphics,Camera3D,7,42,5,0,14,349,56,0,1,0.07,4,2,Client.Graphics.Projection' Client.Graphics.Camera2D' Client.Graphics.ICamera' Client.Graphics.FrustumCull,Client.Graphics.ElementCamera' Client.Graphics.Camera2D
-Client.Graphics,Color,4,1,0,4,1,23,1,0,0,0,0,5,,Client.Graphics.Element' Client.Graphics.VertexDeclarationBuilder' Client.Components.ConsoleLine' Client.Components.Console' Client.Components.IConsole
-Client.Graphics,ElementCamera,17,41,3,0,10,343,62,0,1,0.37,6,1,Client.Graphics.BoundingFrustum' Client.Graphics.Camera3D' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Graphics.ICamera' Client.Graphics.FrustumCull,Client.Graphics.Element
+Client.Graphics,Camera3D,7,42,5,0,14,349,56,0,1,0.07,5,2,Client.Graphics.FrustumCull' Client.Graphics.ICullPrimitive' Client.Graphics.Projection' Client.Graphics.Camera2D' Client.Graphics.ICamera,Client.Graphics.Camera2D' Client.Graphics.ElementCamera
+Client.Graphics,Color,4,1,0,4,1,23,1,0,0,0,0,7,,Client.Components.IConsole' Client.Components.ConsoleLine' Client.Graphics.VertexDeclarationBuilder' Client.Graphics.VertexPositionColorTexture' Client.Graphics.VertexPositionColor' Client.Graphics.Element' Client.Components.Console
+Client.Graphics,ElementCamera,17,41,3,0,10,343,62,0,1,0.37,6,1,Client.Graphics.BoundingFrustum' Client.Graphics.Camera3D' Client.Graphics.FrustumCull' Client.Graphics.ICullPrimitive' Client.Graphics.ICamera' Client.Graphics.DrawState,Client.Graphics.Element
 Client.Graphics,CullMode,0,0,0,0,0,3,0,0,0,-1,0,0,,
-Client.Graphics,DrawScreenTarget,3,8,0,0,6,53,8,0,1,0.38,5,1,Client.Graphics.RenderTarget2D' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Graphics.DrawTarget' Client.Graphics.CombineShader,Client.Engine
+Client.Graphics,DrawScreenTarget,3,8,0,0,6,53,8,0,1,0.38,7,1,Client.Graphics.DrawTarget' Client.Graphics.RenderTarget2D' Client.Graphics.CombineShader' Client.Graphics.Vertices<TVertexType>' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Graphics.VertexPositionTexture,Client.Engine
 Client.Graphics,DrawTarget,1,3,1,0,0,20,3,1,0,1,1,1,Client.Graphics.DeviceContext,Client.Graphics.DrawScreenTarget
-Client.Graphics,Element,8,15,11,0,4,282,38,1,1,0.2,12,1,Client.Graphics.ElementCamera' Client.Graphics.HorizontalAlignment' Client.Graphics.VerticalAlignment' Client.Graphics.AlphaBlendState' Client.Graphics.Color' Client.Graphics.DrawState' Client.Graphics.DeviceContext' Client.Graphics.DeviceRenderState' Client.Graphics.StencilTestState' Client.Graphics.DepthColourCullState' Client.Graphics.DeviceRenderStateContainer' Client.Graphics.ICuller,Client.Graphics.Elements.ElementRect
+Client.Graphics,Element,8,15,11,0,4,282,40,1,1,0.2,11,1,Client.Graphics.Color' Client.Graphics.ElementCamera' Client.Graphics.HorizontalAlignment' Client.Graphics.VerticalAlignment' Client.Graphics.AlphaBlendState' Client.Graphics.DeviceRenderState' Client.Graphics.StencilTestState' Client.Graphics.ICullable' Client.Graphics.ICuller' Client.Graphics.DeviceContext' Client.Graphics.DrawState,Client.Graphics.Elements.ElementRect
 Client.Graphics,ElementScaling,0,0,0,0,0,5,0,0,0,-1,0,1,,Client.Graphics.Elements.ElementRect
 Client.Graphics,HorizontalAlignment,0,0,0,0,0,6,0,0,0,-1,0,1,,Client.Graphics.Element
 Client.Graphics,VerticalAlignment,0,0,0,0,0,6,0,0,0,-1,0,1,,Client.Graphics.Element
-Client.Graphics,FrustumCull,0,6,0,0,0,231,35,0,0,-1,0,4,,Client.Graphics.Camera3D' Client.Graphics.ElementCamera' Client.Graphics.Camera2D' Client.Graphics.DrawState
-Client.Graphics,ICullPrimitive,0,12,0,0,0,96,12,2,0,-1,0,1,,Client.Graphics.DrawState
+Client.Graphics,FrustumCull,0,6,0,0,0,231,35,0,0,-1,0,4,,Client.Graphics.Camera3D' Client.Graphics.Camera2D' Client.Graphics.ElementCamera' Client.Graphics.DrawState
+Client.Graphics,ICullPrimitive,0,12,0,0,0,96,12,2,0,-1,0,6,,Client.Graphics.ICuller' Client.Graphics.ICamera' Client.Graphics.ElementCamera' Client.Graphics.DrawState' Client.Graphics.Camera3D' Client.Graphics.Camera2D
 Client.Graphics,IDeviceIndexBuffer,0,1,0,0,0,4,1,1,0,-1,1,2,Client.Graphics.DrawState,Client.Graphics.Indices<TIndexType>' Client.Graphics.Vertices<TVertexType>
 Client.Graphics,IDeviceVertexBuffer,0,3,0,0,0,6,3,1,0,-1,2,2,Client.Graphics.DeviceContext' Client.Graphics.DrawState,Client.Graphics.VertexDeclarationBuilder' Client.Graphics.Vertices<TVertexType>
-Client.Graphics,IIndices,0,2,6,0,0,11,2,1,0,-1,0,2,,Client.Graphics.IVertices' Client.Graphics.Vertices<TVertexType>
-Client.Graphics,IndexBufferProcessor,0,7,0,0,2,116,27,0,0,-1,1,1,Client.Graphics.Implementation,Client.Graphics.Implementation
-Client.Graphics,Indices<TIndexType>,3,13,11,0,5,213,24,0,1,0.31,4,0,Client.Graphics.Implementation' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Graphics.IDeviceIndexBuffer,
-Client.Graphics,Implementation,9,8,1,5,4,68,9,0,0,0.88,5,3,Client.Graphics.IndexBufferProcessor' Client.Graphics.DrawState' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceContext' Client.Graphics.DeviceCounters,Client.Graphics.IndexBufferProcessor' Client.Graphics.Indices<TIndexType>' Client.Graphics.Vertices<TVertexType>
-Client.Graphics,ISemantic,0,1,1,0,0,5,1,3,0,-1,1,1,Client.Graphics.ShaderParameter,Client.Graphics.Shader
-Client.Graphics,IVertices,0,4,4,0,0,11,4,1,0,-1,2,1,Client.Graphics.DrawState' Client.Graphics.IIndices,Client.Graphics.VertexDeclarationBuilder
-Client.Graphics,MatrixOp,0,0,0,0,0,4,0,0,0,-1,0,2,,Client.Graphics.MatrixCalc' Client.Graphics.DrawState
-Client.Graphics,MatrixCalc,7,2,0,0,2,133,4,0,1,0,6,1,Client.Graphics.MatrixSource' Client.Graphics.MatrixOp' Client.Graphics.DrawState' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceContext' Client.Graphics.DeviceCounters,Client.Graphics.DrawState
-Client.Graphics,Projection,17,16,9,0,6,268,37,0,0,0.19,1,1,Client.Graphics.BoundingFrustum,Client.Graphics.Camera3D
-Client.Graphics,RenderTarget2D,1,3,1,0,1,29,5,0,1,0,2,2,Client.Graphics.DeviceContext' Client.Graphics.Texture2D,Client.Graphics.DrawScreenTarget' Client.Graphics.DeviceContext
-Client.Graphics,Resource,6,20,3,0,14,232,26,1,0,0.1,1,0,Client.Graphics.DrawState,
-Client.Graphics,CombineShader,2,1,2,0,1,33,1,0,1,0,2,1,Client.Graphics.Texture2D' Client.Graphics.DeviceContext,Client.Graphics.DrawScreenTarget
-Client.Graphics,SimpleTextureEffect,1,1,1,0,1,20,1,0,1,0,2,2,Client.Graphics.Texture2D' Client.Graphics.DeviceContext,Client.Graphics.Elements.TexturedElement' Client.Testing.TestRendering
-Client.Graphics,ShaderParameter,9,15,0,5,14,92,15,0,0,0,2,7,Client.Graphics.Shader' Client.Graphics.ShaderElementCollection,Client.Graphics.ISemantic' Client.Graphics.ShaderElementCollection' Client.Graphics.Shader' Client.Graphics.ShaderParameterCollection' Client.Graphics.MatrixSourceSemantic' Client.Graphics.StructSemantic<T>' Client.Graphics.TextureSemantic
-Client.Graphics,ShaderPass,7,3,0,1,1,43,6,0,0,0,2,2,Client.Graphics.DeviceContext' Client.Graphics.Shader,Client.Graphics.ShaderPassCollection' Client.Graphics.DeviceContext
-Client.Graphics,ShaderTechnique,4,1,0,2,0,15,1,0,0,0,3,3,Client.Graphics.ShaderPassCollection' Client.Graphics.Shader' Client.Graphics.DeviceContext,Client.Graphics.ShaderTechniqueCollection' Client.Graphics.ShaderPassCollection' Client.Graphics.Shader
+Client.Graphics,IIndices,0,2,6,0,0,11,2,1,0,-1,0,3,,Client.Graphics.IVertices' Client.Graphics.Indices<TIndexType>' Client.Graphics.Vertices<TVertexType>
+Client.Graphics,IndexBufferProcessor,0,7,0,0,2,116,27,0,0,-1,2,1,Client.Graphics.Indices<TIndexType>' Client.Graphics.Implementation,Client.Graphics.Indices<TIndexType>
+Client.Graphics,Indices<TIndexType>,3,13,11,0,5,213,24,0,1,0.31,9,1,Client.Graphics.Buffer<DataType>' Client.Graphics.IDeviceIndexBuffer' Client.Graphics.IIndices' Client.Graphics.IndexBufferProcessor' Client.Graphics.Implementation' Client.Graphics.DeviceCounters' Client.Graphics.DeviceContext' Client.Graphics.DeviceResource' Client.Graphics.DrawState,Client.Graphics.IndexBufferProcessor
+Client.Graphics,Implementation,9,8,1,5,4,68,9,0,0,0.88,0,3,,Client.Graphics.Indices<TIndexType>' Client.Graphics.IndexBufferProcessor' Client.Graphics.Vertices<TVertexType>
+Client.Graphics,ISemantic,0,1,1,0,0,5,1,3,0,-1,1,2,Client.Graphics.ShaderParameter,Client.Graphics.Shader' Client.Graphics.DrawState
+Client.Graphics,IVertices,0,4,4,0,0,11,4,1,0,-1,2,2,Client.Graphics.IIndices' Client.Graphics.DrawState,Client.Graphics.Vertices<TVertexType>' Client.Graphics.VertexDeclarationBuilder
+Client.Graphics,MatrixOp,0,0,0,0,0,4,0,0,0,-1,0,2,,Client.Graphics.DrawState' Client.Graphics.MatrixCalc
+Client.Graphics,MatrixCalc,7,2,0,0,2,133,6,0,1,1,4,1,Client.Graphics.MatrixOp' Client.Graphics.MatrixSource' Client.Graphics.DeviceCounters' Client.Graphics.DrawState,Client.Graphics.DrawState
+Client.Graphics,Projection,17,16,9,0,6,268,38,0,0,0.19,2,1,Client.MathHelper' Client.Graphics.BoundingFrustum,Client.Graphics.Camera3D
+Client.Graphics,RenderTarget2D,1,3,1,0,1,29,5,0,1,0,2,2,Client.Graphics.Texture2D' Client.Graphics.DeviceContext,Client.Graphics.DrawScreenTarget' Client.Graphics.DeviceContext
+Client.Graphics,Resource,6,20,3,0,14,232,46,1,0,0.1,1,1,Client.Graphics.DrawState,Client.Graphics.DeviceResource
+Client.Graphics,CombineShader,2,1,2,0,1,33,1,0,1,0,4,2,Client.Resources' Client.Graphics.Shader' Client.Graphics.Texture2D' Client.Graphics.DeviceContext,Client.Graphics.DrawScreenTarget' Client.EngineModule
+Client.Graphics,SimpleTextureEffect,1,1,1,0,1,20,1,0,1,0,4,3,Client.Resources' Client.Graphics.Shader' Client.Graphics.Texture2D' Client.Graphics.DeviceContext,Client.Testing.TestRendering' Client.Graphics.Elements.TexturedElement' Client.EngineModule
+Client.Graphics,ShaderParameter,9,15,0,5,14,92,15,0,0,0,2,5,Client.Graphics.ShaderElementCollection' Client.Graphics.Shader,Client.Graphics.ISemantic' Client.Graphics.Shader' Client.Graphics.ShaderParameterCollection' Client.Graphics.ShaderElementCollection' Client.Graphics.DrawState
+Client.Graphics,ShaderPass,7,3,0,1,1,43,6,0,0,0,2,2,Client.Graphics.Shader' Client.Graphics.DeviceContext,Client.Graphics.DeviceContext' Client.Graphics.ShaderPassCollection
+Client.Graphics,ShaderTechnique,4,1,0,2,0,15,1,0,0,0,3,3,Client.Graphics.ShaderPassCollection' Client.Graphics.Shader' Client.Graphics.DeviceContext,Client.Graphics.ShaderPassCollection' Client.Graphics.Shader' Client.Graphics.ShaderTechniqueCollection
 Client.Graphics,TextureSamplerState,7,5,15,0,2,140,6,0,0,0.4,1,1,Client.Graphics.DeviceContext,Client.Graphics.Elements.TexturedElement
-Client.Graphics,VertexDeclarationBuilder,13,12,0,0,6,449,41,0,0,0,8,3,Client.Graphics.DeclarationHash' Client.Graphics.DeviceContext' Client.Graphics.Color' Client.Graphics.ElementHash' Client.Graphics.Ident' Client.Graphics.IDeviceVertexBuffer' Client.Graphics.IVertices' Client.Graphics.VertexElementAttribute,Client.Graphics.VertexElementAttribute' Client.Graphics.Vertices<TVertexType>' Client.Graphics.DeviceContext
+Client.Graphics,VertexDeclarationBuilder,13,12,0,0,6,449,56,0,0,0,9,3,Client.Graphics.Color' Client.Graphics.IDeviceVertexBuffer' Client.Graphics.IVertices' Client.Graphics.Ident' Client.Graphics.Type<T>' Client.Graphics.DeclarationHash' Client.Graphics.ElementHash' Client.Graphics.VertexElementAttribute' Client.Graphics.DeviceContext,Client.Graphics.VertexElementAttribute' Client.Graphics.DeviceContext' Client.Graphics.Vertices<TVertexType>
 Client.Graphics,Ident,2,1,1,0,1,21,1,0,0,0,0,1,,Client.Graphics.VertexDeclarationBuilder
-Client.Graphics,Type<T>,1,0,0,1,0,4,0,0,0,-1,0,0,,
+Client.Graphics,Type<T>,1,0,0,1,0,4,0,0,0,-1,0,1,,Client.Graphics.VertexDeclarationBuilder
 Client.Graphics,VertexUsage,2,1,0,2,1,10,1,0,0,0,0,0,,
-Client.Graphics,DeclarationHash,2,7,0,0,7,71,11,0,0,0.29,0,1,,Client.Graphics.VertexDeclarationBuilder
+Client.Graphics,DeclarationHash,2,7,0,0,7,71,14,0,0,0.29,0,1,,Client.Graphics.VertexDeclarationBuilder
 Client.Graphics,ElementHash,2,4,0,0,4,51,14,0,0,0,0,1,,Client.Graphics.VertexDeclarationBuilder
-Client.Graphics,VertexElementAttribute,3,7,3,0,7,68,10,0,0,0.43,1,7,Client.Graphics.VertexDeclarationBuilder,Client.Graphics.VertexDeclarationBuilder' Client.Graphics.Vertices<TVertexType>' Client.Graphics.VertexPosition' Client.Graphics.VertexPositionColor' Client.Graphics.VertexPositionColorTexture' Client.Graphics.VertexPositionNormalTexture' Client.Graphics.VertexPositionTexture
-Client.Graphics,Vertices<TVertexType>,4,19,7,0,11,407,56,0,1,0.32,10,0,Client.Graphics.Implementation' Client.Graphics.VertexElementAttribute' Client.Graphics.DeviceContext' Client.Graphics.VertexDeclarationBuilder' Client.Graphics.DrawState' Client.Graphics.IDeviceIndexBuffer' Client.Graphics.IDeviceVertexBuffer' Client.Graphics.IIndices' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceCounters,
-Client.Graphics,AlphaBlendState,10,15,17,0,12,276,26,0,0,0.13,2,2,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.Element' Client.Graphics.DeviceRenderState
-Client.Graphics,AlphaTestState,1,5,3,0,2,104,10,0,0,0.4,2,1,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.DeviceRenderState
-Client.Graphics,BitWiseTypeValidator,0,1,0,0,1,72,14,0,0,-1,0,4,,Client.Graphics.AlphaBlendState' Client.Graphics.AlphaTestState' Client.Graphics.DepthColourCullState' Client.Graphics.StencilTestState
+Client.Graphics,VertexElementAttribute,3,7,3,0,7,68,10,0,0,0.43,1,7,Client.Graphics.VertexDeclarationBuilder,Client.Graphics.Vertices<TVertexType>' Client.Graphics.VertexPositionTexture' Client.Graphics.VertexPosition' Client.Graphics.VertexPositionColor' Client.Graphics.VertexPositionNormalTexture' Client.Graphics.VertexPositionColorTexture' Client.Graphics.VertexDeclarationBuilder
+Client.Graphics,Vertices<TVertexType>,4,19,7,0,11,407,68,0,1,0.32,12,3,Client.Graphics.Buffer<DataType>' Client.Graphics.IDeviceIndexBuffer' Client.Graphics.IDeviceVertexBuffer' Client.Graphics.IIndices' Client.Graphics.Implementation' Client.Graphics.IVertices' Client.Graphics.VertexDeclarationBuilder' Client.Graphics.VertexElementAttribute' Client.Graphics.DeviceCounters' Client.Graphics.DeviceContext' Client.Graphics.DeviceResource' Client.Graphics.DrawState,Client.Graphics.DrawScreenTarget' Client.Testing.TestRendering' Client.Graphics.Elements.ElementRect
+Client.Graphics,AlphaBlendState,10,15,17,0,12,276,27,0,0,0.13,2,3,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.DeviceRenderStateContainer' Client.Graphics.Element' Client.Graphics.DeviceRenderState
+Client.Graphics,AlphaTestState,1,5,3,0,2,104,11,0,0,0.4,2,2,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.DeviceRenderStateContainer' Client.Graphics.DeviceRenderState
+Client.Graphics,BitWiseTypeValidator,0,1,0,0,1,72,18,0,0,-1,0,4,,Client.Graphics.AlphaTestState' Client.Graphics.AlphaBlendState' Client.Graphics.DepthColourCullState' Client.Graphics.StencilTestState
 Client.Graphics,BoundingRectangle,2,0,0,2,0,5,0,0,0,-1,0,0,,
-Client.Graphics,Camera2D,19,41,4,0,10,341,60,0,1,0.37,7,4,Client.Graphics.BoundingFrustum' Client.Graphics.Camera3D' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Graphics.ICamera' Client.MathHelper' Client.Graphics.FrustumCull,Client.Graphics.Camera3D' Client.Graphics.DrawState' Client.Testing.TestRendering' Client.Ultima.World
-Client.Graphics,MatrixSource,2,2,0,2,2,12,2,3,0,1,0,3,,Client.Graphics.MatrixCalc' Client.Graphics.DrawState' Client.Graphics.MatrixSourceSemantic
-Client.Graphics,DeviceRenderStateContainer,5,1,0,4,0,38,1,0,0,0,0,3,,Client.Graphics.Element' Client.Graphics.DrawState' Client.Graphics.Elements.ElementRect
+Client.Graphics,Camera2D,19,41,4,0,10,341,60,0,1,0.37,7,4,Client.MathHelper' Client.Graphics.BoundingFrustum' Client.Graphics.Camera3D' Client.Graphics.FrustumCull' Client.Graphics.ICullPrimitive' Client.Graphics.ICamera' Client.Graphics.DrawState,Client.Ultima.World' Client.Graphics.Camera3D' Client.Testing.TestRendering' Client.Graphics.DrawState
+Client.Graphics,MatrixSource,2,2,0,2,2,12,2,3,0,1,0,4,,Client.Graphics.WorldStackProvider' Client.Graphics.ViewProjectionProvider' Client.Graphics.MatrixCalc' Client.Graphics.DrawState
+Client.Graphics,DeviceRenderStateContainer,5,1,0,4,0,38,1,0,0,0,5,1,Client.Graphics.AlphaBlendState' Client.Graphics.AlphaTestState' Client.Graphics.DepthColourCullState' Client.Graphics.DeviceRenderState' Client.Graphics.StencilTestState,Client.Graphics.DrawState
 Client.Graphics,ShaderTechniqueCollection,1,1,1,0,0,30,2,0,0,0,3,1,Client.Graphics.ShaderTechnique' Client.Graphics.Shader' Client.Graphics.DeviceContext,Client.Graphics.Shader
 Client.Graphics,ShaderPassCollection,1,1,1,0,0,29,2,0,0,0,4,1,Client.Graphics.ShaderPass' Client.Graphics.ShaderTechnique' Client.Graphics.Shader' Client.Graphics.DeviceContext,Client.Graphics.ShaderTechnique
 Client.Graphics,ShaderElementCollection,1,1,1,0,0,30,2,0,0,0,2,1,Client.Graphics.ShaderParameter' Client.Graphics.Shader,Client.Graphics.ShaderParameter
-Client.Graphics,Shader,6,11,6,0,3,98,14,2,1,0.27,8,10,Client.Graphics.ShaderTechnique' Client.Graphics.ShaderTechniqueCollection' Client.Graphics.ShaderParameterCollection' Client.Graphics.DeviceContext' Client.Graphics.ShaderParameter' Client.Graphics.ISemantic' Client.Graphics.DrawState' Client.Graphics.DeviceResource,Client.Graphics.ShaderParameter' Client.Graphics.ShaderPass' Client.Graphics.ShaderTechnique' Client.Graphics.ShaderTechniqueCollection' Client.Graphics.ShaderPassCollection' Client.Graphics.ShaderElementCollection' Client.Graphics.ShaderParameterCollection' Client.Graphics.IShaderManager' Client.Graphics.ShaderManager' Client.Components.Console
+Client.Graphics,Shader,6,11,6,0,3,98,14,2,1,0.27,8,13,Client.Graphics.ISemantic' Client.Graphics.ShaderParameter' Client.Graphics.ShaderTechnique' Client.Graphics.ShaderTechniqueCollection' Client.Graphics.ShaderParameterCollection' Client.Graphics.DeviceContext' Client.Graphics.DeviceResource' Client.Graphics.DrawState,Client.Graphics.ShaderElementCollection' Client.Graphics.ShaderPassCollection' Client.Graphics.ShaderTechnique' Client.Graphics.ShaderTechniqueCollection' Client.Graphics.ShaderParameterCollection' Client.Components.Console' Client.Graphics.SimpleTextureEffect' Client.Graphics.ShaderPass' Client.Graphics.CombineShader' Client.Graphics.ShaderParameter' Client.Graphics.IShaderManager' Client.Graphics.DrawState' Client.Graphics.ShaderManager
 Client.Graphics,ShaderParameterCollection,1,1,1,0,0,32,2,0,0,0,2,1,Client.Graphics.ShaderParameter' Client.Graphics.Shader,Client.Graphics.Shader
 Client.Graphics,StateFlag,0,0,0,0,0,10,0,0,0,-1,0,1,,Client.Graphics.DeviceRenderState
-Client.Graphics,DepthColourCullState,1,6,5,0,2,167,16,0,0,0.33,2,4,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.Element' Client.Graphics.DeviceRenderState' Client.Graphics.DrawState' Client.Graphics.Elements.ElementRect
-Client.Graphics,ICamera,0,22,1,0,0,26,22,3,1,-1,0,6,,Client.Graphics.Camera3D' Client.Graphics.ElementCamera' Client.Graphics.Camera2D' Client.Graphics.ViewProjectionProvider' Client.Graphics.DrawState' Client.Components.Gumps.GumpManager
-Client.Graphics,IShaderManager,0,5,0,0,0,8,5,1,0,-1,1,2,Client.Graphics.Shader,Client.EngineModule' Client.Graphics.DrawState
-Client.Graphics,ShaderManager,2,6,0,0,6,40,7,0,1,0,3,0,Client.Graphics.DeviceContext' Client.Graphics.IDeviceContextService' Client.Graphics.Shader,
-Client.Graphics,DeviceRenderState,4,6,0,4,3,111,29,0,0,0.33,9,2,Client.Graphics.AlphaBlendState' Client.Graphics.AlphaTestState' Client.Graphics.DepthColourCullState' Client.Graphics.StencilTestState' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceContext' Client.LifetimeCounters' Client.Graphics.DrawState' Client.Graphics.StateFlag,Client.Graphics.Element' Client.Graphics.DrawState
-Client.Graphics,StencilTestState,3,5,13,0,2,186,22,0,0,0.6,2,2,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.Element' Client.Graphics.DeviceRenderState
-Client.Graphics,ViewProjectionProvider,4,5,0,0,5,60,11,0,1,0.4,5,1,Client.Graphics.ICamera' Client.Graphics.DrawState' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceContext' Client.Graphics.DeviceCounters,Client.Graphics.DrawState
-Client.Graphics,WorldStackProvider,8,9,0,0,9,263,18,0,1,0.22,4,1,Client.Graphics.DrawState' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceContext' Client.Graphics.DeviceCounters,Client.Graphics.DrawState
+Client.Graphics,DepthColourCullState,1,6,5,0,2,167,17,0,0,0.33,2,2,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.DeviceRenderStateContainer' Client.Graphics.DeviceRenderState
+Client.Graphics,ICamera,0,22,1,0,0,26,22,3,1,-1,1,6,Client.Graphics.ICullPrimitive,Client.Components.Gumps.GumpManager' Client.Graphics.ViewProjectionProvider' Client.Graphics.ElementCamera' Client.Graphics.DrawState' Client.Graphics.Camera3D' Client.Graphics.Camera2D
+Client.Graphics,IShaderManager,0,5,0,0,0,8,5,1,0,-1,1,3,Client.Graphics.Shader,Client.Graphics.ShaderManager' Client.EngineModule' Client.Graphics.DrawState
+Client.Graphics,ShaderManager,2,6,0,0,6,40,7,0,1,0,4,1,Client.Graphics.Shader' Client.Graphics.IShaderManager' Client.Graphics.DeviceContext' Client.Graphics.IDeviceContextService,Client.EngineModule
+Client.Graphics,DeviceRenderState,4,6,0,4,3,111,29,0,0,0.33,8,3,Client.LifetimeCounters' Client.Graphics.AlphaBlendState' Client.Graphics.AlphaTestState' Client.Graphics.StateFlag' Client.Graphics.DepthColourCullState' Client.Graphics.StencilTestState' Client.Graphics.DeviceContext' Client.Graphics.DrawState,Client.Graphics.Element' Client.Graphics.DrawState' Client.Graphics.DeviceRenderStateContainer
+Client.Graphics,StencilTestState,3,5,13,0,2,186,23,0,0,0.6,2,3,Client.Graphics.BitWiseTypeValidator' Client.Graphics.DeviceContext,Client.Graphics.DeviceRenderStateContainer' Client.Graphics.DeviceRenderState' Client.Graphics.Element
+Client.Graphics,ViewProjectionProvider,4,5,0,0,5,60,11,0,1,0.4,4,1,Client.Graphics.MatrixSource' Client.Graphics.ICamera' Client.Graphics.DeviceCounters' Client.Graphics.DrawState,Client.Graphics.DrawState
+Client.Graphics,WorldStackProvider,8,9,0,0,9,263,25,0,1,0.22,3,1,Client.Graphics.MatrixSource' Client.Graphics.DeviceCounters' Client.Graphics.DrawState,Client.Graphics.DrawState
 Client.Graphics,VertexPosition,1,0,0,1,0,6,0,0,0,-1,1,0,Client.Graphics.VertexElementAttribute,
-Client.Graphics,ICullable,0,1,0,0,0,4,1,1,0,-1,1,0,Client.Graphics.ICuller,
-Client.Graphics,ICuller,0,16,1,0,0,128,16,1,1,-1,0,3,,Client.Graphics.Element' Client.Graphics.ICullable' Client.Graphics.DrawState
-Client.Graphics,Texture2D,0,5,0,0,4,28,5,1,1,-1,1,5,Client.Graphics.DeviceContext,Client.Graphics.RenderTarget2D' Client.Graphics.CombineShader' Client.Graphics.SimpleTextureEffect' Client.Graphics.Elements.TexturedElement' Client.Testing.TestRendering
-Client.Graphics,DeviceCounters,48,0,0,48,0,51,0,0,0,-1,0,7,,Client.Graphics.Implementation' Client.Graphics.MatrixCalc' Client.Graphics.Vertices<TVertexType>' Client.Graphics.ViewProjectionProvider' Client.Graphics.WorldStackProvider' Client.Graphics.DeviceContext' Client.Graphics.DrawState
-Client.Graphics,TextureBase,9,18,5,0,12,150,20,1,1,0.22,5,0,Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceContext' Client.LifetimeCounters' Client.Graphics.DeviceResource' Client.Graphics.DrawState,
-Client.Graphics,DeviceTimers,3,0,0,3,0,6,0,0,0,-1,0,2,,Client.Engine' Client.Graphics.DeviceContext
-Client.Graphics,DeviceContext,11,124,25,1,122,866,136,0,0,0,6,36,Client.Graphics.ShaderPass' Client.Graphics.VertexDeclarationBuilder' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceTimers' Client.Graphics.DeviceCounters' Client.Graphics.RenderTarget2D,Client.Engine' Client.Graphics.ElementCamera' Client.Graphics.DrawScreenTarget' Client.Graphics.DrawTarget' Client.Graphics.Element' Client.Graphics.IDeviceVertexBuffer' Client.Graphics.Indices<TIndexType>' Client.Graphics.Implementation' Client.Graphics.MatrixCalc' Client.Graphics.RenderTarget2D' Client.Graphics.CombineShader' Client.Graphics.SimpleTextureEffect' Client.Graphics.ShaderPass' Client.Graphics.ShaderTechnique' Client.Graphics.TextureSamplerState' Client.Graphics.VertexDeclarationBuilder' Client.Graphics.Vertices<TVertexType>' Client.Graphics.AlphaBlendState' Client.Graphics.AlphaTestState' Client.Graphics.Camera2D' Client.Graphics.ShaderTechniqueCollection' Client.Graphics.ShaderPassCollection' Client.Graphics.Shader' Client.Graphics.DepthColourCullState' Client.Graphics.ShaderManager' Client.Graphics.DeviceRenderState' Client.Graphics.StencilTestState' Client.Graphics.ViewProjectionProvider' Client.Graphics.WorldStackProvider' Client.Graphics.Texture2D' Client.Graphics.TextureBase' Client.Graphics.DeviceResource' Client.Graphics.DrawState' Client.Graphics.Elements.ElementRect' Client.Graphics.Elements.TexturedElement' Client.Ultima.World
-Client.Graphics,DeviceContextManager,0,1,2,0,1,17,1,0,1,-1,3,0,Client.Configuration.IConfiguration' Client.Configuration.ConfigSections' Client.Configuration.ConfigKeys,
-Client.Graphics,IDeviceContextService,0,0,2,0,0,5,0,1,0,-1,0,6,,Client.Engine' Client.EngineModule' Client.Graphics.ShaderManager' Client.Graphics.DrawState' Client.Input.InputManager' Client.Testing.TestRendering
-Client.Graphics,IDraw,0,1,0,0,0,4,1,1,0,-1,1,0,Client.Graphics.DrawState,
+Client.Graphics,ICullable,0,1,0,0,0,4,1,1,0,-1,1,1,Client.Graphics.ICuller,Client.Graphics.Element
+Client.Graphics,ICuller,0,16,1,0,0,128,16,1,1,-1,2,3,Client.Graphics.ICullPrimitive' Client.Graphics.DrawState,Client.Graphics.ICullable' Client.Graphics.Element' Client.Graphics.DrawState
+Client.Graphics,Texture2D,0,5,0,0,4,28,5,1,1,-1,2,5,Client.Graphics.TextureBase' Client.Graphics.DeviceContext,Client.Graphics.SimpleTextureEffect' Client.Graphics.RenderTarget2D' Client.Graphics.CombineShader' Client.Testing.TestRendering' Client.Graphics.Elements.TexturedElement
+Client.Graphics,DeviceCounters,48,0,0,48,0,51,0,0,0,-1,0,7,,Client.Graphics.Indices<TIndexType>' Client.Graphics.ViewProjectionProvider' Client.Graphics.MatrixCalc' Client.Graphics.Vertices<TVertexType>' Client.Graphics.WorldStackProvider' Client.Graphics.DeviceContext' Client.Graphics.DrawState
+Client.Graphics,TextureBase,9,18,5,0,12,150,20,1,1,0.22,4,1,Client.LifetimeCounters' Client.Graphics.DeviceContext' Client.Graphics.DeviceResource' Client.Graphics.DrawState,Client.Graphics.Texture2D
+Client.Graphics,DeviceTimers,3,0,0,3,0,6,0,0,0,-1,0,2,,Client.Graphics.DeviceContext' Client.Engine
+Client.Graphics,DeviceContext,11,124,25,1,122,866,145,0,0,0,6,33,Client.Graphics.RenderTarget2D' Client.Graphics.ShaderPass' Client.Graphics.VertexDeclarationBuilder' Client.Graphics.DeviceCounters' Client.Graphics.DeviceTimers' Client.Diagnostics.PerformanceMonitor,Client.Graphics.IDeviceVertexBuffer' Client.Graphics.Elements.TexturedElement' Client.Graphics.Elements.ElementRect' Client.Graphics.SimpleTextureEffect' Client.Graphics.CombineShader' Client.Graphics.TextureSamplerState' Client.Graphics.DrawScreenTarget' Client.Graphics.ShaderPass' Client.Graphics.RenderTarget2D' Client.Graphics.VertexDeclarationBuilder' Client.Graphics.Indices<TIndexType>' Client.Graphics.DrawTarget' Client.Graphics.ShaderTechniqueCollection' Client.Graphics.ShaderPassCollection' Client.Graphics.ShaderManager' Client.Graphics.DepthColourCullState' Client.Graphics.AlphaBlendState' Client.Graphics.DeviceRenderState' Client.Engine' Client.Graphics.StencilTestState' Client.Graphics.Shader' Client.Graphics.IDeviceContextService' Client.Graphics.Texture2D' Client.Graphics.TextureBase' Client.Graphics.Vertices<TVertexType>' Client.Graphics.DeviceResource' Client.Graphics.DeviceContextManager' Client.Graphics.ShaderTechnique' Client.Ultima.World' Client.Testing.TestRendering' Client.Graphics.AlphaTestState' Client.Graphics.Element' Client.Graphics.DrawState
+Client.Graphics,DeviceContextManager,0,1,2,0,1,17,1,0,1,-1,5,1,Client.Graphics.DeviceContext' Client.Graphics.IDeviceContextService' Client.Configuration.ConfigKeys' Client.Configuration.ConfigSections' Client.Configuration.IConfiguration,Client.EngineModule
+Client.Graphics,IDeviceContextService,0,0,2,0,0,5,0,1,0,-1,1,7,Client.Graphics.DeviceContext,Client.Graphics.DeviceContextManager' Client.Graphics.ShaderManager' Client.EngineModule' Client.Testing.TestRendering' Client.Input.InputManager' Client.Engine' Client.Graphics.DrawState
+Client.Graphics,IDraw,0,1,0,0,0,4,1,1,0,-1,1,1,Client.Graphics.DrawState,Client.Ultima.World
 Client.Graphics,IRenderer,0,2,0,0,0,5,2,0,0,-1,0,0,,
-Client.Graphics,DeviceResource,1,5,0,0,1,31,5,4,1,0.6,1,2,Client.Graphics.DeviceContext,Client.Graphics.Shader' Client.Graphics.TextureBase
-Client.Graphics,DrawState,41,72,7,1,27,1597,273,0,2,0.1,19,28,Client.Graphics.DeviceContext' Client.Graphics.WorldStackProvider' Client.Graphics.ViewProjectionProvider' Client.Graphics.ICullPrimitive' Client.Graphics.DeviceRenderState' Client.Graphics.MatrixCalc' Client.Graphics.DeviceRenderStateContainer' Client.Graphics.VertexStream' Client.Graphics.IShaderManager' Client.Graphics.ICamera' Client.Graphics.IDeviceContextService' Client.Graphics.MatrixOp' Client.Graphics.MatrixSource' Client.Graphics.Camera2D' Client.Diagnostics.PerformanceMonitor' Client.Graphics.DeviceCounters' Client.Graphics.DepthColourCullState' Client.Graphics.ICuller' Client.Graphics.FrustumCull,Client.Engine' Client.Graphics.Buffer<DataType>' Client.Graphics.ElementCamera' Client.Graphics.DrawScreenTarget' Client.Graphics.Element' Client.Graphics.IDeviceIndexBuffer' Client.Graphics.IDeviceVertexBuffer' Client.Graphics.Indices<TIndexType>' Client.Graphics.Implementation' Client.Graphics.IVertices' Client.Graphics.MatrixCalc' Client.Graphics.Resource' Client.Graphics.Vertices<TVertexType>' Client.Graphics.Camera2D' Client.Graphics.Shader' Client.Graphics.DeviceRenderState' Client.Graphics.ViewProjectionProvider' Client.Graphics.WorldStackProvider' Client.Graphics.TextureBase' Client.Graphics.IDraw' Client.Graphics.MatrixSourceSemantic' Client.Graphics.Elements.ElementRect' Client.Graphics.Elements.TexturedElement' Client.Patterns.Chaining.RenderDelegateChainStep' Client.Components.Console' Client.Testing.TestRendering' Client.Ultima.MapNode' Client.Ultima.World
-Client.Graphics,MatrixSourceSemantic,2,2,1,0,2,22,2,0,1,0,3,0,Client.Graphics.MatrixSource' Client.Graphics.DrawState' Client.Graphics.ShaderParameter,
-Client.Graphics,StructSemantic<T>,1,2,2,0,2,23,2,0,1,1,1,0,Client.Graphics.ShaderParameter,
-Client.Graphics,TextureSemantic,1,2,2,0,2,22,2,0,1,0,1,0,Client.Graphics.ShaderParameter,
+Client.Graphics,DeviceResource,1,5,0,0,1,31,5,4,1,0.6,2,4,Client.Graphics.Resource' Client.Graphics.DeviceContext,Client.Graphics.Shader' Client.Graphics.Indices<TIndexType>' Client.Graphics.TextureBase' Client.Graphics.Vertices<TVertexType>
+Client.Graphics,DrawState,41,72,7,1,27,1597,273,0,2,0.1,24,30,Client.State' Client.Graphics.FrustumCull' Client.Graphics.ICullPrimitive' Client.Graphics.ISemantic' Client.Graphics.MatrixOp' Client.Graphics.MatrixCalc' Client.Graphics.ShaderParameter' Client.Graphics.Camera2D' Client.Graphics.MatrixSource' Client.Graphics.DeviceRenderStateContainer' Client.Graphics.Shader' Client.Graphics.ICamera' Client.Graphics.IShaderManager' Client.Graphics.DeviceRenderState' Client.Graphics.ViewProjectionProvider' Client.Graphics.WorldStackProvider' Client.Graphics.ICuller' Client.Graphics.DeviceCounters' Client.Graphics.DeviceContext' Client.Graphics.IDeviceContextService' Client.Graphics.MatrixSourceSemantic' Client.Graphics.StructSemantic<T>' Client.Graphics.TextureSemantic' Client.Graphics.VertexStream,Client.Patterns.Chaining.RenderChainBase' Client.Graphics.Elements.ElementRect' Client.Ultima.MapNode' Client.Graphics.TextureBase' Client.Graphics.Shader' Client.Graphics.Elements.TexturedElement' Client.Ultima.World' Client.Graphics.IDeviceIndexBuffer' Client.Graphics.ElementCamera' Client.Graphics.IDeviceVertexBuffer' Client.Testing.TestRendering' Client.Graphics.Indices<TIndexType>' Client.Graphics.Buffer<DataType>' Client.Graphics.IVertices' Client.Graphics.DrawScreenTarget' Client.Graphics.MatrixCalc' Client.Patterns.Chaining.IUIRenderChain' Client.Graphics.Element' Client.Graphics.Camera2D' Client.Graphics.DeviceRenderState' Client.Graphics.Vertices<TVertexType>' Client.Graphics.ViewProjectionProvider' Client.Graphics.Resource' Client.Graphics.IDraw' Client.Graphics.WorldStackProvider' Client.Patterns.Chaining.IWorldRenderChain' Client.Components.Console' Client.Patterns.Chaining.RenderDelegateChainStep' Client.Engine' Client.Graphics.ICuller
+Client.Graphics,MatrixSourceSemantic,2,2,1,0,2,22,2,0,1,0,0,1,,Client.Graphics.DrawState
+Client.Graphics,StructSemantic<T>,1,2,2,0,2,23,2,0,1,1,0,1,,Client.Graphics.DrawState
+Client.Graphics,TextureSemantic,1,2,2,0,2,22,2,0,1,0,0,1,,Client.Graphics.DrawState
 Client.Graphics,VertexStream,3,0,0,3,0,6,0,0,0,-1,0,1,,Client.Graphics.DrawState
-Client.Graphics,VertexPositionColor,2,0,0,2,0,8,0,0,0,-1,1,0,Client.Graphics.VertexElementAttribute,
-Client.Graphics,VertexPositionColorTexture,3,0,0,3,0,10,0,0,0,-1,1,1,Client.Graphics.VertexElementAttribute,Client.Graphics.Elements.ElementRect
+Client.Graphics,VertexPositionColor,2,0,0,2,0,8,0,0,0,-1,2,0,Client.Graphics.Color' Client.Graphics.VertexElementAttribute,
+Client.Graphics,VertexPositionColorTexture,3,0,0,3,0,10,0,0,0,-1,2,1,Client.Graphics.Color' Client.Graphics.VertexElementAttribute,Client.Graphics.Elements.ElementRect
 Client.Graphics,VertexPositionNormalTexture,3,0,0,3,0,10,0,0,0,-1,1,0,Client.Graphics.VertexElementAttribute,
-Client.Graphics,VertexPositionTexture,2,0,0,2,0,8,0,0,0,-1,1,0,Client.Graphics.VertexElementAttribute,
-Client.Graphics.Elements,ElementRect,10,9,10,0,2,153,19,1,2,0.56,7,1,Client.Graphics.VertexPositionColorTexture' Client.Graphics.ElementScaling' Client.Graphics.Element' Client.Graphics.DepthColourCullState' Client.Graphics.DeviceRenderStateContainer' Client.Graphics.DrawState' Client.Graphics.DeviceContext,Client.Graphics.Elements.TexturedElement
-Client.Graphics.Elements,TexturedElement,6,7,3,0,3,103,10,0,3,0.43,6,1,Client.Graphics.TextureSamplerState' Client.Graphics.Texture2D' Client.Graphics.Elements.ElementRect' Client.Graphics.DeviceContext' Client.Graphics.SimpleTextureEffect' Client.Graphics.DrawState,Client.Testing.TestRendering
-Client.Components.Gumps,IGumpManager,0,0,0,0,0,3,0,1,0,-1,0,0,,
-Client.Components.Gumps,GumpManager,1,0,0,0,0,4,0,0,1,-1,1,0,Client.Graphics.ICamera,
-Client.Patterns.Chaining,UIRenderChain,0,1,0,0,1,4,1,0,1,-1,0,0,,
-Client.Patterns.Chaining,WorldRenderChain,0,1,0,0,1,4,1,0,1,-1,0,0,,
-Client.Patterns.Chaining,IUIRenderChain,0,0,0,0,0,3,0,1,0,-1,0,1,,Client.Engine
-Client.Patterns.Chaining,IWorldRenderChain,0,0,0,0,0,3,0,1,0,-1,0,1,,Client.Engine
-Client.Patterns.Chaining,UpdateDelegateChainStep,0,3,0,0,2,11,3,0,0,-1,1,0,Client.UpdateState,
-Client.Patterns.Chaining,RenderChainBase,0,1,0,0,0,4,1,2,0,-1,0,0,,
-Client.Patterns.Chaining,RenderDelegateChainStep,0,4,0,0,3,14,4,0,0,-1,1,0,Client.Graphics.DrawState,
-Client.ChainSteps,DelegateChainStepBase<T>,2,4,1,0,3,34,7,0,0,0.5,0,0,,
-Client.Components,ConsoleLine,2,1,1,0,1,14,1,0,0,0,1,0,Client.Graphics.Color,
-Client.Components,Console,6,9,1,1,5,153,17,0,1,0.33,5,0,Client.Graphics.Shader' Client.Input.IInput' Client.Graphics.Color' Client.Graphics.DrawState' Client.Input.HandledKeyEventArgs,
-Client.Components,IConsole,0,4,1,0,0,8,4,1,0,-1,1,1,Client.Graphics.Color,Client.Diagnostics.Tracer.GameConsoleTracer
-Client.Configuration,ConfigKeys,6,0,0,6,0,9,0,0,0,-1,0,4,,Client.Engine' Client.EngineModule' Client.Graphics.DeviceContextManager' Client.Ultima.World
-Client.Configuration,ConfigSections,2,0,0,2,0,5,0,0,0,-1,0,4,,Client.Engine' Client.EngineModule' Client.Graphics.DeviceContextManager' Client.Ultima.World
-Client.Configuration,ConfigurationManager,1,5,1,0,5,32,6,0,1,0.4,0,0,,
-Client.Configuration,IConfiguration,0,4,1,0,0,9,4,1,0,-1,0,5,,Client.Engine' Client.EngineModule' Client.Program' Client.Graphics.DeviceContextManager' Client.Ultima.World
-Client.Diagnostics.Tracer,GameConsoleTracer,1,2,0,0,1,12,2,0,0,0,1,0,Client.Components.IConsole,
-Client.Diagnostics,HighResoltionTimer,2,3,1,2,2,25,3,0,0,0.67,0,0,,
-Client.Diagnostics,PerformanceMonitor,4,11,3,0,11,184,18,0,0,0,2,11,Client.Diagnostics.MonitorTimer' Client.Diagnostics.PerfTimeSpan,Client.Engine' Client.Graphics.Implementation' Client.Graphics.MatrixCalc' Client.Graphics.Vertices<TVertexType>' Client.Graphics.DeviceRenderState' Client.Graphics.ViewProjectionProvider' Client.Graphics.WorldStackProvider' Client.Graphics.TextureBase' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Ultima.World
-Client.Diagnostics,MonitorTimer,0,3,3,0,0,41,6,0,0,-1,1,1,Client.Diagnostics.PerfTime,Client.Diagnostics.PerformanceMonitor
-Client.Diagnostics,PerfTime,1,1,2,0,1,28,1,0,0,0,0,2,,Client.GameTime' Client.Diagnostics.MonitorTimer
-Client.Diagnostics,PerfTimeSpan,1,1,5,0,1,36,1,0,0,0,0,2,,Client.GameTime' Client.Diagnostics.PerformanceMonitor
-Client.Network,INetwork,0,2,6,0,0,12,2,1,0,-1,0,0,,
-Client.Network,NetworkManager,0,0,1,0,0,15,0,0,1,-1,0,0,,
-Client.Input,HandledKeyEventArgs,0,1,0,0,1,4,1,0,0,-1,0,2,,Client.Components.Console' Client.Input.InputManager
-Client.Input,IInput,0,4,2,0,0,17,4,1,0,-1,0,2,,Client.Components.Console' Client.Testing.TestRendering
-Client.Input,InputBinding,8,3,6,2,1,83,5,0,0,1,0,1,,Client.Input.InputManager
-Client.Input,InputManager,2,18,4,0,6,185,28,0,1,0.28,3,0,Client.Graphics.IDeviceContextService' Client.Input.InputBinding' Client.Input.HandledKeyEventArgs,
-Client.Patterns,EngineChainBase<T>,1,2,0,0,0,13,2,0,0,0,0,0,,
-Client.Testing,TestRendering,4,3,0,0,1,46,4,0,0,0.67,7,0,Client.Graphics.Camera2D' Client.Graphics.Elements.TexturedElement' Client.Graphics.Texture2D' Client.Input.IInput' Client.Graphics.IDeviceContextService' Client.Graphics.SimpleTextureEffect' Client.Graphics.DrawState,
-Client.Ultima,Facet,2,1,1,0,1,14,1,0,0,0,3,1,Client.Ultima.World' OpenUO.Ultima.Map' OpenUO.Ultima.InstallLocation,Client.Ultima.World
-Client.Ultima,MapNodeCache,0,1,0,0,1,20,1,0,0,-1,0,0,,
-Client.Ultima,MapNode,7,2,0,0,2,67,2,0,0,1,4,0,OpenUO.Ultima.Tile' OpenUO.Ultima.HuedTile' Client.Ultima.World' Client.Graphics.DrawState,
-Client.Ultima,Mobile,1,1,1,0,0,23,2,0,1,0,0,1,,Client.Ultima.World
-Client.Ultima,World,5,4,2,0,4,115,5,0,1,0.5,11,3,Client.Graphics.Camera2D' OpenUO.Ultima.InstallLocation' Client.Ultima.Facet' Client.Configuration.IConfiguration' Client.Configuration.ConfigSections' Client.Configuration.ConfigKeys' Client.UpdateState' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Diagnostics.PerformanceMonitor' Client.Ultima.Mobile,Client.Engine' Client.Ultima.Facet' Client.Ultima.MapNode
+Client.Graphics,VertexPositionTexture,2,0,0,2,0,8,0,0,0,-1,1,2,Client.Graphics.VertexElementAttribute,Client.Testing.TestRendering' Client.Graphics.DrawScreenTarget
+Client.Graphics.Elements,ElementRect,10,9,10,0,2,153,19,1,2,0.56,6,1,Client.Graphics.Element' Client.Graphics.ElementScaling' Client.Graphics.Vertices<TVertexType>' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Graphics.VertexPositionColorTexture,Client.Graphics.Elements.TexturedElement
+Client.Graphics.Elements,TexturedElement,6,7,3,0,3,103,10,0,3,0.43,6,1,Client.Graphics.SimpleTextureEffect' Client.Graphics.TextureSamplerState' Client.Graphics.Texture2D' Client.Graphics.DeviceContext' Client.Graphics.DrawState' Client.Graphics.Elements.ElementRect,Client.Testing.TestRendering
+Client.Components.Gumps,IGumpManager,0,0,0,0,0,3,0,1,0,-1,0,1,,Client.Components.Gumps.GumpManager
+Client.Components.Gumps,GumpManager,1,0,0,0,0,4,0,0,1,-1,2,0,Client.Graphics.ICamera' Client.Components.Gumps.IGumpManager,
+Client.Patterns.Chaining,UIRenderChain,0,1,0,0,1,4,1,0,1,-1,2,1,Client.Patterns.Chaining.IUIRenderChain' Client.Patterns.Chaining.RenderChainBase,Client.EngineModule
+Client.Patterns.Chaining,WorldRenderChain,0,1,0,0,1,4,1,0,1,-1,2,1,Client.Patterns.Chaining.IWorldRenderChain' Client.Patterns.Chaining.RenderChainBase,Client.EngineModule
+Client.Patterns.Chaining,IUIRenderChain,0,0,0,0,0,3,0,1,0,-1,1,5,Client.Graphics.DrawState,Client.Patterns.Chaining.UIRenderChain' Client.EngineModule' Client.Components.Console' Client.Engine' Client.Testing.TestRendering
+Client.Patterns.Chaining,IWorldRenderChain,0,0,0,0,0,3,0,1,0,-1,1,3,Client.Graphics.DrawState,Client.Patterns.Chaining.WorldRenderChain' Client.EngineModule' Client.Engine
+Client.Patterns.Chaining,UpdateDelegateChainStep,0,3,0,0,2,11,3,0,0,-1,2,0,Client.UpdateState' Client.ChainSteps.DelegateChainStepBase<T>,
+Client.Patterns.Chaining,RenderChainBase,0,1,0,0,0,4,1,2,0,-1,2,2,Client.Graphics.DrawState' Client.Patterns.EngineChainBase<T>,Client.Patterns.Chaining.WorldRenderChain' Client.Patterns.Chaining.UIRenderChain
+Client.Patterns.Chaining,RenderDelegateChainStep,0,4,0,0,3,14,4,0,0,-1,2,1,Client.Graphics.DrawState' Client.ChainSteps.DelegateChainStepBase<T>,Client.Testing.TestRendering
+Client.ChainSteps,DelegateChainStepBase<T>,2,4,1,0,3,34,7,0,0,0.5,0,3,,Client.Components.Console' Client.Patterns.Chaining.UpdateDelegateChainStep' Client.Patterns.Chaining.RenderDelegateChainStep
+Client.Components,ConsoleLine,2,1,1,0,1,14,1,0,0,0,1,2,Client.Graphics.Color,Client.Components.IConsole' Client.Components.Console
+Client.Components,Console,6,9,1,1,5,153,17,0,1,0.33,9,0,Client.Graphics.Color' Client.Graphics.Shader' Client.Graphics.DrawState' Client.Patterns.Chaining.IUIRenderChain' Client.ChainSteps.DelegateChainStepBase<T>' Client.Components.ConsoleLine' Client.Components.IConsole' Client.Input.HandledKeyEventArgs' Client.Input.IInput,
+Client.Components,IConsole,0,4,1,0,0,8,4,1,0,-1,2,4,Client.Graphics.Color' Client.Components.ConsoleLine,Client.Components.Console' Client.Diagnostics.Tracer.GameConsoleTracer' Client.EngineModule' Client.Engine
+Client.Configuration,ConfigKeys,6,0,0,6,0,9,0,0,0,-1,0,4,,Client.Ultima.World' Client.Engine' Client.Graphics.DeviceContextManager' Client.EngineModule
+Client.Configuration,ConfigSections,2,0,0,2,0,5,0,0,0,-1,0,4,,Client.Engine' Client.Graphics.DeviceContextManager' Client.Ultima.World' Client.EngineModule
+Client.Configuration,ConfigurationManager,1,5,1,0,5,32,6,0,1,0.4,1,1,Client.Configuration.IConfiguration,Client.EngineModule
+Client.Configuration,IConfiguration,0,4,1,0,0,9,4,1,0,-1,0,6,,Client.Configuration.ConfigurationManager' Client.Program' Client.Ultima.World' Client.Graphics.DeviceContextManager' Client.Engine' Client.EngineModule
+Client.Diagnostics.Tracer,GameConsoleTracer,1,2,0,0,1,12,2,0,0,0,1,1,Client.Components.IConsole,Client.EngineModule
+Client.Diagnostics,HighResoltionTimer,2,3,1,2,2,25,3,0,0,0.67,0,2,,Client.Diagnostics.PerfTime' Client.Diagnostics.PerfTimeSpan
+Client.Diagnostics,PerformanceMonitor,4,11,3,0,11,184,23,0,0,0,3,1,Client.Diagnostics.MonitorTimer' Client.Diagnostics.PerfTime' Client.Diagnostics.PerfTimeSpan,Client.Graphics.DeviceContext
+Client.Diagnostics,MonitorTimer,0,3,3,0,0,41,6,0,0,-1,0,1,,Client.Diagnostics.PerformanceMonitor
+Client.Diagnostics,PerfTime,1,1,2,0,1,28,1,0,0,0,2,2,Client.Diagnostics.HighResoltionTimer' Client.Diagnostics.PerfTimeSpan,Client.Diagnostics.PerformanceMonitor' Client.GameTime
+Client.Diagnostics,PerfTimeSpan,1,1,5,0,1,36,1,0,0,0,1,3,Client.Diagnostics.HighResoltionTimer,Client.Diagnostics.PerformanceMonitor' Client.GameTime' Client.Diagnostics.PerfTime
+Client.Network,INetwork,0,2,6,0,0,12,2,1,0,-1,0,2,,Client.Network.NetworkManager' Client.EngineModule
+Client.Network,NetworkManager,0,0,1,0,0,15,0,0,1,-1,1,1,Client.Network.INetwork,Client.EngineModule
+Client.Input,HandledKeyEventArgs,0,1,0,0,1,4,1,0,0,-1,0,3,,Client.Components.Console' Client.Input.IInput' Client.Input.InputManager
+Client.Input,IInput,0,4,2,0,0,17,4,1,0,-1,2,4,Client.Input.HandledKeyEventArgs' Client.Input.InputBinding,Client.Input.InputManager' Client.Components.Console' Client.EngineModule' Client.Testing.TestRendering
+Client.Input,InputBinding,8,3,6,2,1,83,5,0,0,1,0,2,,Client.Input.IInput' Client.Input.InputManager
+Client.Input,InputManager,2,18,4,0,6,185,28,0,1,0.28,4,1,Client.Graphics.IDeviceContextService' Client.Input.HandledKeyEventArgs' Client.Input.IInput' Client.Input.InputBinding,Client.EngineModule
+Client.Patterns,EngineChainBase<T>,1,2,0,0,0,13,2,0,0,0,0,2,,Client.Patterns.Chaining.RenderChainBase' Client.UpdateChain
+Client.Testing,TestRendering,4,3,0,0,1,46,4,0,0,0.67,12,1,Client.Graphics.SimpleTextureEffect' Client.Graphics.Vertices<TVertexType>' Client.Graphics.Camera2D' Client.Graphics.Texture2D' Client.Graphics.DeviceContext' Client.Graphics.IDeviceContextService' Client.Graphics.DrawState' Client.Graphics.VertexPositionTexture' Client.Graphics.Elements.TexturedElement' Client.Patterns.Chaining.IUIRenderChain' Client.Patterns.Chaining.RenderDelegateChainStep' Client.Input.IInput,Client.EngineModule
+Client.Ultima,Facet,2,1,1,0,1,14,1,0,0,0,1,1,Client.Ultima.World,Client.Ultima.World
+Client.Ultima,MapNodeCache,0,1,0,0,1,20,1,0,0,-1,1,0,Client.Ultima.MapNode,
+Client.Ultima,MapNode,7,2,0,0,2,67,2,0,0,1,2,1,Client.Graphics.DrawState' Client.Ultima.World,Client.Ultima.MapNodeCache
+Client.Ultima,Mobile,1,1,1,0,0,23,2,0,1,0,1,1,Client.IAttachable,Client.Ultima.World
+Client.Ultima,World,5,4,2,0,4,115,5,0,1,0.5,11,3,Client.IUpdate' Client.UpdateState' Client.Graphics.Camera2D' Client.Graphics.DeviceContext' Client.Graphics.IDraw' Client.Graphics.DrawState' Client.Configuration.ConfigKeys' Client.Configuration.ConfigSections' Client.Configuration.IConfiguration' Client.Ultima.Facet' Client.Ultima.Mobile,Client.Ultima.Facet' Client.Ultima.MapNode' Client.Engine

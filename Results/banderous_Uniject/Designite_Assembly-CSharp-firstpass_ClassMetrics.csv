@@ -1,52 +1,52 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Uniject,IAudioListener,0,1,1,0,0,4,1,1,0,-1,0,0,,
-Uniject,IAudioSource,0,3,1,0,0,6,3,1,0,-1,0,1,,Uniject.Impl.TestableAudioSource
-Uniject,IBoxCollider,0,0,2,0,0,4,0,1,1,-1,0,0,,
-Uniject,ICollider,0,0,2,0,0,4,0,2,0,-1,0,0,,
-Uniject,IInput,0,15,10,0,0,27,15,1,0,-1,0,0,,
-Uniject,ILight,0,0,13,0,0,15,0,1,0,-1,0,0,,
-Uniject,IMaths,0,5,0,0,0,7,5,1,0,-1,0,1,,Uniject.Impl.TestableAudioSource
-Uniject,INavmeshAgent,0,4,4,0,0,10,4,1,0,-1,0,0,,
-Uniject,IPhysicMaterial,0,0,8,0,0,10,0,1,0,-1,0,0,,
-Uniject,RaycastHit,0,1,10,0,1,39,1,0,0,-1,1,2,Uniject.TestableGameObject,Uniject.IPhysics' Uniject.Impl.UnityPhysics
-Uniject,IPhysics,0,2,0,0,0,4,2,1,0,-1,1,0,Uniject.RaycastHit,
+Uniject,IAudioListener,0,1,1,0,0,4,1,1,0,-1,0,1,,Uniject.Impl.UnityAudioListener
+Uniject,IAudioSource,0,3,1,0,0,6,3,1,0,-1,0,2,,Uniject.Impl.UnityAudioSource' Uniject.Impl.TestableAudioSource
+Uniject,IBoxCollider,0,0,2,0,0,4,0,1,1,-1,0,1,,Uniject.Impl.UnityBoxCollider
+Uniject,ICollider,0,0,2,0,0,4,0,2,0,-1,0,2,,Uniject.ISphereCollider' Uniject.IBoxCollider
+Uniject,IInput,0,15,10,0,0,27,15,1,0,-1,0,1,,Uniject.Impl.UnityInput
+Uniject,ILight,0,0,13,0,0,15,0,1,0,-1,0,1,,Uniject.Impl.UnityLight
+Uniject,IMaths,0,5,0,0,0,7,5,1,0,-1,0,2,,Uniject.Impl.UnityMath' Uniject.Impl.TestableAudioSource
+Uniject,INavmeshAgent,0,4,4,0,0,10,4,1,0,-1,0,1,,Uniject.Impl.UnityNavmeshAgent
+Uniject,IPhysicMaterial,0,0,8,0,0,10,0,1,0,-1,0,4,,Uniject.Impl.UnityPhysicsMaterial' Uniject.Impl.UnitySphereCollider' Uniject.ICollider' Uniject.Impl.UnityBoxCollider
+Uniject,RaycastHit,0,1,10,0,1,39,1,0,0,-1,0,2,,Uniject.Impl.UnityPhysics' Uniject.IPhysics
+Uniject,IPhysics,0,2,0,0,0,4,2,1,0,-1,0,1,,Uniject.Impl.UnityPhysics
 Uniject,IPlatformUtil,0,2,0,0,0,4,2,0,0,-1,0,0,,
-Uniject,IResourceLoader,0,5,0,0,0,7,5,1,0,-1,0,2,,Uniject.Impl.ResourceProvider<T>' Uniject.Configuration.XMLConfigManager
-Uniject,IRigidBody,0,2,9,0,0,26,2,1,0,-1,0,0,,
-Uniject,IScreen,0,2,15,0,0,20,2,1,0,-1,0,0,,
-Uniject,ISphereCollider,0,0,2,0,0,4,0,1,1,-1,0,0,,
-Uniject,ITime,0,0,2,0,0,6,0,1,0,-1,0,1,,UnijectUtil.IntervalBasedCallback
-Uniject,ITransform,0,3,6,0,0,26,3,1,0,-1,0,3,,Uniject.Collision' Uniject.TestableGameObject' Uniject.Impl.UnityTransform
+Uniject,IResourceLoader,0,5,0,0,0,7,5,1,0,-1,0,3,,Uniject.Impl.UnityResourceLoader' Uniject.Impl.ResourceProvider<T>' Uniject.Configuration.XMLConfigManager
+Uniject,IRigidBody,0,2,9,0,0,26,2,1,0,-1,0,1,,Uniject.Impl.UnityRigidBody
+Uniject,IScreen,0,2,15,0,0,20,2,1,0,-1,0,1,,Uniject.Impl.UnityScreen
+Uniject,ISphereCollider,0,0,2,0,0,4,0,1,1,-1,0,1,,Uniject.Impl.UnitySphereCollider
+Uniject,ITime,0,0,2,0,0,6,0,1,0,-1,0,2,,Uniject.Impl.UnityTime' UnijectUtil.IntervalBasedCallback
+Uniject,ITransform,0,3,6,0,0,26,3,1,0,-1,0,4,,Uniject.ITransform' Uniject.TestableGameObject' Uniject.Collision' Uniject.Impl.UnityTransform
 Uniject,IUtil,0,2,3,0,0,7,2,0,0,-1,0,0,,
-Uniject,Collision,0,1,4,0,1,15,1,0,0,-1,2,2,Uniject.ITransform' Uniject.TestableGameObject,Uniject.TestableComponent' Uniject.TestableGameObject
-Uniject,Factory<T>,1,2,0,0,2,9,2,0,0,0,0,0,,
+Uniject,Collision,0,1,4,0,1,15,1,0,0,-1,0,2,,Uniject.TestableComponent' Uniject.TestableGameObject
+Uniject,Factory<T>,1,2,0,0,2,9,2,0,0,1,0,0,,
 Uniject,GameObjectBoundary,0,0,0,0,0,3,0,0,0,-1,0,1,,Uniject.Scoping
-Uniject,Scoping,0,2,0,0,2,29,7,0,0,-1,1,2,Uniject.GameObjectBoundary,Uniject.Impl.ResourceProvider<T>' Uniject.Impl.XMLConfigProvider<T>
-Uniject,TestableComponent,1,5,2,0,5,24,6,2,0,0.8,2,1,Uniject.TestableGameObject' Uniject.Collision,Uniject.TestableGameObject
-Uniject,TestableGameObject,1,7,5,0,7,45,14,1,0,0.43,3,7,Uniject.ITransform' Uniject.TestableComponent' Uniject.Collision,Uniject.RaycastHit' Uniject.Collision' Uniject.TestableComponent' Uniject.Impl.UnityAudioListener' Uniject.Impl.UnityGameObject' Uniject.Impl.UnityPhysics' UnijectUtil.IntervalBasedCallback
+Uniject,Scoping,0,2,0,0,2,29,7,0,0,-1,0,2,,Uniject.Impl.ResourceProvider<T>' Uniject.Impl.XMLConfigProvider<T>
+Uniject,TestableComponent,1,5,2,0,5,24,6,2,0,0.8,0,3,,UnijectUtil.IntervalBasedCallback' Uniject.Impl.UnityAudioListener' Uniject.TestableGameObject
+Uniject,TestableGameObject,1,7,5,0,7,45,14,1,0,0.43,0,10,,Uniject.IAudioListener' Uniject.IResourceLoader' Uniject.Impl.UnityResourceLoader' Uniject.Impl.UnityGameObject' Uniject.Impl.UnityAudioListener' UnijectUtil.IntervalBasedCallback' Uniject.RaycastHit' Uniject.Collision' Uniject.TestableComponent' Uniject.Impl.UnityPhysics
 Uniject.Impl,GameObjectProvider,0,1,0,0,0,5,1,0,0,-1,0,0,,
 Uniject.Impl,LateBoundModule,0,4,0,0,1,17,4,0,0,-1,0,0,,
-Uniject.Impl,ResourceProvider<T>,1,2,0,0,1,13,3,0,0,0,2,0,Uniject.IResourceLoader' Uniject.Scoping,
-Uniject.Impl,XMLConfigProvider<T>,1,2,0,0,2,14,3,0,0,0,3,0,Uniject.Configuration.XMLConfigManager' Uniject.Configuration.XMLConfigValue' Uniject.Scoping,
-Uniject.Impl,TestableAudioSource,1,4,1,0,4,17,4,0,0,0.75,2,0,Uniject.IMaths' Uniject.IAudioSource,
-Uniject.Impl,UnityAudioListener,0,2,0,0,2,10,3,0,1,-1,1,0,Uniject.TestableGameObject,
+Uniject.Impl,ResourceProvider<T>,1,2,0,0,1,13,3,0,0,1,0,0,,
+Uniject.Impl,XMLConfigProvider<T>,1,2,0,0,2,14,3,0,0,1,0,1,,Uniject.Impl.LateBoundModule
+Uniject.Impl,TestableAudioSource,1,4,1,0,4,17,4,0,0,1,0,0,,
+Uniject.Impl,UnityAudioListener,0,2,0,0,2,10,3,0,1,-1,0,0,,
 Uniject.Impl,UnityAudioSource,1,4,1,0,4,25,5,0,1,0,0,0,,
-Uniject.Impl,UnityBoxCollider,2,1,4,0,1,29,2,0,2,0,1,0,Uniject.Impl.UnityPhysicsMaterial,
-Uniject.Impl,UnityGameObject,0,3,4,0,3,26,3,0,1,-1,1,1,Uniject.TestableGameObject,Uniject.Impl.UnityResourceLoader
+Uniject.Impl,UnityBoxCollider,2,1,4,0,1,29,2,0,2,0,0,0,,
+Uniject.Impl,UnityGameObject,0,3,4,0,3,26,3,0,1,-1,0,1,,Uniject.Impl.UnityResourceLoader
 Uniject.Impl,UnityInput,0,15,10,0,15,27,15,0,1,-1,0,0,,
 Uniject.Impl,UnityLayerMask,0,1,0,0,1,5,1,0,0,-1,0,0,,
 Uniject.Impl,UnityLight,1,1,13,0,1,61,2,0,1,0,0,0,,
 Uniject.Impl,UnityLogger,0,2,1,0,2,14,3,0,0,-1,0,0,,
 Uniject.Impl,UnityMath,1,5,0,0,5,18,5,0,1,1,0,0,,
 Uniject.Impl,UnityNavmeshAgent,2,5,4,0,5,40,6,0,1,0,0,0,,
-Uniject.Impl,UnityPhysics,0,2,0,0,2,29,4,0,1,-1,2,0,Uniject.TestableGameObject' Uniject.RaycastHit,
-Uniject.Impl,UnityPhysicsMaterial,0,1,9,0,1,39,1,0,1,-1,0,2,,Uniject.Impl.UnityBoxCollider' Uniject.Impl.UnitySphereCollider
-Uniject.Impl,UnityResourceLoader,0,5,0,0,5,24,6,0,1,-1,1,0,Uniject.Impl.UnityGameObject,
+Uniject.Impl,UnityPhysics,0,2,0,0,2,29,4,0,1,-1,0,0,,
+Uniject.Impl,UnityPhysicsMaterial,0,1,9,0,1,39,1,0,1,-1,0,2,,Uniject.Impl.UnitySphereCollider' Uniject.Impl.UnityBoxCollider
+Uniject.Impl,UnityResourceLoader,0,5,0,0,5,24,6,0,1,-1,0,0,,
 Uniject.Impl,UnityRigidBody,1,3,9,0,3,50,4,0,1,0,0,0,,
 Uniject.Impl,UnityScreen,0,2,15,0,2,20,2,0,1,-1,0,0,,
-Uniject.Impl,UnitySphereCollider,2,1,4,0,1,26,1,0,2,0,1,0,Uniject.Impl.UnityPhysicsMaterial,
+Uniject.Impl,UnitySphereCollider,2,1,4,0,1,26,1,0,2,0,0,0,,
 Uniject.Impl,UnityTime,0,0,2,0,0,9,0,0,1,-1,0,0,,
-Uniject.Impl,UnityTransform,1,4,7,0,4,43,4,0,1,1,1,0,Uniject.ITransform,
-UnijectUtil,IntervalBasedCallback,2,2,2,0,2,16,3,0,1,0,2,0,Uniject.ITime' Uniject.TestableGameObject,
+Uniject.Impl,UnityTransform,1,4,7,0,4,43,4,0,1,1,0,2,,Uniject.Impl.UnityGameObject' Uniject.Impl.UnityTransform
+UnijectUtil,IntervalBasedCallback,2,2,2,0,2,16,3,0,1,1,0,0,,
 Uniject.Configuration,XMLConfigValue,0,1,2,0,1,8,1,0,0,-1,0,1,,Uniject.Impl.XMLConfigProvider<T>
-Uniject.Configuration,XMLConfigManager,2,2,0,0,2,22,5,0,0,0,1,1,Uniject.IResourceLoader,Uniject.Impl.XMLConfigProvider<T>
+Uniject.Configuration,XMLConfigManager,2,2,0,0,2,22,5,0,0,1,0,2,,Uniject.Impl.XMLConfigProvider<T>' Uniject.Impl.LateBoundModule

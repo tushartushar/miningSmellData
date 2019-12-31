@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-RemoteHarvester,Clock,0,1,0,0,1,7,1,0,1,-1,0,0,,
+RemoteHarvester,Clock,0,1,0,0,1,7,1,0,1,-1,1,1,RemoteHarvester.IClock,RemoteHarvester.CommandProcessor
 RemoteHarvester,CommandLineOptions,1,2,5,0,2,48,3,0,0,1,0,2,,RemoteHarvester.CommandProcessor' RemoteHarvester.Program
-RemoteHarvester,CommandProcessor,4,3,0,0,2,44,5,0,0,0,6,1,RemoteHarvester.CommandLineOptions' RemoteHarvester.PeachFolderPackager' RemoteHarvester.RequestListener' PeachFarmerLib.PeachFarmerProtocol' RemoteHarvester.NetworkSslServerConnection' RemoteHarvester.NetworkServerConnection,RemoteHarvester.Program
-RemoteHarvester,RequestListener,3,5,0,0,3,55,7,0,0,0,9,2,PeachFarmerLib.Framework.INetworkConnection' RemoteHarvester.ReadRequestProcessor' PeachFarmerLib.Framework.IFolderPacker' RemoteHarvester.IClock' PeachFarmerLib.Messages.RequestMessageBase' PeachFarmerLib.Messages.ResponseMessageBase' PeachFarmerLib.PeachFarmerProtocol' PeachFarmerLib.FarmerMessageSerializer' PeachFarmerLib.Framework.IFarmerNetworkMessage,RemoteHarvester.CommandProcessor' RemoteHarvesterTest.RequestListenerTest
-RemoteHarvester,IClock,0,1,0,0,0,4,1,2,0,-1,0,2,,RemoteHarvester.RequestListener' RemoteHarvester.ReadRequestProcessor
+RemoteHarvester,CommandProcessor,4,3,0,0,2,44,5,0,0,0,6,1,RemoteHarvester.Clock' RemoteHarvester.CommandLineOptions' RemoteHarvester.RequestListener' RemoteHarvester.NetworkSslServerConnection' RemoteHarvester.PeachFolderPackager' RemoteHarvester.NetworkServerConnection,RemoteHarvester.Program
+RemoteHarvester,RequestListener,3,5,0,0,3,55,7,0,0,0,2,1,RemoteHarvester.IClock' RemoteHarvester.ReadRequestProcessor,RemoteHarvester.CommandProcessor
+RemoteHarvester,IClock,0,1,0,0,0,4,1,2,0,-1,0,3,,RemoteHarvester.RequestListener' RemoteHarvester.Clock' RemoteHarvester.ReadRequestProcessor
 RemoteHarvester,NetworkSslServerConnection,3,4,0,0,4,51,8,0,1,0,1,1,RemoteHarvester.NetworkServerConnection,RemoteHarvester.CommandProcessor
 RemoteHarvester,PasswordHasher,0,1,0,0,1,9,1,0,0,-1,0,1,,RemoteHarvester.RequestProcessorBase
-RemoteHarvester,PeachFolderPackager,2,7,0,0,2,132,18,0,1,0,1,2,PeachFarmerLib.Framework.IFileSystem,RemoteHarvester.CommandProcessor' RemoteHarvesterTest.FolderPackagerTest
+RemoteHarvester,PeachFolderPackager,2,7,0,0,2,132,21,0,1,0,0,1,,RemoteHarvester.CommandProcessor
 RemoteHarvester,Program,0,2,0,0,0,29,5,0,0,-1,2,0,RemoteHarvester.CommandLineOptions' RemoteHarvester.CommandProcessor,
-RemoteHarvester,NetworkServerConnection,1,2,0,0,2,23,3,1,2,0,1,2,PeachFarmerLib.NetworkConnectionBase,RemoteHarvester.CommandProcessor' RemoteHarvester.NetworkSslServerConnection
-RemoteHarvester,ReadRequestProcessor,3,4,0,0,1,26,4,0,1,0.75,6,1,PeachFarmerLib.Framework.IFolderPacker' RemoteHarvester.IClock' PeachFarmerLib.Messages.RequestMessageBase' PeachFarmerLib.Messages.ResponseMessageBase' PeachFarmerLib.Messages.ReadResponseMessage' PeachFarmerLib.Messages.ReadRequestMessage,RemoteHarvester.RequestListener
-RemoteHarvester,RequestProcessorBase,1,5,0,0,2,48,11,1,0,0,3,0,RemoteHarvester.PasswordHasher' PeachFarmerLib.Messages.ResponseMessageBase' PeachFarmerLib.Messages.RequestMessageBase,
+RemoteHarvester,NetworkServerConnection,1,2,0,0,2,23,4,1,2,0,0,2,,RemoteHarvester.NetworkSslServerConnection' RemoteHarvester.CommandProcessor
+RemoteHarvester,ReadRequestProcessor,3,4,0,0,1,26,4,0,1,0.75,2,1,RemoteHarvester.IClock' RemoteHarvester.RequestProcessorBase,RemoteHarvester.RequestListener
+RemoteHarvester,RequestProcessorBase,1,5,0,0,2,48,11,1,0,0,1,1,RemoteHarvester.PasswordHasher,RemoteHarvester.ReadRequestProcessor

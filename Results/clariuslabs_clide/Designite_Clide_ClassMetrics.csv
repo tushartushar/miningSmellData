@@ -1,65 +1,106 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Clide,AdapterService,5,8,0,0,2,163,14,0,1,0.62,2,1,Clide.IAdapter' Clide.AdapterInfo,Clide.Adaptable<TSource>
-Clide,AdapterInfo,3,0,0,3,0,6,0,0,0,-1,1,1,Clide.IAdapter,Clide.AdapterService
-Clide,Adaptable<TSource>,2,2,0,0,2,12,2,0,1,0,1,0,Clide.AdapterService,
+Clide,AdapterService,5,8,0,0,2,162,15,0,1,0.62,2,0,Clide.AdapterInfo' Clide.Adaptable<TSource>,
+Clide,AdapterInfo,3,0,0,3,0,6,0,0,0,-1,0,1,,Clide.AdapterService
+Clide,Adaptable<TSource>,2,2,0,0,2,12,2,0,1,1,0,1,,Clide.AdapterService
+Clide,DteToSolutionAdapter,3,4,0,0,4,65,7,0,1,0.5,0,0,,
 Clide,ProjectToDte,0,1,0,0,1,5,1,0,1,-1,1,0,Clide.ProjectNode,
-Clide,SolutionToBehaviorAdapter,1,10,0,0,1,37,10,0,1,0.8,5,0,Clide.ProjectNode' Clide.FolderNode' Clide.ItemNode' Clide.ReferencesNode' Clide.SolutionNode,
-Clide,SolutionToVsAdapter,0,4,0,0,0,12,4,0,1,-1,3,0,Clide.SolutionExplorerNode' Clide.SolutionNode' Clide.ProjectNode,
-Clide,ComponentAttribute,0,1,1,0,1,18,1,0,0,-1,0,0,,
-Clide,ContractNames,2,0,0,1,0,16,0,0,0,-1,0,2,,Clide.Solution.NodeFactorySpec<TNode>' Clide.Solution.SolutionNodeSpec
-Clide,Interop,6,0,0,5,0,9,0,0,0,-1,0,1,,Clide.Solution.SolutionNodeSpec
+Clide,SolutionToBehaviorAdapter,1,10,0,0,1,37,10,0,1,0.9,10,0,Clide.DeletableProjectItemNode' Clide.ProjectContainerNode' Clide.ProjectItemContainerNode' Clide.ReferenceContainerNode' Clide.RemovableProjectItemNode' Clide.FolderNode' Clide.ItemNode' Clide.ProjectNode' Clide.ReferencesNode' Clide.SolutionNode,
+Clide,SolutionToVsAdapter,0,6,0,0,0,21,7,0,1,-1,3,0,Clide.ProjectNode' Clide.SolutionExplorerNode' Clide.SolutionNode,
+Clide,VsToSolutionAdapter,1,3,0,0,3,24,3,0,1,0.67,1,0,Clide.ProjectNode,
+Clide,ContractNames,2,0,0,1,0,21,0,0,0,-1,0,17,,Clide.Interop.VsSolutionSelection' Clide.Components.Interop.VsBooleanSymbolExpressionEvaluatorProvider' Clide.SolutionNodeFactory' Clide.ReferencesNodeFactory' Clide.ReferenceNodeFactory' Clide.FolderNodeFactory' Clide.ItemNodeFactory' Clide.SolutionFolderNodeFactory' Clide.ProjectNodeFactory' Clide.SolutionItemNodeFactory' Clide.SolutionExplorer' Clide.Adapters.DteToVsAdapter' Clide.Components.Interop.VsHierarchyItemManagerProvider' Clide.SolutionExplorerNodeFactory' Clide.Components.Interop.VsUIHierarchyWindowProvider' Clide.Components.Interop.VsServicesExports' Clide.Interop
+Clide,Interop,11,0,0,10,0,14,0,0,0,-1,1,8,Clide.ContractNames,Clide.Adapters.DteToVsAdapter' Clide.Components.Interop.VsHierarchyItemManagerProvider' Clide.Components.Interop.VsBooleanSymbolExpressionEvaluatorProvider' Clide.Components.Interop.VsUIHierarchyWindowProvider' Clide.SolutionExplorer' Clide.Interop.VsSolutionSelection' Clide.ProjectNodeFactory' Clide.Components.Interop.VsServicesExports
+Clide,DevEnvImpl,9,3,8,0,3,93,3,0,1,0,1,0,Clide.TracingExtensions,
+Clide,DevEnvInfoProvider,1,2,1,0,1,40,3,0,0,0,2,0,Microsoft.VisualStudio.Shell.IVsAppId' Microsoft.VisualStudio.Shell.VSAPropID,
+Clide,DiagnosticsLogging,4,2,1,0,2,46,3,0,0,0,4,2,Microsoft.Internal.VisualStudio.Shell.Interop.IVsFeatureFlags' Microsoft.Internal.VisualStudio.Shell.Interop.SVsFeatureFlags' Microsoft.Internal.VisualStudio.Shell.Interop.IVsFeatureFlags' Microsoft.Internal.VisualStudio.Shell.Interop.SVsFeatureFlags,Clide.LegacyDiagnosticsLogProvider' Clide.DiagnosticsLogProvider
+Clide,DiagnosticsLogProvider,2,2,0,0,2,19,3,0,0,1,1,0,Clide.DiagnosticsLogging,
+Clide,ErrorItem,2,2,0,0,2,15,3,0,1,1,0,1,,Clide.ErrorsManager
+Clide,ErrorsManager,2,6,0,0,5,45,6,0,1,0,1,0,Clide.ErrorItem,
+Clide,NullErrorsManager,0,4,0,0,4,24,4,0,1,-1,1,1,Clide.NullErrorItem,Clide.TracingExtensions
+Clide,NullErrorItem,1,1,0,1,1,7,1,0,1,0,0,1,,Clide.NullErrorsManager
+Clide,TracingExtensions,3,6,2,0,6,166,6,0,0,0.83,1,1,Clide.NullErrorsManager,Clide.DevEnvImpl
 Clide,DteExtensions,0,1,0,0,1,21,1,0,0,-1,0,0,,
-Clide,IVsHierarchyItemExtensions,0,15,0,0,15,143,25,0,0,-1,0,0,,
-Clide,IVsSolutionExtensions,0,8,0,0,8,40,9,0,0,-1,0,0,,
-Clide,ServiceLocatorImpl,2,7,0,0,7,44,11,0,1,0,0,3,,Clide.ServiceLocatorProvider' Clide.ServiceLocatorExtensionsSpec' Clide.ServiceLocatorSpec
-Clide,ServiceLocatorProvider,0,6,1,0,6,43,7,0,1,-1,3,1,Clide.Guard' Clide.ServiceLocatorImpl' Clide.IServiceLocator,Clide.CompositionSpec
-Clide,RemovableProjectItemNode,1,3,0,0,3,16,3,0,1,0,2,0,Clide.IFolderNode' Clide.IItemNode,
-Clide,DeletableProjectItemNode,1,3,0,0,3,16,3,0,1,0,2,0,Clide.IFolderNode' Clide.IItemNode,
-Clide,ProjectItemContainerNode,4,7,0,0,4,56,8,0,1,0,6,0,Clide.ISolutionExplorerNode' Clide.IProjectNode' Clide.IFolderNode' Clide.IItemNode' Clide.Guard' Clide.ISolutionExplorerNodeFactory,
-Clide,ReferenceContainerNode,2,3,0,0,3,52,4,0,1,0,4,0,Clide.IProjectNode' Clide.IReferencesNode' Microsoft.VisualStudio.Shell.Interop.IVsSharedProjectReferencesHelper' Clide.KnownCapabilities,
-Clide,ProjectContainerNode,2,2,0,0,2,27,4,0,1,0,2,0,Clide.ISolutionNode' Clide.IProjectNode,
-Clide,ConfigProjectProperties,5,8,0,0,6,65,13,0,1,0,2,0,Clide.ProjectNode' Clide.DynamicPropertyAccessor,
-Clide,ConfigUserProjectProperties,5,8,0,0,6,65,13,0,1,0,2,0,Clide.ProjectNode' Clide.DynamicPropertyAccessor,
-Clide,DynamicPropertyAccessor,1,5,0,0,5,41,11,0,0,0,1,4,Clide.IPropertyAccessor,Clide.ConfigProjectProperties' Clide.ConfigUserProjectProperties' Clide.GlobalProjectProperties' Clide.UserProjectProperties
-Clide,FolderNodeFactory,3,3,0,0,3,34,5,0,1,0,1,0,Clide.IAdapterService,
-Clide,ItemNodeFactory,3,3,0,0,3,32,4,0,1,0,1,0,Clide.IAdapterService,
-Clide,ProjectNodeFactory,6,4,0,0,3,56,11,0,1,0,1,0,Clide.IAdapterService,
-Clide,ReferenceNodeFactory,3,3,0,0,3,20,3,0,1,0,1,0,Clide.IAdapterService,
-Clide,ReferencesNodeFactory,3,3,0,0,3,29,3,0,1,0,1,0,Clide.IAdapterService,
-Clide,SolutionExplorerNodeFactory,4,2,0,0,2,29,3,0,1,0,2,0,Clide.IAdapterService' Clide.ICustomSolutionExplorerNodeFactory,
-Clide,SolutionFolderNodeFactory,3,3,0,0,3,25,3,0,1,0,1,0,Clide.IAdapterService,
-Clide,SolutionItemNodeFactory,3,3,0,0,3,32,4,0,1,0,1,0,Clide.IAdapterService,
-Clide,SolutionNodeFactory,5,3,0,0,3,26,3,0,1,0,2,0,Clide.IAdapterService' Clide.Interop.IVsSolutionSelection,
-Clide,FolderNode,0,3,0,0,3,30,3,0,1,-1,3,1,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.ISolutionVisitor,Clide.SolutionToBehaviorAdapter
-Clide,GenericNode,0,3,0,0,3,30,3,0,1,-1,3,0,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.ISolutionVisitor,
-Clide,GlobalProjectProperties,4,10,0,0,6,133,26,0,1,0,2,0,Clide.DynamicPropertyAccessor' Clide.ProjectNode,
-Clide,IPropertyAccessor,0,2,0,0,0,5,2,4,0,-1,0,1,,Clide.DynamicPropertyAccessor
-Clide,ItemNode,1,3,3,0,3,60,3,0,1,1,3,3,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.ISolutionVisitor,Clide.SolutionToBehaviorAdapter' Clide.ItemProperties' Clide.Adapters.SolutionToVsLangAdapter
-Clide,ItemProperties,4,7,0,0,6,75,14,0,0,0,1,0,Clide.ItemNode,
-Clide,ProjectItemNode,2,6,1,0,5,72,8,4,1,0.5,3,0,Clide.ISolutionExplorerNodeFactory' Clide.SolutionNodeKind' Clide.IAdapterService,
-Clide,ProjectNode,1,8,5,0,8,125,10,0,1,0.88,4,8,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.ISolutionVisitor' Clide.KnownCapabilities,Clide.ProjectToDte' Clide.SolutionToBehaviorAdapter' Clide.SolutionToVsAdapter' Clide.ConfigProjectProperties' Clide.ConfigUserProjectProperties' Clide.GlobalProjectProperties' Clide.UserProjectProperties' Clide.Adapters.SolutionToVsLangAdapter
-Clide,ReferenceNode,0,3,0,0,3,30,3,0,2,-1,3,1,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.ISolutionVisitor,Clide.Adapters.SolutionToVsLangAdapter
-Clide,ReferencesNode,0,3,0,0,3,30,3,0,2,-1,3,2,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.ISolutionVisitor,Clide.SolutionToBehaviorAdapter' Clide.Adapters.SolutionToVsLangAdapter
-Clide,SolutionExplorer,4,3,3,0,3,55,3,0,1,0,3,0,Clide.ISolutionExplorerNodeFactory' Clide.Guard' Clide.Interop.VsToolWindow,
-Clide,SolutionExplorerNode,10,12,12,0,9,235,20,6,1,0.25,6,1,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.Guard' Clide.ISolutionExplorerNode' Clide.SolutionNodeKind' Clide.ISolutionVisitor,Clide.SolutionToVsAdapter
-Clide,SolutionFolderNode,0,4,1,0,4,49,4,0,2,-1,5,0,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.Guard' Clide.ISolutionFolderNode' Clide.ISolutionVisitor,
-Clide,SolutionItemNode,2,3,4,0,3,53,3,0,2,1,3,0,Clide.ISolutionExplorerNodeFactory' Clide.IAdapterService' Clide.ISolutionVisitor,
-Clide,SolutionNode,4,9,4,0,9,161,12,0,2,0.33,6,2,Clide.ISolutionExplorerNodeFactory' Clide.Interop.IVsSolutionSelection' Clide.IAdapterService' Clide.Guard' Clide.ISolutionFolderNode' Clide.ISolutionVisitor,Clide.SolutionToBehaviorAdapter' Clide.SolutionToVsAdapter
-Clide,SolutionVisitable,0,9,0,0,9,138,36,0,0,-1,11,6,Clide.ISolutionVisitor' Clide.ISolutionNode' Clide.ISolutionExplorerNode' Clide.ISolutionFolderNode' Clide.ISolutionItemNode' Clide.IProjectNode' Clide.IReferencesNode' Clide.IReferenceNode' Clide.IFolderNode' Clide.IItemNode' Clide.IGenericNode,Clide.FakeSolution' Clide.FakeSolutionFolder' Clide.FakeSolutionItem' Clide.FakeProject' Clide.FakeFolder' Clide.FakeItem
-Clide,UserProjectProperties,6,8,0,0,6,69,15,0,1,0.25,2,0,Clide.ProjectNode' Clide.DynamicPropertyAccessor,
-Clide.Adapters,DteToVsAdapter,2,6,0,0,1,56,10,0,1,0.33,0,0,,
-Clide.Adapters,SolutionToVsLangAdapter,0,4,0,0,4,26,5,0,1,-1,5,0,Clide.ProjectNode' Clide.ItemNode' Clide.ReferenceNode' Clide.IProjectNode' Clide.ReferencesNode,
-Clide.Components.Interop,VsBooleanSymbolExpressionEvaluatorProvider,1,1,1,0,1,24,1,0,0,0,1,0,Microsoft.VisualStudio.Shell.Interop.BooleanSymbolExpressionEvaluator,
-Clide.Components.Interop,VsShellProvider,1,1,1,0,1,15,1,0,0,0,0,0,,
-Clide.Components.Interop,VsUIHierarchyWindowProvider,2,2,1,0,1,24,3,0,0,0,0,0,,
-Clide.Components.Interop,VsHierarchyItemManagerProvider,1,1,1,0,1,15,1,0,0,0,0,0,,
-Clide.Events,ShellInitializedObservable,5,3,0,0,2,45,6,0,0,0,1,1,Clide.Events.ShellInitialized,Clide.Events.ShellInitializedObservableSpec
-Microsoft.VisualStudio.Shell.Interop,BooleanSymbolExpressionEvaluator,0,0,0,0,0,4,0,0,0,-1,0,1,,Clide.Components.Interop.VsBooleanSymbolExpressionEvaluatorProvider
-Microsoft.VisualStudio.Shell.Interop,IVsSharedProjectReferencesHelper,0,2,0,0,0,17,2,0,0,-1,0,1,,Clide.ReferenceContainerNode
-Microsoft.VisualStudio.Shell.Interop,SVsSharedProjectReferencesHelper,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Clide.Interop,IVsSolutionSelection,0,2,0,0,0,13,2,1,0,-1,0,3,,Clide.SolutionNodeFactory' Clide.SolutionNode' Clide.Interop.VsSolutionSelectionSpec
-Clide.Interop,VsHierarchySelection,3,3,0,0,3,97,3,0,1,0,0,0,,
-Clide.Interop,IVsHierarchySelection,0,2,0,0,0,13,2,1,0,-1,0,1,,Clide.Interop.VsHierarchySelectionSpec
-Clide.Interop,VsSolutionSelection,3,3,0,0,3,61,3,0,1,0,0,0,,
+Clide,IVsHierarchyExtensions,0,1,0,0,1,19,2,0,0,-1,0,0,,
+Clide,IVsHierarchyItemExtensions,0,15,0,0,15,152,25,0,0,-1,0,0,,
+Clide,IVsSolutionExtensions,0,8,0,0,8,41,9,0,0,-1,0,0,,
+Clide,VsUIShellExtensions,0,7,0,0,3,143,26,0,0,-1,1,0,Clide.OleMessageBoxResult,
+Clide,OleMessageBoxResult,11,0,0,11,0,14,0,0,0,-1,0,1,,Clide.VsUIShellExtensions
+Clide,LegacyDiagnosticsLogProvider,2,2,2,0,2,21,3,0,0,1,1,0,Clide.DiagnosticsLogging,
+Clide,OutputWindowManager,5,5,0,0,3,142,6,0,1,0,2,0,Clide.StrategyTextWriter' Clide.OutputWindowTextWriter,
+Clide,StrategyTextWriter,0,4,2,0,4,24,4,0,0,-1,0,1,,Clide.OutputWindowManager
+Clide,OutputWindowTextWriter,2,4,1,0,4,35,4,0,0,0.5,0,1,,Clide.OutputWindowManager
+Clide,ServiceLocatorImpl,2,7,0,0,7,49,12,0,1,0.57,0,1,,Clide.ServiceLocatorProvider
+Clide,ServiceLocatorProvider,0,6,1,0,6,43,7,0,1,-1,1,0,Clide.ServiceLocatorImpl,
+Clide,ISettingsStore,0,7,0,0,0,10,7,1,0,-1,0,1,,Clide.SettingsManager
+Clide,SettingsAttribute,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Clide,SettingsManager,2,8,1,0,3,285,32,0,1,0.38,2,0,Clide.ISettingsStore' Clide.ShellSettingsStore,
+Clide,ShellSettingsStore,1,8,0,0,8,37,8,0,1,0,0,1,,Clide.SettingsManager
+Clide,DeletableProjectItemNode,1,3,0,0,3,16,3,0,1,0,0,1,,Clide.SolutionToBehaviorAdapter
+Clide,ProjectContainerNode,2,2,0,0,2,27,4,0,1,0,0,1,,Clide.SolutionToBehaviorAdapter
+Clide,ProjectItemContainerNode,4,7,0,0,4,56,8,0,1,0.57,0,1,,Clide.SolutionToBehaviorAdapter
+Clide,ReferenceContainerNode,2,3,0,0,3,52,7,0,1,0.67,2,1,Microsoft.VisualStudio.Shell.Interop.IVsSharedProjectReferencesHelper' Microsoft.VisualStudio.Shell.Interop.SVsSharedProjectReferencesHelper,Clide.SolutionToBehaviorAdapter
+Clide,RemovableProjectItemNode,1,3,0,0,3,16,3,0,1,0,0,1,,Clide.SolutionToBehaviorAdapter
+Clide,ConfigProjectProperties,5,8,0,0,6,65,13,0,1,0,3,1,Clide.DynamicPropertyAccessor' Clide.IPropertyAccessor' Clide.ProjectNode,Clide.ProjectNode
+Clide,ConfigUserProjectProperties,5,8,0,0,6,65,13,0,1,0,3,1,Clide.DynamicPropertyAccessor' Clide.IPropertyAccessor' Clide.ProjectNode,Clide.ProjectNode
+Clide,DynamicPropertyAccessor,1,5,0,0,5,41,11,0,0,0.4,1,4,Clide.IPropertyAccessor,Clide.ConfigProjectProperties' Clide.ConfigUserProjectProperties' Clide.UserProjectProperties' Clide.GlobalProjectProperties
+Clide,FolderNodeFactory,3,3,0,0,3,37,5,0,1,0.67,2,0,Clide.ContractNames' Clide.FolderNode,
+Clide,ItemNodeFactory,3,3,0,0,3,35,4,0,1,0.67,2,0,Clide.ContractNames' Clide.ItemNode,
+Clide,ProjectNodeFactory,8,4,0,0,3,72,9,0,1,0,3,0,Clide.ContractNames' Clide.Interop' Clide.ProjectNode,
+Clide,ReferenceNodeFactory,3,3,0,0,3,20,3,0,1,0.67,2,0,Clide.ContractNames' Clide.ReferenceNode,
+Clide,ReferencesNodeFactory,4,3,0,0,3,48,5,0,1,0,2,0,Clide.ContractNames' Clide.ReferencesNode,
+Clide,SolutionExplorerNodeFactory,6,3,1,0,3,53,4,0,1,0.67,2,0,Clide.ContractNames' Clide.GenericNode,
+Clide,SolutionFolderNodeFactory,3,3,0,0,3,25,3,0,1,0.67,2,0,Clide.ContractNames' Clide.SolutionFolderNode,
+Clide,SolutionItemNodeFactory,3,3,0,0,3,31,4,0,1,0.67,2,0,Clide.ContractNames' Clide.SolutionItemNode,
+Clide,SolutionNodeFactory,5,3,0,0,3,26,3,0,1,0.67,3,0,Clide.ContractNames' Clide.SolutionNode' Clide.Interop.IVsSolutionSelection,
+Clide,FolderNode,0,3,0,0,3,30,3,0,1,-1,2,3,Clide.ProjectItemNode' Clide.SolutionVisitable,Clide.SolutionExplorerNode' Clide.FolderNodeFactory' Clide.SolutionToBehaviorAdapter
+Clide,GenericNode,0,3,0,0,3,30,3,0,1,-1,2,1,Clide.SolutionExplorerNode' Clide.SolutionVisitable,Clide.SolutionExplorerNodeFactory
+Clide,GlobalProjectProperties,4,10,0,0,6,133,26,0,1,0,3,1,Clide.DynamicPropertyAccessor' Clide.IPropertyAccessor' Clide.ProjectNode,Clide.ProjectNode
+Clide,IPropertyAccessor,0,2,0,0,0,5,2,4,0,-1,0,5,,Clide.DynamicPropertyAccessor' Clide.UserProjectProperties' Clide.GlobalProjectProperties' Clide.ConfigProjectProperties' Clide.ConfigUserProjectProperties
+Clide,ItemNode,1,3,3,0,3,60,3,0,1,1,3,4,Clide.ItemProperties' Clide.ProjectItemNode' Clide.SolutionVisitable,Clide.ItemProperties' Clide.Adapters.SolutionToVsLangAdapter' Clide.ItemNodeFactory' Clide.SolutionToBehaviorAdapter
+Clide,ItemProperties,4,7,0,0,6,91,14,0,0,0,1,1,Clide.ItemNode,Clide.ItemNode
+Clide,ProjectConfiguration,1,1,7,0,1,73,1,0,1,0,0,1,,Clide.ProjectNode
+Clide,ProjectItemNode,2,6,1,0,5,72,8,4,1,0.67,1,4,Clide.SolutionExplorerNode,Clide.ReferencesNode' Clide.ItemNode' Clide.FolderNode' Clide.ReferenceNode
+Clide,ProjectNode,2,9,7,0,9,134,11,0,1,0.78,7,11,Clide.ConfigProjectProperties' Clide.ConfigUserProjectProperties' Clide.GlobalProjectProperties' Clide.ProjectConfiguration' Clide.SolutionExplorerNode' Clide.SolutionVisitable' Clide.UserProjectProperties,Clide.GlobalProjectProperties' Clide.ProjectToDte' Clide.Adapters.MsBuildAdapter' Clide.ConfigUserProjectProperties' Clide.ConfigProjectProperties' Clide.VsToSolutionAdapter' Clide.ProjectNodeFactory' Clide.UserProjectProperties' Clide.SolutionToBehaviorAdapter' Clide.Adapters.SolutionToVsLangAdapter' Clide.SolutionToVsAdapter
+Clide,ReferenceNode,1,3,2,0,3,36,3,0,2,1,2,2,Clide.ProjectItemNode' Clide.SolutionVisitable,Clide.Adapters.SolutionToVsLangAdapter' Clide.ReferenceNodeFactory
+Clide,ReferencesNode,0,3,0,0,3,30,3,0,2,-1,2,3,Clide.ProjectItemNode' Clide.SolutionVisitable,Clide.Adapters.SolutionToVsLangAdapter' Clide.SolutionToBehaviorAdapter' Clide.ReferencesNodeFactory
+Clide,SolutionConfiguration,1,2,0,0,2,27,5,0,1,1,0,1,,Clide.SolutionNode
+Clide,SolutionExplorer,5,3,3,0,3,55,3,0,1,0,3,0,Clide.ContractNames' Clide.Interop' Clide.Interop.VsToolWindow,
+Clide,SolutionExplorerNode,10,12,13,0,9,263,20,6,1,0.33,1,7,Clide.FolderNode,Clide.ProjectNode' Clide.GenericNode' Clide.ProjectItemNode' Clide.SolutionFolderNode' Clide.SolutionNode' Clide.SolutionItemNode' Clide.SolutionToVsAdapter
+Clide,SolutionFolderNode,0,4,1,0,4,48,4,0,2,-1,2,1,Clide.SolutionExplorerNode' Clide.SolutionVisitable,Clide.SolutionFolderNodeFactory
+Clide,SolutionItemNode,2,3,4,0,3,53,3,0,2,1,2,1,Clide.SolutionExplorerNode' Clide.SolutionVisitable,Clide.SolutionItemNodeFactory
+Clide,SolutionNode,4,9,5,0,9,167,12,0,2,0.33,4,4,Clide.SolutionConfiguration' Clide.SolutionExplorerNode' Clide.SolutionVisitable' Clide.Interop.IVsSolutionSelection,Clide.SolutionToVsAdapter' Clide.Adapters.SolutionNodeToDte' Clide.SolutionToBehaviorAdapter' Clide.SolutionNodeFactory
+Clide,SolutionVisitable,0,9,0,0,9,138,36,0,0,-1,0,9,,Clide.ReferenceNode' Clide.ReferencesNode' Clide.SolutionNode' Clide.FolderNode' Clide.ItemNode' Clide.SolutionFolderNode' Clide.GenericNode' Clide.SolutionItemNode' Clide.ProjectNode
+Clide,UserProjectProperties,6,8,0,0,6,69,15,0,1,0.25,3,1,Clide.DynamicPropertyAccessor' Clide.IPropertyAccessor' Clide.ProjectNode,Clide.ProjectNode
+Clide,IStartableMetadata,0,0,2,0,0,5,0,0,0,-1,0,1,,Clide.StartableService
+Clide,StartableService,2,3,0,0,3,54,6,0,1,0.67,2,0,Clide.IStartableMetadata' Clide.StartableContextParseResult,
+Clide,StartableContextParseResult,0,1,2,0,1,14,3,0,0,-1,0,1,,Clide.StartableService
+Clide,StatusBar,1,4,0,0,4,32,7,0,1,0.5,0,0,,
+Clide,DialogWindowFactory,3,3,0,0,2,43,4,0,1,0,0,0,,
+Clide,MessageBoxService,3,3,0,0,3,44,3,0,1,0,0,0,,
+Clide.Adapters,DteToVsAdapter,2,6,0,0,1,56,10,0,1,0.5,2,0,Clide.ContractNames' Clide.Interop,
+Clide.Adapters,MsBuildAdapter,5,4,0,0,4,52,5,0,1,0.75,1,0,Clide.ProjectNode,
+Clide.Adapters,SolutionNodeToDte,0,1,0,0,1,12,1,0,1,-1,1,0,Clide.SolutionNode,
+Clide.Adapters,SolutionToVsLangAdapter,0,4,0,0,4,26,5,0,1,-1,4,0,Clide.ItemNode' Clide.ProjectNode' Clide.ReferenceNode' Clide.ReferencesNode,
+Clide.Commands,CommandRegistrar,2,2,0,0,2,55,4,0,1,0,3,0,Clide.Commands.ICommandMetadata' Clide.Commands.UIContextWrapper' Clide.Commands.VsCommandExtensionAdapter,
+Clide.Commands,ICommandMetadata,0,0,4,0,0,19,0,0,0,-1,0,1,,Clide.Commands.CommandRegistrar
+Clide.Commands,UIContextWrapper,2,2,1,0,2,14,2,0,0,1,0,2,,Clide.Commands.VsCommandExtensionAdapter' Clide.Commands.CommandRegistrar
+Clide.Commands,VsCommandExtensionAdapter,2,3,1,0,1,97,8,0,0,0,2,1,Clide.Commands.UIContextWrapper' Clide.Commands.MenuCommand,Clide.Commands.CommandRegistrar
+Clide.Commands,MenuCommand,0,0,4,0,0,7,0,0,1,-1,0,1,,Clide.Commands.VsCommandExtensionAdapter
+Clide.Components.Interop,VsBooleanSymbolExpressionEvaluatorProvider,2,1,1,0,1,22,1,0,0,0,2,0,Clide.ContractNames' Clide.Interop,
+Clide.Components.Interop,VsHierarchyItemManagerProvider,1,1,1,0,1,18,1,0,0,0,2,0,Clide.ContractNames' Clide.Interop,
+Clide.Components.Interop,VsServicesExports,6,1,5,0,1,42,1,0,0,0,2,0,Clide.ContractNames' Clide.Interop,
+Clide.Components.Interop,VsUIHierarchyWindowProvider,2,2,1,0,1,28,3,0,0,1,2,0,Clide.ContractNames' Clide.Interop,
+Clide.Events,ShellInitializedObservable,5,3,0,0,2,46,6,0,0,0,0,0,,
+Microsoft.VisualStudio.Shell,IVsAppId,0,6,0,0,0,16,6,0,0,-1,0,2,,Microsoft.VisualStudio.Shell.IVsAppIdExtensions' Clide.DevEnvInfoProvider
+Microsoft.VisualStudio.Shell,VSAPropID,0,0,0,0,0,13,0,0,0,-1,0,2,,Clide.DevEnvInfoProvider' Microsoft.VisualStudio.Shell.IVsAppIdExtensions
+Microsoft.VisualStudio.Shell,IVsAppIdExtensions,0,1,0,0,0,14,2,0,0,-1,2,0,Microsoft.VisualStudio.Shell.IVsAppId' Microsoft.VisualStudio.Shell.VSAPropID,
+Microsoft.Internal.VisualStudio.Shell.Interop,IVsFeatureFlags,0,1,0,0,0,6,1,0,0,-1,0,1,,Clide.DiagnosticsLogging
+Microsoft.Internal.VisualStudio.Shell.Interop,SVsFeatureFlags,0,0,0,0,0,4,0,0,0,-1,0,1,,Clide.DiagnosticsLogging
+Clide.Interop,IVsHierarchySelection,0,2,0,0,0,13,2,1,0,-1,0,1,,Clide.Interop.VsHierarchySelection
+Clide.Interop,IVsSolutionSelection,0,2,0,0,0,13,2,1,0,-1,0,3,,Clide.SolutionNodeFactory' Clide.SolutionNode' Clide.Interop.VsSolutionSelection
+Clide.Interop,VsHierarchySelection,3,3,0,0,3,103,3,0,1,0,1,0,Clide.Interop.IVsHierarchySelection,
+Clide.Interop,VsSolutionSelection,3,3,0,0,3,63,3,0,1,0,3,0,Clide.ContractNames' Clide.Interop' Clide.Interop.IVsSolutionSelection,
 Clide.Interop,VsToolWindow,2,3,1,0,3,37,5,0,0,0,0,1,,Clide.SolutionExplorer
-Clide.Properties,Resources,2,1,23,0,0,230,1,0,0,0,0,0,,
+Microsoft.VisualStudio.Shell.Interop,IVsSharedProjectReferencesHelper,0,2,0,0,0,17,2,0,0,-1,0,1,,Clide.ReferenceContainerNode
+Microsoft.VisualStudio.Shell.Interop,IVsTaskSchedulerService2,0,1,0,0,0,11,1,0,0,-1,0,0,,
+Microsoft.VisualStudio.Shell.Interop,SVsSharedProjectReferencesHelper,0,0,0,0,0,4,0,0,0,-1,0,1,,Clide.ReferenceContainerNode
+Clide.Properties,Resources,2,1,35,0,0,338,1,0,0,0,0,0,,

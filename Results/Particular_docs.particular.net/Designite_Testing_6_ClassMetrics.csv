@@ -1,0 +1,33 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Testing_6.AdditionalServices,Tests,0,1,0,0,1,14,1,0,0,-1,2,0,Testing_6.AdditionalServices.WithDependencyInjectionHandler' Testing_6.AdditionalServices.MyService,
+Testing_6.AdditionalServices,WithDependencyInjectionHandler,1,2,0,0,2,14,2,0,0,1,2,1,Testing_6.AdditionalServices.MyService' Testing_6.AdditionalServices.MyMessage,Testing_6.AdditionalServices.Tests
+Testing_6.AdditionalServices,MyService,0,0,0,0,0,3,0,0,0,-1,0,2,,Testing_6.AdditionalServices.Tests' Testing_6.AdditionalServices.WithDependencyInjectionHandler
+Testing_6.AdditionalServices,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Testing_6.AdditionalServices.WithDependencyInjectionHandler
+Testing_6.Handlers,GatewayTest,0,1,0,0,1,36,1,0,0,-1,3,0,Testing_6.Handlers.MyHandler' Testing_6.Handlers.MyMessage' Testing_6.Handlers.GatewayMessage,
+Testing_6.Handlers,MyHandler,0,1,0,0,1,10,1,0,0,-1,0,1,,Testing_6.Handlers.GatewayTest
+Testing_6.Handlers,MyMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Testing_6.Handlers.GatewayTest
+Testing_6.Handlers,GatewayMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Testing_6.Handlers.GatewayTest
+Testing_6.HeaderManipulation,RequestMessage,0,0,1,0,0,5,0,0,0,-1,0,2,,Testing_6.HeaderManipulation.Tests' Testing_6.HeaderManipulation.MyMessageHandler
+Testing_6.HeaderManipulation,ResponseMessage,0,0,1,0,0,5,0,0,0,-1,0,2,,Testing_6.HeaderManipulation.Tests' Testing_6.HeaderManipulation.MyMessageHandler
+Testing_6.HeaderManipulation,Tests,0,1,0,0,1,23,1,0,0,-1,3,0,Testing_6.HeaderManipulation.RequestMessage' Testing_6.HeaderManipulation.ResponseMessage' Testing_6.HeaderManipulation.MyMessageHandler,
+Testing_6.HeaderManipulation,MyMessageHandler,0,1,0,0,1,12,1,0,0,-1,2,1,Testing_6.HeaderManipulation.RequestMessage' Testing_6.HeaderManipulation.ResponseMessage,Testing_6.HeaderManipulation.Tests
+Testing_6.Saga,ConfigureSagaMessageId,0,1,0,0,1,15,1,0,0,-1,3,0,Testing_6.Saga.MyEvent' Testing_6.Saga.MySaga' Testing_6.Saga.StartsSaga,
+Testing_6.Saga,MyCommand,0,0,0,0,0,4,0,0,0,-1,0,3,,Testing_6.Saga.MySaga' Testing_6.Saga.Tests' Testing_6.UpgradeGuides._5to6.SagaTests
+Testing_6.Saga,MyEvent,0,0,0,0,0,4,0,0,0,-1,0,4,,Testing_6.Saga.Tests' Testing_6.Saga.ConfigureSagaMessageId' Testing_6.Saga.MySaga' Testing_6.UpgradeGuides._5to6.SagaTests
+Testing_6.Saga,MyOtherEvent,0,0,0,0,0,4,0,0,0,-1,0,2,,Testing_6.Saga.Tests' Testing_6.Saga.MySaga
+Testing_6.Saga,MyResponse,0,0,0,0,0,4,0,0,0,-1,0,3,,Testing_6.Saga.Tests' Testing_6.UpgradeGuides._5to6.SagaTests' Testing_6.Saga.MySaga
+Testing_6.Saga,MySaga,0,3,0,0,2,25,3,0,0,-1,6,4,Testing_6.Saga.MyCommand' Testing_6.Saga.MyEvent' Testing_6.Saga.MyOtherEvent' Testing_6.Saga.MyResponse' Testing_6.Saga.MySagaData' Testing_6.Saga.StartsSaga,Testing_6.Saga.ConfigureSagaMessageId' Testing_7.UpgradeGuides._6to7.ExpectSagaCompleted' Testing_6.UpgradeGuides._5to6.SagaTests' Testing_6.Saga.Tests
+Testing_6.Saga,MySagaData,0,0,3,0,0,7,0,0,0,-1,0,2,,Testing_6.UpgradeGuides._6to7.WhenHandling' Testing_6.Saga.MySaga
+Testing_6.Saga,StartsSaga,0,0,0,0,0,4,0,0,0,-1,0,4,,Testing_6.Saga.MySaga' Testing_6.Saga.Tests' Testing_6.Saga.ConfigureSagaMessageId' Testing_6.UpgradeGuides._5to6.SagaTests
+Testing_6.Saga,Tests,0,1,0,0,1,28,1,0,0,-1,6,0,Testing_6.Saga.MyCommand' Testing_6.Saga.MyEvent' Testing_6.Saga.MyOtherEvent' Testing_6.Saga.MyResponse' Testing_6.Saga.MySaga' Testing_6.Saga.StartsSaga,
+Testing_6.ServiceLayer,RequestMessage,0,0,1,0,0,5,0,0,0,-1,0,2,,Testing_6.ServiceLayer.Tests' Testing_6.ServiceLayer.MyHandler
+Testing_6.ServiceLayer,ResponseMessage,0,0,1,0,0,5,0,0,0,-1,0,2,,Testing_6.ServiceLayer.Tests' Testing_6.ServiceLayer.MyHandler
+Testing_6.ServiceLayer,Tests,0,1,0,0,1,21,1,0,0,-1,3,0,Testing_6.ServiceLayer.RequestMessage' Testing_6.ServiceLayer.ResponseMessage' Testing_6.ServiceLayer.MyHandler,
+Testing_6.ServiceLayer,MyHandler,0,1,0,0,1,12,1,0,0,-1,2,1,Testing_6.ServiceLayer.RequestMessage' Testing_6.ServiceLayer.ResponseMessage,Testing_6.ServiceLayer.Tests
+Testing_6.UpgradeGuides._5to6,SagaTests,0,2,0,0,2,52,2,0,0,-1,5,0,Testing_6.Saga.MyCommand' Testing_6.Saga.MyEvent' Testing_6.Saga.MyResponse' Testing_6.Saga.MySaga' Testing_6.Saga.StartsSaga,
+Testing_7.UpgradeGuides._6to7,ExpectSagaCompleted,0,1,0,0,1,17,1,0,0,-1,2,0,Testing_6.Saga.MySaga' Testing_7.UpgradeGuides._6to7.CompleteSagaMessage,
+Testing_7.UpgradeGuides._6to7,CompleteSagaMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Testing_7.UpgradeGuides._6to7.ExpectSagaCompleted
+Testing_6.UpgradeGuides._6to7,WhenHandling,0,1,0,0,1,29,1,0,0,-1,3,0,Testing_6.Saga.MySagaData' Testing_6.UpgradeGuides._6to7.MySaga' Testing_6.UpgradeGuides._6to7.CompleteSagaMessage,
+Testing_6.UpgradeGuides._6to7,MySaga,0,2,0,0,1,14,2,0,0,-1,0,1,,Testing_6.UpgradeGuides._6to7.WhenHandling
+Testing_6.UpgradeGuides._6to7,MySagaData,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Testing_6.UpgradeGuides._6to7,CompleteSagaMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Testing_6.UpgradeGuides._6to7.WhenHandling

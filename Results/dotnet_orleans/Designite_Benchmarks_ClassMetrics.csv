@@ -1,21 +1,28 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Benchmarks.MapReduce,MapReduceBenchmark,6,4,0,0,3,98,6,0,0,0,3,0,Orleans.TestingHost.TestCluster' Orleans.TestingHost.TestClusterOptions' Orleans.IGrainFactory,
+Benchmarks.GrainStorage,GrainStorageBenchmark,1,6,0,0,6,95,7,0,0,0,3,1,Benchmarks.GrainStorage.SiloMemoryStorageConfigurator' Benchmarks.GrainStorage.SiloAzureTableStorageConfigurator' Benchmarks.GrainStorage.SiloAzureBlobStorageConfigurator,Benchmarks.Program
+Benchmarks.GrainStorage,SiloMemoryStorageConfigurator,0,1,0,0,1,7,1,0,1,-1,0,1,,Benchmarks.GrainStorage.GrainStorageBenchmark
+Benchmarks.GrainStorage,SiloAzureTableStorageConfigurator,0,1,0,0,1,10,1,0,1,-1,0,1,,Benchmarks.GrainStorage.GrainStorageBenchmark
+Benchmarks.GrainStorage,SiloAzureBlobStorageConfigurator,0,1,0,0,1,10,1,0,1,-1,0,1,,Benchmarks.GrainStorage.GrainStorageBenchmark
+Benchmarks.MapReduce,MapReduceBenchmark,6,4,0,0,3,99,8,0,0,0,0,1,,Benchmarks.Program
 Benchmarks.MapReduce,MapReduceBenchmarkConfig,0,1,0,0,1,14,1,0,0,-1,0,0,,
-Benchmarks.Ping,PingBenchmark,1,5,0,0,4,47,7,0,0,0,2,0,Orleans.TestingHost.TestCluster' Orleans.TestingHost.TestClusterOptions,
-Benchmarks,Program,1,2,0,0,0,103,4,0,0,1,0,0,,
-Benchmarks.Serialization,SerializationBenchmarkConfig,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Benchmarks.Serialization,SerializerToUse,0,0,0,0,0,6,0,0,0,-1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
-Benchmarks.Serialization,SerializationBenchmarks,5,6,1,0,4,108,8,0,0,0,10,0,TestExtensions.SerializationTestEnvironment' Benchmarks.Serialization.SomeConcreteClass' UnitTests.GrainInterfaces.LargeTestData' Benchmarks.Serialization.SerializerToUse' Benchmarks.Serialization.OuterClass' Benchmarks.Serialization.SomeEnum' Benchmarks.Serialization.SomeAbstractClass' Benchmarks.Serialization.SomeStruct' UnitTests.GrainInterfaces.TestEnum' UnitTests.GrainInterfaces.CampaignEnemyTestType,
-Benchmarks.Serialization,SomeStruct,1,5,5,1,5,31,5,0,0,1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
-Benchmarks.Serialization,ISomeInterface,0,0,1,0,0,1,0,1,0,-1,0,0,,
-Benchmarks.Serialization,SomeAbstractClass,1,2,7,0,2,40,2,2,1,1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
-Benchmarks.Serialization,SomeEnum,0,0,0,0,0,7,0,0,0,-1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
-Benchmarks.Serialization,OuterClass,0,2,0,0,2,30,2,0,0,-1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
-Benchmarks.Serialization,SomeConcreteClass,1,2,3,0,2,16,2,1,2,0,1,1,Benchmarks.Serialization.PrivateConcreteClass,Benchmarks.Serialization.SerializationBenchmarks
-Benchmarks.Serialization,PrivateConcreteClass,1,1,0,1,1,9,1,0,3,0,0,1,,Benchmarks.Serialization.SomeConcreteClass
-Benchmarks.Serialization,AnotherConcreteClass,0,0,2,0,0,6,0,0,2,-1,0,0,,
+Benchmarks.Ping,ConcurrentLoadGenerator<TState>,10,5,0,0,3,146,15,0,0,0,1,1,Benchmarks.Ping.WorkBlock,Benchmarks.Ping.PingBenchmark
+Benchmarks.Ping,WorkBlock,0,0,7,0,0,10,0,0,0,-1,0,1,,Benchmarks.Ping.ConcurrentLoadGenerator<TState>
+Benchmarks.Ping,PingBenchmark,3,10,0,0,9,117,20,0,0,0.2,1,1,Benchmarks.Ping.ConcurrentLoadGenerator<TState>,Benchmarks.Program
+Benchmarks,Program,1,2,0,0,0,218,4,0,0,1,5,0,Benchmarks.GrainStorage.GrainStorageBenchmark' Benchmarks.MapReduce.MapReduceBenchmark' Benchmarks.Ping.PingBenchmark' Benchmarks.Serialization.SerializationBenchmarks' Benchmarks.Transactions.TransactionBenchmark,
+Benchmarks.Serialization,SerializerToUse,0,0,0,0,0,7,0,0,0,-1,0,1,,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,SerializationBenchmarks,4,6,1,0,4,116,11,0,0,0,8,1,Benchmarks.Serialization.SerializerToUse' Benchmarks.Serialization.SomeStruct' Benchmarks.Serialization.ISomeInterface' Benchmarks.Serialization.SomeAbstractClass' Benchmarks.Serialization.SomeEnum' Benchmarks.Serialization.OuterClass' Benchmarks.Serialization.SomeConcreteClass' Benchmarks.Serialization.AnotherConcreteClass,Benchmarks.Program
+Benchmarks.Serialization,SomeStruct,1,5,5,1,5,31,5,0,0,1,0,2,,Benchmarks.Serialization.SerializationBenchmarks' Benchmarks.Serialization.OuterClass
+Benchmarks.Serialization,ISomeInterface,0,0,1,0,0,1,0,1,0,-1,0,2,,Benchmarks.Serialization.SerializationBenchmarks' Benchmarks.Serialization.SomeAbstractClass
+Benchmarks.Serialization,SomeAbstractClass,1,2,7,0,2,40,2,2,1,1,2,3,Benchmarks.Serialization.ISomeInterface' Benchmarks.Serialization.SomeEnum,Benchmarks.Serialization.SerializationBenchmarks' Benchmarks.Serialization.OuterClass' Benchmarks.Serialization.AnotherConcreteClass
+Benchmarks.Serialization,SomeEnum,0,0,0,0,0,7,0,0,0,-1,0,2,,Benchmarks.Serialization.SerializationBenchmarks' Benchmarks.Serialization.SomeAbstractClass
+Benchmarks.Serialization,OuterClass,0,2,0,0,2,30,2,0,0,-1,4,1,Benchmarks.Serialization.SomeStruct' Benchmarks.Serialization.SomeAbstractClass' Benchmarks.Serialization.SomeConcreteClass' Benchmarks.Serialization.PrivateConcreteClass,Benchmarks.Serialization.SerializationBenchmarks
+Benchmarks.Serialization,SomeConcreteClass,1,2,3,0,2,16,2,1,2,0,0,2,,Benchmarks.Serialization.SerializationBenchmarks' Benchmarks.Serialization.OuterClass
+Benchmarks.Serialization,PrivateConcreteClass,1,1,0,1,1,9,1,0,3,0,0,1,,Benchmarks.Serialization.OuterClass
+Benchmarks.Serialization,AnotherConcreteClass,0,0,2,0,0,6,0,0,2,-1,1,1,Benchmarks.Serialization.SomeAbstractClass,Benchmarks.Serialization.SerializationBenchmarks
 Benchmarks.Serialization,InnerType,0,4,2,0,3,29,7,0,0,-1,0,0,,
-Benchmarks.TransactionManager,TransactionManagerBenchmarks,5,6,0,0,2,131,12,0,0,0.67,6,0,Orleans.Transactions.Abstractions.ITransactionManager' Orleans.TestingHost.Utils.NullTelemetryProducer' Benchmarks.TransactionManager.NoOpTransactionalResource' TestExtensions.SerializationTestEnvironment' Orleans.Transactions.AzureStorage.AzureTransactionLogStorage' TestExtensions.TestDefaultConfiguration,
-Benchmarks.TransactionManager,NoOpTransactionalResource,0,4,1,0,4,21,4,0,0,-1,0,1,,Benchmarks.TransactionManager.TransactionManagerBenchmarks
-Benchmarks.Transactions,TransactionBenchmark,1,6,0,0,4,65,8,0,0,0,2,0,Orleans.TestingHost.TestCluster' Orleans.TestingHost.TestClusterOptions,
-Benchmarks.Transactions,SiloBuilderFactory,0,1,0,0,1,12,1,0,1,-1,1,0,Orleans.TestingHost.Utils.TestingUtils,
+Benchmarks.Transactions,TransactionBenchmark,4,9,0,0,8,133,12,0,0,0.33,5,1,Benchmarks.Transactions.SiloMemoryStorageConfigurator' Benchmarks.Transactions.SiloAzureStorageConfigurator' Benchmarks.Transactions.SiloTransactionThrottlingConfigurator' Benchmarks.Transactions.SiloTransactionConfigurator' Benchmarks.Transactions.TelemetryConsumer,Benchmarks.Program
+Benchmarks.Transactions,SiloMemoryStorageConfigurator,0,1,0,0,1,7,1,0,1,-1,0,1,,Benchmarks.Transactions.TransactionBenchmark
+Benchmarks.Transactions,SiloAzureStorageConfigurator,0,1,0,0,1,10,1,0,1,-1,0,1,,Benchmarks.Transactions.TransactionBenchmark
+Benchmarks.Transactions,SiloTransactionThrottlingConfigurator,0,1,0,0,1,11,1,0,1,-1,0,1,,Benchmarks.Transactions.TransactionBenchmark
+Benchmarks.Transactions,SiloTransactionConfigurator,0,1,0,0,1,14,1,0,1,-1,0,1,,Benchmarks.Transactions.TransactionBenchmark
+Benchmarks.Transactions,TelemetryConsumer,1,16,0,0,13,86,18,0,0,0.38,0,1,,Benchmarks.Transactions.TransactionBenchmark

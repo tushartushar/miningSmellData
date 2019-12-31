@@ -1,7 +1,7 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Messages,Event,0,0,0,0,0,4,0,3,0,-1,0,2,,BackendServices.OuroSellerEndpointAdapter' WebAPI.Shared.EventExtensions
-Messages,OuroQuoteDeclined,0,1,12,0,1,19,1,0,1,-1,0,1,,BackendServices.DecliningOuroSellerEndpoint
-Messages,OuroSearchType,0,0,0,0,0,6,0,0,0,-1,0,2,,Messages.SearchRequested' WebAPI.Shared.MessageExtensions
-Messages,OwnLeaseOption,0,0,0,0,0,5,0,0,0,-1,0,2,,Messages.SearchRequested' WebAPI.Shared.MessageExtensions
-Messages,OuroResultFound,0,1,14,0,1,21,1,0,1,-1,0,1,,BackendServices.AcceptsAllOuroSellerEndPoint
-Messages,SearchRequested,0,2,10,0,2,33,2,0,1,-1,2,6,Messages.OuroSearchType' Messages.OwnLeaseOption,BackendServices.AcceptsAllOuroSellerEndPoint' BackendServices.IOuroSellerEndpoint' BackendServices.DecliningOuroSellerEndpoint' BackendServices.OuroSellerEndpointAdapter' WebAPI.Shared.MessageExtensions' WebAPI.Search.SearchController
+Messages,Event,0,0,0,0,0,4,0,3,0,-1,0,3,,Messages.OuroResultFound' Messages.OuroQuoteDeclined' Messages.SearchRequested
+Messages,OuroQuoteDeclined,0,1,12,0,1,19,1,0,1,-1,3,0,Messages.Event' Messages.OuroSearchType' Messages.OwnLeaseOption,
+Messages,OuroSearchType,0,0,0,0,0,6,0,0,0,-1,0,3,,Messages.OuroResultFound' Messages.OuroQuoteDeclined' Messages.SearchRequested
+Messages,OwnLeaseOption,0,0,0,0,0,5,0,0,0,-1,0,3,,Messages.OuroResultFound' Messages.OuroQuoteDeclined' Messages.SearchRequested
+Messages,OuroResultFound,0,1,14,0,1,21,1,0,1,-1,3,0,Messages.Event' Messages.OuroSearchType' Messages.OwnLeaseOption,
+Messages,SearchRequested,0,2,10,0,2,33,2,0,1,-1,3,0,Messages.Event' Messages.OuroSearchType' Messages.OwnLeaseOption,

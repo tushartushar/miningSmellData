@@ -1,49 +1,33 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Examples,BankAccount,0,1,2,0,1,11,1,0,0,-1,1,0,Examples.Money,
-Examples,Money,3,17,2,0,13,101,21,0,0,0.41,1,1,Examples.Currency,Examples.BankAccount
+Examples,Money,3,17,2,0,13,101,21,0,0,0.41,1,2,Examples.Currency,Examples.BankAccount' BasicMoney.Money
 Examples,Currency,0,0,0,0,0,5,0,0,0,-1,0,1,,Examples.Money
-Examples,Meters,0,13,2,0,11,65,16,0,0,-1,2,1,Examples.Yards' Examples.Kilometers,MetersWithBaseClass.Meters
-Examples,Yards,0,1,0,0,1,7,1,0,0,-1,0,2,,Examples.Meters' MetersWithBaseClass.Meters
-Examples,Kilometers,0,1,0,0,1,7,1,0,0,-1,0,2,,Examples.Meters' MetersWithBaseClass.Meters
-Examples,DistancesInMetersCannotBeNegative,0,0,0,0,0,1,0,0,0,-1,0,0,,
-Examples,Customer,0,6,8,0,5,47,6,0,0,-1,5,1,CustomerWithAddressBook.Customer' NameWithPersistence.Customer' NameWithPersistence.Name' NameWithPersistenceNormalized.Customer' NameWithPersistenceNormalized.Name,CustomerWithAddressBook.Customer
-Examples,PhoneNumber,2,4,0,2,2,25,4,0,0,0,1,1,CustomerWithAddressBook.PhoneNumber,CustomerWithAddressBook.PhoneNumber
-Examples,PhoneBook,3,2,0,3,1,16,2,0,0,0,2,0,CustomerWithAddressBook.PhoneNumber' CustomerWithAddressBook.PhoneBook,
-Examples,OvertimeCalculator,0,1,0,0,1,8,1,0,0,-1,4,0,Examples.Hours' Examples.HoursWorked' Examples.ContractedHours' Examples.OvertimeHours,
-Examples,Hours,1,2,0,1,1,16,2,0,0,0,0,4,,Examples.OvertimeCalculator' Examples.HoursWorked' Examples.ContractedHours' Examples.OvertimeHours
-Examples,HoursWorked,1,2,0,1,1,12,2,0,0,0,1,1,Examples.Hours,Examples.OvertimeCalculator
-Examples,ContractedHours,1,2,0,1,1,12,2,0,0,0,1,1,Examples.Hours,Examples.OvertimeCalculator
-Examples,OvertimeHours,1,2,0,1,1,12,2,0,0,0,1,1,Examples.Hours,Examples.OvertimeCalculator
-Examples,MoreThanTwoDecimalPlacesInMoneyValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-Examples,MoneyCannotBeANegativeValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-Examples,Name,2,8,4,2,4,58,8,0,0,0.62,4,2,Examples.CheckConstraint' Examples.Check' NameWithPersistence.Name' NameWithPersistenceNormalized.Name,NameWithPersistence.Name' NameWithPersistenceNormalized.Name
+Examples,Meters,0,13,2,0,11,65,16,0,0,-1,5,0,Examples.Yards' Examples.Kilometers' Examples.DistancesInMetersCannotBeNegative' Examples.ValueObject<T>' MetersWithBaseClass.Meters,
+Examples,Yards,0,1,0,0,1,7,1,0,0,-1,0,1,,Examples.Meters
+Examples,Kilometers,0,1,0,0,1,7,1,0,0,-1,0,1,,Examples.Meters
+Examples,DistancesInMetersCannotBeNegative,0,0,0,0,0,1,0,0,0,-1,0,1,,Examples.Meters
+Examples,Customer,0,6,8,0,5,47,6,0,0,-1,2,0,Examples.PhoneNumber' CustomerWithAddressBook.PhoneBook,
+Examples,PhoneNumber,2,4,0,2,2,25,4,0,0,0,2,2,Examples.ValueObject<T>' CustomerWithAddressBook.PhoneNumber,Examples.Customer' CustomerWithAddressBook.PhoneBook
+Examples,OvertimeCalculator,0,1,0,0,1,8,1,0,0,-1,3,0,Examples.HoursWorked' Examples.ContractedHours' Examples.OvertimeHours,
+Examples,Hours,1,2,0,1,1,16,2,0,0,0,1,3,Examples.ValueObject<T>,Examples.HoursWorked' Examples.ContractedHours' Examples.OvertimeHours
+Examples,HoursWorked,1,2,0,1,1,12,2,0,0,0,2,1,Examples.Hours' Examples.ValueObject<T>,Examples.OvertimeCalculator
+Examples,ContractedHours,1,2,0,1,1,12,2,0,0,0,2,1,Examples.Hours' Examples.ValueObject<T>,Examples.OvertimeCalculator
+Examples,OvertimeHours,1,2,0,1,1,12,2,0,0,0,2,1,Examples.Hours' Examples.ValueObject<T>,Examples.OvertimeCalculator
+Examples,Name,2,8,4,2,4,58,8,0,0,1,4,1,Examples.Check' Examples.ValueObject<T>' NameWithPersistence.Name' NameWithPersistenceNormalized.Name,NameWithPersistence.Customer
 Examples,StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Examples,CheckConstraint,1,2,0,0,2,12,3,0,0,0,0,6,,Examples.Name' Examples.Check' NameWithPersistence.Name' NameWithPersistence.Check' NameWithPersistenceNormalized.Name' NameWithPersistenceNormalized.Check
-Examples,Check,0,1,0,0,1,7,1,0,0,-1,1,3,Examples.CheckConstraint,Examples.Name' NameWithPersistence.Name' NameWithPersistenceNormalized.Name
-Examples,ValueObject<T>,0,4,0,0,3,31,6,0,0,-1,0,0,,
-MetersWithBaseClass,Meters,0,13,2,0,11,65,16,0,0,-1,3,0,Examples.Meters' Examples.Yards' Examples.Kilometers,
-MetersWithBaseClass,Yards,0,1,0,0,1,7,1,0,0,-1,0,0,,
-MetersWithBaseClass,Kilometers,0,1,0,0,1,7,1,0,0,-1,0,0,,
-MetersWithBaseClass,DistancesInMetersCannotBeNegative,0,0,0,0,0,1,0,0,0,-1,0,0,,
-CustomerWithAddressBook,Customer,0,2,4,0,2,19,2,0,0,-1,1,1,Examples.Customer,Examples.Customer
-CustomerWithAddressBook,PhoneNumber,2,4,0,2,2,25,4,0,0,0,1,3,Examples.PhoneNumber,Examples.PhoneNumber' Examples.PhoneBook' CustomerWithAddressBook.PhoneBook
-CustomerWithAddressBook,PhoneBook,3,2,0,3,1,16,2,0,0,0,1,1,CustomerWithAddressBook.PhoneNumber,Examples.PhoneBook
-BasicMoney,Money,3,16,0,0,12,91,20,0,0,0.38,0,0,,
-BasicMoney,MoreThanTwoDecimalPlacesInMoneyValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-BasicMoney,MoneyCannotBeANegativeValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-CombiningMoney,Money,3,16,0,0,12,91,20,0,0,0.38,0,0,,
-CombiningMoney,MoreThanTwoDecimalPlacesInMoneyValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-CombiningMoney,MoneyCannotBeANegativeValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SelfValidating,Money,3,16,0,0,12,91,20,0,0,0.38,0,0,,
-SelfValidating,MoreThanTwoDecimalPlacesInMoneyValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SelfValidating,MoneyCannotBeANegativeValueException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-NameWithPersistence,Name,2,8,4,2,4,58,8,0,0,0.62,4,5,Examples.CheckConstraint' Examples.Check' Examples.Name' NameWithPersistenceNormalized.Name,Examples.Customer' Examples.Name' NameWithPersistence.Customer' NameWithPersistenceNormalized.Name' NameWithPersistenceNormalized.Customer
-NameWithPersistence,StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-NameWithPersistence,CheckConstraint,1,2,0,0,2,12,3,0,0,0,0,0,,
-NameWithPersistence,Check,0,1,0,0,1,7,1,0,0,-1,1,0,Examples.CheckConstraint,
-NameWithPersistence,Customer,0,4,4,0,3,29,4,0,0,-1,3,2,NameWithPersistence.Name' NameWithPersistenceNormalized.Customer' NameWithPersistenceNormalized.Name,Examples.Customer' NameWithPersistenceNormalized.Customer
-NameWithPersistenceNormalized,Name,2,8,4,2,4,58,8,0,0,0.62,4,5,Examples.CheckConstraint' Examples.Check' Examples.Name' NameWithPersistence.Name,Examples.Customer' Examples.Name' NameWithPersistence.Name' NameWithPersistence.Customer' NameWithPersistenceNormalized.Customer
-NameWithPersistenceNormalized,StringExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-NameWithPersistenceNormalized,CheckConstraint,1,2,0,0,2,12,3,0,0,0,0,0,,
-NameWithPersistenceNormalized,Check,0,1,0,0,1,7,1,0,0,-1,1,0,Examples.CheckConstraint,
-NameWithPersistenceNormalized,Customer,0,4,4,0,3,29,4,0,0,-1,3,2,NameWithPersistence.Customer' NameWithPersistence.Name' NameWithPersistenceNormalized.Name,Examples.Customer' NameWithPersistence.Customer
+Examples,CheckConstraint,1,2,0,0,2,12,3,0,0,0,0,1,,Examples.Check
+Examples,Check,0,1,0,0,1,7,1,0,0,-1,1,1,Examples.CheckConstraint,Examples.Name
+Examples,ValueObject<T>,0,4,0,0,3,31,6,0,0,-1,0,9,,Examples.Meters' Examples.PhoneNumber' Examples.Name' CustomerWithAddressBook.PhoneBook' Examples.Hours' Examples.HoursWorked' Examples.ContractedHours' Examples.OvertimeHours' BasicMoney.Money
+MetersWithBaseClass,Meters,0,6,1,0,5,30,7,0,0,-1,0,1,,Examples.Meters
+CustomerWithAddressBook,Customer,0,1,2,0,1,10,1,0,0,-1,0,0,,
+CustomerWithAddressBook,PhoneBook,3,2,0,3,1,16,2,0,0,0,3,1,Examples.PhoneNumber' Examples.ValueObject<T>' CustomerWithAddressBook.PhoneNumber,Examples.Customer
+CustomerWithAddressBook,PhoneNumber,1,2,0,1,1,13,2,0,0,0,0,2,,CustomerWithAddressBook.PhoneBook' Examples.PhoneNumber
+BasicMoney,Money,3,16,0,0,12,91,20,0,0,0.38,6,0,Examples.Money' Examples.ValueObject<T>' CombiningMoney.Money' SelfValidating.Money' SelfValidating.MoreThanTwoDecimalPlacesInMoneyValueException' SelfValidating.MoneyCannotBeANegativeValueException,
+CombiningMoney,Money,2,11,0,0,8,68,15,0,0,0.45,0,1,,BasicMoney.Money
+SelfValidating,Money,1,6,0,0,4,37,10,0,0,0.67,0,1,,BasicMoney.Money
+SelfValidating,MoreThanTwoDecimalPlacesInMoneyValueException,0,0,0,0,0,3,0,0,0,-1,0,1,,BasicMoney.Money
+SelfValidating,MoneyCannotBeANegativeValueException,0,0,0,0,0,3,0,0,0,-1,0,1,,BasicMoney.Money
+NameWithPersistence,Customer,0,4,4,0,3,29,4,0,0,-1,3,0,Examples.Name' NameWithPersistence.Name' NameWithPersistenceNormalized.Name,
+NameWithPersistence,Name,0,6,4,0,3,37,6,0,0,-1,0,2,,NameWithPersistence.Customer' Examples.Name
+NameWithPersistenceNormalized,Customer,0,2,2,0,1,15,2,0,0,-1,0,0,,
+NameWithPersistenceNormalized,Name,0,3,2,0,1,18,3,0,0,-1,0,2,,NameWithPersistence.Customer' Examples.Name

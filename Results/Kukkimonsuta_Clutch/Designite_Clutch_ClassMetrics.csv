@@ -1,29 +1,29 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Clutch,StringExtensions,1,1,0,0,1,21,3,0,0,0,0,0,,
-Clutch,TemporaryActionBase,1,3,0,0,2,21,4,2,0,0,0,0,,
-Clutch,TemporaryAction,1,2,0,0,1,20,4,0,1,0,0,0,,
-Clutch,ServiceLocator,2,6,0,0,5,67,10,0,0,0,0,1,,Clutch.Web.Mvc.ResourcetHelper
-Clutch.Data,CollectionPage,0,2,10,0,2,42,2,1,0,-1,0,3,,Clutch.Data.CollectionPage<T>' Clutch.Data.PagingExtensions' Clutch.Data.PagingOptions
-Clutch.Data,CollectionPage<T>,1,3,0,0,2,19,3,0,1,0,1,0,Clutch.Data.CollectionPage,
-Clutch.Data,PagingExtensions,0,2,0,0,2,17,2,0,0,-1,2,0,Clutch.Data.PagingOptions' Clutch.Data.CollectionPage,
-Clutch.Data,PagingOptions,4,4,7,0,1,128,14,0,0,0.5,1,1,Clutch.Data.CollectionPage,Clutch.Data.PagingExtensions
-Clutch.Data,SortExtensions,0,2,0,0,2,17,2,0,0,-1,0,0,,
-Clutch.Data,SortOptions<TEntity>,0,5,0,0,2,17,5,0,0,-1,0,0,,
-Clutch.Data,SortOptions<TEntity;TKey>,3,4,0,0,0,38,6,0,0,0,0,0,,
-Clutch.Runtime,Bootstrap,6,9,0,3,4,185,29,0,0,0,3,1,Clutch.Runtime.BootstrapAssemblyInformation' Clutch.Runtime.BootstrapSubscriber' Clutch.Runtime.ExecutionScope,Clutch.Diagnostics.EntityFramework.Tests.DbTracingTests
+Clutch,TemporaryActionBase,1,3,0,0,2,21,4,2,0,0,0,2,,Clutch.TemporaryAction' Clutch.Runtime.ExecutionScope
+Clutch,TemporaryAction,1,2,0,0,1,20,4,0,1,1,1,0,Clutch.TemporaryActionBase,
+Clutch,ServiceLocator,2,6,0,0,5,67,10,0,0,0,0,0,,
+Clutch.Data,CollectionPage,0,2,10,0,2,42,2,1,0,-1,1,1,Clutch.Data.CollectionPage<T>,Clutch.Data.CollectionPage<T>
+Clutch.Data,CollectionPage<T>,1,3,0,0,2,19,3,0,1,0.67,1,3,Clutch.Data.CollectionPage,Clutch.Data.CollectionPage' Clutch.Data.PagingExtensions' Clutch.Data.PagingOptions
+Clutch.Data,PagingExtensions,0,2,0,0,2,17,2,0,0,-1,2,0,Clutch.Data.CollectionPage<T>' Clutch.Data.PagingOptions,
+Clutch.Data,PagingOptions,4,4,7,0,1,128,16,0,0,1,1,1,Clutch.Data.CollectionPage<T>,Clutch.Data.PagingExtensions
+Clutch.Data,SortExtensions,0,2,0,0,2,17,2,0,0,-1,1,0,Clutch.Data.SortOptions<TEntity>,
+Clutch.Data,SortOptions<TEntity>,0,5,0,0,2,17,5,0,0,-1,1,2,Clutch.Data.SortOptions<TEntity;TKey>,Clutch.Data.SortExtensions' Clutch.Data.SortOptions<TEntity;TKey>
+Clutch.Data,SortOptions<TEntity;TKey>,3,4,0,0,0,38,6,0,0,0.75,1,1,Clutch.Data.SortOptions<TEntity>,Clutch.Data.SortOptions<TEntity>
+Clutch.Runtime,Bootstrap,6,9,0,3,4,185,29,0,0,0,3,0,Clutch.Runtime.BootstrapAssemblyInformation' Clutch.Runtime.BootstrapSubscriber' Clutch.Runtime.ExecutionScope,
 Clutch.Runtime,BootstrapAssemblyInformation,0,0,4,0,0,7,0,0,0,-1,0,1,,Clutch.Runtime.Bootstrap
 Clutch.Runtime,AssemblyReference,0,1,0,0,1,7,1,0,0,-1,0,0,,
 Clutch.Runtime,BootstrapSubscriber,0,4,0,0,4,7,4,3,0,-1,0,1,,Clutch.Runtime.Bootstrap
-Clutch.Runtime,ExecutionScope,1,3,3,0,1,30,6,0,1,0.67,2,2,Clutch.Runtime.IExecutionScopeStrategy' Clutch.Runtime.IExecutionScopeBehavior,Clutch.Runtime.Bootstrap' Clutch.Web.Diagnostics.Logging.WebBootstrap
+Clutch.Runtime,ExecutionScope,1,3,3,0,1,30,6,0,1,0.67,4,1,Clutch.TemporaryActionBase' Clutch.Runtime.IExecutionScopeBehavior' Clutch.Runtime.IExecutionScopeStrategy' Clutch.Runtime.LocalDataStoreScopeStrategy,Clutch.Runtime.Bootstrap
 Clutch.Runtime,IExecutionScopeBehavior,0,2,0,0,0,5,2,0,0,-1,0,1,,Clutch.Runtime.ExecutionScope
-Clutch.Runtime,IExecutionScopeStrategy,0,2,0,0,0,5,2,2,0,-1,0,1,,Clutch.Runtime.ExecutionScope
-Clutch.Runtime,LocalDataStoreScopeStrategy,1,2,0,0,2,12,2,0,1,0,0,0,,
+Clutch.Runtime,IExecutionScopeStrategy,0,2,0,0,0,5,2,2,0,-1,0,2,,Clutch.Runtime.ExecutionScope' Clutch.Runtime.LocalDataStoreScopeStrategy
+Clutch.Runtime,LocalDataStoreScopeStrategy,1,2,0,0,2,12,2,0,1,0,1,1,Clutch.Runtime.IExecutionScopeStrategy,Clutch.Runtime.ExecutionScope
 Clutch.Runtime.Caching,CacheEntry,1,2,4,0,0,29,4,0,0,1,0,2,,Clutch.Runtime.Caching.MemoryCache' Clutch.Runtime.Caching.MemoryCacheRegion
-Clutch.Runtime.Caching,MemoryCache,4,8,0,1,6,114,19,0,0,0,2,1,Clutch.Runtime.Caching.MemoryCacheRegion' Clutch.Runtime.Caching.CacheEntry,Clutch.Web.Routing.TokenCollection
+Clutch.Runtime.Caching,MemoryCache,4,8,0,1,6,114,19,0,0,0,2,0,Clutch.Runtime.Caching.CacheEntry' Clutch.Runtime.Caching.MemoryCacheRegion,
 Clutch.Runtime.Caching,MemoryCacheRegion,1,7,0,0,6,46,11,0,0,0,1,1,Clutch.Runtime.Caching.CacheEntry,Clutch.Runtime.Caching.MemoryCache
-Clutch.Security,Identity,0,1,6,0,1,23,1,0,0,-1,0,2,,Clutch.Security.IPrincipalExtensions' Clutch.Security.Principal
-Clutch.Security,IPrincipalExtensions,0,7,0,0,7,77,20,0,0,-1,3,0,Clutch.Security.Identity' Clutch.Security.Role' Clutch.Security.Permission,
+Clutch.Security,Identity,0,1,6,0,1,23,1,0,0,-1,1,2,Clutch.Security.Role,Clutch.Security.Principal' Clutch.Security.IPrincipalExtensions
+Clutch.Security,IPrincipalExtensions,0,7,0,0,7,77,20,0,0,-1,3,0,Clutch.Security.Identity' Clutch.Security.Permission' Clutch.Security.Role,
 Clutch.Security,Permission,0,3,2,0,3,30,3,0,0,-1,0,2,,Clutch.Security.IPrincipalExtensions' Clutch.Security.Role
-Clutch.Security,Principal,1,2,1,0,1,20,3,0,0,0,2,0,Clutch.Security.Identity' Clutch.Security.Role,
-Clutch.Security,Role,0,3,3,0,3,35,3,0,0,-1,1,2,Clutch.Security.Permission,Clutch.Security.IPrincipalExtensions' Clutch.Security.Principal
-Clutch.Infrastructure,IApplicationConfigurator,0,0,3,0,0,15,0,0,0,-1,0,1,,Clutch.Web.Mvc.ResourcetHelper
+Clutch.Security,Principal,1,2,1,0,1,20,3,0,0,0,1,0,Clutch.Security.Identity,
+Clutch.Security,Role,0,3,3,0,3,35,3,0,0,-1,1,2,Clutch.Security.Permission,Clutch.Security.Identity' Clutch.Security.IPrincipalExtensions
+Clutch.Infrastructure,IApplicationConfigurator,0,0,3,0,0,15,0,0,0,-1,0,0,,

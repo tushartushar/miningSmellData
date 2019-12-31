@@ -1,42 +1,49 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-IFilterTextReader,ComHelpers,1,3,0,0,2,65,7,0,0,0,2,1,IFilterTextReader.IClassFactory' IFilterTextReader.NativeMethods,IFilterTextReader.FilterLoader
-IFilterTextReader,FilterLoader,2,11,0,0,1,316,27,0,0,0,9,1,IFilterTextReader.ComHelpers' IFilterTextReader.IFilter' IFilterTextReader.IFILTER_INIT' IFilterTextReader.IPersistStream' IFilterTextReader.IFILTER_FLAGS' IFilterTextReader.NativeMethods' IFilterTextReader.IFilterReturnCode' IFilterTextReader.IClassFactory' IFilterTextReader.CacheEntry,IFilterTextReader.FilterReader
+IFilterTextReader,ComHelpers,1,3,0,0,2,65,7,0,0,0,3,1,IFilterTextReader.NativeMethods' IFilterTextReader.IClassFactory' IFilterTextReader.Exceptions.IFClassFactoryFailure,IFilterTextReader.FilterLoader
+IFilterTextReader,Extensions,0,6,0,0,6,102,16,0,0,-1,0,0,,
+IFilterTextReader,FileTypeFileInfo,1,1,4,0,0,47,1,0,0,0,0,1,,IFilterTextReader.FileTypeSelector
+IFilterTextReader,FileTypeSelector,4,9,0,0,2,358,33,0,0,0,1,1,IFilterTextReader.FileTypeFileInfo,IFilterTextReader.FilterReader
+IFilterTextReader,FilterLoader,2,11,0,0,1,313,30,0,0,0.18,10,1,IFilterTextReader.ComHelpers' IFilterTextReader.CacheEntry' IFilterTextReader.IStreamWrapper' IFilterTextReader.NativeMethods' IFilterTextReader.IFILTER_INIT' IFilterTextReader.IFilterReturnCode' IFilterTextReader.IFilter' IFilterTextReader.IPersistStream' IFilterTextReader.Exceptions.IFFilterNotFound' IFilterTextReader.Exceptions.IFOldFilterFormat,IFilterTextReader.FilterReader
 IFilterTextReader,CacheEntry,0,1,2,0,1,15,1,0,0,-1,0,1,,IFilterTextReader.FilterLoader
-IFilterTextReader,FilterReaderTimeout,0,0,0,0,0,15,0,0,0,-1,0,2,,IFilterTextReader.FilterReader' IFilterTextViewer.MainForm
-IFilterTextReader,FilterReader,13,13,0,0,8,1001,58,0,0,0.15,14,2,IFilterTextReader.IFilter' IFilterTextReader.STAT_CHUNK' IFilterTextReader.FilterReaderTimeout' IFilterTextReader.FilterLoader' IFilterTextReader.IFilterReturnCode' IFilterTextReader.NativeMethods' IFilterTextReader.CHUNKSTATE' IFilterTextReader.CHUNK_BREAKTYPE' IFilterTextReader.PROPVARIANT' IFilterTextReader.PROPERTYKEY' IFilterTextReader.PROPSPEC' IFilterTextReader.FULLPROPSPEC' IFilterTextReader.PROPSPECKIND' IFilterTextReader.PropertyMapper,IFilterTextViewer.Reader' IFilterTextViewer.MainForm
-IFilterTextReader,Job,2,5,0,0,4,74,8,0,0,0,3,1,IFilterTextReader.NativeMethods' IFilterTextReader.JobObjectInfoType' IFilterTextReader.JOBOBJECT_EXTENDED_LIMIT_INFORMATION,IFilterTextViewer.MainForm
-IFilterTextReader,NativeMethods,0,9,0,0,0,748,9,0,0,-1,2,4,IFilterTextReader.PROPERTYKEY' IFilterTextReader.JobObjectInfoType,IFilterTextReader.ComHelpers' IFilterTextReader.FilterLoader' IFilterTextReader.FilterReader' IFilterTextReader.Job
-IFilterTextReader,IFILTER_FLAGS,0,0,0,0,0,9,0,0,0,-1,0,2,,IFilterTextReader.FilterLoader' IFilterTextReader.IFilter
-IFilterTextReader,IFILTER_INIT,0,0,0,0,0,64,0,0,0,-1,0,1,,IFilterTextReader.FilterLoader
-IFilterTextReader,IFilterReturnCode,0,0,0,0,0,83,0,0,0,-1,0,2,,IFilterTextReader.FilterLoader' IFilterTextReader.FilterReader
-IFilterTextReader,CHUNK_BREAKTYPE,0,0,0,0,0,24,0,0,0,-1,0,1,,IFilterTextReader.FilterReader
-IFilterTextReader,CHUNKSTATE,0,0,0,0,0,16,0,0,0,-1,0,1,,IFilterTextReader.FilterReader
-IFilterTextReader,PROPSPECKIND,0,0,0,0,0,11,0,0,0,-1,0,1,,IFilterTextReader.FilterReader
-IFilterTextReader,JobObjectInfoType,0,0,0,0,0,10,0,0,0,-1,0,2,,IFilterTextReader.Job' IFilterTextReader.NativeMethods
-IFilterTextReader,STAT_CHUNK,8,0,0,8,0,53,0,0,0,-1,1,2,IFilterTextReader.FULLPROPSPEC,IFilterTextReader.FilterReader' IFilterTextReader.IFilter
-IFilterTextReader,FILTERREGION,3,0,0,3,0,7,0,0,0,-1,0,1,,IFilterTextReader.IFilter
-IFilterTextReader,FULLPROPSPEC,2,0,0,2,0,6,0,0,0,-1,1,2,IFilterTextReader.PROPSPEC,IFilterTextReader.FilterReader' IFilterTextReader.STAT_CHUNK
-IFilterTextReader,PROPSPEC,2,0,0,2,0,7,0,0,0,-1,0,2,,IFilterTextReader.FilterReader' IFilterTextReader.FULLPROPSPEC
-IFilterTextReader,PROPVARIANT,6,3,16,0,1,214,4,0,0,0,0,1,,IFilterTextReader.FilterReader
-IFilterTextReader,PROPERTYKEY,2,0,0,2,0,6,0,0,0,-1,0,2,,IFilterTextReader.FilterReader' IFilterTextReader.NativeMethods
-IFilterTextReader,IO_COUNTERS,6,0,0,6,0,10,0,0,0,-1,0,1,,IFilterTextReader.JOBOBJECT_EXTENDED_LIMIT_INFORMATION
-IFilterTextReader,JOBOBJECT_BASIC_LIMIT_INFORMATION,9,0,0,9,0,13,0,0,0,-1,0,1,,IFilterTextReader.JOBOBJECT_EXTENDED_LIMIT_INFORMATION
+IFilterTextReader,FilterReaderTimeout,0,0,0,0,0,15,0,0,0,-1,1,2,IFilterTextReader.Exceptions.IFFilterTimeout,IFilterTextReader.FilterReaderOptions' IFilterTextReader.FilterReader
+IFilterTextReader,FilterReader,12,14,0,1,8,992,132,0,0,0.21,23,1,IFilterTextReader.FileTypeSelector' IFilterTextReader.FilterLoader' IFilterTextReader.FilterReaderTimeout' IFilterTextReader.FilterReaderOptions' IFilterTextReader.NativeMethods' IFilterTextReader.IFilterReturnCode' IFilterTextReader.CHUNK_BREAKTYPE' IFilterTextReader.CHUNKSTATE' IFilterTextReader.PROPSPECKIND' IFilterTextReader.STAT_CHUNK' IFilterTextReader.PROPVARIANT' IFilterTextReader.PROPERTYKEY' IFilterTextReader.IFilter' IFilterTextReader.PropertyMapper' IFilterTextReader.UnmappedPropertyEventArgs' IFilterTextReader.Exceptions.IFAccessFailure' IFilterTextReader.Exceptions.IFFileIsPasswordProtected' IFilterTextReader.Exceptions.IFFileToLarge' IFilterTextReader.Exceptions.IFFilterNotFound' IFilterTextReader.Exceptions.IFFilterPartiallyFiltered' IFilterTextReader.Exceptions.IFFilterTimeout' IFilterTextReader.Exceptions.IFOldFilterFormat' IFilterTextReader.Exceptions.IFUnknownFormat,IFilterTextReader.FilterSearcher
+IFilterTextReader,FilterReaderOptions,0,1,5,0,1,48,1,0,0,-1,3,1,IFilterTextReader.FilterReaderTimeout' IFilterTextReader.NativeMethods' IFilterTextReader.IFilter,IFilterTextReader.FilterReader
+IFilterTextReader,FilterSearcher,0,4,0,0,4,99,13,0,0,-1,1,0,IFilterTextReader.FilterReader,
+IFilterTextReader,IStreamWrapper,1,14,0,0,14,164,17,0,0,0.43,0,1,,IFilterTextReader.FilterLoader
+IFilterTextReader,Job,2,5,0,0,4,74,8,0,0,0.4,4,0,IFilterTextReader.NativeMethods' IFilterTextReader.JobObjectInfoType' IFilterTextReader.JOBOBJECT_BASIC_LIMIT_INFORMATION' IFilterTextReader.JOBOBJECT_EXTENDED_LIMIT_INFORMATION,
+IFilterTextReader,NativeMethods,0,9,0,0,0,758,9,0,0,-1,17,5,IFilterTextReader.IFILTER_FLAGS' IFilterTextReader.IFILTER_INIT' IFilterTextReader.IFilterReturnCode' IFilterTextReader.CHUNK_BREAKTYPE' IFilterTextReader.CHUNKSTATE' IFilterTextReader.PROPSPECKIND' IFilterTextReader.JobObjectInfoType' IFilterTextReader.STAT_CHUNK' IFilterTextReader.FILTERREGION' IFilterTextReader.FULLPROPSPEC' IFilterTextReader.PROPSPEC' IFilterTextReader.PROPVARIANT' IFilterTextReader.PROPERTYKEY' IFilterTextReader.IO_COUNTERS' IFilterTextReader.JOBOBJECT_BASIC_LIMIT_INFORMATION' IFilterTextReader.IFilter' IFilterTextReader.IPersist,IFilterTextReader.FilterReaderOptions' IFilterTextReader.ComHelpers' IFilterTextReader.FilterLoader' IFilterTextReader.Job' IFilterTextReader.FilterReader
+IFilterTextReader,IFILTER_FLAGS,0,0,0,0,0,9,0,0,0,-1,0,1,,IFilterTextReader.NativeMethods
+IFilterTextReader,IFILTER_INIT,0,0,0,0,0,64,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.FilterLoader
+IFilterTextReader,IFilterReturnCode,0,0,0,0,0,93,0,0,0,-1,0,3,,IFilterTextReader.FilterLoader' IFilterTextReader.NativeMethods' IFilterTextReader.FilterReader
+IFilterTextReader,CHUNK_BREAKTYPE,0,0,0,0,0,24,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.FilterReader
+IFilterTextReader,CHUNKSTATE,0,0,0,0,0,16,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.FilterReader
+IFilterTextReader,PROPSPECKIND,0,0,0,0,0,11,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.FilterReader
+IFilterTextReader,JobObjectInfoType,0,0,0,0,0,10,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.Job
+IFilterTextReader,STAT_CHUNK,8,0,0,8,0,53,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.FilterReader
+IFilterTextReader,FILTERREGION,3,0,0,3,0,7,0,0,0,-1,0,1,,IFilterTextReader.NativeMethods
+IFilterTextReader,FULLPROPSPEC,2,0,0,2,0,6,0,0,0,-1,0,1,,IFilterTextReader.NativeMethods
+IFilterTextReader,PROPSPEC,2,0,0,2,0,7,0,0,0,-1,0,1,,IFilterTextReader.NativeMethods
+IFilterTextReader,PROPVARIANT,6,3,16,0,1,214,4,0,0,0,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.FilterReader
+IFilterTextReader,PROPERTYKEY,2,0,0,2,0,6,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.FilterReader
+IFilterTextReader,IO_COUNTERS,6,0,0,6,0,10,0,0,0,-1,0,1,,IFilterTextReader.NativeMethods
+IFilterTextReader,JOBOBJECT_BASIC_LIMIT_INFORMATION,9,0,0,9,0,13,0,0,0,-1,0,2,,IFilterTextReader.NativeMethods' IFilterTextReader.Job
 IFilterTextReader,SECURITY_ATTRIBUTES,3,0,0,3,0,7,0,0,0,-1,0,0,,
-IFilterTextReader,JOBOBJECT_EXTENDED_LIMIT_INFORMATION,6,0,0,6,0,10,0,0,0,-1,2,1,IFilterTextReader.JOBOBJECT_BASIC_LIMIT_INFORMATION' IFilterTextReader.IO_COUNTERS,IFilterTextReader.Job
-IFilterTextReader,IFilter,0,5,0,0,0,59,5,0,0,-1,3,2,IFilterTextReader.IFILTER_FLAGS' IFilterTextReader.STAT_CHUNK' IFilterTextReader.FILTERREGION,IFilterTextReader.FilterLoader' IFilterTextReader.FilterReader
-IFilterTextReader,IClassFactory,0,2,0,0,0,6,2,0,0,-1,0,2,,IFilterTextReader.ComHelpers' IFilterTextReader.FilterLoader
-IFilterTextReader,IPersist,0,1,0,0,0,5,1,1,0,-1,0,0,,
+IFilterTextReader,JOBOBJECT_EXTENDED_LIMIT_INFORMATION,6,0,0,6,0,10,0,0,0,-1,0,1,,IFilterTextReader.Job
+IFilterTextReader,IFilter,0,5,0,0,0,59,5,0,0,-1,0,4,,IFilterTextReader.FilterReaderOptions' IFilterTextReader.NativeMethods' IFilterTextReader.FilterLoader' IFilterTextReader.FilterReader
+IFilterTextReader,IClassFactory,0,2,0,0,0,6,2,0,0,-1,0,1,,IFilterTextReader.ComHelpers
+IFilterTextReader,IPersist,0,1,0,0,0,5,1,1,0,-1,0,1,,IFilterTextReader.NativeMethods
 IFilterTextReader,IPersistStream,0,5,0,0,0,10,5,0,1,-1,0,1,,IFilterTextReader.FilterLoader
-IFilterTextReader,IStreamWrapper,1,14,0,0,14,166,18,0,0,0.43,0,0,,
 IFilterTextReader,PropertyType,0,0,0,0,0,15,0,0,0,-1,0,1,,IFilterTextReader.Property
 IFilterTextReader,Property,0,1,5,0,0,47,1,0,0,-1,1,0,IFilterTextReader.PropertyType,
 IFilterTextReader,PropertyMapper,1,2,0,0,1,302,2,0,0,0,1,1,IFilterTextReader.Localization.LanguageConsts,IFilterTextReader.FilterReader
-IFilterTextReader,UnmappedPropertyEventArgs,0,1,4,0,0,38,1,0,0,-1,0,0,,
-IFilterTextReader.Exceptions,IFAccesFailure,0,4,0,0,0,8,4,0,0,-1,0,0,,
-IFilterTextReader.Exceptions,IFFileIsPasswordProtected,0,4,0,0,0,8,4,0,0,-1,0,0,,
-IFilterTextReader.Exceptions,IFClassFactoryFailure,0,4,0,0,0,8,4,0,0,-1,0,0,,
-IFilterTextReader.Exceptions,IFFilterNotFound,0,4,0,0,0,8,4,0,0,-1,0,0,,
-IFilterTextReader.Exceptions,IFOldFilterFormat,0,4,0,0,0,8,4,0,0,-1,0,0,,
-IFilterTextReader.Exceptions,IFFilterTimeout,0,4,0,0,0,8,4,0,0,-1,0,0,,
-IFilterTextReader.Exceptions,IFUnknownFormat,0,4,0,0,0,8,4,0,0,-1,0,0,,
+IFilterTextReader,UnmappedPropertyEventArgs,0,1,4,0,0,38,1,0,0,-1,0,1,,IFilterTextReader.FilterReader
+IFilterTextReader.Exceptions,IFAccessFailure,0,4,0,0,0,8,4,0,0,-1,0,1,,IFilterTextReader.FilterReader
+IFilterTextReader.Exceptions,IFClassFactoryFailure,0,4,0,0,0,8,4,0,0,-1,0,1,,IFilterTextReader.ComHelpers
+IFilterTextReader.Exceptions,IFFileIsPasswordProtected,0,4,0,0,0,8,4,0,0,-1,0,1,,IFilterTextReader.FilterReader
+IFilterTextReader.Exceptions,IFFileToLarge,0,4,0,0,0,8,4,0,0,-1,0,1,,IFilterTextReader.FilterReader
+IFilterTextReader.Exceptions,IFFilterNotFound,0,4,0,0,0,8,4,0,0,-1,0,2,,IFilterTextReader.FilterLoader' IFilterTextReader.FilterReader
+IFilterTextReader.Exceptions,IFFilterPartiallyFiltered,0,4,0,0,0,8,4,0,0,-1,0,1,,IFilterTextReader.FilterReader
+IFilterTextReader.Exceptions,IFFilterTimeout,0,4,0,0,0,8,4,0,0,-1,0,2,,IFilterTextReader.FilterReaderTimeout' IFilterTextReader.FilterReader
+IFilterTextReader.Exceptions,IFOldFilterFormat,0,4,0,0,0,8,4,0,0,-1,0,2,,IFilterTextReader.FilterReader' IFilterTextReader.FilterLoader
+IFilterTextReader.Exceptions,IFUnknownFormat,0,4,0,0,0,8,4,0,0,-1,0,1,,IFilterTextReader.FilterReader
 IFilterTextReader.Localization,LanguageConsts,2,1,274,0,0,2489,1,0,0,0,0,1,,IFilterTextReader.PropertyMapper

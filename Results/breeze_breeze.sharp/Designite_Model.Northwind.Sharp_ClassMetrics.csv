@@ -1,45 +1,45 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PartialFoo,Category,0,0,5,0,0,26,0,0,2,-1,0,0,,
-PartialFoo,Customer,0,1,12,0,1,64,1,0,2,-1,0,1,,Breeze.Sharp.Tests.PartialMetadataTests
-PartialFoo,Employee,0,0,24,0,0,102,0,0,2,-1,0,0,,
-PartialFoo,EmployeeTerritory,0,0,6,0,0,8,0,0,2,-1,0,0,,
-PartialFoo,Order,0,0,18,0,0,74,0,0,2,-1,0,0,,
-PartialFoo,OrderDetail,0,0,8,0,0,34,0,0,2,-1,0,0,,
+PartialFoo,Category,0,0,5,0,0,26,0,0,2,-1,1,1,PartialFoo.Product,PartialFoo.Product
+PartialFoo,Customer,0,1,12,0,1,64,1,0,2,-1,1,1,PartialFoo.Order,PartialFoo.Order
+PartialFoo,Employee,0,0,24,0,0,102,0,0,2,-1,3,3,PartialFoo.EmployeeTerritory' PartialFoo.Order' PartialFoo.Territory,PartialFoo.EmployeeTerritory' PartialFoo.Order' PartialFoo.Territory
+PartialFoo,EmployeeTerritory,0,0,6,0,0,8,0,0,2,-1,2,2,PartialFoo.Employee' PartialFoo.Territory,PartialFoo.Employee' PartialFoo.Territory
+PartialFoo,Order,0,0,18,0,0,74,0,0,2,-1,4,4,PartialFoo.Customer' PartialFoo.Employee' PartialFoo.OrderDetail' PartialFoo.InternationalOrder,PartialFoo.Customer' PartialFoo.Employee' PartialFoo.OrderDetail' PartialFoo.InternationalOrder
+PartialFoo,OrderDetail,0,0,8,0,0,34,0,0,2,-1,2,1,PartialFoo.Order' PartialFoo.Product,PartialFoo.Order
 PartialFoo,PreviousEmployee,0,0,18,0,0,75,0,0,2,-1,0,0,,
-PartialFoo,Product,0,0,14,0,0,62,0,0,2,-1,0,0,,
-PartialFoo,Region,0,0,4,0,0,18,0,0,2,-1,0,0,,
-PartialFoo,Role,0,0,6,0,0,26,0,0,2,-1,0,0,,
-PartialFoo,RoleType,0,0,0,0,0,6,0,0,0,-1,0,0,,
-PartialFoo,Supplier,0,0,10,0,0,42,0,0,2,-1,0,0,,
-PartialFoo,Location,0,1,5,0,1,25,1,0,2,-1,0,0,,
-PartialFoo,Territory,0,0,7,0,0,30,0,0,2,-1,0,0,,
-PartialFoo,User,0,0,14,0,0,58,0,0,2,-1,0,0,,
-PartialFoo,UserRole,0,0,5,0,0,22,0,0,2,-1,0,0,,
-PartialFoo,InternationalOrder,0,0,5,0,0,22,0,0,2,-1,0,0,,
-PartialFoo,TimeLimit,0,0,5,0,0,22,0,0,2,-1,0,0,,
-PartialFoo,TimeGroup,0,0,3,0,0,15,0,0,2,-1,0,0,,
+PartialFoo,Product,0,0,14,0,0,62,0,0,2,-1,2,3,PartialFoo.Category' PartialFoo.Supplier,PartialFoo.Category' PartialFoo.OrderDetail' PartialFoo.Supplier
+PartialFoo,Region,0,0,4,0,0,18,0,0,2,-1,1,1,PartialFoo.Territory,PartialFoo.Territory
+PartialFoo,Role,0,0,6,0,0,26,0,0,2,-1,2,1,PartialFoo.RoleType' PartialFoo.UserRole,PartialFoo.UserRole
+PartialFoo,RoleType,0,0,0,0,0,6,0,0,0,-1,0,1,,PartialFoo.Role
+PartialFoo,Supplier,0,0,10,0,0,42,0,0,2,-1,2,1,PartialFoo.Product' PartialFoo.Location,PartialFoo.Product
+PartialFoo,Location,0,1,5,0,1,25,1,0,2,-1,0,1,,PartialFoo.Supplier
+PartialFoo,Territory,0,0,7,0,0,30,0,0,2,-1,3,3,PartialFoo.Employee' PartialFoo.EmployeeTerritory' PartialFoo.Region,PartialFoo.Employee' PartialFoo.EmployeeTerritory' PartialFoo.Region
+PartialFoo,User,0,0,14,0,0,58,0,0,2,-1,1,1,PartialFoo.UserRole,PartialFoo.UserRole
+PartialFoo,UserRole,0,0,5,0,0,22,0,0,2,-1,2,2,PartialFoo.Role' PartialFoo.User,PartialFoo.Role' PartialFoo.User
+PartialFoo,InternationalOrder,0,0,5,0,0,22,0,0,2,-1,1,1,PartialFoo.Order,PartialFoo.Order
+PartialFoo,TimeLimit,0,0,5,0,0,22,0,0,2,-1,1,1,PartialFoo.TimeGroup,PartialFoo.TimeGroup
+PartialFoo,TimeGroup,0,0,3,0,0,15,0,0,2,-1,1,1,PartialFoo.TimeLimit,PartialFoo.TimeLimit
 PartialFoo,Comment,0,0,3,0,0,14,0,0,2,-1,0,0,,
 PartialFoo,Geospatial,0,1,3,0,1,19,1,0,2,-1,0,0,,
 PartialFoo,UnusualDate,0,0,5,0,0,22,0,0,2,-1,0,0,,
-Foo,Category,0,0,6,0,0,26,0,0,2,-1,0,2,,Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.QueryTests
-Foo,Customer,0,1,15,0,1,64,1,0,2,-1,0,14,,Breeze.Sharp.Tests.MetadataTests' Breeze.Sharp.Tests.PredicateQueryTests' Breeze.Sharp.Tests.MetadataByHandTests' Breeze.Sharp.Tests.ValidationTests' Breeze.Sharp.Tests.EntityManagerTests' Breeze.Sharp.Tests.LocalQueryTests' Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.TwoCusts' Breeze.Sharp.Tests.NamedQueryTests' Breeze.Sharp.Tests.IEditableObjectTests' Breeze.Sharp.Tests.AttachTests' Breeze.Sharp.Tests.ExportImportTests' Breeze.Sharp.Tests.ComplexTypeTests' Breeze.Sharp.Tests.QueryTests
-Foo,Employee,0,0,25,0,0,102,0,0,2,-1,0,9,,Breeze.Sharp.Tests.PredicateQueryTests' Breeze.Sharp.Tests.MetadataByHandTests' Breeze.Sharp.Tests.ValidationTests' Breeze.Sharp.Tests.EntityManagerTests' Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.NamedQueryTests' Breeze.Sharp.Tests.AttachTests' Breeze.Sharp.Tests.ExportImportTests' Breeze.Sharp.Tests.QueryTests
-Foo,EmployeeTerritory,0,0,6,0,0,26,0,0,2,-1,0,1,,Breeze.Sharp.Tests.AttachTests
-Foo,Order,0,0,18,0,0,74,0,0,2,-1,0,9,,Breeze.Sharp.Tests.MetadataTests' Breeze.Sharp.Tests.PredicateQueryTests' Breeze.Sharp.Tests.MetadataByHandTests' Breeze.Sharp.Tests.EntityManagerTests' Breeze.Sharp.Tests.LocalQueryTests' Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.AttachTests' Breeze.Sharp.Tests.ExportImportTests' Breeze.Sharp.Tests.QueryTests
-Foo,OrderDetail,0,0,8,0,0,34,0,0,2,-1,0,4,,Breeze.Sharp.Tests.MetadataByHandTests' Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.AttachTests' Breeze.Sharp.Tests.QueryTests
+Foo,Category,0,0,6,0,0,26,0,0,2,-1,1,1,Foo.Product,Foo.Product
+Foo,Customer,0,1,15,0,1,64,1,0,2,-1,1,1,Foo.Order,Foo.Order
+Foo,Employee,0,0,25,0,0,102,0,0,2,-1,3,3,Foo.EmployeeTerritory' Foo.Order' Foo.Territory,Foo.EmployeeTerritory' Foo.Order' Foo.Territory
+Foo,EmployeeTerritory,0,0,6,0,0,26,0,0,2,-1,2,2,Foo.Employee' Foo.Territory,Foo.Employee' Foo.Territory
+Foo,Order,0,0,18,0,0,74,0,0,2,-1,4,4,Foo.Customer' Foo.Employee' Foo.OrderDetail' Foo.InternationalOrder,Foo.Customer' Foo.Employee' Foo.OrderDetail' Foo.InternationalOrder
+Foo,OrderDetail,0,0,8,0,0,34,0,0,2,-1,2,1,Foo.Order' Foo.Product,Foo.Order
 Foo,PreviousEmployee,0,0,18,0,0,75,0,0,2,-1,0,0,,
-Foo,Product,0,0,14,0,0,63,0,0,2,-1,0,4,,Breeze.Sharp.Tests.MetadataByHandTests' Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.AttachTests' Breeze.Sharp.Tests.QueryTests
-Foo,Region,0,0,4,0,0,18,0,0,2,-1,0,1,,Breeze.Sharp.Tests.SaveTests
-Foo,Role,0,0,6,0,0,26,0,0,2,-1,0,3,,Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.ExportImportTests' Breeze.Sharp.Tests.QueryTests
-Foo,RoleType,0,0,0,0,0,6,0,0,0,-1,0,2,,Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.QueryTests
-Foo,Supplier,0,0,10,0,0,42,0,0,2,-1,0,4,,Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.AttachTests' Breeze.Sharp.Tests.ExportImportTests' Breeze.Sharp.Tests.ComplexTypeTests
-Foo,Location,0,1,5,0,1,25,1,0,2,-1,0,2,,Breeze.Sharp.Tests.ExportImportTests' Breeze.Sharp.Tests.ComplexTypeTests
-Foo,Territory,0,0,7,0,0,30,0,0,2,-1,0,2,,Breeze.Sharp.Tests.SaveTests' Breeze.Sharp.Tests.AttachTests
-Foo,User,0,0,14,0,0,58,0,0,2,-1,0,0,,
-Foo,UserRole,0,0,5,0,0,22,0,0,2,-1,0,0,,
-Foo,InternationalOrder,0,0,5,0,0,22,0,0,2,-1,0,2,,Breeze.Sharp.Tests.MetadataTests' Breeze.Sharp.Tests.SaveTests
-Foo,TimeLimit,0,0,5,0,0,22,0,0,2,-1,0,2,,Breeze.Sharp.Tests.AttachTests' Breeze.Sharp.Tests.QueryTests
-Foo,TimeGroup,0,0,3,0,0,15,0,0,2,-1,0,1,,Breeze.Sharp.Tests.AttachTests
+Foo,Product,0,0,14,0,0,63,0,0,2,-1,2,3,Foo.Category' Foo.Supplier,Foo.Category' Foo.OrderDetail' Foo.Supplier
+Foo,Region,0,0,4,0,0,18,0,0,2,-1,1,1,Foo.Territory,Foo.Territory
+Foo,Role,0,0,6,0,0,26,0,0,2,-1,2,1,Foo.RoleType' Foo.UserRole,Foo.UserRole
+Foo,RoleType,0,0,0,0,0,6,0,0,0,-1,0,1,,Foo.Role
+Foo,Supplier,0,0,10,0,0,42,0,0,2,-1,2,1,Foo.Product' Foo.Location,Foo.Product
+Foo,Location,0,1,5,0,1,25,1,0,2,-1,0,1,,Foo.Supplier
+Foo,Territory,0,0,7,0,0,30,0,0,2,-1,3,3,Foo.Employee' Foo.EmployeeTerritory' Foo.Region,Foo.Employee' Foo.EmployeeTerritory' Foo.Region
+Foo,User,0,0,14,0,0,58,0,0,2,-1,1,1,Foo.UserRole,Foo.UserRole
+Foo,UserRole,0,0,5,0,0,22,0,0,2,-1,2,2,Foo.Role' Foo.User,Foo.Role' Foo.User
+Foo,InternationalOrder,0,0,5,0,0,22,0,0,2,-1,1,1,Foo.Order,Foo.Order
+Foo,TimeLimit,0,0,5,0,0,22,0,0,2,-1,1,1,Foo.TimeGroup,Foo.TimeGroup
+Foo,TimeGroup,0,0,3,0,0,15,0,0,2,-1,1,1,Foo.TimeLimit,Foo.TimeLimit
 Foo,Comment,0,0,3,0,0,14,0,0,2,-1,0,0,,
 Foo,UnusualDate,0,0,5,0,0,22,0,0,2,-1,0,0,,
-Model.NorthwindIB,CustomMessages1,2,1,3,0,0,50,1,0,0,0,0,1,,Breeze.Sharp.Tests.ValidationTests
+Model.NorthwindIB,CustomMessages1,2,1,3,0,0,50,1,0,0,0,0,0,,

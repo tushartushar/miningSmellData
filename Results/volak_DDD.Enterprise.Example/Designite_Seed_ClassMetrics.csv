@@ -1,27 +1,27 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Seed.Attributes,CategoryAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Seed.Program
-Seed.Attributes,DependsAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Seed.Program
-Seed.Attributes,OperationAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,Seed.Program
+Seed.Attributes,CategoryAttribute,0,1,1,0,1,10,1,0,0,-1,0,6,,Seed.Program' Seed.Operations.Account' Seed.Operations.AccountType' Seed.Operations.Currency' Seed.Operations.User' Seed.Operations.Country
+Seed.Attributes,DependsAttribute,0,1,1,0,1,10,1,0,0,-1,0,4,,Seed.Operations.Currency' Seed.Operations.Account' Seed.Operations.AccountType' Seed.Program
+Seed.Attributes,OperationAttribute,0,1,1,0,1,10,1,0,0,-1,0,6,,Seed.Operations.AccountType' Seed.Operations.Currency' Seed.Operations.User' Seed.Operations.Country' Seed.Program' Seed.Operations.Account
 Seed,Config,1,0,0,1,0,4,0,0,0,-1,0,0,,
 Seed,SetupInfo,0,0,4,0,0,7,0,0,0,-1,0,1,,Seed.Program
 Seed,ImportInfo,0,0,4,0,0,7,0,0,0,-1,0,1,,Seed.Program
-Seed,Program,5,21,0,0,1,494,60,0,0,0.1,10,0,Demo.Library.Logging.LogsDir' Demo.Library.Logging.LogIncomingMessageBehavior' Seed.Attributes.OperationAttribute' Seed.Attributes.DependsAttribute' Seed.Attributes.CategoryAttribute' Seed.SetupInfo' Seed.ImportInfo' Demo.Library.Setup.ISetup' Demo.Library.Setup.IImport' Seed.Internal.RabbitMqMgmt,
+Seed,Program,5,21,0,0,1,494,66,0,0,0.1,6,0,Seed.Attributes.CategoryAttribute' Seed.Attributes.DependsAttribute' Seed.Attributes.OperationAttribute' Seed.SetupInfo' Seed.ImportInfo' Seed.Internal.RabbitMqMgmt,
 Seed.Internal,Command,0,0,0,0,0,3,0,0,0,-1,0,0,,
-Seed.Internal,CommandMutator,0,2,0,0,2,13,3,0,0,-1,1,0,Demo.Library.Command.DemoCommand,
+Seed.Internal,CommandMutator,0,2,0,0,2,13,3,0,0,-1,0,0,,
 Seed.Internal,NativeMethods,5,4,0,5,3,36,4,0,0,1,1,0,Seed.Internal.Mqmgmtprops,
 Seed.Internal,MqpropVariant,6,0,0,6,0,10,0,0,0,-1,0,0,,
 Seed.Internal,Mqmgmtprops,4,0,0,4,0,8,0,0,0,-1,0,1,,Seed.Internal.NativeMethods
-Seed.Internal,RabbitMqMgmt,0,2,0,0,2,40,2,0,0,-1,0,1,,Seed.Program
-Seed.Internal,Response,0,0,4,0,0,7,0,0,0,-1,0,0,,
-Seed.Operations,Account,2,3,1,1,2,141,6,0,1,0,4,0,Seed.Operations.Container' Seed.Types.Accounting.Account' Seed.Types.Accounting.Currency' Seed.Types.Configuration.AccountType,
+Seed.Internal,RabbitMqMgmt,0,2,0,0,2,40,2,0,0,-1,1,1,Seed.Internal.Response,Seed.Program
+Seed.Internal,Response,0,0,4,0,0,7,0,0,0,-1,0,1,,Seed.Internal.RabbitMqMgmt
+Seed.Operations,Account,2,3,1,1,2,141,6,0,1,0,8,0,Seed.Attributes.CategoryAttribute' Seed.Attributes.DependsAttribute' Seed.Attributes.OperationAttribute' Seed.Operations.Container' Seed.Operations.AccountType' Seed.Operations.Currency' Seed.Operations.IOperation' Seed.Types.Accounting.Account,
 Seed.Operations,Container,0,0,3,0,0,6,0,0,0,-1,0,1,,Seed.Operations.Account
-Seed.Operations,AccountType,4,2,1,3,2,43,2,0,1,0,1,0,Seed.Types.Configuration.AccountType,
-Seed.Operations,Country,2,2,1,1,2,274,2,0,1,0,1,0,Seed.Types.Configuration.Country,
-Seed.Operations,Currency,2,2,1,1,2,38,2,0,1,0,1,0,Seed.Types.Accounting.Currency,
-Seed.Operations,IOperation,0,1,1,0,0,5,1,5,0,-1,0,0,,
-Seed.Operations,User,2,2,1,2,2,21,2,0,1,0,0,0,,
-Seed.Types.Accounting,Account,0,0,12,0,0,16,0,0,0,-1,0,1,,Seed.Operations.Account
-Seed.Types.Accounting,Currency,0,0,10,0,0,13,0,0,0,-1,0,2,,Seed.Operations.Account' Seed.Operations.Currency
-Seed.Types.Authentication,User,0,0,2,0,0,5,0,0,0,-1,0,0,,
-Seed.Types.Configuration,AccountType,0,0,4,0,0,7,0,0,0,-1,0,2,,Seed.Operations.Account' Seed.Operations.AccountType
+Seed.Operations,AccountType,4,2,1,3,2,43,2,0,1,0,5,1,Seed.Attributes.CategoryAttribute' Seed.Attributes.DependsAttribute' Seed.Attributes.OperationAttribute' Seed.Operations.IOperation' Seed.Types.Configuration.AccountType,Seed.Operations.Account
+Seed.Operations,Country,2,2,1,1,2,274,2,0,1,0,4,0,Seed.Attributes.CategoryAttribute' Seed.Attributes.OperationAttribute' Seed.Operations.IOperation' Seed.Types.Configuration.Country,
+Seed.Operations,Currency,2,2,1,1,2,38,2,0,1,0,5,1,Seed.Attributes.CategoryAttribute' Seed.Attributes.DependsAttribute' Seed.Attributes.OperationAttribute' Seed.Operations.IOperation' Seed.Types.Accounting.Currency,Seed.Operations.Account
+Seed.Operations,IOperation,0,1,1,0,0,5,1,5,0,-1,0,5,,Seed.Operations.AccountType' Seed.Operations.User' Seed.Operations.Currency' Seed.Operations.Account' Seed.Operations.Country
+Seed.Operations,User,2,2,1,2,2,21,2,0,1,0,4,0,Seed.Attributes.CategoryAttribute' Seed.Attributes.OperationAttribute' Seed.Operations.IOperation' Seed.Types.Authentication.User,
+Seed.Types.Accounting,Account,0,0,12,0,0,16,0,0,0,-1,2,1,Seed.Types.Accounting.Currency' Seed.Types.Configuration.AccountType,Seed.Operations.Account
+Seed.Types.Accounting,Currency,0,0,10,0,0,13,0,0,0,-1,0,2,,Seed.Types.Accounting.Account' Seed.Operations.Currency
+Seed.Types.Authentication,User,0,0,2,0,0,5,0,0,0,-1,0,1,,Seed.Operations.User
+Seed.Types.Configuration,AccountType,0,0,4,0,0,7,0,0,0,-1,0,2,,Seed.Types.Accounting.Account' Seed.Operations.AccountType
 Seed.Types.Configuration,Country,0,0,3,0,0,6,0,0,0,-1,0,1,,Seed.Operations.Country

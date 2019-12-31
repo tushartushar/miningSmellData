@@ -1,56 +1,56 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Snow,ArchiveMenu,0,3,0,0,1,32,3,0,0,-1,1,1,Snow.ShouldProcess,Snow.Program
-Snow,ArchivePage,0,3,0,0,1,23,3,0,0,-1,1,1,Snow.ShouldProcess,Snow.Program
-Snow,CategoriesPage,0,1,0,0,1,19,1,0,0,-1,1,2,Snow.ShouldProcess,Snow.Program' Snow.Tests.CategoriesPageTests
-Snow,PagesParser,1,1,0,0,1,41,3,0,0,0,5,1,Snow.PostParsers.ParsedFile' Snow.Models.Page' Snow.PostParsers.MarkdownFileParser' Snow.PostParser' Snow.SnowSettings,Snow.Program
-Snow,PostParser,3,4,0,0,2,134,13,0,0,0.5,6,2,Snow.PostParsers.ParsedFile' Snow.Models.Post' Snow.PostParsers.MarkdownFileParser' Snow.Models.MissingPost' Snow.SnowSettings' Snow.Models.Series,Snow.PagesParser' Snow.Program
+Snow,ArchiveMenu,0,3,0,0,1,32,3,0,0,-1,4,1,Snow.ShouldProcess' Snow.Models.Post' Snow.ViewModels.BaseViewModel' Snow.ViewModels.MonthYear,Snow.Program
+Snow,ArchivePage,0,3,0,0,1,23,3,0,0,-1,2,1,Snow.ShouldProcess' Snow.Models.Post,Snow.Program
+Snow,CategoriesPage,0,1,0,0,1,19,1,0,0,-1,3,1,Snow.ShouldProcess' Snow.Models.Category' Snow.Models.Post,Snow.Program
+Snow,PagesParser,1,1,0,0,1,41,3,0,0,0,4,1,Snow.PostParser' Snow.SnowSettings' Snow.Models.Page' Snow.PostParsers.MarkdownFileParser,Snow.Program
+Snow,PostParser,3,4,0,0,2,134,14,0,0,0.5,6,2,Snow.SnowSettings' Snow.Models.Series' Snow.Models.Part' Snow.Models.Post' Snow.Models.MissingPost' Snow.PostParsers.MarkdownFileParser,Snow.Program' Snow.PagesParser
 Snow,ProcessorFactory,1,2,0,0,1,21,2,0,0,0,1,1,Snow.StaticFileProcessors.BaseProcessor,Snow.Program
 Snow,RazorConfig,0,2,1,0,2,16,2,0,0,-1,0,0,,
-Snow,ShouldProcess,0,7,0,0,5,31,7,0,0,-1,3,8,Snow.Models.Post' Snow.Models.Category' Snow.Enums.Published,Snow.ArchiveMenu' Snow.ArchivePage' Snow.CategoriesPage' Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.CategoriesProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.Tests.ShouldProcessTests
+Snow,ShouldProcess,0,7,0,0,5,31,7,0,0,-1,3,7,Snow.Enums.Published' Snow.Models.Category' Snow.Models.Post,Snow.StaticFileProcessors.PostsProcessor' Snow.ArchivePage' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.CategoriesProcessor' Snow.StaticFileProcessors.AtomProcessor' Snow.ArchiveMenu' Snow.CategoriesPage
 Snow,SnowServer,0,1,0,0,1,37,1,0,0,-1,2,1,Snow.Startup' Snow.SnowSettings,Snow.Program
-Snow,Startup,0,1,1,0,1,13,1,0,0,-1,1,1,Snow.SnowSettings,Snow.SnowServer
-Snow,Program,0,6,0,0,0,274,34,0,0,-1,17,0,Snow.SnowSettings' Snow.Extensions.DebugHelperExtensions' Snow.StaticPathProvider' Snow.SnowViewLocationConventions' Snow.PostParser' Snow.Enums.Published' Snow.PagesParser' Snow.TestModule' Snow.CategoriesPage' Snow.ArchivePage' Snow.ArchiveMenu' Snow.SnowServer' Snow.Models.MissingPost' Snow.StaticFileProcessors.BaseProcessor' Snow.StaticFile' Snow.ProcessorFactory' Snow.Models.Post,
-Snow,SnowSettings,6,2,23,1,2,105,2,0,0,1,0,19,,Snow.PagesParser' Snow.PostParser' Snow.SnowServer' Snow.Startup' Snow.Program' Snow.SnowViewLocationConventions' Snow.TestModule' Snow.Extensions.RazorHelpers' Snow.Extensions.SlugExtensions' Snow.Models.Page' Snow.Models.Post' Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.CategoriesProcessor' Snow.StaticFileProcessors.DraftsProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.SitemapProcessor' Snow.StaticFileProcessors.StaticFileProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.StaticFileProcessors.BaseProcessor
+Snow,Startup,0,1,1,0,1,13,1,0,0,-1,0,1,,Snow.SnowServer
+Snow,Program,0,6,0,0,0,274,34,0,0,-1,19,0,Snow.ArchiveMenu' Snow.ArchivePage' Snow.CategoriesPage' Snow.PagesParser' Snow.PostParser' Snow.ProcessorFactory' Snow.SnowServer' Snow.SnowSettings' Snow.SnowViewLocationConventions' Snow.StaticFile' Snow.StaticPathProvider' Snow.TestModule' Snow.Enums.Published' Snow.Extensions.DebugHelperExtensions' Snow.Exceptions.ProcessorNotFoundException' Snow.Models.Page' Snow.Models.Post' Snow.Models.MissingPost' Snow.StaticFileProcessors.SnowyData,
+Snow,SnowSettings,6,2,23,1,2,105,2,0,0,1,1,19,Snow.StaticFile,Snow.Models.Page' Snow.StaticFileProcessors.SnowyData' Snow.StaticFileProcessors.DraftsProcessor' Snow.StaticFileProcessors.AtomProcessor' Snow.PostParser' Snow.Models.Post' Snow.StaticFileProcessors.SitemapProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.StaticFileProcessors.StaticFileProcessor' Snow.SnowServer' Snow.ViewModels.PostViewModel' Snow.SnowViewLocationConventions' Snow.PagesParser' Snow.StaticFileProcessors.CategoriesProcessor' Snow.TestModule' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.BaseProcessor' Snow.Extensions.SlugExtensions' Snow.Program
 Snow,SnowViewLocationConventions,0,3,1,0,2,23,3,0,0,-1,1,1,Snow.SnowSettings,Snow.Program
-Snow,StaticFile,0,0,2,0,0,5,0,0,0,-1,0,3,,Snow.Program' Snow.StaticFileProcessors.PostsProcessor' Snow.StaticFileProcessors.BaseProcessor
+Snow,StaticFile,0,0,2,0,0,5,0,0,0,-1,0,3,,Snow.StaticFileProcessors.SnowyData' Snow.SnowSettings' Snow.Program
 Snow,StaticPathProvider,0,1,1,0,1,8,1,0,0,-1,0,1,,Snow.Program
-Snow,TestModule,1,1,19,0,1,90,1,0,0,0,2,8,Snow.Models.Post' Snow.SnowSettings,Snow.Program' Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.CategoriesProcessor' Snow.StaticFileProcessors.DraftsProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.StaticFileProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.StaticFileProcessors.BaseProcessor
-Snow.Enums,Published,0,0,0,0,0,6,0,0,0,-1,0,12,,Snow.ShouldProcess' Snow.Program' Snow.Extensions.RazorHelpers' Snow.Extensions.SlugExtensions' Snow.Extensions.PostHeaderExtensions' Snow.Models.Post' Snow.StaticFileProcessors.DraftsProcessor' Snow.StaticFileProcessors.BaseProcessor' Snow.Tests.ShouldProcessTests' Snow.Tests.Processors.CategoriesProcessorTests' Snow.Tests.Processors.GetPostsForRssTests' Snow.Tests.SettingParsers.PublishedTests
-Snow.Extensions,AtomResponse,5,2,1,0,1,72,3,0,0,0,0,1,,Snow.Extensions.FormatterExtensions
+Snow,TestModule,1,1,19,0,1,90,1,0,0,0,9,8,Snow.SnowSettings' Snow.Enums.Published' Snow.Models.Page' Snow.Models.Category' Snow.Models.Post' Snow.ViewModels.BaseViewModel' Snow.ViewModels.MonthYear' Snow.ViewModels.ContentViewModel' Snow.ViewModels.PostViewModel,Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.DraftsProcessor' Snow.StaticFileProcessors.BaseProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.StaticFileProcessors.StaticFileProcessor' Snow.Program' Snow.StaticFileProcessors.CategoriesProcessor
+Snow.Enums,Published,0,0,0,0,0,6,0,0,0,-1,0,10,,Snow.StaticFileProcessors.DraftsProcessor' Snow.ViewModels.BaseViewModel' Snow.StaticFileProcessors.BaseProcessor' Snow.ShouldProcess' Snow.Models.Post' Snow.Extensions.SlugExtensions' Snow.Extensions.RazorHelpers' Snow.TestModule' Snow.Extensions.PostHeaderExtensions' Snow.Program
+Snow.Extensions,AtomResponse,5,2,1,0,1,72,3,0,0,0,1,1,Snow.Models.Post,Snow.Extensions.FormatterExtensions
 Snow.Extensions,DateExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
 Snow.Extensions,DebugHelperExtensions,1,3,0,0,3,23,5,0,0,0,0,1,,Snow.Program
-Snow.Extensions,FormatterExtensions,0,3,0,0,3,15,3,0,0,-1,3,0,Snow.Extensions.RssResponse' Snow.Extensions.AtomResponse' Snow.Extensions.SitemapResponse,
+Snow.Extensions,FormatterExtensions,0,3,0,0,3,15,3,0,0,-1,4,0,Snow.Extensions.AtomResponse' Snow.Extensions.RssResponse' Snow.Extensions.SitemapResponse' Snow.Models.Post,
 Snow.Extensions,GravatarExtensions,1,2,0,0,1,25,4,0,0,0,0,0,,
-Snow.Extensions,RazorHelpers,5,9,0,0,8,130,17,0,0,1,5,0,Snow.ViewModels.PostViewModel' Snow.SnowSettings' Snow.Models.Series' Snow.Models.Post' Snow.Enums.Published,
-Snow.Extensions,RssResponse,3,2,1,0,1,56,3,0,0,0,0,1,,Snow.Extensions.FormatterExtensions
+Snow.Extensions,RazorHelpers,5,9,0,0,8,130,17,0,0,1,6,0,Snow.Enums.Published' Snow.Models.Series' Snow.Models.Post' Snow.ViewModels.BaseViewModel' Snow.ViewModels.ContentViewModel' Snow.ViewModels.PostViewModel,
+Snow.Extensions,RssResponse,3,2,1,0,1,56,3,0,0,0,1,1,Snow.Models.Post,Snow.Extensions.FormatterExtensions
 Snow.Extensions,SitemapResponse,1,2,0,0,1,32,3,0,0,0,1,1,Snow.Models.Post,Snow.Extensions.FormatterExtensions
 Snow.Extensions,SlugExtensions,1,15,0,0,4,114,19,0,0,0.93,4,0,Snow.SnowSettings' Snow.Enums.Published' Snow.Models.Page' Snow.Models.Post,
-Snow.Extensions,PostHeaderExtensions,0,1,0,0,1,32,5,0,0,-1,1,0,Snow.Enums.Published,
-Snow.Extensions,StatusCodeExtension,0,1,0,0,1,18,2,0,0,-1,0,0,,
+Snow.Extensions,PostHeaderExtensions,0,1,0,0,1,32,5,0,0,-1,2,0,Snow.Enums.Published' Snow.Models.Post,
+Snow.Extensions,StatusCodeExtension,0,1,0,0,1,18,2,0,0,-1,1,0,Snow.Exceptions.FileProcessingException,
 Snow.Extensions,IoExtensions,2,4,0,0,3,75,13,0,0,1,0,0,,
-Snow.Exceptions,FileProcessingException,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Snow.Exceptions,ProcessorNotFoundException,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Snow.Models,Page,0,1,0,0,1,8,1,0,1,-1,2,2,Snow.Models.Post' Snow.SnowSettings,Snow.PagesParser' Snow.Extensions.SlugExtensions
-Snow.Models,Series,0,1,3,0,1,19,1,0,0,-1,0,3,,Snow.PostParser' Snow.Extensions.RazorHelpers' Snow.Tests.SettingParsers.HeaderParserTests
-Snow.Models,Part,0,1,2,0,1,9,1,0,0,-1,0,0,,
-Snow.Models,Category,0,0,3,0,0,9,0,0,0,-1,0,3,,Snow.ShouldProcess' Snow.StaticFileProcessors.CategoriesProcessor' Snow.Tests.Processors.CategoriesProcessorTests
-Snow.Models,Post,1,3,19,0,3,113,5,2,0,1,2,11,Snow.SnowSettings' Snow.Enums.Published,Snow.PostParser' Snow.ShouldProcess' Snow.Program' Snow.TestModule' Snow.Extensions.RazorHelpers' Snow.Extensions.SitemapResponse' Snow.Extensions.SlugExtensions' Snow.Models.Page' Snow.Tests.CategoriesPageTests' Snow.Tests.SettingParsers.HeaderParserTests' Snow.Tests.SettingParsers.PublishedTests
+Snow.Exceptions,FileProcessingException,0,1,0,0,1,6,1,0,0,-1,0,1,,Snow.Extensions.StatusCodeExtension
+Snow.Exceptions,ProcessorNotFoundException,0,1,0,0,1,8,1,0,0,-1,0,1,,Snow.Program
+Snow.Models,Page,0,1,0,0,1,8,1,0,1,-1,2,6,Snow.SnowSettings' Snow.Models.Post,Snow.TestModule' Snow.ViewModels.BaseViewModel' Snow.Program' Snow.Extensions.SlugExtensions' Snow.ViewModels.ContentViewModel' Snow.PagesParser
+Snow.Models,Series,0,1,3,0,1,19,1,0,0,-1,1,4,Snow.Models.Part,Snow.ViewModels.PostViewModel' Snow.Models.Post' Snow.Extensions.RazorHelpers' Snow.PostParser
+Snow.Models,Part,0,1,2,0,1,9,1,0,0,-1,0,2,,Snow.PostParser' Snow.Models.Series
+Snow.Models,Category,0,0,3,0,0,9,0,0,0,-1,0,6,,Snow.ShouldProcess' Snow.ViewModels.BaseViewModel' Snow.ViewModels.PostViewModel' Snow.TestModule' Snow.CategoriesPage' Snow.StaticFileProcessors.CategoriesProcessor
+Snow.Models,Post,1,3,19,0,3,113,12,2,0,1,3,21,Snow.SnowSettings' Snow.Enums.Published' Snow.Models.Series,Snow.CategoriesPage' Snow.Models.Page' Snow.Extensions.PostHeaderExtensions' Snow.Extensions.RazorHelpers' Snow.ArchiveMenu' Snow.Extensions.AtomResponse' Snow.Extensions.FormatterExtensions' Snow.Extensions.RssResponse' Snow.ArchivePage' Snow.ShouldProcess' Snow.Extensions.SitemapResponse' Snow.StaticFileProcessors.SnowyData' Snow.TestModule' Snow.ViewModels.BaseViewModel' Snow.ViewModels.ContentViewModel' Snow.PostParser' Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.Program' Snow.Extensions.SlugExtensions' Snow.StaticFileProcessors.CategoriesProcessor
 Snow.Models,MissingPost,0,0,0,0,0,4,0,0,1,-1,0,2,,Snow.PostParser' Snow.Program
-Snow.PostParsers,MarkdownFileParser,0,1,0,0,1,44,4,0,0,-1,1,3,Snow.PostParsers.ParsedFile,Snow.PagesParser' Snow.PostParser' Snow.Tests.PostParsers.ParseDataFromFileTests
-Snow.PostParsers,ParsedFile,0,0,3,0,0,6,0,0,0,-1,0,4,,Snow.PagesParser' Snow.PostParser' Snow.PostParsers.MarkdownFileParser' Snow.Tests.PostParsers.ParseDataFromFileTests
-Snow.StaticFileProcessors,AtomProcessor,0,2,1,0,0,23,3,0,1,-1,4,0,Snow.StaticFileProcessors.SnowyData' Snow.TestModule' Snow.SnowSettings' Snow.ShouldProcess,
-Snow.StaticFileProcessors,CategoriesProcessor,0,2,1,0,0,30,4,0,1,-1,5,1,Snow.TestModule' Snow.StaticFileProcessors.SnowyData' Snow.SnowSettings' Snow.Models.Category' Snow.ShouldProcess,Snow.Tests.Processors.CategoriesProcessorTests
-Snow.StaticFileProcessors,DraftsProcessor,0,1,1,0,0,13,1,0,1,-1,5,0,Snow.TestModule' Snow.Enums.Published' Snow.StaticFileProcessors.StaticFileProcessor' Snow.StaticFileProcessors.SnowyData' Snow.SnowSettings,
-Snow.StaticFileProcessors,RssProcessor,0,2,1,0,0,23,3,0,1,-1,4,1,Snow.StaticFileProcessors.SnowyData' Snow.TestModule' Snow.SnowSettings' Snow.ShouldProcess,Snow.Tests.Processors.GetPostsForRssTests
-Snow.StaticFileProcessors,SitemapProcessor,0,1,1,0,0,17,2,0,1,-1,2,0,Snow.StaticFileProcessors.SnowyData' Snow.SnowSettings,
-Snow.StaticFileProcessors,StaticFileProcessor,0,1,1,0,0,19,2,1,1,-1,3,1,Snow.TestModule' Snow.SnowSettings' Snow.StaticFileProcessors.SnowyData,Snow.StaticFileProcessors.DraftsProcessor
-Snow.StaticFileProcessors,PostsProcessor,0,1,1,0,0,37,3,0,1,-1,5,0,Snow.StaticFileProcessors.SnowyData' Snow.ShouldProcess' Snow.SnowSettings' Snow.TestModule' Snow.StaticFile,
-Snow.StaticFileProcessors,SnowyData,0,0,4,0,0,7,0,0,0,-1,0,8,,Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.CategoriesProcessor' Snow.StaticFileProcessors.DraftsProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.SitemapProcessor' Snow.StaticFileProcessors.StaticFileProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.StaticFileProcessors.BaseProcessor
-Snow.StaticFileProcessors,BaseProcessor,0,4,4,0,2,37,5,6,0,-1,5,2,Snow.TestModule' Snow.Enums.Published' Snow.StaticFileProcessors.SnowyData' Snow.SnowSettings' Snow.StaticFile,Snow.ProcessorFactory' Snow.Program
-Snow.ViewModels,BaseViewModel,0,0,10,0,0,25,0,2,1,-1,0,0,,
-Snow.ViewModels,MonthYear,0,0,3,0,0,6,0,0,0,-1,0,0,,
-Snow.ViewModels,ContentViewModel,0,1,8,0,1,18,1,0,2,-1,0,0,,
-Snow.ViewModels,DynamicDictionaryValue,1,26,2,0,26,514,41,0,1,0,0,0,,
-Snow.ViewModels,IHideObjectMembers,0,4,0,0,0,24,4,2,0,-1,0,0,,
-Snow.ViewModels,DynamicDictionary,1,21,5,0,17,273,26,1,1,0.24,0,0,,
-Snow.ViewModels,PostViewModel,0,0,12,0,0,17,0,0,2,-1,0,1,,Snow.Extensions.RazorHelpers
+Snow.PostParsers,MarkdownFileParser,0,1,0,0,1,44,4,0,0,-1,1,2,Snow.PostParsers.ParsedFile,Snow.PagesParser' Snow.PostParser
+Snow.PostParsers,ParsedFile,0,0,3,0,0,6,0,0,0,-1,0,1,,Snow.PostParsers.MarkdownFileParser
+Snow.StaticFileProcessors,AtomProcessor,0,2,1,0,0,23,3,0,1,-1,6,0,Snow.ShouldProcess' Snow.SnowSettings' Snow.TestModule' Snow.Models.Post' Snow.StaticFileProcessors.SnowyData' Snow.StaticFileProcessors.BaseProcessor,
+Snow.StaticFileProcessors,CategoriesProcessor,0,2,1,0,0,30,4,0,1,-1,7,0,Snow.ShouldProcess' Snow.SnowSettings' Snow.TestModule' Snow.Models.Category' Snow.Models.Post' Snow.StaticFileProcessors.SnowyData' Snow.StaticFileProcessors.BaseProcessor,
+Snow.StaticFileProcessors,DraftsProcessor,0,1,1,0,0,13,1,0,1,-1,5,0,Snow.SnowSettings' Snow.TestModule' Snow.Enums.Published' Snow.StaticFileProcessors.StaticFileProcessor' Snow.StaticFileProcessors.SnowyData,
+Snow.StaticFileProcessors,RssProcessor,0,2,1,0,0,23,3,0,1,-1,6,0,Snow.ShouldProcess' Snow.SnowSettings' Snow.TestModule' Snow.Models.Post' Snow.StaticFileProcessors.SnowyData' Snow.StaticFileProcessors.BaseProcessor,
+Snow.StaticFileProcessors,SitemapProcessor,0,1,1,0,0,17,2,0,1,-1,3,0,Snow.SnowSettings' Snow.StaticFileProcessors.SnowyData' Snow.StaticFileProcessors.BaseProcessor,
+Snow.StaticFileProcessors,StaticFileProcessor,0,1,1,0,0,19,2,1,1,-1,4,1,Snow.SnowSettings' Snow.TestModule' Snow.StaticFileProcessors.SnowyData' Snow.StaticFileProcessors.BaseProcessor,Snow.StaticFileProcessors.DraftsProcessor
+Snow.StaticFileProcessors,PostsProcessor,0,1,1,0,0,37,3,0,1,-1,5,0,Snow.ShouldProcess' Snow.SnowSettings' Snow.TestModule' Snow.StaticFileProcessors.SnowyData' Snow.StaticFileProcessors.BaseProcessor,
+Snow.StaticFileProcessors,SnowyData,0,0,4,0,0,7,0,0,0,-1,3,9,Snow.SnowSettings' Snow.StaticFile' Snow.Models.Post,Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.CategoriesProcessor' Snow.StaticFileProcessors.SitemapProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.StaticFileProcessor' Snow.StaticFileProcessors.DraftsProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.StaticFileProcessors.BaseProcessor' Snow.Program
+Snow.StaticFileProcessors,BaseProcessor,0,4,4,0,2,37,5,6,0,-1,4,7,Snow.SnowSettings' Snow.TestModule' Snow.Enums.Published' Snow.StaticFileProcessors.SnowyData,Snow.StaticFileProcessors.AtomProcessor' Snow.StaticFileProcessors.StaticFileProcessor' Snow.StaticFileProcessors.SitemapProcessor' Snow.StaticFileProcessors.CategoriesProcessor' Snow.StaticFileProcessors.RssProcessor' Snow.StaticFileProcessors.PostsProcessor' Snow.ProcessorFactory
+Snow.ViewModels,BaseViewModel,0,0,10,0,0,25,0,2,1,-1,6,5,Snow.Enums.Published' Snow.Models.Page' Snow.Models.Category' Snow.Models.Post' Snow.ViewModels.MonthYear' Snow.ViewModels.DynamicDictionary,Snow.ViewModels.PostViewModel' Snow.ViewModels.ContentViewModel' Snow.TestModule' Snow.ArchiveMenu' Snow.Extensions.RazorHelpers
+Snow.ViewModels,MonthYear,0,0,3,0,0,6,0,0,0,-1,0,3,,Snow.ViewModels.BaseViewModel' Snow.TestModule' Snow.ArchiveMenu
+Snow.ViewModels,ContentViewModel,0,1,8,0,1,18,1,0,2,-1,3,2,Snow.Models.Page' Snow.Models.Post' Snow.ViewModels.BaseViewModel,Snow.Extensions.RazorHelpers' Snow.TestModule
+Snow.ViewModels,DynamicDictionaryValue,1,26,2,0,26,514,49,0,1,0.08,1,1,Snow.ViewModels.IHideObjectMembers,Snow.ViewModels.DynamicDictionary
+Snow.ViewModels,IHideObjectMembers,0,4,0,0,0,24,4,2,0,-1,0,2,,Snow.ViewModels.DynamicDictionary' Snow.ViewModels.DynamicDictionaryValue
+Snow.ViewModels,DynamicDictionary,1,21,5,0,17,273,26,1,1,0.24,2,1,Snow.ViewModels.DynamicDictionaryValue' Snow.ViewModels.IHideObjectMembers,Snow.ViewModels.BaseViewModel
+Snow.ViewModels,PostViewModel,0,0,12,0,0,17,0,0,2,-1,4,2,Snow.SnowSettings' Snow.Models.Series' Snow.Models.Category' Snow.ViewModels.BaseViewModel,Snow.TestModule' Snow.Extensions.RazorHelpers

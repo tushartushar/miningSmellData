@@ -1,0 +1,13 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bdt.Tests.Configuration,TestConfigPackage,8,2,0,4,2,82,30,0,1,0,0,1,,Bdt.Tests.UnitTests.ProtocolsTest
+Bdt.Tests.Logs,TestContextLogger,1,3,0,0,3,15,3,0,2,0.67,0,2,,Bdt.Tests.Runtime.TestServer' Bdt.Tests.Runtime.TestClient
+Bdt.Tests.Model,Project,0,0,0,0,0,10,0,0,0,-1,0,1,,Bdt.Tests.UnitTests.BaseTest
+Bdt.Tests.Model,Translation,0,0,0,0,0,8,0,0,0,-1,0,1,,Bdt.Tests.UnitTests.BaseTest
+Bdt.Tests.Runtime,TestServer,2,3,0,0,2,23,3,0,2,0,1,1,Bdt.Tests.Logs.TestContextLogger,Bdt.Tests.UnitTests.ProtocolsTest
+Bdt.Tests.Runtime,TestClient,1,3,0,0,2,22,3,0,2,0,1,1,Bdt.Tests.Logs.TestContextLogger,Bdt.Tests.UnitTests.ProtocolsTest
+Bdt.Tests.Sockets,EchoSession,8,6,0,0,1,102,12,0,2,0,0,1,,Bdt.Tests.Sockets.EchoServer
+Bdt.Tests.Sockets,EchoServer,0,2,0,0,1,13,2,0,2,-1,1,1,Bdt.Tests.Sockets.EchoSession,Bdt.Tests.UnitTests.ProtocolsTest
+Bdt.Tests.UnitTests,ProgramTest,0,1,0,0,1,23,4,0,1,-1,1,0,Bdt.Tests.UnitTests.BaseTest,
+Bdt.Tests.UnitTests,ResourcesTest,0,1,0,0,1,23,5,0,1,-1,1,0,Bdt.Tests.UnitTests.BaseTest,
+Bdt.Tests.UnitTests,BaseTest,1,5,4,0,0,68,6,3,0,0,2,3,Bdt.Tests.Model.Project' Bdt.Tests.Model.Translation,Bdt.Tests.UnitTests.ProgramTest' Bdt.Tests.UnitTests.ResourcesTest' Bdt.Tests.UnitTests.ProtocolsTest
+Bdt.Tests.UnitTests,ProtocolsTest,3,10,0,0,5,256,18,0,1,0,5,0,Bdt.Tests.Configuration.TestConfigPackage' Bdt.Tests.Runtime.TestServer' Bdt.Tests.Runtime.TestClient' Bdt.Tests.Sockets.EchoServer' Bdt.Tests.UnitTests.BaseTest,

@@ -1,49 +1,49 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SharpMTProto,MTProtoClientBuilder,9,7,0,1,3,65,7,0,1,0.29,14,0,SharpMTProto.IMTProtoClientBuilder' SharpMTProto.Services.IEncryptionServices' SharpMTProto.Services.IHashServices' SharpMTProto.Authentication.IKeyChain' SharpMTProto.Messaging.IMessageCodec' SharpMTProto.Services.IMessageIdGenerator' SharpMTProto.Services.INonceGenerator' SharpMTProto.Transport.IClientTransportFactory' SharpMTProto.Annotations.NotNullAttribute' SharpMTProto.MTProtoClientConnection' SharpMTProto.Transport.IClientTransportConfig' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.IMTProtoClientConnection' SharpMTProto.Authentication.IAuthKeyNegotiator,
-SharpMTProto,ConnectionConfig,3,2,3,0,1,51,2,0,0,1,0,2,,SharpMTProto.IMTProtoClientConnection' SharpMTProto.MTProtoClientConnection
+SharpMTProto,MTProtoClientBuilder,9,7,0,1,3,65,7,0,1,0.29,0,0,,
+SharpMTProto,ConnectionConfig,3,2,3,0,1,51,2,0,0,1,0,3,,SharpMTProto.ConnectionConfig' SharpMTProto.IMTProtoClientConnection' SharpMTProto.MTProtoClientConnection
 SharpMTProto,Defaults,2,0,0,2,0,5,0,0,0,-1,0,1,,SharpMTProto.MTProtoClientConnection
 SharpMTProto,ErrorCode,0,0,0,0,0,59,0,0,0,-1,0,1,,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler
-SharpMTProto,MTProtoException,0,3,0,0,3,12,3,7,0,-1,0,0,,
-SharpMTProto,InvalidResponseException,0,3,0,0,3,12,3,0,1,-1,0,0,,
-SharpMTProto,InvalidMessageException,0,3,0,0,3,12,3,0,1,-1,0,0,,
-SharpMTProto,CouldNotConnectException,0,3,0,0,3,13,3,0,1,-1,1,0,SharpMTProto.MTProtoConnectResult,
-SharpMTProto,PublicKeyNotFoundException,0,3,0,0,2,21,4,0,1,-1,0,0,,
-SharpMTProto,TransportException,0,3,0,0,3,12,3,0,1,-1,0,0,,
-SharpMTProto,InvalidAuthKey,0,3,0,0,3,12,3,0,1,-1,0,0,,
-SharpMTProto,RpcErrorException,0,1,1,0,1,8,1,0,1,-1,1,0,SharpMTProto.Schema.IRpcError,
-SharpMTProto,IMTProtoClientConnection,0,9,6,0,0,85,9,1,1,-1,2,3,SharpMTProto.ConnectionConfig' SharpMTProto.Messaging.MessageSendingFlags,SharpMTProto.MTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler
-SharpMTProto,IRemoteProcedureCaller,0,4,0,0,0,25,4,1,0,-1,0,1,,SharpMTProto.Schema.MTProtoAsyncMethods
+SharpMTProto,MTProtoException,0,3,0,0,3,12,3,7,0,-1,0,10,,SharpMTProto.Messaging.Request<TResponse>' SharpMTProto.Messaging.Handlers.ResponseHandler<TResponse>' SharpMTProto.InvalidResponseException' SharpMTProto.InvalidMessageException' SharpMTProto.CouldNotConnectException' SharpMTProto.PublicKeyNotFoundException' SharpMTProto.TransportException' SharpMTProto.InvalidAuthKey' SharpMTProto.RpcErrorException' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto,InvalidResponseException,0,3,0,0,3,12,3,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto,InvalidMessageException,0,3,0,0,3,12,3,0,1,-1,0,3,,SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Messaging.MessageCodec' SharpMTProto.MTProtoClientConnection
+SharpMTProto,CouldNotConnectException,0,3,0,0,3,13,3,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto,PublicKeyNotFoundException,0,3,0,0,2,21,4,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto,TransportException,0,3,0,0,3,12,3,0,1,-1,0,1,,SharpMTProto.Transport.TcpTransportPacket
+SharpMTProto,InvalidAuthKey,0,3,0,0,3,12,3,0,1,-1,0,1,,SharpMTProto.Messaging.MessageCodec
+SharpMTProto,RpcErrorException,0,1,1,0,1,8,1,0,1,-1,0,1,,SharpMTProto.Messaging.Handlers.RpcResultHandler
+SharpMTProto,IMTProtoClientConnection,0,9,6,0,0,85,9,1,1,-1,0,4,,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.MTProtoClientConnection' SharpMTProto.IMTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto,IRemoteProcedureCaller,0,4,0,0,0,25,4,1,0,-1,0,2,,SharpMTProto.IMTProtoClientConnection' SharpMTProto.Schema.MTProtoAsyncMethods
 SharpMTProto,MTProtoClient,2,3,0,0,1,30,6,0,0,0,0,0,,
-SharpMTProto,MTProtoConnectionState,0,0,0,0,0,6,0,0,0,-1,0,1,,SharpMTProto.MTProtoClientConnection
-SharpMTProto,MTProtoConnectResult,0,0,0,0,0,6,0,0,0,-1,0,3,,SharpMTProto.CouldNotConnectException' SharpMTProto.MTProtoClientConnection' SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto,MTProtoClientConnection,17,37,6,0,19,449,47,0,2,0,17,1,SharpMTProto.Messaging.IMessageCodec' SharpMTProto.Services.IMessageIdGenerator' SharpMTProto.Messaging.RequestsManager' SharpMTProto.Messaging.Handlers.IResponseDispatcher' SharpMTProto.Transport.IClientTransport' SharpMTProto.ConnectionConfig' SharpMTProto.MTProtoConnectionState' SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Defaults' SharpMTProto.Transport.IClientTransportFactory' SharpMTProto.Annotations.NotNullAttribute' SharpMTProto.MTProtoConnectResult' SharpMTProto.Messaging.MessageSendingFlags' SharpMTProto.Messaging.IRequest' SharpMTProto.Schema.Message' SharpMTProto.Schema.IMessage' SharpMTProto.Messaging.Sender,SharpMTProto.MTProtoClientBuilder
-SharpMTProto,IMTProtoClientBuilder,0,2,0,0,0,7,2,1,0,-1,1,2,SharpMTProto.Annotations.NotNullAttribute,SharpMTProto.MTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto,MTProtoConnectionState,0,0,0,0,0,6,0,0,0,-1,0,2,,SharpMTProto.IMTProtoClientConnection' SharpMTProto.MTProtoClientConnection
+SharpMTProto,MTProtoConnectResult,0,0,0,0,0,6,0,0,0,-1,0,4,,SharpMTProto.CouldNotConnectException' SharpMTProto.IMTProtoClientConnection' SharpMTProto.MTProtoClientConnection' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto,MTProtoClientConnection,17,37,6,0,19,449,51,0,2,0,0,0,,
+SharpMTProto,IMTProtoClientBuilder,0,2,0,0,0,7,2,1,0,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
 SharpMTProto.Annotations,CanBeNullAttribute,0,0,0,0,0,5,0,0,0,-1,0,0,,
-SharpMTProto.Annotations,NotNullAttribute,0,0,0,0,0,5,0,0,0,-1,0,15,,SharpMTProto.MTProtoClientBuilder' SharpMTProto.MTProtoClientConnection' SharpMTProto.IMTProtoClientBuilder' SharpMTProto.Annotations.ContractAnnotationAttribute' SharpMTProto.Annotations.BaseTypeRequiredAttribute' SharpMTProto.Annotations.PublicAPIAttribute' SharpMTProto.Annotations.AspMvcActionAttribute' SharpMTProto.Annotations.AspMvcAreaAttribute' SharpMTProto.Annotations.AspMvcControllerAttribute' SharpMTProto.Annotations.HtmlElementAttributesAttribute' SharpMTProto.Annotations.HtmlAttributeValueAttribute' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Authentication.KeyChain' SharpMTProto.Messaging.IMessageCodec' SharpMTProto.Messaging.MessageCodec
+SharpMTProto.Annotations,NotNullAttribute,0,0,0,0,0,5,0,0,0,-1,0,15,,SharpMTProto.Authentication.KeyChain' SharpMTProto.Messaging.IMessageCodec' SharpMTProto.Messaging.MessageCodec' SharpMTProto.MTProtoClientConnection' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.IMTProtoClientBuilder' SharpMTProto.Annotations.ContractAnnotationAttribute' SharpMTProto.Annotations.BaseTypeRequiredAttribute' SharpMTProto.Annotations.PublicAPIAttribute' SharpMTProto.Annotations.PathReferenceAttribute' SharpMTProto.Annotations.AspMvcActionAttribute' SharpMTProto.Annotations.AspMvcAreaAttribute' SharpMTProto.Annotations.AspMvcControllerAttribute' SharpMTProto.Annotations.HtmlElementAttributesAttribute' SharpMTProto.Annotations.HtmlAttributeValueAttribute
 SharpMTProto.Annotations,StringFormatMethodAttribute,0,1,1,0,1,14,1,0,0,-1,0,0,,
 SharpMTProto.Annotations,InvokerParameterNameAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 SharpMTProto.Annotations,NotifyPropertyChangedInvocatorAttribute,0,2,1,0,2,10,2,0,0,-1,0,0,,
-SharpMTProto.Annotations,ContractAnnotationAttribute,0,2,2,0,2,13,2,0,0,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
+SharpMTProto.Annotations,ContractAnnotationAttribute,0,2,2,0,2,13,2,0,0,-1,0,0,,
 SharpMTProto.Annotations,LocalizationRequiredAttribute,0,2,1,0,2,10,2,0,0,-1,0,0,,
 SharpMTProto.Annotations,CannotApplyEqualityOperatorAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
-SharpMTProto.Annotations,BaseTypeRequiredAttribute,0,1,1,0,1,10,1,0,0,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
-SharpMTProto.Annotations,UsedImplicitlyAttribute,0,4,2,0,4,18,4,0,0,-1,2,0,SharpMTProto.Annotations.ImplicitUseKindFlags' SharpMTProto.Annotations.ImplicitUseTargetFlags,
-SharpMTProto.Annotations,MeansImplicitUseAttribute,0,4,2,0,4,18,4,0,0,-1,2,0,SharpMTProto.Annotations.ImplicitUseKindFlags' SharpMTProto.Annotations.ImplicitUseTargetFlags,
+SharpMTProto.Annotations,BaseTypeRequiredAttribute,0,1,1,0,1,10,1,0,0,-1,0,1,,SharpMTProto.Annotations.BaseTypeRequiredAttribute
+SharpMTProto.Annotations,UsedImplicitlyAttribute,0,4,2,0,4,18,4,0,0,-1,0,2,,SharpMTProto.MTProtoClient' SharpMTProto.Annotations.MeansImplicitUseAttribute
+SharpMTProto.Annotations,MeansImplicitUseAttribute,0,4,2,0,4,18,4,0,0,-1,0,1,,SharpMTProto.Annotations.PublicAPIAttribute
 SharpMTProto.Annotations,ImplicitUseKindFlags,0,0,0,0,0,16,0,0,0,-1,0,2,,SharpMTProto.Annotations.UsedImplicitlyAttribute' SharpMTProto.Annotations.MeansImplicitUseAttribute
 SharpMTProto.Annotations,ImplicitUseTargetFlags,0,0,0,0,0,10,0,0,0,-1,0,2,,SharpMTProto.Annotations.UsedImplicitlyAttribute' SharpMTProto.Annotations.MeansImplicitUseAttribute
-SharpMTProto.Annotations,PublicAPIAttribute,0,2,1,0,2,10,2,0,0,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
+SharpMTProto.Annotations,PublicAPIAttribute,0,2,1,0,2,10,2,0,0,-1,0,0,,
 SharpMTProto.Annotations,InstantHandleAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 SharpMTProto.Annotations,PureAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-SharpMTProto.Annotations,PathReferenceAttribute,0,2,1,0,2,10,2,3,0,-1,0,0,,
+SharpMTProto.Annotations,PathReferenceAttribute,0,2,1,0,2,10,2,3,0,-1,0,4,,SharpMTProto.Annotations.AspMvcAreaAttribute' SharpMTProto.Annotations.AspMvcPartialViewAttribute' SharpMTProto.Annotations.AspMvcViewAttribute' SharpMTProto.Annotations.PathReferenceAttribute
 SharpMTProto.Annotations,AspMvcAreaMasterLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcAreaPartialViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcAreaViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcMasterLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcPartialViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
-SharpMTProto.Annotations,AspMvcActionAttribute,0,2,1,0,2,10,2,0,0,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
-SharpMTProto.Annotations,AspMvcAreaAttribute,0,2,1,0,2,10,2,0,1,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
-SharpMTProto.Annotations,AspMvcControllerAttribute,0,2,1,0,2,10,2,0,0,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
+SharpMTProto.Annotations,AspMvcActionAttribute,0,2,1,0,2,10,2,0,0,-1,0,0,,
+SharpMTProto.Annotations,AspMvcAreaAttribute,0,2,1,0,2,10,2,0,1,-1,0,0,,
+SharpMTProto.Annotations,AspMvcControllerAttribute,0,2,1,0,2,10,2,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcMasterAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcModelTypeAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcPartialViewAttribute,0,0,0,0,0,2,0,0,1,-1,0,0,,
@@ -53,120 +53,120 @@ SharpMTProto.Annotations,AspMvcEditorTemplateAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,
 SharpMTProto.Annotations,AspMvcTemplateAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 SharpMTProto.Annotations,AspMvcViewAttribute,0,0,0,0,0,2,0,0,1,-1,0,0,,
 SharpMTProto.Annotations,AspMvcActionSelectorAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-SharpMTProto.Annotations,HtmlElementAttributesAttribute,0,2,1,0,2,12,2,0,0,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
-SharpMTProto.Annotations,HtmlAttributeValueAttribute,0,1,1,0,1,11,1,0,0,-1,1,0,SharpMTProto.Annotations.NotNullAttribute,
+SharpMTProto.Annotations,HtmlElementAttributesAttribute,0,2,1,0,2,12,2,0,0,-1,0,0,,
+SharpMTProto.Annotations,HtmlAttributeValueAttribute,0,1,1,0,1,11,1,0,0,-1,0,0,,
 SharpMTProto.Annotations,RazorSectionAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-SharpMTProto.Authentication,AuthInfo,2,1,2,0,1,18,1,0,0,0,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Authentication,IAuthKeyNegotiator,0,2,1,0,0,14,2,1,0,-1,0,1,,SharpMTProto.MTProtoClientBuilder
-SharpMTProto.Authentication,AuthKeyNegotiator,10,12,1,0,3,360,26,0,1,0.25,26,1,SharpMTProto.Transport.IClientTransportConfig' SharpMTProto.IMTProtoClientBuilder' SharpMTProto.Services.IEncryptionServices' SharpMTProto.Services.IHashServices' SharpMTProto.Authentication.IKeyChain' SharpMTProto.Services.INonceGenerator' SharpMTProto.Annotations.NotNullAttribute' SharpMTProto.Authentication.AuthInfo' SharpMTProto.IMTProtoClientConnection' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.MTProtoConnectResult' SharpMTProto.Schema.ResPQ' SharpMTProto.Schema.PQInnerData' SharpMTProto.Schema.ReqDHParamsArgs' SharpMTProto.Schema.IServerDHParams' SharpMTProto.Schema.ServerDHParamsFail' SharpMTProto.Schema.ServerDHParamsOk' SharpMTProto.Schema.ServerDHInnerData' SharpMTProto.Services.DHOutParams' SharpMTProto.Schema.ClientDHInnerData' SharpMTProto.Schema.SetClientDHParamsArgs' SharpMTProto.Schema.ISetClientDHParamsAnswer' SharpMTProto.Schema.DhGenOk' SharpMTProto.Schema.DhGenRetry' SharpMTProto.Schema.DhGenFail' SharpMTProto.Authentication.PublicKey,SharpMTProto.MTProtoClientBuilder
-SharpMTProto.Authentication,IKeyChain,0,6,0,0,0,10,6,1,0,-1,1,2,SharpMTProto.Authentication.PublicKey,SharpMTProto.MTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Authentication,KeyChain,3,12,0,0,11,91,15,0,1,0.25,3,0,SharpMTProto.Services.IHashServices' SharpMTProto.Annotations.NotNullAttribute' SharpMTProto.Authentication.PublicKey,
-SharpMTProto.Authentication,PublicKey,0,3,3,0,3,30,3,0,0,-1,0,5,,SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Authentication.IKeyChain' SharpMTProto.Authentication.KeyChain' SharpMTProto.Services.EncryptionServices' SharpMTProto.Services.IEncryptionServices
-SharpMTProto.Messaging.Handlers,BadMsgNotificationHandler,3,2,0,0,1,115,8,0,0,0,8,0,SharpMTProto.IMTProtoClientConnection' SharpMTProto.Messaging.IRequestsManager' SharpMTProto.Schema.IBadMsgNotification' SharpMTProto.ErrorCode' SharpMTProto.Messaging.IRequest' SharpMTProto.Schema.BadServerSalt' SharpMTProto.Schema.BadMsgNotification' SharpMTProto.Schema.IMessage,
-SharpMTProto.Messaging.Handlers,FirstRequestResponseHandler,3,2,1,0,2,29,2,0,1,0,3,0,SharpMTProto.Messaging.IRequestsManager' SharpMTProto.Messaging.IRequest' SharpMTProto.Schema.IMessage,
-SharpMTProto.Messaging.Handlers,IResponseHandler,0,1,1,0,0,13,1,2,0,-1,1,2,SharpMTProto.Schema.IMessage,SharpMTProto.Messaging.Handlers.IResponseDispatcher' SharpMTProto.Messaging.Handlers.ResponseDispatcher
-SharpMTProto.Messaging.Handlers,MessageContainerHandler,2,2,0,0,1,40,5,0,0,0,4,0,SharpMTProto.Messaging.Handlers.IResponseDispatcher' SharpMTProto.Schema.MsgContainer' SharpMTProto.Schema.IMessage' SharpMTProto.Schema.Message,
-SharpMTProto.Messaging.Handlers,IResponseDispatcher,0,4,1,0,0,36,4,1,0,-1,2,2,SharpMTProto.Schema.IMessage' SharpMTProto.Messaging.Handlers.IResponseHandler,SharpMTProto.MTProtoClientConnection' SharpMTProto.Messaging.Handlers.MessageContainerHandler
-SharpMTProto.Messaging.Handlers,ResponseDispatcher,2,4,1,0,4,54,8,0,1,0,2,0,SharpMTProto.Messaging.Handlers.IResponseHandler' SharpMTProto.Schema.IMessage,
-SharpMTProto.Messaging.Handlers,ResponseHandler<TResponse>,1,2,1,0,1,18,3,0,1,1,1,0,SharpMTProto.Schema.IMessage,
-SharpMTProto.Messaging.Handlers,RpcResultHandler,2,2,0,0,1,34,4,0,0,0,5,0,SharpMTProto.Messaging.IRequestsManager' SharpMTProto.Schema.IRpcResult' SharpMTProto.Messaging.IRequest' SharpMTProto.Schema.IRpcError' SharpMTProto.Schema.IMessage,
-SharpMTProto.Messaging.Handlers,SessionHandler,0,1,0,0,0,8,1,0,0,-1,1,0,SharpMTProto.Schema.IMessage,
-SharpMTProto.Messaging,IMessageCodec,0,4,0,0,0,57,4,1,0,-1,2,2,SharpMTProto.Annotations.NotNullAttribute' SharpMTProto.Messaging.Sender,SharpMTProto.MTProtoClientBuilder' SharpMTProto.MTProtoClientConnection
-SharpMTProto.Messaging,MessageCodec,11,8,0,1,5,221,10,0,1,0,7,0,SharpMTProto.Services.IEncryptionServices' SharpMTProto.Services.IHashServices' SharpMTProto.Services.IRandomGenerator' SharpMTProto.Annotations.NotNullAttribute' SharpMTProto.Schema.IMessage' SharpMTProto.Schema.Message' SharpMTProto.Messaging.Sender,
-SharpMTProto.Messaging,MessageSendingFlags,0,0,0,0,0,10,0,0,0,-1,0,5,,SharpMTProto.IMTProtoClientConnection' SharpMTProto.MTProtoClientConnection' SharpMTProto.Messaging.Request<TResponse>' SharpMTProto.Messaging.RequestsManager' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Messaging,MessageSerializer,2,3,1,1,1,43,4,0,0,1,1,0,SharpMTProto.Schema.Message,
-SharpMTProto.Messaging,IRequest,0,5,5,0,0,19,5,1,0,-1,0,6,,SharpMTProto.MTProtoClientConnection' SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Messaging.Handlers.FirstRequestResponseHandler' SharpMTProto.Messaging.Handlers.RpcResultHandler' SharpMTProto.Messaging.IRequestsManager' SharpMTProto.Messaging.RequestsManager
-SharpMTProto.Messaging,Request<TResponse>,3,7,5,0,7,59,9,0,1,0.43,2,0,SharpMTProto.Schema.IMessage' SharpMTProto.Messaging.MessageSendingFlags,
-SharpMTProto.Messaging,IRequestsManager,0,4,0,0,0,7,4,1,0,-1,1,3,SharpMTProto.Messaging.IRequest,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Messaging.Handlers.FirstRequestResponseHandler' SharpMTProto.Messaging.Handlers.RpcResultHandler
-SharpMTProto.Messaging,RequestsManager,1,5,0,0,5,26,5,0,1,0,3,1,SharpMTProto.Schema.IMessage' SharpMTProto.Messaging.IRequest' SharpMTProto.Messaging.MessageSendingFlags,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Authentication,AuthInfo,2,1,2,0,1,18,1,0,0,0,0,2,,SharpMTProto.Authentication.IAuthKeyNegotiator' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Authentication,IAuthKeyNegotiator,0,2,1,0,0,14,2,1,0,-1,0,2,,SharpMTProto.IMTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Authentication,AuthKeyNegotiator,10,12,1,0,3,360,26,0,1,0.25,0,0,,
+SharpMTProto.Authentication,IKeyChain,0,6,0,0,0,10,6,1,0,-1,0,3,,SharpMTProto.Authentication.KeyChain' SharpMTProto.Authentication.IAuthKeyNegotiator' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Authentication,KeyChain,3,12,0,0,11,91,15,0,1,0.25,0,0,,
+SharpMTProto.Authentication,PublicKey,0,3,3,0,3,30,3,0,0,-1,0,6,,SharpMTProto.Services.IEncryptionServices' SharpMTProto.Authentication.PublicKey' SharpMTProto.Services.EncryptionServices' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Authentication.IKeyChain' SharpMTProto.Authentication.KeyChain
+SharpMTProto.Messaging.Handlers,BadMsgNotificationHandler,3,2,0,0,1,115,8,0,0,0,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging.Handlers,FirstRequestResponseHandler,3,2,1,0,2,29,2,0,1,0,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging.Handlers,IResponseHandler,0,1,1,0,0,13,1,2,0,-1,0,4,,SharpMTProto.Messaging.Handlers.ResponseHandler<TResponse>' SharpMTProto.Messaging.Handlers.FirstRequestResponseHandler' SharpMTProto.Messaging.Handlers.IResponseDispatcher' SharpMTProto.Messaging.Handlers.ResponseDispatcher
+SharpMTProto.Messaging.Handlers,MessageContainerHandler,2,2,0,0,1,40,5,0,0,0,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging.Handlers,IResponseDispatcher,0,4,1,0,0,36,4,1,0,-1,0,3,,SharpMTProto.Messaging.Handlers.ResponseDispatcher' SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging.Handlers,ResponseDispatcher,2,4,1,0,4,54,8,0,1,0,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging.Handlers,ResponseHandler<TResponse>,1,2,1,0,1,18,3,0,1,1,0,4,,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Messaging.Handlers.RpcResultHandler' SharpMTProto.Messaging.Handlers.SessionHandler
+SharpMTProto.Messaging.Handlers,RpcResultHandler,2,2,0,0,1,34,4,0,0,0,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging.Handlers,SessionHandler,0,1,0,0,0,8,1,0,0,-1,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging,IMessageCodec,0,4,0,0,0,57,4,1,0,-1,0,2,,SharpMTProto.Messaging.MessageCodec' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging,MessageCodec,11,8,0,1,5,221,14,0,1,0,0,1,,SharpMTProto.Messaging.MessageCodec
+SharpMTProto.Messaging,MessageSendingFlags,0,0,0,0,0,10,0,0,0,-1,0,6,,SharpMTProto.IRemoteProcedureCaller' SharpMTProto.Messaging.IRequest' SharpMTProto.Messaging.Request<TResponse>' SharpMTProto.Messaging.RequestsManager' SharpMTProto.IMTProtoClientConnection' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging,MessageSerializer,2,3,1,1,1,43,4,0,0,1,0,1,,SharpMTProto.Schema.Message
+SharpMTProto.Messaging,IRequest,0,5,5,0,0,19,5,1,0,-1,0,7,,SharpMTProto.MTProtoClientConnection' SharpMTProto.Messaging.Request<TResponse>' SharpMTProto.Messaging.Handlers.RpcResultHandler' SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Messaging.IRequestsManager' SharpMTProto.Messaging.RequestsManager' SharpMTProto.Messaging.Handlers.FirstRequestResponseHandler
+SharpMTProto.Messaging,Request<TResponse>,3,7,5,0,7,59,9,0,1,0.43,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Messaging,IRequestsManager,0,4,0,0,0,7,4,1,0,-1,0,4,,SharpMTProto.Messaging.RequestsManager' SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Messaging.Handlers.FirstRequestResponseHandler' SharpMTProto.Messaging.Handlers.RpcResultHandler
+SharpMTProto.Messaging,RequestsManager,1,5,0,0,5,26,5,0,1,0,0,1,,SharpMTProto.MTProtoClientConnection
 SharpMTProto.Messaging,Sender,0,0,0,0,0,5,0,0,0,-1,0,3,,SharpMTProto.MTProtoClientConnection' SharpMTProto.Messaging.IMessageCodec' SharpMTProto.Messaging.MessageCodec
-SharpMTProto.Schema,Message,0,5,4,0,5,78,10,0,1,-1,0,4,,SharpMTProto.MTProtoClientConnection' SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Messaging.MessageCodec' SharpMTProto.Messaging.MessageSerializer
-SharpMTProto.Schema,IMessage,0,0,3,0,0,26,0,1,0,-1,0,13,,SharpMTProto.MTProtoClientConnection' SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Messaging.Handlers.FirstRequestResponseHandler' SharpMTProto.Messaging.Handlers.IResponseHandler' SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Messaging.Handlers.IResponseDispatcher' SharpMTProto.Messaging.Handlers.ResponseDispatcher' SharpMTProto.Messaging.Handlers.ResponseHandler<TResponse>' SharpMTProto.Messaging.Handlers.RpcResultHandler' SharpMTProto.Messaging.Handlers.SessionHandler' SharpMTProto.Messaging.MessageCodec' SharpMTProto.Messaging.Request<TResponse>' SharpMTProto.Messaging.RequestsManager
-SharpMTProto.Schema,IRpcResult,0,0,2,0,0,8,0,1,0,-1,0,1,,SharpMTProto.Messaging.Handlers.RpcResultHandler
-SharpMTProto.Schema,IRpcError,0,0,2,0,0,8,0,1,0,-1,0,2,,SharpMTProto.RpcErrorException' SharpMTProto.Messaging.Handlers.RpcResultHandler
-SharpMTProto.Schema,IBadMsgNotification,0,0,3,0,0,9,0,2,0,-1,0,1,,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler
-SharpMTProto.Schema,ResPQ,0,0,4,0,0,12,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,PQInnerData,0,0,6,0,0,16,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,PQInnerDataTemp,0,0,7,0,0,18,0,0,1,-1,0,0,,
-SharpMTProto.Schema,ServerDHParamsFail,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,ServerDHParamsOk,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,ServerDHInnerData,0,0,6,0,0,16,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,ClientDHInnerData,0,0,4,0,0,12,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,DhGenOk,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,DhGenRetry,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,DhGenFail,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,Message,0,5,4,0,5,78,10,0,1,-1,0,6,,SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Schema.MsgContainer' SharpMTProto.Messaging.MessageSerializer' SharpMTProto.Messaging.MessageCodec' SharpMTProto.MTProtoClientConnection' SharpMTProto.Schema.Message
+SharpMTProto.Schema,IMessage,0,0,3,0,0,26,0,1,0,-1,0,15,,SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Messaging.Handlers.FirstRequestResponseHandler' SharpMTProto.Messaging.Handlers.IResponseHandler' SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Messaging.Handlers.RpcResultHandler' SharpMTProto.Messaging.Handlers.IResponseDispatcher' SharpMTProto.Messaging.Handlers.ResponseDispatcher' SharpMTProto.Messaging.Handlers.SessionHandler' SharpMTProto.Messaging.Handlers.ResponseHandler<TResponse>' SharpMTProto.Messaging.IRequest' SharpMTProto.Messaging.Request<TResponse>' SharpMTProto.Schema.MsgCopy' SharpMTProto.Messaging.IMessageCodec' SharpMTProto.Messaging.MessageCodec' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Schema,IRpcResult,0,0,2,0,0,8,0,1,0,-1,0,2,,SharpMTProto.Schema.RpcResult' SharpMTProto.Messaging.Handlers.RpcResultHandler
+SharpMTProto.Schema,IRpcError,0,0,2,0,0,8,0,1,0,-1,0,3,,SharpMTProto.Messaging.Handlers.RpcResultHandler' SharpMTProto.RpcErrorException' SharpMTProto.Schema.RpcError
+SharpMTProto.Schema,IBadMsgNotification,0,0,3,0,0,9,0,2,0,-1,0,3,,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler' SharpMTProto.Schema.BadMsgNotification' SharpMTProto.Schema.BadServerSalt
+SharpMTProto.Schema,ResPQ,0,0,4,0,0,12,0,0,1,-1,0,2,,SharpMTProto.Schema.IResPQ' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,PQInnerData,0,0,6,0,0,16,0,0,1,-1,0,2,,SharpMTProto.Schema.IPQInnerData' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,PQInnerDataTemp,0,0,7,0,0,18,0,0,1,-1,0,1,,SharpMTProto.Schema.IPQInnerData
+SharpMTProto.Schema,ServerDHParamsFail,0,0,3,0,0,10,0,0,1,-1,0,2,,SharpMTProto.Schema.IServerDHParams' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,ServerDHParamsOk,0,0,3,0,0,10,0,0,1,-1,0,2,,SharpMTProto.Schema.IServerDHParams' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,ServerDHInnerData,0,0,6,0,0,16,0,0,1,-1,0,2,,SharpMTProto.Schema.IServerDHInnerData' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,ClientDHInnerData,0,0,4,0,0,12,0,0,1,-1,0,2,,SharpMTProto.Schema.IClientDHInnerData' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,DhGenOk,0,0,3,0,0,10,0,0,1,-1,0,2,,SharpMTProto.Schema.ISetClientDHParamsAnswer' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,DhGenRetry,0,0,3,0,0,10,0,0,1,-1,0,2,,SharpMTProto.Schema.ISetClientDHParamsAnswer' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,DhGenFail,0,0,3,0,0,10,0,0,1,-1,0,2,,SharpMTProto.Schema.ISetClientDHParamsAnswer' SharpMTProto.Authentication.AuthKeyNegotiator
 SharpMTProto.Schema,RpcResult,0,0,2,0,0,8,0,0,1,-1,0,0,,
 SharpMTProto.Schema,RpcError,0,0,2,0,0,8,0,0,1,-1,0,0,,
-SharpMTProto.Schema,RpcAnswerUnknown,0,0,0,0,0,4,0,0,1,-1,0,0,,
-SharpMTProto.Schema,RpcAnswerDroppedRunning,0,0,0,0,0,4,0,0,1,-1,0,0,,
-SharpMTProto.Schema,RpcAnswerDropped,0,0,3,0,0,10,0,0,1,-1,0,0,,
-SharpMTProto.Schema,FutureSalt,0,0,3,0,0,10,0,0,1,-1,0,0,,
-SharpMTProto.Schema,FutureSalts,0,0,3,0,0,10,0,0,1,-1,0,0,,
-SharpMTProto.Schema,Pong,0,0,2,0,0,8,0,0,1,-1,0,0,,
-SharpMTProto.Schema,DestroySessionOk,0,0,1,0,0,6,0,0,1,-1,0,0,,
-SharpMTProto.Schema,DestroySessionNone,0,0,1,0,0,6,0,0,1,-1,0,0,,
-SharpMTProto.Schema,NewSessionCreated,0,0,3,0,0,10,0,0,1,-1,0,0,,
-SharpMTProto.Schema,MsgContainer,0,0,1,0,0,6,0,0,1,-1,0,1,,SharpMTProto.Messaging.Handlers.MessageContainerHandler
-SharpMTProto.Schema,MsgCopy,0,0,1,0,0,6,0,0,1,-1,0,0,,
+SharpMTProto.Schema,RpcAnswerUnknown,0,0,0,0,0,4,0,0,1,-1,0,1,,SharpMTProto.Schema.IRpcDropAnswer
+SharpMTProto.Schema,RpcAnswerDroppedRunning,0,0,0,0,0,4,0,0,1,-1,0,1,,SharpMTProto.Schema.IRpcDropAnswer
+SharpMTProto.Schema,RpcAnswerDropped,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Schema.IRpcDropAnswer
+SharpMTProto.Schema,FutureSalt,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Schema.IFutureSalt
+SharpMTProto.Schema,FutureSalts,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Schema.IFutureSalts
+SharpMTProto.Schema,Pong,0,0,2,0,0,8,0,0,1,-1,0,1,,SharpMTProto.Schema.IPong
+SharpMTProto.Schema,DestroySessionOk,0,0,1,0,0,6,0,0,1,-1,0,1,,SharpMTProto.Schema.IDestroySessionRes
+SharpMTProto.Schema,DestroySessionNone,0,0,1,0,0,6,0,0,1,-1,0,1,,SharpMTProto.Schema.IDestroySessionRes
+SharpMTProto.Schema,NewSessionCreated,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Schema.INewSession
+SharpMTProto.Schema,MsgContainer,0,0,1,0,0,6,0,0,1,-1,0,2,,SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Schema.IMessageContainer
+SharpMTProto.Schema,MsgCopy,0,0,1,0,0,6,0,0,1,-1,0,1,,SharpMTProto.Schema.IMessageCopy
 SharpMTProto.Schema,GzipPacked,0,0,1,0,0,6,0,0,0,-1,0,0,,
-SharpMTProto.Schema,MsgsAck,0,0,1,0,0,6,0,0,1,-1,0,0,,
+SharpMTProto.Schema,MsgsAck,0,0,1,0,0,6,0,0,1,-1,0,1,,SharpMTProto.Schema.IMsgsAck
 SharpMTProto.Schema,BadMsgNotification,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler
 SharpMTProto.Schema,BadServerSalt,0,0,4,0,0,12,0,0,1,-1,0,1,,SharpMTProto.Messaging.Handlers.BadMsgNotificationHandler
-SharpMTProto.Schema,MsgResendReq,0,0,1,0,0,6,0,0,1,-1,0,0,,
-SharpMTProto.Schema,MsgsStateReq,0,0,1,0,0,6,0,0,1,-1,0,0,,
-SharpMTProto.Schema,MsgsStateInfo,0,0,2,0,0,8,0,0,1,-1,0,0,,
-SharpMTProto.Schema,MsgsAllInfo,0,0,2,0,0,8,0,0,1,-1,0,0,,
-SharpMTProto.Schema,MsgDetailedInfo,0,0,4,0,0,12,0,0,1,-1,0,0,,
-SharpMTProto.Schema,MsgNewDetailedInfo,0,0,3,0,0,10,0,0,1,-1,0,0,,
-SharpMTProto.Schema,BindAuthKeyInner,0,0,5,0,0,14,0,0,1,-1,0,0,,
-SharpMTProto.Schema,ReqPqArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,ReqDHParamsArgs,0,0,6,0,0,16,0,0,0,-1,0,4,,SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,SetClientDHParamsArgs,0,0,3,0,0,10,0,0,0,-1,0,4,,SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,RpcDropAnswerArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,GetFutureSaltsArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,PingArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,PingDelayDisconnectArgs,0,0,2,0,0,8,0,0,0,-1,0,3,,SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,DestroySessionArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,HttpWaitArgs,0,0,3,0,0,10,0,0,0,-1,0,3,,SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,IResPQ,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IPQInnerData,0,0,0,0,0,4,0,2,0,-1,0,0,,
-SharpMTProto.Schema,IServerDHParams,0,0,0,0,0,4,0,2,0,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,IServerDHInnerData,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IClientDHInnerData,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,ISetClientDHParamsAnswer,0,0,0,0,0,4,0,3,0,-1,0,1,,SharpMTProto.Authentication.AuthKeyNegotiator
-SharpMTProto.Schema,IRpcDropAnswer,0,0,0,0,0,4,0,3,0,-1,0,0,,
-SharpMTProto.Schema,IFutureSalt,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IFutureSalts,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IPong,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IDestroySessionRes,0,0,0,0,0,4,0,2,0,-1,0,0,,
-SharpMTProto.Schema,INewSession,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMessageContainer,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMessageCopy,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMsgsAck,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMsgResendReq,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMsgsStateReq,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMsgsStateInfo,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMsgsAllInfo,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMsgDetailedInfo,0,0,0,0,0,4,0,2,0,-1,0,0,,
-SharpMTProto.Schema,IBindAuthKeyInner,0,0,0,0,0,4,0,1,0,-1,0,0,,
-SharpMTProto.Schema,IMTProtoMethods,0,9,0,0,0,12,9,0,0,-1,9,0,SharpMTProto.Schema.ReqPqArgs' SharpMTProto.Schema.ReqDHParamsArgs' SharpMTProto.Schema.SetClientDHParamsArgs' SharpMTProto.Schema.RpcDropAnswerArgs' SharpMTProto.Schema.GetFutureSaltsArgs' SharpMTProto.Schema.PingArgs' SharpMTProto.Schema.PingDelayDisconnectArgs' SharpMTProto.Schema.DestroySessionArgs' SharpMTProto.Schema.HttpWaitArgs,
-SharpMTProto.Schema,IMTProtoAsyncMethods,0,9,0,0,0,12,9,1,0,-1,9,2,SharpMTProto.Schema.ReqPqArgs' SharpMTProto.Schema.ReqDHParamsArgs' SharpMTProto.Schema.SetClientDHParamsArgs' SharpMTProto.Schema.RpcDropAnswerArgs' SharpMTProto.Schema.GetFutureSaltsArgs' SharpMTProto.Schema.PingArgs' SharpMTProto.Schema.PingDelayDisconnectArgs' SharpMTProto.Schema.DestroySessionArgs' SharpMTProto.Schema.HttpWaitArgs,SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Schema.MTProtoAsyncMethods
-SharpMTProto.Schema,MTProtoAsyncMethods,1,12,0,0,10,60,12,0,1,0.17,12,1,SharpMTProto.IRemoteProcedureCaller' SharpMTProto.Schema.ReqPqArgs' SharpMTProto.Schema.ReqDHParamsArgs' SharpMTProto.Schema.SetClientDHParamsArgs' SharpMTProto.Schema.RpcDropAnswerArgs' SharpMTProto.Schema.GetFutureSaltsArgs' SharpMTProto.Schema.PingArgs' SharpMTProto.Schema.PingDelayDisconnectArgs' SharpMTProto.Schema.DestroySessionArgs' SharpMTProto.Schema.HttpWaitArgs' SharpMTProto.Messaging.MessageSendingFlags' SharpMTProto.Schema.IMTProtoAsyncMethods,SharpMTProto.MTProtoClientConnection
-SharpMTProto.Services,EncryptionServices,0,5,0,0,4,92,6,0,1,-1,2,0,SharpMTProto.Authentication.PublicKey' SharpMTProto.Services.DHOutParams,
-SharpMTProto.Services,HashServices,0,4,0,0,4,32,5,0,1,-1,0,0,,
-SharpMTProto.Services,DHOutParams,0,1,2,0,1,10,1,0,0,-1,0,2,,SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Services.EncryptionServices
-SharpMTProto.Services,IEncryptionServices,0,4,0,0,0,7,4,1,0,-1,1,3,SharpMTProto.Authentication.PublicKey,SharpMTProto.MTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Messaging.MessageCodec
-SharpMTProto.Services,IHashServices,0,4,0,0,0,7,4,1,0,-1,0,4,,SharpMTProto.MTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Authentication.KeyChain' SharpMTProto.Messaging.MessageCodec
-SharpMTProto.Services,IMessageIdGenerator,0,1,0,0,0,4,1,1,0,-1,0,2,,SharpMTProto.MTProtoClientBuilder' SharpMTProto.MTProtoClientConnection
-SharpMTProto.Services,MessageIdGenerator,2,1,0,0,1,19,2,0,1,0,1,0,SharpMTProto.Utils.UnixTimeUtils,
-SharpMTProto.Services,INonceGenerator,0,1,0,0,0,4,1,1,0,-1,0,2,,SharpMTProto.MTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,MsgResendReq,0,0,1,0,0,6,0,0,1,-1,0,1,,SharpMTProto.Schema.IMsgResendReq
+SharpMTProto.Schema,MsgsStateReq,0,0,1,0,0,6,0,0,1,-1,0,1,,SharpMTProto.Schema.IMsgsStateReq
+SharpMTProto.Schema,MsgsStateInfo,0,0,2,0,0,8,0,0,1,-1,0,1,,SharpMTProto.Schema.IMsgsStateInfo
+SharpMTProto.Schema,MsgsAllInfo,0,0,2,0,0,8,0,0,1,-1,0,1,,SharpMTProto.Schema.IMsgsAllInfo
+SharpMTProto.Schema,MsgDetailedInfo,0,0,4,0,0,12,0,0,1,-1,0,1,,SharpMTProto.Schema.IMsgDetailedInfo
+SharpMTProto.Schema,MsgNewDetailedInfo,0,0,3,0,0,10,0,0,1,-1,0,1,,SharpMTProto.Schema.IMsgDetailedInfo
+SharpMTProto.Schema,BindAuthKeyInner,0,0,5,0,0,14,0,0,1,-1,0,1,,SharpMTProto.Schema.IBindAuthKeyInner
+SharpMTProto.Schema,ReqPqArgs,0,0,1,0,0,6,0,0,0,-1,0,4,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,ReqDHParamsArgs,0,0,6,0,0,16,0,0,0,-1,0,4,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,SetClientDHParamsArgs,0,0,3,0,0,10,0,0,0,-1,0,4,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Schema,RpcDropAnswerArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,GetFutureSaltsArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,PingArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,PingDelayDisconnectArgs,0,0,2,0,0,8,0,0,0,-1,0,3,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,DestroySessionArgs,0,0,1,0,0,6,0,0,0,-1,0,3,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,HttpWaitArgs,0,0,3,0,0,10,0,0,0,-1,0,3,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,IResPQ,0,0,0,0,0,4,0,1,0,-1,0,4,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.ResPQ' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,IPQInnerData,0,0,0,0,0,4,0,2,0,-1,0,2,,SharpMTProto.Schema.PQInnerData' SharpMTProto.Schema.PQInnerDataTemp
+SharpMTProto.Schema,IServerDHParams,0,0,0,0,0,4,0,2,0,-1,0,6,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Schema.ServerDHParamsFail' SharpMTProto.Schema.ServerDHParamsOk' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,IServerDHInnerData,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.ServerDHInnerData
+SharpMTProto.Schema,IClientDHInnerData,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.ClientDHInnerData
+SharpMTProto.Schema,ISetClientDHParamsAnswer,0,0,0,0,0,4,0,3,0,-1,0,7,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Schema.DhGenOk' SharpMTProto.Schema.DhGenRetry' SharpMTProto.Schema.DhGenFail' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,IRpcDropAnswer,0,0,0,0,0,4,0,3,0,-1,0,6,,SharpMTProto.Schema.RpcAnswerUnknown' SharpMTProto.Schema.RpcAnswerDroppedRunning' SharpMTProto.Schema.RpcAnswerDropped' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
+SharpMTProto.Schema,IFutureSalt,0,0,0,0,0,4,0,1,0,-1,0,2,,SharpMTProto.Schema.FutureSalt' SharpMTProto.Schema.FutureSalts
+SharpMTProto.Schema,IFutureSalts,0,0,0,0,0,4,0,1,0,-1,0,4,,SharpMTProto.Schema.FutureSalts' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
+SharpMTProto.Schema,IPong,0,0,0,0,0,4,0,1,0,-1,0,4,,SharpMTProto.Schema.Pong' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods' SharpMTProto.Schema.MTProtoAsyncMethods
+SharpMTProto.Schema,IDestroySessionRes,0,0,0,0,0,4,0,2,0,-1,0,5,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.Schema.DestroySessionOk' SharpMTProto.Schema.DestroySessionNone' SharpMTProto.Schema.IMTProtoMethods' SharpMTProto.Schema.IMTProtoAsyncMethods
+SharpMTProto.Schema,INewSession,0,0,0,0,0,4,0,1,0,-1,0,2,,SharpMTProto.Messaging.Handlers.SessionHandler' SharpMTProto.Schema.NewSessionCreated
+SharpMTProto.Schema,IMessageContainer,0,0,0,0,0,4,0,1,0,-1,0,2,,SharpMTProto.Messaging.Handlers.MessageContainerHandler' SharpMTProto.Schema.MsgContainer
+SharpMTProto.Schema,IMessageCopy,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.MsgCopy
+SharpMTProto.Schema,IMsgsAck,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.MsgsAck
+SharpMTProto.Schema,IMsgResendReq,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.MsgResendReq
+SharpMTProto.Schema,IMsgsStateReq,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.MsgsStateReq
+SharpMTProto.Schema,IMsgsStateInfo,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.MsgsStateInfo
+SharpMTProto.Schema,IMsgsAllInfo,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.MsgsAllInfo
+SharpMTProto.Schema,IMsgDetailedInfo,0,0,0,0,0,4,0,2,0,-1,0,2,,SharpMTProto.Schema.MsgDetailedInfo' SharpMTProto.Schema.MsgNewDetailedInfo
+SharpMTProto.Schema,IBindAuthKeyInner,0,0,0,0,0,4,0,1,0,-1,0,1,,SharpMTProto.Schema.BindAuthKeyInner
+SharpMTProto.Schema,IMTProtoMethods,0,9,0,0,0,12,9,0,0,-1,0,0,,
+SharpMTProto.Schema,IMTProtoAsyncMethods,0,9,0,0,0,12,9,1,0,-1,0,3,,SharpMTProto.Schema.MTProtoAsyncMethods' SharpMTProto.IMTProtoClientConnection' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Schema,MTProtoAsyncMethods,1,12,0,0,10,60,12,0,1,0.17,0,1,,SharpMTProto.MTProtoClientConnection
+SharpMTProto.Services,EncryptionServices,0,5,0,0,4,92,8,0,1,-1,6,0,SharpMTProto.Services.DHOutParams' SharpMTProto.Services.IEncryptionServices' SharpMTProto.Authentication.PublicKey' SharpMTProto.Authentication.PublicKey' SharpMTProto.Services.DHOutParams' SharpMTProto.Services.IEncryptionServices,
+SharpMTProto.Services,HashServices,0,4,0,0,4,32,5,0,1,-1,1,0,SharpMTProto.Services.IHashServices,
+SharpMTProto.Services,DHOutParams,0,1,2,0,1,10,1,0,0,-1,0,3,,SharpMTProto.Services.IEncryptionServices' SharpMTProto.Services.EncryptionServices' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Services,IEncryptionServices,0,4,0,0,0,7,4,1,0,-1,0,3,,SharpMTProto.Services.EncryptionServices' SharpMTProto.Messaging.MessageCodec' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Services,IHashServices,0,4,0,0,0,7,4,1,0,-1,0,4,,SharpMTProto.Services.HashServices' SharpMTProto.Authentication.KeyChain' SharpMTProto.Messaging.MessageCodec' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Services,IMessageIdGenerator,0,1,0,0,0,4,1,1,0,-1,0,2,,SharpMTProto.Services.MessageIdGenerator' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Services,MessageIdGenerator,2,1,0,0,1,19,2,0,1,0,0,0,,
+SharpMTProto.Services,INonceGenerator,0,1,0,0,0,4,1,1,0,-1,0,2,,SharpMTProto.Services.NonceGenerator' SharpMTProto.Authentication.AuthKeyNegotiator
 SharpMTProto.Services,NonceGenerator,1,2,0,0,2,14,2,0,1,0,0,0,,
-SharpMTProto.Services,IRandomGenerator,0,2,0,0,0,5,2,1,0,-1,0,1,,SharpMTProto.Messaging.MessageCodec
+SharpMTProto.Services,IRandomGenerator,0,2,0,0,0,5,2,1,0,-1,0,2,,SharpMTProto.Messaging.MessageCodec' SharpMTProto.Services.RandomGenerator
 SharpMTProto.Services,RandomGenerator,3,4,0,0,4,35,7,0,1,0,0,0,,
-SharpMTProto.Transport,ClientTransportState,0,0,0,0,0,5,0,0,0,-1,0,0,,
-SharpMTProto.Transport,IClientTransport,0,8,2,0,0,13,8,0,0,-1,0,1,,SharpMTProto.MTProtoClientConnection
-SharpMTProto.Transport,IClientTransportConfig,0,0,1,0,0,4,0,1,0,-1,0,3,,SharpMTProto.MTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator' SharpMTProto.Transport.IClientTransportFactory
-SharpMTProto.Transport,IClientTransportFactory,0,1,0,0,0,9,1,0,0,-1,1,2,SharpMTProto.Transport.IClientTransportConfig,SharpMTProto.MTProtoClientBuilder' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Transport,ClientTransportState,0,0,0,0,0,5,0,0,0,-1,0,1,,SharpMTProto.Transport.IClientTransport
+SharpMTProto.Transport,IClientTransport,0,8,2,0,0,13,8,0,0,-1,0,2,,SharpMTProto.Transport.IClientTransportFactory' SharpMTProto.MTProtoClientConnection
+SharpMTProto.Transport,IClientTransportConfig,0,0,1,0,0,4,0,1,0,-1,0,5,,SharpMTProto.Transport.TcpClientTransportConfig' SharpMTProto.Transport.IClientTransportFactory' SharpMTProto.MTProtoClientConnection' SharpMTProto.IMTProtoClientBuilder' SharpMTProto.Authentication.AuthKeyNegotiator
+SharpMTProto.Transport,IClientTransportFactory,0,1,0,0,0,9,1,0,0,-1,0,1,,SharpMTProto.MTProtoClientConnection
 SharpMTProto.Transport,TcpClientTransportConfig,0,1,5,0,1,19,1,0,1,-1,0,0,,
-SharpMTProto.Transport,TcpTransportPacket,3,9,5,0,7,140,10,0,0,0.44,0,0,,
+SharpMTProto.Transport,TcpTransportPacket,3,9,5,0,7,140,11,0,0,0.44,0,1,,SharpMTProto.Transport.TcpTransportPacket
 SharpMTProto.Utils,UnixTimeUtils,1,6,0,0,6,28,6,0,0,0,0,1,,SharpMTProto.Services.MessageIdGenerator

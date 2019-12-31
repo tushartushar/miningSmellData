@@ -1,21 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Cell.Core,ArrayBuffer,3,3,0,1,0,33,4,0,0,0,3,12,NLog.Logger' Cell.Core.BufferManager' Cell.Core.BufferSegment,Cell.Core.BufferManager' Cell.Core.BufferSegment' Cell.Core.ClientBase' Cell.Core.SegmentStream' WCell.Core.Network.DisposableRealmPacketIn' WCell.Core.Network.FakeClientBase<C;PI;PO;PM>' WCell.Core.Network.PacketIn' WCell.RealmServer.RealmPacketIn' WCell.RealmServer.Network.RealmClient' WCell.RealmServer.Network.CompressedPacket' WCell.RealmServer.UpdateFields.UpdatePacket' WCell.PacketAnalysis.PacketParser
-Cell.Core,BufferManager,15,9,7,8,7,232,19,0,0,0,4,10,NLog.Logger' Cell.Core.BufferSegment' Cell.Core.SegmentStream' Cell.Core.ArrayBuffer,Cell.Core.ArrayBuffer' Cell.Core.ClientBase' Cell.Core.SegmentStream' WCell.Core.Network.DisposableRealmPacketIn' WCell.RealmServer.RealmPacketIn' WCell.RealmServer.Commands.BufferPoolCommand' WCell.RealmServer.Commands.DumpNetworkInfoCommand' WCell.RealmServer.Network.CompressedPacket' WCell.RealmServer.UpdateFields.UpdatePacket' WCell.PacketAnalysis.PacketParser
-Cell.Core,BufferSegment,4,7,3,3,7,121,8,0,0,0,1,15,Cell.Core.ArrayBuffer,Cell.Core.ArrayBuffer' Cell.Core.BufferManager' Cell.Core.ClientBase' Cell.Core.IClient' Cell.Core.SegmentStream' WCell.Core.Network.DisposableRealmPacketIn' WCell.Core.Network.FakeClientBase<C;PI;PO;PM>' WCell.Core.Network.PacketIn' WCell.AuthServer.AuthPacketIn' WCell.RealmServer.RealmPacketIn' WCell.AuthServer.Network.AuthClient' WCell.RealmServer.Network.RealmClient' WCell.RealmServer.Network.CompressedPacket' WCell.RealmServer.UpdateFields.UpdatePacket' WCell.PacketAnalysis.PacketParser
-Cell.Core,CellDef,5,0,0,5,0,23,0,0,0,-1,0,1,,Cell.Core.ServerBase
-Cell.Core,ClientBase,13,17,10,1,9,349,25,2,1,0.24,6,1,NLog.Logger' Cell.Core.BufferManager' Cell.Core.ServerBase' Cell.Core.BufferSegment' Cell.Core.SocketHelpers' Cell.Core.ArrayBuffer,WCell.RealmServer.Network.RealmClient
+Cell.Core,ArrayBuffer,3,3,0,1,0,33,4,0,0,0,2,2,Cell.Core.BufferManager' Cell.Core.BufferSegment,Cell.Core.BufferSegment' Cell.Core.BufferManager
+Cell.Core,BufferManager,15,9,7,8,7,232,20,0,0,0,4,3,Cell.Core.ArrayBuffer' Cell.Core.BufferSegment' Cell.Core.CellDef' Cell.Core.SegmentStream,Cell.Core.SegmentStream' Cell.Core.ClientBase' Cell.Core.ArrayBuffer
+Cell.Core,BufferSegment,4,7,3,3,7,121,8,0,0,0,1,5,Cell.Core.ArrayBuffer,Cell.Core.ArrayBuffer' Cell.Core.IClient' Cell.Core.SegmentStream' Cell.Core.ClientBase' Cell.Core.BufferManager
+Cell.Core,CellDef,5,0,0,5,0,23,0,0,0,-1,0,3,,Cell.Core.BufferManager' Cell.Core.ClientBase' Cell.Core.ServerBase
+Cell.Core,ClientBase,13,17,10,1,9,349,26,2,1,0.24,6,1,Cell.Core.BufferManager' Cell.Core.BufferSegment' Cell.Core.CellDef' Cell.Core.IClient' Cell.Core.ServerBase' Cell.Core.SocketHelpers,Cell.Core.ServerBase
 Cell.Core,ByteArrHelper,0,13,0,0,13,119,24,0,0,-1,0,0,,
-Cell.Core,IClient,0,7,6,0,0,61,7,4,0,-1,1,3,Cell.Core.BufferSegment,Cell.Core.ServerBase' WCell.AuthServer.AuthenticationServer' WCell.RealmServer.RealmServer
+Cell.Core,IClient,0,7,6,0,0,61,7,4,0,-1,2,2,Cell.Core.BufferSegment' Cell.Core.ServerBase,Cell.Core.ClientBase' Cell.Core.ServerBase
 Cell.Core,NativeMethods,0,2,0,0,1,13,2,0,0,-1,0,1,,Cell.Core.SpinWaitLock
-Cell.Core,NetworkUtil,1,1,1,0,1,41,7,0,0,0,0,1,,WCell.AuthServer.RealmEntry
-Cell.Core,ObjectPoolMgr,1,8,0,0,7,103,12,0,0,0,2,1,WCell.Util.ObjectPools.IObjectPool' WCell.Util.ObjectPools.ObjectPoolInfo,Cell.Core.SocketHelpers
-Cell.Core,SegmentStream,3,11,7,0,8,146,17,0,0,0.27,3,2,Cell.Core.BufferSegment' Cell.Core.ArrayBuffer' Cell.Core.BufferManager,Cell.Core.BufferManager' WCell.RealmServer.UpdateFields.UpdatePacket
+Cell.Core,NetworkUtil,1,1,1,0,1,41,7,0,0,0,0,0,,
+Cell.Core,ObjectPoolMgr,1,8,0,0,7,103,13,0,0,0,0,1,,Cell.Core.SocketHelpers
+Cell.Core,SegmentStream,3,11,7,0,8,146,18,0,0,0.27,2,1,Cell.Core.BufferManager' Cell.Core.BufferSegment,Cell.Core.BufferManager
 Cell.Core,UDPSendToArgs,2,1,2,0,1,29,1,0,0,0,1,1,Cell.Core.ServerBase,Cell.Core.ServerBase
-Cell.Core,ServerBase,11,33,13,0,15,754,61,1,0,0.06,8,4,NLog.Logger' Cell.Core.Localization.Resources' Cell.Core.Exceptions.InvalidEndpointException' Cell.Core.IClient' NLog.LogManager' Cell.Core.CellDef' Cell.Core.SocketHelpers' Cell.Core.UDPSendToArgs,Cell.Core.ClientBase' Cell.Core.UDPSendToArgs' WCell.Core.Network.FakeClientBase<C;PI;PO;PM>' WCell.RealmServer.Network.RealmClient
-Cell.Core,SocketHelpers,0,6,0,0,3,47,7,0,0,-1,1,2,Cell.Core.ObjectPoolMgr,Cell.Core.ClientBase' Cell.Core.ServerBase
-Cell.Core,SpinWaitLock,4,3,0,0,2,64,9,0,0,0,1,1,Cell.Core.NativeMethods,WCell.RealmServer.Battlegrounds.Arenas.ArenaTeam
-Cell.Core,XmlIPAddress,1,8,2,0,8,103,9,0,0,0.38,0,1,,WCell.Core.Network.PacketIn
+Cell.Core,ServerBase,11,33,13,0,15,754,62,1,0,0.06,8,3,Cell.Core.CellDef' Cell.Core.ClientBase' Cell.Core.IClient' Cell.Core.UDPSendToArgs' Cell.Core.SocketHelpers' Cell.Core.Exceptions.InvalidEndpointException' Cell.Core.Exceptions.NoAvailableAdaptersException' Cell.Core.Localization.Resources,Cell.Core.IClient' Cell.Core.ClientBase' Cell.Core.UDPSendToArgs
+Cell.Core,SocketHelpers,0,6,0,0,3,47,7,0,0,-1,1,2,Cell.Core.ObjectPoolMgr,Cell.Core.ServerBase' Cell.Core.ClientBase
+Cell.Core,SpinWaitLock,4,3,0,0,2,64,9,0,0,0,1,0,Cell.Core.NativeMethods,
+Cell.Core,XmlIPAddress,1,8,2,0,8,103,9,0,0,0.38,0,0,,
 Cell.Core.Exceptions,InvalidEndpointException,1,3,1,0,3,28,4,0,0,0.67,0,1,,Cell.Core.ServerBase
-Cell.Core.Exceptions,NoAvailableAdaptersException,0,2,0,0,2,12,2,0,0,-1,0,0,,
-Cell.Core.Localization,Cell_Core,2,1,16,0,0,167,1,1,0,0,0,0,,
-Cell.Core.Localization,Resources,0,0,0,0,0,3,0,0,1,-1,0,1,,Cell.Core.ServerBase
+Cell.Core.Exceptions,NoAvailableAdaptersException,0,2,0,0,2,12,2,0,0,-1,0,1,,Cell.Core.ServerBase
+Cell.Core.Localization,Cell_Core,2,1,16,0,0,167,1,1,0,0,0,1,,Cell.Core.Localization.Resources
+Cell.Core.Localization,Resources,0,0,0,0,0,3,0,0,1,-1,1,1,Cell.Core.Localization.Cell_Core,Cell.Core.ServerBase

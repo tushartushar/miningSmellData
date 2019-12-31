@@ -1,0 +1,36 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Kayak.Tests,Config,1,0,0,1,0,4,0,0,0,-1,0,3,,Kayak.Tests.Net.NetTests' Kayak.Tests.Net.SocketTests' Kayak.Tests.Net.ServerTests
+Kayak.Tests,MockSocket,4,5,1,4,5,42,8,0,1,0.8,0,0,,
+Kayak.Tests,MockDataProducer,3,4,0,2,3,54,10,0,1,0.75,0,0,,
+Kayak.Tests,MockDataConsumer,6,4,0,6,4,39,8,0,1,0.5,0,1,,Kayak.Tests.Http.UserKayakAdapter
+Kayak.Tests,MockHttpServerTransactionDelegate,6,7,0,6,7,47,9,0,1,0.43,1,1,Kayak.Tests.HttpRequest,Kayak.Tests.Http.ParserToTransactionTransformTests
+Kayak.Tests,HttpRequest,3,0,0,3,0,6,0,0,0,-1,0,1,,Kayak.Tests.MockHttpServerTransactionDelegate
+Kayak.Tests,MockObserver<T>,3,3,0,3,3,24,6,0,0,1,0,0,,
+Kayak.Tests,MockRequestDelegate,1,1,0,1,1,9,2,0,1,0,0,0,,
+Kayak.Tests,TestRequest,10,2,0,10,1,73,4,0,0,0,0,0,,
+Kayak.Tests.Http,User,0,6,0,0,0,9,6,2,0,-1,1,5,Kayak.Tests.Http.UserKayak,Kayak.Tests.Http.RequestCallbacker' Kayak.Tests.Http.RequestDelegate' Kayak.Tests.Http.UserKayakAdapter' Kayak.Tests.Http.RequestBodyConsumer' Kayak.Tests.Http.RequestAccumulator
+Kayak.Tests.Http,UserKayak,0,6,0,0,0,9,6,1,0,-1,0,6,,Kayak.Tests.Http.UserKayakAdapter' Kayak.Tests.Http.RequestBodyConsumer' Kayak.Tests.Http.RequestAccumulator' Kayak.Tests.Http.RequestCallbacker' Kayak.Tests.Http.User' Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,CallKayakWhen,0,0,0,0,0,15,0,0,0,-1,0,1,,Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,HttpServerTransactionDelegateTests,5,10,0,0,5,241,22,0,0,0,12,0,Kayak.Tests.Http.UserKayak' Kayak.Tests.Http.CallKayakWhen' Kayak.Tests.Http.RequestInfo' Kayak.Tests.Http.Request' Kayak.Tests.Http.RequestAccumulator' Kayak.Tests.Http.RequestCallbacker' Kayak.Tests.Http.RequestDelegate' Kayak.Tests.Http.ResponseInfo' Kayak.Tests.Http.Response' Kayak.Tests.Http.ResponseAccumulator' Kayak.Tests.Http.TransactionTestCases' Kayak.Tests.Http.TransactionInput,
+Kayak.Tests.Http,ParserToTransactionTransformTests,2,9,0,0,7,121,9,0,0,0,1,0,Kayak.Tests.MockHttpServerTransactionDelegate,
+Kayak.Tests.Http,RequestInfo,3,0,0,3,0,6,0,0,0,-1,0,5,,Kayak.Tests.Http.TransactionInput' Kayak.Tests.Http.TransactionTestCases' Kayak.Tests.Http.HttpServerTransactionDelegateTests' Kayak.Tests.Http.RequestAccumulator' Kayak.Tests.Http.Request
+Kayak.Tests.Http,Request,12,0,0,12,0,138,0,0,0,-1,1,2,Kayak.Tests.Http.RequestInfo,Kayak.Tests.Http.HttpServerTransactionDelegateTests' Kayak.Tests.Http.TransactionTestCases
+Kayak.Tests.Http,RequestAccumulator,3,8,0,0,8,58,12,0,1,0.25,3,1,Kayak.Tests.Http.User' Kayak.Tests.Http.UserKayak' Kayak.Tests.Http.RequestInfo,Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,RequestBodyConsumer,2,4,0,0,4,23,4,0,1,0.5,2,0,Kayak.Tests.Http.User' Kayak.Tests.Http.UserKayak,
+Kayak.Tests.Http,RequestCallbacker,3,6,0,3,6,30,9,0,1,1,2,1,Kayak.Tests.Http.User' Kayak.Tests.Http.UserKayak,Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,RequestDelegate,1,2,0,0,2,13,2,0,1,1,2,1,Kayak.Tests.Http.User' Kayak.Tests.Http.UserKayakAdapter,Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,ResponseInfo,3,0,0,3,0,6,0,0,0,-1,0,4,,Kayak.Tests.Http.TransactionTestCases' Kayak.Tests.Http.HttpServerTransactionDelegateTests' Kayak.Tests.Http.ResponseAccumulator' Kayak.Tests.Http.Response
+Kayak.Tests.Http,Response,5,0,0,5,0,48,0,0,0,-1,1,2,Kayak.Tests.Http.ResponseInfo,Kayak.Tests.Http.HttpServerTransactionDelegateTests' Kayak.Tests.Http.TransactionTestCases
+Kayak.Tests.Http,ResponseAccumulator,4,6,1,2,6,61,14,0,1,0.33,1,1,Kayak.Tests.Http.ResponseInfo,Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,SimpleSubject,3,5,0,0,5,29,5,0,1,0.4,0,1,,Kayak.Tests.Http.UserKayakAdapter
+Kayak.Tests.Http,TransactionTestCases,4,2,0,4,2,158,2,0,0,0,4,1,Kayak.Tests.Http.RequestInfo' Kayak.Tests.Http.Request' Kayak.Tests.Http.ResponseInfo' Kayak.Tests.Http.Response,Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,TransactionInput,2,8,0,0,7,49,11,0,0,0,1,1,Kayak.Tests.Http.RequestInfo,Kayak.Tests.Http.HttpServerTransactionDelegateTests
+Kayak.Tests.Http,UserKayakAdapter,5,7,0,0,7,48,9,0,1,0.29,4,1,Kayak.Tests.MockDataConsumer' Kayak.Tests.Http.User' Kayak.Tests.Http.UserKayak' Kayak.Tests.Http.SimpleSubject,Kayak.Tests.Http.RequestDelegate
+Kayak.Tests.Net,SchedulerDelegate,4,2,0,4,2,21,5,0,1,0,0,4,,Kayak.Tests.Net.NetTests' Kayak.Tests.Net.SocketTests' Kayak.Tests.Net.SchedulerTests' Kayak.Tests.Net.ServerTests
+Kayak.Tests.Net,ServerDelegate,4,2,0,4,2,26,4,0,1,1,0,3,,Kayak.Tests.Net.ServerTests' Kayak.Tests.Net.SocketTests' Kayak.Tests.Net.NetTests
+Kayak.Tests.Net,NetTests,12,13,0,0,8,293,17,0,0,0,4,0,Kayak.Tests.Config' Kayak.Tests.Net.SchedulerDelegate' Kayak.Tests.Net.ServerDelegate' Kayak.Tests.Net.SocketDelegate,
+Kayak.Tests.Net,SchedulerTests,3,12,0,0,12,152,12,0,0,0,1,0,Kayak.Tests.Net.SchedulerDelegate,
+Kayak.Tests.Net,ServerTests,3,4,0,0,4,53,5,0,0,0,3,0,Kayak.Tests.Config' Kayak.Tests.Net.SchedulerDelegate' Kayak.Tests.Net.ServerDelegate,
+Kayak.Tests.Net,SocketDelegate,10,6,0,10,6,59,13,0,1,0.5,0,2,,Kayak.Tests.Net.SocketTests' Kayak.Tests.Net.NetTests
+Kayak.Tests.Net,SocketTests,9,15,0,0,14,311,16,0,0,0.13,5,0,Kayak.Tests.Config' Kayak.Tests.Net.SchedulerDelegate' Kayak.Tests.Net.ServerDelegate' Kayak.Tests.Net.SocketDelegate' Kayak.Tests.Net.MockSocketWrapper,
+Kayak.Tests.Net,MockSocketWrapper,0,8,1,0,8,40,8,0,1,-1,0,1,,Kayak.Tests.Net.SocketTests

@@ -1,42 +1,42 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Regalo.Core,AggregateRoot,3,10,2,0,3,118,18,5,0,0.2,5,0,Regalo.Core.ILogger' Regalo.Core.IVersionHandler' Regalo.Core.Resolver' Regalo.Core.TypeInspector' Regalo.Core.Conventions,
-Regalo.Core,Command,0,0,0,0,0,3,0,1,1,-1,0,0,,
-Regalo.Core,CommandProcessor,0,2,0,0,2,11,2,0,1,-1,2,1,Regalo.Core.ILogger' Regalo.Core.ICommandHandler,Regalo.Core.Tests.Unit.CommandProcessorTests
-Regalo.Core,Conventions,4,4,4,0,4,31,4,0,0,1,0,6,,Regalo.Core.AggregateRoot' Regalo.Core.EventBus' Regalo.RavenDB.DelayedWriteRavenEventStore' Regalo.Core.Tests.Unit.EventBusTests' Regalo.RavenDB.Tests.Unit.DelayedWriteEventStoreTests' Regalo.RavenDB.Tests.Unit.PersistenceTests
-Regalo.Core,DefaultVersionHandler,0,2,0,0,2,11,2,0,1,-1,1,1,Regalo.Core.Event,Regalo.Testing.Tests.Unit.ApplicationServiceTestingTests
+Regalo.Core,AggregateRoot,3,10,2,0,3,144,18,5,0,0.2,6,3,Regalo.Core.Conventions' Regalo.Core.IdNotSetException' Regalo.Core.ILogger' Regalo.Core.IVersionHandler' Regalo.Core.Resolver' Regalo.Core.TypeInspector,Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.MessageHandlerContext<TEntity>' Regalo.Core.IRepository
+Regalo.Core,Command,0,0,0,0,0,3,0,1,1,-1,1,0,Regalo.Core.Message,
+Regalo.Core,CommandProcessor,0,2,0,0,2,12,2,0,1,-1,4,0,Regalo.Core.ICommandHandler' Regalo.Core.ICommandProcessor' Regalo.Core.ILogger' Regalo.Core.MessageProcessorBase,
+Regalo.Core,Conventions,4,4,4,0,4,37,4,0,0,1,0,2,,Regalo.Core.EventBus' Regalo.Core.AggregateRoot
+Regalo.Core,DefaultVersionHandler,0,2,0,0,2,12,2,0,1,-1,2,0,Regalo.Core.Event' Regalo.Core.IVersionHandler,
 Regalo.Core,EnumerableExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Regalo.Core,Event,0,1,2,0,0,9,1,9,1,-1,0,7,,Regalo.Core.DefaultVersionHandler' Regalo.Testing.ScenarioAssert<TEntity;THandler;TCommand>' Regalo.Core.Tests.Unit.RepositoryTests' Regalo.Core.Tests.Unit.InMemoryEventStoreTests' Regalo.RavenDB.Tests.Unit.DelayedWriteEventStoreTests' Regalo.RavenDB.Tests.Unit.PersistenceTests' Regalo.ObjectCompare.Tests.Unit.PropertyIgnoringTests
-Regalo.Core,EventBus,1,4,0,0,3,59,7,0,1,0,7,1,Regalo.Core.ILogger' Regalo.Core.IEventHandlingFailedEvent' Regalo.Core.IEventHandlingSucceededEvent' Regalo.Core.EventHandlingFailedEvent' Regalo.Core.EventHandlingSucceededEvent' Regalo.Core.IEventHandler' Regalo.Core.Conventions,Regalo.Core.Tests.Unit.EventBusTests
-Regalo.Core,EventHandlingFailedEvent,0,2,0,0,1,22,2,0,0,-1,1,1,Regalo.Core.IEventHandlingFailedEvent,Regalo.Core.EventBus
-Regalo.Core,EventHandlingFailedEventImpl<TEvent>,0,1,2,0,1,10,1,0,1,-1,0,0,,
-Regalo.Core,EventHandlingResultEvent,0,0,1,0,0,4,0,2,0,-1,0,1,,Regalo.Core.MessageProcessorBase
-Regalo.Core,EventHandlingSucceededEvent,0,2,0,0,1,20,2,0,0,-1,1,1,Regalo.Core.IEventHandlingSucceededEvent,Regalo.Core.EventBus
-Regalo.Core,EventHandlingSucceededEventImpl<TEvent>,0,1,1,0,1,8,1,0,1,-1,0,0,,
-Regalo.Core,ICommandHandler,0,1,0,0,0,4,1,4,0,-1,0,2,,Regalo.Core.CommandProcessor' Regalo.Core.Tests.Unit.CommandProcessorTests
+Regalo.Core,Event,0,1,2,0,0,11,1,9,1,-1,1,1,Regalo.Core.Message,Regalo.Core.DefaultVersionHandler
+Regalo.Core,EventBus,1,4,0,0,3,66,7,0,1,0,7,0,Regalo.Core.Conventions' Regalo.Core.EventHandlingFailedEvent' Regalo.Core.EventHandlingSucceededEvent' Regalo.Core.IEventBus' Regalo.Core.IEventHandler' Regalo.Core.ILogger' Regalo.Core.MessageProcessorBase,
+Regalo.Core,EventHandlingFailedEvent,0,2,0,0,1,25,2,0,0,-1,3,1,Regalo.Core.EventHandlingFailedEventImpl<TEvent>' Regalo.Core.EventHandlingResultEvent' Regalo.Core.IEventHandlingFailedEvent,Regalo.Core.EventBus
+Regalo.Core,EventHandlingFailedEventImpl<TEvent>,0,1,2,0,1,11,1,0,1,-1,0,1,,Regalo.Core.EventHandlingFailedEvent
+Regalo.Core,EventHandlingResultEvent,0,0,1,0,0,4,0,2,0,-1,0,3,,Regalo.Core.EventHandlingFailedEvent' Regalo.Core.EventHandlingSucceededEvent' Regalo.Core.MessageProcessorBase
+Regalo.Core,EventHandlingSucceededEvent,0,2,0,0,1,23,2,0,0,-1,3,1,Regalo.Core.EventHandlingResultEvent' Regalo.Core.EventHandlingSucceededEventImpl<TEvent>' Regalo.Core.IEventHandlingSucceededEvent,Regalo.Core.EventBus
+Regalo.Core,EventHandlingSucceededEventImpl<TEvent>,0,1,1,0,1,9,1,0,1,-1,0,1,,Regalo.Core.EventHandlingSucceededEvent
+Regalo.Core,ICommandHandler,0,1,0,0,0,4,1,4,0,-1,0,1,,Regalo.Core.CommandProcessor
 Regalo.Core,ICommandBus,0,1,0,0,0,5,1,0,0,-1,0,0,,
-Regalo.Core,ICommandProcessor,0,1,0,0,0,4,1,1,0,-1,0,0,,
-Regalo.Core,IdNotSetException,0,2,0,0,1,16,2,0,0,-1,0,0,,
-Regalo.Core,IEventBus,0,2,0,0,0,5,2,2,0,-1,0,2,,Regalo.Core.MessageHandlerContext<TEntity>' Regalo.Testing.TestingMessageHandlerContext<TEntity>
-Regalo.Core,IEventHandler,0,1,0,0,0,4,1,4,0,-1,0,2,,Regalo.Core.EventBus' Regalo.Core.Tests.Unit.EventBusTests
-Regalo.Core,IEventHandlingFailedEvent,0,0,2,0,0,5,0,1,0,-1,0,5,,Regalo.Core.EventBus' Regalo.Core.EventHandlingFailedEvent' Regalo.Core.MessageProcessorBase' Regalo.Core.Tests.Unit.EventBusTests' Regalo.Core.Tests.Unit.FailingEventHandler
-Regalo.Core,IEventHandlingSucceededEvent,0,0,1,0,0,4,0,1,0,-1,0,3,,Regalo.Core.EventBus' Regalo.Core.EventHandlingSucceededEvent' Regalo.Core.MessageProcessorBase
-Regalo.Core,ILogger,0,4,0,0,0,7,4,2,0,-1,0,8,,Regalo.Core.AggregateRoot' Regalo.Core.CommandProcessor' Regalo.Core.EventBus' Regalo.Core.MessageProcessorBase' Regalo.Core.Tests.Unit.TestFixtureBase' Regalo.RavenDB.Tests.Unit.DelayedWriteEventStoreTests' Regalo.RavenDB.Tests.Unit.PersistenceTests' Regalo.Testing.Tests.Unit.ApplicationServiceTestingTests
-Regalo.Core,IMessageHandlerContext,0,2,0,0,0,5,2,2,0,-1,0,1,,Regalo.Core.Tests.DomainModel.SalesOrders.PlaceSalesOrderCommandHandler
-Regalo.Core,IRepository,0,3,0,0,0,7,3,2,0,-1,0,4,,Regalo.Core.MessageHandlerContext<TEntity>' Regalo.Testing.TestingMessageHandlerContext<TEntity>' Regalo.Core.Tests.Unit.RepositoryTests' Regalo.SqlServer.Tests.Unit.PersistenceTests
-Regalo.Core,IVersionHandler,0,2,0,0,0,5,2,2,0,-1,0,8,,Regalo.Core.AggregateRoot' Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.EventSourcing.InMemoryEventStore' Regalo.RavenDB.DelayedWriteRavenEventStore' Regalo.Core.Tests.Unit.TestFixtureBase' Regalo.RavenDB.Tests.Unit.DelayedWriteEventStoreTests' Regalo.RavenDB.Tests.Unit.PersistenceTests' Regalo.Testing.Tests.Unit.ApplicationServiceTestingTests
-Regalo.Core,Message,0,1,1,0,0,8,1,2,0,-1,0,0,,
-Regalo.Core,MessageHandlerContext<TEntity>,2,3,0,0,3,23,5,0,1,0,2,0,Regalo.Core.IRepository' Regalo.Core.IEventBus,
-Regalo.Core,MessageProcessorBase,4,8,0,0,0,104,14,2,0,0,7,0,Regalo.Core.ILogger' Regalo.Core.HandlerDescriptor' Regalo.Core.IEventHandlingSucceededEvent' Regalo.Core.EventHandlingResultEvent' Regalo.Core.Resolver' Regalo.Core.TypeInspector' Regalo.Core.IEventHandlingFailedEvent,
+Regalo.Core,ICommandProcessor,0,1,0,0,0,4,1,1,0,-1,0,1,,Regalo.Core.CommandProcessor
+Regalo.Core,IdNotSetException,0,2,0,0,1,17,2,0,0,-1,0,1,,Regalo.Core.AggregateRoot
+Regalo.Core,IEventBus,0,2,0,0,0,5,2,2,0,-1,0,2,,Regalo.Core.EventBus' Regalo.Core.MessageHandlerContext<TEntity>
+Regalo.Core,IEventHandler,0,1,0,0,0,4,1,4,0,-1,0,1,,Regalo.Core.EventBus
+Regalo.Core,IEventHandlingFailedEvent,0,0,2,0,0,5,0,1,0,-1,0,2,,Regalo.Core.MessageProcessorBase' Regalo.Core.EventHandlingFailedEvent
+Regalo.Core,IEventHandlingSucceededEvent,0,0,1,0,0,4,0,1,0,-1,0,2,,Regalo.Core.EventHandlingSucceededEvent' Regalo.Core.MessageProcessorBase
+Regalo.Core,ILogger,0,4,0,0,0,7,4,2,0,-1,0,4,,Regalo.Core.EventBus' Regalo.Core.CommandProcessor' Regalo.Core.MessageProcessorBase' Regalo.Core.AggregateRoot
+Regalo.Core,IMessageHandlerContext,0,2,0,0,0,5,2,2,0,-1,0,1,,Regalo.Core.MessageHandlerContext<TEntity>
+Regalo.Core,IRepository,0,3,0,0,0,7,3,2,0,-1,1,2,Regalo.Core.AggregateRoot,Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.MessageHandlerContext<TEntity>
+Regalo.Core,IVersionHandler,0,2,0,0,0,5,2,2,0,-1,0,5,,Regalo.Core.DefaultVersionHandler' Regalo.Core.RuntimeConfiguredVersionHandler' Regalo.Core.EventSourcing.InMemoryEventStore' Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.AggregateRoot
+Regalo.Core,Message,0,1,1,0,0,9,1,2,0,-1,0,2,,Regalo.Core.Command' Regalo.Core.Event
+Regalo.Core,MessageHandlerContext<TEntity>,2,3,0,0,3,27,5,0,1,0,4,0,Regalo.Core.AggregateRoot' Regalo.Core.IEventBus' Regalo.Core.IMessageHandlerContext' Regalo.Core.IRepository,
+Regalo.Core,MessageProcessorBase,4,8,0,0,0,124,14,2,0,0,7,2,Regalo.Core.EventHandlingResultEvent' Regalo.Core.IEventHandlingFailedEvent' Regalo.Core.IEventHandlingSucceededEvent' Regalo.Core.ILogger' Regalo.Core.HandlerDescriptor' Regalo.Core.Resolver' Regalo.Core.TypeInspector,Regalo.Core.EventBus' Regalo.Core.CommandProcessor
 Regalo.Core,HandlerDescriptor,0,0,2,0,0,5,0,0,0,-1,0,1,,Regalo.Core.MessageProcessorBase
-Regalo.Core,RuntimeConfiguredVersionHandler,2,3,0,0,3,33,5,0,1,0,0,2,,Regalo.Core.Tests.Unit.RuntimeConfiguredVersionHandlerTests' Regalo.Core.Tests.Unit.TestFixtureBase
-Regalo.Core,Resolver,2,6,0,0,2,45,11,0,0,0,0,10,,Regalo.Core.AggregateRoot' Regalo.Core.MessageProcessorBase' Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.EventSourcing.InMemoryEventStore' Regalo.Core.Tests.Unit.CommandProcessorTests' Regalo.Core.Tests.Unit.EventBusTests' Regalo.Core.Tests.Unit.TestFixtureBase' Regalo.RavenDB.Tests.Unit.DelayedWriteEventStoreTests' Regalo.RavenDB.Tests.Unit.PersistenceTests' Regalo.Testing.Tests.Unit.ApplicationServiceTestingTests
-Regalo.Core,TypeInspector,0,2,0,0,1,29,5,0,0,-1,0,3,,Regalo.Core.AggregateRoot' Regalo.Core.MessageProcessorBase' Regalo.Core.Tests.Unit.TypeInspectorTests
-Regalo.Core.EventSourcing,ConcurrencyConflict,0,1,3,0,1,12,1,0,0,-1,0,2,,Regalo.Core.EventSourcing.StrictConcurrencyMonitor' Regalo.Core.Tests.Unit.SimpleConcurrencyTests
-Regalo.Core.EventSourcing,ConcurrencyConflictsDetectedException,0,1,1,0,1,9,2,0,0,-1,0,1,,Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>
-Regalo.Core.EventSourcing,EventSourcingRepository<TAggregateRoot>,3,6,0,0,4,80,13,0,1,0.67,5,0,Regalo.Core.EventSourcing.IEventStore' Regalo.Core.EventSourcing.IConcurrencyMonitor' Regalo.Core.EventSourcing.ConcurrencyConflictsDetectedException' Regalo.Core.IVersionHandler' Regalo.Core.Resolver,
-Regalo.Core.EventSourcing,IConcurrencyMonitor,0,1,0,0,0,4,1,1,0,-1,0,3,,Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.Tests.Unit.SimpleConcurrencyTests' Regalo.Core.Tests.Unit.RepositoryTests
-Regalo.Core.EventSourcing,IDelayedWriteEventStore,0,1,0,0,0,4,1,1,1,-1,0,0,,
-Regalo.Core.EventSourcing,IEventStore,0,4,0,0,0,7,4,4,0,-1,0,3,,Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.Tests.Unit.InMemoryEventStoreTests' Regalo.RavenDB.Tests.Unit.PersistenceTests
-Regalo.Core.EventSourcing,IEventStoreWithPreloading,0,1,0,0,0,4,1,1,1,-1,0,0,,
-Regalo.Core.EventSourcing,InMemoryEventStore,1,7,1,0,5,58,12,0,1,0,2,3,Regalo.Core.IVersionHandler' Regalo.Core.Resolver,Regalo.Testing.ApplicationServiceTestBase<TEntity>' Regalo.Core.Tests.Unit.RepositoryTests' Regalo.Core.Tests.Unit.InMemoryEventStoreTests
-Regalo.Core.EventSourcing,StrictConcurrencyMonitor,0,1,0,0,1,13,4,0,1,-1,1,0,Regalo.Core.EventSourcing.ConcurrencyConflict,
+Regalo.Core,RuntimeConfiguredVersionHandler,2,3,0,0,3,40,5,0,1,0,1,0,Regalo.Core.IVersionHandler,
+Regalo.Core,Resolver,2,6,0,0,2,55,11,0,0,0,0,4,,Regalo.Core.EventSourcing.InMemoryEventStore' Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>' Regalo.Core.AggregateRoot' Regalo.Core.MessageProcessorBase
+Regalo.Core,TypeInspector,0,2,0,0,1,35,5,0,0,-1,0,2,,Regalo.Core.MessageProcessorBase' Regalo.Core.AggregateRoot
+Regalo.Core.EventSourcing,ConcurrencyConflict,0,1,3,0,1,15,1,0,0,-1,0,3,,Regalo.Core.EventSourcing.IConcurrencyMonitor' Regalo.Core.EventSourcing.ConcurrencyConflictsDetectedException' Regalo.Core.EventSourcing.StrictConcurrencyMonitor
+Regalo.Core.EventSourcing,ConcurrencyConflictsDetectedException,0,1,1,0,1,10,2,0,0,-1,1,1,Regalo.Core.EventSourcing.ConcurrencyConflict,Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>
+Regalo.Core.EventSourcing,EventSourcingRepository<TAggregateRoot>,3,6,0,0,4,80,13,0,1,0.67,7,0,Regalo.Core.AggregateRoot' Regalo.Core.IRepository' Regalo.Core.IVersionHandler' Regalo.Core.Resolver' Regalo.Core.EventSourcing.ConcurrencyConflictsDetectedException' Regalo.Core.EventSourcing.IConcurrencyMonitor' Regalo.Core.EventSourcing.IEventStore,
+Regalo.Core.EventSourcing,IConcurrencyMonitor,0,1,0,0,0,4,1,1,0,-1,1,2,Regalo.Core.EventSourcing.ConcurrencyConflict,Regalo.Core.EventSourcing.StrictConcurrencyMonitor' Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>
+Regalo.Core.EventSourcing,IDelayedWriteEventStore,0,1,0,0,0,4,1,1,1,-1,1,0,Regalo.Core.EventSourcing.IEventStore,
+Regalo.Core.EventSourcing,IEventStore,0,4,0,0,0,7,4,4,0,-1,0,4,,Regalo.Core.EventSourcing.IEventStoreWithPreloading' Regalo.Core.EventSourcing.InMemoryEventStore' Regalo.Core.EventSourcing.IDelayedWriteEventStore' Regalo.Core.EventSourcing.EventSourcingRepository<TAggregateRoot>
+Regalo.Core.EventSourcing,IEventStoreWithPreloading,0,1,0,0,0,4,1,1,1,-1,1,0,Regalo.Core.EventSourcing.IEventStore,
+Regalo.Core.EventSourcing,InMemoryEventStore,1,7,1,0,5,58,12,0,1,0,3,0,Regalo.Core.IVersionHandler' Regalo.Core.Resolver' Regalo.Core.EventSourcing.IEventStore,
+Regalo.Core.EventSourcing,StrictConcurrencyMonitor,0,1,0,0,1,15,4,0,1,-1,2,0,Regalo.Core.EventSourcing.ConcurrencyConflict' Regalo.Core.EventSourcing.IConcurrencyMonitor,

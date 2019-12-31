@@ -1,0 +1,16 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RVIO,FileAttributes,0,0,0,0,0,20,0,0,0,-1,0,1,,RVIO.File
+RVIO,Error,0,1,0,0,1,7,1,0,0,-1,0,0,,
+RVIO,unix,0,0,1,0,0,11,0,0,0,-1,0,7,,RVIO.FileInfo' RVIO.DirectoryInfo' RVIO.Directory' RVIO.File' RVIO.Path' RVIO.FileStream' RVIO.NameFix
+RVIO,FileInfo,4,2,0,4,2,28,5,0,0,1,6,1,RVIO.unix' RVIO.Path' RVIO.NameFix' RVIO.Win32Native' RVIO.WIN32_FILE_ATTRIBUTE_DATA' RVIO.Convert,RVIO.DirectoryInfo
+RVIO,DirectoryInfo,3,6,0,3,6,126,15,0,0,0.5,9,0,RVIO.unix' RVIO.FileInfo' RVIO.Path' RVIO.NameFix' RVIO.Win32Native' RVIO.WIN32_FIND_DATA' RVIO.WIN32_FILE_ATTRIBUTE_DATA' RVIO.SafeFindHandle' RVIO.Convert,
+RVIO,Directory,0,4,0,0,4,69,17,0,0,-1,4,0,RVIO.unix' RVIO.NameFix' RVIO.Win32Native' RVIO.WIN32_FILE_ATTRIBUTE_DATA,
+RVIO,File,2,8,0,0,8,126,22,0,0,0.75,6,0,RVIO.FileAttributes' RVIO.unix' RVIO.FileStream' RVIO.NameFix' RVIO.Win32Native' RVIO.WIN32_FILE_ATTRIBUTE_DATA,
+RVIO,Path,3,8,0,3,5,119,26,0,0,0.5,1,3,RVIO.unix,RVIO.FileInfo' RVIO.DirectoryInfo' RVIO.NameFix
+RVIO,FileStream,3,2,0,0,2,71,6,0,0,0,3,1,RVIO.unix' RVIO.NameFix' RVIO.Win32Native,RVIO.File
+RVIO,NameFix,0,3,0,0,1,58,11,0,0,-1,3,5,RVIO.unix' RVIO.Path' RVIO.Win32Native,RVIO.FileInfo' RVIO.DirectoryInfo' RVIO.Directory' RVIO.File' RVIO.FileStream
+RVIO,Win32Native,6,12,0,2,0,89,12,0,0,0,3,7,RVIO.WIN32_FIND_DATA' RVIO.WIN32_FILE_ATTRIBUTE_DATA' RVIO.SafeFindHandle,RVIO.SafeFindHandle' RVIO.FileInfo' RVIO.DirectoryInfo' RVIO.Directory' RVIO.File' RVIO.FileStream' RVIO.NameFix
+RVIO,WIN32_FIND_DATA,13,0,0,0,0,18,0,0,0,-1,0,2,,RVIO.Win32Native' RVIO.DirectoryInfo
+RVIO,WIN32_FILE_ATTRIBUTE_DATA,9,0,0,0,0,14,0,0,0,-1,0,5,,RVIO.Win32Native' RVIO.FileInfo' RVIO.DirectoryInfo' RVIO.Directory' RVIO.File
+RVIO,SafeFindHandle,0,2,0,0,0,11,2,0,0,-1,1,2,RVIO.Win32Native,RVIO.Win32Native' RVIO.DirectoryInfo
+RVIO,Convert,14,2,0,1,2,33,2,0,0,1,0,2,,RVIO.FileInfo' RVIO.DirectoryInfo

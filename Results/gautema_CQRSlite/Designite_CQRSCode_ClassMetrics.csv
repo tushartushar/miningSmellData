@@ -1,21 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-CQRSCode.ReadModel.Dtos,InventoryItemDetailsDto,4,1,0,4,1,14,1,0,0,0,0,1,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView
-CQRSCode.ReadModel.Dtos,InventoryItemListDto,2,1,0,2,1,10,1,0,0,0,0,0,,
-CQRSCode.ReadModel.Events,InventoryItemCreated,1,1,3,1,1,12,1,0,0,0,0,4,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.ReadModel.Handlers.InventoryListView' CQRSCode.WriteModel.Domain.InventoryItem' CQRSTest.WriteModel.WhenItemCreated
-CQRSCode.ReadModel.Events,InventoryItemDeactivated,0,1,3,0,1,10,1,0,0,-1,0,3,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.ReadModel.Handlers.InventoryListView' CQRSCode.WriteModel.Domain.InventoryItem
-CQRSCode.ReadModel.Events,InventoryItemRenamed,1,1,3,1,1,13,1,0,0,0,0,2,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.ReadModel.Handlers.InventoryListView
-CQRSCode.ReadModel.Events,ItemsCheckedInToInventory,1,1,3,1,1,13,1,0,0,0,0,2,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSTest.WriteModel.When_item_checked_in
-CQRSCode.ReadModel.Events,ItemsRemovedFromInventory,1,1,3,1,1,13,1,0,0,0,0,1,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView
-CQRSCode.ReadModel.Handlers,InventoryItemDetailView,0,6,0,0,5,47,7,0,0,-1,7,0,CQRSCode.ReadModel.Infrastructure.InMemoryDatabase' CQRSCode.ReadModel.Events.InventoryItemCreated' CQRSCode.ReadModel.Dtos.InventoryItemDetailsDto' CQRSCode.ReadModel.Events.InventoryItemRenamed' CQRSCode.ReadModel.Events.ItemsRemovedFromInventory' CQRSCode.ReadModel.Events.ItemsCheckedInToInventory' CQRSCode.ReadModel.Events.InventoryItemDeactivated,
-CQRSCode.ReadModel.Handlers,InventoryListView,0,3,0,0,3,21,3,0,0,-1,4,0,CQRSCode.ReadModel.Infrastructure.InMemoryDatabase' CQRSCode.ReadModel.Events.InventoryItemCreated' CQRSCode.ReadModel.Events.InventoryItemRenamed' CQRSCode.ReadModel.Events.InventoryItemDeactivated,
-CQRSCode.ReadModel.Infrastructure,InMemoryDatabase,2,0,0,2,0,5,0,0,0,-1,0,3,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.ReadModel.Handlers.InventoryListView' CQRSCode.ReadModel.ReadModelFacade
-CQRSCode.ReadModel,IReadModelFacade,0,2,0,0,0,5,2,1,0,-1,0,1,,CQRSWeb.Controllers.HomeController
-CQRSCode.ReadModel,ReadModelFacade,0,2,0,0,2,11,2,0,1,-1,1,0,CQRSCode.ReadModel.Infrastructure.InMemoryDatabase,
-CQRSCode.WriteModel.Commands,CheckInItemsToInventory,1,1,2,1,1,12,1,0,0,0,0,2,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers' CQRSTest.WriteModel.When_item_checked_in
-CQRSCode.WriteModel.Commands,CreateInventoryItem,1,1,2,1,1,12,1,0,0,0,0,2,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers' CQRSTest.WriteModel.WhenItemCreated
-CQRSCode.WriteModel.Commands,DeactivateInventoryItem,0,1,2,0,1,10,1,0,0,-1,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
-CQRSCode.WriteModel.Commands,RemoveItemsFromInventory,1,1,2,1,1,12,1,0,0,0,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
-CQRSCode.WriteModel.Commands,RenameInventoryItem,1,1,2,1,1,12,1,0,0,0,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
-CQRSCode.WriteModel.Domain,InventoryItem,1,8,0,0,5,39,12,0,0,0.75,2,1,CQRSCode.ReadModel.Events.InventoryItemCreated' CQRSCode.ReadModel.Events.InventoryItemDeactivated,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
-CQRSCode.WriteModel.Handlers,InventoryCommandHandlers,1,6,0,0,6,42,6,0,0,0,6,3,CQRSCode.WriteModel.Domain.InventoryItem' CQRSCode.WriteModel.Commands.CreateInventoryItem' CQRSCode.WriteModel.Commands.DeactivateInventoryItem' CQRSCode.WriteModel.Commands.RemoveItemsFromInventory' CQRSCode.WriteModel.Commands.CheckInItemsToInventory' CQRSCode.WriteModel.Commands.RenameInventoryItem,CQRSWeb.Startup' CQRSTest.WriteModel.When_item_checked_in' CQRSTest.WriteModel.WhenItemCreated
-CQRSCode.WriteModel,InMemoryEventStore,2,3,0,0,3,28,5,0,0,0,0,0,,
+CQRSCode.ReadModel.Dtos,InventoryItemDetailsDto,4,1,0,4,1,14,1,0,0,0,0,3,,CQRSCode.ReadModel.Queries.GetInventoryItemDetails' CQRSCode.ReadModel.Infrastructure.InMemoryDatabase' CQRSCode.ReadModel.Handlers.InventoryItemDetailView
+CQRSCode.ReadModel.Dtos,InventoryItemListDto,2,1,0,2,1,10,1,0,0,0,0,3,,CQRSCode.ReadModel.Queries.GetInventoryItems' CQRSCode.ReadModel.Infrastructure.InMemoryDatabase' CQRSCode.ReadModel.Handlers.InventoryListView
+CQRSCode.ReadModel.Events,InventoryItemCreated,1,1,3,1,1,12,1,0,2,0,0,3,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.ReadModel.Handlers.InventoryListView' CQRSCode.WriteModel.Domain.InventoryItem
+CQRSCode.ReadModel.Events,InventoryItemDeactivated,0,1,3,0,1,10,1,0,2,-1,0,3,,CQRSCode.ReadModel.Handlers.InventoryListView' CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.WriteModel.Domain.InventoryItem
+CQRSCode.ReadModel.Events,InventoryItemRenamed,1,1,3,1,1,13,1,0,2,0,0,3,,CQRSCode.ReadModel.Handlers.InventoryListView' CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.WriteModel.Domain.InventoryItem
+CQRSCode.ReadModel.Events,ItemsCheckedInToInventory,1,1,3,1,1,13,1,0,2,0,0,2,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.WriteModel.Domain.InventoryItem
+CQRSCode.ReadModel.Events,ItemsRemovedFromInventory,1,1,3,1,1,13,1,0,2,0,0,2,,CQRSCode.ReadModel.Handlers.InventoryItemDetailView' CQRSCode.WriteModel.Domain.InventoryItem
+CQRSCode.ReadModel.Handlers,InventoryItemDetailView,0,7,0,0,6,52,8,0,2,-1,8,0,CQRSCode.ReadModel.Dtos.InventoryItemDetailsDto' CQRSCode.ReadModel.Events.InventoryItemCreated' CQRSCode.ReadModel.Events.InventoryItemDeactivated' CQRSCode.ReadModel.Events.InventoryItemRenamed' CQRSCode.ReadModel.Events.ItemsCheckedInToInventory' CQRSCode.ReadModel.Events.ItemsRemovedFromInventory' CQRSCode.ReadModel.Infrastructure.InMemoryDatabase' CQRSCode.ReadModel.Queries.GetInventoryItemDetails,
+CQRSCode.ReadModel.Handlers,InventoryListView,0,4,0,0,4,26,4,0,2,-1,6,0,CQRSCode.ReadModel.Dtos.InventoryItemListDto' CQRSCode.ReadModel.Events.InventoryItemCreated' CQRSCode.ReadModel.Events.InventoryItemDeactivated' CQRSCode.ReadModel.Events.InventoryItemRenamed' CQRSCode.ReadModel.Infrastructure.InMemoryDatabase' CQRSCode.ReadModel.Queries.GetInventoryItems,
+CQRSCode.ReadModel.Infrastructure,InMemoryDatabase,2,0,0,2,0,5,0,0,0,-1,2,2,CQRSCode.ReadModel.Dtos.InventoryItemDetailsDto' CQRSCode.ReadModel.Dtos.InventoryItemListDto,CQRSCode.ReadModel.Handlers.InventoryListView' CQRSCode.ReadModel.Handlers.InventoryItemDetailView
+CQRSCode.ReadModel.Queries,GetInventoryItemDetails,0,1,1,0,1,8,1,0,2,-1,1,1,CQRSCode.ReadModel.Dtos.InventoryItemDetailsDto,CQRSCode.ReadModel.Handlers.InventoryItemDetailView
+CQRSCode.ReadModel.Queries,GetInventoryItems,0,0,0,0,0,3,0,0,2,-1,1,1,CQRSCode.ReadModel.Dtos.InventoryItemListDto,CQRSCode.ReadModel.Handlers.InventoryListView
+CQRSCode.WriteModel.Commands,CheckInItemsToInventory,1,1,2,1,1,12,1,0,2,0,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
+CQRSCode.WriteModel.Commands,CreateInventoryItem,1,1,2,1,1,12,1,0,2,0,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
+CQRSCode.WriteModel.Commands,DeactivateInventoryItem,0,1,2,0,1,10,1,0,2,-1,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
+CQRSCode.WriteModel.Commands,RemoveItemsFromInventory,1,1,2,1,1,12,1,0,2,0,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
+CQRSCode.WriteModel.Commands,RenameInventoryItem,1,1,2,1,1,12,1,0,2,0,0,1,,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
+CQRSCode.WriteModel.Domain,InventoryItem,1,8,0,0,5,39,12,0,1,0.75,5,1,CQRSCode.ReadModel.Events.InventoryItemCreated' CQRSCode.ReadModel.Events.InventoryItemDeactivated' CQRSCode.ReadModel.Events.InventoryItemRenamed' CQRSCode.ReadModel.Events.ItemsCheckedInToInventory' CQRSCode.ReadModel.Events.ItemsRemovedFromInventory,CQRSCode.WriteModel.Handlers.InventoryCommandHandlers
+CQRSCode.WriteModel.Handlers,InventoryCommandHandlers,1,6,0,0,6,42,6,0,2,0,6,0,CQRSCode.WriteModel.Commands.CheckInItemsToInventory' CQRSCode.WriteModel.Commands.CreateInventoryItem' CQRSCode.WriteModel.Commands.DeactivateInventoryItem' CQRSCode.WriteModel.Commands.RemoveItemsFromInventory' CQRSCode.WriteModel.Commands.RenameInventoryItem' CQRSCode.WriteModel.Domain.InventoryItem,
+CQRSCode.WriteModel,InMemoryEventStore,2,3,0,0,3,28,5,0,1,0,0,0,,

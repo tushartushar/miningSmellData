@@ -1,16 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-GitHubAPI,ApiBase,3,3,2,1,0,51,5,1,0,1,0,0,,
-GitHubAPI,GithubRestApiClient,1,5,1,0,5,46,5,0,1,0.4,0,20,,GitHubAPI.Api.Activity.ActivityEvents' GitHubAPI.Api.Issues.Issues' GitHubAPI.Api.Issues.IssuesComments' GitHubAPI.Api.Repositories.RepositoriesCollaborators' GitHubAPI.Api.Users.Users' GitHubAPI.IntegrationTests.GetIssuesTestsBase' GitHubAPI.IntegrationTests.when_retrieving_issues_unauthenticated' GitHubAPI.IntegrationTests.when_retrieving_issues_authenticated' GitHubAPI.IntegrationTests.CreateIssueTestsBase' GitHubAPI.IntegrationTests.when_creating_issues_unauthenticated' GitHubAPI.IntegrationTests.when_creating_issues_authenticated_to_nonexistant_repo' GitHubAPI.IntegrationTests.when_creating_issues_authenticated_to_unauthorized_repo' GitHubAPI.IntegrationTests.when_creating_issues_authenticated_to_authorized_repo' GitHubAPI.IntegrationTests.EditIssueTestsBase' GitHubAPI.IntegrationTests.when_editing_issues_authenticated_to_existent_issue' GitHubAPI.IntegrationTests.UsersTestsBase' GitHubAPI.IntegrationTests.when_retrieving_unauthenticated_user' GitHubAPI.IntegrationTests.when_retrieving_the_authenticated_user' GitHubAPI.IntegrationTests.when_getting_the_list_of_users' GitHubAPI.IntegrationTests.when_updating_a_user
+GitHubAPI,ApiBase,3,3,2,1,0,51,5,1,0,1,1,0,GitHubAPI.Exceptions.GitHubResponseException,
+GitHubAPI,GithubRestApiClient,1,5,1,0,5,46,5,0,1,0.4,0,5,,GitHubAPI.Api.Repositories.RepositoriesCollaborators' GitHubAPI.Api.Issues.IssuesComments' GitHubAPI.Api.Activity.ActivityEvents' GitHubAPI.Api.Issues.Issues' GitHubAPI.Api.Users.Users
 GitHubAPI,LogExtensions,1,2,0,0,2,27,2,0,0,0,0,0,,
 GitHubAPI,RestSharpRestResponseExtension,0,2,0,0,2,16,2,0,0,-1,1,0,GitHubAPI.SimpleJson,
-GitHubAPI,JsonArray,0,6,0,0,6,55,6,0,0,-1,1,2,GitHubAPI.SimpleJson,GitHubAPI.SimpleJson' Reflection.SimpleJson
-GitHubAPI,JsonObject,2,44,8,0,40,683,78,0,0,0.34,1,0,GitHubAPI.SimpleJson,
-GitHubAPI,SimpleJson,30,50,4,0,18,1299,158,0,0,0.18,3,5,GitHubAPI.IJsonSerializerStrategy' GitHubAPI.PocoJsonSerializerStrategy' GitHubAPI.JsonArray,GitHubAPI.RestSharpRestResponseExtension' GitHubAPI.JsonArray' GitHubAPI.JsonObject' Reflection.JsonArray' Reflection.JsonObject
-GitHubAPI,IJsonSerializerStrategy,0,4,0,0,0,23,4,2,0,-1,0,2,,GitHubAPI.SimpleJson' Reflection.SimpleJson
-GitHubAPI,PocoJsonSerializerStrategy,12,20,0,0,6,495,74,0,1,0.2,0,2,,GitHubAPI.SimpleJson' Reflection.SimpleJson
-GitHubAPI,ReflectionUtils,2,68,0,0,68,857,90,0,0,0.99,0,0,,
-GitHubAPI,Assigner<T>,0,2,0,0,2,13,2,0,0,-1,0,0,,
-GitHubAPI,ThreadSafeDictionary<TKey;TValue>,6,28,8,0,22,213,32,0,0,0.61,0,0,,
+GitHubAPI,JsonArray,0,6,0,0,6,55,6,0,0,-1,1,1,GitHubAPI.SimpleJson,GitHubAPI.SimpleJson
+GitHubAPI,JsonObject,2,44,8,0,40,683,78,0,0,0.34,1,2,GitHubAPI.SimpleJson,GitHubAPI.SimpleJson' GitHubAPI.PocoJsonSerializerStrategy
+GitHubAPI,SimpleJson,30,50,4,0,18,1299,280,0,0,0.18,5,3,GitHubAPI.JsonArray' GitHubAPI.JsonObject' GitHubAPI.IJsonSerializerStrategy' GitHubAPI.PocoJsonSerializerStrategy' Reflection.ReflectionUtils,GitHubAPI.RestSharpRestResponseExtension' GitHubAPI.JsonArray' GitHubAPI.JsonObject
+GitHubAPI,IJsonSerializerStrategy,0,4,0,0,0,23,4,1,0,-1,0,2,,GitHubAPI.SimpleJson' GitHubAPI.PocoJsonSerializerStrategy
+GitHubAPI,PocoJsonSerializerStrategy,12,20,0,0,6,495,110,0,1,0.2,4,1,GitHubAPI.JsonObject' GitHubAPI.IJsonSerializerStrategy' Reflection.ReflectionUtils' Reflection.ThreadSafeDictionary<TKey;TValue>,GitHubAPI.SimpleJson
 GitHubAPI.Api.Activity,ActivityEvents,0,1,0,0,1,7,1,0,0,-1,1,0,GitHubAPI.GithubRestApiClient,
 GitHubAPI.Api.Activity,ActivityNotifications,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Activity,ActivityStarring,0,0,0,0,0,3,0,0,0,-1,0,0,,
@@ -20,9 +17,9 @@ GitHubAPI.Api.GitData,GitDataCommits,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.GitData,GitDataReferences,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.GitData,GitDataTags,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.GitData,GitDataTrees,0,0,0,0,0,3,0,0,0,-1,0,0,,
-GitHubAPI.Api.Issues,Issues,1,4,0,0,3,87,9,0,0,0.5,2,0,GitHubAPI.Resource.IRestRequestFactory' GitHubAPI.GithubRestApiClient,
+GitHubAPI.Api.Issues,Issues,1,4,0,0,3,87,9,0,0,0.5,1,1,GitHubAPI.GithubRestApiClient,GitHubAPI.Api.Issues.IssuesComments
 GitHubAPI.Api.Issues,IssuesAssignees,0,0,0,0,0,3,0,0,0,-1,0,0,,
-GitHubAPI.Api.Issues,IssuesComments,1,2,0,0,1,38,3,0,0,0,2,0,GitHubAPI.Resource.IRestRequestFactory' GitHubAPI.GithubRestApiClient,
+GitHubAPI.Api.Issues,IssuesComments,1,2,0,0,1,38,3,0,0,0,2,0,GitHubAPI.GithubRestApiClient' GitHubAPI.Api.Issues.Issues,
 GitHubAPI.Api.Issues,IssuesEvents,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Issues,IssuesLabels,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Issues,IssuesMilestones,0,0,0,0,0,3,0,0,0,-1,0,0,,
@@ -30,7 +27,7 @@ GitHubAPI.Api.Orgs,Orgs,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Orgs,OrgsMembers,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Orgs,OrgsTeams,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Repositories,Repositories,0,0,0,0,0,3,0,0,0,-1,0,0,,
-GitHubAPI.Api.Repositories,RepositoriesCollaborators,0,1,0,0,1,24,1,0,0,-1,2,0,GitHubAPI.Resource.IRestRequestFactory' GitHubAPI.GithubRestApiClient,
+GitHubAPI.Api.Repositories,RepositoriesCollaborators,0,1,0,0,1,24,1,0,0,-1,1,0,GitHubAPI.GithubRestApiClient,
 GitHubAPI.Api.Repositories,RepositoriesComments,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Repositories,RepositoriesCommits,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Repositories,RepositoriesContent,0,0,0,0,0,3,0,0,0,-1,0,0,,
@@ -40,41 +37,36 @@ GitHubAPI.Api.Repositories,RepositoriesHooks,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Repositories,RepositoriesKeys,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Repositories,RepositoriesMerging,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.Repositories,RepositoriesStatuses,0,0,0,0,0,3,0,0,0,-1,0,0,,
-GitHubAPI.Api.Users,Users,1,6,0,0,5,211,6,0,0,0.83,2,0,GitHubAPI.Resource.IRestRequestFactory' GitHubAPI.GithubRestApiClient,
-GitHubAPI.Core,IHeader,0,0,2,0,0,5,0,1,0,-1,0,2,,GitHubAPI.Core.IHeaderProvider' GitHubAPI.Core.HeaderProvider
-GitHubAPI.Core,Header,0,4,2,0,4,38,8,0,1,-1,0,1,,GitHubAPI.IntegrationTests.when_new_object_instance_instantiated
-GitHubAPI.Core,IHeaderProvider,0,2,1,0,0,6,2,1,0,-1,1,1,GitHubAPI.Core.IHeader,GitHubAPI.Resource.RestRequestFactory
-GitHubAPI.Core,HeaderProvider,1,2,1,0,2,22,4,0,1,1,1,2,GitHubAPI.Core.IHeader,GitHubAPI.IntegrationTests.HeaderProviderTestsBase' GitHubAPI.IntegrationTests.when_new_object_instance_instantiated
+GitHubAPI.Api.Users,Users,1,6,0,0,5,211,6,0,0,0.83,1,0,GitHubAPI.GithubRestApiClient,
+GitHubAPI.Core,IHeader,0,0,2,0,0,5,0,1,0,-1,0,3,,GitHubAPI.Core.Header' GitHubAPI.Core.IHeaderProvider' GitHubAPI.Core.HeaderProvider
+GitHubAPI.Core,Header,0,4,2,0,4,38,8,0,1,-1,1,0,GitHubAPI.Core.IHeader,
+GitHubAPI.Core,IHeaderProvider,0,2,1,0,0,6,2,1,0,-1,1,2,GitHubAPI.Core.IHeader,GitHubAPI.Resource.RestRequestFactory' GitHubAPI.Core.HeaderProvider
+GitHubAPI.Core,HeaderProvider,1,2,1,0,2,22,4,0,1,1,2,0,GitHubAPI.Core.IHeader' GitHubAPI.Core.IHeaderProvider,
 GitHubAPI.Exceptions,GitHubAuthorizationException,0,4,0,0,3,11,4,0,0,-1,0,0,,
-GitHubAPI.Exceptions,GitHubResponseException,0,4,1,0,3,18,4,0,0,-1,0,1,,GitHubAPI.Extensions.MiscExtensions
+GitHubAPI.Exceptions,GitHubResponseException,0,4,1,0,3,18,4,0,0,-1,0,2,,GitHubAPI.ApiBase' GitHubAPI.Extensions.MiscExtensions
 GitHubAPI.Extensions,MiscExtensions,0,2,0,0,2,22,3,0,0,-1,1,0,GitHubAPI.Exceptions.GitHubResponseException,
 GitHubAPI.Api.Gists,Gists,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Lib,JsonArray,0,3,0,0,3,27,3,0,0,-1,1,1,GitHubAPI.Lib.SimpleJson,GitHubAPI.Lib.SimpleJson
-GitHubAPI.Lib,JsonObject,1,22,4,0,20,338,36,0,0,0.36,1,0,GitHubAPI.Lib.SimpleJson,
-GitHubAPI.Lib,SimpleJson,15,25,2,0,9,635,79,0,0,0.08,4,2,GitHubAPI.Lib.IJsonSerializerStrategy' GitHubAPI.Lib.PocoJsonSerializerStrategy' GitHubAPI.Lib.ReflectionUtils' GitHubAPI.Lib.JsonArray,GitHubAPI.Lib.JsonArray' GitHubAPI.Lib.JsonObject
-GitHubAPI.Lib,IJsonSerializerStrategy,0,2,0,0,0,9,2,1,0,-1,0,1,,GitHubAPI.Lib.SimpleJson
-GitHubAPI.Lib,PocoJsonSerializerStrategy,6,9,0,0,3,222,29,0,1,0.44,1,1,GitHubAPI.Lib.ReflectionUtils,GitHubAPI.Lib.SimpleJson
-GitHubAPI.Lib,ReflectionUtils,1,34,0,0,34,425,45,0,0,0.47,0,2,,GitHubAPI.Lib.SimpleJson' GitHubAPI.Lib.PocoJsonSerializerStrategy
-GitHubAPI.Lib,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,0,,
-GitHubAPI.Lib,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,16,0,0,0.64,0,0,,
+GitHubAPI.Lib,JsonObject,1,22,4,0,20,338,36,0,0,0.36,1,2,GitHubAPI.Lib.SimpleJson,GitHubAPI.Lib.SimpleJson' GitHubAPI.Lib.PocoJsonSerializerStrategy
+GitHubAPI.Lib,SimpleJson,15,25,2,0,9,635,140,0,0,0.08,5,2,GitHubAPI.Lib.JsonArray' GitHubAPI.Lib.JsonObject' GitHubAPI.Lib.IJsonSerializerStrategy' GitHubAPI.Lib.PocoJsonSerializerStrategy' GitHubAPI.Lib.ReflectionUtils,GitHubAPI.Lib.JsonArray' GitHubAPI.Lib.JsonObject
+GitHubAPI.Lib,IJsonSerializerStrategy,0,2,0,0,0,9,2,1,0,-1,0,2,,GitHubAPI.Lib.SimpleJson' GitHubAPI.Lib.PocoJsonSerializerStrategy
+GitHubAPI.Lib,PocoJsonSerializerStrategy,6,9,0,0,3,222,50,0,1,0.44,4,1,GitHubAPI.Lib.JsonObject' GitHubAPI.Lib.IJsonSerializerStrategy' GitHubAPI.Lib.ReflectionUtils' GitHubAPI.Lib.ThreadSafeDictionary<TKey;TValue>,GitHubAPI.Lib.SimpleJson
+GitHubAPI.Lib,ReflectionUtils,1,34,0,0,34,425,45,0,0,0.47,1,2,GitHubAPI.Lib.Assigner<T>,GitHubAPI.Lib.SimpleJson' GitHubAPI.Lib.PocoJsonSerializerStrategy
+GitHubAPI.Lib,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,1,,GitHubAPI.Lib.ReflectionUtils
+GitHubAPI.Lib,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,18,0,0,0.64,0,1,,GitHubAPI.Lib.PocoJsonSerializerStrategy
 GitHubAPI.Api.PullRequests,PullRequests,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Api.PullRequests,PullRequestsReviewComments,0,0,0,0,0,3,0,0,0,-1,0,0,,
 GitHubAPI.Models,AuthenticatedUser,0,0,0,0,0,33,0,0,0,-1,0,0,,
 GitHubAPI.Models,IssueComment,0,3,3,0,3,55,5,0,0,-1,0,0,,
-GitHubAPI.Models,Issue,0,3,4,0,3,43,5,0,0,-1,0,2,,GitHubAPI.IntegrationTests.EditIssueTestsBase' GitHubAPI.IntegrationTests.when_editing_issues_authenticated_to_existent_issue
+GitHubAPI.Models,Issue,0,3,4,0,3,43,5,0,0,-1,1,0,GitHubAPI.Models.User,
 GitHubAPI.Models,Following,0,0,4,0,0,7,0,0,0,-1,0,0,,
-GitHubAPI.Models,Plan,0,3,4,0,3,44,5,0,0,-1,0,0,,
+GitHubAPI.Models,Plan,0,3,4,0,3,44,5,0,0,-1,0,1,,GitHubAPI.Models.User
 GitHubAPI.Models,UpdateableUser,0,0,7,0,0,10,0,1,0,-1,0,1,,GitHubAPI.Models.User
-GitHubAPI.Models,User,0,3,12,0,3,57,4,0,1,-1,1,0,GitHubAPI.Models.UpdateableUser,
+GitHubAPI.Models,User,0,3,12,0,3,57,4,0,1,-1,2,1,GitHubAPI.Models.Plan' GitHubAPI.Models.UpdateableUser,GitHubAPI.Models.Issue
 GitHubAPI.Models,Users,0,4,15,0,3,72,7,0,0,-1,0,0,,
-GitHubAPI.Resource,IRestRequestFactory,0,3,0,0,0,6,3,1,0,-1,0,5,,GitHubAPI.Api.Issues.Issues' GitHubAPI.Api.Issues.IssuesComments' GitHubAPI.Api.Repositories.RepositoriesCollaborators' GitHubAPI.Api.Users.Users' GitHubAPI.Tests.RestRequestFactoryTests
-GitHubAPI.Resource,RestRequestFactory,1,4,0,0,4,54,4,0,1,0.5,1,0,GitHubAPI.Core.IHeaderProvider,
+GitHubAPI.Resource,IRestRequestFactory,0,3,0,0,0,6,3,1,0,-1,0,1,,GitHubAPI.Resource.RestRequestFactory
+GitHubAPI.Resource,RestRequestFactory,1,4,0,0,4,54,4,0,1,0.5,2,0,GitHubAPI.Core.IHeaderProvider' GitHubAPI.Resource.IRestRequestFactory,
 GitHubAPI.Api.Search,Search,0,0,0,0,0,3,0,0,0,-1,0,0,,
-Reflection,JsonArray,0,3,0,0,3,28,3,0,0,-1,1,0,GitHubAPI.SimpleJson,
-Reflection,JsonObject,1,22,4,0,20,342,39,0,0,0.36,1,0,GitHubAPI.SimpleJson,
-Reflection,SimpleJson,15,25,2,0,9,650,79,0,0,0.84,3,0,GitHubAPI.IJsonSerializerStrategy' GitHubAPI.PocoJsonSerializerStrategy' GitHubAPI.JsonArray,
-Reflection,IJsonSerializerStrategy,0,2,0,0,0,12,2,0,0,-1,0,0,,
-Reflection,PocoJsonSerializerStrategy,6,10,0,0,3,248,37,0,1,0.7,0,0,,
-Reflection,ReflectionUtils,1,34,0,0,34,429,45,0,0,1,0,0,,
-Reflection,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Reflection,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,16,0,0,0.64,0,0,,
+Reflection,ReflectionUtils,1,34,0,0,34,429,45,0,0,1,1,2,Reflection.Assigner<T>,GitHubAPI.SimpleJson' GitHubAPI.PocoJsonSerializerStrategy
+Reflection,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,1,,Reflection.ReflectionUtils
+Reflection,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,18,0,0,0.64,0,1,,GitHubAPI.PocoJsonSerializerStrategy

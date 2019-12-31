@@ -1,0 +1,12 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DurableTask.Redis.Tests,ConfigurationTests,0,4,0,0,4,71,4,0,0,-1,0,0,,
+DurableTask.Redis.Tests,EndToEndServiceScenarioTests,0,6,0,0,6,154,9,0,0,-1,7,0,DurableTask.Redis.Tests.TestHelpers' DurableTask.Test.Orchestrations.SimplestGetUserTask' DurableTask.Test.Orchestrations.SimplestGreetingsOrchestration' DurableTask.Test.Orchestrations.SimplestSendGreetingTask' DurableTask.Test.Orchestrations.FanOutOrchestration' DurableTask.Test.Orchestrations.SquareIntTask' DurableTask.Test.Orchestrations.SumIntTask,
+DurableTask.Redis.Tests,TestHelpers,1,3,0,0,2,36,4,0,0,0,1,1,DurableTask.Redis.Tests.RedisTestConfig,DurableTask.Redis.Tests.EndToEndServiceScenarioTests
+DurableTask.Redis.Tests,RedisTestConfig,0,0,1,0,0,4,0,0,0,-1,0,1,,DurableTask.Redis.Tests.TestHelpers
+DurableTask.Redis.Tests,TestOrchestrationClient,4,7,1,0,5,101,11,0,0,0.29,0,0,,
+DurableTask.Test.Orchestrations,SimplestGetUserTask,0,1,0,0,0,7,1,0,0,-1,0,2,,DurableTask.Test.Orchestrations.SimplestGreetingsOrchestration' DurableTask.Redis.Tests.EndToEndServiceScenarioTests
+DurableTask.Test.Orchestrations,SimplestGreetingsOrchestration,1,1,0,1,1,18,2,0,0,0,2,1,DurableTask.Test.Orchestrations.SimplestGetUserTask' DurableTask.Test.Orchestrations.SimplestSendGreetingTask,DurableTask.Redis.Tests.EndToEndServiceScenarioTests
+DurableTask.Test.Orchestrations,SimplestSendGreetingTask,0,1,0,0,0,7,1,0,0,-1,0,2,,DurableTask.Redis.Tests.EndToEndServiceScenarioTests' DurableTask.Test.Orchestrations.SimplestGreetingsOrchestration
+DurableTask.Test.Orchestrations,FanOutOrchestration,1,1,0,1,1,18,2,0,0,0,2,1,DurableTask.Test.Orchestrations.SquareIntTask' DurableTask.Test.Orchestrations.SumIntTask,DurableTask.Redis.Tests.EndToEndServiceScenarioTests
+DurableTask.Test.Orchestrations,SquareIntTask,0,1,0,0,0,7,1,0,0,-1,0,2,,DurableTask.Test.Orchestrations.FanOutOrchestration' DurableTask.Redis.Tests.EndToEndServiceScenarioTests
+DurableTask.Test.Orchestrations,SumIntTask,0,1,0,0,0,12,2,0,0,-1,0,2,,DurableTask.Test.Orchestrations.FanOutOrchestration' DurableTask.Redis.Tests.EndToEndServiceScenarioTests

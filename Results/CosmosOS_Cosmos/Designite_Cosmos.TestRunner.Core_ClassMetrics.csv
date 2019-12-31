@@ -1,0 +1,20 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Cosmos.TestRunner.Core,Engine,6,28,11,0,5,664,74,1,0,0.32,0,0,,
+Cosmos.TestRunner.Core,RunTargetEnum,0,0,0,0,0,6,0,0,0,-1,0,2,,Cosmos.TestRunner.Core.RunConfiguration' Cosmos.TestRunner.Core.IEngineConfiguration
+Cosmos.TestRunner.Core,IEngineConfiguration,0,0,10,0,0,27,0,2,0,-1,1,0,Cosmos.TestRunner.Core.RunTargetEnum,
+Cosmos.TestRunner.Core,IKernelTestResult,0,0,4,0,0,7,0,1,0,-1,1,3,Cosmos.TestRunner.Core.RunConfiguration,Cosmos.TestRunner.Core.KernelTestResult' Cosmos.TestRunner.Core.ITestResult' Cosmos.TestRunner.Core.TestResult
+Cosmos.TestRunner.Core,ITestResult,0,0,1,0,0,4,0,1,0,-1,1,2,Cosmos.TestRunner.Core.IKernelTestResult,Cosmos.TestRunner.Core.TestResult' Cosmos.TestRunner.Core.TestResultExtensions
+Cosmos.TestRunner.Core,KernelTestResult,0,1,4,0,1,14,1,0,1,-1,2,0,Cosmos.TestRunner.Core.IKernelTestResult' Cosmos.TestRunner.Core.RunConfiguration,
+Cosmos.TestRunner.Core,MultiplexingOutputHandler,1,16,0,0,15,71,17,0,1,0.94,2,0,Cosmos.TestRunner.Core.OutputHandlerBasic' Cosmos.TestRunner.Core.RunConfiguration,
+Cosmos.TestRunner.Core,OutputHandlerBase,1,29,0,0,14,86,30,3,1,0.52,2,3,Cosmos.TestRunner.Core.OutputHandlerBasic' Cosmos.TestRunner.Core.RunConfiguration,Cosmos.TestRunner.Core.OutputHandlerTextBase' Cosmos.TestRunner.Core.OutputHandlerXml' Cosmos.TestRunner.Core.OutputHandlerFullTextBase
+Cosmos.TestRunner.Core,OutputHandlerBasic,0,14,0,0,14,17,14,2,0,-1,1,2,Cosmos.TestRunner.Core.RunConfiguration,Cosmos.TestRunner.Core.OutputHandlerBase' Cosmos.TestRunner.Core.MultiplexingOutputHandler
+Cosmos.TestRunner.Core,OutputHandlerConsole,0,1,0,0,0,9,1,0,1,-1,1,0,Cosmos.TestRunner.Core.OutputHandlerTextBase,
+Cosmos.TestRunner.Core,OutputHandlerFullConsole,0,1,0,0,0,9,1,0,1,-1,1,0,Cosmos.TestRunner.Core.OutputHandlerFullTextBase,
+Cosmos.TestRunner.Core,OutputHandlerFullTextBase,6,15,0,0,0,91,16,4,2,0.4,2,2,Cosmos.TestRunner.Core.OutputHandlerBase' Cosmos.TestRunner.Core.RunConfiguration,Cosmos.TestRunner.Core.OutputHandlerFullConsole' Cosmos.TestRunner.Core.TestResultOutputHandler
+Cosmos.TestRunner.Core,OutputHandlerTextBase,6,15,0,0,0,90,16,1,2,0.4,2,1,Cosmos.TestRunner.Core.OutputHandlerBase' Cosmos.TestRunner.Core.RunConfiguration,Cosmos.TestRunner.Core.OutputHandlerConsole
+Cosmos.TestRunner.Core,OutputHandlerXml,9,17,0,0,2,179,27,0,2,0.12,2,0,Cosmos.TestRunner.Core.OutputHandlerBase' Cosmos.TestRunner.Core.RunConfiguration,
+Cosmos.TestRunner.Core,RunConfiguration,0,1,2,0,1,10,1,0,0,-1,1,8,Cosmos.TestRunner.Core.RunTargetEnum,Cosmos.TestRunner.Core.OutputHandlerBasic' Cosmos.TestRunner.Core.OutputHandlerFullTextBase' Cosmos.TestRunner.Core.OutputHandlerXml' Cosmos.TestRunner.Core.KernelTestResult' Cosmos.TestRunner.Core.MultiplexingOutputHandler' Cosmos.TestRunner.Core.IKernelTestResult' Cosmos.TestRunner.Core.OutputHandlerBase' Cosmos.TestRunner.Core.OutputHandlerTextBase
+Cosmos.TestRunner.Core,TaskFailedException,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Cosmos.TestRunner.Core,TestResult,1,2,1,0,2,13,2,0,1,0,2,0,Cosmos.TestRunner.Core.IKernelTestResult' Cosmos.TestRunner.Core.ITestResult,
+Cosmos.TestRunner.Core,TestResultExtensions,1,2,0,0,2,50,5,0,0,0,1,0,Cosmos.TestRunner.Core.ITestResult,
+Cosmos.TestRunner.Core,TestResultOutputHandler,1,2,1,0,1,13,2,0,3,0,1,0,Cosmos.TestRunner.Core.OutputHandlerFullTextBase,

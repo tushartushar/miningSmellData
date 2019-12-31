@@ -1,23 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 YAPA,Const,5,0,0,5,0,15,0,0,0,-1,0,1,,YAPA.MainWindow
-YAPA,DatabaseContext,0,0,1,0,0,4,0,0,0,-1,0,1,,YAPA.ItemRepository
-YAPA,PomodoroEntity,0,1,3,0,1,16,1,0,0,-1,2,3,YAPA.PomodoroViewModel' YAPA.PomodoroLevelEnum,YAPA.ItemRepository' YAPA.Settings' YAPA.MainWindow
-YAPA,PomodoroViewModel,0,0,3,0,0,6,0,0,0,-1,0,2,,YAPA.PomodoroEntity' YAPA.PomodoroWeek
-YAPA,DismissSettings,1,3,0,0,3,32,3,0,0,0.67,2,0,YAPA.ISettingsViewModel' YAPA.Properties.Settings,
-YAPA,IMainViewModel,0,0,17,0,0,62,0,1,0,-1,0,2,,YAPA.Settings' YAPA.ShowSettings
-YAPA,ISettingsViewModel,0,1,12,0,0,56,1,1,0,-1,0,2,,YAPA.DismissSettings' YAPA.SaveSettings
+YAPA,DatabaseContext,0,0,1,0,0,4,0,0,0,-1,1,1,YAPA.PomodoroEntity,YAPA.ItemRepository
+YAPA,PomodoroEntity,0,1,3,0,1,16,1,0,0,-1,2,2,YAPA.PomodoroViewModel' YAPA.PomodoroLevelEnum,YAPA.DatabaseContext' YAPA.ItemRepository
+YAPA,PomodoroViewModel,0,0,3,0,0,6,0,0,0,-1,1,2,YAPA.PomodoroLevelEnum,YAPA.PomodoroWeek' YAPA.PomodoroEntity
+YAPA,DismissSettings,1,3,0,0,3,32,3,0,0,0.67,2,1,YAPA.ISettingsViewModel' YAPA.Properties.Settings,YAPA.Settings
+YAPA,IMainViewModel,0,0,17,0,0,62,0,1,0,-1,0,3,,YAPA.MainWindow' YAPA.ShowSettings' YAPA.Settings
+YAPA,ISettingsViewModel,0,1,12,0,0,56,1,1,0,-1,0,3,,YAPA.SaveSettings' YAPA.Settings' YAPA.DismissSettings
 YAPA,ItemRepository,1,5,0,0,5,45,6,0,0,0,2,2,YAPA.DatabaseContext' YAPA.PomodoroEntity,YAPA.Settings' YAPA.MainWindow
-YAPA,PomodoroLevelEnum,0,0,0,0,0,8,0,0,0,-1,0,3,,YAPA.PomodoroEntity' YAPA.PomodoroWeek' YAPA.Settings
-YAPA,PomodoroWeek,2,3,0,0,2,112,11,0,0,0,2,0,YAPA.PomodoroViewModel' YAPA.PomodoroLevelEnum,
-YAPA,SaveSettings,1,3,0,0,3,32,3,0,0,0.67,2,0,YAPA.ISettingsViewModel' YAPA.Properties.Settings,
-YAPA,Settings,30,14,17,0,3,605,26,0,1,0.36,5,1,YAPA.IMainViewModel' YAPA.ItemRepository' YAPA.PomodoroEntity' YAPA.Properties.Settings' YAPA.PomodoroLevelEnum,YAPA.ShowSettings
-YAPA,ShowSettings,1,3,0,0,3,31,3,0,0,0.67,2,0,YAPA.IMainViewModel' YAPA.Settings,
-YAPA,App,1,5,0,0,4,67,8,0,1,0.4,1,0,YAPA.MainWindow,
-YAPA,MainWindow,30,30,20,0,4,912,68,0,1,0.13,4,1,YAPA.ItemRepository' YAPA.Properties.Settings' YAPA.Const' YAPA.PomodoroEntity,YAPA.App
-Microsoft.Shell,WM,0,0,0,0,0,104,0,0,0,-1,0,0,,
-Microsoft.Shell,NativeMethods,0,3,0,0,1,40,5,0,0,-1,0,1,,Microsoft.Shell.SingleInstance<TApplication>
-Microsoft.Shell,ISingleInstanceApp,0,1,0,0,0,4,1,1,0,-1,0,0,,
-Microsoft.Shell,SingleInstance<TApplication>,7,7,1,0,2,231,14,0,0,0.57,2,0,Microsoft.Shell.NativeMethods' Microsoft.Shell.IPCRemoteService,
+YAPA,PomodoroLevelEnum,0,0,0,0,0,8,0,0,0,-1,0,4,,YAPA.Settings' YAPA.PomodoroEntity' YAPA.PomodoroViewModel' YAPA.PomodoroWeek
+YAPA,PomodoroWeek,2,3,0,0,2,112,13,0,0,0,2,1,YAPA.PomodoroViewModel' YAPA.PomodoroLevelEnum,YAPA.Settings
+YAPA,SaveSettings,1,3,0,0,3,32,3,0,0,0.67,2,1,YAPA.ISettingsViewModel' YAPA.Properties.Settings,YAPA.Settings
+YAPA,Settings,30,14,17,0,3,605,40,0,1,0.36,8,1,YAPA.DismissSettings' YAPA.IMainViewModel' YAPA.ISettingsViewModel' YAPA.ItemRepository' YAPA.PomodoroLevelEnum' YAPA.PomodoroWeek' YAPA.SaveSettings' YAPA.Properties.Settings,YAPA.ShowSettings
+YAPA,ShowSettings,1,3,0,0,3,31,3,0,0,0.67,2,1,YAPA.IMainViewModel' YAPA.Settings,YAPA.MainWindow
+YAPA,App,1,5,0,0,4,67,8,0,1,0.4,3,0,YAPA.MainWindow' Microsoft.Shell.ISingleInstanceApp' Microsoft.Shell.SingleInstance<TApplication>,
+YAPA,MainWindow,30,30,20,0,4,912,92,0,1,0.13,5,1,YAPA.Const' YAPA.IMainViewModel' YAPA.ItemRepository' YAPA.ShowSettings' YAPA.Properties.Settings,YAPA.App
+Microsoft.Shell,WM,0,0,0,0,0,104,0,0,0,-1,0,1,,Microsoft.Shell.NativeMethods
+Microsoft.Shell,NativeMethods,0,3,0,0,1,40,5,0,0,-1,1,1,Microsoft.Shell.WM,Microsoft.Shell.SingleInstance<TApplication>
+Microsoft.Shell,ISingleInstanceApp,0,1,0,0,0,4,1,1,0,-1,0,2,,YAPA.App' Microsoft.Shell.SingleInstance<TApplication>
+Microsoft.Shell,SingleInstance<TApplication>,7,7,1,0,2,231,15,0,0,0.57,3,1,Microsoft.Shell.NativeMethods' Microsoft.Shell.ISingleInstanceApp' Microsoft.Shell.IPCRemoteService,YAPA.App
 Microsoft.Shell,IPCRemoteService,0,2,0,0,2,25,3,0,0,-1,0,1,,Microsoft.Shell.SingleInstance<TApplication>
 YAPA.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
-YAPA.Properties,Settings,1,0,25,0,0,300,0,0,0,-1,0,4,,YAPA.DismissSettings' YAPA.SaveSettings' YAPA.Settings' YAPA.MainWindow
+YAPA.Properties,Settings,1,0,25,0,0,300,0,0,0,-1,0,4,,YAPA.SaveSettings' YAPA.DismissSettings' YAPA.Settings' YAPA.MainWindow

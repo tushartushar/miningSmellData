@@ -3,18 +3,18 @@ WebApplicationRdn,BundleConfig,0,1,0,0,1,32,1,0,0,-1,0,1,,WebApplicationRdn.WebA
 WebApplicationRdn,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,WebApplicationRdn.WebApiApplication
 WebApplicationRdn,RouteConfig,0,1,0,0,1,15,1,0,0,-1,0,1,,WebApplicationRdn.WebApiApplication
 WebApplicationRdn,WebApiConfig,0,1,0,0,1,11,1,0,0,-1,0,1,,WebApplicationRdn.WebApiApplication
-WebApplicationRdn,WebApiApplication,0,1,0,0,0,11,1,0,0,-1,4,0,WebApplicationRdn.WebApiConfig' WebApplicationRdn.FilterConfig' WebApplicationRdn.RouteConfig' WebApplicationRdn.BundleConfig,
-WebApplicationRdn.Controllers,RCode,0,0,4,0,0,7,0,0,0,-1,0,1,,WebApplicationRdn.Controllers.CodeController
-WebApplicationRdn.Controllers,RResult,1,0,4,1,0,8,0,0,0,-1,0,1,,WebApplicationRdn.Controllers.CodeController
-WebApplicationRdn.Controllers,CodeController,4,4,0,0,2,64,6,0,0,0.5,5,0,WebApplicationRdn.Models.SvgGraphicsDevice' WebApplicationRdn.Models.CharacterDevice' WebApplicationRdn.Models.SymbolicExpressionToResultMapper' WebApplicationRdn.Controllers.RResult' WebApplicationRdn.Controllers.RCode,
+WebApplicationRdn,WebApiApplication,0,1,0,0,0,11,1,0,0,-1,4,0,WebApplicationRdn.BundleConfig' WebApplicationRdn.FilterConfig' WebApplicationRdn.RouteConfig' WebApplicationRdn.WebApiConfig,
+WebApplicationRdn.Controllers,RCode,0,0,4,0,0,7,0,0,0,-1,1,1,WebApplicationRdn.Controllers.RResult,WebApplicationRdn.Controllers.CodeController
+WebApplicationRdn.Controllers,RResult,1,0,4,1,0,8,0,0,0,-1,1,2,WebApplicationRdn.Models.RInternalResult,WebApplicationRdn.Controllers.RCode' WebApplicationRdn.Controllers.CodeController
+WebApplicationRdn.Controllers,CodeController,4,4,0,0,2,64,6,0,0,0.5,6,0,WebApplicationRdn.Controllers.RCode' WebApplicationRdn.Controllers.RResult' WebApplicationRdn.Models.CharacterDevice' WebApplicationRdn.Models.SymbolicExpressionToResultMapper' WebApplicationRdn.Models.SvgContextMapper' WebApplicationRdn.Models.SvgGraphicsDevice,
 WebApplicationRdn.Controllers,HomeController,0,1,0,0,1,7,1,0,0,-1,0,0,,
 WebApplicationRdn.Models,CharacterDevice,2,18,0,0,18,77,19,0,0,0.67,0,1,,WebApplicationRdn.Controllers.CodeController
-WebApplicationRdn.Models,RInternalResult,0,0,2,0,0,5,0,0,0,-1,0,1,,WebApplicationRdn.Models.SymbolicExpressionToResultMapper
+WebApplicationRdn.Models,RInternalResult,0,0,2,0,0,5,0,0,0,-1,0,2,,WebApplicationRdn.Models.SymbolicExpressionToResultMapper' WebApplicationRdn.Controllers.RResult
 WebApplicationRdn.Models,SymbolicExpressionToResultMapper,1,6,0,0,1,71,7,0,0,1,1,1,WebApplicationRdn.Models.RInternalResult,WebApplicationRdn.Controllers.CodeController
-WebApplicationRdn.Models,SvgCoordinateContext,0,0,3,0,0,6,0,0,0,-1,0,2,,WebApplicationRdn.Models.SvgContextMapper' WebApplicationRdn.Models.SvgGraphicsDevice
-WebApplicationRdn.Models,SvgPenContext,0,0,5,0,0,8,0,0,0,-1,0,2,,WebApplicationRdn.Models.SvgContextMapper' WebApplicationRdn.Models.SvgGraphicsDevice
-WebApplicationRdn.Models,SvgFontContext,0,0,5,0,0,8,0,0,0,-1,0,2,,WebApplicationRdn.Models.SvgContextMapper' WebApplicationRdn.Models.SvgGraphicsDevice
-WebApplicationRdn.Models,SvgGraphicsContext,0,0,7,0,0,10,0,0,0,-1,0,2,,WebApplicationRdn.Models.SvgContextMapper' WebApplicationRdn.Models.SvgGraphicsDevice
-WebApplicationRdn.Models,ISvgContextMapper,0,10,4,0,0,17,10,1,0,-1,0,1,,WebApplicationRdn.Models.SvgGraphicsDevice
-WebApplicationRdn.Models,SvgContextMapper,5,17,4,4,12,173,22,0,1,0.41,4,0,WebApplicationRdn.Models.SvgGraphicsContext' WebApplicationRdn.Models.SvgPenContext' WebApplicationRdn.Models.SvgCoordinateContext' WebApplicationRdn.Models.SvgFontContext,
-WebApplicationRdn.Models,SvgGraphicsDevice,3,29,1,0,25,276,35,0,0,0.45,5,1,WebApplicationRdn.Models.ISvgContextMapper' WebApplicationRdn.Models.SvgGraphicsContext' WebApplicationRdn.Models.SvgCoordinateContext' WebApplicationRdn.Models.SvgPenContext' WebApplicationRdn.Models.SvgFontContext,WebApplicationRdn.Controllers.CodeController
+WebApplicationRdn.Models,SvgCoordinateContext,0,0,3,0,0,6,0,0,0,-1,0,3,,WebApplicationRdn.Models.SvgGraphicsContext' WebApplicationRdn.Models.ISvgContextMapper' WebApplicationRdn.Models.SvgContextMapper
+WebApplicationRdn.Models,SvgPenContext,0,0,5,0,0,8,0,0,0,-1,0,3,,WebApplicationRdn.Models.SvgGraphicsContext' WebApplicationRdn.Models.ISvgContextMapper' WebApplicationRdn.Models.SvgContextMapper
+WebApplicationRdn.Models,SvgFontContext,0,0,5,0,0,8,0,0,0,-1,0,3,,WebApplicationRdn.Models.SvgGraphicsContext' WebApplicationRdn.Models.ISvgContextMapper' WebApplicationRdn.Models.SvgContextMapper
+WebApplicationRdn.Models,SvgGraphicsContext,0,0,7,0,0,10,0,0,0,-1,3,2,WebApplicationRdn.Models.SvgCoordinateContext' WebApplicationRdn.Models.SvgPenContext' WebApplicationRdn.Models.SvgFontContext,WebApplicationRdn.Models.ISvgContextMapper' WebApplicationRdn.Models.SvgContextMapper
+WebApplicationRdn.Models,ISvgContextMapper,0,10,4,0,0,17,10,1,0,-1,4,2,WebApplicationRdn.Models.SvgCoordinateContext' WebApplicationRdn.Models.SvgPenContext' WebApplicationRdn.Models.SvgFontContext' WebApplicationRdn.Models.SvgGraphicsContext,WebApplicationRdn.Models.SvgContextMapper' WebApplicationRdn.Models.SvgGraphicsDevice
+WebApplicationRdn.Models,SvgContextMapper,5,17,4,4,12,173,27,0,1,0.41,5,1,WebApplicationRdn.Models.SvgCoordinateContext' WebApplicationRdn.Models.SvgPenContext' WebApplicationRdn.Models.SvgFontContext' WebApplicationRdn.Models.SvgGraphicsContext' WebApplicationRdn.Models.ISvgContextMapper,WebApplicationRdn.Controllers.CodeController
+WebApplicationRdn.Models,SvgGraphicsDevice,3,29,1,0,25,276,37,0,0,0.45,1,1,WebApplicationRdn.Models.ISvgContextMapper,WebApplicationRdn.Controllers.CodeController

@@ -1,27 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Tasky.BL.Contracts,BusinessEntityBase,0,1,1,0,1,11,1,0,1,-1,0,0,,
-Tasky.BL.Contracts,IBusinessEntity,0,0,1,0,0,3,0,2,0,-1,0,0,,
-Tasky.DL.SQLite,PrimaryKeyAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-Tasky.DL.SQLite,AutoIncrementAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
+Tasky.BL.Contracts,BusinessEntityBase,0,1,1,0,1,11,1,0,1,-1,3,0,Tasky.BL.Contracts.IBusinessEntity' Tasky.DL.SQLite.PrimaryKeyAttribute' Tasky.DL.SQLite.AutoIncrementAttribute,
+Tasky.BL.Contracts,IBusinessEntity,0,0,1,0,0,3,0,2,0,-1,0,3,,Tasky.BL.Task' Tasky.BL.Contracts.BusinessEntityBase' Tasky.DL.TaskDatabase
+Tasky.DL.SQLite,PrimaryKeyAttribute,0,0,0,0,0,2,0,0,0,-1,0,2,,Tasky.BL.Contracts.BusinessEntityBase' Tasky.BL.Task
+Tasky.DL.SQLite,AutoIncrementAttribute,0,0,0,0,0,2,0,0,0,-1,0,2,,Tasky.BL.Contracts.BusinessEntityBase' Tasky.BL.Task
 Tasky.DL.SQLite,IndexedAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 Tasky.DL.SQLite,IgnoreAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 Tasky.DL.SQLite,MaxLengthAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
 Tasky.DL.SQLite,CollationAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
-Tasky.DL.SQLite,SQLiteConnection,0,24,4,0,24,56,24,0,0,-1,1,0,Tasky.DL.SQLiteBase.TableMapping,
-Tasky.DL.SQLite,TableMapping,0,0,0,0,0,1,0,0,0,-1,0,0,,
-Tasky.DL.SQLite,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,0,,
-Tasky.DL.SQLite,TableQuery<T>,0,2,0,0,1,10,2,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,PrimaryKeyAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,AutoIncrementAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,IndexedAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,IgnoreAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,MaxLengthAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,CollationAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,SQLiteConnection,0,24,4,0,24,56,24,0,0,-1,1,3,Tasky.DL.SQLiteBase.TableMapping,Tasky.DL.TaskDatabase' Tasky.BL.Managers.TaskManager' Tasky.DAL.TaskRepository
-Tasky.DL.SQLiteBase,TableMapping,0,0,0,0,0,1,0,0,0,-1,0,2,,Tasky.DL.SQLite.SQLiteConnection' Tasky.DL.SQLiteBase.SQLiteConnection
-Tasky.DL.SQLiteBase,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,0,,
-Tasky.DL.SQLiteBase,TableQuery<T>,0,2,0,0,1,10,2,0,0,-1,0,0,,
-Tasky.BL,Task,0,1,4,0,1,12,1,0,1,-1,0,2,,Tasky.BL.Managers.TaskManager' Tasky.DAL.TaskRepository
-Tasky.DL,TaskDatabase,2,5,0,0,5,53,5,0,0,0,1,1,Tasky.DL.SQLiteBase.SQLiteConnection,Tasky.DAL.TaskRepository
-Tasky.BL.Managers,TaskManager,1,5,0,0,5,28,5,0,0,0,3,0,Tasky.DAL.TaskRepository' Tasky.DL.SQLiteBase.SQLiteConnection' Tasky.BL.Task,
-Tasky.DAL,TaskRepository,2,5,0,0,5,27,5,0,0,0,3,1,Tasky.DL.TaskDatabase' Tasky.DL.SQLiteBase.SQLiteConnection' Tasky.BL.Task,Tasky.BL.Managers.TaskManager
+Tasky.DL.SQLiteBase,SQLiteConnection,0,24,4,0,24,56,24,0,0,-1,3,3,Tasky.DL.SQLiteBase.TableMapping' Tasky.DL.SQLiteBase.SQLiteCommand' Tasky.DL.SQLiteBase.TableQuery<T>,Tasky.BL.Managers.TaskManager' Tasky.DAL.TaskRepository' Tasky.DL.TaskDatabase
+Tasky.DL.SQLiteBase,TableMapping,0,0,0,0,0,1,0,0,0,-1,0,1,,Tasky.DL.SQLiteBase.SQLiteConnection
+Tasky.DL.SQLiteBase,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,1,,Tasky.DL.SQLiteBase.SQLiteConnection
+Tasky.DL.SQLiteBase,TableQuery<T>,0,2,0,0,1,10,2,0,0,-1,0,1,,Tasky.DL.SQLiteBase.SQLiteConnection
+Tasky.BL,Task,0,1,4,0,1,12,1,0,1,-1,3,3,Tasky.BL.Contracts.IBusinessEntity' Tasky.DL.SQLite.PrimaryKeyAttribute' Tasky.DL.SQLite.AutoIncrementAttribute,Tasky.DL.TaskDatabase' Tasky.BL.Managers.TaskManager' Tasky.DAL.TaskRepository
+Tasky.DL,TaskDatabase,2,5,0,0,5,53,6,0,0,0,3,1,Tasky.BL.Contracts.IBusinessEntity' Tasky.DL.SQLiteBase.SQLiteConnection' Tasky.BL.Task,Tasky.DAL.TaskRepository
+Tasky.BL.Managers,TaskManager,1,5,0,0,5,28,5,0,0,0,3,0,Tasky.DL.SQLiteBase.SQLiteConnection' Tasky.BL.Task' Tasky.DAL.TaskRepository,
+Tasky.DAL,TaskRepository,2,5,0,0,5,27,5,0,0,0,3,1,Tasky.DL.SQLiteBase.SQLiteConnection' Tasky.BL.Task' Tasky.DL.TaskDatabase,Tasky.BL.Managers.TaskManager

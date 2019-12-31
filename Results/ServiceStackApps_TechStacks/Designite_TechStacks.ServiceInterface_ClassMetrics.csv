@@ -1,33 +1,33 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-TechStacks.ServiceInterface.Admin,AdminServices,0,3,0,0,3,41,6,0,0,-1,6,0,TechStacks.ServiceModel.LogoUrlApproval' TechStacks.ServiceModel.LogoUrlApprovalResponse' TechStacks.ServiceModel.LockTechStack' TechStacks.ServiceModel.LockStackResponse' TechStacks.ServiceModel.LockTech' TechStacks.ServiceModel.LockTechResponse,
+TechStacks.ServiceInterface.Admin,AdminServices,0,3,0,0,3,41,6,0,0,-1,0,0,,
 TechStacks.ServiceInterface,AppFeatureFlags,0,1,0,0,1,7,1,0,0,-1,0,0,,
 TechStacks.ServiceInterface,FallbackForClientRoutes,0,0,1,0,0,5,0,0,0,-1,0,1,,TechStacks.ServiceInterface.ClientRoutesService
 TechStacks.ServiceInterface,Ping,0,0,0,0,0,2,0,0,0,-1,0,1,,TechStacks.ServiceInterface.ClientRoutesService
-TechStacks.ServiceInterface,ClientRoutesService,0,8,0,0,8,75,11,0,0,-1,6,0,TechStacks.ServiceInterface.Ping' TechStacks.ServiceInterface.FallbackForClientRoutes' TechStacks.ServiceInterface.ClientAllTechnologyStacks' TechStacks.ServiceInterface.ClientAllTechnologies' TechStacks.ServiceInterface.ClientTechnology' TechStacks.ServiceInterface.ClientUser,
+TechStacks.ServiceInterface,ClientRoutesService,0,8,0,0,8,72,11,0,0,-1,6,0,TechStacks.ServiceInterface.FallbackForClientRoutes' TechStacks.ServiceInterface.Ping' TechStacks.ServiceInterface.ClientAllTechnologies' TechStacks.ServiceInterface.ClientTechnology' TechStacks.ServiceInterface.ClientAllTechnologyStacks' TechStacks.ServiceInterface.ClientUser,
 TechStacks.ServiceInterface,ClientAllTechnologies,0,0,0,0,0,2,0,0,0,-1,0,1,,TechStacks.ServiceInterface.ClientRoutesService
-TechStacks.ServiceInterface,ClientTechnology,0,0,1,0,0,5,0,0,0,-1,0,3,,TechStacks.AppHost' TechStacks.ServiceInterface.ClientRoutesService' TechStacks.ServiceInterface.TechnologyServicesAdmin
+TechStacks.ServiceInterface,ClientTechnology,0,0,1,0,0,5,0,0,0,-1,0,2,,TechStacks.ServiceInterface.ClientRoutesService' TechStacks.ServiceInterface.TechnologyServicesAdmin
 TechStacks.ServiceInterface,ClientAllTechnologyStacks,0,0,0,0,0,2,0,0,0,-1,0,1,,TechStacks.ServiceInterface.ClientRoutesService
-TechStacks.ServiceInterface,ClientTechnologyStack,0,0,1,0,0,5,0,0,0,-1,0,2,,TechStacks.AppHost' TechStacks.ServiceInterface.TechnologyStackServicesAdmin
-TechStacks.ServiceInterface,ClientUser,0,0,1,0,0,5,0,0,0,-1,0,2,,TechStacks.AppHost' TechStacks.ServiceInterface.ClientRoutesService
-TechStacks.ServiceInterface,CustomUserSession,0,1,2,0,1,38,5,0,0,-1,0,0,,
-TechStacks.ServiceInterface,CustomUserAuth,0,0,1,0,0,4,0,0,0,-1,0,1,,TechStacks.ServiceInterface.CachedUserStackServices
-TechStacks.ServiceInterface,TechnologyServicesAdmin,1,4,2,0,3,133,13,0,0,0.75,9,0,TechStacks.ServiceInterface.TwitterUpdates' TechStacks.ServiceModel.Types.Technology' TechStacks.ServiceModel.CreateTechnology' TechStacks.ServiceInterface.ClientTechnology' TechStacks.ServiceModel.CreateTechnologyResponse' TechStacks.ServiceModel.UpdateTechnologyResponse' TechStacks.ServiceModel.UpdateTechnology' TechStacks.ServiceModel.DeleteTechnology' TechStacks.ServiceModel.DeleteTechnologyResponse,
-TechStacks.ServiceInterface,TechnologyStackServicesAdmin,1,4,2,0,3,180,17,0,0,0.75,9,0,TechStacks.ServiceInterface.TwitterUpdates' TechStacks.ServiceModel.Types.TechnologyStack' TechStacks.ServiceModel.CreateTechnologyStack' TechStacks.ServiceInterface.ClientTechnologyStack' TechStacks.ServiceModel.CreateTechnologyStackResponse' TechStacks.ServiceModel.UpdateTechnologyStackResponse' TechStacks.ServiceModel.UpdateTechnologyStack' TechStacks.ServiceModel.DeleteTechnologyStack' TechStacks.ServiceModel.DeleteTechnologyStackResponse,
-TechStacks.ServiceInterface,TwitterUpdates,3,2,0,0,2,32,2,0,0,0,1,3,TechStacks.ServiceInterface.TwitterGateway,TechStacks.ServiceInterface.TechnologyServicesAdmin' TechStacks.ServiceInterface.TechnologyStackServicesAdmin' TechStacks.Tests.AdminTasks
-TechStacks.ServiceInterface,PostStatusTwitter,0,0,3,0,0,6,0,0,0,-1,0,1,,TechStacks.ServiceInterface.TwitterGateway
+TechStacks.ServiceInterface,ClientTechnologyStack,0,0,1,0,0,5,0,0,0,-1,0,1,,TechStacks.ServiceInterface.TechnologyStackServicesAdmin
+TechStacks.ServiceInterface,ClientUser,0,0,1,0,0,5,0,0,0,-1,0,1,,TechStacks.ServiceInterface.ClientRoutesService
+TechStacks.ServiceInterface,CustomUserSession,0,1,2,0,1,38,6,0,0,-1,1,3,TechStacks.ServiceInterface.CustomUserAuth,TechStacks.ServiceInterface.UserStackServices' TechStacks.ServiceInterface.SessionInfoServices' TechStacks.ServiceInterface.UserFavoriteServices
+TechStacks.ServiceInterface,CustomUserAuth,0,0,1,0,0,4,0,0,0,-1,0,2,,TechStacks.ServiceInterface.CustomUserSession' TechStacks.ServiceInterface.CachedUserStackServices
+TechStacks.ServiceInterface,TechnologyServicesAdmin,1,4,2,0,3,133,15,0,0,0.75,2,0,TechStacks.ServiceInterface.ClientTechnology' TechStacks.ServiceInterface.TwitterUpdates,
+TechStacks.ServiceInterface,TechnologyStackServicesAdmin,1,4,2,0,3,180,21,0,0,0.75,2,0,TechStacks.ServiceInterface.ClientTechnologyStack' TechStacks.ServiceInterface.TwitterUpdates,
+TechStacks.ServiceInterface,TwitterUpdates,3,2,0,0,2,32,2,0,0,0,2,2,TechStacks.ServiceInterface.PostStatusTwitter' TechStacks.ServiceInterface.TwitterGateway,TechStacks.ServiceInterface.TechnologyServicesAdmin' TechStacks.ServiceInterface.TechnologyStackServicesAdmin
+TechStacks.ServiceInterface,PostStatusTwitter,0,0,3,0,0,6,0,0,0,-1,0,2,,TechStacks.ServiceInterface.TwitterUpdates' TechStacks.ServiceInterface.TwitterGateway
 TechStacks.ServiceInterface,TwitterGateway,0,2,1,0,2,55,7,0,0,-1,1,1,TechStacks.ServiceInterface.PostStatusTwitter,TechStacks.ServiceInterface.TwitterUpdates
-TechStacks.ServiceInterface,SessionInfoServices,0,1,0,0,1,10,1,0,0,-1,1,0,TechStacks.ServiceModel.SessionInfo,
-TechStacks.ServiceInterface,TechExtensions,0,4,0,0,4,58,4,0,0,-1,1,0,TechStacks.ServiceModel.Types.TechnologyChoice,
-TechStacks.ServiceInterface,TechnologyServices,0,2,0,0,2,27,4,0,0,-1,5,1,TechStacks.ServiceModel.Types.Technology' TechStacks.ServiceModel.GetTechnologyPreviousVersions' TechStacks.ServiceModel.GetTechnologyPreviousVersionsResponse' TechStacks.ServiceModel.GetAllTechnologiesResponse' TechStacks.ServiceModel.GetAllTechnologies,TechStacks.AppHost
-TechStacks.ServiceInterface,CachedTechnologyServices,0,3,1,0,3,42,4,0,0,-1,5,0,TechStacks.ServiceModel.FindTechnologies' TechStacks.ServiceModel.GetTechnology' TechStacks.ServiceModel.GetTechnologyResponse' TechStacks.ServiceModel.GetTechnologyFavoriteDetails' TechStacks.ServiceModel.GetTechnologyFavoriteDetailsResponse,
-TechStacks.ServiceInterface,TechnologyStackServices,0,3,0,0,3,61,8,0,0,-1,7,0,TechStacks.ServiceModel.Types.TechnologyStack' TechStacks.ServiceModel.GetTechnologyStackPreviousVersions' TechStacks.ServiceModel.GetTechnologyStackPreviousVersionsResponse' TechStacks.ServiceModel.GetPageStats' TechStacks.ServiceModel.GetPageStatsResponse' TechStacks.ServiceModel.HourlyTask' TechStacks.ServiceModel.HourlyTaskResponse,
-TechStacks.ServiceInterface,CachedTechnologyStackServices,1,9,1,0,8,166,19,0,0,0.56,16,0,TechStacks.ServiceModel.FindTechStacks' TechStacks.ServiceModel.OverviewResponse' TechStacks.ServiceModel.TechStackDetails' TechStacks.ServiceModel.Overview' TechStacks.ServiceModel.TechnologyInfo' TechStacks.ServiceModel.Types.TechnologyTier' TechStacks.ServiceModel.AppOverviewResponse' TechStacks.ServiceModel.AppOverview' TechStacks.ServiceModel.GetAllTechnologyStacksResponse' TechStacks.ServiceModel.GetAllTechnologyStacks' TechStacks.ServiceModel.GetTechnologyStackResponse' TechStacks.ServiceModel.GetTechnologyStack' TechStacks.ServiceModel.GetTechnologyStackFavoriteDetails' TechStacks.ServiceModel.GetTechnologyStackFavoriteDetailsResponse' TechStacks.ServiceModel.GetConfigResponse' TechStacks.ServiceModel.GetConfig,
+TechStacks.ServiceInterface,SessionInfoServices,0,1,0,0,1,10,1,0,0,-1,1,0,TechStacks.ServiceInterface.CustomUserSession,
+TechStacks.ServiceInterface,TechExtensions,0,4,0,0,4,58,4,0,0,-1,0,0,,
+TechStacks.ServiceInterface,TechnologyServices,0,2,0,0,2,27,4,0,0,-1,0,0,,
+TechStacks.ServiceInterface,CachedTechnologyServices,0,3,1,0,3,42,4,0,0,-1,0,0,,
+TechStacks.ServiceInterface,TechnologyStackServices,0,3,0,0,3,61,8,0,0,-1,0,0,,
+TechStacks.ServiceInterface,CachedTechnologyStackServices,1,9,1,0,8,166,19,0,0,0.56,0,0,,
 TechStacks.ServiceInterface,TechStackQueries,0,1,0,0,1,26,2,0,0,-1,0,0,,
-TechStacks.ServiceInterface,UserFavoriteServices,0,6,0,0,6,111,14,0,0,-1,12,0,TechStacks.ServiceModel.GetFavoriteTechStackResponse' TechStacks.ServiceModel.GetFavoriteTechStack' TechStacks.ServiceModel.Types.UserFavoriteTechnologyStack' TechStacks.ServiceModel.AddFavoriteTechStack' TechStacks.ServiceModel.FavoriteTechStackResponse' TechStacks.ServiceModel.RemoveFavoriteTechStack' TechStacks.ServiceModel.GetFavoriteTechnologiesResponse' TechStacks.ServiceModel.GetFavoriteTechnologies' TechStacks.ServiceModel.Types.UserFavoriteTechnology' TechStacks.ServiceModel.AddFavoriteTechnology' TechStacks.ServiceModel.FavoriteTechnologyResponse' TechStacks.ServiceModel.RemoveFavoriteTechnology,
-TechStacks.ServiceInterface,UserStackServices,0,2,0,0,1,27,3,0,0,-1,2,0,TechStacks.ServiceModel.GetUserFeedResponse' TechStacks.ServiceModel.GetUserFeed,
-TechStacks.ServiceInterface,CachedUserStackServices,0,1,0,0,1,31,2,0,0,-1,3,0,TechStacks.ServiceInterface.CustomUserAuth' TechStacks.ServiceModel.GetUserInfo' TechStacks.ServiceModel.GetUserInfoResponse,
-TechStacks.ServiceInterface.Filters,TechFilters,0,2,0,0,2,35,4,0,0,-1,3,0,TechStacks.ServiceModel.Types.Technology' TechStacks.ServiceModel.CreateTechnology' TechStacks.ServiceModel.UpdateTechnology,
-TechStacks.ServiceInterface.Filters,TechStackFilters,0,2,0,0,2,35,4,0,0,-1,2,0,TechStacks.ServiceModel.CreateTechnologyStack' TechStacks.ServiceModel.UpdateTechnologyStack,
+TechStacks.ServiceInterface,UserFavoriteServices,0,6,0,0,6,111,14,0,0,-1,1,0,TechStacks.ServiceInterface.CustomUserSession,
+TechStacks.ServiceInterface,UserStackServices,0,2,0,0,1,27,3,0,0,-1,1,0,TechStacks.ServiceInterface.CustomUserSession,
+TechStacks.ServiceInterface,CachedUserStackServices,0,1,0,0,1,31,2,0,0,-1,1,0,TechStacks.ServiceInterface.CustomUserAuth,
+TechStacks.ServiceInterface.Filters,TechFilters,0,2,0,0,2,35,6,0,0,-1,0,0,,
+TechStacks.ServiceInterface.Filters,TechStackFilters,0,2,0,0,2,35,6,0,0,-1,0,0,,
 TechStacks.ServiceInterface.Validations,TechStackValidator,0,1,0,0,1,12,1,0,0,-1,0,0,,
 TechStacks.ServiceInterface.Validations,CreateTechValidator,0,1,0,0,1,12,1,0,0,-1,0,0,,
 TechStacks.ServiceInterface.Validations,UpdateTechValidator,0,1,0,0,1,13,1,0,0,-1,0,0,,

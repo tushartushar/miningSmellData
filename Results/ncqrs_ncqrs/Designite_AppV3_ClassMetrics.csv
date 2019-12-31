@@ -1,9 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-AwesomeAppRefactored.Commands,ChangeNameCommand,0,2,2,0,2,15,2,0,2,-1,0,1,,AwesomeAppRefactored.Program
-AwesomeAppRefactored.Commands,CreatePersonCommand,0,2,2,0,2,14,2,0,2,-1,0,1,,AwesomeAppRefactored.Program
-AwesomeAppRefactored.Domain,Person,1,5,0,0,2,26,5,0,2,0.4,2,0,AwesomeAppRefactored.Events.NameChangedEvent' AwesomeAppRefactored.Events.PersonCreatedEvent,
-AwesomeAppRefactored.Events,NameChangedEvent,0,2,1,0,2,15,2,0,3,-1,0,2,,AwesomeAppRefactored.Domain.Person' AwesomeAppRefactored.Program
-AwesomeAppRefactored.Events,NameChangedEventPostConverter,1,1,0,0,1,17,2,0,1,0,1,0,Ncqrs.Eventing.Storage.StoredEvent,
-AwesomeAppRefactored.Events,PersonCreatedEvent,0,2,1,0,2,14,2,0,3,-1,0,2,,AwesomeAppRefactored.Domain.Person' AwesomeAppRefactored.Program
-AwesomeAppRefactored.Events,PersonCreatedEventPostConverter,1,1,0,0,1,17,2,0,1,0,1,0,Ncqrs.Eventing.Storage.StoredEvent,
-AwesomeAppRefactored,Program,0,3,0,0,0,33,3,0,0,-1,11,0,Ncqrs.Commanding.ServiceModel.ICommandService' Ncqrs.NcqrsEnvironment' Ncqrs.Eventing.Storage.AttributeEventTypeResolver' Ncqrs.Eventing.Storage.Serialization.EventConverter' Ncqrs.Eventing.Storage.SQL.MsSqlServerEventStore' AwesomeAppRefactored.Events.NameChangedEvent' AwesomeAppRefactored.Events.PersonCreatedEvent' Ncqrs.Commanding.CommandExecution.Mapping.Attributes.AttributeBasedCommandMapper' Ncqrs.Commanding.ServiceModel.CommandService' AwesomeAppRefactored.Commands.CreatePersonCommand' AwesomeAppRefactored.Commands.ChangeNameCommand,
+AwesomeAppRefactored.Commands,ChangeNameCommand,0,2,2,0,2,15,2,0,2,-1,1,1,AwesomeAppRefactored.Domain.Person,AwesomeAppRefactored.Program
+AwesomeAppRefactored.Commands,CreatePersonCommand,0,2,2,0,2,14,2,0,2,-1,1,1,AwesomeAppRefactored.Domain.Person,AwesomeAppRefactored.Program
+AwesomeAppRefactored.Domain,Person,1,5,0,0,2,26,5,0,2,0.8,2,2,AwesomeAppRefactored.Events.NameChangedEvent' AwesomeAppRefactored.Events.PersonCreatedEvent,AwesomeAppRefactored.Commands.CreatePersonCommand' AwesomeAppRefactored.Commands.ChangeNameCommand
+AwesomeAppRefactored.Events,NameChangedEvent,0,2,1,0,2,15,2,0,3,-1,0,2,,AwesomeAppRefactored.Program' AwesomeAppRefactored.Domain.Person
+AwesomeAppRefactored.Events,NameChangedEventPostConverter,1,1,0,0,1,17,2,0,1,0,0,1,,AwesomeAppRefactored.Program
+AwesomeAppRefactored.Events,PersonCreatedEvent,0,2,1,0,2,14,2,0,3,-1,0,2,,AwesomeAppRefactored.Program' AwesomeAppRefactored.Domain.Person
+AwesomeAppRefactored.Events,PersonCreatedEventPostConverter,1,1,0,0,1,17,2,0,1,0,0,1,,AwesomeAppRefactored.Program
+AwesomeAppRefactored,Program,0,3,0,0,0,33,3,0,0,-1,6,0,AwesomeAppRefactored.Commands.ChangeNameCommand' AwesomeAppRefactored.Commands.CreatePersonCommand' AwesomeAppRefactored.Events.NameChangedEvent' AwesomeAppRefactored.Events.NameChangedEventPostConverter' AwesomeAppRefactored.Events.PersonCreatedEvent' AwesomeAppRefactored.Events.PersonCreatedEventPostConverter,

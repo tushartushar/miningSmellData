@@ -1,0 +1,87 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mandrill,Configuration,5,0,0,5,0,25,0,0,0,-1,0,1,,Mandrill.MandrillApi
+Mandrill,IMandrillApi,0,31,1,0,0,266,31,1,0,-1,42,0,Mandrill.MandrillApi' Mandrill.Models.Content' Mandrill.Models.EmailResult' Mandrill.Models.MessageInfo' Mandrill.Models.RejectInfo' Mandrill.Models.RejectAddResult' Mandrill.Models.RejectDeleteResult' Mandrill.Models.RenderedTemplate' Mandrill.Models.ScheduledEmailResult' Mandrill.Models.SearchResult' Mandrill.Models.Sender' Mandrill.Models.SenderDomain' Mandrill.Models.SubaccountInfo' Mandrill.Models.TemplateInfo' Mandrill.Models.UserInfo' Mandrill.Requests.Messages.CancelScheduledMessageRequest' Mandrill.Requests.Messages.ContentRequest' Mandrill.Requests.Messages.ListScheduledMessagesRequest' Mandrill.Requests.Messages.MessageInfoRequest' Mandrill.Requests.Messages.RescheduleMessageRequest' Mandrill.Requests.Messages.SearchRequest' Mandrill.Requests.Messages.SendMessageRequest' Mandrill.Requests.Messages.SendMessageTemplateRequest' Mandrill.Requests.Messages.SendRawMessageRequest' Mandrill.Requests.Rejects.AddRejectRequest' Mandrill.Requests.Rejects.DeleteRejectRequest' Mandrill.Requests.Rejects.ListRejectsRequest' Mandrill.Requests.Senders.SenderCheckDomainRequest' Mandrill.Requests.Senders.SenderInfoRequest' Mandrill.Requests.SubAccounts.AddSubAccountRequest' Mandrill.Requests.SubAccounts.DeleteSubAccountRequest' Mandrill.Requests.SubAccounts.ListSubAccountsRequest' Mandrill.Requests.SubAccounts.PauseSubAccountRequest' Mandrill.Requests.SubAccounts.ResumeSubAccountRequest' Mandrill.Requests.SubAccounts.SubAccountInfoRequest' Mandrill.Requests.SubAccounts.UpdateSubAccountRequest' Mandrill.Requests.Templates.AddTemplateRequest' Mandrill.Requests.Templates.DeleteTemplateRequest' Mandrill.Requests.Templates.ListTemplatesRequest' Mandrill.Requests.Templates.RenderTemplateRequest' Mandrill.Requests.Templates.TemplateInfoRequest' Mandrill.Requests.Templates.UpdateTemplateRequest,
+Mandrill,MandrillApi,2,37,2,0,36,604,41,0,1,0.05,6,1,Mandrill.Configuration' Mandrill.Models.ErrorResponse' Mandrill.Requests.RequestBase' Mandrill.Utilities.JSON' Mandrill.Utilities.MandrillException' Mandrill.Utilities.MandrillSerializationException,Mandrill.IMandrillApi
+Mandrill.Models,Attachment,0,0,3,0,0,17,0,0,0,-1,0,1,,Mandrill.Models.Content
+Mandrill.Models,Content,0,0,11,0,0,52,0,0,0,-1,2,1,Mandrill.Models.Attachment' Mandrill.Models.Recipient,Mandrill.IMandrillApi
+Mandrill.Models,Dkim,0,0,3,0,0,17,0,0,0,-1,0,1,,Mandrill.Models.SenderDomain
+Mandrill.Models,EmailAddress,0,4,3,0,4,69,4,0,0,-1,0,1,,Mandrill.Models.EmailMessage
+Mandrill.Models,TemplateSyntax,2,0,0,2,0,11,0,0,0,-1,0,0,,
+Mandrill.Models,MergeVar,0,0,2,0,0,15,0,0,0,-1,0,3,,Mandrill.Requests.Templates.RenderTemplateRequest' Mandrill.Models.RcptMergeVar' Mandrill.Models.EmailMessage
+Mandrill.Models,RcptMergeVar,0,1,2,0,1,24,1,0,0,-1,1,1,Mandrill.Models.MergeVar,Mandrill.Models.EmailMessage
+Mandrill.Models,RcptMetadata,0,0,2,0,0,15,0,0,0,-1,0,1,,Mandrill.Models.EmailMessage
+Mandrill.Models,EmailAttachment,0,0,4,0,0,25,0,0,0,-1,0,2,,Mandrill.Models.EmailMessage' Mandrill.Models.WebHookMessage
+Mandrill.Models,Image,0,0,3,0,0,20,0,0,0,-1,0,2,,Mandrill.Models.EmailMessage' Mandrill.Models.WebHookMessage
+Mandrill.Models,EmailMessage,0,4,34,0,4,236,9,0,0,-1,6,2,Mandrill.Models.EmailAddress' Mandrill.Models.MergeVar' Mandrill.Models.RcptMergeVar' Mandrill.Models.RcptMetadata' Mandrill.Models.EmailAttachment' Mandrill.Models.Image,Mandrill.Requests.Messages.SendMessageRequest' Mandrill.Requests.Messages.SendMessageTemplateRequest
+Mandrill.Models,EmailResultStatus,0,0,0,0,0,23,0,0,0,-1,0,1,,Mandrill.Models.EmailResult
+Mandrill.Models,EmailResult,0,0,4,0,0,23,0,0,0,-1,1,1,Mandrill.Models.EmailResultStatus,Mandrill.IMandrillApi
+Mandrill.Models,ErrorResponse,0,0,4,0,0,21,0,0,0,-1,0,3,,Mandrill.Utilities.MandrillSerializationException' Mandrill.MandrillApi' Mandrill.Utilities.MandrillException
+Mandrill.Models,MergeLanguage,2,0,0,2,0,5,0,0,0,-1,0,0,,
+Mandrill.Models,MergeVars,0,0,2,0,0,5,0,0,0,-1,1,0,Mandrill.Models.TemplateContent,
+Mandrill.Models,MessageInfo,0,0,12,0,0,68,0,0,0,-1,4,1,Mandrill.Models.MessageInfoMetaData' Mandrill.Models.OpenDetail' Mandrill.Models.ClickDetail' Mandrill.Models.SearchResultState,Mandrill.IMandrillApi
+Mandrill.Models,MessageInfoMetaData,0,0,2,0,0,13,0,0,0,-1,0,1,,Mandrill.Models.MessageInfo
+Mandrill.Models,OpenDetail,0,0,4,0,0,25,0,1,0,-1,0,3,,Mandrill.Models.MessageInfo' Mandrill.Models.ClickDetail' Mandrill.Models.SearchResult
+Mandrill.Models,ClickDetail,0,0,1,0,0,8,0,0,1,-1,1,2,Mandrill.Models.OpenDetail,Mandrill.Models.SearchResult' Mandrill.Models.MessageInfo
+Mandrill.Models,Recipient,0,0,2,0,0,13,0,0,0,-1,0,1,,Mandrill.Models.Content
+Mandrill.Models,RejectInfo,0,0,8,0,0,37,0,0,0,-1,1,1,Mandrill.Models.Sender,Mandrill.IMandrillApi
+Mandrill.Models,RejectAddResult,0,0,2,0,0,13,0,0,0,-1,0,1,,Mandrill.IMandrillApi
+Mandrill.Models,RejectDeleteResult,0,0,2,0,0,13,0,0,0,-1,0,1,,Mandrill.IMandrillApi
+Mandrill.Models,RenderedTemplate,0,0,1,0,0,9,0,0,0,-1,0,1,,Mandrill.IMandrillApi
+Mandrill.Models,ScheduledEmailResult,0,0,6,0,0,31,0,0,0,-1,0,1,,Mandrill.IMandrillApi
+Mandrill.Models,SearchResultState,0,0,0,0,0,31,0,0,0,-1,0,3,,Mandrill.Models.SmtpEvent' Mandrill.Models.MessageInfo' Mandrill.Models.SearchResult
+Mandrill.Models,SearchResult,0,0,15,0,0,71,0,0,0,-1,4,1,Mandrill.Models.OpenDetail' Mandrill.Models.ClickDetail' Mandrill.Models.SearchResultState' Mandrill.Models.SmtpEvent,Mandrill.IMandrillApi
+Mandrill.Models,Sender,0,0,11,0,0,49,0,0,0,-1,1,2,Mandrill.Models.Stats,Mandrill.Models.RejectInfo' Mandrill.IMandrillApi
+Mandrill.Models,SenderDomain,0,0,7,0,0,33,0,0,0,-1,2,1,Mandrill.Models.Dkim' Mandrill.Models.Spf,Mandrill.IMandrillApi
+Mandrill.Models,SmtpEvent,0,0,7,0,0,37,0,0,0,-1,2,2,Mandrill.Models.SearchResultState' Mandrill.Models.WebHookEvent,Mandrill.Models.SearchResult' Mandrill.Models.WebHookMessage
+Mandrill.Models,Spf,0,0,3,0,0,17,0,0,0,-1,0,1,,Mandrill.Models.SenderDomain
+Mandrill.Models,SubaccountInfo,0,0,11,0,0,50,0,0,0,-1,1,1,Mandrill.Models.Last30Days,Mandrill.IMandrillApi
+Mandrill.Models,Last30Days,0,0,10,0,0,45,0,0,0,-1,0,1,,Mandrill.Models.SubaccountInfo
+Mandrill.Models,TemplateContent,0,0,2,0,0,13,0,0,0,-1,0,3,,Mandrill.Models.MergeVars' Mandrill.Requests.Templates.RenderTemplateRequest' Mandrill.Requests.Messages.SendMessageTemplateRequest
+Mandrill.Models,TemplateInfo,0,0,17,0,0,80,0,0,0,-1,0,1,,Mandrill.IMandrillApi
+Mandrill.Models,TemplateTimeSeries,0,0,10,0,0,45,0,0,0,-1,0,0,,
+Mandrill.Models,TemplateType,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Mandrill.Models,Stats,0,0,6,0,0,34,0,0,0,-1,1,2,Mandrill.Models.UserInfoStats,Mandrill.Models.Sender' Mandrill.Models.UserInfo
+Mandrill.Models,UserInfoStats,0,0,10,0,0,45,0,0,0,-1,0,1,,Mandrill.Models.Stats
+Mandrill.Models,UserInfo,0,0,7,0,0,33,0,0,0,-1,1,1,Mandrill.Models.Stats,Mandrill.IMandrillApi
+Mandrill.Models,WebHookEventType,0,0,0,0,0,43,0,0,0,-1,0,1,,Mandrill.Models.WebHookEvent
+Mandrill.Models,WebHookMessageState,0,0,0,0,0,35,0,0,0,-1,0,1,,Mandrill.Models.WebHookMessage
+Mandrill.Models,WebHookEvent,0,1,7,0,1,52,1,0,0,-1,2,4,Mandrill.Models.WebHookEventType' Mandrill.Models.WebHookMessage,Mandrill.Models.SmtpEvent' Mandrill.Models.WebHookMessage' Mandrill.Models.WebHookOpen' Mandrill.Models.WebHookClick
+Mandrill.Models,WebHookMessage,0,0,28,0,0,210,0,0,0,-1,11,1,Mandrill.Models.EmailAttachment' Mandrill.Models.Image' Mandrill.Models.SmtpEvent' Mandrill.Models.WebHookMessageState' Mandrill.Models.WebHookEvent' Mandrill.Models.MetadataConverter' Mandrill.Models.WebHookOpen' Mandrill.Models.WebHookClick' Mandrill.Models.WebHookMetadata' Mandrill.Models.WebHookDkim' Mandrill.Models.WebHookSpf,Mandrill.Models.WebHookEvent
+Mandrill.Models,MetadataConverter,0,3,0,0,3,83,7,0,0,-1,0,1,,Mandrill.Models.WebHookMessage
+Mandrill.Models,WebHookOpen,0,0,2,0,0,16,0,0,0,-1,1,1,Mandrill.Models.WebHookEvent,Mandrill.Models.WebHookMessage
+Mandrill.Models,WebHookClick,0,0,3,0,0,20,0,0,0,-1,1,1,Mandrill.Models.WebHookEvent,Mandrill.Models.WebHookMessage
+Mandrill.Models,WebHookMetadata,0,0,2,0,0,13,0,0,0,-1,0,1,,Mandrill.Models.WebHookMessage
+Mandrill.Models,WebHookDkim,0,0,2,0,0,13,0,0,0,-1,0,1,,Mandrill.Models.WebHookMessage
+Mandrill.Models,WebHookSpf,0,0,2,0,0,13,0,0,0,-1,0,1,,Mandrill.Models.WebHookMessage
+Mandrill.Requests.Messages,CancelScheduledMessageRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,ContentRequest,0,1,1,0,1,13,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,ListScheduledMessagesRequest,0,0,1,0,0,5,0,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,MessageInfoRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,RescheduleMessageRequest,0,1,2,0,1,12,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,SearchRequest,0,0,7,0,0,40,0,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,SendMessageRequest,0,1,4,0,1,31,1,0,1,-1,2,1,Mandrill.Models.EmailMessage' Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,SendMessageTemplateRequest,0,2,6,0,2,60,2,0,1,-1,3,1,Mandrill.Models.EmailMessage' Mandrill.Models.TemplateContent' Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Messages,SendRawMessageRequest,0,1,8,0,1,55,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Rejects,AddRejectRequest,0,1,3,0,1,25,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Rejects,DeleteRejectRequest,0,1,2,0,1,19,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Rejects,ListRejectsRequest,0,0,3,0,0,21,0,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests,RequestBase,0,0,1,0,0,8,0,29,0,-1,0,30,,Mandrill.Requests.Messages.MessageInfoRequest' Mandrill.Requests.Messages.CancelScheduledMessageRequest' Mandrill.Requests.Messages.RescheduleMessageRequest' Mandrill.Requests.Messages.ContentRequest' Mandrill.Requests.Messages.SendMessageTemplateRequest' Mandrill.Requests.Rejects.AddRejectRequest' Mandrill.Requests.Rejects.DeleteRejectRequest' Mandrill.Requests.Messages.SendRawMessageRequest' Mandrill.Requests.Rejects.ListRejectsRequest' Mandrill.Utilities.MandrillException' Mandrill.Requests.Senders.SenderCheckDomainRequest' Mandrill.Requests.SubAccounts.AddSubAccountRequest' Mandrill.Requests.SubAccounts.DeleteSubAccountRequest' Mandrill.Requests.SubAccounts.SubAccountInfoRequest' Mandrill.Requests.SubAccounts.ListSubAccountsRequest' Mandrill.Requests.SubAccounts.PauseSubAccountRequest' Mandrill.Requests.SubAccounts.UpdateSubAccountRequest' Mandrill.Requests.Templates.AddTemplateRequest' Mandrill.Requests.Senders.SenderInfoRequest' Mandrill.Requests.Templates.DeleteTemplateRequest' Mandrill.Requests.Templates.ListTemplatesRequest' Mandrill.Requests.Templates.TemplateInfoRequest' Mandrill.Requests.Templates.RenderTemplateRequest' Mandrill.Requests.Templates.TemplateTimeSeriesRequest' Mandrill.Requests.SubAccounts.ResumeSubAccountRequest' Mandrill.MandrillApi' Mandrill.Requests.Templates.UpdateTemplateRequest' Mandrill.Requests.Messages.ListScheduledMessagesRequest' Mandrill.Requests.Messages.SendMessageRequest' Mandrill.Requests.Messages.SearchRequest
+Mandrill.Requests.Senders,SenderCheckDomainRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Senders,SenderInfoRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.SubAccounts,AddSubAccountRequest,0,1,4,0,1,31,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.SubAccounts,DeleteSubAccountRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.SubAccounts,ListSubAccountsRequest,0,0,1,0,0,5,0,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.SubAccounts,PauseSubAccountRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.SubAccounts,ResumeSubAccountRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.SubAccounts,SubAccountInfoRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.SubAccounts,UpdateSubAccountRequest,0,1,4,0,1,31,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Templates,AddTemplateRequest,0,1,9,0,1,62,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Templates,DeleteTemplateRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Templates,ListTemplatesRequest,0,0,1,0,0,5,0,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Templates,RenderTemplateRequest,0,1,3,0,1,25,1,0,1,-1,3,1,Mandrill.Models.MergeVar' Mandrill.Models.TemplateContent' Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Templates,TemplateInfoRequest,0,1,1,0,1,9,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Requests.Templates,TemplateTimeSeriesRequest,0,1,1,0,1,13,1,0,1,-1,1,0,Mandrill.Requests.RequestBase,
+Mandrill.Requests.Templates,UpdateTemplateRequest,0,1,8,0,1,55,1,0,1,-1,1,1,Mandrill.Requests.RequestBase,Mandrill.IMandrillApi
+Mandrill.Utilities,JSON,1,3,0,0,3,90,4,0,0,0,0,1,,Mandrill.MandrillApi
+Mandrill.Utilities,MandrillException,0,4,3,0,4,64,4,1,0,-1,2,2,Mandrill.Models.ErrorResponse' Mandrill.Requests.RequestBase,Mandrill.Utilities.MandrillSerializationException' Mandrill.MandrillApi
+Mandrill.Utilities,MandrillSerializationException,0,3,1,0,3,16,3,0,1,-1,2,1,Mandrill.Models.ErrorResponse' Mandrill.Utilities.MandrillException,Mandrill.MandrillApi

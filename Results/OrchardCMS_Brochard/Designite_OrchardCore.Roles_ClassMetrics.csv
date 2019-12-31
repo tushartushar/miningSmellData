@@ -1,16 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Roles,AdminMenu,0,2,1,0,2,23,3,0,1,-1,2,0,OrchardCore.Environment.Navigation.NavigationBuilder' OrchardCore.Roles.Permissions,
-OrchardCore.Roles,Permissions,2,2,0,2,2,21,2,0,1,0,3,2,OrchardCore.Security.Permissions.Permission' OrchardCore.Security.StandardPermissions' OrchardCore.Security.Permissions.PermissionStereotype,OrchardCore.Roles.AdminMenu' OrchardCore.Roles.Controllers.AdminController
-OrchardCore.Roles,RolesPermissionsHandler,1,3,0,0,1,74,15,0,0,0.67,3,0,OrchardCore.Security.Role' OrchardCore.Security.Permissions.Permission' OrchardCore.Security.StandardPermissions,
-OrchardCore.Roles,Startup,0,2,0,0,2,18,2,0,0,-1,0,0,,
-OrchardCore.Roles.Controllers,AdminController,11,10,0,0,7,223,31,0,0,0.2,10,0,OrchardCore.DisplayManagement.IShapeFactory' OrchardCore.Security.Services.IRoleProvider' OrchardCore.DisplayManagement.Notify.INotifier' OrchardCore.Roles.ViewModels.RolesViewModel' OrchardCore.Roles.Permissions' OrchardCore.Roles.ViewModels.CreateRoleViewModel' OrchardCore.Security.Role' OrchardCore.Roles.ViewModels.EditRoleViewModel' OrchardCore.Security.Permissions.Permission' OrchardCore.Roles.ViewModels.RoleEntry,
+OrchardCore.Roles,AdminMenu,1,2,0,0,2,22,3,0,1,0,1,1,OrchardCore.Roles.Permissions,OrchardCore.Roles.Startup
+OrchardCore.Roles,Permissions,2,2,0,2,2,22,2,0,0,0,0,3,,OrchardCore.Roles.AdminMenu' OrchardCore.Roles.Startup' OrchardCore.Roles.Controllers.AdminController
+OrchardCore.Roles,RolesPermissionsHandler,1,3,0,0,1,74,15,0,0,0.67,0,1,,OrchardCore.Roles.Startup
+OrchardCore.Roles,Startup,1,3,0,0,3,52,3,0,0,0.67,11,0,OrchardCore.Roles.AdminMenu' OrchardCore.Roles.Permissions' OrchardCore.Roles.RolesPermissionsHandler' OrchardCore.Roles.Controllers.AdminController' OrchardCore.Roles.Deployment.AllRolesDeploymentSource' OrchardCore.Roles.Deployment.AllRolesDeploymentStep' OrchardCore.Roles.Deployment.AllRolesDeploymentStepDriver' OrchardCore.Roles.Recipes.RolesStep' OrchardCore.Roles.Services.RoleService' OrchardCore.Roles.Services.RoleStore' OrchardCore.Roles.Services.RoleUpdater,
+OrchardCore.Roles.Controllers,AdminController,11,10,0,0,7,229,33,0,0,0.2,5,1,OrchardCore.Roles.Permissions' OrchardCore.Roles.ViewModels.CreateRoleViewModel' OrchardCore.Roles.ViewModels.EditRoleViewModel' OrchardCore.Roles.ViewModels.RolesViewModel' OrchardCore.Roles.ViewModels.RoleEntry,OrchardCore.Roles.Startup
+OrchardCore.Roles.Deployment,AllRolesDeploymentSource,2,2,0,0,2,40,5,0,1,0,2,1,OrchardCore.Roles.Deployment.AllRolesDeploymentStep' OrchardCore.Roles.Recipes.RolesStepRoleModel,OrchardCore.Roles.Startup
+OrchardCore.Roles.Deployment,AllRolesDeploymentStep,0,1,0,0,1,7,1,0,1,-1,0,3,,OrchardCore.Roles.Startup' OrchardCore.Roles.Deployment.AllRolesDeploymentSource' OrchardCore.Roles.Deployment.AllRolesDeploymentStepDriver
+OrchardCore.Roles.Deployment,AllRolesDeploymentStepDriver,0,2,0,0,2,15,2,0,0,-1,1,1,OrchardCore.Roles.Deployment.AllRolesDeploymentStep,OrchardCore.Roles.Startup
 OrchardCore.Roles.Models,RolesDocument,0,0,3,0,0,6,0,0,0,-1,0,1,,OrchardCore.Roles.Services.RoleStore
-OrchardCore.Roles.Recipes,RolesStep,3,2,0,0,2,47,7,0,1,0,3,0,OrchardCore.Security.Role' OrchardCore.Recipes.Models.RecipeExecutionContext' OrchardCore.Security.Permissions.Permission,
-OrchardCore.Roles.Recipes,RolesStepModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
-OrchardCore.Roles.Recipes,RoleModel,0,0,2,0,0,5,0,0,0,-1,0,0,,
-OrchardCore.Roles.Services,RoleStore,6,18,1,1,18,187,32,0,1,0.56,3,0,OrchardCore.Roles.Models.RolesDocument' OrchardCore.Security.IRole' OrchardCore.Security.Role,
-OrchardCore.Roles.Services,RoleUpdater,3,10,1,0,2,98,19,0,0,0.8,2,0,OrchardCore.Security.Role' OrchardCore.Security.Permissions.Permission,
-OrchardCore.Roles.ViewModels,CreateRoleViewModel,0,0,1,0,0,5,0,0,0,-1,0,1,,OrchardCore.Roles.Controllers.AdminController
-OrchardCore.Roles.ViewModels,EditRoleViewModel,0,0,4,0,0,8,0,0,0,-1,0,1,,OrchardCore.Roles.Controllers.AdminController
-OrchardCore.Roles.ViewModels,RolesViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Roles.Controllers.AdminController
-OrchardCore.Roles.ViewModels,RoleEntry,0,0,2,0,0,5,0,0,0,-1,0,1,,OrchardCore.Roles.Controllers.AdminController
+OrchardCore.Roles.Recipes,RolesStep,1,2,0,0,2,41,7,0,1,0,2,1,OrchardCore.Roles.Recipes.RolesStepModel' OrchardCore.Roles.Recipes.RolesStepRoleModel,OrchardCore.Roles.Startup
+OrchardCore.Roles.Recipes,RolesStepModel,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Roles.Recipes.RolesStep
+OrchardCore.Roles.Recipes,RolesStepRoleModel,0,0,3,0,0,6,0,0,0,-1,0,2,,OrchardCore.Roles.Recipes.RolesStep' OrchardCore.Roles.Deployment.AllRolesDeploymentSource
+OrchardCore.Roles.Services,RoleService,1,4,0,0,4,29,6,0,0,0,0,1,,OrchardCore.Roles.Startup
+OrchardCore.Roles.Services,RoleStore,6,18,3,0,16,219,40,0,0,0.56,1,1,OrchardCore.Roles.Models.RolesDocument,OrchardCore.Roles.Startup
+OrchardCore.Roles.Services,RoleUpdater,3,10,1,0,2,98,19,0,0,0.8,0,1,,OrchardCore.Roles.Startup
+OrchardCore.Roles.ViewComponents,SelectRolesViewComponent,1,3,0,0,2,35,4,0,0,0,2,0,OrchardCore.Roles.ViewComponents.SelectRolesViewModel' OrchardCore.Roles.ViewComponents.Selection<T>,
+OrchardCore.Roles.ViewComponents,SelectRolesViewModel,0,0,2,0,0,5,0,0,0,-1,1,1,OrchardCore.Roles.ViewComponents.Selection<T>,OrchardCore.Roles.ViewComponents.SelectRolesViewComponent
+OrchardCore.Roles.ViewComponents,Selection<T>,0,0,2,0,0,5,0,0,0,-1,0,2,,OrchardCore.Roles.ViewComponents.SelectRolesViewComponent' OrchardCore.Roles.ViewComponents.SelectRolesViewModel
+OrchardCore.Roles.ViewModels,CreateRoleViewModel,0,0,2,0,0,6,0,0,0,-1,0,1,,OrchardCore.Roles.Controllers.AdminController
+OrchardCore.Roles.ViewModels,EditRoleViewModel,0,0,5,0,0,9,0,0,0,-1,0,1,,OrchardCore.Roles.Controllers.AdminController
+OrchardCore.Roles.ViewModels,RolesViewModel,0,0,1,0,0,4,0,0,0,-1,1,1,OrchardCore.Roles.ViewModels.RoleEntry,OrchardCore.Roles.Controllers.AdminController
+OrchardCore.Roles.ViewModels,RoleEntry,0,0,3,0,0,6,0,0,0,-1,0,2,,OrchardCore.Roles.ViewModels.RolesViewModel' OrchardCore.Roles.Controllers.AdminController

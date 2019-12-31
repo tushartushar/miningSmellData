@@ -1,38 +1,38 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SevenZip,CRC,2,7,0,1,4,42,11,0,0,0,0,1,,SevenZip.Compression.LZ.BinTree
-SevenZip,DataErrorException,0,1,0,0,1,4,1,0,0,-1,0,0,,
-SevenZip,InvalidParamException,0,1,0,0,1,4,1,0,0,-1,0,0,,
+SevenZip,CRC,2,7,0,1,4,42,11,0,0,0,0,2,,SevenZip.CRC' SevenZip.Compression.LZ.BinTree
+SevenZip,DataErrorException,0,1,0,0,1,4,1,0,0,-1,0,2,,SevenZip.ICoder' SevenZip.Compression.LZMA.Decoder
+SevenZip,InvalidParamException,0,1,0,0,1,4,1,0,0,-1,0,2,,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.Encoder
 SevenZip,ICodeProgress,0,1,0,0,0,13,1,0,0,-1,0,3,,SevenZip.ICoder' SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.Encoder
-SevenZip,ICoder,0,1,0,0,0,26,1,2,0,-1,1,0,SevenZip.ICodeProgress,
-SevenZip,CoderPropID,0,0,0,0,0,63,0,0,0,-1,0,3,,SevenZip.ISetCoderProperties' SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.SevenZipHelper
-SevenZip,ISetCoderProperties,0,1,0,0,0,4,1,1,0,-1,1,0,SevenZip.CoderPropID,
-SevenZip,IWriteCoderProperties,0,1,0,0,0,4,1,1,0,-1,0,0,,
-SevenZip,ISetDecoderProperties,0,1,0,0,0,4,1,1,0,-1,0,0,,
-SevenZip.Compression.LZ,IInWindowStream,0,6,0,0,0,9,6,1,0,-1,0,0,,
-SevenZip.Compression.LZ,IMatchFinder,0,3,0,0,0,7,3,1,1,-1,0,1,,SevenZip.Compression.LZMA.Encoder
-SevenZip.Compression.LZ,BinTree,19,14,0,0,12,324,45,0,2,0.43,2,1,SevenZip.Compression.LZ.InWindow' SevenZip.CRC,SevenZip.Compression.LZMA.Encoder
+SevenZip,ICoder,0,1,0,0,0,26,1,2,0,-1,0,2,,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.Encoder
+SevenZip,CoderPropID,0,0,0,0,0,63,0,0,0,-1,0,3,,SevenZip.ISetCoderProperties' SevenZip.Compression.LZMA.SevenZipHelper' SevenZip.Compression.LZMA.Encoder
+SevenZip,ISetCoderProperties,0,1,0,0,0,4,1,1,0,-1,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip,IWriteCoderProperties,0,1,0,0,0,4,1,1,0,-1,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip,ISetDecoderProperties,0,1,0,0,0,4,1,1,0,-1,0,1,,SevenZip.Compression.LZMA.Decoder
+SevenZip.Compression.LZ,IInWindowStream,0,6,0,0,0,9,6,1,0,-1,0,1,,SevenZip.Compression.LZ.IMatchFinder
+SevenZip.Compression.LZ,IMatchFinder,0,3,0,0,0,7,3,1,1,-1,0,2,,SevenZip.Compression.LZ.BinTree' SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZ,BinTree,19,14,0,0,12,324,46,0,2,0.43,0,1,,SevenZip.Compression.LZMA.Encoder
 SevenZip.Compression.LZ,InWindow,11,12,0,5,11,108,26,1,0,0,0,1,,SevenZip.Compression.LZ.BinTree
 SevenZip.Compression.LZ,OutWindow,6,8,0,1,8,97,22,0,0,0,0,1,,SevenZip.Compression.LZMA.Decoder
 SevenZip.Buffer,InBuffer,7,7,0,0,7,60,12,0,0,0,0,0,,
 SevenZip.Buffer,OutBuffer,5,9,0,0,9,36,11,0,0,0,0,0,,
-SevenZip.Compression.LZMA,Base,27,1,0,27,1,59,2,0,0,0,0,5,,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.LenDecoder' SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.LenEncoder' SevenZip.Compression.LZMA.LenPriceTableEncoder
-SevenZip.Compression.LZMA,State,1,6,0,1,6,15,7,0,0,0,0,3,,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.Optimal
-SevenZip.Compression.LZMA,Decoder,18,8,0,0,4,355,25,0,1,0,9,1,SevenZip.Compression.LZ.OutWindow' SevenZip.Compression.RangeCoder.Decoder' SevenZip.Compression.RangeCoder.BitDecoder' SevenZip.Compression.RangeCoder.BitTreeDecoder' SevenZip.Compression.LZMA.LenDecoder' SevenZip.Compression.LZMA.LiteralDecoder' SevenZip.Compression.LZMA.Base' SevenZip.Compression.LZMA.State' SevenZip.ICodeProgress,SevenZip.Compression.LZMA.SevenZipHelper
-SevenZip.Compression.LZMA,LenDecoder,6,3,0,0,3,46,6,0,0,0,4,1,SevenZip.Compression.RangeCoder.BitDecoder' SevenZip.Compression.RangeCoder.BitTreeDecoder' SevenZip.Compression.LZMA.Base' SevenZip.Compression.RangeCoder.Decoder,SevenZip.Compression.LZMA.Decoder
-SevenZip.Compression.LZMA,LiteralDecoder,4,5,0,0,4,65,8,0,0,0,2,1,SevenZip.Compression.LZMA.Decoder2' SevenZip.Compression.RangeCoder.Decoder,SevenZip.Compression.LZMA.Decoder
-SevenZip.Compression.LZMA,Decoder2,1,4,0,0,4,33,5,0,0,0,2,1,SevenZip.Compression.RangeCoder.BitDecoder' SevenZip.Compression.RangeCoder.Decoder,SevenZip.Compression.LZMA.LiteralDecoder
-SevenZip.Compression.LZMA,Encoder,58,32,0,0,6,1338,141,0,1,0.06,14,1,SevenZip.Compression.LZMA.State' SevenZip.Compression.LZMA.Optimal' SevenZip.Compression.LZ.IMatchFinder' SevenZip.Compression.RangeCoder.Encoder' SevenZip.Compression.RangeCoder.BitEncoder' SevenZip.Compression.RangeCoder.BitTreeEncoder' SevenZip.Compression.LZMA.LenPriceTableEncoder' SevenZip.Compression.LZMA.LiteralEncoder' SevenZip.Compression.LZMA.EMatchFinderType' SevenZip.Compression.LZMA.Base' SevenZip.Compression.LZ.BinTree' SevenZip.Compression.LZMA.Encoder2' SevenZip.ICodeProgress' SevenZip.CoderPropID,SevenZip.Compression.LZMA.SevenZipHelper
+SevenZip.Compression.LZMA,Base,27,1,0,27,1,59,2,0,0,0,0,2,,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZMA,State,1,6,0,1,6,15,8,0,0,0,0,2,,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZMA,Decoder,18,8,0,0,4,355,34,0,1,0,0,1,,SevenZip.Compression.LZMA.SevenZipHelper
+SevenZip.Compression.LZMA,LenDecoder,6,3,0,0,3,46,7,0,0,0,0,1,,SevenZip.Compression.LZMA.Decoder
+SevenZip.Compression.LZMA,LiteralDecoder,4,5,0,0,4,65,8,0,0,0,0,1,,SevenZip.Compression.LZMA.Decoder
+SevenZip.Compression.LZMA,Decoder2,1,4,0,0,4,33,5,0,0,0,0,1,,SevenZip.Compression.LZMA.Decoder
+SevenZip.Compression.LZMA,Encoder,58,32,0,0,6,1338,181,0,1,0.06,0,1,,SevenZip.Compression.LZMA.SevenZipHelper
 SevenZip.Compression.LZMA,EMatchFinderType,0,0,0,0,0,5,0,0,0,-1,0,1,,SevenZip.Compression.LZMA.Encoder
-SevenZip.Compression.LZMA,LiteralEncoder,4,3,0,0,3,89,6,0,0,0,1,1,SevenZip.Compression.LZMA.Encoder2,SevenZip.Compression.LZMA.Encoder
-SevenZip.Compression.LZMA,Encoder2,1,5,0,0,5,62,13,0,0,0,2,2,SevenZip.Compression.RangeCoder.BitEncoder' SevenZip.Compression.RangeCoder.Encoder,SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.LiteralEncoder
-SevenZip.Compression.LZMA,LenEncoder,5,4,0,0,4,72,12,1,0,0,4,1,SevenZip.Compression.RangeCoder.BitEncoder' SevenZip.Compression.RangeCoder.BitTreeEncoder' SevenZip.Compression.LZMA.Base' SevenZip.Compression.RangeCoder.Encoder,SevenZip.Compression.LZMA.LenPriceTableEncoder
-SevenZip.Compression.LZMA,LenPriceTableEncoder,3,5,0,0,4,27,7,0,1,0,3,1,SevenZip.Compression.LZMA.Base' SevenZip.Compression.LZMA.LenEncoder' SevenZip.Compression.RangeCoder.Encoder,SevenZip.Compression.LZMA.Encoder
-SevenZip.Compression.LZMA,Optimal,12,3,0,12,3,18,3,0,0,0,1,1,SevenZip.Compression.LZMA.State,SevenZip.Compression.LZMA.Encoder
-SevenZip.Compression.LZMA,SevenZipHelper,4,2,0,0,2,103,6,0,0,1,3,0,SevenZip.CoderPropID' SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.Decoder,
-SevenZip.Compression.RangeCoder,Encoder,7,11,0,3,11,101,19,0,0,0,0,6,,SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.Encoder2' SevenZip.Compression.LZMA.LenEncoder' SevenZip.Compression.LZMA.LenPriceTableEncoder' SevenZip.Compression.RangeCoder.BitEncoder' SevenZip.Compression.RangeCoder.BitTreeEncoder
-SevenZip.Compression.RangeCoder,Decoder,4,9,0,4,9,100,15,0,0,0,0,6,,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.LenDecoder' SevenZip.Compression.LZMA.LiteralDecoder' SevenZip.Compression.LZMA.Decoder2' SevenZip.Compression.RangeCoder.BitDecoder' SevenZip.Compression.RangeCoder.BitTreeDecoder
-SevenZip.Compression.RangeCoder,BitEncoder,7,7,0,3,6,58,12,0,0,0,1,4,SevenZip.Compression.RangeCoder.Encoder,SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.Encoder2' SevenZip.Compression.LZMA.LenEncoder' SevenZip.Compression.RangeCoder.BitTreeEncoder
-SevenZip.Compression.RangeCoder,BitDecoder,4,3,0,2,3,42,6,0,0,0,1,4,SevenZip.Compression.RangeCoder.Decoder,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.LenDecoder' SevenZip.Compression.LZMA.Decoder2' SevenZip.Compression.RangeCoder.BitTreeDecoder
-SevenZip.Compression.RangeCoder,BitTreeEncoder,2,8,0,0,8,89,15,0,0,0,2,2,SevenZip.Compression.RangeCoder.BitEncoder' SevenZip.Compression.RangeCoder.Encoder,SevenZip.Compression.LZMA.Encoder' SevenZip.Compression.LZMA.LenEncoder
-SevenZip.Compression.RangeCoder,BitTreeDecoder,2,5,0,0,5,49,9,0,0,0,2,2,SevenZip.Compression.RangeCoder.BitDecoder' SevenZip.Compression.RangeCoder.Decoder,SevenZip.Compression.LZMA.Decoder' SevenZip.Compression.LZMA.LenDecoder
-ExcelDnaPack,PackProgram,2,3,0,0,0,379,51,0,0,0,7,0,ExcelDna.Integration.XlCall' ExcelDna.Integration.DnaLibrary' ExcelDna.Integration.ExternalLibrary' ExcelDna.Integration.Project' ExcelDna.Integration.Reference' ExcelDna.Integration.Image' ExcelDna.Integration.SourceItem,
+SevenZip.Compression.LZMA,LiteralEncoder,4,3,0,0,3,89,6,0,0,0,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZMA,Encoder2,1,5,0,0,5,62,13,0,0,0,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZMA,LenEncoder,5,4,0,0,4,72,13,1,0,0,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZMA,LenPriceTableEncoder,3,5,0,0,4,27,7,0,1,0,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZMA,Optimal,12,3,0,12,3,18,3,0,0,0,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.LZMA,SevenZipHelper,4,2,0,0,2,103,6,0,0,1,0,0,,
+SevenZip.Compression.RangeCoder,Encoder,7,11,0,3,11,101,19,0,0,0,0,3,,SevenZip.Compression.RangeCoder.BitTreeEncoder' SevenZip.Compression.RangeCoder.BitEncoder' SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.RangeCoder,Decoder,4,9,0,4,9,100,15,0,0,0,0,3,,SevenZip.Compression.RangeCoder.BitTreeDecoder' SevenZip.Compression.RangeCoder.BitDecoder' SevenZip.Compression.LZMA.Decoder
+SevenZip.Compression.RangeCoder,BitEncoder,7,7,0,3,6,58,12,0,0,0,0,2,,SevenZip.Compression.RangeCoder.BitTreeEncoder' SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.RangeCoder,BitDecoder,4,3,0,2,3,42,7,0,0,0,0,2,,SevenZip.Compression.RangeCoder.BitTreeDecoder' SevenZip.Compression.LZMA.Decoder
+SevenZip.Compression.RangeCoder,BitTreeEncoder,2,8,0,0,8,89,15,0,0,0.38,0,1,,SevenZip.Compression.LZMA.Encoder
+SevenZip.Compression.RangeCoder,BitTreeDecoder,2,5,0,0,5,49,9,0,0,0.4,0,1,,SevenZip.Compression.LZMA.Decoder
+ExcelDnaPack,PackProgram,2,3,0,0,0,385,57,0,0,0,0,0,,

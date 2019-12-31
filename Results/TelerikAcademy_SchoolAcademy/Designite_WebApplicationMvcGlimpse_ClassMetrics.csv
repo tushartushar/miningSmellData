@@ -1,25 +1,25 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 WebApplicationMvcGlimpse.App_Start,AccessControlAllowOrigin,0,1,0,0,1,8,1,0,0,-1,0,0,,
-WebApplicationMvcGlimpse.App_Start,LogAttribute,0,4,0,0,4,23,4,0,0,-1,0,0,,
+WebApplicationMvcGlimpse.App_Start,LogAttribute,0,4,0,0,4,23,4,0,0,-1,0,1,,WebApplicationMvcGlimpse.FilterConfig
 WebApplicationMvcGlimpse,BundleConfig,0,1,0,0,1,21,1,0,0,-1,0,1,,WebApplicationMvcGlimpse.MvcApplication
-WebApplicationMvcGlimpse,FilterConfig,0,1,0,0,1,8,1,0,0,-1,0,1,,WebApplicationMvcGlimpse.MvcApplication
+WebApplicationMvcGlimpse,FilterConfig,0,1,0,0,1,8,1,0,0,-1,1,1,WebApplicationMvcGlimpse.App_Start.LogAttribute,WebApplicationMvcGlimpse.MvcApplication
 WebApplicationMvcGlimpse,RouteConfig,0,1,0,0,1,21,1,0,0,-1,0,1,,WebApplicationMvcGlimpse.MvcApplication
 WebApplicationMvcGlimpse,Startup,0,2,0,0,2,27,2,0,0,-1,0,0,,
-WebApplicationMvcGlimpse,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,WebApplicationMvcGlimpse.FilterConfig' WebApplicationMvcGlimpse.RouteConfig' WebApplicationMvcGlimpse.BundleConfig,
+WebApplicationMvcGlimpse,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,WebApplicationMvcGlimpse.BundleConfig' WebApplicationMvcGlimpse.FilterConfig' WebApplicationMvcGlimpse.RouteConfig,
 WebApplicationMvcGlimpse.Areas.Administration,AdministrationAreaRegistration,0,1,1,0,1,18,1,0,0,-1,0,0,,
-WebApplicationMvcGlimpse.Areas.Administration.Controllers,UsersController,0,1,0,0,1,10,1,0,1,-1,0,0,,
-WebApplicationMvcGlimpse.Controllers,AccountController,0,19,2,0,16,301,34,0,0,-1,5,0,WebApplicationMvcGlimpse.Models.LoginViewModel' WebApplicationMvcGlimpse.Models.RegisterViewModel' WebApplicationMvcGlimpse.Models.ManageUserViewModel' WebApplicationMvcGlimpse.Controllers.ChallengeResult' WebApplicationMvcGlimpse.Models.ExternalLoginConfirmationViewModel,
+WebApplicationMvcGlimpse.Areas.Administration.Controllers,UsersController,0,1,0,0,1,10,1,0,1,-1,1,0,WebApplicationMvcGlimpse.Controllers.AdminController,
+WebApplicationMvcGlimpse.Controllers,AccountController,0,19,2,0,16,301,39,0,0,-1,5,0,WebApplicationMvcGlimpse.Controllers.ChallengeResult' WebApplicationMvcGlimpse.Models.ExternalLoginConfirmationViewModel' WebApplicationMvcGlimpse.Models.ManageUserViewModel' WebApplicationMvcGlimpse.Models.LoginViewModel' WebApplicationMvcGlimpse.Models.RegisterViewModel,
 WebApplicationMvcGlimpse.Controllers,ChallengeResult,0,2,2,0,2,14,2,0,0,-1,0,1,,WebApplicationMvcGlimpse.Controllers.AccountController
-WebApplicationMvcGlimpse.Controllers,AdminController,0,0,0,0,0,4,0,2,0,-1,0,0,,
+WebApplicationMvcGlimpse.Controllers,AdminController,0,0,0,0,0,4,0,2,0,-1,0,2,,WebApplicationMvcGlimpse.Controllers.UsersAdminController' WebApplicationMvcGlimpse.Areas.Administration.Controllers.UsersController
 WebApplicationMvcGlimpse.Controllers,HomeController,0,7,0,0,7,35,7,0,0,-1,0,0,,
-WebApplicationMvcGlimpse.Controllers,ProductsController,0,1,0,0,1,12,1,0,0,-1,0,0,,
-WebApplicationMvcGlimpse.Controllers,UsersAdminController,0,1,0,0,1,7,1,0,1,-1,0,0,,
+WebApplicationMvcGlimpse.Controllers,ProductsController,0,1,0,0,1,12,1,0,0,-1,1,0,WebApplicationMvcGlimpse.Models.Product,
+WebApplicationMvcGlimpse.Controllers,UsersAdminController,0,1,0,0,1,7,1,0,1,-1,1,0,WebApplicationMvcGlimpse.Controllers.AdminController,
 WebApplicationMvcGlimpse.Controllers,Params,0,0,3,0,0,7,0,0,0,-1,0,1,,WebApplicationMvcGlimpse.Controllers.UsersController
 WebApplicationMvcGlimpse.Controllers,UsersController,0,2,0,0,2,16,2,0,0,-1,1,0,WebApplicationMvcGlimpse.Controllers.Params,
 WebApplicationMvcGlimpse.Models,ExternalLoginConfirmationViewModel,0,0,1,0,0,6,0,0,0,-1,0,1,,WebApplicationMvcGlimpse.Controllers.AccountController
 WebApplicationMvcGlimpse.Models,ManageUserViewModel,0,0,3,0,0,16,0,0,0,-1,0,1,,WebApplicationMvcGlimpse.Controllers.AccountController
 WebApplicationMvcGlimpse.Models,LoginViewModel,0,0,3,0,0,12,0,0,0,-1,0,1,,WebApplicationMvcGlimpse.Controllers.AccountController
 WebApplicationMvcGlimpse.Models,RegisterViewModel,0,0,3,0,0,15,0,0,0,-1,0,1,,WebApplicationMvcGlimpse.Controllers.AccountController
-WebApplicationMvcGlimpse.Models,ApplicationUser,0,0,0,0,0,3,0,0,0,-1,0,0,,
-WebApplicationMvcGlimpse.Models,ApplicationDbContext,0,0,0,0,0,3,0,0,0,-1,0,0,,
-WebApplicationMvcGlimpse.Models,Product,0,0,1,0,0,4,0,0,0,-1,0,0,,
+WebApplicationMvcGlimpse.Models,ApplicationUser,0,0,0,0,0,3,0,0,0,-1,0,1,,WebApplicationMvcGlimpse.Models.ApplicationDbContext
+WebApplicationMvcGlimpse.Models,ApplicationDbContext,0,0,0,0,0,3,0,0,0,-1,1,0,WebApplicationMvcGlimpse.Models.ApplicationUser,
+WebApplicationMvcGlimpse.Models,Product,0,0,1,0,0,4,0,0,0,-1,0,1,,WebApplicationMvcGlimpse.Controllers.ProductsController

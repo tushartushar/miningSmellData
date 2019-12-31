@@ -1,22 +1,22 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Reactor.Web,Context,0,3,5,0,3,26,3,0,0,-1,1,5,Reactor.Http.HttpContext,Reactor.Web.MiddlewareProcessor' Reactor.Web.Router' Reactor.Web.StaticFiles' Reactor.Web.Route' Reactor.Web.Media.Stream
-Reactor.Web,MiddlewareProcessor,0,1,0,0,1,34,3,0,0,-1,1,2,Reactor.Web.Context,Reactor.Web.Router' Reactor.Web.Route
+Reactor.Web,Context,0,3,5,0,3,26,3,0,0,-1,0,5,,Reactor.Web.MiddlewareProcessor' Reactor.Web.Media.Stream' Reactor.Web.Route' Reactor.Web.Router' Reactor.Web.Server
+Reactor.Web,MiddlewareProcessor,0,1,0,0,1,34,3,0,0,-1,1,2,Reactor.Web.Context,Reactor.Web.Route' Reactor.Web.Router
 Reactor.Web,Resource,2,1,3,0,0,65,1,0,0,0,0,1,,Reactor.Web.Media.Stream
-Reactor.Web,Router,2,14,0,0,14,88,14,0,0,0.14,3,1,Reactor.Web.MiddlewareProcessor' Reactor.Web.Route' Reactor.Web.Context,Reactor.Web.Server
-Reactor.Web,StaticFiles,0,1,0,0,1,38,1,0,0,-1,5,0,Reactor.File.ReadStream' Reactor.Http.ServerRequest' Reactor.Web.Context' Reactor.Http.ServerResponse' Reactor.Web.Media.Mime,
-Reactor.Web,Route,4,7,2,0,3,112,17,0,0,0,4,1,Reactor.Web.MiddlewareProcessor' Reactor.Web.Context' Reactor.Http.ServerRequest' Reactor.Net.HttpUtility,Reactor.Web.Router
-Reactor.Web,Server,3,19,0,0,18,109,19,0,0,0.16,6,0,Reactor.Http.Server' Reactor.Web.Router' Reactor.Http.ServerResponse' Reactor.Http.HttpContext' Reactor.Buffer' Reactor.Http.ServerRequest,
+Reactor.Web,Router,2,14,0,0,14,88,14,0,0,0.21,3,1,Reactor.Web.Context' Reactor.Web.MiddlewareProcessor' Reactor.Web.Route,Reactor.Web.Server
+Reactor.Web,StaticFiles,0,1,0,0,1,38,1,0,0,-1,1,0,Reactor.Web.Media.Mime,
+Reactor.Web,Route,4,7,2,0,3,112,17,0,0,0.43,2,1,Reactor.Web.Context' Reactor.Web.MiddlewareProcessor,Reactor.Web.Router
+Reactor.Web,Server,3,19,0,0,18,109,19,0,0,0.26,2,0,Reactor.Web.Context' Reactor.Web.Router,
 Reactor.Web.Media,Mime,1,1,0,0,1,586,3,0,0,0,0,2,,Reactor.Web.StaticFiles' Reactor.Web.Media.Stream
-Reactor.Web.Media,Stream,0,3,0,0,3,187,8,0,0,-1,8,0,Reactor.Buffer' Reactor.File.ReadStream' Reactor.Http.ServerResponse' Reactor.Web.Context' Reactor.Http.ServerRequest' Reactor.Web.Media.Mime' Reactor.File.WriteStream' Reactor.Web.Resource,
-Reactor.Web.Templates,Lexer,0,10,0,0,1,335,39,0,0,-1,6,1,Reactor.Web.Templates.Token' Reactor.Web.Templates.SectionToken' Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.RenderToken' Reactor.Web.Templates.CommentToken' Reactor.Web.Templates.ContentToken,Reactor.Web.Templates.DocumentLoader
-Reactor.Web.Templates,CommentToken,0,2,0,0,2,11,2,0,1,-1,0,1,,Reactor.Web.Templates.Lexer
-Reactor.Web.Templates,ContentToken,0,2,0,0,2,11,2,0,1,-1,0,3,,Reactor.Web.Templates.Lexer' Reactor.Web.Templates.Template' Reactor.Web.Templates.DocumentTransform
-Reactor.Web.Templates,DocumentToken,0,3,1,0,3,35,8,0,1,-1,2,3,Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.SectionToken,Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.Template' Reactor.Web.Templates.DocumentTransform
-Reactor.Web.Templates,ImportToken,0,1,1,0,1,8,1,0,1,-1,0,4,,Reactor.Web.Templates.Lexer' Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.DocumentTransform
-Reactor.Web.Templates,RenderToken,0,1,1,0,1,8,1,0,1,-1,0,3,,Reactor.Web.Templates.Lexer' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.DocumentTransform
-Reactor.Web.Templates,SectionToken,0,2,1,0,2,12,2,0,1,-1,0,3,,Reactor.Web.Templates.Lexer' Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.DocumentTransform
-Reactor.Web.Templates,Token,0,1,7,0,1,20,1,6,0,-1,0,3,,Reactor.Web.Templates.Lexer' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.DocumentTransform
-Reactor.Web.Templates,DocumentLoader,0,5,1,0,1,75,13,0,0,-1,6,1,Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.Lexer' Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.RenderToken' Reactor.Web.Templates.Token' Reactor.Web.Templates.Pathing,Reactor.Web.Templates.Template
+Reactor.Web.Media,Stream,0,3,0,0,3,187,15,0,0,-1,3,0,Reactor.Web.Context' Reactor.Web.Resource' Reactor.Web.Media.Mime,
+Reactor.Web.Templates,Lexer,0,10,0,0,1,335,39,0,0,-1,6,1,Reactor.Web.Templates.CommentToken' Reactor.Web.Templates.ContentToken' Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.RenderToken' Reactor.Web.Templates.SectionToken' Reactor.Web.Templates.Token,Reactor.Web.Templates.DocumentLoader
+Reactor.Web.Templates,CommentToken,0,2,0,0,2,11,2,0,1,-1,1,1,Reactor.Web.Templates.Token,Reactor.Web.Templates.Lexer
+Reactor.Web.Templates,ContentToken,0,2,0,0,2,11,2,0,1,-1,1,4,Reactor.Web.Templates.Token,Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.Lexer' Reactor.Web.Templates.Template' Reactor.Web.Templates.DocumentTransform
+Reactor.Web.Templates,DocumentToken,0,3,1,0,3,35,8,0,1,-1,3,3,Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.SectionToken' Reactor.Web.Templates.Token,Reactor.Web.Templates.Template' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.DocumentTransform
+Reactor.Web.Templates,ImportToken,0,1,1,0,1,8,1,0,1,-1,1,3,Reactor.Web.Templates.Token,Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.Lexer' Reactor.Web.Templates.DocumentLoader
+Reactor.Web.Templates,RenderToken,0,1,1,0,1,8,1,0,1,-1,1,3,Reactor.Web.Templates.Token,Reactor.Web.Templates.Lexer' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.DocumentTransform
+Reactor.Web.Templates,SectionToken,0,2,1,0,2,12,2,0,1,-1,1,3,Reactor.Web.Templates.Token,Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.Lexer' Reactor.Web.Templates.DocumentTransform
+Reactor.Web.Templates,Token,0,1,7,0,1,20,1,6,0,-1,0,9,,Reactor.Web.Templates.SectionToken' Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.RenderToken' Reactor.Web.Templates.DocumentTransform' Reactor.Web.Templates.CommentToken' Reactor.Web.Templates.ContentToken' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.Lexer
+Reactor.Web.Templates,DocumentLoader,0,5,1,0,1,75,13,0,0,-1,7,1,Reactor.Web.Templates.Lexer' Reactor.Web.Templates.ContentToken' Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.RenderToken' Reactor.Web.Templates.Token' Reactor.Web.Templates.Pathing,Reactor.Web.Templates.Template
 Reactor.Web.Templates,Pathing,0,3,0,0,1,20,4,0,0,-1,0,1,,Reactor.Web.Templates.DocumentLoader
-Reactor.Web.Templates,Template,1,3,0,0,3,26,5,0,0,0.67,4,0,Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.DocumentTransform' Reactor.Web.Templates.ContentToken,
-Reactor.Web.Templates,DocumentTransform,1,6,0,0,1,129,24,0,0,0,6,1,Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.ImportToken' Reactor.Web.Templates.SectionToken' Reactor.Web.Templates.RenderToken' Reactor.Web.Templates.Token' Reactor.Web.Templates.ContentToken,Reactor.Web.Templates.Template
+Reactor.Web.Templates,Template,1,3,0,0,3,26,5,0,0,0.67,4,0,Reactor.Web.Templates.ContentToken' Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.DocumentLoader' Reactor.Web.Templates.DocumentTransform,
+Reactor.Web.Templates,DocumentTransform,1,6,0,0,1,129,24,0,0,0,5,1,Reactor.Web.Templates.ContentToken' Reactor.Web.Templates.DocumentToken' Reactor.Web.Templates.RenderToken' Reactor.Web.Templates.SectionToken' Reactor.Web.Templates.Token,Reactor.Web.Templates.Template

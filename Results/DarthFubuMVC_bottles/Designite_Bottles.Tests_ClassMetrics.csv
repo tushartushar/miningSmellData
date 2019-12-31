@@ -1,0 +1,115 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bottles.Tests,AssemblyFileFinderTester,4,6,0,0,4,61,6,0,0,0,0,0,,
+Bottles.Tests,when_loading_a_single_package,0,7,0,0,6,96,7,0,0,-1,1,0,Bottles.Tests.StubBottle,
+Bottles.Tests,AssemblyPackageInfoTester,2,4,0,0,4,29,4,0,0,0,0,0,,
+Bottles.Tests,AssemblyPackageInfoIntegratedTester,1,4,0,0,4,42,4,0,0,0.5,0,0,,
+Bottles.Tests,AssemblyTargetTester,0,2,0,0,2,27,2,0,0,-1,0,0,,
+Bottles.Tests,FileSystemExtensionsTester,2,4,0,0,4,40,4,0,0,0.5,0,0,,
+Bottles.Tests,FileSystemTester,0,7,0,0,4,56,9,0,0,-1,0,0,,
+Bottles.Tests,LambdaActivatorTester,0,3,0,0,3,27,3,0,0,-1,0,0,,
+Bottles.Tests,BottleInfoTester,2,9,0,0,7,98,12,0,0,0.22,0,0,,
+Bottles.Tests,when_reading_a_package_from_a_folder,2,3,0,0,3,37,3,0,0,0,0,0,,
+Bottles.Tests,when_reading_a_package_from_a_folder_with_a_native_assembly,2,2,0,0,2,34,2,0,0,0,1,0,Bottles.Tests.FakeAssemblyRegistration,
+Bottles.Tests,FakeAssemblyRegistration,0,3,1,0,3,16,3,0,1,-1,0,1,,Bottles.Tests.when_reading_a_package_from_a_folder_with_a_native_assembly
+Bottles.Tests,BottleManifestTester,0,6,0,0,6,57,6,0,0,-1,0,0,,
+Bottles.Tests,BottleOrderingIntegratedTester,0,5,0,0,3,52,5,0,0,-1,1,0,Bottles.Tests.StubPackageLoader,
+Bottles.Tests,PackageRegistryTester,0,8,0,0,8,137,8,0,0,-1,2,0,Bottles.Tests.FakeActivator' Bottles.Tests.FakeEnvironmentReqirement,
+Bottles.Tests,FakeActivator,2,4,0,1,4,21,4,0,1,0.5,1,1,Bottles.Tests.FakeEnvironmentReqirement,Bottles.Tests.PackageRegistryTester
+Bottles.Tests,FakeEnvironmentReqirement,3,3,0,1,3,27,4,0,1,0,0,2,,Bottles.Tests.PackageRegistryTester' Bottles.Tests.FakeActivator
+Bottles.Tests,BottlingDependencyProcessorTester,2,11,0,0,8,110,12,0,0,0.27,2,0,Bottles.Tests.StubBottleDiagnostics' Bottles.Tests.StubBottle,
+Bottles.Tests,StubBottleDiagnostics,1,13,0,0,13,55,13,0,1,0.85,0,2,,Bottles.Tests.when_detecting_a_duplicate_package_in_a_later_loader' Bottles.Tests.BottlingDependencyProcessorTester
+Bottles.Tests,BottlingDiagnosticsTester,1,7,0,0,7,68,7,0,0,0,2,0,Bottles.Tests.StubBottle' Bottles.Tests.StubPackageLoader,
+Bottles.Tests,when_logging_a_package,3,3,0,0,3,26,3,0,0,0,2,0,Bottles.Tests.StubBottle' Bottles.Tests.StubPackageLoader,
+Bottles.Tests,when_logging_a_bootstrapper_run,5,3,0,0,3,33,3,0,0,0,2,0,Bottles.Tests.StubBootstrapper' Bottles.Tests.StubActivator,
+Bottles.Tests,when_logging_an_assembly,4,4,0,0,4,33,4,0,0,0,1,0,Bottles.Tests.StubBottle,
+Bottles.Tests,BottlingRegistryLogTester,0,2,0,0,2,31,2,0,0,-1,2,0,Bottles.Tests.StubBottle' Bottles.Tests.StubPackageLoader,
+Bottles.Tests,when_adding_an_bootstrapper,3,4,0,0,3,35,4,0,0,0,1,0,Bottles.Tests.StubBootstrapper,
+Bottles.Tests,when_adding_an_activator,3,4,0,0,3,35,4,0,0,0,1,0,Bottles.Tests.StubActivator,
+Bottles.Tests,when_adding_a_package_loader,3,4,0,0,3,35,4,0,0,0,1,0,Bottles.Tests.StubPackageLoader,
+Bottles.Tests,when_detecting_a_duplicate_package_in_a_later_loader,5,3,0,0,2,38,3,0,0,0,2,0,Bottles.Tests.StubBottleDiagnostics' Bottles.Tests.StubPackageLoader,
+Bottles.Tests,StubBootstrapper,2,3,0,0,3,18,3,0,1,0,0,2,,Bottles.Tests.when_logging_a_bootstrapper_run' Bottles.Tests.when_adding_an_bootstrapper
+Bottles.Tests,StubActivator,2,1,2,0,1,19,1,0,1,0,0,2,,Bottles.Tests.when_adding_an_activator' Bottles.Tests.when_logging_a_bootstrapper_run
+Bottles.Tests,must_be_descriptions_on_important_things,0,2,0,0,2,22,2,0,0,-1,0,0,,
+Bottles.Tests,RemoteDomain_determination_of_the_app_config_file_Tester,0,3,0,0,3,40,3,0,0,-1,0,0,,
+Bottles.Tests,SolutionDirectoryBottleLoaderTester,2,2,0,0,2,26,2,0,0,0,0,0,,
+Bottles.Tests,StubBottle,3,10,7,0,10,73,10,0,1,0.8,0,7,,Bottles.Tests.BottlingRegistryLogTester' Bottles.Tests.StubPackageLoader' Bottles.Tests.BottlingDependencyProcessorTester' Bottles.Tests.BottlingDiagnosticsTester' Bottles.Tests.when_logging_a_package' Bottles.Tests.when_logging_an_assembly' Bottles.Tests.when_loading_a_single_package
+Bottles.Tests,StubPackageLoader,1,4,1,0,4,25,4,0,1,0,1,6,Bottles.Tests.StubBottle,Bottles.Tests.BottlingRegistryLogTester' Bottles.Tests.BottleOrderingIntegratedTester' Bottles.Tests.when_adding_a_package_loader' Bottles.Tests.when_detecting_a_duplicate_package_in_a_later_loader' Bottles.Tests.BottlingDiagnosticsTester' Bottles.Tests.when_logging_a_package
+Bottles.Tests,ZipFileServiceTester,0,1,0,0,1,16,1,0,0,-1,0,0,,
+Bottles.Tests.Commands,LinkCommandTester,3,6,0,0,3,57,6,0,0,0.33,0,0,,
+Bottles.Tests.Commands,AliasLibraryTester,3,5,0,0,5,61,5,0,0,0,0,0,,
+Bottles.Tests.Commands,CreateBottleCommandTester,2,10,0,0,4,91,10,0,0,0,0,0,,
+Bottles.Tests.Commands,InitBottleCommandTester,4,9,0,0,7,90,9,0,0,0,0,0,,
+Bottles.Tests.Configuration,BottleConfigurationTester,1,6,0,0,6,45,6,0,0,0,1,0,Bottles.Tests.Configuration.FakeError,
+Bottles.Tests.Configuration,FakeError,0,0,0,0,0,4,0,0,1,-1,0,1,,Bottles.Tests.Configuration.BottleConfigurationTester
+Bottles.Tests.Configuration,environment,1,0,1,0,0,12,0,0,0,-1,0,0,,
+Bottles.Tests.Configuration,when_asserting_the_bottle_configuration,3,3,0,0,3,29,3,0,0,0,0,0,,
+Bottles.Tests.Creation,when_creating_a_bottle_for_all_assemblies_found_and_including_pdbs,7,7,0,0,6,90,7,0,0,0,2,0,Bottles.Tests.Creation.StubZipFileService' Bottles.Tests.Zipping.StubZipEntry,
+Bottles.Tests.Creation,when_creating_a_package_for_all_assemblies_found_and_not_including_pdbs,6,2,0,0,1,58,2,0,0,0,2,0,Bottles.Tests.Creation.StubZipFileService' Bottles.Tests.Zipping.StubZipEntry,
+Bottles.Tests.Creation,StubZipFileService,3,5,3,0,5,45,5,0,1,1,2,3,Bottles.Tests.Zipping.StubZipFile' Bottles.Tests.Zipping.StubZipEntry,Bottles.Tests.Creation.when_creating_a_bottle_for_all_assemblies_found_and_including_pdbs' Bottles.Tests.Creation.when_creating_a_package_for_all_assemblies_found_and_not_including_pdbs' Bottles.Tests.Creation.when_creating_a_package_for_assemblies_and_native_assemblies
+Bottles.Tests.Creation,when_trying_to_create_a_package_and_not_all_assemblies_are_found,5,3,0,0,2,41,3,0,0,0.67,0,0,,
+Bottles.Tests.Creation,when_creating_a_package_for_assemblies_and_native_assemblies,7,7,0,0,6,84,7,0,0,0,2,0,Bottles.Tests.Creation.StubZipFileService' Bottles.Tests.Zipping.StubZipEntry,
+Bottles.Tests.Creation,when_adding_config_files_to_zip,5,3,0,0,2,30,3,0,0,0,1,0,Bottles.Tests.Zipping.StubZipFile,
+Bottles.Tests.Creation,when_adding_data_files_to_zip,5,3,0,0,2,29,3,0,0,0,1,0,Bottles.Tests.Zipping.StubZipFile,
+Bottles.Tests.Environment,FileExistsTester,0,4,0,0,4,53,4,0,0,-1,1,0,Bottles.Tests.Environment.FileSettings,
+Bottles.Tests.Environment,FileSettings,0,0,2,0,0,5,0,0,0,-1,0,2,,Bottles.Tests.Environment.FileExistsTester' Bottles.Tests.Environment.FolderExistsTester
+Bottles.Tests.Environment,FolderExistsTester,0,4,0,0,4,53,4,0,0,-1,1,0,Bottles.Tests.Environment.FileSettings,
+Bottles.Tests.Exploding,integration_test_of_exploding_an_assembly_package,1,3,0,0,3,38,3,0,0,0,0,0,,
+Bottles.Tests.Exploding,integration_test_of_exploding_an_empty_assembly_package,1,2,0,0,2,21,2,0,0,0,0,0,,
+Bottles.Tests.Exploding,when_extracting_package_zip_files,0,4,0,0,4,25,4,0,1,-1,1,0,Bottles.Tests.Exploding.BottleExploderContext,
+Bottles.Tests.Exploding,when_cleaning_all_the_packages,0,2,0,0,1,16,2,0,1,-1,1,0,Bottles.Tests.Exploding.BottleExploderContext,
+Bottles.Tests.Exploding,when_reading_the_version_from_a_package_folder,0,2,0,0,2,20,2,0,1,-1,1,0,Bottles.Tests.Exploding.BottleExploderContext,
+Bottles.Tests.Exploding,explode_all_with_zip_files_and_no_unzipped_directories,0,2,0,0,1,18,2,0,1,-1,1,0,Bottles.Tests.Exploding.BottleExploderContext,
+Bottles.Tests.Exploding,explode_a_zip_file_if_the_version_is_different_than_the_existing_package_folder,2,2,0,0,1,22,2,0,1,1,1,0,Bottles.Tests.Exploding.BottleExploderContext,
+Bottles.Tests.Exploding,explode_a_zip_file_if_the_version_is_missing_from_the_existing_package_folder,1,2,0,0,1,19,2,0,1,1,1,0,Bottles.Tests.Exploding.BottleExploderContext,
+Bottles.Tests.Exploding,do_not_explode_a_zip_file_if_the_version_is_the_same_as_the_existing_folder,1,2,0,0,1,19,2,0,1,1,1,0,Bottles.Tests.Exploding.BottleExploderContext,
+Bottles.Tests.Exploding,BottleExploderContext,1,9,0,0,0,75,9,7,0,0,0,7,,Bottles.Tests.Exploding.when_extracting_package_zip_files' Bottles.Tests.Exploding.when_cleaning_all_the_packages' Bottles.Tests.Exploding.when_reading_the_version_from_a_package_folder' Bottles.Tests.Exploding.explode_all_with_zip_files_and_no_unzipped_directories' Bottles.Tests.Exploding.explode_a_zip_file_if_the_version_is_different_than_the_existing_package_folder' Bottles.Tests.Exploding.explode_a_zip_file_if_the_version_is_missing_from_the_existing_package_folder' Bottles.Tests.Exploding.do_not_explode_a_zip_file_if_the_version_is_the_same_as_the_existing_folder
+Bottles.Tests.Harness,FileWriterActivator,2,3,0,1,3,19,3,0,1,0,0,0,,
+Bottles.Tests.Harness,ServiceRunner,2,2,0,0,2,54,4,0,0,0,1,1,Bottles.Tests.Harness.ServiceFileChecker,Bottles.Tests.Services.Integration.service_activation_integration_tester
+Bottles.Tests.Harness,ServiceFileChecker,3,4,1,0,3,44,4,0,0,0,0,1,,Bottles.Tests.Harness.ServiceRunner
+Bottles.Tests.PackageLoaders.LinkedFolders,LinkManifestTester,0,3,0,0,3,59,3,0,0,-1,0,0,,
+Bottles.Tests.PackageLoaders.Assemblies,AssemblyPackageInfoTester,0,2,0,0,2,22,2,0,0,-1,0,0,,
+Bottles.Tests.Runtime,BootstrappingIntegratedTester,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Bottles.Tests.Services,BottleServiceApplicationTester,0,14,0,0,14,92,14,0,0,-1,8,0,Bottles.Tests.Services.TemplatedApplicationLoader' Bottles.Tests.Services.FakeBootstrapper' Bottles.Tests.Services.AbstractApplicationLoader' Bottles.Tests.Services.FakeApplicationLoader' Bottles.Tests.Services.Application' Bottles.Tests.Services.GoodApplicationSource' Bottles.Tests.Services.AbstractApplicationSource' Bottles.Tests.Services.TemplatedApplicationSource,
+Bottles.Tests.Services,TemplatedApplicationLoader,0,2,0,0,2,10,2,0,1,-1,0,1,,Bottles.Tests.Services.BottleServiceApplicationTester
+Bottles.Tests.Services,FakeBootstrapper,0,1,0,0,1,7,1,0,1,-1,0,1,,Bottles.Tests.Services.BottleServiceApplicationTester
+Bottles.Tests.Services,AbstractApplicationLoader,0,1,0,0,1,7,1,0,1,-1,0,1,,Bottles.Tests.Services.BottleServiceApplicationTester
+Bottles.Tests.Services,FakeApplicationLoader,0,1,0,0,1,7,1,0,1,-1,0,1,,Bottles.Tests.Services.BottleServiceApplicationTester
+Bottles.Tests.Services,Application,0,1,0,0,1,7,1,0,1,-1,0,4,,Bottles.Tests.Services.BottleServiceApplicationTester' Bottles.Tests.Services.GoodApplicationSource' Bottles.Tests.Services.AbstractApplicationSource' Bottles.Tests.Services.TemplatedApplicationSource
+Bottles.Tests.Services,GoodApplicationSource,0,1,0,0,1,7,1,0,1,-1,1,1,Bottles.Tests.Services.Application,Bottles.Tests.Services.BottleServiceApplicationTester
+Bottles.Tests.Services,AbstractApplicationSource,0,1,0,0,1,7,1,0,1,-1,1,1,Bottles.Tests.Services.Application,Bottles.Tests.Services.BottleServiceApplicationTester
+Bottles.Tests.Services,TemplatedApplicationSource,0,2,0,0,2,10,2,0,1,-1,1,1,Bottles.Tests.Services.Application,Bottles.Tests.Services.BottleServiceApplicationTester
+Bottles.Services.Tests,BottleServiceFinderTester,0,3,1,0,3,32,3,0,0,-1,4,0,Bottles.Services.Tests.EmptyBootstrapper' Bottles.Services.Tests.NonBottleServiceBootstrapper' Bottles.Services.Tests.StubServiceBootstrapper' Bottles.Services.Tests.StubService,
+Bottles.Services.Tests,BottleServiceTester,0,5,0,0,5,53,5,0,0,-1,2,0,Bottles.Services.Tests.MarkerBottleInterface' Bottles.Services.Tests.InnerService,
+Bottles.Services.Tests,MarkerBottleInterface,0,0,0,0,0,1,0,0,1,-1,0,1,,Bottles.Services.Tests.BottleServiceTester
+Bottles.Services.Tests,InnerService,0,2,2,0,2,13,2,0,1,-1,0,1,,Bottles.Services.Tests.BottleServiceTester
+Bottles.Services.Tests,EmptyBootstrapper,0,1,0,0,1,7,1,0,1,-1,0,1,,Bottles.Services.Tests.BottleServiceFinderTester
+Bottles.Services.Tests,NonBottleServiceBootstrapper,0,1,0,0,1,14,1,0,1,-1,1,1,Bottles.Services.Tests.SimpleActivator,Bottles.Services.Tests.BottleServiceFinderTester
+Bottles.Services.Tests,SimpleActivator,0,1,0,0,1,7,1,0,1,-1,0,1,,Bottles.Services.Tests.NonBottleServiceBootstrapper
+Bottles.Services.Tests,StubServiceBootstrapper,0,1,0,0,1,7,1,0,1,-1,1,1,Bottles.Services.Tests.StubService,Bottles.Services.Tests.BottleServiceFinderTester
+Bottles.Services.Tests,StubService,0,2,0,0,2,9,2,0,1,-1,0,2,,Bottles.Services.Tests.StubServiceBootstrapper' Bottles.Services.Tests.BottleServiceFinderTester
+Bottles.Tests.Services.Integration,service_activation_integration_tester,0,5,0,0,5,39,5,0,0,-1,1,0,Bottles.Tests.Harness.ServiceRunner,
+Bottles.Services.Tests.Messaging,EventAggregatorTester,1,3,0,0,3,31,3,0,0,0.67,1,0,Bottles.Services.Tests.Messaging.RecordingListener,
+Bottles.Services.Tests.Messaging,RecordingListener,1,2,1,0,2,17,2,0,1,0,0,1,,Bottles.Services.Tests.Messaging.EventAggregatorTester
+Bottles.Services.Tests.Messaging,MessageWaitConditionTester,0,2,0,0,2,46,2,0,0,-1,1,0,Bottles.Services.Tests.Messaging.Message,
+Bottles.Services.Tests.Messaging,Message,0,4,1,0,3,26,7,0,0,-1,0,2,,Bottles.Services.Tests.Messaging.MessageWaitConditionTester' Bottles.Services.Tests.Messaging.RemoteListenerTester
+Bottles.Services.Tests.Messaging,MessagingHubTester,9,7,0,0,5,81,7,0,0,0,2,0,Bottles.Services.Tests.Messaging.Message1' Bottles.Services.Tests.Messaging.Message2,
+Bottles.Services.Tests.Messaging,Message1,0,4,1,0,3,23,7,0,0,-1,0,1,,Bottles.Services.Tests.Messaging.MessagingHubTester
+Bottles.Services.Tests.Messaging,Message2,0,4,1,0,3,23,7,0,0,-1,0,1,,Bottles.Services.Tests.Messaging.MessagingHubTester
+Bottles.Services.Tests.Messaging,RemoteListenerTester,0,1,0,0,1,52,1,0,0,-1,1,0,Bottles.Services.Tests.Messaging.Message,
+Bottles.Services.Tests.Messaging,WaitTester,0,3,0,0,3,27,3,0,0,-1,0,0,,
+Bottles.Services.Tests.Messaging.Tracking,MessageHistoryTester,1,11,0,0,9,140,11,0,0,0.64,1,0,Bottles.Services.Tests.Messaging.Tracking.Foo,
+Bottles.Services.Tests.Messaging.Tracking,Foo,0,1,1,0,1,8,1,0,0,-1,0,1,,Bottles.Services.Tests.Messaging.Tracking.MessageHistoryTester
+Bottles.Services.Tests.Messaging.Tracking,MessageSentTester,0,4,0,0,4,64,4,0,0,-1,1,0,Bottles.Services.Tests.Messaging.Tracking.MyMessage,
+Bottles.Services.Tests.Messaging.Tracking,MyMessage,0,1,2,0,1,9,1,0,0,-1,0,1,,Bottles.Services.Tests.Messaging.Tracking.MessageSentTester
+Bottles.Services.Tests.Remote,AssemblyRequirementTester,0,1,0,0,1,19,1,0,0,-1,0,0,,
+Bottles.Services.Tests.Remote,Examples,0,6,0,0,6,99,6,0,0,-1,1,0,Bottles.Services.Tests.Remote.SomeMessage,
+Bottles.Services.Tests.Remote,CustomApplicationLoader,0,2,0,0,2,12,2,0,1,-1,0,0,,
+Bottles.Services.Tests.Remote,SomeMessage,0,0,0,0,0,1,0,0,0,-1,0,1,,Bottles.Services.Tests.Remote.Examples
+Bottles.Services.Tests.Remote,BigRemoteServicesIntegrationTester,0,11,0,0,10,150,11,0,0,-1,0,0,,
+Bottles.Services.Tests.Remote,RemoteDomainExpressionTester,0,4,0,0,4,56,4,0,0,-1,0,0,,
+Bottles.Services.Tests.Remote,RemoteServicesProxyTester,0,1,0,0,1,11,1,0,0,-1,1,0,Bottles.Services.Tests.Remote.SimpleLoader,
+Bottles.Services.Tests.Remote,SimpleLoader,1,2,0,1,2,13,2,0,1,1,0,1,,Bottles.Services.Tests.Remote.RemoteServicesProxyTester
+Bottles.Tests.Zipping,ZipFileServiceTester,0,3,0,0,3,58,5,0,0,-1,0,0,,
+Bottles.Tests.Zipping,ZipFolderRequestTester,1,6,0,0,4,86,9,0,0,0.33,2,0,Bottles.Tests.Zipping.StubZipFile' Bottles.Tests.Zipping.StubZipEntry,
+Bottles.Tests.Zipping,StubZipFile,2,4,0,2,4,21,4,0,1,0.75,1,4,Bottles.Tests.Zipping.StubZipEntry,Bottles.Tests.Zipping.ZipFolderRequestTester' Bottles.Tests.Creation.StubZipFileService' Bottles.Tests.Creation.when_adding_config_files_to_zip' Bottles.Tests.Creation.when_adding_data_files_to_zip
+Bottles.Tests.Zipping,StubZipEntry,0,6,2,0,6,37,11,0,0,-1,0,6,,Bottles.Tests.Zipping.ZipFolderRequestTester' Bottles.Tests.Zipping.StubZipFile' Bottles.Tests.Creation.when_creating_a_bottle_for_all_assemblies_found_and_including_pdbs' Bottles.Tests.Creation.when_creating_a_package_for_all_assemblies_found_and_not_including_pdbs' Bottles.Tests.Creation.StubZipFileService' Bottles.Tests.Creation.when_creating_a_package_for_assemblies_and_native_assemblies

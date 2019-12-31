@@ -1,0 +1,9 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RoutingWebSite,EndsWithStringRouteConstraint,1,2,0,0,2,19,3,0,0,0,0,1,,RoutingWebSite.UseEndpointRoutingStartup
+RoutingWebSite,Program,2,2,0,2,2,53,5,0,0,0,2,0,RoutingWebSite.UseEndpointRoutingStartup' RoutingWebSite.UseRouterStartup,
+RoutingWebSite,UseEndpointRoutingStartup,2,3,0,0,2,102,3,0,0,1,1,1,RoutingWebSite.EndsWithStringRouteConstraint,RoutingWebSite.Program
+RoutingWebSite,UseRouterStartup,1,3,0,0,2,35,3,0,0,1,0,1,,RoutingWebSite.Program
+Microsoft.AspNetCore.Builder,EndpointRouteBuilderExtensions,0,1,0,0,1,17,2,0,0,-1,0,0,,
+Microsoft.AspNetCore.Builder,HelloAppBuilderExtensions,0,1,0,0,1,14,2,0,0,-1,2,0,RoutingWebSite.HelloExtension.HelloMiddleware' RoutingWebSite.HelloExtension.HelloOptions,
+RoutingWebSite.HelloExtension,HelloMiddleware,3,2,0,0,2,28,3,0,0,0,1,1,RoutingWebSite.HelloExtension.HelloOptions,Microsoft.AspNetCore.Builder.HelloAppBuilderExtensions
+RoutingWebSite.HelloExtension,HelloOptions,0,0,1,0,0,4,0,0,0,-1,0,2,,RoutingWebSite.HelloExtension.HelloMiddleware' Microsoft.AspNetCore.Builder.HelloAppBuilderExtensions

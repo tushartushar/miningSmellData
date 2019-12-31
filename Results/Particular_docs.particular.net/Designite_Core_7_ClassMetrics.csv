@@ -1,1 +1,303 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Core7.Audit,CustomAuditDataBehavior,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Core7.Audit,Usage,0,1,0,0,0,10,1,0,0,-1,0,0,,
+Core7,BasicUsageOfIBus,0,11,0,0,0,131,11,0,0,-1,2,0,Core7.MyMessage' Core7.OtherMessage,
+Core7,MyMessageHandler,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core7,MyMessage,0,0,0,0,0,6,0,0,0,-1,0,2,,Core7.BasicUsageOfIBus' Core7.DiscardingOldMessages
+Core7,OtherMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.BasicUsageOfIBus
+Core7,BestPracticesConfiguration,0,2,0,0,0,32,2,0,0,-1,2,0,Core7.MyEvent' Core7.TransportName,
+Core7,MyEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.BestPracticesConfiguration
+Core7,TransportName,0,1,1,0,1,9,1,0,0,-1,0,1,,Core7.BestPracticesConfiguration
+Core7,CriticalErrors,0,3,0,0,0,36,3,0,0,-1,0,0,,
+Core7,DiscardingOldMessages,0,1,0,0,0,25,1,0,0,-1,1,0,Core7.MyMessage,
+Core7,HandlerOrdering,0,3,0,0,0,36,3,0,0,-1,3,0,Core7.HandlerA' Core7.HandlerB' Core7.HandlerC,
+Core7,HandlerA,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.HandlerOrdering
+Core7,HandlerB,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.HandlerOrdering
+Core7,HandlerC,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.HandlerOrdering
+Core7,Hosting,0,4,0,0,0,58,4,0,0,-1,0,0,,
+Core7,EndpointInstance,0,1,1,0,1,12,2,0,0,-1,0,0,,
+Core7,ForInstallationOnReplacement,0,1,0,0,0,12,1,0,0,-1,0,0,,
+Core7,SwitchInstallersWithCommandline,1,1,0,0,1,18,2,0,0,0,0,0,,
+Core7,SwitchInstallersByMachineNameConvention,0,1,0,0,0,13,2,0,0,-1,0,0,,
+Core7,MyInstaller,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core7,InstancePerUnitOfWorkRegistration,0,1,0,0,0,29,1,0,0,-1,1,0,Core7.MyUnitOfWork,
+Core7,MyUnitOfWork,0,2,0,0,2,14,2,0,0,-1,0,1,,Core7.InstancePerUnitOfWorkRegistration
+Core7,License,0,1,0,0,0,11,1,0,0,-1,0,0,,
+Core7,PurgingMessagesAtStartup,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core7,TimeToWaitBeforeTriggeringCriticalErrorOnTimeoutOutages,0,1,0,0,0,10,1,0,0,-1,0,0,,
+Core7,TransactionScopeUnitOfWork,0,3,0,0,0,26,3,0,0,-1,0,0,,
+Core7,TransportTransactions,0,7,0,0,0,56,7,0,0,-1,1,0,Core7.MyTransport,
+Core7,MyTransport,0,1,1,0,1,9,1,0,0,-1,0,4,,Core7.Routing.RoutingAPIs' Core7.UpgradeGuides._6to7.Routing.RoutingAPIs' Core7.TransportTransactions' Core7.MyTransportConfigurationExtensions
+Core7,MyTransportConfigurationExtensions,0,1,0,0,1,6,1,0,0,-1,1,0,Core7.MyTransport,
+Core7.Container.Custom,MyContainer,0,10,0,0,10,39,10,0,0,-1,0,1,,Core7.Container.Custom.MyContainerDefinition
+Core7.Container.Custom,MyContainerDefinition,0,1,0,0,1,8,1,0,0,-1,1,1,Core7.Container.Custom.MyContainer,Core7.Container.Custom.Usage
+Core7.Container.Custom,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core7.Container.Custom.MyContainerDefinition,
+Core7.Container,MyService,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Container.Usage
+Core7.Container,Usage,0,7,0,0,0,88,7,0,0,-1,1,0,Core7.Container.MyService,
+Core7.Conventions,Usage,0,1,0,0,0,43,1,0,0,-1,0,0,,
+Core7.DataBus.Conventions,MessageWithLargePayload,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Core7.DataBus.Conventions,Usage,0,1,0,0,0,13,1,0,0,-1,0,0,,
+Core7.DataBus.Custom,CustomDataBus,0,3,0,0,3,22,3,0,0,-1,0,2,,Core7.DataBus.Custom.Usage' Core7.DataBus.Custom.CustomDatabusFeature
+Core7.DataBus.Custom,CustomDatabusDefinition,0,1,0,0,0,7,1,0,0,-1,1,0,Core7.DataBus.Custom.CustomDatabusFeature,
+Core7.DataBus.Custom,CustomDatabusFeature,0,2,0,0,1,12,2,0,0,-1,1,1,Core7.DataBus.Custom.CustomDataBus,Core7.DataBus.Custom.CustomDatabusDefinition
+Core7.DataBus.Custom,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core7.DataBus.Custom.CustomDataBus,
+Core7.DataBus.DataBusProperty,MessageWithLargePayload,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Core7.DelayedDelivery,DeferForDateTime,0,1,0,0,0,18,1,0,0,-1,1,0,Core7.DelayedDelivery.MessageToBeSentLater,
+Core7.DelayedDelivery,MessageToBeSentLater,0,0,0,0,0,5,0,0,0,-1,0,2,,Core7.DelayedDelivery.DeferForDateTime' Core7.DelayedDelivery.DeferForTimeSpan
+Core7.DelayedDelivery,DeferForTimeSpan,0,1,0,0,0,21,1,0,0,-1,1,0,Core7.DelayedDelivery.MessageToBeSentLater,
+Core7.EndpointName,Usage,0,2,0,0,0,27,2,0,0,-1,0,0,,
+Core7.EndpointName,MyTransport,0,1,1,0,1,9,1,0,0,-1,0,0,,
+Core7.EndpointName,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Core7.Features,MyAdvancedSatelliteFeature,0,3,0,0,1,30,3,0,0,-1,0,0,,
+Core7.Features,MyFeature,0,2,0,0,0,37,2,0,0,-1,2,0,Core7.Features.MessageHandlerDependency' Core7.Features.CustomBehavior,
+Core7.Features,MessageHandlerDependency,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Features.MyFeature
+Core7.Features,CustomBehavior,0,2,0,0,2,11,2,0,0,-1,0,1,,Core7.Features.MyFeature
+Core7.Features,MinimalFeature,0,1,0,0,0,7,1,0,0,-1,0,0,,
+Core7.Features,ComponentBFeature,0,1,0,0,0,7,1,0,0,-1,0,1,,Core7.Features.ComponentAFeature
+Core7.Features,ComponentAFeature,0,2,0,0,1,18,2,0,0,-1,1,0,Core7.Features.ComponentBFeature,
+Core7.Features,FeatureEnabledByDefault,0,2,0,0,1,11,2,0,0,-1,0,0,,
+Core7.Features,FeatureWithDefaults,0,2,0,0,1,15,2,0,0,-1,0,0,,
+Core7.Features,WriteSettings,0,1,0,0,1,13,1,0,0,-1,1,0,Core7.Features.CustomSettingsDto,
+Core7.Features,CustomSettingsDto,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Features.WriteSettings
+Core7.Features,EnablingOtherFeatures,0,2,0,0,1,21,2,0,0,-1,1,0,Core7.Features.OtherFeature,
+Core7.Features,OtherFeature,0,1,0,0,0,8,1,0,0,-1,0,1,,Core7.Features.EnablingOtherFeatures
+Core7.Features,FeatureWithPrerequisites,0,2,0,0,1,19,2,0,0,-1,0,0,,
+Core7.Features,MyFeatureWithStartupTasks,0,1,0,0,0,12,1,0,0,-1,1,0,Core7.Features.MyStartupTask,
+Core7.Features,MyStartupTask,1,3,0,0,1,20,3,0,0,0,0,1,,Core7.Features.MyFeatureWithStartupTasks
+Core7.Features,MyStartupTaskThatUsesMessageSession,1,3,0,0,1,22,3,0,0,0,1,0,Core7.Features.MyEvent,
+Core7.Features,MyEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Features.MyStartupTaskThatUsesMessageSession
+Core7.Features,MySatelliteFeature,0,3,0,0,1,26,3,0,0,-1,0,0,,
+Core7.Features,SatelliteRecoverability,0,4,0,0,3,54,4,0,0,-1,0,0,,
+Core7.Forwarding,Usage,0,1,0,0,0,16,1,0,0,-1,0,0,,
+Core7.Handlers,ShortComputeBoundHandler,0,1,0,0,1,9,1,0,0,-1,2,0,Core7.Handlers.ComputeBoundComponent' Core7.Handlers.MyMessage,
+Core7.Handlers,LongComputeBoundHandler,0,1,0,0,1,10,1,0,0,-1,2,0,Core7.Handlers.ComputeBoundComponent' Core7.Handlers.MyMessage,
+Core7.Handlers,ComputeBoundComponent,0,2,0,0,2,9,2,0,0,-1,0,2,,Core7.Handlers.ShortComputeBoundHandler' Core7.Handlers.LongComputeBoundHandler
+Core7.Handlers,HandlerReturnsATask,0,1,0,0,1,9,1,0,0,-1,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,HandlerReturnsTwoTasks,1,1,0,0,1,14,2,0,0,0,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,HandlerAwaitsTheTask,0,1,0,0,1,9,1,0,0,-1,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,BatchedDispatchHandler,0,1,0,0,1,13,2,0,0,-1,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,ImmediateDispatchHandler,0,1,0,0,1,16,2,0,0,-1,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,PacketsImmediateDispatchHandler,0,1,0,0,1,20,3,0,0,-1,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,LimitConcurrencyImmediateDispatchHandler,0,2,0,0,1,32,3,0,0,-1,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,GenericAsyncHandler,1,1,0,0,1,10,1,0,0,0,0,0,,
+Core7.Handlers,HandlerWhichIntegratesWithEvent,0,1,0,0,1,26,1,0,0,-1,2,0,Core7.Handlers.DependencyWhichRaisedEvent' Core7.Handlers.MyMessage,
+Core7.Handlers,DependencyWhichRaisedEvent,0,1,0,0,0,8,1,0,0,-1,0,1,,Core7.Handlers.HandlerWhichIntegratesWithEvent
+Core7.Handlers,HandlerWhichIntegratesWithAPM,0,1,0,0,1,23,1,0,0,-1,2,0,Core7.Handlers.DependencyWhichUsesAPM' Core7.Handlers.MyMessage,
+Core7.Handlers,DependencyWhichUsesAPM,0,2,0,0,2,11,2,0,0,-1,0,1,,Core7.Handlers.HandlerWhichIntegratesWithAPM
+Core7.Handlers,HandlerWhichIntegratesWithRemotingWithAPM,0,1,0,0,1,12,1,0,0,-1,2,0,Core7.Handlers.AsyncClient' Core7.Handlers.MyMessage,
+Core7.Handlers,AsyncClient,0,2,0,0,2,27,2,0,0,-1,1,1,Core7.Handlers.RemoteService,Core7.Handlers.HandlerWhichIntegratesWithRemotingWithAPM
+Core7.Handlers,HandlerWhichIntegratesWithRemotingWithTask,0,1,0,0,1,16,1,0,0,-1,2,0,Core7.Handlers.RemoteService' Core7.Handlers.MyMessage,
+Core7.Handlers,RemoteService,0,1,0,0,1,9,1,0,0,-1,0,2,,Core7.Handlers.AsyncClient' Core7.Handlers.HandlerWhichIntegratesWithRemotingWithTask
+Core7.Handlers,MyAsyncHandler,0,1,0,0,1,8,1,0,0,-1,1,0,Core7.Handlers.MyMessage,
+Core7.Handlers,MyMessage,0,0,1,0,0,4,0,0,0,-1,0,14,,Core7.Handlers.MyAsyncHandler' Core7.Handlers.HandlerWhichIntegratesWithEvent' Core7.Handlers.HandlerWhichIntegratesWithAPM' Core7.Handlers.HandlerWhichIntegratesWithRemotingWithAPM' Core7.Handlers.HandlerWhichIntegratesWithRemotingWithTask' Core7.Handlers.ShortComputeBoundHandler' Core7.Handlers.LongComputeBoundHandler' Core7.Handlers.HandlerReturnsATask' Core7.Handlers.HandlerReturnsTwoTasks' Core7.Handlers.HandlerAwaitsTheTask' Core7.Handlers.BatchedDispatchHandler' Core7.Handlers.ImmediateDispatchHandler' Core7.Handlers.PacketsImmediateDispatchHandler' Core7.Handlers.LimitConcurrencyImmediateDispatchHandler
+Core7.Handlers,ReplyingHandler,0,1,0,0,1,17,1,0,0,-1,2,0,Core7.Handlers.RequestDataMessage' Core7.Handlers.DataResponseMessage,
+Core7.Handlers,RequestDataMessage,0,0,2,0,0,6,0,0,0,-1,0,1,,Core7.Handlers.ReplyingHandler
+Core7.Handlers,DataResponseMessage,0,0,2,0,0,5,0,0,0,-1,0,1,,Core7.Handlers.ReplyingHandler
+Core7.Handlers.DataAccess,AddOrderLine,0,0,3,0,0,7,0,0,1,-1,1,2,Core7.Handlers.DataAccess.OrderMessage,Core7.Handlers.DataAccess.Managed' Core7.Handlers.DataAccess.Simple
+Core7.Handlers.DataAccess,IMyOrm,0,1,0,0,0,4,1,0,0,-1,1,1,Core7.Handlers.DataAccess.IMyOrmSession,Core7.Handlers.DataAccess.Simple
+Core7.Handlers.DataAccess,IMyOrmSession,0,2,0,0,0,6,2,0,0,-1,1,2,Core7.Handlers.DataAccess.Order,Core7.Handlers.DataAccess.IMyOrm' Core7.Handlers.DataAccess.MyOrmExtensions
+Core7.Handlers.DataAccess,Managed,0,1,0,0,1,46,1,0,0,-1,5,1,Core7.Handlers.DataAccess.AddOrderLine' Core7.Handlers.DataAccess.IdempotencyEnforcer' Core7.Handlers.DataAccess.MyPersistence' Core7.Handlers.DataAccess.Order' Core7.Handlers.DataAccess.OrderMessage,Core7.Handlers.DataAccess.MyOrmExtensions
+Core7.Handlers.DataAccess,IdempotencyEnforcer,0,2,0,0,1,25,3,0,0,-1,0,2,,Core7.Handlers.DataAccess.MyOrmExtensions' Core7.Handlers.DataAccess.Managed
+Core7.Handlers.DataAccess,NonIdempotentHandler,1,3,0,0,3,29,3,0,0,1,0,0,,
+Core7.Handlers.DataAccess,MyOrmExtensions,0,2,0,0,2,11,2,0,0,-1,4,0,Core7.Handlers.DataAccess.IMyOrmSession' Core7.Handlers.DataAccess.Managed' Core7.Handlers.DataAccess.IdempotencyEnforcer' Core7.Handlers.DataAccess.Order,
+Core7.Handlers.DataAccess,MyPersistence,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.Handlers.DataAccess.Managed
+Core7.Handlers.DataAccess,Order,0,2,0,0,2,10,2,0,0,-1,0,3,,Core7.Handlers.DataAccess.MyOrmExtensions' Core7.Handlers.DataAccess.Managed' Core7.Handlers.DataAccess.IMyOrmSession
+Core7.Handlers.DataAccess,OrderMessage,0,0,1,0,0,5,0,1,0,-1,0,2,,Core7.Handlers.DataAccess.AddOrderLine' Core7.Handlers.DataAccess.Managed
+Core7.Handlers.DataAccess,Simple,0,0,0,0,0,48,0,0,0,-1,2,0,Core7.Handlers.DataAccess.AddOrderLine' Core7.Handlers.DataAccess.IMyOrm,
+Core7.Handlers.DataAccess,IdempotentHandler,1,2,0,0,2,22,3,0,0,1,0,0,,
+Core7.Headers,IncomingBehavior,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core7.Headers,MutateIncomingTransportMessages,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core7.Headers,MutateOutgoingTransportMessages,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core7.Headers,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,4,,Core7.Headers.ReadHandler' Core7.Headers.WriteHandler' Core7.Headers.ReadSaga' Core7.Headers.WriteSaga
+Core7.Headers,OutgoingBehavior,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Core7.Headers,ReadHandler,0,1,0,0,1,11,1,0,0,-1,1,0,Core7.Headers.MyMessage,
+Core7.Headers,ReadSaga,0,2,0,0,1,16,2,0,0,-1,2,0,Core7.Headers.MyMessage' Core7.Headers.ReadSagaData,
+Core7.Headers,ReadSagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.Headers.ReadSaga
+Core7.Headers,SomeOtherMessage,0,0,0,0,0,3,0,0,0,-1,0,2,,Core7.Headers.WriteSaga' Core7.Headers.WriteHandler
+Core7.Headers,StaticHeaders,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core7.Headers,WriteHandler,0,1,0,0,1,19,1,0,0,-1,2,0,Core7.Headers.MyMessage' Core7.Headers.SomeOtherMessage,
+Core7.Headers,WriteSaga,0,2,0,0,1,24,2,0,0,-1,3,0,Core7.Headers.MyMessage' Core7.Headers.SomeOtherMessage' Core7.Headers.WriteSagaData,
+Core7.Headers,WriteSagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.Headers.WriteSaga
+Core7.Headers.Writers,BehaviorCleaner,0,1,0,0,1,28,5,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterError
+Core7.Headers.Writers,EndpointConfigurationExtensions,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core7.Headers.Writers,HeaderWriterAudit,2,1,0,0,1,58,1,0,0,0,2,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator,
+Core7.Headers.Writers,MessageToSend,0,0,6,0,0,34,0,0,0,-1,0,9,,Core7.Headers.Writers.HeaderWriterAudit' Core7.Headers.Writers.HeaderWriterDataBusConvention' Core7.Headers.Writers.HeaderWriterDataBusProperty' Core7.Headers.Writers.HeaderWriterDefer' Core7.Headers.Writers.HeaderWriterEncryption' Core7.Headers.Writers.HeaderWriterError' Core7.Headers.Writers.HeaderWriterReply' Core7.Headers.Writers.HeaderWriterReturn' Core7.Headers.Writers.HeaderWriterSend
+Core7.Headers.Writers,MessageHandler,0,10,0,0,10,72,10,0,0,-1,0,0,,
+Core7.Headers.Writers,Mutator,2,11,0,0,11,195,20,0,0,1,0,11,,Core7.Headers.Writers.HeaderWriterAudit' Core7.Headers.Writers.HeaderWriterDataBusConvention' Core7.Headers.Writers.HeaderWriterDataBusProperty' Core7.Headers.Writers.HeaderWriterDefer' Core7.Headers.Writers.HeaderWriterEncryption' Core7.Headers.Writers.HeaderWriterError' Core7.Headers.Writers.HeaderWriterPublish' Core7.Headers.Writers.HeaderWriterReply' Core7.Headers.Writers.HeaderWriterReturn' Core7.Headers.Writers.HeaderWriterSaga' Core7.Headers.Writers.HeaderWriterSend
+Core7.Headers.Writers,HeaderWriterDataBusConvention,2,1,0,0,1,62,1,0,0,0,2,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator,
+Core7.Headers.Writers,HeaderWriterDataBusProperty,2,1,0,0,1,55,1,0,0,0,2,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator,
+Core7.Headers.Writers,HeaderWriterDefer,3,2,0,1,2,58,2,0,0,0,2,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator,
+Core7.Headers.Writers,HeaderWriterEncryption,2,1,0,0,1,63,1,0,0,0,2,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator,
+Core7.Headers.Writers,HeaderWriterError,2,2,0,0,2,87,2,0,0,0,4,0,Core7.Headers.Writers.BehaviorCleaner' Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator' Core7.Headers.Writers.ErrorMutator,
+Core7.Headers.Writers,ErrorMutator,0,1,0,0,1,15,1,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterError
+Core7.Headers.Writers,HeaderWriterPublish,2,2,0,0,2,57,2,0,0,0,2,0,Core7.Headers.Writers.Mutator' Core7.Headers.Writers.MessageToPublish,
+Core7.Headers.Writers,MessageToPublish,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterPublish
+Core7.Headers.Writers,HeaderWriterReply,2,1,0,0,1,63,1,0,0,0,3,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator' Core7.Headers.Writers.MessageToReply,
+Core7.Headers.Writers,MessageToReply,0,0,0,0,0,7,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterReply
+Core7.Headers.Writers,HeaderWriterReturn,2,1,0,0,1,59,1,0,0,0,2,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator,
+Core7.Headers.Writers,HeaderWriterSaga,2,1,0,0,1,160,1,0,0,0,9,0,Core7.Headers.Writers.Mutator' Core7.Headers.Writers.StartSaga1Message' Core7.Headers.Writers.SendFromSagaMessage' Core7.Headers.Writers.Saga1' Core7.Headers.Writers.SagaData' Core7.Headers.Writers.Saga2' Core7.Headers.Writers.ReplyToOriginatorFromSagaMessage' Core7.Headers.Writers.ReplyFromSagaMessage' Core7.Headers.Writers.TimeoutFromSaga,
+Core7.Headers.Writers,StartSaga1Message,0,0,1,0,0,5,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,SendFromSagaMessage,0,0,1,0,0,5,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,Saga1,0,4,0,0,3,32,4,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,SagaData,0,0,8,0,0,15,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,Saga2,0,3,0,0,2,36,3,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,ReplyToOriginatorFromSagaMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,ReplyFromSagaMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,TimeoutFromSaga,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Headers.Writers.HeaderWriterSaga
+Core7.Headers.Writers,HeaderWriterSend,2,1,0,0,1,43,1,0,0,0,2,0,Core7.Headers.Writers.MessageToSend' Core7.Headers.Writers.Mutator,
+Core7.Headers.Writers,TransportMessageExtension,0,1,0,0,1,11,2,0,0,-1,0,0,,
+Core7.HostIdentifier,HostIdFixer,0,2,0,0,0,20,2,0,0,-1,0,0,,
+Core7.ImmediateDispatch,Usage,0,1,0,0,0,16,1,0,0,-1,1,0,Core7.ImmediateDispatch.MyMessage,
+Core7.ImmediateDispatch,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.ImmediateDispatch.Usage
+Core7.Injection,Injection,0,1,0,0,0,38,1,0,0,-1,2,0,Core7.Injection.EmailHandler' Core7.Injection.EmailMessage,
+Core7.Injection,EmailHandler,0,1,2,0,1,14,1,0,0,-1,0,1,,Core7.Injection.Injection
+Core7.Injection,EmailMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Injection.Injection
+Core7.Lifecycle,NeedsInitialization,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core7.Lifecycle,RunBeforeConfigurationIsFinalized,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Core7.Logging,BuiltInConfig,0,2,0,0,0,17,2,0,0,-1,0,0,,
+Core7.Logging,MessageToLog,0,1,3,0,1,11,1,0,0,-1,0,0,,
+Core7.Logging,ClassUsingLogging,1,1,0,0,1,12,2,0,0,0,0,0,,
+Core7.MessageBodyEncryption,MessageEncryptor,0,2,0,0,2,15,2,0,0,-1,0,1,,Core7.MessageBodyEncryption.Usage
+Core7.MessageBodyEncryption,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core7.MessageBodyEncryption.MessageEncryptor,
+Core7.MessageIdentity,MessageIdSendOptions,0,1,0,0,0,12,1,0,0,-1,1,0,Core7.MessageIdentity.SomeMessage,
+Core7.MessageIdentity,SomeMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.MessageIdentity.MessageIdSendOptions
+Core7.Mutators.Instance,MutateIncomingMessages,0,1,0,0,1,13,1,0,0,-1,0,0,,
+Core7.Mutators.Instance,MutateOutgoingMessages,0,1,0,0,1,21,3,0,0,-1,0,0,,
+Core7.Mutators,MutatorRegistration,0,1,0,0,0,24,1,0,0,-1,2,0,Core7.Mutators.MyIncomingMessageMutator' Core7.Mutators.MyOutgoingTransportMessageMutator,
+Core7.Mutators,MyIncomingMessageMutator,0,1,0,0,1,7,1,0,0,-1,0,1,,Core7.Mutators.MutatorRegistration
+Core7.Mutators,MyOutgoingTransportMessageMutator,0,1,0,0,1,7,1,0,0,-1,0,1,,Core7.Mutators.MutatorRegistration
+Core7.Mutators.Transport,MutateIncomingTransportMessages,0,1,0,0,1,19,1,0,0,-1,1,0,Core7.Mutators.Transport.ServiceThatChangesBody,
+Core7.Mutators.Transport,MutateOutgoingTransportMessages,0,1,0,0,1,30,3,0,0,-1,1,0,Core7.Mutators.Transport.ServiceThatChangesBody,
+Core7.Mutators.Transport,ServiceThatChangesBody,0,2,0,0,2,11,2,0,0,-1,0,2,,Core7.Mutators.Transport.MutateOutgoingTransportMessages' Core7.Mutators.Transport.MutateIncomingTransportMessages
+Core7.NonDurable,DefineExpress,0,1,0,0,0,14,1,0,0,-1,0,0,,
+Core7.NonDurable,DisableDurable,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core7.NonDurable,MessageWithExpress,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Core7.Notifications,EventsToObservables,0,1,0,0,0,20,1,0,0,-1,0,0,,
+Core7.Notifications,SubscribeToNotifications,1,6,0,0,0,44,6,0,0,0.67,0,0,,
+Core7.Outbox,Usage,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core7.Persistence,PersistenceOrder,0,3,0,0,0,31,3,0,0,-1,2,0,Core7.Persistence.RavenDBPersistence' Core7.Persistence.NHibernatePersistence,
+Core7.Persistence,RavenDBPersistence,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Persistence.PersistenceOrder
+Core7.Persistence,NHibernatePersistence,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Persistence.PersistenceOrder
+Core7.Pipeline.Abort,Behavior,0,2,0,0,1,18,3,0,0,-1,0,0,,
+Core7.Pipeline.Abort,Handler,0,1,0,0,1,9,1,0,0,-1,1,0,Core7.Pipeline.Abort.MyMessage,
+Core7.Pipeline.Abort,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Pipeline.Abort.Handler
+Core7.Pipeline,BehaviorRegistration,0,1,0,0,0,12,1,0,0,-1,1,0,Core7.Pipeline.SampleBehavior,
+Core7.Pipeline,FeatureWithBehavior,0,1,0,0,0,13,1,0,0,-1,1,0,Core7.Pipeline.SampleBehavior,
+Core7.Pipeline,ReplaceExistingStep,0,1,0,0,1,12,1,0,0,-1,1,0,Core7.Pipeline.SampleBehavior,
+Core7.Pipeline,CustomErrorHandlingBehavior,0,1,0,0,1,8,1,0,0,-1,0,1,,Core7.Pipeline.NewMessageProcessingPipelineStep
+Core7.Pipeline,CustomErrorHandlingBehaviorForDeserializationFailures,1,1,0,0,1,21,1,0,0,0,0,0,,
+Core7.Pipeline,CustomErrorHandlingBehaviorForAllFailures,1,1,0,0,1,21,1,0,0,0,0,0,,
+Core7.Pipeline,CustomErrorHandlingBehaviorRollbackOnFailures,0,1,0,0,1,20,1,0,0,-1,0,0,,
+Core7.Pipeline,NewMessageProcessingPipelineStep,0,1,0,0,1,17,1,0,0,-1,1,0,Core7.Pipeline.CustomErrorHandlingBehavior,
+Core7.Pipeline,CustomForkConnector,0,1,0,0,1,15,1,0,0,-1,0,1,,Core7.Pipeline.FeatureReplacingExistingForkConnector
+Core7.Pipeline,FeatureReplacingExistingForkConnector,0,2,0,0,0,13,2,0,0,-1,1,0,Core7.Pipeline.CustomForkConnector,
+Core7.Pipeline,CustomStageConnector,0,1,0,0,1,12,1,0,0,-1,0,1,,Core7.Pipeline.FeatureReplacingExistingStage
+Core7.Pipeline,FeatureReplacingExistingStage,0,2,0,0,0,13,2,0,0,-1,1,0,Core7.Pipeline.CustomStageConnector,
+Core7.Pipeline,CustomStageForkConnector,0,1,0,0,1,21,1,0,0,-1,0,1,,Core7.Pipeline.FeatureReplacingExistingStageForkConnector
+Core7.Pipeline,FeatureReplacingExistingStageForkConnector,0,2,0,0,0,13,2,0,0,-1,1,0,Core7.Pipeline.CustomStageForkConnector,
+Core7.Pipeline,OnReceivePipelineCompleted,0,1,0,0,0,32,1,0,0,-1,1,0,Core7.Pipeline.FromFeature,
+Core7.Pipeline,FromFeature,1,1,0,0,0,17,1,0,0,0,0,1,,Core7.Pipeline.OnReceivePipelineCompleted
+Core7.Pipeline,SampleBehavior,0,1,0,0,1,10,1,0,0,-1,0,3,,Core7.Pipeline.BehaviorRegistration' Core7.Pipeline.FeatureWithBehavior' Core7.Pipeline.ReplaceExistingStep
+Core7.Pipeline,ParentBehavior,0,1,0,0,1,10,1,0,0,-1,1,0,Core7.Pipeline.SharedData,
+Core7.Pipeline,ChildBehavior,0,1,0,0,1,10,1,0,0,-1,1,0,Core7.Pipeline.SharedData,
+Core7.Pipeline,SharedData,0,0,0,0,0,3,0,0,0,-1,0,2,,Core7.Pipeline.ParentBehavior' Core7.Pipeline.ChildBehavior
+Core7.Pipeline,SkipSerializationForInts,0,1,0,0,1,26,2,0,0,-1,0,0,,
+Core7.Pipeline,Registration,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core7.PubSub.Publishing,CreateUserCommand,0,0,1,0,0,5,0,0,0,-1,0,2,,Core7.PubSub.Publishing.CreateUserSaga' Core7.PubSub.Publishing.CreateUserHandler
+Core7.PubSub.Publishing,CreateUserHandler,0,1,0,0,1,12,1,0,0,-1,2,0,Core7.PubSub.Publishing.CreateUserCommand' Core7.PubSub.Publishing.UserCreatedEvent,
+Core7.PubSub.Publishing,CreateUserSaga,0,2,0,0,1,21,2,0,0,-1,3,0,Core7.PubSub.Publishing.CreateUserCommand' Core7.PubSub.Publishing.SagaData' Core7.PubSub.Publishing.UserCreatedEvent,
+Core7.PubSub.Publishing,SagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.PubSub.Publishing.CreateUserSaga
+Core7.PubSub.Publishing,PublishAtStartup,0,1,0,0,1,13,1,0,0,-1,1,0,Core7.PubSub.Publishing.MyEvent,
+Core7.PubSub.Publishing,MyEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.PubSub.Publishing.PublishAtStartup
+Core7.PubSub.Publishing,UserCreatedEvent,0,0,1,0,0,5,0,0,0,-1,0,2,,Core7.PubSub.Publishing.CreateUserHandler' Core7.PubSub.Publishing.CreateUserSaga
+Core7.Recoverability.Delayed.CustomPolicies,CustomExceptionPolicy,0,1,0,0,0,10,1,0,0,-1,1,0,Core7.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core7.Recoverability.Delayed.CustomPolicies,ExceptionPolicyOverridingDelayedRetriesPart,0,1,0,0,0,19,3,0,0,-1,1,0,Core7.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core7.Recoverability.Delayed.CustomPolicies,FullyCustomizedPolicy,0,2,0,0,0,50,5,0,0,-1,2,0,Core7.Recoverability.Delayed.CustomPolicies.MyOtherBusinessException' Core7.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core7.Recoverability.Delayed.CustomPolicies,MyOtherBusinessException,0,0,0,0,0,7,0,0,0,-1,0,2,,Core7.Recoverability.Delayed.CustomPolicies.FullyCustomizedPolicy' Core7.Recoverability.Delayed.CustomPolicies.PartiallyCustomizedPolicy
+Core7.Recoverability.Delayed.CustomPolicies,MyBusinessException,0,0,0,0,0,4,0,0,0,-1,0,4,,Core7.Recoverability.Delayed.CustomPolicies.CustomExceptionPolicy' Core7.Recoverability.Delayed.CustomPolicies.PartiallyCustomizedPolicy' Core7.Recoverability.Delayed.CustomPolicies.FullyCustomizedPolicy' Core7.Recoverability.Delayed.CustomPolicies.ExceptionPolicyOverridingDelayedRetriesPart
+Core7.Recoverability.Delayed.CustomPolicies,PartiallyCustomizedPolicy,0,2,0,0,0,40,3,0,0,-1,2,0,Core7.Recoverability.Delayed.CustomPolicies.MyOtherBusinessException' Core7.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core7.Recoverability.Delayed.CustomPolicies,SimplePolicy,0,2,0,0,0,22,3,0,0,-1,0,0,,
+Core7.Recoverability.Delayed,Usage,0,2,0,0,0,26,2,0,0,-1,0,0,,
+Core7.Recoverability.ErrorHandling,ErrorHeadersCustomization,0,1,0,0,1,20,1,0,0,-1,0,0,,
+Core7.Recoverability.ErrorHandling,Usage,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core7.Recoverability.Immediate,Usage,0,2,0,0,0,25,2,0,0,-1,0,0,,
+Core7.Recoverability,DisposeLargeExceptionsBehavior,0,1,0,0,1,17,1,0,0,-1,0,0,,
+Core7.Recoverability,UnrecoverableExceptions,0,2,0,0,0,20,2,0,0,-1,1,0,Core7.Recoverability.ValidationException,
+Core7.Recoverability,ValidationException,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Recoverability.UnrecoverableExceptions
+Core7.Routing.AutomaticSubscriptions,AutoSubscribeSettings,0,3,0,0,0,24,3,0,0,-1,1,0,Core7.Routing.AutomaticSubscriptions.EventType,
+Core7.Routing.AutomaticSubscriptions,EventType,0,0,0,0,0,1,0,0,0,-1,0,1,,Core7.Routing.AutomaticSubscriptions.AutoSubscribeSettings
+Core7.Routing,BasicOperations,0,4,0,0,0,73,4,0,0,-1,4,0,Core7.Routing.MyEvent' Core7.Routing.IMyMessage' Core7.Routing.IMyReply' Core7.Routing.IMyEvent,
+Core7.Routing,InterfaceMessageCreatedUpFront,2,1,0,0,0,19,1,0,0,0,0,0,,
+Core7.Routing,MyEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Routing.BasicOperations
+Core7.Routing,IMyMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Routing.BasicOperations
+Core7.Routing,IMyReply,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Routing.BasicOperations
+Core7.Routing,IMyEvent,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Routing.BasicOperations
+Core7.Routing,RoutingAPIs,0,2,0,0,0,49,2,0,0,-1,5,0,Core7.MyTransport' Core7.Routing.AcceptOrder' Core7.Routing.SendOrder' Core7.Routing.OrderSent' Core7.Routing.OrderAccepted,
+Core7.Routing,AcceptOrder,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Routing.RoutingAPIs
+Core7.Routing,SendOrder,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Routing.RoutingAPIs
+Core7.Routing,OrderSent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Routing.RoutingAPIs
+Core7.Routing,OrderAccepted,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Routing.RoutingAPIs
+Core6.Routing,Extensibility,0,1,0,0,0,114,1,0,0,-1,3,0,Core6.Routing.Refresher' Core6.Routing.MyCommand' Core6.Routing.MyEvent,
+Core6.Routing,RefreshingRouteTable,0,1,0,0,0,73,1,0,0,-1,0,0,,
+Core6.Routing,Refresher,2,4,0,0,1,26,4,0,0,0.75,0,1,,Core6.Routing.Extensibility
+Core6.Routing,RobustRefresher,3,4,0,0,1,35,4,0,0,0.75,0,0,,
+Core6.Routing,PublishersTable,0,1,0,0,0,17,1,0,0,-1,0,0,,
+Core6.Routing,MyCommand,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Routing.Extensibility
+Core6.Routing,MyEvent,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Routing.Extensibility
+Core7.Sagas,ConfigureSagaPersistence,0,1,0,0,0,13,1,0,0,-1,1,0,Core7.Sagas.PersistenceToUseGoesHere,
+Core7.Sagas,PersistenceToUseGoesHere,0,0,0,0,0,4,0,0,0,-1,0,1,,Core7.Sagas.ConfigureSagaPersistence
+Core7.Sagas,SagaNotFoundHandler,0,1,0,0,1,9,1,0,0,-1,1,0,Core7.Sagas.SagaDisappearedMessage,
+Core7.Sagas,SagaDisappearedMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Sagas.SagaNotFoundHandler
+Core7.Sagas.FindByExpression,MyMessage,0,0,2,0,0,5,0,0,0,-1,0,1,,Core7.Sagas.FindByExpression.MySaga
+Core7.Sagas.FindByExpression,MySaga,0,2,0,0,1,16,2,0,0,-1,2,0,Core7.Sagas.FindByExpression.MyMessage' Core7.Sagas.FindByExpression.MySagaData,
+Core7.Sagas.FindByExpression,MySagaData,0,0,1,0,0,5,0,0,0,-1,0,1,,Core7.Sagas.FindByExpression.MySaga
+Core7.Sagas.FindByProperty,MyMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Sagas.FindByProperty.MySaga
+Core7.Sagas.FindByProperty,MySaga,0,2,0,0,1,16,2,0,0,-1,2,0,Core7.Sagas.FindByProperty.MyMessage' Core7.Sagas.FindByProperty.MySagaData,
+Core7.Sagas.FindByProperty,MySagaData,0,0,1,0,0,5,0,0,0,-1,0,1,,Core7.Sagas.FindByProperty.MySaga
+Core7.Sagas.FindSagas,MyMessage,0,0,2,0,0,5,0,0,0,-1,0,1,,Core7.Sagas.FindSagas.MySagaFinder
+Core7.Sagas.FindSagas,MySagaData,0,0,2,0,0,6,0,0,0,-1,0,2,,Core7.Sagas.FindSagas.MySagaFinder' Core7.Sagas.FindSagas.DbSession
+Core7.Sagas.FindSagas,MySagaFinder,0,1,0,0,1,12,1,0,0,-1,2,0,Core7.Sagas.FindSagas.MyMessage' Core7.Sagas.FindSagas.MySagaData,
+Core7.Sagas.FindSagas,SynchronizedStorageSessionEx,0,1,0,0,1,7,1,0,0,-1,1,0,Core7.Sagas.FindSagas.DbSession,
+Core7.Sagas.FindSagas,DbSession,0,1,0,0,1,7,1,0,0,-1,1,1,Core7.Sagas.FindSagas.MySagaData,Core7.Sagas.FindSagas.SynchronizedStorageSessionEx
+Core7.Sagas.Reply,AlmostDoneMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Sagas.Reply.MySaga
+Core7.Sagas.Reply,MySaga,0,2,0,0,1,17,2,0,0,-1,3,0,Core7.Sagas.Reply.AlmostDoneMessage' Core7.Sagas.Reply.MySagaData' Core7.Sagas.Reply.StartMessage,
+Core7.Sagas.Reply,MySagaData,0,0,2,0,0,6,0,0,0,-1,0,1,,Core7.Sagas.Reply.MySaga
+Core7.Sagas.Reply,StartMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Sagas.Reply.MySaga
+Core7.Sagas.SimpleSaga,CompleteOrder,0,0,2,0,0,5,0,0,0,-1,0,1,,Core7.Sagas.SimpleSaga.OrderSaga
+Core7.Sagas.SimpleSaga,OrderSaga,0,3,0,0,2,23,3,0,0,-1,3,0,Core7.Sagas.SimpleSaga.CompleteOrder' Core7.Sagas.SimpleSaga.OrderSagaData' Core7.Sagas.SimpleSaga.StartOrder,
+Core7.Sagas.SimpleSaga,OrderSagaData,0,0,1,0,0,5,0,0,0,-1,0,1,,Core7.Sagas.SimpleSaga.OrderSaga
+Core7.Sagas.SimpleSaga,StartOrder,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Sagas.SimpleSaga.OrderSaga
+Core7.Sagas.Timeouts,AlmostDoneMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Sagas.Timeouts.MySaga
+Core7.Sagas.Timeouts,Message1,0,0,1,0,0,4,0,0,0,-1,0,1,,Core7.Sagas.Timeouts.MySaga
+Core7.Sagas.Timeouts,Message2,0,0,2,0,0,5,0,0,0,-1,0,1,,Core7.Sagas.Timeouts.MySaga
+Core7.Sagas.Timeouts,MyCustomTimeout,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Sagas.Timeouts.MySaga
+Core7.Sagas.Timeouts,MySaga,0,4,0,0,3,33,5,0,0,-1,6,0,Core7.Sagas.Timeouts.AlmostDoneMessage' Core7.Sagas.Timeouts.Message1' Core7.Sagas.Timeouts.Message2' Core7.Sagas.Timeouts.MyCustomTimeout' Core7.Sagas.Timeouts.MySagaData' Core7.Sagas.Timeouts.TiredOfWaitingForMessage2,
+Core7.Sagas.Timeouts,MySagaData,0,0,5,0,0,9,0,0,0,-1,0,1,,Core7.Sagas.Timeouts.MySaga
+Core7.Sagas.Timeouts,TiredOfWaitingForMessage2,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Sagas.Timeouts.MySaga
+Core7.Scanning,ScanningPublicApi,0,6,0,0,0,62,9,0,0,-1,0,0,,
+Core7.Scheduling,Scheduling,1,2,0,0,0,33,2,0,0,1,1,0,Core7.Scheduling.CallLegacySystem,
+Core7.Scheduling,CallLegacySystem,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.Scheduling.Scheduling
+Core7.Serialization,AdditionalDeserializers,0,1,0,0,0,13,1,0,0,-1,1,0,Core7.Serialization.MyCustomSerializerDefinition,
+Core7.Serialization,RegisterCustomSerializer,0,1,0,0,0,11,1,0,0,-1,1,0,Core7.Serialization.MyCustomSerializerDefinition,
+Core7.Serialization,MyCustomSerializerDefinition,1,1,0,1,1,13,1,0,0,0,1,3,Core7.Serialization.MyCustomSerializer,Core7.Serialization.AdditionalDeserializers' Core7.Serialization.RegisterCustomSerializer' Core7.Serialization.MyCustomSerializerConfigurationExtensions
+Core7.Serialization,MyCustomSerializer,0,3,1,0,3,22,3,0,0,-1,0,1,,Core7.Serialization.MyCustomSerializerDefinition
+Core7.Serialization,MyCustomSerializerConfigurationExtensions,0,1,0,0,1,8,1,0,0,-1,1,0,Core7.Serialization.MyCustomSerializerDefinition,
+Core7.ServiceFabricHosting,StatelessEndpointCommunicationListener,1,3,0,0,3,22,3,0,0,0.67,0,0,,
+Core7.ServiceFabricHosting,StatefulEndpointCommunicationListener,3,5,0,0,5,31,5,0,0,0.6,0,1,,Core7.ServiceFabricHosting.MyStatefulService
+Core7.ServiceFabricHosting,MyStatefulService,1,3,0,0,1,20,3,0,0,0.67,1,0,Core7.ServiceFabricHosting.StatefulEndpointCommunicationListener,
+Core7.Transports.QueueCreation,FeatureThatRequiresAQueue,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core7.Transports.QueueCreation,RegisterQueueCreator,0,1,0,0,0,13,1,0,0,-1,1,0,Core7.Transports.QueueCreation.YourQueueCreator,
+Core7.Transports.QueueCreation,YourQueueCreator,0,1,0,0,1,9,1,0,0,-1,0,1,,Core7.Transports.QueueCreation.RegisterQueueCreator
+Core7.Transports.Throughput,ConcurrencyConfiguration,0,1,0,0,0,13,1,0,0,-1,0,0,,
+Core7.Tutorials.SetupMonitoring,Configuration,0,1,0,0,0,19,1,0,0,-1,0,0,,
+Core7.UpgradeGuides._6to7.Audit,ConfigurationChanges,0,2,0,0,2,23,2,0,0,-1,0,0,,
+Core7.UpgradeGuides._6to7.ConnectionStrings,ConfigurationChanges,0,1,0,0,0,11,1,0,0,-1,0,0,,
+Core7.UpgradeGuides._6to7.ErrorHandling,ConfigurationChanges,0,2,0,0,0,17,2,0,0,-1,0,0,,
+Core7.UpgradeGuides._6to7.Logging,ConfigurationChanges,0,2,0,0,2,20,2,0,0,-1,0,0,,
+Core7.UpgradeGuides._6to7.Routing,RoutingAPIs,0,2,0,0,0,49,2,0,0,-1,5,0,Core7.MyTransport' Core7.UpgradeGuides._6to7.Routing.AcceptOrder' Core7.UpgradeGuides._6to7.Routing.SendOrder' Core7.UpgradeGuides._6to7.Routing.OrderSent' Core7.UpgradeGuides._6to7.Routing.OrderAccepted,
+Core7.UpgradeGuides._6to7.Routing,AcceptOrder,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.UpgradeGuides._6to7.Routing.RoutingAPIs
+Core7.UpgradeGuides._6to7.Routing,SendOrder,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.UpgradeGuides._6to7.Routing.RoutingAPIs
+Core7.UpgradeGuides._6to7.Routing,OrderSent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.UpgradeGuides._6to7.Routing.RoutingAPIs
+Core7.UpgradeGuides._6to7.Routing,OrderAccepted,0,0,0,0,0,3,0,0,0,-1,0,1,,Core7.UpgradeGuides._6to7.Routing.RoutingAPIs
+Core7.UpgradeGuides._6to7,Upgrade,0,1,0,0,0,9,1,0,0,-1,1,0,Core7.UpgradeGuides._6to7.MsmqTransport,
+Core7.UpgradeGuides._6to7,MsmqTransport,0,1,1,0,1,8,1,0,0,-1,0,1,,Core7.UpgradeGuides._6to7.Upgrade

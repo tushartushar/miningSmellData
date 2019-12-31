@@ -1,63 +1,62 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-LibOfLegends,AuthenticationProfile,4,0,0,4,0,7,0,0,0,-1,0,2,,LibOfLegends.ConnectionProfile' LibOfLegends.RPCService
+LibOfLegends,AuthenticationProfile,4,0,0,4,0,7,0,0,0,-1,0,1,,LibOfLegends.ConnectionProfile
 LibOfLegends,AuthResponse,6,0,0,6,0,9,0,0,0,-1,0,2,,LibOfLegends.AuthService' LibOfLegends.RPCService
 LibOfLegends,AuthService,2,3,0,0,3,56,5,0,0,0.67,1,1,LibOfLegends.AuthResponse,LibOfLegends.RPCService
-LibOfLegends,ChampionStatistics,26,9,0,25,8,114,14,0,0,0.22,2,0,com.riotgames.platform.statistics.AggregatedStats' com.riotgames.platform.statistics.AggregatedStat,
+LibOfLegends,ChampionStatistics,26,9,0,25,8,114,14,0,0,0.22,1,0,com.riotgames.platform.statistics.AggregatedStats,
 LibOfLegends,ConnectionProfile,5,1,0,5,1,16,1,0,0,0,3,1,LibOfLegends.AuthenticationProfile' LibOfLegends.ProxyProfile' LibOfLegends.RegionProfile,LibOfLegends.RPCService
-LibOfLegends,GameResult,38,4,0,36,1,127,10,0,0,0,2,0,com.riotgames.platform.statistics.PlayerGameStats' com.riotgames.platform.gameclient.domain.RawStat,
-LibOfLegends,InternalCallContext<ReturnType>,6,4,0,0,2,44,6,0,0,0,0,0,,
-LibOfLegends,RPCConnectResultType,0,0,0,0,0,8,0,0,0,-1,0,2,,LibOfLegends.RPCConnectResult' LibOfLegends.RPCService
-LibOfLegends,RPCConnectResult,4,5,0,4,5,47,7,0,0,0,1,0,LibOfLegends.RPCConnectResultType,
-LibOfLegends,RPCException,0,1,0,0,1,7,1,2,0,-1,0,0,,
-LibOfLegends,RPCNotConnectedException,0,1,0,0,1,7,1,0,1,-1,0,0,,
-LibOfLegends,RPCService,12,41,1,0,21,288,45,0,0,0.44,17,0,LibOfLegends.ConnectionProfile' LibOfLegends.AuthResponse' LibOfLegends.AuthService' LibOfLegends.RegionProfile' LibOfLegends.ProxyProfile' com.riotgames.platform.login.AuthenticationCredentials' LibOfLegends.AuthenticationProfile' com.riotgames.platform.login.Session' LibOfLegends.RPCConnectResultType' com.riotgames.platform.summoner.PublicSummoner' com.riotgames.platform.statistics.RecentGames' com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData' com.riotgames.platform.statistics.PlayerLifeTimeStats' com.riotgames.platform.statistics.AggregatedStats' com.riotgames.team.dto.PlayerDTO' com.riotgames.platform.leagues.client.dto.SummonerLeaguesDTO,
-LibOfLegends,ProxyProfile,2,0,0,2,0,5,0,0,0,-1,0,2,,LibOfLegends.ConnectionProfile' LibOfLegends.RPCService
-LibOfLegends,RegionProfile,2,2,0,2,2,13,2,0,0,1,0,2,,LibOfLegends.ConnectionProfile' LibOfLegends.RPCService
-LibOfLegends,RPCTimeoutException,0,1,0,0,1,7,1,0,1,-1,0,0,,
-com.riotgames.platform.leagues.client.dto,SummonerLeaguesDTO,0,0,1,0,0,4,0,0,0,-1,0,1,,LibOfLegends.RPCService
-com.riotgames.leagues.pojo,LeagueItemDTO,15,0,0,15,0,20,0,0,0,-1,1,0,com.riotgames.leagues.pojo.MiniSeriesDTO,
-com.riotgames.leagues.pojo,LeagueListDTO,6,0,0,6,0,9,0,0,0,-1,0,0,,
+LibOfLegends,GameResult,38,4,0,36,1,127,10,0,0,0,2,0,com.riotgames.platform.gameclient.domain.RawStat' com.riotgames.platform.statistics.PlayerGameStats,
+LibOfLegends,InternalCallContext<ReturnType>,6,4,0,0,2,44,6,0,0,0,2,1,LibOfLegends.RPCException' LibOfLegends.RPCTimeoutException,LibOfLegends.RPCService
+LibOfLegends,RPCConnectResultType,0,0,0,0,0,8,0,0,0,-1,0,2,,LibOfLegends.RPCService' LibOfLegends.RPCConnectResult
+LibOfLegends,RPCConnectResult,4,5,0,4,5,47,9,0,0,0,1,1,LibOfLegends.RPCConnectResultType,LibOfLegends.RPCService
+LibOfLegends,RPCException,0,1,0,0,1,7,1,2,0,-1,0,4,,LibOfLegends.RPCNotConnectedException' LibOfLegends.RPCTimeoutException' LibOfLegends.InternalCallContext<ReturnType>' LibOfLegends.RPCService
+LibOfLegends,RPCNotConnectedException,0,1,0,0,1,7,1,0,1,-1,1,1,LibOfLegends.RPCException,LibOfLegends.RPCService
+LibOfLegends,RPCService,12,41,1,0,21,288,45,0,0,0.44,19,0,LibOfLegends.AuthResponse' LibOfLegends.AuthService' LibOfLegends.ConnectionProfile' LibOfLegends.InternalCallContext<ReturnType>' LibOfLegends.RPCConnectResultType' LibOfLegends.RPCConnectResult' LibOfLegends.RPCException' LibOfLegends.RPCNotConnectedException' com.riotgames.platform.leagues.client.dto.SummonerLeaguesDTO' com.riotgames.platform.clientfacade.domain.LoginDataPacket' com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.login.Session' com.riotgames.platform.login.AuthenticationCredentials' com.riotgames.platform.statistics.AggregatedStats' com.riotgames.platform.statistics.PlayerLifeTimeStats' com.riotgames.platform.statistics.RecentGames' com.riotgames.platform.summoner.AllSummonerData' com.riotgames.platform.summoner.PublicSummoner' com.riotgames.team.dto.PlayerDTO,
+LibOfLegends,ProxyProfile,2,0,0,2,0,5,0,0,0,-1,0,1,,LibOfLegends.ConnectionProfile
+LibOfLegends,RegionProfile,2,2,0,2,2,13,2,0,0,1,0,1,,LibOfLegends.ConnectionProfile
+LibOfLegends,RPCTimeoutException,0,1,0,0,1,7,1,0,1,-1,1,1,LibOfLegends.RPCException,LibOfLegends.InternalCallContext<ReturnType>
+com.riotgames.platform.leagues.client.dto,SummonerLeaguesDTO,0,0,1,0,0,4,0,0,0,-1,1,1,com.riotgames.leagues.pojo.LeagueListDTO,LibOfLegends.RPCService
+com.riotgames.leagues.pojo,LeagueItemDTO,15,0,0,15,0,20,0,0,0,-1,1,1,com.riotgames.leagues.pojo.MiniSeriesDTO,com.riotgames.leagues.pojo.LeagueListDTO
+com.riotgames.leagues.pojo,LeagueListDTO,6,0,0,6,0,9,0,0,0,-1,1,1,com.riotgames.leagues.pojo.LeagueItemDTO,com.riotgames.platform.leagues.client.dto.SummonerLeaguesDTO
 com.riotgames.leagues.pojo,MiniSeriesDTO,4,0,0,4,0,7,0,0,0,-1,0,1,,com.riotgames.leagues.pojo.LeagueItemDTO
-com.riotgames.platform.clientfacade.domain,LoginDataPacket,20,0,0,20,0,23,0,0,0,-1,2,0,com.riotgames.platform.statistics.PlayerStatSummaries' com.riotgames.platform.systemstate.ClientSystemStatesNotification,
-com.riotgames.platform.gameclient.domain,AbstractDomainObject,2,1,0,2,1,8,1,30,0,0,0,0,,
-com.riotgames.platform.gameclient.domain,AllPublicSummonerDataDTO,6,0,0,6,0,9,0,0,1,-1,6,1,com.riotgames.platform.summoner.BasePublicSummonerDTO' com.riotgames.platform.summoner.spellbook.SpellBook' com.riotgames.platform.summoner.SummonerDefaultSpells' com.riotgames.platform.summoner.SummonerTalentsAndPoints' com.riotgames.platform.summoner.SummonerLevelAndPoints' com.riotgames.platform.summoner.SummonerLevel,LibOfLegends.RPCService
-com.riotgames.platform.gameclient.domain,FellowPlayerInfo,3,0,0,3,0,6,0,0,0,-1,0,0,,
-com.riotgames.platform.gameclient.domain,RawStat,2,0,0,2,0,5,0,0,1,-1,0,1,,LibOfLegends.GameResult
+com.riotgames.platform.clientfacade.domain,LoginDataPacket,20,0,0,20,0,23,0,0,0,-1,2,1,com.riotgames.platform.statistics.PlayerStatSummaries' com.riotgames.platform.systemstate.ClientSystemStatesNotification,LibOfLegends.RPCService
+com.riotgames.platform.gameclient.domain,AbstractDomainObject,2,1,0,2,1,8,1,30,0,0,0,30,,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.SummonerTalentsAndPoints' com.riotgames.platform.statistics.AggregatedStats' com.riotgames.platform.summoner.SummonerAssociatedTalentPK' com.riotgames.platform.statistics.PlayerGameStats' com.riotgames.platform.summoner.Talent' com.riotgames.platform.summoner.AllSummonerData' com.riotgames.platform.statistics.SummaryAggStat' com.riotgames.platform.summoner.SummonerDefaultSpells' com.riotgames.platform.summoner.SummonerLevelAndPoints' com.riotgames.platform.summoner.SummonerAssociatedTalent' com.riotgames.platform.summoner.spellbook.SpellBook' com.riotgames.platform.statistics.TimeTrackedStat' com.riotgames.platform.summoner.spellbook.SpellBookPage' com.riotgames.platform.summoner.PublicSummoner' com.riotgames.platform.statistics.PlayerStatSummaries' com.riotgames.platform.statistics.LeaverPenaltyStats' com.riotgames.platform.statistics.AggregatedStat' com.riotgames.platform.summoner.Summoner' com.riotgames.platform.statistics.PlayerStats' com.riotgames.platform.statistics.PlayerLifeTimeStats' com.riotgames.platform.summoner.SummonerGameModeSpells' com.riotgames.platform.summoner.spellbook.SlotEntry' com.riotgames.platform.statistics.PlayerStatSummary' com.riotgames.platform.statistics.AggregatedStatsKey' com.riotgames.platform.gameclient.domain.RawStat' com.riotgames.platform.statistics.SummaryAggStats' com.riotgames.team.CreatedTeam' com.riotgames.platform.statistics.RecentGames' com.riotgames.platform.summoner.SummonerLevel
+com.riotgames.platform.gameclient.domain,AllPublicSummonerDataDTO,6,0,0,6,0,9,0,0,1,-1,7,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.summoner.BasePublicSummonerDTO' com.riotgames.platform.summoner.SummonerDefaultSpells' com.riotgames.platform.summoner.SummonerLevel' com.riotgames.platform.summoner.SummonerLevelAndPoints' com.riotgames.platform.summoner.SummonerTalentsAndPoints' com.riotgames.platform.summoner.spellbook.SpellBook,LibOfLegends.RPCService
+com.riotgames.platform.gameclient.domain,FellowPlayerInfo,3,0,0,3,0,6,0,0,0,-1,0,1,,com.riotgames.platform.statistics.PlayerGameStats
+com.riotgames.platform.gameclient.domain,RawStat,2,0,0,2,0,5,0,0,1,-1,1,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.statistics.PlayerGameStats' LibOfLegends.GameResult
 com.riotgames.platform.gameclient.domain,Spell,7,0,0,7,0,10,0,0,0,-1,0,0,,
 com.riotgames.platform.login,Session,0,1,3,0,1,10,1,0,0,-1,0,1,,LibOfLegends.RPCService
 com.riotgames.platform.login,AuthenticationCredentials,0,1,10,0,1,16,1,0,0,-1,0,1,,LibOfLegends.RPCService
-com.riotgames.platform.statistics,AggregatedStat,4,0,0,4,0,7,0,0,1,-1,0,1,,LibOfLegends.ChampionStatistics
-com.riotgames.platform.statistics,AggregatedStats,4,0,0,4,0,7,0,0,1,-1,1,2,com.riotgames.platform.statistics.AggregatedStatsKey,LibOfLegends.ChampionStatistics' LibOfLegends.RPCService
-com.riotgames.platform.statistics,AggregatedStatsKey,3,0,0,3,0,6,0,0,1,-1,0,1,,com.riotgames.platform.statistics.AggregatedStats
-com.riotgames.platform.statistics,LeaverPenaltyStats,5,0,0,5,0,9,0,0,1,-1,0,1,,com.riotgames.platform.statistics.PlayerLifeTimeStats
-com.riotgames.platform.statistics,PlayerLifeTimeStats,8,0,0,8,0,14,0,0,1,-1,3,1,com.riotgames.platform.statistics.PlayerStatSummaries' com.riotgames.platform.statistics.LeaverPenaltyStats' com.riotgames.platform.statistics.PlayerStats,LibOfLegends.RPCService
-com.riotgames.platform.statistics,PlayerStats,3,0,0,3,0,7,0,0,1,-1,0,1,,com.riotgames.platform.statistics.PlayerLifeTimeStats
-com.riotgames.platform.statistics,PlayerStatSummary,11,1,0,11,1,21,1,0,1,0,1,0,com.riotgames.platform.statistics.SummaryAggStats,
-com.riotgames.platform.statistics,SummaryAggStat,2,1,0,2,1,10,1,0,1,0,0,0,,
-com.riotgames.platform.statistics,SummaryAggStats,2,1,0,2,1,8,1,0,1,0,0,1,,com.riotgames.platform.statistics.PlayerStatSummary
-com.riotgames.platform.statistics,TimeTrackedStat,2,0,0,2,0,5,0,0,1,-1,0,0,,
-com.riotgames.platform.statistics,PlayerGameStats,42,0,0,42,0,53,0,0,1,-1,0,1,,LibOfLegends.GameResult
-com.riotgames.platform.statistics,RecentGames,4,1,0,4,1,12,1,0,1,0,0,1,,LibOfLegends.RPCService
-com.riotgames.platform.statistics,PlayerStatSummaries,2,1,0,2,1,9,1,0,1,0,0,2,,com.riotgames.platform.clientfacade.domain.LoginDataPacket' com.riotgames.platform.statistics.PlayerLifeTimeStats
-com.riotgames.platform.summoner,AllSummonerData,6,0,0,6,0,9,0,0,1,-1,6,1,com.riotgames.platform.summoner.spellbook.SpellBook' com.riotgames.platform.summoner.SummonerDefaultSpells' com.riotgames.platform.summoner.SummonerTalentsAndPoints' com.riotgames.platform.summoner.Summoner' com.riotgames.platform.summoner.SummonerLevelAndPoints' com.riotgames.platform.summoner.SummonerLevel,LibOfLegends.RPCService
+com.riotgames.platform.statistics,AggregatedStat,4,0,0,4,0,7,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.statistics.AggregatedStats
+com.riotgames.platform.statistics,AggregatedStats,4,0,0,4,0,7,0,0,1,-1,3,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.statistics.AggregatedStat' com.riotgames.platform.statistics.AggregatedStatsKey,LibOfLegends.ChampionStatistics' LibOfLegends.RPCService
+com.riotgames.platform.statistics,AggregatedStatsKey,3,0,0,3,0,6,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.statistics.AggregatedStats
+com.riotgames.platform.statistics,LeaverPenaltyStats,5,0,0,5,0,9,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.statistics.PlayerLifeTimeStats
+com.riotgames.platform.statistics,PlayerLifeTimeStats,8,0,0,8,0,14,0,0,1,-1,4,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.statistics.LeaverPenaltyStats' com.riotgames.platform.statistics.PlayerStats' com.riotgames.platform.statistics.PlayerStatSummaries,LibOfLegends.RPCService
+com.riotgames.platform.statistics,PlayerStats,3,0,0,3,0,7,0,0,1,-1,2,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.statistics.TimeTrackedStat,com.riotgames.platform.statistics.PlayerLifeTimeStats
+com.riotgames.platform.statistics,PlayerStatSummary,11,1,0,11,1,21,1,0,1,0,2,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.statistics.SummaryAggStats,com.riotgames.platform.statistics.PlayerStatSummaries
+com.riotgames.platform.statistics,SummaryAggStat,2,1,0,2,1,10,1,0,1,0,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.statistics.SummaryAggStats
+com.riotgames.platform.statistics,SummaryAggStats,2,1,0,2,1,8,1,0,1,0,2,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.statistics.SummaryAggStat,com.riotgames.platform.statistics.PlayerStatSummary
+com.riotgames.platform.statistics,TimeTrackedStat,2,0,0,2,0,5,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.statistics.PlayerStats
+com.riotgames.platform.statistics,PlayerGameStats,42,0,0,42,0,53,0,0,1,-1,3,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.gameclient.domain.FellowPlayerInfo' com.riotgames.platform.gameclient.domain.RawStat,com.riotgames.platform.statistics.RecentGames' LibOfLegends.GameResult
+com.riotgames.platform.statistics,RecentGames,4,1,0,4,1,12,1,0,1,0,2,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.statistics.PlayerGameStats,LibOfLegends.RPCService
+com.riotgames.platform.statistics,PlayerStatSummaries,2,1,0,2,1,9,1,0,1,0,2,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.statistics.PlayerStatSummary,com.riotgames.platform.statistics.PlayerLifeTimeStats' com.riotgames.platform.clientfacade.domain.LoginDataPacket
+com.riotgames.platform.summoner,AllSummonerData,6,0,0,6,0,9,0,0,1,-1,7,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.summoner.Summoner' com.riotgames.platform.summoner.SummonerDefaultSpells' com.riotgames.platform.summoner.SummonerLevel' com.riotgames.platform.summoner.SummonerLevelAndPoints' com.riotgames.platform.summoner.SummonerTalentsAndPoints' com.riotgames.platform.summoner.spellbook.SpellBook,LibOfLegends.RPCService
 com.riotgames.platform.summoner,BasePublicSummonerDTO,6,0,0,6,0,9,0,0,0,-1,0,1,,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO
-com.riotgames.platform.summoner,Summoner,15,0,0,15,0,19,0,0,1,-1,0,1,,com.riotgames.platform.summoner.AllSummonerData
-com.riotgames.platform.summoner,SummonerDefaultSpells,3,0,0,3,0,8,0,0,1,-1,0,2,,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
-com.riotgames.platform.summoner,PublicSummoner,8,1,0,8,1,14,1,0,1,0,0,1,,LibOfLegends.RPCService
-com.riotgames.platform.summoner,SummonerAssociatedTalent,3,0,0,3,0,6,0,0,1,-1,2,0,com.riotgames.platform.summoner.SummonerAssociatedTalentPK' com.riotgames.platform.summoner.Talent,
-com.riotgames.platform.summoner,SummonerAssociatedTalentPK,2,0,0,2,0,5,0,0,1,-1,0,1,,com.riotgames.platform.summoner.SummonerAssociatedTalent
-com.riotgames.platform.summoner,SummonerGameModeSpells,2,0,0,2,0,5,0,0,1,-1,0,0,,
-com.riotgames.platform.summoner,SummonerLevel,8,0,0,8,0,11,0,0,1,-1,0,2,,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
-com.riotgames.platform.summoner,SummonerLevelAndPoints,4,0,0,4,0,7,0,0,1,-1,0,2,,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
-com.riotgames.platform.summoner,SummonerTalentsAndPoints,6,0,0,6,0,9,0,0,1,-1,0,2,,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
-com.riotgames.platform.summoner,Talent,15,0,0,15,0,19,0,0,1,-1,0,1,,com.riotgames.platform.summoner.SummonerAssociatedTalent
+com.riotgames.platform.summoner,Summoner,15,0,0,15,0,19,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.summoner.AllSummonerData
+com.riotgames.platform.summoner,SummonerDefaultSpells,3,0,0,3,0,8,0,0,1,-1,2,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.summoner.SummonerGameModeSpells,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
+com.riotgames.platform.summoner,PublicSummoner,8,1,0,8,1,14,1,0,1,0,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,LibOfLegends.RPCService
+com.riotgames.platform.summoner,SummonerAssociatedTalent,3,0,0,3,0,6,0,0,1,-1,3,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.summoner.SummonerAssociatedTalentPK' com.riotgames.platform.summoner.Talent,com.riotgames.platform.summoner.SummonerTalentsAndPoints
+com.riotgames.platform.summoner,SummonerAssociatedTalentPK,2,0,0,2,0,5,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.summoner.SummonerAssociatedTalent
+com.riotgames.platform.summoner,SummonerGameModeSpells,2,0,0,2,0,5,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.summoner.SummonerDefaultSpells
+com.riotgames.platform.summoner,SummonerLevel,8,0,0,8,0,11,0,0,1,-1,1,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
+com.riotgames.platform.summoner,SummonerLevelAndPoints,4,0,0,4,0,7,0,0,1,-1,1,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
+com.riotgames.platform.summoner,SummonerTalentsAndPoints,6,0,0,6,0,9,0,0,1,-1,2,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.summoner.SummonerAssociatedTalent,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
+com.riotgames.platform.summoner,Talent,15,0,0,15,0,19,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.summoner.SummonerAssociatedTalent
 com.riotgames.platform.gameclient.domain.broadcast,BroadcastNotification,1,2,0,1,2,22,2,0,0,1,0,0,,
 com.riotgames.platform.gameclient.domain.game,GameReconnectionInfo,3,0,0,0,0,6,0,0,0,-1,0,0,,
-com.riotgames.platform.gameclient.domain.broadcast.game,GameReconnectionInfo,3,0,0,0,0,6,0,0,0,-1,0,0,,
-com.riotgames.platform.summoner.spellbook,SlotEntry,4,0,0,4,0,9,0,0,1,-1,0,0,,
-com.riotgames.platform.summoner.spellbook,SpellBook,4,0,0,4,0,8,0,0,1,-1,0,2,,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
-com.riotgames.platform.summoner.spellbook,SpellBookPage,6,0,0,6,0,9,0,0,1,-1,0,0,,
+com.riotgames.platform.summoner.spellbook,SlotEntry,4,0,0,4,0,9,0,0,1,-1,1,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject,com.riotgames.platform.summoner.spellbook.SpellBookPage
+com.riotgames.platform.summoner.spellbook,SpellBook,4,0,0,4,0,8,0,0,1,-1,2,2,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.summoner.spellbook.SpellBookPage,com.riotgames.platform.gameclient.domain.AllPublicSummonerDataDTO' com.riotgames.platform.summoner.AllSummonerData
+com.riotgames.platform.summoner.spellbook,SpellBookPage,6,0,0,6,0,9,0,0,1,-1,2,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.platform.summoner.spellbook.SlotEntry,com.riotgames.platform.summoner.spellbook.SpellBook
 com.riotgames.platform.systemstate,ClientSystemStatesNotification,6,2,0,6,2,33,2,0,0,1,0,1,,com.riotgames.platform.clientfacade.domain.LoginDataPacket
-com.riotgames.team,CreatedTeam,2,0,0,2,0,6,0,0,1,-1,1,0,com.riotgames.team.TeamId,
+com.riotgames.team,CreatedTeam,2,0,0,2,0,6,0,0,1,-1,2,1,com.riotgames.platform.gameclient.domain.AbstractDomainObject' com.riotgames.team.TeamId,com.riotgames.team.dto.PlayerDTO
 com.riotgames.team,TeamId,1,0,0,1,0,5,0,0,0,-1,0,1,,com.riotgames.team.CreatedTeam
-com.riotgames.team.dto,PlayerDTO,3,0,0,3,0,6,0,0,0,-1,0,1,,LibOfLegends.RPCService
+com.riotgames.team.dto,PlayerDTO,3,0,0,3,0,6,0,0,0,-1,1,1,com.riotgames.team.CreatedTeam,LibOfLegends.RPCService

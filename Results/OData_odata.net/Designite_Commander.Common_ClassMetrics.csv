@@ -1,23 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Commander,RemoteServer,4,11,0,3,10,126,17,0,0,0.27,3,0,Firewall.PortHelper' Commander.RemoteExecutableResults' Commander.ExecutableFile,
+Commander,RemoteServer,4,11,0,3,10,126,17,0,0,0.27,3,0,Commander.ExecutableFile' Commander.RemoteExecutableResults' Firewall.PortHelper,
 Commander,ExecutableFile,3,5,3,0,5,85,5,0,0,0.6,1,1,Commander.RemoteExecutableResults,Commander.RemoteServer
 Commander,RemoteExecutableResults,2,1,2,0,1,19,1,0,0,0,0,2,,Commander.RemoteServer' Commander.ExecutableFile
 Firewall,NetFwMgr,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Firewall,INetFwMgr,0,3,2,0,0,19,3,0,0,-1,2,1,Firewall.IPVersion' Firewall.IPProtocol,Firewall.PortHelper
-Firewall,INetFwPolicy,0,1,1,0,0,6,1,0,0,-1,1,1,Firewall.FirewallProfileType,Firewall.PortHelper
-Firewall,INetFwProfile,0,0,10,0,0,16,0,0,0,-1,0,1,,Firewall.PortHelper
-Firewall,INetFwRemoteAdminSettings,0,0,4,0,0,8,0,0,0,-1,0,0,,
-Firewall,INetFwIcmpSettings,0,0,10,0,0,14,0,0,0,-1,0,0,,
-Firewall,INetFwOpenPorts,0,3,2,0,0,9,3,0,0,-1,2,1,Firewall.INetFwOpenPort' Firewall.IPProtocol,Firewall.PortHelper
-Firewall,INetFwOpenPort,0,0,8,0,0,13,0,0,0,-1,0,2,,Firewall.INetFwOpenPorts' Firewall.PortHelper
-Firewall,INetFwServices,0,1,2,0,0,7,1,0,0,-1,1,0,Firewall.ServiceType,
-Firewall,INetFwService,0,0,8,0,0,12,0,0,0,-1,0,0,,
-Firewall,INetFwAuthorizedApplications,0,3,2,0,0,9,3,0,0,-1,1,0,Firewall.INetFwAuthorizedApplication,
+Firewall,INetFwMgr,0,3,2,0,0,19,3,0,0,-1,4,1,Firewall.INetFwPolicy' Firewall.FirewallProfileType' Firewall.IPVersion' Firewall.IPProtocol,Firewall.PortHelper
+Firewall,INetFwPolicy,0,1,1,0,0,6,1,0,0,-1,2,1,Firewall.INetFwProfile' Firewall.FirewallProfileType,Firewall.INetFwMgr
+Firewall,INetFwProfile,0,0,10,0,0,16,0,0,0,-1,6,2,Firewall.INetFwRemoteAdminSettings' Firewall.INetFwIcmpSettings' Firewall.INetFwOpenPorts' Firewall.INetFwServices' Firewall.INetFwAuthorizedApplications' Firewall.FirewallProfileType,Firewall.INetFwPolicy' Firewall.PortHelper
+Firewall,INetFwRemoteAdminSettings,0,0,4,0,0,8,0,0,0,-1,2,1,Firewall.IPVersion' Firewall.Scope,Firewall.INetFwProfile
+Firewall,INetFwIcmpSettings,0,0,10,0,0,14,0,0,0,-1,0,1,,Firewall.INetFwProfile
+Firewall,INetFwOpenPorts,0,3,2,0,0,9,3,0,0,-1,2,2,Firewall.INetFwOpenPort' Firewall.IPProtocol,Firewall.INetFwProfile' Firewall.INetFwService
+Firewall,INetFwOpenPort,0,0,8,0,0,13,0,0,0,-1,3,2,Firewall.IPVersion' Firewall.IPProtocol' Firewall.Scope,Firewall.INetFwOpenPorts' Firewall.PortHelper
+Firewall,INetFwServices,0,1,2,0,0,7,1,0,0,-1,2,1,Firewall.INetFwService' Firewall.ServiceType,Firewall.INetFwProfile
+Firewall,INetFwService,0,0,8,0,0,12,0,0,0,-1,4,1,Firewall.INetFwOpenPorts' Firewall.IPVersion' Firewall.Scope' Firewall.ServiceType,Firewall.INetFwServices
+Firewall,INetFwAuthorizedApplications,0,3,2,0,0,9,3,0,0,-1,1,1,Firewall.INetFwAuthorizedApplication,Firewall.INetFwProfile
 Firewall,NetFwAuthorizedApplication,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Firewall,INetFwAuthorizedApplication,0,0,6,0,0,11,0,0,0,-1,0,1,,Firewall.INetFwAuthorizedApplications
-Firewall,FirewallProfileType,0,0,0,0,0,7,0,0,0,-1,0,1,,Firewall.INetFwPolicy
-Firewall,IPVersion,0,0,0,0,0,7,0,0,0,-1,0,1,,Firewall.INetFwMgr
-Firewall,IPProtocol,0,0,0,0,0,5,0,0,0,-1,0,3,,Firewall.INetFwMgr' Firewall.INetFwOpenPorts' Firewall.PortHelper
-Firewall,Scope,0,0,0,0,0,7,0,0,0,-1,0,1,,Firewall.PortHelper
-Firewall,ServiceType,0,0,0,0,0,8,0,0,0,-1,0,1,,Firewall.INetFwServices
-Firewall,PortHelper,0,2,0,0,2,39,4,0,0,-1,7,1,Firewall.INetFwMgr' Firewall.INetFwProfile' Firewall.INetFwOpenPort' Firewall.INetFwPolicy' Firewall.INetFwOpenPorts' Firewall.Scope' Firewall.IPProtocol,Commander.RemoteServer
+Firewall,INetFwAuthorizedApplication,0,0,6,0,0,11,0,0,0,-1,2,1,Firewall.IPVersion' Firewall.Scope,Firewall.INetFwAuthorizedApplications
+Firewall,FirewallProfileType,0,0,0,0,0,7,0,0,0,-1,0,3,,Firewall.INetFwMgr' Firewall.INetFwPolicy' Firewall.INetFwProfile
+Firewall,IPVersion,0,0,0,0,0,7,0,0,0,-1,0,5,,Firewall.INetFwMgr' Firewall.INetFwRemoteAdminSettings' Firewall.INetFwOpenPort' Firewall.INetFwService' Firewall.INetFwAuthorizedApplication
+Firewall,IPProtocol,0,0,0,0,0,5,0,0,0,-1,0,4,,Firewall.INetFwMgr' Firewall.INetFwOpenPorts' Firewall.INetFwOpenPort' Firewall.PortHelper
+Firewall,Scope,0,0,0,0,0,7,0,0,0,-1,0,5,,Firewall.INetFwRemoteAdminSettings' Firewall.INetFwOpenPort' Firewall.INetFwService' Firewall.INetFwAuthorizedApplication' Firewall.PortHelper
+Firewall,ServiceType,0,0,0,0,0,8,0,0,0,-1,0,2,,Firewall.INetFwServices' Firewall.INetFwService
+Firewall,PortHelper,0,2,0,0,2,39,4,0,0,-1,5,1,Firewall.INetFwMgr' Firewall.INetFwProfile' Firewall.INetFwOpenPort' Firewall.IPProtocol' Firewall.Scope,Commander.RemoteServer

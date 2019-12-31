@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Metrics.Samples,UserValueTimerSample,1,4,0,0,2,28,5,0,0,0.5,2,3,Metrics.Timer' Metrics.Utils.ThreadLocalRandom,Metrics.SamplesConsole.Program' NancyFx.Sample.Program' Owin.Sample.Program
-Metrics.Samples,UserValueHistogramSample,1,3,0,0,2,22,4,0,0,0,2,3,Metrics.Histogram' Metrics.Utils.ThreadLocalRandom,Metrics.SamplesConsole.Program' NancyFx.Sample.Program' Owin.Sample.Program
-Metrics.Samples,SetMeterSample,1,3,0,0,2,37,9,0,0,0,3,3,Metrics.Meter' Metrics.Samples.Command' Metrics.Utils.ThreadLocalRandom,Metrics.SamplesConsole.Program' NancyFx.Sample.Program' Owin.Sample.Program
+Metrics.Samples,UserValueTimerSample,1,4,0,0,2,28,5,0,0,0.5,0,0,,
+Metrics.Samples,UserValueHistogramSample,1,3,0,0,2,22,4,0,0,0,0,0,,
+Metrics.Samples,SetMeterSample,1,3,0,0,2,37,9,0,0,0,6,0,Metrics.Samples.Command' Metrics.Samples.SendEmail' Metrics.Samples.ShipProduct' Metrics.Samples.BillCustomer' Metrics.Samples.MakeInvoice' Metrics.Samples.MarkAsPreffered,
 Metrics.Samples,Command,0,0,0,0,0,1,0,5,0,-1,0,2,,Metrics.Samples.SetMeterSample' Metrics.Samples.SetCounterSample
-Metrics.Samples,SendEmail,0,0,0,0,0,1,0,0,1,-1,0,0,,
-Metrics.Samples,ShipProduct,0,0,0,0,0,1,0,0,1,-1,0,0,,
-Metrics.Samples,BillCustomer,0,0,0,0,0,1,0,0,1,-1,0,0,,
-Metrics.Samples,MakeInvoice,0,0,0,0,0,1,0,0,1,-1,0,0,,
-Metrics.Samples,MarkAsPreffered,0,0,0,0,0,1,0,0,1,-1,0,0,,
-Metrics.Samples,HealthChecksSample,0,5,0,0,3,91,5,0,0,-1,2,3,Metrics.HealthChecks' Metrics.HealthCheckResult,Metrics.SamplesConsole.Program' NancyFx.Sample.Program' Owin.Sample.Program
-Metrics.Samples,IDatabase,0,1,0,0,0,1,1,0,0,-1,0,1,,Metrics.Samples.DatabaseHealthCheck
-Metrics.Samples,DatabaseHealthCheck,1,2,0,0,1,21,3,0,1,0,3,0,Metrics.Samples.IDatabase' Metrics.HealthChecks' Metrics.HealthCheckResult,
-Metrics.Samples,MultiContextMetrics,3,1,0,0,1,12,1,0,0,0,2,1,Metrics.Counter' Metrics.Meter,Metrics.Samples.SampleMetrics
-Metrics.Samples,MultiContextInstanceMetrics,2,3,0,0,3,25,4,0,0,0,5,1,Metrics.Counter' Metrics.Timer' Metrics.Metric' Metrics.MetricsContext' Metrics.Unit,Metrics.Samples.SampleMetrics
-Metrics.Samples,SampleMetrics,8,3,0,0,3,64,4,0,0,0,8,3,Metrics.Counter' Metrics.Meter' Metrics.Histogram' Metrics.Timer' Metrics.Metric' Metrics.Samples.MultiContextMetrics' Metrics.Samples.MultiContextInstanceMetrics' Metrics.Utils.ThreadLocalRandom,Metrics.SamplesConsole.Program' NancyFx.Sample.Program' Owin.Sample.Program
-Metrics.Samples,SetCounterSample,1,2,0,0,2,27,8,0,0,0,3,3,Metrics.Counter' Metrics.Samples.Command' Metrics.Utils.ThreadLocalRandom,Metrics.SamplesConsole.Program' NancyFx.Sample.Program' Owin.Sample.Program
+Metrics.Samples,SendEmail,0,0,0,0,0,1,0,0,1,-1,0,2,,Metrics.Samples.SetMeterSample' Metrics.Samples.SetCounterSample
+Metrics.Samples,ShipProduct,0,0,0,0,0,1,0,0,1,-1,0,2,,Metrics.Samples.SetMeterSample' Metrics.Samples.SetCounterSample
+Metrics.Samples,BillCustomer,0,0,0,0,0,1,0,0,1,-1,0,2,,Metrics.Samples.SetMeterSample' Metrics.Samples.SetCounterSample
+Metrics.Samples,MakeInvoice,0,0,0,0,0,1,0,0,1,-1,0,2,,Metrics.Samples.SetMeterSample' Metrics.Samples.SetCounterSample
+Metrics.Samples,MarkAsPreffered,0,0,0,0,0,1,0,0,1,-1,0,2,,Metrics.Samples.SetMeterSample' Metrics.Samples.SetCounterSample
+Metrics.Samples,HealthChecksSample,0,5,0,0,3,91,5,0,0,-1,2,0,Metrics.Samples.IDatabase' Metrics.Samples.DatabaseHealthCheck,
+Metrics.Samples,IDatabase,0,1,0,0,0,1,1,0,0,-1,0,1,,Metrics.Samples.HealthChecksSample
+Metrics.Samples,DatabaseHealthCheck,1,2,0,0,1,21,3,0,1,1,0,1,,Metrics.Samples.HealthChecksSample
+Metrics.Samples,MultiContextMetrics,3,1,0,0,1,12,1,0,0,0,0,1,,Metrics.Samples.SampleMetrics
+Metrics.Samples,MultiContextInstanceMetrics,2,3,0,0,3,25,4,0,0,0,0,1,,Metrics.Samples.SampleMetrics
+Metrics.Samples,SampleMetrics,8,3,0,0,3,64,4,0,0,0,2,0,Metrics.Samples.MultiContextMetrics' Metrics.Samples.MultiContextInstanceMetrics,
+Metrics.Samples,SetCounterSample,1,2,0,0,2,27,8,0,0,0,6,0,Metrics.Samples.Command' Metrics.Samples.SendEmail' Metrics.Samples.ShipProduct' Metrics.Samples.BillCustomer' Metrics.Samples.MakeInvoice' Metrics.Samples.MarkAsPreffered,

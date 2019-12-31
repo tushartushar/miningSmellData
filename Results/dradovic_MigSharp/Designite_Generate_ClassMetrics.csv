@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-MigSharp.Generate,CommandLineOptions,1,1,8,1,1,34,1,0,0,0,2,1,MigSharp.MigrationExportAttribute' MigSharp.MigrationOptions,MigSharp.Generate.Program
-MigSharp.Generate,GeneratorOptions,5,2,7,0,0,23,2,0,0,1,0,6,,MigSharp.Generate.Program' MigSharp.Generate.SqlAggregateMigrationGenerator' MigSharp.Generate.SqlFirstMigrationGenerator' MigSharp.Generate.SqlMigrationGeneratorBase' MigSharp.Generate.SqlMigrationGeneratorFactory' MigSharp.SqlServer.NUnit.SqlServer2012IntegrationTests
-MigSharp.Generate,IGenerator,0,1,1,0,0,5,1,1,0,-1,0,2,,MigSharp.Generate.Program' MigSharp.SqlServer.NUnit.SqlServer2012IntegrationTests
+MigSharp.Generate,CommandLineOptions,1,1,8,1,1,34,1,0,0,0,1,1,MigSharp.Generate.Util.CommandLineSwitchAttribute,MigSharp.Generate.Program
+MigSharp.Generate,GeneratorOptions,5,2,7,0,0,23,2,0,0,1,0,5,,MigSharp.Generate.SqlAggregateMigrationGenerator' MigSharp.Generate.SqlMigrationGeneratorFactory' MigSharp.Generate.SqlFirstMigrationGenerator' MigSharp.Generate.SqlMigrationGeneratorBase' MigSharp.Generate.Program
+MigSharp.Generate,IGenerator,0,1,1,0,0,5,1,1,0,-1,0,3,,MigSharp.Generate.SqlMigrationGeneratorBase' MigSharp.Generate.Program' MigSharp.Generate.SqlMigrationGeneratorFactory
 MigSharp.Generate,InvalidCommandLineArgumentException,1,6,1,0,5,31,6,0,0,0.83,0,1,,MigSharp.Generate.Program
-MigSharp.Generate,Program,4,4,0,3,0,126,11,0,0,0,6,0,MigSharp.Generate.CommandLineOptions' MigSharp.Generate.Util.CommandLineParser' MigSharp.Generate.SqlMigrationGeneratorFactory' MigSharp.Generate.GeneratorOptions' MigSharp.Generate.IGenerator' MigSharp.Generate.InvalidCommandLineArgumentException,
-MigSharp.Generate,SqlAggregateMigrationGenerator,1,2,2,0,1,36,3,0,1,0,6,1,MigSharp.Process.History' MigSharp.Providers.ProviderLocator' MigSharp.DbPlatform' MigSharp.Generate.GeneratorOptions' MigSharp.Providers.ProviderInfo' MigSharp.IMigrationMetadata,MigSharp.Generate.SqlMigrationGeneratorFactory
-MigSharp.Generate,SqlFirstMigrationGenerator,0,1,2,0,1,9,1,0,1,-1,1,1,MigSharp.Generate.GeneratorOptions,MigSharp.Generate.SqlMigrationGeneratorFactory
-MigSharp.Generate,SqlMigrationGeneratorBase,5,22,5,0,1,416,62,2,1,0.14,1,0,MigSharp.Generate.GeneratorOptions,
-MigSharp.Generate,SqlMigrationGeneratorFactory,1,2,0,0,2,23,3,0,0,0,3,2,MigSharp.Generate.GeneratorOptions' MigSharp.Generate.SqlAggregateMigrationGenerator' MigSharp.Generate.SqlFirstMigrationGenerator,MigSharp.Generate.Program' MigSharp.SqlServer.NUnit.SqlServer2012IntegrationTests
-MigSharp.Generate.Util,CommandLineArgumentException,2,4,2,0,3,35,6,1,0,0.75,0,1,,MigSharp.Generate.Util.SwitchRecord
-MigSharp.Generate.Util,CommandLineArgumentMissingException,0,2,0,0,1,13,2,0,1,-1,0,0,,
-MigSharp.Generate.Util,CommandLineParser,4,12,3,0,9,514,51,0,0,0.25,4,1,MigSharp.Generate.Util.SwitchRecord' MigSharp.Generate.Util.CommandLineSwitchAttribute' MigSharp.Generate.Util.CommandLineAliasAttribute' MigSharp.Generate.Util.SwitchInfo,MigSharp.Generate.Program
-MigSharp.Generate.Util,SwitchInfo,1,1,4,0,1,29,2,0,0,0,1,1,MigSharp.Generate.Util.SwitchRecord,MigSharp.Generate.Util.CommandLineParser
-MigSharp.Generate.Util,SwitchRecord,10,6,13,0,4,157,12,0,0,0.33,1,2,MigSharp.Generate.Util.CommandLineArgumentException,MigSharp.Generate.Util.CommandLineParser' MigSharp.Generate.Util.SwitchInfo
-MigSharp.Generate.Util,CommandLineSwitchAttribute,3,1,3,0,1,30,1,0,0,0,0,1,,MigSharp.Generate.Util.CommandLineParser
+MigSharp.Generate,Program,4,4,0,3,0,133,11,0,0,0.5,7,0,MigSharp.Generate.CommandLineOptions' MigSharp.Generate.GeneratorOptions' MigSharp.Generate.IGenerator' MigSharp.Generate.InvalidCommandLineArgumentException' MigSharp.Generate.SqlMigrationGeneratorFactory' MigSharp.Generate.Util.CommandLineArgumentMissingException' MigSharp.Generate.Util.CommandLineParser,
+MigSharp.Generate,SqlAggregateMigrationGenerator,1,2,2,0,1,36,3,0,1,0,2,1,MigSharp.Generate.GeneratorOptions' MigSharp.Generate.SqlMigrationGeneratorBase,MigSharp.Generate.SqlMigrationGeneratorFactory
+MigSharp.Generate,SqlFirstMigrationGenerator,0,1,2,0,1,9,1,0,1,-1,2,1,MigSharp.Generate.GeneratorOptions' MigSharp.Generate.SqlMigrationGeneratorBase,MigSharp.Generate.SqlMigrationGeneratorFactory
+MigSharp.Generate,SqlMigrationGeneratorBase,5,22,5,0,1,416,84,2,1,0.18,2,2,MigSharp.Generate.GeneratorOptions' MigSharp.Generate.IGenerator,MigSharp.Generate.SqlFirstMigrationGenerator' MigSharp.Generate.SqlAggregateMigrationGenerator
+MigSharp.Generate,SqlMigrationGeneratorFactory,1,2,0,0,2,23,3,0,0,0,4,1,MigSharp.Generate.GeneratorOptions' MigSharp.Generate.IGenerator' MigSharp.Generate.SqlAggregateMigrationGenerator' MigSharp.Generate.SqlFirstMigrationGenerator,MigSharp.Generate.Program
+MigSharp.Generate.Util,CommandLineArgumentException,2,4,2,0,3,35,6,1,0,0.75,0,2,,MigSharp.Generate.Util.CommandLineParser' MigSharp.Generate.Util.CommandLineArgumentMissingException
+MigSharp.Generate.Util,CommandLineArgumentMissingException,0,2,0,0,1,13,2,0,1,-1,1,2,MigSharp.Generate.Util.CommandLineArgumentException,MigSharp.Generate.Util.CommandLineParser' MigSharp.Generate.Program
+MigSharp.Generate.Util,CommandLineParser,4,12,3,0,9,514,58,0,0,0.25,6,1,MigSharp.Generate.Util.CommandLineArgumentException' MigSharp.Generate.Util.CommandLineArgumentMissingException' MigSharp.Generate.Util.SwitchInfo' MigSharp.Generate.Util.SwitchRecord' MigSharp.Generate.Util.CommandLineSwitchAttribute' MigSharp.Generate.Util.CommandLineAliasAttribute,MigSharp.Generate.Program
+MigSharp.Generate.Util,SwitchInfo,1,1,4,0,1,29,2,0,0,0,0,1,,MigSharp.Generate.Util.CommandLineParser
+MigSharp.Generate.Util,SwitchRecord,10,6,13,0,4,157,16,0,0,0.33,0,1,,MigSharp.Generate.Util.CommandLineParser
+MigSharp.Generate.Util,CommandLineSwitchAttribute,3,1,3,0,1,30,1,0,0,0,0,2,,MigSharp.Generate.Util.CommandLineParser' MigSharp.Generate.CommandLineOptions
 MigSharp.Generate.Util,CommandLineAliasAttribute,1,1,1,0,1,16,1,0,0,0,0,1,,MigSharp.Generate.Util.CommandLineParser

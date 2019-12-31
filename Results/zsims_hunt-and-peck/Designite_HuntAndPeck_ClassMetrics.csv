@@ -1,36 +1,36 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 System,AssemblyVersionInformation,1,0,0,0,0,3,0,0,0,-1,0,0,,
-HuntAndPeck,App,4,5,0,0,1,82,6,0,0,1,13,0,HuntAndPeck.SingleLaunchMutex' HuntAndPeck.Services.UiAutomationHintProviderService' HuntAndPeck.Services.HintLabelService' HuntAndPeck.Services.KeyListenerService' HuntAndPeck.Views.OverlayView' HuntAndPeck.ViewModels.OverlayViewModel' HuntAndPeck.Views.DebugOverlayView' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.Views.OptionsView' HuntAndPeck.ViewModels.OptionsViewModel' HuntAndPeck.Models.HintSession' HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.Views.ShellView,
+HuntAndPeck,App,4,5,0,0,1,82,7,0,0,1,12,0,HuntAndPeck.SingleLaunchMutex' HuntAndPeck.Services.HintLabelService' HuntAndPeck.Services.KeyListenerService' HuntAndPeck.Services.UiAutomationHintProviderService' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.ViewModels.OptionsViewModel' HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.ViewModels.OverlayViewModel' HuntAndPeck.Views.DebugOverlayView' HuntAndPeck.Views.OptionsView' HuntAndPeck.Views.ShellView' HuntAndPeck.Views.OverlayView,
 HuntAndPeck,SingleLaunchMutex,2,2,1,0,2,33,4,0,0,0,0,1,,HuntAndPeck.App
 HuntAndPeck.Extensions,IEnumerableTExtensions,0,1,0,0,1,8,1,0,0,-1,0,0,,
-HuntAndPeck.Extensions,RectExtensions,0,2,0,0,2,33,3,0,0,-1,2,0,HuntAndPeck.NativeMethods.POINT' HuntAndPeck.NativeMethods.User32,
-HuntAndPeck.Models,DebugHint,0,2,1,0,2,16,2,0,1,-1,0,2,,HuntAndPeck.Services.UiAutomationHintProviderService' HuntAndPeck.ViewModels.DebugHintViewModel
-HuntAndPeck.Models,Hint,0,2,2,0,1,25,2,6,0,-1,0,2,,HuntAndPeck.Services.UiAutomationHintProviderService' HuntAndPeck.ViewModels.HintViewModel
-HuntAndPeck.Models,HintSession,0,0,3,0,0,15,0,0,0,-1,0,5,,HuntAndPeck.App' HuntAndPeck.Services.UiAutomationHintProviderService' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.ViewModels.OverlayViewModel
-HuntAndPeck.Models,UiAutomationExpandCollapseHint,1,2,0,0,2,22,3,0,1,0,0,1,,HuntAndPeck.Services.UiAutomationHintProviderService
-HuntAndPeck.Models,UiAutomationFocusHint,1,2,0,0,2,13,2,0,1,0,0,1,,HuntAndPeck.Services.UiAutomationHintProviderService
-HuntAndPeck.Models,UiAutomationInvokeHint,1,2,0,0,2,13,2,0,1,0,0,1,,HuntAndPeck.Services.UiAutomationHintProviderService
-HuntAndPeck.Models,UiAutomationSelectHint,1,2,0,0,2,13,2,0,1,0,0,1,,HuntAndPeck.Services.UiAutomationHintProviderService
-HuntAndPeck.Models,UiAutomationToggleHint,1,2,0,0,2,13,2,0,1,0,0,1,,HuntAndPeck.Services.UiAutomationHintProviderService
-HuntAndPeck.Services,HintLabelService,0,2,0,0,1,60,6,0,1,-1,0,2,,HuntAndPeck.App' HuntAndPeck.Tests.Services.HintLabelServiceTest
-HuntAndPeck.Services,KeyListenerService,3,3,2,0,0,81,7,0,1,1,4,1,HuntAndPeck.Services.Interfaces.HotKey' HuntAndPeck.NativeMethods.User32' HuntAndPeck.NativeMethods.HotKeyEventArgs' HuntAndPeck.NativeMethods.Constants,HuntAndPeck.App
+HuntAndPeck.Extensions,RectExtensions,0,2,0,0,2,33,3,0,0,-1,0,0,,
+HuntAndPeck.Models,DebugHint,0,2,1,0,2,16,2,0,1,-1,1,3,HuntAndPeck.Models.Hint,HuntAndPeck.ViewModels.DebugHintViewModel' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Models,Hint,0,2,2,0,1,25,2,6,0,-1,0,9,,HuntAndPeck.Models.DebugHint' HuntAndPeck.Models.UiAutomationInvokeHint' HuntAndPeck.Models.UiAutomationExpandCollapseHint' HuntAndPeck.Models.UiAutomationFocusHint' HuntAndPeck.Models.UiAutomationSelectHint' HuntAndPeck.Models.UiAutomationToggleHint' HuntAndPeck.ViewModels.HintViewModel' HuntAndPeck.Models.HintSession' HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Models,HintSession,0,0,3,0,0,15,0,0,0,-1,1,5,HuntAndPeck.Models.Hint,HuntAndPeck.ViewModels.OverlayViewModel' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.Services.Interfaces.IHintProviderService' HuntAndPeck.Services.UiAutomationHintProviderService' HuntAndPeck.Services.Interfaces.IDebugHintProviderService
+HuntAndPeck.Models,UiAutomationExpandCollapseHint,1,2,0,0,2,22,3,0,1,0,1,1,HuntAndPeck.Models.Hint,HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Models,UiAutomationFocusHint,1,2,0,0,2,13,2,0,1,0,1,1,HuntAndPeck.Models.Hint,HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Models,UiAutomationInvokeHint,1,2,0,0,2,13,2,0,1,0,1,1,HuntAndPeck.Models.Hint,HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Models,UiAutomationSelectHint,1,2,0,0,2,13,2,0,1,0,1,1,HuntAndPeck.Models.Hint,HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Models,UiAutomationToggleHint,1,2,0,0,2,13,2,0,1,0,1,1,HuntAndPeck.Models.Hint,HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Services,HintLabelService,0,2,0,0,1,60,6,0,1,-1,1,1,HuntAndPeck.Services.Interfaces.IHintLabelService,HuntAndPeck.App
+HuntAndPeck.Services,KeyListenerService,3,3,2,0,0,81,7,0,1,1,2,1,HuntAndPeck.Services.Interfaces.HotKey' HuntAndPeck.Services.Interfaces.IKeyListenerService,HuntAndPeck.App
 HuntAndPeck.Services,UiAutomationPatternIds,1,0,1,0,0,44,0,0,0,-1,0,1,,HuntAndPeck.Services.UiAutomationHintProviderService
-HuntAndPeck.Services,UiAutomationHintProviderService,1,8,0,0,4,178,24,0,1,0.38,11,1,HuntAndPeck.NativeMethods.User32' HuntAndPeck.Models.HintSession' HuntAndPeck.NativeMethods.RECT' HuntAndPeck.Models.Hint' HuntAndPeck.Models.UiAutomationInvokeHint' HuntAndPeck.Models.UiAutomationToggleHint' HuntAndPeck.Models.UiAutomationSelectHint' HuntAndPeck.Models.UiAutomationExpandCollapseHint' HuntAndPeck.Models.UiAutomationFocusHint' HuntAndPeck.Services.UiAutomationPatternIds' HuntAndPeck.Models.DebugHint,HuntAndPeck.App
-HuntAndPeck.Services.Interfaces,IDebugHintProviderService,0,2,0,0,0,5,2,1,0,-1,0,1,,HuntAndPeck.ViewModels.ShellViewModel
-HuntAndPeck.Services.Interfaces,IHintLabelService,0,1,0,0,0,7,1,1,0,-1,0,2,,HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.ViewModels.OverlayViewModel
-HuntAndPeck.Services.Interfaces,IHintProviderService,0,1,0,0,0,8,1,1,0,-1,0,1,,HuntAndPeck.ViewModels.ShellViewModel
-HuntAndPeck.Services.Interfaces,HotKey,0,0,3,0,0,9,0,0,0,-1,0,1,,HuntAndPeck.Services.KeyListenerService
-HuntAndPeck.Services.Interfaces,IKeyListenerService,0,0,2,0,0,7,0,1,0,-1,0,1,,HuntAndPeck.ViewModels.ShellViewModel
-HuntAndPeck.ViewModels,DebugHintViewModel,0,1,3,0,1,18,2,0,0,-1,1,0,HuntAndPeck.Models.DebugHint,
-HuntAndPeck.ViewModels,DebugOverlayViewModel,1,1,2,0,1,25,1,0,1,0,1,3,HuntAndPeck.Models.HintSession,HuntAndPeck.App' HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.Views.DebugOverlayView
-HuntAndPeck.ViewModels,DelegateCommand,2,7,0,0,7,36,7,0,0,0.57,0,0,,
-HuntAndPeck.ViewModels,HintViewModel,2,1,3,0,1,20,1,0,1,0,1,0,HuntAndPeck.Models.Hint,
-HuntAndPeck.ViewModels,NotifyPropertyChanged,0,1,0,0,0,8,1,3,0,-1,0,0,,
+HuntAndPeck.Services,UiAutomationHintProviderService,1,8,0,0,4,178,24,0,1,0.38,11,1,HuntAndPeck.Models.DebugHint' HuntAndPeck.Models.Hint' HuntAndPeck.Models.HintSession' HuntAndPeck.Models.UiAutomationExpandCollapseHint' HuntAndPeck.Models.UiAutomationFocusHint' HuntAndPeck.Models.UiAutomationInvokeHint' HuntAndPeck.Models.UiAutomationSelectHint' HuntAndPeck.Models.UiAutomationToggleHint' HuntAndPeck.Services.UiAutomationPatternIds' HuntAndPeck.Services.Interfaces.IDebugHintProviderService' HuntAndPeck.Services.Interfaces.IHintProviderService,HuntAndPeck.App
+HuntAndPeck.Services.Interfaces,IDebugHintProviderService,0,2,0,0,0,5,2,1,0,-1,1,2,HuntAndPeck.Models.HintSession,HuntAndPeck.Services.UiAutomationHintProviderService' HuntAndPeck.ViewModels.ShellViewModel
+HuntAndPeck.Services.Interfaces,IHintLabelService,0,1,0,0,0,7,1,1,0,-1,0,3,,HuntAndPeck.ViewModels.OverlayViewModel' HuntAndPeck.Services.HintLabelService' HuntAndPeck.ViewModels.ShellViewModel
+HuntAndPeck.Services.Interfaces,IHintProviderService,0,1,0,0,0,8,1,1,0,-1,1,2,HuntAndPeck.Models.HintSession,HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.Services.UiAutomationHintProviderService
+HuntAndPeck.Services.Interfaces,HotKey,0,0,3,0,0,9,0,0,0,-1,0,3,,HuntAndPeck.Services.Interfaces.IKeyListenerService' HuntAndPeck.Services.KeyListenerService' HuntAndPeck.ViewModels.ShellViewModel
+HuntAndPeck.Services.Interfaces,IKeyListenerService,0,0,2,0,0,7,0,1,0,-1,1,2,HuntAndPeck.Services.Interfaces.HotKey,HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.Services.KeyListenerService
+HuntAndPeck.ViewModels,DebugHintViewModel,0,1,3,0,1,18,2,0,0,-1,1,1,HuntAndPeck.Models.DebugHint,HuntAndPeck.ViewModels.DebugOverlayViewModel
+HuntAndPeck.ViewModels,DebugOverlayViewModel,1,1,2,0,1,25,1,0,1,0,4,3,HuntAndPeck.Models.DebugHint' HuntAndPeck.Models.HintSession' HuntAndPeck.ViewModels.DebugHintViewModel' HuntAndPeck.ViewModels.NotifyPropertyChanged,HuntAndPeck.App' HuntAndPeck.Views.DebugOverlayView' HuntAndPeck.ViewModels.ShellViewModel
+HuntAndPeck.ViewModels,DelegateCommand,2,7,0,0,7,36,7,0,0,0.57,0,1,,HuntAndPeck.ViewModels.ShellViewModel
+HuntAndPeck.ViewModels,HintViewModel,2,1,3,0,1,20,1,0,1,0,2,1,HuntAndPeck.Models.Hint' HuntAndPeck.ViewModels.NotifyPropertyChanged,HuntAndPeck.ViewModels.OverlayViewModel
+HuntAndPeck.ViewModels,NotifyPropertyChanged,0,1,0,0,0,8,1,3,0,-1,0,3,,HuntAndPeck.ViewModels.HintViewModel' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.ViewModels.OverlayViewModel
 HuntAndPeck.ViewModels,OptionsViewModel,0,1,1,0,1,8,1,0,0,-1,0,2,,HuntAndPeck.App' HuntAndPeck.ViewModels.ShellViewModel
-HuntAndPeck.ViewModels,ShellViewModel,6,5,2,0,3,71,7,0,0,0.4,9,1,HuntAndPeck.Services.Interfaces.IHintLabelService' HuntAndPeck.Services.Interfaces.IHintProviderService' HuntAndPeck.Services.Interfaces.IDebugHintProviderService' HuntAndPeck.Services.Interfaces.IKeyListenerService' HuntAndPeck.NativeMethods.KeyModifier' HuntAndPeck.Models.HintSession' HuntAndPeck.ViewModels.OverlayViewModel' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.ViewModels.OptionsViewModel,HuntAndPeck.App
-HuntAndPeck.ViewModels,OverlayViewModel,2,1,4,0,1,69,2,0,1,0,2,3,HuntAndPeck.Models.HintSession' HuntAndPeck.Services.Interfaces.IHintLabelService,HuntAndPeck.App' HuntAndPeck.ViewModels.ShellViewModel' HuntAndPeck.Views.OverlayView
-HuntAndPeck.Views,DebugOverlayView,2,5,0,0,2,74,7,0,1,0.4,1,1,HuntAndPeck.ViewModels.DebugOverlayViewModel,HuntAndPeck.App
-HuntAndPeck.Views,ForegroundWindow,2,4,0,0,0,68,8,2,0,0,2,0,HuntAndPeck.NativeMethods.User32' HuntAndPeck.NativeMethods.Kernel32,
+HuntAndPeck.ViewModels,ShellViewModel,6,5,2,0,3,71,7,0,0,0.4,9,1,HuntAndPeck.Services.Interfaces.IDebugHintProviderService' HuntAndPeck.Services.Interfaces.IHintLabelService' HuntAndPeck.Services.Interfaces.IHintProviderService' HuntAndPeck.Services.Interfaces.HotKey' HuntAndPeck.Services.Interfaces.IKeyListenerService' HuntAndPeck.ViewModels.DebugOverlayViewModel' HuntAndPeck.ViewModels.DelegateCommand' HuntAndPeck.ViewModels.OptionsViewModel' HuntAndPeck.ViewModels.OverlayViewModel,HuntAndPeck.App
+HuntAndPeck.ViewModels,OverlayViewModel,2,1,4,0,1,69,2,0,1,0,4,3,HuntAndPeck.Models.HintSession' HuntAndPeck.Services.Interfaces.IHintLabelService' HuntAndPeck.ViewModels.HintViewModel' HuntAndPeck.ViewModels.NotifyPropertyChanged,HuntAndPeck.Views.OverlayView' HuntAndPeck.App' HuntAndPeck.ViewModels.ShellViewModel
+HuntAndPeck.Views,DebugOverlayView,2,5,0,0,2,74,6,0,1,0.4,1,1,HuntAndPeck.ViewModels.DebugOverlayViewModel,HuntAndPeck.App
+HuntAndPeck.Views,ForegroundWindow,2,4,0,0,0,68,8,2,0,0,0,0,,
 HuntAndPeck.Views,OptionsView,1,3,0,0,2,39,4,0,0,0,0,1,,HuntAndPeck.App
 HuntAndPeck.Views,ShellView,0,1,0,0,1,7,1,0,0,-1,0,1,,HuntAndPeck.App
 HuntAndPeck.Views,OverlayView,3,6,0,0,2,92,9,0,1,0.5,1,1,HuntAndPeck.ViewModels.OverlayViewModel,HuntAndPeck.App

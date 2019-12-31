@@ -1,36 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WebDav.Client.Exceptions,UnauthorizedException,0,0,0,0,0,2,0,0,1,-1,0,0,,
-WebDav.Client.Exceptions,WebDavException,0,0,0,0,0,2,0,1,0,-1,0,0,,
-WebDav.Client.Exceptions,WebDavHttpException,0,0,0,0,0,2,0,1,1,-1,0,0,,
-Client,IFolder,0,4,0,0,0,6,4,0,0,-1,0,0,,
-Client,WebDavFolder,2,11,0,0,10,249,21,0,0,0.36,0,0,,
-Client,IItemContent,0,5,2,0,0,9,5,0,0,-1,0,0,,
-Client,IResource,0,0,2,0,0,4,0,0,0,-1,0,0,,
-Client,WebDavResource,16,23,16,0,23,353,36,0,0,0.48,0,0,,
+WebDav.Client.Exceptions,UnauthorizedException,0,0,0,0,0,2,0,0,1,-1,1,1,WebDav.Client.Exceptions.WebDavHttpException,Client.WebDavFolder
+WebDav.Client.Exceptions,WebDavException,0,0,0,0,0,2,0,1,0,-1,0,1,,WebDav.Client.Exceptions.WebDavHttpException
+WebDav.Client.Exceptions,WebDavHttpException,0,0,0,0,0,2,0,1,1,-1,1,1,WebDav.Client.Exceptions.WebDavException,WebDav.Client.Exceptions.UnauthorizedException
+Client,IFolder,0,4,0,0,0,6,4,0,0,-1,2,2,Client.IResource' Client.IHierarchyItem,Client.WebDavSession' Client.WebDavFolder
+Client,WebDavFolder,2,11,0,0,10,249,33,0,0,0.36,9,1,WebDav.Client.Exceptions.UnauthorizedException' Client.IFolder' Client.IResource' Client.WebDavResource' Client.IHierarchyItem' Client.WebDavHierarchyItem' Client.Property' Client.PropertyName' Client.ItemType,Client.WebDavSession
+Client,IItemContent,0,5,2,0,0,9,5,0,0,-1,0,1,,Client.IResource
+Client,IResource,0,0,2,0,0,4,0,0,0,-1,3,4,Client.IItemContent' Client.IHierarchyItem' Client.IConnectionSettings,Client.WebDavResource' Client.WebDavSession' Client.IFolder' Client.WebDavFolder
+Client,WebDavResource,16,23,16,0,23,353,36,0,0,0.48,5,1,Client.IResource' Client.IHierarchyItem' Client.Property' Client.PropertyName' Client.ItemType,Client.WebDavFolder
 Client,IResumableUpload,0,6,0,0,0,8,6,0,0,-1,0,0,,
 Client,WebDavResumableUpload,1,6,0,0,6,22,6,0,0,1,0,0,,
-Client,LockUriTokenPair,2,1,0,2,1,7,1,0,0,0,0,0,,
-Client,WebDavSession,0,5,1,0,5,51,5,0,0,-1,0,0,,
-Client,IHierarchyItem,0,4,8,0,0,15,4,0,0,-1,0,0,,
-Client,WebDavHierarchyItem,9,18,8,0,18,155,24,0,0,0.61,0,0,,
-Client,IConnectionSettings,0,0,3,0,0,5,0,0,0,-1,0,0,,
-Client,WebDavConnectionSettings,3,0,3,0,0,9,0,0,0,-1,0,0,,
-Client,Property,2,3,1,1,3,20,3,0,0,0.67,0,0,,
-Client,PropertyName,2,4,0,2,4,27,6,0,0,0.5,0,0,,
-Client,ItemType,0,0,0,0,0,6,0,0,0,-1,0,0,,
-WebDav,IFolder,0,4,0,0,0,6,4,0,0,-1,0,0,,
-WebDav,WebDavFolder,2,11,0,0,10,249,21,0,0,0.36,0,0,,
-WebDav,IItemContent,0,5,2,0,0,9,5,0,0,-1,0,0,,
-WebDav,IResource,0,0,2,0,0,4,0,0,0,-1,0,0,,
-WebDav,WebDavResource,16,23,16,0,23,353,36,0,0,0.48,0,0,,
-WebDav,IResumableUpload,0,6,0,0,0,8,6,0,0,-1,0,0,,
-WebDav,WebDavResumableUpload,1,6,0,0,6,22,6,0,0,1,0,0,,
-WebDav,LockUriTokenPair,2,1,0,2,1,7,1,0,0,0,0,0,,
-WebDav,WebDavSession,0,5,1,0,5,51,5,0,0,-1,0,0,,
-WebDav,IHierarchyItem,0,4,8,0,0,15,4,0,0,-1,0,0,,
-WebDav,WebDavHierarchyItem,9,18,8,0,18,155,24,0,0,0.61,0,0,,
-WebDav,IConnectionSettings,0,0,3,0,0,5,0,0,0,-1,0,0,,
-WebDav,WebDavConnectionSettings,3,0,3,0,0,9,0,0,0,-1,0,0,,
-WebDav,Property,2,3,1,1,3,20,3,0,0,0.67,0,0,,
-WebDav,PropertyName,2,4,0,2,4,27,6,0,0,0.5,0,0,,
-WebDav,ItemType,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Client,LockUriTokenPair,2,1,0,2,1,7,1,0,0,0,0,1,,Client.WebDavHierarchyItem
+Client,WebDavSession,0,5,1,0,5,51,5,0,0,-1,3,0,Client.IFolder' Client.WebDavFolder' Client.IResource,
+Client,IHierarchyItem,0,4,8,0,0,15,4,0,0,-1,4,5,Client.IConnectionSettings' Client.Property' Client.PropertyName' Client.ItemType,Client.WebDavHierarchyItem' Client.IResource' Client.WebDavResource' Client.IFolder' Client.WebDavFolder
+Client,WebDavHierarchyItem,9,18,8,0,18,155,25,0,0,0.61,6,1,Client.LockUriTokenPair' Client.IHierarchyItem' Client.WebDavConnectionSettings' Client.Property' Client.PropertyName' Client.ItemType,Client.WebDavFolder
+Client,IConnectionSettings,0,0,3,0,0,5,0,0,0,-1,0,2,,Client.IHierarchyItem' Client.IResource
+Client,WebDavConnectionSettings,3,0,3,0,0,9,0,0,0,-1,0,1,,Client.WebDavHierarchyItem
+Client,Property,2,3,1,1,3,20,3,0,0,0.67,1,4,Client.PropertyName,Client.WebDavResource' Client.WebDavFolder' Client.IHierarchyItem' Client.WebDavHierarchyItem
+Client,PropertyName,2,4,0,2,4,27,6,0,0,0.5,0,5,,Client.IHierarchyItem' Client.WebDavHierarchyItem' Client.WebDavFolder' Client.Property' Client.WebDavResource
+Client,ItemType,0,0,0,0,0,6,0,0,0,-1,0,4,,Client.WebDavResource' Client.IHierarchyItem' Client.WebDavHierarchyItem' Client.WebDavFolder

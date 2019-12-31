@@ -1,8 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SuperSocket.Server,AppSession,2,3,1,0,2,23,3,1,1,1,0,1,,SuperSocket.Server.AppSessionFactory<TPackageInfo;TPipelineFilter>
-SuperSocket.Server,AppSession<TPackageInfo>,2,3,0,0,2,57,9,0,2,0.67,1,0,SuperSocket.ProtoBase.IPipelineFilter,
-SuperSocket.Server,AppSessionFactory<TPackageInfo;TPipelineFilter>,1,2,0,0,2,19,3,0,1,0,1,0,SuperSocket.Server.AppSession,
-SuperSocket.Server,IAppSession,0,2,0,0,0,6,2,1,0,-1,0,1,,SuperSocket.Server.SocketServer
-SuperSocket.Server,IAppSessionFactory,0,1,0,0,0,4,1,1,0,-1,0,1,,SuperSocket.Server.SocketServer
-SuperSocket.Server,SocketListener,1,4,1,0,4,34,4,0,0,0.5,1,0,SuperSocket.Listener,
-SuperSocket.Server,SocketServer,8,7,5,0,3,130,14,0,0,0,4,0,SuperSocket.Server.IAppSessionFactory' SuperSocket.Config.ServerConfig' SuperSocket.Listener' SuperSocket.Server.IAppSession,
+SuperSocket.Server,AppSession,2,6,7,0,3,82,6,1,1,0.83,0,4,,SuperSocket.HostBuilderExtensions' SuperSocket.Server.GenericSessionFactory<TSession>' SuperSocket.Server.DefaultSessionFactory' SuperSocket.Server.SuperSocketService<TReceivePackageInfo>
+SuperSocket.Server,DefaultSessionFactory,0,1,0,0,1,7,1,0,1,-1,1,1,SuperSocket.Server.AppSession,SuperSocket.Server.SuperSocketService<TReceivePackageInfo>
+SuperSocket.Server,GenericSessionFactory<TSession>,0,1,0,0,1,8,1,0,1,-1,1,1,SuperSocket.Server.AppSession,SuperSocket.HostBuilderExtensions
+SuperSocket.Server,PackageHandlingException<TPackageInfo>,0,1,1,0,1,9,1,0,0,-1,0,2,,SuperSocket.Server.SuperSocketService<TReceivePackageInfo>' SuperSocket.HostBuilderExtensions
+SuperSocket.Server,SuperSocketService<TReceivePackageInfo>,14,19,5,0,3,250,40,0,2,0.37,3,1,SuperSocket.Server.AppSession' SuperSocket.Server.DefaultSessionFactory' SuperSocket.Server.PackageHandlingException<TPackageInfo>,SuperSocket.HostBuilderExtensions
+SuperSocket.Server,TcpChannelCreator,5,8,2,0,5,100,13,0,1,0.25,0,1,,SuperSocket.Server.TcpChannelCreatorFactory
+SuperSocket.Server,TcpChannelCreatorFactory,0,1,0,0,1,23,2,0,1,-1,1,1,SuperSocket.Server.TcpChannelCreator,SuperSocket.HostBuilderExtensions
+SuperSocket,HostBuilderExtensions,0,16,0,0,13,138,17,0,0,-1,5,0,SuperSocket.Server.AppSession' SuperSocket.Server.GenericSessionFactory<TSession>' SuperSocket.Server.PackageHandlingException<TPackageInfo>' SuperSocket.Server.SuperSocketService<TReceivePackageInfo>' SuperSocket.Server.TcpChannelCreatorFactory,
+SuperSocket,SuperSocketExtensions,0,1,0,0,1,20,1,0,0,-1,0,0,,
+SuperSocket,SuperSocketHostBuilder<TReceivePackage>,0,1,0,0,1,17,1,0,1,-1,0,1,,SuperSocket.SuperSocketHostBuilder
+SuperSocket,SuperSocketHostBuilder,0,2,0,0,2,18,2,1,0,-1,1,0,SuperSocket.SuperSocketHostBuilder<TReceivePackage>,

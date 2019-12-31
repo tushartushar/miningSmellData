@@ -1,0 +1,75 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Coinbase,ApiKeyAuthenticator,0,3,0,0,1,31,4,0,0,-1,0,1,,Coinbase.ApiKeyConfig
+Coinbase,IAccountsEndpoint,0,5,0,0,0,27,5,1,0,-1,5,2,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Account' Coinbase.Models.UpdateAccount,Coinbase.ICoinbaseClient' Coinbase.CoinbaseClient
+Coinbase,CoinbaseClient,5,53,19,2,4,687,56,2,1,0.83,6,6,Coinbase.IAccountsEndpoint' Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Account' Coinbase.Models.UpdateAccount,Coinbase.Config' Coinbase.OAuthConfig' Coinbase.ApiKeyConfig' Coinbase.CoinbaseApiClient' Coinbase.CoinbaseOAuthClient' Coinbase.AutoRefreshTokenHelper
+Coinbase,IAddressesEndpoint,0,4,0,0,0,20,4,1,0,-1,6,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.AddressEntity' Coinbase.Models.Transaction' Coinbase.Models.CreateAddress,Coinbase.ICoinbaseClient
+Coinbase,IBuysEndpoint,0,4,0,0,0,26,4,1,0,-1,5,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Buy' Coinbase.Models.PlaceBuy,Coinbase.ICoinbaseClient
+Coinbase,ICoinbaseClient,0,0,11,0,0,14,0,3,0,-1,11,2,Coinbase.IAccountsEndpoint' Coinbase.IAddressesEndpoint' Coinbase.IBuysEndpoint' Coinbase.IDataEndpoint' Coinbase.IDepositsEndpoint' Coinbase.INotificationsEndpoint' Coinbase.IPaymentMethodsEndpoint' Coinbase.ISellsEndpoint' Coinbase.ITransactionsEndpoint' Coinbase.IUsersEndpoint' Coinbase.IWithdrawalsEndpoint,Coinbase.ICoinbaseApiClient' Coinbase.ICoinbaseOAuthClient
+Coinbase,ICoinbaseApiClient,0,0,0,0,0,3,0,1,1,-1,1,1,Coinbase.ICoinbaseClient,Coinbase.CoinbaseApiClient
+Coinbase,CoinbaseApiClient,0,1,0,0,1,6,1,0,2,-1,3,0,Coinbase.CoinbaseClient' Coinbase.ICoinbaseApiClient' Coinbase.ApiKeyConfig,
+Coinbase,ICoinbaseOAuthClient,0,0,0,0,0,3,0,1,1,-1,1,1,Coinbase.ICoinbaseClient,Coinbase.CoinbaseOAuthClient
+Coinbase,CoinbaseOAuthClient,0,1,0,0,1,6,1,0,2,-1,3,0,Coinbase.CoinbaseClient' Coinbase.ICoinbaseOAuthClient' Coinbase.OAuthConfig,
+Coinbase,DebugProxyFactory,1,2,0,0,2,16,2,0,0,1,0,0,,
+Coinbase,IDataEndpoint,0,6,0,0,0,35,6,1,0,-1,7,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Currency' Coinbase.Models.ExchangeRates' Coinbase.Models.Money' Coinbase.Models.Time,Coinbase.ICoinbaseClient
+Coinbase,IDepositsEndpoint,0,4,0,0,0,19,4,1,0,-1,5,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Deposit' Coinbase.Models.DepositFunds,Coinbase.ICoinbaseClient
+Coinbase,INotificationsEndpoint,0,2,0,0,0,11,2,1,0,-1,4,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Notification,Coinbase.ICoinbaseClient
+Coinbase,AuthorizeOptions,0,0,12,0,0,54,0,0,0,-1,0,1,,Coinbase.OAuthHelper
+Coinbase,OAuthHelper,2,4,0,2,4,97,5,0,0,0.5,2,1,Coinbase.AuthorizeOptions' Coinbase.Models.OAuthResponse,Coinbase.AutoRefreshTokenHelper
+Coinbase,AutoRefreshTokenHelper,1,1,0,1,1,39,2,0,0,0,5,0,Coinbase.CoinbaseClient' Coinbase.OAuthHelper' Coinbase.OAuthConfig' Coinbase.Models.OAuthResponse' Coinbase.Models.JsonResponse,
+Coinbase,IPaymentMethodsEndpoint,0,2,0,0,0,11,2,1,0,-1,4,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.PaymentMethod,Coinbase.ICoinbaseClient
+Coinbase,ISellsEndpoint,0,4,0,0,0,26,4,1,0,-1,5,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Sell' Coinbase.Models.PlaceSell,Coinbase.ICoinbaseClient
+Coinbase,ITransactionsEndpoint,0,8,0,0,0,40,8,1,0,-1,7,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Transaction' Coinbase.Models.CreateTransaction' Coinbase.Models.CreateTransfer' Coinbase.Models.RequestMoney,Coinbase.ICoinbaseClient
+Coinbase,IUsersEndpoint,0,4,0,0,0,19,4,1,0,-1,4,1,Coinbase.Models.Response<T>' Coinbase.Models.User' Coinbase.Models.Auth' Coinbase.Models.UserUpdate,Coinbase.ICoinbaseClient
+Coinbase,IWithdrawalsEndpoint,0,4,0,0,0,19,4,1,0,-1,5,1,Coinbase.PaginationOptions' Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.Models.Withdrawal' Coinbase.Models.WithdrawalFunds,Coinbase.ICoinbaseClient
+Coinbase,Config,0,3,2,0,0,14,3,2,0,-1,1,2,Coinbase.CoinbaseClient,Coinbase.OAuthConfig' Coinbase.ApiKeyConfig
+Coinbase,OAuthConfig,0,3,2,0,0,22,4,0,1,-1,2,2,Coinbase.CoinbaseClient' Coinbase.Config,Coinbase.CoinbaseOAuthClient' Coinbase.AutoRefreshTokenHelper
+Coinbase,ApiKeyConfig,0,3,2,0,0,39,5,0,1,-1,5,1,Coinbase.ApiKeyAuthenticator' Coinbase.CoinbaseClient' Coinbase.Config' Coinbase.HeaderNames' Coinbase.TimeHelper,Coinbase.CoinbaseApiClient
+Coinbase,ExtensionsForUrl,0,3,0,0,3,24,5,0,0,-1,0,0,,
+Coinbase,HeaderNames,6,0,0,6,0,9,0,0,0,-1,0,1,,Coinbase.ApiKeyConfig
+Coinbase,PaginationOptions,0,0,4,0,0,7,0,0,0,-1,0,12,,Coinbase.ExtensionsForFlurlUrl' Coinbase.IAccountsEndpoint' Coinbase.CoinbaseClient' Coinbase.ISellsEndpoint' Coinbase.IDataEndpoint' Coinbase.INotificationsEndpoint' Coinbase.IPaymentMethodsEndpoint' Coinbase.IBuysEndpoint' Coinbase.IDepositsEndpoint' Coinbase.IWithdrawalsEndpoint' Coinbase.ITransactionsEndpoint' Coinbase.IAddressesEndpoint
+Coinbase,ExtensionsForFlurlUrl,0,1,0,0,1,13,2,0,0,-1,1,0,Coinbase.PaginationOptions,
+Coinbase,TimeHelper,1,2,0,0,2,20,2,0,0,0,0,2,,Coinbase.Models.OAuthResponse' Coinbase.ApiKeyConfig
+Coinbase,WebhookHelper,4,1,0,0,1,30,1,0,0,0,0,0,,
+Coinbase.Models,Json,0,0,1,0,0,8,0,14,0,-1,0,14,,Coinbase.Models.OAuthResponse' Coinbase.Models.JsonResponse' Coinbase.Models.Error' Coinbase.Models.Warning' Coinbase.Models.Pagination' Coinbase.Models.Entity' Coinbase.Models.AccountCurrency' Coinbase.Models.Currency' Coinbase.Models.ExchangeRates' Coinbase.Models.Network' Coinbase.Models.NetworkMoney' Coinbase.Models.Money' Coinbase.Models.Time' Coinbase.Models.Auth
+Coinbase.Models,OAuthResponse,0,1,8,0,0,24,1,0,1,-1,2,2,Coinbase.TimeHelper' Coinbase.Models.Json,Coinbase.OAuthHelper' Coinbase.AutoRefreshTokenHelper
+Coinbase.Models,JsonResponse,0,2,2,0,2,28,2,2,1,-1,3,3,Coinbase.Models.Json' Coinbase.Models.Error' Coinbase.Models.Warning,Coinbase.Models.Response<T>' Coinbase.Models.PagedResponse<T>' Coinbase.AutoRefreshTokenHelper
+Coinbase.Models,Response<T>,0,0,1,0,0,5,0,0,2,-1,1,12,Coinbase.Models.JsonResponse,Coinbase.IPaymentMethodsEndpoint' Coinbase.INotificationsEndpoint' Coinbase.IAddressesEndpoint' Coinbase.IDepositsEndpoint' Coinbase.IAccountsEndpoint' Coinbase.IBuysEndpoint' Coinbase.CoinbaseClient' Coinbase.ISellsEndpoint' Coinbase.IWithdrawalsEndpoint' Coinbase.IUsersEndpoint' Coinbase.ITransactionsEndpoint' Coinbase.IDataEndpoint
+Coinbase.Models,PagedResponse<T>,0,1,2,0,1,15,1,0,2,-1,2,11,Coinbase.Models.JsonResponse' Coinbase.Models.Pagination,Coinbase.IAccountsEndpoint' Coinbase.CoinbaseClient' Coinbase.IWithdrawalsEndpoint' Coinbase.ITransactionsEndpoint' Coinbase.IAddressesEndpoint' Coinbase.ISellsEndpoint' Coinbase.IBuysEndpoint' Coinbase.IPaymentMethodsEndpoint' Coinbase.INotificationsEndpoint' Coinbase.IDataEndpoint' Coinbase.IDepositsEndpoint
+Coinbase.Models,Error,0,0,3,0,0,6,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.Models.JsonResponse
+Coinbase.Models,Warning,0,0,3,0,0,6,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.Models.JsonResponse
+Coinbase.Models,Pagination,0,0,6,0,0,14,0,0,1,-1,2,1,Coinbase.Models.Json' Coinbase.Models.SortOrder,Coinbase.Models.PagedResponse<T>
+Coinbase.Models,SortOrder,0,0,0,0,0,5,0,0,0,-1,0,1,,Coinbase.Models.Pagination
+Coinbase.Models,Entity,0,0,3,0,0,9,0,12,1,-1,1,12,Coinbase.Models.Json,Coinbase.Models.User' Coinbase.Models.Account' Coinbase.Models.AddressEntity' Coinbase.Models.To' Coinbase.Models.From' Coinbase.Models.Transaction' Coinbase.Models.Buy' Coinbase.Models.PaymentMethod' Coinbase.Models.Sell' Coinbase.Models.Deposit' Coinbase.Models.Withdrawal' Coinbase.Models.Notification
+Coinbase.Models,User,0,0,6,0,0,15,0,0,2,-1,1,1,Coinbase.Models.Entity,Coinbase.IUsersEndpoint
+Coinbase.Models,AccountCurrency,0,0,8,0,0,19,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.Models.Account
+Coinbase.Models,Account,0,0,7,0,0,17,0,0,2,-1,3,2,Coinbase.Models.Entity' Coinbase.Models.AccountCurrency' Coinbase.Models.Money,Coinbase.IAccountsEndpoint' Coinbase.CoinbaseClient
+Coinbase.Models,AddressEntity,0,0,5,0,0,13,0,0,2,-1,1,1,Coinbase.Models.Entity,Coinbase.IAddressesEndpoint
+Coinbase.Models,To,0,0,2,0,0,7,0,0,2,-1,1,1,Coinbase.Models.Entity,Coinbase.Models.Transaction
+Coinbase.Models,From,0,0,2,0,0,7,0,0,2,-1,1,1,Coinbase.Models.Entity,Coinbase.Models.Transaction
+Coinbase.Models,Transaction,0,0,14,0,0,36,0,0,2,-1,6,2,Coinbase.Models.Entity' Coinbase.Models.To' Coinbase.Models.From' Coinbase.Models.Network' Coinbase.Models.Money' Coinbase.Models.TransactionStatus,Coinbase.IAddressesEndpoint' Coinbase.ITransactionsEndpoint
+Coinbase.Models,Buy,0,0,12,0,0,27,0,0,2,-1,2,1,Coinbase.Models.Entity' Coinbase.Models.Money,Coinbase.IBuysEndpoint
+Coinbase.Models,PaymentMethod,0,0,14,0,0,31,0,0,2,-1,1,1,Coinbase.Models.Entity,Coinbase.IPaymentMethodsEndpoint
+Coinbase.Models,Sell,0,0,12,0,0,27,0,0,2,-1,2,1,Coinbase.Models.Entity' Coinbase.Models.Money,Coinbase.ISellsEndpoint
+Coinbase.Models,Deposit,0,0,10,0,0,23,0,0,2,-1,2,1,Coinbase.Models.Entity' Coinbase.Models.Money,Coinbase.IDepositsEndpoint
+Coinbase.Models,Withdrawal,0,0,10,0,0,23,0,0,2,-1,2,1,Coinbase.Models.Entity' Coinbase.Models.Money,Coinbase.IWithdrawalsEndpoint
+Coinbase.Models,Currency,0,0,3,0,0,9,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.IDataEndpoint
+Coinbase.Models,ExchangeRates,0,0,2,0,0,7,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.IDataEndpoint
+Coinbase.Models,Network,0,0,6,0,0,15,0,0,1,-1,2,1,Coinbase.Models.Json' Coinbase.Models.NetworkMoney,Coinbase.Models.Transaction
+Coinbase.Models,NetworkMoney,0,0,2,0,0,7,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.Models.Network
+Coinbase.Models,Money,0,0,3,0,0,9,0,0,1,-1,1,7,Coinbase.Models.Json,Coinbase.Models.Account' Coinbase.Models.Transaction' Coinbase.Models.Buy' Coinbase.Models.Sell' Coinbase.Models.Deposit' Coinbase.Models.Withdrawal' Coinbase.IDataEndpoint
+Coinbase.Models,Time,0,0,2,0,0,7,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.IDataEndpoint
+Coinbase.Models,Auth,0,0,3,0,0,9,0,0,1,-1,1,1,Coinbase.Models.Json,Coinbase.IUsersEndpoint
+Coinbase.Models,UserUpdate,0,0,3,0,0,10,0,0,0,-1,0,1,,Coinbase.IUsersEndpoint
+Coinbase.Models,UpdateAccount,0,0,1,0,0,6,0,0,0,-1,0,2,,Coinbase.IAccountsEndpoint' Coinbase.CoinbaseClient
+Coinbase.Models,CreateAddress,0,0,1,0,0,6,0,0,0,-1,0,1,,Coinbase.IAddressesEndpoint
+Coinbase.Models,CreateTransaction,0,0,10,0,0,24,0,0,0,-1,0,1,,Coinbase.ITransactionsEndpoint
+Coinbase.Models,CreateTransfer,0,0,5,0,0,14,0,0,0,-1,0,1,,Coinbase.ITransactionsEndpoint
+Coinbase.Models,RequestMoney,0,0,5,0,0,14,0,0,0,-1,0,1,,Coinbase.ITransactionsEndpoint
+Coinbase.Models,PlaceBuy,0,0,7,0,0,18,0,0,0,-1,0,1,,Coinbase.IBuysEndpoint
+Coinbase.Models,PlaceSell,0,0,7,0,0,18,0,0,0,-1,0,1,,Coinbase.ISellsEndpoint
+Coinbase.Models,DepositFunds,0,0,4,0,0,12,0,0,0,-1,0,1,,Coinbase.IDepositsEndpoint
+Coinbase.Models,WithdrawalFunds,0,0,4,0,0,12,0,0,0,-1,0,1,,Coinbase.IWithdrawalsEndpoint
+Coinbase.Models,Notification,0,0,9,0,0,24,0,0,2,-1,2,1,Coinbase.Models.Entity' Coinbase.Models.NotificationEventNames,Coinbase.INotificationsEndpoint
+Coinbase.Models,NotificationEventNames,14,0,0,14,0,76,0,0,0,-1,0,1,,Coinbase.Models.Notification
+Coinbase.Models,TransactionStatus,7,0,0,7,0,31,0,0,0,-1,0,1,,Coinbase.Models.Transaction
+System,AssemblyVersionInformation,10,0,0,0,0,12,0,0,0,-1,0,0,,

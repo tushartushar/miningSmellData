@@ -1,31 +1,39 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Queries,AdminMenu,0,2,1,0,2,21,3,0,1,-1,2,0,OrchardCore.Environment.Navigation.NavigationBuilder' OrchardCore.Queries.Permissions,
-OrchardCore.Queries,Permissions,4,4,0,2,4,42,5,0,0,0.5,1,3,OrchardCore.Queries.IQueryManager,OrchardCore.Queries.AdminMenu' OrchardCore.Queries.Controllers.AdminController' OrchardCore.Queries.Controllers.ApiController
-OrchardCore.Queries,Startup,0,2,0,0,2,21,2,0,0,-1,0,0,,
-OrchardCore.Queries,LiquidStartup,0,1,0,0,1,8,1,0,0,-1,0,0,,
-OrchardCore.Queries.Controllers,AdminController,7,7,3,0,7,179,23,0,0,0,11,0,OrchardCore.DisplayManagement.Notify.INotifier' OrchardCore.Queries.IQueryManager' OrchardCore.DisplayManagement.IDisplayManager' OrchardCore.DisplayManagement.IShapeFactory' OrchardCore.Navigation.Pager' OrchardCore.Queries.ViewModels.QueriesIndexViewModel' OrchardCore.Queries.Permissions' OrchardCore.Queries.ViewModels.QueryIndexOptions' OrchardCore.Navigation.PagerParameters' OrchardCore.Queries.ViewModels.QueriesCreateViewModel' OrchardCore.Queries.ViewModels.QueriesEditViewModel,
-OrchardCore.Queries.Controllers,ApiController,2,2,0,0,2,33,4,0,0,0,2,0,OrchardCore.Queries.IQueryManager' OrchardCore.Queries.Permissions,
-OrchardCore.Queries.Drivers,QueryDisplayDriver,2,4,0,0,4,66,6,0,0,0.75,4,0,OrchardCore.Queries.IQueryManager' OrchardCore.DisplayManagement.Views.ShapeResult' OrchardCore.Queries.Query' OrchardCore.DisplayManagement.Views.CombinedResult,
-OrchardCore.Queries.Liquid,QueryFilter,1,2,0,0,2,23,4,0,1,0,1,0,OrchardCore.Queries.IQueryManager,
-OrchardCore.Queries.Recipes,QueryStep,3,2,0,0,2,34,5,0,0,0,2,0,OrchardCore.Queries.IQueryManager' OrchardCore.Queries.Query,
-OrchardCore.Queries.Recipes,QueryStepModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
+OrchardCore.Queries,AdminMenu,1,2,0,0,2,24,3,0,1,0,1,1,OrchardCore.Queries.Permissions,OrchardCore.Queries.Startup
+OrchardCore.Queries,Permissions,4,4,0,2,4,41,5,0,0,0.5,0,4,,OrchardCore.Queries.Startup' OrchardCore.Queries.Controllers.ApiController' OrchardCore.Queries.AdminMenu' OrchardCore.Queries.Controllers.AdminController
+OrchardCore.Queries,QueryGlobalMethodProvider,1,2,0,0,2,30,2,0,0,0,0,1,,OrchardCore.Queries.Startup
+OrchardCore.Queries,Startup,1,3,0,0,3,55,3,0,0,0.67,11,0,OrchardCore.Queries.AdminMenu' OrchardCore.Queries.Permissions' OrchardCore.Queries.QueryGlobalMethodProvider' OrchardCore.Queries.Controllers.AdminController' OrchardCore.Queries.Deployment.AllQueriesDeploymentSource' OrchardCore.Queries.Deployment.AllQueriesDeploymentStep' OrchardCore.Queries.Deployment.AllQueriesDeploymentStepDriver' OrchardCore.Queries.Drivers.QueryDisplayDriver' OrchardCore.Queries.Recipes.QueryStep' OrchardCore.Queries.Services.QueryManager' OrchardCore.Queries.Sql.Controllers.AdminController,
+OrchardCore.Queries,LiquidStartup,0,1,0,0,1,9,1,0,0,-1,2,0,OrchardCore.Queries.Liquid.QueriesLiquidTemplateEventHandler' OrchardCore.Queries.Liquid.QueryFilter,
+OrchardCore.Queries.Controllers,AdminController,9,8,0,0,8,185,24,0,0,0.25,6,1,OrchardCore.Queries.Permissions' OrchardCore.Queries.ViewModels.QueriesCreateViewModel' OrchardCore.Queries.ViewModels.QueriesEditViewModel' OrchardCore.Queries.ViewModels.QueriesIndexViewModel' OrchardCore.Queries.ViewModels.QueryEntry' OrchardCore.Queries.ViewModels.QueryIndexOptions,OrchardCore.Queries.Startup
+OrchardCore.Queries.Controllers,ApiController,2,2,0,0,2,39,4,0,0,0,1,0,OrchardCore.Queries.Permissions,
+OrchardCore.Queries.Deployment,AllQueriesDeploymentSource,1,2,0,0,2,22,3,0,1,0,1,1,OrchardCore.Queries.Deployment.AllQueriesDeploymentStep,OrchardCore.Queries.Startup
+OrchardCore.Queries.Deployment,AllQueriesDeploymentStep,0,1,0,0,1,7,1,0,1,-1,0,3,,OrchardCore.Queries.Deployment.AllQueriesDeploymentStepDriver' OrchardCore.Queries.Deployment.AllQueriesDeploymentSource' OrchardCore.Queries.Startup
+OrchardCore.Queries.Deployment,AllQueriesDeploymentStepDriver,0,2,0,0,2,15,2,0,0,-1,1,1,OrchardCore.Queries.Deployment.AllQueriesDeploymentStep,OrchardCore.Queries.Startup
+OrchardCore.Queries.Drivers,QueryDisplayDriver,2,4,0,0,4,70,7,0,0,0.5,1,1,OrchardCore.Queries.ViewModels.EditQueryViewModel,OrchardCore.Queries.Startup
+OrchardCore.Queries.Liquid,QueriesLiquidTemplateEventHandler,1,2,0,0,2,13,2,0,1,0,0,1,,OrchardCore.Queries.LiquidStartup
+OrchardCore.Queries.Liquid,QueryFilter,1,2,0,0,2,23,4,0,1,0,0,1,,OrchardCore.Queries.LiquidStartup
+OrchardCore.Queries.Recipes,QueryStep,3,2,0,0,2,35,5,0,0,0,1,1,OrchardCore.Queries.Recipes.QueryStepModel,OrchardCore.Queries.Startup
+OrchardCore.Queries.Recipes,QueryStepModel,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Queries.Recipes.QueryStep
 OrchardCore.Queries.Services,QueriesDocument,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Queries.Services.QueryManager
-OrchardCore.Queries.Services,QueryManager,5,7,0,0,6,101,12,0,1,0,2,0,OrchardCore.Queries.Query' OrchardCore.Queries.Services.QueriesDocument,
-OrchardCore.Queries.Sql,AdminMenu,0,2,1,0,2,23,3,0,1,-1,2,0,OrchardCore.Environment.Navigation.NavigationBuilder' OrchardCore.Queries.Sql.Permissions,
-OrchardCore.Queries.Sql,Permissions,1,2,0,1,2,27,2,0,0,0,0,2,,OrchardCore.Queries.Sql.AdminMenu' OrchardCore.Queries.Sql.Controllers.AdminController
-OrchardCore.Queries.Sql,SqlGrammar,0,1,0,0,1,137,1,0,0,-1,0,0,,
-OrchardCore.Queries.Sql,SqlParser,8,21,0,0,1,431,54,0,0,0,1,2,OrchardCore.Queries.Sql.FormattingModes,OrchardCore.Queries.Sql.SqlQuerySource' OrchardCore.Queries.Sql.Controllers.AdminController
+OrchardCore.Queries.Services,QueryManager,6,9,1,0,8,96,15,0,1,0,1,1,OrchardCore.Queries.Services.QueriesDocument,OrchardCore.Queries.Startup
+OrchardCore.Queries.Sql,AdminMenu,1,2,0,0,2,24,3,0,1,0,1,1,OrchardCore.Queries.Sql.Permissions,OrchardCore.Queries.Sql.Startup
+OrchardCore.Queries.Sql,Permissions,1,2,0,1,2,28,2,0,0,0,0,3,,OrchardCore.Queries.Sql.Startup' OrchardCore.Queries.Sql.Controllers.AdminController' OrchardCore.Queries.Sql.AdminMenu
+OrchardCore.Queries.Sql,SqlGrammar,0,1,0,0,1,145,1,0,0,-1,0,1,,OrchardCore.Queries.Sql.SqlParser
+OrchardCore.Queries.Sql,SqlParser,17,22,0,0,1,549,89,0,0,0,3,2,OrchardCore.Queries.Sql.SqlGrammar' OrchardCore.Queries.Sql.FormattingModes' OrchardCore.Queries.Sql.SqlParserException,OrchardCore.Queries.Sql.SqlQuerySource' OrchardCore.Queries.Sql.Controllers.AdminController
 OrchardCore.Queries.Sql,FormattingModes,0,0,0,0,0,5,0,0,0,-1,0,1,,OrchardCore.Queries.Sql.SqlParser
-OrchardCore.Queries.Sql,SqlQuery,0,1,2,0,1,8,1,0,1,-1,0,2,,OrchardCore.Queries.Sql.SqlQuerySource' OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver
-OrchardCore.Queries.Sql,SqlQuerySource,3,3,1,0,3,62,6,0,1,0.67,4,0,OrchardCore.Liquid.ILiquidTemplateManager' OrchardCore.Queries.Sql.SqlQuery' OrchardCore.Queries.Sql.SqlParser' OrchardCore.Queries.Query,
-OrchardCore.Queries.Sql,Startup,0,1,0,0,1,11,1,0,0,-1,0,0,,
-OrchardCore.Queries.Sql.Controllers,AdminController,4,3,0,0,3,78,8,0,0,0.67,4,0,OrchardCore.Liquid.ILiquidTemplateManager' OrchardCore.Queries.Sql.Permissions' OrchardCore.Queries.Sql.ViewModels.AdminQueryViewModel' OrchardCore.Queries.Sql.SqlParser,
-OrchardCore.Queries.Sql.Drivers,SqlQueryDisplayDriver,1,4,0,0,4,48,6,0,0,0.5,5,0,OrchardCore.DisplayManagement.Views.ShapeResult' OrchardCore.DisplayManagement.Views.CombinedResult' OrchardCore.Queries.Sql.SqlQuery' OrchardCore.Queries.Sql.ViewModels.SqlQueryViewModel' OrchardCore.DisplayManagement.Views.IDisplayResult,
+OrchardCore.Queries.Sql,SqlParserException,0,1,0,0,1,6,1,0,0,-1,0,1,,OrchardCore.Queries.Sql.SqlParser
+OrchardCore.Queries.Sql,SqlQuery,0,1,2,0,1,8,1,0,1,-1,0,3,,OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver' OrchardCore.Queries.Sql.SqlQuerySource' OrchardCore.Queries.Sql.GraphQL.Queries.SqlQueryFieldTypeProvider
+OrchardCore.Queries.Sql,SqlQuerySource,3,3,1,0,3,75,8,0,1,0.67,2,1,OrchardCore.Queries.Sql.SqlParser' OrchardCore.Queries.Sql.SqlQuery,OrchardCore.Queries.Sql.Startup
+OrchardCore.Queries.Sql,Startup,0,1,0,0,1,11,1,0,0,-1,4,0,OrchardCore.Queries.Sql.AdminMenu' OrchardCore.Queries.Sql.Permissions' OrchardCore.Queries.Sql.SqlQuerySource' OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver,
+OrchardCore.Queries.Sql.Controllers,AdminController,4,3,0,0,3,82,9,0,0,0,3,1,OrchardCore.Queries.Sql.Permissions' OrchardCore.Queries.Sql.SqlParser' OrchardCore.Queries.Sql.ViewModels.AdminQueryViewModel,OrchardCore.Queries.Startup
+OrchardCore.Queries.Sql.Drivers,SqlQueryDisplayDriver,1,4,0,0,4,48,6,0,0,0.5,2,1,OrchardCore.Queries.Sql.SqlQuery' OrchardCore.Queries.Sql.ViewModels.SqlQueryViewModel,OrchardCore.Queries.Sql.Startup
+OrchardCore.Queries.Sql.GraphQL.Queries,SqlQueryFieldTypeProvider,1,4,0,0,2,117,10,0,0,0.75,1,1,OrchardCore.Queries.Sql.SqlQuery,OrchardCore.Queries.Sql.GraphQL.Startup
+OrchardCore.Queries.Sql.GraphQL,Startup,0,1,0,0,1,9,1,0,0,-1,1,0,OrchardCore.Queries.Sql.GraphQL.Queries.SqlQueryFieldTypeProvider,
 OrchardCore.Queries.Sql.ViewModels,AdminQueryViewModel,0,0,6,0,0,13,0,0,0,-1,0,1,,OrchardCore.Queries.Sql.Controllers.AdminController
 OrchardCore.Queries.Sql.ViewModels,SqlQueryViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,OrchardCore.Queries.Sql.Drivers.SqlQueryDisplayDriver
-OrchardCore.Queries.ViewModels,EditQueryViewModel,0,0,4,0,0,8,0,0,0,-1,0,0,,
-OrchardCore.Queries.ViewModels,QueriesCreateViewModel,0,0,2,0,0,5,0,1,0,-1,0,1,,OrchardCore.Queries.Controllers.AdminController
-OrchardCore.Queries.ViewModels,QueriesEditViewModel,0,0,1,0,0,4,0,0,1,-1,0,1,,OrchardCore.Queries.Controllers.AdminController
-OrchardCore.Queries.ViewModels,QueriesIndexViewModel,0,0,4,0,0,7,0,0,0,-1,0,1,,OrchardCore.Queries.Controllers.AdminController
-OrchardCore.Queries.ViewModels,QueryEntry,0,0,3,0,0,6,0,0,0,-1,0,0,,
-OrchardCore.Queries.ViewModels,QueryIndexOptions,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Queries.Controllers.AdminController
+OrchardCore.Queries.ViewModels,EditQueryViewModel,0,0,5,0,0,9,0,0,0,-1,0,1,,OrchardCore.Queries.Drivers.QueryDisplayDriver
+OrchardCore.Queries.ViewModels,QueriesCreateViewModel,0,0,2,0,0,5,0,1,0,-1,0,2,,OrchardCore.Queries.ViewModels.QueriesEditViewModel' OrchardCore.Queries.Controllers.AdminController
+OrchardCore.Queries.ViewModels,QueriesEditViewModel,0,0,2,0,0,5,0,0,1,-1,1,1,OrchardCore.Queries.ViewModels.QueriesCreateViewModel,OrchardCore.Queries.Controllers.AdminController
+OrchardCore.Queries.ViewModels,QueriesIndexViewModel,0,0,4,0,0,7,0,0,0,-1,2,1,OrchardCore.Queries.ViewModels.QueryEntry' OrchardCore.Queries.ViewModels.QueryIndexOptions,OrchardCore.Queries.Controllers.AdminController
+OrchardCore.Queries.ViewModels,QueryEntry,0,0,3,0,0,6,0,0,0,-1,0,2,,OrchardCore.Queries.ViewModels.QueriesIndexViewModel' OrchardCore.Queries.Controllers.AdminController
+OrchardCore.Queries.ViewModels,QueryIndexOptions,0,0,1,0,0,4,0,0,0,-1,0,2,,OrchardCore.Queries.ViewModels.QueriesIndexViewModel' OrchardCore.Queries.Controllers.AdminController

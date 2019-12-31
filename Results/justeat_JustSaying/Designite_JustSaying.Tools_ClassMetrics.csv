@@ -1,8 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-JustSaying.Tools,CommandParser,0,2,0,0,1,26,2,0,0,-1,0,1,,JustSaying.Tools.Program
-JustSaying.Tools,Program,0,2,0,0,1,16,3,0,0,-1,1,0,JustSaying.Tools.CommandParser,
-JustSaying.Tools.Commands,ExitCommand,0,0,0,0,0,1,0,0,1,-1,0,0,,
-JustSaying.Tools.Commands,HelpCommand,0,1,0,0,1,8,1,0,1,-1,0,0,,
-JustSaying.Tools.Commands,ICommand,0,1,0,0,0,4,1,3,0,-1,0,0,,
-JustSaying.Tools.Commands,MoveCommand,0,4,4,0,2,66,5,0,1,-1,0,0,,
-JustSaying.Tools.Commands,QuitCommand,0,1,0,0,1,4,1,1,1,-1,0,0,,
+JustSaying.Tools,CommandParser,0,2,0,0,1,32,2,0,0,-1,4,1,JustSaying.Tools.Commands.ExitCommand' JustSaying.Tools.Commands.HelpCommand' JustSaying.Tools.Commands.ICommand' JustSaying.Tools.Commands.MoveCommand,JustSaying.Tools.Program
+JustSaying.Tools,EnumerableExtensions,0,1,0,0,0,10,2,0,0,-1,0,0,,
+JustSaying.Tools,Program,0,2,0,0,1,15,3,0,0,-1,1,0,JustSaying.Tools.CommandParser,
+JustSaying.Tools.Commands,ExitCommand,0,0,0,0,0,1,0,0,1,-1,1,1,JustSaying.Tools.Commands.QuitCommand,JustSaying.Tools.CommandParser
+JustSaying.Tools.Commands,HelpCommand,0,1,0,0,1,8,1,0,1,-1,1,1,JustSaying.Tools.Commands.ICommand,JustSaying.Tools.CommandParser
+JustSaying.Tools.Commands,ICommand,0,1,0,0,0,4,1,3,0,-1,0,4,,JustSaying.Tools.Commands.QuitCommand' JustSaying.Tools.Commands.MoveCommand' JustSaying.Tools.Commands.HelpCommand' JustSaying.Tools.CommandParser
+JustSaying.Tools.Commands,MoveCommand,0,4,4,0,2,66,5,0,1,-1,1,1,JustSaying.Tools.Commands.ICommand,JustSaying.Tools.CommandParser
+JustSaying.Tools.Commands,QuitCommand,0,1,0,0,1,4,1,1,1,-1,1,1,JustSaying.Tools.Commands.ICommand,JustSaying.Tools.Commands.ExitCommand

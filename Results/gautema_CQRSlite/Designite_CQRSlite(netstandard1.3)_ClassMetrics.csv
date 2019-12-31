@@ -1,0 +1,47 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CQRSlite.Caching,CacheRepository,4,4,0,0,3,81,7,0,1,0.5,4,0,CQRSlite.Caching.ICache' CQRSlite.Domain.AggregateRoot' CQRSlite.Domain.IRepository' CQRSlite.Events.IEventStore,
+CQRSlite.Caching,ICache,0,5,0,0,0,33,5,2,0,-1,1,2,CQRSlite.Domain.AggregateRoot,CQRSlite.Caching.MemoryCache' CQRSlite.Caching.CacheRepository
+CQRSlite.Caching,MemoryCache,2,6,0,0,6,77,6,0,1,0,2,0,CQRSlite.Caching.ICache' CQRSlite.Domain.AggregateRoot,
+CQRSlite.Commands,ICancellableCommandHandler,0,0,0,0,0,3,0,2,1,-1,2,0,CQRSlite.Commands.ICommand' CQRSlite.Messages.ICancellableHandler,
+CQRSlite.Commands,ICommand,0,0,0,0,0,3,0,7,1,-1,1,4,CQRSlite.Messages.IMessage,CQRSlite.Commands.ICommandHandler' CQRSlite.Commands.ICancellableCommandHandler' CQRSlite.Commands.ICommandSender' CQRSlite.Routing.Router
+CQRSlite.Commands,ICommandHandler,0,0,0,0,0,3,0,4,1,-1,2,0,CQRSlite.Commands.ICommand' CQRSlite.Messages.IHandler,
+CQRSlite.Commands,ICommandSender,0,1,0,0,0,11,1,1,0,-1,1,1,CQRSlite.Commands.ICommand,CQRSlite.Routing.Router
+CQRSlite.Domain,AggregateRoot,1,5,2,0,3,88,12,4,0,0,4,11,CQRSlite.Domain.Exception.AggregateOrEventMissingIdException' CQRSlite.Domain.Exception.EventIdIncorrectException' CQRSlite.Domain.Exception.EventsOutOfOrderException' CQRSlite.Events.IEvent,CQRSlite.Snapshotting.SnapshotAggregateRoot<T>' CQRSlite.Snapshotting.ISnapshotStrategy' CQRSlite.Domain.IRepository' CQRSlite.Domain.ISession' CQRSlite.Caching.ICache' CQRSlite.Snapshotting.DefaultSnapshotStrategy' CQRSlite.Caching.CacheRepository' CQRSlite.Domain.Session' CQRSlite.Domain.Repository' CQRSlite.Snapshotting.SnapshotRepository' CQRSlite.Caching.MemoryCache
+CQRSlite.Domain,IRepository,0,2,0,0,0,20,2,4,0,-1,1,4,CQRSlite.Domain.AggregateRoot,CQRSlite.Domain.Repository' CQRSlite.Domain.Session' CQRSlite.Caching.CacheRepository' CQRSlite.Snapshotting.SnapshotRepository
+CQRSlite.Domain,ISession,0,3,0,0,0,26,3,1,0,-1,1,1,CQRSlite.Domain.AggregateRoot,CQRSlite.Domain.Session
+CQRSlite.Domain,Repository,2,5,0,0,4,56,9,0,1,0,7,0,CQRSlite.Domain.AggregateRoot' CQRSlite.Domain.IRepository' CQRSlite.Domain.Exception.AggregateNotFoundException' CQRSlite.Domain.Exception.ConcurrencyException' CQRSlite.Domain.Factories.AggregateFactory<T>' CQRSlite.Events.IEventPublisher' CQRSlite.Events.IEventStore,
+CQRSlite.Domain,Session,2,5,0,0,4,72,11,0,1,0,5,0,CQRSlite.Domain.AggregateRoot' CQRSlite.Domain.IRepository' CQRSlite.Domain.ISession' CQRSlite.Domain.AggregateDescriptor' CQRSlite.Domain.Exception.ConcurrencyException,
+CQRSlite.Domain,AggregateDescriptor,0,0,2,0,0,5,0,0,0,-1,0,1,,CQRSlite.Domain.Session
+CQRSlite.Domain.Exception,AggregateNotFoundException,0,1,0,0,1,6,1,0,0,-1,0,1,,CQRSlite.Domain.Repository
+CQRSlite.Domain.Exception,AggregateOrEventMissingIdException,0,1,0,0,1,6,1,0,0,-1,0,1,,CQRSlite.Domain.AggregateRoot
+CQRSlite.Domain.Exception,ConcurrencyException,0,1,0,0,1,6,1,0,0,-1,0,2,,CQRSlite.Domain.Repository' CQRSlite.Domain.Session
+CQRSlite.Domain.Exception,EventIdIncorrectException,0,1,0,0,1,6,1,0,0,-1,0,1,,CQRSlite.Domain.AggregateRoot
+CQRSlite.Domain.Exception,EventsOutOfOrderException,0,1,0,0,1,6,1,0,0,-1,0,1,,CQRSlite.Domain.AggregateRoot
+CQRSlite.Domain.Exception,MissingParameterLessConstructorException,0,1,0,0,1,6,1,0,0,-1,0,1,,CQRSlite.Domain.Factories.AggregateFactory<T>
+CQRSlite.Domain.Factories,AggregateFactory<T>,1,2,0,0,1,23,3,0,0,1,1,2,CQRSlite.Domain.Exception.MissingParameterLessConstructorException,CQRSlite.Snapshotting.SnapshotRepository' CQRSlite.Domain.Repository
+CQRSlite.Events,ICancellableEventHandler,0,0,0,0,0,3,0,4,1,-1,2,0,CQRSlite.Events.IEvent' CQRSlite.Messages.ICancellableHandler,
+CQRSlite.Events,IEvent,0,0,3,0,0,6,0,9,1,-1,1,6,CQRSlite.Messages.IMessage,CQRSlite.Events.IEventHandler' CQRSlite.Events.ICancellableEventHandler' CQRSlite.Routing.Router' CQRSlite.Events.IEventPublisher' CQRSlite.Events.IEventStore' CQRSlite.Domain.AggregateRoot
+CQRSlite.Events,IEventHandler,0,0,0,0,0,3,0,2,1,-1,2,0,CQRSlite.Events.IEvent' CQRSlite.Messages.IHandler,
+CQRSlite.Events,IEventPublisher,0,1,0,0,0,11,1,3,0,-1,1,2,CQRSlite.Events.IEvent,CQRSlite.Routing.Router' CQRSlite.Domain.Repository
+CQRSlite.Events,IEventStore,0,2,0,0,0,18,2,6,0,-1,1,3,CQRSlite.Events.IEvent,CQRSlite.Domain.Repository' CQRSlite.Snapshotting.SnapshotRepository' CQRSlite.Caching.CacheRepository
+CQRSlite.Infrastructure,CompiledMethodInfo,1,2,0,0,2,34,4,0,0,0,0,1,,CQRSlite.Infrastructure.DynamicInvoker
+CQRSlite.Infrastructure,DynamicInvoker,3,5,0,0,0,76,15,0,0,0.8,1,0,CQRSlite.Infrastructure.CompiledMethodInfo,
+CQRSlite.Infrastructure,InterfaceMap,0,1,0,0,0,16,1,0,0,-1,0,0,,
+CQRSlite.Messages,ICancellableHandler,0,1,0,0,0,10,1,2,0,-1,1,3,CQRSlite.Messages.IMessage,CQRSlite.Events.ICancellableEventHandler' CQRSlite.Commands.ICancellableCommandHandler' CQRSlite.Routing.RouteRegistrar
+CQRSlite.Messages,IHandler,0,1,0,0,0,9,1,2,0,-1,1,3,CQRSlite.Messages.IMessage,CQRSlite.Commands.ICommandHandler' CQRSlite.Events.IEventHandler' CQRSlite.Routing.RouteRegistrar
+CQRSlite.Messages,IMessage,0,0,0,0,0,2,0,3,0,-1,0,7,,CQRSlite.Events.IEvent' CQRSlite.Commands.ICommand' CQRSlite.Messages.ICancellableHandler' CQRSlite.Messages.IHandler' CQRSlite.Queries.IQuery' CQRSlite.Routing.IHandlerRegistrar' CQRSlite.Routing.Router
+CQRSlite.Queries,ICancellableQueryHandler,0,1,0,0,0,10,1,3,0,-1,1,1,CQRSlite.Queries.IQuery,CQRSlite.Routing.RouteRegistrar
+CQRSlite.Queries,IQuery,0,0,0,0,0,3,0,3,1,-1,1,4,CQRSlite.Messages.IMessage,CQRSlite.Queries.ICancellableQueryHandler' CQRSlite.Queries.IQueryProcessor' CQRSlite.Queries.IQueryHandler' CQRSlite.Routing.Router
+CQRSlite.Queries,IQueryHandler,0,1,0,0,0,9,1,1,0,-1,1,1,CQRSlite.Queries.IQuery,CQRSlite.Routing.RouteRegistrar
+CQRSlite.Queries,IQueryProcessor,0,1,0,0,0,11,1,1,0,-1,1,1,CQRSlite.Queries.IQuery,CQRSlite.Routing.Router
+CQRSlite.Routing.Exception,HandlerNotResolvedException,0,1,0,0,1,7,1,0,0,-1,0,1,,CQRSlite.Routing.RouteRegistrar
+CQRSlite.Routing.Exception,ResolvedHandlerMethodNotFoundException,0,1,0,0,1,7,1,0,0,-1,0,1,,CQRSlite.Routing.RouteRegistrar
+CQRSlite.Routing,IHandlerRegistrar,0,1,0,0,0,9,1,2,0,-1,1,2,CQRSlite.Messages.IMessage,CQRSlite.Routing.Router' CQRSlite.Routing.RouteRegistrar
+CQRSlite.Routing,Router,1,4,0,0,4,42,11,0,1,0,8,0,CQRSlite.Commands.ICommand' CQRSlite.Commands.ICommandSender' CQRSlite.Events.IEvent' CQRSlite.Events.IEventPublisher' CQRSlite.Messages.IMessage' CQRSlite.Queries.IQuery' CQRSlite.Queries.IQueryProcessor' CQRSlite.Routing.IHandlerRegistrar,
+CQRSlite.Routing,RouteRegistrar,1,6,0,0,3,102,10,0,0,0.5,7,0,CQRSlite.Messages.ICancellableHandler' CQRSlite.Messages.IHandler' CQRSlite.Queries.ICancellableQueryHandler' CQRSlite.Queries.IQueryHandler' CQRSlite.Routing.Exception.HandlerNotResolvedException' CQRSlite.Routing.Exception.ResolvedHandlerMethodNotFoundException' CQRSlite.Routing.IHandlerRegistrar,
+CQRSlite.Snapshotting,DefaultSnapshotStrategy,1,2,0,0,2,23,7,0,1,1,3,0,CQRSlite.Domain.AggregateRoot' CQRSlite.Snapshotting.ISnapshotStrategy' CQRSlite.Snapshotting.SnapshotAggregateRoot<T>,
+CQRSlite.Snapshotting,ISnapshotStore,0,2,0,0,0,17,2,4,0,-1,1,1,CQRSlite.Snapshotting.Snapshot,CQRSlite.Snapshotting.SnapshotRepository
+CQRSlite.Snapshotting,ISnapshotStrategy,0,2,0,0,0,15,2,1,0,-1,1,2,CQRSlite.Domain.AggregateRoot,CQRSlite.Snapshotting.DefaultSnapshotStrategy' CQRSlite.Snapshotting.SnapshotRepository
+CQRSlite.Snapshotting,Snapshot,0,0,2,0,0,5,0,1,0,-1,0,2,,CQRSlite.Snapshotting.SnapshotAggregateRoot<T>' CQRSlite.Snapshotting.ISnapshotStore
+CQRSlite.Snapshotting,SnapshotAggregateRoot<T>,0,4,0,0,2,17,4,0,1,-1,2,1,CQRSlite.Domain.AggregateRoot' CQRSlite.Snapshotting.Snapshot,CQRSlite.Snapshotting.DefaultSnapshotStrategy
+CQRSlite.Snapshotting,SnapshotRepository,4,5,0,0,3,54,9,0,1,0,6,0,CQRSlite.Domain.AggregateRoot' CQRSlite.Domain.IRepository' CQRSlite.Domain.Factories.AggregateFactory<T>' CQRSlite.Events.IEventStore' CQRSlite.Snapshotting.ISnapshotStore' CQRSlite.Snapshotting.ISnapshotStrategy,

@@ -1,0 +1,69 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+BoC.Tests,BaseIoCFixture,1,3,0,0,1,20,3,4,0,0,1,4,BoC.Tests.TestableDependencyResolver,BoC.Tests.EventAggregator.DefaultSetupTasks.InitEventAggregatorTaskFixture' BoC.Tests.Tasks.BootstrapperTasksInitializerFixture' BoC.Tests.InversionOfControl.IoCFixture' BoC.Tests.Tasks.RegisterBackgroundTasksFixture
+BoC.Tests,TestableDependencyResolver,1,18,0,0,18,82,20,0,1,0.44,0,2,,BoC.Tests.BaseIoCFixture' BoC.Tests.Services.AutoRegisterModelServicesFixture
+BoC.Tests.EventAggregator.DefaultSetupTasks,InitEventAggregatorTaskFixture,0,2,0,0,2,24,2,0,1,-1,1,0,BoC.Tests.BaseIoCFixture,
+BoC.Tests.Extensions,ExpressionExtensionFixture,0,2,0,0,2,24,2,0,0,-1,0,0,,
+BoC.Tests.Extensions,StringExtensionFixture,0,22,0,0,22,184,22,0,0,-1,1,0,BoC.Tests.Extensions.testEnum,
+BoC.Tests.Extensions,testEnum,0,0,0,0,0,6,0,0,0,-1,0,1,,BoC.Tests.Extensions.StringExtensionFixture
+BoC.Tests.Extensions,TypeExtensionsFixture,0,4,0,0,4,30,4,0,0,-1,5,0,BoC.Tests.Extensions.IGenericInterface' BoC.Tests.Extensions.IInheritedInterface' BoC.Tests.Extensions.ImplementedClass' BoC.Tests.Extensions.InheritedImplementedClass' BoC.Tests.Extensions.OtherImplementedClass,
+BoC.Tests.Extensions,IGenericInterface,0,0,0,0,0,1,0,2,0,-1,0,3,,BoC.Tests.Extensions.TypeExtensionsFixture' BoC.Tests.Extensions.IInheritedInterface' BoC.Tests.Extensions.ImplementedClass
+BoC.Tests.Extensions,IInheritedInterface,0,0,0,0,0,1,0,1,1,-1,1,2,BoC.Tests.Extensions.IGenericInterface,BoC.Tests.Extensions.TypeExtensionsFixture' BoC.Tests.Extensions.OtherImplementedClass
+BoC.Tests.Extensions,ImplementedClass,0,0,0,0,0,1,0,1,1,-1,1,2,BoC.Tests.Extensions.IGenericInterface,BoC.Tests.Extensions.TypeExtensionsFixture' BoC.Tests.Extensions.InheritedImplementedClass
+BoC.Tests.Extensions,InheritedImplementedClass,0,0,0,0,0,1,0,0,2,-1,1,1,BoC.Tests.Extensions.ImplementedClass,BoC.Tests.Extensions.TypeExtensionsFixture
+BoC.Tests.Extensions,OtherImplementedClass,0,0,0,0,0,1,0,0,2,-1,1,1,BoC.Tests.Extensions.IInheritedInterface,BoC.Tests.Extensions.TypeExtensionsFixture
+BoC.Tests.Helpers,CheckArgumentFixture,0,42,0,0,42,212,42,0,0,-1,0,0,,
+BoC.Tests.Helpers,AppDomainHelperFixture,0,4,0,0,4,44,4,0,0,-1,0,0,,
+BoC.Tests.Helpers,InflectorTestCase,1,4,0,0,4,110,6,0,0,0.5,0,0,,
+BoC.Tests.InversionOfControl,IoCFixture,0,7,0,0,7,80,7,0,1,-1,2,0,BoC.Tests.BaseIoCFixture' BoC.Tests.InversionOfControl.TestableContainerInitializer,
+BoC.Tests.InversionOfControl,TestableContainerInitializer,0,1,1,0,1,8,1,0,1,-1,0,1,,BoC.Tests.InversionOfControl.IoCFixture
+BoC.Tests.Persistence,TestableEntity1,0,0,1,0,0,3,0,0,0,-1,0,1,,BoC.Tests.Persistence.BaseEntityFixture
+BoC.Tests.Persistence,TestableEntity2,0,0,0,0,0,1,0,0,0,-1,0,1,,BoC.Tests.Persistence.BaseEntityFixture
+BoC.Tests.Persistence,OtherEntity,0,0,0,0,0,1,0,0,0,-1,0,1,,BoC.Tests.Persistence.BaseEntityFixture
+BoC.Tests.Persistence,BaseEntityFixture,0,11,0,0,11,90,11,0,0,-1,3,0,BoC.Tests.Persistence.TestableEntity1' BoC.Tests.Persistence.TestableEntity2' BoC.Tests.Persistence.OtherEntity,
+BoC.Tests.Services,AutoRegisterModelServicesFixture,0,7,0,0,7,98,7,0,0,-1,7,0,BoC.Tests.TestableDependencyResolver' BoC.Tests.Services.DummyModel' BoC.Tests.Services.DummyModel2' BoC.Tests.Services.DummyModelService' BoC.Tests.Services.DummyModelService2' BoC.Tests.Services.InheritedDummyModelService' BoC.Tests.Services.IDummyModelService2,
+BoC.Tests.Services,DummyModel,0,1,1,0,1,5,1,0,1,-1,0,3,,BoC.Tests.Services.DummyModelService' BoC.Tests.Services.InheritedDummyModelService' BoC.Tests.Services.AutoRegisterModelServicesFixture
+BoC.Tests.Services,DummyModel2,0,1,1,0,1,5,1,0,1,-1,0,3,,BoC.Tests.Services.DummyModelService2' BoC.Tests.Services.IDummyModelService2' BoC.Tests.Services.AutoRegisterModelServicesFixture
+BoC.Tests.Services,DummyModelService,0,10,0,0,9,43,10,0,1,-1,1,1,BoC.Tests.Services.DummyModel,BoC.Tests.Services.AutoRegisterModelServicesFixture
+BoC.Tests.Services,DummyModelService2,0,10,0,0,9,42,10,0,1,-1,2,1,BoC.Tests.Services.DummyModel2' BoC.Tests.Services.IDummyModelService2,BoC.Tests.Services.AutoRegisterModelServicesFixture
+BoC.Tests.Services,BaseDummyModelService<T>,0,10,0,0,9,43,10,0,1,-1,0,1,,BoC.Tests.Services.InheritedDummyModelService
+BoC.Tests.Services,InheritedDummyModelService,0,0,0,0,0,2,0,0,0,-1,2,1,BoC.Tests.Services.DummyModel' BoC.Tests.Services.BaseDummyModelService<T>,BoC.Tests.Services.AutoRegisterModelServicesFixture
+BoC.Tests.Services,IDummyModelService2,0,0,0,0,0,2,0,1,1,-1,1,2,BoC.Tests.Services.DummyModel2,BoC.Tests.Services.DummyModelService2' BoC.Tests.Services.AutoRegisterModelServicesFixture
+BoC.Tests.Services.BaseModelServiceFixtures,BasicQueryFixture,0,6,0,0,6,41,6,0,1,-1,2,0,BoC.Tests.Services.BaseModelServiceFixtures.BaseModelServiceBaseFixture' BoC.Tests.Services.BaseModelServiceFixtures.DummyModel,
+BoC.Tests.Services.BaseModelServiceFixtures,BaseModelServiceBaseFixture,9,1,0,0,1,32,1,6,0,0,1,6,BoC.Tests.Services.BaseModelServiceFixtures.DummyModel,BoC.Tests.Services.BaseModelServiceFixtures.UpdateFixture' BoC.Tests.Services.BaseModelServiceFixtures.BasicQueryFixture' BoC.Tests.Services.BaseModelServiceFixtures.ValidateEntityFixture' BoC.Tests.Services.BaseModelServiceFixtures.FindByModelFixture' BoC.Tests.Services.BaseModelServiceFixtures.InsertFixture' BoC.Tests.Services.BaseModelServiceFixtures.DeleteFixture
+BoC.Tests.Services.BaseModelServiceFixtures,ValidateEntityFixture,0,2,0,0,2,16,2,0,1,-1,1,0,BoC.Tests.Services.BaseModelServiceFixtures.BaseModelServiceBaseFixture,
+BoC.Tests.Services.BaseModelServiceFixtures,UpdateFixture,0,4,0,0,4,72,4,0,1,-1,2,0,BoC.Tests.Services.BaseModelServiceFixtures.BaseModelServiceBaseFixture' BoC.Tests.Services.BaseModelServiceFixtures.DummyModel,
+BoC.Tests.Services.BaseModelServiceFixtures,DeleteFixture,0,4,0,0,4,72,4,0,1,-1,2,0,BoC.Tests.Services.BaseModelServiceFixtures.BaseModelServiceBaseFixture' BoC.Tests.Services.BaseModelServiceFixtures.DummyModel,
+BoC.Tests.Services.BaseModelServiceFixtures,DummyModel,0,1,2,0,1,9,1,0,1,-1,0,7,,BoC.Tests.Services.BaseModelServiceFixtures.BasicQueryFixture' BoC.Tests.Services.BaseModelServiceFixtures.FindByModelFixture' BoC.Tests.Services.BaseModelServiceFixtures.FindFixture' BoC.Tests.Services.BaseModelServiceFixtures.BaseModelServiceBaseFixture' BoC.Tests.Services.BaseModelServiceFixtures.UpdateFixture' BoC.Tests.Services.BaseModelServiceFixtures.DeleteFixture' BoC.Tests.Services.BaseModelServiceFixtures.InsertFixture
+BoC.Tests.Services.BaseModelServiceFixtures,FindByModelFixture,0,8,0,0,8,77,8,0,1,-1,2,0,BoC.Tests.Services.BaseModelServiceFixtures.BaseModelServiceBaseFixture' BoC.Tests.Services.BaseModelServiceFixtures.DummyModel,
+BoC.Tests.Services.BaseModelServiceFixtures,InsertFixture,0,5,0,0,5,86,5,0,1,-1,2,0,BoC.Tests.Services.BaseModelServiceFixtures.BaseModelServiceBaseFixture' BoC.Tests.Services.BaseModelServiceFixtures.DummyModel,
+BoC.Tests.Services.BaseModelServiceFixtures,FindFixture,9,4,0,0,4,56,4,0,0,0,1,0,BoC.Tests.Services.BaseModelServiceFixtures.DummyModel,
+BoC.Tests.Tasks,BootstrapperTasksInitializerFixture,0,3,0,0,3,53,3,0,1,-1,2,0,BoC.Tests.BaseIoCFixture' BoC.Tests.Tasks.FindableBootstrapperTask,
+BoC.Tests.Tasks,FindableBootstrapperTask,0,1,0,0,1,7,1,0,1,-1,0,1,,BoC.Tests.Tasks.BootstrapperTasksInitializerFixture
+BoC.Tests.Tasks,BaseTimedBackgroundTaskFixture,1,8,0,0,8,81,8,0,0,0.25,1,0,BoC.Tests.Tasks.TestableTimedBackgroundTask,
+BoC.Tests.Tasks,TestableTimedBackgroundTask,0,3,2,0,3,22,4,0,3,-1,0,1,,BoC.Tests.Tasks.BaseTimedBackgroundTaskFixture
+BoC.Tests.Tasks,RegisterBackgroundTasksFixture,0,2,0,0,2,26,2,0,1,-1,2,0,BoC.Tests.BaseIoCFixture' BoC.Tests.Tasks.FindableBackgroundTask,
+BoC.Tests.Tasks,FindableBackgroundTask,0,3,1,0,3,19,3,0,1,-1,0,1,,BoC.Tests.Tasks.RegisterBackgroundTasksFixture
+BoC.Tests.Tasks,StartBackgroundTasksFixture,3,2,0,0,2,21,2,0,0,0,0,0,,
+BoC.Tests.Tasks,BaseBackgroundTaskFixture,2,9,0,0,9,104,9,1,0,0,3,1,BoC.Tests.Tasks.DummyEventArgs' BoC.Tests.Tasks.DummyEvent' BoC.Tests.Tasks.TestableBackgroundTask,BoC.Tests.Tasks.BaseThreadedBackgroundTaskFixture
+BoC.Tests.Tasks,DummyEventArgs,0,0,0,0,0,3,0,0,0,-1,0,1,,BoC.Tests.Tasks.BaseBackgroundTaskFixture
+BoC.Tests.Tasks,DummyEvent,0,0,0,0,0,3,0,0,1,-1,0,1,,BoC.Tests.Tasks.BaseBackgroundTaskFixture
+BoC.Tests.Tasks,TestableBackgroundTask,0,5,0,0,1,24,5,0,2,-1,0,1,,BoC.Tests.Tasks.BaseBackgroundTaskFixture
+BoC.Tests.Tasks,BaseThreadedBackgroundTaskFixture,1,4,0,0,4,49,4,0,1,0,2,0,BoC.Tests.Tasks.BaseBackgroundTaskFixture' BoC.Tests.Tasks.TestableThreadedBackgroundTask,
+BoC.Tests.Tasks,TestableThreadedBackgroundTask,0,3,1,0,3,20,4,0,3,-1,0,1,,BoC.Tests.Tasks.BaseThreadedBackgroundTaskFixture
+BoC.Tests.EventAggregator,BaseEventFixture,1,7,0,0,6,54,7,0,0,0,1,0,BoC.Tests.EventAggregator.BaseEventTestDouble,
+BoC.Tests.EventAggregator,BaseEventTestDouble,0,2,1,0,2,18,2,0,1,-1,0,1,,BoC.Tests.EventAggregator.BaseEventFixture
+BoC.Tests.EventAggregator,BaseEventGenericFixture,1,7,0,0,7,50,7,0,0,0,1,0,BoC.Tests.EventAggregator.BaseEventTestDouble<TPayload>,
+BoC.Tests.EventAggregator,BaseEventTestDouble<TPayload>,0,0,1,0,0,10,0,0,1,-1,0,1,,BoC.Tests.EventAggregator.BaseEventGenericFixture
+BoC.Tests.EventAggregator,DelegateReferenceFixture,0,8,0,0,8,107,8,0,0,-1,1,0,BoC.Tests.EventAggregator.SomeClassHandler,
+BoC.Tests.EventAggregator,SomeClassHandler,1,3,0,1,3,20,3,0,0,1,0,1,,BoC.Tests.EventAggregator.DelegateReferenceFixture
+BoC.Tests.EventAggregator,EventAggregatorFixture,1,3,0,0,3,24,3,0,0,0,1,0,BoC.Tests.EventAggregator.SomeEvent,
+BoC.Tests.EventAggregator,SomeEvent,0,0,1,0,0,4,0,0,1,-1,0,1,,BoC.Tests.EventAggregator.EventAggregatorFixture
+BoC.Tests.EventAggregator,EventSubscriptionFixture,0,9,0,0,9,107,9,0,0,-1,0,0,,
+BoC.Tests.EventAggregator,SubscriptionTokenFixture,1,5,0,0,5,31,5,0,0,0.6,0,0,,
+BoC.UnitOfWork,UnitOfWorkFixtture,0,3,0,0,3,37,3,0,0,-1,0,0,,
+BoC.Tests.Validation,DataAnnotationsModelValidatorFixture,0,3,0,0,3,30,3,0,0,-1,1,0,BoC.Tests.Validation.ValidatableObject,
+BoC.Tests.Validation,ValidatableObject,0,0,2,0,0,7,0,0,0,-1,1,1,BoC.Tests.Validation.DummyValidator,BoC.Tests.Validation.DataAnnotationsModelValidatorFixture
+BoC.Tests.Validation,DummyValidator,0,1,0,0,1,7,1,0,0,-1,0,1,,BoC.Tests.Validation.ValidatableObject
+BoC.Tests.Validation,RegisterDefaultModelValidatorFixture,0,2,0,0,2,31,2,0,0,-1,0,0,,
+BoC.Tests.Validation,RulesExceptionFixture,0,3,0,0,3,31,3,0,0,-1,0,0,,
+BoC.Tests.Validation,ErrorInfoFixture,0,2,0,0,2,20,2,0,0,-1,0,0,,

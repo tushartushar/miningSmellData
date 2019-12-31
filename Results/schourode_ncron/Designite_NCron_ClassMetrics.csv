@@ -1,24 +1,24 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NCron,ExceptionHelper,1,1,0,0,0,10,1,0,0,0,0,2,,NCron.Service.Bootstrap' NCron.Service.SchedulingService
-NCron,CronContext,0,1,2,0,1,21,1,0,0,-1,2,3,NCron.ICronJob' NCron.Logging.ILog,NCron.CronJob' NCron.ICronJob' NCron.Service.SchedulingService
-NCron,CronJob,0,4,2,0,2,41,4,1,1,-1,1,0,NCron.CronContext,
-NCron,ICronJob,0,2,0,0,0,12,2,1,0,-1,1,6,NCron.CronContext,NCron.CronContext' NCron.Logging.DefaultLogFactory' NCron.Logging.ILogFactory' NCron.Service.SchedulingService' NCron.Integration.log4net.LogFactory' NCron.Integration.NLog.NLogFactory
-NCron,ApplicationInfo,1,0,0,1,0,4,0,0,0,-1,0,2,,NCron.Logging.DefaultLogFactory' NCron.Service.Bootstrap
-NCron,SystemTime,1,0,1,1,0,14,0,0,0,-1,0,2,,NCron.Service.SchedulingService' Tests.NCron.CronJobTestsBase
+NCron,ExceptionHelper,1,1,0,0,0,10,1,0,0,0,1,2,NCron.ApplicationInfo,NCron.Service.SchedulingService' NCron.Service.Bootstrap
+NCron,CronContext,0,1,2,0,1,21,1,0,0,-1,2,3,NCron.ICronJob' NCron.Logging.ILog,NCron.ICronJob' NCron.CronJob' NCron.Service.SchedulingService
+NCron,CronJob,0,4,2,0,2,41,4,1,1,-1,3,0,NCron.CronContext' NCron.ICronJob' NCron.Logging.ILog,
+NCron,ICronJob,0,2,0,0,0,12,2,1,0,-1,1,9,NCron.CronContext,NCron.Service.SchedulingService' NCron.Logging.ILogFactory' NCron.Logging.DefaultLogFactory' NCron.CronContext' NCron.CronJob' NCron.Fluent.SchedulePart' NCron.Fluent.SchedulePart<TContainer>' NCron.Fluent.Generics.Extensions' NCron.Fluent.Reflection.Extensions
+NCron,ApplicationInfo,1,0,0,1,0,4,0,0,0,-1,0,3,,NCron.Service.Bootstrap' NCron.ExceptionHelper' NCron.Logging.DefaultLogFactory
+NCron,SystemTime,1,0,1,1,0,14,0,0,0,-1,0,1,,NCron.Service.SchedulingService
 NCron.Fluent,Extensions,0,1,0,0,1,13,1,0,0,-1,2,0,NCron.Fluent.SchedulePart' NCron.Service.ISchedulingService,
-NCron.Fluent,JobPart,2,2,0,0,1,18,2,0,0,0,2,6,NCron.Service.ISchedulingService' NCron.Service.ScheduledJob,NCron.Fluent.SchedulePart' NCron.Fluent.SchedulePart<TContainer>' NCron.Fluent.Generics.Extensions' NCron.Fluent.Reflection.Extensions' NCron.Integration.Autofac.AutofacIntegration' NCron.Integration.LightCore.LightCoreIntegration
-NCron.Fluent,SchedulePart,2,3,0,0,2,38,3,0,0,0,3,6,NCron.Service.ISchedulingService' NCron.Service.ScheduledJob' NCron.Fluent.JobPart,NCron.Fluent.Extensions' NCron.Fluent.Generics.Extensions' NCron.Fluent.Reflection.Extensions' NCron.Fluent.Crontab.Extensions' NCron.Integration.Autofac.AutofacIntegration' NCron.Integration.LightCore.LightCoreIntegration
-NCron.Fluent,SchedulePart<TContainer>,3,2,0,0,1,31,2,0,0,0,3,0,NCron.Service.ISchedulingService' NCron.Service.ScheduledJob' NCron.Fluent.JobPart,
-NCron.Fluent.Generics,Extensions,0,1,0,0,1,14,1,0,0,-1,2,0,NCron.Fluent.SchedulePart' NCron.Fluent.JobPart,
-NCron.Fluent.Reflection,Extensions,2,2,0,0,2,27,2,0,0,1,2,0,NCron.Fluent.SchedulePart' NCron.Fluent.JobPart,
-NCron.Fluent.Crontab,Extensions,0,5,0,0,5,51,5,0,0,-1,2,0,NCron.Service.ISchedulingService' NCron.Fluent.SchedulePart,
-NCron.Logging,EventLogAdapter,1,10,0,0,10,46,10,0,1,0.3,0,1,,NCron.Logging.DefaultLogFactory
-NCron.Logging,DefaultLogFactory,0,2,0,0,2,19,2,0,1,-1,3,0,NCron.ApplicationInfo' NCron.Logging.EventLogAdapter' NCron.ICronJob,
-NCron.Logging,ILog,0,8,0,0,0,47,8,3,0,-1,0,2,,NCron.CronContext' NCron.Service.SchedulingService
-NCron.Logging,ILogFactory,0,1,0,0,0,9,1,3,0,-1,1,1,NCron.ICronJob,NCron.Service.SchedulingService
-NCron.Service,ISchedulingService,0,4,1,0,0,28,4,1,0,-1,0,6,,NCron.Fluent.Extensions' NCron.Fluent.JobPart' NCron.Fluent.SchedulePart' NCron.Fluent.SchedulePart<TContainer>' NCron.Fluent.Crontab.Extensions' NCron.Service.ServiceProcessAdapter
+NCron.Fluent,JobPart,2,2,0,0,1,18,2,0,0,0,2,4,NCron.Service.ISchedulingService' NCron.Service.ScheduledJob,NCron.Fluent.Generics.Extensions' NCron.Fluent.Reflection.Extensions' NCron.Fluent.SchedulePart' NCron.Fluent.SchedulePart<TContainer>
+NCron.Fluent,SchedulePart,2,3,0,0,2,38,3,0,0,0,4,4,NCron.ICronJob' NCron.Fluent.JobPart' NCron.Fluent.SchedulePart<TContainer>' NCron.Service.ISchedulingService,NCron.Fluent.Generics.Extensions' NCron.Fluent.Reflection.Extensions' NCron.Fluent.Extensions' NCron.Fluent.Crontab.Extensions
+NCron.Fluent,SchedulePart<TContainer>,3,2,0,0,1,31,2,0,0,0,3,1,NCron.ICronJob' NCron.Fluent.JobPart' NCron.Service.ISchedulingService,NCron.Fluent.SchedulePart
+NCron.Fluent.Generics,Extensions,0,1,0,0,1,14,1,0,0,-1,3,0,NCron.ICronJob' NCron.Fluent.JobPart' NCron.Fluent.SchedulePart,
+NCron.Fluent.Reflection,Extensions,2,2,0,0,2,27,2,0,0,1,3,0,NCron.ICronJob' NCron.Fluent.JobPart' NCron.Fluent.SchedulePart,
+NCron.Fluent.Crontab,Extensions,0,5,0,0,5,51,5,0,0,-1,2,0,NCron.Fluent.SchedulePart' NCron.Service.ISchedulingService,
+NCron.Logging,EventLogAdapter,1,10,0,0,10,46,10,0,1,0.3,1,1,NCron.Logging.ILog,NCron.Logging.DefaultLogFactory
+NCron.Logging,DefaultLogFactory,0,2,0,0,2,19,2,0,1,-1,5,1,NCron.ICronJob' NCron.ApplicationInfo' NCron.Logging.EventLogAdapter' NCron.Logging.ILog' NCron.Logging.ILogFactory,NCron.Service.SchedulingService
+NCron.Logging,ILog,0,8,0,0,0,47,8,3,0,-1,0,5,,NCron.Logging.DefaultLogFactory' NCron.Logging.EventLogAdapter' NCron.CronJob' NCron.CronContext' NCron.Logging.ILogFactory
+NCron.Logging,ILogFactory,0,1,0,0,0,9,1,3,0,-1,2,3,NCron.ICronJob' NCron.Logging.ILog,NCron.Logging.DefaultLogFactory' NCron.Service.ISchedulingService' NCron.Service.SchedulingService
+NCron.Service,ISchedulingService,0,4,1,0,0,28,4,1,0,-1,2,8,NCron.Logging.ILogFactory' NCron.Service.ScheduledJob,NCron.Service.SchedulingService' NCron.Fluent.Extensions' NCron.Service.ServiceProcessAdapter' NCron.Fluent.JobPart' NCron.Service.Bootstrap' NCron.Fluent.SchedulePart' NCron.Fluent.SchedulePart<TContainer>' NCron.Fluent.Crontab.Extensions
 NCron.Service,ProjectInstaller,2,6,0,0,4,59,6,0,0,0,0,1,,NCron.Service.Bootstrap
-NCron.Service,ScheduledJob,1,3,2,0,1,26,3,0,0,0.67,0,4,,NCron.Fluent.JobPart' NCron.Fluent.SchedulePart' NCron.Fluent.SchedulePart<TContainer>' NCron.Service.SchedulingService
-NCron.Service,Bootstrap,0,5,0,0,1,122,6,0,0,-1,4,0,NCron.ApplicationInfo' NCron.ExceptionHelper' NCron.Service.SchedulingService' NCron.Service.ProjectInstaller,
-NCron.Service,SchedulingService,5,10,1,0,6,116,12,0,1,0.2,7,3,NCron.Logging.ILogFactory' NCron.Service.ScheduledJob' NCron.SystemTime' NCron.ExceptionHelper' NCron.CronContext' NCron.Logging.ILog' NCron.ICronJob,NCron.Service.Bootstrap' Tests.NCron.CronJobTestsBase' Tests.NCron.Given_a_scheduled_CronJob
-NCron.Service,ServiceProcessAdapter,1,5,0,0,1,26,5,0,0,0,1,0,NCron.Service.ISchedulingService,
+NCron.Service,ScheduledJob,1,3,2,0,1,26,3,0,0,0.67,0,3,,NCron.Fluent.JobPart' NCron.Service.SchedulingService' NCron.Service.ISchedulingService
+NCron.Service,Bootstrap,0,5,0,0,1,122,17,0,0,-1,6,0,NCron.ExceptionHelper' NCron.ApplicationInfo' NCron.Service.ISchedulingService' NCron.Service.ProjectInstaller' NCron.Service.SchedulingService' NCron.Service.ServiceProcessAdapter,
+NCron.Service,SchedulingService,5,10,1,0,6,116,12,0,1,0.2,8,1,NCron.ExceptionHelper' NCron.CronContext' NCron.ICronJob' NCron.SystemTime' NCron.Logging.DefaultLogFactory' NCron.Logging.ILogFactory' NCron.Service.ISchedulingService' NCron.Service.ScheduledJob,NCron.Service.Bootstrap
+NCron.Service,ServiceProcessAdapter,1,5,0,0,1,26,5,0,0,0,1,1,NCron.Service.ISchedulingService,NCron.Service.Bootstrap

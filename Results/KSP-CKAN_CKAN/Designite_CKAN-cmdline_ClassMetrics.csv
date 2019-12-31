@@ -1,54 +1,72 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-CKAN.CmdLine,Available,0,2,1,0,2,20,3,0,1,-1,6,1,CKAN.IUser' CKAN.IRegistryQuerier' CKAN.RegistryManager' CKAN.KSP' CKAN.CkanModule' CKAN.CmdLine.Exit,CKAN.CmdLine.MainClass
-CKAN.CmdLine,Compare,1,2,0,0,2,45,4,0,0,0,4,1,CKAN.IUser' CKAN.CmdLine.CompareOptions' CKAN.Version' CKAN.CmdLine.Exit,CKAN.CmdLine.MainClass
-CKAN.CmdLine,ICommand,0,1,0,0,0,4,1,8,0,-1,1,0,CKAN.KSP,
-CKAN.CmdLine,Install,1,3,1,0,2,211,10,0,1,0.67,20,1,CKAN.IUser' CKAN.CmdLine.InstallOptions' CKAN.RelationshipResolverOptions' CKAN.ModuleInstaller' CKAN.CmdLine.Exit' CKAN.Net' CKAN.CkanModule' CKAN.Kraken' CKAN.ModuleNotFoundKraken' CKAN.BadMetadataKraken' CKAN.TooManyModsProvideKraken' CKAN.FileExistsKraken' CKAN.Meta' CKAN.VersionFormat' CKAN.InconsistentKraken' CKAN.MissingCertificateKraken' CKAN.DirectoryNotFoundKraken' CKAN.KSP' CKAN.RegistryManager' CKAN.Registry,CKAN.CmdLine.MainClass
-CKAN.CmdLine,ISubCommand,0,1,0,0,0,4,1,4,0,-1,1,0,CKAN.CmdLine.SubCommandOptions,
-CKAN.CmdLine,KSP,0,7,2,0,2,293,23,0,1,-1,15,1,CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.Exit' CKAN.IUser' CKAN.CmdLine.MainClass' CKAN.RegistryManager' CKAN.KSP' CKAN.KSPManager' CKAN.Versioning.KspVersion' CKAN.CmdLine.AddOptions' CKAN.NotKSPDirKraken' CKAN.CmdLine.RenameOptions' CKAN.CmdLine.ForgetOptions' CKAN.CmdLine.DefaultOptions' CKAN.IWin32Registry,CKAN.CmdLine.MainClass
-CKAN.CmdLine,KSPSubOptions,0,1,5,0,1,52,2,0,1,-1,0,0,,
+CKAN.CmdLine,AuthToken,4,5,0,0,2,107,11,0,1,0.4,9,1,CKAN.CmdLine.AuthTokenSubOptions' CKAN.CmdLine.AddAuthTokenOptions' CKAN.CmdLine.RemoveAuthTokenOptions' CKAN.CmdLine.ISubCommand' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,AuthTokenSubOptions,0,1,3,0,1,38,4,0,1,-1,4,2,CKAN.CmdLine.AddAuthTokenOptions' CKAN.CmdLine.RemoveAuthTokenOptions' CKAN.CmdLine.VerbCommandOptions' CKAN.CmdLine.CommonOptions,CKAN.CmdLine.Actions' CKAN.CmdLine.AuthToken
+CKAN.CmdLine,AddAuthTokenOptions,0,0,2,0,0,5,0,0,1,-1,1,2,CKAN.CmdLine.CommonOptions,CKAN.CmdLine.AuthToken' CKAN.CmdLine.AuthTokenSubOptions
+CKAN.CmdLine,RemoveAuthTokenOptions,0,0,1,0,0,4,0,0,1,-1,1,2,CKAN.CmdLine.CommonOptions,CKAN.CmdLine.AuthToken' CKAN.CmdLine.AuthTokenSubOptions
+CKAN.CmdLine,Available,0,2,1,0,2,31,5,0,1,-1,3,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.AvailableOptions' CKAN.CmdLine.Exit,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Cache,3,9,0,0,2,205,14,0,1,0.22,10,1,CKAN.CmdLine.CacheSubOptions' CKAN.CmdLine.SetOptions' CKAN.CmdLine.SetLimitOptions' CKAN.CmdLine.ISubCommand' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.VerbCommandOptions' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,CacheSubOptions,0,1,6,0,1,50,4,0,1,-1,0,1,,CKAN.CmdLine.Cache
+CKAN.CmdLine,SetOptions,0,0,1,0,0,5,0,0,1,-1,0,1,,CKAN.CmdLine.Cache
+CKAN.CmdLine,SetLimitOptions,0,0,1,0,0,5,0,0,1,-1,0,1,,CKAN.CmdLine.Cache
+CKAN.CmdLine,Compare,1,2,0,0,2,49,7,0,0,1,2,1,CKAN.CmdLine.Exit' CKAN.CmdLine.CompareOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,ICommand,0,1,0,0,0,4,1,10,0,-1,0,10,,CKAN.CmdLine.Available' CKAN.CmdLine.Import' CKAN.CmdLine.Remove' CKAN.CmdLine.Install' CKAN.CmdLine.Upgrade' CKAN.CmdLine.List' CKAN.CmdLine.Show' CKAN.CmdLine.Replace' CKAN.CmdLine.Search' CKAN.CmdLine.Update
+CKAN.CmdLine,Import,3,4,0,0,2,89,10,0,1,0,3,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.Exit' CKAN.CmdLine.ImportOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Install,2,2,1,0,2,262,10,0,1,0,5,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.Search' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.InstallOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,ISubCommand,0,1,0,0,0,4,1,7,0,-1,2,7,CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions,CKAN.CmdLine.Repair' CKAN.CmdLine.AuthToken' CKAN.CmdLine.Mark' CKAN.CmdLine.Cache' CKAN.CmdLine.Repo' CKAN.CmdLine.Action.Compat' CKAN.CmdLine.KSP
+CKAN.CmdLine,KSP,1,9,2,0,2,563,37,0,1,0.22,15,1,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.KSPSubOptions' CKAN.CmdLine.AddOptions' CKAN.CmdLine.CloneOptions' CKAN.CmdLine.RenameOptions' CKAN.CmdLine.ForgetOptions' CKAN.CmdLine.DefaultOptions' CKAN.CmdLine.FakeOptions' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.NoGameInstanceKraken' CKAN.CmdLine.VerbCommandOptions' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,KSPSubOptions,0,1,7,0,1,63,7,0,1,-1,0,1,,CKAN.CmdLine.KSP
 CKAN.CmdLine,AddOptions,0,0,4,0,0,9,0,0,1,-1,0,2,,CKAN.CmdLine.KSP' CKAN.CmdLine.Repo
+CKAN.CmdLine,CloneOptions,0,0,3,0,0,6,0,0,1,-1,0,1,,CKAN.CmdLine.KSP
 CKAN.CmdLine,RenameOptions,0,0,2,0,0,5,0,0,1,-1,0,1,,CKAN.CmdLine.KSP
 CKAN.CmdLine,ForgetOptions,0,0,2,0,0,7,0,0,1,-1,0,2,,CKAN.CmdLine.KSP' CKAN.CmdLine.Repo
 CKAN.CmdLine,DefaultOptions,0,0,2,0,0,7,0,0,1,-1,0,2,,CKAN.CmdLine.KSP' CKAN.CmdLine.Repo
-CKAN.CmdLine,List,1,3,1,0,2,103,11,0,1,0.67,12,1,CKAN.IUser' CKAN.CmdLine.ListOptions' CKAN.IRegistryQuerier' CKAN.Version' CKAN.CkanModule' CKAN.RegistryManager' CKAN.KSP' CKAN.Exporters.Exporter' CKAN.CmdLine.Exit' CKAN.ProvidesVersion' CKAN.DllVersion' CKAN.Types.ExportFileType,CKAN.CmdLine.MainClass
-CKAN.CmdLine,Remove,1,2,1,0,2,65,7,0,1,1,8,1,CKAN.IUser' CKAN.CmdLine.RemoveOptions' CKAN.IRegistryQuerier' CKAN.ModuleInstaller' CKAN.RegistryManager' CKAN.ModNotInstalledKraken' CKAN.CmdLine.Exit' CKAN.KSP,CKAN.CmdLine.MainClass
-CKAN.CmdLine,Repair,0,3,1,0,2,76,3,0,1,-1,9,1,CKAN.CmdLine.CommonOptions' CKAN.KSPManager' CKAN.CmdLine.Exit' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.MainClass' CKAN.IUser' CKAN.RegistryManager' CKAN.Registry' CKAN.KSP,CKAN.CmdLine.MainClass
-CKAN.CmdLine,RepairSubOptions,0,1,1,0,1,30,2,0,1,-1,0,0,,
-CKAN.CmdLine,Repo,1,8,2,0,2,270,26,0,1,0.25,12,1,CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.Exit' CKAN.IUser' CKAN.CmdLine.MainClass' CKAN.RegistryManager' CKAN.Repository' CKAN.CmdLine.RepositoryList' CKAN.Registry' CKAN.CmdLine.AddOptions' CKAN.CmdLine.ForgetOptions' CKAN.CmdLine.DefaultOptions,CKAN.CmdLine.MainClass
-CKAN.CmdLine,RepoSubOptions,0,1,5,0,1,49,2,0,1,-1,0,0,,
-CKAN.CmdLine,AvailableOptions,0,0,0,0,0,1,0,0,1,-1,0,0,,
-CKAN.CmdLine,ListOptions,0,0,2,0,0,7,0,0,1,-1,0,1,,CKAN.CmdLine.List
-CKAN.CmdLine,RepositoryList,1,0,0,1,0,4,0,0,0,-1,1,1,CKAN.Repository,CKAN.CmdLine.Repo
-CKAN.CmdLine,Search,0,3,1,0,3,55,6,0,1,-1,7,2,CKAN.IUser' CKAN.CmdLine.SearchOptions' CKAN.CmdLine.Exit' CKAN.CkanModule' CKAN.KSP' CKAN.Registry' CKAN.RegistryManager,CKAN.CmdLine.Show' CKAN.CmdLine.MainClass
-CKAN.CmdLine,Show,0,5,1,0,4,188,31,0,1,-1,12,1,CKAN.IUser' CKAN.CmdLine.ShowOptions' CKAN.Registry' CKAN.InstalledModule' CKAN.CkanModule' CKAN.CmdLine.Search' CKAN.CmdLine.Exit' CKAN.RegistryManager' CKAN.KSP' CKAN.ResourcesDescriptor' CKAN.NetFileCache' CKAN.RelationshipDescriptor,CKAN.CmdLine.MainClass
-CKAN.CmdLine,Update,0,5,1,0,2,114,15,0,1,-1,9,1,CKAN.IUser' CKAN.CmdLine.UpdateOptions' CKAN.Registry' CKAN.RegistryManager' CKAN.KSP' CKAN.MissingCertificateKraken' CKAN.CmdLine.Exit' CKAN.CkanModule' CKAN.Repo,CKAN.CmdLine.MainClass
-CKAN.CmdLine,Upgrade,1,3,1,0,2,118,11,0,1,0.67,15,1,CKAN.IUser' CKAN.CmdLine.UpgradeOptions' CKAN.Version' CKAN.Registry' CKAN.CkanModule' CKAN.CmdLine.Exit' CKAN.AutoUpdate' CKAN.Meta' CKAN.VersionFormat' CKAN.RegistryManager' CKAN.KSP' CKAN.ModuleInstaller' CKAN.ModuleNotFoundKraken' CKAN.ProvidesVersion' CKAN.DllVersion,CKAN.CmdLine.MainClass
-CKAN.CmdLine,ConsoleUser,2,6,1,0,1,196,30,0,1,0.67,0,1,,CKAN.CmdLine.MainClass
-CKAN.CmdLine,Exit,3,0,0,3,0,6,0,0,0,-1,0,16,,CKAN.CmdLine.Available' CKAN.CmdLine.Compare' CKAN.CmdLine.Install' CKAN.CmdLine.KSP' CKAN.CmdLine.List' CKAN.CmdLine.Remove' CKAN.CmdLine.Repair' CKAN.CmdLine.Repo' CKAN.CmdLine.Search' CKAN.CmdLine.Show' CKAN.CmdLine.Update' CKAN.CmdLine.Upgrade' CKAN.CmdLine.MainClass' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.InstanceSpecificOptions' CKAN.CmdLine.Action.CompatSubCommand
-CKAN.CmdLine,MainClass,1,10,0,0,3,210,17,0,0,0,28,4,CKAN.CmdLine.Repair' CKAN.CmdLine.KSP' CKAN.CmdLine.Action.CompatSubCommand' CKAN.CmdLine.Repo' CKAN.CmdLine.Options' CKAN.CmdLine.CommonOptions' CKAN.IUser' CKAN.KSPManager' CKAN.Logging' CKAN.CmdLine.Exit' CKAN.CmdLine.ConsoleUser' CKAN.Meta' CKAN.VersionFormat' CKAN.KSP' CKAN.CmdLine.Update' CKAN.CmdLine.Available' CKAN.CmdLine.Install' CKAN.CmdLine.List' CKAN.CmdLine.Show' CKAN.CmdLine.Search' CKAN.CmdLine.Remove' CKAN.CmdLine.Upgrade' CKAN.CmdLine.Compare' CKAN.RegistryManager' CKAN.GUI' CKAN.CmdLine.GuiOptions' CKAN.ConsoleUI.ConsoleUI' CKAN.InconsistentKraken,CKAN.CmdLine.KSP' CKAN.CmdLine.Repair' CKAN.CmdLine.Repo' CKAN.CmdLine.Action.CompatSubCommand
-CKAN.CmdLine,NoGameInstanceKraken,0,1,0,0,1,4,1,0,1,-1,0,0,,
-CKAN.CmdLine,CmdLineUtil,0,2,0,0,1,13,3,0,0,-1,1,1,CKAN.Platform,CKAN.CmdLine.CommonOptions
-CKAN.CmdLine,Options,0,1,2,0,1,24,1,0,0,-1,0,1,,CKAN.CmdLine.MainClass
-CKAN.CmdLine,Actions,0,1,18,0,1,87,2,0,1,-1,0,0,,
-CKAN.CmdLine,VerbCommandOptions,0,1,0,0,0,15,3,5,0,-1,0,0,,
-CKAN.CmdLine,CommonOptions,1,3,6,0,2,89,11,10,0,0.67,6,6,CKAN.Platform' CKAN.CmdLine.CmdLineUtil' CKAN.IUser' CKAN.CmdLine.Exit' CKAN.Net' CKAN.KSPManager,CKAN.CmdLine.KSP' CKAN.CmdLine.Repair' CKAN.CmdLine.Repo' CKAN.CmdLine.MainClass' CKAN.CmdLine.InstanceSpecificOptions' CKAN.CmdLine.Action.CompatSubCommand
-CKAN.CmdLine,InstanceSpecificOptions,0,1,2,0,1,39,4,17,1,-1,4,0,CKAN.CmdLine.CommonOptions' CKAN.CmdLine.Exit' CKAN.IUser' CKAN.KSPManager,
-CKAN.CmdLine,SubCommandOptions,0,2,1,0,2,10,2,0,1,-1,0,5,,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.KSP' CKAN.CmdLine.Repair' CKAN.CmdLine.Repo' CKAN.CmdLine.Action.CompatSubCommand
-CKAN.CmdLine,InstallOptions,0,0,5,0,0,13,0,0,2,-1,0,1,,CKAN.CmdLine.Install
-CKAN.CmdLine,UpgradeOptions,0,0,6,0,0,15,0,0,2,-1,0,1,,CKAN.CmdLine.Upgrade
-CKAN.CmdLine,ScanOptions,0,0,0,0,0,1,0,0,2,-1,0,0,,
-CKAN.CmdLine,VersionOptions,0,0,0,0,0,1,0,0,1,-1,0,0,,
-CKAN.CmdLine,CleanOptions,0,0,0,0,0,1,0,0,2,-1,0,0,,
-CKAN.CmdLine,GuiOptions,0,0,1,0,0,5,0,0,2,-1,0,1,,CKAN.CmdLine.MainClass
-CKAN.CmdLine,ConsoleUIOptions,0,0,0,0,0,1,0,0,1,-1,0,0,,
-CKAN.CmdLine,UpdateOptions,0,0,3,0,0,10,0,0,2,-1,0,1,,CKAN.CmdLine.Update
-CKAN.CmdLine,RemoveOptions,0,0,3,0,0,9,0,0,2,-1,0,1,,CKAN.CmdLine.Remove
-CKAN.CmdLine,ShowOptions,0,0,1,0,0,4,0,0,2,-1,0,1,,CKAN.CmdLine.Show
-CKAN.CmdLine,SearchOptions,0,0,1,0,0,4,0,0,2,-1,0,1,,CKAN.CmdLine.Search
-CKAN.CmdLine,CompareOptions,0,0,2,0,0,5,0,0,1,-1,0,1,,CKAN.CmdLine.Compare
-CKAN.CmdLine,ProgressReporter,0,1,0,0,1,23,2,0,0,-1,1,0,CKAN.IUser,
-CKAN.CmdLine.Action,CompatSubCommand,2,2,0,0,2,171,2,0,1,1,11,1,CKAN.KSPManager' CKAN.IUser' CKAN.CmdLine.CommonOptions' CKAN.KSP' CKAN.CmdLine.Action.CompatAddOptions' CKAN.Versioning.KspVersion' CKAN.CmdLine.Action.CompatForgetOptions' CKAN.CmdLine.Exit' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.MainClass' CKAN.RegistryManager,CKAN.CmdLine.MainClass
-CKAN.CmdLine.Action,CompatOptions,0,1,3,0,1,39,2,0,1,-1,0,0,,
-CKAN.CmdLine.Action,CompatListOptions,0,0,0,0,0,1,0,0,2,-1,0,0,,
-CKAN.CmdLine.Action,CompatAddOptions,0,0,1,0,0,4,0,0,2,-1,0,1,,CKAN.CmdLine.Action.CompatSubCommand
-CKAN.CmdLine.Action,CompatForgetOptions,0,0,1,0,0,4,0,0,2,-1,0,1,,CKAN.CmdLine.Action.CompatSubCommand
+CKAN.CmdLine,FakeOptions,0,0,6,0,0,12,0,0,1,-1,0,1,,CKAN.CmdLine.KSP
+CKAN.CmdLine,List,1,3,1,0,2,132,24,0,1,0.67,3,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.ListOptions' CKAN.CmdLine.Exit,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Mark,1,3,2,0,2,94,9,0,1,0.67,9,1,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.MarkSubOptions' CKAN.CmdLine.MarkAutoOptions' CKAN.CmdLine.Search' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,MarkSubOptions,0,1,2,0,1,33,3,0,1,-1,2,1,CKAN.CmdLine.MarkAutoOptions' CKAN.CmdLine.VerbCommandOptions,CKAN.CmdLine.Mark
+CKAN.CmdLine,MarkAutoOptions,0,0,1,0,0,5,0,0,1,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Mark' CKAN.CmdLine.MarkSubOptions
+CKAN.CmdLine,Remove,2,2,1,0,2,79,7,0,1,0,4,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.Search' CKAN.CmdLine.Exit' CKAN.CmdLine.RemoveOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Prompt,1,2,0,0,2,35,6,0,0,1,3,1,CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.CommonOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Repair,0,3,1,0,2,79,3,0,1,-1,9,1,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.RepairSubOptions' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.VerbCommandOptions' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.InstanceSpecificOptions' CKAN.CmdLine.SubCommandOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,RepairSubOptions,0,1,1,0,1,30,2,0,1,-1,0,1,,CKAN.CmdLine.Repair
+CKAN.CmdLine,Replace,2,2,1,0,2,150,15,0,1,0,4,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.ReplaceOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Repo,1,8,2,0,2,269,25,0,1,0.25,15,1,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.AddOptions' CKAN.CmdLine.ForgetOptions' CKAN.CmdLine.DefaultOptions' CKAN.CmdLine.RepoSubOptions' CKAN.CmdLine.AvailableOptions' CKAN.CmdLine.ListOptions' CKAN.CmdLine.RepositoryList' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.VerbCommandOptions' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.InstanceSpecificOptions' CKAN.CmdLine.SubCommandOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,RepoSubOptions,0,1,5,0,1,49,4,0,1,-1,0,1,,CKAN.CmdLine.Repo
+CKAN.CmdLine,AvailableOptions,0,0,1,0,0,5,0,0,1,-1,0,3,,CKAN.CmdLine.Repo' CKAN.CmdLine.Actions' CKAN.CmdLine.Available
+CKAN.CmdLine,ListOptions,0,0,2,0,0,7,0,0,1,-1,0,3,,CKAN.CmdLine.Repo' CKAN.CmdLine.List' CKAN.CmdLine.Actions
+CKAN.CmdLine,RepositoryList,1,0,0,1,0,4,0,0,0,-1,0,1,,CKAN.CmdLine.Repo
+CKAN.CmdLine,Search,0,5,1,0,4,183,20,0,1,-1,3,6,CKAN.CmdLine.ICommand' CKAN.CmdLine.Exit' CKAN.CmdLine.SearchOptions,CKAN.CmdLine.Show' CKAN.CmdLine.MainClass' CKAN.CmdLine.Mark' CKAN.CmdLine.Install' CKAN.CmdLine.Upgrade' CKAN.CmdLine.Remove
+CKAN.CmdLine,Show,0,5,1,0,4,185,31,0,1,-1,4,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.Search' CKAN.CmdLine.Exit' CKAN.CmdLine.ShowOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Update,1,5,1,0,2,130,15,0,1,0,3,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.Exit' CKAN.CmdLine.UpdateOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Upgrade,2,2,1,0,2,130,13,0,1,0,5,1,CKAN.CmdLine.ICommand' CKAN.CmdLine.Search' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.UpgradeOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,ConsoleUser,2,6,1,0,6,241,32,0,1,0.83,0,8,,CKAN.CmdLine.MainClass' CKAN.CmdLine.AuthToken' CKAN.CmdLine.Mark' CKAN.CmdLine.Repair' CKAN.CmdLine.Repo' CKAN.CmdLine.KSP' CKAN.CmdLine.Cache' CKAN.CmdLine.Action.Compat
+CKAN.CmdLine,Exit,3,0,0,3,0,6,0,0,0,-1,0,22,,CKAN.CmdLine.Available' CKAN.CmdLine.List' CKAN.CmdLine.Compare' CKAN.CmdLine.Import' CKAN.CmdLine.Remove' CKAN.CmdLine.Prompt' CKAN.CmdLine.Replace' CKAN.CmdLine.Search' CKAN.CmdLine.Update' CKAN.CmdLine.Show' CKAN.CmdLine.Upgrade' CKAN.CmdLine.Install' CKAN.CmdLine.MainClass' CKAN.CmdLine.Repair' CKAN.CmdLine.Action.Compat' CKAN.CmdLine.Mark' CKAN.CmdLine.Cache' CKAN.CmdLine.Repo' CKAN.CmdLine.KSP' CKAN.CmdLine.AuthToken' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.InstanceSpecificOptions
+CKAN.CmdLine,MainClass,1,12,0,0,4,263,40,0,0,0.17,27,11,CKAN.CmdLine.AuthToken' CKAN.CmdLine.Available' CKAN.CmdLine.Cache' CKAN.CmdLine.Compare' CKAN.CmdLine.Import' CKAN.CmdLine.Install' CKAN.CmdLine.KSP' CKAN.CmdLine.List' CKAN.CmdLine.Mark' CKAN.CmdLine.Remove' CKAN.CmdLine.Prompt' CKAN.CmdLine.Repair' CKAN.CmdLine.Replace' CKAN.CmdLine.Repo' CKAN.CmdLine.Search' CKAN.CmdLine.Show' CKAN.CmdLine.Update' CKAN.CmdLine.Upgrade' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.NoGameInstanceKraken' CKAN.CmdLine.Options' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.ReplaceOptions' CKAN.CmdLine.GuiOptions' CKAN.CmdLine.Action.Compat,CKAN.CmdLine.AuthToken' CKAN.CmdLine.Cache' CKAN.CmdLine.KSP' CKAN.CmdLine.Repair' CKAN.CmdLine.Install' CKAN.CmdLine.Upgrade' CKAN.CmdLine.Replace' CKAN.CmdLine.Action.Compat' CKAN.CmdLine.Mark' CKAN.CmdLine.Repo' CKAN.CmdLine.Prompt
+CKAN.CmdLine,NoGameInstanceKraken,0,1,0,0,1,4,1,0,1,-1,0,2,,CKAN.CmdLine.KSP' CKAN.CmdLine.MainClass
+CKAN.CmdLine,CmdLineUtil,0,2,0,0,1,13,3,0,0,-1,0,1,,CKAN.CmdLine.CommonOptions
+CKAN.CmdLine,Options,0,1,2,0,1,24,1,0,0,-1,1,1,CKAN.CmdLine.Actions,CKAN.CmdLine.MainClass
+CKAN.CmdLine,Actions,0,1,24,0,1,102,7,0,1,-1,20,1,CKAN.CmdLine.AuthTokenSubOptions' CKAN.CmdLine.AvailableOptions' CKAN.CmdLine.ListOptions' CKAN.CmdLine.VerbCommandOptions' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.InstallOptions' CKAN.CmdLine.UpgradeOptions' CKAN.CmdLine.ReplaceOptions' CKAN.CmdLine.ScanOptions' CKAN.CmdLine.VersionOptions' CKAN.CmdLine.CleanOptions' CKAN.CmdLine.GuiOptions' CKAN.CmdLine.ConsoleUIOptions' CKAN.CmdLine.UpdateOptions' CKAN.CmdLine.RemoveOptions' CKAN.CmdLine.ImportOptions' CKAN.CmdLine.ShowOptions' CKAN.CmdLine.SearchOptions' CKAN.CmdLine.CompareOptions,CKAN.CmdLine.Options
+CKAN.CmdLine,VerbCommandOptions,0,1,0,0,0,15,3,8,0,-1,0,8,,CKAN.CmdLine.AuthTokenSubOptions' CKAN.CmdLine.MarkSubOptions' CKAN.CmdLine.Repo' CKAN.CmdLine.Action.Compat' CKAN.CmdLine.Cache' CKAN.CmdLine.Actions' CKAN.CmdLine.KSP' CKAN.CmdLine.Repair
+CKAN.CmdLine,CommonOptions,1,4,6,0,3,106,14,15,0,0.75,2,18,CKAN.CmdLine.Exit' CKAN.CmdLine.CmdLineUtil,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.Prompt' CKAN.CmdLine.Repair' CKAN.CmdLine.Mark' CKAN.CmdLine.Repo' CKAN.CmdLine.MainClass' CKAN.CmdLine.Action.Compat' CKAN.CmdLine.AuthToken' CKAN.CmdLine.AuthTokenSubOptions' CKAN.CmdLine.AddAuthTokenOptions' CKAN.CmdLine.RemoveAuthTokenOptions' CKAN.CmdLine.Actions' CKAN.CmdLine.InstanceSpecificOptions' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.VersionOptions' CKAN.CmdLine.CompareOptions' CKAN.CmdLine.KSP' CKAN.CmdLine.Cache
+CKAN.CmdLine,InstanceSpecificOptions,0,1,2,0,1,44,5,21,1,-1,2,16,CKAN.CmdLine.Exit' CKAN.CmdLine.CommonOptions,CKAN.CmdLine.MarkAutoOptions' CKAN.CmdLine.Repair' CKAN.CmdLine.Repo' CKAN.CmdLine.Action.Compat' CKAN.CmdLine.InstallOptions' CKAN.CmdLine.UpgradeOptions' CKAN.CmdLine.ReplaceOptions' CKAN.CmdLine.ScanOptions' CKAN.CmdLine.CleanOptions' CKAN.CmdLine.GuiOptions' CKAN.CmdLine.ConsoleUIOptions' CKAN.CmdLine.UpdateOptions' CKAN.CmdLine.RemoveOptions' CKAN.CmdLine.ImportOptions' CKAN.CmdLine.ShowOptions' CKAN.CmdLine.SearchOptions
+CKAN.CmdLine,SubCommandOptions,0,2,1,0,2,10,2,0,1,-1,1,10,CKAN.CmdLine.CommonOptions,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.Repair' CKAN.CmdLine.AuthToken' CKAN.CmdLine.Action.Compat' CKAN.CmdLine.Mark' CKAN.CmdLine.Cache' CKAN.CmdLine.KSP' CKAN.CmdLine.Repo' CKAN.CmdLine.Actions' CKAN.CmdLine.MainClass
+CKAN.CmdLine,InstallOptions,0,0,6,0,0,15,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions' CKAN.CmdLine.Install
+CKAN.CmdLine,UpgradeOptions,0,0,6,0,0,15,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Upgrade' CKAN.CmdLine.Actions
+CKAN.CmdLine,ReplaceOptions,0,0,7,0,0,18,0,0,2,-1,1,3,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.MainClass' CKAN.CmdLine.Actions' CKAN.CmdLine.Replace
+CKAN.CmdLine,ScanOptions,0,0,0,0,0,3,0,0,2,-1,1,1,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions
+CKAN.CmdLine,VersionOptions,0,0,0,0,0,1,0,0,1,-1,1,1,CKAN.CmdLine.CommonOptions,CKAN.CmdLine.Actions
+CKAN.CmdLine,CleanOptions,0,0,0,0,0,1,0,0,2,-1,1,1,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions
+CKAN.CmdLine,GuiOptions,0,0,1,0,0,5,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.MainClass' CKAN.CmdLine.Actions
+CKAN.CmdLine,ConsoleUIOptions,0,0,0,0,0,1,0,0,2,-1,1,1,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions
+CKAN.CmdLine,UpdateOptions,0,0,3,0,0,10,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Update' CKAN.CmdLine.Actions
+CKAN.CmdLine,RemoveOptions,0,0,3,0,0,9,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions' CKAN.CmdLine.Remove
+CKAN.CmdLine,ImportOptions,0,0,1,0,0,5,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions' CKAN.CmdLine.Import
+CKAN.CmdLine,ShowOptions,0,0,1,0,0,4,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions' CKAN.CmdLine.Show
+CKAN.CmdLine,SearchOptions,0,0,4,0,0,11,0,0,2,-1,1,2,CKAN.CmdLine.InstanceSpecificOptions,CKAN.CmdLine.Actions' CKAN.CmdLine.Search
+CKAN.CmdLine,CompareOptions,0,0,3,0,0,7,0,0,1,-1,1,2,CKAN.CmdLine.CommonOptions,CKAN.CmdLine.Actions' CKAN.CmdLine.Compare
+CKAN.CmdLine,ProgressReporter,0,1,0,0,1,23,2,0,0,-1,0,0,,
+CKAN.CmdLine.Action,Compat,2,2,0,0,2,171,2,0,1,1,12,1,CKAN.CmdLine.ISubCommand' CKAN.CmdLine.ConsoleUser' CKAN.CmdLine.Exit' CKAN.CmdLine.MainClass' CKAN.CmdLine.VerbCommandOptions' CKAN.CmdLine.CommonOptions' CKAN.CmdLine.InstanceSpecificOptions' CKAN.CmdLine.SubCommandOptions' CKAN.CmdLine.Action.CompatOptions' CKAN.CmdLine.Action.CompatListOptions' CKAN.CmdLine.Action.CompatAddOptions' CKAN.CmdLine.Action.CompatForgetOptions,CKAN.CmdLine.MainClass
+CKAN.CmdLine.Action,CompatOptions,0,1,3,0,1,39,3,0,1,-1,0,1,,CKAN.CmdLine.Action.Compat
+CKAN.CmdLine.Action,CompatListOptions,0,0,0,0,0,1,0,0,2,-1,0,1,,CKAN.CmdLine.Action.Compat
+CKAN.CmdLine.Action,CompatAddOptions,0,0,1,0,0,4,0,0,2,-1,0,1,,CKAN.CmdLine.Action.Compat
+CKAN.CmdLine.Action,CompatForgetOptions,0,0,1,0,0,4,0,0,2,-1,0,1,,CKAN.CmdLine.Action.Compat

@@ -1,0 +1,13 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Orleans.Hosting,ClientBuilderExtensions,0,2,0,0,2,20,2,0,0,-1,2,0,Orleans.Hosting.ClusterClientSqsStreamConfigurator' Orleans.Configuration.SqsOptions,
+Orleans.Hosting,SiloBuilderExtensions,0,4,0,0,4,43,4,0,0,-1,2,0,Orleans.Hosting.SiloSqsStreamConfigurator' Orleans.Configuration.SqsOptions,
+Orleans.Hosting,SiloSqsStreamConfigurator,0,4,0,0,4,33,4,0,1,-1,2,1,OrleansAWSUtils.Streams.SQSAdapterFactory' Orleans.Configuration.SqsOptions,Orleans.Hosting.SiloBuilderExtensions
+Orleans.Hosting,ClusterClientSqsStreamConfigurator,0,3,0,0,3,28,3,0,0,-1,2,1,OrleansAWSUtils.Streams.SQSAdapterFactory' Orleans.Configuration.SqsOptions,Orleans.Hosting.ClientBuilderExtensions
+OrleansAWSUtils.Storage,SQSStorage,10,10,1,1,6,203,27,0,0,0,2,3,Orleans.Streaming.SQS.AWSUtils' Orleans.AWSUtils.Tests.AWSUtils,OrleansAWSUtils.Streams.SQSStreamProviderUtils' OrleansAWSUtils.Streams.SQSAdapter' OrleansAWSUtils.Streams.SQSAdapterReceiver
+OrleansAWSUtils.Streams,SQSAdapter,6,3,3,0,3,44,7,0,0,0,3,1,OrleansAWSUtils.Storage.SQSStorage' OrleansAWSUtils.Streams.SQSAdapterReceiver' OrleansAWSUtils.Streams.SQSBatchContainer,OrleansAWSUtils.Streams.SQSAdapterFactory
+OrleansAWSUtils.Streams,SQSAdapterFactory,7,7,1,0,7,77,8,0,0,0.57,2,2,OrleansAWSUtils.Streams.SQSAdapter' Orleans.Configuration.SqsOptions,Orleans.Hosting.SiloSqsStreamConfigurator' Orleans.Hosting.ClusterClientSqsStreamConfigurator
+OrleansAWSUtils.Streams,SQSAdapterReceiver,5,6,1,0,5,91,15,0,0,0.33,2,1,OrleansAWSUtils.Storage.SQSStorage' OrleansAWSUtils.Streams.SQSBatchContainer,OrleansAWSUtils.Streams.SQSAdapter
+OrleansAWSUtils.Streams,SQSBatchContainer,4,8,3,0,4,90,12,0,0,0.62,0,2,,OrleansAWSUtils.Streams.SQSAdapter' OrleansAWSUtils.Streams.SQSAdapterReceiver
+OrleansAWSUtils.Streams,SQSStreamProviderUtils,0,1,0,0,1,23,3,0,0,-1,1,0,OrleansAWSUtils.Storage.SQSStorage,
+Orleans.Configuration,SqsOptions,0,0,1,0,0,5,0,0,0,-1,0,5,,Orleans.Hosting.ClientBuilderExtensions' Orleans.Hosting.SiloBuilderExtensions' OrleansAWSUtils.Streams.SQSAdapterFactory' Orleans.Hosting.SiloSqsStreamConfigurator' Orleans.Hosting.ClusterClientSqsStreamConfigurator
+Orleans.Streaming.SQS,AWSUtils,0,3,0,0,2,67,20,0,0,-1,0,1,,OrleansAWSUtils.Storage.SQSStorage

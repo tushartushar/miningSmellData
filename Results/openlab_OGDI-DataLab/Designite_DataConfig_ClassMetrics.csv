@@ -1,23 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-DataConfig,BundleConfig,0,1,0,0,1,37,1,0,0,-1,0,1,,DataConfig.MvcApplication
+DataConfig,BundleConfig,0,1,0,0,1,46,1,0,0,-1,0,1,,DataConfig.MvcApplication
 DataConfig,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,DataConfig.MvcApplication
-DataConfig,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,DataConfig.MvcApplication
+DataConfig,RouteConfig,0,1,0,0,1,13,1,0,0,-1,0,1,,DataConfig.MvcApplication
 DataConfig,WebApiConfig,0,1,0,0,1,11,1,0,0,-1,0,1,,DataConfig.MvcApplication
-DataConfig,MvcApplication,0,2,0,0,0,25,3,0,0,-1,4,0,DataConfig.WebApiConfig' DataConfig.FilterConfig' DataConfig.RouteConfig' DataConfig.BundleConfig,
-DataConfig.Controllers,CatalogController,0,2,0,0,2,74,7,0,0,-1,7,0,DataConfig.Models.AvailableEndpoint' DataConfig.Helper.Azure' DataConfig.Models.AddCatalog' DataConfig.Helper.Table' DataConfig.Resources.Messages' DataConfig.Models.DeleteCatalog' DataConfig.Models.TableMetadata,
-DataConfig.Controllers,DatasetController,0,1,0,0,1,66,9,0,0,-1,6,0,DataConfig.Models.AvailableEndpoint' DataConfig.Models.TableMetadata' DataConfig.Helper.Azure' DataConfig.Models.DeleteDataset' DataConfig.Helper.Table' DataConfig.Resources.Messages,
-DataConfig.Controllers,MainController,0,2,0,0,2,35,6,0,0,-1,4,0,DataConfig.Models.Data' DataConfig.Resources.Messages' DataConfig.Helper.Azure' DataConfig.Resources.UI,
-DataConfig.Helper,Azure,1,2,0,0,2,31,2,0,0,0,1,3,DataConfig.Helper.Table,DataConfig.Controllers.CatalogController' DataConfig.Controllers.DatasetController' DataConfig.Controllers.MainController
-DataConfig.Helper,Table,5,0,0,5,0,8,0,0,0,-1,0,3,,DataConfig.Controllers.CatalogController' DataConfig.Controllers.DatasetController' DataConfig.Helper.Azure
-DataConfig.Models,AvailableEndpoint,0,3,5,0,3,19,3,0,0,-1,0,2,,DataConfig.Controllers.CatalogController' DataConfig.Controllers.DatasetController
-DataConfig.Models,TableMetadata,0,2,8,0,2,28,2,0,0,-1,0,2,,DataConfig.Controllers.CatalogController' DataConfig.Controllers.DatasetController
-DataConfig.Models,TableColumnsMetadata,0,2,5,0,2,15,2,0,0,-1,0,0,,
-DataConfig.Models,EntityMetadata,0,2,2,0,2,12,2,0,0,-1,0,0,,
-DataConfig.Models,ProcessorParams,0,2,2,0,2,12,2,0,0,-1,0,0,,
-DataConfig.Models,Data,7,2,13,0,2,171,2,0,0,1,0,1,,DataConfig.Controllers.MainController
+DataConfig,MvcApplication,0,2,0,0,0,29,4,0,0,-1,4,0,DataConfig.BundleConfig' DataConfig.FilterConfig' DataConfig.RouteConfig' DataConfig.WebApiConfig,
+DataConfig.Controllers,CatalogController,0,2,0,0,2,91,7,0,0,-1,7,0,DataConfig.Helper.Azure' DataConfig.Helper.Table' DataConfig.Models.AvailableEndpoint' DataConfig.Models.TableMetadata' DataConfig.Models.AddCatalog' DataConfig.Models.DeleteCatalog' DataConfig.Resources.Messages,
+DataConfig.Controllers,DatasetController,0,1,0,0,1,77,9,0,0,-1,9,0,DataConfig.Helper.Azure' DataConfig.Helper.Table' DataConfig.Models.AvailableEndpoint' DataConfig.Models.TableMetadata' DataConfig.Models.TableColumnsMetadata' DataConfig.Models.EntityMetadata' DataConfig.Models.ProcessorParams' DataConfig.Models.DeleteDataset' DataConfig.Resources.Messages,
+DataConfig.Controllers,MainController,0,2,0,0,2,45,6,0,0,-1,4,0,DataConfig.Helper.Azure' DataConfig.Models.Data' DataConfig.Resources.Messages' DataConfig.Resources.UI,
+DataConfig.Helper,Azure,1,2,0,0,2,35,2,0,0,0,1,4,DataConfig.Helper.Table,DataConfig.Controllers.MainController' DataConfig.Models.Data' DataConfig.Controllers.CatalogController' DataConfig.Controllers.DatasetController
+DataConfig.Helper,Table,5,0,0,5,0,8,0,0,0,-1,0,4,,DataConfig.Helper.Azure' DataConfig.Models.Data' DataConfig.Controllers.DatasetController' DataConfig.Controllers.CatalogController
+DataConfig.Models,AvailableEndpoint,0,3,5,0,3,22,3,0,0,-1,0,3,,DataConfig.Controllers.DatasetController' DataConfig.Models.Data' DataConfig.Controllers.CatalogController
+DataConfig.Models,TableMetadata,0,2,8,0,2,33,2,0,0,-1,0,3,,DataConfig.Controllers.CatalogController' DataConfig.Controllers.DatasetController' DataConfig.Models.Data
+DataConfig.Models,TableColumnsMetadata,0,2,5,0,2,17,2,0,0,-1,0,1,,DataConfig.Controllers.DatasetController
+DataConfig.Models,EntityMetadata,0,2,2,0,2,14,2,0,0,-1,0,1,,DataConfig.Controllers.DatasetController
+DataConfig.Models,ProcessorParams,0,2,2,0,2,14,2,0,0,-1,0,1,,DataConfig.Controllers.DatasetController
+DataConfig.Models,Data,7,2,13,0,2,195,2,0,0,1,4,1,DataConfig.Helper.Azure' DataConfig.Helper.Table' DataConfig.Models.AvailableEndpoint' DataConfig.Models.TableMetadata,DataConfig.Controllers.MainController
 DataConfig.Models,AddCatalog,0,0,7,0,0,10,0,0,0,-1,0,1,,DataConfig.Controllers.CatalogController
 DataConfig.Models,DeleteCatalog,0,0,4,0,0,7,0,0,0,-1,0,1,,DataConfig.Controllers.CatalogController
 DataConfig.Models,DeleteDataset,0,0,5,0,0,8,0,0,0,-1,0,1,,DataConfig.Controllers.DatasetController
-DataConfig.Resources,Messages,2,1,16,0,0,167,1,0,0,0,0,3,,DataConfig.Controllers.CatalogController' DataConfig.Controllers.DatasetController' DataConfig.Controllers.MainController
+DataConfig.Resources,Messages,2,1,16,0,0,167,1,0,0,0,0,3,,DataConfig.Controllers.DatasetController' DataConfig.Controllers.MainController' DataConfig.Controllers.CatalogController
 DataConfig.Resources,_Layout,2,1,17,0,0,176,1,0,0,0,0,0,,
 DataConfig.Resources,UI,2,1,36,0,0,347,1,0,0,0,0,1,,DataConfig.Controllers.MainController

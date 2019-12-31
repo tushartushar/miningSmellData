@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SevenPass.IO.Crypto,CrsAlgorithm,0,0,0,0,0,11,0,0,0,-1,0,2,,SevenPass.IO.FileFormat' SevenPass.Tests.IO.FileFormatTests
-SevenPass.IO.Crypto,HashedBlockFileFormat,0,1,0,0,1,99,12,0,0,-1,0,2,,SevenPass.IO.FileFormat' SevenPass.Tests.IO.Crypto.HashedBlockFileFormatTests
-SevenPass.IO.Crypto,HashedInputStream,2,5,0,0,5,52,6,0,0,0,0,2,,SevenPass.IO.FileFormat' SevenPass.Tests.IO.Crypto.HashedInputStreamTests
-SevenPass.IO.Crypto,HashedOutputStream,2,5,0,0,5,48,6,0,0,0,0,1,,SevenPass.Tests.IO.Crypto.HashedOutputStreamTests
-SevenPass.IO.Crypto,IRandomGenerator,0,1,0,0,0,9,1,2,0,-1,0,1,,SevenPass.IO.FileFormat
-SevenPass.IO.Crypto,Rc4RandomGenerator,3,2,0,0,2,60,5,0,1,0,0,1,,SevenPass.Tests.IO.Crypto.Rc4RandomGeneratorTests
-SevenPass.IO.Crypto,Salsa20RandomGenerator,1,2,0,0,2,25,4,0,1,0,1,1,KeePassLib.Cryptography.Cipher.Salsa20Cipher,SevenPass.Tests.IO.Crypto.Salsa20RandomGeneratorTests
+SevenPass.IO.Crypto,CrsAlgorithm,0,0,0,0,0,11,0,0,0,-1,0,2,,SevenPass.IO.Models.FileHeaders' SevenPass.IO.FileFormat
+SevenPass.IO.Crypto,HashedBlockFileFormat,0,1,0,0,1,99,12,0,0,-1,0,1,,SevenPass.IO.FileFormat
+SevenPass.IO.Crypto,HashedInputStream,2,5,0,0,5,52,6,0,0,0,0,1,,SevenPass.IO.FileFormat
+SevenPass.IO.Crypto,HashedOutputStream,2,5,0,0,5,48,6,0,0,0,0,0,,
+SevenPass.IO.Crypto,IRandomGenerator,0,1,0,0,0,9,1,2,0,-1,0,3,,SevenPass.IO.Crypto.Rc4RandomGenerator' SevenPass.IO.Crypto.Salsa20RandomGenerator' SevenPass.IO.FileFormat
+SevenPass.IO.Crypto,Rc4RandomGenerator,3,2,0,0,2,60,5,0,1,0,1,1,SevenPass.IO.Crypto.IRandomGenerator,SevenPass.IO.FileFormat
+SevenPass.IO.Crypto,Salsa20RandomGenerator,1,2,0,0,2,25,4,0,1,0,2,1,SevenPass.IO.Crypto.IRandomGenerator' KeePassLib.Cryptography.Cipher.Salsa20Cipher,SevenPass.IO.FileFormat
 KeePassLib.Cryptography.Cipher,Salsa20Cipher,5,8,0,0,2,150,26,0,0,0,0,1,,SevenPass.IO.Crypto.Salsa20RandomGenerator
-SevenPass.IO,FileFormat,0,13,0,0,8,362,41,0,0,-1,8,6,SevenPass.IO.Models.FileHeaders' SevenPass.IO.Crypto.HashedInputStream' SevenPass.IO.Models.FileFormats' SevenPass.IO.Models.ReadHeaderResult' SevenPass.IO.Crypto.HashedBlockFileFormat' SevenPass.IO.Crypto.IRandomGenerator' SevenPass.IO.Crypto.CrsAlgorithm' SevenPass.IO.Models.HeaderFields,SevenPass.Services.Databases.RegisteredDbsService' SevenPass.ViewModels.PasswordViewModel' SevenPass.Services.Databases.RegisteredDbsService' SevenPass.ViewModels.PasswordViewModel' SevenPass.Tests.IO.IntegrationTests' SevenPass.Tests.IO.FileFormatTests
-SevenPass.IO,PasswordData,1,9,3,0,5,228,20,0,0,0,1,4,SevenPass.IO.Models.FileHeaders,SevenPass.ViewModels.PasswordViewModel' SevenPass.ViewModels.PasswordViewModel' SevenPass.Tests.IO.IntegrationTests' SevenPass.Tests.IO.PasswordDataTests
+SevenPass.IO,FileFormat,0,13,0,0,8,362,48,0,0,-1,10,0,SevenPass.IO.Crypto.CrsAlgorithm' SevenPass.IO.Crypto.HashedBlockFileFormat' SevenPass.IO.Crypto.HashedInputStream' SevenPass.IO.Crypto.IRandomGenerator' SevenPass.IO.Crypto.Rc4RandomGenerator' SevenPass.IO.Crypto.Salsa20RandomGenerator' SevenPass.IO.Models.FileFormats' SevenPass.IO.Models.FileHeaders' SevenPass.IO.Models.HeaderFields' SevenPass.IO.Models.ReadHeaderResult,
+SevenPass.IO,PasswordData,1,9,3,0,5,228,21,0,0,0.44,1,0,SevenPass.IO.Models.FileHeaders,
 SevenPass.IO,Utils,0,2,0,0,2,26,2,0,0,-1,0,0,,
-SevenPass.IO.Models,FileFormats,0,0,0,0,0,27,0,0,0,-1,0,7,,SevenPass.IO.FileFormat' SevenPass.Services.GlobalMessagesService' SevenPass.Services.Databases.RegisteredDbsService' SevenPass.Services.GlobalMessagesService' SevenPass.Services.Databases.RegisteredDbsService' SevenPass.Tests.IO.IntegrationTests' SevenPass.Tests.IO.FileFormatTests
-SevenPass.IO.Models,FileHeaders,0,0,10,0,0,47,0,0,0,-1,0,3,,SevenPass.IO.FileFormat' SevenPass.IO.PasswordData' SevenPass.Tests.IO.FileFormatTests
+SevenPass.IO.Models,FileFormats,0,0,0,0,0,27,0,0,0,-1,0,2,,SevenPass.IO.Models.ReadHeaderResult' SevenPass.IO.FileFormat
+SevenPass.IO.Models,FileHeaders,0,0,10,0,0,47,0,0,0,-1,1,3,SevenPass.IO.Crypto.CrsAlgorithm,SevenPass.IO.PasswordData' SevenPass.IO.Models.ReadHeaderResult' SevenPass.IO.FileFormat
 SevenPass.IO.Models,HeaderFields,0,0,0,0,0,14,0,0,0,-1,0,1,,SevenPass.IO.FileFormat
-SevenPass.IO.Models,ReadHeaderResult,0,0,2,0,0,11,0,0,0,-1,0,1,,SevenPass.IO.FileFormat
+SevenPass.IO.Models,ReadHeaderResult,0,0,2,0,0,11,0,0,0,-1,2,1,SevenPass.IO.Models.FileFormats' SevenPass.IO.Models.FileHeaders,SevenPass.IO.FileFormat

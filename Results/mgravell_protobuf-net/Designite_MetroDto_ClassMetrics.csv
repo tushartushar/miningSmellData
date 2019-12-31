@@ -1,14 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-DAL,Database,1,1,0,1,0,8,1,0,0,0,0,0,,
-DAL,TagAttribute,0,1,0,0,1,4,1,0,0,-1,0,0,,
-DAL,TableAttribute,0,0,1,0,0,4,0,0,0,-1,0,0,,
-DAL,SerializableAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
-DAL,ColumnAttribute,0,0,5,0,0,8,0,0,0,-1,0,0,,
-DAL,AssociationAttribute,0,0,3,0,0,6,0,0,0,-1,0,0,,
-DAL,AutoSync,0,0,0,0,0,1,0,0,0,-1,0,0,,
-DAL,DatabaseCompat,1,1,1,1,1,12,1,0,0,0,0,1,,Metro_DevRig.MainPage
-DAL,DatabaseCompatRem,1,1,1,1,1,47,1,0,0,0,0,0,,
-DAL,OrderCompat,15,39,15,0,4,382,39,0,0,0.87,1,0,DAL.OrderLineCompat,
-DAL,OrderLineCompat,5,17,5,0,2,139,17,0,0,0.82,0,1,,DAL.OrderCompat
-MetroDto,TestClass,0,0,3,0,0,10,0,0,0,-1,0,1,,Metro_DevRig.MainPage
-MetroDto,MyEnum,0,0,0,0,0,5,0,0,0,-1,0,1,,Metro_DevRig.MainPage
+DAL,Database,1,1,0,1,0,8,1,0,0,0,0,4,,DAL.DatabaseCompat' DAL.DatabaseCompatRem' DAL.OrderCompat' DAL.OrderLineCompat
+DAL,TagAttribute,0,1,0,0,1,4,1,0,0,-1,0,4,,DAL.DatabaseCompat' DAL.DatabaseCompatRem' DAL.OrderCompat' DAL.OrderLineCompat
+DAL,TableAttribute,0,0,1,0,0,4,0,0,0,-1,0,1,,DAL.OrderLineCompat
+DAL,SerializableAttribute,0,0,0,0,0,3,0,0,0,-1,0,4,,DAL.DatabaseCompat' DAL.DatabaseCompatRem' DAL.OrderCompat' DAL.OrderLineCompat
+DAL,ColumnAttribute,0,0,5,0,0,8,0,0,0,-1,1,2,DAL.AutoSync,DAL.OrderCompat' DAL.OrderLineCompat
+DAL,AssociationAttribute,0,0,3,0,0,6,0,0,0,-1,0,1,,DAL.OrderCompat
+DAL,AutoSync,0,0,0,0,0,1,0,0,0,-1,0,2,,DAL.ColumnAttribute' DAL.OrderCompat
+DAL,DatabaseCompat,1,1,1,1,1,12,1,0,0,0,4,0,DAL.Database' DAL.TagAttribute' DAL.SerializableAttribute' DAL.OrderCompat,
+DAL,DatabaseCompatRem,1,1,1,1,1,47,1,0,0,0,4,0,DAL.Database' DAL.TagAttribute' DAL.SerializableAttribute' DAL.OrderCompat,
+DAL,OrderCompat,15,39,15,0,4,382,39,0,0,0.87,7,2,DAL.Database' DAL.TagAttribute' DAL.SerializableAttribute' DAL.ColumnAttribute' DAL.AssociationAttribute' DAL.AutoSync' DAL.OrderLineCompat,DAL.DatabaseCompat' DAL.DatabaseCompatRem
+DAL,OrderLineCompat,5,17,5,0,2,139,17,0,0,0.82,5,1,DAL.Database' DAL.TagAttribute' DAL.TableAttribute' DAL.SerializableAttribute' DAL.ColumnAttribute,DAL.OrderCompat
+MetroDto,TestClass,0,0,3,0,0,10,0,0,0,-1,1,0,MetroDto.MyEnum,
+MetroDto,MyEnum,0,0,0,0,0,5,0,0,0,-1,0,1,,MetroDto.TestClass

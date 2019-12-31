@@ -1,30 +1,30 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Chinchilla.Integration,Feature,1,6,2,0,1,41,7,9,0,0.5,0,0,,
-Chinchilla.Integration,RabbitCollection,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Chinchilla.Integration,RabbitFixture,1,2,1,1,2,17,2,0,0,0,0,0,,
+Chinchilla.Integration,Feature,1,6,2,0,1,41,7,9,0,0.5,0,9,,Chinchilla.Integration.Features.ConsumerFeature' Chinchilla.Integration.Features.PublisherConfirmsFeature' Chinchilla.Integration.Features.CustomTopologyFeature' Chinchilla.Integration.Features.SharedSubscriptionFeature' Chinchilla.Integration.Features.CustomSerializersFeature' Chinchilla.Integration.Features.PausableWorkersFeature' Chinchilla.Integration.Features.RequestResponseFeature' Chinchilla.Integration.Features.PublishFeature' Chinchilla.Integration.Features.ConnectionFeature
+Chinchilla.Integration,RabbitCollection,0,0,0,0,0,4,0,0,0,-1,1,0,Chinchilla.Integration.RabbitFixture,
+Chinchilla.Integration,RabbitFixture,1,2,1,1,2,17,2,0,0,0,0,1,,Chinchilla.Integration.RabbitCollection
 Chinchilla.Integration.Features.Api,RabbitAdminFeature,0,1,0,0,1,13,1,0,0,-1,0,0,,
-Chinchilla.Integration.Features,ConnectionFeature,0,5,0,0,5,97,5,0,1,-1,0,0,,
-Chinchilla.Integration.Features,ConsumerFeature,0,3,0,0,3,53,3,0,1,-1,0,0,,
-Chinchilla.Integration.Features,CustomSerializersFeature,0,2,0,0,2,47,2,0,1,-1,1,0,Chinchilla.Integration.Features.Messages.HelloWorldMessage,
-Chinchilla.Integration.Features,CustomTopologyFeature,0,1,0,0,1,45,1,0,1,-1,1,0,Chinchilla.Integration.Features.Messages.HelloWorldMessage,
-Chinchilla.Integration.Features,CustomSubscribeMessageTopology,0,1,0,0,1,12,1,0,0,-1,0,0,,
-Chinchilla.Integration.Features,PausableWorkersFeature,0,1,0,0,1,31,1,0,1,-1,0,0,,
-Chinchilla.Integration.Features,PublisherConfirmsFeature,0,2,0,0,2,29,2,0,1,-1,0,0,,
-Chinchilla.Integration.Features,PublishFeature,0,6,0,0,6,128,6,0,1,-1,0,0,,
-Chinchilla.Integration.Features,CustomRouter,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Chinchilla.Integration.Features,RetryOnFailures,0,1,0,0,1,7,1,0,0,-1,1,0,Chinchilla.Integration.Features.Messages.HelloWorldMessage,
-Chinchilla.Integration.Features,RequestResponseFeature,0,1,0,0,1,66,1,0,1,-1,1,0,Chinchilla.Integration.Features.Messages.CapitalizedMessage,
-Chinchilla.Integration.Features,SharedSubscriptionFeature,0,0,0,0,0,38,0,0,1,-1,0,0,,
-Chinchilla.Integration.Features,SharedSubscriptionTopology,0,1,0,0,1,12,1,0,0,-1,0,0,,
-Chinchilla.Integration.Features.Consumers,CapitalizeMessageConsumer,0,1,0,0,1,8,1,0,0,-1,1,0,Chinchilla.Integration.Features.Messages.CapitalizeMessage,
-Chinchilla.Integration.Features.Consumers,CustomConfigurationConsumer,0,2,0,0,2,10,2,0,0,-1,1,0,Chinchilla.Integration.Features.Messages.HelloWorldMessage,
-Chinchilla.Integration.Features.Consumers,HelloWorldMessageConsumer,0,1,0,0,1,7,1,0,0,-1,1,0,Chinchilla.Integration.Features.Messages.HelloWorldMessage,
-Chinchilla.Integration.Features.Messages,CapitalizedMessage,0,2,2,0,2,14,2,0,0,-1,0,1,,Chinchilla.Integration.Features.RequestResponseFeature
-Chinchilla.Integration.Features.Messages,CapitalizeMessage,0,2,2,0,2,14,2,0,0,-1,0,1,,Chinchilla.Integration.Features.Consumers.CapitalizeMessageConsumer
-Chinchilla.Integration.Features.Messages,HelloWorldMessage,0,0,2,0,0,8,0,0,1,-1,0,5,,Chinchilla.Integration.Features.CustomSerializersFeature' Chinchilla.Integration.Features.CustomTopologyFeature' Chinchilla.Integration.Features.RetryOnFailures' Chinchilla.Integration.Features.Consumers.CustomConfigurationConsumer' Chinchilla.Integration.Features.Consumers.HelloWorldMessageConsumer
-Chinchilla.Integration.Features.Messages,IHelloWorldMessage,0,0,1,0,0,4,0,1,0,-1,0,0,,
-Chinchilla.Integration.Features.MessageTypeFactories,CastleMessageTypeFactory,1,1,0,0,1,30,1,0,0,0,0,0,,
-Chinchilla.Integration.Features.MessageTypeFactories,BasicInterceptor,1,1,0,0,1,22,3,0,0,0,0,0,,
-Chinchilla.Integration.Serializers,ComplexMessage,0,0,7,0,0,30,0,0,0,-1,0,1,,Chinchilla.Integration.Serializers.MessageSerializerTests
-Chinchilla.Integration.Serializers,AnEnum,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Chinchilla.Integration.Features,ConnectionFeature,0,5,0,0,5,97,6,0,1,-1,2,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.Messages.HelloWorldMessage,
+Chinchilla.Integration.Features,ConsumerFeature,0,3,0,0,3,53,6,0,1,-1,4,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.Consumers.CustomConfigurationConsumer' Chinchilla.Integration.Features.Consumers.HelloWorldMessageConsumer' Chinchilla.Integration.Features.Messages.HelloWorldMessage,
+Chinchilla.Integration.Features,CustomSerializersFeature,0,2,0,0,2,47,2,0,1,-1,2,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.Messages.HelloWorldMessage,
+Chinchilla.Integration.Features,CustomTopologyFeature,0,1,0,0,1,45,2,0,1,-1,3,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.CustomSubscribeMessageTopology' Chinchilla.Integration.Features.Messages.HelloWorldMessage,
+Chinchilla.Integration.Features,CustomSubscribeMessageTopology,0,1,0,0,1,12,1,0,1,-1,0,1,,Chinchilla.Integration.Features.CustomTopologyFeature
+Chinchilla.Integration.Features,PausableWorkersFeature,0,1,0,0,1,31,1,0,1,-1,2,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.Messages.HelloWorldMessage,
+Chinchilla.Integration.Features,PublisherConfirmsFeature,0,2,0,0,2,29,2,0,1,-1,2,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.Messages.HelloWorldMessage,
+Chinchilla.Integration.Features,PublishFeature,0,6,0,0,6,128,10,0,1,-1,3,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.CustomRouter' Chinchilla.Integration.Features.Messages.HelloWorldMessage,
+Chinchilla.Integration.Features,CustomRouter,0,1,0,0,1,7,1,0,2,-1,0,1,,Chinchilla.Integration.Features.PublishFeature
+Chinchilla.Integration.Features,RetryOnFailures,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Chinchilla.Integration.Features,RequestResponseFeature,0,1,0,0,1,66,1,0,1,-1,4,0,Chinchilla.Integration.Feature' Chinchilla.Integration.Features.Consumers.CapitalizeMessageConsumer' Chinchilla.Integration.Features.Messages.CapitalizedMessage' Chinchilla.Integration.Features.Messages.CapitalizeMessage,
+Chinchilla.Integration.Features,SharedSubscriptionFeature,0,0,0,0,0,38,0,0,1,-1,1,0,Chinchilla.Integration.Feature,
+Chinchilla.Integration.Features,SharedSubscriptionTopology,0,1,0,0,1,12,1,0,1,-1,0,0,,
+Chinchilla.Integration.Features.Consumers,CapitalizeMessageConsumer,0,1,0,0,1,8,1,0,1,-1,2,1,Chinchilla.Integration.Features.Messages.CapitalizedMessage' Chinchilla.Integration.Features.Messages.CapitalizeMessage,Chinchilla.Integration.Features.RequestResponseFeature
+Chinchilla.Integration.Features.Consumers,CustomConfigurationConsumer,0,2,0,0,2,10,2,0,1,-1,1,1,Chinchilla.Integration.Features.Messages.HelloWorldMessage,Chinchilla.Integration.Features.ConsumerFeature
+Chinchilla.Integration.Features.Consumers,HelloWorldMessageConsumer,0,1,0,0,1,7,1,0,1,-1,1,1,Chinchilla.Integration.Features.Messages.HelloWorldMessage,Chinchilla.Integration.Features.ConsumerFeature
+Chinchilla.Integration.Features.Messages,CapitalizedMessage,0,2,2,0,2,14,2,0,1,-1,0,2,,Chinchilla.Integration.Features.Consumers.CapitalizeMessageConsumer' Chinchilla.Integration.Features.RequestResponseFeature
+Chinchilla.Integration.Features.Messages,CapitalizeMessage,0,2,2,0,2,14,2,0,1,-1,0,2,,Chinchilla.Integration.Features.RequestResponseFeature' Chinchilla.Integration.Features.Consumers.CapitalizeMessageConsumer
+Chinchilla.Integration.Features.Messages,HelloWorldMessage,0,0,2,0,0,8,0,0,1,-1,1,9,Chinchilla.Integration.Features.Messages.IHelloWorldMessage,Chinchilla.Integration.Features.Consumers.HelloWorldMessageConsumer' Chinchilla.Integration.Features.Consumers.CustomConfigurationConsumer' Chinchilla.Integration.Features.ConsumerFeature' Chinchilla.Integration.Features.PausableWorkersFeature' Chinchilla.Integration.Features.PublisherConfirmsFeature' Chinchilla.Integration.Features.CustomTopologyFeature' Chinchilla.Integration.Features.ConnectionFeature' Chinchilla.Integration.Features.CustomSerializersFeature' Chinchilla.Integration.Features.PublishFeature
+Chinchilla.Integration.Features.Messages,IHelloWorldMessage,0,0,1,0,0,4,0,1,0,-1,0,1,,Chinchilla.Integration.Features.Messages.HelloWorldMessage
+Chinchilla.Integration.Features.MessageTypeFactories,CastleMessageTypeFactory,1,1,0,0,1,30,1,0,1,0,1,0,Chinchilla.Integration.Features.MessageTypeFactories.BasicInterceptor,
+Chinchilla.Integration.Features.MessageTypeFactories,BasicInterceptor,1,1,0,0,1,22,3,0,0,0,0,1,,Chinchilla.Integration.Features.MessageTypeFactories.CastleMessageTypeFactory
+Chinchilla.Integration.Serializers,ComplexMessage,0,0,7,0,0,30,0,0,0,-1,1,1,Chinchilla.Integration.Serializers.AnEnum,Chinchilla.Integration.Serializers.MessageSerializerTests
+Chinchilla.Integration.Serializers,AnEnum,0,0,0,0,0,6,0,0,0,-1,0,1,,Chinchilla.Integration.Serializers.ComplexMessage
 Chinchilla.Integration.Serializers,MessageSerializerTests,0,3,0,0,2,28,3,0,0,-1,1,0,Chinchilla.Integration.Serializers.ComplexMessage,

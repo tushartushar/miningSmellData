@@ -1,0 +1,38 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NServiceBus.Testing,DefaultTestingLoggerFactory,8,4,0,0,4,50,5,0,1,0.5,2,2,NServiceBus.Testing.NamedLogger' NServiceBus.Testing.TextWriterLogger,NServiceBus.Testing.NamedLogger' NServiceBus.Testing.TestingLoggerFactory
+NServiceBus.Testing,FakeBuilder,2,11,0,0,11,126,15,0,1,0.45,0,3,,NServiceBus.Testing.TestableBehaviorContext' NServiceBus.Testing.TestableOutgoingContext' NServiceBus.Testing.TestableIncomingContext
+NServiceBus.Testing,NamedLogger,2,16,5,0,16,75,16,0,1,0.12,1,1,NServiceBus.Testing.DefaultTestingLoggerFactory,NServiceBus.Testing.DefaultTestingLoggerFactory
+NServiceBus.Testing,OutgoingMessage<TMessage;TOptions>,0,1,2,0,0,19,1,0,0,-1,0,6,,NServiceBus.Testing.SentMessage<TMessage>' NServiceBus.Testing.PublishedMessage<TMessage>' NServiceBus.Testing.RepliedMessage<TMessage>' NServiceBus.Testing.Subscription' NServiceBus.Testing.Unsubscription' NServiceBus.Testing.TimeoutMessage<TMessage>
+NServiceBus.Testing,OutgoingMessageExtensions,0,6,0,0,6,53,6,0,0,-1,3,0,NServiceBus.Testing.PublishedMessage<TMessage>' NServiceBus.Testing.RepliedMessage<TMessage>' NServiceBus.Testing.SentMessage<TMessage>,
+NServiceBus.Testing,PublishedMessage<TMessage>,0,1,0,0,1,9,1,0,0,-1,1,2,NServiceBus.Testing.OutgoingMessage<TMessage;TOptions>,NServiceBus.Testing.TestablePipelineContext' NServiceBus.Testing.OutgoingMessageExtensions
+NServiceBus.Testing,RepliedMessage<TMessage>,0,1,0,0,1,9,1,0,0,-1,1,2,NServiceBus.Testing.OutgoingMessage<TMessage;TOptions>,NServiceBus.Testing.TestableMessageProcessingContext' NServiceBus.Testing.OutgoingMessageExtensions
+NServiceBus.Testing,SentMessage<TMessage>,0,1,0,0,1,9,1,0,0,-1,1,2,NServiceBus.Testing.OutgoingMessage<TMessage;TOptions>,NServiceBus.Testing.TestablePipelineContext' NServiceBus.Testing.OutgoingMessageExtensions
+NServiceBus.Testing,Subscription,0,1,0,0,1,11,1,0,0,-1,1,1,NServiceBus.Testing.OutgoingMessage<TMessage;TOptions>,NServiceBus.Testing.TestableMessageSession
+NServiceBus.Testing,TestableAuditContext,0,1,3,0,1,24,1,0,2,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestableBatchDispatchContext,0,0,2,0,0,8,0,0,3,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestableBehaviorContext,0,1,3,0,0,21,1,8,2,-1,1,8,NServiceBus.Testing.FakeBuilder,NServiceBus.Testing.TestableBatchDispatchContext' NServiceBus.Testing.TestableAuditContext' NServiceBus.Testing.TestableDispatchContext' NServiceBus.Testing.TestableForwardingContext' NServiceBus.Testing.TestableSubscribeContext' NServiceBus.Testing.TestableRoutingContext' NServiceBus.Testing.TestableTransportReceiveContext' NServiceBus.Testing.TestableUnsubscribeContext
+NServiceBus.Testing,TestableDispatchContext,0,0,2,0,0,8,0,0,3,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestableEndpointInstance,0,1,1,0,1,15,1,0,2,-1,1,0,NServiceBus.Testing.TestableMessageSession,
+NServiceBus.Testing,TestableForwardingContext,0,0,2,0,0,11,0,0,3,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestableIncomingContext,0,2,2,0,0,23,2,3,3,-1,2,3,NServiceBus.Testing.FakeBuilder' NServiceBus.Testing.TestableMessageProcessingContext,NServiceBus.Testing.TestableIncomingLogicalMessageContext' NServiceBus.Testing.TestableIncomingPhysicalMessageContext' NServiceBus.Testing.TestableInvokeHandlerContext
+NServiceBus.Testing,TestableIncomingLogicalMessageContext,0,2,3,0,2,29,2,1,4,-1,1,0,NServiceBus.Testing.TestableIncomingContext,
+NServiceBus.Testing,TestableIncomingPhysicalMessageContext,0,2,1,0,2,21,2,1,4,-1,1,0,NServiceBus.Testing.TestableIncomingContext,
+NServiceBus.Testing,TestableInvokeHandlerContext,0,3,8,0,3,59,3,1,4,-1,1,1,NServiceBus.Testing.TestableIncomingContext,NServiceBus.Testing.TestableMessageHandlerContext
+NServiceBus.Testing,TestableMessageHandlerContext,0,1,0,0,1,9,1,0,5,-1,1,1,NServiceBus.Testing.TestableInvokeHandlerContext,NServiceBus.Testing.TestablePipelineContext
+NServiceBus.Testing,TestableMessageProcessingContext,2,4,6,0,4,62,4,1,2,0.75,2,1,NServiceBus.Testing.RepliedMessage<TMessage>' NServiceBus.Testing.TestablePipelineContext,NServiceBus.Testing.TestableIncomingContext
+NServiceBus.Testing,TestableMessageSession,2,2,2,0,2,34,2,1,1,1,3,1,NServiceBus.Testing.Subscription' NServiceBus.Testing.TestablePipelineContext' NServiceBus.Testing.Unsubscription,NServiceBus.Testing.TestableEndpointInstance
+NServiceBus.Testing,TestableOutgoingContext,0,1,4,0,0,25,1,5,3,-1,2,5,NServiceBus.Testing.FakeBuilder' NServiceBus.Testing.TestablePipelineContext,NServiceBus.Testing.TestableOutgoingPublishContext' NServiceBus.Testing.TestableOutgoingLogicalMessageContext' NServiceBus.Testing.TestableOutgoingSendContext' NServiceBus.Testing.TestableOutgoingPhysicalMessageContext' NServiceBus.Testing.TestableOutgoingReplyContext
+NServiceBus.Testing,TestableOutgoingLogicalMessageContext,0,1,2,0,1,18,1,1,4,-1,1,0,NServiceBus.Testing.TestableOutgoingContext,
+NServiceBus.Testing,TestableOutgoingPhysicalMessageContext,0,1,2,0,1,21,1,1,4,-1,1,0,NServiceBus.Testing.TestableOutgoingContext,
+NServiceBus.Testing,TestableOutgoingPublishContext,0,0,1,0,0,7,0,0,4,-1,1,0,NServiceBus.Testing.TestableOutgoingContext,
+NServiceBus.Testing,TestableOutgoingReplyContext,0,0,1,0,0,7,0,0,4,-1,1,0,NServiceBus.Testing.TestableOutgoingContext,
+NServiceBus.Testing,TestableOutgoingSendContext,0,0,1,0,0,7,0,0,4,-1,1,0,NServiceBus.Testing.TestableOutgoingContext,
+NServiceBus.Testing,TestablePipelineContext,4,6,4,0,5,88,8,3,2,0.33,4,3,NServiceBus.Testing.PublishedMessage<TMessage>' NServiceBus.Testing.SentMessage<TMessage>' NServiceBus.Testing.TestableMessageHandlerContext' NServiceBus.Testing.TimeoutMessage<TMessage>,NServiceBus.Testing.TestableMessageSession' NServiceBus.Testing.TestableMessageProcessingContext' NServiceBus.Testing.TestableOutgoingContext
+NServiceBus.Testing,TestableRoutingContext,0,0,2,0,0,11,0,0,3,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestableSubscribeContext,0,0,1,0,0,7,0,0,3,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestableTransportReceiveContext,0,1,2,0,1,18,1,0,3,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestableUnsubscribeContext,0,0,1,0,0,7,0,0,3,-1,1,0,NServiceBus.Testing.TestableBehaviorContext,
+NServiceBus.Testing,TestingLoggerFactory,2,4,0,0,3,38,4,0,1,0.75,1,0,NServiceBus.Testing.DefaultTestingLoggerFactory,
+NServiceBus.Testing,TextWriterLogger,1,2,0,0,2,12,2,0,0,0,0,1,,NServiceBus.Testing.DefaultTestingLoggerFactory
+NServiceBus.Testing,TimeoutMessage<TMessage>,0,2,2,0,2,26,2,0,0,-1,1,1,NServiceBus.Testing.OutgoingMessage<TMessage;TOptions>,NServiceBus.Testing.TestablePipelineContext
+NServiceBus.Testing,Unsubscription,0,1,0,0,1,9,1,0,0,-1,1,1,NServiceBus.Testing.OutgoingMessage<TMessage;TOptions>,NServiceBus.Testing.TestableMessageSession

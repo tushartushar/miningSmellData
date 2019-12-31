@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RemactNUnitTest,ActorDemoTest,7,14,0,0,9,346,17,0,0,0.29,0,0,,
+RemactNUnitTest,MyOutputContext,0,0,0,0,0,3,0,0,0,-1,0,1,,RemactNUnitTest.ActorDemoTest
+RemactNUnitTest,ClientServer,3,16,0,0,13,352,25,0,0,0.31,0,0,,
+RemactNUnitTest,ServiceStructureTest,1,7,0,0,7,234,7,0,0,0.43,0,0,,
+RemactNUnitTest,Request,1,1,0,1,1,9,1,1,0,0,0,4,,RemactNUnitTest.RequestA1' RemactNUnitTest.DelayActor' RemactNUnitTest.ActorDemoTest' RemactNUnitTest.ServiceStructureTest
+RemactNUnitTest,RequestA1,0,0,0,0,0,3,0,1,1,-1,1,3,RemactNUnitTest.Request,RemactNUnitTest.RequestA2' RemactNUnitTest.ActorDemoTest' RemactNUnitTest.DelayActor
+RemactNUnitTest,RequestA2,0,0,0,0,0,3,0,0,2,-1,1,2,RemactNUnitTest.RequestA1,RemactNUnitTest.ActorDemoTest' RemactNUnitTest.DelayActor
+RemactNUnitTest,Response,1,1,0,1,1,8,1,1,0,0,0,4,,RemactNUnitTest.ResponseA1' RemactNUnitTest.DelayActor' RemactNUnitTest.ActorDemoTest' RemactNUnitTest.ServiceStructureTest
+RemactNUnitTest,ResponseA1,0,0,0,0,0,3,0,1,1,-1,1,3,RemactNUnitTest.Response,RemactNUnitTest.ResponseA2' RemactNUnitTest.ActorDemoTest' RemactNUnitTest.DelayActor
+RemactNUnitTest,ResponseA2,0,0,0,0,0,3,0,0,2,-1,1,2,RemactNUnitTest.ResponseA1,RemactNUnitTest.DelayActor' RemactNUnitTest.ActorDemoTest
+RemactNUnitTest,TestMessage,1,0,0,1,0,4,0,0,0,-1,1,3,RemactNUnitTest.IInnerTestMessage,RemactNUnitTest.IClientServerReceiver' RemactNUnitTest.ClientServerService' RemactNUnitTest.ClientServer
+RemactNUnitTest,IInnerTestMessage,0,0,1,0,0,4,0,1,0,-1,0,2,,RemactNUnitTest.TestMessage' RemactNUnitTest.InnerTestMessage
+RemactNUnitTest,InnerTestMessage,1,0,1,1,0,5,0,0,1,-1,1,2,RemactNUnitTest.IInnerTestMessage,RemactNUnitTest.ClientServerService' RemactNUnitTest.ClientServer
+RemactNUnitTest,IClientServerReceiver,0,5,0,0,0,8,5,0,0,-1,0,2,,RemactNUnitTest.ClientServerService' RemactNUnitTest.ClientServer
+RemactNUnitTest,ClientServerService,2,7,1,2,1,69,8,0,0,1,0,1,,RemactNUnitTest.ClientServer
+RemactNUnitTest,DelayActor,7,8,3,3,3,130,14,0,0,0.5,0,2,,RemactNUnitTest.ServiceStructureTest' RemactNUnitTest.ActorDemoTest
+RemactNUnitTest,MyInputContext,0,0,0,0,0,3,0,0,0,-1,0,1,,RemactNUnitTest.DelayActor
+RemactNUnitTest,Helper,3,6,1,1,6,100,8,0,0,0.83,0,5,,RemactNUnitTest.ClientServerService' RemactNUnitTest.ServiceStructureTest' RemactNUnitTest.DelayActor' RemactNUnitTest.ActorDemoTest' RemactNUnitTest.ClientServer

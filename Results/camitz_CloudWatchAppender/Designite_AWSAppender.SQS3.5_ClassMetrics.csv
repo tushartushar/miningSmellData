@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-AWSAppender.SQS.Model,SQSDatum,0,3,4,0,3,20,3,0,0,-1,1,4,AWSAppender.SQS.Model.SQSDatumRenderer,AWSAppender.SQS.Model.SQSDatumRenderer' AWSAppender.SQS.Parsers.SQSMessageParser' SQSAppender.BufferingSQSAppender' SQSAppender.SQSAppender
-AWSAppender.SQS.Model,SQSDatumRenderer,0,2,0,0,1,22,7,0,0,-1,1,1,AWSAppender.SQS.Model.SQSDatum,AWSAppender.SQS.Model.SQSDatum
-AWSAppender.SQS.Parsers,ISQSEventMessageParser,0,0,3,0,0,6,0,1,1,-1,0,1,,AWSAppender.SQS.Services.SQSEventProcessor
-AWSAppender.SQS.Parsers,SQSMessageParser,3,8,4,1,2,82,14,0,2,0.5,2,0,AWSAppender.SQS.Model.SQSDatum' AWSAppender.Core.Services.AppenderValue,
-AWSAppender.SQS.Services,SQSClientWrapper,2,3,0,0,1,36,4,0,0,0.67,2,2,AWSAppender.SQS.Services.LockObject' AWSAppender.SQS.Services.SendMessageBatchRequestWrapper,SQSAppender.BufferingSQSAppender' SQSAppender.SQSAppender
-AWSAppender.SQS.Services,SendMessageBatchRequestWrapper,0,0,3,0,0,9,0,0,0,-1,0,1,,AWSAppender.SQS.Services.SQSClientWrapper
+AWSAppender.SQS.Model,SQSDatum,0,3,4,0,3,20,3,0,0,-1,0,6,,AWSAppender.SQS.Parsers.ISQSEventMessageParser' AWSAppender.SQS.Services.SQSEventProcessor' AWSAppender.SQS.Model.SQSDatumRenderer' AWSAppender.SQS.Parsers.SQSMessageParser' SQSAppender.SQSAppender' SQSAppender.BufferingSQSAppender
+AWSAppender.SQS.Model,SQSDatumRenderer,0,2,0,0,1,22,7,0,0,-1,0,3,,SQSAppender.SQSAppender' SQSAppender.BufferingSQSAppender' AWSAppender.SQS.Model.SQSDatum
+AWSAppender.SQS.Parsers,ISQSEventMessageParser,0,0,3,0,0,6,0,1,1,-1,0,2,,AWSAppender.SQS.Parsers.SQSMessageParser' AWSAppender.SQS.Services.SQSEventProcessor
+AWSAppender.SQS.Parsers,SQSMessageParser,3,8,4,1,2,82,20,0,2,0.5,0,2,,SQSAppender.SQSAppender' SQSAppender.BufferingSQSAppender
+AWSAppender.SQS.Services,SQSClientWrapper,2,3,0,0,1,36,5,0,0,0.67,0,2,,SQSAppender.SQSAppender' SQSAppender.BufferingSQSAppender
+AWSAppender.SQS.Services,SendMessageBatchRequestWrapper,0,0,3,0,0,9,0,0,0,-1,0,3,,AWSAppender.SQS.Services.SQSClientWrapper' SQSAppender.SQSAppender' SQSAppender.BufferingSQSAppender
 AWSAppender.SQS.Services,LockObject,1,1,0,0,1,8,1,0,0,0,0,1,,AWSAppender.SQS.Services.SQSClientWrapper
-AWSAppender.SQS.Services,SQSEventProcessor,6,3,1,0,2,38,3,0,1,0,2,0,AWSAppender.SQS.Parsers.ISQSEventMessageParser' AWSAppender.Core.Services.PatternParser,
-SQSAppender,BufferingSQSAppender,9,6,7,0,2,149,13,0,1,0.5,4,0,AWSAppender.Core.Services.EventRateLimiter' AWSAppender.SQS.Services.SQSClientWrapper' AWSAppender.Core.Services.IEventProcessor' AWSAppender.SQS.Model.SQSDatum,
-SQSAppender,MessageTooLargeException,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SQSAppender,ISQSAppender,0,0,3,0,0,6,0,2,1,-1,0,0,,
-SQSAppender,SQSAppender,4,4,5,0,2,74,8,0,2,0.5,4,0,AWSAppender.SQS.Services.SQSClientWrapper' AWSAppender.Core.Services.IEventProcessor' AWSAppender.SQS.Model.SQSDatum' AWSAppender.Core.Services.EventRateLimiter,
+AWSAppender.SQS.Services,SQSEventProcessor,6,3,1,0,2,38,3,0,1,0,0,2,,SQSAppender.SQSAppender' SQSAppender.BufferingSQSAppender
+SQSAppender,BufferingSQSAppender,9,6,7,0,2,149,13,0,1,0.5,8,0,AWSAppender.SQS.Model.SQSDatum' AWSAppender.SQS.Model.SQSDatumRenderer' AWSAppender.SQS.Parsers.SQSMessageParser' AWSAppender.SQS.Services.SQSClientWrapper' AWSAppender.SQS.Services.SendMessageBatchRequestWrapper' AWSAppender.SQS.Services.SQSEventProcessor' SQSAppender.MessageTooLargeException' SQSAppender.ISQSAppender,
+SQSAppender,MessageTooLargeException,0,0,0,0,0,3,0,0,0,-1,0,1,,SQSAppender.BufferingSQSAppender
+SQSAppender,ISQSAppender,0,0,3,0,0,6,0,2,1,-1,0,2,,SQSAppender.BufferingSQSAppender' SQSAppender.SQSAppender
+SQSAppender,SQSAppender,4,4,5,0,2,74,8,0,2,0.5,7,0,AWSAppender.SQS.Model.SQSDatum' AWSAppender.SQS.Model.SQSDatumRenderer' AWSAppender.SQS.Parsers.SQSMessageParser' AWSAppender.SQS.Services.SQSClientWrapper' AWSAppender.SQS.Services.SendMessageBatchRequestWrapper' AWSAppender.SQS.Services.SQSEventProcessor' SQSAppender.ISQSAppender,

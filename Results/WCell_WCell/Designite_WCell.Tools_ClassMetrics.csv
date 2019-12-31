@@ -1,74 +1,74 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WCell.Tools.Commands,DBCCommand,0,1,0,0,0,20,1,0,1,-1,0,0,,
-WCell.Tools.Commands,DBCDumpCommand,0,2,0,0,1,12,2,0,1,-1,2,0,WCell.MPQTool.DBCTool' WCell.RealmServer.RealmServerConfiguration,
-WCell.Tools.Commands,PacketAnalyzerCommand,0,1,1,0,0,584,1,0,1,-1,0,0,,
-WCell.Tools.Commands,PASubCommand,0,4,2,0,4,133,16,20,1,-1,2,0,WCell.Tools.PATools.PATool' WCell.Util.Strings.StringStream,
-WCell.Tools.Commands,PAParseCommand,0,2,0,0,1,15,2,0,2,-1,1,0,WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PASaveCommand,0,2,0,0,1,23,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PALoadCommand,0,2,0,0,1,13,2,0,2,-1,1,0,WCell.RealmServer.Debugging.DebugUtil,
-WCell.Tools.Commands,PAInfoCommand,0,2,0,0,1,26,2,0,2,-1,2,0,WCell.Tools.PATools.PATool' WCell.Util.IStreamTarget,
-WCell.Tools.Commands,PASelectDirCommand,0,2,0,0,1,37,5,0,2,-1,2,0,WCell.Tools.PATools.PATool' WCell.Util.Strings.StringStream,
-WCell.Tools.Commands,PASelectOutputFileCommand,0,2,0,0,1,21,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PASelectParserCommand,0,2,0,0,1,14,2,0,2,-1,3,0,WCell.Tools.PATools.PATool' WCell.Util.Strings.StringStream' WCell.PacketAnalysis.Logs.LogParserType,
-WCell.Tools.Commands,PAListParsersCommand,0,2,0,0,1,17,3,0,2,-1,1,0,WCell.PacketAnalysis.Logs.LogParserType,
-WCell.Tools.Commands,PAAddSelectedFilesCommand,0,2,0,0,1,41,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PARemoveSelectedFilesCommand,0,2,0,0,1,32,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
+WCell.Tools.Commands,DBCCommand,0,1,0,0,0,20,1,0,1,-1,2,0,WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.Commands.ToolCommand,
+WCell.Tools.Commands,DBCDumpCommand,0,2,0,0,1,12,2,0,1,-1,0,0,,
+WCell.Tools.Commands,PacketAnalyzerCommand,0,1,1,0,0,584,1,0,1,-1,5,0,WCell.Tools.Commands.PASubCommand' WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.Commands.ToolCommand' WCell.Tools.PATools.PATool' WCell.Tools.Tools,
+WCell.Tools.Commands,PASubCommand,0,4,2,0,4,133,24,20,1,-1,0,1,,WCell.Tools.Commands.PacketAnalyzerCommand
+WCell.Tools.Commands,PAParseCommand,0,2,0,0,1,15,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PASaveCommand,0,2,0,0,1,23,3,0,2,-1,0,0,,
+WCell.Tools.Commands,PALoadCommand,0,2,0,0,1,13,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PAInfoCommand,0,2,0,0,1,26,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PASelectDirCommand,0,2,0,0,1,37,5,0,2,-1,0,0,,
+WCell.Tools.Commands,PASelectOutputFileCommand,0,2,0,0,1,21,3,0,2,-1,0,0,,
+WCell.Tools.Commands,PASelectParserCommand,0,2,0,0,1,14,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PAListParsersCommand,0,2,0,0,1,17,3,0,2,-1,0,0,,
+WCell.Tools.Commands,PAAddSelectedFilesCommand,0,2,0,0,1,41,6,0,2,-1,0,0,,
+WCell.Tools.Commands,PARemoveSelectedFilesCommand,0,2,0,0,1,32,4,0,2,-1,0,0,,
 WCell.Tools.Commands,PAAddFilterCommand,0,2,0,0,1,112,2,0,2,-1,0,0,,
-WCell.Tools.Commands,PAAddIncAndFilterCommand,0,2,0,0,1,25,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PAAddIncOrFilterCommand,0,2,0,0,1,25,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PAAddExcAndFilterCommand,0,2,0,0,1,25,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PAAddExcOrFilterCommand,0,2,0,0,1,25,3,0,2,-1,2,0,WCell.Util.Strings.StringStream' WCell.Tools.PATools.PATool,
+WCell.Tools.Commands,PAAddIncAndFilterCommand,0,2,0,0,1,25,4,0,2,-1,0,0,,
+WCell.Tools.Commands,PAAddIncOrFilterCommand,0,2,0,0,1,25,4,0,2,-1,0,0,,
+WCell.Tools.Commands,PAAddExcAndFilterCommand,0,2,0,0,1,25,4,0,2,-1,0,0,,
+WCell.Tools.Commands,PAAddExcOrFilterCommand,0,2,0,0,1,25,4,0,2,-1,0,0,,
 WCell.Tools.Commands,PARemoveFilterCommand,0,2,0,0,1,68,2,0,2,-1,0,0,,
-WCell.Tools.Commands,PARemoveIncAndFilterCommand,0,2,0,0,1,14,2,0,2,-1,1,0,WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PARemoveIncOrFilterCommand,0,2,0,0,1,14,2,0,2,-1,1,0,WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PARemoveExcAndFilterCommand,0,2,0,0,1,14,2,0,2,-1,1,0,WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PARemoveExcOrFilterCommand,0,2,0,0,1,14,2,0,2,-1,1,0,WCell.Tools.PATools.PATool,
-WCell.Tools.Commands,PepsiFactionStudiesCommand,0,1,0,0,0,21,1,0,1,-1,0,0,,
-WCell.Tools.Commands,StudySpellCommand,0,4,0,0,2,24,4,0,1,-1,3,0,WCell.RealmServer.Factions.FactionMgr' WCell.Tools.Pepsi.FactionStudies' WCell.Tools.Ralek.SpellStudies,
-WCell.Tools.Commands,RalekSpellStudiesCommand,0,1,0,0,0,20,1,0,1,-1,0,0,,
-WCell.Tools.Commands,ToolCommandHandler,1,2,1,1,2,63,3,0,0,0,2,2,WCell.Tools.Tools' WCell.Tools.Commands.ToolCmdArgs,WCell.PostBuild.Docs.CommandDocs' WCell.Tools.Tools
-WCell.Tools.Commands,ToolCmdTrigger,0,2,0,0,2,11,2,0,0,-1,1,0,WCell.RealmServer.Chat.ChatUtility,
-WCell.Tools.Commands,ToolCmdArgs,0,0,0,0,0,3,0,0,1,-1,0,1,,WCell.Tools.Commands.ToolCommandHandler
-WCell.Tools.Commands,ToolCommand,0,0,1,0,0,7,0,7,0,-1,0,0,,
-WCell.Tools.Commands,LocaleCommand,0,2,0,0,1,26,3,0,1,-1,3,0,WCell.Constants.ClientLocale' WCell.Util.Strings.StringStream' WCell.Tools.ToolConfig,
-WCell.Tools.Commands,WPCommand,0,1,0,0,0,26,1,0,1,-1,0,0,,
-WCell.Tools.Commands,RandomWPCommand,0,2,0,0,1,19,2,0,1,-1,3,0,WCell.Util.Strings.StringStream' WCell.RealmServer.Waypoints.RandomWaypointGenerator' WCell.Util.Graphics.Vector3,
-WCell.Tools.Commands,DumpCommand,1,2,0,1,1,147,3,0,1,0,2,0,WCell.Util.Utility' WCell.Constants.WCellInfo,
-WCell.Tools.Commands,DumpSpellsCommand,0,3,0,0,2,18,3,0,1,-1,1,1,WCell.Tools.Domi.Output.SpellOutput,WCell.Tools.Commands.DumpAllCommand
-WCell.Tools.Commands,DumpNPCsCommand,0,3,0,0,2,18,3,0,1,-1,1,1,WCell.Tools.Domi.Output.NPCOutput,WCell.Tools.Commands.DumpAllCommand
-WCell.Tools.Commands,DumpGOsCommand,0,3,0,0,2,18,3,0,1,-1,1,1,WCell.Tools.Domi.Output.GOOutput,WCell.Tools.Commands.DumpAllCommand
-WCell.Tools.Commands,DumpItemsCommand,0,3,0,0,2,18,3,0,1,-1,1,1,WCell.Tools.Domi.Output.ItemOutput,WCell.Tools.Commands.DumpAllCommand
-WCell.Tools.Commands,DumpQuestsCommand,0,3,0,0,2,18,3,0,1,-1,1,1,WCell.Tools.Domi.Output.QuestOutput,WCell.Tools.Commands.DumpAllCommand
-WCell.Tools.Commands,DumpATsCommand,0,3,0,0,2,18,3,0,1,-1,1,1,WCell.Tools.Domi.Output.ATOutput,WCell.Tools.Commands.DumpAllCommand
-WCell.Tools.Commands,DumpAllCommand,0,3,0,0,2,21,3,0,1,-1,6,0,WCell.Tools.Commands.DumpSpellsCommand' WCell.Tools.Commands.DumpNPCsCommand' WCell.Tools.Commands.DumpGOsCommand' WCell.Tools.Commands.DumpItemsCommand' WCell.Tools.Commands.DumpQuestsCommand' WCell.Tools.Commands.DumpATsCommand,
-WCell.Tools.Domi,Instances,0,1,0,0,1,28,3,0,0,-1,8,0,WCell.Tools.ToolConfig' WCell.RealmServer.Database.RealmDBMgr' WCell.RealmServer.Content.ContentMgr' WCell.RealmServer.Global.World' WCell.RealmServer.Instances.InstanceMgr' WCell.Constants.World.MapId' WCell.RealmServer.Global.MapTemplate' WCell.RealmServer.Instances.BaseInstance,
-WCell.Tools.Domi,WCellEnumWriter,4,26,0,3,25,693,39,0,0,0,43,1,WCell.RealmServer.Database.RealmDBMgr' WCell.RealmServer.Content.ContentMgr' WCell.RealmServer.Global.World' WCell.RealmServer.Spells.SpellHandler' WCell.RealmServer.Factions.FactionMgr' WCell.RealmServer.AreaTriggers.AreaTriggerMgr' WCell.RealmServer.Misc.CfgCategories' WCell.RealmServer.NPCs.NPCMgr' WCell.RealmServer.Items.ItemMgr' WCell.RealmServer.Items.ItemTemplate' WCell.Constants.Items.InventorySlotType' WCell.Constants.Items.ItemClass' WCell.RealmServer.Spells.Spell' WCell.RealmServer.Items.ItemSet' WCell.RealmServer.NPCs.NPCEntry' WCell.Constants.NPCs.CreatureRank' WCell.RealmServer.NPCs.CreatureFamily' WCell.RealmServer.GameObjects.GOMgr' WCell.RealmServer.GameObjects.GOEntry' WCell.Tools.Spells.SpellFocusObjectReader' WCell.RealmServer.Spells.SpellEffect' WCell.Constants.Spells.AuraType' WCell.RealmServer.Global.ZoneTemplate' WCell.RealmServer.Global.MapTemplate' WCell.RealmServer.Talents.TalentMgr' WCell.RealmServer.Talents.TalentEntry' WCell.RealmServer.Talents.TalentTree' WCell.Util.NLog.LogUtil' WCell.RealmServer.Skills.SkillHandler' WCell.RealmServer.Skills.SkillLine' WCell.Tools.Spells.SpellLineWriter' WCell.RealmServer.Skills.SkillAbility' WCell.Constants.SkillCategory' WCell.RealmServer.RealmServerConfiguration' WCell.Core.WCellConstants' WCell.Tools.Domi.DistanceEntry' WCell.RealmServer.Factions.FactionEntry' WCell.RealmServer.Factions.Faction' WCell.RealmServer.Factions.FactionTemplateEntry' WCell.RealmServer.Items.TotemCategoryInfo' WCell.RealmServer.AreaTriggers.AreaTrigger' WCell.RealmServer.AreaTriggers.ATTemplate' WCell.Util.Code.CodeFileWriter,WCell.Tools.Spells.SpellLineWriter
-WCell.Tools.Domi,DistanceConverter,0,1,0,0,1,11,1,0,0,-1,1,0,WCell.Tools.Domi.DistanceEntry,
-WCell.Tools.Domi,DistanceEntry,3,0,0,3,0,6,0,0,0,-1,0,2,,WCell.Tools.Domi.WCellEnumWriter' WCell.Tools.Domi.DistanceConverter
-WCell.Tools.Domi.Output,ATOutput,1,2,0,1,1,27,2,0,0,0,5,1,WCell.RealmServer.Database.RealmDBMgr' WCell.RealmServer.Spells.SpellHandler' WCell.RealmServer.AreaTriggers.AreaTriggerMgr' WCell.RealmServer.AreaTriggers.AreaTrigger' WCell.Util.IndentTextWriter,WCell.Tools.Commands.DumpATsCommand
-WCell.Tools.Domi.Output,QuestOutput,1,4,0,1,4,72,6,0,0,0.5,9,1,WCell.RealmServer.Quests.QuestMgr' WCell.Tools.Tools' WCell.RealmServer.Items.ItemMgr' WCell.RealmServer.NPCs.NPCMgr' WCell.RealmServer.GameObjects.GOMgr' WCell.RealmServer.AreaTriggers.AreaTriggerMgr' WCell.Tools.ToolConfig' WCell.Util.IndentTextWriter' WCell.RealmServer.Quests.QuestTemplate,WCell.Tools.Commands.DumpQuestsCommand
-WCell.Tools.Domi.Output,GOOutput,2,10,0,1,6,191,31,0,0,0.3,10,1,WCell.RealmServer.Database.RealmDBMgr' WCell.RealmServer.Spells.SpellHandler' WCell.RealmServer.GameObjects.GOMgr' WCell.RealmServer.GameObjects.GOEntry' WCell.Constants.GameObjects.GameObjectType' WCell.RealmServer.GameObjects.Spawns.GOSpawnEntry' WCell.RealmServer.Misc.LockEntry' WCell.RealmServer.Misc.LockOpeningMethod' WCell.Constants.Skills.SkillId' WCell.Util.Utility,WCell.Tools.Commands.DumpGOsCommand
-WCell.Tools.Domi.Output,ItemOutput,3,2,0,1,1,33,2,0,0,0,3,1,WCell.Tools.Tools' WCell.RealmServer.Items.ItemMgr' WCell.RealmServer.Items.ItemTemplate,WCell.Tools.Commands.DumpItemsCommand
+WCell.Tools.Commands,PARemoveIncAndFilterCommand,0,2,0,0,1,14,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PARemoveIncOrFilterCommand,0,2,0,0,1,14,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PARemoveExcAndFilterCommand,0,2,0,0,1,14,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PARemoveExcOrFilterCommand,0,2,0,0,1,14,2,0,2,-1,0,0,,
+WCell.Tools.Commands,PepsiFactionStudiesCommand,0,1,0,0,0,21,1,0,1,-1,3,0,WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.Commands.ToolCommand' WCell.Tools.Pepsi.FactionStudies,
+WCell.Tools.Commands,StudySpellCommand,0,4,0,0,2,24,4,0,1,-1,0,0,,
+WCell.Tools.Commands,RalekSpellStudiesCommand,0,1,0,0,0,20,1,0,1,-1,3,0,WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.Commands.ToolCommand' WCell.Tools.Ralek.SpellStudies,
+WCell.Tools.Commands,ToolCommandHandler,1,2,1,1,2,63,3,0,0,0,3,1,WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.ToolConfig' WCell.Tools.Tools,WCell.Tools.Tools
+WCell.Tools.Commands,ToolCmdTrigger,0,2,0,0,2,11,2,0,0,-1,1,0,WCell.Tools.Commands.ToolCmdArgs,
+WCell.Tools.Commands,ToolCmdArgs,0,0,0,0,0,3,0,0,1,-1,0,11,,WCell.Tools.Commands.DBCCommand' WCell.Tools.Commands.RalekSpellStudiesCommand' WCell.Tools.Commands.LocaleCommand' WCell.Tools.Commands.WPCommand' WCell.Tools.Commands.PepsiFactionStudiesCommand' WCell.Tools.Tools' WCell.Tools.Commands.ToolCommandHandler' WCell.Tools.Commands.ToolCmdTrigger' WCell.Tools.Commands.ToolCommand' WCell.Tools.Commands.DumpCommand' WCell.Tools.Commands.PacketAnalyzerCommand
+WCell.Tools.Commands,ToolCommand,0,0,1,0,0,7,0,7,0,-1,1,7,WCell.Tools.Commands.ToolCmdArgs,WCell.Tools.Commands.DBCCommand' WCell.Tools.Commands.PepsiFactionStudiesCommand' WCell.Tools.Commands.PacketAnalyzerCommand' WCell.Tools.Commands.RalekSpellStudiesCommand' WCell.Tools.Commands.LocaleCommand' WCell.Tools.Commands.WPCommand' WCell.Tools.Commands.DumpCommand
+WCell.Tools.Commands,LocaleCommand,0,2,0,0,1,26,4,0,1,-1,3,0,WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.Commands.ToolCommand' WCell.Tools.ToolConfig,
+WCell.Tools.Commands,WPCommand,0,1,0,0,0,26,1,0,1,-1,2,0,WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.Commands.ToolCommand,
+WCell.Tools.Commands,RandomWPCommand,0,2,0,0,1,19,2,0,1,-1,0,0,,
+WCell.Tools.Commands,DumpCommand,1,2,0,1,1,147,3,0,1,0,14,0,WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.Commands.ToolCommand' WCell.Tools.Commands.DumpSpellsCommand' WCell.Tools.Commands.DumpNPCsCommand' WCell.Tools.Commands.DumpGOsCommand' WCell.Tools.Commands.DumpItemsCommand' WCell.Tools.Commands.DumpQuestsCommand' WCell.Tools.Commands.DumpATsCommand' WCell.Tools.Domi.Output.ATOutput' WCell.Tools.Domi.Output.QuestOutput' WCell.Tools.Domi.Output.GOOutput' WCell.Tools.Domi.Output.ItemOutput' WCell.Tools.Domi.Output.NPCOutput' WCell.Tools.Domi.Output.SpellOutput,
+WCell.Tools.Commands,DumpSpellsCommand,0,3,0,0,2,18,3,0,1,-1,0,1,,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Commands,DumpNPCsCommand,0,3,0,0,2,18,3,0,1,-1,0,1,,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Commands,DumpGOsCommand,0,3,0,0,2,18,3,0,1,-1,0,1,,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Commands,DumpItemsCommand,0,3,0,0,2,18,3,0,1,-1,0,1,,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Commands,DumpQuestsCommand,0,3,0,0,2,18,3,0,1,-1,0,1,,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Commands,DumpATsCommand,0,3,0,0,2,18,3,0,1,-1,0,1,,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Commands,DumpAllCommand,0,3,0,0,2,21,3,0,1,-1,0,0,,
+WCell.Tools.Domi,Instances,0,1,0,0,1,28,3,0,0,-1,1,0,WCell.Tools.ToolConfig,
+WCell.Tools.Domi,WCellEnumWriter,4,26,0,3,25,693,54,0,0,0,5,1,WCell.Tools.Domi.DistanceConverter' WCell.Tools.Domi.DistanceEntry' WCell.Tools.Spells.SpellFocusObjectReader' WCell.Tools.Spells.SpellLineWriter' WCell.Tools.ToolConfig,WCell.Tools.Spells.SpellLineWriter
+WCell.Tools.Domi,DistanceConverter,0,1,0,0,1,11,1,0,0,-1,0,1,,WCell.Tools.Domi.WCellEnumWriter
+WCell.Tools.Domi,DistanceEntry,3,0,0,3,0,6,0,0,0,-1,0,1,,WCell.Tools.Domi.WCellEnumWriter
+WCell.Tools.Domi.Output,ATOutput,1,2,0,1,1,27,4,0,0,0,1,1,WCell.Tools.ToolConfig,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Domi.Output,QuestOutput,1,4,0,1,4,72,11,0,0,0.5,2,1,WCell.Tools.ToolConfig' WCell.Tools.Tools,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Domi.Output,GOOutput,2,10,0,1,6,191,34,0,0,0.3,1,1,WCell.Tools.ToolConfig,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Domi.Output,ItemOutput,3,2,0,1,1,33,4,0,0,0,2,1,WCell.Tools.ToolConfig' WCell.Tools.Tools,WCell.Tools.Commands.DumpCommand
 WCell.Tools.Domi.Output,MiscOutput,0,1,0,0,1,6,1,0,0,-1,0,0,,
-WCell.Tools.Domi.Output,NPCOutput,1,8,0,1,8,109,8,0,0,0.38,12,1,WCell.Tools.Tools' WCell.RealmServer.NPCs.NPCMgr' WCell.RealmServer.NPCs.NPCEntry' WCell.Util.IndentTextWriter' WCell.Tools.ToolConfig' WCell.Constants.ClassId' WCell.Constants.RaceId' WCell.Constants.SheathType' WCell.Constants.Pets.PetState' WCell.RealmServer.NPCs.NPCAddonData' WCell.RealmServer.NPCs.Spawns.NPCSpawnEntry' WCell.Util.Utility,WCell.Tools.Commands.DumpNPCsCommand
-WCell.Tools.Domi.Output,TalentOutput,0,1,0,0,1,30,1,0,0,-1,5,0,WCell.RealmServer.Talents.TalentMgr' WCell.Tools.ToolConfig' WCell.Core.WCellConstants' WCell.Constants.ClassId' WCell.RealmServer.Talents.TalentTree,
-WCell.Tools.Domi.Output,SkillOutput,0,5,0,0,5,118,5,0,0,-1,5,0,WCell.Tools.Domi.Output.SpellOutput' WCell.RealmServer.Skills.SkillHandler' WCell.Tools.ToolConfig' WCell.RealmServer.Skills.SkillRaceClassInfo' WCell.RealmServer.Skills.SkillAbility,
-WCell.Tools.Domi.Output,SpellOutput,2,30,0,2,26,811,65,0,0,0.33,20,2,WCell.Constants.Spells.SpellEffectType' WCell.Core.Initialization.InitMgr' WCell.RealmServer.Database.RealmDBMgr' WCell.RealmServer.RealmServer' WCell.RealmServer.Addons.RealmAddonMgr' WCell.RealmServer.Content.ContentMgr' WCell.RealmServer.Spells.SpellHandler' WCell.RealmServer.Factions.FactionMgr' WCell.RealmServer.Spells.Spell' WCell.RealmServer.Spells.SpellEffect' WCell.Tools.ToolConfig' WCell.RealmServer.Entities.ObjectReference' WCell.Constants.Spells.ImplicitSpellTargetType' WCell.Tools.Domi.Output.TargetPair' WCell.Constants.Spells.AuraType' WCell.Constants.Spells.SpellFocus' WCell.Tools.Tools' WCell.RealmServer.Items.ItemMgr' WCell.RealmServer.Spells.DurationEntry' WCell.Constants.Spells.SpellClassSet,WCell.Tools.Commands.DumpSpellsCommand' WCell.Tools.Domi.Output.SkillOutput
-WCell.Tools.Domi.Output,TargetPair,2,3,0,2,3,23,4,0,0,0,1,1,WCell.Constants.Spells.ImplicitSpellTargetType,WCell.Tools.Domi.Output.SpellOutput
-WCell.Tools.Misc,LineConverter,2,2,0,2,2,35,4,0,0,0,1,0,WCell.Tools.ToolConfig,
-WCell.Tools.Mokrago,CombatRatingsOutput,1,6,0,1,1,91,13,0,0,0.5,4,0,WCell.Tools.Tools' WCell.RealmServer.Entities.GameTables' WCell.Constants.Misc.CombatRating' WCell.Constants.ClassId,
-WCell.Tools.Pepsi,FactionStudies,1,2,0,1,2,73,8,0,0,0,5,1,WCell.RealmServer.Factions.FactionMgr' WCell.Constants.Factions.FactionTemplateFlags' WCell.RealmServer.Factions.FactionTemplateEntry' WCell.RealmServer.Factions.Faction' WCell.Util.IndentTextWriter,WCell.Tools.Commands.StudySpellCommand
-WCell.Tools.Spells,SpellEffectCreator,2,2,0,0,2,44,2,0,0,0,2,0,WCell.RealmServer.Spells.SpellHandler' WCell.Constants.Spells.SpellEffectType,
-WCell.Tools.Spells,SpellFocusObjectReader,0,1,0,0,1,14,2,0,0,-1,3,1,WCell.RealmServer.RealmServerConfiguration' WCell.Core.WCellConstants' WCell.RealmServer.Spells.SpellFocusEntry,WCell.Tools.Domi.WCellEnumWriter
-WCell.Tools.Spells,SpellLineWriter,3,8,1,0,4,289,52,0,0,0.25,22,1,NLog.Logger' WCell.Util.Code.CodeFileWriter' WCell.Tools.ToolConfig' WCell.Tools.Domi.WCellEnumWriter' WCell.Constants.ClassId' WCell.RealmServer.Spells.Spell' WCell.Constants.ClassMask' WCell.RealmServer.Skills.SkillLine' WCell.RealmServer.Skills.SkillAbility' WCell.RealmServer.Database.RealmDBMgr' WCell.RealmServer.Content.ContentMgr' WCell.RealmServer.Spells.SpellHandler' WCell.RealmServer.Global.World' WCell.RealmServer.RacesClasses.ArchetypeMgr' WCell.RealmServer.NPCs.NPCMgr' WCell.RealmServer.RacesClasses.Archetype' WCell.RealmServer.NPCs.NPCEntry' WCell.RealmServer.NPCs.Trainers.TrainerEntry' WCell.RealmServer.NPCs.Trainers.TrainerSpellEntry' WCell.Constants.SkillCategory' WCell.RealmServer.Spells.SpellEffect' WCell.Constants.Spells.SpellEffectType,WCell.Tools.Domi.WCellEnumWriter
-WCell.Tools.PATools,PATool,7,18,11,1,12,384,53,0,0,0.22,9,18,WCell.Util.IStreamTarget' WCell.PacketAnalysis.Logs.LogParserType' WCell.PacketAnalysis.Logs.GenericLogParser' WCell.Util.XmlFileBase' WCell.Core.Network.PacketId' WCell.PacketAnalysis.PacketParser' WCell.Util.IndentTextWriter' WCell.PacketAnalysis.Updates.ParsedUpdatePacket' WCell.Tools.ToolConfig,WCell.Tools.Commands.PASubCommand' WCell.Tools.Commands.PAParseCommand' WCell.Tools.Commands.PASaveCommand' WCell.Tools.Commands.PAInfoCommand' WCell.Tools.Commands.PASelectDirCommand' WCell.Tools.Commands.PASelectOutputFileCommand' WCell.Tools.Commands.PASelectParserCommand' WCell.Tools.Commands.PAAddSelectedFilesCommand' WCell.Tools.Commands.PARemoveSelectedFilesCommand' WCell.Tools.Commands.PAAddIncAndFilterCommand' WCell.Tools.Commands.PAAddIncOrFilterCommand' WCell.Tools.Commands.PAAddExcAndFilterCommand' WCell.Tools.Commands.PAAddExcOrFilterCommand' WCell.Tools.Commands.PARemoveIncAndFilterCommand' WCell.Tools.Commands.PARemoveIncOrFilterCommand' WCell.Tools.Commands.PARemoveExcAndFilterCommand' WCell.Tools.Commands.PARemoveExcOrFilterCommand' WCell.Tools.ToolConfig
+WCell.Tools.Domi.Output,NPCOutput,1,8,0,1,8,109,19,0,0,0.38,2,1,WCell.Tools.ToolConfig' WCell.Tools.Tools,WCell.Tools.Commands.DumpCommand
+WCell.Tools.Domi.Output,TalentOutput,0,1,0,0,1,30,5,0,0,-1,1,0,WCell.Tools.ToolConfig,
+WCell.Tools.Domi.Output,SkillOutput,0,5,0,0,5,118,23,0,0,-1,2,0,WCell.Tools.Domi.Output.SpellOutput' WCell.Tools.ToolConfig,
+WCell.Tools.Domi.Output,SpellOutput,2,30,0,2,26,811,139,0,0,0.33,3,2,WCell.Tools.Domi.Output.TargetPair' WCell.Tools.ToolConfig' WCell.Tools.Tools,WCell.Tools.Domi.Output.SkillOutput' WCell.Tools.Commands.DumpCommand
+WCell.Tools.Domi.Output,TargetPair,2,3,0,2,3,23,4,0,0,0,0,1,,WCell.Tools.Domi.Output.SpellOutput
+WCell.Tools.Misc,LineConverter,2,2,0,2,2,35,5,0,0,0,1,0,WCell.Tools.ToolConfig,
+WCell.Tools.Mokrago,CombatRatingsOutput,1,6,0,1,1,91,14,0,0,0.5,2,0,WCell.Tools.ToolConfig' WCell.Tools.Tools,
+WCell.Tools.Pepsi,FactionStudies,1,2,0,1,2,73,10,0,0,0,1,1,WCell.Tools.ToolConfig,WCell.Tools.Commands.PepsiFactionStudiesCommand
+WCell.Tools.Spells,SpellEffectCreator,2,2,0,0,2,44,3,0,0,0,0,0,,
+WCell.Tools.Spells,SpellFocusObjectReader,0,1,0,0,1,14,2,0,0,-1,0,1,,WCell.Tools.Domi.WCellEnumWriter
+WCell.Tools.Spells,SpellLineWriter,3,8,1,0,4,289,52,0,0,0.25,2,1,WCell.Tools.Domi.WCellEnumWriter' WCell.Tools.ToolConfig,WCell.Tools.Domi.WCellEnumWriter
+WCell.Tools.PATools,PATool,7,18,11,1,12,384,53,0,0,0.22,1,3,WCell.Tools.ToolConfig,WCell.Tools.Tools' WCell.Tools.ToolConfig' WCell.Tools.Commands.PacketAnalyzerCommand
 WCell.Tools.Ralek,SpellClassSet,0,0,0,0,0,3,0,0,0,-1,0,0,,
-WCell.Tools.Ralek,SpellStudies,0,30,0,0,26,500,98,0,0,-1,11,1,WCell.RealmServer.Spells.SpellHandler' WCell.RealmServer.Spells.Spell' WCell.Constants.Spells.SpellAttributes' WCell.Constants.Spells.SpellAttributesEx' WCell.Constants.Spells.SpellAttributesExB' WCell.Constants.Spells.SpellClassSet' WCell.Constants.Spells.SpellFacingFlags' WCell.RealmServer.Spells.SpellEffect' WCell.Constants.Spells.SpellEffectType' WCell.Constants.Spells.AuraType' WCell.Constants.Spells.ImplicitSpellTargetType,WCell.Tools.Commands.StudySpellCommand
-WCell.Tools.Ralek,SpellExtensions,0,4,0,0,4,27,8,0,0,-1,5,0,WCell.RealmServer.Spells.Spell' WCell.Constants.Spells.SpellAttributes' WCell.Constants.Spells.SpellAttributesEx' WCell.Constants.Spells.SpellAttributesExB' WCell.Constants.Spells.SpellFacingFlags,
+WCell.Tools.Ralek,SpellStudies,0,30,0,0,26,500,98,0,0,-1,0,1,,WCell.Tools.Commands.RalekSpellStudiesCommand
+WCell.Tools.Ralek,SpellExtensions,0,4,0,0,4,27,8,0,0,-1,0,0,,
 WCell.Tools.Ralek,Extensions,0,7,0,0,7,78,12,0,0,-1,0,0,,
-WCell.Tools,ToolConfig,10,5,26,7,3,115,8,0,0,0.6,8,12,NLog.Logger' WCell.Util.Variables.NotVariableAttribute' WCell.Constants.ClientLocale' WCell.Tools.PATools.PATool' WCell.MPQTool.DBCTool' WCell.PacketAnalysis.Logs.LogConverter' WCell.PacketAnalysis.Logs.LogParserType' WCell.RealmServer.Debugging.DebugUtil,WCell.PostBuild.Docs.CommandDocs' WCell.Tools.Commands.LocaleCommand' WCell.Tools.Domi.Instances' WCell.Tools.Domi.Output.QuestOutput' WCell.Tools.Domi.Output.NPCOutput' WCell.Tools.Domi.Output.TalentOutput' WCell.Tools.Domi.Output.SkillOutput' WCell.Tools.Domi.Output.SpellOutput' WCell.Tools.Misc.LineConverter' WCell.Tools.Spells.SpellLineWriter' WCell.Tools.PATools.PATool' WCell.Tools.Tools
-WCell.Tools,Tools,3,9,1,2,8,257,18,0,0,0.44,23,6,WCell.Util.Toolshed.ToolMgr' NLog.Logger' WCell.Tools.ToolConfig' WCell.RealmServer.RealmServer' WCell.Util.NLog.LogUtil' WCell.RealmServer.RealmServerConfiguration' WCell.RealmServer.Addons.RealmAddonMgr' WCell.Core.Initialization.InitMgr' WCell.Tools.Commands.ToolCommandHandler' WCell.PacketAnalysis.PacketAnalyzer' WCell.Util.Commands.ConsoleCmdTrigger' WCell.Util.Strings.StringStream' WCell.RealmServer.Commands.RealmCommandHandler' WCell.RealmServer.Global.Map' WCell.Util.Utility' WCell.RealmServer.Items.ItemMgr' WCell.RealmServer.NPCs.NPCMgr' WCell.RealmServer.GameObjects.GOMgr' WCell.RealmServer.Quests.QuestMgr' WCell.RealmServer.Global.World' WCell.Constants.World.MapId' WCell.RealmServer.Content.ContentMgr' WCell.RealmServer.Database.RealmDBMgr,WCell.Tools.Commands.ToolCommandHandler' WCell.Tools.Domi.Output.QuestOutput' WCell.Tools.Domi.Output.ItemOutput' WCell.Tools.Domi.Output.NPCOutput' WCell.Tools.Domi.Output.SpellOutput' WCell.Tools.Mokrago.CombatRatingsOutput
-WCell.Tools,VariablePurifier,3,6,0,2,6,140,15,0,0,0,0,0,,
+WCell.Tools,ToolConfig,10,5,26,7,3,115,8,0,0,0.6,1,18,WCell.Tools.PATools.PATool,WCell.Tools.Commands.ToolCommandHandler' WCell.Tools.Domi.Output.ATOutput' WCell.Tools.Domi.WCellEnumWriter' WCell.Tools.Misc.LineConverter' WCell.Tools.Domi.Output.GOOutput' WCell.Tools.Domi.Output.ItemOutput' WCell.Tools.Domi.Instances' WCell.Tools.Pepsi.FactionStudies' WCell.Tools.Mokrago.CombatRatingsOutput' WCell.Tools.Spells.SpellLineWriter' WCell.Tools.Commands.LocaleCommand' WCell.Tools.PATools.PATool' WCell.Tools.Tools' WCell.Tools.Domi.Output.TalentOutput' WCell.Tools.Domi.Output.QuestOutput' WCell.Tools.Domi.Output.NPCOutput' WCell.Tools.Domi.Output.SkillOutput' WCell.Tools.Domi.Output.SpellOutput
+WCell.Tools,Tools,3,9,1,2,8,257,20,0,0,0.44,4,7,WCell.Tools.Commands.ToolCommandHandler' WCell.Tools.Commands.ToolCmdArgs' WCell.Tools.PATools.PATool' WCell.Tools.ToolConfig,WCell.Tools.Domi.Output.QuestOutput' WCell.Tools.Commands.PacketAnalyzerCommand' WCell.Tools.Domi.Output.ItemOutput' WCell.Tools.Commands.ToolCommandHandler' WCell.Tools.Mokrago.CombatRatingsOutput' WCell.Tools.Domi.Output.NPCOutput' WCell.Tools.Domi.Output.SpellOutput
+WCell.Tools,VariablePurifier,3,6,0,2,6,140,16,0,0,0,0,0,,
 WCell.Tools.Ralek.Utility,Stats,7,6,6,0,5,119,13,0,0,0,0,1,,WCell.Tools.Ralek.Utility.MultiSampleCodeTimer
-WCell.Tools.Ralek.Utility,MultiSampleCodeTimer,5,4,2,4,4,66,6,0,0,0.75,2,0,WCell.Tools.Ralek.Utility.CodeTimer' WCell.Tools.Ralek.Utility.Stats,
+WCell.Tools.Ralek.Utility,MultiSampleCodeTimer,5,4,2,4,4,66,6,0,0,0.75,2,0,WCell.Tools.Ralek.Utility.Stats' WCell.Tools.Ralek.Utility.CodeTimer,
 WCell.Tools.Ralek.Utility,CodeTimer,6,4,2,2,3,76,9,0,0,0.5,0,1,,WCell.Tools.Ralek.Utility.MultiSampleCodeTimer

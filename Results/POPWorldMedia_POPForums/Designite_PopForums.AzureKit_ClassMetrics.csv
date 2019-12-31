@@ -1,6 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PopForums.AzureKit.Redis,CacheHelper,6,9,0,0,8,136,17,0,1,0,3,0,PopForums.Configuration.IErrorLog' PopForums.Configuration.IConfig' PopForums.Configuration.ErrorSeverity,
-PopForums.AzureKit.Search,SearchIndexSubsystem,2,3,0,1,2,91,5,0,1,0,10,1,PopForums.Services.ITextParsingService' PopForums.Models.Topic' PopForums.AzureKit.Search.SearchTopic' PopForums.Services.ISearchService' PopForums.Configuration.IConfig' PopForums.Services.IPostService' PopForums.Configuration.IErrorLog' PopForums.Configuration.ErrorSeverity' PopForums.Services.ITopicService' PopForums.Configuration.ISettingsManager,PopForums.AzureKit.Search.SearchRepository
-PopForums.AzureKit.Search,SearchRepository,3,7,0,0,7,80,10,0,0,0.86,7,0,PopForums.Configuration.IConfig' PopForums.Configuration.IErrorLog' PopForums.Repositories.ITopicRepository' PopForums.Data.Sql.ISqlObjectFactory' PopForums.AzureKit.Search.SearchIndexSubsystem' PopForums.Models.SearchType' PopForums.Configuration.ErrorSeverity,
-PopForums.AzureKit.Search,SearchTopic,0,0,12,0,0,16,0,0,0,-1,0,1,,PopForums.AzureKit.Search.SearchIndexSubsystem
-PopForums.AzureKit,ServiceCollectionExtensions,0,2,0,0,2,18,3,0,0,-1,0,0,,
+PopForums.AzureKit.Queue,AwardCalculationQueueRepository,2,4,0,1,3,34,4,0,1,0.5,0,1,,PopForums.AzureKit.ServiceCollectionExtensions
+PopForums.AzureKit.Queue,EmailQueueRepository,2,4,0,1,3,32,4,0,1,0.5,0,1,,PopForums.AzureKit.ServiceCollectionExtensions
+PopForums.AzureKit.Queue,SearchIndexQueueRepository,2,4,0,1,3,34,4,0,1,0.5,0,1,,PopForums.AzureKit.ServiceCollectionExtensions
+PopForums.AzureKit.Redis,CacheHelper,8,10,0,0,8,167,20,0,1,0,0,1,,PopForums.AzureKit.ServiceCollectionExtensions
+PopForums.AzureKit.Search,SearchIndexSubsystem,7,4,0,1,3,134,7,0,1,0,1,2,PopForums.AzureKit.Search.SearchTopic,PopForums.AzureKit.ServiceCollectionExtensions' PopForums.AzureKit.Search.SearchRepository
+PopForums.AzureKit.Search,SearchRepository,3,7,0,0,7,86,13,0,0,0.86,2,1,PopForums.AzureKit.Search.SearchIndexSubsystem' PopForums.AzureKit.Search.SearchTopic,PopForums.AzureKit.ServiceCollectionExtensions
+PopForums.AzureKit.Search,SearchTopic,0,0,14,0,0,18,0,0,0,-1,0,2,,PopForums.AzureKit.Search.SearchRepository' PopForums.AzureKit.Search.SearchIndexSubsystem
+PopForums.AzureKit,ServiceCollectionExtensions,0,4,0,0,4,35,5,0,0,-1,6,0,PopForums.AzureKit.Queue.AwardCalculationQueueRepository' PopForums.AzureKit.Queue.EmailQueueRepository' PopForums.AzureKit.Queue.SearchIndexQueueRepository' PopForums.AzureKit.Redis.CacheHelper' PopForums.AzureKit.Search.SearchIndexSubsystem' PopForums.AzureKit.Search.SearchRepository,

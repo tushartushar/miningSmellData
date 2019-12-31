@@ -1,8 +1,8 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-BackendServices,AcceptsAllOuroSellerEndPoint,3,2,0,0,2,36,2,0,1,0,2,0,Messages.SearchRequested' Messages.OuroResultFound,
+BackendServices,AcceptsAllOuroSellerEndPoint,3,2,0,0,2,36,2,0,1,0,1,0,BackendServices.IOuroSellerEndpoint,
 BackendServices,Json,2,2,0,2,2,40,3,0,0,0,1,1,BackendServices.Log,BackendServices.OuroSellerEndpointAdapter
-BackendServices,Log,0,2,0,0,2,12,2,0,0,-1,0,2,,BackendServices.Json' BackendServices.OuroSellerEndpointAdapter
+BackendServices,Log,0,2,0,0,2,12,2,0,0,-1,0,2,,BackendServices.OuroSellerEndpointAdapter' BackendServices.Json
 BackendServices,Handles<T>,0,0,0,0,0,1,0,0,0,-1,0,0,,
-BackendServices,IOuroSellerEndpoint,0,1,0,0,0,4,1,2,0,-1,1,1,Messages.SearchRequested,BackendServices.OuroSellerEndpointAdapter
-BackendServices,DecliningOuroSellerEndpoint,2,2,0,0,2,25,2,0,1,0,2,0,Messages.SearchRequested' Messages.OuroQuoteDeclined,
-BackendServices,OuroSellerEndpointAdapter,6,6,0,0,3,72,6,0,0,0,5,1,BackendServices.IOuroSellerEndpoint' BackendServices.Log' Messages.SearchRequested' Messages.Event' BackendServices.Json,ConsoleHost.ScatterGatherWireUp
+BackendServices,IOuroSellerEndpoint,0,1,0,0,0,4,1,2,0,-1,0,3,,BackendServices.DecliningOuroSellerEndpoint' BackendServices.AcceptsAllOuroSellerEndPoint' BackendServices.OuroSellerEndpointAdapter
+BackendServices,DecliningOuroSellerEndpoint,2,2,0,0,2,25,2,0,1,0,1,0,BackendServices.IOuroSellerEndpoint,
+BackendServices,OuroSellerEndpointAdapter,6,6,0,0,3,72,6,0,0,0,3,0,BackendServices.Json' BackendServices.Log' BackendServices.IOuroSellerEndpoint,

@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NServiceBus,ConfigureNcqrs,0,1,0,0,1,18,1,0,0,-1,1,0,NServiceBus.ConfigNcqrs,
-NServiceBus,ConfigNcqrs,3,4,0,0,4,46,4,0,0,0,4,1,Ncqrs.Messaging.MessageService' Ncqrs.Messaging.MessageSendingEventHandler' Ncqrs.Messaging.IMessageService' Ncqrs.Messaging.IReceivingStrategy,NServiceBus.ConfigureNcqrs
-Ncqrs.NServiceBus,EventMessage<T>,0,0,1,0,0,8,0,0,0,-1,0,0,,
-Ncqrs.NServiceBus,NsbEnvironmentConfiguration,1,2,0,0,2,23,4,0,0,0,0,0,,
-Ncqrs.NServiceBus,NsbEventBus,0,4,1,0,3,42,4,0,0,-1,1,0,Ncqrs.NServiceBus.IEventMessageFactory,
+NServiceBus,ConfigureNcqrs,0,1,0,0,1,18,1,0,0,-1,3,0,NServiceBus.ConfigNcqrs' Ncqrs.NServiceBus.CommandMessage' Ncqrs.NServiceBus.ConfigNcqrs,
+NServiceBus,ConfigNcqrs,3,4,0,0,4,46,4,0,0,0,2,1,Ncqrs.NServiceBus.NsbEnvironmentConfiguration' Ncqrs.NServiceBus.NsbEventBus,NServiceBus.ConfigureNcqrs
+Ncqrs.NServiceBus,EventMessage<T>,0,0,1,0,0,8,0,0,0,-1,0,1,,Ncqrs.NServiceBus.NsbEventBus
+Ncqrs.NServiceBus,NsbEnvironmentConfiguration,1,2,0,0,2,23,4,0,0,0,0,1,,NServiceBus.ConfigNcqrs
+Ncqrs.NServiceBus,NsbEventBus,0,4,1,0,3,42,4,0,0,-1,6,1,Ncqrs.NServiceBus.EventMessage<T>' Ncqrs.NServiceBus.IEventMessageFactory' Ncqrs.NServiceBus.EventMessageFactory<T>' Ncqrs.NServiceBus.EventMessage<T>' Ncqrs.NServiceBus.IEventMessageFactory' Ncqrs.NServiceBus.EventMessageFactory<T>,NServiceBus.ConfigNcqrs
 Ncqrs.NServiceBus,IEventMessageFactory,0,1,0,0,0,4,1,1,0,-1,0,1,,Ncqrs.NServiceBus.NsbEventBus
-Ncqrs.NServiceBus,EventMessageFactory<T>,0,1,0,0,0,10,1,0,1,-1,0,0,,
-Ncqrs.Messaging.NServiceBus,InternalMessage,0,0,8,0,0,12,0,0,0,-1,0,1,,Ncqrs.Messaging.NServiceBus.NsbInternalReceivingStrategy
-Ncqrs.Messaging.NServiceBus,NsbInternalReceivingStrategy,1,1,0,0,1,18,1,0,1,0,3,0,Ncqrs.Messaging.IAddressing' Ncqrs.Messaging.NServiceBus.InternalMessage' Ncqrs.Messaging.IncomingMessage,
-Ncqrs.Messaging.NServiceBus,NsbInternalSendingStrategy,1,1,1,0,1,23,1,0,1,0,3,0,Ncqrs.Messaging.IAddressing' Ncqrs.Messaging.Destination' Ncqrs.Messaging.OutgoingMessage,
-Ncqrs.Messaging.NServiceBus,NsbExternalSendingStrategy<TIn;TOut>,1,2,1,0,2,18,2,0,1,0,1,0,Ncqrs.Messaging.OutgoingMessage,
+Ncqrs.NServiceBus,EventMessageFactory<T>,0,1,0,0,0,10,1,0,1,-1,0,1,,Ncqrs.NServiceBus.NsbEventBus
+Ncqrs.Messaging.NServiceBus,InternalMessage,0,0,8,0,0,12,0,0,0,-1,0,2,,Ncqrs.Messaging.NServiceBus.NsbInternalReceivingStrategy' Ncqrs.Messaging.NServiceBus.NsbInternalSendingStrategy
+Ncqrs.Messaging.NServiceBus,NsbInternalReceivingStrategy,1,1,0,0,1,18,1,0,1,0,1,0,Ncqrs.Messaging.NServiceBus.InternalMessage,
+Ncqrs.Messaging.NServiceBus,NsbInternalSendingStrategy,1,1,1,0,1,23,1,0,1,0,1,0,Ncqrs.Messaging.NServiceBus.InternalMessage,
+Ncqrs.Messaging.NServiceBus,NsbExternalSendingStrategy<TIn;TOut>,1,2,1,0,2,18,2,0,1,0,0,0,,

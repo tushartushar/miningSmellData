@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 OpenRasta.DI.Unity.Extensions.Policies,CycleDetectionPolicy,0,0,0,0,0,3,0,0,0,-1,0,1,,OpenRasta.DI.Unity.Extensions.Strategies.CycleDetectionStrategy
-OpenRasta.DI.Unity.Extensions.Policies,TypeToBeResolved,1,2,0,0,2,13,2,0,0,0,0,0,,
-OpenRasta.DI.Unity.Extensions.Policies,PropertySelectorPolicy,0,2,0,0,1,51,8,0,0,-1,2,0,OpenRasta.DI.Unity.Extensions.TypeTracker' OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy,
-OpenRasta.DI.Unity.Extensions.Policies,ConstructorSelectorPolicy,1,3,0,0,1,75,11,0,0,0,3,0,OpenRasta.DI.Unity.Extensions.Policies.ParameterResolver' OpenRasta.DI.Unity.Extensions.TypeTracker' OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy,
+OpenRasta.DI.Unity.Extensions.Policies,TypeToBeResolved,1,2,0,0,2,13,2,0,0,1,0,2,,OpenRasta.DI.Unity.Extensions.Policies.ConstructorSelectorPolicy' OpenRasta.DI.Unity.Extensions.Policies.PropertySelectorPolicy
+OpenRasta.DI.Unity.Extensions.Policies,PropertySelectorPolicy,0,2,0,0,1,51,8,0,0,-1,2,1,OpenRasta.DI.Unity.Extensions.Policies.TypeToBeResolved' OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy,OpenRasta.DI.Unity.Extensions.InjectionPolicies
+OpenRasta.DI.Unity.Extensions.Policies,ConstructorSelectorPolicy,1,3,0,0,1,75,11,0,0,0,4,1,OpenRasta.DI.Unity.Extensions.Policies.TypeToBeResolved' OpenRasta.DI.Unity.Extensions.Policies.ParameterResolver' OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy' OpenRasta.DI.Unity.Extensions.TypeTracker,OpenRasta.DI.Unity.Extensions.InjectionPolicies
 OpenRasta.DI.Unity.Extensions.Policies,ParameterResolver,0,1,0,0,1,7,1,0,0,-1,0,1,,OpenRasta.DI.Unity.Extensions.Policies.ConstructorSelectorPolicy
-OpenRasta.DI.Unity.Extensions.Policies,TypeTrackerPolicy,0,1,1,0,1,8,1,0,0,-1,1,3,OpenRasta.DI.Unity.Extensions.TypeTracker,OpenRasta.DI.Unity.Extensions.Policies.PropertySelectorPolicy' OpenRasta.DI.Unity.Extensions.Policies.ConstructorSelectorPolicy' OpenRasta.DI.Unity.Extensions.Strategies.TypeRegistrationRequiredStrategy
-OpenRasta.DI.Unity.Extensions,TypeRegistrationRequired,0,1,0,0,0,7,1,0,0,-1,0,0,,
-OpenRasta.DI.Unity.Extensions,InjectionPolicies,0,2,0,0,0,25,3,0,0,-1,0,0,,
-OpenRasta.DI.Unity.Extensions,CycleDetector,0,1,0,0,0,7,1,0,0,-1,0,0,,
-OpenRasta.DI.Unity.Extensions,TypeTracker,1,5,1,0,3,82,17,0,0,0,0,6,,OpenRasta.DI.Unity.Extensions.Policies.PropertySelectorPolicy' OpenRasta.DI.Unity.Extensions.Policies.ConstructorSelectorPolicy' OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy' OpenRasta.DI.Unity.Extensions.Strategies.TypeRegistrationRequiredStrategy' OpenRasta.DI.Unity.UnityContainerExtensions' OpenRasta.DI.Unity.UnityDependencyResolver
-OpenRasta.DI.Unity.Extensions.Strategies,CycleDetectionStrategy,2,2,0,0,2,29,5,0,0,0,1,0,OpenRasta.DI.Unity.Extensions.Policies.CycleDetectionPolicy,
-OpenRasta.DI.Unity.Extensions.Strategies,TypeRegistrationRequiredStrategy,0,2,0,0,1,30,8,0,0,-1,2,0,OpenRasta.DI.Unity.Extensions.TypeTracker' OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy,
-OpenRasta.DI.Unity,PerRequestLifetimeManager,2,4,1,0,4,34,5,0,0,0.5,0,0,,
+OpenRasta.DI.Unity.Extensions.Policies,TypeTrackerPolicy,0,1,1,0,1,8,1,0,0,-1,1,4,OpenRasta.DI.Unity.Extensions.TypeTracker,OpenRasta.DI.Unity.Extensions.Policies.ConstructorSelectorPolicy' OpenRasta.DI.Unity.Extensions.TypeTracker' OpenRasta.DI.Unity.Extensions.Policies.PropertySelectorPolicy' OpenRasta.DI.Unity.Extensions.Strategies.TypeRegistrationRequiredStrategy
+OpenRasta.DI.Unity.Extensions,TypeRegistrationRequired,0,1,0,0,0,7,1,0,0,-1,1,1,OpenRasta.DI.Unity.Extensions.Strategies.TypeRegistrationRequiredStrategy,OpenRasta.DI.Unity.UnityDependencyResolver
+OpenRasta.DI.Unity.Extensions,InjectionPolicies,0,2,0,0,0,25,3,0,0,-1,2,1,OpenRasta.DI.Unity.Extensions.Policies.PropertySelectorPolicy' OpenRasta.DI.Unity.Extensions.Policies.ConstructorSelectorPolicy,OpenRasta.DI.Unity.UnityDependencyResolver
+OpenRasta.DI.Unity.Extensions,CycleDetector,0,1,0,0,0,7,1,0,0,-1,1,1,OpenRasta.DI.Unity.Extensions.Strategies.CycleDetectionStrategy,OpenRasta.DI.Unity.UnityDependencyResolver
+OpenRasta.DI.Unity.Extensions,TypeTracker,1,5,1,0,3,82,17,0,0,0,1,4,OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy,OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy' OpenRasta.DI.Unity.UnityContainerExtensions' OpenRasta.DI.Unity.Extensions.Policies.ConstructorSelectorPolicy' OpenRasta.DI.Unity.UnityDependencyResolver
+OpenRasta.DI.Unity.Extensions.Strategies,CycleDetectionStrategy,2,2,0,0,2,29,5,0,0,0,1,1,OpenRasta.DI.Unity.Extensions.Policies.CycleDetectionPolicy,OpenRasta.DI.Unity.Extensions.CycleDetector
+OpenRasta.DI.Unity.Extensions.Strategies,TypeRegistrationRequiredStrategy,0,2,0,0,1,30,8,0,0,-1,1,1,OpenRasta.DI.Unity.Extensions.Policies.TypeTrackerPolicy,OpenRasta.DI.Unity.Extensions.TypeRegistrationRequired
+OpenRasta.DI.Unity,PerRequestLifetimeManager,2,4,1,0,4,34,5,0,0,0.75,0,1,,OpenRasta.DI.Unity.UnityDependencyResolver
 OpenRasta.DI.Unity,UnityContainerExtensions,0,1,0,0,1,10,1,0,0,-1,1,0,OpenRasta.DI.Unity.Extensions.TypeTracker,
-OpenRasta.DI.Unity,UnityDependencyResolver,2,15,1,0,5,175,28,0,0,0,1,0,OpenRasta.DI.Unity.Extensions.TypeTracker,
+OpenRasta.DI.Unity,UnityDependencyResolver,2,15,1,0,5,175,31,0,0,0,5,0,OpenRasta.DI.Unity.Extensions.TypeRegistrationRequired' OpenRasta.DI.Unity.Extensions.InjectionPolicies' OpenRasta.DI.Unity.Extensions.CycleDetector' OpenRasta.DI.Unity.Extensions.TypeTracker' OpenRasta.DI.Unity.PerRequestLifetimeManager,

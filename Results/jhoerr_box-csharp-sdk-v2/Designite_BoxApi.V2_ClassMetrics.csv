@@ -1,98 +1,98 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-BoxApi.V2.Authentication.Common,IRequestAuthenticator,0,3,0,0,0,6,3,2,0,-1,0,4,,BoxApi.V2.BoxManager' BoxApi.V2.BoxRestClient' BoxApi.V2.BoxUploadClient' BoxApi.V2.BoxRestClientBase
-BoxApi.V2.Authentication.Common,RequestAuthenticatorBase,3,6,0,0,3,33,7,2,0,0.83,0,0,,
-BoxApi.V2.Authentication.Legacy,BoxAuthenticator,2,4,4,0,3,70,6,0,0,0,5,0,BoxApi.V2.Authentication.Legacy.RequestHelper' BoxApi.V2.BoxRestClient' BoxApi.V2.Model.Enum.BoxManagerOptions' BoxApi.V2.Authentication.Legacy.BoxTicket' BoxApi.V2.Authentication.Legacy.BoxAuthToken,
-BoxApi.V2.Authentication.Legacy,BoxAuthToken,0,0,3,0,0,15,0,0,0,-1,0,1,,BoxApi.V2.Authentication.Legacy.BoxAuthenticator
+BoxApi.V2.Authentication.Common,IRequestAuthenticator,0,3,0,0,0,6,3,2,0,-1,0,5,,BoxApi.V2.Authentication.OAuth2.OAuth2RequestAuthenticator' BoxApi.V2.Authentication.Legacy.LegacyRequestAuthenticator' BoxApi.V2.BoxRestClient' BoxApi.V2.BoxUploadClient' BoxApi.V2.BoxRestClientBase
+BoxApi.V2.Authentication.Common,RequestAuthenticatorBase,3,6,0,0,3,33,7,2,0,0.83,0,2,,BoxApi.V2.Authentication.Legacy.LegacyRequestAuthenticator' BoxApi.V2.Authentication.OAuth2.OAuth2RequestAuthenticator
+BoxApi.V2.Authentication.Legacy,BoxAuthenticator,2,4,4,0,3,70,6,0,0,0,6,0,BoxApi.V2.Authentication.Legacy.BoxAuthToken' BoxApi.V2.Authentication.Legacy.BoxTicket' BoxApi.V2.Authentication.Legacy.LegacyRequestAuthenticator' BoxApi.V2.Authentication.Legacy.RequestHelper' BoxApi.V2.BoxRestClient' BoxApi.V2.Model.Enum.BoxManagerOptions,
+BoxApi.V2.Authentication.Legacy,BoxAuthToken,0,0,3,0,0,15,0,0,0,-1,1,1,BoxApi.V2.Model.User,BoxApi.V2.Authentication.Legacy.BoxAuthenticator
 BoxApi.V2.Authentication.Legacy,BoxTicket,0,0,2,0,0,11,0,0,0,-1,0,1,,BoxApi.V2.Authentication.Legacy.BoxAuthenticator
-BoxApi.V2.Authentication.Legacy,BoxToken,0,0,2,0,0,11,0,0,1,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.TokenTests
-BoxApi.V2.Authentication.Legacy,LegacyRequestAuthenticator,1,2,0,0,2,23,3,0,1,0,0,0,,
+BoxApi.V2.Authentication.Legacy,BoxToken,0,0,2,0,0,11,0,0,1,-1,2,0,BoxApi.V2.Model.EntityBase' BoxApi.V2.Model.Entity,
+BoxApi.V2.Authentication.Legacy,LegacyRequestAuthenticator,1,2,0,0,2,23,3,0,1,0,2,1,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.Authentication.Common.RequestAuthenticatorBase,BoxApi.V2.Authentication.Legacy.BoxAuthenticator
 BoxApi.V2.Authentication.Legacy,RequestHelper,0,3,0,0,3,24,3,0,0,-1,0,1,,BoxApi.V2.Authentication.Legacy.BoxAuthenticator
-BoxApi.V2.Authentication.OAuth2,OAuth2RequestAuthenticator,0,2,0,0,2,22,4,0,1,-1,0,0,,
+BoxApi.V2.Authentication.OAuth2,OAuth2RequestAuthenticator,0,2,0,0,2,22,4,0,1,-1,2,0,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.Authentication.Common.RequestAuthenticatorBase,
 BoxApi.V2.Authentication.OAuth2,RequestHelper,0,4,0,0,4,45,6,0,0,-1,0,1,,BoxApi.V2.Authentication.OAuth2.TokenProvider
-BoxApi.V2.Authentication.OAuth2,OAuthToken,0,0,4,0,0,7,0,0,0,-1,0,5,,BoxApi.V2.Authentication.OAuth2.TokenProvider' BoxApi.V2.Samples.Program' BoxApi.V2.Tests.Authentication.OAuth2.AuthenticatorTests' BoxApi.V2.Tests.Harness.BoxApiTestHarness' BoxApi.V2.Tests.Harness.TestConfigInfo
-BoxApi.V2.Authentication.OAuth2,TokenProvider,4,5,0,0,5,34,5,0,0,0,4,3,BoxApi.V2.Authentication.OAuth2.RequestHelper' BoxApi.V2.BoxRestClient' BoxApi.V2.Model.Enum.BoxManagerOptions' BoxApi.V2.Authentication.OAuth2.OAuthToken,BoxApi.V2.Samples.Program' BoxApi.V2.Tests.Authentication.OAuth2.AuthenticatorTests' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2,BoxManager,6,270,0,0,255,3642,279,0,1,0.02,34,19,BoxApi.V2.RequestHelper' BoxApi.V2.BoxRestClient' BoxApi.V2.BoxUploadClient' BoxApi.V2.Model.Folder' BoxApi.V2.Model.Collaboration' BoxApi.V2.Model.Enum.CollaborationRole' BoxApi.V2.Model.CollaborationCollection' BoxApi.V2.Model.Enum.Status' BoxApi.V2.Model.File' BoxApi.V2.Model.Comment' BoxApi.V2.Model.Enum.ResourceType' BoxApi.V2.Model.Discussion' BoxApi.V2.Model.CommentCollection' BoxApi.V2.Model.DiscussionCollection' BoxApi.V2.Model.UserEventCollection' BoxApi.V2.Model.Enum.StreamType' BoxApi.V2.Model.EnterpriseEventCollection' BoxApi.V2.Model.Enum.EnterpriseEventType' BoxApi.V2.Model.ItemCollection' BoxApi.V2.BoxDownloadNotReadyException' BoxApi.V2.Model.Error' BoxApi.V2.Model.SharedLink' BoxApi.V2.Model.MiniFolderEntity' BoxApi.V2.Model.VersionCollection' BoxApi.V2.Model.SearchResultCollection' BoxApi.V2.Authentication.Legacy.BoxToken' BoxApi.V2.Model.User' BoxApi.V2.Model.EnterpriseUserCollection' BoxApi.V2.Model.EnterpriseUser' BoxApi.V2.Model.Fields.EnterpriseUserField' BoxApi.V2.Model.EmailAliasCollection' BoxApi.V2.Model.EmailAlias' BoxApi.V2.Model.Enum.BoxManagerOptions' BoxApi.V2.Authentication.Common.IRequestAuthenticator,BoxApi.V2.Samples.Program' BoxApi.V2.Tests.Client.CollaborationTests' BoxApi.V2.Tests.Client.CommentTestsAsync' BoxApi.V2.Tests.Client.CommentTestsSync' BoxApi.V2.Tests.Client.DiscussionTestsSync' BoxApi.V2.Tests.Client.EnterpriseUserAliasTests' BoxApi.V2.Tests.Client.EnterpriseUserTests' BoxApi.V2.Tests.Client.EventTestsSync' BoxApi.V2.Tests.Client.FileTestsAsync' BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.FolderTestsAsync' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Client.OnBehalfOfTests' BoxApi.V2.Tests.Client.SearchTests' BoxApi.V2.Tests.Client.SharedItemTests' BoxApi.V2.Tests.Client.SingleUserTests' BoxApi.V2.Tests.Client.ThumbnailTests' BoxApi.V2.Tests.Client.TokenTests' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2,BoxRestClient,1,2,0,0,2,12,2,0,1,1,2,3,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.Model.Enum.BoxManagerOptions,BoxApi.V2.Authentication.Legacy.BoxAuthenticator' BoxApi.V2.Authentication.OAuth2.TokenProvider' BoxApi.V2.BoxManager
-BoxApi.V2,BoxUploadClient,1,1,0,0,1,8,1,0,1,0,2,1,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.Model.Enum.BoxManagerOptions,BoxApi.V2.BoxManager
-BoxApi.V2,BoxRestClientBase,3,15,1,3,7,214,22,2,0,0.2,4,0,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.Model.Enum.BoxManagerOptions' BoxApi.V2.Model.Error' BoxApi.V2.Model.Enum.ResourceType,
-BoxApi.V2,ICollaboration,0,24,0,0,0,201,24,1,0,-1,4,0,BoxApi.V2.Model.Folder' BoxApi.V2.Model.Enum.CollaborationRole' BoxApi.V2.Model.Collaboration' BoxApi.V2.Model.Enum.Status,
-BoxApi.V2,IComment,0,28,0,0,0,217,28,1,0,-1,3,0,BoxApi.V2.Model.File' BoxApi.V2.Model.Discussion' BoxApi.V2.Model.Comment,
-BoxApi.V2,IDiscussion,0,16,0,0,0,125,16,1,0,-1,2,0,BoxApi.V2.Model.Folder' BoxApi.V2.Model.Discussion,
-BoxApi.V2,IEnterpriseManager,0,39,0,0,0,302,39,1,1,-1,4,0,BoxApi.V2.Model.EnterpriseUser' BoxApi.V2.Model.Fields.EnterpriseUserField' BoxApi.V2.Model.EmailAlias' BoxApi.V2.Model.Enum.EnterpriseEventType,
-BoxApi.V2,IFile,0,69,0,0,0,596,69,1,1,-1,3,0,BoxApi.V2.Model.Folder' BoxApi.V2.Model.File' BoxApi.V2.Model.SharedLink,
-BoxApi.V2,IFolder,0,39,0,0,0,367,39,1,1,-1,2,0,BoxApi.V2.Model.Folder' BoxApi.V2.Model.SharedLink,
-BoxApi.V2,ISharedFile,0,6,0,0,0,56,6,1,0,-1,1,0,BoxApi.V2.Model.File,
-BoxApi.V2,ISharedFolder,0,12,0,0,0,127,12,1,0,-1,1,0,BoxApi.V2.Model.Folder,
-BoxApi.V2,ISharedItems,0,2,0,0,0,26,2,1,0,-1,0,0,,
-BoxApi.V2,IStandaloneUser,0,8,0,0,0,63,8,1,0,-1,1,0,BoxApi.V2.Model.Enum.StreamType,
-BoxApi.V2,IUserManager,0,0,0,0,0,3,0,1,2,-1,0,0,,
-BoxApi.V2,BoxException,0,2,5,0,2,47,2,3,0,-1,1,1,BoxApi.V2.Model.Error,BoxApi.V2.Tests.Client.ExceptionTests
-BoxApi.V2,BoxItemModifiedException,0,1,0,0,1,10,1,0,1,-1,1,0,BoxApi.V2.Model.Error,
-BoxApi.V2,BoxItemNotModifiedException,0,1,0,0,1,11,1,0,1,-1,1,0,BoxApi.V2.Model.Error,
-BoxApi.V2,BoxDownloadNotReadyException,0,1,0,0,1,10,1,0,1,-1,1,2,BoxApi.V2.Model.Error,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.ThumbnailTests
-BoxApi.V2,RequestHelper,0,53,0,0,43,456,73,0,0,-1,8,1,BoxApi.V2.Model.Enum.ResourceType' BoxApi.V2.Model.SharedLink' BoxApi.V2.Model.Enum.CollaborationRole' BoxApi.V2.Model.Enum.Status' BoxApi.V2.Model.Enum.StreamType' BoxApi.V2.Model.Enum.EnterpriseEventType' BoxApi.V2.Model.Fields.EnterpriseUserField' BoxApi.V2.Model.EnterpriseUser,BoxApi.V2.BoxManager
-BoxApi.V2,Rollout,0,0,1,0,0,4,0,0,0,-1,0,0,,
-BoxApi.V2,UpdateableEnterpriseUser,0,1,1,0,1,22,1,0,1,-1,1,0,BoxApi.V2.Model.EnterpriseUser,
-BoxApi.V2.Model,Collaboration,0,0,8,0,0,43,0,0,1,-1,0,3,,BoxApi.V2.BoxManager' BoxApi.V2.ICollaboration' BoxApi.V2.Tests.Client.CollaborationTests
-BoxApi.V2.Model,CollaborationCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.CollaborationTests
-BoxApi.V2.Model,Collection<T>,0,0,2,0,0,11,0,0,0,-1,0,0,,
-BoxApi.V2.Model,CommentCollection,0,0,0,0,0,3,0,0,0,-1,0,4,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.CommentTestsAsync' BoxApi.V2.Tests.Client.CommentTestsSync' BoxApi.V2.Tests.Client.DiscussionTestsSync
-BoxApi.V2.Model,Discussion,0,0,0,0,0,3,0,0,1,-1,0,4,,BoxApi.V2.BoxManager' BoxApi.V2.IComment' BoxApi.V2.IDiscussion' BoxApi.V2.Tests.Client.DiscussionTestsSync
-BoxApi.V2.Model,DiscussionCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.DiscussionTestsSync
-BoxApi.V2.Model,EmailAlias,0,0,2,0,0,12,0,0,1,-1,0,3,,BoxApi.V2.BoxManager' BoxApi.V2.IEnterpriseManager' BoxApi.V2.Tests.Client.EnterpriseUserAliasTests
-BoxApi.V2.Model,EmailAliasCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.EnterpriseUserAliasTests
-BoxApi.V2.Model,EnterpriseUser,0,0,7,0,0,37,0,1,1,-1,0,6,,BoxApi.V2.BoxManager' BoxApi.V2.IEnterpriseManager' BoxApi.V2.RequestHelper' BoxApi.V2.UpdateableEnterpriseUser' BoxApi.V2.Tests.Client.EnterpriseUserAliasTests' BoxApi.V2.Tests.Client.EnterpriseUserTests
-BoxApi.V2.Model,ErrorCollection,0,0,0,0,0,3,0,0,0,-1,0,0,,
-BoxApi.V2.Model,EventCollection<T>,0,1,3,0,0,19,1,0,0,-1,0,0,,
-BoxApi.V2.Model,UserEventCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model,EnterpriseEventCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model,Event,0,0,5,0,0,27,0,2,1,-1,0,0,,
-BoxApi.V2.Model,UserEvent,0,0,1,0,0,8,0,0,2,-1,0,1,,BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model,EnterpriseEvent,0,0,1,0,0,8,0,0,2,-1,0,1,,BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model,FolderUploadEmail,0,0,2,0,0,11,0,0,0,-1,0,1,,BoxApi.V2.Tests.Client.FolderTestsSync
-BoxApi.V2.Model,HierarchyEntity,0,0,6,0,0,29,0,2,1,-1,0,0,,
-BoxApi.V2.Model,MiniFolderEntity,0,0,2,0,0,11,0,0,1,-1,0,7,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.DiscussionTestsSync' BoxApi.V2.Tests.Client.FileTestsAsync' BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.FolderTestsAsync' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2.Model,PathCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.FolderTestsSync
-BoxApi.V2.Model,SearchResultCollection,0,0,1,0,0,7,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.SearchTests
-BoxApi.V2.Model,TrackingCode,0,5,3,0,4,36,8,0,0,-1,0,0,,
-BoxApi.V2.Model,EnterpriseUserCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.EnterpriseUserTests
-BoxApi.V2.Model,Comment,0,0,5,0,0,26,0,0,1,-1,0,5,,BoxApi.V2.BoxManager' BoxApi.V2.IComment' BoxApi.V2.Tests.Client.CommentTestsAsync' BoxApi.V2.Tests.Client.CommentTestsSync' BoxApi.V2.Tests.Client.DiscussionTestsSync
-BoxApi.V2.Model,Error,0,0,6,0,0,27,0,0,1,-1,0,7,,BoxApi.V2.BoxManager' BoxApi.V2.BoxRestClientBase' BoxApi.V2.BoxException' BoxApi.V2.BoxItemModifiedException' BoxApi.V2.BoxItemNotModifiedException' BoxApi.V2.BoxDownloadNotReadyException' BoxApi.V2.Tests.Client.ExceptionTests
-BoxApi.V2.Model,AuthError,0,0,2,0,0,5,0,0,0,-1,0,0,,
-BoxApi.V2.Model,File,0,0,3,0,0,17,0,1,2,-1,0,16,,BoxApi.V2.BoxManager' BoxApi.V2.IComment' BoxApi.V2.IFile' BoxApi.V2.ISharedFile' BoxApi.V2.Samples.Program' BoxApi.V2.Tests.Client.CommentTestsAsync' BoxApi.V2.Tests.Client.CommentTestsSync' BoxApi.V2.Tests.Client.EventTestsSync' BoxApi.V2.Tests.Client.FileTestsAsync' BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Client.SearchTests' BoxApi.V2.Tests.Client.SharedItemTests' BoxApi.V2.Tests.Client.SingleUserTests' BoxApi.V2.Tests.Client.ThumbnailTests' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2.Model,Folder,1,2,5,1,1,56,5,0,3,1,2,19,BoxApi.V2.Model.ItemCollection' BoxApi.V2.Model.Enum.ResourceType,BoxApi.V2.BoxManager' BoxApi.V2.ICollaboration' BoxApi.V2.IDiscussion' BoxApi.V2.IFile' BoxApi.V2.IFolder' BoxApi.V2.ISharedFolder' BoxApi.V2.Samples.Program' BoxApi.V2.Tests.Client.CollaborationTests' BoxApi.V2.Tests.Client.DiscussionTestsSync' BoxApi.V2.Tests.Client.EnterpriseUserTests' BoxApi.V2.Tests.Client.EventTestsSync' BoxApi.V2.Tests.Client.FileTestsAsync' BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.FolderTestsAsync' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Client.SearchTests' BoxApi.V2.Tests.Client.SharedItemTests' BoxApi.V2.Tests.Client.SingleUserTests' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2.Model,EntityBase,0,0,1,0,0,8,0,4,0,-1,0,0,,
-BoxApi.V2.Model,IdentifiedEntity,0,0,1,0,0,8,0,2,1,-1,0,0,,
-BoxApi.V2.Model,Entity,0,1,1,0,1,14,1,3,2,-1,0,3,,BoxApi.V2.Tests.Client.CollaborationTests' BoxApi.V2.Tests.Client.CommentTestsSync' BoxApi.V2.Tests.Client.SearchTests
-BoxApi.V2.Model,ItemCollection,0,0,0,0,0,3,0,0,0,-1,0,5,,BoxApi.V2.BoxManager' BoxApi.V2.Model.Folder' BoxApi.V2.Tests.Client.FolderTestsAsync' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Client.SharedItemTests
-BoxApi.V2.Model,ModifiableEntity,0,0,5,0,0,23,0,3,3,-1,0,1,,BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model,Permissions,0,0,2,0,0,13,0,0,0,-1,0,2,,BoxApi.V2.Model.SharedLink' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2.Model,SharedLink,0,2,8,0,2,58,3,0,0,-1,2,9,BoxApi.V2.Model.Enum.Access' BoxApi.V2.Model.Permissions,BoxApi.V2.BoxManager' BoxApi.V2.IFile' BoxApi.V2.IFolder' BoxApi.V2.RequestHelper' BoxApi.V2.Tests.Client.FileTestsAsync' BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.FolderTestsAsync' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2.Model,User,0,0,11,0,0,59,0,1,1,-1,0,5,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.EnterpriseUserAliasTests' BoxApi.V2.Tests.Client.EnterpriseUserTests' BoxApi.V2.Tests.Client.OnBehalfOfTests' BoxApi.V2.Tests.Client.SingleUserTests
-BoxApi.V2.Model,UserEntity,0,1,1,0,1,11,1,1,3,-1,1,3,BoxApi.V2.Model.Enum.ResourceType,BoxApi.V2.Tests.Client.CollaborationTests' BoxApi.V2.Tests.Client.EnterpriseUserTests' BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model,Version,0,0,1,0,0,7,0,1,4,-1,0,1,,BoxApi.V2.Tests.Client.FileTestsSync
-BoxApi.V2.Model,VersionCollection,0,0,0,0,0,3,0,0,0,-1,0,2,,BoxApi.V2.BoxManager' BoxApi.V2.Tests.Client.FileTestsSync
-BoxApi.V2.Model.Enum,Access,0,0,0,0,0,6,0,0,0,-1,0,5,,BoxApi.V2.Model.SharedLink' BoxApi.V2.Tests.Client.FileTestsAsync' BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.FolderTestsAsync' BoxApi.V2.Tests.Client.FolderTestsSync
-BoxApi.V2.Model.Enum,BoxManagerOptions,0,0,0,0,0,12,0,0,0,-1,0,7,,BoxApi.V2.Authentication.Legacy.BoxAuthenticator' BoxApi.V2.Authentication.OAuth2.TokenProvider' BoxApi.V2.BoxManager' BoxApi.V2.BoxRestClient' BoxApi.V2.BoxUploadClient' BoxApi.V2.BoxRestClientBase' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2.Model.Enum,CollaborationRole,0,0,0,0,0,85,0,0,0,-1,0,4,,BoxApi.V2.BoxManager' BoxApi.V2.ICollaboration' BoxApi.V2.RequestHelper' BoxApi.V2.Tests.Client.CollaborationTests
-BoxApi.V2.Model.Enum,EnterpriseEventType,0,0,0,0,0,218,0,0,0,-1,0,4,,BoxApi.V2.BoxManager' BoxApi.V2.IEnterpriseManager' BoxApi.V2.RequestHelper' BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model.Enum,EnumExtensions,0,3,0,0,3,42,8,0,0,-1,0,0,,
-BoxApi.V2.Model.Enum,ResourceType,0,0,0,0,0,17,0,0,0,-1,0,8,,BoxApi.V2.BoxManager' BoxApi.V2.BoxRestClientBase' BoxApi.V2.RequestHelper' BoxApi.V2.Model.Folder' BoxApi.V2.Model.UserEntity' BoxApi.V2.Tests.Client.EnterpriseUserAliasTests' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Harness.BoxApiTestHarness
-BoxApi.V2.Model.Enum,StandardEventType,0,0,0,0,0,87,0,0,0,-1,0,1,,BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model.Enum,Status,0,0,0,0,0,6,0,0,0,-1,0,3,,BoxApi.V2.BoxManager' BoxApi.V2.ICollaboration' BoxApi.V2.RequestHelper
-BoxApi.V2.Model.Enum,StreamType,0,0,0,0,0,19,0,0,0,-1,0,4,,BoxApi.V2.BoxManager' BoxApi.V2.IStandaloneUser' BoxApi.V2.RequestHelper' BoxApi.V2.Tests.Client.EventTestsSync
-BoxApi.V2.Model.Enum,SyncState,0,0,0,0,0,19,0,0,0,-1,0,1,,BoxApi.V2.Tests.Client.FolderTestsSync
-BoxApi.V2.Model.Enum,ThumbnailSize,0,0,0,0,0,19,0,0,0,-1,0,1,,BoxApi.V2.Tests.Client.ThumbnailTests
-BoxApi.V2.Model.Enum,UserRole,0,0,0,0,0,6,0,0,0,-1,0,1,,BoxApi.V2.Tests.Client.EnterpriseUserTests
-BoxApi.V2.Model.Enum,UserStatus,0,0,0,0,0,11,0,0,0,-1,0,2,,BoxApi.V2.Tests.Client.EnterpriseUserAliasTests' BoxApi.V2.Tests.Client.EnterpriseUserTests
-BoxApi.V2.Model.Fields,CollaborationField,9,1,0,9,0,15,1,0,1,0,0,0,,
-BoxApi.V2.Model.Fields,CommentField,7,1,0,7,0,13,1,0,1,0,0,0,,
-BoxApi.V2.Model.Fields,DiscussionField,6,1,0,6,0,12,1,0,1,0,0,0,,
-BoxApi.V2.Model.Fields,EnterpriseUserField,21,1,0,21,0,49,1,0,1,0,0,3,,BoxApi.V2.BoxManager' BoxApi.V2.IEnterpriseManager' BoxApi.V2.RequestHelper
-BoxApi.V2.Model.Fields,IField,0,0,1,0,0,4,0,2,0,-1,0,0,,
-BoxApi.V2.Model.Fields,Field,0,1,1,0,0,8,1,7,1,-1,0,0,,
-BoxApi.V2.Model.Fields,FileField,17,1,0,17,0,23,1,0,2,0,0,2,,BoxApi.V2.Tests.Client.FileTestsSync' BoxApi.V2.Tests.Client.SharedItemTests
-BoxApi.V2.Model.Fields,FolderField,19,1,0,19,0,25,1,0,2,0,0,3,,BoxApi.V2.Tests.Client.FolderTestsAsync' BoxApi.V2.Tests.Client.FolderTestsSync' BoxApi.V2.Tests.Client.SharedItemTests
-BoxApi.V2.Model.Fields,IContentField,0,0,0,0,0,3,0,2,1,-1,0,0,,
-BoxApi.V2.Model.Fields,UserField,13,1,0,13,0,19,1,0,2,0,0,1,,BoxApi.V2.Tests.Client.SingleUserTests
-BoxApi.V2.Serialization,AttributableJsonSerializer,1,3,4,0,3,62,3,0,0,0,0,0,,
+BoxApi.V2.Authentication.OAuth2,OAuthToken,0,0,4,0,0,7,0,0,0,-1,0,1,,BoxApi.V2.Authentication.OAuth2.TokenProvider
+BoxApi.V2.Authentication.OAuth2,TokenProvider,4,5,0,0,5,34,5,0,0,0,4,0,BoxApi.V2.Authentication.OAuth2.RequestHelper' BoxApi.V2.Authentication.OAuth2.OAuthToken' BoxApi.V2.BoxRestClient' BoxApi.V2.Model.Enum.BoxManagerOptions,
+BoxApi.V2,BoxManager,6,270,0,0,255,3642,280,0,1,0.02,7,0,BoxApi.V2.Model.Collaboration' BoxApi.V2.Model.CollaborationCollection' BoxApi.V2.Model.Error' BoxApi.V2.Model.Folder' BoxApi.V2.Model.Enum.CollaborationRole' BoxApi.V2.Model.Enum.Status' BoxApi.V2.Model.Fields.CollaborationField,
+BoxApi.V2,BoxRestClient,1,2,0,0,2,12,2,0,1,1,3,2,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.BoxRestClientBase' BoxApi.V2.Model.Enum.BoxManagerOptions,BoxApi.V2.Authentication.OAuth2.TokenProvider' BoxApi.V2.Authentication.Legacy.BoxAuthenticator
+BoxApi.V2,BoxUploadClient,1,1,0,0,1,8,1,0,1,0,3,0,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.BoxRestClientBase' BoxApi.V2.Model.Enum.BoxManagerOptions,
+BoxApi.V2,BoxRestClientBase,3,15,1,3,7,214,37,2,0,0.2,10,2,BoxApi.V2.Authentication.Common.IRequestAuthenticator' BoxApi.V2.BoxException' BoxApi.V2.BoxItemModifiedException' BoxApi.V2.BoxItemNotModifiedException' BoxApi.V2.BoxDownloadNotReadyException' BoxApi.V2.Model.ErrorCollection' BoxApi.V2.Model.Error' BoxApi.V2.Model.AuthError' BoxApi.V2.Model.Enum.BoxManagerOptions' BoxApi.V2.Model.Enum.ResourceType,BoxApi.V2.BoxRestClient' BoxApi.V2.BoxUploadClient
+BoxApi.V2,ICollaboration,0,24,0,0,0,201,24,1,0,-1,7,1,BoxApi.V2.Model.Collaboration' BoxApi.V2.Model.CollaborationCollection' BoxApi.V2.Model.Error' BoxApi.V2.Model.Folder' BoxApi.V2.Model.Enum.CollaborationRole' BoxApi.V2.Model.Enum.Status' BoxApi.V2.Model.Fields.CollaborationField,BoxApi.V2.IUserManager
+BoxApi.V2,IComment,0,28,0,0,0,217,28,1,0,-1,6,1,BoxApi.V2.Model.CommentCollection' BoxApi.V2.Model.Discussion' BoxApi.V2.Model.Comment' BoxApi.V2.Model.Error' BoxApi.V2.Model.File' BoxApi.V2.Model.Fields.CommentField,BoxApi.V2.IUserManager
+BoxApi.V2,IDiscussion,0,16,0,0,0,125,16,1,0,-1,5,1,BoxApi.V2.Model.Discussion' BoxApi.V2.Model.DiscussionCollection' BoxApi.V2.Model.Error' BoxApi.V2.Model.Folder' BoxApi.V2.Model.Fields.DiscussionField,BoxApi.V2.IUserManager
+BoxApi.V2,IEnterpriseManager,0,39,0,0,0,302,39,1,1,-1,12,0,BoxApi.V2.IUserManager' BoxApi.V2.BoxException' BoxApi.V2.Model.EmailAlias' BoxApi.V2.Model.EmailAliasCollection' BoxApi.V2.Model.EnterpriseUser' BoxApi.V2.Model.EnterpriseEventCollection' BoxApi.V2.Model.EnterpriseUserCollection' BoxApi.V2.Model.Error' BoxApi.V2.Model.Folder' BoxApi.V2.Model.User' BoxApi.V2.Model.Enum.EnterpriseEventType' BoxApi.V2.Model.Fields.EnterpriseUserField,
+BoxApi.V2,IFile,0,69,0,0,0,596,69,1,1,-1,8,1,BoxApi.V2.ISharedFile' BoxApi.V2.Model.Error' BoxApi.V2.Model.File' BoxApi.V2.Model.Folder' BoxApi.V2.Model.SharedLink' BoxApi.V2.Model.VersionCollection' BoxApi.V2.Model.Enum.ThumbnailSize' BoxApi.V2.Model.Fields.FileField,BoxApi.V2.IUserManager
+BoxApi.V2,IFolder,0,39,0,0,0,367,39,1,1,-1,6,1,BoxApi.V2.ISharedFolder' BoxApi.V2.BoxException' BoxApi.V2.Model.Error' BoxApi.V2.Model.Folder' BoxApi.V2.Model.SharedLink' BoxApi.V2.Model.Fields.FolderField,BoxApi.V2.IUserManager
+BoxApi.V2,ISharedFile,0,6,0,0,0,56,6,1,0,-1,3,1,BoxApi.V2.Model.Error' BoxApi.V2.Model.File' BoxApi.V2.Model.Fields.FileField,BoxApi.V2.IFile
+BoxApi.V2,ISharedFolder,0,12,0,0,0,127,12,1,0,-1,4,1,BoxApi.V2.Model.Error' BoxApi.V2.Model.Folder' BoxApi.V2.Model.ItemCollection' BoxApi.V2.Model.Fields.FolderField,BoxApi.V2.IFolder
+BoxApi.V2,ISharedItems,0,2,0,0,0,26,2,1,0,-1,3,1,BoxApi.V2.Model.Error' BoxApi.V2.Model.File' BoxApi.V2.Model.Fields.IContentField,BoxApi.V2.IUserManager
+BoxApi.V2,IStandaloneUser,0,8,0,0,0,63,8,1,0,-1,6,1,BoxApi.V2.Model.UserEventCollection' BoxApi.V2.Model.SearchResultCollection' BoxApi.V2.Model.Error' BoxApi.V2.Model.User' BoxApi.V2.Model.Enum.StreamType' BoxApi.V2.Model.Fields.UserField,BoxApi.V2.IUserManager
+BoxApi.V2,IUserManager,0,0,0,0,0,3,0,1,2,-1,7,1,BoxApi.V2.ICollaboration' BoxApi.V2.IComment' BoxApi.V2.IDiscussion' BoxApi.V2.IFile' BoxApi.V2.IFolder' BoxApi.V2.ISharedItems' BoxApi.V2.IStandaloneUser,BoxApi.V2.IEnterpriseManager
+BoxApi.V2,BoxException,0,2,5,0,2,47,2,3,0,-1,1,6,BoxApi.V2.Model.Error,BoxApi.V2.BoxItemModifiedException' BoxApi.V2.BoxItemNotModifiedException' BoxApi.V2.BoxDownloadNotReadyException' BoxApi.V2.BoxRestClientBase' BoxApi.V2.IFolder' BoxApi.V2.IEnterpriseManager
+BoxApi.V2,BoxItemModifiedException,0,1,0,0,1,10,1,0,1,-1,2,1,BoxApi.V2.BoxException' BoxApi.V2.Model.Error,BoxApi.V2.BoxRestClientBase
+BoxApi.V2,BoxItemNotModifiedException,0,1,0,0,1,11,1,0,1,-1,2,1,BoxApi.V2.BoxException' BoxApi.V2.Model.Error,BoxApi.V2.BoxRestClientBase
+BoxApi.V2,BoxDownloadNotReadyException,0,1,0,0,1,10,1,0,1,-1,2,1,BoxApi.V2.BoxException' BoxApi.V2.Model.Error,BoxApi.V2.BoxRestClientBase
+BoxApi.V2,RequestHelper,0,53,0,0,43,456,73,0,0,-1,19,0,BoxApi.V2.Rollout' BoxApi.V2.UpdateableEnterpriseUser' BoxApi.V2.Model.EnterpriseUser' BoxApi.V2.Model.SharedLink' BoxApi.V2.Model.Enum.CollaborationRole' BoxApi.V2.Model.Enum.EnterpriseEventType' BoxApi.V2.Model.Enum.ResourceType' BoxApi.V2.Model.Enum.Status' BoxApi.V2.Model.Enum.StreamType' BoxApi.V2.Model.Enum.ThumbnailSize' BoxApi.V2.Model.Fields.CollaborationField' BoxApi.V2.Model.Fields.CommentField' BoxApi.V2.Model.Fields.DiscussionField' BoxApi.V2.Model.Fields.EnterpriseUserField' BoxApi.V2.Model.Fields.IField' BoxApi.V2.Model.Fields.FileField' BoxApi.V2.Model.Fields.FolderField' BoxApi.V2.Model.Fields.UserField' BoxApi.V2.Serialization.AttributableJsonSerializer,
+BoxApi.V2,Rollout,0,0,1,0,0,4,0,0,0,-1,0,1,,BoxApi.V2.RequestHelper
+BoxApi.V2,UpdateableEnterpriseUser,0,1,1,0,1,22,1,0,1,-1,0,1,,BoxApi.V2.RequestHelper
+BoxApi.V2.Model,Collaboration,0,0,8,0,0,43,0,0,1,-1,6,3,BoxApi.V2.Model.Entity' BoxApi.V2.Model.ModifiableEntity' BoxApi.V2.Model.UserEntity' BoxApi.V2.Model.Enum.CollaborationRole' BoxApi.V2.Model.Enum.EnumExtensions' BoxApi.V2.Model.Enum.Status,BoxApi.V2.Model.CollaborationCollection' BoxApi.V2.ICollaboration' BoxApi.V2.BoxManager
+BoxApi.V2.Model,CollaborationCollection,0,0,0,0,0,3,0,0,0,-1,2,2,BoxApi.V2.Model.Collaboration' BoxApi.V2.Model.Collection<T>,BoxApi.V2.BoxManager' BoxApi.V2.ICollaboration
+BoxApi.V2.Model,Collection<T>,0,0,2,0,0,11,0,0,0,-1,0,10,,BoxApi.V2.Model.ItemCollection' BoxApi.V2.Model.VersionCollection' BoxApi.V2.Model.CommentCollection' BoxApi.V2.Model.PathCollection' BoxApi.V2.Model.ErrorCollection' BoxApi.V2.Model.EnterpriseUserCollection' BoxApi.V2.Model.SearchResultCollection' BoxApi.V2.Model.CollaborationCollection' BoxApi.V2.Model.EmailAliasCollection' BoxApi.V2.Model.DiscussionCollection
+BoxApi.V2.Model,CommentCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.Comment,BoxApi.V2.IComment
+BoxApi.V2.Model,Discussion,0,0,0,0,0,3,0,0,1,-1,1,3,BoxApi.V2.Model.HierarchyEntity,BoxApi.V2.Model.DiscussionCollection' BoxApi.V2.IComment' BoxApi.V2.IDiscussion
+BoxApi.V2.Model,DiscussionCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.Discussion,BoxApi.V2.IDiscussion
+BoxApi.V2.Model,EmailAlias,0,0,2,0,0,12,0,0,1,-1,1,2,BoxApi.V2.Model.IdentifiedEntity,BoxApi.V2.Model.EmailAliasCollection' BoxApi.V2.IEnterpriseManager
+BoxApi.V2.Model,EmailAliasCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.EmailAlias,BoxApi.V2.IEnterpriseManager
+BoxApi.V2.Model,EnterpriseUser,0,0,7,0,0,37,0,1,1,-1,3,3,BoxApi.V2.Model.TrackingCode' BoxApi.V2.Model.User' BoxApi.V2.Model.Enum.UserRole,BoxApi.V2.Model.EnterpriseUserCollection' BoxApi.V2.RequestHelper' BoxApi.V2.IEnterpriseManager
+BoxApi.V2.Model,ErrorCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.Error,BoxApi.V2.BoxRestClientBase
+BoxApi.V2.Model,EventCollection<T>,0,1,3,0,0,19,1,0,0,-1,1,2,BoxApi.V2.Model.Event,BoxApi.V2.Model.UserEventCollection' BoxApi.V2.Model.EnterpriseEventCollection
+BoxApi.V2.Model,UserEventCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.EventCollection<T>' BoxApi.V2.Model.UserEvent,BoxApi.V2.IStandaloneUser
+BoxApi.V2.Model,EnterpriseEventCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.EventCollection<T>' BoxApi.V2.Model.EnterpriseEvent,BoxApi.V2.IEnterpriseManager
+BoxApi.V2.Model,Event,0,0,5,0,0,27,0,2,1,-1,3,3,BoxApi.V2.Model.EntityBase' BoxApi.V2.Model.ModifiableEntity' BoxApi.V2.Model.UserEntity,BoxApi.V2.Model.UserEvent' BoxApi.V2.Model.EnterpriseEvent' BoxApi.V2.Model.EventCollection<T>
+BoxApi.V2.Model,UserEvent,0,0,1,0,0,8,0,0,2,-1,2,1,BoxApi.V2.Model.Event' BoxApi.V2.Model.Enum.StandardEventType,BoxApi.V2.Model.UserEventCollection
+BoxApi.V2.Model,EnterpriseEvent,0,0,1,0,0,8,0,0,2,-1,2,1,BoxApi.V2.Model.Event' BoxApi.V2.Model.Enum.EnterpriseEventType,BoxApi.V2.Model.EnterpriseEventCollection
+BoxApi.V2.Model,FolderUploadEmail,0,0,2,0,0,11,0,0,0,-1,1,1,BoxApi.V2.Model.Enum.Access,BoxApi.V2.Model.Folder
+BoxApi.V2.Model,HierarchyEntity,0,0,6,0,0,29,0,2,1,-1,4,2,BoxApi.V2.Model.MiniFolderEntity' BoxApi.V2.Model.PathCollection' BoxApi.V2.Model.SharedLink' BoxApi.V2.Model.Version,BoxApi.V2.Model.Discussion' BoxApi.V2.Model.File
+BoxApi.V2.Model,MiniFolderEntity,0,0,2,0,0,11,0,0,1,-1,1,2,BoxApi.V2.Model.Entity,BoxApi.V2.Model.PathCollection' BoxApi.V2.Model.HierarchyEntity
+BoxApi.V2.Model,PathCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.MiniFolderEntity,BoxApi.V2.Model.HierarchyEntity
+BoxApi.V2.Model,SearchResultCollection,0,0,1,0,0,7,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.Entity,BoxApi.V2.IStandaloneUser
+BoxApi.V2.Model,TrackingCode,0,5,3,0,4,36,8,0,0,-1,0,1,,BoxApi.V2.Model.EnterpriseUser
+BoxApi.V2.Model,EnterpriseUserCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.EnterpriseUser,BoxApi.V2.IEnterpriseManager
+BoxApi.V2.Model,Comment,0,0,5,0,0,26,0,0,1,-1,2,2,BoxApi.V2.Model.Entity' BoxApi.V2.Model.ModifiableEntity,BoxApi.V2.Model.CommentCollection' BoxApi.V2.IComment
+BoxApi.V2.Model,Error,0,0,6,0,0,27,0,0,1,-1,1,17,BoxApi.V2.Model.EntityBase,BoxApi.V2.IDiscussion' BoxApi.V2.ICollaboration' BoxApi.V2.BoxManager' BoxApi.V2.IComment' BoxApi.V2.ISharedFile' BoxApi.V2.ISharedItems' BoxApi.V2.IStandaloneUser' BoxApi.V2.Model.ErrorCollection' BoxApi.V2.ISharedFolder' BoxApi.V2.IEnterpriseManager' BoxApi.V2.IFolder' BoxApi.V2.BoxException' BoxApi.V2.BoxItemModifiedException' BoxApi.V2.BoxItemNotModifiedException' BoxApi.V2.BoxDownloadNotReadyException' BoxApi.V2.IFile' BoxApi.V2.BoxRestClientBase
+BoxApi.V2.Model,AuthError,0,0,2,0,0,5,0,0,0,-1,0,1,,BoxApi.V2.BoxRestClientBase
+BoxApi.V2.Model,File,0,0,3,0,0,17,0,1,2,-1,1,5,BoxApi.V2.Model.HierarchyEntity,BoxApi.V2.ISharedItems' BoxApi.V2.IComment' BoxApi.V2.Model.Folder' BoxApi.V2.ISharedFile' BoxApi.V2.IFile
+BoxApi.V2.Model,Folder,1,2,5,1,1,56,5,0,3,1,5,8,BoxApi.V2.Model.FolderUploadEmail' BoxApi.V2.Model.File' BoxApi.V2.Model.ItemCollection' BoxApi.V2.Model.Enum.ResourceType' BoxApi.V2.Model.Enum.SyncState,BoxApi.V2.Model.ItemCollection' BoxApi.V2.ICollaboration' BoxApi.V2.IEnterpriseManager' BoxApi.V2.BoxManager' BoxApi.V2.IDiscussion' BoxApi.V2.ISharedFolder' BoxApi.V2.IFile' BoxApi.V2.IFolder
+BoxApi.V2.Model,EntityBase,0,0,1,0,0,8,0,4,0,-1,1,4,BoxApi.V2.Model.Enum.ResourceType,BoxApi.V2.Model.IdentifiedEntity' BoxApi.V2.Model.Event' BoxApi.V2.Model.Error' BoxApi.V2.Authentication.Legacy.BoxToken
+BoxApi.V2.Model,IdentifiedEntity,0,0,1,0,0,8,0,2,1,-1,1,2,BoxApi.V2.Model.EntityBase,BoxApi.V2.Model.Entity' BoxApi.V2.Model.EmailAlias
+BoxApi.V2.Model,Entity,0,1,1,0,1,14,1,3,2,-1,1,7,BoxApi.V2.Model.IdentifiedEntity,BoxApi.V2.Model.UserEntity' BoxApi.V2.Model.Collaboration' BoxApi.V2.Model.MiniFolderEntity' BoxApi.V2.Model.SearchResultCollection' BoxApi.V2.Model.ModifiableEntity' BoxApi.V2.Model.Comment' BoxApi.V2.Authentication.Legacy.BoxToken
+BoxApi.V2.Model,ItemCollection,0,0,0,0,0,3,0,0,0,-1,2,2,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.Folder,BoxApi.V2.ISharedFolder' BoxApi.V2.Model.Folder
+BoxApi.V2.Model,ModifiableEntity,0,0,5,0,0,23,0,3,3,-1,2,4,BoxApi.V2.Model.Entity' BoxApi.V2.Model.UserEntity,BoxApi.V2.Model.Comment' BoxApi.V2.Model.Event' BoxApi.V2.Model.Version' BoxApi.V2.Model.Collaboration
+BoxApi.V2.Model,Permissions,0,0,2,0,0,13,0,0,0,-1,0,1,,BoxApi.V2.Model.SharedLink
+BoxApi.V2.Model,SharedLink,0,2,8,0,2,58,3,0,0,-1,2,4,BoxApi.V2.Model.Permissions' BoxApi.V2.Model.Enum.Access,BoxApi.V2.Model.HierarchyEntity' BoxApi.V2.RequestHelper' BoxApi.V2.IFolder' BoxApi.V2.IFile
+BoxApi.V2.Model,User,0,0,11,0,0,59,0,1,1,-1,2,4,BoxApi.V2.Model.UserEntity' BoxApi.V2.Model.Enum.UserStatus,BoxApi.V2.Model.EnterpriseUser' BoxApi.V2.Authentication.Legacy.BoxAuthToken' BoxApi.V2.IEnterpriseManager' BoxApi.V2.IStandaloneUser
+BoxApi.V2.Model,UserEntity,0,1,1,0,1,11,1,1,3,-1,2,4,BoxApi.V2.Model.Entity' BoxApi.V2.Model.Enum.ResourceType,BoxApi.V2.Model.Collaboration' BoxApi.V2.Model.Event' BoxApi.V2.Model.User' BoxApi.V2.Model.ModifiableEntity
+BoxApi.V2.Model,Version,0,0,1,0,0,7,0,1,4,-1,1,2,BoxApi.V2.Model.ModifiableEntity,BoxApi.V2.Model.HierarchyEntity' BoxApi.V2.Model.VersionCollection
+BoxApi.V2.Model,VersionCollection,0,0,0,0,0,3,0,0,0,-1,2,1,BoxApi.V2.Model.Collection<T>' BoxApi.V2.Model.Version,BoxApi.V2.IFile
+BoxApi.V2.Model.Enum,Access,0,0,0,0,0,6,0,0,0,-1,0,2,,BoxApi.V2.Model.FolderUploadEmail' BoxApi.V2.Model.SharedLink
+BoxApi.V2.Model.Enum,BoxManagerOptions,0,0,0,0,0,12,0,0,0,-1,0,5,,BoxApi.V2.Authentication.Legacy.BoxAuthenticator' BoxApi.V2.Authentication.OAuth2.TokenProvider' BoxApi.V2.BoxRestClient' BoxApi.V2.BoxUploadClient' BoxApi.V2.BoxRestClientBase
+BoxApi.V2.Model.Enum,CollaborationRole,0,0,0,0,0,85,0,0,0,-1,0,4,,BoxApi.V2.RequestHelper' BoxApi.V2.ICollaboration' BoxApi.V2.BoxManager' BoxApi.V2.Model.Collaboration
+BoxApi.V2.Model.Enum,EnterpriseEventType,0,0,0,0,0,218,0,0,0,-1,0,3,,BoxApi.V2.Model.EnterpriseEvent' BoxApi.V2.RequestHelper' BoxApi.V2.IEnterpriseManager
+BoxApi.V2.Model.Enum,EnumExtensions,0,3,0,0,3,42,9,0,0,-1,0,1,,BoxApi.V2.Model.Collaboration
+BoxApi.V2.Model.Enum,ResourceType,0,0,0,0,0,17,0,0,0,-1,0,5,,BoxApi.V2.Model.EntityBase' BoxApi.V2.Model.UserEntity' BoxApi.V2.Model.Folder' BoxApi.V2.BoxRestClientBase' BoxApi.V2.RequestHelper
+BoxApi.V2.Model.Enum,StandardEventType,0,0,0,0,0,87,0,0,0,-1,0,1,,BoxApi.V2.Model.UserEvent
+BoxApi.V2.Model.Enum,Status,0,0,0,0,0,6,0,0,0,-1,0,4,,BoxApi.V2.Model.Collaboration' BoxApi.V2.ICollaboration' BoxApi.V2.BoxManager' BoxApi.V2.RequestHelper
+BoxApi.V2.Model.Enum,StreamType,0,0,0,0,0,19,0,0,0,-1,0,2,,BoxApi.V2.IStandaloneUser' BoxApi.V2.RequestHelper
+BoxApi.V2.Model.Enum,SyncState,0,0,0,0,0,19,0,0,0,-1,0,1,,BoxApi.V2.Model.Folder
+BoxApi.V2.Model.Enum,ThumbnailSize,0,0,0,0,0,19,0,0,0,-1,0,2,,BoxApi.V2.RequestHelper' BoxApi.V2.IFile
+BoxApi.V2.Model.Enum,UserRole,0,0,0,0,0,6,0,0,0,-1,0,1,,BoxApi.V2.Model.EnterpriseUser
+BoxApi.V2.Model.Enum,UserStatus,0,0,0,0,0,11,0,0,0,-1,0,1,,BoxApi.V2.Model.User
+BoxApi.V2.Model.Fields,CollaborationField,9,1,0,9,0,15,1,0,1,0,1,3,BoxApi.V2.Model.Fields.Field,BoxApi.V2.RequestHelper' BoxApi.V2.ICollaboration' BoxApi.V2.BoxManager
+BoxApi.V2.Model.Fields,CommentField,7,1,0,7,0,13,1,0,1,0,1,2,BoxApi.V2.Model.Fields.Field,BoxApi.V2.RequestHelper' BoxApi.V2.IComment
+BoxApi.V2.Model.Fields,DiscussionField,6,1,0,6,0,12,1,0,1,0,1,2,BoxApi.V2.Model.Fields.Field,BoxApi.V2.RequestHelper' BoxApi.V2.IDiscussion
+BoxApi.V2.Model.Fields,EnterpriseUserField,21,1,0,21,0,49,1,0,1,0,1,2,BoxApi.V2.Model.Fields.Field,BoxApi.V2.IEnterpriseManager' BoxApi.V2.RequestHelper
+BoxApi.V2.Model.Fields,IField,0,0,1,0,0,4,0,2,0,-1,0,3,,BoxApi.V2.Model.Fields.Field' BoxApi.V2.Model.Fields.IContentField' BoxApi.V2.RequestHelper
+BoxApi.V2.Model.Fields,Field,0,1,1,0,0,8,1,7,1,-1,1,7,BoxApi.V2.Model.Fields.IField,BoxApi.V2.Model.Fields.EnterpriseUserField' BoxApi.V2.Model.Fields.FileField' BoxApi.V2.Model.Fields.UserField' BoxApi.V2.Model.Fields.CollaborationField' BoxApi.V2.Model.Fields.DiscussionField' BoxApi.V2.Model.Fields.CommentField' BoxApi.V2.Model.Fields.FolderField
+BoxApi.V2.Model.Fields,FileField,17,1,0,17,0,23,1,0,2,0,2,3,BoxApi.V2.Model.Fields.Field' BoxApi.V2.Model.Fields.IContentField,BoxApi.V2.RequestHelper' BoxApi.V2.ISharedFile' BoxApi.V2.IFile
+BoxApi.V2.Model.Fields,FolderField,19,1,0,19,0,25,1,0,2,0,2,3,BoxApi.V2.Model.Fields.Field' BoxApi.V2.Model.Fields.IContentField,BoxApi.V2.RequestHelper' BoxApi.V2.ISharedFolder' BoxApi.V2.IFolder
+BoxApi.V2.Model.Fields,IContentField,0,0,0,0,0,3,0,2,1,-1,1,3,BoxApi.V2.Model.Fields.IField,BoxApi.V2.Model.Fields.FileField' BoxApi.V2.Model.Fields.FolderField' BoxApi.V2.ISharedItems
+BoxApi.V2.Model.Fields,UserField,13,1,0,13,0,19,1,0,2,0,1,2,BoxApi.V2.Model.Fields.Field,BoxApi.V2.RequestHelper' BoxApi.V2.IStandaloneUser
+BoxApi.V2.Serialization,AttributableJsonSerializer,1,3,4,0,3,62,3,0,0,0,0,1,,BoxApi.V2.RequestHelper

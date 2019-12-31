@@ -1,51 +1,51 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 statsd.net.shared,BetterExpando,3,11,0,0,9,116,16,0,0,0,0,0,,
-statsd.net.shared,LoggingBootstrap,0,1,0,0,1,11,1,0,0,-1,0,1,,statsd.net.ServiceWrapper
-statsd.net.shared,SuperCheapIOC,2,7,1,0,5,42,9,0,0,0,0,9,,statsd.net.Backends.GraphiteBackend' statsd.net.Backends.GraphiteTCPBackend' statsd.net.Backends.Librato.LibratoBackend' statsd.net.Backends.SqlServer.SqlServerBackend' statsd.net.Backends.Statsdnet.StatsdnetForwardingClient' statsd.net.Statsd' statsd.net.shared.Listeners.StatsdnetTcpListener' statsd.net.shared.Services.SystemMetricsService' statsd.net_Tests.StatsdTestSuite
-statsd.net.shared,Utility,0,5,0,0,5,76,7,0,0,-1,1,9,statsd.net.shared.TimerHandle,statsd.net.Backends.GraphiteBackend' statsd.net.Backends.GraphiteTCPBackend' statsd.net.Backends.Librato.LibratoBackend' statsd.net.Backends.Statsdnet.StatsdnetBackend' statsd.net.Framework.PassThroughBlockFactory' statsd.net.Framework.TimedGaugeAggregatorBlockFactory' statsd.net.shared.Listeners.StatsdnetTcpListener' statsd.net.shared.Listeners.UdpStatsListener' statsd.net_Tests.Infrastructure.InAppBackend
+statsd.net.shared,LoggingBootstrap,0,1,0,0,1,11,1,0,0,-1,0,0,,
+statsd.net.shared,SuperCheapIOC,2,7,1,0,5,42,9,0,0,0,0,2,,statsd.net.shared.Listeners.StatsdnetTcpListener' statsd.net.shared.Services.SystemMetricsService
+statsd.net.shared,Utility,0,5,0,0,5,76,11,0,0,-1,1,2,statsd.net.shared.TimerHandle,statsd.net.shared.Listeners.StatsdnetTcpListener' statsd.net.shared.Listeners.UdpStatsListener
 statsd.net.shared,TimerHandle,2,3,0,0,3,18,3,0,0,0,0,1,,statsd.net.shared.Utility
-statsd.net.shared.Blocks,TimedBufferBlock<T>,5,5,1,0,4,55,6,0,0,0.4,1,0,statsd.net.shared.Services.IIntervalService,
+statsd.net.shared.Blocks,TimedBufferBlock<T>,5,5,1,0,4,55,6,0,0,0.4,2,0,statsd.net.shared.Services.IIntervalService' statsd.net.shared.Services.IntervalService,
 statsd.net.shared.Encryption,SimplerAES,3,8,0,0,7,47,8,0,0,0,0,0,,
-statsd.net.shared.Factories,MessageParserBlockFactory,0,1,0,0,1,26,1,0,0,-1,4,2,statsd.net.shared.Messages.StatsdMessage' statsd.net.core.ISystemMetricsService' statsd.net.shared.Messages.StatsdMessageFactory' statsd.net.shared.Messages.InvalidMessage,statsd.net.Statsd' statsd.net_Tests.MessageParserBlockTests
-statsd.net.shared.Listeners,MSSQLRelayListener,8,7,1,0,2,143,8,0,1,0,2,0,statsd.net.shared.Services.IntervalService' statsd.net.core.ISystemMetricsService,
-statsd.net.shared.Listeners,HttpStatsListener,6,2,1,0,2,271,2,0,1,0,1,1,statsd.net.core.ISystemMetricsService,statsd.net.shared.Listeners.RequestDelegate
-statsd.net.shared.Listeners,SchedulerDelegate,0,2,0,0,2,10,2,0,0,-1,0,0,,
-statsd.net.shared.Listeners,RequestDelegate,1,10,0,0,2,170,12,0,0,0,2,0,statsd.net.shared.Listeners.HttpStatsListener' statsd.net.core.ISystemMetricsService,
-statsd.net.shared.Listeners,BufferedConsumer,3,4,0,0,4,28,4,0,0,0,0,0,,
-statsd.net.shared.Listeners,BufferedProducer,1,2,0,0,2,14,2,0,0,0,0,0,,
-statsd.net.shared.Listeners,EmptyResponse,0,2,0,0,2,12,2,0,0,-1,0,0,,
-statsd.net.shared.Listeners,IListener,0,1,1,0,0,5,1,6,0,-1,0,1,,statsd.net.Statsd
+statsd.net.shared.Factories,MessageParserBlockFactory,0,1,0,0,1,26,1,0,0,-1,3,0,statsd.net.shared.Messages.InvalidMessage' statsd.net.shared.Messages.StatsdMessage' statsd.net.shared.Messages.StatsdMessageFactory,
+statsd.net.shared.Listeners,MSSQLRelayListener,8,7,1,0,2,143,11,0,1,0,2,0,statsd.net.shared.Listeners.IListener' statsd.net.shared.Services.IntervalService,
+statsd.net.shared.Listeners,HttpStatsListener,6,2,1,0,2,271,2,0,1,0,6,0,statsd.net.shared.Listeners.SchedulerDelegate' statsd.net.shared.Listeners.RequestDelegate' statsd.net.shared.Listeners.BufferedConsumer' statsd.net.shared.Listeners.BufferedProducer' statsd.net.shared.Listeners.EmptyResponse' statsd.net.shared.Listeners.IListener,
+statsd.net.shared.Listeners,SchedulerDelegate,0,2,0,0,2,10,2,0,0,-1,0,1,,statsd.net.shared.Listeners.HttpStatsListener
+statsd.net.shared.Listeners,RequestDelegate,1,10,0,0,2,170,17,0,0,0,0,1,,statsd.net.shared.Listeners.HttpStatsListener
+statsd.net.shared.Listeners,BufferedConsumer,3,4,0,0,4,28,4,0,0,0,0,1,,statsd.net.shared.Listeners.HttpStatsListener
+statsd.net.shared.Listeners,BufferedProducer,1,2,0,0,2,14,2,0,0,0,0,1,,statsd.net.shared.Listeners.HttpStatsListener
+statsd.net.shared.Listeners,EmptyResponse,0,2,0,0,2,12,2,0,0,-1,0,1,,statsd.net.shared.Listeners.HttpStatsListener
+statsd.net.shared.Listeners,IListener,0,1,1,0,0,5,1,6,0,-1,0,5,,statsd.net.shared.Listeners.HttpStatsListener' statsd.net.shared.Listeners.MSSQLRelayListener' statsd.net.shared.Listeners.TcpStatsListener' statsd.net.shared.Listeners.StatsdnetTcpListener' statsd.net.shared.Listeners.UdpStatsListener
 statsd.net.shared.Listeners,IMessageProcessor,0,0,0,0,0,3,0,0,0,-1,0,0,,
-statsd.net.shared.Listeners,StatsdnetTcpListener,10,5,1,0,2,127,8,0,1,0,4,0,statsd.net.core.ISystemMetricsService' statsd.net.shared.SuperCheapIOC' statsd.net.shared.Utility' statsd.net.shared.Structures.DecoderBlockPacket,
-statsd.net.shared.Listeners,TcpStatsListener,5,4,1,0,3,92,5,0,1,0,1,0,statsd.net.core.ISystemMetricsService,
-statsd.net.shared.Listeners,UdpStatsListener,6,2,1,0,2,56,2,0,1,0,2,0,statsd.net.core.ISystemMetricsService' statsd.net.shared.Utility,
-statsd.net.shared.Messages,Calendargram,9,3,2,8,3,51,6,0,1,0,3,2,statsd.net.shared.Messages.StatsdMessage' statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.CalendargramRetentionPeriod,statsd.net.Framework.TimedCalendargramAggregatorBlockFactory' statsd.net.shared.Messages.StatsdMessageFactory
+statsd.net.shared.Listeners,StatsdnetTcpListener,10,5,1,0,2,127,10,0,1,0,4,0,statsd.net.shared.SuperCheapIOC' statsd.net.shared.Utility' statsd.net.shared.Listeners.IListener' statsd.net.shared.Structures.DecoderBlockPacket,
+statsd.net.shared.Listeners,TcpStatsListener,5,4,1,0,3,92,8,0,1,0,1,0,statsd.net.shared.Listeners.IListener,
+statsd.net.shared.Listeners,UdpStatsListener,6,2,1,0,2,56,2,0,1,0,2,0,statsd.net.shared.Utility' statsd.net.shared.Listeners.IListener,
+statsd.net.shared.Messages,Calendargram,9,3,2,8,3,51,12,0,1,0,3,1,statsd.net.shared.Messages.CalendargramRetentionPeriod' statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.StatsdMessage,statsd.net.shared.Messages.StatsdMessageFactory
 statsd.net.shared.Messages,CalendargramRetentionPeriod,0,0,0,0,0,10,0,0,0,-1,0,2,,statsd.net.shared.Messages.Calendargram' statsd.net.shared.Structures.TimeWindow
-statsd.net.shared.Messages,Counter,0,3,2,0,3,37,6,0,1,-1,1,3,statsd.net.shared.Messages.MessageType,statsd.net.Framework.TimedCounterAggregatorBlockFactory' statsd.net.shared.Messages.StatsdMessageFactory' statsd.net_Tests.MessageParserBlockTests
-statsd.net.shared.Messages,Gauge,0,2,1,0,2,14,2,0,1,-1,1,2,statsd.net.shared.Messages.MessageType,statsd.net.Framework.TimedGaugeAggregatorBlockFactory' statsd.net.shared.Messages.StatsdMessageFactory
-statsd.net.shared.Messages,InvalidMessage,0,2,1,0,2,13,2,0,1,-1,1,2,statsd.net.shared.Messages.MessageType,statsd.net.shared.Factories.MessageParserBlockFactory' statsd.net.shared.Messages.StatsdMessageFactory
-statsd.net.shared.Messages,MessageType,0,0,0,0,0,11,0,0,0,-1,0,9,,statsd.net.Framework.StatsdMessageRouterBlock' statsd.net.Statsd' statsd.net.shared.Messages.Calendargram' statsd.net.shared.Messages.Counter' statsd.net.shared.Messages.Gauge' statsd.net.shared.Messages.InvalidMessage' statsd.net.shared.Messages.Raw' statsd.net.shared.Messages.Set' statsd.net.shared.Messages.Timing
-statsd.net.shared.Messages,Raw,0,2,2,0,2,18,2,0,1,-1,1,2,statsd.net.shared.Messages.MessageType,statsd.net.shared.Messages.StatsdMessageFactory' statsd.net.shared.Structures.RawBucket
-statsd.net.shared.Messages,Set,0,2,1,0,2,14,2,0,1,-1,1,2,statsd.net.shared.Messages.MessageType,statsd.net.Framework.TimedSetAggregatorBlockFactory' statsd.net.shared.Messages.StatsdMessageFactory
-statsd.net.shared.Messages,StatsdMessage,0,1,2,0,1,9,1,7,0,-1,0,4,,statsd.net.Framework.StatsdMessageRouterBlock' statsd.net.shared.Factories.MessageParserBlockFactory' statsd.net.shared.Messages.Calendargram' statsd.net_Tests.MessageParserBlockTests
-statsd.net.shared.Messages,StatsdMessageFactory,1,2,0,0,2,71,7,0,0,1,7,1,statsd.net.shared.Messages.InvalidMessage' statsd.net.shared.Messages.Counter' statsd.net.shared.Messages.Timing' statsd.net.shared.Messages.Gauge' statsd.net.shared.Messages.Set' statsd.net.shared.Messages.Raw' statsd.net.shared.Messages.Calendargram,statsd.net.shared.Factories.MessageParserBlockFactory
-statsd.net.shared.Messages,Timing,0,2,1,0,2,14,2,0,1,-1,1,3,statsd.net.shared.Messages.MessageType,statsd.net.Framework.TimedLatencyPercentileAggregatorBlockFactory' statsd.net.Framework.TimedLatencyAggregatorBlockFactory' statsd.net.shared.Messages.StatsdMessageFactory
-statsd.net.shared.Services,ITimeWindowService,0,1,0,0,0,4,1,2,0,-1,0,1,,statsd.net.Framework.TimedCalendargramAggregatorBlockFactory
-statsd.net.shared.Services,TimeWindowService,0,1,0,0,1,7,1,0,1,-1,1,0,statsd.net.shared.Structures.TimeWindow,
-statsd.net.shared.Services,IIntervalService,0,3,1,0,0,8,3,2,0,-1,0,10,,statsd.net.Framework.PassThroughBlockFactory' statsd.net.Framework.TimedCalendargramAggregatorBlockFactory' statsd.net.Framework.TimedSetAggregatorBlockFactory' statsd.net.Framework.TimedLatencyPercentileAggregatorBlockFactory' statsd.net.Framework.TimedCounterAggregatorBlockFactory' statsd.net.Framework.TimedLatencyAggregatorBlockFactory' statsd.net.Framework.TimedGaugeAggregatorBlockFactory' statsd.net.Statsd' statsd.net.shared.Blocks.TimedBufferBlock<T>' statsd.net.shared.Services.SystemMetricsService
-statsd.net.shared.Services,IntervalService,2,7,1,0,6,58,9,0,1,0.29,0,2,,statsd.net.Statsd' statsd.net.shared.Listeners.MSSQLRelayListener
-statsd.net.shared.Services,IntervalFiredEventArgs,0,1,1,0,1,9,1,0,0,-1,0,8,,statsd.net.Framework.PassThroughBlockFactory' statsd.net.Framework.TimedCalendargramAggregatorBlockFactory' statsd.net.Framework.TimedSetAggregatorBlockFactory' statsd.net.Framework.TimedLatencyPercentileAggregatorBlockFactory' statsd.net.Framework.TimedCounterAggregatorBlockFactory' statsd.net.Framework.TimedLatencyAggregatorBlockFactory' statsd.net.Framework.TimedGaugeAggregatorBlockFactory' statsd.net.shared.Services.SystemMetricsService
+statsd.net.shared.Messages,Counter,0,3,2,0,3,37,6,0,1,-1,2,1,statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.StatsdMessage,statsd.net.shared.Messages.StatsdMessageFactory
+statsd.net.shared.Messages,Gauge,0,2,1,0,2,14,2,0,1,-1,2,1,statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.StatsdMessage,statsd.net.shared.Messages.StatsdMessageFactory
+statsd.net.shared.Messages,InvalidMessage,0,2,1,0,2,13,2,0,1,-1,2,2,statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.StatsdMessage,statsd.net.shared.Factories.MessageParserBlockFactory' statsd.net.shared.Messages.StatsdMessageFactory
+statsd.net.shared.Messages,MessageType,0,0,0,0,0,11,0,0,0,-1,0,8,,statsd.net.shared.Messages.InvalidMessage' statsd.net.shared.Messages.Timing' statsd.net.shared.Messages.Gauge' statsd.net.shared.Messages.Raw' statsd.net.shared.Messages.StatsdMessage' statsd.net.shared.Messages.Set' statsd.net.shared.Messages.Counter' statsd.net.shared.Messages.Calendargram
+statsd.net.shared.Messages,Raw,0,2,2,0,2,18,2,0,1,-1,2,2,statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.StatsdMessage,statsd.net.shared.Structures.RawBucket' statsd.net.shared.Messages.StatsdMessageFactory
+statsd.net.shared.Messages,Set,0,2,1,0,2,14,2,0,1,-1,2,1,statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.StatsdMessage,statsd.net.shared.Messages.StatsdMessageFactory
+statsd.net.shared.Messages,StatsdMessage,0,1,2,0,1,9,1,7,0,-1,1,9,statsd.net.shared.Messages.MessageType,statsd.net.shared.Messages.Calendargram' statsd.net.shared.Messages.Raw' statsd.net.shared.Messages.InvalidMessage' statsd.net.shared.Messages.Set' statsd.net.shared.Messages.Counter' statsd.net.shared.Messages.Timing' statsd.net.shared.Messages.Gauge' statsd.net.shared.Messages.StatsdMessageFactory' statsd.net.shared.Factories.MessageParserBlockFactory
+statsd.net.shared.Messages,StatsdMessageFactory,1,2,0,0,2,71,14,0,0,1,8,1,statsd.net.shared.Messages.Calendargram' statsd.net.shared.Messages.Counter' statsd.net.shared.Messages.Gauge' statsd.net.shared.Messages.InvalidMessage' statsd.net.shared.Messages.Raw' statsd.net.shared.Messages.Set' statsd.net.shared.Messages.StatsdMessage' statsd.net.shared.Messages.Timing,statsd.net.shared.Factories.MessageParserBlockFactory
+statsd.net.shared.Messages,Timing,0,2,1,0,2,14,2,0,1,-1,2,1,statsd.net.shared.Messages.MessageType' statsd.net.shared.Messages.StatsdMessage,statsd.net.shared.Messages.StatsdMessageFactory
+statsd.net.shared.Services,ITimeWindowService,0,1,0,0,0,4,1,2,0,-1,1,1,statsd.net.shared.Structures.TimeWindow,statsd.net.shared.Services.TimeWindowService
+statsd.net.shared.Services,TimeWindowService,0,1,0,0,1,7,1,0,1,-1,2,0,statsd.net.shared.Services.ITimeWindowService' statsd.net.shared.Structures.TimeWindow,
+statsd.net.shared.Services,IIntervalService,0,3,1,0,0,8,3,2,0,-1,1,3,statsd.net.shared.Services.IntervalFiredEventArgs,statsd.net.shared.Services.SystemMetricsService' statsd.net.shared.Services.IntervalService' statsd.net.shared.Blocks.TimedBufferBlock<T>
+statsd.net.shared.Services,IntervalService,2,7,1,0,6,58,9,0,1,0.29,2,3,statsd.net.shared.Services.IIntervalService' statsd.net.shared.Services.IntervalFiredEventArgs,statsd.net.shared.Services.SystemMetricsService' statsd.net.shared.Blocks.TimedBufferBlock<T>' statsd.net.shared.Listeners.MSSQLRelayListener
+statsd.net.shared.Services,IntervalFiredEventArgs,0,1,1,0,1,9,1,0,0,-1,0,3,,statsd.net.shared.Services.SystemMetricsService' statsd.net.shared.Services.IIntervalService' statsd.net.shared.Services.IntervalService
 statsd.net.shared.Services,PercentileCalculator,0,1,0,0,1,31,5,0,0,-1,0,1,,statsd.net.shared.Structures.PercentileBucket
-statsd.net.shared.Services,ISystemInfoService,0,0,1,0,0,4,0,1,0,-1,0,0,,
-statsd.net.shared.Services,SystemInfoService,0,1,1,0,1,8,1,0,1,-1,0,1,,statsd.net.Statsd
-statsd.net.shared.Services,SystemMetricsService,3,5,1,0,4,48,8,0,1,0,5,1,statsd.net.shared.Services.IIntervalService' statsd.net.shared.Structures.CounterBucket' statsd.net.shared.SuperCheapIOC' statsd.net.core.Backends.IBackend' statsd.net.shared.Services.IntervalFiredEventArgs,statsd.net.Statsd
+statsd.net.shared.Services,ISystemInfoService,0,0,1,0,0,4,0,1,0,-1,0,1,,statsd.net.shared.Services.SystemInfoService
+statsd.net.shared.Services,SystemInfoService,0,1,1,0,1,8,1,0,1,-1,1,0,statsd.net.shared.Services.ISystemInfoService,
+statsd.net.shared.Services,SystemMetricsService,3,5,1,0,4,48,8,0,1,0,5,0,statsd.net.shared.SuperCheapIOC' statsd.net.shared.Services.IIntervalService' statsd.net.shared.Services.IntervalService' statsd.net.shared.Services.IntervalFiredEventArgs' statsd.net.shared.Structures.CounterBucket,
 statsd.net.shared.Structures,DecoderBlockPacket,2,1,0,2,1,10,1,0,0,0,0,1,,statsd.net.shared.Listeners.StatsdnetTcpListener
-statsd.net.shared.Structures,CounterBucket,0,4,0,0,4,32,7,0,1,-1,1,5,statsd.net.core.Messages.GraphiteLine,statsd.net.Backends.Librato.LibratoBackend' statsd.net.Framework.TimedCalendargramAggregatorBlockFactory' statsd.net.Framework.TimedSetAggregatorBlockFactory' statsd.net.Framework.TimedCounterAggregatorBlockFactory' statsd.net.shared.Services.SystemMetricsService
-statsd.net.shared.Structures,DatapointBox,6,4,0,0,3,55,6,1,0,0,0,3,,statsd.net.Framework.TimedLatencyPercentileAggregatorBlockFactory' statsd.net.shared.Structures.LatencyDatapointBox' statsd.net.shared.Structures.PercentileBucket
-statsd.net.shared.Structures,GaugesBucket,0,4,1,0,4,34,7,0,1,-1,1,2,statsd.net.core.Messages.GraphiteLine,statsd.net.Backends.Librato.LibratoBackend' statsd.net.Framework.TimedGaugeAggregatorBlockFactory
-statsd.net.shared.Structures,LatencyBucket,1,5,1,0,4,73,11,0,1,0,2,2,statsd.net.shared.Structures.LatencyDatapointBox' statsd.net.core.Messages.GraphiteLine,statsd.net.Backends.Librato.LibratoBackend' statsd.net.Framework.TimedLatencyAggregatorBlockFactory
-statsd.net.shared.Structures,LatencyDatapointBox,4,3,6,0,3,52,6,0,1,0,1,3,statsd.net.shared.Structures.DatapointBox,statsd.net.Backends.Librato.LibratoBackend' statsd.net.Framework.TimedLatencyAggregatorBlockFactory' statsd.net.shared.Structures.LatencyBucket
-statsd.net.shared.Structures,PercentileBucket,0,5,3,0,5,75,11,0,1,-1,3,2,statsd.net.shared.Services.PercentileCalculator' statsd.net.shared.Structures.DatapointBox' statsd.net.core.Messages.GraphiteLine,statsd.net.Backends.Librato.LibratoBackend' statsd.net.Framework.TimedLatencyPercentileAggregatorBlockFactory
-statsd.net.shared.Structures,RawBucket,1,4,0,0,4,35,7,0,1,0,2,1,statsd.net.shared.Messages.Raw' statsd.net.core.Messages.GraphiteLine,statsd.net.Framework.PassThroughBlockFactory
+statsd.net.shared.Structures,CounterBucket,0,4,0,0,4,32,7,0,1,-1,0,1,,statsd.net.shared.Services.SystemMetricsService
+statsd.net.shared.Structures,DatapointBox,6,4,0,0,3,55,7,1,0,0,0,2,,statsd.net.shared.Structures.LatencyDatapointBox' statsd.net.shared.Structures.PercentileBucket
+statsd.net.shared.Structures,GaugesBucket,0,4,1,0,4,34,7,0,1,-1,0,0,,
+statsd.net.shared.Structures,LatencyBucket,1,5,1,0,4,73,11,0,1,0,1,0,statsd.net.shared.Structures.LatencyDatapointBox,
+statsd.net.shared.Structures,LatencyDatapointBox,4,3,6,0,3,52,8,0,1,0,1,1,statsd.net.shared.Structures.DatapointBox,statsd.net.shared.Structures.LatencyBucket
+statsd.net.shared.Structures,PercentileBucket,0,5,3,0,5,75,11,0,1,-1,2,0,statsd.net.shared.Services.PercentileCalculator' statsd.net.shared.Structures.DatapointBox,
+statsd.net.shared.Structures,RawBucket,1,4,0,0,4,35,7,0,1,0,1,0,statsd.net.shared.Messages.Raw,
 statsd.net.shared.Structures,SetsBucket,0,3,1,0,3,33,7,0,1,-1,0,0,,
-statsd.net.shared.Structures,TimeWindow,7,4,8,7,4,59,12,0,0,1,1,5,statsd.net.shared.Messages.CalendargramRetentionPeriod,statsd.net.Framework.TimedCalendargramAggregatorBlockFactory' statsd.net.Framework.TimedSetAggregatorBlockFactory' statsd.net.shared.Services.TimeWindowService' statsd.net_Tests.Infrastructure.MockTimeWindowService' statsd.net_Tests.TimedCalendargramAggregatorBlockTests
+statsd.net.shared.Structures,TimeWindow,7,4,8,7,4,59,18,0,0,1,1,2,statsd.net.shared.Messages.CalendargramRetentionPeriod,statsd.net.shared.Services.ITimeWindowService' statsd.net.shared.Services.TimeWindowService

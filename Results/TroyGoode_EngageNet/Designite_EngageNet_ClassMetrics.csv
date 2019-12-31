@@ -1,40 +1,40 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-EngageNet.Api,ApiResponseParser,0,2,0,0,2,55,6,0,0,-1,0,2,,EngageNet.Api.ApiWrapper' EngageNet.Tests.ApiResponseParserTests
-EngageNet.Api,ApiWrapper,3,4,2,0,2,64,8,0,1,0,2,1,EngageNet.IEngageNetSettings' EngageNet.Api.ApiResponseParser,EngageNet.Tests.ApiWrapperTests
-EngageNet.Api,IApiWrapper,0,1,0,0,0,4,1,1,0,-1,0,7,,EngageNet.EngageNet' EngageNet.Tests.ServiceActivityTests' EngageNet.Tests.ServiceContactsTests' EngageNet.Tests.ServiceGetAuthenticationDetailsTests' EngageNet.Tests.ServiceGetUserDataTests' EngageNet.Tests.ServiceMappingTests' EngageNet.Tests.ServiceStatusTests
-EngageNet.Data,Activity,0,0,8,0,0,11,0,0,0,-1,0,1,,EngageNet.EngageNet
-EngageNet.Data,ActivityMedia,0,0,1,0,0,4,0,4,0,-1,0,0,,
-EngageNet.Data,ActivityMediaFlash,0,0,6,0,0,9,0,0,1,-1,0,0,,
-EngageNet.Data,ActivityMediaImage,0,0,2,0,0,5,0,0,1,-1,0,0,,
-EngageNet.Data,ActivityMediaMp3,0,0,4,0,0,7,0,0,1,-1,0,0,,
-EngageNet.Data,ActivityMediaVideo,0,0,4,0,0,7,0,0,1,-1,0,0,,
+EngageNet.Api,ApiResponseParser,0,2,0,0,2,55,19,0,0,-1,16,1,EngageNet.Exceptions.TokenUrlMismatchException' EngageNet.Exceptions.MappingExistsException' EngageNet.Exceptions.AccountUpgradeNeededException' EngageNet.Exceptions.ApplicationConfigurationException' EngageNet.Exceptions.AuthenticationErrorException' EngageNet.Exceptions.CredentialsMissingException' EngageNet.Exceptions.CredentialsRevokedException' EngageNet.Exceptions.DataNotFoundException' EngageNet.Exceptions.FacebookErrorException' EngageNet.Exceptions.InvalidParameterException' EngageNet.Exceptions.MissingParameterException' EngageNet.Exceptions.PreviouslyOperationalProviderException' EngageNet.Exceptions.ServiceTemporarilyUnavailableException' EngageNet.Exceptions.UnknownResponseException' EngageNet.Exceptions.UnsupportedProviderFeatureException' EngageNet.EngageException,EngageNet.Api.ApiWrapper
+EngageNet.Api,ApiWrapper,3,4,2,0,2,64,8,0,1,0,3,1,EngageNet.Api.ApiResponseParser' EngageNet.Api.IApiWrapper' EngageNet.IEngageNetSettings,EngageNet.EngageNet
+EngageNet.Api,IApiWrapper,0,1,0,0,0,4,1,1,0,-1,0,2,,EngageNet.Api.ApiWrapper' EngageNet.EngageNet
+EngageNet.Data,Activity,0,0,8,0,0,11,0,0,0,-1,1,1,EngageNet.Data.ActivityMedia,EngageNet.EngageNet
+EngageNet.Data,ActivityMedia,0,0,1,0,0,4,0,4,0,-1,0,5,,EngageNet.Data.ActivityMediaImage' EngageNet.Data.Activity' EngageNet.Data.ActivityMediaFlash' EngageNet.Data.ActivityMediaMp3' EngageNet.Data.ActivityMediaVideo
+EngageNet.Data,ActivityMediaFlash,0,0,6,0,0,9,0,0,1,-1,1,0,EngageNet.Data.ActivityMedia,
+EngageNet.Data,ActivityMediaImage,0,0,2,0,0,5,0,0,1,-1,1,0,EngageNet.Data.ActivityMedia,
+EngageNet.Data,ActivityMediaMp3,0,0,4,0,0,7,0,0,1,-1,1,0,EngageNet.Data.ActivityMedia,
+EngageNet.Data,ActivityMediaVideo,0,0,4,0,0,7,0,0,1,-1,1,0,EngageNet.Data.ActivityMedia,
 EngageNet.Data,AllIdentifiers,0,1,0,0,1,10,2,0,0,-1,1,1,EngageNet.Data.Identifiers,EngageNet.EngageNet
-EngageNet.Data,Contact,0,1,2,0,1,21,1,0,0,-1,1,2,EngageNet.Data.ContactEmailAddress,EngageNet.Data.GetContactsResponse' EngageNet.Tests.Data.ContactTests
-EngageNet.Data,ContactEmailAddress,0,1,2,0,1,13,1,0,0,-1,0,2,,EngageNet.Data.Contact' EngageNet.Tests.Data.ContactEmailAddressTests
-EngageNet.Data,GetContactsResponse,0,1,3,0,1,17,1,0,0,-1,1,1,EngageNet.Data.Contact,EngageNet.EngageNet
-EngageNet.Data,Address,0,1,6,0,1,37,2,0,1,-1,0,2,,EngageNet.Data.AuthenticationDetails' EngageNet.Tests.Data.AddressTests
-EngageNet.Data,AuthenticationDetails,0,3,15,0,1,90,7,0,1,-1,2,2,EngageNet.Data.Name' EngageNet.Data.Address,EngageNet.EngageNet' EngageNet.Tests.Data.AuthenticationDetailsTests
-EngageNet.Data,ElementBase,1,2,0,0,1,12,2,3,0,0,0,0,,
-EngageNet.Data,Name,0,1,6,0,1,37,2,0,1,-1,0,2,,EngageNet.Data.AuthenticationDetails' EngageNet.Tests.Data.NameTests
-EngageNet.Data,Identifiers,0,1,0,0,1,9,1,0,0,-1,0,2,,EngageNet.Data.AllIdentifiers' EngageNet.EngageNet
-EngageNet.Exceptions,TokenUrlMismatchException,0,3,0,0,3,15,3,0,1,-1,0,0,,
-EngageNet.Exceptions,ResponseException,0,3,1,0,0,17,3,14,1,-1,0,0,,
-EngageNet.Exceptions,MappingExistsException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,AccountUpgradeNeededException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,ApplicationConfigurationException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,AuthenticationErrorException,0,3,0,0,3,15,3,1,2,-1,0,0,,
-EngageNet.Exceptions,CredentialsMissingException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,CredentialsRevokedException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,DataNotFoundException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,FacebookErrorException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,InvalidParameterException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,MissingParameterException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,PreviouslyOperationalProviderException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,ServiceTemporarilyUnavailableException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,UnknownResponseException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet.Exceptions,UnsupportedProviderFeatureException,0,3,0,0,3,15,3,0,2,-1,0,0,,
-EngageNet,EngageException,0,4,0,0,3,19,4,1,0,-1,0,0,,
-EngageNet,IEngageNet,0,10,0,0,0,14,10,1,0,-1,0,0,,
-EngageNet,IEngageNetSettings,0,0,3,0,0,6,0,1,0,-1,0,2,,EngageNet.Api.ApiWrapper' EngageNet.EngageNet
-EngageNet,EngageNetSettings,3,2,3,0,2,30,2,0,1,1,0,1,,EngageNet.Tests.ApiWrapperTests
-EngageNet,EngageNet,1,14,0,0,14,148,30,0,1,0.21,7,7,EngageNet.Api.IApiWrapper' EngageNet.IEngageNetSettings' EngageNet.Data.GetContactsResponse' EngageNet.Data.AllIdentifiers' EngageNet.Data.Identifiers' EngageNet.Data.AuthenticationDetails' EngageNet.Data.Activity,EngageNet.Mvc.EngageProvider' EngageNet.Tests.ServiceActivityTests' EngageNet.Tests.ServiceContactsTests' EngageNet.Tests.ServiceGetAuthenticationDetailsTests' EngageNet.Tests.ServiceGetUserDataTests' EngageNet.Tests.ServiceMappingTests' EngageNet.Tests.ServiceStatusTests
+EngageNet.Data,Contact,0,1,2,0,1,21,1,0,0,-1,1,1,EngageNet.Data.ContactEmailAddress,EngageNet.Data.GetContactsResponse
+EngageNet.Data,ContactEmailAddress,0,1,2,0,1,13,1,0,0,-1,0,1,,EngageNet.Data.Contact
+EngageNet.Data,GetContactsResponse,0,1,3,0,1,17,1,0,0,-1,1,2,EngageNet.Data.Contact,EngageNet.IEngageNet' EngageNet.EngageNet
+EngageNet.Data,Address,0,1,6,0,1,37,2,0,1,-1,1,1,EngageNet.Data.ElementBase,EngageNet.Data.AuthenticationDetails
+EngageNet.Data,AuthenticationDetails,0,3,15,0,1,90,8,0,1,-1,3,2,EngageNet.Data.Address' EngageNet.Data.ElementBase' EngageNet.Data.Name,EngageNet.EngageNet' EngageNet.IEngageNet
+EngageNet.Data,ElementBase,1,2,0,0,1,12,2,3,0,0,0,3,,EngageNet.Data.AuthenticationDetails' EngageNet.Data.Address' EngageNet.Data.Name
+EngageNet.Data,Name,0,1,6,0,1,37,2,0,1,-1,1,1,EngageNet.Data.ElementBase,EngageNet.Data.AuthenticationDetails
+EngageNet.Data,Identifiers,0,1,0,0,1,9,1,0,0,-1,0,2,,EngageNet.EngageNet' EngageNet.Data.AllIdentifiers
+EngageNet.Exceptions,TokenUrlMismatchException,0,3,0,0,3,15,3,0,1,-1,1,1,EngageNet.Exceptions.AuthenticationErrorException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,ResponseException,0,3,1,0,0,17,3,14,1,-1,1,14,EngageNet.EngageException,EngageNet.Exceptions.MissingParameterException' EngageNet.Exceptions.UnsupportedProviderFeatureException' EngageNet.Exceptions.CredentialsMissingException' EngageNet.Exceptions.ApplicationConfigurationException' EngageNet.Exceptions.CredentialsRevokedException' EngageNet.Exceptions.PreviouslyOperationalProviderException' EngageNet.Exceptions.InvalidParameterException' EngageNet.Exceptions.DataNotFoundException' EngageNet.Exceptions.AuthenticationErrorException' EngageNet.Exceptions.MappingExistsException' EngageNet.Exceptions.FacebookErrorException' EngageNet.Exceptions.AccountUpgradeNeededException' EngageNet.Exceptions.ServiceTemporarilyUnavailableException' EngageNet.Exceptions.UnknownResponseException
+EngageNet.Exceptions,MappingExistsException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,AccountUpgradeNeededException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,ApplicationConfigurationException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,AuthenticationErrorException,0,3,0,0,3,15,3,1,2,-1,1,2,EngageNet.Exceptions.ResponseException,EngageNet.Exceptions.TokenUrlMismatchException' EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,CredentialsMissingException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,CredentialsRevokedException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,DataNotFoundException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,FacebookErrorException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,InvalidParameterException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,MissingParameterException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,PreviouslyOperationalProviderException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,ServiceTemporarilyUnavailableException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,UnknownResponseException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet.Exceptions,UnsupportedProviderFeatureException,0,3,0,0,3,15,3,0,2,-1,1,1,EngageNet.Exceptions.ResponseException,EngageNet.Api.ApiResponseParser
+EngageNet,EngageException,0,4,0,0,3,19,4,1,0,-1,0,2,,EngageNet.Api.ApiResponseParser' EngageNet.Exceptions.ResponseException
+EngageNet,IEngageNet,0,10,0,0,0,14,10,1,0,-1,2,1,EngageNet.Data.GetContactsResponse' EngageNet.Data.AuthenticationDetails,EngageNet.EngageNet
+EngageNet,IEngageNetSettings,0,0,3,0,0,6,0,1,0,-1,0,3,,EngageNet.Api.ApiWrapper' EngageNet.EngageNet' EngageNet.EngageNetSettings
+EngageNet,EngageNetSettings,3,2,3,0,2,30,2,0,1,1,1,1,EngageNet.IEngageNetSettings,EngageNet.EngageNet
+EngageNet,EngageNet,1,14,0,0,14,148,30,0,1,0.21,10,0,EngageNet.Api.ApiWrapper' EngageNet.Api.IApiWrapper' EngageNet.Data.Activity' EngageNet.Data.AllIdentifiers' EngageNet.Data.GetContactsResponse' EngageNet.Data.AuthenticationDetails' EngageNet.Data.Identifiers' EngageNet.IEngageNet' EngageNet.IEngageNetSettings' EngageNet.EngageNetSettings,

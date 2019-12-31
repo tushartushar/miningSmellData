@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PingPong,ClientAsyncActor,0,1,0,0,1,31,1,0,1,-1,1,0,Akka.Actor.IActorRef,
-PingPong,ClientReceiveActor,0,1,0,0,1,31,1,0,1,-1,1,0,Akka.Actor.IActorRef,
-PingPong,ClientActorBase,5,2,0,0,1,48,7,0,1,0,4,0,Akka.Actor.IActorRef' PingPong.Msg' PingPong.Run' PingPong.Started,
-PingPong,Messages,0,0,0,0,0,6,0,0,0,-1,0,0,,
-PingPong,Msg,0,1,0,0,1,1,1,0,0,-1,0,2,,PingPong.ClientActorBase' PingPong.Destination
-PingPong,Run,0,1,0,0,1,1,1,0,0,-1,0,2,,PingPong.ClientActorBase' PingPong.Program
-PingPong,Started,0,1,0,0,1,1,1,0,0,-1,0,4,,PingPong.ClientActorBase' PingPong.Program' PingPong.Destination' PingPong.WaitForStarts
-PingPong,Program,0,6,0,0,2,219,20,0,0,-1,10,0,Akka.Actor.ActorSystem' PingPong.PrintStats' Akka.Actor.IActorRef' PingPong.Started' Akka.Actor.LocalActorRef' PingPong.Run' Akka.Configuration.ConfigurationFactory' Akka.Actor.Props' Akka.Dispatch.MessageDispatcher' Akka.Actor.ActorCell,
-PingPong,Destination,0,1,0,0,0,10,2,0,1,-1,3,0,Akka.Actor.IActorRef' PingPong.Msg' PingPong.Started,
-PingPong,WaitForStarts,1,2,0,0,1,13,3,0,1,0,1,0,PingPong.Started,
+PingPong,ClientAsyncActor,0,1,0,0,1,31,1,0,1,-1,4,1,PingPong.Messages' PingPong.Msg' PingPong.Run' PingPong.Started,PingPong.Program
+PingPong,ClientReceiveActor,0,1,0,0,1,31,1,0,1,-1,4,1,PingPong.Messages' PingPong.Msg' PingPong.Run' PingPong.Started,PingPong.Program
+PingPong,ClientActorBase,5,2,0,0,1,48,8,0,1,0,4,1,PingPong.Messages' PingPong.Msg' PingPong.Run' PingPong.Started,PingPong.Program
+PingPong,Messages,0,0,0,0,0,6,0,0,0,-1,0,4,,PingPong.Program' PingPong.ClientActorBase' PingPong.ClientReceiveActor' PingPong.ClientAsyncActor
+PingPong,Msg,0,1,0,0,1,1,1,0,0,-1,0,4,,PingPong.ClientActorBase' PingPong.ClientReceiveActor' PingPong.ClientAsyncActor' PingPong.Program
+PingPong,Run,0,1,0,0,1,1,1,0,0,-1,0,4,,PingPong.ClientReceiveActor' PingPong.ClientAsyncActor' PingPong.ClientActorBase' PingPong.Program
+PingPong,Started,0,1,0,0,1,1,1,0,0,-1,0,4,,PingPong.ClientActorBase' PingPong.ClientAsyncActor' PingPong.ClientReceiveActor' PingPong.Program
+PingPong,Program,0,6,0,0,2,219,22,0,0,-1,10,0,PingPong.ClientAsyncActor' PingPong.ClientReceiveActor' PingPong.ClientActorBase' PingPong.Messages' PingPong.Msg' PingPong.Run' PingPong.Started' PingPong.Destination' PingPong.WaitForStarts' PingPong.PrintStats,
+PingPong,Destination,0,1,0,0,0,10,3,0,1,-1,0,1,,PingPong.Program
+PingPong,WaitForStarts,1,2,0,0,1,13,3,0,1,0,0,1,,PingPong.Program
 PingPong,PrintStats,0,0,0,0,0,8,0,0,0,-1,0,1,,PingPong.Program

@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Nake,App,1,4,0,0,2,38,6,0,0,0.5,1,2,Nake.Log,Nake.Application' Nake.Program
+Nake,App,1,4,0,0,2,38,6,0,0,0.5,1,0,Nake.Log,
 Nake,Color,0,1,0,0,1,14,1,0,0,-1,0,1,,Nake.Log
-Nake,FileSet,6,21,0,0,15,437,41,0,0,0.24,4,3,Nake.Location' Nake.Item' Nake.Exclusion' Nake.Inclusion,Nake.FS' Nake.Utility.FileSetExtensionsFixture' Nake.Utility.FileSetFixture
-Nake,Inclusion,2,2,1,0,2,23,3,0,0,0,1,1,Nake.Item,Nake.FileSet
-Nake,Exclusion,1,5,0,0,4,26,5,0,0,0.4,0,1,,Nake.FileSet
-Nake,Item,7,5,0,6,3,112,8,0,0,0.4,0,4,,Nake.FileSet' Nake.Inclusion' Nake.Utility.FileSetExtensionsFixture' Nake.Utility.FileSetFixture
-Nake,Env,1,0,0,1,0,24,0,0,0,-1,1,9,Nake.Variables,Nake.Magic.StringInterpolation' Nake.CacheKey' Nake.Application' Nake.Program' Nake.Run' Nake.Feature_intersections' Nake.Redefining_public_fields' Nake.String_interpolation' Nake.Invoking_tasks
-Nake,Variables,2,1,0,2,0,14,1,0,1,0,1,2,Nake.EnvironmentScope,Nake.Env' Nake.Run
-Nake,EnvironmentScope,1,3,0,0,2,45,3,1,0,0,0,1,,Nake.Variables
+Nake,FileSet,6,21,0,0,15,437,41,0,0,0.29,4,1,Nake.Inclusion' Nake.Exclusion' Nake.Item' Nake.Location,Nake.FS
+Nake,Inclusion,2,2,1,0,2,23,3,0,0,0,0,1,,Nake.FileSet
+Nake,Exclusion,1,5,0,0,4,26,5,0,0,0.8,0,1,,Nake.FileSet
+Nake,Item,7,5,0,6,3,112,8,0,0,0.4,0,1,,Nake.FileSet
+Nake,Env,1,0,0,1,0,24,0,0,0,-1,2,3,Nake.Variables' Nake.EnvironmentScope,Nake.Log' Nake.Location' Nake.Run
+Nake,Variables,2,1,0,2,0,14,1,0,1,0,0,1,,Nake.Env
+Nake,EnvironmentScope,1,3,0,0,2,45,3,1,0,0.67,0,1,,Nake.Env
 Nake,FS,0,11,0,0,10,177,15,0,0,-1,3,0,Nake.FileSet' Nake.Location' Nake.Run,
-Nake,Location,1,3,2,1,0,40,3,0,0,0.67,0,6,,Nake.Application' Nake.FileSet' Nake.FS' Nake.Run' Nake.Utility.FileSetExtensionsFixture' Nake.Utility.FileSetFixture
-Nake,MSBuildEngineStub,1,6,4,0,6,44,6,0,0,0.33,0,0,,
+Nake,Location,1,3,2,1,0,40,3,0,0,0.67,1,3,Nake.Env,Nake.Run' Nake.FileSet' Nake.FS
+Nake,MSBuildEngineStub,1,6,4,0,6,44,6,0,0,0.33,0,1,,Nake.Run
 Nake,MSBuildExtensions,0,3,0,0,3,30,3,0,0,-1,0,0,,
-Nake,Log,4,8,0,1,8,91,12,0,0,0,1,4,Nake.Color,Nake.Magic.FieldSubstitution' Nake.Application' Nake.Program' Nake.App
-Nake,Run,0,3,0,0,3,89,5,0,0,-1,3,2,Nake.Location' Nake.Variables' Nake.Env,Nake.FS' Nake.Utility.RunFixture
+Nake,Log,4,8,0,1,8,91,12,0,0,0,2,1,Nake.Color' Nake.Env,Nake.App
+Nake,Run,0,3,0,0,3,89,6,0,0,-1,3,1,Nake.Env' Nake.Location' Nake.MSBuildEngineStub,Nake.FS

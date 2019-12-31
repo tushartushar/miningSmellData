@@ -1,75 +1,74 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OpenStory.Common.Game,AuthOperationType,0,0,0,0,0,13,0,0,0,-1,0,1,,OpenStory.Server.Auth.AuthClient
-OpenStory.Common.Game,PinRequestType,0,0,0,0,0,18,0,0,0,-1,0,1,,OpenStory.Server.Auth.AuthClient
-OpenStory.Common.Game,PinResponseType,0,0,0,0,0,23,0,0,0,-1,0,2,,OpenStory.Server.Auth.AuthClient' OpenStory.Server.Auth.PacketHelpers
-OpenStory.Common.Game,AuthenticationResult,0,0,0,0,0,39,0,0,0,-1,0,3,,OpenStory.Server.Auth.AuthClient' OpenStory.Server.Auth.SimpleAuthenticator' OpenStory.Services.Simple.StubAuthenticator
-OpenStory.Common.Game,GameConstants,1,0,0,1,0,7,0,0,0,-1,0,2,,OpenStory.Common.Game.KeyLayout' OpenStory.Common.Game.KeyLayoutFixture
+OpenStory.Common.Game,AuthOperationType,0,0,0,0,0,13,0,0,0,-1,1,0,OpenStory.Common.PacketValueAttribute,
+OpenStory.Common.Game,PinRequestType,0,0,0,0,0,18,0,0,0,-1,1,0,OpenStory.Common.PacketValueAttribute,
+OpenStory.Common.Game,PinResponseType,0,0,0,0,0,23,0,0,0,-1,1,0,OpenStory.Common.PacketValueAttribute,
+OpenStory.Common.Game,AuthenticationResult,0,0,0,0,0,39,0,0,0,-1,1,0,OpenStory.Common.PacketValueAttribute,
+OpenStory.Common.Game,GameConstants,1,0,0,1,0,7,0,0,0,-1,0,1,,OpenStory.Common.Game.KeyLayout
 OpenStory.Common.Game,Elements,0,0,0,0,0,44,0,0,0,-1,0,0,,
-OpenStory.Common.Game,Gender,0,0,0,0,0,19,0,0,0,-1,0,1,,OpenStory.Services.Simple.StubAuthenticator
+OpenStory.Common.Game,Gender,0,0,0,0,0,19,0,0,0,-1,1,0,OpenStory.Common.PacketValueAttribute,
 OpenStory.Common.Game,GuildRank,0,0,0,0,0,28,0,0,0,-1,0,0,,
-OpenStory.Common.Game,IChannel,0,0,4,0,0,19,0,1,0,-1,0,1,,OpenStory.Server.Auth.Packets
-OpenStory.Common.Game,IWorld,0,0,5,0,0,23,0,1,0,-1,0,1,,OpenStory.Server.Auth.Packets
-OpenStory.Common.Game,KeyBinding,0,1,2,0,1,21,1,0,0,-1,0,2,,OpenStory.Common.Game.KeyLayout' OpenStory.Common.Game.KeyLayoutFixture
+OpenStory.Common.Game,IChannel,0,0,4,0,0,19,0,1,0,-1,0,1,,OpenStory.Common.Game.IWorld
+OpenStory.Common.Game,IWorld,0,0,5,0,0,23,0,1,0,-1,2,0,OpenStory.Common.Game.IChannel' OpenStory.Common.Game.ServerStatus,
+OpenStory.Common.Game,KeyBinding,0,1,2,0,1,21,1,0,0,-1,0,1,,OpenStory.Common.Game.KeyLayout
 OpenStory.Common.Game,InventoryType,0,0,0,0,0,28,0,0,0,-1,0,0,,
 OpenStory.Common.Game,ItemType,0,0,0,0,0,22,0,0,0,-1,0,0,,
 OpenStory.Common.Game,JobClass,0,0,0,0,0,7,0,0,0,-1,0,0,,
-OpenStory.Common.Game,KeyLayout,1,5,1,0,3,70,7,0,0,0,3,1,OpenStory.Common.Game.GameConstants' OpenStory.CommonStrings' OpenStory.Common.Game.KeyBinding,OpenStory.Common.Game.KeyLayoutFixture
-OpenStory.Common.Game,PointS,0,8,2,0,8,113,10,0,0,-1,1,4,OpenStory.CommonStrings,OpenStory.Common.IO.IoExtensions' OpenStory.Tests.Helpers.PointSAssertions' OpenStory.Tests.Helpers.FluentAssertionsExtensions' OpenStory.Common.Game.PointSFixture
-OpenStory.Common.Game,ServerStatus,0,0,0,0,0,16,0,0,0,-1,0,0,,
-OpenStory.Common.IO,ByteBuffer,1,2,1,0,2,28,2,0,0,0,1,1,OpenStory.Common.IO.IPacketBuilder,OpenStory.Common.IO.IoExtensions
-OpenStory.Common.IO,IPacketReader,0,1,1,0,0,13,1,2,0,-1,0,0,,
-OpenStory.Common.IO,ArraySegmentException,0,2,0,0,1,25,2,0,0,-1,1,4,OpenStory.CommonStrings,OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.Common.IO.BoundedBuffer' OpenStory.Common.IO.PacketReader' OpenStory.Common.ArrayExtensions
-OpenStory.Common.IO,Flags,0,4,1,0,2,50,5,2,0,-1,3,0,OpenStory.CommonStrings' OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader,
-OpenStory.Common.IO,HandshakeInfo,0,1,6,0,0,33,1,1,0,-1,0,2,,OpenStory.Framework.Contracts.IServerSession' OpenStory.Server.Processing.ServerSession
-OpenStory.Common.IO,IntFlags,1,4,0,0,2,60,9,0,1,0.75,2,0,OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader,
-OpenStory.Common.IO,IoExtensions,0,9,0,0,9,123,9,0,0,-1,4,0,OpenStory.Common.IO.ByteBuffer' OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader' OpenStory.Common.Game.PointS,
-OpenStory.Common.IO,IPacketBuilder,0,15,0,0,0,87,15,1,0,-1,0,6,,OpenStory.Common.IO.ByteBuffer' OpenStory.Common.IO.Flags' OpenStory.Common.IO.IntFlags' OpenStory.Common.IO.IoExtensions' OpenStory.Common.IO.LongFlags' OpenStory.Server.Auth.Packets
-OpenStory.Common.IO,ISafePacketReader,0,13,0,0,0,81,13,1,1,-1,0,1,,OpenStory.Common.IO.SafePacketReadingFixture
-OpenStory.Common.IO,IUnsafePacketReader,0,12,0,0,0,77,12,1,1,-1,0,10,,OpenStory.Common.IO.Flags' OpenStory.Common.IO.IntFlags' OpenStory.Common.IO.IoExtensions' OpenStory.Common.IO.LongFlags' OpenStory.Server.Processing.ClientBase' OpenStory.Server.Auth.AuthClient' OpenStory.Server.Auth.IAuthenticator' OpenStory.Server.Auth.SimpleAuthenticator' OpenStory.Services.Simple.StubAuthenticator' OpenStory.Common.IO.SafePacketReadingFixture
-OpenStory.Common.IO,LittleEndianBitConverter,0,19,0,0,16,213,23,0,0,-1,2,2,OpenStory.CommonStrings' OpenStory.Common.IO.ArraySegmentException,OpenStory.Common.IO.PacketBuilder' OpenStory.Common.IO.PacketReader
-OpenStory.Common.IO,BoundedBuffer,3,14,1,0,6,176,23,0,0,0,4,2,OpenStory.Common.IO.ArraySegmentException' OpenStory.Common.Arrays' OpenStory.Common.Misc' OpenStory.CommonStrings,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Common.IO.BoundedBufferFixture
-OpenStory.Common.IO,ByteOrder,0,19,0,0,18,161,20,0,0,-1,0,1,,OpenStory.Common.IO.ByteOrderFixture
-OpenStory.Common.IO,LongFlags,1,4,0,0,2,60,9,0,1,0.75,2,0,OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader,
-OpenStory.Common.IO,PacketBuilder,2,20,0,0,18,184,27,0,1,0,3,6,OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.CommonStrings' OpenStory.Common.Misc,OpenStory.Server.Processing.ClientBase' OpenStory.Server.Processing.PacketFactory' OpenStory.Server.Processing.ServerSession' OpenStory.Server.Auth.AuthClient' OpenStory.Server.Auth.PacketHelpers' OpenStory.Common.IO.PacketBuilderFixture
+OpenStory.Common.Game,KeyLayout,1,5,1,0,3,67,7,0,0,0,3,0,OpenStory.Common.Game.GameConstants' OpenStory.Common.Game.KeyBinding' OpenStory.CommonStrings,
+OpenStory.Common.Game,PointS,0,8,2,0,8,114,10,0,0,-1,1,1,OpenStory.CommonStrings,OpenStory.Common.IO.IoExtensions
+OpenStory.Common.Game,ServerStatus,0,0,0,0,0,16,0,0,0,-1,0,1,,OpenStory.Common.Game.IWorld
+OpenStory.Common.IO,IPacketReader,0,1,1,0,0,13,1,2,0,-1,0,2,,OpenStory.Common.IO.ISafePacketReader' OpenStory.Common.IO.IUnsafePacketReader
+OpenStory.Common.IO,ArraySegmentException,0,2,0,0,1,25,2,0,0,-1,1,4,OpenStory.CommonStrings,OpenStory.Common.ArrayExtensions' OpenStory.Common.IO.BoundedBuffer' OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.Common.IO.PacketReader
+OpenStory.Common.IO,Flags,0,4,1,0,2,50,5,2,0,-1,3,3,OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader' OpenStory.CommonStrings,OpenStory.Common.IO.IoExtensions' OpenStory.Common.IO.LongFlags' OpenStory.Common.IO.IntFlags
+OpenStory.Common.IO,HandshakeInfo,0,1,6,0,0,33,1,1,0,-1,0,0,,
+OpenStory.Common.IO,IntFlags,1,4,0,0,2,60,9,0,1,0.75,3,0,OpenStory.Common.IO.Flags' OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader,
+OpenStory.Common.IO,IoExtensions,0,8,0,0,8,110,8,0,0,-1,8,0,OpenStory.Common.Game.PointS' OpenStory.Common.IO.Flags' OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader' OpenStory.Common.IO.PacketBuilder' OpenStory.Common.IO.PacketReader' OpenStory.Common.PacketValueAttribute' OpenStory.Common.PacketValueExtensions,
+OpenStory.Common.IO,IPacketBuilder,0,15,0,0,0,87,15,1,0,-1,0,5,,OpenStory.Common.IO.LongFlags' OpenStory.Common.IO.Flags' OpenStory.Common.IO.PacketBuilder' OpenStory.Common.IO.IntFlags' OpenStory.Common.IO.IoExtensions
+OpenStory.Common.IO,ISafePacketReader,0,13,0,0,0,81,13,1,1,-1,1,1,OpenStory.Common.IO.IPacketReader,OpenStory.Common.IO.PacketReader
+OpenStory.Common.IO,IUnsafePacketReader,0,12,0,0,0,77,12,1,1,-1,1,5,OpenStory.Common.IO.IPacketReader,OpenStory.Common.IO.IntFlags' OpenStory.Common.IO.LongFlags' OpenStory.Common.IO.Flags' OpenStory.Common.IO.IoExtensions' OpenStory.Common.IO.PacketReader
+OpenStory.Common.IO,LittleEndianBitConverter,0,19,0,0,16,213,23,0,0,-1,2,2,OpenStory.Common.IO.ArraySegmentException' OpenStory.CommonStrings,OpenStory.Common.IO.PacketBuilder' OpenStory.Common.IO.PacketReader
+OpenStory.Common.IO,BoundedBuffer,3,14,1,0,6,176,23,0,0,0,4,1,OpenStory.Common.IO.ArraySegmentException' OpenStory.Common.Arrays<T>' OpenStory.Common.Misc' OpenStory.CommonStrings,OpenStory.Networking.EncryptedNetworkSession
+OpenStory.Common.IO,ByteOrder,0,19,0,0,18,161,20,0,0,-1,0,0,,
+OpenStory.Common.IO,LongFlags,1,4,0,0,2,60,9,0,1,0.75,3,0,OpenStory.Common.IO.Flags' OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.IUnsafePacketReader,
+OpenStory.Common.IO,PacketBuilder,2,20,0,0,18,184,27,0,1,0,4,1,OpenStory.Common.IO.IPacketBuilder' OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.Common.Misc' OpenStory.CommonStrings,OpenStory.Common.IO.IoExtensions
 OpenStory.Common.IO,PacketReadingException,0,3,0,0,1,28,3,0,0,-1,1,1,OpenStory.CommonStrings,OpenStory.Common.IO.PacketReader
-OpenStory.Common.IO,PacketReader,4,40,1,0,32,574,70,0,2,0,5,5,OpenStory.CommonStrings' OpenStory.Common.IO.ArraySegmentException' OpenStory.Common.Misc' OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.Common.IO.PacketReadingException,OpenStory.Framework.Contracts.PacketProcessingEventArgs' OpenStory.Server.Processing.ServerSession' OpenStory.Common.IO.PacketReaderFixtureBase' OpenStory.Common.IO.SafePacketReadingFixture' OpenStory.Common.IO.UnsafePacketReadingFixture
-OpenStory.Common,ArrayExtensions,0,4,0,0,4,91,9,0,0,-1,2,1,OpenStory.CommonStrings' OpenStory.Common.IO.ArraySegmentException,OpenStory.Common.ArrayExtensionsFixture
-OpenStory.Common,AtomicBoolean,1,5,1,0,5,94,6,0,0,0.6,0,5,,OpenStory.Networking.NetworkSession' OpenStory.Networking.SendDescriptor' OpenStory.Server.Processing.ServerSession' OpenStory.Server.Processing.ServerProcess' OpenStory.Common.AtomicBooleanFixture
-OpenStory.Common,AtomicInteger,1,7,1,0,7,108,8,0,0,0,0,4,,OpenStory.Server.Processing.ClientBase' OpenStory.Server.Processing.ServerSession' OpenStory.Server.Accounts.AccountServer' OpenStory.Common.AtomicIntegerFixture
-OpenStory.Common,PacketValueAttribute,1,1,1,0,1,20,1,0,0,0,0,1,,OpenStory.Common.PacketValueCache
-OpenStory.Common,IPacketCodeTable,0,4,0,0,0,29,4,1,0,-1,0,2,,OpenStory.Server.Processing.PacketFactory' OpenStory.Server.Processing.ServerSession
-OpenStory.Common,PacketCodeTable,2,9,0,0,5,104,11,3,1,0,0,0,,
-OpenStory.Common,PacketValueExtensions,1,4,0,0,3,91,8,0,0,0,2,0,OpenStory.CommonStrings' OpenStory.Common.PacketValueCache,
-OpenStory.Common,PacketValueCache,1,1,2,0,1,21,1,0,0,0,1,1,OpenStory.Common.PacketValueAttribute,OpenStory.Common.PacketValueExtensions
-OpenStory.Common,Arrays,0,3,0,0,2,38,4,0,0,-1,0,1,,OpenStory.Common.IO.BoundedBuffer
-OpenStory.Common,Arrays<T>,1,0,0,1,0,7,0,0,0,-1,0,0,,
+OpenStory.Common.IO,PacketReader,4,40,1,0,32,571,70,0,2,0,7,2,OpenStory.Common.IO.ArraySegmentException' OpenStory.Common.IO.ISafePacketReader' OpenStory.Common.IO.IUnsafePacketReader' OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.Common.IO.PacketReadingException' OpenStory.Common.Misc' OpenStory.CommonStrings,OpenStory.Common.IO.IoExtensions' OpenStory.Networking.PacketReceivedEventArgs
+OpenStory.Common,ArrayExtensions,0,4,0,0,4,91,9,0,0,-1,2,0,OpenStory.Common.IO.ArraySegmentException' OpenStory.CommonStrings,
+OpenStory.Common,AtomicBoolean,1,5,1,0,5,91,6,0,0,0.6,0,2,,OpenStory.Networking.NetworkSession' OpenStory.Networking.SendDescriptor
+OpenStory.Common,AtomicInteger,1,7,1,0,7,105,8,0,0,0,0,0,,
+OpenStory.Common,PacketValueAttribute,0,1,1,0,1,16,1,0,0,-1,0,7,,OpenStory.Common.IO.IoExtensions' OpenStory.Common.Game.AuthOperationType' OpenStory.Common.Game.Gender' OpenStory.Common.Game.PinResponseType' OpenStory.Common.Game.PinRequestType' OpenStory.Common.Game.AuthenticationResult' OpenStory.Common.PacketValueExtensions
+OpenStory.Common,IPacketCodeTable,0,4,0,0,0,29,4,1,0,-1,0,1,,OpenStory.Common.PacketCodeTable
+OpenStory.Common,PacketCodeTable,2,9,0,0,5,104,11,3,1,0,1,0,OpenStory.Common.IPacketCodeTable,
+OpenStory.Common,PacketValueExtensions,1,4,0,0,3,91,8,0,0,0,3,1,OpenStory.Common.PacketValueAttribute' OpenStory.Common.PacketValueCache' OpenStory.CommonStrings,OpenStory.Common.IO.IoExtensions
+OpenStory.Common,PacketValueCache,1,1,2,0,1,21,1,0,0,0,0,1,,OpenStory.Common.PacketValueExtensions
+OpenStory.Common,Arrays,0,3,0,0,2,38,4,0,0,-1,0,0,,
+OpenStory.Common,Arrays<T>,1,0,0,1,0,7,0,0,0,-1,0,1,,OpenStory.Common.IO.BoundedBuffer
 OpenStory.Common,HexExtensions,0,2,0,0,2,64,8,0,0,-1,1,0,OpenStory.CommonStrings,
-OpenStory.Common,Misc,0,6,0,0,6,108,7,0,0,-1,0,9,,OpenStory.Common.IO.BoundedBuffer' OpenStory.Common.IO.PacketBuilder' OpenStory.Common.IO.PacketReader' OpenStory.Networking.DescriptorBase' OpenStory.Networking.EncryptedNetworkSession' OpenStory.Networking.NetworkSession' OpenStory.Server.Processing.ClientBase' OpenStory.Server.Channel.PlayerRegistry' OpenStory.Common.IO.PacketBuilderFixture
-OpenStory.Common,ParameterList,6,9,0,0,5,200,16,0,0,0,1,2,OpenStory.CommonStrings,OpenStory.Services.Wcf.EnvironmentNexusConnectionProvider' OpenStory.Common.ParameterListFixture
-OpenStory.Cryptography,AesTransform,3,5,0,0,2,99,11,0,1,0,1,1,OpenStory.CommonStrings,OpenStory.Cryptography.EmsRollingIvFactoryProvider
-OpenStory.Cryptography,CryptoTransformBase,2,5,2,0,3,103,11,3,1,0.4,1,0,OpenStory.CommonStrings,
+OpenStory.Common,Misc,0,6,0,0,6,108,7,0,0,-1,0,6,,OpenStory.Common.IO.BoundedBuffer' OpenStory.Networking.DescriptorBase' OpenStory.Common.IO.PacketBuilder' OpenStory.Networking.EncryptedNetworkSession' OpenStory.Networking.NetworkSession' OpenStory.Common.IO.PacketReader
+OpenStory.Common,ParameterList,6,9,0,0,5,200,18,0,0,0.22,1,0,OpenStory.CommonStrings,
+OpenStory.Cryptography,AesTransform,3,5,0,0,2,99,11,0,1,0,2,1,OpenStory.Cryptography.CryptoTransformBase' OpenStory.CommonStrings,OpenStory.Cryptography.EmsRollingIvFactoryProvider
+OpenStory.Cryptography,CryptoTransformBase,2,5,2,0,3,97,11,3,1,0.4,2,3,OpenStory.Cryptography.ICryptoAlgorithm' OpenStory.CommonStrings,OpenStory.Cryptography.KmstDecryptor' OpenStory.Cryptography.KmstEncryptor' OpenStory.Cryptography.AesTransform
 OpenStory.Cryptography,CustomCrypto,0,8,0,0,2,162,16,0,0,-1,0,1,,OpenStory.Cryptography.EndpointCrypto
-OpenStory.Cryptography,EmsRollingIvFactoryProvider,3,1,0,0,1,36,1,0,1,0,2,0,OpenStory.Cryptography.AesTransform' OpenStory.Cryptography.RollingIvFactory,
-OpenStory.Cryptography,EndpointCrypto,2,8,0,0,6,158,10,0,0,0,4,4,OpenStory.Cryptography.RollingIv' OpenStory.Cryptography.CustomCrypto' OpenStory.Cryptography.RollingIvFactory' OpenStory.Cryptography.VersionMaskType,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Framework.Contracts.IServerSession' OpenStory.Server.Processing.ServerSession' OpenStory.Server.Processing.ServerProcess
+OpenStory.Cryptography,EmsRollingIvFactoryProvider,3,1,0,0,1,36,1,0,1,0,3,0,OpenStory.Cryptography.AesTransform' OpenStory.Cryptography.IRollingIvFactoryProvider' OpenStory.Cryptography.RollingIvFactory,
+OpenStory.Cryptography,EndpointCrypto,2,8,0,0,6,158,10,0,0,0.38,4,1,OpenStory.Cryptography.CustomCrypto' OpenStory.Cryptography.RollingIv' OpenStory.Cryptography.RollingIvFactory' OpenStory.Cryptography.VersionMaskType,OpenStory.Networking.EncryptedNetworkSession
 OpenStory.Cryptography,HeartbeatCrypto,0,1,0,0,1,15,1,0,0,-1,0,0,,
-OpenStory.Cryptography,ICryptoAlgorithm,0,3,0,0,0,36,3,1,0,-1,0,2,,OpenStory.Cryptography.RollingIv' OpenStory.Cryptography.RollingIvFactory
-OpenStory.Cryptography,IRollingIvFactoryProvider,0,1,0,0,0,8,1,2,0,-1,0,2,,OpenStory.Server.Processing.ServerProcess' OpenStory.Server.Processing.ServerProcessFixture
-OpenStory.Cryptography,KmstDecryptor,0,2,0,0,2,34,4,0,2,-1,1,1,OpenStory.CommonStrings,OpenStory.Cryptography.KmstRollingIvFactoryProvider
-OpenStory.Cryptography,KmstEncryptor,0,2,0,0,2,34,4,0,2,-1,1,1,OpenStory.CommonStrings,OpenStory.Cryptography.KmstRollingIvFactoryProvider
-OpenStory.Cryptography,KmstRollingIvFactoryProvider,2,1,0,0,1,34,1,0,1,0,3,0,OpenStory.Cryptography.KmstEncryptor' OpenStory.Cryptography.KmstDecryptor' OpenStory.Cryptography.RollingIvFactory,
-OpenStory.Cryptography,LoginCrypto,1,4,0,0,3,58,5,0,0,0.5,0,1,,OpenStory.Server.Auth.SimpleAuthenticator
-OpenStory.Cryptography,RollingIv,3,9,0,0,7,179,17,0,0,0.22,2,3,OpenStory.Cryptography.ICryptoAlgorithm' OpenStory.CommonStrings,OpenStory.Cryptography.EndpointCrypto' OpenStory.Cryptography.RollingIvFactory' OpenStory.Cryptography.RollingIvFixture
-OpenStory.Cryptography,RollingIvFactory,3,5,0,0,4,62,6,0,0,0,3,4,OpenStory.Cryptography.ICryptoAlgorithm' OpenStory.Cryptography.RollingIv' OpenStory.Cryptography.VersionMaskType,OpenStory.Cryptography.EmsRollingIvFactoryProvider' OpenStory.Cryptography.EndpointCrypto' OpenStory.Cryptography.KmstRollingIvFactoryProvider' OpenStory.Server.Processing.ServerProcess
+OpenStory.Cryptography,ICryptoAlgorithm,0,3,0,0,0,36,3,1,0,-1,0,3,,OpenStory.Cryptography.CryptoTransformBase' OpenStory.Cryptography.RollingIv' OpenStory.Cryptography.RollingIvFactory
+OpenStory.Cryptography,IRollingIvFactoryProvider,0,1,0,0,0,8,1,2,0,-1,1,2,OpenStory.Cryptography.RollingIvFactory,OpenStory.Cryptography.KmstRollingIvFactoryProvider' OpenStory.Cryptography.EmsRollingIvFactoryProvider
+OpenStory.Cryptography,KmstDecryptor,0,2,0,0,2,34,4,0,2,-1,2,1,OpenStory.Cryptography.CryptoTransformBase' OpenStory.CommonStrings,OpenStory.Cryptography.KmstRollingIvFactoryProvider
+OpenStory.Cryptography,KmstEncryptor,0,2,0,0,2,34,4,0,2,-1,2,1,OpenStory.Cryptography.CryptoTransformBase' OpenStory.CommonStrings,OpenStory.Cryptography.KmstRollingIvFactoryProvider
+OpenStory.Cryptography,KmstRollingIvFactoryProvider,2,1,0,0,1,34,1,0,1,0,4,0,OpenStory.Cryptography.IRollingIvFactoryProvider' OpenStory.Cryptography.KmstDecryptor' OpenStory.Cryptography.KmstEncryptor' OpenStory.Cryptography.RollingIvFactory,
+OpenStory.Cryptography,LoginCrypto,1,4,0,0,3,58,5,0,0,0.5,0,0,,
+OpenStory.Cryptography,RollingIv,3,9,0,0,7,179,17,0,0,0.22,2,2,OpenStory.Cryptography.ICryptoAlgorithm' OpenStory.CommonStrings,OpenStory.Cryptography.EndpointCrypto' OpenStory.Cryptography.RollingIvFactory
+OpenStory.Cryptography,RollingIvFactory,3,5,0,0,4,62,6,0,0,0,3,4,OpenStory.Cryptography.ICryptoAlgorithm' OpenStory.Cryptography.RollingIv' OpenStory.Cryptography.VersionMaskType,OpenStory.Cryptography.IRollingIvFactoryProvider' OpenStory.Cryptography.EndpointCrypto' OpenStory.Cryptography.EmsRollingIvFactoryProvider' OpenStory.Cryptography.KmstRollingIvFactoryProvider
 OpenStory.Cryptography,VersionMaskType,0,0,0,0,0,11,0,0,0,-1,0,2,,OpenStory.Cryptography.EndpointCrypto' OpenStory.Cryptography.RollingIvFactory
-OpenStory,CommonStrings,2,1,38,0,0,366,1,0,0,0,0,29,,OpenStory.Common.Game.KeyLayout' OpenStory.Common.Game.PointS' OpenStory.Common.IO.ArraySegmentException' OpenStory.Common.IO.Flags' OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.Common.IO.BoundedBuffer' OpenStory.Common.IO.PacketBuilder' OpenStory.Common.IO.PacketReadingException' OpenStory.Common.IO.PacketReader' OpenStory.Common.ArrayExtensions' OpenStory.Common.PacketValueExtensions' OpenStory.Common.HexExtensions' OpenStory.Common.ParameterList' OpenStory.Cryptography.AesTransform' OpenStory.Cryptography.CryptoTransformBase' OpenStory.Cryptography.KmstDecryptor' OpenStory.Cryptography.KmstEncryptor' OpenStory.Cryptography.RollingIv' OpenStory.Networking.EncryptedNetworkSession' OpenStory.Networking.NetworkSession' OpenStory.Networking.ReceiveDescriptor' OpenStory.Networking.SendDescriptor' OpenStory.Framework.Model.Common.ItemContainer<TItemInfo>' OpenStory.Server.Networking.SocketAcceptor' OpenStory.Common.HexExtensionsFixture' OpenStory.Common.Game.KeyLayoutFixture' OpenStory.Common.IO.PacketBuilderFixture' OpenStory.Cryptography.RollingIvFixture' OpenStory.Networking.ReceiveDescriptorFixture
-OpenStory.Networking,ConnectionClosingEventArgs,1,1,1,0,0,16,1,0,0,0,0,3,,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Server.Processing.ClientBase' OpenStory.Server.Processing.ServerProcess
-OpenStory.Networking,DataArrivedEventArgs,0,1,1,0,0,19,1,0,0,-1,0,2,,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Networking.ReceiveDescriptor
-OpenStory.Networking,DescriptorBase,2,6,2,0,2,102,9,2,0,0.33,2,0,OpenStory.Networking.IDescriptorContainer' OpenStory.Common.Misc,
-OpenStory.Networking,EncryptedNetworkSession,4,13,4,0,5,219,24,1,1,0.31,9,0,OpenStory.Networking.NetworkSession' OpenStory.Common.IO.BoundedBuffer' OpenStory.Networking.SocketErrorEventArgs' OpenStory.Networking.ConnectionClosingEventArgs' OpenStory.Cryptography.EndpointCrypto' OpenStory.Networking.PacketReceivedEventArgs' OpenStory.Networking.DataArrivedEventArgs' OpenStory.CommonStrings' OpenStory.Common.Misc,
-OpenStory.Networking,IDescriptorContainer,0,1,2,0,0,16,1,1,0,-1,0,3,,OpenStory.Networking.DescriptorBase' OpenStory.Networking.ReceiveDescriptor' OpenStory.Networking.SendDescriptor
-OpenStory.Networking,INetworkSession,0,1,0,0,0,16,1,2,0,-1,0,0,,
-OpenStory.Networking,NetworkSession,4,8,4,0,7,187,13,0,1,0.25,5,2,OpenStory.Common.AtomicBoolean' OpenStory.Networking.ReceiveDescriptor' OpenStory.Networking.SendDescriptor' OpenStory.CommonStrings' OpenStory.Common.Misc,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Server.Processing.ServerSession
-OpenStory.Networking,PacketReceivedEventArgs,1,1,1,0,1,24,1,0,0,0,0,2,,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Server.Processing.ServerSession
-OpenStory.Networking,ReceiveDescriptor,2,10,0,0,2,160,16,0,1,0,3,2,OpenStory.Networking.IDescriptorContainer' OpenStory.CommonStrings' OpenStory.Networking.DataArrivedEventArgs,OpenStory.Networking.NetworkSession' OpenStory.Networking.ReceiveDescriptorFixture
-OpenStory.Networking,SendDescriptor,3,8,0,0,2,183,17,0,1,0,3,1,OpenStory.Common.AtomicBoolean' OpenStory.Networking.IDescriptorContainer' OpenStory.CommonStrings,OpenStory.Networking.NetworkSession
-OpenStory.Networking,SocketErrorEventArgs,0,1,1,0,1,15,1,0,0,-1,0,2,,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Server.Processing.ServerProcess
+OpenStory,CommonStrings,2,1,38,0,0,366,1,0,0,0,0,22,,OpenStory.Common.IO.PacketReadingException' OpenStory.Cryptography.AesTransform' OpenStory.Common.Game.PointS' OpenStory.Networking.SendDescriptor' OpenStory.Cryptography.KmstEncryptor' OpenStory.Common.IO.Flags' OpenStory.Common.IO.ArraySegmentException' OpenStory.Cryptography.KmstDecryptor' OpenStory.Common.ArrayExtensions' OpenStory.Common.Game.KeyLayout' OpenStory.Common.IO.LittleEndianBitConverter' OpenStory.Common.ParameterList' OpenStory.Networking.EncryptedNetworkSession' OpenStory.Common.HexExtensions' OpenStory.Common.IO.PacketBuilder' OpenStory.Common.IO.BoundedBuffer' OpenStory.Networking.NetworkSession' OpenStory.Cryptography.CryptoTransformBase' OpenStory.Networking.ReceiveDescriptor' OpenStory.Common.IO.PacketReader' OpenStory.Cryptography.RollingIv' OpenStory.Common.PacketValueExtensions
+OpenStory.Networking,ConnectionClosingEventArgs,1,1,1,0,0,16,1,0,0,0,0,3,,OpenStory.Networking.EncryptedNetworkSession' OpenStory.Networking.INetworkSession' OpenStory.Networking.NetworkSession
+OpenStory.Networking,DataArrivedEventArgs,0,1,1,0,0,19,1,0,0,-1,0,3,,OpenStory.Networking.NetworkSession' OpenStory.Networking.EncryptedNetworkSession' OpenStory.Networking.ReceiveDescriptor
+OpenStory.Networking,DescriptorBase,2,6,2,0,2,98,9,2,0,0.33,3,2,OpenStory.Common.Misc' OpenStory.Networking.IDescriptorContainer' OpenStory.Networking.SocketErrorEventArgs,OpenStory.Networking.ReceiveDescriptor' OpenStory.Networking.SendDescriptor
+OpenStory.Networking,EncryptedNetworkSession,4,13,4,0,5,202,22,1,1,0.31,10,0,OpenStory.Common.IO.BoundedBuffer' OpenStory.Common.Misc' OpenStory.Cryptography.EndpointCrypto' OpenStory.CommonStrings' OpenStory.Networking.ConnectionClosingEventArgs' OpenStory.Networking.DataArrivedEventArgs' OpenStory.Networking.INetworkSession' OpenStory.Networking.NetworkSession' OpenStory.Networking.PacketReceivedEventArgs' OpenStory.Networking.SocketErrorEventArgs,
+OpenStory.Networking,IDescriptorContainer,0,1,2,0,0,16,1,1,0,-1,0,4,,OpenStory.Networking.ReceiveDescriptor' OpenStory.Networking.SendDescriptor' OpenStory.Networking.DescriptorBase' OpenStory.Networking.NetworkSession
+OpenStory.Networking,INetworkSession,0,1,0,0,0,16,1,2,0,-1,2,1,OpenStory.Networking.ConnectionClosingEventArgs' OpenStory.Networking.SocketErrorEventArgs,OpenStory.Networking.EncryptedNetworkSession
+OpenStory.Networking,NetworkSession,4,8,4,0,7,174,12,0,1,0.25,9,1,OpenStory.Common.AtomicBoolean' OpenStory.Common.Misc' OpenStory.CommonStrings' OpenStory.Networking.ConnectionClosingEventArgs' OpenStory.Networking.DataArrivedEventArgs' OpenStory.Networking.IDescriptorContainer' OpenStory.Networking.ReceiveDescriptor' OpenStory.Networking.SendDescriptor' OpenStory.Networking.SocketErrorEventArgs,OpenStory.Networking.EncryptedNetworkSession
+OpenStory.Networking,PacketReceivedEventArgs,1,1,1,0,1,20,1,0,0,0,1,1,OpenStory.Common.IO.PacketReader,OpenStory.Networking.EncryptedNetworkSession
+OpenStory.Networking,ReceiveDescriptor,2,10,0,0,2,160,16,0,1,0,4,1,OpenStory.CommonStrings' OpenStory.Networking.DataArrivedEventArgs' OpenStory.Networking.DescriptorBase' OpenStory.Networking.IDescriptorContainer,OpenStory.Networking.NetworkSession
+OpenStory.Networking,SendDescriptor,3,8,0,0,2,183,17,0,1,0,4,1,OpenStory.Common.AtomicBoolean' OpenStory.CommonStrings' OpenStory.Networking.DescriptorBase' OpenStory.Networking.IDescriptorContainer,OpenStory.Networking.NetworkSession
+OpenStory.Networking,SocketErrorEventArgs,0,1,1,0,1,15,1,0,0,-1,0,4,,OpenStory.Networking.INetworkSession' OpenStory.Networking.NetworkSession' OpenStory.Networking.EncryptedNetworkSession' OpenStory.Networking.DescriptorBase

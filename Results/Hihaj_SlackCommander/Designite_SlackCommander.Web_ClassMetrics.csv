@@ -1,49 +1,49 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SlackCommander.Web,AppSettings,0,1,0,0,1,7,1,0,1,-1,0,0,,
-SlackCommander.Web,Bootstrapper,1,2,0,0,0,39,2,0,0,1,0,0,,
+SlackCommander.Web,AppSettings,0,1,0,0,1,7,1,0,1,-1,1,1,SlackCommander.Web.IAppSettings,SlackCommander.Web.Bootstrapper
+SlackCommander.Web,Bootstrapper,1,2,0,0,0,39,2,0,0,1,8,0,SlackCommander.Web.AppSettings' SlackCommander.Web.IAppSettings' SlackCommander.Web.Todo.AzureTableStorageTodoService' SlackCommander.Web.Todo.ITodoService' SlackCommander.Web.MailChimp.DummyMailChimpWebhooks' SlackCommander.Web.MailChimp.IMailChimpWebhooks' SlackCommander.Web.Mailgun.DummyMailgunWebhooks' SlackCommander.Web.Mailgun.IMailgunWebhooks,
 SlackCommander.Web,HomeModule,0,1,0,0,1,10,1,0,0,-1,0,0,,
 SlackCommander.Web,SlashCommand,0,0,8,0,0,12,0,0,0,-1,0,2,,SlackCommander.Web.Todo.TodoModule' SlackCommander.Web.Whois.WhoisModule
 SlackCommander.Web,HttpStatusCodeExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,SlackCommander.Web.HttpStatusCodeResponse,
-SlackCommander.Web,HttpStatusCodeResponse,0,1,0,0,1,8,1,0,0,-1,0,5,,SlackCommander.Web.HttpStatusCodeExtensions' SlackCommander.Web.Todo.TodoModule' SlackCommander.Web.MailChimp.MailChimpModule' SlackCommander.Web.Mailgun.MailgunModule' SlackCommander.Web.Whois.WhoisModule
-SlackCommander.Web,ISlackApi,0,1,0,0,0,5,1,0,0,-1,0,0,,
-SlackCommander.Web,IAppSettings,0,1,0,0,0,4,1,1,0,-1,0,8,,SlackCommander.Web.SlackMessage.SlackMessageSender' SlackCommander.Web.Todo.AzureTableStorageTodoService' SlackCommander.Web.Todo.TodoModule' SlackCommander.Web.MailChimp.DummyMailChimpWebhooks' SlackCommander.Web.MailChimp.MailChimpModule' SlackCommander.Web.Mailgun.DummyMailgunWebhooks' SlackCommander.Web.Whois.FullContactLookup' SlackCommander.Web.Whois.WhoisModule
+SlackCommander.Web,HttpStatusCodeResponse,0,1,0,0,1,8,1,0,0,-1,0,1,,SlackCommander.Web.HttpStatusCodeExtensions
+SlackCommander.Web,ISlackApi,0,1,0,0,0,5,1,0,0,-1,1,1,SlackCommander.Web.SlackMessage.Messages.MessageToSlack,SlackCommander.Web.SlackMessage.SlackMessageSender
+SlackCommander.Web,IAppSettings,0,1,0,0,0,4,1,1,0,-1,0,10,,SlackCommander.Web.Todo.TodoModule' SlackCommander.Web.Whois.WhoisModule' SlackCommander.Web.MailChimp.MailChimpModule' SlackCommander.Web.AppSettings' SlackCommander.Web.Mailgun.DummyMailgunWebhooks' SlackCommander.Web.MailChimp.DummyMailChimpWebhooks' SlackCommander.Web.SlackMessage.SlackMessageSender' SlackCommander.Web.Bootstrapper' SlackCommander.Web.Whois.FullContactLookup' SlackCommander.Web.Todo.AzureTableStorageTodoService
 SlackCommander.Web,SlackUserIdentity,0,0,2,0,0,11,0,0,0,-1,0,0,,
 SlackCommander.Web,StringExtensions,0,4,0,0,4,37,6,0,0,-1,0,0,,
-SlackCommander.Web.SlackMessage,SlackMessageSender,2,2,0,0,2,23,4,0,0,0,2,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.SlackMessage.Messages.MessageToSlack,
-SlackCommander.Web.Todo,TodoItemClaimedBySomeoneElseException,0,1,1,0,1,8,1,0,0,-1,0,1,,SlackCommander.Web.Todo.TodoModule
-SlackCommander.Web.Todo,AzureTableStorageTodoService,2,10,0,0,9,283,22,0,1,0,4,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.Todo.Tables' SlackCommander.Web.Todo.TodoItemRecord' SlackCommander.Web.Todo.TodoItem,
+SlackCommander.Web.SlackMessage,SlackMessageSender,2,2,0,0,2,23,4,0,0,0,3,0,SlackCommander.Web.ISlackApi' SlackCommander.Web.IAppSettings' SlackCommander.Web.SlackMessage.Messages.MessageToSlack,
+SlackCommander.Web.Todo,TodoItemClaimedBySomeoneElseException,0,1,1,0,1,8,1,0,0,-1,0,2,,SlackCommander.Web.Todo.TodoModule' SlackCommander.Web.Todo.AzureTableStorageTodoService
+SlackCommander.Web.Todo,AzureTableStorageTodoService,2,10,0,0,9,283,22,0,1,0,6,1,SlackCommander.Web.IAppSettings' SlackCommander.Web.Todo.TodoItemClaimedBySomeoneElseException' SlackCommander.Web.Todo.Tables' SlackCommander.Web.Todo.TodoItemRecord' SlackCommander.Web.Todo.ITodoService' SlackCommander.Web.Todo.TodoItem,SlackCommander.Web.Bootstrapper
 SlackCommander.Web.Todo,Tables,1,0,0,1,0,4,0,0,0,-1,0,1,,SlackCommander.Web.Todo.AzureTableStorageTodoService
-SlackCommander.Web.Todo,TodoItemRecord,0,3,6,0,3,43,3,0,0,-1,1,1,SlackCommander.Web.Todo.TodoItem,SlackCommander.Web.Todo.AzureTableStorageTodoService
+SlackCommander.Web.Todo,TodoItemRecord,0,3,6,0,3,43,3,0,0,-1,0,1,,SlackCommander.Web.Todo.AzureTableStorageTodoService
 SlackCommander.Web.Todo,CloudTableExtensions,0,6,0,0,6,45,8,0,0,-1,0,0,,
-SlackCommander.Web.Todo,ITodoService,0,8,0,0,0,11,8,1,0,-1,0,1,,SlackCommander.Web.Todo.TodoModule
-SlackCommander.Web.Todo,TodoItem,0,0,6,0,0,10,0,0,0,-1,0,3,,SlackCommander.Web.Todo.AzureTableStorageTodoService' SlackCommander.Web.Todo.TodoItemRecord' SlackCommander.Web.Todo.TodoItemExtensions
+SlackCommander.Web.Todo,ITodoService,0,8,0,0,0,11,8,1,0,-1,1,3,SlackCommander.Web.Todo.TodoItem,SlackCommander.Web.Bootstrapper' SlackCommander.Web.Todo.AzureTableStorageTodoService' SlackCommander.Web.Todo.TodoModule
+SlackCommander.Web.Todo,TodoItem,0,0,6,0,0,10,0,0,0,-1,0,3,,SlackCommander.Web.Todo.ITodoService' SlackCommander.Web.Todo.TodoItemExtensions' SlackCommander.Web.Todo.AzureTableStorageTodoService
 SlackCommander.Web.Todo,TodoItemExtensions,0,1,0,0,1,24,3,0,0,-1,1,0,SlackCommander.Web.Todo.TodoItem,
-SlackCommander.Web.Todo,TodoModule,3,2,0,0,1,202,4,0,0,0,5,0,SlackCommander.Web.Todo.ITodoService' SlackCommander.Web.IAppSettings' SlackCommander.Web.HttpStatusCodeResponse' SlackCommander.Web.SlashCommand' SlackCommander.Web.Todo.TodoItemClaimedBySomeoneElseException,
-SlackCommander.Web.Whois.Messages,FullContactEmailLookupRequest,0,0,2,0,0,5,0,0,0,-1,0,1,,SlackCommander.Web.Whois.FullContactLookup
-SlackCommander.Web.Whois.Messages,FullContactTwitterLookupRequest,0,0,2,0,0,5,0,0,0,-1,0,1,,SlackCommander.Web.Whois.FullContactLookup
-SlackCommander.Web.Whois.Messages,WhoisTwitterRequest,0,0,4,0,0,8,0,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,WhoisEmailRequest,0,0,4,0,0,8,0,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,FullContactPersonResult,0,1,2,0,1,10,1,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,ResultSegment,0,1,7,0,1,104,1,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,ContactInfoSegment,0,1,4,0,1,17,1,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,Website,0,0,1,0,0,5,0,0,0,-1,0,0,,
-SlackCommander.Web.Whois.Messages,DemographicsSegment,0,1,5,0,1,21,1,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,LocationDeducedSegment,0,0,3,0,0,8,0,0,0,-1,0,0,,
-SlackCommander.Web.Whois.Messages,SocialProfile,0,0,6,0,0,11,0,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,Organization,0,0,7,0,0,29,0,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.Whois.Messages,Photo,0,0,2,0,0,7,0,0,0,-1,0,1,,SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.MailChimp,DummyMailChimpWebhooks,1,2,0,0,2,25,4,0,1,0,2,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.MailChimp.MailChimpWebhook,
-SlackCommander.Web.MailChimp,IMailChimpWebhooks,0,1,0,0,0,4,1,1,0,-1,0,1,,SlackCommander.Web.MailChimp.MailChimpModule
-SlackCommander.Web.MailChimp,MailChimpWebhook,0,0,2,0,0,5,0,0,0,-1,0,2,,SlackCommander.Web.MailChimp.DummyMailChimpWebhooks' SlackCommander.Web.MailChimp.MailChimpModule
-SlackCommander.Web.MailChimp,MailChimpModule,1,1,0,0,1,66,1,0,0,0,4,0,SlackCommander.Web.MailChimp.IMailChimpWebhooks' SlackCommander.Web.MailChimp.MailChimpWebhook' SlackCommander.Web.IAppSettings' SlackCommander.Web.HttpStatusCodeResponse,
-SlackCommander.Web.Mailgun,MailgunModule,1,1,0,0,1,50,1,0,0,0,2,0,SlackCommander.Web.Mailgun.IMailgunWebhooks' SlackCommander.Web.HttpStatusCodeResponse,
-SlackCommander.Web.Mailgun,DummyMailgunWebhooks,1,2,0,0,2,24,4,0,1,0,2,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.Mailgun.MailgunWebhook,
-SlackCommander.Web.Mailgun,IMailgunWebhooks,0,1,0,0,0,4,1,1,0,-1,0,1,,SlackCommander.Web.Mailgun.MailgunModule
-SlackCommander.Web.Mailgun,MailgunWebhook,0,0,1,0,0,4,0,0,0,-1,0,1,,SlackCommander.Web.Mailgun.DummyMailgunWebhooks
-SlackCommander.Web.Whois,WhoisSaga,0,6,10,0,1,128,14,0,0,-1,10,0,SlackCommander.Web.Whois.Messages.WhoisEmailRequest' SlackCommander.Web.Whois.Messages.WhoisTwitterRequest' SlackCommander.Web.SlackMessage.Messages.MessageToSlack' SlackCommander.Web.Whois.Messages.ResultSegment' SlackCommander.Web.Whois.Messages.FullContactPersonResult' SlackCommander.Web.Whois.Messages.Photo' SlackCommander.Web.Whois.Messages.ContactInfoSegment' SlackCommander.Web.Whois.Messages.DemographicsSegment' SlackCommander.Web.Whois.Messages.Organization' SlackCommander.Web.Whois.Messages.SocialProfile,
-SlackCommander.Web.Whois,FullContactLookup,4,3,0,0,3,49,3,0,0,0,3,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.Whois.Messages.FullContactEmailLookupRequest' SlackCommander.Web.Whois.Messages.FullContactTwitterLookupRequest,
-SlackCommander.Web.Whois,IFullContactApi,0,2,0,0,0,7,2,0,0,-1,0,0,,
-SlackCommander.Web.Whois,WhoisModule,2,2,0,0,1,86,4,0,0,0,3,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.HttpStatusCodeResponse' SlackCommander.Web.SlashCommand,
-SlackCommander.Web.SlackMessage.Messages,MessageToSlack,0,1,7,0,1,37,1,0,0,-1,0,2,,SlackCommander.Web.SlackMessage.SlackMessageSender' SlackCommander.Web.Whois.WhoisSaga
-SlackCommander.Web.SlackMessage.Messages,Attachment,0,1,6,0,1,22,1,0,0,-1,0,0,,
-SlackCommander.Web.SlackMessage.Messages,Field,0,0,3,0,0,7,0,0,0,-1,0,0,,
+SlackCommander.Web.Todo,TodoModule,3,2,0,0,1,202,20,0,0,0,5,0,SlackCommander.Web.SlashCommand' SlackCommander.Web.IAppSettings' SlackCommander.Web.Todo.TodoItemClaimedBySomeoneElseException' SlackCommander.Web.Todo.ITodoService' SlackCommander.Web.SlackMessage.Messages.MessageToSlack,
+SlackCommander.Web.Whois.Messages,FullContactEmailLookupRequest,0,0,2,0,0,5,0,0,0,-1,0,2,,SlackCommander.Web.Whois.FullContactLookup' SlackCommander.Web.Whois.WhoisSaga
+SlackCommander.Web.Whois.Messages,FullContactTwitterLookupRequest,0,0,2,0,0,5,0,0,0,-1,0,2,,SlackCommander.Web.Whois.FullContactLookup' SlackCommander.Web.Whois.WhoisSaga
+SlackCommander.Web.Whois.Messages,WhoisTwitterRequest,0,0,4,0,0,8,0,0,0,-1,0,2,,SlackCommander.Web.Whois.WhoisSaga' SlackCommander.Web.Whois.WhoisModule
+SlackCommander.Web.Whois.Messages,WhoisEmailRequest,0,0,4,0,0,8,0,0,0,-1,0,3,,SlackCommander.Web.Whois.WhoisSaga' SlackCommander.Web.Whois.WhoisModule' SlackCommander.Web.MailChimp.MailChimpModule
+SlackCommander.Web.Whois.Messages,FullContactPersonResult,0,1,2,0,1,10,1,0,0,-1,1,2,SlackCommander.Web.Whois.Messages.ResultSegment,SlackCommander.Web.Whois.WhoisSaga' SlackCommander.Web.Whois.WhoisModule
+SlackCommander.Web.Whois.Messages,ResultSegment,0,1,7,0,1,104,1,0,0,-1,7,1,SlackCommander.Web.Whois.Messages.ContactInfoSegment' SlackCommander.Web.Whois.Messages.Website' SlackCommander.Web.Whois.Messages.DemographicsSegment' SlackCommander.Web.Whois.Messages.LocationDeducedSegment' SlackCommander.Web.Whois.Messages.SocialProfile' SlackCommander.Web.Whois.Messages.Organization' SlackCommander.Web.Whois.Messages.Photo,SlackCommander.Web.Whois.Messages.FullContactPersonResult
+SlackCommander.Web.Whois.Messages,ContactInfoSegment,0,1,4,0,1,17,1,0,0,-1,0,1,,SlackCommander.Web.Whois.Messages.ResultSegment
+SlackCommander.Web.Whois.Messages,Website,0,0,1,0,0,5,0,0,0,-1,0,1,,SlackCommander.Web.Whois.Messages.ResultSegment
+SlackCommander.Web.Whois.Messages,DemographicsSegment,0,1,5,0,1,21,1,0,0,-1,0,1,,SlackCommander.Web.Whois.Messages.ResultSegment
+SlackCommander.Web.Whois.Messages,LocationDeducedSegment,0,0,3,0,0,8,0,0,0,-1,0,1,,SlackCommander.Web.Whois.Messages.ResultSegment
+SlackCommander.Web.Whois.Messages,SocialProfile,0,0,6,0,0,11,0,0,0,-1,0,1,,SlackCommander.Web.Whois.Messages.ResultSegment
+SlackCommander.Web.Whois.Messages,Organization,0,0,7,0,0,29,0,0,0,-1,0,1,,SlackCommander.Web.Whois.Messages.ResultSegment
+SlackCommander.Web.Whois.Messages,Photo,0,0,2,0,0,7,0,0,0,-1,0,1,,SlackCommander.Web.Whois.Messages.ResultSegment
+SlackCommander.Web.MailChimp,DummyMailChimpWebhooks,1,2,0,0,2,25,4,0,1,0,3,1,SlackCommander.Web.IAppSettings' SlackCommander.Web.MailChimp.IMailChimpWebhooks' SlackCommander.Web.MailChimp.MailChimpWebhook,SlackCommander.Web.Bootstrapper
+SlackCommander.Web.MailChimp,IMailChimpWebhooks,0,1,0,0,0,4,1,1,0,-1,1,3,SlackCommander.Web.MailChimp.MailChimpWebhook,SlackCommander.Web.MailChimp.DummyMailChimpWebhooks' SlackCommander.Web.MailChimp.MailChimpModule' SlackCommander.Web.Bootstrapper
+SlackCommander.Web.MailChimp,MailChimpWebhook,0,0,2,0,0,5,0,0,0,-1,0,2,,SlackCommander.Web.MailChimp.IMailChimpWebhooks' SlackCommander.Web.MailChimp.DummyMailChimpWebhooks
+SlackCommander.Web.MailChimp,MailChimpModule,1,1,0,0,1,66,1,0,0,0,4,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.Whois.Messages.WhoisEmailRequest' SlackCommander.Web.MailChimp.IMailChimpWebhooks' SlackCommander.Web.SlackMessage.Messages.MessageToSlack,
+SlackCommander.Web.Mailgun,MailgunModule,1,1,0,0,1,50,1,0,0,0,3,0,SlackCommander.Web.Mailgun.IMailgunWebhooks' SlackCommander.Web.SlackMessage.Messages.MessageToSlack' SlackCommander.Web.SlackMessage.Messages.Attachment,
+SlackCommander.Web.Mailgun,DummyMailgunWebhooks,1,2,0,0,2,24,4,0,1,0,3,1,SlackCommander.Web.IAppSettings' SlackCommander.Web.Mailgun.IMailgunWebhooks' SlackCommander.Web.Mailgun.MailgunWebhook,SlackCommander.Web.Bootstrapper
+SlackCommander.Web.Mailgun,IMailgunWebhooks,0,1,0,0,0,4,1,1,0,-1,1,3,SlackCommander.Web.Mailgun.MailgunWebhook,SlackCommander.Web.Bootstrapper' SlackCommander.Web.Mailgun.DummyMailgunWebhooks' SlackCommander.Web.Mailgun.MailgunModule
+SlackCommander.Web.Mailgun,MailgunWebhook,0,0,1,0,0,4,0,0,0,-1,0,2,,SlackCommander.Web.Mailgun.IMailgunWebhooks' SlackCommander.Web.Mailgun.DummyMailgunWebhooks
+SlackCommander.Web.Whois,WhoisSaga,0,6,10,0,1,128,14,0,0,-1,6,0,SlackCommander.Web.Whois.Messages.FullContactEmailLookupRequest' SlackCommander.Web.Whois.Messages.FullContactTwitterLookupRequest' SlackCommander.Web.Whois.Messages.WhoisTwitterRequest' SlackCommander.Web.Whois.Messages.WhoisEmailRequest' SlackCommander.Web.Whois.Messages.FullContactPersonResult' SlackCommander.Web.SlackMessage.Messages.MessageToSlack,
+SlackCommander.Web.Whois,FullContactLookup,4,3,0,0,3,49,3,0,0,0,4,0,SlackCommander.Web.IAppSettings' SlackCommander.Web.Whois.Messages.FullContactEmailLookupRequest' SlackCommander.Web.Whois.Messages.FullContactTwitterLookupRequest' SlackCommander.Web.Whois.IFullContactApi,
+SlackCommander.Web.Whois,IFullContactApi,0,2,0,0,0,7,2,0,0,-1,0,1,,SlackCommander.Web.Whois.FullContactLookup
+SlackCommander.Web.Whois,WhoisModule,2,2,0,0,1,86,4,0,0,0,5,0,SlackCommander.Web.SlashCommand' SlackCommander.Web.IAppSettings' SlackCommander.Web.Whois.Messages.WhoisTwitterRequest' SlackCommander.Web.Whois.Messages.WhoisEmailRequest' SlackCommander.Web.Whois.Messages.FullContactPersonResult,
+SlackCommander.Web.SlackMessage.Messages,MessageToSlack,0,1,7,0,1,37,1,0,0,-1,2,6,SlackCommander.Web.SlackMessage.Messages.Attachment' SlackCommander.Web.SlackMessage.Messages.Field,SlackCommander.Web.SlackMessage.SlackMessageSender' SlackCommander.Web.MailChimp.MailChimpModule' SlackCommander.Web.Whois.WhoisSaga' SlackCommander.Web.Todo.TodoModule' SlackCommander.Web.Mailgun.MailgunModule' SlackCommander.Web.ISlackApi
+SlackCommander.Web.SlackMessage.Messages,Attachment,0,1,6,0,1,22,1,0,0,-1,0,2,,SlackCommander.Web.SlackMessage.Messages.MessageToSlack' SlackCommander.Web.Mailgun.MailgunModule
+SlackCommander.Web.SlackMessage.Messages,Field,0,0,3,0,0,7,0,0,0,-1,0,1,,SlackCommander.Web.SlackMessage.Messages.MessageToSlack

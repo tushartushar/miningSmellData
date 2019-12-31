@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-cmd,Cmd,0,3,1,0,3,26,5,0,0,-1,3,1,cmd.Runner.Shells.Shell' cmd.Runner.IRunner' cmd.Commands.ICommando,cmd.UnitTests.CmdDslTests
-cmd.Commands,CmdCommando,0,1,0,0,1,8,1,0,1,-1,1,1,cmd.Runner.IRunner,cmd.Runner.Shells.CmdShell
-cmd.Commands,Commando,2,4,3,0,4,43,4,1,1,0.75,2,1,cmd.Runner.IRunner' cmd.Runner.RunOptions,cmd.Runner.Shells.ProcessRunner
-cmd.Commands,ICommando,0,1,2,0,0,6,1,2,0,-1,0,2,,cmd.Cmd' cmd.Runner.RunOptions
-cmd.Commands,PowershellCommando,0,1,2,0,1,9,1,0,1,-1,0,0,,
-cmd.Runner.Arguments,Argument,0,2,2,0,2,17,3,0,0,-1,0,10,,cmd.Runner.Arguments.ArgumentBuilder' cmd.Runner.Arguments.CmdArgumentBuilder' cmd.Runner.Arguments.IArgumentBuilder' cmd.Runner.Arguments.PowershellArgumentBuilder' cmd.Runner.IRunner' cmd.Runner.Shells.Posh' cmd.Runner.Shells.ProcessRunner' cmd.UnitTests.Runner.Arguments.ArgumentBuilderTests' cmd.UnitTests.Runner.Arguments.CmdArgumentBuilderTests' cmd.UnitTests.Runner.Arguments.PowershellArgumentBuilderTests
-cmd.Runner.Arguments,ArgumentBuilder,0,2,0,0,1,16,5,2,1,-1,1,0,cmd.Runner.Arguments.Argument,
-cmd.Runner.Arguments,CmdArgumentBuilder,0,1,0,0,0,7,1,0,2,-1,1,0,cmd.Runner.Arguments.Argument,
-cmd.Runner.Arguments,IArgumentBuilder,0,1,0,0,0,4,1,1,0,-1,1,4,cmd.Runner.Arguments.Argument,cmd.Runner.Shells.ProcessRunner' cmd.UnitTests.Runner.Arguments.ArgumentBuilderTests' cmd.UnitTests.Runner.Arguments.CmdArgumentBuilderTests' cmd.UnitTests.Runner.Arguments.PowershellArgumentBuilderTests
-cmd.Runner.Arguments,PowershellArgumentBuilder,0,1,0,0,0,7,1,0,2,-1,1,0,cmd.Runner.Arguments.Argument,
-cmd.Runner,IRunner,0,3,1,0,0,7,3,2,0,-1,2,9,cmd.Runner.IRunOptions' cmd.Runner.Arguments.Argument,cmd.Cmd' cmd.Commands.CmdCommando' cmd.Commands.Commando' cmd.Runner.Shells.Shell' cmd.UnitTests.CmdDslTests' cmd.UnitTests.CmdTests' cmd.UnitTests.Commands.CmdCommandoTests' cmd.UnitTests.Commands.CommandoTests' cmd.UnitTests.Runner.Shells.PowershellDSLTests
-cmd.Runner,IRunOptions,0,0,2,0,0,5,0,1,0,-1,0,6,,cmd.Runner.IRunner' cmd.Runner.Shells.Posh' cmd.Runner.Shells.ProcessRunner' cmd.UnitTests.CmdTests' cmd.UnitTests.Commands.CmdCommandoTests' cmd.UnitTests.Commands.CommandoTests
-cmd.Runner,RunOptions,0,1,2,0,1,10,1,0,1,-1,1,1,cmd.Commands.ICommando,cmd.Commands.Commando
-cmd.Runner.Shells,CmdShell,1,1,1,0,1,12,1,0,1,0,1,0,cmd.Commands.CmdCommando,
-cmd.Runner.Shells,Posh,0,3,2,0,3,17,3,0,1,-1,3,0,cmd.Runner.Shells.ProcessRunner' cmd.Runner.IRunOptions' cmd.Runner.Arguments.Argument,
-cmd.Runner.Shells,ProcessRunner,1,4,2,0,3,42,5,1,1,0.75,4,1,cmd.Runner.Arguments.IArgumentBuilder' cmd.Runner.Arguments.Argument' cmd.Commands.Commando' cmd.Runner.IRunOptions,cmd.Runner.Shells.Posh
-cmd.Runner.Shells,Shell,3,0,0,3,0,6,0,0,0,-1,1,3,cmd.Runner.IRunner,cmd.Cmd' cmd.UnitTests.CmdDslTests' cmd.UnitTests.Runner.Shells.ShellTests
+cmd,Cmd,0,3,1,0,3,26,5,0,0,-1,2,0,cmd.Runner.IRunner' cmd.Runner.Shells.Shell,
+cmd.Commands,CmdCommando,0,1,0,0,1,8,1,0,1,-1,2,1,cmd.Commands.Commando' cmd.Runner.IRunner,cmd.Runner.Shells.CmdShell
+cmd.Commands,Commando,2,4,3,0,4,43,4,1,1,0.75,5,2,cmd.Commands.ICommando' cmd.Runner.Arguments.Argument' cmd.Runner.IRunner' cmd.Runner.RunOptions' cmd.Runner.Shells.ProcessRunner,cmd.Runner.Shells.ProcessRunner' cmd.Commands.CmdCommando
+cmd.Commands,ICommando,0,1,2,0,0,6,1,2,0,-1,0,7,,cmd.Commands.PowershellCommando' cmd.Commands.Commando' cmd.Runner.Shells.ProcessRunner' cmd.Runner.Shells.CmdShell' cmd.Runner.Shells.Posh' cmd.Runner.RunOptions' cmd.Runner.IRunner
+cmd.Commands,PowershellCommando,0,1,2,0,1,9,1,0,1,-1,1,0,cmd.Commands.ICommando,
+cmd.Runner.Arguments,Argument,0,2,2,0,2,17,3,0,0,-1,0,8,,cmd.Runner.Arguments.CmdArgumentBuilder' cmd.Runner.Arguments.IArgumentBuilder' cmd.Runner.Arguments.PowershellArgumentBuilder' cmd.Runner.Shells.Posh' cmd.Runner.Arguments.ArgumentBuilder' cmd.Runner.Shells.ProcessRunner' cmd.Runner.IRunner' cmd.Commands.Commando
+cmd.Runner.Arguments,ArgumentBuilder,0,2,0,0,1,16,5,2,1,-1,2,3,cmd.Runner.Arguments.Argument' cmd.Runner.Arguments.IArgumentBuilder,cmd.Runner.Arguments.CmdArgumentBuilder' cmd.Runner.Arguments.PowershellArgumentBuilder' cmd.Runner.Shells.ProcessRunner
+cmd.Runner.Arguments,CmdArgumentBuilder,0,1,0,0,0,7,1,0,2,-1,2,1,cmd.Runner.Arguments.Argument' cmd.Runner.Arguments.ArgumentBuilder,cmd.Runner.Shells.CmdShell
+cmd.Runner.Arguments,IArgumentBuilder,0,1,0,0,0,4,1,1,0,-1,1,4,cmd.Runner.Arguments.Argument,cmd.Runner.Arguments.ArgumentBuilder' cmd.Runner.Shells.Posh' cmd.Runner.Shells.CmdShell' cmd.Runner.Shells.ProcessRunner
+cmd.Runner.Arguments,PowershellArgumentBuilder,0,1,0,0,0,7,1,0,2,-1,2,0,cmd.Runner.Arguments.Argument' cmd.Runner.Arguments.ArgumentBuilder,
+cmd.Runner,IRunner,0,3,1,0,0,7,3,2,0,-1,3,6,cmd.Commands.ICommando' cmd.Runner.Arguments.Argument' cmd.Runner.IRunOptions,cmd.Runner.Shells.ProcessRunner' cmd.Runner.Shells.Posh' cmd.Commands.CmdCommando' cmd.Commands.Commando' cmd.Runner.Shells.Shell' cmd.Cmd
+cmd.Runner,IRunOptions,0,0,2,0,0,5,0,1,0,-1,0,4,,cmd.Runner.IRunner' cmd.Runner.RunOptions' cmd.Runner.Shells.Posh' cmd.Runner.Shells.ProcessRunner
+cmd.Runner,RunOptions,0,1,2,0,1,10,1,0,1,-1,2,1,cmd.Commands.ICommando' cmd.Runner.IRunOptions,cmd.Commands.Commando
+cmd.Runner.Shells,CmdShell,1,1,1,0,1,12,1,0,1,0,5,1,cmd.Commands.CmdCommando' cmd.Commands.ICommando' cmd.Runner.Arguments.CmdArgumentBuilder' cmd.Runner.Arguments.IArgumentBuilder' cmd.Runner.Shells.ProcessRunner,cmd.Runner.Shells.Shell
+cmd.Runner.Shells,Posh,0,3,2,0,3,17,3,0,1,-1,6,1,cmd.Commands.ICommando' cmd.Runner.Arguments.Argument' cmd.Runner.Arguments.IArgumentBuilder' cmd.Runner.IRunner' cmd.Runner.IRunOptions' cmd.Runner.Shells.ProcessRunner,cmd.Runner.Shells.Shell
+cmd.Runner.Shells,ProcessRunner,1,4,2,0,3,42,5,1,1,0.75,7,4,cmd.Commands.Commando' cmd.Commands.ICommando' cmd.Runner.Arguments.Argument' cmd.Runner.Arguments.ArgumentBuilder' cmd.Runner.Arguments.IArgumentBuilder' cmd.Runner.IRunner' cmd.Runner.IRunOptions,cmd.Runner.Shells.CmdShell' cmd.Commands.Commando' cmd.Runner.Shells.Shell' cmd.Runner.Shells.Posh
+cmd.Runner.Shells,Shell,3,0,0,3,0,6,0,0,0,-1,4,1,cmd.Runner.IRunner' cmd.Runner.Shells.CmdShell' cmd.Runner.Shells.Posh' cmd.Runner.Shells.ProcessRunner,cmd.Cmd

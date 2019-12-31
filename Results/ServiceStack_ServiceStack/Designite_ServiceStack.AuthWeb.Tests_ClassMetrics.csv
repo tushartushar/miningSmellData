@@ -1,0 +1,46 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ServiceStack.AuthWeb.Tests,AppHost,1,8,0,1,4,221,10,0,2,0.75,6,1,ServiceStack.AuthWeb.Tests.CustomUserAuth' ServiceStack.AuthWeb.Tests.CustomUserAuthDetails' ServiceStack.AuthWeb.Tests.CustomUserSession' ServiceStack.AuthWeb.Tests.DataSource' ServiceStack.AuthWeb.Tests.UserTable' ServiceStack.AuthWeb.Tests.Rockstar,ServiceStack.AuthWeb.Tests.Global
+ServiceStack.AuthWeb.Tests,CustomUserAuth,0,0,1,0,0,4,0,0,2,-1,0,1,,ServiceStack.AuthWeb.Tests.AppHost
+ServiceStack.AuthWeb.Tests,CustomUserAuthDetails,0,0,1,0,0,4,0,0,2,-1,0,1,,ServiceStack.AuthWeb.Tests.AppHost
+ServiceStack.AuthWeb.Tests,CustomCredentialsAuthProvider,0,2,0,0,2,20,3,0,3,-1,0,0,,
+ServiceStack.AuthWeb.Tests,PrivateAuth,0,0,1,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.PrivateAuthService
+ServiceStack.AuthWeb.Tests,PrivateAuthService,0,1,0,0,1,14,1,0,3,-1,1,0,ServiceStack.AuthWeb.Tests.PrivateAuth,
+ServiceStack.AuthWeb.Tests,CustomRegisterPlugin,0,1,0,0,1,18,1,0,1,-1,1,0,ServiceStack.AuthWeb.Tests.CustomRegistrationValidator,
+ServiceStack.AuthWeb.Tests,CustomRegistrationValidator,0,1,0,0,1,11,1,0,1,-1,0,1,,ServiceStack.AuthWeb.Tests.CustomRegisterPlugin
+ServiceStack.AuthWeb.Tests,CustomUserSession,0,4,1,0,4,23,4,0,2,-1,0,6,,ServiceStack.AuthWeb.Tests.AppHost' ServiceStack.AuthWeb.Tests.UserProfileService' ServiceStack.AuthWeb.Tests.HasPermission' ServiceStack.AuthWeb.Tests.RequiresPermissionService' ServiceStack.AuthWeb.Tests.HasRole' ServiceStack.AuthWeb.Tests.RequiresRoleService
+ServiceStack.AuthWeb.Tests,DataSource,1,0,0,1,0,4,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.AppHost
+ServiceStack.AuthWeb.Tests,UserTable,0,0,2,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.AppHost
+ServiceStack.AuthWeb.Tests,PostChatToChannel,0,0,5,0,0,9,0,0,1,-1,1,1,ServiceStack.AuthWeb.Tests.ChatMessage,ServiceStack.AuthWeb.Tests.ServerEventsService
+ServiceStack.AuthWeb.Tests,ChatMessage,0,0,7,0,0,10,0,0,0,-1,0,2,,ServiceStack.AuthWeb.Tests.PostChatToChannel' ServiceStack.AuthWeb.Tests.ServerEventsService
+ServiceStack.AuthWeb.Tests,PostRawToChannel,0,0,5,0,0,9,0,0,2,-1,0,1,,ServiceStack.AuthWeb.Tests.ServerEventsService
+ServiceStack.AuthWeb.Tests,GetAllSubscribers,0,0,0,0,0,4,0,0,1,-1,0,1,,ServiceStack.AuthWeb.Tests.ServerEventsService
+ServiceStack.AuthWeb.Tests,ServerEventsService,1,3,1,0,3,52,8,0,3,1,4,0,ServiceStack.AuthWeb.Tests.PostChatToChannel' ServiceStack.AuthWeb.Tests.ChatMessage' ServiceStack.AuthWeb.Tests.PostRawToChannel' ServiceStack.AuthWeb.Tests.GetAllSubscribers,
+ServiceStack.AuthWeb.Tests,AntiForgeryTest,0,0,1,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.AntiForgeryService
+ServiceStack.AuthWeb.Tests,AntiForgeryService,0,1,0,0,1,8,1,0,3,-1,1,0,ServiceStack.AuthWeb.Tests.AntiForgeryTest,
+ServiceStack.AuthWeb.Tests,AuthWebTests,1,3,0,1,3,34,3,0,0,0,1,0,ServiceStack.AuthWeb.Tests.RequiresAuth,
+ServiceStack.AuthWeb.Tests,Global,0,1,0,0,0,8,1,0,0,-1,1,0,ServiceStack.AuthWeb.Tests.AppHost,
+ServiceStack.AuthWeb.Tests,RequiresManager,0,0,1,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.ProtectedServices
+ServiceStack.AuthWeb.Tests,RequiresEmployee,0,0,1,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.ProtectedServices
+ServiceStack.AuthWeb.Tests,RequiresAnyUser,0,0,1,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.ProtectedServices
+ServiceStack.AuthWeb.Tests,ProtectedServices,0,3,0,0,3,16,3,0,3,-1,3,0,ServiceStack.AuthWeb.Tests.RequiresManager' ServiceStack.AuthWeb.Tests.RequiresEmployee' ServiceStack.AuthWeb.Tests.RequiresAnyUser,
+ServiceStack.AuthWeb.Tests,RequiresAuth,0,0,1,0,0,5,0,0,1,-1,0,2,,ServiceStack.AuthWeb.Tests.AuthService' ServiceStack.AuthWeb.Tests.AuthWebTests
+ServiceStack.AuthWeb.Tests,AuthService,0,1,0,0,1,8,1,0,3,-1,1,0,ServiceStack.AuthWeb.Tests.RequiresAuth,
+ServiceStack.AuthWeb.Tests,GetUserProfile,0,0,0,0,0,2,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.UserProfileService
+ServiceStack.AuthWeb.Tests,UserProfile,0,0,4,0,0,7,0,0,0,-1,0,2,,ServiceStack.AuthWeb.Tests.UserProfileResponse' ServiceStack.AuthWeb.Tests.UserProfileService
+ServiceStack.AuthWeb.Tests,UserProfileResponse,0,0,2,0,0,5,0,0,0,-1,1,0,ServiceStack.AuthWeb.Tests.UserProfile,
+ServiceStack.AuthWeb.Tests,LockAllUsers,0,0,0,0,0,2,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.LockServices
+ServiceStack.AuthWeb.Tests,LockServices,0,1,0,0,1,10,1,0,3,-1,1,0,ServiceStack.AuthWeb.Tests.LockAllUsers,
+ServiceStack.AuthWeb.Tests,UserProfileService,0,1,0,0,1,17,1,0,3,-1,3,0,ServiceStack.AuthWeb.Tests.CustomUserSession' ServiceStack.AuthWeb.Tests.GetUserProfile' ServiceStack.AuthWeb.Tests.UserProfile,
+ServiceStack.AuthWeb.Tests,ResetUserAuth,0,0,0,0,0,2,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.ResetUserAuthService
+ServiceStack.AuthWeb.Tests,ResetUserAuthService,0,1,0,0,1,13,1,0,3,-1,1,0,ServiceStack.AuthWeb.Tests.ResetUserAuth,
+ServiceStack.AuthWeb.Tests,Rockstars,0,0,5,0,0,12,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.RockstarsService
+ServiceStack.AuthWeb.Tests,RockstarsResponse,0,0,3,0,0,10,0,0,0,-1,1,1,ServiceStack.AuthWeb.Tests.Rockstar,ServiceStack.AuthWeb.Tests.RockstarsService
+ServiceStack.AuthWeb.Tests,Rockstar,1,2,5,1,2,25,2,0,0,1,0,3,,ServiceStack.AuthWeb.Tests.AppHost' ServiceStack.AuthWeb.Tests.RockstarsResponse' ServiceStack.AuthWeb.Tests.RockstarsService
+ServiceStack.AuthWeb.Tests,RockstarsService,0,2,1,0,2,32,4,0,3,-1,3,0,ServiceStack.AuthWeb.Tests.Rockstars' ServiceStack.AuthWeb.Tests.RockstarsResponse' ServiceStack.AuthWeb.Tests.Rockstar,
+ServiceStack.AuthWeb.Tests,ViewThatUsesLayoutAndModel,0,0,1,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.ViewService
+ServiceStack.AuthWeb.Tests,ViewThatUsesLayoutAndModelResponse,0,0,2,0,0,5,0,0,0,-1,0,1,,ServiceStack.AuthWeb.Tests.ViewService
+ServiceStack.AuthWeb.Tests,ViewService,0,1,0,0,1,11,1,0,3,-1,2,0,ServiceStack.AuthWeb.Tests.ViewThatUsesLayoutAndModel' ServiceStack.AuthWeb.Tests.ViewThatUsesLayoutAndModelResponse,
+ServiceStack.AuthWeb.Tests,HasPermission,0,0,0,0,0,2,0,0,1,-1,1,1,ServiceStack.AuthWeb.Tests.CustomUserSession,ServiceStack.AuthWeb.Tests.RequiresPermissionService
+ServiceStack.AuthWeb.Tests,RequiresPermissionService,0,1,0,0,1,8,1,0,3,-1,2,0,ServiceStack.AuthWeb.Tests.CustomUserSession' ServiceStack.AuthWeb.Tests.HasPermission,
+ServiceStack.AuthWeb.Tests,HasRole,0,0,0,0,0,2,0,0,1,-1,1,1,ServiceStack.AuthWeb.Tests.CustomUserSession,ServiceStack.AuthWeb.Tests.RequiresRoleService
+ServiceStack.AuthWeb.Tests,RequiresRoleService,0,1,0,0,1,8,1,0,3,-1,2,0,ServiceStack.AuthWeb.Tests.CustomUserSession' ServiceStack.AuthWeb.Tests.HasRole,

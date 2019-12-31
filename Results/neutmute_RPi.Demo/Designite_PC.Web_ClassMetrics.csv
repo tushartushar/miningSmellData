@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PC.Web,BundleConfig,0,1,0,0,1,22,1,0,0,-1,0,1,,PC.Web.MvcApplication
+PC.Web,BundleConfig,0,1,0,0,1,25,1,0,0,-1,0,1,,PC.Web.MvcApplication
 PC.Web,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,PC.Web.MvcApplication
-PC.Web,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,PC.Web.MvcApplication
+PC.Web,RouteConfig,0,1,0,0,1,13,1,0,0,-1,0,1,,PC.Web.MvcApplication
 PC.Web,WebApiConfig,0,1,0,0,1,11,1,0,0,-1,0,1,,PC.Web.MvcApplication
-PC.Web,MvcApplication,1,1,0,0,0,13,1,0,0,0,4,0,PC.Web.WebApiConfig' PC.Web.FilterConfig' PC.Web.RouteConfig' PC.Web.BundleConfig,
-PC.Web,PiController,1,4,2,0,3,32,4,0,0,1,2,1,RPi.Comms.PwmCommand' RPi.Comms.StepperCommand,PC.Web.Hubs.RemoteHub
-PC.Web,PiHub,1,2,0,0,2,13,2,0,0,0,0,0,,
+PC.Web,MvcApplication,1,1,0,0,0,16,1,0,0,0,4,0,PC.Web.BundleConfig' PC.Web.FilterConfig' PC.Web.RouteConfig' PC.Web.WebApiConfig,
+PC.Web,PiController,1,4,2,0,3,38,4,0,0,1,1,1,PC.Web.PiHub,PC.Web.Hubs.RemoteHub
+PC.Web,PiHub,1,2,0,0,2,14,2,0,0,0,0,1,,PC.Web.PiController
 PC.Web,Startup,0,1,0,0,1,7,1,0,0,-1,0,0,,
-PC.Web.Controllers,PiRemoteController,0,1,0,0,1,9,1,0,0,-1,0,0,,
-PC.Web.Hubs,RemoteHubBase,1,2,1,0,2,14,2,1,0,1,0,0,,
-PC.Web.Hubs,RemoteHub,0,3,0,0,3,22,3,0,1,-1,4,0,PC.Web.PiController' RPi.Comms.PwmCommand' RPi.Comms.DeviceChannel' RPi.Comms.StepperCommand,
-PC.Web.Hubs,RemoteHubController,1,1,2,0,0,24,1,0,0,0,0,0,,
+PC.Web.Controllers,PiRemoteController,0,1,0,0,1,11,1,0,0,-1,0,0,,
+PC.Web.Hubs,RemoteHubBase,1,2,1,0,2,17,2,1,0,1,0,1,,PC.Web.Hubs.RemoteHub
+PC.Web.Hubs,RemoteHub,0,3,0,0,3,24,3,0,1,-1,4,1,PC.Web.PiController' PC.Web.Hubs.RemoteHubBase' PC.Web.Hubs.RemoteHubBase' RPi.NancyHost.Hubs.PiController,PC.Web.Hubs.RemoteHubController
+PC.Web.Hubs,RemoteHubController,1,1,2,0,0,28,1,0,0,0,1,0,PC.Web.Hubs.RemoteHub,

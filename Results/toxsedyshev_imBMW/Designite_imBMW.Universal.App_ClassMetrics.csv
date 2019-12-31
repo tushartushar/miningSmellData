@@ -1,17 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-imBMW.Universal.App,App,0,8,0,0,1,165,13,0,0,-1,10,0,imBMW.Clients.BluetoothClient' imBMW.Logger' imBMW.iBus.Manager' imBMW.LogItem' imBMW.LogPriority' imBMW.iBus.Message' imBMW.iBus.MessageEventArgs' imBMW.iBus.InternalMessage' imBMW.Clients.SocketClient' imBMW.Universal.App.Views.MainPage,
+imBMW.Universal.App,App,1,14,1,0,1,239,21,0,0,0.71,1,0,imBMW.Universal.App.Views.MainPage,
 imBMW.Universal.App.Common,NotNullVisibilityConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
 imBMW.Universal.App.Common,NullVisibilityConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
 imBMW.Universal.App.Controls,Gauge,0,1,0,0,1,7,1,0,0,-1,0,0,,
 imBMW.Universal.App.Controls,GaugeMobile,0,1,0,0,1,7,1,0,0,-1,0,0,,
 imBMW.Universal.App.Controls,PieSlice,4,3,5,3,1,86,5,0,0,0,0,0,,
-imBMW.Universal.App.Models,GaugeSettings,1,0,15,0,0,30,0,0,1,-1,0,1,,imBMW.Universal.App.Models.GaugeWatcher
-imBMW.Universal.App.Models,GaugeField,0,0,0,0,0,16,0,0,0,-1,0,2,,imBMW.Universal.App.Models.GaugeWatcher' imBMW.Universal.App.Views.DashboardPage
-imBMW.Universal.App.Models,GaugeWatcher,9,8,10,0,5,213,15,0,1,0.75,3,1,imBMW.Universal.App.Models.GaugeSettings' imBMW.Universal.App.Models.GaugeField' imBMW.Diagnostics.DME.DMEAnalogValues,imBMW.Universal.App.Views.DashboardPage
-imBMW.Universal.App.Models,ObservableObject,0,2,0,0,0,18,3,2,0,-1,0,0,,
-imBMW.Universal.App.Tools,Settings,2,6,3,0,0,141,10,0,0,0.33,0,1,,imBMW.Universal.App.Views.DashboardPage
-imBMW.Universal.App.Views,DashboardPage,4,17,1,0,1,176,29,0,1,0.29,17,1,imBMW.Universal.App.Tools.Settings' imBMW.iBus.Devices.Real.InstrumentClusterElectronics' imBMW.Universal.App.Models.GaugeWatcher' imBMW.Universal.App.Views.ExtendedPage' imBMW.iBus.Manager' imBMW.iBus.Devices.Real.IgnitionEventArgs' imBMW.iBus.Devices.Real.IgnitionState' imBMW.Diagnostics.DME.MS43JMGAnalogValues' imBMW.Diagnostics.DME.MS43AnalogValues' imBMW.iBus.MessageEventArgs' imBMW.Universal.App.Models.GaugeField' imBMW.iBus.Devices.Real.TemperatureEventArgs' imBMW.iBus.Devices.Real.SpeedRPMEventArgs' imBMW.iBus.Devices.Real.SpeedLimitEventArgs' imBMW.iBus.Devices.Real.RangeEventArgs' imBMW.iBus.Devices.Real.ConsumptionEventArgs' imBMW.iBus.Devices.Real.AverageSpeedEventArgs,imBMW.Universal.App.Views.MainPage
-imBMW.Universal.App.Views,ExtendedPage,0,3,1,0,0,25,4,2,0,-1,0,1,,imBMW.Universal.App.Views.DashboardPage
-imBMW.Universal.App.Views,MainPage,0,3,0,0,1,15,3,0,0,-1,2,1,imBMW.Universal.App.Views.DashboardPage' imBMW.Universal.App.Views.ToolsPage,imBMW.Universal.App.App
-imBMW.Universal.App.Views,ToolsPage,0,5,0,0,1,23,5,0,0,-1,3,1,imBMW.iBus.Devices.Real.BodyModule' imBMW.iBus.Manager' imBMW.iBus.DeviceAddress,imBMW.Universal.App.Views.MainPage
-imBMW.Universal.App.Views.DeviceFamily_Mobile,DashboardPage,0,1,0,0,1,7,1,0,1,-1,0,0,,
+imBMW.Universal.App.Models,GaugeFactory,0,4,1,0,4,460,44,0,0,-1,4,1,imBMW.Universal.App.Models.GaugeSettings' imBMW.Universal.App.Models.GaugeSlot' imBMW.Universal.App.Models.GaugeType' imBMW.Universal.App.Models.GaugeWatcher,imBMW.Universal.App.Views.DashboardPage
+imBMW.Universal.App.Models,GaugeSettings,2,1,17,0,1,52,1,0,1,0,2,2,imBMW.Universal.App.Models.GaugeType' imBMW.Universal.App.Models.ObservableObject,imBMW.Universal.App.Models.GaugeWatcher' imBMW.Universal.App.Models.GaugeFactory
+imBMW.Universal.App.Models,GaugeSlot,0,1,2,0,1,10,1,0,0,-1,1,2,imBMW.Universal.App.Models.GaugeType,imBMW.Universal.App.Models.GaugeFactory' imBMW.Universal.App.Tools.Settings
+imBMW.Universal.App.Models,GaugeType,0,0,0,0,0,56,0,0,0,-1,0,6,,imBMW.Universal.App.Models.GaugeSlot' imBMW.Universal.App.Models.GaugeWatcher' imBMW.Universal.App.Views.DashboardPage' imBMW.Universal.App.Tools.Settings' imBMW.Universal.App.Models.GaugeSettings' imBMW.Universal.App.Models.GaugeFactory
+imBMW.Universal.App.Models,GaugeWatcher,10,7,12,0,4,255,15,0,1,0.57,3,2,imBMW.Universal.App.Models.GaugeSettings' imBMW.Universal.App.Models.GaugeType' imBMW.Universal.App.Models.ObservableObject,imBMW.Universal.App.Models.GaugeFactory' imBMW.Universal.App.Views.DashboardPage
+imBMW.Universal.App.Models,ObservableObject,0,2,0,0,0,18,3,2,0,-1,0,2,,imBMW.Universal.App.Models.GaugeSettings' imBMW.Universal.App.Models.GaugeWatcher
+imBMW.Universal.App.Tools,Settings,2,6,3,0,0,142,11,0,0,0.33,2,1,imBMW.Universal.App.Models.GaugeSlot' imBMW.Universal.App.Models.GaugeType,imBMW.Universal.App.Views.DashboardPage
+imBMW.Universal.App.Views,DashboardPage,4,17,2,0,1,183,27,0,1,0.41,5,1,imBMW.Universal.App.Models.GaugeFactory' imBMW.Universal.App.Models.GaugeType' imBMW.Universal.App.Models.GaugeWatcher' imBMW.Universal.App.Tools.Settings' imBMW.Universal.App.Views.ExtendedPage,imBMW.Universal.App.Views.MainPage
+imBMW.Universal.App.Views,ExtendedPage,0,3,1,0,0,25,4,2,0,-1,0,2,,imBMW.Universal.App.Views.DashboardPage' imBMW.Universal.App.Views.DeviceFamily_Mobile.DashboardPage
+imBMW.Universal.App.Views,MainPage,0,5,0,0,1,37,5,0,0,-1,2,1,imBMW.Universal.App.Views.DashboardPage' imBMW.Universal.App.Views.ToolsPage,imBMW.Universal.App.App
+imBMW.Universal.App.Views,ToolsPage,0,5,0,0,1,23,5,0,0,-1,0,1,,imBMW.Universal.App.Views.MainPage
+imBMW.Universal.App.Views.DeviceFamily_Mobile,DashboardPage,0,1,0,0,1,7,1,0,1,-1,1,0,imBMW.Universal.App.Views.ExtendedPage,

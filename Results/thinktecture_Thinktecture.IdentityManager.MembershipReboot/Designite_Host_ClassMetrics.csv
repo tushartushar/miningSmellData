@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-IdentityManager.Host,CustomDatabase,0,1,0,0,1,7,1,0,0,-1,0,2,,IdentityManager.Host.CustomGroupRepository' IdentityManager.Host.CustomUserRepository
-IdentityManager.Host,CustomGroup,0,0,1,0,0,4,0,0,0,-1,0,0,,
-IdentityManager.Host,CustomGroupService,0,1,0,0,1,7,1,0,0,-1,2,1,IdentityManager.Host.CustomGroupRepository' IdentityManager.Host.CustomConfig,IdentityManager.Host.Config.CustomIdentityManagerService
-IdentityManager.Host,CustomGroupRepository,0,1,0,0,1,7,1,0,0,-1,1,1,IdentityManager.Host.CustomDatabase,IdentityManager.Host.CustomGroupService
-IdentityManager.Host,CustomUser,0,0,3,0,0,8,0,0,0,-1,0,0,,
-IdentityManager.Host,CustomUserAccountService,0,1,0,0,1,7,1,0,0,-1,2,1,IdentityManager.Host.CustomConfig' IdentityManager.Host.CustomUserRepository,IdentityManager.Host.Config.CustomIdentityManagerService
-IdentityManager.Host,CustomUserRepository,0,1,0,0,1,7,1,0,0,-1,1,1,IdentityManager.Host.CustomDatabase,IdentityManager.Host.CustomUserAccountService
-IdentityManager.Host,CustomConfig,1,1,0,1,1,10,1,0,0,0,0,3,,IdentityManager.Host.CustomGroupService' IdentityManager.Host.CustomUserAccountService' IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions
-IdentityManager.Host,MembershipRebootIdentityManagerServiceExtensions,0,1,0,0,1,13,1,0,0,-1,1,0,IdentityManager.Host.CustomConfig,
+IdentityManager.Host,CustomDatabase,0,1,0,0,1,7,1,0,0,-1,2,3,IdentityManager.Host.CustomGroup' IdentityManager.Host.CustomUser,IdentityManager.Host.CustomUserRepository' IdentityManager.Host.CustomGroupRepository' IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions
+IdentityManager.Host,CustomGroup,0,0,1,0,0,4,0,0,0,-1,0,4,,IdentityManager.Host.CustomDatabase' IdentityManager.Host.Config.CustomIdentityManagerService' IdentityManager.Host.CustomGroupService' IdentityManager.Host.CustomGroupRepository
+IdentityManager.Host,CustomGroupService,0,1,0,0,1,7,1,0,0,-1,3,2,IdentityManager.Host.CustomGroup' IdentityManager.Host.CustomGroupRepository' IdentityManager.Host.CustomConfig,IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions' IdentityManager.Host.Config.CustomIdentityManagerService
+IdentityManager.Host,CustomGroupRepository,0,1,0,0,1,7,1,0,0,-1,2,2,IdentityManager.Host.CustomDatabase' IdentityManager.Host.CustomGroup,IdentityManager.Host.CustomGroupService' IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions
+IdentityManager.Host,CustomUser,0,0,3,0,0,8,0,0,0,-1,0,5,,IdentityManager.Host.CustomDatabase' IdentityManager.Host.CustomConfig' IdentityManager.Host.Config.CustomIdentityManagerService' IdentityManager.Host.CustomUserAccountService' IdentityManager.Host.CustomUserRepository
+IdentityManager.Host,CustomUserAccountService,0,1,0,0,1,7,1,0,0,-1,3,2,IdentityManager.Host.CustomUser' IdentityManager.Host.CustomUserRepository' IdentityManager.Host.CustomConfig,IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions' IdentityManager.Host.Config.CustomIdentityManagerService
+IdentityManager.Host,CustomUserRepository,0,1,0,0,1,7,1,0,0,-1,2,2,IdentityManager.Host.CustomDatabase' IdentityManager.Host.CustomUser,IdentityManager.Host.CustomUserAccountService' IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions
+IdentityManager.Host,CustomConfig,1,1,0,1,1,10,1,0,0,0,1,3,IdentityManager.Host.CustomUser,IdentityManager.Host.CustomGroupService' IdentityManager.Host.CustomUserAccountService' IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions
+IdentityManager.Host,MembershipRebootIdentityManagerServiceExtensions,0,1,0,0,1,13,1,0,0,-1,7,0,IdentityManager.Host.CustomDatabase' IdentityManager.Host.CustomGroupService' IdentityManager.Host.CustomGroupRepository' IdentityManager.Host.CustomUserAccountService' IdentityManager.Host.CustomUserRepository' IdentityManager.Host.CustomConfig' IdentityManager.Host.Config.CustomIdentityManagerService,
 IdentityManager.Host,Startup,0,1,0,0,1,14,1,0,0,-1,0,0,,
-IdentityManager.Host.Config,CustomIdentityManagerService,0,1,0,0,1,7,1,0,0,-1,2,0,IdentityManager.Host.CustomUserAccountService' IdentityManager.Host.CustomGroupService,
+IdentityManager.Host.Config,CustomIdentityManagerService,0,1,0,0,1,7,1,0,0,-1,4,1,IdentityManager.Host.CustomGroup' IdentityManager.Host.CustomGroupService' IdentityManager.Host.CustomUser' IdentityManager.Host.CustomUserAccountService,IdentityManager.Host.MembershipRebootIdentityManagerServiceExtensions

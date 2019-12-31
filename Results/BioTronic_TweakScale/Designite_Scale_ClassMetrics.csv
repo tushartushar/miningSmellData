@@ -1,54 +1,54 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 TweakScale,CompatibilityChecker,1,6,0,0,5,155,14,0,0,0,0,0,,
-TweakScale,Enums<T>,0,1,0,0,1,16,1,0,0,-1,0,0,,
-TweakScale,Enums,0,0,0,0,0,3,0,0,0,-1,0,1,,TweakScale.Hotkey
-TweakScale,ExtensionMethods,0,19,0,0,19,229,30,0,0,-1,1,0,TweakScale.Tuple,
+TweakScale,Enums<T>,0,1,0,0,1,16,1,0,0,-1,0,1,,TweakScale.Enums
+TweakScale,Enums,0,0,0,0,0,3,0,0,0,-1,1,1,TweakScale.Enums<T>,TweakScale.Hotkey
+TweakScale,ExtensionMethods,0,19,0,0,19,229,30,0,0,-1,0,0,,
 TweakScale,ConvertEx,0,2,0,0,2,30,2,0,0,-1,0,1,,TweakScale.Tools
-TweakScale,Hotkey,4,6,1,0,3,77,10,0,0,0,3,1,TweakScale.HotkeyManager' TweakScale.Tools' TweakScale.Enums,TweakScale.Hotkeyable
-TweakScale,Hotkeyable,6,4,1,0,3,57,5,0,0,0,3,2,TweakScale.OSD' TweakScale.Hotkey' TweakScale.HotkeyManager,TweakScale.HotkeyManager' TweakScale.TweakScale
-TweakScale,HotkeyManager,3,3,1,0,1,29,5,0,0,0,2,3,TweakScale.OSD' TweakScale.Hotkeyable,TweakScale.Hotkey' TweakScale.Hotkeyable' TweakScale.TweakScale
-TweakScale,MemberUpdater,5,6,3,0,3,188,17,0,0,0.33,1,1,TweakScale.Tools,TweakScale.ScaleExponents
+TweakScale,Hotkey,4,6,1,0,3,77,10,0,0,0,3,1,TweakScale.Enums' TweakScale.HotkeyManager' TweakScale.Tools,TweakScale.Hotkeyable
+TweakScale,Hotkeyable,6,4,1,0,3,57,5,0,0,0,3,2,TweakScale.Hotkey' TweakScale.HotkeyManager' TweakScale.OSD,TweakScale.TweakScale' TweakScale.HotkeyManager
+TweakScale,HotkeyManager,3,3,1,0,1,29,5,0,0,0,5,3,TweakScale.Hotkeyable' TweakScale.OSD' TweakScale.SingletonBehavior<T>' TweakScale.TweakScale' TweakScale.Annotations.UsedImplicitlyAttribute,TweakScale.Hotkeyable' TweakScale.Hotkey' TweakScale.TweakScale
+TweakScale,MemberUpdater,5,6,3,0,3,188,20,0,0,0.33,1,1,TweakScale.Tools,TweakScale.ScaleExponents
 TweakScale,OSD,1,8,0,0,6,57,9,0,0,0.62,1,2,TweakScale.Message,TweakScale.Hotkeyable' TweakScale.HotkeyManager
 TweakScale,Message,3,0,0,3,0,6,0,0,0,-1,0,1,,TweakScale.OSD
-TweakScale,ScaleExponentsLoader,0,1,0,0,1,8,1,0,1,-1,1,0,TweakScale.ScaleExponents,
-TweakScale,ScaleExponents,8,12,0,0,4,371,52,0,0,0.17,5,4,TweakScale.Tools' TweakScale.ScalingMode' TweakScale.MemberUpdater' TweakScale.ModuleAndPrefab' TweakScale.ModulesAndExponents,TweakScale.ScaleExponentsLoader' TweakScale.ModulesAndExponents' TweakScale.ScaleType' TweakScale.TSGenericUpdater
+TweakScale,ScaleExponentsLoader,0,1,0,0,1,8,1,0,1,-1,2,0,TweakScale.ScaleExponents' TweakScale.RescalableRegistratorAddon,
+TweakScale,ScaleExponents,8,12,0,0,4,371,60,0,0,0.17,5,3,TweakScale.MemberUpdater' TweakScale.ScalingMode' TweakScale.ModuleAndPrefab' TweakScale.ModulesAndExponents' TweakScale.Tools,TweakScale.TSGenericUpdater' TweakScale.ScaleType' TweakScale.ScaleExponentsLoader
 TweakScale,ScalingMode,2,1,0,2,1,11,1,0,0,0,0,1,,TweakScale.ScaleExponents
-TweakScale,ModuleAndPrefab,0,2,2,0,1,15,2,0,0,-1,0,2,,TweakScale.ScaleExponents' TweakScale.ModulesAndExponents
-TweakScale,ModulesAndExponents,0,2,3,0,1,17,2,0,0,-1,2,1,TweakScale.ModuleAndPrefab' TweakScale.ScaleExponents,TweakScale.ScaleExponents
-TweakScale,SingletonBehavior<T>,0,1,1,0,0,9,1,0,0,-1,0,0,,
-TweakScale,Tools,0,12,0,0,12,217,26,0,0,-1,1,9,TweakScale.ConvertEx,TweakScale.Hotkey' TweakScale.MemberUpdater' TweakScale.ScaleExponents' TweakScale.TweakScale' TweakScale.ScaleType' TweakScale.NodeInfo' TweakScale.TweakScaleRegister' TweakScale.TweakScaleEditor' TweakScale.ScaleDatabase
+TweakScale,ModuleAndPrefab,0,2,2,0,1,15,2,0,0,-1,0,1,,TweakScale.ScaleExponents
+TweakScale,ModulesAndExponents,0,2,3,0,1,17,2,0,0,-1,0,1,,TweakScale.ScaleExponents
+TweakScale,SingletonBehavior<T>,0,1,1,0,0,9,1,0,0,-1,1,1,TweakScale.Annotations.UsedImplicitlyAttribute,TweakScale.HotkeyManager
+TweakScale,Tools,0,12,0,0,12,217,26,0,0,-1,2,6,TweakScale.ConvertEx' TweakScale.Annotations.StringFormatMethodAttribute,TweakScale.Hotkey' TweakScale.TweakScaleRegister' TweakScale.MemberUpdater' TweakScale.ScaleExponents' TweakScale.TweakScale' TweakScale.ScaleType
 TweakScale,GoodspeedTweakScale,1,1,0,0,0,13,2,0,1,0,1,0,TweakScale.TweakScale,
-TweakScale,TweakScale,19,18,7,8,4,559,69,1,0,0.17,9,3,TweakScale.Tristate' TweakScale.Hotkeyable' TweakScale.ScaleType' TweakScale.TweakScaleUpdater' TweakScale.Tools' TweakScale.HotkeyManager' TweakScale.Tuple' TweakScale.NodeInfo' TweakScale.IUpdateable,TweakScale.GoodspeedTweakScale' TweakScale.TSGenericUpdater' TweakScale.EmitterUpdater
+TweakScale,TweakScale,19,18,7,8,4,559,72,1,0,0.17,9,4,TweakScale.Hotkeyable' TweakScale.HotkeyManager' TweakScale.Tools' TweakScale.Tristate' TweakScale.ScaleType' TweakScale.Tuple' TweakScale.TweakScaleUpdater' TweakScale.IUpdateable' TweakScale.Annotations.UsedImplicitlyAttribute,TweakScale.HotkeyManager' TweakScale.TSGenericUpdater' TweakScale.EmitterUpdater' TweakScale.GoodspeedTweakScale
 TweakScale,Tristate,0,0,0,0,0,6,0,0,0,-1,0,1,,TweakScale.TweakScale
 TweakScale,TechUpdater,0,1,0,0,1,8,1,0,0,-1,1,0,TweakScale.Tech,
-TweakScale,Tech,1,2,0,0,2,29,7,0,0,0,0,1,,TweakScale.TechUpdater
-TweakScale,ScaleType,14,8,6,10,4,210,19,0,0,0.38,2,4,TweakScale.Tools' TweakScale.ScaleExponents,TweakScale.TweakScale' TweakScale.TSGenericUpdater' TweakScale.TweakScaleEditor' TweakScale.ScaleDatabase
-TweakScale,NodeInfo,2,4,0,2,3,45,10,0,0,0.5,1,1,TweakScale.Tools,TweakScale.TweakScale
-TweakScale,Tuple,0,9,2,0,8,69,12,0,0,-1,0,2,,TweakScale.ExtensionMethods' TweakScale.TweakScale
-TweakScale,RescalableRegistratorAddon,1,3,0,0,3,20,4,2,0,0,0,0,,
-TweakScale,TweakScaleRegister,0,3,0,0,1,31,5,0,1,-1,2,0,TweakScale.Tools' TweakScale.TweakScaleUpdater,
-TweakScale,TweakScaleUpdater,1,3,0,0,2,38,5,0,0,0.67,0,2,,TweakScale.TweakScale' TweakScale.TweakScaleRegister
-TweakScale,TSGenericUpdater,3,2,0,0,2,16,2,0,0,0,3,0,TweakScale.TweakScale' TweakScale.ScaleExponents' TweakScale.ScaleType,
-TweakScale,IUpdateable,0,1,0,0,0,4,1,1,0,-1,0,1,,TweakScale.TweakScale
-TweakScale,EmitterUpdater,6,5,0,0,3,89,14,0,1,0,2,0,TweakScale.TweakScale' TweakScale.EmitterData,
+TweakScale,Tech,1,2,0,0,2,29,7,0,0,0,0,2,,TweakScale.TechUpdater' TweakScale.ScaleType
+TweakScale,ScaleType,14,8,6,10,4,210,19,0,0,0.38,4,1,TweakScale.ScaleExponents' TweakScale.Tools' TweakScale.Tech' TweakScale.NodeInfo,TweakScale.TweakScale
+TweakScale,NodeInfo,2,4,0,2,3,45,10,0,0,0.5,0,1,,TweakScale.ScaleType
+TweakScale,Tuple,0,9,2,0,8,69,12,0,0,-1,0,1,,TweakScale.TweakScale
+TweakScale,RescalableRegistratorAddon,1,3,0,0,3,20,4,2,0,0,0,2,,TweakScale.TweakScaleRegister' TweakScale.ScaleExponentsLoader
+TweakScale,TweakScaleRegister,0,3,0,0,1,31,5,0,1,-1,3,0,TweakScale.Tools' TweakScale.RescalableRegistratorAddon' TweakScale.TweakScaleUpdater,
+TweakScale,TweakScaleUpdater,1,3,0,0,2,38,5,0,0,0.67,2,2,TweakScale.TSGenericUpdater' TweakScale.EmitterUpdater,TweakScale.TweakScaleRegister' TweakScale.TweakScale
+TweakScale,TSGenericUpdater,3,2,0,0,2,16,2,0,0,0,2,1,TweakScale.ScaleExponents' TweakScale.TweakScale,TweakScale.TweakScaleUpdater
+TweakScale,IUpdateable,0,1,0,0,0,4,1,1,0,-1,0,2,,TweakScale.EmitterUpdater' TweakScale.TweakScale
+TweakScale,EmitterUpdater,6,5,0,0,3,89,15,0,1,0,3,1,TweakScale.TweakScale' TweakScale.IUpdateable' TweakScale.EmitterData,TweakScale.TweakScaleUpdater
 TweakScale,EmitterData,7,1,0,7,1,16,1,0,0,0,0,1,,TweakScale.EmitterUpdater
 TweakScale.Annotations,CanBeNullAttribute,0,0,0,0,0,5,0,0,0,-1,0,0,,
-TweakScale.Annotations,NotNullAttribute,0,0,0,0,0,5,0,0,0,-1,0,8,,TweakScale.Annotations.ContractAnnotationAttribute' TweakScale.Annotations.BaseTypeRequiredAttribute' TweakScale.Annotations.PublicAPIAttribute' TweakScale.Annotations.AspMvcActionAttribute' TweakScale.Annotations.AspMvcAreaAttribute' TweakScale.Annotations.AspMvcControllerAttribute' TweakScale.Annotations.HtmlElementAttributesAttribute' TweakScale.Annotations.HtmlAttributeValueAttribute
-TweakScale.Annotations,StringFormatMethodAttribute,0,1,1,0,1,14,1,0,0,-1,0,0,,
+TweakScale.Annotations,NotNullAttribute,0,0,0,0,0,5,0,0,0,-1,0,9,,TweakScale.Annotations.ContractAnnotationAttribute' TweakScale.Annotations.BaseTypeRequiredAttribute' TweakScale.Annotations.PublicAPIAttribute' TweakScale.Annotations.PathReferenceAttribute' TweakScale.Annotations.AspMvcActionAttribute' TweakScale.Annotations.AspMvcAreaAttribute' TweakScale.Annotations.AspMvcControllerAttribute' TweakScale.Annotations.HtmlElementAttributesAttribute' TweakScale.Annotations.HtmlAttributeValueAttribute
+TweakScale.Annotations,StringFormatMethodAttribute,0,1,1,0,1,14,1,0,0,-1,0,1,,TweakScale.Tools
 TweakScale.Annotations,InvokerParameterNameAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 TweakScale.Annotations,NotifyPropertyChangedInvocatorAttribute,0,2,1,0,2,10,2,0,0,-1,0,0,,
 TweakScale.Annotations,ContractAnnotationAttribute,0,2,2,0,2,13,2,0,0,-1,1,0,TweakScale.Annotations.NotNullAttribute,
 TweakScale.Annotations,LocalizationRequiredAttribute,0,2,1,0,2,10,2,0,0,-1,0,0,,
 TweakScale.Annotations,CannotApplyEqualityOperatorAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
 TweakScale.Annotations,BaseTypeRequiredAttribute,0,1,1,0,1,10,1,0,0,-1,1,0,TweakScale.Annotations.NotNullAttribute,
-TweakScale.Annotations,UsedImplicitlyAttribute,0,4,2,0,4,18,4,0,0,-1,2,0,TweakScale.Annotations.ImplicitUseKindFlags' TweakScale.Annotations.ImplicitUseTargetFlags,
-TweakScale.Annotations,MeansImplicitUseAttribute,0,4,2,0,4,18,4,0,0,-1,2,0,TweakScale.Annotations.ImplicitUseKindFlags' TweakScale.Annotations.ImplicitUseTargetFlags,
+TweakScale.Annotations,UsedImplicitlyAttribute,0,4,2,0,4,18,4,0,0,-1,2,4,TweakScale.Annotations.ImplicitUseKindFlags' TweakScale.Annotations.ImplicitUseTargetFlags,TweakScale.TweakScale' TweakScale.SingletonBehavior<T>' TweakScale.HotkeyManager' TweakScale.Annotations.MeansImplicitUseAttribute
+TweakScale.Annotations,MeansImplicitUseAttribute,0,4,2,0,4,18,4,0,0,-1,3,1,TweakScale.Annotations.UsedImplicitlyAttribute' TweakScale.Annotations.ImplicitUseKindFlags' TweakScale.Annotations.ImplicitUseTargetFlags,TweakScale.Annotations.PublicAPIAttribute
 TweakScale.Annotations,ImplicitUseKindFlags,0,0,0,0,0,16,0,0,0,-1,0,2,,TweakScale.Annotations.UsedImplicitlyAttribute' TweakScale.Annotations.MeansImplicitUseAttribute
 TweakScale.Annotations,ImplicitUseTargetFlags,0,0,0,0,0,10,0,0,0,-1,0,2,,TweakScale.Annotations.UsedImplicitlyAttribute' TweakScale.Annotations.MeansImplicitUseAttribute
-TweakScale.Annotations,PublicAPIAttribute,0,2,1,0,2,10,2,0,0,-1,1,0,TweakScale.Annotations.NotNullAttribute,
+TweakScale.Annotations,PublicAPIAttribute,0,2,1,0,2,10,2,0,0,-1,2,0,TweakScale.Annotations.NotNullAttribute' TweakScale.Annotations.MeansImplicitUseAttribute,
 TweakScale.Annotations,InstantHandleAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 TweakScale.Annotations,PureAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-TweakScale.Annotations,PathReferenceAttribute,0,2,1,0,2,10,2,3,0,-1,0,0,,
+TweakScale.Annotations,PathReferenceAttribute,0,2,1,0,2,10,2,3,0,-1,1,3,TweakScale.Annotations.NotNullAttribute,TweakScale.Annotations.AspMvcAreaAttribute' TweakScale.Annotations.AspMvcPartialViewAttribute' TweakScale.Annotations.AspMvcViewAttribute
 TweakScale.Annotations,AspMvcAreaMasterLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcAreaPartialViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcAreaViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
@@ -56,16 +56,16 @@ TweakScale.Annotations,AspMvcMasterLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,
 TweakScale.Annotations,AspMvcPartialViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcViewLocationFormatAttribute,0,1,0,0,1,5,1,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcActionAttribute,0,2,1,0,2,10,2,0,0,-1,1,0,TweakScale.Annotations.NotNullAttribute,
-TweakScale.Annotations,AspMvcAreaAttribute,0,2,1,0,2,10,2,0,1,-1,1,0,TweakScale.Annotations.NotNullAttribute,
+TweakScale.Annotations,AspMvcAreaAttribute,0,2,1,0,2,10,2,0,1,-1,2,0,TweakScale.Annotations.NotNullAttribute' TweakScale.Annotations.PathReferenceAttribute,
 TweakScale.Annotations,AspMvcControllerAttribute,0,2,1,0,2,10,2,0,0,-1,1,0,TweakScale.Annotations.NotNullAttribute,
 TweakScale.Annotations,AspMvcMasterAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcModelTypeAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-TweakScale.Annotations,AspMvcPartialViewAttribute,0,0,0,0,0,2,0,0,1,-1,0,0,,
+TweakScale.Annotations,AspMvcPartialViewAttribute,0,0,0,0,0,2,0,0,1,-1,1,0,TweakScale.Annotations.PathReferenceAttribute,
 TweakScale.Annotations,AspMvcSupressViewErrorAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcDisplayTemplateAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcEditorTemplateAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 TweakScale.Annotations,AspMvcTemplateAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
-TweakScale.Annotations,AspMvcViewAttribute,0,0,0,0,0,2,0,0,1,-1,0,0,,
+TweakScale.Annotations,AspMvcViewAttribute,0,0,0,0,0,2,0,0,1,-1,1,0,TweakScale.Annotations.PathReferenceAttribute,
 TweakScale.Annotations,AspMvcActionSelectorAttribute,0,0,0,0,0,2,0,0,0,-1,0,0,,
 TweakScale.Annotations,HtmlElementAttributesAttribute,0,2,1,0,2,12,2,0,0,-1,1,0,TweakScale.Annotations.NotNullAttribute,
 TweakScale.Annotations,HtmlAttributeValueAttribute,0,1,1,0,1,11,1,0,0,-1,1,0,TweakScale.Annotations.NotNullAttribute,

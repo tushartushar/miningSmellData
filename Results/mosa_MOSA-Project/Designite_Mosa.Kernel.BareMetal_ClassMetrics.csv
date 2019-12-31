@@ -1,0 +1,24 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mosa.Kernel.BareMetal,AddressRange,0,4,2,0,4,25,4,0,0,-1,0,1,,Mosa.Kernel.BareMetal.Platform
+Mosa.Kernel.BareMetal,Alignment,0,12,0,0,12,51,12,0,0,-1,0,1,,Mosa.Kernel.BareMetal.PhysicalPageAllocator
+Mosa.Kernel.BareMetal,BitMapIndexTable,1,3,0,0,3,17,3,0,0,0,1,1,Mosa.Kernel.BareMetal.Page,Mosa.Kernel.BareMetal.PhysicalPageAllocator
+Mosa.Kernel.BareMetal,Boot,0,1,0,0,1,27,2,0,0,-1,6,0,Mosa.Kernel.BareMetal.BootPageAllocator' Mosa.Kernel.BareMetal.Console' Mosa.Kernel.BareMetal.ConsoleColor' Mosa.Kernel.BareMetal.PageTable' Mosa.Kernel.BareMetal.Platform' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap,
+Mosa.Kernel.BareMetal,BootPageAllocator,3,3,0,0,2,25,3,0,0,0,2,3,Mosa.Kernel.BareMetal.Page' Mosa.Kernel.BareMetal.Platform,Mosa.Kernel.BareMetal.Boot' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap' Mosa.Kernel.BareMetal.PhysicalPageAllocator
+Mosa.Kernel.BareMetal,Console,4,8,0,4,8,50,9,0,0,0,2,3,Mosa.Kernel.BareMetal.ConsoleColor' Mosa.Kernel.BareMetal.Platform,Mosa.Kernel.BareMetal.PhysicalPageAllocator' Mosa.Kernel.BareMetal.PageTable' Mosa.Kernel.BareMetal.Boot
+Mosa.Kernel.BareMetal,ConsoleColor,0,0,0,0,0,11,0,0,1,-1,0,2,,Mosa.Kernel.BareMetal.Boot' Mosa.Kernel.BareMetal.Console
+Mosa.Kernel.BareMetal,Multiboot,0,1,2,0,1,15,1,0,0,-1,1,1,Mosa.Kernel.BareMetal.MultibootSpecification.MultibootV1,Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap
+Mosa.Kernel.BareMetal,Page,0,1,3,0,1,15,2,0,0,-1,1,4,Mosa.Kernel.BareMetal.Platform,Mosa.Kernel.BareMetal.BitMapIndexTable' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap' Mosa.Kernel.BareMetal.BootPageAllocator' Mosa.Kernel.BareMetal.PhysicalPageAllocator
+Mosa.Kernel.BareMetal,PageTable,0,3,0,0,3,33,3,0,0,-1,2,1,Mosa.Kernel.BareMetal.Console' Mosa.Kernel.BareMetal.Platform,Mosa.Kernel.BareMetal.Boot
+Mosa.Kernel.BareMetal,PhysicalPageAllocator,7,6,0,0,4,246,35,0,0,0.33,6,0,Mosa.Kernel.BareMetal.Alignment' Mosa.Kernel.BareMetal.BitMapIndexTable' Mosa.Kernel.BareMetal.BootPageAllocator' Mosa.Kernel.BareMetal.Console' Mosa.Kernel.BareMetal.Page' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap,
+Mosa.Kernel.BareMetal,Platform,0,11,0,0,11,36,11,0,0,-1,1,5,Mosa.Kernel.BareMetal.AddressRange,Mosa.Kernel.BareMetal.Page' Mosa.Kernel.BareMetal.Boot' Mosa.Kernel.BareMetal.BootPageAllocator' Mosa.Kernel.BareMetal.Console' Mosa.Kernel.BareMetal.PageTable
+Mosa.Kernel.BareMetal,VirtualMemoryManager,0,4,0,0,4,22,4,0,0,-1,0,0,,
+Mosa.Kernel.BareMetal.BootMemory,BootMemoryMap,1,6,0,0,6,57,11,0,0,0,7,2,Mosa.Kernel.BareMetal.BootPageAllocator' Mosa.Kernel.BareMetal.Multiboot' Mosa.Kernel.BareMetal.Page' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMapEntry' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMapTable' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMapType' Mosa.Kernel.BareMetal.MultibootSpecification.MultibootV1MemoryMapEntry,Mosa.Kernel.BareMetal.Boot' Mosa.Kernel.BareMetal.PhysicalPageAllocator
+Mosa.Kernel.BareMetal.BootMemory,BootMemoryMapEntry,2,1,6,1,1,30,1,0,0,0,1,2,Mosa.Kernel.BareMetal.BootMemory.BootMemoryMapType,Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMapTable
+Mosa.Kernel.BareMetal.BootMemory,BootMemoryMapTable,1,2,2,0,2,19,2,0,0,0,1,1,Mosa.Kernel.BareMetal.BootMemory.BootMemoryMapEntry,Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap
+Mosa.Kernel.BareMetal.BootMemory,BootMemoryMapType,0,0,0,0,0,5,0,0,0,-1,0,2,,Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap' Mosa.Kernel.BareMetal.BootMemory.BootMemoryMapEntry
+Mosa.Kernel.BareMetal.MultibootSpecification,MultibootV1,2,1,21,1,1,125,1,0,0,0,1,1,Mosa.Kernel.BareMetal.MultibootSpecification.MultiBootInfoOffset,Mosa.Kernel.BareMetal.Multiboot
+Mosa.Kernel.BareMetal.MultibootSpecification,MultiBootInfoOffset,24,0,0,24,0,27,0,0,0,-1,0,1,,Mosa.Kernel.BareMetal.MultibootSpecification.MultibootV1
+Mosa.Kernel.BareMetal.MultibootSpecification,MultibootV1MemoryMapEntry,1,2,6,0,2,39,3,0,0,0,1,1,Mosa.Kernel.BareMetal.MultibootSpecification.MultiBootMemoryMapOffset,Mosa.Kernel.BareMetal.BootMemory.BootMemoryMap
+Mosa.Kernel.BareMetal.MultibootSpecification,MultiBootMemoryMapOffset,5,0,0,5,0,8,0,0,0,-1,0,1,,Mosa.Kernel.BareMetal.MultibootSpecification.MultibootV1MemoryMapEntry
+Mosa.Kernel.BareMetal.MultibootSpecification,MultibootV1VBEEntry,1,1,33,0,1,85,1,0,0,0,1,0,Mosa.Kernel.BareMetal.MultibootSpecification.VBEModeInfoOffset,
+Mosa.Kernel.BareMetal.MultibootSpecification,VBEModeInfoOffset,33,0,0,33,0,36,0,0,0,-1,0,1,,Mosa.Kernel.BareMetal.MultibootSpecification.MultibootV1VBEEntry

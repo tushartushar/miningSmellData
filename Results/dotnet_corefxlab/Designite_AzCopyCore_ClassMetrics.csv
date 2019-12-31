@@ -1,0 +1,16 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+System.CommandLine,CommandLine,1,5,0,0,5,56,16,0,0,0,0,0,,
+System.Diagnostics,ConsoleTraceListener,0,6,1,0,6,49,11,0,0,-1,0,0,,
+System.IO.Pipelines,PipelinesExtensions,0,3,0,0,3,53,11,0,0,-1,0,0,,
+System.Net.Experimental,PipeHttpClient,2,3,1,0,2,50,7,0,0,0,1,1,System.Net.Experimental.IHttpResponseHandler,System.Azure.Storage.StorageClient
+System.Net.Experimental,IHttpResponseHandler,0,1,0,0,0,4,1,1,0,-1,0,2,,System.Azure.Storage.StorageResponse' System.Net.Experimental.PipeHttpClient
+System.Net.Experimental,SocketPipe,7,7,4,1,2,155,21,0,0,0,0,1,,System.Azure.Storage.StorageClient
+System.Azure.Storage,StorageClient,6,5,4,0,4,57,7,0,0,0,4,4,System.Net.Experimental.PipeHttpClient' System.Net.Experimental.SocketPipe' System.Azure.Storage.StorageResponse' System.Azure.Storage.Requests.IStorageRequest,System.Azure.Storage.Requests.IStorageRequest' System.Azure.Storage.Requests.PutRangeRequest' System.Azure.Storage.Requests.CreateFileRequest' System.Azure.Storage.Requests.GetFileRequest
+System.Azure.Storage,StorageResponse,2,3,3,0,3,27,5,0,1,1,1,1,System.Net.Experimental.IHttpResponseHandler,System.Azure.Storage.StorageClient
+System.Azure.Storage.Requests,IStorageRequest,0,0,5,0,0,8,0,3,0,-1,1,5,System.Azure.Storage.StorageClient,System.Azure.Storage.StorageClient' System.Azure.Storage.Requests.StorageRequestWriter<T>' System.Azure.Storage.Requests.PutRangeRequest' System.Azure.Storage.Requests.CreateFileRequest' System.Azure.Storage.Requests.GetFileRequest
+System.Azure.Storage.Requests,RequestWriter<T>,0,3,1,0,1,13,3,0,0,-1,0,1,,System.Azure.Storage.Requests.StorageRequestWriter<T>
+System.Azure.Storage.Requests,StorageRequestWriter<T>,2,4,1,0,1,49,6,0,0,1,2,2,System.Azure.Storage.Requests.IStorageRequest' System.Azure.Storage.Requests.RequestWriter<T>,System.Azure.Storage.Requests.PutRangeRequest' System.Azure.Storage.Requests.Writer
+System.Azure.Storage.Requests,PutRangeRequest,5,2,5,0,2,49,4,0,1,1,4,0,System.Azure.Storage.StorageClient' System.Azure.Storage.Requests.IStorageRequest' System.Azure.Storage.Requests.StorageRequestWriter<T>' System.Azure.Storage.Requests.Writer,
+System.Azure.Storage.Requests,Writer,0,4,3,0,0,39,4,0,0,-1,3,3,System.Azure.Storage.Requests.StorageRequestWriter<T>' System.Azure.Storage.Requests.CreateFileRequest' System.Azure.Storage.Requests.GetFileRequest,System.Azure.Storage.Requests.PutRangeRequest' System.Azure.Storage.Requests.CreateFileRequest' System.Azure.Storage.Requests.GetFileRequest
+System.Azure.Storage.Requests,CreateFileRequest,1,2,6,0,2,29,2,0,1,1,3,1,System.Azure.Storage.StorageClient' System.Azure.Storage.Requests.IStorageRequest' System.Azure.Storage.Requests.Writer,System.Azure.Storage.Requests.Writer
+System.Azure.Storage.Requests,GetFileRequest,1,2,6,0,2,26,2,0,1,1,3,1,System.Azure.Storage.StorageClient' System.Azure.Storage.Requests.IStorageRequest' System.Azure.Storage.Requests.Writer,System.Azure.Storage.Requests.Writer

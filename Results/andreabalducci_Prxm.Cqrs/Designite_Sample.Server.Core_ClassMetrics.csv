@@ -1,11 +1,11 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Sample.Server.Core,CommandStoreInterceptor,1,2,0,0,2,40,3,0,0,0,3,0,Sample.Server.Core.IRawCommandStore' Proximo.Cqrs.Core.Commanding.ICommand' Sample.Server.Core.ExecutedCommand,
-Sample.Server.Core,ExecutedCommand,0,0,4,0,0,17,0,0,0,-1,0,3,,Sample.Server.Core.CommandStoreInterceptor' Sample.Server.Core.MongoRawCommandStore' Sample.Server.Core.IRawCommandStore
-Sample.Server.Core,MongoRawCommandStore,2,2,0,0,2,15,2,0,1,0,1,0,Sample.Server.Core.ExecutedCommand,
-Sample.Server.Core,IRawCommandStore,0,1,0,0,0,4,1,1,0,-1,1,1,Sample.Server.Core.ExecutedCommand,Sample.Server.Core.CommandStoreInterceptor
-Sample.Server.Core,IRawEventStore,0,2,0,0,0,5,2,1,0,-1,1,3,Sample.Server.Core.PersistedDomainEvent,Sample.Server.Support.EventDispatcherToRawStoragePipelineHook' Sample.Server.Program' Sample.Server.Core.Initialization.ReplayableDomainEventHandlerInitializer
-Sample.Server.Core,MongoRawEventStore,2,3,0,0,3,32,3,0,1,0,1,0,Sample.Server.Core.PersistedDomainEvent,
-Sample.Server.Core,PersistedDomainEvent,0,1,7,0,1,18,1,0,0,-1,0,3,,Sample.Server.Support.EventDispatcherToRawStoragePipelineHook' Sample.Server.Core.IRawEventStore' Sample.Server.Core.MongoRawEventStore
-Sample.Server.Core.Initialization,IDomainEventHandlerInitializer,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Sample.Server.Core,CommandStoreInterceptor,1,2,0,0,2,40,3,0,0,0,2,0,Sample.Server.Core.ExecutedCommand' Sample.Server.Core.IRawCommandStore,
+Sample.Server.Core,ExecutedCommand,0,0,4,0,0,17,0,0,0,-1,0,3,,Sample.Server.Core.MongoRawCommandStore' Sample.Server.Core.IRawCommandStore' Sample.Server.Core.CommandStoreInterceptor
+Sample.Server.Core,MongoRawCommandStore,2,2,0,0,2,15,2,0,1,0,3,0,Sample.Server.Core.ExecutedCommand' Sample.Server.Core.IRawCommandStore' Sample.Server.Core.PersistedDomainEvent,
+Sample.Server.Core,IRawCommandStore,0,1,0,0,0,4,1,1,0,-1,1,2,Sample.Server.Core.ExecutedCommand,Sample.Server.Core.MongoRawCommandStore' Sample.Server.Core.CommandStoreInterceptor
+Sample.Server.Core,IRawEventStore,0,2,0,0,0,5,2,1,0,-1,1,2,Sample.Server.Core.PersistedDomainEvent,Sample.Server.Core.MongoRawEventStore' Sample.Server.Core.Initialization.ReplayableDomainEventHandlerInitializer
+Sample.Server.Core,MongoRawEventStore,2,3,0,0,3,32,3,0,1,0,2,0,Sample.Server.Core.IRawEventStore' Sample.Server.Core.PersistedDomainEvent,
+Sample.Server.Core,PersistedDomainEvent,0,1,7,0,1,18,1,0,0,-1,0,3,,Sample.Server.Core.IRawEventStore' Sample.Server.Core.MongoRawCommandStore' Sample.Server.Core.MongoRawEventStore
+Sample.Server.Core.Initialization,IDomainEventHandlerInitializer,0,1,0,0,0,4,1,1,0,-1,0,1,,Sample.Server.Core.Initialization.ReplayableDomainEventHandlerInitializer
 Sample.Server.Core.Initialization,IReplayable,0,3,0,0,0,17,3,1,0,-1,0,1,,Sample.Server.Core.Initialization.ReplayableDomainEventHandlerInitializer
-Sample.Server.Core.Initialization,ReplayableDomainEventHandlerInitializer,3,2,0,0,2,44,5,0,1,0,6,0,Proximo.Cqrs.Server.Eventing.IDomainEventHandlerCatalog' Sample.Server.Core.IRawEventStore' Proximo.Cqrs.Core.Support.ILogger' Sample.Server.Core.Initialization.IReplayable' Proximo.Cqrs.Server.Eventing.DomainEventInvoker' Proximo.Cqrs.Server.Eventing.DomainEvent,
+Sample.Server.Core.Initialization,ReplayableDomainEventHandlerInitializer,3,2,0,0,2,44,5,0,1,0,3,0,Sample.Server.Core.IRawEventStore' Sample.Server.Core.Initialization.IDomainEventHandlerInitializer' Sample.Server.Core.Initialization.IReplayable,

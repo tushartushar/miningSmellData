@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NakedObjects.Audit,IAuditor,0,4,0,0,0,6,4,1,0,-1,0,0,,
-NakedObjects.Audit,INamespaceAuditor,0,0,0,0,0,3,0,0,1,-1,0,0,,
+NakedObjects.Audit,IAuditor,0,4,0,0,0,6,4,1,0,-1,0,1,,NakedObjects.Audit.INamespaceAuditor
+NakedObjects.Audit,INamespaceAuditor,0,0,0,0,0,3,0,0,1,-1,1,0,NakedObjects.Audit.IAuditor,
 NakedObjects,DomainException,0,3,0,0,3,21,3,0,0,-1,0,0,,
-NakedObjects,IDomainObjectContainer,0,22,1,0,0,135,22,0,0,-1,0,7,,NakedObjects.ViewModel<T>' NakedObjects.Services.AbstractFactoryAndRepository' NakedObjects.Services.ObjectFinder' NakedObjects.Services.PolymorphicNavigator' NakedObjects.Services.PolymorphicNavigatorWithOid' NakedObjects.Services.SimpleRepository<T>' NakedObjects.Util.KeyUtils
-NakedObjects,ITitleBuilder,0,14,0,0,0,16,14,0,0,-1,0,0,,
-NakedObjects,IViewModelSwitchable,0,1,0,0,0,3,1,0,1,-1,0,0,,
-NakedObjects,IViewModel,0,2,0,0,0,14,2,3,0,-1,0,0,,
-NakedObjects,IViewModelEdit,0,0,0,0,0,1,0,0,1,-1,0,0,,
-NakedObjects.Async,IAsyncService,0,1,0,0,0,11,1,0,0,-1,0,0,,
+NakedObjects,IDomainObjectContainer,0,22,1,0,0,135,22,0,0,-1,2,1,NakedObjects.ITitleBuilder' NakedObjects.IViewModel,NakedObjects.Async.IAsyncService
+NakedObjects,ITitleBuilder,0,14,0,0,0,16,14,0,0,-1,0,1,,NakedObjects.IDomainObjectContainer
+NakedObjects,IViewModelSwitchable,0,1,0,0,0,3,1,0,1,-1,1,0,NakedObjects.IViewModel,
+NakedObjects,IViewModel,0,2,0,0,0,14,2,3,0,-1,0,3,,NakedObjects.IViewModelSwitchable' NakedObjects.IViewModelEdit' NakedObjects.IDomainObjectContainer
+NakedObjects,IViewModelEdit,0,0,0,0,0,1,0,0,1,-1,1,0,NakedObjects.IViewModel,
+NakedObjects.Async,IAsyncService,0,1,0,0,0,11,1,0,0,-1,1,0,NakedObjects.IDomainObjectContainer,
 NakedObjects.Menu,IMenu,0,7,1,0,0,56,7,0,0,-1,0,0,,
 NakedObjects.Profile,IProfiler,0,2,0,0,0,4,2,0,0,-1,1,0,NakedObjects.Profile.ProfileEvent,
 NakedObjects.Profile,ProfileEvent,0,0,0,0,0,13,0,0,0,-1,0,1,,NakedObjects.Profile.IProfiler
@@ -15,8 +15,8 @@ NakedObjects.Redirect,IRedirectedObject,0,0,2,0,0,6,0,0,0,-1,0,0,,
 NakedObjects.Redirect,IRedirectedService,0,2,0,0,0,6,2,0,0,-1,0,0,,
 NakedObjects.Security,INamespaceAuthorizer,0,2,0,0,0,18,2,0,0,-1,0,0,,
 NakedObjects.Security,ITypeAuthorizer,0,2,0,0,0,18,2,0,0,-1,0,0,,
-NakedObjects.Snapshot,IXmlSnapshot,0,4,3,0,0,9,4,0,0,-1,0,0,,
-NakedObjects.Snapshot,IXmlSnapshotService,0,1,0,0,0,3,1,0,0,-1,0,0,,
-NakedObjects.Value,FileAttachment,1,8,4,0,7,51,10,1,1,0.38,0,0,,
-NakedObjects.Value,Image,0,4,0,0,4,9,4,0,2,-1,0,0,,
-NakedObjects.Value,IStreamResource,0,1,1,0,0,4,1,1,0,-1,0,0,,
+NakedObjects.Snapshot,IXmlSnapshot,0,4,3,0,0,9,4,0,0,-1,0,1,,NakedObjects.Snapshot.IXmlSnapshotService
+NakedObjects.Snapshot,IXmlSnapshotService,0,1,0,0,0,3,1,0,0,-1,1,0,NakedObjects.Snapshot.IXmlSnapshot,
+NakedObjects.Value,FileAttachment,1,8,4,0,7,51,10,1,1,0.38,1,1,NakedObjects.Value.IStreamResource,NakedObjects.Value.Image
+NakedObjects.Value,Image,0,4,0,0,4,9,4,0,2,-1,1,0,NakedObjects.Value.FileAttachment,
+NakedObjects.Value,IStreamResource,0,1,1,0,0,4,1,1,0,-1,0,1,,NakedObjects.Value.FileAttachment

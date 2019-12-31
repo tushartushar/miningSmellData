@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Akka.Persistence.Sqlite,ConnectionContext,1,2,0,0,2,20,5,0,0,0,0,1,,Akka.Persistence.Sqlite.SqlitePersistence
 Akka.Persistence.Sqlite,DbHelper,2,2,0,0,2,44,6,0,0,1,0,1,,Akka.Persistence.Sqlite.SqlitePersistence
-Akka.Persistence.Sqlite,SqliteJournalSettings,1,1,1,1,1,12,1,0,1,0,1,2,Akka.Configuration.Config,Akka.Persistence.Sqlite.SqlitePersistence' ClusterSharding.Node.AutomaticJoin.AutomaticCluster
-Akka.Persistence.Sqlite,SqliteSnapshotSettings,1,1,1,1,1,12,1,0,1,0,1,2,Akka.Configuration.Config,Akka.Persistence.Sqlite.SqlitePersistence' Akka.Persistence.Sqlite.Snapshot.QueryBuilder
-Akka.Persistence.Sqlite,SqlitePersistence,2,3,0,2,3,45,7,0,1,0.67,9,6,Akka.Persistence.Sqlite.SqliteJournalSettings' Akka.Persistence.Sqlite.SqliteSnapshotSettings' Akka.Configuration.ConfigurationFactory' Akka.Configuration.Config' Akka.Actor.ActorSystem' Akka.Actor.Settings' Akka.Actor.ExtendedActorSystem' Akka.Persistence.Sqlite.ConnectionContext' Akka.Persistence.Sqlite.DbHelper,Akka.Persistence.Sqlite.SqlitePersistenceProvder' Akka.Persistence.Sqlite.Journal.SqliteJournal' Akka.Persistence.Sqlite.Snapshot.SqliteSnapshotStore' ClusterSharding.Node.AutomaticJoin.AutomaticCluster' Akka.Persistence.Sqlite.Tests.SqliteJournalSpec' Akka.Persistence.Sqlite.Tests.SqliteSnapshotStoreSpec
-Akka.Persistence.Sqlite,SqlitePersistenceProvder,0,1,0,0,1,7,1,0,0,-1,2,0,Akka.Persistence.Sqlite.SqlitePersistence' Akka.Actor.ExtendedActorSystem,
-Akka.Persistence.Sqlite.Journal,SqliteQueryBuilder,3,7,0,0,6,130,19,0,1,0.29,5,0,Akka.Persistence.Sql.Common.Queries.TimestampRange' Akka.Persistence.Sql.Common.Queries.PersistenceIdRange' Akka.Persistence.Sql.Common.Queries.WithManifest' Akka.Persistence.Sql.Common.Queries.IHint' Akka.Persistence.IPersistentRepresentation,
-Akka.Persistence.Sqlite.Journal,SqliteJournalEngine,0,3,1,0,1,22,3,0,1,-1,3,0,Akka.Persistence.Sql.Common.JournalSettings' Akka.Actor.ActorSystem' Akka.Persistence.Sql.Common.Journal.JournalEntry,
-Akka.Persistence.Sqlite.Journal,SqliteJournal,1,1,0,1,1,7,1,0,2,0,1,0,Akka.Persistence.Sqlite.SqlitePersistence,
-Akka.Persistence.Sqlite.Snapshot,QueryBuilder,3,5,0,0,5,76,11,0,1,0,2,0,Akka.Persistence.Sqlite.SqliteSnapshotSettings' Akka.Persistence.Sql.Common.Snapshot.SnapshotEntry,
-Akka.Persistence.Sqlite.Snapshot,SqliteQueryMapper,1,3,0,0,2,25,3,0,1,0,4,0,Akka.Serialization.Serialization' Akka.Persistence.SnapshotMetadata' Akka.Persistence.SelectedSnapshot' Akka.Serialization.Serializer,
-Akka.Persistence.Sqlite.Snapshot,SqliteSnapshotStore,1,2,1,0,1,16,2,0,2,1,3,0,Akka.Persistence.Sqlite.SqlitePersistence' Akka.Actor.IActorContext' Akka.Actor.ActorSystem,
+Akka.Persistence.Sqlite,SqliteJournalSettings,1,1,1,1,1,12,1,0,1,0,0,2,,Akka.Persistence.Sqlite.Journal.SqliteJournalEngine' Akka.Persistence.Sqlite.SqlitePersistence
+Akka.Persistence.Sqlite,SqliteSnapshotSettings,1,1,1,1,1,12,1,0,1,0,0,2,,Akka.Persistence.Sqlite.Snapshot.QueryBuilder' Akka.Persistence.Sqlite.SqlitePersistence
+Akka.Persistence.Sqlite,SqlitePersistence,2,3,0,2,3,45,7,0,1,0.67,5,3,Akka.Persistence.Sqlite.ConnectionContext' Akka.Persistence.Sqlite.DbHelper' Akka.Persistence.Sqlite.SqliteJournalSettings' Akka.Persistence.Sqlite.SqliteSnapshotSettings' Akka.Persistence.Sqlite.SqlitePersistenceProvder,Akka.Persistence.Sqlite.Journal.SqliteJournal' Akka.Persistence.Sqlite.Snapshot.SqliteSnapshotStore' Akka.Persistence.Sqlite.SqlitePersistenceProvder
+Akka.Persistence.Sqlite,SqlitePersistenceProvder,0,1,0,0,1,7,1,0,0,-1,1,1,Akka.Persistence.Sqlite.SqlitePersistence,Akka.Persistence.Sqlite.SqlitePersistence
+Akka.Persistence.Sqlite.Journal,SqliteQueryBuilder,3,7,0,0,6,130,20,0,1,0.29,0,1,,Akka.Persistence.Sqlite.Journal.SqliteJournalEngine
+Akka.Persistence.Sqlite.Journal,SqliteJournalEngine,0,3,1,0,1,22,3,0,1,-1,2,1,Akka.Persistence.Sqlite.SqliteJournalSettings' Akka.Persistence.Sqlite.Journal.SqliteQueryBuilder,Akka.Persistence.Sqlite.Journal.SqliteJournal
+Akka.Persistence.Sqlite.Journal,SqliteJournal,1,1,0,1,1,7,1,0,2,0,2,0,Akka.Persistence.Sqlite.SqlitePersistence' Akka.Persistence.Sqlite.Journal.SqliteJournalEngine,
+Akka.Persistence.Sqlite.Snapshot,QueryBuilder,3,5,0,0,5,76,11,0,1,0,1,1,Akka.Persistence.Sqlite.SqliteSnapshotSettings,Akka.Persistence.Sqlite.Snapshot.SqliteSnapshotStore
+Akka.Persistence.Sqlite.Snapshot,SqliteQueryMapper,1,3,0,0,2,25,3,0,1,0,0,1,,Akka.Persistence.Sqlite.Snapshot.SqliteSnapshotStore
+Akka.Persistence.Sqlite.Snapshot,SqliteSnapshotStore,1,2,1,0,1,16,2,0,2,1,3,0,Akka.Persistence.Sqlite.SqlitePersistence' Akka.Persistence.Sqlite.Snapshot.QueryBuilder' Akka.Persistence.Sqlite.Snapshot.SqliteQueryMapper,

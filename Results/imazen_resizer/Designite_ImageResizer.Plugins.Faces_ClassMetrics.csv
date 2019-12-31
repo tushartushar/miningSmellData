@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 ImageResizer.Plugins.Faces,FileLocator,5,2,0,0,1,50,3,0,0,0,0,1,,ImageResizer.Plugins.Faces.CascadePool
-ImageResizer.Plugins.Faces,Pool<T>,2,4,2,0,2,73,8,0,0,0.75,0,0,,
-ImageResizer.Plugins.Faces,CascadePool,1,1,1,0,1,22,1,0,0,0,1,1,ImageResizer.Plugins.Faces.FileLocator,ImageResizer.Plugins.Faces.FeatureDetectionBase<T>
-ImageResizer.Plugins.Faces,StoragePool,0,1,1,0,1,10,1,0,0,-1,0,1,,ImageResizer.Plugins.Faces.FeatureDetectionBase<T>
-ImageResizer.Plugins.Faces,DetectionResponse<T>,12,3,0,12,3,92,3,0,0,1,5,0,ImageResizer.Resizing.ImageState' ImageResizer.Util.PolygonMath' ImageResizer.Plugins.Faces.AlternateResponseException' ImageResizer.Caching.IResponseHeaders' ImageResizer.Caching.ResponseArgs,
-ImageResizer.Plugins.Faces,Face,0,1,5,0,1,34,1,0,1,-1,0,1,,ImageResizer.Plugins.Faces.FacesPlugin
-ImageResizer.Plugins.Faces,FaceDetection,2,2,7,0,1,127,7,0,0,1,1,1,ImageResizer.Util.PolygonMath,ImageResizer.Plugins.Faces.FacesPlugin
+ImageResizer.Plugins.Faces,Pool<T>,2,4,2,0,2,73,9,0,0,0.75,0,2,,ImageResizer.Plugins.Faces.CascadePool' ImageResizer.Plugins.Faces.StoragePool
+ImageResizer.Plugins.Faces,CascadePool,1,1,1,0,1,22,1,0,0,0,2,1,ImageResizer.Plugins.Faces.FileLocator' ImageResizer.Plugins.Faces.Pool<T>,ImageResizer.Plugins.Faces.FeatureDetectionBase<T>
+ImageResizer.Plugins.Faces,StoragePool,0,1,1,0,1,10,1,0,0,-1,1,1,ImageResizer.Plugins.Faces.Pool<T>,ImageResizer.Plugins.Faces.FeatureDetectionBase<T>
+ImageResizer.Plugins.Faces,DetectionResponse<T>,12,3,0,12,3,92,3,0,0,1,1,1,ImageResizer.Plugins.Faces.AlternateResponseException,ImageResizer.Plugins.Faces.FacesPlugin
+ImageResizer.Plugins.Faces,Face,0,1,5,0,1,34,1,0,1,-1,1,2,ImageResizer.Plugins.Faces.IFeature,ImageResizer.Plugins.Faces.FaceDetection' ImageResizer.Plugins.Faces.FacesPlugin
+ImageResizer.Plugins.Faces,FaceDetection,2,2,7,0,1,127,7,0,0,1,2,1,ImageResizer.Plugins.Faces.Face' ImageResizer.Plugins.Faces.FeatureDetectionBase<T>,ImageResizer.Plugins.Faces.FacesPlugin
 ImageResizer.Plugins.Faces,OpenCvExtensions,0,3,0,0,3,15,3,0,0,-1,0,0,,
-ImageResizer.Plugins.Faces,IFeature,0,0,4,0,0,18,0,2,0,-1,0,1,,ImageResizer.Plugins.Faces.FeatureDetectionBase<T>
-ImageResizer.Plugins.Faces,FeatureDetectionBase<T>,2,5,0,0,2,109,10,0,0,1,3,0,ImageResizer.Plugins.Faces.CascadePool' ImageResizer.Plugins.Faces.StoragePool' ImageResizer.Plugins.Faces.IFeature,
+ImageResizer.Plugins.Faces,IFeature,0,0,4,0,0,18,0,2,0,-1,0,2,,ImageResizer.Plugins.Faces.Face' ImageResizer.Plugins.Faces.FeatureDetectionBase<T>
+ImageResizer.Plugins.Faces,FeatureDetectionBase<T>,2,5,0,0,2,109,10,0,0,1,3,1,ImageResizer.Plugins.Faces.CascadePool' ImageResizer.Plugins.Faces.StoragePool' ImageResizer.Plugins.Faces.IFeature,ImageResizer.Plugins.Faces.FaceDetection
 ImageResizer.Plugins.Faces,FeatureDetectionUtils,0,1,0,0,1,6,1,0,0,-1,0,0,,
-ImageResizer.Plugins.Faces,FacesPlugin,1,11,0,0,7,208,27,0,2,0.64,11,0,ImageResizer.Configuration.Config' ImageResizer.Configuration.PluginConfig' ImageResizer.Configuration.PipelineConfig' ImageResizer.Plugins.Faces.Face' ImageResizer.Plugins.Faces.FaceDetection' ImageResizer.ImageBuilder' ImageResizer.Resizing.ImageState' ImageResizer.Resizing.RequestedAction' ImageResizer.Resizing.LayoutBuilder' ImageResizer.ResizeSettings' ImageResizer.Caching.IResponseArgs,
+ImageResizer.Plugins.Faces,FacesPlugin,1,11,0,0,7,208,30,0,2,0.82,3,0,ImageResizer.Plugins.Faces.DetectionResponse<T>' ImageResizer.Plugins.Faces.Face' ImageResizer.Plugins.Faces.FaceDetection,
 ImageResizer.Plugins.Faces,AlternateResponseException,0,1,3,0,1,7,1,0,0,-1,0,1,,ImageResizer.Plugins.Faces.DetectionResponse<T>
 ImageResizer.Plugins.CropAround,Extensions,0,1,0,0,1,10,2,0,0,-1,0,0,,
-ImageResizer.Plugins.CropAround,SalientArea,0,2,2,0,2,52,7,0,0,-1,1,2,ImageResizer.ResizeSettings,ImageResizer.Plugins.CropAround.CropAroundPlugin' ImageResizer.Plugins.CropAround.Aligner
-ImageResizer.Plugins.CropAround,CropAroundPlugin,0,4,0,0,3,59,6,0,2,-1,8,0,ImageResizer.Configuration.PluginConfig' ImageResizer.Configuration.Config' ImageResizer.Plugins.CropAround.SalientArea' ImageResizer.Plugins.CropAround.Aligner' ImageResizer.ResizeSettings' ImageResizer.Resizing.ImageState' ImageResizer.FitMode' ImageResizer.Resizing.RequestedAction,
-ImageResizer.Plugins.CropAround,Aligner,0,3,5,0,0,98,9,0,0,-1,2,1,ImageResizer.Util.PolygonMath' ImageResizer.Plugins.CropAround.SalientArea,ImageResizer.Plugins.CropAround.CropAroundPlugin
+ImageResizer.Plugins.CropAround,SalientArea,0,2,2,0,2,52,7,0,0,-1,0,2,,ImageResizer.Plugins.CropAround.CropAroundPlugin' ImageResizer.Plugins.CropAround.Aligner
+ImageResizer.Plugins.CropAround,CropAroundPlugin,0,4,0,0,3,59,6,0,2,-1,2,0,ImageResizer.Plugins.CropAround.SalientArea' ImageResizer.Plugins.CropAround.Aligner,
+ImageResizer.Plugins.CropAround,Aligner,0,3,5,0,0,98,9,0,0,-1,1,1,ImageResizer.Plugins.CropAround.SalientArea,ImageResizer.Plugins.CropAround.CropAroundPlugin

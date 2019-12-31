@@ -1,11 +1,11 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WebAPI,ApiBootstrapper,0,1,0,0,1,14,1,0,0,-1,0,1,,ConsoleHost.ScatterGatherWireUp
-WebAPI,ApiCompositionRoot,1,2,0,0,2,14,3,0,0,0,1,0,WebAPI.Search.SearchController,
-WebAPI.Shared,EventExtensions,0,1,0,0,1,7,1,0,0,-1,2,0,WebAPI.Shared.Json' Messages.Event,
+WebAPI,ApiBootstrapper,0,1,0,0,1,14,1,0,0,-1,1,0,WebAPI.ApiCompositionRoot,
+WebAPI,ApiCompositionRoot,1,2,0,0,2,14,3,0,0,0,1,1,WebAPI.Search.SearchController,WebAPI.ApiBootstrapper
+WebAPI.Shared,EventExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,WebAPI.Shared.Json,
 WebAPI.Shared,Json,2,2,0,2,2,40,3,0,0,0,1,1,WebAPI.Shared.Log,WebAPI.Shared.EventExtensions
 WebAPI.Shared,Log,0,2,0,0,2,12,2,0,0,-1,0,1,,WebAPI.Shared.Json
-WebAPI.Shared,MessageExtensions,0,3,0,0,1,35,5,0,0,-1,6,0,WebAPI.Search.OuroSearchType' Messages.OuroSearchType' WebAPI.Search.OwnLeaseOption' Messages.OwnLeaseOption' WebAPI.Search.OuroSearchRequest' Messages.SearchRequested,
-WebAPI.Search,OuroSearchRequest,0,1,9,0,1,16,1,0,0,-1,0,2,,WebAPI.Shared.MessageExtensions' WebAPI.Search.SearchController
-WebAPI.Search,OuroSearchType,0,0,0,0,0,6,0,0,0,-1,0,1,,WebAPI.Shared.MessageExtensions
-WebAPI.Search,OwnLeaseOption,0,0,0,0,0,5,0,0,0,-1,0,1,,WebAPI.Shared.MessageExtensions
-WebAPI.Search,SearchController,1,3,0,0,2,54,3,0,0,0.67,2,1,Messages.SearchRequested' WebAPI.Search.OuroSearchRequest,WebAPI.ApiCompositionRoot
+WebAPI.Shared,MessageExtensions,0,3,0,0,1,35,8,0,0,-1,3,0,WebAPI.Search.OuroSearchRequest' WebAPI.Search.OuroSearchType' WebAPI.Search.OwnLeaseOption,
+WebAPI.Search,OuroSearchRequest,0,1,9,0,1,16,1,0,0,-1,2,2,WebAPI.Search.OuroSearchType' WebAPI.Search.OwnLeaseOption,WebAPI.Shared.MessageExtensions' WebAPI.Search.SearchController
+WebAPI.Search,OuroSearchType,0,0,0,0,0,6,0,0,0,-1,0,2,,WebAPI.Search.OuroSearchRequest' WebAPI.Shared.MessageExtensions
+WebAPI.Search,OwnLeaseOption,0,0,0,0,0,5,0,0,0,-1,0,2,,WebAPI.Search.OuroSearchRequest' WebAPI.Shared.MessageExtensions
+WebAPI.Search,SearchController,1,3,0,0,2,54,3,0,0,0.67,1,1,WebAPI.Search.OuroSearchRequest,WebAPI.ApiCompositionRoot

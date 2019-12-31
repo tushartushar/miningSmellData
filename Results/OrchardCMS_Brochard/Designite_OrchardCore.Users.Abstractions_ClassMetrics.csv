@@ -1,4 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Users,IUser,0,0,1,0,0,4,0,1,0,-1,0,4,,OrchardCore.Users.Services.IMembershipService' OrchardCore.Users.Services.IUserService' OrchardCore.Users.Services.UserService' OrchardCore.Users.Services.UserStore
-OrchardCore.Users.Services,IMembershipService,0,3,0,0,0,6,3,0,0,-1,1,1,OrchardCore.Users.IUser,OrchardCore.Lists.RemotePublishing.MetaWeblogHandler
-OrchardCore.Users.Services,IUserService,0,3,0,0,0,6,3,1,0,-1,1,0,OrchardCore.Users.IUser,
+OrchardCore.Users,ClaimsPrincipalExtensions,0,1,0,0,1,16,1,0,0,-1,1,0,OrchardCore.Users.SerializableClaim,
+OrchardCore.Users,IUser,0,0,1,0,0,4,0,1,0,-1,0,6,,OrchardCore.Users.Handlers.UpdateRolesContext' OrchardCore.Users.Handlers.CreateUserContext' OrchardCore.Users.Events.IRegistrationFormEvents' OrchardCore.Users.Handlers.UserContextBase' OrchardCore.Users.Services.IMembershipService' OrchardCore.Users.Services.IUserService
+OrchardCore.Users,SerializableClaim,0,0,7,0,0,10,0,0,0,-1,0,3,,OrchardCore.Users.Handlers.IExternalLoginEventHandler' OrchardCore.Users.Handlers.UpdateRolesContext' OrchardCore.Users.ClaimsPrincipalExtensions
+OrchardCore.Users.Events,ILoginFormEvent,0,3,0,0,0,6,3,1,0,-1,0,0,,
+OrchardCore.Users.Events,IPasswordRecoveryFormEvents,0,4,0,0,0,7,4,1,0,-1,0,0,,
+OrchardCore.Users.Events,IRegistrationFormEvents,0,2,0,0,0,5,2,1,0,-1,1,0,OrchardCore.Users.IUser,
+OrchardCore.Users.Handlers,CreateUserContext,0,1,0,0,1,6,1,0,1,-1,2,1,OrchardCore.Users.IUser' OrchardCore.Users.Handlers.UserContextBase,OrchardCore.Users.Handlers.IUserCreatedEventHandler
+OrchardCore.Users.Handlers,IExternalLoginEventHandler,0,2,0,0,0,5,2,0,0,-1,2,0,OrchardCore.Users.SerializableClaim' OrchardCore.Users.Handlers.UpdateRolesContext,
+OrchardCore.Users.Handlers,IUserCreatedEventHandler,0,1,0,0,0,4,1,0,0,-1,1,0,OrchardCore.Users.Handlers.CreateUserContext,
+OrchardCore.Users.Handlers,UpdateRolesContext,0,1,5,0,1,14,1,0,1,-1,3,1,OrchardCore.Users.IUser' OrchardCore.Users.SerializableClaim' OrchardCore.Users.Handlers.UserContextBase,OrchardCore.Users.Handlers.IExternalLoginEventHandler
+OrchardCore.Users.Handlers,UserContextBase,0,1,1,0,0,8,1,2,0,-1,1,2,OrchardCore.Users.IUser,OrchardCore.Users.Handlers.CreateUserContext' OrchardCore.Users.Handlers.UpdateRolesContext
+OrchardCore.Users.Services,IMembershipService,0,3,0,0,0,6,3,0,0,-1,1,0,OrchardCore.Users.IUser,
+OrchardCore.Users.Services,IUserService,0,9,0,0,0,12,9,1,0,-1,1,0,OrchardCore.Users.IUser,

@@ -1,24 +1,24 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Endjin.Retry.Async,SleepService,1,1,0,0,1,8,1,0,1,0,0,0,,
-Endjin.Retry.Contracts,ISleepService,0,1,0,0,0,4,1,1,0,-1,0,2,,Endjin.Core.Retry.Retriable' Endjin.Core.Retry.RetryTaskFactory
-Endjin.Core.Repeat.Strategies,IPeriodicityStrategy,0,3,0,0,0,6,3,2,0,-1,0,1,,Endjin.Core.Repeat.Repeatable
-Endjin.Core.Repeat.Strategies,BackOffPeriodicityStrategy,3,5,5,0,5,50,6,0,1,0.4,0,0,,
-Endjin.Core.Repeat.Strategies,LinearPeriodicityStrategy,2,5,0,0,5,29,6,0,1,0.4,0,0,,
-Endjin.Core.Retry.Policies,IRetryPolicy,0,1,0,0,0,4,1,2,0,-1,0,3,,Endjin.Core.Retry.Retriable' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTaskFactory
-Endjin.Core.Retry.Policies,AggregatePolicy,1,1,1,0,1,12,1,0,1,0,0,0,,
-Endjin.Core.Retry.Policies,AnyException,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Endjin.Core.Retry.Strategies,IRetryStrategy,0,2,2,0,0,14,2,1,0,-1,1,3,Endjin.Core.Retry.RetryEventArgs,Endjin.Core.Retry.Retriable' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTaskFactory
-Endjin.Core.Retry.Strategies,Backoff,3,3,6,0,3,52,4,0,1,0.67,0,0,,
-Endjin.Core.Retry.Strategies,Count,2,3,1,0,3,25,3,0,1,1,0,0,,
-Endjin.Core.Retry.Strategies,DoNotRetry,0,1,1,0,1,11,1,0,1,-1,0,0,,
-Endjin.Core.Retry.Strategies,Incremental,4,3,1,0,3,34,4,0,1,0.67,0,0,,
-Endjin.Core.Retry.Strategies,Linear,3,2,1,0,2,24,2,0,1,0,0,0,,
-Endjin.Core.Retry.Strategies,RetryStrategy,1,3,2,0,2,42,6,5,1,1,1,0,Endjin.Core.Retry.RetryEventArgs,
-Endjin.Core.Repeat,PeriodicTaskFactory,0,3,0,0,1,154,6,0,0,-1,0,0,,
-Endjin.Core.Repeat,Repeatable,0,8,0,0,6,45,10,0,0,-1,1,0,Endjin.Core.Repeat.Strategies.IPeriodicityStrategy,
-Endjin.Core.Retry,Retriable,1,13,1,0,12,161,13,0,0,0.54,3,1,Endjin.Retry.Contracts.ISleepService' Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.Policies.IRetryPolicy,Endjin.Retry.Samples.Program
-Endjin.Core.Retry,RetryEventArgs,0,1,2,0,1,10,1,0,0,-1,0,2,,Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.Strategies.RetryStrategy
-Endjin.Core.Retry,RetryTask,1,0,2,0,0,17,0,0,0,-1,1,1,Endjin.Core.Retry.RetryTaskFactory,Endjin.Retry.Samples.Program
-Endjin.Core.Retry,RetryTask<T>,1,0,2,0,0,18,0,0,0,-1,1,0,Endjin.Core.Retry.RetryTaskFactory,
-Endjin.Core.Retry,RetryTaskFactory<T>,0,30,0,0,29,126,30,0,0,-1,3,0,Endjin.Core.Retry.RetryTaskFactory' Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.Policies.IRetryPolicy,
-Endjin.Core.Retry,RetryTaskFactory,0,33,1,0,29,160,38,0,0,-1,3,4,Endjin.Core.Retry.Policies.IRetryPolicy' Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Retry.Contracts.ISleepService,Endjin.Core.Retry.RetryTask' Endjin.Core.Retry.RetryTask<T>' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Retry.Samples.Program
+Endjin.Retry.Async,SleepService,1,1,0,0,1,8,1,0,1,0,1,3,Endjin.Retry.Contracts.ISleepService,Endjin.Core.Retry.RetryTask' Endjin.Core.Retry.Retriable' Endjin.Core.Retry.RetryTask<T>
+Endjin.Retry.Contracts,ISleepService,0,1,0,0,0,4,1,1,0,-1,0,5,,Endjin.Core.Retry.RetryTask' Endjin.Core.Retry.RetryTask<T>' Endjin.Core.Retry.RetryTaskFactory' Endjin.Retry.Async.SleepService' Endjin.Core.Retry.Retriable
+Endjin.Core.Repeat.Strategies,IPeriodicityStrategy,0,3,0,0,0,6,3,2,0,-1,0,3,,Endjin.Core.Repeat.Strategies.LinearPeriodicityStrategy' Endjin.Core.Repeat.Strategies.BackOffPeriodicityStrategy' Endjin.Core.Repeat.Repeatable
+Endjin.Core.Repeat.Strategies,BackOffPeriodicityStrategy,3,5,5,0,5,50,6,0,1,0.6,1,0,Endjin.Core.Repeat.Strategies.IPeriodicityStrategy,
+Endjin.Core.Repeat.Strategies,LinearPeriodicityStrategy,2,5,0,0,5,29,6,0,1,0.6,1,1,Endjin.Core.Repeat.Strategies.IPeriodicityStrategy,Endjin.Core.Repeat.Repeatable
+Endjin.Core.Retry.Policies,IRetryPolicy,0,1,0,0,0,4,1,2,0,-1,0,5,,Endjin.Core.Retry.Policies.AnyException' Endjin.Core.Retry.Retriable' Endjin.Core.Retry.Policies.AggregatePolicy' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTaskFactory
+Endjin.Core.Retry.Policies,AggregatePolicy,1,1,1,0,1,12,1,0,1,0,1,0,Endjin.Core.Retry.Policies.IRetryPolicy,
+Endjin.Core.Retry.Policies,AnyException,0,1,0,0,1,7,1,0,1,-1,1,3,Endjin.Core.Retry.Policies.IRetryPolicy,Endjin.Core.Retry.Retriable' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTaskFactory
+Endjin.Core.Retry.Strategies,IRetryStrategy,0,2,2,0,0,14,2,1,0,-1,1,4,Endjin.Core.Retry.RetryEventArgs,Endjin.Core.Retry.Strategies.RetryStrategy' Endjin.Core.Retry.Retriable' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTaskFactory
+Endjin.Core.Retry.Strategies,Backoff,3,3,6,0,3,52,4,0,1,1,1,0,Endjin.Core.Retry.Strategies.RetryStrategy,
+Endjin.Core.Retry.Strategies,Count,2,3,1,0,3,25,3,0,1,1,1,3,Endjin.Core.Retry.Strategies.RetryStrategy,Endjin.Core.Retry.Retriable' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTaskFactory
+Endjin.Core.Retry.Strategies,DoNotRetry,0,1,1,0,1,11,1,0,1,-1,1,0,Endjin.Core.Retry.Strategies.RetryStrategy,
+Endjin.Core.Retry.Strategies,Incremental,4,3,1,0,3,34,4,0,1,0.67,1,0,Endjin.Core.Retry.Strategies.RetryStrategy,
+Endjin.Core.Retry.Strategies,Linear,3,2,1,0,2,24,2,0,1,1,1,0,Endjin.Core.Retry.Strategies.RetryStrategy,
+Endjin.Core.Retry.Strategies,RetryStrategy,1,3,2,0,2,42,6,5,1,1,2,5,Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.RetryEventArgs,Endjin.Core.Retry.Strategies.DoNotRetry' Endjin.Core.Retry.Strategies.Incremental' Endjin.Core.Retry.Strategies.Linear' Endjin.Core.Retry.Strategies.Backoff' Endjin.Core.Retry.Strategies.Count
+Endjin.Core.Repeat,PeriodicTaskFactory,0,3,0,0,1,154,11,0,0,-1,0,0,,
+Endjin.Core.Repeat,Repeatable,0,8,0,0,6,45,10,0,0,-1,2,0,Endjin.Core.Repeat.Strategies.IPeriodicityStrategy' Endjin.Core.Repeat.Strategies.LinearPeriodicityStrategy,
+Endjin.Core.Retry,Retriable,1,13,1,0,12,161,13,0,0,0.54,7,0,Endjin.Retry.Async.SleepService' Endjin.Retry.Contracts.ISleepService' Endjin.Core.Retry.Policies.IRetryPolicy' Endjin.Core.Retry.Policies.AnyException' Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.Strategies.Count' Endjin.Core.Retry.RetryEventArgs,
+Endjin.Core.Retry,RetryEventArgs,0,1,2,0,1,10,1,0,0,-1,0,4,,Endjin.Core.Retry.RetryTaskFactory' Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.Strategies.RetryStrategy' Endjin.Core.Retry.Retriable
+Endjin.Core.Retry,RetryTask,1,0,2,0,0,17,0,0,0,-1,3,0,Endjin.Retry.Async.SleepService' Endjin.Retry.Contracts.ISleepService' Endjin.Core.Retry.RetryTaskFactory,
+Endjin.Core.Retry,RetryTask<T>,1,0,2,0,0,18,0,0,0,-1,4,0,Endjin.Retry.Async.SleepService' Endjin.Retry.Contracts.ISleepService' Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTaskFactory,
+Endjin.Core.Retry,RetryTaskFactory<T>,0,30,0,0,29,126,30,0,0,-1,5,1,Endjin.Core.Retry.Policies.IRetryPolicy' Endjin.Core.Retry.Policies.AnyException' Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.Strategies.Count' Endjin.Core.Retry.RetryTaskFactory,Endjin.Core.Retry.RetryTask<T>
+Endjin.Core.Retry,RetryTaskFactory,0,33,1,0,29,160,38,0,0,-1,6,3,Endjin.Retry.Contracts.ISleepService' Endjin.Core.Retry.Policies.IRetryPolicy' Endjin.Core.Retry.Policies.AnyException' Endjin.Core.Retry.Strategies.IRetryStrategy' Endjin.Core.Retry.Strategies.Count' Endjin.Core.Retry.RetryEventArgs,Endjin.Core.Retry.RetryTaskFactory<T>' Endjin.Core.Retry.RetryTask' Endjin.Core.Retry.RetryTask<T>

@@ -1,51 +1,51 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-HttpGhost.Authentication,AnonymousAuthentication,0,1,0,0,1,7,1,0,1,-1,1,0,HttpGhost.Transport.Request,
-HttpGhost.Authentication,BasicAuthentication,1,3,0,0,2,21,5,0,1,0,1,1,HttpGhost.Transport.Request,UnitTests.Authentication.BasicAuthenticationTests
-HttpGhost.Authentication,Credentials,2,1,3,0,1,26,3,0,0,0,0,1,,UnitTests.Authentication.CredentialsTests
-HttpGhost.Authentication,IAuthenticate,0,1,0,0,0,4,1,3,0,-1,1,4,HttpGhost.Transport.Request,HttpGhost.HtmlSession' HttpGhost.JsonSession' HttpGhost.Session<T>' HttpGhost.HttpSession
-HttpGhost.Authentication,InvalidUserCredentialsException,0,1,0,0,1,5,1,0,0,-1,0,0,,
-HttpGhost,ContentType,3,0,0,3,0,6,0,0,0,-1,0,3,,HttpGhost.HtmlSession' HttpGhost.JsonSession' IntegrationTests.BasicAuthenticationTests
-HttpGhost,HtmlResult,1,5,2,0,4,37,7,0,1,0,7,2,HttpGhost.Transport.IResponse' HttpGhost.Navigation.INavigationResult' HttpGhost.Html.Elements' HttpGhost.Html.Form' HttpGhost.Navigation.UrlByLink' HttpGhost.Transport.IRequest' HttpGhost.IHtmlResult,HttpGhost.HtmlSession' UnitTests.HtmlResultTests
-HttpGhost,HtmlSession,0,5,0,0,4,30,5,0,0,-1,8,1,HttpGhost.Authentication.IAuthenticate' HttpGhost.Navigation.INavigate' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Navigation.UrlByLink' HttpGhost.Transport.IRequest' HttpGhost.ContentType' HttpGhost.HtmlResult' HttpGhost.IHtmlResult,IntegrationTests.HtmlSessionTests
-HttpGhost,HttpMethods,4,0,0,4,0,7,0,0,0,-1,0,2,,HttpGhost.Session<T>' HttpGhost.Navigation.WebRequestNavigator
-HttpGhost,HttpResult,0,1,3,0,1,12,1,2,1,-1,1,1,HttpGhost.Navigation.INavigationResult,HttpGhost.HttpSession
-HttpGhost,IHtmlResult,0,3,0,0,0,21,3,1,1,-1,0,4,,HttpGhost.HtmlResult' HttpGhost.HtmlSession' HttpGhost.Html.Form' IntegrationTests.HtmlSessionTests
-HttpGhost,IHttpResult,0,0,3,0,0,9,0,3,0,-1,0,2,,IntegrationTests.BasicAuthenticationTests' IntegrationTests.NoAuthenticationTests
-HttpGhost,IJsonResult,0,1,0,0,0,9,1,1,1,-1,0,2,,HttpGhost.JsonSession' IntegrationTests.JsonSessionTests
-HttpGhost,JsonResult,1,2,0,0,2,12,2,0,2,0,3,1,HttpGhost.Serialization.JsonSerializer' HttpGhost.Navigation.INavigationResult' HttpGhost.Transport.IResponse,HttpGhost.JsonSession
-HttpGhost,JsonSession,0,9,0,0,8,62,9,0,0,-1,7,1,HttpGhost.Authentication.IAuthenticate' HttpGhost.Navigation.INavigate' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.ContentType' HttpGhost.IJsonResult' HttpGhost.JsonResult' HttpGhost.Transport.IRequest,IntegrationTests.JsonSessionTests
-HttpGhost,Session<T>,3,10,0,0,4,94,11,0,0,0.8,8,0,HttpGhost.Navigation.INavigate' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Authentication.IAuthenticate' HttpGhost.Transport.IRequest' HttpGhost.UrlBuilder' HttpGhost.HttpMethods' HttpGhost.Transport.Request' HttpGhost.Serialization.ISerializer,
-HttpGhost,HttpSession,0,5,0,0,4,22,5,0,0,-1,5,3,HttpGhost.Authentication.IAuthenticate' HttpGhost.Navigation.INavigate' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.HttpResult' HttpGhost.Transport.IRequest,UnitTests.HttpSessionTests' IntegrationTests.BasicAuthenticationTests' IntegrationTests.NoAuthenticationTests
-HttpGhost,UrlBuilder,3,2,0,0,2,20,4,0,0,0,1,2,HttpGhost.Serialization.ISerializer,HttpGhost.Session<T>' UnitTests.UrlBuilderTests
-HttpGhost.Html,Element,1,3,2,0,3,25,3,1,0,0,0,1,,HttpGhost.Html.Elements
-HttpGhost.Html,Elements,1,4,2,0,3,23,4,0,0,0,1,3,HttpGhost.Html.Element,HttpGhost.HtmlResult' UnitTests.HtmlResultTests' UnitTests.Html.ElementsTests
-HttpGhost.Html,Form,1,7,1,0,5,82,13,0,1,0.43,1,3,HttpGhost.IHtmlResult,HttpGhost.HtmlResult' UnitTests.Html.FormTests' IntegrationTests.HtmlSessionTests
+HttpGhost.Authentication,AnonymousAuthentication,0,1,0,0,1,7,1,0,1,-1,2,1,HttpGhost.Authentication.IAuthenticate' HttpGhost.Transport.Request,HttpGhost.Session<T>
+HttpGhost.Authentication,BasicAuthentication,1,3,0,0,2,21,5,0,1,0,3,1,HttpGhost.Authentication.IAuthenticate' HttpGhost.Authentication.InvalidUserCredentialsException' HttpGhost.Transport.Request,HttpGhost.Session<T>
+HttpGhost.Authentication,Credentials,2,1,3,0,1,26,3,0,0,0,1,0,HttpGhost.Authentication.InvalidUserCredentialsException,
+HttpGhost.Authentication,IAuthenticate,0,1,0,0,0,4,1,3,0,-1,1,6,HttpGhost.Transport.Request,HttpGhost.Authentication.BasicAuthentication' HttpGhost.Authentication.AnonymousAuthentication' HttpGhost.JsonSession' HttpGhost.HtmlSession' HttpGhost.HttpSession' HttpGhost.Session<T>
+HttpGhost.Authentication,InvalidUserCredentialsException,0,1,0,0,1,5,1,0,0,-1,0,2,,HttpGhost.Authentication.Credentials' HttpGhost.Authentication.BasicAuthentication
+HttpGhost,ContentType,3,0,0,3,0,6,0,0,0,-1,0,2,,HttpGhost.HtmlSession' HttpGhost.JsonSession
+HttpGhost,HtmlResult,1,5,2,0,4,37,7,0,1,0,7,1,HttpGhost.HttpResult' HttpGhost.IHtmlResult' HttpGhost.Html.Elements' HttpGhost.Html.Form' HttpGhost.Navigation.INavigationResult' HttpGhost.Navigation.NavigationResultException' HttpGhost.Navigation.UrlByLink,HttpGhost.HtmlSession
+HttpGhost,HtmlSession,0,5,0,0,4,30,5,0,0,-1,9,0,HttpGhost.Authentication.IAuthenticate' HttpGhost.ContentType' HttpGhost.HtmlResult' HttpGhost.IHtmlResult' HttpGhost.Session<T>' HttpGhost.Navigation.INavigate' HttpGhost.Navigation.UrlByLink' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Transport.IRequest,
+HttpGhost,HttpMethods,4,0,0,4,0,7,0,0,0,-1,0,2,,HttpGhost.Navigation.WebRequestNavigator' HttpGhost.Session<T>
+HttpGhost,HttpResult,0,1,3,0,1,12,1,2,1,-1,4,3,HttpGhost.IHttpResult' HttpGhost.Navigation.INavigationResult' HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse,HttpGhost.JsonResult' HttpGhost.HtmlResult' HttpGhost.HttpSession
+HttpGhost,IHtmlResult,0,3,0,0,0,21,3,1,1,-1,3,3,HttpGhost.IHttpResult' HttpGhost.Html.Elements' HttpGhost.Html.Form,HttpGhost.Html.Form' HttpGhost.HtmlResult' HttpGhost.HtmlSession
+HttpGhost,IHttpResult,0,0,3,0,0,9,0,3,0,-1,2,4,HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse,HttpGhost.IJsonResult' HttpGhost.HttpResult' HttpGhost.IHtmlResult' HttpGhost.HttpSession
+HttpGhost,IJsonResult,0,1,0,0,0,9,1,1,1,-1,1,2,HttpGhost.IHttpResult,HttpGhost.JsonResult' HttpGhost.JsonSession
+HttpGhost,JsonResult,1,2,0,0,2,12,2,0,2,0,4,1,HttpGhost.HttpResult' HttpGhost.IJsonResult' HttpGhost.Navigation.INavigationResult' HttpGhost.Serialization.JsonSerializer,HttpGhost.JsonSession
+HttpGhost,JsonSession,0,9,0,0,8,62,9,0,0,-1,8,0,HttpGhost.Authentication.IAuthenticate' HttpGhost.ContentType' HttpGhost.IJsonResult' HttpGhost.JsonResult' HttpGhost.Session<T>' HttpGhost.Navigation.INavigate' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Transport.IRequest,
+HttpGhost,Session<T>,3,10,0,0,4,94,11,0,0,1,11,3,HttpGhost.Authentication.AnonymousAuthentication' HttpGhost.Authentication.BasicAuthentication' HttpGhost.Authentication.IAuthenticate' HttpGhost.HttpMethods' HttpGhost.UrlBuilder' HttpGhost.Navigation.INavigate' HttpGhost.Navigation.WebRequestNavigator' HttpGhost.Serialization.DefaultSerializeBuilder' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Transport.IRequest' HttpGhost.Transport.Request,HttpGhost.JsonSession' HttpGhost.HttpSession' HttpGhost.HtmlSession
+HttpGhost,HttpSession,0,5,0,0,4,22,5,0,0,-1,7,0,HttpGhost.Authentication.IAuthenticate' HttpGhost.HttpResult' HttpGhost.IHttpResult' HttpGhost.Session<T>' HttpGhost.Navigation.INavigate' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Transport.IRequest,
+HttpGhost,UrlBuilder,3,2,0,0,2,20,4,0,0,0,2,1,HttpGhost.Serialization.FormSerializer' HttpGhost.Serialization.ISerializer,HttpGhost.Session<T>
+HttpGhost.Html,Element,1,3,2,0,3,25,3,1,0,0,0,2,,HttpGhost.Html.Form' HttpGhost.Html.Elements
+HttpGhost.Html,Elements,1,4,2,0,3,23,4,0,0,0,1,2,HttpGhost.Html.Element,HttpGhost.IHtmlResult' HttpGhost.HtmlResult
+HttpGhost.Html,Form,1,7,1,0,5,82,13,0,1,0.43,2,2,HttpGhost.IHtmlResult' HttpGhost.Html.Element,HttpGhost.HtmlResult' HttpGhost.IHtmlResult
 HttpGhost.Navigation,Client,0,5,0,0,2,44,5,0,0,-1,3,1,HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse' HttpGhost.Transport.Response,HttpGhost.Navigation.WebClientNavigator
-HttpGhost.Navigation,INavigate,0,1,0,0,0,4,1,3,0,-1,1,4,HttpGhost.Transport.IRequest,HttpGhost.HtmlSession' HttpGhost.JsonSession' HttpGhost.Session<T>' HttpGhost.HttpSession
-HttpGhost.Navigation,INavigationResult,0,0,3,0,0,9,0,1,0,-1,0,5,,HttpGhost.HtmlResult' HttpGhost.HttpResult' HttpGhost.JsonResult' HttpGhost.Navigation.WebClientNavigator' HttpGhost.Navigation.WebRequestNavigator
-HttpGhost.Navigation,NavigationResultException,0,1,0,0,1,5,1,0,0,-1,0,0,,
-HttpGhost.Navigation,WebClientNavigator,1,6,0,0,2,44,8,0,1,0,5,0,HttpGhost.Transport.IRequest' HttpGhost.Navigation.INavigationResult' HttpGhost.Transport.IResponse' HttpGhost.Navigation.Client' HttpGhost.Navigation.NavigationResult,
-HttpGhost.Navigation,NavigationResult,0,1,3,0,1,11,1,0,1,-1,2,3,HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse,HttpGhost.Navigation.WebClientNavigator' HttpGhost.Navigation.WebRequestNavigator' UnitTests.NavigatorFake
-HttpGhost.Navigation,UrlByLink,0,1,0,0,1,9,2,0,0,-1,0,3,,HttpGhost.HtmlResult' HttpGhost.HtmlSession' UnitTests.Navigation.UrlByLinkTests
-HttpGhost.Navigation,WebRequestNavigator,1,5,0,0,2,57,9,0,1,0,7,0,HttpGhost.Transport.IResponse' HttpGhost.Transport.IRequest' HttpGhost.Navigation.HttpWebRequestBuilder' HttpGhost.HttpMethods' HttpGhost.Navigation.INavigationResult' HttpGhost.Navigation.NavigationResult' HttpGhost.Transport.Response,
+HttpGhost.Navigation,INavigate,0,1,0,0,0,4,1,3,0,-1,2,6,HttpGhost.Navigation.INavigationResult' HttpGhost.Transport.IRequest,HttpGhost.HtmlSession' HttpGhost.JsonSession' HttpGhost.HttpSession' HttpGhost.Navigation.WebRequestNavigator' HttpGhost.Navigation.WebClientNavigator' HttpGhost.Session<T>
+HttpGhost.Navigation,INavigationResult,0,0,3,0,0,9,0,1,0,-1,2,7,HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse,HttpGhost.Navigation.NavigationResult' HttpGhost.HtmlResult' HttpGhost.JsonResult' HttpGhost.HttpResult' HttpGhost.Navigation.INavigate' HttpGhost.Navigation.WebRequestNavigator' HttpGhost.Navigation.WebClientNavigator
+HttpGhost.Navigation,NavigationResultException,0,1,0,0,1,5,1,0,0,-1,0,3,,HttpGhost.Navigation.WebClientNavigator' HttpGhost.Navigation.WebRequestNavigator' HttpGhost.HtmlResult
+HttpGhost.Navigation,WebClientNavigator,1,6,0,0,2,44,8,0,1,0,7,0,HttpGhost.Navigation.Client' HttpGhost.Navigation.INavigate' HttpGhost.Navigation.INavigationResult' HttpGhost.Navigation.NavigationResultException' HttpGhost.Navigation.NavigationResult' HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse,
+HttpGhost.Navigation,NavigationResult,0,1,3,0,1,11,1,0,1,-1,3,2,HttpGhost.Navigation.INavigationResult' HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse,HttpGhost.Navigation.WebClientNavigator' HttpGhost.Navigation.WebRequestNavigator
+HttpGhost.Navigation,UrlByLink,0,1,0,0,1,9,2,0,0,-1,0,2,,HttpGhost.HtmlResult' HttpGhost.HtmlSession
+HttpGhost.Navigation,WebRequestNavigator,1,5,0,0,2,57,9,0,1,0,10,1,HttpGhost.HttpMethods' HttpGhost.Navigation.INavigate' HttpGhost.Navigation.INavigationResult' HttpGhost.Navigation.NavigationResultException' HttpGhost.Navigation.NavigationResult' HttpGhost.Navigation.HttpWebRequestBuilder' HttpGhost.Transport.IRequest' HttpGhost.Transport.IResponse' HttpGhost.Transport.Response' HttpGhost.Transport.Request,HttpGhost.Session<T>
 HttpGhost.Navigation,IntegerExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-HttpGhost.Navigation,HttpWebRequestBuilder,0,1,0,0,1,22,1,0,0,-1,1,2,HttpGhost.Transport.IRequest,HttpGhost.Navigation.WebRequestNavigator' UnitTests.Navigation.HttpWebRequestBuilderTests
+HttpGhost.Navigation,HttpWebRequestBuilder,0,1,0,0,1,22,1,0,0,-1,1,1,HttpGhost.Transport.IRequest,HttpGhost.Navigation.WebRequestNavigator
 HttpGhost.Navigation,HttpWebRequestExtensions,1,4,0,0,4,54,8,0,0,1,1,0,HttpGhost.Transport.IRequest,
-HttpGhost.CssSelector,BracketToken,1,2,0,0,2,16,3,0,1,0,1,0,HttpGhost.CssSelector.CssSelectorParser,
-HttpGhost.CssSelector,ClassToken,2,2,0,0,2,24,4,0,1,0,1,0,HttpGhost.CssSelector.CssSelectorParser,
-HttpGhost.CssSelector,CssSelectorParser,2,4,4,0,2,51,7,0,0,0,1,6,HttpGhost.CssSelector.ElementToken,HttpGhost.CssSelector.BracketToken' HttpGhost.CssSelector.ClassToken' HttpGhost.CssSelector.HtmlNodeExtension' HttpGhost.CssSelector.IdToken' HttpGhost.CssSelector.SpaceToken' UnitTests.CssSelector.SelectorParserTests
-HttpGhost.CssSelector,DescendentToken,1,2,0,0,2,12,2,0,0,0,0,0,,
-HttpGhost.CssSelector,ElementToken,3,2,0,0,2,18,3,0,0,0,0,1,,HttpGhost.CssSelector.CssSelectorParser
+HttpGhost.CssSelector,BracketToken,1,2,0,0,2,16,3,0,1,1,2,1,HttpGhost.CssSelector.CssSelectorParser' HttpGhost.CssSelector.Token,HttpGhost.CssSelector.CssSelectorParser
+HttpGhost.CssSelector,ClassToken,2,2,0,0,2,24,4,0,1,1,2,1,HttpGhost.CssSelector.CssSelectorParser' HttpGhost.CssSelector.Token,HttpGhost.CssSelector.CssSelectorParser
+HttpGhost.CssSelector,CssSelectorParser,2,4,4,0,2,51,7,0,0,0.5,6,5,HttpGhost.CssSelector.BracketToken' HttpGhost.CssSelector.ClassToken' HttpGhost.CssSelector.DescendentToken' HttpGhost.CssSelector.ElementToken' HttpGhost.CssSelector.IdToken' HttpGhost.CssSelector.SpaceToken,HttpGhost.CssSelector.BracketToken' HttpGhost.CssSelector.ClassToken' HttpGhost.CssSelector.IdToken' HttpGhost.CssSelector.HtmlNodeExtension' HttpGhost.CssSelector.SpaceToken
+HttpGhost.CssSelector,DescendentToken,1,2,0,0,2,12,2,0,0,1,0,1,,HttpGhost.CssSelector.CssSelectorParser
+HttpGhost.CssSelector,ElementToken,3,2,0,0,2,18,3,0,0,1,0,1,,HttpGhost.CssSelector.CssSelectorParser
 HttpGhost.CssSelector,HtmlNodeExtension,0,5,0,0,4,27,5,0,0,-1,1,0,HttpGhost.CssSelector.CssSelectorParser,
-HttpGhost.CssSelector,IdToken,2,2,0,0,2,20,3,0,1,0,1,0,HttpGhost.CssSelector.CssSelectorParser,
-HttpGhost.CssSelector,SpaceToken,2,2,0,0,2,18,3,0,0,0,1,0,HttpGhost.CssSelector.CssSelectorParser,
-HttpGhost.CssSelector,Token,1,3,0,0,1,16,3,3,0,0,0,0,,
-HttpGhost.Serialization,DefaultSerializeBuilder,0,1,0,0,1,11,2,0,1,-1,2,0,HttpGhost.Serialization.JsonSerializer' HttpGhost.Serialization.FormSerializer,
-HttpGhost.Serialization,FormSerializer,1,6,0,0,2,47,10,0,1,0,0,2,,HttpGhost.Serialization.DefaultSerializeBuilder' UnitTests.Serialization.FormSerializerTests
-HttpGhost.Serialization,ISerializeBuilder,0,1,0,0,0,4,1,1,0,-1,0,4,,HttpGhost.HtmlSession' HttpGhost.JsonSession' HttpGhost.Session<T>' HttpGhost.HttpSession
-HttpGhost.Serialization,ISerializer,0,1,0,0,0,9,1,2,0,-1,0,2,,HttpGhost.Session<T>' HttpGhost.UrlBuilder
-HttpGhost.Serialization,JsonSerializer,0,2,0,0,2,13,3,0,1,-1,0,2,,HttpGhost.JsonResult' HttpGhost.Serialization.DefaultSerializeBuilder
-HttpGhost.Transport,IRequest,0,1,4,0,0,18,1,2,0,-1,0,15,,HttpGhost.HtmlResult' HttpGhost.HtmlSession' HttpGhost.JsonSession' HttpGhost.Session<T>' HttpGhost.HttpSession' HttpGhost.Navigation.Client' HttpGhost.Navigation.INavigate' HttpGhost.Navigation.WebClientNavigator' HttpGhost.Navigation.NavigationResult' HttpGhost.Navigation.WebRequestNavigator' HttpGhost.Navigation.HttpWebRequestBuilder' HttpGhost.Navigation.HttpWebRequestExtensions' UnitTests.NavigatorFake' UnitTests.HttpSessionTests' IntegrationTests.HtmlSessionTests
-HttpGhost.Transport,IResponse,0,0,3,0,0,6,0,2,0,-1,0,10,,HttpGhost.HtmlResult' HttpGhost.JsonResult' HttpGhost.Navigation.Client' HttpGhost.Navigation.WebClientNavigator' HttpGhost.Navigation.NavigationResult' HttpGhost.Navigation.WebRequestNavigator' UnitTests.RequestFake' IntegrationTests.BasicAuthenticationTests' IntegrationTests.HtmlSessionTests' IntegrationTests.NoAuthenticationTests
-HttpGhost.Transport,Response,0,1,3,0,1,10,1,0,1,-1,0,2,,HttpGhost.Navigation.Client' HttpGhost.Navigation.WebRequestNavigator
-HttpGhost.Transport,Request,0,5,4,0,5,24,5,0,1,-1,0,8,,HttpGhost.Authentication.AnonymousAuthentication' HttpGhost.Authentication.BasicAuthentication' HttpGhost.Authentication.IAuthenticate' HttpGhost.Session<T>' UnitTests.Authentication.BasicAuthenticationTests' UnitTests.AuthenticatorFake' UnitTests.Navigation.HttpWebRequestBuilderTests' UnitTests.Transport.RequestTests
+HttpGhost.CssSelector,IdToken,2,2,0,0,2,20,3,0,1,1,2,1,HttpGhost.CssSelector.CssSelectorParser' HttpGhost.CssSelector.Token,HttpGhost.CssSelector.CssSelectorParser
+HttpGhost.CssSelector,SpaceToken,2,2,0,0,2,18,3,0,0,1,1,1,HttpGhost.CssSelector.CssSelectorParser,HttpGhost.CssSelector.CssSelectorParser
+HttpGhost.CssSelector,Token,1,3,0,0,1,16,3,3,0,0.67,0,3,,HttpGhost.CssSelector.BracketToken' HttpGhost.CssSelector.ClassToken' HttpGhost.CssSelector.IdToken
+HttpGhost.Serialization,DefaultSerializeBuilder,0,1,0,0,1,11,2,0,1,-1,4,1,HttpGhost.Serialization.FormSerializer' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Serialization.ISerializer' HttpGhost.Serialization.JsonSerializer,HttpGhost.Session<T>
+HttpGhost.Serialization,FormSerializer,1,6,0,0,2,47,10,0,1,0,1,2,HttpGhost.Serialization.ISerializer,HttpGhost.Serialization.DefaultSerializeBuilder' HttpGhost.UrlBuilder
+HttpGhost.Serialization,ISerializeBuilder,0,1,0,0,0,4,1,1,0,-1,1,5,HttpGhost.Serialization.ISerializer,HttpGhost.Serialization.DefaultSerializeBuilder' HttpGhost.HtmlSession' HttpGhost.HttpSession' HttpGhost.JsonSession' HttpGhost.Session<T>
+HttpGhost.Serialization,ISerializer,0,1,0,0,0,9,1,2,0,-1,0,5,,HttpGhost.Serialization.DefaultSerializeBuilder' HttpGhost.Serialization.FormSerializer' HttpGhost.Serialization.ISerializeBuilder' HttpGhost.Serialization.JsonSerializer' HttpGhost.UrlBuilder
+HttpGhost.Serialization,JsonSerializer,0,2,0,0,2,13,3,0,1,-1,1,2,HttpGhost.Serialization.ISerializer,HttpGhost.Serialization.DefaultSerializeBuilder' HttpGhost.JsonResult
+HttpGhost.Transport,IRequest,0,1,4,0,0,18,1,2,0,-1,0,15,,HttpGhost.IHttpResult' HttpGhost.Navigation.INavigate' HttpGhost.HttpResult' HttpGhost.HtmlSession' HttpGhost.Navigation.INavigationResult' HttpGhost.JsonSession' HttpGhost.Transport.Request' HttpGhost.Navigation.NavigationResult' HttpGhost.HttpSession' HttpGhost.Session<T>' HttpGhost.Navigation.WebClientNavigator' HttpGhost.Navigation.Client' HttpGhost.Navigation.WebRequestNavigator' HttpGhost.Navigation.HttpWebRequestBuilder' HttpGhost.Navigation.HttpWebRequestExtensions
+HttpGhost.Transport,IResponse,0,0,3,0,0,6,0,2,0,-1,0,8,,HttpGhost.HttpResult' HttpGhost.Navigation.INavigationResult' HttpGhost.IHttpResult' HttpGhost.Transport.Response' HttpGhost.Navigation.NavigationResult' HttpGhost.Navigation.WebRequestNavigator' HttpGhost.Navigation.Client' HttpGhost.Navigation.WebClientNavigator
+HttpGhost.Transport,Response,0,1,3,0,1,10,1,0,1,-1,1,2,HttpGhost.Transport.IResponse,HttpGhost.Navigation.Client' HttpGhost.Navigation.WebRequestNavigator
+HttpGhost.Transport,Request,0,5,4,0,5,24,5,0,1,-1,1,5,HttpGhost.Transport.IRequest,HttpGhost.Authentication.AnonymousAuthentication' HttpGhost.Authentication.BasicAuthentication' HttpGhost.Authentication.IAuthenticate' HttpGhost.Session<T>' HttpGhost.Navigation.WebRequestNavigator

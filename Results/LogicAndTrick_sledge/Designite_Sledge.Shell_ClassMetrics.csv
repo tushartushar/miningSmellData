@@ -1,73 +1,93 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Sledge.Shell.Commands,CloseFile,0,2,2,0,2,19,3,0,2,-1,3,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Documents.IDocument' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,Exit,1,2,2,0,2,19,2,0,2,1,3,0,Sledge.Common.Shell.Context.IContext' Sledge.Shell.Forms.Shell' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,Export,1,2,2,0,2,36,3,0,2,1,5,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Documents.IDocument' Sledge.Common.Shell.Documents.IDocumentLoader' Sledge.Common.Shell.Documents.FileExtensionInfo' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,NewFile,0,2,2,0,2,36,6,0,2,-1,3,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Logging.Log' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,OpenSettingsForm,0,2,2,0,2,18,2,0,2,-1,2,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,OpenFile,1,2,2,0,2,36,2,0,2,1,5,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Documents.IDocumentLoader' Sledge.Common.Shell.Documents.IDocument' Sledge.Common.Shell.Documents.FileExtensionInfo' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,SaveDocument,1,2,2,0,2,30,6,0,2,1,4,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Documents.IDocument' Sledge.Common.Shell.Documents.IDocumentLoader' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,SaveFile,1,2,2,0,2,30,4,0,2,1,4,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Documents.IDocument' Sledge.Common.Shell.Documents.IDocumentLoader' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,SaveFileAs,1,2,2,0,2,38,3,0,2,1,5,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Documents.IDocument' Sledge.Common.Shell.Documents.IDocumentLoader' Sledge.Common.Shell.Documents.FileExtensionInfo' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,OpenCommandBox,0,2,2,0,2,16,2,0,2,-1,2,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Commands.CommandParameters,
-Sledge.Shell.Commands,CommandActivator,1,2,3,0,2,15,2,0,1,0,1,0,Sledge.Common.Shell.Commands.ICommand,
-Sledge.Shell.Commands,IActivator,0,1,3,0,0,20,1,1,0,-1,0,2,,Sledge.Shell.Forms.CommandBox' Sledge.Shell.Forms.CommandItem
-Sledge.Shell.Components,CommandMenuItemProvider,2,1,0,0,1,23,3,0,1,0,6,0,Sledge.Common.Shell.Menu.MenuItemAttribute' Sledge.Common.Shell.Menu.MenuImageAttribute' Sledge.Common.Shell.Hotkeys.IHotkey' Sledge.Common.Shell.Menu.AllowToolbarAttribute' Sledge.Common.Shell.Commands.ICommand' Sledge.Shell.Registers.HotkeyRegister,
-Sledge.Shell.Components,ContextExplorerComponent,1,4,2,0,2,58,9,0,2,0.5,1,0,Sledge.Common.Shell.Context.IContext,
+Sledge.Shell.Commands,CloseFile,1,3,2,0,3,30,4,0,2,0.67,2,0,Sledge.Shell.Registers.DocumentRegister' Sledge.Shell.Properties.Resources,
+Sledge.Shell.Commands,Exit,1,3,2,0,2,25,3,0,2,0.67,1,0,Sledge.Shell.Forms.Shell,
+Sledge.Shell.Commands,Export,1,3,2,0,3,41,6,0,2,0.67,1,0,Sledge.Shell.Properties.Resources,
+Sledge.Shell.Commands,IActivatorProvider,0,1,0,0,0,9,1,1,0,-1,1,2,Sledge.Shell.Commands.IActivator,Sledge.Shell.Registers.CommandRegister' Sledge.Shell.Forms.CommandBox
+Sledge.Shell.Commands,OpenTranslator,1,3,2,0,3,28,3,0,2,0.67,1,0,Sledge.Shell.Forms.TranslationForm,
+Sledge.Shell.Commands,OpenDocument,1,3,2,0,3,26,3,0,2,0.67,1,0,Sledge.Shell.Registers.DocumentRegister,
+Sledge.Shell.Commands,NewFile,2,3,2,0,3,43,6,0,2,0.67,2,0,Sledge.Shell.Registers.DocumentRegister' Sledge.Shell.Properties.Resources,
+Sledge.Shell.Commands,OpenSettingsForm,0,2,2,0,2,18,2,0,2,-1,1,0,Sledge.Shell.Properties.Resources,
+Sledge.Shell.Commands,OpenFile,1,3,2,0,3,34,4,0,2,0.67,1,0,Sledge.Shell.Properties.Resources,
+Sledge.Shell.Commands,ExportDocument,1,3,2,0,3,27,3,0,2,0.67,1,0,Sledge.Shell.Registers.DocumentRegister,
+Sledge.Shell.Commands,SaveFile,1,3,2,0,3,43,6,0,2,0.67,2,0,Sledge.Shell.Registers.DocumentRegister' Sledge.Shell.Properties.Resources,
+Sledge.Shell.Commands,SaveFileAs,1,3,2,0,3,40,5,0,2,0.67,2,0,Sledge.Shell.Registers.DocumentRegister' Sledge.Shell.Properties.Resources,
+Sledge.Shell.Commands,OpenCommandBox,0,2,2,0,2,16,2,0,2,-1,0,0,,
+Sledge.Shell.Commands,CommandActivator,1,2,3,0,2,15,2,0,1,0,1,1,Sledge.Shell.Commands.IActivator,Sledge.Shell.Registers.CommandRegister
+Sledge.Shell.Commands,IActivator,0,1,3,0,0,20,1,1,0,-1,0,4,,Sledge.Shell.Commands.CommandActivator' Sledge.Shell.Commands.IActivatorProvider' Sledge.Shell.Registers.CommandRegister' Sledge.Shell.Forms.CommandBox
+Sledge.Shell.Components,Autosaver,1,11,8,0,5,131,27,0,1,0.36,1,0,Sledge.Shell.Registers.DocumentRegister,
+Sledge.Shell.Components,CommandMenuItemProvider,2,2,0,0,1,29,4,0,1,0,1,0,Sledge.Shell.Registers.HotkeyRegister,
+Sledge.Shell.Components,ContextExplorerComponent,1,4,2,0,2,55,9,0,2,0.5,0,0,,
 Sledge.Shell.Components,DefaultMenuMetadataProvider,0,2,5,0,2,26,2,0,1,-1,0,0,,
-Sledge.Shell.Components,InformationStatusItem,0,3,5,0,2,24,3,0,2,-1,1,0,Sledge.Common.Shell.Context.IContext,
-Sledge.Shell.Components,LogComponent,2,3,3,0,2,45,6,0,2,0.67,2,0,Sledge.Common.Logging.LogMessage' Sledge.Common.Shell.Context.IContext,
-Sledge.Shell.Components,RecentFilesMenuItemProvider,1,6,1,0,5,110,9,0,1,0.33,3,0,Sledge.Common.Shell.Documents.IDocument' Sledge.Shell.Components.RecentFile' Sledge.Common.Shell.Settings.ISettingsStore,
-Sledge.Shell.Components,RecentFile,0,0,1,0,0,4,0,0,0,-1,0,2,,Sledge.Shell.Components.RecentFilesMenuItemProvider' Sledge.Shell.Components.RecentFilesMenuItem
-Sledge.Shell.Components,RecentFilesMenuItem,3,5,11,0,4,62,9,0,2,0.8,2,0,Sledge.Shell.Components.RecentFile' Sledge.Common.Shell.Context.IContext,
-Sledge.Shell,ControlExtensions,0,3,0,0,3,30,7,0,0,-1,0,0,,
-Sledge.Shell,Bootstrapper,4,4,0,0,4,57,9,0,0,1,5,1,Sledge.Common.Logging.Log' Sledge.Common.Shell.Hooks.IStartupHook' Sledge.Common.Shell.Hooks.IInitialiseHook' Sledge.Common.Shell.Hooks.IShuttingDownHook' Sledge.Common.Shell.Hooks.IShutdownHook,Sledge.Shell.Forms.Shell
-Sledge.Shell,Startup,0,2,0,0,2,25,2,0,0,-1,1,2,Sledge.Shell.Forms.Shell,Sledge.MinimalEditor.Program' Sledge.Sandbox.Program
-Sledge.Shell.Controls,ClosableTabControl,3,10,0,0,1,150,21,0,0,0.4,0,1,,Sledge.Shell.Forms.Shell
-Sledge.Shell.Controls,DockedPanel,8,11,4,0,1,249,20,0,0,0,1,2,Sledge.Shell.Properties.Resources,Sledge.Shell.Forms.Shell' Sledge.Shell.Settings.LayoutSettingsContainer
-Sledge.Shell.Controls,DropdownButton,0,2,1,0,0,22,4,0,0,-1,0,1,,Sledge.BspEditor.Environment.Controls.EnvironmentCollectionEditor
-Sledge.Shell.Controls,TextSidebarPanel,2,6,3,0,1,109,9,0,2,0.5,1,0,Sledge.Common.Shell.Context.IContext,
-Sledge.Shell.Controls,SidebarContainer,3,12,0,0,6,137,16,0,0,0.17,0,2,,Sledge.Shell.Forms.Shell' Sledge.Shell.Registers.SidebarRegister
-Sledge.Shell.Controls,SidebarPanel,3,3,2,0,2,137,3,0,0,0,1,2,Sledge.Shell.Controls.SidebarHeader,Sledge.Shell.Registers.SidebarRegister' Sledge.Shell.Registers.SidebarComponent
+Sledge.Shell.Components,InformationStatusItem,0,3,4,0,2,24,3,0,2,-1,0,0,,
+Sledge.Shell.Components,LogComponent,2,3,2,0,2,78,5,0,2,0.67,1,0,Sledge.Shell.Components.LogBuffer,
+Sledge.Shell.Components,LogBuffer,3,3,0,0,3,30,4,0,0,0,0,1,,Sledge.Shell.Components.LogComponent
+Sledge.Shell.Components,RecentFilesMenuItemProvider,1,6,1,0,5,105,9,0,1,0.33,2,0,Sledge.Shell.Components.RecentFile' Sledge.Shell.Components.RecentFilesMenuItem,
+Sledge.Shell.Components,RecentFile,0,0,1,0,0,4,0,0,0,-1,0,1,,Sledge.Shell.Components.RecentFilesMenuItemProvider
+Sledge.Shell.Components,RecentFilesMenuItem,3,5,11,0,4,57,7,0,2,0.8,0,1,,Sledge.Shell.Components.RecentFilesMenuItemProvider
+Sledge.Shell,ControlExtensions,0,5,0,0,5,68,8,0,0,-1,0,0,,
+Sledge.Shell,Bootstrapper,6,9,0,0,7,129,16,0,0,0.22,0,1,,Sledge.Shell.Forms.Shell
+Sledge.Shell,SingleInstance,0,2,0,0,1,14,2,0,0,-1,0,1,,Sledge.Shell.Startup
+Sledge.Shell,Startup,0,3,0,0,2,57,4,0,0,-1,2,0,Sledge.Shell.SingleInstance' Sledge.Shell.Forms.Shell,
+Sledge.Shell.Controls,ClosableTabControl,3,10,0,0,1,154,24,0,0,0.4,0,0,,
+Sledge.Shell.Controls,DockedPanel,8,11,4,0,1,249,33,0,0,0,1,1,Sledge.Shell.Properties.Resources,Sledge.Shell.Forms.Shell
+Sledge.Shell.Controls,DropdownButton,0,2,1,0,0,22,4,0,0,-1,0,0,,
+Sledge.Shell.Controls,NumericUpDownEx,0,1,3,0,0,46,7,0,0,-1,0,0,,
+Sledge.Shell.Controls,TextSidebarPanel,2,6,3,0,1,109,12,0,2,0.5,0,0,,
+Sledge.Shell.Controls,SidebarContainer,3,12,0,0,6,136,16,0,0,0.17,0,0,,
+Sledge.Shell.Controls,SidebarPanel,3,3,2,0,2,137,3,0,0,0,1,1,Sledge.Shell.Controls.SidebarHeader,Sledge.Shell.Registers.SidebarRegister
 Sledge.Shell.Controls,SidebarHeader,2,5,1,0,1,87,7,0,0,0,0,1,,Sledge.Shell.Controls.SidebarPanel
-Sledge.Shell.Forms,BaseForm,0,4,1,0,1,62,8,2,0,-1,1,4,Sledge.Shell.Registers.HotkeyRegister,Sledge.BspEditor.Tools.Texture.TextureApplicationForm' Sledge.Shell.Forms.Shell' Sledge.Shell.Settings.Editors.HotkeysEditor' Sledge.Shell.Registers.HotkeyRegister
-Sledge.Shell.Forms,CommandBox,8,12,0,0,1,244,23,0,0,0.25,2,2,Sledge.Shell.Forms.CommandItem' Sledge.Shell.Commands.IActivator,Sledge.Shell.Forms.CommandItem' Sledge.Shell.Forms.Shell
-Sledge.Shell.Forms,CommandItem,3,2,2,0,1,43,2,0,0,0,2,1,Sledge.Shell.Forms.CommandBox' Sledge.Shell.Commands.IActivator,Sledge.Shell.Forms.CommandBox
-Sledge.Shell.Forms,SettingsForm,12,14,3,0,3,280,26,0,2,0.43,10,0,Sledge.Shell.Properties.Resources' Sledge.Common.Shell.Settings.JsonSettingsStore' Sledge.Common.Shell.Settings.ISettingsContainer' Sledge.Shell.Forms.GroupHolder' Sledge.Common.Shell.Settings.SettingKey' Sledge.Common.Translations.ITranslationStringProvider' Sledge.Common.Shell.Settings.ISettingEditor' Sledge.Common.Shell.Settings.ISettingEditorFactory' Sledge.Shell.Settings.Editors.DefaultSettingEditor' Sledge.Common.Shell.Context.IContext,
+Sledge.Shell.Forms,AddLanguageForm,8,7,2,0,1,158,8,0,0,0.71,0,1,,Sledge.Shell.Forms.TranslationForm
+Sledge.Shell.Forms,BaseForm,0,4,1,0,1,61,8,3,0,-1,1,3,Sledge.Shell.Registers.HotkeyRegister,Sledge.Shell.Forms.Shell' Sledge.Shell.Registers.HotkeyRegister' Sledge.Shell.Settings.Editors.HotkeysEditor
+Sledge.Shell.Forms,CommandBox,9,12,0,0,1,245,23,0,0,0.25,3,1,Sledge.Shell.Commands.IActivatorProvider' Sledge.Shell.Commands.IActivator' Sledge.Shell.Forms.CommandItem,Sledge.Shell.Forms.Shell
+Sledge.Shell.Forms,CommandItem,3,2,2,0,1,43,2,0,0,0,0,1,,Sledge.Shell.Forms.CommandBox
+Sledge.Shell.Forms,ExceptionWindow,15,6,1,0,1,317,7,0,0,0.5,1,1,Sledge.Shell.Forms.ExceptionInfo,Sledge.Shell.Forms.Shell
+Sledge.Shell.Forms,ExceptionInfo,0,1,11,0,1,43,2,0,0,-1,0,1,,Sledge.Shell.Forms.ExceptionWindow
+Sledge.Shell.Forms,SaveChangesForm,6,7,0,0,2,155,9,0,0,0.71,0,1,,Sledge.Shell.Forms.Shell
+Sledge.Shell.Forms,TranslationForm,17,14,0,0,1,409,39,0,0,0.21,2,1,Sledge.Shell.Forms.AddLanguageForm' Sledge.Shell.Forms.Wrapper<T>,Sledge.Shell.Commands.OpenTranslator
+Sledge.Shell.Forms,Wrapper<T>,0,2,2,0,2,11,2,0,0,-1,0,1,,Sledge.Shell.Forms.TranslationForm
+Sledge.Shell.Forms,SettingsForm,12,15,3,0,3,319,30,0,2,0.4,3,0,Sledge.Shell.Forms.GroupHolder' Sledge.Shell.Settings.Editors.DefaultSettingEditor' Sledge.Shell.Properties.Resources,
 Sledge.Shell.Forms,GroupHolder,0,2,2,0,2,14,2,0,0,-1,0,1,,Sledge.Shell.Forms.SettingsForm
-Sledge.Shell.Forms,Shell,18,14,2,0,1,388,23,0,1,0.21,8,9,Sledge.Shell.Controls.DockedPanel' Sledge.Shell.Controls.ClosableTabControl' Sledge.Shell.Controls.SidebarContainer' Sledge.Shell.Bootstrapper' Sledge.Common.Shell.Documents.IDocument' Sledge.Common.Shell.Context.IContext' Sledge.Shell.Forms.CommandBox' Sledge.Shell.Forms.BaseForm,Sledge.Shell.Commands.Exit' Sledge.Shell.Startup' Sledge.Shell.Registers.BottomTabRegister' Sledge.Shell.Registers.MenuRegister' Sledge.Shell.Registers.SidebarRegister' Sledge.Shell.Registers.StatusRegister' Sledge.Shell.Registers.DialogRegister' Sledge.Shell.Registers.ToolRegister' Sledge.Shell.Settings.LayoutSettingsContainer
+Sledge.Shell.Forms,Shell,21,28,5,0,4,605,57,0,1,0.18,8,9,Sledge.Shell.Bootstrapper' Sledge.Shell.Controls.DockedPanel' Sledge.Shell.Forms.BaseForm' Sledge.Shell.Forms.CommandBox' Sledge.Shell.Forms.ExceptionWindow' Sledge.Shell.Forms.SaveChangesForm' Sledge.Shell.Forms.LoadedDocument' Sledge.Shell.Registers.DocumentRegister,Sledge.Shell.Commands.Exit' Sledge.Shell.Registers.BottomTabRegister' Sledge.Shell.Registers.DialogRegister' Sledge.Shell.Registers.StatusRegister' Sledge.Shell.Registers.ToolRegister' Sledge.Shell.Settings.LayoutSettingsContainer' Sledge.Shell.Registers.SidebarRegister' Sledge.Shell.Startup' Sledge.Shell.Registers.MenuRegister
+Sledge.Shell.Forms,LoadedDocument,0,3,3,0,3,26,5,0,0,-1,0,1,,Sledge.Shell.Forms.Shell
 Sledge.Shell.Settings.Editors,DefaultSettingEditor,1,1,4,0,1,19,1,0,1,0,0,1,,Sledge.Shell.Forms.SettingsForm
 Sledge.Shell.Settings.Editors,BooleanEditor,2,3,4,0,1,71,4,0,1,0.67,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
-Sledge.Shell.Settings.Editors,SliderEditor,6,7,4,0,1,147,14,0,1,0.29,1,1,Sledge.Common.Shell.Settings.SettingKey,Sledge.Shell.Settings.Editors.ShellEditorsFactory
-Sledge.Shell.Settings.Editors,ShellEditorsFactory,0,2,0,0,2,61,4,0,1,-1,9,0,Sledge.Common.Shell.Settings.SettingKey' Sledge.Shell.Registers.HotkeyBindings' Sledge.Shell.Settings.Editors.TextEditor' Sledge.Shell.Settings.Editors.EnumEditor' Sledge.Shell.Settings.Editors.BooleanEditor' Sledge.Shell.Settings.Editors.SliderEditor' Sledge.Shell.Settings.Editors.NumericEditor' Sledge.Shell.Settings.Editors.ColorEditor' Sledge.Shell.Settings.Editors.HotkeysEditor,
-Sledge.Shell.Settings.Editors,EnumEditor,4,3,4,0,1,99,4,0,1,0.67,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
-Sledge.Shell.Settings.Editors,EnumValue,0,1,2,0,1,10,1,0,0,-1,0,0,,
-Sledge.Shell.Settings.Editors,ColorEditor,5,6,4,0,1,145,9,0,1,0.33,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
-Sledge.Shell.Settings.Editors,HotkeysEditor,16,11,4,0,1,355,23,0,1,0.18,6,1,Sledge.Shell.Registers.HotkeyBindings' Sledge.Shell.Registers.HotkeyRegister' Sledge.Shell.Forms.BaseForm' Sledge.Common.Shell.Hotkeys.IHotkey' Sledge.Shell.Input.KeyboardState' Sledge.Shell.Settings.Editors.HotkeyWrapper,Sledge.Shell.Settings.Editors.ShellEditorsFactory
-Sledge.Shell.Settings.Editors,HotkeyWrapper,0,5,1,0,4,27,8,0,0,-1,1,1,Sledge.Common.Shell.Hotkeys.IHotkey,Sledge.Shell.Settings.Editors.HotkeysEditor
-Sledge.Shell.Settings.Editors,TextEditor,3,3,4,0,1,82,4,0,1,0.67,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
-Sledge.Shell.Settings.Editors,NumericEditor,4,5,4,0,1,107,10,0,1,0.4,1,1,Sledge.Common.Shell.Settings.SettingKey,Sledge.Shell.Settings.Editors.ShellEditorsFactory
-Sledge.Shell.Input,KeyboardState,1,7,6,0,3,87,9,0,0,0.57,0,13,,Sledge.BspEditor.Rendering.Viewport.OrthographicCameraViewportListener' Sledge.BspEditor.Rendering.Viewport.PerspectiveCameraNavigationViewportListener' Sledge.BspEditor.Tools.BaseTool' Sledge.BspEditor.Tools.CameraTool' Sledge.BspEditor.Tools.Clip.ClipTool' Sledge.BspEditor.Tools.Selection.SelectTool' Sledge.BspEditor.Tools.Selection.TransformationHandles.RotateTransformHandle' Sledge.BspEditor.Tools.Selection.TransformationHandles.SkewTransformHandle' Sledge.BspEditor.Tools.Texture.TextureTool' Sledge.BspEditor.Tools.Texture.TextureListPanel' Sledge.BspEditor.Tools.Widgets.RotationWidget' Sledge.Shell.Settings.Editors.HotkeysEditor' Sledge.Shell.Registers.HotkeyRegister
-Sledge.Shell.Registers,BottomTabRegister,3,4,0,0,2,53,5,0,1,0,4,0,Sledge.Common.Logging.Log' Sledge.Common.Shell.Components.IBottomTabComponent' Sledge.Shell.Forms.Shell' Sledge.Common.Shell.Context.IContext,
-Sledge.Shell.Registers,CommandRegister,3,9,0,0,4,108,12,0,1,0.44,2,1,Sledge.Common.Shell.Commands.ICommand' Sledge.Common.Shell.Commands.CommandMessage,Sledge.Shell.Registers.ActivatorProvider
-Sledge.Shell.Registers,ActivatorProvider,1,3,0,0,3,16,3,0,0,0.67,1,0,Sledge.Shell.Registers.CommandRegister,
-Sledge.Shell.Registers,ContextRegister,1,13,0,0,11,99,14,0,1,0.31,1,0,Sledge.Common.Shell.Context.ContextInfo,
-Sledge.Shell.Registers,DocumentRegister,2,6,0,0,4,50,7,0,1,0,2,0,Sledge.Common.Logging.Log' Sledge.Common.Shell.Documents.IDocumentLoader,
-Sledge.Shell.Registers,MenuRegister,8,7,0,0,3,414,10,0,1,0,6,0,Sledge.Shell.Registers.VirtualMenuTree' Sledge.Common.Shell.Menu.IMenuItemProvider' Sledge.Common.Shell.Menu.IMenuMetadataProvider' Sledge.Shell.Forms.Shell' Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Menu.IMenuItem,
-Sledge.Shell.Registers,VirtualMenuTree,3,6,3,0,5,77,11,0,0,0.5,4,1,Sledge.Common.Shell.Context.IContext' Sledge.Shell.Registers.MenuTreeRoot' Sledge.Common.Shell.Menu.MenuSection' Sledge.Common.Shell.Menu.IMenuItem,Sledge.Shell.Registers.MenuRegister
-Sledge.Shell.Registers,MenuTreeRoot,1,3,3,0,2,85,10,0,1,0,7,1,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Menu.MenuSection' Sledge.Shell.Registers.BaseMenuTreeNode' Sledge.Common.Shell.Menu.MenuGroup' Sledge.Shell.Registers.MenuTreeNode' Sledge.Common.Shell.Menu.IMenuItem' Sledge.Shell.Registers.MenuTreeGroup,Sledge.Shell.Registers.VirtualMenuTree
-Sledge.Shell.Registers,MenuTreeTextNode,0,1,1,0,1,10,1,0,1,-1,2,0,Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Menu.MenuGroup,
-Sledge.Shell.Registers,MenuTreeNode,0,3,2,0,2,55,9,0,1,-1,4,1,Sledge.Common.Shell.Menu.IMenuItem' Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Menu.MenuGroup' Sledge.Shell.Registers.BaseMenuTreeNode,Sledge.Shell.Registers.MenuTreeRoot
-Sledge.Shell.Registers,BaseMenuTreeNode,0,3,7,0,2,60,8,3,0,-1,2,2,Sledge.Shell.Registers.MenuTreeGroup' Sledge.Common.Shell.Menu.MenuGroup,Sledge.Shell.Registers.MenuTreeRoot' Sledge.Shell.Registers.MenuTreeNode
-Sledge.Shell.Registers,MenuTreeGroup,0,1,3,0,1,11,1,0,0,-1,1,2,Sledge.Common.Shell.Menu.MenuGroup,Sledge.Shell.Registers.MenuTreeRoot' Sledge.Shell.Registers.BaseMenuTreeNode
-Sledge.Shell.Registers,HotkeyRegister,4,10,1,0,8,127,21,0,1,0.2,7,3,Sledge.Common.Shell.Hotkeys.DefaultHotkeyAttribute' Sledge.Common.Shell.Commands.ICommand' Sledge.Shell.Forms.BaseForm' Sledge.Common.Shell.Hotkeys.IHotkey' Sledge.Shell.Input.KeyboardState' Sledge.Shell.Registers.HotkeyBindings' Sledge.Common.Shell.Settings.ISettingsStore,Sledge.Shell.Components.CommandMenuItemProvider' Sledge.Shell.Forms.BaseForm' Sledge.Shell.Settings.Editors.HotkeysEditor
-Sledge.Shell.Registers,HotkeyBindings,0,1,0,0,1,9,2,0,0,-1,0,3,,Sledge.Shell.Settings.Editors.ShellEditorsFactory' Sledge.Shell.Settings.Editors.HotkeysEditor' Sledge.Shell.Registers.HotkeyRegister
-Sledge.Shell.Registers,SidebarRegister,4,7,1,0,5,151,11,0,1,0.29,9,0,Sledge.Common.Shell.Components.ISidebarComponent' Sledge.Common.Shell.Components.OrderHintAttribute' Sledge.Common.Logging.Log' Sledge.Shell.Registers.SidebarComponent' Sledge.Shell.Controls.SidebarContainer' Sledge.Shell.Forms.Shell' Sledge.Common.Shell.Context.IContext' Sledge.Common.Shell.Settings.ISettingsStore' Sledge.Shell.Controls.SidebarPanel,
-Sledge.Shell.Registers,SidebarComponent,0,2,4,0,2,42,2,0,0,-1,3,1,Sledge.Common.Shell.Components.ISidebarComponent' Sledge.Shell.Controls.SidebarPanel' Sledge.Common.Shell.Context.IContext,Sledge.Shell.Registers.SidebarRegister
-Sledge.Shell.Registers,StatusRegister,3,4,0,0,3,71,6,0,1,0,5,0,Sledge.Common.Shell.Components.OrderHintAttribute' Sledge.Common.Shell.Components.IStatusItem' Sledge.Shell.Registers.StatusBarItem' Sledge.Shell.Forms.Shell' Sledge.Common.Shell.Context.IContext,
-Sledge.Shell.Registers,StatusBarItem,0,3,2,0,2,33,3,0,0,-1,2,1,Sledge.Common.Shell.Components.IStatusItem' Sledge.Common.Shell.Context.IContext,Sledge.Shell.Registers.StatusRegister
-Sledge.Shell.Registers,DialogRegister,3,3,0,0,2,32,4,0,1,0,4,0,Sledge.Common.Logging.Log' Sledge.Common.Shell.Components.IDialog' Sledge.Shell.Forms.Shell' Sledge.Common.Shell.Context.IContext,
-Sledge.Shell.Registers,ToolRegister,3,4,0,0,2,70,6,0,1,0,5,0,Sledge.Common.Shell.Components.OrderHintAttribute' Sledge.Common.Shell.Components.ITool' Sledge.Common.Logging.Log' Sledge.Common.Shell.Context.IContext' Sledge.Shell.Forms.Shell,
-Sledge.Shell.Properties,Resources,2,1,11,0,0,131,1,0,0,0,0,2,,Sledge.Shell.Controls.DockedPanel' Sledge.Shell.Forms.SettingsForm
-Sledge.Shell.Settings,LayoutSettingsContainer,1,3,1,0,3,35,4,0,1,0.67,3,0,Sledge.Shell.Forms.Shell' Sledge.Common.Shell.Settings.ISettingsStore' Sledge.Shell.Controls.DockedPanel,
-Sledge.Shell.Settings,SettingsProvider,3,6,0,0,3,95,17,0,1,0,3,0,Sledge.Common.Logging.Log' Sledge.Common.Shell.Settings.ISettingsContainer' Sledge.Common.Shell.Settings.JsonSettingsStore,
-Sledge.Shell.Translations,TranslationsProvider,1,7,2,0,7,64,14,0,1,0.57,3,0,Sledge.Common.Translations.TranslationStringsCatalog' Sledge.Common.Translations.TranslationStringsCollection' Sledge.Common.Shell.Settings.ISettingsStore,
+Sledge.Shell.Settings.Editors,DropdownEditor,4,4,4,0,1,107,5,0,1,0.5,1,1,Sledge.Shell.Settings.Editors.DropdownValue,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,DropdownValue,0,1,1,0,1,8,1,0,0,-1,0,1,,Sledge.Shell.Settings.Editors.DropdownEditor
+Sledge.Shell.Settings.Editors,LanguageSelectionEditor,3,3,4,0,1,97,4,0,1,0.67,1,1,Sledge.Shell.Settings.Editors.LanguageValue,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,LanguageValue,0,1,2,0,1,10,1,0,0,-1,0,1,,Sledge.Shell.Settings.Editors.LanguageSelectionEditor
+Sledge.Shell.Settings.Editors,FileAssociationsEditor,3,5,4,0,1,98,8,0,1,0.4,2,1,Sledge.Shell.Registers.DocumentRegister' Sledge.Shell.Registers.FileAssociations,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,SliderEditor,6,9,4,0,1,156,16,0,1,0.22,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,ShellEditorsFactory,1,2,1,0,2,87,21,0,1,1,14,0,Sledge.Shell.Settings.Editors.BooleanEditor' Sledge.Shell.Settings.Editors.DropdownEditor' Sledge.Shell.Settings.Editors.LanguageSelectionEditor' Sledge.Shell.Settings.Editors.FileAssociationsEditor' Sledge.Shell.Settings.Editors.SliderEditor' Sledge.Shell.Settings.Editors.EnumEditor' Sledge.Shell.Settings.Editors.ColorEditor' Sledge.Shell.Settings.Editors.HotkeysEditor' Sledge.Shell.Settings.Editors.TextEditor' Sledge.Shell.Settings.Editors.NumericEditor' Sledge.Shell.Registers.DocumentRegister' Sledge.Shell.Registers.FileAssociations' Sledge.Shell.Registers.HotkeyRegister' Sledge.Shell.Registers.HotkeyBindings,
+Sledge.Shell.Settings.Editors,EnumEditor,4,3,4,0,1,99,4,0,1,0.67,1,1,Sledge.Shell.Settings.Editors.EnumValue,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,EnumValue,0,1,2,0,1,10,1,0,0,-1,0,1,,Sledge.Shell.Settings.Editors.EnumEditor
+Sledge.Shell.Settings.Editors,ColorEditor,5,6,4,0,1,146,10,0,1,0.33,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,HotkeysEditor,16,13,4,0,1,366,25,0,1,0.15,5,1,Sledge.Shell.Forms.BaseForm' Sledge.Shell.Settings.Editors.HotkeyWrapper' Sledge.Shell.Input.KeyboardState' Sledge.Shell.Registers.HotkeyRegister' Sledge.Shell.Registers.HotkeyBindings,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,HotkeyWrapper,0,5,1,0,4,27,8,0,0,-1,0,1,,Sledge.Shell.Settings.Editors.HotkeysEditor
+Sledge.Shell.Settings.Editors,TextEditor,5,7,4,0,1,143,13,0,1,0.29,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Settings.Editors,NumericEditor,4,5,4,0,1,107,10,0,1,0.4,0,1,,Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Input,KeyboardState,1,7,6,0,3,87,9,0,0,0.57,0,2,,Sledge.Shell.Settings.Editors.HotkeysEditor' Sledge.Shell.Registers.HotkeyRegister
+Sledge.Shell.Registers,BottomTabRegister,3,5,0,0,2,75,6,0,1,0,1,0,Sledge.Shell.Forms.Shell,
+Sledge.Shell.Registers,CommandRegister,3,8,0,0,4,83,11,0,1,0.25,3,0,Sledge.Shell.Commands.IActivatorProvider' Sledge.Shell.Commands.CommandActivator' Sledge.Shell.Commands.IActivator,
+Sledge.Shell.Registers,ContextRegister,1,11,0,0,9,87,12,0,1,0.27,0,0,,
+Sledge.Shell.Registers,DocumentRegister,4,24,2,0,18,285,57,0,1,0.08,1,10,Sledge.Shell.Registers.FileAssociations,Sledge.Shell.Commands.ExportDocument' Sledge.Shell.Commands.OpenDocument' Sledge.Shell.Commands.SaveFileAs' Sledge.Shell.Commands.NewFile' Sledge.Shell.Commands.CloseFile' Sledge.Shell.Forms.Shell' Sledge.Shell.Components.Autosaver' Sledge.Shell.Commands.SaveFile' Sledge.Shell.Settings.Editors.FileAssociationsEditor' Sledge.Shell.Settings.Editors.ShellEditorsFactory
+Sledge.Shell.Registers,FileAssociations,0,1,0,0,1,9,2,0,0,-1,0,3,,Sledge.Shell.Settings.Editors.FileAssociationsEditor' Sledge.Shell.Settings.Editors.ShellEditorsFactory' Sledge.Shell.Registers.DocumentRegister
+Sledge.Shell.Registers,MenuRegister,8,7,0,0,3,417,10,0,1,0,7,0,Sledge.Shell.Forms.Shell' Sledge.Shell.Registers.VirtualMenuTree' Sledge.Shell.Registers.MenuTreeRoot' Sledge.Shell.Registers.MenuTreeTextNode' Sledge.Shell.Registers.MenuTreeNode' Sledge.Shell.Registers.BaseMenuTreeNode' Sledge.Shell.Registers.MenuTreeGroup,
+Sledge.Shell.Registers,VirtualMenuTree,3,7,3,0,4,90,13,0,0,0.29,0,1,,Sledge.Shell.Registers.MenuRegister
+Sledge.Shell.Registers,MenuTreeRoot,1,3,3,0,2,85,10,0,1,0,0,1,,Sledge.Shell.Registers.MenuRegister
+Sledge.Shell.Registers,MenuTreeTextNode,0,1,1,0,1,10,1,0,1,-1,0,1,,Sledge.Shell.Registers.MenuRegister
+Sledge.Shell.Registers,MenuTreeNode,0,3,2,0,2,55,9,0,1,-1,0,1,,Sledge.Shell.Registers.MenuRegister
+Sledge.Shell.Registers,BaseMenuTreeNode,0,3,7,0,2,60,8,3,0,-1,0,1,,Sledge.Shell.Registers.MenuRegister
+Sledge.Shell.Registers,MenuTreeGroup,0,1,3,0,1,11,1,0,0,-1,0,1,,Sledge.Shell.Registers.MenuRegister
+Sledge.Shell.Registers,HotkeyRegister,7,10,1,0,8,154,23,0,1,0.2,3,4,Sledge.Shell.Forms.BaseForm' Sledge.Shell.Input.KeyboardState' Sledge.Shell.Registers.HotkeyBindings,Sledge.Shell.Components.CommandMenuItemProvider' Sledge.Shell.Forms.BaseForm' Sledge.Shell.Settings.Editors.ShellEditorsFactory' Sledge.Shell.Settings.Editors.HotkeysEditor
+Sledge.Shell.Registers,HotkeyBindings,0,1,0,0,1,9,2,0,0,-1,0,3,,Sledge.Shell.Settings.Editors.HotkeysEditor' Sledge.Shell.Settings.Editors.ShellEditorsFactory' Sledge.Shell.Registers.HotkeyRegister
+Sledge.Shell.Registers,SidebarRegister,4,8,2,0,6,175,12,0,1,0.25,3,0,Sledge.Shell.Controls.SidebarPanel' Sledge.Shell.Forms.Shell' Sledge.Shell.Registers.SidebarComponent,
+Sledge.Shell.Registers,SidebarComponent,0,3,4,0,3,51,3,0,0,-1,0,1,,Sledge.Shell.Registers.SidebarRegister
+Sledge.Shell.Registers,StatusRegister,3,4,0,0,3,71,6,0,1,0,2,0,Sledge.Shell.Forms.Shell' Sledge.Shell.Registers.StatusBarItem,
+Sledge.Shell.Registers,StatusBarItem,0,3,2,0,2,33,3,0,0,-1,0,1,,Sledge.Shell.Registers.StatusRegister
+Sledge.Shell.Registers,DialogRegister,3,3,0,0,2,34,4,0,1,0,1,0,Sledge.Shell.Forms.Shell,
+Sledge.Shell.Registers,ToolRegister,3,5,0,0,3,97,7,0,1,0,2,0,Sledge.Shell.Forms.Shell' Sledge.Shell.Registers.SwitchToolHotkey,
+Sledge.Shell.Registers,SwitchToolHotkey,0,3,5,0,3,22,3,0,2,-1,0,1,,Sledge.Shell.Registers.ToolRegister
+Sledge.Shell.Properties,Resources,2,1,11,0,0,131,1,0,0,0,0,9,,Sledge.Shell.Commands.CloseFile' Sledge.Shell.Commands.SaveFile' Sledge.Shell.Commands.NewFile' Sledge.Shell.Commands.OpenFile' Sledge.Shell.Commands.Export' Sledge.Shell.Commands.OpenSettingsForm' Sledge.Shell.Commands.SaveFileAs' Sledge.Shell.Forms.SettingsForm' Sledge.Shell.Controls.DockedPanel
+Sledge.Shell.Settings,LayoutSettingsContainer,1,3,1,0,3,35,4,0,1,0.67,1,0,Sledge.Shell.Forms.Shell,
+Sledge.Shell.Settings,SettingsProvider,4,6,0,0,3,106,20,0,1,0,0,0,,
+Sledge.Shell.Translations,TranslationsProvider,3,9,2,0,8,97,17,0,1,0.44,0,0,,

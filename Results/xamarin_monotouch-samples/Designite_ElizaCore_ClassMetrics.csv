@@ -1,0 +1,20 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ElizaCore,String,0,2,0,0,2,9,2,0,0,-1,0,1,,ElizaCore.EString
+ElizaCore,Decomp,4,6,0,0,5,73,10,0,0,0,2,2,ElizaCore.ConsoleSurrogate' ElizaCore.ReasembList,ElizaCore.DecompList' ElizaCore.ElizaMain
+ElizaCore,ConsoleSurrogate,0,3,0,0,3,13,3,0,0,-1,0,8,,ElizaCore.ReasembList' ElizaCore.PrePost' ElizaCore.Decomp' ElizaCore.KeyStack' ElizaCore.SynList' ElizaCore.WordList' ElizaCore.Key' ElizaCore.ElizaMain
+ElizaCore,DecompList,0,2,0,0,2,19,3,0,0,-1,2,3,ElizaCore.Decomp' ElizaCore.ReasembList,ElizaCore.KeyList' ElizaCore.Key' ElizaCore.ElizaMain
+ElizaCore,EString,1,11,0,0,9,311,47,0,0,0.55,1,4,ElizaCore.String,ElizaCore.KeyList' ElizaCore.SynList' ElizaCore.PrePostList' ElizaCore.ElizaMain
+ElizaCore,ILineSource,0,2,0,0,0,5,2,1,0,-1,0,2,,ElizaCore.LineSourceFromAssembly' ElizaCore.ElizaMain
+ElizaCore,Key,3,8,0,0,6,70,10,0,0,0.25,2,3,ElizaCore.ConsoleSurrogate' ElizaCore.DecompList,ElizaCore.KeyStack' ElizaCore.ElizaMain' ElizaCore.KeyList
+ElizaCore,KeyList,1,4,0,0,3,65,10,0,0,0.75,4,1,ElizaCore.DecompList' ElizaCore.EString' ElizaCore.Key' ElizaCore.KeyStack,ElizaCore.ElizaMain
+ElizaCore,KeyStack,3,5,0,0,5,68,10,0,0,0,2,2,ElizaCore.ConsoleSurrogate' ElizaCore.Key,ElizaCore.KeyList' ElizaCore.ElizaMain
+ElizaCore,Mem,3,2,0,0,2,30,5,0,0,0,0,1,,ElizaCore.ElizaMain
+ElizaCore,PrePost,2,4,0,0,3,35,5,0,0,0.5,1,1,ElizaCore.ConsoleSurrogate,ElizaCore.PrePostList
+ElizaCore,PrePostList,1,4,0,0,3,59,8,0,0,0.75,2,1,ElizaCore.EString' ElizaCore.PrePost,ElizaCore.ElizaMain
+ElizaCore,ReasembList,1,1,0,0,1,18,3,0,0,0,1,3,ElizaCore.ConsoleSurrogate,ElizaCore.DecompList' ElizaCore.Decomp' ElizaCore.ElizaMain
+ElizaCore,SynList,1,3,0,0,2,80,12,0,0,0.67,3,1,ElizaCore.ConsoleSurrogate' ElizaCore.EString' ElizaCore.WordList,ElizaCore.ElizaMain
+ElizaCore,WordList,1,2,0,0,1,28,5,0,0,1,1,2,ElizaCore.ConsoleSurrogate,ElizaCore.ElizaMain' ElizaCore.SynList
+ElizaCore,ElizaMain,21,9,0,0,4,357,47,0,0,0.33,14,0,ElizaCore.Decomp' ElizaCore.ConsoleSurrogate' ElizaCore.DecompList' ElizaCore.EString' ElizaCore.ILineSource' ElizaCore.Key' ElizaCore.KeyList' ElizaCore.KeyStack' ElizaCore.Mem' ElizaCore.PrePostList' ElizaCore.ReasembList' ElizaCore.SynList' ElizaCore.WordList' ElizaCore.LineSourceFromAssembly,
+ElizaCore,LineSourceFromAssembly,1,3,0,0,3,25,4,0,1,0,1,1,ElizaCore.ILineSource,ElizaCore.ElizaMain
+ElizaCore,ElizaUser,0,1,4,0,1,19,1,0,0,-1,0,1,,ElizaCore.ElizaAddressBook
+ElizaCore,ElizaAddressBook,0,5,1,0,5,51,8,0,0,-1,1,0,ElizaCore.ElizaUser,

@@ -1,0 +1,26 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Whois,AsyncHelper,1,2,0,0,2,20,2,0,0,0,0,2,,Whois.WhoisLookup' Whois.Servers.IanaServerLookup
+Whois,Contact,0,1,11,0,1,54,1,0,0,-1,0,3,,Whois.WhoisResponse' Whois.Parsers.Fixups.WhoisIsocOrgIlFixup' Whois.Parsers.Fixups.MultipleContactFixup
+Whois,HostName,0,9,4,0,6,103,14,0,0,-1,0,5,,Whois.Registrar' Whois.Servers.IanaServerLookup' Whois.WhoisResponse' Whois.Parsers.ToHostNameTransformer' Whois.WhoisLookup
+Whois,IWhoisLookup,0,6,0,0,0,27,6,1,0,-1,2,1,Whois.WhoisRequest' Whois.WhoisResponse,Whois.WhoisLookup
+Whois,Registrar,0,0,6,0,0,27,0,0,0,-1,1,1,Whois.HostName,Whois.WhoisResponse
+Whois,ResourceReader,0,8,0,0,4,70,18,0,0,-1,0,2,,Whois.Servers.IanaServerLookup' Whois.Parsers.WhoisParser
+Whois,Trademark,0,0,4,0,0,19,0,0,0,-1,0,1,,Whois.WhoisResponse
+Whois,WhoisException,0,2,1,0,2,16,2,0,0,-1,0,2,,Whois.Net.TcpReader' Whois.WhoisLookup
+Whois,WhoisLookup,2,12,3,0,10,157,22,0,1,0.5,12,0,Whois.AsyncHelper' Whois.HostName' Whois.IWhoisLookup' Whois.WhoisException' Whois.WhoisOptions' Whois.WhoisRequest' Whois.WhoisResponse' Whois.Net.ITcpReader' Whois.Net.TcpReader' Whois.Parsers.WhoisParser' Whois.Servers.IanaServerLookup' Whois.Servers.IWhoisServerLookup,
+Whois,WhoisOptions,0,2,4,0,1,37,2,0,0,-1,0,2,,Whois.WhoisRequest' Whois.WhoisLookup
+Whois,WhoisRequest,0,2,5,0,2,41,2,0,0,-1,1,4,Whois.WhoisOptions,Whois.Servers.IWhoisServerLookup' Whois.IWhoisLookup' Whois.Servers.IanaServerLookup' Whois.WhoisLookup
+Whois,WhoisResponse,0,5,24,0,1,149,8,0,0,-1,5,9,Whois.Contact' Whois.HostName' Whois.Registrar' Whois.Trademark' Whois.WhoisStatus,Whois.Servers.IWhoisServerLookup' Whois.Parsers.WhoisParser' Whois.Servers.IanaServerLookup' Whois.Parsers.Fixups.MultipleContactFixup' Whois.Parsers.Fixups.IFixup' Whois.IWhoisLookup' Whois.Parsers.Fixups.WhoisIsocOrgIlFixup' Whois.Servers.WhoisServerCache' Whois.WhoisLookup
+Whois,WhoisStatus,0,0,0,0,0,27,0,0,0,-1,0,4,,Whois.Parsers.WhoisParser' Whois.Parsers.WhoisStatusParser' Whois.Servers.IanaServerLookup' Whois.WhoisResponse
+Whois.Net,ITcpReader,0,1,0,0,0,12,1,2,0,-1,0,3,,Whois.Net.TcpReader' Whois.WhoisLookup' Whois.Servers.IanaServerLookup
+Whois.Net,TcpReader,3,6,0,0,3,100,10,0,1,0,2,2,Whois.WhoisException' Whois.Net.ITcpReader,Whois.Servers.IanaServerLookup' Whois.WhoisLookup
+Whois.Parsers,CleanDomainStatusTransformer,0,1,0,0,1,26,4,0,0,-1,0,2,,Whois.Parsers.WhoisParser' Whois.Servers.IanaServerLookup
+Whois.Parsers,ToHostNameTransformer,0,1,0,0,1,24,4,0,0,-1,1,2,Whois.HostName,Whois.Parsers.WhoisParser' Whois.Servers.IanaServerLookup
+Whois.Parsers,WhoisParser,4,8,2,0,6,110,16,0,0,0,9,1,Whois.ResourceReader' Whois.WhoisResponse' Whois.WhoisStatus' Whois.Parsers.CleanDomainStatusTransformer' Whois.Parsers.ToHostNameTransformer' Whois.Parsers.WhoisStatusParser' Whois.Parsers.Fixups.IFixup' Whois.Parsers.Fixups.MultipleContactFixup' Whois.Parsers.Fixups.WhoisIsocOrgIlFixup,Whois.WhoisLookup
+Whois.Parsers,WhoisStatusParser,0,2,0,0,1,71,57,0,0,-1,1,1,Whois.WhoisStatus,Whois.Parsers.WhoisParser
+Whois.Parsers.Fixups,IFixup,0,2,0,0,0,11,2,1,0,-1,1,2,Whois.WhoisResponse,Whois.Parsers.Fixups.MultipleContactFixup' Whois.Parsers.WhoisParser
+Whois.Parsers.Fixups,MultipleContactFixup,0,6,0,0,2,176,41,1,1,-1,3,2,Whois.Contact' Whois.WhoisResponse' Whois.Parsers.Fixups.IFixup,Whois.Parsers.Fixups.WhoisIsocOrgIlFixup' Whois.Parsers.WhoisParser
+Whois.Parsers.Fixups,WhoisIsocOrgIlFixup,0,3,0,0,1,105,25,0,2,-1,3,1,Whois.Contact' Whois.WhoisResponse' Whois.Parsers.Fixups.MultipleContactFixup,Whois.Parsers.WhoisParser
+Whois.Servers,IanaServerLookup,4,8,1,0,5,85,12,0,1,0.38,11,1,Whois.AsyncHelper' Whois.HostName' Whois.ResourceReader' Whois.WhoisRequest' Whois.WhoisResponse' Whois.WhoisStatus' Whois.Net.ITcpReader' Whois.Net.TcpReader' Whois.Parsers.CleanDomainStatusTransformer' Whois.Parsers.ToHostNameTransformer' Whois.Servers.IWhoisServerLookup,Whois.WhoisLookup
+Whois.Servers,IWhoisServerLookup,0,2,0,0,0,11,2,2,0,-1,2,2,Whois.WhoisRequest' Whois.WhoisResponse,Whois.Servers.IanaServerLookup' Whois.WhoisLookup
+Whois.Servers,WhoisServerCache,1,3,0,0,3,16,3,0,0,0,1,0,Whois.WhoisResponse,

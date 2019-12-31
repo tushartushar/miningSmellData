@@ -1,9 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Fixie.ConsoleRunner,AppVeyorListener,3,8,0,0,7,86,8,0,1,0.38,9,0,Fixie.Execution.AssemblyInfo' Fixie.Execution.CaseResult' Fixie.Execution.SkipResult' Fixie.Execution.PassResult' Fixie.Execution.ExceptionInfo' Fixie.Execution.CompoundException' Fixie.Execution.FailResult' Fixie.Execution.AssemblyResult' Fixie.ConsoleRunner.TestResult,
-Fixie.ConsoleRunner,TestResult,0,0,8,0,0,11,0,0,0,-1,0,2,,Fixie.ConsoleRunner.AppVeyorListener' Fixie.Tests.ConsoleRunner.AppVeyorListenerTests
-Fixie.ConsoleRunner,CommandLineOption,3,0,0,3,0,6,0,0,0,-1,0,1,,Fixie.ConsoleRunner.Program
-Fixie.ConsoleRunner,CommandLineParser,0,5,4,0,2,77,11,0,0,-1,1,2,Fixie.Options,Fixie.ConsoleRunner.Program' Fixie.Tests.ConsoleRunner.CommandLineParserTests
-Fixie.ConsoleRunner,ConsoleListener,0,5,0,0,5,28,5,0,1,-1,8,0,Fixie.Execution.AssemblyInfo' Fixie.ConsoleRunner.Foreground' Fixie.Execution.SkipResult' Fixie.Execution.PassResult' Fixie.Execution.FailResult' Fixie.Execution.ExceptionInfo' Fixie.Execution.CompoundException' Fixie.Execution.AssemblyResult,
-Fixie.ConsoleRunner,Foreground,1,2,2,0,2,15,2,0,0,0,0,2,,Fixie.ConsoleRunner.ConsoleListener' Fixie.ConsoleRunner.Program
-Fixie.ConsoleRunner,Program,1,7,0,0,0,98,15,0,0,0,9,0,Fixie.ConsoleRunner.CommandLineParser' Fixie.Execution.ExecutionResult' Fixie.ConsoleRunner.Foreground' Fixie.Options' Fixie.Execution.AssemblyResult' Fixie.ConsoleRunner.CommandLineOption' Fixie.Reports.NUnitXmlReport' Fixie.Reports.XUnitXmlReport' Fixie.Execution.ExecutionEnvironment,
-Fixie.ConsoleRunner,TeamCityListener,0,10,0,0,5,70,14,0,1,-1,7,0,Fixie.Execution.AssemblyInfo' Fixie.Execution.SkipResult' Fixie.Execution.PassResult' Fixie.Execution.FailResult' Fixie.Execution.ExceptionInfo' Fixie.Execution.CompoundException' Fixie.Execution.AssemblyResult,
+Fixie.Console,Options,0,1,5,0,1,19,1,0,0,-1,0,1,,Fixie.Console.Program
+Fixie.Console,Program,3,11,0,0,0,161,23,0,0,0,5,0,Fixie.Console.Options' Fixie.Cli.CommandLine' Fixie.Cli.CommandLineException' Fixie.Cli.Dotnet' Fixie.Cli.Foreground,
+Fixie.Console,Shell,0,8,0,0,4,70,13,0,0,-1,2,0,Fixie.Cli.CommandLine' Fixie.Cli.Dotnet,
+Fixie.Cli,CommandLine,0,6,0,0,6,37,9,0,0,-1,0,2,,Fixie.Console.Program' Fixie.Console.Shell
+Fixie.Cli,CommandLineException,0,2,0,0,2,7,2,0,0,-1,0,2,,Fixie.Console.Program' Fixie.Cli.Parser
+Fixie.Cli,Dotnet,1,2,0,1,0,28,3,0,0,0,0,2,,Fixie.Console.Program' Fixie.Console.Shell
+Fixie.Cli,Foreground,1,2,3,0,2,13,2,0,0,0,0,2,,Fixie.Console.Program' Fixie.Cli.Foreground
+Fixie.Cli,NamedArgument,0,2,5,0,2,20,2,0,0,-1,0,1,,Fixie.Cli.Parser
+Fixie.Cli,Parser,0,10,2,0,1,176,32,0,0,-1,0,1,,Fixie.Cli.CommandLine
+Fixie.Cli,PositionalArgument,0,1,3,0,1,11,1,0,0,-1,0,1,,Fixie.Cli.Parser
+Fixie.Cli,Serializer,0,2,0,0,1,22,2,0,0,-1,0,1,,Fixie.Cli.CommandLine

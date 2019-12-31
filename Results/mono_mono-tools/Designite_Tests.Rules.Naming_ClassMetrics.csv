@@ -1,0 +1,144 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+One,I1,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two,I2,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three,I3,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three.Four,I4,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three.Four.Five,I5,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three.Four.Design,IDesign,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three.Four.Interop,IInterop,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three.Four.Permissions,IPermissions,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three.Four.Impl,IImpl,0,0,0,0,0,1,0,0,0,-1,0,0,,
+One.Two.Three.Four.Internal,Internal,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.Rules.Naming,AvoidDeepNamespaceHierarchyTest,1,4,0,0,4,35,4,0,0,0.5,0,0,,
+Test.Rules.Naming,IFoo,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.AvoidTypeInterfaceInconsistencyTest
+Test.Rules.Naming,JFoo,0,0,0,0,0,2,0,1,0,-1,0,2,,Test.Rules.Naming.Foo' Test.Rules.Naming.AvoidTypeInterfaceInconsistencyTest
+Test.Rules.Naming,Foo,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.JFoo,Test.Rules.Naming.AvoidTypeInterfaceInconsistencyTest
+Test.Rules.Naming,IBar,0,0,0,0,0,2,0,1,0,-1,0,2,,Test.Rules.Naming.Bar' Test.Rules.Naming.AvoidTypeInterfaceInconsistencyTest
+Test.Rules.Naming,Bar,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.IBar,Test.Rules.Naming.AvoidTypeInterfaceInconsistencyTest
+Test.Rules.Naming,Box,0,0,0,0,0,2,0,1,0,-1,0,2,,Test.Rules.Naming.IBox' Test.Rules.Naming.AvoidTypeInterfaceInconsistencyTest
+Test.Rules.Naming,IBox,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.Box,Test.Rules.Naming.AvoidTypeInterfaceInconsistencyTest
+Test.Rules.Naming,AvoidTypeInterfaceInconsistencyTest,0,3,0,0,3,24,3,0,0,-1,7,0,Test.Rules.Naming.IFoo' Test.Rules.Naming.JFoo' Test.Rules.Naming.Foo' Test.Rules.Naming.IBar' Test.Rules.Naming.Bar' Test.Rules.Naming.Box' Test.Rules.Naming.IBox,
+Test.Rules.Naming,InternalClassName_WithUnderscore,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest
+Test.Rules.Naming,PublicClassName_WithUnderscore,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest
+Test.Rules.Naming,InternalInterface_WithUnderscore,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest
+Test.Rules.Naming,PublicInterface_WithUnderscore,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest
+Test.Rules.Naming,IMetaDataDispenser,0,1,0,0,0,6,1,0,0,-1,0,2,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest' Test.Rules.Naming.AvoidNonAlphanumericIdentifierMethodTest
+Test.Rules.Naming,PublicEnum_WithUnderscore,0,0,0,0,0,4,0,0,0,-1,0,2,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest' Test.Rules.Naming.AvoidNonAlphanumericIdentifierMethodTest
+Test.Rules.Naming,AvoidNonAlphanumericIdentifierAssemblyTest,1,3,0,0,3,29,3,0,0,0,0,0,,
+Test.Rules.Naming,AvoidNonAlphanumericIdentifierTypeTest,0,8,0,0,8,52,8,0,0,-1,8,0,Test.Rules.Naming.InternalClassName_WithUnderscore' Test.Rules.Naming.PublicClassName_WithUnderscore' Test.Rules.Naming.InternalInterface_WithUnderscore' Test.Rules.Naming.PublicInterface_WithUnderscore' Test.Rules.Naming.IMetaDataDispenser' Test.Rules.Naming.PublicEnum_WithUnderscore' Test_Rules_Naming.Type_With_Underscore' Test_Rules_Naming.TypeWithoutUnderscore,
+Test.Rules.Naming,AvoidNonAlphanumericIdentifierMethodTest,0,6,0,0,6,47,6,0,0,-1,5,0,Test.Rules.Naming.IMetaDataDispenser' Test.Rules.Naming.PublicEnum_WithUnderscore' Test.Rules.Naming.ClassWithAnonymousDelegate' Test_Rules_Naming.Type_With_Underscore' Test_Rules_Naming.TypeWithoutUnderscore,
+Test.Rules.Naming,ClassWithAnonymousDelegate,0,1,0,0,1,7,1,0,0,-1,0,1,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierMethodTest
+Test.Rules.Naming,DoNotPrefixEventsWithAfterOrBeforeTest,0,4,0,0,4,68,4,0,0,-1,9,0,Test.Rules.Naming.ClassicBad' Test.Rules.Naming.CustomBad' Test.Rules.Naming.GenericsBad' Test.Rules.Naming.StructBad' Test.Rules.Naming.IBad' Test.Rules.Naming.ClassicOk' Test.Rules.Naming.CustomOk' Test.Rules.Naming.GenericOk' Test.Rules.Naming.StructOk,
+Test.Rules.Naming,ClassicBad,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,CustomBad,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,GenericsBad,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,StructBad,0,0,0,0,0,3,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,IBad,0,0,0,0,0,3,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,ClassicOk,0,0,0,0,0,5,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,CustomOk,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,GenericOk,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,StructOk,0,0,0,0,0,3,0,0,0,-1,0,1,,Test.Rules.Naming.DoNotPrefixEventsWithAfterOrBeforeTest
+Test.Rules.Naming,DoNotPrefixValuesWithEnumNameTest,4,6,0,0,5,75,8,0,0,0,0,0,,
+Test.Rules.Naming,NonEnum,4,0,0,0,0,5,0,0,0,-1,0,0,,
+Test.Rules.Naming,FalsePositive,0,0,0,0,0,9,0,0,0,-1,0,0,,
+Test.Rules.Naming,SameName,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Test.Rules.Naming,Prefix,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Test.Rules.Naming,DoNotUseReservedInEnumValueNamesTest,4,5,0,0,4,58,7,0,0,0,0,0,,
+Test.Rules.Naming,Reserved,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Test.Rules.Naming,ISomeInterface,0,1,0,0,0,3,1,1,0,-1,0,1,,Test.Rules.Naming.ParameterNamesShouldMatchOverridenMethodTest
+Test.Rules.Naming,ISomeInterface2,0,1,0,0,0,3,1,1,0,-1,0,1,,Test.Rules.Naming.ParameterNamesShouldMatchOverridenMethodTest
+Test.Rules.Naming,SuperBaseClass,0,2,0,0,0,8,2,1,0,-1,0,1,,Test.Rules.Naming.BaseClass
+Test.Rules.Naming,BaseClass,0,5,0,0,0,13,5,1,1,-1,1,1,Test.Rules.Naming.SuperBaseClass,Test.Rules.Naming.ParameterNamesShouldMatchOverridenMethodTest
+Test.Rules.Naming,ParameterNamesShouldMatchOverridenMethodTest,0,6,0,0,6,75,6,0,0,-1,4,0,Test.Rules.Naming.ISomeInterface' Test.Rules.Naming.ISomeInterface2' Test.Rules.Naming.BaseClass' Test.Rules.Naming.TestCase,
+Test.Rules.Naming,TestCase,0,10,0,0,2,37,10,0,2,-1,0,1,,Test.Rules.Naming.ParameterNamesShouldMatchOverridenMethodTest
+Test.Rules.Naming,UseCorrectCasingAssemblyTest,0,1,0,0,1,14,1,0,0,-1,0,0,,
+Test.Rules.Naming,UseCorrectCasingTypeTest,0,2,0,0,2,18,2,0,0,-1,2,0,Test.Rules.Naming.CorrectCasing' Test.Rules.Naming.incorrectCasing,
+Test.Rules.Naming,CorrectCasing,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectCasingTypeTest
+Test.Rules.Naming,incorrectCasing,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectCasingTypeTest
+Test.Rules.Naming,CasingMethods,0,7,0,0,7,9,7,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectCasingTest
+Test.Rules.Naming,MoreComplexCasing,0,4,2,0,3,19,4,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectCasingTest
+Test.Rules.Naming,PrivateEventCasing,0,0,0,0,0,3,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectCasingTest
+Test.Rules.Naming,UseCorrectCasingTest,1,15,0,0,15,115,18,0,0,0.93,3,0,Test.Rules.Naming.CasingMethods' Test.Rules.Naming.MoreComplexCasing' Test.Rules.Naming.PrivateEventCasing,
+Test.Rules.Naming,AnonymousMethod,0,1,0,0,0,8,2,0,0,-1,0,0,,
+Test.Rules.Naming,C,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,CorrectClass,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,AnotherCorrectClass,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,CIncorrectClass,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,INcorrectClass,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,ILRange,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,InMemoryDoohicky,0,0,0,0,0,3,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,I,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,ICorrectInterface,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,IncorrectInterface,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,AnotherIncorrectInterface,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,CLSAbbreviation,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,ICLSAbbreviation,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,GoodSingleGenericType<T;V;K>,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,GoodPrefixGenericType<TPrefix>,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,BadCapsGenericType<a;b>,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,BadPrefixGenericType<Prefix>,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectPrefixTypeTest
+Test.Rules.Naming,UseCorrectPrefixTypeTest,0,5,0,0,5,41,5,0,0,-1,17,0,Test.Rules.Naming.C' Test.Rules.Naming.CorrectClass' Test.Rules.Naming.AnotherCorrectClass' Test.Rules.Naming.CIncorrectClass' Test.Rules.Naming.INcorrectClass' Test.Rules.Naming.ILRange' Test.Rules.Naming.InMemoryDoohicky' Test.Rules.Naming.I' Test.Rules.Naming.ICorrectInterface' Test.Rules.Naming.IncorrectInterface' Test.Rules.Naming.AnotherIncorrectInterface' Test.Rules.Naming.CLSAbbreviation' Test.Rules.Naming.ICLSAbbreviation' Test.Rules.Naming.GoodSingleGenericType<T;V;K>' Test.Rules.Naming.GoodPrefixGenericType<TPrefix>' Test.Rules.Naming.BadCapsGenericType<a;b>' Test.Rules.Naming.BadPrefixGenericType<Prefix>,
+Test.Rules.Naming,CorrectAttribute,0,0,0,0,0,2,0,2,0,-1,0,3,,Test.Rules.Naming.OtherAttribute' Test.Rules.Naming.OtherAttr' Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,IncorrectAttr,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,OtherAttribute,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.CorrectAttribute,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,OtherAttr,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.CorrectAttribute,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CorrectContextStaticAttribute,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,OtherClass,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,YetAnotherClass,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,InterfaceImplementer,0,2,3,0,2,20,2,2,0,-1,0,2,,Test.Rules.Naming.CorrectICollectionCollection' Test.Rules.Naming.IncorrectICollectionCol
+Test.Rules.Naming,CorrectICollectionCollection,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.InterfaceImplementer,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,IncorrectICollectionCol,0,0,0,0,0,2,0,1,1,-1,1,2,Test.Rules.Naming.InterfaceImplementer,Test.Rules.Naming.IncorrectICollectionColDerived' Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,IncorrectICollectionColDerived,0,0,0,0,0,2,0,0,2,-1,1,1,Test.Rules.Naming.IncorrectICollectionCol,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,MultipleInterfaceImplementer,0,8,0,0,8,34,8,3,0,-1,0,4,,Test.Rules.Naming.CorrectMultipleInterfaceImplementerPermission' Test.Rules.Naming.CorrectMultipleInterfaceImplementerCollection' Test.Rules.Naming.IncorrectMultipleInterfaceImplementer' Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CorrectMultipleInterfaceImplementerPermission,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.MultipleInterfaceImplementer,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CorrectMultipleInterfaceImplementerCollection,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.MultipleInterfaceImplementer,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,IncorrectMultipleInterfaceImplementer,0,0,0,0,0,2,0,1,1,-1,1,2,Test.Rules.Naming.MultipleInterfaceImplementer,Test.Rules.Naming.IncorrectICollectionImplementer' Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,IncorrectICollectionImplementer,0,2,3,0,2,20,2,0,2,-1,1,1,Test.Rules.Naming.IncorrectMultipleInterfaceImplementer,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,DerivingClassImplementingInterfaces,0,7,0,0,7,31,7,3,0,-1,0,3,,Test.Rules.Naming.CorrectDerivingClassImplementingInterfacesEventArgs' Test.Rules.Naming.IncorrectDerivingClassImplementingInterfacesCollection' Test.Rules.Naming.IncorrectDerivingClassImplementingInterfaces
+Test.Rules.Naming,CorrectDerivingClassImplementingInterfacesEventArgs,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.DerivingClassImplementingInterfaces,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,IncorrectDerivingClassImplementingInterfacesCollection,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.DerivingClassImplementingInterfaces,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,IncorrectDerivingClassImplementingInterfaces,0,0,0,0,0,2,0,0,1,-1,1,1,Test.Rules.Naming.DerivingClassImplementingInterfaces,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CorrectCollection<T>,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CollectionIncorrect<T>,0,0,0,0,0,2,0,0,0,-1,0,2,,Test.Rules.Naming.CollectionIncorrectDerived<T>' Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CollectionIncorrectDerived<T>,0,0,0,0,0,2,0,0,0,-1,1,1,Test.Rules.Naming.CollectionIncorrect<T>,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CorrectDictionary<T;V>,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,DictionaryIncorrect<T;V>,0,0,0,0,0,2,0,0,0,-1,0,2,,Test.Rules.Naming.DictionaryIncorrectDerived<T;V>' Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,DictionaryIncorrectDerived<T;V>,0,0,0,0,0,2,0,0,0,-1,1,1,Test.Rules.Naming.DictionaryIncorrect<T;V>,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,CorrectCollectionAndDictionary<T;V>,0,5,1,0,5,8,5,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,UseCorrectSuffixTest,0,25,0,0,23,205,25,0,0,-1,38,0,Test.Rules.Naming.CorrectAttribute' Test.Rules.Naming.IncorrectAttr' Test.Rules.Naming.OtherAttribute' Test.Rules.Naming.OtherAttr' Test.Rules.Naming.CorrectContextStaticAttribute' Test.Rules.Naming.OtherClass' Test.Rules.Naming.YetAnotherClass' Test.Rules.Naming.CorrectICollectionCollection' Test.Rules.Naming.IncorrectICollectionCol' Test.Rules.Naming.IncorrectICollectionColDerived' Test.Rules.Naming.MultipleInterfaceImplementer' Test.Rules.Naming.CorrectMultipleInterfaceImplementerPermission' Test.Rules.Naming.CorrectMultipleInterfaceImplementerCollection' Test.Rules.Naming.IncorrectMultipleInterfaceImplementer' Test.Rules.Naming.IncorrectICollectionImplementer' Test.Rules.Naming.CorrectDerivingClassImplementingInterfacesEventArgs' Test.Rules.Naming.IncorrectDerivingClassImplementingInterfacesCollection' Test.Rules.Naming.IncorrectDerivingClassImplementingInterfaces' Test.Rules.Naming.CorrectCollection<T>' Test.Rules.Naming.CollectionIncorrect<T>' Test.Rules.Naming.CollectionIncorrectDerived<T>' Test.Rules.Naming.CorrectDictionary<T;V>' Test.Rules.Naming.DictionaryIncorrect<T;V>' Test.Rules.Naming.DictionaryIncorrectDerived<T;V>' Test.Rules.Naming.CorrectCollectionAndDictionary<T;V>' Test.Rules.Naming.My' Test.Rules.Naming.MyDelegate' Test.Rules.Naming.MyEnum' Test.Rules.Naming.MyFlags' Test.Rules.Naming.MyEx' Test.Rules.Naming.MyImpl' Test.Rules.Naming.MyCollection' Test.Rules.Naming.ReturnValue' Test.Rules.Naming.ReturnValueEnum' Test.Rules.Naming.ReturnValues' Test.Rules.Naming.ReturnValuesFlags' Test.Rules.Naming.returnvalueenum' Test.Rules.Naming.returnvaluesflags,
+Test.Rules.Naming,My,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,MyDelegate,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,MyEnum,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,MyFlags,0,0,0,0,0,3,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,MyEx,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,MyImpl,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,MyCollection,0,0,0,0,0,2,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,ReturnValue,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,ReturnValueEnum,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,ReturnValues,0,0,0,0,0,5,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,ReturnValuesFlags,0,0,0,0,0,5,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,returnvalueenum,0,0,0,0,0,4,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,returnvaluesflags,0,0,0,0,0,5,0,0,0,-1,0,1,,Test.Rules.Naming.UseCorrectSuffixTest
+Test.Rules.Naming,AppDomainManagerInitializationOptions,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Test.Rules.Naming,ConsoleModifier,0,0,0,0,0,6,0,0,0,-1,0,0,,
+Test.Rules.Naming,UsePluralNameInEnumFlagsTest,4,3,0,0,3,33,3,0,0,0,0,0,,
+Test.Rules.Naming,UsePreferredTermsAssemblyTest,2,3,0,0,3,30,3,0,0,0,0,1,,Test.Rules.Naming.UsePreferredTermsTypeTest
+Test.Rules.Naming,UsePreferredTermsTypeTest,0,2,0,0,2,17,2,0,0,-1,3,0,Test.Rules.Naming.UsePreferredTermsAssemblyTest' Cancelled.ComPlus.Indices.ShouldntBe.Writeable.WouldntLogOutOrSignOff' Cancelled.ComPlus.Indices.ShouldntBe.Writeable.CouldntLogInOrSignOn,
+Test.Rules.Naming,UsePreferredTermsMethodTest,0,3,0,0,2,19,3,0,0,-1,2,0,Cancelled.ComPlus.Indices.ShouldntBe.Writeable.WouldntLogOutOrSignOff' Cancelled.ComPlus.Indices.ShouldntBe.Writeable.CouldntLogInOrSignOn,
+Test.Rules.Naming,DayOfWeek,0,0,0,0,0,9,0,0,0,-1,0,0,,
+Test.Rules.Naming,DateTimeKinds,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Test.Rules.Naming,StringSplitOptions,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Test.Rules.Naming,UseSingularNameInEnumsUnlessAreFlagsTest,4,4,0,0,4,40,4,0,0,0,0,0,,
+Test_Rules_Naming,Type_With_Underscore,1,1,1,0,1,13,1,0,0,0,0,2,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest' Test.Rules.Naming.AvoidNonAlphanumericIdentifierMethodTest
+Test_Rules_Naming,TypeWithoutUnderscore,2,1,2,0,1,17,1,0,0,0,0,2,,Test.Rules.Naming.AvoidNonAlphanumericIdentifierTypeTest' Test.Rules.Naming.AvoidNonAlphanumericIdentifierMethodTest
+Test.IO,Foo,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.Fa,Foo,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.ASP,Foo,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.ASP,Bar,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.A,Foo,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.Rules.ROCKS,Foo,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.aSP,Foo,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.aSP,Zoo,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Test.aSP,Yar,0,0,0,0,0,1,0,0,0,-1,0,0,,
+Cancelled.ComPlus.Indices.ShouldntBe.Writeable,WouldntLogOutOrSignOff,2,2,1,2,0,13,2,0,0,1,0,3,,Cancelled.ComPlus.Indices.ShouldntBe.Writeable.CouldntLogInOrSignOn' Test.Rules.Naming.UsePreferredTermsTypeTest' Test.Rules.Naming.UsePreferredTermsMethodTest
+Cancelled.ComPlus.Indices.ShouldntBe.Writeable,CouldntLogInOrSignOn,1,1,1,0,0,8,1,0,0,0,1,2,Cancelled.ComPlus.Indices.ShouldntBe.Writeable.WouldntLogOutOrSignOff,Test.Rules.Naming.UsePreferredTermsTypeTest' Test.Rules.Naming.UsePreferredTermsMethodTest

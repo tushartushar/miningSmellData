@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WebBackgrounder,IJobCoordinator,0,1,0,0,0,9,1,2,0,-1,1,1,WebBackgrounder.IJob,WebBackgrounder.JobManager
-WebBackgrounder,IJob,0,1,3,0,0,10,1,2,0,-1,0,9,,WebBackgrounder.IJobCoordinator' WebBackgrounder.IWorkItemRepository' WebBackgrounder.Schedule' WebBackgrounder.SingleServerJobCoordinator' WebBackgrounder.Scheduler' WebBackgrounder.WebFarmJobCoordinator' WebBackgrounder.WorkItemExtensions' WebBackgrounder.EntityWorkItemRepository' WebBackgrounder.UnitTests.TheNextMethod
-WebBackgrounder,IJobHost,0,1,0,0,0,4,1,1,0,-1,0,1,,WebBackgrounder.JobManager
-WebBackgrounder,IWorkItem,0,0,3,0,0,6,0,1,0,-1,0,6,,WebBackgrounder.WebFarmJobCoordinator' WebBackgrounder.WorkItemExtensions' WebBackgrounder.EntityWorkItemRepository' WebBackgrounder.UnitTests.TheGetLastWorkItemMethod' WebBackgrounder.UnitTests.TheIsActiveMethod' WebBackgrounder.UnitTests.TheIsTimedOutMethod
-WebBackgrounder,JobHost,2,3,0,0,3,45,4,0,1,0.67,0,2,,WebBackgrounder.UnitTests.TheStopMethod' WebBackgrounder.UnitTests.TheDoWorkMethod
-WebBackgrounder,IWorkItemRepository,0,5,0,0,0,8,5,1,0,-1,1,2,WebBackgrounder.IJob,WebBackgrounder.JobUnitOfWork' WebBackgrounder.WebFarmJobCoordinator
-WebBackgrounder,Job,0,3,3,0,1,26,3,2,1,-1,0,0,,
-WebBackgrounder,JobUnitOfWork,2,3,0,0,3,18,3,0,0,0,1,2,WebBackgrounder.IWorkItemRepository,WebBackgrounder.WebFarmJobCoordinator' WebBackgrounder.UnitTests.TheReserveWorkMethod
-WebBackgrounder,JobManager,6,10,1,0,7,90,15,0,0,0.3,4,1,WebBackgrounder.IJobHost' WebBackgrounder.IJobCoordinator' WebBackgrounder.Scheduler' WebBackgrounder.Schedule,WebBackgrounder.UnitTests.TheStartMethod
-WebBackgrounder,Schedule,1,5,3,0,4,47,7,0,0,0.4,1,7,WebBackgrounder.IJob,WebBackgrounder.JobManager' WebBackgrounder.Scheduler' WebBackgrounder.UnitTests.TheConstructor' WebBackgrounder.UnitTests.TheNextRunTimeProperty' WebBackgrounder.UnitTests.TheGetIntervalToNextRunMethod' WebBackgrounder.UnitTests.TheDisposeMethod' WebBackgrounder.UnitTests.TheNextMethod
-WebBackgrounder,SingleServerJobCoordinator,0,2,0,0,2,10,2,0,1,-1,1,0,WebBackgrounder.IJob,
-WebBackgrounder,Scheduler,1,3,0,0,3,21,4,0,0,0.67,2,2,WebBackgrounder.IJob' WebBackgrounder.Schedule,WebBackgrounder.JobManager' WebBackgrounder.UnitTests.TheNextMethod
-WebBackgrounder,TimerExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
-WebBackgrounder,WebFarmJobCoordinator,2,4,0,0,4,93,10,0,1,0,4,2,WebBackgrounder.IWorkItemRepository' WebBackgrounder.JobUnitOfWork' WebBackgrounder.IJob' WebBackgrounder.IWorkItem,WebBackgrounder.UnitTests.TheReserveWorkMethod' WebBackgrounder.UnitTests.TheGetWorkMethod
-WebBackgrounder,WorkItemExtensions,0,2,0,0,2,15,3,0,0,-1,2,0,WebBackgrounder.IWorkItem' WebBackgrounder.IJob,
+WebBackgrounder,IJobCoordinator,0,1,0,0,0,9,1,2,0,-1,1,3,WebBackgrounder.IJob,WebBackgrounder.JobManager' WebBackgrounder.WebFarmJobCoordinator' WebBackgrounder.SingleServerJobCoordinator
+WebBackgrounder,IJob,0,1,3,0,0,13,1,2,0,-1,0,9,,WebBackgrounder.WorkItemExtensions' WebBackgrounder.Job' WebBackgrounder.SingleServerJobCoordinator' WebBackgrounder.WebFarmJobCoordinator' WebBackgrounder.IJobCoordinator' WebBackgrounder.IWorkItemRepository' WebBackgrounder.Schedule' WebBackgrounder.JobManager' WebBackgrounder.Scheduler
+WebBackgrounder,IJobHost,0,1,0,0,0,4,1,1,0,-1,0,2,,WebBackgrounder.JobHost' WebBackgrounder.JobManager
+WebBackgrounder,IWorkItem,0,0,3,0,0,6,0,1,0,-1,0,2,,WebBackgrounder.WorkItemExtensions' WebBackgrounder.IWorkItemRepository
+WebBackgrounder,JobHost,2,3,0,0,3,45,6,0,1,0.67,1,1,WebBackgrounder.IJobHost,WebBackgrounder.JobManager
+WebBackgrounder,IWorkItemRepository,0,5,0,0,0,8,5,1,0,-1,2,2,WebBackgrounder.IJob' WebBackgrounder.IWorkItem,WebBackgrounder.WebFarmJobCoordinator' WebBackgrounder.JobUnitOfWork
+WebBackgrounder,Job,0,3,3,0,1,31,3,2,1,-1,1,0,WebBackgrounder.IJob,
+WebBackgrounder,JobUnitOfWork,2,3,0,0,3,21,3,0,0,0,1,1,WebBackgrounder.IWorkItemRepository,WebBackgrounder.WebFarmJobCoordinator
+WebBackgrounder,JobManager,6,10,1,0,7,104,16,0,0,0.3,6,0,WebBackgrounder.IJobCoordinator' WebBackgrounder.IJob' WebBackgrounder.IJobHost' WebBackgrounder.JobHost' WebBackgrounder.SingleServerJobCoordinator' WebBackgrounder.Scheduler,
+WebBackgrounder,Schedule,1,5,3,0,4,55,7,0,0,0.4,1,1,WebBackgrounder.IJob,WebBackgrounder.Scheduler
+WebBackgrounder,SingleServerJobCoordinator,0,2,0,0,2,11,2,0,1,-1,2,1,WebBackgrounder.IJobCoordinator' WebBackgrounder.IJob,WebBackgrounder.JobManager
+WebBackgrounder,Scheduler,1,3,0,0,3,24,4,0,0,0.67,2,1,WebBackgrounder.IJob' WebBackgrounder.Schedule,WebBackgrounder.JobManager
+WebBackgrounder,TimerExtensions,0,2,0,0,2,12,2,0,0,-1,0,0,,
+WebBackgrounder,WebFarmJobCoordinator,2,4,0,0,4,105,10,0,1,0,4,0,WebBackgrounder.IJobCoordinator' WebBackgrounder.IJob' WebBackgrounder.IWorkItemRepository' WebBackgrounder.JobUnitOfWork,
+WebBackgrounder,WorkItemExtensions,0,2,0,0,2,16,3,0,0,-1,2,0,WebBackgrounder.IJob' WebBackgrounder.IWorkItem,

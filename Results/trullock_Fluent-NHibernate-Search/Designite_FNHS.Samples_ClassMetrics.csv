@@ -1,10 +1,10 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-FNHS.Samples.Domain,Author,0,1,3,0,1,11,1,0,0,-1,0,4,,FNHS.Samples.Domain.Book' FNHS.Samples.Mappings.AuthorMap' FNHS.Samples.Program' FNHS.Samples.SearchMappings.AuthorSearchMap
-FNHS.Samples.Domain,Book,0,2,4,0,1,15,2,0,0,-1,1,2,FNHS.Samples.Domain.Author,FNHS.Samples.Mappings.BookMap' FNHS.Samples.Program
-FNHS.Samples.Mappings,AuthorMap,0,1,0,0,1,14,1,0,0,-1,1,0,FNHS.Samples.Domain.Author,
+FNHS.Samples.Domain,Author,0,1,3,0,1,11,1,0,0,-1,1,4,FNHS.Samples.Domain.Book,FNHS.Samples.SearchMappings.AuthorSearchMap' FNHS.Samples.Mappings.AuthorMap' FNHS.Samples.Domain.Book' FNHS.Samples.Program
+FNHS.Samples.Domain,Book,0,2,4,0,1,15,2,0,0,-1,1,3,FNHS.Samples.Domain.Author,FNHS.Samples.Mappings.BookMap' FNHS.Samples.Domain.Author' FNHS.Samples.Program
+FNHS.Samples.Mappings,AuthorMap,0,1,0,0,1,14,1,0,0,-1,1,1,FNHS.Samples.Domain.Author,FNHS.Samples.SessionFactory
 FNHS.Samples.Mappings,BookMap,0,1,0,0,1,11,1,0,0,-1,1,0,FNHS.Samples.Domain.Book,
-FNHS.Samples,Program,1,1,0,0,0,32,1,0,0,0,3,0,FNHS.Samples.SessionFactory' FNHS.Samples.Domain.Author' FNHS.Samples.Domain.Book,
-FNHS.Samples,SessionFactory,2,3,0,0,1,44,3,0,0,0,5,1,FluentNHibernate.Search.Cfg.FluentSearchConfiguration' FluentNHibernate.Search.Cfg.FluentSearchIndexingStrategyConfiguration' FluentNHibernate.Search.Cfg.FluentSearchDirectoryProviderConfiguration' FluentNHibernate.Search.Cfg.FluentSearch' FluentNHibernate.Search.Cfg.ListenerConfiguration,FNHS.Samples.Program
-FNHS.Samples.SearchMappings,AuthorSearchMap,0,1,0,0,0,11,1,0,0,-1,3,0,FluentNHibernate.Search.Mapping.Parts.DocumentIdMappingPart' FNHS.Samples.Domain.Author' FluentNHibernate.Search.Mapping.Parts.FieldMappingPart,
+FNHS.Samples,Program,1,1,0,0,0,32,1,0,0,0,3,0,FNHS.Samples.Domain.Author' FNHS.Samples.Domain.Book' FNHS.Samples.SessionFactory,
+FNHS.Samples,SessionFactory,2,3,0,0,1,44,3,0,0,0,2,1,FNHS.Samples.Mappings.AuthorMap' FNHS.Samples.SearchMappings.SearchMap,FNHS.Samples.Program
+FNHS.Samples.SearchMappings,AuthorSearchMap,0,1,0,0,0,11,1,0,0,-1,1,0,FNHS.Samples.Domain.Author,
 FNHS.Samples.SearchMappings,BookSearchMap,0,0,0,0,0,4,0,0,0,-1,0,0,,
-FNHS.Samples.SearchMappings,SearchMap,0,1,0,0,0,7,1,0,1,-1,0,0,,
+FNHS.Samples.SearchMappings,SearchMap,0,1,0,0,0,7,1,0,1,-1,0,1,,FNHS.Samples.SessionFactory

@@ -1,0 +1,66 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NxCoreAPI,NxDate,8,0,0,8,0,20,0,0,0,-1,0,8,,ServerNxCore.ServerNxCore' NxCoreAPI.NxCoreSystem' NxCoreAPI.DataUnion' NxCoreAPI.NxOptionHdr' NxCoreAPI.NxCoreHeader' NxCoreAPI.NxCoreTapeFile' NxCoreAPI.NxCoreAPIDLLFile' NxCoreAPI.NxCore
+NxCoreAPI,NxTime,8,0,0,7,0,20,0,0,0,-1,0,5,,ServerNxCore.ServerNxCore' NxCoreAPI.NxCoreSystem' NxCoreAPI.DataUnion' NxCoreAPI.NxCoreHeader' NxCoreAPI.NxCoreAPIDLLFile
+NxCoreAPI,NxString,4,0,0,4,0,13,0,0,0,-1,0,7,,NxCoreAPI.NxCoreMMQuote' NxCoreAPI.DataUnion' NxCoreAPI.NxCoreCategory' NxCoreAPI.NxOptionHdr' NxCoreAPI.NxCoreSymbolChange' NxCoreAPI.NxCoreHeader' NxCoreAPI.NxCoreStateMMQuote
+NxCoreAPI,NxStringDaS,4,0,0,4,0,12,0,0,0,-1,0,1,,NxCoreAPI.NxOptionHdr
+NxCoreAPI,NxAccessStatus,17,0,0,17,0,38,0,0,0,-1,0,1,,NxCoreAPI.NxCoreSystem
+NxCoreAPI,NxCoreSystem,13,0,0,13,0,30,0,0,0,-1,3,1,NxCoreAPI.NxDate' NxCoreAPI.NxTime' NxCoreAPI.NxAccessStatus,ServerNxCore.ServerNxCore
+NxCoreAPI,NxCoreQuote,13,0,0,12,0,30,0,0,0,-1,0,3,,ServerNxCore.ServerNxCore' NxCoreAPI.NxCoreExgQuote' NxCoreAPI.NxCoreMMQuote
+NxCoreAPI,NxCoreExgQuote,17,0,0,17,0,38,0,0,0,-1,1,2,NxCoreAPI.NxCoreQuote,ServerNxCore.ServerNxCore' NxCoreAPI.NxCoreData
+NxCoreAPI,NxCoreMMQuote,4,0,0,4,0,12,0,0,0,-1,2,1,NxCoreAPI.NxString' NxCoreAPI.NxCoreQuote,NxCoreAPI.NxCoreData
+NxCoreAPI,NxCTAnalysis,12,0,0,11,0,28,0,0,0,-1,0,1,,NxCoreAPI.NxCoreTrade
+NxCoreAPI,NxCoreTrade,20,0,0,18,0,44,0,0,0,-1,1,2,NxCoreAPI.NxCTAnalysis,ServerNxCore.ServerNxCore' NxCoreAPI.NxCoreData
+NxCoreAPI,NxPrice,2,0,0,2,0,8,0,0,0,-1,0,1,,NxCoreAPI.DataUnion
+NxCoreAPI,StringTableItem,2,0,0,2,0,8,0,0,0,-1,0,1,,NxCoreAPI.DataUnion
+NxCoreAPI,DataUnion,9,0,0,9,0,22,0,0,0,-1,5,1,NxCoreAPI.NxDate' NxCoreAPI.NxTime' NxCoreAPI.NxString' NxCoreAPI.NxPrice' NxCoreAPI.StringTableItem,NxCoreAPI.NxCategoryField
+NxCoreAPI,NxCategoryField,11,0,0,11,0,26,0,0,0,-1,1,1,NxCoreAPI.DataUnion,NxCoreAPI.NxCoreCategory
+NxCoreAPI,NxCoreCategory,3,0,0,3,0,10,0,0,0,-1,2,1,NxCoreAPI.NxString' NxCoreAPI.NxCategoryField,NxCoreAPI.NxCoreData
+NxCoreAPI,NxOptionHdr,13,0,0,13,0,30,0,0,0,-1,3,2,NxCoreAPI.NxDate' NxCoreAPI.NxString' NxCoreAPI.NxStringDaS,NxCoreAPI.NxCoreSymbolChange' NxCoreAPI.NxCoreHeader
+NxCoreAPI,NxCoreSymbolChange,6,0,0,5,0,16,0,0,0,-1,2,1,NxCoreAPI.NxString' NxCoreAPI.NxOptionHdr,NxCoreAPI.NxCoreData
+NxCoreAPI,NxCoreSymbolSpin,5,0,0,5,0,14,0,0,0,-1,0,1,,NxCoreAPI.NxCoreData
+NxCoreAPI,NxCoreData,6,0,0,6,0,16,0,0,0,-1,6,1,NxCoreAPI.NxCoreExgQuote' NxCoreAPI.NxCoreMMQuote' NxCoreAPI.NxCoreTrade' NxCoreAPI.NxCoreCategory' NxCoreAPI.NxCoreSymbolChange' NxCoreAPI.NxCoreSymbolSpin,NxCoreAPI.NxCoreMessage
+NxCoreAPI,NxCoreHeader,9,0,0,8,0,22,0,0,0,-1,4,1,NxCoreAPI.NxDate' NxCoreAPI.NxTime' NxCoreAPI.NxString' NxCoreAPI.NxOptionHdr,NxCoreAPI.NxCoreMessage
+NxCoreAPI,NxCoreMessage,3,0,0,3,0,10,0,0,0,-1,2,1,NxCoreAPI.NxCoreData' NxCoreAPI.NxCoreHeader,ServerNxCore.ServerNxCore
+NxCoreAPI,NxCoreStateExgQuote,6,0,0,6,0,16,0,0,0,-1,0,1,,NxCoreAPI.NxCoreStateExgQuotes
+NxCoreAPI,NxCoreStateMMQuote,7,0,0,7,0,18,0,0,0,-1,1,1,NxCoreAPI.NxString,NxCoreAPI.NxCoreStateMMQuotes
+NxCoreAPI,NxCoreStateExgQuotes,6,0,0,6,0,17,0,0,0,-1,1,1,NxCoreAPI.NxCoreStateExgQuote,NxCoreAPI.NxCore
+NxCoreAPI,NxCoreStateMMQuotes,4,0,0,4,0,13,0,0,0,-1,1,1,NxCoreAPI.NxCoreStateMMQuote,NxCoreAPI.NxCore
+NxCoreAPI,NxCoreStateTrade,14,0,0,14,0,32,0,0,0,-1,0,1,,NxCoreAPI.NxCore
+NxCoreAPI,NxCoreStateOHLCTrade,15,0,0,15,0,34,0,0,0,-1,0,0,,
+NxCoreAPI,NxCoreTapeFile,7,0,0,7,0,18,0,0,0,-1,1,0,NxCoreAPI.NxDate,
+NxCoreAPI,NxCoreAPIDLLFile,10,0,0,10,0,24,0,0,0,-1,2,0,NxCoreAPI.NxDate' NxCoreAPI.NxTime,
+NxCoreAPI,NxCore,163,18,0,163,18,324,18,0,0,1,4,1,NxCoreAPI.NxDate' NxCoreAPI.NxCoreStateExgQuotes' NxCoreAPI.NxCoreStateMMQuotes' NxCoreAPI.NxCoreStateTrade,ServerNxCore.ServerNxCore
+ServerNxCore,nxST_EXCHANGE,0,0,0,0,0,63,0,0,0,-1,0,1,,ServerNxCore.ServerNxCore
+ServerNxCore,nxST_TRADECONDITION,0,0,0,0,0,111,0,0,0,-1,0,0,,
+ServerNxCore,nxST_QUOTECONDITION,0,0,0,0,0,62,0,0,0,-1,0,0,,
+ServerNxCore,nxST_CATEGORY,0,0,0,0,0,64,0,0,0,-1,0,0,,
+ServerNxCore,nxST_HALTSTATUS,0,0,0,0,0,7,0,0,0,-1,0,0,,
+ServerNxCore,nxST_HALTREASONTYPE,0,0,0,0,0,11,0,0,0,-1,0,0,,
+ServerNxCore,nxST_OPENINDICATIONTYPE,0,0,0,0,0,9,0,0,0,-1,0,0,,
+ServerNxCore,nxST_ORDERIMBALANCETYPE,0,0,0,0,0,10,0,0,0,-1,0,0,,
+ServerNxCore,nxST_TRADEREPORTREASON,0,0,0,0,0,10,0,0,0,-1,0,0,,
+ServerNxCore,nxST_EXGCORRECTIONMAP,0,0,0,0,0,9,0,0,0,-1,0,0,,
+ServerNxCore,nxST_SYMBOLCHANGETYPE,0,0,0,0,0,6,0,0,0,-1,0,0,,
+ServerNxCore,nxST_OHLCFLAGS,0,0,0,0,0,32,0,0,0,-1,0,0,,
+ServerNxCore,nxST_EXDIVIDENDATTRIB,0,0,0,0,0,32,0,0,0,-1,0,0,,
+ServerNxCore,nxST_OPRAEXCHANGELIST,0,0,0,0,0,19,0,0,0,-1,0,0,,
+ServerNxCore,nxST_MARKETMAKERTYPE,0,0,0,0,0,6,0,0,0,-1,0,0,,
+ServerNxCore,nxST_MMQUOTETYPE,0,0,0,0,0,9,0,0,0,-1,0,0,,
+ServerNxCore,nxST_REFRESHTYPE,0,0,0,0,0,7,0,0,0,-1,0,0,,
+ServerNxCore,nxST_EXPIRATIONCYCLE,0,0,0,0,0,12,0,0,0,-1,0,0,,
+ServerNxCore,nxST_VOLUMETYPE,0,0,0,0,0,7,0,0,0,-1,0,0,,
+ServerNxCore,nxST_QTEMATCHTYPE,0,0,0,0,0,9,0,0,0,-1,0,0,,
+ServerNxCore,nxST_QTEMATCHFLAGS,0,0,0,0,0,5,0,0,0,-1,0,0,,
+ServerNxCore,nxST_SIGHIGHLOWTYPE,0,0,0,0,0,8,0,0,0,-1,0,0,,
+ServerNxCore,nxST_BBOCHANGEFLAGS,0,0,0,0,0,9,0,0,0,-1,0,0,,
+ServerNxCore,nxST_TRADECONDFLAGS,0,0,0,0,0,6,0,0,0,-1,0,0,,
+ServerNxCore,nxST_PRICEFLAGS,0,0,0,0,0,10,0,0,0,-1,0,0,,
+ServerNxCore,nxST_SETTLEFLAGMAP,0,0,0,0,0,7,0,0,0,-1,0,0,,
+ServerNxCore,nxST_SYMBOLFNCLSTATUSMAP,0,0,0,0,0,8,0,0,0,-1,0,0,,
+ServerNxCore,nxST_EQUITYCLASSIFICATIONS,0,0,0,0,0,13,0,0,0,-1,0,0,,
+ServerNxCore,nxST_SYMBOLTYPES,0,0,0,0,0,14,0,0,0,-1,0,0,,
+ServerNxCore,ServerNxCore,22,18,5,2,3,439,73,0,0,0.28,10,1,NxCoreAPI.NxDate' NxCoreAPI.NxTime' NxCoreAPI.NxCoreSystem' NxCoreAPI.NxCoreQuote' NxCoreAPI.NxCoreExgQuote' NxCoreAPI.NxCoreTrade' NxCoreAPI.NxCoreMessage' NxCoreAPI.NxCore' ServerNxCore.nxST_EXCHANGE' ServerNxCore.ServerNxCoreMain,ServerNxCore.ServerNxCoreMain
+ServerNxCore,ServerNxCoreMain,6,7,1,1,1,103,10,0,0,0.29,2,2,ServerNxCore.ServerNxCore' ServerNxCore.Properties.Settings,ServerNxCore.ServerNxCore' ServerNxCore.Program
+ServerNxCore,Program,1,3,0,0,0,32,3,0,0,1,1,0,ServerNxCore.ServerNxCoreMain,
+ServerNxCore.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+ServerNxCore.Properties,Settings,1,0,6,0,0,72,0,0,0,-1,0,1,,ServerNxCore.ServerNxCoreMain

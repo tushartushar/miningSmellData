@@ -1,62 +1,100 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Cosmos.HAL.BlockDevice,Ata,3,2,2,0,1,23,2,1,1,1,3,1,Cosmos.Debug.Kernel.Debugger' Cosmos.HAL.BlockDevice.ControllerIdEnum' Cosmos.HAL.BlockDevice.BusPositionEnum,Cosmos.HAL.Global
-Cosmos.HAL.BlockDevice,ControllerIdEnum,0,0,0,0,0,1,0,0,0,-1,0,3,,Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.Global
-Cosmos.HAL.BlockDevice,BusPositionEnum,0,0,0,0,0,1,0,0,0,-1,0,3,,Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.Global
-Cosmos.HAL.BlockDevice,AtaPio,7,14,4,1,8,319,22,0,2,0.14,11,1,Cosmos.Core.IOGroup.ATA' Cosmos.HAL.BlockDevice.SpecLevel' Cosmos.Debug.Kernel.Debugger' Cosmos.Core.IOPortWrite' Cosmos.HAL.BlockDevice.ControllerIdEnum' Cosmos.HAL.BlockDevice.BusPositionEnum' Cosmos.HAL.BlockDevice.Status' Cosmos.HAL.BlockDevice.Cmd' Cosmos.Core.IOPort' Cosmos.Core.IOPortRead' Cosmos.HAL.BlockDevice.DvcSelVal,Cosmos.HAL.Global
+Cosmos.HAL.BlockDevice,AHCI,27,12,1,2,3,332,53,0,0,0.17,22,2,Cosmos.HAL.BlockDevice.BlockDevice' Cosmos.HAL.BlockDevice.EBR' Cosmos.HAL.BlockDevice.MBR' Cosmos.HAL.BlockDevice.Partition' Cosmos.HAL.BlockDevice.Ports.SATA' Cosmos.HAL.BlockDevice.Ports.StoragePort' Cosmos.HAL.BlockDevice.Registers.Base' Cosmos.HAL.BlockDevice.Registers.GenericRegisters' Cosmos.HAL.BlockDevice.Registers.PortRegisters' Cosmos.HAL.BlockDevice.Registers.HBACommandHeader' Cosmos.HAL.BlockDevice.Registers.PortType' Cosmos.HAL.BlockDevice.Registers.AHCISignature' Cosmos.HAL.BlockDevice.Registers.InterfacePowerManagementStatus' Cosmos.HAL.BlockDevice.Registers.CurrentInterfaceSpeedStatus' Cosmos.HAL.BlockDevice.Registers.DeviceDetectionStatus' Cosmos.HAL.BlockDevice.Registers.ATADeviceStatus' Cosmos.HAL.BlockDevice.Registers.CommandAndStatus' Cosmos.HAL.ClassID' Cosmos.HAL.SubclassID' Cosmos.HAL.ProgramIF' Cosmos.HAL.PCI' Cosmos.HAL.PCIDevice,Cosmos.HAL.Global' Cosmos.HAL.BlockDevice.Ports.SATA
+Cosmos.HAL.BlockDevice,Ata,3,2,2,0,1,20,2,1,1,1,3,2,Cosmos.HAL.BlockDevice.ControllerIdEnum' Cosmos.HAL.BlockDevice.BusPositionEnum' Cosmos.HAL.BlockDevice.BlockDevice,Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.BlockDevice.IDE
+Cosmos.HAL.BlockDevice,ControllerIdEnum,0,0,0,0,0,1,0,0,0,-1,0,3,,Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.BlockDevice.IDE
+Cosmos.HAL.BlockDevice,BusPositionEnum,0,0,0,0,0,1,0,0,0,-1,0,3,,Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.BlockDevice.AtaPio
+Cosmos.HAL.BlockDevice,AtaPio,7,14,4,1,8,325,26,0,2,0.14,7,1,Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.ControllerIdEnum' Cosmos.HAL.BlockDevice.BusPositionEnum' Cosmos.HAL.BlockDevice.Status' Cosmos.HAL.BlockDevice.DvcSelVal' Cosmos.HAL.BlockDevice.Cmd' Cosmos.HAL.BlockDevice.SpecLevel,Cosmos.HAL.BlockDevice.IDE
 Cosmos.HAL.BlockDevice,Status,0,0,0,0,0,13,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AtaPio
 Cosmos.HAL.BlockDevice,Error,0,0,0,0,0,12,0,0,0,-1,0,0,,
 Cosmos.HAL.BlockDevice,DvcSelVal,0,0,0,0,0,12,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AtaPio
 Cosmos.HAL.BlockDevice,Cmd,0,0,0,0,0,18,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AtaPio
 Cosmos.HAL.BlockDevice,Ident,0,0,0,0,0,14,0,0,0,-1,0,0,,
-Cosmos.HAL.BlockDevice,SpecLevel,0,0,0,0,0,6,0,0,0,-1,0,2,,Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.Global
-Cosmos.HAL.BlockDevice,BlockDevice,3,5,2,1,3,38,7,2,1,0.8,0,3,,Cosmos.HAL.BlockDevice.Partition' Cosmos.HAL.Global' Cosmos.System.FileSystem.CosmosVFS
-Cosmos.HAL.BlockDevice,EBR,1,2,0,1,1,37,3,0,0,1,1,1,Cosmos.HAL.BlockDevice.PartInfo,Cosmos.HAL.Global
-Cosmos.HAL.BlockDevice,PartInfo,6,2,0,6,2,21,2,0,0,0,0,2,,Cosmos.HAL.BlockDevice.EBR' Cosmos.HAL.BlockDevice.MBR
-Cosmos.HAL.BlockDevice,MBR,2,2,0,2,1,41,3,0,0,1,1,1,Cosmos.HAL.BlockDevice.PartInfo,Cosmos.HAL.Global
-Cosmos.HAL.BlockDevice,Partition,2,4,0,0,4,30,4,0,2,0.5,1,5,Cosmos.HAL.BlockDevice.BlockDevice,Cosmos.HAL.Global' Cosmos.System.FileSystem.CosmosVFS' Cosmos.System.FileSystem.FileSystem' Cosmos.System.FileSystem.FAT.FatFileSystem' Cosmos.System.FileSystem.FAT.Fat
-Cosmos.HAL,Bootstrap,0,1,0,0,1,8,1,0,0,-1,1,1,Cosmos.Core.Bootstrap,Cosmos.System.Kernel
-Cosmos.HAL,DebugTextScreen,2,11,2,0,10,85,12,0,1,0.91,1,0,Cosmos.Debug.Kernel.Debugger,
-Cosmos.HAL,Device,0,0,0,0,0,2,0,6,0,-1,0,0,,
-Cosmos.HAL,VGAScreen,21,19,3,2,13,1171,42,0,0,0.16,9,1,Cosmos.Debug.Kernel.Debugger' Cosmos.Core.IOGroup.VGA' Cosmos.Core.IOPortWrite' Cosmos.Core.IOPort' Cosmos.Core.IOPortRead' Cosmos.Core.MemoryBlock08' Cosmos.HAL.TextSize' Cosmos.HAL.ScreenSize' Cosmos.HAL.ColorDepth,Cosmos.System.VGAScreen
-Cosmos.HAL,TextSize,0,0,0,0,0,9,0,0,0,-1,0,2,,Cosmos.HAL.VGAScreen' Cosmos.System.VGAScreen
-Cosmos.HAL,ScreenSize,0,0,0,0,0,15,0,0,0,-1,0,2,,Cosmos.HAL.VGAScreen' Cosmos.System.VGAScreen
-Cosmos.HAL,ColorDepth,0,0,0,0,0,7,0,0,0,-1,0,2,,Cosmos.HAL.VGAScreen' Cosmos.System.VGAScreen
-Cosmos.HAL,Global,3,3,1,3,2,102,10,0,0,0.67,17,4,Cosmos.Debug.Kernel.Debugger' Cosmos.HAL.TextScreenBase' Cosmos.HAL.PCI' Cosmos.Core.Global' Cosmos.Core.ACPI' Cosmos.HAL.BlockDevice.ControllerIdEnum' Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.BusPositionEnum' Cosmos.Core.CPU' Cosmos.Core.IOGroup.ATA' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.BlockDevice.MBR' Cosmos.HAL.BlockDevice.EBR' Cosmos.HAL.BlockDevice.Partition' Cosmos.Core.BaseIOGroups' Cosmos.HAL.BlockDevice.SpecLevel' Cosmos.HAL.BlockDevice.BlockDevice,Cosmos.HAL.KeyboardBase' Cosmos.HAL.Drivers.VBEDriver' Cosmos.System.Global' Cosmos.System.Kernel
-Cosmos.HAL,KeyboardBase,1,4,0,1,2,21,4,1,1,0.5,4,1,Cosmos.Debug.Kernel.Debugger' Cosmos.HAL.Global' Cosmos.Core.CPU' Cosmos.Core.Global,Cosmos.System.KeyboardManager
-Cosmos.HAL,Mouse,7,6,0,5,2,137,9,0,0,0,6,0,Cosmos.HAL.MouseState' Cosmos.Core.IOPort' Cosmos.Core.IOGroup.Mouse' Cosmos.Core.BaseIOGroups' Cosmos.Core.INTs' Cosmos.Core.IRQContext,
-Cosmos.HAL,MouseState,0,0,0,0,0,19,0,0,0,-1,0,1,,Cosmos.HAL.Mouse
-Cosmos.HAL,NetworkDevice,1,10,3,1,8,34,10,1,1,1,0,5,,Cosmos.System.Network.ARP.ARPPacket' Cosmos.System.Network.NetworkStack' Cosmos.System.Network.IPv4.Config' Cosmos.System.Network.IPv4.OutgoingBuffer' Cosmos.System.Network.IPv4.BufferEntry
-Cosmos.HAL,PCI,1,5,1,0,3,72,16,0,0,0,1,2,Cosmos.HAL.PCIDevice,Cosmos.HAL.Global' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
-Cosmos.HAL,PCIDevice,20,12,0,19,4,260,14,3,0,0.17,7,3,Cosmos.HAL.PCIHeaderType' Cosmos.HAL.PCIBist' Cosmos.HAL.PCIInterruptPIN' Cosmos.HAL.PCIBaseAddressBar' Cosmos.Core.IOGroup.PCI' Cosmos.HAL.Config' Cosmos.Core.IOPort,Cosmos.HAL.PCI' Cosmos.HAL.DeviceClass' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
+Cosmos.HAL.BlockDevice,SpecLevel,0,0,0,0,0,6,0,0,0,-1,0,2,,Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.BlockDevice.IDE
+Cosmos.HAL.BlockDevice,BlockDevice,3,5,2,1,3,32,7,4,1,0.8,1,5,Cosmos.HAL.Device,Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.Ports.StoragePort' Cosmos.HAL.BlockDevice.Partition' Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice,EBR,1,2,0,1,1,38,4,0,0,1,1,2,Cosmos.HAL.BlockDevice.PartInfo,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.IDE
+Cosmos.HAL.BlockDevice,PartInfo,6,2,0,6,2,23,2,0,0,0,0,2,,Cosmos.HAL.BlockDevice.EBR' Cosmos.HAL.BlockDevice.MBR
+Cosmos.HAL.BlockDevice,IDE,1,2,0,0,0,69,10,0,0,0,13,1,Cosmos.HAL.BlockDevice.Ata' Cosmos.HAL.BlockDevice.ControllerIdEnum' Cosmos.HAL.BlockDevice.BusPositionEnum' Cosmos.HAL.BlockDevice.AtaPio' Cosmos.HAL.BlockDevice.SpecLevel' Cosmos.HAL.BlockDevice.BlockDevice' Cosmos.HAL.BlockDevice.EBR' Cosmos.HAL.BlockDevice.MBR' Cosmos.HAL.BlockDevice.Partition' Cosmos.HAL.ClassID' Cosmos.HAL.SubclassID' Cosmos.HAL.PCI' Cosmos.HAL.PCIDevice,Cosmos.HAL.Global
+Cosmos.HAL.BlockDevice,MBR,2,2,0,2,1,46,4,0,0,1,1,2,Cosmos.HAL.BlockDevice.PartInfo,Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice,Partition,2,4,0,0,4,30,4,0,2,0.5,1,2,Cosmos.HAL.BlockDevice.BlockDevice,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.IDE
+Cosmos.HAL.BlockDevice.Ports,SATA,7,10,6,3,7,300,40,0,1,0.3,10,1,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.Ports.StoragePort' Cosmos.HAL.BlockDevice.Registers.Base' Cosmos.HAL.BlockDevice.Registers.PortRegisters' Cosmos.HAL.BlockDevice.Registers.HBACommandHeader' Cosmos.HAL.BlockDevice.Registers.HBACommandTable' Cosmos.HAL.BlockDevice.Registers.FISRegisterH2D' Cosmos.HAL.BlockDevice.Registers.PortType' Cosmos.HAL.BlockDevice.Registers.FISType' Cosmos.HAL.BlockDevice.Registers.ATACommands,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Ports,SATAPI,2,5,3,1,5,113,16,0,1,0.4,8,0,Cosmos.HAL.BlockDevice.Ports.StoragePort' Cosmos.HAL.BlockDevice.Registers.PortRegisters' Cosmos.HAL.BlockDevice.Registers.HBACommandHeader' Cosmos.HAL.BlockDevice.Registers.HBACommandTable' Cosmos.HAL.BlockDevice.Registers.FISRegisterH2D' Cosmos.HAL.BlockDevice.Registers.PortType' Cosmos.HAL.BlockDevice.Registers.FISType' Cosmos.HAL.BlockDevice.Registers.ATACommands,
+Cosmos.HAL.BlockDevice.Ports,StoragePort,0,0,3,0,0,6,0,2,2,-1,2,3,Cosmos.HAL.BlockDevice.BlockDevice' Cosmos.HAL.BlockDevice.Registers.PortType,Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.Ports.SATA' Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,Base,0,0,0,0,0,4,0,0,0,-1,0,2,,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.Ports.SATA
+Cosmos.HAL.BlockDevice.Registers,GenericRegisters,2,1,11,0,1,65,1,0,0,0,0,1,,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,PortRegisters,5,1,18,3,1,104,1,0,0,0,1,3,Cosmos.HAL.BlockDevice.Registers.PortType,Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.Ports.SATA' Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,HBACommandHeader,3,1,17,0,1,93,1,0,0,0,0,3,,Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.Ports.SATA
+Cosmos.HAL.BlockDevice.Registers,HBACommandTable,3,1,3,1,1,29,2,0,0,0,1,2,Cosmos.HAL.BlockDevice.Registers.HBAPRDTEntry,Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.Ports.SATA
+Cosmos.HAL.BlockDevice.Registers,HBAPRDTEntry,3,1,6,0,1,41,1,0,0,0,0,1,,Cosmos.HAL.BlockDevice.Registers.HBACommandTable
+Cosmos.HAL.BlockDevice.Registers,FISRegisterH2D,2,1,20,0,1,107,1,0,0,0,0,2,,Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.Ports.SATA
+Cosmos.HAL.BlockDevice.Registers,FISRegisterD2H,2,1,23,0,1,116,1,0,0,0,1,0,Cosmos.HAL.BlockDevice.Registers.FISType,
+Cosmos.HAL.BlockDevice.Registers,PortType,0,0,0,0,0,8,0,0,0,-1,0,5,,Cosmos.HAL.BlockDevice.Ports.StoragePort' Cosmos.HAL.BlockDevice.Registers.PortRegisters' Cosmos.HAL.BlockDevice.Ports.SATA' Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,FISType,0,0,0,0,0,11,0,0,0,-1,0,3,,Cosmos.HAL.BlockDevice.Registers.FISRegisterD2H' Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.Ports.SATA
+Cosmos.HAL.BlockDevice.Registers,FISSize,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Cosmos.HAL.BlockDevice.Registers,AHCISignature,0,0,0,0,0,8,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,InterfacePowerManagementStatus,0,0,0,0,0,8,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,CurrentInterfaceSpeedStatus,0,0,0,0,0,7,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,DeviceDetectionStatus,0,0,0,0,0,7,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,ATADeviceStatus,0,0,0,0,0,5,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,CommandAndStatus,0,0,0,0,0,32,0,0,0,-1,0,1,,Cosmos.HAL.BlockDevice.AHCI
+Cosmos.HAL.BlockDevice.Registers,InterruptStatus,0,0,0,0,0,21,0,0,0,-1,0,0,,
+Cosmos.HAL.BlockDevice.Registers,InterruptEnable,0,0,0,0,0,15,0,0,0,-1,0,0,,
+Cosmos.HAL.BlockDevice.Registers,ATACommands,0,0,0,0,0,15,0,0,0,-1,0,2,,Cosmos.HAL.BlockDevice.Ports.SATAPI' Cosmos.HAL.BlockDevice.Ports.SATA
+Cosmos.HAL.BlockDevice.Registers,Bases,0,0,0,0,0,4,0,0,0,-1,0,0,,
+Cosmos.HAL,Bootstrap,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Cosmos.HAL,DebugTextScreen,2,11,2,0,10,85,12,0,1,0.91,1,0,Cosmos.HAL.TextScreenBase,
+Cosmos.HAL,Device,0,0,0,0,0,2,0,7,0,-1,0,7,,Cosmos.HAL.BlockDevice.BlockDevice' Cosmos.HAL.Drivers.USB.USBHost' Cosmos.HAL.KeyboardBase' Cosmos.HAL.MouseBase' Cosmos.HAL.TextScreenBase' Cosmos.HAL.PIT' Cosmos.HAL.PS2Controller
+Cosmos.HAL,VGAScreen,21,19,3,2,13,1171,55,0,0,0.16,3,0,Cosmos.HAL.TextSize' Cosmos.HAL.ScreenSize' Cosmos.HAL.ColorDepth,
+Cosmos.HAL,TextSize,0,0,0,0,0,9,0,0,0,-1,0,1,,Cosmos.HAL.VGAScreen
+Cosmos.HAL,ScreenSize,0,0,0,0,0,15,0,0,0,-1,0,1,,Cosmos.HAL.VGAScreen
+Cosmos.HAL,ColorDepth,0,0,0,0,0,7,0,0,0,-1,0,1,,Cosmos.HAL.VGAScreen
+Cosmos.HAL,Global,5,4,1,5,4,72,9,0,0,0.5,10,4,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.KeyboardBase' Cosmos.HAL.MouseBase' Cosmos.HAL.PCI' Cosmos.HAL.PIT' Cosmos.HAL.PS2Controller' Cosmos.HAL.PS2Mouse' Cosmos.HAL.TextScreen' Cosmos.HAL.TextScreenBase,Cosmos.HAL.PS2Mouse' Cosmos.HAL.PIT' Cosmos.HAL.PS2Keyboard' Cosmos.HAL.Drivers.VBEDriver
+Cosmos.HAL,KeyboardBase,1,3,0,1,3,14,3,1,1,1,1,2,Cosmos.HAL.Device,Cosmos.HAL.PS2Keyboard' Cosmos.HAL.Global
+Cosmos.HAL,MouseBase,1,1,0,1,1,7,1,1,1,0,1,2,Cosmos.HAL.Device,Cosmos.HAL.PS2Mouse' Cosmos.HAL.Global
+Cosmos.HAL,CardType,0,0,0,0,0,5,0,0,0,-1,0,2,,Cosmos.HAL.NetworkDevice' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.HAL,NetworkDevice,1,10,5,1,8,41,10,1,0,1,2,1,Cosmos.HAL.CardType' Cosmos.HAL.Network.MACAddress,Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.HAL,ClassID,0,0,0,0,0,25,0,0,0,-1,0,3,,Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.PCI
+Cosmos.HAL,SubclassID,0,0,0,0,0,14,0,0,0,-1,0,3,,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.PCI
+Cosmos.HAL,ProgramIF,0,0,0,0,0,10,0,0,0,-1,0,2,,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.PCI
+Cosmos.HAL,VendorID,0,0,0,0,0,8,0,0,0,-1,0,3,,Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII' Cosmos.HAL.PCI
+Cosmos.HAL,DeviceID,0,0,0,0,0,8,0,0,0,-1,0,3,,Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII' Cosmos.HAL.PCI
+Cosmos.HAL,PCI,1,6,1,1,4,88,21,0,0,0,6,5,Cosmos.HAL.ClassID' Cosmos.HAL.SubclassID' Cosmos.HAL.ProgramIF' Cosmos.HAL.VendorID' Cosmos.HAL.DeviceID' Cosmos.HAL.PCIDevice,Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.Global' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
+Cosmos.HAL,PCIDevice,19,14,3,18,6,756,18,3,0,0.14,6,8,Cosmos.HAL.PCIHeaderType' Cosmos.HAL.PCIBist' Cosmos.HAL.PCIInterruptPIN' Cosmos.HAL.PCICommand' Cosmos.HAL.Config' Cosmos.HAL.PCIBaseAddressBar,Cosmos.HAL.PCIDeviceNormal' Cosmos.HAL.BlockDevice.IDE' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII' Cosmos.HAL.PCIDeviceCardbus' Cosmos.HAL.PCIDeviceBridge' Cosmos.HAL.BlockDevice.AHCI' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII' Cosmos.HAL.PCI
 Cosmos.HAL,PCIHeaderType,0,0,0,0,0,6,0,0,0,-1,0,1,,Cosmos.HAL.PCIDevice
 Cosmos.HAL,PCIBist,0,0,0,0,0,6,0,0,0,-1,0,1,,Cosmos.HAL.PCIDevice
 Cosmos.HAL,PCIInterruptPIN,0,0,0,0,0,8,0,0,0,-1,0,1,,Cosmos.HAL.PCIDevice
+Cosmos.HAL,PCICommand,0,0,0,0,0,13,0,0,0,-1,0,1,,Cosmos.HAL.PCIDevice
 Cosmos.HAL,Config,0,0,0,0,0,19,0,0,0,-1,0,1,,Cosmos.HAL.PCIDevice
-Cosmos.HAL,DeviceClass,0,1,0,0,1,98,3,0,0,-1,1,0,Cosmos.HAL.PCIDevice,
-Cosmos.HAL,PCIBaseAddressBar,4,1,2,0,1,37,2,0,0,0,0,2,,Cosmos.HAL.PCIDevice' Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
-Cosmos.HAL,PCIDeviceBridge,0,1,19,0,1,48,1,0,1,-1,0,0,,
-Cosmos.HAL,PCIDeviceCardbus,0,1,19,0,1,45,1,0,1,-1,0,0,,
-Cosmos.HAL,PCIDeviceNormal,0,1,8,0,1,33,1,0,1,-1,0,1,,Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII
-Cosmos.HAL,PCSpeaker,0,3,0,0,3,30,4,0,0,-1,3,0,Cosmos.Core.IOPort' Cosmos.Core.IOGroup.PCSpeaker' Cosmos.Core.BaseIOGroups,
-Cosmos.HAL,PIT,9,10,6,3,9,172,18,0,1,0.3,4,0,Cosmos.Core.IOGroup.PIT' Cosmos.Core.CPU' Cosmos.Core.Global' Cosmos.HAL.PITTimer,
-Cosmos.HAL,PITTimer,5,3,1,3,3,33,4,0,0,0.67,0,1,,Cosmos.HAL.PIT
-Cosmos.HAL,Power,0,3,0,0,3,18,3,0,0,-1,3,1,Cosmos.Core.CPU' Cosmos.Core.Global' Cosmos.Core.ACPI,Cosmos.System.Power
-Cosmos.HAL,PS2Keyboard,1,4,0,0,2,34,5,0,2,1,4,0,Cosmos.Core.IOGroup.Keyboard' Cosmos.Core.INTs' Cosmos.Core.IOPort' Cosmos.Core.IRQContext,
-Cosmos.HAL,RTC,4,3,8,0,0,271,5,0,0,0.67,2,1,Cosmos.Core.IOGroup.RTC' Cosmos.Core.IOPort,Cosmos.System.FileSystem.FAT.Listing.FatDirectoryEntry
-Cosmos.HAL,TextScreen,9,10,2,0,10,120,13,0,1,0,5,0,Cosmos.Core.IOGroup.TextScreen' Cosmos.Core.MemoryBlock08' Cosmos.HAL.TextScreenHelpers' Cosmos.Core.MemoryBlock' Cosmos.Core.IOPort,
-Cosmos.HAL,TextScreenBase,0,9,4,0,9,35,9,2,1,-1,0,3,,Cosmos.HAL.Global' Cosmos.System.Console' Cosmos.System.Global
-Cosmos.HAL,TextScreenHelpers,1,5,0,0,5,45,9,0,0,0,1,1,Cosmos.Debug.Kernel.Debugger,Cosmos.HAL.TextScreen
-Cosmos.HAL.Drivers.PCI.Audio,PCMStream,2,3,0,0,3,18,3,0,0,0,0,0,,
-Cosmos.HAL.Drivers.PCI.Network,AMDPCNetII,12,12,5,0,9,283,31,0,2,0.5,10,0,Cosmos.HAL.PCIDeviceNormal' Cosmos.Core.IOGroup.Network.AMDPCNetIIIOGroup' Cosmos.HAL.Network.MACAddress' Cosmos.Core.ManagedMemoryBlock' Cosmos.Core.IOPort' Cosmos.Core.IOPortRead' Cosmos.Common.BinaryHelper' Cosmos.Core.PIC' Cosmos.Core.Global' Cosmos.Core.IRQContext,
-Cosmos.HAL.Drivers.PCI.Video,VMWareSVGAII,11,17,0,0,10,311,26,0,0,0,11,0,Cosmos.Core.IOPort' Cosmos.Core.MemoryBlock' Cosmos.HAL.PCIDevice' Cosmos.HAL.PCI' Cosmos.HAL.PCIBaseAddressBar' Cosmos.HAL.Drivers.PCI.Video.IOPortOffset' Cosmos.HAL.Drivers.PCI.Video.Register' Cosmos.HAL.Drivers.PCI.Video.ID' Cosmos.HAL.Drivers.PCI.Video.FIFO' Cosmos.HAL.Drivers.PCI.Video.FIFOCommand' Cosmos.HAL.Drivers.PCI.Video.Capability,
+Cosmos.HAL,DeviceClass,0,2,0,0,2,555,192,0,0,-1,0,0,,
+Cosmos.HAL,PCIBaseAddressBar,4,1,2,0,1,37,3,0,0,0,0,3,,Cosmos.HAL.PCIDeviceBridge' Cosmos.HAL.PCIDeviceNormal' Cosmos.HAL.PCIDevice
+Cosmos.HAL,PCIDeviceBridge,0,1,19,0,1,48,1,0,1,-1,2,0,Cosmos.HAL.PCIDevice' Cosmos.HAL.PCIBaseAddressBar,
+Cosmos.HAL,PCIDeviceCardbus,0,1,19,0,1,45,1,0,1,-1,1,0,Cosmos.HAL.PCIDevice,
+Cosmos.HAL,PCIDeviceNormal,0,1,8,0,1,33,1,0,1,-1,2,0,Cosmos.HAL.PCIDevice' Cosmos.HAL.PCIBaseAddressBar,
+Cosmos.HAL,SpeakerExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
+Cosmos.HAL,PCSpeaker,2,4,0,0,2,42,7,0,0,0,1,0,Cosmos.HAL.PIT,
+Cosmos.HAL,PIT,9,11,6,3,9,233,20,0,1,0.36,3,2,Cosmos.HAL.Device' Cosmos.HAL.Global' Cosmos.HAL.PITTimer,Cosmos.HAL.Global' Cosmos.HAL.PCSpeaker
+Cosmos.HAL,PITTimer,5,3,1,3,3,41,4,0,0,0.67,0,1,,Cosmos.HAL.PIT
+Cosmos.HAL,Power,0,3,0,0,3,18,3,0,0,-1,0,0,,
+Cosmos.HAL,PS2Controller,10,16,0,8,8,486,51,0,1,0,6,3,Cosmos.HAL.Device' Cosmos.HAL.Command' Cosmos.HAL.DeviceCommand' Cosmos.HAL.OutputLines' Cosmos.HAL.PS2Keyboard' Cosmos.HAL.PS2Mouse,Cosmos.HAL.PS2Keyboard' Cosmos.HAL.PS2Mouse' Cosmos.HAL.Global
+Cosmos.HAL,Command,0,0,0,0,0,39,0,0,0,-1,0,3,,Cosmos.HAL.PS2Controller' Cosmos.HAL.PS2Keyboard' Cosmos.HAL.PS2Mouse
+Cosmos.HAL,DeviceCommand,0,0,0,0,0,5,0,0,0,-1,0,1,,Cosmos.HAL.PS2Controller
+Cosmos.HAL,OutputLines,0,0,0,0,0,10,0,0,0,-1,0,1,,Cosmos.HAL.PS2Controller
+Cosmos.HAL,PS2Keyboard,3,7,1,0,2,110,12,0,2,0.29,4,1,Cosmos.HAL.Global' Cosmos.HAL.KeyboardBase' Cosmos.HAL.PS2Controller' Cosmos.HAL.Command,Cosmos.HAL.PS2Controller
+Cosmos.HAL,PS2Mouse,6,6,2,0,2,185,21,0,2,0,4,2,Cosmos.HAL.Global' Cosmos.HAL.MouseBase' Cosmos.HAL.PS2Controller' Cosmos.HAL.Command,Cosmos.HAL.PS2Controller' Cosmos.HAL.Global
+Cosmos.HAL,RTC,4,3,8,0,0,271,5,0,0,0.67,0,0,,
+Cosmos.HAL,TextScreen,9,10,2,0,10,125,13,0,1,0,2,1,Cosmos.HAL.TextScreenBase' Cosmos.HAL.TextScreenHelpers,Cosmos.HAL.Global
+Cosmos.HAL,TextScreenBase,0,9,4,0,9,35,9,2,1,-1,1,3,Cosmos.HAL.Device,Cosmos.HAL.DebugTextScreen' Cosmos.HAL.TextScreen' Cosmos.HAL.Global
+Cosmos.HAL,TextScreenHelpers,1,5,0,0,5,45,9,0,0,0,0,1,,Cosmos.HAL.TextScreen
+Cosmos.HAL.Drivers.PCI.Audio,PCMStream,2,3,0,0,3,18,3,0,0,1,0,0,,
+Cosmos.HAL.Drivers.PCI.Network,AMDPCNetII,12,12,7,0,9,285,33,0,1,0.5,7,0,Cosmos.HAL.CardType' Cosmos.HAL.NetworkDevice' Cosmos.HAL.VendorID' Cosmos.HAL.DeviceID' Cosmos.HAL.PCI' Cosmos.HAL.PCIDevice' Cosmos.HAL.Network.MACAddress,
+Cosmos.HAL.Drivers.PCI.Video,VMWareSVGAII,11,17,0,0,10,311,31,0,0,0,10,0,Cosmos.HAL.VendorID' Cosmos.HAL.DeviceID' Cosmos.HAL.PCI' Cosmos.HAL.PCIDevice' Cosmos.HAL.Drivers.PCI.Video.Register' Cosmos.HAL.Drivers.PCI.Video.ID' Cosmos.HAL.Drivers.PCI.Video.FIFO' Cosmos.HAL.Drivers.PCI.Video.FIFOCommand' Cosmos.HAL.Drivers.PCI.Video.IOPortOffset' Cosmos.HAL.Drivers.PCI.Video.Capability,
 Cosmos.HAL.Drivers.PCI.Video,Register,0,0,0,0,0,40,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
 Cosmos.HAL.Drivers.PCI.Video,ID,0,0,0,0,0,8,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
 Cosmos.HAL.Drivers.PCI.Video,FIFO,0,0,0,0,0,7,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
 Cosmos.HAL.Drivers.PCI.Video,FIFOCommand,0,0,0,0,0,25,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
 Cosmos.HAL.Drivers.PCI.Video,IOPortOffset,0,0,0,0,0,7,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
 Cosmos.HAL.Drivers.PCI.Video,Capability,0,0,0,0,0,29,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.PCI.Video.VMWareSVGAII
-Cosmos.HAL.Drivers.USB,USBHost,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Cosmos.HAL.Drivers,VBEDriver,1,14,0,0,7,108,14,0,0,0.14,7,1,Cosmos.Core.IOGroup.VBE' Cosmos.Debug.Kernel.Debugger' Cosmos.HAL.Global' Cosmos.Core.IOPort' Cosmos.HAL.Drivers.VBERegisterIndex' Cosmos.HAL.Drivers.VBEEnableValues' Cosmos.Core.MemoryBlock,Cosmos.System.VBEScreen
-Cosmos.HAL.Drivers,VBERegisterIndex,0,0,0,0,0,12,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.VBEDriver
-Cosmos.HAL.Drivers,VBEEnableValues,0,0,0,0,0,8,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.VBEDriver
-Cosmos.HAL.Network,MACAddress,3,11,0,3,9,131,21,0,0,0.18,0,9,,Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII' Cosmos.System.Network.ARP.ARPCache' Cosmos.System.Network.ARP.ARPPacket' Cosmos.System.Network.EthernetPacket' Cosmos.System.Network.IPv4.ARPPacket_Ethernet' Cosmos.System.Network.IPv4.ARPReply_Ethernet' Cosmos.System.Network.IPv4.ARPRequest_Ethernet' Cosmos.System.Network.IPv4.IPPacket' Cosmos.System.Network.IPv4.OutgoingBuffer
+Cosmos.HAL.Drivers.USB,USBHost,0,0,0,0,0,3,0,0,1,-1,1,0,Cosmos.HAL.Device,
+Cosmos.HAL.Drivers,VBEDriver,1,15,0,0,9,113,15,0,0,0,3,0,Cosmos.HAL.Global' Cosmos.HAL.Drivers.RegisterIndex' Cosmos.HAL.Drivers.EnableValues,
+Cosmos.HAL.Drivers,RegisterIndex,0,0,0,0,0,13,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.VBEDriver
+Cosmos.HAL.Drivers,EnableValues,0,0,0,0,0,8,0,0,0,-1,0,1,,Cosmos.HAL.Drivers.VBEDriver
+Cosmos.HAL.Network,MACAddress,3,11,0,3,9,131,21,0,0,0.18,0,2,,Cosmos.HAL.NetworkDevice' Cosmos.HAL.Drivers.PCI.Network.AMDPCNetII

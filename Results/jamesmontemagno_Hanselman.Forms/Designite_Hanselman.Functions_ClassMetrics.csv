@@ -1,0 +1,38 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Hanselman.Functions.Helpers,BlobHelpers,0,2,0,0,0,44,2,0,0,-1,0,4,,Hanselman.Functions.Triggers.TwitterFunctions' Hanselman.Functions.Triggers.VideoFunctions' Hanselman.Functions.Triggers.PodcastFunctions' Hanselman.Functions.TimerFunctions
+Hanselman.Functions.Helpers,TimeHelpers,0,1,0,0,0,49,6,0,0,-1,1,1,Hanselman.Functions.Models.UpdateTimeStamp,Hanselman.Functions.TimerFunctions
+Hanselman.Functions,FeedItemHelpers,1,5,0,0,0,180,14,0,0,0.4,2,3,Hanselman.Functions.MediaExtensions' Hanselman.Functions.ItunesExtensions,Hanselman.Functions.TimerFunctions' Hanselman.Functions.Triggers.PodcastFunctions' Hanselman.Functions.Triggers.VideoFunctions
+Hanselman.Functions,MediaExtensions,1,3,1,0,3,17,3,0,0,0,0,1,,Hanselman.Functions.FeedItemHelpers
+Hanselman.Functions,ItunesExtensions,1,3,1,0,3,17,3,0,0,0,0,1,,Hanselman.Functions.FeedItemHelpers
+Hanselman.Functions,TwitterHelpers,1,3,0,1,2,53,3,0,0,0.67,1,1,Hanselman.Functions.Models.TweetRaw,Hanselman.Functions.Triggers.TwitterFunctions
+Hanselman.Functions,HttpClientFactoryAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Hanselman.Functions.HttpClientFactoryExtensionConfigProvider
+Hanselman.Functions,HttpClientFactoryExtensionConfigProvider,1,2,0,0,2,15,2,0,0,1,1,1,Hanselman.Functions.HttpClientFactoryAttribute,HttpClientFactory.Azure.WebJobs.Extensions.HttpClientFactoryWebJobsStartup
+Hanselman.Functions,TimerFunctions,0,3,0,0,3,74,8,0,0,-1,3,0,Hanselman.Functions.Helpers.BlobHelpers' Hanselman.Functions.Helpers.TimeHelpers' Hanselman.Functions.FeedItemHelpers,
+Hanselman.Functions.Models,Link,0,0,4,0,0,12,0,0,0,-1,0,1,,Hanselman.Functions.Models.Channel
+Hanselman.Functions.Models,Image,0,0,3,0,0,10,0,0,0,-1,0,1,,Hanselman.Functions.Models.Channel
+Hanselman.Functions.Models,Image2,0,0,1,0,0,6,0,0,0,-1,0,2,,Hanselman.Functions.Models.Item' Hanselman.Functions.Models.Channel
+Hanselman.Functions.Models,Owner,0,0,2,0,0,8,0,0,0,-1,0,1,,Hanselman.Functions.Models.Channel
+Hanselman.Functions.Models,Category,0,0,2,0,0,8,0,0,0,-1,0,1,,Hanselman.Functions.Models.Channel
+Hanselman.Functions.Models,Guid,0,0,2,0,0,8,0,0,0,-1,0,1,,Hanselman.Functions.Models.Item
+Hanselman.Functions.Models,Enclosure,0,0,3,0,0,10,0,0,0,-1,0,1,,Hanselman.Functions.Models.Item
+Hanselman.Functions.Models,Item,0,0,15,0,0,34,0,0,0,-1,3,1,Hanselman.Functions.Models.Image2' Hanselman.Functions.Models.Guid' Hanselman.Functions.Models.Enclosure,Hanselman.Functions.Models.Channel
+Hanselman.Functions.Models,Channel,0,0,21,0,0,46,0,0,0,-1,6,1,Hanselman.Functions.Models.Link' Hanselman.Functions.Models.Image' Hanselman.Functions.Models.Image2' Hanselman.Functions.Models.Owner' Hanselman.Functions.Models.Category' Hanselman.Functions.Models.Item,Hanselman.Functions.Models.Rss
+Hanselman.Functions.Models,Rss,0,0,5,0,0,14,0,0,0,-1,1,0,Hanselman.Functions.Models.Channel,
+Hanselman.Functions.Models,TweetRaw,0,1,11,0,1,28,1,0,0,-1,4,2,Hanselman.Functions.Models.TweetRawEntities' Hanselman.Functions.Models.User' Hanselman.Functions.Models.RetweetedStatus' Hanselman.Functions.Models.Converter,Hanselman.Functions.TwitterHelpers' Hanselman.Functions.Models.Serialize
+Hanselman.Functions.Models,TweetRawEntities,0,0,5,0,0,13,0,0,0,-1,4,2,Hanselman.Functions.Models.Hashtag' Hanselman.Functions.Models.EntitiesMedia' Hanselman.Functions.Models.Url' Hanselman.Functions.Models.UserMention,Hanselman.Functions.Models.TweetRaw' Hanselman.Functions.Models.RetweetedStatus
+Hanselman.Functions.Models,Hashtag,0,0,2,0,0,7,0,0,0,-1,0,1,,Hanselman.Functions.Models.TweetRawEntities
+Hanselman.Functions.Models,EntitiesMedia,0,0,10,0,0,23,0,0,0,-1,1,1,Hanselman.Functions.Models.Sizes,Hanselman.Functions.Models.TweetRawEntities
+Hanselman.Functions.Models,Sizes,0,0,4,0,0,11,0,0,0,-1,1,1,Hanselman.Functions.Models.Large,Hanselman.Functions.Models.EntitiesMedia
+Hanselman.Functions.Models,Large,0,0,3,0,0,9,0,0,0,-1,1,1,Hanselman.Functions.Models.Resize,Hanselman.Functions.Models.Sizes
+Hanselman.Functions.Models,Url,0,0,4,0,0,11,0,0,0,-1,0,1,,Hanselman.Functions.Models.TweetRawEntities
+Hanselman.Functions.Models,UserMention,0,0,5,0,0,13,0,0,0,-1,0,1,,Hanselman.Functions.Models.TweetRawEntities
+Hanselman.Functions.Models,User,0,0,8,0,0,19,0,0,0,-1,0,2,,Hanselman.Functions.Models.TweetRaw' Hanselman.Functions.Models.RetweetedStatus
+Hanselman.Functions.Models,RetweetedStatus,0,0,7,0,0,17,0,0,0,-1,2,1,Hanselman.Functions.Models.TweetRawEntities' Hanselman.Functions.Models.User,Hanselman.Functions.Models.TweetRaw
+Hanselman.Functions.Models,Resize,0,0,0,0,0,1,0,0,0,-1,0,1,,Hanselman.Functions.Models.Large
+Hanselman.Functions.Models,Serialize,0,1,0,0,1,4,1,0,0,-1,2,0,Hanselman.Functions.Models.TweetRaw' Hanselman.Functions.Models.Converter,
+Hanselman.Functions.Models,Converter,1,0,0,1,0,13,0,0,0,-1,0,2,,Hanselman.Functions.Models.TweetRaw' Hanselman.Functions.Models.Serialize
+Hanselman.Functions.Models,UpdateTimeStamp,0,0,1,0,0,4,0,0,0,-1,0,1,,Hanselman.Functions.Helpers.TimeHelpers
+HttpClientFactory.Azure.WebJobs.Extensions,HttpClientFactoryWebJobsStartup,0,1,0,0,1,13,1,0,0,-1,1,0,Hanselman.Functions.HttpClientFactoryExtensionConfigProvider,
+Hanselman.Functions.Triggers,PodcastFunctions,0,2,0,0,2,70,9,0,0,-1,2,0,Hanselman.Functions.Helpers.BlobHelpers' Hanselman.Functions.FeedItemHelpers,
+Hanselman.Functions.Triggers,TwitterFunctions,0,2,0,0,2,35,2,0,0,-1,2,0,Hanselman.Functions.Helpers.BlobHelpers' Hanselman.Functions.TwitterHelpers,
+Hanselman.Functions.Triggers,VideoFunctions,0,2,0,0,2,88,12,0,0,-1,2,0,Hanselman.Functions.Helpers.BlobHelpers' Hanselman.Functions.FeedItemHelpers,

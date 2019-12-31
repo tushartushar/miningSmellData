@@ -1,106 +1,106 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Reactor,AsyncResult<TResult>,0,1,2,0,0,10,1,0,0,-1,0,0,,
+Reactor,AsyncResult<TResult>,0,1,2,0,0,10,1,0,0,-1,0,1,,Reactor.Async
 Reactor,AsyncException,0,1,1,0,0,8,1,0,0,-1,0,0,,
-Reactor,Async,0,6,0,0,6,227,15,0,0,-1,1,0,Reactor.Loop,
-Reactor,ThrottlePool<TRequest;TResponse>,4,3,0,0,2,43,5,0,0,0,1,0,Reactor.Worker,
-Reactor,Worker,0,0,2,0,0,5,0,0,0,-1,0,1,,Reactor.ThrottlePool<TRequest;TResponse>
+Reactor,Async,0,6,0,0,6,227,15,0,0,-1,4,0,Reactor.AsyncResult<TResult>' Reactor.ThrottlePool<TRequest;TResponse>' Reactor.Worker' Reactor.Loop,
+Reactor,ThrottlePool<TRequest;TResponse>,4,3,0,0,2,43,5,0,0,0,0,1,,Reactor.Async
+Reactor,Worker,0,0,2,0,0,5,0,0,0,-1,0,1,,Reactor.Async
 Reactor,DynamicAction,0,7,2,0,2,82,12,0,0,-1,0,0,,
 Reactor,IDomain,0,1,0,0,0,4,1,1,0,-1,0,1,,Reactor.Domain
-Reactor,Domain,1,4,0,0,3,38,4,0,1,0,2,0,Reactor.Loop' Reactor.IDomain,
-Reactor,GC,3,7,1,0,4,112,7,0,0,0,1,0,Reactor.Timeout,
-Reactor,IDuplexable,0,0,0,0,0,3,0,3,1,-1,0,1,,Reactor.Web.Socket.Transport
-Reactor,Context,4,6,1,0,6,67,10,0,0,0,2,1,Reactor.Runtime' Reactor.Messages,Reactor.Loop
-Reactor,Loop,0,5,0,0,5,23,5,0,0,-1,1,8,Reactor.Context,console.Program' Reactor.Async' Reactor.Domain' Reactor.IO' Reactor.Interval' Reactor.Timeout' Reactor.Net.Dns' Reactor.Divert.Socket
-Reactor,Messages,1,4,0,0,4,31,6,0,0,0,0,2,,Reactor.Context' Reactor.Runtime
-Reactor,Runtime,5,5,0,0,4,63,10,0,0,0,1,1,Reactor.Messages,Reactor.Context
-Reactor,Buffer,4,43,1,0,42,338,46,0,0,0.14,0,20,,console.Program' Reactor.Http.ServerConnection' Reactor.Http.WriteCommand' Reactor.Http.Request' Reactor.Http.ServerResponse' Reactor.Process.WriteStream' Reactor.Process.WriteCommand' Reactor.Tls.Socket' Reactor.Tls.WriteCommand' Reactor.File.WriteStream' Reactor.File.WriteCommand' Reactor.Tcp.Socket' Reactor.Tcp.WriteCommand' Reactor.Fusion.Socket' Reactor.Web.Server' Reactor.Web.Media.Stream' Reactor.Web.Socket.Transport' Reactor.Web.Socket.ServerWebSocketUpgradeResponse' Reactor.Web.Socket.WebSocketRequest' Reactor.Web.Socket.WebSocketResponse
-Reactor,IO,0,20,0,0,20,592,21,0,0,-1,3,16,Reactor.Loop' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListener,Reactor.Http.ServerConnection' Reactor.Http.Request' Reactor.Http.Response' Reactor.Http.Server' Reactor.Http.ServerRequest' Reactor.Http.ServerResponse' Reactor.IP.Socket' Reactor.Process.WriteStream' Reactor.Process.ReadStream' Reactor.Tls.Server' Reactor.Tls.Socket' Reactor.Udp.Socket' Reactor.File.ReadStream' Reactor.File.WriteStream' Reactor.Tcp.Server' Reactor.Tcp.Socket
-Reactor,Settings,2,0,0,2,0,5,0,0,0,-1,0,0,,
-Reactor,IReadable,0,4,0,0,0,11,4,5,0,-1,1,8,Reactor.IWriteable,Reactor.Http.ServerConnection' Reactor.Http.Response' Reactor.Http.ServerRequest' Reactor.Process.ReadStream' Reactor.Tls.Socket' Reactor.File.ReadStream' Reactor.Tcp.Socket' Reactor.Web.Socket.Transport
-Reactor,IWriteable,0,6,0,0,0,10,6,5,0,-1,0,9,,Reactor.IReadable' Reactor.Http.ServerConnection' Reactor.Http.Response' Reactor.Http.ServerRequest' Reactor.Process.ReadStream' Reactor.Tls.Socket' Reactor.File.ReadStream' Reactor.Tcp.Socket' Reactor.Web.Socket.Transport
+Reactor,Domain,1,4,0,0,3,38,4,0,1,0.5,2,0,Reactor.IDomain' Reactor.Loop,
+Reactor,GC,3,7,1,0,4,112,9,0,0,0,1,0,Reactor.Timeout,
+Reactor,IDuplexable,0,0,0,0,0,3,0,3,1,-1,2,3,Reactor.IReadable' Reactor.IWriteable,Reactor.Tcp.Socket' Reactor.Http.ServerConnection' Reactor.Tls.Socket
+Reactor,Context,4,6,1,0,6,67,10,0,0,0,2,1,Reactor.Messages' Reactor.Runtime,Reactor.Loop
+Reactor,Loop,0,5,0,0,5,23,5,0,0,-1,1,6,Reactor.Context,Reactor.Domain' Reactor.Interval' Reactor.Timeout' Reactor.Async' Reactor.Net.Dns' Reactor.IO
+Reactor,Messages,1,4,0,0,4,31,6,0,0,0,1,2,Reactor.Concurrent.ConcurrentQueue<T>,Reactor.Runtime' Reactor.Context
+Reactor,Runtime,5,5,0,0,4,63,11,0,0,0,1,1,Reactor.Messages,Reactor.Context
+Reactor,Buffer,4,43,1,0,42,338,50,0,0,0.14,0,11,,Reactor.Process.WriteStream' Reactor.File.WriteStream' Reactor.Process.ReadStream' Reactor.Http.ServerResponse' Reactor.Http.ServerConnection' Reactor.Http.Response' Reactor.File.ReadStream' Reactor.Tls.Socket' Reactor.Http.ServerRequest' Reactor.Tcp.Socket' Reactor.Http.Request
+Reactor,IO,0,20,0,0,20,592,21,0,0,-1,3,16,Reactor.Loop' Reactor.Net.HttpListener' Reactor.Net.HttpListenerContext,Reactor.Http.Server' Reactor.Tls.Server' Reactor.Process.WriteStream' Reactor.File.WriteStream' Reactor.Http.ServerResponse' Reactor.IP.Socket' Reactor.Udp.Socket' Reactor.Http.Request' Reactor.Tcp.Server' Reactor.Process.ReadStream' Reactor.Http.Response' Reactor.File.ReadStream' Reactor.Http.ServerRequest' Reactor.Http.ServerConnection' Reactor.Tls.Socket' Reactor.Tcp.Socket
+Reactor,Settings,2,0,0,2,0,5,0,0,0,-1,0,7,,Reactor.Http.ServerConnection' Reactor.Tls.Socket' Reactor.File.ReadStream' Reactor.Tcp.Socket' Reactor.Process.ReadStream' Reactor.Http.Response' Reactor.Http.ServerRequest
+Reactor,IReadable,0,4,0,0,0,11,4,5,0,-1,1,8,Reactor.IWriteable,Reactor.IDuplexable' Reactor.File.ReadStream' Reactor.Process.ReadStream' Reactor.Http.Response' Reactor.Http.ServerConnection' Reactor.Http.ServerRequest' Reactor.Tcp.Socket' Reactor.Tls.Socket
+Reactor,IWriteable,0,6,0,0,0,10,6,5,0,-1,0,13,,Reactor.IDuplexable' Reactor.Process.WriteStream' Reactor.Process.ReadStream' Reactor.Http.ServerConnection' Reactor.IReadable' Reactor.File.ReadStream' Reactor.File.WriteStream' Reactor.Http.Response' Reactor.Http.ServerRequest' Reactor.Http.ServerResponse' Reactor.Tls.Socket' Reactor.Http.Request' Reactor.Tcp.Socket
 Reactor,Interval,1,3,0,0,3,39,3,0,0,0.67,1,0,Reactor.Loop,
-Reactor,Timeout,1,2,0,0,2,31,2,0,0,1,1,2,Reactor.Loop,Reactor.GC' Reactor.Udp.Socket
+Reactor,Timeout,1,2,0,0,2,31,2,0,0,1,1,1,Reactor.Loop,Reactor.GC
 Reactor.Concurrent,ConcurrentStack<T>,3,16,4,0,13,207,24,0,0,0.56,1,0,Reactor.Concurrent.Node,
 Reactor.Concurrent,Node,4,0,0,4,0,9,0,0,0,-1,0,2,,Reactor.Concurrent.ConcurrentStack<T>' Reactor.Concurrent.ConcurrentQueue<T>
-Reactor.Concurrent,ConcurrentQueue<T>,4,12,4,0,8,199,31,0,0,0.58,1,0,Reactor.Concurrent.Node,
-Reactor.Net,AuthenticationSchemes,0,0,0,0,0,16,0,0,0,-1,0,3,,Reactor.Net.HttpListener' Reactor.Net.HttpListenerContext' Reactor.Net.ListenerAsyncResult
-Reactor.Net,ChunkedInputStream,4,6,1,0,5,170,19,0,1,0,7,0,Reactor.Net.ChunkStream' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpStreamAsyncResult' Reactor.Net.ReadBufferState' Reactor.Net.RequestStream' Reactor.Net.HttpConnection,
-Reactor.Net,ReadBufferState,5,1,0,5,1,16,1,0,0,0,1,1,Reactor.Net.HttpStreamAsyncResult,Reactor.Net.ChunkedInputStream
-Reactor.Net,ChunkStream,10,14,4,0,6,394,57,0,0,0,3,1,Reactor.Net.WebHeaderCollection' Reactor.Net.State' Reactor.Net.Chunk,Reactor.Net.ChunkedInputStream
+Reactor.Concurrent,ConcurrentQueue<T>,4,12,4,0,8,199,31,0,0,0.58,1,1,Reactor.Concurrent.Node,Reactor.Messages
+Reactor.Net,AuthenticationSchemes,0,0,0,0,0,16,0,0,0,-1,0,3,,Reactor.Net.HttpListenerContext' Reactor.Net.HttpListener' Reactor.Net.ListenerAsyncResult
+Reactor.Net,ChunkedInputStream,4,6,1,0,5,170,19,0,1,0,7,1,Reactor.Net.ReadBufferState' Reactor.Net.ChunkStream' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerException' Reactor.Net.HttpStreamAsyncResult' Reactor.Net.RequestStream' Reactor.Net.WebHeaderCollection,Reactor.Net.HttpConnection
+Reactor.Net,ReadBufferState,5,1,0,5,1,16,1,0,0,0,0,1,,Reactor.Net.ChunkedInputStream
+Reactor.Net,ChunkStream,10,14,4,0,6,394,57,0,0,0,3,1,Reactor.Net.State' Reactor.Net.Chunk' Reactor.Net.WebHeaderCollection,Reactor.Net.ChunkedInputStream
 Reactor.Net,State,0,0,0,0,0,9,0,0,0,-1,0,1,,Reactor.Net.ChunkStream
 Reactor.Net,Chunk,2,2,0,2,2,19,2,0,0,0,0,1,,Reactor.Net.ChunkStream
-Reactor.Net,Cookie,17,12,16,0,7,336,26,0,0,0,0,5,,Reactor.Net.CookieCollection' Reactor.Net.CookieCollectionComparer' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse' Reactor.Http.ServerResponse
-Reactor.Net,CookieCollection,2,7,5,0,5,148,17,0,0,0,2,2,Reactor.Net.CookieCollectionComparer' Reactor.Net.Cookie,Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse
-Reactor.Net,CookieCollectionComparer,0,1,0,0,1,16,2,0,0,-1,1,1,Reactor.Net.Cookie,Reactor.Net.CookieCollection
-Reactor.Net,CookieException,0,6,0,0,2,25,6,0,0,-1,0,0,,
-Reactor.Net,EndPointListener,9,14,0,0,6,406,51,0,0,0.14,7,2,Reactor.Net.HttpConnection' Reactor.Net.HttpListenerRequest' Reactor.Net.ListenerPrefix' Reactor.Net.HttpListener' Reactor.Net.HttpListenerContext' Reactor.Net.HttpUtility' Reactor.Net.EndPointManager,Reactor.Net.EndPointManager' Reactor.Net.HttpConnection
-Reactor.Net,EndPointManager,1,9,0,0,5,154,16,0,0,0.22,3,3,Reactor.Net.HttpListener' Reactor.Net.ListenerPrefix' Reactor.Net.EndPointListener,Reactor.Net.EndPointListener' Reactor.Net.HttpListener' Reactor.Net.HttpListenerPrefixCollection
+Reactor.Net,Cookie,17,12,16,0,7,336,26,0,0,0.33,1,4,Reactor.Net.CookieException,Reactor.Http.ServerResponse' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse' Reactor.Net.CookieCollection
+Reactor.Net,CookieCollection,2,7,5,0,5,148,17,0,0,0,2,4,Reactor.Net.Cookie' Reactor.Net.CookieCollectionComparer,Reactor.Http.ServerResponse' Reactor.Http.ServerRequest' Reactor.Net.HttpListenerResponse' Reactor.Net.HttpListenerRequest
+Reactor.Net,CookieCollectionComparer,0,1,0,0,1,16,2,0,0,-1,0,1,,Reactor.Net.CookieCollection
+Reactor.Net,CookieException,0,6,0,0,2,25,6,0,0,-1,0,1,,Reactor.Net.Cookie
+Reactor.Net,EndPointListener,9,14,0,0,6,406,52,0,0,0.14,8,2,Reactor.Net.EndPointManager' Reactor.Net.HttpConnection' Reactor.Net.HttpListener' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerException' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpUtility' Reactor.Net.ListenerPrefix,Reactor.Net.HttpConnection' Reactor.Net.EndPointManager
+Reactor.Net,EndPointManager,1,9,0,0,5,154,21,0,0,0.22,4,3,Reactor.Net.EndPointListener' Reactor.Net.HttpListener' Reactor.Net.HttpListenerException' Reactor.Net.ListenerPrefix,Reactor.Net.EndPointListener' Reactor.Net.HttpListener' Reactor.Net.HttpListenerPrefixCollection
 Reactor.Net,HttpListenerBasicIdentity,1,1,1,0,1,15,1,0,0,0,0,1,,Reactor.Net.HttpListenerContext
-Reactor.Net,HttpConnection,26,19,9,0,7,567,50,0,0,0.11,10,7,Reactor.Net.EndPointListener' Reactor.Net.HttpListenerContext' Reactor.Net.ListenerPrefix' Reactor.Net.RequestStream' Reactor.Net.ResponseStream' Reactor.Net.HttpListener' Reactor.Net.InputState' Reactor.Net.LineState' Reactor.Net.HttpListenerResponse' Reactor.Net.HttpListenerRequest,Reactor.Net.ChunkedInputStream' Reactor.Net.EndPointListener' Reactor.Net.HttpListener' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse' Reactor.Http.ServerConnection
+Reactor.Net,HttpConnection,26,19,9,0,7,567,51,0,0,0.16,10,5,Reactor.Net.ChunkedInputStream' Reactor.Net.EndPointListener' Reactor.Net.InputState' Reactor.Net.LineState' Reactor.Net.HttpListener' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerResponse' Reactor.Net.ListenerPrefix' Reactor.Net.RequestStream' Reactor.Net.ResponseStream,Reactor.Net.HttpListenerContext' Reactor.Http.ServerConnection' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListener' Reactor.Net.EndPointListener
 Reactor.Net,InputState,0,0,0,0,0,5,0,0,0,-1,0,1,,Reactor.Net.HttpConnection
 Reactor.Net,LineState,0,0,0,0,0,6,0,0,0,-1,0,1,,Reactor.Net.HttpConnection
-Reactor.Net,HttpListener,12,18,8,0,8,369,34,0,0,0,6,9,Reactor.Net.AuthenticationSchemes' Reactor.Net.HttpListenerPrefixCollection' Reactor.Net.EndPointManager' Reactor.Net.HttpListenerContext' Reactor.Net.HttpConnection' Reactor.Net.ListenerAsyncResult,Reactor.IO' Reactor.Net.EndPointListener' Reactor.Net.EndPointManager' Reactor.Net.HttpConnection' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerPrefixCollection' Reactor.Net.ListenerAsyncResult' Reactor.Net.ListenerPrefix' Reactor.Http.Server
-Reactor.Net,HttpListenerContext,7,3,7,0,0,137,7,0,0,0,6,9,Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse' Reactor.Net.HttpConnection' Reactor.Net.HttpListener' Reactor.Net.AuthenticationSchemes' Reactor.Net.HttpListenerBasicIdentity,Reactor.IO' Reactor.Net.ChunkedInputStream' Reactor.Net.EndPointListener' Reactor.Net.HttpConnection' Reactor.Net.HttpListener' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse' Reactor.Net.ListenerAsyncResult' Reactor.Http.HttpContext
-Reactor.Net,HttpListenerException,0,4,1,0,3,23,4,0,0,-1,0,0,,
-Reactor.Net,HttpListenerPrefixCollection,2,9,3,0,7,94,14,0,0,0,3,2,Reactor.Net.HttpListener' Reactor.Net.ListenerPrefix' Reactor.Net.EndPointManager,Reactor.Net.HttpListener' Reactor.Http.Server
-Reactor.Net,HttpListenerRequest,21,12,26,0,3,634,52,0,0,0.17,8,7,Reactor.Net.CookieCollection' Reactor.Net.WebHeaderCollection' Reactor.Net.HttpListenerContext' Reactor.Net.HttpVersion' Reactor.Net.HttpUtility' Reactor.Net.ResponseStream' Reactor.Net.HttpConnection' Reactor.Net.Cookie,Reactor.Net.ChunkedInputStream' Reactor.Net.EndPointListener' Reactor.Net.HttpConnection' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerResponse' Reactor.Net.ListenerAsyncResult' Reactor.Http.ServerRequest
-Reactor.Net,HttpListenerResponse,18,15,13,0,9,567,54,0,0,0.2,8,5,Reactor.Net.CookieCollection' Reactor.Net.WebHeaderCollection' Reactor.Net.ResponseStream' Reactor.Net.HttpListenerContext' Reactor.Net.Cookie' Reactor.Net.HttpConnection' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpVersion,Reactor.Net.HttpConnection' Reactor.Net.HttpListenerContext' Reactor.Net.ListenerAsyncResult' Reactor.Net.ResponseStream' Reactor.Http.ServerResponse
+Reactor.Net,HttpListener,12,18,8,0,8,369,43,0,0,0,6,8,Reactor.Net.AuthenticationSchemes' Reactor.Net.EndPointManager' Reactor.Net.HttpConnection' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerPrefixCollection' Reactor.Net.ListenerAsyncResult,Reactor.Net.ListenerPrefix' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerPrefixCollection' Reactor.IO' Reactor.Http.Server' Reactor.Net.EndPointManager' Reactor.Net.HttpConnection' Reactor.Net.EndPointListener
+Reactor.Net,HttpListenerContext,7,3,7,0,0,137,7,0,0,0,6,9,Reactor.Net.AuthenticationSchemes' Reactor.Net.HttpListenerBasicIdentity' Reactor.Net.HttpConnection' Reactor.Net.HttpListener' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse,Reactor.Net.ChunkedInputStream' Reactor.Net.EndPointListener' Reactor.IO' Reactor.Net.HttpListenerResponse' Reactor.Net.HttpListenerRequest' Reactor.Http.HttpContext' Reactor.Net.ListenerAsyncResult' Reactor.Net.HttpConnection' Reactor.Net.HttpListener
+Reactor.Net,HttpListenerException,0,4,1,0,3,23,4,0,0,-1,0,4,,Reactor.Net.ChunkedInputStream' Reactor.Net.EndPointManager' Reactor.Net.ListenerAsyncResult' Reactor.Net.EndPointListener
+Reactor.Net,HttpListenerPrefixCollection,2,9,3,0,7,94,14,0,0,0.22,3,1,Reactor.Net.EndPointManager' Reactor.Net.HttpListener' Reactor.Net.ListenerPrefix,Reactor.Net.HttpListener
+Reactor.Net,HttpListenerRequest,21,12,26,0,3,634,69,0,0,0.17,8,3,Reactor.Net.Cookie' Reactor.Net.CookieCollection' Reactor.Net.HttpConnection' Reactor.Net.HttpListenerContext' Reactor.Net.HttpUtility' Reactor.Net.HttpVersion' Reactor.Net.ResponseStream' Reactor.Net.WebHeaderCollection,Reactor.Net.EndPointListener' Reactor.Net.HttpListenerContext' Reactor.Http.ServerRequest
+Reactor.Net,HttpListenerResponse,18,15,13,0,9,567,98,0,0,0.27,6,4,Reactor.Net.Cookie' Reactor.Net.CookieCollection' Reactor.Net.HttpListenerContext' Reactor.Net.HttpVersion' Reactor.Net.ResponseStream' Reactor.Net.WebHeaderCollection,Reactor.Net.ResponseStream' Reactor.Http.ServerResponse' Reactor.Net.HttpListenerContext' Reactor.Net.HttpConnection
 Reactor.Net,HttpStatusCode,0,0,0,0,0,94,0,0,0,-1,0,0,,
-Reactor.Net,HttpStreamAsyncResult,10,2,4,0,2,75,2,0,0,0,0,3,,Reactor.Net.ChunkedInputStream' Reactor.Net.ReadBufferState' Reactor.Net.RequestStream
-Reactor.Net,HttpUtility,3,38,0,0,27,1535,151,0,0,0.11,0,3,,Reactor.Net.EndPointListener' Reactor.Net.HttpListenerRequest' Reactor.Web.Route
-Reactor.Net,HttpQSCollection,0,1,0,0,1,22,4,0,0,-1,0,0,,
-Reactor.Net,HttpVersion,2,1,0,2,1,7,1,0,0,0,0,3,,Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse' Reactor.Web.Socket.ServerWebSocketUpgradeRequest
-Reactor.Net,ListenerAsyncResult,12,6,4,0,1,199,12,0,0,0,5,1,Reactor.Net.HttpListenerContext' Reactor.Net.AuthenticationSchemes' Reactor.Net.HttpListener' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse,Reactor.Net.HttpListener
-Reactor.Net,ListenerPrefix,7,6,5,1,5,173,19,0,0,0.33,1,4,Reactor.Net.HttpListener,Reactor.Net.EndPointListener' Reactor.Net.EndPointManager' Reactor.Net.HttpConnection' Reactor.Net.HttpListenerPrefixCollection
-Reactor.Net,NetworkCredential,3,7,3,0,5,71,7,0,0,0.86,0,0,,
-Reactor.Net,RequestStream,6,13,5,0,10,222,35,1,0,0.54,1,2,Reactor.Net.HttpStreamAsyncResult,Reactor.Net.ChunkedInputStream' Reactor.Net.HttpConnection
-Reactor.Net,ResponseStream,6,14,5,0,10,253,29,0,0,0.5,1,3,Reactor.Net.HttpListenerResponse,Reactor.Net.HttpConnection' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse
-Reactor.Net,WebHeaderCollection,4,42,3,0,24,731,97,0,0,0.21,1,3,Reactor.Net.HeaderInfo,Reactor.Net.ChunkStream' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpListenerResponse
+Reactor.Net,HttpStreamAsyncResult,10,2,4,0,2,75,5,0,0,0,0,2,,Reactor.Net.ChunkedInputStream' Reactor.Net.RequestStream
+Reactor.Net,HttpUtility,3,38,0,0,27,1535,182,0,0,0.11,1,2,Reactor.Net.HttpQSCollection,Reactor.Net.EndPointListener' Reactor.Net.HttpListenerRequest
+Reactor.Net,HttpQSCollection,0,1,0,0,1,22,4,0,0,-1,0,1,,Reactor.Net.HttpUtility
+Reactor.Net,HttpVersion,2,1,0,2,1,7,1,0,0,0,0,2,,Reactor.Net.HttpListenerResponse' Reactor.Net.HttpListenerRequest
+Reactor.Net,ListenerAsyncResult,12,6,4,0,1,199,20,0,0,0.33,3,1,Reactor.Net.AuthenticationSchemes' Reactor.Net.HttpListenerContext' Reactor.Net.HttpListenerException,Reactor.Net.HttpListener
+Reactor.Net,ListenerPrefix,7,6,5,1,5,173,20,0,0,0.33,1,5,Reactor.Net.HttpListener,Reactor.Net.HttpListenerPrefixCollection' Reactor.Http.ServerConnection' Reactor.Net.HttpConnection' Reactor.Net.EndPointManager' Reactor.Net.EndPointListener
+Reactor.Net,NetworkCredential,3,7,3,0,5,71,7,0,0,1,0,0,,
+Reactor.Net,RequestStream,6,13,5,0,10,222,36,1,0,0.62,1,2,Reactor.Net.HttpStreamAsyncResult,Reactor.Net.ChunkedInputStream' Reactor.Net.HttpConnection
+Reactor.Net,ResponseStream,6,14,5,0,10,253,34,0,0,0.57,1,3,Reactor.Net.HttpListenerResponse,Reactor.Net.HttpListenerResponse' Reactor.Net.HttpListenerRequest' Reactor.Net.HttpConnection
+Reactor.Net,WebHeaderCollection,4,42,3,0,24,731,166,0,0,0.24,1,5,Reactor.Net.HeaderInfo,Reactor.Http.ServerResponse' Reactor.Net.ChunkedInputStream' Reactor.Net.HttpListenerRequest' Reactor.Net.ChunkStream' Reactor.Net.HttpListenerResponse
 Reactor.Net,HeaderInfo,0,0,0,0,0,8,0,0,0,-1,0,1,,Reactor.Net.WebHeaderCollection
-Reactor.Net,Dns,0,2,0,0,2,46,2,0,0,-1,1,1,Reactor.Loop,Reactor.Udp.Socket
-Reactor.Http,ServerConnection,11,30,6,0,28,472,39,0,2,0.07,9,1,Reactor.Http.HttpContext' Reactor.Net.HttpConnection' Reactor.IWriteable' Reactor.IReadable' Reactor.Buffer' Reactor.IO' Reactor.Http.Command' Reactor.Http.WriteCommand' Reactor.Http.EndCommand,Reactor.Web.Socket.ServerWebSocketUpgradeResponse
+Reactor.Net,Dns,0,2,0,0,2,46,2,0,0,-1,1,0,Reactor.Loop,
+Reactor.Http,ServerConnection,11,30,6,0,28,472,39,0,2,0.07,12,1,Reactor.IDuplexable' Reactor.Buffer' Reactor.IO' Reactor.Settings' Reactor.IReadable' Reactor.IWriteable' Reactor.Net.HttpConnection' Reactor.Net.ListenerPrefix' Reactor.Http.Command' Reactor.Http.WriteCommand' Reactor.Http.EndCommand' Reactor.Http.HttpContext,Reactor.Http.HttpContext
 Reactor.Http,Command,0,0,3,0,0,10,0,5,0,-1,0,3,,Reactor.Http.ServerConnection' Reactor.Http.Request' Reactor.Http.ServerResponse
-Reactor.Http,WriteCommand,0,3,3,0,3,25,3,0,1,-1,1,3,Reactor.Buffer,Reactor.Http.ServerConnection' Reactor.Http.Request' Reactor.Http.ServerResponse
+Reactor.Http,WriteCommand,0,3,3,0,3,25,3,0,1,-1,0,3,,Reactor.Http.ServerConnection' Reactor.Http.Request' Reactor.Http.ServerResponse
 Reactor.Http,EndCommand,0,3,0,0,3,19,3,0,1,-1,0,3,,Reactor.Http.ServerConnection' Reactor.Http.Request' Reactor.Http.ServerResponse
-Reactor.Http,Request,7,38,38,0,37,908,60,0,1,0,9,0,Reactor.Buffer' Reactor.Http.Command' Reactor.Http.GetRequestStreamCommand' Reactor.Http.WriteCommand' Reactor.Http.EndCommand' Reactor.Http.GetResponseCommand' Reactor.IO' Reactor.Http.FlushCommand' Reactor.Http.Response,
+Reactor.Http,Request,7,38,38,0,37,908,60,0,1,0,10,0,Reactor.Buffer' Reactor.IO' Reactor.IWriteable' Reactor.Http.Command' Reactor.Http.WriteCommand' Reactor.Http.EndCommand' Reactor.Http.FlushCommand' Reactor.Http.GetRequestStreamCommand' Reactor.Http.GetResponseCommand' Reactor.Http.Response,
 Reactor.Http,FlushCommand,0,2,0,0,2,13,2,0,1,-1,0,2,,Reactor.Http.Request' Reactor.Http.ServerResponse
 Reactor.Http,GetRequestStreamCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.Http.Request
 Reactor.Http,GetResponseCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.Http.Request
-Reactor.Http,Response,7,6,14,0,4,282,9,0,1,0,3,1,Reactor.IWriteable' Reactor.IReadable' Reactor.IO,Reactor.Http.Request
-Reactor.Http,Server,1,8,2,0,7,83,9,0,0,0.62,3,2,Reactor.Net.HttpListener' Reactor.Net.HttpListenerPrefixCollection' Reactor.IO,Reactor.Web.Server' Reactor.Web.Socket.Server
-Reactor.Http,HttpContext,0,1,5,0,0,16,1,0,0,-1,1,9,Reactor.Net.HttpListenerContext,Reactor.Http.ServerConnection' Reactor.Http.ServerRequest' Reactor.Http.ServerResponse' Reactor.Web.Context' Reactor.Web.Server' Reactor.Web.Socket.Context' Reactor.Web.Socket.ServerWebSocketUpgradeRequest' Reactor.Web.Socket.ServerWebSocketUpgradeResponse' Reactor.Web.Socket.Server
-Reactor.Http,ServerRequest,8,7,25,0,5,360,10,0,1,0.29,5,7,Reactor.Http.HttpContext' Reactor.Net.HttpListenerRequest' Reactor.IWriteable' Reactor.IReadable' Reactor.IO,Reactor.Web.StaticFiles' Reactor.Web.Route' Reactor.Web.Server' Reactor.Web.Media.Stream' Reactor.Web.Socket.ServerWebSocketUpgradeRequest' Reactor.Web.Socket.ServerWebSocketUpgradeResponse' Reactor.Web.Socket.Server
-Reactor.Http,ServerResponse,6,30,10,0,28,411,40,0,1,0,9,5,Reactor.Http.HttpContext' Reactor.Net.HttpListenerResponse' Reactor.Net.Cookie' Reactor.Buffer' Reactor.Http.Command' Reactor.Http.WriteCommand' Reactor.Http.EndCommand' Reactor.IO' Reactor.Http.FlushCommand,Reactor.Web.StaticFiles' Reactor.Web.Server' Reactor.Web.Media.Stream' Reactor.Web.Socket.ServerWebSocketUpgradeResponse' Reactor.Web.Socket.Server
+Reactor.Http,Response,7,6,14,0,4,282,9,0,1,0,5,1,Reactor.Buffer' Reactor.IO' Reactor.Settings' Reactor.IReadable' Reactor.IWriteable,Reactor.Http.Request
+Reactor.Http,Server,1,8,2,0,7,83,9,0,0,0.62,3,0,Reactor.IO' Reactor.Net.HttpListener' Reactor.Http.HttpContext,
+Reactor.Http,HttpContext,0,1,5,0,0,16,1,0,0,-1,4,4,Reactor.Net.HttpListenerContext' Reactor.Http.ServerConnection' Reactor.Http.ServerRequest' Reactor.Http.ServerResponse,Reactor.Http.ServerRequest' Reactor.Http.ServerResponse' Reactor.Http.ServerConnection' Reactor.Http.Server
+Reactor.Http,ServerRequest,8,7,25,0,5,360,10,0,1,0.29,8,1,Reactor.Buffer' Reactor.IO' Reactor.Settings' Reactor.IReadable' Reactor.IWriteable' Reactor.Net.CookieCollection' Reactor.Net.HttpListenerRequest' Reactor.Http.HttpContext,Reactor.Http.HttpContext
+Reactor.Http,ServerResponse,6,30,10,0,28,411,40,0,1,0.07,12,1,Reactor.Buffer' Reactor.IO' Reactor.IWriteable' Reactor.Net.Cookie' Reactor.Net.CookieCollection' Reactor.Net.HttpListenerResponse' Reactor.Net.WebHeaderCollection' Reactor.Http.Command' Reactor.Http.WriteCommand' Reactor.Http.EndCommand' Reactor.Http.FlushCommand' Reactor.Http.HttpContext,Reactor.Http.HttpContext
 Reactor.IP,Socket,2,13,24,0,12,325,13,0,0,0.15,1,0,Reactor.IO,
-Reactor.Process,Process,1,10,38,0,10,339,11,0,0,0.6,0,0,,
-Reactor.Process,WriteStream,4,25,0,0,23,266,35,0,1,0,6,0,Reactor.Buffer' Reactor.Process.Command' Reactor.Process.WriteCommand' Reactor.Process.EndCommand' Reactor.IO' Reactor.Process.FlushCommand,
+Reactor.Process,Process,1,10,38,0,10,339,11,0,0,0.6,2,0,Reactor.Process.WriteStream' Reactor.Process.ReadStream,
+Reactor.Process,WriteStream,4,25,0,0,23,266,35,0,1,0,7,1,Reactor.Buffer' Reactor.IO' Reactor.IWriteable' Reactor.Process.Command' Reactor.Process.WriteCommand' Reactor.Process.FlushCommand' Reactor.Process.EndCommand,Reactor.Process.Process
 Reactor.Process,Command,0,0,1,0,0,4,0,3,0,-1,0,1,,Reactor.Process.WriteStream
-Reactor.Process,WriteCommand,0,1,1,0,1,9,1,0,1,-1,1,1,Reactor.Buffer,Reactor.Process.WriteStream
+Reactor.Process,WriteCommand,0,1,1,0,1,9,1,0,1,-1,0,1,,Reactor.Process.WriteStream
 Reactor.Process,FlushCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.Process.WriteStream
 Reactor.Process,EndCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.Process.WriteStream
-Reactor.Process,ReadStream,6,6,0,0,4,173,9,0,1,0,3,0,Reactor.IWriteable' Reactor.IReadable' Reactor.IO,
-Reactor.Tls,Server,3,4,0,0,3,62,4,0,0,0,1,0,Reactor.IO,
-Reactor.Tls,Socket,11,42,24,0,39,846,52,0,2,0.19,7,0,Reactor.IO' Reactor.IWriteable' Reactor.IReadable' Reactor.Buffer' Reactor.Tls.Command' Reactor.Tls.WriteCommand' Reactor.Tls.EndCommand,
+Reactor.Process,ReadStream,6,6,0,0,4,173,9,0,1,0,5,1,Reactor.Buffer' Reactor.IO' Reactor.Settings' Reactor.IReadable' Reactor.IWriteable,Reactor.Process.Process
+Reactor.Tls,Server,3,4,0,0,3,62,4,0,0,0.75,2,0,Reactor.IO' Reactor.Tls.Socket,
+Reactor.Tls,Socket,11,42,24,0,39,846,52,0,2,0.19,9,1,Reactor.IDuplexable' Reactor.Buffer' Reactor.IO' Reactor.Settings' Reactor.IReadable' Reactor.IWriteable' Reactor.Tls.Command' Reactor.Tls.WriteCommand' Reactor.Tls.EndCommand,Reactor.Tls.Server
 Reactor.Tls,Command,0,0,1,0,0,4,0,2,0,-1,0,1,,Reactor.Tls.Socket
-Reactor.Tls,WriteCommand,0,1,1,0,1,9,1,0,1,-1,1,1,Reactor.Buffer,Reactor.Tls.Socket
+Reactor.Tls,WriteCommand,0,1,1,0,1,9,1,0,1,-1,0,1,,Reactor.Tls.Socket
 Reactor.Tls,EndCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.Tls.Socket
-Reactor.Udp,Socket,2,15,24,0,13,565,17,0,0,0.13,6,2,Reactor.IO' Reactor.Udp.StunPacket' Reactor.Net.Dns' Reactor.Udp.PacketType' Reactor.Udp.NatType' Reactor.Timeout,Reactor.Fusion.Server' Reactor.Fusion.Socket
+Reactor.Udp,Socket,2,15,24,0,13,565,17,0,0,0.13,1,0,Reactor.IO,
 Reactor.Udp,ChangeRequest,0,2,2,0,2,13,2,0,0,-1,0,1,,Reactor.Udp.StunPacket
 Reactor.Udp,ErrorCode,0,2,2,0,2,14,2,0,0,-1,0,1,,Reactor.Udp.StunPacket
-Reactor.Udp,PacketType,0,0,0,0,0,27,0,0,0,-1,0,2,,Reactor.Udp.Socket' Reactor.Udp.StunPacket
-Reactor.Udp,StunPacket,12,6,0,12,3,293,11,0,0,0,5,1,Reactor.Udp.PacketType' Reactor.Udp.ChangeRequest' Reactor.Udp.ErrorCode' Reactor.Udp.AttributeType' Reactor.Udp.IPFamily,Reactor.Udp.Socket
+Reactor.Udp,PacketType,0,0,0,0,0,27,0,0,0,-1,0,1,,Reactor.Udp.StunPacket
+Reactor.Udp,StunPacket,12,6,0,12,3,293,35,0,0,0,5,0,Reactor.Udp.ChangeRequest' Reactor.Udp.ErrorCode' Reactor.Udp.PacketType' Reactor.Udp.AttributeType' Reactor.Udp.IPFamily,
 Reactor.Udp,AttributeType,0,0,0,0,0,17,0,0,0,-1,0,1,,Reactor.Udp.StunPacket
 Reactor.Udp,IPFamily,0,0,0,0,0,5,0,0,0,-1,0,1,,Reactor.Udp.StunPacket
-Reactor.Udp,NatType,0,0,0,0,0,43,0,0,0,-1,0,2,,Reactor.Udp.Socket' Reactor.Udp.StunResponse
+Reactor.Udp,NatType,0,0,0,0,0,43,0,0,0,-1,0,1,,Reactor.Udp.StunResponse
 Reactor.Udp,StunResponse,0,2,2,0,2,13,2,0,0,-1,1,0,Reactor.Udp.NatType,
-Reactor.File,ReadStream,8,15,1,0,14,289,18,0,1,0.27,3,2,Reactor.IWriteable' Reactor.IReadable' Reactor.IO,Reactor.Web.StaticFiles' Reactor.Web.Media.Stream
-Reactor.File,WriteStream,5,31,0,0,30,294,41,0,1,0.13,6,1,Reactor.Buffer' Reactor.File.Command' Reactor.File.WriteCommand' Reactor.File.EndCommand' Reactor.IO' Reactor.File.FlushCommand,Reactor.Web.Media.Stream
+Reactor.File,ReadStream,8,15,1,0,14,289,18,0,1,0.67,5,0,Reactor.Buffer' Reactor.IO' Reactor.Settings' Reactor.IReadable' Reactor.IWriteable,
+Reactor.File,WriteStream,5,31,0,0,30,294,41,0,1,0.23,7,0,Reactor.Buffer' Reactor.IO' Reactor.IWriteable' Reactor.File.Command' Reactor.File.WriteCommand' Reactor.File.FlushCommand' Reactor.File.EndCommand,
 Reactor.File,Command,0,0,1,0,0,4,0,3,0,-1,0,1,,Reactor.File.WriteStream
-Reactor.File,WriteCommand,0,1,1,0,1,9,1,0,1,-1,1,1,Reactor.Buffer,Reactor.File.WriteStream
+Reactor.File,WriteCommand,0,1,1,0,1,9,1,0,1,-1,0,1,,Reactor.File.WriteStream
 Reactor.File,FlushCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.File.WriteStream
 Reactor.File,EndCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.File.WriteStream
-Reactor.Tcp,Server,2,4,0,0,3,47,4,0,0,0,1,1,Reactor.IO,console.Program
-Reactor.Tcp,Socket,10,39,24,0,36,788,49,0,2,0.13,7,3,Reactor.IO' Reactor.IWriteable' Reactor.IReadable' Reactor.Buffer' Reactor.Tcp.Command' Reactor.Tcp.WriteCommand' Reactor.Tcp.EndCommand,console.Program' Reactor.Web.Socket.WebSocketRequest' Reactor.Web.Socket.WebSocketResponse
+Reactor.Tcp,Server,2,4,0,0,3,47,4,0,0,0.75,2,0,Reactor.IO' Reactor.Tcp.Socket,
+Reactor.Tcp,Socket,10,39,24,0,36,788,49,0,2,0.13,9,1,Reactor.IDuplexable' Reactor.Buffer' Reactor.IO' Reactor.Settings' Reactor.IReadable' Reactor.IWriteable' Reactor.Tcp.Command' Reactor.Tcp.WriteCommand' Reactor.Tcp.EndCommand,Reactor.Tcp.Server
 Reactor.Tcp,Command,0,0,1,0,0,4,0,2,0,-1,0,1,,Reactor.Tcp.Socket
-Reactor.Tcp,WriteCommand,0,1,1,0,1,9,1,0,1,-1,1,1,Reactor.Buffer,Reactor.Tcp.Socket
+Reactor.Tcp,WriteCommand,0,1,1,0,1,9,1,0,1,-1,0,1,,Reactor.Tcp.Socket
 Reactor.Tcp,EndCommand,0,1,0,0,1,7,1,0,1,-1,0,1,,Reactor.Tcp.Socket

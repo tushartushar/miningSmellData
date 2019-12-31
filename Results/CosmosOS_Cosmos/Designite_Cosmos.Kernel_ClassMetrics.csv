@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Cosmos.Kernel,AddressSpace,2,17,0,2,17,106,17,2,0,1,0,2,,Cosmos.Hardware2.PCIDevice' Cosmos.Hardware2.Network.Devices.RTL8139.RTL8139
-Cosmos.Kernel,IOAddressSpace,0,18,0,0,18,89,25,0,1,-1,1,2,Cosmos.Kernel.CPUBus,Cosmos.Hardware2.Network.Devices.AMDPCNetII.AMDPCNet' Cosmos.Hardware2.Network.Devices.ViaRhine.VT6102
-Cosmos.Kernel,MemoryAddressSpace,0,21,0,0,21,111,32,1,1,-1,0,19,,Cosmos.Hardware2.VGAScreen' Cosmos.Hardware2.Audio.Devices.ES1370.Managers.AK4531Manager' Cosmos.Hardware2.Audio.Devices.ES1370.Registers.ControlRegister' Cosmos.Hardware2.Audio.Devices.ES1370.Registers.InterruptStatusRegister' Cosmos.Hardware2.Audio.Devices.ES1370.Registers.SerialInterfaceRegister' Cosmos.Hardware2.Audio.Devices.ES1370.Registers.UARTInterfaceRegister' Cosmos.Hardware2.Audio.Devices.GenericSoundCard' Cosmos.Hardware2.Audio.Devices.ES1370.ES1370' Cosmos.Hardware2.Network.Devices.RTL8139.RTL8139_Old' Cosmos.Hardware2.Network.Devices.RTL8139.Register.CommandRegister' Cosmos.Hardware2.Network.Devices.RTL8139.Register.ConfigurationRegister1' Cosmos.Hardware2.Network.Devices.RTL8139.Register.InterruptMaskRegister' Cosmos.Hardware2.Network.Devices.RTL8139.Register.InterruptStatusRegister' Cosmos.Hardware2.Network.Devices.RTL8139.Register.MediaStatusRegister' Cosmos.Hardware2.Network.Devices.RTL8139.Register.ReceiveConfigurationRegister' Cosmos.Hardware2.Network.Devices.RTL8139.Register.TransmitConfigurationRegister' Cosmos.Hardware2.Network.Devices.RTL8139.Register.TransmitStatusDescriptor' Cosmos.Hardware2.Network.Devices.RTL8139.Register.ValueTypeRegisters' Cosmos.Hardware2.PC.Bus.USB.USBHostOHCIRegisters
-Cosmos.Kernel,CPU,3,18,4,0,15,129,18,0,0,0.89,1,3,Cosmos.Kernel.CPUBus,Cosmos.Hardware2.Global2' Cosmos.Kernel.Plugs.Interlocked' Cosmos.Kernel.Plugs.ThreadImpl
-Cosmos.Kernel,CPUBus,0,6,0,0,6,14,6,0,0,-1,0,5,,Cosmos.Hardware2.Mouse' Cosmos.Hardware2.PCIDevice' Cosmos.Hardware2.VGAScreen' Cosmos.Kernel.IOAddressSpace' Cosmos.Kernel.CPU
+Cosmos.Kernel,AddressSpace,2,17,0,2,17,106,17,2,0,1,0,2,,Cosmos.Kernel.MemoryAddressSpace' Cosmos.Kernel.IOAddressSpace
+Cosmos.Kernel,IOAddressSpace,0,18,0,0,18,89,25,0,1,-1,2,0,Cosmos.Kernel.AddressSpace' Cosmos.Kernel.CPUBus,
+Cosmos.Kernel,MemoryAddressSpace,0,21,0,0,21,111,32,1,1,-1,1,1,Cosmos.Kernel.AddressSpace,Cosmos.Kernel.ManagedMemorySpace
+Cosmos.Kernel,CPU,3,18,4,0,15,129,18,0,0,0.89,1,0,Cosmos.Kernel.CPUBus,
+Cosmos.Kernel,CPUBus,0,6,0,0,6,14,6,0,0,-1,0,2,,Cosmos.Kernel.CPU' Cosmos.Kernel.IOAddressSpace
 Cosmos.Kernel,BinaryExtension,0,15,0,0,12,102,23,0,0,-1,0,0,,
-Cosmos.Kernel,GC,0,3,0,0,3,15,3,0,0,-1,0,1,,Cosmos.Kernel.Plugs.GCImplementationImpl
+Cosmos.Kernel,GC,0,3,0,0,3,15,3,0,0,-1,0,0,,
 Cosmos.Kernel,Global,0,1,0,0,1,4,1,0,0,-1,0,0,,
-Cosmos.Kernel,ManagedMemorySpace,1,4,0,0,4,64,6,0,2,0.75,0,3,,Cosmos.Hardware2.Network.Devices.AMDPCNetII.AMDPCNet' Cosmos.Hardware2.Network.Devices.RTL8139.RTL8139' Cosmos.Hardware2.Network.Devices.ViaRhine.VT6102
+Cosmos.Kernel,ManagedMemorySpace,1,4,0,0,4,64,6,0,2,0.75,1,0,Cosmos.Kernel.MemoryAddressSpace,
 Cosmos.Kernel,PageDirectoryEntry,1,0,10,1,0,116,0,0,0,-1,0,0,,
 Cosmos.Kernel,PageTableEntry,1,0,11,1,0,127,0,0,0,-1,0,0,,
 Cosmos.Kernel,PagingUtility,0,6,0,0,6,27,6,0,0,-1,0,0,,

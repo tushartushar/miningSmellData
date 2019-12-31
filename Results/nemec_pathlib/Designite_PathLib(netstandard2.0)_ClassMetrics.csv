@@ -1,0 +1,51 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PathLib,ConcretePath<TPath;TPurePath>,3,100,14,1,45,748,112,0,1,0.44,6,2,PathLib.DirectoryContents<TPath>' PathLib.FileSize' PathLib.IPath' PathLib.IPurePath' PathLib.PathComponent' PathLib.StatInfo,PathLib.WindowsPath' PathLib.PosixPath
+PathLib,PathFactoryConverter,1,3,0,0,3,36,6,0,0,0.67,2,1,PathLib.PathFactory' PathLib.IPath,PathLib.IPath
+PathLib,PurePathFactoryConverter,1,3,0,0,3,36,6,0,0,0.67,2,1,PathLib.PurePathFactory' PathLib.IPurePath,PathLib.IPurePath
+PathLib,PurePosixPathConverter,0,3,0,0,3,34,6,0,0,-1,1,1,PathLib.PurePosixPath,PathLib.PurePosixPath
+PathLib,PureWindowsPathConverter,0,3,0,0,3,34,6,0,0,-1,1,1,PathLib.PureWindowsPath,PathLib.PureWindowsPath
+PathLib,DirectoryContents<TPath>,0,2,3,0,1,35,2,0,0,-1,1,4,PathLib.IPath,PathLib.IPath' PathLib.PosixPath' PathLib.WindowsPath' PathLib.ConcretePath<TPath;TPurePath>
+PathLib,PathFactory,0,7,0,0,6,135,15,0,0,-1,9,2,PathLib.PathFactoryOptions' PathLib.Platform' PathLib.PlatformChooser' PathLib.PurePath' PathLib.IPath' PathLib.PosixPath' PathLib.PurePosixPath' PathLib.PureWindowsPath' PathLib.WindowsPath,PathLib.Paths' PathLib.PathFactoryConverter
+PathLib,PurePathFactoryOptions,0,0,2,0,0,13,0,0,0,-1,0,2,,PathLib.PurePath' PathLib.PurePathFactory
+PathLib,PathFactoryOptions,0,0,5,0,0,31,0,0,0,-1,1,2,PathLib.IPath,PathLib.Paths' PathLib.PathFactory
+PathLib,Paths,1,5,3,0,4,77,5,0,0,0.4,3,0,PathLib.PathFactory' PathLib.PathFactoryOptions' PathLib.IPath,
+PathLib,Platform,0,0,0,0,0,5,0,0,0,-1,0,3,,PathLib.PlatformChooser' PathLib.PurePathFactory' PathLib.PathFactory
+PathLib,PlatformChooser,0,1,0,0,1,14,2,0,0,-1,1,2,PathLib.Platform,PathLib.PathFactory' PathLib.PurePathFactory
+PathLib,PurePath,1,3,1,0,2,36,3,3,0,0.67,3,2,PathLib.PurePathFactoryOptions' PathLib.PurePathFactory' PathLib.IPurePath,PathLib.PathFactory' PathLib.PurePathFactory
+PathLib,PurePathFactory,0,7,0,0,6,125,13,0,0,-1,7,2,PathLib.PurePathFactoryOptions' PathLib.Platform' PathLib.PlatformChooser' PathLib.PurePath' PathLib.IPurePath' PathLib.PurePosixPath' PathLib.PureWindowsPath,PathLib.PurePath' PathLib.PurePathFactoryConverter
+PathLib,FileSize,5,9,5,0,6,200,12,0,0,0.22,3,2,PathLib.FileSizeScale' PathLib.ConversionData' PathLib.FileSizeUnits,PathLib.IPath' PathLib.ConcretePath<TPath;TPurePath>
+PathLib,FileSizeScale,0,0,0,0,0,15,0,0,0,-1,0,1,,PathLib.FileSize
+PathLib,ConversionData,0,1,3,0,1,13,1,0,0,-1,0,1,,PathLib.FileSize
+PathLib,FileSizeUnits,0,0,0,0,0,23,0,0,0,-1,0,1,,PathLib.FileSize
+PathLib,InvalidPathException,0,1,0,0,1,10,1,0,0,-1,0,3,,PathLib.PureWindowsPath' PathLib.PurePosixPath' PathLib.PurePath<TPath>
+PathLib,IPath,0,55,3,0,0,322,55,1,1,-1,5,6,PathLib.PathFactoryConverter' PathLib.DirectoryContents<TPath>' PathLib.FileSize' PathLib.IPurePath' PathLib.StatInfo,PathLib.PathFactoryOptions' PathLib.PathFactoryConverter' PathLib.Paths' PathLib.DirectoryContents<TPath>' PathLib.PathFactory' PathLib.ConcretePath<TPath;TPurePath>
+PathLib,IPathParser,0,6,0,0,0,45,6,3,0,-1,0,3,,PathLib.PurePosixPath' PathLib.PureWindowsPath' PathLib.PurePath<TPath>
+PathLib,IPurePath,0,37,11,0,0,323,37,2,0,-1,2,11,PathLib.PurePathFactoryConverter' PathLib.PathComponent,PathLib.PosixPath' PathLib.WindowsPath' PathLib.PurePath' PathLib.PurePathFactoryConverter' PathLib.PurePosixPath' PathLib.PureWindowsPath' PathLib.IPath' PathLib.PurePathFactory' PathLib.Utils.PathUtils' PathLib.PurePath<TPath>' PathLib.ConcretePath<TPath;TPurePath>
+PathLib,PathComponent,0,0,0,0,0,44,0,0,0,-1,0,4,,PathLib.IPurePath' PathLib.ConcretePath<TPath;TPurePath>' PathLib.Utils.PathUtils' PathLib.PurePath<TPath>
+PathLib,PosixPath,0,11,0,0,7,76,11,0,0,-1,5,2,PathLib.ConcretePath<TPath;TPurePath>' PathLib.DirectoryContents<TPath>' PathLib.IPurePath' PathLib.PurePosixPath' PathLib.StatInfo,PathLib.PosixPathConverter' PathLib.PathFactory
+PathLib,PosixPathConverter,0,3,0,0,3,34,6,0,0,-1,2,0,PathLib.PosixPath' PathLib.PurePosixPath,
+PathLib,PurePath<TPath>,5,57,13,0,26,716,103,0,1,0.98,5,2,PathLib.InvalidPathException' PathLib.IPathParser' PathLib.IPurePath' PathLib.PathComponent' PathLib.Utils.PathUtils,PathLib.PurePosixPath' PathLib.PureWindowsPath
+PathLib,PurePosixPath,0,13,2,0,10,314,13,0,1,-1,7,5,PathLib.PurePosixPathConverter' PathLib.InvalidPathException' PathLib.IPathParser' PathLib.IPurePath' PathLib.PurePath<TPath>' PathLib.PosixParser' PathLib.Utils.PathUtils,PathLib.PosixPathConverter' PathLib.PathFactory' PathLib.PurePosixPathConverter' PathLib.PosixPath' PathLib.PurePathFactory
+PathLib,PosixParser,1,6,0,0,6,60,9,0,1,0.5,0,1,,PathLib.PurePosixPath
+PathLib,PureWindowsPath,2,13,2,0,10,377,16,0,1,0.92,7,5,PathLib.PureWindowsPathConverter' PathLib.InvalidPathException' PathLib.IPathParser' PathLib.IPurePath' PathLib.PurePath<TPath>' PathLib.WindowsPathParser' PathLib.Utils.PathUtils,PathLib.WindowsPathConverter' PathLib.PureWindowsPathConverter' PathLib.PathFactory' PathLib.PurePathFactory' PathLib.WindowsPath
+PathLib,WindowsPathParser,2,6,0,0,6,74,11,0,1,0.33,0,1,,PathLib.PureWindowsPath
+PathLib,StatInfo,0,0,10,0,0,54,0,0,0,-1,0,4,,PathLib.PosixPath' PathLib.IPath' PathLib.ConcretePath<TPath;TPurePath>' PathLib.WindowsPath
+PathLib,ReparsePoint,13,10,2,0,2,285,23,0,0,0.6,5,1,PathLib.REPARSE_DATA_BUFFER' PathLib.LUID' PathLib.LUID_AND_ATTRIBUTES' PathLib.TOKEN_PRIVILEGES' PathLib.TagType,PathLib.WindowsPath
+PathLib,REPARSE_DATA_BUFFER,8,0,0,8,0,13,0,0,0,-1,0,1,,PathLib.ReparsePoint
+PathLib,LUID,2,0,0,2,0,6,0,0,0,-1,0,1,,PathLib.ReparsePoint
+PathLib,LUID_AND_ATTRIBUTES,2,0,0,2,0,6,0,0,0,-1,0,1,,PathLib.ReparsePoint
+PathLib,TOKEN_PRIVILEGES,2,0,0,2,0,7,0,0,0,-1,0,1,,PathLib.ReparsePoint
+PathLib,TagType,0,0,0,0,0,7,0,0,0,-1,0,2,,PathLib.ReparsePoint' PathLib.WindowsPath
+PathLib,WindowsPath,3,21,0,0,14,413,37,0,0,0.86,12,2,PathLib.ConcretePath<TPath;TPurePath>' PathLib.DirectoryContents<TPath>' PathLib.IPurePath' PathLib.PureWindowsPath' PathLib.StatInfo' PathLib.ReparsePoint' PathLib.TagType' PathLib.CurrentDirectorySetter' PathLib.WindowsPathConverter' PathLib.Windows.FindFileNative' PathLib.Windows.WIN32_FIND_DATA' PathLib.Windows.SafeFindHandle,PathLib.WindowsPathConverter' PathLib.PathFactory
+PathLib,CurrentDirectorySetter,2,2,0,0,2,18,3,0,0,0,0,1,,PathLib.WindowsPath
+PathLib,WindowsPathConverter,0,3,0,0,3,34,6,0,0,-1,2,1,PathLib.PureWindowsPath' PathLib.WindowsPath,PathLib.WindowsPath
+PathLib.Utils,FilePermissionMode,0,0,0,0,0,6,0,0,0,-1,0,1,,PathLib.Utils.FileAccess
+PathLib.Utils,FileAccess,0,1,0,0,1,12,1,0,0,-1,1,0,PathLib.Utils.FilePermissionMode,
+PathLib.Utils,LinqBridge,0,12,0,0,12,178,35,0,0,-1,0,0,,
+PathLib.Utils,EmptyOf<T>,1,0,1,0,0,6,0,0,0,-1,0,0,,
+PathLib.Utils,PathUtils,5,12,0,4,7,430,60,0,0,0.5,2,3,PathLib.IPurePath' PathLib.PathComponent,PathLib.PurePosixPath' PathLib.PureWindowsPath' PathLib.PurePath<TPath>
+System.Runtime.CompilerServices,ExtensionAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
+PathLib.Windows,FindFileNative,2,3,0,2,3,71,3,0,0,1,3,1,PathLib.Windows.FILETIME' PathLib.Windows.WIN32_FIND_DATA' PathLib.Windows.SafeFindHandle,PathLib.WindowsPath
+PathLib.Windows,FILETIME,2,0,0,2,0,6,0,0,0,-1,0,1,,PathLib.Windows.FindFileNative
+PathLib.Windows,WIN32_FIND_DATA,10,0,0,10,0,16,0,0,0,-1,0,2,,PathLib.Windows.FindFileNative' PathLib.WindowsPath
+PathLib.Windows,SafeFindHandle,0,4,0,0,1,32,6,0,0,-1,0,2,,PathLib.Windows.FindFileNative' PathLib.WindowsPath

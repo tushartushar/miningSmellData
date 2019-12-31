@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-StockMarket,HttpPriceService,1,2,0,0,2,12,2,0,1,0,1,0,StockMarket.HttpJsonRpcServiceHelper,
-StockMarket,HttpPortfolioService,1,2,0,0,2,12,2,0,1,0,1,0,StockMarket.HttpJsonRpcServiceHelper,
-StockMarket,HttpAuthenticationService,1,2,0,0,2,12,2,0,1,0,1,0,StockMarket.HttpJsonRpcServiceHelper,
-StockMarket,HttpJsonRpcServiceHelper,0,1,0,0,0,11,1,0,0,-1,0,3,,StockMarket.HttpPriceService' StockMarket.HttpPortfolioService' StockMarket.HttpAuthenticationService
-StockMarket,IAuthenticationService,0,1,0,0,0,8,1,2,0,-1,0,2,,StockViewer.Program' StockViewer.StockViewerForm
-StockMarket,IStockPortfolioService,0,1,0,0,0,7,1,2,0,-1,0,2,,StockViewer.Program' StockViewer.StockViewerForm
-StockMarket,IStockPriceService,0,1,0,0,0,8,1,2,0,-1,0,2,,StockViewer.Program' StockViewer.StockViewerForm
-StockMarket,RandomProvider,2,1,0,0,1,11,1,0,0,0,0,2,,StockMarket.SimpleStockPortfolioService' StockMarket.SimpleStockPriceService
-StockMarket,SimpleAuthenticationService,1,2,0,0,2,17,2,0,1,0,2,0,StockMarket.SimpleDataContext' StockMarket.User,
-StockMarket,SimpleDataContext,0,1,4,0,0,34,1,0,0,-1,1,3,StockMarket.User,StockMarket.SimpleAuthenticationService' StockMarket.SimpleStockPortfolioService' StockMarket.SimpleStockPriceService
-StockMarket,SimpleStockPortfolioService,1,2,0,0,2,18,2,0,1,0,3,0,StockMarket.SimpleDataContext' StockMarket.RandomProvider' StockMarket.UserStockHolding,
-StockMarket,SimpleStockPriceService,1,2,0,0,2,21,3,0,1,0,3,0,StockMarket.SimpleDataContext' StockMarket.RandomProvider' StockMarket.StockPrice,
-StockMarket,StockHolding,0,1,2,0,1,10,1,0,0,-1,0,1,,StockViewer.StockViewerForm
-StockMarket,StockPrice,0,0,2,0,0,5,0,0,0,-1,0,1,,StockMarket.SimpleStockPriceService
-StockMarket,User,0,0,3,0,0,7,0,0,0,-1,0,2,,StockMarket.SimpleAuthenticationService' StockMarket.SimpleDataContext
-StockMarket,UserStockHolding,0,0,3,0,0,6,0,0,0,-1,0,1,,StockMarket.SimpleStockPortfolioService
+StockMarket,HttpPriceService,1,2,0,0,2,12,2,0,1,1,2,0,StockMarket.HttpJsonRpcServiceHelper' StockMarket.IStockPriceService,
+StockMarket,HttpPortfolioService,1,2,0,0,2,12,2,0,1,1,3,0,StockMarket.HttpJsonRpcServiceHelper' StockMarket.IStockPortfolioService' StockMarket.StockHolding,
+StockMarket,HttpAuthenticationService,1,2,0,0,2,12,2,0,1,1,2,0,StockMarket.HttpJsonRpcServiceHelper' StockMarket.IAuthenticationService,
+StockMarket,HttpJsonRpcServiceHelper,0,1,0,0,0,11,1,0,0,-1,0,3,,StockMarket.HttpPriceService' StockMarket.HttpAuthenticationService' StockMarket.HttpPortfolioService
+StockMarket,IAuthenticationService,0,1,0,0,0,8,1,2,0,-1,0,2,,StockMarket.SimpleAuthenticationService' StockMarket.HttpAuthenticationService
+StockMarket,IStockPortfolioService,0,1,0,0,0,7,1,2,0,-1,1,2,StockMarket.StockHolding,StockMarket.SimpleStockPortfolioService' StockMarket.HttpPortfolioService
+StockMarket,IStockPriceService,0,1,0,0,0,8,1,2,0,-1,0,2,,StockMarket.SimpleStockPriceService' StockMarket.HttpPriceService
+StockMarket,RandomProvider,2,1,0,0,1,11,1,0,0,0,0,2,,StockMarket.SimpleStockPriceService' StockMarket.SimpleStockPortfolioService
+StockMarket,SimpleAuthenticationService,1,2,0,0,2,17,2,0,1,0,2,0,StockMarket.IAuthenticationService' StockMarket.SimpleDataContext,
+StockMarket,SimpleDataContext,0,1,4,0,0,34,1,0,0,-1,3,3,StockMarket.StockPrice' StockMarket.User' StockMarket.UserStockHolding,StockMarket.SimpleStockPriceService' StockMarket.SimpleStockPortfolioService' StockMarket.SimpleAuthenticationService
+StockMarket,SimpleStockPortfolioService,1,2,0,0,2,18,2,0,1,0,4,0,StockMarket.IStockPortfolioService' StockMarket.RandomProvider' StockMarket.SimpleDataContext' StockMarket.StockHolding,
+StockMarket,SimpleStockPriceService,1,2,0,0,2,21,3,0,1,0,3,0,StockMarket.IStockPriceService' StockMarket.RandomProvider' StockMarket.SimpleDataContext,
+StockMarket,StockHolding,0,1,2,0,1,10,1,0,0,-1,0,3,,StockMarket.IStockPortfolioService' StockMarket.HttpPortfolioService' StockMarket.SimpleStockPortfolioService
+StockMarket,StockPrice,0,0,2,0,0,5,0,0,0,-1,0,1,,StockMarket.SimpleDataContext
+StockMarket,User,0,0,3,0,0,7,0,0,0,-1,0,1,,StockMarket.SimpleDataContext
+StockMarket,UserStockHolding,0,0,3,0,0,6,0,0,0,-1,0,1,,StockMarket.SimpleDataContext

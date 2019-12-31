@@ -1,39 +1,39 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Abstractions.Helpers,ObjectCache<KeyType;ValueType>,2,8,0,0,6,77,10,0,0,0.5,1,0,Abstractions.Helpers.CacheEntry,
+Abstractions.Helpers,ObjectCache<KeyType;ValueType>,2,8,0,0,6,77,12,0,0,0.5,1,1,Abstractions.Helpers.CacheEntry,Abstractions.Helpers.TimedCache<KeyType;ValueType>
 Abstractions.Helpers,CacheEntry,2,0,0,2,0,5,0,1,0,-1,0,2,,Abstractions.Helpers.ObjectCache<KeyType;ValueType>' Abstractions.Helpers.TimedCache<KeyType;ValueType>
-Abstractions.Helpers,TimedCache<KeyType;ValueType>,3,9,0,0,4,103,10,0,0,0.44,2,0,Abstractions.Helpers.CacheEntry' Abstractions.Helpers.TimedCacheEntry,
+Abstractions.Helpers,TimedCache<KeyType;ValueType>,3,9,0,0,4,103,17,0,0,0.44,3,0,Abstractions.Helpers.ObjectCache<KeyType;ValueType>' Abstractions.Helpers.CacheEntry' Abstractions.Helpers.TimedCacheEntry,
 Abstractions.Helpers,TimedCacheEntry,1,0,0,1,0,4,0,0,1,-1,0,1,,Abstractions.Helpers.TimedCache<KeyType;ValueType>
-Abstractions.Logging,LibraryLogging,1,6,0,0,6,78,10,0,0,0.83,1,5,Abstractions.Logging.Level,Abstractions.Pipes.Pipe' Abstractions.Pipes.PipeClient' Abstractions.Pipes.PipeServer' pGina.Configuration.ConfigurationUI' pGina.Service.Impl.Service
-Abstractions.Logging,Level,0,0,0,0,0,7,0,0,0,-1,0,3,,Abstractions.Logging.LibraryLogging' pGina.Configuration.ConfigurationUI' pGina.Service.Impl.Service
-Abstractions.Pipes,PipeMessage,1,2,0,1,2,110,3,0,0,0,1,1,Abstractions.Pipes.DataType,Abstractions.Pipes.Pipe
+Abstractions.Logging,LibraryLogging,1,6,0,0,6,78,16,0,0,0.83,1,3,Abstractions.Logging.Level,Abstractions.Pipes.PipeClient' Abstractions.Pipes.Pipe' Abstractions.Pipes.PipeServer
+Abstractions.Logging,Level,0,0,0,0,0,7,0,0,0,-1,0,1,,Abstractions.Logging.LibraryLogging
+Abstractions.Pipes,PipeMessage,1,2,0,1,2,110,16,0,0,0,1,1,Abstractions.Pipes.DataType,Abstractions.Pipes.Pipe
 Abstractions.Pipes,DataType,0,0,0,0,0,8,0,0,0,-1,0,1,,Abstractions.Pipes.PipeMessage
-Abstractions.Pipes,Pipe,0,6,2,0,0,88,12,2,0,-1,2,0,Abstractions.Pipes.PipeMessage' Abstractions.Logging.LibraryLogging,
-Abstractions.Pipes,PipeClient,0,7,0,0,7,55,8,0,1,-1,1,2,Abstractions.Logging.LibraryLogging,Abstractions.Pipes.PipeServer' pGina.Configuration.ConfigurationUI
-Abstractions.Pipes,PipeServer,2,8,2,0,4,122,13,0,1,0.5,3,1,Abstractions.Logging.LibraryLogging' Abstractions.Windows.Security' Abstractions.Pipes.PipeClient,pGina.Service.Impl.Service
+Abstractions.Pipes,Pipe,0,6,2,0,0,88,12,2,0,-1,2,2,Abstractions.Logging.LibraryLogging' Abstractions.Pipes.PipeMessage,Abstractions.Pipes.PipeClient' Abstractions.Pipes.PipeServer
+Abstractions.Pipes,PipeClient,0,7,0,0,7,55,8,0,1,-1,2,1,Abstractions.Logging.LibraryLogging' Abstractions.Pipes.Pipe,Abstractions.Pipes.PipeServer
+Abstractions.Pipes,PipeServer,2,8,2,0,4,122,14,0,1,0.5,4,0,Abstractions.Logging.LibraryLogging' Abstractions.Pipes.Pipe' Abstractions.Pipes.PipeClient' Abstractions.Windows.Security,
 Abstractions.Settings,DynamicSetting,2,5,2,0,5,91,12,0,0,0,0,1,,Abstractions.Settings.DynamicSettings
-Abstractions.Settings,DynamicSettings,2,15,0,1,14,125,15,1,0,0.13,1,0,Abstractions.Settings.DynamicSetting,
-Abstractions.WindowsApi,pInvokes,0,14,0,0,14,708,33,0,0,-1,14,7,Abstractions.WindowsApi.SafeNativeMethods' Abstractions.WindowsApi.WTS_SESSION_INFO' Abstractions.WindowsApi.WTS_INFO_CLASS' Abstractions.WindowsApi.ACCESS_MASK' Abstractions.WindowsApi.SECURITY_IMPERSONATION_LEVEL' Abstractions.WindowsApi.TOKEN_TYPE' Abstractions.WindowsApi.TOKEN_INFORMATION_CLASS' Abstractions.WindowsApi.SECURITY_ATTRIBUTES' Abstractions.WindowsApi.STARTUPINFO' Abstractions.WindowsApi.PROCESS_INFORMATION' Abstractions.WindowsApi.CREDUI_INFO' Abstractions.WindowsApi.NETRESOURCE' Abstractions.WindowsApi.LogonType' Abstractions.WindowsApi.LogonProvider,pGina.Configuration.ConfigurationUI' pGina.Plugin.RADIUS.RADIUSPlugin' pGina.Plugin.DriveMapper.PluginMain' pGina.Plugin.LocalMachine.LocalAccount' pGina.Plugin.LocalMachine.PluginImpl' pGina.Plugin.SessionLimit.PluginImpl' pGina.Plugin.SingleUser.PluginImpl
-Abstractions.WindowsApi,SafeNativeMethods,2,22,0,2,22,409,22,0,0,1,10,1,Abstractions.WindowsApi.CREDUI_INFO' Abstractions.WindowsApi.PromptForWindowsCredentialsFlags' Abstractions.WindowsApi.NETRESOURCE' Abstractions.WindowsApi.WTS_INFO_CLASS' Abstractions.WindowsApi.SECURITY_IMPERSONATION_LEVEL' Abstractions.WindowsApi.TOKEN_TYPE' Abstractions.WindowsApi.TOKEN_INFORMATION_CLASS' Abstractions.WindowsApi.SECURITY_ATTRIBUTES' Abstractions.WindowsApi.STARTUPINFO' Abstractions.WindowsApi.PROCESS_INFORMATION,Abstractions.WindowsApi.pInvokes
-Abstractions.WindowsApi,CREDUI_INFO,5,0,0,5,0,9,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,PromptForWindowsCredentialsFlags,0,0,0,0,0,40,0,0,0,-1,0,1,,Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,ResourceScope,0,0,0,0,0,8,0,0,0,-1,0,1,,Abstractions.WindowsApi.NETRESOURCE
-Abstractions.WindowsApi,ResourceType,0,0,0,0,0,7,0,0,0,-1,0,1,,Abstractions.WindowsApi.NETRESOURCE
-Abstractions.WindowsApi,ResourceUsage,0,0,0,0,0,9,0,0,0,-1,0,1,,Abstractions.WindowsApi.NETRESOURCE
-Abstractions.WindowsApi,ResourceDisplayType,0,0,0,0,0,15,0,0,0,-1,0,1,,Abstractions.WindowsApi.NETRESOURCE
-Abstractions.WindowsApi,NETRESOURCE,8,0,0,8,0,12,0,0,0,-1,4,2,Abstractions.WindowsApi.ResourceScope' Abstractions.WindowsApi.ResourceType' Abstractions.WindowsApi.ResourceDisplayType' Abstractions.WindowsApi.ResourceUsage,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,SECURITY_ATTRIBUTES,3,0,0,3,0,7,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,SECURITY_IMPERSONATION_LEVEL,0,0,0,0,0,7,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
+Abstractions.Settings,DynamicSettings,2,15,0,1,14,125,18,1,0,0.13,1,0,Abstractions.Settings.DynamicSetting,
+Abstractions.WindowsApi,pInvokes,0,14,0,0,14,708,35,0,0,-1,20,0,Abstractions.WindowsApi.SafeNativeMethods' Abstractions.WindowsApi.CREDUI_INFO' Abstractions.WindowsApi.PromptForWindowsCredentialsFlags' Abstractions.WindowsApi.ResourceScope' Abstractions.WindowsApi.ResourceType' Abstractions.WindowsApi.ResourceUsage' Abstractions.WindowsApi.ResourceDisplayType' Abstractions.WindowsApi.NETRESOURCE' Abstractions.WindowsApi.SECURITY_ATTRIBUTES' Abstractions.WindowsApi.SECURITY_IMPERSONATION_LEVEL' Abstractions.WindowsApi.ACCESS_MASK' Abstractions.WindowsApi.TOKEN_TYPE' Abstractions.WindowsApi.TOKEN_INFORMATION_CLASS' Abstractions.WindowsApi.STARTUPINFO' Abstractions.WindowsApi.PROCESS_INFORMATION' Abstractions.WindowsApi.WTS_SESSION_INFO' Abstractions.WindowsApi.WTS_INFO_CLASS' Abstractions.WindowsApi.WTS_CONNECTSTATE_CLASS' Abstractions.WindowsApi.LogonType' Abstractions.WindowsApi.LogonProvider,
+Abstractions.WindowsApi,SafeNativeMethods,2,22,0,2,22,409,22,0,0,1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,CREDUI_INFO,5,0,0,5,0,9,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,PromptForWindowsCredentialsFlags,0,0,0,0,0,40,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,ResourceScope,0,0,0,0,0,8,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,ResourceType,0,0,0,0,0,7,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,ResourceUsage,0,0,0,0,0,9,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,ResourceDisplayType,0,0,0,0,0,15,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,NETRESOURCE,8,0,0,8,0,12,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,SECURITY_ATTRIBUTES,3,0,0,3,0,7,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,SECURITY_IMPERSONATION_LEVEL,0,0,0,0,0,7,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
 Abstractions.WindowsApi,ACCESS_MASK,0,0,0,0,0,40,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
-Abstractions.WindowsApi,TOKEN_TYPE,0,0,0,0,0,5,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
+Abstractions.WindowsApi,TOKEN_TYPE,0,0,0,0,0,5,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
 Abstractions.WindowsApi,LogonFlags,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Abstractions.WindowsApi,TOKEN_INFORMATION_CLASS,0,0,0,0,0,21,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,STARTUPINFO,18,0,0,18,0,22,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,PROCESS_INFORMATION,4,0,0,4,0,8,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,WTS_SESSION_INFO,3,0,0,3,0,8,0,0,0,-1,1,1,Abstractions.WindowsApi.WTS_CONNECTSTATE_CLASS,Abstractions.WindowsApi.pInvokes
-Abstractions.WindowsApi,WTS_INFO_CLASS,0,0,0,0,0,20,0,0,0,-1,0,2,,Abstractions.WindowsApi.pInvokes' Abstractions.WindowsApi.SafeNativeMethods
-Abstractions.WindowsApi,WTS_CONNECTSTATE_CLASS,0,0,0,0,0,13,0,0,0,-1,0,1,,Abstractions.WindowsApi.WTS_SESSION_INFO
+Abstractions.WindowsApi,TOKEN_INFORMATION_CLASS,0,0,0,0,0,21,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,STARTUPINFO,18,0,0,18,0,22,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,PROCESS_INFORMATION,4,0,0,4,0,8,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,WTS_SESSION_INFO,3,0,0,3,0,8,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,WTS_INFO_CLASS,0,0,0,0,0,20,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
+Abstractions.WindowsApi,WTS_CONNECTSTATE_CLASS,0,0,0,0,0,13,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
 Abstractions.WindowsApi,LogonType,0,0,0,0,0,47,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
 Abstractions.WindowsApi,LogonProvider,0,0,0,0,0,10,0,0,0,-1,0,1,,Abstractions.WindowsApi.pInvokes
-Abstractions.Windows,OsInfo,0,4,0,0,4,30,6,0,0,-1,0,5,,pGina.Configuration.ConfigurationUI' pGina.Service.Impl.Service' pGina.CredentialProvider.Registration.CredProviderManager' pGina.CredentialProvider.Registration.GinaCredProviderManager' pGina.CredentialProvider.Registration.DefaultCredProviderManager
-Abstractions.Windows,Security,0,4,0,0,4,21,4,0,0,-1,0,2,,Abstractions.Pipes.PipeServer' pGina.Plugin.LocalMachine.PluginImpl
-Abstractions.Windows,User,1,1,0,0,1,29,1,0,0,0,0,1,,pGina.Plugin.LocalMachine.LocalAccount
+Abstractions.Windows,OsInfo,0,4,0,0,4,30,6,0,0,-1,0,0,,
+Abstractions.Windows,Security,0,4,0,0,4,21,4,0,0,-1,0,1,,Abstractions.Pipes.PipeServer
+Abstractions.Windows,User,1,1,0,0,1,29,4,0,0,0,0,0,,

@@ -1,0 +1,26 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CodeFeatureName,SampleCodeFeature,0,0,0,0,0,4,0,0,1,-1,0,2,,CodeFeatureName.A_code_feature_name' CodeFeatureName.A_code_feature_id
+CodeFeatureName,A_code_feature_name,0,2,0,0,2,16,2,0,0,-1,2,0,CodeFeatureName.SampleCodeFeature' Fooidity.Tests.TopLevelCodeFeature,
+CodeFeatureName,A_code_feature_id,0,2,0,0,2,18,2,0,0,-1,2,0,CodeFeatureName.SampleCodeFeature' Fooidity.Tests.TopLevelCodeFeature,
+Fooidity.Tests,TopLevelCodeFeature,0,0,0,0,0,4,0,0,1,-1,0,2,,CodeFeatureName.A_code_feature_name' CodeFeatureName.A_code_feature_id
+Fooidity.Tests,A_disabled_DateRange,2,3,0,0,3,32,3,0,0,0,1,0,Fooidity.Tests.SpecialDiscount,
+Fooidity.Tests,SpecialDiscount,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.A_disabled_DateRange
+Fooidity.Tests,A_dependent_fooid,0,2,0,0,2,29,2,0,0,-1,2,0,Fooidity.Tests.Level1' Fooidity.Tests.Level2,
+Fooidity.Tests,Level1,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.A_dependent_fooid
+Fooidity.Tests,Level2,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.A_dependent_fooid
+Fooidity.Tests,Using_a_code_switch_inline,0,1,0,0,1,24,1,0,0,-1,1,0,Fooidity.Tests.TestFeature,
+Fooidity.Tests,TestFeature,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.Using_a_code_switch_inline
+Fooidity.Tests,Using_the_fooidity_api,0,2,0,0,2,42,2,0,0,-1,4,0,Fooidity.Tests.A' Fooidity.Tests.B' Fooidity.Tests.C' Fooidity.Tests.ABC,
+Fooidity.Tests,A,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.Using_the_fooidity_api
+Fooidity.Tests,B,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.Using_the_fooidity_api
+Fooidity.Tests,C,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.Using_the_fooidity_api
+Fooidity.Tests,ABC,0,0,0,0,0,4,0,0,1,-1,0,1,,Fooidity.Tests.Using_the_fooidity_api
+ConfigurationFeatureState_Specs,Off,0,0,0,0,0,4,0,0,1,-1,0,2,,ConfigurationFeatureState_Specs.Loading_the_configuration_state_from_the_app_config_file' ConfigurationFeatureState_Specs.Overriding_configuration_state_by_user_context
+ConfigurationFeatureState_Specs,On,0,0,0,0,0,4,0,0,1,-1,0,2,,ConfigurationFeatureState_Specs.Loading_the_configuration_state_from_the_app_config_file' ConfigurationFeatureState_Specs.Overriding_configuration_state_by_user_context
+ConfigurationFeatureState_Specs,UserContext,0,0,1,0,0,4,0,0,0,-1,0,3,,ConfigurationFeatureState_Specs.TestUserContext' ConfigurationFeatureState_Specs.UserContextKeyProvider' ConfigurationFeatureState_Specs.Overriding_configuration_state_by_user_context
+ConfigurationFeatureState_Specs,TestUserContext,1,1,1,0,1,13,1,0,0,0,1,1,ConfigurationFeatureState_Specs.UserContext,ConfigurationFeatureState_Specs.Overriding_configuration_state_by_user_context
+ConfigurationFeatureState_Specs,UserContextKeyProvider,0,1,0,0,1,10,2,0,1,-1,1,1,ConfigurationFeatureState_Specs.UserContext,ConfigurationFeatureState_Specs.Overriding_configuration_state_by_user_context
+ConfigurationFeatureState_Specs,Loading_the_configuration_state_from_the_app_config_file,1,3,0,0,3,25,3,0,0,0,2,0,ConfigurationFeatureState_Specs.Off' ConfigurationFeatureState_Specs.On,
+ConfigurationFeatureState_Specs,Overriding_configuration_state_by_user_context,2,4,0,0,4,38,4,0,0,0,5,0,ConfigurationFeatureState_Specs.Off' ConfigurationFeatureState_Specs.On' ConfigurationFeatureState_Specs.UserContext' ConfigurationFeatureState_Specs.TestUserContext' ConfigurationFeatureState_Specs.UserContextKeyProvider,
+ToggleSwitch_Specs,A,0,0,0,0,0,4,0,0,1,-1,0,1,,ToggleSwitch_Specs.Toggling_a_code_switch
+ToggleSwitch_Specs,Toggling_a_code_switch,0,2,0,0,2,19,2,0,0,-1,1,0,ToggleSwitch_Specs.A,

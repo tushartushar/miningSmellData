@@ -1,53 +1,55 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Kato,AutoUpdater,6,6,4,0,3,112,12,0,0,0.5,1,1,Kato.Properties.Settings,Kato.AppModel
-Kato,ConsoleOutputControl,4,4,0,0,1,36,5,0,0,0,3,3,Kato.BuildViewModel' JenkinsApiClient.ConsoleOutput' JenkinsApiClient.HttpHelper,Kato.FlowDocumentExt' Kato.DocumentManager' Kato.JobViewModel
-Kato,TextAddedEventArgs,0,1,1,0,1,8,1,0,0,-1,0,1,,Kato.DocumentManager
-Kato,FlowDocumentExt,1,6,0,1,2,87,11,0,0,0.5,2,0,Kato.ConsoleOutputControl' Kato.DocumentManager,
-Kato,DocumentManager,2,5,0,0,2,33,6,0,0,0,2,1,Kato.ConsoleOutputControl' Kato.TextAddedEventArgs,Kato.FlowDocumentExt
-Kato,PersistedUserSettings,2,2,0,0,2,30,4,0,0,0,0,1,,Kato.AppModel
-Kato,UserSettings,0,0,1,0,0,4,0,0,0,-1,0,1,,Kato.AppModel
-Kato,SavedJenkinsServers,0,0,3,0,0,6,0,0,0,-1,0,1,,Kato.AppModel
-Kato,SavedJob,0,0,2,0,0,5,0,0,0,-1,0,1,,Kato.AppModel
+Kato,AutoUpdater,6,6,4,0,3,112,13,0,0,0.5,1,1,Kato.Properties.Settings,Kato.AppModel
+Kato,Bootstrapper,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Kato,ConsoleOutputControl,4,4,0,0,1,36,5,0,0,0,2,2,Kato.TextAddedEventArgs' Kato.BuildViewModel,Kato.JobViewModel' Kato.FlowDocumentExt
+Kato,TextAddedEventArgs,0,1,1,0,1,8,1,0,0,-1,0,2,,Kato.FlowDocumentExt' Kato.ConsoleOutputControl
+Kato,CredentialsHelper,1,2,0,0,2,35,6,0,0,0,1,2,SecureCredentialsLibrary.CredentialsDialog,Kato.ServerViewModel' Kato.AppModel
+Kato,FlowDocumentExt,1,6,0,1,2,87,11,0,0,0.5,3,0,Kato.ConsoleOutputControl' Kato.TextAddedEventArgs' Kato.DocumentManager,
+Kato,DocumentManager,2,5,0,0,2,33,6,0,0,0,0,1,,Kato.FlowDocumentExt
+Kato,PersistedUserSettings,2,2,0,0,2,30,4,0,0,0,1,1,Kato.App,Kato.AppModel
+Kato,UserSettings,0,0,1,0,0,4,0,0,0,-1,1,1,Kato.SavedJenkinsServers,Kato.AppModel
+Kato,SavedJenkinsServers,0,0,3,0,0,6,0,0,0,-1,1,2,Kato.SavedJob,Kato.UserSettings' Kato.AppModel
+Kato,SavedJob,0,0,2,0,0,5,0,0,0,-1,0,2,,Kato.SavedJenkinsServers' Kato.AppModel
 Kato,ViewModeKind,0,0,0,0,0,5,0,0,0,-1,0,1,,Kato.AppModel
 Kato,AsyncHelper,1,1,0,0,1,16,1,0,0,0,0,0,,
-Kato,BuildViewModel,7,0,9,0,0,85,0,0,0,-1,0,3,,Kato.ConsoleOutputControl' Kato.ServerViewModel' Kato.JobViewModel
-Kato,WM,0,0,0,0,0,104,0,0,0,-1,0,0,,
-Kato,NativeMethods,0,3,0,0,1,40,5,0,0,-1,0,1,,Kato.SingleInstance<TApplication>
-Kato,ISingleInstanceApp,0,1,0,0,0,4,1,1,0,-1,0,0,,
-Kato,SingleInstance<TApplication>,7,7,1,0,2,231,14,0,0,0.57,2,0,Kato.NativeMethods' Kato.IPCRemoteService,
+Kato,BuildViewModel,7,0,9,0,0,85,0,0,0,-1,0,3,,Kato.ConsoleOutputControl' Kato.JobViewModel' Kato.ServerViewModel
+Kato,WM,0,0,0,0,0,104,0,0,0,-1,0,1,,Kato.NativeMethods
+Kato,NativeMethods,0,3,0,0,1,40,5,0,0,-1,1,1,Kato.WM,Kato.SingleInstance<TApplication>
+Kato,ISingleInstanceApp,0,1,0,0,0,4,1,1,0,-1,0,2,,Kato.App' Kato.SingleInstance<TApplication>
+Kato,SingleInstance<TApplication>,7,7,1,0,2,231,15,0,0,0.57,3,2,Kato.NativeMethods' Kato.ISingleInstanceApp' Kato.IPCRemoteService,Kato.Pages.Main' Kato.App
 Kato,IPCRemoteService,0,2,0,0,2,25,3,0,0,-1,0,1,,Kato.SingleInstance<TApplication>
-Kato,StatusViewModel,3,0,3,0,0,36,0,0,0,-1,0,0,,
+Kato,StatusViewModel,3,0,3,0,0,36,0,0,0,-1,0,1,,Kato.AppModel
 Kato,TaskbarHelper,0,1,0,0,1,26,3,0,0,-1,0,1,,Kato.AppModel
-Kato,App,4,5,0,2,3,79,9,0,1,0.4,0,0,,
-Kato,AppModel,24,32,14,0,12,560,68,0,0,0.12,19,2,Kato.UserSettings' Kato.AutoUpdater' Kato.BuildStatus' Kato.ViewModeKind' Kato.JobViewModel' Kato.Properties.Settings' Kato.PersistedUserSettings' Kato.ServerViewModel' Kato.MainWindow' Kato.SavedJenkinsServers' JenkinsApiClient.UserCredentials' JenkinsApiClient.JenkinsClient' JenkinsApiClient.Server' Kato.SavedJob' Kato.StatusChangedArgs' Kato.TaskbarHelper' SecureCredentialsLibrary.CredentialsDialog' JenkinsApiClient.JenkinsApiHelper' JenkinsApiClient.HttpHelper,Kato.MainWindow' Kato.Pages.Subscribe
-Kato,BuildStatus,0,0,0,0,0,12,0,0,0,-1,0,4,,Kato.AppModel' Kato.JobViewModel' Kato.StatusChangedArgs' Kato.Resources.StatusToHumanReadableConverter
-Kato,ServerViewModel,5,6,5,0,2,84,14,0,0,0,7,2,JenkinsApiClient.Server' JenkinsApiClient.JenkinsClient' Kato.JobViewModel' JenkinsApiClient.Job' Kato.BuildViewModel' JenkinsApiClient.Build' JenkinsApiClient.ServerJob,Kato.AppModel' Kato.MainWindow
-Kato,JobViewModel,11,15,12,0,14,219,16,0,0,0.8,6,3,JenkinsApiClient.JenkinsClient' Kato.BuildViewModel' JenkinsApiClient.HealthReport' Kato.ConsoleOutputControl' Kato.BuildStatus' Kato.MainWindow,Kato.AppModel' Kato.ServerViewModel' Kato.MainWindow
-Kato,StatusChangedArgs,0,1,2,0,1,10,1,0,0,-1,1,1,Kato.BuildStatus,Kato.AppModel
-Kato,MainWindow,3,8,1,1,3,70,12,0,0,0.5,4,3,FirstFloor.ModernUI.Presentation.RelayCommand' Kato.AppModel' Kato.JobViewModel' Kato.ServerViewModel,Kato.AppModel' Kato.JobViewModel' Kato.Pages.Subscribe
-SecureCredentialsLibrary,CredentialsDialog,14,18,12,0,14,467,29,0,0,0.33,5,1,SecureCredentialsLibrary.CREDUI' SecureCredentialsLibrary.ReturnCodes' SecureCredentialsLibrary.INFO' SecureCredentialsLibrary.FLAGS' SecureCredentialsLibrary.GDI32,Kato.AppModel
+Kato,App,4,5,0,2,3,78,8,0,1,0.4,2,2,Kato.ISingleInstanceApp' Kato.SingleInstance<TApplication>,Kato.PersistedUserSettings' Kato.Pages.Main
+Kato,AppModel,24,30,14,0,13,523,74,0,0,0.13,15,2,Kato.AutoUpdater' Kato.CredentialsHelper' Kato.PersistedUserSettings' Kato.UserSettings' Kato.SavedJenkinsServers' Kato.SavedJob' Kato.ViewModeKind' Kato.StatusViewModel' Kato.TaskbarHelper' Kato.BuildStatus' Kato.ServerViewModel' Kato.JobViewModel' Kato.StatusChangedArgs' Kato.MainWindow' Kato.Properties.Settings,Kato.Pages.Subscribe' Kato.MainWindow
+Kato,BuildStatus,0,0,0,0,0,12,0,0,0,-1,0,4,,Kato.JobViewModel' Kato.StatusChangedArgs' Kato.Resources.StatusToHumanReadableConverter' Kato.AppModel
+Kato,ServerViewModel,8,9,7,0,6,136,18,0,0,0,3,1,Kato.CredentialsHelper' Kato.BuildViewModel' Kato.JobViewModel,Kato.AppModel
+Kato,JobViewModel,12,15,13,0,14,232,16,0,0,0.8,5,3,Kato.ConsoleOutputControl' Kato.BuildViewModel' Kato.BuildStatus' Kato.StatusChangedArgs' Kato.MainWindow,Kato.MainWindow' Kato.ServerViewModel' Kato.AppModel
+Kato,StatusChangedArgs,0,1,2,0,1,10,1,0,0,-1,1,2,Kato.BuildStatus,Kato.JobViewModel' Kato.AppModel
+Kato,MainWindow,3,8,1,1,3,74,11,0,0,0.5,2,3,Kato.AppModel' Kato.JobViewModel,Kato.Pages.Subscribe' Kato.JobViewModel' Kato.AppModel
+SecureCredentialsLibrary,CredentialsDialog,14,18,12,0,14,467,37,0,0,0.33,5,1,SecureCredentialsLibrary.GDI32' SecureCredentialsLibrary.CREDUI' SecureCredentialsLibrary.FLAGS' SecureCredentialsLibrary.ReturnCodes' SecureCredentialsLibrary.INFO,Kato.CredentialsHelper
 SecureCredentialsLibrary,GDI32,0,2,0,0,1,7,2,0,0,-1,0,1,,SecureCredentialsLibrary.CredentialsDialog
-SecureCredentialsLibrary,CREDUI,6,3,0,6,2,90,3,0,0,1,2,1,SecureCredentialsLibrary.INFO' SecureCredentialsLibrary.FLAGS,SecureCredentialsLibrary.CredentialsDialog
+SecureCredentialsLibrary,CREDUI,6,3,0,6,2,90,3,0,0,1,3,1,SecureCredentialsLibrary.FLAGS' SecureCredentialsLibrary.ReturnCodes' SecureCredentialsLibrary.INFO,SecureCredentialsLibrary.CredentialsDialog
 SecureCredentialsLibrary,FLAGS,0,0,0,0,0,21,0,0,0,-1,0,2,,SecureCredentialsLibrary.CredentialsDialog' SecureCredentialsLibrary.CREDUI
-SecureCredentialsLibrary,ReturnCodes,0,0,0,0,0,11,0,0,0,-1,0,1,,SecureCredentialsLibrary.CredentialsDialog
+SecureCredentialsLibrary,ReturnCodes,0,0,0,0,0,11,0,0,0,-1,0,2,,SecureCredentialsLibrary.CredentialsDialog' SecureCredentialsLibrary.CREDUI
 SecureCredentialsLibrary,INFO,5,0,0,5,0,10,0,0,0,-1,0,2,,SecureCredentialsLibrary.CredentialsDialog' SecureCredentialsLibrary.CREDUI
 Kato.Pages,About,0,1,0,0,1,7,1,0,0,-1,0,0,,
 Kato.Pages,ProjectDetails,1,4,0,0,2,46,5,0,0,0.5,0,0,,
-Kato.Pages,Main,0,6,0,0,5,30,6,0,1,-1,5,0,FirstFloor.ModernUI.Windows.Controls.ModernWindow' FirstFloor.ModernUI.Windows.Navigation.NavigationEventArgs' FirstFloor.ModernUI.Windows.Controls.ModernFrame' FirstFloor.ModernUI.Windows.Navigation.FragmentNavigationEventArgs' FirstFloor.ModernUI.Windows.Navigation.NavigatingCancelEventArgs,
-Kato.Pages,Subscribe,0,7,0,0,5,47,8,0,1,-1,5,0,Kato.AppModel' FirstFloor.ModernUI.Windows.Navigation.FragmentNavigationEventArgs' Kato.MainWindow' FirstFloor.ModernUI.Windows.Navigation.NavigationEventArgs' FirstFloor.ModernUI.Windows.Navigation.NavigatingCancelEventArgs,
-Kato.Resources,Converters,13,0,0,13,0,16,0,0,0,-1,0,0,,
-Kato.Resources,StatusToHumanReadableConverter,0,2,0,0,2,40,3,0,0,-1,1,0,Kato.BuildStatus,
-Kato.Resources,PrettyTimeSpanConverter,0,2,0,0,2,15,3,0,0,-1,0,0,,
-Kato.Resources,IsValidToBrushConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Kato.Resources,StatusToColorConverter,0,2,0,0,2,38,3,0,0,-1,0,0,,
-Kato.Resources,StatusToBuildingColorConverter,0,2,0,0,2,36,3,0,0,-1,0,0,,
-Kato.Resources,IsLessThanConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Kato.Resources,ReverseBooleanToVisibilityConverter,0,2,0,0,2,13,3,0,0,-1,0,0,,
-Kato.Resources,TextNullOrEmptyToVisibilityConverter,0,2,0,0,2,13,3,0,0,-1,0,0,,
-Kato.Resources,IsNotNullConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Kato.Resources,IsSelectedConverter,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Kato.Resources,NullIfEmpty,0,2,0,0,2,14,3,0,0,-1,0,0,,
-Kato.Resources,FriendlyTimeDescription,1,4,0,0,2,34,5,0,0,0.5,0,0,,
+Kato.Pages,Main,0,6,0,0,5,30,6,0,1,-1,2,0,Kato.SingleInstance<TApplication>' Kato.App,
+Kato.Pages,Subscribe,0,7,0,0,5,47,8,0,1,-1,2,0,Kato.AppModel' Kato.MainWindow,
+Kato.Resources,Converters,13,0,0,13,0,16,0,0,0,-1,12,0,Kato.Resources.StatusToHumanReadableConverter' Kato.Resources.PrettyTimeSpanConverter' Kato.Resources.IsValidToBrushConverter' Kato.Resources.StatusToColorConverter' Kato.Resources.StatusToBuildingColorConverter' Kato.Resources.IsLessThanConverter' Kato.Resources.ReverseBooleanToVisibilityConverter' Kato.Resources.TextNullOrEmptyToVisibilityConverter' Kato.Resources.IsNotNullConverter' Kato.Resources.IsSelectedConverter' Kato.Resources.NullIfEmpty' Kato.Resources.FriendlyTimeDescription,
+Kato.Resources,StatusToHumanReadableConverter,0,2,0,0,2,40,9,0,0,-1,1,1,Kato.BuildStatus,Kato.Resources.Converters
+Kato.Resources,PrettyTimeSpanConverter,0,2,0,0,2,15,3,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,IsValidToBrushConverter,0,2,0,0,2,11,2,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,StatusToColorConverter,0,2,0,0,2,38,7,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,StatusToBuildingColorConverter,0,2,0,0,2,36,7,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,IsLessThanConverter,0,2,0,0,2,11,2,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,ReverseBooleanToVisibilityConverter,0,2,0,0,2,13,3,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,TextNullOrEmptyToVisibilityConverter,0,2,0,0,2,13,3,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,IsNotNullConverter,0,2,0,0,2,11,2,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,IsSelectedConverter,0,2,0,0,2,11,2,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,NullIfEmpty,0,2,0,0,2,14,3,0,0,-1,0,1,,Kato.Resources.Converters
+Kato.Resources,FriendlyTimeDescription,1,4,0,0,2,34,5,0,0,0.5,0,1,,Kato.Resources.Converters
 Kato.Resources,WatermarkAdorner,1,4,2,0,1,85,5,0,0,0,0,1,,Kato.Resources.WatermarkService
 Kato.Resources,WatermarkService,2,11,0,1,2,181,29,0,0,0,1,0,Kato.Resources.WatermarkAdorner,
 Kato.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,

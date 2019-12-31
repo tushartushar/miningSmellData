@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 NExtra.Cache,DictionaryCacheItem,0,1,2,0,1,10,1,0,0,-1,0,1,,NExtra.Cache.DictionaryCache
-NExtra.Cache,ICache,0,8,0,0,0,11,8,3,0,-1,0,1,,NExtra.Tests.Cache.DictionaryCacheBehavior
-NExtra.Cache,MemoryCacheFacade,1,9,0,0,9,50,11,0,1,0,0,0,,
-NExtra.Cache,DictionaryCache,1,11,0,0,9,66,15,0,1,0,1,0,NExtra.Cache.DictionaryCacheItem,
-NExtra.Collections,IOrderContext,0,1,3,0,0,7,1,1,0,-1,0,1,,NExtra.Tests.Collections.OrderContextTests
-NExtra.Collections,OrderContext<T>,0,2,3,0,2,21,3,0,1,-1,0,0,,
-NExtra.Collections,IPaginationContext,0,1,11,0,0,51,1,1,0,-1,0,0,,
-NExtra.Collections,PaginationContext<T>,3,3,11,0,3,85,3,0,1,1,0,0,,
-NExtra.Console,CommandLineArgumentParser,2,5,0,0,2,74,13,0,1,0,0,0,,
-NExtra.Console,CommandLineArguments,1,5,1,0,5,31,5,0,0,0,0,3,,NExtra.Console.TypedCommandLineArgumentParser' NExtra.Tests.Console.CommandLineArgumentsBehavior' NExtra.Tests.Console.TypedCommandLineArgumentParserBehavior
-NExtra.Console,ConsoleFacade,0,5,0,0,5,23,5,0,1,-1,0,0,,
-NExtra.Console,TypedCommandLineArgumentParser,1,2,0,0,2,16,2,0,1,0,2,0,NExtra.Console.ICommandLineArgumentParser' NExtra.Console.CommandLineArguments,
-NExtra.Console,ICommandLineArgumentParser,0,1,0,0,0,4,1,2,0,-1,0,2,,NExtra.Console.TypedCommandLineArgumentParser' NExtra.Tests.Console.TypedCommandLineArgumentParserBehavior
-NExtra.Console,IConsole,0,5,0,0,0,8,5,1,0,-1,0,0,,
+NExtra.Cache,ICache,0,8,0,0,0,11,8,3,0,-1,0,2,,NExtra.Cache.MemoryCacheFacade' NExtra.Cache.DictionaryCache
+NExtra.Cache,MemoryCacheFacade,1,9,0,0,9,50,11,0,1,0,1,0,NExtra.Cache.ICache,
+NExtra.Cache,DictionaryCache,1,11,0,0,9,66,15,0,1,0,2,0,NExtra.Cache.DictionaryCacheItem' NExtra.Cache.ICache,
+NExtra.Collections,IOrderContext,0,1,3,0,0,7,1,1,0,-1,0,1,,NExtra.Collections.OrderContext<T>
+NExtra.Collections,OrderContext<T>,0,2,3,0,2,21,3,0,1,-1,1,0,NExtra.Collections.IOrderContext,
+NExtra.Collections,IPaginationContext,0,1,11,0,0,51,1,1,0,-1,0,1,,NExtra.Collections.PaginationContext<T>
+NExtra.Collections,PaginationContext<T>,3,3,11,0,3,85,3,0,1,1,1,0,NExtra.Collections.IPaginationContext,
+NExtra.Console,CommandLineArgumentParser,2,5,0,0,2,74,14,0,1,0,1,0,NExtra.Console.ICommandLineArgumentParser,
+NExtra.Console,CommandLineArguments,1,5,1,0,5,31,5,0,0,0,0,1,,NExtra.Console.TypedCommandLineArgumentParser
+NExtra.Console,ConsoleFacade,0,5,0,0,5,23,5,0,1,-1,1,0,NExtra.Console.IConsole,
+NExtra.Console,TypedCommandLineArgumentParser,1,2,0,0,2,16,2,0,1,0,2,0,NExtra.Console.CommandLineArguments' NExtra.Console.ICommandLineArgumentParser,
+NExtra.Console,ICommandLineArgumentParser,0,1,0,0,0,4,1,2,0,-1,0,2,,NExtra.Console.CommandLineArgumentParser' NExtra.Console.TypedCommandLineArgumentParser
+NExtra.Console,IConsole,0,5,0,0,0,8,5,1,0,-1,0,1,,NExtra.Console.ConsoleFacade
 NExtra.Extensions,Assembly_FileExtensions,0,2,0,0,2,17,2,0,0,-1,0,0,,
 NExtra.Extensions,Assembly_TypeExtensions,0,4,0,0,4,25,6,0,0,-1,0,0,,
 NExtra.Extensions,IQueryable_PaginateExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
@@ -39,84 +39,84 @@ NExtra.Extensions,IComparable_Extensions,0,1,0,0,1,15,3,0,0,-1,0,0,,
 NExtra.Extensions,Enum_Extensions,0,2,0,0,2,17,2,0,0,-1,0,0,,
 NExtra.Extensions,String_Extensions,0,5,0,0,5,28,6,0,0,-1,0,0,,
 NExtra.Extensions,Uri_Extensions,0,4,0,0,4,37,5,0,0,-1,0,0,,
-NExtra.Geo,PositionBearingCalculator,1,3,0,0,3,30,4,0,1,0,2,1,NExtra.Geo.IAngleConverter' NExtra.Geo.IPosition,NExtra.Tests.Geo.PositionBearingCalculatorBehavior
-NExtra.Geo,PositionDistanceCalculator,1,3,0,0,3,35,5,0,1,0,4,1,NExtra.Geo.IAngleConverter' NExtra.Geo.DistanceUnit' NExtra.Geo.GeoConstants' NExtra.Geo.IPosition,NExtra.Tests.Geo.PositionDistanceCalculatorBehavior
-NExtra.Geo,IPosition,0,0,2,0,0,5,0,1,0,-1,0,4,,NExtra.Geo.PositionBearingCalculator' NExtra.Geo.PositionDistanceCalculator' NExtra.Geo.IPositionBearingCalculator' NExtra.Geo.IPositionDistanceCalculator
+NExtra.Geo,PositionBearingCalculator,1,3,0,0,3,30,4,0,1,0,3,0,NExtra.Geo.IPosition' NExtra.Geo.IAngleConverter' NExtra.Geo.IPositionBearingCalculator,
+NExtra.Geo,PositionDistanceCalculator,1,3,0,0,3,35,5,0,1,0,5,0,NExtra.Geo.IPosition' NExtra.Geo.GeoConstants' NExtra.Geo.IAngleConverter' NExtra.Geo.IPositionDistanceCalculator' NExtra.Geo.DistanceUnit,
+NExtra.Geo,IPosition,0,0,2,0,0,5,0,1,0,-1,0,5,,NExtra.Geo.Position' NExtra.Geo.PositionBearingCalculator' NExtra.Geo.IPositionBearingCalculator' NExtra.Geo.IPositionDistanceCalculator' NExtra.Geo.PositionDistanceCalculator
 NExtra.Geo,GeoConstants,2,0,0,2,0,5,0,0,0,-1,0,1,,NExtra.Geo.PositionDistanceCalculator
-NExtra.Geo,IAngleConverter,0,2,0,0,0,5,2,1,0,-1,0,3,,NExtra.Geo.PositionBearingCalculator' NExtra.Geo.PositionDistanceCalculator' NExtra.Tests.Geo.AngleConverterBehavior
-NExtra.Geo,IPositionBearingCalculator,0,2,0,0,0,5,2,1,0,-1,1,0,NExtra.Geo.IPosition,
-NExtra.Geo,IPositionDistanceCalculator,0,2,0,0,0,5,2,1,0,-1,2,0,NExtra.Geo.IPosition' NExtra.Geo.DistanceUnit,
-NExtra.Geo,IDistanceConverter,0,2,0,0,0,5,2,1,0,-1,0,1,,NExtra.Tests.Geo.DistanceConverterBehavior
-NExtra.Geo,AngleConverter,0,2,0,0,2,11,2,0,1,-1,0,0,,
-NExtra.Geo,DistanceConverter,0,2,0,0,2,11,2,0,1,-1,0,0,,
-NExtra.Geo,DistanceUnit,0,0,0,0,0,5,0,0,0,-1,0,3,,NExtra.Geo.PositionDistanceCalculator' NExtra.Geo.IPositionDistanceCalculator' NExtra.Tests.Geo.PositionDistanceCalculatorBehavior
-NExtra.Geo,Position,0,1,2,0,1,11,1,0,1,-1,0,2,,NExtra.Tests.Geo.PositionBearingCalculatorBehavior' NExtra.Tests.Geo.PositionDistanceCalculatorBehavior
-NExtra.IO,IFileEncodingResolver,0,1,0,0,0,4,1,2,0,-1,0,2,,NExtra.Tests.IO.KlerksFileEncodingResolverBehavior' NExtra.Tests.IO.StreamReaderFileEncodingResolverBehavior
-NExtra.IO,KlerksFileEncodingResolver,1,2,0,0,2,14,2,0,1,0,1,0,NExtra.IO.KlerksSoftFileEncodingDetector,
-NExtra.IO,KlerksSoftFileEncodingDetector,1,8,0,0,6,370,38,0,0,0.25,0,1,,NExtra.IO.KlerksFileEncodingResolver
-NExtra.IO,StreamReaderFileEncodingResolver,0,1,0,0,1,14,1,0,1,-1,0,0,,
-NExtra.IO,FileFacade,0,52,0,0,52,212,52,0,1,-1,0,0,,
-NExtra.IO,DirectoryFacade,0,44,0,0,44,179,44,0,1,-1,0,0,,
-NExtra.IO,IDirectory,0,44,0,0,0,47,44,1,0,-1,0,0,,
-NExtra.IO,IFile,0,52,0,0,0,55,52,1,0,-1,0,0,,
-NExtra.IO,IFileSizePresenter,0,1,0,0,0,7,1,1,0,-1,0,0,,
-NExtra.IO,IPathPatternMatcher,0,2,0,0,0,5,2,1,0,-1,0,0,,
-NExtra.IO,PathPatternMatcher,4,5,0,4,2,52,11,0,1,0,0,1,,NExtra.Tests.IO.PathPatternMatcherBehavior
-NExtra.IO,FileSizePresenter,0,1,0,0,1,18,5,0,1,-1,0,1,,NExtra.Tests.IO.FileSizePresenterBehavior
+NExtra.Geo,IAngleConverter,0,2,0,0,0,5,2,1,0,-1,0,3,,NExtra.Geo.AngleConverter' NExtra.Geo.PositionBearingCalculator' NExtra.Geo.PositionDistanceCalculator
+NExtra.Geo,IPositionBearingCalculator,0,2,0,0,0,5,2,1,0,-1,1,1,NExtra.Geo.IPosition,NExtra.Geo.PositionBearingCalculator
+NExtra.Geo,IPositionDistanceCalculator,0,2,0,0,0,5,2,1,0,-1,2,1,NExtra.Geo.IPosition' NExtra.Geo.DistanceUnit,NExtra.Geo.PositionDistanceCalculator
+NExtra.Geo,IDistanceConverter,0,2,0,0,0,5,2,1,0,-1,0,1,,NExtra.Geo.DistanceConverter
+NExtra.Geo,AngleConverter,0,2,0,0,2,11,2,0,1,-1,1,0,NExtra.Geo.IAngleConverter,
+NExtra.Geo,DistanceConverter,0,2,0,0,2,11,2,0,1,-1,1,0,NExtra.Geo.IDistanceConverter,
+NExtra.Geo,DistanceUnit,0,0,0,0,0,5,0,0,0,-1,0,2,,NExtra.Geo.IPositionDistanceCalculator' NExtra.Geo.PositionDistanceCalculator
+NExtra.Geo,Position,0,1,2,0,1,11,1,0,1,-1,1,0,NExtra.Geo.IPosition,
+NExtra.IO,IFileEncodingResolver,0,1,0,0,0,4,1,2,0,-1,0,2,,NExtra.IO.StreamReaderFileEncodingResolver' NExtra.IO.KlerksFileEncodingResolver
+NExtra.IO,KlerksFileEncodingResolver,1,2,0,0,2,14,2,0,1,0,2,0,NExtra.IO.IFileEncodingResolver' NExtra.IO.KlerksSoftFileEncodingDetector,
+NExtra.IO,KlerksSoftFileEncodingDetector,1,8,0,0,6,370,61,0,0,0.25,0,1,,NExtra.IO.KlerksFileEncodingResolver
+NExtra.IO,StreamReaderFileEncodingResolver,0,1,0,0,1,14,1,0,1,-1,1,0,NExtra.IO.IFileEncodingResolver,
+NExtra.IO,FileFacade,0,52,0,0,52,212,52,0,1,-1,1,0,NExtra.IO.IFile,
+NExtra.IO,DirectoryFacade,0,44,0,0,44,179,44,0,1,-1,1,0,NExtra.IO.IDirectory,
+NExtra.IO,IDirectory,0,44,0,0,0,47,44,1,0,-1,0,1,,NExtra.IO.DirectoryFacade
+NExtra.IO,IFile,0,52,0,0,0,55,52,1,0,-1,0,1,,NExtra.IO.FileFacade
+NExtra.IO,IFileSizePresenter,0,1,0,0,0,7,1,1,0,-1,0,1,,NExtra.IO.FileSizePresenter
+NExtra.IO,IPathPatternMatcher,0,2,0,0,0,5,2,1,0,-1,0,1,,NExtra.IO.PathPatternMatcher
+NExtra.IO,PathPatternMatcher,4,5,0,4,2,52,11,0,1,0,1,0,NExtra.IO.IPathPatternMatcher,
+NExtra.IO,FileSizePresenter,0,1,0,0,1,18,5,0,1,-1,1,0,NExtra.IO.IFileSizePresenter,
 NExtra.Security,IAuthenticationService,0,4,0,0,0,7,4,1,0,-1,0,0,,
-NExtra.Security,IHashValueGenerator,0,1,0,0,0,4,1,4,0,-1,0,0,,
-NExtra.Security,Md5Generator,0,1,0,0,1,9,1,0,1,-1,0,1,,NExtra.Tests.Security.Md5GeneratorBehavior
-NExtra.Security,Sha1Generator,0,1,0,0,1,9,1,0,1,-1,0,1,,NExtra.Tests.Security.Sha1GeneratorBehavior
-NExtra.Serialization,IObjectSerializer,0,4,0,0,0,7,4,1,0,-1,0,1,,NExtra.Web.Tests.Serialization.NativeJsonSerializerTests
-NExtra.Date,WeekResolver,2,4,0,0,4,38,8,1,1,0,0,0,,
-NExtra.Date,IWeekResolver,0,3,0,0,0,6,3,1,0,-1,0,2,,NExtra.Tests.Date.Iso8601WeekResolverBehavior' NExtra.Tests.Date.WeekResolverBehavior
-NExtra.Date,Iso8601WeekResolver,5,2,0,0,2,44,7,0,2,1,0,0,,
-NExtra.Diagnostics,IProcess,0,14,0,0,0,17,14,1,0,-1,0,0,,
-NExtra.Diagnostics,ProcessFacade,0,14,0,0,14,59,14,0,1,-1,0,0,,
-NExtra.Documentation,AssemblyXmlDocumentationExtractor,1,3,0,0,3,39,5,0,1,0,0,0,,
-NExtra.Documentation,IAssemblyDocumentationExtractor,0,2,0,0,0,13,2,2,0,-1,0,2,,NExtra.Documentation.XmlDocumentationElementExtractor' NExtra.Documentation.XmlDocumentationHandler
-NExtra.Documentation,IMemberInfoDocumentationExtractor,0,1,0,0,0,7,1,2,0,-1,0,1,,NExtra.Documentation.XmlDocumentationHandler
-NExtra.Documentation,IMethodInfoDocumentationExtractor,0,1,0,0,0,7,1,2,0,-1,0,1,,NExtra.Documentation.XmlDocumentationHandler
-NExtra.Documentation,ITypeDocumentationExtractor,0,1,0,0,0,7,1,2,0,-1,0,1,,NExtra.Documentation.XmlDocumentationHandler
-NExtra.Documentation,IDocumentationElementExtractor,0,1,0,0,0,11,1,2,0,-1,0,4,,NExtra.Documentation.MemberInfoXmlDocumentationExtractor' NExtra.Documentation.MethodInfoXmlDocumentationExtractor' NExtra.Documentation.TypeXmlDocumentationExtractor' NExtra.Documentation.XmlDocumentationHandler
-NExtra.Documentation,MemberInfoXmlDocumentationExtractor,1,2,0,0,2,14,2,0,1,0,1,0,NExtra.Documentation.IDocumentationElementExtractor,
-NExtra.Documentation,MethodInfoXmlDocumentationExtractor,1,2,0,0,2,23,4,0,1,0,1,0,NExtra.Documentation.IDocumentationElementExtractor,
-NExtra.Documentation,TypeXmlDocumentationExtractor,1,2,0,0,2,14,2,0,1,0,1,0,NExtra.Documentation.IDocumentationElementExtractor,
-NExtra.Documentation,XmlDocumentationElementExtractor,1,2,0,0,2,36,7,0,1,0,1,0,NExtra.Documentation.IAssemblyDocumentationExtractor,
-NExtra.Documentation,XmlDocumentationHandler,5,10,0,0,10,112,10,0,1,0.4,5,0,NExtra.Documentation.IAssemblyDocumentationExtractor' NExtra.Documentation.IDocumentationElementExtractor' NExtra.Documentation.IMemberInfoDocumentationExtractor' NExtra.Documentation.IMethodInfoDocumentationExtractor' NExtra.Documentation.ITypeDocumentationExtractor,
-NExtra.Email,IEmailSender,0,2,0,0,0,5,2,2,0,-1,0,0,,
-NExtra.Email,EmailNonSender,0,2,0,0,2,9,2,0,1,-1,0,0,,
-NExtra.Email,SmtpClientBasedEmailSender,0,2,0,0,2,11,2,0,1,-1,0,0,,
+NExtra.Security,IHashValueGenerator,0,1,0,0,0,4,1,4,0,-1,0,2,,NExtra.Security.Sha1Generator' NExtra.Security.Md5Generator
+NExtra.Security,Md5Generator,0,1,0,0,1,9,1,0,1,-1,1,0,NExtra.Security.IHashValueGenerator,
+NExtra.Security,Sha1Generator,0,1,0,0,1,9,1,0,1,-1,1,0,NExtra.Security.IHashValueGenerator,
+NExtra.Serialization,IObjectSerializer,0,4,0,0,0,7,4,1,0,-1,0,0,,
+NExtra.Date,WeekResolver,2,4,0,0,4,38,8,1,1,0,1,1,NExtra.Date.IWeekResolver,NExtra.Date.Iso8601WeekResolver
+NExtra.Date,IWeekResolver,0,3,0,0,0,6,3,1,0,-1,0,1,,NExtra.Date.WeekResolver
+NExtra.Date,Iso8601WeekResolver,5,2,0,0,2,44,7,0,2,1,1,0,NExtra.Date.WeekResolver,
+NExtra.Diagnostics,IProcess,0,14,0,0,0,17,14,1,0,-1,0,1,,NExtra.Diagnostics.ProcessFacade
+NExtra.Diagnostics,ProcessFacade,0,14,0,0,14,59,14,0,1,-1,1,0,NExtra.Diagnostics.IProcess,
+NExtra.Documentation,AssemblyXmlDocumentationExtractor,1,3,0,0,3,39,5,0,1,0,1,1,NExtra.Documentation.IAssemblyDocumentationExtractor,NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,IAssemblyDocumentationExtractor,0,2,0,0,0,13,2,2,0,-1,0,3,,NExtra.Documentation.AssemblyXmlDocumentationExtractor' NExtra.Documentation.XmlDocumentationElementExtractor' NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,IMemberInfoDocumentationExtractor,0,1,0,0,0,7,1,2,0,-1,0,2,,NExtra.Documentation.MemberInfoXmlDocumentationExtractor' NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,IMethodInfoDocumentationExtractor,0,1,0,0,0,7,1,2,0,-1,0,2,,NExtra.Documentation.MethodInfoXmlDocumentationExtractor' NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,ITypeDocumentationExtractor,0,1,0,0,0,7,1,2,0,-1,0,2,,NExtra.Documentation.TypeXmlDocumentationExtractor' NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,IDocumentationElementExtractor,0,1,0,0,0,11,1,2,0,-1,0,5,,NExtra.Documentation.XmlDocumentationElementExtractor' NExtra.Documentation.MethodInfoXmlDocumentationExtractor' NExtra.Documentation.MemberInfoXmlDocumentationExtractor' NExtra.Documentation.TypeXmlDocumentationExtractor' NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,MemberInfoXmlDocumentationExtractor,1,2,0,0,2,14,2,0,1,0,2,1,NExtra.Documentation.IMemberInfoDocumentationExtractor' NExtra.Documentation.IDocumentationElementExtractor,NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,MethodInfoXmlDocumentationExtractor,1,2,0,0,2,23,4,0,1,0,2,1,NExtra.Documentation.IMethodInfoDocumentationExtractor' NExtra.Documentation.IDocumentationElementExtractor,NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,TypeXmlDocumentationExtractor,1,2,0,0,2,14,2,0,1,0,2,1,NExtra.Documentation.ITypeDocumentationExtractor' NExtra.Documentation.IDocumentationElementExtractor,NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,XmlDocumentationElementExtractor,1,2,0,0,2,36,7,0,1,0,2,1,NExtra.Documentation.IAssemblyDocumentationExtractor' NExtra.Documentation.IDocumentationElementExtractor,NExtra.Documentation.XmlDocumentationHandler
+NExtra.Documentation,XmlDocumentationHandler,5,10,0,0,10,112,10,0,1,0.4,10,0,NExtra.Documentation.AssemblyXmlDocumentationExtractor' NExtra.Documentation.IAssemblyDocumentationExtractor' NExtra.Documentation.IMemberInfoDocumentationExtractor' NExtra.Documentation.IMethodInfoDocumentationExtractor' NExtra.Documentation.ITypeDocumentationExtractor' NExtra.Documentation.IDocumentationElementExtractor' NExtra.Documentation.MemberInfoXmlDocumentationExtractor' NExtra.Documentation.MethodInfoXmlDocumentationExtractor' NExtra.Documentation.TypeXmlDocumentationExtractor' NExtra.Documentation.XmlDocumentationElementExtractor,
+NExtra.Email,IEmailSender,0,2,0,0,0,5,2,2,0,-1,0,2,,NExtra.Email.SmtpClientBasedEmailSender' NExtra.Email.EmailNonSender
+NExtra.Email,EmailNonSender,0,2,0,0,2,9,2,0,1,-1,1,0,NExtra.Email.IEmailSender,
+NExtra.Email,SmtpClientBasedEmailSender,0,2,0,0,2,11,2,0,1,-1,1,0,NExtra.Email.IEmailSender,
 NExtra,EventArgs<T>,0,1,1,0,1,8,1,0,0,-1,0,0,,
 NExtra,Nullable<T>,0,2,2,0,2,16,2,0,0,-1,0,0,,
-NExtra.Localization,HierarchicalResourceManagerTranslator,0,5,1,0,5,45,10,0,1,-1,1,1,NExtra.Localization.ResourceManagerTranslator,NExtra.Tests.Localization.HierarchicalResourceManagerTranslatorBehavior
-NExtra.Localization,ITranslator,0,4,0,0,0,7,4,1,0,-1,0,4,,NExtra.Mvc.HtmlHelpers.TranslateHelper' NExtra.Mvc.Localization.LocalizedDataAnnotationsModelMetadataProvider' NExtra.Mvc.Tests.Localization.LocalizedDataAnnotationsModelMetadataProviderBehavior' NExtra.Mvc.Tests.Localization.ProviderWrapper
-NExtra.Localization,ResourceManagerTranslator,1,5,0,0,5,26,5,1,1,0,0,1,,NExtra.Localization.HierarchicalResourceManagerTranslator
-NExtra.Logging,DoNothingLogWriter,0,1,0,0,1,6,1,0,1,-1,1,0,NExtra.Logging.LogLevel,
-NExtra.Logging,ILogWriter,0,1,0,0,0,4,1,1,0,-1,1,0,NExtra.Logging.LogLevel,
-NExtra.Logging,LogLevel,0,0,0,0,0,8,0,0,0,-1,0,2,,NExtra.Logging.DoNothingLogWriter' NExtra.Logging.ILogWriter
-NExtra.Reflection,ITypeLocator,0,1,0,0,0,4,1,1,0,-1,0,0,,
-NExtra.Reflection,TypeLocator<TType>,1,2,0,0,2,24,3,0,1,0,0,0,,
-NExtra.Syndication,ISyndicationFeedLoader,0,1,0,0,0,7,1,1,0,-1,0,0,,
-NExtra.Syndication,SyndicationFeedLoader,0,1,0,0,1,9,1,0,1,-1,1,1,NExtra.Validation.UrlAttribute,NExtra.Tests.Syndication.SyndicationFeedLoaderBehavior
-NExtra.Testing,MetadataValidator,0,1,3,0,1,28,1,0,0,-1,1,1,NExtra.Testing.MetadataRegistrator,NExtra.Mvc.Testing.ControllerExtensions
+NExtra.Localization,HierarchicalResourceManagerTranslator,0,5,1,0,5,45,10,0,1,-1,1,0,NExtra.Localization.ResourceManagerTranslator,
+NExtra.Localization,ITranslator,0,4,0,0,0,7,4,1,0,-1,0,1,,NExtra.Localization.ResourceManagerTranslator
+NExtra.Localization,ResourceManagerTranslator,1,5,0,0,5,26,5,1,1,0,1,1,NExtra.Localization.ITranslator,NExtra.Localization.HierarchicalResourceManagerTranslator
+NExtra.Logging,DoNothingLogWriter,0,1,0,0,1,6,1,0,1,-1,2,0,NExtra.Logging.ILogWriter' NExtra.Logging.LogLevel,
+NExtra.Logging,ILogWriter,0,1,0,0,0,4,1,1,0,-1,1,1,NExtra.Logging.LogLevel,NExtra.Logging.DoNothingLogWriter
+NExtra.Logging,LogLevel,0,0,0,0,0,8,0,0,0,-1,0,2,,NExtra.Logging.ILogWriter' NExtra.Logging.DoNothingLogWriter
+NExtra.Reflection,ITypeLocator,0,1,0,0,0,4,1,1,0,-1,0,1,,NExtra.Reflection.TypeLocator<TType>
+NExtra.Reflection,TypeLocator<TType>,1,2,0,0,2,24,3,0,1,0,1,0,NExtra.Reflection.ITypeLocator,
+NExtra.Syndication,ISyndicationFeedLoader,0,1,0,0,0,7,1,1,0,-1,0,1,,NExtra.Syndication.SyndicationFeedLoader
+NExtra.Syndication,SyndicationFeedLoader,0,1,0,0,1,9,1,0,1,-1,2,0,NExtra.Syndication.ISyndicationFeedLoader' NExtra.Validation.UrlAttribute,
+NExtra.Testing,MetadataValidator,0,1,3,0,1,28,1,0,0,-1,1,0,NExtra.Testing.MetadataRegistrator,
 NExtra.Testing,CrossThreadTestRunner,1,4,0,0,2,54,6,0,0,0,0,0,,
-NExtra.Testing,MetadataRegistrator,2,4,0,0,3,50,8,0,0,0.5,0,1,,NExtra.Testing.MetadataValidator
-NExtra.Url,IUrlifier,0,1,0,0,0,4,1,1,0,-1,0,2,,NExtra.Mvc.HtmlHelpers.UrlifyHelper' NExtra.Tests.Url.StringUrlifierBehavior
-NExtra.Url,StringUrlifier,0,1,0,0,1,42,4,0,1,-1,0,0,,
-NExtra.Validation,IValidator,0,1,0,0,0,4,1,14,0,-1,0,15,,NExtra.Validation.Ssn.SwedishSsnChecksumValidator' NExtra.Validation.Ssn.NorwegianSsnAttribute' NExtra.Validation.Ssn.FinnishSsnAttribute' NExtra.Validation.Ssn.SwedishSsnAttribute' NExtra.Tests.Validation.LuhnAttributeBehavior' NExtra.Tests.Validation.PhoneNumberAttributeBehavior' NExtra.Tests.Validation.MinLengthAttributeBehavior' NExtra.Tests.Validation.IpAddressAttributeBehavior' NExtra.Tests.Validation.EmailAddressAttributeBehavior' NExtra.Tests.Validation.GuidAttributeBehavior' NExtra.Tests.Validation.UrlAttributeBehavior' NExtra.Tests.Validation.Ssn.NorwegianSsnValidatorBehavior' NExtra.Tests.Validation.Ssn.FinnishSsnValidatorBehavior' NExtra.Tests.Validation.Ssn.SwedishSsnValidatorBehavior' NExtra.Tests.Validation.PostalCode.SwedishPostalCodeAttributeBehavior
-NExtra.Validation,LuhnAttribute,0,1,0,0,1,17,4,0,1,-1,0,0,,
-NExtra.Validation,PhoneNumberAttribute,1,1,0,1,1,7,1,0,1,0,0,0,,
-NExtra.Validation,IpAddressAttribute,1,1,0,1,1,7,1,0,1,0,0,0,,
-NExtra.Validation,EmailAddressAttribute,1,1,0,1,1,6,1,0,1,0,0,0,,
-NExtra.Validation,GuidAttribute,1,1,0,1,1,7,1,0,1,0,0,0,,
-NExtra.Validation,MinLengthAttribute,1,2,0,0,2,15,2,0,1,0,0,1,,NExtra.Tests.Validation.MinLengthAttributeBehavior
-NExtra.Validation,UrlAttribute,1,1,0,1,1,7,1,0,1,0,0,1,,NExtra.Syndication.SyndicationFeedLoader
-NExtra.Validation,UseSeparator,0,0,0,0,0,6,0,0,0,-1,0,6,,NExtra.Validation.Ssn.FinnishSsnAttribute' NExtra.Validation.Ssn.SwedishSsnAttribute' NExtra.Validation.PostalCode.SwedishPostalCodeAttribute' NExtra.Tests.Validation.Ssn.FinnishSsnValidatorBehavior' NExtra.Tests.Validation.Ssn.SwedishSsnValidatorBehavior' NExtra.Tests.Validation.PostalCode.SwedishPostalCodeAttributeBehavior
-NExtra.Validation.Ssn,NorwegianSsnChecksumValidator,2,4,0,0,1,36,6,0,1,0,0,0,,
-NExtra.Validation.Ssn,SwedishSsnChecksumValidator,1,4,0,0,3,21,4,0,1,0.5,1,0,NExtra.Validation.IValidator,
-NExtra.Validation.Ssn,FinnishSsnChecksumValidator,0,2,0,0,1,20,3,0,1,-1,0,0,,
-NExtra.Validation.Ssn,NorwegianSsnAttribute,2,3,0,1,3,23,4,0,1,0.67,1,1,NExtra.Validation.IValidator,NExtra.Tests.Validation.Ssn.NorwegianSsnValidatorBehavior
-NExtra.Validation.Ssn,FinnishSsnAttribute,4,4,0,0,4,35,6,0,1,0.5,2,1,NExtra.Validation.IValidator' NExtra.Validation.UseSeparator,NExtra.Tests.Validation.Ssn.FinnishSsnValidatorBehavior
-NExtra.Validation.Ssn,SwedishSsnAttribute,4,4,0,0,4,35,6,0,1,0.5,2,1,NExtra.Validation.IValidator' NExtra.Validation.UseSeparator,NExtra.Tests.Validation.Ssn.SwedishSsnValidatorBehavior
-NExtra.Validation.PostalCode,SwedishPostalCodeAttribute,3,2,0,0,2,22,3,0,1,0,1,1,NExtra.Validation.UseSeparator,NExtra.Tests.Validation.PostalCode.SwedishPostalCodeAttributeBehavior
+NExtra.Testing,MetadataRegistrator,2,4,0,0,3,50,10,0,0,0.5,0,1,,NExtra.Testing.MetadataValidator
+NExtra.Url,IUrlifier,0,1,0,0,0,4,1,1,0,-1,0,1,,NExtra.Url.StringUrlifier
+NExtra.Url,StringUrlifier,0,1,0,0,1,42,9,0,1,-1,1,0,NExtra.Url.IUrlifier,
+NExtra.Validation,IValidator,0,1,0,0,0,4,1,14,0,-1,0,14,,NExtra.Validation.EmailAddressAttribute' NExtra.Validation.PhoneNumberAttribute' NExtra.Validation.LuhnAttribute' NExtra.Validation.PostalCode.SwedishPostalCodeAttribute' NExtra.Validation.MinLengthAttribute' NExtra.Validation.GuidAttribute' NExtra.Validation.UrlAttribute' NExtra.Validation.Ssn.FinnishSsnChecksumValidator' NExtra.Validation.Ssn.NorwegianSsnChecksumValidator' NExtra.Validation.IpAddressAttribute' NExtra.Validation.Ssn.SwedishSsnChecksumValidator' NExtra.Validation.Ssn.SwedishSsnAttribute' NExtra.Validation.Ssn.FinnishSsnAttribute' NExtra.Validation.Ssn.NorwegianSsnAttribute
+NExtra.Validation,LuhnAttribute,0,1,0,0,1,17,4,0,1,-1,1,1,NExtra.Validation.IValidator,NExtra.Validation.Ssn.SwedishSsnChecksumValidator
+NExtra.Validation,PhoneNumberAttribute,1,1,0,1,1,7,1,0,1,0,1,0,NExtra.Validation.IValidator,
+NExtra.Validation,IpAddressAttribute,1,1,0,1,1,7,1,0,1,0,1,0,NExtra.Validation.IValidator,
+NExtra.Validation,EmailAddressAttribute,1,1,0,1,1,6,1,0,1,0,1,0,NExtra.Validation.IValidator,
+NExtra.Validation,GuidAttribute,1,1,0,1,1,7,1,0,1,0,1,0,NExtra.Validation.IValidator,
+NExtra.Validation,MinLengthAttribute,1,2,0,0,2,15,2,0,1,0,1,0,NExtra.Validation.IValidator,
+NExtra.Validation,UrlAttribute,1,1,0,1,1,7,1,0,1,0,1,1,NExtra.Validation.IValidator,NExtra.Syndication.SyndicationFeedLoader
+NExtra.Validation,UseSeparator,0,0,0,0,0,6,0,0,0,-1,0,3,,NExtra.Validation.PostalCode.SwedishPostalCodeAttribute' NExtra.Validation.Ssn.SwedishSsnAttribute' NExtra.Validation.Ssn.FinnishSsnAttribute
+NExtra.Validation.Ssn,NorwegianSsnChecksumValidator,2,4,0,0,1,36,6,0,1,0,1,1,NExtra.Validation.IValidator,NExtra.Validation.Ssn.NorwegianSsnAttribute
+NExtra.Validation.Ssn,SwedishSsnChecksumValidator,1,4,0,0,3,21,4,0,1,0.75,2,1,NExtra.Validation.IValidator' NExtra.Validation.LuhnAttribute,NExtra.Validation.Ssn.SwedishSsnAttribute
+NExtra.Validation.Ssn,FinnishSsnChecksumValidator,0,2,0,0,1,20,3,0,1,-1,1,1,NExtra.Validation.IValidator,NExtra.Validation.Ssn.FinnishSsnAttribute
+NExtra.Validation.Ssn,NorwegianSsnAttribute,2,3,0,1,3,23,4,0,1,0.67,2,0,NExtra.Validation.IValidator' NExtra.Validation.Ssn.NorwegianSsnChecksumValidator,
+NExtra.Validation.Ssn,FinnishSsnAttribute,4,4,0,0,4,35,7,0,1,0.5,3,0,NExtra.Validation.IValidator' NExtra.Validation.UseSeparator' NExtra.Validation.Ssn.FinnishSsnChecksumValidator,
+NExtra.Validation.Ssn,SwedishSsnAttribute,4,4,0,0,4,35,7,0,1,0.5,3,0,NExtra.Validation.IValidator' NExtra.Validation.UseSeparator' NExtra.Validation.Ssn.SwedishSsnChecksumValidator,
+NExtra.Validation.PostalCode,SwedishPostalCodeAttribute,3,2,0,0,2,22,4,0,1,0,2,0,NExtra.Validation.IValidator' NExtra.Validation.UseSeparator,

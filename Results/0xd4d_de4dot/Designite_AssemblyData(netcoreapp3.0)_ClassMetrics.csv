@@ -1,0 +1,41 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+AssemblyData,AssemblyResolver,4,8,0,0,2,94,19,0,0,0.38,1,1,AssemblyData.Utils,AssemblyData.AssemblyService
+AssemblyData,AssemblyService,3,8,0,0,6,47,16,3,1,0.75,6,3,AssemblyData.AssemblyResolver' AssemblyData.GenericService' AssemblyData.AssemblyServiceType' AssemblyData.IAssemblyService' AssemblyData.MethodDecrypterService' AssemblyData.StringDecrypterService,AssemblyData.MethodDecrypterService' AssemblyData.GenericService' AssemblyData.StringDecrypterService
+AssemblyData,DelegateStringDecrypter,1,3,0,0,2,22,5,0,1,0,2,1,AssemblyData.IStringDecrypter' AssemblyData.Utils,AssemblyData.StringDecrypterService
+AssemblyData,EmuStringDecrypter,2,3,0,0,2,27,5,0,1,0,3,1,AssemblyData.DecryptInfo' AssemblyData.IStringDecrypter' AssemblyData.methodsrewriter.MethodsRewriter,AssemblyData.StringDecrypterService
+AssemblyData,DecryptInfo,2,1,0,2,1,5,1,0,0,0,0,1,,AssemblyData.EmuStringDecrypter
+AssemblyData,GenericService,1,6,0,0,4,37,12,0,2,0,4,1,AssemblyData.AssemblyService' AssemblyData.CreateUserGenericServiceAttribute' AssemblyData.IGenericService' AssemblyData.IUserGenericService,AssemblyData.AssemblyService
+AssemblyData,AssemblyServiceType,0,0,0,0,0,5,0,0,0,-1,0,1,,AssemblyData.AssemblyService
+AssemblyData,IAssemblyService,0,2,0,0,0,4,2,4,0,-1,0,4,,AssemblyData.IStringDecrypterService' AssemblyData.IMethodDecrypterService' AssemblyData.IGenericService' AssemblyData.AssemblyService
+AssemblyData,CreateUserGenericServiceAttribute,0,0,0,0,0,2,0,0,0,-1,0,1,,AssemblyData.GenericService
+AssemblyData,IGenericService,0,3,0,0,0,5,3,1,1,-1,1,1,AssemblyData.IAssemblyService,AssemblyData.GenericService
+AssemblyData,IMethodDecrypterService,0,4,0,0,0,6,4,1,1,-1,1,1,AssemblyData.IAssemblyService,AssemblyData.MethodDecrypterService
+AssemblyData,IStringDecrypter,0,2,0,0,0,4,2,2,0,-1,0,3,,AssemblyData.StringDecrypterService' AssemblyData.EmuStringDecrypter' AssemblyData.DelegateStringDecrypter
+AssemblyData,StringDecrypterType,0,0,0,0,0,4,0,0,0,-1,0,2,,AssemblyData.IStringDecrypterService' AssemblyData.StringDecrypterService
+AssemblyData,IStringDecrypterService,0,4,0,0,0,6,4,1,1,-1,2,1,AssemblyData.IAssemblyService' AssemblyData.StringDecrypterType,AssemblyData.StringDecrypterService
+AssemblyData,IUserGenericService,0,2,0,0,0,4,2,2,0,-1,0,1,,AssemblyData.GenericService
+AssemblyData,MethodDecrypterService,1,4,0,0,4,23,5,0,2,1,2,1,AssemblyData.AssemblyService' AssemblyData.IMethodDecrypterService,AssemblyData.AssemblyService
+AssemblyData,MyString,1,3,0,0,3,23,7,0,0,0.67,0,1,,AssemblyData.SimpleData
+AssemblyData,SimpleData,0,2,0,0,2,16,6,0,0,-1,1,1,AssemblyData.MyString,AssemblyData.StringDecrypterService
+AssemblyData,StringDecrypterService,1,7,0,0,4,54,16,0,2,0.29,7,1,AssemblyData.AssemblyService' AssemblyData.DelegateStringDecrypter' AssemblyData.EmuStringDecrypter' AssemblyData.IStringDecrypter' AssemblyData.StringDecrypterType' AssemblyData.IStringDecrypterService' AssemblyData.SimpleData,AssemblyData.AssemblyService
+AssemblyData,Utils,1,6,0,0,6,105,52,0,0,0.83,0,4,,AssemblyData.methodsrewriter.CodeGenerator' AssemblyData.AssemblyResolver' AssemblyData.methodsrewriter.MethodsRewriter' AssemblyData.DelegateStringDecrypter
+AssemblyServer,Start,0,1,0,0,1,6,1,0,0,-1,0,0,,
+AssemblyData.methodsrewriter,MGenericParameter,0,0,0,0,0,2,0,0,0,-1,0,1,,AssemblyData.methodsrewriter.AssemblyResolver
+AssemblyData.methodsrewriter,AssemblyResolver,4,11,0,0,5,94,34,0,0,0,3,1,AssemblyData.methodsrewriter.MGenericParameter' AssemblyData.methodsrewriter.ResolverUtils' AssemblyData.methodsrewriter.TypeResolver,AssemblyData.methodsrewriter.Resolver
+AssemblyData.methodsrewriter,CodeGenerator,17,18,1,0,3,247,68,0,0,0.22,7,1,AssemblyData.Utils' AssemblyData.methodsrewriter.IMethodsRewriter' AssemblyData.methodsrewriter.MMethod' AssemblyData.methodsrewriter.Operand' AssemblyData.methodsrewriter.Type' AssemblyData.methodsrewriter.Resolver' AssemblyData.methodsrewriter.ResolverUtils,AssemblyData.methodsrewriter.MethodsRewriter
+AssemblyData.methodsrewriter,IMethodsRewriter,0,1,0,0,0,3,1,1,0,-1,0,2,,AssemblyData.methodsrewriter.MethodsRewriter' AssemblyData.methodsrewriter.CodeGenerator
+AssemblyData.methodsrewriter,MethodsFinder,1,1,0,0,1,31,2,0,0,0,1,1,AssemblyData.methodsrewriter.MethodsModule,AssemblyData.methodsrewriter.MethodsRewriter
+AssemblyData.methodsrewriter,MethodsModule,3,2,0,0,2,23,8,0,0,0,0,1,,AssemblyData.methodsrewriter.MethodsFinder
+AssemblyData.methodsrewriter,MethodsRewriter,5,23,0,0,4,275,53,0,1,0.26,9,1,AssemblyData.Utils' AssemblyData.methodsrewriter.CodeGenerator' AssemblyData.methodsrewriter.IMethodsRewriter' AssemblyData.methodsrewriter.MethodsFinder' AssemblyData.methodsrewriter.NewMethodInfo' AssemblyData.methodsrewriter.Operand' AssemblyData.methodsrewriter.Type' AssemblyData.methodsrewriter.Resolver' AssemblyData.methodsrewriter.ResolverUtils,AssemblyData.EmuStringDecrypter
+AssemblyData.methodsrewriter,NewMethodInfo,7,3,0,7,3,22,3,0,0,1,0,1,,AssemblyData.methodsrewriter.MethodsRewriter
+AssemblyData.methodsrewriter,MField,2,2,0,2,2,9,2,0,0,1,0,3,,AssemblyData.methodsrewriter.Resolver' AssemblyData.methodsrewriter.MModule' AssemblyData.methodsrewriter.MType
+AssemblyData.methodsrewriter,MMethod,2,3,0,2,3,10,3,0,0,0.67,0,4,,AssemblyData.methodsrewriter.Resolver' AssemblyData.methodsrewriter.CodeGenerator' AssemblyData.methodsrewriter.MType' AssemblyData.methodsrewriter.MModule
+AssemblyData.methodsrewriter,MModule,7,10,0,2,7,100,28,0,0,0,3,1,AssemblyData.methodsrewriter.MField' AssemblyData.methodsrewriter.MMethod' AssemblyData.methodsrewriter.MType,AssemblyData.methodsrewriter.Resolver
+AssemblyData.methodsrewriter,MType,6,8,0,2,6,61,14,0,0,0.25,3,2,AssemblyData.methodsrewriter.MField' AssemblyData.methodsrewriter.MMethod' AssemblyData.methodsrewriter.ResolverUtils,AssemblyData.methodsrewriter.Resolver' AssemblyData.methodsrewriter.MModule
+AssemblyData.methodsrewriter,Operand,2,3,0,2,3,21,3,0,0,0.67,1,2,AssemblyData.methodsrewriter.Type,AssemblyData.methodsrewriter.CodeGenerator' AssemblyData.methodsrewriter.MethodsRewriter
+AssemblyData.methodsrewriter,Type,0,0,0,0,0,8,0,0,0,-1,0,3,,AssemblyData.methodsrewriter.Operand' AssemblyData.methodsrewriter.MethodsRewriter' AssemblyData.methodsrewriter.CodeGenerator
+AssemblyData.methodsrewriter,Resolver,2,16,0,0,9,160,54,0,0,0.38,5,3,AssemblyData.methodsrewriter.AssemblyResolver' AssemblyData.methodsrewriter.MField' AssemblyData.methodsrewriter.MMethod' AssemblyData.methodsrewriter.MModule' AssemblyData.methodsrewriter.MType,AssemblyData.methodsrewriter.ResolverUtils' AssemblyData.methodsrewriter.MethodsRewriter' AssemblyData.methodsrewriter.CodeGenerator
+AssemblyData.methodsrewriter,ResolverUtils,1,12,0,0,12,91,28,0,0,0.92,2,5,AssemblyData.methodsrewriter.Resolver' AssemblyData.methodsrewriter.CachedMemberInfo,AssemblyData.methodsrewriter.MType' AssemblyData.methodsrewriter.CodeGenerator' AssemblyData.methodsrewriter.AssemblyResolver' AssemblyData.methodsrewriter.MethodsRewriter' AssemblyData.methodsrewriter.TypeInstanceResolver
+AssemblyData.methodsrewriter,CachedMemberInfo,2,3,0,0,3,15,4,0,0,0.67,0,1,,AssemblyData.methodsrewriter.ResolverUtils
+AssemblyData.methodsrewriter,TypeInstanceResolver,3,5,0,0,3,50,17,0,0,0.4,1,1,AssemblyData.methodsrewriter.ResolverUtils,AssemblyData.methodsrewriter.TypeResolver
+AssemblyData.methodsrewriter,TypeResolver,2,4,0,1,3,12,5,0,0,1,1,1,AssemblyData.methodsrewriter.TypeInstanceResolver,AssemblyData.methodsrewriter.AssemblyResolver

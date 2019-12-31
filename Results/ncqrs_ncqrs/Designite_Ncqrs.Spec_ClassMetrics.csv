@@ -1,19 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Ncqrs.Spec,AggregateRootTestFixture<TAggregateRoot>,0,4,4,0,1,41,5,0,0,-1,3,0,Ncqrs.Domain.Storage.IAggregateRootCreationStrategy' Ncqrs.Spec.PrepareTheseEvents' Ncqrs.Spec.Prepare,
-Ncqrs.Spec,AndAttribute,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Ncqrs.Spec,AutoMappedCommandTestFixture<TCommand>,1,1,0,0,0,9,1,0,0,0,2,0,Ncqrs.Commanding.CommandExecution.Mapping.Attributes.AttributeBasedCommandMapper' Ncqrs.Commanding.CommandExecution.Mapping.UoWMappedCommandExecutor,
-Ncqrs.Spec,BaseTestFixture,1,5,0,0,1,25,5,3,0,0,0,2,,Ncqrs.Spec.EventSerializationFixture<T>' Ncqrs.Config.Ninject.Tests.NinjectAggregateRootCreationStrategyTests
+Ncqrs.Spec,AggregateRootTestFixture<TAggregateRoot>,0,4,4,0,1,41,5,0,0,-1,1,0,Ncqrs.Spec.Prepare,
+Ncqrs.Spec,AndAttribute,0,0,0,0,0,3,0,0,1,-1,1,0,Ncqrs.Spec.ThenAttribute,
+Ncqrs.Spec,AutoMappedCommandTestFixture<TCommand>,1,1,0,0,0,9,1,0,0,0,1,0,Ncqrs.Spec.CommandTestFixture<TCommand>,
+Ncqrs.Spec,BaseTestFixture,1,5,0,0,1,25,5,3,0,0,0,2,,Ncqrs.Spec.EventSerializationFixture<T>' Ncqrs.Spec.DomainTestFixture<TCommand>
 Ncqrs.Spec,BaseTestFixture<TSubjectUnderTest>,2,5,0,0,1,27,5,0,0,1,0,0,,
-Ncqrs.Spec,DomainTestFixture<TCommand>,1,7,2,0,0,39,7,0,1,0.86,2,0,Ncqrs.Spec.Fakes.EnvironmentConfigurationWrapper' Ncqrs.Spec.EventContext,
-Ncqrs.Spec,JsonEventSerializationFixture<T>,1,7,1,0,0,40,7,0,0,0.71,4,0,Ncqrs.Eventing.Storage.Serialization.IEventFormatter' Ncqrs.Eventing.Storage.SimpleEventTypeResolver' Ncqrs.Eventing.Storage.IEventTypeResolver' Ncqrs.Eventing.Storage.Serialization.JsonEventFormatter,
-Ncqrs.Spec,CommandTestFixture<TCommand>,0,3,1,0,0,16,3,0,0,-1,1,0,Ncqrs.Commanding.CommandExecution.ICommandExecutor,
-Ncqrs.Spec,BigBangTestFixture<TCommand>,0,6,2,0,0,39,6,0,0,-1,7,0,Ncqrs.NcqrsEnvironment' Ncqrs.Commanding.ServiceModel.ICommandService' Ncqrs.IUniqueIdentifierGenerator' Ncqrs.Eventing.Storage.IEventStore' Ncqrs.Eventing.UncommittedEventStream' Ncqrs.Spec.PrepareTheseEvents' Ncqrs.Spec.Prepare,
-Ncqrs.Spec,EventSerializationFixture<T>,0,16,3,0,6,128,22,0,1,-1,1,0,Ncqrs.Spec.BaseTestFixture,
-Ncqrs.Spec,ExceptionTestFixture<TCommand;TException>,0,3,0,0,3,20,3,0,0,-1,0,0,,
-Ncqrs.Spec,OneEventTestFixture<TCommand;TEvent>,0,4,1,0,3,29,4,0,0,-1,0,0,,
-Ncqrs.Spec,EventContext,3,6,3,0,2,88,10,0,0,0.33,2,1,Ncqrs.Domain.AggregateRoot' Ncqrs.Eventing.UncommittedEvent,Ncqrs.Spec.DomainTestFixture<TCommand>
+Ncqrs.Spec,DomainTestFixture<TCommand>,1,7,2,0,0,39,7,0,1,0.86,3,2,Ncqrs.Spec.BaseTestFixture' Ncqrs.Spec.EventContext' Ncqrs.Spec.Fakes.EnvironmentConfigurationWrapper,Ncqrs.Spec.BigBangTestFixture<TCommand>' Ncqrs.Spec.CommandTestFixture<TCommand>
+Ncqrs.Spec,JsonEventSerializationFixture<T>,1,7,1,0,0,49,7,0,0,0.71,1,0,Ncqrs.Spec.EventSerializationFixture<T>,
+Ncqrs.Spec,CommandTestFixture<TCommand>,0,3,1,0,0,16,3,0,0,-1,1,1,Ncqrs.Spec.DomainTestFixture<TCommand>,Ncqrs.Spec.AutoMappedCommandTestFixture<TCommand>
+Ncqrs.Spec,BigBangTestFixture<TCommand>,0,6,2,0,0,39,6,0,0,-1,2,2,Ncqrs.Spec.DomainTestFixture<TCommand>' Ncqrs.Spec.Prepare,Ncqrs.Spec.OneEventTestFixture<TCommand;TEvent>' Ncqrs.Spec.ExceptionTestFixture<TCommand;TException>
+Ncqrs.Spec,EventSerializationFixture<T>,0,16,3,0,6,158,22,0,1,-1,2,1,Ncqrs.Spec.BaseTestFixture' Ncqrs.Spec.ThenAttribute,Ncqrs.Spec.JsonEventSerializationFixture<T>
+Ncqrs.Spec,ExceptionTestFixture<TCommand;TException>,0,3,0,0,3,20,3,0,0,-1,2,0,Ncqrs.Spec.BigBangTestFixture<TCommand>' Ncqrs.Spec.ThenAttribute,
+Ncqrs.Spec,OneEventTestFixture<TCommand;TEvent>,0,4,1,0,3,29,4,0,0,-1,2,0,Ncqrs.Spec.BigBangTestFixture<TCommand>' Ncqrs.Spec.ThenAttribute,
+Ncqrs.Spec,EventContext,3,6,3,0,2,88,10,0,0,0.33,0,1,,Ncqrs.Spec.DomainTestFixture<TCommand>
 Ncqrs.Spec,Prepare,0,2,0,0,2,48,2,0,0,-1,1,2,Ncqrs.Spec.PrepareTheseEvents,Ncqrs.Spec.AggregateRootTestFixture<TAggregateRoot>' Ncqrs.Spec.BigBangTestFixture<TCommand>
-Ncqrs.Spec,PrepareTheseEvents,1,3,0,0,3,37,5,0,0,0,4,3,Ncqrs.Eventing.CommittedEvent' Ncqrs.Eventing.CommittedEventStream' Ncqrs.Eventing.UncommittedEventStream' Ncqrs.Eventing.UncommittedEvent,Ncqrs.Spec.AggregateRootTestFixture<TAggregateRoot>' Ncqrs.Spec.BigBangTestFixture<TCommand>' Ncqrs.Spec.Prepare
-Ncqrs.Spec,ThenAttribute,0,0,0,0,0,1,0,1,0,-1,0,0,,
-Ncqrs.Spec.Fakes,EnvironmentConfigurationWrapper,3,8,0,0,8,66,10,0,1,0.38,2,1,Ncqrs.Config.IEnvironmentConfiguration' Ncqrs.NcqrsEnvironment,Ncqrs.Spec.DomainTestFixture<TCommand>
+Ncqrs.Spec,PrepareTheseEvents,1,3,0,0,3,37,5,0,0,0,0,1,,Ncqrs.Spec.Prepare
+Ncqrs.Spec,ThenAttribute,0,0,0,0,0,1,0,1,0,-1,0,4,,Ncqrs.Spec.AndAttribute' Ncqrs.Spec.OneEventTestFixture<TCommand;TEvent>' Ncqrs.Spec.ExceptionTestFixture<TCommand;TException>' Ncqrs.Spec.EventSerializationFixture<T>
+Ncqrs.Spec.Fakes,EnvironmentConfigurationWrapper,3,8,0,0,8,66,14,0,1,0.38,0,1,,Ncqrs.Spec.DomainTestFixture<TCommand>
 Ncqrs.Spec.Fakes,FrozenClock,1,3,0,0,3,17,3,0,1,0.67,0,0,,

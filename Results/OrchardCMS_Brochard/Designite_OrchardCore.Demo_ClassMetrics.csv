@@ -1,28 +1,32 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Demo,AdminMenu,0,2,1,0,2,33,3,0,1,-1,1,0,OrchardCore.Environment.Navigation.NavigationBuilder,
-OrchardCore.Demo,BlockingMiddleware,1,2,0,0,2,19,3,0,0,0,0,0,,
-OrchardCore.Demo,NonBlockingMiddleware,1,2,0,0,2,13,2,0,0,0,0,0,,
-OrchardCore.Demo,Migrations,1,2,0,0,2,16,2,0,2,0,0,0,,
-OrchardCore.Demo,Permissions,1,2,0,1,2,20,2,0,0,0,0,1,,OrchardCore.Demo.Controllers.ContentApiController
-OrchardCore.Demo,Startup,0,2,0,0,2,43,2,0,0,-1,0,0,,
-OrchardCore.Demo.Commands,DemoCommands,1,2,0,0,2,18,3,0,2,0,0,0,,
+OrchardCore.Demo,AdminMenu,1,2,0,0,2,42,3,0,1,0,0,1,,OrchardCore.Demo.Startup
+OrchardCore.Demo,BlockingMiddleware,1,2,0,0,2,19,3,0,0,0,0,1,,OrchardCore.Demo.Startup
+OrchardCore.Demo,NonBlockingMiddleware,1,2,0,0,2,14,2,0,0,0,0,1,,OrchardCore.Demo.Startup
+OrchardCore.Demo,Migrations,1,2,0,0,2,16,2,0,2,0,0,1,,OrchardCore.Demo.Startup
+OrchardCore.Demo,Permissions,1,2,0,1,2,20,2,0,0,0,0,2,,OrchardCore.Demo.Startup' OrchardCore.Demo.Controllers.ContentApiController
+OrchardCore.Demo,Startup,1,3,0,0,3,61,3,0,0,0.67,14,0,OrchardCore.Demo.AdminMenu' OrchardCore.Demo.BlockingMiddleware' OrchardCore.Demo.NonBlockingMiddleware' OrchardCore.Demo.Migrations' OrchardCore.Demo.Permissions' OrchardCore.Demo.Commands.DemoCommands' OrchardCore.Demo.ContentElementDisplays.TestContentElementDisplay' OrchardCore.Demo.Drivers.UserProfileDisplayDriver' OrchardCore.Demo.Models.TestContentPartA' OrchardCore.Demo.Services.TestBackgroundTask' OrchardCore.Demo.Services.ITestDependency' OrchardCore.Demo.Services.ClassFoo' OrchardCore.DisplayManagement.Descriptors.DemoShapeProvider' OrchardCore.Demo.TagHelpers.BazTagHelper,
+OrchardCore.Demo.Commands,DemoCommands,1,2,0,0,2,18,3,0,0,0,0,1,,OrchardCore.Demo.Startup
 OrchardCore.Demo.Components,FakeViewComponent,0,1,0,0,1,7,1,0,0,-1,0,0,,
-OrchardCore.Demo.ContentElementDisplays,TestContentElementDisplay,2,3,0,0,3,65,8,0,2,1,0,0,,
-OrchardCore.Demo.Controllers,ContentApiController,2,4,0,0,4,49,9,0,0,0,2,0,OrchardCore.Demo.Permissions' OrchardCore.Contents.Permissions,
-OrchardCore.Demo.Controllers,ContentController,3,4,0,0,4,54,8,0,0,0,1,0,OrchardCore.ContentManagement.Display.IContentItemDisplayManager,
+OrchardCore.Demo.ContentElementDisplays,TestContentElementDisplay,2,3,0,0,3,65,8,0,2,1,2,1,OrchardCore.Demo.Models.TestContentPartA' OrchardCore.Demo.Models.TestContentPartAShape,OrchardCore.Demo.Startup
+OrchardCore.Demo.Controllers,AdminController,0,1,0,0,1,7,1,0,0,-1,0,0,,
+OrchardCore.Demo.Controllers,ContentApiController,2,4,0,0,4,50,9,0,0,0,1,0,OrchardCore.Demo.Permissions,
+OrchardCore.Demo.Controllers,ContentController,3,4,0,0,4,54,8,0,0,0,0,0,,
 OrchardCore.Demo.Controllers,DemoController,0,3,0,0,3,19,3,0,0,-1,0,0,,
-OrchardCore.Demo.Controllers,HomeController,7,13,1,0,13,114,15,0,0,0.62,3,0,OrchardCore.Demo.Services.ITestDependency' OrchardCore.ContentManagement.Display.IContentItemDisplayManager' OrchardCore.DeferredTasks.IDeferredTaskEngine,
-OrchardCore.Demo.Drivers,UserProfileDisplayDriver,0,2,0,0,2,21,3,0,0,-1,2,0,OrchardCore.Demo.Models.UserProfile' OrchardCore.Demo.ViewModels.EditUserProfileViewModel,
+OrchardCore.Demo.Controllers,HomeController,6,13,1,0,13,110,15,0,0,0.69,2,0,OrchardCore.Demo.Models.TestContentPartA' OrchardCore.Demo.Services.ITestDependency,
+OrchardCore.Demo.Drivers,UserProfileDisplayDriver,0,2,0,0,2,21,3,0,0,-1,2,1,OrchardCore.Demo.Models.UserProfile' OrchardCore.Demo.ViewModels.EditUserProfileViewModel,OrchardCore.Demo.Startup
+OrchardCore.Demo.GraphQL,TestQueryObjectType,0,1,0,0,1,10,1,0,0,-1,1,1,OrchardCore.Demo.Models.TestContentPartA,OrchardCore.Demo.GraphQL.Startup
+OrchardCore.Demo.GraphQL,Startup,0,1,0,0,1,80,1,0,0,-1,2,0,OrchardCore.Demo.GraphQL.TestQueryObjectType' OrchardCore.Demo.Models.TestContentPartA,
+OrchardCore.Demo.Models,CustomViewModel,0,0,1,0,0,4,0,0,2,-1,0,0,,
 OrchardCore.Demo.Models,FakeShape,0,0,1,0,0,4,0,0,0,-1,0,0,,
 OrchardCore.Demo.Models,HomeViewModel,0,0,2,0,0,5,0,0,0,-1,0,0,,
 OrchardCore.Demo.Models,TestContentField,1,0,0,1,0,4,0,0,0,-1,0,0,,
-OrchardCore.Demo.Models,TestContentPartA,0,0,2,0,0,5,0,0,0,-1,0,0,,
-OrchardCore.Demo.Models,TestContentPartAShape,0,0,1,0,0,4,0,0,0,-1,0,0,,
+OrchardCore.Demo.Models,TestContentPartA,0,0,2,0,0,5,0,0,0,-1,0,5,,OrchardCore.Demo.GraphQL.TestQueryObjectType' OrchardCore.Demo.Startup' OrchardCore.Demo.GraphQL.Startup' OrchardCore.Demo.Controllers.HomeController' OrchardCore.Demo.ContentElementDisplays.TestContentElementDisplay
+OrchardCore.Demo.Models,TestContentPartAShape,0,0,1,0,0,4,0,0,2,-1,0,1,,OrchardCore.Demo.ContentElementDisplays.TestContentElementDisplay
 OrchardCore.Demo.Models,UserProfile,0,0,2,0,0,5,0,0,0,-1,0,1,,OrchardCore.Demo.Drivers.UserProfileDisplayDriver
-OrchardCore.Demo.Services,TestBackgroundTask,1,1,0,0,1,9,1,0,1,0,0,0,,
-OrchardCore.Demo.Services,ITestDependency,0,1,0,0,0,4,1,1,0,-1,0,1,,OrchardCore.Demo.Controllers.HomeController
-OrchardCore.Demo.Services,ClassFoo,1,2,0,0,2,12,2,0,1,0,0,0,,
+OrchardCore.Demo.Services,TestBackgroundTask,1,1,0,0,1,9,1,0,0,0,0,1,,OrchardCore.Demo.Startup
+OrchardCore.Demo.Services,ITestDependency,0,1,0,0,0,4,1,1,0,-1,0,3,,OrchardCore.Demo.Services.ClassFoo' OrchardCore.Demo.Controllers.HomeController' OrchardCore.Demo.Startup
+OrchardCore.Demo.Services,ClassFoo,1,2,0,0,2,12,2,0,1,0,1,1,OrchardCore.Demo.Services.ITestDependency,OrchardCore.Demo.Startup
 OrchardCore.Demo.TagHelpers.Intellisense,BazTagHelper,0,0,2,0,0,11,0,0,0,-1,0,0,,
-OrchardCore.DisplayManagement.Descriptors,DemoShapeProvider,0,2,0,0,2,20,3,0,0,-1,0,0,,
-OrchardCore.Demo.TagHelpers,BazTagHelper,0,1,0,0,1,9,1,0,0,-1,0,0,,
+OrchardCore.DisplayManagement.Descriptors,DemoShapeProvider,0,2,0,0,2,20,3,0,1,-1,0,1,,OrchardCore.Demo.Startup
+OrchardCore.Demo.TagHelpers,BazTagHelper,0,1,0,0,1,9,1,0,1,-1,0,1,,OrchardCore.Demo.Startup
 OrchardCore.Demo.ViewModels,EditUserProfileViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,OrchardCore.Demo.Drivers.UserProfileDisplayDriver

@@ -1,0 +1,32 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+vimage,SortBy,0,0,0,0,0,1,0,0,0,-1,0,3,,vimage.ContextMenu' vimage.Config' vimage.ImageViewer
+vimage,SortDirection,0,0,0,0,0,1,0,0,0,-1,0,3,,vimage.ContextMenu' vimage.Config' vimage.ImageViewer
+vimage,SizingOption,0,0,0,0,0,1,0,0,0,-1,0,2,,vimage.Config' vimage.ImageViewer
+vimage,Config,60,31,34,59,19,1526,304,0,0,0.06,10,1,vimage.SortBy' vimage.SortDirection' vimage.SizingOption' vimage.Action' vimage.Actions' vimage.Action' vimage.Actions' vimage.SortBy' vimage.SortDirection' vimage.SizingOption,vimage.ImageViewer
+vimage,ContextMenu,8,13,0,3,5,296,68,0,0,0.15,5,1,vimage.SortBy' vimage.SortDirection' vimage.AnimatedImage' vimage.ImageViewer' vimage.Action,vimage.ImageViewer
+vimage,AnimatedImageData,7,1,2,5,1,37,1,0,0,0,0,3,,vimage.AnimatedImage' vimage.Graphics' vimage.LoadingAnimatedImage
+vimage,AnimatedImage,9,9,3,7,9,76,17,0,1,0,2,3,vimage.AnimatedImageData' vimage.DisplayObject,vimage.ContextMenu' vimage.Graphics' vimage.ImageViewer
+vimage,DisplayObject,6,18,6,4,18,113,29,1,0,0.67,1,4,vimage.TextureInfo,vimage.AnimatedImage' vimage.Graphics' vimage.TextureInfo' vimage.ImageViewer
+vimage,TextureInfo,4,1,2,1,1,28,1,0,0,0,1,1,vimage.DisplayObject,vimage.DisplayObject
+vimage,DWM,15,19,0,4,13,119,25,0,0,0.21,3,1,vimage.RECT' vimage.Point' vimage.DWM_BLURBEHIND,vimage.ImageViewer
+vimage,RECT,4,0,0,4,0,2,0,0,0,-1,0,1,,vimage.DWM
+vimage,Point,2,0,0,2,0,1,0,0,0,-1,0,1,,vimage.DWM
+vimage,DWM_BB,0,0,0,0,0,7,0,0,0,-1,0,2,,vimage.DWM_BLURBEHIND' vimage.ImageViewer
+vimage,DWM_BLURBEHIND,4,0,0,4,0,8,0,0,0,-1,1,2,vimage.DWM_BB,vimage.DWM' vimage.ImageViewer
+vimage,Graphics,9,11,0,3,9,399,51,0,0,0,4,1,vimage.AnimatedImageData' vimage.AnimatedImage' vimage.DisplayObject' vimage.LoadingAnimatedImage,vimage.ImageViewer
+vimage,LoadingAnimatedImage,3,2,0,0,2,33,5,0,0,0,2,1,vimage.AnimatedImageData' ImageManipulation.OctreeQuantizer,vimage.Graphics
+vimage,ImageViewer,57,66,0,24,47,2001,457,0,0,0,16,2,vimage.SortBy' vimage.SortDirection' vimage.SizingOption' vimage.Config' vimage.ContextMenu' vimage.AnimatedImage' vimage.DisplayObject' vimage.DWM' vimage.DWM_BB' vimage.DWM_BLURBEHIND' vimage.Graphics' vimage.ViewState' vimage.Action' vimage.ImageViewerUtils' vimage.WindowsFileSorting' vimage.NaturalStringComparer,vimage.Program' vimage.ContextMenu
+vimage,ViewState,6,1,0,6,1,18,1,0,0,0,0,1,,vimage.ImageViewer
+vimage,Action,0,0,0,0,0,60,0,0,0,-1,0,4,,vimage.ContextMenu' vimage.Actions' vimage.Config' vimage.ImageViewer
+vimage,Actions,2,2,0,2,2,77,2,0,0,0,2,1,vimage.Action' vimage.Action,vimage.Config
+vimage,Program,0,4,0,0,1,33,7,0,0,-1,1,0,vimage.ImageViewer,
+vimage,ImageViewerUtils,0,7,0,0,7,101,26,0,0,-1,0,1,,vimage.ImageViewer
+vimage,WindowsFileSorting,0,1,0,0,1,19,1,0,0,-1,1,1,vimage.SafeNativeMethods,vimage.ImageViewer
+vimage,SafeNativeMethods,0,1,0,0,1,6,1,0,0,-1,0,1,,vimage.WindowsFileSorting
+vimage,NaturalStringComparer,0,1,0,0,1,4,1,0,0,-1,0,1,,vimage.ImageViewer
+vimage,NaturalFileInfoNameComparer,0,1,0,0,1,4,1,0,0,-1,0,0,,
+ImageManipulation,OctreeQuantizer,2,4,0,0,1,404,8,0,1,0,4,1,ImageManipulation.Octree' ImageManipulation.OctreeNode' ImageManipulation.Quantizer' ImageManipulation.Color32,vimage.LoadingAnimatedImage
+ImageManipulation,Octree,7,6,2,0,5,328,10,0,0,0,0,1,,ImageManipulation.OctreeQuantizer
+ImageManipulation,OctreeNode,8,6,2,0,6,190,16,0,0,0,0,1,,ImageManipulation.OctreeQuantizer
+ImageManipulation,Quantizer,1,7,0,0,2,222,13,1,0,0,1,1,ImageManipulation.Color32,ImageManipulation.OctreeQuantizer
+ImageManipulation,Color32,5,0,1,5,0,36,0,0,0,-1,0,2,,ImageManipulation.OctreeQuantizer' ImageManipulation.Quantizer

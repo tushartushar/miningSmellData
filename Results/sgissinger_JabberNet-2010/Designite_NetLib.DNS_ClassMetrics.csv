@@ -1,19 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NetLib.DNS,DnsException,1,6,1,0,5,135,6,0,0,0.67,0,0,,
-NetLib.DNS,DnsQueryReturnCode,0,0,0,0,0,91,0,0,0,-1,0,0,,
+NetLib.DNS,DnsException,1,6,1,0,5,135,6,0,0,0.83,1,1,NetLib.DNS.DnsQueryReturnCode,NetLib.DNS.DnsRequest
+NetLib.DNS,DnsQueryReturnCode,0,0,0,0,0,91,0,0,0,-1,0,1,,NetLib.DNS.DnsException
 NetLib.DNS,DnsQueryType,0,0,0,0,0,71,0,0,0,-1,0,1,,NetLib.DNS.DnsRequest
-NetLib.DNS,DnsRecord,7,0,0,7,0,56,0,0,0,-1,1,1,NetLib.DNS.DnsRecordFlags,NetLib.DNS.DnsRequest
+NetLib.DNS,DnsRecord,7,0,0,7,0,56,0,0,0,-1,2,1,NetLib.DNS.DnsRecordFlags' NetLib.DNS.DnsRecordType,NetLib.DNS.DnsRequest
 NetLib.DNS,DnsRecordFlags,2,0,0,2,0,16,0,0,0,-1,0,1,,NetLib.DNS.DnsRecord
-NetLib.DNS,DnsRecordType,0,0,0,0,0,41,0,0,0,-1,0,4,,Bedrock.Net.Address' NetLib.DNS.DnsRequest' NetLib.DNS.DnsResponse' NetLib.DNS.DnsWrapper
+NetLib.DNS,DnsRecordType,0,0,0,0,0,41,0,0,0,-1,0,4,,NetLib.DNS.DnsRecord' NetLib.DNS.DnsWrapper' NetLib.DNS.DnsResponse' NetLib.DNS.DnsRequest
 NetLib.DNS,DnsFreeType,0,0,0,0,0,11,0,0,0,-1,0,1,,NetLib.DNS.DnsRequest
-NetLib.DNS,DnsRequest,2,9,13,0,3,462,14,0,0,0,13,1,NetLib.DNS.DnsQueryType' NetLib.DNS.DnsFreeType' NetLib.DNS.DnsResponse' NetLib.DNS.DnsRecord' NetLib.DNS.DnsWrapper' NetLib.DNS.DnsWrapperCollection' NetLib.DNS.DnsRecordType' NetLib.DNS.Records.ARecord' NetLib.DNS.Records.PTRRecord' NetLib.DNS.Records.MXRecord' NetLib.DNS.Records.SOARecord' NetLib.DNS.Records.SRVRecord' NetLib.DNS.Records.TXTRecord,Bedrock.Net.Address
-NetLib.DNS,DnsResponse,1,2,4,0,1,143,4,0,0,0,3,2,NetLib.DNS.DnsWrapperCollection' NetLib.DNS.DnsWrapper' NetLib.DNS.DnsRecordType,Bedrock.Net.Address' NetLib.DNS.DnsRequest
-NetLib.DNS,DnsWrapper,2,4,0,2,4,133,11,0,0,0,1,3,NetLib.DNS.DnsRecordType,NetLib.DNS.DnsRequest' NetLib.DNS.DnsResponse' NetLib.DNS.DnsWrapperCollection
-NetLib.DNS,DnsWrapperCollection,0,4,0,0,0,64,6,0,0,-1,2,3,NetLib.DNS.DnsWrapper' NetLib.DNS.DnsWrapperCollectionEnumerator,NetLib.DNS.DnsRequest' NetLib.DNS.DnsResponse' NetLib.DNS.DnsWrapperCollectionEnumerator
-NetLib.DNS,DnsWrapperCollectionEnumerator,2,3,1,0,1,25,3,0,0,0,1,1,NetLib.DNS.DnsWrapperCollection,NetLib.DNS.DnsWrapperCollection
-NetLib.DNS.Records,MXRecord,3,1,0,3,1,47,1,0,0,0,0,1,,NetLib.DNS.DnsRequest
-NetLib.DNS.Records,PTRRecord,1,1,0,1,1,26,1,0,0,0,0,1,,NetLib.DNS.DnsRequest
+NetLib.DNS,DnsRequest,2,9,13,0,3,462,19,0,0,0,13,0,NetLib.DNS.DnsException' NetLib.DNS.DnsQueryType' NetLib.DNS.DnsRecord' NetLib.DNS.DnsRecordType' NetLib.DNS.DnsFreeType' NetLib.DNS.DnsResponse' NetLib.DNS.DnsWrapper' NetLib.DNS.Records.MXRecord' NetLib.DNS.Records.PTRRecord' NetLib.DNS.Records.SOARecord' NetLib.DNS.Records.SRVRecord' NetLib.DNS.Records.TXTRecord' NetLib.DNS.Records.ARecord,
+NetLib.DNS,DnsResponse,1,2,4,0,1,143,4,0,0,0,8,1,NetLib.DNS.DnsRecordType' NetLib.DNS.DnsWrapper' NetLib.DNS.DnsWrapperCollection' NetLib.DNS.Records.MXRecord' NetLib.DNS.Records.PTRRecord' NetLib.DNS.Records.SRVRecord' NetLib.DNS.Records.TXTRecord' NetLib.DNS.Records.ARecord,NetLib.DNS.DnsRequest
+NetLib.DNS,DnsWrapper,2,4,0,2,4,133,11,0,0,0,1,3,NetLib.DNS.DnsRecordType,NetLib.DNS.DnsResponse' NetLib.DNS.DnsRequest' NetLib.DNS.DnsWrapperCollection
+NetLib.DNS,DnsWrapperCollection,0,4,0,0,0,64,6,0,0,-1,2,1,NetLib.DNS.DnsWrapper' NetLib.DNS.DnsWrapperCollectionEnumerator,NetLib.DNS.DnsResponse
+NetLib.DNS,DnsWrapperCollectionEnumerator,2,3,1,0,1,25,3,0,0,0.67,0,1,,NetLib.DNS.DnsWrapperCollection
+NetLib.DNS.Records,MXRecord,3,1,0,3,1,47,1,0,0,0,0,2,,NetLib.DNS.DnsRequest' NetLib.DNS.DnsResponse
+NetLib.DNS.Records,PTRRecord,1,1,0,1,1,26,1,0,0,0,0,2,,NetLib.DNS.DnsResponse' NetLib.DNS.DnsRequest
 NetLib.DNS.Records,SOARecord,7,1,0,7,1,87,1,0,0,0,0,1,,NetLib.DNS.DnsRequest
-NetLib.DNS.Records,SRVRecord,5,1,0,5,1,63,1,0,0,0,0,3,,Bedrock.Net.UnixDnsResolver' Bedrock.Net.Address' NetLib.DNS.DnsRequest
-NetLib.DNS.Records,TXTRecord,2,1,0,2,1,39,1,0,0,0,0,2,,Bedrock.Net.Address' NetLib.DNS.DnsRequest
-NetLib.DNS.Records,ARecord,1,1,1,1,1,35,1,0,0,0,0,1,,NetLib.DNS.DnsRequest
+NetLib.DNS.Records,SRVRecord,5,1,0,5,1,63,1,0,0,0,0,2,,NetLib.DNS.DnsRequest' NetLib.DNS.DnsResponse
+NetLib.DNS.Records,TXTRecord,2,1,0,2,1,39,1,0,0,0,0,2,,NetLib.DNS.DnsRequest' NetLib.DNS.DnsResponse
+NetLib.DNS.Records,ARecord,1,1,1,1,1,35,1,0,0,0,0,2,,NetLib.DNS.DnsResponse' NetLib.DNS.DnsRequest

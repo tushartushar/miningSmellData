@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Voat.Http,HttpCookie,0,1,3,0,1,11,1,0,0,-1,0,2,,Voat.Http.HttpExtensions' Voat.Controllers.SubversesController
-Voat.Http,HttpExtensions,0,14,0,0,14,236,33,0,0,-1,5,0,Voat.Logging.LogInformation' Voat.Configuration.VoatSettings' Voat.Logging.LogType' Voat.Http.HttpCookie' Voat.RuntimeStateSetting,
-Voat.Http.Filters,ISpamTimeAdjustor,0,1,0,0,0,4,1,0,0,-1,0,1,,Voat.Http.Filters.PreventSpamFilter
-Voat.Http.Filters,PreventSpamAttribute,0,2,0,0,2,78,5,0,0,-1,0,5,,Voat.Controllers.CommentController' Voat.Controllers.HomeController' Voat.Controllers.MessagesController' Voat.Controllers.ReportController' Voat.Controllers.SubversesController
-Voat.Http.Filters,PreventSpamOptions,0,0,3,0,0,6,0,0,0,-1,0,1,,Voat.Http.Filters.PreventSpamFilter
-Voat.Http.Filters,PreventSpamFilter,4,3,0,1,3,44,5,0,0,0.67,4,0,Voat.Http.Filters.PreventSpamOptions' Voat.Http.Filters.ISpamTimeAdjustor' Voat.Common.Configuration.HandlerInfo' Voat.Common.Age,
-Voat.Http.Filters,GlobalExceptionFilter,0,3,0,0,3,19,4,0,0,-1,4,1,Voat.Logging.ILogger' Voat.Logging.LogType' Voat.Logging.ILogInformation' Voat.Utilities.Components.EventLogger,Voat.Startup
-Voat.Http.Filters,RouteLoggerFilter,0,2,0,0,2,22,3,0,0,-1,4,1,Voat.Logging.ILogger' Voat.Logging.LogType' Voat.Logging.ILogInformation' Voat.Utilities.Components.EventLogger,Voat.Startup
-Voat.Http.Middleware,BaseMiddleware,1,3,1,0,3,26,4,4,0,1,2,4,Voat.Configuration.VoatSettings' Voat.Configuration.JsonSettings,Voat.Http.Middleware.CorsMiddleware' Voat.Http.Middleware.GlobalExceptionLoggerMiddleware' Voat.Http.Middleware.RequestDurationLoggerMiddleware' Voat.Http.Middleware.RuntimeStateMiddleware
-Voat.Http.Middleware,CorsMiddleware,0,3,0,0,2,36,5,0,1,-1,2,0,Voat.Http.Middleware.CorEvaluation' Voat.Http.Middleware.BaseMiddleware,
+Voat.Http,HttpCookie,0,1,3,0,1,11,1,0,0,-1,0,1,,Voat.Http.HttpExtensions
+Voat.Http,HttpExtensions,0,14,0,0,14,236,37,0,0,-1,1,0,Voat.Http.HttpCookie,
+Voat.Http.Filters,ISpamTimeAdjustor,0,1,0,0,0,4,1,0,0,-1,0,1,,Voat.Http.Filters.PreventSpamAttribute
+Voat.Http.Filters,PreventSpamAttribute,0,2,0,0,2,78,5,0,0,-1,3,0,Voat.Http.Filters.ISpamTimeAdjustor' Voat.Http.Filters.PreventSpamOptions' Voat.Http.Filters.PreventSpamFilter,
+Voat.Http.Filters,PreventSpamOptions,0,0,3,0,0,6,0,0,0,-1,0,1,,Voat.Http.Filters.PreventSpamAttribute
+Voat.Http.Filters,PreventSpamFilter,4,3,0,1,3,44,5,0,0,0.67,0,1,,Voat.Http.Filters.PreventSpamAttribute
+Voat.Http.Filters,GlobalExceptionFilter,0,3,0,0,3,19,4,0,0,-1,0,0,,
+Voat.Http.Filters,RouteLoggerFilter,0,2,0,0,2,22,3,0,0,-1,0,0,,
+Voat.Http.Middleware,BaseMiddleware,1,3,1,0,3,26,4,4,0,1,0,4,,Voat.Http.Middleware.CorsMiddleware' Voat.Http.Middleware.GlobalExceptionLoggerMiddleware' Voat.Http.Middleware.RequestDurationLoggerMiddleware' Voat.Http.Middleware.RuntimeStateMiddleware
+Voat.Http.Middleware,CorsMiddleware,0,3,0,0,2,36,5,0,1,-1,2,0,Voat.Http.Middleware.BaseMiddleware' Voat.Http.Middleware.CorEvaluation,
 Voat.Http.Middleware,CorEvaluation,0,0,0,0,0,6,0,0,0,-1,0,1,,Voat.Http.Middleware.CorsMiddleware
-Voat.Http.Middleware,GlobalExceptionLoggerMiddleware,0,2,0,0,2,22,2,0,1,-1,5,0,Voat.Logging.ILogger' Voat.Logging.LogType' Voat.Logging.ILogInformation' Voat.Http.Middleware.BaseMiddleware' Voat.Utilities.Components.EventLogger,
-Voat.Http.Middleware,MiddlewareExtensions,0,3,0,0,3,15,3,0,0,-1,0,0,,
-Voat.Http.Middleware,RequestDurationLoggerMiddleware,1,2,0,0,2,16,2,0,1,1,5,0,Voat.Logging.ILogger' Voat.Logging.LogType' Voat.Logging.ILogInformation' Voat.Utilities.Components.EventLogger' Voat.Http.Middleware.BaseMiddleware,
-Voat.Http.Middleware,RuntimeStateMiddleware,0,2,0,0,2,14,3,0,1,-1,1,0,Voat.Http.Middleware.BaseMiddleware,
+Voat.Http.Middleware,GlobalExceptionLoggerMiddleware,0,2,0,0,2,22,2,0,1,-1,1,1,Voat.Http.Middleware.BaseMiddleware,Voat.Http.Middleware.MiddlewareExtensions
+Voat.Http.Middleware,MiddlewareExtensions,0,3,0,0,3,15,3,0,0,-1,3,0,Voat.Http.Middleware.GlobalExceptionLoggerMiddleware' Voat.Http.Middleware.RequestDurationLoggerMiddleware' Voat.Http.Middleware.RuntimeStateMiddleware,
+Voat.Http.Middleware,RequestDurationLoggerMiddleware,1,2,0,0,2,16,2,0,1,1,1,1,Voat.Http.Middleware.BaseMiddleware,Voat.Http.Middleware.MiddlewareExtensions
+Voat.Http.Middleware,RuntimeStateMiddleware,0,2,0,0,2,14,3,0,1,-1,1,1,Voat.Http.Middleware.BaseMiddleware,Voat.Http.Middleware.MiddlewareExtensions

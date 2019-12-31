@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-VBF.Compilers,CodeContract,0,5,0,0,5,38,10,0,0,-1,0,0,,
-VBF.Compilers.Intermediate,AssignInstruction,0,0,1,0,0,4,0,0,1,-1,0,0,,
-VBF.Compilers.Intermediate,BinaryOperator,0,0,0,0,0,13,0,0,0,-1,0,0,,
-VBF.Compilers.Intermediate,BinaryExpression,0,0,3,0,0,6,0,0,1,-1,0,0,,
-VBF.Compilers.Intermediate,ConstValue,0,0,0,0,0,3,0,0,1,-1,0,0,,
-VBF.Compilers.Intermediate,ConvertExpression,0,1,2,0,0,9,1,0,0,-1,0,0,,
-VBF.Compilers.Intermediate,Expression,0,0,0,0,0,3,0,2,0,-1,0,0,,
-VBF.Compilers.Intermediate,GotoInstruction,0,0,1,0,0,4,0,0,1,-1,0,0,,
-VBF.Compilers.Intermediate,Instruction,0,0,0,0,0,3,0,3,0,-1,0,0,,
-VBF.Compilers.Intermediate,Label,0,0,0,0,0,3,0,0,0,-1,0,0,,
-VBF.Compilers.Intermediate,Operand,0,0,0,0,0,3,0,2,0,-1,0,0,,
-VBF.Compilers.Intermediate,PrimaryType,0,0,0,0,0,12,0,0,0,-1,0,0,,
-VBF.Compilers.Intermediate,ReceiveInstruction,0,0,0,0,0,3,0,0,1,-1,0,0,,
+VBF.Compilers,CodeContract,0,5,0,0,5,42,10,0,0,-1,0,0,,
+VBF.Compilers.Intermediate,AssignInstruction,0,0,1,0,0,4,0,0,1,-1,2,0,VBF.Compilers.Intermediate.Instruction' VBF.Compilers.Intermediate.Variable,
+VBF.Compilers.Intermediate,BinaryOperator,0,0,0,0,0,13,0,0,0,-1,0,1,,VBF.Compilers.Intermediate.BinaryExpression
+VBF.Compilers.Intermediate,BinaryExpression,0,0,3,0,0,8,0,0,1,-1,3,0,VBF.Compilers.Intermediate.BinaryOperator' VBF.Compilers.Intermediate.Expression' VBF.Compilers.Intermediate.Operand,
+VBF.Compilers.Intermediate,ConstValue,0,0,0,0,0,3,0,0,1,-1,1,0,VBF.Compilers.Intermediate.Operand,
+VBF.Compilers.Intermediate,ConvertExpression,0,1,2,0,0,10,1,0,0,-1,2,0,VBF.Compilers.Intermediate.Operand' VBF.Compilers.Intermediate.PrimaryType,
+VBF.Compilers.Intermediate,Expression,0,0,0,0,0,4,0,2,0,-1,0,2,,VBF.Compilers.Intermediate.UnaryExpression' VBF.Compilers.Intermediate.BinaryExpression
+VBF.Compilers.Intermediate,GotoInstruction,0,0,1,0,0,4,0,0,1,-1,2,0,VBF.Compilers.Intermediate.Instruction' VBF.Compilers.Intermediate.Label,
+VBF.Compilers.Intermediate,Instruction,0,0,0,0,0,3,0,3,0,-1,0,3,,VBF.Compilers.Intermediate.GotoInstruction' VBF.Compilers.Intermediate.AssignInstruction' VBF.Compilers.Intermediate.ReceiveInstruction
+VBF.Compilers.Intermediate,Label,0,0,0,0,0,3,0,0,0,-1,0,1,,VBF.Compilers.Intermediate.GotoInstruction
+VBF.Compilers.Intermediate,Operand,0,0,0,0,0,3,0,2,0,-1,0,5,,VBF.Compilers.Intermediate.ConstValue' VBF.Compilers.Intermediate.Variable' VBF.Compilers.Intermediate.ConvertExpression' VBF.Compilers.Intermediate.BinaryExpression' VBF.Compilers.Intermediate.UnaryExpression
+VBF.Compilers.Intermediate,PrimaryType,0,0,0,0,0,12,0,0,0,-1,0,1,,VBF.Compilers.Intermediate.ConvertExpression
+VBF.Compilers.Intermediate,ReceiveInstruction,0,0,0,0,0,4,0,0,1,-1,1,0,VBF.Compilers.Intermediate.Instruction,
 VBF.Compilers.Intermediate,TreeLang,0,0,0,0,0,3,0,0,0,-1,0,0,,
-VBF.Compilers.Intermediate,UnaryOperator,0,0,0,0,0,7,0,0,0,-1,0,0,,
-VBF.Compilers.Intermediate,UnaryExpression,0,0,2,0,0,5,0,0,1,-1,0,0,,
-VBF.Compilers.Intermediate,Variable,0,0,0,0,0,3,0,0,1,-1,0,0,,
+VBF.Compilers.Intermediate,UnaryOperator,0,0,0,0,0,7,0,0,0,-1,0,1,,VBF.Compilers.Intermediate.UnaryExpression
+VBF.Compilers.Intermediate,UnaryExpression,0,0,2,0,0,6,0,0,1,-1,3,0,VBF.Compilers.Intermediate.Expression' VBF.Compilers.Intermediate.Operand' VBF.Compilers.Intermediate.UnaryOperator,
+VBF.Compilers.Intermediate,Variable,0,0,0,0,0,3,0,0,1,-1,1,1,VBF.Compilers.Intermediate.Operand,VBF.Compilers.Intermediate.AssignInstruction

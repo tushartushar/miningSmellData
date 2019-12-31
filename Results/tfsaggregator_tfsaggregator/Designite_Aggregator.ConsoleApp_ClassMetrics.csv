@@ -1,8 +1,10 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Aggregator.ConsoleApp,ConsoleEventLogger,0,2,0,0,1,15,2,0,1,-1,1,1,Aggregator.ConsoleApp.ConsoleTextLogger,Aggregator.ConsoleApp.RunCommand
+Aggregator.ConsoleApp,ConsoleTextLogger,1,4,1,0,2,62,9,0,1,0,0,1,,Aggregator.ConsoleApp.ConsoleEventLogger
 Aggregator.ConsoleApp,ExceptionExtensions,0,1,0,0,1,16,2,0,0,-1,0,0,,
-Aggregator.ConsoleApp,ConsoleTextLogger,1,4,1,0,2,62,6,0,1,0,1,0,Aggregator.Core.Monitoring.LogLevel,
-Aggregator.ConsoleApp,Notification,0,1,3,0,1,39,1,0,1,-1,0,0,,
+Aggregator.ConsoleApp,Notification,0,1,4,0,1,48,2,0,1,-1,0,1,,Aggregator.ConsoleApp.RequestContext
 Aggregator.ConsoleApp,Program,0,3,0,0,0,50,4,0,0,-1,0,0,,
-Aggregator.ConsoleApp,RequestContext,2,5,4,0,5,59,5,0,1,0.4,0,1,,Aggregator.ConsoleApp.RunCommand
-Aggregator.ConsoleApp,RunCommand,0,2,6,0,2,105,4,0,0,-1,8,0,Aggregator.Core.Monitoring.LogLevel' Aggregator.ConsoleApp.ConsoleEventLogger' Aggregator.ConsoleApp.RequestContext' Aggregator.Core.Context.RuntimeContext' Aggregator.Core.ProcessingResult' Aggregator.Core.Interfaces.INotification' Aggregator.Core.Monitoring.ILogEvents' Aggregator.Core.EventProcessor,
-Aggregator.ConsoleApp,ConsoleEventLogger,0,1,0,0,1,11,1,0,1,-1,1,1,Aggregator.Core.Monitoring.LogLevel,Aggregator.ConsoleApp.RunCommand
+Aggregator.ConsoleApp,QueryRunner,0,4,3,0,2,99,13,0,0,-1,1,1,Aggregator.ConsoleApp.QueryResult,Aggregator.ConsoleApp.RunCommand
+Aggregator.ConsoleApp,QueryResult,3,0,3,0,0,10,0,0,0,-1,0,1,,Aggregator.ConsoleApp.QueryRunner
+Aggregator.ConsoleApp,RequestContext,2,5,5,0,5,60,5,0,1,0.8,1,1,Aggregator.ConsoleApp.Notification,Aggregator.ConsoleApp.RunCommand
+Aggregator.ConsoleApp,RunCommand,0,3,9,0,3,176,13,0,0,-1,3,0,Aggregator.ConsoleApp.ConsoleEventLogger' Aggregator.ConsoleApp.QueryRunner' Aggregator.ConsoleApp.RequestContext,

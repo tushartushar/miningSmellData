@@ -1,7 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Benchmark.Classes,Address,0,0,4,0,0,7,0,0,0,-1,0,1,,Benchmark.Program
-Benchmark.Classes,AddressDTO,0,0,3,0,0,6,0,0,0,-1,0,0,,
-Benchmark.Classes,Customer,0,0,7,0,0,10,0,0,0,-1,0,1,,Benchmark.Program
-Benchmark.Classes,CustomerDTO,0,0,7,0,0,10,0,0,0,-1,0,1,,Benchmark.Program
-Benchmark.Classes,Foo,0,0,12,0,0,15,0,0,0,-1,0,1,,Benchmark.Program
-Benchmark,Program,6,13,0,0,0,220,13,0,0,0.15,4,0,Benchmark.Classes.Foo' Benchmark.Classes.Customer' Benchmark.Classes.CustomerDTO' Benchmark.Classes.Address,
+Benchmark.Classes,Address,0,0,4,0,0,7,0,0,0,-1,0,4,,Benchmark.Classes.Customer' Benchmark.Program' Benchmark.CustomerMapper' Benchmark.Classes.CustomerDTO
+Benchmark.Classes,AddressDTO,0,0,3,0,0,6,0,0,0,-1,0,3,,Benchmark.Classes.CustomerDTO' Benchmark.Program' Benchmark.CustomerMapper
+Benchmark.Classes,Customer,0,0,7,0,0,10,0,0,0,-1,1,2,Benchmark.Classes.Address,Benchmark.Program' Benchmark.CustomerMapper
+Benchmark.Classes,CustomerDTO,0,0,7,0,0,10,0,0,0,-1,2,2,Benchmark.Classes.Address' Benchmark.Classes.AddressDTO,Benchmark.CustomerMapper' Benchmark.Program
+Benchmark.Classes,Foo,0,0,12,0,0,15,0,0,0,-1,0,2,,Benchmark.FooMapper' Benchmark.Program
+Benchmark,Program,5,15,0,0,0,244,15,0,0,0.33,7,0,Benchmark.Classes.Address' Benchmark.Classes.AddressDTO' Benchmark.Classes.Customer' Benchmark.Classes.CustomerDTO' Benchmark.Classes.Foo' Benchmark.CustomerMapper' Benchmark.FooMapper,
+Benchmark,CustomerMapper,0,3,0,0,1,81,7,0,0,-1,4,1,Benchmark.Classes.Address' Benchmark.Classes.AddressDTO' Benchmark.Classes.Customer' Benchmark.Classes.CustomerDTO,Benchmark.Program
+Benchmark,FooMapper,0,4,0,0,1,61,7,0,0,-1,1,1,Benchmark.Classes.Foo,Benchmark.Program

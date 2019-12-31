@@ -1,14 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Posh,CallInvokedArgs,0,1,2,0,1,20,1,0,0,-1,0,1,,Posh.PoshServer
-Posh,DynamicRPC,4,15,3,0,13,145,16,0,0,0.2,0,1,,Posh.PoshSvgEventCaller
-Posh,IPoshRPCs,0,5,0,0,0,17,5,1,0,-1,0,0,,
-Posh,PoshServer,17,16,1,9,12,253,32,0,1,0.31,3,1,Posh.PoshSvgEventCaller' Posh.RemoteContext' Posh.CallInvokedArgs,PoshDemo.MainForm
+Posh,CallInvokedArgs,0,1,2,0,1,20,1,0,0,-1,0,3,,Posh.PoshServer' Posh.PoshSvgEventCaller' Posh.DynamicRPC
+Posh,DynamicRPC,4,15,3,0,13,145,16,0,0,0.2,1,1,Posh.CallInvokedArgs,Posh.PoshSvgEventCaller
+Posh,IPoshRPCs,0,5,0,0,0,17,5,1,0,-1,0,1,,Posh.PoshServer
+Posh,PoshServer,17,16,1,9,12,253,32,0,1,0.31,4,0,Posh.CallInvokedArgs' Posh.IPoshRPCs' Posh.PoshSvgEventCaller' Posh.RemoteContext,
 Posh,IDGenerator,1,0,1,0,0,11,0,0,0,-1,0,1,,Posh.SvgIdManager
-Posh,PoshSvgEventCaller,2,12,0,0,11,84,13,0,0,0,1,1,Posh.DynamicRPC,Posh.PoshServer
-Posh,AttributeUpdate,2,1,0,2,1,10,1,0,0,0,0,0,,
-Posh,ContentUpdate,2,1,0,2,1,10,1,0,0,0,0,0,,
-Posh,ContentUpdateJsonObject,2,0,0,2,0,5,0,0,0,-1,0,1,,Posh.RemoteContext
+Posh,PoshSvgEventCaller,2,12,0,0,11,84,13,0,0,0,2,1,Posh.CallInvokedArgs' Posh.DynamicRPC,Posh.PoshServer
+Posh,AttributeUpdate,2,1,0,2,1,10,1,0,0,0,0,1,,Posh.RemoteContext
+Posh,ContentUpdate,2,1,0,2,1,10,1,0,0,0,0,2,,Posh.ContentUpdateJsonObject' Posh.RemoteContext
+Posh,ContentUpdateJsonObject,2,0,0,2,0,5,0,0,0,-1,1,1,Posh.ContentUpdate,Posh.RemoteContext
 Posh,RemoveJsonObject,2,0,0,2,0,5,0,0,0,-1,0,1,,Posh.RemoteContext
-Posh,RemoteContext,6,23,0,2,19,276,33,0,0,0,2,3,Posh.ContentUpdateJsonObject' Posh.RemoveJsonObject,PoshDemo.MainForm' Posh.PoshServer' Posh.SvgIdManager
-Posh,SvgIdManager,4,7,0,0,3,119,18,0,0,0.29,2,0,Posh.RemoteContext' Posh.IDGenerator,
-Posh,WebServer,12,13,0,4,6,270,25,0,0,0.15,0,1,,PoshDemo.MainForm
+Posh,RemoteContext,6,23,0,2,19,276,42,0,0,0,4,2,Posh.AttributeUpdate' Posh.ContentUpdate' Posh.ContentUpdateJsonObject' Posh.RemoveJsonObject,Posh.SvgIdManager' Posh.PoshServer
+Posh,SvgIdManager,4,7,0,0,3,119,18,0,0,0.29,2,0,Posh.IDGenerator' Posh.RemoteContext,
+Posh,WebServer,12,13,0,4,6,270,34,0,0,0.15,0,0,,

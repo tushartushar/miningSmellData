@@ -1,0 +1,93 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bifrost.Web.Applications,ApplicationRoute,1,2,0,0,2,14,2,0,0,1,1,1,Bifrost.Web.Applications.ApplicationRouteHandler,System.Web.Routing.RouteExtensions
+Bifrost.Web.Applications,ApplicationRouteHandler,3,2,0,0,2,20,3,0,0,0,1,1,Bifrost.Web.Applications.ApplicationRouteHttpHandler,Bifrost.Web.Applications.ApplicationRoute
+Bifrost.Web.Applications,ApplicationRouteHttpHandler,3,5,1,0,2,127,22,0,0,0,0,1,,Bifrost.Web.Applications.ApplicationRouteHandler
+System.Web.Routing,RouteExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Bifrost.Web.Applications.ApplicationRoute,
+Bifrost.Web,AssemblySpecifier,0,1,0,0,1,12,1,0,2,-1,0,0,,
+Bifrost.Web,IPipe,0,2,0,0,0,5,2,1,0,-1,1,3,Bifrost.Web.IWebContext,Bifrost.Web.Pipeline.SinglePageApplication' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.HttpModule
+Bifrost.Web,IWebContext,0,1,3,0,0,10,1,1,0,-1,1,3,Bifrost.Web.IWebRequest,Bifrost.Web.WebContext' Bifrost.Web.IPipe' Bifrost.Web.Pipeline.SinglePageApplication
+Bifrost.Web,IWebRequest,0,0,1,0,0,4,0,1,0,-1,0,3,,Bifrost.Web.WebContext' Bifrost.Web.IWebContext' Bifrost.Web.Request
+Bifrost.Web,BootStrapper,2,3,0,0,1,54,5,0,0,0.67,10,0,Bifrost.Web.HttpModule' Bifrost.Web.Assets.IAssetsManager' Bifrost.Web.Assets.AssetManagerRoute' Bifrost.Web.Commands.CommandCoordinatorService' Bifrost.Web.Commands.CommandSecurityService' Bifrost.Web.Configuration.ConfigurationRoute' Bifrost.Web.Proxies.ProxyRoute' Bifrost.Web.Read.QueryService' Bifrost.Web.Read.ReadModelService' Bifrost.Web.Security.SecurityRoute,
+Bifrost.Web,HttpModule,1,4,0,0,3,32,7,0,0,0.75,2,1,Bifrost.Web.IPipe' Bifrost.Web.WebContext,Bifrost.Web.BootStrapper
+Bifrost.Web,Request,1,1,1,0,1,11,1,0,1,0,1,1,Bifrost.Web.IWebRequest,Bifrost.Web.WebContext
+Bifrost.Web,WebCallContext,0,3,0,0,3,18,3,0,1,-1,0,1,,Bifrost.Web.Configurator
+Bifrost.Web,WebContext,1,2,3,0,2,31,2,0,1,0,3,1,Bifrost.Web.IWebContext' Bifrost.Web.IWebRequest' Bifrost.Web.Request,Bifrost.Web.HttpModule
+Bifrost.Web,Configurator,0,2,0,0,1,30,2,0,2,-1,3,0,Bifrost.Web.WebCallContext' Bifrost.Web.SignalR.BifrostDependencyResolver' Bifrost.Web.SignalR.FilteredCamelCasePropertyNamesContractResolver,
+Bifrost.Web.Assets,AssetsManager,2,7,0,0,5,75,14,0,1,0,2,0,Bifrost.Web.Assets.IAssetsManager' Bifrost.Web.Configuration.WebConfiguration,
+Bifrost.Web.Assets,IAssetsManager,0,4,0,0,0,8,4,1,0,-1,0,4,,Bifrost.Web.Assets.AssetsManager' Bifrost.Web.BootStrapper' Bifrost.Web.Assets.AssetManagerRouteHttpHandler' Bifrost.Web.Configuration.ConfigurationAsJavaScript
+Bifrost.Web.Assets,AssetManagerRoute,0,2,0,0,2,12,2,0,0,-1,1,1,Bifrost.Web.Assets.AssetManagerRouteHandler,Bifrost.Web.BootStrapper
+Bifrost.Web.Assets,AssetManagerRouteHandler,2,2,0,0,2,18,3,0,0,0,1,1,Bifrost.Web.Assets.AssetManagerRouteHttpHandler,Bifrost.Web.Assets.AssetManagerRoute
+Bifrost.Web.Assets,AssetManagerRouteHttpHandler,1,2,1,0,2,26,4,0,0,1,1,1,Bifrost.Web.Assets.IAssetsManager,Bifrost.Web.Assets.AssetManagerRouteHandler
+Bifrost.Web.Commands,CommandContextConnectionManager,2,6,0,0,4,56,10,0,1,0,2,0,Bifrost.Web.Commands.ICommandContextConnectionManager' Bifrost.Web.Commands.UnknownCommandContextException,
+Bifrost.Web.Commands,CommandCoordinatorService,3,4,0,0,3,58,7,0,0,0,1,1,Bifrost.Web.Commands.CommandDescriptor,Bifrost.Web.BootStrapper
+Bifrost.Web.Commands,CommandDescriptor,0,0,4,0,0,22,0,0,0,-1,0,2,,Bifrost.Web.Commands.CommandCoordinator' Bifrost.Web.Commands.CommandCoordinatorService
+Bifrost.Web.Commands,CommandProxies,5,3,0,0,3,69,8,0,1,0,4,2,Bifrost.Web.Commands.ICanExtendCommandProperty' Bifrost.Web.Configuration.Namespaces' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Proxies.IProxyGenerator,Bifrost.Web.Proxies.GeneratedProxies' Bifrost.Web.Commands.CommandSecurityProxies
+Bifrost.Web.Commands,CommandSecurityProxies,4,2,0,0,2,73,7,0,1,0,4,2,Bifrost.Web.Commands.CommandProxies' Bifrost.Web.Configuration.Namespaces' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Proxies.IProxyGenerator,Bifrost.Web.Proxies.GeneratedProxies' Bifrost.Web.Security.SecurityRouteHttpHandler
+Bifrost.Web.Commands,CommandSecurityService,2,2,0,0,2,19,2,0,0,0,0,1,,Bifrost.Web.BootStrapper
+Bifrost.Web.Commands,CommandValidationPropertyExtender,1,2,0,0,2,20,3,0,1,0,1,0,Bifrost.Web.Commands.ICanExtendCommandProperty,
+Bifrost.Web.Commands,ICanExtendCommandProperty,0,1,0,0,0,10,1,2,1,-1,0,3,,Bifrost.Web.Commands.CommandValidationPropertyExtender' Bifrost.Web.Commands.TypePropertyExtender' Bifrost.Web.Commands.CommandProxies
+Bifrost.Web.Commands,ICommandContextConnectionManager,0,4,0,0,0,7,4,1,0,-1,0,2,,Bifrost.Web.Commands.CommandContextConnectionManager' Bifrost.Web.Commands.CommandCoordinator
+Bifrost.Web.Commands,CommandCoordinator,4,2,0,0,2,39,2,0,0,0,2,0,Bifrost.Web.Commands.CommandDescriptor' Bifrost.Web.Commands.ICommandContextConnectionManager,
+Bifrost.Web.Commands,TypePropertyExtender,0,1,0,0,1,38,7,0,2,-1,1,0,Bifrost.Web.Commands.ICanExtendCommandProperty,
+Bifrost.Web.Commands,UnknownCommandContextException,0,0,0,0,0,3,0,0,0,-1,0,1,,Bifrost.Web.Commands.CommandContextConnectionManager
+Bifrost.Web.Configuration,AssetsConfiguration,0,2,1,0,2,20,2,0,2,-1,0,1,,Bifrost.Web.Configuration.WebConfiguration
+Bifrost.Web.Configuration,ConfigurationAsJavaScript,2,3,1,0,2,82,9,0,0,0,3,1,Bifrost.Web.Assets.IAssetsManager' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Proxies.GeneratedProxies,Bifrost.Web.Configuration.ConfigurationRouteHttpHandler
+Bifrost.Web.Configuration,NamespaceConfigurationProxies,2,2,0,0,2,24,2,0,1,0,2,1,Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Proxies.IProxyGenerator,Bifrost.Web.Proxies.GeneratedProxies
+Bifrost.Web.Configuration,NamespaceExtensions,0,1,0,0,1,13,2,0,0,-1,1,0,Bifrost.Web.Configuration.PathToNamespaceMappers,
+Bifrost.Web.Configuration,NamespaceMapper,3,7,0,0,7,52,9,0,0,0,0,2,,Bifrost.Web.Configuration.WebConfiguration' Bifrost.Configuration.WebConfigurationExtensions
+Bifrost.Web.Configuration,Namespaces,3,0,0,3,0,6,0,0,0,-1,0,5,,Bifrost.Web.Read.QueryProxies' Bifrost.Web.Commands.CommandProxies' Bifrost.Web.Hubs.HubProxies' Bifrost.Web.Commands.CommandSecurityProxies' Bifrost.Web.Read.ReadModelProxies
+Bifrost.Web.Configuration,ConfigurationRoute,1,2,0,0,2,14,2,0,0,1,1,1,Bifrost.Web.Configuration.ConfigurationRouteHandler,Bifrost.Web.BootStrapper
+Bifrost.Web.Configuration,ConfigurationRouteHandler,1,1,0,0,1,12,2,0,0,0,1,1,Bifrost.Web.Configuration.ConfigurationRouteHttpHandler,Bifrost.Web.Configuration.ConfigurationRoute
+Bifrost.Web.Configuration,ConfigurationRouteHttpHandler,2,4,1,0,3,59,6,0,0,0.5,2,1,Bifrost.Web.Configuration.ConfigurationAsJavaScript' Bifrost.Web.Configuration.WebConfiguration,Bifrost.Web.Configuration.ConfigurationRouteHandler
+Bifrost.Web.Configuration,PathToNamespaceMappers,1,4,1,0,4,30,4,0,0,0,0,3,,Bifrost.Web.Configuration.NamespaceExtensions' Bifrost.Configuration.WebConfigurationExtensions' Bifrost.Web.Configuration.WebConfiguration
+Bifrost.Web.Configuration,ScriptsToInclude,0,2,6,0,2,30,2,0,0,-1,0,1,,Bifrost.Web.Configuration.WebConfiguration
+Bifrost.Web.Configuration,WebConfiguration,1,3,7,0,3,36,3,0,2,1,5,11,Bifrost.Web.IPipe' Bifrost.Web.Configuration.AssetsConfiguration' Bifrost.Web.Configuration.NamespaceMapper' Bifrost.Web.Configuration.PathToNamespaceMappers' Bifrost.Web.Configuration.ScriptsToInclude,Bifrost.Web.Assets.AssetsManager' Bifrost.Web.Configuration.ConfigurationAsJavaScript' Bifrost.Web.Configuration.NamespaceConfigurationProxies' Bifrost.Web.Commands.CommandProxies' Bifrost.Web.Commands.CommandSecurityProxies' Bifrost.Web.Read.QueryProxies' Bifrost.Web.Configuration.ConfigurationRouteHttpHandler' Bifrost.Web.Read.QueryService' Bifrost.Web.Hubs.HubProxies' Bifrost.Web.Read.ReadModelProxies' Bifrost.Configuration.WebConfigurationExtensions
+Bifrost.Configuration,WebConfigurationExtensions,0,8,0,0,8,55,8,0,0,-1,4,0,Bifrost.Web.Configuration.NamespaceMapper' Bifrost.Web.Configuration.PathToNamespaceMappers' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Pipeline.SinglePageApplication,
+Bifrost.Web.Hubs,HubCodeGenerationExtensions,0,1,0,0,1,30,1,0,0,-1,0,0,,
+Bifrost.Web.Hubs,HubProxies,3,2,0,0,2,56,7,0,1,0,3,1,Bifrost.Web.Configuration.Namespaces' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Proxies.IProxyGenerator,Bifrost.Web.Proxies.GeneratedProxies
+Bifrost.Web.Pipeline,SinglePageApplication,0,6,0,0,2,52,12,0,1,-1,2,1,Bifrost.Web.IPipe' Bifrost.Web.IWebContext,Bifrost.Configuration.WebConfigurationExtensions
+Bifrost.Web.Proxies,GeneratedProxies,0,1,1,0,1,39,2,0,0,-1,8,2,Bifrost.Web.Commands.CommandProxies' Bifrost.Web.Commands.CommandSecurityProxies' Bifrost.Web.Configuration.NamespaceConfigurationProxies' Bifrost.Web.Hubs.HubProxies' Bifrost.Web.Proxies.IProxyGenerator' Bifrost.Web.Read.QueryProxies' Bifrost.Web.Read.ReadModelProxies' Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Proxies.ProxyRouteHttpHandler' Bifrost.Web.Configuration.ConfigurationAsJavaScript
+Bifrost.Web.Proxies,IProxyGenerator,0,1,0,0,0,4,1,7,1,-1,0,8,,Bifrost.Web.Commands.CommandProxies' Bifrost.Web.Services.ServiceProxies' Bifrost.Web.Hubs.HubProxies' Bifrost.Web.Read.QueryProxies' Bifrost.Web.Configuration.NamespaceConfigurationProxies' Bifrost.Web.Commands.CommandSecurityProxies' Bifrost.Web.Read.ReadModelProxies' Bifrost.Web.Proxies.GeneratedProxies
+Bifrost.Web.Proxies,ProxyRoute,1,2,0,0,2,14,2,0,0,1,1,1,Bifrost.Web.Proxies.ProxyRouteHandler,Bifrost.Web.BootStrapper
+Bifrost.Web.Proxies,ProxyRouteHandler,1,1,0,0,1,12,2,0,0,0,1,1,Bifrost.Web.Proxies.ProxyRouteHttpHandler,Bifrost.Web.Proxies.ProxyRoute
+Bifrost.Web.Proxies,ProxyRouteHttpHandler,1,2,1,0,2,17,3,0,0,1,1,1,Bifrost.Web.Proxies.GeneratedProxies,Bifrost.Web.Proxies.ProxyRouteHandler
+Bifrost.Web.Read,QueryDescriptor,0,1,3,0,1,11,1,0,0,-1,0,1,,Bifrost.Web.Read.QueryService
+Bifrost.Web.Read,QueryProxies,3,2,0,0,2,54,6,0,2,0,3,1,Bifrost.Web.Configuration.Namespaces' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Proxies.IProxyGenerator,Bifrost.Web.Proxies.GeneratedProxies
+Bifrost.Web.Read,QueryService,5,4,0,0,2,74,9,0,0,0,2,1,Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Read.QueryDescriptor,Bifrost.Web.BootStrapper
+Bifrost.Web.Read,ReadModelProxies,3,2,0,0,2,62,6,0,2,0,3,1,Bifrost.Web.Configuration.Namespaces' Bifrost.Web.Configuration.WebConfiguration' Bifrost.Web.Proxies.IProxyGenerator,Bifrost.Web.Proxies.GeneratedProxies
+Bifrost.Web.Read,ReadModelProxyExtensions,0,1,0,0,1,32,3,0,0,-1,0,0,,
+Bifrost.Web.Read,ReadModelQueryDescriptor,0,1,3,0,1,11,1,0,0,-1,0,1,,Bifrost.Web.Read.ReadModelService
+Bifrost.Web.Read,ReadModelService,5,3,0,0,2,101,11,0,0,0,1,1,Bifrost.Web.Read.ReadModelQueryDescriptor,Bifrost.Web.BootStrapper
+Bifrost.Web.Security,SecurityRoute,1,2,0,0,2,14,2,0,0,1,1,1,Bifrost.Web.Security.SecurityRouteHandler,Bifrost.Web.BootStrapper
+Bifrost.Web.Security,SecurityRouteHandler,1,1,0,0,1,12,2,0,0,0,1,1,Bifrost.Web.Security.SecurityRouteHttpHandler,Bifrost.Web.Security.SecurityRoute
+Bifrost.Web.Security,SecurityRouteHttpHandler,0,2,1,0,2,15,2,0,0,-1,1,1,Bifrost.Web.Commands.CommandSecurityProxies,Bifrost.Web.Security.SecurityRouteHandler
+Bifrost.Web.Services,HttpStatus,0,1,0,0,1,19,1,0,0,-1,1,1,Bifrost.Web.Services.HttpStatusException,Bifrost.Web.Services.RestServiceRouteHttpHandler
+Bifrost.Web.Services,HttpStatusException,0,1,2,0,1,11,1,0,0,-1,0,2,,Bifrost.Web.Services.HttpStatus' Bifrost.Web.Services.RestServiceRouteHttpHandler
+Bifrost.Web.Services,ICanInterceptValue,0,1,0,0,0,4,1,1,1,-1,0,1,,Bifrost.Web.Services.JsonInterceptor
+Bifrost.Web.Services,IHttpCookie,0,0,2,0,0,14,0,0,0,-1,0,1,,Bifrost.Web.Services.IHttpCookies
+Bifrost.Web.Services,IHttpCookies,0,1,0,0,0,9,1,0,0,-1,1,1,Bifrost.Web.Services.IHttpCookie,Bifrost.Web.Services.RequestParams
+Bifrost.Web.Services,IHttpRequest,0,0,3,0,0,17,0,1,0,-1,0,3,,Bifrost.Web.Services.RequestParamsFactory' Bifrost.Web.Services.IRequestParamsFactory' Bifrost.Web.Services.HttpRequest
+Bifrost.Web.Services,IJsonInterceptor,0,1,0,0,0,4,1,1,0,-1,0,2,,Bifrost.Web.Services.JsonInterceptor' Bifrost.Web.Services.RestServiceMethodInvoker
+Bifrost.Web.Services,IRegisteredServices,0,2,0,0,0,5,2,1,0,-1,0,2,,Bifrost.Web.Services.RegisteredServices' Bifrost.Web.Services.ServiceProxies
+Bifrost.Web.Services,IRequestParamsFactory,0,1,0,0,0,9,1,1,0,-1,2,2,Bifrost.Web.Services.IHttpRequest' Bifrost.Web.Services.RequestParams,Bifrost.Web.Services.RequestParamsFactory' Bifrost.Web.Services.RestServiceRouteHttpHandler
+Bifrost.Web.Services,IRestServiceMethodInvoker,0,1,0,0,0,4,1,1,0,-1,0,2,,Bifrost.Web.Services.RestServiceMethodInvoker' Bifrost.Web.Services.RestServiceRouteHttpHandler
+Bifrost.Web.Services,JsonInterceptor,2,7,0,0,2,85,15,0,1,0.29,2,0,Bifrost.Web.Services.ICanInterceptValue' Bifrost.Web.Services.IJsonInterceptor,
+Bifrost.Web.Services,MethodNotSpecifiedException,0,1,0,0,1,6,1,0,0,-1,0,1,,Bifrost.Web.Services.RestServiceMethodInvoker
+Bifrost.Web.Services,MissingParameterException,0,1,0,0,1,7,1,0,0,-1,0,1,,Bifrost.Web.Services.RestServiceMethodInvoker
+Bifrost.Web.Services,HttpRequest,1,1,3,0,1,23,1,0,1,0,1,1,Bifrost.Web.Services.IHttpRequest,Bifrost.Web.Services.RestServiceRouteHttpHandler
+Bifrost.Web.Services,RestServiceRoute,1,2,0,0,2,15,2,0,0,1,1,1,Bifrost.Web.Services.RestServiceRouteHandler,Bifrost.Web.Services.ServiceRoutingExtensions
+Bifrost.Web.Services,RestServiceRouteHandler,3,2,0,0,2,20,3,0,0,0,1,1,Bifrost.Web.Services.RestServiceRouteHttpHandler,Bifrost.Web.Services.RestServiceRoute
+Bifrost.Web.Services,RestServiceRouteHttpHandler,7,3,1,0,3,75,4,0,0,0.67,5,1,Bifrost.Web.Services.HttpStatus' Bifrost.Web.Services.HttpStatusException' Bifrost.Web.Services.IRequestParamsFactory' Bifrost.Web.Services.IRestServiceMethodInvoker' Bifrost.Web.Services.HttpRequest,Bifrost.Web.Services.RestServiceRouteHandler
+Bifrost.Web.Services,ServiceRoutingExtensions,1,3,0,0,2,26,4,0,0,0.67,1,0,Bifrost.Web.Services.RestServiceRoute,
+Bifrost.Web.Services,ParameterCountMismatchException,0,1,0,0,1,7,1,0,0,-1,0,1,,Bifrost.Web.Services.RestServiceMethodInvoker
+Bifrost.Web.Services,RegisteredServices,1,2,0,0,2,16,2,0,1,0,1,0,Bifrost.Web.Services.IRegisteredServices,
+Bifrost.Web.Services,RequestParams,0,2,0,0,2,27,4,0,0,-1,1,2,Bifrost.Web.Services.IHttpCookies,Bifrost.Web.Services.IRequestParamsFactory' Bifrost.Web.Services.RequestParamsFactory
+Bifrost.Web.Services,RequestParamsFactory,1,3,0,0,2,39,5,0,1,0,3,0,Bifrost.Web.Services.IHttpRequest' Bifrost.Web.Services.IRequestParamsFactory' Bifrost.Web.Services.RequestParams,
+Bifrost.Web.Services,RestServiceMethodInvoker,2,11,0,0,2,126,24,0,1,0,5,0,Bifrost.Web.Services.IJsonInterceptor' Bifrost.Web.Services.IRestServiceMethodInvoker' Bifrost.Web.Services.MethodNotSpecifiedException' Bifrost.Web.Services.MissingParameterException' Bifrost.Web.Services.ParameterCountMismatchException,
+Bifrost.Web.Services,ServiceExtensions,0,3,0,0,1,54,8,0,0,-1,0,0,,
+Bifrost.Web.Services,ServiceProxies,2,2,0,0,2,39,2,0,2,0,2,1,Bifrost.Web.Proxies.IProxyGenerator' Bifrost.Web.Services.IRegisteredServices,Bifrost.Web.Proxies.GeneratedProxies
+Bifrost.Web.SignalR,BifrostDependencyResolver,1,4,0,0,3,34,6,0,0,0.5,0,1,,Bifrost.Web.Configurator
+Bifrost.Web.SignalR,FilteredCamelCasePropertyNamesContractResolver,0,1,0,0,0,12,2,0,0,-1,0,1,,Bifrost.Web.Configurator
+Bifrost.Web.Visualizer.QualityAssurance,AllProblems,1,1,1,0,1,26,1,0,2,0,1,0,Bifrost.Web.Visualizer.QualityAssurance.Problems,
+Bifrost.Web.Visualizer.QualityAssurance,Problems,0,0,1,0,0,4,0,0,2,-1,0,1,,Bifrost.Web.Visualizer.QualityAssurance.AllProblems
+Bifrost.Web.Visualizer.QualityAssurance,ViolatingCommand,0,0,13,0,0,16,0,0,2,-1,0,0,,

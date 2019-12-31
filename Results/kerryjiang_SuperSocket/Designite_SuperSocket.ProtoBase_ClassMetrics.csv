@@ -1,7 +1,22 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SuperSocket.ProtoBase,FilterResult,0,0,1,0,0,4,0,1,0,-1,0,0,,
-SuperSocket.ProtoBase,FilterResult<TPackageInfo>,0,1,1,0,1,8,1,0,1,-1,0,0,,
-SuperSocket.ProtoBase,IPipelineFilter,0,1,1,0,0,6,1,1,0,-1,0,1,,SuperSocket.Server.AppSession<TPackageInfo>
-SuperSocket.ProtoBase,PipelineFilterBase<TPackageInfo>,0,1,1,0,1,6,1,0,1,-1,0,0,,
-SuperSocket.ProtoBase,ProcessState,0,0,0,0,0,15,0,0,0,-1,0,0,,
-SuperSocket.ProtoBase,TerminatorPipelineFilter<TPackageInfo>,1,3,0,0,3,21,4,0,0,0.67,0,0,,
+SuperSocket.ProtoBase,BeginEndMarkPipelineFilter<TPackageInfo>,3,3,0,0,2,40,7,0,0,0,2,0,SuperSocket.ProtoBase.PipelineFilterBase<TPackageInfo>' SuperSocket.ProtoBase.ProtocolException,
+SuperSocket.ProtoBase,CommandLinePipelineFilter,0,1,0,0,1,7,1,0,0,-1,2,0,SuperSocket.ProtoBase.StringPackageInfo' SuperSocket.ProtoBase.TerminatorPipelineFilter<TPackageInfo>,
+SuperSocket.ProtoBase,DefaultPipelineFilterFactory<TPackageInfo;TPipelineFilter>,0,2,0,0,1,13,2,0,0,-1,2,0,SuperSocket.ProtoBase.IPipelineFilter' SuperSocket.ProtoBase.PipelineFilterFactoryBase<TPackageInfo>,
+SuperSocket.ProtoBase,DelegatePipelineFilterFactory<TPackageInfo>,1,2,0,0,1,14,2,0,0,0,2,0,SuperSocket.ProtoBase.IPipelineFilter' SuperSocket.ProtoBase.PipelineFilterFactoryBase<TPackageInfo>,
+SuperSocket.ProtoBase,Extensions,0,1,0,0,1,18,2,0,0,-1,0,0,,
+SuperSocket.ProtoBase,FixedHeaderPipelineFilter<TPackageInfo>,3,4,0,0,2,51,9,0,0,0.5,2,0,SuperSocket.ProtoBase.FixedSizePipelineFilter<TPackageInfo>' SuperSocket.ProtoBase.ProtocolException,
+SuperSocket.ProtoBase,FixedSizePipelineFilter<TPackageInfo>,1,2,0,0,1,24,3,0,0,0,1,1,SuperSocket.ProtoBase.PipelineFilterBase<TPackageInfo>,SuperSocket.ProtoBase.FixedHeaderPipelineFilter<TPackageInfo>
+SuperSocket.ProtoBase,IKeyedPackageInfo,0,0,1,0,0,4,0,1,0,-1,0,1,,SuperSocket.ProtoBase.StringPackageInfo
+SuperSocket.ProtoBase,IPackageDecoder,0,1,0,0,0,5,1,1,0,-1,0,3,,SuperSocket.ProtoBase.IPipelineFilter' SuperSocket.ProtoBase.PipelineFilterBase<TPackageInfo>' SuperSocket.ProtoBase.PipelineFilterFactoryBase<TPackageInfo>
+SuperSocket.ProtoBase,IPackageEncoder,0,1,0,0,0,4,1,1,0,-1,0,0,,
+SuperSocket.ProtoBase,IPipelineFilter,0,2,3,0,0,13,2,5,0,-1,1,5,SuperSocket.ProtoBase.IPackageDecoder,SuperSocket.ProtoBase.IPipelineFilterFactory' SuperSocket.ProtoBase.DefaultPipelineFilterFactory<TPackageInfo;TPipelineFilter>' SuperSocket.ProtoBase.PipelineFilterFactoryBase<TPackageInfo>' SuperSocket.ProtoBase.PipelineFilterBase<TPackageInfo>' SuperSocket.ProtoBase.DelegatePipelineFilterFactory<TPackageInfo>
+SuperSocket.ProtoBase,IPipelineFilterFactory,0,1,0,0,0,5,1,1,0,-1,1,1,SuperSocket.ProtoBase.IPipelineFilter,SuperSocket.ProtoBase.PipelineFilterFactoryBase<TPackageInfo>
+SuperSocket.ProtoBase,LinePipelineFilter,0,2,0,0,1,11,2,0,0,-1,2,0,SuperSocket.ProtoBase.TerminatorPipelineFilter<TPackageInfo>' SuperSocket.ProtoBase.TextPackageInfo,
+SuperSocket.ProtoBase,PipelineFilterBase<TPackageInfo>,0,3,3,0,2,16,3,0,1,-1,2,3,SuperSocket.ProtoBase.IPackageDecoder' SuperSocket.ProtoBase.IPipelineFilter,SuperSocket.ProtoBase.FixedSizePipelineFilter<TPackageInfo>' SuperSocket.ProtoBase.BeginEndMarkPipelineFilter<TPackageInfo>' SuperSocket.ProtoBase.TerminatorPipelineFilter<TPackageInfo>
+SuperSocket.ProtoBase,PipelineFilterFactoryBase<TPackageInfo>,0,3,1,0,2,17,3,0,1,-1,3,2,SuperSocket.ProtoBase.IPackageDecoder' SuperSocket.ProtoBase.IPipelineFilter' SuperSocket.ProtoBase.IPipelineFilterFactory,SuperSocket.ProtoBase.DefaultPipelineFilterFactory<TPackageInfo;TPipelineFilter>' SuperSocket.ProtoBase.DelegatePipelineFilterFactory<TPackageInfo>
+SuperSocket.ProtoBase,ProtocolException,0,2,0,0,2,11,2,0,0,-1,0,2,,SuperSocket.ProtoBase.FixedHeaderPipelineFilter<TPackageInfo>' SuperSocket.ProtoBase.BeginEndMarkPipelineFilter<TPackageInfo>
+SuperSocket.ProtoBase,SequenceSegment,0,2,0,0,2,16,2,0,0,-1,0,0,,
+SuperSocket.ProtoBase,StringPackageInfo,0,0,3,0,0,6,0,0,1,-1,1,1,SuperSocket.ProtoBase.IKeyedPackageInfo,SuperSocket.ProtoBase.CommandLinePipelineFilter
+SuperSocket.ProtoBase,TerminatorPipelineFilter<TPackageInfo>,1,2,0,0,2,25,3,0,0,0,1,3,SuperSocket.ProtoBase.PipelineFilterBase<TPackageInfo>,SuperSocket.ProtoBase.TerminatorTextPipelineFilter' SuperSocket.ProtoBase.CommandLinePipelineFilter' SuperSocket.ProtoBase.LinePipelineFilter
+SuperSocket.ProtoBase,TerminatorTextPipelineFilter,0,2,0,0,1,11,2,0,0,-1,2,0,SuperSocket.ProtoBase.TerminatorPipelineFilter<TPackageInfo>' SuperSocket.ProtoBase.TextPackageInfo,
+SuperSocket.ProtoBase,TextPackageInfo,0,1,1,0,1,8,1,0,0,-1,0,2,,SuperSocket.ProtoBase.LinePipelineFilter' SuperSocket.ProtoBase.TerminatorTextPipelineFilter

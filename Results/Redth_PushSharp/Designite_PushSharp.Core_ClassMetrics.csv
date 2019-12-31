@@ -1,22 +1,22 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PushSharp.Core,INotification,0,1,1,0,0,5,1,7,0,-1,0,4,,PushSharp.Core.DeviceSubscriptionExpiredException' PushSharp.Core.DeviceSubscriptonExpiredException' PushSharp.Core.NotificationException' PushSharp.Core.RetryAfterException
-PushSharp.Core,IServiceConnection,0,1,0,0,0,4,1,7,0,-1,0,1,,PushSharp.Core.ServiceWorker<TNotification>
+PushSharp.Core,INotification,0,1,1,0,0,5,1,7,0,-1,0,9,,PushSharp.Core.DeviceSubscriptionExpiredException' PushSharp.Core.DeviceSubscriptonExpiredException' PushSharp.Core.NotificationException' PushSharp.Core.RetryAfterException' PushSharp.Core.IServiceBroker' PushSharp.Core.IServiceConnectionFactory' PushSharp.Core.IServiceConnection' PushSharp.Core.ServiceBroker<TNotification>' PushSharp.Core.ServiceWorker<TNotification>
+PushSharp.Core,IServiceConnection,0,1,0,0,0,4,1,7,0,-1,1,2,PushSharp.Core.INotification,PushSharp.Core.IServiceConnectionFactory' PushSharp.Core.ServiceWorker<TNotification>
 PushSharp.Core,NotificationBlockingCollection,0,1,0,0,1,6,1,0,0,-1,0,0,,
-PushSharp.Core,IServiceBroker,0,5,1,0,0,11,5,1,0,-1,0,1,,PushSharp.Core.ServiceWorker<TNotification>
-PushSharp.Core,ServiceBroker<TNotification>,4,9,3,0,8,100,15,0,1,0.44,2,0,PushSharp.Core.IServiceConnectionFactory' PushSharp.Core.Log,
-PushSharp.Core,ServiceWorker<TNotification>,0,3,4,0,3,66,3,0,0,-1,3,0,PushSharp.Core.IServiceBroker' PushSharp.Core.IServiceConnection' PushSharp.Core.Log,
+PushSharp.Core,IServiceBroker,0,5,1,0,0,11,5,1,0,-1,1,2,PushSharp.Core.INotification,PushSharp.Core.ServiceBroker<TNotification>' PushSharp.Core.ServiceWorker<TNotification>
+PushSharp.Core,ServiceBroker<TNotification>,4,9,3,0,8,100,18,0,1,0.44,5,0,PushSharp.Core.INotification' PushSharp.Core.IServiceBroker' PushSharp.Core.ServiceWorker<TNotification>' PushSharp.Core.IServiceConnectionFactory' PushSharp.Core.Log,
+PushSharp.Core,ServiceWorker<TNotification>,0,3,4,0,3,66,3,0,0,-1,4,1,PushSharp.Core.INotification' PushSharp.Core.IServiceConnection' PushSharp.Core.IServiceBroker' PushSharp.Core.Log,PushSharp.Core.ServiceBroker<TNotification>
 PushSharp.Core,ServiceBrokerConfiguration,0,1,3,0,1,20,1,0,0,-1,0,0,,
-PushSharp.Core,IServiceConnectionFactory,0,1,0,0,0,4,1,7,0,-1,0,1,,PushSharp.Core.ServiceBroker<TNotification>
-PushSharp.Core,DeviceSubscriptionExpiredException,0,1,0,0,1,6,1,0,1,-1,1,0,PushSharp.Core.INotification,
-PushSharp.Core,DeviceSubscriptonExpiredException,0,1,3,0,1,11,1,1,1,-1,1,0,PushSharp.Core.INotification,
-PushSharp.Core,NotificationException,0,2,1,0,2,13,2,9,0,-1,1,1,PushSharp.Core.INotification,PushSharp.Windows.WnsNotificationException
-PushSharp.Core,RetryAfterException,0,1,1,0,1,8,1,0,1,-1,1,0,PushSharp.Core.INotification,
+PushSharp.Core,IServiceConnectionFactory,0,1,0,0,0,4,1,7,0,-1,2,1,PushSharp.Core.INotification' PushSharp.Core.IServiceConnection,PushSharp.Core.ServiceBroker<TNotification>
+PushSharp.Core,DeviceSubscriptionExpiredException,0,1,0,0,1,6,1,0,1,-1,2,0,PushSharp.Core.INotification' PushSharp.Core.DeviceSubscriptonExpiredException,
+PushSharp.Core,DeviceSubscriptonExpiredException,0,1,3,0,1,11,1,1,1,-1,2,1,PushSharp.Core.INotification' PushSharp.Core.NotificationException,PushSharp.Core.DeviceSubscriptionExpiredException
+PushSharp.Core,NotificationException,0,2,1,0,2,13,2,9,0,-1,1,2,PushSharp.Core.INotification,PushSharp.Core.DeviceSubscriptonExpiredException' PushSharp.Core.RetryAfterException
+PushSharp.Core,RetryAfterException,0,1,1,0,1,8,1,0,1,-1,2,0,PushSharp.Core.INotification' PushSharp.Core.NotificationException,
 PushSharp.Core,LogLevel,0,0,0,0,0,7,0,0,0,-1,0,4,,PushSharp.Core.ILogger' PushSharp.Core.Log' PushSharp.Core.CounterExtensions' PushSharp.Core.ConsoleLogger
-PushSharp.Core,ILogger,0,1,0,0,0,4,1,1,0,-1,1,1,PushSharp.Core.LogLevel,PushSharp.Core.Log
-PushSharp.Core,Log,2,10,2,0,9,70,12,0,0,0,3,7,PushSharp.Core.ILogger' PushSharp.Core.LogLevel' PushSharp.Core.CounterToken,PushSharp.Apple.ApnsConnection' PushSharp.Core.ServiceBroker<TNotification>' PushSharp.Core.ServiceWorker<TNotification>' PushSharp.Core.CounterExtensions' PushSharp.Windows.WnsAccessTokenManager' PushSharp.Tests.ApnsTests' PushSharp.Tests.BrokerTests
-PushSharp.Core,CounterExtensions,0,2,0,0,2,11,2,0,0,-1,3,0,PushSharp.Core.Log' PushSharp.Core.CounterToken' PushSharp.Core.LogLevel,
-PushSharp.Core,CounterToken,0,0,1,0,0,4,0,0,0,-1,0,4,,PushSharp.Core.Log' PushSharp.Core.CounterExtensions' PushSharp.Tests.ApnsTests' PushSharp.Tests.BrokerTests
-PushSharp.Core,ConsoleLogger,0,1,0,0,1,21,3,0,1,-1,1,0,PushSharp.Core.LogLevel,
-PushSharp.Core,PushHttpClient,0,2,0,0,1,48,3,0,0,-1,2,0,PushSharp.Core.PushHttpResponse' PushSharp.Core.PushHttpRequest,
+PushSharp.Core,ILogger,0,1,0,0,0,4,1,1,0,-1,1,2,PushSharp.Core.LogLevel,PushSharp.Core.Log' PushSharp.Core.ConsoleLogger
+PushSharp.Core,Log,2,10,2,0,9,70,13,0,0,0,4,3,PushSharp.Core.LogLevel' PushSharp.Core.ILogger' PushSharp.Core.CounterToken' PushSharp.Core.ConsoleLogger,PushSharp.Core.CounterExtensions' PushSharp.Core.ServiceBroker<TNotification>' PushSharp.Core.ServiceWorker<TNotification>
+PushSharp.Core,CounterExtensions,0,2,0,0,2,11,2,0,0,-1,3,0,PushSharp.Core.LogLevel' PushSharp.Core.Log' PushSharp.Core.CounterToken,
+PushSharp.Core,CounterToken,0,0,1,0,0,4,0,0,0,-1,0,2,,PushSharp.Core.Log' PushSharp.Core.CounterExtensions
+PushSharp.Core,ConsoleLogger,0,1,0,0,1,21,4,0,1,-1,2,1,PushSharp.Core.LogLevel' PushSharp.Core.ILogger,PushSharp.Core.Log
+PushSharp.Core,PushHttpClient,0,2,0,0,1,48,3,0,0,-1,2,0,PushSharp.Core.PushHttpRequest' PushSharp.Core.PushHttpResponse,
 PushSharp.Core,PushHttpRequest,0,1,5,0,1,15,1,0,0,-1,0,1,,PushSharp.Core.PushHttpClient
 PushSharp.Core,PushHttpResponse,0,0,6,0,0,9,0,0,0,-1,0,1,,PushSharp.Core.PushHttpClient

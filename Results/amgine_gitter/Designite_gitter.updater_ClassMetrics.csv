@@ -1,19 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-gitter,Assert,0,23,0,0,22,316,44,0,0,-1,0,1,,gitter.Argument
+gitter,Assert,0,23,0,0,22,316,46,0,0,-1,0,2,,gitter.Assert' gitter.Verify
 gitter,Verify,0,0,0,0,0,768,0,0,0,-1,0,1,,gitter.Updater.MainForm
-gitter,Argument,0,32,0,0,32,638,72,0,0,-1,1,1,gitter.Assert,gitter.Updater.MainForm
+gitter,Argument,0,32,0,0,32,638,74,0,0,-1,0,1,,gitter.Updater.MainForm
 gitter,State,0,7,0,0,7,125,14,0,0,-1,0,0,,
-gitter.Updater,CommandLine,1,2,0,0,2,55,7,0,0,0,0,4,,gitter.Updater.DeployDriver' gitter.Updater.GitUpdateDriver' gitter.Updater.IUpdateDriver' gitter.Updater.Program
-gitter.Updater,CommandLineParameter,2,1,2,0,1,18,1,0,0,0,0,0,,
-gitter.Updater,DeployDriver,0,1,1,0,1,15,3,0,1,-1,2,0,gitter.Updater.DeployProcess' gitter.Updater.CommandLine,
-gitter.Updater,DeployProcess,4,5,1,0,3,73,8,0,1,0,3,1,gitter.Updater.UpdateProcessMonitor' gitter.Updater.Properties.Resources' gitter.Updater.Utility,gitter.Updater.DeployDriver
-gitter.Updater,GitUpdateDriver,0,3,1,0,1,76,14,0,1,-1,2,0,gitter.Updater.CommandLine' gitter.Updater.UpdateFromGitRepositoryProcess,
-gitter.Updater,UpdateFromGitRepositoryProcess,13,13,1,0,3,367,25,0,1,0.15,3,1,gitter.Updater.UpdateProcessMonitor' gitter.Updater.Utility' gitter.Updater.Properties.Resources,gitter.Updater.GitUpdateDriver
-gitter.Updater,IUpdateDriver,0,1,1,0,0,5,1,2,0,-1,1,1,gitter.Updater.CommandLine,gitter.Updater.Program
-gitter.Updater,IUpdateProcess,0,2,0,0,0,5,2,2,0,-1,1,2,gitter.Updater.UpdateProcessMonitor,gitter.Updater.MainForm' gitter.Updater.Program
-gitter.Updater,MainForm,8,12,0,0,1,225,20,0,0,0.42,5,0,gitter.Updater.IUpdateProcess' gitter.Updater.UpdateProcessMonitor' gitter.Argument' gitter.Verify' gitter.Updater.UpdateFailedEventArgs,
-gitter.Updater,Program,1,1,0,0,0,64,7,0,0,0,4,0,gitter.Updater.CommandLine' gitter.Updater.IUpdateDriver' gitter.Updater.IUpdateProcess' gitter.Updater.UpdateProcessMonitor,
-gitter.Updater,UpdateProcessMonitor,4,4,5,0,4,81,7,0,0,1,0,5,,gitter.Updater.DeployProcess' gitter.Updater.UpdateFromGitRepositoryProcess' gitter.Updater.IUpdateProcess' gitter.Updater.MainForm' gitter.Updater.Program
-gitter.Updater,UpdateFailedEventArgs,1,1,1,0,1,12,1,0,0,0,0,1,,gitter.Updater.MainForm
+gitter.Updater,CommandLine,1,2,0,0,2,55,7,0,0,0,1,4,gitter.Updater.CommandLineParameter,gitter.Updater.IUpdateDriver' gitter.Updater.Program' gitter.Updater.DeployDriver' gitter.Updater.GitUpdateDriver
+gitter.Updater,CommandLineParameter,2,1,2,0,1,18,1,0,0,0,0,1,,gitter.Updater.CommandLine
+gitter.Updater,DeployDriver,0,1,1,0,1,15,3,0,1,-1,4,1,gitter.Updater.CommandLine' gitter.Updater.DeployProcess' gitter.Updater.IUpdateDriver' gitter.Updater.IUpdateProcess,gitter.Updater.Program
+gitter.Updater,DeployProcess,4,5,1,0,3,73,8,0,1,0,4,1,gitter.Updater.IUpdateProcess' gitter.Updater.UpdateProcessMonitor' gitter.Updater.Utility' gitter.Updater.Properties.Resources,gitter.Updater.DeployDriver
+gitter.Updater,GitUpdateDriver,0,3,1,0,1,76,15,0,1,-1,4,1,gitter.Updater.CommandLine' gitter.Updater.UpdateFromGitRepositoryProcess' gitter.Updater.IUpdateDriver' gitter.Updater.IUpdateProcess,gitter.Updater.Program
+gitter.Updater,UpdateFromGitRepositoryProcess,13,13,1,0,3,367,40,0,1,0.15,4,1,gitter.Updater.IUpdateProcess' gitter.Updater.UpdateProcessMonitor' gitter.Updater.Utility' gitter.Updater.Properties.Resources,gitter.Updater.GitUpdateDriver
+gitter.Updater,IUpdateDriver,0,1,1,0,0,5,1,2,0,-1,2,3,gitter.Updater.CommandLine' gitter.Updater.IUpdateProcess,gitter.Updater.GitUpdateDriver' gitter.Updater.DeployDriver' gitter.Updater.Program
+gitter.Updater,IUpdateProcess,0,2,0,0,0,5,2,2,0,-1,1,6,gitter.Updater.UpdateProcessMonitor,gitter.Updater.IUpdateDriver' gitter.Updater.MainForm' gitter.Updater.DeployDriver' gitter.Updater.DeployProcess' gitter.Updater.GitUpdateDriver' gitter.Updater.UpdateFromGitRepositoryProcess
+gitter.Updater,MainForm,8,12,0,0,1,225,21,0,0,0.42,5,1,gitter.Verify' gitter.Argument' gitter.Updater.IUpdateProcess' gitter.Updater.UpdateProcessMonitor' gitter.Updater.UpdateFailedEventArgs,gitter.Updater.Program
+gitter.Updater,Program,1,1,0,0,0,64,7,0,0,0,6,0,gitter.Updater.CommandLine' gitter.Updater.DeployDriver' gitter.Updater.GitUpdateDriver' gitter.Updater.IUpdateDriver' gitter.Updater.MainForm' gitter.Updater.UpdateProcessMonitor,
+gitter.Updater,UpdateProcessMonitor,4,4,5,0,4,81,7,0,0,1,1,5,gitter.Updater.UpdateFailedEventArgs,gitter.Updater.IUpdateProcess' gitter.Updater.DeployProcess' gitter.Updater.Program' gitter.Updater.UpdateFromGitRepositoryProcess' gitter.Updater.MainForm
+gitter.Updater,UpdateFailedEventArgs,1,1,1,0,1,12,1,0,0,0,0,2,,gitter.Updater.MainForm' gitter.Updater.UpdateProcessMonitor
 gitter.Updater,Utility,0,10,1,0,8,171,25,0,0,-1,0,2,,gitter.Updater.DeployProcess' gitter.Updater.UpdateFromGitRepositoryProcess
 gitter.Updater.Properties,Resources,2,1,3,0,0,50,1,0,0,0,0,2,,gitter.Updater.DeployProcess' gitter.Updater.UpdateFromGitRepositoryProcess

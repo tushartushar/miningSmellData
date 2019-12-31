@@ -1,1 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Core6.Cancellation,Message,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Cancellation.Usage
+Core6.Cancellation,Usage,0,1,0,0,0,20,1,0,0,-1,1,0,Core6.Cancellation.Message,
+Core6.Handlers,MyMessageHandler,0,1,0,0,1,8,1,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Handlers.MyMessageHandler
+Core6.Enum,Handler,0,1,0,0,1,8,1,0,0,-1,2,0,Core6.Enum.Message' Core6.Enum.Status,
+Core6.Enum,Message,0,0,0,0,0,4,0,0,0,-1,0,2,,Core6.Enum.Handler' Core6.Enum.Usage
+Core6.Enum,Status,0,0,0,0,0,5,0,0,0,-1,0,2,,Core6.Enum.Usage' Core6.Enum.Handler
+Core6.Enum,Usage,0,1,0,0,0,12,1,0,0,-1,2,0,Core6.Enum.Message' Core6.Enum.Status,
+Core6.Int,Handler,0,1,0,0,1,8,1,0,0,-1,1,0,Core6.Int.Message,
+Core6.Int,Message,0,0,0,0,0,4,0,0,0,-1,0,2,,Core6.Int.Handler' Core6.Int.Usage
+Core6.Int,Usage,0,1,0,0,0,12,1,0,0,-1,1,0,Core6.Int.Message,
+Core6.Object,Handler,0,1,0,0,1,12,1,0,0,-1,2,0,Core6.Object.Message' Core6.Object.ResponseMessage,
+Core6.Object,Message,0,0,0,0,0,4,0,0,0,-1,0,2,,Core6.Object.Handler' Core6.Object.Usage
+Core6.Object,ResponseMessage,0,0,1,0,0,5,0,0,0,-1,0,2,,Core6.Object.Handler' Core6.Object.Usage
+Core6.Object,Usage,0,1,0,0,0,15,1,0,0,-1,2,0,Core6.Object.Message' Core6.Object.ResponseMessage,
+Core6.UpgradeGuides._5to6,Callbacks,0,1,0,0,0,23,1,0,0,-1,2,0,Core6.UpgradeGuides._5to6.RequestMessage' Core6.UpgradeGuides._5to6.ResponseMessage,
+Core6.UpgradeGuides._5to6,RequestMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.Callbacks
+Core6.UpgradeGuides._5to6,ResponseMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.Callbacks

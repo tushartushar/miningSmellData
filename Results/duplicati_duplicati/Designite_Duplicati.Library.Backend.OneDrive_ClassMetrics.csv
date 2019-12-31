@@ -1,10 +1,39 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Duplicati.Library.Backend,OneDrive,16,16,9,0,12,526,36,0,1,0.38,9,0,Duplicati.Library.Backend.WLID_FolderItem' Duplicati.Library.OAuthHelper' Duplicati.Library.Utility.Uri' Duplicati.Library.Backend.WLID_DataItem' Duplicati.Library.Utility.AsyncHttpRequest' Duplicati.Library.Backend.Strings.OneDrive' Duplicati.Library.Utility.Utility' Duplicati.Library.Backend.WLID_QuotaInfo' Duplicati.Library.Interface.FileEntry,
-Duplicati.Library.Backend,WLID_Service_Response,0,0,2,0,0,6,0,0,0,-1,0,0,,
-Duplicati.Library.Backend,WLID_DataItem,0,0,1,0,0,4,0,0,0,-1,0,1,,Duplicati.Library.Backend.OneDrive
-Duplicati.Library.Backend,WLID_FolderItem,0,0,9,0,0,15,0,0,0,-1,0,1,,Duplicati.Library.Backend.OneDrive
-Duplicati.Library.Backend,WLID_CreateFolderData,2,0,0,2,0,5,0,0,0,-1,0,0,,
-Duplicati.Library.Backend,WLID_ContinuationResponse,0,0,3,0,0,9,0,0,0,-1,0,0,,
-Duplicati.Library.Backend,WLID_UserInfo,0,0,6,0,0,9,0,0,0,-1,0,0,,
-Duplicati.Library.Backend,WLID_QuotaInfo,0,0,2,0,0,7,0,0,0,-1,0,1,,Duplicati.Library.Backend.OneDrive
-Duplicati.Library.Backend.Strings,OneDrive,0,6,3,0,6,11,6,0,0,-1,1,1,Duplicati.Library.Localization.Short.LC,Duplicati.Library.Backend.OneDrive
+Duplicati.Library.Backend.MicrosoftGraph,MicrosoftGraphException,1,5,2,0,3,47,7,2,0,0.6,0,4,,Duplicati.Library.Backend.MicrosoftGraph.DriveItemNotFoundException' Duplicati.Library.Backend.MicrosoftGraph.UploadSessionException' Duplicati.Library.Backend.SharePointV2' Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,DriveItemNotFoundException,0,1,0,0,1,7,1,0,1,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.MicrosoftGraphException,Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,UploadSessionException,0,1,7,0,1,24,1,0,1,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.MicrosoftGraphException,Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,Identity,0,0,2,0,0,7,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.IdentitySet
+Duplicati.Library.Backend.MicrosoftGraph,IdentitySet,0,0,3,0,0,18,0,0,0,-1,1,2,Duplicati.Library.Backend.MicrosoftGraph.Identity,Duplicati.Library.Backend.MicrosoftGraph.BaseItem' Duplicati.Library.Backend.MicrosoftGraph.Drive
+Duplicati.Library.Backend.MicrosoftGraph,BaseItem,0,0,8,0,0,27,0,4,0,-1,1,4,Duplicati.Library.Backend.MicrosoftGraph.IdentitySet,Duplicati.Library.Backend.MicrosoftGraph.Drive' Duplicati.Library.Backend.MicrosoftGraph.DriveItem' Duplicati.Library.Backend.MicrosoftGraph.SharePointSite' Duplicati.Library.Backend.MicrosoftGraph.Group
+Duplicati.Library.Backend.MicrosoftGraph,QuotaState,0,0,0,0,0,25,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.Quota
+Duplicati.Library.Backend.MicrosoftGraph,Quota,0,0,5,0,0,14,0,0,0,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.QuotaState,Duplicati.Library.Backend.MicrosoftGraph.Drive
+Duplicati.Library.Backend.MicrosoftGraph,DriveType,0,0,0,0,0,20,0,0,0,-1,0,2,,Duplicati.Library.Backend.MicrosoftGraph.Drive' Duplicati.Library.Backend.MicrosoftGraph.ItemReference
+Duplicati.Library.Backend.MicrosoftGraph,Drive,0,0,3,0,0,10,0,0,1,-1,4,2,Duplicati.Library.Backend.MicrosoftGraph.IdentitySet' Duplicati.Library.Backend.MicrosoftGraph.BaseItem' Duplicati.Library.Backend.MicrosoftGraph.Quota' Duplicati.Library.Backend.MicrosoftGraph.DriveType,Duplicati.Library.Backend.SharePointV2' Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,HashesType,0,0,3,0,0,21,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.FileFacet
+Duplicati.Library.Backend.MicrosoftGraph,FileFacet,0,0,2,0,0,7,0,0,0,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.HashesType,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,SortBy,0,0,0,0,0,37,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.FolderView
+Duplicati.Library.Backend.MicrosoftGraph,SortOrder,0,0,0,0,0,9,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.FolderView
+Duplicati.Library.Backend.MicrosoftGraph,ViewType,0,0,0,0,0,13,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.FolderView
+Duplicati.Library.Backend.MicrosoftGraph,FolderView,0,0,3,0,0,12,0,0,0,-1,3,1,Duplicati.Library.Backend.MicrosoftGraph.SortBy' Duplicati.Library.Backend.MicrosoftGraph.SortOrder' Duplicati.Library.Backend.MicrosoftGraph.ViewType,Duplicati.Library.Backend.MicrosoftGraph.FolderFacet
+Duplicati.Library.Backend.MicrosoftGraph,FolderFacet,0,0,2,0,0,7,0,0,0,-1,1,2,Duplicati.Library.Backend.MicrosoftGraph.FolderView,Duplicati.Library.Backend.MicrosoftGraph.DriveItem' Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,FileSystemInfoFacet,0,0,3,0,0,12,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,PackageFacet,0,0,1,0,0,8,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,DeletedFacet,0,0,1,0,0,5,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,RemoteItemFacet,0,0,1,0,0,5,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,RootFacet,0,0,0,0,0,3,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,SpecialFolderFacet,0,0,1,0,0,8,0,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,ItemReference,0,0,5,0,0,13,0,0,0,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.DriveType,Duplicati.Library.Backend.MicrosoftGraph.DriveItem
+Duplicati.Library.Backend.MicrosoftGraph,ConflictBehavior,0,0,0,0,0,11,0,0,0,-1,0,2,,Duplicati.Library.Backend.MicrosoftGraph.DriveItem' Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,DriveItem,0,0,20,0,0,92,0,0,1,-1,11,2,Duplicati.Library.Backend.MicrosoftGraph.BaseItem' Duplicati.Library.Backend.MicrosoftGraph.FileFacet' Duplicati.Library.Backend.MicrosoftGraph.FolderFacet' Duplicati.Library.Backend.MicrosoftGraph.FileSystemInfoFacet' Duplicati.Library.Backend.MicrosoftGraph.PackageFacet' Duplicati.Library.Backend.MicrosoftGraph.DeletedFacet' Duplicati.Library.Backend.MicrosoftGraph.RemoteItemFacet' Duplicati.Library.Backend.MicrosoftGraph.RootFacet' Duplicati.Library.Backend.MicrosoftGraph.SpecialFolderFacet' Duplicati.Library.Backend.MicrosoftGraph.ItemReference' Duplicati.Library.Backend.MicrosoftGraph.ConflictBehavior,Duplicati.Library.Backend.MicrosoftGraph.UploadSession' Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,GraphCollection<T>,0,0,2,0,0,7,0,0,0,-1,0,2,,Duplicati.Library.Backend.MicrosoftGraphBackend' Duplicati.Library.Backend.MicrosoftGroup
+Duplicati.Library.Backend.MicrosoftGraph,UploadSession,0,0,4,0,0,11,0,0,0,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.DriveItem,Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.MicrosoftGraph,SharePointSite,0,0,0,0,0,3,0,0,1,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.BaseItem,Duplicati.Library.Backend.SharePointV2
+Duplicati.Library.Backend.MicrosoftGraph,Group,0,0,5,0,0,23,0,0,1,-1,1,1,Duplicati.Library.Backend.MicrosoftGraph.BaseItem,Duplicati.Library.Backend.MicrosoftGroup
+Duplicati.Library.Backend,MicrosoftGraphBackend,21,24,12,0,10,511,42,3,1,0.29,10,3,Duplicati.Library.Backend.MicrosoftGraph.MicrosoftGraphException' Duplicati.Library.Backend.MicrosoftGraph.DriveItemNotFoundException' Duplicati.Library.Backend.MicrosoftGraph.UploadSessionException' Duplicati.Library.Backend.MicrosoftGraph.Drive' Duplicati.Library.Backend.MicrosoftGraph.FolderFacet' Duplicati.Library.Backend.MicrosoftGraph.ConflictBehavior' Duplicati.Library.Backend.MicrosoftGraph.DriveItem' Duplicati.Library.Backend.MicrosoftGraph.GraphCollection<T>' Duplicati.Library.Backend.MicrosoftGraph.UploadSession' Duplicati.Library.Backend.Strings.MicrosoftGraph,Duplicati.Library.Backend.OneDriveV2' Duplicati.Library.Backend.MicrosoftGroup' Duplicati.Library.Backend.SharePointV2
+Duplicati.Library.Backend,MicrosoftGroup,4,3,5,0,2,82,9,0,2,0.67,4,0,Duplicati.Library.Backend.MicrosoftGraph.GraphCollection<T>' Duplicati.Library.Backend.MicrosoftGraph.Group' Duplicati.Library.Backend.MicrosoftGraphBackend' Duplicati.Library.Backend.Strings.MicrosoftGroup,
+Duplicati.Library.Backend,OneDriveV2,4,2,5,0,2,50,3,0,2,1,2,0,Duplicati.Library.Backend.MicrosoftGraphBackend' Duplicati.Library.Backend.Strings.OneDriveV2,
+Duplicati.Library.Backend,SharePointV2,4,4,5,0,2,132,11,0,2,0.5,5,0,Duplicati.Library.Backend.MicrosoftGraph.MicrosoftGraphException' Duplicati.Library.Backend.MicrosoftGraph.Drive' Duplicati.Library.Backend.MicrosoftGraph.SharePointSite' Duplicati.Library.Backend.MicrosoftGraphBackend' Duplicati.Library.Backend.Strings.SharePointV2,
+Duplicati.Library.Backend.Strings,MicrosoftGraph,0,2,7,0,2,12,2,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGraphBackend
+Duplicati.Library.Backend.Strings,OneDriveV2,0,2,2,0,2,7,2,0,0,-1,0,1,,Duplicati.Library.Backend.OneDriveV2
+Duplicati.Library.Backend.Strings,SharePointV2,0,2,4,0,2,9,2,0,0,-1,0,1,,Duplicati.Library.Backend.SharePointV2
+Duplicati.Library.Backend.Strings,MicrosoftGroup,0,4,6,0,4,13,4,0,0,-1,0,1,,Duplicati.Library.Backend.MicrosoftGroup

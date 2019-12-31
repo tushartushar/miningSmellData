@@ -1,0 +1,17 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SendGrid.Tests.Helpers.Mail,MailHelperTests,0,4,0,0,4,86,4,0,0,-1,0,0,,
+SendGrid.Tests.Helpers.Mail,NonReadableStream,0,5,5,0,5,28,5,0,0,-1,0,1,,SendGrid.Tests.Helpers.Mail.SendGridMessageTests
+SendGrid.Tests.Helpers.Mail,SendGridMessageTests,0,11,0,0,11,214,11,0,0,-1,1,0,SendGrid.Tests.Helpers.Mail.NonReadableStream,
+SendGrid.Tests,IntegrationFixture,3,2,0,3,2,37,4,0,0,0,0,1,,SendGrid.Tests.Integration
+SendGrid.Tests,Integration,2,303,0,0,303,5636,303,0,0,0.22,5,0,SendGrid.Tests.IntegrationFixture' SendGrid.Tests.FakeWebProxy' SendGrid.Tests.FixedStatusAndMessageHttpMessageHandler' SendGrid.Tests.TimeOutExceptionThrowingHttpMessageHandler' SendGrid.Tests.Reliability.RetryTestBehaviourDelegatingHandler,
+SendGrid.Tests,FakeWebProxy,0,2,1,0,2,12,2,0,0,-1,0,1,,SendGrid.Tests.Integration
+SendGrid.Tests,FakeHttpMessageHandler,0,2,0,0,1,11,2,2,0,-1,0,2,,SendGrid.Tests.FixedStatusAndMessageHttpMessageHandler' SendGrid.Tests.TimeOutExceptionThrowingHttpMessageHandler
+SendGrid.Tests,FixedStatusAndMessageHttpMessageHandler,2,2,0,0,2,17,2,0,1,1,1,1,SendGrid.Tests.FakeHttpMessageHandler,SendGrid.Tests.Integration
+SendGrid.Tests,TimeOutExceptionThrowingHttpMessageHandler,2,2,0,0,2,15,2,0,1,1,1,1,SendGrid.Tests.FakeHttpMessageHandler,SendGrid.Tests.Integration
+SendGrid.Tests,LicenseTests,0,1,0,0,1,10,1,0,0,-1,0,0,,
+SendGrid.Tests,TestRequiredFilesExist,0,16,0,0,16,88,16,0,0,-1,0,0,,
+SendGrid.Tests,TemplateDataSerialisationTests,0,1,0,0,1,27,1,0,0,-1,1,0,SendGrid.Tests.TestTemplateData,
+SendGrid.Tests,TestTemplateData,0,0,4,0,0,10,0,0,0,-1,0,1,,SendGrid.Tests.TemplateDataSerialisationTests
+SendGrid.Tests.Reliability,ReliabilitySettingsTests,0,9,0,0,9,88,9,0,0,-1,0,0,,
+SendGrid.Tests.Reliability,RetryDelegatingHandlerTests,2,9,0,0,9,79,9,0,0,0,1,0,SendGrid.Tests.Reliability.RetryTestBehaviourDelegatingHandler,
+SendGrid.Tests.Reliability,RetryTestBehaviourDelegatingHandler,1,12,1,0,11,59,12,0,0,0.83,0,2,,SendGrid.Tests.Reliability.RetryDelegatingHandlerTests' SendGrid.Tests.Integration

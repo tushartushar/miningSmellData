@@ -1,27 +1,27 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Cosmos.CPU.x86,BaseIOGroups,0,0,0,0,0,15,0,0,0,-1,0,1,,Cosmos.CPU.x86.Global
-Cosmos.CPU.x86,Boot,2,1,0,2,0,30,1,0,0,0,2,0,Cosmos.CPU.x86.PIC' Cosmos.CPU.x86.Processor,
+Cosmos.CPU.x86,Boot,2,1,0,2,0,30,1,0,0,0,2,1,Cosmos.CPU.x86.PIC' Cosmos.CPU.x86.Processor,Cosmos.CPU.x86.Global
 Cosmos.CPU.x86,GCImplementation,0,5,0,0,3,23,5,0,0,-1,0,0,,
-Cosmos.CPU.x86,Global,2,1,2,2,1,21,1,0,0,0,2,1,Cosmos.Debug.Kernel.Debugger' Cosmos.CPU.x86.BaseIOGroups,Cosmos.CPU.x86.INTs
+Cosmos.CPU.x86,Global,2,1,2,2,1,21,1,0,0,0,4,1,Cosmos.CPU.x86.BaseIOGroups' Cosmos.CPU.x86.Boot' Cosmos.CPU.x86.PIC' Cosmos.CPU.x86.Processor,Cosmos.CPU.x86.INTs
 Cosmos.CPU.x86,GlobalSystemInfo,0,1,0,0,0,24,1,0,0,-1,0,0,,
-Cosmos.CPU.x86,INTs,3,55,0,1,51,406,62,0,0,0.09,3,1,Cosmos.CPU.x86.IRQContext' Cosmos.CPU.x86.PIC' Cosmos.CPU.x86.Global,Cosmos.CPU_Asm.CPUUpdateIDTAsm
-Cosmos.CPU.x86,EFlagsEnum,0,0,0,0,0,18,0,0,0,-1,0,0,,
+Cosmos.CPU.x86,INTs,3,55,0,1,51,406,62,0,0,0.09,4,0,Cosmos.CPU.x86.Global' Cosmos.CPU.x86.EFlagsEnum' Cosmos.CPU.x86.MMXContext' Cosmos.CPU.x86.IRQContext,
+Cosmos.CPU.x86,EFlagsEnum,0,0,0,0,0,18,0,0,0,-1,0,1,,Cosmos.CPU.x86.INTs
 Cosmos.CPU.x86,TSS,26,0,0,26,0,55,0,0,0,-1,0,0,,
-Cosmos.CPU.x86,MMXContext,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Cosmos.CPU.x86,MMXContext,0,0,0,0,0,3,0,0,0,-1,0,1,,Cosmos.CPU.x86.INTs
 Cosmos.CPU.x86,IRQContext,15,0,0,15,0,33,0,0,0,-1,0,1,,Cosmos.CPU.x86.INTs
-Cosmos.CPU.x86,IOPortBase,1,11,0,1,3,63,14,3,0,0.45,0,0,,
-Cosmos.CPU.x86,IOPort,0,3,3,0,3,39,3,0,1,-1,0,3,,Cosmos.CPU.x86.PIC' Cosmos.CPU.x86.Processor' Cosmos.CPU.x86.IOGroup.PIC
-Cosmos.CPU.x86,IOPortRead,0,2,3,0,2,21,2,0,1,-1,0,0,,
-Cosmos.CPU.x86,IOPortWrite,0,2,3,0,2,21,2,0,1,-1,0,0,,
+Cosmos.CPU.x86,IOPortBase,1,11,0,1,3,63,14,3,0,0.45,0,3,,Cosmos.CPU.x86.IOPort' Cosmos.CPU.x86.IOPortRead' Cosmos.CPU.x86.IOPortWrite
+Cosmos.CPU.x86,IOPort,0,3,3,0,3,39,3,0,1,-1,1,3,Cosmos.CPU.x86.IOPortBase,Cosmos.CPU.x86.Processor' Cosmos.CPU.x86.PIC' Cosmos.CPU.x86.IOGroup.PIC
+Cosmos.CPU.x86,IOPortRead,0,2,3,0,2,21,2,0,1,-1,1,0,Cosmos.CPU.x86.IOPortBase,
+Cosmos.CPU.x86,IOPortWrite,0,2,3,0,2,21,2,0,1,-1,1,0,Cosmos.CPU.x86.IOPortBase,
 Cosmos.CPU.x86,Memory2,1,1,0,0,1,6,1,0,0,0,0,0,,
-Cosmos.CPU.x86,PIC,2,5,0,0,3,104,5,0,0,0.4,3,2,Cosmos.CPU.x86.IOGroup.PIC' Cosmos.CPU.x86.IOPort' Cosmos.CPU.x86.Cmd,Cosmos.CPU.x86.Boot' Cosmos.CPU.x86.INTs
+Cosmos.CPU.x86,PIC,2,5,0,0,3,104,5,0,0,0.4,3,2,Cosmos.CPU.x86.IOPort' Cosmos.CPU.x86.Cmd' Cosmos.CPU.x86.IOGroup.PIC,Cosmos.CPU.x86.Global' Cosmos.CPU.x86.Boot
 Cosmos.CPU.x86,Cmd,0,0,0,0,0,4,0,0,0,-1,0,1,,Cosmos.CPU.x86.PIC
-Cosmos.CPU.x86,Processor,1,12,0,1,10,64,13,0,0,0.58,1,4,Cosmos.CPU.x86.IOPort,Cosmos.CPU.x86.Boot' Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo' Cosmos.CPU.x86.Memory.Old.Heap' Cosmos.CPU_Asm.CPUImpl
-Cosmos.CPU.x86,TempDebug,1,1,0,0,1,11,1,0,0,0,0,1,,Cosmos.Platform.PC.Devices.Processor
-Cosmos.CPU.x86.IOGroup,IOGroup,0,0,0,0,0,2,0,1,0,-1,0,0,,
-Cosmos.CPU.x86.IOGroup,PIC,2,1,0,2,0,9,1,0,1,0,1,1,Cosmos.CPU.x86.IOPort,Cosmos.CPU.x86.PIC
-Cosmos.CPU.x86.Memory.Old,DataLookupEntry,3,0,0,3,0,10,0,0,0,-1,0,2,,Cosmos.CPU.x86.Memory.Old.DataLookupTable' Cosmos.CPU.x86.Memory.Old.Heap
-Cosmos.CPU.x86.Memory.Old,DataLookupTable,4,1,0,4,1,19,1,0,0,0,1,1,Cosmos.CPU.x86.Memory.Old.DataLookupEntry,Cosmos.CPU.x86.Memory.Old.Heap
-Cosmos.CPU.x86.Memory.Old,GlobalInformationTable,1,0,0,1,0,5,0,0,0,-1,0,1,,Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo
-Cosmos.CPU.x86.Memory.Old,GlobalSystemInfo,1,1,2,0,1,29,2,0,0,0,2,2,Cosmos.CPU.x86.Memory.Old.GlobalInformationTable' Cosmos.CPU.x86.Processor,Cosmos.CPU.x86.Memory.Old.Heap' Cosmos.CPU_Plugs.GCImplementationImpl
-Cosmos.CPU.x86.Memory.Old,Heap,5,5,0,0,1,179,23,0,0,0,5,1,Cosmos.Debug.Kernel.Debugger' Cosmos.CPU.x86.Processor' Cosmos.CPU.x86.Memory.Old.DataLookupTable' Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo' Cosmos.CPU.x86.Memory.Old.DataLookupEntry,Cosmos.CPU_Plugs.GCImplementationImpl
+Cosmos.CPU.x86,Processor,1,12,0,1,10,64,13,0,0,0.58,1,4,Cosmos.CPU.x86.IOPort,Cosmos.CPU.x86.Global' Cosmos.CPU.x86.Boot' Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo' Cosmos.CPU.x86.Memory.Old.Heap
+Cosmos.CPU.x86,TempDebug,1,1,0,0,1,11,1,0,0,0,0,0,,
+Cosmos.CPU.x86.IOGroup,IOGroup,0,0,0,0,0,2,0,1,0,-1,0,1,,Cosmos.CPU.x86.IOGroup.PIC
+Cosmos.CPU.x86.IOGroup,PIC,2,1,0,2,0,9,1,0,1,0,2,1,Cosmos.CPU.x86.IOPort' Cosmos.CPU.x86.IOGroup.IOGroup,Cosmos.CPU.x86.PIC
+Cosmos.CPU.x86.Memory.Old,DataLookupEntry,3,0,0,3,0,10,0,0,0,-1,0,3,,Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo' Cosmos.CPU.x86.Memory.Old.Heap' Cosmos.CPU.x86.Memory.Old.DataLookupTable
+Cosmos.CPU.x86.Memory.Old,DataLookupTable,4,1,0,4,1,19,1,0,0,0,1,3,Cosmos.CPU.x86.Memory.Old.DataLookupEntry,Cosmos.CPU.x86.Memory.Old.GlobalInformationTable' Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo' Cosmos.CPU.x86.Memory.Old.Heap
+Cosmos.CPU.x86.Memory.Old,GlobalInformationTable,1,0,0,1,0,5,0,0,0,-1,1,1,Cosmos.CPU.x86.Memory.Old.DataLookupTable,Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo
+Cosmos.CPU.x86.Memory.Old,GlobalSystemInfo,1,1,2,0,1,29,2,0,0,0,4,1,Cosmos.CPU.x86.Processor' Cosmos.CPU.x86.Memory.Old.DataLookupEntry' Cosmos.CPU.x86.Memory.Old.DataLookupTable' Cosmos.CPU.x86.Memory.Old.GlobalInformationTable,Cosmos.CPU.x86.Memory.Old.Heap
+Cosmos.CPU.x86.Memory.Old,Heap,5,5,0,0,1,179,23,0,0,0,4,0,Cosmos.CPU.x86.Processor' Cosmos.CPU.x86.Memory.Old.DataLookupEntry' Cosmos.CPU.x86.Memory.Old.DataLookupTable' Cosmos.CPU.x86.Memory.Old.GlobalSystemInfo,

@@ -1,107 +1,107 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SqlLinq,DictionaryComparer<TKey;TValue>,0,4,0,0,3,58,13,0,0,-1,0,0,,
-SqlLinq,DynamicGetMemberBinder,1,2,0,0,2,17,3,0,0,1,0,0,,
-SqlLinq,ExpandoComparer,1,2,0,0,2,12,2,0,0,0,0,1,,SqlLinq.UnitTests.DynamicTests
-SqlLinq,ScalarJoinQuery<TSource;TInner;TResult>,1,3,1,0,2,22,4,0,0,0.67,3,0,SqlLinq.ICompile' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.SelectNode,
-SqlLinq,ScalarQuery<TSource;TResult>,1,3,1,0,2,22,4,0,0,0.67,3,0,SqlLinq.ICompile' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.SelectNode,
-SqlLinq,SqlException,0,4,0,0,3,19,4,0,0,-1,0,0,,
-SqlLinq,Filter<T>,1,3,0,0,2,20,5,0,0,0.67,0,0,,
-SqlLinq,JoinQuery<TSource;TInner;TResult>,3,3,0,0,2,37,9,0,0,0.67,8,0,SqlLinq.SyntaxTree.Clauses.FromClause' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Joins.Join' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.SyntaxTree.Clauses.OrderByClause' SqlLinq.SyntaxTree.Clauses.HavingClause,
+SqlLinq,DictionaryComparer<TKey;TValue>,0,4,0,0,3,58,14,0,0,-1,0,2,,SqlLinq.QueryBase<TResult>' SqlLinq.ExpandoComparer
+SqlLinq,DynamicGetMemberBinder,1,2,0,0,2,17,3,0,0,1,0,1,,SqlLinq.ExpressionFactory
+SqlLinq,ExpandoComparer,1,2,0,0,2,12,2,0,0,0,1,1,SqlLinq.DictionaryComparer<TKey;TValue>,SqlLinq.QueryBase<TResult>
+SqlLinq,ScalarJoinQuery<TSource;TInner;TResult>,1,3,1,0,2,22,4,0,0,0.67,3,1,SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.ICompile' SqlLinq.QueryBase<TResult>,SqlLinq.SqlLinq
+SqlLinq,ScalarQuery<TSource;TResult>,1,3,1,0,2,22,4,0,0,0.67,3,2,SqlLinq.Query<TSource;TResult>' SqlLinq.ICompile' SqlLinq.QueryBase<TResult>,SqlLinq.SyntaxTree.Expressions.TupleSelectNode' SqlLinq.SqlLinq
+SqlLinq,SqlException,0,4,0,0,3,19,4,0,0,-1,0,5,,SqlLinq.QueryBase<TResult>' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.SyntaxTree.SelectNode
+SqlLinq,Filter<T>,1,3,0,0,2,20,5,0,0,0.67,0,3,,SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>' SqlLinq.QueryBase<TResult>
+SqlLinq,JoinQuery<TSource;TInner;TResult>,3,3,0,0,2,37,9,0,0,0.67,4,2,SqlLinq.SqlException' SqlLinq.Filter<T>' SqlLinq.QueryBase<TResult>' SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>,SqlLinq.ScalarJoinQuery<TSource;TInner;TResult>' SqlLinq.SqlLinq
 SqlLinq,LinqExtensions,0,2,0,0,2,27,4,0,0,-1,0,0,,
 SqlLinq,ParserFactory,1,2,0,0,1,15,2,0,0,1,0,1,,SqlLinq.SqlParser
-SqlLinq,Query<TSource;TResult>,0,3,2,0,2,33,8,0,0,-1,6,0,SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.SyntaxTree.Clauses.OrderByClause' SqlLinq.SyntaxTree.Clauses.HavingClause,
-SqlLinq,ICompile,0,1,0,0,0,4,1,1,0,-1,1,3,SqlLinq.SyntaxTree.SelectNode,SqlLinq.ScalarJoinQuery<TSource;TInner;TResult>' SqlLinq.ScalarQuery<TSource;TResult>' SqlLinq.SyntaxTree.Expressions.TupleSelectNode
-SqlLinq,QueryBase<TResult>,0,6,3,0,2,44,8,0,1,-1,2,0,SqlLinq.SyntaxTree.SelectNode' SqlLinq.SqlParser,
-SqlLinq,SqlLinq,0,8,0,0,8,61,8,0,0,-1,0,0,,
-SqlLinq,SqlParser,1,3,5,0,3,86,5,0,0,1,3,1,SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.ParserFactory' SqlLinq.SyntaxRuleFactory,SqlLinq.QueryBase<TResult>
-SqlLinq,SyntaxRuleFactory,1,2,0,0,1,18,2,0,0,1,2,1,SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.SyntaxNodeAttribute,SqlLinq.SqlParser
-SqlLinq,ExpressionFactory,0,13,0,0,11,113,17,0,0,-1,0,8,,SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.ColumnsStar' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Aggregates.AggregateNode' SqlLinq.SyntaxTree.Aggregates.CountNode' SqlLinq.SyntaxTree.Joins.Join
+SqlLinq,Query<TSource;TResult>,0,3,2,0,2,33,8,0,0,-1,2,2,SqlLinq.Filter<T>' SqlLinq.QueryBase<TResult>,SqlLinq.ScalarQuery<TSource;TResult>' SqlLinq.SqlLinq
+SqlLinq,ICompile,0,1,0,0,0,4,1,1,0,-1,1,4,SqlLinq.SyntaxTree.SelectNode,SqlLinq.ScalarJoinQuery<TSource;TInner;TResult>' SqlLinq.ScalarQuery<TSource;TResult>' SqlLinq.SyntaxTree.Expressions.TupleSelectNode' SqlLinq.QueryBase<TResult>
+SqlLinq,QueryBase<TResult>,0,6,3,0,2,44,9,0,1,-1,7,4,SqlLinq.DictionaryComparer<TKey;TValue>' SqlLinq.ExpandoComparer' SqlLinq.SqlException' SqlLinq.Filter<T>' SqlLinq.ICompile' SqlLinq.SqlParser' SqlLinq.SyntaxTree.SelectNode,SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>' SqlLinq.ScalarJoinQuery<TSource;TInner;TResult>' SqlLinq.ScalarQuery<TSource;TResult>
+SqlLinq,SqlLinq,0,8,0,0,8,61,8,0,0,-1,4,0,SqlLinq.ScalarJoinQuery<TSource;TInner;TResult>' SqlLinq.ScalarQuery<TSource;TResult>' SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>,
+SqlLinq,SqlParser,1,3,5,0,3,86,14,0,0,1,5,1,SqlLinq.ParserFactory' SqlLinq.SyntaxRuleFactory' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.SyntaxNode' SqlLinq.SyntaxTree.TerminalNode,SqlLinq.QueryBase<TResult>
+SqlLinq,SyntaxRuleFactory,1,2,0,0,1,18,2,0,0,1,2,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.NonTerminalNode,SqlLinq.SqlParser
+SqlLinq,ExpressionFactory,0,13,0,0,11,113,17,0,0,-1,1,8,SqlLinq.DynamicGetMemberBinder,SqlLinq.SyntaxTree.Aggregates.CountNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.Aggregates.AggregateNode' SqlLinq.SyntaxTree.Joins.Join' SqlLinq.SyntaxTree.ColumnsStar
 SqlLinq,TypeExtensions,0,14,0,0,12,148,50,0,0,-1,0,0,,
-SqlLinq.SyntaxTree,AggregateFunctionsFactory,0,1,0,0,1,13,2,0,0,-1,0,1,,SqlLinq.SyntaxTree.Columns
-SqlLinq.SyntaxTree,AggregateFunctions<TSource;TResult>,0,3,1,0,1,17,3,0,0,-1,0,0,,
-SqlLinq.SyntaxTree,AggregateIntoExpando<TSource;TResult>,0,2,0,0,1,14,3,0,0,-1,0,0,,
-SqlLinq.SyntaxTree,AggregateIntoDictionary<TSource;TResult>,0,2,0,0,1,16,3,0,0,-1,0,0,,
-SqlLinq.SyntaxTree,AggregateIntoObjectMembers<TSource;TResult>,0,2,0,0,1,17,3,0,0,-1,0,0,,
-SqlLinq.SyntaxTree,AggregateIntoObjectConstructor<TSource;TResult>,0,2,0,0,1,18,4,0,0,-1,0,0,,
-SqlLinq.SyntaxTree,SyntaxNodeAttribute,0,1,1,0,1,9,1,0,0,-1,0,1,,SqlLinq.SyntaxRuleFactory
-SqlLinq.SyntaxTree,Columns,0,8,6,0,4,129,15,1,1,-1,5,6,SqlLinq.SyntaxTree.Aggregates.AggregateNode' SqlLinq.SyntaxTree.AggregateFunctionsFactory' SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.ColumnSource,SqlLinq.ScalarJoinQuery<TSource;TInner;TResult>' SqlLinq.ScalarQuery<TSource;TResult>' SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.WhereClause
-SqlLinq.SyntaxTree,ColumnSource,1,3,2,0,1,37,3,1,1,1,1,2,SqlLinq.SyntaxTree.Identifier,SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.SelectNode
-SqlLinq.SyntaxTree,ColumnsStar,0,2,0,0,2,11,2,0,2,-1,1,0,SqlLinq.ExpressionFactory,
-SqlLinq.SyntaxTree,Identifier,0,2,3,0,2,42,2,0,0,-1,0,8,,SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Aggregates.AggregateNode' SqlLinq.SyntaxTree.Aggregates.CountStarNode
-SqlLinq.SyntaxTree,NonTerminalNode,1,10,2,0,3,71,14,10,1,0.3,2,6,SqlLinq.SyntaxTree.SyntaxNode' SqlLinq.SyntaxTree.TerminalNode,SqlLinq.SqlParser' SqlLinq.SyntaxRuleFactory' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.SyntaxNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.WhereClause
-SqlLinq.SyntaxTree,SelectNode,0,2,7,0,1,83,8,0,2,-1,9,7,SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.Clauses.OrderByClause' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Aggregates.AggregateNode,SqlLinq.ScalarJoinQuery<TSource;TInner;TResult>' SqlLinq.ScalarQuery<TSource;TResult>' SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>' SqlLinq.ICompile' SqlLinq.QueryBase<TResult>' SqlLinq.SyntaxTree.Expressions.TupleSelectNode
-SqlLinq.SyntaxTree,SyntaxNode,1,3,3,0,1,35,4,2,0,1,1,1,SqlLinq.SyntaxTree.NonTerminalNode,SqlLinq.SyntaxTree.NonTerminalNode
-SqlLinq.SyntaxTree,TerminalNode,0,3,4,0,2,23,3,0,1,-1,0,2,,SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Joins.Join
-SqlLinq.SyntaxTree.Clauses,GroupByCallFactory,0,1,0,0,1,13,4,0,0,-1,0,1,,SqlLinq.SyntaxTree.Clauses.GroupByClause
-SqlLinq.SyntaxTree.Clauses,GroupByCall<TSource;TResult>,0,3,2,0,1,27,3,0,0,-1,0,0,,
-SqlLinq.SyntaxTree.Clauses,GroupByIntoDictionary<TSource;TResult>,0,2,0,0,2,23,4,0,0,-1,0,0,,
-SqlLinq.SyntaxTree.Clauses,GroupByExpando<TSource;TResult>,0,2,0,0,2,21,4,0,0,-1,0,0,,
-SqlLinq.SyntaxTree.Clauses,GroupByConstructor<TSource;TResult>,0,2,0,0,2,18,3,0,0,-1,0,0,,
-SqlLinq.SyntaxTree.Clauses,GroupByMemberInit<TSource;TResult>,0,2,0,0,2,24,4,0,0,-1,0,0,,
-SqlLinq.SyntaxTree.Clauses,FromClause,0,1,2,0,1,21,1,0,2,-1,0,1,,SqlLinq.JoinQuery<TSource;TInner;TResult>
-SqlLinq.SyntaxTree.Clauses,GroupByClause,0,4,1,0,2,71,6,0,2,-1,6,3,SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.Aggregates.AggregateNode' SqlLinq.SyntaxTree.Clauses.GroupByCallFactory,SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>' SqlLinq.SyntaxTree.SelectNode
-SqlLinq.SyntaxTree.Clauses,HavingClause,0,2,0,0,1,10,2,0,1,-1,0,2,,SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>
-SqlLinq.SyntaxTree.Clauses,OrderByClause,0,2,1,0,2,28,3,0,2,-1,1,3,SqlLinq.SyntaxTree.Clauses.OrderByItem,SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>' SqlLinq.SyntaxTree.SelectNode
-SqlLinq.SyntaxTree.Clauses,OrderByItem,1,5,2,0,3,47,5,1,2,0.4,2,2,SqlLinq.SyntaxTree.Identifier' SqlLinq.ExpressionFactory,SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.OrderByClause
-SqlLinq.SyntaxTree.Clauses,OrderByValueItem,0,2,0,0,1,13,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Clauses,WhereClause,0,3,0,0,2,26,5,1,2,-1,4,2,SqlLinq.SyntaxTree.Expressions.ExpressionNode' SqlLinq.SyntaxTree.Aggregates.AggregateNode' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Columns,SqlLinq.JoinQuery<TSource;TInner;TResult>' SqlLinq.Query<TSource;TResult>
-SqlLinq.SyntaxTree.Expressions,InListNode,0,2,0,0,1,11,2,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions,TupleSelectNode,0,2,0,0,1,17,2,0,1,-1,2,0,SqlLinq.SyntaxTree.SelectNode' SqlLinq.ICompile,
-SqlLinq.SyntaxTree.Expressions,ValueListNode,0,2,0,0,1,12,2,0,1,-1,1,0,SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
-SqlLinq.SyntaxTree.Expressions,BinaryExpressionNode,0,4,0,0,0,24,6,7,1,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions,ExpressionNode,0,4,0,0,1,27,5,14,2,-1,0,1,,SqlLinq.SyntaxTree.Clauses.WhereClause
-SqlLinq.SyntaxTree.Expressions,NodeWithId,1,2,1,0,1,22,2,0,3,1,2,3,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.Identifier,SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Aggregates.AggregateNode
-SqlLinq.SyntaxTree.Expressions,TupleNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,PredicateExpressionNode,0,1,0,0,0,7,1,6,2,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,BetweenNode,0,3,0,0,1,26,6,1,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,EqualityNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,GreaterThanNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,GreaterThanOrEqualNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,InequalityNode,0,2,0,0,1,12,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,InNode,0,3,0,0,1,21,4,1,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,IsNotNullNode,0,2,0,0,1,11,2,0,1,-1,1,0,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.IsNullNode,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,IsNullNode,0,2,0,0,1,11,2,1,3,-1,0,1,,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.IsNotNullNode
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,LessThanNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,LessThanOrEqualNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,LikeNode,0,5,0,0,2,46,7,1,3,-1,0,2,,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.NotLikeNode' SqlLinq.UnitTests.LikeConversionTests
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,NotBetweenNode,0,2,0,0,1,11,2,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,NotInNode,0,2,0,0,1,11,2,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,NotLikeNode,0,2,0,0,1,11,2,0,4,-1,1,0,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LikeNode,
-SqlLinq.SyntaxTree.Aggregates,AggregateNode,0,6,5,0,0,72,9,6,2,-1,3,4,SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.ExpressionFactory,SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.WhereClause
-SqlLinq.SyntaxTree.Aggregates,AverageNode,0,1,0,0,1,8,1,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,CountAllNode,0,3,0,0,3,16,3,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,CountNode,0,3,1,0,0,25,3,3,3,-1,1,0,SqlLinq.ExpressionFactory,
-SqlLinq.SyntaxTree.Aggregates,CountStarNode,0,2,2,0,1,26,2,0,4,-1,1,0,SqlLinq.SyntaxTree.Identifier,
-SqlLinq.SyntaxTree.Aggregates,CountDistinctNode,0,3,0,0,3,19,3,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,MaxNode,0,1,0,0,1,8,1,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,MinNode,0,1,0,0,1,8,1,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,StandardDeviationNode,0,1,0,0,1,8,1,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,StandardDeviationPNode,0,1,0,0,1,8,1,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,SumNode,0,1,0,0,1,8,1,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,VarianceNode,0,1,1,0,1,15,1,3,3,-1,0,0,,
-SqlLinq.SyntaxTree.Aggregates,VariancePNode,0,1,0,0,1,8,1,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Functions,FunctionNode,0,1,0,0,0,6,1,1,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Functions,Value,0,2,0,0,1,11,2,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Joins,Inner,0,1,0,0,1,8,1,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Joins,Join,2,3,5,0,0,73,5,3,2,0.67,2,1,SqlLinq.SyntaxTree.TerminalNode' SqlLinq.ExpressionFactory,SqlLinq.JoinQuery<TSource;TInner;TResult>
-SqlLinq.SyntaxTree.Joins,IJoinEntry,0,1,0,0,0,5,1,2,0,-1,0,1,,SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>
-SqlLinq.SyntaxTree.Joins,ObjectJoinEntry,1,2,0,0,2,21,2,0,1,0,0,1,,SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>
-SqlLinq.SyntaxTree.Joins,DictionaryJoinEntry,2,3,0,0,2,30,3,0,1,0,0,1,,SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>
-SqlLinq.SyntaxTree.Joins,JoinResultSelector<TOuter;TInner>,2,2,0,0,1,35,3,0,0,1,3,0,SqlLinq.SyntaxTree.Joins.IJoinEntry' SqlLinq.SyntaxTree.Joins.DictionaryJoinEntry' SqlLinq.SyntaxTree.Joins.ObjectJoinEntry,
-SqlLinq.SyntaxTree.Joins,Left,0,1,0,0,1,7,1,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Joins,Right,0,1,0,0,1,7,1,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Literals,BooleanLiteral,0,2,0,0,1,12,2,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Literals,DateLiteral,0,2,0,0,1,15,3,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Literals,IntegerLiteral,0,2,0,0,1,14,3,0,1,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Literals,LiteralNode,1,4,2,0,0,31,4,6,3,1,0,1,,SqlLinq.SyntaxTree.Expressions.ValueListNode
-SqlLinq.SyntaxTree.Expressions.Literals,NullLiteral,0,2,0,0,1,12,2,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Literals,RealLiteral,0,2,0,0,1,12,2,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Literals,StringLiteral,0,2,1,0,1,20,2,0,4,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Arithmetic,DivideNode,0,2,0,0,1,11,2,0,2,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Arithmetic,MinusNode,0,2,0,0,1,11,2,0,2,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Arithmetic,MultiplyNode,0,2,0,0,1,11,2,0,2,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Arithmetic,NegateNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Arithmetic,PlusNode,0,2,0,0,1,11,2,0,2,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Boolean,AndNode,0,2,0,0,1,11,2,0,2,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Boolean,NotNode,0,2,0,0,1,11,2,0,3,-1,0,0,,
-SqlLinq.SyntaxTree.Expressions.Predicates.Boolean,OrNode,0,2,0,0,1,11,2,0,2,-1,0,0,,
+SqlLinq.SyntaxTree,AggregateFunctionsFactory,0,1,0,0,1,13,4,0,0,-1,5,1,SqlLinq.SyntaxTree.AggregateFunctions<TSource;TResult>' SqlLinq.SyntaxTree.AggregateIntoExpando<TSource;TResult>' SqlLinq.SyntaxTree.AggregateIntoDictionary<TSource;TResult>' SqlLinq.SyntaxTree.AggregateIntoObjectMembers<TSource;TResult>' SqlLinq.SyntaxTree.AggregateIntoObjectConstructor<TSource;TResult>,SqlLinq.SyntaxTree.Columns
+SqlLinq.SyntaxTree,AggregateFunctions<TSource;TResult>,0,3,1,0,1,17,3,0,0,-1,0,6,,SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.AggregateFunctionsFactory' SqlLinq.SyntaxTree.AggregateIntoExpando<TSource;TResult>' SqlLinq.SyntaxTree.AggregateIntoDictionary<TSource;TResult>' SqlLinq.SyntaxTree.AggregateIntoObjectMembers<TSource;TResult>' SqlLinq.SyntaxTree.AggregateIntoObjectConstructor<TSource;TResult>
+SqlLinq.SyntaxTree,AggregateIntoExpando<TSource;TResult>,0,2,0,0,1,14,3,0,0,-1,1,1,SqlLinq.SyntaxTree.AggregateFunctions<TSource;TResult>,SqlLinq.SyntaxTree.AggregateFunctionsFactory
+SqlLinq.SyntaxTree,AggregateIntoDictionary<TSource;TResult>,0,2,0,0,1,16,3,0,0,-1,1,1,SqlLinq.SyntaxTree.AggregateFunctions<TSource;TResult>,SqlLinq.SyntaxTree.AggregateFunctionsFactory
+SqlLinq.SyntaxTree,AggregateIntoObjectMembers<TSource;TResult>,0,2,0,0,1,17,3,0,0,-1,1,1,SqlLinq.SyntaxTree.AggregateFunctions<TSource;TResult>,SqlLinq.SyntaxTree.AggregateFunctionsFactory
+SqlLinq.SyntaxTree,AggregateIntoObjectConstructor<TSource;TResult>,0,2,0,0,1,18,4,0,0,-1,1,1,SqlLinq.SyntaxTree.AggregateFunctions<TSource;TResult>,SqlLinq.SyntaxTree.AggregateFunctionsFactory
+SqlLinq.SyntaxTree,SyntaxNodeAttribute,0,1,1,0,1,9,1,0,0,-1,0,60,,SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Aggregates.CountAllNode' SqlLinq.SyntaxTree.Aggregates.CountDistinctNode' SqlLinq.SyntaxTree.Expressions.InListNode' SqlLinq.SyntaxTree.Expressions.TupleNode' SqlLinq.SyntaxTree.Aggregates.StandardDeviationNode' SqlLinq.SyntaxTree.Aggregates.StandardDeviationPNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.NotLikeNode' SqlLinq.SyntaxTree.Aggregates.SumNode' SqlLinq.SyntaxTree.Aggregates.VarianceNode' SqlLinq.SyntaxTree.Aggregates.VariancePNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.NotInNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.FromClause' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.NotBetweenNode' SqlLinq.SyntaxTree.Clauses.HavingClause' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LikeNode' SqlLinq.SyntaxTree.Clauses.OrderByValueItem' SqlLinq.SyntaxTree.Clauses.OrderByClause' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LessThanOrEqualNode' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LessThanNode' SqlLinq.SyntaxTree.Aggregates.MaxNode' SqlLinq.SyntaxTree.Expressions.Functions.Value' SqlLinq.SyntaxTree.Expressions.TupleSelectNode' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.Aggregates.CountStarNode' SqlLinq.SyntaxTree.Aggregates.AverageNode' SqlLinq.SyntaxTree.Expressions.ValueListNode' SqlLinq.SyntaxTree.Aggregates.MinNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.IsNullNode' SqlLinq.SyntaxTree.ColumnsStar' SqlLinq.SyntaxTree.Joins.Right' SqlLinq.SyntaxTree.Joins.Left' SqlLinq.SyntaxTree.Expressions.Literals.BooleanLiteral' SqlLinq.SyntaxTree.Joins.Inner' SqlLinq.SyntaxTree.Expressions.Literals.DateLiteral' SqlLinq.SyntaxTree.Expressions.Literals.RealLiteral' SqlLinq.SyntaxTree.Expressions.Literals.IntegerLiteral' SqlLinq.SyntaxRuleFactory' SqlLinq.SyntaxTree.Expressions.Literals.NullLiteral' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.IsNotNullNode' SqlLinq.SyntaxTree.Expressions.Literals.StringLiteral' SqlLinq.SyntaxTree.Expressions.Arithmetic.DivideNode' SqlLinq.SyntaxTree.Expressions.Arithmetic.MinusNode' SqlLinq.SyntaxTree.Expressions.Arithmetic.PlusNode' SqlLinq.SyntaxTree.Expressions.Arithmetic.MultiplyNode' SqlLinq.SyntaxTree.Expressions.Predicates.Boolean.AndNode' SqlLinq.SyntaxTree.Expressions.Predicates.Boolean.NotNode' SqlLinq.SyntaxTree.Expressions.Predicates.Boolean.OrNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.InNode' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Expressions.Arithmetic.NegateNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.GreaterThanNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.BetweenNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.GreaterThanOrEqualNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.EqualityNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.InequalityNode
+SqlLinq.SyntaxTree,Columns,0,8,6,0,4,129,15,1,1,-1,7,3,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.AggregateFunctionsFactory' SqlLinq.SyntaxTree.AggregateFunctions<TSource;TResult>' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Aggregates.AggregateNode,SqlLinq.SyntaxTree.ColumnsStar' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.SyntaxTree.SelectNode
+SqlLinq.SyntaxTree,ColumnSource,1,3,2,0,1,37,3,1,1,1,4,2,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Expressions.NodeWithId,SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.Aggregates.AggregateNode
+SqlLinq.SyntaxTree,ColumnsStar,0,2,0,0,2,11,2,0,2,-1,3,0,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Columns,
+SqlLinq.SyntaxTree,Identifier,0,2,3,0,2,42,2,0,0,-1,0,6,,SqlLinq.SyntaxTree.Aggregates.CountStarNode' SqlLinq.SyntaxTree.Aggregates.AggregateNode' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SyntaxTree.Joins.Join
+SqlLinq.SyntaxTree,NonTerminalNode,1,10,2,0,3,71,14,10,1,0.3,2,13,SqlLinq.SyntaxTree.SyntaxNode' SqlLinq.SyntaxTree.TerminalNode,SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.OrderByClause' SqlLinq.SyntaxTree.Clauses.FromClause' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.Expressions.ExpressionNode' SqlLinq.SyntaxTree.Joins.Join' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.SyntaxNode' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SqlParser' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxRuleFactory
+SqlLinq.SyntaxTree,SelectNode,0,2,7,0,1,83,9,0,2,-1,11,3,SqlLinq.SqlException' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Clauses.FromClause' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.HavingClause' SqlLinq.SyntaxTree.Clauses.OrderByClause' SqlLinq.SyntaxTree.Clauses.OrderByItem' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.SyntaxTree.Aggregates.AggregateNode,SqlLinq.ICompile' SqlLinq.QueryBase<TResult>' SqlLinq.SyntaxTree.Expressions.TupleSelectNode
+SqlLinq.SyntaxTree,SyntaxNode,1,3,3,0,1,35,4,2,0,1,1,3,SqlLinq.SyntaxTree.NonTerminalNode,SqlLinq.SyntaxTree.TerminalNode' SqlLinq.SqlParser' SqlLinq.SyntaxTree.NonTerminalNode
+SqlLinq.SyntaxTree,TerminalNode,0,3,4,0,2,23,3,0,1,-1,1,3,SqlLinq.SyntaxTree.SyntaxNode,SqlLinq.SqlParser' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Joins.Join
+SqlLinq.SyntaxTree.Clauses,GroupByCallFactory,0,1,0,0,1,13,4,0,0,-1,5,1,SqlLinq.SyntaxTree.Clauses.GroupByCall<TSource;TResult>' SqlLinq.SyntaxTree.Clauses.GroupByIntoDictionary<TSource;TResult>' SqlLinq.SyntaxTree.Clauses.GroupByExpando<TSource;TResult>' SqlLinq.SyntaxTree.Clauses.GroupByConstructor<TSource;TResult>' SqlLinq.SyntaxTree.Clauses.GroupByMemberInit<TSource;TResult>,SqlLinq.SyntaxTree.Clauses.GroupByClause
+SqlLinq.SyntaxTree.Clauses,GroupByCall<TSource;TResult>,0,3,2,0,1,27,3,0,0,-1,0,6,,SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Clauses.GroupByCallFactory' SqlLinq.SyntaxTree.Clauses.GroupByIntoDictionary<TSource;TResult>' SqlLinq.SyntaxTree.Clauses.GroupByExpando<TSource;TResult>' SqlLinq.SyntaxTree.Clauses.GroupByConstructor<TSource;TResult>' SqlLinq.SyntaxTree.Clauses.GroupByMemberInit<TSource;TResult>
+SqlLinq.SyntaxTree.Clauses,GroupByIntoDictionary<TSource;TResult>,0,2,0,0,2,23,4,0,0,-1,1,1,SqlLinq.SyntaxTree.Clauses.GroupByCall<TSource;TResult>,SqlLinq.SyntaxTree.Clauses.GroupByCallFactory
+SqlLinq.SyntaxTree.Clauses,GroupByExpando<TSource;TResult>,0,2,0,0,2,21,4,0,0,-1,1,1,SqlLinq.SyntaxTree.Clauses.GroupByCall<TSource;TResult>,SqlLinq.SyntaxTree.Clauses.GroupByCallFactory
+SqlLinq.SyntaxTree.Clauses,GroupByConstructor<TSource;TResult>,0,2,0,0,2,18,3,0,0,-1,1,1,SqlLinq.SyntaxTree.Clauses.GroupByCall<TSource;TResult>,SqlLinq.SyntaxTree.Clauses.GroupByCallFactory
+SqlLinq.SyntaxTree.Clauses,GroupByMemberInit<TSource;TResult>,0,2,0,0,2,24,4,0,0,-1,1,1,SqlLinq.SyntaxTree.Clauses.GroupByCall<TSource;TResult>,SqlLinq.SyntaxTree.Clauses.GroupByCallFactory
+SqlLinq.SyntaxTree.Clauses,FromClause,0,1,2,0,1,21,1,0,2,-1,3,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Joins.Join,SqlLinq.SyntaxTree.SelectNode
+SqlLinq.SyntaxTree.Clauses,GroupByClause,0,4,1,0,2,71,12,0,2,-1,8,1,SqlLinq.SqlException' SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Clauses.GroupByCallFactory' SqlLinq.SyntaxTree.Clauses.GroupByCall<TSource;TResult>' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Aggregates.AggregateNode,SqlLinq.SyntaxTree.SelectNode
+SqlLinq.SyntaxTree.Clauses,HavingClause,0,2,0,0,1,10,2,0,1,-1,2,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Clauses.WhereClause,SqlLinq.SyntaxTree.SelectNode
+SqlLinq.SyntaxTree.Clauses,OrderByClause,0,2,1,0,2,28,3,0,2,-1,3,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Clauses.OrderByItem,SqlLinq.SyntaxTree.SelectNode
+SqlLinq.SyntaxTree.Clauses,OrderByItem,1,5,2,0,3,47,5,1,2,0.4,4,3,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.NonTerminalNode,SqlLinq.SyntaxTree.Clauses.OrderByValueItem' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.OrderByClause
+SqlLinq.SyntaxTree.Clauses,OrderByValueItem,0,2,0,0,1,13,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Clauses.OrderByItem,
+SqlLinq.SyntaxTree.Clauses,WhereClause,0,3,0,0,2,26,5,1,2,-1,6,2,SqlLinq.SqlException' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.Expressions.ExpressionNode' SqlLinq.SyntaxTree.Aggregates.AggregateNode,SqlLinq.SyntaxTree.Clauses.HavingClause' SqlLinq.SyntaxTree.SelectNode
+SqlLinq.SyntaxTree.Expressions,InListNode,0,2,0,0,1,11,2,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,
+SqlLinq.SyntaxTree.Expressions,TupleSelectNode,0,2,0,0,1,17,2,0,1,-1,5,0,SqlLinq.ScalarQuery<TSource;TResult>' SqlLinq.ICompile' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Expressions.ExpressionNode,
+SqlLinq.SyntaxTree.Expressions,ValueListNode,0,2,0,0,1,12,2,0,1,-1,3,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
+SqlLinq.SyntaxTree.Expressions,BinaryExpressionNode,0,4,0,0,0,24,6,7,1,-1,1,7,SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Expressions.Arithmetic.DivideNode' SqlLinq.SyntaxTree.Expressions.Arithmetic.MinusNode' SqlLinq.SyntaxTree.Expressions.Arithmetic.MultiplyNode' SqlLinq.SyntaxTree.Expressions.Arithmetic.PlusNode' SqlLinq.SyntaxTree.Expressions.Predicates.Boolean.OrNode' SqlLinq.SyntaxTree.Expressions.Predicates.Boolean.AndNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.PredicateExpressionNode
+SqlLinq.SyntaxTree.Expressions,ExpressionNode,0,4,0,0,1,27,5,14,2,-1,1,15,SqlLinq.SyntaxTree.NonTerminalNode,SqlLinq.SyntaxTree.Expressions.TupleSelectNode' SqlLinq.SyntaxTree.Expressions.ValueListNode' SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode' SqlLinq.SyntaxTree.Expressions.InListNode' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode' SqlLinq.SyntaxTree.Expressions.Predicates.Boolean.NotNode' SqlLinq.SyntaxTree.Expressions.Arithmetic.NegateNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.BetweenNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.InNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.IsNullNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LikeNode' SqlLinq.SyntaxTree.Expressions.TupleNode' SqlLinq.SyntaxTree.Clauses.WhereClause' SqlLinq.SyntaxTree.Expressions.Functions.FunctionNode
+SqlLinq.SyntaxTree.Expressions,NodeWithId,1,2,1,0,1,22,2,0,3,1,4,4,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Joins.Join' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.Aggregates.AggregateNode
+SqlLinq.SyntaxTree.Expressions,TupleNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,PredicateExpressionNode,0,1,0,0,0,7,1,6,2,-1,1,6,SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.EqualityNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.InequalityNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LessThanOrEqualNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.GreaterThanOrEqualNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LessThanNode' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.GreaterThanNode
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,BetweenNode,0,3,0,0,1,26,6,1,3,-1,2,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.NotBetweenNode
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,EqualityNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.PredicateExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,GreaterThanNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.PredicateExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,GreaterThanOrEqualNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.PredicateExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,InequalityNode,0,2,0,0,1,12,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.PredicateExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,InNode,0,3,0,0,1,21,4,1,3,-1,2,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.NotInNode
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,IsNotNullNode,0,2,0,0,1,11,2,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.IsNullNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,IsNullNode,0,2,0,0,1,11,2,1,3,-1,2,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.IsNotNullNode
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,LessThanNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.PredicateExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,LessThanOrEqualNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.PredicateExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,LikeNode,0,5,0,0,2,46,7,1,3,-1,2,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.NotLikeNode
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,NotBetweenNode,0,2,0,0,1,11,2,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.BetweenNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,NotInNode,0,2,0,0,1,11,2,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.InNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Comparison,NotLikeNode,0,2,0,0,1,11,2,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Predicates.Comparison.LikeNode,
+SqlLinq.SyntaxTree.Aggregates,AggregateNode,0,6,5,0,0,72,9,6,2,-1,5,10,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.ColumnSource' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Expressions.Functions.Value,SqlLinq.SyntaxTree.Aggregates.CountNode' SqlLinq.SyntaxTree.Aggregates.MinNode' SqlLinq.SyntaxTree.Aggregates.MaxNode' SqlLinq.SyntaxTree.Aggregates.AverageNode' SqlLinq.SyntaxTree.Aggregates.SumNode' SqlLinq.SyntaxTree.Aggregates.VarianceNode' SqlLinq.SyntaxTree.Clauses.GroupByClause' SqlLinq.SyntaxTree.Columns' SqlLinq.SyntaxTree.SelectNode' SqlLinq.SyntaxTree.Clauses.WhereClause
+SqlLinq.SyntaxTree.Aggregates,AverageNode,0,1,0,0,1,8,1,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.AggregateNode,
+SqlLinq.SyntaxTree.Aggregates,CountAllNode,0,3,0,0,3,16,3,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.CountNode,
+SqlLinq.SyntaxTree.Aggregates,CountNode,0,3,1,0,0,25,3,3,3,-1,2,3,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.Aggregates.AggregateNode,SqlLinq.SyntaxTree.Aggregates.CountAllNode' SqlLinq.SyntaxTree.Aggregates.CountStarNode' SqlLinq.SyntaxTree.Aggregates.CountDistinctNode
+SqlLinq.SyntaxTree.Aggregates,CountStarNode,0,2,2,0,1,26,2,0,4,-1,3,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.Aggregates.CountNode,
+SqlLinq.SyntaxTree.Aggregates,CountDistinctNode,0,3,0,0,3,19,3,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.CountNode,
+SqlLinq.SyntaxTree.Aggregates,MaxNode,0,1,0,0,1,8,1,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.AggregateNode,
+SqlLinq.SyntaxTree.Aggregates,MinNode,0,1,0,0,1,8,1,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.AggregateNode,
+SqlLinq.SyntaxTree.Aggregates,StandardDeviationNode,0,1,0,0,1,8,1,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.VarianceNode,
+SqlLinq.SyntaxTree.Aggregates,StandardDeviationPNode,0,1,0,0,1,8,1,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.VarianceNode,
+SqlLinq.SyntaxTree.Aggregates,SumNode,0,1,0,0,1,8,1,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.AggregateNode,
+SqlLinq.SyntaxTree.Aggregates,VarianceNode,0,1,1,0,1,15,1,3,3,-1,2,3,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.AggregateNode,SqlLinq.SyntaxTree.Aggregates.StandardDeviationNode' SqlLinq.SyntaxTree.Aggregates.VariancePNode' SqlLinq.SyntaxTree.Aggregates.StandardDeviationPNode
+SqlLinq.SyntaxTree.Aggregates,VariancePNode,0,1,0,0,1,8,1,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Aggregates.VarianceNode,
+SqlLinq.SyntaxTree.Expressions.Functions,FunctionNode,0,1,0,0,0,6,1,1,3,-1,1,1,SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Expressions.Functions.Value
+SqlLinq.SyntaxTree.Expressions.Functions,Value,0,2,0,0,1,11,2,0,4,-1,2,1,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Functions.FunctionNode,SqlLinq.SyntaxTree.Aggregates.AggregateNode
+SqlLinq.SyntaxTree.Joins,Inner,0,1,0,0,1,8,1,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Joins.Join,
+SqlLinq.SyntaxTree.Joins,Join,2,3,5,0,0,73,5,3,2,0.67,6,4,SqlLinq.ExpressionFactory' SqlLinq.SyntaxTree.Identifier' SqlLinq.SyntaxTree.NonTerminalNode' SqlLinq.SyntaxTree.TerminalNode' SqlLinq.SyntaxTree.Expressions.NodeWithId' SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>,SqlLinq.SyntaxTree.Joins.Right' SqlLinq.SyntaxTree.Joins.Left' SqlLinq.SyntaxTree.Joins.Inner' SqlLinq.SyntaxTree.Clauses.FromClause
+SqlLinq.SyntaxTree.Joins,IJoinEntry,0,1,0,0,0,5,1,2,0,-1,0,3,,SqlLinq.SyntaxTree.Joins.ObjectJoinEntry' SqlLinq.SyntaxTree.Joins.DictionaryJoinEntry' SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>
+SqlLinq.SyntaxTree.Joins,ObjectJoinEntry,1,2,0,0,2,21,2,0,1,0,1,1,SqlLinq.SyntaxTree.Joins.IJoinEntry,SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>
+SqlLinq.SyntaxTree.Joins,DictionaryJoinEntry,2,3,0,0,2,30,3,0,1,0,1,1,SqlLinq.SyntaxTree.Joins.IJoinEntry,SqlLinq.SyntaxTree.Joins.JoinResultSelector<TOuter;TInner>
+SqlLinq.SyntaxTree.Joins,JoinResultSelector<TOuter;TInner>,2,2,0,0,1,35,3,0,0,1,3,2,SqlLinq.SyntaxTree.Joins.IJoinEntry' SqlLinq.SyntaxTree.Joins.ObjectJoinEntry' SqlLinq.SyntaxTree.Joins.DictionaryJoinEntry,SqlLinq.SyntaxTree.Joins.Join' SqlLinq.JoinQuery<TSource;TInner;TResult>
+SqlLinq.SyntaxTree.Joins,Left,0,1,0,0,1,7,1,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Joins.Join,
+SqlLinq.SyntaxTree.Joins,Right,0,1,0,0,1,7,1,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Joins.Join,
+SqlLinq.SyntaxTree.Expressions.Literals,BooleanLiteral,0,2,0,0,1,12,2,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
+SqlLinq.SyntaxTree.Expressions.Literals,DateLiteral,0,2,0,0,1,15,3,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
+SqlLinq.SyntaxTree.Expressions.Literals,IntegerLiteral,0,2,0,0,1,14,3,0,1,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
+SqlLinq.SyntaxTree.Expressions.Literals,LiteralNode,1,4,2,0,0,31,4,6,3,1,1,7,SqlLinq.SyntaxTree.Expressions.ExpressionNode,SqlLinq.SyntaxTree.Expressions.Literals.IntegerLiteral' SqlLinq.SyntaxTree.Expressions.Literals.BooleanLiteral' SqlLinq.SyntaxTree.Expressions.Literals.NullLiteral' SqlLinq.SyntaxTree.Expressions.Literals.DateLiteral' SqlLinq.SyntaxTree.Expressions.Literals.RealLiteral' SqlLinq.SyntaxTree.Expressions.Literals.StringLiteral' SqlLinq.SyntaxTree.Expressions.ValueListNode
+SqlLinq.SyntaxTree.Expressions.Literals,NullLiteral,0,2,0,0,1,12,2,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
+SqlLinq.SyntaxTree.Expressions.Literals,RealLiteral,0,2,0,0,1,12,2,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
+SqlLinq.SyntaxTree.Expressions.Literals,StringLiteral,0,2,1,0,1,20,2,0,4,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.Literals.LiteralNode,
+SqlLinq.SyntaxTree.Expressions.Arithmetic,DivideNode,0,2,0,0,1,11,2,0,2,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Arithmetic,MinusNode,0,2,0,0,1,11,2,0,2,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Arithmetic,MultiplyNode,0,2,0,0,1,11,2,0,2,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Arithmetic,NegateNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Arithmetic,PlusNode,0,2,0,0,1,11,2,0,2,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Boolean,AndNode,0,2,0,0,1,11,2,0,2,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Boolean,NotNode,0,2,0,0,1,11,2,0,3,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.ExpressionNode,
+SqlLinq.SyntaxTree.Expressions.Predicates.Boolean,OrNode,0,2,0,0,1,11,2,0,2,-1,2,0,SqlLinq.SyntaxTree.SyntaxNodeAttribute' SqlLinq.SyntaxTree.Expressions.BinaryExpressionNode,

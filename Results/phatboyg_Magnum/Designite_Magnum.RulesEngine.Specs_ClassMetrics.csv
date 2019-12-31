@@ -2,30 +2,30 @@ Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out 
 Agenda_Specs,Agenda_Specs,0,3,0,0,3,46,3,0,0,-1,1,0,Magnum.RulesEngine.Specs.Model.Customer,
 BetaMemory_Specs,BetaMemory_Specs,5,3,0,0,3,53,3,0,0,0,1,0,Magnum.RulesEngine.Specs.Model.Customer,
 Magnum.RulesEngine.Specs.Conditions,CustomerIsPreferred,0,1,0,0,1,8,1,0,0,-1,1,0,Magnum.RulesEngine.Specs.Model.Customer,
-Magnum.RulesEngine.Specs.Conditions,OrderAmountIsOverLimit,0,1,0,0,1,8,1,0,0,-1,1,0,Magnum.RulesEngine.Specs.Events.OrderSubmitted,
-Magnum.RulesEngine.Specs.Consequences,LogOrderDetails,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Magnum.RulesEngine.Specs.Consequences,RequestOrderApproval,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Magnum.RulesEngine.Specs.Consequences,HoldOrderForApproval,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Magnum.RulesEngine.Specs.Conditions,OrderAmountIsOverLimit,0,1,0,0,1,8,1,0,0,-1,1,2,Magnum.RulesEngine.Specs.Events.OrderSubmitted,Magnum.RulesEngine.Specs.When_defining_a_rule_using_the_dsl' Magnum.RulesEngine.Specs.FluentRuleSyntax.When_declaring_a_rule_using_the_domain_specific_language
+Magnum.RulesEngine.Specs.Consequences,LogOrderDetails,0,1,0,0,1,8,1,0,0,-1,1,1,Magnum.RulesEngine.Specs.Events.OrderSubmitted,Magnum.RulesEngine.Specs.FluentRuleSyntax.When_declaring_a_rule_using_the_domain_specific_language
+Magnum.RulesEngine.Specs.Consequences,RequestOrderApproval,0,1,0,0,1,8,1,0,0,-1,1,1,Magnum.RulesEngine.Specs.Events.OrderSubmitted,Magnum.RulesEngine.Specs.FluentRuleSyntax.When_declaring_a_rule_using_the_domain_specific_language
+Magnum.RulesEngine.Specs.Consequences,HoldOrderForApproval,0,1,0,0,1,8,1,0,0,-1,1,1,Magnum.RulesEngine.Specs.Events.OrderSubmitted,Magnum.RulesEngine.Specs.When_defining_a_rule_using_the_dsl
 Magnum.RulesEngine.Specs,When_selecting_against_a_rich_object_model_with_collections,0,1,0,0,1,42,1,0,0,-1,2,0,Magnum.RulesEngine.Specs.Model.Order' Magnum.RulesEngine.Specs.Model.OrderLine,
-Magnum.RulesEngine.Specs,When_defining_a_rule_using_the_dsl,0,1,0,0,1,16,1,0,0,-1,0,0,,
-Magnum.RulesEngine.Specs.Events,OrderSubmitted,0,0,1,0,0,4,0,0,0,-1,0,2,,Magnum.RulesEngine.Specs.Conditions.OrderAmountIsOverLimit' Magnum.RulesEngine.Specs.ExecutionModelTest.ProcessingAnEvent_Specs
-Magnum.RulesEngine.Specs.ExecutionModelTest,Given_a_complete_order,0,1,1,0,1,29,1,1,0,-1,1,0,Magnum.SystemUtil,
-Magnum.RulesEngine.Specs.ExecutionModelTest,Engine_Specs,0,5,0,0,1,58,5,0,1,-1,2,0,Magnum.RulesEngine.Specs.Model.Order' Magnum.RulesEngine.Specs.Model.Customer,
-Magnum.RulesEngine.Specs.ExecutionModelTest,JoinTree_Specs,2,5,0,0,4,34,6,0,0,0,0,0,,
-Magnum.RulesEngine.Specs.ExecutionModelTest,xxx,0,2,0,0,2,29,3,0,0,-1,0,0,,
+Magnum.RulesEngine.Specs,When_defining_a_rule_using_the_dsl,0,1,0,0,1,16,1,0,0,-1,3,0,Magnum.RulesEngine.Specs.Conditions.OrderAmountIsOverLimit' Magnum.RulesEngine.Specs.Consequences.HoldOrderForApproval' Magnum.RulesEngine.Specs.Events.OrderSubmitted,
+Magnum.RulesEngine.Specs.Events,OrderSubmitted,0,0,1,0,0,4,0,0,0,-1,0,8,,Magnum.RulesEngine.Specs.Conditions.OrderAmountIsOverLimit' Magnum.RulesEngine.Specs.Consequences.LogOrderDetails' Magnum.RulesEngine.Specs.Consequences.RequestOrderApproval' Magnum.RulesEngine.Specs.Consequences.HoldOrderForApproval' Magnum.RulesEngine.Specs.When_defining_a_rule_using_the_dsl' Magnum.RulesEngine.Specs.FluentRuleSyntax.When_declaring_a_rule_using_the_domain_specific_language' Magnum.RulesEngine.Specs.FluentRuleSyntax.Extensions' Magnum.RulesEngine.Specs.ExecutionModelTest.ProcessingAnEvent_Specs
+Magnum.RulesEngine.Specs.ExecutionModelTest,Given_a_complete_order,0,1,1,0,1,29,1,1,0,-1,3,1,Magnum.RulesEngine.Specs.Model.Customer' Magnum.RulesEngine.Specs.Model.Order' Magnum.RulesEngine.Specs.Model.OrderLine,Magnum.RulesEngine.Specs.ExecutionModelTest.Engine_Specs
+Magnum.RulesEngine.Specs.ExecutionModelTest,Engine_Specs,0,5,0,0,1,58,5,0,1,-1,2,0,Magnum.RulesEngine.Specs.ExecutionModelTest.Given_a_complete_order' Magnum.RulesEngine.Specs.Model.Order,
+Magnum.RulesEngine.Specs.ExecutionModelTest,JoinTree_Specs,2,5,0,0,4,34,6,0,0,0,1,0,Magnum.RulesEngine.Specs.Model.Customer,
+Magnum.RulesEngine.Specs.ExecutionModelTest,xxx,0,2,0,0,2,29,4,0,0,-1,0,0,,
 Magnum.RulesEngine.Specs.ExecutionModelTest,ProcessingAnEvent_Specs,4,4,0,0,2,51,4,0,0,0,1,0,Magnum.RulesEngine.Specs.Events.OrderSubmitted,
-Magnum.RulesEngine.Specs.ExecutionModelTest,Loading_up_a_single_node,0,1,0,0,1,13,1,0,0,-1,1,0,Magnum.RulesEngine.Specs.Model.Customer,
-Magnum.RulesEngine.Specs.ExecutionModelTest,ANode<T>,2,2,0,0,2,23,2,0,0,0,0,0,,
-Magnum.RulesEngine.Specs.ExecutionModelTest,AMemory<T>,1,2,0,0,2,12,2,0,0,0,0,0,,
+Magnum.RulesEngine.Specs.ExecutionModelTest,Loading_up_a_single_node,0,1,0,0,1,13,1,0,0,-1,3,0,Magnum.RulesEngine.Specs.ExecutionModelTest.ANode<T>' Magnum.RulesEngine.Specs.ExecutionModelTest.AMemory<T>' Magnum.RulesEngine.Specs.Model.Customer,
+Magnum.RulesEngine.Specs.ExecutionModelTest,ANode<T>,2,2,0,0,2,23,2,0,0,0,1,1,Magnum.RulesEngine.Specs.ExecutionModelTest.AMemory<T>,Magnum.RulesEngine.Specs.ExecutionModelTest.Loading_up_a_single_node
+Magnum.RulesEngine.Specs.ExecutionModelTest,AMemory<T>,1,2,0,0,2,12,2,0,0,0,0,2,,Magnum.RulesEngine.Specs.ExecutionModelTest.Loading_up_a_single_node' Magnum.RulesEngine.Specs.ExecutionModelTest.ANode<T>
 Expression_Specs,Expression_Specs,0,1,0,0,1,15,1,0,0,-1,0,0,,
-Magnum.RulesEngine.Specs.FluentRuleSyntax,When_declaring_a_rule_using_the_domain_specific_language,1,4,0,0,4,56,4,0,0,0.5,0,0,,
-Magnum.RulesEngine.Specs.FluentRuleSyntax,Extensions,0,2,0,0,2,9,2,0,0,-1,0,0,,
-Magnum.RulesEngine.Specs.Graphing,Graphing_an_existing_engine,1,7,0,0,2,62,7,0,0,0,2,0,Magnum.RulesEngine.Specs.Model.Order' Magnum.RulesEngine.Specs.Model.Customer,
-Magnum.RulesEngine.Specs.Graphing,xxx,0,5,0,0,5,18,5,0,0,-1,0,0,,
-Magnum.RulesEngine.Specs.Graphing,Generating_a_graph_from_a_pipeline,0,1,0,0,1,20,1,0,0,-1,6,0,Magnum.Pipeline.Segments.MessageConsumerSegment' Magnum.Pipeline.Segments.EndSegment' Magnum.Pipeline.Segments.RecipientListSegment' Magnum.Pipeline.Segments.FilterSegment' Magnum.Pipeline.Pipe' Magnum.Pipeline.Segments.PipeSegment,
-Magnum.RulesEngine.Specs.Graphing,SomethingHappenedEvent,0,0,0,0,0,3,0,0,0,-1,0,0,,
-Magnum.RulesEngine.Specs.Graphing,StateMachineGraph_Specs,0,1,0,0,1,12,1,0,0,-1,2,0,Magnum.Specs.StateMachine.OrderStateMachine' Magnum.Visualizers.StateMachine.StateMachineGraphGenerator,
-Magnum.RulesEngine.Specs.Model,Customer,0,0,3,0,0,6,0,0,0,-1,0,6,,Agenda_Specs.Agenda_Specs' BetaMemory_Specs.BetaMemory_Specs' Magnum.RulesEngine.Specs.Conditions.CustomerIsPreferred' Magnum.RulesEngine.Specs.ExecutionModelTest.Engine_Specs' Magnum.RulesEngine.Specs.ExecutionModelTest.Loading_up_a_single_node' Magnum.RulesEngine.Specs.Graphing.Graphing_an_existing_engine
-Magnum.RulesEngine.Specs.Model,Order,0,0,3,0,0,6,0,0,0,-1,0,3,,Magnum.RulesEngine.Specs.When_selecting_against_a_rich_object_model_with_collections' Magnum.RulesEngine.Specs.ExecutionModelTest.Engine_Specs' Magnum.RulesEngine.Specs.Graphing.Graphing_an_existing_engine
-Magnum.RulesEngine.Specs.Model,OrderLine,0,0,1,0,0,4,0,0,0,-1,0,1,,Magnum.RulesEngine.Specs.When_selecting_against_a_rich_object_model_with_collections
-Magnum.RulesEngine.Specs.Commands,SubmitOrder,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Magnum.RulesEngine.Specs.FluentRuleSyntax,When_declaring_a_rule_using_the_domain_specific_language,1,4,0,0,4,56,4,0,0,0.5,4,0,Magnum.RulesEngine.Specs.Conditions.OrderAmountIsOverLimit' Magnum.RulesEngine.Specs.Consequences.LogOrderDetails' Magnum.RulesEngine.Specs.Consequences.RequestOrderApproval' Magnum.RulesEngine.Specs.Events.OrderSubmitted,
+Magnum.RulesEngine.Specs.FluentRuleSyntax,Extensions,0,2,0,0,2,9,2,0,0,-1,1,0,Magnum.RulesEngine.Specs.Events.OrderSubmitted,
+Magnum.RulesEngine.Specs.Graphing,Graphing_an_existing_engine,1,7,0,0,2,62,7,0,0,0,1,0,Magnum.RulesEngine.Specs.Model.Order,
+Magnum.RulesEngine.Specs.Graphing,xxx,0,5,0,0,5,18,5,0,0,-1,1,0,Magnum.RulesEngine.Specs.Model.Order,
+Magnum.RulesEngine.Specs.Graphing,Generating_a_graph_from_a_pipeline,0,1,0,0,1,20,1,0,0,-1,1,0,Magnum.RulesEngine.Specs.Graphing.SomethingHappenedEvent,
+Magnum.RulesEngine.Specs.Graphing,SomethingHappenedEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Magnum.RulesEngine.Specs.Graphing.Generating_a_graph_from_a_pipeline
+Magnum.RulesEngine.Specs.Graphing,StateMachineGraph_Specs,0,1,0,0,1,12,1,0,0,-1,0,0,,
+Magnum.RulesEngine.Specs.Model,Customer,0,0,3,0,0,6,0,0,0,-1,0,8,,Magnum.RulesEngine.Specs.Commands.SubmitOrder' Magnum.RulesEngine.Specs.Conditions.CustomerIsPreferred' Magnum.RulesEngine.Specs.Model.Order' Magnum.RulesEngine.Specs.ExecutionModelTest.JoinTree_Specs' Magnum.RulesEngine.Specs.ExecutionModelTest.Loading_up_a_single_node' Magnum.RulesEngine.Specs.ExecutionModelTest.Given_a_complete_order' Agenda_Specs.Agenda_Specs' BetaMemory_Specs.BetaMemory_Specs
+Magnum.RulesEngine.Specs.Model,Order,0,0,3,0,0,6,0,0,0,-1,2,5,Magnum.RulesEngine.Specs.Model.Customer' Magnum.RulesEngine.Specs.Model.OrderLine,Magnum.RulesEngine.Specs.When_selecting_against_a_rich_object_model_with_collections' Magnum.RulesEngine.Specs.ExecutionModelTest.Given_a_complete_order' Magnum.RulesEngine.Specs.ExecutionModelTest.Engine_Specs' Magnum.RulesEngine.Specs.Graphing.Graphing_an_existing_engine' Magnum.RulesEngine.Specs.Graphing.xxx
+Magnum.RulesEngine.Specs.Model,OrderLine,0,0,1,0,0,4,0,0,0,-1,0,3,,Magnum.RulesEngine.Specs.Model.Order' Magnum.RulesEngine.Specs.ExecutionModelTest.Given_a_complete_order' Magnum.RulesEngine.Specs.When_selecting_against_a_rich_object_model_with_collections
+Magnum.RulesEngine.Specs.Commands,SubmitOrder,0,0,2,0,0,5,0,0,0,-1,1,0,Magnum.RulesEngine.Specs.Model.Customer,

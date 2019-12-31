@@ -1,0 +1,25 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NGettext,Catalog,2,21,3,1,21,307,27,0,1,0.43,5,2,NGettext.ICatalog' NGettext.Loaders.ILoader' NGettext.Loaders.MoLoader' NGettext.Plural.DefaultPluralRuleGenerator' NGettext.Plural.IPluralRule,NGettext.Loaders.ILoader' NGettext.Loaders.MoLoader
+NGettext,ICatalog,0,8,0,0,0,76,8,1,0,-1,0,1,,NGettext.Catalog
+NGettext.Loaders,BigEndianBinaryReader,1,11,0,0,10,194,17,0,0,0.27,0,1,,NGettext.Loaders.MoFileParser
+NGettext.Loaders,CatalogLoadingException,0,3,0,0,3,6,3,0,0,-1,0,1,,NGettext.Loaders.MoFileParser
+NGettext.Loaders,ContentType,2,3,5,0,2,53,7,0,0,0,0,1,,NGettext.Loaders.MoFileParser
+NGettext.Loaders,ILoader,0,1,0,0,0,8,1,1,0,-1,1,2,NGettext.Catalog,NGettext.Loaders.MoLoader' NGettext.Catalog
+NGettext.Loaders,MoAstPluralLoader,0,6,0,0,6,72,6,0,1,-1,3,0,NGettext.Loaders.MoFileParser' NGettext.Loaders.MoLoader' NGettext.Plural.AstPluralRuleGenerator,
+NGettext.Loaders,MoFile,0,1,5,0,1,37,1,0,0,-1,0,2,,NGettext.Loaders.MoLoader' NGettext.Loaders.MoFileParser
+NGettext.Loaders,MoFileParser,2,5,2,0,3,175,18,0,0,0.6,6,2,NGettext.Loaders.BigEndianBinaryReader' NGettext.Loaders.CatalogLoadingException' NGettext.Loaders.ContentType' NGettext.Loaders.MoFile' NGettext.Loaders.StringOffsetTable' NGettext.Loaders.ReadOnlyStreamWrapper,NGettext.Loaders.MoAstPluralLoader' NGettext.Loaders.MoLoader
+NGettext.Loaders,StringOffsetTable,2,0,0,2,0,5,0,0,0,-1,0,1,,NGettext.Loaders.MoFileParser
+NGettext.Loaders,MoLoader,6,19,2,0,13,301,37,2,1,0.53,7,2,NGettext.Catalog' NGettext.Loaders.ILoader' NGettext.Loaders.MoFile' NGettext.Loaders.MoFileParser' NGettext.Plural.DefaultPluralRuleGenerator' NGettext.Plural.IPluralRuleGenerator' NGettext.Plural.IPluralRuleTextParser,NGettext.Loaders.MoAstPluralLoader' NGettext.Catalog
+NGettext.Loaders,ReadOnlyStreamWrapper,1,15,6,0,13,227,19,0,0,0.53,0,1,,NGettext.Loaders.MoFileParser
+NGettext.Plural,AstPluralRule,0,3,2,0,2,97,22,0,1,-1,3,1,NGettext.Plural.IPluralRule' NGettext.Plural.Ast.Token' NGettext.Plural.Ast.TokenType,NGettext.Plural.AstPluralRuleGenerator
+NGettext.Plural,AstPluralRuleGenerator,2,8,2,0,8,107,11,1,1,0.5,5,1,NGettext.Plural.AstPluralRule' NGettext.Plural.DefaultPluralRuleGenerator' NGettext.Plural.IPluralRule' NGettext.Plural.IPluralRuleTextParser' NGettext.Plural.Ast.AstTokenParser,NGettext.Loaders.MoAstPluralLoader
+NGettext.Plural,DefaultPluralRuleGenerator,0,1,0,0,1,211,21,1,1,-1,3,3,NGettext.Plural.IPluralRule' NGettext.Plural.IPluralRuleGenerator' NGettext.Plural.PluralRule,NGettext.Plural.AstPluralRuleGenerator' NGettext.Catalog' NGettext.Loaders.MoLoader
+NGettext.Plural,IPluralRule,0,1,1,0,0,13,1,2,0,-1,0,6,,NGettext.Plural.AstPluralRule' NGettext.Plural.AstPluralRuleGenerator' NGettext.Plural.DefaultPluralRuleGenerator' NGettext.Plural.IPluralRuleGenerator' NGettext.Plural.PluralRule' NGettext.Catalog
+NGettext.Plural,IPluralRuleGenerator,0,1,0,0,0,9,1,2,0,-1,1,3,NGettext.Plural.IPluralRule,NGettext.Plural.IPluralRuleTextParser' NGettext.Plural.DefaultPluralRuleGenerator' NGettext.Loaders.MoLoader
+NGettext.Plural,IPluralRuleTextParser,0,1,0,0,0,8,1,1,1,-1,1,2,NGettext.Plural.IPluralRuleGenerator,NGettext.Plural.AstPluralRuleGenerator' NGettext.Loaders.MoLoader
+NGettext.Plural,PluralRule,2,2,1,1,2,43,4,1,1,0,1,1,NGettext.Plural.IPluralRule,NGettext.Plural.DefaultPluralRuleGenerator
+NGettext.Plural.Ast,AstTokenParser,4,11,0,0,2,250,39,0,0,0,4,1,NGettext.Plural.Ast.ParserException' NGettext.Plural.Ast.Token' NGettext.Plural.Ast.TokenDefinition' NGettext.Plural.Ast.TokenType,NGettext.Plural.AstPluralRuleGenerator
+NGettext.Plural.Ast,ParserException,0,3,0,0,3,6,3,0,0,-1,0,1,,NGettext.Plural.Ast.AstTokenParser
+NGettext.Plural.Ast,Token,2,1,2,2,1,26,1,0,0,0,1,3,NGettext.Plural.Ast.TokenType,NGettext.Plural.AstPluralRule' NGettext.Plural.Ast.TokenDefinition' NGettext.Plural.Ast.AstTokenParser
+NGettext.Plural.Ast,TokenDefinition,2,5,2,0,5,72,9,0,0,0.6,2,1,NGettext.Plural.Ast.Token' NGettext.Plural.Ast.TokenType,NGettext.Plural.Ast.AstTokenParser
+NGettext.Plural.Ast,TokenType,0,0,0,0,0,84,0,0,0,-1,0,4,,NGettext.Plural.Ast.Token' NGettext.Plural.Ast.TokenDefinition' NGettext.Plural.Ast.AstTokenParser' NGettext.Plural.AstPluralRule

@@ -1,37 +1,37 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SILUBS.ScriptureChecks,ChapterVerseCheck,19,14,6,0,4,706,61,0,0,0.14,4,0,SILUBS.ScriptureChecks.ChapterToken' SILUBS.ScriptureChecks.VerseToken' SILUBS.ScriptureChecks.VersePart' SILUBS.ScriptureChecks.ParseVerseResult,
+SILUBS.ScriptureChecks,ChapterVerseCheck,19,14,6,0,4,706,79,0,0,0.14,4,0,SILUBS.ScriptureChecks.ParseVerseResult' SILUBS.ScriptureChecks.VersePart' SILUBS.ScriptureChecks.ChapterToken' SILUBS.ScriptureChecks.VerseToken,
 SILUBS.ScriptureChecks,ParseVerseResult,0,0,0,0,0,8,0,0,0,-1,0,1,,SILUBS.ScriptureChecks.ChapterVerseCheck
 SILUBS.ScriptureChecks,VersePart,0,0,0,0,0,6,0,0,0,-1,0,1,,SILUBS.ScriptureChecks.ChapterVerseCheck
-SILUBS.ScriptureChecks,ChapterToken,5,2,3,0,0,78,5,0,0,0,0,1,,SILUBS.ScriptureChecks.ChapterVerseCheck
-SILUBS.ScriptureChecks,VerseToken,3,3,4,0,0,74,4,0,0,0.67,0,1,,SILUBS.ScriptureChecks.ChapterVerseCheck
-SILUBS.ScriptureChecks,CharactersCheck,10,11,8,0,6,345,34,0,0,0.18,2,0,SILUBS.ScriptureChecks.TextInventoryItem' SILUBS.ScriptureChecks.TextInventory,
-SILUBS.ScriptureChecks,MatchedPairsCheck,7,5,8,0,4,195,12,0,0,0,2,0,SILUBS.ScriptureChecks.StyleCategorizer' SILUBS.ScriptureChecks.ProcessMatchedPairTokens,
+SILUBS.ScriptureChecks,ChapterToken,5,2,3,0,0,78,5,0,0,0,1,1,SILUBS.ScriptureChecks.VerseToken,SILUBS.ScriptureChecks.ChapterVerseCheck
+SILUBS.ScriptureChecks,VerseToken,3,3,4,0,0,74,4,0,0,0.67,0,2,,SILUBS.ScriptureChecks.ChapterVerseCheck' SILUBS.ScriptureChecks.ChapterToken
+SILUBS.ScriptureChecks,CharactersCheck,10,11,8,0,6,345,36,0,0,0.18,1,0,SILUBS.ScriptureChecks.TextInventory,
+SILUBS.ScriptureChecks,MatchedPairsCheck,7,5,8,0,4,195,12,0,0,0,2,0,SILUBS.ScriptureChecks.ProcessMatchedPairTokens' SILUBS.ScriptureChecks.StyleCategorizer,
 SILUBS.ScriptureChecks,ProcessMatchedPairTokens,4,7,1,0,3,153,19,0,0,0,1,1,SILUBS.ScriptureChecks.StyleCategorizer,SILUBS.ScriptureChecks.MatchedPairsCheck
 SILUBS.ScriptureChecks,StyleCategorizer,2,3,0,0,3,35,3,0,0,0,0,2,,SILUBS.ScriptureChecks.MatchedPairsCheck' SILUBS.ScriptureChecks.ProcessMatchedPairTokens
-SILUBS.ScriptureChecks,MixedCapitalizationCheck,8,5,8,0,4,185,11,0,0,0,1,0,SILUBS.ScriptureChecks.ProcessMixedCapitalization,
+SILUBS.ScriptureChecks,MixedCapitalizationCheck,8,5,8,0,4,185,10,0,0,0,1,0,SILUBS.ScriptureChecks.ProcessMixedCapitalization,
 SILUBS.ScriptureChecks,AWord,6,4,2,0,2,101,12,0,0,0,0,1,,SILUBS.ScriptureChecks.ProcessMixedCapitalization
 SILUBS.ScriptureChecks,ProcessMixedCapitalization,5,3,0,0,2,66,10,0,0,0,1,1,SILUBS.ScriptureChecks.AWord,SILUBS.ScriptureChecks.MixedCapitalizationCheck
 SILUBS.ScriptureChecks,PunctuationTokenType,0,0,0,0,0,1,0,0,0,-1,0,2,,SILUBS.ScriptureChecks.PunctuationToken' SILUBS.ScriptureChecks.ProcessPunctationTokens
 SILUBS.ScriptureChecks,CheckingLevel,0,0,0,0,0,1,0,0,0,-1,0,2,,SILUBS.ScriptureChecks.PunctuationCheck' SILUBS.ScriptureChecks.ProcessPunctationTokens
-SILUBS.ScriptureChecks,PunctuationCheck,10,5,8,0,4,250,17,0,0,0,3,1,SILUBS.ScriptureChecks.CheckingLevel' SILUBS.ScriptureChecks.QuotationMarkCategorizer' SILUBS.ScriptureChecks.ProcessPunctationTokens,SILUBS.ScriptureChecks.PunctuationToken
-SILUBS.ScriptureChecks,PunctuationToken,5,3,1,5,3,76,4,0,0,0.67,2,1,SILUBS.ScriptureChecks.PunctuationTokenType' SILUBS.ScriptureChecks.PunctuationCheck,SILUBS.ScriptureChecks.ProcessPunctationTokens
-SILUBS.ScriptureChecks,ProcessPunctationTokens,6,11,1,0,4,382,42,0,0,0,4,1,SILUBS.ScriptureChecks.QuotationMarkCategorizer' SILUBS.ScriptureChecks.CheckingLevel' SILUBS.ScriptureChecks.PunctuationToken' SILUBS.ScriptureChecks.PunctuationTokenType,SILUBS.ScriptureChecks.PunctuationCheck
-SILUBS.ScriptureChecks,QuotationCheck,8,5,8,0,4,190,10,0,0,0,3,0,SILUBS.ScriptureChecks.QuotationMarkCategorizer' SILUBS.ScriptureChecks.QTokenProcessor' SILUBS.ScriptureChecks.VerseTextToken,
-SILUBS.ScriptureChecks,QTokenProcessor,12,13,0,0,0,453,46,0,0,0,6,1,SILUBS.ScriptureChecks.QuotationMarkCategorizer' SILUBS.ScriptureChecks.ParaStartToken' SILUBS.ScriptureChecks.QuotationMarkToken' SILUBS.ScriptureChecks.VerseTextToken' SILUBS.ScriptureChecks.OpenQuotes' SILUBS.ScriptureChecks.QToken,SILUBS.ScriptureChecks.QuotationCheck
+SILUBS.ScriptureChecks,PunctuationCheck,10,5,8,0,4,250,19,0,0,0,3,1,SILUBS.ScriptureChecks.CheckingLevel' SILUBS.ScriptureChecks.ProcessPunctationTokens' SILUBS.ScriptureChecks.QuotationMarkCategorizer,SILUBS.ScriptureChecks.PunctuationToken
+SILUBS.ScriptureChecks,PunctuationToken,5,3,1,5,3,76,5,0,0,0.67,2,1,SILUBS.ScriptureChecks.PunctuationTokenType' SILUBS.ScriptureChecks.PunctuationCheck,SILUBS.ScriptureChecks.ProcessPunctationTokens
+SILUBS.ScriptureChecks,ProcessPunctationTokens,6,11,1,0,4,382,47,0,0,0,4,1,SILUBS.ScriptureChecks.PunctuationTokenType' SILUBS.ScriptureChecks.CheckingLevel' SILUBS.ScriptureChecks.PunctuationToken' SILUBS.ScriptureChecks.QuotationMarkCategorizer,SILUBS.ScriptureChecks.PunctuationCheck
+SILUBS.ScriptureChecks,QuotationCheck,8,5,8,0,4,190,11,0,0,0,3,0,SILUBS.ScriptureChecks.QTokenProcessor' SILUBS.ScriptureChecks.QuotationMarkCategorizer' SILUBS.ScriptureChecks.VerseTextToken,
+SILUBS.ScriptureChecks,QTokenProcessor,12,13,0,0,0,453,66,0,0,0,6,1,SILUBS.ScriptureChecks.QuotationMarkCategorizer' SILUBS.ScriptureChecks.OpenQuotes' SILUBS.ScriptureChecks.QToken' SILUBS.ScriptureChecks.QuotationMarkToken' SILUBS.ScriptureChecks.ParaStartToken' SILUBS.ScriptureChecks.VerseTextToken,SILUBS.ScriptureChecks.QuotationCheck
 SILUBS.ScriptureChecks,QuotationMarkCategorizer,3,12,4,1,0,244,34,0,0,0,0,5,,SILUBS.ScriptureChecks.PunctuationCheck' SILUBS.ScriptureChecks.ProcessPunctationTokens' SILUBS.ScriptureChecks.QuotationCheck' SILUBS.ScriptureChecks.QTokenProcessor' SILUBS.ScriptureChecks.QuotationMarkToken
 SILUBS.ScriptureChecks,OpenQuotes,3,0,0,0,0,15,0,0,0,-1,1,1,SILUBS.ScriptureChecks.QuotationMarkToken,SILUBS.ScriptureChecks.QTokenProcessor
-SILUBS.ScriptureChecks,QToken,1,1,0,0,1,18,2,2,0,0,0,1,,SILUBS.ScriptureChecks.QTokenProcessor
-SILUBS.ScriptureChecks,QuotationMarkToken,3,2,3,0,1,57,2,0,1,0,1,2,SILUBS.ScriptureChecks.QuotationMarkCategorizer,SILUBS.ScriptureChecks.QTokenProcessor' SILUBS.ScriptureChecks.OpenQuotes
-SILUBS.ScriptureChecks,ParaStartToken,1,2,0,0,1,23,2,0,1,0,0,1,,SILUBS.ScriptureChecks.QTokenProcessor
-SILUBS.ScriptureChecks,RepeatedWordsCheck,6,5,8,0,4,200,15,0,0,0,1,0,SILUBS.ScriptureChecks.ProcessRepeatedWords,
-SILUBS.ScriptureChecks,ProcessRepeatedWords,4,5,0,0,3,48,11,0,0,0,0,1,,SILUBS.ScriptureChecks.RepeatedWordsCheck
-SILUBS.ScriptureChecks,TextInventoryItem,4,2,3,2,2,48,4,0,0,0,1,2,SILUBS.ScriptureChecks.ItemStatus,SILUBS.ScriptureChecks.CharactersCheck' SILUBS.ScriptureChecks.TextInventory
+SILUBS.ScriptureChecks,QToken,1,1,0,0,1,18,2,2,0,0,0,3,,SILUBS.ScriptureChecks.QTokenProcessor' SILUBS.ScriptureChecks.QuotationMarkToken' SILUBS.ScriptureChecks.ParaStartToken
+SILUBS.ScriptureChecks,QuotationMarkToken,3,2,3,0,1,57,2,0,1,0,2,2,SILUBS.ScriptureChecks.QuotationMarkCategorizer' SILUBS.ScriptureChecks.QToken,SILUBS.ScriptureChecks.QTokenProcessor' SILUBS.ScriptureChecks.OpenQuotes
+SILUBS.ScriptureChecks,ParaStartToken,1,2,0,0,1,23,2,0,1,0,1,1,SILUBS.ScriptureChecks.QToken,SILUBS.ScriptureChecks.QTokenProcessor
+SILUBS.ScriptureChecks,RepeatedWordsCheck,6,5,8,0,4,200,14,0,0,0,1,0,SILUBS.ScriptureChecks.ProcessRepeatedWords,
+SILUBS.ScriptureChecks,ProcessRepeatedWords,4,5,0,0,3,48,11,0,0,0.4,0,1,,SILUBS.ScriptureChecks.RepeatedWordsCheck
+SILUBS.ScriptureChecks,TextInventoryItem,4,2,3,2,2,48,4,0,0,0,1,1,SILUBS.ScriptureChecks.ItemStatus,SILUBS.ScriptureChecks.TextInventory
 SILUBS.ScriptureChecks,ItemStatus,0,0,0,0,0,1,0,0,0,-1,0,1,,SILUBS.ScriptureChecks.TextInventoryItem
 SILUBS.ScriptureChecks,TextInventory,0,1,0,0,1,14,2,0,0,-1,1,1,SILUBS.ScriptureChecks.TextInventoryItem,SILUBS.ScriptureChecks.CharactersCheck
-SILUBS.ScriptureChecks,CapitalizationCheck,5,7,6,0,3,199,14,0,0,0.29,4,1,SILUBS.ScriptureChecks.CapitalizationProcessor' SILUBS.ScriptureChecks.VerseTextToken' SILUBS.ScriptureChecks.CapCheckTypes' SILUBS.ScriptureChecks.StyleCapInfo,SILUBS.ScriptureChecks.CapitalizationProcessor
+SILUBS.ScriptureChecks,CapitalizationCheck,5,7,6,0,3,199,20,0,0,0.29,4,1,SILUBS.ScriptureChecks.StyleCapInfo' SILUBS.ScriptureChecks.CapCheckTypes' SILUBS.ScriptureChecks.CapitalizationProcessor' SILUBS.ScriptureChecks.VerseTextToken,SILUBS.ScriptureChecks.CapitalizationProcessor
 SILUBS.ScriptureChecks,StyleCapInfo,2,1,0,2,1,37,1,0,0,0,1,2,SILUBS.ScriptureChecks.CapCheckTypes,SILUBS.ScriptureChecks.CapitalizationCheck' SILUBS.ScriptureChecks.CapitalizationProcessor
 SILUBS.ScriptureChecks,CapCheckTypes,0,0,0,0,0,17,0,0,0,-1,0,3,,SILUBS.ScriptureChecks.CapitalizationCheck' SILUBS.ScriptureChecks.StyleCapInfo' SILUBS.ScriptureChecks.CapitalizationProcessor
-SILUBS.ScriptureChecks,CapitalizationProcessor,11,10,1,0,2,268,28,0,0,0,4,1,SILUBS.ScriptureChecks.CapitalizationCheck' SILUBS.ScriptureChecks.CapCheckTypes' SILUBS.ScriptureChecks.StyleCapInfo' SILUBS.ScriptureChecks.VerseTextToken,SILUBS.ScriptureChecks.CapitalizationCheck
-SILUBS.ScriptureChecks,VerseTextToken,2,1,11,0,1,117,1,0,0,0,0,4,,SILUBS.ScriptureChecks.QuotationCheck' SILUBS.ScriptureChecks.QTokenProcessor' SILUBS.ScriptureChecks.CapitalizationCheck' SILUBS.ScriptureChecks.CapitalizationProcessor
+SILUBS.ScriptureChecks,CapitalizationProcessor,11,10,1,0,2,268,28,0,0,0,4,1,SILUBS.ScriptureChecks.CapitalizationCheck' SILUBS.ScriptureChecks.StyleCapInfo' SILUBS.ScriptureChecks.CapCheckTypes' SILUBS.ScriptureChecks.VerseTextToken,SILUBS.ScriptureChecks.CapitalizationCheck
+SILUBS.ScriptureChecks,VerseTextToken,2,1,11,0,1,117,1,0,0,0,0,4,,SILUBS.ScriptureChecks.CapitalizationCheck' SILUBS.ScriptureChecks.CapitalizationProcessor' SILUBS.ScriptureChecks.QuotationCheck' SILUBS.ScriptureChecks.QTokenProcessor
 SILUBS.ScriptureChecks.Properties,Resources,2,1,2,0,0,36,1,0,0,0,0,0,,
 SILUBS.ScriptureChecks.Properties,Settings,1,0,1,0,0,10,0,0,0,-1,0,0,,

@@ -1,25 +1,25 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-EApp.Infrastructure.Domain,EntityBase<TIdentityKey>,4,5,2,0,3,92,11,0,1,1,2,0,EApp.Infrastructure.Domain.EntityBase' EApp.Infrastructure.Domain.PropertyChangedEventArgs,
-EApp.Infrastructure.Domain,EntityBase,0,2,0,0,2,8,2,0,1,-1,0,1,,EApp.Infrastructure.Domain.EntityBase<TIdentityKey>
+EApp.Infrastructure.Domain,EntityBase<TIdentityKey>,4,5,2,0,3,92,12,0,1,1,2,1,EApp.Infrastructure.Domain.PropertyChangedEventArgs' EApp.Infrastructure.Domain.IEntity,EApp.Infrastructure.Domain.EntityBase
+EApp.Infrastructure.Domain,EntityBase,0,2,0,0,2,8,2,0,1,-1,2,0,EApp.Infrastructure.Domain.EntityBase<TIdentityKey>' EApp.Infrastructure.Domain.IEntity,
 EApp.Infrastructure.Domain,PropertyChangedEventArgs,0,1,2,0,1,18,1,0,0,-1,0,1,,EApp.Infrastructure.Domain.EntityBase<TIdentityKey>
-EApp.Infrastructure.Domain,IAggregateRoot,0,0,0,0,0,5,0,0,1,-1,0,0,,
-EApp.Infrastructure.Domain,IEntity,0,0,1,0,0,6,0,3,0,-1,0,4,,EApp.Infrastructure.Domain.Events.DomainEvent' EApp.Infrastructure.Repository.IRepositoryContext' EApp.Infrastructure.Repository.IUnitOfWorkRepository' EApp.Infrastructure.Repository.RepositoryContext
-EApp.Infrastructure.Domain,ValueObject<TObject>,0,4,0,0,3,96,11,0,0,-1,0,0,,
-EApp.Infrastructure.Domain.Events,DomainEventAggregator,1,0,1,0,0,11,0,0,1,-1,0,0,,
-EApp.Infrastructure.Domain.Events,DomainEvent,3,1,3,0,1,31,1,0,1,0,1,0,EApp.Infrastructure.Domain.IEntity,
-EApp.Infrastructure.Domain.Events,IDomainEvent,0,0,1,0,0,7,0,1,1,-1,0,0,,
-EApp.Infrastructure.Domain.Events,IDomainEventHandler,0,0,0,0,0,4,0,0,1,-1,0,0,,
-EApp.Infrastructure.Events,ActionDelegateEventHandler<TEvent>,1,4,0,0,4,37,8,0,1,0,0,0,,
-EApp.Infrastructure.Events,EventAggregator,3,11,0,0,11,150,19,1,1,0.18,1,0,EApp.Infrastructure.Events.IEventHandler,
-EApp.Infrastructure.Events,IEventHandler,0,1,0,0,0,8,1,2,0,-1,0,2,,EApp.Infrastructure.Events.EventAggregator' EApp.Infrastructure.Events.IEventAggregator
-EApp.Infrastructure.Events,IEvent,0,0,2,0,0,11,0,1,0,-1,0,0,,
-EApp.Infrastructure.Events,IEventAggregator,0,10,0,0,0,21,10,1,0,-1,1,1,EApp.Infrastructure.Events.IEventHandler,EApp.Infrastructure.Events.Bus.EventBus
-EApp.Infrastructure.Events.Bus,EventBus,2,4,1,0,4,31,5,0,1,0.5,1,0,EApp.Infrastructure.Events.IEventAggregator,
-EApp.Infrastructure.Events.Bus,IBus,0,3,1,0,0,20,3,1,0,-1,0,0,,
-EApp.Infrastructure.Events.Bus,IEventBus,0,0,0,0,0,3,0,1,1,-1,0,0,,
-EApp.Infrastructure.Repository,IRepository,0,15,1,0,0,73,15,1,0,-1,1,0,EApp.Core.QuerySepcifications.ISpecification,
-EApp.Infrastructure.Repository,IRepositoryContext,0,3,1,0,0,7,3,1,1,-1,2,1,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Repository.IUnitOfWorkRepository,EApp.Infrastructure.Repository.Repository<TEntity>
+EApp.Infrastructure.Domain,IAggregateRoot,0,0,0,0,0,5,0,0,1,-1,1,0,EApp.Infrastructure.Domain.IEntity,
+EApp.Infrastructure.Domain,IEntity,0,0,1,0,0,6,0,3,0,-1,0,10,,EApp.Infrastructure.Domain.EntityBase<TIdentityKey>' EApp.Infrastructure.Domain.IAggregateRoot' EApp.Infrastructure.Repository.IRepository' EApp.Infrastructure.Domain.Events.IDomainEvent' EApp.Infrastructure.Repository.Repository<TEntity>' EApp.Infrastructure.Domain.EntityBase' EApp.Infrastructure.Repository.IUnitOfWorkRepository' EApp.Infrastructure.Repository.IRepositoryContext' EApp.Infrastructure.Domain.Events.DomainEvent' EApp.Infrastructure.Repository.RepositoryContext
+EApp.Infrastructure.Domain,ValueObject<TObject>,0,4,0,0,3,96,16,0,0,-1,0,0,,
+EApp.Infrastructure.Domain.Events,DomainEventAggregator,1,0,1,0,0,11,0,0,1,-1,1,0,EApp.Infrastructure.Events.EventAggregator,
+EApp.Infrastructure.Domain.Events,DomainEvent,3,1,3,0,1,31,1,0,1,0,2,0,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Domain.Events.IDomainEvent,
+EApp.Infrastructure.Domain.Events,IDomainEvent,0,0,1,0,0,7,0,1,1,-1,2,2,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Events.IEvent,EApp.Infrastructure.Domain.Events.DomainEvent' EApp.Infrastructure.Domain.Events.IDomainEventHandler
+EApp.Infrastructure.Domain.Events,IDomainEventHandler,0,0,0,0,0,4,0,0,1,-1,2,0,EApp.Infrastructure.Domain.Events.IDomainEvent' EApp.Infrastructure.Events.IEventHandler,
+EApp.Infrastructure.Events,ActionDelegateEventHandler<TEvent>,1,4,0,0,4,37,8,0,1,0.5,2,1,EApp.Infrastructure.Events.IEventHandler' EApp.Infrastructure.Events.IEvent,EApp.Infrastructure.Events.EventAggregator
+EApp.Infrastructure.Events,EventAggregator,3,11,0,0,11,150,26,1,1,0.18,4,1,EApp.Infrastructure.Events.ActionDelegateEventHandler<TEvent>' EApp.Infrastructure.Events.IEventHandler' EApp.Infrastructure.Events.IEvent' EApp.Infrastructure.Events.IEventAggregator,EApp.Infrastructure.Domain.Events.DomainEventAggregator
+EApp.Infrastructure.Events,IEventHandler,0,1,0,0,0,8,1,2,0,-1,1,4,EApp.Infrastructure.Events.IEvent,EApp.Infrastructure.Events.ActionDelegateEventHandler<TEvent>' EApp.Infrastructure.Domain.Events.IDomainEventHandler' EApp.Infrastructure.Events.IEventAggregator' EApp.Infrastructure.Events.EventAggregator
+EApp.Infrastructure.Events,IEvent,0,0,2,0,0,11,0,1,0,-1,0,7,,EApp.Infrastructure.Events.ActionDelegateEventHandler<TEvent>' EApp.Infrastructure.Events.IEventHandler' EApp.Infrastructure.Domain.Events.IDomainEvent' EApp.Infrastructure.Events.Bus.EventBus' EApp.Infrastructure.Events.Bus.IBus' EApp.Infrastructure.Events.IEventAggregator' EApp.Infrastructure.Events.EventAggregator
+EApp.Infrastructure.Events,IEventAggregator,0,10,0,0,0,21,10,1,0,-1,2,2,EApp.Infrastructure.Events.IEventHandler' EApp.Infrastructure.Events.IEvent,EApp.Infrastructure.Events.EventAggregator' EApp.Infrastructure.Events.Bus.EventBus
+EApp.Infrastructure.Events.Bus,EventBus,2,4,1,0,4,31,5,0,1,0.75,3,0,EApp.Infrastructure.Events.IEvent' EApp.Infrastructure.Events.IEventAggregator' EApp.Infrastructure.Events.Bus.IEventBus,
+EApp.Infrastructure.Events.Bus,IBus,0,3,1,0,0,20,3,1,0,-1,1,1,EApp.Infrastructure.Events.IEvent,EApp.Infrastructure.Events.Bus.IEventBus
+EApp.Infrastructure.Events.Bus,IEventBus,0,0,0,0,0,3,0,1,1,-1,1,1,EApp.Infrastructure.Events.Bus.IBus,EApp.Infrastructure.Events.Bus.EventBus
+EApp.Infrastructure.Repository,IRepository,0,15,1,0,0,73,15,1,0,-1,2,1,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Repository.IRepositoryContext,EApp.Infrastructure.Repository.Repository<TEntity>
+EApp.Infrastructure.Repository,IRepositoryContext,0,3,1,0,0,7,3,1,1,-1,3,3,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Repository.IUnitOfWorkRepository' EApp.Infrastructure.UnitOfWork.IUnitOfWork,EApp.Infrastructure.Repository.IRepository' EApp.Infrastructure.Repository.RepositoryContext' EApp.Infrastructure.Repository.Repository<TEntity>
 EApp.Infrastructure.Repository,IUnitOfWorkRepository,0,3,0,0,0,15,3,0,0,-1,1,2,EApp.Infrastructure.Domain.IEntity,EApp.Infrastructure.Repository.IRepositoryContext' EApp.Infrastructure.Repository.RepositoryContext
-EApp.Infrastructure.Repository,Repository<TEntity>,1,27,1,0,16,88,27,0,1,1,2,0,EApp.Infrastructure.Repository.IRepositoryContext' EApp.Core.QuerySepcifications.ISpecification,
-EApp.Infrastructure.Repository,RepositoryContext,6,7,5,0,6,156,12,0,2,0.57,2,0,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Repository.IUnitOfWorkRepository,
-EApp.Infrastructure.UnitOfWork,IUnitOfWork,0,2,1,0,0,15,2,1,0,-1,0,0,,
+EApp.Infrastructure.Repository,Repository<TEntity>,1,27,1,0,16,88,27,0,1,1,3,0,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Repository.IRepository' EApp.Infrastructure.Repository.IRepositoryContext,
+EApp.Infrastructure.Repository,RepositoryContext,6,7,5,0,6,156,12,0,2,0.57,3,0,EApp.Infrastructure.Domain.IEntity' EApp.Infrastructure.Repository.IRepositoryContext' EApp.Infrastructure.Repository.IUnitOfWorkRepository,
+EApp.Infrastructure.UnitOfWork,IUnitOfWork,0,2,1,0,0,15,2,1,0,-1,0,1,,EApp.Infrastructure.Repository.IRepositoryContext

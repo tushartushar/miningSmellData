@@ -1,34 +1,34 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Corpy,Application,0,1,0,0,0,10,1,0,0,-1,0,0,,
-Corpy,AppDelegate,0,5,1,0,5,46,6,0,0,-1,2,0,Corpy.EmployeeManager' Corpy.EmployeeDatabase,
-Corpy,RootViewController,0,11,0,0,10,86,13,0,0,-1,3,0,Corpy.DetailViewController' Corpy.RootViewSource' Corpy.Employee,
+Corpy,AppDelegate,0,5,1,0,5,46,6,0,0,-1,2,0,Corpy.EmployeeDatabase' Corpy.EmployeeManager,
+Corpy,RootViewController,0,11,0,0,10,86,13,0,0,-1,2,0,Corpy.DetailViewController' Corpy.RootViewSource,
 Corpy,DetailViewController,1,12,10,0,10,183,22,0,0,0.83,1,1,Corpy.Employee,Corpy.RootViewController
-Corpy,Employee,0,1,9,0,1,19,1,0,1,-1,0,3,,Corpy.RootViewController' Corpy.DetailViewController' Corpy.RootViewSource
-Corpy,EmployeeDatabase,0,2,2,0,0,17,2,0,1,-1,0,2,,Corpy.AppDelegate' Corpy.EmployeeManager
-Corpy,EmployeeManager,0,5,1,0,3,31,5,0,0,-1,1,2,Corpy.EmployeeDatabase,Corpy.AppDelegate' Corpy.RootViewSource
-Corpy,RootViewSource,2,4,0,0,4,25,4,0,0,0,2,1,Corpy.EmployeeManager' Corpy.Employee,Corpy.RootViewController
-SQLiteClient,SQLiteException,0,2,1,0,1,12,2,0,0,-1,1,4,SQLiteClient.Result,SQLiteClient.SQLiteConnection' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.SQLite3
-SQLiteClient,SQLiteConnection,8,27,7,0,25,592,61,1,0,0.11,9,4,SQLiteClient.SQLite3' SQLiteClient.Result' SQLiteClient.SQLiteException' SQLiteClient.TableInfo' SQLiteClient.TableMapping' SQLiteClient.Orm' SQLiteClient.Column' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand,SQLiteClient.TableMapping' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.TableQuery<T>
+Corpy,Employee,0,1,9,0,1,19,1,0,1,-1,3,4,SQLiteClient.PrimaryKeyAttribute' SQLiteClient.AutoIncrementAttribute' SQLiteClient.IBusinessEntity,Corpy.RootViewSource' Corpy.DetailViewController' Corpy.EmployeeDatabase' Corpy.EmployeeManager
+Corpy,EmployeeDatabase,0,2,2,0,0,17,2,0,1,-1,2,2,Corpy.Employee' SQLiteClient.SQLiteCrudDatabase,Corpy.AppDelegate' Corpy.EmployeeManager
+Corpy,EmployeeManager,0,5,1,0,3,31,5,0,0,-1,2,2,Corpy.Employee' Corpy.EmployeeDatabase,Corpy.RootViewSource' Corpy.AppDelegate
+Corpy,RootViewSource,2,4,0,0,4,25,4,0,0,0,2,1,Corpy.Employee' Corpy.EmployeeManager,Corpy.RootViewController
+SQLiteClient,SQLiteException,0,2,1,0,1,12,2,0,0,-1,2,4,SQLiteClient.SQLite3' SQLiteClient.Result,SQLiteClient.SQLiteConnection' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.SQLite3
+SQLiteClient,SQLiteConnection,8,27,7,0,25,592,62,1,0,0.11,9,5,SQLiteClient.SQLiteException' SQLiteClient.TableInfo' SQLiteClient.TableMapping' SQLiteClient.Column' SQLiteClient.Orm' SQLiteClient.SQLiteCommand' SQLiteClient.TableQuery<T>' SQLiteClient.SQLite3' SQLiteClient.Result,SQLiteClient.SQLiteCrudDatabase' SQLiteClient.TableMapping' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.TableQuery<T>
 SQLiteClient,TableInfo,0,0,6,0,0,9,0,0,0,-1,0,1,,SQLiteClient.SQLiteConnection
-SQLiteClient,PrimaryKeyAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,SQLiteClient.Orm
-SQLiteClient,AutoIncrementAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,SQLiteClient.Orm
+SQLiteClient,PrimaryKeyAttribute,0,0,0,0,0,3,0,0,0,-1,0,2,,Corpy.Employee' SQLiteClient.Orm
+SQLiteClient,AutoIncrementAttribute,0,0,0,0,0,3,0,0,0,-1,0,2,,Corpy.Employee' SQLiteClient.Orm
 SQLiteClient,IndexedAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,SQLiteClient.Orm
 SQLiteClient,IgnoreAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,SQLiteClient.TableMapping
 SQLiteClient,MaxLengthAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,SQLiteClient.Orm
 SQLiteClient,CollationAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,SQLiteClient.Orm
-SQLiteClient,TableMapping,4,6,6,0,4,127,14,0,0,0.5,4,3,SQLiteClient.Column' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.IgnoreAttribute' SQLiteClient.SQLiteConnection,SQLiteClient.SQLiteConnection' SQLiteClient.SQLiteCommand' SQLiteClient.TableQuery<T>
+SQLiteClient,TableMapping,4,6,6,0,4,127,15,0,0,0.5,6,4,SQLiteClient.SQLiteConnection' SQLiteClient.IgnoreAttribute' SQLiteClient.Column' SQLiteClient.PropColumn' SQLiteClient.Orm' SQLiteClient.PreparedSqlLiteInsertCommand,SQLiteClient.SQLiteConnection' SQLiteClient.Orm' SQLiteClient.SQLiteCommand' SQLiteClient.TableQuery<T>
 SQLiteClient,Column,0,2,8,0,2,13,2,1,0,-1,0,4,,SQLiteClient.SQLiteConnection' SQLiteClient.TableMapping' SQLiteClient.Orm' SQLiteClient.SQLiteCommand
-SQLiteClient,PropColumn,1,3,0,0,3,25,3,0,1,0,1,0,SQLiteClient.Orm,
-SQLiteClient,Orm,1,7,0,1,7,78,14,0,0,0.86,6,2,SQLiteClient.Column' SQLiteClient.PrimaryKeyAttribute' SQLiteClient.CollationAttribute' SQLiteClient.AutoIncrementAttribute' SQLiteClient.IndexedAttribute' SQLiteClient.MaxLengthAttribute,SQLiteClient.SQLiteConnection' SQLiteClient.PropColumn
-SQLiteClient,SQLiteCommand,3,15,1,0,9,220,30,0,0,0,8,4,SQLiteClient.SQLiteConnection' SQLiteClient.Result' SQLiteClient.SQLite3' SQLiteClient.SQLiteException' SQLiteClient.TableMapping' SQLiteClient.Column' SQLiteClient.ColType' SQLiteClient.Binding,SQLiteClient.SQLiteConnection' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.TableQuery<T>' SQLiteClient.SQLiteCrudDatabase
+SQLiteClient,PropColumn,1,3,0,0,3,25,3,0,1,0,0,1,,SQLiteClient.TableMapping
+SQLiteClient,Orm,1,7,0,1,7,78,20,0,0,0.86,7,2,SQLiteClient.PrimaryKeyAttribute' SQLiteClient.AutoIncrementAttribute' SQLiteClient.IndexedAttribute' SQLiteClient.MaxLengthAttribute' SQLiteClient.CollationAttribute' SQLiteClient.TableMapping' SQLiteClient.Column,SQLiteClient.SQLiteConnection' SQLiteClient.TableMapping
+SQLiteClient,SQLiteCommand,3,15,1,0,9,220,55,0,0,0,8,3,SQLiteClient.SQLiteException' SQLiteClient.SQLiteConnection' SQLiteClient.TableMapping' SQLiteClient.Column' SQLiteClient.Binding' SQLiteClient.SQLite3' SQLiteClient.Result' SQLiteClient.ColType,SQLiteClient.SQLiteConnection' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.TableQuery<T>
 SQLiteClient,Binding,0,0,3,0,0,6,0,0,0,-1,0,1,,SQLiteClient.SQLiteCommand
-SQLiteClient,PreparedSqlLiteInsertCommand,1,5,4,0,2,73,11,0,0,0.6,5,2,SQLiteClient.SQLiteConnection' SQLiteClient.Result' SQLiteClient.SQLite3' SQLiteClient.SQLiteCommand' SQLiteClient.SQLiteException,SQLiteClient.SQLiteConnection' SQLiteClient.TableMapping
-SQLiteClient,TableQuery<T>,5,18,2,0,10,311,33,0,0,0.61,5,0,SQLiteClient.SQLiteConnection' SQLiteClient.TableMapping' SQLiteClient.CompileResult' SQLiteClient.Ordering' SQLiteClient.SQLiteCommand,
+SQLiteClient,PreparedSqlLiteInsertCommand,1,5,4,0,2,73,12,0,0,0.6,5,1,SQLiteClient.SQLiteException' SQLiteClient.SQLiteConnection' SQLiteClient.SQLiteCommand' SQLiteClient.SQLite3' SQLiteClient.Result,SQLiteClient.TableMapping
+SQLiteClient,TableQuery<T>,5,18,2,0,10,311,61,0,0,0.61,5,1,SQLiteClient.SQLiteConnection' SQLiteClient.TableMapping' SQLiteClient.SQLiteCommand' SQLiteClient.Ordering' SQLiteClient.CompileResult,SQLiteClient.SQLiteConnection
 SQLiteClient,Ordering,0,0,2,0,0,5,0,0,0,-1,0,1,,SQLiteClient.TableQuery<T>
 SQLiteClient,CompileResult,0,0,2,0,0,5,0,0,0,-1,0,1,,SQLiteClient.TableQuery<T>
-SQLiteClient,SQLite3,0,34,0,0,33,254,36,0,0,-1,3,3,SQLiteClient.ConfigOption' SQLiteClient.Result' SQLiteClient.SQLiteException,SQLiteClient.SQLiteConnection' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand
+SQLiteClient,SQLite3,0,34,0,0,33,254,36,0,0,-1,4,4,SQLiteClient.SQLiteException' SQLiteClient.Result' SQLiteClient.ConfigOption' SQLiteClient.ColType,SQLiteClient.SQLiteException' SQLiteClient.SQLiteConnection' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand
 SQLiteClient,Result,0,0,0,0,0,20,0,0,0,-1,0,5,,SQLiteClient.SQLiteException' SQLiteClient.SQLiteConnection' SQLiteClient.SQLiteCommand' SQLiteClient.PreparedSqlLiteInsertCommand' SQLiteClient.SQLite3
 SQLiteClient,ConfigOption,0,0,0,0,0,6,0,0,0,-1,0,1,,SQLiteClient.SQLite3
-SQLiteClient,ColType,0,0,0,0,0,8,0,0,0,-1,0,1,,SQLiteClient.SQLiteCommand
-SQLiteClient,IBusinessEntity,0,0,1,0,0,3,0,1,0,-1,0,0,,
-SQLiteClient,SQLiteCrudDatabase,2,8,2,0,7,86,8,1,1,0.25,1,0,SQLiteClient.SQLiteCommand,
+SQLiteClient,ColType,0,0,0,0,0,8,0,0,0,-1,0,2,,SQLiteClient.SQLiteCommand' SQLiteClient.SQLite3
+SQLiteClient,IBusinessEntity,0,0,1,0,0,3,0,1,0,-1,0,2,,Corpy.Employee' SQLiteClient.SQLiteCrudDatabase
+SQLiteClient,SQLiteCrudDatabase,2,8,2,0,7,86,10,1,1,0.25,2,1,SQLiteClient.SQLiteConnection' SQLiteClient.IBusinessEntity,Corpy.EmployeeDatabase

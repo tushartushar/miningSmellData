@@ -1,154 +1,169 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 EppLib.Entities,AuthInfo,0,0,1,0,0,4,0,0,0,-1,0,0,,
-EppLib.Entities,ContactCheckResult,0,4,3,0,4,41,9,0,0,-1,0,0,,
-EppLib.Entities,DomainReleaseResponse,0,2,1,0,1,36,6,0,1,-1,1,2,EppLib.Entities.DomainTransferResult,EppLib.Entities.DomainRelease' EppLib.Tests.LocalTest
-EppLib.Entities,DomainRelease,2,4,0,0,2,30,4,0,0,0.5,1,1,EppLib.Entities.DomainReleaseResponse,EppLib.Tests.LocalTest
-EppLib.Entities,Services,2,0,0,2,0,5,0,0,0,-1,0,2,,EppLib.Entities.Login' EppLib.Tests.LocalTest
-EppLib.Entities,ContactChange,6,2,0,6,2,21,2,0,0,1,4,4,EppLib.Entities.PostalInfo' EppLib.Entities.Telephone' EppLib.Entities.DiscloseFlags' EppLib.Entities.Contact,EppLib.Entities.ContactUpdate' EppLib.Tests.Program' EppLib.Tests.LocalTest' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Entities,ContactCheckResponse,1,2,1,0,1,21,4,0,1,1,0,2,,EppLib.Entities.ContactCheck' EppLib.Tests.LocalTest
-EppLib.Entities,ContactCreateResponse,0,2,2,0,1,27,5,0,1,-1,0,2,,EppLib.Entities.ContactCreate' EppLib.Tests.Program
-EppLib.Entities,ContactDeleteResponse,0,1,0,0,1,4,1,0,1,-1,0,1,,EppLib.Entities.ContactDelete
-EppLib.Entities,ContactInfoResponse,1,4,1,0,2,280,49,2,1,1,5,6,EppLib.Entities.Contact' EppLib.Entities.Telephone' EppLib.Entities.DiscloseFlags' EppLib.Entities.PostalInfo' EppLib.Entities.PostalAddress,EppLib.Entities.ContactInfo' EppLib.Extensions.Iis.IisContactInfoResponse' EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,Contact,11,3,12,11,3,82,3,2,0,1,3,12,EppLib.Entities.Telephone' EppLib.Entities.PostalInfo' EppLib.Entities.PostalAddressType,EppLib.Entities.ContactChange' EppLib.Entities.ContactInfoResponse' EppLib.Entities.ContactBase<T>' EppLib.Entities.ContactCreate' EppLib.Extensions.Iis.IisContactCreate' EppLib.Extensions.Iis.IisContactInfoResponse' EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Extensions.Cira.CiraContactCreate' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate' EppLib.Tests.Program' EppLib.Tests.LocalTest' EppLib.Tests.IisExtensionLocalTest
-EppLib.Entities,DiscloseFlags,0,0,0,0,0,15,0,0,0,-1,0,5,,EppLib.Entities.ContactChange' EppLib.Entities.ContactInfoResponse' EppLib.Entities.ContactBase<T>' EppLib.Tests.LocalTest' EppLib.Tests.IisExtensionLocalTest
-EppLib.Entities,ContactBase<T>,0,3,0,0,0,120,25,0,0,-1,4,0,EppLib.Entities.PostalAddress' EppLib.Entities.PostalInfo' EppLib.Entities.DiscloseFlags' EppLib.Entities.Contact,
-EppLib.Entities,ContactCheck,1,4,0,0,3,25,5,0,0,0.5,1,1,EppLib.Entities.ContactCheckResponse,EppLib.Tests.LocalTest
-EppLib.Entities,ContactDelete,1,3,0,0,2,18,3,0,0,0.67,1,0,EppLib.Entities.ContactDeleteResponse,
-EppLib.Entities,ContactInfo,1,3,0,0,2,18,3,0,0,0.67,1,2,EppLib.Entities.ContactInfoResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,ContactUpdate,4,4,0,4,2,94,19,2,0,0.5,5,4,EppLib.Entities.ContactChange' EppLib.Entities.EppContactUpdateAddRemove' EppLib.Entities.Telephone' EppLib.Entities.Status' EppLib.Entities.ContactUpdateResponse,EppLib.Extensions.Iis.IisContactUpdate' EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdate' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,ContactUpdateResponse,0,1,0,0,1,7,1,0,1,-1,0,3,,EppLib.Entities.ContactUpdate' EppLib.Tests.Program' EppLib.Tests.NominetExtensionLocalTest
+EppLib.Entities,ContactCheckResult,0,4,3,0,4,41,9,0,0,-1,0,1,,EppLib.Entities.ContactCheckResponse
+EppLib.Entities,DomainReleaseResponse,0,2,1,0,1,36,6,0,1,-1,2,1,EppLib.Entities.DomainTransferResult' EppLib.Entities.EppResponse,EppLib.Entities.DomainRelease
+EppLib.Entities,DomainRelease,2,4,0,0,2,30,4,0,0,0.5,2,0,EppLib.Entities.DomainReleaseResponse' EppLib.Entities.DomainBase<T>,
+EppLib.Entities,Services,2,0,0,2,0,5,0,0,0,-1,0,1,,EppLib.Entities.Login
+EppLib.Entities,ContactChange,6,2,0,6,2,21,2,0,0,1,4,1,EppLib.Entities.Contact' EppLib.Entities.DiscloseFlags' EppLib.Entities.PostalInfo' EppLib.Entities.Telephone,EppLib.Entities.ContactUpdate
+EppLib.Entities,ContactCheckResponse,1,2,1,0,1,21,4,0,1,1,2,1,EppLib.Entities.ContactCheckResult' EppLib.Entities.EppResponse,EppLib.Entities.ContactCheck
+EppLib.Entities,ContactCreateResponse,0,2,2,0,1,27,5,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.ContactCreate
+EppLib.Entities,ContactDeleteResponse,0,1,0,0,1,4,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.ContactDelete
+EppLib.Entities,ContactInfoResponse,1,4,1,0,2,280,60,2,1,1,6,4,EppLib.Entities.Contact' EppLib.Entities.DiscloseFlags' EppLib.Entities.EppResponse' EppLib.Entities.PostalAddress' EppLib.Entities.PostalInfo' EppLib.Entities.Telephone,EppLib.Extensions.Iis.IisContactInfoResponse' EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Entities.ContactInfo' EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification
+EppLib.Entities,Contact,11,3,12,11,3,82,3,2,0,1,5,11,EppLib.Entities.DiscloseFlags' EppLib.Entities.PostalAddress' EppLib.Entities.PostalAddressType' EppLib.Entities.PostalInfo' EppLib.Entities.Telephone,EppLib.Extensions.Cira.CiraContactCreate' EppLib.Extensions.Iis.IisContactExtension' EppLib.Entities.ContactCreate' EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification' EppLib.Entities.ContactChange' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate' EppLib.Extensions.Nominet.ContactInfo.NominetContactExtension' EppLib.Extensions.Iis.IisContactCreate' EppLib.Extensions.Smallregistry.ContactCreate.SmallregistryContactCreate' EppLib.Entities.ContactInfoResponse' EppLib.Entities.ContactBase<T>
+EppLib.Entities,DiscloseFlags,0,0,0,0,0,15,0,0,0,-1,0,4,,EppLib.Entities.ContactChange' EppLib.Entities.Contact' EppLib.Entities.ContactInfoResponse' EppLib.Entities.ContactBase<T>
+EppLib.Entities,ContactBase<T>,0,3,0,0,0,120,25,0,0,-1,6,7,EppLib.Entities.Contact' EppLib.Entities.DiscloseFlags' EppLib.Entities.EppCommand<T>' EppLib.Entities.EppException' EppLib.Entities.EppResponse' EppLib.Entities.PostalInfo,EppLib.Entities.ContactCheck' EppLib.Entities.ContactInfo' EppLib.Extensions.Nominet.ContactInfo.NominetContactInfo' EppLib.Entities.ContactUpdate' EppLib.Extensions.Iis.IisContactInfo' EppLib.Entities.ContactDelete' EppLib.Entities.ContactCreate
+EppLib.Entities,ContactCheck,1,4,0,0,3,25,5,0,0,0.75,2,0,EppLib.Entities.ContactCheckResponse' EppLib.Entities.ContactBase<T>,
+EppLib.Entities,ContactDelete,1,3,0,0,2,18,3,0,0,0.67,2,0,EppLib.Entities.ContactDeleteResponse' EppLib.Entities.ContactBase<T>,
+EppLib.Entities,ContactInfo,1,3,0,0,2,18,3,0,0,1,2,0,EppLib.Entities.ContactInfoResponse' EppLib.Entities.ContactBase<T>,
+EppLib.Entities,ContactUpdate,4,4,0,4,2,94,19,2,0,0.5,5,2,EppLib.Entities.ContactChange' EppLib.Entities.ContactBase<T>' EppLib.Entities.ContactUpdateResponse' EppLib.Entities.EppContactUpdateAddRemove' EppLib.Entities.EppException,EppLib.Extensions.Iis.IisContactUpdate' EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdate
+EppLib.Entities,ContactUpdateResponse,0,1,0,0,1,7,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.ContactUpdate
 EppLib.Entities,CiraCprCategory,0,3,2,0,3,20,5,0,0,-1,0,1,,EppLib.Entities.CiraCprCategories
-EppLib.Entities,EppContactUpdateAddRemove,1,0,0,1,0,4,0,0,0,-1,0,1,,EppLib.Entities.ContactUpdate
-EppLib.Entities,CiraCprCategories,20,1,0,20,1,92,2,0,0,0,1,1,EppLib.Entities.CiraCprCategory,EppLib.Tests.Program
-EppLib.Entities,Domain,0,1,15,0,1,67,1,2,0,-1,0,4,,EppLib.Entities.DomainInfoResponse' EppLib.Extensions.Iis.IisDomainInfoResponse' EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfoResponse' EppLib.Tests.Program
-EppLib.Entities,DomainBase<T>,0,2,0,0,0,16,3,0,0,-1,0,0,,
-EppLib.Entities,DomainChange,3,0,0,3,0,6,0,0,0,-1,0,2,,EppLib.Entities.DomainUpdate' EppLib.Tests.Program
-EppLib.Entities,DomainCheck,1,4,0,0,3,25,5,1,0,0.5,1,3,EppLib.Entities.DomainCheckResponse,EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheck' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,DomainCheckResponse,1,3,1,0,1,36,6,0,1,0.67,1,3,EppLib.Entities.DomainCheckResult,EppLib.Entities.DomainCheck' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,DomainCheckResult,0,4,4,0,4,42,9,0,0,-1,0,2,,EppLib.Entities.DomainCheckResponse' EppLib.Tests.Program
-EppLib.Entities,DomainContact,2,1,0,2,1,10,1,0,0,0,0,2,,EppLib.Entities.DomainCreate' EppLib.Entities.DomainUpdate
-EppLib.Entities,DomainCreate,2,3,5,0,2,51,7,2,0,1,3,4,EppLib.Entities.DomainPeriod' EppLib.Entities.DomainContact' EppLib.Entities.DomainCreateResponse,EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreate' EppLib.Extensions.Nominet.DomainCreate.NominetDomainCreate' EppLib.Tests.Program' EppLib.Tests.SecDNSExtensionLocalTest
-EppLib.Entities,DomainCreateResponse,0,3,1,0,2,32,7,0,1,-1,1,4,EppLib.Entities.DomainCreateResult,EppLib.Entities.DomainCreate' EppLib.Extensions.Nominet.Notifications.ReferralAcceptNotification' EppLib.Tests.Program' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Entities,DomainCreateResult,0,0,3,0,0,6,0,0,0,-1,0,2,,EppLib.Entities.DomainCreateResponse' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Entities,DomainDelete,1,3,0,0,2,18,3,0,0,0.67,1,1,EppLib.Entities.DomainDeleteResponse,EppLib.Tests.Program
-EppLib.Entities,DomainDeleteResponse,0,1,0,0,1,7,1,0,1,-1,0,2,,EppLib.Entities.DomainDelete' EppLib.Tests.Program
-EppLib.Entities,DomainInfo,1,3,1,0,2,29,4,0,0,0.67,1,1,EppLib.Entities.DomainInfoResponse,EppLib.Tests.Program
-EppLib.Entities,DomainInfoResponse,1,3,1,0,2,147,34,2,1,1,1,5,EppLib.Entities.Domain,EppLib.Entities.DomainInfo' EppLib.Extensions.Iis.IisDomainInfoResponse' EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification' EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfoResponse' EppLib.Tests.Program
+EppLib.Entities,EppContactUpdateAddRemove,1,0,0,1,0,4,0,0,0,-1,1,1,EppLib.Entities.Status,EppLib.Entities.ContactUpdate
+EppLib.Entities,CiraCprCategories,20,1,0,20,1,92,18,0,0,0,1,0,EppLib.Entities.CiraCprCategory,
+EppLib.Entities,Domain,0,1,15,0,1,67,1,2,0,-1,2,4,EppLib.Entities.DomainContact' EppLib.Entities.Status,EppLib.Extensions.Iis.IisDomainExtension' EppLib.Extensions.Nominet.DomainInfo.NominetDomainExtension' EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification' EppLib.Entities.DomainInfoResponse
+EppLib.Entities,DomainBase<T>,0,2,0,0,0,16,3,0,0,-1,2,11,EppLib.Entities.EppCommand<T>' EppLib.Entities.EppResponse,EppLib.Entities.DomainRelease' EppLib.Entities.DomainDelete' EppLib.Entities.DomainCreate' EppLib.Entities.DomainRenew' EppLib.Entities.DomainUpdate' EppLib.Entities.DomainTransfer' EppLib.Entities.DomainInfo' EppLib.Extensions.Iis.IisDomainInfo' EppLib.Entities.DomainCheck' EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheck' EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfo
+EppLib.Entities,DomainChange,3,0,0,3,0,6,0,0,0,-1,0,1,,EppLib.Entities.DomainUpdate
+EppLib.Entities,DomainCheck,1,4,0,0,3,25,5,1,0,0.75,2,1,EppLib.Entities.DomainBase<T>' EppLib.Entities.DomainCheckResponse,EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheck
+EppLib.Entities,DomainCheckResponse,1,3,1,0,1,36,6,0,1,0.67,2,1,EppLib.Entities.DomainCheckResult' EppLib.Entities.EppResponse,EppLib.Entities.DomainCheck
+EppLib.Entities,DomainCheckResult,0,4,4,0,4,42,9,0,0,-1,0,1,,EppLib.Entities.DomainCheckResponse
+EppLib.Entities,DomainContact,2,1,0,2,1,10,1,0,0,0,0,4,,EppLib.Entities.EppDomainUpdateAddRemove' EppLib.Entities.Domain' EppLib.Entities.DomainInfoResponse' EppLib.Entities.DomainCreate
+EppLib.Entities,DomainCreate,2,3,5,0,2,51,7,2,0,1,4,2,EppLib.Entities.DomainBase<T>' EppLib.Entities.DomainContact' EppLib.Entities.DomainCreateResponse' EppLib.Entities.DomainPeriod,EppLib.Extensions.Nominet.DomainCreate.NominetDomainCreate' EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreate
+EppLib.Entities,DomainCreateResponse,0,3,1,0,2,32,7,0,1,-1,2,2,EppLib.Entities.DomainCreateResult' EppLib.Entities.EppResponse,EppLib.Extensions.Nominet.Notifications.ReferralAcceptNotification' EppLib.Entities.DomainCreate
+EppLib.Entities,DomainCreateResult,0,0,3,0,0,6,0,0,0,-1,0,2,,EppLib.Entities.DomainCreateResponse' EppLib.Extensions.Nominet.Notifications.ReferralAcceptNotification
+EppLib.Entities,DomainDelete,1,3,0,0,2,18,3,0,0,0.67,2,0,EppLib.Entities.DomainBase<T>' EppLib.Entities.DomainDeleteResponse,
+EppLib.Entities,DomainDeleteResponse,0,1,0,0,1,7,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.DomainDelete
+EppLib.Entities,DomainInfo,1,3,1,0,2,29,4,0,0,1,2,0,EppLib.Entities.DomainBase<T>' EppLib.Entities.DomainInfoResponse,
+EppLib.Entities,DomainInfoResponse,1,3,1,0,2,147,34,2,1,1,4,4,EppLib.Entities.Domain' EppLib.Entities.DomainContact' EppLib.Entities.EppResponse' EppLib.Entities.Status,EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfoResponse' EppLib.Extensions.Iis.IisDomainInfoResponse' EppLib.Entities.DomainInfo' EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification
 EppLib.Entities,DomainPeriod,0,1,2,0,1,10,1,0,0,-1,0,2,,EppLib.Entities.DomainCreate' EppLib.Entities.DomainRenew
-EppLib.Entities,DomainRenew,3,3,0,0,2,28,4,0,0,0.67,2,2,EppLib.Entities.DomainPeriod' EppLib.Entities.DomainRenewResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,DomainRenewResponse,1,2,1,0,1,30,5,0,1,1,0,2,,EppLib.Entities.DomainRenew' EppLib.Tests.Program
-EppLib.Entities,DomainTransfer,4,5,0,0,4,35,5,1,0,0.4,1,1,EppLib.Entities.DomainTransferResponse,EppLib.Extensions.Cira.CiraDomainTransfer
+EppLib.Entities,DomainRenew,3,3,0,0,2,28,4,0,0,0.67,3,0,EppLib.Entities.DomainBase<T>' EppLib.Entities.DomainPeriod' EppLib.Entities.DomainRenewResponse,
+EppLib.Entities,DomainRenewResponse,1,2,1,0,1,30,5,0,1,1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.DomainRenew
+EppLib.Entities,DomainTransfer,4,5,0,0,4,35,5,1,0,0.4,2,1,EppLib.Entities.DomainBase<T>' EppLib.Entities.DomainTransferResponse,EppLib.Extensions.Cira.CiraDomainTransfer
 EppLib.Entities,DomainTransferResult,0,0,3,0,0,6,0,0,0,-1,0,2,,EppLib.Entities.DomainReleaseResponse' EppLib.Entities.DomainTransferResponse
-EppLib.Entities,DomainTransferResponse,0,2,1,0,1,35,6,0,1,-1,1,2,EppLib.Entities.DomainTransferResult,EppLib.Entities.DomainTransfer' EppLib.Tests.Program
-EppLib.Entities,DomainUpdate,3,4,3,0,2,109,18,2,0,0.5,5,4,EppLib.Entities.EppDomainUpdateAddRemove' EppLib.Entities.DomainChange' EppLib.Entities.DomainContact' EppLib.Entities.Status' EppLib.Entities.DomainUpdateResponse,EppLib.Extensions.Iis.IisDomainUpdate' EppLib.Extensions.Nominet.DomainUpdate.NominetDomainUpdate' EppLib.Tests.Program' EppLib.Tests.SecDNSExtensionLocalTest
-EppLib.Entities,DomainUpdateResponse,0,1,0,0,1,7,1,0,1,-1,0,2,,EppLib.Entities.DomainUpdate' EppLib.Tests.Program
-EppLib.Entities,EppBase<T>,1,9,0,0,2,64,13,0,0,0.89,1,0,EppLib.Entities.EppExtension,
-EppLib.Entities,ContactCreate,1,3,0,0,2,54,11,3,0,0.67,3,4,EppLib.Entities.Contact' EppLib.Entities.Telephone' EppLib.Entities.ContactCreateResponse,EppLib.Extensions.Iis.IisContactCreate' EppLib.Extensions.Cira.CiraContactCreate' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate' EppLib.Tests.LocalTest
-EppLib.Entities,EppCommand<T>,4,10,2,1,1,87,15,0,0,0.7,0,0,,
-EppLib.Entities,EppDomainUpdateAddRemove,3,0,0,3,0,6,0,0,0,-1,0,2,,EppLib.Entities.DomainUpdate' EppLib.Tests.Program
-EppLib.Entities,EppException,0,4,0,0,3,17,4,0,0,-1,0,0,,
-EppLib.Entities,EppExtension,0,5,1,0,1,33,7,9,0,-1,0,1,,EppLib.Entities.EppBase<T>
-EppLib.Entities,EppResponse,0,7,7,0,2,67,16,24,0,-1,0,1,,EppLib.Tests.Program
-EppLib.Entities,Hello,0,2,0,0,2,17,2,0,0,-1,1,1,EppLib.Entities.HelloResponse,EppLib.Tests.LocalTest
-EppLib.Entities,HelloResponse,0,1,0,0,1,7,1,0,1,-1,0,2,,EppLib.Entities.Hello' EppLib.Tests.LocalTest
-EppLib.Entities,EppHostUpdateAddRemove,1,0,1,1,0,5,0,0,0,-1,0,2,,EppLib.Entities.HostUpdate' EppLib.Tests.Program
-EppLib.Entities,Host,2,2,10,0,2,28,2,0,0,1,0,4,,EppLib.Entities.HostCreate' EppLib.Entities.HostInfoResponse' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,HostAddress,0,2,2,0,2,13,2,0,0,-1,0,3,,EppLib.Entities.HostCreate' EppLib.Entities.HostInfoResponse' EppLib.Entities.HostUpdate
-EppLib.Entities,HostBase<T>,0,1,0,0,0,6,1,0,0,-1,0,0,,
+EppLib.Entities,DomainTransferResponse,0,2,1,0,1,35,6,0,1,-1,2,1,EppLib.Entities.DomainTransferResult' EppLib.Entities.EppResponse,EppLib.Entities.DomainTransfer
+EppLib.Entities,DomainUpdate,3,4,3,0,2,109,19,2,0,0.75,4,2,EppLib.Entities.DomainBase<T>' EppLib.Entities.DomainChange' EppLib.Entities.DomainUpdateResponse' EppLib.Entities.EppDomainUpdateAddRemove,EppLib.Extensions.Nominet.DomainUpdate.NominetDomainUpdate' EppLib.Extensions.Iis.IisDomainUpdate
+EppLib.Entities,DomainUpdateResponse,0,1,0,0,1,7,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.DomainUpdate
+EppLib.Entities,EppBase<T>,1,9,0,0,2,64,13,0,0,0.89,2,5,EppLib.Entities.EppExtension' EppLib.Entities.EppResponse,EppLib.Extensions.Fury.GetAgreement' EppLib.Entities.Hello' EppLib.Entities.EppCommand<T>' EppLib.Extensions.Cira.GetAgreement' EppLib.Service
+EppLib.Entities,ContactCreate,1,3,0,0,2,54,11,4,0,1,4,4,EppLib.Entities.ContactCreateResponse' EppLib.Entities.Contact' EppLib.Entities.ContactBase<T>' EppLib.Entities.EppException,EppLib.Extensions.Cira.CiraContactCreate' EppLib.Extensions.Smallregistry.ContactCreate.SmallregistryContactCreate' EppLib.Extensions.Iis.IisContactCreate' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate
+EppLib.Entities,EppCommand<T>,4,10,2,1,1,87,15,0,0,0.8,3,6,EppLib.Entities.EppBase<T>' EppLib.Entities.EppExtension' EppLib.Entities.EppResponse,EppLib.Entities.Poll' EppLib.Entities.Logout' EppLib.Entities.Login' EppLib.Entities.DomainBase<T>' EppLib.Entities.HostBase<T>' EppLib.Entities.ContactBase<T>
+EppLib.Entities,EppDomainUpdateAddRemove,3,0,0,3,0,6,0,0,0,-1,2,1,EppLib.Entities.DomainContact' EppLib.Entities.Status,EppLib.Entities.DomainUpdate
+EppLib.Entities,EppException,0,4,0,0,3,17,4,0,0,-1,0,4,,EppLib.Entities.ContactUpdate' EppLib.Entities.ContactCreate' EppLib.Entities.ContactBase<T>' EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheckExtension
+EppLib.Entities,EppExtension,0,5,1,0,1,33,7,13,0,-1,0,17,,EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreateExtension' EppLib.Extensions.Iis.IisExtensionBase' EppLib.Extensions.Fury.FuryExtension' EppLib.Extensions.Nominet.NominetDirectRightsExtensionBase' EppLib.Extensions.Nominet.NominetDomainExtensionBase' EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckExtension' EppLib.Extensions.Idn.IdnExtension' EppLib.Entities.EppBase<T>' EppLib.Extensions.Cira.CiraExtensionBase' EppLib.Extensions.SecDNS.SecDNSCreate' EppLib.Extensions.Nominet.NominetContactExtensionBase' EppLib.Extensions.SecDNS.SecDNSUpdate' EppLib.Extensions.Smallregistry.SmallregistryExtensionBase' EppLib.Extensions.Fury.GetAgreement' EppLib.Extensions.Cira.GetAgreement' EppLib.Extensions.Namestore.NamestoreExtension' EppLib.Entities.EppCommand<T>
+EppLib.Entities,EppResponse,0,7,7,0,2,67,16,25,0,-1,0,31,,EppLib.Entities.ContactUpdateResponse' EppLib.Entities.DomainReleaseResponse' EppLib.Extensions.Fury.GetAgreementResponse' EppLib.Entities.DomainCheckResponse' EppLib.Entities.ContactCreateResponse' EppLib.Entities.ContactDeleteResponse' EppLib.Entities.ContactInfoResponse' EppLib.Entities.DomainDeleteResponse' EppLib.Entities.ContactCheckResponse' EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckResponse' EppLib.Entities.DomainCreateResponse' EppLib.Entities.DomainTransferResponse' EppLib.Entities.DomainUpdateResponse' EppLib.Entities.DomainInfoResponse' EppLib.Extensions.Cira.GetAgreementResponse' EppLib.Entities.HelloResponse' EppLib.Entities.DomainRenewResponse' EppLib.Entities.EppBase<T>' EppLib.Entities.HostBase<T>' EppLib.Entities.EppCommand<T>' EppLib.Entities.DomainBase<T>' EppLib.Entities.HostCheckResponse' EppLib.Entities.ContactBase<T>' EppLib.Entities.HostInfoResponse' EppLib.Entities.HostUpdateResponse' EppLib.Entities.HostDeleteResponse' EppLib.Entities.HostCreateResponse' EppLib.Entities.LoginResponse' EppLib.Service' EppLib.Entities.LogoutResponse' EppLib.Entities.PollResponse
+EppLib.Entities,Hello,0,2,0,0,2,17,2,0,0,-1,2,0,EppLib.Entities.EppBase<T>' EppLib.Entities.HelloResponse,
+EppLib.Entities,HelloResponse,0,1,0,0,1,7,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.Hello
+EppLib.Entities,EppHostUpdateAddRemove,1,1,1,1,1,10,1,0,0,0,2,1,EppLib.Entities.HostAddress' EppLib.Entities.Status,EppLib.Entities.HostUpdate
+EppLib.Entities,Host,2,2,10,0,2,28,2,0,0,1,2,2,EppLib.Entities.HostAddress' EppLib.Entities.Status,EppLib.Entities.HostCreate' EppLib.Entities.HostInfoResponse
+EppLib.Entities,HostAddress,0,2,2,0,2,13,2,0,0,-1,0,3,,EppLib.Entities.HostInfoResponse' EppLib.Entities.EppHostUpdateAddRemove' EppLib.Entities.Host
+EppLib.Entities,HostBase<T>,0,1,0,0,0,6,1,0,0,-1,2,5,EppLib.Entities.EppCommand<T>' EppLib.Entities.EppResponse,EppLib.Entities.HostUpdate' EppLib.Entities.HostCreate' EppLib.Entities.HostInfo' EppLib.Entities.HostDelete' EppLib.Entities.HostCheck
 EppLib.Entities,HostChange,0,0,1,0,0,4,0,0,0,-1,0,1,,EppLib.Entities.HostUpdate
-EppLib.Entities,HostCheck,1,4,0,0,3,25,5,0,0,0.5,1,2,EppLib.Entities.HostCheckResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,HostCheckResponse,1,2,1,0,1,24,4,0,1,1,0,3,,EppLib.Entities.HostCheck' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,HostCheckResult,0,4,3,0,4,41,9,0,0,-1,0,0,,
-EppLib.Entities,HostCreate,0,3,1,0,2,24,4,0,0,-1,3,2,EppLib.Entities.Host' EppLib.Entities.HostAddress' EppLib.Entities.HostCreateResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,HostCreateResponse,0,2,1,0,1,26,5,0,1,-1,1,2,EppLib.Entities.HostCreateResult,EppLib.Entities.HostCreate' EppLib.Tests.Program
+EppLib.Entities,HostCheck,1,4,0,0,3,25,5,0,0,0.75,2,0,EppLib.Entities.HostBase<T>' EppLib.Entities.HostCheckResponse,
+EppLib.Entities,HostCheckResponse,1,2,1,0,1,24,4,0,1,1,2,1,EppLib.Entities.EppResponse' EppLib.Entities.HostCheckResult,EppLib.Entities.HostCheck
+EppLib.Entities,HostCheckResult,0,4,3,0,4,41,9,0,0,-1,0,1,,EppLib.Entities.HostCheckResponse
+EppLib.Entities,HostCreate,0,3,1,0,2,24,4,0,0,-1,3,0,EppLib.Entities.Host' EppLib.Entities.HostBase<T>' EppLib.Entities.HostCreateResponse,
+EppLib.Entities,HostCreateResponse,0,2,1,0,1,26,5,0,1,-1,2,1,EppLib.Entities.EppResponse' EppLib.Entities.HostCreateResult,EppLib.Entities.HostCreate
 EppLib.Entities,HostCreateResult,0,0,2,0,0,5,0,0,0,-1,0,1,,EppLib.Entities.HostCreateResponse
-EppLib.Entities,HostDelete,0,3,1,0,2,18,3,0,0,-1,1,0,EppLib.Entities.HostDeleteResponse,
-EppLib.Entities,HostDeleteResponse,0,1,0,0,1,7,1,0,1,-1,0,1,,EppLib.Entities.HostDelete
-EppLib.Entities,HostInfo,1,3,0,0,2,18,3,0,0,0.67,1,2,EppLib.Entities.HostInfoResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,HostInfoResponse,0,2,1,0,1,82,17,0,1,-1,2,2,EppLib.Entities.HostAddress' EppLib.Entities.Host,EppLib.Entities.HostInfo' EppLib.Tests.Program
-EppLib.Entities,HostUpdate,4,4,0,3,2,77,15,0,0,0.5,5,2,EppLib.Entities.EppHostUpdateAddRemove' EppLib.Entities.HostChange' EppLib.Entities.HostAddress' EppLib.Entities.Status' EppLib.Entities.HostUpdateResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,HostUpdateResponse,0,1,0,0,1,7,1,0,1,-1,0,3,,EppLib.Entities.HostUpdate' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,Login,3,4,2,0,3,60,12,0,0,0.5,3,2,EppLib.Entities.Options' EppLib.Entities.Services' EppLib.Entities.LoginResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
+EppLib.Entities,HostDelete,0,3,1,0,2,18,3,0,0,-1,2,0,EppLib.Entities.HostBase<T>' EppLib.Entities.HostDeleteResponse,
+EppLib.Entities,HostDeleteResponse,0,1,0,0,1,7,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.HostDelete
+EppLib.Entities,HostInfo,1,3,0,0,2,18,3,0,0,1,2,0,EppLib.Entities.HostBase<T>' EppLib.Entities.HostInfoResponse,
+EppLib.Entities,HostInfoResponse,0,2,1,0,1,82,17,0,1,-1,4,1,EppLib.Entities.EppResponse' EppLib.Entities.Host' EppLib.Entities.HostAddress' EppLib.Entities.Status,EppLib.Entities.HostInfo
+EppLib.Entities,HostUpdate,4,4,0,3,2,77,15,0,0,0.5,4,0,EppLib.Entities.EppHostUpdateAddRemove' EppLib.Entities.HostBase<T>' EppLib.Entities.HostChange' EppLib.Entities.HostUpdateResponse,
+EppLib.Entities,HostUpdateResponse,0,1,0,0,1,7,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.HostUpdate
+EppLib.Entities,Login,3,4,2,0,3,60,12,0,0,1,4,0,EppLib.Entities.Services' EppLib.Entities.EppCommand<T>' EppLib.Entities.LoginResponse' EppLib.Entities.Options,
 EppLib.Entities,ObjUri,0,0,0,0,0,3,0,0,0,-1,0,0,,
-EppLib.Entities,LoginResponse,0,1,0,0,1,4,1,0,1,-1,0,3,,EppLib.Entities.Login' EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,Logout,0,2,0,0,1,13,2,0,0,-1,1,2,EppLib.Entities.LogoutResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,LogoutResponse,0,1,0,0,1,7,1,0,1,-1,0,1,,EppLib.Entities.Logout
+EppLib.Entities,LoginResponse,0,1,0,0,1,4,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.Login
+EppLib.Entities,Logout,0,2,0,0,1,13,2,0,0,-1,2,0,EppLib.Entities.EppCommand<T>' EppLib.Entities.LogoutResponse,
+EppLib.Entities,LogoutResponse,0,1,0,0,1,7,1,0,1,-1,1,1,EppLib.Entities.EppResponse,EppLib.Entities.Logout
 EppLib.Entities,Options,0,0,2,0,0,5,0,0,0,-1,0,1,,EppLib.Entities.Login
-EppLib.Entities,PostalAddress,0,0,7,0,0,10,0,0,0,-1,0,7,,EppLib.Entities.ContactInfoResponse' EppLib.Entities.ContactBase<T>' EppLib.Entities.PostalInfo' EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheckExtension' EppLib.Tests.LocalTest' EppLib.Tests.NominetExtensionLocalTest' EppLib.Tests.IisExtensionLocalTest
-EppLib.Entities,PostalAddressType,2,0,0,2,0,5,0,0,0,-1,0,3,,EppLib.Entities.Contact' EppLib.Tests.LocalTest' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Entities,PostalInfo,4,0,0,4,0,10,0,0,0,-1,1,8,EppLib.Entities.PostalAddress,EppLib.Entities.ContactChange' EppLib.Entities.ContactInfoResponse' EppLib.Entities.Contact' EppLib.Entities.ContactBase<T>' EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheckExtension' EppLib.Tests.LocalTest' EppLib.Tests.NominetExtensionLocalTest' EppLib.Tests.IisExtensionLocalTest
-EppLib.Entities,Telephone,2,2,0,2,2,13,2,0,0,1,0,8,,EppLib.Entities.ContactChange' EppLib.Entities.ContactInfoResponse' EppLib.Entities.Contact' EppLib.Entities.ContactUpdate' EppLib.Entities.ContactCreate' EppLib.Tests.LocalTest' EppLib.Tests.NominetExtensionLocalTest' EppLib.Tests.IisExtensionLocalTest
-EppLib.Entities,Poll,0,2,2,0,1,20,3,0,0,-1,1,2,EppLib.Entities.PollResponse,EppLib.Tests.Program' EppLib.Tests.LocalTest
-EppLib.Entities,PollResponse,2,3,6,2,2,56,11,8,1,1,0,12,,EppLib.Entities.Poll' EppLib.Extensions.Nominet.Notifications.AbuseNotification' EppLib.Extensions.Nominet.Notifications.DomainCancellationNotification' EppLib.Extensions.Nominet.Notifications.DomainsSuspendedNotification' EppLib.Extensions.Nominet.Notifications.HandshakeRejectedNotification' EppLib.Extensions.Nominet.Notifications.DomainsReleasedNotification' EppLib.Extensions.Nominet.Notifications.ReferralRejecteNotification' EppLib.Extensions.Nominet.Notifications.ReferralAcceptNotification' EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification' EppLib.Tests.Program' EppLib.Tests.LocalTest' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Entities,PollType,2,0,0,2,0,5,0,0,0,-1,0,1,,EppLib.Tests.Program
-EppLib.Entities,Status,0,1,3,0,1,12,1,0,0,-1,0,3,,EppLib.Entities.ContactUpdate' EppLib.Entities.DomainUpdate' EppLib.Entities.HostUpdate
-EppLib.Extensions.Iis,IisContactCreate,0,2,2,0,2,17,2,0,1,-1,3,0,EppLib.Entities.Contact' EppLib.Extensions.Iis.IisContactCreateExtension' EppLib.Entities.ContactCreate,
-EppLib.Extensions.Iis,IisContactCreateExtension,0,1,2,0,1,18,3,0,1,-1,0,1,,EppLib.Extensions.Iis.IisContactCreate
-EppLib.Extensions.Iis,IisContactExtension,0,0,2,0,0,5,0,0,1,-1,0,2,,EppLib.Extensions.Iis.IisContactInfoResponse' EppLib.Tests.IisExtensionLocalTest
-EppLib.Extensions.Iis,IisContactInfo,1,3,0,0,2,18,3,0,0,0.67,1,0,EppLib.Extensions.Iis.IisContactInfoResponse,
-EppLib.Extensions.Iis,IisContactInfoResponse,1,3,1,0,1,51,6,0,2,0.67,3,2,EppLib.Extensions.Iis.IisContactExtension' EppLib.Entities.ContactInfoResponse' EppLib.Entities.Contact,EppLib.Extensions.Iis.IisContactInfo' EppLib.Tests.IisExtensionLocalTest
-EppLib.Extensions.Iis,IisContactUpdate,0,2,1,0,2,15,2,0,1,-1,2,0,EppLib.Extensions.Iis.IisContactUpdateExtension' EppLib.Entities.ContactUpdate,
-EppLib.Extensions.Iis,IisContactUpdateExtension,0,1,1,0,1,13,2,0,1,-1,0,1,,EppLib.Extensions.Iis.IisContactUpdate
-EppLib.Extensions.Iis,IisDomainExtension,0,0,5,0,0,8,0,0,1,-1,0,1,,EppLib.Extensions.Iis.IisDomainInfoResponse
-EppLib.Extensions.Iis,IisDomainInfo,1,3,1,0,2,23,4,0,0,0.67,1,0,EppLib.Extensions.Iis.IisDomainInfoResponse,
-EppLib.Extensions.Iis,IisDomainInfoResponse,1,3,1,0,1,77,11,0,2,0.67,3,1,EppLib.Extensions.Iis.IisDomainExtension' EppLib.Entities.DomainInfoResponse' EppLib.Entities.Domain,EppLib.Extensions.Iis.IisDomainInfo
-EppLib.Extensions.Iis,IisDomainUpdate,0,2,1,0,2,15,2,0,1,-1,2,0,EppLib.Extensions.Iis.IisDomainUpdateExtension' EppLib.Entities.DomainUpdate,
-EppLib.Extensions.Iis,IisDomainUpdateExtension,0,1,1,0,1,13,2,0,1,-1,0,1,,EppLib.Extensions.Iis.IisDomainUpdate
-EppLib.Extensions.Iis,IisExtensionBase,1,0,1,0,0,9,0,3,1,-1,0,0,,
-EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheck,1,5,0,0,4,31,6,0,0,0.6,1,1,EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckResponse,EppLib.Tests.LaunchPhaseExtensionLocalTest
-EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheckExtension,0,1,1,0,1,15,1,0,1,-1,0,0,,
-EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheckResponse,0,2,1,0,1,15,3,0,1,-1,0,2,,EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheck' EppLib.Tests.LaunchPhaseExtensionLocalTest
-EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheckResult,0,2,3,0,2,27,5,0,0,-1,0,1,,EppLib.Tests.LaunchPhaseExtensionLocalTest
-EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimKey,0,2,2,0,2,13,3,0,0,-1,0,1,,EppLib.Tests.LaunchPhaseExtensionLocalTest
-EppLib.Extensions.LaunchPhase.ClaimCreate,ClaimCreate,0,2,1,0,2,13,2,0,1,-1,1,1,EppLib.Entities.DomainCreate,EppLib.Tests.LaunchPhaseExtensionLocalTest
-EppLib.Extensions.LaunchPhase.ClaimCreate,ClaimCreateExtension,1,2,2,0,2,35,4,0,1,0,1,0,EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimNotice,
-EppLib.Extensions.LaunchPhase.ClaimCreate,ClaimNotice,0,0,4,0,0,7,0,0,0,-1,0,1,,EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreateExtension
-EppLib.Extensions.Nominet.ContactInfo,NominetDataQualityExtension,0,0,6,0,0,9,0,0,0,-1,0,2,,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.ContactInfo,NominetContactInfo,1,3,0,0,2,18,3,0,0,0.67,1,0,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse,
-EppLib.Extensions.Nominet.ContactInfo,NominetContactInfoResponse,2,3,2,0,1,123,21,0,2,0.67,6,2,EppLib.Extensions.Nominet.ContactInfo.NominetContactExtension' EppLib.Extensions.Nominet.ContactInfo.NominetDataQualityExtension' EppLib.Entities.ContactInfoResponse' EppLib.Entities.Contact' EppLib.Extensions.Nominet.CoType' EppLib.Extensions.Nominet.YesNoFlag,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfo' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.ContactInfo,NominetContactExtension,0,0,4,0,0,7,0,0,1,-1,0,2,,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.DomainCheck,NominetDomainCheck,0,3,3,0,3,24,3,0,1,-1,2,1,EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheckExtension' EppLib.Entities.DomainCheck,EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.DomainCheck,NominetDomainCheckExtension,0,2,3,0,1,90,18,0,1,-1,2,1,EppLib.Entities.PostalAddress' EppLib.Entities.PostalInfo,EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheck
-EppLib.Extensions.Nominet,NominetDirectRightsExtensionBase,2,0,2,0,0,15,0,1,1,-1,0,0,,
-EppLib.Extensions.Nominet,NominetDomainExtensionBase,1,0,1,0,0,10,0,2,1,-1,0,0,,
-EppLib.Extensions.Nominet,YesNoFlag,0,0,0,0,0,5,0,0,0,-1,0,4,,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Extensions.Nominet.Notifications.AbuseNotification' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreateExtension' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet,CoType,0,0,0,0,0,20,0,0,0,-1,0,3,,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreateExtension' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet,NominetContactExtensionBase,1,0,1,0,0,9,0,2,1,-1,0,0,,
-EppLib.Extensions.Nominet.Notifications,AbuseNotification,0,3,11,0,2,63,8,0,2,-1,2,1,EppLib.Entities.PollResponse' EppLib.Extensions.Nominet.YesNoFlag,EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.Notifications,DomainCancellationNotification,0,3,2,0,2,26,6,0,2,-1,1,1,EppLib.Entities.PollResponse,EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.Notifications,DomainsSuspendedNotification,0,3,3,0,2,42,9,0,2,-1,1,1,EppLib.Entities.PollResponse,EppLib.Tests.NominetExtensionLocalTest
+EppLib.Entities,PostalAddress,0,0,7,0,0,10,0,0,0,-1,0,3,,EppLib.Entities.PostalInfo' EppLib.Entities.ContactInfoResponse' EppLib.Entities.Contact
+EppLib.Entities,PostalAddressType,2,0,0,2,0,5,0,0,0,-1,0,1,,EppLib.Entities.Contact
+EppLib.Entities,PostalInfo,4,0,0,4,0,10,0,0,0,-1,1,6,EppLib.Entities.PostalAddress,EppLib.Entities.ContactBase<T>' EppLib.Entities.ContactChange' EppLib.Entities.Contact' EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheckExtension' EppLib.Entities.ContactInfoResponse' EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheck
+EppLib.Entities,Telephone,2,2,0,2,2,13,2,0,0,1,0,3,,EppLib.Entities.ContactChange' EppLib.Entities.ContactInfoResponse' EppLib.Entities.Contact
+EppLib.Entities,Poll,0,2,2,0,1,20,3,0,0,-1,2,0,EppLib.Entities.EppCommand<T>' EppLib.Entities.PollResponse,
+EppLib.Entities,PollResponse,2,3,6,2,2,56,11,8,1,1,1,9,EppLib.Entities.EppResponse,EppLib.Extensions.Nominet.Notifications.RegistrarChangeNotification' EppLib.Extensions.Nominet.Notifications.ReferralAcceptNotification' EppLib.Extensions.Nominet.Notifications.AbuseNotification' EppLib.Extensions.Nominet.Notifications.DomainCancellationNotification' EppLib.Extensions.Nominet.Notifications.ReferralRejecteNotification' EppLib.Extensions.Nominet.Notifications.DomainsSuspendedNotification' EppLib.Extensions.Nominet.Notifications.HandshakeRejectedNotification' EppLib.Extensions.Nominet.Notifications.DomainsReleasedNotification' EppLib.Entities.Poll
+EppLib.Entities,PollType,2,0,0,2,0,5,0,0,0,-1,0,0,,
+EppLib.Entities,Status,0,1,3,0,1,12,1,0,0,-1,0,7,,EppLib.Entities.EppDomainUpdateAddRemove' EppLib.Entities.EppHostUpdateAddRemove' EppLib.Entities.EppContactUpdateAddRemove' EppLib.Entities.Domain' EppLib.Entities.Host' EppLib.Entities.DomainInfoResponse' EppLib.Entities.HostInfoResponse
+EppLib.Extensions.Fury,FuryContactCreateExtension,1,2,0,0,2,32,6,0,1,0,1,0,EppLib.Extensions.Fury.FuryExtension,
+EppLib.Extensions.Fury,FuryContactUpdateExtension,2,2,0,0,2,40,2,0,1,1,1,0,EppLib.Extensions.Fury.FuryExtension,
+EppLib.Extensions.Fury,FuryDomainCreateExtension,1,2,0,0,2,19,2,0,1,1,1,0,EppLib.Extensions.Fury.FuryExtension,
+EppLib.Extensions.Fury,FuryDomainUpdateExtension,1,2,0,0,2,33,2,0,1,1,1,0,EppLib.Extensions.Fury.FuryExtension,
+EppLib.Extensions.Fury,FuryExtension,1,0,1,0,0,10,0,5,1,-1,1,5,EppLib.Entities.EppExtension,EppLib.Extensions.Fury.FuryDomainCreateExtension' EppLib.Extensions.Fury.FuryGetAgreementExtension' EppLib.Extensions.Fury.FuryDomainUpdateExtension' EppLib.Extensions.Fury.FuryContactCreateExtension' EppLib.Extensions.Fury.FuryContactUpdateExtension
+EppLib.Extensions.Fury,FuryGetAgreementExtension,2,2,0,0,2,25,2,0,2,1,1,1,EppLib.Extensions.Fury.FuryExtension,EppLib.Extensions.Fury.GetAgreement
+EppLib.Extensions.Fury,GetAgreement,2,3,0,0,3,23,3,0,0,1,4,0,EppLib.Entities.EppBase<T>' EppLib.Entities.EppExtension' EppLib.Extensions.Fury.FuryGetAgreementExtension' EppLib.Extensions.Fury.GetAgreementResponse,
+EppLib.Extensions.Fury,GetAgreementResponse,3,2,0,3,1,38,6,0,1,1,1,1,EppLib.Entities.EppResponse,EppLib.Extensions.Fury.GetAgreement
+EppLib.Extensions.Idn,IdnExtension,3,2,1,0,2,23,2,0,1,1,1,0,EppLib.Entities.EppExtension,
+EppLib.Extensions.Iis,IisContactCreate,0,2,2,0,2,17,2,0,1,-1,3,0,EppLib.Entities.Contact' EppLib.Entities.ContactCreate' EppLib.Extensions.Iis.IisContactCreateExtension,
+EppLib.Extensions.Iis,IisContactCreateExtension,0,1,2,0,1,18,3,0,1,-1,1,1,EppLib.Extensions.Iis.IisExtensionBase,EppLib.Extensions.Iis.IisContactCreate
+EppLib.Extensions.Iis,IisContactExtension,0,0,2,0,0,5,0,0,1,-1,1,1,EppLib.Entities.Contact,EppLib.Extensions.Iis.IisContactInfoResponse
+EppLib.Extensions.Iis,IisContactInfo,1,3,0,0,2,18,3,0,0,0.67,2,0,EppLib.Entities.ContactBase<T>' EppLib.Extensions.Iis.IisContactInfoResponse,
+EppLib.Extensions.Iis,IisContactInfoResponse,1,3,1,0,1,51,6,0,2,0.67,2,1,EppLib.Entities.ContactInfoResponse' EppLib.Extensions.Iis.IisContactExtension,EppLib.Extensions.Iis.IisContactInfo
+EppLib.Extensions.Iis,IisContactUpdate,0,2,1,0,2,15,2,0,1,-1,2,0,EppLib.Entities.ContactUpdate' EppLib.Extensions.Iis.IisContactUpdateExtension,
+EppLib.Extensions.Iis,IisContactUpdateExtension,0,1,1,0,1,13,2,0,1,-1,1,1,EppLib.Extensions.Iis.IisExtensionBase,EppLib.Extensions.Iis.IisContactUpdate
+EppLib.Extensions.Iis,IisDomainExtension,0,0,5,0,0,8,0,0,1,-1,1,1,EppLib.Entities.Domain,EppLib.Extensions.Iis.IisDomainInfoResponse
+EppLib.Extensions.Iis,IisDomainInfo,1,3,1,0,2,23,4,0,0,1,2,0,EppLib.Entities.DomainBase<T>' EppLib.Extensions.Iis.IisDomainInfoResponse,
+EppLib.Extensions.Iis,IisDomainInfoResponse,1,3,1,0,1,77,11,0,2,0.67,2,1,EppLib.Entities.DomainInfoResponse' EppLib.Extensions.Iis.IisDomainExtension,EppLib.Extensions.Iis.IisDomainInfo
+EppLib.Extensions.Iis,IisDomainUpdate,0,2,1,0,2,15,2,0,1,-1,2,0,EppLib.Entities.DomainUpdate' EppLib.Extensions.Iis.IisDomainUpdateExtension,
+EppLib.Extensions.Iis,IisDomainUpdateExtension,0,1,1,0,1,13,2,0,1,-1,1,1,EppLib.Extensions.Iis.IisExtensionBase,EppLib.Extensions.Iis.IisDomainUpdate
+EppLib.Extensions.Iis,IisExtensionBase,1,0,1,0,0,9,0,3,1,-1,1,3,EppLib.Entities.EppExtension,EppLib.Extensions.Iis.IisContactCreateExtension' EppLib.Extensions.Iis.IisDomainUpdateExtension' EppLib.Extensions.Iis.IisContactUpdateExtension
+EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheck,1,5,0,0,4,31,6,0,0,0.8,3,0,EppLib.Entities.DomainBase<T>' EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckExtension' EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckResponse,
+EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheckExtension,0,1,1,0,1,15,1,0,1,-1,1,1,EppLib.Entities.EppExtension,EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheck
+EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheckResponse,0,2,1,0,1,15,3,0,1,-1,2,1,EppLib.Entities.EppResponse' EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckResult,EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheck
+EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimCheckResult,0,2,3,0,2,27,5,0,0,-1,1,1,EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimKey,EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckResponse
+EppLib.Extensions.LaunchPhase.ClaimCheck,ClaimKey,0,2,2,0,2,13,3,0,0,-1,0,1,,EppLib.Extensions.LaunchPhase.ClaimCheck.ClaimCheckResult
+EppLib.Extensions.LaunchPhase.ClaimCreate,ClaimCreate,0,2,1,0,2,13,2,0,1,-1,3,0,EppLib.Entities.DomainCreate' EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreateExtension' EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimNotice,
+EppLib.Extensions.LaunchPhase.ClaimCreate,ClaimCreateExtension,1,2,2,0,2,35,4,0,1,1,2,1,EppLib.Entities.EppExtension' EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimNotice,EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreate
+EppLib.Extensions.LaunchPhase.ClaimCreate,ClaimNotice,0,0,4,0,0,7,0,0,0,-1,0,2,,EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreate' EppLib.Extensions.LaunchPhase.ClaimCreate.ClaimCreateExtension
+EppLib.Extensions.Namestore,NamestoreCreateExtension,1,2,0,1,2,17,3,0,1,0,1,0,EppLib.Extensions.Namestore.NamestoreExtension,
+EppLib.Extensions.Namestore,NamestoreExtension,1,0,1,0,0,9,0,1,1,-1,1,1,EppLib.Entities.EppExtension,EppLib.Extensions.Namestore.NamestoreCreateExtension
+EppLib.Extensions.Nominet.ContactInfo,NominetDataQualityExtension,0,0,6,0,0,9,0,0,0,-1,0,1,,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse
+EppLib.Extensions.Nominet.ContactInfo,NominetContactInfo,1,3,0,0,2,18,3,0,0,0.67,2,0,EppLib.Entities.ContactBase<T>' EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse,
+EppLib.Extensions.Nominet.ContactInfo,NominetContactInfoResponse,2,3,2,0,1,123,21,0,2,0.67,5,1,EppLib.Entities.ContactInfoResponse' EppLib.Extensions.Nominet.ContactInfo.NominetDataQualityExtension' EppLib.Extensions.Nominet.ContactInfo.NominetContactExtension' EppLib.Extensions.Nominet.YesNoFlag' EppLib.Extensions.Nominet.CoType,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfo
+EppLib.Extensions.Nominet.ContactInfo,NominetContactExtension,0,0,4,0,0,7,0,0,1,-1,3,1,EppLib.Entities.Contact' EppLib.Extensions.Nominet.YesNoFlag' EppLib.Extensions.Nominet.CoType,EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse
+EppLib.Extensions.Nominet.DomainCheck,NominetDomainCheck,0,3,3,0,3,24,3,0,1,-1,3,0,EppLib.Entities.DomainCheck' EppLib.Entities.PostalInfo' EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheckExtension,
+EppLib.Extensions.Nominet.DomainCheck,NominetDomainCheckExtension,0,2,3,0,1,90,18,0,1,-1,3,1,EppLib.Entities.EppException' EppLib.Entities.PostalInfo' EppLib.Extensions.Nominet.NominetDirectRightsExtensionBase,EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheck
+EppLib.Extensions.Nominet,NominetDirectRightsExtensionBase,2,0,2,0,0,15,0,1,1,-1,1,1,EppLib.Entities.EppExtension,EppLib.Extensions.Nominet.DomainCheck.NominetDomainCheckExtension
+EppLib.Extensions.Nominet,NominetDomainExtensionBase,1,0,1,0,0,10,0,2,1,-1,1,2,EppLib.Entities.EppExtension,EppLib.Extensions.Nominet.DomainCreate.NominetDomainCreateExtension' EppLib.Extensions.Nominet.DomainUpdate.NominetDomainUpdateExtension
+EppLib.Extensions.Nominet,YesNoFlag,0,0,0,0,0,5,0,0,0,-1,0,7,,EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate' EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdate' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreateExtension' EppLib.Extensions.Nominet.ContactInfo.NominetContactExtension' EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse' EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdateExtension' EppLib.Extensions.Nominet.Notifications.AbuseNotification
+EppLib.Extensions.Nominet,CoType,0,0,0,0,0,20,0,0,0,-1,0,6,,EppLib.Extensions.Nominet.ContactCreate.NominetContactCreateExtension' EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdate' EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdateExtension' EppLib.Extensions.Nominet.ContactInfo.NominetContactExtension' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate' EppLib.Extensions.Nominet.ContactInfo.NominetContactInfoResponse
+EppLib.Extensions.Nominet,NominetContactExtensionBase,1,0,1,0,0,9,0,2,1,-1,1,2,EppLib.Entities.EppExtension,EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdateExtension' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreateExtension
+EppLib.Extensions.Nominet.Notifications,AbuseNotification,0,3,11,0,2,63,8,0,2,-1,2,0,EppLib.Entities.PollResponse' EppLib.Extensions.Nominet.YesNoFlag,
+EppLib.Extensions.Nominet.Notifications,DomainCancellationNotification,0,3,2,0,2,26,6,0,2,-1,1,0,EppLib.Entities.PollResponse,
+EppLib.Extensions.Nominet.Notifications,DomainsSuspendedNotification,0,3,3,0,2,42,9,0,2,-1,1,0,EppLib.Entities.PollResponse,
 EppLib.Extensions.Nominet.Notifications,HandshakeRejectedNotification,0,3,4,0,2,46,10,0,2,-1,1,0,EppLib.Entities.PollResponse,
-EppLib.Extensions.Nominet.Notifications,DomainsReleasedNotification,0,3,4,0,2,46,10,0,2,-1,1,1,EppLib.Entities.PollResponse,EppLib.Tests.LocalTest
+EppLib.Extensions.Nominet.Notifications,DomainsReleasedNotification,0,3,4,0,2,46,10,0,2,-1,1,0,EppLib.Entities.PollResponse,
 EppLib.Extensions.Nominet.Notifications,ReferralRejecteNotification,0,3,2,0,2,26,6,0,2,-1,1,0,EppLib.Entities.PollResponse,
-EppLib.Extensions.Nominet.Notifications,ReferralAcceptNotification,0,3,1,0,2,17,4,0,2,-1,2,0,EppLib.Entities.DomainCreateResponse' EppLib.Entities.PollResponse,
-EppLib.Extensions.Nominet.Notifications,RegistrarChangeNotification,0,3,5,0,2,57,11,0,2,-1,3,0,EppLib.Entities.DomainInfoResponse' EppLib.Entities.ContactInfoResponse' EppLib.Entities.PollResponse,
-EppLib.Extensions.Cira,CiraContactUpdateExtension,3,1,0,3,1,25,4,0,1,0,0,0,,
-EppLib.Extensions.Cira,CiraAgreementExtension,1,1,0,0,1,15,2,0,1,0,0,0,,
-EppLib.Extensions.Cira,CiraContactCreate,0,2,6,0,2,27,2,0,1,-1,3,1,EppLib.Entities.Contact' EppLib.Extensions.Cira.CiraCreateExtension' EppLib.Entities.ContactCreate,EppLib.Tests.Program
-EppLib.Extensions.Cira,CiraTransferExtension,1,1,3,0,1,39,6,0,1,0,0,1,,EppLib.Extensions.Cira.CiraDomainTransfer
-EppLib.Extensions.Cira,CiraDomainTransfer,0,4,0,0,4,24,4,0,1,-1,2,1,EppLib.Extensions.Cira.CiraTransferExtension' EppLib.Entities.DomainTransfer,EppLib.Tests.Program
-EppLib.Extensions.Cira,CiraCreateExtension,6,1,0,6,1,43,7,0,1,0,0,1,,EppLib.Extensions.Cira.CiraContactCreate
-EppLib.Extensions.Cira,CiraExtensionBase,1,0,1,0,0,9,0,4,1,-1,0,0,,
-EppLib.Extensions.Cira,GetAgreement,0,2,0,0,2,16,2,0,0,-1,1,1,EppLib.Extensions.Cira.GetAgreementResponse,EppLib.Tests.Program
-EppLib.Extensions.Cira,GetAgreementResponse,3,2,0,3,1,34,6,0,1,1,0,2,,EppLib.Extensions.Cira.GetAgreement' EppLib.Tests.Program
-EppLib,Debug,1,3,0,0,3,16,3,0,0,0,1,1,EppLib.IDebugger,EppLib.TcpTransport
-EppLib,Service,1,5,0,0,4,39,5,0,0,0,1,1,EppLib.TcpTransport,EppLib.Tests.Program
-EppLib,TcpTransport,7,8,0,0,6,113,15,0,0,0.25,1,2,EppLib.Debug,EppLib.Service' EppLib.Tests.Program
-EppLib,IDebugger,0,2,0,0,0,5,2,1,0,-1,0,1,,EppLib.Debug
-EppLib,SimpleLogger,1,3,0,1,2,25,3,0,1,0,0,0,,
-EppLib.Extensions.Nominet.ContactCreate,NominetContactCreate,0,2,4,0,2,21,2,0,1,-1,3,0,EppLib.Entities.Contact' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreateExtension' EppLib.Entities.ContactCreate,
-EppLib.Extensions.Nominet.ContactCreate,NominetContactCreateExtension,0,1,4,0,1,28,5,0,2,-1,2,1,EppLib.Extensions.Nominet.CoType' EppLib.Extensions.Nominet.YesNoFlag,EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate
-EppLib.Extensions.Nominet.ContactUpdate,NominetContactUpdate,0,2,4,0,2,21,2,0,1,-1,2,1,EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdateExtension' EppLib.Entities.ContactUpdate,EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.ContactUpdate,NominetContactUpdateExtension,0,1,4,0,1,28,5,0,2,-1,0,1,,EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdate
-EppLib.Extensions.Nominet.DomainInfo,NominetDomainExtension,0,0,10,0,0,13,0,0,1,-1,0,2,,EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfoResponse' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.DomainInfo,NominetDomainInfo,1,3,1,0,2,23,4,0,0,0.67,1,0,EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfoResponse,
-EppLib.Extensions.Nominet.DomainInfo,NominetDomainInfoResponse,1,3,1,0,1,92,15,0,2,0.67,3,2,EppLib.Extensions.Nominet.DomainInfo.NominetDomainExtension' EppLib.Entities.DomainInfoResponse' EppLib.Entities.Domain,EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfo' EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.DomainCreate,NominetDomainCreate,0,2,8,0,2,30,2,0,1,-1,2,1,EppLib.Extensions.Nominet.DomainCreate.NominetDomainCreateExtension' EppLib.Entities.DomainCreate,EppLib.Tests.NominetExtensionLocalTest
-EppLib.Extensions.Nominet.DomainCreate,NominetDomainCreateExtension,0,1,8,0,1,52,10,0,2,-1,0,1,,EppLib.Extensions.Nominet.DomainCreate.NominetDomainCreate
-EppLib.Extensions.Nominet.DomainUpdate,NominetDomainUpdate,0,2,9,0,2,31,2,0,1,-1,2,0,EppLib.Extensions.Nominet.DomainUpdate.NominetDomainUpdateExtension' EppLib.Entities.DomainUpdate,
-EppLib.Extensions.Nominet.DomainUpdate,NominetDomainUpdateExtension,0,1,9,0,1,56,11,0,2,-1,0,1,,EppLib.Extensions.Nominet.DomainUpdate.NominetDomainUpdate
-EppLib.Extensions.SecDNS,SecDNSCreate,0,1,3,0,1,25,3,0,1,-1,1,1,EppLib.Extensions.SecDNS.SecDNSData,EppLib.Tests.SecDNSExtensionLocalTest
-EppLib.Extensions.SecDNS,SecDNSAlgorithm,0,0,0,0,0,11,0,0,0,-1,0,1,,EppLib.Tests.SecDNSExtensionLocalTest
-EppLib.Extensions.SecDNS,SecDNSData,0,1,3,0,1,23,1,0,0,-1,0,2,,EppLib.Extensions.SecDNS.SecDNSCreate' EppLib.Extensions.SecDNS.SecDNSUpdate
-EppLib.Extensions.SecDNS,SecDNSUpdate,0,1,3,0,1,33,5,0,1,-1,1,1,EppLib.Extensions.SecDNS.SecDNSData,EppLib.Tests.SecDNSExtensionLocalTest
-EppLib.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
+EppLib.Extensions.Nominet.Notifications,ReferralAcceptNotification,0,3,1,0,2,17,4,0,2,-1,3,0,EppLib.Entities.DomainCreateResponse' EppLib.Entities.DomainCreateResult' EppLib.Entities.PollResponse,
+EppLib.Extensions.Nominet.Notifications,RegistrarChangeNotification,0,3,5,0,2,57,11,0,2,-1,5,0,EppLib.Entities.ContactInfoResponse' EppLib.Entities.Contact' EppLib.Entities.Domain' EppLib.Entities.DomainInfoResponse' EppLib.Entities.PollResponse,
+EppLib.Extensions.Cira,CiraContactUpdateExtension,3,1,0,3,1,25,4,0,1,0,1,0,EppLib.Extensions.Cira.CiraExtensionBase,
+EppLib.Extensions.Cira,CiraAgreementExtension,1,1,0,0,1,15,2,0,1,0,1,1,EppLib.Extensions.Cira.CiraExtensionBase,EppLib.Extensions.Cira.GetAgreement
+EppLib.Extensions.Cira,CiraContactCreate,0,2,6,0,2,27,2,0,1,-1,3,0,EppLib.Entities.Contact' EppLib.Entities.ContactCreate' EppLib.Extensions.Cira.CiraCreateExtension,
+EppLib.Extensions.Cira,CiraTransferExtension,1,1,3,0,1,39,6,0,1,0,1,1,EppLib.Extensions.Cira.CiraExtensionBase,EppLib.Extensions.Cira.CiraDomainTransfer
+EppLib.Extensions.Cira,CiraDomainTransfer,0,4,0,0,4,24,4,0,1,-1,2,0,EppLib.Entities.DomainTransfer' EppLib.Extensions.Cira.CiraTransferExtension,
+EppLib.Extensions.Cira,CiraCreateExtension,6,1,0,6,1,43,7,0,1,0,1,1,EppLib.Extensions.Cira.CiraExtensionBase,EppLib.Extensions.Cira.CiraContactCreate
+EppLib.Extensions.Cira,CiraExtensionBase,1,0,1,0,0,9,0,4,1,-1,1,4,EppLib.Entities.EppExtension,EppLib.Extensions.Cira.CiraContactUpdateExtension' EppLib.Extensions.Cira.CiraCreateExtension' EppLib.Extensions.Cira.CiraAgreementExtension' EppLib.Extensions.Cira.CiraTransferExtension
+EppLib.Extensions.Cira,GetAgreement,0,2,0,0,2,16,2,0,0,-1,4,0,EppLib.Entities.EppBase<T>' EppLib.Entities.EppExtension' EppLib.Extensions.Cira.CiraAgreementExtension' EppLib.Extensions.Cira.GetAgreementResponse,
+EppLib.Extensions.Cira,GetAgreementResponse,3,2,0,3,1,34,6,0,1,1,1,1,EppLib.Entities.EppResponse,EppLib.Extensions.Cira.GetAgreement
+EppLib,Debug,1,3,0,0,3,16,3,0,0,0,2,1,EppLib.IDebugger' EppLib.SimpleLogger,EppLib.TcpTransport
+EppLib,ITransport,0,4,0,0,0,7,4,1,0,-1,0,2,,EppLib.TcpTransport' EppLib.Service
+EppLib,Service,1,5,0,0,4,39,5,0,0,0.4,3,0,EppLib.Entities.EppBase<T>' EppLib.Entities.EppResponse' EppLib.ITransport,
+EppLib,TcpTransport,7,8,0,0,6,113,15,0,1,0.25,2,0,EppLib.Debug' EppLib.ITransport,
+EppLib,IDebugger,0,2,0,0,0,5,2,1,0,-1,0,2,,EppLib.Debug' EppLib.SimpleLogger
+EppLib,SimpleLogger,1,3,0,1,2,25,3,0,1,0.67,1,1,EppLib.IDebugger,EppLib.Debug
+EppLib.Extensions.Nominet.ContactCreate,NominetContactCreate,0,2,4,0,2,21,2,0,1,-1,5,0,EppLib.Entities.Contact' EppLib.Entities.ContactCreate' EppLib.Extensions.Nominet.YesNoFlag' EppLib.Extensions.Nominet.CoType' EppLib.Extensions.Nominet.ContactCreate.NominetContactCreateExtension,
+EppLib.Extensions.Nominet.ContactCreate,NominetContactCreateExtension,0,1,4,0,1,28,5,0,2,-1,3,1,EppLib.Extensions.Nominet.YesNoFlag' EppLib.Extensions.Nominet.CoType' EppLib.Extensions.Nominet.NominetContactExtensionBase,EppLib.Extensions.Nominet.ContactCreate.NominetContactCreate
+EppLib.Extensions.Nominet.ContactUpdate,NominetContactUpdate,0,2,4,0,2,21,2,0,1,-1,4,0,EppLib.Entities.ContactUpdate' EppLib.Extensions.Nominet.YesNoFlag' EppLib.Extensions.Nominet.CoType' EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdateExtension,
+EppLib.Extensions.Nominet.ContactUpdate,NominetContactUpdateExtension,0,1,4,0,1,28,5,0,2,-1,3,1,EppLib.Extensions.Nominet.YesNoFlag' EppLib.Extensions.Nominet.CoType' EppLib.Extensions.Nominet.NominetContactExtensionBase,EppLib.Extensions.Nominet.ContactUpdate.NominetContactUpdate
+EppLib.Extensions.Nominet.DomainInfo,NominetDomainExtension,0,0,10,0,0,13,0,0,1,-1,1,1,EppLib.Entities.Domain,EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfoResponse
+EppLib.Extensions.Nominet.DomainInfo,NominetDomainInfo,1,3,1,0,2,23,4,0,0,1,2,0,EppLib.Entities.DomainBase<T>' EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfoResponse,
+EppLib.Extensions.Nominet.DomainInfo,NominetDomainInfoResponse,1,3,1,0,1,92,15,0,2,0.67,2,1,EppLib.Entities.DomainInfoResponse' EppLib.Extensions.Nominet.DomainInfo.NominetDomainExtension,EppLib.Extensions.Nominet.DomainInfo.NominetDomainInfo
+EppLib.Extensions.Nominet.DomainCreate,NominetDomainCreate,0,2,8,0,2,30,2,0,1,-1,2,0,EppLib.Entities.DomainCreate' EppLib.Extensions.Nominet.DomainCreate.NominetDomainCreateExtension,
+EppLib.Extensions.Nominet.DomainCreate,NominetDomainCreateExtension,0,1,8,0,1,52,10,0,2,-1,1,1,EppLib.Extensions.Nominet.NominetDomainExtensionBase,EppLib.Extensions.Nominet.DomainCreate.NominetDomainCreate
+EppLib.Extensions.Nominet.DomainUpdate,NominetDomainUpdate,0,2,9,0,2,31,2,0,1,-1,2,0,EppLib.Entities.DomainUpdate' EppLib.Extensions.Nominet.DomainUpdate.NominetDomainUpdateExtension,
+EppLib.Extensions.Nominet.DomainUpdate,NominetDomainUpdateExtension,0,1,9,0,1,56,11,0,2,-1,1,1,EppLib.Extensions.Nominet.NominetDomainExtensionBase,EppLib.Extensions.Nominet.DomainUpdate.NominetDomainUpdate
+EppLib.Extensions.SecDNS,SecDNSCreate,0,1,3,0,1,25,3,0,1,-1,2,0,EppLib.Entities.EppExtension' EppLib.Extensions.SecDNS.SecDNSData,
+EppLib.Extensions.SecDNS,SecDNSAlgorithm,0,0,0,0,0,11,0,0,0,-1,0,1,,EppLib.Extensions.SecDNS.SecDNSData
+EppLib.Extensions.SecDNS,SecDNSData,0,1,3,0,1,23,1,0,0,-1,1,2,EppLib.Extensions.SecDNS.SecDNSAlgorithm,EppLib.Extensions.SecDNS.SecDNSCreate' EppLib.Extensions.SecDNS.SecDNSUpdate
+EppLib.Extensions.SecDNS,SecDNSUpdate,0,1,3,0,1,33,5,0,1,-1,2,0,EppLib.Entities.EppExtension' EppLib.Extensions.SecDNS.SecDNSData,
+EppLib.Extensions.Smallregistry.ContactCreate,SmallregistryContactCreate,0,2,3,0,2,33,3,0,1,-1,4,0,EppLib.Entities.Contact' EppLib.Entities.ContactCreate' EppLib.Extensions.Smallregistry.ContactCreate.SmallregistryContactPMCreateExtension' EppLib.Extensions.Smallregistry.SmallregistryContactPPCreateExtension,
+EppLib.Extensions.Smallregistry.ContactCreate,SmallregistryContactPMCreateExtension,0,1,1,0,1,16,2,0,1,-1,1,1,EppLib.Extensions.Smallregistry.SmallregistryExtensionBase,EppLib.Extensions.Smallregistry.ContactCreate.SmallregistryContactCreate
+EppLib.Extensions.Smallregistry,SmallregistryContactPPCreateExtension,0,1,2,0,1,21,3,0,1,-1,1,1,EppLib.Extensions.Smallregistry.SmallregistryExtensionBase,EppLib.Extensions.Smallregistry.ContactCreate.SmallregistryContactCreate
+EppLib.Extensions.Smallregistry,SmallregistryExtensionBase,1,0,1,0,0,9,0,2,1,-1,1,2,EppLib.Entities.EppExtension,EppLib.Extensions.Smallregistry.ContactCreate.SmallregistryContactPMCreateExtension' EppLib.Extensions.Smallregistry.SmallregistryContactPPCreateExtension

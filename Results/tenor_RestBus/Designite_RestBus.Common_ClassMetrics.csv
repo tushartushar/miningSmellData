@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-RestBus.Common.Amqp,AmqpConnectionInfo,0,1,2,0,1,25,6,0,0,-1,0,3,,RestBus.RabbitMQ.Client.ConnectionManager' RestBus.RabbitMQ.Client.RestBusClient' RestBus.RabbitMQ.Subscription.RestBusSubscriber
-RestBus.Common.Amqp,MessagingConfiguration,0,0,4,0,0,29,0,0,0,-1,0,3,,RestBus.RabbitMQ.AmqpUtils' RestBus.RabbitMQ.Client.RestBusClient' RestBus.RabbitMQ.Subscription.RestBusSubscriber
-RestBus.Common.Amqp,ExchangeKind,0,0,0,0,0,8,0,0,0,-1,0,4,,RestBus.RabbitMQ.AmqpUtils' RestBus.RabbitMQ.BasicMessageMapper' RestBus.RabbitMQ.Client.RestBusClient' RestBus.Common.Amqp.IMessageMapper
-RestBus.Common.Amqp,IMessageMapper,0,3,3,0,0,9,3,1,0,-1,1,3,RestBus.Common.Amqp.ExchangeKind,RestBus.RabbitMQ.AmqpUtils' RestBus.RabbitMQ.Client.RestBusClient' RestBus.RabbitMQ.Subscription.RestBusSubscriber
-RestBus.Common,SequenceGenerator,2,4,0,0,4,47,6,0,0,0.5,0,1,,RestBus.RabbitMQ.Client.RestBusClient
-RestBus.Common,Shared,3,1,0,2,1,16,1,0,0,0,0,2,,RestBus.RabbitMQ.Subscription.RestBusSubscriber' RestBus.Common.Http.HttpHelpers
+RestBus.Common.Amqp,AmqpConnectionInfo,0,1,2,0,1,25,6,0,0,-1,0,1,,RestBus.Common.Amqp.IMessageMapper
+RestBus.Common.Amqp,MessagingConfiguration,0,0,4,0,0,29,0,0,0,-1,0,1,,RestBus.Common.Amqp.IMessageMapper
+RestBus.Common.Amqp,ExchangeKind,0,0,0,0,0,8,0,0,0,-1,0,1,,RestBus.Common.Amqp.IMessageMapper
+RestBus.Common.Amqp,IMessageMapper,0,3,3,0,0,9,3,1,0,-1,3,0,RestBus.Common.Amqp.AmqpConnectionInfo' RestBus.Common.Amqp.MessagingConfiguration' RestBus.Common.Amqp.ExchangeKind,
+RestBus.Common,SequenceGenerator,2,4,0,0,4,47,6,0,0,0.5,0,0,,
+RestBus.Common,Shared,3,1,0,2,1,16,1,0,0,0,0,1,,RestBus.Common.Http.HttpHelpers
 RestBus.Common,CommonUtils,0,0,0,0,0,28,0,0,0,-1,0,0,,
-RestBus.Common,MessageContext,0,0,4,0,0,10,0,0,0,-1,0,4,,RestBus.RabbitMQ.Subscription.RestBusSubscriber' RestBus.Common.IRestBusSubscriber' RestBus.ServiceStack.RestBusHost' RestBus.WebApi.RestBusHost
-RestBus.Common,HttpMessageReader,8,3,1,0,3,57,10,0,0,0,0,2,,RestBus.Common.HttpRequestPacket' RestBus.Common.HttpResponsePacket
-RestBus.Common,HttpPacket,4,7,0,3,1,74,12,2,0,0.43,0,1,,RestBus.Common.Http.HttpHelpers
-RestBus.Common,HttpRequestPacket,2,5,0,2,4,155,21,0,1,0.4,1,5,RestBus.Common.HttpMessageReader,RestBus.RabbitMQ.Client.RestBusClient' RestBus.RabbitMQ.Subscription.RestBusSubscriber' RestBus.Common.Http.HttpHelpers' RestBus.ServiceStack.RequestWrapper' RestBus.WebApi.RestBusHost
-RestBus.Common,HttpResponsePacket,2,3,0,2,3,94,11,0,1,0.67,1,7,RestBus.Common.HttpMessageReader,RestBus.RabbitMQ.Client.RPCStrategyHelpers' RestBus.RabbitMQ.Client.ExpectedResponse' RestBus.RabbitMQ.Subscription.RestBusSubscriber' RestBus.Common.IRestBusSubscriber' RestBus.Common.Http.HttpHelpers' RestBus.ServiceStack.RestBusHost' RestBus.WebApi.RestBusHost
-RestBus.Common,IRestBusSubscriber,0,3,2,0,0,16,3,1,0,-1,2,2,RestBus.Common.MessageContext' RestBus.Common.HttpResponsePacket,RestBus.ServiceStack.RestBusHost' RestBus.WebApi.RestBusHost
-RestBus.Common,InterlockedBoolean,3,13,2,0,13,147,16,0,0,0.54,0,4,,RestBus.RabbitMQ.ChannelPooling.AmqpChannelPooler' RestBus.RabbitMQ.Subscription.RestBusSubscriber' RestBus.ServiceStack.RestBusHost' RestBus.WebApi.RestBusHost
-RestBus.Common,SynchronizedRandom,3,5,1,0,4,45,5,0,0,0.4,0,2,,RestBus.RabbitMQ.AmqpUtils' RestBus.RabbitMQ.Client.CallbackQueueRPCStrategy
-RestBus.Common.Http,HttpHelpers,1,5,0,0,3,136,23,0,0,1,4,0,RestBus.Common.HttpPacket' RestBus.Common.Shared' RestBus.Common.HttpRequestPacket' RestBus.Common.HttpResponsePacket,
+RestBus.Common,MessageContext,0,0,4,0,0,10,0,0,0,-1,1,1,RestBus.Common.HttpRequestPacket,RestBus.Common.IRestBusSubscriber
+RestBus.Common,HttpMessageReader,8,3,1,0,3,57,10,0,0,0,0,2,,RestBus.Common.HttpResponsePacket' RestBus.Common.HttpRequestPacket
+RestBus.Common,HttpPacket,4,7,0,3,1,74,13,2,0,0.43,0,3,,RestBus.Common.HttpResponsePacket' RestBus.Common.HttpRequestPacket' RestBus.Common.Http.HttpHelpers
+RestBus.Common,HttpRequestPacket,2,5,0,2,4,155,22,0,1,0.4,2,2,RestBus.Common.HttpMessageReader' RestBus.Common.HttpPacket,RestBus.Common.MessageContext' RestBus.Common.Http.HttpHelpers
+RestBus.Common,HttpResponsePacket,2,3,0,2,3,94,12,0,1,0.67,2,2,RestBus.Common.HttpMessageReader' RestBus.Common.HttpPacket,RestBus.Common.IRestBusSubscriber' RestBus.Common.Http.HttpHelpers
+RestBus.Common,IRestBusSubscriber,0,3,2,0,0,16,3,1,0,-1,2,0,RestBus.Common.MessageContext' RestBus.Common.HttpResponsePacket,
+RestBus.Common,InterlockedBoolean,3,13,2,0,13,147,16,0,0,0.54,0,0,,
+RestBus.Common,SynchronizedRandom,3,5,1,0,4,45,5,0,0,0.4,0,0,,
+RestBus.Common.Http,HttpHelpers,1,5,0,0,3,136,26,0,0,1,4,0,RestBus.Common.Shared' RestBus.Common.HttpPacket' RestBus.Common.HttpRequestPacket' RestBus.Common.HttpResponsePacket,

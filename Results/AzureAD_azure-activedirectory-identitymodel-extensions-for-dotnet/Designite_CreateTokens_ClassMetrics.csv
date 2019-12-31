@@ -1,0 +1,13 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RuntimeCommon,TestConfig,0,3,6,0,3,82,13,0,0,-1,5,3,RuntimeCommon.TestLogger' RuntimeCommon.TestRun' RuntimeCommon.TestConfig' RuntimeCommon.TestLogger' RuntimeCommon.TestRun,RuntimeCommon.TestRunner' RuntimeCommon.TestUtilities' RuntimeTests.CreateTokens
+RuntimeCommon,TestData,0,0,10,0,0,51,0,0,0,-1,2,1,RuntimeCommon.TestKeyMaterial' RuntimeCommon.TestKeyMaterial,RuntimeTests.CreateTokens
+RuntimeCommon,TestKeyMaterial,0,0,4,0,0,22,0,0,0,-1,0,1,,RuntimeCommon.TestData
+RuntimeCommon,TestLogger,1,1,1,0,1,9,1,0,0,0,0,2,,RuntimeCommon.TestRun' RuntimeCommon.TestConfig
+RuntimeCommon,TestRun,0,0,5,0,0,8,0,0,0,-1,2,3,RuntimeCommon.TestLogger' RuntimeCommon.TestLogger,RuntimeCommon.TestRunner' RuntimeCommon.TestConfig' RuntimeCommon.TestUtilities
+RuntimeCommon,TestRunData,0,0,2,0,0,5,0,1,0,-1,0,3,,RuntimeCommon.TokenTestRunData' RuntimeCommon.TestRunner' RuntimeCommon.TokenTestExecutors
+RuntimeCommon,TestRunner,0,3,0,0,1,69,9,0,0,-1,6,1,RuntimeCommon.TestConfig' RuntimeCommon.TestRun' RuntimeCommon.TestRunData' RuntimeCommon.TestConfig' RuntimeCommon.TestRun' RuntimeCommon.TestRunData,RuntimeTests.CreateTokens
+RuntimeCommon,TestUtilities,0,2,0,0,2,66,11,0,0,-1,4,0,RuntimeCommon.TestConfig' RuntimeCommon.TestRun' RuntimeCommon.TestConfig' RuntimeCommon.TestRun,
+RuntimeCommon,TokenTestExecutors,8,16,0,0,16,268,40,0,0,0.94,4,1,RuntimeCommon.TestRunData' RuntimeCommon.TokenTestRunData' RuntimeCommon.TestRunData' RuntimeCommon.TokenTestRunData,RuntimeTests.CreateTokens
+RuntimeCommon,TokenTestRunData,0,0,9,0,0,12,0,0,1,-1,2,2,RuntimeCommon.TestRunData' RuntimeCommon.TestRunData,RuntimeTests.CreateTokens' RuntimeCommon.TokenTestExecutors
+RuntimeTests,CreateTokens,0,1,0,0,1,41,2,0,0,-1,5,1,RuntimeCommon.TestConfig' RuntimeCommon.TestData' RuntimeCommon.TestRunner' RuntimeCommon.TokenTestExecutors' RuntimeCommon.TokenTestRunData,RuntimeTests.Program
+RuntimeTests,Program,0,1,0,0,0,7,1,0,0,-1,1,0,RuntimeTests.CreateTokens,

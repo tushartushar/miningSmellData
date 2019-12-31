@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-KillrVideo.MessageBus,Bus,6,5,1,0,4,121,13,0,1,0,5,0,KillrVideo.MessageBus.Subscribe.SubscriptionServer' KillrVideo.MessageBus.Publish.Publisher' KillrVideo.Host.HostOptions' KillrVideo.MessageBus.Transport.IMessageTransport' KillrVideo.MessageBus.Subscribe.IHandlerFactory,
+KillrVideo.MessageBus,Bus,6,5,1,0,4,121,13,0,1,0,5,0,KillrVideo.MessageBus.IBus' KillrVideo.MessageBus.Publish.Publisher' KillrVideo.MessageBus.Subscribe.IHandlerFactory' KillrVideo.MessageBus.Subscribe.SubscriptionServer' KillrVideo.MessageBus.Transport.IMessageTransport,
 KillrVideo.MessageBus,HelperExtensions,0,2,0,0,2,27,4,0,0,-1,1,0,KillrVideo.MessageBus.IHandleMessage,
-KillrVideo.MessageBus,IHandleMessage,0,1,0,0,0,4,1,2,0,-1,0,1,,KillrVideo.MessageBus.HelperExtensions
-KillrVideo.MessageBus,IBus,0,1,0,0,0,7,1,2,0,-1,0,6,,KillrVideo.Comments.CommentsServiceImpl' KillrVideo.Ratings.RatingsServiceImpl' KillrVideo.UserManagement.LinqUserManagementService' KillrVideo.UserManagement.UserManagementServiceImpl' KillrVideo.VideoCatalog.Handlers.UpdateUploadedVideoWhenPublished' KillrVideo.VideoCatalog.VideoCatalogServiceImpl
-KillrVideo.MessageBus.Publish,Publisher,3,6,0,0,2,47,9,0,1,0,1,1,KillrVideo.MessageBus.Transport.IMessageTransport,KillrVideo.MessageBus.Bus
-KillrVideo.MessageBus.Subscribe,HandlerRegistration,1,3,1,0,2,23,3,1,0,1,1,1,KillrVideo.MessageBus.Subscribe.IHandlerFactory,KillrVideo.MessageBus.Subscribe.SubscriptionServer
-KillrVideo.MessageBus.Subscribe,HandlerRegistration<THandler;TMessage>,0,2,0,0,2,29,3,0,1,-1,1,0,KillrVideo.MessageBus.Subscribe.IHandlerFactory,
-KillrVideo.MessageBus.Subscribe,IHandlerFactory,0,3,0,0,0,16,3,1,0,-1,0,4,,KillrVideo.MessageBus.Bus' KillrVideo.MessageBus.Subscribe.HandlerRegistration' KillrVideo.MessageBus.Subscribe.HandlerRegistration<THandler;TMessage>' KillrVideo.MessageBus.Subscribe.SubscriptionServer
-KillrVideo.MessageBus.Subscribe,Subscription,0,1,2,0,1,11,1,0,0,-1,0,1,,KillrVideo.MessageBus.Subscribe.SubscriptionServer
-KillrVideo.MessageBus.Subscribe,SubscriptionServer,7,6,0,0,3,156,15,0,0,0,4,1,KillrVideo.MessageBus.Transport.IMessageTransport' KillrVideo.MessageBus.Subscribe.IHandlerFactory' KillrVideo.MessageBus.Subscribe.HandlerRegistration' KillrVideo.MessageBus.Subscribe.Subscription,KillrVideo.MessageBus.Bus
-KillrVideo.MessageBus.Transport,AsyncQueue<T>,3,3,2,0,3,174,3,0,0,0,1,0,KillrVideo.MessageBus.Transport.AsyncQueueLock,
-KillrVideo.MessageBus.Transport,AsyncQueueLock,6,6,0,0,3,135,8,0,0,0,0,2,,KillrVideo.MessageBus.Transport.AsyncQueue<T>' KillrVideo.MessageBus.Transport.Releaser
-KillrVideo.MessageBus.Transport,Releaser,1,2,0,0,2,12,2,0,0,0,1,0,KillrVideo.MessageBus.Transport.AsyncQueueLock,
-KillrVideo.MessageBus.Transport,IMessageTransport,0,3,0,0,0,16,3,1,0,-1,0,3,,KillrVideo.MessageBus.Bus' KillrVideo.MessageBus.Publish.Publisher' KillrVideo.MessageBus.Subscribe.SubscriptionServer
-KillrVideo.MessageBus.Transport,InMemoryTopic,2,4,0,0,4,31,6,0,0,0,0,1,,KillrVideo.MessageBus.Transport.InMemoryTransport
-KillrVideo.MessageBus.Transport,InMemoryTransport,2,5,1,0,3,47,8,0,1,0.4,1,0,KillrVideo.MessageBus.Transport.InMemoryTopic,
+KillrVideo.MessageBus,IHandleMessage,0,1,0,0,0,4,1,2,0,-1,0,3,,KillrVideo.MessageBus.HelperExtensions' KillrVideo.MessageBus.Subscribe.HandlerRegistration' KillrVideo.MessageBus.Subscribe.HandlerRegistration<THandler;TMessage>
+KillrVideo.MessageBus,IBus,0,1,0,0,0,7,1,2,0,-1,0,2,,KillrVideo.MessageBus.Publish.Publisher' KillrVideo.MessageBus.Bus
+KillrVideo.MessageBus.Publish,Publisher,3,6,0,0,2,47,9,0,1,0,2,1,KillrVideo.MessageBus.IBus' KillrVideo.MessageBus.Transport.IMessageTransport,KillrVideo.MessageBus.Bus
+KillrVideo.MessageBus.Subscribe,HandlerRegistration,1,3,1,0,2,23,3,1,0,1,3,3,KillrVideo.MessageBus.IHandleMessage' KillrVideo.MessageBus.Subscribe.HandlerRegistration<THandler;TMessage>' KillrVideo.MessageBus.Subscribe.IHandlerFactory,KillrVideo.MessageBus.Subscribe.Subscription' KillrVideo.MessageBus.Subscribe.HandlerRegistration<THandler;TMessage>' KillrVideo.MessageBus.Subscribe.SubscriptionServer
+KillrVideo.MessageBus.Subscribe,HandlerRegistration<THandler;TMessage>,0,2,0,0,2,29,3,0,1,-1,3,1,KillrVideo.MessageBus.IHandleMessage' KillrVideo.MessageBus.Subscribe.HandlerRegistration' KillrVideo.MessageBus.Subscribe.IHandlerFactory,KillrVideo.MessageBus.Subscribe.HandlerRegistration
+KillrVideo.MessageBus.Subscribe,IHandlerFactory,0,3,0,0,0,16,3,1,0,-1,0,4,,KillrVideo.MessageBus.Bus' KillrVideo.MessageBus.Subscribe.SubscriptionServer' KillrVideo.MessageBus.Subscribe.HandlerRegistration' KillrVideo.MessageBus.Subscribe.HandlerRegistration<THandler;TMessage>
+KillrVideo.MessageBus.Subscribe,Subscription,0,1,2,0,1,11,1,0,0,-1,1,1,KillrVideo.MessageBus.Subscribe.HandlerRegistration,KillrVideo.MessageBus.Subscribe.SubscriptionServer
+KillrVideo.MessageBus.Subscribe,SubscriptionServer,7,6,0,0,3,156,15,0,0,0,4,1,KillrVideo.MessageBus.Subscribe.HandlerRegistration' KillrVideo.MessageBus.Subscribe.IHandlerFactory' KillrVideo.MessageBus.Subscribe.Subscription' KillrVideo.MessageBus.Transport.IMessageTransport,KillrVideo.MessageBus.Bus
+KillrVideo.MessageBus.Transport,AsyncQueue<T>,3,3,2,0,3,174,3,0,0,0,2,1,KillrVideo.MessageBus.Transport.AsyncQueueLock' KillrVideo.MessageBus.Transport.Releaser,KillrVideo.MessageBus.Transport.InMemoryTopic
+KillrVideo.MessageBus.Transport,AsyncQueueLock,6,6,0,0,3,135,12,0,0,0,0,1,,KillrVideo.MessageBus.Transport.AsyncQueue<T>
+KillrVideo.MessageBus.Transport,Releaser,1,2,0,0,2,12,2,0,0,0,0,1,,KillrVideo.MessageBus.Transport.AsyncQueue<T>
+KillrVideo.MessageBus.Transport,IMessageTransport,0,3,0,0,0,16,3,1,0,-1,0,4,,KillrVideo.MessageBus.Transport.InMemoryTransport' KillrVideo.MessageBus.Bus' KillrVideo.MessageBus.Subscribe.SubscriptionServer' KillrVideo.MessageBus.Publish.Publisher
+KillrVideo.MessageBus.Transport,InMemoryTopic,2,4,0,0,4,31,6,0,0,0,1,1,KillrVideo.MessageBus.Transport.AsyncQueue<T>,KillrVideo.MessageBus.Transport.InMemoryTransport
+KillrVideo.MessageBus.Transport,InMemoryTransport,2,5,1,0,3,47,8,0,1,0.4,2,0,KillrVideo.MessageBus.Transport.IMessageTransport' KillrVideo.MessageBus.Transport.InMemoryTopic,

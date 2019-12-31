@@ -1,0 +1,22 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TestUtils.Commands,ExpandTuRarArchiveCommand,0,1,0,0,0,9,1,0,1,-1,2,2,TestUtils.ExtractCmdletBase' TestUtils.ExpandRarArchiveCommand,TestUtils.ArchivingHelper' TestUtils.ExpandRarArchiveCommand
+TestUtils.Commands,ExpandTuZipArchiveCommand,0,1,0,0,0,22,1,0,1,-1,2,2,TestUtils.ExtractCmdletBase' TestUtils.ExpandZipArchiveCommand,TestUtils.ArchivingHelper' TestUtils.ExpandZipArchiveCommand
+TestUtils.Commands,NewTuZipArchiveCommand,0,2,4,0,1,32,2,0,1,-1,2,2,TestUtils.ArchivingCmdletBase' TestUtils.NewZipArchiveCommand,TestUtils.ArchivingHelper' TestUtils.NewZipArchiveCommand
+TestUtils.Commands,NewTuScheduledTaskCommand,0,1,0,0,0,9,1,0,1,-1,2,1,TestUtils.CommonCmdletBase' TestUtils.NewScheduledTaskCommand,TestUtils.NewScheduledTaskCommand
+TestUtils.Commands,GrantWin32LocalAccountPrivilegeCommand,0,1,0,0,0,8,1,0,1,-1,2,1,TestUtils.PrivilegeCmdletBase' TestUtils.GrantLocalAccountPrivilegeCommand,TestUtils.GrantLocalAccountPrivilegeCommand
+TestUtils,ArchivingHelper,0,3,0,0,0,175,16,0,0,-1,3,3,TestUtils.Commands.ExpandTuRarArchiveCommand' TestUtils.Commands.ExpandTuZipArchiveCommand' TestUtils.Commands.NewTuZipArchiveCommand,TestUtils.ExpandZipArchiveCommand' TestUtils.NewZipArchiveCommand' TestUtils.ExpandRarArchiveCommand
+TestUtils,ArchivingCmdletBase,0,0,0,0,0,11,0,2,1,-1,1,2,TestUtils.CommonCmdletBase,TestUtils.Commands.NewTuZipArchiveCommand' TestUtils.ExtractCmdletBase
+TestUtils,CommonCmdletBase,0,31,1,0,1,172,35,3,1,-1,1,9,TestUtils.Preferences,TestUtils.SecurityCmdletBase' TestUtils.ExpandRarArchiveCommand' TestUtils.ExpandZipArchiveCommand' TestUtils.NewZipArchiveCommand' TestUtils.NewScheduledTaskCommand' TestUtils.GrantLocalAccountPrivilegeCommand' TestUtils.ArchivingCmdletBase' TestUtils.Commands.NewTuScheduledTaskCommand' TestUtils.Win32Command
+TestUtils,ExtractCmdletBase,0,0,3,0,0,15,0,2,2,-1,1,2,TestUtils.ArchivingCmdletBase,TestUtils.Commands.ExpandTuRarArchiveCommand' TestUtils.Commands.ExpandTuZipArchiveCommand
+TestUtils,PrivilegeCmdletBase,0,1,0,0,1,6,1,1,1,-1,1,2,TestUtils.SecurityCmdletBase,TestUtils.Win32Helper' TestUtils.Commands.GrantWin32LocalAccountPrivilegeCommand
+TestUtils,SecurityCmdletBase,0,1,0,0,1,6,1,1,2,-1,1,1,TestUtils.CommonCmdletBase,TestUtils.PrivilegeCmdletBase
+TestUtils,ExpandRarArchiveCommand,0,2,0,0,0,13,2,0,1,-1,4,1,TestUtils.Commands.ExpandTuRarArchiveCommand' TestUtils.ArchivingHelper' TestUtils.CommonCmdletBase' TestUtils.Win32Command,TestUtils.Commands.ExpandTuRarArchiveCommand
+TestUtils,ExpandZipArchiveCommand,0,2,0,0,0,13,2,0,1,-1,4,1,TestUtils.Commands.ExpandTuZipArchiveCommand' TestUtils.ArchivingHelper' TestUtils.CommonCmdletBase' TestUtils.Win32Command,TestUtils.Commands.ExpandTuZipArchiveCommand
+TestUtils,NewZipArchiveCommand,0,2,0,0,0,13,2,0,1,-1,4,1,TestUtils.Commands.NewTuZipArchiveCommand' TestUtils.ArchivingHelper' TestUtils.CommonCmdletBase' TestUtils.Win32Command,TestUtils.Commands.NewTuZipArchiveCommand
+TestUtils,NewScheduledTaskCommand,0,2,0,0,0,13,2,0,1,-1,3,1,TestUtils.Commands.NewTuScheduledTaskCommand' TestUtils.CommonCmdletBase' TestUtils.Win32Command,TestUtils.Commands.NewTuScheduledTaskCommand
+TestUtils,GrantLocalAccountPrivilegeCommand,0,2,0,0,0,13,2,0,1,-1,4,1,TestUtils.Commands.GrantWin32LocalAccountPrivilegeCommand' TestUtils.CommonCmdletBase' TestUtils.Win32Command' TestUtils.Win32Helper,TestUtils.Commands.GrantWin32LocalAccountPrivilegeCommand
+TestUtils,Win32Command,0,2,1,0,0,10,2,5,0,-1,1,5,TestUtils.CommonCmdletBase,TestUtils.NewZipArchiveCommand' TestUtils.ExpandZipArchiveCommand' TestUtils.ExpandRarArchiveCommand' TestUtils.NewScheduledTaskCommand' TestUtils.GrantLocalAccountPrivilegeCommand
+TestUtils,Preferences,0,1,1,0,1,9,1,0,0,-1,0,1,,TestUtils.CommonCmdletBase
+TestUtils,Win32Helper,0,1,0,0,1,7,1,0,0,-1,1,1,TestUtils.PrivilegeCmdletBase,TestUtils.GrantLocalAccountPrivilegeCommand
+TestUtils.Interfaces,IScheduledTaskData,0,0,0,0,0,4,0,0,0,-1,0,0,,
+TestUtils.ObjectModel.ScheduledTasks,TaskCreator,0,1,0,0,1,6,1,0,0,-1,0,0,,

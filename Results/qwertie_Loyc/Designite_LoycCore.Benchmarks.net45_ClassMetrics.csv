@@ -1,0 +1,22 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Benchmark,Benchmarks,5,9,0,0,6,841,88,0,0,0.67,3,1,Benchmark.Cell' Benchmark.BenchmarkSets<T>' Benchmark.BenchmarkMaps<T>,Benchmark.Program
+Benchmark,Cell,4,3,0,4,3,23,3,0,0,1,0,1,,Benchmark.Benchmarks
+Benchmark,Benchmarker,9,18,3,5,14,410,48,0,0,0.11,4,1,Benchmark.Benchmark' Benchmark.ColInfo' Benchmark.BenchmarkAttribute' Benchmark.BenchmarkStatistic,Benchmark.ListBenchmarks
+Benchmark,Benchmark,4,0,1,4,0,8,0,0,0,-1,0,1,,Benchmark.Benchmarker
+Benchmark,ColInfo,3,1,0,3,1,7,1,0,0,0,0,1,,Benchmark.Benchmarker
+Benchmark,BenchmarkAttribute,3,4,0,3,4,16,4,0,0,0.5,0,2,,Benchmark.ListBenchmarks' Benchmark.Benchmarker
+Benchmark,BenchmarkStatistic,4,3,0,4,3,33,7,0,1,0,0,1,,Benchmark.Benchmarker
+Benchmark,BenchmarkSetsBase<T>,10,5,0,0,0,89,8,0,0,0.6,1,2,Benchmark.Result,Benchmark.BenchmarkSets<T>' Benchmark.BenchmarkMaps<T>
+Benchmark,Result,7,1,0,7,1,19,2,0,0,0,0,1,,Benchmark.BenchmarkSetsBase<T>
+Benchmark,BenchmarkSets<T>,6,16,0,0,1,285,51,0,0,0.69,2,1,Benchmark.BenchmarkSetsBase<T>' Benchmark.Op,Benchmark.Benchmarks
+Benchmark,Op,0,0,0,0,0,1,0,0,0,-1,0,1,,Benchmark.BenchmarkSets<T>
+Benchmark,BenchmarkMaps<T>,6,15,0,0,1,219,39,0,0,0.67,1,1,Benchmark.BenchmarkSetsBase<T>,Benchmark.Benchmarks
+Benchmark,EzChartForm,8,13,1,0,5,269,32,0,1,0.23,2,2,Benchmark.ChartPage' Benchmark.EzDataPoint,Benchmark.Program' Benchmark.ListBenchmarks
+Benchmark,ChartPage,2,1,1,2,1,20,1,0,0,0,0,1,,Benchmark.EzChartForm
+Benchmark,EzDataPoint,4,5,0,4,5,33,7,0,1,0.6,0,2,,Benchmark.ListBenchmarks' Benchmark.EzChartForm
+Benchmark,ListBenchmarks,6,11,0,0,8,429,19,0,0,0,4,1,Benchmark.Benchmarker' Benchmark.BenchmarkAttribute' Benchmark.EzChartForm' Benchmark.EzDataPoint,Benchmark.Program
+Benchmark,Program,0,4,0,0,2,116,11,0,0,-1,5,0,Benchmark.Benchmarks' Benchmark.EzChartForm' Benchmark.ListBenchmarks' Loyc.GoInterfaceBenchmark' Benchmark.Resources.Resources,
+Loyc,GoInterfaceBenchmark,0,1,0,0,1,117,4,0,0,-1,2,1,Loyc.ISimpleSource' Loyc.IListSource,Benchmark.Program
+Loyc,ISimpleSource,0,0,1,0,0,4,0,1,0,-1,0,1,,Loyc.GoInterfaceBenchmark
+Loyc,IListSource,0,0,0,0,0,4,0,0,1,-1,0,1,,Loyc.GoInterfaceBenchmark
+Benchmark.Resources,Resources,2,1,3,0,0,104,1,0,0,0,0,1,,Benchmark.Program

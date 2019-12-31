@@ -1,0 +1,20 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+King.Service.Demo,AppConfig,0,0,8,0,0,43,0,0,0,-1,0,5,,King.Service.Demo.Factories.Factory' King.Service.Demo.Factories.DataGenerationFactory' King.Service.Demo.Tasks.DynamicScaler' King.Service.Demo.Tasks.ScalableQueue' King.Service.Demo.Program
+King.Service.Demo,Program,0,1,0,0,1,36,3,0,0,-1,3,0,King.Service.Demo.AppConfig' King.Service.Demo.Factories.DataGenerationFactory' King.Service.Demo.Factories.Factory,
+King.Service.Demo.Factories,DataGenerationFactory,0,1,0,0,1,14,1,0,1,-1,3,1,King.Service.Demo.AppConfig' King.Service.Demo.Tasks.CompanyQueuer' King.Service.Demo.Tasks.CompanyQueuerSharded,King.Service.Demo.Program
+King.Service.Demo.Factories,Factory,0,1,0,0,1,46,1,0,1,-1,11,1,King.Service.Demo.AppConfig' King.Service.Demo.Models.CompanyModel' King.Service.Demo.Processors.CompanyProcessor' King.Service.Demo.Tasks.Adaptive' King.Service.Demo.Tasks.Backoff' King.Service.Demo.Tasks.CompanyDequeuer' King.Service.Demo.Tasks.Coordinated' King.Service.Demo.Tasks.DynamicScaler' King.Service.Demo.Tasks.InitTask' King.Service.Demo.Tasks.OnceDaily' King.Service.Demo.Tasks.Recurring,King.Service.Demo.Program
+King.Service.Demo.Models,CompanyModel,0,0,2,0,0,14,0,0,0,-1,0,5,,King.Service.Demo.Tasks.CompanyDequeuer' King.Service.Demo.Processors.CompanyProcessor' King.Service.Demo.Tasks.CompanyQueuerSharded' King.Service.Demo.Tasks.CompanyQueuer' King.Service.Demo.Factories.Factory
+King.Service.Demo.Processors,CompanyProcessor,0,1,0,0,1,8,1,0,0,-1,1,2,King.Service.Demo.Models.CompanyModel,King.Service.Demo.Tasks.CompanyDequeuer' King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,Adaptive,0,1,0,0,1,9,1,0,2,-1,0,1,,King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,AttributeBasedTasks,0,4,0,0,4,40,4,0,0,-1,0,0,,
+King.Service.Demo.Tasks,Backoff,0,1,0,0,1,9,1,0,2,-1,0,1,,King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,CompanyDequeuer,0,1,0,0,1,7,1,0,0,-1,2,2,King.Service.Demo.Models.CompanyModel' King.Service.Demo.Processors.CompanyProcessor,King.Service.Demo.Tasks.ScalableQueue' King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,CompanyQueuer,2,2,0,0,2,21,2,0,2,0,1,1,King.Service.Demo.Models.CompanyModel,King.Service.Demo.Factories.DataGenerationFactory
+King.Service.Demo.Tasks,CompanyQueuerSharded,2,2,0,0,2,21,2,0,2,0,1,1,King.Service.Demo.Models.CompanyModel,King.Service.Demo.Factories.DataGenerationFactory
+King.Service.Demo.Tasks,Coordinated,0,2,0,0,2,11,2,0,2,-1,0,1,,King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,DynamicScaler,0,2,0,0,2,13,2,0,0,-1,2,1,King.Service.Demo.AppConfig' King.Service.Demo.Tasks.ScalableTask,King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,InitTask,0,1,0,0,1,7,1,0,2,-1,0,1,,King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,OnceDaily,0,2,0,0,2,11,2,0,3,-1,0,1,,King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,Recurring,0,1,0,0,1,7,1,0,2,-1,0,1,,King.Service.Demo.Factories.Factory
+King.Service.Demo.Tasks,ScalableQueue,0,2,0,0,2,11,2,0,0,-1,2,0,King.Service.Demo.AppConfig' King.Service.Demo.Tasks.CompanyDequeuer,
+King.Service.Demo.Tasks,ScalableTask,0,1,2,0,1,24,1,0,2,-1,0,1,,King.Service.Demo.Tasks.DynamicScaler

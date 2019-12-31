@@ -1,54 +1,142 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Xunit.Sdk,ExceptionUtility,0,12,0,0,3,149,31,0,0,-1,1,8,Xunit.Sdk.FailureInformation,Xunit.Sdk.ErrorMessage' Xunit.Sdk.TestAssemblyCleanupFailure' Xunit.Sdk.TestCaseCleanupFailure' Xunit.Sdk.TestClassCleanupFailure' Xunit.Sdk.TestCleanupFailure' Xunit.Sdk.TestCollectionCleanupFailure' Xunit.Sdk.TestFailed' Xunit.Sdk.TestMethodCleanupFailure
+Xunit.Sdk,AsyncTestSyncContext,4,6,0,0,6,105,9,0,0,0.33,2,1,Xunit.Sdk.AsyncManualResetEvent' Xunit.Sdk.XunitWorkerThread,Xunit.Sdk.TestInvoker<TTestCase>
+Xunit.Sdk,DefaultTestCaseOrderer,1,4,0,0,2,58,5,0,1,1,1,1,Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.TestAssemblyRunner<TTestCase>
+Xunit.Sdk,DefaultTestCollectionOrderer,0,2,0,0,1,23,4,0,1,-1,0,1,,Xunit.Sdk.TestAssemblyRunner<TTestCase>
+Xunit.Sdk,DisposalTracker,1,2,0,0,2,22,3,0,0,0,0,4,,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.TestFrameworkDiscoverer' Xunit.Sdk.TestFrameworkExecutor<TTestCase>' Xunit.Sdk.TestFramework
+Xunit.Sdk,ExtensibilityPointFactory,2,17,0,0,15,264,29,0,0,0,5,10,Xunit.Sdk.DisposalTracker' Xunit.Sdk.CollectionPerAssemblyTestCollectionFactory' Xunit.Sdk.CollectionPerClassTestCollectionFactory' Xunit.Sdk.SerializationHelper' Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.TestFramework' Xunit.Sdk.XunitTestClassRunner' Xunit.Sdk.XunitTestCollectionRunner' Xunit.Sdk.TraitHelper' Xunit.Sdk.XunitTestCase' Xunit.Sdk.TestFrameworkProxy' Xunit.Sdk.TheoryDiscoverer' Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.XunitTestAssemblyRunner' Xunit.Sdk.XunitTestFrameworkDiscoverer
+Xunit.Sdk,CollectionPerAssemblyTestCollectionFactory,4,3,1,0,2,44,4,0,1,0,2,1,Xunit.Sdk.TestCollection' Xunit.Sdk.TestCollectionFactoryHelper,Xunit.Sdk.ExtensibilityPointFactory
+Xunit.Sdk,CollectionPerClassTestCollectionFactory,3,3,1,0,2,45,4,0,1,0.67,2,1,Xunit.Sdk.TestCollection' Xunit.Sdk.TestCollectionFactoryHelper,Xunit.Sdk.ExtensibilityPointFactory
+Xunit.Sdk,DisplayNameFormatter,1,3,0,0,3,241,9,0,0,0,7,1,Xunit.Sdk.FormatContext' Xunit.Sdk.CharacterRule' Xunit.Sdk.ReplaceOperatorMonikerRule' Xunit.Sdk.ReplaceUnderscoreRule' Xunit.Sdk.ReplaceEscapeSequenceRule' Xunit.Sdk.ReplacePeriodRule' Xunit.Sdk.KeepPeriodRule,Xunit.Sdk.TestMethodTestCase
+Xunit.Sdk,FormatContext,3,3,3,0,3,26,3,0,0,1,0,1,,Xunit.Sdk.DisplayNameFormatter
+Xunit.Sdk,CharacterRule,0,1,1,0,1,6,1,5,0,-1,0,1,,Xunit.Sdk.DisplayNameFormatter
+Xunit.Sdk,ReplaceOperatorMonikerRule,1,2,0,0,1,46,7,0,1,1,0,1,,Xunit.Sdk.DisplayNameFormatter
+Xunit.Sdk,ReplaceUnderscoreRule,0,1,0,0,1,13,2,0,1,-1,0,1,,Xunit.Sdk.DisplayNameFormatter
+Xunit.Sdk,ReplaceEscapeSequenceRule,0,4,0,0,1,61,9,0,1,-1,0,1,,Xunit.Sdk.DisplayNameFormatter
+Xunit.Sdk,ReplacePeriodRule,0,1,0,0,1,13,2,0,1,-1,0,1,,Xunit.Sdk.DisplayNameFormatter
+Xunit.Sdk,KeepPeriodRule,0,1,0,0,1,13,2,0,1,-1,0,1,,Xunit.Sdk.DisplayNameFormatter
+Xunit.Sdk,ExecutionErrorTestCase,0,6,1,0,6,68,6,0,1,-1,2,4,Xunit.Sdk.ExecutionErrorTestCaseRunner' Xunit.Sdk.XunitTestCase,Xunit.Sdk.ExecutionErrorTestCaseRunner' Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.FactDiscoverer' Xunit.Sdk.TheoryDiscoverer
+Xunit.Sdk,ExecutionTimer,1,3,1,0,3,55,3,0,0,0,0,2,,Xunit.Sdk.TestInvoker<TTestCase>' Xunit.Sdk.XunitTheoryTestCaseRunner
+Xunit.Sdk,FactDiscoverer,0,3,1,0,2,49,5,0,1,-1,2,0,Xunit.Sdk.ExecutionErrorTestCase' Xunit.Sdk.XunitTestCase,
+Xunit.Sdk,ExecutionErrorTestCaseRunner,0,2,0,0,1,43,5,0,0,-1,6,1,Xunit.Sdk.ExecutionErrorTestCase' Xunit.Sdk.TestCaseRunner<TTestCase>' Xunit.Sdk.XunitTest' Xunit.Sdk.TestFailed' Xunit.Sdk.TestFinished' Xunit.Sdk.TestStarting,Xunit.Sdk.ExecutionErrorTestCase
+Xunit.Sdk,TestAssemblyRunner<TTestCase>,0,12,8,0,2,229,18,0,0,-1,9,1,Xunit.Sdk.DefaultTestCaseOrderer' Xunit.Sdk.DefaultTestCollectionOrderer' Xunit.Sdk.TestCollectionComparer' Xunit.Sdk.MessageBus' Xunit.Sdk.SynchronousMessageBus' Xunit.Sdk.DiagnosticMessage' Xunit.Sdk.TestAssemblyCleanupFailure' Xunit.Sdk.TestAssemblyFinished' Xunit.Sdk.TestAssemblyStarting,Xunit.Sdk.XunitTestAssemblyRunner
+Xunit.Sdk,TestCaseRunner<TTestCase>,0,5,4,0,1,95,8,0,0,-1,3,2,Xunit.Sdk.TestCaseCleanupFailure' Xunit.Sdk.TestCaseFinished' Xunit.Sdk.TestCaseStarting,Xunit.Sdk.ExecutionErrorTestCaseRunner' Xunit.Sdk.XunitTestCaseRunner
+Xunit.Sdk,TestClassRunner<TTestCase>,0,10,8,0,1,242,24,0,0,-1,6,1,Xunit.Sdk.TestMethodComparer' Xunit.Sdk.TestClassException' Xunit.Sdk.DiagnosticMessage' Xunit.Sdk.TestClassCleanupFailure' Xunit.Sdk.TestClassFinished' Xunit.Sdk.TestClassStarting,Xunit.Sdk.XunitTestClassRunner
+Xunit.Sdk,TestCollectionRunner<TTestCase>,0,6,6,0,1,132,11,0,0,-1,4,1,Xunit.Sdk.TestClassComparer' Xunit.Sdk.TestCollectionCleanupFailure' Xunit.Sdk.TestCollectionFinished' Xunit.Sdk.TestCollectionStarting,Xunit.Sdk.XunitTestCollectionRunner
+Xunit.Sdk,TestInvoker<TTestCase>,1,9,11,0,2,270,14,0,0,1,2,1,Xunit.Sdk.AsyncTestSyncContext' Xunit.Sdk.ExecutionTimer,Xunit.Sdk.XunitTestInvoker
+Xunit.Sdk,TestMethodRunner<TTestCase>,0,6,7,0,1,137,11,0,0,-1,3,1,Xunit.Sdk.TestMethodCleanupFailure' Xunit.Sdk.TestMethodFinished' Xunit.Sdk.TestMethodStarting,Xunit.Sdk.XunitTestMethodRunner
+Xunit.Sdk,TestRunner<TTestCase>,0,5,11,0,1,180,16,0,0,-1,7,1,Xunit.Sdk.TestResultMessage' Xunit.Sdk.TestCleanupFailure' Xunit.Sdk.TestFailed' Xunit.Sdk.TestFinished' Xunit.Sdk.TestPassed' Xunit.Sdk.TestSkipped' Xunit.Sdk.TestStarting,Xunit.Sdk.XunitTestRunner
+Xunit.Sdk,XunitTestAssemblyRunner,6,11,0,0,2,226,29,0,0,0.36,6,1,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.TestAssemblyRunner<TTestCase>' Xunit.Sdk.XunitTestCollectionRunner' Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.MaxConcurrencySyncContext' Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.XunitTestFrameworkExecutor
+Xunit.Sdk,XunitTestCaseRunner,1,5,7,0,1,128,7,1,0,0.6,4,2,Xunit.Sdk.TestCaseRunner<TTestCase>' Xunit.Sdk.XunitTestRunner' Xunit.Sdk.XunitTest' Xunit.Sdk.Reflector,Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.XunitTestCase
+Xunit.Sdk,XunitTestClassRunner,1,9,2,0,1,184,20,0,0,0.78,6,1,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.TestClassRunner<TTestCase>' Xunit.Sdk.XunitTestMethodRunner' Xunit.Sdk.TestOutputHelper' Xunit.Sdk.TestClassException' Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.XunitTestCollectionRunner
+Xunit.Sdk,XunitTestCollectionRunner,0,7,2,0,1,148,15,0,0,-1,5,1,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.TestCollectionRunner<TTestCase>' Xunit.Sdk.XunitTestClassRunner' Xunit.Sdk.TestClassException' Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.XunitTestAssemblyRunner
+Xunit.Sdk,XunitTestInvoker,2,5,1,0,1,115,13,0,0,0.6,6,1,Xunit.Sdk.TestInvoker<TTestCase>' Xunit.Sdk.TestTimeoutException' Xunit.Sdk.AfterTestFinished' Xunit.Sdk.AfterTestStarting' Xunit.Sdk.BeforeTestFinished' Xunit.Sdk.BeforeTestStarting,Xunit.Sdk.XunitTestRunner
+Xunit.Sdk,XunitTestMethodRunner,2,2,0,0,1,36,2,0,0,1,1,1,Xunit.Sdk.TestMethodRunner<TTestCase>,Xunit.Sdk.XunitTestClassRunner
+Xunit.Sdk,XunitTestRunner,1,3,1,0,1,73,7,0,0,0.67,3,2,Xunit.Sdk.TestRunner<TTestCase>' Xunit.Sdk.XunitTestInvoker' Xunit.Sdk.TestOutputHelper,Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.XunitTestCaseRunner
+Xunit.Sdk,XunitTheoryTestCaseRunner,5,5,1,0,1,158,17,0,1,0.4,10,1,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.ExecutionTimer' Xunit.Sdk.XunitTestCaseRunner' Xunit.Sdk.XunitTestRunner' Xunit.Sdk.XunitTest' Xunit.Sdk.Reflector' Xunit.Sdk.SerializationHelper' Xunit.Sdk.TestFailed' Xunit.Sdk.TestFinished' Xunit.Sdk.TestStarting,Xunit.Sdk.XunitTheoryTestCase
+Xunit.Sdk,TestAssembly,0,4,3,0,4,73,6,0,1,-1,2,2,Xunit.Sdk.Reflector' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.XunitTestFrameworkExecutor
+Xunit.Sdk,TestClass,0,4,2,0,4,47,4,0,1,-1,3,1,Xunit.Sdk.Reflector' Xunit.Sdk.SerializationHelper' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestFrameworkDiscoverer
+Xunit.Sdk,TestClassComparer,1,2,0,1,2,19,2,0,0,1,0,1,,Xunit.Sdk.TestCollectionRunner<TTestCase>
+Xunit.Sdk,TestCollection,0,5,4,0,4,72,7,0,1,-1,3,3,Xunit.Sdk.Reflector' Xunit.Sdk.SerializationHelper' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.CollectionPerClassTestCollectionFactory' Xunit.Sdk.CollectionPerAssemblyTestCollectionFactory' Xunit.Sdk.XunitTestFrameworkDiscoverer
+Xunit.Sdk,TestCollectionComparer,1,2,0,1,2,19,2,0,0,1,0,1,,Xunit.Sdk.TestAssemblyRunner<TTestCase>
+Xunit.Sdk,TestCollectionFactoryHelper,0,1,0,0,1,32,3,0,0,-1,1,2,Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.CollectionPerAssemblyTestCollectionFactory' Xunit.Sdk.CollectionPerClassTestCollectionFactory
+Xunit.Sdk,TestFramework,0,6,3,0,3,83,6,1,1,-1,5,1,Xunit.Sdk.DisposalTracker' Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.NullSourceInformationProvider' Xunit.Sdk.SourceInformation' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestFramework
+Xunit.Sdk,NullSourceInformationProvider,1,2,0,1,2,11,2,0,0,1,0,1,,Xunit.Sdk.TestFramework
+Xunit.Sdk,TestFrameworkDiscoverer,1,11,6,0,4,209,13,1,1,0.64,11,1,Xunit.Sdk.DisposalTracker' Xunit.Sdk.PreserveWorkingFolder' Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.MessageBus' Xunit.Sdk.SynchronousMessageBus' Xunit.Sdk.SerializationHelper' Xunit.Sdk.XunitWorkerThread' Xunit.Sdk.DiagnosticMessage' Xunit.Sdk.DiscoveryCompleteMessage' Xunit.Sdk.TestCaseDiscoveryMessage' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestFrameworkDiscoverer
+Xunit.Sdk,PreserveWorkingFolder,0,2,0,0,2,23,2,0,0,-1,0,1,,Xunit.Sdk.TestFrameworkDiscoverer
+Xunit.Sdk,TestFrameworkExecutor<TTestCase>,0,7,4,0,4,97,7,0,1,-1,5,1,Xunit.Sdk.DisposalTracker' Xunit.Sdk.Reflector' Xunit.Sdk.TestDiscoveryVisitor' Xunit.Sdk.SerializationHelper' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestFrameworkExecutor
+Xunit.Sdk,TestFrameworkProxy,0,6,2,0,4,121,10,0,1,-1,5,0,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.MessageSinkWrapper' Xunit.Sdk.XunitTestFramework' Xunit.Sdk.DiagnosticMessage' Xunit.LongLivedMarshalByRefObject,
+Xunit.Sdk,MessageSinkWrapper,1,2,0,1,2,17,2,0,1,0,0,1,,Xunit.Sdk.TestFrameworkProxy
+Xunit.Sdk,TestMethod,0,4,2,0,4,45,4,0,1,-1,1,2,Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.XunitTestFrameworkExecutor
+Xunit.Sdk,TestMethodComparer,1,2,0,1,2,19,2,0,0,1,0,1,,Xunit.Sdk.TestClassRunner<TTestCase>
+Xunit.Sdk,TestMethodTestCase,8,12,13,0,3,319,24,1,1,0.67,5,2,Xunit.Sdk.DisplayNameFormatter' Xunit.Sdk.TypeUtility' Xunit.Sdk.Sha1Digest' Xunit.Sdk.SerializationHelper' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.TheoryDiscoverer' Xunit.Sdk.XunitTestCase
+Xunit.Sdk,TestOutputHelper,4,7,1,0,4,112,13,0,0,0.43,1,2,Xunit.Sdk.TestOutput,Xunit.Sdk.XunitTestClassRunner' Xunit.Sdk.XunitTestRunner
+Xunit.Sdk,TestTimeoutException,0,1,0,0,1,9,1,0,0,-1,0,1,,Xunit.Sdk.XunitTestInvoker
+Xunit.Sdk,TheoryDiscoverer,0,10,1,0,2,248,20,0,1,-1,8,0,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.ExecutionErrorTestCase' Xunit.Sdk.TestMethodTestCase' Xunit.Sdk.XunitSkippedDataRowTestCase' Xunit.Sdk.XunitTestCase' Xunit.Sdk.XunitTheoryTestCase' Xunit.Sdk.SerializationHelper' Xunit.Sdk.DiagnosticMessage,
+Xunit.Sdk,XunitSkippedDataRowTestCase,1,6,0,0,5,67,6,0,1,0.67,1,1,Xunit.Sdk.XunitTestCase,Xunit.Sdk.TheoryDiscoverer
+Xunit.Sdk,XunitTest,0,1,3,0,1,24,1,0,1,-1,1,3,Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestCaseRunner' Xunit.Sdk.ExecutionErrorTestCaseRunner' Xunit.Sdk.XunitTheoryTestCaseRunner
+Xunit.Sdk,XunitTestCase,3,13,2,0,6,163,17,3,2,0.92,6,7,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.XunitTestCaseRunner' Xunit.Sdk.TestMethodTestCase' Xunit.Sdk.TypeUtility' Xunit.Sdk.NullMessageSink' Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.XunitTheoryTestCase' Xunit.Sdk.XunitSkippedDataRowTestCase' Xunit.Sdk.ExecutionErrorTestCase' Xunit.Sdk.FactDiscoverer' Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.XunitTestFrameworkExecutor' Xunit.Sdk.TheoryDiscoverer
+Xunit.Sdk,XunitTestFramework,0,3,0,0,1,20,3,0,2,-1,3,1,Xunit.Sdk.TestFramework' Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.XunitTestFrameworkExecutor,Xunit.Sdk.TestFrameworkProxy
+Xunit.Sdk,XunitTestFrameworkDiscoverer,2,7,2,1,2,159,20,0,2,0.71,10,4,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.ExecutionErrorTestCase' Xunit.Sdk.TestAssembly' Xunit.Sdk.TestClass' Xunit.Sdk.TestCollection' Xunit.Sdk.TestFrameworkDiscoverer' Xunit.Sdk.TestMethod' Xunit.Sdk.XunitTestCase' Xunit.Sdk.SerializationHelper' Xunit.Sdk.DiagnosticMessage,Xunit.Sdk.TestFrameworkDiscoverer' Xunit.Sdk.XunitTestAssemblyRunner' Xunit.Sdk.XunitTestFramework' Xunit.Sdk.XunitTestFrameworkExecutor
+Xunit.Sdk,XunitTestFrameworkExecutor,1,4,1,0,2,86,12,0,0,0.5,6,1,Xunit.Sdk.XunitTestAssemblyRunner' Xunit.Sdk.TestAssembly' Xunit.Sdk.TestFrameworkExecutor<TTestCase>' Xunit.Sdk.TestMethod' Xunit.Sdk.XunitTestCase' Xunit.Sdk.XunitTestFrameworkDiscoverer,Xunit.Sdk.XunitTestFramework
+Xunit.Sdk,XunitTheoryTestCase,0,4,0,0,4,40,4,0,3,-1,2,1,Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.XunitTestCase,Xunit.Sdk.TheoryDiscoverer
+Xunit.Sdk,MaxConcurrencySyncContext,5,6,1,0,4,96,13,0,0,0.33,2,1,Xunit.Sdk.ExecutionContextHelper' Xunit.Sdk.XunitWorkerThread,Xunit.Sdk.XunitTestAssemblyRunner
+Xunit.Sdk,MessageBus,7,5,0,0,3,76,9,0,1,0,2,2,Xunit.Sdk.XunitWorkerThread' Xunit.Sdk.ErrorMessage,Xunit.Sdk.TestAssemblyRunner<TTestCase>' Xunit.Sdk.TestFrameworkDiscoverer
+Xunit.Sdk,DelegatingMessageBus,2,3,0,0,3,28,4,1,1,1,0,1,,Xunit.Sdk.DelegatingMessageBus<TFinalMessage>
+Xunit.Sdk,DelegatingMessageBus<TFinalMessage>,0,2,2,0,2,38,3,0,2,-1,2,0,Xunit.Sdk.DelegatingMessageBus' Xunit.Sdk.DelegatingMessageSink<TFinalMessage>,
+Xunit.Sdk,DelegatingMessageSink,2,3,0,0,3,28,4,1,1,1,1,1,Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.DelegatingMessageSink<TFinalMessage>
+Xunit.Sdk,DelegatingMessageSink<TFinalMessage>,0,2,2,0,2,38,3,0,2,-1,1,1,Xunit.Sdk.DelegatingMessageSink,Xunit.Sdk.DelegatingMessageBus<TFinalMessage>
+Xunit.Sdk,ReflectionAssemblyInfo,0,6,3,0,6,85,6,0,1,-1,3,1,Xunit.Sdk.ReflectionAttributeNameCache' Xunit.Sdk.Reflector' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.Reflector
+Xunit.Sdk,ReflectionAttributeInfo,2,11,2,0,5,170,32,0,1,0.64,3,3,Xunit.Sdk.ReflectionAttributeNameCache' Xunit.Sdk.Reflector' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.Reflector' Xunit.Sdk.ReflectionTypeInfo' Xunit.Sdk.ReflectionMethodInfo
+Xunit.Sdk,ReflectionAttributeNameCache,1,1,0,0,0,9,1,0,0,0,1,3,Xunit.Sdk.SerializationHelper,Xunit.Sdk.ReflectionAttributeInfo' Xunit.Sdk.ReflectionMethodInfo' Xunit.Sdk.ReflectionAssemblyInfo
+Xunit.Sdk,ReflectionMethodInfo,3,10,8,0,6,202,26,0,1,0.7,5,1,Xunit.Sdk.ReflectionAttributeInfo' Xunit.Sdk.ReflectionAttributeNameCache' Xunit.Sdk.GenericTypeComparer' Xunit.Sdk.Reflector' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.Reflector
+Xunit.Sdk,GenericTypeComparer,0,2,0,0,0,19,3,0,0,-1,0,1,,Xunit.Sdk.ReflectionMethodInfo
+Xunit.Sdk,ReflectionParameterInfo,0,1,3,0,1,26,1,0,1,-1,2,1,Xunit.Sdk.Reflector' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.Reflector
+Xunit.Sdk,ReflectionTypeInfo,0,6,10,0,6,110,8,0,1,-1,3,1,Xunit.Sdk.ReflectionAttributeInfo' Xunit.Sdk.Reflector' Xunit.LongLivedMarshalByRefObject,Xunit.Sdk.Reflector
+Xunit.Sdk,Reflector,4,7,0,0,6,122,16,0,0,0.86,5,13,Xunit.Sdk.ReflectionAssemblyInfo' Xunit.Sdk.ReflectionAttributeInfo' Xunit.Sdk.ReflectionMethodInfo' Xunit.Sdk.ReflectionParameterInfo' Xunit.Sdk.ReflectionTypeInfo,Xunit.Sdk.TestFrameworkExecutor<TTestCase>' Xunit.Sdk.XunitTestCaseRunner' Xunit.Sdk.ReflectionParameterInfo' Xunit.Sdk.TestClass' Xunit.Sdk.TestAssembly' Xunit.Sdk.ReflectionAttributeInfo' Xunit.Sdk.TestCollection' Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.TraitHelper' Xunit.Sdk.ReflectionTypeInfo' Xunit.Sdk.ReflectionAssemblyInfo' Xunit.Sdk.TypeUtility' Xunit.Sdk.ReflectionMethodInfo
+Xunit.Sdk,SynchronousMessageBus,1,3,0,0,3,19,3,0,1,1,0,2,,Xunit.Sdk.TestFrameworkDiscoverer' Xunit.Sdk.TestAssemblyRunner<TTestCase>
+Xunit.Sdk,TestCaseBulkDeserializer,1,2,0,0,1,31,2,0,1,1,2,0,Xunit.Sdk.NullMessageSink' Xunit.LongLivedMarshalByRefObject,
+Xunit.Sdk,TestCaseDescriptorFactory,3,2,0,0,1,61,8,0,1,0,1,0,Xunit.LongLivedMarshalByRefObject,
+Xunit.Sdk,TestClassException,0,1,0,0,1,17,1,0,0,-1,0,3,,Xunit.Sdk.TestClassRunner<TTestCase>' Xunit.Sdk.XunitTestCollectionRunner' Xunit.Sdk.XunitTestClassRunner
+Xunit.Sdk,TestDiscoveryVisitor,0,3,2,0,3,30,5,0,0,-1,0,1,,Xunit.Sdk.TestFrameworkExecutor<TTestCase>
+Xunit.Sdk,TestFrameworkTypeDiscoverer,0,1,0,0,1,9,1,0,1,-1,1,0,Xunit.Sdk.SerializationHelper,
+Xunit.Sdk,TraitHelper,0,2,0,0,1,50,7,0,0,-1,3,0,Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.Reflector' Xunit.Sdk.NullMessageSink,
+Xunit.Sdk,TypeUtility,1,16,0,0,5,424,63,0,0,0.56,1,2,Xunit.Sdk.Reflector,Xunit.Sdk.XunitTestCase' Xunit.Sdk.TestMethodTestCase
+Xunit.Sdk,AsyncManualResetEvent,1,4,1,0,4,31,6,0,0,0,0,1,,Xunit.Sdk.AsyncTestSyncContext
+Xunit.Sdk,CollectionExtensions,0,2,0,0,2,12,2,0,0,-1,0,0,,
+Xunit.Sdk,ExecutionContextHelper,6,4,1,0,2,79,5,0,0,0,0,1,,Xunit.Sdk.MaxConcurrencySyncContext
+Xunit.Sdk,Pack,0,36,0,0,0,261,41,0,0,-1,0,1,,Xunit.Sdk.Sha1Digest
+Xunit.Sdk,GeneralDigest,4,13,1,0,7,125,18,1,0,0.31,0,1,,Xunit.Sdk.Sha1Digest
+Xunit.Sdk,Sha1Digest,12,13,1,0,6,267,20,0,1,0,2,1,Xunit.Sdk.Pack' Xunit.Sdk.GeneralDigest,Xunit.Sdk.TestMethodTestCase
+Xunit.Sdk,ExceptionUtility,0,12,0,0,3,183,33,0,0,-1,2,8,Xunit.Sdk.FailureInformation' Xunit.FailureInformation,Xunit.Sdk.TestCaseCleanupFailure' Xunit.Sdk.TestClassCleanupFailure' Xunit.Sdk.TestAssemblyCleanupFailure' Xunit.Sdk.TestMethodCleanupFailure' Xunit.Sdk.ErrorMessage' Xunit.Sdk.TestCollectionCleanupFailure' Xunit.Sdk.TestCleanupFailure' Xunit.Sdk.TestFailed
 Xunit.Sdk,FailureInformation,0,0,4,0,0,7,0,0,0,-1,0,1,,Xunit.Sdk.ExceptionUtility
-Xunit.Sdk,NullMessageSink,0,3,0,0,3,14,3,0,1,-1,0,0,,
-Xunit.Sdk,SerializationHelper,1,8,0,0,6,256,34,0,0,0.38,3,2,Xunit.Serialization.ArraySerializer' Xunit.Serialization.XunitSerializationInfo' Xunit.ExecutionHelper,Xunit.Serialization.XunitSerializationInfo' Xunit.Serialization.ArraySerializer
-Xunit.Sdk,SourceInformation,0,2,2,0,2,19,2,0,1,-1,0,0,,
-Xunit.Sdk,XunitWorkerThread,1,4,0,0,4,37,5,0,0,0.75,1,0,Xunit.Sdk.State,
+Xunit.Sdk,NullMessageSink,0,3,0,0,3,16,3,0,1,-1,3,3,Xunit.LongLivedMarshalByRefObject' Xunit.IMessageSinkWithTypes' Xunit.Sdk.LongLivedMarshalByRefObject,Xunit.Sdk.TestCaseBulkDeserializer' Xunit.Sdk.TraitHelper' Xunit.Sdk.XunitTestCase
+Xunit.Sdk,SerializationHelper,1,8,0,0,6,296,38,0,0,0.88,5,12,Xunit.ExecutionHelper' Xunit.Serialization.XunitSerializationInfo' Xunit.Serialization.ArraySerializer' Xunit.Serialization.XunitSerializationInfo' Xunit.Serialization.ArraySerializer,Xunit.Sdk.TestFrameworkDiscoverer' Xunit.Sdk.TestFrameworkExecutor<TTestCase>' Xunit.Sdk.TestClass' Xunit.Sdk.TestCollection' Xunit.Sdk.ReflectionAttributeNameCache' Xunit.Sdk.TestMethodTestCase' Xunit.Sdk.TestFrameworkTypeDiscoverer' Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.ExtensibilityPointFactory' Xunit.Serialization.XunitSerializationInfo' Xunit.Sdk.TheoryDiscoverer
+Xunit.Sdk,SourceInformation,0,2,2,0,2,22,2,0,1,-1,2,1,Xunit.LongLivedMarshalByRefObject' Xunit.Sdk.LongLivedMarshalByRefObject,Xunit.Sdk.TestFramework
+Xunit.Sdk,XunitWorkerThread,2,4,0,0,4,48,4,0,0,0.5,1,4,Xunit.Sdk.State,Xunit.Sdk.AsyncTestSyncContext' Xunit.Sdk.MessageBus' Xunit.Sdk.MaxConcurrencySyncContext' Xunit.Sdk.TestFrameworkDiscoverer
 Xunit.Sdk,State,2,0,0,2,0,5,0,0,0,-1,0,1,,Xunit.Sdk.XunitWorkerThread
-Xunit.Sdk,AfterTestFinished,0,1,1,0,1,13,1,0,1,-1,0,0,,
-Xunit.Sdk,AfterTestStarting,0,1,1,0,1,13,1,0,1,-1,0,0,,
-Xunit.Sdk,TestAssemblyMessage,0,2,2,0,1,23,2,4,1,-1,0,0,,
-Xunit.Sdk,TestCaseMessage,0,1,1,0,1,10,1,5,1,-1,0,0,,
-Xunit.Sdk,TestClassMessage,0,2,1,0,1,21,2,4,1,-1,0,0,,
-Xunit.Sdk,TestCollectionMessage,0,2,1,0,1,21,2,4,2,-1,0,0,,
-Xunit.Sdk,TestMessage,0,1,1,0,1,13,1,13,2,-1,0,0,,
-Xunit.Sdk,TestMethodMessage,0,2,1,0,1,21,2,4,2,-1,0,0,,
-Xunit.Sdk,TestResultMessage,0,1,2,0,1,16,1,3,3,-1,0,0,,
-Xunit.Sdk,BeforeTestFinished,0,1,1,0,1,13,1,0,3,-1,0,0,,
-Xunit.Sdk,BeforeTestStarting,0,1,1,0,1,13,1,0,3,-1,0,0,,
-Xunit.Sdk,DiagnosticMessage,1,3,2,0,3,32,3,0,1,1,0,0,,
-Xunit.Sdk,DiscoveryCompleteMessage,0,0,0,0,0,1,0,0,1,-1,0,0,,
-Xunit.Sdk,ErrorMessage,0,2,5,0,2,36,2,0,1,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestAssemblyCleanupFailure,0,2,4,0,2,34,2,0,2,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestAssemblyFinished,0,1,4,0,1,22,1,0,2,-1,0,0,,
-Xunit.Sdk,TestAssemblyStarting,0,1,3,0,1,19,1,0,2,-1,0,0,,
-Xunit.Sdk,TestCaseCleanupFailure,0,2,4,0,2,34,2,0,2,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestCaseDiscoveryMessage,0,1,0,0,1,8,1,0,2,-1,0,0,,
-Xunit.Sdk,TestCaseFinished,0,1,4,0,1,22,1,0,2,-1,0,0,,
-Xunit.Sdk,TestCaseStarting,0,1,0,0,1,8,1,0,2,-1,0,0,,
-Xunit.Sdk,TestClassCleanupFailure,0,2,4,0,2,34,2,0,2,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestClassConstructionFinished,0,1,0,0,1,8,1,0,3,-1,0,0,,
-Xunit.Sdk,TestClassConstructionStarting,0,1,0,0,1,8,1,0,3,-1,0,0,,
-Xunit.Sdk,TestClassDisposeFinished,0,1,0,0,1,8,1,0,3,-1,0,0,,
-Xunit.Sdk,TestClassDisposeStarting,0,1,0,0,1,8,1,0,3,-1,0,0,,
-Xunit.Sdk,TestClassFinished,0,1,4,0,1,22,1,0,2,-1,0,0,,
-Xunit.Sdk,TestClassStarting,0,1,0,0,1,8,1,0,2,-1,0,0,,
-Xunit.Sdk,TestCleanupFailure,0,2,4,0,2,34,2,0,3,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestCollectionCleanupFailure,0,2,4,0,2,34,2,0,3,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestCollectionFinished,0,1,4,0,1,22,1,0,3,-1,0,0,,
-Xunit.Sdk,TestCollectionStarting,0,1,0,0,1,8,1,0,3,-1,0,0,,
-Xunit.Sdk,TestFailed,0,2,4,0,2,43,2,0,4,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestFinished,0,1,2,0,1,16,1,0,3,-1,0,0,,
-Xunit.Sdk,TestMethodCleanupFailure,0,2,4,0,2,34,2,0,3,-1,1,0,Xunit.Sdk.ExceptionUtility,
-Xunit.Sdk,TestMethodFinished,0,1,4,0,1,22,1,0,3,-1,0,0,,
-Xunit.Sdk,TestMethodStarting,0,1,0,0,1,8,1,0,3,-1,0,0,,
-Xunit.Sdk,TestOutput,0,1,1,0,1,13,1,0,3,-1,0,0,,
-Xunit.Sdk,TestPassed,0,1,0,0,1,8,1,0,4,-1,0,0,,
-Xunit.Sdk,TestSkipped,0,1,1,0,1,13,1,0,4,-1,0,0,,
-Xunit.Sdk,TestStarting,0,1,0,0,1,8,1,0,3,-1,0,0,,
-Xunit,ExecutionHelper,3,0,1,1,0,48,0,0,0,-1,0,1,,Xunit.Sdk.SerializationHelper
-Xunit,LongLivedMarshalByRefObject,0,1,0,0,1,7,1,6,0,-1,0,0,,
-Xunit.Serialization,XunitSerializationInfo,2,13,0,0,9,398,72,0,0,0.23,3,1,Xunit.Serialization.XunitSerializationTriple' Xunit.Sdk.SerializationHelper' Xunit.Serialization.ArraySerializer,Xunit.Sdk.SerializationHelper
-Xunit.Serialization,ArraySerializer,2,4,1,0,4,81,17,0,0,0.5,1,2,Xunit.Sdk.SerializationHelper,Xunit.Sdk.SerializationHelper' Xunit.Serialization.XunitSerializationInfo
-Xunit.Serialization,XunitSerializationTriple,3,1,0,3,1,27,1,0,0,0,0,1,,Xunit.Serialization.XunitSerializationInfo
+Xunit.Sdk,AfterTestFinished,0,1,1,0,1,14,1,0,1,-1,3,1,Xunit.Sdk.TestMessage' Xunit.AfterTestFinished' Xunit.TestMessage,Xunit.Sdk.XunitTestInvoker
+Xunit.Sdk,AfterTestStarting,0,1,1,0,1,14,1,0,1,-1,3,1,Xunit.Sdk.TestMessage' Xunit.AfterTestStarting' Xunit.TestMessage,Xunit.Sdk.XunitTestInvoker
+Xunit.Sdk,TestAssemblyMessage,0,2,2,0,1,27,2,4,1,-1,3,4,Xunit.LongLivedMarshalByRefObject' Xunit.TestAssemblyMessage' Xunit.Sdk.LongLivedMarshalByRefObject,Xunit.Sdk.TestAssemblyCleanupFailure' Xunit.Sdk.TestCollectionMessage' Xunit.Sdk.TestAssemblyStarting' Xunit.Sdk.TestAssemblyFinished
+Xunit.Sdk,TestCaseMessage,0,1,1,0,1,11,1,5,1,-1,3,5,Xunit.Sdk.TestMethodMessage' Xunit.TestCaseMessage' Xunit.TestMethodMessage,Xunit.Sdk.TestCaseDiscoveryMessage' Xunit.Sdk.TestCaseFinished' Xunit.Sdk.TestMessage' Xunit.Sdk.TestCaseStarting' Xunit.Sdk.TestCaseCleanupFailure
+Xunit.Sdk,TestClassMessage,0,2,1,0,1,23,2,4,1,-1,3,4,Xunit.Sdk.TestCollectionMessage' Xunit.TestClassMessage' Xunit.TestCollectionMessage,Xunit.Sdk.TestClassStarting' Xunit.Sdk.TestClassFinished' Xunit.Sdk.TestMethodMessage' Xunit.Sdk.TestClassCleanupFailure
+Xunit.Sdk,TestCollectionMessage,0,2,1,0,1,23,2,4,2,-1,3,4,Xunit.Sdk.TestAssemblyMessage' Xunit.TestAssemblyMessage' Xunit.TestCollectionMessage,Xunit.Sdk.TestClassMessage' Xunit.Sdk.TestCollectionStarting' Xunit.Sdk.TestCollectionFinished' Xunit.Sdk.TestCollectionCleanupFailure
+Xunit.Sdk,TestMessage,0,1,1,0,1,14,1,13,2,-1,3,13,Xunit.Sdk.TestCaseMessage' Xunit.TestCaseMessage' Xunit.TestMessage,Xunit.Sdk.AfterTestStarting' Xunit.Sdk.AfterTestFinished' Xunit.Sdk.TestResultMessage' Xunit.Sdk.BeforeTestFinished' Xunit.Sdk.TestClassConstructionStarting' Xunit.Sdk.TestClassDisposeFinished' Xunit.Sdk.TestClassDisposeStarting' Xunit.Sdk.TestCleanupFailure' Xunit.Sdk.TestClassConstructionFinished' Xunit.Sdk.BeforeTestStarting' Xunit.Sdk.TestFinished' Xunit.Sdk.TestOutput' Xunit.Sdk.TestStarting
+Xunit.Sdk,TestMethodMessage,0,2,1,0,1,23,2,4,2,-1,3,4,Xunit.Sdk.TestClassMessage' Xunit.TestClassMessage' Xunit.TestMethodMessage,Xunit.Sdk.TestMethodStarting' Xunit.Sdk.TestMethodFinished' Xunit.Sdk.TestCaseMessage' Xunit.Sdk.TestMethodCleanupFailure
+Xunit.Sdk,TestResultMessage,0,1,2,0,1,18,1,3,3,-1,3,4,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestResultMessage,Xunit.Sdk.TestFailed' Xunit.Sdk.TestPassed' Xunit.Sdk.TestSkipped' Xunit.Sdk.TestRunner<TTestCase>
+Xunit.Sdk,BeforeTestFinished,0,1,1,0,1,14,1,0,3,-1,3,1,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.BeforeTestFinished,Xunit.Sdk.XunitTestInvoker
+Xunit.Sdk,BeforeTestStarting,0,1,1,0,1,14,1,0,3,-1,3,1,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.BeforeTestStarting,Xunit.Sdk.XunitTestInvoker
+Xunit.Sdk,DiagnosticMessage,1,3,2,0,3,36,3,0,1,1,4,13,Xunit.LongLivedMarshalByRefObject' Xunit.IMessageSinkMessageWithTypes' Xunit.DiagnosticMessage' Xunit.Sdk.LongLivedMarshalByRefObject,Xunit.Sdk.XunitTestFrameworkDiscoverer' Xunit.Sdk.XunitTestCase' Xunit.Sdk.DefaultTestCaseOrderer' Xunit.Sdk.TestClassRunner<TTestCase>' Xunit.Sdk.TestFrameworkDiscoverer' Xunit.Sdk.TestAssemblyRunner<TTestCase>' Xunit.Sdk.TestCollectionFactoryHelper' Xunit.Sdk.XunitTestClassRunner' Xunit.Sdk.XunitTestCollectionRunner' Xunit.Sdk.TheoryDiscoverer' Xunit.Sdk.ExtensibilityPointFactory' Xunit.Sdk.TestFrameworkProxy' Xunit.Sdk.XunitTestAssemblyRunner
+Xunit.Sdk,DiscoveryCompleteMessage,0,0,0,0,0,1,0,0,1,-1,2,1,Xunit.LongLivedMarshalByRefObject' Xunit.Sdk.LongLivedMarshalByRefObject,Xunit.Sdk.TestFrameworkDiscoverer
+Xunit.Sdk,ErrorMessage,0,2,5,0,2,43,2,0,1,-1,5,1,Xunit.Sdk.ExceptionUtility' Xunit.LongLivedMarshalByRefObject' Xunit.ExceptionUtility' Xunit.ErrorMessage' Xunit.Sdk.LongLivedMarshalByRefObject,Xunit.Sdk.MessageBus
+Xunit.Sdk,TestAssemblyCleanupFailure,0,2,4,0,2,39,2,0,2,-1,5,1,Xunit.Sdk.ExceptionUtility' Xunit.Sdk.TestAssemblyMessage' Xunit.ExceptionUtility' Xunit.TestAssemblyMessage' Xunit.TestAssemblyCleanupFailure,Xunit.Sdk.TestAssemblyRunner<TTestCase>
+Xunit.Sdk,TestAssemblyFinished,0,1,4,0,1,26,1,0,2,-1,3,1,Xunit.Sdk.TestAssemblyMessage' Xunit.TestAssemblyMessage' Xunit.TestAssemblyFinished,Xunit.Sdk.TestAssemblyRunner<TTestCase>
+Xunit.Sdk,TestAssemblyStarting,0,1,3,0,1,22,1,0,2,-1,3,1,Xunit.Sdk.TestAssemblyMessage' Xunit.TestAssemblyMessage' Xunit.TestAssemblyStarting,Xunit.Sdk.TestAssemblyRunner<TTestCase>
+Xunit.Sdk,TestCaseCleanupFailure,0,2,4,0,2,39,2,0,2,-1,5,1,Xunit.Sdk.ExceptionUtility' Xunit.Sdk.TestCaseMessage' Xunit.ExceptionUtility' Xunit.TestCaseMessage' Xunit.TestCaseCleanupFailure,Xunit.Sdk.TestCaseRunner<TTestCase>
+Xunit.Sdk,TestCaseDiscoveryMessage,0,1,0,0,1,8,1,0,2,-1,3,1,Xunit.Sdk.TestCaseMessage' Xunit.TestCaseMessage' Xunit.TestCaseDiscoveryMessage,Xunit.Sdk.TestFrameworkDiscoverer
+Xunit.Sdk,TestCaseFinished,0,1,4,0,1,26,1,0,2,-1,3,1,Xunit.Sdk.TestCaseMessage' Xunit.TestCaseMessage' Xunit.TestCaseFinished,Xunit.Sdk.TestCaseRunner<TTestCase>
+Xunit.Sdk,TestCaseStarting,0,1,0,0,1,8,1,0,2,-1,3,1,Xunit.Sdk.TestCaseMessage' Xunit.TestCaseMessage' Xunit.TestCaseStarting,Xunit.Sdk.TestCaseRunner<TTestCase>
+Xunit.Sdk,TestClassCleanupFailure,0,2,4,0,2,39,2,0,2,-1,5,3,Xunit.Sdk.ExceptionUtility' Xunit.Sdk.TestClassMessage' Xunit.ExceptionUtility' Xunit.TestClassMessage' Xunit.TestClassCleanupFailure,Xunit.Sdk.TestCollectionCleanupFailure' Xunit.Sdk.TestMethodCleanupFailure' Xunit.Sdk.TestClassRunner<TTestCase>
+Xunit.Sdk,TestClassConstructionFinished,0,1,0,0,1,8,1,0,3,-1,3,0,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestClassConstructionFinished,
+Xunit.Sdk,TestClassConstructionStarting,0,1,0,0,1,8,1,0,3,-1,3,0,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestClassConstructionStarting,
+Xunit.Sdk,TestClassDisposeFinished,0,1,0,0,1,8,1,0,3,-1,3,0,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestClassDisposeFinished,
+Xunit.Sdk,TestClassDisposeStarting,0,1,0,0,1,8,1,0,3,-1,3,0,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestClassDisposeStarting,
+Xunit.Sdk,TestClassFinished,0,1,4,0,1,26,1,0,2,-1,3,1,Xunit.Sdk.TestClassMessage' Xunit.TestClassMessage' Xunit.TestClassFinished,Xunit.Sdk.TestClassRunner<TTestCase>
+Xunit.Sdk,TestClassStarting,0,1,0,0,1,8,1,0,2,-1,3,1,Xunit.Sdk.TestClassMessage' Xunit.TestClassMessage' Xunit.TestClassStarting,Xunit.Sdk.TestClassRunner<TTestCase>
+Xunit.Sdk,TestCleanupFailure,0,2,4,0,2,39,2,0,3,-1,5,1,Xunit.Sdk.ExceptionUtility' Xunit.Sdk.TestMessage' Xunit.ExceptionUtility' Xunit.TestMessage' Xunit.TestCleanupFailure,Xunit.Sdk.TestRunner<TTestCase>
+Xunit.Sdk,TestCollectionCleanupFailure,0,2,4,0,2,39,2,0,3,-1,6,1,Xunit.Sdk.ExceptionUtility' Xunit.Sdk.TestCollectionMessage' Xunit.Sdk.TestClassCleanupFailure' Xunit.ExceptionUtility' Xunit.TestCollectionMessage' Xunit.TestClassCleanupFailure,Xunit.Sdk.TestCollectionRunner<TTestCase>
+Xunit.Sdk,TestCollectionFinished,0,1,4,0,1,26,1,0,3,-1,3,1,Xunit.Sdk.TestCollectionMessage' Xunit.TestCollectionMessage' Xunit.TestCollectionFinished,Xunit.Sdk.TestCollectionRunner<TTestCase>
+Xunit.Sdk,TestCollectionStarting,0,1,0,0,1,8,1,0,3,-1,3,1,Xunit.Sdk.TestCollectionMessage' Xunit.TestCollectionMessage' Xunit.TestCollectionStarting,Xunit.Sdk.TestCollectionRunner<TTestCase>
+Xunit.Sdk,TestFailed,0,2,4,0,2,48,2,0,4,-1,5,3,Xunit.Sdk.ExceptionUtility' Xunit.Sdk.TestResultMessage' Xunit.ExceptionUtility' Xunit.TestResultMessage' Xunit.TestFailed,Xunit.Sdk.ExecutionErrorTestCaseRunner' Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.TestRunner<TTestCase>
+Xunit.Sdk,TestFinished,0,1,2,0,1,18,1,0,3,-1,3,3,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestFinished,Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.TestRunner<TTestCase>' Xunit.Sdk.ExecutionErrorTestCaseRunner
+Xunit.Sdk,TestMethodCleanupFailure,0,2,4,0,2,39,2,0,3,-1,6,1,Xunit.Sdk.ExceptionUtility' Xunit.Sdk.TestMethodMessage' Xunit.Sdk.TestClassCleanupFailure' Xunit.ExceptionUtility' Xunit.TestMethodMessage' Xunit.TestClassCleanupFailure,Xunit.Sdk.TestMethodRunner<TTestCase>
+Xunit.Sdk,TestMethodFinished,0,1,4,0,1,26,1,0,3,-1,3,1,Xunit.Sdk.TestMethodMessage' Xunit.TestMethodMessage' Xunit.TestMethodFinished,Xunit.Sdk.TestMethodRunner<TTestCase>
+Xunit.Sdk,TestMethodStarting,0,1,0,0,1,8,1,0,3,-1,3,1,Xunit.Sdk.TestMethodMessage' Xunit.TestMethodMessage' Xunit.TestMethodStarting,Xunit.Sdk.TestMethodRunner<TTestCase>
+Xunit.Sdk,TestOutput,0,1,1,0,1,14,1,0,3,-1,3,1,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestOutput,Xunit.Sdk.TestOutputHelper
+Xunit.Sdk,TestPassed,0,1,0,0,1,8,1,0,4,-1,3,1,Xunit.Sdk.TestResultMessage' Xunit.TestResultMessage' Xunit.TestPassed,Xunit.Sdk.TestRunner<TTestCase>
+Xunit.Sdk,TestSkipped,0,1,1,0,1,14,1,0,4,-1,3,1,Xunit.Sdk.TestResultMessage' Xunit.TestResultMessage' Xunit.TestSkipped,Xunit.Sdk.TestRunner<TTestCase>
+Xunit.Sdk,TestStarting,0,1,0,0,1,8,1,0,3,-1,3,3,Xunit.Sdk.TestMessage' Xunit.TestMessage' Xunit.TestStarting,Xunit.Sdk.ExecutionErrorTestCaseRunner' Xunit.Sdk.XunitTheoryTestCaseRunner' Xunit.Sdk.TestRunner<TTestCase>
+Xunit,ExecutionHelper,4,0,1,1,0,51,0,0,0,-1,0,1,,Xunit.Sdk.SerializationHelper
+Xunit,LongLivedMarshalByRefObject,0,1,0,0,1,7,1,25,0,-1,0,24,,Xunit.Sdk.TestClass' Xunit.Sdk.TestAssembly' Xunit.Sdk.TestCollection' Xunit.Sdk.XunitTest' Xunit.Sdk.TestMethod' Xunit.Sdk.TestFrameworkDiscoverer' Xunit.Sdk.DelegatingMessageSink' Xunit.Sdk.TestFrameworkExecutor<TTestCase>' Xunit.Sdk.TestMethodTestCase' Xunit.Sdk.TestFrameworkProxy' Xunit.Sdk.ReflectionAssemblyInfo' Xunit.Sdk.TestFramework' Xunit.Sdk.ReflectionParameterInfo' Xunit.Sdk.ReflectionMethodInfo' Xunit.Sdk.ReflectionAttributeInfo' Xunit.Sdk.ReflectionTypeInfo' Xunit.Sdk.TestCaseBulkDeserializer' Xunit.Sdk.TestCaseDescriptorFactory' Xunit.Sdk.NullMessageSink' Xunit.Sdk.SourceInformation' Xunit.Sdk.TestAssemblyMessage' Xunit.Sdk.DiscoveryCompleteMessage' Xunit.Sdk.ErrorMessage' Xunit.Sdk.DiagnosticMessage
+Xunit.Serialization,XunitSerializationInfo,2,13,0,0,9,477,74,0,0,0.38,7,1,Xunit.Sdk.SerializationHelper' Xunit.Serialization.ArraySerializer' Xunit.Serialization.XunitSerializationTriple' Xunit.Sdk.SerializationHelper' Xunit.Serialization.XunitSerializationInfo' Xunit.Serialization.ArraySerializer' Xunit.Serialization.XunitSerializationTriple,Xunit.Sdk.SerializationHelper
+Xunit.Serialization,ArraySerializer,2,4,1,0,4,92,17,0,0,0.5,0,2,,Xunit.Sdk.SerializationHelper' Xunit.Serialization.XunitSerializationInfo
+Xunit.Serialization,XunitSerializationTriple,3,1,0,3,1,30,1,0,0,0,1,1,Xunit.Serialization.XunitSerializationTriple,Xunit.Serialization.XunitSerializationInfo

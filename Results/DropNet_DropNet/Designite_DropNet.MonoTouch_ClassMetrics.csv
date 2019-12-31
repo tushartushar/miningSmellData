@@ -1,28 +1,28 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-DropNet.Authenticators,OAuthAuthenticator,16,8,0,0,5,118,12,0,0,0.38,0,0,,
-DropNet.Authenticators,QueryParameterComparer,0,1,0,0,1,8,1,0,0,-1,0,0,,
-DropNet.Authenticators,OAuth2Authenticator,0,2,0,0,2,13,3,0,0,-1,0,0,,
+DropNet.Authenticators,OAuthAuthenticator,16,8,0,0,5,118,13,0,0,0.38,0,1,,DropNet.DropNetClient
+DropNet.Authenticators,QueryParameterComparer,0,1,0,0,1,8,1,0,0,-1,0,1,,DropNet.Authenticators.OAuthAuthenticator
+DropNet.Authenticators,OAuth2Authenticator,0,2,0,0,2,13,3,0,0,-1,0,1,,DropNet.DropNetClient
 DropNet.Authenticators,OAuth2AuthorizationFlow,0,0,0,0,0,15,0,0,0,-1,0,2,,DropNet.DropNetClient' DropNet.Helpers.RequestHelper
-DropNet,DropNetClient,16,113,6,0,102,1169,183,0,0,0.08,17,0,DropNet.Models.UserLogin' DropNet.AuthenticationMethod' DropNet.Helpers.RequestHelper' DropNet.Authenticators.OAuth2AuthorizationFlow' DropNet.ApiType' DropNet.Helpers.ChunkedUploadHelper' DropNet.Models.ChunkedUpload' DropNet.Models.MetaData' DropNet.Models.ThumbnailSize' DropNet.Models.ShareResponse' DropNet.Models.CopyRefResponse' DropNet.Models.LongpollDeltaResult' DropNet.DeltaPageInternal' DropNet.Models.DeltaPage' DropNet.Models.DeltaEntry' DropNet.Models.OAuth2AccessToken' DropNet.Models.AccountInfo,
+DropNet,DropNetClient,16,113,6,0,102,1169,192,0,0,0.08,0,0,,
 DropNet,ApiType,0,0,0,0,0,6,0,0,0,-1,0,1,,DropNet.DropNetClient
 DropNet,AuthenticationMethod,0,0,0,0,0,11,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet,DeltaPageInternal,0,0,4,0,0,7,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Exceptions,DropboxException,0,2,0,0,2,10,2,1,0,-1,0,0,,
-DropNet.Exceptions,DropboxRestException,0,3,4,0,3,51,3,0,1,-1,0,0,,
+DropNet,DeltaPageInternal,0,0,4,0,0,7,0,0,0,-1,0,0,,
+DropNet.Exceptions,DropboxException,0,2,0,0,2,10,2,1,0,-1,0,2,,DropNet.Exceptions.DropboxRestException' DropNet.DropNetClient
+DropNet.Exceptions,DropboxRestException,0,3,4,0,3,51,3,0,1,-1,0,2,,DropNet.Extensions.RestClientExtensions' DropNet.DropNetClient
 DropNet.Extensions,RestClientExtensions,0,3,0,0,2,90,3,0,0,-1,0,0,,
 DropNet.Extensions,StringExtensions,0,1,0,0,1,20,3,0,0,-1,0,0,,
-DropNet.Helpers,RequestHelper,1,35,0,0,32,421,48,0,0,0,4,1,DropNet.Helpers.StreamUtils' DropNet.Models.ChunkedUpload' DropNet.Authenticators.OAuth2AuthorizationFlow' DropNet.Models.ThumbnailSize,DropNet.DropNetClient
+DropNet.Helpers,RequestHelper,1,35,0,0,32,421,51,0,0,0,0,1,,DropNet.DropNetClient
 DropNet.Helpers,StreamUtils,1,2,0,0,2,16,6,0,0,0,0,1,,DropNet.Helpers.RequestHelper
-DropNet.Models,AccountInfo,0,0,7,0,0,10,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,QuotaInfo,0,0,3,0,0,6,0,0,0,-1,0,0,,
-DropNet.Models,Team,0,0,1,0,0,4,0,0,0,-1,0,0,,
-DropNet.Models,DeltaPage,0,0,4,0,0,23,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,DeltaEntry,0,0,2,0,0,24,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,LongpollDeltaResult,0,0,2,0,0,12,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,MetaData,0,3,21,0,0,105,6,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,ShareResponse,0,0,3,0,0,9,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,ThumbnailSize,0,0,0,0,0,23,0,0,0,-1,0,2,,DropNet.DropNetClient' DropNet.Helpers.RequestHelper
+DropNet.Models,AccountInfo,0,0,7,0,0,10,0,0,0,-1,0,0,,
+DropNet.Models,QuotaInfo,0,0,3,0,0,6,0,0,0,-1,0,1,,DropNet.Models.AccountInfo
+DropNet.Models,Team,0,0,1,0,0,4,0,0,0,-1,0,1,,DropNet.Models.AccountInfo
+DropNet.Models,DeltaPage,0,0,4,0,0,23,0,0,0,-1,0,0,,
+DropNet.Models,DeltaEntry,0,0,2,0,0,24,0,0,0,-1,0,1,,DropNet.Models.DeltaPage
+DropNet.Models,LongpollDeltaResult,0,0,2,0,0,12,0,0,0,-1,0,0,,
+DropNet.Models,MetaData,0,3,21,0,0,105,6,0,0,-1,0,2,,DropNet.Models.MetaData' DropNet.Models.DeltaEntry
+DropNet.Models,ShareResponse,0,0,3,0,0,9,0,0,0,-1,0,0,,
+DropNet.Models,ThumbnailSize,0,0,0,0,0,23,0,0,0,-1,0,1,,DropNet.Helpers.RequestHelper
 DropNet.Models,UserLogin,0,0,2,0,0,7,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,ChunkedUpload,0,0,4,0,0,13,0,0,0,-1,0,2,,DropNet.DropNetClient' DropNet.Helpers.RequestHelper
-DropNet.Models,CopyRefResponse,0,0,3,0,0,9,0,0,0,-1,0,1,,DropNet.DropNetClient
-DropNet.Models,OAuth2AccessToken,0,0,3,0,0,8,0,0,0,-1,0,1,,DropNet.DropNetClient
+DropNet.Models,ChunkedUpload,0,0,4,0,0,13,0,0,0,-1,0,1,,DropNet.Helpers.RequestHelper
+DropNet.Models,CopyRefResponse,0,0,3,0,0,9,0,0,0,-1,0,0,,
+DropNet.Models,OAuth2AccessToken,0,0,3,0,0,8,0,0,0,-1,0,0,,

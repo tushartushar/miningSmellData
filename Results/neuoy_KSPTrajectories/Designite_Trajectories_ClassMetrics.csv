@@ -1,44 +1,52 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Trajectories,ToolbarManager,6,2,2,0,1,45,2,0,1,0,3,1,Trajectories.IToolbarManager' Trajectories.ToolbarTypes' Trajectories.IButton,Trajectories.MapGUI
-Trajectories,IToolbarManager,0,1,0,0,0,13,1,1,0,-1,0,2,,Trajectories.ToolbarManager' Trajectories.MapGUI
-Trajectories,IButton,0,1,10,0,0,175,1,1,0,-1,0,6,,Trajectories.ToolbarManager' Trajectories.ClickEvent' Trajectories.MouseMoveEvent' Trajectories.MouseEnterEvent' Trajectories.MouseLeaveEvent' Trajectories.MapGUI
-Trajectories,IDrawable,0,2,0,0,0,17,2,1,0,-1,0,1,,Trajectories.Button
-Trajectories,ClickEvent,2,1,0,2,0,19,1,0,0,0,1,1,Trajectories.IButton,Trajectories.MapGUI
-Trajectories,MouseMoveEvent,1,1,0,1,0,10,1,2,0,0,1,0,Trajectories.IButton,
-Trajectories,MouseEnterEvent,0,1,0,0,0,6,1,0,1,-1,1,0,Trajectories.IButton,
-Trajectories,MouseLeaveEvent,0,1,0,0,0,6,1,0,1,-1,1,0,Trajectories.IButton,
-Trajectories,IVisibility,0,0,1,0,0,9,0,2,0,-1,0,2,,Trajectories.Button' Trajectories.GUIToggleButtonBlizzyVisibility
-Trajectories,GameScenesVisibility,2,1,1,0,1,14,1,0,1,0,1,0,Trajectories.ToolbarTypes,
-Trajectories,PopupMenuDrawable,7,6,0,0,6,57,6,0,1,0,2,0,Trajectories.ToolbarTypes' Trajectories.Button,
-Trajectories,Button,7,7,10,0,1,139,10,0,1,0.57,4,1,Trajectories.ToolbarTypes' Trajectories.IVisibility' Trajectories.IDrawable' Trajectories.ButtonTypes,Trajectories.PopupMenuDrawable
+Trajectories,ToolbarManager,6,2,2,0,1,45,2,0,1,0,4,3,Trajectories.IToolbarManager' Trajectories.IButton' Trajectories.Button' Trajectories.ToolbarTypes,Trajectories.MapGUI' Trajectories.MainGUI' Trajectories.AppLauncherButton
+Trajectories,IToolbarManager,0,1,0,0,0,13,1,1,0,-1,1,1,Trajectories.IButton,Trajectories.ToolbarManager
+Trajectories,IButton,0,1,10,0,0,175,1,1,0,-1,2,10,Trajectories.IDrawable' Trajectories.IVisibility,Trajectories.AppLauncherButton' Trajectories.IToolbarManager' Trajectories.ClickEvent' Trajectories.MouseMoveEvent' Trajectories.IVisibility' Trajectories.PopupMenuDrawable' Trajectories.ToolbarManager' Trajectories.Button' Trajectories.MouseEnterEvent' Trajectories.MouseLeaveEvent
+Trajectories,IDrawable,0,2,0,0,0,17,2,1,0,-1,0,3,,Trajectories.IButton' Trajectories.PopupMenuDrawable' Trajectories.Button
+Trajectories,ClickEvent,2,1,0,2,0,19,1,0,0,0,1,2,Trajectories.IButton,Trajectories.AppLauncherButton' Trajectories.Button
+Trajectories,MouseMoveEvent,1,1,0,1,0,10,1,2,0,0,1,2,Trajectories.IButton,Trajectories.MouseEnterEvent' Trajectories.MouseLeaveEvent
+Trajectories,MouseEnterEvent,0,1,0,0,0,6,1,0,1,-1,2,1,Trajectories.IButton' Trajectories.MouseMoveEvent,Trajectories.Button
+Trajectories,MouseLeaveEvent,0,1,0,0,0,6,1,0,1,-1,2,1,Trajectories.IButton' Trajectories.MouseMoveEvent,Trajectories.Button
+Trajectories,IVisibility,0,0,1,0,0,9,0,2,0,-1,1,4,Trajectories.IButton,Trajectories.AppLauncherButton' Trajectories.IButton' Trajectories.GameScenesVisibility' Trajectories.Button
+Trajectories,GameScenesVisibility,2,1,1,0,1,14,1,0,1,0,2,1,Trajectories.IVisibility' Trajectories.ToolbarTypes,Trajectories.AppLauncherButton
+Trajectories,PopupMenuDrawable,7,6,0,0,6,57,6,0,1,0,4,0,Trajectories.IButton' Trajectories.IDrawable' Trajectories.Button' Trajectories.ToolbarTypes,
+Trajectories,Button,7,7,10,0,1,139,10,0,1,0.57,7,2,Trajectories.IButton' Trajectories.IDrawable' Trajectories.ClickEvent' Trajectories.MouseEnterEvent' Trajectories.MouseLeaveEvent' Trajectories.IVisibility' Trajectories.ToolbarTypes,Trajectories.PopupMenuDrawable' Trajectories.ToolbarManager
 Trajectories,ToolbarTypes,4,6,0,0,0,34,6,0,0,0.83,1,5,Trajectories.ButtonTypes,Trajectories.ToolbarManager' Trajectories.GameScenesVisibility' Trajectories.PopupMenuDrawable' Trajectories.Button' Trajectories.ButtonTypes
-Trajectories,ButtonTypes,15,1,0,0,0,34,1,0,0,0,1,2,Trajectories.ToolbarTypes,Trajectories.Button' Trajectories.ToolbarTypes
-Trajectories,AerodynamicModelFactory,0,1,0,0,1,30,3,0,0,-1,2,1,Trajectories.FARModel' Trajectories.StockModel,Trajectories.Trajectory
+Trajectories,ButtonTypes,15,1,0,0,0,34,1,0,0,0,1,1,Trajectories.ToolbarTypes,Trajectories.ToolbarTypes
+Trajectories,AerodynamicModelFactory,0,1,0,0,1,30,2,0,0,-1,3,1,Trajectories.FARModel' Trajectories.StockModel' Trajectories.VesselAerodynamicModel,Trajectories.Trajectory
 Trajectories,AeroForceCache,2,6,6,0,2,77,10,0,0,0,1,1,Trajectories.VesselAerodynamicModel,Trajectories.VesselAerodynamicModel
-Trajectories,FARModel,1,4,1,0,3,40,7,0,1,0.5,1,1,Trajectories.StockAeroUtil,Trajectories.AerodynamicModelFactory
-Trajectories,StockModel,0,4,1,0,3,24,5,0,1,-1,1,1,Trajectories.StockAeroUtil,Trajectories.AerodynamicModelFactory
-Trajectories,API,0,8,1,0,7,81,19,0,0,-1,5,0,Trajectories.Trajectory' Trajectories.Patch' Trajectories.VesselState' Trajectories.NavBallOverlay' Trajectories.DescentProfile,
-Trajectories,FlightOverlay,4,4,0,0,2,77,10,0,0,0.5,8,0,Trajectories.TrajectoryLine' Trajectories.TargetingCross' Trajectories.Patch' Trajectories.Settings' Trajectories.Util' Trajectories.Trajectory' Trajectories.VesselState' Trajectories.Point,
+Trajectories,FARModel,1,4,1,0,3,40,7,0,1,0.5,2,1,Trajectories.StockAeroUtil' Trajectories.VesselAerodynamicModel,Trajectories.AerodynamicModelFactory
+Trajectories,StockModel,0,4,1,0,3,24,5,0,1,-1,2,1,Trajectories.StockAeroUtil' Trajectories.VesselAerodynamicModel,Trajectories.AerodynamicModelFactory
+Trajectories,API,0,10,7,0,9,232,32,0,0,-1,6,0,Trajectories.DescentProfile' Trajectories.NavBallOverlay' Trajectories.Settings' Trajectories.Trajectory' Trajectories.Patch' Trajectories.Target,
+Trajectories,AppLauncherButton,5,8,1,0,3,190,26,0,0,0.5,9,1,Trajectories.ToolbarManager' Trajectories.IButton' Trajectories.ClickEvent' Trajectories.IVisibility' Trajectories.GameScenesVisibility' Trajectories.BlizzyToolbarButtonVisibility' Trajectories.IconStyleType' Trajectories.Settings' Trajectories.Util,Trajectories.MainGUI
+Trajectories,BlizzyToolbarButtonVisibility,1,1,2,0,1,23,1,0,1,0,0,1,,Trajectories.AppLauncherButton
+Trajectories,IconStyleType,0,0,0,0,0,6,0,0,0,-1,0,2,,Trajectories.MainGUI' Trajectories.AppLauncherButton
+Trajectories,FlightOverlay,10,3,0,0,3,78,11,0,0,0,6,0,Trajectories.TrajectoryLine' Trajectories.TargetingCross' Trajectories.Settings' Trajectories.Trajectory' Trajectories.Patch' Trajectories.Util,
 Trajectories,TrajectoryLine,2,1,0,2,1,11,2,0,0,0,1,1,Trajectories.GLUtils,Trajectories.FlightOverlay
-Trajectories,TargetingCross,1,1,2,1,1,17,2,0,0,0,1,1,Trajectories.GLUtils,Trajectories.FlightOverlay
-Trajectories,GLUtils,1,7,1,0,7,142,17,0,0,0.29,0,2,,Trajectories.TrajectoryLine' Trajectories.TargetingCross
-Trajectories,Profiler,0,2,0,0,2,227,2,0,0,-1,0,0,,
+Trajectories,TargetingCross,7,1,2,1,1,29,3,0,0,0,1,1,Trajectories.GLUtils,Trajectories.FlightOverlay
+Trajectories,GLUtils,1,7,1,0,7,143,17,0,0,0.29,0,2,,Trajectories.TrajectoryLine' Trajectories.TargetingCross
+Trajectories,Profiler,15,14,0,0,7,251,36,0,0,0,2,3,Trajectories.Entry' Trajectories.Util,Trajectories.VesselAerodynamicModel' Trajectories.StockAeroUtil' Trajectories.Trajectory
+Trajectories,Entry,11,0,0,11,0,14,0,0,0,-1,0,1,,Trajectories.Profiler
+Trajectories,ProfileScope,1,2,0,0,2,10,2,0,0,1,0,0,,
 Trajectories,Telemetry,0,3,0,0,2,71,3,0,0,-1,0,0,,
 Trajectories,TrajectoriesDebug,2,0,0,2,0,7,0,0,0,-1,0,1,,Trajectories.StockAeroUtil
-Trajectories,DescentProfile,8,9,1,0,8,219,16,0,0,0.33,2,4,Trajectories.Node' Trajectories.TrajectoriesVesselSettings,Trajectories.API' Trajectories.MapGUI' Trajectories.NavBallOverlay' Trajectories.Trajectory
-Trajectories,Node,6,3,0,4,3,32,5,0,0,0,0,1,,Trajectories.DescentProfile
-Trajectories,GUIToggleButtonBlizzyVisibility,1,1,2,0,0,23,2,0,1,0,1,1,Trajectories.IVisibility,Trajectories.MapGUI
-Trajectories,MapGUI,16,16,0,0,2,395,52,0,0,0.44,11,0,Trajectories.IButton' Trajectories.Settings' Trajectories.Util' Trajectories.Trajectory' Trajectories.Patch' Trajectories.VesselState' Trajectories.DescentProfile' Trajectories.ToolbarManager' Trajectories.IToolbarManager' Trajectories.GUIToggleButtonBlizzyVisibility' Trajectories.ClickEvent,
-Trajectories,MapOverlay,6,12,0,0,4,347,51,0,0,0.25,7,1,Trajectories.CameraListener' Trajectories.Settings' Trajectories.Trajectory' Trajectories.VesselState' Trajectories.Patch' Trajectories.Util' Trajectories.Point,Trajectories.CameraListener
-Trajectories,CameraListener,1,1,0,1,1,8,1,0,0,0,1,1,Trajectories.MapOverlay,Trajectories.MapOverlay
-Trajectories,NavBallOverlay,4,7,0,0,3,160,21,0,0,0,6,1,Trajectories.Patch' Trajectories.Trajectory' Trajectories.VesselState' Trajectories.DescentProfile' Trajectories.Point' Trajectories.Settings,Trajectories.API
-Trajectories,Settings,3,3,16,0,2,97,6,0,0,0,1,6,Trajectories.Persistent,Trajectories.FlightOverlay' Trajectories.MapGUI' Trajectories.MapOverlay' Trajectories.NavBallOverlay' Trajectories.Trajectory' Trajectories.VesselAerodynamicModel
+Trajectories,DescentProfile,5,12,3,4,10,310,33,0,0,0,3,5,Trajectories.Node' Trajectories.Settings' Trajectories.TrajectoriesVesselSettings,Trajectories.MapGUI' Trajectories.NavBallOverlay' Trajectories.Trajectory' Trajectories.API' Trajectories.MainGUI
+Trajectories,Node,3,4,7,0,4,76,6,0,0,1,0,1,,Trajectories.DescentProfile
+Trajectories,MainGUI,59,63,3,0,6,981,120,0,0,0.62,10,1,Trajectories.ToolbarManager' Trajectories.AppLauncherButton' Trajectories.IconStyleType' Trajectories.DescentProfile' Trajectories.PageType' Trajectories.Settings' Trajectories.Trajectory' Trajectories.Patch' Trajectories.Target' Trajectories.Util,Trajectories.Util
+Trajectories,PageType,0,0,0,0,0,7,0,0,0,-1,0,1,,Trajectories.MainGUI
+Trajectories,MapGUI,14,7,0,0,3,322,39,0,0,0.29,7,0,Trajectories.ToolbarManager' Trajectories.DescentProfile' Trajectories.Settings' Trajectories.Trajectory' Trajectories.Patch' Trajectories.Target' Trajectories.Util,
+Trajectories,MapOverlay,6,10,1,0,4,374,44,0,0,0.4,7,0,Trajectories.MapTrajectoryRenderer' Trajectories.Settings' Trajectories.Trajectory' Trajectories.Point' Trajectories.Patch' Trajectories.Target' Trajectories.Util,
+Trajectories,MapTrajectoryRenderer,1,2,0,1,2,21,5,0,0,0,0,1,,Trajectories.MapOverlay
+Trajectories,NavBallOverlay,4,7,0,0,3,160,21,0,0,0,4,1,Trajectories.DescentProfile' Trajectories.Settings' Trajectories.Trajectory' Trajectories.Target,Trajectories.API
+Trajectories,Settings,3,3,22,0,2,113,6,0,0,0,1,10,Trajectories.Persistent,Trajectories.API' Trajectories.FlightOverlay' Trajectories.NavBallOverlay' Trajectories.DescentProfile' Trajectories.VesselAerodynamicModel' Trajectories.MapOverlay' Trajectories.AppLauncherButton' Trajectories.MainGUI' Trajectories.Trajectory' Trajectories.MapGUI
 Trajectories,Persistent,1,1,0,1,1,5,1,0,0,0,0,1,,Trajectories.Settings
-Trajectories,StockAeroUtil,0,5,0,0,5,223,23,0,0,-1,2,2,Trajectories.TrajectoriesDebug' Trajectories.VesselAerodynamicModel,Trajectories.FARModel' Trajectories.StockModel
-Trajectories,TrajectoriesVesselSettings,13,0,0,13,0,29,0,0,0,-1,0,2,,Trajectories.DescentProfile' Trajectories.Trajectory
-Trajectories,Trajectory,17,14,11,0,10,789,54,0,0,0.29,9,5,Trajectories.VesselAerodynamicModel' Trajectories.VesselState' Trajectories.TrajectoriesVesselSettings' Trajectories.Settings' Trajectories.DescentProfile' Trajectories.AerodynamicModelFactory' Trajectories.Util' Trajectories.Patch' Trajectories.Point,Trajectories.API' Trajectories.FlightOverlay' Trajectories.MapGUI' Trajectories.MapOverlay' Trajectories.NavBallOverlay
-Trajectories,VesselState,0,2,5,0,2,24,2,0,0,-1,0,7,,Trajectories.API' Trajectories.FlightOverlay' Trajectories.MapGUI' Trajectories.MapOverlay' Trajectories.NavBallOverlay' Trajectories.Trajectory' Trajectories.Patch
-Trajectories,Point,5,0,0,5,0,14,0,0,0,-1,0,5,,Trajectories.FlightOverlay' Trajectories.MapOverlay' Trajectories.NavBallOverlay' Trajectories.Trajectory' Trajectories.Patch
-Trajectories,Patch,0,1,8,0,1,41,4,0,0,-1,2,6,Trajectories.Point' Trajectories.VesselState,Trajectories.API' Trajectories.FlightOverlay' Trajectories.MapGUI' Trajectories.MapOverlay' Trajectories.NavBallOverlay' Trajectories.Trajectory
-Trajectories,Util,3,16,9,0,16,217,20,0,0,0.88,0,4,,Trajectories.FlightOverlay' Trajectories.MapGUI' Trajectories.MapOverlay' Trajectories.Trajectory
-Trajectories,VesselAerodynamicModel,8,12,5,0,8,189,27,2,0,0.25,2,3,Trajectories.AeroForceCache' Trajectories.Settings,Trajectories.AeroForceCache' Trajectories.StockAeroUtil' Trajectories.Trajectory
+Trajectories,StockAeroUtil,0,5,0,0,5,234,27,0,0,-1,3,2,Trajectories.Profiler' Trajectories.TrajectoriesDebug' Trajectories.VesselAerodynamicModel,Trajectories.FARModel' Trajectories.StockModel
+Trajectories,TrajectoriesVesselSettings,16,0,0,16,0,35,0,0,0,-1,0,2,,Trajectories.DescentProfile' Trajectories.Trajectory
+Trajectories,Trajectory,16,15,8,2,8,977,74,0,0,0.33,12,6,Trajectories.AerodynamicModelFactory' Trajectories.Profiler' Trajectories.DescentProfile' Trajectories.Settings' Trajectories.TrajectoriesVesselSettings' Trajectories.VesselState' Trajectories.Point' Trajectories.Patch' Trajectories.Target' Trajectories.SimulationState' Trajectories.Util' Trajectories.VesselAerodynamicModel,Trajectories.NavBallOverlay' Trajectories.MapGUI' Trajectories.MapOverlay' Trajectories.FlightOverlay' Trajectories.API' Trajectories.MainGUI
+Trajectories,VesselState,0,2,5,0,2,24,2,0,0,-1,0,1,,Trajectories.Trajectory
+Trajectories,Point,5,0,0,5,0,14,0,0,0,-1,0,2,,Trajectories.MapOverlay' Trajectories.Trajectory
+Trajectories,Patch,0,0,8,0,0,13,0,0,0,-1,0,6,,Trajectories.FlightOverlay' Trajectories.MapOverlay' Trajectories.MapGUI' Trajectories.API' Trajectories.Trajectory' Trajectories.MainGUI
+Trajectories,Target,0,6,4,0,6,99,9,0,0,-1,0,6,,Trajectories.MapOverlay' Trajectories.API' Trajectories.NavBallOverlay' Trajectories.MapGUI' Trajectories.Trajectory' Trajectories.MainGUI
+Trajectories,SimulationState,2,0,0,2,0,5,0,0,0,-1,0,1,,Trajectories.Trajectory
+Trajectories,Util,3,20,10,0,20,260,24,0,0,0.9,1,7,Trajectories.MainGUI,Trajectories.AppLauncherButton' Trajectories.FlightOverlay' Trajectories.MapGUI' Trajectories.MapOverlay' Trajectories.MainGUI' Trajectories.Profiler' Trajectories.Trajectory
+Trajectories,VesselAerodynamicModel,8,12,5,0,8,192,27,2,0,0.25,3,6,Trajectories.AeroForceCache' Trajectories.Profiler' Trajectories.Settings,Trajectories.AerodynamicModelFactory' Trajectories.StockModel' Trajectories.FARModel' Trajectories.AeroForceCache' Trajectories.StockAeroUtil' Trajectories.Trajectory

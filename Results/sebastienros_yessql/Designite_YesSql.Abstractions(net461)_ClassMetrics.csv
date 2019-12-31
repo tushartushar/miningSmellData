@@ -1,0 +1,62 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+YesSql,CommandInterpreterFactory,1,1,0,1,1,15,2,0,0,0,3,0,YesSql.ICommandInterpreter' YesSql.ISqlDialect' YesSql.SqlDialectFactory,
+YesSql,ConcurrencyException,0,1,0,0,1,6,1,0,0,-1,0,1,,YesSql.ISession
+YesSql,Document,0,0,4,0,0,22,0,0,0,-1,0,3,,YesSql.Indexes.IIndex' YesSql.Indexes.MapIndex' YesSql.Indexes.ReduceIndex
+YesSql,ICommandInterpreter,0,12,0,0,0,15,12,1,0,-1,12,1,YesSql.Sql.Schema.IAddColumnCommand' YesSql.Sql.Schema.IAddIndexCommand' YesSql.Sql.Schema.IAlterColumnCommand' YesSql.Sql.Schema.IAlterTableCommand' YesSql.Sql.Schema.ICreateForeignKeyCommand' YesSql.Sql.Schema.ICreateTableCommand' YesSql.Sql.Schema.IDropColumnCommand' YesSql.Sql.Schema.IDropForeignKeyCommand' YesSql.Sql.Schema.IDropIndexCommand' YesSql.Sql.Schema.IDropTableCommand' YesSql.Sql.Schema.ISchemaCommand' YesSql.Sql.Schema.ISqlStatementCommand,YesSql.CommandInterpreterFactory
+YesSql,ICompiledQuery,0,1,0,0,0,4,1,0,0,-1,1,1,YesSql.IQuery,YesSql.ISession
+YesSql,IConfiguration,0,0,10,0,0,13,0,1,0,-1,4,3,YesSql.IConnectionFactory' YesSql.IContentSerializer' YesSql.IIdentifierFactory' YesSql.IIdGenerator,YesSql.IStore' YesSql.IIdGenerator' YesSql.ConfigurationExtensions
+YesSql,ConfigurationExtensions,0,10,0,0,10,52,10,0,0,-1,4,0,YesSql.IConfiguration' YesSql.IConnectionFactory' YesSql.IContentSerializer' YesSql.IIdentifierFactory,
+YesSql,DbConnectionFactory<TDbConnection>,1,2,1,0,2,18,2,0,1,0,1,0,YesSql.IConnectionFactory,
+YesSql,IConnectionFactory,0,1,1,0,0,5,1,1,0,-1,0,3,,YesSql.IConfiguration' YesSql.ConfigurationExtensions' YesSql.DbConnectionFactory<TDbConnection>
+YesSql,IContentSerializer,0,3,0,0,0,6,3,1,0,-1,0,2,,YesSql.IConfiguration' YesSql.ConfigurationExtensions
+YesSql,IIdAccessor,0,2,0,0,0,15,2,1,0,-1,0,2,,YesSql.IStore' YesSql.IIdentifierFactory
+YesSql,IIdentifierFactory,0,1,0,0,0,4,1,1,0,-1,1,2,YesSql.IIdAccessor,YesSql.IConfiguration' YesSql.ConfigurationExtensions
+YesSql,IIdGenerator,0,3,0,0,0,19,3,2,0,-1,3,1,YesSql.IConfiguration' YesSql.IStore' YesSql.Sql.ISchemaBuilder,YesSql.IConfiguration
+YesSql,IQuery,0,23,0,0,0,44,23,3,0,-1,3,3,YesSql.IQueryIndex' YesSql.ISqlDialect' YesSql.Indexes.IIndex,YesSql.ISession' YesSql.QueryExtensions' YesSql.ICompiledQuery
+YesSql,IQueryIndex,0,16,0,0,0,19,16,1,0,-1,2,2,YesSql.ISqlDialect' YesSql.Indexes.IIndex,YesSql.QueryExtensions' YesSql.IQuery
+YesSql,ISession,0,12,1,0,0,78,12,1,0,-1,5,4,YesSql.ConcurrencyException' YesSql.ICompiledQuery' YesSql.IQuery' YesSql.IStore' YesSql.Indexes.IIndexProvider,YesSql.IStore' YesSql.IStoreExtensions' YesSql.SessionExtensions' YesSql.QueryExtensions
+YesSql,SessionExtensions,0,2,0,0,2,27,2,0,0,-1,1,0,YesSql.ISession,
+YesSql,ISqlBuilder,0,25,5,0,0,33,25,1,0,-1,0,1,,YesSql.ISqlDialect
+YesSql,ISqlDialect,0,17,12,0,0,35,17,1,0,-1,1,6,YesSql.ISqlBuilder,YesSql.IStore' YesSql.IQueryIndex' YesSql.IQuery' YesSql.Sql.ISchemaBuilder' YesSql.CommandInterpreterFactory' YesSql.SqlDialectFactory
+YesSql,ISqlFunction,0,1,0,0,0,4,1,2,0,-1,0,0,,
+YesSql,IStore,0,5,3,0,0,20,5,1,0,-1,7,3,YesSql.IConfiguration' YesSql.IIdAccessor' YesSql.ISession' YesSql.ISqlDialect' YesSql.ITypeService' YesSql.Indexes.IIndexProvider' YesSql.Indexes.IndexDescriptor,YesSql.IIdGenerator' YesSql.ISession' YesSql.IStoreExtensions
+YesSql,IStoreExtensions,0,1,0,0,1,11,1,0,0,-1,2,0,YesSql.ISession' YesSql.IStore,
+YesSql,ITypeService,0,0,0,0,0,5,0,1,0,-1,0,1,,YesSql.IStore
+YesSql,QueryExtensions,0,5,0,0,5,27,5,0,0,-1,4,0,YesSql.IQuery' YesSql.IQueryIndex' YesSql.ISession' YesSql.Indexes.IIndex,
+YesSql,SimplifiedTypeName,0,1,1,0,1,8,1,0,0,-1,0,0,,
+YesSql,SqlDialectFactory,1,2,0,1,2,17,3,0,0,1,1,1,YesSql.ISqlDialect,YesSql.CommandInterpreterFactory
+YesSql.Sql.Schema,IAddColumnCommand,0,0,0,0,0,3,0,1,1,-1,1,2,YesSql.Sql.Schema.ICreateColumnCommand,YesSql.Sql.Schema.IAlterTableCommand' YesSql.ICommandInterpreter
+YesSql.Sql.Schema,IAddIndexCommand,0,0,2,0,0,5,0,1,1,-1,1,1,YesSql.Sql.Schema.ITableCommand,YesSql.ICommandInterpreter
+YesSql.Sql.Schema,IAlterColumnCommand,0,2,0,0,0,5,2,1,1,-1,1,2,YesSql.Sql.Schema.IColumnCommand,YesSql.Sql.Schema.IAlterTableCommand' YesSql.ICommandInterpreter
+YesSql.Sql.Schema,IAlterTableCommand,0,7,0,0,0,10,7,1,1,-1,3,2,YesSql.Sql.Schema.IAddColumnCommand' YesSql.Sql.Schema.IAlterColumnCommand' YesSql.Sql.Schema.ISchemaCommand,YesSql.ICommandInterpreter' YesSql.Sql.ISchemaBuilder
+YesSql.Sql.Schema,IColumnCommand,0,3,6,0,0,12,3,5,1,-1,1,4,YesSql.Sql.Schema.ITableCommand,YesSql.Sql.Schema.IAlterColumnCommand' YesSql.Sql.Schema.IRenameColumnCommand' YesSql.Sql.Schema.IDropColumnCommand' YesSql.Sql.Schema.ICreateColumnCommand
+YesSql.Sql.Schema,ICreateColumnCommand,0,8,4,0,0,15,8,2,2,-1,1,2,YesSql.Sql.Schema.IColumnCommand,YesSql.Sql.Schema.IAddColumnCommand' YesSql.Sql.Schema.ICreateTableCommand
+YesSql.Sql.Schema,ICreateForeignKeyCommand,0,0,4,0,0,7,0,1,1,-1,1,1,YesSql.Sql.Schema.ISchemaCommand,YesSql.ICommandInterpreter
+YesSql.Sql.Schema,ICreateTableCommand,0,2,0,0,0,5,2,1,1,-1,2,2,YesSql.Sql.Schema.ICreateColumnCommand' YesSql.Sql.Schema.ISchemaCommand,YesSql.ICommandInterpreter' YesSql.Sql.ISchemaBuilder
+YesSql.Sql.Schema,IDropColumnCommand,0,0,0,0,0,3,0,1,2,-1,1,1,YesSql.Sql.Schema.IColumnCommand,YesSql.ICommandInterpreter
+YesSql.Sql.Schema,IDropForeignKeyCommand,0,0,1,0,0,4,0,1,1,-1,1,1,YesSql.Sql.Schema.ISchemaCommand,YesSql.ICommandInterpreter
+YesSql.Sql.Schema,IDropIndexCommand,0,0,1,0,0,4,0,1,1,-1,1,1,YesSql.Sql.Schema.ITableCommand,YesSql.ICommandInterpreter
+YesSql.Sql.Schema,IDropTableCommand,0,0,0,0,0,3,0,1,1,-1,1,1,YesSql.Sql.Schema.ISchemaCommand,YesSql.ICommandInterpreter
+YesSql.Sql.Schema,IRenameColumnCommand,0,0,1,0,0,4,0,1,2,-1,1,0,YesSql.Sql.Schema.IColumnCommand,
+YesSql.Sql.Schema,ISchemaCommand,0,0,2,0,0,5,0,9,0,-1,1,8,YesSql.Sql.Schema.ITableCommand,YesSql.Sql.Schema.IDropForeignKeyCommand' YesSql.Sql.Schema.ITableCommand' YesSql.Sql.Schema.ICreateTableCommand' YesSql.Sql.Schema.ICreateForeignKeyCommand' YesSql.Sql.Schema.ISqlStatementCommand' YesSql.Sql.Schema.IAlterTableCommand' YesSql.Sql.Schema.IDropTableCommand' YesSql.ICommandInterpreter
+YesSql.Sql.Schema,SchemaCommandType,0,0,0,0,0,9,0,0,0,-1,0,0,,
+YesSql.Sql.Schema,ITableCommand,0,0,0,0,0,3,0,4,1,-1,1,4,YesSql.Sql.Schema.ISchemaCommand,YesSql.Sql.Schema.IColumnCommand' YesSql.Sql.Schema.IDropIndexCommand' YesSql.Sql.Schema.ISchemaCommand' YesSql.Sql.Schema.IAddIndexCommand
+YesSql.Sql.Schema,ISqlStatementCommand,0,0,2,0,0,5,0,1,1,-1,1,1,YesSql.Sql.Schema.ISchemaCommand,YesSql.ICommandInterpreter
+YesSql.Indexes,DescribeContext<T>,1,4,0,0,4,38,5,0,1,0.75,6,1,YesSql.Indexes.IDescribeFor' YesSql.Indexes.IMapFor' YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>' YesSql.Indexes.IDescriptor' YesSql.Indexes.IIndex' YesSql.Indexes.IndexDescriptor,YesSql.Indexes.IndexProvider<T>
+YesSql.Indexes,IDescribeFor,0,3,2,0,0,8,3,1,0,-1,1,2,YesSql.Indexes.IIndex,YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>' YesSql.Indexes.DescribeContext<T>
+YesSql.Indexes,IMapFor,0,4,0,0,0,7,4,1,0,-1,2,2,YesSql.Indexes.IGroupFor' YesSql.Indexes.IIndex,YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>' YesSql.Indexes.DescribeContext<T>
+YesSql.Indexes,IGroupFor,0,1,0,0,0,4,1,1,0,-1,2,2,YesSql.Indexes.IReduceFor' YesSql.Indexes.IIndex,YesSql.Indexes.IMapFor' YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>
+YesSql.Indexes,IReduceFor,0,1,0,0,0,4,1,1,0,-1,2,2,YesSql.Indexes.IDeleteFor' YesSql.Indexes.IIndex,YesSql.Indexes.IGroupFor' YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>
+YesSql.Indexes,IDeleteFor,0,1,0,0,0,4,1,1,0,-1,1,2,YesSql.Indexes.IIndex,YesSql.Indexes.IReduceFor' YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>
+YesSql.Indexes,IndexDescriptor<T;TIndex;TKey>,4,10,2,0,7,83,15,0,1,0.2,7,1,YesSql.Indexes.IDescribeFor' YesSql.Indexes.IMapFor' YesSql.Indexes.IGroupFor' YesSql.Indexes.IReduceFor' YesSql.Indexes.IDeleteFor' YesSql.Indexes.GroupedEnumerable<TKey;TIndex>' YesSql.Indexes.IIndex,YesSql.Indexes.DescribeContext<T>
+YesSql.Indexes,GroupedEnumerable<TKey;TIndex>,2,3,1,0,2,22,3,0,0,0.67,1,1,YesSql.Indexes.IIndex,YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>
+YesSql.Indexes,IDescriptor,0,2,0,0,0,5,2,1,0,-1,1,3,YesSql.Indexes.IndexDescriptor,YesSql.Indexes.IndexProvider<T>' YesSql.Indexes.IIndexProvider' YesSql.Indexes.DescribeContext<T>
+YesSql.Indexes,IIndex,0,4,1,0,0,8,4,2,0,-1,1,14,YesSql.Document,YesSql.Indexes.DescribeContext<T>' YesSql.Indexes.ReduceIndex' YesSql.QueryExtensions' YesSql.Indexes.MapIndex' YesSql.Indexes.IndexDescriptor' YesSql.IQuery' YesSql.IQueryIndex' YesSql.Indexes.IDescribeFor' YesSql.Indexes.IMapFor' YesSql.Indexes.IGroupFor' YesSql.Indexes.IReduceFor' YesSql.Indexes.IDeleteFor' YesSql.Indexes.IndexDescriptor<T;TIndex;TKey>' YesSql.Indexes.GroupedEnumerable<TKey;TIndex>
+YesSql.Indexes,IIndexProvider,0,2,1,0,0,6,2,1,0,-1,1,3,YesSql.Indexes.IDescriptor,YesSql.IStore' YesSql.ISession' YesSql.Indexes.IndexProvider<T>
+YesSql.Indexes,IndexDescriptor,0,0,7,0,0,10,0,0,0,-1,1,3,YesSql.Indexes.IIndex,YesSql.Indexes.IDescriptor' YesSql.IStore' YesSql.Indexes.DescribeContext<T>
+YesSql.Indexes,IndexProvider<T>,0,3,1,0,2,13,3,0,1,-1,3,0,YesSql.Indexes.DescribeContext<T>' YesSql.Indexes.IDescriptor' YesSql.Indexes.IIndexProvider,
+YesSql.Indexes,MapIndex,0,4,2,0,0,21,4,0,1,-1,2,0,YesSql.Document' YesSql.Indexes.IIndex,
+YesSql.Indexes,ReduceIndex,1,5,2,0,1,27,5,0,1,0.8,2,0,YesSql.Document' YesSql.Indexes.IIndex,
+YesSql.Sql,ISchemaBuilder,0,12,4,0,0,19,12,1,0,-1,3,1,YesSql.ISqlDialect' YesSql.Sql.Schema.IAlterTableCommand' YesSql.Sql.Schema.ICreateTableCommand,YesSql.IIdGenerator
+YesSql.Storage,DocumentIdentity,0,2,3,0,2,18,2,0,1,-1,1,0,YesSql.Storage.IIdentityEntity,
+YesSql.Storage,IIdentityEntity,0,0,3,0,0,6,0,1,0,-1,0,1,,YesSql.Storage.DocumentIdentity

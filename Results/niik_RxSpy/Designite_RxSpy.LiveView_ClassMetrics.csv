@@ -1,28 +1,28 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-RxSpy.AppStartup,StartupSequence,0,1,0,0,1,41,1,0,0,-1,4,1,RxSpy.Communication.RxSpyHttpClient' RxSpy.Models.RxSpySessionModel' RxSpy.ViewModels.MainViewModel' RxSpy.App,RxSpy.App
-RxSpy.Communication,IRxSpyClient,0,1,0,0,0,4,1,1,0,-1,0,0,,
-RxSpy.Communication,RxSpyHttpClient,1,4,0,0,3,44,4,0,1,0.75,2,1,RxSpy.Communication.Serialization.RxSpyJsonSerializerStrategy' RxSpy.SimpleJson,RxSpy.AppStartup.StartupSequence
-RxSpy,GraphWindow,1,1,2,1,1,25,1,0,0,0,0,1,,RxSpy.Views.Controls.TrackedObservablesGrid
+RxSpy.AppStartup,StartupSequence,0,1,0,0,1,41,1,0,0,-1,9,1,RxSpy.Communication.RxSpyHttpClient' RxSpy.App' RxSpy.Models.RxSpySessionModel' RxSpy.ViewModels.MainViewModel' RxSpy.ViewModels.RxSpyObservableDetailsViewModel' RxSpy.ViewModels.RxSpyObservablesGridViewModel' RxSpy.Views.Controls.ObservableDetails' RxSpy.Views.Controls.TrackedObservablesGrid' RxSpy.Views.MainView,RxSpy.App
+RxSpy.Communication,IRxSpyClient,0,1,0,0,0,4,1,1,0,-1,0,1,,RxSpy.Communication.RxSpyHttpClient
+RxSpy.Communication,RxSpyHttpClient,1,4,0,0,3,44,4,0,1,0.75,1,1,RxSpy.Communication.IRxSpyClient,RxSpy.AppStartup.StartupSequence
+RxSpy,GraphWindow,1,1,2,1,1,25,1,0,0,0,1,1,RxSpy.ViewModels.ObservableGraphViewModel,RxSpy.Views.Controls.TrackedObservablesGrid
 RxSpy,App,1,3,0,0,3,47,4,0,0,0.67,1,1,RxSpy.AppStartup.StartupSequence,RxSpy.AppStartup.StartupSequence
-RxSpy,MainWindow,0,2,0,0,1,13,2,0,0,-1,0,0,,
-RxSpy.Models,RxSpyErrorModel,0,1,4,0,1,14,1,0,0,-1,1,2,RxSpy.Events.IOnErrorEvent,RxSpy.Models.RxSpyObservableModel' RxSpy.ViewModels.RxSpyObservableDetailsViewModel
-RxSpy.Models,RxSpyObservableModel,12,5,17,0,5,124,5,0,0,1,6,6,RxSpy.Models.RxSpyErrorModel' RxSpy.Events.IOperatorCreatedEvent' RxSpy.Events.IOnNextEvent' RxSpy.Events.IOnCompletedEvent' RxSpy.Events.IOnErrorEvent' RxSpy.Events.ITagOperatorEvent,RxSpy.Models.RxSpySessionModel' RxSpy.Models.RxSpySubscriptionModel' RxSpy.ViewModels.Graphs.ObservableVertex' RxSpy.ViewModels.ObservableGraphViewModel' RxSpy.ViewModels.RxSpyObservableDetailsViewModel' RxSpy.ViewModels.RxSpyObservableGridItemViewModel
-RxSpy.Models,RxSpyObservedValueModel,0,1,4,0,1,14,1,0,0,-1,1,1,RxSpy.Events.IOnNextEvent,RxSpy.ViewModels.RxSpyObservedValueViewModel
-RxSpy.Models,RxSpySessionModel,4,9,3,0,1,112,13,0,0,0.22,11,2,RxSpy.Events.IEvent' RxSpy.Events.EventType' RxSpy.Models.RxSpyObservableModel' RxSpy.Events.IOperatorCreatedEvent' RxSpy.Models.RxSpySubscriptionModel' RxSpy.Events.ISubscribeEvent' RxSpy.Events.IUnsubscribeEvent' RxSpy.Events.IOnErrorEvent' RxSpy.Events.IOnNextEvent' RxSpy.Events.IOnCompletedEvent' RxSpy.Events.ITagOperatorEvent,RxSpy.AppStartup.StartupSequence' RxSpy.ViewModels.MainViewModel
-RxSpy.Models,RxSpySubscriptionModel,3,1,5,0,1,31,1,0,0,0,2,1,RxSpy.Models.RxSpyObservableModel' RxSpy.Events.ISubscribeEvent,RxSpy.Models.RxSpySessionModel
-RxSpy.ViewModels.Graphs,ObservableGraph,0,0,0,0,0,3,0,0,0,-1,0,1,,RxSpy.ViewModels.ObservableGraphViewModel
-RxSpy.ViewModels.Graphs,ObservableGraphLayout,0,0,0,0,0,3,0,0,0,-1,0,0,,
-RxSpy.ViewModels.Graphs,ObservableVertex,5,3,7,0,3,55,4,0,0,1,1,2,RxSpy.Models.RxSpyObservableModel,RxSpy.ViewModels.Graphs.ObserveableEdge' RxSpy.ViewModels.ObservableGraphViewModel
-RxSpy.ViewModels.Graphs,ObserveableEdge,0,3,0,0,3,17,4,0,0,-1,1,0,RxSpy.ViewModels.Graphs.ObservableVertex,
-RxSpy.ViewModels,MainViewModel,7,1,8,0,1,66,1,0,0,0,2,1,RxSpy.ViewModels.RxSpyObservablesGridViewModel' RxSpy.Models.RxSpySessionModel,RxSpy.AppStartup.StartupSequence
-RxSpy.ViewModels,ObservableGraphViewModel,1,3,1,0,1,35,5,0,0,0,3,0,RxSpy.ViewModels.Graphs.ObservableGraph' RxSpy.Models.RxSpyObservableModel' RxSpy.ViewModels.Graphs.ObservableVertex,
-RxSpy.ViewModels,RxSpyObservableDetailsViewModel,7,2,6,0,1,67,4,0,0,1,3,0,RxSpy.Models.RxSpyObservableModel' RxSpy.Models.RxSpyErrorModel' RxSpy.Events.ITypeInfo,
-RxSpy.ViewModels,RxSpyObservableGridItemViewModel,11,1,12,0,1,86,1,0,0,0,1,2,RxSpy.Models.RxSpyObservableModel,RxSpy.ViewModels.RxSpyObservablesGridViewModel' RxSpy.Views.Controls.TrackedObservablesGrid
-RxSpy.ViewModels,RxSpyObservablesGridViewModel,2,1,2,0,1,19,1,0,0,0,1,1,RxSpy.ViewModels.RxSpyObservableGridItemViewModel,RxSpy.ViewModels.MainViewModel
-RxSpy.ViewModels,RxSpyObservedValueViewModel,5,1,4,0,1,38,1,0,0,0,1,0,RxSpy.Models.RxSpyObservedValueModel,
-RxSpy.Views.Controls,ObservableDetails,1,1,2,1,1,27,1,0,0,0,0,0,,
-RxSpy.Views.Controls,TrackedObservablesGrid,3,3,2,1,2,83,5,0,0,0,2,0,RxSpy.GraphWindow' RxSpy.ViewModels.RxSpyObservableGridItemViewModel,
-RxSpy.Views,MainView,1,1,2,1,1,29,1,0,0,0,0,0,,
+RxSpy,MainWindow,0,2,0,0,1,13,2,0,0,-1,1,0,RxSpy.ViewModels.MainViewModel,
+RxSpy.Models,RxSpyErrorModel,0,1,4,0,1,14,1,0,0,-1,0,2,,RxSpy.ViewModels.RxSpyObservableDetailsViewModel' RxSpy.Models.RxSpyObservableModel
+RxSpy.Models,RxSpyObservableModel,12,5,17,0,5,124,5,0,0,1,3,8,RxSpy.Models.RxSpyErrorModel' RxSpy.Models.RxSpyObservedValueModel' RxSpy.Models.RxSpySubscriptionModel,RxSpy.ViewModels.ObservableGraphViewModel' RxSpy.ViewModels.RxSpyObservablesGridViewModel' RxSpy.ViewModels.RxSpyObservableDetailsViewModel' RxSpy.ViewModels.Graphs.ObservableVertex' RxSpy.ViewModels.MainViewModel' RxSpy.ViewModels.RxSpyObservableGridItemViewModel' RxSpy.Models.RxSpySubscriptionModel' RxSpy.Models.RxSpySessionModel
+RxSpy.Models,RxSpyObservedValueModel,0,1,4,0,1,14,1,0,0,-1,0,2,,RxSpy.ViewModels.RxSpyObservedValueViewModel' RxSpy.Models.RxSpyObservableModel
+RxSpy.Models,RxSpySessionModel,4,9,3,0,1,112,18,0,0,0.22,2,2,RxSpy.Models.RxSpyObservableModel' RxSpy.Models.RxSpySubscriptionModel,RxSpy.ViewModels.MainViewModel' RxSpy.AppStartup.StartupSequence
+RxSpy.Models,RxSpySubscriptionModel,3,1,5,0,1,31,1,0,0,0,1,2,RxSpy.Models.RxSpyObservableModel,RxSpy.Models.RxSpyObservableModel' RxSpy.Models.RxSpySessionModel
+RxSpy.ViewModels.Graphs,ObservableGraph,0,0,0,0,0,3,0,0,0,-1,2,2,RxSpy.ViewModels.Graphs.ObservableVertex' RxSpy.ViewModels.Graphs.ObserveableEdge,RxSpy.ViewModels.Graphs.ObservableGraphLayout' RxSpy.ViewModels.ObservableGraphViewModel
+RxSpy.ViewModels.Graphs,ObservableGraphLayout,0,0,0,0,0,3,0,0,0,-1,3,0,RxSpy.ViewModels.Graphs.ObservableGraph' RxSpy.ViewModels.Graphs.ObservableVertex' RxSpy.ViewModels.Graphs.ObserveableEdge,
+RxSpy.ViewModels.Graphs,ObservableVertex,5,3,7,0,3,55,4,0,0,1,1,4,RxSpy.Models.RxSpyObservableModel,RxSpy.ViewModels.Graphs.ObservableGraph' RxSpy.ViewModels.Graphs.ObservableGraphLayout' RxSpy.ViewModels.Graphs.ObserveableEdge' RxSpy.ViewModels.ObservableGraphViewModel
+RxSpy.ViewModels.Graphs,ObserveableEdge,0,3,0,0,3,17,4,0,0,-1,1,3,RxSpy.ViewModels.Graphs.ObservableVertex,RxSpy.ViewModels.Graphs.ObservableGraph' RxSpy.ViewModels.Graphs.ObservableGraphLayout' RxSpy.ViewModels.ObservableGraphViewModel
+RxSpy.ViewModels,MainViewModel,7,1,8,0,1,66,1,0,0,0,4,3,RxSpy.Models.RxSpyObservableModel' RxSpy.Models.RxSpySessionModel' RxSpy.ViewModels.RxSpyObservableDetailsViewModel' RxSpy.ViewModels.RxSpyObservablesGridViewModel,RxSpy.MainWindow' RxSpy.Views.MainView' RxSpy.AppStartup.StartupSequence
+RxSpy.ViewModels,ObservableGraphViewModel,1,3,1,0,1,35,5,0,0,0,4,2,RxSpy.Models.RxSpyObservableModel' RxSpy.ViewModels.Graphs.ObservableGraph' RxSpy.ViewModels.Graphs.ObservableVertex' RxSpy.ViewModels.Graphs.ObserveableEdge,RxSpy.Views.Controls.TrackedObservablesGrid' RxSpy.GraphWindow
+RxSpy.ViewModels,RxSpyObservableDetailsViewModel,7,2,6,0,1,67,4,0,0,1,4,3,RxSpy.Models.RxSpyErrorModel' RxSpy.Models.RxSpyObservableModel' RxSpy.ViewModels.RxSpyObservablesGridViewModel' RxSpy.ViewModels.RxSpyObservedValueViewModel,RxSpy.AppStartup.StartupSequence' RxSpy.Views.Controls.ObservableDetails' RxSpy.ViewModels.MainViewModel
+RxSpy.ViewModels,RxSpyObservableGridItemViewModel,11,1,12,0,1,86,1,0,0,0,1,2,RxSpy.Models.RxSpyObservableModel,RxSpy.Views.Controls.TrackedObservablesGrid' RxSpy.ViewModels.RxSpyObservablesGridViewModel
+RxSpy.ViewModels,RxSpyObservablesGridViewModel,2,1,2,0,1,19,1,0,0,0,2,4,RxSpy.Models.RxSpyObservableModel' RxSpy.ViewModels.RxSpyObservableGridItemViewModel,RxSpy.AppStartup.StartupSequence' RxSpy.ViewModels.MainViewModel' RxSpy.ViewModels.RxSpyObservableDetailsViewModel' RxSpy.Views.Controls.TrackedObservablesGrid
+RxSpy.ViewModels,RxSpyObservedValueViewModel,5,1,4,0,1,38,1,0,0,0,1,1,RxSpy.Models.RxSpyObservedValueModel,RxSpy.ViewModels.RxSpyObservableDetailsViewModel
+RxSpy.Views.Controls,ObservableDetails,1,1,2,1,1,27,1,0,0,0,1,1,RxSpy.ViewModels.RxSpyObservableDetailsViewModel,RxSpy.AppStartup.StartupSequence
+RxSpy.Views.Controls,TrackedObservablesGrid,3,3,2,1,2,83,4,0,0,0,4,1,RxSpy.GraphWindow' RxSpy.ViewModels.ObservableGraphViewModel' RxSpy.ViewModels.RxSpyObservableGridItemViewModel' RxSpy.ViewModels.RxSpyObservablesGridViewModel,RxSpy.AppStartup.StartupSequence
+RxSpy.Views,MainView,1,1,2,1,1,29,1,0,0,0,1,1,RxSpy.ViewModels.MainViewModel,RxSpy.AppStartup.StartupSequence
 RxSpy.Properties,Resources,2,1,3,0,0,51,1,0,0,0,0,0,,
 RxSpy.Properties,Settings,1,0,1,0,0,13,0,0,0,-1,0,0,,
 XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

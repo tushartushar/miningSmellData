@@ -1,21 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 CQRSShop.Domain.Aggregates,Customer,0,6,1,0,1,29,6,0,1,-1,0,3,,CQRSShop.Domain.Aggregates.Basket' CQRSShop.Domain.CommandHandlers.BasketCommandHandler' CQRSShop.Domain.CommandHandlers.CustomerCommandHandler
-CQRSShop.Domain.Aggregates,Order,1,9,0,0,1,70,13,0,1,0.44,2,2,CQRSShop.Domain.Aggregates.OrderState' CQRSShop.Infrastructure.IdGenerator,CQRSShop.Domain.Aggregates.Basket' CQRSShop.Domain.CommandHandlers.OrderHandler
+CQRSShop.Domain.Aggregates,Order,1,9,0,0,1,70,13,0,1,0.44,4,2,CQRSShop.Domain.Aggregates.OrderState' CQRSShop.Domain.Exceptions.OrderCancelledException' CQRSShop.Domain.Exceptions.ShippingStartedException' CQRSShop.Domain.Exceptions.InvalidOrderState,CQRSShop.Domain.Aggregates.Basket' CQRSShop.Domain.CommandHandlers.OrderHandler
 CQRSShop.Domain.Aggregates,OrderState,0,0,0,0,0,6,0,0,0,-1,0,1,,CQRSShop.Domain.Aggregates.Order
 CQRSShop.Domain.Aggregates,Product,0,4,2,0,1,23,4,0,1,-1,0,3,,CQRSShop.Domain.Aggregates.Basket' CQRSShop.Domain.CommandHandlers.BasketCommandHandler' CQRSShop.Domain.CommandHandlers.ProductCommandHandler
-CQRSShop.Domain.Aggregates,Basket,2,9,0,0,1,52,11,0,1,0.67,3,1,CQRSShop.Domain.Aggregates.Customer' CQRSShop.Domain.Aggregates.Product' CQRSShop.Domain.Aggregates.Order,CQRSShop.Domain.CommandHandlers.BasketCommandHandler
-CQRSShop.Domain.CommandHandlers,BasketCommandHandler,1,6,0,0,6,52,6,0,1,0,5,1,CQRSShop.Infrastructure.IDomainRepository' CQRSShop.Domain.Aggregates.Basket' CQRSShop.Domain.Aggregates.Customer' CQRSShop.Infrastructure.IAggregate' CQRSShop.Domain.Aggregates.Product,CQRSShop.Domain.DomainEntry
-CQRSShop.Domain.CommandHandlers,CustomerCommandHandler,1,3,0,0,3,29,3,0,1,0,3,1,CQRSShop.Infrastructure.IDomainRepository' CQRSShop.Domain.Aggregates.Customer' CQRSShop.Infrastructure.IAggregate,CQRSShop.Domain.DomainEntry
-CQRSShop.Domain.CommandHandlers,ProductCommandHandler,1,2,0,0,2,22,2,0,1,0,3,1,CQRSShop.Infrastructure.IDomainRepository' CQRSShop.Domain.Aggregates.Product' CQRSShop.Infrastructure.IAggregate,CQRSShop.Domain.DomainEntry
-CQRSShop.Domain.CommandHandlers,OrderHandler,1,5,0,0,5,36,5,0,1,0,2,1,CQRSShop.Infrastructure.IDomainRepository' CQRSShop.Domain.Aggregates.Order,CQRSShop.Domain.DomainEntry
-CQRSShop.Domain,DomainEntry,1,4,0,0,2,45,6,0,0,0,6,2,CQRSShop.Infrastructure.CommandDispatcher' CQRSShop.Infrastructure.IDomainRepository' CQRSShop.Domain.CommandHandlers.CustomerCommandHandler' CQRSShop.Domain.CommandHandlers.ProductCommandHandler' CQRSShop.Domain.CommandHandlers.BasketCommandHandler' CQRSShop.Domain.CommandHandlers.OrderHandler,CQRSShop.Web.Api.BasePostEndpoint<TCommand>' CQRSShop.Tests.TestBase
-CQRSShop.Domain.Exceptions,CustomerAlreadyExistsException,0,1,0,0,1,7,1,0,1,-1,0,0,,
-CQRSShop.Domain.Exceptions,DuplicateAggregateException,0,2,0,0,0,11,2,3,1,-1,0,0,,
-CQRSShop.Domain.Exceptions,ProductAlreadyExistsException,0,1,0,0,1,6,1,0,2,-1,0,0,,
-CQRSShop.Domain.Exceptions,MissingAddressException,0,0,0,0,0,4,0,0,1,-1,0,0,,
-CQRSShop.Domain.Exceptions,UnexpectedPaymentException,0,0,0,0,0,2,0,0,1,-1,0,0,,
-CQRSShop.Domain.Exceptions,OrderCancelledException,0,0,0,0,0,2,0,0,1,-1,0,0,,
-CQRSShop.Domain.Exceptions,ShippingStartedException,0,0,0,0,0,1,0,0,1,-1,0,0,,
-CQRSShop.Domain.Exceptions,DomainException,0,2,0,0,1,9,2,6,0,-1,0,0,,
-CQRSShop.Domain.Exceptions,InvalidOrderState,0,0,0,0,0,1,0,0,1,-1,0,0,,
-CQRSShop.Domain.Exceptions,BasketAlreadExistsException,0,1,0,0,1,6,1,0,2,-1,0,0,,
+CQRSShop.Domain.Aggregates,Basket,2,9,0,0,1,52,11,0,1,0.67,5,1,CQRSShop.Domain.Aggregates.Customer' CQRSShop.Domain.Aggregates.Order' CQRSShop.Domain.Aggregates.Product' CQRSShop.Domain.Exceptions.MissingAddressException' CQRSShop.Domain.Exceptions.UnexpectedPaymentException,CQRSShop.Domain.CommandHandlers.BasketCommandHandler
+CQRSShop.Domain.CommandHandlers,BasketCommandHandler,1,6,0,0,6,52,6,0,1,0,4,1,CQRSShop.Domain.Aggregates.Customer' CQRSShop.Domain.Aggregates.Product' CQRSShop.Domain.Aggregates.Basket' CQRSShop.Domain.Exceptions.BasketAlreadExistsException,CQRSShop.Domain.DomainEntry
+CQRSShop.Domain.CommandHandlers,CustomerCommandHandler,1,3,0,0,3,29,3,0,1,0,2,1,CQRSShop.Domain.Aggregates.Customer' CQRSShop.Domain.Exceptions.CustomerAlreadyExistsException,CQRSShop.Domain.DomainEntry
+CQRSShop.Domain.CommandHandlers,ProductCommandHandler,1,2,0,0,2,22,2,0,1,0,2,1,CQRSShop.Domain.Aggregates.Product' CQRSShop.Domain.Exceptions.ProductAlreadyExistsException,CQRSShop.Domain.DomainEntry
+CQRSShop.Domain.CommandHandlers,OrderHandler,1,5,0,0,5,36,5,0,1,0,1,1,CQRSShop.Domain.Aggregates.Order,CQRSShop.Domain.DomainEntry
+CQRSShop.Domain,DomainEntry,1,4,0,0,2,45,6,0,0,0,4,0,CQRSShop.Domain.CommandHandlers.BasketCommandHandler' CQRSShop.Domain.CommandHandlers.CustomerCommandHandler' CQRSShop.Domain.CommandHandlers.ProductCommandHandler' CQRSShop.Domain.CommandHandlers.OrderHandler,
+CQRSShop.Domain.Exceptions,CustomerAlreadyExistsException,0,1,0,0,1,7,1,0,1,-1,1,1,CQRSShop.Domain.Exceptions.DuplicateAggregateException,CQRSShop.Domain.CommandHandlers.CustomerCommandHandler
+CQRSShop.Domain.Exceptions,DuplicateAggregateException,0,2,0,0,0,11,2,3,1,-1,1,3,CQRSShop.Domain.Exceptions.DomainException,CQRSShop.Domain.Exceptions.CustomerAlreadyExistsException' CQRSShop.Domain.Exceptions.ProductAlreadyExistsException' CQRSShop.Domain.Exceptions.BasketAlreadExistsException
+CQRSShop.Domain.Exceptions,ProductAlreadyExistsException,0,1,0,0,1,6,1,0,2,-1,1,1,CQRSShop.Domain.Exceptions.DuplicateAggregateException,CQRSShop.Domain.CommandHandlers.ProductCommandHandler
+CQRSShop.Domain.Exceptions,MissingAddressException,0,0,0,0,0,4,0,0,1,-1,1,1,CQRSShop.Domain.Exceptions.DomainException,CQRSShop.Domain.Aggregates.Basket
+CQRSShop.Domain.Exceptions,UnexpectedPaymentException,0,0,0,0,0,2,0,0,1,-1,1,1,CQRSShop.Domain.Exceptions.DomainException,CQRSShop.Domain.Aggregates.Basket
+CQRSShop.Domain.Exceptions,OrderCancelledException,0,0,0,0,0,2,0,0,1,-1,1,1,CQRSShop.Domain.Exceptions.DomainException,CQRSShop.Domain.Aggregates.Order
+CQRSShop.Domain.Exceptions,ShippingStartedException,0,0,0,0,0,1,0,0,1,-1,1,1,CQRSShop.Domain.Exceptions.DomainException,CQRSShop.Domain.Aggregates.Order
+CQRSShop.Domain.Exceptions,DomainException,0,2,0,0,1,9,2,6,0,-1,0,6,,CQRSShop.Domain.Exceptions.DuplicateAggregateException' CQRSShop.Domain.Exceptions.MissingAddressException' CQRSShop.Domain.Exceptions.UnexpectedPaymentException' CQRSShop.Domain.Exceptions.OrderCancelledException' CQRSShop.Domain.Exceptions.ShippingStartedException' CQRSShop.Domain.Exceptions.InvalidOrderState
+CQRSShop.Domain.Exceptions,InvalidOrderState,0,0,0,0,0,1,0,0,1,-1,1,1,CQRSShop.Domain.Exceptions.DomainException,CQRSShop.Domain.Aggregates.Order
+CQRSShop.Domain.Exceptions,BasketAlreadExistsException,0,1,0,0,1,6,1,0,2,-1,1,1,CQRSShop.Domain.Exceptions.DuplicateAggregateException,CQRSShop.Domain.CommandHandlers.BasketCommandHandler

@@ -2,13 +2,13 @@ Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out 
 OAuth2ProtectedWebApi,BundleConfig,0,1,0,0,1,30,1,0,0,-1,0,1,,OAuth2ProtectedWebApi.WebApiApplication
 OAuth2ProtectedWebApi,FilterConfig,0,1,0,0,1,5,1,0,0,-1,0,1,,OAuth2ProtectedWebApi.WebApiApplication
 OAuth2ProtectedWebApi,RouteConfig,0,1,0,0,1,10,1,0,0,-1,0,1,,OAuth2ProtectedWebApi.WebApiApplication
-OAuth2ProtectedWebApi,WebApiConfig,0,1,0,0,1,10,1,0,0,-1,0,1,,OAuth2ProtectedWebApi.WebApiApplication
-OAuth2ProtectedWebApi,WebApiApplication,0,1,0,0,0,9,1,0,0,-1,4,0,OAuth2ProtectedWebApi.WebApiConfig' OAuth2ProtectedWebApi.FilterConfig' OAuth2ProtectedWebApi.RouteConfig' OAuth2ProtectedWebApi.BundleConfig,
-OAuth2ProtectedWebApi.Code,AuthorizationServerHost,1,5,2,0,5,155,7,0,1,1,8,1,DotNetOpenAuth.Messaging.Bindings.ICryptoKeyStore' DotNetOpenAuth.OAuth2.AuthorizationServerAccessToken' DotNetOpenAuth.OAuth2.AccessTokenResult' DotNetOpenAuth.OAuth2.Messages.IAccessTokenRequest' OAuth2ProtectedWebApi.Code.AnyCallbackClient' DotNetOpenAuth.OAuth2.ChannelElements.IAuthorizationDescription' DotNetOpenAuth.OAuth2.AutomatedUserAuthorizationCheckResponse' DotNetOpenAuth.OAuth2.AutomatedAuthorizationCheckResponse,OAuth2ProtectedWebApi.Code.BearerTokenHandler
+OAuth2ProtectedWebApi,WebApiConfig,0,1,0,0,1,10,1,0,0,-1,1,1,OAuth2ProtectedWebApi.Code.BearerTokenHandler,OAuth2ProtectedWebApi.WebApiApplication
+OAuth2ProtectedWebApi,WebApiApplication,0,1,0,0,0,9,1,0,0,-1,4,0,OAuth2ProtectedWebApi.BundleConfig' OAuth2ProtectedWebApi.FilterConfig' OAuth2ProtectedWebApi.RouteConfig' OAuth2ProtectedWebApi.WebApiConfig,
+OAuth2ProtectedWebApi.Code,AuthorizationServerHost,1,5,2,0,5,155,7,0,1,1,1,3,OAuth2ProtectedWebApi.Code.AnyCallbackClient,OAuth2ProtectedWebApi.Controllers.TokenController' OAuth2ProtectedWebApi.Code.BearerTokenHandler' OAuth2ProtectedWebApi.Controllers.UserController
 OAuth2ProtectedWebApi.Code,AnyCallbackClient,0,1,0,0,1,5,1,0,1,-1,0,1,,OAuth2ProtectedWebApi.Code.AuthorizationServerHost
-OAuth2ProtectedWebApi.Code,BearerTokenHandler,0,1,0,0,0,13,3,0,0,-1,2,0,DotNetOpenAuth.OAuth2.ResourceServer' OAuth2ProtectedWebApi.Code.AuthorizationServerHost,
-OAuth2ProtectedWebApi.Code,HttpHeaderAttribute,0,2,2,0,2,27,2,0,0,-1,0,0,,
+OAuth2ProtectedWebApi.Code,BearerTokenHandler,0,1,0,0,0,13,3,0,0,-1,1,1,OAuth2ProtectedWebApi.Code.AuthorizationServerHost,OAuth2ProtectedWebApi.WebApiConfig
+OAuth2ProtectedWebApi.Code,HttpHeaderAttribute,0,2,2,0,2,27,2,0,0,-1,0,1,,OAuth2ProtectedWebApi.Controllers.UserController
 OAuth2ProtectedWebApi.Controllers,HomeController,0,1,0,0,1,5,1,0,0,-1,0,0,,
-OAuth2ProtectedWebApi.Controllers,TokenController,0,1,0,0,1,7,1,0,0,-1,1,0,DotNetOpenAuth.OAuth2.AuthorizationServer,
-OAuth2ProtectedWebApi.Controllers,UserController,0,4,0,0,4,54,8,0,0,-1,13,0,DotNetOpenAuth.OAuth2.AuthorizationServer' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationRequest' DotNetOpenAuth.Messaging.IProtocolMessage' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationSuccessResponseBase' DotNetOpenAuth.OAuth2.Messages.EndUserAuthorizationFailedResponse' DotNetOpenAuth.OAuth2.EndUserAuthorizationRequestErrorCodes' DotNetOpenAuth.OAuth2.Protocol' DotNetOpenAuth.Messaging.Channel' DotNetOpenAuth.OpenId.RelyingParty.OpenIdRelyingParty' DotNetOpenAuth.OpenId.Realm' DotNetOpenAuth.OpenId.RelyingParty.IAuthenticationRequest' DotNetOpenAuth.OpenId.RelyingParty.WellKnownProviders' DotNetOpenAuth.OpenId.RelyingParty.AuthenticationStatus,
+OAuth2ProtectedWebApi.Controllers,TokenController,0,1,0,0,1,7,1,0,0,-1,1,0,OAuth2ProtectedWebApi.Code.AuthorizationServerHost,
+OAuth2ProtectedWebApi.Controllers,UserController,0,4,0,0,4,54,8,0,0,-1,2,0,OAuth2ProtectedWebApi.Code.AuthorizationServerHost' OAuth2ProtectedWebApi.Code.HttpHeaderAttribute,
 OAuth2ProtectedWebApi.Controllers,ValuesController,0,5,0,0,5,20,5,0,0,-1,0,0,,

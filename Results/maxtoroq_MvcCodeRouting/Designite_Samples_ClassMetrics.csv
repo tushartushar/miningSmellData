@@ -1,28 +1,28 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Samples,ViewEngineConfig,0,1,0,0,1,5,1,0,0,-1,0,1,,Samples.MvcApplication
 Samples,WebApiConfig,0,1,0,0,1,11,2,0,0,-1,0,1,,Samples.MvcApplication
-Samples,MvcApplication,0,1,0,0,0,10,1,0,0,-1,4,0,Samples.RouteConfig' Samples.FilterConfig' Samples.ViewEngineConfig' Samples.WebApiConfig,
+Samples,MvcApplication,0,1,0,0,0,10,1,0,0,-1,4,0,Samples.ViewEngineConfig' Samples.WebApiConfig' Samples.FilterConfig' Samples.RouteConfig,
 Samples,FilterConfig,0,1,0,0,1,6,1,0,0,-1,0,1,,Samples.MvcApplication
-Samples,RouteConfig,0,1,0,0,1,8,1,0,0,-1,3,1,MvcCodeRouting.CodeRoutingSettings' MvcCodeRouting.RouteFormatterArgs' Samples.Controllers.HomeController,Samples.MvcApplication
+Samples,RouteConfig,0,1,0,0,1,8,1,0,0,-1,1,1,Samples.Controllers.HomeController,Samples.MvcApplication
 Samples.Controllers,AccountController,0,8,0,0,8,40,10,0,0,-1,0,0,,
 Samples.Controllers,AsyncController,0,3,0,0,3,9,3,0,0,-1,0,0,,
 Samples.Controllers,HomeController,0,2,0,0,2,15,2,0,0,-1,0,1,,Samples.RouteConfig
-Samples.Controllers,UserController,0,7,0,0,7,30,7,0,0,-1,2,0,Samples.Models.User' MvcCodeRouting.Web.Mvc.FromRouteAttribute,
+Samples.Controllers,UserController,0,7,0,0,7,30,7,0,0,-1,1,0,Samples.Models.User,
 Samples.Controllers.Admin,AdminController,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Samples.Controllers.Admin,CrudController<TEntity;TEntityKey>,0,7,0,0,5,34,7,0,0,-1,1,0,MvcCodeRouting.Web.Mvc.FromRouteAttribute,
-Samples.Controllers.Admin,RoleController,0,0,0,0,0,1,0,0,0,-1,0,0,,
-Samples.Controllers.Admin,UserController,0,2,0,0,0,8,2,0,0,-1,1,0,Samples.Models.User,
+Samples.Controllers.Admin,CrudController<TEntity;TEntityKey>,0,7,0,0,5,34,7,0,0,-1,0,2,,Samples.Controllers.Admin.UserController' Samples.Controllers.Admin.RoleController
+Samples.Controllers.Admin,RoleController,0,0,0,0,0,1,0,0,0,-1,2,0,Samples.Controllers.Admin.CrudController<TEntity;TEntityKey>' Samples.Models.Role,
+Samples.Controllers.Admin,UserController,0,2,0,0,0,8,2,0,0,-1,2,0,Samples.Controllers.Admin.CrudController<TEntity;TEntityKey>' Samples.Models.User,
 Samples.Controllers.Admin.Tasks,TasksController,0,1,0,0,1,5,1,0,0,-1,0,0,,
 Samples.Controllers.Admin.Tasks,MaintenanceController,0,1,0,0,1,5,1,0,0,-1,0,0,,
-Samples.Controllers.Api,ApiController,0,1,0,0,1,10,1,0,0,-1,1,1,Samples.Controllers.Api.api,Samples.SelfHost.Program
-Samples.Controllers.Api,api,0,0,1,0,0,3,0,0,0,-1,0,1,,Samples.Controllers.Api.ApiController
-Samples.Controllers.Api,link,0,0,2,0,0,4,0,0,0,-1,0,0,,
-Samples.Controllers.Api,UserController,0,5,0,0,5,15,5,0,0,-1,2,0,Samples.Models.User' MvcCodeRouting.Web.Http.FromRouteAttribute,
-Samples.Controllers.Api.Book,BookController,0,5,0,0,5,19,5,0,0,-1,1,0,MvcCodeRouting.Web.Http.FromRouteAttribute,
-Samples.Controllers.Api.Book,ChapterController,0,2,2,0,1,14,2,0,0,-1,1,0,MvcCodeRouting.Web.Http.FromRouteAttribute,
-Samples.Controllers.Custom,BlogController,0,3,0,0,3,18,3,0,0,-1,1,0,MvcCodeRouting.Web.Mvc.FromRouteAttribute,
-Samples.Controllers.Custom,CustomRouteController,0,3,0,0,3,6,3,0,0,-1,1,0,MvcCodeRouting.Web.Mvc.FromRouteAttribute,
-Samples.Controllers.Book,BookController,0,5,0,0,5,20,5,0,0,-1,1,0,MvcCodeRouting.Web.Mvc.FromRouteAttribute,
-Samples.Controllers.Book,ChapterController,0,2,2,0,1,15,2,0,0,-1,1,0,MvcCodeRouting.Web.Mvc.FromRouteAttribute,
-Samples.Models,Role,0,0,2,0,0,4,0,0,0,-1,0,0,,
-Samples.Models,User,0,1,2,0,1,10,1,0,0,-1,0,3,,Samples.Controllers.UserController' Samples.Controllers.Admin.UserController' Samples.Controllers.Api.UserController
+Samples.Controllers.Api,ApiController,0,1,0,0,1,10,1,0,0,-1,2,0,Samples.Controllers.Api.api' Samples.Controllers.Api.link,
+Samples.Controllers.Api,api,0,0,1,0,0,3,0,0,0,-1,1,1,Samples.Controllers.Api.link,Samples.Controllers.Api.ApiController
+Samples.Controllers.Api,link,0,0,2,0,0,4,0,0,0,-1,0,2,,Samples.Controllers.Api.ApiController' Samples.Controllers.Api.api
+Samples.Controllers.Api,UserController,0,5,0,0,5,15,5,0,0,-1,1,0,Samples.Models.User,
+Samples.Controllers.Api.Book,BookController,0,5,0,0,5,19,5,0,0,-1,0,0,,
+Samples.Controllers.Api.Book,ChapterController,0,2,2,0,1,14,2,0,0,-1,0,0,,
+Samples.Controllers.Custom,BlogController,0,3,0,0,3,18,3,0,0,-1,0,0,,
+Samples.Controllers.Custom,CustomRouteController,0,3,0,0,3,6,3,0,0,-1,0,0,,
+Samples.Controllers.Book,BookController,0,5,0,0,5,20,5,0,0,-1,0,0,,
+Samples.Controllers.Book,ChapterController,0,2,2,0,1,15,2,0,0,-1,0,0,,
+Samples.Models,Role,0,0,2,0,0,4,0,0,0,-1,0,1,,Samples.Controllers.Admin.RoleController
+Samples.Models,User,0,1,2,0,1,10,1,0,0,-1,0,3,,Samples.Controllers.Admin.UserController' Samples.Controllers.UserController' Samples.Controllers.Api.UserController

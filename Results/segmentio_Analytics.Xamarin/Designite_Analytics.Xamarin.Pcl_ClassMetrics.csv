@@ -1,33 +1,33 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Segment,Analytics,2,3,1,1,3,54,3,0,0,0,2,4,Segment.Config' Segment.Client,Segment.Model.Context' Segment.Test.Actions' Segment.Test.ActionTests' Segment.Test.FlushTests
-Segment,Client,3,31,3,0,27,586,42,1,0,0.16,6,5,Segment.Flush.IFlushHandler' Segment.Config' Segment.Request.IRequestHandler' Segment.Stats.Statistics' Segment.Model.Options' Segment.Model.BaseAction,Segment.Analytics' Segment.Test.Actions' Segment.Test.ActionTests' Segment.Test.FlushTests' Tests.TestClient
-Segment,Config,0,5,4,0,5,64,5,0,0,-1,1,4,Segment.Defaults,Segment.Analytics' Segment.Client' Segment.Test.ActionTests' Segment.Test.FlushTests
+Segment,Analytics,2,3,1,1,3,54,6,0,0,0,2,1,Segment.Client' Segment.Config,Segment.Model.Context
+Segment,Client,3,31,3,0,27,586,42,1,0,0.16,17,1,Segment.Config' Segment.Flush.AsyncFlushHandler' Segment.Flush.BlockingFlushHandler' Segment.Flush.IBatchFactory' Segment.Flush.IFlushHandler' Segment.Flush.SimpleBatchFactory' Segment.Model.Alias' Segment.Model.BaseAction' Segment.Model.Group' Segment.Model.Identify' Segment.Model.Options' Segment.Model.Page' Segment.Model.Screen' Segment.Model.Track' Segment.Request.BlockingRequestHandler' Segment.Request.IRequestHandler' Segment.Stats.Statistics,Segment.Analytics
+Segment,Config,0,5,4,0,5,64,5,0,0,-1,1,2,Segment.Defaults,Segment.Analytics' Segment.Client
 Segment,Constants,1,0,0,1,0,7,0,0,0,-1,0,1,,Segment.Flush.AsyncFlushHandler
 Segment,Defaults,4,0,0,4,0,7,0,0,0,-1,0,1,,Segment.Config
-Segment,Logger,0,9,0,0,0,59,10,0,0,-1,2,5,Segment.Level' Segment.Model.Dict,Segment.Flush.AsyncFlushHandler' Segment.Flush.BlockingQueue<T>' Segment.Request.BlockingRequestHandler' Segment.Test.ActionTests' Segment.Test.FlushTests
-Segment,Level,0,0,0,0,0,7,0,0,0,-1,0,3,,Segment.Logger' Segment.Test.ActionTests' Segment.Test.FlushTests
-Segment.Exception,APIException,0,1,2,0,1,10,1,0,0,-1,0,0,,
+Segment,Logger,0,9,0,0,0,59,10,0,0,-1,2,3,Segment.Level' Segment.Model.Dict,Segment.Flush.BlockingQueue<T>' Segment.Request.BlockingRequestHandler' Segment.Flush.AsyncFlushHandler
+Segment,Level,0,0,0,0,0,7,0,0,0,-1,0,1,,Segment.Logger
+Segment.Exception,APIException,0,1,2,0,1,10,1,0,0,-1,0,1,,Segment.Request.BlockingRequestHandler
 Segment.Exception,NotInitializedException,0,1,0,0,1,4,1,0,0,-1,0,0,,
-Segment.Flush,AsyncFlushHandler,5,5,1,0,3,144,9,0,1,0,6,0,Segment.Flush.IBatchFactory' Segment.Request.IRequestHandler' Segment.Logger' Segment.Model.BaseAction' Segment.Model.Batch' Segment.Constants,
-Segment.Flush,BlockingFlushHandler,2,4,0,0,3,37,4,0,1,0.75,4,0,Segment.Flush.IBatchFactory' Segment.Request.IRequestHandler' Segment.Model.Batch' Segment.Model.BaseAction,
-Segment.Flush,BlockingQueue<T>,3,3,1,1,3,34,5,0,0,0,1,0,Segment.Logger,
-Segment.Flush,IBatchFactory,0,1,0,0,0,4,1,1,0,-1,0,2,,Segment.Flush.AsyncFlushHandler' Segment.Flush.BlockingFlushHandler
-Segment.Flush,IFlushHandler,0,2,0,0,0,12,2,2,0,-1,1,1,Segment.Model.BaseAction,Segment.Client
-Segment.Flush,SimpleBatchFactory,1,2,0,0,1,12,2,0,1,0,1,0,Segment.Model.Batch,
-Segment.Model,Alias,0,1,2,0,0,13,1,0,1,-1,1,0,Segment.Model.Options,
-Segment.Model,BaseAction,0,1,6,0,0,28,2,6,0,-1,1,5,Segment.Model.Options,Segment.Client' Segment.Flush.AsyncFlushHandler' Segment.Flush.BlockingFlushHandler' Segment.Flush.IFlushHandler' Segment.Test.FlushTests
-Segment.Model,Batch,0,2,4,0,0,19,2,0,0,-1,0,5,,Segment.Flush.AsyncFlushHandler' Segment.Flush.BlockingFlushHandler' Segment.Flush.SimpleBatchFactory' Segment.Request.BlockingRequestHandler' Segment.Request.IRequestHandler
-Segment.Model,Context,0,2,0,0,2,20,2,0,1,-1,2,2,Segment.Analytics' Segment.Model.Dict,Segment.Model.Options' Segment.Test.Actions
-Segment.Model,Dict,0,1,0,0,1,14,1,4,0,-1,0,6,,Segment.Logger' Segment.Model.Context' Segment.Model.Options' Segment.Request.BlockingRequestHandler' Segment.Test.ActionTests' Segment.Test.FlushTests
-Segment.Model,Group,0,1,3,0,0,19,1,0,1,-1,1,0,Segment.Model.Options,
-Segment.Model,Identify,0,1,2,0,0,15,1,0,1,-1,1,0,Segment.Model.Options,
-Segment.Model,Options,0,5,4,0,5,64,5,0,0,-1,2,10,Segment.Model.Context' Segment.Model.Dict,Segment.Client' Segment.Model.Alias' Segment.Model.BaseAction' Segment.Model.Group' Segment.Model.Identify' Segment.Model.Page' Segment.Model.Screen' Segment.Model.Track' Segment.Test.Actions' Tests.TestClient
-Segment.Model,Page,0,1,4,0,0,23,1,0,1,-1,1,0,Segment.Model.Options,
-Segment.Model,Properties,0,0,0,0,0,3,0,0,1,-1,0,1,,Segment.Test.Actions
-Segment.Model,Providers,0,3,0,0,3,31,3,0,1,-1,0,0,,
-Segment.Model,Screen,0,1,4,0,0,23,1,0,1,-1,1,0,Segment.Model.Options,
-Segment.Model,Track,0,1,3,0,0,19,1,0,1,-1,1,0,Segment.Model.Options,
-Segment.Model,Traits,0,0,0,0,0,3,0,0,1,-1,0,1,,Segment.Test.Actions
-Segment.Request,BlockingRequestHandler,2,6,0,0,2,101,11,0,1,0,3,0,Segment.Model.Dict' Segment.Model.Batch' Segment.Logger,
-Segment.Request,IRequestHandler,0,1,0,0,0,16,1,1,0,-1,1,3,Segment.Model.Batch,Segment.Client' Segment.Flush.AsyncFlushHandler' Segment.Flush.BlockingFlushHandler
-Segment.Stats,Statistics,0,0,3,0,0,6,0,0,0,-1,0,3,,Segment.Client' Segment.Test.ActionTests' Segment.Test.FlushTests
+Segment.Flush,AsyncFlushHandler,5,5,1,0,3,144,9,0,1,0,9,1,Segment.Constants' Segment.Logger' Segment.Flush.BlockingQueue<T>' Segment.Flush.IBatchFactory' Segment.Flush.IFlushHandler' Segment.Model.BaseAction' Segment.Model.Batch' Segment.Model.Dict' Segment.Request.IRequestHandler,Segment.Client
+Segment.Flush,BlockingFlushHandler,2,4,0,0,3,37,4,0,1,0.75,5,1,Segment.Flush.IBatchFactory' Segment.Flush.IFlushHandler' Segment.Model.BaseAction' Segment.Model.Batch' Segment.Request.IRequestHandler,Segment.Client
+Segment.Flush,BlockingQueue<T>,3,3,1,1,3,34,7,0,0,0,2,1,Segment.Logger' Segment.Model.Dict,Segment.Flush.AsyncFlushHandler
+Segment.Flush,IBatchFactory,0,1,0,0,0,4,1,1,0,-1,2,4,Segment.Model.BaseAction' Segment.Model.Batch,Segment.Flush.SimpleBatchFactory' Segment.Flush.BlockingFlushHandler' Segment.Flush.AsyncFlushHandler' Segment.Client
+Segment.Flush,IFlushHandler,0,2,0,0,0,12,2,2,0,-1,1,3,Segment.Model.BaseAction,Segment.Flush.AsyncFlushHandler' Segment.Flush.BlockingFlushHandler' Segment.Client
+Segment.Flush,SimpleBatchFactory,1,2,0,0,1,12,2,0,1,0,3,1,Segment.Flush.IBatchFactory' Segment.Model.BaseAction' Segment.Model.Batch,Segment.Client
+Segment.Model,Alias,0,1,2,0,0,13,1,0,1,-1,2,1,Segment.Model.BaseAction' Segment.Model.Options,Segment.Client
+Segment.Model,BaseAction,0,1,6,0,0,28,2,6,0,-1,3,14,Segment.Model.Context' Segment.Model.Dict' Segment.Model.Options,Segment.Model.Alias' Segment.Flush.IFlushHandler' Segment.Model.Group' Segment.Model.Page' Segment.Model.Screen' Segment.Model.Track' Segment.Flush.BlockingFlushHandler' Segment.Model.Identify' Segment.Flush.SimpleBatchFactory' Segment.Client' Segment.Model.Batch' Segment.Flush.IBatchFactory' Segment.Flush.AsyncFlushHandler' Segment.Request.BlockingRequestHandler
+Segment.Model,Batch,0,2,4,0,0,19,2,0,0,-1,1,6,Segment.Model.BaseAction,Segment.Flush.IBatchFactory' Segment.Request.IRequestHandler' Segment.Flush.BlockingFlushHandler' Segment.Request.BlockingRequestHandler' Segment.Flush.AsyncFlushHandler' Segment.Flush.SimpleBatchFactory
+Segment.Model,Context,0,2,0,0,2,20,2,0,1,-1,2,2,Segment.Analytics' Segment.Model.Dict,Segment.Model.BaseAction' Segment.Model.Options
+Segment.Model,Dict,0,1,0,0,1,14,1,4,0,-1,0,10,,Segment.Model.Providers' Segment.Model.Traits' Segment.Model.Properties' Segment.Model.BaseAction' Segment.Model.Options' Segment.Flush.BlockingQueue<T>' Segment.Request.BlockingRequestHandler' Segment.Model.Context' Segment.Logger' Segment.Flush.AsyncFlushHandler
+Segment.Model,Group,0,1,3,0,0,19,1,0,1,-1,3,1,Segment.Model.BaseAction' Segment.Model.Options' Segment.Model.Traits,Segment.Client
+Segment.Model,Identify,0,1,2,0,0,15,1,0,1,-1,3,1,Segment.Model.BaseAction' Segment.Model.Options' Segment.Model.Traits,Segment.Client
+Segment.Model,Options,0,5,4,0,5,64,5,0,0,-1,2,8,Segment.Model.Context' Segment.Model.Dict,Segment.Model.Identify' Segment.Model.Track' Segment.Model.Group' Segment.Model.Screen' Segment.Model.Alias' Segment.Model.Page' Segment.Model.BaseAction' Segment.Client
+Segment.Model,Page,0,1,4,0,0,23,1,0,1,-1,3,1,Segment.Model.BaseAction' Segment.Model.Options' Segment.Model.Properties,Segment.Client
+Segment.Model,Properties,0,0,0,0,0,3,0,0,1,-1,1,3,Segment.Model.Dict,Segment.Model.Page' Segment.Model.Screen' Segment.Model.Track
+Segment.Model,Providers,0,3,0,0,3,31,3,0,1,-1,1,0,Segment.Model.Dict,
+Segment.Model,Screen,0,1,4,0,0,23,1,0,1,-1,3,1,Segment.Model.BaseAction' Segment.Model.Options' Segment.Model.Properties,Segment.Client
+Segment.Model,Track,0,1,3,0,0,19,1,0,1,-1,3,1,Segment.Model.BaseAction' Segment.Model.Options' Segment.Model.Properties,Segment.Client
+Segment.Model,Traits,0,0,0,0,0,3,0,0,1,-1,1,2,Segment.Model.Dict,Segment.Model.Group' Segment.Model.Identify
+Segment.Request,BlockingRequestHandler,2,6,0,0,2,101,11,0,1,0,6,1,Segment.Logger' Segment.Exception.APIException' Segment.Model.BaseAction' Segment.Model.Batch' Segment.Model.Dict' Segment.Request.IRequestHandler,Segment.Client
+Segment.Request,IRequestHandler,0,1,0,0,0,16,1,1,0,-1,1,4,Segment.Model.Batch,Segment.Request.BlockingRequestHandler' Segment.Flush.AsyncFlushHandler' Segment.Client' Segment.Flush.BlockingFlushHandler
+Segment.Stats,Statistics,0,0,3,0,0,6,0,0,0,-1,0,1,,Segment.Client

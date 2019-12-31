@@ -1,1 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SagaFinder,MyMessage,0,0,1,0,0,5,0,0,0,-1,0,3,,SagaFinder.PostgreSqlSagaFinder' SagaFinder.SqlServerSagaFinder' SagaFinder.MySqlSagaFinder
+SagaFinder,MySagaData,0,0,5,0,0,9,0,0,0,-1,0,3,,SagaFinder.MySqlSagaFinder' SagaFinder.PostgreSqlSagaFinder' SagaFinder.SqlServerSagaFinder
+SagaFinder,MySqlSagaFinder,0,1,0,0,1,17,1,0,0,-1,2,0,SagaFinder.MyMessage' SagaFinder.MySagaData,
+SagaFinder,PostgreSqlSagaFinder,0,1,0,0,1,17,1,0,0,-1,2,0,SagaFinder.MyMessage' SagaFinder.MySagaData,
+SagaFinder,SqlServerSagaFinder,0,1,0,0,1,17,1,0,0,-1,2,0,SagaFinder.MyMessage' SagaFinder.MySagaData,
+SqlPersistence_1.UsingSaga,OrderSaga,1,2,1,0,1,22,2,0,0,1,1,0,SqlPersistence_1.UsingSaga.SagaData,
+SqlPersistence_1.UsingSaga,SagaData,0,0,4,0,0,17,0,0,0,-1,0,4,,SqlPersistence_1.UsingSaga.OrderSaga' SqlPersistence_1.UsingSaga.SagaWithCorrelation' SqlPersistence_1.UsingSaga.SagaWithCorrelationAndTransitional' SqlPersistence_1.UsingSaga.SagaWithNoMessageMapping
+SqlPersistence_1.UsingSaga,SagaWithCorrelation,0,2,1,0,1,19,2,0,0,-1,2,0,SqlPersistence_1.UsingSaga.SagaData' SqlPersistence_1.UsingSaga.StartSagaMessage,
+SqlPersistence_1.UsingSaga,SagaWithCorrelationAndTransitional,0,2,2,0,1,21,2,0,0,-1,2,0,SqlPersistence_1.UsingSaga.SagaData' SqlPersistence_1.UsingSaga.StartSagaMessage,
+SqlPersistence_1.UsingSaga,SagaWithNoMessageMapping,0,1,1,0,0,12,1,0,0,-1,1,0,SqlPersistence_1.UsingSaga.SagaData,
+SqlPersistence_1.UsingSaga,StartSagaMessage,0,0,2,0,0,6,0,0,0,-1,0,2,,SqlPersistence_1.UsingSaga.SagaWithCorrelation' SqlPersistence_1.UsingSaga.SagaWithCorrelationAndTransitional
+SqlPersistence_4.UsingSagaAttribute,SagaWithAmbiguousCorrelationProperty,0,1,0,0,0,16,1,0,0,-1,1,0,SqlPersistence_4.UsingSagaAttribute.SagaData,
+SqlPersistence_4.UsingSagaAttribute,SagaData,0,0,5,0,0,12,0,0,0,-1,0,3,,SqlPersistence_4.UsingSagaAttribute.SagaWithAmbiguousCorrelationProperty' SqlPersistence_4.UsingSagaAttribute.OrderSaga' SqlPersistence_4.UsingSagaAttribute.MySaga
+SqlPersistence_4.UsingSagaAttribute,OrderSaga,0,1,0,0,0,18,1,0,0,-1,1,0,SqlPersistence_4.UsingSagaAttribute.SagaData,
+SqlPersistence_4.UsingSagaAttribute,MySaga,0,1,0,0,0,17,1,0,0,-1,1,0,SqlPersistence_4.UsingSagaAttribute.SagaData,

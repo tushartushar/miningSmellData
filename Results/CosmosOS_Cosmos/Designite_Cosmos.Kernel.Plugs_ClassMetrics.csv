@@ -2,18 +2,18 @@ Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out 
 Cosmos.Kernel.Plugs.Assemblers,CPUIDSupport,0,1,0,0,1,30,1,0,0,-1,0,0,,
 Cosmos.Kernel.Plugs.Assemblers,GetCPUIDInternal,0,1,0,0,1,27,1,0,0,-1,0,0,,
 Cosmos.Kernel.Plugs.Assemblers,DisableInterrupts,0,1,0,0,1,5,1,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs.Assemblers,ASMDisablePaging,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs.Assemblers,ASMDisablePSE,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Cosmos.Kernel.Plugs.Assemblers,ASMDisablePaging,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Kernel.Plugs.PagingUtility
+Cosmos.Kernel.Plugs.Assemblers,ASMDisablePSE,0,1,0,0,1,8,1,0,0,-1,0,1,,Cosmos.Kernel.Plugs.PagingUtility
 Cosmos.Kernel.Plugs.Assemblers,EnableInterrupts,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs.Assemblers,ASMEnablePaging,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs.Assemblers,ASMEnablePSE,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Cosmos.Kernel.Plugs.Assemblers,ASMEnablePaging,0,1,0,0,1,8,1,0,0,-1,0,1,,Cosmos.Kernel.Plugs.PagingUtility
+Cosmos.Kernel.Plugs.Assemblers,ASMEnablePSE,0,1,0,0,1,7,1,0,0,-1,0,1,,Cosmos.Kernel.Plugs.PagingUtility
 Cosmos.Kernel.Plugs.Assemblers,GetAmountOfRAM,0,1,0,0,1,10,1,0,0,-1,0,0,,
 Cosmos.Kernel.Plugs.Assemblers,GetCurrentESP,0,1,0,0,1,5,1,0,0,-1,0,0,,
 Cosmos.Kernel.Plugs.Assemblers,GetMBIAddress,0,1,0,0,1,7,1,0,0,-1,0,0,,
 Cosmos.Kernel.Plugs.Assemblers,InitFloat,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs.Assemblers,ASMSetPageDirectory,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs,GCImplementationImpl,0,3,0,0,3,16,3,0,0,-1,1,0,Cosmos.Kernel.GC,
+Cosmos.Kernel.Plugs.Assemblers,ASMSetPageDirectory,0,1,0,0,1,6,1,0,0,-1,0,1,,Cosmos.Kernel.Plugs.PagingUtility
+Cosmos.Kernel.Plugs,GCImplementationImpl,0,3,0,0,3,16,3,0,0,-1,0,0,,
 Cosmos.Kernel.Plugs,HeapImpl,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs,Interlocked,0,1,0,0,1,22,2,0,0,-1,1,0,Cosmos.Kernel.CPU,
-Cosmos.Kernel.Plugs,PagingUtility,0,5,0,0,5,29,5,0,0,-1,0,0,,
-Cosmos.Kernel.Plugs,ThreadImpl,1,2,0,0,2,26,2,0,0,1,1,0,Cosmos.Kernel.CPU,
+Cosmos.Kernel.Plugs,Interlocked,0,1,0,0,1,22,2,0,0,-1,0,0,,
+Cosmos.Kernel.Plugs,PagingUtility,0,5,0,0,5,29,5,0,0,-1,5,0,Cosmos.Kernel.Plugs.Assemblers.ASMDisablePaging' Cosmos.Kernel.Plugs.Assemblers.ASMDisablePSE' Cosmos.Kernel.Plugs.Assemblers.ASMEnablePaging' Cosmos.Kernel.Plugs.Assemblers.ASMEnablePSE' Cosmos.Kernel.Plugs.Assemblers.ASMSetPageDirectory,
+Cosmos.Kernel.Plugs,ThreadImpl,1,2,0,0,2,26,2,0,0,1,0,0,,

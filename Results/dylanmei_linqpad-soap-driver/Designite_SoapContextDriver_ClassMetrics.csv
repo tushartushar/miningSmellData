@@ -1,21 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Driver,CodeProvider,1,0,0,1,0,5,0,0,0,-1,0,3,,Driver.DiscoveryCompiler' Driver.DiscoveryWorker' Driver.ProxyBuilder
-Driver,ConnectionHistoryWriter,1,2,0,0,2,21,3,0,0,0,1,1,Driver.ConnectionHistoryReader,Driver.SoapContextDriver
-Driver,ConnectionHistoryReader,1,3,0,0,2,21,5,0,0,0,0,2,,Driver.ConnectionHistoryWriter' Driver.SoapContextDriver
-Driver,ConnectionLogger,1,6,0,0,5,28,6,0,0,0,0,1,,Driver.Dialog
-Driver,DiscoveryBinding,0,1,2,0,0,10,1,0,0,-1,0,1,,Driver.Dialog
-Driver,Discovery,3,6,0,0,3,60,9,0,0,0.5,0,3,,Driver.DiscoveryCompiler' Driver.DiscoveryWorker' Driver.ProxyBuilder
-Driver,DiscoveryCompiler,2,6,0,0,2,77,17,0,0,0,3,2,Driver.Discovery' Driver.CodeProvider' Driver.DiscoveryReference,Driver.DiscoveryWorker' Driver.ProxyBuilder
-Driver,DiscoveryReference,2,3,7,0,1,28,3,0,0,1,0,3,,Driver.DiscoveryCompiler' Driver.ProxyBuilder' Driver.Dialog
-Driver,DiscoveryCompleteEventArgs,0,0,1,0,0,4,0,0,0,-1,0,1,,Driver.Dialog
-Driver,DiscoveryFailureEventArgs,0,0,1,0,0,4,0,0,0,-1,0,1,,Driver.Dialog
-Driver,DiscoveryWorker,3,6,1,0,4,71,8,0,0,0.5,4,1,Driver.Discovery' Driver.DiscoveryResult' Driver.DiscoveryCompiler' Driver.CodeProvider,Driver.Dialog
+Driver,CodeProvider,1,0,0,1,0,5,0,0,0,-1,0,3,,Driver.DiscoveryCompiler' Driver.ProxyBuilder' Driver.DiscoveryWorker
+Driver,ConnectionHistoryWriter,1,2,0,0,2,21,4,0,0,1,1,1,Driver.ConnectionHistoryReader,Driver.SoapContextDriver
+Driver,ConnectionHistoryReader,1,3,0,0,2,21,5,0,0,0.67,0,2,,Driver.ConnectionHistoryWriter' Driver.SoapContextDriver
+Driver,ConnectionLogger,1,6,0,0,5,28,6,0,0,0.33,0,1,,Driver.Dialog
+Driver,DiscoveryBinding,0,1,2,0,0,10,1,0,0,-1,0,2,,Driver.DiscoveryReference' Driver.DiscoveryCompiler
+Driver,Discovery,3,6,0,0,3,60,9,0,0,0.67,0,3,,Driver.DiscoveryCompiler' Driver.DiscoveryWorker' Driver.ProxyBuilder
+Driver,DiscoveryCompiler,2,6,0,0,2,77,17,0,0,0.33,4,2,Driver.CodeProvider' Driver.DiscoveryBinding' Driver.Discovery' Driver.DiscoveryReference,Driver.ProxyBuilder' Driver.DiscoveryWorker
+Driver,DiscoveryReference,2,3,7,0,1,28,3,0,0,1,1,3,Driver.DiscoveryBinding,Driver.DiscoveryCompleteEventArgs' Driver.DiscoveryWorker' Driver.DiscoveryCompiler
+Driver,DiscoveryCompleteEventArgs,0,0,1,0,0,4,0,0,0,-1,1,2,Driver.DiscoveryReference,Driver.Dialog' Driver.DiscoveryWorker
+Driver,DiscoveryFailureEventArgs,0,0,1,0,0,4,0,0,0,-1,0,2,,Driver.Dialog' Driver.DiscoveryWorker
+Driver,DiscoveryWorker,3,6,1,0,4,71,9,0,0,0.83,7,1,Driver.CodeProvider' Driver.Discovery' Driver.DiscoveryCompiler' Driver.DiscoveryReference' Driver.DiscoveryCompleteEventArgs' Driver.DiscoveryFailureEventArgs' Driver.DiscoveryResult,Driver.Dialog
 Driver,DiscoveryResult,0,0,2,0,0,5,0,0,0,-1,0,1,,Driver.DiscoveryWorker
-Driver,Proxy,0,0,3,0,0,6,0,0,0,-1,0,2,,Driver.ProxyBuilder' Driver.SoapContextDriver
-Driver,ProxyBuilder,1,3,0,0,2,32,4,0,0,0,5,1,Driver.Discovery' Driver.Proxy' Driver.DiscoveryReference' Driver.CodeProvider' Driver.DiscoveryCompiler,Driver.SoapContextDriver
-Driver,Schema,0,0,2,0,0,5,0,0,0,-1,0,2,,Driver.SchemaBuilder' Driver.SoapContextDriver
+Driver,Proxy,0,0,3,0,0,6,0,0,0,-1,0,1,,Driver.ProxyBuilder
+Driver,ProxyBuilder,1,3,0,0,2,32,4,0,0,0,4,1,Driver.CodeProvider' Driver.Discovery' Driver.DiscoveryCompiler' Driver.Proxy,Driver.SoapContextDriver
+Driver,Schema,0,0,2,0,0,5,0,0,0,-1,0,1,,Driver.SchemaBuilder
 Driver,SchemaBuilder,0,7,0,0,1,75,10,0,0,-1,1,1,Driver.Schema,Driver.SoapContextDriver
-Driver,ConnectionModel,2,1,5,0,1,34,1,0,0,0,0,3,,Driver.SoapContextDriver' Driver.Dialog' TestWindow.MainWindow
-Driver,SoapContextDriver,0,7,2,0,6,59,7,0,0,-1,8,0,Driver.ConnectionModel' Driver.ConnectionHistoryReader' Driver.Dialog' Driver.Proxy' Driver.Schema' Driver.ProxyBuilder' Driver.SchemaBuilder' Driver.ConnectionHistoryWriter,
-Driver,Dialog,15,12,1,0,2,287,21,0,0,0.17,7,2,Driver.ConnectionLogger' Driver.DiscoveryWorker' Driver.ConnectionModel' Driver.DiscoveryFailureEventArgs' Driver.DiscoveryReference' Driver.DiscoveryCompleteEventArgs' Driver.DiscoveryBinding,Driver.SoapContextDriver' TestWindow.MainWindow
+Driver,ConnectionModel,2,1,5,0,1,34,1,0,0,0,0,2,,Driver.Dialog' Driver.SoapContextDriver
+Driver,SoapContextDriver,0,7,2,0,6,59,7,0,0,-1,6,0,Driver.ConnectionHistoryWriter' Driver.ConnectionHistoryReader' Driver.ProxyBuilder' Driver.SchemaBuilder' Driver.ConnectionModel' Driver.Dialog,
+Driver,Dialog,15,12,1,0,2,287,32,0,0,0.17,5,1,Driver.ConnectionLogger' Driver.DiscoveryCompleteEventArgs' Driver.DiscoveryFailureEventArgs' Driver.DiscoveryWorker' Driver.ConnectionModel,Driver.SoapContextDriver
 Driver,WsdlExtensions,0,1,0,0,1,17,2,0,0,-1,0,0,,

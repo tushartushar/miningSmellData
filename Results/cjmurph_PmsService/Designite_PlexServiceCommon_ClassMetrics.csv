@@ -1,10 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PlexServiceCommon,AuxiliaryApplication,0,1,6,0,1,40,1,0,0,-1,0,4,,PlexServiceCommon.AuxiliaryApplicationMonitor' PlexServiceTray.AuxiliaryApplicationViewModel' PlexServiceTray.NotifyIconApplicationContext' PlexServiceTray.SettingsWindowViewModel
-PlexServiceCommon,AuxiliaryApplicationMonitor,3,7,2,0,3,175,13,0,0,0,2,1,PlexServiceCommon.AuxiliaryApplication' PlexServiceCommon.StatusChangeEventArgs,PlexServiceWCF.PmsMonitor
-PlexServiceCommon,DriveMap,0,6,2,0,3,89,11,0,0,-1,1,3,PlexServiceCommon.NetworkResource,PlexServiceTray.DriveMapViewModel' PlexServiceTray.SettingsWindowViewModel' PlexServiceWCF.PmsMonitor
+PlexServiceCommon,AuxiliaryApplication,0,1,6,0,1,40,1,0,0,-1,0,2,,PlexServiceCommon.AuxiliaryApplicationMonitor' PlexServiceCommon.Settings
+PlexServiceCommon,AuxiliaryApplicationMonitor,3,7,2,0,3,175,13,0,0,0,2,0,PlexServiceCommon.AuxiliaryApplication' PlexServiceCommon.StatusChangeEventArgs,
+PlexServiceCommon,DriveMap,0,6,2,0,3,89,11,0,0,-1,1,1,PlexServiceCommon.NetworkResource,PlexServiceCommon.Settings
 PlexServiceCommon,NetworkResource,8,0,0,8,0,12,0,0,0,-1,0,1,,PlexServiceCommon.DriveMap
-PlexServiceCommon,PlexState,0,0,0,0,0,7,0,0,0,-1,0,5,,PlexServiceCommon.Interface.ITrayCallback' PlexServiceTray.NotifyIconApplicationContext' PlexServiceTray.TrayCallback' PlexServiceWCF.PmsMonitor' PlexServiceWCF.TrayInteraction
-PlexServiceCommon,Settings,0,4,5,0,4,69,4,0,0,-1,0,7,,PlexService.PlexMediaServerService' PlexServiceTray.ConnectionSettings' PlexServiceTray.NotifyIconApplicationContext' PlexServiceTray.SettingsWindowViewModel' PlexServiceWCF.PmsMonitor' PlexServiceWCF.SettingsHandler' PlexServiceWCF.TrayInteraction
-PlexServiceCommon,StatusChangeEventArgs,0,1,2,0,1,14,1,0,0,-1,0,4,,PlexServiceCommon.AuxiliaryApplicationMonitor' PlexServiceTray.NotifyIconApplicationContext' PlexServiceWCF.PmsMonitor' PlexServiceWCF.TrayInteraction
-PlexServiceCommon.Interface,ITrayCallback,0,1,0,0,0,5,1,1,0,-1,1,1,PlexServiceCommon.PlexState,PlexServiceWCF.TrayInteraction
-PlexServiceCommon.Interface,ITrayInteraction,0,12,0,0,0,28,12,1,0,-1,0,2,,PlexService.PlexMediaServerService' PlexServiceTray.NotifyIconApplicationContext
+PlexServiceCommon,PlexState,0,0,0,0,0,7,0,0,0,-1,0,3,,PlexServiceCommon.Interface.ITrayCallback' PlexServiceCommon.Interface.ITrayInteraction' PlexServiceCommon.TrayCallback
+PlexServiceCommon,Settings,0,4,5,0,4,69,4,0,0,-1,2,0,PlexServiceCommon.AuxiliaryApplication' PlexServiceCommon.DriveMap,
+PlexServiceCommon,StatusChangeEventArgs,0,1,2,0,1,14,1,0,0,-1,0,2,,PlexServiceCommon.TrayCallback' PlexServiceCommon.AuxiliaryApplicationMonitor
+PlexServiceCommon,TrayCallback,0,4,0,0,2,41,8,0,1,-1,3,0,PlexServiceCommon.PlexState' PlexServiceCommon.StatusChangeEventArgs' PlexServiceCommon.Interface.ITrayCallback,
+PlexServiceCommon,TrayInteractionClient,0,1,0,0,1,5,1,0,0,-1,1,0,PlexServiceCommon.Interface.ITrayInteraction,
+PlexServiceCommon.Interface,ITrayCallback,0,2,0,0,0,7,2,1,0,-1,1,2,PlexServiceCommon.PlexState,PlexServiceCommon.TrayCallback' PlexServiceCommon.Interface.ITrayInteraction
+PlexServiceCommon.Interface,ITrayInteraction,0,12,0,0,0,28,12,1,0,-1,2,1,PlexServiceCommon.PlexState' PlexServiceCommon.Interface.ITrayCallback,PlexServiceCommon.TrayInteractionClient

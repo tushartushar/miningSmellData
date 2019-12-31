@@ -1,35 +1,35 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 FubuMVC.Swagger.Actions,SwaggerExtensions,0,3,0,0,3,19,3,0,0,-1,0,0,,
-FubuMVC.Swagger.Actions,SwaggerUIAction,2,2,0,0,2,15,2,0,0,0,3,1,FubuMVC.Swagger.UI.SwaggerUICache' FubuMVC.Swagger.UI.SwaggerUIIndex' FubuMVC.Swagger.Actions.SwaggerUIRequest,FubuMVC.Swagger.SwaggerConvention
+FubuMVC.Swagger.Actions,SwaggerUIAction,2,2,0,0,2,15,2,0,0,0,2,1,FubuMVC.Swagger.Actions.SwaggerUIRequest' FubuMVC.Swagger.UI.SwaggerUICache,FubuMVC.Swagger.SwaggerConvention
 FubuMVC.Swagger.Actions,SwaggerUIRequest,0,0,0,0,0,3,0,0,0,-1,0,1,,FubuMVC.Swagger.Actions.SwaggerUIAction
-FubuMVC.Swagger.Actions,ResourceDiscoveryAction,3,2,0,0,2,41,2,0,0,0,3,1,FubuMVC.Swagger.ConnegActionFinder' FubuMVC.Swagger.Specification.ResourceDiscoveryAPI' FubuMVC.Swagger.Specification.ResourceDiscovery,FubuMVC.Swagger.SwaggerConvention
-FubuMVC.Swagger.Actions,ResourceRequest,0,0,1,0,0,5,0,0,0,-1,0,1,,FubuMVC.Swagger.Actions.ResourceAction
-FubuMVC.Swagger.Actions,ResourceAction,4,3,0,0,2,56,3,0,0,0,5,1,FubuMVC.Swagger.ConnegActionFinder' FubuMVC.Swagger.ActionCallMapper' FubuMVC.Swagger.Actions.ResourceRequest' FubuMVC.Swagger.Specification.Resource' FubuMVC.Swagger.Specification.API,FubuMVC.Swagger.SwaggerConvention
-FubuMVC.Swagger,IActionGrouper,0,1,0,0,0,4,1,1,0,-1,0,1,,FubuMVC.Swagger.ConnegActionFinder
-FubuMVC.Swagger,APIRouteGrouper,0,1,0,0,1,14,1,0,1,-1,0,1,,FubuMVC.Swagger.Tests.api_route_grouper
+FubuMVC.Swagger.Actions,ResourceDiscoveryAction,3,2,0,0,2,41,2,0,0,0,4,1,FubuMVC.Swagger.Actions.ResourceRequest' FubuMVC.Swagger.ConnegActionFinder' FubuMVC.Swagger.Specification.ResourceDiscovery' FubuMVC.Swagger.Specification.ResourceDiscoveryAPI,FubuMVC.Swagger.SwaggerConvention
+FubuMVC.Swagger.Actions,ResourceRequest,0,0,1,0,0,5,0,0,0,-1,0,2,,FubuMVC.Swagger.Actions.ResourceAction' FubuMVC.Swagger.Actions.ResourceDiscoveryAction
+FubuMVC.Swagger.Actions,ResourceAction,4,3,0,0,2,56,3,0,0,0,5,1,FubuMVC.Swagger.Actions.ResourceRequest' FubuMVC.Swagger.ConnegActionFinder' FubuMVC.Swagger.ActionCallMapper' FubuMVC.Swagger.Specification.Resource' FubuMVC.Swagger.Specification.API,FubuMVC.Swagger.SwaggerConvention
+FubuMVC.Swagger,IActionGrouper,0,1,0,0,0,4,1,1,0,-1,0,4,,FubuMVC.Swagger.ConnegActionFinder' FubuMVC.Swagger.APIRouteGrouper' FubuMVC.Swagger.Configuration.SwaggerApiDocumentationExtension' FubuMVC.Swagger.Configuration.SwaggerPackageRegistry
+FubuMVC.Swagger,APIRouteGrouper,0,1,0,0,1,14,1,0,1,-1,1,2,FubuMVC.Swagger.IActionGrouper,FubuMVC.Swagger.Configuration.SwaggerApiDocumentationExtension' FubuMVC.Swagger.Configuration.SwaggerPackageRegistry
 FubuMVC.Swagger,ConnegActionFinder,3,4,0,0,4,28,4,0,0,0,2,2,FubuMVC.Swagger.IActionGrouper' FubuMVC.Swagger.IActionFinder,FubuMVC.Swagger.Actions.ResourceDiscoveryAction' FubuMVC.Swagger.Actions.ResourceAction
-FubuMVC.Swagger,IActionFinder,0,0,1,0,0,4,0,1,0,-1,0,1,,FubuMVC.Swagger.ConnegActionFinder
+FubuMVC.Swagger,IActionFinder,0,0,1,0,0,4,0,1,0,-1,0,4,,FubuMVC.Swagger.Configuration.APIRouteFinder' FubuMVC.Swagger.ConnegActionFinder' FubuMVC.Swagger.Configuration.SwaggerPackageRegistry' FubuMVC.Swagger.Configuration.SwaggerApiDocumentationExtension
 FubuMVC.Swagger,StringExtensions,0,1,0,0,1,21,6,0,0,-1,0,0,,
-FubuMVC.Swagger,SwaggerConvention,0,1,0,0,1,13,1,0,0,-1,3,0,FubuMVC.Swagger.Actions.SwaggerUIAction' FubuMVC.Swagger.Actions.ResourceDiscoveryAction' FubuMVC.Swagger.Actions.ResourceAction,
-FubuMVC.Swagger,ActionCallMapper,1,6,0,0,4,77,11,0,0,0.5,3,5,FubuMVC.Swagger.Specification.Operation' FubuMVC.Swagger.Specification.Parameter' FubuMVC.Swagger.Specification.AllowableValues,FubuMVC.Swagger.Actions.ResourceAction' FubuMVC.Swagger.Tests.action_call_mapper' FubuMVC.Swagger.Tests.action_call_mapper_get_route_verbs' FubuMVC.Swagger.Tests.when_creating_parameters' FubuMVC.Swagger.Tests.when_creating_parameters_paramTypes
-FubuMVC.Swagger.Configuration,APIRouteFinder,0,1,1,0,0,8,1,0,1,-1,0,0,,
-FubuMVC.Swagger.Configuration,HandlerConvention,2,3,0,1,2,59,3,0,0,0,1,0,FubuMVC.Swagger.Configuration.HandlerActionSource,
-FubuMVC.Swagger.Configuration,HandlerActionSource,1,4,0,0,4,36,12,0,0,0,1,1,FubuMVC.Swagger.Configuration.HandlersUrlPolicy,FubuMVC.Swagger.Configuration.HandlerConvention
-FubuMVC.Swagger.Configuration,HandlersUrlPolicy,4,7,0,3,4,104,14,0,0,0.43,0,1,,FubuMVC.Swagger.Configuration.HandlerActionSource
-FubuMVC.Swagger.Configuration,IApi,0,0,0,0,0,3,0,2,0,-1,0,0,,
-FubuMVC.Swagger.Configuration,SwaggerPackageRegistry,0,1,0,0,1,10,1,0,0,-1,0,0,,
-FubuMVC.Swagger.Configuration,SwaggerApiDocumentationExtension,0,1,0,0,1,9,1,0,0,-1,0,0,,
-FubuMVC.Swagger.Specification,AllowableValuesAttribute,0,1,1,0,1,8,1,0,0,-1,0,0,,
-FubuMVC.Swagger.Specification,ResourceDiscovery,0,0,4,0,0,7,0,0,0,-1,0,1,,FubuMVC.Swagger.Actions.ResourceDiscoveryAction
-FubuMVC.Swagger.Specification,ResourceDiscoveryAPI,0,0,2,0,0,5,0,0,0,-1,0,1,,FubuMVC.Swagger.Actions.ResourceDiscoveryAction
-FubuMVC.Swagger.Specification,Resource,0,0,5,0,0,10,0,0,0,-1,0,1,,FubuMVC.Swagger.Actions.ResourceAction
-FubuMVC.Swagger.Specification,API,0,0,3,0,0,6,0,0,0,-1,0,1,,FubuMVC.Swagger.Actions.ResourceAction
-FubuMVC.Swagger.Specification,Operation,0,0,8,0,0,11,0,0,0,-1,0,2,,FubuMVC.Swagger.ActionCallMapper' FubuMVC.Swagger.Tests.action_call_mapper
-FubuMVC.Swagger.Specification,Parameter,0,0,8,0,0,11,0,0,0,-1,0,3,,FubuMVC.Swagger.ActionCallMapper' FubuMVC.Swagger.Tests.when_creating_parameters' FubuMVC.Swagger.Tests.when_creating_parameters_paramTypes
-FubuMVC.Swagger.Specification,AllowableValues,0,0,2,0,0,5,0,0,0,-1,0,2,,FubuMVC.Swagger.ActionCallMapper' FubuMVC.Swagger.Tests.when_creating_parameters
-FubuMVC.Swagger.Specification,ErrorResponses,0,0,2,0,0,5,0,0,0,-1,0,0,,
-FubuMVC.Swagger.Specification,Model,0,0,2,0,0,5,0,0,0,-1,0,0,,
-FubuMVC.Swagger.Specification,ModelProperty,0,0,7,0,0,10,0,0,0,-1,0,0,,
-FubuMVC.Swagger.UI,CacheIt<T>,1,3,0,0,1,19,4,0,0,0.67,0,0,,
-FubuMVC.Swagger.UI,SwaggerUICache,3,5,0,0,3,52,7,0,0,0.6,1,1,FubuMVC.Swagger.UI.SwaggerUIIndex,FubuMVC.Swagger.Actions.SwaggerUIAction
-FubuMVC.Swagger.UI,SwaggerUIIndex,0,0,1,0,0,4,0,0,0,-1,0,2,,FubuMVC.Swagger.Actions.SwaggerUIAction' FubuMVC.Swagger.UI.SwaggerUICache
+FubuMVC.Swagger,SwaggerConvention,0,1,0,0,1,13,1,0,0,-1,3,2,FubuMVC.Swagger.Actions.SwaggerUIAction' FubuMVC.Swagger.Actions.ResourceDiscoveryAction' FubuMVC.Swagger.Actions.ResourceAction,FubuMVC.Swagger.Configuration.SwaggerApiDocumentationExtension' FubuMVC.Swagger.Configuration.SwaggerPackageRegistry
+FubuMVC.Swagger,ActionCallMapper,1,6,0,0,4,77,11,0,0,0.5,5,1,FubuMVC.Swagger.Specification.AllowableValuesAttribute' FubuMVC.Swagger.Specification.Operation' FubuMVC.Swagger.Specification.Parameter' FubuMVC.Swagger.Specification.AllowableValues' FubuMVC.Swagger.Specification.ErrorResponses,FubuMVC.Swagger.Actions.ResourceAction
+FubuMVC.Swagger.Configuration,APIRouteFinder,0,1,1,0,0,8,1,0,1,-1,2,2,FubuMVC.Swagger.IActionFinder' FubuMVC.Swagger.Configuration.IApi,FubuMVC.Swagger.Configuration.SwaggerApiDocumentationExtension' FubuMVC.Swagger.Configuration.SwaggerPackageRegistry
+FubuMVC.Swagger.Configuration,HandlerConvention,2,3,0,1,2,59,3,0,0,0,2,0,FubuMVC.Swagger.Configuration.HandlerActionSource' FubuMVC.Swagger.Configuration.HandlersUrlPolicy,
+FubuMVC.Swagger.Configuration,HandlerActionSource,1,4,0,0,4,36,12,0,0,0,0,1,,FubuMVC.Swagger.Configuration.HandlerConvention
+FubuMVC.Swagger.Configuration,HandlersUrlPolicy,4,7,0,3,4,104,15,0,0,0.43,0,1,,FubuMVC.Swagger.Configuration.HandlerConvention
+FubuMVC.Swagger.Configuration,IApi,0,0,0,0,0,3,0,2,0,-1,0,1,,FubuMVC.Swagger.Configuration.APIRouteFinder
+FubuMVC.Swagger.Configuration,SwaggerPackageRegistry,0,1,0,0,1,10,1,0,0,-1,5,0,FubuMVC.Swagger.IActionGrouper' FubuMVC.Swagger.APIRouteGrouper' FubuMVC.Swagger.IActionFinder' FubuMVC.Swagger.SwaggerConvention' FubuMVC.Swagger.Configuration.APIRouteFinder,
+FubuMVC.Swagger.Configuration,SwaggerApiDocumentationExtension,0,1,0,0,1,9,1,0,0,-1,5,0,FubuMVC.Swagger.IActionGrouper' FubuMVC.Swagger.APIRouteGrouper' FubuMVC.Swagger.IActionFinder' FubuMVC.Swagger.SwaggerConvention' FubuMVC.Swagger.Configuration.APIRouteFinder,
+FubuMVC.Swagger.Specification,AllowableValuesAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,FubuMVC.Swagger.ActionCallMapper
+FubuMVC.Swagger.Specification,ResourceDiscovery,0,0,4,0,0,7,0,0,0,-1,1,1,FubuMVC.Swagger.Specification.ResourceDiscoveryAPI,FubuMVC.Swagger.Actions.ResourceDiscoveryAction
+FubuMVC.Swagger.Specification,ResourceDiscoveryAPI,0,0,2,0,0,5,0,0,0,-1,0,2,,FubuMVC.Swagger.Specification.ResourceDiscovery' FubuMVC.Swagger.Actions.ResourceDiscoveryAction
+FubuMVC.Swagger.Specification,Resource,0,0,5,0,0,10,0,0,0,-1,1,1,FubuMVC.Swagger.Specification.API,FubuMVC.Swagger.Actions.ResourceAction
+FubuMVC.Swagger.Specification,API,0,0,3,0,0,6,0,0,0,-1,1,2,FubuMVC.Swagger.Specification.Operation,FubuMVC.Swagger.Specification.Resource' FubuMVC.Swagger.Actions.ResourceAction
+FubuMVC.Swagger.Specification,Operation,0,0,8,0,0,11,0,0,0,-1,2,2,FubuMVC.Swagger.Specification.Parameter' FubuMVC.Swagger.Specification.ErrorResponses,FubuMVC.Swagger.Specification.API' FubuMVC.Swagger.ActionCallMapper
+FubuMVC.Swagger.Specification,Parameter,0,0,8,0,0,11,0,0,0,-1,1,2,FubuMVC.Swagger.Specification.AllowableValues,FubuMVC.Swagger.Specification.Operation' FubuMVC.Swagger.ActionCallMapper
+FubuMVC.Swagger.Specification,AllowableValues,0,0,2,0,0,5,0,0,0,-1,0,2,,FubuMVC.Swagger.Specification.Parameter' FubuMVC.Swagger.ActionCallMapper
+FubuMVC.Swagger.Specification,ErrorResponses,0,0,2,0,0,5,0,0,0,-1,0,2,,FubuMVC.Swagger.Specification.Operation' FubuMVC.Swagger.ActionCallMapper
+FubuMVC.Swagger.Specification,Model,0,0,2,0,0,5,0,0,0,-1,1,0,FubuMVC.Swagger.Specification.ModelProperty,
+FubuMVC.Swagger.Specification,ModelProperty,0,0,7,0,0,10,0,0,0,-1,0,1,,FubuMVC.Swagger.Specification.Model
+FubuMVC.Swagger.UI,CacheIt<T>,1,3,0,0,1,19,4,0,0,0.67,0,1,,FubuMVC.Swagger.UI.SwaggerUICache
+FubuMVC.Swagger.UI,SwaggerUICache,3,5,0,0,3,52,7,0,0,0.6,2,1,FubuMVC.Swagger.UI.CacheIt<T>' FubuMVC.Swagger.UI.SwaggerUIIndex,FubuMVC.Swagger.Actions.SwaggerUIAction
+FubuMVC.Swagger.UI,SwaggerUIIndex,0,0,1,0,0,4,0,0,0,-1,0,1,,FubuMVC.Swagger.UI.SwaggerUICache

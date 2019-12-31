@@ -1,96 +1,88 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Squirrel.Bsdiff,BinaryPatchUtility,2,11,0,0,2,522,49,0,0,0,1,1,Squirrel.Bsdiff.Ownership,Squirrel.DeltaPackageBuilder
-Squirrel.Bsdiff,WrappingStream,2,14,6,0,12,186,18,0,0,0,1,0,Squirrel.Bsdiff.Ownership,
+Squirrel.Bsdiff,BinaryPatchUtility,2,11,0,0,2,522,94,0,0,0,2,1,Squirrel.Bsdiff.WrappingStream' Squirrel.Bsdiff.Ownership,Squirrel.DeltaPackageBuilder
+Squirrel.Bsdiff,WrappingStream,2,14,6,0,12,186,18,0,0,0,1,1,Squirrel.Bsdiff.Ownership,Squirrel.Bsdiff.BinaryPatchUtility
 Squirrel.Bsdiff,Ownership,0,0,0,0,0,11,0,0,0,-1,0,2,,Squirrel.Bsdiff.BinaryPatchUtility' Squirrel.Bsdiff.WrappingStream
 Squirrel.Bsdiff,StreamUtility,0,2,0,0,2,48,9,0,0,-1,0,0,,
-Squirrel,ContentType,0,2,0,0,2,45,7,0,0,-1,0,2,,Squirrel.ReleasePackage' Squirrel.Tests.Core.ContentTypeTests
-Squirrel,IDeltaPackageBuilder,0,2,0,0,0,5,2,1,0,-1,1,0,Squirrel.ReleasePackage,
-Squirrel,DeltaPackageBuilder,1,7,0,0,3,243,24,0,1,0.29,4,5,Squirrel.ReleasePackage' Squirrel.Utility' Squirrel.ReleaseEntry' Squirrel.Bsdiff.BinaryPatchUtility,Squirrel.ApplyReleasesImpl' Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.Core.ApplyDeltaPackageTests' Squirrel.Tests.Core.CreateDeltaPackageTests
-Squirrel,EnumerableExtensions,0,15,0,0,11,209,45,0,0,-1,0,1,,Squirrel.UpdateInfo
-Squirrel,IFileDownloader,0,2,0,0,0,5,2,2,0,-1,0,3,,Squirrel.UpdateManager' Squirrel.CheckForUpdateImpl' Squirrel.DownloadReleasesImpl
-Squirrel,FileDownloader,1,3,0,0,3,57,3,0,1,0,1,0,Squirrel.Utility,
-Squirrel,ShortcutLocation,0,0,0,0,0,10,0,0,0,-1,0,7,,Squirrel.IUpdateManager' Squirrel.EasyModeMixin' Squirrel.UpdateManager' Squirrel.ApplyReleasesImpl' Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.ApplyReleasesTests
-Squirrel,IUpdateManager,0,11,0,0,0,99,11,1,0,-1,2,1,Squirrel.UpdateInfo' Squirrel.ShortcutLocation,Squirrel.EasyModeMixin
-Squirrel,EasyModeMixin,0,3,0,0,3,47,3,0,0,-1,4,0,Squirrel.UpdateInfo' Squirrel.IUpdateManager' Squirrel.ReleaseEntry' Squirrel.ShortcutLocation,
-Squirrel,NativeMethods,0,16,0,0,1,73,16,0,0,-1,4,4,Squirrel.PROCESS_BASIC_INFORMATION' Squirrel.ProcessAccess' Squirrel.PROCESSINFOCLASS' Squirrel.StandardHandles,Squirrel.SquirrelAwareExecutableDetector' Squirrel.UnsafeUtility' Squirrel.Update.Program' Squirrel.Update.Program
-Squirrel,ProcessAccess,0,0,0,0,0,16,0,0,0,-1,0,4,,Squirrel.NativeMethods' Squirrel.UnsafeUtility' Squirrel.Update.Program' Squirrel.Update.Program
+Squirrel,ContentType,0,2,0,0,2,45,7,0,0,-1,0,1,,Squirrel.ReleasePackage
+Squirrel,IDeltaPackageBuilder,0,2,0,0,0,5,2,1,0,-1,1,1,Squirrel.ReleasePackage,Squirrel.DeltaPackageBuilder
+Squirrel,DeltaPackageBuilder,1,7,0,0,3,241,26,0,1,0.29,6,1,Squirrel.Bsdiff.BinaryPatchUtility' Squirrel.IDeltaPackageBuilder' Squirrel.ReleaseEntry' Squirrel.ReleasePackage' Squirrel.ChecksumFailedException' Squirrel.Utility,Squirrel.UpdateManager
+Squirrel,EnumerableExtensions,0,15,0,0,11,209,51,0,0,-1,0,1,,Squirrel.UpdateInfo
+Squirrel,IFileDownloader,0,2,0,0,0,5,2,2,0,-1,0,3,,Squirrel.FileDownloader' Squirrel.DownloadReleasesImpl' Squirrel.CheckForUpdateImpl
+Squirrel,FileDownloader,1,3,0,0,3,57,3,0,1,0,2,1,Squirrel.IFileDownloader' Squirrel.Utility,Squirrel.DownloadReleasesImpl
+Squirrel,ShortcutLocation,0,0,0,0,0,10,0,0,0,-1,0,3,,Squirrel.IUpdateManager' Squirrel.EasyModeMixin' Squirrel.UpdateManager
+Squirrel,UpdaterIntention,0,0,0,0,0,4,0,0,0,-1,0,2,,Squirrel.IUpdateManager' Squirrel.CheckForUpdateImpl
+Squirrel,IUpdateManager,0,11,0,0,0,101,11,1,0,-1,4,1,Squirrel.ShortcutLocation' Squirrel.UpdaterIntention' Squirrel.ReleaseEntry' Squirrel.UpdateInfo,Squirrel.EasyModeMixin
+Squirrel,EasyModeMixin,0,3,0,0,3,47,3,0,0,-1,4,0,Squirrel.ShortcutLocation' Squirrel.IUpdateManager' Squirrel.ReleaseEntry' Squirrel.UpdateInfo,
+Squirrel,NativeMethods,0,16,0,0,1,73,16,0,0,-1,4,2,Squirrel.ProcessAccess' Squirrel.PROCESSINFOCLASS' Squirrel.PROCESS_BASIC_INFORMATION' Squirrel.StandardHandles,Squirrel.SquirrelAwareExecutableDetector' Squirrel.UnsafeUtility
+Squirrel,ProcessAccess,0,0,0,0,0,16,0,0,0,-1,0,2,,Squirrel.UnsafeUtility' Squirrel.NativeMethods
 Squirrel,PROCESSINFOCLASS,0,0,0,0,0,60,0,0,0,-1,0,1,,Squirrel.NativeMethods
 Squirrel,PROCESS_BASIC_INFORMATION,6,0,1,6,0,12,0,0,0,-1,0,1,,Squirrel.NativeMethods
-Squirrel,StandardHandles,0,0,0,0,0,5,0,0,0,-1,0,3,,Squirrel.NativeMethods' Squirrel.Update.Program' Squirrel.Update.Program
-Squirrel,IReleaseEntry,0,2,8,0,0,13,2,1,0,-1,0,0,,
-Squirrel,ReleaseEntry,4,15,10,0,12,220,30,0,1,0.6,3,15,Squirrel.Utility' Squirrel.IReleasePackage' Squirrel.ReleasePackage,Squirrel.DeltaPackageBuilder' Squirrel.EasyModeMixin' Squirrel.UpdateInfo' Squirrel.CheckForUpdateImpl' Squirrel.Utility' Squirrel.DownloadReleasesImpl' Squirrel.ApplyReleasesImpl' Squirrel.InstallHelperImpl' SyncReleases.SyncImplementations' Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.ApplyReleasesTests' Squirrel.Tests.UpdateLocalReleasesTests' Squirrel.Tests.Core.ReleaseEntryTests' Squirrel.Tests.TestHelpers.IntegrationTestHelper
+Squirrel,StandardHandles,0,0,0,0,0,5,0,0,0,-1,0,1,,Squirrel.NativeMethods
+Squirrel,IReleaseEntry,0,2,8,0,0,13,2,1,0,-1,0,1,,Squirrel.ReleaseEntry
+Squirrel,ReleaseEntry,4,15,10,0,12,220,31,0,1,0.6,4,9,Squirrel.IReleaseEntry' Squirrel.IReleasePackage' Squirrel.ReleasePackage' Squirrel.Utility,Squirrel.InstallHelperImpl' Squirrel.DownloadReleasesImpl' Squirrel.IUpdateManager' Squirrel.EasyModeMixin' Squirrel.DeltaPackageBuilder' Squirrel.Utility' Squirrel.CheckForUpdateImpl' Squirrel.UpdateInfo' Squirrel.UpdateManager
 Squirrel,VersionExtensions,2,2,0,0,2,15,2,0,0,1,1,0,Squirrel.IReleasePackage,
-Squirrel,FrameworkTargetVersion,2,0,0,2,0,5,0,0,0,-1,0,1,,Squirrel.Tests.Core.CreateReleasePackageTests
-Squirrel,IReleasePackage,0,1,3,0,0,7,1,1,0,-1,0,2,,Squirrel.ReleaseEntry' Squirrel.VersionExtensions
-Squirrel,VersionComparer,0,1,0,0,1,25,4,0,0,-1,0,1,,Squirrel.ReleasePackage
-Squirrel,ReleasePackage,0,11,4,0,3,238,17,0,1,-1,4,10,MarkdownSharp.Markdown' Squirrel.Utility' Squirrel.VersionComparer' Squirrel.ContentType,Squirrel.IDeltaPackageBuilder' Squirrel.DeltaPackageBuilder' Squirrel.ReleaseEntry' Squirrel.ApplyReleasesImpl' Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.Core.ApplyDeltaPackageTests' Squirrel.Tests.Core.CreateDeltaPackageTests' Squirrel.Tests.Core.ReleaseEntryTests' Squirrel.Tests.Core.CreateReleasePackageTests
-Squirrel,ChecksumFailedException,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Squirrel,FrameworkTargetVersion,2,0,0,2,0,5,0,0,0,-1,0,0,,
+Squirrel,IReleasePackage,0,1,3,0,0,7,1,1,0,-1,0,3,,Squirrel.ReleasePackage' Squirrel.VersionExtensions' Squirrel.ReleaseEntry
+Squirrel,VersionComparer,0,1,0,0,1,25,6,0,0,-1,0,1,,Squirrel.ReleasePackage
+Squirrel,ReleasePackage,0,11,4,0,3,238,19,0,1,-1,5,4,Squirrel.ContentType' Squirrel.IReleasePackage' Squirrel.VersionComparer' Squirrel.Utility' MarkdownSharp.Markdown,Squirrel.ReleaseEntry' Squirrel.IDeltaPackageBuilder' Squirrel.DeltaPackageBuilder' Squirrel.UpdateManager
+Squirrel,ChecksumFailedException,0,0,1,0,0,4,0,0,0,-1,0,1,,Squirrel.DeltaPackageBuilder
 Squirrel,SquirrelAwareApp,0,1,0,0,1,59,6,0,0,-1,0,0,,
-Squirrel,SquirrelAwareExecutableDetector,0,4,0,0,2,64,11,0,0,-1,2,2,Squirrel.Utility' Squirrel.NativeMethods,Squirrel.ApplyReleasesImpl' Squirrel.Tests.SquirrelAwareExecutableDetectorTests
-Squirrel,TrayStateChanger,0,6,0,0,3,153,15,0,0,-1,9,1,Squirrel.TrayNotify' Squirrel.NOTIFYITEM' Squirrel.NOTIFYITEM_Writable' Squirrel.ITrayNotifyWin7' Squirrel.ITrayNotify' Squirrel.NOTIFYITEM_PREFERENCE' Squirrel.IconStreamsHeader' Squirrel.IconStreamsItem' Squirrel.NotificationCb,Squirrel.ApplyReleasesImpl
+Squirrel,SquirrelAwareExecutableDetector,0,4,0,0,2,64,11,0,0,-1,2,1,Squirrel.NativeMethods' Squirrel.Utility,Squirrel.UpdateManager
+Squirrel,TrayStateChanger,0,6,0,0,3,153,15,0,0,-1,10,1,Squirrel.NotificationCb' Squirrel.NOTIFYITEM_PREFERENCE' Squirrel.NOTIFYITEM' Squirrel.NOTIFYITEM_Writable' Squirrel.INotificationCb' Squirrel.ITrayNotifyWin7' Squirrel.ITrayNotify' Squirrel.TrayNotify' Squirrel.IconStreamsHeader' Squirrel.IconStreamsItem,Squirrel.UpdateManager
 Squirrel,NotificationCb,1,1,0,1,1,8,1,0,1,0,0,1,,Squirrel.TrayStateChanger
 Squirrel,NOTIFYITEM_PREFERENCE,0,0,0,0,0,9,0,0,0,-1,0,3,,Squirrel.TrayStateChanger' Squirrel.NOTIFYITEM' Squirrel.NOTIFYITEM_Writable
-Squirrel,NOTIFYITEM,7,0,0,7,0,16,0,0,0,-1,1,2,Squirrel.NOTIFYITEM_PREFERENCE,Squirrel.TrayStateChanger' Squirrel.NOTIFYITEM_Writable
-Squirrel,NOTIFYITEM_Writable,7,1,0,7,1,26,1,0,0,0,2,1,Squirrel.NOTIFYITEM_PREFERENCE' Squirrel.NOTIFYITEM,Squirrel.TrayStateChanger
-Squirrel,INotificationCb,0,1,0,0,0,7,1,1,0,-1,0,0,,
-Squirrel,ITrayNotifyWin7,0,3,0,0,0,9,3,0,0,-1,0,1,,Squirrel.TrayStateChanger
-Squirrel,ITrayNotify,0,5,0,0,0,11,5,0,0,-1,0,1,,Squirrel.TrayStateChanger
+Squirrel,NOTIFYITEM,7,0,0,7,0,16,0,0,0,-1,1,3,Squirrel.NOTIFYITEM_PREFERENCE,Squirrel.TrayStateChanger' Squirrel.NOTIFYITEM_Writable' Squirrel.INotificationCb
+Squirrel,NOTIFYITEM_Writable,7,1,0,7,1,26,1,0,0,0,2,3,Squirrel.NOTIFYITEM_PREFERENCE' Squirrel.NOTIFYITEM,Squirrel.TrayStateChanger' Squirrel.ITrayNotifyWin7' Squirrel.ITrayNotify
+Squirrel,INotificationCb,0,1,0,0,0,7,1,1,0,-1,1,3,Squirrel.NOTIFYITEM,Squirrel.TrayStateChanger' Squirrel.ITrayNotifyWin7' Squirrel.ITrayNotify
+Squirrel,ITrayNotifyWin7,0,3,0,0,0,9,3,0,0,-1,2,1,Squirrel.NOTIFYITEM_Writable' Squirrel.INotificationCb,Squirrel.TrayStateChanger
+Squirrel,ITrayNotify,0,5,0,0,0,11,5,0,0,-1,2,1,Squirrel.NOTIFYITEM_Writable' Squirrel.INotificationCb,Squirrel.TrayStateChanger
 Squirrel,TrayNotify,0,0,0,0,0,2,0,0,0,-1,0,1,,Squirrel.TrayStateChanger
 Squirrel,IconStreamsHeader,5,0,0,5,0,7,0,0,0,-1,0,1,,Squirrel.TrayStateChanger
 Squirrel,IconStreamsItem,2,0,1,2,0,27,0,0,0,-1,0,1,,Squirrel.TrayStateChanger
-Squirrel,UpdateInfo,0,3,5,0,2,59,6,0,0,-1,2,9,Squirrel.ReleaseEntry' Squirrel.EnumerableExtensions,Squirrel.IUpdateManager' Squirrel.EasyModeMixin' Squirrel.UpdateManager' Squirrel.CheckForUpdateImpl' Squirrel.ApplyReleasesImpl' Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.ApplyReleasesTests' Squirrel.Tests.UpdateLocalReleasesTests
-Squirrel,UpdateManager,6,22,3,0,19,1197,34,0,1,0,11,5,Squirrel.IFileDownloader' Squirrel.CheckForUpdateImpl' Squirrel.Utility' Squirrel.UpdateInfo' Squirrel.DownloadReleasesImpl' Squirrel.ApplyReleasesImpl' Squirrel.InstallHelperImpl' Squirrel.ShortcutLocation' Squirrel.Disposable' Squirrel.Release' Squirrel.Json.SimpleJson,Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.ApplyReleasesTests' Squirrel.Tests.CreateUninstallerRegKeyTests' Squirrel.Tests.UpdateLocalReleasesTests
-Squirrel,CheckForUpdateImpl,1,5,0,0,2,156,16,0,0,0,4,1,Squirrel.ReleaseEntry' Squirrel.UpdateInfo' Squirrel.Utility' Squirrel.IFileDownloader,Squirrel.UpdateManager
-Squirrel,Release,0,0,3,0,0,10,0,0,0,-1,0,1,,Squirrel.UpdateManager
-Squirrel,Utility,6,56,0,3,49,619,81,0,0,0.62,3,19,Squirrel.Disposable' Squirrel.ReleaseEntry' Squirrel.MoveFileFlags,Squirrel.DeltaPackageBuilder' Squirrel.FileDownloader' Squirrel.ReleaseEntry' Squirrel.ReleasePackage' Squirrel.SquirrelAwareExecutableDetector' Squirrel.UpdateManager' Squirrel.CheckForUpdateImpl' Squirrel.DownloadReleasesImpl' Squirrel.ApplyReleasesImpl' Squirrel.InstallHelperImpl' SyncReleases.SyncImplementations' Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.ApplyReleasesTests' Squirrel.Tests.CreateUninstallerRegKeyTests' Squirrel.Tests.UpdateLocalReleasesTests' Squirrel.Tests.Core.CreateReleasePackageTests' Squirrel.Tests.Core.UtilityTests' Squirrel.Tests.TestHelpers.IntegrationTestHelper
+Squirrel,UpdateInfo,0,3,5,0,2,59,6,0,0,-1,2,4,Squirrel.EnumerableExtensions' Squirrel.ReleaseEntry,Squirrel.UpdateManager' Squirrel.IUpdateManager' Squirrel.EasyModeMixin' Squirrel.CheckForUpdateImpl
+Squirrel,UpdateManager,6,22,3,0,19,1205,34,0,1,0.09,10,0,Squirrel.DeltaPackageBuilder' Squirrel.ShortcutLocation' Squirrel.ReleaseEntry' Squirrel.ReleasePackage' Squirrel.SquirrelAwareExecutableDetector' Squirrel.TrayStateChanger' Squirrel.UpdateInfo' Squirrel.Utility' Squirrel.UnsafeUtility' Squirrel.Shell.ShellLink,
+Squirrel,ApplyReleasesImpl,1,21,0,0,6,546,65,0,0,0.14,0,0,,
+Squirrel,CheckForUpdateImpl,1,5,0,0,2,164,21,0,0,0.4,5,0,Squirrel.IFileDownloader' Squirrel.UpdaterIntention' Squirrel.ReleaseEntry' Squirrel.UpdateInfo' Squirrel.Utility,
+Squirrel,DownloadReleasesImpl,1,6,0,0,2,84,11,0,0,0.5,4,0,Squirrel.IFileDownloader' Squirrel.FileDownloader' Squirrel.ReleaseEntry' Squirrel.Utility,
+Squirrel,Release,0,0,3,0,0,10,0,0,0,-1,0,0,,
+Squirrel,InstallHelperImpl,4,5,0,0,5,110,9,0,0,0.4,3,0,Squirrel.ReleaseEntry' Squirrel.Utility' Squirrel.UnsafeUtility,
+Squirrel,Utility,6,56,0,3,49,619,87,0,0,0.62,3,9,Squirrel.ReleaseEntry' Squirrel.MoveFileFlags' Squirrel.Disposable,Squirrel.SquirrelAwareExecutableDetector' Squirrel.ReleaseEntry' Squirrel.InstallHelperImpl' Squirrel.DownloadReleasesImpl' Squirrel.FileDownloader' Squirrel.ReleasePackage' Squirrel.CheckForUpdateImpl' Squirrel.DeltaPackageBuilder' Squirrel.UpdateManager
 Squirrel,MoveFileFlags,0,0,0,0,0,10,0,0,0,-1,0,1,,Squirrel.Utility
-Squirrel,UnsafeUtility,0,1,0,0,1,32,1,0,0,-1,2,3,Squirrel.NativeMethods' Squirrel.ProcessAccess,Squirrel.ApplyReleasesImpl' Squirrel.InstallHelperImpl' Squirrel.Tests.Core.UtilityTests
+Squirrel,UnsafeUtility,0,1,0,0,1,32,1,0,0,-1,2,2,Squirrel.NativeMethods' Squirrel.ProcessAccess,Squirrel.UpdateManager' Squirrel.InstallHelperImpl
 Squirrel,SingleGlobalInstance,1,2,0,0,2,45,7,0,0,0,1,0,Squirrel.Disposable,
-Squirrel,Disposable,0,1,0,0,1,20,1,0,0,-1,1,6,Squirrel.AnonDisposable,Squirrel.UpdateManager' Squirrel.Utility' Squirrel.SingleGlobalInstance' Squirrel.Update.Program' Squirrel.Update.Program' Squirrel.Tests.StaticHttpServer
+Squirrel,Disposable,0,1,0,0,1,20,1,0,0,-1,1,2,Squirrel.AnonDisposable,Squirrel.Utility' Squirrel.SingleGlobalInstance
 Squirrel,AnonDisposable,2,2,0,0,2,13,2,0,0,0,0,1,,Squirrel.Disposable
-Squirrel,DownloadReleasesImpl,1,6,0,0,2,84,10,0,0,0.33,3,1,Squirrel.Utility' Squirrel.ReleaseEntry' Squirrel.IFileDownloader,Squirrel.UpdateManager
-Squirrel,ApplyReleasesImpl,1,21,0,0,6,546,63,0,0,0.1,10,3,Squirrel.ReleaseEntry' Squirrel.TrayStateChanger' Squirrel.UpdateInfo' Squirrel.Utility' Squirrel.SquirrelAwareExecutableDetector' Squirrel.ShortcutLocation' Squirrel.Shell.ShellLink' Squirrel.ReleasePackage' Squirrel.DeltaPackageBuilder' Squirrel.UnsafeUtility,Squirrel.UpdateManager' Squirrel.Tests.ApplyReleasesTests' Squirrel.Tests.UpdateLocalReleasesTests
-Squirrel,InstallHelperImpl,4,5,0,0,5,110,8,0,0,0,3,1,Squirrel.ReleaseEntry' Squirrel.Utility' Squirrel.UnsafeUtility,Squirrel.UpdateManager
 MarkdownSharp,MarkdownOptions,0,0,6,0,0,32,0,0,0,-1,0,1,,MarkdownSharp.Markdown
-MarkdownSharp,Markdown,57,63,7,0,3,1409,114,0,0,0.06,3,2,MarkdownSharp.MarkdownOptions' MarkdownSharp.TokenType' MarkdownSharp.Token,Squirrel.ReleasePackage' Squirrel.Tests.Core.CreateReleasePackageTests
-MarkdownSharp,TokenType,0,0,0,0,0,1,0,0,0,-1,0,2,,MarkdownSharp.Markdown' MarkdownSharp.Token
-MarkdownSharp,Token,2,1,0,2,1,10,1,0,0,0,1,1,MarkdownSharp.TokenType,MarkdownSharp.Markdown
-Squirrel.Shell,ShellLink,3,11,11,0,10,893,20,0,0,0,10,3,Squirrel.Shell.IShellLinkW' Squirrel.Shell.IShellLinkA' Squirrel.Shell.SHGetFileInfoConstants' Squirrel.Shell.FileIcon' Squirrel.Shell.UnManagedMethods' Squirrel.Shell.IPropertyStore' Squirrel.Shell.PROPERTYKEY' Squirrel.Shell.PropVariant' Squirrel.Shell.IPersistFile' Squirrel.Shell.EShellLinkResolveFlags,Squirrel.ApplyReleasesImpl' Squirrel.Shell.TaskbarHelper' Squirrel.Tests.Core.UtilityTests
+MarkdownSharp,Markdown,57,63,7,0,3,1409,125,0,0,0.06,3,1,MarkdownSharp.MarkdownOptions' MarkdownSharp.TokenType' MarkdownSharp.Token,Squirrel.ReleasePackage
+MarkdownSharp,TokenType,0,0,0,0,0,1,0,0,0,-1,0,1,,MarkdownSharp.Markdown
+MarkdownSharp,Token,2,1,0,2,1,10,1,0,0,0,0,1,,MarkdownSharp.Markdown
+Squirrel.Shell,ShellLink,3,12,11,0,11,941,23,0,0,0,17,2,Squirrel.Shell.IPersistFile' Squirrel.Shell.PropVariant' Squirrel.Shell.PROPERTYKEY' Squirrel.Shell.IPropertyStore' Squirrel.Shell.IShellLinkA' Squirrel.Shell.IShellLinkW' Squirrel.Shell.CShellLink' Squirrel.Shell.EShellLinkGP' Squirrel.Shell.EShowWindowFlags' Squirrel.Shell._WIN32_FIND_DATAW' Squirrel.Shell._WIN32_FIND_DATAA' Squirrel.Shell._FILETIME' Squirrel.Shell.UnManagedMethods' Squirrel.Shell.EShellLinkResolveFlags' Squirrel.Shell.LinkDisplayMode' Squirrel.Shell.FileIcon' Squirrel.Shell.SHGetFileInfoConstants,Squirrel.Shell.TaskbarHelper' Squirrel.UpdateManager
 Squirrel.Shell,IPersist,0,1,0,0,0,9,1,0,0,-1,0,0,,
 Squirrel.Shell,IPersistFile,0,6,0,0,0,25,6,0,0,-1,0,1,,Squirrel.Shell.ShellLink
-Squirrel.Shell,PropVariant,5,1,0,5,1,15,1,0,0,0,0,2,,Squirrel.Shell.ShellLink' Squirrel.Shell.IPropertyStore
-Squirrel.Shell,PROPERTYKEY,2,0,2,2,0,22,0,0,0,-1,0,2,,Squirrel.Shell.ShellLink' Squirrel.Shell.IPropertyStore
-Squirrel.Shell,IPropertyStore,0,5,0,0,0,16,5,0,0,-1,2,1,Squirrel.Shell.PROPERTYKEY' Squirrel.Shell.PropVariant,Squirrel.Shell.ShellLink
-Squirrel.Shell,IShellLinkA,0,18,0,0,0,65,18,0,0,-1,1,1,Squirrel.Shell._WIN32_FIND_DATAA,Squirrel.Shell.ShellLink
-Squirrel.Shell,IShellLinkW,0,18,0,0,0,65,18,0,0,-1,1,1,Squirrel.Shell._WIN32_FIND_DATAW,Squirrel.Shell.ShellLink
-Squirrel.Shell,CShellLink,0,0,0,0,0,6,0,0,0,-1,0,0,,
-Squirrel.Shell,EShellLinkGP,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Squirrel.Shell,EShowWindowFlags,0,0,0,0,0,18,0,0,0,-1,0,0,,
-Squirrel.Shell,_WIN32_FIND_DATAW,10,0,0,10,0,17,0,0,0,-1,1,1,Squirrel.Shell._FILETIME,Squirrel.Shell.IShellLinkW
-Squirrel.Shell,_WIN32_FIND_DATAA,10,0,0,10,0,17,0,0,0,-1,1,1,Squirrel.Shell._FILETIME,Squirrel.Shell.IShellLinkA
-Squirrel.Shell,_FILETIME,2,0,0,2,0,6,0,0,0,-1,0,2,,Squirrel.Shell._WIN32_FIND_DATAW' Squirrel.Shell._WIN32_FIND_DATAA
+Squirrel.Shell,PropVariant,5,4,0,5,3,48,4,0,0,0,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,PROPERTYKEY,2,0,2,2,0,22,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,IPropertyStore,0,5,0,0,0,16,5,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,IShellLinkA,0,18,0,0,0,65,18,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,IShellLinkW,0,18,0,0,0,65,18,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,CShellLink,0,0,0,0,0,6,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,EShellLinkGP,0,0,0,0,0,5,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,EShowWindowFlags,0,0,0,0,0,18,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,_WIN32_FIND_DATAW,10,0,0,10,0,17,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,_WIN32_FIND_DATAA,10,0,0,10,0,17,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,_FILETIME,2,0,0,2,0,6,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
 Squirrel.Shell,UnManagedMethods,0,2,0,0,0,12,2,0,0,-1,0,1,,Squirrel.Shell.ShellLink
 Squirrel.Shell,EShellLinkResolveFlags,0,0,0,0,0,56,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
-Squirrel.Shell,LinkDisplayMode,0,0,0,0,0,6,0,0,0,-1,0,0,,
-Squirrel.Shell,FileIcon,13,8,5,0,4,185,10,0,0,0.25,2,1,Squirrel.Shell.SHGetFileInfoConstants' Squirrel.Shell.SHFILEINFO,Squirrel.Shell.ShellLink
+Squirrel.Shell,LinkDisplayMode,0,0,0,0,0,6,0,0,0,-1,0,1,,Squirrel.Shell.ShellLink
+Squirrel.Shell,FileIcon,13,8,5,0,4,185,10,0,0,0.25,2,1,Squirrel.Shell.SHFILEINFO' Squirrel.Shell.SHGetFileInfoConstants,Squirrel.Shell.ShellLink
 Squirrel.Shell,SHFILEINFO,5,0,0,5,0,11,0,0,0,-1,0,1,,Squirrel.Shell.FileIcon
 Squirrel.Shell,SHGetFileInfoConstants,0,0,0,0,0,22,0,0,0,-1,0,2,,Squirrel.Shell.ShellLink' Squirrel.Shell.FileIcon
 Squirrel.Shell,TaskbarHelper,0,4,0,0,3,50,9,0,0,-1,1,0,Squirrel.Shell.ShellLink,
-Squirrel.Json,JsonArray,0,6,0,0,6,55,6,0,0,-1,1,2,Squirrel.Json.SimpleJson,Squirrel.Json.SimpleJson' Reflection.SimpleJson
-Squirrel.Json,JsonObject,2,44,8,0,40,683,78,0,0,0.34,1,0,Squirrel.Json.SimpleJson,
-Squirrel.Json,SimpleJson,38,52,6,0,18,1355,164,0,0,0.17,4,7,Squirrel.Json.IJsonSerializerStrategy' Squirrel.Json.PocoJsonSerializerStrategy' Squirrel.Json.DataContractJsonSerializerStrategy' Squirrel.Json.JsonArray,Squirrel.UpdateManager' Squirrel.Json.JsonArray' Squirrel.Json.JsonObject' Reflection.JsonArray' Reflection.JsonObject' Squirrel.Update.Program' Squirrel.Update.Program
-Squirrel.Json,IJsonSerializerStrategy,0,4,0,0,0,23,4,2,0,-1,0,2,,Squirrel.Json.SimpleJson' Reflection.SimpleJson
-Squirrel.Json,PocoJsonSerializerStrategy,12,20,0,0,6,507,80,2,1,0.2,0,4,,Squirrel.Json.SimpleJson' Squirrel.Json.DataContractJsonSerializerStrategy' Reflection.SimpleJson' Reflection.DataContractJsonSerializerStrategy
-Squirrel.Json,DataContractJsonSerializerStrategy,0,8,0,0,2,143,36,0,2,-1,1,2,Squirrel.Json.PocoJsonSerializerStrategy,Squirrel.Json.SimpleJson' Reflection.SimpleJson
-Squirrel.Json,ReflectionUtils,2,74,0,0,74,897,100,0,0,0.99,0,0,,
-Squirrel.Json,Assigner<T>,0,2,0,0,2,13,2,0,0,-1,0,0,,
-Squirrel.Json,ThreadSafeDictionary<TKey;TValue>,6,28,8,0,22,213,32,0,0,0.61,0,0,,
-Reflection,JsonArray,0,3,0,0,3,28,3,0,0,-1,1,0,Squirrel.Json.SimpleJson,
-Reflection,JsonObject,1,22,4,0,20,342,39,0,0,0.36,1,0,Squirrel.Json.SimpleJson,
-Reflection,SimpleJson,19,26,3,0,9,678,82,0,0,0.81,4,0,Squirrel.Json.IJsonSerializerStrategy' Squirrel.Json.PocoJsonSerializerStrategy' Squirrel.Json.DataContractJsonSerializerStrategy' Squirrel.Json.JsonArray,
-Reflection,IJsonSerializerStrategy,0,2,0,0,0,12,2,0,0,-1,0,0,,
-Reflection,PocoJsonSerializerStrategy,6,10,0,0,3,254,40,0,1,0.7,0,0,,
-Reflection,DataContractJsonSerializerStrategy,0,4,0,0,1,72,18,0,2,-1,1,0,Squirrel.Json.PocoJsonSerializerStrategy,
-Reflection,ReflectionUtils,1,37,0,0,37,449,50,0,0,1,0,0,,
-Reflection,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Reflection,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,16,0,0,0.64,0,0,,
+Squirrel.Json,JsonArray,0,6,0,0,6,55,6,0,0,-1,1,1,Squirrel.Json.SimpleJson,Squirrel.Json.SimpleJson
+Squirrel.Json,JsonObject,2,44,8,0,40,683,78,0,0,0.34,1,2,Squirrel.Json.SimpleJson,Squirrel.Json.SimpleJson' Squirrel.Json.PocoJsonSerializerStrategy
+Squirrel.Json,SimpleJson,38,52,6,0,18,1355,276,0,0,0.17,6,2,Squirrel.Json.JsonArray' Squirrel.Json.JsonObject' Squirrel.Json.IJsonSerializerStrategy' Squirrel.Json.PocoJsonSerializerStrategy' Squirrel.Json.DataContractJsonSerializerStrategy' Reflection.ReflectionUtils,Squirrel.Json.JsonArray' Squirrel.Json.JsonObject
+Squirrel.Json,IJsonSerializerStrategy,0,4,0,0,0,23,4,1,0,-1,0,2,,Squirrel.Json.SimpleJson' Squirrel.Json.PocoJsonSerializerStrategy
+Squirrel.Json,PocoJsonSerializerStrategy,12,20,0,0,6,507,116,1,1,0.2,4,2,Squirrel.Json.JsonObject' Squirrel.Json.IJsonSerializerStrategy' Reflection.ReflectionUtils' Reflection.ThreadSafeDictionary<TKey;TValue>,Squirrel.Json.SimpleJson' Squirrel.Json.DataContractJsonSerializerStrategy
+Squirrel.Json,DataContractJsonSerializerStrategy,0,8,0,0,2,143,36,0,2,-1,3,1,Squirrel.Json.PocoJsonSerializerStrategy' Reflection.ReflectionUtils' Reflection.ThreadSafeDictionary<TKey;TValue>,Squirrel.Json.SimpleJson
+Reflection,ReflectionUtils,1,37,0,0,37,449,50,0,0,1,1,3,Reflection.Assigner<T>,Squirrel.Json.SimpleJson' Squirrel.Json.PocoJsonSerializerStrategy' Squirrel.Json.DataContractJsonSerializerStrategy
+Reflection,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,1,,Reflection.ReflectionUtils
+Reflection,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,18,0,0,0.64,0,2,,Squirrel.Json.PocoJsonSerializerStrategy' Squirrel.Json.DataContractJsonSerializerStrategy

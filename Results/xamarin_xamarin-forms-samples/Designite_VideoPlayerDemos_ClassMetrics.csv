@@ -1,0 +1,21 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+VideoPlayerDemos,App,0,4,0,0,1,20,4,0,0,-1,1,0,VideoPlayerDemos.HomePage,
+VideoPlayerDemos,BindToVideoPlayerPage,0,1,0,0,1,7,1,0,0,-1,0,0,,
+VideoPlayerDemos,CustomPositionBarPage,0,3,0,0,1,22,5,0,0,-1,1,0,FormsVideoLibrary.VideoStatus,
+VideoPlayerDemos,CustomTransportPage,0,3,0,0,1,22,5,0,0,-1,1,0,FormsVideoLibrary.VideoStatus,
+VideoPlayerDemos,VideoInfo,0,1,2,0,1,9,1,0,0,-1,1,0,FormsVideoLibrary.VideoSource,
+VideoPlayerDemos,HomePage,0,1,1,0,1,14,1,0,0,-1,0,1,,VideoPlayerDemos.App
+VideoPlayerDemos,PlayLibraryVideoPage,0,2,0,0,1,21,3,0,0,-1,2,0,FormsVideoLibrary.FileVideoSource' FormsVideoLibrary.IVideoPicker,
+VideoPlayerDemos,PlayVideoResourcePage,0,1,0,0,1,7,1,0,0,-1,0,0,,
+VideoPlayerDemos,PlayWebVideoPage,0,1,0,0,1,7,1,0,0,-1,0,0,,
+VideoPlayerDemos,SelectWebVideoPage,0,2,0,0,1,15,3,0,0,-1,1,0,FormsVideoLibrary.UriVideoSource,
+FormsVideoLibrary,FileVideoSource,1,0,1,1,0,10,0,0,1,-1,1,2,FormsVideoLibrary.VideoSource,FormsVideoLibrary.VideoSource' VideoPlayerDemos.PlayLibraryVideoPage
+FormsVideoLibrary,IVideoPicker,0,1,0,0,0,4,1,3,0,-1,0,1,,VideoPlayerDemos.PlayLibraryVideoPage
+FormsVideoLibrary,IVideoPlayerController,0,0,2,0,0,5,0,1,0,-1,1,1,FormsVideoLibrary.VideoStatus,FormsVideoLibrary.VideoPlayer
+FormsVideoLibrary,PositionSlider,2,1,2,2,1,42,1,0,0,0,0,0,,
+FormsVideoLibrary,ResourceVideoSource,1,0,1,1,0,10,0,0,1,-1,1,1,FormsVideoLibrary.VideoSource,FormsVideoLibrary.VideoSource
+FormsVideoLibrary,UriVideoSource,1,0,1,1,0,10,0,0,1,-1,1,2,FormsVideoLibrary.VideoSource,VideoPlayerDemos.SelectWebVideoPage' FormsVideoLibrary.VideoSource
+FormsVideoLibrary,VideoPlayer,10,5,9,7,4,102,5,0,1,1,4,0,FormsVideoLibrary.IVideoPlayerController' FormsVideoLibrary.VideoSource' FormsVideoLibrary.VideoSourceConverter' FormsVideoLibrary.VideoStatus,
+FormsVideoLibrary,VideoSource,0,3,0,0,3,16,3,3,0,-1,4,6,FormsVideoLibrary.FileVideoSource' FormsVideoLibrary.ResourceVideoSource' FormsVideoLibrary.UriVideoSource' FormsVideoLibrary.VideoSourceConverter,FormsVideoLibrary.ResourceVideoSource' FormsVideoLibrary.UriVideoSource' FormsVideoLibrary.FileVideoSource' VideoPlayerDemos.VideoInfo' FormsVideoLibrary.VideoSourceConverter' FormsVideoLibrary.VideoPlayer
+FormsVideoLibrary,VideoSourceConverter,0,1,0,0,1,13,2,0,0,-1,1,2,FormsVideoLibrary.VideoSource,FormsVideoLibrary.VideoSource' FormsVideoLibrary.VideoPlayer
+FormsVideoLibrary,VideoStatus,0,0,0,0,0,6,0,0,0,-1,0,4,,FormsVideoLibrary.IVideoPlayerController' VideoPlayerDemos.CustomTransportPage' VideoPlayerDemos.CustomPositionBarPage' FormsVideoLibrary.VideoPlayer

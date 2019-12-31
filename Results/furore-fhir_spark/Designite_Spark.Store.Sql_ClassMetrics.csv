@@ -1,19 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Spark.Store.Sql,CustomResourceStore,1,5,0,0,5,22,5,0,1,0.6,2,0,Spark.Store.Sql.Model.ResourceContent' Spark.Store.Sql.Model.Resource,
-Spark.Store.Sql,FormatId,1,4,0,0,4,20,4,0,1,0,0,0,,
-Spark.Store.Sql,IFormatId,0,4,0,0,0,7,4,1,0,-1,0,1,,Spark.Store.Sql.SqlScopedFhirIndex
-Spark.Store.Sql,IScope,0,0,1,0,0,4,0,1,0,-1,0,1,,Spark.Store.Sql.SqlScopedFhirIndex
-Spark.Store.Sql,ScopeProvider<T>,2,1,1,0,1,14,1,0,1,0,0,0,,
-Spark.Store.Sql,IScopedFhirIndex,0,0,1,0,0,4,0,1,1,-1,0,0,,
-Spark.Store.Sql,IScopedSnapshotStore,0,0,1,0,0,4,0,1,1,-1,0,0,,
+Spark.Store.Sql,CustomResourceStore,1,5,0,0,5,22,5,0,1,0.6,3,0,Spark.Store.Sql.Model.IResourceStore' Spark.Store.Sql.Model.Resource' Spark.Store.Sql.Model.ResourceContent,
+Spark.Store.Sql,FormatId,1,4,0,0,4,20,4,0,1,0,1,0,Spark.Store.Sql.IFormatId,
+Spark.Store.Sql,IFormatId,0,4,0,0,0,7,4,1,0,-1,0,2,,Spark.Store.Sql.FormatId' Spark.Store.Sql.SqlScopedFhirIndex
+Spark.Store.Sql,IScope,0,0,1,0,0,4,0,1,0,-1,0,5,,Spark.Store.Sql.ScopeProvider<T>' Spark.Store.Sql.SqlScopedFhirIndex' Spark.Store.Sql.IScopedSnapshotStore' Spark.Store.Sql.IScopedFhirIndex' Spark.Store.Sql.SqlScopedSnapshotStore
+Spark.Store.Sql,ScopeProvider<T>,2,1,1,0,1,14,1,0,1,0,1,0,Spark.Store.Sql.IScope,
+Spark.Store.Sql,IScopedFhirIndex,0,0,1,0,0,4,0,1,1,-1,1,1,Spark.Store.Sql.IScope,Spark.Store.Sql.SqlScopedFhirIndex
+Spark.Store.Sql,IScopedSnapshotStore,0,0,1,0,0,4,0,1,1,-1,1,1,Spark.Store.Sql.IScope,Spark.Store.Sql.SqlScopedSnapshotStore
 Spark.Store.Sql,IServiceProvider,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Spark.Store.Sql,SqlScopedFhirIndex,2,7,1,0,7,48,7,0,2,0.71,8,0,Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.IFormatId' Spark.Engine.Core.Entry' Spark.Engine.Core.SearchResults' Spark.Store.Sql.IScope' Spark.Engine.Core.Key' Spark.Store.Sql.Model.Resource' Spark.Store.Sql.Model.ResourceContent,
-Spark.Store.Sql,SqlScopedIndexStore,0,3,0,0,3,12,3,0,1,-1,2,0,Spark.Engine.Model.IndexValue' Spark.Engine.Core.Entry,
-Spark.Store.Sql,SqlScopedSnapshotStore,1,3,1,0,3,27,3,0,2,0,4,0,Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.Model.BundleSnapshot' Spark.Engine.Core.Snapshot' Spark.Store.Sql.Model.BundleSnapshotResource,
-Spark.Store.Sql.Model,IFhirDbContext,0,2,4,0,0,10,2,0,0,-1,0,2,,Spark.Store.Sql.SqlScopedFhirIndex' Spark.Store.Sql.SqlScopedSnapshotStore
-Spark.Store.Sql.Model,IResourceStore,0,4,0,0,0,7,4,1,0,-1,2,0,Spark.Store.Sql.Model.Resource' Spark.Store.Sql.Model.ResourceContent,
-Spark.Store.Sql.Model,Resource,0,0,7,0,0,17,0,0,0,-1,0,3,,Spark.Store.Sql.CustomResourceStore' Spark.Store.Sql.SqlScopedFhirIndex' Spark.Store.Sql.Model.IResourceStore
-Spark.Store.Sql.Model,BundleSnapshot,0,0,6,0,0,10,0,0,0,-1,0,1,,Spark.Store.Sql.SqlScopedSnapshotStore
-Spark.Store.Sql.Model,BundleSnapshotResource,0,0,4,0,0,9,0,0,0,-1,0,1,,Spark.Store.Sql.SqlScopedSnapshotStore
-Spark.Store.Sql.Model,ResourceContent,0,0,7,0,0,16,0,0,0,-1,0,3,,Spark.Store.Sql.CustomResourceStore' Spark.Store.Sql.SqlScopedFhirIndex' Spark.Store.Sql.Model.IResourceStore
+Spark.Store.Sql,SqlScopedFhirIndex,2,7,1,0,7,48,7,0,2,0.71,5,0,Spark.Store.Sql.IFormatId' Spark.Store.Sql.IScope' Spark.Store.Sql.IScopedFhirIndex' Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.Model.Resource,
+Spark.Store.Sql,SqlScopedIndexStore,0,3,0,0,3,12,3,0,1,-1,0,0,,
+Spark.Store.Sql,SqlScopedSnapshotStore,1,3,1,0,3,27,3,0,2,0.67,5,0,Spark.Store.Sql.IScope' Spark.Store.Sql.IScopedSnapshotStore' Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.Model.BundleSnapshot' Spark.Store.Sql.Model.BundleSnapshotResource,
+Spark.Store.Sql.Model,IFhirDbContext,0,2,4,0,0,10,2,0,0,-1,4,2,Spark.Store.Sql.Model.Resource' Spark.Store.Sql.Model.BundleSnapshot' Spark.Store.Sql.Model.BundleSnapshotResource' Spark.Store.Sql.Model.ResourceContent,Spark.Store.Sql.SqlScopedSnapshotStore' Spark.Store.Sql.SqlScopedFhirIndex
+Spark.Store.Sql.Model,IResourceStore,0,4,0,0,0,7,4,1,0,-1,2,1,Spark.Store.Sql.Model.Resource' Spark.Store.Sql.Model.ResourceContent,Spark.Store.Sql.CustomResourceStore
+Spark.Store.Sql.Model,Resource,0,0,7,0,0,17,0,0,0,-1,1,5,Spark.Store.Sql.Model.ResourceContent,Spark.Store.Sql.Model.ResourceContent' Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.Model.IResourceStore' Spark.Store.Sql.CustomResourceStore' Spark.Store.Sql.SqlScopedFhirIndex
+Spark.Store.Sql.Model,BundleSnapshot,0,0,6,0,0,10,0,0,0,-1,1,3,Spark.Store.Sql.Model.BundleSnapshotResource,Spark.Store.Sql.Model.BundleSnapshotResource' Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.SqlScopedSnapshotStore
+Spark.Store.Sql.Model,BundleSnapshotResource,0,0,4,0,0,9,0,0,0,-1,1,3,Spark.Store.Sql.Model.BundleSnapshot,Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.Model.BundleSnapshot' Spark.Store.Sql.SqlScopedSnapshotStore
+Spark.Store.Sql.Model,ResourceContent,0,0,7,0,0,16,0,0,0,-1,1,4,Spark.Store.Sql.Model.Resource,Spark.Store.Sql.Model.Resource' Spark.Store.Sql.CustomResourceStore' Spark.Store.Sql.Model.IFhirDbContext' Spark.Store.Sql.Model.IResourceStore
 Spark.Store.Sql.StoreExtensions,IFhirStoreScopedExtension,0,0,1,0,0,4,0,0,2,-1,0,0,,

@@ -1,11 +1,11 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-RockBands.Models,Album,0,0,8,0,0,17,0,0,1,-1,0,5,,RockBands.Data.RockBandsData' RockBands.Data.Migrations.Configuration' RockBands.Data.Repositories.AlbumRepository' RockBands.Services.Controllers.AlbumsController' RockBands.Services.Controllers.SongsController
-RockBands.Models,Artist,0,0,4,0,0,10,0,0,0,-1,0,0,,
-RockBands.Models,Band,2,1,10,0,1,47,1,0,1,0,0,6,,RockBands.Data.RockBandsData' RockBands.Data.Migrations.Configuration' RockBands.Data.Repositories.BandRepository' RockBands.Services.Controllers.AlbumsController' RockBands.Services.Controllers.BandsController' RockBands.Services.Controllers.SongsController
-RockBands.Models,Song,0,0,8,0,0,18,0,0,1,-1,0,4,,RockBands.Data.RockBandsData' RockBands.Data.Migrations.Configuration' RockBands.Data.Repositories.SongRepository' RockBands.Services.Controllers.SongsController
-RockBands.Models.Contracts,ICover,0,0,4,0,0,7,0,3,0,-1,0,0,,
-RockBands.Models.Projections,AlbumDetails,0,0,9,0,0,28,0,0,0,-1,0,1,,RockBands.Services.Controllers.AlbumsController
-RockBands.Models.Projections,FilterModel,0,0,2,0,0,5,0,0,0,-1,0,2,,RockBands.Services.Controllers.AlbumsController' RockBands.Services.Controllers.SongsController
-RockBands.Models.Projections,BandDetails,0,0,10,0,0,30,0,0,0,-1,0,1,,RockBands.Services.Controllers.BandsController
-RockBands.Models.Projections,Cover,0,0,5,0,0,20,0,0,0,-1,0,6,,RockBands.Data.Repositories.SongRepository' RockBands.Data.Repositories.AlbumRepository' RockBands.Data.Repositories.BandRepository' RockBands.Services.Controllers.AlbumsController' RockBands.Services.Controllers.BandsController' RockBands.Services.Controllers.SongsController
-RockBands.Models.Projections,SongDetails,0,0,11,0,0,32,0,0,0,-1,0,1,,RockBands.Services.Controllers.SongsController
+RockBands.Models,Album,0,0,8,0,0,17,0,0,1,-1,2,3,RockBands.Models.Band' RockBands.Models.Contracts.ICover,RockBands.Models.Song' RockBands.Models.Projections.AlbumDetails' RockBands.Models.Band
+RockBands.Models,Artist,0,0,4,0,0,10,0,0,0,-1,1,1,RockBands.Models.Band,RockBands.Models.Band
+RockBands.Models,Band,2,1,10,0,1,47,1,0,1,0,3,3,RockBands.Models.Album' RockBands.Models.Artist' RockBands.Models.Contracts.ICover,RockBands.Models.Artist' RockBands.Models.Projections.BandDetails' RockBands.Models.Album
+RockBands.Models,Song,0,0,8,0,0,18,0,0,1,-1,2,1,RockBands.Models.Album' RockBands.Models.Contracts.ICover,RockBands.Models.Projections.SongDetails
+RockBands.Models.Contracts,ICover,0,0,4,0,0,7,0,3,0,-1,0,4,,RockBands.Models.Band' RockBands.Models.Projections.Cover' RockBands.Models.Song' RockBands.Models.Album
+RockBands.Models.Projections,AlbumDetails,0,0,9,0,0,28,0,0,0,-1,1,0,RockBands.Models.Album,
+RockBands.Models.Projections,FilterModel,0,0,2,0,0,5,0,0,0,-1,0,0,,
+RockBands.Models.Projections,BandDetails,0,0,10,0,0,30,0,0,0,-1,1,0,RockBands.Models.Band,
+RockBands.Models.Projections,Cover,0,0,5,0,0,20,0,0,0,-1,1,0,RockBands.Models.Contracts.ICover,
+RockBands.Models.Projections,SongDetails,0,0,11,0,0,32,0,0,0,-1,1,0,RockBands.Models.Song,

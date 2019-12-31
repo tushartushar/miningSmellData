@@ -1,8 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Users.Indexes,UserByRoleNameIndex,0,0,2,0,0,5,0,0,0,-1,0,0,,
-OrchardCore.Users.Indexes,UserByRoleNameIndexProvider,1,3,0,0,2,32,3,0,0,0.67,0,0,,
-OrchardCore.Users.Indexes,UserIndex,0,0,2,0,0,5,0,0,0,-1,0,1,,OrchardCore.Users.Indexes.UserIndexProvider
-OrchardCore.Users.Indexes,UserIndexProvider,0,1,0,0,1,15,1,0,0,-1,1,0,OrchardCore.Users.Indexes.UserIndex,
-OrchardCore.Users.Models,User,0,1,9,0,1,16,1,0,2,-1,0,5,,OrchardCore.Users.Services.UserService' OrchardCore.Users.Services.UserStore' OrchardCore.Users.Controllers.AdminController' OrchardCore.Users.Drivers.UserButtonsDisplayDriver' OrchardCore.Users.Drivers.UserDisplayDriver
-OrchardCore.Users.Services,UserService,3,5,0,0,4,117,15,0,1,0,2,0,OrchardCore.Users.Models.User' OrchardCore.Users.IUser,
-OrchardCore.Users.Services,UserStore,3,30,0,0,30,291,58,0,0,0.67,3,0,OrchardCore.Security.Services.IRoleProvider' OrchardCore.Users.IUser' OrchardCore.Users.Models.User,
+OrchardCore.Users.Indexes,UserByClaimIndex,0,0,2,0,0,5,0,0,0,-1,0,2,,OrchardCore.Users.Services.UserStore' OrchardCore.Users.Indexes.UserByClaimIndexProvider
+OrchardCore.Users.Indexes,UserByClaimIndexProvider,0,1,0,0,1,12,1,0,0,-1,2,0,OrchardCore.Users.Indexes.UserByClaimIndex' OrchardCore.Users.Models.User,
+OrchardCore.Users.Indexes,UserByLoginInfoIndex,0,0,2,0,0,5,0,0,0,-1,0,2,,OrchardCore.Users.Services.UserStore' OrchardCore.Users.Indexes.UserByLoginInfoIndexProvider
+OrchardCore.Users.Indexes,UserByLoginInfoIndexProvider,0,1,0,0,1,12,1,0,0,-1,2,0,OrchardCore.Users.Indexes.UserByLoginInfoIndex' OrchardCore.Users.Models.User,
+OrchardCore.Users.Indexes,UserByRoleNameIndex,0,0,2,0,0,5,0,0,0,-1,0,2,,OrchardCore.Users.Services.UserStore' OrchardCore.Users.Indexes.UserByRoleNameIndexProvider
+OrchardCore.Users.Indexes,UserByRoleNameIndexProvider,1,3,0,0,2,32,3,0,0,0.67,2,0,OrchardCore.Users.Indexes.UserByRoleNameIndex' OrchardCore.Users.Models.User,
+OrchardCore.Users.Indexes,UserIndex,0,0,4,0,0,7,0,0,0,-1,0,2,,OrchardCore.Users.Indexes.UserIndexProvider' OrchardCore.Users.Services.UserStore
+OrchardCore.Users.Indexes,UserIndexProvider,0,1,0,0,1,16,1,0,0,-1,2,0,OrchardCore.Users.Indexes.UserIndex' OrchardCore.Users.Models.User,
+OrchardCore.Users.Models,User,0,1,13,0,1,20,1,0,1,-1,1,6,OrchardCore.Users.Models.UserClaim,OrchardCore.Users.Indexes.UserIndexProvider' OrchardCore.Users.Indexes.UserByRoleNameIndexProvider' OrchardCore.Users.Indexes.UserByClaimIndexProvider' OrchardCore.Users.Indexes.UserByLoginInfoIndexProvider' OrchardCore.Users.Services.UserService' OrchardCore.Users.Services.UserStore
+OrchardCore.Users.Models,UserClaim,0,1,2,0,1,15,1,0,0,-1,0,2,,OrchardCore.Users.Models.User' OrchardCore.Users.Services.UserStore
+OrchardCore.Users.Services,DefaultUserClaimsPrincipalFactory,2,2,0,0,1,27,4,0,0,0,0,0,,
+OrchardCore.Users.Services,UserService,4,12,0,0,11,200,42,0,1,0,1,0,OrchardCore.Users.Models.User,
+OrchardCore.Users.Services,UserStore,4,39,1,0,39,400,87,0,0,0.69,6,0,OrchardCore.Users.Indexes.UserByClaimIndex' OrchardCore.Users.Indexes.UserByLoginInfoIndex' OrchardCore.Users.Indexes.UserByRoleNameIndex' OrchardCore.Users.Indexes.UserIndex' OrchardCore.Users.Models.User' OrchardCore.Users.Models.UserClaim,

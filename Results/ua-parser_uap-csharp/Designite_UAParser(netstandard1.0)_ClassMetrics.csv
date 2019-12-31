@@ -1,0 +1,16 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+UAParser,Device,0,2,4,0,2,37,4,0,0,-1,0,3,,UAParser.IUAParserOutput' UAParser.ClientInfo' UAParser.Parser
+UAParser,OS,0,2,5,0,2,43,2,0,0,-1,1,3,UAParser.VersionString,UAParser.IUAParserOutput' UAParser.ClientInfo' UAParser.Parser
+UAParser,UserAgent,0,2,4,0,2,38,2,0,0,-1,1,3,UAParser.VersionString,UAParser.IUAParserOutput' UAParser.ClientInfo' UAParser.Parser
+UAParser,VersionString,0,1,0,0,1,7,1,0,0,-1,0,2,,UAParser.OS' UAParser.UserAgent
+UAParser,IUAParserOutput,0,0,4,0,0,21,0,1,0,-1,3,1,UAParser.Device' UAParser.OS' UAParser.UserAgent,UAParser.ClientInfo
+UAParser,ClientInfo,0,2,5,0,2,45,2,0,1,-1,4,1,UAParser.Device' UAParser.OS' UAParser.UserAgent' UAParser.IUAParserOutput,UAParser.Parser
+UAParser,ParserOptions,0,0,1,0,0,18,0,0,0,-1,0,1,,UAParser.Parser
+UAParser,Parser,4,10,0,1,6,287,10,0,0,0.6,8,0,UAParser.Device' UAParser.OS' UAParser.UserAgent' UAParser.ClientInfo' UAParser.ParserOptions' UAParser.Config' UAParser.Parsers' UAParser.MinimalYamlParser,
+UAParser,Config,1,5,0,0,3,65,8,0,0,0.4,0,1,,UAParser.Parser
+UAParser,Parsers,1,10,0,0,3,142,14,0,0,0.5,0,1,,UAParser.Parser
+UAParser,RegexBinderBuilder,0,1,0,0,1,16,1,0,0,-1,0,0,,
+UAParser,StringExtensions,0,1,0,0,1,11,2,0,0,-1,0,0,,
+UAParser,DictionaryExtensions,0,1,0,0,1,8,2,0,0,-1,0,0,,
+UAParser,MinimalYamlParser,1,4,1,0,2,87,16,0,0,0.5,1,1,UAParser.Mapping,UAParser.Parser
+UAParser,Mapping,1,3,1,0,3,18,3,0,0,0.67,0,1,,UAParser.MinimalYamlParser

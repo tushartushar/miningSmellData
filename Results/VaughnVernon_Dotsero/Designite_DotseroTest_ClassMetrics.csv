@@ -1,0 +1,71 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DotseroTest,ActorSystemTests,0,4,0,0,4,39,4,0,0,-1,0,0,,
+DotseroTest,ActorPathTests,0,4,0,0,4,35,4,0,0,-1,0,0,,
+DotseroTest,BecomeTests,0,2,0,0,2,54,2,0,0,-1,3,0,DotseroTest.Counting' DotseroTest.EndAddAddMult' DotseroTest.EndAddAddAddMultMult,
+DotseroTest,Counting,1,3,3,0,3,79,3,0,2,1,2,1,DotseroTest.Addition' DotseroTest.Multiplication,DotseroTest.BecomeTests
+DotseroTest,Addition,2,4,0,0,4,51,8,0,2,0.75,0,2,,DotseroTest.Counting' DotseroTest.ActorTests
+DotseroTest,Multiplication,2,4,0,0,4,50,8,0,2,0.75,0,2,,DotseroTest.Counting' DotseroTest.ActorTests
+DotseroTest,EndAddAddMult,1,2,0,0,2,13,2,0,2,1,0,1,,DotseroTest.BecomeTests
+DotseroTest,EndAddAddAddMultMult,1,2,0,0,2,13,2,0,2,1,0,1,,DotseroTest.BecomeTests
+DotseroTest,ActorTests,0,5,0,0,5,80,5,0,0,-1,7,0,DotseroTest.Addition' DotseroTest.Multiplication' DotseroTest.TestActor' DotseroTest.TestForwardOriginalActor' DotseroTest.TestForwardFromActor' DotseroTest.TestForwardToActor' DotseroTest.Operation,
+DotseroTest,TestActor,0,0,0,0,0,3,0,0,2,-1,0,1,,DotseroTest.ActorTests
+DotseroTest,TestForwardOriginalActor,1,2,0,0,2,13,2,0,2,1,0,1,,DotseroTest.ActorTests
+DotseroTest,TestForwardFromActor,1,2,0,0,2,13,2,0,2,1,0,1,,DotseroTest.ActorTests
+DotseroTest,TestForwardToActor,2,2,0,0,2,16,2,0,2,1,0,1,,DotseroTest.ActorTests
+DotseroTest,Operation,0,1,4,0,1,14,1,0,0,-1,0,1,,DotseroTest.ActorTests
+DotseroTest,ActorManagerWorkerTests,0,1,0,0,1,99,1,0,0,-1,3,0,DotseroTest.Manager' DotseroTest.SpecificMessage' DotseroTest.Worker,
+DotseroTest,Manager,3,3,0,0,3,35,5,0,2,1,0,1,,DotseroTest.ActorManagerWorkerTests
+DotseroTest,SpecificMessage,0,3,1,0,3,16,3,0,0,-1,0,1,,DotseroTest.ActorManagerWorkerTests
+DotseroTest,Worker,0,2,0,0,2,19,3,0,2,-1,0,1,,DotseroTest.ActorManagerWorkerTests
+DotseroTest,SupervisionResumeTests,1,3,0,0,1,33,3,0,0,0,1,0,DotseroTest.ResumeLevel1,
+DotseroTest,ResumeSupervisorStrategy,0,2,0,0,2,11,2,0,1,-1,0,1,,DotseroTest.ResumeLevel2
+DotseroTest,ResumeLevel1,2,3,0,0,3,18,3,0,2,0.67,1,1,DotseroTest.ResumeLevel2,DotseroTest.SupervisionResumeTests
+DotseroTest,ResumeLevel2,2,3,0,0,3,22,3,0,2,0.67,2,1,DotseroTest.ResumeSupervisorStrategy' DotseroTest.ResumeLevel3,DotseroTest.ResumeLevel1
+DotseroTest,ResumeLevel3,2,2,0,0,2,28,3,0,2,1,0,1,,DotseroTest.ResumeLevel2
+DotseroTest,SupervisionEscalateTests,1,3,0,0,1,32,3,0,0,0,1,0,DotseroTest.EscalateLevel1,
+DotseroTest,EscalateSupervisorStrategy,0,2,0,0,2,11,2,0,1,-1,0,1,,DotseroTest.EscalateLevel2
+DotseroTest,EscalateLevel1,2,3,0,0,3,21,3,0,2,0.67,1,1,DotseroTest.EscalateLevel2,DotseroTest.SupervisionEscalateTests
+DotseroTest,EscalateLevel2,3,5,0,0,5,38,6,0,2,0.4,2,1,DotseroTest.EscalateSupervisorStrategy' DotseroTest.EscalateLevel3,DotseroTest.EscalateLevel1
+DotseroTest,EscalateLevel3,1,2,0,0,2,19,2,0,2,1,0,1,,DotseroTest.EscalateLevel2
+DotseroTest,SupervisionRestartTests,1,3,0,0,1,32,3,0,0,0,1,0,DotseroTest.RestartLevel1,
+DotseroTest,RestartSupervisorStrategy,0,2,0,0,2,11,2,0,1,-1,0,0,,
+DotseroTest,RestartLevel1,2,3,0,0,3,18,3,0,2,0.67,1,1,DotseroTest.RestartLevel2,DotseroTest.SupervisionRestartTests
+DotseroTest,RestartLevel2,2,3,0,0,3,21,3,0,2,0.67,1,1,DotseroTest.RestartLevel3,DotseroTest.RestartLevel1
+DotseroTest,RestartLevel3,3,5,0,0,5,46,9,0,2,0.4,0,1,,DotseroTest.RestartLevel2
+DotseroTest,SupervisionStopTests,1,3,0,0,1,33,3,0,0,0,1,0,DotseroTest.StopLevel1,
+DotseroTest,StopLevel1,2,3,0,0,3,18,3,0,2,0.67,1,1,DotseroTest.StopLevel2,DotseroTest.SupervisionStopTests
+DotseroTest,StopLevel2,1,3,0,0,3,23,3,0,2,1,0,1,,DotseroTest.StopLevel1
+DotseroTest,ActorSelectionTests,1,4,0,0,2,57,4,0,0,0,1,0,DotseroTest.TestSelection1,
+DotseroTest,TestSelection1,1,3,0,0,3,24,4,0,2,0.67,1,1,DotseroTest.TestSelection2,DotseroTest.ActorSelectionTests
+DotseroTest,TestSelection2,1,3,0,0,3,25,4,0,2,0.67,1,1,DotseroTest.TestSelection3,DotseroTest.TestSelection1
+DotseroTest,TestSelection3,1,3,0,0,3,20,3,0,2,0.67,1,1,DotseroTest.TestSelection4,DotseroTest.TestSelection2
+DotseroTest,TestSelection4,1,2,0,0,2,12,2,0,2,1,0,1,,DotseroTest.TestSelection3
+DotseroTest,SchedulerTests,0,3,0,0,3,57,3,0,0,-1,2,0,DotseroTest.SchedulerTestOnce' DotseroTest.SchedulerTestRepeating,
+DotseroTest,SchedulerTestOnce,1,2,0,0,2,15,3,0,2,1,0,1,,DotseroTest.SchedulerTests
+DotseroTest,SchedulerTestRepeating,2,2,0,0,2,23,4,0,2,1,0,1,,DotseroTest.SchedulerTests
+DotseroTest,ProcessManagerTests,0,1,0,0,1,23,1,0,0,-1,4,0,DotseroTest.QuoteBestLoanRate' DotseroTest.LoanBroker' DotseroTest.CreditBureau' DotseroTest.Bank,
+DotseroTest,ProcessStarted,0,1,2,0,1,10,1,0,0,-1,0,2,,DotseroTest.ProcessManager' DotseroTest.LoanBroker
+DotseroTest,ProcessStopped,0,1,2,0,1,10,1,0,0,-1,0,2,,DotseroTest.ProcessManager' DotseroTest.LoanBroker
+DotseroTest,ProcessManager,1,4,0,0,0,29,6,1,2,0.5,2,1,DotseroTest.ProcessStarted' DotseroTest.ProcessStopped,DotseroTest.LoanBroker
+DotseroTest,QuoteBestLoanRate,0,1,3,0,1,12,1,0,0,-1,0,2,,DotseroTest.ProcessManagerTests' DotseroTest.LoanBroker
+DotseroTest,BestLoanRateQuoted,0,1,7,0,1,27,1,0,0,-1,0,1,,DotseroTest.LoanBroker
+DotseroTest,BestLoanRateDenied,0,1,5,0,1,21,1,0,0,-1,0,1,,DotseroTest.LoanBroker
+DotseroTest,LoanBroker,3,12,0,0,12,124,13,0,3,0.83,21,1,DotseroTest.ProcessStarted' DotseroTest.ProcessStopped' DotseroTest.ProcessManager' DotseroTest.QuoteBestLoanRate' DotseroTest.BestLoanRateQuoted' DotseroTest.BestLoanRateDenied' DotseroTest.StartLoanRateQuote' DotseroTest.LoanRateQuoteStarted' DotseroTest.TerminateLoanRateQuote' DotseroTest.LoanRateQuoteTerminated' DotseroTest.EstablishCreditScoreForLoanRateQuote' DotseroTest.CreditScoreForLoanRateQuoteEstablished' DotseroTest.CreditScoreForLoanRateQuoteDenied' DotseroTest.RecordLoanRateQuote' DotseroTest.LoanRateQuoteRecorded' DotseroTest.LoanRateBestQuoteFilled' DotseroTest.LoanRateQuote' DotseroTest.CheckCredit' DotseroTest.CreditChecked' DotseroTest.QuoteLoanRate' DotseroTest.BankLoanRateQuoted,DotseroTest.ProcessManagerTests
+DotseroTest,StartLoanRateQuote,0,1,1,0,1,8,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,LoanRateQuoteStarted,0,1,2,0,1,10,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,TerminateLoanRateQuote,0,0,0,0,0,3,0,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,LoanRateQuoteTerminated,0,1,2,0,1,10,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,EstablishCreditScoreForLoanRateQuote,0,1,3,0,1,15,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,CreditScoreForLoanRateQuoteEstablished,0,1,5,0,1,21,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,CreditScoreForLoanRateQuoteDenied,0,1,5,0,1,21,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,RecordLoanRateQuote,0,1,3,0,1,12,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,LoanRateQuoteRecorded,0,1,3,0,1,15,1,0,0,-1,1,2,DotseroTest.BankLoanRateQuote,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,LoanRateBestQuoteFilled,0,1,6,0,1,25,1,0,0,-1,1,2,DotseroTest.BankLoanRateQuote,DotseroTest.LoanBroker' DotseroTest.LoanRateQuote
+DotseroTest,BankLoanRateQuote,0,1,3,0,1,12,1,0,0,-1,0,3,,DotseroTest.LoanRateQuoteRecorded' DotseroTest.LoanRateBestQuoteFilled' DotseroTest.LoanRateQuote
+DotseroTest,LoanRateQuote,8,7,0,0,5,103,11,0,2,0.29,11,1,DotseroTest.StartLoanRateQuote' DotseroTest.LoanRateQuoteStarted' DotseroTest.TerminateLoanRateQuote' DotseroTest.LoanRateQuoteTerminated' DotseroTest.EstablishCreditScoreForLoanRateQuote' DotseroTest.CreditScoreForLoanRateQuoteEstablished' DotseroTest.CreditScoreForLoanRateQuoteDenied' DotseroTest.RecordLoanRateQuote' DotseroTest.LoanRateQuoteRecorded' DotseroTest.LoanRateBestQuoteFilled' DotseroTest.BankLoanRateQuote,DotseroTest.LoanBroker
+DotseroTest,CheckCredit,0,1,2,0,1,12,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.CreditBureau
+DotseroTest,CreditChecked,0,1,3,0,1,15,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.CreditBureau
+DotseroTest,CreditBureau,3,1,0,0,1,19,1,0,2,0,2,1,DotseroTest.CheckCredit' DotseroTest.CreditChecked,DotseroTest.ProcessManagerTests
+DotseroTest,QuoteLoanRate,0,1,5,0,1,21,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.Bank
+DotseroTest,BankLoanRateQuoted,0,1,5,0,1,21,1,0,0,-1,0,2,,DotseroTest.LoanBroker' DotseroTest.Bank
+DotseroTest,Bank,5,3,0,0,2,38,3,0,2,0.67,2,1,DotseroTest.QuoteLoanRate' DotseroTest.BankLoanRateQuoted,DotseroTest.ProcessManagerTests

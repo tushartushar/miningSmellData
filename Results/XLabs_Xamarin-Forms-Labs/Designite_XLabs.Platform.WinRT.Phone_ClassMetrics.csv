@@ -1,25 +1,25 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-XLabs.Platform.Device,Accelerometer,1,6,2,1,1,134,8,0,1,1,2,0,XLabs.EventExtensions' XLabs.Platform.Device.AccelerometerInterval,
-XLabs.Platform.Device,Battery,0,10,2,0,0,163,10,0,1,-1,0,0,,
-XLabs.Platform.Device,Display,1,3,6,0,3,64,3,0,1,1,1,0,DeviceInfo.DeviceProperties,
-XLabs.Platform.Device,Gyroscope,0,6,2,0,1,85,8,0,1,-1,2,0,XLabs.EventExtensions' XLabs.Platform.Device.AccelerometerInterval,
-XLabs.Platform.Device,WindowsPhoneDevice,6,2,21,0,2,288,4,0,1,1,4,1,XLabs.Platform.Device.IDevice' XLabs.Platform.Services.IO.IFileManager' XLabs.Platform.Services.Media.IMediaPicker' XLabs.Platform.Services.INetwork,XLabs.Samples.WinPhone.App
-XLabs.Platform.Device,BluetoothDevice,2,3,5,0,3,116,5,0,1,0.67,0,0,,
-XLabs.Platform.Device,BluetoothHub,0,3,1,0,3,38,3,0,1,-1,0,0,,
+XLabs.Platform.Device,Accelerometer,1,6,2,1,1,134,8,0,1,1,0,1,,XLabs.Platform.Device.WindowsPhoneDevice
+XLabs.Platform.Device,Battery,0,10,2,0,0,163,10,0,1,-1,0,1,,XLabs.Platform.Device.WindowsPhoneDevice
+XLabs.Platform.Device,Display,1,3,6,0,3,64,3,0,1,1,1,1,DeviceInfo.DeviceProperties,XLabs.Platform.Device.WindowsPhoneDevice
+XLabs.Platform.Device,Gyroscope,0,6,2,0,1,85,8,0,1,-1,0,1,,XLabs.Platform.Device.WindowsPhoneDevice
+XLabs.Platform.Device,WindowsPhoneDevice,6,2,21,0,2,288,4,0,1,1,7,0,XLabs.Platform.Device.Accelerometer' XLabs.Platform.Device.Battery' XLabs.Platform.Device.Display' XLabs.Platform.Device.Gyroscope' XLabs.Platform.Device.BluetoothHub' XLabs.Platform.Services.Network' XLabs.Platform.Services.PhoneService,
+XLabs.Platform.Device,BluetoothDevice,2,3,5,0,3,116,5,0,1,0.67,0,2,,XLabs.Platform.Device.BluetoothDevice' XLabs.Platform.Device.BluetoothHub
+XLabs.Platform.Device,BluetoothHub,0,3,1,0,3,38,3,0,1,-1,0,2,,XLabs.Platform.Device.BluetoothHub' XLabs.Platform.Device.WindowsPhoneDevice
 XLabs.Platform.Services.Email,EmailService,0,2,1,0,2,74,9,0,1,-1,0,0,,
-XLabs.Platform.Services.Geolocation,CoordinateExtensions,0,1,0,0,1,21,1,0,0,-1,1,0,XLabs.Platform.Services.Geolocation.Position,
-XLabs.Platform.Services.Geolocation,Geolocator,1,12,5,0,10,217,16,0,1,0.25,2,0,XLabs.Platform.Services.Geolocation.GeolocationError' XLabs.Platform.Services.Geolocation.Position,
-XLabs.Platform.Services.Media,SoundService,1,10,5,0,7,189,15,0,1,0.7,2,0,XLabs.Platform.Services.Media.SoundFinishedEventArgs' XLabs.Platform.Services.Media.SoundFile,
-XLabs.Platform.Services,Network,1,6,1,0,4,174,12,0,1,0,1,0,XLabs.Platform.Services.NetworkStatus,
+XLabs.Platform.Services.Geolocation,CoordinateExtensions,0,1,0,0,1,21,1,0,0,-1,0,0,,
+XLabs.Platform.Services.Geolocation,Geolocator,1,12,5,0,10,217,19,0,1,0.25,0,0,,
+XLabs.Platform.Services.Media,SoundService,1,10,5,0,7,189,15,0,1,0.7,0,0,,
+XLabs.Platform.Services,Network,1,6,1,0,4,174,17,0,1,0,0,1,,XLabs.Platform.Device.WindowsPhoneDevice
 XLabs.Platform.Services,NfcDevice,3,6,2,0,4,151,7,0,1,0.67,0,0,,
-XLabs.Platform.Services,PhoneService,1,2,8,0,2,120,2,0,1,1,0,0,,
+XLabs.Platform.Services,PhoneService,1,2,8,0,2,120,2,0,1,1,0,1,,XLabs.Platform.Device.WindowsPhoneDevice
 XLabs.Platform.Services,SecureStorage,2,6,1,0,6,115,8,0,1,0.67,0,0,,
 XLabs.Platform.Services,TextToSpeechService,2,3,1,0,3,53,3,0,1,0.67,0,0,,
 XLabs.Platform.Services,FontService,0,1,0,0,1,29,3,0,0,-1,0,0,,
-DeviceInfo,DeviceProperties,9,21,45,0,5,1164,56,0,0,0.14,3,1,DeviceInfo.UnitPrefixes' DeviceInfo.Resolutions' DeviceInfo.DisplayInfo,XLabs.Platform.Device.Display
+DeviceInfo,DeviceProperties,9,21,45,0,5,1164,67,0,0,0.14,0,2,,XLabs.Platform.Device.Display' DeviceInfo.DeviceProperties
 DeviceInfo,Resolutions,0,0,0,0,0,29,0,0,0,-1,0,1,,DeviceInfo.DeviceProperties
 DeviceInfo,UnitPrefixes,0,0,0,0,0,15,0,0,0,-1,0,1,,DeviceInfo.DeviceProperties
 DeviceInfo,DisplayInfo,0,0,8,0,0,51,0,0,0,-1,0,1,,DeviceInfo.DeviceProperties
 XLabs.Platform,ColorExtensions,0,2,0,0,2,25,2,0,0,-1,0,0,,
-XLabs.Platform,DeviceExtensions,0,1,0,0,1,13,1,0,0,-1,2,0,XLabs.Platform.Device.IDevice' XLabs.Platform.Services.Geolocation.Position,
-XLabs.Platform,VectorExtensions,0,2,0,0,2,21,2,0,0,-1,1,0,XLabs.Vector3,
+XLabs.Platform,DeviceExtensions,0,1,0,0,1,13,1,0,0,-1,0,0,,
+XLabs.Platform,VectorExtensions,0,2,0,0,2,21,2,0,0,-1,0,0,,

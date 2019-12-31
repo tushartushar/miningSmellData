@@ -1,65 +1,65 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Toxy,CnmFile,2,7,12,0,7,151,16,0,0,0.57,0,1,,Toxy.Parsers.CnmEmailParser
+Toxy,CnmFile,2,7,12,0,7,151,27,0,0,0.57,0,1,,Toxy.Parsers.CnmEmailParser
 Toxy,DateTimeParser,2,2,0,0,1,141,5,0,0,0,0,1,,HLIB.MailFormats.EMLReader
-Toxy,ToxyAddress,0,1,5,0,1,49,10,0,0,-1,0,1,,Toxy.Parsers.VCardDocumentParser
-Toxy,GenderType,0,0,0,0,0,5,0,0,0,-1,0,2,,Toxy.ToxyBusinessCard' Toxy.Parsers.VCardDocumentParser
-Toxy,ToxyBusinessCard,0,3,17,0,3,53,7,0,0,-1,3,2,Toxy.ToxyName' Toxy.GenderType' Toxy.ToxyContact,Toxy.ToxyBusinessCards' Toxy.Parsers.VCardDocumentParser
-Toxy,ToxyBusinessCards,1,3,2,0,3,81,8,0,0,0.67,3,1,Toxy.ToxyBusinessCard' Toxy.ToxyName' Toxy.ToxyContact,Toxy.Parsers.VCardDocumentParser
-Toxy,ToxyContact,8,3,3,8,3,29,3,0,0,1,0,2,,Toxy.ToxyBusinessCard' Toxy.ToxyBusinessCards
-Toxy,ToxyAttribute,0,3,2,0,3,23,5,0,0,-1,0,0,,
-Toxy,ToxyDom,1,0,1,0,0,9,0,0,0,-1,1,2,Toxy.ToxyNode,Toxy.Parsers.HtmlDomParser' Toxy.Parsers.XMLDomParser
-Toxy,ToxyNode,2,3,7,0,2,84,7,0,0,0,0,3,,Toxy.ToxyDom' Toxy.Parsers.HtmlDomParser' Toxy.Parsers.XMLDomParser
-Toxy,ToxyName,0,1,4,0,1,15,3,0,0,-1,0,3,,Toxy.ToxyBusinessCard' Toxy.ToxyBusinessCards' Toxy.Parsers.VCardDocumentParser
+Toxy,ToxyAddress,0,1,5,0,1,49,10,0,0,-1,0,2,,Toxy.ToxyBusinessCard' Toxy.Parsers.VCardDocumentParser
+Toxy,GenderType,0,0,0,0,0,5,0,0,0,-1,0,2,,Toxy.Parsers.VCardDocumentParser' Toxy.ToxyBusinessCard
+Toxy,ToxyBusinessCard,0,3,17,0,3,53,7,0,0,-1,0,2,,Toxy.Parsers.VCardDocumentParser' Toxy.ToxyBusinessCards
+Toxy,ToxyBusinessCards,1,3,2,0,3,81,9,0,0,0.67,0,1,,Toxy.Parsers.VCardDocumentParser
+Toxy,ToxyContact,8,3,3,8,3,29,3,0,0,1,0,2,,Toxy.ToxyBusinessCard' Toxy.Parsers.VCardDocumentParser
+Toxy,ToxyAttribute,0,3,2,0,3,23,5,0,0,-1,0,2,,Toxy.Parsers.XMLDomParser' Toxy.ToxyNode
+Toxy,ToxyDom,1,0,1,0,0,9,0,0,0,-1,0,3,,Toxy.IDomParser' Toxy.Parsers.XMLDomParser' Toxy.Parsers.HtmlDomParser
+Toxy,ToxyNode,2,3,7,0,2,84,7,0,0,0,0,4,,Toxy.ToxyDom' Toxy.Parsers.XMLDomParser' Toxy.Parsers.HtmlDomParser' Toxy.ToxyNode
+Toxy,ToxyName,0,1,4,0,1,15,3,0,0,-1,0,2,,Toxy.ToxyBusinessCard' Toxy.Parsers.VCardDocumentParser
 Toxy,ToxyProperty,0,0,2,0,0,5,0,0,0,-1,0,1,,Toxy.ToxyMetadata
-Toxy,ToxyMetadata,1,8,1,0,7,57,11,0,0,0,1,4,Toxy.ToxyProperty,Toxy.Parsers.AudioMetadataParser' Toxy.Parsers.ImageMetadataParser' Toxy.Parsers.OLE2MetadataParser' Toxy.Parsers.OOXMLMetadataParser
-Toxy,ToxySlide,0,1,2,0,1,9,1,0,0,-1,0,1,,Toxy.Parsers.Powerpoint2007SlideshowParser
-Toxy,ToxySlideshow,0,1,1,0,1,8,1,0,0,-1,0,1,,Toxy.Parsers.Powerpoint2007SlideshowParser
-Toxy,MergeCellRange,0,0,4,0,0,7,0,0,0,-1,0,0,,
-Toxy,ToxyCell,0,3,4,0,3,30,4,0,0,-1,0,4,,Toxy.ToxyRow' Toxy.ToxyTable' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.CSVSpreadsheetParser
-Toxy,ToxyRow,0,2,3,0,2,24,3,0,0,-1,1,3,Toxy.ToxyCell,Toxy.ToxyTable' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.CSVSpreadsheetParser
-Toxy,ToxyTable,0,5,9,0,4,117,17,0,0,-1,2,3,Toxy.ToxyRow' Toxy.ToxyCell,Toxy.ToxySpreadsheet' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.CSVSpreadsheetParser
-Toxy,IMetadataParser,0,1,1,0,0,5,1,4,0,-1,0,1,,Toxy.ParserFactory
-Toxy,ISlideshowParser,0,2,1,0,0,6,2,1,0,-1,0,1,,Toxy.ParserFactory
-Toxy,IDomParser,0,1,1,0,0,5,1,2,0,-1,0,1,,Toxy.ParserFactory
-Toxy,IEmailParser,0,1,1,0,0,5,1,3,0,-1,0,1,,Toxy.ParserFactory
-Toxy,IDocumentParser,0,1,1,0,0,5,1,3,0,-1,0,1,,Toxy.ParserFactory
-Toxy,ITextParser,0,1,1,0,0,5,1,4,0,-1,0,1,,Toxy.ParserFactory
-Toxy,ParserContext,0,2,3,0,2,17,2,0,0,-1,0,28,,Toxy.ParserFactory' Toxy.Parsers.AudioMetadataParser' Toxy.Parsers.CnmEmailParser' Toxy.Parsers.EMLTextParser' Toxy.Parsers.MsgEmailParser' Toxy.Parsers.ExcelTextParser' Toxy.Parsers.HtmlDomParser' Toxy.Parsers.EMLEmailParser' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.ImageMetadataParser' Toxy.Parsers.MsgTextParser' Toxy.Parsers.OLE2MetadataParser' Toxy.Parsers.OOXMLMetadataParser' Toxy.Parsers.PDFTextParser' Toxy.Parsers.Powerpoint2007SlideshowParser' Toxy.Parsers.Powerpoint2007TextParser' Toxy.Parsers.RTFTextParser' Toxy.Parsers.VCardDocumentParser' Toxy.Parsers.VCardTextParser' Toxy.Parsers.PlainTextParser' Toxy.Parsers.CSVSpreadsheetParser' Toxy.Parsers.PDFDocumentParser' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.Word2003TextParser' Toxy.Parsers.Word2007DocumentParser' Toxy.Parsers.Word2007TextParser' Toxy.Parsers.XMLDomParser' Toxy.Parsers.ZipTextParser
-Toxy,ISpreadsheetParser,0,2,1,0,0,6,2,2,0,-1,0,1,,Toxy.ParserFactory
-Toxy,ToxyParagraph,0,1,3,0,1,10,1,0,0,-1,0,4,,Toxy.ToxyDocument' Toxy.Parsers.PDFDocumentParser' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.Word2007DocumentParser
-Toxy,ToxyParagraphStyle,0,0,5,0,0,8,0,0,0,-1,0,0,,
-Toxy,ToxyDocument,0,2,4,0,2,20,3,0,0,-1,1,3,Toxy.ToxyParagraph,Toxy.Parsers.PDFDocumentParser' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.Word2007DocumentParser
-Toxy,ToxyEmail,0,1,9,0,1,19,1,0,0,-1,0,3,,Toxy.Parsers.CnmEmailParser' Toxy.Parsers.MsgEmailParser' Toxy.Parsers.EMLEmailParser
-Toxy,ToxySpreadsheet,0,3,2,0,3,46,5,0,0,-1,1,2,Toxy.ToxyTable,Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.CSVSpreadsheetParser
-Toxy,ParserFactory,1,12,0,0,8,178,16,0,0,0.17,35,0,Toxy.Parsers.PlainTextParser' Toxy.Parsers.XMLDomParser' Toxy.Parsers.CSVSpreadsheetParser' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.ExcelTextParser' Toxy.Parsers.OLE2MetadataParser' Toxy.Parsers.OOXMLMetadataParser' Toxy.Parsers.Powerpoint2007TextParser' Toxy.Parsers.Powerpoint2007SlideshowParser' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.Word2003TextParser' Toxy.Parsers.Word2007TextParser' Toxy.Parsers.Word2007DocumentParser' Toxy.Parsers.RTFTextParser' Toxy.Parsers.PDFTextParser' Toxy.Parsers.PDFDocumentParser' Toxy.Parsers.HtmlDomParser' Toxy.Parsers.EMLEmailParser' Toxy.Parsers.EMLTextParser' Toxy.Parsers.CnmEmailParser' Toxy.Parsers.MsgEmailParser' Toxy.Parsers.MsgTextParser' Toxy.Parsers.VCardDocumentParser' Toxy.Parsers.VCardTextParser' Toxy.Parsers.ZipTextParser' Toxy.Parsers.AudioMetadataParser' Toxy.Parsers.ImageMetadataParser' Toxy.ParserContext' Toxy.ITextParser' Toxy.IEmailParser' Toxy.ISpreadsheetParser' Toxy.IDocumentParser' Toxy.IDomParser' Toxy.IMetadataParser' Toxy.ISlideshowParser,
-Toxy,Utility,0,1,0,0,1,11,2,0,0,-1,0,5,,Toxy.Parsers.ExcelTextParser' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.Word2007DocumentParser' Toxy.Parsers.Word2007TextParser
-HLIB.MailFormats,EMLReader,17,6,17,0,1,291,24,0,0,0,1,2,Toxy.DateTimeParser,Toxy.Parsers.EMLTextParser' Toxy.Parsers.EMLEmailParser
-Toxy.Parsers,AudioMetadataParser,0,2,1,0,2,73,28,0,1,-1,2,1,Toxy.ParserContext' Toxy.ToxyMetadata,Toxy.ParserFactory
-Toxy.Parsers,CnmEmailParser,0,2,1,0,2,30,3,0,1,-1,3,1,Toxy.ParserContext' Toxy.CnmFile' Toxy.ToxyEmail,Toxy.ParserFactory
-Toxy.Parsers,EMLTextParser,0,2,0,0,2,29,3,0,1,-1,2,1,Toxy.ParserContext' HLIB.MailFormats.EMLReader,Toxy.ParserFactory
-Toxy.Parsers,MsgEmailParser,0,2,1,0,2,57,2,0,1,-1,2,1,Toxy.ParserContext' Toxy.ToxyEmail,Toxy.ParserFactory
-Toxy.Parsers,ExcelTextParser,0,2,0,0,2,52,8,0,1,-1,2,1,Toxy.ParserContext' Toxy.Utility,Toxy.ParserFactory
-Toxy.Parsers,HtmlDomParser,0,2,1,0,2,40,6,0,1,-1,3,1,Toxy.ParserContext' Toxy.ToxyNode' Toxy.ToxyDom,Toxy.ParserFactory
-Toxy.Parsers,EMLEmailParser,0,2,1,0,2,31,3,0,1,-1,3,1,Toxy.ParserContext' Toxy.ToxyEmail' HLIB.MailFormats.EMLReader,Toxy.ParserFactory
-Toxy.Parsers,ExcelSpreadsheetParser,0,4,1,0,3,172,30,0,1,-1,6,1,Toxy.ParserContext' Toxy.ToxySpreadsheet' Toxy.ToxyTable' Toxy.Utility' Toxy.ToxyRow' Toxy.ToxyCell,Toxy.ParserFactory
-Toxy.Parsers,ImageMetadataParser,0,2,1,0,2,75,27,0,1,-1,2,1,Toxy.ParserContext' Toxy.ToxyMetadata,Toxy.ParserFactory
-Toxy.Parsers,MsgTextParser,0,2,0,0,2,73,2,0,1,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
-Toxy.Parsers,OLE2MetadataParser,0,3,1,0,2,131,4,0,1,-1,2,1,Toxy.ParserContext' Toxy.ToxyMetadata,Toxy.ParserFactory
-Toxy.Parsers,OOXMLMetadataParser,0,2,1,0,2,125,18,0,1,-1,2,1,Toxy.ParserContext' Toxy.ToxyMetadata,Toxy.ParserFactory
-Toxy.Parsers,PDFTextParser,0,2,1,0,2,24,3,0,1,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
-Toxy.Parsers,Powerpoint2007SlideshowParser,0,4,1,0,3,81,11,0,1,-1,3,1,Toxy.ParserContext' Toxy.ToxySlideshow' Toxy.ToxySlide,Toxy.ParserFactory
-Toxy.Parsers,Powerpoint2007TextParser,0,3,0,0,3,74,10,0,1,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
-Toxy.Parsers,RTFTextParser,0,2,0,0,2,16,3,0,1,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
-Toxy.Parsers,VCardDocumentParser,0,2,1,0,2,70,3,0,0,-1,6,1,Toxy.ParserContext' Toxy.ToxyBusinessCards' Toxy.ToxyBusinessCard' Toxy.ToxyAddress' Toxy.ToxyName' Toxy.GenderType,Toxy.ParserFactory
-Toxy.Parsers,VCardTextParser,0,2,0,0,2,92,3,0,1,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
-Toxy.Parsers,PlainTextParser,0,2,1,0,2,58,6,7,1,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
-Toxy.Parsers,ParseLineEventArgs,0,1,2,0,1,10,1,0,0,-1,0,0,,
-Toxy.Parsers,CSVSpreadsheetParser,0,3,1,0,3,112,16,0,1,-1,5,1,Toxy.ParserContext' Toxy.ToxySpreadsheet' Toxy.ToxyTable' Toxy.ToxyRow' Toxy.ToxyCell,Toxy.ParserFactory
-Toxy.Parsers,ParseSegmentEventArgs,0,1,3,0,1,12,1,0,0,-1,0,0,,
-Toxy.Parsers,PDFDocumentParser,0,2,1,0,2,34,3,0,1,-1,3,1,Toxy.ParserContext' Toxy.ToxyDocument' Toxy.ToxyParagraph,Toxy.ParserFactory
-Toxy.Parsers,Word2003DocumentParser,0,2,1,0,2,58,5,0,1,-1,4,1,Toxy.ParserContext' Toxy.ToxyDocument' Toxy.ToxyParagraph' Toxy.Utility,Toxy.ParserFactory
-Toxy.Parsers,Word2003TextParser,0,2,1,0,2,23,3,0,1,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
-Toxy.Parsers,Word2007DocumentParser,0,2,1,0,2,86,5,0,1,-1,4,1,Toxy.ParserContext' Toxy.ToxyDocument' Toxy.ToxyParagraph' Toxy.Utility,Toxy.ParserFactory
-Toxy.Parsers,Word2007TextParser,0,2,1,0,2,64,5,0,1,-1,2,1,Toxy.ParserContext' Toxy.Utility,Toxy.ParserFactory
-Toxy.Parsers,XMLDomParser,0,4,1,0,2,51,10,0,1,-1,3,1,Toxy.ParserContext' Toxy.ToxyNode' Toxy.ToxyDom,Toxy.ParserFactory
-Toxy.Parsers,ZipTextParser,0,2,0,0,2,24,3,0,2,-1,1,1,Toxy.ParserContext,Toxy.ParserFactory
+Toxy,ToxyMetadata,1,8,1,0,7,57,11,0,0,0,0,5,,Toxy.IMetadataParser' Toxy.Parsers.AudioMetadataParser' Toxy.Parsers.OOXMLMetadataParser' Toxy.Parsers.ImageMetadataParser' Toxy.Parsers.OLE2MetadataParser
+Toxy,ToxySlide,0,1,2,0,1,9,1,0,0,-1,0,3,,Toxy.ISlideshowParser' Toxy.ToxySlideshow' Toxy.Parsers.Powerpoint2007SlideshowParser
+Toxy,ToxySlideshow,0,1,1,0,1,8,1,0,0,-1,0,2,,Toxy.ISlideshowParser' Toxy.Parsers.Powerpoint2007SlideshowParser
+Toxy,MergeCellRange,0,0,4,0,0,7,0,0,0,-1,0,2,,Toxy.ToxyTable' Toxy.Parsers.ExcelSpreadsheetParser
+Toxy,ToxyCell,0,3,4,0,3,30,4,0,0,-1,0,4,,Toxy.ToxyCell' Toxy.ToxyRow' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.CSVSpreadsheetParser
+Toxy,ToxyRow,0,2,3,0,2,24,3,0,0,-1,0,4,,Toxy.ToxyRow' Toxy.Parsers.CSVSpreadsheetParser' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.ToxyTable
+Toxy,ToxyTable,0,5,9,0,4,117,17,0,0,-1,0,5,,Toxy.ISpreadsheetParser' Toxy.ToxyTable' Toxy.Parsers.CSVSpreadsheetParser' Toxy.ToxySpreadsheet' Toxy.Parsers.ExcelSpreadsheetParser
+Toxy,IMetadataParser,0,1,1,0,0,5,1,4,0,-1,0,5,,Toxy.Parsers.ImageMetadataParser' Toxy.Parsers.OLE2MetadataParser' Toxy.Parsers.OOXMLMetadataParser' Toxy.Parsers.AudioMetadataParser' Toxy.ParserFactory
+Toxy,ISlideshowParser,0,2,1,0,0,6,2,1,0,-1,0,2,,Toxy.Parsers.Powerpoint2007SlideshowParser' Toxy.ParserFactory
+Toxy,IDomParser,0,1,1,0,0,5,1,2,0,-1,0,3,,Toxy.Parsers.XMLDomParser' Toxy.Parsers.HtmlDomParser' Toxy.ParserFactory
+Toxy,IEmailParser,0,1,1,0,0,5,1,3,0,-1,0,4,,Toxy.Parsers.MsgEmailParser' Toxy.Parsers.EMLEmailParser' Toxy.Parsers.CnmEmailParser' Toxy.ParserFactory
+Toxy,IDocumentParser,0,1,1,0,0,5,1,3,0,-1,0,4,,Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.Word2007DocumentParser' Toxy.Parsers.PDFDocumentParser' Toxy.ParserFactory
+Toxy,ITextParser,0,1,1,0,0,5,1,4,0,-1,0,5,,Toxy.Parsers.PlainTextParser' Toxy.Parsers.PDFTextParser' Toxy.Parsers.Word2003TextParser' Toxy.Parsers.Word2007TextParser' Toxy.ParserFactory
+Toxy,ParserContext,0,2,3,0,2,17,2,0,0,-1,0,35,,Toxy.Parsers.EMLTextParser' Toxy.IMetadataParser' Toxy.ISlideshowParser' Toxy.Parsers.ExcelTextParser' Toxy.Parsers.RTFTextParser' Toxy.Parsers.VCardTextParser' Toxy.Parsers.ZipTextParser' Toxy.Parsers.XMLDomParser' Toxy.Parsers.Powerpoint2007TextParser' Toxy.Parsers.MsgTextParser' Toxy.Parsers.AudioMetadataParser' Toxy.IDocumentParser' Toxy.IDomParser' Toxy.IEmailParser' Toxy.Parsers.CnmEmailParser' Toxy.Parsers.HtmlDomParser' Toxy.Parsers.EMLEmailParser' Toxy.Parsers.MsgEmailParser' Toxy.Parsers.Word2007TextParser' Toxy.ITextParser' Toxy.ISpreadsheetParser' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.Parsers.ImageMetadataParser' Toxy.Parsers.OLE2MetadataParser' Toxy.Parsers.OOXMLMetadataParser' Toxy.Parsers.PDFTextParser' Toxy.Parsers.VCardDocumentParser' Toxy.Parsers.Word2007DocumentParser' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.PDFDocumentParser' Toxy.Parsers.Powerpoint2007SlideshowParser' Toxy.Parsers.CSVSpreadsheetParser' Toxy.Parsers.PlainTextParser' Toxy.Parsers.Word2003TextParser' Toxy.ParserFactory
+Toxy,ISpreadsheetParser,0,2,1,0,0,6,2,2,0,-1,0,3,,Toxy.Parsers.CSVSpreadsheetParser' Toxy.Parsers.ExcelSpreadsheetParser' Toxy.ParserFactory
+Toxy,ToxyParagraph,0,1,3,0,1,10,1,0,0,-1,0,4,,Toxy.ToxyDocument' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.PDFDocumentParser' Toxy.Parsers.Word2007DocumentParser
+Toxy,ToxyParagraphStyle,0,0,5,0,0,8,0,0,0,-1,0,1,,Toxy.ToxyParagraph
+Toxy,ToxyDocument,0,2,4,0,2,20,3,0,0,-1,0,4,,Toxy.IDocumentParser' Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.PDFDocumentParser' Toxy.Parsers.Word2007DocumentParser
+Toxy,ToxyEmail,0,1,9,0,1,19,1,0,0,-1,0,4,,Toxy.IEmailParser' Toxy.Parsers.EMLEmailParser' Toxy.Parsers.CnmEmailParser' Toxy.Parsers.MsgEmailParser
+Toxy,ToxySpreadsheet,0,3,2,0,3,46,5,0,0,-1,0,4,,Toxy.ISpreadsheetParser' Toxy.ToxySpreadsheet' Toxy.Parsers.CSVSpreadsheetParser' Toxy.Parsers.ExcelSpreadsheetParser
+Toxy,ParserFactory,1,12,0,0,8,178,16,0,0,0.17,0,0,,
+Toxy,Utility,0,1,0,0,1,11,2,0,0,-1,0,5,,Toxy.Parsers.Word2003DocumentParser' Toxy.Parsers.Word2007DocumentParser' Toxy.Parsers.Word2007TextParser' Toxy.Parsers.ExcelTextParser' Toxy.Parsers.ExcelSpreadsheetParser
+HLIB.MailFormats,EMLReader,17,6,17,0,1,291,42,0,0,0,0,2,,Toxy.Parsers.EMLEmailParser' Toxy.Parsers.EMLTextParser
+Toxy.Parsers,AudioMetadataParser,0,2,1,0,2,73,28,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,CnmEmailParser,0,2,1,0,2,30,3,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,EMLTextParser,0,2,0,0,2,29,7,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,MsgEmailParser,0,2,1,0,2,57,9,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,ExcelTextParser,0,2,0,0,2,52,8,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,HtmlDomParser,0,2,1,0,2,40,6,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,EMLEmailParser,0,2,1,0,2,31,4,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,ExcelSpreadsheetParser,0,4,1,0,3,172,35,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,ImageMetadataParser,0,2,1,0,2,75,27,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,MsgTextParser,0,2,0,0,2,73,13,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,OLE2MetadataParser,0,3,1,0,2,131,38,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,OOXMLMetadataParser,0,2,1,0,2,125,27,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,PDFTextParser,0,2,1,0,2,24,4,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,Powerpoint2007SlideshowParser,0,4,1,0,3,81,13,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,Powerpoint2007TextParser,0,3,0,0,3,74,12,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,RTFTextParser,0,2,0,0,2,16,3,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,VCardDocumentParser,0,2,1,0,2,70,11,0,0,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,VCardTextParser,0,2,0,0,2,92,27,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,PlainTextParser,0,2,1,0,2,58,6,7,1,-1,0,8,,Toxy.Parsers.EMLTextParser' Toxy.Parsers.ExcelTextParser' Toxy.Parsers.ZipTextParser' Toxy.Parsers.MsgTextParser' Toxy.Parsers.Powerpoint2007TextParser' Toxy.Parsers.RTFTextParser' Toxy.Parsers.VCardTextParser' Toxy.ParserFactory
+Toxy.Parsers,ParseLineEventArgs,0,1,2,0,1,10,1,0,0,-1,0,1,,Toxy.Parsers.PlainTextParser
+Toxy.Parsers,CSVSpreadsheetParser,0,3,1,0,3,112,16,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,ParseSegmentEventArgs,0,1,3,0,1,12,1,0,0,-1,0,1,,Toxy.Parsers.CSVSpreadsheetParser
+Toxy.Parsers,PDFDocumentParser,0,2,1,0,2,34,5,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,Word2003DocumentParser,0,2,1,0,2,58,8,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,Word2003TextParser,0,2,1,0,2,23,3,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,Word2007DocumentParser,0,2,1,0,2,86,14,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,Word2007TextParser,0,2,1,0,2,64,12,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,XMLDomParser,0,4,1,0,2,51,10,0,1,-1,0,1,,Toxy.ParserFactory
+Toxy.Parsers,ZipTextParser,0,2,0,0,2,24,4,0,2,-1,0,1,,Toxy.ParserFactory

@@ -1,10 +1,50 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-GameRes.Formats.Microsoft,CabEntry,1,1,0,1,1,13,1,0,1,0,1,1,GameRes.FormatCatalog,GameRes.Formats.Microsoft.CabOpener
-GameRes.Formats.Microsoft,CabOpener,0,2,5,0,2,21,3,0,1,-1,5,0,GameRes.VFS' GameRes.ArcView' GameRes.ArcFile' GameRes.Formats.Microsoft.CabEntry' GameRes.Entry,
-GameRes.Formats.CellWorks,IgsDatOpener,1,3,5,0,2,63,6,0,1,1,8,1,GameRes.VFS' GameRes.ArcView' GameRes.Formats.CellWorks.IgsDbReader' GameRes.ArcFile' GameRes.ArcViewStream' GameRes.Entry' GameRes.BinMemoryStream' GameRes.Formats.PrefixStream,GameRes.Formats.CellWorks.IgsDbReader
-GameRes.Formats.CellWorks,IgsDbReader,3,4,0,0,4,80,6,0,0,0,3,1,GameRes.Formats.CellWorks.IgsDatOpener' GameRes.Entry' GameRes.FormatCatalog,GameRes.Formats.CellWorks.IgsDatOpener
-GameRes.Formats.Opus,OpusAudio,0,1,4,0,1,64,5,0,1,-1,4,0,GameRes.CowArray' GameRes.WaveFormat' GameRes.RawPcmInput' GameRes.IBinaryStream,
+GameRes.Formats.Artemis,IptTile,4,0,0,4,0,7,0,0,0,-1,0,2,,GameRes.Formats.Artemis.IptMetaData' GameRes.Formats.Artemis.IptFormat
+GameRes.Formats.Artemis,IptMetaData,3,0,0,3,0,6,0,0,1,-1,1,1,GameRes.Formats.Artemis.IptTile,GameRes.Formats.Artemis.IptFormat
+GameRes.Formats.Artemis,IptFormat,0,6,3,0,3,164,19,0,1,-1,4,0,GameRes.Formats.Artemis.IptTile' GameRes.Formats.Artemis.IptMetaData' GameRes.Formats.Artemis.IPTParser' GameRes.Formats.Artemis.IPTObject,
+GameRes.Formats.Artemis,ValueType,3,0,1,3,0,9,0,0,0,-1,1,2,GameRes.Formats.Artemis.IPTObject,GameRes.Formats.Artemis.ScanBase' GameRes.Formats.Artemis.ScanObj
+GameRes.Formats.Artemis,IPTParser,5,8,2,0,2,135,15,0,0,0.5,2,1,GameRes.Formats.Artemis.IPTObject' GameRes.Formats.Artemis.IPTScanner,GameRes.Formats.Artemis.IptFormat
+GameRes.Formats.Artemis,IPTObject,2,1,1,0,1,18,1,0,0,0,0,3,,GameRes.Formats.Artemis.IptFormat' GameRes.Formats.Artemis.IPTParser' GameRes.Formats.Artemis.ValueType
+GameRes.Formats.Artemis,Token,0,0,0,0,0,2,0,0,0,-1,0,0,,
+GameRes.Formats.Artemis,ScanBase,1,1,1,0,0,6,1,1,0,0,3,0,GameRes.Formats.Artemis.ValueType' QUT.Gppg.LexLocation' QUT.Gppg.AbstractScanner<TValue;TSpan>,
+GameRes.Formats.Artemis,ScanObj,3,1,0,3,1,9,1,0,0,0,2,0,GameRes.Formats.Artemis.ValueType' QUT.Gppg.LexLocation,
+GameRes.Formats.Artemis,IPTScanner,24,26,7,0,5,629,46,0,1,0.23,1,1,GameRes.Formats.Artemis.YYParseException,GameRes.Formats.Artemis.IPTParser
+GameRes.Formats.Artemis,YYParseException,0,1,0,0,1,6,1,0,0,-1,0,1,,GameRes.Formats.Artemis.IPTScanner
+GameRes.Formats.Artemis,Result,0,0,0,0,0,1,0,0,0,-1,0,0,,
+GameRes.Formats.Artemis,Table,4,1,0,4,1,7,1,0,0,0,0,0,,
+GameRes.Formats.Artemis,BufferContext,4,0,0,0,0,6,0,0,0,-1,1,0,QUT.GplexBuffers.ScanBuff,
+GameRes.Formats.Microsoft,CabEntry,1,1,0,1,1,14,1,0,1,0,0,1,,GameRes.Formats.Microsoft.CabOpener
+GameRes.Formats.Microsoft,CabOpener,0,2,5,0,2,23,3,0,1,-1,1,0,GameRes.Formats.Microsoft.CabEntry,
+GameRes.Formats.CellWorks,IgsDatOpener,1,3,5,0,2,67,10,0,1,1,1,1,GameRes.Formats.CellWorks.IgsDbReader,GameRes.Formats.CellWorks.IgsDbReader
+GameRes.Formats.CellWorks,IgsDbReader,3,4,0,0,4,84,8,0,0,0,1,1,GameRes.Formats.CellWorks.IgsDatOpener,GameRes.Formats.CellWorks.IgsDatOpener
+QUT.GplexBuffers,BufferException,0,4,0,0,3,10,4,0,0,-1,0,1,,QUT.GplexBuffers.BuildBuffer
+QUT.GplexBuffers,ScanBuff,3,7,3,2,7,40,7,3,0,1,3,5,QUT.GplexBuffers.StringBuffer' QUT.GplexBuffers.LineBuffer' QUT.GplexBuffers.BuildBuffer,QUT.GplexBuffers.StringBuffer' QUT.GplexBuffers.LineBuffer' QUT.GplexBuffers.BuildBuffer' QUT.GplexBuffers.Guesser' GameRes.Formats.Artemis.BufferContext
+QUT.GplexBuffers,StringBuffer,3,4,1,0,4,41,8,0,1,0.5,1,1,QUT.GplexBuffers.ScanBuff,QUT.GplexBuffers.ScanBuff
+QUT.GplexBuffers,LineBuffer,12,5,1,0,4,127,18,0,1,0.4,1,1,QUT.GplexBuffers.ScanBuff,QUT.GplexBuffers.ScanBuff
+QUT.GplexBuffers,BuildBuffer,3,6,2,0,6,162,10,0,1,0.33,4,2,QUT.GplexBuffers.BufferException' QUT.GplexBuffers.ScanBuff' QUT.GplexBuffers.BufferElement' QUT.GplexBuffers.BlockReaderFactory,QUT.GplexBuffers.ScanBuff' QUT.GplexBuffers.Guesser
+QUT.GplexBuffers,BufferElement,6,4,1,0,0,70,10,0,0,0.5,0,1,,QUT.GplexBuffers.BuildBuffer
+QUT.GplexBuffers,BlockReaderFactory,0,3,0,0,2,65,11,0,0,-1,1,1,QUT.GplexBuffers.Guesser,QUT.GplexBuffers.BuildBuffer
+QUT.GplexBuffers,CodePageHandling,0,1,0,0,1,36,6,0,0,-1,0,0,,
+QUT.GplexBuffers,Guesser,15,6,0,2,3,157,21,0,0,0,2,1,QUT.GplexBuffers.ScanBuff' QUT.GplexBuffers.BuildBuffer,QUT.GplexBuffers.BlockReaderFactory
+GameRes.Formats.Opus,OpusAudio,0,1,4,0,1,65,8,0,1,-1,0,0,,
+GameRes.Formats.RPGMaker,RgssOpener,0,7,5,0,3,118,20,0,1,-1,2,0,GameRes.Formats.RPGMaker.RgssEntry' GameRes.Formats.RPGMaker.KeyGenerator,
+GameRes.Formats.RPGMaker,RgssEntry,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.RPGMaker.RgssOpener
+GameRes.Formats.RPGMaker,KeyGenerator,1,2,1,0,2,18,2,0,0,0,0,1,,GameRes.Formats.RPGMaker.RgssOpener
+GameRes.Formats.RPGMaker,RpgmvoAudio,0,1,4,0,1,28,5,0,1,-1,1,0,GameRes.Formats.RPGMaker.RpgmvDecryptor,
+GameRes.Formats.RPGMaker,RpgmvpMetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.RPGMaker.RpgmvpFormat
+GameRes.Formats.RPGMaker,RpgmvpFormat,0,3,3,0,3,51,8,0,1,-1,2,0,GameRes.Formats.RPGMaker.RpgmvpMetaData' GameRes.Formats.RPGMaker.RpgmvDecryptor,
+GameRes.Formats.RPGMaker,RpgmvDecryptor,2,6,0,0,2,70,14,0,0,0.67,0,2,,GameRes.Formats.RPGMaker.RpgmvoAudio' GameRes.Formats.RPGMaker.RpgmvpFormat
+QUT.Gppg,ShiftReduceParser<TValue;TSpan>,16,28,4,0,1,551,73,0,0,0.46,8,0,QUT.Gppg.AcceptException' QUT.Gppg.AbortException' QUT.Gppg.ErrorException' QUT.Gppg.IMerge' QUT.Gppg.AbstractScanner<TValue;TSpan>' QUT.Gppg.State' QUT.Gppg.Rule' QUT.Gppg.PushdownPrefixState<T>,
+QUT.Gppg,AcceptException,0,2,0,0,0,8,2,0,0,-1,0,1,,QUT.Gppg.ShiftReduceParser<TValue;TSpan>
+QUT.Gppg,AbortException,0,2,0,0,0,8,2,0,0,-1,0,1,,QUT.Gppg.ShiftReduceParser<TValue;TSpan>
+QUT.Gppg,ErrorException,0,2,0,0,0,8,2,0,0,-1,0,1,,QUT.Gppg.ShiftReduceParser<TValue;TSpan>
+QUT.Gppg,IMerge,0,1,0,0,0,13,1,1,0,-1,0,3,,QUT.Gppg.ShiftReduceParser<TValue;TSpan>' QUT.Gppg.LexLocation' QUT.Gppg.AbstractScanner<TValue;TSpan>
+QUT.Gppg,LexLocation,4,3,4,0,3,52,3,0,1,0.67,1,2,QUT.Gppg.IMerge,GameRes.Formats.Artemis.ScanBase' GameRes.Formats.Artemis.ScanObj
+QUT.Gppg,AbstractScanner<TValue;TSpan>,1,2,1,1,2,56,2,0,0,1,1,2,QUT.Gppg.IMerge,GameRes.Formats.Artemis.ScanBase' QUT.Gppg.ShiftReduceParser<TValue;TSpan>
+QUT.Gppg,State,4,4,0,0,4,56,7,0,0,0.75,0,1,,QUT.Gppg.ShiftReduceParser<TValue;TSpan>
+QUT.Gppg,Rule,2,1,0,0,1,18,1,0,0,0,0,1,,QUT.Gppg.ShiftReduceParser<TValue;TSpan>
+QUT.Gppg,PushdownPrefixState<T>,2,4,1,0,0,40,5,0,0,0,0,1,,QUT.Gppg.ShiftReduceParser<TValue;TSpan>
 GameRes.Formats.Google,WebPMetaData,7,0,0,7,0,10,0,0,1,-1,1,1,GameRes.Formats.Google.WebPFeature,GameRes.Formats.Google.WebPFormat
-GameRes.Formats.Google,WebPFeature,0,0,0,0,0,10,0,0,0,-1,0,1,,GameRes.Formats.Google.WebPMetaData
-GameRes.Formats.Google,WebPFormat,0,4,3,0,4,116,20,0,1,-1,8,0,GameRes.Formats.Google.WebPMetaData' GameRes.IBinaryStream' GameRes.CowArray' GameRes.Utility.LittleEndian' GameRes.Utility.Binary' GameRes.Formats.Google.LibWebPLoader' GameRes.ImageMetaData' GameRes.ImageData,
-GameRes.Formats.Google,LibWebPLoader,3,2,0,0,1,21,4,0,0,1,0,1,,GameRes.Formats.Google.WebPFormat
+GameRes.Formats.Google,WebPFeature,0,0,0,0,0,10,0,0,0,-1,0,2,,GameRes.Formats.Google.WebPMetaData' GameRes.Formats.Google.WebPFormat
+GameRes.Formats.Google,WebPFormat,0,4,3,0,4,120,22,0,1,-1,3,0,GameRes.Formats.Google.WebPMetaData' GameRes.Formats.Google.WebPFeature' GameRes.Formats.Google.LibWebPLoader,
+GameRes.Formats.Google,LibWebPLoader,3,2,0,0,1,24,4,0,0,1,0,1,,GameRes.Formats.Google.WebPFormat

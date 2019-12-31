@@ -1,9 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SharpLab.Runtime.Internal,Flow,3,4,1,1,3,108,21,0,0,0,3,2,SharpLab.Runtime.Internal.Step' SharpLab.Runtime.Internal.ReportLimits' SharpLab.Runtime.Internal.ObjectAppender,SharpLab.Server.Execution.Remote' SharpLab.Server.Execution.Internal.FlowReportingRewriter
-SharpLab.Runtime.Internal,ReportLimits,6,0,0,6,0,8,0,0,0,-1,0,1,,SharpLab.Runtime.Internal.Flow
-SharpLab.Runtime.Internal,Step,0,1,5,0,1,15,1,0,0,-1,0,2,,SharpLab.Runtime.Internal.Flow' SharpLab.Server.Execution.Executor
-SharpLab.Runtime.Internal,InspectionResult,0,1,2,0,1,9,1,0,0,-1,0,2,,SharpLab.Runtime.Internal.Output' SharpLab.Server.Execution.Executor
-SharpLab.Runtime.Internal,ObjectAppender,0,3,0,0,2,43,9,0,0,-1,0,1,,SharpLab.Runtime.Internal.Flow
-SharpLab.Runtime.Internal,Output,2,5,2,0,4,47,7,0,0,0,1,2,SharpLab.Runtime.Internal.InspectionResult,SharpLab.Runtime.Internal.OutputWriter' SharpLab.Server.Execution.Remote
-SharpLab.Runtime.Internal,OutputWriter,0,5,1,0,5,19,5,0,0,-1,1,0,SharpLab.Runtime.Internal.Output,
-SharpLab.Runtime,JitGenericAttribute,0,1,1,0,1,7,1,0,0,-1,0,4,,SharpLab.Server.Common.Languages.CSharpAdapter' SharpLab.Server.Common.Languages.FSharpAdapter' SharpLab.Server.Common.Languages.VisualBasicAdapter' SharpLab.Server.Decompilation.Remote
+SharpLab.Runtime.Internal,Flow,3,11,1,1,8,137,32,0,0,0.27,4,0,SharpLab.Runtime.Internal.ReportLimits' SharpLab.Runtime.Internal.Step' SharpLab.Runtime.Internal.ValuePresenter' SharpLab.Runtime.Internal.ValuePresenterLimits,
+SharpLab.Runtime.Internal,ReportLimits,5,0,0,5,0,9,0,0,0,-1,0,1,,SharpLab.Runtime.Internal.Flow
+SharpLab.Runtime.Internal,Step,0,1,5,0,1,15,1,0,0,-1,0,1,,SharpLab.Runtime.Internal.Flow
+SharpLab.Runtime.Internal,IInspection,0,0,0,0,0,2,0,4,0,-1,0,5,,SharpLab.Runtime.Internal.SimpleInspection' SharpLab.Runtime.Internal.Output' SharpLab.Runtime.Internal.MemoryInspection' SharpLab.Runtime.Internal.MemoryGraphInspection' SharpLab.Runtime.Internal.InspectionGroup
+SharpLab.Runtime.Internal,InspectionGroup,0,1,3,0,1,11,1,0,1,-1,1,0,SharpLab.Runtime.Internal.IInspection,
+SharpLab.Runtime.Internal,InspectionSettings,0,0,3,0,0,5,0,0,0,-1,0,0,,
+SharpLab.Runtime.Internal,MemoryGraphArgumentNames,2,3,0,0,3,17,3,0,0,0,0,0,,
+SharpLab.Runtime.Internal,MemoryGraphBuilder,5,8,0,0,3,99,22,0,0,0,4,0,SharpLab.Runtime.Internal.MemoryGraphInspection' SharpLab.Runtime.Internal.MemoryGraphNode' SharpLab.Runtime.Internal.MemoryGraphReference' SharpLab.Runtime.Internal.ValuePresenter,
+SharpLab.Runtime.Internal,MemoryGraphInspection,0,1,3,0,1,15,1,0,1,-1,3,1,SharpLab.Runtime.Internal.IInspection' SharpLab.Runtime.Internal.MemoryGraphNode' SharpLab.Runtime.Internal.MemoryGraphReference,SharpLab.Runtime.Internal.MemoryGraphBuilder
+SharpLab.Runtime.Internal,MemoryGraphNode,2,8,9,0,7,61,11,0,0,0.88,0,3,,SharpLab.Runtime.Internal.MemoryGraphReference' SharpLab.Runtime.Internal.MemoryGraphInspection' SharpLab.Runtime.Internal.MemoryGraphBuilder
+SharpLab.Runtime.Internal,MemoryGraphReference,0,1,2,0,1,9,1,0,0,-1,1,2,SharpLab.Runtime.Internal.MemoryGraphNode,SharpLab.Runtime.Internal.MemoryGraphInspection' SharpLab.Runtime.Internal.MemoryGraphBuilder
+SharpLab.Runtime.Internal,MemoryInspection,0,1,3,0,1,11,1,0,1,-1,2,0,SharpLab.Runtime.Internal.IInspection' SharpLab.Runtime.Internal.MemoryInspectionLabel,
+SharpLab.Runtime.Internal,MemoryInspectionLabel,0,1,4,0,1,13,1,0,0,-1,0,1,,SharpLab.Runtime.Internal.MemoryInspection
+SharpLab.Runtime.Internal,Output,2,5,2,0,4,48,7,0,0,0,3,0,SharpLab.Runtime.Internal.IInspection' SharpLab.Runtime.Internal.OutputWriter' SharpLab.Runtime.Internal.SimpleInspection,
+SharpLab.Runtime.Internal,OutputWriter,0,6,1,0,6,21,6,0,0,-1,0,1,,SharpLab.Runtime.Internal.Output
+SharpLab.Runtime.Internal,SimpleInspection,0,3,3,0,3,20,3,0,1,-1,1,1,SharpLab.Runtime.Internal.IInspection,SharpLab.Runtime.Internal.Output
+SharpLab.Runtime.Internal,ValuePresenter,0,8,0,0,5,87,22,0,0,-1,1,2,SharpLab.Runtime.Internal.ValuePresenterLimits,SharpLab.Runtime.Internal.Flow' SharpLab.Runtime.Internal.MemoryGraphBuilder
+SharpLab.Runtime.Internal,ValuePresenterLimits,2,1,3,0,1,18,1,0,0,0,0,2,,SharpLab.Runtime.Internal.Flow' SharpLab.Runtime.Internal.ValuePresenter
+SharpLab.Runtime,JitGenericAttribute,0,1,1,0,1,7,1,0,0,-1,0,0,,

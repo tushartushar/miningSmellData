@@ -1,0 +1,121 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TvLibrary.Interfaces,CardType,0,0,0,0,0,35,0,0,0,-1,0,1,,TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,CaPmtListManagementAction,0,0,0,0,0,27,0,0,0,-1,0,1,,TvLibrary.Interfaces.Pmt
+TvLibrary.Interfaces,CaPmtCommand,0,0,0,0,0,19,0,0,0,-1,0,1,,TvLibrary.Interfaces.Pmt
+TvLibrary.Interfaces,MmiApplicationType,0,0,0,0,0,11,0,0,0,-1,0,0,,
+TvLibrary.Interfaces,MmiResponseType,0,0,0,0,0,11,0,0,0,-1,0,1,,TvLibrary.Interfaces.DvbMmiHandler
+TvLibrary.Interfaces,MmiCloseType,0,0,0,0,0,11,0,0,0,-1,0,1,,TvLibrary.Interfaces.DvbMmiHandler
+TvLibrary.Interfaces,MmiTag,0,0,0,0,0,195,0,0,0,-1,0,1,,TvLibrary.Interfaces.DvbMmiHandler
+TvLibrary.Interfaces,StreamType,0,0,0,0,0,138,0,0,0,-1,0,2,,TvLibrary.Interfaces.Pmt' TvLibrary.Interfaces.PmtElementaryStream
+TvLibrary.Interfaces,LogicalStreamType,0,0,0,0,0,76,0,0,0,-1,0,3,,TvLibrary.Interfaces.StreamTypeHelper' TvLibrary.Interfaces.Pmt' TvLibrary.Interfaces.PmtElementaryStream
+TvLibrary.Interfaces,DescriptorTag,0,0,0,0,0,696,0,0,0,-1,0,5,,TvLibrary.Interfaces.Cat' TvLibrary.Interfaces.Pmt' TvLibrary.Interfaces.IDescriptor' TvLibrary.Interfaces.Descriptor' TvLibrary.Interfaces.ConditionalAccessDescriptor
+TvLibrary.Interfaces,StreamTypeHelper,0,2,0,0,2,38,4,0,0,-1,1,1,TvLibrary.Interfaces.LogicalStreamType,TvLibrary.Interfaces.Pmt
+TvLibrary.Interfaces,DvbServiceType,0,0,0,0,0,98,0,0,0,-1,0,0,,
+TvLibrary.Interfaces,AtscServiceType,0,0,0,0,0,39,0,0,0,-1,0,0,,
+TvLibrary.Interfaces,Cat,11,4,10,0,3,238,15,0,0,0.5,5,0,TvLibrary.Interfaces.DescriptorTag' TvLibrary.Interfaces.IDescriptor' TvLibrary.Interfaces.Descriptor' TvLibrary.Interfaces.DVB_MMI' TvLibrary.Log.Log,
+TvLibrary.Interfaces,Pmt,15,5,14,0,4,496,46,0,0,0.4,12,0,TvLibrary.Interfaces.CaPmtListManagementAction' TvLibrary.Interfaces.CaPmtCommand' TvLibrary.Interfaces.StreamType' TvLibrary.Interfaces.LogicalStreamType' TvLibrary.Interfaces.DescriptorTag' TvLibrary.Interfaces.StreamTypeHelper' TvLibrary.Interfaces.PmtElementaryStream' TvLibrary.Interfaces.IDescriptor' TvLibrary.Interfaces.Descriptor' TvLibrary.Interfaces.DVB_MMI' TvLibrary.Interfaces.CamType' TvLibrary.Log.Log,
+TvLibrary.Interfaces,PmtElementaryStream,6,1,6,0,1,119,3,0,0,0,4,1,TvLibrary.Interfaces.StreamType' TvLibrary.Interfaces.LogicalStreamType' TvLibrary.Interfaces.IDescriptor' TvLibrary.Log.Log,TvLibrary.Interfaces.Pmt
+TvLibrary.Interfaces,IDescriptor,0,2,3,0,0,27,2,2,0,-1,1,5,TvLibrary.Interfaces.DescriptorTag,TvLibrary.Interfaces.Cat' TvLibrary.Interfaces.Pmt' TvLibrary.Interfaces.PmtElementaryStream' TvLibrary.Interfaces.Descriptor' TvLibrary.Interfaces.ConditionalAccessDescriptor
+TvLibrary.Interfaces,Descriptor,4,5,3,0,3,130,7,1,1,0,4,3,TvLibrary.Interfaces.DescriptorTag' TvLibrary.Interfaces.IDescriptor' TvLibrary.Interfaces.DVB_MMI' TvLibrary.Log.Log,TvLibrary.Interfaces.Cat' TvLibrary.Interfaces.Pmt' TvLibrary.Interfaces.ConditionalAccessDescriptor
+TvLibrary.Interfaces,ConditionalAccessDescriptor,4,5,4,0,2,269,25,0,2,0.4,5,0,TvLibrary.Interfaces.DescriptorTag' TvLibrary.Interfaces.IDescriptor' TvLibrary.Interfaces.Descriptor' TvLibrary.Interfaces.DVB_MMI' TvLibrary.Log.Log,
+TvLibrary.Interfaces,DvbMmiHandler,0,13,0,0,10,436,50,0,0,-1,6,0,TvLibrary.Interfaces.MmiResponseType' TvLibrary.Interfaces.MmiCloseType' TvLibrary.Interfaces.MmiTag' TvLibrary.Interfaces.DVB_MMI' TvLibrary.Interfaces.ICiMenuCallbacks' TvLibrary.Log.Log,
+TvLibrary.Interfaces,DVB_MMI,0,4,0,0,3,70,9,0,0,-1,1,5,TvLibrary.Log.Log,TvLibrary.Interfaces.Cat' TvLibrary.Interfaces.Pmt' TvLibrary.Interfaces.Descriptor' TvLibrary.Interfaces.ConditionalAccessDescriptor' TvLibrary.Interfaces.DvbMmiHandler
+TvLibrary.Interfaces,DvbTextConverter,0,1,0,0,1,110,39,0,0,-1,2,0,TvLibrary.Interfaces.ISOTextDecoder' TvLibrary.Log.Log,
+TvLibrary.Interfaces,ICiMenuActions,0,5,0,0,0,32,5,8,0,-1,1,0,TvLibrary.Interfaces.ICiMenuCallbacks,
+TvLibrary.Interfaces,CiMenuState,0,0,0,0,0,17,0,0,0,-1,0,1,,TvLibrary.Interfaces.CiMenu
+TvLibrary.Interfaces,ICiMenuCallbacks,0,4,0,0,0,43,4,1,0,-1,0,2,,TvLibrary.Interfaces.ICiMenuActions' TvLibrary.Interfaces.DvbMmiHandler
+TvLibrary.Interfaces,IDeviceEventListener,0,2,0,0,0,13,2,1,0,-1,1,0,TvLibrary.Interfaces.ITVCard,
+TvLibrary.Interfaces,DiSEqCDirection,0,0,0,0,0,19,0,0,0,-1,0,1,,TvLibrary.Interfaces.IDiSEqCMotor
+TvLibrary.Interfaces,IDiSEqCMotor,0,9,1,0,0,45,9,1,0,-1,1,1,TvLibrary.Interfaces.DiSEqCDirection,TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,IChannelLinkageCallback,0,1,0,0,0,12,1,1,0,-1,0,1,,TvLibrary.Interfaces.BaseChannelLinkageScanner
+TvLibrary.Interfaces,BaseChannelLinkageScanner,0,1,0,0,1,12,1,1,1,-1,1,1,TvLibrary.Interfaces.IChannelLinkageCallback,TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,ITvSubChannel,0,5,15,0,0,106,5,4,0,-1,4,1,TvLibrary.Interfaces.IVideoStream' TvLibrary.Interfaces.IAudioStream' TvLibrary.Interfaces.IChannel' TvLibrary.Teletext.ITeletext,TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,VideoStreamType,0,0,0,0,0,23,0,0,0,-1,0,2,,TvLibrary.Interfaces.IVideoStream' TvLibrary.Implementations.VideoStream
+TvLibrary.Interfaces,IVideoStream,0,0,3,0,0,15,0,1,0,-1,1,2,TvLibrary.Interfaces.VideoStreamType,TvLibrary.Implementations.VideoStream' TvLibrary.Interfaces.ITvSubChannel
+TvLibrary.Interfaces,CiMenuCallbackSink,0,2,0,0,1,17,2,2,0,-1,1,0,TvLibrary.Interfaces.CiMenu,
+TvLibrary.Interfaces,CiMenuEntry,2,2,2,0,2,38,2,0,0,0,0,1,,TvLibrary.Interfaces.CiMenu
+TvLibrary.Interfaces,CiMenu,9,4,9,0,4,129,4,0,0,0.5,2,1,TvLibrary.Interfaces.CiMenuState' TvLibrary.Interfaces.CiMenuEntry,TvLibrary.Interfaces.CiMenuCallbackSink
+TvLibrary.Interfaces,ISOTextDecoder,0,4,0,0,4,1013,479,0,0,-1,0,1,,TvLibrary.Interfaces.DvbTextConverter
+TvLibrary.Interfaces,PathManager,0,0,1,0,0,16,0,0,0,-1,0,2,,TvLibrary.Implementations.Analog.Configuration' TvLibrary.Log.Log4netLogger
+TvLibrary.Interfaces,ServiceProvider,1,7,0,0,7,84,10,0,0,0,0,1,,TvLibrary.Interfaces.GlobalServiceProvider
+TvLibrary.Interfaces,AudioStreamType,0,0,0,0,0,31,0,0,0,-1,0,3,,TvLibrary.Interfaces.IAudioStream' TvLibrary.Implementations.DVB.DVBAudioStream' TvLibrary.Implementations.DVB.AnalogAudioStream
+TvLibrary.Interfaces,IAudioStream,0,0,3,0,0,15,0,2,0,-1,1,3,TvLibrary.Interfaces.AudioStreamType,TvLibrary.Implementations.DVB.AnalogAudioStream' TvLibrary.Implementations.DVB.DVBAudioStream' TvLibrary.Interfaces.ITvSubChannel
+TvLibrary.Interfaces,IChannel,0,1,4,0,0,26,1,3,0,-1,0,12,,TvLibrary.Channels.ATSCChannel' TvLibrary.Interfaces.ITvSubChannel' TvLibrary.Channels.DVBCChannel' TvLibrary.Channels.DVBTChannel' TvLibrary.Epg.EpgChannel' TvLibrary.Implementations.RadioWebStreamChannel' TvLibrary.Hardware.ICustomTuning' TvLibrary.Channels.DVBSChannel' TvLibrary.Implementations.AnalogChannel' TvLibrary.Interfaces.ITVScanning' TvLibrary.Interfaces.ITVCard' TvLibrary.Channels.DVBBaseChannel
+TvLibrary.Interfaces,VIDEOENCODER_BITRATE_MODE,0,0,0,0,0,23,0,0,0,-1,0,2,,TvLibrary.Interfaces.IQuality' TvLibrary.Implementations.Analog.Configuration
+TvLibrary.Interfaces,QualityType,0,0,0,0,0,17,0,0,0,-1,0,2,,TvLibrary.Interfaces.IQuality' TvLibrary.Implementations.Analog.Configuration
+TvLibrary.Interfaces,IQuality,0,6,2,0,0,38,6,1,0,-1,3,1,TvLibrary.Interfaces.VIDEOENCODER_BITRATE_MODE' TvLibrary.Interfaces.QualityType' TvLibrary.Implementations.Analog.Configuration,TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,CamType,0,0,0,0,0,11,0,0,0,-1,0,2,,TvLibrary.Interfaces.ITVCard' TvLibrary.Interfaces.Pmt
+TvLibrary.Interfaces,ITVCard,0,18,26,0,0,222,18,8,0,-1,13,2,TvLibrary.Interfaces.CardType' TvLibrary.Interfaces.IDiSEqCMotor' TvLibrary.Interfaces.BaseChannelLinkageScanner' TvLibrary.Interfaces.ITvSubChannel' TvLibrary.Interfaces.IChannel' TvLibrary.Interfaces.IQuality' TvLibrary.Interfaces.CamType' TvLibrary.Interfaces.BaseEpgGrabber' TvLibrary.Interfaces.IEpgEvents' TvLibrary.Interfaces.ITVScanning' TvLibrary.ChannelLinkage.PortalChannel' TvLibrary.Epg.EpgChannel' TvLibrary.ScanParameters,TvLibrary.Interfaces.ITVScanning' TvLibrary.Interfaces.IDeviceEventListener
+TvLibrary.Interfaces,IEpgCallback,0,1,0,0,0,12,1,1,0,-1,0,1,,TvLibrary.Interfaces.BaseEpgGrabber
+TvLibrary.Interfaces,BaseEpgGrabber,0,2,0,0,2,17,2,2,1,-1,1,2,TvLibrary.Interfaces.IEpgCallback,TvLibrary.Interfaces.ITVEPG' TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,ITVEPG,0,1,1,0,0,13,1,0,0,-1,2,0,TvLibrary.Interfaces.BaseEpgGrabber' TvLibrary.Epg.EpgChannel,
+TvLibrary.Interfaces,IEpgEvents,0,1,0,0,0,7,1,1,0,-1,1,1,TvLibrary.Epg.EpgChannel,TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,ITVScanning,0,4,1,0,0,30,4,3,0,-1,3,1,TvLibrary.Interfaces.IChannel' TvLibrary.Interfaces.ITVCard' TvLibrary.ScanParameters,TvLibrary.Interfaces.ITVCard
+TvLibrary.Interfaces,GlobalServiceProvider,1,0,1,0,0,18,0,0,0,-1,1,0,TvLibrary.Interfaces.ServiceProvider,
+TvLibrary.Interfaces,TvConstants,0,0,0,0,0,55,0,0,0,-1,0,0,,
+TvLibrary.Interfaces,TvGroupNames,5,0,0,5,0,23,0,0,0,-1,0,0,,
+TvLibrary.Interfaces,RadioGroupNames,5,0,0,5,0,23,0,0,0,-1,0,0,,
+TvLibrary.ChannelLinkage,LinkedChannel,4,1,4,0,1,56,1,0,0,0,0,1,,TvLibrary.ChannelLinkage.PortalChannel
+TvLibrary.ChannelLinkage,PortalChannel,4,1,4,0,1,56,1,0,0,0,1,1,TvLibrary.ChannelLinkage.LinkedChannel,TvLibrary.Interfaces.ITVCard
+TvLibrary.Epg,MpGenre,5,3,5,0,3,76,4,0,0,0.67,0,0,,
+TvLibrary.Epg,Languages,3,5,1,0,5,103,13,0,0,0,0,0,,
+TvLibrary.Epg,EpgChannel,2,2,2,0,2,44,2,0,0,0,2,3,TvLibrary.Interfaces.IChannel' TvLibrary.Epg.EpgProgram,TvLibrary.Interfaces.ITVEPG' TvLibrary.Interfaces.IEpgEvents' TvLibrary.Interfaces.ITVCard
+TvLibrary.Epg,EpgLanguageText,7,1,7,0,1,101,1,0,0,0,0,1,,TvLibrary.Epg.EpgProgram
+TvLibrary.Epg,EpgProgram,3,2,3,0,2,72,4,0,0,1,1,1,TvLibrary.Epg.EpgLanguageText,TvLibrary.Epg.EpgChannel
+TvLibrary.Hardware,CapabilitiesType,0,0,0,0,0,16,0,0,0,-1,0,1,,TvLibrary.Hardware.IHardwareProvider
+TvLibrary.Hardware,IHardwareProvider,0,2,6,0,0,38,2,1,0,-1,1,0,TvLibrary.Hardware.CapabilitiesType,
+TvLibrary.Hardware,ICustomTuning,0,2,0,0,0,16,2,1,0,-1,2,0,TvLibrary.Interfaces.IChannel' TvLibrary.ScanParameters,
+TvLibrary.Implementations.Analog,Configuration,10,4,10,0,2,281,16,0,0,0.5,5,1,TvLibrary.Interfaces.PathManager' TvLibrary.Interfaces.VIDEOENCODER_BITRATE_MODE' TvLibrary.Interfaces.QualityType' TvLibrary.Implementations.Analog.GraphComponents.Graph' TvLibrary.Log.Log,TvLibrary.Interfaces.IQuality
+TvLibrary.Implementations.Analog.GraphComponents,VideoQuality,6,2,6,0,2,120,6,0,0,0,0,1,,TvLibrary.Implementations.Analog.GraphComponents.Capture
+TvLibrary.Implementations.Analog.GraphComponents,Capture,11,3,11,0,2,277,11,0,0,0.67,1,1,TvLibrary.Implementations.Analog.GraphComponents.VideoQuality,TvLibrary.Implementations.Analog.GraphComponents.Graph
+TvLibrary.Implementations.Analog.GraphComponents,Crossbar,6,3,6,0,2,173,10,0,0,1,3,1,TvLibrary.Implementations.AnalogChannel' TvLibrary.Implementations.VideoInputType' TvLibrary.Implementations.AudioInputType,TvLibrary.Implementations.Analog.GraphComponents.Graph
+TvLibrary.Implementations.Analog.GraphComponents,Teletext,2,3,2,0,2,74,4,0,0,1,0,1,,TvLibrary.Implementations.Analog.GraphComponents.Graph
+TvLibrary.Implementations.Analog.GraphComponents,TvAudioVariant,0,0,0,0,0,19,0,0,0,-1,0,1,,TvLibrary.Implementations.Analog.GraphComponents.TvAudio
+TvLibrary.Implementations.Analog.GraphComponents,TvAudio,3,3,3,0,2,106,6,0,0,1,1,1,TvLibrary.Implementations.Analog.GraphComponents.TvAudioVariant,TvLibrary.Implementations.Analog.GraphComponents.Graph
+TvLibrary.Implementations.Analog.GraphComponents,Graph,5,3,5,0,2,116,4,0,0,1,5,1,TvLibrary.Implementations.Analog.GraphComponents.Capture' TvLibrary.Implementations.Analog.GraphComponents.Crossbar' TvLibrary.Implementations.Analog.GraphComponents.Teletext' TvLibrary.Implementations.Analog.GraphComponents.TvAudio' TvLibrary.Implementations.Analog.GraphComponents.Tuner,TvLibrary.Implementations.Analog.Configuration
+TvLibrary.Implementations.Analog.GraphComponents,RadioMode,0,0,0,0,0,16,0,0,0,-1,0,1,,TvLibrary.Implementations.Analog.GraphComponents.Tuner
+TvLibrary.Implementations.Analog.GraphComponents,Tuner,4,3,4,0,2,104,4,0,0,1,1,1,TvLibrary.Implementations.Analog.GraphComponents.RadioMode,TvLibrary.Implementations.Analog.GraphComponents.Graph
+TvLibrary.Channels,DVBIPChannel,1,3,1,0,3,44,6,0,1,1,1,0,TvLibrary.Channels.DVBBaseChannel,
+TvLibrary.Channels,ATSCChannel,4,7,4,0,7,181,22,0,1,0.43,2,0,TvLibrary.Interfaces.IChannel' TvLibrary.Channels.DVBBaseChannel,
+TvLibrary.Channels,DVBBaseChannel,11,6,11,0,6,233,18,5,1,0.67,1,5,TvLibrary.Interfaces.IChannel,TvLibrary.Channels.DVBIPChannel' TvLibrary.Channels.DVBCChannel' TvLibrary.Channels.DVBTChannel' TvLibrary.Channels.ATSCChannel' TvLibrary.Channels.DVBSChannel
+TvLibrary.Channels,DVBCTuning,3,2,0,3,2,36,2,0,0,0,0,1,,TvLibrary.Channels.DVBCChannel
+TvLibrary.Channels,DVBCChannel,2,6,3,0,6,122,11,0,2,1,3,0,TvLibrary.Interfaces.IChannel' TvLibrary.Channels.DVBBaseChannel' TvLibrary.Channels.DVBCTuning,
+TvLibrary.Channels,BandType,0,0,0,0,0,56,0,0,0,-1,0,2,,TvLibrary.Channels.BandTypeConverter' TvLibrary.Channels.DVBSChannel
+TvLibrary.Channels,BandTypeConverter,0,3,0,0,3,131,21,0,0,-1,4,0,TvLibrary.Channels.BandType' TvLibrary.Channels.DisEqcType' TvLibrary.Channels.DVBSChannel' TvLibrary.ScanParameters,
+TvLibrary.Channels,DisEqcType,0,0,0,0,0,31,0,0,0,-1,0,2,,TvLibrary.Channels.BandTypeConverter' TvLibrary.Channels.DVBSChannel
+TvLibrary.Channels,DVBSChannel,10,6,10,0,6,238,19,0,2,0.67,4,1,TvLibrary.Interfaces.IChannel' TvLibrary.Channels.DVBBaseChannel' TvLibrary.Channels.BandType' TvLibrary.Channels.DisEqcType,TvLibrary.Channels.BandTypeConverter
+TvLibrary.Channels,ToneBurst,0,0,0,0,0,6,0,0,0,-1,0,0,,
+TvLibrary.Channels,Tone22k,0,0,0,0,0,6,0,0,0,-1,0,0,,
+TvLibrary.Channels,DVBTTuning,3,2,0,3,2,36,2,0,0,0,0,1,,TvLibrary.Channels.DVBTChannel
+TvLibrary.Channels,DVBTChannel,2,6,3,0,6,112,10,0,2,1,3,0,TvLibrary.Interfaces.IChannel' TvLibrary.Channels.DVBBaseChannel' TvLibrary.Channels.DVBTTuning,
+TvLibrary.Implementations,RadioWebStreamChannel,3,5,6,0,5,131,9,0,1,0.8,3,0,TvLibrary.Interfaces.IChannel' TvLibrary.Country' TvLibrary.CountryCollection,
+TvLibrary.Implementations,VideoStream,3,4,3,0,4,86,6,0,1,0.5,2,0,TvLibrary.Interfaces.VideoStreamType' TvLibrary.Interfaces.IVideoStream,
+TvLibrary.Implementations,AnalogChannel,9,5,11,0,5,363,17,1,1,0.8,5,1,TvLibrary.Interfaces.IChannel' TvLibrary.Implementations.VideoInputType' TvLibrary.Implementations.AudioInputType' TvLibrary.Country' TvLibrary.CountryCollection,TvLibrary.Implementations.Analog.GraphComponents.Crossbar
+TvLibrary.Implementations,VideoInputType,0,0,0,0,0,67,0,0,0,-1,0,2,,TvLibrary.Implementations.AnalogChannel' TvLibrary.Implementations.Analog.GraphComponents.Crossbar
+TvLibrary.Implementations,AudioInputType,0,0,0,0,0,59,0,0,0,-1,0,2,,TvLibrary.Implementations.AnalogChannel' TvLibrary.Implementations.Analog.GraphComponents.Crossbar
+TvLibrary.Log,FileLogger,5,22,1,0,14,393,41,0,1,0,3,0,TvLibrary.Log.LogType' TvLibrary.Log.ILogger' TvLibrary.Log.LogLevel,
+TvLibrary.Log,LogType,0,0,0,0,0,37,0,0,0,-1,0,2,,TvLibrary.Log.FileLogger' TvLibrary.Log.Log
+TvLibrary.Log,ILogger,0,11,1,0,0,73,11,2,0,-1,1,2,TvLibrary.Log.LogLevel,TvLibrary.Log.FileLogger' TvLibrary.Log.Log4netLogger
+TvLibrary.Log,Log,4,22,0,0,12,396,46,0,0,0.14,2,9,TvLibrary.Log.LogType' TvLibrary.Log.LogLevel,TvLibrary.Interfaces.DvbTextConverter' TvLibrary.Implementations.Analog.Configuration' TvLibrary.Interfaces.Cat' TvLibrary.Interfaces.Pmt' TvLibrary.Interfaces.PmtElementaryStream' TvLibrary.Interfaces.Descriptor' TvLibrary.Interfaces.ConditionalAccessDescriptor' TvLibrary.Interfaces.DvbMmiHandler' TvLibrary.Interfaces.DVB_MMI
+TvLibrary.Log,Log4netLogger,2,20,1,0,20,223,33,0,1,0.15,3,0,TvLibrary.Interfaces.PathManager' TvLibrary.Log.ILogger' TvLibrary.Log.LogLevel,
+TvLibrary.Log,LogLevel,0,0,0,0,0,10,0,0,0,-1,0,4,,TvLibrary.Log.ILogger' TvLibrary.Log.FileLogger' TvLibrary.Log.Log' TvLibrary.Log.Log4netLogger
+TvLibrary.Streaming,RtspClient,5,2,5,0,2,75,2,0,0,1,0,0,,
+TvLibrary,ScanParameters,13,0,13,0,0,133,0,0,0,-1,0,4,,TvLibrary.Hardware.ICustomTuning' TvLibrary.Interfaces.ITVCard' TvLibrary.Interfaces.ITVScanning' TvLibrary.Channels.BandTypeConverter
+TvLibrary,Country,5,4,5,0,4,89,4,0,0,0.5,0,3,,TvLibrary.Implementations.RadioWebStreamChannel' TvLibrary.Implementations.AnalogChannel' TvLibrary.CountryCollection
+TvLibrary,CountryCollection,1,4,1,0,4,337,11,0,0,0,1,2,TvLibrary.Country,TvLibrary.Implementations.RadioWebStreamChannel' TvLibrary.Implementations.AnalogChannel
+TvLibrary,TvExceptionTuneCancelled,0,3,0,0,3,22,3,0,0,-1,0,0,,
+TvLibrary,TvExceptionNoPMT,0,3,0,0,3,22,3,0,0,-1,0,0,,
+TvLibrary,TvExceptionNoSignal,0,3,0,0,3,22,3,0,0,-1,1,0,TvLibrary.TvException,
+TvLibrary,TvExceptionGraphBuildingFailed,0,3,0,0,3,22,3,0,0,-1,1,0,TvLibrary.TvException,
+TvLibrary,TvExceptionSWEncoderMissing,0,3,0,0,3,22,3,0,0,-1,1,0,TvLibrary.TvException,
+TvLibrary,TvException,0,3,0,0,3,22,3,0,0,-1,0,3,,TvLibrary.TvExceptionNoSignal' TvLibrary.TvExceptionGraphBuildingFailed' TvLibrary.TvExceptionSWEncoderMissing
+TvLibrary.Implementations.DVB,AnalogAudioStream,4,4,4,0,4,99,6,0,1,0.5,2,0,TvLibrary.Interfaces.AudioStreamType' TvLibrary.Interfaces.IAudioStream,
+TvLibrary.Implementations.DVB,DVBAudioStream,3,4,3,0,4,87,6,0,1,0.5,2,0,TvLibrary.Interfaces.AudioStreamType' TvLibrary.Interfaces.IAudioStream,
+TvLibrary.Teletext,ITeletext,0,7,8,0,0,97,7,1,0,-1,0,1,,TvLibrary.Interfaces.ITvSubChannel
+api,AbstractStringMetric,0,5,2,0,5,70,7,1,1,-1,1,1,api.InterfaceStringMetric,similaritymetrics.Levenstein
+api,AbstractSubstitutionCost,0,4,0,0,4,27,4,1,1,-1,1,2,api.InterfaceSubstitutionCost,similaritymetrics.Levenstein' similaritymetrics.costfunctions.SubCost01
+api,InterfaceStringMetric,0,3,2,0,0,32,3,1,0,-1,0,1,,api.AbstractStringMetric
+api,InterfaceSubstitutionCost,0,4,0,0,0,27,4,1,0,-1,0,1,,api.AbstractSubstitutionCost
+similaritymetrics,Levenstein,1,5,2,0,3,106,16,0,2,0.4,4,0,api.AbstractStringMetric' api.AbstractSubstitutionCost' mathSimmetrics.MathFuncs' similaritymetrics.costfunctions.SubCost01,
+mathSimmetrics,MathFuncs,0,5,0,0,5,59,5,0,0,-1,0,1,,similaritymetrics.Levenstein
+similaritymetrics.costfunctions,SubCost01,0,4,0,0,4,40,4,0,2,-1,1,1,api.AbstractSubstitutionCost,similaritymetrics.Levenstein

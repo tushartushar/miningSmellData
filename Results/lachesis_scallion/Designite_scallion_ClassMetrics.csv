@@ -1,46 +1,46 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-scallion,CLContext,5,6,0,4,5,66,13,0,0,0,6,2,scallion.CLDeviceInfo' OpenTK.Compute.CL10.CL' OpenTK.Compute.CL10.ErrorCode' OpenTK.Compute.CL10.ProgramBuildInfo' scallion.CLKernel' OpenTK.Compute.CL10.MemFlags,scallion.Program' scallion.CLRuntime
-scallion,CLBuffer<T>,6,7,2,4,6,72,12,0,0,0.57,3,0,OpenTK.Compute.CL10.ErrorCode' OpenTK.Compute.CL10.CL' OpenTK.Compute.CL10.MemFlags,
-scallion,CLKernel,7,7,1,6,6,79,14,0,0,0,2,3,OpenTK.Compute.CL10.CL' OpenTK.Compute.CL10.ErrorCode,scallion.CLContext' scallion.Program' scallion.CLRuntime
-scallion,CLDeviceInfo,6,11,45,2,4,322,13,0,0,0,5,3,OpenTK.Compute.CL10.DeviceInfo' OpenTK.Compute.CL10.DeviceTypeFlags' OpenTK.Compute.CL10.CL' OpenTK.Compute.CL10.Bool' OpenTK.Compute.CL10.ErrorCode,scallion.CLContext' scallion.Program' scallion.CLRuntime
-scallion,KernelGenerator,0,3,0,0,1,71,4,0,0,-1,4,1,scallion.ProgramParameters' scallion.ToolConfig' scallion.BitmaskPatternsTuple' scallion.Util,scallion.CLRuntime
+scallion,CLContext,5,6,0,4,5,66,13,0,0,0,3,2,scallion.CLBuffer<T>' scallion.CLKernel' scallion.CLDeviceInfo,scallion.Program' scallion.CLRuntime
+scallion,CLBuffer<T>,6,7,2,4,6,72,12,0,0,0.57,0,3,,scallion.CLContext' scallion.CLKernel' scallion.CLRuntime
+scallion,CLKernel,7,7,1,6,6,79,14,0,0,0,1,3,scallion.CLBuffer<T>,scallion.Program' scallion.CLContext' scallion.CLRuntime
+scallion,CLDeviceInfo,6,11,45,2,4,322,13,0,0,0,0,3,,scallion.CLContext' scallion.Program' scallion.CLRuntime
+scallion,KernelGenerator,0,3,0,0,1,71,5,0,0,-1,4,1,scallion.ProgramParameters' scallion.Util' scallion.BitmaskPatternsTuple' scallion.ToolConfig,scallion.CLRuntime
 scallion,RegexPattern,3,6,0,0,6,108,6,0,0,0,1,3,scallion.SingleRegexPattern,scallion.ToolConfig' scallion.GpgToolConfig' scallion.OnionToolConfig
-scallion,SingleRegexPattern,2,4,0,0,3,68,11,0,0,0,0,1,,scallion.RegexPattern
+scallion,SingleRegexPattern,2,4,0,0,3,68,13,0,0,0,0,1,,scallion.RegexPattern
 scallion,Mode,0,0,0,0,0,7,0,0,0,-1,0,2,,scallion.ProgramParameters' scallion.Program
-scallion,ProgramParameters,18,1,3,17,1,90,6,0,0,0,3,4,scallion.Mode' scallion.ToolConfig' scallion.KernelType,scallion.KernelGenerator' scallion.Program' scallion.CLRuntime' scallion.KernelInput
-scallion,Program,1,6,0,0,4,152,11,0,0,0,9,1,scallion.CLRuntime' scallion.CLContext' scallion.CLKernel' OpenTK.Compute.CL10.CL' scallion.CLDeviceInfo' Mono.Options.OptionSet' scallion.ProgramParameters' OpenSSL.Core.ThreadInitialization' scallion.Mode,scallion.CLRuntime
-scallion,RSAWrapper,0,18,8,0,10,463,29,0,0,-1,3,6,OpenSSL.Core.BIO' OpenSSL.Crypto.RSA' OpenSSL.Core.BigNumber,scallion.CLRuntime' scallion.KernelInput' scallion.ToolConfig' scallion.GpgToolConfig' scallion.OnionToolConfig' scallion.XmlKeyDictionary
+scallion,ProgramParameters,18,1,3,17,1,90,7,0,0,0,3,3,scallion.Mode' scallion.KernelType' scallion.ToolConfig,scallion.KernelGenerator' scallion.CLRuntime' scallion.Program
+scallion,Program,1,6,0,0,4,152,17,0,0,0,7,1,scallion.CLContext' scallion.CLKernel' scallion.CLDeviceInfo' scallion.Mode' scallion.ProgramParameters' scallion.CLRuntime' Mono.Options.OptionSet,scallion.CLRuntime
+scallion,RSAWrapper,0,18,8,0,10,463,32,0,0,-1,0,5,,scallion.GpgToolConfig' scallion.OnionToolConfig' scallion.CLRuntime' scallion.ToolConfig' scallion.XmlKeyDictionary
 scallion,SHA1,0,6,1,0,4,99,14,0,0,-1,1,1,Mono.DataConverter,scallion.CLRuntime
-scallion,TorBase32,0,4,0,0,4,85,13,0,0,-1,0,2,,scallion.GpgToolConfig' scallion.OnionToolConfig
+scallion,TorBase32,0,4,0,0,4,85,18,0,0,-1,0,2,,scallion.OnionToolConfig' scallion.GpgToolConfig
 scallion,KernelType,0,0,0,0,0,5,0,0,0,-1,0,2,,scallion.ProgramParameters' scallion.CLRuntime
-scallion,CLRuntime,7,5,0,1,3,431,35,0,0,0.6,17,1,scallion.KernelType' scallion.Profiler' scallion.CLDeviceInfo' scallion.ProgramParameters' scallion.RSAWrapper' OpenSSL.Core.BigNumber' OpenSSL.Crypto.RSA' scallion.KernelInput' scallion.SHA1' scallion.ToolConfig' scallion.CLContext' scallion.CLKernel' scallion.XmlMatchOutput' scallion.KernelGenerator' OpenTK.Compute.CL10.MemFlags' scallion.Util' scallion.Program,scallion.Program
-scallion,RandomList<T>,2,2,1,0,2,20,3,0,0,0,0,0,,
-scallion,KernelInput,6,2,0,6,2,27,2,0,0,0,3,1,scallion.RSAWrapper' scallion.ToolConfig' scallion.ProgramParameters,scallion.CLRuntime
+scallion,CLRuntime,7,5,0,1,3,433,39,0,0,0.6,17,1,scallion.CLContext' scallion.CLBuffer<T>' scallion.CLKernel' scallion.CLDeviceInfo' scallion.KernelGenerator' scallion.ProgramParameters' scallion.Program' scallion.RSAWrapper' scallion.SHA1' scallion.KernelType' scallion.RandomList<T>' scallion.KernelInput' scallion.Profiler' scallion.Util' scallion.GpgToolConfig' scallion.OnionToolConfig' scallion.XmlMatchOutput,scallion.Program
+scallion,RandomList<T>,2,2,1,0,2,20,3,0,0,0,0,1,,scallion.CLRuntime
+scallion,KernelInput,6,2,0,6,2,27,2,0,0,0,0,1,,scallion.CLRuntime
 scallion,Profiler,1,5,0,0,5,45,7,0,0,0,1,1,scallion.StopwatchHolder,scallion.CLRuntime
 scallion,StopwatchHolder,2,0,0,2,0,5,0,0,0,-1,0,1,,scallion.Profiler
-scallion,Util,2,19,0,0,19,154,28,0,0,0.63,1,4,OpenSSL.Core.BigNumber,scallion.KernelGenerator' scallion.CLRuntime' scallion.ToolConfig' scallion.OnionToolConfig
-scallion,BitmaskPatternsTuple,2,2,0,2,2,11,2,0,0,1,0,3,,scallion.KernelGenerator' scallion.ToolConfig' scallion.GpgToolConfig
-scallion,ToolConfig,2,11,10,0,6,86,14,2,0,0.55,4,4,scallion.RegexPattern' scallion.BitmaskPatternsTuple' scallion.Util' scallion.RSAWrapper,scallion.KernelGenerator' scallion.ProgramParameters' scallion.CLRuntime' scallion.KernelInput
-scallion,GpgToolConfig,0,8,2,0,5,61,8,0,1,-1,4,0,scallion.RegexPattern' scallion.RSAWrapper' scallion.TorBase32' scallion.BitmaskPatternsTuple,
-scallion,OnionToolConfig,0,8,2,0,5,52,8,0,1,-1,5,0,scallion.RegexPattern' scallion.RSAWrapper' scallion.TorBase32' scallion.Util' OpenSSL.Crypto.RSA,
-scallion,XmlPublicKey,0,2,2,0,2,24,2,0,0,-1,1,0,OpenSSL.Core.BigNumber,
-scallion,XmlKeyDictionary,0,3,1,0,3,29,5,0,0,-1,3,0,OpenSSL.Core.BigNumber' OpenSSL.Crypto.RSA' scallion.RSAWrapper,
+scallion,Util,2,19,0,0,19,154,28,0,0,0.63,0,4,,scallion.OnionToolConfig' scallion.CLRuntime' scallion.ToolConfig' scallion.KernelGenerator
+scallion,BitmaskPatternsTuple,2,2,0,2,2,11,2,0,0,1,0,4,,scallion.OnionToolConfig' scallion.ToolConfig' scallion.KernelGenerator' scallion.GpgToolConfig
+scallion,ToolConfig,2,11,10,0,6,86,14,2,0,0.55,4,4,scallion.RegexPattern' scallion.RSAWrapper' scallion.Util' scallion.BitmaskPatternsTuple,scallion.OnionToolConfig' scallion.GpgToolConfig' scallion.KernelGenerator' scallion.ProgramParameters
+scallion,GpgToolConfig,0,8,2,0,5,61,8,0,1,-1,5,1,scallion.RegexPattern' scallion.RSAWrapper' scallion.TorBase32' scallion.BitmaskPatternsTuple' scallion.ToolConfig,scallion.CLRuntime
+scallion,OnionToolConfig,0,8,2,0,5,52,8,0,1,-1,6,1,scallion.RegexPattern' scallion.RSAWrapper' scallion.TorBase32' scallion.Util' scallion.BitmaskPatternsTuple' scallion.ToolConfig,scallion.CLRuntime
+scallion,XmlPublicKey,0,2,2,0,2,24,2,0,0,-1,0,0,,
+scallion,XmlKeyDictionary,0,3,1,0,3,29,5,0,0,-1,1,0,scallion.RSAWrapper,
 scallion,XmlMatchOutput,0,1,7,0,1,38,1,0,0,-1,0,1,,scallion.CLRuntime
 Mono.Options,StringCoda,0,6,0,0,2,75,14,0,0,-1,0,1,,Mono.Options.OptionSet
-Mono.Options,OptionValueCollection,2,22,5,0,12,76,25,0,0,0,4,3,Mono.Options.OptionContext' Mono.Options.Option' Mono.Options.OptionValueType' Mono.Options.OptionSet,Mono.Options.OptionContext' Mono.Options.Option' Mono.Options.OptionSet
-Mono.Options,OptionContext,5,1,5,0,1,30,1,0,0,0,3,7,Mono.Options.Option' Mono.Options.OptionSet' Mono.Options.OptionValueCollection,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet' Mono.Options.Category' Mono.Options.ActionOption' Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>
+Mono.Options,OptionValueCollection,2,22,5,0,12,76,25,0,0,0.09,3,2,Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.OptionException,Mono.Options.OptionContext' Mono.Options.OptionSet
+Mono.Options,OptionContext,5,1,5,0,1,30,1,0,0,0,3,3,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
 Mono.Options,OptionValueType,0,0,0,0,0,5,0,0,0,-1,0,3,,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
-Mono.Options,Option,7,10,6,0,4,164,30,4,0,0.4,5,3,Mono.Options.OptionValueType' Mono.Options.Category' Mono.Options.OptionSet' Mono.Options.OptionContext' Mono.Options.OptionValueCollection,Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.OptionSet
-Mono.Options,ArgumentSource,0,6,1,0,4,55,12,1,0,-1,0,2,,Mono.Options.ResponseFileSource' Mono.Options.OptionSet
+Mono.Options,Option,7,10,6,0,4,164,35,4,0,0.5,5,2,Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.OptionException' Mono.Options.OptionSet' Mono.Options.Category,Mono.Options.OptionContext' Mono.Options.OptionSet
+Mono.Options,ArgumentSource,0,6,1,0,4,55,14,1,0,-1,0,2,,Mono.Options.ResponseFileSource' Mono.Options.OptionSet
 Mono.Options,ResponseFileSource,0,2,1,0,2,18,3,0,1,-1,1,0,Mono.Options.ArgumentSource,
-Mono.Options,OptionException,1,5,1,0,4,31,5,0,0,0.4,0,0,,
-Mono.Options,OptionSet,7,37,2,0,15,581,101,0,0,0.27,8,4,Mono.Options.Option' Mono.Options.ArgumentSource' Mono.Options.OptionContext' Mono.Options.ArgumentEnumerator' Mono.Options.OptionValueCollection' Mono.Options.OptionValueType' Mono.Options.Category' Mono.Options.StringCoda,scallion.Program' Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.Option
-Mono.Options,Category,0,2,0,0,1,13,2,0,1,-1,1,2,Mono.Options.OptionContext,Mono.Options.Option' Mono.Options.OptionSet
-Mono.Options,ActionOption,1,2,0,0,1,14,3,0,1,0,1,2,Mono.Options.OptionContext,Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>
-Mono.Options,ActionOption<T>,1,2,0,0,1,14,3,0,1,0,2,0,Mono.Options.ActionOption' Mono.Options.OptionContext,
-Mono.Options,ActionOption<TKey;TValue>,1,2,0,0,1,16,3,0,1,0,2,0,Mono.Options.ActionOption' Mono.Options.OptionContext,
+Mono.Options,OptionException,1,5,1,0,4,31,5,0,0,0.4,0,3,,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,OptionSet,7,37,2,0,15,581,111,0,0,0.27,12,3,Mono.Options.StringCoda' Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.Option' Mono.Options.ArgumentSource' Mono.Options.OptionException' Mono.Options.Category' Mono.Options.ActionOption' Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>' Mono.Options.ArgumentEnumerator,scallion.Program' Mono.Options.OptionContext' Mono.Options.Option
+Mono.Options,Category,0,2,0,0,1,13,2,0,1,-1,0,2,,Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,ActionOption,1,2,0,0,1,14,3,0,1,1,0,1,,Mono.Options.OptionSet
+Mono.Options,ActionOption<T>,1,2,0,0,1,14,3,0,1,1,0,1,,Mono.Options.OptionSet
+Mono.Options,ActionOption<TKey;TValue>,1,2,0,0,1,16,3,0,1,1,0,1,,Mono.Options.OptionSet
 Mono.Options,ArgumentEnumerator,1,4,0,0,3,27,4,0,0,0,0,1,,Mono.Options.OptionSet
-Mono,DataConverter,3,31,3,1,27,1624,50,2,0,0.32,1,2,Mono.PackContext,scallion.SHA1' Mono.PackContext
-Mono,PackContext,7,2,0,6,2,56,8,0,0,0,1,1,Mono.DataConverter,Mono.DataConverter
-Mono,CopyConverter,0,16,0,0,16,190,48,0,1,-1,0,0,,
-Mono,SwapConverter,0,16,0,0,16,198,48,0,1,-1,0,0,,
+Mono,DataConverter,3,31,3,1,27,1624,140,2,0,0.32,3,1,Mono.PackContext' Mono.CopyConverter' Mono.SwapConverter,scallion.SHA1
+Mono,PackContext,7,2,0,6,2,56,8,0,0,0,0,1,,Mono.DataConverter
+Mono,CopyConverter,0,16,0,0,16,190,48,0,1,-1,0,1,,Mono.DataConverter
+Mono,SwapConverter,0,16,0,0,16,198,48,0,1,-1,0,1,,Mono.DataConverter

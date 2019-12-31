@@ -1,11 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SampleViews,LineItem,0,0,4,0,0,7,0,0,0,-1,0,1,,datagridbinding.frmMain
-SampleViews,SalesInvoice,0,1,9,0,1,17,1,0,0,-1,0,4,,datagridbinding.frmMain' SampleViews.SalesInvoiceView' SampleViews.SalesItemRowsView' SampleViews.newview
-SampleViews,SalesInvoiceViewRowSchema,7,0,0,7,0,14,0,0,2,-1,1,2,RaptorDB.CaseInsensitiveAttribute,datagridbinding.frmMain' SampleViews.SalesInvoiceView
-SampleViews,SalesInvoiceView,0,1,0,0,1,27,1,0,0,-1,3,0,SampleViews.SalesInvoiceViewRowSchema' SampleViews.SalesInvoice' RaptorDB.IMapAPI,
-SampleViews,SalesItemRowsViewRowSchema,4,0,0,4,0,7,0,0,2,-1,0,3,,datagridbinding.frmMain' SampleViews.SalesItemRowsView' Views.ServerSide
-SampleViews,SalesItemRowsView,0,1,0,0,1,19,1,0,0,-1,3,0,SampleViews.SalesInvoice' RaptorDB.IMapAPI' SampleViews.SalesItemRowsViewRowSchema,
+SampleViews,LineItem,0,0,4,0,0,7,0,0,0,-1,0,1,,SampleViews.SalesInvoice
+SampleViews,SalesInvoice,0,1,9,0,1,17,1,0,0,-1,1,3,SampleViews.LineItem,SampleViews.SalesInvoiceView' SampleViews.SalesItemRowsView' SampleViews.newview
+SampleViews,TestData,3,0,0,3,0,6,0,0,0,-1,0,1,,SampleViews.TestView
+SampleViews,TestSchema,2,0,0,2,0,5,0,0,2,-1,0,1,,SampleViews.TestView
+SampleViews,TestView,0,1,0,0,1,16,1,0,0,-1,2,0,SampleViews.TestData' SampleViews.TestSchema,
+SampleViews,SalesInvoiceViewRowSchema,7,0,0,7,0,15,0,0,2,-1,0,1,,SampleViews.SalesInvoiceView
+SampleViews,SalesInvoiceView,0,1,0,0,1,27,1,0,0,-1,2,0,SampleViews.SalesInvoice' SampleViews.SalesInvoiceViewRowSchema,
+SampleViews,SalesItemRowsViewRowSchema,4,0,0,4,0,7,0,0,2,-1,0,2,,SampleViews.SalesItemRowsView' Views.ServerSide
+SampleViews,SalesItemRowsView,0,1,0,0,1,19,1,0,0,-1,2,0,SampleViews.SalesInvoice' SampleViews.SalesItemRowsViewRowSchema,
 SampleViews,NewViewRowSchema,4,0,0,4,0,7,0,0,2,-1,0,1,,SampleViews.newview
-SampleViews,newview,0,1,0,0,1,20,1,0,0,-1,3,0,SampleViews.SalesInvoice' RaptorDB.IMapAPI' SampleViews.NewViewRowSchema,
-Views,ServerSide,0,2,0,0,2,41,3,0,0,-1,2,1,RaptorDB.Common.IRaptorDB' SampleViews.SalesItemRowsViewRowSchema,datagridbinding.frmMain
-Views,sumtype,3,0,0,3,0,6,0,0,1,-1,0,0,,
+SampleViews,newview,0,1,0,0,1,20,1,0,0,-1,2,0,SampleViews.SalesInvoice' SampleViews.NewViewRowSchema,
+Views,ServerSide,0,2,0,0,2,41,3,0,0,-1,2,0,SampleViews.SalesItemRowsViewRowSchema' Views.sumtype,
+Views,sumtype,3,0,0,3,0,6,0,0,1,-1,0,1,,Views.ServerSide

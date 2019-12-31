@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ConsoleTests,SimpleEntity,0,2,1,0,1,9,2,0,0,-1,0,1,,ConsoleTests.MainClass
+ConsoleTests,SmallEntity,0,0,2,0,0,5,0,0,0,-1,0,1,,ConsoleTests.MainClass
+ConsoleTests,MainClass,1,18,0,0,12,1072,57,0,0,0.22,7,0,ConsoleTests.SimpleEntity' ConsoleTests.SmallEntity' ConsoleTests.Account' ConsoleTests.Transfer' ConsoleTests.TreeItem' ConsoleTests.Dummy' ConsoleTests.BetShop,
+ConsoleTests,Account,3,0,0,3,0,7,0,0,0,-1,0,1,,ConsoleTests.MainClass
+ConsoleTests,Transfer,2,0,0,2,0,5,0,0,0,-1,0,1,,ConsoleTests.MainClass
+ConsoleTests,TreeItem,1,0,0,1,0,4,0,0,0,-1,0,1,,ConsoleTests.MainClass
+ConsoleTests,Dummy,1,0,0,1,0,4,0,0,0,-1,0,1,,ConsoleTests.MainClass
+ConsoleTests,Event,1,0,3,1,0,8,0,0,0,-1,1,2,ConsoleTests.BetOffer,ConsoleTests.BetOffer' ConsoleTests.BetShop
+ConsoleTests,BetOffer,0,0,4,0,0,7,0,0,0,-1,1,3,ConsoleTests.Event,ConsoleTests.Event' ConsoleTests.Bet' ConsoleTests.BetShop
+ConsoleTests,Ticket,0,0,4,0,0,7,0,0,0,-1,1,1,ConsoleTests.Bet,ConsoleTests.BetShop
+ConsoleTests,Bet,0,0,2,0,0,5,0,0,0,-1,1,2,ConsoleTests.BetOffer,ConsoleTests.Ticket' ConsoleTests.BetShop
+ConsoleTests,BetShop,5,5,0,3,3,120,5,0,0,0.4,4,1,ConsoleTests.Event' ConsoleTests.BetOffer' ConsoleTests.Ticket' ConsoleTests.Bet,ConsoleTests.MainClass
+ConsoleTests,Queue,10,6,0,0,1,146,11,0,0,0,2,0,ConsoleTests.Item' ConsoleTests.ProcessorSlot,
+ConsoleTests,Item,3,0,0,3,0,6,0,0,0,-1,0,1,,ConsoleTests.Queue
+ConsoleTests,ProcessorSlot,1,3,1,0,3,23,3,0,0,0,0,1,,ConsoleTests.Queue
+ConsoleTests,SequentialTests,0,6,0,0,1,105,14,0,0,-1,0,0,,
+ConsoleTests,ShieldedActor<T>,2,4,1,0,4,45,4,0,0,0,0,1,,ConsoleTests.ActorTestRun
+ConsoleTests,ActorTestRun,8,4,0,0,2,59,5,0,0,0,1,0,ConsoleTests.ShieldedActor<T>,

@@ -1,15 +1,15 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WorkoutWotch.UI,LinkerPreserve,0,1,0,0,0,8,1,0,0,-1,0,0,,
-WorkoutWotch.UI,PreserveAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
-WorkoutWotch.UI,App,3,2,4,0,2,51,2,0,0,0,1,0,WorkoutWotch.ViewModels.MainViewModel,
-WorkoutWotch.UI,CompositionRoot,12,18,0,0,3,124,18,0,0,0.39,2,1,WorkoutWotch.Models.ExerciseProgram' WorkoutWotch.Models.Exercise,WorkoutWotch.UI.SplatRegistrar
+WorkoutWotch.UI,LinkerPreserve,0,1,0,0,0,8,1,0,0,-1,1,0,WorkoutWotch.UI.PreserveAttribute,
+WorkoutWotch.UI,PreserveAttribute,0,0,0,0,0,3,0,0,0,-1,0,1,,WorkoutWotch.UI.LinkerPreserve
+WorkoutWotch.UI,App,3,2,4,0,2,51,3,0,0,0,1,1,WorkoutWotch.UI.MainView,WorkoutWotch.UI.CompositionRoot
+WorkoutWotch.UI,CompositionRoot,12,18,0,0,3,124,18,2,0,0.39,1,1,WorkoutWotch.UI.App,WorkoutWotch.UI.SplatRegistrar
 WorkoutWotch.UI,ExerciseCellView,3,4,0,0,1,97,5,0,0,0,0,0,,
 WorkoutWotch.UI,ExerciseProgramCellView,0,1,0,0,1,23,1,0,0,-1,0,0,,
-WorkoutWotch.UI,ExerciseProgramView,0,2,0,0,1,79,2,0,0,-1,1,0,WorkoutWotch.UI.Controls.ControlButton,
-WorkoutWotch.UI,ExerciseProgramsView,0,6,0,0,1,131,7,0,0,-1,1,0,WorkoutWotch.ViewModels.ExerciseProgramsViewModelStatus,
-WorkoutWotch.UI,MainView,0,1,0,0,1,8,1,0,0,-1,1,0,WorkoutWotch.ViewModels.MainViewModel,
-WorkoutWotch.UI,SplatRegistrar,1,7,0,0,1,51,7,0,0,0,1,0,WorkoutWotch.UI.CompositionRoot,
+WorkoutWotch.UI,ExerciseProgramView,0,2,0,0,1,79,2,0,0,-1,1,1,WorkoutWotch.UI.Controls.ControlButton,WorkoutWotch.UI.SplatRegistrar
+WorkoutWotch.UI,ExerciseProgramsView,0,6,0,0,1,131,8,0,0,-1,0,1,,WorkoutWotch.UI.SplatRegistrar
+WorkoutWotch.UI,MainView,0,1,0,0,1,8,1,0,0,-1,0,1,,WorkoutWotch.UI.App
+WorkoutWotch.UI,SplatRegistrar,1,7,0,0,1,51,7,2,0,0,4,0,WorkoutWotch.UI.CompositionRoot' WorkoutWotch.UI.ExerciseProgramView' WorkoutWotch.UI.ExerciseProgramsView' WorkoutWotch.UI.ReactiveUI.ControlButtonCommandBinder,
 WorkoutWotch.UI.Behaviors,AccessoryType,0,0,0,0,0,5,0,0,0,-1,0,1,,WorkoutWotch.UI.Behaviors.CellBehavior
 WorkoutWotch.UI.Behaviors,CellBehavior,2,4,0,2,4,26,4,0,0,0.5,1,0,WorkoutWotch.UI.Behaviors.AccessoryType,
 WorkoutWotch.UI.Controls,ControlButton,4,1,4,3,1,52,1,0,0,0,0,2,,WorkoutWotch.UI.ExerciseProgramView' WorkoutWotch.UI.ReactiveUI.ControlButtonCommandBinder
-WorkoutWotch.UI.ReactiveUI,ControlButtonCommandBinder,0,3,0,0,3,33,3,0,0,-1,1,0,WorkoutWotch.UI.Controls.ControlButton,
+WorkoutWotch.UI.ReactiveUI,ControlButtonCommandBinder,0,3,0,0,3,33,3,0,0,-1,1,1,WorkoutWotch.UI.Controls.ControlButton,WorkoutWotch.UI.SplatRegistrar

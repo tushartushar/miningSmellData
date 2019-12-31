@@ -1,42 +1,42 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NMoneys.Serialization.Entity_Framework,MonetaryQuantity,0,8,2,0,7,64,14,0,0,-1,2,1,NMoneys.Money' NMoneys.CurrencyIsoCode,NMoneys.Serialization.Entity_Framework.MonetaryQuantityCanonicalConfigurator
+NMoneys.Serialization.Entity_Framework,MonetaryQuantity,0,8,2,0,7,64,14,0,0,-1,0,1,,NMoneys.Serialization.Entity_Framework.MonetaryQuantityCanonicalConfigurator
 NMoneys.Serialization.Entity_Framework,MonetaryQuantityCanonicalConfigurator,0,2,0,0,2,15,2,0,0,-1,1,0,NMoneys.Serialization.Entity_Framework.MonetaryQuantity,
-NMoneys.Serialization.Json_NET,CanonicalMoneyConverter,2,4,0,0,4,31,5,0,0,0.5,4,0,NMoneys.Serialization.Json_NET.IMoneyWriter' NMoneys.Serialization.Json_NET.IMoneyReader' NMoneys.Money' NMoneys.Serialization.Json_NET.MoneyReader,
-NMoneys.Serialization.Json_NET,DefaultMoneyConverter,2,5,0,0,5,32,6,0,0,0.6,5,0,NMoneys.Serialization.Json_NET.IMoneyWriter' NMoneys.Serialization.Json_NET.IMoneyReader' NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Money' NMoneys.Serialization.Json_NET.MoneyReader,
-NMoneys.Serialization.Json_NET,CurrencyLessMoneyConverter,1,5,0,0,5,25,5,0,0,0.8,3,0,NMoneys.Serialization.Json_NET.IMoneyReader' NMoneys.CurrencyIsoCode' NMoneys.Money,
+NMoneys.Serialization.Json_NET,CanonicalMoneyConverter,2,4,0,0,4,31,5,0,0,0.5,5,0,NMoneys.Serialization.Json_NET.IMoneyReader' NMoneys.Serialization.Json_NET.MoneyReader' NMoneys.Serialization.Json_NET.CanonicalMoneyReader' NMoneys.Serialization.Json_NET.IMoneyWriter' NMoneys.Serialization.Json_NET.CanonicalMoneyWriter,
+NMoneys.Serialization.Json_NET,DefaultMoneyConverter,2,5,0,0,5,32,6,0,0,0.6,6,0,NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Serialization.Json_NET.IMoneyReader' NMoneys.Serialization.Json_NET.MoneyReader' NMoneys.Serialization.Json_NET.DefaultMoneyReader' NMoneys.Serialization.Json_NET.IMoneyWriter' NMoneys.Serialization.Json_NET.DefaultMoneyWriter,
+NMoneys.Serialization.Json_NET,CurrencyLessMoneyConverter,1,5,0,0,5,25,5,0,0,0.8,2,0,NMoneys.Serialization.Json_NET.IMoneyReader' NMoneys.Serialization.Json_NET.CurrencyLessMoneyReader,
 NMoneys.Serialization.Json_NET,CurrencyStyle,0,0,0,0,0,5,0,0,0,-1,0,6,,NMoneys.Serialization.Json_NET.DefaultMoneyConverter' NMoneys.Serialization.Json_NET.DefaultMoneyReader' NMoneys.Serialization.Json_NET.CanonicalMoneyReader' NMoneys.Serialization.Json_NET.CurrencyStyleReadExtensions' NMoneys.Serialization.Json_NET.DefaultMoneyWriter' NMoneys.Serialization.Json_NET.CurrencyStyleWriteExtensions
 NMoneys.Serialization.Json_NET,ElementName,3,4,0,0,3,21,4,0,0,0,0,4,,NMoneys.Serialization.Json_NET.DefaultMoneyReader' NMoneys.Serialization.Json_NET.CanonicalMoneyReader' NMoneys.Serialization.Json_NET.DefaultMoneyWriter' NMoneys.Serialization.Json_NET.CanonicalMoneyWriter
-NMoneys.Serialization.Json_NET,IMoneyReader,0,2,0,0,0,5,2,3,0,-1,0,3,,NMoneys.Serialization.Json_NET.CanonicalMoneyConverter' NMoneys.Serialization.Json_NET.DefaultMoneyConverter' NMoneys.Serialization.Json_NET.CurrencyLessMoneyConverter
+NMoneys.Serialization.Json_NET,IMoneyReader,0,2,0,0,0,5,2,3,0,-1,0,6,,NMoneys.Serialization.Json_NET.CanonicalMoneyConverter' NMoneys.Serialization.Json_NET.DefaultMoneyConverter' NMoneys.Serialization.Json_NET.CurrencyLessMoneyConverter' NMoneys.Serialization.Json_NET.DefaultMoneyReader' NMoneys.Serialization.Json_NET.CanonicalMoneyReader' NMoneys.Serialization.Json_NET.CurrencyLessMoneyReader
 NMoneys.Serialization.Json_NET,MoneyReader,0,1,0,0,0,10,1,0,0,-1,0,2,,NMoneys.Serialization.Json_NET.CanonicalMoneyConverter' NMoneys.Serialization.Json_NET.DefaultMoneyConverter
-NMoneys.Serialization.Json_NET,DefaultMoneyReader,1,3,0,0,3,17,3,0,1,0.67,3,0,NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Serialization.Json_NET.ElementName' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Json_NET,CanonicalMoneyReader,0,2,0,0,2,12,2,0,1,-1,3,0,NMoneys.Serialization.Json_NET.ElementName' NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Json_NET,CurrencyLessMoneyReader,1,3,0,0,3,18,3,0,1,0.67,1,0,NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Json_NET,CurrencyStyleReadExtensions,0,1,0,0,0,21,2,0,0,-1,4,0,NMoneys.CurrencyIsoCode' NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Code' NMoneys.Currency,
-NMoneys.Serialization.Json_NET,IMoneyWriter,0,1,0,0,0,4,1,1,0,-1,1,2,NMoneys.Money,NMoneys.Serialization.Json_NET.CanonicalMoneyConverter' NMoneys.Serialization.Json_NET.DefaultMoneyConverter
-NMoneys.Serialization.Json_NET,MoneyWriter,0,3,0,0,1,12,3,2,1,-1,1,0,NMoneys.Money,
-NMoneys.Serialization.Json_NET,DefaultMoneyWriter,1,3,0,0,1,18,3,0,2,0.67,3,0,NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Serialization.Json_NET.ElementName' NMoneys.Money,
-NMoneys.Serialization.Json_NET,CanonicalMoneyWriter,0,2,0,0,0,16,2,0,2,-1,3,0,NMoneys.Serialization.Json_NET.ElementName' NMoneys.Money' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Json_NET,CurrencyStyleWriteExtensions,0,1,0,0,0,17,2,0,0,-1,2,0,NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Mongo_DB,CanonicalMoneySerializer,0,1,0,0,1,6,1,0,1,-1,0,0,,
-NMoneys.Serialization.Mongo_DB,DefaultMoneySerializer,0,1,0,0,1,7,1,0,1,-1,0,0,,
-NMoneys.Serialization.Mongo_DB,MoneySerializer,2,5,0,0,4,66,5,2,0,0.4,3,0,NMoneys.Serialization.Mongo_DB.IMoneyReader' NMoneys.Serialization.Mongo_DB.IMoneyWriter' NMoneys.Money,
+NMoneys.Serialization.Json_NET,DefaultMoneyReader,1,3,0,0,3,17,3,0,1,0.67,3,1,NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Serialization.Json_NET.ElementName' NMoneys.Serialization.Json_NET.IMoneyReader,NMoneys.Serialization.Json_NET.DefaultMoneyConverter
+NMoneys.Serialization.Json_NET,CanonicalMoneyReader,0,2,0,0,2,12,2,0,1,-1,3,1,NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Serialization.Json_NET.ElementName' NMoneys.Serialization.Json_NET.IMoneyReader,NMoneys.Serialization.Json_NET.CanonicalMoneyConverter
+NMoneys.Serialization.Json_NET,CurrencyLessMoneyReader,1,3,0,0,3,18,3,0,1,0.67,1,1,NMoneys.Serialization.Json_NET.IMoneyReader,NMoneys.Serialization.Json_NET.CurrencyLessMoneyConverter
+NMoneys.Serialization.Json_NET,CurrencyStyleReadExtensions,0,1,0,0,0,21,3,0,0,-1,1,0,NMoneys.Serialization.Json_NET.CurrencyStyle,
+NMoneys.Serialization.Json_NET,IMoneyWriter,0,1,0,0,0,4,1,1,0,-1,0,3,,NMoneys.Serialization.Json_NET.CanonicalMoneyConverter' NMoneys.Serialization.Json_NET.DefaultMoneyConverter' NMoneys.Serialization.Json_NET.MoneyWriter
+NMoneys.Serialization.Json_NET,MoneyWriter,0,3,0,0,1,12,3,2,1,-1,1,2,NMoneys.Serialization.Json_NET.IMoneyWriter,NMoneys.Serialization.Json_NET.DefaultMoneyWriter' NMoneys.Serialization.Json_NET.CanonicalMoneyWriter
+NMoneys.Serialization.Json_NET,DefaultMoneyWriter,1,3,0,0,1,18,3,0,2,0.67,3,1,NMoneys.Serialization.Json_NET.CurrencyStyle' NMoneys.Serialization.Json_NET.ElementName' NMoneys.Serialization.Json_NET.MoneyWriter,NMoneys.Serialization.Json_NET.DefaultMoneyConverter
+NMoneys.Serialization.Json_NET,CanonicalMoneyWriter,0,2,0,0,0,16,2,0,2,-1,2,1,NMoneys.Serialization.Json_NET.ElementName' NMoneys.Serialization.Json_NET.MoneyWriter,NMoneys.Serialization.Json_NET.CanonicalMoneyConverter
+NMoneys.Serialization.Json_NET,CurrencyStyleWriteExtensions,0,1,0,0,0,17,3,0,0,-1,1,0,NMoneys.Serialization.Json_NET.CurrencyStyle,
+NMoneys.Serialization.Mongo_DB,CanonicalMoneySerializer,0,1,0,0,1,6,1,0,1,-1,3,0,NMoneys.Serialization.Mongo_DB.MoneySerializer' NMoneys.Serialization.Mongo_DB.CanonicalMoneyWriter' NMoneys.Serialization.Mongo_DB.CanonicalMoneyReader,
+NMoneys.Serialization.Mongo_DB,DefaultMoneySerializer,0,1,0,0,1,7,1,0,1,-1,3,0,NMoneys.Serialization.Mongo_DB.MoneySerializer' NMoneys.Serialization.Mongo_DB.DefaultMoneyWriter' NMoneys.Serialization.Mongo_DB.DefaultMoneyReader,
+NMoneys.Serialization.Mongo_DB,MoneySerializer,2,5,0,0,4,66,5,2,0,0.4,2,2,NMoneys.Serialization.Mongo_DB.IMoneyWriter' NMoneys.Serialization.Mongo_DB.IMoneyReader,NMoneys.Serialization.Mongo_DB.CanonicalMoneySerializer' NMoneys.Serialization.Mongo_DB.DefaultMoneySerializer
 NMoneys.Serialization.Mongo_DB,PropertyNameCapitalizer,0,1,0,0,1,12,2,0,0,-1,0,0,,
-NMoneys.Serialization.Mongo_DB,IMoneyWriter,0,1,0,0,0,4,1,1,0,-1,1,1,NMoneys.Money,NMoneys.Serialization.Mongo_DB.MoneySerializer
-NMoneys.Serialization.Mongo_DB,MoneyWriter,0,3,0,0,1,12,3,2,1,-1,1,0,NMoneys.Money,
-NMoneys.Serialization.Mongo_DB,CanonicalMoneyWriter,1,3,0,0,1,21,3,0,2,0,2,0,NMoneys.Money' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Mongo_DB,DefaultMoneyWriter,1,3,0,0,1,19,3,0,2,0,2,0,NMoneys.Money' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Mongo_DB,IMoneyReader,0,1,0,0,0,4,1,1,0,-1,0,1,,NMoneys.Serialization.Mongo_DB.MoneySerializer
-NMoneys.Serialization.Mongo_DB,MoneyReader,0,3,0,0,1,13,3,2,1,-1,2,0,NMoneys.CurrencyIsoCode' NMoneys.Money,
-NMoneys.Serialization.Mongo_DB,CanonicalMoneyReader,1,3,0,0,1,22,3,0,2,0,4,0,NMoneys.Money' NMoneys.Code' NMoneys.Currency' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Mongo_DB,DefaultMoneyReader,1,3,0,0,1,22,3,0,2,0,2,0,NMoneys.Money' NMoneys.CurrencyIsoCode,
-NMoneys.Serialization.Service_Stack,CanonicalMoneySerializer,0,2,0,0,2,13,2,0,0,-1,2,0,NMoneys.Serialization.Service_Stack.CanonicalSurrogate' NMoneys.Money,
+NMoneys.Serialization.Mongo_DB,IMoneyWriter,0,1,0,0,0,4,1,1,0,-1,0,2,,NMoneys.Serialization.Mongo_DB.MoneySerializer' NMoneys.Serialization.Mongo_DB.MoneyWriter
+NMoneys.Serialization.Mongo_DB,MoneyWriter,0,3,0,0,1,12,3,2,1,-1,1,2,NMoneys.Serialization.Mongo_DB.IMoneyWriter,NMoneys.Serialization.Mongo_DB.CanonicalMoneyWriter' NMoneys.Serialization.Mongo_DB.DefaultMoneyWriter
+NMoneys.Serialization.Mongo_DB,CanonicalMoneyWriter,1,3,0,0,1,21,3,0,2,0,1,1,NMoneys.Serialization.Mongo_DB.MoneyWriter,NMoneys.Serialization.Mongo_DB.CanonicalMoneySerializer
+NMoneys.Serialization.Mongo_DB,DefaultMoneyWriter,1,3,0,0,1,19,3,0,2,0,1,1,NMoneys.Serialization.Mongo_DB.MoneyWriter,NMoneys.Serialization.Mongo_DB.DefaultMoneySerializer
+NMoneys.Serialization.Mongo_DB,IMoneyReader,0,1,0,0,0,4,1,1,0,-1,0,2,,NMoneys.Serialization.Mongo_DB.MoneySerializer' NMoneys.Serialization.Mongo_DB.MoneyReader
+NMoneys.Serialization.Mongo_DB,MoneyReader,0,3,0,0,1,13,3,2,1,-1,1,2,NMoneys.Serialization.Mongo_DB.IMoneyReader,NMoneys.Serialization.Mongo_DB.CanonicalMoneyReader' NMoneys.Serialization.Mongo_DB.DefaultMoneyReader
+NMoneys.Serialization.Mongo_DB,CanonicalMoneyReader,1,3,0,0,1,22,3,0,2,0,1,1,NMoneys.Serialization.Mongo_DB.MoneyReader,NMoneys.Serialization.Mongo_DB.CanonicalMoneySerializer
+NMoneys.Serialization.Mongo_DB,DefaultMoneyReader,1,3,0,0,1,22,3,0,2,0,1,1,NMoneys.Serialization.Mongo_DB.MoneyReader,NMoneys.Serialization.Mongo_DB.DefaultMoneySerializer
+NMoneys.Serialization.Service_Stack,CanonicalMoneySerializer,0,2,0,0,2,13,2,0,0,-1,1,0,NMoneys.Serialization.Service_Stack.CanonicalSurrogate,
 NMoneys.Serialization.Service_Stack,CanonicalNullableMoneySerializer,0,2,0,0,2,22,3,0,0,-1,1,0,NMoneys.Serialization.Service_Stack.CanonicalSurrogate,
-NMoneys.Serialization.Service_Stack,DefaultMoneySerializer,0,2,0,0,2,39,2,0,0,-1,2,0,NMoneys.Serialization.Service_Stack.DefaultSurrogate' NMoneys.Money,
-NMoneys.Serialization.Service_Stack,Numeric,0,4,0,0,4,34,5,0,0,-1,2,0,NMoneys.Serialization.Service_Stack.NumericSurrogate' NMoneys.Money,
-NMoneys.Serialization.Service_Stack,DefaultNullableMoneySerializer,0,2,0,0,2,57,3,0,0,-1,2,0,NMoneys.Serialization.Service_Stack.DefaultSurrogate' NMoneys.Money,
-NMoneys.Serialization.Service_Stack,CurrencyLessMoneySerializer,0,1,0,0,1,12,1,0,0,-1,1,0,NMoneys.Money,
-NMoneys.Serialization.Service_Stack,ISurrogate,0,1,1,0,0,5,1,3,0,-1,0,0,,
-NMoneys.Serialization.Service_Stack,CanonicalSurrogate,0,2,2,0,2,23,2,0,1,-1,2,2,NMoneys.Money' NMoneys.Serialization.Service_Stack.CurrencySurrogate,NMoneys.Serialization.Service_Stack.CanonicalMoneySerializer' NMoneys.Serialization.Service_Stack.CanonicalNullableMoneySerializer
-NMoneys.Serialization.Service_Stack,CurrencySurrogate,0,2,1,0,2,9,2,0,0,-1,1,1,NMoneys.CurrencyIsoCode,NMoneys.Serialization.Service_Stack.CanonicalSurrogate
-NMoneys.Serialization.Service_Stack,DefaultSurrogate,0,2,2,0,2,14,2,0,1,-1,1,2,NMoneys.Money,NMoneys.Serialization.Service_Stack.DefaultMoneySerializer' NMoneys.Serialization.Service_Stack.DefaultNullableMoneySerializer
-NMoneys.Serialization.Service_Stack,NumericSurrogate,0,2,2,0,2,14,2,0,1,-1,4,1,NMoneys.Money' NMoneys.CurrencyIsoCode' NMoneys.Code' NMoneys.Currency,NMoneys.Serialization.Service_Stack.Numeric
+NMoneys.Serialization.Service_Stack,DefaultMoneySerializer,0,2,0,0,2,39,2,0,0,-1,2,0,NMoneys.Serialization.Service_Stack.DefaultSurrogate' NMoneys.Serialization.Service_Stack.NumericSurrogate,
+NMoneys.Serialization.Service_Stack,Numeric,0,4,0,0,4,34,5,0,0,-1,1,0,NMoneys.Serialization.Service_Stack.NumericSurrogate,
+NMoneys.Serialization.Service_Stack,DefaultNullableMoneySerializer,0,2,0,0,2,57,3,0,0,-1,1,0,NMoneys.Serialization.Service_Stack.DefaultSurrogate,
+NMoneys.Serialization.Service_Stack,CurrencyLessMoneySerializer,0,1,0,0,1,12,1,0,0,-1,0,0,,
+NMoneys.Serialization.Service_Stack,ISurrogate,0,1,1,0,0,5,1,3,0,-1,0,3,,NMoneys.Serialization.Service_Stack.CanonicalSurrogate' NMoneys.Serialization.Service_Stack.DefaultSurrogate' NMoneys.Serialization.Service_Stack.NumericSurrogate
+NMoneys.Serialization.Service_Stack,CanonicalSurrogate,0,2,2,0,2,23,2,0,1,-1,2,2,NMoneys.Serialization.Service_Stack.ISurrogate' NMoneys.Serialization.Service_Stack.CurrencySurrogate,NMoneys.Serialization.Service_Stack.CanonicalMoneySerializer' NMoneys.Serialization.Service_Stack.CanonicalNullableMoneySerializer
+NMoneys.Serialization.Service_Stack,CurrencySurrogate,0,2,1,0,2,9,2,0,0,-1,0,1,,NMoneys.Serialization.Service_Stack.CanonicalSurrogate
+NMoneys.Serialization.Service_Stack,DefaultSurrogate,0,2,2,0,2,14,2,0,1,-1,1,2,NMoneys.Serialization.Service_Stack.ISurrogate,NMoneys.Serialization.Service_Stack.DefaultMoneySerializer' NMoneys.Serialization.Service_Stack.DefaultNullableMoneySerializer
+NMoneys.Serialization.Service_Stack,NumericSurrogate,0,2,2,0,2,14,2,0,1,-1,1,2,NMoneys.Serialization.Service_Stack.ISurrogate,NMoneys.Serialization.Service_Stack.DefaultMoneySerializer' NMoneys.Serialization.Service_Stack.Numeric

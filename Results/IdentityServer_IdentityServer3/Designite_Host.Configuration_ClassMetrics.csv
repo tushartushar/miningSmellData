@@ -1,13 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Host.Configuration.Extensions,AnotherCustomGrantValidator,0,1,1,0,1,22,2,0,1,-1,1,0,IdentityServer3.Core.Validation.ValidatedTokenRequest,
-Host.Configuration.Extensions,CustomGrantValidator,0,1,1,0,1,21,2,0,1,-1,1,0,IdentityServer3.Core.Validation.ValidatedTokenRequest,
-Host.Configuration.Extensions,CustomTokenResponseGenerator,0,1,0,0,1,10,1,0,1,-1,2,0,IdentityServer3.Core.Models.TokenResponse' IdentityServer3.Core.Validation.ValidatedTokenRequest,
-Host.Configuration.Extensions,ResponsePoco,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Host.Configuration.Extensions,AnotherCustomGrantValidator,0,1,1,0,1,22,2,0,1,-1,0,1,,Host.Configuration.FactoryExtensions
+Host.Configuration.Extensions,CustomGrantValidator,0,1,1,0,1,21,2,0,1,-1,0,1,,Host.Configuration.FactoryExtensions
+Host.Configuration.Extensions,CustomTokenResponseGenerator,0,1,0,0,1,10,1,0,1,-1,1,1,Host.Configuration.Extensions.ResponsePoco,Host.Configuration.FactoryExtensions
+Host.Configuration.Extensions,ResponsePoco,0,0,2,0,0,5,0,0,0,-1,0,1,,Host.Configuration.Extensions.CustomTokenResponseGenerator
 Host.Configuration.Extensions,SyncConfigurationManager,1,3,0,0,3,44,3,0,0,0,1,1,Host.Configuration.Extensions.AsyncHelper,Owin.IdentityServerExtension
 Host.Configuration.Extensions,AsyncHelper,1,2,0,0,2,27,2,0,0,0,0,1,,Host.Configuration.Extensions.SyncConfigurationManager
-IdentityServer3.Host.Config,Cert,0,2,0,0,1,24,2,0,0,-1,0,1,,Owin.IdentityServerExtension
-IdentityServer3.Host.Config,Clients,0,1,0,0,1,432,1,0,0,-1,9,1,IdentityServer3.Core.Models.Flows' IdentityServer3.Core.SecretTypes' IdentityServer3.Core.Constants' IdentityServer3.Core.Models.AccessTokenType' IdentityServer3.Core.Models.TokenUsage' IdentityServer3.Core.Models.TokenExpiration' IdentityServer3.Core.StandardScopes' IdentityServer3.Core.Models.Scope' IdentityServer3.Core.Models.StandardScopes,Owin.IdentityServerExtension
-IdentityServer3.Host.Config,Scopes,0,1,0,0,1,58,1,0,0,-1,5,1,IdentityServer3.Core.Models.StandardScopes' IdentityServer3.Core.Models.ScopeType' IdentityServer3.Core.ClaimTypes' IdentityServer3.Core.Constants' IdentityServer3.Core.Models.Scope,Owin.IdentityServerExtension
-IdentityServer3.Host.Config,Users,0,1,0,0,1,38,1,0,0,-1,3,1,IdentityServer3.Core.ClaimTypes' IdentityServer3.Core.Constants' IdentityServer3.Core.ClaimValueTypes,Owin.IdentityServerExtension
-Host.Configuration,FactoryExtensions,0,2,0,0,2,17,2,0,0,-1,1,0,IdentityServer3.Core.Configuration.IdentityServerServiceFactory,
-Owin,IdentityServerExtension,0,2,0,0,2,102,2,0,0,-1,7,0,IdentityServer3.Core.Configuration.IdentityServerServiceFactory' IdentityServer3.Core.Configuration.IdentityServerOptions' IdentityServer3.Host.Config.Users' IdentityServer3.Host.Config.Clients' IdentityServer3.Host.Config.Scopes' IdentityServer3.Host.Config.Cert' Host.Configuration.Extensions.SyncConfigurationManager,
+IdentityServer3.Host.Config,Cert,0,2,0,0,1,24,3,0,0,-1,0,1,,Owin.IdentityServerExtension
+IdentityServer3.Host.Config,Clients,0,1,0,0,1,432,1,0,0,-1,0,1,,Owin.IdentityServerExtension
+IdentityServer3.Host.Config,Scopes,0,1,0,0,1,58,1,0,0,-1,0,1,,Owin.IdentityServerExtension
+IdentityServer3.Host.Config,Users,0,1,0,0,1,38,1,0,0,-1,0,1,,Owin.IdentityServerExtension
+Host.Configuration,FactoryExtensions,0,2,0,0,2,17,2,0,0,-1,3,0,Host.Configuration.Extensions.AnotherCustomGrantValidator' Host.Configuration.Extensions.CustomGrantValidator' Host.Configuration.Extensions.CustomTokenResponseGenerator,
+Owin,IdentityServerExtension,0,2,0,0,2,102,2,0,0,-1,5,0,Host.Configuration.Extensions.SyncConfigurationManager' IdentityServer3.Host.Config.Cert' IdentityServer3.Host.Config.Clients' IdentityServer3.Host.Config.Scopes' IdentityServer3.Host.Config.Users,

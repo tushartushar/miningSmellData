@@ -1,0 +1,29 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+inAppBillingDemo,Activity1,10,12,0,5,2,166,16,0,0,0.33,8,1,inAppBillingDemo.InAppBillingDemoPurchaseObserver' inAppBillingDemo.Resource' inAppBillingDemo.Id' inAppBillingDemo.Layout' Billing.BillingService' Billing.Consts' Billing.PurchaseDatabase' Billing.ResponseHandler,inAppBillingDemo.InAppBillingDemoPurchaseObserver
+inAppBillingDemo,InAppBillingDemoPurchaseObserver,1,5,0,0,5,99,23,0,1,0,8,1,inAppBillingDemo.Activity1' Billing.BillingService' Billing.RequestPurchase' Billing.RestoreTransactions' Billing.Consts' Billing.ResponseCode' Billing.PurchaseState' Billing.PurchaseObserver,inAppBillingDemo.Activity1
+inAppBillingDemo,Resource,0,0,0,0,0,61,0,0,0,-1,0,1,,inAppBillingDemo.Activity1
+inAppBillingDemo,Attribute,0,1,0,0,0,7,1,0,0,-1,0,0,,
+inAppBillingDemo,Drawable,1,1,0,1,0,10,1,0,0,0,0,0,,
+inAppBillingDemo,Id,2,1,0,2,0,13,1,0,0,0,0,1,,inAppBillingDemo.Activity1
+inAppBillingDemo,Layout,1,1,0,1,0,10,1,0,0,0,0,1,,inAppBillingDemo.Activity1
+inAppBillingDemo,String,2,1,0,2,0,13,1,0,0,0,0,0,,
+com.android.vending.billing,IMarketBillingService,0,1,0,0,0,6,1,2,0,-1,0,2,,com.android.vending.billing.BillingServiceStub' Billing.BillingService
+com.android.vending.billing,BillingServiceStub,2,5,0,0,3,106,8,0,1,0.4,2,1,com.android.vending.billing.IMarketBillingService' com.android.vending.billing.Proxy,Billing.BillingService
+com.android.vending.billing,Proxy,1,4,0,0,4,54,6,0,1,0.5,0,1,,com.android.vending.billing.BillingServiceStub
+Billing,BillingReceiver,1,4,0,0,1,90,8,0,0,0,4,3,Billing.BillingService' Billing.Consts' Billing.ResponseCode' Billing.ResponseHandler,Billing.ResponseHandler' Billing.Security' Billing.BillingService
+Billing,BillingService,4,17,1,0,11,670,36,0,0,0.47,14,5,com.android.vending.billing.IMarketBillingService' com.android.vending.billing.BillingServiceStub' Billing.BillingReceiver' Billing.BillingRequest' Billing.CheckBillingSupported' Billing.RequestPurchase' Billing.ConfirmNotifications' Billing.GetPurchaseInformation' Billing.RestoreTransactions' Billing.Consts' Billing.ResponseCode' Billing.ResponseHandler' Billing.Security' Billing.VerifiedPurchase,Billing.PurchaseObserver' Billing.ResponseHandler' Billing.BillingReceiver' inAppBillingDemo.Activity1' inAppBillingDemo.InAppBillingDemoPurchaseObserver
+Billing,BillingRequest,3,8,1,0,3,107,15,5,0,0.5,0,1,,Billing.BillingService
+Billing,CheckBillingSupported,2,3,0,1,2,62,5,0,1,0.67,0,1,,Billing.BillingService
+Billing,RequestPurchase,4,5,0,3,3,76,7,0,1,0.8,0,4,,Billing.ResponseHandler' Billing.PurchaseObserver' inAppBillingDemo.InAppBillingDemoPurchaseObserver' Billing.BillingService
+Billing,ConfirmNotifications,2,2,0,0,1,21,2,0,1,0,0,1,,Billing.BillingService
+Billing,GetPurchaseInformation,3,3,0,0,1,29,3,0,1,0,0,1,,Billing.BillingService
+Billing,RestoreTransactions,2,4,0,0,1,33,4,0,1,0.75,0,4,,Billing.PurchaseObserver' Billing.ResponseHandler' inAppBillingDemo.InAppBillingDemoPurchaseObserver' Billing.BillingService
+Billing,Consts,27,0,0,27,0,81,0,0,0,-1,0,8,,Billing.PurchaseObserver' Billing.ResponseHandler' Billing.PurchaseDatabase' inAppBillingDemo.Activity1' inAppBillingDemo.InAppBillingDemoPurchaseObserver' Billing.BillingReceiver' Billing.Security' Billing.BillingService
+Billing,ResponseCode,0,0,0,0,0,21,0,0,0,-1,0,5,,Billing.BillingReceiver' Billing.ResponseHandler' Billing.PurchaseObserver' inAppBillingDemo.InAppBillingDemoPurchaseObserver' Billing.BillingService
+Billing,PurchaseState,0,0,0,0,0,18,0,0,0,-1,0,5,,Billing.ResponseHandler' Billing.PurchaseObserver' inAppBillingDemo.InAppBillingDemoPurchaseObserver' Billing.PurchaseDatabase' Billing.Security
+Billing,PurchaseDatabase,16,6,0,0,4,160,10,0,0,0,3,2,Billing.Consts' Billing.PurchaseState' Billing.DatabaseHelper,inAppBillingDemo.Activity1' Billing.ResponseHandler
+Billing,DatabaseHelper,1,4,0,0,3,32,5,0,0,0.5,0,1,,Billing.PurchaseDatabase
+Billing,PurchaseObserver,6,8,0,0,5,134,8,1,0,0.5,6,2,Billing.BillingService' Billing.RequestPurchase' Billing.RestoreTransactions' Billing.Consts' Billing.ResponseCode' Billing.PurchaseState,inAppBillingDemo.InAppBillingDemoPurchaseObserver' Billing.ResponseHandler
+Billing,ResponseHandler,2,7,0,0,7,137,12,0,0,0,10,3,Billing.BillingReceiver' Billing.BillingService' Billing.RequestPurchase' Billing.RestoreTransactions' Billing.Consts' Billing.ResponseCode' Billing.PurchaseState' Billing.PurchaseDatabase' Billing.PurchaseObserver' Billing.Security,Billing.BillingReceiver' inAppBillingDemo.Activity1' Billing.BillingService
+Billing,Security,5,6,0,0,5,236,17,0,0,0,4,2,Billing.BillingReceiver' Billing.Consts' Billing.PurchaseState' Billing.VerifiedPurchase,Billing.ResponseHandler' Billing.BillingService
+Billing,VerifiedPurchase,6,1,0,6,1,18,1,0,0,0,0,2,,Billing.BillingService' Billing.Security

@@ -1,103 +1,75 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-cbconnectcli,MainClass,0,2,0,0,1,33,3,0,0,-1,0,0,,
-cbconnectcli,ICommand,0,1,0,0,0,4,1,2,0,-1,0,0,,
-cbconnectcli,CreateBaselineDatabaseCommand,1,14,0,0,2,365,24,0,1,0.14,9,0,CouchbaseConnect2014.Models.Schedule' cbconnectcli.RawScheduleData' cbconnectcli.SpeakerRaw' cbconnectcli.SessionSpeaker' CouchbaseConnect2014.Models.Session' cbconnectcli.StartAndEnd' CouchbaseConnect2014.Models.Slot' CouchbaseConnect2014.Models.Speaker' CouchbaseConnect2014.Models.ScavengerHuntItem,
+cbconnectcli,MainClass,0,2,0,0,1,33,5,0,0,-1,3,0,cbconnectcli.ICommand' cbconnectcli.CreateBaselineDatabaseCommand' cbconnectcli.ExtractSpeakerImageUrlCommand,
+cbconnectcli,ICommand,0,1,0,0,0,4,1,2,0,-1,0,3,,cbconnectcli.MainClass' cbconnectcli.CreateBaselineDatabaseCommand' cbconnectcli.ExtractSpeakerImageUrlCommand
+cbconnectcli,CreateBaselineDatabaseCommand,1,14,0,0,2,365,24,0,1,0.14,11,1,cbconnectcli.ICommand' cbconnectcli.SessionSpeaker' cbconnectcli.SpeakerRaw' cbconnectcli.StartAndEnd' cbconnectcli.RawScheduleData' CouchbaseConnect2014.Models.Day' CouchbaseConnect2014.Models.Session' CouchbaseConnect2014.Models.Slot' CouchbaseConnect2014.Models.Speaker' CouchbaseConnect2014.Models.Schedule' CouchbaseConnect2014.Models.ScavengerHuntItem,cbconnectcli.MainClass
 cbconnectcli,SessionSpeaker,2,0,0,2,0,5,0,0,0,-1,0,1,,cbconnectcli.CreateBaselineDatabaseCommand
 cbconnectcli,SpeakerRaw,4,0,0,4,0,7,0,0,0,-1,0,1,,cbconnectcli.CreateBaselineDatabaseCommand
 cbconnectcli,StartAndEnd,0,0,2,0,0,5,0,0,0,-1,0,1,,cbconnectcli.CreateBaselineDatabaseCommand
 cbconnectcli,RawScheduleData,0,1,0,0,1,72,1,0,0,-1,0,1,,cbconnectcli.CreateBaselineDatabaseCommand
-cbconnectcli,ExtractSpeakerImageUrlCommand,0,3,0,0,2,1648,4,0,1,-1,0,0,,
+cbconnectcli,ExtractSpeakerImageUrlCommand,0,3,0,0,2,1648,4,0,1,-1,1,1,cbconnectcli.ICommand,cbconnectcli.MainClass
 cbconnectcli,SpeakerImage,0,0,2,0,0,5,0,0,0,-1,0,0,,
 CouchbaseConnect2014.Models,Agenda,0,2,1,0,2,16,2,0,1,-1,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Models,Contact,0,0,8,0,0,36,0,1,1,-1,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Models,Day,0,1,2,0,1,15,1,0,0,-1,0,0,,
-CouchbaseConnect2014.Models,Session,0,1,6,0,1,33,1,0,1,-1,0,2,,cbconnectcli.CreateBaselineDatabaseCommand' CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Models,Slot,0,1,3,0,1,20,1,0,0,-1,0,1,,cbconnectcli.CreateBaselineDatabaseCommand
-CouchbaseConnect2014.Models,Tweet,0,0,8,0,0,44,0,0,0,-1,0,0,,
+CouchbaseConnect2014.Models,Contact,0,0,8,0,0,36,0,1,1,-1,0,3,,CouchbaseConnect2014.Models.ContactProxy' CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
+CouchbaseConnect2014.Models,Day,0,1,2,0,1,15,1,0,0,-1,0,2,,CouchbaseConnect2014.Models.Schedule' cbconnectcli.CreateBaselineDatabaseCommand
+CouchbaseConnect2014.Models,Session,0,1,6,0,1,33,1,0,1,-1,0,3,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository' cbconnectcli.CreateBaselineDatabaseCommand
+CouchbaseConnect2014.Models,Slot,0,1,3,0,1,20,1,0,0,-1,0,2,,CouchbaseConnect2014.Models.Day' cbconnectcli.CreateBaselineDatabaseCommand
+CouchbaseConnect2014.Models,Tweet,0,0,8,0,0,44,0,0,0,-1,0,2,,CouchbaseConnect2014.Services.ITwitterService' CouchbaseConnect2014.Services.TwitterService
 CouchbaseConnect2014.Models,UserSession,0,0,4,0,0,13,0,0,0,-1,0,0,,
-CouchbaseConnect2014.Models,Speaker,0,1,6,0,1,31,1,0,1,-1,0,2,,cbconnectcli.CreateBaselineDatabaseCommand' CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Models,AggregateRoot,0,0,1,0,0,7,0,7,0,-1,0,0,,
-CouchbaseConnect2014.Models,Schedule,0,0,1,0,0,4,0,0,1,-1,0,2,,cbconnectcli.CreateBaselineDatabaseCommand' CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Models,CouchbaseUser,0,0,2,0,0,13,0,0,0,-1,0,1,,CouchbaseConnect2014.Services.CouchbaseUserService
+CouchbaseConnect2014.Models,Speaker,0,1,6,0,1,31,1,0,1,-1,0,3,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository' cbconnectcli.CreateBaselineDatabaseCommand
+CouchbaseConnect2014.Models,AggregateRoot,0,0,1,0,0,7,0,7,0,-1,0,7,,CouchbaseConnect2014.Models.Session' CouchbaseConnect2014.Models.Contact' CouchbaseConnect2014.Models.Speaker' CouchbaseConnect2014.Models.Schedule' CouchbaseConnect2014.Models.ScavengerHuntItem' CouchbaseConnect2014.Models.ScavengerHuntCapture' CouchbaseConnect2014.Models.Agenda
+CouchbaseConnect2014.Models,Schedule,0,0,1,0,0,4,0,0,1,-1,0,3,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository' cbconnectcli.CreateBaselineDatabaseCommand
+CouchbaseConnect2014.Models,CouchbaseUser,0,0,2,0,0,13,0,0,0,-1,0,2,,CouchbaseConnect2014.Services.ICouchbaseUserService' CouchbaseConnect2014.Services.CouchbaseUserService
 CouchbaseConnect2014.Models,ContactExchange,0,0,4,0,0,23,0,0,0,-1,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
 CouchbaseConnect2014.Models,ConferenceSurveyResult,4,1,4,0,1,34,1,0,0,0,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Models,ContactProxy,0,0,0,0,0,3,0,0,2,-1,0,0,,
+CouchbaseConnect2014.Models,ContactProxy,0,0,0,0,0,3,0,0,2,-1,0,1,,CouchbaseConnect2014.Services.Repository
 CouchbaseConnect2014.Models,ScavengerHuntItem,0,1,3,0,1,24,1,0,1,-1,0,1,,cbconnectcli.CreateBaselineDatabaseCommand
 CouchbaseConnect2014.Models,ScavengerHuntCapture,0,0,2,0,0,15,0,0,1,-1,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Models,ScavengerHuntView,0,0,6,0,0,35,0,0,0,-1,0,1,,CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Services,ICouchbaseService,0,4,1,0,0,8,4,1,0,-1,0,1,,CouchbaseConnect2014.Services.Repository
-CouchbaseConnect2014.Services,CouchbaseService,4,9,1,0,4,252,18,0,1,0,2,0,CouchbaseConnect2014.Services.ICouchbaseUserService' TinyIoC.TinyIoCContainer,
-CouchbaseConnect2014.Services,ITimeService,0,0,2,0,0,5,0,1,0,-1,0,0,,
-CouchbaseConnect2014.Services,IRepository,0,20,0,0,0,27,20,1,0,-1,6,0,CouchbaseConnect2014.Models.Contact' CouchbaseConnect2014.Models.Agenda' CouchbaseConnect2014.Models.ContactExchange' CouchbaseConnect2014.Models.ConferenceSurveyResult' CouchbaseConnect2014.SessionRatingResult' CouchbaseConnect2014.Models.ScavengerHuntCapture,
-CouchbaseConnect2014.Services,Repository,2,29,0,0,21,308,40,0,1,0.14,12,0,CouchbaseConnect2014.Services.ICouchbaseService' CouchbaseConnect2014.AppConfig' CouchbaseConnect2014.Models.Contact' CouchbaseConnect2014.Models.Schedule' CouchbaseConnect2014.Models.Session' CouchbaseConnect2014.Models.Speaker' CouchbaseConnect2014.Models.Agenda' CouchbaseConnect2014.Models.ContactExchange' CouchbaseConnect2014.Models.ConferenceSurveyResult' CouchbaseConnect2014.SessionRatingResult' CouchbaseConnect2014.Models.ScavengerHuntView' CouchbaseConnect2014.Models.ScavengerHuntCapture,
+CouchbaseConnect2014.Models,ScavengerHuntView,0,0,6,0,0,35,0,0,0,-1,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
+CouchbaseConnect2014.Services,ICouchbaseService,0,4,1,0,0,8,4,1,0,-1,0,2,,CouchbaseConnect2014.Services.CouchbaseService' CouchbaseConnect2014.Services.Repository
+CouchbaseConnect2014.Services,CouchbaseService,4,9,1,0,4,252,18,0,1,0,0,0,,
+CouchbaseConnect2014.Services,ITimeService,0,0,2,0,0,5,0,1,0,-1,0,1,,CouchbaseConnect2014.Services.TimeService
+CouchbaseConnect2014.Services,IRepository,0,20,0,0,0,27,20,1,0,-1,0,1,,CouchbaseConnect2014.Services.Repository
+CouchbaseConnect2014.Services,Repository,2,29,0,0,21,308,40,0,1,0.14,0,0,,
 CouchbaseConnect2014.Services,TimeService,0,0,2,0,0,13,0,0,1,-1,0,0,,
-CouchbaseConnect2014.Services,ITwitterService,0,1,0,0,0,4,1,1,0,-1,0,0,,
-CouchbaseConnect2014.Services,TwitterService,0,1,0,0,1,152,1,0,1,-1,4,0,CouchbaseConnect2014.Services.Tweet' CouchbaseConnect2014.Services.User' CouchbaseConnect2014.Services.Entities' CouchbaseConnect2014.Services.Url,
+CouchbaseConnect2014.Services,ITwitterService,0,1,0,0,0,4,1,1,0,-1,0,1,,CouchbaseConnect2014.Services.TwitterService
+CouchbaseConnect2014.Services,TwitterService,0,1,0,0,1,152,2,0,1,-1,0,0,,
 CouchbaseConnect2014.Services,Tweet,1,0,6,0,0,56,0,0,0,-1,0,1,,CouchbaseConnect2014.Services.TwitterService
 CouchbaseConnect2014.Services,User,0,0,6,0,0,42,0,0,0,-1,0,2,,CouchbaseConnect2014.Services.TwitterService' CouchbaseConnect2014.Services.CouchbaseUserService
 CouchbaseConnect2014.Services,Entities,0,0,1,0,0,10,0,0,0,-1,0,1,,CouchbaseConnect2014.Services.TwitterService
 CouchbaseConnect2014.Services,Url,0,0,2,0,0,16,0,0,0,-1,0,1,,CouchbaseConnect2014.Services.TwitterService
-CouchbaseConnect2014.Services,ICouchbaseUserService,0,2,0,0,0,5,2,1,0,-1,0,1,,CouchbaseConnect2014.Services.CouchbaseService
-CouchbaseConnect2014.Services,CouchbaseUserService,0,2,0,0,2,79,2,0,1,-1,2,0,CouchbaseConnect2014.Services.User' CouchbaseConnect2014.Models.CouchbaseUser,
-CouchbaseConnect2014,LiveQueryObservableCollection<T>,1,2,0,0,2,26,2,0,0,0,0,0,,
-CouchbaseConnect2014,AppConfig,0,0,3,0,0,19,0,0,0,-1,0,1,,CouchbaseConnect2014.Services.Repository
+CouchbaseConnect2014.Services,ICouchbaseUserService,0,2,0,0,0,5,2,1,0,-1,0,2,,CouchbaseConnect2014.Services.CouchbaseUserService' CouchbaseConnect2014.Services.CouchbaseService
+CouchbaseConnect2014.Services,CouchbaseUserService,0,2,0,0,2,79,4,0,1,-1,0,0,,
+CouchbaseConnect2014,LiveQueryObservableCollection<T>,1,2,0,0,2,26,2,0,0,1,0,1,,CouchbaseConnect2014.Services.Repository
+CouchbaseConnect2014,AppConfig,0,0,3,0,0,19,0,0,0,-1,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
 CouchbaseConnect2014,SessionRatingResult,3,1,4,0,1,32,1,0,0,0,0,2,,CouchbaseConnect2014.Services.IRepository' CouchbaseConnect2014.Services.Repository
-TinyIoC,SafeDictionary<TKey;TValue>,2,4,1,0,4,66,4,0,0,0,0,0,,
+TinyIoC,SafeDictionary<TKey;TValue>,2,4,1,0,4,66,5,0,0,0,0,2,,TinyIoC.TypeExtensions' TinyIoC.TinyIoCContainer
 TinyIoC,AssemblyExtensions,0,1,0,0,1,26,1,0,0,-1,0,0,,
-TinyIoC,TypeExtensions,1,3,0,0,1,167,5,0,0,0,1,0,TinyIoC.GenericMethodCacheKey,
-TinyIoC,GenericMethodCacheKey,5,4,0,0,3,62,13,0,0,0,0,3,,TinyIoC.TypeExtensions' System.Reflection.TypeExtensions' System.Reflection.GenericMethodCacheKey
-TinyIoC,TinyIoCResolutionException,1,2,0,0,2,12,2,0,0,0,0,0,,
-TinyIoC,TinyIoCRegistrationTypeException,1,2,0,0,2,12,2,0,0,0,0,0,,
-TinyIoC,TinyIoCRegistrationException,2,4,0,0,4,21,4,0,0,0.5,0,0,,
-TinyIoC,TinyIoCWeakReferenceException,1,2,0,0,2,12,2,0,0,0,0,0,,
-TinyIoC,TinyIoCConstructorResolutionException,1,4,0,0,4,20,4,0,0,0.75,0,0,,
-TinyIoC,TinyIoCAutoRegistrationException,1,3,0,0,2,18,3,0,0,0,0,0,,
-TinyIoC,NamedParameterOverloads,1,3,1,0,3,22,3,0,0,1,0,19,,TinyIoC.TinyIoCContainer' TinyIoC.ObjectFactoryBase' TinyIoC.MultiInstanceFactory' TinyIoC.DelegateFactory' TinyIoC.WeakDelegateFactory' TinyIoC.InstanceFactory' TinyIoC.WeakInstanceFactory' TinyIoC.SingletonFactory' TinyIoC.CustomObjectLifetimeFactory' System.Reflection.NamedParameterOverloads' System.Reflection.TinyIoCContainer' System.Reflection.ObjectFactoryBase' System.Reflection.MultiInstanceFactory' System.Reflection.DelegateFactory' System.Reflection.WeakDelegateFactory' System.Reflection.InstanceFactory' System.Reflection.WeakInstanceFactory' System.Reflection.SingletonFactory' System.Reflection.CustomObjectLifetimeFactory
-TinyIoC,UnregisteredResolutionActions,0,0,0,0,0,20,0,0,0,-1,0,4,,TinyIoC.ResolveOptions' TinyIoC.TinyIoCContainer' System.Reflection.ResolveOptions' System.Reflection.TinyIoCContainer
-TinyIoC,NamedResolutionFailureActions,0,0,0,0,0,5,0,0,0,-1,0,4,,TinyIoC.ResolveOptions' TinyIoC.TinyIoCContainer' System.Reflection.ResolveOptions' System.Reflection.TinyIoCContainer
-TinyIoC,ResolveOptions,6,0,6,0,0,59,0,0,0,-1,2,19,TinyIoC.UnregisteredResolutionActions' TinyIoC.NamedResolutionFailureActions,TinyIoC.TinyIoCContainer' TinyIoC.ObjectFactoryBase' TinyIoC.MultiInstanceFactory' TinyIoC.DelegateFactory' TinyIoC.WeakDelegateFactory' TinyIoC.InstanceFactory' TinyIoC.WeakInstanceFactory' TinyIoC.SingletonFactory' TinyIoC.CustomObjectLifetimeFactory' System.Reflection.ResolveOptions' System.Reflection.TinyIoCContainer' System.Reflection.ObjectFactoryBase' System.Reflection.MultiInstanceFactory' System.Reflection.DelegateFactory' System.Reflection.WeakDelegateFactory' System.Reflection.InstanceFactory' System.Reflection.WeakInstanceFactory' System.Reflection.SingletonFactory' System.Reflection.CustomObjectLifetimeFactory
-TinyIoC,TinyIoCContainer,5,116,1,0,86,2607,183,0,0,0.03,10,20,TinyIoC.RegisterOptions' TinyIoC.MultiRegisterOptions' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions' TinyIoC.ObjectFactoryBase' TinyIoC.TypeRegistration' TinyIoC.SingletonFactory' TinyIoC.MultiInstanceFactory' TinyIoC.NamedResolutionFailureActions' TinyIoC.UnregisteredResolutionActions,CouchbaseConnect2014.Services.CouchbaseService' TinyIoC.RegisterOptions' TinyIoC.ObjectFactoryBase' TinyIoC.MultiInstanceFactory' TinyIoC.DelegateFactory' TinyIoC.WeakDelegateFactory' TinyIoC.InstanceFactory' TinyIoC.WeakInstanceFactory' TinyIoC.SingletonFactory' TinyIoC.CustomObjectLifetimeFactory' System.Reflection.TinyIoCContainer' System.Reflection.RegisterOptions' System.Reflection.ObjectFactoryBase' System.Reflection.MultiInstanceFactory' System.Reflection.DelegateFactory' System.Reflection.WeakDelegateFactory' System.Reflection.InstanceFactory' System.Reflection.WeakInstanceFactory' System.Reflection.SingletonFactory' System.Reflection.CustomObjectLifetimeFactory
-TinyIoC,RegisterOptions,2,7,0,0,7,99,19,0,0,0,4,5,TinyIoC.TinyIoCContainer' TinyIoC.TypeRegistration' TinyIoC.ObjectFactoryBase' TinyIoC.ITinyIoCObjectLifetimeProvider,TinyIoC.TinyIoCContainer' TinyIoC.MultiRegisterOptions' System.Reflection.TinyIoCContainer' System.Reflection.RegisterOptions' System.Reflection.MultiRegisterOptions
-TinyIoC,MultiRegisterOptions,1,4,0,0,3,41,5,0,0,0,1,3,TinyIoC.RegisterOptions,TinyIoC.TinyIoCContainer' System.Reflection.TinyIoCContainer' System.Reflection.MultiRegisterOptions
-TinyIoC,ITinyIoCObjectLifetimeProvider,0,3,0,0,0,17,3,0,0,-1,0,10,,TinyIoC.RegisterOptions' TinyIoC.ObjectFactoryBase' TinyIoC.MultiInstanceFactory' TinyIoC.SingletonFactory' TinyIoC.CustomObjectLifetimeFactory' System.Reflection.RegisterOptions' System.Reflection.ObjectFactoryBase' System.Reflection.MultiInstanceFactory' System.Reflection.SingletonFactory' System.Reflection.CustomObjectLifetimeFactory
-TinyIoC,ObjectFactoryBase,0,4,7,0,4,67,4,14,0,-1,4,5,TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions' TinyIoC.ITinyIoCObjectLifetimeProvider,TinyIoC.TinyIoCContainer' TinyIoC.RegisterOptions' System.Reflection.TinyIoCContainer' System.Reflection.RegisterOptions' System.Reflection.ObjectFactoryBase
-TinyIoC,MultiInstanceFactory,2,3,3,0,3,49,5,0,1,0,5,3,TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions' TinyIoC.CustomObjectLifetimeFactory' TinyIoC.ITinyIoCObjectLifetimeProvider,TinyIoC.TinyIoCContainer' System.Reflection.TinyIoCContainer' System.Reflection.MultiInstanceFactory
-TinyIoC,DelegateFactory,2,3,4,0,3,43,4,0,1,0.67,3,1,TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,System.Reflection.DelegateFactory
-TinyIoC,WeakDelegateFactory,2,3,4,0,3,49,5,0,1,0.67,3,1,TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,System.Reflection.WeakDelegateFactory
-TinyIoC,InstanceFactory,3,4,5,0,4,51,6,0,1,0.5,3,1,TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,System.Reflection.InstanceFactory
-TinyIoC,WeakInstanceFactory,3,4,4,0,4,59,7,0,1,0.5,3,1,TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,System.Reflection.WeakInstanceFactory
-TinyIoC,SingletonFactory,4,5,3,0,5,67,10,0,1,0,5,3,TinyIoC.NamedParameterOverloads' TinyIoC.TinyIoCContainer' TinyIoC.ResolveOptions' TinyIoC.CustomObjectLifetimeFactory' TinyIoC.ITinyIoCObjectLifetimeProvider,TinyIoC.TinyIoCContainer' System.Reflection.TinyIoCContainer' System.Reflection.SingletonFactory
-TinyIoC,CustomObjectLifetimeFactory,4,5,3,0,5,74,8,0,1,0,4,5,TinyIoC.ITinyIoCObjectLifetimeProvider' TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,TinyIoC.MultiInstanceFactory' TinyIoC.SingletonFactory' System.Reflection.MultiInstanceFactory' System.Reflection.SingletonFactory' System.Reflection.CustomObjectLifetimeFactory
-TinyIoC,TypeRegistration,1,4,2,0,4,31,7,0,0,0.75,0,5,,TinyIoC.TinyIoCContainer' TinyIoC.RegisterOptions' System.Reflection.TinyIoCContainer' System.Reflection.RegisterOptions' System.Reflection.TypeRegistration
-TinyIoC,ReverseTypeExtender,0,10,0,0,10,43,10,0,0,-1,0,0,,
-System.Reflection,SafeDictionary<TKey;TValue>,2,4,1,0,4,66,4,0,0,0,0,0,,
-System.Reflection,AssemblyExtensions,0,1,0,0,1,26,1,0,0,-1,0,0,,
-System.Reflection,TypeExtensions,1,3,0,0,1,167,5,0,0,0.67,1,0,TinyIoC.GenericMethodCacheKey,
-System.Reflection,GenericMethodCacheKey,5,4,0,0,3,62,13,0,0,0,1,0,TinyIoC.GenericMethodCacheKey,
-System.Reflection,TinyIoCResolutionException,1,2,0,0,2,12,2,0,0,0,0,0,,
-System.Reflection,TinyIoCRegistrationTypeException,1,2,0,0,2,12,2,0,0,0,0,0,,
-System.Reflection,TinyIoCRegistrationException,2,4,0,0,4,21,4,0,0,0.5,0,0,,
-System.Reflection,TinyIoCWeakReferenceException,1,2,0,0,2,12,2,0,0,0,0,0,,
-System.Reflection,TinyIoCConstructorResolutionException,1,4,0,0,4,20,4,0,0,0.75,0,0,,
-System.Reflection,TinyIoCAutoRegistrationException,1,3,0,0,2,18,3,0,0,0.67,0,0,,
-System.Reflection,NamedParameterOverloads,1,3,1,0,3,22,3,0,0,1,1,0,TinyIoC.NamedParameterOverloads,
-System.Reflection,UnregisteredResolutionActions,0,0,0,0,0,20,0,0,0,-1,0,0,,
-System.Reflection,NamedResolutionFailureActions,0,0,0,0,0,5,0,0,0,-1,0,0,,
-System.Reflection,ResolveOptions,6,0,6,0,0,59,0,0,0,-1,3,0,TinyIoC.ResolveOptions' TinyIoC.UnregisteredResolutionActions' TinyIoC.NamedResolutionFailureActions,
-System.Reflection,TinyIoCContainer,5,116,1,0,86,2607,183,0,0,0.91,11,0,TinyIoC.TinyIoCContainer' TinyIoC.RegisterOptions' TinyIoC.MultiRegisterOptions' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions' TinyIoC.ObjectFactoryBase' TinyIoC.TypeRegistration' TinyIoC.SingletonFactory' TinyIoC.MultiInstanceFactory' TinyIoC.NamedResolutionFailureActions' TinyIoC.UnregisteredResolutionActions,
-System.Reflection,RegisterOptions,2,7,0,0,7,99,19,0,0,0,5,0,TinyIoC.TinyIoCContainer' TinyIoC.TypeRegistration' TinyIoC.ObjectFactoryBase' TinyIoC.RegisterOptions' TinyIoC.ITinyIoCObjectLifetimeProvider,
-System.Reflection,MultiRegisterOptions,1,4,0,0,3,41,5,0,0,0,2,0,TinyIoC.RegisterOptions' TinyIoC.MultiRegisterOptions,
-System.Reflection,ITinyIoCObjectLifetimeProvider,0,3,0,0,0,17,3,0,0,-1,0,0,,
-System.Reflection,ObjectFactoryBase,0,4,7,0,4,67,4,0,0,-1,5,0,TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions' TinyIoC.ObjectFactoryBase' TinyIoC.ITinyIoCObjectLifetimeProvider,
-System.Reflection,MultiInstanceFactory,2,3,3,0,3,49,5,0,1,0,6,0,TinyIoC.MultiInstanceFactory' TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions' TinyIoC.CustomObjectLifetimeFactory' TinyIoC.ITinyIoCObjectLifetimeProvider,
-System.Reflection,DelegateFactory,2,3,4,0,3,43,4,0,1,0.67,4,0,TinyIoC.DelegateFactory' TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,
-System.Reflection,WeakDelegateFactory,2,3,4,0,3,49,5,0,1,0.67,4,0,TinyIoC.WeakDelegateFactory' TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,
-System.Reflection,InstanceFactory,3,4,5,0,4,51,6,0,1,0.5,4,0,TinyIoC.InstanceFactory' TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,
-System.Reflection,WeakInstanceFactory,3,4,4,0,4,59,7,0,1,0.5,4,0,TinyIoC.WeakInstanceFactory' TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,
-System.Reflection,SingletonFactory,4,5,3,0,5,67,10,0,1,0.4,6,0,TinyIoC.SingletonFactory' TinyIoC.NamedParameterOverloads' TinyIoC.TinyIoCContainer' TinyIoC.ResolveOptions' TinyIoC.CustomObjectLifetimeFactory' TinyIoC.ITinyIoCObjectLifetimeProvider,
-System.Reflection,CustomObjectLifetimeFactory,4,5,3,0,5,74,8,0,1,0.4,5,0,TinyIoC.ITinyIoCObjectLifetimeProvider' TinyIoC.CustomObjectLifetimeFactory' TinyIoC.TinyIoCContainer' TinyIoC.NamedParameterOverloads' TinyIoC.ResolveOptions,
-System.Reflection,TypeRegistration,1,4,2,0,4,31,7,0,0,0.75,1,0,TinyIoC.TypeRegistration,
+TinyIoC,TypeExtensions,1,3,0,0,1,167,5,0,0,0,0,0,,
+TinyIoC,GenericMethodCacheKey,5,4,0,0,3,62,13,0,0,0,0,1,,TinyIoC.TypeExtensions
+TinyIoC,TinyIoCResolutionException,1,2,0,0,2,12,2,0,0,0,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,TinyIoCRegistrationTypeException,1,2,0,0,2,12,2,0,0,0,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,TinyIoCRegistrationException,2,4,0,0,4,21,4,0,0,0.5,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,TinyIoCWeakReferenceException,1,2,0,0,2,12,2,0,0,0,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,TinyIoCConstructorResolutionException,1,4,0,0,4,20,4,0,0,0.75,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,TinyIoCAutoRegistrationException,1,3,0,0,2,18,3,0,0,0,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,NamedParameterOverloads,1,3,1,0,3,22,3,0,0,1,0,2,,TinyIoC.NamedParameterOverloads' TinyIoC.TinyIoCContainer
+TinyIoC,UnregisteredResolutionActions,0,0,0,0,0,20,0,0,0,-1,0,2,,TinyIoC.ResolveOptions' TinyIoC.TinyIoCContainer
+TinyIoC,NamedResolutionFailureActions,0,0,0,0,0,5,0,0,0,-1,0,2,,TinyIoC.ResolveOptions' TinyIoC.TinyIoCContainer
+TinyIoC,ResolveOptions,6,0,6,0,0,59,0,0,0,-1,0,2,,TinyIoC.ResolveOptions' TinyIoC.TinyIoCContainer
+TinyIoC,TinyIoCContainer,5,116,1,0,86,2607,190,0,0,0.03,0,2,,CouchbaseConnect2014.Services.CouchbaseService' TinyIoC.TinyIoCContainer
+TinyIoC,RegisterOptions,2,7,0,0,7,99,19,0,0,0,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,MultiRegisterOptions,1,4,0,0,3,41,5,0,0,0,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,ITinyIoCObjectLifetimeProvider,0,3,0,0,0,17,3,0,0,-1,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,ObjectFactoryBase,0,4,7,0,4,67,4,7,0,-1,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,MultiInstanceFactory,2,3,3,0,3,49,5,0,1,0.67,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,DelegateFactory,2,3,4,0,3,43,4,0,1,0.67,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,WeakDelegateFactory,2,3,4,0,3,49,5,0,1,0.67,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,InstanceFactory,3,4,5,0,4,51,6,0,1,0.5,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,WeakInstanceFactory,3,4,4,0,4,59,7,0,1,0.5,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,SingletonFactory,4,5,3,0,5,67,11,0,1,0.4,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,CustomObjectLifetimeFactory,4,5,3,0,5,74,9,0,1,0,0,1,,TinyIoC.TinyIoCContainer
+TinyIoC,TypeRegistration,1,4,2,0,4,31,7,0,0,0.75,0,1,,TinyIoC.TinyIoCContainer
 System.Reflection,ReverseTypeExtender,0,10,0,0,10,43,10,0,0,-1,0,0,,
-CouchbaseConnect2014.Extensions,DateTime_TimeSince,0,1,0,0,1,37,2,0,0,-1,0,0,,
+CouchbaseConnect2014.Extensions,DateTime_TimeSince,0,1,0,0,1,37,7,0,0,-1,0,0,,
 CouchbaseConnect2014.Extensions,Object_ToDictionary,0,2,0,0,1,23,4,0,0,-1,0,0,,
 CouchbaseConnect2014.Extensions,IDictionary_ToObject,0,2,0,0,1,27,6,0,0,-1,0,0,,

@@ -1,20 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Statsd,TimestampHelper,1,2,1,1,2,19,2,0,0,0,0,2,,Statsd.GaugeBucket' TestPerformance.Program
-Statsd,AbstractBucket,3,2,3,0,1,27,2,3,1,1,0,0,,
-Statsd,CounterBucket,0,2,0,0,2,11,2,0,2,-1,0,0,,
-Statsd,TimerBucket,1,2,0,0,2,14,2,0,2,0,0,0,,
-Statsd,GaugeBucket,1,2,0,0,2,14,2,0,2,0,1,0,Statsd.TimestampHelper,
-Statsd,BucketBuffer,5,3,0,0,3,85,10,0,0,0,1,1,Statsd.IBucket,Statsd.BufferedStrategy
-Statsd,BucketTypeMismatchException,0,2,0,0,2,6,2,0,0,-1,0,1,,TestPerformance.Program
-Statsd,StatsdPipe,3,6,3,0,6,77,9,0,1,0,2,2,Statsd.ITransport' Statsd.IStrategy,TestStatsdClient.StatsdPipeTest' TestPerformance.Program
-Statsd,BufferedStrategy,4,9,0,1,4,63,11,0,1,0.22,2,0,Statsd.BucketBuffer' Statsd.IBucket,
-Statsd,InstantStrategy,0,1,0,0,1,11,1,0,1,-1,0,0,,
-Statsd,NativeMailSlot,0,6,0,0,6,30,6,0,0,-1,0,2,,Statsd.MailSlotTransport' Statsd.MailSlotTest
-Statsd,MailSlotTransport,3,5,1,0,3,95,8,1,1,0,1,2,Statsd.NativeMailSlot,Statsd.AFTransport' Statsd.MailSlotTest
-Statsd,AFTransport,1,1,0,0,1,19,2,0,2,0,2,0,Statsd.UDPTransport' Statsd.MailSlotTransport,
-Statsd,UDPTransport,3,1,0,2,1,12,1,0,1,0,0,1,,Statsd.AFTransport
-Statsd,IBucket,0,1,2,0,0,6,1,1,0,-1,0,2,,Statsd.BucketBuffer' Statsd.BufferedStrategy
-Statsd,IStatsdClient,0,6,0,0,0,9,6,2,0,-1,0,2,,TestPerformance.ThreadPoolStatsd' TestPerformance.Program
-Statsd,IStrategicStatsd,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Statsd,ITransport,0,1,0,0,0,4,1,3,0,-1,0,1,,Statsd.StatsdPipe
-Statsd,IStrategy,0,1,0,0,0,5,1,2,0,-1,0,1,,Statsd.StatsdPipe
+Statsd,TimestampHelper,1,2,1,1,2,19,2,0,0,0,0,1,,Statsd.GaugeBucket
+Statsd,AbstractBucket,3,2,3,0,1,27,2,3,1,1,1,3,Statsd.IBucket,Statsd.CounterBucket' Statsd.TimerBucket' Statsd.GaugeBucket
+Statsd,CounterBucket,0,2,0,0,2,11,2,0,2,-1,1,1,Statsd.AbstractBucket,Statsd.StatsdPipe
+Statsd,TimerBucket,1,2,0,0,2,14,2,0,2,0,1,1,Statsd.AbstractBucket,Statsd.StatsdPipe
+Statsd,GaugeBucket,1,2,0,0,2,14,2,0,2,0,2,1,Statsd.TimestampHelper' Statsd.AbstractBucket,Statsd.StatsdPipe
+Statsd,BucketBuffer,5,3,0,0,3,85,10,0,0,0,2,1,Statsd.BucketTypeMismatchException' Statsd.IBucket,Statsd.BufferedStrategy
+Statsd,BucketTypeMismatchException,0,2,0,0,2,6,2,0,0,-1,0,1,,Statsd.BucketBuffer
+Statsd,StatsdPipe,3,6,3,0,6,77,9,0,1,0,8,0,Statsd.CounterBucket' Statsd.TimerBucket' Statsd.GaugeBucket' Statsd.InstantStrategy' Statsd.AFTransport' Statsd.IStatsdClient' Statsd.ITransport' Statsd.IStrategy,
+Statsd,BufferedStrategy,4,9,0,1,4,63,11,0,1,0.22,3,0,Statsd.BucketBuffer' Statsd.IBucket' Statsd.IStrategy,
+Statsd,InstantStrategy,0,1,0,0,1,11,1,0,1,-1,2,1,Statsd.IBucket' Statsd.IStrategy,Statsd.StatsdPipe
+Statsd,NativeMailSlot,0,6,0,0,6,30,6,0,0,-1,0,1,,Statsd.MailSlotTransport
+Statsd,MailSlotTransport,3,5,1,0,3,95,9,1,1,0,2,1,Statsd.NativeMailSlot' Statsd.ITransport,Statsd.AFTransport
+Statsd,AFTransport,1,1,0,0,1,19,2,0,2,0,2,1,Statsd.MailSlotTransport' Statsd.UDPTransport,Statsd.StatsdPipe
+Statsd,UDPTransport,3,1,0,2,1,12,1,0,1,0,1,1,Statsd.ITransport,Statsd.AFTransport
+Statsd,IBucket,0,1,2,0,0,6,1,1,0,-1,0,5,,Statsd.IStrategy' Statsd.BufferedStrategy' Statsd.InstantStrategy' Statsd.AbstractBucket' Statsd.BucketBuffer
+Statsd,IStatsdClient,0,6,0,0,0,9,6,2,0,-1,0,2,,Statsd.IStrategicStatsd' Statsd.StatsdPipe
+Statsd,IStrategicStatsd,0,0,0,0,0,3,0,0,1,-1,1,0,Statsd.IStatsdClient,
+Statsd,ITransport,0,1,0,0,0,4,1,3,0,-1,0,3,,Statsd.StatsdPipe' Statsd.MailSlotTransport' Statsd.UDPTransport
+Statsd,IStrategy,0,1,0,0,0,5,1,2,0,-1,1,3,Statsd.IBucket,Statsd.StatsdPipe' Statsd.BufferedStrategy' Statsd.InstantStrategy

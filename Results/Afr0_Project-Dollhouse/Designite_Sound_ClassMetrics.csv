@@ -1,13 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Sound,Coroutine,6,5,0,2,5,47,7,1,0,0,0,0,,
-Sound,ExportTable,1,2,0,0,2,38,6,0,0,0,1,2,Files.FileReader,Sound.Hit' Sound.HitVM
-Sound,Hit,3,3,0,2,2,36,7,0,0,0,2,3,Files.FileReader' Sound.ExportTable,Sound.HitResourcegroup' Sound.HitVM' Sound.SubRoutine
-Sound,HitException,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Sound,HitResourcegroup,3,3,0,3,2,28,7,0,0,0,3,2,Sound.Hit' Files.AudioLogic.EVT' Files.AudioLogic.HSM,Sound.HitVM' Sound.RegisteredEvent
-Sound,HITTVOn,8,8,1,0,6,163,22,0,0,0,5,1,Sound.SoundPlayer' Files.Manager.FileManager' Files.AudioFiles.ISoundCodec' Sound.HitVM' Files.AudioFiles.XAFile,Sound.HitVM
-Sound,HitVM,14,11,1,4,10,281,31,0,0,0,13,2,Sound.HitResourcegroup' Sound.HITTVOn' Files.Manager.FileManager' Files.AudioLogic.IniSection' Files.AudioLogic.Ini' Sound.RegisteredEvent' Files.AudioLogic.EVT' Files.AudioLogic.TrackEvent' Sound.SubRoutine' Sound.ExportTable' Sound.Hit' Files.AudioLogic.HSM' Files.AudioLogic.HITEvents,Sound.HITTVOn' Sound.SubRoutine
-Sound,ActiveSound,6,2,0,6,1,31,5,0,0,0,1,1,Files.AudioFiles.MP3File,Sound.SoundPlayer
-Sound,SoundPlayer,2,12,0,0,8,205,27,0,0,0.25,3,2,Sound.ActiveSound' Files.Manager.FileManager' Files.AudioFiles.MP3File,Sound.HITTVOn' Sound.SubRoutine
-Sound,RegisteredEvent,4,0,0,4,0,19,0,0,0,-1,2,1,Files.AudioLogic.HITEvents' Sound.HitResourcegroup,Sound.HitVM
-Sound,HITNoteEntry,2,1,0,2,1,10,1,0,0,0,1,1,Files.AudioFiles.ISoundCodec,Sound.SubRoutine
-Sound,SubRoutine,20,9,0,4,2,541,17,0,1,0,8,1,Sound.Hit' Files.AudioLogic.HLS' Files.AudioLogic.TRK' Sound.SoundPlayer' Files.Manager.FileManager' Sound.HitVM' Files.AudioFiles.ISoundCodec' Sound.HITNoteEntry,Sound.HitVM
+Sound,Coroutine,6,6,0,2,6,54,8,1,0,0.33,0,1,,Sound.SubRoutine
+Sound,ExportTable,1,2,0,0,2,38,6,0,0,0,0,2,,Sound.HitVM' Sound.Hit
+Sound,Hit,4,3,0,2,2,51,7,0,0,0,2,2,Sound.ExportTable' Sound.HitException,Sound.SubRoutine' Sound.HitResourcegroup
+Sound,HitException,0,1,0,0,1,7,1,0,0,-1,0,1,,Sound.Hit
+Sound,HitResourcegroup,4,3,0,3,2,43,7,0,0,0,1,2,Sound.Hit,Sound.RegisteredEvent' Sound.HitVM
+Sound,HITTVOn,9,10,1,0,7,197,29,0,0,0,2,1,Sound.HitVM' Sound.SoundPlayer,Sound.HitVM
+Sound,HitVM,15,13,1,4,11,312,38,0,0,0,5,2,Sound.ExportTable' Sound.HitResourcegroup' Sound.HITTVOn' Sound.RegisteredEvent' Sound.SubRoutine,Sound.HITTVOn' Sound.SubRoutine
+Sound,StreamingPlaybackState,0,0,0,0,0,7,0,0,0,-1,0,1,,Sound.SoundPlayer
+Sound,ActiveSound,12,2,0,11,1,47,5,0,0,0,0,1,,Sound.SoundPlayer
+Sound,SoundPlayer,6,14,1,0,8,350,41,0,0,0.14,2,2,Sound.StreamingPlaybackState' Sound.ActiveSound,Sound.SubRoutine' Sound.HITTVOn
+Sound,RegisteredEvent,4,0,0,4,0,19,0,0,0,-1,1,1,Sound.HitResourcegroup,Sound.HitVM
+Sound,HITNoteEntry,2,1,0,2,1,10,1,0,0,0,0,1,,Sound.SubRoutine
+Sound,SubRoutine,20,9,0,4,2,542,88,0,1,0,5,1,Sound.Coroutine' Sound.Hit' Sound.HitVM' Sound.SoundPlayer' Sound.HITNoteEntry,Sound.HitVM

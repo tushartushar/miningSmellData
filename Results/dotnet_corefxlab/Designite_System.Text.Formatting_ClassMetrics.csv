@@ -1,17 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-System.Diagnostics,Precondition,0,2,0,0,1,24,4,0,0,-1,0,0,,
-System.Diagnostics,Failure,1,1,0,0,0,5,1,0,0,0,0,0,,
-System.Text.Formatting,CompositeFormattingExtensions,0,7,0,0,5,357,44,0,0,-1,1,0,System.Text.Formatting.CompositeFormatReader,
-System.Text.Formatting,CompositeFormatReader,4,4,0,0,2,141,15,0,0,0,2,1,System.Text.Formatting.State' System.Text.Formatting.CompositeSegment,System.Text.Formatting.CompositeFormattingExtensions
-System.Text.Formatting,State,0,0,0,0,0,6,0,0,0,-1,0,1,,System.Text.Formatting.CompositeFormatReader
-System.Text.Formatting,CompositeSegment,0,2,3,0,2,14,2,0,0,-1,0,1,,System.Text.Formatting.CompositeFormatReader
-System.Text.Formatting,ArrayFormatter,3,5,5,0,5,43,7,0,1,0,0,3,,LibuvWithNonAllocatingFormatters.Program' System.Text.Formatting.Tests.SystemTextFormattingTests' System.Text.Formatting.Tests.PerfSmokeTests
-System.Text.Formatting,OutputFormatter,2,4,2,0,4,17,4,0,1,0.5,0,0,,
-System.Text.Formatting,SequenceFormatterExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-System.Text.Formatting,SequenceFormatter<TSequence>,7,3,6,0,1,73,7,0,1,0,0,0,,
-System.Text.Formatting,StreamFormatter,4,5,2,0,3,67,7,0,1,0.4,0,2,,System.Text.Formatting.Tests.CustomTypeFormatting' System.Text.Formatting.Tests.SystemTextFormattingTests
-System.Text.Formatting,StringFormatter,2,9,2,0,7,60,13,0,1,0.22,0,5,,System.Text.Formatting.Tests.CompositeFormattingTests' System.Text.Formatting.Tests.CustomCultureTests' System.Text.Formatting.Tests.CustomTypeFormatting' System.Text.Formatting.Tests.SystemTextFormattingTests' System.Text.Formatting.Tests.PerfSmokeTests
-System.Text.Formatting,IOutputExtensions,0,38,0,0,38,297,74,0,0,-1,1,0,System.Text.Utf8.Utf8Span,
-System.Text.Formatting,ITextOutput,0,0,1,0,0,4,0,6,0,-1,0,1,,System.Text.Json.JsonWriter
-System.Text.Formatting,ITextOutputExtensions,0,38,0,0,38,273,73,0,0,-1,1,0,System.Text.Utf8.Utf8Span,
-System.Text.Parsing,TextSequenceExtensions,1,2,0,0,2,125,26,0,0,0,0,0,,
+System.Diagnostics,Precondition,0,2,0,0,1,24,4,0,0,-1,1,0,System.Diagnostics.Failure,
+System.Diagnostics,Failure,1,1,0,0,0,5,1,0,0,0,0,1,,System.Diagnostics.Precondition
+System.Text.Formatting,CompositeFormattingExtensions,0,7,0,0,5,356,54,0,0,-1,4,0,System.Text.Formatting.CompositeFormatReader' System.Text.Formatting.State' System.Text.Formatting.CompositeSegment' System.Text.Formatting.ITextBufferWriter,
+System.Text.Formatting,CompositeFormatReader,4,4,0,0,2,141,20,0,0,0,0,1,,System.Text.Formatting.CompositeFormattingExtensions
+System.Text.Formatting,State,0,0,0,0,0,6,0,0,0,-1,0,1,,System.Text.Formatting.CompositeFormattingExtensions
+System.Text.Formatting,CompositeSegment,0,2,3,0,2,14,2,0,0,-1,0,1,,System.Text.Formatting.CompositeFormattingExtensions
+System.Text.Formatting,ArrayFormatterWrapper,1,6,4,0,6,20,6,0,1,0,2,0,System.Text.Formatting.ArrayFormatter' System.Text.Formatting.ITextBufferWriter,
+System.Text.Formatting,ArrayFormatter,3,6,4,0,6,62,11,0,1,0,2,1,System.Text.Formatting.FormatterThrowHelper' System.Text.Formatting.ITextBufferWriter,System.Text.Formatting.ArrayFormatterWrapper
+System.Text.Formatting,BufferWriterFormatter,2,5,1,0,5,23,5,0,1,0.4,1,0,System.Text.Formatting.ITextBufferWriter,
+System.Text.Formatting,FormatterThrowHelper,0,2,0,0,1,12,2,0,0,-1,0,1,,System.Text.Formatting.ArrayFormatter
+System.Text.Formatting,MemoryFormatter,1,4,0,0,4,26,6,0,0,0,0,0,,
+System.Text.Formatting,SequenceFormatterExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,System.Text.Formatting.SequenceFormatter<TSequence>,
+System.Text.Formatting,SequenceFormatter<TSequence>,7,4,6,0,1,99,15,0,1,0,1,1,System.Text.Formatting.ITextBufferWriter,System.Text.Formatting.SequenceFormatterExtensions
+System.Text.Formatting,StreamFormatter,4,6,2,0,3,76,11,0,1,0.33,1,0,System.Text.Formatting.ITextBufferWriter,
+System.Text.Formatting,StringFormatter,2,10,2,0,7,77,17,0,1,0.2,1,0,System.Text.Formatting.ITextBufferWriter,
+System.Text.Formatting,IOutputExtensions,0,39,0,0,38,301,78,0,0,-1,0,0,,
+System.Text.Formatting,ITextBufferWriter,0,0,1,0,0,4,0,7,0,-1,0,8,,System.Text.Formatting.BufferWriterFormatter' System.Text.Formatting.StringFormatter' System.Text.Formatting.ArrayFormatterWrapper' System.Text.Formatting.ArrayFormatter' System.Text.Formatting.SequenceFormatter<TSequence>' System.Text.Formatting.StreamFormatter' System.Text.Formatting.CompositeFormattingExtensions' System.Text.Formatting.ITextOutputExtensions
+System.Text.Formatting,ITextOutputExtensions,0,39,0,0,38,277,74,0,0,-1,1,0,System.Text.Formatting.ITextBufferWriter,
+System.Text.Parsing,TextSequenceExtensions,1,4,0,0,4,260,52,0,0,0,0,0,,

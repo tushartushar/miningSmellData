@@ -1,97 +1,113 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-FunWithNinject.ConflictingScopes,Inner,0,0,0,0,0,3,0,0,0,-1,0,1,,FunWithNinject.ConflictingScopes.Middle
-FunWithNinject.ConflictingScopes,Middle,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.ConflictingScopes.Inner,FunWithNinject.ConflictingScopes.Outer
-FunWithNinject.ConflictingScopes,Outer,0,1,1,0,1,8,1,0,0,-1,1,0,FunWithNinject.ConflictingScopes.Middle,
-FunWithNinject.ConflictingScopes,Tests,0,3,0,0,3,58,3,0,0,-1,0,0,,
-FunWithNinject.Conventions,ConventionsTests,0,2,0,0,2,62,2,0,0,-1,0,0,,
-FunWithNinject.Conventions,IFace1,0,0,0,0,0,1,0,1,0,-1,0,0,,
-FunWithNinject.Conventions,IFace2,0,0,0,0,0,1,0,1,0,-1,0,0,,
-FunWithNinject.Conventions,IGeneric,0,0,2,0,0,5,0,1,0,-1,0,0,,
+FunWithNinject.Attributes,AttributeTests,0,3,0,0,2,33,3,0,0,-1,6,0,FunWithNinject.Attributes.DependsOnDefaultFoo' FunWithNinject.Attributes.DependsOnSpecialFoo' FunWithNinject.Attributes.SpecialFooAttribute' FunWithNinject.IFoo' FunWithNinject.Foo1' FunWithNinject.Foo2,
+FunWithNinject.Attributes,DependsOnDefaultFoo,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.IFoo,FunWithNinject.Attributes.AttributeTests
+FunWithNinject.Attributes,DependsOnSpecialFoo,0,1,1,0,1,8,1,0,0,-1,2,1,FunWithNinject.Attributes.SpecialFooAttribute' FunWithNinject.IFoo,FunWithNinject.Attributes.AttributeTests
+FunWithNinject.Attributes,SpecialFooAttribute,0,0,0,0,0,1,0,0,0,-1,0,2,,FunWithNinject.Attributes.AttributeTests' FunWithNinject.Attributes.DependsOnSpecialFoo
+FunWithNinject.ConflictingScopes,Inner,0,0,0,0,0,3,0,0,0,-1,0,2,,FunWithNinject.ConflictingScopes.Middle' FunWithNinject.ConflictingScopes.Tests
+FunWithNinject.ConflictingScopes,Middle,0,1,1,0,1,8,1,0,0,-1,1,2,FunWithNinject.ConflictingScopes.Inner,FunWithNinject.ConflictingScopes.Outer' FunWithNinject.ConflictingScopes.Tests
+FunWithNinject.ConflictingScopes,Outer,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.ConflictingScopes.Middle,FunWithNinject.ConflictingScopes.Tests
+FunWithNinject.ConflictingScopes,Tests,0,3,0,0,3,58,3,0,0,-1,3,0,FunWithNinject.ConflictingScopes.Inner' FunWithNinject.ConflictingScopes.Middle' FunWithNinject.ConflictingScopes.Outer,
+FunWithNinject.Conventions,ConventionsTests,0,2,0,0,2,62,2,0,0,-1,3,0,FunWithNinject.Conventions.IFace1' FunWithNinject.Conventions.IFace2' FunWithNinject.Conventions.IGeneric,
+FunWithNinject.Conventions,IFace1,0,0,0,0,0,1,0,1,0,-1,0,1,,FunWithNinject.Conventions.ConventionsTests
+FunWithNinject.Conventions,IFace2,0,0,0,0,0,1,0,1,0,-1,0,1,,FunWithNinject.Conventions.ConventionsTests
+FunWithNinject.Conventions,IGeneric,0,0,2,0,0,5,0,1,0,-1,0,1,,FunWithNinject.Conventions.ConventionsTests
 FunWithNinject.Conventions,AllFaces,0,0,0,0,0,1,0,0,1,-1,0,0,,
 FunWithNinject.Conventions,Generic<T1;T2>,0,1,2,0,1,10,1,0,1,-1,0,0,,
-FunWithNinject.CtorChoosing,MyObj,0,2,4,0,2,18,2,0,0,-1,2,0,FunWithNinject.IFoo' FunWithNinject.IBar,
-FunWithNinject.CtorChoosing,Tests,0,2,0,0,2,31,2,0,0,-1,0,0,,
-FunWithNinject.Factories,IBar,0,0,1,0,0,4,0,1,0,-1,0,1,,FunWithNinject.Factories.Foo
-FunWithNinject.Factories,Bar,0,1,1,0,1,8,1,0,1,-1,0,0,,
-FunWithNinject.Factories,FactoryTests,0,5,0,0,5,80,5,0,0,-1,1,0,FunWithNinject.FooDependingOnBar,
-FunWithNinject.Factories,IFoo,0,0,1,0,0,4,0,1,0,-1,0,0,,
-FunWithNinject.Factories,Foo,1,1,1,0,1,9,1,0,1,0,1,0,FunWithNinject.Factories.IBar,
-FunWithNinject,IBar,0,0,0,0,0,1,0,2,0,-1,0,3,,FunWithNinject.CtorChoosing.MyObj' FunWithNinject.FooDependingOnMultipleBars' FunWithNinject.FooDependingOnBar
-FunWithNinject,IBaz,0,0,0,0,0,1,0,1,0,-1,0,0,,
-FunWithNinject,IFoo,0,0,0,0,0,1,0,5,0,-1,0,3,,FunWithNinject.CtorChoosing.MyObj' FunWithNinject.Provider.DirectDependency' FunWithNinject.Provider.NamedFooProvider
-FunWithNinject,IQux,0,0,0,0,0,1,0,1,0,-1,0,0,,
-FunWithNinject,Bar,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject,Bar2,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject,Baz,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject,Foo,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject,Foo1,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject,Foo2,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject,FooDependingOnMultipleBars,0,1,2,0,1,10,1,0,1,-1,1,0,FunWithNinject.IBar,
-FunWithNinject,FooDependingOnBar,0,1,1,0,1,8,1,0,1,-1,1,2,FunWithNinject.IBar,FunWithNinject.Factories.FactoryTests' FunWithNinject.WhenInjected.WhenInjectedTests
-FunWithNinject,Qux,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject,InjectionTests,0,2,0,0,2,26,2,0,0,-1,0,0,,
+FunWithNinject.CtorChoosing,MyObj,0,2,4,0,2,18,2,0,0,-1,2,1,FunWithNinject.IBar' FunWithNinject.IFoo,FunWithNinject.CtorChoosing.Tests
+FunWithNinject.CtorChoosing,Tests,0,2,0,0,2,31,2,0,0,-1,4,0,FunWithNinject.CtorChoosing.MyObj' FunWithNinject.IBar' FunWithNinject.IFoo' FunWithNinject.Foo,
+FunWithNinject.Factories,IBar,0,0,1,0,0,4,0,1,0,-1,0,3,,FunWithNinject.Factories.Bar' FunWithNinject.Factories.Foo' FunWithNinject.Factories.FactoryTests
+FunWithNinject.Factories,Bar,0,1,1,0,1,8,1,0,1,-1,1,1,FunWithNinject.Factories.IBar,FunWithNinject.Factories.FactoryTests
+FunWithNinject.Factories,FactoryTests,0,5,0,0,5,80,5,0,0,-1,10,0,FunWithNinject.Factories.IBar' FunWithNinject.Factories.Bar' FunWithNinject.Factories.IFoo' FunWithNinject.Factories.Foo' FunWithNinject.IBar' FunWithNinject.IFoo' FunWithNinject.Bar' FunWithNinject.Bar2' FunWithNinject.Foo' FunWithNinject.FooDependingOnBar,
+FunWithNinject.Factories,IFoo,0,0,1,0,0,4,0,1,0,-1,0,2,,FunWithNinject.Factories.Foo' FunWithNinject.Factories.FactoryTests
+FunWithNinject.Factories,Foo,1,1,1,0,1,9,1,0,1,0,2,1,FunWithNinject.Factories.IBar' FunWithNinject.Factories.IFoo,FunWithNinject.Factories.FactoryTests
+FunWithNinject,IBar,0,0,0,0,0,1,0,2,0,-1,0,11,,FunWithNinject.CtorChoosing.Tests' FunWithNinject.CtorChoosing.MyObj' FunWithNinject.ModulesModulesModules.Module1' FunWithNinject.Factories.FactoryTests' FunWithNinject.NamedScope.ChildKernelTests' FunWithNinject.WhenInjected.WhenInjectedTests' FunWithNinject.InjectionTests' FunWithNinject.Bar' FunWithNinject.Bar2' FunWithNinject.FooDependingOnBar' FunWithNinject.FooDependingOnMultipleBars
+FunWithNinject,IBaz,0,0,0,0,0,1,0,1,0,-1,0,1,,FunWithNinject.Baz
+FunWithNinject,IFoo,0,0,0,0,0,1,0,5,0,-1,0,21,,FunWithNinject.WhenInjected.WhenInjectedTests' FunWithNinject.Provider.NamedFooProvider' FunWithNinject.Attributes.AttributeTests' FunWithNinject.Attributes.DependsOnDefaultFoo' FunWithNinject.Attributes.DependsOnSpecialFoo' FunWithNinject.Initialization.Tests' FunWithNinject.CtorChoosing.MyObj' FunWithNinject.Foo' FunWithNinject.Foo1' FunWithNinject.Foo2' FunWithNinject.FooDependingOnBar' FunWithNinject.FooDependingOnMultipleBars' FunWithNinject.ModulesModulesModules.Module1' FunWithNinject.Provider.DirectDependency' FunWithNinject.ModulesModulesModules.Module2' FunWithNinject.Provider.DirectDualDependency' FunWithNinject.CtorChoosing.Tests' FunWithNinject.ModulesModulesModules.Tests' FunWithNinject.Provider.ProviderTests' FunWithNinject.Factories.FactoryTests' FunWithNinject.NamedScope.ChildKernelTests
+FunWithNinject,IQux,0,0,0,0,0,1,0,1,0,-1,0,1,,FunWithNinject.Qux
+FunWithNinject,Bar,0,0,0,0,0,1,0,0,1,-1,1,4,FunWithNinject.IBar,FunWithNinject.Factories.FactoryTests' FunWithNinject.ModulesModulesModules.Module1' FunWithNinject.NamedScope.ChildKernelTests' FunWithNinject.InjectionTests
+FunWithNinject,Bar2,0,0,0,0,0,1,0,0,1,-1,1,2,FunWithNinject.IBar,FunWithNinject.Factories.FactoryTests' FunWithNinject.WhenInjected.WhenInjectedTests
+FunWithNinject,Baz,0,0,0,0,0,1,0,0,1,-1,1,0,FunWithNinject.IBaz,
+FunWithNinject,Foo,0,0,0,0,0,1,0,0,1,-1,1,4,FunWithNinject.IFoo,FunWithNinject.Initialization.Tests' FunWithNinject.Factories.FactoryTests' FunWithNinject.NamedScope.ChildKernelTests' FunWithNinject.CtorChoosing.Tests
+FunWithNinject,Foo1,0,0,0,0,0,1,0,0,1,-1,1,5,FunWithNinject.IFoo,FunWithNinject.ModulesModulesModules.Tests' FunWithNinject.ModulesModulesModules.Module1' FunWithNinject.Attributes.AttributeTests' FunWithNinject.NamedScope.ChildKernelTests' FunWithNinject.Provider.ProviderTests
+FunWithNinject,Foo2,0,0,0,0,0,1,0,0,1,-1,1,5,FunWithNinject.IFoo,FunWithNinject.ModulesModulesModules.Tests' FunWithNinject.ModulesModulesModules.Module2' FunWithNinject.Attributes.AttributeTests' FunWithNinject.NamedScope.ChildKernelTests' FunWithNinject.Provider.ProviderTests
+FunWithNinject,FooDependingOnBar,0,1,1,0,1,8,1,0,1,-1,2,3,FunWithNinject.IBar' FunWithNinject.IFoo,FunWithNinject.Factories.FactoryTests' FunWithNinject.NamedScope.ChildKernelTests' FunWithNinject.WhenInjected.WhenInjectedTests
+FunWithNinject,FooDependingOnMultipleBars,0,1,2,0,1,10,1,0,1,-1,2,1,FunWithNinject.IBar' FunWithNinject.IFoo,FunWithNinject.InjectionTests
+FunWithNinject,Qux,0,0,0,0,0,1,0,0,1,-1,1,0,FunWithNinject.IQux,
+FunWithNinject,InjectionTests,0,2,0,0,2,26,2,0,0,-1,3,0,FunWithNinject.IBar' FunWithNinject.Bar' FunWithNinject.FooDependingOnMultipleBars,
 FunWithNinject,Program,0,1,0,0,1,6,1,0,0,-1,0,0,,
-FunWithNinject.Initialization,FooBars,0,0,0,0,0,19,0,0,0,-1,0,0,,
-FunWithNinject.Initialization,IFoo,0,0,1,0,0,4,0,2,0,-1,0,0,,
-FunWithNinject.Initialization,IFoo1,0,0,0,0,0,1,0,1,1,-1,0,0,,
-FunWithNinject.Initialization,IFoo2,0,0,0,0,0,1,0,1,1,-1,0,0,,
-FunWithNinject.Initialization,IBar,0,0,0,0,0,1,0,1,0,-1,0,1,,FunWithNinject.Initialization.Foo
-FunWithNinject.Initialization,Bar,0,0,0,0,0,1,0,0,1,-1,0,0,,
-FunWithNinject.Initialization,Foo,0,1,1,0,1,8,1,0,2,-1,1,0,FunWithNinject.Initialization.IBar,
-FunWithNinject.Initialization,IInitializable,0,1,1,0,0,5,1,1,0,-1,0,0,,
-FunWithNinject.Initialization,Initializable,0,2,2,0,2,13,2,0,1,-1,0,1,,FunWithNinject.Initialization.Tests
-FunWithNinject.Initialization,Tests,0,4,0,0,4,61,4,0,0,-1,1,0,FunWithNinject.Initialization.Initializable,
-FunWithNinject.InjectingSequences,Foo,0,1,1,0,1,8,1,0,0,-1,0,1,,FunWithNinject.InjectingSequences.SequenceInjectionTests
-FunWithNinject.InjectingSequences,IEnumerableOfFoo,0,1,1,0,1,8,1,0,0,-1,0,0,,
-FunWithNinject.InjectingSequences,ListOfFoo,0,1,1,0,1,8,1,0,0,-1,0,0,,
-FunWithNinject.InjectingSequences,SequenceInjectionTests,0,2,0,0,2,30,2,0,0,-1,1,0,FunWithNinject.InjectingSequences.Foo,
-FunWithNinject.Interception,NonVirtualFoo,0,1,0,0,1,4,1,0,1,-1,0,0,,
-FunWithNinject.Interception,OverrideReturnInterceptor<T>,1,2,0,0,1,13,2,0,0,0,0,0,,
-FunWithNinject.Interception,SetReturnValueAttribute,1,2,0,0,2,12,2,0,0,0,0,0,,
-FunWithNinject.Interception,AttributedFoo,0,1,0,0,1,5,1,0,1,-1,0,0,,
-FunWithNinject.Interception,IFoo,0,1,0,0,0,4,1,3,0,-1,0,0,,
-FunWithNinject.Interception,ReturnMaxIntInterceptor,0,1,0,0,0,8,1,0,0,-1,0,0,,
-FunWithNinject.Interception,SimpleInterceptionTest,0,4,0,0,4,56,4,0,0,-1,0,0,,
-FunWithNinject.Interception,VirtualFoo,0,1,0,0,1,11,1,0,1,-1,0,0,,
-FunWithNinject.ModulesModulesModules,Module1,0,1,0,0,1,8,1,0,0,-1,0,0,,
-FunWithNinject.ModulesModulesModules,Module2,0,1,0,0,1,7,1,0,0,-1,0,0,,
-FunWithNinject.ModulesModulesModules,Tests,0,2,0,0,2,30,2,0,0,-1,0,0,,
-FunWithNinject.NamedScope,ChildKernelTests,0,4,0,0,4,57,4,0,0,-1,0,0,,
-FunWithNinject.AncestorBindings,Leaf,0,0,1,0,0,4,0,0,0,-1,0,2,,FunWithNinject.AncestorBindings.LevelThree' FunWithNinject.AncestorBindings.SingleLevel
+FunWithNinject.Initialization,FooBars,0,0,0,0,0,19,0,0,0,-1,4,1,FunWithNinject.Initialization.IFoo' FunWithNinject.Initialization.IFoo1' FunWithNinject.Initialization.IFoo2' FunWithNinject.Initialization.IBar,FunWithNinject.Initialization.Tests
+FunWithNinject.Initialization,IFoo,0,0,1,0,0,4,0,2,0,-1,0,1,,FunWithNinject.Initialization.FooBars
+FunWithNinject.Initialization,IFoo1,0,0,0,0,0,1,0,1,1,-1,0,2,,FunWithNinject.Initialization.FooBars' FunWithNinject.Initialization.Tests
+FunWithNinject.Initialization,IFoo2,0,0,0,0,0,1,0,1,1,-1,0,2,,FunWithNinject.Initialization.FooBars' FunWithNinject.Initialization.Tests
+FunWithNinject.Initialization,IBar,0,0,0,0,0,1,0,1,0,-1,0,2,,FunWithNinject.Initialization.Tests' FunWithNinject.Initialization.FooBars
+FunWithNinject.Initialization,Bar,0,0,0,0,0,1,0,0,1,-1,0,1,,FunWithNinject.Initialization.Tests
+FunWithNinject.Initialization,Foo,0,1,1,0,1,8,1,0,2,-1,0,1,,FunWithNinject.Initialization.Tests
+FunWithNinject.Initialization,IInitializable,0,1,1,0,0,5,1,1,0,-1,0,2,,FunWithNinject.Initialization.Initializable' FunWithNinject.Initialization.Tests
+FunWithNinject.Initialization,Initializable,0,2,2,0,2,13,2,0,1,-1,1,1,FunWithNinject.Initialization.IInitializable,FunWithNinject.Initialization.Tests
+FunWithNinject.Initialization,Tests,0,4,0,0,4,61,4,0,0,-1,10,0,FunWithNinject.IFoo' FunWithNinject.Foo' FunWithNinject.Initialization.FooBars' FunWithNinject.Initialization.IFoo1' FunWithNinject.Initialization.IFoo2' FunWithNinject.Initialization.IBar' FunWithNinject.Initialization.Bar' FunWithNinject.Initialization.Foo' FunWithNinject.Initialization.IInitializable' FunWithNinject.Initialization.Initializable,
+FunWithNinject.InjectingSequences,Foo,0,1,1,0,1,8,1,0,0,-1,0,3,,FunWithNinject.InjectingSequences.IEnumerableOfFoo' FunWithNinject.InjectingSequences.ListOfFoo' FunWithNinject.InjectingSequences.SequenceInjectionTests
+FunWithNinject.InjectingSequences,IEnumerableOfFoo,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.InjectingSequences.Foo,FunWithNinject.InjectingSequences.SequenceInjectionTests
+FunWithNinject.InjectingSequences,ListOfFoo,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.InjectingSequences.Foo,FunWithNinject.InjectingSequences.SequenceInjectionTests
+FunWithNinject.InjectingSequences,SequenceInjectionTests,0,2,0,0,2,30,2,0,0,-1,3,0,FunWithNinject.InjectingSequences.Foo' FunWithNinject.InjectingSequences.IEnumerableOfFoo' FunWithNinject.InjectingSequences.ListOfFoo,
+FunWithNinject.Interception.ClassLevelCacheInterceptor,CacheInterceptorTests,0,7,0,0,6,106,7,0,0,-1,3,0,FunWithNinject.Interception.ClassLevelCacheInterceptor.DataSource' FunWithNinject.Interception.ClassLevelCacheInterceptor.IDataSource' FunWithNinject.Interception.ClassLevelCacheInterceptor.SimpleCache,
+FunWithNinject.Interception.ClassLevelCacheInterceptor,CacheInterfaceAttribute,0,0,0,0,0,1,0,0,0,-1,0,2,,FunWithNinject.Interception.ClassLevelCacheInterceptor.IDataSource' FunWithNinject.Interception.ClassLevelCacheInterceptor.InterceptionConfigurtionTests
+FunWithNinject.Interception.ClassLevelCacheInterceptor,CacheInterface_NotAppliedAttribute,0,0,0,0,0,1,0,0,0,-1,0,1,,FunWithNinject.Interception.ClassLevelCacheInterceptor.InterceptionConfigurtionTests
+FunWithNinject.Interception.ClassLevelCacheInterceptor,DataSource,1,2,1,0,2,15,2,0,1,0,1,2,FunWithNinject.Interception.ClassLevelCacheInterceptor.IDataSource,FunWithNinject.Interception.ClassLevelCacheInterceptor.CacheInterceptorTests' FunWithNinject.Interception.ClassLevelCacheInterceptor.InterceptionConfigurtionTests
+FunWithNinject.Interception.ClassLevelCacheInterceptor,IDataSource,0,2,1,0,0,7,2,1,0,-1,1,3,FunWithNinject.Interception.ClassLevelCacheInterceptor.CacheInterfaceAttribute,FunWithNinject.Interception.ClassLevelCacheInterceptor.DataSource' FunWithNinject.Interception.ClassLevelCacheInterceptor.CacheInterceptorTests' FunWithNinject.Interception.ClassLevelCacheInterceptor.InterceptionConfigurtionTests
+FunWithNinject.Interception.ClassLevelCacheInterceptor,InterceptionConfigurtionTests,0,3,0,0,2,45,3,0,0,-1,5,0,FunWithNinject.Interception.ClassLevelCacheInterceptor.CacheInterfaceAttribute' FunWithNinject.Interception.ClassLevelCacheInterceptor.CacheInterface_NotAppliedAttribute' FunWithNinject.Interception.ClassLevelCacheInterceptor.DataSource' FunWithNinject.Interception.ClassLevelCacheInterceptor.IDataSource' FunWithNinject.Interception.ClassLevelCacheInterceptor.PassThroughInterceptor,
+FunWithNinject.Interception.ClassLevelCacheInterceptor,PassThroughInterceptor,0,1,1,0,0,9,1,0,0,-1,0,1,,FunWithNinject.Interception.ClassLevelCacheInterceptor.InterceptionConfigurtionTests
+FunWithNinject.Interception.ClassLevelCacheInterceptor,SimpleCache,1,4,0,0,2,40,6,0,0,0,0,1,,FunWithNinject.Interception.ClassLevelCacheInterceptor.CacheInterceptorTests
+FunWithNinject.Interception,NonVirtualFoo,0,1,0,0,1,4,1,0,1,-1,1,1,FunWithNinject.Interception.IFoo,FunWithNinject.Interception.SimpleInterceptionTest
+FunWithNinject.Interception,OverrideReturnInterceptor<T>,1,2,0,0,1,13,2,0,0,0,0,1,,FunWithNinject.Interception.SetReturnValueAttribute
+FunWithNinject.Interception,SetReturnValueAttribute,1,2,0,0,2,12,2,0,0,0,1,1,FunWithNinject.Interception.OverrideReturnInterceptor<T>,FunWithNinject.Interception.AttributedFoo
+FunWithNinject.Interception,AttributedFoo,0,1,0,0,1,5,1,0,1,-1,2,1,FunWithNinject.Interception.SetReturnValueAttribute' FunWithNinject.Interception.IFoo,FunWithNinject.Interception.SimpleInterceptionTest
+FunWithNinject.Interception,IFoo,0,1,0,0,0,4,1,3,0,-1,0,4,,FunWithNinject.Interception.NonVirtualFoo' FunWithNinject.Interception.AttributedFoo' FunWithNinject.Interception.VirtualFoo' FunWithNinject.Interception.SimpleInterceptionTest
+FunWithNinject.Interception,ReturnMaxIntInterceptor,0,1,0,0,0,8,1,0,0,-1,0,1,,FunWithNinject.Interception.SimpleInterceptionTest
+FunWithNinject.Interception,SimpleInterceptionTest,0,4,0,0,4,56,4,0,0,-1,5,0,FunWithNinject.Interception.NonVirtualFoo' FunWithNinject.Interception.AttributedFoo' FunWithNinject.Interception.IFoo' FunWithNinject.Interception.ReturnMaxIntInterceptor' FunWithNinject.Interception.VirtualFoo,
+FunWithNinject.Interception,VirtualFoo,0,1,0,0,1,11,1,0,1,-1,1,1,FunWithNinject.Interception.IFoo,FunWithNinject.Interception.SimpleInterceptionTest
+FunWithNinject.ModulesModulesModules,Module1,0,1,0,0,1,8,1,0,0,-1,4,1,FunWithNinject.IBar' FunWithNinject.IFoo' FunWithNinject.Bar' FunWithNinject.Foo1,FunWithNinject.ModulesModulesModules.Tests
+FunWithNinject.ModulesModulesModules,Module2,0,1,0,0,1,7,1,0,0,-1,2,1,FunWithNinject.IFoo' FunWithNinject.Foo2,FunWithNinject.ModulesModulesModules.Tests
+FunWithNinject.ModulesModulesModules,Tests,0,2,0,0,2,30,2,0,0,-1,5,0,FunWithNinject.IFoo' FunWithNinject.Foo1' FunWithNinject.Foo2' FunWithNinject.ModulesModulesModules.Module1' FunWithNinject.ModulesModulesModules.Module2,
+FunWithNinject.NamedScope,ChildKernelTests,0,4,0,0,4,57,4,0,0,-1,7,0,FunWithNinject.IBar' FunWithNinject.IFoo' FunWithNinject.Bar' FunWithNinject.Foo' FunWithNinject.Foo1' FunWithNinject.Foo2' FunWithNinject.FooDependingOnBar,
+FunWithNinject.AncestorBindings,Leaf,0,0,1,0,0,4,0,0,0,-1,0,4,,FunWithNinject.AncestorBindings.LevelThree' FunWithNinject.AncestorBindings.SingleLevel' FunWithNinject.AncestorBindings.Parent' FunWithNinject.AncestorBindings.AncestorBindingsTests
 FunWithNinject.AncestorBindings,LevelThree,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.AncestorBindings.Leaf,FunWithNinject.AncestorBindings.LevelTwo
-FunWithNinject.AncestorBindings,LevelTwo,0,1,1,0,1,8,1,0,0,-1,1,0,FunWithNinject.AncestorBindings.LevelThree,
-FunWithNinject.AncestorBindings,AncestorBindingsTests,0,3,0,0,3,42,3,0,0,-1,0,0,,
-FunWithNinject.AncestorBindings,Parent,0,1,2,0,1,12,1,0,0,-1,0,0,,
-FunWithNinject.AncestorBindings,Root,0,1,2,0,1,12,1,0,0,-1,0,0,,
-FunWithNinject.AncestorBindings,SingleLevel,0,1,1,0,1,8,1,0,0,-1,1,0,FunWithNinject.AncestorBindings.Leaf,
-FunWithNinject.NamedScopes,NamedScopesTests,0,4,0,0,3,68,4,0,0,-1,0,0,,
-FunWithNinject.NamedScopes,EventAggregator,2,1,0,0,1,9,1,0,1,0,0,0,,
-FunWithNinject.NamedScopes,HaveFunc,2,1,1,0,1,17,1,0,1,0,1,0,FunWithNinject.NamedScopes.IEventAggregator,
-FunWithNinject.NamedScopes,IEventAggregator,0,0,0,0,0,3,0,1,0,-1,0,2,,FunWithNinject.NamedScopes.HaveFunc' FunWithNinject.NamedScopes.Root
-FunWithNinject.NamedScopes,IHaveFunc,0,0,1,0,0,4,0,1,0,-1,0,1,,FunWithNinject.NamedScopes.Root
-FunWithNinject.NamedScopes,IRoot,0,0,3,0,0,6,0,1,0,-1,0,0,,
-FunWithNinject.NamedScopes,Root,0,1,3,0,1,11,1,0,1,-1,2,0,FunWithNinject.NamedScopes.IEventAggregator' FunWithNinject.NamedScopes.IHaveFunc,
-FunWithNinject.OpenGenerics,OpenGenericsTests,0,1,0,0,1,42,1,0,0,-1,1,0,FunWithNinject.OpenGenerics.IAutoCache,
-FunWithNinject.OpenGenerics,IAutoCache,0,0,1,0,0,1,0,1,0,-1,0,2,,FunWithNinject.OpenGenerics.OpenGenericsTests' FunWithNinject.OpenGenerics.DependsOnCachedInt
-FunWithNinject.OpenGenerics,IProvider,0,0,1,0,0,1,0,1,0,-1,0,1,,FunWithNinject.OpenGenerics.AutoCache<T>
-FunWithNinject.OpenGenerics,AutoCache<T>,0,1,1,0,1,8,1,0,1,-1,1,0,FunWithNinject.OpenGenerics.IProvider,
-FunWithNinject.OpenGenerics,DependsOnCachedInt,0,1,1,0,1,8,1,0,0,-1,1,0,FunWithNinject.OpenGenerics.IAutoCache,
-FunWithNinject.OpenGenerics,IntProvider,0,0,1,0,0,4,0,0,1,-1,0,0,,
-FunWithNinject.Provider,DirectDependency,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.IFoo,FunWithNinject.Provider.IntermediateDependency
-FunWithNinject.Provider,DirectDualDependency,0,1,2,0,1,13,1,0,0,-1,0,0,,
-FunWithNinject.Provider,IndirectDependencyOnFoo2,0,1,1,0,1,8,1,0,0,-1,0,0,,
-FunWithNinject.Provider,IndirectDependencyOnFoo1,0,1,1,0,1,8,1,0,0,-1,0,0,,
-FunWithNinject.Provider,IntermediateDependency,0,1,1,0,1,8,1,0,0,-1,1,0,FunWithNinject.Provider.DirectDependency,
-FunWithNinject.Provider,MoreIndirectDependencyOnFoo1,0,1,1,0,1,8,1,0,0,-1,0,0,,
-FunWithNinject.Provider,ProviderTests,0,5,0,0,4,72,5,0,0,-1,1,0,FunWithNinject.Provider.NamedFooProvider,
-FunWithNinject.Provider,NamedFooProvider,4,3,0,2,1,35,5,0,0,0,1,1,FunWithNinject.IFoo,FunWithNinject.Provider.ProviderTests
-FunWithNinject.WhenInjected,BingChildService,0,1,0,0,1,7,1,0,1,-1,1,0,FunWithNinject.WhenInjected.ISomeUtility,
-FunWithNinject.WhenInjected,BingService,0,1,0,0,1,7,1,1,1,-1,1,0,FunWithNinject.WhenInjected.ISomeUtility,
-FunWithNinject.WhenInjected,BingUtility,0,0,0,0,0,3,0,0,1,-1,0,0,,
-FunWithNinject.WhenInjected,GoogleChildService,0,1,0,0,1,7,1,0,1,-1,1,0,FunWithNinject.WhenInjected.ISomeUtility,
-FunWithNinject.WhenInjected,GoogleService,0,1,0,0,1,7,1,1,1,-1,1,0,FunWithNinject.WhenInjected.ISomeUtility,
-FunWithNinject.WhenInjected,GoogleUtility,0,0,0,0,0,3,0,0,1,-1,0,0,,
-FunWithNinject.WhenInjected,IService,0,0,0,0,0,3,0,3,0,-1,0,0,,
-FunWithNinject.WhenInjected,ISomeUtility,0,0,0,0,0,3,0,2,0,-1,0,5,,FunWithNinject.WhenInjected.BingChildService' FunWithNinject.WhenInjected.BingService' FunWithNinject.WhenInjected.GoogleChildService' FunWithNinject.WhenInjected.GoogleService' FunWithNinject.WhenInjected.ServiceBase
-FunWithNinject.WhenInjected,ServiceBase,0,1,1,0,1,8,1,2,1,-1,1,0,FunWithNinject.WhenInjected.ISomeUtility,
-FunWithNinject.WhenInjected,WhenInjectedTests,0,4,0,0,4,64,4,0,0,-1,1,0,FunWithNinject.FooDependingOnBar,
+FunWithNinject.AncestorBindings,LevelTwo,0,1,1,0,1,8,1,0,0,-1,1,2,FunWithNinject.AncestorBindings.LevelThree,FunWithNinject.AncestorBindings.Root' FunWithNinject.AncestorBindings.AncestorBindingsTests
+FunWithNinject.AncestorBindings,AncestorBindingsTests,0,3,0,0,3,42,3,0,0,-1,5,0,FunWithNinject.AncestorBindings.Leaf' FunWithNinject.AncestorBindings.LevelTwo' FunWithNinject.AncestorBindings.Parent' FunWithNinject.AncestorBindings.Root' FunWithNinject.AncestorBindings.SingleLevel,
+FunWithNinject.AncestorBindings,Parent,0,1,2,0,1,12,1,0,0,-1,1,1,FunWithNinject.AncestorBindings.Leaf,FunWithNinject.AncestorBindings.AncestorBindingsTests
+FunWithNinject.AncestorBindings,Root,0,1,2,0,1,12,1,0,0,-1,1,1,FunWithNinject.AncestorBindings.LevelTwo,FunWithNinject.AncestorBindings.AncestorBindingsTests
+FunWithNinject.AncestorBindings,SingleLevel,0,1,1,0,1,8,1,0,0,-1,1,1,FunWithNinject.AncestorBindings.Leaf,FunWithNinject.AncestorBindings.AncestorBindingsTests
+FunWithNinject.NamedScopes,NamedScopesTests,0,4,0,0,3,67,4,0,0,-1,6,0,FunWithNinject.NamedScopes.EventAggregator' FunWithNinject.NamedScopes.HaveFunc' FunWithNinject.NamedScopes.IEventAggregator' FunWithNinject.NamedScopes.IHaveFunc' FunWithNinject.NamedScopes.IRoot' FunWithNinject.NamedScopes.Root,
+FunWithNinject.NamedScopes,EventAggregator,2,1,0,0,1,9,1,0,1,0,1,1,FunWithNinject.NamedScopes.IEventAggregator,FunWithNinject.NamedScopes.NamedScopesTests
+FunWithNinject.NamedScopes,HaveFunc,2,1,1,0,1,17,1,0,1,0,2,1,FunWithNinject.NamedScopes.IEventAggregator' FunWithNinject.NamedScopes.IHaveFunc,FunWithNinject.NamedScopes.NamedScopesTests
+FunWithNinject.NamedScopes,IEventAggregator,0,0,0,0,0,3,0,1,0,-1,0,6,,FunWithNinject.NamedScopes.IHaveFunc' FunWithNinject.NamedScopes.EventAggregator' FunWithNinject.NamedScopes.IRoot' FunWithNinject.NamedScopes.NamedScopesTests' FunWithNinject.NamedScopes.Root' FunWithNinject.NamedScopes.HaveFunc
+FunWithNinject.NamedScopes,IHaveFunc,0,0,1,0,0,4,0,1,0,-1,1,4,FunWithNinject.NamedScopes.IEventAggregator,FunWithNinject.NamedScopes.HaveFunc' FunWithNinject.NamedScopes.IRoot' FunWithNinject.NamedScopes.Root' FunWithNinject.NamedScopes.NamedScopesTests
+FunWithNinject.NamedScopes,IRoot,0,0,3,0,0,6,0,1,0,-1,2,2,FunWithNinject.NamedScopes.IEventAggregator' FunWithNinject.NamedScopes.IHaveFunc,FunWithNinject.NamedScopes.Root' FunWithNinject.NamedScopes.NamedScopesTests
+FunWithNinject.NamedScopes,Root,0,1,3,0,1,11,1,0,1,-1,3,1,FunWithNinject.NamedScopes.IEventAggregator' FunWithNinject.NamedScopes.IHaveFunc' FunWithNinject.NamedScopes.IRoot,FunWithNinject.NamedScopes.NamedScopesTests
+FunWithNinject.OpenGenerics,OpenGenericsTests,0,1,0,0,1,42,1,0,0,-1,5,0,FunWithNinject.OpenGenerics.IAutoCache' FunWithNinject.OpenGenerics.IProvider' FunWithNinject.OpenGenerics.AutoCache<T>' FunWithNinject.OpenGenerics.DependsOnCachedInt' FunWithNinject.OpenGenerics.IntProvider,
+FunWithNinject.OpenGenerics,IAutoCache,0,0,1,0,0,1,0,1,0,-1,0,1,,FunWithNinject.OpenGenerics.OpenGenericsTests
+FunWithNinject.OpenGenerics,IProvider,0,0,1,0,0,1,0,1,0,-1,0,1,,FunWithNinject.OpenGenerics.OpenGenericsTests
+FunWithNinject.OpenGenerics,AutoCache<T>,0,1,1,0,1,8,1,0,1,-1,0,1,,FunWithNinject.OpenGenerics.OpenGenericsTests
+FunWithNinject.OpenGenerics,DependsOnCachedInt,0,1,1,0,1,8,1,0,0,-1,0,1,,FunWithNinject.OpenGenerics.OpenGenericsTests
+FunWithNinject.OpenGenerics,IntProvider,0,0,1,0,0,4,0,0,1,-1,0,1,,FunWithNinject.OpenGenerics.OpenGenericsTests
+FunWithNinject.Provider,DirectDependency,0,1,1,0,1,8,1,0,0,-1,1,4,FunWithNinject.IFoo,FunWithNinject.Provider.IndirectDependencyOnFoo2' FunWithNinject.Provider.IntermediateDependency' FunWithNinject.Provider.IndirectDependencyOnFoo1' FunWithNinject.Provider.ProviderTests
+FunWithNinject.Provider,DirectDualDependency,0,1,2,0,1,13,1,0,0,-1,2,1,FunWithNinject.IFoo' FunWithNinject.Provider.NamedFooProvider,FunWithNinject.Provider.ProviderTests
+FunWithNinject.Provider,IndirectDependencyOnFoo2,0,1,1,0,1,8,1,0,0,-1,2,1,FunWithNinject.Provider.DirectDependency' FunWithNinject.Provider.NamedFooProvider,FunWithNinject.Provider.ProviderTests
+FunWithNinject.Provider,IndirectDependencyOnFoo1,0,1,1,0,1,8,1,0,0,-1,2,1,FunWithNinject.Provider.DirectDependency' FunWithNinject.Provider.NamedFooProvider,FunWithNinject.Provider.ProviderTests
+FunWithNinject.Provider,IntermediateDependency,0,1,1,0,1,8,1,0,0,-1,1,2,FunWithNinject.Provider.DirectDependency,FunWithNinject.Provider.MoreIndirectDependencyOnFoo1' FunWithNinject.Provider.ProviderTests
+FunWithNinject.Provider,MoreIndirectDependencyOnFoo1,0,1,1,0,1,8,1,0,0,-1,2,1,FunWithNinject.Provider.IntermediateDependency' FunWithNinject.Provider.NamedFooProvider,FunWithNinject.Provider.ProviderTests
+FunWithNinject.Provider,ProviderTests,0,5,0,0,4,72,5,0,0,-1,10,0,FunWithNinject.IFoo' FunWithNinject.Foo1' FunWithNinject.Foo2' FunWithNinject.Provider.DirectDependency' FunWithNinject.Provider.DirectDualDependency' FunWithNinject.Provider.IndirectDependencyOnFoo2' FunWithNinject.Provider.IndirectDependencyOnFoo1' FunWithNinject.Provider.IntermediateDependency' FunWithNinject.Provider.MoreIndirectDependencyOnFoo1' FunWithNinject.Provider.NamedFooProvider,
+FunWithNinject.Provider,NamedFooProvider,4,3,0,2,1,35,5,0,0,0,1,5,FunWithNinject.IFoo,FunWithNinject.Provider.MoreIndirectDependencyOnFoo1' FunWithNinject.Provider.IndirectDependencyOnFoo1' FunWithNinject.Provider.IndirectDependencyOnFoo2' FunWithNinject.Provider.DirectDualDependency' FunWithNinject.Provider.ProviderTests
+FunWithNinject.Scope,ScopeTests,0,2,0,0,2,52,2,0,0,-1,3,0,FunWithNinject.Scope.IScare' FunWithNinject.Scope.Boo' FunWithNinject.Scope.RealMonster,
+FunWithNinject.Scope,IScare,0,1,0,0,0,4,1,1,0,-1,0,1,,FunWithNinject.Scope.ScopeTests
+FunWithNinject.Scope,Boo,0,1,0,0,1,7,1,0,1,-1,0,1,,FunWithNinject.Scope.ScopeTests
+FunWithNinject.Scope,RealMonster,0,1,2,0,1,10,1,0,0,-1,0,1,,FunWithNinject.Scope.ScopeTests
+FunWithNinject.WhenInjected,BingChildService,0,1,0,0,1,7,1,0,1,-1,2,0,FunWithNinject.WhenInjected.BingService' FunWithNinject.WhenInjected.ISomeUtility,
+FunWithNinject.WhenInjected,BingService,0,1,0,0,1,7,1,1,1,-1,3,2,FunWithNinject.WhenInjected.IService' FunWithNinject.WhenInjected.ISomeUtility' FunWithNinject.WhenInjected.ServiceBase,FunWithNinject.WhenInjected.WhenInjectedTests' FunWithNinject.WhenInjected.BingChildService
+FunWithNinject.WhenInjected,BingUtility,0,0,0,0,0,3,0,0,1,-1,1,1,FunWithNinject.WhenInjected.ISomeUtility,FunWithNinject.WhenInjected.WhenInjectedTests
+FunWithNinject.WhenInjected,GoogleChildService,0,1,0,0,1,7,1,0,1,-1,2,1,FunWithNinject.WhenInjected.GoogleService' FunWithNinject.WhenInjected.ISomeUtility,FunWithNinject.WhenInjected.WhenInjectedTests
+FunWithNinject.WhenInjected,GoogleService,0,1,0,0,1,7,1,1,1,-1,3,2,FunWithNinject.WhenInjected.IService' FunWithNinject.WhenInjected.ISomeUtility' FunWithNinject.WhenInjected.ServiceBase,FunWithNinject.WhenInjected.GoogleChildService' FunWithNinject.WhenInjected.WhenInjectedTests
+FunWithNinject.WhenInjected,GoogleUtility,0,0,0,0,0,3,0,0,1,-1,1,1,FunWithNinject.WhenInjected.ISomeUtility,FunWithNinject.WhenInjected.WhenInjectedTests
+FunWithNinject.WhenInjected,IService,0,0,0,0,0,3,0,3,0,-1,0,3,,FunWithNinject.WhenInjected.GoogleService' FunWithNinject.WhenInjected.BingService' FunWithNinject.WhenInjected.ServiceBase
+FunWithNinject.WhenInjected,ISomeUtility,0,0,0,0,0,3,0,2,0,-1,0,8,,FunWithNinject.WhenInjected.GoogleService' FunWithNinject.WhenInjected.BingUtility' FunWithNinject.WhenInjected.BingService' FunWithNinject.WhenInjected.BingChildService' FunWithNinject.WhenInjected.GoogleUtility' FunWithNinject.WhenInjected.GoogleChildService' FunWithNinject.WhenInjected.ServiceBase' FunWithNinject.WhenInjected.WhenInjectedTests
+FunWithNinject.WhenInjected,ServiceBase,0,1,1,0,1,8,1,2,1,-1,2,2,FunWithNinject.WhenInjected.IService' FunWithNinject.WhenInjected.ISomeUtility,FunWithNinject.WhenInjected.BingService' FunWithNinject.WhenInjected.GoogleService
+FunWithNinject.WhenInjected,WhenInjectedTests,0,4,0,0,4,64,4,0,0,-1,10,0,FunWithNinject.IBar' FunWithNinject.IFoo' FunWithNinject.Bar2' FunWithNinject.FooDependingOnBar' FunWithNinject.WhenInjected.BingService' FunWithNinject.WhenInjected.BingUtility' FunWithNinject.WhenInjected.GoogleChildService' FunWithNinject.WhenInjected.GoogleService' FunWithNinject.WhenInjected.GoogleUtility' FunWithNinject.WhenInjected.ISomeUtility,

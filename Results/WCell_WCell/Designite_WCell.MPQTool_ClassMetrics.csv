@@ -1,40 +1,40 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 WCell.MPQTool.DBC.Compare,CompareResultType,0,0,0,0,0,27,0,0,0,-1,0,0,,
-WCell.MPQTool.DBC.Compare,DBCFileComparer,8,2,2,4,2,214,26,0,0,0,3,2,WCell.MPQTool.DBC.DBCReader' WCell.MPQTool.DBC.CellType' WCell.Util.ArrayUtil,WCell.MPQTool.DBC.Compare.DBCDirComparer' WCell.MPQTool.DBCTool
-WCell.MPQTool.DBC.Compare,DBCDirComparer,3,3,2,0,3,83,10,0,0,0,2,1,WCell.MPQTool.DBC.DBCReader' WCell.MPQTool.DBC.Compare.DBCFileComparer,WCell.MPQTool.DBCTool
+WCell.MPQTool.DBC.Compare,DBCFileComparer,8,2,2,4,2,214,31,0,0,0,2,2,WCell.MPQTool.DBC.CellType' WCell.MPQTool.DBC.DBCReader,WCell.MPQTool.DBCTool' WCell.MPQTool.DBC.Compare.DBCDirComparer
+WCell.MPQTool.DBC.Compare,DBCDirComparer,3,3,2,0,3,83,11,0,0,0.67,2,1,WCell.MPQTool.DBC.Compare.DBCFileComparer' WCell.MPQTool.DBC.DBCReader,WCell.MPQTool.DBCTool
 WCell.MPQTool.DBC.Compare,DBCDirCompareResult,0,0,0,0,0,3,0,0,0,-1,0,0,,
-WCell.MPQTool,DBCTool,5,17,1,4,12,411,41,0,0,0,8,4,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.Constants.ClientVersion' WCell.Constants.WCellInfo' WCell.Util.NLog.LogUtil' WCell.MPQTool.DBC.Compare.DBCDirComparer' WCell.MPQTool.DBC.Compare.DBCFileComparer' WCell.MPQTool.MPQToolConfig,WCell.MPQTool.DBCToolRunner' WCell.MPQTool.MpqLibrarian' WCell.Tools.Commands.DBCDumpCommand' WCell.Tools.ToolConfig
-WCell.MPQTool,DBCToolRunner,0,1,0,0,0,17,1,0,0,-1,4,0,WCell.MPQTool.MPQToolConfig' WCell.Util.NLog.LogUtil' WCell.MPQTool.StormLibWrapper.NativeMethods' WCell.MPQTool.DBCTool,
-WCell.MPQTool,MpqLibrarian,2,6,0,1,6,97,13,0,0,0.33,5,11,WCell.MPQTool.DBCTool' WCell.Util.NLog.LogUtil' WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.StormLibWrapper.MpqStream,WCell.Terrain.WCellTerrainSettings' WCell.Terrain.MPQ.WDT' WCell.Terrain.Serialization.ADTReader' WCell.Terrain.Serialization.M2Reader' WCell.Terrain.Serialization.WDTReader' WCell.Terrain.Serialization.WMOGroupReader' WCell.Terrain.Serialization.WMOReader' WCell.Terrain.Extractor.HeightfieldExtractor' WCell.Terrain.Extractor.Extractor' WCell.Terrain.GUI.TerrainViewer' WCell.Terrain.GUI.UI.TileOverview
+WCell.MPQTool,DBCTool,5,17,1,4,12,411,46,0,0,0,4,2,WCell.MPQTool.DBC.Compare.DBCFileComparer' WCell.MPQTool.DBC.Compare.DBCDirComparer' WCell.MPQTool.MPQToolConfig' WCell.MPQTool.StormLibWrapper.MpqArchive,WCell.MPQTool.MpqLibrarian' WCell.MPQTool.DBCToolRunner
+WCell.MPQTool,DBCToolRunner,0,1,0,0,0,17,1,0,0,-1,3,0,WCell.MPQTool.DBCTool' WCell.MPQTool.MPQToolConfig' WCell.MPQTool.StormLibWrapper.NativeMethods,
+WCell.MPQTool,MpqLibrarian,2,6,0,1,6,97,13,0,0,0.33,3,0,WCell.MPQTool.DBCTool' WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqStream,
 WCell.MPQTool,MPQToolConfig,3,0,2,2,0,33,0,0,0,-1,0,2,,WCell.MPQTool.DBCTool' WCell.MPQTool.DBCToolRunner
 WCell.MPQTool.DBC,CellType,0,0,0,0,0,11,0,0,0,-1,0,2,,WCell.MPQTool.DBC.Compare.DBCFileComparer' WCell.MPQTool.DBC.DBCReader
-WCell.MPQTool.DBC,DBCReader,9,6,6,2,5,180,16,0,0,0,2,2,WCell.Util.Utility' WCell.MPQTool.DBC.CellType,WCell.MPQTool.DBC.Compare.DBCFileComparer' WCell.MPQTool.DBC.Compare.DBCDirComparer
+WCell.MPQTool.DBC,DBCReader,9,6,6,2,5,180,16,0,0,0,1,2,WCell.MPQTool.DBC.CellType,WCell.MPQTool.DBC.Compare.DBCFileComparer' WCell.MPQTool.DBC.Compare.DBCDirComparer
 MpqReader,BitStream,3,5,1,0,4,44,10,0,0,0,0,2,,MpqReader.MpqHuffman' MpqReader.PKLibDecompress
-MpqReader,MpqArchive,8,16,4,0,5,297,38,0,0,0,5,2,MpqReader.MpqHeader' MpqReader.MpqHash' MpqReader.MpqBlock' MpqReader.FileInfo' MpqReader.MpqStream,MpqReader.MpqStream' SCSharp.MpqArchive
-MpqReader,FileInfo,4,0,0,4,0,7,0,0,0,-1,1,1,MpqReader.MpqFileFlags,MpqReader.MpqArchive
-MpqReader,LinkedNode,6,2,1,6,2,49,4,0,0,0,0,1,,MpqReader.MpqHuffman
-MpqReader,MpqHuffman,1,7,0,0,1,285,23,0,0,0.29,2,1,MpqReader.LinkedNode' MpqReader.BitStream,MpqReader.MpqStream
-MpqReader,MpqParserException,0,3,0,0,3,17,3,0,0,-1,0,0,,
-MpqReader,MpqStream,8,15,5,0,6,315,51,0,0,0.33,7,2,MpqReader.MpqBlock' MpqReader.MpqArchive' MpqReader.MpqFileFlags' MpqReader.MpqHuffman' MpqReader.MpqWavCompression' MpqReader.PKLibDecompress' ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream,MpqReader.MpqArchive' SCSharp.MpqArchive
-MpqReader,MpqFileFlags,0,0,0,0,0,16,0,0,0,-1,0,3,,MpqReader.FileInfo' MpqReader.MpqStream' MpqReader.MpqBlock
+MpqReader,MpqArchive,8,16,4,0,5,297,38,0,0,0,7,2,MpqReader.FileInfo' MpqReader.MpqParserException' MpqReader.MpqStream' MpqReader.MpqFileFlags' MpqReader.MpqHeader' MpqReader.MpqHash' MpqReader.MpqBlock,SCSharp.MpqArchive' MpqReader.MpqStream
+MpqReader,FileInfo,4,0,0,4,0,7,0,0,0,-1,0,1,,MpqReader.MpqArchive
+MpqReader,LinkedNode,6,2,1,6,2,49,5,0,0,1,0,1,,MpqReader.MpqHuffman
+MpqReader,MpqHuffman,1,7,0,0,1,285,23,0,0,0.29,3,1,MpqReader.BitStream' MpqReader.LinkedNode' MpqReader.MpqParserException,MpqReader.MpqStream
+MpqReader,MpqParserException,0,3,0,0,3,17,3,0,0,-1,0,4,,MpqReader.MpqArchive' MpqReader.MpqHuffman' MpqReader.MpqStream' MpqReader.PKLibDecompress
+MpqReader,MpqStream,8,15,5,0,6,315,54,0,0,0.33,7,1,MpqReader.MpqArchive' MpqReader.MpqHuffman' MpqReader.MpqParserException' MpqReader.MpqFileFlags' MpqReader.MpqBlock' MpqReader.MpqWavCompression' MpqReader.PKLibDecompress,MpqReader.MpqArchive
+MpqReader,MpqFileFlags,0,0,0,0,0,16,0,0,0,-1,0,3,,MpqReader.MpqArchive' MpqReader.MpqBlock' MpqReader.MpqStream
 MpqReader,MpqFileCompression,0,0,0,0,0,9,0,0,0,-1,0,0,,
 MpqReader,MpqHeader,11,1,0,11,1,28,1,0,0,0,0,1,,MpqReader.MpqArchive
 MpqReader,MpqHash,5,2,1,5,2,30,2,0,0,0,0,1,,MpqReader.MpqArchive
-MpqReader,MpqBlock,5,1,2,5,1,33,1,0,0,0,1,2,MpqReader.MpqFileFlags,MpqReader.MpqArchive' MpqReader.MpqStream
-MpqReader,MpqWavCompression,2,2,0,0,1,110,7,0,0,1,0,1,,MpqReader.MpqStream
+MpqReader,MpqBlock,5,1,2,5,1,33,1,0,0,0,1,2,MpqReader.MpqFileFlags,MpqReader.MpqStream' MpqReader.MpqArchive
+MpqReader,MpqWavCompression,2,2,0,0,1,110,25,0,0,1,0,1,,MpqReader.MpqStream
 MpqReader,CompressionType,0,0,0,0,0,5,0,0,0,-1,0,1,,MpqReader.PKLibDecompress
-MpqReader,PKLibDecompress,11,6,0,0,2,158,17,0,0,0,2,1,MpqReader.BitStream' MpqReader.CompressionType,MpqReader.MpqStream
+MpqReader,PKLibDecompress,11,6,0,0,2,158,26,0,0,0,3,1,MpqReader.BitStream' MpqReader.MpqParserException' MpqReader.CompressionType,MpqReader.MpqStream
 SCSharp,MpqResource,0,1,0,0,0,4,1,0,0,-1,0,0,,
-SCSharp,Mpq,1,3,0,0,2,80,3,3,0,1,0,1,,SCSharp.MpqContainer
+SCSharp,Mpq,1,3,0,0,2,80,3,3,0,1,0,3,,SCSharp.MpqContainer' SCSharp.MpqDirectory' SCSharp.MpqArchive
 SCSharp,MpqContainer,1,6,0,0,6,39,11,0,1,0,1,0,SCSharp.Mpq,
-SCSharp,MpqDirectory,2,4,0,0,2,41,9,0,1,0,0,0,,
-SCSharp,MpqArchive,1,3,0,0,3,21,3,0,1,0,2,0,MpqReader.MpqArchive' MpqReader.MpqStream,
-WCell.MPQTool.StormLibWrapper,ErrorHandler,0,1,0,0,1,20,3,0,0,-1,0,2,,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqStream
-WCell.MPQTool.StormLibWrapper,MpqArchive,4,12,3,0,9,163,26,0,0,0,6,6,WCell.MPQTool.StormLibWrapper.OpenArchiveFlags' WCell.MPQTool.StormLibWrapper.ErrorHandler' WCell.MPQTool.StormLibWrapper.NativeMethods' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.StormLibWrapper.OpenFileFlags' WCell.MPQTool.StormLibWrapper.FileFindData,WCell.MPQTool.DBCTool' WCell.MPQTool.MpqLibrarian' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.Terrain.Serialization.ADTReader' WCell.Terrain.Extractor.HeightfieldExtractor' WCell.Terrain.GUI.UI.TileOverview
-WCell.MPQTool.StormLibWrapper,MpqFile,3,5,3,0,5,86,10,0,0,0,3,4,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqStream' WCell.MPQTool.StormLibWrapper.NativeMethods,WCell.MPQTool.DBCTool' WCell.MPQTool.MpqLibrarian' WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqStream
-WCell.MPQTool.StormLibWrapper,MpqStream,3,8,5,0,7,208,18,0,0,0.5,3,3,WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.StormLibWrapper.NativeMethods' WCell.MPQTool.StormLibWrapper.ErrorHandler,WCell.MPQTool.MpqLibrarian' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.Terrain.Serialization.ADTReader
-WCell.MPQTool.StormLibWrapper,NativeMethods,3,21,2,3,20,171,22,0,0,0.1,3,6,WCell.MPQTool.StormLibWrapper.OpenArchiveFlags' WCell.MPQTool.StormLibWrapper.OpenFileFlags' WCell.MPQTool.StormLibWrapper.FileFindData,WCell.MPQTool.DBCToolRunner' WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.StormLibWrapper.MpqStream' WCell.Terrain.Extractor.Program' WCell.Terrain.GUI.TerrainViewerProgram
-WCell.MPQTool.StormLibWrapper,OpenArchiveFlags,0,0,0,0,0,51,0,0,0,-1,0,2,,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.NativeMethods
-WCell.MPQTool.StormLibWrapper,OpenFileFlags,0,0,0,0,0,19,0,0,0,-1,0,2,,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.NativeMethods
-WCell.MPQTool.StormLibWrapper,FileFindData,10,0,0,10,0,44,0,0,0,-1,0,2,,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.NativeMethods
-WCell.MPQTool.StormLibWrapper,StormLibException,1,6,2,0,6,76,6,0,0,0.83,0,0,,
+SCSharp,MpqDirectory,2,4,0,0,2,41,9,0,1,0,1,0,SCSharp.Mpq,
+SCSharp,MpqArchive,1,3,0,0,3,21,3,0,1,0,2,0,MpqReader.MpqArchive' SCSharp.Mpq,
+WCell.MPQTool.StormLibWrapper,ErrorHandler,0,1,0,0,1,20,3,0,0,-1,1,2,WCell.MPQTool.StormLibWrapper.StormLibException,WCell.MPQTool.StormLibWrapper.MpqStream' WCell.MPQTool.StormLibWrapper.MpqArchive
+WCell.MPQTool.StormLibWrapper,MpqArchive,4,12,3,0,9,163,26,0,0,0.17,7,3,WCell.MPQTool.StormLibWrapper.ErrorHandler' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.StormLibWrapper.NativeMethods' WCell.MPQTool.StormLibWrapper.OpenArchiveFlags' WCell.MPQTool.StormLibWrapper.OpenFileFlags' WCell.MPQTool.StormLibWrapper.FileFindData' WCell.MPQTool.StormLibWrapper.StormLibException,WCell.MPQTool.DBCTool' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.MpqLibrarian
+WCell.MPQTool.StormLibWrapper,MpqFile,3,5,3,0,5,86,10,0,0,0.6,3,2,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.MpqStream' WCell.MPQTool.StormLibWrapper.NativeMethods,WCell.MPQTool.StormLibWrapper.MpqStream' WCell.MPQTool.StormLibWrapper.MpqArchive
+WCell.MPQTool.StormLibWrapper,MpqStream,3,8,5,0,7,208,18,0,0,0.75,4,2,WCell.MPQTool.StormLibWrapper.ErrorHandler' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.StormLibWrapper.NativeMethods' WCell.MPQTool.StormLibWrapper.StormLibException,WCell.MPQTool.MpqLibrarian' WCell.MPQTool.StormLibWrapper.MpqFile
+WCell.MPQTool.StormLibWrapper,NativeMethods,3,21,2,3,20,171,22,0,0,0.1,3,5,WCell.MPQTool.StormLibWrapper.OpenArchiveFlags' WCell.MPQTool.StormLibWrapper.OpenFileFlags' WCell.MPQTool.StormLibWrapper.FileFindData,WCell.MPQTool.DBCToolRunner' WCell.MPQTool.StormLibWrapper.FileFindData' WCell.MPQTool.StormLibWrapper.MpqFile' WCell.MPQTool.StormLibWrapper.MpqStream' WCell.MPQTool.StormLibWrapper.MpqArchive
+WCell.MPQTool.StormLibWrapper,OpenArchiveFlags,0,0,0,0,0,51,0,0,0,-1,0,2,,WCell.MPQTool.StormLibWrapper.NativeMethods' WCell.MPQTool.StormLibWrapper.MpqArchive
+WCell.MPQTool.StormLibWrapper,OpenFileFlags,0,0,0,0,0,19,0,0,0,-1,0,2,,WCell.MPQTool.StormLibWrapper.NativeMethods' WCell.MPQTool.StormLibWrapper.MpqArchive
+WCell.MPQTool.StormLibWrapper,FileFindData,10,0,0,10,0,44,0,0,0,-1,1,2,WCell.MPQTool.StormLibWrapper.NativeMethods,WCell.MPQTool.StormLibWrapper.MpqArchive' WCell.MPQTool.StormLibWrapper.NativeMethods
+WCell.MPQTool.StormLibWrapper,StormLibException,1,6,2,0,6,76,6,0,0,1,0,3,,WCell.MPQTool.StormLibWrapper.ErrorHandler' WCell.MPQTool.StormLibWrapper.MpqStream' WCell.MPQTool.StormLibWrapper.MpqArchive

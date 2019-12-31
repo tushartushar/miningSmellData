@@ -1,1 +1,359 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Core6.Audit,CustomAuditDataBehavior,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Core6.Audit,ProvideConfiguration,0,1,0,0,1,12,1,0,0,-1,0,0,,
+Core6.Audit,Usage,0,1,0,0,0,10,1,0,0,-1,0,0,,
+Core6,BasicUsageOfIBus,0,11,0,0,0,131,11,0,0,-1,2,0,Core6.MyMessage' Core6.OtherMessage,
+Core6,MyMessageHandler,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core6,MyMessage,0,0,0,0,0,6,0,0,0,-1,0,2,,Core6.BasicUsageOfIBus' Core6.DiscardingOldMessages
+Core6,OtherMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.BasicUsageOfIBus
+Core6,BestPracticesConfiguration,0,2,0,0,0,32,2,0,0,-1,2,0,Core6.MyEvent' Core6.TransportName,
+Core6,MyEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.BestPracticesConfiguration
+Core6,TransportName,0,1,1,0,1,9,1,0,0,-1,0,1,,Core6.BestPracticesConfiguration
+Core6,CriticalErrors,0,3,0,0,0,36,3,0,0,-1,0,0,,
+Core6,CustomConfigSource,0,1,0,0,0,9,1,0,0,-1,1,0,Core6.MyCustomConfigurationSource,
+Core6,MyCustomConfigurationSource,0,1,0,0,1,17,2,0,0,-1,0,1,,Core6.CustomConfigSource
+Core6,CustomRijndaelEncryptionServiceConfigProvider,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6,DiscardingOldMessages,0,1,0,0,0,25,1,0,0,-1,1,0,Core6.MyMessage,
+Core6,HandlerOrdering,0,3,0,0,0,36,3,0,0,-1,3,0,Core6.HandlerA' Core6.HandlerB' Core6.HandlerC,
+Core6,HandlerA,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.HandlerOrdering
+Core6,HandlerB,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.HandlerOrdering
+Core6,HandlerC,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.HandlerOrdering
+Core6,Hosting,0,4,0,0,0,58,4,0,0,-1,0,0,,
+Core6,EndpointInstance,0,1,1,0,1,12,2,0,0,-1,0,0,,
+Core6,ForInstallationOnReplacement,0,1,0,0,0,12,1,0,0,-1,0,0,,
+Core6,SwitchInstallersWithCommandline,1,1,0,0,1,21,2,0,0,0,0,0,,
+Core6,SwitchInstallersByMachineNameConvention,0,1,0,0,0,13,2,0,0,-1,0,0,,
+Core6,DisableInstallers,0,1,0,0,0,12,1,0,0,-1,0,0,,
+Core6,MyInstaller,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core6,InstancePerUnitOfWorkRegistration,0,1,0,0,0,29,1,0,0,-1,1,0,Core6.MyUnitOfWork,
+Core6,MyUnitOfWork,0,2,0,0,2,14,2,0,0,-1,0,1,,Core6.InstancePerUnitOfWorkRegistration
+Core6,License,0,1,0,0,0,11,1,0,0,-1,0,0,,
+Core6,PurgingMessagesAtStartup,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core6,TimeToWaitBeforeTriggeringCriticalErrorOnTimeoutOutages,0,1,0,0,0,10,1,0,0,-1,0,0,,
+Core6,TransactionScopeUnitOfWork,0,3,0,0,0,26,3,0,0,-1,0,0,,
+Core6,TransportTransactions,0,7,0,0,0,56,7,0,0,-1,1,0,Core6.MyTransport,
+Core6,MyTransport,0,1,1,0,1,9,1,0,0,-1,0,4,,Core6.Routing.RoutingAPIs' Core6.TransportTransactions' Core6.MyTransportConfigurationExtensions' Core6.UpgradeGuides._5to6.Upgrade
+Core6,MyTransportConfigurationExtensions,0,1,0,0,1,6,1,0,0,-1,1,0,Core6.MyTransport,
+Core6.Container.Custom,MyContainer,0,10,0,0,10,39,10,0,0,-1,0,1,,Core6.Container.Custom.MyContainerDefinition
+Core6.Container.Custom,MyContainerDefinition,0,1,0,0,1,8,1,0,0,-1,1,1,Core6.Container.Custom.MyContainer,Core6.Container.Custom.Usage
+Core6.Container.Custom,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core6.Container.Custom.MyContainerDefinition,
+Core6.Container,MyService,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Container.Usage
+Core6.Container,Usage,0,7,0,0,0,88,7,0,0,-1,1,0,Core6.Container.MyService,
+Core6.Conventions,Usage,0,1,0,0,0,43,1,0,0,-1,0,0,,
+Core6.DataBus.Conventions,MessageWithLargePayload,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Core6.DataBus.Conventions,Usage,0,1,0,0,0,13,1,0,0,-1,0,0,,
+Core6.DataBus.Custom,CustomDataBus,0,3,0,0,3,22,3,0,0,-1,0,2,,Core6.DataBus.Custom.Usage' Core6.DataBus.Custom.CustomDatabusFeature
+Core6.DataBus.Custom,CustomDatabusDefinition,0,1,0,0,0,7,1,0,0,-1,1,0,Core6.DataBus.Custom.CustomDatabusFeature,
+Core6.DataBus.Custom,CustomDatabusFeature,0,2,0,0,1,12,2,0,0,-1,1,1,Core6.DataBus.Custom.CustomDataBus,Core6.DataBus.Custom.CustomDatabusDefinition
+Core6.DataBus.Custom,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core6.DataBus.Custom.CustomDataBus,
+Core6.DataBus.DataBusProperty,MessageWithLargePayload,0,0,2,0,0,5,0,0,0,-1,0,0,,
+Core6.DelayedDelivery,DeferForDateTime,0,1,0,0,0,18,1,0,0,-1,1,0,Core6.DelayedDelivery.MessageToBeSentLater,
+Core6.DelayedDelivery,MessageToBeSentLater,0,0,0,0,0,5,0,0,0,-1,0,2,,Core6.DelayedDelivery.DeferForDateTime' Core6.DelayedDelivery.DeferForTimeSpan
+Core6.DelayedDelivery,DeferForTimeSpan,0,1,0,0,0,21,1,0,0,-1,1,0,Core6.DelayedDelivery.MessageToBeSentLater,
+Core6.EndpointName,Usage,0,2,0,0,0,27,2,0,0,-1,0,0,,
+Core6.EndpointName,MyTransport,0,1,1,0,1,9,1,0,0,-1,0,0,,
+Core6.EndpointName,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Core6.Features,MyAdvancedSatelliteFeature,0,3,0,0,1,30,3,0,0,-1,0,0,,
+Core6.Features,MyFeature,0,2,0,0,0,37,2,0,0,-1,2,0,Core6.Features.MessageHandlerDependency' Core6.Features.CustomBehavior,
+Core6.Features,MessageHandlerDependency,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Features.MyFeature
+Core6.Features,CustomBehavior,0,2,0,0,2,11,2,0,0,-1,0,1,,Core6.Features.MyFeature
+Core6.Features,MinimalFeature,0,1,0,0,0,7,1,0,0,-1,0,0,,
+Core6.Features,ComponentBFeature,0,1,0,0,0,7,1,0,0,-1,0,1,,Core6.Features.ComponentAFeature
+Core6.Features,ComponentAFeature,0,2,0,0,1,18,2,0,0,-1,1,0,Core6.Features.ComponentBFeature,
+Core6.Features,FeatureEnabledByDefault,0,2,0,0,1,11,2,0,0,-1,0,0,,
+Core6.Features,FeatureWithDefaults,0,2,0,0,1,15,2,0,0,-1,0,0,,
+Core6.Features,WriteSettings,0,1,0,0,1,13,1,0,0,-1,1,0,Core6.Features.CustomSettingsDto,
+Core6.Features,CustomSettingsDto,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Features.WriteSettings
+Core6.Features,EnablingOtherFeatures,0,2,0,0,1,21,2,0,0,-1,1,0,Core6.Features.OtherFeature,
+Core6.Features,OtherFeature,0,1,0,0,0,8,1,0,0,-1,0,1,,Core6.Features.EnablingOtherFeatures
+Core6.Features,FeatureWithPrerequisites,0,2,0,0,1,19,2,0,0,-1,0,0,,
+Core6.Features,MyFeatureWithStartupTasks,0,1,0,0,0,12,1,0,0,-1,1,0,Core6.Features.MyStartupTask,
+Core6.Features,MyStartupTask,1,3,0,0,1,20,3,0,0,0,0,1,,Core6.Features.MyFeatureWithStartupTasks
+Core6.Features,MyStartupTaskThatUsesMessageSession,1,3,0,0,1,22,3,0,0,0,1,0,Core6.Features.MyEvent,
+Core6.Features,MyEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Features.MyStartupTaskThatUsesMessageSession
+Core6.Features,MySatelliteFeature,0,3,0,0,1,26,3,0,0,-1,0,0,,
+Core6.Features,SatelliteRecoverability,0,4,0,0,3,54,4,0,0,-1,0,0,,
+Core6.Forwarding,Usage,0,1,0,0,0,16,1,0,0,-1,0,0,,
+Core6.Handlers,ShortComputeBoundHandler,0,1,0,0,1,9,1,0,0,-1,2,0,Core6.Handlers.ComputeBoundComponent' Core6.Handlers.MyMessage,
+Core6.Handlers,LongComputeBoundHandler,0,1,0,0,1,10,1,0,0,-1,2,0,Core6.Handlers.ComputeBoundComponent' Core6.Handlers.MyMessage,
+Core6.Handlers,ComputeBoundComponent,0,2,0,0,2,9,2,0,0,-1,0,2,,Core6.Handlers.ShortComputeBoundHandler' Core6.Handlers.LongComputeBoundHandler
+Core6.Handlers,HandlerReturnsATask,0,1,0,0,1,9,1,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,HandlerReturnsTwoTasks,1,1,0,0,1,14,2,0,0,0,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,HandlerAwaitsTheTask,0,1,0,0,1,8,1,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,BatchedDispatchHandler,0,1,0,0,1,13,2,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,ImmediateDispatchHandler,0,1,0,0,1,16,2,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,PacketsImmediateDispatchHandler,0,1,0,0,1,20,3,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,LimitConcurrencyImmediateDispatchHandler,0,2,0,0,1,32,3,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,GenericAsyncHandler,1,1,0,0,1,10,1,0,0,0,0,0,,
+Core6.Handlers,HandlerWhichIntegratesWithEvent,0,1,0,0,1,26,1,0,0,-1,2,0,Core6.Handlers.DependencyWhichRaisedEvent' Core6.Handlers.MyMessage,
+Core6.Handlers,DependencyWhichRaisedEvent,0,1,0,0,0,8,1,0,0,-1,0,1,,Core6.Handlers.HandlerWhichIntegratesWithEvent
+Core6.Handlers,HandlerWhichIntegratesWithAPM,0,1,0,0,1,23,1,0,0,-1,2,0,Core6.Handlers.DependencyWhichUsesAPM' Core6.Handlers.MyMessage,
+Core6.Handlers,DependencyWhichUsesAPM,0,2,0,0,2,11,2,0,0,-1,0,1,,Core6.Handlers.HandlerWhichIntegratesWithAPM
+Core6.Handlers,HandlerWhichIntegratesWithRemotingWithAPM,0,1,0,0,1,12,1,0,0,-1,2,0,Core6.Handlers.AsyncClient' Core6.Handlers.MyMessage,
+Core6.Handlers,AsyncClient,0,2,0,0,2,27,2,0,0,-1,1,1,Core6.Handlers.RemoteService,Core6.Handlers.HandlerWhichIntegratesWithRemotingWithAPM
+Core6.Handlers,HandlerWhichIntegratesWithRemotingWithTask,0,1,0,0,1,16,1,0,0,-1,2,0,Core6.Handlers.RemoteService' Core6.Handlers.MyMessage,
+Core6.Handlers,RemoteService,0,1,0,0,1,9,1,0,0,-1,0,2,,Core6.Handlers.AsyncClient' Core6.Handlers.HandlerWhichIntegratesWithRemotingWithTask
+Core6.Handlers,MyAsyncHandler,0,1,0,0,1,8,1,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.Handlers,MyMessage,0,0,1,0,0,4,0,0,0,-1,0,26,,Core6.Handlers.MyAsyncHandler' Core6.UpgradeGuides._5to6.MessageContext' Core6.Handlers.HandlerWhichIntegratesWithEvent' Core6.Handlers.HandlerWhichIntegratesWithAPM' Core6.Handlers.HandlerWhichIntegratesWithRemotingWithAPM' Core6.Handlers.HandlerWhichIntegratesWithRemotingWithTask' Core6.UpgradeGuides._5to6.UpgradeMyAsynchronousHandler' Core6.UpgradeGuides._5to6.UpgradeMySynchronousHandler' Core6.UpgradeGuides._5to6.SendAndPublishHandler' Core6.UpgradeGuides._5to6.MigrationBeginning' Core6.UpgradeGuides._5to6.MigrationStep1' Core6.UpgradeGuides._5to6.MigrationStep2' Core6.UpgradeGuides._5to6.MigrationStep3' Core6.UpgradeGuides._5to6.MigrationStep4' Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichUsesIBus' Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichReturns' Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichAccessesContext' Core6.Handlers.ShortComputeBoundHandler' Core6.Handlers.LongComputeBoundHandler' Core6.Handlers.HandlerReturnsATask' Core6.Handlers.HandlerReturnsTwoTasks' Core6.Handlers.HandlerAwaitsTheTask' Core6.Handlers.BatchedDispatchHandler' Core6.Handlers.ImmediateDispatchHandler' Core6.Handlers.PacketsImmediateDispatchHandler' Core6.Handlers.LimitConcurrencyImmediateDispatchHandler
+Core6.Handlers,ReplyingHandler,0,1,0,0,1,17,1,0,0,-1,2,0,Core6.Handlers.RequestDataMessage' Core6.Handlers.DataResponseMessage,
+Core6.Handlers,RequestDataMessage,0,0,2,0,0,6,0,0,0,-1,0,1,,Core6.Handlers.ReplyingHandler
+Core6.Handlers,DataResponseMessage,0,0,2,0,0,5,0,0,0,-1,0,1,,Core6.Handlers.ReplyingHandler
+Core6.Handlers.DataAccess,AddOrderLine,0,0,3,0,0,7,0,0,1,-1,1,2,Core6.Handlers.DataAccess.OrderMessage,Core6.Handlers.DataAccess.Managed' Core6.Handlers.DataAccess.Simple
+Core6.Handlers.DataAccess,IMyOrm,0,1,0,0,0,4,1,0,0,-1,1,1,Core6.Handlers.DataAccess.IMyOrmSession,Core6.Handlers.DataAccess.Simple
+Core6.Handlers.DataAccess,IMyOrmSession,0,2,0,0,0,6,2,0,0,-1,1,2,Core6.Handlers.DataAccess.Order,Core6.Handlers.DataAccess.IMyOrm' Core6.Handlers.DataAccess.MyOrmExtensions
+Core6.Handlers.DataAccess,Managed,0,1,0,0,1,45,1,0,0,-1,5,1,Core6.Handlers.DataAccess.AddOrderLine' Core6.Handlers.DataAccess.IdempotencyEnforcer' Core6.Handlers.DataAccess.MyPersistence' Core6.Handlers.DataAccess.Order' Core6.Handlers.DataAccess.OrderMessage,Core6.Handlers.DataAccess.MyOrmExtensions
+Core6.Handlers.DataAccess,IdempotencyEnforcer,0,2,0,0,1,24,3,0,0,-1,0,2,,Core6.Handlers.DataAccess.MyOrmExtensions' Core6.Handlers.DataAccess.Managed
+Core6.Handlers.DataAccess,NonIdempotentHandler,1,3,0,0,3,29,3,0,0,1,0,0,,
+Core6.Handlers.DataAccess,MyOrmExtensions,0,2,0,0,2,10,2,0,0,-1,4,0,Core6.Handlers.DataAccess.IMyOrmSession' Core6.Handlers.DataAccess.Managed' Core6.Handlers.DataAccess.IdempotencyEnforcer' Core6.Handlers.DataAccess.Order,
+Core6.Handlers.DataAccess,MyPersistence,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Handlers.DataAccess.Managed
+Core6.Handlers.DataAccess,Order,0,2,0,0,2,10,2,0,0,-1,0,3,,Core6.Handlers.DataAccess.IMyOrmSession' Core6.Handlers.DataAccess.Managed' Core6.Handlers.DataAccess.MyOrmExtensions
+Core6.Handlers.DataAccess,OrderMessage,0,0,1,0,0,5,0,1,0,-1,0,2,,Core6.Handlers.DataAccess.AddOrderLine' Core6.Handlers.DataAccess.Managed
+Core6.Handlers.DataAccess,Simple,0,0,0,0,0,48,0,0,0,-1,2,0,Core6.Handlers.DataAccess.AddOrderLine' Core6.Handlers.DataAccess.IMyOrm,
+Core6.Handlers.DataAccess,IdempotentHandler,1,2,0,0,2,22,3,0,0,1,0,0,,
+Core6.Headers,IncomingBehavior,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6.Headers,MutateIncomingTransportMessages,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6.Headers,MutateOutgoingTransportMessages,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core6.Headers,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,4,,Core6.Headers.ReadHandler' Core6.Headers.ReadSaga' Core6.Headers.WriteHandler' Core6.Headers.WriteSaga
+Core6.Headers,OutgoingBehavior,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Core6.Headers,ReadHandler,0,1,0,0,1,11,1,0,0,-1,1,0,Core6.Headers.MyMessage,
+Core6.Headers,ReadSaga,0,2,0,0,1,16,2,0,0,-1,2,0,Core6.Headers.MyMessage' Core6.Headers.ReadSagaData,
+Core6.Headers,ReadSagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Headers.ReadSaga
+Core6.Headers,SomeOtherMessage,0,0,0,0,0,3,0,0,0,-1,0,2,,Core6.Headers.WriteHandler' Core6.Headers.WriteSaga
+Core6.Headers,StaticHeaders,0,1,0,0,1,9,1,0,0,-1,0,0,,
+Core6.Headers,WriteHandler,0,1,0,0,1,19,1,0,0,-1,2,0,Core6.Headers.MyMessage' Core6.Headers.SomeOtherMessage,
+Core6.Headers,WriteSaga,0,2,0,0,1,24,2,0,0,-1,3,0,Core6.Headers.MyMessage' Core6.Headers.SomeOtherMessage' Core6.Headers.WriteSagaData,
+Core6.Headers,WriteSagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Headers.WriteSaga
+Core6.Headers.Writers,BehaviorCleaner,0,1,0,0,1,28,5,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterError
+Core6.Headers.Writers,EndpointConfigurationExtensions,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6.Headers.Writers,HeaderWriterAudit,2,1,0,0,1,59,1,0,0,0,2,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator,
+Core6.Headers.Writers,MessageToSend,0,0,6,0,0,34,0,0,0,-1,0,9,,Core6.Headers.Writers.HeaderWriterAudit' Core6.Headers.Writers.HeaderWriterDataBusConvention' Core6.Headers.Writers.HeaderWriterDataBusProperty' Core6.Headers.Writers.HeaderWriterDefer' Core6.Headers.Writers.HeaderWriterEncryption' Core6.Headers.Writers.HeaderWriterError' Core6.Headers.Writers.HeaderWriterReply' Core6.Headers.Writers.HeaderWriterReturn' Core6.Headers.Writers.HeaderWriterSend
+Core6.Headers.Writers,MessageHandler,0,10,0,0,10,72,10,0,0,-1,0,0,,
+Core6.Headers.Writers,Mutator,2,11,0,0,11,195,20,0,0,1,0,11,,Core6.Headers.Writers.HeaderWriterAudit' Core6.Headers.Writers.HeaderWriterDataBusConvention' Core6.Headers.Writers.HeaderWriterDataBusProperty' Core6.Headers.Writers.HeaderWriterDefer' Core6.Headers.Writers.HeaderWriterEncryption' Core6.Headers.Writers.HeaderWriterError' Core6.Headers.Writers.HeaderWriterPublish' Core6.Headers.Writers.HeaderWriterReply' Core6.Headers.Writers.HeaderWriterReturn' Core6.Headers.Writers.HeaderWriterSaga' Core6.Headers.Writers.HeaderWriterSend
+Core6.Headers.Writers,HeaderWriterDataBusConvention,2,1,0,0,1,63,1,0,0,0,2,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator,
+Core6.Headers.Writers,HeaderWriterDataBusProperty,2,1,0,0,1,56,1,0,0,0,2,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator,
+Core6.Headers.Writers,HeaderWriterDefer,3,2,0,1,2,58,2,0,0,0,2,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator,
+Core6.Headers.Writers,HeaderWriterEncryption,2,1,0,0,1,60,1,0,0,0,2,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator,
+Core6.Headers.Writers,HeaderWriterError,2,2,0,0,2,87,2,0,0,0,4,0,Core6.Headers.Writers.BehaviorCleaner' Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator' Core6.Headers.Writers.ErrorMutator,
+Core6.Headers.Writers,ErrorMutator,0,1,0,0,1,15,1,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterError
+Core6.Headers.Writers,HeaderWriterPublish,2,2,0,0,2,58,2,0,0,0,2,0,Core6.Headers.Writers.Mutator' Core6.Headers.Writers.MessageToPublish,
+Core6.Headers.Writers,MessageToPublish,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterPublish
+Core6.Headers.Writers,HeaderWriterReply,2,1,0,0,1,64,1,0,0,0,3,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator' Core6.Headers.Writers.MessageToReply,
+Core6.Headers.Writers,MessageToReply,0,0,0,0,0,7,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterReply
+Core6.Headers.Writers,HeaderWriterReturn,2,1,0,0,1,59,1,0,0,0,2,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator,
+Core6.Headers.Writers,HeaderWriterSaga,2,1,0,0,1,160,1,0,0,0,9,0,Core6.Headers.Writers.Mutator' Core6.Headers.Writers.StartSaga1Message' Core6.Headers.Writers.SendFromSagaMessage' Core6.Headers.Writers.Saga1' Core6.Headers.Writers.SagaData' Core6.Headers.Writers.Saga2' Core6.Headers.Writers.ReplyToOriginatorFromSagaMessage' Core6.Headers.Writers.ReplyFromSagaMessage' Core6.Headers.Writers.TimeoutFromSaga,
+Core6.Headers.Writers,StartSaga1Message,0,0,1,0,0,5,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,SendFromSagaMessage,0,0,1,0,0,5,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,Saga1,0,4,0,0,3,32,4,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,SagaData,0,0,8,0,0,15,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,Saga2,0,3,0,0,2,36,3,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,ReplyToOriginatorFromSagaMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,ReplyFromSagaMessage,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,TimeoutFromSaga,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Headers.Writers.HeaderWriterSaga
+Core6.Headers.Writers,HeaderWriterSend,2,1,0,0,1,44,1,0,0,0,2,0,Core6.Headers.Writers.MessageToSend' Core6.Headers.Writers.Mutator,
+Core6.Headers.Writers,TransportMessageExtension,0,1,0,0,1,11,2,0,0,-1,0,0,,
+Core6.HostIdentifier,HostIdFixer,0,2,0,0,0,20,2,0,0,-1,0,0,,
+Core6.ImmediateDispatch,Usage,0,1,0,0,0,16,1,0,0,-1,1,0,Core6.ImmediateDispatch.MyMessage,
+Core6.ImmediateDispatch,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.ImmediateDispatch.Usage
+Core6.Injection,Injection,0,1,0,0,0,38,1,0,0,-1,2,0,Core6.Injection.EmailHandler' Core6.Injection.EmailMessage,
+Core6.Injection,EmailHandler,0,1,2,0,1,14,1,0,0,-1,0,1,,Core6.Injection.Injection
+Core6.Injection,EmailMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Injection.Injection
+Core6.Lifecycle,NeedsInitialization,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6.Lifecycle,RunBeforeConfigurationIsFinalized,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Core6.Logging,BuiltInConfig,0,2,0,0,0,17,2,0,0,-1,0,0,,
+Core6.Logging,MessageToLog,0,1,3,0,1,11,1,0,0,-1,0,0,,
+Core6.Logging,ProvideConfiguration,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6.Logging,ClassUsingLogging,1,1,0,0,1,12,2,0,0,0,0,0,,
+Core6.MessageBodyEncryption,MessageEncryptor,0,2,0,0,2,15,2,0,0,-1,0,1,,Core6.MessageBodyEncryption.Usage
+Core6.MessageBodyEncryption,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core6.MessageBodyEncryption.MessageEncryptor,
+Core6.MessageIdentity,MessageIdSendOptions,0,1,0,0,0,12,1,0,0,-1,1,0,Core6.MessageIdentity.SomeMessage,
+Core6.MessageIdentity,SomeMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.MessageIdentity.MessageIdSendOptions
+Core6.Mutators.Instance,MutateIncomingMessages,0,1,0,0,1,13,1,0,0,-1,0,0,,
+Core6.Mutators.Instance,MutateOutgoingMessages,0,1,0,0,1,21,3,0,0,-1,0,0,,
+Core6.Mutators,MutatorRegistration,0,1,0,0,0,24,1,0,0,-1,2,0,Core6.Mutators.MyIncomingMessageMutator' Core6.Mutators.MyOutgoingTransportMessageMutator,
+Core6.Mutators,MyIncomingMessageMutator,0,1,0,0,1,7,1,0,0,-1,0,1,,Core6.Mutators.MutatorRegistration
+Core6.Mutators,MyOutgoingTransportMessageMutator,0,1,0,0,1,7,1,0,0,-1,0,1,,Core6.Mutators.MutatorRegistration
+Core6.Mutators.Transport,MutateIncomingTransportMessages,0,1,0,0,1,19,1,0,0,-1,1,0,Core6.Mutators.Transport.ServiceThatChangesBody,
+Core6.Mutators.Transport,MutateOutgoingTransportMessages,0,1,0,0,1,31,3,0,0,-1,1,0,Core6.Mutators.Transport.ServiceThatChangesBody,
+Core6.Mutators.Transport,ServiceThatChangesBody,0,2,0,0,2,11,2,0,0,-1,0,2,,Core6.Mutators.Transport.MutateIncomingTransportMessages' Core6.Mutators.Transport.MutateOutgoingTransportMessages
+Core6.NonDurable,DefineExpress,0,1,0,0,0,14,1,0,0,-1,0,0,,
+Core6.NonDurable,DisableDurable,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core6.NonDurable,MessageWithExpress,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Core6.Notifications,EventsToObservables,0,1,0,0,0,18,1,0,0,-1,0,0,,
+Core6.Notifications,SubscribeToNotifications,1,6,0,0,0,42,6,0,0,0.67,0,0,,
+Core6.Outbox,Usage,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core6.Persistence,PersistenceOrder,0,3,0,0,0,31,3,0,0,-1,2,0,Core6.Persistence.NHibernatePersistence' Core6.Persistence.RavenDBPersistence,
+Core6.Persistence,NHibernatePersistence,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Persistence.PersistenceOrder
+Core6.Persistence,RavenDBPersistence,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Persistence.PersistenceOrder
+Core6.Pipeline.Abort,Behavior,0,2,0,0,1,18,3,0,0,-1,0,0,,
+Core6.Pipeline.Abort,Handler,0,1,0,0,1,9,1,0,0,-1,1,0,Core6.Pipeline.Abort.MyMessage,
+Core6.Pipeline.Abort,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Pipeline.Abort.Handler
+Core6.Pipeline,BehaviorRegistration,0,1,0,0,0,12,1,0,0,-1,1,0,Core6.Pipeline.SampleBehavior,
+Core6.Pipeline,FeatureWithBehavior,0,1,0,0,0,13,1,0,0,-1,1,0,Core6.Pipeline.SampleBehavior,
+Core6.Pipeline,ReplaceExistingStep,0,1,0,0,1,12,1,0,0,-1,1,0,Core6.Pipeline.SampleBehavior,
+Core6.Pipeline,CustomErrorHandlingBehavior,0,1,0,0,1,8,1,0,0,-1,0,1,,Core6.Pipeline.NewMessageProcessingPipelineStep
+Core6.Pipeline,CustomErrorHandlingBehaviorForDeserializationFailures,1,1,0,0,1,21,1,0,0,0,0,0,,
+Core6.Pipeline,CustomErrorHandlingBehaviorForAllFailures,1,1,0,0,1,21,1,0,0,0,0,0,,
+Core6.Pipeline,CustomErrorHandlingBehaviorRollbackOnFailures,0,1,0,0,1,20,1,0,0,-1,0,0,,
+Core6.Pipeline,NewMessageProcessingPipelineStep,0,1,0,0,1,17,1,0,0,-1,1,0,Core6.Pipeline.CustomErrorHandlingBehavior,
+Core6.Pipeline,CustomForkConnector,0,1,0,0,1,15,1,0,0,-1,0,1,,Core6.Pipeline.FeatureReplacingExistingForkConnector
+Core6.Pipeline,FeatureReplacingExistingForkConnector,0,2,0,0,0,13,2,0,0,-1,1,0,Core6.Pipeline.CustomForkConnector,
+Core6.Pipeline,CustomStageConnector,0,1,0,0,1,12,1,0,0,-1,0,1,,Core6.Pipeline.FeatureReplacingExistingStage
+Core6.Pipeline,FeatureReplacingExistingStage,0,2,0,0,0,13,2,0,0,-1,1,0,Core6.Pipeline.CustomStageConnector,
+Core6.Pipeline,CustomStageForkConnector,0,1,0,0,1,21,1,0,0,-1,0,1,,Core6.Pipeline.FeatureReplacingExistingStageForkConnector
+Core6.Pipeline,FeatureReplacingExistingStageForkConnector,0,2,0,0,0,13,2,0,0,-1,1,0,Core6.Pipeline.CustomStageForkConnector,
+Core6.Pipeline,OnReceivePipelineCompleted,0,1,0,0,0,32,1,0,0,-1,1,0,Core6.Pipeline.FromFeature,
+Core6.Pipeline,FromFeature,1,1,0,0,0,17,1,0,0,0,0,1,,Core6.Pipeline.OnReceivePipelineCompleted
+Core6.Pipeline,SampleBehavior,0,1,0,0,1,10,1,0,0,-1,0,3,,Core6.Pipeline.BehaviorRegistration' Core6.Pipeline.FeatureWithBehavior' Core6.Pipeline.ReplaceExistingStep
+Core6.Pipeline,ParentBehavior,0,1,0,0,1,10,1,0,0,-1,1,0,Core6.Pipeline.SharedData,
+Core6.Pipeline,ChildBehavior,0,1,0,0,1,10,1,0,0,-1,1,0,Core6.Pipeline.SharedData,
+Core6.Pipeline,SharedData,0,0,0,0,0,3,0,0,0,-1,0,2,,Core6.Pipeline.ParentBehavior' Core6.Pipeline.ChildBehavior
+Core6.Pipeline,SkipSerializationForInts,0,1,0,0,1,26,2,0,0,-1,0,0,,
+Core6.Pipeline,Registration,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6.PubSub.Publishing,CreateUserCommand,0,0,1,0,0,5,0,0,0,-1,0,2,,Core6.PubSub.Publishing.CreateUserHandler' Core6.PubSub.Publishing.CreateUserSaga
+Core6.PubSub.Publishing,CreateUserHandler,0,1,0,0,1,12,1,0,0,-1,2,0,Core6.PubSub.Publishing.CreateUserCommand' Core6.PubSub.Publishing.UserCreatedEvent,
+Core6.PubSub.Publishing,CreateUserSaga,0,2,0,0,1,21,2,0,0,-1,3,0,Core6.PubSub.Publishing.CreateUserCommand' Core6.PubSub.Publishing.SagaData' Core6.PubSub.Publishing.UserCreatedEvent,
+Core6.PubSub.Publishing,SagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.PubSub.Publishing.CreateUserSaga
+Core6.PubSub.Publishing,PublishAtStartup,0,1,0,0,1,13,1,0,0,-1,1,0,Core6.PubSub.Publishing.MyEvent,
+Core6.PubSub.Publishing,MyEvent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.PubSub.Publishing.PublishAtStartup
+Core6.PubSub.Publishing,UserCreatedEvent,0,0,1,0,0,5,0,0,0,-1,0,2,,Core6.PubSub.Publishing.CreateUserHandler' Core6.PubSub.Publishing.CreateUserSaga
+Core6.Recoverability.Delayed.CustomPolicies,CustomExceptionPolicy,0,2,0,0,0,23,3,0,0,-1,1,0,Core6.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core6.Recoverability.Delayed.CustomPolicies,CustomExceptionPolicy62,0,1,0,0,0,10,1,0,0,-1,1,0,Core6.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core6.Recoverability.Delayed.CustomPolicies,ExceptionPolicyOverridingDelayedRetriesPart,0,1,0,0,0,19,3,0,0,-1,1,0,Core6.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core6.Recoverability.Delayed.CustomPolicies,FullyCustomizedPolicy,0,2,0,0,0,46,4,0,0,-1,2,0,Core6.Recoverability.Delayed.CustomPolicies.MyOtherBusinessException' Core6.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core6.Recoverability.Delayed.CustomPolicies,MyOtherBusinessException,0,0,0,0,0,13,0,0,0,-1,0,4,,Core6.Recoverability.Delayed.CustomPolicies.FullyCustomizedPolicy' Core6.Recoverability.Delayed.CustomPolicies.FullyCustomizedPolicy62' Core6.Recoverability.Delayed.CustomPolicies.PartiallyCustomizedPolicy' Core6.Recoverability.Delayed.CustomPolicies.PartiallyCustomizedPolicy62
+Core6.Recoverability.Delayed.CustomPolicies,FullyCustomizedPolicy62,0,2,0,0,0,50,5,0,0,-1,2,0,Core6.Recoverability.Delayed.CustomPolicies.MyOtherBusinessException' Core6.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core6.Recoverability.Delayed.CustomPolicies,MyBusinessException,0,0,0,0,0,4,0,0,0,-1,0,7,,Core6.Recoverability.Delayed.CustomPolicies.ExceptionPolicyOverridingDelayedRetriesPart' Core6.Recoverability.Delayed.CustomPolicies.CustomExceptionPolicy' Core6.Recoverability.Delayed.CustomPolicies.CustomExceptionPolicy62' Core6.Recoverability.Delayed.CustomPolicies.FullyCustomizedPolicy' Core6.Recoverability.Delayed.CustomPolicies.FullyCustomizedPolicy62' Core6.Recoverability.Delayed.CustomPolicies.PartiallyCustomizedPolicy' Core6.Recoverability.Delayed.CustomPolicies.PartiallyCustomizedPolicy62
+Core6.Recoverability.Delayed.CustomPolicies,PartiallyCustomizedPolicy,0,2,0,0,0,45,4,0,0,-1,2,0,Core6.Recoverability.Delayed.CustomPolicies.MyOtherBusinessException' Core6.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core6.Recoverability.Delayed.CustomPolicies,PartiallyCustomizedPolicy62,0,2,0,0,0,40,3,0,0,-1,2,0,Core6.Recoverability.Delayed.CustomPolicies.MyOtherBusinessException' Core6.Recoverability.Delayed.CustomPolicies.MyBusinessException,
+Core6.Recoverability.Delayed.CustomPolicies,SimplePolicy,0,2,0,0,0,22,3,0,0,-1,0,0,,
+Core6.Recoverability.Delayed,Usage,0,2,0,0,0,26,2,0,0,-1,0,0,,
+Core6.Recoverability.ErrorHandling.ConfigurationSource,ConfigurationSource,0,1,0,0,1,17,2,0,0,-1,0,1,,Core6.Recoverability.ErrorHandling.ConfigurationSource.Usage
+Core6.Recoverability.ErrorHandling.ConfigurationSource,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core6.Recoverability.ErrorHandling.ConfigurationSource.ConfigurationSource,
+Core6.Recoverability.ErrorHandling,ErrorHeadersCustomization,0,1,0,0,1,20,1,0,0,-1,0,0,,
+Core6.Recoverability.ErrorHandling,ProvideConfiguration,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Core6.Recoverability.ErrorHandling,Usage,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core6.Recoverability.Immediate,Usage,0,2,0,0,0,25,2,0,0,-1,0,0,,
+Core6.Recoverability,DisposeLargeExceptionsBehavior,0,1,0,0,1,17,1,0,0,-1,0,0,,
+Core6.Recoverability,UnrecoverableExceptions,0,2,0,0,0,20,2,0,0,-1,1,0,Core6.Recoverability.ValidationException,
+Core6.Recoverability,ValidationException,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Recoverability.UnrecoverableExceptions
+Core6.Recoverability,Usage,0,1,0,0,0,12,1,0,0,-1,0,0,,
+Core6.Routing.AutomaticSubscriptions,AutoSubscribeSettings,0,3,0,0,0,24,3,0,0,-1,1,0,Core6.Routing.AutomaticSubscriptions.EventType,
+Core6.Routing.AutomaticSubscriptions,EventType,0,0,0,0,0,1,0,0,0,-1,0,1,,Core6.Routing.AutomaticSubscriptions.AutoSubscribeSettings
+Core6.Routing,BasicOperations,0,4,0,0,0,73,4,0,0,-1,4,0,Core6.Routing.MyEvent' Core6.Routing.IMyMessage' Core6.Routing.IMyReply' Core6.Routing.IMyEvent,
+Core6.Routing,InterfaceMessageCreatedUpFront,2,1,0,0,0,19,1,0,0,0,0,0,,
+Core6.Routing,MyEvent,0,0,0,0,0,6,0,0,0,-1,0,2,,Core6.Routing.BasicOperations' Core6.Routing.Extensibility
+Core6.Routing,IMyMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Routing.BasicOperations
+Core6.Routing,IMyReply,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Routing.BasicOperations
+Core6.Routing,IMyEvent,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Routing.BasicOperations
+Core6.Routing,Extensibility,0,1,0,0,0,113,1,0,0,-1,3,0,Core6.Routing.MyEvent' Core6.Routing.Refresher' Core6.Routing.MyCommand,
+Core6.Routing,RefreshingRouteTable,0,1,0,0,0,73,1,0,0,-1,0,0,,
+Core6.Routing,Refresher,2,4,0,0,1,26,4,0,0,0.75,0,1,,Core6.Routing.Extensibility
+Core6.Routing,RobustRefresher,3,4,0,0,1,35,4,0,0,0.75,0,0,,
+Core6.Routing,PublishersTable,0,1,0,0,0,16,1,0,0,-1,0,0,,
+Core6.Routing,MyCommand,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Routing.Extensibility
+Core6.Routing,RoutingAPIs,0,2,0,0,0,49,2,0,0,-1,5,0,Core6.MyTransport' Core6.Routing.AcceptOrder' Core6.Routing.SendOrder' Core6.Routing.OrderSent' Core6.Routing.OrderAccepted,
+Core6.Routing,AcceptOrder,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Routing.RoutingAPIs
+Core6.Routing,SendOrder,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Routing.RoutingAPIs
+Core6.Routing,OrderSent,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Routing.RoutingAPIs
+Core6.Routing,OrderAccepted,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Routing.RoutingAPIs
+Core6.Routing.EndpointMapping.ConfigurationSource,ConfigurationSource,0,1,0,0,1,30,3,0,0,-1,0,1,,Core6.Routing.EndpointMapping.ConfigurationSource.Usage
+Core6.Routing.EndpointMapping.ConfigurationSource,Usage,0,1,0,0,0,9,1,0,0,-1,1,0,Core6.Routing.EndpointMapping.ConfigurationSource.ConfigurationSource,
+Core6.Routing.EndpointMapping,ProvideConfiguration,0,1,0,0,1,26,2,0,0,-1,0,0,,
+Core6.Sagas,ConfigureSagaPersistence,0,1,0,0,0,13,1,0,0,-1,1,0,Core6.Sagas.PersistenceToUseGoesHere,
+Core6.Sagas,PersistenceToUseGoesHere,0,0,0,0,0,4,0,0,0,-1,0,1,,Core6.Sagas.ConfigureSagaPersistence
+Core6.Sagas,SagaNotFoundHandler,0,1,0,0,1,9,1,0,0,-1,1,0,Core6.Sagas.SagaDisappearedMessage,
+Core6.Sagas,SagaDisappearedMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Sagas.SagaNotFoundHandler
+Core6.Sagas.FindByExpression,MyMessage,0,0,2,0,0,5,0,0,0,-1,0,1,,Core6.Sagas.FindByExpression.MySaga
+Core6.Sagas.FindByExpression,MySaga,0,2,0,0,1,16,2,0,0,-1,2,0,Core6.Sagas.FindByExpression.MyMessage' Core6.Sagas.FindByExpression.MySagaData,
+Core6.Sagas.FindByExpression,MySagaData,0,0,1,0,0,5,0,0,0,-1,0,1,,Core6.Sagas.FindByExpression.MySaga
+Core6.Sagas.FindByProperty,MyMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Sagas.FindByProperty.MySaga
+Core6.Sagas.FindByProperty,MySaga,0,2,0,0,1,16,2,0,0,-1,2,0,Core6.Sagas.FindByProperty.MyMessage' Core6.Sagas.FindByProperty.MySagaData,
+Core6.Sagas.FindByProperty,MySagaData,0,0,1,0,0,5,0,0,0,-1,0,1,,Core6.Sagas.FindByProperty.MySaga
+Core6.Sagas.FindSagas,MyMessage,0,0,2,0,0,5,0,0,0,-1,0,1,,Core6.Sagas.FindSagas.MySagaFinder
+Core6.Sagas.FindSagas,MySagaData,0,0,2,0,0,6,0,0,0,-1,0,2,,Core6.Sagas.FindSagas.DbSession' Core6.Sagas.FindSagas.MySagaFinder
+Core6.Sagas.FindSagas,MySagaFinder,0,1,0,0,1,12,1,0,0,-1,2,0,Core6.Sagas.FindSagas.MyMessage' Core6.Sagas.FindSagas.MySagaData,
+Core6.Sagas.FindSagas,SynchronizedStorageSessionEx,0,1,0,0,1,7,1,0,0,-1,1,0,Core6.Sagas.FindSagas.DbSession,
+Core6.Sagas.FindSagas,DbSession,0,1,0,0,1,7,1,0,0,-1,1,1,Core6.Sagas.FindSagas.MySagaData,Core6.Sagas.FindSagas.SynchronizedStorageSessionEx
+Core6.Sagas.Reply,AlmostDoneMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Sagas.Reply.MySaga
+Core6.Sagas.Reply,MySaga,0,2,0,0,1,17,2,0,0,-1,3,0,Core6.Sagas.Reply.AlmostDoneMessage' Core6.Sagas.Reply.MySagaData' Core6.Sagas.Reply.StartMessage,
+Core6.Sagas.Reply,MySagaData,0,0,2,0,0,6,0,0,0,-1,0,1,,Core6.Sagas.Reply.MySaga
+Core6.Sagas.Reply,StartMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Sagas.Reply.MySaga
+Core6.Sagas.SimpleSaga,CompleteOrder,0,0,2,0,0,5,0,0,0,-1,0,2,,Core6.Sagas.SimpleSaga.OrderSaga' Core6.UpgradeGuides._5to6.OrderSaga
+Core6.Sagas.SimpleSaga,OrderSaga,0,3,0,0,2,23,3,0,0,-1,3,0,Core6.Sagas.SimpleSaga.CompleteOrder' Core6.Sagas.SimpleSaga.OrderSagaData' Core6.Sagas.SimpleSaga.StartOrder,
+Core6.Sagas.SimpleSaga,OrderSagaData,0,0,1,0,0,5,0,0,0,-1,0,2,,Core6.UpgradeGuides._5to6.OrderSaga' Core6.Sagas.SimpleSaga.OrderSaga
+Core6.Sagas.SimpleSaga,StartOrder,0,0,1,0,0,4,0,0,0,-1,0,2,,Core6.UpgradeGuides._5to6.OrderSaga' Core6.Sagas.SimpleSaga.OrderSaga
+Core6.Sagas.Timeouts,AlmostDoneMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Sagas.Timeouts.MySaga
+Core6.Sagas.Timeouts,Message1,0,0,1,0,0,4,0,0,0,-1,0,1,,Core6.Sagas.Timeouts.MySaga
+Core6.Sagas.Timeouts,Message2,0,0,2,0,0,5,0,0,0,-1,0,1,,Core6.Sagas.Timeouts.MySaga
+Core6.Sagas.Timeouts,MyCustomTimeout,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Sagas.Timeouts.MySaga
+Core6.Sagas.Timeouts,MySaga,0,4,0,0,3,33,5,0,0,-1,6,0,Core6.Sagas.Timeouts.AlmostDoneMessage' Core6.Sagas.Timeouts.Message1' Core6.Sagas.Timeouts.Message2' Core6.Sagas.Timeouts.MyCustomTimeout' Core6.Sagas.Timeouts.MySagaData' Core6.Sagas.Timeouts.TiredOfWaitingForMessage2,
+Core6.Sagas.Timeouts,MySagaData,0,0,5,0,0,9,0,0,0,-1,0,1,,Core6.Sagas.Timeouts.MySaga
+Core6.Sagas.Timeouts,TiredOfWaitingForMessage2,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Sagas.Timeouts.MySaga
+Core6.Scanning,ScanningPublicApi,0,7,0,0,0,71,10,0,0,-1,0,0,,
+Core6.Scheduling,Scheduling,1,2,0,0,0,33,2,0,0,1,1,0,Core6.Scheduling.CallLegacySystem,
+Core6.Scheduling,CallLegacySystem,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.Scheduling.Scheduling
+Core6.Serialization,AdditionalDeserializers,0,1,0,0,0,13,1,0,0,-1,1,0,Core6.Serialization.MyCustomSerializerDefinition,
+Core6.Serialization,RegisterCustomSerializer,0,1,0,0,0,11,1,0,0,-1,1,0,Core6.Serialization.MyCustomSerializerDefinition,
+Core6.Serialization,MyCustomSerializerDefinition,1,1,0,1,1,13,1,0,0,0,1,3,Core6.Serialization.MyCustomSerializer,Core6.Serialization.AdditionalDeserializers' Core6.Serialization.RegisterCustomSerializer' Core6.Serialization.MyCustomSerializerConfigurationExtensions
+Core6.Serialization,MyCustomSerializer,0,3,1,0,3,22,3,0,0,-1,0,1,,Core6.Serialization.MyCustomSerializerDefinition
+Core6.Serialization,MyCustomSerializerConfigurationExtensions,0,1,0,0,1,8,1,0,0,-1,1,0,Core6.Serialization.MyCustomSerializerDefinition,
+Core6.ServiceFabricHosting,StatelessEndpointCommunicationListener,1,3,0,0,3,22,3,0,0,0.67,0,0,,
+Core6.ServiceFabricHosting,StatefulEndpointCommunicationListener,3,5,0,0,5,31,5,0,0,0.6,0,1,,Core6.ServiceFabricHosting.MyStatefulService
+Core6.ServiceFabricHosting,MyStatefulService,1,3,0,0,1,20,3,0,0,0.67,1,0,Core6.ServiceFabricHosting.StatefulEndpointCommunicationListener,
+Core6.Transports.QueueCreation,FeatureThatRequiresAQueue,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core6.Transports.QueueCreation,RegisterQueueCreator,0,1,0,0,0,13,1,0,0,-1,1,0,Core6.Transports.QueueCreation.YourQueueCreator,
+Core6.Transports.QueueCreation,YourQueueCreator,0,1,0,0,1,9,1,0,0,-1,0,1,,Core6.Transports.QueueCreation.RegisterQueueCreator
+Core6.Transports.Throughput,ConcurrencyConfiguration,0,1,0,0,0,13,1,0,0,-1,0,0,,
+Core6.Tutorials.SetupMonitoring,Configuration,0,1,0,0,0,19,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,DependentFeature,0,2,0,0,1,13,2,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,EndpointNameHelper,0,2,0,0,1,58,10,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,EndpointNameRequired,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,EndpointStartStop,0,2,0,0,0,28,2,0,0,-1,1,0,Core6.UpgradeGuides._5to6.SomeMessage,
+Core6.UpgradeGuides._5to6,EndpointStartStopFullAsync,0,1,0,0,0,17,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,EndpointStartStopSyncToAsync,0,2,0,0,0,21,2,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,SomeMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.EndpointStartStop
+Core6.UpgradeGuides._5to6,HandlerOrdering,0,2,0,0,0,28,2,0,0,-1,3,0,Core6.UpgradeGuides._5to6.HandlerA' Core6.UpgradeGuides._5to6.HandlerB' Core6.UpgradeGuides._5to6.HandlerC,
+Core6.UpgradeGuides._5to6,HandlerA,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.HandlerOrdering
+Core6.UpgradeGuides._5to6,HandlerB,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.HandlerOrdering
+Core6.UpgradeGuides._5to6,HandlerC,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.HandlerOrdering
+Core6.UpgradeGuides._5to6,IConfigureComponentsNotInjected,0,1,0,0,1,21,1,0,0,-1,1,0,Core6.UpgradeGuides._5to6.MyDependency,
+Core6.UpgradeGuides._5to6,MyDependency,1,4,0,0,3,26,5,0,0,0.75,0,2,,Core6.UpgradeGuides._5to6.IConfigureComponentsNotInjected' Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichUsesIBus
+Core6.UpgradeGuides._5to6,Injection,0,1,0,0,0,36,1,0,0,-1,2,0,Core6.UpgradeGuides._5to6.MyHandler' Core6.UpgradeGuides._5to6.EmailMessage,
+Core6.UpgradeGuides._5to6,MyHandler,0,1,2,0,1,10,1,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.Injection
+Core6.UpgradeGuides._5to6,EmailMessage,0,0,0,0,0,3,0,0,0,-1,0,1,,Core6.UpgradeGuides._5to6.Injection
+Core6.UpgradeGuides._5to6,MessageContext,0,1,0,0,1,13,1,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.UpgradeGuides._5to6,MsmqSubscriptionAuthorization,0,1,0,0,0,21,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,MyEvent,0,0,1,0,0,5,0,0,0,-1,0,6,,Core6.UpgradeGuides._5to6.SendAndPublishHandler' Core6.UpgradeGuides._5to6.MigrationBeginning' Core6.UpgradeGuides._5to6.MigrationStep1' Core6.UpgradeGuides._5to6.MigrationStep2' Core6.UpgradeGuides._5to6.MigrationStep3' Core6.UpgradeGuides._5to6.MigrationStep4
+Core6.UpgradeGuides._5to6,MyOtherMessage,0,0,1,0,0,4,0,0,0,-1,0,6,,Core6.UpgradeGuides._5to6.SendAndPublishHandler' Core6.UpgradeGuides._5to6.MigrationBeginning' Core6.UpgradeGuides._5to6.MigrationStep1' Core6.UpgradeGuides._5to6.MigrationStep2' Core6.UpgradeGuides._5to6.MigrationStep3' Core6.UpgradeGuides._5to6.MigrationStep4
+Core6.UpgradeGuides._5to6,OutgoingBehavior,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,FeatureThatRequiresAQueue,0,1,0,0,0,9,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,YourQueueCreator,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,RawSend,0,1,0,0,0,25,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,Recoverable,0,1,0,0,0,12,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,OrderSaga,0,3,0,0,2,28,3,0,0,-1,3,0,Core6.Sagas.SimpleSaga.CompleteOrder' Core6.Sagas.SimpleSaga.OrderSagaData' Core6.Sagas.SimpleSaga.StartOrder,
+Core6.UpgradeGuides._5to6,SpecifyingHostId,0,2,0,0,0,18,2,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,TimeToBeReceived,0,1,0,0,0,15,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,Upgrade,0,13,0,0,0,122,13,0,0,-1,1,0,Core6.MyTransport,
+Core6.UpgradeGuides._5to6,WinIdNameMutator,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6,UpgradeMyAsynchronousHandler,0,1,0,0,1,8,1,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.UpgradeGuides._5to6,UpgradeMySynchronousHandler,0,1,0,0,1,11,1,0,0,-1,1,0,Core6.Handlers.MyMessage,
+Core6.UpgradeGuides._5to6,SendAndPublishHandler,0,1,0,0,1,11,1,0,0,-1,3,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyEvent' Core6.UpgradeGuides._5to6.MyOtherMessage,
+Core6.UpgradeGuides._5to6,MigrationBeginning,0,1,1,0,1,10,1,0,1,-1,5,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyEvent' Core6.UpgradeGuides._5to6.MyOtherMessage' Core6.UpgradeGuides._5to6.IHandleMessagesFromPreviousVersions' Core6.UpgradeGuides._5to6.IBus,
+Core6.UpgradeGuides._5to6,MigrationStep1,0,2,1,0,2,13,2,0,0,-1,4,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyEvent' Core6.UpgradeGuides._5to6.MyOtherMessage' Core6.UpgradeGuides._5to6.IBus,
+Core6.UpgradeGuides._5to6,MigrationStep2,0,2,1,0,2,13,2,0,0,-1,4,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyEvent' Core6.UpgradeGuides._5to6.MyOtherMessage' Core6.UpgradeGuides._5to6.IBus,
+Core6.UpgradeGuides._5to6,MigrationStep3,0,1,0,0,1,10,1,0,0,-1,3,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyEvent' Core6.UpgradeGuides._5to6.MyOtherMessage,
+Core6.UpgradeGuides._5to6,MigrationStep4,0,1,0,0,1,11,1,0,0,-1,3,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyEvent' Core6.UpgradeGuides._5to6.MyOtherMessage,
+Core6.UpgradeGuides._5to6,HandlerWithDependencyWhichUsesIBus,1,2,0,0,2,13,2,0,1,1,3,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyDependency' Core6.UpgradeGuides._5to6.IHandleMessagesFromPreviousVersions,
+Core6.UpgradeGuides._5to6,MyReturningDependency,1,3,0,0,2,16,3,0,0,0.67,2,1,Core6.UpgradeGuides._5to6.IBus' Core6.UpgradeGuides._5to6.Customer,Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichReturns
+Core6.UpgradeGuides._5to6,HandlerWithDependencyWhichReturns,1,2,0,0,2,17,3,0,0,1,3,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyReturningDependency' Core6.UpgradeGuides._5to6.CustomerChanged,
+Core6.UpgradeGuides._5to6,MyContextAccessingDependency,0,2,0,0,1,15,3,0,0,-1,2,1,Core6.UpgradeGuides._5to6.Customer' Core6.UpgradeGuides._5to6.CustomerChanged,Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichAccessesContext
+Core6.UpgradeGuides._5to6,HandlerWithDependencyWhichAccessesContext,1,2,0,0,2,15,2,0,0,1,2,0,Core6.Handlers.MyMessage' Core6.UpgradeGuides._5to6.MyContextAccessingDependency,
+Core6.UpgradeGuides._5to6,IHandleMessagesFromPreviousVersions,0,1,0,0,0,4,1,2,0,-1,0,2,,Core6.UpgradeGuides._5to6.MigrationBeginning' Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichUsesIBus
+Core6.UpgradeGuides._5to6,IBus,0,2,0,0,0,5,2,0,0,-1,0,4,,Core6.UpgradeGuides._5to6.MigrationBeginning' Core6.UpgradeGuides._5to6.MigrationStep1' Core6.UpgradeGuides._5to6.MigrationStep2' Core6.UpgradeGuides._5to6.MyReturningDependency
+Core6.UpgradeGuides._5to6,Customer,0,0,1,0,0,4,0,0,0,-1,0,2,,Core6.UpgradeGuides._5to6.MyReturningDependency' Core6.UpgradeGuides._5to6.MyContextAccessingDependency
+Core6.UpgradeGuides._5to6,CustomerChanged,0,0,1,0,0,4,0,0,0,-1,0,2,,Core6.UpgradeGuides._5to6.HandlerWithDependencyWhichReturns' Core6.UpgradeGuides._5to6.MyContextAccessingDependency
+Core6.UpgradeGuides._5to6.Recoverability,SimplePolicy,0,2,0,0,0,33,3,0,0,-1,0,0,,
+Core6.UpgradeGuides._5to6.Recoverability,Recoverability,0,5,0,0,0,65,5,0,0,-1,0,0,,
+Core6.UpgradeGuides._6to6._2,Upgrade,0,1,0,0,0,24,1,0,0,-1,1,0,Core6.UpgradeGuides._6to6._2.MyMutator,
+Core6.UpgradeGuides._6to6._2,MyMutator,0,1,0,0,1,8,1,0,0,-1,0,1,,Core6.UpgradeGuides._6to6._2.Upgrade
+Core6.UpgradeGuides._6to7,Upgrade,0,0,0,0,0,3,0,0,0,-1,0,0,,

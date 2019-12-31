@@ -2,19 +2,19 @@ Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out 
 SampleWebApp,BundleConfig,0,1,0,0,1,56,1,0,0,-1,0,1,,SampleWebApp.MvcApplication
 SampleWebApp,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,SampleWebApp.MvcApplication
 SampleWebApp,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,SampleWebApp.MvcApplication
-SampleWebApp,MvcApplication,0,1,0,0,0,14,1,0,0,-1,4,0,SampleWebApp.FilterConfig' SampleWebApp.RouteConfig' SampleWebApp.BundleConfig' SampleWebApp.Infrastructure.WebUiInitialise,
-SampleWebApp.Controllers,BlogsController,0,6,0,0,6,59,11,0,0,-1,1,0,DataLayer.DataClasses.Concrete.Blog,
-SampleWebApp.Controllers,PostsAsyncController,0,12,0,0,11,97,17,0,0,-1,4,0,ServiceLayer.PostServices.DetailPostDtoAsync' DataLayer.DataClasses.SampleWebAppDb' DataLayer.Startup.DataLayerInitialise' DataLayer.Startup.TestDataSelection,
-SampleWebApp.Controllers,HomeController,0,5,0,0,5,24,5,0,0,-1,0,0,,
-SampleWebApp.Controllers,PostsController,0,12,0,0,12,103,18,0,0,-1,4,0,ServiceLayer.PostServices.DetailPostDto' DataLayer.DataClasses.SampleWebAppDb' DataLayer.Startup.DataLayerInitialise' DataLayer.Startup.TestDataSelection,
-SampleWebApp.Controllers,TagsAsyncController,0,8,0,0,8,70,13,0,0,-1,1,0,DataLayer.DataClasses.Concrete.Tag,
-SampleWebApp.Controllers,TagsController,0,8,0,0,8,73,13,0,0,-1,1,0,DataLayer.DataClasses.Concrete.Tag,
+SampleWebApp,MvcApplication,0,1,0,0,0,14,1,0,0,-1,5,0,SampleWebApp.BundleConfig' SampleWebApp.FilterConfig' SampleWebApp.RouteConfig' SampleWebApp.Infrastructure.DiModelBinder' SampleWebApp.Infrastructure.WebUiInitialise,
+SampleWebApp.Controllers,BlogsController,0,6,0,0,6,59,11,0,0,-1,0,0,,
+SampleWebApp.Controllers,PostsAsyncController,0,12,0,0,11,97,17,0,0,-1,0,0,,
+SampleWebApp.Controllers,HomeController,0,5,0,0,5,24,5,0,0,-1,1,0,SampleWebApp.Models.InternalsInfo,
+SampleWebApp.Controllers,PostsController,0,12,0,0,12,103,18,0,0,-1,0,0,,
+SampleWebApp.Controllers,TagsAsyncController,0,8,0,0,8,70,13,0,0,-1,0,0,,
+SampleWebApp.Controllers,TagsController,0,8,0,0,8,73,13,0,0,-1,0,0,,
 SampleWebApp.Infrastructure,AutofacDi,1,2,0,0,0,16,2,0,0,0,0,1,,SampleWebApp.Infrastructure.WebUiInitialise
-SampleWebApp.Infrastructure,DiModelBinder,0,1,0,0,0,9,1,0,0,-1,0,0,,
-SampleWebApp.Infrastructure,TraceGenericLogger,1,12,1,0,12,58,13,0,0,0,0,0,,
-SampleWebApp.Infrastructure,Log4NetGenericLogger,1,12,0,0,12,52,12,0,0,0,0,0,,
-SampleWebApp.Infrastructure,ValidationHelper,0,5,0,0,4,94,15,0,0,-1,0,0,,
+SampleWebApp.Infrastructure,DiModelBinder,0,1,0,0,0,9,1,0,0,-1,0,1,,SampleWebApp.MvcApplication
+SampleWebApp.Infrastructure,TraceGenericLogger,1,12,1,0,12,58,13,0,0,0,0,1,,SampleWebApp.Infrastructure.WebUiInitialise
+SampleWebApp.Infrastructure,Log4NetGenericLogger,1,12,0,0,12,52,12,0,0,0,0,1,,SampleWebApp.Infrastructure.WebUiInitialise
+SampleWebApp.Infrastructure,ValidationHelper,0,5,0,0,4,94,16,0,0,-1,0,0,,
 SampleWebApp.Infrastructure,HostTypes,0,0,0,0,0,1,0,0,0,-1,0,1,,SampleWebApp.Infrastructure.WebUiInitialise
-SampleWebApp.Infrastructure,WebUiInitialise,3,3,1,1,1,59,4,0,0,0,4,1,SampleWebApp.Properties.Settings' SampleWebApp.Infrastructure.HostTypes' ServiceLayer.Startup.ServiceLayerInitialise' SampleWebApp.Infrastructure.AutofacDi,SampleWebApp.MvcApplication
-SampleWebApp.Models,InternalsInfo,0,1,4,0,1,19,1,0,0,-1,0,0,,
+SampleWebApp.Infrastructure,WebUiInitialise,3,3,1,1,1,59,6,0,0,0,5,1,SampleWebApp.Infrastructure.AutofacDi' SampleWebApp.Infrastructure.TraceGenericLogger' SampleWebApp.Infrastructure.Log4NetGenericLogger' SampleWebApp.Infrastructure.HostTypes' SampleWebApp.Properties.Settings,SampleWebApp.MvcApplication
+SampleWebApp.Models,InternalsInfo,0,1,4,0,1,19,1,0,0,-1,0,1,,SampleWebApp.Controllers.HomeController
 SampleWebApp.Properties,Settings,1,0,3,0,0,30,0,0,0,-1,0,1,,SampleWebApp.Infrastructure.WebUiInitialise

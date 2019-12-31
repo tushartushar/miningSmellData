@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Starbucks.Barista,BaristaBootStrapper,0,2,0,0,0,15,2,0,2,-1,2,2,Rhino.ServiceBus.Castle.CastleBootStrapper' Rhino.ServiceBus.Internal.ISagaPersister,Starbucks.Program' Starbucks.Tests.IntegrationTest
-Starbucks.Barista,BaristaSaga,1,4,3,0,3,51,6,0,3,0,4,0,Rhino.ServiceBus.IServiceBus' Starbucks.Barista.BaristaState' Starbucks.Messages.Cashier.PrepareDrink' Starbucks.Messages.Cashier.PaymentComplete,
+Starbucks.Barista,BaristaBootStrapper,0,2,0,0,0,15,2,0,2,-1,0,1,,Starbucks.Program
+Starbucks.Barista,BaristaSaga,1,4,3,0,3,51,6,0,3,0.5,4,0,Starbucks.Barista.BaristaState' Starbucks.Messages.Barista.DrinkReady' Starbucks.Messages.Cashier.PaymentComplete' Starbucks.Messages.Cashier.PrepareDrink,
 Starbucks.Barista,BaristaState,0,0,3,0,0,6,0,0,0,-1,0,1,,Starbucks.Barista.BaristaSaga
-Starbucks.Cashier,CashierBootStrapper,0,2,0,0,0,15,2,0,2,-1,2,2,Rhino.ServiceBus.Castle.CastleBootStrapper' Rhino.ServiceBus.Internal.ISagaPersister,Starbucks.Program' Starbucks.Tests.IntegrationTest
-Starbucks.Cashier,CashierSaga,1,3,0,0,3,40,3,0,2,0,3,0,Rhino.ServiceBus.IServiceBus' Starbucks.Messages.Cashier.NewOrder' Starbucks.Messages.Cashier.SubmitPayment,
-Starbucks.Customer,CustomerBootStrapper,0,2,0,0,0,15,2,0,2,-1,2,0,Rhino.ServiceBus.Castle.CastleBootStrapper' Rhino.ServiceBus.Internal.ISagaPersister,
-Starbucks.Customer,CustomerController,2,4,4,0,4,42,6,0,3,0,4,2,Rhino.ServiceBus.IServiceBus' Starbucks.Customer.CustomerUserInterface' Starbucks.Messages.Cashier.PaymentDue' Starbucks.Messages.Barista.DrinkReady,Starbucks.Program' Starbucks.Tests.IntegrationTest
+Starbucks.Cashier,CashierBootStrapper,0,2,0,0,0,15,2,0,2,-1,0,1,,Starbucks.Program
+Starbucks.Cashier,CashierSaga,1,3,0,0,3,40,3,0,2,0.67,5,0,Starbucks.Messages.Cashier.NewOrder' Starbucks.Messages.Cashier.PaymentComplete' Starbucks.Messages.Cashier.PaymentDue' Starbucks.Messages.Cashier.PrepareDrink' Starbucks.Messages.Cashier.SubmitPayment,
+Starbucks.Customer,CustomerBootStrapper,0,2,0,0,0,15,2,0,2,-1,0,1,,Starbucks.Program
+Starbucks.Customer,CustomerController,2,4,4,0,4,42,7,0,3,0.5,6,1,Starbucks.Customer.CustomerUserInterface' Starbucks.Messages.Barista.DrinkReady' Starbucks.Messages.DrinkSize' Starbucks.Messages.Cashier.NewOrder' Starbucks.Messages.Cashier.PaymentDue' Starbucks.Messages.Cashier.SubmitPayment,Starbucks.Program
 Starbucks.Customer,CustomerUserInterface,0,2,0,0,2,14,2,1,0,-1,0,1,,Starbucks.Customer.CustomerController
-Starbucks.Messages.Barista,DrinkReady,0,0,2,0,0,5,0,0,1,-1,0,1,,Starbucks.Customer.CustomerController
-Starbucks.Messages,DrinkSize,0,0,0,0,0,6,0,0,0,-1,0,2,,Starbucks.Program' Starbucks.Tests.IntegrationTest
-Starbucks.Messages.Cashier,NewOrder,0,0,3,0,0,7,0,0,0,-1,0,1,,Starbucks.Cashier.CashierSaga
-Starbucks.Messages.Cashier,PaymentComplete,0,0,1,0,0,5,0,0,1,-1,0,1,,Starbucks.Barista.BaristaSaga
-Starbucks.Messages.Cashier,PaymentDue,0,0,3,0,0,6,0,0,0,-1,0,1,,Starbucks.Customer.CustomerController
-Starbucks.Messages.Cashier,PrepareDrink,0,0,4,0,0,9,0,0,1,-1,0,1,,Starbucks.Barista.BaristaSaga
-Starbucks.Messages.Cashier,SubmitPayment,0,0,2,0,0,5,0,0,1,-1,0,1,,Starbucks.Cashier.CashierSaga
-Starbucks,PrepareQueues,0,5,0,0,1,56,7,0,0,-1,3,2,Rhino.ServiceBus.Msmq.QueueInfo' Rhino.ServiceBus.Msmq.MsmqUtil' Rhino.ServiceBus.Msmq.QueueType,Starbucks.Program' Starbucks.Tests.IntegrationTest
-Starbucks,Program,0,1,0,0,1,37,1,0,0,-1,11,0,Rhino.ServiceBus.Hosting.RemoteAppDomainHost' Rhino.ServiceBus.Hosting.DefaultHost' Rhino.ServiceBus.IServiceBus' Starbucks.Customer.CustomerController' Starbucks.PrepareQueues' Rhino.ServiceBus.Msmq.QueueType' Rhino.ServiceBus.Hosting.HostConfiguration' Starbucks.Messages.DrinkSize' Rhino.ServiceBus.Castle.CastleBootStrapper' Starbucks.Cashier.CashierBootStrapper' Starbucks.Barista.BaristaBootStrapper,
+Starbucks.Messages.Barista,DrinkReady,0,0,2,0,0,5,0,0,1,-1,0,2,,Starbucks.Customer.CustomerController' Starbucks.Barista.BaristaSaga
+Starbucks.Messages,DrinkSize,0,0,0,0,0,6,0,0,0,-1,0,4,,Starbucks.Customer.CustomerController' Starbucks.Messages.Cashier.PrepareDrink' Starbucks.Program' Starbucks.Messages.Cashier.NewOrder
+Starbucks.Messages.Cashier,NewOrder,0,0,3,0,0,7,0,0,0,-1,1,2,Starbucks.Messages.DrinkSize,Starbucks.Cashier.CashierSaga' Starbucks.Customer.CustomerController
+Starbucks.Messages.Cashier,PaymentComplete,0,0,1,0,0,5,0,0,1,-1,0,2,,Starbucks.Barista.BaristaSaga' Starbucks.Cashier.CashierSaga
+Starbucks.Messages.Cashier,PaymentDue,0,0,3,0,0,6,0,0,0,-1,0,2,,Starbucks.Customer.CustomerController' Starbucks.Cashier.CashierSaga
+Starbucks.Messages.Cashier,PrepareDrink,0,0,4,0,0,9,0,0,1,-1,1,2,Starbucks.Messages.DrinkSize,Starbucks.Cashier.CashierSaga' Starbucks.Barista.BaristaSaga
+Starbucks.Messages.Cashier,SubmitPayment,0,0,2,0,0,5,0,0,1,-1,0,2,,Starbucks.Cashier.CashierSaga' Starbucks.Customer.CustomerController
+Starbucks,PrepareQueues,0,5,0,0,1,56,9,0,0,-1,0,1,,Starbucks.Program
+Starbucks,Program,0,1,0,0,1,37,1,0,0,-1,6,0,Starbucks.Barista.BaristaBootStrapper' Starbucks.Cashier.CashierBootStrapper' Starbucks.Customer.CustomerBootStrapper' Starbucks.Customer.CustomerController' Starbucks.Messages.DrinkSize' Starbucks.PrepareQueues,

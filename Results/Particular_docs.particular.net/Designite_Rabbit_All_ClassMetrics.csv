@@ -1,1 +1,15 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Rabbit_All.ErrorQueue,ErrorQueue,0,3,0,0,2,45,3,0,0,-1,0,1,,Rabbit_All.ErrorQueue.Tests
+Rabbit_All.ErrorQueue,Tests,0,1,0,0,1,44,1,0,0,-1,1,0,Rabbit_All.ErrorQueue.ErrorQueue,
+Rabbit_All.NativeSend,NativeSend,0,3,0,0,1,45,3,0,0,-1,0,1,,Rabbit_All.NativeSend.Tests
+Rabbit_All.NativeSend,Tests,3,3,0,0,2,66,3,0,0,0,3,0,Rabbit_All.NativeSend.NativeSend' Rabbit_All.NativeSend.MessageToSend' Rabbit_All.QueueDeletion.DeleteEndpointQueues,
+Rabbit_All.NativeSend,MessageHandler,0,1,0,0,1,10,1,0,0,-1,0,0,,
+Rabbit_All.NativeSend,MessageToSend,0,0,1,0,0,5,0,0,0,-1,0,1,,Rabbit_All.NativeSend.Tests
+Rabbit_All.QueueCreation,CreateEndpointQueues,0,2,0,0,1,30,2,0,0,-1,1,1,Rabbit_All.QueueCreation.QueueCreationUtils,Rabbit_All.QueueCreation.Tests
+Rabbit_All.QueueCreation,QueueCreationUtils,0,2,0,0,1,29,3,0,0,-1,0,3,,Rabbit_All.QueueCreation.Tests' Rabbit_All.QueueCreation.QueueCreationUtilsUsage' Rabbit_All.QueueCreation.CreateEndpointQueues
+Rabbit_All.QueueCreation,QueueCreationUtilsUsage,0,1,0,0,0,18,1,0,0,-1,1,0,Rabbit_All.QueueCreation.QueueCreationUtils,
+Rabbit_All.QueueCreation,Tests,0,1,0,0,1,24,1,0,0,-1,2,0,Rabbit_All.QueueCreation.CreateEndpointQueues' Rabbit_All.QueueCreation.QueueCreationUtils,
+Rabbit_All.QueueDeletion,DeleteEndpointQueues,0,2,0,0,1,27,2,0,0,-1,1,2,Rabbit_All.QueueDeletion.QueueDeletionUtils,Rabbit_All.QueueDeletion.Tests' Rabbit_All.NativeSend.Tests
+Rabbit_All.QueueDeletion,QueueDeletionUtils,0,1,0,0,1,17,1,0,0,-1,0,3,,Rabbit_All.QueueDeletion.Tests' Rabbit_All.QueueDeletion.QueueDeletionUtilsUsage' Rabbit_All.QueueDeletion.DeleteEndpointQueues
+Rabbit_All.QueueDeletion,QueueDeletionUtilsUsage,0,1,0,0,0,14,1,0,0,-1,1,0,Rabbit_All.QueueDeletion.QueueDeletionUtils,
+Rabbit_All.QueueDeletion,Tests,0,1,0,0,1,19,1,0,0,-1,2,0,Rabbit_All.QueueDeletion.DeleteEndpointQueues' Rabbit_All.QueueDeletion.QueueDeletionUtils,

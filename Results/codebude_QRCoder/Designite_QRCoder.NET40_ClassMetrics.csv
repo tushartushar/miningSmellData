@@ -1,79 +1,99 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-QRCoder,AbstractQRCode<T>,0,2,1,0,1,10,2,0,0,-1,1,0,QRCoder.QRCodeData,
-QRCoder,Base64QRCode,1,7,0,0,6,61,8,0,0,0.57,3,0,QRCoder.QRCode' QRCoder.QRCodeData' QRCoder.ImageType,
-QRCoder,ImageType,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.Base64QRCode
-QRCoder,BitmapByteQRCode,0,7,0,0,5,80,15,0,0,-1,1,0,QRCoder.QRCodeData,
-QRCoder,String40Methods,0,3,0,0,3,39,9,0,0,-1,0,1,,QRCoder.OneTimePassword
-QRCoder,PayloadGenerator,0,6,0,0,1,1825,10,0,0,-1,0,0,,
-QRCoder,WiFi,4,2,0,0,2,32,2,0,0,0,1,0,QRCoder.Authentication,
-QRCoder,Authentication,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.WiFi
-QRCoder,Mail,4,4,0,0,4,66,5,0,0,0,1,0,QRCoder.MailEncoding,
-QRCoder,MailEncoding,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.Mail
-QRCoder,SMS,3,3,0,0,3,48,4,0,0,0,1,0,QRCoder.SMSEncoding,
-QRCoder,SMSEncoding,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.SMS
-QRCoder,MMS,3,3,0,0,3,45,4,0,0,0,1,0,QRCoder.MMSEncoding,
-QRCoder,MMSEncoding,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.MMS
-QRCoder,Geolocation,3,2,0,0,2,34,3,0,0,0,1,0,QRCoder.GeolocationEncoding,
-QRCoder,GeolocationEncoding,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.Geolocation
-QRCoder,PhoneNumber,1,2,0,0,2,17,2,0,0,0,0,0,,
-QRCoder,SkypeCall,1,2,0,0,2,16,2,0,0,0,0,0,,
-QRCoder,Url,1,2,0,0,2,16,2,0,0,0,0,0,,
-QRCoder,WhatsAppMessage,1,2,0,0,2,16,2,0,0,0,0,0,,
-QRCoder,Bookmark,2,2,0,0,2,18,2,0,0,0,0,0,,
-QRCoder,ContactData,16,2,0,0,2,167,12,0,0,0,1,0,QRCoder.ContactOutputType,
-QRCoder,ContactOutputType,0,0,0,0,0,7,0,0,0,-1,0,1,,QRCoder.ContactData
-QRCoder,BitcoinAddress,4,2,0,0,2,42,5,0,0,0,0,0,,
-QRCoder,SwissQrCode,11,2,0,0,2,301,10,0,0,0,5,0,QRCoder.Iban' QRCoder.Contact' QRCoder.Currency' QRCoder.Reference' QRCoder.ReferenceType,
-QRCoder,Reference,4,1,3,0,1,73,8,0,0,0,2,1,QRCoder.ReferenceType' QRCoder.ReferenceTextType,QRCoder.SwissQrCode
-QRCoder,ReferenceType,0,0,0,0,0,6,0,0,0,-1,0,2,,QRCoder.SwissQrCode' QRCoder.Reference
-QRCoder,ReferenceTextType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.Reference
-QRCoder,SwissQrCodeReferenceException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,Iban,2,2,1,0,2,46,4,0,0,0,1,1,QRCoder.IbanType,QRCoder.SwissQrCode
-QRCoder,IbanType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.Iban
-QRCoder,SwissQrCodeIbanException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,Contact,7,2,0,0,2,71,11,0,0,0,0,1,,QRCoder.SwissQrCode
-QRCoder,SwissQrCodeContactException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,Currency,0,0,0,0,0,185,0,0,0,-1,0,2,,QRCoder.SwissQrCode' QRCoder.BezahlCode
-QRCoder,SwissQrCodeException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,Girocode,11,2,0,0,2,113,11,0,0,0,3,0,QRCoder.GirocodeVersion' QRCoder.GirocodeEncoding' QRCoder.TypeOfRemittance,
-QRCoder,GirocodeVersion,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.Girocode
-QRCoder,TypeOfRemittance,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.Girocode
-QRCoder,GirocodeEncoding,0,0,0,0,0,11,0,0,0,-1,0,1,,QRCoder.Girocode
-QRCoder,GirocodeException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,BezahlCode,19,5,0,0,5,520,41,0,0,0,2,0,QRCoder.Currency' QRCoder.AuthorityType,
-QRCoder,AuthorityType,0,0,0,0,0,38,0,0,0,-1,0,1,,QRCoder.BezahlCode
-QRCoder,BezahlCodeException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,CalendarEvent,6,2,0,0,2,43,3,0,0,0,1,0,QRCoder.EventEncoding,
-QRCoder,EventEncoding,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.CalendarEvent
-QRCoder,OneTimePassword,0,4,8,0,1,109,17,0,0,-1,2,0,QRCoder.OneTimePasswordAuthType' QRCoder.String40Methods,
-QRCoder,OneTimePasswordAuthType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.OneTimePassword
-QRCoder,OoneTimePasswordAuthAlgorithm,0,0,0,0,0,6,0,0,0,-1,0,0,,
-QRCoder,ShadowSocksConfig,7,2,0,0,2,110,3,0,0,0,1,0,QRCoder.Method,
-QRCoder,Method,0,0,0,0,0,33,0,0,0,-1,0,1,,QRCoder.ShadowSocksConfig
-QRCoder,ShadowSocksConfigException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,MoneroTransaction,5,2,0,0,2,50,4,0,0,0,0,0,,
-QRCoder,MoneroTransactionException,0,3,0,0,3,14,3,0,0,-1,0,0,,
-QRCoder,PngByteQRCode,0,5,0,0,4,261,10,0,0,-1,3,0,QRCoder.QRCodeData' QRCoder.PngBuilder' QRCoder.ColorType,
-QRCoder,PngBuilder,8,12,0,0,6,180,18,0,0,0,1,1,QRCoder.ColorType,QRCoder.PngByteQRCode
-QRCoder,ColorType,0,0,0,0,0,5,0,0,0,-1,0,2,,QRCoder.PngByteQRCode' QRCoder.PngBuilder
-QRCoder,QRCodeData,0,7,2,0,6,160,20,0,0,-1,2,10,QRCoder.Compression' QRCoder.Framework4._0Methods.Stream4Methods,QRCoder.AbstractQRCode<T>' QRCoder.Base64QRCode' QRCoder.BitmapByteQRCode' QRCoder.PngByteQRCode' QRCoder.QRCode' QRCoder.QRCodeGenerator' QRCoder.ModulePlacer' QRCoder.MaskPattern' QRCoder.SvgQRCode' QRCoder.UnityQRCode
+QRCoder,AbstractQRCode,0,4,1,0,2,21,4,8,0,-1,0,8,,QRCoder.BitmapByteQRCode' QRCoder.QRCode' QRCoder.PostscriptQRCode' QRCoder.SvgQRCode' QRCoder.XamlQRCode' QRCoder.AsciiQRCode' QRCoder.PngByteQRCode' QRCoder.Base64QRCode
+QRCoder,AsciiQRCode,0,6,0,0,6,80,11,0,1,-1,4,1,QRCoder.AbstractQRCode' QRCoder.QRCodeData' QRCoder.AbstractQRCode' QRCoder.QRCodeData,QRCoder.AsciiQRCodeHelper
+QRCoder,AsciiQRCodeHelper,0,1,0,0,1,10,1,0,0,-1,8,0,QRCoder.AsciiQRCode' QRCoder.QRCodeGenerator' QRCoder.EciMode' QRCoder.ECCLevel' QRCoder.AsciiQRCode' QRCoder.QRCodeGenerator' QRCoder.EciMode' QRCoder.ECCLevel,
+QRCoder,Base64QRCode,1,8,0,0,7,75,11,0,1,0.38,0,1,,QRCoder.Base64QRCodeHelper
+QRCoder,ImageType,0,0,0,0,0,6,0,0,0,-1,0,2,,QRCoder.Base64QRCode' QRCoder.Base64QRCodeHelper
+QRCoder,Base64QRCodeHelper,0,1,0,0,1,10,1,0,0,-1,0,0,,
+QRCoder,BitmapByteQRCode,0,7,0,0,5,76,15,0,1,-1,0,1,,QRCoder.BitmapByteQRCodeHelper
+QRCoder,BitmapByteQRCodeHelper,0,2,0,0,2,21,2,0,0,-1,0,0,,
+QRCoder,String40Methods,0,3,0,0,3,39,9,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,PayloadGenerator,0,6,0,0,1,2083,11,0,0,-1,0,1,,QRCoder.QRCodeGenerator
+QRCoder,Payload,0,1,3,0,1,7,1,20,0,-1,0,2,,QRCoder.QRCodeGenerator' QRCoder.PayloadGenerator
+QRCoder,WiFi,4,2,0,0,2,32,2,0,1,0,0,0,,
+QRCoder,Authentication,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,Mail,4,4,0,0,4,66,7,0,1,0.5,0,0,,
+QRCoder,MailEncoding,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,SMS,3,3,0,0,3,48,6,0,1,0.67,0,0,,
+QRCoder,SMSEncoding,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,MMS,3,3,0,0,3,45,5,0,1,0.67,0,0,,
+QRCoder,MMSEncoding,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,Geolocation,3,2,0,0,2,34,4,0,1,1,0,0,,
+QRCoder,GeolocationEncoding,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,PhoneNumber,1,2,0,0,2,16,2,0,1,1,0,0,,
+QRCoder,SkypeCall,1,2,0,0,2,16,2,0,1,1,0,0,,
+QRCoder,Url,1,2,0,0,2,16,2,0,1,1,0,0,,
+QRCoder,WhatsAppMessage,2,3,0,0,3,27,3,0,1,0.67,0,0,,
+QRCoder,Bookmark,2,2,0,0,2,18,2,0,1,1,0,0,,
+QRCoder,ContactData,18,2,0,0,2,200,32,0,1,1,0,0,,
+QRCoder,ContactOutputType,0,0,0,0,0,7,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,AddressOrder,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,BitcoinAddress,4,2,0,0,2,42,5,0,1,1,0,0,,
+QRCoder,SwissQrCode,12,2,0,0,2,407,11,0,1,1,0,0,,
+QRCoder,AdditionalInformation,3,1,3,0,1,46,2,0,0,0,0,1,,QRCoder.PayloadGenerator
+QRCoder,SwissQrCodeAdditionalInformationException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,Reference,3,1,2,0,1,66,7,0,0,0,0,1,,QRCoder.PayloadGenerator
+QRCoder,ReferenceType,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,ReferenceTextType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,SwissQrCodeReferenceException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,Iban,2,2,1,0,2,46,4,0,0,1,0,1,,QRCoder.PayloadGenerator
+QRCoder,IbanType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,SwissQrCodeIbanException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,Contact,8,4,0,0,3,127,24,0,0,0.75,0,1,,QRCoder.PayloadGenerator
+QRCoder,AddressType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,SwissQrCodeContactException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,Currency,0,0,0,0,0,185,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,SwissQrCodeException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,Girocode,11,2,0,0,2,113,11,0,1,1,0,0,,
+QRCoder,GirocodeVersion,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,TypeOfRemittance,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,GirocodeEncoding,0,0,0,0,0,11,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,GirocodeException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,BezahlCode,19,5,0,0,5,516,57,0,1,1,0,0,,
+QRCoder,AuthorityType,0,0,0,0,0,38,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,BezahlCodeException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,CalendarEvent,6,2,0,0,2,43,3,0,1,1,0,0,,
+QRCoder,EventEncoding,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,OneTimePassword,0,4,9,0,1,122,19,0,1,-1,0,0,,
+QRCoder,OneTimePasswordAuthType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,OneTimePasswordAuthAlgorithm,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,OoneTimePasswordAuthAlgorithm,0,0,0,0,0,7,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,ShadowSocksConfig,7,2,0,0,2,110,3,0,1,0,0,0,,
+QRCoder,Method,0,0,0,0,0,33,0,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,ShadowSocksConfigException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,MoneroTransaction,5,2,0,0,2,49,4,0,1,1,0,0,,
+QRCoder,MoneroTransactionException,0,3,0,0,3,14,3,0,0,-1,0,1,,QRCoder.PayloadGenerator
+QRCoder,SlovenianUpnQr,13,6,3,0,3,87,6,0,1,0.33,0,0,,
+QRCoder,PngByteQRCode,0,5,0,0,4,261,10,0,1,-1,0,1,,QRCoder.PngByteQRCodeHelper
+QRCoder,PngBuilder,8,12,0,0,6,180,18,0,0,0,0,1,,QRCoder.PngByteQRCode
+QRCoder,ColorType,0,0,0,0,0,5,0,0,0,-1,0,1,,QRCoder.PngByteQRCode
+QRCoder,PngByteQRCodeHelper,0,2,0,0,2,19,2,0,0,-1,0,0,,
+QRCoder,PostscriptQRCode,3,9,0,0,8,122,12,0,1,0.33,0,1,,QRCoder.PostscriptQRCodeHelper
+QRCoder,PostscriptQRCodeHelper,0,1,0,0,1,10,1,0,0,-1,0,0,,
+QRCoder,QRCodeData,0,7,2,0,6,154,22,0,0,-1,0,10,,QRCoder.SvgQRCode' QRCoder.QRCode' QRCoder.XamlQRCode' QRCoder.PngByteQRCode' QRCoder.Base64QRCode' QRCoder.AsciiQRCode' QRCoder.AbstractQRCode' QRCoder.BitmapByteQRCode' QRCoder.PostscriptQRCode' QRCoder.QRCodeGenerator
 QRCoder,Compression,0,0,0,0,0,6,0,0,0,-1,0,1,,QRCoder.QRCodeData
-QRCoder,QRCode,0,7,0,0,6,127,16,0,0,-1,1,1,QRCoder.QRCodeData,QRCoder.Base64QRCode
-QRCoder,QRCodeGenerator,11,36,0,0,3,1249,93,0,0,0,13,0,QRCoder.EncodingMode' QRCoder.ECCInfo' QRCoder.QRCodeData' QRCoder.ECCLevel' QRCoder.CodewordBlock' QRCoder.ModulePlacer' QRCoder.AlignmentPattern' QRCoder.Polynom' QRCoder.PolynomItem' QRCoder.VersionInfo' QRCoder.VersionInfoDetails' QRCoder.Antilog' QRCoder.Point,
-QRCoder,ModulePlacer,0,14,0,0,11,428,58,0,0,-1,5,1,QRCoder.QRCodeData' QRCoder.Point' QRCoder.MaskPattern' QRCoder.ECCLevel' QRCoder.Rectangle,QRCoder.QRCodeGenerator
-QRCoder,MaskPattern,0,9,0,0,9,154,25,0,0,-1,1,1,QRCoder.QRCodeData,QRCoder.ModulePlacer
-QRCoder,ECCLevel,0,0,0,0,0,19,0,0,0,-1,0,4,,QRCoder.QRCodeGenerator' QRCoder.ModulePlacer' QRCoder.ECCInfo' QRCoder.VersionInfoDetails
+QRCoder,QRCode,0,7,0,0,6,116,16,0,1,-1,0,2,,QRCoder.QRCodeHelper' QRCoder.Base64QRCode
+QRCoder,QRCodeHelper,0,1,0,0,1,10,1,0,0,-1,0,0,,
+QRCoder,QRCodeGenerator,11,46,0,0,10,1413,120,0,0,0.15,0,9,,QRCoder.QRCodeHelper' QRCoder.XamlQRCodeHelper' QRCoder.Base64QRCodeHelper' QRCoder.AsciiQRCodeHelper' QRCoder.SvgQRCodeHelper' QRCoder.PngByteQRCodeHelper' QRCoder.BitmapByteQRCodeHelper' QRCoder.PostscriptQRCodeHelper' QRCoder.PayloadGenerator
+QRCoder,EciMode,0,0,0,0,0,7,0,0,0,-1,0,10,,QRCoder.PostscriptQRCodeHelper' QRCoder.BitmapByteQRCodeHelper' QRCoder.AsciiQRCodeHelper' QRCoder.SvgQRCodeHelper' QRCoder.XamlQRCodeHelper' QRCoder.PngByteQRCodeHelper' QRCoder.Base64QRCodeHelper' QRCoder.QRCodeHelper' QRCoder.QRCodeGenerator' QRCoder.PayloadGenerator
+QRCoder,ModulePlacer,0,14,0,0,11,442,60,0,0,-1,0,1,,QRCoder.QRCodeGenerator
+QRCoder,MaskPattern,0,9,0,0,9,153,27,0,0,-1,0,1,,QRCoder.QRCodeGenerator
+QRCoder,ECCLevel,0,0,0,0,0,19,0,0,0,-1,0,10,,QRCoder.XamlQRCodeHelper' QRCoder.Base64QRCodeHelper' QRCoder.SvgQRCodeHelper' QRCoder.QRCodeHelper' QRCoder.AsciiQRCodeHelper' QRCoder.BitmapByteQRCodeHelper' QRCoder.PngByteQRCodeHelper' QRCoder.PostscriptQRCodeHelper' QRCoder.PayloadGenerator' QRCoder.QRCodeGenerator
 QRCoder,EncodingMode,0,0,0,0,0,8,0,0,0,-1,0,1,,QRCoder.QRCodeGenerator
 QRCoder,AlignmentPattern,2,0,0,2,0,5,0,0,0,-1,0,1,,QRCoder.QRCodeGenerator
 QRCoder,CodewordBlock,0,1,7,0,1,21,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
-QRCoder,ECCInfo,0,1,8,0,1,23,1,0,0,-1,1,1,QRCoder.ECCLevel,QRCoder.QRCodeGenerator
+QRCoder,ECCInfo,0,1,8,0,1,23,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
 QRCoder,VersionInfo,0,1,2,0,1,10,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
-QRCoder,VersionInfoDetails,0,1,2,0,1,10,1,0,0,-1,1,1,QRCoder.ECCLevel,QRCoder.QRCodeGenerator
+QRCoder,VersionInfoDetails,0,1,2,0,1,10,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
 QRCoder,Antilog,0,1,2,0,1,10,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
-QRCoder,PolynomItem,0,1,2,0,1,10,1,0,0,-1,0,2,,QRCoder.QRCodeGenerator' QRCoder.Polynom
-QRCoder,Polynom,0,2,1,0,2,18,3,0,0,-1,1,1,QRCoder.PolynomItem,QRCoder.QRCodeGenerator
-QRCoder,Point,0,1,2,0,1,10,1,0,0,-1,0,2,,QRCoder.QRCodeGenerator' QRCoder.ModulePlacer
-QRCoder,Rectangle,0,1,4,0,1,14,1,0,0,-1,0,1,,QRCoder.ModulePlacer
-QRCoder,SvgQRCode,0,9,0,0,8,65,13,0,0,-1,1,0,QRCoder.QRCodeData,
-QRCoder,UnityQRCode,0,6,0,0,5,53,11,0,0,-1,1,0,QRCoder.QRCodeData,
+QRCoder,PolynomItem,0,1,2,0,1,10,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
+QRCoder,Polynom,0,2,1,0,2,18,3,0,0,-1,0,1,,QRCoder.QRCodeGenerator
+QRCoder,Point,0,1,2,0,1,10,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
+QRCoder,Rectangle,0,1,4,0,1,14,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
+QRCoder,SvgQRCode,0,9,0,0,8,65,12,0,1,-1,0,1,,QRCoder.SvgQRCodeHelper
+QRCoder,SizingMode,0,0,0,0,0,5,0,0,0,-1,0,2,,QRCoder.SvgQRCode' QRCoder.SvgQRCodeHelper
+QRCoder,SvgQRCodeHelper,0,1,0,0,1,10,1,0,0,-1,0,0,,
+QRCoder,XamlQRCode,0,9,0,0,8,64,12,0,1,-1,0,1,,QRCoder.XamlQRCodeHelper
+QRCoder,XamlQRCodeHelper,0,1,0,0,1,10,1,0,0,-1,0,0,,
+QRCoder.Exceptions,DataTooLongException,0,1,0,0,1,6,1,0,0,-1,0,1,,QRCoder.QRCodeGenerator
 QRCoder.Framework4._0Methods,Stream4Methods,0,1,0,0,1,12,2,0,0,-1,0,1,,QRCoder.QRCodeData

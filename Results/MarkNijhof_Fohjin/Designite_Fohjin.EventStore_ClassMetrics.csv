@@ -1,20 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Fohjin.EventStore.Configuration,ApprovedEntitiesCache,1,3,0,0,3,16,3,0,0,0,0,1,,Fohjin.EventStore.Infrastructure.AggregateRootFactory
-Fohjin.EventStore.Configuration,EventProcessor,0,1,3,0,1,12,1,0,0,-1,0,1,,Fohjin.EventStore.Infrastructure.EventProvider
-Fohjin.EventStore.Configuration,EventProcessorCache,1,3,0,0,3,18,4,0,0,0,0,3,,Fohjin.EventStore.Configuration.PreProcessor' Fohjin.EventStore.Infrastructure.AggregateRootFactory' Fohjin.EventStore.Infrastructure.EventProvider
-Fohjin.EventStore.Configuration,MethodMissingException,0,1,0,0,1,6,1,0,0,-1,0,0,,
+Fohjin.EventStore.Configuration,EventProcessor,0,1,3,0,1,12,1,0,0,-1,0,3,,Fohjin.EventStore.Infrastructure.EventProvider' Fohjin.EventStore.Configuration.EventProcessorCache' Fohjin.EventStore.Reflection.EventAccessor
+Fohjin.EventStore.Configuration,EventProcessorCache,1,3,0,0,3,18,4,0,0,0,1,3,Fohjin.EventStore.Configuration.EventProcessor,Fohjin.EventStore.Configuration.PreProcessor' Fohjin.EventStore.Infrastructure.EventProvider' Fohjin.EventStore.Infrastructure.AggregateRootFactory
+Fohjin.EventStore.Configuration,MethodMissingException,0,1,0,0,1,6,1,0,0,-1,0,1,,Fohjin.EventStore.Infrastructure.AggregateRootFactory
 Fohjin.EventStore.Configuration,PreProcessor,3,5,0,0,4,28,5,0,0,0,2,0,Fohjin.EventStore.Configuration.EventProcessorCache' Fohjin.EventStore.Reflection.EventAccessor,
-Fohjin.EventStore.Infrastructure,IAggregateRootFactory,0,2,0,0,0,5,2,1,0,-1,0,1,,Fohjin.EventStore.DomainRepository
-Fohjin.EventStore.Infrastructure,AggregateRootFactory,3,5,0,0,3,44,7,0,1,0,4,0,Fohjin.EventStore.Configuration.EventProcessorCache' Fohjin.EventStore.Configuration.ApprovedEntitiesCache' Fohjin.EventStore.Infrastructure.EventProvider' Fohjin.EventStore.Infrastructure.Orginator,
-Fohjin.EventStore.Infrastructure,IEventProvider,0,4,2,0,0,9,4,1,0,-1,0,0,,
-Fohjin.EventStore.Infrastructure,EventProvider,4,14,3,0,1,103,19,0,1,0.21,3,1,Fohjin.EventStore.Configuration.EventProcessorCache' Fohjin.EventStore.IDomainEvent' Fohjin.EventStore.Configuration.EventProcessor,Fohjin.EventStore.Infrastructure.AggregateRootFactory
-Fohjin.EventStore.Infrastructure,IlligalStateAssignmentException,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Fohjin.EventStore.Infrastructure,IOrginator,0,2,0,0,0,5,2,1,0,-1,1,0,Fohjin.EventStore.IMemento,
-Fohjin.EventStore.Infrastructure,Orginator,0,2,0,0,2,11,2,0,1,-1,1,1,Fohjin.EventStore.IMemento,Fohjin.EventStore.Infrastructure.AggregateRootFactory
-Fohjin.EventStore.Infrastructure,UnregisteredDomainEventException,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Fohjin.EventStore,IDomainEvent,0,0,3,0,0,6,0,0,0,-1,0,2,,Fohjin.EventStore.Infrastructure.EventProvider' Fohjin.EventStore.Reflection.EventPropertyLocator
-Fohjin.EventStore,IDomainRepository,0,1,0,0,0,9,1,1,0,-1,0,0,,
-Fohjin.EventStore,DomainRepository,1,2,0,0,2,12,2,0,1,0,1,0,Fohjin.EventStore.Infrastructure.IAggregateRootFactory,
+Fohjin.EventStore.Infrastructure,IAggregateRootFactory,0,2,0,0,0,5,2,1,0,-1,0,2,,Fohjin.EventStore.Infrastructure.AggregateRootFactory' Fohjin.EventStore.DomainRepository
+Fohjin.EventStore.Infrastructure,AggregateRootFactory,3,5,0,0,3,44,7,0,1,0,6,0,Fohjin.EventStore.Configuration.ApprovedEntitiesCache' Fohjin.EventStore.Configuration.EventProcessorCache' Fohjin.EventStore.Configuration.MethodMissingException' Fohjin.EventStore.Infrastructure.IAggregateRootFactory' Fohjin.EventStore.Infrastructure.EventProvider' Fohjin.EventStore.Infrastructure.Orginator,
+Fohjin.EventStore.Infrastructure,IEventProvider,0,4,2,0,0,9,4,1,0,-1,1,1,Fohjin.EventStore.IDomainEvent,Fohjin.EventStore.Infrastructure.EventProvider
+Fohjin.EventStore.Infrastructure,EventProvider,4,14,3,0,1,103,19,0,1,0.21,6,1,Fohjin.EventStore.Configuration.EventProcessor' Fohjin.EventStore.Configuration.EventProcessorCache' Fohjin.EventStore.Infrastructure.IEventProvider' Fohjin.EventStore.Infrastructure.IlligalStateAssignmentException' Fohjin.EventStore.Infrastructure.UnregisteredDomainEventException' Fohjin.EventStore.IDomainEvent,Fohjin.EventStore.Infrastructure.AggregateRootFactory
+Fohjin.EventStore.Infrastructure,IlligalStateAssignmentException,0,1,0,0,1,6,1,0,0,-1,0,1,,Fohjin.EventStore.Infrastructure.EventProvider
+Fohjin.EventStore.Infrastructure,IOrginator,0,2,0,0,0,5,2,1,0,-1,1,1,Fohjin.EventStore.IMemento,Fohjin.EventStore.Infrastructure.Orginator
+Fohjin.EventStore.Infrastructure,Orginator,0,2,0,0,2,11,2,0,1,-1,2,1,Fohjin.EventStore.Infrastructure.IOrginator' Fohjin.EventStore.IMemento,Fohjin.EventStore.Infrastructure.AggregateRootFactory
+Fohjin.EventStore.Infrastructure,UnregisteredDomainEventException,0,1,0,0,1,6,1,0,0,-1,0,1,,Fohjin.EventStore.Infrastructure.EventProvider
+Fohjin.EventStore,IDomainEvent,0,0,3,0,0,6,0,1,0,-1,0,4,,Fohjin.EventStore.Reflection.EventAccessor' Fohjin.EventStore.Reflection.EventPropertyLocator' Fohjin.EventStore.Infrastructure.IEventProvider' Fohjin.EventStore.Infrastructure.EventProvider
+Fohjin.EventStore,IDomainRepository,0,1,0,0,0,9,1,1,0,-1,0,1,,Fohjin.EventStore.DomainRepository
+Fohjin.EventStore,DomainRepository,1,2,0,0,2,12,2,0,1,0,2,0,Fohjin.EventStore.Infrastructure.IAggregateRootFactory' Fohjin.EventStore.IDomainRepository,
 Fohjin.EventStore,IMemento,0,0,0,0,0,3,0,0,0,-1,0,2,,Fohjin.EventStore.Infrastructure.IOrginator' Fohjin.EventStore.Infrastructure.Orginator
 Fohjin.EventStore.Reflection,EventPropertyLocator,0,2,0,0,1,13,2,0,0,-1,1,1,Fohjin.EventStore.IDomainEvent,Fohjin.EventStore.Reflection.EventAccessor
-Fohjin.EventStore.Reflection,EventAccessor,3,6,0,0,2,47,6,0,0,0.5,1,1,Fohjin.EventStore.Reflection.EventPropertyLocator,Fohjin.EventStore.Configuration.PreProcessor
+Fohjin.EventStore.Reflection,EventAccessor,3,6,0,0,2,47,6,0,0,0.5,3,1,Fohjin.EventStore.Configuration.EventProcessor' Fohjin.EventStore.IDomainEvent' Fohjin.EventStore.Reflection.EventPropertyLocator,Fohjin.EventStore.Configuration.PreProcessor

@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Sample.Saga,DemoAggregate1,0,4,0,0,4,15,4,0,1,-1,1,1,Sample.Saga.DemoEvent1,Sample.Saga.DemoCommandHandler
 Sample.Saga,DemoAggregate2,0,4,0,0,4,15,4,0,1,-1,1,1,Sample.Saga.DemoEvent2,Sample.Saga.DemoCommandHandler
-Sample.Saga,DemoCommandHandler,2,3,0,0,3,31,3,0,1,0,5,0,Proximo.Cqrs.Core.Support.ILogger' Sample.Saga.DemoAggregate1' Sample.Saga.DemoCommand1' Sample.Saga.DemoAggregate2' Sample.Saga.DemoCommand2,
-Sample.Saga,DemoEvent1,0,0,1,0,0,4,0,0,2,-1,0,3,,Sample.Saga.DemoAggregate1' Sample.Saga.DemoSaga' Sample.Server.Program
+Sample.Saga,DemoCommandHandler,2,3,0,0,3,31,3,0,1,0,4,0,Sample.Saga.DemoAggregate1' Sample.Saga.DemoAggregate2' Sample.Saga.DemoCommand1' Sample.Saga.DemoCommand2,
+Sample.Saga,DemoEvent1,0,0,1,0,0,4,0,0,2,-1,0,2,,Sample.Saga.DemoAggregate1' Sample.Saga.DemoSaga
 Sample.Saga,DemoEvent2,0,0,1,0,0,4,0,0,2,-1,0,2,,Sample.Saga.DemoAggregate2' Sample.Saga.DemoSaga
-Sample.Saga,DemoCommand1,0,0,3,0,0,6,0,0,1,-1,0,2,,Sample.Client.Program' Sample.Saga.DemoCommandHandler
-Sample.Saga,DemoCommand2,0,0,3,0,0,6,0,0,1,-1,0,2,,Sample.Client.Program' Sample.Saga.DemoCommandHandler
-Sample.Saga,SagaCommand,0,0,1,0,0,4,0,0,1,-1,0,1,,Sample.Saga.DemoSagaCommandHandler
-Sample.Saga,DemoSagaCommandHandler,1,2,0,0,2,13,2,0,1,0,2,0,Proximo.Cqrs.Core.Support.ILogger' Sample.Saga.SagaCommand,
-Sample.Saga,DemoSagaState,0,0,2,0,0,6,0,0,0,-1,0,2,,Sample.Saga.DemoSaga' Sample.Server.Program
-Sample.Saga,DemoSaga,0,4,0,0,4,56,7,0,1,-1,6,0,Sample.Saga.Infrastructure.ISagaRepository' Proximo.Cqrs.Core.Commanding.ICommandQueue' Proximo.Cqrs.Core.Support.ILogger' Sample.Saga.DemoEvent1' Sample.Saga.DemoSagaState' Sample.Saga.DemoEvent2,
-Sample.Saga.Impl,MongoDbSagaRepository<T;TId>,1,4,2,1,4,42,6,0,1,1,0,0,,
-Sample.Saga.Infrastructure,IamWokeUpBy,0,1,0,0,0,8,1,1,1,-1,0,0,,
-Sample.Saga.Infrastructure,ISagaRepository,0,3,0,0,0,19,3,1,0,-1,0,3,,Sample.Saga.DemoSaga' Sample.Saga.Infrastructure.Saga<TState;TId>' Sample.Server.Program
-Sample.Saga.Infrastructure,Saga<TState;TId>,0,3,4,0,1,29,4,0,0,-1,3,0,Sample.Saga.Infrastructure.ISagaRepository' Proximo.Cqrs.Core.Commanding.ICommandQueue' Proximo.Cqrs.Core.Support.ILogger,
-Sample.Saga.Infrastructure,SagaState<TId>,0,0,2,0,0,9,0,0,0,-1,0,0,,
+Sample.Saga,DemoCommand1,0,0,3,0,0,6,0,0,1,-1,0,1,,Sample.Saga.DemoCommandHandler
+Sample.Saga,DemoCommand2,0,0,3,0,0,6,0,0,1,-1,0,1,,Sample.Saga.DemoCommandHandler
+Sample.Saga,SagaCommand,0,0,1,0,0,4,0,0,1,-1,0,2,,Sample.Saga.DemoSagaCommandHandler' Sample.Saga.DemoSaga
+Sample.Saga,DemoSagaCommandHandler,1,2,0,0,2,13,2,0,1,0,1,0,Sample.Saga.SagaCommand,
+Sample.Saga,DemoSagaState,0,0,2,0,0,6,0,0,0,-1,1,1,Sample.Saga.Infrastructure.SagaState<TId>,Sample.Saga.DemoSaga
+Sample.Saga,DemoSaga,0,4,0,0,4,56,7,0,1,-1,7,0,Sample.Saga.DemoEvent1' Sample.Saga.DemoEvent2' Sample.Saga.SagaCommand' Sample.Saga.DemoSagaState' Sample.Saga.Infrastructure.IamWokeUpBy' Sample.Saga.Infrastructure.ISagaRepository' Sample.Saga.Infrastructure.Saga<TState;TId>,
+Sample.Saga.Impl,MongoDbSagaRepository<T;TId>,1,4,2,1,4,42,6,0,1,1,2,0,Sample.Saga.Infrastructure.ISagaRepository' Sample.Saga.Infrastructure.SagaState<TId>,
+Sample.Saga.Infrastructure,IamWokeUpBy,0,1,0,0,0,8,1,1,1,-1,0,1,,Sample.Saga.DemoSaga
+Sample.Saga.Infrastructure,ISagaRepository,0,3,0,0,0,19,3,1,0,-1,1,3,Sample.Saga.Infrastructure.SagaState<TId>,Sample.Saga.Impl.MongoDbSagaRepository<T;TId>' Sample.Saga.DemoSaga' Sample.Saga.Infrastructure.Saga<TState;TId>
+Sample.Saga.Infrastructure,Saga<TState;TId>,0,3,4,0,1,29,4,0,0,-1,2,1,Sample.Saga.Infrastructure.ISagaRepository' Sample.Saga.Infrastructure.SagaState<TId>,Sample.Saga.DemoSaga
+Sample.Saga.Infrastructure,SagaState<TId>,0,0,2,0,0,9,0,0,0,-1,0,4,,Sample.Saga.Impl.MongoDbSagaRepository<T;TId>' Sample.Saga.Infrastructure.ISagaRepository' Sample.Saga.DemoSagaState' Sample.Saga.Infrastructure.Saga<TState;TId>

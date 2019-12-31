@@ -1,26 +1,77 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Users,AdminMenu,0,2,1,0,2,23,3,0,1,-1,2,0,OrchardCore.Environment.Navigation.NavigationBuilder' OrchardCore.Users.Permissions,
-OrchardCore.Users,Migrations,0,1,0,0,1,15,1,0,2,-1,0,0,,
-OrchardCore.Users,Permissions,1,2,0,1,2,19,2,0,0,0,0,2,,OrchardCore.Users.AdminMenu' OrchardCore.Users.Controllers.AdminController
-OrchardCore.Users,Startup,4,3,0,0,3,109,3,0,0,0,0,0,,
-OrchardCore.Users.Commands,UserCommands,1,2,4,0,2,33,3,0,2,0,1,0,OrchardCore.Environment.Commands.CommandContext,
-OrchardCore.Users.Controllers,AccountController,4,10,0,0,9,139,17,0,0,0.5,3,0,OrchardCore.Users.ViewModels.LoginViewModel' OrchardCore.Users.ViewModels.RegisterViewModel' OrchardCore.Users.ViewModels.ChangePasswordViewModel,
-OrchardCore.Users.Controllers,AdminController,8,7,0,0,7,186,23,0,0,0,8,0,OrchardCore.Navigation.Pager' OrchardCore.Users.ViewModels.UsersIndexViewModel' OrchardCore.Users.Permissions' OrchardCore.Users.ViewModels.UserIndexOptions' OrchardCore.Users.ViewModels.UsersFilter' OrchardCore.Users.ViewModels.UsersOrder' OrchardCore.Navigation.PagerParameters' OrchardCore.Users.Models.User,
-OrchardCore.Users.Drivers,UserButtonsDisplayDriver,0,2,0,0,2,11,2,0,0,-1,1,0,OrchardCore.Users.Models.User,
-OrchardCore.Users.Drivers,UserDisplayDriver,4,6,0,0,4,126,10,0,0,0.33,2,0,OrchardCore.Users.Models.User' OrchardCore.Users.ViewModels.EditUserViewModel,
-OrchardCore.Users.Services,MembershipService,2,4,0,0,4,30,5,0,0,0,0,0,,
-OrchardCore.Users.Services,SetupEventHandler,1,2,0,0,2,21,2,0,1,0,0,0,,
-OrchardCore.Users.Services,UserLiquidTemplateEventHandler,1,2,0,0,2,16,2,0,1,0,0,0,,
-OrchardCore.Users.Services,UserRoleRemovedEventHandler,1,2,0,0,2,16,3,0,0,0,0,0,,
+OrchardCore.Users,AdminMenu,1,2,0,0,2,31,3,0,1,0,2,1,OrchardCore.Users.Permissions' OrchardCore.Users.Drivers.LoginSettingsDisplayDriver,OrchardCore.Users.Startup
+OrchardCore.Users,RegistrationAdminMenu,1,2,0,0,2,26,3,0,1,0,2,1,OrchardCore.Users.Permissions' OrchardCore.Users.Drivers.RegistrationSettingsDisplayDriver,OrchardCore.Users.RegistrationStartup
+OrchardCore.Users,ResetPasswordAdminMenu,1,2,0,0,2,25,3,0,1,0,2,1,OrchardCore.Users.Permissions' OrchardCore.Users.Drivers.ResetPasswordSettingsDisplayDriver,OrchardCore.Users.ResetPasswordStartup
+OrchardCore.Users,Migrations,0,4,0,0,4,38,4,0,2,-1,0,1,,OrchardCore.Users.Startup
+OrchardCore.Users,Permissions,1,2,0,1,2,21,2,0,0,0,0,6,,OrchardCore.Users.Controllers.RegistrationController' OrchardCore.Users.Startup' OrchardCore.Users.AdminMenu' OrchardCore.Users.RegistrationAdminMenu' OrchardCore.Users.ResetPasswordAdminMenu' OrchardCore.Users.Controllers.AdminController
+OrchardCore.Users,Startup,4,3,0,0,3,118,3,0,0,0,14,0,OrchardCore.Users.AdminMenu' OrchardCore.Users.Migrations' OrchardCore.Users.Permissions' OrchardCore.Users.Commands.UserCommands' OrchardCore.Users.Controllers.AccountController' OrchardCore.Users.Controllers.AdminController' OrchardCore.Users.Drivers.LoginSettingsDisplayDriver' OrchardCore.Users.Drivers.UserButtonsDisplayDriver' OrchardCore.Users.Drivers.UserDisplayDriver' OrchardCore.Users.Liquid.UserLiquidTemplateEventHandler' OrchardCore.Users.Services.MembershipService' OrchardCore.Users.Services.SetupEventHandler' OrchardCore.Users.Services.UserRoleRemovedEventHandler' OrchardCore.Users.Services.UsersThemeSelector,
+OrchardCore.Users,LiquidStartup,0,1,0,0,1,11,1,0,0,-1,4,0,OrchardCore.Users.Liquid.HasClaimFilter' OrchardCore.Users.Liquid.HasPermissionFilter' OrchardCore.Users.Liquid.IsInRoleFilter' OrchardCore.Users.Liquid.UserLiquidTemplateEventHandler,
+OrchardCore.Users,RegistrationStartup,1,3,0,0,2,23,3,0,0,1,3,0,OrchardCore.Users.RegistrationAdminMenu' OrchardCore.Users.Drivers.RegistrationSettingsDisplayDriver' OrchardCore.Users.ViewModels.ConfirmEmailViewModel,
+OrchardCore.Users,ResetPasswordStartup,4,3,0,0,2,44,3,0,0,1,3,0,OrchardCore.Users.ResetPasswordAdminMenu' OrchardCore.Users.Drivers.ResetPasswordSettingsDisplayDriver' OrchardCore.Users.ViewModels.LostPasswordViewModel,
+OrchardCore.Users.Commands,UserCommands,1,2,4,0,2,34,3,0,0,0,0,1,,OrchardCore.Users.Startup
+OrchardCore.Users.Controllers,AccountController,11,23,1,0,16,647,85,0,0,0.26,11,1,OrchardCore.Users.ViewModels.ChangePasswordViewModel' OrchardCore.Users.ViewModels.ExternalLoginsViewModel' OrchardCore.Users.ViewModels.LinkExternalLoginViewModel' OrchardCore.Users.ViewModels.LoginViewModel' OrchardCore.Users.ViewModels.RegisterExternalLoginViewModel' OrchardCore.Users.ViewModels.RegisterViewModel' OrchardCore.Users.ViewModels.RemoveLoginViewModel' OrchardCore.Users.Models.LoginSettings' OrchardCore.Users.Models.RegistrationSettings' OrchardCore.Users.Models.UserRegistrationType' OrchardCore.Users.Workflows.Activities.UserLoggedInEvent,OrchardCore.Users.Startup
+OrchardCore.Users.Controllers,AdminController,9,11,0,0,11,326,51,0,0,0.18,8,2,OrchardCore.Users.Permissions' OrchardCore.Users.ViewModels.ResetPasswordViewModel' OrchardCore.Users.ViewModels.UsersIndexViewModel' OrchardCore.Users.ViewModels.UserEntry' OrchardCore.Users.ViewModels.UserIndexOptions' OrchardCore.Users.ViewModels.UsersOrder' OrchardCore.Users.ViewModels.UsersFilter' OrchardCore.Users.ViewModels.UsersBulkAction,OrchardCore.Users.Controllers.RegistrationController' OrchardCore.Users.Startup
+OrchardCore.Users.Controllers,ControllerExtensions,0,3,0,0,0,74,7,0,0,-1,4,0,OrchardCore.Users.ViewModels.ConfirmEmailViewModel' OrchardCore.Users.ViewModels.RegisterViewModel' OrchardCore.Users.Models.RegistrationSettings' OrchardCore.Users.Models.UserRegistrationType,
+OrchardCore.Users.Controllers,RegistrationController,5,6,2,0,5,107,15,0,0,0,5,0,OrchardCore.Users.Permissions' OrchardCore.Users.Controllers.AdminController' OrchardCore.Users.ViewModels.RegisterViewModel' OrchardCore.Users.Models.RegistrationSettings' OrchardCore.Users.Models.UserRegistrationType,
+OrchardCore.Users.Controllers,ResetPasswordController,5,8,1,0,7,124,18,0,0,0.5,5,0,OrchardCore.Users.ViewModels.ForgotPasswordViewModel' OrchardCore.Users.ViewModels.LostPasswordViewModel' OrchardCore.Users.ViewModels.ResetPasswordViewModel' OrchardCore.Users.Models.RegistrationSettings' OrchardCore.Users.Models.ResetPasswordSettings,
+OrchardCore.Users.Drivers,LoginSettingsDisplayDriver,1,2,0,1,2,23,3,0,0,0,1,2,OrchardCore.Users.Models.LoginSettings,OrchardCore.Users.Startup' OrchardCore.Users.AdminMenu
+OrchardCore.Users.Drivers,RegistrationSettingsDisplayDriver,1,2,0,1,2,27,3,0,0,0,1,2,OrchardCore.Users.Models.RegistrationSettings,OrchardCore.Users.RegistrationStartup' OrchardCore.Users.RegistrationAdminMenu
+OrchardCore.Users.Drivers,ResetPasswordSettingsDisplayDriver,1,2,0,1,2,21,3,0,0,0,1,2,OrchardCore.Users.Models.ResetPasswordSettings,OrchardCore.Users.ResetPasswordStartup' OrchardCore.Users.ResetPasswordAdminMenu
+OrchardCore.Users.Drivers,UserButtonsDisplayDriver,0,2,0,0,2,11,2,0,0,-1,0,1,,OrchardCore.Users.Startup
+OrchardCore.Users.Drivers,UserDisplayDriver,4,5,0,0,4,126,21,0,0,0.4,3,1,OrchardCore.Users.ViewModels.EditUserViewModel' OrchardCore.Users.ViewModels.RoleViewModel' OrchardCore.Users.ViewModels.SummaryAdminUserViewModel,OrchardCore.Users.Startup
+OrchardCore.Users.Liquid,HasClaimFilter,0,1,0,0,1,15,2,0,1,-1,0,1,,OrchardCore.Users.LiquidStartup
+OrchardCore.Users.Liquid,HasPermissionFilter,0,1,0,0,1,31,5,0,1,-1,0,1,,OrchardCore.Users.LiquidStartup
+OrchardCore.Users.Liquid,IsInRoleFilter,0,1,0,0,1,15,2,0,1,-1,0,1,,OrchardCore.Users.LiquidStartup
+OrchardCore.Users.Liquid,UserLiquidTemplateEventHandler,1,2,0,0,2,17,2,0,1,0,0,2,,OrchardCore.Users.Startup' OrchardCore.Users.LiquidStartup
+OrchardCore.Users.ViewModels,ConfirmEmailViewModel,0,1,2,0,1,9,1,0,2,-1,0,2,,OrchardCore.Users.RegistrationStartup' OrchardCore.Users.Controllers.ControllerExtensions
+OrchardCore.Users.ViewModels,ForgotPasswordViewModel,0,0,1,0,0,5,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.ResetPasswordController
+OrchardCore.Users.ViewModels,LostPasswordViewModel,0,1,2,0,1,9,1,0,2,-1,0,2,,OrchardCore.Users.ResetPasswordStartup' OrchardCore.Users.Controllers.ResetPasswordController
+OrchardCore.Users.ViewModels,ResetPasswordViewModel,0,0,4,0,0,14,0,0,0,-1,0,2,,OrchardCore.Users.Controllers.ResetPasswordController' OrchardCore.Users.Controllers.AdminController
 OrchardCore.Users.ViewModels,ChangePasswordViewModel,0,0,3,0,0,12,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AccountController
-OrchardCore.Users.ViewModels,EditUserViewModel,0,0,7,0,0,16,0,0,0,-1,0,1,,OrchardCore.Users.Drivers.UserDisplayDriver
+OrchardCore.Users.ViewModels,EditUserViewModel,0,0,8,0,0,17,0,0,0,-1,1,1,OrchardCore.Users.ViewModels.RoleViewModel,OrchardCore.Users.Drivers.UserDisplayDriver
+OrchardCore.Users.ViewModels,ExternalLoginsViewModel,0,0,4,0,0,7,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AccountController
+OrchardCore.Users.ViewModels,LinkExternalLoginViewModel,0,1,1,0,1,13,2,0,0,-1,0,1,,OrchardCore.Users.Controllers.AccountController
 OrchardCore.Users.ViewModels,LoginViewModel,0,0,3,0,0,9,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AccountController
-OrchardCore.Users.ViewModels,RegisterViewModel,0,0,4,0,0,15,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AccountController
-OrchardCore.Users.ViewModels,RoleViewModel,0,0,2,0,0,5,0,0,0,-1,0,0,,
-OrchardCore.Users.ViewModels,SummaryAdminUserViewModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
-OrchardCore.Users.ViewModels,UsersIndexViewModel,0,0,3,0,0,6,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AdminController
-OrchardCore.Users.ViewModels,UserEntry,0,0,2,0,0,5,0,0,0,-1,0,0,,
-OrchardCore.Users.ViewModels,UserIndexOptions,0,0,4,0,0,7,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AdminController
-OrchardCore.Users.ViewModels,UsersOrder,0,0,0,0,0,7,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AdminController
-OrchardCore.Users.ViewModels,UsersFilter,0,0,0,0,0,7,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AdminController
-OrchardCore.Users.ViewModels,UsersBulkAction,0,0,0,0,0,8,0,0,0,-1,0,0,,
+OrchardCore.Users.ViewModels,RegisterExternalLoginViewModel,0,1,7,0,1,37,6,0,0,-1,0,1,,OrchardCore.Users.Controllers.AccountController
+OrchardCore.Users.ViewModels,RegisterViewModel,0,0,4,0,0,14,0,0,0,-1,0,3,,OrchardCore.Users.Controllers.ControllerExtensions' OrchardCore.Users.Controllers.RegistrationController' OrchardCore.Users.Controllers.AccountController
+OrchardCore.Users.ViewModels,RemoveLoginViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,OrchardCore.Users.Controllers.AccountController
+OrchardCore.Users.ViewModels,RoleViewModel,0,0,2,0,0,5,0,0,0,-1,0,2,,OrchardCore.Users.ViewModels.EditUserViewModel' OrchardCore.Users.Drivers.UserDisplayDriver
+OrchardCore.Users.ViewModels,SummaryAdminUserViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Users.Drivers.UserDisplayDriver
+OrchardCore.Users.ViewModels,UsersIndexViewModel,0,0,3,0,0,6,0,0,0,-1,2,1,OrchardCore.Users.ViewModels.UserEntry' OrchardCore.Users.ViewModels.UserIndexOptions,OrchardCore.Users.Controllers.AdminController
+OrchardCore.Users.ViewModels,UserEntry,0,0,2,0,0,5,0,0,0,-1,0,2,,OrchardCore.Users.ViewModels.UsersIndexViewModel' OrchardCore.Users.Controllers.AdminController
+OrchardCore.Users.ViewModels,UserIndexOptions,0,0,7,0,0,13,0,0,0,-1,3,2,OrchardCore.Users.ViewModels.UsersOrder' OrchardCore.Users.ViewModels.UsersFilter' OrchardCore.Users.ViewModels.UsersBulkAction,OrchardCore.Users.ViewModels.UsersIndexViewModel' OrchardCore.Users.Controllers.AdminController
+OrchardCore.Users.ViewModels,UsersOrder,0,0,0,0,0,7,0,0,0,-1,0,2,,OrchardCore.Users.ViewModels.UserIndexOptions' OrchardCore.Users.Controllers.AdminController
+OrchardCore.Users.ViewModels,UsersFilter,0,0,0,0,0,7,0,0,0,-1,0,2,,OrchardCore.Users.ViewModels.UserIndexOptions' OrchardCore.Users.Controllers.AdminController
+OrchardCore.Users.ViewModels,UsersBulkAction,0,0,0,0,0,9,0,0,0,-1,0,2,,OrchardCore.Users.ViewModels.UserIndexOptions' OrchardCore.Users.Controllers.AdminController
+OrchardCore.Users.Models,LoginSettings,0,0,5,0,0,8,0,0,0,-1,0,3,,OrchardCore.Users.Services.UsersThemeSelector' OrchardCore.Users.Drivers.LoginSettingsDisplayDriver' OrchardCore.Users.Controllers.AccountController
+OrchardCore.Users.Models,RegistrationSettings,0,0,8,0,0,11,0,0,0,-1,1,6,OrchardCore.Users.Models.UserRegistrationType,OrchardCore.Users.Controllers.ControllerExtensions' OrchardCore.Users.Services.UsersThemeSelector' OrchardCore.Users.Controllers.RegistrationController' OrchardCore.Users.Controllers.ResetPasswordController' OrchardCore.Users.Drivers.RegistrationSettingsDisplayDriver' OrchardCore.Users.Controllers.AccountController
+OrchardCore.Users.Models,ResetPasswordSettings,0,0,2,0,0,5,0,0,0,-1,0,3,,OrchardCore.Users.Services.UsersThemeSelector' OrchardCore.Users.Drivers.ResetPasswordSettingsDisplayDriver' OrchardCore.Users.Controllers.ResetPasswordController
+OrchardCore.Users.Models,UserRegistrationType,0,0,0,0,0,6,0,0,0,-1,0,4,,OrchardCore.Users.Models.RegistrationSettings' OrchardCore.Users.Controllers.RegistrationController' OrchardCore.Users.Controllers.ControllerExtensions' OrchardCore.Users.Controllers.AccountController
+OrchardCore.Users.Services,MembershipService,2,4,0,0,4,30,5,0,0,0,0,1,,OrchardCore.Users.Startup
+OrchardCore.Users.Services,SetupEventHandler,1,2,0,0,2,29,2,0,1,0,0,1,,OrchardCore.Users.Startup
+OrchardCore.Users.Services,UserRoleRemovedEventHandler,1,2,0,0,2,16,3,0,0,0,0,1,,OrchardCore.Users.Startup
+OrchardCore.Users.Services,UsersThemeSelector,3,2,0,0,2,48,7,0,1,0,3,1,OrchardCore.Users.Models.LoginSettings' OrchardCore.Users.Models.RegistrationSettings' OrchardCore.Users.Models.ResetPasswordSettings,OrchardCore.Users.Startup
+OrchardCore.Users.TimeZone.Drivers,UserTimeZoneDisplayDriver,2,3,0,0,3,28,4,0,0,0.67,3,1,OrchardCore.Users.TimeZone.Models.UserTimeZone' OrchardCore.Users.TimeZone.Services.UserTimeZoneService' OrchardCore.Users.TimeZone.ViewModels.UserTimeZoneViewModel,OrchardCore.Users.TimeZone.Startup
+OrchardCore.Users.TimeZone.Models,UserTimeZone,0,0,1,0,0,4,0,0,0,-1,0,2,,OrchardCore.Users.TimeZone.Drivers.UserTimeZoneDisplayDriver' OrchardCore.Users.TimeZone.Services.UserTimeZoneService
+OrchardCore.Users.TimeZone.Services,UserTimeZoneSelector,1,2,0,0,2,16,2,0,0,0,1,1,OrchardCore.Users.TimeZone.Services.UserTimeZoneService,OrchardCore.Users.TimeZone.Startup
+OrchardCore.Users.TimeZone.Services,UserTimeZoneService,8,5,0,0,4,68,10,0,0,0.4,1,3,OrchardCore.Users.TimeZone.Models.UserTimeZone,OrchardCore.Users.TimeZone.Services.UserTimeZoneSelector' OrchardCore.Users.TimeZone.Startup' OrchardCore.Users.TimeZone.Drivers.UserTimeZoneDisplayDriver
+OrchardCore.Users.TimeZone,Startup,0,2,0,0,2,11,2,0,0,-1,3,0,OrchardCore.Users.TimeZone.Drivers.UserTimeZoneDisplayDriver' OrchardCore.Users.TimeZone.Services.UserTimeZoneSelector' OrchardCore.Users.TimeZone.Services.UserTimeZoneService,
+OrchardCore.Users.TimeZone.ViewModels,UserTimeZoneViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Users.TimeZone.Drivers.UserTimeZoneDisplayDriver
+OrchardCore.Users.Workflows.Activities,AssignUserRoleTask,3,3,6,0,3,49,5,0,3,0.67,0,2,,OrchardCore.Users.Workflows.Startup' OrchardCore.Users.Workflows.Drivers.AssignUserRoleTaskDisplay
+OrchardCore.Users.Workflows.Activities,RegisterUserTask,7,3,6,0,3,135,15,0,3,0,0,2,,OrchardCore.Users.Workflows.Drivers.RegisterUserTaskDisplay' OrchardCore.Users.Workflows.Startup
+OrchardCore.Users.Workflows.Activities,UserActivity,0,3,5,0,2,29,3,1,2,-1,0,1,,OrchardCore.Users.Workflows.Activities.UserEvent
+OrchardCore.Users.Workflows.Activities,UserCreatedEvent,0,1,2,0,1,8,1,0,1,-1,1,4,OrchardCore.Users.Workflows.Activities.UserEvent,OrchardCore.Users.Workflows.ViewModels.UserCreatedEventViewModel' OrchardCore.Users.Workflows.Startup' OrchardCore.Users.Workflows.Handlers.UserCreatedHandler' OrchardCore.Users.Workflows.Drivers.UserCreatedEventDisplay
+OrchardCore.Users.Workflows.Activities,UserEvent,0,3,0,0,3,15,3,2,3,-1,1,3,OrchardCore.Users.Workflows.Activities.UserActivity,OrchardCore.Users.Workflows.ViewModels.UserEventViewModel<T>' OrchardCore.Users.Workflows.Activities.UserLoggedInEvent' OrchardCore.Users.Workflows.Activities.UserCreatedEvent
+OrchardCore.Users.Workflows.Activities,UserLoggedInEvent,0,1,2,0,1,8,1,0,4,-1,1,5,OrchardCore.Users.Workflows.Activities.UserEvent,OrchardCore.Users.Workflows.Startup' OrchardCore.Users.Workflows.ViewModels.UserLoggedInEventViewModel' OrchardCore.Users.Workflows.Handlers.ExternallUserHandler' OrchardCore.Users.Controllers.AccountController' OrchardCore.Users.Workflows.Drivers.UserLoggedInEventDisplay
+OrchardCore.Users.Workflows.Drivers,AssignUserRoleTaskDisplay,0,2,0,0,0,13,2,0,0,-1,2,1,OrchardCore.Users.Workflows.Activities.AssignUserRoleTask' OrchardCore.Users.Workflows.ViewModels.AssignUserRoleTaskViewModel,OrchardCore.Users.Workflows.Startup
+OrchardCore.Users.Workflows.Drivers,RegisterUserTaskDisplay,0,2,0,0,0,13,2,0,0,-1,2,1,OrchardCore.Users.Workflows.Activities.RegisterUserTask' OrchardCore.Users.Workflows.ViewModels.RegisterUserTaskViewModel,OrchardCore.Users.Workflows.Startup
+OrchardCore.Users.Workflows.Drivers,UserCreatedEventDisplay,0,3,1,0,2,23,3,0,0,-1,2,1,OrchardCore.Users.Workflows.Activities.UserCreatedEvent' OrchardCore.Users.Workflows.ViewModels.UserCreatedEventViewModel,OrchardCore.Users.Workflows.Startup
+OrchardCore.Users.Workflows.Drivers,UserLoggedInEventDisplay,0,3,1,0,2,23,3,0,0,-1,2,1,OrchardCore.Users.Workflows.Activities.UserLoggedInEvent' OrchardCore.Users.Workflows.ViewModels.UserLoggedInEventViewModel,OrchardCore.Users.Workflows.Startup
+OrchardCore.Users.Workflows.Handlers,ExternallUserHandler,1,3,0,0,3,19,3,0,0,0.67,1,0,OrchardCore.Users.Workflows.Activities.UserLoggedInEvent,
+OrchardCore.Users.Workflows.Handlers,UserCreatedHandler,1,3,0,0,2,19,3,0,0,0,1,1,OrchardCore.Users.Workflows.Activities.UserCreatedEvent,OrchardCore.Users.Workflows.Startup
+OrchardCore.Users.Workflows,Startup,0,1,0,0,1,12,1,0,0,-1,9,0,OrchardCore.Users.Workflows.Activities.AssignUserRoleTask' OrchardCore.Users.Workflows.Activities.RegisterUserTask' OrchardCore.Users.Workflows.Activities.UserCreatedEvent' OrchardCore.Users.Workflows.Activities.UserLoggedInEvent' OrchardCore.Users.Workflows.Drivers.AssignUserRoleTaskDisplay' OrchardCore.Users.Workflows.Drivers.RegisterUserTaskDisplay' OrchardCore.Users.Workflows.Drivers.UserCreatedEventDisplay' OrchardCore.Users.Workflows.Drivers.UserLoggedInEventDisplay' OrchardCore.Users.Workflows.Handlers.UserCreatedHandler,
+OrchardCore.Users.Workflows.ViewModels,AssignUserRoleTaskViewModel,0,0,2,0,0,7,0,0,0,-1,0,1,,OrchardCore.Users.Workflows.Drivers.AssignUserRoleTaskDisplay
+OrchardCore.Users.Workflows.ViewModels,RegisterUserTaskViewModel,0,0,2,0,0,6,0,0,0,-1,0,1,,OrchardCore.Users.Workflows.Drivers.RegisterUserTaskDisplay
+OrchardCore.Users.Workflows.ViewModels,UserCreatedEventViewModel,0,2,0,0,2,10,2,0,0,-1,2,1,OrchardCore.Users.Workflows.Activities.UserCreatedEvent' OrchardCore.Users.Workflows.ViewModels.UserEventViewModel<T>,OrchardCore.Users.Workflows.Drivers.UserCreatedEventDisplay
+OrchardCore.Users.Workflows.ViewModels,UserEventViewModel<T>,0,2,0,0,2,10,2,0,1,-1,1,2,OrchardCore.Users.Workflows.Activities.UserEvent,OrchardCore.Users.Workflows.ViewModels.UserCreatedEventViewModel' OrchardCore.Users.Workflows.ViewModels.UserLoggedInEventViewModel
+OrchardCore.Users.Workflows.ViewModels,UserLoggedInEventViewModel,0,2,0,0,2,10,2,0,0,-1,2,1,OrchardCore.Users.Workflows.Activities.UserLoggedInEvent' OrchardCore.Users.Workflows.ViewModels.UserEventViewModel<T>,OrchardCore.Users.Workflows.Drivers.UserLoggedInEventDisplay

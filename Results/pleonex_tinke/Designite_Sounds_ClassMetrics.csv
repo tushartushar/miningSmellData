@@ -1,23 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Sounds,ADX,4,6,0,0,4,193,18,0,1,0.67,3,1,Sounds.ADX_Header' Sounds.Helper' Sounds.BitReader,Sounds.Main
+Sounds,ADX,4,6,0,0,4,193,20,0,1,0.67,4,1,Sounds.ADX_Header' Sounds.Helper' Sounds.BitReader' Sounds.SoundBase,Sounds.Main
 Sounds,ADX_Header,17,0,0,17,0,20,0,0,0,-1,0,1,,Sounds.ADX
 Sounds,Encoding,0,0,0,0,0,7,0,0,0,-1,0,0,,
-Sounds,Helper,1,8,0,1,8,66,15,0,0,0.88,0,4,,Sounds.ADX' Sounds.SADL' Sounds.WAV' Sounds.Compression.Procyon
+Sounds,Helper,1,8,0,1,8,66,15,0,0,0.88,0,4,,Sounds.WAV' Sounds.SADL' Sounds.Compression.Procyon' Sounds.ADX
 Sounds,BitReader,3,12,0,0,6,138,30,0,0,0.17,0,1,,Sounds.ADX
-Sounds,Main,3,10,0,0,6,108,19,0,0,0.3,5,0,Sounds.Waiting' Sounds.SoundBase' Sounds.SADL' Sounds.ADX' Sounds.SoundControl,
-Sounds,SADL,2,6,0,0,5,216,25,0,1,0,5,1,Sounds.sSADL' Sounds.Coding' Sounds.Compression.IMA_ADPCM' Sounds.Helper' Sounds.Compression.Procyon,Sounds.Main
+Sounds,Main,3,10,0,0,6,108,21,0,0,0.4,5,0,Sounds.ADX' Sounds.SADL' Sounds.SoundBase' Sounds.SoundControl' Sounds.Waiting,
+Sounds,SADL,2,6,0,0,5,216,27,0,1,0.33,6,1,Sounds.Helper' Sounds.sSADL' Sounds.Coding' Sounds.SoundBase' Sounds.Compression.IMA_ADPCM' Sounds.Compression.Procyon,Sounds.Main
 Sounds,sSADL,9,0,0,9,0,13,0,0,0,-1,1,1,Sounds.Coding,Sounds.SADL
 Sounds,Coding,0,0,0,0,0,5,0,0,0,-1,0,2,,Sounds.SADL' Sounds.sSADL
-Sounds,SoundBase,15,11,12,0,9,259,18,2,0,0.18,6,2,Sounds.sWAV' Sounds.DataChunk' Sounds.WaveChunk' Sounds.FmtChunk' Sounds.WaveFormat' Sounds.Compression.PCM,Sounds.Main' Sounds.SoundControl
-Sounds,SoundControl,15,11,0,0,2,315,25,0,0,0.18,2,1,Sounds.SoundBase' Sounds.Properties.Resources,Sounds.Main
+Sounds,SoundBase,15,11,12,0,9,259,18,2,0,0.27,3,4,Sounds.sWAV' Sounds.WaveFormat' Sounds.Compression.PCM,Sounds.ADX' Sounds.SADL' Sounds.SoundControl' Sounds.Main
+Sounds,SoundControl,15,11,0,0,2,315,25,0,0,0.18,1,1,Sounds.SoundBase,Sounds.Main
 Sounds,Waiting,3,4,0,0,2,88,5,0,0,0.5,0,1,,Sounds.Main
-Sounds,WAV,0,4,0,0,4,146,5,0,0,-1,6,0,Sounds.sWAV' Sounds.FmtChunk' Sounds.WaveChunk' Sounds.DataChunk' Sounds.Helper' Sounds.WaveFormat,
-Sounds,sWAV,7,0,0,7,0,32,0,0,0,-1,1,2,Sounds.WaveChunk,Sounds.SoundBase' Sounds.WAV
-Sounds,WaveChunk,2,0,0,2,0,22,0,0,0,-1,2,3,Sounds.FmtChunk' Sounds.DataChunk,Sounds.SoundBase' Sounds.WAV' Sounds.sWAV
-Sounds,FmtChunk,8,0,0,8,0,11,0,0,0,-1,1,3,Sounds.WaveFormat,Sounds.SoundBase' Sounds.WAV' Sounds.WaveChunk
-Sounds,DataChunk,3,0,0,3,0,6,0,0,0,-1,0,3,,Sounds.SoundBase' Sounds.WAV' Sounds.WaveChunk
-Sounds,WaveFormat,0,0,0,0,0,8,0,0,0,-1,0,3,,Sounds.SoundBase' Sounds.WAV' Sounds.FmtChunk
-Sounds.Compression,IMA_ADPCM,2,6,0,0,4,271,48,0,0,0,0,1,,Sounds.SADL
+Sounds,WAV,0,4,0,0,4,146,5,0,0,-1,3,0,Sounds.Helper' Sounds.sWAV' Sounds.WaveFormat,
+Sounds,sWAV,7,0,0,7,0,32,0,0,0,-1,4,2,Sounds.WaveChunk' Sounds.FmtChunk' Sounds.DataChunk' Sounds.WaveFormat,Sounds.SoundBase' Sounds.WAV
+Sounds,WaveChunk,2,0,0,2,0,22,0,0,0,-1,0,1,,Sounds.sWAV
+Sounds,FmtChunk,8,0,0,8,0,11,0,0,0,-1,0,1,,Sounds.sWAV
+Sounds,DataChunk,3,0,0,3,0,6,0,0,0,-1,0,1,,Sounds.sWAV
+Sounds,WaveFormat,0,0,0,0,0,8,0,0,0,-1,0,3,,Sounds.WAV' Sounds.sWAV' Sounds.SoundBase
+Sounds.Compression,IMA_ADPCM,2,6,0,0,4,271,57,0,0,0,0,1,,Sounds.SADL
 Sounds.Compression,PCM,0,4,0,0,4,57,11,0,0,-1,0,1,,Sounds.SoundBase
 Sounds.Compression,Procyon,1,1,0,0,1,51,4,0,0,0,1,1,Sounds.Helper,Sounds.SADL
-Sounds.Properties,Resources,2,1,4,0,0,55,1,0,0,0,0,1,,Sounds.SoundControl
+Sounds.Properties,Resources,2,1,4,0,0,55,1,0,0,0,0,0,,

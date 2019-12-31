@@ -1,11 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Stetic,Gui,1,1,0,0,0,11,2,0,0,0,0,1,,GeneticSharp.Runner.GtkApp.PropertyEditor
 Stetic,ActionGroups,0,2,0,0,2,11,2,0,0,-1,0,0,,
-GeneticSharp.Runner.GtkApp,MainClass,0,1,0,0,1,10,1,0,0,-1,0,0,,
-GeneticSharp.Runner.GtkApp,PropertyEditor,4,6,1,0,2,190,14,0,0,0,1,0,Stetic.Gui,
-GeneticSharp.Runner.GtkApp,FunctionOptimizationSampleController,2,12,0,0,11,149,14,0,1,0.75,8,0,GeneticSharp.Domain.Chromosomes.FloatingPointChromosome' GeneticSharp.Domain.Fitnesses.FuncFitness' GeneticSharp.Runner.GtkApp.Samples.SampleContext' GeneticSharp.Domain.Crossovers.UniformCrossover' GeneticSharp.Domain.Mutations.FlipBitMutation' GeneticSharp.Domain.Selections.EliteSelection' GeneticSharp.Domain.Terminations.FitnessStagnationTermination' GeneticSharp.Domain.GeneticAlgorithm,
-GeneticSharp.Runner.GtkApp.Samples,BitmapEqualitySampleController,5,10,0,0,9,136,13,0,1,0.7,8,0,GeneticSharp.Extensions.Drawing.BitmapEqualityFitness' GeneticSharp.Extensions.Drawing.BitmapChromosome' GeneticSharp.Runner.GtkApp.Samples.SampleContext' GeneticSharp.Domain.Crossovers.UniformCrossover' GeneticSharp.Domain.Mutations.TworsMutation' GeneticSharp.Domain.Selections.EliteSelection' GeneticSharp.Domain.GeneticAlgorithm' GeneticSharp.Domain.Chromosomes.IChromosome,
-GeneticSharp.Runner.GtkApp.Samples,ISampleController,0,11,1,0,0,70,11,1,0,-1,1,0,GeneticSharp.Domain.GeneticAlgorithm,
-GeneticSharp.Runner.GtkApp.Samples,SampleControllerBase,0,12,1,0,11,93,13,3,1,-1,2,0,GeneticSharp.Domain.Terminations.FitnessStagnationTermination' GeneticSharp.Domain.GeneticAlgorithm,
-GeneticSharp.Runner.GtkApp.Samples,SampleContext,1,4,8,0,4,38,4,0,0,0.75,0,3,,GeneticSharp.Runner.GtkApp.FunctionOptimizationSampleController' GeneticSharp.Runner.GtkApp.Samples.BitmapEqualitySampleController' GeneticSharp.Runner.GtkApp.Samples.TspSampleController
-GeneticSharp.Runner.GtkApp.Samples,TspSampleController,4,9,0,0,9,137,15,0,2,0.44,9,0,GeneticSharp.Extensions.Tsp.TspFitness' GeneticSharp.Extensions.Tsp.TspChromosome' GeneticSharp.Runner.GtkApp.Samples.SampleContext' GeneticSharp.Domain.Crossovers.OrderedCrossover' GeneticSharp.Domain.Mutations.ReverseSequenceMutation' GeneticSharp.Domain.Selections.EliteSelection' GeneticSharp.Domain.Populations.Population' GeneticSharp.Extensions.Tsp.TspCity' GeneticSharp.Domain.Chromosomes.Gene,
+GeneticSharp.Runner.GtkApp,PropertyEditor,4,6,1,0,2,190,21,0,0,0,1,0,Stetic.Gui,
+GeneticSharp.Runner.GtkApp,MainClass,0,1,0,0,1,18,1,0,0,-1,0,0,,
+GeneticSharp.Runner.GtkApp,FunctionOptimizationSampleController,2,12,0,0,11,149,14,0,1,0.75,1,0,GeneticSharp.Runner.GtkApp.Samples.SampleControllerBase,
+GeneticSharp.Runner.GtkApp.Samples,BitmapEqualitySampleController,5,11,0,0,10,140,14,0,1,0.73,1,0,GeneticSharp.Runner.GtkApp.Samples.SampleControllerBase,
+GeneticSharp.Runner.GtkApp.Samples,ISampleController,0,11,1,0,0,70,11,1,0,-1,1,1,GeneticSharp.Runner.GtkApp.Samples.SampleContext,GeneticSharp.Runner.GtkApp.Samples.SampleControllerBase
+GeneticSharp.Runner.GtkApp.Samples,SampleContext,1,4,8,0,4,38,4,0,0,0.75,0,2,,GeneticSharp.Runner.GtkApp.Samples.SampleControllerBase' GeneticSharp.Runner.GtkApp.Samples.ISampleController
+GeneticSharp.Runner.GtkApp.Samples,SampleControllerBase,0,12,1,0,11,93,13,4,1,-1,2,4,GeneticSharp.Runner.GtkApp.Samples.ISampleController' GeneticSharp.Runner.GtkApp.Samples.SampleContext,GeneticSharp.Runner.GtkApp.Samples.SudokuSampleController' GeneticSharp.Runner.GtkApp.Samples.BitmapEqualitySampleController' GeneticSharp.Runner.GtkApp.Samples.TspSampleController' GeneticSharp.Runner.GtkApp.FunctionOptimizationSampleController
+GeneticSharp.Runner.GtkApp.Samples,SudokuChromosomeType,0,0,0,0,0,8,0,0,0,-1,0,1,,GeneticSharp.Runner.GtkApp.Samples.SudokuSampleController
+GeneticSharp.Runner.GtkApp.Samples,SudokuSampleController,9,13,0,0,10,286,26,0,2,0.38,2,0,GeneticSharp.Runner.GtkApp.Samples.SampleControllerBase' GeneticSharp.Runner.GtkApp.Samples.SudokuChromosomeType,
+GeneticSharp.Runner.GtkApp.Samples,TspSampleController,4,10,0,0,10,146,16,0,2,0.5,1,0,GeneticSharp.Runner.GtkApp.Samples.SampleControllerBase,

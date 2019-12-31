@@ -1,0 +1,35 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+JWT.Algorithms,HMACSHA256Algorithm,0,1,2,0,1,15,1,0,1,-1,2,1,JWT.Algorithms.IJwtAlgorithm' JWT.JwtHashAlgorithm,JWT.Algorithms.HMACSHAAlgorithmFactory
+JWT.Algorithms,HMACSHA384Algorithm,0,1,2,0,1,15,1,0,1,-1,2,1,JWT.Algorithms.IJwtAlgorithm' JWT.JwtHashAlgorithm,JWT.Algorithms.HMACSHAAlgorithmFactory
+JWT.Algorithms,HMACSHA512Algorithm,0,1,2,0,1,15,1,0,1,-1,2,1,JWT.Algorithms.IJwtAlgorithm' JWT.JwtHashAlgorithm,JWT.Algorithms.HMACSHAAlgorithmFactory
+JWT.Algorithms,HMACSHAAlgorithmFactory,0,2,0,0,2,23,6,1,1,-1,6,2,JWT.Algorithms.HMACSHA256Algorithm' JWT.Algorithms.HMACSHA384Algorithm' JWT.Algorithms.HMACSHA512Algorithm' JWT.Algorithms.IAlgorithmFactory' JWT.Algorithms.IJwtAlgorithm' JWT.JwtHashAlgorithm,JWT.Algorithms.RSAlgorithmFactory' JWT.JwtDecoder
+JWT.Algorithms,IAlgorithmFactory,0,2,0,0,0,13,2,1,0,-1,2,3,JWT.Algorithms.IJwtAlgorithm' JWT.JwtHashAlgorithm,JWT.JwtDecoder' JWT.Algorithms.HMACSHAAlgorithmFactory' JWT.Algorithms.RSAlgorithmFactory
+JWT.Algorithms,IJwtAlgorithm,0,1,2,0,0,17,1,4,0,-1,0,9,,JWT.Algorithms.HMACSHA384Algorithm' JWT.Algorithms.HMACSHA512Algorithm' JWT.Algorithms.HMACSHA256Algorithm' JWT.Algorithms.RS256Algorithm' JWT.JwtEncoder' JWT.Builder.JwtBuilder' JWT.Algorithms.HMACSHAAlgorithmFactory' JWT.Algorithms.RSAlgorithmFactory' JWT.Algorithms.IAlgorithmFactory
+JWT.Algorithms,RS256Algorithm,2,8,2,0,6,76,9,0,1,0.25,2,2,JWT.Algorithms.IJwtAlgorithm' JWT.JwtHashAlgorithm,JWT.Builder.JwtBuilder' JWT.Algorithms.RSAlgorithmFactory
+JWT.Algorithms,RSAlgorithmFactory,1,4,0,0,4,34,5,0,2,0,5,0,JWT.Algorithms.HMACSHAAlgorithmFactory' JWT.Algorithms.IAlgorithmFactory' JWT.Algorithms.IJwtAlgorithm' JWT.Algorithms.RS256Algorithm' JWT.JwtHashAlgorithm,
+JWT.Builder,ClaimName,0,0,0,0,0,89,0,0,0,-1,0,3,,JWT.Builder.EnumExtensions' JWT.Builder.JwtBuilder' JWT.Builder.JwtBuilderExtensions
+JWT.Builder,EnumExtensions,0,3,0,0,2,21,3,0,0,-1,2,0,JWT.Builder.ClaimName' JWT.Builder.HeaderName,
+JWT.Builder,HeaderName,0,0,0,0,0,11,0,0,0,-1,0,2,,JWT.Builder.EnumExtensions' JWT.Builder.JwtBuilder
+JWT.Builder,JwtBuilder,10,29,0,0,20,310,46,0,0,0.07,17,1,JWT.Algorithms.IJwtAlgorithm' JWT.Algorithms.RS256Algorithm' JWT.Builder.ClaimName' JWT.Builder.HeaderName' JWT.Builder.JwtData' JWT.IBase64UrlEncoder' JWT.IDateTimeProvider' JWT.IJsonSerializer' JWT.IJwtDecoder' JWT.IJwtEncoder' JWT.IJwtValidator' JWT.JwtBase64UrlEncoder' JWT.JwtDecoder' JWT.JwtEncoder' JWT.JwtValidator' JWT.UtcDateTimeProvider' JWT.Serializers.JsonNetSerializer,JWT.Builder.JwtBuilderExtensions
+JWT.Builder,JwtBuilderExtensions,0,12,0,0,12,27,12,0,0,-1,3,0,JWT.Builder.ClaimName' JWT.Builder.JwtBuilder' JWT.UnixEpoch,
+JWT.Builder,JwtData,0,4,2,0,4,46,5,0,0,-1,1,1,JWT.InvalidTokenPartsException,JWT.Builder.JwtBuilder
+JWT,IBase64UrlEncoder,0,2,0,0,0,11,2,1,0,-1,0,4,,JWT.JwtBase64UrlEncoder' JWT.Builder.JwtBuilder' JWT.JwtEncoder' JWT.JwtDecoder
+JWT,IDateTimeProvider,0,1,0,0,0,7,1,2,0,-1,0,3,,JWT.UtcDateTimeProvider' JWT.Builder.JwtBuilder' JWT.JwtValidator
+JWT,IJsonSerializer,0,2,0,0,0,16,2,1,0,-1,0,5,,JWT.Serializers.JsonNetSerializer' JWT.JwtValidator' JWT.JwtEncoder' JWT.Builder.JwtBuilder' JWT.JwtDecoder
+JWT,IJwtDecoder,0,16,0,0,0,150,16,1,0,-1,3,2,JWT.JwtParts' JWT.SignatureVerificationException' JWT.TokenExpiredException,JWT.Builder.JwtBuilder' JWT.JwtDecoder
+JWT,IJwtEncoder,0,4,0,0,0,33,4,1,0,-1,0,2,,JWT.JwtEncoder' JWT.Builder.JwtBuilder
+JWT,IJwtValidator,0,1,0,0,0,12,1,1,0,-1,2,3,JWT.SignatureVerificationException' JWT.TokenExpiredException,JWT.JwtValidator' JWT.Builder.JwtBuilder' JWT.JwtDecoder
+JWT,InvalidTokenPartsException,0,1,0,0,1,11,1,0,0,-1,0,2,,JWT.Builder.JwtData' JWT.JwtParts
+JWT,JwtBase64UrlEncoder,0,2,0,0,2,44,8,0,1,-1,1,1,JWT.IBase64UrlEncoder,JWT.Builder.JwtBuilder
+JWT,JwtDecoder,4,21,0,0,20,221,32,0,1,0.19,7,1,JWT.Algorithms.HMACSHAAlgorithmFactory' JWT.Algorithms.IAlgorithmFactory' JWT.IBase64UrlEncoder' JWT.IJsonSerializer' JWT.IJwtDecoder' JWT.IJwtValidator' JWT.JwtParts,JWT.Builder.JwtBuilder
+JWT,JwtEncoder,3,5,0,0,5,47,6,0,1,0.4,4,1,JWT.Algorithms.IJwtAlgorithm' JWT.IBase64UrlEncoder' JWT.IJsonSerializer' JWT.IJwtEncoder,JWT.Builder.JwtBuilder
+JWT,JwtHashAlgorithm,0,0,0,0,0,19,0,0,0,-1,0,7,,JWT.Algorithms.IAlgorithmFactory' JWT.Algorithms.RS256Algorithm' JWT.Algorithms.HMACSHA256Algorithm' JWT.Algorithms.HMACSHA384Algorithm' JWT.Algorithms.HMACSHA512Algorithm' JWT.Algorithms.RSAlgorithmFactory' JWT.Algorithms.HMACSHAAlgorithmFactory
+JWT,JwtParts,0,2,4,0,2,60,6,0,0,-1,2,2,JWT.InvalidTokenPartsException' JWT.JwtPartsIndex,JWT.IJwtDecoder' JWT.JwtDecoder
+JWT,JwtPartsIndex,0,0,0,0,0,6,0,0,0,-1,0,1,,JWT.JwtParts
+JWT,JwtValidator,2,11,0,0,4,144,24,0,1,0,6,1,JWT.IDateTimeProvider' JWT.IJsonSerializer' JWT.IJwtValidator' JWT.SignatureVerificationException' JWT.TokenExpiredException' JWT.UnixEpoch,JWT.Builder.JwtBuilder
+JWT,SignatureVerificationException,2,3,2,0,2,43,3,1,0,1,0,4,,JWT.IJwtValidator' JWT.IJwtDecoder' JWT.TokenExpiredException' JWT.JwtValidator
+JWT,TokenExpiredException,2,1,2,0,1,29,1,0,1,0,1,3,JWT.SignatureVerificationException,JWT.IJwtValidator' JWT.IJwtDecoder' JWT.JwtValidator
+JWT,UnixEpoch,0,2,1,0,2,12,2,0,0,-1,0,2,,JWT.Builder.JwtBuilderExtensions' JWT.JwtValidator
+JWT,UtcDateTimeProvider,0,1,0,0,1,11,1,0,1,-1,1,1,JWT.IDateTimeProvider,JWT.Builder.JwtBuilder
+JWT.Internal,EncodingHelper,0,3,0,0,0,9,3,0,0,-1,0,0,,
+JWT.Serializers,JsonNetSerializer,1,4,0,0,4,24,4,0,1,0.5,1,1,JWT.IJsonSerializer,JWT.Builder.JwtBuilder

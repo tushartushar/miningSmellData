@@ -1,29 +1,29 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-COST,BufferTrie<TValue>,7,4,0,0,3,93,13,0,0,0.5,1,0,COST.Pair,
-COST,Pair,2,1,0,0,1,6,1,0,0,0,0,3,,COST.BufferTrie<TValue>' COST.Program' COST.SingleThreaded
-COST,HilbertCurve,4,8,0,0,7,219,35,0,0,0.5,0,2,,COST.HilbertConversion' COST.Program
-COST,MultiHilbertScanner,6,2,0,0,2,74,5,0,0,0,2,1,COST.UnbufferedIO' COST.SequentialReader,COST.SingleThreaded
-COST,HilbertConversion,0,6,0,0,5,417,52,0,0,-1,4,0,COST.FileGraphScanner' COST.HilbertCurve' COST.UnbufferedIO' COST.SequentialReader,
-COST,LargePages,1,4,0,0,4,36,8,0,0,0,0,2,,COST.Program' COST.SingleThreaded
-COST,NaiadImplementations,0,19,0,0,19,1792,20,0,0,-1,0,0,,
-COST,GraphReader,1,2,0,0,2,33,4,0,0,0,1,0,COST.SingleThreaded,
-COST,GraphStreamReader,1,2,0,0,2,37,4,0,0,0,1,0,COST.SingleThreaded,
-COST,VertexStreamReader,0,2,0,0,2,71,4,0,0,-1,0,0,,
-COST,SortEdgeVertex,0,1,0,0,1,6,1,0,0,-1,0,0,,
-COST,GroupEdgeVertex,2,2,0,0,2,83,11,0,0,0,0,0,,
-COST,ReformatVertex,1,2,0,0,2,60,2,0,0,1,1,0,COST.BatchStruct,
-COST,BatchStruct,257,0,0,257,0,260,0,0,0,-1,0,3,,COST.ReformatVertex' COST.UnionFindVertexInts' COST.UnionFindVertexHashTable
-COST,UnionFindVertex,7,3,0,0,3,109,15,0,0,0,0,0,,
-COST,UnionFindVertexInts,23,4,0,0,3,444,12,0,0,0,1,0,COST.BatchStruct,
-COST,UnionFindVertexHashTable,19,4,0,0,3,269,12,0,0,0,1,0,COST.BatchStruct,
-COST,UnionFindVertexPacked,8,3,0,0,3,148,8,0,0,0,0,0,,
-COST,UnionFindVertexPackedHashTable,8,3,0,0,3,129,7,0,0,0.67,0,0,,
-COST,Program,0,8,0,0,5,898,47,0,0,-1,4,0,COST.Pair' COST.LargePages' COST.SingleThreaded' COST.HilbertCurve,
-COST,GraphScanner,0,2,0,0,0,5,2,2,0,-1,0,0,,
-COST,FileGraphScanner,1,3,0,0,3,37,5,0,1,0,2,2,COST.UnbufferedIO' COST.SequentialReader,COST.HilbertConversion' COST.SingleThreaded
-COST,MemoryGraphScanner,2,3,0,0,3,26,5,0,1,0,1,0,COST.UnbufferedIO,
-COST,SingleThreaded,0,21,0,0,21,669,60,0,0,-1,6,3,COST.UnbufferedIO' COST.SequentialReader' COST.Pair' COST.LargePages' COST.MultiHilbertScanner' COST.FileGraphScanner,COST.GraphReader' COST.GraphStreamReader' COST.Program
-COST,UnbufferedIO,0,1,0,0,1,267,1,0,0,-1,1,5,COST.SequentialReader,COST.MultiHilbertScanner' COST.HilbertConversion' COST.FileGraphScanner' COST.MemoryGraphScanner' COST.SingleThreaded
+COST,BufferTrie<TValue>,7,4,0,0,3,93,13,0,0,0.5,1,2,COST.Pair,COST.Program' COST.SingleThreaded
+COST,Pair,2,1,0,0,1,6,1,0,0,0,0,3,,COST.BufferTrie<TValue>' COST.SingleThreaded' COST.Program
+COST,HilbertCurve,4,8,0,0,7,219,35,0,0,0.5,0,2,,COST.Program' COST.HilbertConversion
+COST,MultiHilbertScanner,6,2,0,0,2,74,11,0,0,0,2,1,COST.UnbufferedIO' COST.SequentialReader,COST.SingleThreaded
+COST,HilbertConversion,0,6,0,0,5,417,56,0,0,-1,4,0,COST.HilbertCurve' COST.FileGraphScanner' COST.UnbufferedIO' COST.SequentialReader,
+COST,LargePages,1,4,0,0,4,36,8,0,0,0,0,2,,COST.SingleThreaded' COST.Program
+COST,NaiadImplementations,0,19,0,0,19,1792,20,0,0,-1,12,0,COST.GraphReader' COST.GraphStreamReader' COST.SortEdgeVertex' COST.GroupEdgeVertex' COST.ReformatVertex' COST.BatchStruct' COST.UnionFindVertex' COST.UnionFindVertexInts' COST.UnionFindVertexHashTable' COST.UnionFindVertexPacked' COST.UnionFindVertexPackedHashTable' COST.SingleThreaded,
+COST,GraphReader,1,2,0,0,2,33,4,0,0,0,0,1,,COST.NaiadImplementations
+COST,GraphStreamReader,1,2,0,0,2,37,4,0,0,0,0,1,,COST.NaiadImplementations
+COST,VertexStreamReader,0,2,0,0,2,71,10,0,0,-1,0,0,,
+COST,SortEdgeVertex,0,1,0,0,1,6,1,0,0,-1,0,1,,COST.NaiadImplementations
+COST,GroupEdgeVertex,2,2,0,0,2,83,11,0,0,1,0,1,,COST.NaiadImplementations
+COST,ReformatVertex,1,2,0,0,2,60,2,0,0,1,0,1,,COST.NaiadImplementations
+COST,BatchStruct,257,0,0,257,0,260,0,0,0,-1,0,1,,COST.NaiadImplementations
+COST,UnionFindVertex,7,3,0,0,3,109,16,0,0,0.67,0,1,,COST.NaiadImplementations
+COST,UnionFindVertexInts,23,4,0,0,3,444,13,0,0,0,0,1,,COST.NaiadImplementations
+COST,UnionFindVertexHashTable,19,4,0,0,3,269,13,0,0,0,0,1,,COST.NaiadImplementations
+COST,UnionFindVertexPacked,8,3,0,0,3,148,8,0,0,0.67,0,1,,COST.NaiadImplementations
+COST,UnionFindVertexPackedHashTable,8,3,0,0,3,129,7,0,0,0.67,0,1,,COST.NaiadImplementations
+COST,Program,0,8,0,0,5,898,99,0,0,-1,5,0,COST.BufferTrie<TValue>' COST.Pair' COST.HilbertCurve' COST.LargePages' COST.SingleThreaded,
+COST,GraphScanner,0,2,0,0,0,5,2,2,0,-1,0,2,,COST.FileGraphScanner' COST.MemoryGraphScanner
+COST,FileGraphScanner,1,3,0,0,3,37,7,0,1,0,3,2,COST.GraphScanner' COST.UnbufferedIO' COST.SequentialReader,COST.SingleThreaded' COST.HilbertConversion
+COST,MemoryGraphScanner,2,3,0,0,3,26,5,0,1,0,2,0,COST.GraphScanner' COST.UnbufferedIO,
+COST,SingleThreaded,0,21,0,0,21,669,83,0,0,-1,7,2,COST.BufferTrie<TValue>' COST.Pair' COST.MultiHilbertScanner' COST.LargePages' COST.FileGraphScanner' COST.UnbufferedIO' COST.SequentialReader,COST.NaiadImplementations' COST.Program
+COST,UnbufferedIO,0,1,0,0,1,267,3,0,0,-1,2,5,COST.SequentialReader<T>' COST.SequentialReader,COST.FileGraphScanner' COST.MemoryGraphScanner' COST.SingleThreaded' COST.MultiHilbertScanner' COST.HilbertConversion
 COST,SequentialWriter<T>,8,5,0,0,5,52,11,0,0,0,0,0,,
-COST,SequentialReader<T>,10,6,0,2,6,103,17,0,0,0,1,0,COST.SequentialReader,
-COST,SequentialReader,7,4,0,2,4,88,16,0,0,0,0,6,,COST.MultiHilbertScanner' COST.HilbertConversion' COST.FileGraphScanner' COST.SingleThreaded' COST.UnbufferedIO' COST.SequentialReader<T>
+COST,SequentialReader<T>,10,6,0,2,6,103,21,0,0,0.5,0,1,,COST.UnbufferedIO
+COST,SequentialReader,7,4,0,2,4,88,18,0,0,0.5,0,5,,COST.FileGraphScanner' COST.SingleThreaded' COST.UnbufferedIO' COST.MultiHilbertScanner' COST.HilbertConversion

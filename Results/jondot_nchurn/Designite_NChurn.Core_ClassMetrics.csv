@@ -1,27 +1,27 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NChurn.Core.Adapters,DummyAdapter,1,4,1,0,4,27,5,0,1,0,0,0,,
-NChurn.Core.Adapters,BaseAdapter,0,5,1,0,4,20,6,5,1,-1,0,0,,
-NChurn.Core.Adapters,IVersioningAdapter,0,3,1,0,0,7,3,2,0,-1,0,4,,NChurn.Program' NChurn.Core.Adapters.AutoDiscoveryAdapter' NChurn.Core.Analyzers.Analyzer' NChurn.Core.Tests.TestHelpers
-NChurn.Core.Adapters,AutoDiscoveryAdapter,1,4,0,0,4,35,5,0,2,0,1,0,NChurn.Core.Adapters.IVersioningAdapter,
-NChurn.Core.Adapters,IAdapterResolver,0,1,0,0,0,4,1,0,0,-1,0,0,,
-NChurn.Core.Adapters.Git,GitAdapter,0,3,0,0,3,18,3,0,2,-1,1,0,NChurn.Core.Support.IAdapterDataSource,
-NChurn.Core.Adapters.Hg,HgAdapter,0,3,0,0,3,18,3,0,2,-1,1,0,NChurn.Core.Support.IAdapterDataSource,
-NChurn.Core.Adapters.Svn,SvnAdapter,1,3,0,0,3,23,3,0,2,1,1,0,NChurn.Core.Support.IAdapterDataSource,
-NChurn.Core.Adapters.TF,TFAdapter,1,3,0,0,3,23,3,0,2,1,1,0,NChurn.Core.Support.IAdapterDataSource,
-NChurn.Core.Analyzers,AnalysisResult,0,0,1,0,0,4,0,0,0,-1,0,6,,NChurn.Program' NChurn.Core.Analyzers.Analyzer' NChurn.Core.Reporters.BaseAnalysisReporter' NChurn.Core.Reporters.IAnalysisReporter' NChurn.Core.Reporters.TableReporter' NChurn.Core.Tests.TestHelpers
-NChurn.Core.Analyzers,Analyzer,3,12,0,0,7,83,16,0,0,0.25,2,2,NChurn.Core.Adapters.IVersioningAdapter' NChurn.Core.Analyzers.AnalysisResult,NChurn.Program' NChurn.Core.Tests.TestHelpers
-NChurn.Core.Processors.Cutoff,MinimalCutoffProcessor,1,2,0,0,2,12,2,0,1,0,0,0,,
-NChurn.Core.Processors.Cutoff,PrecentCutoffProcessor,1,2,0,0,2,24,4,0,1,0,0,0,,
-NChurn.Core.Processors,IProcessor,0,1,0,0,0,4,1,2,0,-1,0,4,,NChurn.Program' NChurn.Core.Reporters.BaseAnalysisReporter' NChurn.Core.Reporters.IAnalysisReporter' NChurn.Core.Reporters.TableReporter
-NChurn.Core.Reporters,BaseAnalysisReporter,1,3,0,0,1,17,4,2,1,0,2,0,NChurn.Core.Analyzers.AnalysisResult' NChurn.Core.Processors.IProcessor,
-NChurn.Core.Reporters,CSVReporter,1,2,0,0,1,17,3,0,2,1,0,0,,
-NChurn.Core.Reporters,IAnalysisReporter,0,1,0,0,0,4,1,2,0,-1,2,1,NChurn.Core.Analyzers.AnalysisResult' NChurn.Core.Processors.IProcessor,NChurn.Program
-NChurn.Core.Reporters,TableReporter,1,2,0,0,2,29,4,0,1,0,2,1,NChurn.Core.Analyzers.AnalysisResult' NChurn.Core.Processors.IProcessor,NChurn.Core.Tests.TestHelpers
-NChurn.Core.Reporters,XMLReporter,0,2,0,0,1,18,2,0,2,-1,1,0,NChurn.Core.Reporters.NChurnAnalysisResult,
-NChurn.Core.Reporters,NChurnAnalysisResult,1,0,0,1,0,6,0,0,0,-1,0,1,,NChurn.Core.Reporters.XMLReporter
-NChurn.Core.Reporters,FileChurn,2,0,0,2,0,8,0,0,0,-1,0,0,,
-NChurn.Core.Support,CommandRunnerException,0,1,0,0,1,6,1,0,0,-1,0,1,,NChurn.Program
-NChurn.Core.Support,DataSourceContextKeys,0,0,0,0,0,4,0,0,0,-1,0,3,,NChurn.Program' NChurn.Core.Support.IAdapterDataSource' NChurn.Core.Support.Win32.Win32CommandRunnerDataSource
-NChurn.Core.Support,IAdapterDataSource,0,2,0,0,0,5,2,1,0,-1,1,6,NChurn.Core.Support.DataSourceContextKeys,NChurn.Program' NChurn.Core.Adapters.Git.GitAdapter' NChurn.Core.Adapters.Hg.HgAdapter' NChurn.Core.Adapters.Svn.SvnAdapter' NChurn.Core.Adapters.TF.TFAdapter' NChurn.Core.Tests.TestHelpers
+NChurn.Core.Adapters,DummyAdapter,1,4,1,0,4,27,5,0,1,0,2,0,NChurn.Core.Adapters.IVersioningAdapter' NChurn.Core.Support.IAdapterDataSource,
+NChurn.Core.Adapters,BaseAdapter,0,5,1,0,4,20,6,5,1,-1,3,5,NChurn.Core.Adapters.IVersioningAdapter' NChurn.Core.Support.IAdapterDataSource' NChurn.Core.Support.Win32.Win32CommandRunnerDataSource,NChurn.Core.Adapters.Git.GitAdapter' NChurn.Core.Adapters.AutoDiscoveryAdapter' NChurn.Core.Adapters.TF.TFAdapter' NChurn.Core.Adapters.Svn.SvnAdapter' NChurn.Core.Adapters.Hg.HgAdapter
+NChurn.Core.Adapters,IVersioningAdapter,0,3,1,0,0,7,3,2,0,-1,1,5,NChurn.Core.Support.IAdapterDataSource,NChurn.Core.Adapters.IAdapterResolver' NChurn.Core.Adapters.AutoDiscoveryAdapter' NChurn.Core.Adapters.DummyAdapter' NChurn.Core.Analyzers.Analyzer' NChurn.Core.Adapters.BaseAdapter
+NChurn.Core.Adapters,AutoDiscoveryAdapter,1,4,0,0,4,35,7,0,2,0,6,1,NChurn.Core.Adapters.BaseAdapter' NChurn.Core.Adapters.IVersioningAdapter' NChurn.Core.Adapters.Git.GitAdapter' NChurn.Core.Adapters.Hg.HgAdapter' NChurn.Core.Adapters.Svn.SvnAdapter' NChurn.Core.Adapters.TF.TFAdapter,NChurn.Core.Analyzers.Analyzer
+NChurn.Core.Adapters,IAdapterResolver,0,1,0,0,0,4,1,0,0,-1,1,0,NChurn.Core.Adapters.IVersioningAdapter,
+NChurn.Core.Adapters.Git,GitAdapter,0,3,0,0,3,18,3,0,2,-1,1,1,NChurn.Core.Adapters.BaseAdapter,NChurn.Core.Adapters.AutoDiscoveryAdapter
+NChurn.Core.Adapters.Hg,HgAdapter,0,3,0,0,3,18,3,0,2,-1,1,1,NChurn.Core.Adapters.BaseAdapter,NChurn.Core.Adapters.AutoDiscoveryAdapter
+NChurn.Core.Adapters.Svn,SvnAdapter,1,3,0,0,3,23,3,0,2,1,1,1,NChurn.Core.Adapters.BaseAdapter,NChurn.Core.Adapters.AutoDiscoveryAdapter
+NChurn.Core.Adapters.TF,TFAdapter,1,3,0,0,3,23,3,0,2,1,1,1,NChurn.Core.Adapters.BaseAdapter,NChurn.Core.Adapters.AutoDiscoveryAdapter
+NChurn.Core.Analyzers,AnalysisResult,0,0,1,0,0,4,0,0,0,-1,0,4,,NChurn.Core.Reporters.TableReporter' NChurn.Core.Reporters.BaseAnalysisReporter' NChurn.Core.Reporters.IAnalysisReporter' NChurn.Core.Analyzers.Analyzer
+NChurn.Core.Analyzers,Analyzer,3,12,0,0,7,83,16,0,0,0.25,3,0,NChurn.Core.Adapters.IVersioningAdapter' NChurn.Core.Adapters.AutoDiscoveryAdapter' NChurn.Core.Analyzers.AnalysisResult,
+NChurn.Core.Processors.Cutoff,MinimalCutoffProcessor,1,2,0,0,2,12,2,0,1,0,1,0,NChurn.Core.Processors.IProcessor,
+NChurn.Core.Processors.Cutoff,PrecentCutoffProcessor,1,2,0,0,2,24,4,0,1,0,1,0,NChurn.Core.Processors.IProcessor,
+NChurn.Core.Processors,IProcessor,0,1,0,0,0,4,1,2,0,-1,0,5,,NChurn.Core.Reporters.IAnalysisReporter' NChurn.Core.Processors.Cutoff.PrecentCutoffProcessor' NChurn.Core.Processors.Cutoff.MinimalCutoffProcessor' NChurn.Core.Reporters.TableReporter' NChurn.Core.Reporters.BaseAnalysisReporter
+NChurn.Core.Reporters,BaseAnalysisReporter,1,3,0,0,1,17,4,2,1,0,3,2,NChurn.Core.Analyzers.AnalysisResult' NChurn.Core.Processors.IProcessor' NChurn.Core.Reporters.IAnalysisReporter,NChurn.Core.Reporters.XMLReporter' NChurn.Core.Reporters.CSVReporter
+NChurn.Core.Reporters,CSVReporter,1,2,0,0,1,17,3,0,2,1,1,0,NChurn.Core.Reporters.BaseAnalysisReporter,
+NChurn.Core.Reporters,IAnalysisReporter,0,1,0,0,0,4,1,2,0,-1,2,2,NChurn.Core.Analyzers.AnalysisResult' NChurn.Core.Processors.IProcessor,NChurn.Core.Reporters.TableReporter' NChurn.Core.Reporters.BaseAnalysisReporter
+NChurn.Core.Reporters,TableReporter,1,2,0,0,2,29,4,0,1,0,3,0,NChurn.Core.Analyzers.AnalysisResult' NChurn.Core.Processors.IProcessor' NChurn.Core.Reporters.IAnalysisReporter,
+NChurn.Core.Reporters,XMLReporter,0,2,0,0,1,18,2,0,2,-1,3,0,NChurn.Core.Reporters.BaseAnalysisReporter' NChurn.Core.Reporters.NChurnAnalysisResult' NChurn.Core.Reporters.FileChurn,
+NChurn.Core.Reporters,NChurnAnalysisResult,1,0,0,1,0,6,0,0,0,-1,1,1,NChurn.Core.Reporters.FileChurn,NChurn.Core.Reporters.XMLReporter
+NChurn.Core.Reporters,FileChurn,2,0,0,2,0,8,0,0,0,-1,0,2,,NChurn.Core.Reporters.XMLReporter' NChurn.Core.Reporters.NChurnAnalysisResult
+NChurn.Core.Support,CommandRunnerException,0,1,0,0,1,6,1,0,0,-1,0,1,,NChurn.Core.Support.Win32.Win32CommandRunnerDataSource
+NChurn.Core.Support,DataSourceContextKeys,0,0,0,0,0,4,0,0,0,-1,0,2,,NChurn.Core.Support.IAdapterDataSource' NChurn.Core.Support.Win32.Win32CommandRunnerDataSource
+NChurn.Core.Support,IAdapterDataSource,0,2,0,0,0,5,2,1,0,-1,1,4,NChurn.Core.Support.DataSourceContextKeys,NChurn.Core.Support.Win32.Win32CommandRunnerDataSource' NChurn.Core.Adapters.BaseAdapter' NChurn.Core.Adapters.DummyAdapter' NChurn.Core.Adapters.IVersioningAdapter
 NChurn.Core.Support,SystemExts,0,1,0,0,1,7,1,0,0,-1,0,0,,
-NChurn.Core.Support.Win32,Win32CommandRunnerDataSource,2,2,0,1,2,42,4,0,1,0,1,0,NChurn.Core.Support.DataSourceContextKeys,
+NChurn.Core.Support.Win32,Win32CommandRunnerDataSource,2,2,0,1,2,42,4,0,1,0,3,1,NChurn.Core.Support.CommandRunnerException' NChurn.Core.Support.DataSourceContextKeys' NChurn.Core.Support.IAdapterDataSource,NChurn.Core.Adapters.BaseAdapter

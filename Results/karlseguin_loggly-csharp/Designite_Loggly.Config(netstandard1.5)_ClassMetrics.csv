@@ -1,0 +1,18 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Loggly.Config,LogTransport,0,0,0,0,0,20,0,0,0,-1,0,3,,Loggly.Config.TransportConfiguration' Loggly.Config.ITransportConfiguration' Loggly.Config.ITransportConfigurationExtensions
+Loggly.Config,TagExtensions,1,3,0,0,2,32,6,0,0,1,2,0,Loggly.Config.ITag' Loggly.Config.SimpleTag,
+Loggly.Config,ITransportConfigurationExtensions,0,1,0,0,1,38,6,0,0,-1,3,0,Loggly.Config.LogTransport' Loggly.Config.ITransportConfiguration' Loggly.Config.TransportConfiguration,
+Loggly.Config,ITagConfiguration,0,0,1,0,0,4,0,1,0,-1,1,3,Loggly.Config.ITag,Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig' Loggly.Config.TagConfiguration
+Loggly.Config,IHttpTransport,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Loggly.Config,ITransportConfiguration,0,0,4,0,0,7,0,1,0,-1,1,4,Loggly.Config.LogTransport,Loggly.Config.TransportConfiguration' Loggly.Config.LogglyConfig' Loggly.Config.ILogglyConfig' Loggly.Config.ITransportConfigurationExtensions
+Loggly.Config,ISearchConfiguration,0,0,3,0,0,6,0,1,0,-1,0,3,,Loggly.Config.SearchConfiguration' Loggly.Config.LogglyConfig' Loggly.Config.ILogglyConfig
+Loggly.Config,ILogglyConfig,0,0,8,0,0,14,0,1,0,-1,3,1,Loggly.Config.ITagConfiguration' Loggly.Config.ITransportConfiguration' Loggly.Config.ISearchConfiguration,Loggly.Config.LogglyConfig
+Loggly.Config,LogglyConfig,1,2,9,0,0,62,2,0,1,1,6,1,Loggly.Config.ITagConfiguration' Loggly.Config.ITransportConfiguration' Loggly.Config.ISearchConfiguration' Loggly.Config.ILogglyConfig' Loggly.Config.TagConfiguration' Loggly.Config.TransportConfiguration,Loggly.ApplicationNameTag
+Loggly.Config,SearchConfiguration,0,0,3,0,0,6,0,0,1,-1,1,0,Loggly.Config.ISearchConfiguration,
+Loggly.Config,TagConfiguration,0,1,1,0,1,10,1,0,1,-1,2,1,Loggly.Config.ITagConfiguration' Loggly.Config.ITag,Loggly.Config.LogglyConfig
+Loggly.Config,ITag,0,0,1,0,0,4,0,2,0,-1,0,5,,Loggly.Config.ITagConfiguration' Loggly.Config.SimpleTag' Loggly.ComplexTag' Loggly.Config.TagExtensions' Loggly.Config.TagConfiguration
+Loggly.Config,SimpleTag,0,0,1,0,0,4,0,0,1,-1,1,1,Loggly.Config.ITag,Loggly.Config.TagExtensions
+Loggly.Config,TransportConfiguration,0,1,4,0,1,11,1,0,1,-1,2,2,Loggly.Config.LogTransport' Loggly.Config.ITransportConfiguration,Loggly.Config.ITransportConfigurationExtensions' Loggly.Config.LogglyConfig
+Loggly,ApplicationNameTag,0,0,1,0,0,7,0,0,1,-1,2,0,Loggly.Config.LogglyConfig' Loggly.ComplexTag,
+Loggly,ComplexTag,0,1,3,0,0,13,1,2,1,-1,1,2,Loggly.Config.ITag,Loggly.HostnameTag' Loggly.ApplicationNameTag
+Loggly,HostnameTag,0,0,1,0,0,7,0,0,2,-1,1,0,Loggly.ComplexTag,

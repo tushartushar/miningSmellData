@@ -1,18 +1,30 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SubtitleEdit,BaiduFanyiJson,0,0,4,0,0,13,0,0,0,-1,0,1,,SubtitleEdit.BaiduTranslator
-SubtitleEdit,TransResult,0,0,2,0,0,5,0,0,0,-1,0,1,,SubtitleEdit.BaiduTranslator
-SubtitleEdit,ErrorResult,0,1,2,0,1,24,2,0,0,-1,0,1,,SubtitleEdit.BaiduTranslator
-SubtitleEdit,BaiduTranslator,2,3,0,0,3,50,5,0,0,0,3,1,SubtitleEdit.BaiduFanyiJson' SubtitleEdit.ErrorResult' SubtitleEdit.TransResult,SubtitleEdit.MainForm
-SubtitleEdit,MainForm,23,17,2,0,2,556,29,0,0,0.18,6,1,Nikse.SubtitleEdit.PluginLogic.Subtitle' Nikse.SubtitleEdit.PluginLogic.Paragraph' SubtitleEdit.BackgroundWorkerParameter' SubtitleEdit.BaiduTranslator' Nikse.SubtitleEdit.PluginLogic.Utilities' SubtitleEdit.BaiduTranslationPair,Nikse.SubtitleEdit.PluginLogic.BaiduTranslate
-SubtitleEdit,BaiduTranslationPair,0,2,4,0,2,18,2,0,0,-1,0,1,,SubtitleEdit.MainForm
-SubtitleEdit,BackgroundWorkerParameter,0,0,4,0,0,7,0,0,0,-1,0,1,,SubtitleEdit.MainForm
-Nikse.SubtitleEdit.PluginLogic,Configuration,2,0,0,2,0,5,0,0,0,-1,0,1,,Nikse.SubtitleEdit.PluginLogic.BaiduTranslate
+BaiduTranslate,Form1,3,4,0,0,1,88,5,0,0,0.75,3,1,BaiduTranslate.MainForm' BaiduTranslate.Logic.Paragraph' BaiduTranslate.Logic.Subtitle,BaiduTranslate.Program
+BaiduTranslate,MainForm,25,23,2,0,2,698,62,0,0,0.17,6,2,BaiduTranslate.Logic.LanguageAutoDetect' BaiduTranslate.Logic.Paragraph' BaiduTranslate.Logic.SubRip' BaiduTranslate.Logic.Subtitle' BaiduTranslate.Translator.BaiduTranslator' BaiduTranslate.Translator.TranslationPair,Nikse.SubtitleEdit.PluginLogic.BaiduTranslate' BaiduTranslate.Form1
+BaiduTranslate,Program,0,1,0,0,0,13,1,0,0,-1,1,0,BaiduTranslate.Form1,
 Nikse.SubtitleEdit.PluginLogic,IPlugin,0,1,6,0,0,38,1,1,0,-1,0,1,,Nikse.SubtitleEdit.PluginLogic.BaiduTranslate
-Nikse.SubtitleEdit.PluginLogic,Paragraph,0,4,12,0,4,60,4,0,0,-1,1,3,Nikse.SubtitleEdit.PluginLogic.TimeCode,SubtitleEdit.MainForm' Nikse.SubtitleEdit.PluginLogic.SubRip' Nikse.SubtitleEdit.PluginLogic.Subtitle
-Nikse.SubtitleEdit.PluginLogic,BaiduTranslate,0,1,6,0,0,51,4,0,1,-1,5,0,Nikse.SubtitleEdit.PluginLogic.Subtitle' Nikse.SubtitleEdit.PluginLogic.SubRip' Nikse.SubtitleEdit.PluginLogic.Configuration' Nikse.SubtitleEdit.PluginLogic.IPlugin' SubtitleEdit.MainForm,
-Nikse.SubtitleEdit.PluginLogic,SubRip,5,7,5,0,0,214,22,0,1,0.29,4,1,Nikse.SubtitleEdit.PluginLogic.ExpectingLine' Nikse.SubtitleEdit.PluginLogic.Paragraph' Nikse.SubtitleEdit.PluginLogic.Subtitle' Nikse.SubtitleEdit.PluginLogic.Utilities,Nikse.SubtitleEdit.PluginLogic.BaiduTranslate
-Nikse.SubtitleEdit.PluginLogic,ExpectingLine,0,0,0,0,0,6,0,0,0,-1,0,1,,Nikse.SubtitleEdit.PluginLogic.SubRip
-Nikse.SubtitleEdit.PluginLogic,Subtitle,3,4,6,0,0,60,7,0,0,0.5,2,4,Nikse.SubtitleEdit.PluginLogic.SubtitleFormat' Nikse.SubtitleEdit.PluginLogic.Paragraph,SubtitleEdit.MainForm' Nikse.SubtitleEdit.PluginLogic.BaiduTranslate' Nikse.SubtitleEdit.PluginLogic.SubRip' Nikse.SubtitleEdit.PluginLogic.SubtitleFormat
-Nikse.SubtitleEdit.PluginLogic,SubtitleFormat,1,3,5,0,0,30,3,1,0,1,1,1,Nikse.SubtitleEdit.PluginLogic.Subtitle,Nikse.SubtitleEdit.PluginLogic.Subtitle
-Nikse.SubtitleEdit.PluginLogic,TimeCode,1,4,7,0,1,65,5,0,0,0.5,0,1,,Nikse.SubtitleEdit.PluginLogic.Paragraph
-Nikse.SubtitleEdit.PluginLogic,Utilities,0,7,1,0,6,79,15,0,0,-1,0,2,,SubtitleEdit.MainForm' Nikse.SubtitleEdit.PluginLogic.SubRip
+Nikse.SubtitleEdit.PluginLogic,BaiduTranslate,0,1,6,0,0,51,5,0,1,-1,5,0,BaiduTranslate.MainForm' Nikse.SubtitleEdit.PluginLogic.IPlugin' BaiduTranslate.Logic.Configuration' BaiduTranslate.Logic.SubRip' BaiduTranslate.Logic.Subtitle,
+BaiduTranslate.Logic,Configuration,2,0,0,2,0,5,0,0,0,-1,0,1,,Nikse.SubtitleEdit.PluginLogic.BaiduTranslate
+BaiduTranslate.Logic,Formatting,0,2,4,0,2,71,12,0,0,-1,2,0,BaiduTranslate.Logic.HtmlUtil' BaiduTranslate.Logic.Utilities,
+BaiduTranslate.Logic,HtmlUtil,8,9,0,6,9,664,156,0,0,0.67,1,4,BaiduTranslate.Logic.Utilities,BaiduTranslate.Logic.StringExtensions' BaiduTranslate.Translator.Formatting' BaiduTranslate.Logic.Formatting' BaiduTranslate.Logic.Utilities
+BaiduTranslate.Logic,Json,0,3,0,0,3,58,11,0,0,-1,0,0,,
+BaiduTranslate.Logic,LanguageAutoDetect,40,6,0,0,3,321,64,0,0,0.33,1,1,BaiduTranslate.Logic.Subtitle,BaiduTranslate.MainForm
+BaiduTranslate.Logic,Paragraph,0,4,11,0,4,54,4,0,0,-1,1,6,BaiduTranslate.Logic.TimeCode,BaiduTranslate.Translator.ITranslator' BaiduTranslate.Translator.BaiduTranslator' BaiduTranslate.MainForm' BaiduTranslate.Logic.SubRip' BaiduTranslate.Logic.Subtitle' BaiduTranslate.Form1
+BaiduTranslate.Logic,StringExtensions,0,22,0,0,21,241,63,0,0,-1,1,0,BaiduTranslate.Logic.HtmlUtil,
+BaiduTranslate.Logic,SubRip,5,7,5,0,0,214,33,0,1,0.29,6,2,BaiduTranslate.Logic.Paragraph' BaiduTranslate.Logic.ExpectingLine' BaiduTranslate.Logic.Subtitle' BaiduTranslate.Logic.SubtitleFormat' BaiduTranslate.Logic.TimeCode' BaiduTranslate.Logic.Utilities,Nikse.SubtitleEdit.PluginLogic.BaiduTranslate' BaiduTranslate.MainForm
+BaiduTranslate.Logic,ExpectingLine,0,0,0,0,0,6,0,0,0,-1,0,1,,BaiduTranslate.Logic.SubRip
+BaiduTranslate.Logic,Subtitle,3,6,6,0,2,86,14,0,0,0.5,2,6,BaiduTranslate.Logic.Paragraph' BaiduTranslate.Logic.SubtitleFormat,BaiduTranslate.Logic.SubtitleFormat' BaiduTranslate.Form1' Nikse.SubtitleEdit.PluginLogic.BaiduTranslate' BaiduTranslate.Logic.SubRip' BaiduTranslate.Logic.LanguageAutoDetect' BaiduTranslate.MainForm
+BaiduTranslate.Logic,SubtitleFormat,1,3,5,0,0,30,3,1,0,1,1,2,BaiduTranslate.Logic.Subtitle,BaiduTranslate.Logic.SubRip' BaiduTranslate.Logic.Subtitle
+BaiduTranslate.Logic,TimeCode,1,4,7,0,1,65,5,0,0,0.5,0,2,,BaiduTranslate.Logic.SubRip' BaiduTranslate.Logic.Paragraph
+BaiduTranslate.Logic,ParserException,0,1,2,0,1,11,1,0,0,-1,0,1,,BaiduTranslate.Logic.JsonParser
+BaiduTranslate.Logic,ILogger,0,1,0,0,0,4,1,1,0,-1,0,2,,BaiduTranslate.Logic.TextWriterLogger' BaiduTranslate.Logic.JsonParser
+BaiduTranslate.Logic,TextWriterLogger,0,2,1,0,2,15,3,0,1,-1,1,0,BaiduTranslate.Logic.ILogger,
+BaiduTranslate.Logic,JsonParser,0,18,7,0,1,383,64,0,0,-1,2,1,BaiduTranslate.Logic.ParserException' BaiduTranslate.Logic.ILogger,BaiduTranslate.Translator.BaiduTranslator
+BaiduTranslate.Logic,Utilities,5,20,1,5,16,605,129,0,0,0.35,1,5,BaiduTranslate.Logic.HtmlUtil,BaiduTranslate.Translator.BaiduTranslator' BaiduTranslate.Logic.Formatting' BaiduTranslate.Translator.Formatting' BaiduTranslate.Logic.SubRip' BaiduTranslate.Logic.HtmlUtil
+BaiduTranslate.Translator,BaiduTranslator,11,11,1,0,7,415,61,0,0,0.27,6,1,BaiduTranslate.Logic.Paragraph' BaiduTranslate.Logic.JsonParser' BaiduTranslate.Logic.Utilities' BaiduTranslate.Translator.Formatting' BaiduTranslate.Translator.TranslationHelper' BaiduTranslate.Translator.TranslationPair,BaiduTranslate.MainForm
+BaiduTranslate.Translator,Formatting,0,2,4,0,2,67,11,0,0,-1,2,1,BaiduTranslate.Logic.HtmlUtil' BaiduTranslate.Logic.Utilities,BaiduTranslate.Translator.BaiduTranslator
+BaiduTranslate.Translator,ITranslator,0,4,0,0,0,7,4,0,0,-1,2,0,BaiduTranslate.Logic.Paragraph' BaiduTranslate.Translator.TranslationPair,
+BaiduTranslate.Translator,TranslationHelper,0,2,0,0,2,52,4,0,0,-1,0,1,,BaiduTranslate.Translator.BaiduTranslator
+BaiduTranslate.Translator,TranslationPair,0,3,2,0,3,20,4,0,0,-1,0,3,,BaiduTranslate.Translator.ITranslator' BaiduTranslate.MainForm' BaiduTranslate.Translator.BaiduTranslator
+BaiduTranslate.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+BaiduTranslate.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

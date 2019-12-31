@@ -1,0 +1,30 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+NBi.Extensibility.Decoration.DataEngineering,IBatchRunnerArgs,0,0,2,0,0,5,0,1,0,-1,0,1,,NBi.Extensibility.Decoration.DataEngineering.IBatchRunnerFactory
+NBi.Extensibility.Decoration.DataEngineering,IBatchRunnerFactory,0,1,0,0,0,4,1,0,0,-1,2,0,NBi.Extensibility.Decoration.DataEngineering.IBatchRunnerArgs' NBi.Extensibility.Decoration.DataEngineering.IBatchRunner,
+NBi.Extensibility.Decoration.DataEngineering,IEtlRunnerFactory,0,1,0,0,0,4,1,0,0,-1,2,0,NBi.Extensibility.Decoration.DataEngineering.IEtlArgs' NBi.Extensibility.Decoration.DataEngineering.IEtlRunner,
+NBi.Extensibility.Decoration.DataEngineering,IEtlRunResult,0,0,0,0,0,1,0,0,1,-1,1,1,NBi.Extensibility.IExecutionResult,NBi.Extensibility.Decoration.DataEngineering.IEtlRunner
+NBi.Extensibility.Decoration.DataEngineering,IEtlArgs,0,0,13,0,0,16,0,0,0,-1,0,1,,NBi.Extensibility.Decoration.DataEngineering.IEtlRunnerFactory
+NBi.Extensibility.Decoration.DataEngineering,IEtlRunner,0,1,0,0,0,4,1,0,1,-1,2,1,NBi.Extensibility.Decoration.DataEngineering.IEtlRunResult' NBi.Extensibility.IExecutable,NBi.Extensibility.Decoration.DataEngineering.IEtlRunnerFactory
+NBi.Extensibility.Decoration.DataEngineering,IBatchRunner,0,1,0,0,0,4,1,0,0,-1,0,1,,NBi.Extensibility.Decoration.DataEngineering.IBatchRunnerFactory
+NBi.Extensibility.Decoration,CustomConditionResult,0,1,3,0,1,7,1,0,0,-1,0,1,,NBi.Extensibility.Decoration.ICustomCondition
+NBi.Extensibility.Decoration,ICustomCommand,0,1,0,0,0,4,1,6,0,-1,0,0,,
+NBi.Extensibility.Decoration,ICustomCondition,0,1,0,0,0,4,1,8,0,-1,1,0,NBi.Extensibility.Decoration.CustomConditionResult,
+NBi.Extensibility,ExternalDependencyNotFoundException,0,1,0,0,1,7,1,0,1,-1,1,0,NBi.Extensibility.NBiException,
+NBi.Extensibility,IExecutionResult,0,0,4,0,0,7,0,1,0,-1,0,2,,NBi.Extensibility.Decoration.DataEngineering.IEtlRunResult' NBi.Extensibility.IExecutable
+NBi.Extensibility,IExecutable,0,1,0,0,0,4,1,1,0,-1,1,1,NBi.Extensibility.IExecutionResult,NBi.Extensibility.Decoration.DataEngineering.IEtlRunner
+NBi.Extensibility,ITemplateEngine,0,1,0,0,0,4,1,1,0,-1,0,1,,NBi.Extensibility.Query.ICommandFactory
+NBi.Extensibility,NBiException,0,2,0,0,2,14,3,7,0,-1,1,1,NBi.Extensibility.NBiTraceSwitch,NBi.Extensibility.ExternalDependencyNotFoundException
+NBi.Extensibility,NBiTraceSwitch,2,1,6,0,0,60,1,0,0,0,0,1,,NBi.Extensibility.NBiException
+NBi.Extensibility,ProgressStatusEventArgs,0,2,2,0,2,19,2,0,0,-1,1,0,NBi.Extensibility.ProgressInfo,
+NBi.Extensibility,ProgressInfo,2,0,0,2,0,5,0,0,0,-1,0,1,,NBi.Extensibility.ProgressStatusEventArgs
+NBi.Extensibility.FlatFile,IFlatFileProfile,0,0,1,0,0,4,0,2,0,-1,0,0,,
+NBi.Extensibility.FlatFile,IFlatFileReader,0,1,0,0,0,5,1,6,0,-1,0,0,,
+NBi.Extensibility.Query,IClient,0,1,2,0,0,6,1,5,0,-1,0,2,,NBi.Extensibility.Query.ICommandFactory' NBi.Extensibility.Query.IClientFactory
+NBi.Extensibility.Query,IClientFactory,0,2,0,0,0,5,2,7,0,-1,1,0,NBi.Extensibility.Query.IClient,
+NBi.Extensibility.Query,ICommand,0,0,2,0,0,5,0,3,0,-1,0,1,,NBi.Extensibility.Query.ICommandFactory
+NBi.Extensibility.Query,ICommandFactory,0,2,0,0,0,5,2,4,0,-1,4,0,NBi.Extensibility.ITemplateEngine' NBi.Extensibility.Query.IClient' NBi.Extensibility.Query.ICommand' NBi.Extensibility.Query.IQuery,
+NBi.Extensibility.Query,IExecutionEngine,0,3,0,0,0,6,3,3,0,-1,0,0,,
+NBi.Extensibility.Query,IQuery,0,0,6,0,0,9,0,1,0,-1,2,1,NBi.Extensibility.Query.IQueryParameter' NBi.Extensibility.Query.IQueryTemplateVariable,NBi.Extensibility.Query.ICommandFactory
+NBi.Extensibility.Query,IQueryParameter,0,1,2,0,0,7,1,1,0,-1,0,1,,NBi.Extensibility.Query.IQuery
+NBi.Extensibility.Query,IQueryTemplateVariable,0,0,2,0,0,5,0,1,0,-1,0,1,,NBi.Extensibility.Query.IQuery
+NBi.Extensibility.Query,SupportedCommandTypeAttribute,0,1,1,0,1,9,1,0,0,-1,0,0,,

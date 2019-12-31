@@ -1,45 +1,45 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NMock,CallMethodOrder,0,3,0,0,3,36,4,0,1,-1,3,1,NMock.MethodSignature' NMock.MockCall' NMock.CallSequence,NMock.Mock
-NMock,CallMethodWithoutExpectation,2,4,1,0,4,25,4,0,1,0.5,2,1,NMock.MockCall' NMock.MethodSignature,NMock.Mock
-NMock,CallMethodWithParams,0,3,0,0,3,49,7,0,1,-1,4,1,NMock.MethodSignature' NMock.MockCall' NMock.Constraints.IConstraint' NMock.CallSequence,NMock.Mock
-NMock,DynamicMock,5,14,2,0,5,201,35,1,1,0.21,6,0,NMock.Dynamic.ClassGenerator' NMock.Mock' NMock.IMethod' NMock.MethodSignature' NMock.Dynamic.InterfaceLister' NMock.Constraints.IConstraint,
-NMock,IInvocationHandler,0,1,0,0,0,9,1,1,0,-1,0,1,,NMock.Dynamic.ClassGenerator
-NMock,IMethod,0,2,1,0,0,9,2,3,1,-1,1,2,NMock.MockCall,NMock.DynamicMock' NMock.Mock
-NMock,IMock,0,19,3,0,0,61,19,1,1,-1,0,0,,
+NMock,CallMethodOrder,0,3,0,0,3,36,4,0,1,-1,7,1,NMock.Method' NMock.MethodSignature' NMock.MockCall' NMock.CallMethodOrder' NMock.Method' NMock.MethodSignature' NMock.MockCall,NMock.Mock
+NMock,CallMethodWithoutExpectation,2,4,1,0,4,25,4,0,1,0.75,6,1,NMock.IMethod' NMock.MethodSignature' NMock.MockCall' NMock.IMethod' NMock.MethodSignature' NMock.MockCall,NMock.Mock
+NMock,CallMethodWithParams,0,3,0,0,3,49,7,0,1,-1,9,1,NMock.Method' NMock.MethodSignature' NMock.MockCall' NMock.Constraints.IConstraint' NMock.CallMethodWithParams' NMock.Method' NMock.MethodSignature' NMock.MockCall' NMock.Constraints.IConstraint,NMock.Mock
+NMock,DynamicMock,5,14,2,0,5,201,37,1,1,0.36,12,1,NMock.IMethod' NMock.MethodSignature' NMock.Mock' NMock.Constraints.IConstraint' NMock.Dynamic.ClassGenerator' NMock.Dynamic.InterfaceLister' NMock.IMethod' NMock.MethodSignature' NMock.Mock' NMock.Constraints.IConstraint' NMock.Dynamic.ClassGenerator' NMock.Dynamic.InterfaceLister,NMock.Remoting.RemotingMock
+NMock,IInvocationHandler,0,1,0,0,0,9,1,1,0,-1,0,2,,NMock.IMock' NMock.Dynamic.ClassGenerator
+NMock,IMethod,0,2,1,0,0,9,2,3,1,-1,4,5,NMock.IVerifiable' NMock.MockCall' NMock.IVerifiable' NMock.MockCall,NMock.CallMethodWithoutExpectation' NMock.SingleMethod' NMock.Method' NMock.DynamicMock' NMock.Mock
+NMock,IMock,0,19,3,0,0,61,19,1,1,-1,4,1,NMock.IInvocationHandler' NMock.IVerifiable' NMock.IInvocationHandler' NMock.IVerifiable,NMock.Mock
 NMock,Invocation,2,1,0,2,1,10,1,0,0,0,0,0,,
-NMock,IVerifiable,0,1,0,0,0,5,1,2,0,-1,0,0,,
-NMock,Method,4,5,2,0,4,85,5,2,2,0,5,0,NMock.MethodSignature' NMock.CallSequence' NMock.MockCall' NMock.Assertion' NMock.Mock,
-NMock,CallSequence,2,2,2,0,2,43,2,0,0,1,1,3,NMock.MockCall,NMock.CallMethodOrder' NMock.CallMethodWithParams' NMock.Method
-NMock,MethodSignature,3,5,0,3,5,49,11,0,0,0,0,8,,NMock.CallMethodOrder' NMock.CallMethodWithoutExpectation' NMock.CallMethodWithParams' NMock.DynamicMock' NMock.Method' NMock.Mock' NMock.MockCall' NMock.MockNoCall
-NMock,Mock,4,27,3,0,24,338,41,1,2,0,6,4,NMock.MockCall' NMock.CallMethodWithoutExpectation' NMock.CallMethodOrder' NMock.CallMethodWithParams' NMock.IMethod' NMock.MethodSignature,NMock.DynamicMock' NMock.Method' NMock.MockCall' NMock.SingleMethod
-NMock,Assertion,0,2,0,0,2,17,4,0,0,-1,0,3,,NMock.Method' NMock.MockCall' NMock.SingleMethod
-NMock,MockCall,5,8,3,0,4,109,19,1,0,0.25,4,8,NMock.MethodSignature' NMock.Constraints.IConstraint' NMock.Assertion' NMock.Mock,NMock.CallMethodOrder' NMock.CallMethodWithoutExpectation' NMock.CallMethodWithParams' NMock.IMethod' NMock.Method' NMock.CallSequence' NMock.Mock' NMock.SingleMethod
-NMock,MockNoCall,0,2,0,0,2,10,2,0,1,-1,1,0,NMock.MethodSignature,
-NMock,SingleMethod,3,4,1,0,4,28,4,0,2,0,3,0,NMock.MockCall' NMock.Assertion' NMock.Mock,
-NMock,VerifyException,4,1,4,0,1,32,1,0,0,0,0,0,,
-NMock.Constraints,BaseConstraint,0,2,1,0,2,9,2,19,1,-1,0,0,,
-NMock.Constraints,IsNull,0,1,1,0,1,11,1,0,2,-1,0,0,,
-NMock.Constraints,IsAnything,0,1,1,0,1,11,1,0,2,-1,0,0,,
-NMock.Constraints,IsIn,1,2,1,0,2,47,5,0,2,0,0,0,,
-NMock.Constraints,IsEqual,1,3,1,0,2,31,7,0,2,0,0,0,,
-NMock.Constraints,IsTypeOf,1,2,1,0,2,17,2,0,2,0,0,0,,
-NMock.Constraints,Not,1,2,1,0,2,16,2,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,And,2,2,1,0,2,18,2,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,Or,2,2,1,0,2,18,2,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,NotNull,0,1,1,0,1,11,1,0,2,-1,0,0,,
-NMock.Constraints,NotEqual,1,2,1,0,2,16,2,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,NotIn,1,2,1,0,2,16,2,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,IsEqualIgnoreCase,1,2,1,0,2,16,2,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,IsEqualIgnoreWhiteSpace,1,3,1,0,3,38,6,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,IsMatch,1,4,1,0,4,24,4,0,2,0,0,0,,
-NMock.Constraints,IsCloseTo,2,2,1,0,2,26,2,0,2,0,0,0,,
-NMock.Constraints,StartsWith,1,2,1,0,2,16,2,0,2,0,0,0,,
-NMock.Constraints,PropertyIs,2,3,1,0,2,39,6,0,2,0,1,0,NMock.Constraints.IConstraint,
-NMock.Constraints,Constraint,1,2,1,0,2,17,2,0,2,0,0,0,,
-NMock.Constraints,CollectingConstraint,1,1,2,0,1,17,1,0,2,0,0,0,,
-NMock.Constraints,IConstraint,0,2,1,0,0,6,2,1,0,-1,0,11,,NMock.CallMethodWithParams' NMock.DynamicMock' NMock.MockCall' NMock.Constraints.Not' NMock.Constraints.And' NMock.Constraints.Or' NMock.Constraints.NotEqual' NMock.Constraints.NotIn' NMock.Constraints.IsEqualIgnoreCase' NMock.Constraints.IsEqualIgnoreWhiteSpace' NMock.Constraints.PropertyIs
-NMock.Dynamic,ClassGenerator,18,22,4,2,5,649,86,0,0,0,2,1,NMock.IInvocationHandler' NMock.Dynamic.InterfaceLister,NMock.DynamicMock
-NMock.Dynamic,CompareMethodInfo,0,2,0,0,0,20,3,0,0,-1,0,0,,
+NMock,IVerifiable,0,1,0,0,0,5,1,2,0,-1,0,2,,NMock.IMock' NMock.IMethod
+NMock,Method,4,5,2,0,4,85,5,2,2,0,16,3,NMock.IMethod' NMock.CallSequence' NMock.MethodSignature' NMock.Mock' NMock.Assertion' NMock.MockCall' NMock.MockNoCall' NMock.VerifyException' NMock.IMethod' NMock.CallSequence' NMock.MethodSignature' NMock.Mock' NMock.Assertion' NMock.MockCall' NMock.MockNoCall' NMock.VerifyException,NMock.CallMethodWithParams' NMock.CallMethodOrder' NMock.Mock
+NMock,CallSequence,2,2,2,0,2,43,2,0,0,1,0,1,,NMock.Method
+NMock,MethodSignature,3,5,0,3,5,49,11,0,0,0.4,1,9,NMock.MethodSignature,NMock.CallMethodWithoutExpectation' NMock.CallMethodOrder' NMock.CallMethodWithParams' NMock.Method' NMock.MockCall' NMock.MockNoCall' NMock.Dynamic.ClassGenerator' NMock.DynamicMock' NMock.Mock
+NMock,Mock,4,27,3,0,24,338,42,1,2,0,20,4,NMock.CallMethodOrder' NMock.CallMethodWithoutExpectation' NMock.CallMethodWithParams' NMock.IMethod' NMock.IMock' NMock.Method' NMock.MethodSignature' NMock.MockCall' NMock.MockNoCall' NMock.VerifyException' NMock.CallMethodOrder' NMock.CallMethodWithoutExpectation' NMock.CallMethodWithParams' NMock.IMethod' NMock.IMock' NMock.Method' NMock.MethodSignature' NMock.MockCall' NMock.MockNoCall' NMock.VerifyException,NMock.DynamicMock' NMock.SingleMethod' NMock.Method' NMock.MockCall
+NMock,Assertion,0,2,0,0,2,17,4,0,0,-1,0,3,,NMock.SingleMethod' NMock.Method' NMock.MockCall
+NMock,MockCall,5,8,3,0,4,109,19,1,0,0.5,14,8,NMock.MethodSignature' NMock.Mock' NMock.Assertion' NMock.VerifyException' NMock.Constraints.IsAnything' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint' NMock.MethodSignature' NMock.Mock' NMock.Assertion' NMock.VerifyException' NMock.Constraints.IsAnything' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint,NMock.CallMethodWithoutExpectation' NMock.CallMethodOrder' NMock.SingleMethod' NMock.CallMethodWithParams' NMock.IMethod' NMock.MockNoCall' NMock.Method' NMock.Mock
+NMock,MockNoCall,0,2,0,0,2,10,2,0,1,-1,6,2,NMock.MethodSignature' NMock.MockCall' NMock.VerifyException' NMock.MethodSignature' NMock.MockCall' NMock.VerifyException,NMock.Method' NMock.Mock
+NMock,SingleMethod,3,4,1,0,4,28,4,0,2,0.75,8,0,NMock.IMethod' NMock.Mock' NMock.Assertion' NMock.MockCall' NMock.IMethod' NMock.Mock' NMock.Assertion' NMock.MockCall,
+NMock,VerifyException,4,1,4,0,1,32,1,0,0,0,0,4,,NMock.Method' NMock.MockCall' NMock.MockNoCall' NMock.Mock
+NMock.Constraints,BaseConstraint,0,2,1,0,2,9,2,19,1,-1,2,19,NMock.Constraints.IConstraint' NMock.Constraints.IConstraint,NMock.Constraints.IsNull' NMock.Constraints.IsAnything' NMock.Constraints.IsIn' NMock.Constraints.IsEqual' NMock.Constraints.IsTypeOf' NMock.Constraints.Not' NMock.Constraints.And' NMock.Constraints.Or' NMock.Constraints.NotNull' NMock.Constraints.NotEqual' NMock.Constraints.NotIn' NMock.Constraints.IsEqualIgnoreCase' NMock.Constraints.IsEqualIgnoreWhiteSpace' NMock.Constraints.IsMatch' NMock.Constraints.IsCloseTo' NMock.Constraints.StartsWith' NMock.Constraints.PropertyIs' NMock.Constraints.Constraint' NMock.Constraints.CollectingConstraint
+NMock.Constraints,IsNull,0,1,1,0,1,11,1,0,2,-1,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,IsAnything,0,1,1,0,1,11,1,0,2,-1,2,1,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,NMock.MockCall
+NMock.Constraints,IsIn,1,2,1,0,2,47,5,0,2,1,2,1,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,NMock.Constraints.NotIn
+NMock.Constraints,IsEqual,1,3,1,0,2,31,7,0,2,0.67,2,5,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,NMock.MockCall' NMock.Constraints.NotEqual' NMock.Constraints.IsEqualIgnoreCase' NMock.Constraints.IsEqualIgnoreWhiteSpace' NMock.Constraints.PropertyIs
+NMock.Constraints,IsTypeOf,1,2,1,0,2,17,2,0,2,1,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,Not,1,2,1,0,2,16,2,0,2,1,4,2,NMock.Constraints.BaseConstraint' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IConstraint,NMock.Constraints.NotEqual' NMock.Constraints.NotIn
+NMock.Constraints,And,2,2,1,0,2,18,2,0,2,1,4,0,NMock.Constraints.BaseConstraint' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IConstraint,
+NMock.Constraints,Or,2,2,1,0,2,18,2,0,2,1,4,0,NMock.Constraints.BaseConstraint' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IConstraint,
+NMock.Constraints,NotNull,0,1,1,0,1,11,1,0,2,-1,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,NotEqual,1,2,1,0,2,16,2,0,2,0,8,0,NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.Not' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.Not' NMock.Constraints.IConstraint,
+NMock.Constraints,NotIn,1,2,1,0,2,16,2,0,2,0,8,0,NMock.Constraints.BaseConstraint' NMock.Constraints.IsIn' NMock.Constraints.Not' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IsIn' NMock.Constraints.Not' NMock.Constraints.IConstraint,
+NMock.Constraints,IsEqualIgnoreCase,1,2,1,0,2,16,2,0,2,0,6,0,NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint,
+NMock.Constraints,IsEqualIgnoreWhiteSpace,1,3,1,0,3,38,6,0,2,0,6,0,NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint,
+NMock.Constraints,IsMatch,1,4,1,0,4,24,4,0,2,1,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,IsCloseTo,2,2,1,0,2,26,2,0,2,1,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,StartsWith,1,2,1,0,2,16,2,0,2,0,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,PropertyIs,2,3,1,0,2,39,6,0,2,0,6,0,NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint' NMock.Constraints.BaseConstraint' NMock.Constraints.IsEqual' NMock.Constraints.IConstraint,
+NMock.Constraints,Constraint,1,2,1,0,2,17,2,0,2,1,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,CollectingConstraint,1,1,2,0,1,17,1,0,2,0,2,0,NMock.Constraints.BaseConstraint' NMock.Constraints.BaseConstraint,
+NMock.Constraints,IConstraint,0,2,1,0,0,6,2,1,0,-1,0,12,,NMock.CallMethodWithParams' NMock.DynamicMock' NMock.MockCall' NMock.Constraints.BaseConstraint' NMock.Constraints.Not' NMock.Constraints.And' NMock.Constraints.Or' NMock.Constraints.NotEqual' NMock.Constraints.NotIn' NMock.Constraints.IsEqualIgnoreCase' NMock.Constraints.IsEqualIgnoreWhiteSpace' NMock.Constraints.PropertyIs
+NMock.Dynamic,ClassGenerator,18,22,4,2,5,649,112,0,0,0.18,8,1,NMock.IInvocationHandler' NMock.MethodSignature' NMock.Dynamic.CompareMethodInfo' NMock.Dynamic.InterfaceLister' NMock.IInvocationHandler' NMock.MethodSignature' NMock.Dynamic.CompareMethodInfo' NMock.Dynamic.InterfaceLister,NMock.DynamicMock
+NMock.Dynamic,CompareMethodInfo,0,2,0,0,0,20,4,0,0,-1,0,1,,NMock.Dynamic.ClassGenerator
 NMock.Dynamic,InterfaceLister,0,3,0,0,1,29,6,0,0,-1,0,2,,NMock.DynamicMock' NMock.Dynamic.ClassGenerator
 NMock.Remoting,MockServer,3,2,0,0,2,25,3,0,0,0,0,0,,
-NMock.Remoting,RemotingMock,0,1,1,0,1,11,1,0,2,-1,0,0,,
+NMock.Remoting,RemotingMock,0,1,1,0,1,11,1,0,2,-1,2,0,NMock.DynamicMock' NMock.DynamicMock,

@@ -1,21 +1,34 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-LibMPlayerCommon,ScreenAspectRatio,0,0,2,0,0,17,0,0,0,-1,0,1,,LibMPlayerCommon.Discover
-LibMPlayerCommon,BackendPrograms,2,5,2,0,4,83,6,0,0,0.6,0,4,,LibMPlayerCommon.Discover' LibMPlayerCommon.Mencoder' LibMPlayerCommon.MPlayer' MediaPlayer.Player
-LibMPlayerCommon,Discover,15,5,13,0,4,317,11,0,0,0.4,5,4,LibMPlayerCommon.BackendPrograms' LibMPlayerCommon.AudioTrackInfo' LibMPlayerCommon.SubtitlesInfo' LibMPlayerCommon.Globals' LibMPlayerCommon.ScreenAspectRatio,LibMPlayerCommon.MPlayer' MediaPlayer.Player' MplayerUnitTests.Discover_Test' MplayerUnitTests.Mencoder_Test
-LibMPlayerCommon,AudioTrackInfo,0,0,3,0,0,6,0,0,0,-1,0,2,,LibMPlayerCommon.Discover' MediaPlayer.Player
-LibMPlayerCommon,SubtitlesInfo,0,0,3,0,0,6,0,0,0,-1,0,2,,LibMPlayerCommon.Discover' MediaPlayer.Player
-LibMPlayerCommon,Globals,0,3,3,0,2,32,4,0,0,-1,0,5,,LibMPlayerCommon.Discover' LibMPlayerCommon.Logging' LibMPlayerCommon.Mencoder' LibMPlayerCommon.MPlayer' LibMPlayerCommon.SlideShow
-LibMPlayerCommon,Logging,3,5,1,0,4,54,5,0,0,0.4,1,3,LibMPlayerCommon.Globals,LibMPlayerCommon.Mencoder' LibMPlayerCommon.MPlayer' MediaPlayer.Player
-LibMPlayerCommon,MediaStatus,0,0,0,0,0,6,0,0,0,-1,0,2,,LibMPlayerCommon.MPlayer' MediaPlayer.Player
-LibMPlayerCommon,Mencoder,2,15,1,0,12,350,32,0,0,0.4,6,2,LibMPlayerCommon.BackendPrograms' LibMPlayerCommon.VideoType' LibMPlayerCommon.AudioType' LibMPlayerCommon.RegionType' LibMPlayerCommon.Globals' LibMPlayerCommon.Logging,LibMPlayerCommon.SlideShow' MplayerUnitTests.Mencoder_Test
-LibMPlayerCommon,VideoType,0,0,0,0,0,9,0,0,0,-1,0,1,,LibMPlayerCommon.Mencoder
-LibMPlayerCommon,AudioType,0,0,0,0,0,10,0,0,0,-1,0,1,,LibMPlayerCommon.Mencoder
-LibMPlayerCommon,RegionType,0,0,0,0,0,5,0,0,0,-1,0,2,,LibMPlayerCommon.Mencoder' MplayerUnitTests.Mencoder_Test
-LibMPlayerCommon,MPlayer,20,51,5,0,43,884,79,0,0,0.53,7,4,LibMPlayerCommon.MplayerBackends' LibMPlayerCommon.BackendPrograms' LibMPlayerCommon.MediaStatus' LibMPlayerCommon.Seek' LibMPlayerCommon.Logging' LibMPlayerCommon.Discover' LibMPlayerCommon.Globals,LibMPlayerWinform.WinFormMPlayerControl' MediaPlayer.Player' MPlayerGtkWidget.GtkMPlayerWidget' WpfMPlayer.WpfMPlayerControl
-LibMPlayerCommon,MplayerBackends,0,0,0,0,0,72,0,0,0,-1,0,5,,LibMPlayerCommon.MPlayer' LibMPlayerWinform.WinFormMPlayerControl' MediaPlayer.Player' MPlayerGtkWidget.GtkMPlayerWidget' WpfMPlayer.WpfMPlayerControl
-LibMPlayerCommon,MplayerEvent,2,2,2,0,2,26,2,0,0,0,0,2,,MediaPlayer.Player' MplayerUnitTests.Mencoder_Test
-LibMPlayerCommon,Seek,0,0,0,0,0,6,0,0,0,-1,0,2,,LibMPlayerCommon.MPlayer' MediaPlayer.Player
-LibMPlayerCommon,SlideShow,10,13,0,0,3,217,26,0,0,0.15,6,2,LibMPlayerCommon.Globals' LibMPlayerCommon.SlideShowInfo' LibImages.ImageResize' LibMPlayerCommon.SlideShowEffect' LibImages.BitmapFilter' LibMPlayerCommon.Mencoder,SlideShow.MainForm' MplayerUnitTests.SlideShow_Test
-LibMPlayerCommon,SlideShowEffect,0,0,0,0,0,11,0,0,0,-1,0,4,,LibMPlayerCommon.SlideShow' LibMPlayerCommon.SlideShowInfo' SlideShow.MainForm' MplayerUnitTests.SlideShow_Test
-LibMPlayerCommon,SlideShowInfo,0,1,2,0,1,10,1,0,0,-1,1,1,LibMPlayerCommon.SlideShowEffect,LibMPlayerCommon.SlideShow
-LibMPlayerCommon,TimeConversion,0,1,0,0,1,35,4,0,0,-1,0,1,,MediaPlayer.Player
+LibMPlayerCommon,ScreenAspectRatio,0,0,2,0,0,17,0,0,0,-1,0,2,,LibMPlayerCommon.MpvDiscover' LibMPlayerCommon.MPlayerDiscover
+LibMPlayerCommon,BackendPrograms,2,5,2,0,4,83,6,0,0,0.6,0,4,,LibMPlayerCommon.Mencoder' LibMPlayerCommon.Mencoder2' LibMPlayerCommon.MPlayerDiscover' LibMPlayerCommon.MPlayer
+LibMPlayerCommon,Discover,0,2,13,0,0,18,2,2,0,-1,2,3,LibMPlayerCommon.AudioTrackInfo' LibMPlayerCommon.SubtitlesInfo,LibMPlayerCommon.MPlayerDiscover' LibMPlayerCommon.MpvDiscover' LibMPlayerCommon.DiscoverFactory
+LibMPlayerCommon,DiscoverFactory,0,4,0,0,1,47,13,0,0,-1,5,0,LibMPlayerCommon.Discover' LibMPlayerCommon.MPlayerDiscover' LibMPlayerCommon.MpvDiscover' LibMPlayerCommon.Platform' LibMPlayerCommon.PlatformCheck,
+LibMPlayerCommon,MPlayerControlException,1,4,0,1,4,22,4,0,0,0.75,0,2,,LibMPlayerCommon.TimeConversion' LibMPlayerCommon.Mpv
+LibMPlayerCommon,Globals,0,3,3,0,2,32,4,0,0,-1,0,7,,LibMPlayerCommon.SlideShow' LibMPlayerCommon.Logging' LibMPlayerCommon.MPlayer' LibMPlayerCommon.Mpv' LibMPlayerCommon.Mencoder' LibMPlayerCommon.Mencoder2' LibMPlayerCommon.MPlayerDiscover
+LibMPlayerCommon,Logging,3,5,1,0,4,54,5,0,0,0.4,1,4,LibMPlayerCommon.Globals,LibMPlayerCommon.Mencoder2' LibMPlayerCommon.MpvPlayer' LibMPlayerCommon.Mencoder' LibMPlayerCommon.MPlayer
+LibMPlayerCommon,MediaStatus,0,0,0,0,0,6,0,0,0,-1,0,3,,LibMPlayerCommon.Player' LibMPlayerCommon.MPlayer' LibMPlayerCommon.MpvPlayer
+LibMPlayerCommon,Mencoder,3,17,1,0,13,324,50,0,0,0.29,7,1,LibMPlayerCommon.BackendPrograms' LibMPlayerCommon.Globals' LibMPlayerCommon.Logging' LibMPlayerCommon.VideoType' LibMPlayerCommon.AudioType' LibMPlayerCommon.RegionType' LibMPlayerCommon.MplayerEvent,LibMPlayerCommon.Mencoder2
+LibMPlayerCommon,VideoType,0,0,0,0,0,9,0,0,0,-1,0,2,,LibMPlayerCommon.Mencoder2' LibMPlayerCommon.Mencoder
+LibMPlayerCommon,AudioType,0,0,0,0,0,10,0,0,0,-1,0,2,,LibMPlayerCommon.Mencoder2' LibMPlayerCommon.Mencoder
+LibMPlayerCommon,RegionType,0,0,0,0,0,5,0,0,0,-1,0,2,,LibMPlayerCommon.Mencoder2' LibMPlayerCommon.Mencoder
+LibMPlayerCommon,Mencoder2,3,16,0,0,13,290,47,0,0,0.44,8,1,LibMPlayerCommon.BackendPrograms' LibMPlayerCommon.Globals' LibMPlayerCommon.Logging' LibMPlayerCommon.Mencoder' LibMPlayerCommon.VideoType' LibMPlayerCommon.AudioType' LibMPlayerCommon.RegionType' LibMPlayerCommon.MplayerEvent,LibMPlayerCommon.SlideShow
+LibMPlayerCommon,MPlayer,23,55,5,2,45,932,129,0,1,0.09,9,1,LibMPlayerCommon.BackendPrograms' LibMPlayerCommon.Globals' LibMPlayerCommon.Logging' LibMPlayerCommon.MediaStatus' LibMPlayerCommon.MplayerBackends' LibMPlayerCommon.MPlayerDiscover' LibMPlayerCommon.MplayerEvent' LibMPlayerCommon.Player' LibMPlayerCommon.Seek,LibMPlayerCommon.PlayerFactory
+LibMPlayerCommon,MplayerBackends,0,0,0,0,0,72,0,0,0,-1,0,2,,LibMPlayerCommon.PlayerFactory' LibMPlayerCommon.MPlayer
+LibMPlayerCommon,MPlayerDiscover,16,7,13,0,5,264,34,0,1,0.71,6,2,LibMPlayerCommon.ScreenAspectRatio' LibMPlayerCommon.BackendPrograms' LibMPlayerCommon.Discover' LibMPlayerCommon.Globals' LibMPlayerCommon.AudioTrackInfo' LibMPlayerCommon.SubtitlesInfo,LibMPlayerCommon.DiscoverFactory' LibMPlayerCommon.MPlayer
+LibMPlayerCommon,AudioTrackInfo,0,0,3,0,0,6,0,0,0,-1,0,3,,LibMPlayerCommon.Discover' LibMPlayerCommon.MpvDiscover' LibMPlayerCommon.MPlayerDiscover
+LibMPlayerCommon,SubtitlesInfo,0,0,3,0,0,6,0,0,0,-1,0,3,,LibMPlayerCommon.Discover' LibMPlayerCommon.MPlayerDiscover' LibMPlayerCommon.MpvDiscover
+LibMPlayerCommon,MplayerEvent,2,2,2,0,2,26,2,0,0,0,0,5,,LibMPlayerCommon.MpvPlayer' LibMPlayerCommon.Mencoder' LibMPlayerCommon.SlideShow' LibMPlayerCommon.Mencoder2' LibMPlayerCommon.MPlayer
+LibMPlayerCommon,Mpv,16,23,0,0,13,274,42,0,0,0,6,2,LibMPlayerCommon.MPlayerControlException' LibMPlayerCommon.Globals' LibMPlayerCommon.MpvError' LibMPlayerCommon.MpvFormat' LibMPlayerCommon.Platform' LibMPlayerCommon.PlatformCheck,LibMPlayerCommon.MpvPlayer' LibMPlayerCommon.MpvDiscover
+LibMPlayerCommon,MpvError,0,0,0,0,0,104,0,0,0,-1,0,1,,LibMPlayerCommon.Mpv
+LibMPlayerCommon,MpvDiscover,17,6,13,0,4,232,14,0,1,0.5,6,1,LibMPlayerCommon.ScreenAspectRatio' LibMPlayerCommon.Discover' LibMPlayerCommon.AudioTrackInfo' LibMPlayerCommon.SubtitlesInfo' LibMPlayerCommon.Mpv' LibMPlayerCommon.MpvFormat,LibMPlayerCommon.DiscoverFactory
+LibMPlayerCommon,MpvPlayer,8,23,4,0,18,284,35,0,1,0.17,7,1,LibMPlayerCommon.Logging' LibMPlayerCommon.MediaStatus' LibMPlayerCommon.MplayerEvent' LibMPlayerCommon.Mpv' LibMPlayerCommon.MpvFormat' LibMPlayerCommon.Player' LibMPlayerCommon.Seek,LibMPlayerCommon.PlayerFactory
+LibMPlayerCommon,MpvFormat,0,0,0,0,0,125,0,0,0,-1,0,3,,LibMPlayerCommon.MpvPlayer' LibMPlayerCommon.MpvDiscover' LibMPlayerCommon.Mpv
+LibMPlayerCommon,Platform,0,0,0,0,0,6,0,0,0,-1,0,4,,LibMPlayerCommon.PlatformCheck' LibMPlayerCommon.DiscoverFactory' LibMPlayerCommon.PlayerFactory' LibMPlayerCommon.Mpv
+LibMPlayerCommon,PlatformCheck,0,1,0,0,1,27,4,0,0,-1,1,3,LibMPlayerCommon.Platform,LibMPlayerCommon.DiscoverFactory' LibMPlayerCommon.PlayerFactory' LibMPlayerCommon.Mpv
+LibMPlayerCommon,Player,0,13,2,0,0,24,13,2,0,-1,2,3,LibMPlayerCommon.MediaStatus' LibMPlayerCommon.Seek,LibMPlayerCommon.MpvPlayer' LibMPlayerCommon.PlayerFactory' LibMPlayerCommon.MPlayer
+LibMPlayerCommon,PlayerFactory,0,4,0,0,1,48,13,0,0,-1,6,0,LibMPlayerCommon.MPlayer' LibMPlayerCommon.MplayerBackends' LibMPlayerCommon.MpvPlayer' LibMPlayerCommon.Platform' LibMPlayerCommon.PlatformCheck' LibMPlayerCommon.Player,
+LibMPlayerCommon,Seek,0,0,0,0,0,6,0,0,0,-1,0,3,,LibMPlayerCommon.Player' LibMPlayerCommon.MPlayer' LibMPlayerCommon.MpvPlayer
+LibMPlayerCommon,SlideShow,10,14,0,0,4,220,29,0,0,0.14,5,0,LibMPlayerCommon.Globals' LibMPlayerCommon.Mencoder2' LibMPlayerCommon.MplayerEvent' LibMPlayerCommon.SlideShowEffect' LibMPlayerCommon.SlideShowInfo,
+LibMPlayerCommon,SlideShowEffect,0,0,0,0,0,11,0,0,0,-1,0,2,,LibMPlayerCommon.SlideShow' LibMPlayerCommon.SlideShowInfo
+LibMPlayerCommon,SlideShowInfo,0,1,2,0,1,13,1,0,0,-1,1,1,LibMPlayerCommon.SlideShowEffect,LibMPlayerCommon.SlideShow
+LibMPlayerCommon,TimeConversion,0,1,0,0,1,32,4,0,0,-1,1,0,LibMPlayerCommon.MPlayerControlException,

@@ -1,1 +1,35 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SqsAll,ClientFactory,0,3,0,0,3,15,3,0,0,-1,0,13,,SqsAll.SqsTransportConfigurationExtensions' SqsAll.ErrorQueue.ErrorQueue' SqsAll.NativeSend.Tests' SqsAll.QueueDeletion.QueueDeletionUtils' SqsAll.ErrorQueue.Tests' SqsAll.QueueDeletion.QueueExistenceUtils' SqsAll.QueueDeletion.QueueAccessUtils' SqsAll.QueueCreation.QueueCreationUtils' SqsAll.QueueCreation.CreateEndpointQueuesCloudFormation' SqsAll.QueueDeletion.QueueDeletionUtilsCloudFormation' SqsAll.QueueCreation.QueueCreationUtilsCloudFormation' SqsAll.QueueDeletion.DeleteEndpointQueuesCloudFormation' SqsAll.QueueDeletion.Tests
+SqsAll,EnvironmentHelper,0,1,0,0,1,12,2,0,0,-1,0,1,,SqsAll.SqsTransportConfigurationExtensions
+SqsAll,QueueNameHelper,0,1,0,0,1,31,5,0,0,-1,0,12,,SqsAll.QueueCreation.CreateEndpointQueuesCloudFormation' SqsAll.QueueCreation.QueueCreationUtilsCloudFormation' SqsAll.QueueCreation.QueueCreationUtils' SqsAll.QueueDeletion.DeleteEndpointQueuesCloudFormation' SqsAll.QueueDeletion.QueueDeletionUtilsCloudFormation' SqsAll.QueueDeletion.QueueExistenceUtils' SqsAll.QueueDeletion.QueueAccessUtils' SqsAll.QueueDeletion.QueueDeletionUtils' SqsAll.QueueDeletion.Tests' SqsAll.ErrorQueue.Tests' SqsAll.NativeSend.NativeSend' SqsAll.ErrorQueue.ErrorQueue
+SqsAll,SqsTransportConfigurationExtensions,1,1,1,0,1,19,3,0,0,0,2,1,SqsAll.ClientFactory' SqsAll.EnvironmentHelper,SqsAll.NativeSend.Tests
+SqsAll.ErrorQueue,ErrorQueue,0,5,0,0,1,79,7,0,0,-1,3,1,SqsAll.ClientFactory' SqsAll.QueueNameHelper' SqsAll.ErrorQueue.TransportMessage,SqsAll.ErrorQueue.Tests
+SqsAll.ErrorQueue,TransportMessage,0,0,3,0,0,6,0,0,0,-1,0,1,,SqsAll.ErrorQueue.ErrorQueue
+SqsAll.ErrorQueue,HeaderInfo,0,0,2,0,0,5,0,0,0,-1,0,0,,
+SqsAll.ErrorQueue,Tests,0,4,0,0,1,114,4,0,0,-1,7,0,SqsAll.ClientFactory' SqsAll.QueueNameHelper' SqsAll.ErrorQueue.ErrorQueue' SqsAll.ErrorQueue.State' SqsAll.ErrorQueue.MessageToSend' SqsAll.QueueDeletion.DeleteEndpointQueues' SqsAll.QueueDeletion.QueueDeletionUtils,
+SqsAll.ErrorQueue,State,2,1,0,2,1,12,1,0,0,0,0,1,,SqsAll.ErrorQueue.Tests
+SqsAll.ErrorQueue,MessageHandler,1,2,0,0,2,18,3,0,0,1,0,0,,
+SqsAll.ErrorQueue,MessageToSend,0,0,0,0,0,4,0,0,0,-1,0,1,,SqsAll.ErrorQueue.Tests
+SqsAll.NativeSend,NativeSend,0,3,0,0,2,77,3,0,0,-1,1,1,SqsAll.QueueNameHelper,SqsAll.NativeSend.Tests
+SqsAll.NativeSend,Tests,0,6,0,0,4,218,6,0,0,-1,7,0,SqsAll.ClientFactory' SqsAll.SqsTransportConfigurationExtensions' SqsAll.NativeSend.NativeSend' SqsAll.NativeSend.State' SqsAll.NativeSend.MessageToSend' SqsAll.QueueDeletion.DeleteEndpointQueues' SqsAll.QueueDeletion.QueueDeletionUtils,
+SqsAll.NativeSend,State,1,1,0,1,1,11,1,0,0,0,0,1,,SqsAll.NativeSend.Tests
+SqsAll.NativeSend,MessageHandler,1,2,0,0,2,14,2,0,0,1,0,0,,
+SqsAll.NativeSend,MessageToSend,0,0,1,0,0,5,0,0,0,-1,0,1,,SqsAll.NativeSend.Tests
+SqsAll.QueueCreation,CloudFormationHelper,0,1,0,0,1,14,1,0,0,-1,0,2,,SqsAll.QueueCreation.CreateEndpointQueuesCloudFormation' SqsAll.QueueCreation.QueueCreationUtilsCloudFormation
+SqsAll.QueueCreation,CreateEndpointQueues,0,2,0,0,1,48,4,0,0,-1,1,2,SqsAll.QueueCreation.QueueCreationUtils,SqsAll.QueueDeletion.Tests' SqsAll.QueueCreation.Tests
+SqsAll.QueueCreation,CreateEndpointQueuesCloudFormation,0,2,0,0,1,67,3,0,0,-1,4,1,SqsAll.ClientFactory' SqsAll.QueueNameHelper' SqsAll.QueueCreation.CloudFormationHelper' SqsAll.QueueCreation.QueueCreationUtils,SqsAll.QueueCreation.Tests
+SqsAll.QueueCreation,QueueCreationUtils,1,1,0,1,1,31,2,0,0,0,2,5,SqsAll.ClientFactory' SqsAll.QueueNameHelper,SqsAll.QueueCreation.CreateEndpointQueuesCloudFormation' SqsAll.QueueCreation.QueueCreationUtilsUsage' SqsAll.QueueCreation.CreateEndpointQueues' SqsAll.QueueCreation.Tests' SqsAll.QueueDeletion.Tests
+SqsAll.QueueCreation,QueueCreationUtilsCloudFormation,1,1,0,0,1,44,2,0,0,0,3,2,SqsAll.ClientFactory' SqsAll.QueueNameHelper' SqsAll.QueueCreation.CloudFormationHelper,SqsAll.QueueCreation.QueueCreationUtilsUsage' SqsAll.QueueCreation.Tests
+SqsAll.QueueCreation,QueueCreationUtilsUsage,0,1,0,0,0,32,1,0,0,-1,2,0,SqsAll.QueueCreation.QueueCreationUtils' SqsAll.QueueCreation.QueueCreationUtilsCloudFormation,
+SqsAll.QueueCreation,Tests,0,15,0,0,13,594,18,0,0,-1,12,0,SqsAll.QueueCreation.CreateEndpointQueues' SqsAll.QueueCreation.CreateEndpointQueuesCloudFormation' SqsAll.QueueCreation.QueueCreationUtils' SqsAll.QueueCreation.QueueCreationUtilsCloudFormation' SqsAll.QueueCreation.State' SqsAll.QueueCreation.MessageToSend' SqsAll.QueueDeletion.DeleteEndpointQueues' SqsAll.QueueDeletion.DeleteEndpointQueuesCloudFormation' SqsAll.QueueDeletion.QueueAccessUtils' SqsAll.QueueDeletion.QueueDeletionUtils' SqsAll.QueueDeletion.QueueDeletionUtilsCloudFormation' SqsAll.QueueDeletion.QueueExistenceUtils,
+SqsAll.QueueCreation,State,1,1,0,1,1,11,1,0,0,0,0,1,,SqsAll.QueueCreation.Tests
+SqsAll.QueueCreation,MessageHandler,1,2,0,0,2,14,2,0,0,1,0,0,,
+SqsAll.QueueCreation,MessageToSend,0,0,0,0,0,4,0,0,0,-1,0,1,,SqsAll.QueueCreation.Tests
+SqsAll.QueueDeletion,DeleteEndpointQueues,0,2,0,0,1,42,4,0,0,-1,1,4,SqsAll.QueueDeletion.QueueDeletionUtils,SqsAll.ErrorQueue.Tests' SqsAll.QueueDeletion.Tests' SqsAll.NativeSend.Tests' SqsAll.QueueCreation.Tests
+SqsAll.QueueDeletion,DeleteEndpointQueuesCloudFormation,0,2,0,0,1,50,3,0,0,-1,2,1,SqsAll.ClientFactory' SqsAll.QueueNameHelper,SqsAll.QueueCreation.Tests
+SqsAll.QueueDeletion,QueueAccessUtils,0,1,0,0,1,21,1,0,0,-1,2,1,SqsAll.ClientFactory' SqsAll.QueueNameHelper,SqsAll.QueueCreation.Tests
+SqsAll.QueueDeletion,QueueDeletionUtils,0,4,0,0,2,81,6,0,0,-1,2,6,SqsAll.ClientFactory' SqsAll.QueueNameHelper,SqsAll.ErrorQueue.Tests' SqsAll.QueueDeletion.QueueDeletionUtilsUsage' SqsAll.NativeSend.Tests' SqsAll.QueueDeletion.DeleteEndpointQueues' SqsAll.QueueDeletion.Tests' SqsAll.QueueCreation.Tests
+SqsAll.QueueDeletion,QueueDeletionUtilsCloudFormation,0,1,0,0,1,38,2,0,0,-1,2,2,SqsAll.ClientFactory' SqsAll.QueueNameHelper,SqsAll.QueueDeletion.QueueDeletionUtilsUsage' SqsAll.QueueCreation.Tests
+SqsAll.QueueDeletion,QueueDeletionUtilsUsage,0,1,0,0,0,18,1,0,0,-1,2,0,SqsAll.QueueDeletion.QueueDeletionUtils' SqsAll.QueueDeletion.QueueDeletionUtilsCloudFormation,
+SqsAll.QueueDeletion,QueueExistenceUtils,0,1,0,0,1,20,1,0,0,-1,2,2,SqsAll.ClientFactory' SqsAll.QueueNameHelper,SqsAll.QueueCreation.Tests' SqsAll.QueueDeletion.Tests
+SqsAll.QueueDeletion,Tests,0,11,0,0,9,330,19,0,0,-1,7,0,SqsAll.ClientFactory' SqsAll.QueueNameHelper' SqsAll.QueueCreation.CreateEndpointQueues' SqsAll.QueueCreation.QueueCreationUtils' SqsAll.QueueDeletion.DeleteEndpointQueues' SqsAll.QueueDeletion.QueueDeletionUtils' SqsAll.QueueDeletion.QueueExistenceUtils,

@@ -1,81 +1,55 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Gate,OwinConstants,20,0,0,20,0,23,0,0,0,-1,0,9,,Owin.HeadSuppression' Owin.Static' Owin.ContentLength' Owin.Cascade' Gate.Middleware.HeadSuppression' Gate.Middleware.Static' Gate.Middleware.ContentLength' Gate.Middleware.Cascade' Gate.Middleware.WebSockets.OpaqueToWebSocket
-Gate,AppBuilderMapExtensions,0,3,0,0,3,26,3,0,0,-1,1,0,Gate.Mapping.UrlMapper,
-Owin,StartupExtensions,0,18,0,0,18,184,38,0,0,-1,0,0,,
-Owin,HeadSuppressionExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Owin,HeadSuppression,1,2,0,0,2,17,3,0,0,0,3,0,Gate.Middleware.HeadSuppression' Gate.Request' Gate.OwinConstants,
-Owin,ValidatorExtensions,0,1,0,0,1,18,3,0,0,-1,2,0,Gate.BuilderProperties' Gate.Middleware.PassiveValidator,
-Owin,PassiveValidator,1,10,0,0,2,413,54,0,0,0.9,8,0,Gate.Middleware.PassiveValidator' Gate.Request' Gate.Middleware.Utils.TriggerStream' System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchResult' Gate.BuilderProperties' Gate.Response,
-Owin,LoggerExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Owin,RequestLogger,2,7,0,0,3,65,11,0,0,0.71,3,0,Gate.Middleware.RequestLogger' Gate.Request' Gate.Response,
-Owin,TracerExtensions,0,1,0,0,1,9,1,0,0,-1,1,0,Gate.BuilderProperties,
-Owin,RequestTracer,2,8,0,0,3,86,12,0,0,0,4,0,Gate.Request' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchResult' Gate.Response,
+Gate,OwinConstants,20,0,0,20,0,28,0,0,0,-1,0,9,,Gate.Mapping.UrlMapper' Gate.Middleware.HeadSuppression' Gate.Middleware.ContentLength' Gate.Middleware.Static' Gate.Middleware.Cascade' Gate.Middleware.WebSockets.OpaqueToWebSocket' Gate.BuilderProperties' Gate.Response' Gate.Request
+Gate,AppBuilderMapExtensions,0,3,0,0,3,31,3,0,0,-1,2,0,Gate.Mapping.MapBuilder' Gate.Mapping.UrlMapper,
+Owin,StartupExtensions,0,18,0,0,18,216,38,0,0,-1,0,0,,
+Owin,HeadSuppressionExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.HeadSuppression,
+Owin,ValidatorExtensions,0,1,0,0,1,18,3,0,0,-1,1,0,Gate.Middleware.PassiveValidator,
+Owin,LoggerExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.RequestLogger,
+Owin,TracerExtensions,0,1,0,0,1,9,1,0,0,-1,1,0,Gate.Middleware.RequestTracer,
 Owin,StaticExtensions,0,4,0,0,4,19,4,0,0,-1,1,0,Gate.Middleware.Static,
-Owin,Static,3,7,0,0,7,61,11,0,0,0,3,0,Gate.Middleware.StaticFiles.FileServer' Gate.Middleware.Static' Gate.OwinConstants,
-Owin,ContentLengthExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Owin,ContentLength,1,3,0,0,2,65,3,0,0,0.67,6,0,Gate.Middleware.ContentLength' Gate.Request' Gate.Response' Gate.Middleware.Utils.TriggerStream' Gate.OwinConstants' System.Threading.Tasks.TaskHelpers,
-Owin,ChunkedExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Owin,Chunked,4,5,0,0,4,125,6,0,0,0.6,6,0,Gate.Middleware.Chunked' Gate.Request' Gate.Response' Gate.Middleware.Utils.TriggerStream' Gate.Middleware.Utils.FilterStream' System.Threading.Tasks.TaskHelpers,
-Owin,CascadeExtensions,0,2,0,0,2,12,2,0,0,-1,0,0,,
-Owin,Cascade,2,2,0,0,2,92,3,0,0,0,6,0,Gate.Middleware.Cascade' Gate.Response' Gate.Middleware.Utils.TriggerStream' System.Threading.Tasks.CatchInfo' Gate.OwinConstants' System.Threading.Tasks.CatchResult,
-Owin,ContentTypeExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Owin,ContentType,3,3,0,0,3,36,3,0,0,0,3,0,Gate.Middleware.ContentType' Gate.Response' Gate.Middleware.Utils.TriggerStream,
+Owin,ContentLengthExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.ContentLength,
+Owin,ChunkedExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.Chunked,
+Owin,CascadeExtensions,0,2,0,0,2,12,2,0,0,-1,1,0,Gate.Middleware.Cascade,
+Owin,ContentTypeExtensions,0,2,0,0,2,11,2,0,0,-1,1,0,Gate.Middleware.ContentType,
 Owin,ShowExceptionsExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.ShowExceptions,
-Owin,ShowExceptions,0,7,0,0,1,153,11,0,0,-1,7,0,Gate.Response' Gate.Middleware.Utils.TriggerStream' System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchResult' Gate.Middleware.Chunk' Gate.Middleware.Frame,
-Owin,Chunk,3,3,1,3,3,32,4,0,0,0,1,0,Gate.Middleware.Chunk,
-Owin,Frame,7,0,0,7,0,10,0,0,0,-1,0,0,,
-Owin,TraceExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Owin,TraceMethod,1,2,0,0,2,38,6,0,0,0,3,0,Gate.Middleware.TraceMethod' Gate.Request' Gate.Response,
-Owin,XSendFileExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Owin,XSendFile,1,2,0,0,2,48,2,0,0,0,3,0,Gate.Middleware.XSendFile' Gate.Response' System.Threading.Tasks.TaskHelpers,
-System.Threading.Tasks,TaskHelpers,2,18,0,0,1,345,35,0,0,0.44,0,16,,Owin.PassiveValidator' Owin.ContentLength' Owin.Chunked' Owin.ShowExceptions' Owin.XSendFile' System.Threading.Tasks.TaskHelpersExtensions' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchInfo<T>' Gate.Middleware.NotFound' Gate.Middleware.PassiveValidator' Gate.Middleware.ContentLength' Gate.Middleware.Chunked' Gate.Middleware.ShowExceptions' Gate.Middleware.Wilson' Gate.Middleware.XSendFile' Gate.Middleware.StaticFiles.FileServer
-System.Threading.Tasks,AsyncVoid,0,0,0,0,0,5,0,0,0,-1,0,0,,
-System.Threading.Tasks,CancelCache<TResult>,1,1,0,1,0,10,1,0,0,0,0,0,,
-System.Threading.Tasks,TaskHelpersExtensions,2,33,0,0,0,745,67,0,0,0.39,2,0,System.Threading.Tasks.CatchResult' System.Threading.Tasks.TaskHelpers,
-System.Threading.Tasks,CatchInfoBase<TTask>,2,2,1,0,1,37,2,0,0,0,1,0,System.Threading.Tasks.CatchResult,
-System.Threading.Tasks,CatchResult,0,0,1,0,0,7,0,0,0,-1,0,12,,Owin.PassiveValidator' Owin.RequestTracer' Owin.Cascade' Owin.ShowExceptions' System.Threading.Tasks.TaskHelpersExtensions' System.Threading.Tasks.CatchInfoBase<TTask>' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchInfo<T>' Gate.Middleware.PassiveValidator' Gate.Middleware.RequestTracer' Gate.Middleware.Cascade' Gate.Middleware.ShowExceptions
-System.Threading.Tasks,CatchInfo,1,4,0,0,4,35,4,0,0,1,2,8,System.Threading.Tasks.CatchResult' System.Threading.Tasks.TaskHelpers,Owin.PassiveValidator' Owin.RequestTracer' Owin.Cascade' Owin.ShowExceptions' Gate.Middleware.PassiveValidator' Gate.Middleware.RequestTracer' Gate.Middleware.Cascade' Gate.Middleware.ShowExceptions
-System.Threading.Tasks,CatchInfo<T>,0,4,0,0,4,35,4,0,0,-1,2,0,System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.CatchResult,
-Gate.Middleware,HeadSuppressionExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Gate.Middleware,HeadSuppression,1,2,0,0,2,17,3,0,0,0,2,1,Gate.Request' Gate.OwinConstants,Owin.HeadSuppression
-Gate.Middleware,NotFound,1,2,0,0,2,31,3,0,0,1,3,0,Gate.Response' Gate.Request' System.Threading.Tasks.TaskHelpers,
-Gate.Middleware,ValidatorExtensions,0,1,0,0,1,18,3,0,0,-1,2,0,Gate.BuilderProperties' Gate.Middleware.PassiveValidator,
-Gate.Middleware,PassiveValidator,1,10,0,0,2,413,54,0,0,0.2,7,3,Gate.Request' Gate.Middleware.Utils.TriggerStream' System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchResult' Gate.BuilderProperties' Gate.Response,Owin.ValidatorExtensions' Owin.PassiveValidator' Gate.Middleware.ValidatorExtensions
-Gate.Middleware,LoggerExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Gate.Middleware,RequestLogger,2,7,0,0,3,65,11,0,0,0,2,1,Gate.Request' Gate.Response,Owin.RequestLogger
-Gate.Middleware,TracerExtensions,0,1,0,0,1,9,1,0,0,-1,1,0,Gate.BuilderProperties,
-Gate.Middleware,RequestTracer,2,8,0,0,3,86,12,0,0,0,4,0,Gate.Request' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchResult' Gate.Response,
-Gate.Middleware,MethodOverride,0,2,0,0,2,18,2,0,0,-1,1,0,Gate.Request,
-Gate.Middleware,StaticExtensions,0,4,0,0,4,19,4,0,0,-1,1,0,Gate.Middleware.Static,
-Gate.Middleware,Static,3,7,0,0,7,61,11,0,0,0,2,3,Gate.Middleware.StaticFiles.FileServer' Gate.OwinConstants,Owin.StaticExtensions' Owin.Static' Gate.Middleware.StaticExtensions
-Gate.Middleware,ContentLengthExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Gate.Middleware,ContentLength,1,3,0,0,2,65,3,0,0,0,5,1,Gate.Request' Gate.Response' Gate.Middleware.Utils.TriggerStream' Gate.OwinConstants' System.Threading.Tasks.TaskHelpers,Owin.ContentLength
-Gate.Middleware,ChunkedExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Gate.Middleware,Chunked,4,5,0,0,4,125,6,0,0,0,5,1,Gate.Request' Gate.Response' Gate.Middleware.Utils.TriggerStream' Gate.Middleware.Utils.FilterStream' System.Threading.Tasks.TaskHelpers,Owin.Chunked
-Gate.Middleware,CascadeExtensions,0,2,0,0,2,12,2,0,0,-1,0,0,,
-Gate.Middleware,Cascade,2,2,0,0,2,92,3,0,0,0,5,1,Gate.Response' Gate.Middleware.Utils.TriggerStream' System.Threading.Tasks.CatchInfo' Gate.OwinConstants' System.Threading.Tasks.CatchResult,Owin.Cascade
-Gate.Middleware,ContentTypeExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Gate.Middleware,ContentType,3,3,0,0,3,36,3,0,0,0,2,1,Gate.Response' Gate.Middleware.Utils.TriggerStream,Owin.ContentType
-Gate.Middleware,ShowExceptionsExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.ShowExceptions,
-Gate.Middleware,ShowExceptions,0,8,0,0,1,649,30,0,0,-1,8,3,Gate.Response' Gate.Middleware.Utils.TriggerStream' System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchResult' Gate.Middleware.Chunk' Gate.Middleware.Frame' Gate.Request,Owin.ShowExceptionsExtensions' Gate.Middleware.ShowExceptionsExtensions' Sample.Nancy.Startup
-Gate.Middleware,Chunk,3,3,1,3,3,32,4,0,0,0,0,3,,Owin.ShowExceptions' Owin.Chunk' Gate.Middleware.ShowExceptions
-Gate.Middleware,Frame,7,0,0,7,0,10,0,0,0,-1,0,2,,Owin.ShowExceptions' Gate.Middleware.ShowExceptions
-Gate.Middleware,TraceExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Gate.Middleware,TraceMethod,1,2,0,0,2,38,6,0,0,0,2,1,Gate.Request' Gate.Response,Owin.TraceMethod
-Gate.Middleware,Wilson,0,3,0,0,3,36,5,0,0,-1,4,2,Gate.Middleware.WilsonAsync' Gate.Request' Gate.Response' System.Threading.Tasks.TaskHelpers,Sample.Nancy.Startup' Samples.ViaRouting.Startup
-Gate.Middleware,WilsonAsync,0,3,0,0,2,67,4,0,0,-1,2,2,Gate.Request' Gate.Response,Gate.Middleware.Wilson' Samples.ViaRouting.Startup
-Gate.Middleware,XSendFileExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Gate.Middleware,XSendFile,1,2,0,0,2,48,2,0,0,0,2,1,Gate.Response' System.Threading.Tasks.TaskHelpers,Owin.XSendFile
-Gate.Mapping,MapBuilder,3,5,1,0,5,33,5,0,0,0,0,0,,
-Gate.Mapping,UrlMapper,2,4,0,0,3,89,6,0,0,0,1,1,Gate.Mapping.Paths,Gate.AppBuilderMapExtensions
-Gate.Mapping,Paths,3,1,2,0,1,38,2,0,0,0,0,1,,Gate.Mapping.UrlMapper
-Gate.Middleware.StaticFiles,FileBody,3,5,0,0,3,44,7,0,0,0,0,1,,Gate.Middleware.StaticFiles.FileServer
-Gate.Middleware.StaticFiles,FileServer,6,4,0,0,2,119,9,0,0,0,6,2,Gate.Request' Gate.Response' System.Threading.Tasks.TaskHelpers' Gate.Middleware.StaticFiles.FileBody' Gate.Middleware.Utils.RangeHeader' Gate.Middleware.StaticFiles.Mime,Owin.Static' Gate.Middleware.Static
+Owin,TraceExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.TraceMethod,
+Owin,XSendFileExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,Gate.Middleware.XSendFile,
+System.Threading.Tasks,TaskHelpers,2,18,0,0,1,384,34,0,0,0.44,2,11,System.Threading.Tasks.AsyncVoid' System.Threading.Tasks.CancelCache<TResult>,Gate.Middleware.NotFound' Gate.Middleware.PassiveValidator' Gate.Middleware.Chunked' Gate.Middleware.Wilson' Gate.Middleware.StaticFiles.FileServer' Gate.Middleware.ShowExceptions' Gate.Middleware.ContentLength' Gate.Middleware.XSendFile' System.Threading.Tasks.TaskHelpersExtensions' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchInfo<T>
+System.Threading.Tasks,AsyncVoid,0,0,0,0,0,5,0,0,0,-1,0,2,,System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.TaskHelpersExtensions
+System.Threading.Tasks,CancelCache<TResult>,1,1,0,1,0,11,1,0,0,0,0,1,,System.Threading.Tasks.TaskHelpers
+System.Threading.Tasks,TaskHelpersExtensions,2,33,0,0,0,819,68,0,0,0.39,5,0,System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.AsyncVoid' System.Threading.Tasks.CatchResult' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchInfo<T>,
+System.Threading.Tasks,CatchInfoBase<TTask>,2,2,1,0,1,41,2,0,0,0,1,2,System.Threading.Tasks.CatchResult,System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchInfo<T>
+System.Threading.Tasks,CatchResult,0,0,1,0,0,7,0,0,0,-1,0,4,,System.Threading.Tasks.TaskHelpersExtensions' System.Threading.Tasks.CatchInfoBase<TTask>' System.Threading.Tasks.CatchInfo' System.Threading.Tasks.CatchInfo<T>
+System.Threading.Tasks,CatchInfo,1,4,0,0,4,39,4,0,0,1,3,1,System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.CatchInfoBase<TTask>' System.Threading.Tasks.CatchResult,System.Threading.Tasks.TaskHelpersExtensions
+System.Threading.Tasks,CatchInfo<T>,0,4,0,0,4,38,4,0,0,-1,3,1,System.Threading.Tasks.TaskHelpers' System.Threading.Tasks.CatchInfoBase<TTask>' System.Threading.Tasks.CatchResult,System.Threading.Tasks.TaskHelpersExtensions
+Gate.Middleware,HeadSuppression,1,2,0,0,2,20,3,0,0,1,3,1,Gate.OwinConstants' Gate.OwinConstants' Gate.OwinConstants,Owin.HeadSuppressionExtensions
+Gate.Middleware,NotFound,1,2,0,0,2,35,3,0,0,1,1,0,System.Threading.Tasks.TaskHelpers,
+Gate.Middleware,PassiveValidator,1,10,0,0,2,413,57,0,0,0.3,2,1,System.Threading.Tasks.TaskHelpers' Gate.Middleware.Utils.TriggerStream,Owin.ValidatorExtensions
+Gate.Middleware,RequestLogger,2,7,0,0,3,80,11,0,0,0,0,1,,Owin.LoggerExtensions
+Gate.Middleware,RequestTracer,2,8,0,0,3,100,12,0,0,0,0,1,,Owin.TracerExtensions
+Gate.Middleware,MethodOverride,0,2,0,0,2,18,2,0,0,-1,0,0,,
+Gate.Middleware,Static,3,7,0,0,7,61,11,0,0,0.86,4,1,Gate.OwinConstants' Gate.Middleware.StaticFiles.FileServer' Gate.OwinConstants' Gate.OwinConstants,Owin.StaticExtensions
+Gate.Middleware,ContentLength,1,3,0,0,2,65,3,0,0,0.67,5,1,Gate.OwinConstants' System.Threading.Tasks.TaskHelpers' Gate.Middleware.Utils.TriggerStream' Gate.OwinConstants' Gate.OwinConstants,Owin.ContentLengthExtensions
+Gate.Middleware,Chunked,4,5,0,0,4,125,6,0,0,0.4,3,1,System.Threading.Tasks.TaskHelpers' Gate.Middleware.Utils.FilterStream' Gate.Middleware.Utils.TriggerStream,Owin.ChunkedExtensions
+Gate.Middleware,Cascade,2,2,0,0,2,92,3,0,0,0,4,1,Gate.OwinConstants' Gate.Middleware.Utils.TriggerStream' Gate.OwinConstants' Gate.OwinConstants,Owin.CascadeExtensions
+Gate.Middleware,ContentType,3,3,0,0,3,36,3,0,0,0.67,1,1,Gate.Middleware.Utils.TriggerStream,Owin.ContentTypeExtensions
+Gate.Middleware,ShowExceptions,0,8,0,0,1,649,32,0,0,-1,4,1,System.Threading.Tasks.TaskHelpers' Gate.Middleware.Chunk' Gate.Middleware.Frame' Gate.Middleware.Utils.TriggerStream,Owin.ShowExceptionsExtensions
+Gate.Middleware,Chunk,3,3,1,3,3,32,4,0,0,0,0,1,,Gate.Middleware.ShowExceptions
+Gate.Middleware,Frame,7,0,0,7,0,10,0,0,0,-1,0,1,,Gate.Middleware.ShowExceptions
+Gate.Middleware,TraceMethod,1,2,0,0,2,46,6,0,0,1,0,1,,Owin.TraceExtensions
+Gate.Middleware,Wilson,0,3,0,0,3,36,5,0,0,-1,2,0,System.Threading.Tasks.TaskHelpers' Gate.Middleware.WilsonAsync,
+Gate.Middleware,WilsonAsync,0,3,0,0,2,67,4,0,0,-1,0,1,,Gate.Middleware.Wilson
+Gate.Middleware,XSendFile,1,2,0,0,2,56,2,0,0,1,1,1,System.Threading.Tasks.TaskHelpers,Owin.XSendFileExtensions
+Gate.Mapping,MapBuilder,3,5,1,0,5,38,5,0,0,0,0,1,,Gate.AppBuilderMapExtensions
+Gate.Mapping,UrlMapper,2,4,0,0,3,100,6,0,0,0,4,1,Gate.OwinConstants' Gate.Mapping.Paths' Gate.OwinConstants' Gate.OwinConstants,Gate.AppBuilderMapExtensions
+Gate.Mapping,Paths,3,1,2,0,1,42,2,0,0,0,0,1,,Gate.Mapping.UrlMapper
+Gate.Middleware.StaticFiles,FileBody,3,5,0,0,3,44,7,0,0,0.4,0,1,,Gate.Middleware.StaticFiles.FileServer
+Gate.Middleware.StaticFiles,FileServer,6,4,0,0,2,119,11,0,0,0.5,4,1,System.Threading.Tasks.TaskHelpers' Gate.Middleware.StaticFiles.FileBody' Gate.Middleware.StaticFiles.Mime' Gate.Middleware.Utils.RangeHeader,Gate.Middleware.Static
 Gate.Middleware.StaticFiles,Mime,1,1,0,1,1,189,3,0,0,0,0,1,,Gate.Middleware.StaticFiles.FileServer
-Gate.Middleware.StaticFiles,TextBody,2,3,0,0,3,39,3,0,0,0,0,0,,
+Gate.Middleware.StaticFiles,TextBody,2,3,0,0,3,39,3,0,0,0.67,0,0,,
 Gate.Middleware.Utils,HttpFormatExtensions,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Gate.Middleware.Utils,RangeHeader,1,3,0,0,2,87,10,0,0,0,0,1,,Gate.Middleware.StaticFiles.FileServer
-Gate.Middleware.Utils,FilterStream,2,12,8,0,12,112,15,0,0,0,0,2,,Owin.Chunked' Gate.Middleware.Chunked
-Gate.Middleware.Utils,TriggerStream,0,16,11,0,14,119,19,0,0,-1,0,12,,Owin.PassiveValidator' Owin.ContentLength' Owin.Chunked' Owin.Cascade' Owin.ContentType' Owin.ShowExceptions' Gate.Middleware.PassiveValidator' Gate.Middleware.ContentLength' Gate.Middleware.Chunked' Gate.Middleware.Cascade' Gate.Middleware.ContentType' Gate.Middleware.ShowExceptions
-Gate.Middleware.WebSockets,OpaqueToWebSocket,0,4,0,0,2,69,4,0,0,-1,4,0,Gate.Request' Gate.Response' Gate.Middleware.WebSockets.WebSocketLayer' Gate.OwinConstants,
+Gate.Middleware.Utils,RangeHeader,1,3,0,0,2,87,13,0,0,0,0,1,,Gate.Middleware.StaticFiles.FileServer
+Gate.Middleware.Utils,FilterStream,2,12,8,0,12,136,15,0,0,0,0,1,,Gate.Middleware.Chunked
+Gate.Middleware.Utils,TriggerStream,0,16,11,0,14,143,19,0,0,-1,0,6,,Gate.Middleware.Chunked' Gate.Middleware.ContentLength' Gate.Middleware.PassiveValidator' Gate.Middleware.ShowExceptions' Gate.Middleware.ContentType' Gate.Middleware.Cascade
+Gate.Middleware.WebSockets,OpaqueToWebSocket,0,4,0,0,2,69,4,0,0,-1,4,0,Gate.OwinConstants' Gate.Middleware.WebSockets.WebSocketLayer' Gate.OwinConstants' Gate.OwinConstants,
 Gate.Middleware.WebSockets,WebSocketLayer,3,5,1,0,5,44,5,0,0,1,0,1,,Gate.Middleware.WebSockets.OpaqueToWebSocket

@@ -1,0 +1,11 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TestCodeOnly,Address,0,0,2,0,0,4,0,2,0,-1,0,4,,TestCodeOnly.DomesticAddress' TestCodeOnly.Person' TestCodeOnly.InternationalAddress' TestCodeOnly.CodeFirstContext
+TestCodeOnly,Category,1,0,3,0,0,9,0,0,0,-1,1,2,TestCodeOnly.Product,TestCodeOnly.CodeFirstContext' TestCodeOnly.Product
+TestCodeOnly,CodeFirstContext,0,1,7,0,1,10,1,0,0,-1,7,0,TestCodeOnly.Address' TestCodeOnly.Category' TestCodeOnly.CountryCode' TestCodeOnly.DomesticAddress' TestCodeOnly.InternationalAddress' TestCodeOnly.Person' TestCodeOnly.Product,
+TestCodeOnly,CountryCode,0,0,2,0,0,6,0,0,0,-1,0,1,,TestCodeOnly.CodeFirstContext
+TestCodeOnly,DomesticAddress,0,0,1,0,0,3,0,0,1,-1,1,1,TestCodeOnly.Address,TestCodeOnly.CodeFirstContext
+TestCodeOnly,InternationalAddress,0,0,1,0,0,3,0,0,1,-1,1,1,TestCodeOnly.Address,TestCodeOnly.CodeFirstContext
+TestCodeOnly,AbstractPerson,0,0,0,0,0,1,0,1,1,-1,1,1,TestCodeOnly.AbstractTestCode,TestCodeOnly.Person
+TestCodeOnly,Person,0,1,5,0,1,10,1,0,2,-1,3,1,TestCodeOnly.Address' TestCodeOnly.AbstractPerson' TestCodeOnly.Product,TestCodeOnly.CodeFirstContext
+TestCodeOnly,AbstractTestCode,1,10,0,0,9,53,11,2,0,0,0,2,,TestCodeOnly.AbstractPerson' TestCodeOnly.Product
+TestCodeOnly,Product,1,3,4,0,3,26,3,0,1,1,2,3,TestCodeOnly.Category' TestCodeOnly.AbstractTestCode,TestCodeOnly.CodeFirstContext' TestCodeOnly.Person' TestCodeOnly.Category

@@ -1,5 +1,75 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Benchmarks,ComparisonBench,3,5,0,0,2,66,5,0,0,0,0,0,,
-System.IO.Pipelines,PipeConnection,0,2,4,0,2,19,2,0,0,-1,0,0,,
-System.IO.Pipelines.Samples,FakeListener,2,4,0,0,4,38,8,0,0,0,0,1,,System.IO.Pipelines.Samples.RawInMemoryHttpServer
-System.IO.Pipelines.Samples,RawInMemoryHttpServer,0,1,0,0,1,54,2,0,0,-1,1,0,System.IO.Pipelines.Samples.FakeListener,
+Benchmarks.ALCProxy,ITest,0,6,0,0,0,9,6,1,0,-1,1,2,Benchmarks.ALCProxy.Test2,Benchmarks.ALCProxy.Test' Benchmarks.ALCProxy.ALCBenchmark
+Benchmarks.ALCProxy,IGeneric,0,5,0,0,0,8,5,1,0,-1,1,2,Benchmarks.ALCProxy.Test2,Benchmarks.ALCProxy.GenericClass<T>' Benchmarks.ALCProxy.ALCBenchmark
+Benchmarks.ALCProxy,Test2,1,3,0,1,3,16,3,0,0,0,0,5,,Benchmarks.ALCProxy.ITest' Benchmarks.ALCProxy.IGeneric' Benchmarks.ALCProxy.GenericClass<T>' Benchmarks.ALCProxy.Test' Benchmarks.ALCProxy.ALCBenchmark
+Benchmarks.ALCProxy,GenericClass<T>,2,7,0,0,7,34,7,0,1,1,2,1,Benchmarks.ALCProxy.IGeneric' Benchmarks.ALCProxy.Test2,Benchmarks.ALCProxy.ALCBenchmark
+Benchmarks.ALCProxy,Test,0,6,0,0,6,30,6,0,1,-1,2,1,Benchmarks.ALCProxy.ITest' Benchmarks.ALCProxy.Test2,Benchmarks.ALCProxy.ALCBenchmark
+Benchmarks.ALCProxy,ALCBenchmark,9,16,0,0,16,103,16,0,0,0.25,6,0,Benchmarks.ALCProxy.ITest' Benchmarks.ALCProxy.IGeneric' Benchmarks.ALCProxy.Test2' Benchmarks.ALCProxy.GenericClass<T>' Benchmarks.ALCProxy.Test' Benchmarks.ALCProxy.TestAssemblyLoadContext,
+Benchmarks.ALCProxy,TestAssemblyLoadContext,1,3,0,0,2,21,4,0,0,0,0,1,,Benchmarks.ALCProxy.ALCBenchmark
+System.IO.Pipelines,DuplexPipe,0,2,4,0,2,19,2,0,0,-1,0,1,,System.IO.Pipelines.Samples.FakeListener
+System.IO.Pipelines.Samples,FakeListener,2,4,0,0,4,39,8,0,0,0,1,1,System.IO.Pipelines.DuplexPipe,System.IO.Pipelines.Samples.RawInMemoryHttpServer
+System.IO.Pipelines.Samples,RawInMemoryHttpServer,0,1,0,0,1,52,2,0,0,-1,1,1,System.IO.Pipelines.Samples.FakeListener,System.IO.Pipelines.Benchmarks.E2E
+Benchmarks.Microsoft.Data.Analysis,DataFrameBinaryOps,3,3,0,0,3,25,3,0,0,0,0,0,,
+Benchmarks.Microsoft.Data.Analysis,DataFrameComputations,2,6,0,0,6,37,6,0,0,0,0,0,,
+Benchmarks.Microsoft.Data.Analysis,DataFrameFunctions,8,15,0,0,15,105,16,0,0,0,0,0,,
+Microsoft.Collections.Extensions.Benchmarks,DictionarySlimFasta,8,9,0,0,2,216,28,0,0,0.44,1,1,Microsoft.Collections.Extensions.Benchmarks.Frequency,Microsoft.Collections.Extensions.Benchmarks.DictionarySlimKNucleotide
+Microsoft.Collections.Extensions.Benchmarks,Frequency,2,1,0,2,1,10,1,0,0,0,0,1,,Microsoft.Collections.Extensions.Benchmarks.DictionarySlimFasta
+Microsoft.Collections.Extensions.Benchmarks,DictionarySlimGeneral,4,5,1,0,5,74,9,0,0,0,1,0,Microsoft.Collections.Extensions.Benchmarks.KeyWithHashCode,
+Microsoft.Collections.Extensions.Benchmarks,KeyWithHashCode,4,8,0,0,6,43,8,0,0,0,0,2,,Microsoft.Collections.Extensions.Benchmarks.DictionarySlimGeneral' Microsoft.Collections.Extensions.Benchmarks.DictionarySlimGroupBy
+Microsoft.Collections.Extensions.Benchmarks,DictionarySlimGroupBy,2,3,1,0,3,49,4,0,0,0,1,0,Microsoft.Collections.Extensions.Benchmarks.KeyWithHashCode,
+Microsoft.Collections.Extensions.Benchmarks,Enumerable2,0,1,0,0,1,23,3,0,0,-1,1,0,Microsoft.Collections.Extensions.Benchmarks.Grouping<TKey;TElement>,
+Microsoft.Collections.Extensions.Benchmarks,Grouping<TKey;TElement>,0,1,1,0,1,8,1,0,0,-1,0,1,,Microsoft.Collections.Extensions.Benchmarks.Enumerable2
+Microsoft.Collections.Extensions.Benchmarks,DictionarySlimKNucleotide,1,5,2,0,5,37,7,0,0,0.4,4,0,Microsoft.Collections.Extensions.Benchmarks.DictionarySlimFasta' Microsoft.Collections.Extensions.Benchmarks.KNucleotideHack9' Microsoft.Collections.Extensions.Benchmarks.KNucleotideDictionary' Microsoft.Collections.Extensions.Benchmarks.KNucleotideDictionarySlim,
+Microsoft.Collections.Extensions.Benchmarks,KNucleotideHack9,6,8,0,0,1,251,22,0,0,0.5,1,1,Microsoft.Collections.Extensions.Benchmarks.Incrementor,Microsoft.Collections.Extensions.Benchmarks.DictionarySlimKNucleotide
+Microsoft.Collections.Extensions.Benchmarks,Incrementor,9,4,0,0,3,68,7,0,0,0,0,1,,Microsoft.Collections.Extensions.Benchmarks.KNucleotideHack9
+Microsoft.Collections.Extensions.Benchmarks,KNucleotideDictionary,6,8,0,0,1,181,23,0,0,0.5,0,1,,Microsoft.Collections.Extensions.Benchmarks.DictionarySlimKNucleotide
+Microsoft.Collections.Extensions.Benchmarks,KNucleotideDictionarySlim,6,8,0,0,1,178,22,0,0,0.5,0,1,,Microsoft.Collections.Extensions.Benchmarks.DictionarySlimKNucleotide
+Microsoft.Collections.Extensions.Benchmarks,DictionarySlimRemove,3,6,1,0,5,59,12,0,0,0,0,0,,
+Microsoft.Collections.Extensions.Benchmarks,DictionarySlimString,4,5,1,0,5,55,10,0,0,0,0,0,,
+Microsoft.Collections.Extensions.Tests,MultiValueDictionaryPerformanceTests,4,17,1,0,16,80,24,0,0,0.18,0,0,,
+Benchmarks,Program,0,1,0,0,1,11,1,0,0,-1,0,0,,
+System.Azure.Experimental.Benchmarks,CosmosDb,21,7,0,0,5,160,21,0,0,0.29,0,0,,
+System.Azure.Experimental.Benchmarks,Storage,11,7,0,0,5,125,17,0,0,0.29,0,0,,
+System.Binary.Base64.Benchmarks,Base64Encode,5,3,0,1,3,27,3,0,0,0,0,0,,
+System.Binary.Base64.Benchmarks,Stiching,8,4,0,1,4,50,4,0,0,0,0,0,,
+System.Buffers.Benchmarks,Reader,2,4,0,0,4,46,8,0,0,0,0,0,,
+System.Buffers.Benchmarks,Reader_Advance,3,5,0,0,5,73,11,0,0,0,0,0,,
+System.Buffers.Benchmarks,Reader_Binary,3,5,0,0,5,49,9,0,0,0,0,0,,
+System.Buffers.Benchmarks,Reader_Construction,3,3,0,0,3,25,3,0,0,0,0,0,,
+System.Buffers.Benchmarks,Reader_ParseInt,3,3,0,0,3,34,5,0,0,0,0,0,,
+System.Buffers.Benchmarks,Reader_Search,3,15,0,0,15,139,29,0,0,0,0,0,,
+System.Buffers.Benchmarks,Writer,17,4,0,0,4,108,4,0,0,0,5,0,System.Buffers.Benchmarks.Sink' System.Buffers.Benchmarks.AsciiString' System.Buffers.Benchmarks.DateHeader' PlatfromBenchmark.BufferWriter' System.Buffers.BufferWriterInternal,
+System.Buffers.Benchmarks,Sink,2,5,0,0,5,20,6,0,0,0,0,1,,System.Buffers.Benchmarks.Writer
+System.Buffers.Benchmarks,AsciiString,1,7,1,0,6,30,8,0,0,0,0,1,,System.Buffers.Benchmarks.Writer
+System.Buffers.Benchmarks,DateHeader,6,2,1,0,1,35,3,0,0,0,0,1,,System.Buffers.Benchmarks.Writer
+PlatfromBenchmark,BufferWriter,3,8,1,0,6,94,16,0,0,0,0,1,,System.Buffers.Benchmarks.Writer
+System.Buffers,BufferWriterInternal,3,9,1,0,6,98,17,0,0,0,0,1,,System.Buffers.Benchmarks.Writer
+System.Buffers,SpanLiteralExtensions,0,2,0,0,0,62,15,0,0,-1,0,1,,System.Buffers.Tests.BufferSegment<T>
+System.IO.Pipelines.Benchmarks,E2E,2,2,0,0,2,48,2,0,0,0,1,0,System.IO.Pipelines.Samples.RawInMemoryHttpServer,
+System.Memory.Benchmarks,SimdConfig,0,1,0,0,1,9,1,0,0,-1,0,1,,System.Memory.Benchmarks.IndexOf
+System.Memory.Benchmarks,IndexOf,1,2,0,0,2,30,2,0,0,1,1,0,System.Memory.Benchmarks.SimdConfig,
+System.Memory.Benchmarks,Slice,2,2,0,0,2,24,2,0,0,0,0,0,,
+System.Text.CaseFolding.Benchmarks,StringComparerBenchmark,0,3,0,0,3,21,3,0,0,-1,0,0,,
+System.Text.CaseFolding,StringFoldingBenchmark,0,4,0,0,4,26,4,0,0,-1,0,0,,
+System.Text.Encodings.Web.Utf8.Benchmarks,UrlEncoderPerf,1,2,0,0,2,26,4,0,0,0,0,0,,
+System.Text.Formatting.Benchmarks,StringFormatterPerf,2,13,1,0,13,183,25,0,0,0.46,2,0,System.Text.Formatting.Benchmarks.Age' System.Text.Formatting.Benchmarks.CustomUtf16SymbolTable,
+System.Text.Formatting.Benchmarks,Age,2,3,0,0,3,24,5,0,0,0,0,1,,System.Text.Formatting.Benchmarks.StringFormatterPerf
+System.Text.Formatting.Benchmarks,CustomUtf16SymbolTable,0,5,0,0,5,12,5,0,0,-1,0,1,,System.Text.Formatting.Benchmarks.StringFormatterPerf
+System.Text.Http.Parser.Benchmarks,HttpParser<T>,8,3,0,0,3,43,3,0,0,0,2,0,System.Text.Http.Parser.Benchmarks.Request' System.Text.Http.Parser.Benchmarks.RequestStruct,
+System.Text.Http.Parser.Benchmarks,Request,0,2,0,0,2,23,2,0,1,-1,0,1,,System.Text.Http.Parser.Benchmarks.HttpParser<T>
+System.Text.Http.Parser.Benchmarks,RequestStruct,0,2,0,0,2,23,2,0,1,-1,0,1,,System.Text.Http.Parser.Benchmarks.HttpParser<T>
+System.Text.Primitives.Benchmarks,AsciiCasing,3,5,0,1,5,21,5,0,0,0,0,0,,
+System.Text.Primitives.Benchmarks,AsciiDecoding,2,4,0,1,4,14,4,0,0,0,0,0,,
+System.Text.Primitives.Benchmarks,CodePoint,0,2,5,0,2,31,2,0,0,-1,2,5,System.Text.Primitives.Benchmarks.EncoderHelper' System.Text.Primitives.Benchmarks.SpecialTestCases,System.Text.Primitives.Benchmarks.EncodeFromUtf16toUtf8' System.Text.Primitives.Benchmarks.EncodeFromUtf32toUtf8' System.Text.Primitives.Benchmarks.EncodeFromUtf8toUtf16' System.Text.Primitives.Benchmarks.EncodeFromUtf32toUtf16' System.Text.Primitives.Benchmarks.EncoderHelper
+System.Text.Primitives.Benchmarks,EncodeFromUtf16toUtf8,6,4,0,2,4,38,5,0,0,0.5,2,0,System.Text.Primitives.Benchmarks.CodePoint' System.Text.Primitives.Benchmarks.EncoderHelper,
+System.Text.Primitives.Benchmarks,EncodeFromUtf32toUtf16,6,4,0,2,4,40,6,0,0,0.5,2,0,System.Text.Primitives.Benchmarks.CodePoint' System.Text.Primitives.Benchmarks.EncoderHelper,
+System.Text.Primitives.Benchmarks,EncodeFromUtf32toUtf8,7,4,0,2,4,44,5,0,0,0.5,2,0,System.Text.Primitives.Benchmarks.CodePoint' System.Text.Primitives.Benchmarks.EncoderHelper,
+System.Text.Primitives.Benchmarks,EncodeFromUtf8toUtf16,6,4,0,2,4,42,6,0,0,0.5,2,0,System.Text.Primitives.Benchmarks.CodePoint' System.Text.Primitives.Benchmarks.EncoderHelper,
+System.Text.Primitives.Benchmarks,EncoderHelper,0,2,0,0,2,32,5,0,0,-1,2,5,System.Text.Primitives.Benchmarks.CodePoint' System.Text.Primitives.Benchmarks.SpecialTestCases,System.Text.Primitives.Benchmarks.EncodeFromUtf32toUtf8' System.Text.Primitives.Benchmarks.EncodeFromUtf8toUtf16' System.Text.Primitives.Benchmarks.EncodeFromUtf32toUtf16' System.Text.Primitives.Benchmarks.EncodeFromUtf16toUtf8' System.Text.Primitives.Benchmarks.CodePoint
+System.Text.Primitives.Benchmarks,SpecialTestCases,0,0,0,0,0,6,0,0,0,-1,0,2,,System.Text.Primitives.Benchmarks.CodePoint' System.Text.Primitives.Benchmarks.EncoderHelper
+System.Text.Primitives.Benchmarks,GetUtf16CharCount,4,5,0,1,4,38,5,0,0,0.4,0,0,,
+System.Text.Primitives.Benchmarks,PrimitiveParserPerfTests,0,12,0,0,12,82,12,0,0,-1,1,0,Benchmarks.System.Text.Primitives.Utf8ByteArrayArgument,
+Benchmarks.System.Text.Primitives,Utf8ByteArrayArgument,0,3,2,0,3,12,3,0,0,-1,0,1,,System.Text.Primitives.Benchmarks.PrimitiveParserPerfTests
+System.Text.Utf8.Benchmarks,Utf8StringPerf,3,4,0,1,3,58,10,0,0,0,1,0,System.Text.Utf8.Benchmarks.TestCaseType,
+System.Text.Utf8.Benchmarks,TestCaseType,0,0,0,0,0,7,0,0,0,-1,0,1,,System.Text.Utf8.Benchmarks.Utf8StringPerf
+System.Buffers.Tests,BufferSegment<T>,3,5,7,0,5,97,8,0,0,0.8,5,2,System.Buffers.SpanLiteralExtensions' System.Buffers.Tests.BufferSegment<T>' System.Buffers.SpanLiteralExtensions' System.Buffers.Tests.BufferSegment<T>' System.Buffers.SpanLiteralExtensions,System.Buffers.Tests.ReaderBasicTests<T>' System.Buffers.Tests.BufferUtilities

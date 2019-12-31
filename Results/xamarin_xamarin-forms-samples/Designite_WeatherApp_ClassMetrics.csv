@@ -1,6 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WeatherApp,App,0,4,0,0,1,19,4,0,0,-1,0,0,,
-WeatherApp,Core,0,1,0,0,1,30,2,0,0,-1,2,1,WeatherApp.Weather' WeatherApp.DataService,WeatherApp.WeatherPage
-WeatherApp,DataService,0,1,0,0,1,15,2,0,0,-1,0,1,,WeatherApp.Core
-WeatherApp,Weather,0,1,7,0,1,22,1,0,0,-1,0,2,,WeatherApp.Core' WeatherApp.WeatherPage
-WeatherApp,WeatherPage,0,2,0,0,1,23,4,0,0,-1,2,0,WeatherApp.Weather' WeatherApp.Core,
+WeatherApp,App,0,4,0,0,1,20,4,0,0,-1,1,0,WeatherApp.MainPage,
+WeatherApp,Constants,2,0,0,2,0,5,0,0,0,-1,0,1,,WeatherApp.MainPage
+WeatherApp,LongToDateTimeConverter,1,2,0,0,2,13,2,0,0,1,0,0,,
+WeatherApp,MainPage,1,3,0,0,1,25,4,0,0,0,3,1,WeatherApp.Constants' WeatherApp.RestService' WeatherApp.WeatherData,WeatherApp.App
+WeatherApp,RestService,1,2,0,0,2,26,3,0,0,0,1,1,WeatherApp.WeatherData,WeatherApp.MainPage
+WeatherApp,WeatherData,0,0,12,0,0,27,0,0,0,-1,6,2,WeatherApp.Clouds' WeatherApp.Coord' WeatherApp.Main' WeatherApp.Sys' WeatherApp.Weather' WeatherApp.Wind,WeatherApp.MainPage' WeatherApp.RestService
+WeatherApp,Clouds,0,0,1,0,0,5,0,0,0,-1,0,1,,WeatherApp.WeatherData
+WeatherApp,Coord,0,0,2,0,0,7,0,0,0,-1,0,1,,WeatherApp.WeatherData
+WeatherApp,Main,0,0,5,0,0,13,0,0,0,-1,0,1,,WeatherApp.WeatherData
+WeatherApp,Sys,0,0,6,0,0,15,0,0,0,-1,0,1,,WeatherApp.WeatherData
+WeatherApp,Weather,0,0,4,0,0,11,0,0,0,-1,0,1,,WeatherApp.WeatherData
+WeatherApp,Wind,0,0,2,0,0,7,0,0,0,-1,0,1,,WeatherApp.WeatherData

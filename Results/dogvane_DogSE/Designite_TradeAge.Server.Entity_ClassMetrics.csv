@@ -1,19 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-TradeAge.Server.Entity.Character,Account,0,0,6,0,0,32,0,0,1,-1,0,1,,TradeAge.Server.Logic.Login.LogicModule
-TradeAge.Server.Entity.Character,Sex,0,0,0,0,0,11,0,0,0,-1,0,3,,TradeAge.Server.Logic.Login.LogicModule' DogSE.Server.Core.Protocol.AutoCode.ILoginAccess2' TradeAge.Server.Interface.Server.ILogin
-TradeAge.Server.Entity.Character,Player,4,5,13,3,5,131,5,0,1,0,1,5,DogSE.Library.Component.ComponentManager,TradeAge.Server.Entity.GameEvent.PlayerEvents' TradeAge.Server.Logic.Game.GameModule' TradeAge.Server.Logic.Login.LogicModule' TradeAge.Server.Logic.Scene.SecneModule' TradeAge.Server.Logic.Scene.SecneUtils
-TradeAge.Server.Entity.Character,SceneSprite,2,0,6,2,0,36,0,0,0,-1,1,4,TradeAge.Server.Entity.Ship.SpeedUpTypes,TradeAge.Server.Logic.Scene.SecneUtils' DogSE.Server.Core.Protocol.AutoCode.ISceneProxy1' DogSE.Server.Core.Protocol.AutoCode.SceneSpriteWriteProxy' TradeAge.Server.Interface.Client.IScene
-TradeAge.Server.Entity.Character,SpriteType,0,0,0,0,0,19,0,0,0,-1,0,1,,TradeAge.Server.Logic.Scene.SecneUtils
-TradeAge.Server.Entity.Character,SimplePlayer,2,0,7,2,0,40,0,0,0,-1,1,4,TradeAge.Server.Entity.Ship.SpeedUpTypes,TradeAge.Server.Logic.Scene.SecneUtils' DogSE.Server.Core.Protocol.AutoCode.ISceneProxy1' DogSE.Server.Core.Protocol.AutoCode.SimplePlayerWriteProxy' TradeAge.Server.Interface.Client.IScene
-TradeAge.Server.Entity.Common,IntSequenceGenerator,3,2,0,0,2,25,2,0,0,0,0,1,,TradeAge.Server.Logic.Login.LogicModule
+TradeAge.Server.Entity.Character,Account,0,0,6,0,0,32,0,0,1,-1,0,1,,TradeAge.Server.Entity.WorldEntityManager
+TradeAge.Server.Entity.Character,Sex,0,0,0,0,0,11,0,0,0,-1,0,2,,TradeAge.Client.Entity.Character.SimplePlayer' TradeAge.Server.Entity.Character.Player
+TradeAge.Server.Entity.Character,Player,4,5,13,3,5,131,5,0,1,0,2,2,TradeAge.Server.Entity.Character.Sex' TradeAge.Server.Entity.Ship.SpeedUpTypes,TradeAge.Server.Entity.GameEvent.PlayerEvents' TradeAge.Server.Entity.WorldEntityManager
+TradeAge.Server.Entity.Character,SceneSprite,2,0,6,2,0,36,0,0,0,-1,0,0,,
+TradeAge.Server.Entity.Character,SpriteType,0,0,0,0,0,19,0,0,0,-1,0,1,,TradeAge.Client.Entity.Character.SceneSprite
+TradeAge.Server.Entity.Character,SimplePlayer,2,0,7,2,0,40,0,0,0,-1,0,1,,TradeAge.Server.Entity.WorldEntityManager
+TradeAge.Server.Entity.Common,IntSequenceGenerator,3,2,0,0,2,25,2,0,0,0,0,1,,TradeAge.Server.Entity.Common.WorldSeqGen
 TradeAge.Server.Entity.Common,LongSequenceGenerator,3,2,0,0,2,25,2,0,0,0,0,0,,
-TradeAge.Server.Entity.Common,WorldSeqGen,0,1,1,0,0,11,1,0,0,-1,0,1,,TradeAge.Server.Logic.Login.LogicModule
-TradeAge.Server.Entity.GameEvent,PlayerEvents,0,2,0,0,2,33,4,0,0,-1,1,2,TradeAge.Server.Entity.Character.Player,TradeAge.Server.Logic.Login.LogicModule' TradeAge.Server.Logic.Scene.SecneModule
-TradeAge.Server.Entity.Login,LoginServerResult,0,0,0,0,0,15,0,0,0,-1,0,3,,TradeAge.Server.Logic.Login.LogicModule' DogSE.Server.Core.Protocol.AutoCode.ILoginProxy1' TradeAge.Server.Interface.Client.ILogin
-TradeAge.Server.Entity.Login,CraetePlayerResult,0,0,0,0,0,16,0,0,0,-1,0,3,,TradeAge.Server.Logic.Login.LogicModule' DogSE.Server.Core.Protocol.AutoCode.ILoginProxy1' TradeAge.Server.Interface.Client.ILogin
-TradeAge.Server.Entity.NetCode,OpCode,0,0,0,0,0,62,0,0,0,-1,0,0,,
-TradeAge.Server.Entity.NetCode,OpCodeName,0,0,0,0,0,3,0,0,0,-1,0,0,,
-TradeAge.Server.Entity.Ship,SpeedUpTypes,0,0,0,0,0,8,0,0,0,-1,0,7,,TradeAge.Server.Entity.Character.SceneSprite' TradeAge.Server.Entity.Character.SimplePlayer' TradeAge.Server.Logic.Scene.SecneModule' DogSE.Server.Core.Protocol.AutoCode.ISceneProxy1' DogSE.Server.Core.Protocol.AutoCode.ISceneAccess3' TradeAge.Server.Interface.Client.IScene' TradeAge.Server.Interface.Server.IScene
+TradeAge.Server.Entity.Common,WorldSeqGen,0,1,1,0,0,11,1,0,0,-1,1,0,TradeAge.Server.Entity.Common.IntSequenceGenerator,
+TradeAge.Server.Entity.GameEvent,PlayerEvents,0,2,0,0,2,33,4,0,0,-1,1,0,TradeAge.Server.Entity.Character.Player,
+TradeAge.Server.Entity.Login,LoginServerResult,0,0,0,0,0,15,0,0,0,-1,0,0,,
+TradeAge.Server.Entity.Login,CraetePlayerResult,0,0,0,0,0,16,0,0,0,-1,0,0,,
+TradeAge.Server.Entity.NetCode,OpCode,0,0,0,0,0,62,0,0,0,-1,0,1,,TradeAge.Server.Entity.NetCode.OpCodeName
+TradeAge.Server.Entity.NetCode,OpCodeName,0,0,0,0,0,3,0,0,0,-1,1,0,TradeAge.Server.Entity.NetCode.OpCode,
+TradeAge.Server.Entity.Ship,SpeedUpTypes,0,0,0,0,0,8,0,0,0,-1,0,3,,TradeAge.Server.Entity.Character.Player' TradeAge.Client.Entity.Character.SimplePlayer' TradeAge.Client.Entity.Character.SceneSprite
 TradeAge.Server.Entity.Template,ShipTemplate,0,0,7,0,0,33,0,0,0,-1,0,0,,
-TradeAge.Server.Entity,WorldEntityManager,0,1,6,0,0,115,1,0,0,-1,0,2,,TradeAge.Server.Logic.Login.LogicModule' TradeAge.Server.Logic.Scene.SecneModule
-TradeAge.Server.Entity,EntityMap<TKey;TValue>,2,5,1,0,5,71,11,0,0,0,0,0,,
+TradeAge.Server.Entity,WorldEntityManager,0,1,6,0,0,115,1,0,0,-1,4,0,TradeAge.Server.Entity.Character.Account' TradeAge.Server.Entity.Character.Player' TradeAge.Server.Entity.Character.SimplePlayer' TradeAge.Server.Entity.EntityMap<TKey;TValue>,
+TradeAge.Server.Entity,EntityMap<TKey;TValue>,2,5,1,0,5,71,11,0,0,0,0,1,,TradeAge.Server.Entity.WorldEntityManager

@@ -1,35 +1,35 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Apphbify,Bootstrapper,1,4,1,0,0,44,5,0,0,1,3,0,Apphbify.SessionKeys' Apphbify.Services.OAuth' Apphbify.Services.ApiService,
-Apphbify,HookModule,1,2,0,0,2,23,4,0,0,0,1,0,Apphbify.Services.IMailService,
-Apphbify,OAuthModule,1,4,0,0,1,34,7,0,0,0.5,2,0,Apphbify.Services.IOAuth' Apphbify.SessionKeys,
-Apphbify,PagesModule,1,4,0,0,1,23,4,0,0,0.75,1,0,Apphbify.Data.DataStore,
-Apphbify,SecuredPagesModule,3,9,0,0,1,110,21,0,0,0.22,7,0,Apphbify.Data.DataStore' Apphbify.Services.IApiService' Apphbify.Services.IDeploymentService' Apphbify.ViewModels.JsonResult' Apphbify.Data.App' Apphbify.Services.DeploymentResult' Apphbify.SessionKeys,
+Apphbify,Bootstrapper,1,4,1,0,0,44,5,0,0,1,11,0,Apphbify.SessionKeys' Apphbify.Services.ApiService' Apphbify.Services.DeploymentService' Apphbify.Services.IApiService' Apphbify.Services.IDeploymentService' Apphbify.Services.IMailService' Apphbify.Services.NullMailService' Apphbify.Services.IOAuth' Apphbify.Services.OAuth' Apphbify.Services.SendGridMailService' Apphbify.Data.DataStore,
+Apphbify,HookModule,1,2,0,0,2,23,4,0,0,0,2,0,Apphbify.Models.ServiceHookModel' Apphbify.Services.IMailService,
+Apphbify,OAuthModule,1,4,0,0,1,34,7,0,0,0.5,3,0,Apphbify.SessionKeys' Apphbify.Services.IOAuth' Apphbify.ViewModels.SignInViewModel,
+Apphbify,PagesModule,1,4,0,0,1,23,4,0,0,0.75,3,0,Apphbify.Data.DataStore' Apphbify.ViewModels.BaseViewModel' Apphbify.ViewModels.AppsViewModel,
+Apphbify,SecuredPagesModule,3,9,0,0,1,110,26,0,0,0.22,8,0,Apphbify.SessionKeys' Apphbify.Services.DeploymentResult' Apphbify.Services.IApiService' Apphbify.Services.IDeploymentService' Apphbify.Data.DataStore' Apphbify.ViewModels.DeployViewModel' Apphbify.ViewModels.JsonResult' Apphbify.ViewModels.SitesViewModel,
 Apphbify,ResponseExtensions,0,2,0,0,2,13,2,0,0,-1,1,0,Apphbify.SessionKeys,
-Apphbify,SessionKeys,4,0,0,4,0,7,0,0,0,-1,0,13,,Apphbify.Bootstrapper' Apphbify.OAuthModule' Apphbify.SecuredPagesModule' Apphbify.ResponseExtensions' Apphbify.ViewModels.BaseViewModel' Apphbify.Tests.Helpers.BrowserResponseExtensions' Apphbify.Tests.Pages.Master.When_an_error_message_is_present' Apphbify.Tests.Pages.Master.When_a_success_message_is_present' Apphbify.Tests.Pages.OAuthCallback.When_a_redirect_was_specified' Apphbify.Tests.Pages.OAuthCallback.When_oauth_callback_is_received' Apphbify.Tests.Pages.SignIn.When_a_redirect_url_is_specified' Apphbify.Tests.Pages.SignOut.When_user_signs_out' Apphbify.Tests.TestConfig
+Apphbify,SessionKeys,4,0,0,4,0,7,0,0,0,-1,0,5,,Apphbify.ResponseExtensions' Apphbify.SecuredPagesModule' Apphbify.OAuthModule' Apphbify.ViewModels.BaseViewModel' Apphbify.Bootstrapper
 Apphbify.Models,Application,0,1,3,0,0,15,1,0,0,-1,0,1,,Apphbify.ViewModels.SitesViewModel
-Apphbify.Models,ServiceHookModel,0,0,2,0,0,7,0,0,0,-1,0,0,,
-Apphbify.Models,ServiceHookApplicationModel,0,0,1,0,0,5,0,0,0,-1,0,0,,
-Apphbify.Models,ServiceHookBuildModel,0,0,2,0,0,7,0,0,0,-1,0,0,,
-Apphbify.Models,ServiceHookCommitModel,0,0,2,0,0,7,0,0,0,-1,0,0,,
-Apphbify.Resources,StaticResources,2,2,0,2,0,20,2,0,0,0,0,2,,Apphbify.Resources.StaticResourceStartup' Apphbify.Tests.ResourcesTests.When_loading_static_content
+Apphbify.Models,ServiceHookModel,0,0,2,0,0,7,0,0,0,-1,2,1,Apphbify.Models.ServiceHookApplicationModel' Apphbify.Models.ServiceHookBuildModel,Apphbify.HookModule
+Apphbify.Models,ServiceHookApplicationModel,0,0,1,0,0,5,0,0,0,-1,0,1,,Apphbify.Models.ServiceHookModel
+Apphbify.Models,ServiceHookBuildModel,0,0,2,0,0,7,0,0,0,-1,1,1,Apphbify.Models.ServiceHookCommitModel,Apphbify.Models.ServiceHookModel
+Apphbify.Models,ServiceHookCommitModel,0,0,2,0,0,7,0,0,0,-1,0,1,,Apphbify.Models.ServiceHookBuildModel
+Apphbify.Resources,StaticResources,2,2,0,2,0,20,2,0,0,0,0,1,,Apphbify.Resources.StaticResourceStartup
 Apphbify.Resources,StaticResourceStartup,0,2,0,0,1,26,2,0,0,-1,1,0,Apphbify.Resources.StaticResources,
-Apphbify.Services,ApiService,2,9,0,0,9,77,9,0,1,0,0,1,,Apphbify.Bootstrapper
-Apphbify.Services,DeploymentService,2,2,0,0,2,49,12,0,1,0,5,0,Apphbify.Services.IApiService' Apphbify.Data.DataStore' Apphbify.Data.Addon' Apphbify.Services.DeploymentResult' Apphbify.Data.App,
-Apphbify.Services,DeploymentResult,0,0,0,0,0,9,0,0,0,-1,0,10,,Apphbify.SecuredPagesModule' Apphbify.Services.DeploymentService' Apphbify.Tests.Pages.Deploy.When_application_has_default_variables' Apphbify.Tests.Pages.Deploy.When_addons_fail_to_install' Apphbify.Tests.Pages.Deploy.When_application_creation_fails' Apphbify.Tests.Pages.Deploy.When_code_deploy_fails' Apphbify.Tests.Pages.Deploy.When_config_variables_are_entered' Apphbify.Tests.Pages.Deploy.When_deployment_fails_for_an_unknown_reason' Apphbify.Tests.Pages.Deploy.When_deployment_succeeds' Apphbify.Tests.Pages.Deploy.When_variables_fail_to_set
-Apphbify.Services,IApiService,0,8,0,0,0,11,8,1,0,-1,0,3,,Apphbify.SecuredPagesModule' Apphbify.Services.DeploymentService' Apphbify.ViewModels.SitesViewModel
-Apphbify.Services,IDeploymentService,0,1,0,0,0,4,1,1,0,-1,1,1,Apphbify.Data.App,Apphbify.SecuredPagesModule
-Apphbify.Services,IMailService,0,1,0,0,0,4,1,2,0,-1,0,1,,Apphbify.HookModule
-Apphbify.Services,NullMailService,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Apphbify.Services,IOAuth,0,2,0,0,0,5,2,1,0,-1,0,2,,Apphbify.OAuthModule' Apphbify.ViewModels.SignInViewModel
-Apphbify.Services,OAuth,3,3,0,0,3,34,3,0,1,0,0,1,,Apphbify.Bootstrapper
-Apphbify.Services,SendGridMailService,0,1,0,0,1,24,1,0,1,-1,0,0,,
-Apphbify.Data,DataStore,3,6,0,0,5,36,6,0,0,0.67,3,10,Apphbify.Data.App' Apphbify.Data.Addon' Apphbify.Data.Region,Apphbify.PagesModule' Apphbify.SecuredPagesModule' Apphbify.Services.DeploymentService' Apphbify.ViewModels.DeployViewModel' Apphbify.ViewModels.AppsViewModel' Apphbify.Tests.Bootstrapper.DoesRegionExist' Apphbify.Tests.DataStoreTests.GetAddonByKey' Apphbify.Tests.DataStoreTests.GetAllApps' Apphbify.Tests.DataStoreTests.GetAllRegions' Apphbify.Tests.DataStoreTests.GetAppByKey
-Apphbify.Data,App,0,1,9,0,1,26,1,0,0,-1,0,7,,Apphbify.SecuredPagesModule' Apphbify.Services.DeploymentService' Apphbify.Services.IDeploymentService' Apphbify.Data.DataStore' Apphbify.ViewModels.DeployViewModel' Apphbify.Tests.DataStoreTests.GetAllApps' Apphbify.Tests.DataStoreTests.GetAppByKey
-Apphbify.Data,Addon,0,0,2,0,0,7,0,0,0,-1,0,3,,Apphbify.Services.DeploymentService' Apphbify.Data.DataStore' Apphbify.Tests.DataStoreTests.GetAddonByKey
-Apphbify.Data,Region,0,0,2,0,0,7,0,0,0,-1,0,1,,Apphbify.Data.DataStore
-Apphbify.ViewModels,BaseViewModel,0,1,8,0,1,22,1,4,0,-1,1,0,Apphbify.SessionKeys,
-Apphbify.ViewModels,DeployViewModel,0,1,2,0,1,11,1,0,1,-1,2,0,Apphbify.Data.DataStore' Apphbify.Data.App,
+Apphbify.Services,ApiService,2,9,0,0,9,77,9,0,1,0,1,1,Apphbify.Services.IApiService,Apphbify.Bootstrapper
+Apphbify.Services,DeploymentService,2,2,0,0,2,49,12,0,1,0,5,1,Apphbify.Services.DeploymentResult' Apphbify.Services.IApiService' Apphbify.Services.IDeploymentService' Apphbify.Data.DataStore' Apphbify.Data.App,Apphbify.Bootstrapper
+Apphbify.Services,DeploymentResult,0,0,0,0,0,9,0,0,0,-1,0,3,,Apphbify.Services.IDeploymentService' Apphbify.Services.DeploymentService' Apphbify.SecuredPagesModule
+Apphbify.Services,IApiService,0,8,0,0,0,11,8,1,0,-1,0,5,,Apphbify.ViewModels.SitesViewModel' Apphbify.Services.ApiService' Apphbify.Bootstrapper' Apphbify.Services.DeploymentService' Apphbify.SecuredPagesModule
+Apphbify.Services,IDeploymentService,0,1,0,0,0,4,1,1,0,-1,2,3,Apphbify.Services.DeploymentResult' Apphbify.Data.App,Apphbify.Bootstrapper' Apphbify.Services.DeploymentService' Apphbify.SecuredPagesModule
+Apphbify.Services,IMailService,0,1,0,0,0,4,1,2,0,-1,0,4,,Apphbify.Services.SendGridMailService' Apphbify.Services.NullMailService' Apphbify.HookModule' Apphbify.Bootstrapper
+Apphbify.Services,NullMailService,0,1,0,0,1,7,1,0,1,-1,1,1,Apphbify.Services.IMailService,Apphbify.Bootstrapper
+Apphbify.Services,IOAuth,0,2,0,0,0,5,2,1,0,-1,0,4,,Apphbify.Services.OAuth' Apphbify.OAuthModule' Apphbify.ViewModels.SignInViewModel' Apphbify.Bootstrapper
+Apphbify.Services,OAuth,3,3,0,0,3,34,3,0,1,0,1,1,Apphbify.Services.IOAuth,Apphbify.Bootstrapper
+Apphbify.Services,SendGridMailService,0,1,0,0,1,24,1,0,1,-1,1,1,Apphbify.Services.IMailService,Apphbify.Bootstrapper
+Apphbify.Data,DataStore,3,6,0,0,5,36,6,0,0,0.67,3,6,Apphbify.Data.App' Apphbify.Data.Addon' Apphbify.Data.Region,Apphbify.PagesModule' Apphbify.SecuredPagesModule' Apphbify.Services.DeploymentService' Apphbify.ViewModels.DeployViewModel' Apphbify.ViewModels.AppsViewModel' Apphbify.Bootstrapper
+Apphbify.Data,App,0,1,9,0,1,26,1,0,0,-1,0,5,,Apphbify.Services.DeploymentService' Apphbify.Services.IDeploymentService' Apphbify.ViewModels.AppsViewModel' Apphbify.ViewModels.DeployViewModel' Apphbify.Data.DataStore
+Apphbify.Data,Addon,0,0,2,0,0,7,0,0,0,-1,0,1,,Apphbify.Data.DataStore
+Apphbify.Data,Region,0,0,2,0,0,7,0,0,0,-1,0,2,,Apphbify.ViewModels.DeployViewModel' Apphbify.Data.DataStore
+Apphbify.ViewModels,BaseViewModel,0,1,8,0,1,22,1,4,0,-1,1,5,Apphbify.SessionKeys,Apphbify.ViewModels.AppsViewModel' Apphbify.ViewModels.SignInViewModel' Apphbify.ViewModels.DeployViewModel' Apphbify.ViewModels.SitesViewModel' Apphbify.PagesModule
+Apphbify.ViewModels,DeployViewModel,0,1,2,0,1,11,1,0,1,-1,4,1,Apphbify.Data.DataStore' Apphbify.Data.App' Apphbify.Data.Region' Apphbify.ViewModels.BaseViewModel,Apphbify.SecuredPagesModule
 Apphbify.ViewModels,JsonResult,0,2,2,0,2,13,2,0,0,-1,0,1,,Apphbify.SecuredPagesModule
-Apphbify.ViewModels,SignInViewModel,0,1,1,0,1,9,1,0,1,-1,1,0,Apphbify.Services.IOAuth,
-Apphbify.ViewModels,AppsViewModel,0,1,1,0,1,9,1,0,1,-1,1,0,Apphbify.Data.DataStore,
-Apphbify.ViewModels,SitesViewModel,0,1,1,0,1,9,1,0,1,-1,2,0,Apphbify.Services.IApiService' Apphbify.Models.Application,
+Apphbify.ViewModels,SignInViewModel,0,1,1,0,1,9,1,0,1,-1,2,1,Apphbify.Services.IOAuth' Apphbify.ViewModels.BaseViewModel,Apphbify.OAuthModule
+Apphbify.ViewModels,AppsViewModel,0,1,1,0,1,9,1,0,1,-1,3,1,Apphbify.Data.DataStore' Apphbify.Data.App' Apphbify.ViewModels.BaseViewModel,Apphbify.PagesModule
+Apphbify.ViewModels,SitesViewModel,0,1,1,0,1,9,1,0,1,-1,3,1,Apphbify.Models.Application' Apphbify.Services.IApiService' Apphbify.ViewModels.BaseViewModel,Apphbify.SecuredPagesModule

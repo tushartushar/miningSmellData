@@ -1,0 +1,14 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TvThumbnails,Thumbs,15,5,17,0,3,339,23,0,0,0.6,3,2,TvThumbnails.ThumbQuality' TvThumbnails.LargeThumbSize' TvThumbnails.ThumbSize,TvThumbnails.ThumbProcessor' TvThumbnails.VideoThumbCreator.VideoThumbCreator
+TvThumbnails,ThumbQuality,0,0,0,0,0,8,0,0,0,-1,0,1,,TvThumbnails.Thumbs
+TvThumbnails,LargeThumbSize,0,0,0,0,0,6,0,0,0,-1,0,1,,TvThumbnails.Thumbs
+TvThumbnails,ThumbSize,0,0,0,0,0,6,0,0,0,-1,0,1,,TvThumbnails.Thumbs
+TvThumbnails,ThumbProcessor,1,6,0,0,4,84,11,0,0,0.5,3,0,TvThumbnails.Thumbs' TvThumbnails.ProcessingQueue' TvThumbnails.VideoThumbCreator.VideoThumbCreator,
+TvThumbnails,ProcessingQueue,4,4,0,0,3,82,11,0,0,0,0,1,,TvThumbnails.ThumbProcessor
+TvThumbnails.VideoThumbCreator,ImageFast,3,8,0,0,1,97,14,0,0,0.38,3,1,TvThumbnails.VideoThumbCreator.StartupInput' TvThumbnails.VideoThumbCreator.StartupOutput' TvThumbnails.VideoThumbCreator.GdipImageTypeEnum,TvThumbnails.VideoThumbCreator.VideoThumbCreator
+TvThumbnails.VideoThumbCreator,StartupInput,4,1,0,4,1,16,1,0,0,0,0,1,,TvThumbnails.VideoThumbCreator.ImageFast
+TvThumbnails.VideoThumbCreator,StartupOutput,2,0,0,2,0,6,0,0,0,-1,0,1,,TvThumbnails.VideoThumbCreator.ImageFast
+TvThumbnails.VideoThumbCreator,GdipImageTypeEnum,0,0,0,0,0,6,0,0,0,-1,0,1,,TvThumbnails.VideoThumbCreator.ImageFast
+TvThumbnails.VideoThumbCreator,VideoThumbCreator,3,13,0,0,3,710,64,0,0,0.38,3,1,TvThumbnails.Thumbs' TvThumbnails.VideoThumbCreator.ImageFast' TvThumbnails.VideoThumbCreator.ProcessFailedConditions,TvThumbnails.ThumbProcessor
+TvThumbnails.VideoThumbCreator,IVideoThumbBlacklist,0,4,0,0,0,7,4,0,0,-1,0,0,,
+TvThumbnails.VideoThumbCreator,ProcessFailedConditions,2,1,0,2,0,9,1,0,0,0,0,1,,TvThumbnails.VideoThumbCreator.VideoThumbCreator

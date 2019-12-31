@@ -1,25 +1,25 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-PeachFarmerClient,AwsWorkerController,1,2,0,0,2,37,3,0,1,0,0,1,,PeachFarmerClient.CommandProcessor
-PeachFarmerClient,ConnectionManager,2,3,0,0,3,26,4,0,1,0.67,2,1,PeachFarmerClient.NetworkSslClientConnection' PeachFarmerClient.NetworkClientConnection,PeachFarmerClient.CommandProcessor
-PeachFarmerClient,CommandLineOptions,1,2,8,0,2,69,3,0,0,1,0,2,,PeachFarmerClient.CommandProcessor' PeachFarmerClient.Program
-PeachFarmerClient,CommandProcessor,5,5,0,0,2,102,13,0,0,0,7,1,PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.SavedWorkerManager' PeachFarmerClient.CommandLineOptions' PeachFarmerClient.RemoteWorker' PeachFarmerClient.AwsWorkerController' PeachFarmerClient.TargetFileParser' PeachFarmerClient.ConnectionManager,PeachFarmerClient.Program
-PeachFarmerClient,FilePuller,2,5,1,0,4,53,7,0,1,0.4,4,2,PeachFarmerClient.Framework.IFolderUnpacker' PeachFarmerLib.Messages.ReadRequestMessage' PeachFarmerLib.FarmerMessageSerializer' PeachFarmerLib.Messages.ReadResponseMessage,PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClientTest.FilePullerTest
-PeachFarmerClient,FolderUnpacker,3,5,0,0,3,71,9,0,1,0,1,2,PeachFarmerLib.Framework.IFileSystem,PeachFarmerClient.RemoteWorkerFactory' RemoteHarvesterTest.FolderPackagerTest
-PeachFarmerClient,NetworkClientConnection,0,4,2,0,2,42,6,1,1,-1,1,3,PeachFarmerLib.NetworkConnectionBase,PeachFarmerClient.ConnectionManager' PeachFarmerClient.NetworkSslClientConnection' PeachFarmerClient.RemoteWorkerFactory
+PeachFarmerClient,AwsWorkerController,1,2,0,0,2,37,3,0,1,0,1,1,PeachFarmerClient.Framework.ICloudWorkerController,PeachFarmerClient.CommandProcessor
+PeachFarmerClient,ConnectionManager,2,3,0,0,3,26,4,0,1,0.67,3,1,PeachFarmerClient.NetworkClientConnection' PeachFarmerClient.NetworkSslClientConnection' PeachFarmerClient.Framework.IConnectionManager,PeachFarmerClient.CommandProcessor
+PeachFarmerClient,CommandLineOptions,1,2,8,0,2,69,5,0,0,1,0,2,,PeachFarmerClient.Program' PeachFarmerClient.CommandProcessor
+PeachFarmerClient,CommandProcessor,5,5,0,0,2,102,14,0,0,0,8,1,PeachFarmerClient.AwsWorkerController' PeachFarmerClient.ConnectionManager' PeachFarmerClient.CommandLineOptions' PeachFarmerClient.RemoteWorker' PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.SavedWorkerManager' PeachFarmerClient.TargetFileParser' PeachFarmerClient.Framework.IConnectionManager,PeachFarmerClient.Program
+PeachFarmerClient,FilePuller,2,5,1,0,4,53,8,0,1,0.4,2,1,PeachFarmerClient.Framework.IFilePuller' PeachFarmerClient.Framework.IFolderUnpacker,PeachFarmerClient.RemoteWorkerFactory
+PeachFarmerClient,FolderUnpacker,3,5,0,0,3,71,10,0,1,0,1,1,PeachFarmerClient.Framework.IFolderUnpacker,PeachFarmerClient.RemoteWorkerFactory
+PeachFarmerClient,NetworkClientConnection,0,4,2,0,2,42,6,1,1,-1,1,4,PeachFarmerClient.Framework.INetworkClientConnection,PeachFarmerClient.Framework.IConnectionManager' PeachFarmerClient.NetworkSslClientConnection' PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.ConnectionManager
 PeachFarmerClient,NetworkSslClientConnection,3,5,0,0,5,55,9,0,2,0,1,1,PeachFarmerClient.NetworkClientConnection,PeachFarmerClient.ConnectionManager
-PeachFarmerClient,PeachStatus,0,5,4,0,5,49,9,0,0,-1,0,3,,PeachFarmerClient.RemoteWorker' PeachFarmerClient.StatusFileParser' RemoteHarvesterTest.StatusFileParserTest
+PeachFarmerClient,PeachStatus,0,5,4,0,5,49,9,0,0,-1,0,3,,PeachFarmerClient.Framework.IStatusFileParser' PeachFarmerClient.StatusFileParser' PeachFarmerClient.RemoteWorker
 PeachFarmerClient,Program,0,2,0,0,0,25,4,0,0,-1,2,0,PeachFarmerClient.CommandLineOptions' PeachFarmerClient.CommandProcessor,
-PeachFarmerClient,RemoteWorker,4,7,3,0,5,131,12,0,0,0.43,4,4,PeachFarmerClient.Framework.INetworkClientConnection' PeachFarmerClient.Framework.IFilePuller' PeachFarmerClient.Framework.IStatusFileParser' PeachFarmerClient.PeachStatus,PeachFarmerClient.CommandProcessor' PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.RemoteWorkerSerializer' PeachFarmerClient.SavedWorkerManager
-PeachFarmerClient,RemoteWorkerFactory,2,3,0,0,3,36,5,0,0,0,7,3,PeachFarmerClient.Framework.IConnectionManager' PeachFarmerClient.RemoteWorker' PeachFarmerLib.FileSystem' PeachFarmerClient.FolderUnpacker' PeachFarmerClient.NetworkClientConnection' PeachFarmerClient.FilePuller' PeachFarmerLib.PeachFarmerProtocol,PeachFarmerClient.CommandProcessor' PeachFarmerClient.RemoteWorkerSerializer' PeachFarmerClient.SavedWorkerManager
-PeachFarmerClient,RemoteWorkerSerializer,0,5,0,0,3,38,7,0,0,-1,2,1,PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.RemoteWorker,PeachFarmerClient.SavedWorkerManager
-PeachFarmerClient,SavedWorkerManager,2,5,0,0,3,75,11,0,0,0,3,1,PeachFarmerClient.RemoteWorkerSerializer' PeachFarmerClient.RemoteWorker' PeachFarmerClient.RemoteWorkerFactory,PeachFarmerClient.CommandProcessor
-PeachFarmerClient,StatusFileParser,0,7,0,0,1,95,8,0,1,-1,2,1,PeachFarmerClient.PeachStatus' PeachFarmerClient.StatusLineType,RemoteHarvesterTest.StatusFileParserTest
+PeachFarmerClient,RemoteWorker,4,7,3,0,5,131,16,0,0,0.43,4,4,PeachFarmerClient.PeachStatus' PeachFarmerClient.Framework.IFilePuller' PeachFarmerClient.Framework.INetworkClientConnection' PeachFarmerClient.Framework.IStatusFileParser,PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.RemoteWorkerSerializer' PeachFarmerClient.CommandProcessor' PeachFarmerClient.SavedWorkerManager
+PeachFarmerClient,RemoteWorkerFactory,2,3,0,0,3,36,5,0,0,0,6,3,PeachFarmerClient.FilePuller' PeachFarmerClient.FolderUnpacker' PeachFarmerClient.NetworkClientConnection' PeachFarmerClient.RemoteWorker' PeachFarmerClient.StatusFileParser' PeachFarmerClient.Framework.IConnectionManager,PeachFarmerClient.SavedWorkerManager' PeachFarmerClient.RemoteWorkerSerializer' PeachFarmerClient.CommandProcessor
+PeachFarmerClient,RemoteWorkerSerializer,0,5,0,0,3,38,7,0,0,-1,2,1,PeachFarmerClient.RemoteWorker' PeachFarmerClient.RemoteWorkerFactory,PeachFarmerClient.SavedWorkerManager
+PeachFarmerClient,SavedWorkerManager,2,5,0,0,3,75,11,0,0,0,3,1,PeachFarmerClient.RemoteWorker' PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.RemoteWorkerSerializer,PeachFarmerClient.CommandProcessor
+PeachFarmerClient,StatusFileParser,0,7,0,0,1,95,16,0,1,-1,3,1,PeachFarmerClient.PeachStatus' PeachFarmerClient.StatusLineType' PeachFarmerClient.Framework.IStatusFileParser,PeachFarmerClient.RemoteWorkerFactory
 PeachFarmerClient,StatusLineType,0,0,0,0,0,8,0,0,0,-1,0,1,,PeachFarmerClient.StatusFileParser
-PeachFarmerClient,TargetFileParser,0,1,0,0,1,15,1,0,0,-1,0,2,,PeachFarmerClient.CommandProcessor' PeachFarmerClientTest.TargetFileParserTest
-PeachFarmerClient.Framework,IConnectionManager,0,1,0,0,0,4,1,1,0,-1,0,1,,PeachFarmerClient.RemoteWorkerFactory
-PeachFarmerClient.Framework,IFilePuller,0,2,1,0,0,6,2,1,0,-1,0,1,,PeachFarmerClient.RemoteWorker
-PeachFarmerClient.Framework,INetworkClientConnection,0,0,2,0,0,5,0,1,1,-1,0,1,,PeachFarmerClient.RemoteWorker
+PeachFarmerClient,TargetFileParser,0,1,0,0,1,15,1,0,0,-1,0,1,,PeachFarmerClient.CommandProcessor
+PeachFarmerClient.Framework,IConnectionManager,0,1,0,0,0,4,1,1,0,-1,1,3,PeachFarmerClient.NetworkClientConnection,PeachFarmerClient.ConnectionManager' PeachFarmerClient.RemoteWorkerFactory' PeachFarmerClient.CommandProcessor
+PeachFarmerClient.Framework,IFilePuller,0,2,1,0,0,6,2,1,0,-1,0,2,,PeachFarmerClient.FilePuller' PeachFarmerClient.RemoteWorker
+PeachFarmerClient.Framework,INetworkClientConnection,0,0,2,0,0,5,0,1,1,-1,0,2,,PeachFarmerClient.RemoteWorker' PeachFarmerClient.NetworkClientConnection
 PeachFarmerClient.Framework,INetworkStreamCreator,0,1,1,0,0,5,1,0,0,-1,0,0,,
-PeachFarmerClient.Framework,ICloudWorkerController,0,1,0,0,0,4,1,1,0,-1,0,0,,
-PeachFarmerClient.Framework,IFolderUnpacker,0,2,0,0,0,5,2,2,0,-1,0,1,,PeachFarmerClient.FilePuller
-PeachFarmerClient.Framework,IStatusFileParser,0,1,0,0,0,4,1,1,0,-1,0,1,,PeachFarmerClient.RemoteWorker
+PeachFarmerClient.Framework,ICloudWorkerController,0,1,0,0,0,4,1,1,0,-1,0,1,,PeachFarmerClient.AwsWorkerController
+PeachFarmerClient.Framework,IFolderUnpacker,0,2,0,0,0,5,2,2,0,-1,0,2,,PeachFarmerClient.FolderUnpacker' PeachFarmerClient.FilePuller
+PeachFarmerClient.Framework,IStatusFileParser,0,1,0,0,0,4,1,1,0,-1,1,2,PeachFarmerClient.PeachStatus,PeachFarmerClient.StatusFileParser' PeachFarmerClient.RemoteWorker

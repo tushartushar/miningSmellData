@@ -1,0 +1,24 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+DiffPlex.Chunkers,CharacterChunker,0,1,0,0,1,9,2,0,1,-1,1,1,DiffPlex.IChunker,DiffPlex.Differ
+DiffPlex.Chunkers,CustomFunctionChunker,1,2,0,0,2,13,3,0,1,1,1,1,DiffPlex.IChunker,DiffPlex.Differ
+DiffPlex.Chunkers,DelimiterChunker,1,2,0,0,2,63,11,1,1,1,1,3,DiffPlex.IChunker,DiffPlex.Differ' DiffPlex.DiffBuilder.SideBySideDiffBuilder' DiffPlex.Chunkers.WordChunker
+DiffPlex.Chunkers,LineChunker,1,1,0,0,1,8,1,0,1,0,1,3,DiffPlex.IChunker,DiffPlex.DiffBuilder.InlineDiffBuilder' DiffPlex.Differ' DiffPlex.DiffBuilder.SideBySideDiffBuilder
+DiffPlex.Chunkers,LineEndingsPreservingChunker,1,1,0,0,1,37,6,0,1,0,1,0,DiffPlex.IChunker,
+DiffPlex.Chunkers,WordChunker,0,1,1,0,1,7,1,0,2,-1,1,1,DiffPlex.Chunkers.DelimiterChunker,DiffPlex.DiffBuilder.SideBySideDiffBuilder
+DiffPlex.DiffBuilder,IInlineDiffBuilder,0,2,0,0,0,5,2,1,0,-1,2,1,DiffPlex.DiffBuilder.Model.DiffPaneModel' DiffPlex.IChunker,DiffPlex.DiffBuilder.InlineDiffBuilder
+DiffPlex.DiffBuilder,InlineDiffBuilder,1,5,0,0,4,57,15,0,1,0.4,8,0,DiffPlex.Chunkers.LineChunker' DiffPlex.DiffBuilder.IInlineDiffBuilder' DiffPlex.DiffBuilder.Model.DiffPaneModel' DiffPlex.DiffBuilder.Model.ChangeType' DiffPlex.DiffBuilder.Model.DiffPiece' DiffPlex.IChunker' DiffPlex.IDiffer' DiffPlex.Model.DiffResult,
+DiffPlex.DiffBuilder,ISideBySideDiffBuilder,0,1,0,0,0,10,1,1,0,-1,1,1,DiffPlex.DiffBuilder.Model.SideBySideDiffModel,DiffPlex.DiffBuilder.SideBySideDiffBuilder
+DiffPlex.DiffBuilder,SideBySideDiffBuilder,3,8,0,0,5,98,16,0,1,0.5,10,0,DiffPlex.Chunkers.DelimiterChunker' DiffPlex.Chunkers.LineChunker' DiffPlex.Chunkers.WordChunker' DiffPlex.DiffBuilder.ISideBySideDiffBuilder' DiffPlex.DiffBuilder.Model.ChangeType' DiffPlex.DiffBuilder.Model.DiffPiece' DiffPlex.DiffBuilder.Model.SideBySideDiffModel' DiffPlex.IChunker' DiffPlex.IDiffer' DiffPlex.Model.DiffResult,
+DiffPlex.DiffBuilder.Model,DiffPaneModel,0,1,1,0,1,8,1,0,0,-1,1,3,DiffPlex.DiffBuilder.Model.DiffPiece,DiffPlex.DiffBuilder.Model.SideBySideDiffModel' DiffPlex.DiffBuilder.InlineDiffBuilder' DiffPlex.DiffBuilder.IInlineDiffBuilder
+DiffPlex.DiffBuilder.Model,ChangeType,0,0,0,0,0,8,0,0,0,-1,0,3,,DiffPlex.DiffBuilder.Model.DiffPiece' DiffPlex.DiffBuilder.InlineDiffBuilder' DiffPlex.DiffBuilder.SideBySideDiffBuilder
+DiffPlex.DiffBuilder.Model,DiffPiece,0,6,4,0,5,53,11,0,0,-1,1,3,DiffPlex.DiffBuilder.Model.ChangeType,DiffPlex.DiffBuilder.Model.DiffPaneModel' DiffPlex.DiffBuilder.InlineDiffBuilder' DiffPlex.DiffBuilder.SideBySideDiffBuilder
+DiffPlex.DiffBuilder.Model,SideBySideDiffModel,0,1,2,0,1,10,1,0,0,-1,1,2,DiffPlex.DiffBuilder.Model.DiffPaneModel,DiffPlex.DiffBuilder.SideBySideDiffBuilder' DiffPlex.DiffBuilder.ISideBySideDiffBuilder
+DiffPlex,Differ,1,14,0,0,9,299,47,1,1,0,12,0,DiffPlex.Chunkers.CharacterChunker' DiffPlex.Chunkers.CustomFunctionChunker' DiffPlex.Chunkers.DelimiterChunker' DiffPlex.Chunkers.LineChunker' DiffPlex.IChunker' DiffPlex.IDiffer' DiffPlex.Log' DiffPlex.Model.DiffBlock' DiffPlex.Model.DiffResult' DiffPlex.Model.Edit' DiffPlex.Model.EditLengthResult' DiffPlex.Model.ModificationData,
+DiffPlex,IChunker,0,1,0,0,0,7,1,5,0,-1,0,10,,DiffPlex.Chunkers.LineChunker' DiffPlex.Chunkers.CharacterChunker' DiffPlex.Chunkers.DelimiterChunker' DiffPlex.Chunkers.LineEndingsPreservingChunker' DiffPlex.IDiffer' DiffPlex.DiffBuilder.IInlineDiffBuilder' DiffPlex.DiffBuilder.InlineDiffBuilder' DiffPlex.Chunkers.CustomFunctionChunker' DiffPlex.Differ' DiffPlex.DiffBuilder.SideBySideDiffBuilder
+DiffPlex,IDiffer,0,9,0,0,0,36,9,1,0,-1,2,3,DiffPlex.IChunker' DiffPlex.Model.DiffResult,DiffPlex.DiffBuilder.InlineDiffBuilder' DiffPlex.Differ' DiffPlex.DiffBuilder.SideBySideDiffBuilder
+DiffPlex,Log,0,2,0,0,2,13,2,0,0,-1,0,1,,DiffPlex.Differ
+DiffPlex.Model,DiffBlock,0,1,4,0,1,27,1,0,0,-1,0,2,,DiffPlex.Differ' DiffPlex.Model.DiffResult
+DiffPlex.Model,DiffResult,0,1,3,0,1,22,1,0,0,-1,1,4,DiffPlex.Model.DiffBlock,DiffPlex.DiffBuilder.InlineDiffBuilder' DiffPlex.DiffBuilder.SideBySideDiffBuilder' DiffPlex.IDiffer' DiffPlex.Differ
+DiffPlex.Model,Edit,0,0,0,0,0,8,0,0,0,-1,0,2,,DiffPlex.Model.EditLengthResult' DiffPlex.Differ
+DiffPlex.Model,EditLengthResult,0,0,6,0,0,9,0,0,0,-1,1,1,DiffPlex.Model.Edit,DiffPlex.Differ
+DiffPlex.Model,ModificationData,0,1,4,0,1,11,1,0,0,-1,0,1,,DiffPlex.Differ

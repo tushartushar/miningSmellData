@@ -1,41 +1,41 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NPlant.UI,EventDispatcher,1,3,0,0,2,44,7,0,0,0,0,4,,NPlant.UI.MainScreen' NPlant.UI.Program' NPlant.UI.MainScreenController' NPlant.UI.Screens.FileViews.FileViewController
-NPlant.UI,EventDispatcherRegistration<T>,1,2,0,0,2,12,2,0,0,0,0,0,,
-NPlant.UI,AboutScreen,2,5,0,0,2,69,6,0,1,0.8,0,0,,
-NPlant.UI,CommandLineArguments,0,4,2,0,1,37,9,1,0,-1,0,3,,NPlant.UI.MainScreen' NPlant.UI.MainScreenController' NPlant.Tests.UI.CommandLineArgumentsFixture
-NPlant.UI,FileView,0,0,0,0,0,4,0,1,0,-1,0,2,,NPlant.UI.FileViewTab' NPlant.UI.Screens.FileViews.ClassDiagramView
+NPlant.UI,EventDispatcher,1,3,0,0,2,56,7,0,0,0,1,4,NPlant.UI.EventDispatcherRegistration<T>,NPlant.UI.MainScreen' NPlant.UI.Program' NPlant.UI.MainScreenController' NPlant.UI.Screens.FileViews.FileViewController
+NPlant.UI,EventDispatcherRegistration<T>,1,2,0,0,2,14,2,0,0,0,0,1,,NPlant.UI.EventDispatcher
+NPlant.UI,AboutScreen,2,5,0,0,2,69,6,0,1,0.8,1,1,NPlant.UI.IScreen,NPlant.UI.MainScreen
+NPlant.UI,CommandLineArguments,0,4,2,0,1,37,9,1,0,-1,0,2,,NPlant.UI.MainScreenController' NPlant.UI.MainScreen
+NPlant.UI,FileView,0,0,0,0,0,4,0,1,0,-1,0,2,,NPlant.UI.Screens.FileViews.ClassDiagramView' NPlant.UI.FileViewTab
 NPlant.UI,FileViewTab,0,1,0,0,1,11,1,0,0,-1,1,1,NPlant.UI.FileView,NPlant.UI.MainScreen
-NPlant.UI,IResultScreen,0,1,0,0,0,4,1,2,1,-1,0,0,,
-NPlant.UI,IScreen,0,1,0,0,0,4,1,3,0,-1,0,0,,
-NPlant.UI,LoadedDiagram,2,2,1,0,2,18,2,0,0,0,1,1,NPlant.ClassDiagram,NPlant.UI.Screens.FileViews.ClassDiagramViewController
-NPlant.UI,UserNotificationEvent,0,2,2,0,2,15,2,0,0,-1,1,5,NPlant.UI.UserNotificationType,NPlant.UI.IMainScreen' NPlant.UI.MainScreen' NPlant.UI.Program' NPlant.UI.MainScreenController' NPlant.Tests.UI.StubMainScreen
-NPlant.UI,UserNotificationType,0,0,0,0,0,6,0,0,0,-1,0,3,,NPlant.UI.UserNotificationEvent' NPlant.UI.MainScreen' NPlant.UI.Program
-NPlant.UI,FileViewType,0,0,0,0,0,5,0,0,0,-1,0,4,,NPlant.UI.IMainScreen' NPlant.UI.MainScreen' NPlant.UI.MainScreenController' NPlant.Tests.UI.StubMainScreen
-NPlant.UI,IMainScreen,0,2,1,0,0,6,2,2,0,-1,2,1,NPlant.UI.FileViewType' NPlant.UI.UserNotificationEvent,NPlant.UI.MainScreenController
-NPlant.UI,MainScreen,17,15,2,0,3,318,20,0,1,0.47,10,0,NPlant.UI.MainScreenController' NPlant.UI.CommandLineArguments' NPlant.UI.FileViewTab' NPlant.UI.EventDispatcher' NPlant.UI.UserNotificationType' NPlant.UI.FileViewType' NPlant.UI.UserNotificationEvent' NPlant.UI.ScreenManager' NPlant.UI.Screens.FileDialogResult' NPlant.UI.Screens.FileFilters,
-NPlant.UI,Program,0,2,0,0,0,33,2,0,0,-1,5,0,NPlant.UI.UserNotificationEvent' NPlant.UI.UserNotificationType' NPlant.UI.EventDispatcher' NPlant.Core.PlantUmlJarExtractor' NPlant.UI.SystemEnvironment,
-NPlant.UI,MainScreenController,2,6,0,0,4,42,10,0,0,0.33,6,2,NPlant.UI.IMainScreen' NPlant.UI.CommandLineArguments' NPlant.UI.EventDispatcher' NPlant.UI.UserNotificationEvent' NPlant.UI.Screens.FileDialogResult' NPlant.UI.FileViewType,NPlant.UI.MainScreen' NPlant.Tests.UI.MainScreenControllerFixture
-NPlant.UI,ScreenManager,0,5,0,0,3,45,7,0,0,-1,0,3,,NPlant.UI.MainScreen' NPlant.UI.Screens.Controls.ImageGenerationSummary' NPlant.UI.Screens.SettingsScreen
-NPlant.UI,SystemEnvironment,0,2,1,0,2,21,3,0,0,-1,1,3,NPlant.UI.SystemSettings,NPlant.UI.Program' NPlant.UI.Screens.SettingsScreenController' NPlant.UI.Screens.FileViews.ImageFileGenerationModel
-NPlant.UI,SystemSettings,0,0,1,0,0,4,0,0,0,-1,0,3,,NPlant.UI.SystemEnvironment' NPlant.UI.Screens.SettingsScreenController' NPlant.UI.Screens.FileViews.ImageFileGenerationModel
-NPlant.UI,WaitCursor,1,2,0,0,2,13,2,0,0,0,0,0,,
-NPlant.UI.Screens.Controls,ImageFileWatcher,2,2,0,0,2,22,2,0,0,0,0,0,,
-NPlant.UI.Screens.Controls,ImageGenerationSummary,5,7,1,0,1,130,9,0,0,0.43,3,1,NPlant.UI.Screens.Controls.SmartPictureBox' NPlant.UI.Screens.FileDialogResult' NPlant.UI.ScreenManager,NPlant.UI.Screens.FileViews.ClassDiagramView
-NPlant.UI.Screens.Controls,SmartPictureBox,2,5,0,0,3,67,10,0,0,0.4,0,1,,NPlant.UI.Screens.Controls.ImageGenerationSummary
-NPlant.UI.Screens,FileDialogResult,0,1,4,0,1,18,2,0,0,-1,0,6,,NPlant.UI.MainScreen' NPlant.UI.MainScreenController' NPlant.UI.Screens.Controls.ImageGenerationSummary' NPlant.UI.Screens.FileSaveScreen' NPlant.UI.Screens.FileOpenScreen' NPlant.UI.Screens.SettingsScreen
-NPlant.UI.Screens,FileFilters,2,0,0,0,0,8,0,0,0,-1,0,2,,NPlant.UI.MainScreen' NPlant.UI.Screens.SettingsScreen
-NPlant.UI.Screens,FileSaveScreen,1,2,0,0,2,16,2,0,2,0,1,0,NPlant.UI.Screens.FileDialogResult,
-NPlant.UI.Screens,FileOpenScreen,2,3,0,0,3,24,3,0,2,0,1,0,NPlant.UI.Screens.FileDialogResult,
-NPlant.UI.Screens,ISettingScreen,0,0,1,0,0,4,0,1,1,-1,0,1,,NPlant.UI.Screens.SettingsScreenController
+NPlant.UI,IResultScreen,0,1,0,0,0,4,1,2,1,-1,1,3,NPlant.UI.IScreen,NPlant.UI.Screens.FileSaveScreen' NPlant.UI.Screens.FileOpenScreen' NPlant.UI.ScreenManager
+NPlant.UI,IScreen,0,1,0,0,0,4,1,3,0,-1,0,4,,NPlant.UI.Screens.ISettingScreen' NPlant.UI.ScreenManager' NPlant.UI.IResultScreen' NPlant.UI.AboutScreen
+NPlant.UI,LoadedDiagram,2,2,1,0,2,21,2,0,0,0,0,4,,NPlant.UI.Screens.FileViews.IAssemblyFileView' NPlant.UI.Screens.FileViews.IClassDiagramView' NPlant.UI.Screens.FileViews.ClassDiagramView' NPlant.UI.Screens.FileViews.ClassDiagramViewController
+NPlant.UI,UserNotificationEvent,0,2,2,0,2,17,2,0,0,-1,1,5,NPlant.UI.UserNotificationType,NPlant.UI.IMainScreen' NPlant.UI.Screens.FileViews.FileViewController' NPlant.UI.MainScreenController' NPlant.UI.MainScreen' NPlant.UI.Program
+NPlant.UI,UserNotificationType,0,0,0,0,0,6,0,0,0,-1,0,3,,NPlant.UI.Program' NPlant.UI.MainScreen' NPlant.UI.UserNotificationEvent
+NPlant.UI,FileViewType,0,0,0,0,0,5,0,0,0,-1,0,3,,NPlant.UI.IMainScreen' NPlant.UI.MainScreen' NPlant.UI.MainScreenController
+NPlant.UI,IMainScreen,0,2,1,0,0,6,2,2,0,-1,2,2,NPlant.UI.UserNotificationEvent' NPlant.UI.FileViewType,NPlant.UI.MainScreen' NPlant.UI.MainScreenController
+NPlant.UI,MainScreen,17,15,2,0,3,318,21,0,1,0.47,15,1,NPlant.UI.EventDispatcher' NPlant.UI.AboutScreen' NPlant.UI.CommandLineArguments' NPlant.UI.FileViewTab' NPlant.UI.UserNotificationEvent' NPlant.UI.UserNotificationType' NPlant.UI.FileViewType' NPlant.UI.IMainScreen' NPlant.UI.MainScreenController' NPlant.UI.ScreenManager' NPlant.UI.Screens.FileDialogResult' NPlant.UI.Screens.FileFilters' NPlant.UI.Screens.FileOpenScreen' NPlant.UI.Screens.SettingsScreen' NPlant.UI.Screens.FileViews.ClassDiagramView,NPlant.UI.Program
+NPlant.UI,Program,0,2,0,0,0,33,2,0,0,-1,5,0,NPlant.UI.EventDispatcher' NPlant.UI.UserNotificationEvent' NPlant.UI.UserNotificationType' NPlant.UI.MainScreen' NPlant.UI.SystemEnvironment,
+NPlant.UI,MainScreenController,2,6,0,0,4,42,11,0,0,0.33,6,1,NPlant.UI.EventDispatcher' NPlant.UI.CommandLineArguments' NPlant.UI.UserNotificationEvent' NPlant.UI.FileViewType' NPlant.UI.IMainScreen' NPlant.UI.Screens.FileDialogResult,NPlant.UI.MainScreen
+NPlant.UI,ScreenManager,0,5,0,0,3,45,9,0,0,-1,2,3,NPlant.UI.IResultScreen' NPlant.UI.IScreen,NPlant.UI.Screens.Controls.ImageGenerationSummary' NPlant.UI.Screens.SettingsScreen' NPlant.UI.MainScreen
+NPlant.UI,SystemEnvironment,0,2,1,0,2,21,3,0,0,-1,1,3,NPlant.UI.SystemSettings,NPlant.UI.Program' NPlant.UI.Screens.FileViews.ImageFileGenerationModel' NPlant.UI.Screens.SettingsScreenController
+NPlant.UI,SystemSettings,0,0,1,0,0,4,0,0,0,-1,0,3,,NPlant.UI.Screens.FileViews.ImageFileGenerationModel' NPlant.UI.SystemEnvironment' NPlant.UI.Screens.SettingsScreenController
+NPlant.UI,WaitCursor,1,2,0,0,2,15,2,0,0,0,0,2,,NPlant.UI.Screens.SettingsScreen' NPlant.UI.Screens.FileViews.ClassDiagramView
+NPlant.UI.Screens.Controls,ImageFileWatcher,2,2,0,0,2,27,2,0,0,0,0,0,,
+NPlant.UI.Screens.Controls,ImageGenerationSummary,5,7,1,0,1,130,9,0,0,0.43,4,0,NPlant.UI.ScreenManager' NPlant.UI.Screens.Controls.SmartPictureBox' NPlant.UI.Screens.FileDialogResult' NPlant.UI.Screens.FileSaveScreen,
+NPlant.UI.Screens.Controls,SmartPictureBox,2,5,0,0,3,74,12,0,0,0.4,0,1,,NPlant.UI.Screens.Controls.ImageGenerationSummary
+NPlant.UI.Screens,FileDialogResult,0,1,4,0,1,18,2,0,0,-1,0,6,,NPlant.UI.MainScreenController' NPlant.UI.Screens.Controls.ImageGenerationSummary' NPlant.UI.MainScreen' NPlant.UI.Screens.SettingsScreen' NPlant.UI.Screens.FileSaveScreen' NPlant.UI.Screens.FileOpenScreen
+NPlant.UI.Screens,FileFilters,2,0,0,0,0,8,0,0,0,-1,0,2,,NPlant.UI.Screens.SettingsScreen' NPlant.UI.MainScreen
+NPlant.UI.Screens,FileSaveScreen,1,2,0,0,2,16,2,0,2,0,2,1,NPlant.UI.IResultScreen' NPlant.UI.Screens.FileDialogResult,NPlant.UI.Screens.Controls.ImageGenerationSummary
+NPlant.UI.Screens,FileOpenScreen,2,3,0,0,3,24,3,0,2,0,2,2,NPlant.UI.IResultScreen' NPlant.UI.Screens.FileDialogResult,NPlant.UI.Screens.SettingsScreen' NPlant.UI.MainScreen
+NPlant.UI.Screens,ISettingScreen,0,0,1,0,0,4,0,1,1,-1,1,2,NPlant.UI.IScreen,NPlant.UI.Screens.SettingsScreen' NPlant.UI.Screens.SettingsScreenController
 NPlant.UI.Screens,PromptDialog,7,7,2,0,1,159,9,0,0,0.57,0,1,,NPlant.UI.Screens.FileViews.ClassDiagramViewController
-NPlant.UI.Screens,SettingsScreen,8,7,1,0,1,158,9,0,2,0.43,4,0,NPlant.UI.Screens.SettingsScreenController' NPlant.UI.Screens.FileDialogResult' NPlant.UI.ScreenManager' NPlant.UI.Screens.FileFilters,
-NPlant.UI.Screens,SettingsScreenController,1,3,0,0,3,17,3,0,0,0,3,1,NPlant.UI.Screens.ISettingScreen' NPlant.UI.SystemSettings' NPlant.UI.SystemEnvironment,NPlant.UI.Screens.SettingsScreen
-NPlant.UI.Screens.FileViews,FileViewController,1,4,0,0,1,19,4,1,0,0,4,0,NPlant.UI.Screens.FileViews.IFileView' NPlant.UI.Screens.FileViews.ImageFileGenerationModel' NPlant.Generation.NPlantImage' NPlant.UI.EventDispatcher,
-NPlant.UI.Screens.FileViews,IAssemblyFileView,0,0,2,0,0,5,0,0,1,-1,0,0,,
-NPlant.UI.Screens.FileViews,ImageFileGenerationModel,1,2,4,0,1,19,2,0,0,1,3,1,NPlant.Generation.PlantUmlInvocation' NPlant.UI.SystemEnvironment' NPlant.UI.SystemSettings,NPlant.UI.Screens.FileViews.FileViewController
-NPlant.UI.Screens.FileViews,IClassDiagramView,0,0,4,0,0,7,0,1,1,-1,0,1,,NPlant.UI.Screens.FileViews.ClassDiagramViewController
-NPlant.UI.Screens.FileViews,IFileView,0,0,1,0,0,4,0,2,0,-1,0,1,,NPlant.UI.Screens.FileViews.FileViewController
-NPlant.UI.Screens.FileViews,ClassDiagramView,10,8,5,0,1,251,9,0,2,0.25,3,0,NPlant.UI.Screens.FileViews.ClassDiagramViewController' NPlant.UI.Screens.Controls.ImageGenerationSummary' NPlant.UI.FileView,
-NPlant.UI.Screens.FileViews,ClassDiagramViewController,3,9,0,0,5,72,14,0,1,0,8,1,NPlant.UI.Screens.FileViews.IClassDiagramView' NPlant.Generation.NPlantAssemblyLoader' NPlant.Generation.NPlantDiagramLoader' NPlant.Generation.DiscoveredDiagram' NPlant.UI.Screens.PromptDialog' NPlant.ClassDiagram' NPlant.UI.LoadedDiagram' NPlant.Generation.ClassDiagraming.BufferedClassDiagramGenerator,NPlant.UI.Screens.FileViews.ClassDiagramView
+NPlant.UI.Screens,SettingsScreen,8,7,1,0,1,158,9,0,2,0.43,7,1,NPlant.UI.ScreenManager' NPlant.UI.WaitCursor' NPlant.UI.Screens.FileDialogResult' NPlant.UI.Screens.FileFilters' NPlant.UI.Screens.FileOpenScreen' NPlant.UI.Screens.ISettingScreen' NPlant.UI.Screens.SettingsScreenController,NPlant.UI.MainScreen
+NPlant.UI.Screens,SettingsScreenController,1,3,0,0,3,17,3,0,0,0,3,1,NPlant.UI.SystemEnvironment' NPlant.UI.SystemSettings' NPlant.UI.Screens.ISettingScreen,NPlant.UI.Screens.SettingsScreen
+NPlant.UI.Screens.FileViews,FileViewController,1,4,0,0,1,19,4,1,0,0,4,1,NPlant.UI.EventDispatcher' NPlant.UI.UserNotificationEvent' NPlant.UI.Screens.FileViews.ImageFileGenerationModel' NPlant.UI.Screens.FileViews.IFileView,NPlant.UI.Screens.FileViews.ClassDiagramViewController
+NPlant.UI.Screens.FileViews,IAssemblyFileView,0,0,2,0,0,5,0,0,1,-1,2,0,NPlant.UI.LoadedDiagram' NPlant.UI.Screens.FileViews.IFileView,
+NPlant.UI.Screens.FileViews,ImageFileGenerationModel,1,2,4,0,1,19,2,0,0,1,2,1,NPlant.UI.SystemEnvironment' NPlant.UI.SystemSettings,NPlant.UI.Screens.FileViews.FileViewController
+NPlant.UI.Screens.FileViews,IClassDiagramView,0,0,4,0,0,7,0,1,1,-1,2,2,NPlant.UI.LoadedDiagram' NPlant.UI.Screens.FileViews.IFileView,NPlant.UI.Screens.FileViews.ClassDiagramViewController' NPlant.UI.Screens.FileViews.ClassDiagramView
+NPlant.UI.Screens.FileViews,IFileView,0,0,1,0,0,4,0,2,0,-1,0,3,,NPlant.UI.Screens.FileViews.IAssemblyFileView' NPlant.UI.Screens.FileViews.IClassDiagramView' NPlant.UI.Screens.FileViews.FileViewController
+NPlant.UI.Screens.FileViews,ClassDiagramView,10,8,5,0,1,251,9,0,2,0.25,5,1,NPlant.UI.FileView' NPlant.UI.LoadedDiagram' NPlant.UI.WaitCursor' NPlant.UI.Screens.FileViews.IClassDiagramView' NPlant.UI.Screens.FileViews.ClassDiagramViewController,NPlant.UI.MainScreen
+NPlant.UI.Screens.FileViews,ClassDiagramViewController,3,9,0,0,5,72,15,0,1,0,4,1,NPlant.UI.LoadedDiagram' NPlant.UI.Screens.PromptDialog' NPlant.UI.Screens.FileViews.FileViewController' NPlant.UI.Screens.FileViews.IClassDiagramView,NPlant.UI.Screens.FileViews.ClassDiagramView
 NPlant.UI.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
 NPlant.UI.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

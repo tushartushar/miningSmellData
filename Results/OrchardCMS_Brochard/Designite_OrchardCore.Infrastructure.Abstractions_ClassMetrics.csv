@@ -1,0 +1,32 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OrchardCore.Environment.Cache,CacheContext,2,8,6,0,8,89,14,0,0,0.75,0,1,,OrchardCore.Environment.Cache.ICacheScopeManager
+OrchardCore.Environment.Cache,CacheContextEntry,0,1,2,0,1,10,1,0,0,-1,0,2,,OrchardCore.Environment.Cache.ICacheContextProvider' OrchardCore.Environment.Cache.ICacheContextManager
+OrchardCore.Environment.Cache,ICacheContextManager,0,1,0,0,0,8,1,1,0,-1,2,0,OrchardCore.Environment.Cache.CacheContextEntry' OrchardCore.Environment.Cache.ICacheContextProvider,
+OrchardCore.Environment.Cache,ICacheContextProvider,0,1,0,0,0,4,1,7,0,-1,1,1,OrchardCore.Environment.Cache.CacheContextEntry,OrchardCore.Environment.Cache.ICacheContextManager
+OrchardCore.Environment.Cache,ICacheScopeManager,0,7,0,0,0,18,7,1,0,-1,1,0,OrchardCore.Environment.Cache.CacheContext,
+OrchardCore.Environment.Cache,ITagCache,0,3,0,0,0,6,3,1,0,-1,0,0,,
+OrchardCore.Environment.Cache,ITagRemovedEventHandler,0,1,0,0,0,4,1,0,0,-1,0,0,,
+OrchardCore.Entities,Entity,0,0,1,0,0,4,0,0,1,-1,1,0,OrchardCore.Entities.IEntity,
+OrchardCore.Entities,EntityExtensions,0,7,0,0,7,78,9,0,0,-1,1,0,OrchardCore.Entities.IEntity,
+OrchardCore.Entities,IEntity,0,0,1,0,0,4,0,2,0,-1,0,3,,OrchardCore.Entities.Entity' OrchardCore.Settings.ISite' OrchardCore.Entities.EntityExtensions
+OrchardCore.Entities,IIdGenerator,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Microsoft.Extensions.FileProviders,FileProviderExtensions,0,1,0,0,1,10,1,0,0,-1,1,0,System.IO.PathExtensions,
+System.IO,PathExtensions,3,3,0,1,3,113,17,0,0,0,0,1,,Microsoft.Extensions.FileProviders.FileProviderExtensions
+OrchardCore.Scripting,GlobalMethod,0,0,2,0,0,5,0,0,0,-1,0,2,,OrchardCore.Scripting.IScriptingEngine' OrchardCore.Scripting.IGlobalMethodProvider
+OrchardCore.Scripting,IGlobalMethodProvider,0,1,0,0,0,8,1,5,0,-1,2,1,OrchardCore.Scripting.GlobalMethod' OrchardCore.Scripting.IScriptingManager,OrchardCore.Scripting.IScriptingManager
+OrchardCore.Scripting,IScriptingEngine,0,2,1,0,0,6,2,2,0,-1,2,1,OrchardCore.Scripting.GlobalMethod' OrchardCore.Scripting.IScriptingScope,OrchardCore.Scripting.IScriptingManager
+OrchardCore.Scripting,IScriptingManager,0,2,1,0,0,22,2,1,0,-1,2,1,OrchardCore.Scripting.IGlobalMethodProvider' OrchardCore.Scripting.IScriptingEngine,OrchardCore.Scripting.IGlobalMethodProvider
+OrchardCore.Scripting,IScriptingScope,0,0,0,0,0,3,0,2,0,-1,0,1,,OrchardCore.Scripting.IScriptingEngine
+OrchardCore.Security,IRole,0,0,2,0,0,5,0,1,0,-1,0,2,,OrchardCore.Security.Role' OrchardCore.Security.Services.IRoleService
+OrchardCore.Security,IRoleRemovedEventHandler,0,1,0,0,0,4,1,0,0,-1,0,0,,
+OrchardCore.Security,Role,0,0,5,0,0,12,0,0,1,-1,2,0,OrchardCore.Security.IRole' OrchardCore.Security.RoleClaim,
+OrchardCore.Security,RoleClaim,0,1,2,0,1,15,1,0,0,-1,0,1,,OrchardCore.Security.Role
+OrchardCore.Security,StandardPermissions,1,0,0,1,0,4,0,0,0,-1,1,0,OrchardCore.Security.Permissions.Permission,
+OrchardCore.Security.Permissions,IPermissionProvider,0,2,0,0,0,5,2,0,0,-1,2,0,OrchardCore.Security.Permissions.PermissionStereotype' OrchardCore.Security.Permissions.Permission,
+OrchardCore.Security.Permissions,PermissionStereotype,0,0,2,0,0,5,0,0,0,-1,1,1,OrchardCore.Security.Permissions.Permission,OrchardCore.Security.Permissions.IPermissionProvider
+OrchardCore.Security.Permissions,Permission,1,3,5,1,3,30,4,0,0,1,0,3,,OrchardCore.Security.Permissions.IPermissionProvider' OrchardCore.Security.Permissions.PermissionStereotype' OrchardCore.Security.StandardPermissions
+OrchardCore.Security.Services,IRoleService,0,2,0,0,0,5,2,0,0,-1,1,1,OrchardCore.Security.IRole,OrchardCore.Security.Services.RoleServiceExtensions
+OrchardCore.Security.Services,RoleServiceExtensions,0,1,0,0,1,9,1,0,0,-1,1,0,OrchardCore.Security.Services.IRoleService,
+OrchardCore.Settings,ISite,0,0,16,0,0,19,0,0,1,-1,2,1,OrchardCore.Entities.IEntity' OrchardCore.Settings.ResourceDebugMode,OrchardCore.Settings.ISiteService
+OrchardCore.Settings,ISiteService,0,3,1,0,0,19,3,0,0,-1,1,0,OrchardCore.Settings.ISite,
+OrchardCore.Settings,ResourceDebugMode,0,0,0,0,0,6,0,0,0,-1,0,1,,OrchardCore.Settings.ISite

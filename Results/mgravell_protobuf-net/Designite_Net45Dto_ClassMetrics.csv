@@ -1,19 +1,19 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-DAL,Database,1,1,0,1,0,8,1,0,0,0,0,0,,
-DAL,TagAttribute,0,1,0,0,1,4,1,0,0,-1,0,0,,
-DAL,TableAttribute,0,0,1,0,0,4,0,0,0,-1,0,0,,
-DAL,ColumnAttribute,0,0,5,0,0,8,0,0,0,-1,0,0,,
-DAL,AssociationAttribute,0,0,3,0,0,6,0,0,0,-1,0,0,,
-DAL,AutoSync,0,0,0,0,0,1,0,0,0,-1,0,0,,
-DAL,DatabaseCompat,1,1,3,1,1,35,1,0,0,0,0,0,,
-DAL,Fear,0,0,0,0,0,18,0,0,0,-1,0,0,,
-DAL,Confusion,0,0,0,0,0,16,0,0,0,-1,0,0,,
-DAL,Doubt,0,0,0,0,0,14,0,0,0,-1,0,0,,
-DAL,NestedInternalType,0,0,1,0,0,6,0,0,0,-1,0,0,,
-DAL,NestedPublicType,0,0,1,0,0,6,0,0,0,-1,0,0,,
-DAL,DatabaseCompatRem,1,1,1,1,1,47,1,0,0,0,0,0,,
-DAL,OrderCompat,15,39,15,0,4,382,39,0,0,0.87,1,0,DAL.OrderLineCompat,
-DAL,OrderLineCompat,5,17,5,0,2,139,17,0,0,0.82,0,1,,DAL.OrderCompat
+DAL,Database,1,1,0,1,0,8,1,0,0,0,0,4,,DAL.DatabaseCompat' DAL.DatabaseCompatRem' DAL.OrderCompat' DAL.OrderLineCompat
+DAL,TagAttribute,0,1,0,0,1,4,1,0,0,-1,0,4,,DAL.DatabaseCompat' DAL.DatabaseCompatRem' DAL.OrderCompat' DAL.OrderLineCompat
+DAL,TableAttribute,0,0,1,0,0,4,0,0,0,-1,0,1,,DAL.OrderLineCompat
+DAL,ColumnAttribute,0,0,5,0,0,8,0,0,0,-1,1,2,DAL.AutoSync,DAL.OrderCompat' DAL.OrderLineCompat
+DAL,AssociationAttribute,0,0,3,0,0,6,0,0,0,-1,0,1,,DAL.OrderCompat
+DAL,AutoSync,0,0,0,0,0,1,0,0,0,-1,0,2,,DAL.ColumnAttribute' DAL.OrderCompat
+DAL,DatabaseCompat,1,1,3,1,1,35,1,0,0,0,8,0,DAL.Database' DAL.TagAttribute' DAL.Fear' DAL.Confusion' DAL.Doubt' DAL.NestedInternalType' DAL.NestedPublicType' DAL.OrderCompat,
+DAL,Fear,0,0,0,0,0,18,0,0,0,-1,0,1,,DAL.DatabaseCompat
+DAL,Confusion,0,0,0,0,0,16,0,0,0,-1,0,1,,DAL.DatabaseCompat
+DAL,Doubt,0,0,0,0,0,14,0,0,0,-1,0,1,,DAL.DatabaseCompat
+DAL,NestedInternalType,0,0,1,0,0,6,0,0,0,-1,0,1,,DAL.DatabaseCompat
+DAL,NestedPublicType,0,0,1,0,0,6,0,0,0,-1,0,1,,DAL.DatabaseCompat
+DAL,DatabaseCompatRem,1,1,1,1,1,47,1,0,0,0,3,0,DAL.Database' DAL.TagAttribute' DAL.OrderCompat,
+DAL,OrderCompat,15,39,15,0,4,382,39,0,0,0.87,6,2,DAL.Database' DAL.TagAttribute' DAL.ColumnAttribute' DAL.AssociationAttribute' DAL.AutoSync' DAL.OrderLineCompat,DAL.DatabaseCompat' DAL.DatabaseCompatRem
+DAL,OrderLineCompat,5,17,5,0,2,139,17,0,0,0.82,4,1,DAL.Database' DAL.TagAttribute' DAL.TableAttribute' DAL.ColumnAttribute,DAL.OrderCompat
 DAL,Dummy1,0,0,0,0,0,1,0,0,0,-1,0,0,,
 DAL,Dummy2,0,0,0,0,0,1,0,0,0,-1,0,0,,
 DAL,Dummy3,0,0,0,0,0,1,0,0,0,-1,0,0,,

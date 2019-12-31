@@ -1,15 +1,15 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-EasyNetQ.Scheduler,ConfigurationBase,0,2,0,0,2,25,4,2,0,-1,0,0,,
-EasyNetQ.Scheduler,ISqlDialect,0,1,18,0,0,22,1,2,0,-1,0,2,,EasyNetQ.Scheduler.SqlDialectResolver' EasyNetQ.Scheduler.ScheduleRepository
-EasyNetQ.Scheduler,SqlDialectResolver,1,2,0,0,1,14,2,0,0,0,1,1,EasyNetQ.Scheduler.ISqlDialect,EasyNetQ.Scheduler.ScheduleRepository
-EasyNetQ.Scheduler,MssqlDialect,0,2,18,0,2,46,2,0,1,-1,0,0,,
-EasyNetQ.Scheduler,PostgreSqlDialect,0,2,18,0,2,48,2,0,1,-1,0,0,,
-EasyNetQ.Scheduler,Program,0,1,0,0,0,33,1,0,0,-1,1,0,EasyNetQ.Scheduler.SchedulerServiceFactory,
-EasyNetQ.Scheduler,IScheduleRepository,0,4,0,0,0,7,4,1,0,-1,0,1,,EasyNetQ.Scheduler.SchedulerService
-EasyNetQ.Scheduler,ScheduleRepository,4,14,0,0,6,171,17,0,1,0.14,3,0,EasyNetQ.Scheduler.ScheduleRepositoryConfiguration' EasyNetQ.Scheduler.ISqlDialect' EasyNetQ.Scheduler.SqlDialectResolver,
-EasyNetQ.Scheduler,ScheduleRepositoryConfiguration,4,2,8,0,2,41,2,0,1,1,0,2,,EasyNetQ.Scheduler.ScheduleRepository' EasyNetQ.Scheduler.SchedulerServiceFactory
-EasyNetQ.Scheduler,ISchedulerService,0,2,0,0,0,5,2,1,0,-1,0,0,,
-EasyNetQ.Scheduler,SchedulerService,7,7,0,0,6,111,11,0,1,0,2,1,EasyNetQ.Scheduler.IScheduleRepository' EasyNetQ.Scheduler.SchedulerServiceConfiguration,EasyNetQ.Scheduler.SchedulerServiceFactory
-EasyNetQ.Scheduler,SchedulerServiceConfiguration,0,1,2,0,1,13,1,0,1,-1,0,2,,EasyNetQ.Scheduler.SchedulerService' EasyNetQ.Scheduler.SchedulerServiceFactory
-EasyNetQ.Scheduler,SchedulerServiceFactory,0,1,0,0,1,13,1,0,0,-1,4,1,EasyNetQ.Scheduler.Logger' EasyNetQ.Scheduler.ScheduleRepositoryConfiguration' EasyNetQ.Scheduler.SchedulerServiceConfiguration' EasyNetQ.Scheduler.SchedulerService,EasyNetQ.Scheduler.Program
-EasyNetQ.Scheduler,Logger,1,5,0,0,5,24,5,0,0,0,0,1,,EasyNetQ.Scheduler.SchedulerServiceFactory
+EasyNetQ.Scheduler,ConfigurationBase,0,2,0,0,2,25,4,2,0,-1,0,2,,EasyNetQ.Scheduler.SchedulerServiceConfiguration' EasyNetQ.Scheduler.ScheduleRepositoryConfiguration
+EasyNetQ.Scheduler,ISqlDialect,0,1,18,0,0,22,1,2,0,-1,0,4,,EasyNetQ.Scheduler.ScheduleRepository' EasyNetQ.Scheduler.SqlDialectResolver' EasyNetQ.Scheduler.MssqlDialect' EasyNetQ.Scheduler.PostgreSqlDialect
+EasyNetQ.Scheduler,SqlDialectResolver,1,2,0,0,1,14,2,0,0,0,3,1,EasyNetQ.Scheduler.ISqlDialect' EasyNetQ.Scheduler.MssqlDialect' EasyNetQ.Scheduler.PostgreSqlDialect,EasyNetQ.Scheduler.ScheduleRepository
+EasyNetQ.Scheduler,MssqlDialect,0,2,18,0,2,46,2,0,1,-1,1,1,EasyNetQ.Scheduler.ISqlDialect,EasyNetQ.Scheduler.SqlDialectResolver
+EasyNetQ.Scheduler,PostgreSqlDialect,0,2,18,0,2,48,2,0,1,-1,1,1,EasyNetQ.Scheduler.ISqlDialect,EasyNetQ.Scheduler.SqlDialectResolver
+EasyNetQ.Scheduler,Program,0,1,0,0,0,33,1,0,0,-1,2,0,EasyNetQ.Scheduler.ISchedulerService' EasyNetQ.Scheduler.SchedulerServiceFactory,
+EasyNetQ.Scheduler,IScheduleRepository,0,4,0,0,0,7,4,2,0,-1,0,2,,EasyNetQ.Scheduler.ScheduleRepository' EasyNetQ.Scheduler.SchedulerService
+EasyNetQ.Scheduler,ScheduleRepository,4,14,0,0,6,171,17,0,1,0.14,4,1,EasyNetQ.Scheduler.ISqlDialect' EasyNetQ.Scheduler.SqlDialectResolver' EasyNetQ.Scheduler.IScheduleRepository' EasyNetQ.Scheduler.ScheduleRepositoryConfiguration,EasyNetQ.Scheduler.SchedulerServiceFactory
+EasyNetQ.Scheduler,ScheduleRepositoryConfiguration,4,2,8,0,2,41,2,0,1,1,1,2,EasyNetQ.Scheduler.ConfigurationBase,EasyNetQ.Scheduler.ScheduleRepository' EasyNetQ.Scheduler.SchedulerServiceFactory
+EasyNetQ.Scheduler,ISchedulerService,0,2,0,0,0,5,2,1,0,-1,0,3,,EasyNetQ.Scheduler.SchedulerService' EasyNetQ.Scheduler.SchedulerServiceFactory' EasyNetQ.Scheduler.Program
+EasyNetQ.Scheduler,SchedulerService,7,7,0,0,6,111,13,0,1,0.29,3,1,EasyNetQ.Scheduler.IScheduleRepository' EasyNetQ.Scheduler.ISchedulerService' EasyNetQ.Scheduler.SchedulerServiceConfiguration,EasyNetQ.Scheduler.SchedulerServiceFactory
+EasyNetQ.Scheduler,SchedulerServiceConfiguration,0,1,2,0,1,13,1,0,1,-1,1,2,EasyNetQ.Scheduler.ConfigurationBase,EasyNetQ.Scheduler.SchedulerServiceFactory' EasyNetQ.Scheduler.SchedulerService
+EasyNetQ.Scheduler,SchedulerServiceFactory,0,1,0,0,1,13,1,0,0,-1,6,1,EasyNetQ.Scheduler.ScheduleRepository' EasyNetQ.Scheduler.ScheduleRepositoryConfiguration' EasyNetQ.Scheduler.ISchedulerService' EasyNetQ.Scheduler.SchedulerService' EasyNetQ.Scheduler.SchedulerServiceConfiguration' EasyNetQ.Scheduler.Logger,EasyNetQ.Scheduler.Program
+EasyNetQ.Scheduler,Logger,1,5,0,0,5,24,5,0,0,0.4,0,1,,EasyNetQ.Scheduler.SchedulerServiceFactory

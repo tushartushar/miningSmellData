@@ -1,14 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Settings,AdminMenu,0,2,1,0,2,23,3,0,1,-1,1,0,OrchardCore.Environment.Navigation.NavigationBuilder,
-OrchardCore.Settings,Permissions,2,2,0,2,2,21,2,0,0,0,0,1,,OrchardCore.Settings.Controllers.AdminController
-OrchardCore.Settings,SiteSettings,0,0,14,0,0,17,0,0,2,-1,0,0,,
-OrchardCore.Settings,Startup,0,2,0,0,2,26,2,0,0,-1,0,0,,
-OrchardCore.Settings.Controllers,AdminController,4,3,1,0,3,56,6,0,0,0,4,0,OrchardCore.DisplayManagement.IDisplayManager' OrchardCore.DisplayManagement.Notify.INotifier' OrchardCore.Settings.ViewModels.AdminIndexViewModel' OrchardCore.Settings.Permissions,
-OrchardCore.Settings.Drivers,ButtonsSettingsDisplayDriver,1,2,0,1,2,15,2,0,0,0,3,0,OrchardCore.DisplayManagement.Views.ShapeResult' OrchardCore.DisplayManagement.Handlers.BuildEditorContext' OrchardCore.DisplayManagement.Handlers.UpdateEditorContext,
-OrchardCore.Settings.Drivers,DefaultSiteSettingsDisplayDriver,1,2,0,1,2,28,4,0,0,0,5,0,OrchardCore.DisplayManagement.Views.ShapeResult' OrchardCore.DisplayManagement.Handlers.BuildEditorContext' OrchardCore.Settings.ViewModels.SiteSettingsViewModel' OrchardCore.DisplayManagement.Handlers.UpdateEditorContext' OrchardCore.DisplayManagement.Views.IDisplayResult,
-OrchardCore.Settings.Recipes,SettingsStep,1,2,0,0,2,66,5,0,1,0,1,0,OrchardCore.Recipes.Models.RecipeExecutionContext,
-OrchardCore.Settings.Services,SetupEventHandler,1,2,0,0,2,26,2,0,1,0,0,0,,
-OrchardCore.Settings.Services,SiteLiquidTemplateEventHandler,1,2,0,0,2,14,2,0,1,0,0,0,,
-OrchardCore.Settings.Services,SiteService,4,4,1,0,3,86,6,0,0,0,0,0,,
+OrchardCore.Settings,AdminMenu,1,2,0,0,2,25,3,0,1,0,1,1,OrchardCore.Settings.Permissions,OrchardCore.Settings.Startup
+OrchardCore.Settings,Permissions,2,2,0,2,2,21,2,0,0,0,0,3,,OrchardCore.Settings.Startup' OrchardCore.Settings.Controllers.AdminController' OrchardCore.Settings.AdminMenu
+OrchardCore.Settings,SiteSettings,0,0,16,0,0,23,0,0,0,-1,0,1,,OrchardCore.Settings.Services.SiteService
+OrchardCore.Settings,Startup,1,3,0,0,3,35,3,0,0,0.67,12,0,OrchardCore.Settings.AdminMenu' OrchardCore.Settings.Permissions' OrchardCore.Settings.Deployment.SiteSettingsDeploymentSource' OrchardCore.Settings.Deployment.SiteSettingsDeploymentStep' OrchardCore.Settings.Deployment.SiteSettingsDeploymentStepDriver' OrchardCore.Settings.Drivers.ButtonsSettingsDisplayDriver' OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver' OrchardCore.Settings.Recipes.SettingsStep' OrchardCore.Settings.Services.DefaultTimeZoneSelector' OrchardCore.Settings.Services.SetupEventHandler' OrchardCore.Settings.Services.SiteLiquidTemplateEventHandler' OrchardCore.Settings.Services.SiteService,
+OrchardCore.Settings.Controllers,AdminController,4,3,2,0,3,61,6,0,0,0,2,0,OrchardCore.Settings.Permissions' OrchardCore.Settings.ViewModels.AdminIndexViewModel,
+OrchardCore.Settings.Deployment,SiteSettingsDeploymentSource,1,2,0,0,2,74,19,0,1,0,1,1,OrchardCore.Settings.Deployment.SiteSettingsDeploymentStep,OrchardCore.Settings.Startup
+OrchardCore.Settings.Deployment,SiteSettingsDeploymentStep,0,1,1,0,1,8,1,0,1,-1,0,3,,OrchardCore.Settings.Deployment.SiteSettingsDeploymentSource' OrchardCore.Settings.Startup' OrchardCore.Settings.Deployment.SiteSettingsDeploymentStepDriver
+OrchardCore.Settings.Deployment,SiteSettingsDeploymentStepDriver,0,3,0,0,3,25,3,0,0,-1,2,1,OrchardCore.Settings.Deployment.SiteSettingsDeploymentStep' OrchardCore.Settings.ViewModels.SiteSettingsDeploymentStepViewModel,OrchardCore.Settings.Startup
+OrchardCore.Settings.Drivers,ButtonsSettingsDisplayDriver,1,2,0,1,2,15,2,0,0,0,0,1,,OrchardCore.Settings.Startup
+OrchardCore.Settings.Drivers,DefaultSiteSettingsDisplayDriver,3,3,0,1,3,50,5,0,0,0,1,1,OrchardCore.Settings.ViewModels.SiteSettingsViewModel,OrchardCore.Settings.Startup
+OrchardCore.Settings.Recipes,SettingsStep,1,2,0,0,2,72,19,0,1,0,0,1,,OrchardCore.Settings.Startup
+OrchardCore.Settings.Services,DefaultTimeZoneSelector,1,2,0,0,2,16,2,0,0,0,0,1,,OrchardCore.Settings.Startup
+OrchardCore.Settings.Services,SetupEventHandler,1,2,0,0,2,28,2,0,1,0,0,1,,OrchardCore.Settings.Startup
+OrchardCore.Settings.Services,SiteLiquidTemplateEventHandler,1,2,0,0,2,14,2,0,1,0,0,1,,OrchardCore.Settings.Startup
+OrchardCore.Settings.Services,SiteService,4,5,3,0,4,71,7,0,0,0.4,1,1,OrchardCore.Settings.SiteSettings,OrchardCore.Settings.Startup
 OrchardCore.Settings.ViewModels,AdminIndexViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,OrchardCore.Settings.Controllers.AdminController
-OrchardCore.Settings.ViewModels,SiteSettingsViewModel,0,0,3,0,0,6,0,0,0,-1,0,1,,OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver
+OrchardCore.Settings.ViewModels,SiteCulturesViewModel,0,0,3,0,0,6,0,0,0,-1,0,0,,
+OrchardCore.Settings.ViewModels,SiteSettingsDeploymentStepViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Settings.Deployment.SiteSettingsDeploymentStepDriver
+OrchardCore.Settings.ViewModels,SiteSettingsViewModel,0,0,9,0,0,12,0,0,0,-1,0,1,,OrchardCore.Settings.Drivers.DefaultSiteSettingsDisplayDriver

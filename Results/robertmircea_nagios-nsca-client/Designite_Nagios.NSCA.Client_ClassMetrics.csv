@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Nagios.NSCA.Client,CRC32,6,16,0,1,11,151,22,0,0,0.12,0,1,,Nagios.NSCA.Client.PassiveCheckProtocolWriter
-Nagios.NSCA.Client,AESEncryption,1,2,0,0,2,25,2,0,1,0,0,1,,Nagios.NSCA.Client.EncryptorFactory
-Nagios.NSCA.Client,EncryptorFactory,0,1,0,0,1,23,2,0,0,-1,5,1,Nagios.NSCA.Client.NSCAEncryptionType' Nagios.NSCA.Client.XorEncryption' Nagios.NSCA.Client.TripleDESEncryption' Nagios.NSCA.Client.NoEncryption' Nagios.NSCA.Client.AESEncryption,Nagios.NSCA.Client.PassiveCheckProtocolWriter
-Nagios.NSCA.Client,INSCAClientSender,0,1,0,0,0,7,1,2,0,-1,1,1,Nagios.NSCA.Client.Level,NagiosNSCAClient.Program
-Nagios.NSCA.Client,Level,0,0,0,0,0,7,0,0,0,-1,0,5,,Nagios.NSCA.Client.INSCAClientSender' Nagios.NSCA.Client.NSCAClientSender' Nagios.NSCA.Client.NullNSCAClientSender' Nagios.NSCA.Client.PassiveCheckProtocolWriter' NagiosNSCAClient.Program
-Nagios.NSCA.Client,NoEncryption,0,1,0,0,1,7,1,0,1,-1,0,1,,Nagios.NSCA.Client.EncryptorFactory
-Nagios.NSCA.Client,NSCASettings,0,0,4,0,0,40,0,0,0,-1,0,3,,Nagios.NSCA.Client.NSCAClientSender' Nagios.NSCA.Client.PassiveCheckProtocolWriter' NagiosNSCAClient.Program
-Nagios.NSCA.Client,NSCAClientSender,2,3,0,0,3,44,7,0,1,0.67,3,0,Nagios.NSCA.Client.NSCASettings' Nagios.NSCA.Client.PassiveCheckProtocolWriter' Nagios.NSCA.Client.Level,
-Nagios.NSCA.Client,NSCAEncryptionBase,0,1,0,0,1,4,1,4,0,-1,0,1,,Nagios.NSCA.Client.PassiveCheckProtocolWriter
-Nagios.NSCA.Client,NSCAEncryptionType,0,0,0,0,0,9,0,0,0,-1,0,2,,Nagios.NSCA.Client.EncryptorFactory' NagiosNSCAClient.Program
-Nagios.NSCA.Client,NullNSCAClientSender,1,1,1,0,1,9,1,0,1,0,1,0,Nagios.NSCA.Client.Level,
-Nagios.NSCA.Client,PassiveCheckProtocolWriter,5,2,0,0,2,34,2,0,0,0,5,1,Nagios.NSCA.Client.NSCASettings' Nagios.NSCA.Client.NSCAEncryptionBase' Nagios.NSCA.Client.CRC32' Nagios.NSCA.Client.EncryptorFactory' Nagios.NSCA.Client.Level,Nagios.NSCA.Client.NSCAClientSender
+Nagios.NSCA.Client,AESEncryption,1,2,0,0,2,30,2,0,1,1,1,1,Nagios.NSCA.Client.NSCAEncryptionBase,Nagios.NSCA.Client.EncryptorFactory
+Nagios.NSCA.Client,EncryptorFactory,0,1,0,0,1,23,7,0,0,-1,6,1,Nagios.NSCA.Client.AESEncryption' Nagios.NSCA.Client.NoEncryption' Nagios.NSCA.Client.NSCAEncryptionBase' Nagios.NSCA.Client.NSCAEncryptionType' Nagios.NSCA.Client.TripleDESEncryption' Nagios.NSCA.Client.XorEncryption,Nagios.NSCA.Client.PassiveCheckProtocolWriter
+Nagios.NSCA.Client,INSCAClientSender,0,1,0,0,0,7,1,2,0,-1,1,2,Nagios.NSCA.Client.Level,Nagios.NSCA.Client.NullNSCAClientSender' Nagios.NSCA.Client.NSCAClientSender
+Nagios.NSCA.Client,Level,0,0,0,0,0,7,0,0,0,-1,0,4,,Nagios.NSCA.Client.NullNSCAClientSender' Nagios.NSCA.Client.INSCAClientSender' Nagios.NSCA.Client.PassiveCheckProtocolWriter' Nagios.NSCA.Client.NSCAClientSender
+Nagios.NSCA.Client,NoEncryption,0,1,0,0,1,7,1,0,1,-1,1,1,Nagios.NSCA.Client.NSCAEncryptionBase,Nagios.NSCA.Client.EncryptorFactory
+Nagios.NSCA.Client,NSCASettings,0,0,4,0,0,40,0,0,0,-1,1,2,Nagios.NSCA.Client.NSCAEncryptionType,Nagios.NSCA.Client.PassiveCheckProtocolWriter' Nagios.NSCA.Client.NSCAClientSender
+Nagios.NSCA.Client,NSCAClientSender,2,3,0,0,3,44,7,0,1,0.67,4,0,Nagios.NSCA.Client.INSCAClientSender' Nagios.NSCA.Client.Level' Nagios.NSCA.Client.NSCASettings' Nagios.NSCA.Client.PassiveCheckProtocolWriter,
+Nagios.NSCA.Client,NSCAEncryptionBase,0,1,0,0,1,4,1,4,0,-1,0,5,,Nagios.NSCA.Client.XorEncryption' Nagios.NSCA.Client.NoEncryption' Nagios.NSCA.Client.AESEncryption' Nagios.NSCA.Client.TripleDESEncryption' Nagios.NSCA.Client.EncryptorFactory
+Nagios.NSCA.Client,NSCAEncryptionType,0,0,0,0,0,9,0,0,0,-1,0,2,,Nagios.NSCA.Client.NSCASettings' Nagios.NSCA.Client.EncryptorFactory
+Nagios.NSCA.Client,NullNSCAClientSender,1,1,1,0,1,9,1,0,1,0,2,0,Nagios.NSCA.Client.INSCAClientSender' Nagios.NSCA.Client.Level,
+Nagios.NSCA.Client,PassiveCheckProtocolWriter,5,2,0,0,2,34,2,0,0,1,4,1,Nagios.NSCA.Client.CRC32' Nagios.NSCA.Client.EncryptorFactory' Nagios.NSCA.Client.Level' Nagios.NSCA.Client.NSCASettings,Nagios.NSCA.Client.NSCAClientSender
 Nagios.NSCA.Client,MemoryStreamExtensions,0,3,0,0,3,35,6,0,0,-1,0,0,,
-Nagios.NSCA.Client,TripleDESEncryption,0,1,0,0,1,17,1,0,1,-1,0,1,,Nagios.NSCA.Client.EncryptorFactory
-Nagios.NSCA.Client,XorEncryption,1,1,0,0,1,29,6,0,1,0,0,1,,Nagios.NSCA.Client.EncryptorFactory
+Nagios.NSCA.Client,TripleDESEncryption,0,1,0,0,1,17,1,0,1,-1,1,1,Nagios.NSCA.Client.NSCAEncryptionBase,Nagios.NSCA.Client.EncryptorFactory
+Nagios.NSCA.Client,XorEncryption,1,1,0,0,1,29,6,0,1,0,1,1,Nagios.NSCA.Client.NSCAEncryptionBase,Nagios.NSCA.Client.EncryptorFactory

@@ -1,28 +1,28 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-CRFSharp,BaseModel,7,6,0,7,5,131,18,2,0,0.67,2,0,CRFSharp.Index' CRFSharp.Tagger,
+CRFSharp,BaseModel,7,6,0,7,5,131,21,2,0,0.67,2,2,CRFSharp.Index' CRFSharp.Tagger,CRFSharp.ModelWriter' CRFSharp.ModelReader
 CRFSharp,Index,2,1,0,2,1,13,1,0,0,0,0,1,,CRFSharp.BaseModel
-CRFSharp,IGenerateFeature,0,2,0,0,0,5,2,2,0,-1,0,1,,corpus2tag.Program
-CRFSharp,Node,10,0,0,10,0,13,0,0,0,-1,0,6,,CRFSharp.Path' CRFSharp.Tagger' CRFSharp.QueueElement' CRFSharp.DecoderTagger' CRFSharp.CRFEncoderThread' CRFSharp.EncoderTagger
-CRFSharp,Path,4,2,0,4,2,20,2,0,0,0,1,4,CRFSharp.Node,CRFSharp.Tagger' CRFSharp.DecoderTagger' CRFSharp.CRFEncoderThread' CRFSharp.EncoderTagger
-CRFSharp,Pool<T>,4,3,2,0,2,79,5,0,0,0,1,0,CRFSharp.PoolItem,
-CRFSharp,PoolItem,3,2,0,1,1,29,2,0,0,0,0,3,,CRFSharp.Pool<T>' CRFSharp.DecoderTagger' CRFSharp.ModelWriter
-CRFSharp,Tagger,8,5,0,8,3,127,22,2,0,0,3,1,CRFSharp.Node' CRFSharp.Path' CRFSharp.Utils,CRFSharp.BaseModel
-CRFSharp,QueueElement,4,0,0,4,0,7,0,0,0,-1,1,2,CRFSharp.Node,CRFSharp.Utils' CRFSharp.DecoderTagger
-CRFSharp,Heap,5,0,0,5,0,8,0,0,0,-1,0,2,,CRFSharp.Utils' CRFSharp.DecoderTagger
-CRFSharp,Utils,13,7,0,13,7,120,18,0,0,1,2,7,CRFSharp.Heap' CRFSharp.QueueElement,CRFSharp.Tagger' CRFSharp.DecoderTagger' CRFSharp.LBFGS' CRFSharp.ModelWriter' CRFSharp.DefaultFeatureLexicalDict' CRFSharpWrapper.Decoder' CRFSharpWrapper.SegDecoderTagger
-CRFSharp,crf_term_out,3,1,0,3,1,14,1,1,0,0,0,3,,CRFSharp.DecoderTagger' CRFSharpWrapper.Decoder' CRFSharpConsole.DecoderConsole
-CRFSharp,DecoderTagger,7,22,0,3,19,405,58,1,1,0,8,1,CRFSharp.ModelReader' CRFSharp.Heap' CRFSharp.Node' CRFSharp.Path' CRFSharp.Utils' CRFSharp.QueueElement' CRFSharp.crf_term_out' CRFSharp.PoolItem,CRFSharpWrapper.Decoder
-CRFSharp,ModelReader,3,12,1,1,5,212,12,0,1,0.25,0,4,,CRFSharp.DecoderTagger' CRFSharp.ModelWriter' CRFSharpWrapper.Decoder' CRFSharpTests.ModelReaderTests
-CRFSharp,CRFEncoderThread,11,2,0,10,2,76,12,0,0,0,4,1,CRFSharp.EncoderTagger' CRFSharp.Node' CRFSharp.LBFGS' CRFSharp.Path,CRFSharpWrapper.Encoder
-CRFSharp,EncoderTagger,2,9,0,2,7,168,29,0,1,0,3,3,CRFSharp.ModelWriter' CRFSharp.Node' CRFSharp.Path,CRFSharp.CRFEncoderThread' CRFSharp.ModelWriter' CRFSharpWrapper.Encoder
+CRFSharp,IGenerateFeature,0,2,0,0,0,5,2,2,0,-1,0,0,,
+CRFSharp,Node,10,0,0,10,0,13,0,0,0,-1,1,6,CRFSharp.Path,CRFSharp.QueueElement' CRFSharp.Path' CRFSharp.EncoderTagger' CRFSharp.Tagger' CRFSharp.DecoderTagger' CRFSharp.CRFEncoderThread
+CRFSharp,Path,4,2,0,4,2,20,2,0,0,0,1,4,CRFSharp.Node,CRFSharp.Tagger' CRFSharp.Node' CRFSharp.CRFEncoderThread' CRFSharp.DecoderTagger
+CRFSharp,Pool<T>,4,3,2,0,2,79,5,0,0,0,1,2,CRFSharp.PoolItem,CRFSharp.ModelWriter' CRFSharp.DecoderTagger
+CRFSharp,PoolItem,3,2,0,1,1,29,2,0,0,0,0,1,,CRFSharp.Pool<T>
+CRFSharp,Tagger,8,5,0,8,3,127,22,2,0,0,3,3,CRFSharp.Node' CRFSharp.Path' CRFSharp.Utils,CRFSharp.EncoderTagger' CRFSharp.DecoderTagger' CRFSharp.BaseModel
+CRFSharp,QueueElement,4,0,0,4,0,7,0,0,0,-1,1,2,CRFSharp.Node,CRFSharp.Heap' CRFSharp.Utils
+CRFSharp,Heap,5,0,0,5,0,8,0,0,0,-1,1,2,CRFSharp.QueueElement,CRFSharp.DecoderTagger' CRFSharp.Utils
+CRFSharp,Utils,13,7,0,13,7,120,18,0,0,1,2,6,CRFSharp.QueueElement' CRFSharp.Heap,CRFSharp.DefaultFeatureLexicalDict' CRFSharp.LBFGS' CRFSharp.ModelWriter' CRFSharp.Tagger' CRFSharp.crf_term_out' CRFSharp.DecoderTagger
+CRFSharp,crf_term_out,3,1,0,3,1,14,1,1,0,0,1,1,CRFSharp.Utils,CRFSharp.DecoderTagger
+CRFSharp,DecoderTagger,7,22,0,3,19,405,70,1,1,0,8,0,CRFSharp.Node' CRFSharp.Path' CRFSharp.Pool<T>' CRFSharp.Tagger' CRFSharp.Heap' CRFSharp.Utils' CRFSharp.crf_term_out' CRFSharp.ModelReader,
+CRFSharp,ModelReader,3,12,1,1,5,212,22,0,1,0.33,1,2,CRFSharp.BaseModel,CRFSharp.ModelWriter' CRFSharp.DecoderTagger
+CRFSharp,CRFEncoderThread,11,2,0,10,2,76,12,0,0,0,4,0,CRFSharp.Node' CRFSharp.Path' CRFSharp.EncoderTagger' CRFSharp.LBFGS,
+CRFSharp,EncoderTagger,2,9,0,2,7,168,29,0,1,0,3,2,CRFSharp.Node' CRFSharp.Tagger' CRFSharp.ModelWriter,CRFSharp.CRFEncoderThread' CRFSharp.ModelWriter
 CRFSharp,FeatureIdPair,2,1,0,2,1,10,1,0,0,0,0,2,,CRFSharp.FeatureItem' CRFSharp.DefaultFeatureLexicalDict
 CRFSharp,FeatureItem,2,2,0,2,2,14,2,0,0,0,1,0,CRFSharp.FeatureIdPair,
 CRFSharp,MEMORYSTATUSEX,9,1,0,9,1,17,1,0,0,0,0,1,,CRFSharp.HugeFeatureLexicalDict
 CRFSharp,FeatureFreq,2,1,0,2,1,9,1,0,0,0,0,1,,CRFSharp.HugeFeatureLexicalDict
-CRFSharp,HugeFeatureLexicalDict,9,12,2,0,6,232,26,0,1,0,2,0,CRFSharp.FeatureFreq' CRFSharp.MEMORYSTATUSEX,
-CRFSharp,IFeatureLexicalDict,0,5,1,0,0,12,5,2,0,-1,0,1,,CRFSharp.ModelWriter
-CRFSharp,LBFGS,19,8,0,6,2,306,26,0,0,0,2,2,CRFSharp.Mcsrch' CRFSharp.Utils,CRFSharp.CRFEncoderThread' CRFSharpWrapper.Encoder
-CRFSharp,Mcsrch,26,4,0,0,2,422,25,0,0,0,0,1,,CRFSharp.LBFGS
-CRFSharp,ModelWriter,6,10,0,1,8,360,30,0,1,0,5,2,CRFSharp.IFeatureLexicalDict' CRFSharp.EncoderTagger' CRFSharp.ModelReader' CRFSharp.Utils' CRFSharp.PoolItem,CRFSharp.EncoderTagger' CRFSharpWrapper.Encoder
-CRFSharp,DefaultFeatureLexicalDict,4,7,1,0,6,104,12,0,1,0,2,0,CRFSharp.FeatureIdPair' CRFSharp.Utils,
+CRFSharp,HugeFeatureLexicalDict,9,12,2,0,6,232,28,0,1,0,3,1,CRFSharp.MEMORYSTATUSEX' CRFSharp.FeatureFreq' CRFSharp.IFeatureLexicalDict,CRFSharp.ModelWriter
+CRFSharp,IFeatureLexicalDict,0,5,1,0,0,12,5,2,0,-1,0,3,,CRFSharp.DefaultFeatureLexicalDict' CRFSharp.HugeFeatureLexicalDict' CRFSharp.ModelWriter
+CRFSharp,LBFGS,19,8,0,6,2,306,30,0,0,0,2,1,CRFSharp.Utils' CRFSharp.Mcsrch,CRFSharp.CRFEncoderThread
+CRFSharp,Mcsrch,26,4,0,0,2,422,41,0,0,0,0,1,,CRFSharp.LBFGS
+CRFSharp,ModelWriter,6,10,0,1,8,360,42,0,1,0,8,1,CRFSharp.BaseModel' CRFSharp.Pool<T>' CRFSharp.Utils' CRFSharp.ModelReader' CRFSharp.EncoderTagger' CRFSharp.HugeFeatureLexicalDict' CRFSharp.IFeatureLexicalDict' CRFSharp.DefaultFeatureLexicalDict,CRFSharp.EncoderTagger
+CRFSharp,DefaultFeatureLexicalDict,4,7,1,0,6,104,13,0,1,0,3,1,CRFSharp.Utils' CRFSharp.FeatureIdPair' CRFSharp.IFeatureLexicalDict,CRFSharp.ModelWriter
 CRFSharp.decoder,ModelReaderExtensions,2,4,0,0,0,26,6,0,0,1,0,0,,

@@ -1,12 +1,10 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrleansZooKeeperUtils,LegacyZooKeeperGatewayListProviderConfigurator,0,1,0,0,1,10,1,0,0,-1,0,0,,
-OrleansZooKeeperUtils,LegacyZooKeeperMembershipConfigurator,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Orleans.Runtime.Host,MembershipSerializerSettings,1,1,0,1,0,68,1,0,0,0,0,1,,Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable
-Orleans.Runtime.Host,MembershipEntryConverter,0,3,0,0,3,36,3,0,0,-1,0,0,,
-Orleans.Runtime.Host,SiloAddressConverter,0,3,0,0,3,22,3,0,0,-1,1,0,Orleans.Runtime.SiloAddress,
-OrleansZooKeeperUtils.Options,ZooKeeperGatewayListProviderOptions,0,0,1,0,0,7,0,0,0,-1,0,0,,
-OrleansZooKeeperUtils.Configuration,ZooKeeperMembershipOptions,0,0,1,0,0,7,0,0,0,-1,0,0,,
-Orleans.Runtime.Membership,ZooKeeperBasedMembershipTable,6,19,0,0,8,263,19,0,0,0.37,3,1,Orleans.Runtime.Membership.ZooKeeperWatcher' Orleans.Runtime.SiloAddress' Orleans.Runtime.Host.MembershipSerializerSettings,Orleans.Runtime.Membership.ZooKeeperGatewayListProvider
-Orleans.Runtime.Membership,ZooKeeperWatcher,1,2,0,0,2,16,3,0,0,0,0,2,,Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable' Orleans.Runtime.Membership.ZooKeeperGatewayListProvider
-Orleans.Runtime.Membership,ZooKeeperGatewayListProvider,4,3,2,0,3,58,3,0,0,0.67,2,0,Orleans.Runtime.Membership.ZooKeeperWatcher' Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable,
-Orleans.Hosting,ZooKeeperHostingExtensions,0,8,0,0,8,69,8,0,0,-1,1,0,Orleans.Hosting.ISiloHostBuilder,
+Orleans.Runtime.Host,MembershipSerializerSettings,1,1,0,1,0,68,1,0,0,0,2,1,Orleans.Runtime.Host.MembershipEntryConverter' Orleans.Runtime.Host.SiloAddressConverter,Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable
+Orleans.Runtime.Host,MembershipEntryConverter,0,3,0,0,3,36,3,0,0,-1,0,1,,Orleans.Runtime.Host.MembershipSerializerSettings
+Orleans.Runtime.Host,SiloAddressConverter,0,3,0,0,3,22,3,0,0,-1,0,1,,Orleans.Runtime.Host.MembershipSerializerSettings
+Orleans.Configuration,ZooKeeperClusteringSiloOptions,0,0,1,0,0,8,0,0,0,-1,0,2,,Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable' Orleans.Hosting.ZooKeeperHostingExtensions
+Orleans.Configuration,ZooKeeperGatewayListProviderOptions,0,0,1,0,0,8,0,0,0,-1,0,2,,Orleans.Runtime.Membership.ZooKeeperClusteringClientOptions' Orleans.Hosting.ZooKeeperHostingExtensions
+Orleans.Runtime.Membership,ZooKeeperBasedMembershipTable,6,20,0,0,9,270,20,0,0,0.4,3,2,Orleans.Runtime.Host.MembershipSerializerSettings' Orleans.Configuration.ZooKeeperClusteringSiloOptions' Orleans.Runtime.Membership.ZooKeeperWatcher,Orleans.Runtime.Membership.ZooKeeperClusteringClientOptions' Orleans.Hosting.ZooKeeperHostingExtensions
+Orleans.Runtime.Membership,ZooKeeperWatcher,1,2,0,0,2,16,3,0,0,1,0,2,,Orleans.Runtime.Membership.ZooKeeperClusteringClientOptions' Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable
+Orleans.Runtime.Membership,ZooKeeperClusteringClientOptions,4,3,2,0,3,62,3,0,0,0.67,3,1,Orleans.Configuration.ZooKeeperGatewayListProviderOptions' Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable' Orleans.Runtime.Membership.ZooKeeperWatcher,Orleans.Hosting.ZooKeeperHostingExtensions
+Orleans.Hosting,ZooKeeperHostingExtensions,0,6,0,0,6,150,6,0,0,-1,4,0,Orleans.Configuration.ZooKeeperClusteringSiloOptions' Orleans.Configuration.ZooKeeperGatewayListProviderOptions' Orleans.Runtime.Membership.ZooKeeperBasedMembershipTable' Orleans.Runtime.Membership.ZooKeeperClusteringClientOptions,

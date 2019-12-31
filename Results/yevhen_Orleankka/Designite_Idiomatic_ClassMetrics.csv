@@ -1,21 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Example,Create,1,1,0,1,1,9,1,0,1,0,0,1,,Example.InventoryItem
-Example,CheckIn,1,1,0,1,1,9,1,0,1,0,0,1,,Example.InventoryItem
-Example,CheckOut,1,1,0,1,1,9,1,0,1,0,0,1,,Example.InventoryItem
-Example,Rename,1,1,0,1,1,9,1,0,1,0,0,1,,Example.InventoryItem
-Example,Deactivate,0,0,0,0,0,3,0,0,1,-1,0,1,,Example.InventoryItem
-Example,GetDetails,0,0,0,0,0,3,0,0,1,-1,0,1,,Example.InventoryItem
-Example,GetInventoryItems,0,0,0,0,0,3,0,0,1,-1,0,1,,Example.Inventory
-Example,GetInventoryItemsTotal,0,0,0,0,0,3,0,0,1,-1,0,1,,Example.Inventory
-Example,EventEnvelope<T>,2,1,0,2,1,11,1,0,0,0,0,0,,
-Example,InventoryItemDetails,3,1,0,3,1,13,1,0,0,0,0,2,,Example.InventoryItem' Example.Program
-Example,InventoryItemCreated,1,1,0,1,1,9,1,0,1,0,0,1,,Example.InventoryItem
-Example,InventoryItemCheckedIn,1,1,0,1,1,9,1,0,1,0,0,1,,Example.InventoryItem
-Example,InventoryItemCheckedOut,1,1,0,1,1,9,1,0,1,0,0,1,,Example.InventoryItem
-Example,InventoryItemRenamed,2,1,0,2,1,11,1,0,1,0,0,1,,Example.InventoryItem
-Example,InventoryItemDeactivated,0,0,0,0,0,3,0,0,1,-1,0,1,,Example.InventoryItem
-Example,InventoryItem,3,12,0,0,0,60,18,0,1,0,12,0,Example.InventoryItemCreated' Example.InventoryItemRenamed' Example.InventoryItemCheckedIn' Example.InventoryItemCheckedOut' Example.InventoryItemDeactivated' Example.Create' Example.Rename' Example.CheckIn' Example.CheckOut' Example.Deactivate' Example.InventoryItemDetails' Example.GetDetails,
-Example,Inventory,1,7,0,0,0,13,7,0,1,0,2,0,Example.GetInventoryItems' Example.GetInventoryItemsTotal,
-Example,CqsActor,0,3,0,0,1,15,5,1,1,-1,2,0,Orleankka.Meta.Command' Orleankka.Meta.Query,
-Example,EventSourcedActor,0,3,0,0,0,23,4,1,2,-1,5,0,Orleankka.StreamRef' Orleankka.IActorSystem' Orleankka.Meta.Command' Orleankka.Meta.Event' Orleankka.Meta.Query,
-Example,Program,0,4,0,0,1,46,4,0,0,-1,7,0,Orleankka.IActorSystem' Orleankka.Embedded.EmbeddedConfigurator' Orleankka.Playground.PlaygroundConfigurator' Orleankka.IActorSystemConfigurator' Orleankka.ActorSystem' Orleankka.ActorRef' Example.InventoryItemDetails,
+Example,IInventoryItem,0,0,0,0,0,2,0,1,1,-1,0,2,,Example.InventoryItem' Example.Program
+Example,InventoryItem,3,13,0,0,1,61,19,0,2,0.15,14,0,Example.IInventoryItem' Example.EventSourcedActor' Example.Create' Example.CheckIn' Example.CheckOut' Example.Rename' Example.DeactivateItem' Example.GetDetails' Example.InventoryItemDetails' Example.InventoryItemCreated' Example.InventoryItemCheckedIn' Example.InventoryItemCheckedOut' Example.InventoryItemRenamed' Example.InventoryItemDeactivated,
+Example,IInventory,0,0,0,0,0,2,0,1,1,-1,0,2,,Example.Inventory' Example.Program
+Example,Inventory,1,7,0,0,0,13,7,0,2,0,10,0,Example.IInventory' Example.GetInventoryItems' Example.GetInventoryItemsTotal' Example.EventEnvelope<T>' Example.InventoryItemDetails' Example.InventoryItemCreated' Example.InventoryItemCheckedIn' Example.InventoryItemCheckedOut' Example.InventoryItemRenamed' Example.InventoryItemDeactivated,
+Example,EventSourcedActor,1,5,0,0,1,42,9,1,1,0,1,1,Example.EventEnvelope<T>,Example.InventoryItem
+Example,Create,1,1,0,1,1,9,1,0,1,0,0,2,,Example.InventoryItem' Example.Program
+Example,CheckIn,1,1,0,1,1,9,1,0,1,0,0,2,,Example.InventoryItem' Example.Program
+Example,CheckOut,1,1,0,1,1,9,1,0,1,0,0,2,,Example.InventoryItem' Example.Program
+Example,Rename,1,1,0,1,1,9,1,0,1,0,0,2,,Example.InventoryItem' Example.Program
+Example,DeactivateItem,0,0,0,0,0,3,0,0,1,-1,0,2,,Example.InventoryItem' Example.Program
+Example,GetDetails,0,0,0,0,0,3,0,0,1,-1,1,2,Example.InventoryItemDetails,Example.Program' Example.InventoryItem
+Example,GetInventoryItems,0,0,0,0,0,3,0,0,1,-1,1,2,Example.InventoryItemDetails,Example.Inventory' Example.Program
+Example,GetInventoryItemsTotal,0,0,0,0,0,3,0,0,1,-1,0,2,,Example.Inventory' Example.Program
+Example,EventEnvelope<T>,2,1,0,2,1,11,1,0,0,0,0,2,,Example.Inventory' Example.EventSourcedActor
+Example,InventoryItemDetails,3,1,0,3,1,13,1,0,0,0,0,5,,Example.GetDetails' Example.GetInventoryItems' Example.Program' Example.InventoryItem' Example.Inventory
+Example,InventoryItemCreated,1,1,0,1,1,9,1,0,1,0,0,2,,Example.InventoryItem' Example.Inventory
+Example,InventoryItemCheckedIn,1,1,0,1,1,9,1,0,1,0,0,2,,Example.InventoryItem' Example.Inventory
+Example,InventoryItemCheckedOut,1,1,0,1,1,9,1,0,1,0,0,2,,Example.InventoryItem' Example.Inventory
+Example,InventoryItemRenamed,2,1,0,2,1,11,1,0,1,0,0,2,,Example.InventoryItem' Example.Inventory
+Example,InventoryItemDeactivated,0,0,0,0,0,3,0,0,1,-1,0,2,,Example.InventoryItem' Example.Inventory
+Example,Program,0,4,0,0,1,48,4,0,0,-1,11,0,Example.IInventoryItem' Example.IInventory' Example.Create' Example.CheckIn' Example.CheckOut' Example.Rename' Example.DeactivateItem' Example.GetDetails' Example.GetInventoryItems' Example.GetInventoryItemsTotal' Example.InventoryItemDetails,
+Orleankka,DemoExtensions,5,6,0,0,4,68,6,0,0,0.83,0,0,,

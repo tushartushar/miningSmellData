@@ -1,112 +1,112 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-hacs,Smsrecipient,0,0,1,0,0,4,0,0,0,-1,0,1,,hacs.AlarmingThread
-hacs,Xmpprecipient,0,0,1,0,0,4,0,0,0,-1,0,0,,
-hacs,Activator,0,0,5,0,0,8,0,0,0,-1,0,1,,hacs.AlarmingThread
-hacs,Sensorcheck,0,0,4,0,0,7,0,0,0,-1,0,0,,
-hacs,Actorcheck,0,0,3,0,0,6,0,0,0,-1,0,1,,hacs.AlarmingThread
-hacs,Alarm,0,0,7,0,0,10,0,0,0,-1,0,1,,hacs.AlarmingThread
-hacs,AlarmConfiguration,0,1,1,0,1,8,1,0,0,-1,0,2,,hacs.AlarmingConfiguration' hacs.AlarmingThread
-hacs,AlarmingConfiguration,1,1,0,1,1,12,2,0,0,0,2,2,hacs.AlarmConfiguration' Newtonsoft.Json.JsonConvert,hacs.AlarmingThread' hacs.Program
-hacs,AlarmingThread,5,2,0,1,2,297,42,0,0,0,22,1,hacs.ConsoleOutputLogger' SMS77.SMS77Gateway' TelekomSendSMS.TelekomSendSMSGateway' hacs.Properties.Settings' sones.storage.TinyOnDiskStorage' hacs.IAlarmingEvent' hacs.xs1.XS1_DataObject' hacs.current_actor_status' hacs.IDeviceDiffSet' hacs.ShutterContactDiff' hacs.ShutterContactModes' hacs.AlarmConfiguration' hacs.AlarmingConfiguration' hacs.Alarm' hacs.Activator' hacs.AlarmingEventType' hacs.Actorcheck' hacs.KnownActorStates' hacs.actor_status' hacs.Smsrecipient' SMS77.SMSType' hacs.DeviceTypes,hacs.LoggingThread
-hacs,AlarmingDataSet,3,4,0,0,4,26,4,0,1,0,1,0,hacs.AlarmingEventType,
-hacs,AlarmingEventType,0,0,0,0,0,8,0,0,0,-1,0,7,,hacs.AlarmingThread' hacs.AlarmingDataSet' hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.NetworkMonitoringDataSet' hacs.SolarLogDataSet' hacs.xs1.XS1_DataObject
-hacs,IAlarmingEvent,0,3,0,0,0,6,3,5,0,-1,0,1,,hacs.AlarmingThread
-hacs,MAXEncodeDecode,0,2,0,0,2,40,8,0,0,-1,4,1,hacs.L_Message' hacs.House' hacs.M_Message' hacs.H_Message,hacs.MAXMonitoringThread
-hacs,MAXMonitoringThread,10,2,0,2,2,261,21,0,0,0,13,5,hacs.House' hacs.ConsoleOutputLogger' hacs.MAXEncodeDecode' hacs.HeatingThermostat' hacs.HeatingThermostatDiff' hacs.ShutterContact' hacs.ShutterContactDiff' hacs.DiffHouse' hacs.Properties.Settings' hacs.IMAXDevice' hacs.DeviceTypes' hacs.Room' hacs.BatteryStatus,hacs.HTTPProxy' hacs.GenerateSwimlane' hacs.LoggingThread' HTTP.HttpProcessor' HTTP.HttpServer
-hacs,BatteryStatus,0,0,0,0,0,6,0,0,0,-1,0,5,,hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.LoggingThread
-hacs,IDeviceDiffSet,0,0,4,0,0,7,0,2,1,-1,0,2,,hacs.AlarmingThread' hacs.LoggingThread
-hacs,DiffHouse,0,1,0,0,1,81,13,0,0,-1,8,1,hacs.IMAXDevice' hacs.HeatingThermostatDiff' hacs.HeatingThermostat' hacs.ShutterContactDiff' hacs.ShutterContact' hacs.DeviceTypes' hacs.Room' hacs.BatteryStatus,hacs.MAXMonitoringThread
-hacs,HeatingThermostatDiff,8,7,7,0,5,108,7,0,2,0.57,4,3,hacs.DeviceTypes' hacs.ThermostatModes' hacs.BatteryStatus' hacs.AlarmingEventType,hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.LoggingThread
-hacs,ShutterContactDiff,7,5,6,0,5,85,5,0,2,0.4,4,4,hacs.DeviceTypes' hacs.ShutterContactModes' hacs.BatteryStatus' hacs.AlarmingEventType,hacs.AlarmingThread' hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.LoggingThread
-hacs,Base64,0,2,0,0,2,13,2,0,0,-1,0,3,,hacs.C_Message' hacs.L_Message' hacs.M_Message
-hacs,AMAXException,1,2,1,0,1,23,2,1,0,1,0,0,,
-hacs,MAXException,0,1,0,0,1,7,1,0,1,-1,0,0,,
+hacs,Smsrecipient,0,0,1,0,0,4,0,0,0,-1,0,2,,hacs.Alarm' hacs.AlarmingThread
+hacs,Xmpprecipient,0,0,1,0,0,4,0,0,0,-1,0,1,,hacs.Alarm
+hacs,Activator,0,0,5,0,0,8,0,0,0,-1,0,2,,hacs.Alarm' hacs.AlarmingThread
+hacs,Sensorcheck,0,0,4,0,0,7,0,0,0,-1,0,1,,hacs.Alarm
+hacs,Actorcheck,0,0,3,0,0,6,0,0,0,-1,0,2,,hacs.Alarm' hacs.AlarmingThread
+hacs,Alarm,0,0,7,0,0,10,0,0,0,-1,5,2,hacs.Smsrecipient' hacs.Xmpprecipient' hacs.Activator' hacs.Sensorcheck' hacs.Actorcheck,hacs.AlarmConfiguration' hacs.AlarmingThread
+hacs,AlarmConfiguration,0,1,1,0,1,8,1,0,0,-1,1,1,hacs.Alarm,hacs.AlarmingConfiguration
+hacs,AlarmingConfiguration,1,1,0,1,1,12,2,0,0,0,1,2,hacs.AlarmConfiguration,hacs.Program' hacs.AlarmingThread
+hacs,AlarmingThread,5,2,0,1,2,297,46,0,0,0,17,1,hacs.Smsrecipient' hacs.Activator' hacs.Actorcheck' hacs.Alarm' hacs.AlarmingConfiguration' hacs.AlarmingEventType' hacs.IAlarmingEvent' hacs.IDeviceDiffSet' hacs.ShutterContactDiff' hacs.ShutterContactModes' hacs.DeviceTypes' hacs.KnownActorStates' hacs.actor_status' hacs.current_actor_status' hacs.ConsoleOutputLogger' hacs.xs1.XS1_DataObject' hacs.Properties.Settings,hacs.LoggingThread
+hacs,AlarmingDataSet,3,4,0,0,4,26,4,0,1,0,2,0,hacs.AlarmingEventType' hacs.IAlarmingEvent,
+hacs,AlarmingEventType,0,0,0,0,0,8,0,0,0,-1,0,8,,hacs.IAlarmingEvent' hacs.AlarmingDataSet' hacs.ShutterContactDiff' hacs.xs1.XS1_DataObject' hacs.HeatingThermostatDiff' hacs.NetworkMonitoringDataSet' hacs.SolarLogDataSet' hacs.AlarmingThread
+hacs,IAlarmingEvent,0,3,0,0,0,6,3,5,0,-1,1,7,hacs.AlarmingEventType,hacs.AlarmingDataSet' hacs.IDeviceDiffSet' hacs.NetworkMonitoringDataSet' hacs.SolarLogDataSet' hacs.xs1.XS1_DataObject' hacs.AlarmingThread' hacs.LoggingThread
+hacs,MAXEncodeDecode,0,2,0,0,2,40,8,0,0,-1,7,1,hacs.MAXException' hacs.H_Message' hacs.IMAXMessage' hacs.L_Message' hacs.M_Message' hacs.IMAXDevice' hacs.House,hacs.MAXMonitoringThread
+hacs,MAXMonitoringThread,10,2,0,2,2,261,21,0,0,0,13,5,hacs.MAXEncodeDecode' hacs.BatteryStatus' hacs.IDeviceDiffSet' hacs.DiffHouse' hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.HeatingThermostat' hacs.IMAXDevice' hacs.ShutterContact' hacs.House' hacs.DeviceTypes' hacs.ConsoleOutputLogger' hacs.Properties.Settings,hacs.GenerateSwimlane' hacs.HTTPProxy' HTTP.HttpServer' HTTP.HttpProcessor' hacs.LoggingThread
+hacs,BatteryStatus,0,0,0,0,0,6,0,0,0,-1,0,5,,hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.DiffHouse' hacs.MAXMonitoringThread' hacs.LoggingThread
+hacs,IDeviceDiffSet,0,0,4,0,0,7,0,2,1,-1,2,6,hacs.IAlarmingEvent' hacs.DeviceTypes,hacs.ShutterContactDiff' hacs.HeatingThermostatDiff' hacs.DiffHouse' hacs.AlarmingThread' hacs.LoggingThread' hacs.MAXMonitoringThread
+hacs,DiffHouse,0,1,0,0,1,81,20,0,0,-1,8,1,hacs.BatteryStatus' hacs.IDeviceDiffSet' hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.HeatingThermostat' hacs.IMAXDevice' hacs.ShutterContact' hacs.DeviceTypes,hacs.MAXMonitoringThread
+hacs,HeatingThermostatDiff,8,7,7,0,5,108,7,0,2,0.57,5,3,hacs.AlarmingEventType' hacs.BatteryStatus' hacs.IDeviceDiffSet' hacs.ThermostatModes' hacs.DeviceTypes,hacs.MAXMonitoringThread' hacs.LoggingThread' hacs.DiffHouse
+hacs,ShutterContactDiff,7,5,6,0,5,85,5,0,2,0.4,5,4,hacs.AlarmingEventType' hacs.BatteryStatus' hacs.IDeviceDiffSet' hacs.ShutterContactModes' hacs.DeviceTypes,hacs.MAXMonitoringThread' hacs.LoggingThread' hacs.AlarmingThread' hacs.DiffHouse
+hacs,Base64,0,2,0,0,2,13,2,0,0,-1,0,3,,hacs.L_Message' hacs.C_Message' hacs.M_Message
+hacs,AMAXException,1,2,1,0,1,23,2,1,0,1,0,1,,hacs.MAXException
+hacs,MAXException,0,1,0,0,1,7,1,0,1,-1,1,5,hacs.AMAXException,hacs.L_Message' hacs.M_Message' hacs.H_Message' hacs.MAXEncodeDecode' hacs.C_Message
 hacs,TokenizeMessage,0,1,0,0,1,37,3,0,0,-1,0,1,,hacs.L_Message
-hacs,C_Message,2,2,1,2,2,51,5,0,1,1,2,0,hacs.Base64' hacs.House,
-hacs,H_Message,5,3,1,5,3,67,6,0,1,0,1,2,hacs.House,hacs.MAXEncodeDecode' hacs.House
-hacs,IMAXMessage,0,0,1,0,0,4,0,4,0,-1,0,0,,
-hacs,L_Message,2,3,1,2,3,521,57,0,1,0,12,1,hacs.IMAXDevice' hacs.DeviceTypes' hacs.HeatingThermostat' hacs.HeatingThermostatPlus' hacs.PushButton' hacs.ShutterContact' hacs.WallMountedThermostat' hacs.Base64' hacs.TokenizeMessage' hacs.House' hacs.ThermostatModes' hacs.ShutterContactModes,hacs.MAXEncodeDecode
-hacs,M_Message,4,2,1,3,2,158,16,0,1,0,4,1,hacs.House' hacs.Room' hacs.Base64' hacs.IMAXDevice,hacs.MAXEncodeDecode
-hacs,HeatingThermostat,16,2,16,0,2,183,2,0,1,1,3,4,hacs.DeviceTypes' hacs.Room' hacs.ThermostatModes,hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.L_Message' hacs.VirtualXS1
-hacs,HeatingThermostatPlus,6,2,6,0,2,72,2,0,1,1,2,1,hacs.DeviceTypes' hacs.Room,hacs.L_Message
-hacs,IMAXDevice,0,0,6,0,0,9,0,6,0,-1,0,7,,hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.L_Message' hacs.M_Message' hacs.House' hacs.Room' hacs.VirtualXS1
-hacs,PushButton,6,2,6,0,2,73,2,0,1,1,2,1,hacs.DeviceTypes' hacs.Room,hacs.L_Message
-hacs,ShutterContact,14,2,14,0,2,163,2,0,1,1,3,4,hacs.DeviceTypes' hacs.Room' hacs.ShutterContactModes,hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.L_Message' hacs.VirtualXS1
-hacs,UnknownDevice,6,2,6,0,2,73,2,0,1,1,2,0,hacs.DeviceTypes' hacs.Room,
-hacs,WallMountedThermostat,6,2,6,0,2,73,2,0,1,1,2,1,hacs.DeviceTypes' hacs.Room,hacs.L_Message
-hacs,House,3,4,0,3,4,63,11,0,0,0,3,8,hacs.H_Message' hacs.Room' hacs.IMAXDevice,hacs.MAXEncodeDecode' hacs.MAXMonitoringThread' hacs.C_Message' hacs.H_Message' hacs.L_Message' hacs.M_Message' hacs.Room' hacs.VirtualXS1
-hacs,Room,5,2,0,5,2,27,3,0,0,0,2,10,hacs.House' hacs.IMAXDevice,hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.M_Message' hacs.HeatingThermostat' hacs.HeatingThermostatPlus' hacs.PushButton' hacs.ShutterContact' hacs.UnknownDevice' hacs.WallMountedThermostat' hacs.House
-hacs,ShutterContactModes,0,0,0,0,0,6,0,0,0,-1,0,6,,hacs.AlarmingThread' hacs.ShutterContactDiff' hacs.L_Message' hacs.ShutterContact' hacs.VirtualXS1' hacs.LoggingThread
-hacs,ThermostatModes,0,0,0,0,0,8,0,0,0,-1,0,4,,hacs.HeatingThermostatDiff' hacs.L_Message' hacs.HeatingThermostat' hacs.LoggingThread
-hacs,DeviceTypes,0,0,0,0,0,9,0,0,0,-1,0,14,,hacs.AlarmingThread' hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.L_Message' hacs.HeatingThermostat' hacs.HeatingThermostatPlus' hacs.PushButton' hacs.ShutterContact' hacs.UnknownDevice' hacs.WallMountedThermostat' hacs.VirtualXS1' hacs.LoggingThread
-hacs,MAXMessageType,0,0,0,0,0,7,0,0,0,-1,0,0,,
-hacs,MQTTBindingConfiguration,1,1,0,1,1,13,2,0,0,0,2,2,hacs.Devices.MQTTBinding.MQTTBindingRoot' Newtonsoft.Json.JsonConvert,hacs.Program' hacs.Devices.MQTTBinding.MQTT_Handling
-hacs,NetworkMonitoring,5,2,0,1,2,110,8,0,0,0,7,1,hacs.ConsoleOutputLogger' Org.Mentalis.Network.ICMP' Org.Mentalis.Network.ICMP_PingResult' hacs.NetworkMonitoringDataSet' hacs.NetworkMonitorConfiguration' hacs.NetworkMonitoringHost' Org.Mentalis.Network.ICMP_Status,hacs.LoggingThread
-hacs,NetworkMonitoringHost,2,0,0,2,0,5,0,0,0,-1,0,3,,hacs.NetworkMonitoring' hacs.NetworkMonitorConfiguration' hacs.Program
-hacs,NetworkMonitorConfiguration,1,1,0,1,1,35,5,0,0,0,1,2,hacs.NetworkMonitoringHost,hacs.NetworkMonitoring' hacs.Program
-hacs,NetworkMonitoringDataSet,5,4,0,5,4,30,5,0,1,0.5,2,2,Org.Mentalis.Network.ICMP_Status' hacs.AlarmingEventType,hacs.NetworkMonitoring' hacs.LoggingThread
+hacs,C_Message,2,2,1,2,2,51,5,0,1,1,5,0,hacs.Base64' hacs.MAXException' hacs.IMAXMessage' hacs.House' hacs.MAXMessageType,
+hacs,H_Message,5,3,1,5,3,67,6,0,1,0,4,2,hacs.MAXException' hacs.IMAXMessage' hacs.House' hacs.MAXMessageType,hacs.House' hacs.MAXEncodeDecode
+hacs,IMAXMessage,0,0,1,0,0,4,0,4,0,-1,1,5,hacs.MAXMessageType,hacs.C_Message' hacs.M_Message' hacs.H_Message' hacs.MAXEncodeDecode' hacs.L_Message
+hacs,L_Message,2,3,1,2,3,521,69,0,1,0,15,1,hacs.Base64' hacs.MAXException' hacs.TokenizeMessage' hacs.IMAXMessage' hacs.HeatingThermostat' hacs.HeatingThermostatPlus' hacs.IMAXDevice' hacs.PushButton' hacs.ShutterContact' hacs.WallMountedThermostat' hacs.House' hacs.ShutterContactModes' hacs.ThermostatModes' hacs.DeviceTypes' hacs.MAXMessageType,hacs.MAXEncodeDecode
+hacs,M_Message,4,2,1,3,2,158,20,0,1,0,13,1,hacs.Base64' hacs.MAXException' hacs.IMAXMessage' hacs.HeatingThermostat' hacs.HeatingThermostatPlus' hacs.IMAXDevice' hacs.PushButton' hacs.ShutterContact' hacs.UnknownDevice' hacs.WallMountedThermostat' hacs.House' hacs.Room' hacs.MAXMessageType,hacs.MAXEncodeDecode
+hacs,HeatingThermostat,16,2,16,0,2,183,2,0,1,1,4,5,hacs.IMAXDevice' hacs.Room' hacs.ThermostatModes' hacs.DeviceTypes,hacs.M_Message' hacs.VirtualXS1' hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.L_Message
+hacs,HeatingThermostatPlus,6,2,6,0,2,72,2,0,1,1,3,2,hacs.IMAXDevice' hacs.Room' hacs.DeviceTypes,hacs.L_Message' hacs.M_Message
+hacs,IMAXDevice,0,0,6,0,0,9,0,6,0,-1,2,14,hacs.Room' hacs.DeviceTypes,hacs.MAXEncodeDecode' hacs.HeatingThermostat' hacs.HeatingThermostatPlus' hacs.UnknownDevice' hacs.PushButton' hacs.ShutterContact' hacs.M_Message' hacs.WallMountedThermostat' hacs.DiffHouse' hacs.Room' hacs.VirtualXS1' hacs.MAXMonitoringThread' hacs.L_Message' hacs.House
+hacs,PushButton,6,2,6,0,2,73,2,0,1,1,3,2,hacs.IMAXDevice' hacs.Room' hacs.DeviceTypes,hacs.L_Message' hacs.M_Message
+hacs,ShutterContact,14,2,14,0,2,163,2,0,1,1,4,5,hacs.IMAXDevice' hacs.Room' hacs.ShutterContactModes' hacs.DeviceTypes,hacs.M_Message' hacs.MAXMonitoringThread' hacs.VirtualXS1' hacs.DiffHouse' hacs.L_Message
+hacs,UnknownDevice,6,2,6,0,2,73,2,0,1,1,3,1,hacs.IMAXDevice' hacs.Room' hacs.DeviceTypes,hacs.M_Message
+hacs,WallMountedThermostat,6,2,6,0,2,73,2,0,1,1,3,2,hacs.IMAXDevice' hacs.Room' hacs.DeviceTypes,hacs.L_Message' hacs.M_Message
+hacs,House,3,4,0,3,4,63,11,0,0,0,3,8,hacs.H_Message' hacs.IMAXDevice' hacs.Room,hacs.H_Message' hacs.C_Message' hacs.MAXEncodeDecode' hacs.M_Message' hacs.L_Message' hacs.VirtualXS1' hacs.Room' hacs.MAXMonitoringThread
+hacs,Room,5,2,0,5,2,27,3,0,0,0,2,9,hacs.IMAXDevice' hacs.House,hacs.IMAXDevice' hacs.PushButton' hacs.ShutterContact' hacs.HeatingThermostatPlus' hacs.WallMountedThermostat' hacs.UnknownDevice' hacs.HeatingThermostat' hacs.M_Message' hacs.House
+hacs,ShutterContactModes,0,0,0,0,0,6,0,0,0,-1,0,6,,hacs.VirtualXS1' hacs.ShutterContact' hacs.L_Message' hacs.ShutterContactDiff' hacs.AlarmingThread' hacs.LoggingThread
+hacs,ThermostatModes,0,0,0,0,0,8,0,0,0,-1,0,4,,hacs.HeatingThermostat' hacs.HeatingThermostatDiff' hacs.LoggingThread' hacs.L_Message
+hacs,DeviceTypes,0,0,0,0,0,9,0,0,0,-1,0,16,,hacs.IDeviceDiffSet' hacs.IMAXDevice' hacs.HeatingThermostatPlus' hacs.PushButton' hacs.HeatingThermostat' hacs.ShutterContactDiff' hacs.HeatingThermostatDiff' hacs.UnknownDevice' hacs.ShutterContact' hacs.WallMountedThermostat' hacs.MAXMonitoringThread' hacs.DiffHouse' hacs.AlarmingThread' hacs.LoggingThread' hacs.VirtualXS1' hacs.L_Message
+hacs,MAXMessageType,0,0,0,0,0,7,0,0,0,-1,0,5,,hacs.IMAXMessage' hacs.C_Message' hacs.M_Message' hacs.H_Message' hacs.L_Message
+hacs,MQTTBindingConfiguration,1,1,0,1,1,13,2,0,0,0,1,2,hacs.Devices.MQTTBinding.MQTTBindingRoot,hacs.Program' hacs.Devices.MQTTBinding.MQTT_Handling
+hacs,NetworkMonitoring,5,2,0,1,2,110,10,0,0,0,4,1,hacs.NetworkMonitoringHost' hacs.NetworkMonitorConfiguration' hacs.NetworkMonitoringDataSet' hacs.ConsoleOutputLogger,hacs.LoggingThread
+hacs,NetworkMonitoringHost,2,0,0,2,0,5,0,0,0,-1,0,3,,hacs.Program' hacs.NetworkMonitorConfiguration' hacs.NetworkMonitoring
+hacs,NetworkMonitorConfiguration,1,1,0,1,1,35,5,0,0,0,1,2,hacs.NetworkMonitoringHost,hacs.Program' hacs.NetworkMonitoring
+hacs,NetworkMonitoringDataSet,5,4,0,5,4,30,5,0,1,0.5,2,2,hacs.AlarmingEventType' hacs.IAlarmingEvent,hacs.NetworkMonitoring' hacs.LoggingThread
 hacs,SolarLogDataHelper,0,1,0,0,1,39,4,0,0,-1,2,1,hacs.SolarLogDataSet' hacs.ConsoleOutputLogger,hacs.SolarLogMonitoringThread
-hacs,SolarLogDataSet,3,4,0,3,4,26,4,0,1,0.75,1,3,hacs.AlarmingEventType,hacs.SolarLogDataHelper' hacs.SolarLogMonitoringThread' hacs.LoggingThread
-hacs,SolarLogMonitoringThread,6,2,0,1,2,60,5,0,0,0,3,1,hacs.ConsoleOutputLogger' hacs.SolarLogDataSet' hacs.SolarLogDataHelper,hacs.LoggingThread
-hacs,ActorReswitching,5,3,0,0,3,105,10,0,0,0,7,1,hacs.xs1.configuration.XS1Configuration' hacs.ConsoleOutputLogger' hacs.set_state_actuator.set_state_actuator' hacs.Properties.Settings' hacs.KnownActorStates' hacs.current_actor_status' hacs.actor_status,hacs.LoggingThread
-hacs,ActorsStatusOutputTypes,0,0,0,0,0,6,0,0,0,-1,0,3,,HTTP.HttpProcessor' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs,KnownActorStates,1,0,0,1,0,4,0,0,0,-1,0,5,,hacs.AlarmingThread' hacs.ActorReswitching' hacs.LoggingThread' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs,ScriptingActorElement,6,1,0,6,1,27,3,0,0,0,1,2,hacs.actor_status,hacs.ScriptingActorConfiguration' hacs.LoggingThread
-hacs,ScriptingActorConfiguration,1,1,0,1,1,60,6,0,0,0,2,2,hacs.ScriptingActorElement' hacs.actor_status,hacs.Program' hacs.LoggingThread
-hacs,SensorCheck,3,4,0,0,4,71,8,0,0,0,3,1,hacs.ConsoleOutputLogger' hacs.Properties.Settings' hacs.SensorCheckIgnoreConfiguration,hacs.LoggingThread
+hacs,SolarLogDataSet,3,4,0,3,4,26,4,0,1,0.75,2,3,hacs.AlarmingEventType' hacs.IAlarmingEvent,hacs.SolarLogDataHelper' hacs.SolarLogMonitoringThread' hacs.LoggingThread
+hacs,SolarLogMonitoringThread,6,2,0,1,2,60,9,0,0,0,3,1,hacs.SolarLogDataHelper' hacs.SolarLogDataSet' hacs.ConsoleOutputLogger,hacs.LoggingThread
+hacs,ActorReswitching,5,3,0,0,3,105,11,0,0,0,7,1,hacs.KnownActorStates' hacs.actor_status' hacs.current_actor_status' hacs.ConsoleOutputLogger' hacs.xs1.configuration.XS1Configuration' hacs.Properties.Settings' hacs.set_state_actuator.set_state_actuator,hacs.LoggingThread
+hacs,ActorsStatusOutputTypes,0,0,0,0,0,6,0,0,0,-1,0,3,,hacs.JSONHandlers.JSONData' HTTP.HttpProcessor' hacs.JSONHandlers.NumericsJSONData
+hacs,KnownActorStates,1,0,0,1,0,4,0,0,0,-1,1,5,hacs.current_actor_status,hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData' hacs.AlarmingThread' hacs.ActorReswitching' hacs.LoggingThread
+hacs,ScriptingActorElement,6,1,0,6,1,27,4,0,0,0,1,2,hacs.actor_status,hacs.ScriptingActorConfiguration' hacs.LoggingThread
+hacs,ScriptingActorConfiguration,1,1,0,1,1,60,10,0,0,0,2,2,hacs.ScriptingActorElement' hacs.actor_status,hacs.Program' hacs.LoggingThread
+hacs,SensorCheck,3,4,0,0,4,71,9,0,0,0,3,1,hacs.SensorCheckIgnoreConfiguration' hacs.ConsoleOutputLogger' hacs.Properties.Settings,hacs.LoggingThread
 hacs,SensorCheckIgnoreConfiguration,1,2,0,1,2,48,8,0,0,0,0,3,,hacs.SensorCheck' hacs.Program' hacs.LoggingThread
-hacs,XS1MonitoringThread,7,2,0,3,2,83,4,0,0,0,3,1,hacs.ConsoleOutputLogger' hacs.xs1.XS1_DataObject' hacs.xs1.HandleXS1_TSV,hacs.LoggingThread
-hacs,actor_status,0,0,0,0,0,8,0,0,0,-1,0,8,,hacs.AlarmingThread' hacs.ActorReswitching' hacs.ScriptingActorElement' hacs.ScriptingActorConfiguration' hacs.current_actor_status' hacs.LoggingThread' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs,current_actor_status,3,1,0,3,1,12,1,0,0,0,1,5,hacs.actor_status,hacs.AlarmingThread' hacs.ActorReswitching' hacs.LoggingThread' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
+hacs,XS1MonitoringThread,7,2,0,3,2,83,4,0,0,0,3,1,hacs.ConsoleOutputLogger' hacs.xs1.HandleXS1_TSV' hacs.xs1.XS1_DataObject,hacs.LoggingThread
+hacs,actor_status,0,0,0,0,0,8,0,0,0,-1,0,8,,hacs.current_actor_status' hacs.ScriptingActorElement' hacs.ScriptingActorConfiguration' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData' hacs.AlarmingThread' hacs.ActorReswitching' hacs.LoggingThread
+hacs,current_actor_status,3,1,0,3,1,12,1,0,0,0,1,4,hacs.actor_status,hacs.KnownActorStates' hacs.ActorReswitching' hacs.AlarmingThread' hacs.LoggingThread
 hacs,ProxyResponse,2,0,0,2,0,5,0,0,0,-1,0,2,,hacs.HTTPProxy' HTTP.HttpProcessor
-hacs,HTTPProxy,2,3,0,0,3,94,13,0,0,0.67,6,1,hacs.ConsoleOutputLogger' hacs.MAXMonitoringThread' hacs.HTTPProxyConfiguration' hacs.ProxyElement' hacs.ProxyResponse' hacs.VirtualXS1,HTTP.HttpProcessor
+hacs,HTTPProxy,2,3,0,0,3,94,13,0,0,0.67,6,1,hacs.MAXMonitoringThread' hacs.ProxyResponse' hacs.ProxyElement' hacs.HTTPProxyConfiguration' hacs.VirtualXS1' hacs.ConsoleOutputLogger,HTTP.HttpProcessor
 hacs,ProxyElement,2,0,0,2,0,5,0,0,0,-1,0,2,,hacs.HTTPProxy' hacs.HTTPProxyConfiguration
 hacs,HTTPProxyConfiguration,1,1,0,1,1,35,5,0,0,0,1,2,hacs.ProxyElement,hacs.HTTPProxy' hacs.Program
-hacs,FunctionJSON,0,0,2,0,0,5,0,0,0,-1,0,0,,
-hacs,ActuatorJSON,0,0,7,0,0,10,0,0,0,-1,0,0,,
-hacs,ActorJSON_Root,0,0,5,0,0,8,0,0,0,-1,0,1,,hacs.VirtualXS1
-hacs,SensorJSON,0,0,6,0,0,9,0,0,0,-1,0,1,,hacs.VirtualXS1
-hacs,SensorJSON_Root,0,0,5,0,0,8,0,0,0,-1,0,1,,hacs.VirtualXS1
-hacs,VirtualXS1,0,2,0,0,2,96,9,0,0,-1,10,1,hacs.ActorJSON_Root' Newtonsoft.Json.JsonConvert' hacs.House' hacs.SensorJSON_Root' hacs.HeatingThermostat' hacs.SensorJSON' hacs.ShutterContact' hacs.IMAXDevice' hacs.DeviceTypes' hacs.ShutterContactModes,hacs.HTTPProxy
-hacs,GeoJSON_PointFeature_Properties,0,1,1,0,1,8,1,0,0,-1,0,0,,
-hacs,GeoJSON_PointFeature_Geometry,0,1,2,0,1,12,1,0,0,-1,0,0,,
-hacs,GeoJSON_PointFeature_Feature,0,1,3,0,1,12,1,0,0,-1,0,0,,
-hacs,GeoJSON_PointFeature_Root,0,1,2,0,1,9,1,0,0,-1,0,0,,
-hacs,GenerateSwimlane,0,2,0,0,1,56,3,0,0,-1,6,1,hacs.xs1.XS1_DataObject' sones.storage.ObjectCache' sones.storage.TinyOnDiskStorage' sones.Storage.OnDiscAdress' hacs.SwimLaneRootObject' hacs.MAXMonitoringThread,HTTP.HttpProcessor
-hacs,LaneJSON,0,0,2,0,0,5,0,0,0,-1,0,0,,
-hacs,ItemJSON,0,0,6,0,0,9,0,0,0,-1,0,0,,
-hacs,SwimLaneRootObject,0,0,2,0,0,5,0,0,0,-1,0,1,,hacs.GenerateSwimlane
-hacs,ScriptingTimerElement,11,0,0,11,0,15,0,0,0,-1,1,2,hacs.scripting_timer_operation_modes,hacs.ScriptingTimerConfiguration' hacs.ScriptingTimerThread
+hacs,FunctionJSON,0,0,2,0,0,5,0,0,0,-1,0,1,,hacs.ActuatorJSON
+hacs,ActuatorJSON,0,0,7,0,0,10,0,0,0,-1,1,1,hacs.FunctionJSON,hacs.ActorJSON_Root
+hacs,ActorJSON_Root,0,0,5,0,0,8,0,0,0,-1,1,1,hacs.ActuatorJSON,hacs.VirtualXS1
+hacs,SensorJSON,0,0,6,0,0,9,0,0,0,-1,0,2,,hacs.SensorJSON_Root' hacs.VirtualXS1
+hacs,SensorJSON_Root,0,0,5,0,0,8,0,0,0,-1,1,1,hacs.SensorJSON,hacs.VirtualXS1
+hacs,VirtualXS1,0,2,0,0,2,96,9,0,0,-1,9,1,hacs.HeatingThermostat' hacs.IMAXDevice' hacs.ShutterContact' hacs.House' hacs.ShutterContactModes' hacs.DeviceTypes' hacs.ActorJSON_Root' hacs.SensorJSON' hacs.SensorJSON_Root,hacs.HTTPProxy
+hacs,GeoJSON_PointFeature_Properties,0,1,1,0,1,8,1,0,0,-1,0,1,,hacs.GeoJSON_PointFeature_Feature
+hacs,GeoJSON_PointFeature_Geometry,0,1,2,0,1,12,1,0,0,-1,0,1,,hacs.GeoJSON_PointFeature_Feature
+hacs,GeoJSON_PointFeature_Feature,0,1,3,0,1,12,1,0,0,-1,2,1,hacs.GeoJSON_PointFeature_Properties' hacs.GeoJSON_PointFeature_Geometry,hacs.GeoJSON_PointFeature_Root
+hacs,GeoJSON_PointFeature_Root,0,1,2,0,1,9,1,0,0,-1,1,0,hacs.GeoJSON_PointFeature_Feature,
+hacs,GenerateSwimlane,0,2,0,0,1,56,8,0,0,-1,5,1,hacs.MAXMonitoringThread' hacs.LaneJSON' hacs.ItemJSON' hacs.SwimLaneRootObject' hacs.xs1.XS1_DataObject,HTTP.HttpProcessor
+hacs,LaneJSON,0,0,2,0,0,5,0,0,0,-1,0,2,,hacs.SwimLaneRootObject' hacs.GenerateSwimlane
+hacs,ItemJSON,0,0,6,0,0,9,0,0,0,-1,0,2,,hacs.SwimLaneRootObject' hacs.GenerateSwimlane
+hacs,SwimLaneRootObject,0,0,2,0,0,5,0,0,0,-1,2,1,hacs.LaneJSON' hacs.ItemJSON,hacs.GenerateSwimlane
+hacs,ScriptingTimerElement,11,0,0,11,0,15,0,0,0,-1,1,2,hacs.scripting_timer_operation_modes,hacs.ScriptingTimerThread' hacs.ScriptingTimerConfiguration
 hacs,ScriptingTimerConfiguration,1,1,0,1,1,49,9,0,0,0,2,2,hacs.ScriptingTimerElement' hacs.scripting_timer_operation_modes,hacs.ScriptingTimerThread' hacs.Program
 hacs,scripting_timer_operation_modes,0,0,0,0,0,4,0,0,0,-1,0,2,,hacs.ScriptingTimerElement' hacs.ScriptingTimerConfiguration
-hacs,ScriptingTimerThread,2,4,0,1,2,53,7,0,0,0.5,4,1,hacs.ConsoleOutputLogger' hacs.LoggingThread' hacs.ScriptingTimerElement' hacs.ScriptingTimerConfiguration,hacs.Program
-hacs,ConsoleOutputLogger,6,8,0,2,6,121,12,0,0,0,1,18,hacs.Properties.Settings,hacs.AlarmingThread' hacs.MAXMonitoringThread' hacs.NetworkMonitoring' hacs.SolarLogDataHelper' hacs.SolarLogMonitoringThread' hacs.ActorReswitching' hacs.SensorCheck' hacs.XS1MonitoringThread' hacs.HTTPProxy' hacs.ScriptingTimerThread' hacs.Program' hacs.LoggingThread' hacs.MiataruThread' hacs.Devices.MQTTBinding.MQTT_Handling' HTTP.HttpProcessor' HTTP.HttpServer' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs,Program,0,1,0,0,0,74,7,0,0,-1,15,0,hacs.ConsoleOutputLogger' sones.storage.TinyOnDiskStorage' hacs.ScriptingTimerThread' hacs.LoggingThread' hacs.Properties.Settings' hacs.ScriptingActorConfiguration' hacs.PowerSensorConfiguration' hacs.ScriptingTimerConfiguration' hacs.SensorCheckIgnoreConfiguration' hacs.HTTPProxyConfiguration' hacs.AlarmingConfiguration' hacs.MiataruConfiguration' hacs.MQTTBindingConfiguration' hacs.NetworkMonitorConfiguration' hacs.NetworkMonitoringHost,
-hacs,LoggingThread,20,2,0,7,2,529,30,0,0,0,33,2,sones.storage.TinyOnDiskStorage' hacs.xs1.configuration.XS1Configuration' hacs.ConsoleOutputLogger' hacs.Devices.MQTTBinding.MQTT_Handling' hacs.Properties.Settings' hacs.MAXMonitoringThread' hacs.SolarLogMonitoringThread' hacs.SensorCheck' hacs.ActorReswitching' hacs.XS1MonitoringThread' HTTP.HttpServer' hacs.NetworkMonitoring' hacs.AlarmingThread' hacs.MiataruThread' hacs.xs1.XS1_DataObject' hacs.set_state_actuator.set_state_actuator' hacs.current_actor_status' hacs.IDeviceDiffSet' hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.SolarLogDataSet' hacs.NetworkMonitoringDataSet' hacs.xs1.ObjectTypes' hacs.KnownActorStates' hacs.ScriptingActorConfiguration' hacs.ScriptingActorElement' hacs.actor_status' hacs.DeviceTypes' hacs.SensorCheckIgnoreConfiguration' hacs.BatteryStatus' hacs.ThermostatModes' hacs.ShutterContactModes' Org.Mentalis.Network.ICMP_Status,hacs.ScriptingTimerThread' hacs.Program
+hacs,ScriptingTimerThread,2,4,0,1,2,53,7,0,0,0.5,4,1,hacs.ScriptingTimerElement' hacs.ScriptingTimerConfiguration' hacs.ConsoleOutputLogger' hacs.LoggingThread,hacs.Program
+hacs,ConsoleOutputLogger,6,8,0,2,6,121,18,0,0,0,1,18,hacs.Properties.Settings,hacs.SolarLogDataHelper' hacs.XS1MonitoringThread' hacs.ActorReswitching' hacs.NetworkMonitoring' hacs.SolarLogMonitoringThread' hacs.SensorCheck' hacs.HTTPProxy' hacs.MAXMonitoringThread' hacs.MiataruThread' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData' hacs.ScriptingTimerThread' HTTP.HttpServer' hacs.AlarmingThread' hacs.Devices.MQTTBinding.MQTT_Handling' hacs.LoggingThread' HTTP.HttpProcessor' hacs.Program
+hacs,Program,0,1,0,0,0,74,7,0,0,-1,14,0,hacs.AlarmingConfiguration' hacs.MQTTBindingConfiguration' hacs.NetworkMonitoringHost' hacs.NetworkMonitorConfiguration' hacs.ScriptingActorConfiguration' hacs.SensorCheckIgnoreConfiguration' hacs.HTTPProxyConfiguration' hacs.ScriptingTimerConfiguration' hacs.ScriptingTimerThread' hacs.ConsoleOutputLogger' hacs.LoggingThread' hacs.PowerSensorConfiguration' hacs.MiataruConfiguration' hacs.Properties.Settings,
+hacs,LoggingThread,20,2,0,7,2,529,68,0,0,0,32,2,hacs.AlarmingThread' hacs.IAlarmingEvent' hacs.MAXMonitoringThread' hacs.BatteryStatus' hacs.IDeviceDiffSet' hacs.HeatingThermostatDiff' hacs.ShutterContactDiff' hacs.ShutterContactModes' hacs.ThermostatModes' hacs.DeviceTypes' hacs.NetworkMonitoring' hacs.NetworkMonitoringDataSet' hacs.SolarLogDataSet' hacs.SolarLogMonitoringThread' hacs.ActorReswitching' hacs.KnownActorStates' hacs.ScriptingActorElement' hacs.ScriptingActorConfiguration' hacs.SensorCheck' hacs.SensorCheckIgnoreConfiguration' hacs.XS1MonitoringThread' hacs.actor_status' hacs.current_actor_status' hacs.ConsoleOutputLogger' hacs.MiataruThread' hacs.Devices.MQTTBinding.MQTT_Handling' hacs.xs1.ObjectTypes' hacs.xs1.XS1_DataObject' hacs.xs1.configuration.XS1Configuration' HTTP.HttpServer' hacs.Properties.Settings' hacs.set_state_actuator.set_state_actuator,hacs.ScriptingTimerThread' hacs.Program
 hacs,PowerConsumptionSensor,4,0,0,4,0,7,0,0,0,-1,0,3,,hacs.PowerSensorConfiguration' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs,PowerSensorConfiguration,1,1,0,1,1,45,6,0,0,0,1,3,hacs.PowerConsumptionSensor,hacs.Program' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
+hacs,PowerSensorConfiguration,1,1,0,1,1,45,6,0,0,0,1,3,hacs.PowerConsumptionSensor,hacs.Program' hacs.JSONHandlers.NumericsJSONData' hacs.JSONHandlers.JSONData
 hacs,PowerSensorOutputs,0,0,0,0,0,9,0,0,0,-1,0,3,,HTTP.HttpProcessor' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs,MiataruThread,5,2,0,2,2,84,7,0,0,0,8,1,hacs.ConsoleOutputLogger' sones.storage.TinyOnDiskStorage' miataruclientcsharp.miataruclient' hacs.MiataruDataObject' hacs.MiataruAccountConfigurationFile' hacs.MiataruConfiguration' hacs.MiataruAccount' miataruclientcsharp.MiataruLocation,hacs.LoggingThread
-hacs,MiataruDataObject,6,4,0,6,4,53,4,0,1,0.5,2,1,sones.Storage.Serializer.SerializationWriter' sones.Storage.Serializer.SerializationReader,hacs.MiataruThread
-hacs,MiataruAccount,0,0,3,0,0,6,0,0,0,-1,0,1,,hacs.MiataruThread
-hacs,MiataruAccountConfigurationFile,0,0,1,0,0,4,0,0,0,-1,0,2,,hacs.MiataruThread' hacs.MiataruConfiguration
-hacs,MiataruConfiguration,1,1,0,1,1,15,2,0,0,0,2,2,hacs.MiataruAccountConfigurationFile' Newtonsoft.Json.JsonConvert,hacs.Program' hacs.MiataruThread
-hacs.Devices.MQTTBinding,MqttActorMapping,0,0,2,0,0,5,0,0,0,-1,0,1,,hacs.Devices.MQTTBinding.MQTT_Handling
-hacs.Devices.MQTTBinding,MqttSensorMapping,0,0,2,0,0,5,0,0,0,-1,0,1,,hacs.Devices.MQTTBinding.MQTT_Handling
-hacs.Devices.MQTTBinding,MQTTBindingRoot,0,0,5,0,0,8,0,0,0,-1,0,2,,hacs.MQTTBindingConfiguration' hacs.Devices.MQTTBinding.MQTT_Handling
-hacs.Devices.MQTTBinding,MQTT_Handling,4,4,0,1,4,71,12,0,0,0,9,1,hacs.ConsoleOutputLogger' uPLibrary.Networking.M2Mqtt.MqttClient' hacs.Devices.MQTTBinding.MQTTBindingRoot' hacs.MQTTBindingConfiguration' uPLibrary.Networking.M2Mqtt.MqttSslProtocols' hacs.xs1.XS1_DataObject' hacs.Devices.MQTTBinding.MqttSensorMapping' uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase' hacs.Devices.MQTTBinding.MqttActorMapping,hacs.LoggingThread
-hacs.xs1,HandleXS1_TSV,0,1,0,0,1,41,3,0,0,-1,2,1,hacs.xs1.XS1_DataObject' hacs.xs1.ObjectTypes,hacs.XS1MonitoringThread
-hacs.xs1,ObjectTypes,0,0,0,0,0,6,0,0,0,-1,0,6,,hacs.LoggingThread' hacs.xs1.HandleXS1_TSV' hacs.xs1.XS1_DataObject' HTTP.HttpProcessor' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs.xs1,XS1_DataObject,10,8,0,9,8,111,10,0,1,0.38,4,8,hacs.xs1.ObjectTypes' sones.Storage.Serializer.SerializationWriter' sones.Storage.Serializer.SerializationReader' hacs.AlarmingEventType,hacs.AlarmingThread' hacs.XS1MonitoringThread' hacs.GenerateSwimlane' hacs.LoggingThread' hacs.Devices.MQTTBinding.MQTT_Handling' hacs.xs1.HandleXS1_TSV' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData
-hacs.xs1.configuration,actuator_function,2,0,0,2,0,5,0,0,0,-1,0,3,,hacs.xs1.configuration.XS1Actuator' HTTP.HttpProcessor' hacs.set_state_actuator.set_state_actuator
-hacs.xs1.configuration,XS1Actuator,7,0,0,7,0,10,0,0,0,-1,1,3,hacs.xs1.configuration.actuator_function,hacs.xs1.configuration.XS1ActuatorList' HTTP.HttpProcessor' hacs.set_state_actuator.set_state_actuator
-hacs.xs1.configuration,XS1ActuatorList,5,0,0,5,0,8,0,0,0,-1,1,3,hacs.xs1.configuration.XS1Actuator,hacs.xs1.configuration.XS1Configuration' HTTP.HttpProcessor' hacs.set_state_actuator.set_state_actuator
-hacs.xs1.configuration,XS1Configuration,3,2,0,0,2,44,5,0,0,0,1,5,hacs.xs1.configuration.XS1ActuatorList,hacs.ActorReswitching' hacs.LoggingThread' HTTP.HttpProcessor' HTTP.HttpServer' hacs.set_state_actuator.set_state_actuator
+hacs,MiataruThread,5,2,0,2,2,84,7,0,0,0,4,1,hacs.ConsoleOutputLogger' hacs.MiataruDataObject' hacs.MiataruAccount' hacs.MiataruConfiguration,hacs.LoggingThread
+hacs,MiataruDataObject,6,4,0,6,4,53,4,0,1,0.5,0,1,,hacs.MiataruThread
+hacs,MiataruAccount,0,0,3,0,0,6,0,0,0,-1,0,2,,hacs.MiataruAccountConfigurationFile' hacs.MiataruThread
+hacs,MiataruAccountConfigurationFile,0,0,1,0,0,4,0,0,0,-1,1,1,hacs.MiataruAccount,hacs.MiataruConfiguration
+hacs,MiataruConfiguration,1,1,0,1,1,15,2,0,0,0,1,2,hacs.MiataruAccountConfigurationFile,hacs.Program' hacs.MiataruThread
+hacs.Devices.MQTTBinding,MqttActorMapping,0,0,2,0,0,5,0,0,0,-1,0,2,,hacs.Devices.MQTTBinding.MQTTBindingRoot' hacs.Devices.MQTTBinding.MQTT_Handling
+hacs.Devices.MQTTBinding,MqttSensorMapping,0,0,2,0,0,5,0,0,0,-1,0,2,,hacs.Devices.MQTTBinding.MQTTBindingRoot' hacs.Devices.MQTTBinding.MQTT_Handling
+hacs.Devices.MQTTBinding,MQTTBindingRoot,0,0,5,0,0,8,0,0,0,-1,2,1,hacs.Devices.MQTTBinding.MqttActorMapping' hacs.Devices.MQTTBinding.MqttSensorMapping,hacs.MQTTBindingConfiguration
+hacs.Devices.MQTTBinding,MQTT_Handling,4,4,0,1,4,71,12,0,0,0,5,1,hacs.MQTTBindingConfiguration' hacs.ConsoleOutputLogger' hacs.Devices.MQTTBinding.MqttActorMapping' hacs.Devices.MQTTBinding.MqttSensorMapping' hacs.xs1.XS1_DataObject,hacs.LoggingThread
+hacs.xs1,HandleXS1_TSV,0,1,0,0,1,41,4,0,0,-1,2,1,hacs.xs1.ObjectTypes' hacs.xs1.XS1_DataObject,hacs.XS1MonitoringThread
+hacs.xs1,ObjectTypes,0,0,0,0,0,6,0,0,0,-1,0,6,,hacs.xs1.HandleXS1_TSV' hacs.JSONHandlers.JSONData' HTTP.HttpProcessor' hacs.xs1.XS1_DataObject' hacs.JSONHandlers.NumericsJSONData' hacs.LoggingThread
+hacs.xs1,XS1_DataObject,10,8,0,9,8,111,14,0,1,0.38,3,8,hacs.AlarmingEventType' hacs.IAlarmingEvent' hacs.xs1.ObjectTypes,hacs.Devices.MQTTBinding.MQTT_Handling' hacs.XS1MonitoringThread' hacs.xs1.HandleXS1_TSV' hacs.AlarmingThread' hacs.GenerateSwimlane' hacs.JSONHandlers.NumericsJSONData' hacs.JSONHandlers.JSONData' hacs.LoggingThread
+hacs.xs1.configuration,actuator_function,2,0,0,2,0,5,0,0,0,-1,0,3,,hacs.xs1.configuration.XS1Actuator' hacs.set_state_actuator.set_state_actuator' HTTP.HttpProcessor
+hacs.xs1.configuration,XS1Actuator,7,0,0,7,0,10,0,0,0,-1,1,3,hacs.xs1.configuration.actuator_function,hacs.xs1.configuration.XS1ActuatorList' hacs.set_state_actuator.set_state_actuator' HTTP.HttpProcessor
+hacs.xs1.configuration,XS1ActuatorList,5,0,0,5,0,8,0,0,0,-1,1,3,hacs.xs1.configuration.XS1Actuator,hacs.set_state_actuator.set_state_actuator' hacs.xs1.configuration.XS1Configuration' HTTP.HttpProcessor
+hacs.xs1.configuration,XS1Configuration,3,2,0,0,2,44,5,0,0,0,1,5,hacs.xs1.configuration.XS1ActuatorList,hacs.ActorReswitching' hacs.set_state_actuator.set_state_actuator' HTTP.HttpServer' hacs.LoggingThread' HTTP.HttpProcessor
 hacs.xs1.configuration,XS1Device,0,0,0,0,0,3,0,0,0,-1,0,0,,
-HTTP,HttpProcessor,28,17,0,1,14,1495,146,0,0,0.24,17,1,hacs.xs1.configuration.XS1Configuration' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData' hacs.ConsoleOutputLogger' hacs.HTTPProxy' hacs.MAXMonitoringThread' sones.storage.TinyOnDiskStorage' hacs.ProxyResponse' hacs.PowerSensorOutputs' hacs.ActorsStatusOutputTypes' hacs.xs1.configuration.XS1ActuatorList' hacs.set_state_actuator.set_state_actuator' hacs.Properties.Settings' hacs.xs1.ObjectTypes' hacs.xs1.configuration.XS1Actuator' hacs.GenerateSwimlane' hacs.xs1.configuration.actuator_function,HTTP.HttpServer
-HTTP,HttpServer,12,2,0,0,2,90,3,0,0,0,5,1,sones.storage.TinyOnDiskStorage' hacs.xs1.configuration.XS1Configuration' hacs.ConsoleOutputLogger' hacs.MAXMonitoringThread' HTTP.HttpProcessor,hacs.LoggingThread
-hacs.JSONHandlers,JSONData,2,8,0,0,7,783,25,0,0,0.25,13,1,sones.storage.TinyOnDiskStorage' hacs.ConsoleOutputLogger' hacs.xs1.XS1_DataObject' sones.storage.ObjectCache' sones.Storage.OnDiscAdress' hacs.xs1.ObjectTypes' hacs.PowerSensorOutputs' hacs.PowerSensorConfiguration' hacs.PowerConsumptionSensor' hacs.KnownActorStates' hacs.current_actor_status' hacs.actor_status' hacs.ActorsStatusOutputTypes,HTTP.HttpProcessor
-hacs.JSONHandlers,NumericsJSONData,2,8,0,0,7,788,25,0,0,0.25,13,1,sones.storage.TinyOnDiskStorage' hacs.ConsoleOutputLogger' hacs.xs1.XS1_DataObject' sones.storage.ObjectCache' sones.Storage.OnDiscAdress' hacs.xs1.ObjectTypes' hacs.PowerSensorOutputs' hacs.PowerSensorConfiguration' hacs.PowerConsumptionSensor' hacs.KnownActorStates' hacs.current_actor_status' hacs.actor_status' hacs.ActorsStatusOutputTypes,HTTP.HttpProcessor
-hacs.Properties,Settings,1,0,53,0,0,636,0,0,0,-1,0,9,,hacs.AlarmingThread' hacs.MAXMonitoringThread' hacs.ActorReswitching' hacs.SensorCheck' hacs.ConsoleOutputLogger' hacs.Program' hacs.LoggingThread' HTTP.HttpProcessor' hacs.set_state_actuator.set_state_actuator
+HTTP,HttpProcessor,28,17,0,1,14,1495,169,0,0,0.24,16,1,hacs.MAXMonitoringThread' hacs.ActorsStatusOutputTypes' hacs.ProxyResponse' hacs.HTTPProxy' hacs.GenerateSwimlane' hacs.ConsoleOutputLogger' hacs.PowerSensorOutputs' hacs.xs1.ObjectTypes' hacs.xs1.configuration.actuator_function' hacs.xs1.configuration.XS1Actuator' hacs.xs1.configuration.XS1ActuatorList' hacs.xs1.configuration.XS1Configuration' hacs.JSONHandlers.JSONData' hacs.JSONHandlers.NumericsJSONData' hacs.Properties.Settings' hacs.set_state_actuator.set_state_actuator,HTTP.HttpServer
+HTTP,HttpServer,12,2,0,0,2,90,3,0,0,0,4,1,hacs.MAXMonitoringThread' hacs.ConsoleOutputLogger' hacs.xs1.configuration.XS1Configuration' HTTP.HttpProcessor,hacs.LoggingThread
+hacs.JSONHandlers,JSONData,2,8,0,0,7,783,112,0,0,0.25,9,1,hacs.ActorsStatusOutputTypes' hacs.KnownActorStates' hacs.actor_status' hacs.ConsoleOutputLogger' hacs.PowerConsumptionSensor' hacs.PowerSensorConfiguration' hacs.PowerSensorOutputs' hacs.xs1.ObjectTypes' hacs.xs1.XS1_DataObject,HTTP.HttpProcessor
+hacs.JSONHandlers,NumericsJSONData,2,8,0,0,7,788,112,0,0,0.25,9,1,hacs.ActorsStatusOutputTypes' hacs.KnownActorStates' hacs.actor_status' hacs.ConsoleOutputLogger' hacs.PowerConsumptionSensor' hacs.PowerSensorConfiguration' hacs.PowerSensorOutputs' hacs.xs1.ObjectTypes' hacs.xs1.XS1_DataObject,HTTP.HttpProcessor
+hacs.Properties,Settings,1,0,53,0,0,636,0,0,0,-1,0,9,,hacs.ConsoleOutputLogger' hacs.SensorCheck' hacs.set_state_actuator.set_state_actuator' hacs.MAXMonitoringThread' hacs.AlarmingThread' hacs.ActorReswitching' hacs.Program' HTTP.HttpProcessor' hacs.LoggingThread
 hacs.set_state_actuator,set_state_actuator_response,1,0,0,1,0,4,0,0,0,-1,0,0,,
-hacs.set_state_actuator,set_state_actuator,0,3,0,0,3,86,10,0,0,-1,5,3,hacs.xs1.configuration.XS1ActuatorList' hacs.xs1.configuration.XS1Configuration' hacs.Properties.Settings' hacs.xs1.configuration.XS1Actuator' hacs.xs1.configuration.actuator_function,hacs.ActorReswitching' hacs.LoggingThread' HTTP.HttpProcessor
+hacs.set_state_actuator,set_state_actuator,0,3,0,0,3,86,10,0,0,-1,5,3,hacs.xs1.configuration.actuator_function' hacs.xs1.configuration.XS1Actuator' hacs.xs1.configuration.XS1ActuatorList' hacs.xs1.configuration.XS1Configuration' hacs.Properties.Settings,hacs.ActorReswitching' hacs.LoggingThread' HTTP.HttpProcessor

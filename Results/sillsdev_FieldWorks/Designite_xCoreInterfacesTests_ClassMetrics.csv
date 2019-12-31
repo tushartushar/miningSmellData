@@ -1,0 +1,18 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+XCore.Properties,Resources,2,1,4,0,0,78,1,0,0,0,0,1,,XCore.PropertyTableTests
+XCore,PropertyTableTests,4,15,1,0,13,764,16,0,0,0.13,1,0,XCore.Properties.Resources,
+XCore,TestMessageSequencer,0,8,0,0,5,199,14,0,0,-1,5,0,XCore.DummyForm' XCore.TrickQueue' XCore.TestControl1' XCore.TestControl2' XCore.TestControl3,
+XCore,DummyForm,0,2,0,0,1,19,2,0,0,-1,0,1,,XCore.TestMessageSequencer
+XCore,TestMessagePriority,0,1,0,0,1,21,1,0,0,-1,3,0,XCore.LowColleague' XCore.MedColleague' XCore.HighColleague,
+XCore,TrickQueue,0,1,0,0,0,14,2,0,0,-1,0,1,,XCore.TestMessageSequencer
+XCore,TestControlBase,1,7,0,1,3,60,7,1,0,0.43,0,1,,XCore.TestControl1
+XCore,TestControl1,1,6,1,0,3,62,7,2,1,0.5,1,3,XCore.TestControlBase,XCore.TestMessageSequencer' XCore.TestControl2' XCore.TestControl3
+XCore,TestControl2,4,2,0,0,0,30,4,0,2,0,1,1,XCore.TestControl1,XCore.TestMessageSequencer
+XCore,TestControl3,3,2,0,0,0,24,3,0,2,0,1,1,XCore.TestControl1,XCore.TestMessageSequencer
+XCore,TestColleague,0,2,2,0,2,30,2,3,0,-1,0,3,,XCore.LowColleague' XCore.MedColleague' XCore.HighColleague
+XCore,LowColleague,0,1,1,0,1,14,1,0,1,-1,1,1,XCore.TestColleague,XCore.TestMessagePriority
+XCore,MedColleague,0,1,1,0,1,14,1,0,1,-1,1,1,XCore.TestColleague,XCore.TestMessagePriority
+XCore,HighColleague,0,1,1,0,1,14,1,0,1,-1,1,1,XCore.TestColleague,XCore.TestMessagePriority
+XCore,TestTupleComparer,0,5,0,0,5,34,5,0,0,-1,2,0,XCore.ClassA' XCore.ClassB,
+XCore,ClassA,0,2,2,0,2,11,2,1,0,-1,0,2,,XCore.TestTupleComparer' XCore.ClassB
+XCore,ClassB,0,0,0,0,0,3,0,0,1,-1,1,1,XCore.ClassA,XCore.TestTupleComparer

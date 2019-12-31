@@ -1,59 +1,59 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Sider,Aggregate,0,0,0,0,0,4,0,0,0,-1,0,2,,Sider.IRedisClient' Sider.RedisClient<T>
-Sider,IdleTimeoutException,0,1,0,0,1,5,1,0,0,-1,0,0,,
-Sider,ResponseException,0,2,0,0,2,7,2,0,0,-1,0,0,,
-Sider,Invocation,0,1,0,0,1,10,1,0,0,-1,0,10,,Sider.RedisClient<T>' Sider.Executors.ExecutorBase' Sider.Executors.IExecutor' Sider.Executors.ImmediateExecutor' Sider.Executors.IocpExecutor' Sider.Executors.MonitorExecutor' Sider.Executors.MonitorObservable' Sider.Executors.PipelinedExecutor' Sider.Executors.PubSubExecutor<T>' Sider.Executors.TransactedExecutor
-Sider,Invocation<TResult>,0,1,3,0,1,14,1,0,0,-1,0,0,,
-Sider,LimitingStream,2,6,6,0,6,52,6,0,0,0.67,1,2,Sider.SAssert,Sider.RedisReader' Sider.RedisWriter
-Sider,MessageType,0,0,0,0,0,10,0,0,0,-1,0,4,,Sider.MessageTypes' Sider.ProtocolReader' Sider.Message' Sider.Message<T>
-Sider,MessageTypes,0,1,0,0,1,15,2,0,0,-1,1,1,Sider.MessageType,Sider.ProtocolReader
-Sider,Observable<T>,3,6,2,0,3,64,11,0,0,0.67,1,0,Sider.DisposableDelegate,
+Sider,IdleTimeoutException,0,1,0,0,1,5,1,0,0,-1,0,3,,Sider.Executors.ExecutorBase' Sider.Executors.PipelinedExecutor' Sider.Executors.ImmediateExecutor
+Sider,ResponseException,0,2,0,0,2,7,2,0,0,-1,0,2,,Sider.SAssert' Sider.RedisReader
+Sider,Invocation,0,1,0,0,1,10,1,0,0,-1,3,2,Sider.Invocation<TResult>' Sider.ProtocolReader' Sider.ProtocolWriter,Sider.RedisClient<T>' Sider.Executors.MonitorExecutor
+Sider,Invocation<TResult>,0,1,3,0,1,14,1,0,0,-1,2,9,Sider.ProtocolReader' Sider.ProtocolWriter,Sider.Invocation' Sider.Executors.TransactedExecutor' Sider.Executors.IocpExecutor' Sider.Executors.MonitorExecutor' Sider.Executors.PipelinedExecutor' Sider.Executors.PubSubExecutor<T>' Sider.Executors.ExecutorBase' Sider.Executors.IExecutor' Sider.Executors.ImmediateExecutor
+Sider,LimitingStream,2,6,6,0,6,52,6,0,0,0.67,1,3,Sider.SAssert,Sider.Serialization.ObjectSerializer<T>' Sider.RedisReader' Sider.RedisWriter
+Sider,MessageType,0,0,0,0,0,10,0,0,0,-1,0,4,,Sider.Message' Sider.Message<T>' Sider.MessageTypes' Sider.ProtocolReader
+Sider,MessageTypes,0,1,0,0,1,15,7,0,0,-1,1,1,Sider.MessageType,Sider.ProtocolReader
+Sider,Observable<T>,3,6,2,0,3,64,11,0,0,0.67,1,2,Sider.DisposableDelegate,Sider.Executors.PubSubExecutor<T>' Sider.Executors.MonitorExecutor
 Sider,DisposableDelegate,1,2,0,0,2,12,2,0,0,0,0,1,,Sider.Observable<T>
-Sider,ProtocolReader,3,28,0,0,25,241,44,0,1,0,9,5,Sider.RedisReader' Sider.ProtocolEncoder' Sider.RedisSettings' Sider.ResponseType' Sider.Serialization.ISerializer' Sider.MessageType' Sider.MessageTypes' Sider.Message' Sider.SAssert,Sider.RedisClientBase' Sider.RedisClient<T>' Sider.Executors.MonitorObservable' Sider.Executors.PubSubObservable' Sider.Executors.TransactedExecutor
-Sider,ProtocolEncoder,4,9,1,0,9,68,14,0,1,0.78,1,3,Sider.RedisSettings,Sider.ProtocolReader' Sider.ProtocolWriter' Sider.RedisClientBase
-Sider,ProtocolWriter,3,15,1,0,13,75,16,0,1,0,5,5,Sider.RedisWriter' Sider.ProtocolEncoder' Sider.RedisSettings' Sider.ResponseType' Sider.Serialization.ISerializer,Sider.RedisClientBase' Sider.RedisClient<T>' Sider.Executors.ExecutorBase' Sider.Executors.PipelinedExecutor' Sider.Executors.TransactedExecutor
-Sider,RedisClientBase,8,7,5,0,4,88,10,1,1,0.29,5,4,Sider.ProtocolReader' Sider.ProtocolEncoder' Sider.ProtocolWriter' Sider.Executors.IExecutor' Sider.RedisSettings,Sider.Executors.ExecutorBase' Sider.Executors.IExecutor' Sider.Executors.MonitorExecutor' Sider.Tests.RedisClientTests
-Sider,RedisVersionAttribute,0,1,1,0,1,8,1,0,0,-1,0,0,,
-Sider,SettingsWrapper,0,1,1,0,0,9,1,5,0,-1,2,0,Sider.SAssert' Sider.RedisSettings,
+Sider,ProtocolReader,3,28,0,0,25,241,48,0,1,0,11,6,Sider.MessageType' Sider.MessageTypes' Sider.ProtocolEncoder' Sider.SettingsWrapper' Sider.RedisSettings' Sider.SAssert' Sider.RedisReader' Sider.ResponseType' Sider.Message' Sider.Message<T>' Sider.Serialization.ISerializer,Sider.Executors.ExecutorBase' Sider.RedisClientBase' Sider.Invocation' Sider.Invocation<TResult>' Sider.RedisClient<T>' Sider.IRedisClient
+Sider,ProtocolEncoder,4,9,1,0,9,68,14,0,1,0.78,2,3,Sider.SettingsWrapper' Sider.RedisSettings,Sider.ProtocolReader' Sider.ProtocolWriter' Sider.RedisClientBase
+Sider,ProtocolWriter,3,15,1,0,13,75,16,0,1,0,6,6,Sider.ProtocolEncoder' Sider.SettingsWrapper' Sider.RedisSettings' Sider.RedisWriter' Sider.ResponseType' Sider.Serialization.ISerializer,Sider.Executors.ExecutorBase' Sider.IRedisClient' Sider.RedisClient<T>' Sider.Invocation' Sider.Invocation<TResult>' Sider.RedisClientBase
+Sider,RedisClientBase,8,7,5,0,4,88,10,1,1,0.29,7,2,Sider.ProtocolReader' Sider.ProtocolEncoder' Sider.ProtocolWriter' Sider.SettingsWrapper' Sider.RedisSettings' Sider.Executors.IExecutor' Sider.Executors.ImmediateExecutor,Sider.Executors.IExecutor' Sider.Executors.ExecutorBase
+Sider,RedisVersionAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,Sider.RedisClient<T>
+Sider,SettingsWrapper,0,1,1,0,0,9,1,5,0,-1,2,5,Sider.RedisSettings' Sider.SAssert,Sider.ProtocolWriter' Sider.ProtocolEncoder' Sider.ProtocolReader' Sider.AutoActivatingPool<T>' Sider.RedisClientBase
 Sider,RedisClientPipeliningExtensions,0,6,0,0,6,126,6,0,0,-1,1,0,Sider.IRedisClient,
-Sider,RedisSettings,3,5,20,2,4,224,5,0,0,1,1,32,Sider.Builder,Sider.ProtocolReader' Sider.ProtocolEncoder' Sider.ProtocolWriter' Sider.RedisClientBase' Sider.SettingsWrapper' Sider.Builder' Sider.RoundRobinPool<T>' Sider.RedisClient<T>' Sider.RedisClient' Sider.RedisReader' Sider.RedisWriter' Sider.AutoActivatingPool' Sider.AutoActivatingPool<T>' Sider.ThreadwisePool' Sider.ThreadwisePool<T>' Sider.TrackedThreadwisePool<T>' Sider.Executors.ExecutorBase' Sider.Executors.ImmediateExecutor' Sider.Executors.PipelinedExecutor' Sider.Serialization.ObjectSerializer<T>' Sider.Serialization.SerializerBase<T>' Sider.Serialization.ISerializer' Sider.Serialization.StringSerializer' Sider.Benchmark.Program' Sider.Samples.LinqPipelineSample' Sider.Samples.PersonnelSerializer' Sider.Tests.RedisClientTests' Sider.Tests.RedisReaderTests' Sider.Tests.RedisSettingsTests' Sider.Tests.RedisWriterTests' Sider.Tests.Serialization.SerializationInfo<T>' Sider.Tests.Serialization.SerializationTestBase<TSerializer;TOut>
-Sider,Builder,1,24,0,0,23,157,24,0,0,0,3,5,Sider.RedisSettings' Sider.SAssert' Sider.Serialization.ISerializer,Sider.RedisSettings' Sider.Benchmark.Program' Sider.Tests.RedisClientTests' Sider.Tests.RedisSettingsTests' Sider.Tests.RedisWriterTests
-Sider,RoundRobinPool<T>,2,2,0,0,2,17,3,0,1,0,2,0,Sider.IRedisClient' Sider.RedisSettings,
-Sider,SAssert,0,8,0,0,7,76,16,0,0,-1,2,8,Sider.ResponseType' Sider.RedisReader,Sider.LimitingStream' Sider.ProtocolReader' Sider.SettingsWrapper' Sider.Builder' Sider.RedisReader' Sider.RedisWriter' Sider.ThreadwisePool<T>' Sider.Executors.ExecutorBase
-Sider,IClientsPool,0,1,0,0,0,4,1,3,0,-1,0,2,,Sider.Benchmark.Program' Sider.Samples.HighLoadSample
-Sider,IRedisClient,0,153,2,0,0,164,153,1,0,-1,1,21,Sider.Aggregate,Sider.RedisClientPipeliningExtensions' Sider.RoundRobinPool<T>' Sider.AutoActivatingPool<T>' Sider.ThreadwisePool<T>' Sider.TrackedThreadwisePool<T>' Sider.Benchmark.GetJob' Sider.Benchmark.GetToJob' Sider.Benchmark.IncrJob' Sider.Benchmark.MultiplePipelinedResultTypeJob' Sider.Benchmark.SetWithStringSerializerJob' Sider.Benchmark.SmallPipelinedPingJob' Sider.Benchmark.PingJob' Sider.Benchmark.WholesalePipelinedPingJob' Sider.Benchmark.Program' Sider.Benchmark.SetJob' Sider.GUI.ClientsController' Sider.GUI.MainForm' Sider.Samples.HighLoadSample' Sider.Samples.ThreadPoolSample' Sider.Samples.Chat.ChatForm' Sider.Tests.RedisClientTests
-Sider,RedisClient<T>,4,165,1,0,155,1119,189,0,2,0.67,13,0,Sider.Serialization.ISerializer' Sider.Executors.PipelinedExecutor' Sider.Invocation' Sider.ProtocolReader' Sider.ProtocolWriter' Sider.Executors.MonitorExecutor' Sider.Executors.TransactedExecutor' Sider.RedisTypes' Sider.RedisType' Sider.Aggregate' Sider.RedisSettings' Sider.Serialization.Serializers' Sider.Executors.IExecutor,
-Sider,RedisClient,0,3,0,0,2,10,3,0,0,-1,1,11,Sider.RedisSettings,Sider.AutoActivatingPool<T>' Sider.ThreadwisePool<T>' Sider.Samples.InfoSample' Sider.Samples.MonitorSample' Sider.Samples.SortSample' Sider.Samples.LinqPipelineSample' Sider.Samples.ComplexSetupSample' Sider.Samples.MultiExecSample' Sider.Samples.StreamingSample' Sider.Samples.Chat.RedisFormBase' Sider.Tests.RedisClientTests
-Sider,RedisReader,2,12,0,0,11,141,21,0,0,0.17,5,3,Sider.RedisSettings' Sider.SAssert' Sider.ResponseType' Sider.LimitingStream' Sider.Serialization.ISerializer,Sider.ProtocolReader' Sider.SAssert' Sider.Tests.RedisReaderTests
-Sider,RedisType,0,0,0,0,0,9,0,0,0,-1,0,2,,Sider.RedisClient<T>' Sider.RedisTypes
-Sider,RedisTypes,0,1,0,0,1,16,2,0,0,-1,1,1,Sider.RedisType,Sider.RedisClient<T>
-Sider,RedisWriter,3,12,1,0,10,101,15,0,0,0.17,5,2,Sider.RedisSettings' Sider.SAssert' Sider.ResponseType' Sider.LimitingStream' Sider.Serialization.ISerializer,Sider.ProtocolWriter' Sider.Tests.RedisWriterTests
-Sider,ResponseType,0,0,0,0,0,8,0,0,0,-1,0,7,,Sider.ProtocolReader' Sider.ProtocolWriter' Sider.SAssert' Sider.RedisReader' Sider.RedisWriter' Sider.Tests.RedisReaderTests' Sider.Tests.RedisWriterTests
+Sider,RedisSettings,3,5,20,2,4,224,5,0,0,1,3,17,Sider.Builder' Sider.SAssert' Sider.Serialization.ISerializer,Sider.RoundRobinPool<T>' Sider.ProtocolEncoder' Sider.ProtocolReader' Sider.ProtocolWriter' Sider.Serialization.SerializerBase<T>' Sider.Executors.ExecutorBase' Sider.Serialization.ISerializer' Sider.SettingsWrapper' Sider.TrackedThreadwisePool<T>' Sider.ThreadwisePool' Sider.ThreadwisePool<T>' Sider.RedisClient' Sider.RedisReader' Sider.RedisWriter' Sider.AutoActivatingPool' Sider.AutoActivatingPool<T>' Sider.RedisClientBase
+Sider,Builder,1,24,0,0,23,157,24,0,0,0,0,6,,Sider.TrackedThreadwisePool<T>' Sider.AutoActivatingPool' Sider.AutoActivatingPool<T>' Sider.ThreadwisePool' Sider.ThreadwisePool<T>' Sider.RedisSettings
+Sider,RoundRobinPool<T>,2,2,0,0,2,17,3,0,1,0,4,0,Sider.RedisSettings' Sider.IClientsPool' Sider.IRedisClient' Sider.RedisClient<T>,
+Sider,SAssert,0,8,0,0,7,76,16,0,0,-1,3,8,Sider.ResponseException' Sider.RedisReader' Sider.ResponseType,Sider.SettingsWrapper' Sider.ThreadwisePool<T>' Sider.ProtocolReader' Sider.Executors.ExecutorBase' Sider.LimitingStream' Sider.RedisWriter' Sider.RedisSettings' Sider.RedisReader
+Sider,IClientsPool,0,1,0,0,0,4,1,3,0,-1,1,3,Sider.IRedisClient,Sider.ThreadwisePool<T>' Sider.AutoActivatingPool<T>' Sider.RoundRobinPool<T>
+Sider,IRedisClient,0,153,2,0,0,164,153,1,0,-1,6,8,Sider.Aggregate' Sider.ProtocolReader' Sider.ProtocolWriter' Sider.RedisType' Sider.Message<T>' Sider.Mode,Sider.IClientsPool' Sider.RedisClient<T>' Sider.RoundRobinPool<T>' Sider.AutoActivatingPool<T>' Sider.Executors.PipelinedExecutor' Sider.TrackedThreadwisePool<T>' Sider.ThreadwisePool<T>' Sider.RedisClientPipeliningExtensions
+Sider,RedisClient<T>,4,165,1,0,155,1119,189,0,2,0.67,14,4,Sider.Aggregate' Sider.Invocation' Sider.ProtocolReader' Sider.ProtocolWriter' Sider.RedisVersionAttribute' Sider.IRedisClient' Sider.RedisType' Sider.RedisTypes' Sider.Message<T>' Sider.Executors.ImmediateExecutor' Sider.Executors.MonitorExecutor' Sider.Executors.PipelinedExecutor' Sider.Executors.PubSubExecutor<T>' Sider.Executors.TransactedExecutor,Sider.RoundRobinPool<T>' Sider.RedisClient' Sider.AutoActivatingPool<T>' Sider.ThreadwisePool<T>
+Sider,RedisClient,0,3,0,0,2,10,3,0,0,-1,2,0,Sider.RedisSettings' Sider.RedisClient<T>,
+Sider,RedisReader,2,12,0,0,11,141,21,0,0,0.17,6,2,Sider.ResponseException' Sider.LimitingStream' Sider.RedisSettings' Sider.SAssert' Sider.ResponseType' Sider.Serialization.ISerializer,Sider.SAssert' Sider.ProtocolReader
+Sider,RedisType,0,0,0,0,0,9,0,0,0,-1,0,3,,Sider.RedisClient<T>' Sider.RedisTypes' Sider.IRedisClient
+Sider,RedisTypes,0,1,0,0,1,16,6,0,0,-1,1,1,Sider.RedisType,Sider.RedisClient<T>
+Sider,RedisWriter,3,12,1,0,10,101,15,0,0,0.17,5,1,Sider.LimitingStream' Sider.RedisSettings' Sider.SAssert' Sider.ResponseType' Sider.Serialization.ISerializer,Sider.ProtocolWriter
+Sider,ResponseType,0,0,0,0,0,8,0,0,0,-1,0,5,,Sider.ProtocolWriter' Sider.RedisWriter' Sider.RedisReader' Sider.SAssert' Sider.ProtocolReader
 Sider,StringExtensions,0,4,0,0,4,11,4,0,0,-1,0,0,,
-Sider,Message,0,1,0,0,1,8,1,0,0,-1,1,2,Sider.MessageType,Sider.ProtocolReader' Sider.Executors.PubSubObservable
-Sider,Message<T>,0,1,5,0,1,18,1,0,0,-1,1,0,Sider.MessageType,
-Sider,AutoActivatingPool,0,3,0,0,3,10,3,0,0,-1,1,0,Sider.RedisSettings,
-Sider,AutoActivatingPool<T>,1,8,0,0,4,64,9,0,1,0.88,4,0,Sider.RedisSettings' Sider.PoolContext' Sider.IRedisClient' Sider.RedisClient,
+Sider,Message,0,1,0,0,1,8,1,0,0,-1,2,1,Sider.MessageType' Sider.Message<T>,Sider.ProtocolReader
+Sider,Message<T>,0,1,5,0,1,18,1,0,0,-1,1,5,Sider.MessageType,Sider.Executors.PubSubExecutor<T>' Sider.ProtocolReader' Sider.Message' Sider.IRedisClient' Sider.RedisClient<T>
+Sider,AutoActivatingPool,0,3,0,0,3,10,3,0,0,-1,3,0,Sider.RedisSettings' Sider.Builder' Sider.AutoActivatingPool<T>,
+Sider,AutoActivatingPool<T>,1,8,0,0,4,64,9,0,1,0.88,7,1,Sider.SettingsWrapper' Sider.RedisSettings' Sider.Builder' Sider.IClientsPool' Sider.IRedisClient' Sider.RedisClient<T>' Sider.PoolContext,Sider.AutoActivatingPool
 Sider,PoolContext,0,0,4,0,0,7,0,0,0,-1,0,1,,Sider.AutoActivatingPool<T>
-Sider,ThreadwisePool,0,3,0,0,3,12,3,1,0,-1,1,3,Sider.RedisSettings,Sider.TrackedThreadwisePool<T>' Sider.Samples.HighLoadSample' Sider.Samples.ThreadPoolSample
-Sider,ThreadwisePool<T>,3,6,1,0,4,53,9,0,1,0.67,4,0,Sider.RedisSettings' Sider.SAssert' Sider.IRedisClient' Sider.RedisClient,
-Sider,Mode,0,0,0,0,0,9,0,0,0,-1,0,0,,
-Sider,TrackedThreadwisePool<T>,1,6,0,0,5,33,8,0,1,0.67,3,0,Sider.RedisSettings' Sider.IRedisClient' Sider.ThreadwisePool,
-Sider.Executors,ExecutorBase,0,6,5,0,4,49,9,5,1,-1,6,2,Sider.SAssert' Sider.RedisClientBase' Sider.Executors.IExecutor' Sider.Invocation' Sider.ProtocolWriter' Sider.RedisSettings,Sider.Executors.PipelinedExecutor' Sider.Executors.PubSubExecutor<T>
-Sider.Executors,IExecutor,0,3,2,0,0,8,3,1,0,-1,2,6,Sider.RedisClientBase' Sider.Invocation,Sider.RedisClientBase' Sider.RedisClient<T>' Sider.Executors.ExecutorBase' Sider.Executors.PipelinedExecutor' Sider.Executors.PubSubExecutor<T>' Sider.Executors.TransactedExecutor
-Sider.Executors,ImmediateExecutor,0,2,1,0,1,25,2,0,2,-1,2,0,Sider.Invocation' Sider.RedisSettings,
-Sider.Executors,IocpExecutor,5,5,1,0,3,89,10,0,2,0,2,0,Sider.Executors.IocpTask' Sider.Invocation,
+Sider,ThreadwisePool,0,3,0,0,3,12,3,1,0,-1,3,0,Sider.RedisSettings' Sider.Builder' Sider.ThreadwisePool<T>,
+Sider,ThreadwisePool<T>,3,6,1,0,4,53,9,0,1,0.67,6,2,Sider.RedisSettings' Sider.Builder' Sider.SAssert' Sider.IClientsPool' Sider.IRedisClient' Sider.RedisClient<T>,Sider.TrackedThreadwisePool<T>' Sider.ThreadwisePool
+Sider,Mode,0,0,0,0,0,9,0,0,0,-1,0,9,,Sider.Executors.IExecutor' Sider.Executors.ExecutorBase' Sider.IRedisClient' Sider.Executors.MonitorExecutor' Sider.Executors.PubSubExecutor<T>' Sider.Executors.IocpExecutor' Sider.Executors.ImmediateExecutor' Sider.Executors.TransactedExecutor' Sider.Executors.PipelinedExecutor
+Sider,TrackedThreadwisePool<T>,1,6,0,0,5,33,8,0,1,0.67,4,0,Sider.RedisSettings' Sider.Builder' Sider.IRedisClient' Sider.ThreadwisePool<T>,
+Sider.Executors,ExecutorBase,0,6,5,0,4,49,9,5,1,-1,9,5,Sider.IdleTimeoutException' Sider.Invocation<TResult>' Sider.ProtocolReader' Sider.ProtocolWriter' Sider.RedisClientBase' Sider.RedisSettings' Sider.SAssert' Sider.Mode' Sider.Executors.IExecutor,Sider.Executors.IocpExecutor' Sider.Executors.ImmediateExecutor' Sider.Executors.PubSubExecutor<T>' Sider.Executors.PipelinedExecutor' Sider.Executors.MonitorExecutor
+Sider.Executors,IExecutor,0,3,2,0,0,8,3,1,0,-1,3,5,Sider.Invocation<TResult>' Sider.RedisClientBase' Sider.Mode,Sider.Executors.PipelinedExecutor' Sider.Executors.TransactedExecutor' Sider.Executors.PubSubExecutor<T>' Sider.Executors.ExecutorBase' Sider.RedisClientBase
+Sider.Executors,ImmediateExecutor,0,2,1,0,1,25,2,0,2,-1,4,2,Sider.IdleTimeoutException' Sider.Invocation<TResult>' Sider.Mode' Sider.Executors.ExecutorBase,Sider.RedisClientBase' Sider.RedisClient<T>
+Sider.Executors,IocpExecutor,5,5,1,0,3,89,10,0,2,0,4,0,Sider.Invocation<TResult>' Sider.Mode' Sider.Executors.ExecutorBase' Sider.Executors.IocpTask,
 Sider.Executors,IocpTask,0,1,3,0,1,12,1,0,0,-1,0,1,,Sider.Executors.IocpExecutor
-Sider.Executors,MonitorExecutor,1,2,1,0,2,46,3,0,2,0,2,2,Sider.Invocation' Sider.RedisClientBase,Sider.RedisClient<T>' Sider.Executors.MonitorObservable
-Sider.Executors,MonitorObservable,1,3,0,0,2,23,4,0,0,0,3,0,Sider.Executors.MonitorExecutor' Sider.ProtocolReader' Sider.Invocation,
-Sider.Executors,PipelinedExecutor,1,6,2,0,4,55,8,1,2,0,5,3,Sider.Executors.ExecutorBase' Sider.Executors.IExecutor' Sider.RedisSettings' Sider.Invocation' Sider.ProtocolWriter,Sider.RedisClient<T>' Sider.Executors.PubSubExecutor<T>' Sider.Executors.TransactedExecutor
-Sider.Executors,PubSubExecutor<T>,4,5,4,0,5,110,10,0,2,0.4,7,0,Sider.Executors.PubSubObservable' Sider.Serialization.ISerializer' Sider.Executors.ExecutorBase' Sider.Executors.PipelinedExecutor' Sider.Executors.TransactedExecutor' Sider.Executors.IExecutor' Sider.Invocation,
-Sider.Executors,PubSubObservable,2,3,0,0,2,32,5,0,0,0,2,1,Sider.Message' Sider.ProtocolReader,Sider.Executors.PubSubExecutor<T>
-Sider.Executors,TransactedExecutor,0,4,1,0,4,43,7,0,3,-1,5,2,Sider.Executors.PipelinedExecutor' Sider.Executors.IExecutor' Sider.Invocation' Sider.ProtocolWriter' Sider.ProtocolReader,Sider.RedisClient<T>' Sider.Executors.PubSubExecutor<T>
-Sider.Serialization,ObjectSerializer,0,0,0,0,0,3,0,0,0,-1,0,1,,Sider.Tests.Serialization.ObjectSerializerTests
-Sider.Serialization,ObjectSerializer<T>,2,4,0,0,3,28,4,0,0,0,1,0,Sider.RedisSettings,
-Sider.Serialization,SerializerBase<T>,0,9,1,0,6,38,11,0,1,-1,1,0,Sider.RedisSettings,
-Sider.Serialization,BufferSerializer,0,3,0,0,3,16,3,0,0,-1,0,0,,
-Sider.Serialization,ISerializer,0,4,0,0,0,9,4,2,0,-1,1,8,Sider.RedisSettings,Sider.ProtocolReader' Sider.ProtocolWriter' Sider.Builder' Sider.RedisClient<T>' Sider.RedisReader' Sider.RedisWriter' Sider.Executors.PubSubExecutor<T>' Sider.Serialization.Serializers
-Sider.Serialization,Serializers,0,1,0,0,1,11,3,0,0,-1,1,1,Sider.Serialization.ISerializer,Sider.RedisClient<T>
-Sider.Serialization,StringSerializer,2,4,0,0,3,32,5,0,0,0,1,0,Sider.RedisSettings,
+Sider.Executors,MonitorExecutor,1,2,1,0,2,46,3,0,2,0,6,1,Sider.Invocation' Sider.Invocation<TResult>' Sider.Observable<T>' Sider.Mode' Sider.Executors.ExecutorBase' Sider.Executors.MonitorObservable,Sider.RedisClient<T>
+Sider.Executors,MonitorObservable,1,3,0,0,2,23,4,0,0,0,0,1,,Sider.Executors.MonitorExecutor
+Sider.Executors,PipelinedExecutor,1,6,2,0,4,55,8,1,2,0,6,3,Sider.IdleTimeoutException' Sider.Invocation<TResult>' Sider.IRedisClient' Sider.Mode' Sider.Executors.ExecutorBase' Sider.Executors.IExecutor,Sider.Executors.PubSubExecutor<T>' Sider.Executors.TransactedExecutor' Sider.RedisClient<T>
+Sider.Executors,PubSubExecutor<T>,4,5,4,0,5,110,11,0,2,0.4,10,1,Sider.Invocation<TResult>' Sider.Observable<T>' Sider.Message<T>' Sider.Mode' Sider.Executors.ExecutorBase' Sider.Executors.IExecutor' Sider.Executors.PipelinedExecutor' Sider.Executors.PubSubObservable' Sider.Executors.TransactedExecutor' Sider.Serialization.ISerializer,Sider.RedisClient<T>
+Sider.Executors,PubSubObservable,2,3,0,0,2,32,5,0,0,0,0,1,,Sider.Executors.PubSubExecutor<T>
+Sider.Executors,TransactedExecutor,0,4,1,0,4,43,7,0,3,-1,4,2,Sider.Invocation<TResult>' Sider.Mode' Sider.Executors.IExecutor' Sider.Executors.PipelinedExecutor,Sider.Executors.PubSubExecutor<T>' Sider.RedisClient<T>
+Sider.Serialization,ObjectSerializer,0,0,0,0,0,3,0,0,0,-1,1,0,Sider.Serialization.ObjectSerializer<T>,
+Sider.Serialization,ObjectSerializer<T>,2,4,0,0,3,28,4,0,0,0,2,2,Sider.LimitingStream' Sider.Serialization.SerializerBase<T>,Sider.Serialization.ObjectSerializer' Sider.Serialization.Serializers
+Sider.Serialization,SerializerBase<T>,0,9,1,0,6,38,11,0,1,-1,2,3,Sider.RedisSettings' Sider.Serialization.ISerializer,Sider.Serialization.StringSerializer' Sider.Serialization.ObjectSerializer<T>' Sider.Serialization.BufferSerializer
+Sider.Serialization,BufferSerializer,0,3,0,0,3,16,3,0,0,-1,1,1,Sider.Serialization.SerializerBase<T>,Sider.Serialization.Serializers
+Sider.Serialization,ISerializer,0,4,0,0,0,9,4,2,0,-1,1,8,Sider.RedisSettings,Sider.RedisSettings' Sider.Serialization.SerializerBase<T>' Sider.ProtocolWriter' Sider.RedisReader' Sider.RedisWriter' Sider.Executors.PubSubExecutor<T>' Sider.ProtocolReader' Sider.Serialization.Serializers
+Sider.Serialization,Serializers,0,1,0,0,1,11,3,0,0,-1,4,0,Sider.Serialization.ObjectSerializer<T>' Sider.Serialization.BufferSerializer' Sider.Serialization.ISerializer' Sider.Serialization.StringSerializer,
+Sider.Serialization,StringSerializer,2,4,0,0,3,32,5,0,0,0,1,1,Sider.Serialization.SerializerBase<T>,Sider.Serialization.Serializers

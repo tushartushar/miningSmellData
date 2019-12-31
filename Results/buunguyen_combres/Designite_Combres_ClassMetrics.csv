@@ -1,100 +1,100 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Combres,ICacheVaryProvider,0,1,1,0,0,15,1,0,0,-1,1,3,Combres.ResourceSet,Combres.CacheVaryState' Combres.ResourceSet' Combres.WebExtensions
-Combres,CacheVaryState,0,5,3,0,3,57,5,0,0,-1,1,2,Combres.ICacheVaryProvider,Combres.WebExtensions' Combres.RequestProcessor
-Combres,ICacheVaryStateReceiver,0,0,1,0,0,8,0,0,0,-1,0,1,,Combres.RequestProcessor
-Combres,IResourceSetCache,0,2,0,0,0,19,2,1,0,-1,0,1,,Combres.RequestProcessor
-Combres,Include,0,1,2,0,0,38,2,0,0,-1,1,0,Combres.WebExtensions,
-Combres,IContentFilter,0,1,0,0,0,9,1,4,0,-1,1,2,Combres.ResourceType,Combres.ResourceSet' Combres.RequestProcessor
-Combres,ILogger,0,10,5,0,0,18,10,2,0,-1,0,13,,Combres.LoggerFactory' Combres.NoArgCtorCreator' Combres.StringArgCtorCreator' Combres.NoArgCreationMethodCreator' Combres.StringArgCreationMethodCreator' Combres.ChangeMonitor' Combres.Configuration' Combres.ResourceContentReader' Combres.CombresHandler' Combres.RequestProcessor' Combres.Filters.FixUrlsInCssFilter' Combres.VersionGenerators.HashCodeVersionGenerator' Combres.VersionGenerators.Sha512VersionGenerator
-Combres,LoggerFactory,3,5,0,0,2,108,9,0,0,0.4,7,0,Combres.ConfigSectionSetting' Combres.ILoggerCreator' Combres.StringArgCreationMethodCreator' Combres.NoArgCreationMethodCreator' Combres.StringArgCtorCreator' Combres.NoArgCtorCreator' Combres.ILogger,
+Combres,ICacheVaryProvider,0,1,1,0,0,15,1,0,0,-1,2,4,Combres.CacheVaryState' Combres.ResourceSet,Combres.ICacheVaryStateReceiver' Combres.CacheVaryState' Combres.SchemaConstants' Combres.WebExtensions
+Combres,CacheVaryState,0,5,3,0,3,57,5,0,0,-1,5,3,Combres.ICacheVaryProvider' Combres.ICacheVaryStateReceiver' Combres.IContentFilter' Combres.IResourceMinifier' Combres.ResourceSet,Combres.RequestProcessor' Combres.ICacheVaryStateReceiver' Combres.ICacheVaryProvider
+Combres,ICacheVaryStateReceiver,0,0,1,0,0,8,0,0,0,-1,2,2,Combres.ICacheVaryProvider' Combres.CacheVaryState,Combres.CacheVaryState' Combres.RequestProcessor
+Combres,IResourceSetCache,0,2,0,0,0,19,2,1,0,-1,0,2,,Combres.Caches.AspNetResourceSetCache' Combres.RequestProcessor
+Combres,Include,0,1,2,0,0,38,3,0,0,-1,1,0,Combres.WebExtensions,
+Combres,IContentFilter,0,1,0,0,0,9,1,4,0,-1,1,10,Combres.ResourceType,Combres.CacheVaryState' Combres.Filters.DotLessCssCombineFilter' Combres.Filters.HandleCssVariablesFilter' Combres.ICompressedContentFilter' Combres.Filters.FixUrlsInCssFilter' Combres.ISingleContentFilter' Combres.Filters.DotLessCssFilter' Combres.ICombinedContentFilter' Combres.IMinifiedContentFilter' Combres.RequestProcessor
+Combres,ILogger,0,10,5,0,0,18,10,2,0,-1,0,10,,Combres.Loggers.IgnoreLogger' Combres.VersionGenerators.Sha512VersionGenerator' Combres.VersionGenerators.HashCodeVersionGenerator' Combres.ResourceContentReader' Combres.Configuration' Combres.ChangeMonitor' Combres.CombresHandler' Combres.Filters.FixUrlsInCssFilter' Combres.RequestProcessor' Combres.LoggerFactory
+Combres,LoggerFactory,3,5,0,0,2,108,9,0,0,0.4,7,8,Combres.ILogger' Combres.ILoggerCreator' Combres.NoArgCtorCreator' Combres.StringArgCtorCreator' Combres.NoArgCreationMethodCreator' Combres.StringArgCreationMethodCreator' Combres.ConfigSectionSetting,Combres.ResourceContentReader' Combres.ChangeMonitor' Combres.RequestProcessor' Combres.Filters.FixUrlsInCssFilter' Combres.Configuration' Combres.VersionGenerators.Sha512VersionGenerator' Combres.CombresHandler' Combres.VersionGenerators.HashCodeVersionGenerator
 Combres,ILoggerCreator,0,1,0,0,0,4,1,4,0,-1,0,1,,Combres.LoggerFactory
-Combres,NoArgCtorCreator,0,1,0,0,1,7,1,0,1,-1,1,1,Combres.ILogger,Combres.LoggerFactory
-Combres,StringArgCtorCreator,0,1,0,0,1,7,1,0,1,-1,1,1,Combres.ILogger,Combres.LoggerFactory
-Combres,NoArgCreationMethodCreator,0,1,0,0,1,7,1,0,1,-1,1,1,Combres.ILogger,Combres.LoggerFactory
-Combres,StringArgCreationMethodCreator,0,1,0,0,1,7,1,0,1,-1,1,1,Combres.ILogger,Combres.LoggerFactory
-Combres,IResourceMinifier,0,1,0,0,0,11,1,7,0,-1,2,1,Combres.Settings' Combres.ResourceSet,Combres.RequestProcessor
-Combres,CombresException,0,4,0,0,3,8,4,2,0,-1,0,0,,
+Combres,NoArgCtorCreator,0,1,0,0,1,7,1,0,1,-1,0,1,,Combres.LoggerFactory
+Combres,StringArgCtorCreator,0,1,0,0,1,7,1,0,1,-1,0,1,,Combres.LoggerFactory
+Combres,NoArgCreationMethodCreator,0,1,0,0,1,7,1,0,1,-1,0,1,,Combres.LoggerFactory
+Combres,StringArgCreationMethodCreator,0,1,0,0,1,7,1,0,1,-1,0,1,,Combres.LoggerFactory
+Combres,IResourceMinifier,0,1,0,0,0,11,1,7,0,-1,2,10,Combres.ResourceSet' Combres.Settings,Combres.CacheVaryState' Combres.Minifiers.YuiCssMinifier' Combres.Minifiers.ClosureJSMinifier' Combres.Minifiers.LocalClosureJSMinifier' Combres.Minifiers.MSAjaxCssMinifier' Combres.Minifiers.NullMinifier' Combres.Minifiers.YuiJSMinifier' Combres.Minifiers.MSAjaxJSMinifier' Combres.SchemaConstants' Combres.RequestProcessor
+Combres,CombresException,0,4,0,0,3,8,4,2,0,-1,0,4,,Combres.ClosureCodeRequest' Combres.ResourceContentReader' Combres.ResourceSetNotFoundException' Combres.ResourceNotFoundException
 Combres,CompressionExtensions,0,3,0,0,2,52,4,0,0,-1,1,0,Combres.CompressionType,
 Combres,CompressionType,0,0,0,0,0,5,0,0,0,-1,0,1,,Combres.CompressionExtensions
 Combres,HashExtensions,0,3,0,0,2,27,6,0,0,-1,0,0,,
 Combres,TypeExtensions,0,3,0,0,2,46,8,0,0,-1,0,0,,
 Combres,UrlExtensions,0,8,0,0,6,117,13,0,0,-1,0,0,,
 Combres,XLinqExtensions,0,6,0,0,6,95,13,0,0,-1,0,0,,
-Combres,ILock,0,2,0,0,0,5,2,2,0,-1,0,3,,Combres.LockFactory' Combres.Configuration' Combres.ResourceContentCache
-Combres,MonitorLock,1,3,0,0,3,26,3,0,1,0.67,1,1,Combres.Lock,Combres.LockFactory
-Combres,Lock,1,2,0,0,2,13,2,0,0,0,0,1,,Combres.MonitorLock
-Combres,LockPolicy,0,0,0,0,0,6,0,0,0,-1,0,1,,Combres.LockFactory
-Combres,ReadWriteLock,1,5,0,0,5,49,5,0,1,0.4,2,1,Combres.ReaderLock' Combres.WriterLock,Combres.LockFactory
-Combres,ReaderLock,1,2,0,0,2,13,2,0,0,0,0,1,,Combres.ReadWriteLock
-Combres,WriterLock,1,2,0,0,2,13,2,0,0,0,0,1,,Combres.ReadWriteLock
-Combres,LockFactory,0,2,0,0,2,20,3,0,0,-1,4,0,Combres.ILock' Combres.LockPolicy' Combres.ReadWriteLock' Combres.MonitorLock,
-Combres,SchemaConstants,2,0,0,2,0,98,0,0,0,-1,0,4,,Combres.Resource' Combres.ResourceSet' Combres.ConfigReader' Combres.Settings
+Combres,ILock,0,2,0,0,0,5,2,2,0,-1,0,5,,Combres.ReadWriteLock' Combres.MonitorLock' Combres.LockFactory' Combres.Configuration' Combres.ResourceContentReader
+Combres,MonitorLock,1,3,0,0,3,26,3,0,1,0.67,2,1,Combres.ILock' Combres.Lock,Combres.LockFactory
+Combres,Lock,1,2,0,0,2,13,2,0,0,1,0,1,,Combres.MonitorLock
+Combres,LockPolicy,0,0,0,0,0,6,0,0,0,-1,0,3,,Combres.ResourceContentReader' Combres.Configuration' Combres.LockFactory
+Combres,ReadWriteLock,1,5,0,0,5,49,5,0,1,0.4,3,1,Combres.ILock' Combres.ReaderLock' Combres.WriterLock,Combres.LockFactory
+Combres,ReaderLock,1,2,0,0,2,13,2,0,0,1,0,1,,Combres.ReadWriteLock
+Combres,WriterLock,1,2,0,0,2,13,2,0,0,1,0,1,,Combres.ReadWriteLock
+Combres,LockFactory,0,2,0,0,2,20,4,0,0,-1,4,2,Combres.ILock' Combres.MonitorLock' Combres.LockPolicy' Combres.ReadWriteLock,Combres.ResourceContentReader' Combres.Configuration
+Combres,SchemaConstants,2,0,0,2,0,98,0,0,0,-1,8,2,Combres.ICacheVaryProvider' Combres.IResourceMinifier' Combres.ICombinedContentFilter' Combres.ICompressedContentFilter' Combres.IMinifiedContentFilter' Combres.ISingleContentFilter' Combres.IObjectBinder' Combres.IVersionGenerator,Combres.ConfigReader' Combres.Settings
 Combres,Setting,18,0,0,18,0,21,0,0,0,-1,0,2,,Combres.ConfigReader' Combres.Settings
-Combres,Set,10,0,0,10,0,13,0,0,0,-1,0,2,,Combres.ResourceSet' Combres.Settings
-Combres,Resource,7,5,6,7,3,93,8,0,0,0,8,14,Combres.ResourceMode' Combres.ResourceSet' Combres.SchemaConstants' Combres.Default' Combres.ResourceType' Combres.ModelUtils' Combres.MinifierInfo' Combres.Settings,Combres.ChangeMonitor' Combres.DefaultProcessingWorkflow' Combres.ISingleContentFilter' Combres.Configuration' Combres.ResourceContentReader' Combres.ResourceContentCache' Combres.ResourceSet' Combres.WebExtensions' Combres.RequestProcessor' Combres.Filters.DotLessCssFilter' Combres.Filters.FixUrlsInCssFilter' Combres.Filters.HandleCssVariablesFilter' Combres.VersionGenerators.HashCodeVersionGenerator' Combres.VersionGenerators.Sha512VersionGenerator
-Combres,Binder,3,0,0,3,0,11,0,0,0,-1,0,1,,Combres.Settings
+Combres,Set,10,0,0,10,0,13,0,0,0,-1,0,1,,Combres.Settings
+Combres,Resource,7,5,6,7,3,93,8,0,0,0,0,12,,Combres.ICombinedContentFilter' Combres.ISingleContentFilter' Combres.IMinifiedContentFilter' Combres.Filters.DotLessCssFilter' Combres.Filters.DotLessCssCombineFilter' Combres.Filters.HandleCssVariablesFilter' Combres.DefaultProcessingWorkflow' Combres.Filters.FixUrlsInCssFilter' Combres.ChangeMonitor' Combres.WebExtensions' Combres.ResourceContentReader' Combres.RequestProcessor
+Combres,Binder,3,0,0,3,0,11,0,0,0,-1,0,2,,Combres.Settings' Combres.Default
 Combres,Filter,3,0,0,3,0,12,0,0,0,-1,0,1,,Combres.Settings
 Combres,CacheVaryProvider,3,0,0,3,0,9,0,0,0,-1,0,1,,Combres.Settings
-Combres,VersionGenerator,1,0,0,1,0,7,0,0,0,-1,0,2,,Combres.ResourceSet' Combres.Settings
-Combres,Minifier,9,0,0,8,0,35,0,0,0,-1,1,1,Combres.MinifierInfo,Combres.Settings
+Combres,VersionGenerator,1,0,0,1,0,7,0,0,0,-1,0,1,,Combres.Settings
+Combres,Minifier,9,0,0,8,0,35,0,0,0,-1,0,1,,Combres.Settings
 Combres,Param,1,0,0,1,0,4,0,0,0,-1,0,1,,Combres.Settings
-Combres,Timer,0,2,4,0,2,29,4,0,0,-1,0,0,,
+Combres,Timer,0,2,4,0,2,29,4,0,0,-1,0,2,,Combres.Configuration' Combres.RequestProcessor
 Combres,Utils,0,3,0,0,2,25,4,0,0,-1,0,1,,Combres.Minifiers.LocalClosureJSMinifier
-Combres,ChangeMonitor,5,8,0,0,2,260,17,0,0,0,10,1,Combres.ILogger' Combres.DynamicChangesMonitorInfo' Combres.Settings' Combres.ResourceSet' Combres.Resource' Combres.ResourceMode' Combres.ChangeType' Combres.ConfigSectionSetting' Combres.Configuration' Combres.ChangeDetectedEventArg,Combres.Configuration
+Combres,ChangeMonitor,5,8,0,0,2,260,25,0,0,0,9,1,Combres.ILogger' Combres.LoggerFactory' Combres.Resource' Combres.DynamicChangesMonitorInfo' Combres.ChangeType' Combres.ChangeDetectedEventArg' Combres.Configuration' Combres.ResourceMode' Combres.Settings,Combres.Configuration
 Combres,DynamicChangesMonitorInfo,0,2,3,0,2,18,2,0,0,-1,0,1,,Combres.ChangeMonitor
-Combres,ChangeType,0,0,0,0,0,5,0,0,0,-1,0,3,,Combres.ChangeMonitor' Combres.ChangeDetectedEventArg' Combres.Configuration
+Combres,ChangeType,0,0,0,0,0,5,0,0,0,-1,0,3,,Combres.ChangeDetectedEventArg' Combres.ChangeMonitor' Combres.Configuration
 Combres,ChangeDetectedEventArg,0,3,2,0,3,27,4,0,0,-1,1,2,Combres.ChangeType,Combres.ChangeMonitor' Combres.Configuration
-Combres,ClosureCodeRequest,2,2,0,0,2,84,3,0,0,0,2,1,Combres.Request' Combres.CompilationLevel,Combres.Minifiers.ClosureJSMinifier
+Combres,ClosureCodeRequest,2,2,0,0,2,84,3,0,0,0,3,1,Combres.CombresException' Combres.CompilationLevel' Combres.Request,Combres.Minifiers.ClosureJSMinifier
 Combres,CompilationLevel,0,0,0,0,0,12,0,0,0,-1,0,2,,Combres.ClosureCodeRequest' Combres.Minifiers.ClosureJSMinifier
-Combres,Request,2,3,0,0,2,39,7,0,0,0,0,1,,Combres.ClosureCodeRequest
-Combres,CacheVaryProviderInfo,0,2,4,0,2,48,4,0,0,-1,0,3,,Combres.ResourceSet' Combres.Settings' Combres.VersionGenerators.Sha512VersionGenerator
-Combres,ReadOnlyDictionary<TKey;TValue>,1,13,4,0,11,82,14,0,0,0.54,0,0,,
-Combres,DebugProcessingWorkflow,1,2,0,0,2,18,2,0,1,0,1,0,Combres.RequestProcessor,
-Combres,DefaultProcessingWorkflow,1,3,0,0,2,57,5,0,1,0,3,0,Combres.RequestProcessor' Combres.MinifierInfo' Combres.Resource,
-Combres,IProcessingWorkflow,0,1,0,0,0,4,1,2,0,-1,0,1,,Combres.RequestProcessor
-Combres,ICombinedContentFilter,0,1,0,0,0,11,1,1,1,-1,1,0,Combres.ResourceSet,
-Combres,ICompressedContentFilter,0,1,0,0,0,10,1,0,1,-1,1,0,Combres.ResourceSet,
-Combres,IMinifiedContentFilter,0,1,0,0,0,11,1,0,1,-1,1,0,Combres.ResourceSet,
-Combres,ISingleContentFilter,0,1,0,0,0,11,1,3,1,-1,2,0,Combres.ResourceSet' Combres.Resource,
-Combres,ConfigSectionSetting,0,1,3,0,1,38,1,0,0,-1,0,3,,Combres.LoggerFactory' Combres.ChangeMonitor' Combres.Configuration
-Combres,Configuration,9,10,0,0,1,194,19,0,0,0,11,3,Combres.ILogger' Combres.ConfigSectionSetting' Combres.ILock' Combres.ChangeMonitor' Combres.Settings' Combres.ResourceContentReader' Combres.ConfigReader' Combres.ChangeDetectedEventArg' Combres.ChangeType' Combres.ResourceSet' Combres.Resource,Combres.ChangeMonitor' Combres.WebExtensions' Combres.CombresHandler
-Combres,IObjectBinder,0,1,0,0,0,9,1,1,0,-1,0,2,,Combres.ResourceSet' Combres.RequestProcessor
-Combres,ResourceContentReader,2,4,0,0,4,134,9,0,0,0,4,1,Combres.ILogger' Combres.ResourceContentCache' Combres.Resource' Combres.ResourceMode,Combres.Configuration
-Combres,ResourceContentCache,2,4,0,0,4,33,4,0,0,0,2,1,Combres.ILock' Combres.Resource,Combres.ResourceContentReader
-Combres,Default,0,0,0,0,0,44,0,0,0,-1,0,2,,Combres.Resource' Combres.Settings
-Combres,ResourceSet,5,15,15,4,3,259,24,0,0,0.53,13,26,Combres.Settings' Combres.ResourceType' Combres.ModelUtils' Combres.Set' Combres.SchemaConstants' Combres.Resource' Combres.VersionGenerator' Combres.IVersionGenerator' Combres.IContentFilter' Combres.FilterInfo' Combres.CacheVaryProviderInfo' Combres.ICacheVaryProvider' Combres.IObjectBinder,Combres.ICacheVaryProvider' Combres.IResourceMinifier' Combres.Resource' Combres.ChangeMonitor' Combres.ICombinedContentFilter' Combres.ICompressedContentFilter' Combres.IMinifiedContentFilter' Combres.ISingleContentFilter' Combres.Configuration' Combres.IVersionGenerator' Combres.Settings' Combres.WebExtensions' Combres.RequestProcessor' Combres.Filters.DotLessCssCombineFilter' Combres.Filters.DotLessCssFilter' Combres.Filters.FixUrlsInCssFilter' Combres.Filters.HandleCssVariablesFilter' Combres.Minifiers.LocalClosureJSMinifier' Combres.Minifiers.MSAjaxCssMinifier' Combres.Minifiers.ClosureJSMinifier' Combres.Minifiers.MSAjaxJSMinifier' Combres.Minifiers.NullMinifier' Combres.Minifiers.YuiCssMinifier' Combres.Minifiers.YuiJSMinifier' Combres.VersionGenerators.HashCodeVersionGenerator' Combres.VersionGenerators.Sha512VersionGenerator
-Combres,FilterInfo,0,2,4,0,2,48,4,0,0,-1,1,4,Combres.MinifierInfo,Combres.ResourceSet' Combres.Settings' Combres.RequestProcessor' Combres.VersionGenerators.Sha512VersionGenerator
-Combres,ModelUtils,0,4,0,0,4,39,9,0,0,-1,1,3,Combres.MinifierInfo,Combres.Resource' Combres.ResourceSet' Combres.Settings
-Combres,IVersionGenerator,0,1,0,0,0,11,1,2,0,-1,1,1,Combres.ResourceSet,Combres.ResourceSet
-Combres,MinifierInfo,0,2,4,0,2,49,4,0,0,-1,0,8,,Combres.Resource' Combres.Minifier' Combres.DefaultProcessingWorkflow' Combres.FilterInfo' Combres.ModelUtils' Combres.Settings' Combres.RequestProcessor' Combres.VersionGenerators.Sha512VersionGenerator
-Combres,ResourceMode,0,0,0,0,0,11,0,0,0,-1,0,5,,Combres.Resource' Combres.ChangeMonitor' Combres.ResourceContentReader' Combres.WebExtensions' Combres.VersionGenerators.Sha512VersionGenerator
-Combres,ConfigReader,0,4,0,0,0,27,4,0,0,-1,3,1,Combres.Setting' Combres.SchemaConstants' Combres.Settings,Combres.Configuration
-Combres,ResourceType,0,0,0,0,0,11,0,0,0,-1,0,9,,Combres.IContentFilter' Combres.Resource' Combres.ResourceSet' Combres.WebExtensions' Combres.RequestProcessor' Combres.Filters.DotLessCssCombineFilter' Combres.Filters.DotLessCssFilter' Combres.Filters.FixUrlsInCssFilter' Combres.Filters.HandleCssVariablesFilter
-Combres,Settings,0,9,18,0,0,238,16,0,0,-1,15,16,Combres.FilterInfo' Combres.Setting' Combres.SchemaConstants' Combres.Filter' Combres.ModelUtils' Combres.Param' Combres.CacheVaryProviderInfo' Combres.CacheVaryProvider' Combres.Binder' Combres.Default' Combres.Minifier' Combres.MinifierInfo' Combres.ResourceSet' Combres.VersionGenerator' Combres.Set,Combres.IResourceMinifier' Combres.Resource' Combres.ChangeMonitor' Combres.Configuration' Combres.ResourceSet' Combres.ConfigReader' Combres.WebExtensions' Combres.CombresHandler' Combres.RequestProcessor' Combres.Minifiers.LocalClosureJSMinifier' Combres.Minifiers.MSAjaxCssMinifier' Combres.Minifiers.ClosureJSMinifier' Combres.Minifiers.MSAjaxJSMinifier' Combres.Minifiers.NullMinifier' Combres.Minifiers.YuiCssMinifier' Combres.Minifiers.YuiJSMinifier
-Combres,WebExtensions,5,11,1,0,6,242,25,0,0,0.27,9,2,Combres.Configuration' Combres.Engine.GlobalSettings' Combres.ResourceSet' Combres.ICacheVaryProvider' Combres.CacheVaryState' Combres.Settings' Combres.Resource' Combres.ResourceMode' Combres.ResourceType,Combres.Include' Combres.Mvc.MvcExtensions
-Combres,ResourceNotFoundException,0,4,1,0,3,13,4,0,1,-1,0,0,,
-Combres,ResourceSetNotFoundException,0,4,1,0,3,13,4,0,1,-1,0,0,,
-Combres,CombresRouteHandler,0,1,0,0,1,9,1,0,0,-1,1,0,Combres.CombresHandler,
-Combres,CombresHandler,3,3,1,0,2,41,5,0,0,0,4,1,Combres.ILogger' Combres.Settings' Combres.Configuration' Combres.RequestProcessor,Combres.CombresRouteHandler
-Combres,RequestProcessor,4,15,8,1,2,282,33,0,0,0.13,16,3,Combres.IResourceSetCache' Combres.ILogger' Combres.Compressors.ICompressor' Combres.ResourceSet' Combres.CacheVaryState' Combres.ResourceType' Combres.Compressors.NullCompressor' Combres.Settings' Combres.IProcessingWorkflow' Combres.IResourceMinifier' Combres.MinifierInfo' Combres.Resource' Combres.IContentFilter' Combres.FilterInfo' Combres.IObjectBinder' Combres.ICacheVaryStateReceiver,Combres.DebugProcessingWorkflow' Combres.DefaultProcessingWorkflow' Combres.CombresHandler
-Combres.Caches,AspNetResourceSetCache,0,2,0,0,2,21,2,0,1,-1,0,0,,
-Combres.Compressors,DeflateCompressor,0,3,1,0,3,24,3,0,1,-1,0,0,,
-Combres.Compressors,GZipCompressor,0,3,1,0,3,24,3,0,1,-1,0,0,,
-Combres.Compressors,ICompressor,0,3,1,0,0,7,3,3,0,-1,0,1,,Combres.RequestProcessor
-Combres.Compressors,NullCompressor,0,3,1,0,3,23,3,0,1,-1,0,1,,Combres.RequestProcessor
-Combres.Filters,DotLessCssCombineFilter,2,2,0,0,2,19,2,0,2,1,2,0,Combres.ResourceType' Combres.ResourceSet,
-Combres.Filters,DotLessCssFilter,2,2,0,0,2,19,2,0,2,1,3,0,Combres.ResourceType' Combres.ResourceSet' Combres.Resource,
-Combres.Filters,FixUrlsInCssFilter,1,4,0,0,2,83,11,0,2,0.75,4,0,Combres.ILogger' Combres.ResourceType' Combres.ResourceSet' Combres.Resource,
-Combres.Filters,HandleCssVariablesFilter,0,2,0,0,2,31,3,0,2,-1,3,0,Combres.ResourceType' Combres.ResourceSet' Combres.Resource,
+Combres,Request,2,3,0,0,2,39,7,0,0,0.67,0,1,,Combres.ClosureCodeRequest
+Combres,CacheVaryProviderInfo,0,2,4,0,2,48,4,0,0,-1,0,1,,Combres.Settings
+Combres,ReadOnlyDictionary<TKey;TValue>,1,13,4,0,11,82,14,0,0,0.54,0,1,,Combres.ModelUtils
+Combres,DebugProcessingWorkflow,1,2,0,0,2,18,2,0,1,1,2,1,Combres.IProcessingWorkflow' Combres.RequestProcessor,Combres.RequestProcessor
+Combres,DefaultProcessingWorkflow,1,3,0,0,2,57,8,0,1,0.67,4,1,Combres.Resource' Combres.IProcessingWorkflow' Combres.MinifierInfo' Combres.RequestProcessor,Combres.RequestProcessor
+Combres,IProcessingWorkflow,0,1,0,0,0,4,1,2,0,-1,0,3,,Combres.DefaultProcessingWorkflow' Combres.DebugProcessingWorkflow' Combres.RequestProcessor
+Combres,ICombinedContentFilter,0,1,0,0,0,11,1,1,1,-1,3,3,Combres.IContentFilter' Combres.Resource' Combres.ResourceSet,Combres.Filters.DotLessCssCombineFilter' Combres.RequestProcessor' Combres.SchemaConstants
+Combres,ICompressedContentFilter,0,1,0,0,0,10,1,0,1,-1,2,2,Combres.IContentFilter' Combres.ResourceSet,Combres.SchemaConstants' Combres.RequestProcessor
+Combres,IMinifiedContentFilter,0,1,0,0,0,11,1,0,1,-1,3,2,Combres.IContentFilter' Combres.Resource' Combres.ResourceSet,Combres.SchemaConstants' Combres.RequestProcessor
+Combres,ISingleContentFilter,0,1,0,0,0,11,1,3,1,-1,3,5,Combres.IContentFilter' Combres.Resource' Combres.ResourceSet,Combres.SchemaConstants' Combres.Filters.DotLessCssFilter' Combres.Filters.FixUrlsInCssFilter' Combres.Filters.HandleCssVariablesFilter' Combres.RequestProcessor
+Combres,ConfigSectionSetting,0,1,3,0,1,38,1,0,0,-1,0,3,,Combres.Configuration' Combres.LoggerFactory' Combres.RequestProcessor
+Combres,Configuration,9,10,0,0,1,194,27,0,0,0,13,3,Combres.ILogger' Combres.LoggerFactory' Combres.ILock' Combres.LockPolicy' Combres.LockFactory' Combres.Timer' Combres.ChangeMonitor' Combres.ChangeType' Combres.ChangeDetectedEventArg' Combres.ConfigSectionSetting' Combres.ResourceContentReader' Combres.ConfigReader' Combres.Settings,Combres.CombresHandler' Combres.ChangeMonitor' Combres.WebExtensions
+Combres,IObjectBinder,0,1,0,0,0,9,1,1,0,-1,0,3,,Combres.Binders.SimpleObjectBinder' Combres.SchemaConstants' Combres.RequestProcessor
+Combres,ResourceContentReader,2,4,0,0,4,134,16,0,0,0,10,1,Combres.ILogger' Combres.LoggerFactory' Combres.CombresException' Combres.ILock' Combres.LockPolicy' Combres.LockFactory' Combres.Resource' Combres.ResourceContentCache' Combres.ResourceMode' Combres.ResourceNotFoundException,Combres.Configuration
+Combres,ResourceContentCache,2,4,0,0,4,33,4,0,0,0,0,1,,Combres.ResourceContentReader
+Combres,Default,0,0,0,0,0,44,0,0,0,-1,8,1,Combres.Binder' Combres.MinifierInfo' Combres.ResourceMode' Combres.Minifiers.NullMinifier' Combres.Minifiers.YuiCssMinifier' Combres.Minifiers.YuiJSMinifier' Combres.Binders.SimpleObjectBinder' Combres.VersionGenerators.HashCodeVersionGenerator,Combres.Settings
+Combres,ResourceSet,5,15,15,4,3,259,24,0,0,0.53,0,24,,Combres.Settings' Combres.CacheVaryState' Combres.Filters.DotLessCssFilter' Combres.ICombinedContentFilter' Combres.Minifiers.LocalClosureJSMinifier' Combres.IResourceMinifier' Combres.Minifiers.MSAjaxCssMinifier' Combres.ICompressedContentFilter' Combres.IMinifiedContentFilter' Combres.ISingleContentFilter' Combres.Filters.FixUrlsInCssFilter' Combres.ICacheVaryProvider' Combres.Filters.HandleCssVariablesFilter' Combres.Minifiers.ClosureJSMinifier' Combres.Minifiers.MSAjaxJSMinifier' Combres.Minifiers.NullMinifier' Combres.Minifiers.YuiCssMinifier' Combres.Minifiers.YuiJSMinifier' Combres.VersionGenerators.HashCodeVersionGenerator' Combres.IVersionGenerator' Combres.VersionGenerators.Sha512VersionGenerator' Combres.Filters.DotLessCssCombineFilter' Combres.RequestProcessor' Combres.WebExtensions
+Combres,FilterInfo,0,2,4,0,2,48,4,0,0,-1,1,1,Combres.MinifierInfo,Combres.Settings
+Combres,ModelUtils,0,4,0,0,4,39,9,0,0,-1,2,1,Combres.ReadOnlyDictionary<TKey;TValue>' Combres.MinifierInfo,Combres.Settings
+Combres,IVersionGenerator,0,1,0,0,0,11,1,2,0,-1,1,3,Combres.ResourceSet,Combres.VersionGenerators.HashCodeVersionGenerator' Combres.VersionGenerators.Sha512VersionGenerator' Combres.SchemaConstants
+Combres,MinifierInfo,0,2,4,0,2,49,4,0,0,-1,0,6,,Combres.RequestProcessor' Combres.ModelUtils' Combres.FilterInfo' Combres.DefaultProcessingWorkflow' Combres.Default' Combres.Settings
+Combres,ResourceMode,0,0,0,0,0,11,0,0,0,-1,0,4,,Combres.Default' Combres.WebExtensions' Combres.ResourceContentReader' Combres.ChangeMonitor
+Combres,ConfigReader,0,4,0,0,0,27,4,0,0,-1,3,1,Combres.SchemaConstants' Combres.Setting' Combres.Settings,Combres.Configuration
+Combres,ResourceType,0,0,0,0,0,11,0,0,0,-1,0,7,,Combres.IContentFilter' Combres.RequestProcessor' Combres.Filters.HandleCssVariablesFilter' Combres.Filters.FixUrlsInCssFilter' Combres.WebExtensions' Combres.Filters.DotLessCssCombineFilter' Combres.Filters.DotLessCssFilter
+Combres,Settings,0,9,18,0,0,238,16,0,0,-1,15,13,Combres.SchemaConstants' Combres.Setting' Combres.Set' Combres.Binder' Combres.Filter' Combres.CacheVaryProvider' Combres.VersionGenerator' Combres.Minifier' Combres.Param' Combres.CacheVaryProviderInfo' Combres.Default' Combres.ResourceSet' Combres.FilterInfo' Combres.ModelUtils' Combres.MinifierInfo,Combres.Minifiers.ClosureJSMinifier' Combres.IResourceMinifier' Combres.Minifiers.YuiCssMinifier' Combres.Minifiers.NullMinifier' Combres.Minifiers.MSAjaxJSMinifier' Combres.Minifiers.MSAjaxCssMinifier' Combres.Minifiers.YuiJSMinifier' Combres.ChangeMonitor' Combres.Minifiers.LocalClosureJSMinifier' Combres.ConfigReader' Combres.RequestProcessor' Combres.Configuration' Combres.WebExtensions
+Combres,WebExtensions,5,11,1,0,6,242,27,0,0,0.27,10,1,Combres.ICacheVaryProvider' Combres.Resource' Combres.Configuration' Combres.ResourceSet' Combres.ResourceMode' Combres.ResourceType' Combres.Settings' Combres.ResourceSetNotFoundException' Combres.CombresRouteHandler' Combres.Engine.GlobalSettings,Combres.Include
+Combres,ResourceNotFoundException,0,4,1,0,3,13,4,0,1,-1,1,2,Combres.CombresException,Combres.ResourceContentReader' Combres.CombresHandler
+Combres,ResourceSetNotFoundException,0,4,1,0,3,13,4,0,1,-1,1,3,Combres.CombresException,Combres.RequestProcessor' Combres.CombresHandler' Combres.WebExtensions
+Combres,CombresRouteHandler,0,1,0,0,1,9,1,0,0,-1,1,1,Combres.CombresHandler,Combres.WebExtensions
+Combres,CombresHandler,3,3,1,0,2,41,5,0,0,0.67,6,1,Combres.ILogger' Combres.LoggerFactory' Combres.Configuration' Combres.ResourceNotFoundException' Combres.ResourceSetNotFoundException' Combres.RequestProcessor,Combres.CombresRouteHandler
+Combres,RequestProcessor,4,15,8,1,2,282,35,0,0,0.13,27,3,Combres.CacheVaryState' Combres.ICacheVaryStateReceiver' Combres.IResourceSetCache' Combres.IContentFilter' Combres.ILogger' Combres.LoggerFactory' Combres.IResourceMinifier' Combres.Resource' Combres.Timer' Combres.DebugProcessingWorkflow' Combres.DefaultProcessingWorkflow' Combres.IProcessingWorkflow' Combres.ICombinedContentFilter' Combres.ICompressedContentFilter' Combres.IMinifiedContentFilter' Combres.ISingleContentFilter' Combres.ConfigSectionSetting' Combres.IObjectBinder' Combres.ResourceSet' Combres.MinifierInfo' Combres.ResourceType' Combres.Settings' Combres.ResourceSetNotFoundException' Combres.Compressors.DeflateCompressor' Combres.Compressors.GZipCompressor' Combres.Compressors.ICompressor' Combres.Compressors.NullCompressor,Combres.DebugProcessingWorkflow' Combres.DefaultProcessingWorkflow' Combres.CombresHandler
+Combres.Caches,AspNetResourceSetCache,0,2,0,0,2,21,2,0,1,-1,1,0,Combres.IResourceSetCache,
+Combres.Compressors,DeflateCompressor,0,3,1,0,3,24,3,0,1,-1,1,1,Combres.Compressors.ICompressor,Combres.RequestProcessor
+Combres.Compressors,GZipCompressor,0,3,1,0,3,24,3,0,1,-1,1,1,Combres.Compressors.ICompressor,Combres.RequestProcessor
+Combres.Compressors,ICompressor,0,3,1,0,0,7,3,3,0,-1,0,4,,Combres.Compressors.NullCompressor' Combres.Compressors.GZipCompressor' Combres.Compressors.DeflateCompressor' Combres.RequestProcessor
+Combres.Compressors,NullCompressor,0,3,1,0,3,23,3,0,1,-1,1,1,Combres.Compressors.ICompressor,Combres.RequestProcessor
+Combres.Filters,DotLessCssCombineFilter,2,2,0,0,2,19,2,0,2,1,5,0,Combres.IContentFilter' Combres.Resource' Combres.ICombinedContentFilter' Combres.ResourceSet' Combres.ResourceType,
+Combres.Filters,DotLessCssFilter,2,2,0,0,2,19,2,0,2,1,5,0,Combres.IContentFilter' Combres.Resource' Combres.ISingleContentFilter' Combres.ResourceSet' Combres.ResourceType,
+Combres.Filters,FixUrlsInCssFilter,1,4,0,0,2,83,11,0,2,0.75,7,0,Combres.IContentFilter' Combres.ILogger' Combres.LoggerFactory' Combres.Resource' Combres.ISingleContentFilter' Combres.ResourceSet' Combres.ResourceType,
+Combres.Filters,HandleCssVariablesFilter,0,2,0,0,2,31,3,0,2,-1,5,0,Combres.IContentFilter' Combres.Resource' Combres.ISingleContentFilter' Combres.ResourceSet' Combres.ResourceType,
 Combres.Engine,GlobalSettings,0,1,0,0,1,11,1,0,0,-1,0,1,,Combres.WebExtensions
-Combres.Loggers,IgnoreLogger,0,10,5,0,10,18,10,0,1,-1,0,0,,
-Combres.Minifiers,LocalClosureJSMinifier,0,2,2,0,1,47,2,0,1,-1,3,0,Combres.Utils' Combres.Settings' Combres.ResourceSet,
-Combres.Minifiers,MSAjaxCssMinifier,0,1,2,0,1,27,1,0,1,-1,2,0,Combres.Settings' Combres.ResourceSet,
-Combres.Minifiers,ClosureJSMinifier,0,1,2,0,1,22,1,0,1,-1,4,0,Combres.CompilationLevel' Combres.ClosureCodeRequest' Combres.Settings' Combres.ResourceSet,
-Combres.Minifiers,MSAjaxJSMinifier,0,1,7,0,1,77,1,0,1,-1,2,0,Combres.Settings' Combres.ResourceSet,
-Combres.Minifiers,NullMinifier,0,1,0,0,1,8,1,0,1,-1,2,0,Combres.Settings' Combres.ResourceSet,
-Combres.Minifiers,YuiCssMinifier,0,1,2,0,1,26,1,0,1,-1,2,0,Combres.Settings' Combres.ResourceSet,
-Combres.Minifiers,YuiJSMinifier,0,1,6,0,1,52,1,0,1,-1,2,0,Combres.Settings' Combres.ResourceSet,
-Combres.Binders,SimpleObjectBinder,2,4,0,0,1,63,6,0,1,0,0,0,,
-Combres.VersionGenerators,HashCodeVersionGenerator,1,1,0,0,1,27,3,0,1,0,3,0,Combres.ILogger' Combres.ResourceSet' Combres.Resource,
-Combres.VersionGenerators,Sha512VersionGenerator,1,1,0,0,1,25,3,0,1,0,7,0,Combres.ILogger' Combres.ResourceSet' Combres.FilterInfo' Combres.CacheVaryProviderInfo' Combres.Resource' Combres.ResourceMode' Combres.MinifierInfo,
+Combres.Loggers,IgnoreLogger,0,10,5,0,10,18,10,0,1,-1,1,0,Combres.ILogger,
+Combres.Minifiers,LocalClosureJSMinifier,0,2,2,0,1,47,2,0,1,-1,4,0,Combres.IResourceMinifier' Combres.Utils' Combres.ResourceSet' Combres.Settings,
+Combres.Minifiers,MSAjaxCssMinifier,0,1,2,0,1,27,1,0,1,-1,3,0,Combres.IResourceMinifier' Combres.ResourceSet' Combres.Settings,
+Combres.Minifiers,ClosureJSMinifier,0,1,2,0,1,22,1,0,1,-1,5,0,Combres.IResourceMinifier' Combres.ClosureCodeRequest' Combres.CompilationLevel' Combres.ResourceSet' Combres.Settings,
+Combres.Minifiers,MSAjaxJSMinifier,0,1,7,0,1,77,1,0,1,-1,3,0,Combres.IResourceMinifier' Combres.ResourceSet' Combres.Settings,
+Combres.Minifiers,NullMinifier,0,1,0,0,1,8,1,0,1,-1,3,1,Combres.IResourceMinifier' Combres.ResourceSet' Combres.Settings,Combres.Default
+Combres.Minifiers,YuiCssMinifier,0,1,2,0,1,26,1,0,1,-1,3,1,Combres.IResourceMinifier' Combres.ResourceSet' Combres.Settings,Combres.Default
+Combres.Minifiers,YuiJSMinifier,0,1,6,0,1,52,1,0,1,-1,3,1,Combres.IResourceMinifier' Combres.ResourceSet' Combres.Settings,Combres.Default
+Combres.Binders,SimpleObjectBinder,2,4,0,0,1,63,7,0,1,0,1,1,Combres.IObjectBinder,Combres.Default
+Combres.VersionGenerators,HashCodeVersionGenerator,1,1,0,0,1,27,3,0,1,0,4,1,Combres.ILogger' Combres.LoggerFactory' Combres.ResourceSet' Combres.IVersionGenerator,Combres.Default
+Combres.VersionGenerators,Sha512VersionGenerator,1,1,0,0,1,25,3,0,1,0,4,0,Combres.ILogger' Combres.LoggerFactory' Combres.ResourceSet' Combres.IVersionGenerator,

@@ -1,35 +1,35 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-HttpMock,ILog,0,2,0,0,0,5,2,2,0,-1,0,4,,HttpMock.LogFactory' HttpMock.FileResponseBody' HttpMock.HttpServer' HttpMock.RequestProcessor
-HttpMock,IRequestProcessor,0,4,0,0,0,7,4,1,0,-1,1,5,HttpMock.RequestHandler,HttpMock.RequestHandlerFactory' HttpMock.HttpServer' HttpMock.RequestHandler' HttpMock.Verify.NUnit.RequestWasCalled' HttpMock.Verify.NUnit.RequestWasNotCalled
-HttpMock,IRequestVerify,0,5,0,0,0,8,5,1,0,-1,0,7,,HttpMock.RequestProcessor' HttpMock.Verify.NUnit.HttpServerExtensions' HttpMock.Verify.NUnit.RequestHandlerExpectExtensions' HttpMock.Verify.NUnit.RequestWasCalled' HttpMock.Verify.NUnit.RequestWasNotCalled' HttpMock.Integration.Tests.HttpExpectationTests' HttpMock.Unit.Tests.RequestProcessorTests
+HttpMock,ILog,0,2,0,0,0,5,2,2,0,-1,0,4,,HttpMock.RequestProcessor' HttpMock.FileResponseBody' HttpMock.HttpServer' HttpMock.LogFactory
+HttpMock,IRequestProcessor,0,4,0,0,0,7,4,1,0,-1,2,6,HttpMock.IRequestVerify' HttpMock.RequestHandler,HttpMock.RequestProcessor' HttpMock.HttpServer' HttpMock.RequestHandler' HttpMock.RequestHandlerFactory' HttpMock.IRequestHandler' HttpMock.IHttpServer
+HttpMock,IRequestVerify,0,5,0,0,0,8,5,1,0,-1,1,3,HttpMock.ReceivedRequest,HttpMock.IRequestProcessor' HttpMock.RequestHandler' HttpMock.RequestProcessor
 HttpMock,HeaderMatch,0,2,0,0,0,15,3,0,0,-1,1,1,HttpMock.IRequestHandler,HttpMock.EndpointMatchingRule
-HttpMock,LogFactory,1,2,0,0,2,25,3,0,0,0,2,1,HttpMock.VoidLogger' HttpMock.ILog,HttpMock.Logging.Log4Net.Log4NetFactory
+HttpMock,LogFactory,1,2,0,0,2,25,3,0,0,0,2,3,HttpMock.ILog' HttpMock.VoidLogger,HttpMock.FileResponseBody' HttpMock.RequestProcessor' HttpMock.HttpServer
 HttpMock,VoidLogger,0,2,0,0,2,9,2,0,1,-1,0,1,,HttpMock.LogFactory
-HttpMock,IRequestMatcher,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HttpMock,RequestMatcher,1,2,0,0,2,15,2,0,1,0,2,2,HttpMock.IMatchingRule' HttpMock.IRequestHandler,HttpMock.RequestProcessor' HttpMock.Unit.Tests.RequestMatcherTests
-HttpMock,ReceivedRequest,0,1,2,0,0,10,1,0,0,-1,0,3,,HttpMock.RequestHandler' HttpMock.Verify.NUnit.RequestHandlerExpectExtensions' HttpMock.Integration.Tests.HttpEndPointTests
-HttpMock,RequestHandlerFactory,1,9,0,0,8,34,9,0,0,0.22,2,12,HttpMock.IRequestProcessor' HttpMock.RequestHandler,HttpMock.HttpServer' HttpMock.Integration.Tests.EndpointsReturningFilesTests' HttpMock.Integration.Tests.HttpEndPointTests' HttpMock.Integration.Tests.HttpExpectationTests' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerAndDifferentUris' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerWithDifferentHttpMethods' HttpMock.Integration.Tests.SameServerUsingDifferentBaseUrlsTests' HttpMock.Integration.Tests.StubConstraintsTests' HttpMock.Integration.Tests.UsingMultipleServersTests' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentQueryRequestParams' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentRequestHeaders' HttpMock.Unit.Tests.RequestProcessorTests
-HttpMock,BufferedConsumer,3,4,0,0,4,26,4,0,0,0,0,1,,HttpMock.Unit.Tests.BufferedConsumerTests
-HttpMock,EndpointMatchingRule,2,6,0,0,2,62,11,0,1,0.33,3,1,HttpMock.HeaderMatch' HttpMock.QueryParamMatch' HttpMock.IRequestHandler,HttpMock.Unit.Tests.EndpointMatchingRuleTests
-HttpMock,FileResponseBody,3,3,0,0,3,37,3,0,1,0,1,0,HttpMock.ILog,
-HttpMock,IResponse,0,1,0,0,0,3,1,3,0,-1,0,1,,HttpMock.ResponseBuilder
-HttpMock,HttpHeaderNames,2,0,0,2,0,5,0,0,0,-1,0,2,,HttpMock.RequestProcessor' HttpMock.ResponseBuilder
-HttpMock,HttpServer,7,9,0,0,8,107,13,0,1,0,4,0,HttpMock.ILog' HttpMock.RequestHandlerFactory' HttpMock.IRequestProcessor' HttpMock.IRequestStub,
-HttpMock,HttpServerFactory,1,3,0,0,2,24,5,0,0,0,1,2,HttpMock.IHttpServer,HttpMock.HttpMockRepository' HttpMock.Integration.Tests.HttpFactoryTests
-HttpMock,IHttpMockRepository,0,2,0,0,0,6,2,0,0,-1,0,0,,
-HttpMock,IHttpServer,0,6,0,0,0,9,6,1,0,-1,0,15,,HttpMock.HttpServerFactory' HttpMock.HttpMockRepository' HttpMock.Verify.NUnit.HttpServerExtensions' HttpMockConsole.Program' HttpMock.Integration.Tests.EndpointsReturningFilesTests' HttpMock.Integration.Tests.HttpEndPointTests' HttpMock.Integration.Tests.HttpExpectationTests' HttpMock.Integration.Tests.HttpFactoryTests' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerAndDifferentUris' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerWithDifferentHttpMethods' HttpMock.Integration.Tests.SameServerUsingDifferentBaseUrlsTests' HttpMock.Integration.Tests.StubConstraintsTests' HttpMock.Integration.Tests.UsingMultipleServersTests' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentQueryRequestParams' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentRequestHeaders
-HttpMock,IMatchingRule,0,1,0,0,0,4,1,1,0,-1,1,3,HttpMock.IRequestHandler,HttpMock.RequestMatcher' HttpMock.RequestProcessor' HttpMock.Unit.Tests.RequestProcessorTests
-HttpMock,IRequestHandler,0,2,6,0,0,10,2,1,0,-1,0,7,,HttpMock.HeaderMatch' HttpMock.RequestMatcher' HttpMock.EndpointMatchingRule' HttpMock.IMatchingRule' HttpMock.QueryParamMatch' HttpMock.RequestProcessor' HttpMock.Unit.Tests.RequestMatcherTests
-HttpMock,IRequestStub,0,14,0,0,0,17,14,1,0,-1,0,12,,HttpMock.HttpServer' HttpMock.RequestHandler' HttpMock.Integration.Tests.EndpointsReturningFilesTests' HttpMock.Integration.Tests.HttpEndPointTests' HttpMock.Integration.Tests.HttpExpectationTests' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerAndDifferentUris' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerWithDifferentHttpMethods' HttpMock.Integration.Tests.SameServerUsingDifferentBaseUrlsTests' HttpMock.Integration.Tests.StubConstraintsTests' HttpMock.Integration.Tests.UsingMultipleServersTests' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentQueryRequestParams' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentRequestHeaders
-HttpMock,IStubResponse,0,1,0,0,0,4,1,1,0,-1,0,0,,
+HttpMock,IRequestMatcher,0,1,0,0,0,4,1,1,0,-1,1,1,HttpMock.IRequestHandler,HttpMock.RequestMatcher
+HttpMock,RequestMatcher,1,2,0,0,2,15,2,0,1,0,3,1,HttpMock.IRequestMatcher' HttpMock.IMatchingRule' HttpMock.IRequestHandler,HttpMock.RequestProcessor
+HttpMock,ReceivedRequest,0,1,2,0,0,10,1,0,0,-1,0,2,,HttpMock.IRequestVerify' HttpMock.RequestHandler
+HttpMock,RequestHandlerFactory,1,9,0,0,8,34,9,0,0,0.22,2,2,HttpMock.IRequestProcessor' HttpMock.RequestHandler,HttpMock.IHttpServer' HttpMock.HttpServer
+HttpMock,BufferedConsumer,3,4,0,0,4,26,4,0,0,0,0,1,,HttpMock.RequestProcessor
+HttpMock,EndpointMatchingRule,2,6,0,0,2,62,11,0,1,0.33,4,1,HttpMock.HeaderMatch' HttpMock.IMatchingRule' HttpMock.IRequestHandler' HttpMock.QueryParamMatch,HttpMock.HttpServer
+HttpMock,FileResponseBody,3,3,0,0,3,37,5,0,1,0,3,1,HttpMock.ILog' HttpMock.LogFactory' HttpMock.IResponse,HttpMock.ResponseBuilder
+HttpMock,IResponse,0,1,0,0,0,3,1,3,0,-1,0,4,,HttpMock.FileResponseBody' HttpMock.ResponseBuilder' HttpMock.BufferedBody' HttpMock.NoBody
+HttpMock,HttpHeaderNames,2,0,0,2,0,5,0,0,0,-1,0,2,,HttpMock.ResponseBuilder' HttpMock.RequestProcessor
+HttpMock,HttpServer,7,9,0,0,8,107,14,0,1,0,10,2,HttpMock.ILog' HttpMock.IRequestProcessor' HttpMock.LogFactory' HttpMock.RequestHandlerFactory' HttpMock.EndpointMatchingRule' HttpMock.IHttpServer' HttpMock.IRequestStub' HttpMock.RequestHandlerList' HttpMock.RequestProcessor' HttpMock.SchedulerDelegate,HttpMock.HttpServerFactory' HttpMock.IHttpMockRepository
+HttpMock,HttpServerFactory,1,3,0,0,2,24,5,0,0,0,2,1,HttpMock.HttpServer' HttpMock.IHttpServer,HttpMock.HttpMockRepository
+HttpMock,IHttpMockRepository,0,2,0,0,0,6,2,0,0,-1,1,0,HttpMock.HttpServer,
+HttpMock,IHttpServer,0,6,0,0,0,9,6,1,0,-1,3,3,HttpMock.IRequestProcessor' HttpMock.RequestHandlerFactory' HttpMock.IRequestStub,HttpMock.HttpMockRepository' HttpMock.HttpServer' HttpMock.HttpServerFactory
+HttpMock,IMatchingRule,0,1,0,0,0,4,1,1,0,-1,1,3,HttpMock.IRequestHandler,HttpMock.EndpointMatchingRule' HttpMock.RequestProcessor' HttpMock.RequestMatcher
+HttpMock,IRequestHandler,0,2,7,0,0,11,2,1,0,-1,2,10,HttpMock.IRequestProcessor' HttpMock.ResponseBuilder,HttpMock.QueryParamMatch' HttpMock.RequestHandler' HttpMock.IRequestHandlerList' HttpMock.RequestHandlerList' HttpMock.IMatchingRule' HttpMock.RequestProcessor' HttpMock.IRequestMatcher' HttpMock.RequestMatcher' HttpMock.HeaderMatch' HttpMock.EndpointMatchingRule
+HttpMock,IRequestStub,0,16,0,0,0,19,16,1,0,-1,0,3,,HttpMock.IHttpServer' HttpMock.HttpServer' HttpMock.RequestHandler
+HttpMock,IStubResponse,0,1,0,0,0,4,1,1,0,-1,1,1,HttpMock.ResponseBuilder,HttpMock.StubNotFoundResponse
 HttpMock,QueryParamMatch,0,1,0,0,0,13,4,0,0,-1,1,1,HttpMock.IRequestHandler,HttpMock.EndpointMatchingRule
-HttpMock,BufferedBody,1,7,1,0,7,23,7,0,1,0.86,0,1,,HttpMock.ResponseBuilder
-HttpMock,NoBody,0,2,0,0,2,8,2,0,1,-1,0,0,,
-HttpMock,HttpMockRepository,1,2,0,0,2,15,3,0,0,1,2,12,HttpMock.HttpServerFactory' HttpMock.IHttpServer,HttpMockConsole.Program' HttpMock.Integration.Tests.EndpointsReturningFilesTests' HttpMock.Integration.Tests.HttpEndPointTests' HttpMock.Integration.Tests.HttpExpectationTests' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerAndDifferentUris' HttpMock.Integration.Tests.MultipleTestsUsingTheSameStubServerWithDifferentHttpMethods' HttpMock.Integration.Tests.SameServerUsingDifferentBaseUrlsTests' HttpMock.Integration.Tests.StubConstraintsTests' HttpMock.Integration.Tests.UsingMultipleServersTests' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentQueryRequestParams' HttpMock.Integration.Tests.UsingTheSameStubServerAndDifferentRequestHeaders' HttpMock.Unit.Tests.HttpMockRepositoryTests
-HttpMock,RequestHandler,3,22,6,0,22,107,23,0,1,0.45,4,6,HttpMock.ResponseBuilder' HttpMock.IRequestProcessor' HttpMock.IRequestStub' HttpMock.ReceivedRequest,HttpMock.IRequestProcessor' HttpMock.RequestHandlerFactory' HttpMock.RequestProcessor' HttpMock.Integration.Tests.HttpEndPointTests' HttpMock.Unit.Tests.RequestHandlerTests' HttpMock.Unit.Tests.RequestProcessorTests
-HttpMock,IRequestHandlerList,0,0,0,0,0,4,0,1,0,-1,0,1,,HttpMock.RequestProcessor
-HttpMock,RequestHandlerList,0,0,0,0,0,4,0,0,1,-1,0,0,,
-HttpMock,RequestProcessor,3,11,0,0,6,91,16,0,1,0,9,1,HttpMock.ILog' HttpMock.IRequestHandlerList' HttpMock.RequestMatcher' HttpMock.IMatchingRule' HttpMock.IRequestHandler' HttpMock.ResponseBuilder' HttpMock.IRequestVerify' HttpMock.HttpHeaderNames' HttpMock.RequestHandler,HttpMock.Unit.Tests.RequestProcessorTests
-HttpMock,SchedulerDelegate,0,2,0,0,2,13,2,0,0,-1,0,0,,
-HttpMock,ResponseBuilder,5,10,0,0,10,78,13,0,0,0,3,4,HttpMock.IResponse' HttpMock.BufferedBody' HttpMock.HttpHeaderNames,HttpMock.RequestHandler' HttpMock.RequestProcessor' HttpMock.StubNotFoundResponse' HttpMock.Unit.Tests.RequestProcessorTests
-HttpMock,StubNotFoundResponse,0,1,0,0,1,9,1,0,1,-1,1,0,HttpMock.ResponseBuilder,
+HttpMock,BufferedBody,1,7,1,0,7,23,7,0,1,0.86,1,1,HttpMock.IResponse,HttpMock.ResponseBuilder
+HttpMock,NoBody,0,2,0,0,2,8,2,0,1,-1,1,0,HttpMock.IResponse,
+HttpMock,HttpMockRepository,1,2,0,0,2,15,3,0,0,1,2,0,HttpMock.HttpServerFactory' HttpMock.IHttpServer,
+HttpMock,RequestHandler,3,24,7,0,24,118,25,0,1,0.5,6,3,HttpMock.IRequestProcessor' HttpMock.IRequestVerify' HttpMock.ReceivedRequest' HttpMock.IRequestHandler' HttpMock.IRequestStub' HttpMock.ResponseBuilder,HttpMock.IRequestProcessor' HttpMock.RequestProcessor' HttpMock.RequestHandlerFactory
+HttpMock,IRequestHandlerList,0,0,0,0,0,4,0,1,0,-1,1,2,HttpMock.IRequestHandler,HttpMock.RequestHandlerList' HttpMock.RequestProcessor
+HttpMock,RequestHandlerList,0,0,0,0,0,4,0,0,1,-1,2,2,HttpMock.IRequestHandler' HttpMock.IRequestHandlerList,HttpMock.RequestProcessor' HttpMock.HttpServer
+HttpMock,RequestProcessor,3,11,0,0,6,95,17,0,1,0,12,1,HttpMock.ILog' HttpMock.IRequestProcessor' HttpMock.IRequestVerify' HttpMock.LogFactory' HttpMock.RequestMatcher' HttpMock.BufferedConsumer' HttpMock.HttpHeaderNames' HttpMock.IMatchingRule' HttpMock.IRequestHandler' HttpMock.RequestHandler' HttpMock.IRequestHandlerList' HttpMock.RequestHandlerList,HttpMock.HttpServer
+HttpMock,SchedulerDelegate,0,2,0,0,2,13,2,0,0,-1,0,1,,HttpMock.HttpServer
+HttpMock,ResponseBuilder,5,10,0,0,10,78,13,0,0,0,4,4,HttpMock.FileResponseBody' HttpMock.IResponse' HttpMock.HttpHeaderNames' HttpMock.BufferedBody,HttpMock.IStubResponse' HttpMock.IRequestHandler' HttpMock.StubNotFoundResponse' HttpMock.RequestHandler
+HttpMock,StubNotFoundResponse,0,1,0,0,1,9,1,0,1,-1,2,0,HttpMock.IStubResponse' HttpMock.ResponseBuilder,

@@ -1,20 +1,20 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-LogFlow.Specifications.Flows,EmptyFlow,0,0,0,0,0,3,0,0,1,-1,0,0,,
-LogFlow.Specifications.Flows,when_starting_simple_flow,5,0,0,0,0,25,0,0,0,-1,1,0,LogFlow.FlowBuilder,
-LogFlow.Specifications.Flows,FlowWithoutInput,0,1,0,0,1,7,1,0,1,-1,0,0,,
-LogFlow.Specifications.Flows,FlowWithoutName,0,1,0,0,1,9,1,0,1,-1,2,0,LogFlow.LogStructureWithInput' LogFlow.LogStructureWithoutInput,
-LogFlow.Specifications.Flows,FlowWithoutProcess,0,1,0,0,1,7,1,0,1,-1,1,0,LogFlow.LogStructureWithoutInput,
-LogFlow.Specifications.Flows,SimpleFlow,0,1,0,0,1,11,1,0,1,-1,2,0,LogFlow.LogStructureWithInput' LogFlow.LogStructureWithoutInput,
-LogFlow.Specifications.Flows,SimpleTagProcessor,1,2,0,0,2,15,2,0,3,0,1,0,LogFlow.Result,
-LogFlow.Specifications.Flows,WorkingFlow,0,1,0,0,1,10,1,0,1,-1,2,0,LogFlow.LogStructureWithInput' LogFlow.LogStructureWithoutInput,
-LogFlow.Specifications.Helpers,ReportToCurrentResultOutput,1,1,0,1,1,8,1,0,3,0,1,0,LogFlow.Result,
-LogFlow.Specifications.Helpers,EmptyInput,1,2,0,1,2,12,2,0,3,1,1,0,LogFlow.Result,
-LogFlow.Specifications.Helpers,TestProcessor,0,1,0,0,1,7,1,0,3,-1,1,0,LogFlow.Result,
-LogFlow.Specifications.Processors,When_processing_logs_with_only_comments,4,0,0,0,0,17,0,0,0,-1,2,0,LogFlow.Builtins.Processors.IISLog.IISLogProcessor' LogFlow.Result,
-LogFlow.Specifications.Processors,When_processing_log_line,23,0,0,0,0,41,0,0,0,-1,2,0,LogFlow.Builtins.Processors.IISLog.IISLogProcessor' LogFlow.Result,
-LogFlow.Specifications,when_adding_a_working_flow,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.FlowBuilder,
-LogFlow.Specifications,when_adding_an_empty_flow,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.FlowBuilder,
-LogFlow.Specifications,when_adding_a_flow_without_a_name,4,0,0,0,0,10,0,0,0,-1,1,0,LogFlow.FlowBuilder,
-LogFlow.Specifications,when_adding_a_flow_without_a_input,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.FlowBuilder,
-LogFlow.Specifications,when_adding_a_flow_without_a_process,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.FlowBuilder,
-LogFlow.Specifications,when_adding_a_flow_with_the_same_name,3,0,0,0,0,12,0,0,0,-1,1,0,LogFlow.FlowBuilder,
+LogFlow.Specifications.Flows,EmptyFlow,0,0,0,0,0,3,0,0,1,-1,0,1,,LogFlow.Specifications.when_adding_an_empty_flow
+LogFlow.Specifications.Flows,when_starting_simple_flow,5,0,0,0,0,25,0,0,0,-1,3,0,LogFlow.Specifications.Flows.SimpleFlow' LogFlow.Specifications.Helpers.ReportToCurrentResultOutput' LogFlow.Specifications.Helpers.EmptyInput,
+LogFlow.Specifications.Flows,FlowWithoutInput,0,1,0,0,1,7,1,0,1,-1,0,1,,LogFlow.Specifications.when_adding_a_flow_without_a_input
+LogFlow.Specifications.Flows,FlowWithoutName,0,1,0,0,1,9,1,0,1,-1,3,1,LogFlow.Specifications.Helpers.ReportToCurrentResultOutput' LogFlow.Specifications.Helpers.EmptyInput' LogFlow.Specifications.Helpers.TestProcessor,LogFlow.Specifications.when_adding_a_flow_without_a_name
+LogFlow.Specifications.Flows,FlowWithoutProcess,0,1,0,0,1,7,1,0,1,-1,1,1,LogFlow.Specifications.Helpers.EmptyInput,LogFlow.Specifications.when_adding_a_flow_without_a_process
+LogFlow.Specifications.Flows,SimpleFlow,0,1,0,0,1,11,1,0,1,-1,3,1,LogFlow.Specifications.Flows.SimpleTagProcessor' LogFlow.Specifications.Helpers.ReportToCurrentResultOutput' LogFlow.Specifications.Helpers.EmptyInput,LogFlow.Specifications.Flows.when_starting_simple_flow
+LogFlow.Specifications.Flows,SimpleTagProcessor,1,2,0,0,2,15,2,0,3,0,0,1,,LogFlow.Specifications.Flows.SimpleFlow
+LogFlow.Specifications.Flows,WorkingFlow,0,1,0,0,1,10,1,0,1,-1,3,2,LogFlow.Specifications.Helpers.ReportToCurrentResultOutput' LogFlow.Specifications.Helpers.EmptyInput' LogFlow.Specifications.Helpers.TestProcessor,LogFlow.Specifications.when_adding_a_working_flow' LogFlow.Specifications.when_adding_a_flow_with_the_same_name
+LogFlow.Specifications.Helpers,ReportToCurrentResultOutput,1,1,0,1,1,8,1,0,3,0,0,4,,LogFlow.Specifications.Flows.WorkingFlow' LogFlow.Specifications.Flows.SimpleFlow' LogFlow.Specifications.Flows.FlowWithoutName' LogFlow.Specifications.Flows.when_starting_simple_flow
+LogFlow.Specifications.Helpers,EmptyInput,1,2,0,1,2,12,2,0,3,1,0,5,,LogFlow.Specifications.Flows.WorkingFlow' LogFlow.Specifications.Flows.FlowWithoutName' LogFlow.Specifications.Flows.SimpleFlow' LogFlow.Specifications.Flows.FlowWithoutProcess' LogFlow.Specifications.Flows.when_starting_simple_flow
+LogFlow.Specifications.Helpers,TestProcessor,0,1,0,0,1,7,1,0,3,-1,0,2,,LogFlow.Specifications.Flows.FlowWithoutName' LogFlow.Specifications.Flows.WorkingFlow
+LogFlow.Specifications.Processors,When_processing_logs_with_only_comments,4,0,0,0,0,17,0,0,0,-1,0,0,,
+LogFlow.Specifications.Processors,When_processing_log_line,23,0,0,0,0,41,0,0,0,-1,0,0,,
+LogFlow.Specifications,when_adding_a_working_flow,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.Specifications.Flows.WorkingFlow,
+LogFlow.Specifications,when_adding_an_empty_flow,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.Specifications.Flows.EmptyFlow,
+LogFlow.Specifications,when_adding_a_flow_without_a_name,4,0,0,0,0,10,0,0,0,-1,1,0,LogFlow.Specifications.Flows.FlowWithoutName,
+LogFlow.Specifications,when_adding_a_flow_without_a_input,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.Specifications.Flows.FlowWithoutInput,
+LogFlow.Specifications,when_adding_a_flow_without_a_process,3,0,0,0,0,8,0,0,0,-1,1,0,LogFlow.Specifications.Flows.FlowWithoutProcess,
+LogFlow.Specifications,when_adding_a_flow_with_the_same_name,3,0,0,0,0,12,0,0,0,-1,1,0,LogFlow.Specifications.Flows.WorkingFlow,

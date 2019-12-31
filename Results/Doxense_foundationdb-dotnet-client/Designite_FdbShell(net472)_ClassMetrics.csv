@@ -1,0 +1,28 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+FdbShell,BasicCommands,0,21,0,0,18,948,119,0,0,-1,4,1,FdbShell.DirectoryBrowseOptions' FdbShell.Program' FdbShell.RobustHistogram' FdbShell.TimeScale,FdbShell.Program
+FdbShell,DirectoryBrowseOptions,0,0,0,0,0,7,0,0,0,-1,0,2,,FdbShell.Program' FdbShell.BasicCommands
+FdbShell,FdbCliCommands,0,1,0,0,1,69,2,0,0,-1,1,1,FdbShell.FdbCliResult,FdbShell.Program
+FdbShell,FdbCliResult,0,0,3,0,0,6,0,0,0,-1,0,1,,FdbShell.FdbCliCommands
+FdbShell,Program,4,21,0,0,3,937,118,0,0,0.1,7,1,FdbShell.BasicCommands' FdbShell.DirectoryBrowseOptions' FdbShell.FdbCliCommands' FdbShell.PerfCounters' Mono.Terminal.LineEditor' Mono.Terminal.Completion' Mono.Options.OptionSet,FdbShell.BasicCommands
+FdbShell,RobustHistogram,9,19,13,2,15,384,65,0,0,0.16,1,2,FdbShell.TimeScale,FdbShell.RobustTimeLine' FdbShell.BasicCommands
+FdbShell,TimeScale,0,0,0,0,0,8,0,0,0,-1,0,3,,FdbShell.BasicCommands' FdbShell.RobustHistogram' FdbShell.RobustTimeLine
+FdbShell,RobustTimeLine,0,11,8,0,8,83,16,0,0,-1,2,0,FdbShell.RobustHistogram' FdbShell.TimeScale,
+FdbShell,PerfCounters,17,1,0,17,0,46,1,0,0,0,0,1,,FdbShell.Program
+Mono.Terminal,LineEditor,18,45,5,1,3,958,128,0,0,0.04,3,1,Mono.Terminal.Completion' Mono.Terminal.Handler' Mono.Terminal.History,FdbShell.Program
+Mono.Terminal,Completion,2,1,0,2,1,10,1,0,0,0,0,2,,Mono.Terminal.LineEditor' FdbShell.Program
+Mono.Terminal,Handler,2,5,0,2,5,30,5,0,0,0,0,1,,Mono.Terminal.LineEditor
+Mono.Terminal,History,6,13,0,0,13,171,38,0,0,0,0,1,,Mono.Terminal.LineEditor
+Mono.Options,StringCoda,0,6,0,0,2,75,14,0,0,-1,0,1,,Mono.Options.OptionSet
+Mono.Options,OptionValueCollection,2,22,5,0,12,76,25,0,0,0.09,3,2,Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.OptionException,Mono.Options.OptionContext' Mono.Options.OptionSet
+Mono.Options,OptionContext,5,1,5,0,1,30,1,0,0,0,3,3,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,OptionValueType,0,0,0,0,0,5,0,0,0,-1,0,3,,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,Option,8,11,7,0,4,171,36,4,0,0.55,5,2,Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.OptionException' Mono.Options.OptionSet' Mono.Options.Category,Mono.Options.OptionContext' Mono.Options.OptionSet
+Mono.Options,ArgumentSource,0,6,1,0,4,53,14,1,0,-1,0,2,,Mono.Options.ResponseFileSource' Mono.Options.OptionSet
+Mono.Options,ResponseFileSource,0,2,1,0,2,18,3,0,1,-1,1,0,Mono.Options.ArgumentSource,
+Mono.Options,OptionException,1,5,1,0,4,33,5,0,0,0.4,0,3,,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,OptionSet,7,39,2,0,17,594,114,0,0,0.26,12,3,Mono.Options.StringCoda' Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.Option' Mono.Options.ArgumentSource' Mono.Options.OptionException' Mono.Options.Category' Mono.Options.ActionOption' Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>' Mono.Options.ArgumentEnumerator,FdbShell.Program' Mono.Options.OptionContext' Mono.Options.Option
+Mono.Options,Category,0,2,0,0,1,13,2,0,1,-1,0,2,,Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,ActionOption,1,3,0,0,2,18,4,0,1,1,0,1,,Mono.Options.OptionSet
+Mono.Options,ActionOption<T>,1,2,0,0,1,14,3,0,1,1,0,1,,Mono.Options.OptionSet
+Mono.Options,ActionOption<TKey;TValue>,1,2,0,0,1,16,3,0,1,1,0,1,,Mono.Options.OptionSet
+Mono.Options,ArgumentEnumerator,1,4,0,0,3,27,4,0,0,0,0,1,,Mono.Options.OptionSet

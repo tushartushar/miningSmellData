@@ -1,0 +1,26 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Warewolf.Configuration,ConfigSettingsBase<T>,3,4,1,0,1,35,6,0,0,0,0,0,,
+Warewolf.Common,Interop,1,2,0,0,2,8,2,0,0,1,0,1,,Warewolf.Common.ConsoleWindow
+Warewolf.Common,ConsoleWindow,0,1,0,0,1,16,1,0,0,-1,1,0,Warewolf.Common.Interop,
+Warewolf.Common,IHttpClientFactory,0,2,0,0,0,5,2,1,0,-1,0,1,,Warewolf.Common.HttpClientFactory
+Warewolf.Common,HttpClientFactory,0,2,0,0,2,37,4,0,1,-1,2,0,Warewolf.Common.IHttpClientFactory' Warewolf.HttpClientWrapper,
+Warewolf.Common,WarewolfLogger,1,11,0,0,10,56,11,0,0,0,0,1,,Warewolf.OS.ProcessMonitor
+Warewolf,PauseHelper,0,1,0,0,1,7,1,0,1,-1,0,0,,
+Warewolf,HttpClientWrapper,1,4,1,0,4,19,4,0,1,0,0,1,,Warewolf.Common.HttpClientFactory
+Warewolf,MessageToInputsMapper,0,2,0,0,2,40,9,0,0,-1,0,0,,
+Warewolf.OS,ChildProcessTrackerWrapper,0,1,0,0,1,4,1,0,1,-1,1,0,Warewolf.OS.ChildProcessTracker,
+Warewolf.OS,ChildProcessTracker,1,5,0,0,1,69,9,0,0,0.6,4,1,Warewolf.OS.JobObjectInfoType' Warewolf.OS.JOBOBJECT_BASIC_LIMIT_INFORMATION' Warewolf.OS.JOBOBJECTLIMIT' Warewolf.OS.JOBOBJECT_EXTENDED_LIMIT_INFORMATION,Warewolf.OS.ChildProcessTrackerWrapper
+Warewolf.OS,JobObjectInfoType,0,0,0,0,0,10,0,0,0,-1,0,1,,Warewolf.OS.ChildProcessTracker
+Warewolf.OS,JOBOBJECT_BASIC_LIMIT_INFORMATION,9,0,0,9,0,13,0,0,0,-1,1,2,Warewolf.OS.JOBOBJECTLIMIT,Warewolf.OS.ChildProcessTracker' Warewolf.OS.JOBOBJECT_EXTENDED_LIMIT_INFORMATION
+Warewolf.OS,JOBOBJECTLIMIT,0,0,0,0,0,5,0,0,0,-1,0,2,,Warewolf.OS.ChildProcessTracker' Warewolf.OS.JOBOBJECT_BASIC_LIMIT_INFORMATION
+Warewolf.OS,IO_COUNTERS,6,0,0,6,0,10,0,0,0,-1,0,1,,Warewolf.OS.JOBOBJECT_EXTENDED_LIMIT_INFORMATION
+Warewolf.OS,JOBOBJECT_EXTENDED_LIMIT_INFORMATION,6,0,0,6,0,10,0,0,0,-1,2,1,Warewolf.OS.JOBOBJECT_BASIC_LIMIT_INFORMATION' Warewolf.OS.IO_COUNTERS,Warewolf.OS.ChildProcessTracker
+Warewolf.OS,ProcessMonitor,5,4,4,0,2,111,6,3,1,0.5,1,0,Warewolf.Common.WarewolfLogger,
+Warewolf.OS,ProcessThreadList,5,9,2,0,4,105,17,3,1,0,0,1,,Warewolf.OS.WorkerMonitor
+Warewolf.OS,ProcessWrapper,1,5,4,0,5,38,5,0,1,0,0,1,,Warewolf.OS.ProcessWrapperFactory
+Warewolf.OS,ProcessWrapperFactory,0,2,0,0,2,11,2,0,1,-1,1,0,Warewolf.OS.ProcessWrapper,
+Warewolf.OS,WorkerMonitor,2,9,0,0,2,74,15,2,1,0.22,1,0,Warewolf.OS.ProcessThreadList,
+Warewolf.Streams,DeserializingConsumer<T>,2,2,0,0,2,15,2,0,1,0,0,1,,Warewolf.Streams.IConnectionExtensionMethods
+Warewolf.Streams,IConnectionExtensionMethods,0,2,0,0,2,12,2,0,0,-1,2,0,Warewolf.Streams.DeserializingConsumer<T>' Warewolf.Streams.SerializingPublisher<T>,
+Warewolf.Streams,JsonSerializer,0,2,0,0,2,5,2,0,1,-1,0,0,,
+Warewolf.Streams,SerializingPublisher<T>,2,2,0,0,2,11,2,0,1,0,0,1,,Warewolf.Streams.IConnectionExtensionMethods

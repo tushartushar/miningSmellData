@@ -1,0 +1,50 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+kOS.Safe.Test.Calculator,CalculatorScalarTest,1,2,0,0,2,21,2,0,0,0,0,0,,
+kOS.Safe.Test.Calculator,CalculatorStructureTest,1,2,0,0,2,22,2,0,0,0,0,0,,
+kOS.Safe.Test.Collections,MixedCollectionPrintingTest,0,2,0,0,2,41,2,0,1,-1,1,0,kOS.Safe.Test.CollectionValueTest,
+kOS.Safe.Test.Collections,LexiconTest,1,24,0,0,22,250,27,0,0,0.5,1,0,kOS.Safe.Test.Opcode.FakeCpu,
+kOS.Safe.Test.Collections,ListValueTest,0,8,0,0,7,185,8,0,1,-1,2,0,kOS.Safe.Test.Opcode.FakeCpu' kOS.Safe.Test.CollectionValueTest,
+kOS.Safe.Test.Collections,QueueValueTest,0,5,0,0,5,82,5,0,1,-1,1,0,kOS.Safe.Test.CollectionValueTest,
+kOS.Safe.Test.Collections,StackValueTest,0,5,0,0,5,83,5,0,1,-1,1,0,kOS.Safe.Test.CollectionValueTest,
+kOS.Safe.Test.Collections,RangeValueTest,0,5,0,0,5,62,5,0,1,-1,1,0,kOS.Safe.Test.CollectionValueTest,
+kOS.Safe.Test.Collections,UniqueSetValueTest,0,5,0,0,5,86,5,0,1,-1,1,0,kOS.Safe.Test.CollectionValueTest,
+kOS.Safe.Test.Structures,BooleanValueTest,0,5,0,0,5,114,5,0,0,-1,0,0,,
+kOS.Safe.Test.Structures,ScalarValueTest,0,19,0,0,19,194,19,0,0,-1,0,0,,
+kOS.Safe.Test.Structures,StringValueTest,0,13,0,0,13,183,13,0,0,-1,0,0,,
+kOS.Safe.Test.Structure,ClampSetSuffixTest,0,5,0,0,5,68,5,0,0,-1,0,0,,
+kOS.Safe.Test.Structure,MockStructure,0,0,0,0,0,4,0,0,2,-1,0,1,,kOS.Safe.Test.Structure.NoArgsSuffixTest
+kOS.Safe.Test.Structure,NoArgsSuffixTest,1,5,0,0,5,53,5,0,0,0.6,2,0,kOS.Safe.Test.Structure.MockStructure' kOS.Safe.Test.Opcode.FakeCpu,
+kOS.Safe.Test.Structure,SetSuffixTest,0,6,0,0,5,57,6,0,0,-1,1,0,kOS.Safe.Test.TestLogger,
+kOS.Safe.Test.Structure,StructureSuffixIntegrationTest,0,8,0,0,6,77,8,0,0,-1,3,0,kOS.Safe.Test.Structure.StructureTest' kOS.Safe.Test.Structure.TestStructure' kOS.Safe.Test.TestLogger,
+kOS.Safe.Test.Structure,StructureTest,0,13,0,0,13,199,13,0,0,-1,2,1,kOS.Safe.Test.Structure.TestStructure' kOS.Safe.Test.TestLogger,kOS.Safe.Test.Structure.StructureSuffixIntegrationTest
+kOS.Safe.Test.Structure,TestStructure,0,4,0,0,4,19,4,0,2,-1,0,2,,kOS.Safe.Test.Structure.StructureSuffixIntegrationTest' kOS.Safe.Test.Structure.StructureTest
+kOS.Safe.Test.Structure,TwoArgsVoidSuffixTest,1,3,0,0,3,33,3,0,0,0.67,1,0,kOS.Safe.Test.Opcode.FakeCpu,
+kOS.Safe.Test.Opcode,FakeCpu,1,59,6,0,59,263,59,0,2,0.86,0,7,,kOS.Safe.Test.Opcode.OpcodeGetIndexText' kOS.Safe.Test.Structure.NoArgsSuffixTest' kOS.Safe.Test.Structure.TwoArgsVoidSuffixTest' kOS.Safe.Test.Opcode.OpcodeSetIndexTest' kOS.Safe.Test.CollectionValueTest' kOS.Safe.Test.Collections.LexiconTest' kOS.Safe.Test.Collections.ListValueTest
+kOS.Safe.Test.Opcode,OpcodeGetIndexText,1,6,0,0,6,80,6,0,0,0,1,0,kOS.Safe.Test.Opcode.FakeCpu,
+kOS.Safe.Test.Opcode,OpcodeSetIndexTest,1,7,0,0,7,106,7,0,0,0,1,0,kOS.Safe.Test.Opcode.FakeCpu,
+kOS.Safe.Test,TestLogger,0,7,0,0,7,31,7,0,1,-1,0,5,,kOS.Safe.Test.Structure.SetSuffixTest' kOS.Safe.Test.Structure.StructureTest' kOS.Safe.Test.CopyAndMoveTest' kOS.Safe.Test.VolumeTest' kOS.Safe.Test.Structure.StructureSuffixIntegrationTest
+kOS.Safe.Test,CollectionValueTest,1,2,0,0,1,22,3,6,0,0,1,6,kOS.Safe.Test.Opcode.FakeCpu,kOS.Safe.Test.Collections.UniqueSetValueTest' kOS.Safe.Test.Collections.RangeValueTest' kOS.Safe.Test.Collections.StackValueTest' kOS.Safe.Test.Collections.MixedCollectionPrintingTest' kOS.Safe.Test.Collections.QueueValueTest' kOS.Safe.Test.Collections.ListValueTest
+kOS.Safe.Test,VolumeTest,0,23,3,0,23,255,24,2,0,-1,1,2,kOS.Safe.Test.TestLogger,kOS.Safe.Test.Persistence.HarddiskTest' kOS.Safe.Test.Persistence.ArchiveTest
+kOS.Safe.Test,CopyAndMoveTest,18,32,2,0,31,326,40,2,0,0.06,1,2,kOS.Safe.Test.TestLogger,kOS.Safe.Test.Persistence.ArchiveAndHarddiskCopyAndMoveTest' kOS.Safe.Test.Persistence.HarddiskToHarddiskCopyAndMoveTest
+kOS.Safe.Test,Config,0,4,19,0,4,206,4,0,2,-1,0,1,,kOS.Safe.Test.Execution.StaticSetup
+kOS.Safe.Test,Screen,1,17,13,0,17,207,23,0,1,0.76,0,1,,kOS.Safe.Test.Execution.BaseIntegrationTest
+kOS.Safe.Test.Serialization,JSONFormatterTest,0,0,2,0,0,18,0,0,1,-1,1,0,kOS.Safe.Test.Serialization.FormatterTest,
+kOS.Safe.Test.Serialization,TerminalFormatterTest,0,3,0,0,2,27,3,0,0,-1,0,0,,
+kOS.Safe.Test.Serialization,FormatterTest,0,7,2,0,5,76,7,1,0,-1,0,1,,kOS.Safe.Test.Serialization.JSONFormatterTest
+kOS.Safe.Test.Communication,MessageQueueTest,1,7,0,0,7,126,7,0,0,0,1,0,kOS.Safe.Test.Communication.FakeCurrentTimeProvider,
+kOS.Safe.Test.Communication,FakeCurrentTimeProvider,0,2,1,0,2,12,2,0,1,-1,0,1,,kOS.Safe.Test.Communication.MessageQueueTest
+kOS.Safe.Test.Persistence,VolumePathTest,0,10,0,0,10,82,10,0,0,-1,0,0,,
+kOS.Safe.Test.Persistence,GlobalPathTest,0,11,0,0,11,123,11,0,0,-1,0,0,,
+kOS.Safe.Test.Persistence,ArchiveTest,2,1,2,1,1,26,2,0,1,0,1,0,kOS.Safe.Test.VolumeTest,
+kOS.Safe.Test.Persistence,HarddiskTest,0,1,2,0,1,19,1,0,1,-1,1,0,kOS.Safe.Test.VolumeTest,
+kOS.Safe.Test.Persistence,HarddiskToArchiveCopyAndMoveTest,0,0,2,0,0,13,0,0,1,-1,1,0,kOS.Safe.Test.Persistence.ArchiveAndHarddiskCopyAndMoveTest,
+kOS.Safe.Test.Persistence,HarddiskToHarddiskCopyAndMoveTest,2,1,2,0,1,20,1,0,1,0,1,0,kOS.Safe.Test.CopyAndMoveTest,
+kOS.Safe.Test.Persistence,ArchiveAndHarddiskCopyAndMoveTest,4,2,0,1,1,22,3,2,1,0,1,2,kOS.Safe.Test.CopyAndMoveTest,kOS.Safe.Test.Persistence.ArchiveToHarddiskCopyAndMoveTest' kOS.Safe.Test.Persistence.HarddiskToArchiveCopyAndMoveTest
+kOS.Safe.Test.Persistence,ArchiveToHarddiskCopyAndMoveTest,0,0,2,0,0,14,0,0,2,-1,1,0,kOS.Safe.Test.Persistence.ArchiveAndHarddiskCopyAndMoveTest,
+kOS.Safe.Test.KS,ParserTest,2,2,0,0,2,18,2,0,0,0,0,0,,
+kOS.Safe.Test.Execution,StaticSetup,0,1,0,0,1,20,1,0,0,-1,2,0,kOS.Safe.Test.Config' kOS.Safe.Test.Execution.NoopLogger,
+kOS.Safe.Test.Execution,BaseIntegrationTest,4,5,0,0,1,61,7,1,0,0,3,1,kOS.Safe.Test.Screen' kOS.Safe.Test.Execution.NoopGameEventDispatchManager' kOS.Safe.Test.Execution.NoopProcessor,kOS.Safe.Test.Execution.SimpleTest
+kOS.Safe.Test.Execution,NoopLogger,0,7,0,0,7,27,7,0,1,-1,0,1,,kOS.Safe.Test.Execution.StaticSetup
+kOS.Safe.Test.Execution,NoopGameEventDispatchManager,0,3,0,0,3,12,3,0,1,-1,0,1,,kOS.Safe.Test.Execution.BaseIntegrationTest
+kOS.Safe.Test.Execution,NoopProcessor,0,2,3,0,2,31,2,0,1,-1,0,1,,kOS.Safe.Test.Execution.BaseIntegrationTest
+kOS.Safe.Test.Execution,SimpleTest,0,7,0,0,7,102,7,0,1,-1,1,0,kOS.Safe.Test.Execution.BaseIntegrationTest,

@@ -1,9 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-CqrsReplicator,IAppendOnlyStore,0,6,0,0,0,33,6,0,0,-1,0,1,,CqrsReplicator.EventStorePublisher
-CqrsReplicator,DataWithKey,4,1,0,4,1,14,1,0,0,0,0,1,,CqrsReplicator.EventStorePublisher
-CqrsReplicator,AppendOnlyStoreConcurrencyException,0,2,3,0,1,19,2,0,0,-1,0,0,,
-CqrsReplicator,IMessageSerializer,0,6,0,0,0,21,6,0,0,-1,0,0,,
-CqrsReplicator,MessageAttribute,3,1,0,3,1,11,1,0,0,0,0,0,,
+CqrsReplicator,IAppendOnlyStore,0,6,0,0,0,33,6,0,0,-1,2,1,CqrsReplicator.DataWithKey' CqrsReplicator.AppendOnlyStoreConcurrencyException,CqrsReplicator.EventStorePublisher
+CqrsReplicator,DataWithKey,4,1,0,4,1,14,1,0,0,0,0,2,,CqrsReplicator.EventStorePublisher' CqrsReplicator.IAppendOnlyStore
+CqrsReplicator,AppendOnlyStoreConcurrencyException,0,2,3,0,1,19,2,0,0,-1,0,1,,CqrsReplicator.IAppendOnlyStore
+CqrsReplicator,IMessageSerializer,0,6,0,0,0,21,6,0,0,-1,1,0,CqrsReplicator.MessageAttribute,
+CqrsReplicator,MessageAttribute,3,1,0,3,1,11,1,0,0,0,0,1,,CqrsReplicator.IMessageSerializer
 CqrsReplicator,Program,0,1,0,0,0,3,1,0,0,-1,0,0,,
 CqrsReplicator,EventStoreConfig,0,0,3,0,0,5,0,0,0,-1,0,1,,CqrsReplicator.EventStorePublisher
-CqrsReplicator,EventStorePublisher,5,3,0,0,2,64,5,0,0,0.67,6,0,CqrsReplicator.IAppendOnlyStore' CqrsReplicator.EventStoreConfig' MessageVault.ICheckpointWriter' MessageVault.Api.CloudClient' CqrsReplicator.DataWithKey' MessageVault.Message,
+CqrsReplicator,EventStorePublisher,5,3,0,0,2,64,7,0,0,0.67,3,0,CqrsReplicator.IAppendOnlyStore' CqrsReplicator.DataWithKey' CqrsReplicator.EventStoreConfig,

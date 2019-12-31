@@ -1,0 +1,19 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Sample.CSharp,Class1,0,3,0,0,3,28,3,0,0,-1,3,0,Sample.CSharp.IBar' Sample.CSharp.IFoo' Moq.Mock,
+Sample.CSharp,IBar,0,1,0,0,0,4,1,0,0,-1,0,2,,Sample.CSharp.Class1' Mocks.IBarMock
+Sample.CSharp,IFoo,0,1,2,0,0,6,1,0,0,-1,0,2,,Mocks.IFooMock' Sample.CSharp.Class1
+Sample.CSharp,Recursive,1,2,0,0,2,16,2,0,0,0,1,0,Moq.Mock,
+Sample.CSharp,Foo,0,2,0,0,2,24,2,0,0,-1,3,0,Sample.CSharp.IRefOutParent' Moq.CSharp.IParser' Moq.Mock,
+Sample.CSharp,IRefOutParent,0,0,1,0,0,4,0,1,0,-1,1,2,Sample.CSharp.IRefOut,Mocks.IRefOutParentMock' Sample.CSharp.Foo
+Sample.CSharp,IRefOut,0,1,0,0,0,4,1,1,0,-1,0,3,,Mocks.IRefOutMock' Sample.CSharp.IRefOutParent' Mocks.IRefOutParentMock
+Moq.CSharp,IParser,0,1,0,0,0,4,1,1,0,-1,0,2,,Mocks.IParserMock' Sample.CSharp.Foo
+Mocks,CalculatorBaseICustomFormatterIDisposableMock,2,12,5,0,12,50,12,0,1,0,0,0,,
+Mocks,IBarMock,2,4,2,0,4,16,4,0,0,0,1,0,Sample.CSharp.IBar,
+Mocks,ICalculatorMemoryMock,2,7,2,0,7,22,7,0,1,0,0,0,,
+Mocks,ICalculatorMock,2,10,5,0,10,46,10,0,1,0,0,0,,
+Mocks,ICustomFormatterIDisposableMock,2,5,2,0,5,18,5,0,0,0,0,0,,
+Mocks,IFooMock,2,4,4,0,4,20,4,0,0,0,1,0,Sample.CSharp.IFoo,
+Mocks,IParserMock,2,4,2,0,4,22,4,0,1,0,1,0,Moq.CSharp.IParser,
+Mocks,IRefOutMock,2,4,2,0,4,22,4,0,1,0,1,0,Sample.CSharp.IRefOut,
+Mocks,IRefOutParentMock,2,3,3,0,3,16,3,0,1,0,2,0,Sample.CSharp.IRefOutParent' Sample.CSharp.IRefOut,
+Moq,Mock,0,21,0,0,19,100,21,0,0,-1,0,3,,Sample.CSharp.Foo' Sample.CSharp.Recursive' Sample.CSharp.Class1

@@ -1,41 +1,42 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Carnac.Logic.Enums,NotificationPlacement,0,0,0,0,0,7,0,0,0,-1,0,1,,Carnac.UI.PreferencesViewModel
+Carnac.Logic.Enums,NotificationPlacement,0,0,0,0,0,7,0,0,0,-1,0,1,,Carnac.Logic.Models.PopupSettings
 Carnac.Logic,IConcurrencyService,0,0,2,0,0,5,0,1,0,-1,0,1,,Carnac.Logic.KeysController
-Carnac.Logic,IMessageProvider,0,1,0,0,0,4,1,1,0,-1,0,2,,Carnac.App' Carnac.Logic.KeysController
-Carnac.Logic,IKeyProvider,0,1,0,0,0,4,1,1,0,-1,0,1,,Carnac.Logic.MessageProvider
-Carnac.Logic,IPasswordModeService,0,1,1,0,0,5,1,1,0,-1,1,2,Carnac.Logic.KeyMonitor.InterceptKeyEventArgs,Carnac.Logic.KeyProvider' Carnac.Tests.KeyProviderTests
-Carnac.Logic,IScreenManager,0,1,0,0,0,4,1,1,0,-1,0,4,,Carnac.UI.PreferencesViewModel' Carnac.Tests.ViewModels.when_creating_the_new_viewmodel' Carnac.Tests.ViewModels.when_the_settings_file_is_defined' Carnac.Tests.ViewModels.when_the_settings_file_is_not_defined
-Carnac.Logic,IShortcutProvider,0,1,0,0,0,4,1,1,0,-1,1,3,Carnac.Logic.Models.KeyPress,Carnac.Logic.ShortcutAccumulator' Carnac.Logic.MessageProvider' Carnac.Tests.MessageProviderFacts
-Carnac.Logic,KeysController,6,3,0,0,3,60,3,0,0,0,2,2,Carnac.Logic.IMessageProvider' Carnac.Logic.IConcurrencyService,Carnac.App' Carnac.Tests.KeysControllerFacts
-Carnac.Logic,ShortcutAccumulator,3,9,2,0,3,85,18,0,0,0,5,0,Carnac.Logic.Models.Message' Carnac.Logic.IShortcutProvider' Carnac.Logic.Models.KeyPress' Carnac.Logic.Models.ProcessInfo' Carnac.Logic.KeyShortcut,
+Carnac.Logic,IMessageProvider,0,1,0,0,0,4,1,1,0,-1,1,2,Carnac.Logic.Models.Message,Carnac.Logic.MessageProvider' Carnac.Logic.KeysController
+Carnac.Logic,IKeyProvider,0,1,0,0,0,4,1,1,0,-1,1,2,Carnac.Logic.Models.KeyPress,Carnac.Logic.KeyProvider' Carnac.Logic.MessageProvider
+Carnac.Logic,IPasswordModeService,0,1,1,0,0,5,1,1,0,-1,1,2,Carnac.Logic.KeyMonitor.InterceptKeyEventArgs,Carnac.Logic.PasswordModeService' Carnac.Logic.KeyProvider
+Carnac.Logic,IScreenManager,0,1,0,0,0,4,1,1,0,-1,1,1,Carnac.Logic.Native.DetailedScreen,Carnac.Logic.ScreenManager
+Carnac.Logic,IShortcutProvider,0,1,0,0,0,4,1,1,0,-1,2,3,Carnac.Logic.KeyShortcut' Carnac.Logic.Models.KeyPress,Carnac.Logic.ShortcutProvider' Carnac.Logic.ShortcutAccumulator' Carnac.Logic.MessageProvider
+Carnac.Logic,KeysController,6,3,0,0,3,60,3,0,0,0,4,0,Carnac.Logic.IConcurrencyService' Carnac.Logic.IMessageProvider' Carnac.Logic.Models.Message' Carnac.Logic.Models.PopupSettings,
+Carnac.Logic,AssociatedProcessUtilities,1,3,0,0,1,28,4,0,0,0,0,1,,Carnac.Logic.KeyProvider
+Carnac.Logic,ShortcutAccumulator,3,9,2,0,3,85,19,0,0,0,4,1,Carnac.Logic.IShortcutProvider' Carnac.Logic.KeyShortcut' Carnac.Logic.Models.KeyPress' Carnac.Logic.Models.Message,Carnac.Logic.MessageProvider
 Carnac.Logic,KeyPressDefinition,0,4,5,0,4,50,9,1,0,-1,0,3,,Carnac.Logic.KeyShortcut' Carnac.Logic.ShortcutProvider' Carnac.Logic.Models.KeyPress
-Carnac.Logic,KeyShortcut,1,3,1,0,3,20,3,0,0,0,1,2,Carnac.Logic.KeyPressDefinition,Carnac.Logic.ShortcutAccumulator' Carnac.Logic.Models.Message
-Carnac.Logic,KeyProvider,6,9,0,0,2,144,18,0,1,0.22,7,2,Carnac.Logic.KeyMonitor.IInterceptKeys' Carnac.Logic.IPasswordModeService' Carnac.Logic.KeyMonitor.IDesktopLockEventService' Carnac.Logic.KeyMonitor.KeyDirection' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.IconUtilities' Carnac.Logic.Models.KeyPress,Carnac.Tests.MessageProviderFacts' Carnac.Tests.KeyProviderTests
-Carnac.Logic,MessageProvider,3,2,0,0,2,47,2,0,1,0,4,1,Carnac.Logic.IShortcutProvider' Carnac.Logic.IKeyProvider' Carnac.Logic.Models.PopupSettings' Carnac.Logic.Models.Message,Carnac.Tests.MessageProviderFacts
-Carnac.Logic,NotifyPropertyChanged,0,2,0,0,0,13,3,4,0,-1,0,0,,
-Carnac.Logic,PasswordModeService,4,2,1,0,2,62,3,0,1,0,2,0,Carnac.Logic.InterceptKeyEventArgsEqualityComparer' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs,
-Carnac.Logic,InterceptKeyEventArgsEqualityComparer,0,2,0,0,2,23,4,0,0,-1,1,1,Carnac.Logic.KeyMonitor.InterceptKeyEventArgs,Carnac.Logic.PasswordModeService
+Carnac.Logic,KeyShortcut,1,3,1,0,3,20,3,0,0,0.67,2,5,Carnac.Logic.KeyPressDefinition' Carnac.Logic.Models.KeyPress,Carnac.Logic.IShortcutProvider' Carnac.Logic.ShortcutCollection' Carnac.Logic.ShortcutAccumulator' Carnac.Logic.Models.Message' Carnac.Logic.ShortcutProvider
+Carnac.Logic,KeyProvider,7,7,0,0,2,155,23,0,1,0.29,11,0,Carnac.Logic.IKeyProvider' Carnac.Logic.IPasswordModeService' Carnac.Logic.AssociatedProcessUtilities' Carnac.Logic.IconUtilities' Carnac.Logic.KeyMonitor.IInterceptKeys' Carnac.Logic.KeyMonitor.IDesktopLockEventService' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.KeyMonitor.KeyDirection' Carnac.Logic.Models.ProcessInfo' Carnac.Logic.Models.KeyPress' Carnac.Logic.Models.PopupSettings,
+Carnac.Logic,MessageProvider,3,2,0,0,2,47,2,0,1,1,6,0,Carnac.Logic.IMessageProvider' Carnac.Logic.IKeyProvider' Carnac.Logic.IShortcutProvider' Carnac.Logic.ShortcutAccumulator' Carnac.Logic.Models.Message' Carnac.Logic.Models.PopupSettings,
+Carnac.Logic,NotifyPropertyChanged,0,2,0,0,0,13,3,4,0,-1,0,1,,Carnac.Logic.Models.PopupSettings
+Carnac.Logic,PasswordModeService,4,2,1,0,2,62,3,0,1,0,5,0,Carnac.Logic.IPasswordModeService' Carnac.Logic.InterceptKeyEventArgsEqualityComparer' Carnac.Logic.Internal.FixedQueue<T>' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.KeyMonitor.KeyDirection,
+Carnac.Logic,InterceptKeyEventArgsEqualityComparer,0,2,0,0,2,23,4,0,0,-1,0,1,,Carnac.Logic.PasswordModeService
 Carnac.Logic,ReplaceKey,2,3,0,0,3,106,9,0,0,0,0,1,,Carnac.Logic.ShortcutProvider
-Carnac.Logic,ScreenManager,0,3,0,0,1,60,9,0,1,-1,4,0,Carnac.Logic.Native.DISPLAY_DEVICE' Carnac.Logic.Native.DEVMODE' Carnac.Logic.Native.DetailedScreen' Carnac.Logic.Native.POINTL,
-Carnac.Logic,ShortcutCollection,0,2,2,0,2,14,2,0,0,-1,0,1,,Carnac.Logic.ShortcutProvider
-Carnac.Logic,ShortcutProvider,1,8,0,0,2,84,12,0,1,0.75,5,0,Carnac.Logic.Models.ProcessInfo' Carnac.Logic.Models.KeyPress' Carnac.Logic.ReplaceKey' Carnac.Logic.KeyPressDefinition' Carnac.Logic.ShortcutCollection,
-Carnac.Logic,Win32Methods,8,7,0,8,5,34,7,0,0,0.86,0,2,,Carnac.UI.KeyShowView' Carnac.Logic.KeyMonitor.InterceptKeys
-Carnac.Logic,NotifyPropertyAttribute,0,0,3,0,0,17,0,0,0,-1,0,0,,
+Carnac.Logic,ScreenManager,0,3,0,0,1,60,9,0,1,-1,4,0,Carnac.Logic.IScreenManager' Carnac.Logic.Native.DetailedScreen' Carnac.Logic.Native.DEVMODE' Carnac.Logic.Native.DISPLAY_DEVICE,
+Carnac.Logic,ShortcutCollection,0,2,2,0,2,14,2,0,0,-1,2,1,Carnac.Logic.KeyShortcut' Carnac.Logic.Models.KeyPress,Carnac.Logic.ShortcutProvider
+Carnac.Logic,ShortcutProvider,1,8,0,0,2,84,12,0,1,0.75,6,0,Carnac.Logic.IShortcutProvider' Carnac.Logic.KeyPressDefinition' Carnac.Logic.KeyShortcut' Carnac.Logic.ReplaceKey' Carnac.Logic.ShortcutCollection' Carnac.Logic.Models.KeyPress,
+Carnac.Logic,Win32Methods,8,7,0,8,5,34,7,0,0,0.86,0,1,,Carnac.Logic.KeyMonitor.InterceptKeys
+Carnac.Logic,NotifyPropertyAttribute,0,0,3,0,0,17,0,0,0,-1,0,1,,Carnac.Logic.Models.PopupSettings
 Carnac.Logic,IconUtilities,1,4,0,0,1,42,6,0,0,0,0,1,,Carnac.Logic.KeyProvider
-Carnac.Logic.Internal,FixedQueue<T>,2,5,0,0,4,30,6,0,0,0.4,0,0,,
-Carnac.Logic.KeyMonitor,IInterceptKeys,0,1,0,0,0,4,1,2,0,-1,0,1,,Carnac.Logic.KeyProvider
-Carnac.Logic.KeyMonitor,DesktopLockEventService,0,1,0,0,1,10,1,0,1,-1,0,0,,
-Carnac.Logic.KeyMonitor,IDesktopLockEventService,0,1,0,0,0,4,1,1,0,-1,0,2,,Carnac.Logic.KeyProvider' Carnac.Tests.KeyProviderTests
-Carnac.Logic.KeyMonitor,InterceptKeyEventArgs,0,2,6,0,2,21,2,0,0,-1,1,7,Carnac.Logic.KeyMonitor.KeyDirection,Carnac.Logic.IPasswordModeService' Carnac.Logic.KeyProvider' Carnac.Logic.PasswordModeService' Carnac.Logic.InterceptKeyEventArgsEqualityComparer' Carnac.Logic.KeyMonitor.InterceptKeys' Carnac.Logic.Models.KeyPress' KeyStreamCapture.MainWindow
-Carnac.Logic.KeyMonitor,InterceptKeys,3,4,0,1,1,82,6,0,1,0,3,2,Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.Win32Methods' Carnac.Logic.KeyMonitor.KeyDirection,Carnac.App' KeyStreamCapture.MainWindow
-Carnac.Logic.KeyMonitor,KeyDirection,0,0,0,0,0,6,0,0,0,-1,0,6,,Carnac.Logic.KeyProvider' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.KeyMonitor.InterceptKeys' KeyStreamCapture.MainWindow' Carnac.Tests.KeyStreams' Carnac.Tests.MessageFacts
-Carnac.Logic.Models,ProcessInfo,0,2,2,0,2,14,2,0,0,-1,0,5,,Carnac.Logic.ShortcutAccumulator' Carnac.Logic.ShortcutProvider' Carnac.Logic.Models.KeyPress' Carnac.Logic.Models.Message' Carnac.Tests.MessageFacts
-Carnac.Logic.Models,KeyPress,0,7,4,0,4,88,17,0,1,-1,3,6,Carnac.Logic.Models.ProcessInfo' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.KeyPressDefinition,Carnac.Logic.IShortcutProvider' Carnac.Logic.ShortcutAccumulator' Carnac.Logic.KeyProvider' Carnac.Logic.ShortcutProvider' Carnac.Logic.Models.Message' Carnac.Logic.Models.RepeatedKeyPress
-Carnac.Logic.Models,Message,12,15,10,0,9,198,20,0,0,0.2,3,4,Carnac.Logic.Models.ProcessInfo' Carnac.Logic.Models.KeyPress' Carnac.Logic.KeyShortcut,Carnac.Logic.ShortcutAccumulator' Carnac.Logic.MessageProvider' Carnac.Tests.KeysControllerFacts' Carnac.Tests.MessageFacts
-Carnac.Logic.Models,RepeatedKeyPress,4,4,1,0,4,34,7,0,0,0,1,0,Carnac.Logic.Models.KeyPress,
-Carnac.Logic.Models,PopupSettings,1,1,22,0,0,65,2,0,1,0,0,8,,Carnac.App' Carnac.UI.KeyShowViewModel' Carnac.UI.PreferencesViewModel' Carnac.UI.KeyShowView' Carnac.Logic.MessageProvider' Carnac.Tests.KeysControllerFacts' Carnac.Tests.ViewModels.when_the_settings_file_is_defined' Carnac.Tests.ViewModels.when_the_settings_file_is_not_defined
-Carnac.Logic.Native,DetailedScreen,0,0,12,0,0,15,0,0,0,-1,0,4,,Carnac.PositionOnMonitorSelector' Carnac.UI.PreferencesViewModel' Carnac.Utilities.PlacementMarginConverter' Carnac.Logic.ScreenManager
+Carnac.Logic.Internal,FixedQueue<T>,2,5,0,0,4,30,6,0,0,0.4,0,1,,Carnac.Logic.PasswordModeService
+Carnac.Logic.KeyMonitor,IInterceptKeys,0,1,0,0,0,4,1,2,0,-1,1,2,Carnac.Logic.KeyMonitor.InterceptKeyEventArgs,Carnac.Logic.KeyMonitor.InterceptKeys' Carnac.Logic.KeyProvider
+Carnac.Logic.KeyMonitor,DesktopLockEventService,0,1,0,0,1,10,1,0,1,-1,1,0,Carnac.Logic.KeyMonitor.IDesktopLockEventService,
+Carnac.Logic.KeyMonitor,IDesktopLockEventService,0,1,0,0,0,4,1,1,0,-1,0,2,,Carnac.Logic.KeyMonitor.DesktopLockEventService' Carnac.Logic.KeyProvider
+Carnac.Logic.KeyMonitor,InterceptKeyEventArgs,0,2,6,0,2,21,2,0,0,-1,1,6,Carnac.Logic.KeyMonitor.KeyDirection,Carnac.Logic.KeyMonitor.IInterceptKeys' Carnac.Logic.IPasswordModeService' Carnac.Logic.Models.KeyPress' Carnac.Logic.KeyProvider' Carnac.Logic.KeyMonitor.InterceptKeys' Carnac.Logic.PasswordModeService
+Carnac.Logic.KeyMonitor,InterceptKeys,3,4,0,1,1,82,6,0,1,0,4,0,Carnac.Logic.Win32Methods' Carnac.Logic.KeyMonitor.IInterceptKeys' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.KeyMonitor.KeyDirection,
+Carnac.Logic.KeyMonitor,KeyDirection,0,0,0,0,0,6,0,0,0,-1,0,4,,Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.KeyProvider' Carnac.Logic.KeyMonitor.InterceptKeys' Carnac.Logic.PasswordModeService
+Carnac.Logic.Models,ProcessInfo,0,2,2,0,2,14,2,0,0,-1,0,2,,Carnac.Logic.Models.KeyPress' Carnac.Logic.KeyProvider
+Carnac.Logic.Models,KeyPress,0,7,4,0,4,88,17,0,1,-1,3,8,Carnac.Logic.KeyPressDefinition' Carnac.Logic.KeyMonitor.InterceptKeyEventArgs' Carnac.Logic.Models.ProcessInfo,Carnac.Logic.IShortcutProvider' Carnac.Logic.IKeyProvider' Carnac.Logic.KeyShortcut' Carnac.Logic.ShortcutProvider' Carnac.Logic.ShortcutCollection' Carnac.Logic.ShortcutAccumulator' Carnac.Logic.KeyProvider' Carnac.Logic.Models.Message
+Carnac.Logic.Models,Message,12,15,10,0,9,198,20,0,0,0.33,3,4,Carnac.Logic.KeyShortcut' Carnac.Logic.Models.KeyPress' Carnac.Logic.Models.RepeatedKeyPress,Carnac.Logic.IMessageProvider' Carnac.Logic.KeysController' Carnac.Logic.MessageProvider' Carnac.Logic.ShortcutAccumulator
+Carnac.Logic.Models,RepeatedKeyPress,4,4,1,0,4,34,7,0,0,0,0,1,,Carnac.Logic.Models.Message
+Carnac.Logic.Models,PopupSettings,1,1,24,0,0,68,2,0,1,0,3,3,Carnac.Logic.Enums.NotificationPlacement' Carnac.Logic.NotifyPropertyChanged' Carnac.Logic.NotifyPropertyAttribute,Carnac.Logic.MessageProvider' Carnac.Logic.KeysController' Carnac.Logic.KeyProvider
+Carnac.Logic.Native,DetailedScreen,0,0,12,0,0,15,0,0,0,-1,0,2,,Carnac.Logic.IScreenManager' Carnac.Logic.ScreenManager
 Carnac.Logic.Native,DEVMODE,29,0,0,29,0,76,0,0,0,-1,1,1,Carnac.Logic.Native.POINTL,Carnac.Logic.ScreenManager
-Carnac.Logic.Native,DisplayDeviceStateFlags,0,0,0,0,0,19,0,0,0,-1,0,0,,
-Carnac.Logic.Native,DISPLAY_DEVICE,6,0,0,6,0,16,0,0,0,-1,0,1,,Carnac.Logic.ScreenManager
-Carnac.Logic.Native,POINTL,2,0,0,2,0,6,0,0,0,-1,0,2,,Carnac.Logic.ScreenManager' Carnac.Logic.Native.DEVMODE
+Carnac.Logic.Native,DisplayDeviceStateFlags,0,0,0,0,0,19,0,0,0,-1,0,1,,Carnac.Logic.Native.DISPLAY_DEVICE
+Carnac.Logic.Native,DISPLAY_DEVICE,6,0,0,6,0,16,0,0,0,-1,1,1,Carnac.Logic.Native.DisplayDeviceStateFlags,Carnac.Logic.ScreenManager
+Carnac.Logic.Native,POINTL,2,0,0,2,0,6,0,0,0,-1,0,1,,Carnac.Logic.Native.DEVMODE

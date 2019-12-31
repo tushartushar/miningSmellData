@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-HarmonyHub.Entities.Auth,Credentials,0,0,2,0,0,14,0,0,0,-1,0,0,,
-HarmonyHub.Entities.Auth,GetUserAuthTokenResult,0,0,2,0,0,14,0,0,0,-1,0,1,,HarmonyHub.HarmonyAuthentication
-HarmonyHub.Entities.Auth,GetUserAuthTokenResultRootObject,0,0,1,0,0,9,0,0,0,-1,0,1,,HarmonyHub.HarmonyAuthentication
-HarmonyHub.Entities.Response,Activity,0,1,12,0,1,71,1,0,0,-1,0,2,,HarmonyConsole.Program' HarmonyHub.Entities.Response.Config
-HarmonyHub.Entities.Response,Content,0,0,5,0,0,29,0,0,0,-1,0,0,,
-HarmonyHub.Entities.Response,ControlGroup,0,1,2,0,1,22,1,0,0,-1,0,2,,HarmonyConsole.Program' HarmonyDemo.FormMain
-HarmonyHub.Entities.Response,Device,0,2,16,0,2,101,2,0,0,-1,0,3,,HarmonyConsole.Program' HarmonyDemo.FormMain' HarmonyHub.Entities.Response.Config
-HarmonyHub.Entities.Response,FixItCommand,0,0,5,0,0,29,0,0,0,-1,0,0,,
-HarmonyHub.Entities.Response,Function,0,1,3,0,1,26,1,0,0,-1,0,2,,HarmonyConsole.Program' HarmonyDemo.FormMain
-HarmonyHub.Entities.Response,Global,0,0,2,0,0,14,0,0,0,-1,0,0,,
-HarmonyHub.Entities.Response,Config,0,2,5,0,2,46,2,0,0,-1,2,3,HarmonyHub.Entities.Response.Activity' HarmonyHub.Entities.Response.Device,HarmonyConsole.Program' HarmonyDemo.FormMain' HarmonyHub.HarmonyClient
-HarmonyHub.Entities.Request,HarmonyAction,0,0,3,0,0,19,0,0,0,-1,0,0,,
-HarmonyHub,HarmonyAuthentication,1,1,0,1,1,55,2,0,0,0,3,1,HarmonyHub.Entities.Auth.GetUserAuthTokenResultRootObject' HarmonyHub.Utils.Serializer' HarmonyHub.Entities.Auth.GetUserAuthTokenResult,HarmonyHub.HarmonyClient
-HarmonyHub,HarmonyClient,3,20,1,0,10,435,39,0,0,0.25,4,2,HarmonyHub.HarmonyAuthentication' HarmonyHub.Internals.HarmonyDocuments' HarmonyHub.Utils.Serializer' HarmonyHub.Entities.Response.Config,HarmonyConsole.Program' HarmonyDemo.FormMain
+HarmonyHub.Entities.Auth,Credentials,0,0,2,0,0,14,0,0,0,-1,0,1,,HarmonyHub.HarmonyAuthentication
+HarmonyHub.Entities.Auth,GetUserAuthTokenResult,0,0,2,0,0,14,0,0,0,-1,0,1,,HarmonyHub.Entities.Auth.GetUserAuthTokenResultRootObject
+HarmonyHub.Entities.Auth,GetUserAuthTokenResultRootObject,0,0,1,0,0,9,0,0,0,-1,1,1,HarmonyHub.Entities.Auth.GetUserAuthTokenResult,HarmonyHub.HarmonyAuthentication
+HarmonyHub.Entities.Response,Activity,0,1,12,0,1,71,1,0,0,-1,2,1,HarmonyHub.Entities.Response.ControlGroup' HarmonyHub.Entities.Response.FixItCommand,HarmonyHub.Entities.Response.Config
+HarmonyHub.Entities.Response,Content,0,0,5,0,0,29,0,0,0,-1,0,1,,HarmonyHub.Entities.Response.Config
+HarmonyHub.Entities.Response,ControlGroup,0,1,2,0,1,22,1,0,0,-1,1,2,HarmonyHub.Entities.Response.Function,HarmonyHub.Entities.Response.Device' HarmonyHub.Entities.Response.Activity
+HarmonyHub.Entities.Response,Device,0,2,16,0,2,101,2,0,0,-1,1,1,HarmonyHub.Entities.Response.ControlGroup,HarmonyHub.Entities.Response.Config
+HarmonyHub.Entities.Response,FixItCommand,0,0,5,0,0,29,0,0,0,-1,0,1,,HarmonyHub.Entities.Response.Activity
+HarmonyHub.Entities.Response,Function,0,1,3,0,1,26,1,0,0,-1,0,1,,HarmonyHub.Entities.Response.ControlGroup
+HarmonyHub.Entities.Response,Global,0,0,2,0,0,14,0,0,0,-1,0,1,,HarmonyHub.Entities.Response.Config
+HarmonyHub.Entities.Response,Config,0,2,5,0,2,46,2,0,0,-1,4,1,HarmonyHub.Entities.Response.Activity' HarmonyHub.Entities.Response.Content' HarmonyHub.Entities.Response.Device' HarmonyHub.Entities.Response.Global,HarmonyHub.HarmonyClient
+HarmonyHub.Entities.Request,HarmonyAction,0,0,3,0,0,19,0,0,0,-1,0,1,,HarmonyHub.Internals.HarmonyDocuments
+HarmonyHub,HarmonyAuthentication,1,1,0,1,1,55,2,0,0,0,3,1,HarmonyHub.Entities.Auth.Credentials' HarmonyHub.Entities.Auth.GetUserAuthTokenResultRootObject' HarmonyHub.Utils.Serializer,HarmonyHub.HarmonyClient
+HarmonyHub,HarmonyClient,3,20,1,0,10,435,40,0,0,0.25,4,0,HarmonyHub.Entities.Response.Config' HarmonyHub.HarmonyAuthentication' HarmonyHub.Internals.HarmonyDocuments' HarmonyHub.Utils.Serializer,
 HarmonyHub.Internals,HarmonyCommands,0,0,0,0,0,20,0,0,0,-1,0,1,,HarmonyHub.Internals.HarmonyDocuments
-HarmonyHub.Internals,HarmonyDocuments,1,7,0,0,5,113,9,0,0,0,2,1,HarmonyHub.Internals.HarmonyCommands' HarmonyHub.Utils.Serializer,HarmonyHub.HarmonyClient
-HarmonyHub.Utils,Serializer,0,2,0,0,2,34,2,0,0,-1,0,3,,HarmonyHub.HarmonyAuthentication' HarmonyHub.HarmonyClient' HarmonyHub.Internals.HarmonyDocuments
+HarmonyHub.Internals,HarmonyDocuments,1,7,0,0,5,113,9,0,0,0,3,1,HarmonyHub.Entities.Request.HarmonyAction' HarmonyHub.Internals.HarmonyCommands' HarmonyHub.Utils.Serializer,HarmonyHub.HarmonyClient
+HarmonyHub.Utils,Serializer,0,2,0,0,2,34,2,0,0,-1,0,3,,HarmonyHub.HarmonyClient' HarmonyHub.Internals.HarmonyDocuments' HarmonyHub.HarmonyAuthentication

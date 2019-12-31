@@ -1,9 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Rebel.Lucene.Caching,CacheProvider,5,11,1,0,5,167,29,0,2,0.18,10,0,Rebel.Lucene.IndexController' Rebel.Framework.Caching.RuntimeCacheProvider' Rebel.Framework.Serialization.JsonNetSerializer' Rebel.Framework.Diagnostics.LogHelper' Rebel.Framework.Caching.CacheModificationResult' Rebel.Framework.Caching.ICachePolicy' Rebel.Framework.Serialization.IStreamedResult' Rebel.Lucene.IndexReader' Rebel.Framework.Caching.CacheKey' Rebel.Framework.Caching.ICacheValueOf,
-Rebel.Lucene.Caching,DemandBuilder,0,1,0,0,1,31,1,0,1,-1,5,0,Rebel.Framework.DependencyManagement.IScopeManager' Rebel.Framework.DependencyManagement.IDependencyRegistrar' Rebel.Framework.DependencyManagement.IContainerBuilder' Rebel.Framework.DependencyManagement.IBuilderContext' Rebel.Framework.DependencyManagement.IResolutionContext,
-Rebel.Lucene,IndexConfiguration,0,1,1,0,1,8,1,0,0,-1,0,3,,Rebel.Lucene.IndexController' Rebel.Lucene.IndexReader' Rebel.Lucene.TransactionalIndexWorker
-Rebel.Lucene,IndexController,10,29,4,0,12,371,45,0,1,0.28,10,1,Rebel.Framework.Context.IFrameworkContext' Rebel.Lucene.IndexConfiguration' Rebel.Lucene.IndexModificationQueue' Rebel.Lucene.TransactionalIndexWorker' Rebel.Lucene.IndexModificationBatch' Rebel.Framework.Diagnostics.LogHelper' Rebel.Framework.DisposableTimer' Rebel.Lucene.IndexReader' Rebel.Framework.AbstractScopedCache' Rebel.Framework.AbstractFinalizer,Rebel.Lucene.Caching.CacheProvider
-Rebel.Lucene,IndexModificationBatch,1,2,1,0,2,16,2,0,0,0,0,1,,Rebel.Lucene.IndexController
-Rebel.Lucene,IndexModificationQueue,1,0,1,0,0,8,0,0,0,-1,0,1,,Rebel.Lucene.IndexController
-Rebel.Lucene,IndexReader,2,3,1,0,2,31,3,0,1,1,1,2,Rebel.Lucene.IndexConfiguration,Rebel.Lucene.Caching.CacheProvider' Rebel.Lucene.IndexController
-Rebel.Lucene,TransactionalIndexWorker,2,9,1,0,8,93,12,0,1,0,2,1,Rebel.Lucene.IndexConfiguration' Rebel.Framework.Diagnostics.LogHelper,Rebel.Lucene.IndexController
+Rebel.Lucene.Caching,CacheProvider,5,11,1,0,5,167,29,0,2,0.18,2,0,Rebel.Lucene.Caching.DemandBuilder' Rebel.Lucene.IndexController,
+Rebel.Lucene.Caching,DemandBuilder,0,1,0,0,1,31,1,0,1,-1,2,1,Rebel.Lucene.IndexConfiguration' Rebel.Lucene.IndexController,Rebel.Lucene.Caching.CacheProvider
+Rebel.Lucene,IndexConfiguration,0,1,1,0,1,8,1,0,0,-1,0,4,,Rebel.Lucene.TransactionalIndexWorker' Rebel.Lucene.IndexReader' Rebel.Lucene.IndexController' Rebel.Lucene.Caching.DemandBuilder
+Rebel.Lucene,IndexController,10,29,4,0,12,371,56,0,1,0.28,5,2,Rebel.Lucene.IndexConfiguration' Rebel.Lucene.IndexModificationBatch' Rebel.Lucene.IndexModificationQueue' Rebel.Lucene.IndexReader' Rebel.Lucene.TransactionalIndexWorker,Rebel.Lucene.Caching.DemandBuilder' Rebel.Lucene.Caching.CacheProvider
+Rebel.Lucene,IndexModificationBatch,1,2,1,0,2,16,2,0,0,0,1,2,Rebel.Lucene.TransactionalIndexWorker,Rebel.Lucene.IndexModificationQueue' Rebel.Lucene.IndexController
+Rebel.Lucene,IndexModificationQueue,1,0,1,0,0,8,0,0,0,-1,1,1,Rebel.Lucene.IndexModificationBatch,Rebel.Lucene.IndexController
+Rebel.Lucene,IndexReader,2,3,1,0,2,31,3,0,1,1,1,1,Rebel.Lucene.IndexConfiguration,Rebel.Lucene.IndexController
+Rebel.Lucene,TransactionalIndexWorker,2,9,1,0,8,93,12,0,1,0,1,2,Rebel.Lucene.IndexConfiguration,Rebel.Lucene.IndexController' Rebel.Lucene.IndexModificationBatch

@@ -1,17 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-System.IO.FileSystem.Watcher.Polling.Properties,Strings,2,1,3,0,0,48,1,0,0,0,0,1,,System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,ChangeType,0,0,0,0,0,7,0,0,0,-1,0,3,,System.IO.FileSystem.FileChangeList' System.IO.FileSystem.Comparer' System.IO.FileSystem.FileChange
-System.IO.FileSystem,FileChangeList,3,7,2,0,2,64,9,0,0,0,3,1,System.IO.FileSystem.FileChange' System.IO.FileSystem.ChangeType' System.IO.FileSystem.Comparer,System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,Comparer,1,1,0,1,1,10,2,0,0,0,2,1,System.IO.FileSystem.FileChange' System.IO.FileSystem.ChangeType,System.IO.FileSystem.FileChangeList
-System.IO.FileSystem,FileState,5,2,1,4,2,22,2,0,0,0,0,3,,System.IO.FileSystem.PathToFileStateHashtable' System.IO.FileSystem.Enumerator' System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,FileChange,3,1,4,0,0,41,1,0,0,0,1,2,System.IO.FileSystem.ChangeType,System.IO.FileSystem.FileChangeList' System.IO.FileSystem.Comparer
-System.IO.FileSystem,DllImports,3,4,0,2,1,15,4,0,0,1,2,1,System.IO.FileSystem.FINDEX_INFO_LEVELS' System.IO.FileSystem.FINDEX_SEARCH_OPS,System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,FINDEX_INFO_LEVELS,0,0,0,0,0,5,0,0,0,-1,0,2,,System.IO.FileSystem.DllImports' System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,FINDEX_SEARCH_OPS,0,0,0,0,0,6,0,0,0,-1,0,2,,System.IO.FileSystem.DllImports' System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,WIN32_FIND_DATAW,12,0,3,12,0,43,0,0,0,-1,1,1,System.IO.FileSystem.FILETIME,System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,FILETIME,2,0,1,2,0,15,0,0,0,-1,0,1,,System.IO.FileSystem.WIN32_FIND_DATAW
-System.IO.FileSystem,PathToFileStateHashtable,5,17,2,0,7,284,52,0,0,0.24,4,2,System.IO.FileSystem.Bucket' System.IO.FileSystem.FileState' System.IO.FileSystem.FullPath' System.IO.FileSystem.Enumerator,System.IO.FileSystem.Enumerator' System.IO.FileSystem.PollingWatcher
-System.IO.FileSystem,Enumerator,2,2,1,0,2,24,2,0,0,0,2,1,System.IO.FileSystem.PathToFileStateHashtable' System.IO.FileSystem.FileState,System.IO.FileSystem.PathToFileStateHashtable
-System.IO.FileSystem,Bucket,2,2,1,2,2,17,3,0,0,0,1,1,System.IO.FileSystem.FullPath,System.IO.FileSystem.PathToFileStateHashtable
-System.IO.FileSystem,FullPath,2,1,0,2,1,9,1,0,0,0,0,2,,System.IO.FileSystem.PathToFileStateHashtable' System.IO.FileSystem.Bucket
-System.IO.FileSystem,PollingWatcher,10,12,1,2,4,228,39,0,0,0.17,8,0,System.IO.FileSystem.PathToFileStateHashtable' System.IO.FileSystem.Watcher.Polling.Properties.Strings' System.IO.FileSystem.FileChangeList' System.IO.FileSystem.WIN32_FIND_DATAW' System.IO.FileSystem.DllImports' System.IO.FileSystem.FINDEX_INFO_LEVELS' System.IO.FileSystem.FINDEX_SEARCH_OPS' System.IO.FileSystem.FileState,
+System.IO.FileSystem.Watcher.Polling.Properties,Strings,2,1,3,0,0,48,1,0,0,0,0,0,,
+System.IO,FileChange,0,1,3,0,0,13,1,0,0,-1,0,2,,System.IO.PollingFileSystemEventArgs' System.IO.FileChangeList
+System.IO,FileChangeList,3,7,1,0,2,63,9,0,0,0,2,2,System.IO.FileChange' System.IO.Comparer,System.IO.FileSystemChangeEnumerator' System.IO.PollingFileSystemWatcher
+System.IO,Comparer,1,1,0,1,1,10,2,0,0,0,0,1,,System.IO.FileChangeList
+System.IO,FileState,5,2,0,4,2,19,2,0,0,0,0,2,,System.IO.PollingFileSystemWatcher' System.IO.PathToFileStateHashtable
+System.IO,FileSystemChangeEnumerator,3,5,1,0,0,28,6,0,0,0,2,1,System.IO.FileChangeList' System.IO.PollingFileSystemWatcher,System.IO.PollingFileSystemWatcher
+System.IO,PathToFileStateHashtable,3,13,2,0,6,213,34,0,0,0.38,4,1,System.IO.FileState' System.IO.Enumerator' System.IO.Bucket' System.IO.FullPath,System.IO.PollingFileSystemWatcher
+System.IO,Enumerator,2,2,1,0,2,24,2,0,0,0,0,1,,System.IO.PathToFileStateHashtable
+System.IO,Bucket,2,2,1,2,2,18,3,0,0,0,0,1,,System.IO.PathToFileStateHashtable
+System.IO,FullPath,2,1,0,2,1,10,1,0,0,0,0,1,,System.IO.PathToFileStateHashtable
+System.IO,PollingFileSystemEventArgs,0,1,1,0,1,8,1,0,0,-1,1,1,System.IO.FileChange,System.IO.PollingFileSystemWatcher
+System.IO,PollingFileSystemWatcher,6,13,4,0,5,179,28,0,0,0.31,5,1,System.IO.FileChangeList' System.IO.FileState' System.IO.FileSystemChangeEnumerator' System.IO.PathToFileStateHashtable' System.IO.PollingFileSystemEventArgs,System.IO.FileSystemChangeEnumerator

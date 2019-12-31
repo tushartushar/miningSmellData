@@ -1,23 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Spring.Erlang.Connection,ConnectionFactoryUtils,1,1,0,0,1,25,2,0,0,0,2,1,Spring.Erlang.Connection.IConnection' Spring.Erlang.Connection.IConnectionFactory,Spring.Erlang.Core.ErlangTemplate
-Spring.Erlang.Connection,ConnectionParameters,2,3,0,0,3,31,3,0,0,0,0,0,,
-Spring.Erlang.Connection,DefaultConnection,1,5,0,0,5,29,5,0,1,0,0,2,,Spring.Erlang.Connection.SimpleConnectionFactory' Spring.Erlang.Connection.SingleConnectionFactory
-Spring.Erlang.Connection,IConnection,0,3,0,0,0,69,3,1,0,-1,0,5,,Spring.Erlang.Connection.ConnectionFactoryUtils' Spring.Erlang.Connection.SingleConnectionFactory' Spring.Erlang.Connection.SharedConnectionInvocationHandler' Spring.Erlang.Core.ErlangTemplate' Spring.Erlang.Support.ErlangAccessor
-Spring.Erlang.Connection,IConnectionFactory,0,1,0,0,0,8,1,2,0,-1,0,4,,Spring.Erlang.Connection.ConnectionFactoryUtils' Spring.Erlang.Core.ErlangTemplate' Spring.Erlang.Support.ErlangAccessor' Spring.Messaging.Amqp.Rabbit.Admin.RabbitBrokerAdmin
-Spring.Erlang.Connection,IConnectionProxy,0,1,0,0,0,8,1,1,1,-1,0,0,,
-Spring.Erlang.Connection,SimpleConnectionFactory,7,4,1,0,4,103,6,0,1,0,1,1,Spring.Erlang.Connection.DefaultConnection,Spring.Messaging.Amqp.Rabbit.Admin.RabbitBrokerAdmin
-Spring.Erlang.Connection,SingleConnectionFactory,10,11,1,0,7,230,14,0,1,0,2,1,Spring.Erlang.Connection.IConnection' Spring.Erlang.Connection.DefaultConnection,Spring.Messaging.Amqp.Rabbit.Admin.ErlangNetIntegrationTests
-Spring.Erlang.Connection,SharedConnectionInvocationHandler,1,2,0,0,2,43,3,0,0,0,1,0,Spring.Erlang.Connection.IConnection,
-Spring.Erlang,ErlangErrorRpcException,1,2,1,0,2,12,2,0,0,1,0,0,,
-Spring.Erlang,OtpIOException,0,2,0,0,2,10,2,0,0,-1,0,0,,
-Spring.Erlang,ErlangBadRpcException,1,2,1,0,2,12,2,0,0,1,0,0,,
+Spring.Erlang.Connection,ConnectionParameters,2,3,0,0,3,31,3,0,0,1,0,0,,
+Spring.Erlang.Connection,DefaultConnection,1,5,0,0,5,29,5,0,1,0.4,1,2,Spring.Erlang.Connection.IConnectionProxy,Spring.Erlang.Connection.SingleConnectionFactory' Spring.Erlang.Connection.SimpleConnectionFactory
+Spring.Erlang.Connection,IConnection,0,3,0,0,0,69,3,1,0,-1,0,8,,Spring.Erlang.Connection.IConnectionProxy' Spring.Erlang.Connection.SimpleConnectionFactory' Spring.Erlang.Support.ErlangAccessor' Spring.Erlang.Connection.ConnectionFactoryUtils' Spring.Erlang.Connection.IConnectionFactory' Spring.Erlang.Connection.SingleConnectionFactory' Spring.Erlang.Connection.SharedConnectionInvocationHandler' Spring.Erlang.Core.ErlangTemplate
+Spring.Erlang.Connection,IConnectionFactory,0,1,0,0,0,8,1,2,0,-1,1,5,Spring.Erlang.Connection.IConnection,Spring.Erlang.Connection.ConnectionFactoryUtils' Spring.Erlang.Connection.SimpleConnectionFactory' Spring.Erlang.Connection.SingleConnectionFactory' Spring.Erlang.Support.ErlangAccessor' Spring.Erlang.Core.ErlangTemplate
+Spring.Erlang.Connection,IConnectionProxy,0,1,0,0,0,8,1,1,1,-1,1,1,Spring.Erlang.Connection.IConnection,Spring.Erlang.Connection.DefaultConnection
+Spring.Erlang.Connection,SimpleConnectionFactory,7,4,1,0,4,103,6,0,1,0.75,4,0,Spring.Erlang.Connection.DefaultConnection' Spring.Erlang.Connection.IConnection' Spring.Erlang.Connection.IConnectionFactory' Spring.Erlang.OtpIOException,
+Spring.Erlang.Connection,SingleConnectionFactory,10,11,1,0,7,230,18,0,1,0.27,5,0,Spring.Erlang.Connection.DefaultConnection' Spring.Erlang.Connection.IConnection' Spring.Erlang.Connection.IConnectionFactory' Spring.Erlang.Connection.SharedConnectionInvocationHandler' Spring.Erlang.OtpIOException,
+Spring.Erlang.Connection,SharedConnectionInvocationHandler,1,2,0,0,2,43,6,0,0,1,1,1,Spring.Erlang.Connection.IConnection,Spring.Erlang.Connection.SingleConnectionFactory
+Spring.Erlang,ErlangErrorRpcException,1,2,1,0,2,12,2,0,0,1,0,1,,Spring.Erlang.Core.ErlangTemplate
+Spring.Erlang,OtpIOException,0,2,0,0,2,10,2,0,0,-1,0,2,,Spring.Erlang.Connection.SimpleConnectionFactory' Spring.Erlang.Connection.SingleConnectionFactory
+Spring.Erlang,ErlangBadRpcException,1,2,1,0,2,12,2,0,0,1,0,1,,Spring.Erlang.Core.ErlangTemplate
 Spring.Erlang,UncategorizedOtpException,0,2,0,0,2,9,2,0,0,-1,0,1,,Spring.Erlang.Support.ErlangUtils
-Spring.Erlang.Core,Application,3,2,3,0,2,42,2,0,0,0,0,0,,
-Spring.Erlang.Core,ErlangTemplate,1,9,1,0,8,133,13,0,1,0.22,5,2,Spring.Erlang.Support.Converter.IErlangConverter' Spring.Erlang.Connection.IConnectionFactory' Spring.Erlang.Connection.IConnection' Spring.Erlang.Connection.ConnectionFactoryUtils' Spring.Erlang.Support.ErlangUtils,Spring.Messaging.Amqp.Rabbit.Admin.RabbitBrokerAdmin' Spring.Messaging.Amqp.Rabbit.Admin.ErlangNetIntegrationTests
-Spring.Erlang.Core,IErlangOperations,0,6,0,0,0,39,6,1,0,-1,1,0,Spring.Erlang.Support.Converter.IErlangConverter,
-Spring.Erlang.Core,Node,1,2,1,0,2,19,2,0,0,0,0,1,,Spring.Messaging.Amqp.Rabbit.Admin.RabbitBrokerAdminLifecycleIntegrationTests
-Spring.Erlang.Support,ErlangAccessor,2,2,1,0,1,25,2,1,0,1,2,0,Spring.Erlang.Connection.IConnectionFactory' Spring.Erlang.Connection.IConnection,
+Spring.Erlang.Core,Application,3,2,3,0,2,42,2,0,0,1,0,0,,
+Spring.Erlang.Core,ErlangTemplate,1,9,1,0,8,133,15,0,1,0.22,10,0,Spring.Erlang.Connection.ConnectionFactoryUtils' Spring.Erlang.Connection.IConnection' Spring.Erlang.Connection.IConnectionFactory' Spring.Erlang.ErlangErrorRpcException' Spring.Erlang.ErlangBadRpcException' Spring.Erlang.Core.IErlangOperations' Spring.Erlang.Support.ErlangAccessor' Spring.Erlang.Support.ErlangUtils' Spring.Erlang.Support.Converter.IErlangConverter' Spring.Erlang.Support.Converter.SimpleErlangConverter,
+Spring.Erlang.Core,IErlangOperations,0,6,0,0,0,39,6,1,0,-1,1,1,Spring.Erlang.Support.Converter.IErlangConverter,Spring.Erlang.Core.ErlangTemplate
+Spring.Erlang.Core,Node,1,2,1,0,2,19,2,0,0,1,0,0,,
+Spring.Erlang.Support,ErlangAccessor,2,2,1,0,1,25,2,1,0,1,2,1,Spring.Erlang.Connection.IConnection' Spring.Erlang.Connection.IConnectionFactory,Spring.Erlang.Core.ErlangTemplate
 Spring.Erlang.Support,ErlangUtils,0,2,0,0,2,22,3,0,0,-1,1,1,Spring.Erlang.UncategorizedOtpException,Spring.Erlang.Core.ErlangTemplate
-Spring.Erlang.Support.Converter,ErlangConversionException,0,2,0,0,2,9,2,0,0,-1,0,0,,
-Spring.Erlang.Support.Converter,IErlangConverter,0,3,0,0,0,20,3,1,0,-1,0,3,,Spring.Erlang.Core.ErlangTemplate' Spring.Erlang.Core.IErlangOperations' Spring.Messaging.Amqp.Rabbit.Admin.RabbitControlErlangConverter
-Spring.Erlang.Support.Converter,SimpleErlangConverter,0,8,0,0,6,198,14,5,1,-1,0,1,,Spring.Messaging.Amqp.Rabbit.Admin.RabbitControlErlangConverter
+Spring.Erlang.Support.Converter,ErlangConversionException,0,2,0,0,2,9,2,0,0,-1,0,2,,Spring.Erlang.Support.Converter.IErlangConverter' Spring.Erlang.Support.Converter.SimpleErlangConverter
+Spring.Erlang.Support.Converter,IErlangConverter,0,3,0,0,0,20,3,1,0,-1,1,3,Spring.Erlang.Support.Converter.ErlangConversionException,Spring.Erlang.Core.IErlangOperations' Spring.Erlang.Support.Converter.SimpleErlangConverter' Spring.Erlang.Core.ErlangTemplate
+Spring.Erlang.Support.Converter,SimpleErlangConverter,0,8,0,0,6,198,35,5,1,-1,2,1,Spring.Erlang.Support.Converter.ErlangConversionException' Spring.Erlang.Support.Converter.IErlangConverter,Spring.Erlang.Core.ErlangTemplate

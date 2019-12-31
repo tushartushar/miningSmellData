@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Security.Composition,CompositionContextResolver,1,1,0,0,1,15,2,0,0,0,0,0,,
+Security.Composition,CompositionContextResolver,1,1,0,0,1,15,2,0,0,0,1,0,Security.FakeLoginManager,
 Security,CryptoHelper,1,5,1,0,4,75,7,0,0,0.6,0,1,,Security.User
-Security,FakeLoginManager,0,1,0,0,1,10,2,0,1,-1,2,0,Security.LoginManager' Security.UserPrincipal,
+Security,FakeLoginManager,0,1,0,0,1,10,2,0,1,-1,2,1,Security.LoginManager' Security.UserPrincipal,Security.Composition.CompositionContextResolver
 Security,LoginManager,0,2,0,0,2,23,6,1,0,-1,3,1,Security.SecurityEntities' Security.User' Security.UserPrincipal,Security.FakeLoginManager
-Security,SecurityDbContext,0,3,1,0,1,23,3,0,0,-1,0,1,,Security.SecurityDbInitializer
-Security,SecurityDbInitializer,0,1,0,0,0,9,1,0,0,-1,2,0,Security.User' Security.SecurityDbContext,
-Security,SecurityEntities,0,2,1,0,2,10,2,0,0,-1,0,1,,Security.LoginManager
-Security,User,0,4,3,0,3,57,4,0,0,-1,1,3,Security.CryptoHelper,DomainServices.SampleData.SecuritySampleDataProvider' Security.LoginManager' Security.SecurityDbInitializer
-Security,UserPrincipal,0,1,1,0,1,10,1,0,0,-1,0,3,,Security.FakeLoginManager' Security.LoginManager' Security.Messages.LoggedInMessage
-Security.Messages,LoggedInMessage,0,1,1,0,1,8,1,0,0,-1,1,2,Security.UserPrincipal,TempHire.ViewModels.ShellViewModel' TempHire.ViewModels.ShellViewModel
-Security.Messages,LoggedOutMessage,0,0,0,0,0,4,0,0,0,-1,0,2,,TempHire.ViewModels.ShellViewModel' TempHire.ViewModels.ShellViewModel
+Security,SecurityDbContext,0,3,1,0,1,23,3,0,0,-1,2,1,Security.SecurityDbInitializer' Security.User,Security.SecurityDbInitializer
+Security,SecurityDbInitializer,0,1,0,0,0,9,1,0,0,-1,2,1,Security.SecurityDbContext' Security.User,Security.SecurityDbContext
+Security,SecurityEntities,0,2,1,0,2,10,2,0,0,-1,1,1,Security.User,Security.LoginManager
+Security,User,0,4,3,0,3,57,4,0,0,-1,1,4,Security.CryptoHelper,Security.SecurityEntities' Security.LoginManager' Security.SecurityDbContext' Security.SecurityDbInitializer
+Security,UserPrincipal,0,1,1,0,1,10,1,0,0,-1,0,3,,Security.LoginManager' Security.FakeLoginManager' Security.Messages.LoggedInMessage
+Security.Messages,LoggedInMessage,0,1,1,0,1,8,1,0,0,-1,1,0,Security.UserPrincipal,
+Security.Messages,LoggedOutMessage,0,0,0,0,0,4,0,0,0,-1,0,0,,

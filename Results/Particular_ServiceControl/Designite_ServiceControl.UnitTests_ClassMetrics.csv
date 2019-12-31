@@ -1,0 +1,60 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+ServiceControl.UnitTests.API,APIApprovals,0,7,0,0,6,74,8,0,0,-1,0,0,,
+ServiceControl.UnitTests.Archiving,ArchiveGroupTests,0,1,0,0,1,52,1,0,0,-1,1,0,ServiceControl.UnitTests.Operations.FakeDomainEvents,
+ServiceControl.UnitTests.BodyStorage,BodyStorageEnricherTests,0,1,0,0,1,28,1,0,0,-1,1,0,ServiceControl.UnitTests.BodyStorage.FakeBodyStorage,
+ServiceControl.UnitTests.BodyStorage,FakeBodyStorage,0,2,1,0,2,13,2,0,1,-1,0,1,,ServiceControl.UnitTests.BodyStorage.BodyStorageEnricherTests
+ServiceControl.UnitTests.BodyStorage,RavenAttachmentsBodyStorageTests,0,1,0,0,1,18,1,0,0,-1,0,0,,
+ServiceControl.UnitTests.CompositeViews,FailedMessagesTests,1,3,0,0,3,68,3,0,0,0,0,0,,
+ServiceControl.UnitTests.CompositeViews,MessagesViewTests,1,7,0,0,7,220,7,0,0,0,0,0,,
+ServiceControl.UnitTests,EventHierarchy,0,1,0,0,1,13,1,0,0,-1,0,0,,
+ServiceControl.UnitTests,HeaderAssertions,0,2,0,0,2,13,2,0,0,-1,0,0,,
+ServiceControl.UnitTests.Expiration,ChunkerTests,0,3,0,0,3,63,3,0,0,-1,0,0,,
+ServiceControl.UnitTests.Expiration,ProcessedMessageExpirationTests,1,8,0,0,6,222,11,0,0,0,0,0,,
+ServiceControl.UnitTests.Expiration,RavenLastModifiedScope,1,2,0,0,2,13,2,0,0,0,0,1,,ServiceControl.UnitTests.Expiration.SagaAuditExpirationTests
+ServiceControl.UnitTests.Expiration,SagaAuditExpirationTests,0,7,0,0,5,167,9,0,0,-1,1,0,ServiceControl.UnitTests.Expiration.RavenLastModifiedScope,
+ServiceControl.UnitTests.ExternalIntegrations,MessageFailedConverterTests,0,7,0,0,7,129,7,0,0,-1,1,0,ServiceControl.UnitTests.ExternalIntegrations.FailedMessageBuilder,
+ServiceControl.UnitTests.ExternalIntegrations,FailedMessageBuilder,4,5,0,0,5,59,5,0,0,0.8,0,1,,ServiceControl.UnitTests.ExternalIntegrations.MessageFailedConverterTests
+ServiceControl.UnitTests.Operations,FakeDomainEvents,0,1,1,0,1,9,1,0,1,-1,0,3,,ServiceControl.UnitTests.Archiving.ArchiveGroupTests' ServiceControl.UnitTests.Recoverability.Retry_State_Tests' ServiceControl.UnitTests.Operations.RetryOperationTests
+ServiceControl.UnitTests.Operations,FailedAuditImportCustomCheckTests,0,2,0,0,2,33,2,0,0,-1,0,0,,
+ServiceControl.UnitTests.Operations,FailedErrorImportCustomCheckTests,0,2,0,0,2,33,2,0,0,-1,0,0,,
+ServiceControl.UnitTests.Operations,WatchdogTests,1,4,0,0,4,108,4,0,0,0,0,0,,
+ServiceControl.UnitTests.Operations,EndpointInstanceIdClassifierTests,0,2,0,0,2,28,2,0,0,-1,0,0,,
+ServiceControl.UnitTests.Operations,ExceptionTypeAndStackTraceFailureClassifierTest,0,11,0,0,9,113,11,0,0,-1,0,0,,
+ServiceControl.UnitTests.Operations,MessageTypeFailureClassifierTest,0,2,0,0,2,18,2,0,0,-1,0,0,,
+ServiceControl.UnitTests.Operations,RetryGroupEtagHelperTests,0,8,0,0,8,84,8,0,0,-1,0,0,,
+ServiceControl.UnitTests.Operations,RetryOperationProgressCalculatorTests,0,8,0,0,8,52,8,0,0,-1,0,0,,
+ServiceControl.UnitTests.Operations,RetryOperationTests,0,11,0,0,11,128,11,0,0,-1,1,0,ServiceControl.UnitTests.Operations.FakeDomainEvents,
+ServiceControl.UnitTests.Operations,ReturnToSenderDequeuerTests,0,6,0,0,5,134,6,0,0,-1,3,0,ServiceControl.UnitTests.Operations.FaultySender' ServiceControl.UnitTests.Operations.FakeSender' ServiceControl.UnitTests.Operations.FakeBodyStorage,
+ServiceControl.UnitTests.Operations,FaultySender,0,1,0,0,1,7,1,0,0,-1,0,1,,ServiceControl.UnitTests.Operations.ReturnToSenderDequeuerTests
+ServiceControl.UnitTests.Operations,FakeSender,0,1,2,0,1,13,1,0,0,-1,0,1,,ServiceControl.UnitTests.Operations.ReturnToSenderDequeuerTests
+ServiceControl.UnitTests.Operations,FakeBodyStorage,0,2,0,0,2,16,2,0,1,-1,0,1,,ServiceControl.UnitTests.Operations.ReturnToSenderDequeuerTests
+ServiceControl.UnitTests.Infrastructure.Extensions,NegotiatorExtensionsTests,0,12,0,0,11,104,15,0,0,-1,0,0,,
+ServiceControl.UnitTests.Infrastructure,PreventReindexing,0,1,0,0,1,14,1,0,0,-1,0,0,,
+ServiceControl.UnitTests.Infrastructure,SerializationTests,0,2,0,0,1,31,2,0,0,-1,2,0,ServiceControl.UnitTests.Infrastructure.DTO' ServiceControl.UnitTests.Infrastructure.DisposableCulture,
+ServiceControl.UnitTests.Infrastructure,DTO,0,0,1,0,0,4,0,0,0,-1,0,1,,ServiceControl.UnitTests.Infrastructure.SerializationTests
+ServiceControl.UnitTests.Infrastructure,DisposableCulture,2,2,0,0,2,17,2,0,0,0,0,1,,ServiceControl.UnitTests.Infrastructure.SerializationTests
+ServiceControl.UnitTests.Infrastructure,TransportMessageExtensionsTests,0,5,0,0,5,52,5,0,0,-1,0,0,,
+ServiceControl.UnitTests.Infrastructure.RavenDB,SubscriptionPersisterTests,1,4,0,0,4,43,4,0,0,0,1,0,ServiceControl.UnitTests.Infrastructure.RavenDB.SampleMessageType,
+ServiceControl.UnitTests.Infrastructure.RavenDB,SampleMessageType,0,0,0,0,0,3,0,0,0,-1,0,1,,ServiceControl.UnitTests.Infrastructure.RavenDB.SubscriptionPersisterTests
+ServiceControl.UnitTests.Infrastructure.Settings,SettingsTests,0,2,0,0,2,41,2,0,0,-1,1,0,ServiceControl.UnitTests.Infrastructure.Settings.RemoteInstanceSettingComparer,
+ServiceControl.UnitTests.Infrastructure.Settings,RemoteInstanceSettingComparer,0,1,0,0,1,7,1,0,0,-1,0,1,,ServiceControl.UnitTests.Infrastructure.Settings.SettingsTests
+ServiceControl.UnitTests.Recoverability,CorruptedReplyToHeaderStrategyTests,2,4,0,0,4,73,4,0,0,0,0,0,,
+ServiceControl.UnitTests.Recoverability,EditMessageTests,0,13,3,0,11,195,13,0,0,-1,1,0,ServiceControl.UnitTests.Recoverability.TestableUnicastDispatcher,
+ServiceControl.UnitTests.Recoverability,TestableUnicastDispatcher,0,1,1,0,1,9,1,0,0,-1,0,1,,ServiceControl.UnitTests.Recoverability.EditMessageTests
+ServiceControl.UnitTests.Recoverability,LockedHeaderModificationValidatorTests,3,6,0,0,6,55,6,0,0,0,0,0,,
+ServiceControl.UnitTests.Recoverability,Retry_State_Tests,0,8,0,0,6,222,9,0,0,-1,4,0,ServiceControl.UnitTests.Operations.FakeDomainEvents' ServiceControl.UnitTests.Recoverability.CustomRetryDocumentManager' ServiceControl.UnitTests.Recoverability.TestReturnToSenderDequeuer' ServiceControl.UnitTests.Recoverability.TestSender,
+ServiceControl.UnitTests.Recoverability,CustomRetryDocumentManager,1,2,0,0,2,18,3,0,1,1,0,1,,ServiceControl.UnitTests.Recoverability.Retry_State_Tests
+ServiceControl.UnitTests.Recoverability,TestReturnToSenderDequeuer,0,2,0,0,2,11,2,0,1,-1,0,1,,ServiceControl.UnitTests.Recoverability.Retry_State_Tests
+ServiceControl.UnitTests.Recoverability,TestSender,0,1,1,0,1,12,2,0,0,-1,0,1,,ServiceControl.UnitTests.Recoverability.Retry_State_Tests
+ServiceControl.UnitTests.RouteApi,RetryMessage_RoutesApiTest,3,5,0,0,5,135,5,0,0,0,3,0,ServiceControl.UnitTests.RouteApi.InterceptingHandler' ServiceControl.UnitTests.RouteApi.TestApi' ServiceControl.UnitTests.RouteApi.FakeController,
+ServiceControl.UnitTests.RouteApi,InterceptingHandler,1,2,0,0,1,12,2,0,0,1,0,1,,ServiceControl.UnitTests.RouteApi.RetryMessage_RoutesApiTest
+ServiceControl.UnitTests.RouteApi,TestApi,1,2,0,0,1,17,2,0,0,1,0,1,,ServiceControl.UnitTests.RouteApi.RetryMessage_RoutesApiTest
+ServiceControl.UnitTests.RouteApi,FakeController,0,0,0,0,0,3,0,0,0,-1,0,1,,ServiceControl.UnitTests.RouteApi.RetryMessage_RoutesApiTest
+ServiceControl.UnitTests.SagaAudit,SagaDetailsIndexTests,0,2,0,0,1,66,3,0,0,-1,0,0,,
+ServiceControl.UnitTests.SagaAudit,SagaListIndexTests,0,2,0,0,1,54,3,0,0,-1,0,0,,
+ServiceControl.UnitTests.SagaAudit,SagaRelationshipsEnricherTests,0,6,0,0,6,93,6,0,0,-1,0,0,,
+ServiceControl.UnitTests.ScatterGather,MessagesView_ScatterGather_DataFromBothInstances,0,5,0,0,4,32,5,0,1,-1,1,0,ServiceControl.UnitTests.ScatterGather.MessageView_ScatterGatherTest,
+ServiceControl.UnitTests.ScatterGather,MessagesView_ScatterGather_NoData,0,2,0,0,1,13,2,0,1,-1,1,0,ServiceControl.UnitTests.ScatterGather.MessageView_ScatterGatherTest,
+ServiceControl.UnitTests.ScatterGather,MessageViewComparerTests,12,7,0,0,6,143,9,0,0,0,0,0,,
+ServiceControl.UnitTests.ScatterGather,MessageView_ScatterGatherTest,6,7,1,0,1,57,9,2,0,0.29,1,2,ServiceControl.UnitTests.ScatterGather.TestApi,ServiceControl.UnitTests.ScatterGather.MessagesView_ScatterGather_NoData' ServiceControl.UnitTests.ScatterGather.MessagesView_ScatterGather_DataFromBothInstances
+ServiceControl.UnitTests.ScatterGather,TestApi,0,2,0,0,1,10,2,0,0,-1,0,1,,ServiceControl.UnitTests.ScatterGather.MessageView_ScatterGatherTest

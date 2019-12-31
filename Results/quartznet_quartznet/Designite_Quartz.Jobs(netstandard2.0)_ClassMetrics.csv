@@ -1,0 +1,14 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Quartz.Job,DirectoryScanJob,10,4,0,5,2,136,12,0,1,0,4,3,Quartz.Job.FileInfoComparer' Quartz.Job.DirectoryScanJobModel' Quartz.Job.IDirectoryScanListener' Quartz.Spi.IDirectoryProvider,Quartz.Spi.IDirectoryProvider' Quartz.Simpl.DefaultDirectoryProvider' Quartz.Job.DirectoryScanJobModel
+Quartz.Job,FileInfoComparer,0,2,0,0,2,11,2,0,0,-1,0,1,,Quartz.Job.DirectoryScanJob
+Quartz.Job,DirectoryScanJobModel,0,6,9,0,0,113,9,0,0,-1,4,1,Quartz.Job.DirectoryScanJob' Quartz.Job.IDirectoryScanListener' Quartz.Simpl.DefaultDirectoryProvider' Quartz.Spi.IDirectoryProvider,Quartz.Job.DirectoryScanJob
+Quartz.Job,FileScanJob,4,3,1,3,2,136,12,0,1,0.67,1,0,Quartz.Job.IFileScanListener,
+Quartz.Job,IDirectoryScanListener,0,2,0,0,0,11,2,0,0,-1,0,2,,Quartz.Job.DirectoryScanJob' Quartz.Job.DirectoryScanJobModel
+Quartz.Job,IFileScanListener,0,1,0,0,0,7,1,1,0,-1,0,1,,Quartz.Job.FileScanJob
+Quartz.Job,NativeJob,7,3,1,5,2,217,13,0,1,0.67,1,0,Quartz.Job.StreamConsumer,
+Quartz.Job,StreamConsumer,3,2,0,0,2,47,4,0,0,1,0,1,,Quartz.Job.NativeJob
+Quartz.Job,NoOpJob,0,1,0,0,1,10,1,0,1,-1,0,0,,
+Quartz.Job,SendMailJob,12,6,0,11,1,135,14,1,1,0,1,0,Quartz.Job.MailInfo,
+Quartz.Job,MailInfo,0,0,5,0,0,8,0,0,0,-1,0,1,,Quartz.Job.SendMailJob
+Quartz.Simpl,DefaultDirectoryProvider,0,1,0,0,1,28,4,0,1,-1,2,1,Quartz.Job.DirectoryScanJob' Quartz.Spi.IDirectoryProvider,Quartz.Job.DirectoryScanJobModel
+Quartz.Spi,IDirectoryProvider,0,1,0,0,0,9,1,1,0,-1,1,3,Quartz.Job.DirectoryScanJob,Quartz.Job.DirectoryScanJob' Quartz.Simpl.DefaultDirectoryProvider' Quartz.Job.DirectoryScanJobModel

@@ -1,23 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Learning.Web.App_Start,NinjectWebCommon,1,4,0,0,2,47,4,0,0,0.5,0,0,,
-Learning.Web.Controllers,BaseApiController,2,1,2,0,1,27,1,4,0,0,2,0,Learning.Data.ILearningRepository' Learning.Web.Models.ModelFactory,
-Learning.Web.Controllers,StudentsV2Controller,0,6,0,0,6,127,13,0,1,-1,3,0,Learning.Data.ILearningRepository' Learning.Data.Entities.Student' Learning.Web.Models.ModelFactory,
-Learning.Web.Controllers,CoursesController,0,6,0,0,6,133,15,0,1,-1,4,0,Learning.Data.ILearningRepository' Learning.Data.Entities.Subject' Learning.Data.Entities.Course' Learning.Web.Models.ModelFactory,
-Learning.Web.Controllers,EnrollmentsController,0,3,0,0,3,48,6,0,1,-1,3,0,Learning.Data.ILearningRepository' Learning.Data.Entities.Student' Learning.Web.Models.ModelFactory,
-Learning.Web.Controllers,StudentsController,0,6,0,0,6,130,13,0,1,-1,3,0,Learning.Data.ILearningRepository' Learning.Data.Entities.Student' Learning.Web.Models.ModelFactory,
-Learning.Web.Filters,ForceHttpsAttribute,0,1,0,0,1,25,3,0,0,-1,0,0,,
-Learning.Web.Filters,LearningAuthorizeAttribute,0,4,1,0,1,63,10,0,0,-1,1,0,Learning.Data.LearningRepository,
-Learning.Web,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,Learning.Web.WebApiConfig' Learning.Web.FilterConfig' Learning.Web.RouteConfig,
+Learning.Web.App_Start,NinjectWebCommon,1,4,0,0,2,47,4,0,0,0.5,1,0,Learning.Web.Services.NinjectWebApiFilterProvider,
+Learning.Web.Controllers,BaseApiController,2,1,2,0,1,27,1,4,0,0,1,4,Learning.Web.Models.ModelFactory,Learning.Web.Controllers.StudentsController' Learning.Web.Controllers.CoursesController' Learning.Web.Controllers.EnrollmentsController' Learning.Web.Controllers.StudentsV2Controller
+Learning.Web.Controllers,StudentsV2Controller,0,6,0,0,6,127,13,0,1,-1,3,0,Learning.Web.Controllers.BaseApiController' Learning.Web.Filters.LearningAuthorizeAttribute' Learning.Web.Models.StudentV2BaseModel,
+Learning.Web.Controllers,CoursesController,0,6,0,0,6,133,15,0,1,-1,3,0,Learning.Web.Controllers.BaseApiController' Learning.Web.Filters.ForceHttpsAttribute' Learning.Web.Models.CourseModel,
+Learning.Web.Controllers,EnrollmentsController,0,3,0,0,3,48,7,0,1,-1,3,0,Learning.Web.Controllers.BaseApiController' Learning.Web.Filters.LearningAuthorizeAttribute' Learning.Web.Models.StudentBaseModel,
+Learning.Web.Controllers,StudentsController,0,6,0,0,6,130,13,0,1,-1,3,0,Learning.Web.Controllers.BaseApiController' Learning.Web.Filters.LearningAuthorizeAttribute' Learning.Web.Models.StudentBaseModel,
+Learning.Web.Filters,ForceHttpsAttribute,0,1,0,0,1,25,3,0,0,-1,0,1,,Learning.Web.Controllers.CoursesController
+Learning.Web.Filters,LearningAuthorizeAttribute,0,4,1,0,1,63,10,0,0,-1,0,3,,Learning.Web.Controllers.StudentsController' Learning.Web.Controllers.EnrollmentsController' Learning.Web.Controllers.StudentsV2Controller
+Learning.Web,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,Learning.Web.FilterConfig' Learning.Web.RouteConfig' Learning.Web.WebApiConfig,
 Learning.Web,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,Learning.Web.MvcApplication
 Learning.Web,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,Learning.Web.MvcApplication
-Learning.Web,WebApiConfig,0,1,0,0,1,51,1,0,0,-1,0,1,,Learning.Web.MvcApplication
-Learning.Web.Models,StudentV2BaseModel,0,0,6,0,0,10,0,0,0,-1,0,1,,Learning.Web.Models.ModelFactory
-Learning.Web.Models,StudentBaseModel,0,0,6,0,0,10,0,1,0,-1,0,1,,Learning.Web.Models.ModelFactory
-Learning.Web.Models,CourseModel,0,0,7,0,0,10,0,0,0,-1,0,1,,Learning.Web.Models.ModelFactory
-Learning.Web.Models,EnrollmentModel,0,0,2,0,0,5,0,0,0,-1,0,1,,Learning.Web.Models.ModelFactory
-Learning.Web.Models,ModelFactory,2,9,0,0,9,112,9,0,0,0.33,13,5,Learning.Data.ILearningRepository' Learning.Data.Entities.Student' Learning.Web.Models.StudentModel' Learning.Web.Models.StudentBaseModel' Learning.Data.Entities.Course' Learning.Data.Entities.Enrollment' Learning.Web.Models.StudentV2BaseModel' Learning.Web.Models.CourseModel' Learning.Web.Models.EnrollmentModel' Learning.Data.Entities.Tutor' Learning.Web.Models.TutorModel' Learning.Data.Entities.Subject' Learning.Web.Models.SubjectModel,Learning.Web.Controllers.BaseApiController' Learning.Web.Controllers.StudentsV2Controller' Learning.Web.Controllers.CoursesController' Learning.Web.Controllers.EnrollmentsController' Learning.Web.Controllers.StudentsController
-Learning.Web.Models,StudentModel,0,0,5,0,0,8,0,0,1,-1,0,1,,Learning.Web.Models.ModelFactory
-Learning.Web.Models,SubjectModel,0,0,2,0,0,5,0,0,0,-1,0,1,,Learning.Web.Models.ModelFactory
-Learning.Web.Models,TutorModel,0,0,6,0,0,9,0,0,0,-1,0,1,,Learning.Web.Models.ModelFactory
-Learning.Web.Services,LearningControllerSelector,1,5,0,0,2,72,13,0,0,0.8,0,0,,
-Learning.Web.Services,NinjectWebApiFilterProvider,1,2,0,0,2,20,3,0,0,0,0,0,,
+Learning.Web,WebApiConfig,0,1,0,0,1,51,1,0,0,-1,1,1,Learning.Web.Services.LearningControllerSelector,Learning.Web.MvcApplication
+Learning.Web.Models,StudentV2BaseModel,0,0,6,0,0,10,0,0,0,-1,0,2,,Learning.Web.Controllers.StudentsV2Controller' Learning.Web.Models.ModelFactory
+Learning.Web.Models,StudentBaseModel,0,0,6,0,0,10,0,1,0,-1,0,4,,Learning.Web.Models.StudentModel' Learning.Web.Controllers.EnrollmentsController' Learning.Web.Controllers.StudentsController' Learning.Web.Models.ModelFactory
+Learning.Web.Models,CourseModel,0,0,7,0,0,10,0,0,0,-1,2,3,Learning.Web.Models.SubjectModel' Learning.Web.Models.TutorModel,Learning.Web.Models.EnrollmentModel' Learning.Web.Controllers.CoursesController' Learning.Web.Models.ModelFactory
+Learning.Web.Models,EnrollmentModel,0,0,2,0,0,5,0,0,0,-1,1,2,Learning.Web.Models.CourseModel,Learning.Web.Models.StudentModel' Learning.Web.Models.ModelFactory
+Learning.Web.Models,ModelFactory,2,9,0,0,9,112,9,0,0,0.33,7,1,Learning.Web.Models.StudentV2BaseModel' Learning.Web.Models.StudentBaseModel' Learning.Web.Models.CourseModel' Learning.Web.Models.EnrollmentModel' Learning.Web.Models.StudentModel' Learning.Web.Models.SubjectModel' Learning.Web.Models.TutorModel,Learning.Web.Controllers.BaseApiController
+Learning.Web.Models,StudentModel,0,0,5,0,0,8,0,0,1,-1,2,1,Learning.Web.Models.StudentBaseModel' Learning.Web.Models.EnrollmentModel,Learning.Web.Models.ModelFactory
+Learning.Web.Models,SubjectModel,0,0,2,0,0,5,0,0,0,-1,0,2,,Learning.Web.Models.CourseModel' Learning.Web.Models.ModelFactory
+Learning.Web.Models,TutorModel,0,0,6,0,0,9,0,0,0,-1,0,2,,Learning.Web.Models.CourseModel' Learning.Web.Models.ModelFactory
+Learning.Web.Services,LearningControllerSelector,1,5,0,0,2,72,13,0,0,0.8,0,1,,Learning.Web.WebApiConfig
+Learning.Web.Services,NinjectWebApiFilterProvider,1,2,0,0,2,20,3,0,0,0,0,1,,Learning.Web.App_Start.NinjectWebCommon

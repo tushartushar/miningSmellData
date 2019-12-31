@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Bank,Account,3,3,3,0,3,43,4,3,1,1,1,1,Bank.Customer,Bank.Bank
+Bank,Account,3,3,3,0,3,43,4,3,1,1,2,4,Bank.Customer' Bank.IDepositable,Bank.LoanAccount' Bank.MortgageAccount' Bank.DepositAccount' Bank.Bank
 Bank,Bank,1,4,0,0,4,33,5,0,0,0,1,1,Bank.Account,Bank.TestBank
-Bank,Company,0,1,0,0,1,7,1,0,1,-1,0,1,,Bank.MortgageAccount
-Bank,Customer,1,1,1,0,1,21,1,2,0,0,0,4,,Bank.Account' Bank.DepositAccount' Bank.LoanAccount' Bank.MortgageAccount
-Bank,DepositAccount,0,4,0,0,4,27,6,0,2,-1,1,0,Bank.Customer,
-Bank,IDepositable,0,1,0,0,0,4,1,1,0,-1,0,0,,
-Bank,IDrawable,0,1,0,0,0,4,1,1,0,-1,0,0,,
-Bank,Individual,0,1,0,0,1,7,1,0,1,-1,0,1,,Bank.LoanAccount
-Bank,LoanAccount,0,3,0,0,3,23,4,0,2,-1,2,0,Bank.Customer' Bank.Individual,
-Bank,MortgageAccount,0,3,0,0,3,36,5,0,2,-1,2,0,Bank.Customer' Bank.Company,
-Bank,TestBank,0,2,0,0,0,19,2,0,0,-1,1,0,Bank.Bank,
+Bank,Company,0,1,0,0,1,7,1,0,1,-1,1,2,Bank.Customer,Bank.MortgageAccount' Bank.TestBank
+Bank,Customer,1,1,1,0,1,21,1,2,0,0,0,6,,Bank.LoanAccount' Bank.DepositAccount' Bank.MortgageAccount' Bank.Individual' Bank.Company' Bank.Account
+Bank,DepositAccount,0,4,0,0,4,27,6,0,2,-1,3,1,Bank.Account' Bank.Customer' Bank.IDrawable,Bank.TestBank
+Bank,IDepositable,0,1,0,0,0,4,1,1,0,-1,0,1,,Bank.Account
+Bank,IDrawable,0,1,0,0,0,4,1,1,0,-1,0,1,,Bank.DepositAccount
+Bank,Individual,0,1,0,0,1,7,1,0,1,-1,1,2,Bank.Customer,Bank.LoanAccount' Bank.TestBank
+Bank,LoanAccount,0,3,0,0,3,23,4,0,2,-1,3,1,Bank.Account' Bank.Customer' Bank.Individual,Bank.TestBank
+Bank,MortgageAccount,0,3,0,0,3,36,6,0,2,-1,3,1,Bank.Account' Bank.Company' Bank.Customer,Bank.TestBank
+Bank,TestBank,0,2,0,0,0,19,2,0,0,-1,6,0,Bank.Bank' Bank.Company' Bank.DepositAccount' Bank.Individual' Bank.LoanAccount' Bank.MortgageAccount,

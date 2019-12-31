@@ -1,6 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SuperSocket.Channel,ChannelBase,1,4,0,0,3,16,4,1,1,1,0,1,,SuperSocket.Channel.SocketChannelBase
-SuperSocket.Channel,IChannel,0,3,0,0,0,7,3,1,0,-1,0,0,,
-SuperSocket.Channel,SocketChannelBase,0,2,1,0,1,13,2,1,2,-1,1,0,SuperSocket.Channel.ChannelBase,
-SuperSocket.Channel,SocketState,0,0,0,0,0,6,0,0,0,-1,0,1,,SuperSocket.Channel.TcpSocketChannel
-SuperSocket.Channel,TcpSocketChannel,0,4,3,0,4,33,6,0,3,-1,1,0,SuperSocket.Channel.SocketState,
+SuperSocket.Channel,ChannelBase<TPackageInfo>,0,5,1,0,4,14,5,0,1,-1,1,1,SuperSocket.Channel.IChannel,SuperSocket.Channel.PipeChannel<TPackageInfo>
+SuperSocket.Channel,ChannelOptions,0,0,5,0,0,12,0,1,0,-1,0,4,,SuperSocket.Channel.StreamPipeChannel<TPackageInfo>' SuperSocket.Channel.TcpPipeChannel<TPackageInfo>' SuperSocket.Channel.RelayPipeChannel<TPackageInfo>' SuperSocket.Channel.PipeChannel<TPackageInfo>
+SuperSocket.Channel,DefaultObjectPipe<T>,10,11,0,0,3,165,23,0,1,0.18,2,1,SuperSocket.Channel.BufferSegment' SuperSocket.Channel.IObjectPipe,SuperSocket.Channel.PipeChannel<TPackageInfo>
+SuperSocket.Channel,BufferSegment,0,2,5,0,2,19,2,0,0,-1,0,1,,SuperSocket.Channel.DefaultObjectPipe<T>
+SuperSocket.Channel,IChannel,0,4,1,0,0,10,4,2,0,-1,0,2,,SuperSocket.Channel.ChannelBase<TPackageInfo>' SuperSocket.Channel.PipeChannel<TPackageInfo>
+SuperSocket.Channel,IObjectPipe,0,2,0,0,0,10,2,1,0,-1,0,2,,SuperSocket.Channel.PipeChannel<TPackageInfo>' SuperSocket.Channel.DefaultObjectPipe<T>
+SuperSocket.Channel,IPipeChannel,0,0,3,0,0,6,0,1,0,-1,0,1,,SuperSocket.Channel.PipeChannel<TPackageInfo>
+SuperSocket.Channel,PipeChannel<TPackageInfo>,2,17,7,0,3,282,40,0,1,0.82,6,3,SuperSocket.Channel.ChannelBase<TPackageInfo>' SuperSocket.Channel.ChannelOptions' SuperSocket.Channel.DefaultObjectPipe<T>' SuperSocket.Channel.IChannel' SuperSocket.Channel.IObjectPipe' SuperSocket.Channel.IPipeChannel,SuperSocket.Channel.StreamPipeChannel<TPackageInfo>' SuperSocket.Channel.RelayPipeChannel<TPackageInfo>' SuperSocket.Channel.TcpPipeChannel<TPackageInfo>
+SuperSocket.Channel,RelayPipeChannel<TPackageInfo>,0,5,0,0,2,37,8,0,0,-1,2,0,SuperSocket.Channel.ChannelOptions' SuperSocket.Channel.PipeChannel<TPackageInfo>,
+SuperSocket.Channel,StreamPipeChannel<TPackageInfo>,1,5,0,0,2,35,6,0,0,0,2,0,SuperSocket.Channel.ChannelOptions' SuperSocket.Channel.PipeChannel<TPackageInfo>,
+SuperSocket.Channel,TcpPipeChannel<TPackageInfo>,2,6,0,0,2,65,11,0,0,0.33,2,0,SuperSocket.Channel.ChannelOptions' SuperSocket.Channel.PipeChannel<TPackageInfo>,

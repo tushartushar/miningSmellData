@@ -1,0 +1,63 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+System.Reactive,OccurenceTimeAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
+System.Reactive,TypeStatisticsAttribute,1,1,1,0,1,16,1,0,0,0,0,0,,
+System.Reactive,FileParserAttribute,2,1,2,0,1,22,1,0,0,0,0,1,,System.Reactive.PlaybackConfigurationExtensions
+System.Reactive,RealTimeFeedAttribute,2,1,2,0,1,22,1,0,0,0,0,0,,
+System.Reactive,DeserializerAttribute,1,1,1,0,1,15,1,0,0,0,0,0,,
+System.Reactive,ByteArrayExtensions,0,1,0,0,1,70,10,0,0,-1,0,0,,
+System.Reactive,CompositeDeserializer<TInput>,2,6,2,0,6,121,16,0,1,0,7,2,System.Reactive.IDeserializer' System.Reactive.ITypeMap' System.Reactive.IRootTypeMap' System.Reactive.IPartitionableTypeMap' System.Reactive.PartitionKeyDeserializer<TInput;TKey>' System.Reactive.RootDeserializer<TInput;TOutputBase>' System.Reactive.TransformDeserializer<TInput>,System.Reactive.PlaybackBase' System.Reactive.PlaybackConfigurationExtensions
+System.Reactive,CsvExtensions,0,2,0,0,2,135,2,0,0,-1,1,0,System.Reactive.TextFileWriter<T>,
+System.Reactive,TextFileWriter<T>,3,8,0,0,5,122,20,0,0,0.25,0,1,,System.Reactive.CsvExtensions
+System.Reactive,CsvObservable,2,5,0,0,3,117,15,0,0,0.6,1,1,System.Reactive.Record,System.Reactive.PlaybackConfigurationExtensions
+System.Reactive,StringBuilderExtensions,0,3,0,0,3,40,7,0,0,-1,0,0,,
+System.Reactive,Record,0,2,2,0,2,16,2,0,0,-1,0,3,,System.Reactive.PlaybackConfigurationExtensions' System.Reactive.CsvObservable' System.Reactive.CsvRecordTypeMap
+System.Reactive,CsvRecordTypeMap,2,5,3,0,3,79,9,0,1,0.4,2,0,System.Reactive.Record' System.Reactive.IPartitionableTypeMap,
+System.Reactive,Demultiplexor,2,6,0,0,4,148,14,0,0,0.33,1,1,System.Reactive.OutputSubject<T>,System.Reactive.PlaybackBase
+System.Reactive,OutputSubject<T>,2,6,0,0,6,53,6,0,0,0,0,1,,System.Reactive.Demultiplexor
+System.Reactive,Envelope,0,1,7,0,1,86,1,1,1,-1,1,0,System.Reactive.IEnvelope,
+System.Reactive,IDeserializer,0,2,0,0,0,7,2,4,0,-1,0,5,,System.Reactive.PlaybackBase' System.Reactive.CompositeDeserializer<TInput>' System.Reactive.PartitionKeyDeserializer<TInput;TKey>' System.Reactive.TransformDeserializer<TInput>' System.Reactive.RootDeserializer<TInput;TOutputBase>
+System.Reactive,IEnvelope,0,0,7,0,0,58,0,5,0,-1,0,3,,System.Reactive.Envelope' Tx.Core.PassthroughTransformBuilder' System.Reactive.EnvelopeTypeMap
+System.Reactive,BufferQueue<T>,3,7,2,0,6,71,8,0,0,0.29,0,1,,System.Reactive.PlaybackBase
+System.Reactive,OutputPump<T>,5,3,0,0,2,63,5,0,0,0,0,1,,System.Reactive.PlaybackBase
+System.Reactive,TypeOccurenceAggregator,2,0,3,0,0,17,0,1,0,-1,0,2,,System.Reactive.TypeOccurenceAggregator<TInput;TKey>' System.Reactive.TypeOccurenceStatistics
+System.Reactive,TypeOccurenceAggregator<TInput;TKey>,3,4,1,0,4,81,9,0,1,0.5,3,1,System.Reactive.TypeOccurenceAggregator' System.Reactive.OccurenceRecord' System.Reactive.IPartitionableTypeMap,System.Reactive.TypeOccurenceStatistics
+System.Reactive,OccurenceRecord,2,0,0,2,0,5,0,0,0,-1,0,1,,System.Reactive.TypeOccurenceAggregator<TInput;TKey>
+System.Reactive,IObservableDemultiplexor,0,1,0,0,0,8,1,1,0,-1,0,1,,System.Reactive.IPlayback
+System.Reactive,IPlayback,0,2,1,0,0,8,2,1,1,-1,2,1,System.Reactive.IObservableDemultiplexor' System.Reactive.IPlaybackConfiguration,System.Reactive.Playback
+System.Reactive,IPlaybackConfiguration,0,2,0,0,0,10,2,3,0,-1,1,4,System.Reactive.ITypeMap,System.Reactive.IPlayback' System.Reactive.TypeOccurenceStatistics' System.Reactive.PlaybackConfigurationExtensions' System.Reactive.PlaybackBase
+System.Reactive,ITypeMap,0,1,1,0,0,5,1,7,0,-1,0,10,,System.Reactive.RootDeserializer<TInput;TOutputBase>' System.Reactive.PlaybackConfigurationExtensions' System.Reactive.TransformDeserializer<TInput>' System.Reactive.IRootTypeMap' System.Reactive.IPartitionableTypeMap' System.Reactive.IPlaybackConfiguration' System.Reactive.SingleTypeMap<T>' System.Reactive.PlaybackBase' System.Reactive.TypeOccurenceStatistics' System.Reactive.CompositeDeserializer<TInput>
+System.Reactive,IRootTypeMap,0,0,0,0,0,3,0,2,1,-1,1,3,System.Reactive.ITypeMap,System.Reactive.TypeOccurenceStatistics' System.Reactive.PlaybackBase' System.Reactive.CompositeDeserializer<TInput>
+System.Reactive,IPartitionableTypeMap,0,2,1,0,0,6,2,14,1,-1,1,10,System.Reactive.ITypeMap,System.Reactive.CsvRecordTypeMap' System.Reactive.PlaybackBase' System.Reactive.PartitionKeyDeserializer<TInput;TKey>' System.Reactive.PlaybackConfigurationExtensions' System.Reactive.TypeOccurenceAggregator<TInput;TKey>' System.Reactive.PartitionableContravariantTypeMap' System.Reactive.TimestampedTypeMap<T>' System.Reactive.EnvelopeTypeMap' System.Reactive.TypeOccurenceStatistics' System.Reactive.CompositeDeserializer<TInput>
+System.Reactive,TreeNode,0,0,4,0,0,7,0,0,0,-1,0,1,,System.Reactive.ITypeStatistics
+System.Reactive,ITypeStatistics,0,1,0,0,0,7,1,0,0,-1,1,0,System.Reactive.TreeNode,
+System.Reactive,NonDetachObservable<T>,1,2,0,0,2,14,2,0,0,0,0,0,,
+System.Reactive,PartitionKeyDeserializer<TInput;TKey>,4,3,0,0,3,64,9,0,1,0,2,1,System.Reactive.IDeserializer' System.Reactive.IPartitionableTypeMap,System.Reactive.CompositeDeserializer<TInput>
+System.Reactive,PlaybackBase,11,8,5,0,5,308,24,1,1,0,14,1,System.Reactive.CompositeDeserializer<TInput>' System.Reactive.Demultiplexor' System.Reactive.IDeserializer' System.Reactive.BufferQueue<T>' System.Reactive.OutputPump<T>' System.Reactive.IPlaybackConfiguration' System.Reactive.ITypeMap' System.Reactive.IRootTypeMap' System.Reactive.IPartitionableTypeMap' System.Reactive.IInputStream' System.Reactive.InputStream<TInput>' System.Reactive.PullMergeSort<T>' System.Reactive.ITimeSource' System.Reactive.TimeSource<T>,System.Reactive.Playback
+System.Reactive,IInputStream,0,4,3,0,0,13,4,1,0,-1,0,3,,System.Reactive.PlaybackBase' System.Reactive.Playback' System.Reactive.TypeOccurenceStatistics
+System.Reactive,InputStream<TInput>,6,7,3,0,7,78,8,0,1,0.29,0,2,,System.Reactive.PlaybackBase' System.Reactive.TypeOccurenceStatistics
+System.Reactive,Playback,0,1,0,0,1,16,2,0,2,-1,3,0,System.Reactive.IPlayback' System.Reactive.PlaybackBase' System.Reactive.IInputStream,
+System.Reactive,PlaybackConfigurationExtensions,0,4,0,0,4,167,16,0,0,-1,8,0,System.Reactive.FileParserAttribute' System.Reactive.CompositeDeserializer<TInput>' System.Reactive.CsvObservable' System.Reactive.Record' System.Reactive.IPlaybackConfiguration' System.Reactive.ITypeMap' System.Reactive.IPartitionableTypeMap' System.Reactive.PartitionableTypeMap<T>,
+System.Reactive,PartitionableTypeMap<T>,0,3,2,0,3,33,3,0,2,-1,0,1,,System.Reactive.PlaybackConfigurationExtensions
+System.Reactive,PullMergeSort<T>,2,3,0,0,2,154,3,0,0,0.67,2,1,System.Reactive.Enumerator' System.Reactive.Reader,System.Reactive.PlaybackBase
+System.Reactive,Enumerator,4,5,2,0,4,93,14,0,0,0.4,0,1,,System.Reactive.PullMergeSort<T>
+System.Reactive,Reader,2,3,2,0,3,30,3,0,0,0,0,1,,System.Reactive.PullMergeSort<T>
+System.Reactive,RootDeserializer<TInput;TOutputBase>,3,3,0,0,3,35,5,0,1,0,2,1,System.Reactive.IDeserializer' System.Reactive.ITypeMap,System.Reactive.CompositeDeserializer<TInput>
+System.Reactive,StringExtensions,0,1,0,0,1,21,2,0,0,-1,0,0,,
+System.Reactive,ITimeSource,0,0,1,0,0,4,0,2,0,-1,0,2,,System.Reactive.PlaybackBase' System.Reactive.TimeSource<T>
+System.Reactive,TimeSource<T>,5,7,3,0,4,224,11,0,1,0,4,1,System.Reactive.ITimeSource' System.Reactive.TimeSegmentScheduler' System.Reactive.IPostponedWorkItem' System.Reactive.PostponedWorkItem<TState>,System.Reactive.PlaybackBase
+System.Reactive,TimeSegmentScheduler,3,7,1,1,7,132,10,0,0,0.29,0,1,,System.Reactive.TimeSource<T>
+System.Reactive,IPostponedWorkItem,0,1,0,0,0,4,1,1,0,-1,0,1,,System.Reactive.TimeSource<T>
+System.Reactive,PostponedWorkItem<TState>,6,4,0,0,4,57,7,0,1,0,0,1,,System.Reactive.TimeSource<T>
+System.Reactive,TransformDeserializer<TInput>,3,3,0,0,3,37,5,0,1,0,2,1,System.Reactive.IDeserializer' System.Reactive.ITypeMap,System.Reactive.CompositeDeserializer<TInput>
+System.Reactive,TypeIdentifierHelpers,1,4,0,0,4,102,7,0,0,1,0,0,,
+System.Reactive,EnvelopeTypeMap,4,8,2,0,4,124,12,1,2,0.88,2,0,System.Reactive.IEnvelope' System.Reactive.IPartitionableTypeMap,
+System.Reactive,LambdaTypeMap<T>,1,1,1,0,1,22,2,0,0,0,1,0,System.Reactive.SingleTypeMap<T>,
+System.Reactive,PartitionableContravariantTypeMap,1,5,2,0,3,56,7,0,2,1,1,0,System.Reactive.IPartitionableTypeMap,
+System.Reactive,SingleTypeMap<T>,0,1,1,0,1,16,2,0,1,-1,1,2,System.Reactive.ITypeMap,System.Reactive.SystemClockTypeMap<T>' System.Reactive.LambdaTypeMap<T>
+System.Reactive,SystemClockTypeMap<T>,0,1,1,0,0,15,1,0,0,-1,1,0,System.Reactive.SingleTypeMap<T>,
+System.Reactive,TimestampedTypeMap<T>,0,3,2,0,3,33,3,0,2,-1,1,0,System.Reactive.IPartitionableTypeMap,
+System.Reactive,TypeOccurenceStatistics,4,4,1,0,4,120,15,0,1,0.5,8,0,System.Reactive.TypeOccurenceAggregator' System.Reactive.TypeOccurenceAggregator<TInput;TKey>' System.Reactive.IPlaybackConfiguration' System.Reactive.ITypeMap' System.Reactive.IRootTypeMap' System.Reactive.IPartitionableTypeMap' System.Reactive.IInputStream' System.Reactive.InputStream<TInput>,
+Tx.Core,Converter<TIn;TOut>,3,6,0,0,5,89,13,0,0,0.5,1,0,Tx.Core.ITransformBuilder,
+Tx.Core,E,0,1,0,0,1,12,1,0,0,-1,1,0,Tx.Core.ITransformBuilder,
+Tx.Core,ITransformBuilder,0,1,0,0,0,4,1,3,0,-1,0,3,,Tx.Core.PassthroughTransformBuilder' Tx.Core.Converter<TIn;TOut>' Tx.Core.E
+Tx.Core,PassthroughTransformBuilder,0,2,0,0,1,17,3,0,1,-1,2,0,System.Reactive.IEnvelope' Tx.Core.ITransformBuilder,

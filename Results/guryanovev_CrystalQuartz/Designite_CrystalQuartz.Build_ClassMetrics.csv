@@ -1,6 +1,11 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-CrystalQuartz.Build.Common,SolutionStructure,1,1,5,0,1,28,1,0,0,0,0,2,,CrystalQuartz.Build.Tasks.GenerateNuspecsTask' CrystalQuartz.Build.Tasks.MergeBinariesTask
-CrystalQuartz.Build.Extensions,SpecInputExtensions,0,1,0,0,1,20,1,0,0,-1,0,0,,
-CrystalQuartz.Build,MainWorkflow,0,1,0,0,0,118,1,0,0,-1,1,0,CrystalQuartz.Build.Tasks.MergeBinariesTask,
-CrystalQuartz.Build.Tasks,GenerateNuspecsTask,3,2,1,0,1,53,2,0,0,0,1,0,CrystalQuartz.Build.Common.SolutionStructure,
-CrystalQuartz.Build.Tasks,MergeBinariesTask,4,3,1,0,1,57,3,0,0,0,1,1,CrystalQuartz.Build.Common.SolutionStructure,CrystalQuartz.Build.MainWorkflow
+CrystalQuartz.Build.Common,SolutionStructure,1,1,7,0,1,36,1,0,0,0,0,5,,CrystalQuartz.Build.Tasks.MergeBinariesTask' CrystalQuartz.Build.Tasks.CompileDocsTask' CrystalQuartz.Build.Tasks.CompileClientAssets' CrystalQuartz.Build.Tasks.GenerateNuspecsTask' CrystalQuartz.Build.MainWorkflow
+CrystalQuartz.Build.Extensions,TargetedFile,2,1,2,0,1,18,1,0,0,0,0,2,,CrystalQuartz.Build.Extensions.SpecInputExtensions' CrystalQuartz.Build.Tasks.GenerateNuspecsTask
+CrystalQuartz.Build.Extensions,SpecInputExtensions,0,1,0,0,1,20,1,0,0,-1,1,0,CrystalQuartz.Build.Extensions.TargetedFile,
+CrystalQuartz.Build.Helpers,NpmExtensions,0,1,0,0,1,23,1,0,0,-1,0,0,,
+CrystalQuartz.Build,MainWorkflow,0,1,0,0,0,182,1,0,0,-1,6,0,CrystalQuartz.Build.Common.SolutionStructure' CrystalQuartz.Build.CustomMsBuildTask' CrystalQuartz.Build.Tasks.CompileClientAssets' CrystalQuartz.Build.Tasks.CompileDocsTask' CrystalQuartz.Build.Tasks.GenerateNuspecsTask' CrystalQuartz.Build.Tasks.MergeBinariesTask,
+CrystalQuartz.Build,CustomMsBuildTask,0,1,0,0,0,11,2,0,0,-1,0,1,,CrystalQuartz.Build.MainWorkflow
+CrystalQuartz.Build.Tasks,CompileClientAssets,2,2,1,0,1,28,2,0,0,0,1,1,CrystalQuartz.Build.Common.SolutionStructure,CrystalQuartz.Build.MainWorkflow
+CrystalQuartz.Build.Tasks,CompileDocsTask,2,2,1,0,1,30,2,0,0,0,1,1,CrystalQuartz.Build.Common.SolutionStructure,CrystalQuartz.Build.MainWorkflow
+CrystalQuartz.Build.Tasks,GenerateNuspecsTask,4,2,1,0,1,77,2,0,0,0,2,1,CrystalQuartz.Build.Common.SolutionStructure' CrystalQuartz.Build.Extensions.TargetedFile,CrystalQuartz.Build.MainWorkflow
+CrystalQuartz.Build.Tasks,MergeBinariesTask,9,3,1,0,1,142,3,0,0,0,1,1,CrystalQuartz.Build.Common.SolutionStructure,CrystalQuartz.Build.MainWorkflow

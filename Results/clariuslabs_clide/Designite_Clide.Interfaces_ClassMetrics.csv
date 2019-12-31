@@ -1,41 +1,73 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Clide.Events,ShellInitialized,0,0,0,0,0,3,0,0,0,-1,0,2,,Clide.Events.ShellInitializedObservable' Clide.Events.ShellInitializedObservableSpec
-Clide,IProjectContainerNode,0,1,0,0,0,4,1,1,0,-1,0,0,,
-Clide,IRemovableNode,0,1,0,0,0,7,1,1,0,-1,0,0,,
-Clide,SolutionExtensions,0,11,0,0,11,33,11,0,0,-1,5,0,Clide.IItemNode' Clide.ISolutionNode' Clide.IReferencesNode' Clide.IProjectNode' Clide.IFolderNode,
-Clide,MissingDependencyException,0,3,0,0,2,37,3,0,0,-1,0,0,,
-Clide,FallbackServiceProvider,2,2,0,0,2,26,2,0,0,0,0,0,,
-Clide,IDevEnv,0,0,0,0,0,3,0,0,0,-1,0,0,,
-Clide,ServiceProvider,3,0,1,0,0,48,0,0,0,-1,1,1,Clide.VsServiceProvider,Clide.ServiceLocator
-Clide,DteServiceProvider,1,2,0,0,1,28,5,0,0,1,2,0,Clide.Interop.RunningObjects' Clide.NullServiceProvider,
-Clide,NullServiceProvider,0,1,0,0,1,7,1,0,0,-1,0,1,,Clide.DteServiceProvider
+Clide,Awaitable,0,1,0,0,1,7,1,0,0,-1,1,0,Clide.Awaitable<T>,
+Clide,Awaitable<T>,1,5,0,0,5,29,5,0,0,1,0,3,,Clide.Awaitable' Clide.IProjectConfiguration' Clide.ISolutionExplorer
+Clide,CommandAttribute,0,1,4,0,1,42,1,0,0,-1,1,0,Clide.ICommandExtension,
+Clide,ICommandExtension,0,2,1,0,0,15,2,0,0,-1,1,2,Clide.IMenuCommand,Clide.IMenuCommand' Clide.CommandAttribute
+Clide,ICommandRegistrar,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Clide,IMenuCommand,0,0,4,0,0,19,0,1,0,-1,1,1,Clide.ICommandExtension,Clide.ICommandExtension
+Clide,DevEnv,0,2,0,0,2,10,2,0,0,-1,2,0,Clide.IDevEnv' Clide.ServiceProvider,
+Clide,DevEnvInfo,0,0,10,0,0,43,0,0,0,-1,0,1,,Clide.IDevEnv
+Clide,DialogCreated,0,1,1,0,1,8,1,0,0,-1,1,0,Clide.IDialogWindow,
+Clide,IOutputWindowManagerExtensions,0,2,0,0,2,31,2,0,0,-1,1,0,Clide.IOutputWindowManager,
+Clide,ITreeNodeExtensions,0,2,0,0,2,26,2,0,0,-1,1,0,Clide.ISolutionExplorerNode,
+Clide,MissingDependencyException,0,3,0,0,2,37,3,0,0,-1,0,1,,Clide.IServiceLocator
+Clide,FallbackServiceProvider,2,2,0,0,2,26,2,0,0,1,0,1,,Clide.ServiceProvider
+Clide,FlavoredProject,0,1,2,0,1,10,1,0,0,-1,0,0,,
+Clide,Guard,0,4,0,0,4,51,8,0,0,-1,0,0,,
+Clide,IAdaptable,0,1,0,0,0,9,1,1,0,-1,0,1,,Clide.IAdapterService
+Clide,IAdapterService,0,1,0,0,0,8,1,1,0,-1,1,0,Clide.IAdaptable,
+Clide,IDevEnv,0,2,8,0,0,47,2,1,0,-1,7,1,Clide.DevEnvInfo' Clide.IDialogWindowFactory' Clide.IErrorsManager' Clide.IMessageBoxService' Clide.IOutputWindowManager' Clide.IServiceLocator' Clide.IStatusBar,Clide.DevEnv
+Clide,IDialogWindow,0,2,2,0,0,20,2,0,0,-1,0,2,,Clide.DialogCreated' Clide.IDialogWindowFactory
+Clide,IDialogWindowFactory,0,1,0,0,0,11,1,1,0,-1,1,1,Clide.IDialogWindow,Clide.IDevEnv
+Clide,IErrorItem,0,1,0,0,0,7,1,2,0,-1,0,1,,Clide.IErrorsManager
+Clide,IErrorsManager,0,4,0,0,0,19,4,2,0,-1,1,1,Clide.IErrorItem,Clide.IDevEnv
+Clide,IMessageBoxService,0,2,0,0,0,17,2,1,0,-1,1,2,Clide.MessageBoxServiceDefaults,Clide.IDevEnv' Clide.IMessageBoxServiceExtensions
+Clide,MessageBoxServiceDefaults,4,0,0,4,0,7,0,0,0,-1,0,1,,Clide.IMessageBoxService
+Clide,IMessageBoxServiceExtensions,0,2,0,0,2,17,2,0,0,-1,1,0,Clide.IMessageBoxService,
+Clide,IOutputWindowManager,0,1,0,0,0,10,1,1,0,-1,0,2,,Clide.IDevEnv' Clide.IOutputWindowManagerExtensions
+Clide,IServiceLocator,0,4,0,0,0,45,4,1,0,-1,1,3,Clide.MissingDependencyException,Clide.IDevEnv' Clide.IServiceLocatorProvider' Clide.ServiceLocator
+Clide,IServiceLocatorProvider,0,5,0,0,0,8,5,1,0,-1,1,0,Clide.IServiceLocator,
+Clide,ISettings,0,1,0,0,0,12,1,1,0,-1,0,1,,Clide.Settings
+Clide,ISettingsManager,0,2,0,0,0,13,2,1,0,-1,0,1,,Clide.Settings
+Clide,IStatusBar,0,3,0,0,0,19,3,1,0,-1,0,1,,Clide.IDevEnv
+Clide,IToolWindow,0,2,1,0,0,15,2,1,0,-1,0,1,,Clide.ISolutionExplorer
+Clide,JoinableLazy,0,1,0,0,1,5,1,0,0,-1,1,0,Clide.JoinableLazy<T>,
+Clide,JoinableLazy<T>,3,9,1,0,8,107,9,0,0,0.33,0,1,,Clide.JoinableLazy
+Clide,OleServiceProvider,1,4,0,0,3,43,7,0,0,1,1,1,Clide.Interop.NativeMethods,Clide.ServiceProvider
+Clide,ServiceLocator,1,2,1,0,2,32,2,0,0,1,2,0,Clide.IServiceLocator' Clide.ServiceProvider,
+Clide,ServiceProvider,2,0,1,0,0,56,0,0,0,-1,6,2,Clide.FallbackServiceProvider' Clide.OleServiceProvider' Clide.DteServiceProvider' Clide.NullServiceProvider' Clide.VsServiceProvider' Clide.Interop.RunningObjects,Clide.DevEnv' Clide.ServiceLocator
+Clide,DteServiceProvider,1,2,0,0,1,40,5,0,0,1,0,1,,Clide.ServiceProvider
+Clide,NullServiceProvider,0,1,0,0,1,7,1,0,0,-1,0,1,,Clide.ServiceProvider
 Clide,VsServiceProvider,0,1,0,0,1,7,1,0,0,-1,0,1,,Clide.ServiceProvider
-Clide,ServiceLocator,1,2,1,0,2,32,2,0,0,1,2,1,Clide.IServiceLocator' Clide.ServiceProvider,Clide.ServiceLocatorSpec
+Clide,Settings,4,10,1,0,7,134,16,0,1,0.2,2,0,Clide.ISettings' Clide.ISettingsManager,
 Clide,IDeletableNode,0,1,0,0,0,7,1,1,0,-1,0,0,,
-Clide,IProjectItemContainerNode,0,2,0,0,0,9,2,1,0,-1,0,0,,
+Clide,IProjectContainerNode,0,1,0,0,0,4,1,1,0,-1,1,0,Clide.IProjectNode,
+Clide,IProjectItemContainerNode,0,2,0,0,0,9,2,1,0,-1,2,0,Clide.IFolderNode' Clide.IItemNode,
 Clide,IReferenceContainerNode,0,1,0,0,0,8,1,1,0,-1,1,0,Clide.IProjectNode,
-Clide,IAdaptable,0,1,0,0,0,9,1,1,0,-1,0,3,,Clide.DteToVsAdapterSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec
-Clide,IAdapterService,0,1,0,0,0,8,1,1,0,-1,0,23,,Clide.FolderNodeFactory' Clide.ItemNodeFactory' Clide.ProjectNodeFactory' Clide.ReferenceNodeFactory' Clide.ReferencesNodeFactory' Clide.SolutionExplorerNodeFactory' Clide.SolutionFolderNodeFactory' Clide.SolutionItemNodeFactory' Clide.SolutionNodeFactory' Clide.FolderNode' Clide.GenericNode' Clide.ItemNode' Clide.ProjectItemNode' Clide.ProjectNode' Clide.ReferenceNode' Clide.ReferencesNode' Clide.SolutionExplorerNode' Clide.SolutionFolderNode' Clide.SolutionItemNode' Clide.SolutionNode' Clide.DteToVsAdapterSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec
-Clide,IToolWindow,0,2,1,0,0,15,2,1,0,-1,0,0,,
-Clide,Guard,0,4,0,0,4,51,8,0,0,-1,0,7,,Clide.ServiceLocatorProvider' Clide.ProjectItemContainerNode' Clide.SolutionExplorer' Clide.SolutionExplorerNode' Clide.SolutionFolderNode' Clide.SolutionNode' Clide.GuardSpec
-Clide,IServiceLocator,0,4,0,0,0,45,4,1,0,-1,0,10,,Clide.ServiceLocatorProvider' Clide.ServiceLocator' Clide.ServiceLocatorExtensionsSpec' Clide.DteToVsAdapterSpec' Clide.ServiceLocatorSpec' Clide.ServiceLocatorExtensionsSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec' Clide.Interop.VsHierarchySelectionSpec' Clide.Interop.VsSolutionSelectionSpec
-Clide,IServiceLocatorProvider,0,5,0,0,0,8,5,1,0,-1,0,0,,
-Clide,IGenericNode,0,0,0,0,0,3,0,1,1,-1,0,3,,Clide.SolutionVisitable' Clide.ISolutionVisitor' Clide.SolutionVisitor
-Clide,IFolderNode,0,0,0,0,0,3,0,2,1,-1,0,11,,Clide.RemovableProjectItemNode' Clide.DeletableProjectItemNode' Clide.ProjectItemContainerNode' Clide.SolutionVisitable' Clide.SolutionExtensions' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Interop.VsHierarchySelectionSpec' Clide.Interop.VsSolutionSelectionSpec
-Clide,IItemNode,0,0,3,0,0,20,0,2,1,-1,0,15,,Clide.RemovableProjectItemNode' Clide.DeletableProjectItemNode' Clide.ProjectItemContainerNode' Clide.SolutionVisitable' Clide.SolutionExtensions' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.SolutionExtensionsSpec' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec' Clide.Interop.VsHierarchySelectionSpec' Clide.Interop.VsSolutionSelectionSpec' Clide.Solution.SharedProjectSpec' Clide.Solution.SolutionExplorerNodeSpec
-Clide,IProjectItemNode,0,0,1,0,0,7,0,4,1,-1,0,0,,
-Clide,IProjectNode,0,5,3,0,0,61,5,2,1,-1,1,21,Clide.KnownCapabilities,Clide.ProjectItemContainerNode' Clide.ReferenceContainerNode' Clide.ProjectContainerNode' Clide.SolutionVisitable' Clide.Adapters.SolutionToVsLangAdapter' Clide.SolutionExtensions' Clide.IReferenceContainerNode' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.FakeProject' Clide.SolutionExtensionsSpec' Clide.DteToVsAdapterFacadeSpec' Clide.DteToVsAdapterSpec' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec' Clide.Interop.VsHierarchySelectionSpec' Clide.Interop.VsSolutionSelectionSpec' Clide.Solution.SharedProjectSpec' Clide.Solution.SolutionExplorerNodeSpec' Clide.Solution.SolutionSpec
-Clide,IReferenceNode,0,0,0,0,0,3,0,1,2,-1,0,6,,Clide.SolutionVisitable' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec
-Clide,IReferencesNode,0,0,0,0,0,3,0,1,2,-1,0,8,,Clide.ReferenceContainerNode' Clide.SolutionVisitable' Clide.SolutionExtensions' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec
-Clide,ISolutionExplorer,0,0,2,0,0,14,0,2,1,-1,0,5,,Clide.SolutionExtensionsSpec' Clide.SolutionFixture' Clide.Interop.VsHierarchySelectionSpec' Clide.Interop.VsSolutionSelectionSpec' Clide.Solution.Explorer.SolutionExplorerSpec
-Clide,ISolutionExplorerNode,0,5,10,0,0,70,5,8,0,-1,1,12,Clide.ISolutionVisitor,Clide.ProjectItemContainerNode' Clide.SolutionExplorerNode' Clide.SolutionVisitable' Clide.SolutionVisitor' Clide.FakeSolutionExplorerNode' Clide.SolutionExtensionsSpec' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Solution.SharedProjectSpec' Clide.Solution.SolutionExplorerNodeSpec' Clide.Solution.NodeFactorySpec<TNode>' Clide.Solution.SolutionSpec
-Clide,ISolutionFolderNode,0,1,0,0,0,8,1,2,1,-1,0,8,,Clide.SolutionFolderNode' Clide.SolutionNode' Clide.SolutionVisitable' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Solution.SolutionSpec
-Clide,ISolutionItemNode,0,0,3,0,0,16,0,2,1,-1,0,6,,Clide.SolutionVisitable' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.SolutionExtensionsSpec' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec
-Clide,ISolutionNode,0,6,4,0,0,49,6,2,1,-1,0,18,,Clide.ProjectContainerNode' Clide.SolutionVisitable' Clide.SolutionExtensions' Clide.ISolutionVisitor' Clide.SolutionVisitor' Clide.SolutionExtensionsSpec' Clide.DteToVsAdapterFacadeSpec' Clide.DteToVsAdapterSpec' Clide.SolutionFixture' Clide.Adapters.SolutionAdapterFacadeSpec' Clide.Adapters.SolutionToVsAdapterSpec' Clide.Adapters.SolutionToVsLangAdapterSpec' Clide.Interop.VsHierarchySelectionSpec' Clide.Interop.VsSolutionSelectionSpec' Clide.Solution.SharedProjectSpec' Clide.Solution.SolutionExplorerNodeSpec' Clide.Solution.SolutionSpec' Clide.Solution.SolutionNodeSpec
-Clide,ISolutionVisitor,0,18,0,0,0,111,18,1,0,-1,9,19,Clide.ISolutionNode' Clide.ISolutionItemNode' Clide.ISolutionFolderNode' Clide.IProjectNode' Clide.IFolderNode' Clide.IItemNode' Clide.IReferencesNode' Clide.IReferenceNode' Clide.IGenericNode,Clide.FolderNode' Clide.GenericNode' Clide.ItemNode' Clide.ProjectNode' Clide.ReferenceNode' Clide.ReferencesNode' Clide.SolutionExplorerNode' Clide.SolutionFolderNode' Clide.SolutionItemNode' Clide.SolutionNode' Clide.SolutionVisitable' Clide.ISolutionExplorerNode' Clide.FakeSolution' Clide.FakeSolutionFolder' Clide.FakeSolutionItem' Clide.FakeProject' Clide.FakeFolder' Clide.FakeItem' Clide.FakeSolutionExplorerNode
-Clide,KnownCapabilities,0,0,0,0,0,5,0,0,0,-1,0,4,,Clide.ReferenceContainerNode' Clide.ProjectNode' Clide.IProjectNode' Clide.FakeProject
-Clide,SolutionNodeKind,0,0,0,0,0,40,0,0,0,-1,0,2,,Clide.ProjectItemNode' Clide.SolutionExplorerNode
-Clide,SolutionVisitor,0,20,0,0,20,156,20,0,1,-1,10,0,Clide.ISolutionNode' Clide.ISolutionItemNode' Clide.ISolutionFolderNode' Clide.IProjectNode' Clide.IFolderNode' Clide.IItemNode' Clide.IReferencesNode' Clide.IReferenceNode' Clide.ISolutionExplorerNode' Clide.IGenericNode,
-Clide.Interop,NativeMethods,0,4,0,0,0,15,4,0,0,-1,0,1,,Clide.Interop.RunningObjects
-Clide.Interop,RunningObjects,1,4,0,0,3,63,10,0,0,0,1,1,Clide.Interop.NativeMethods,Clide.DteServiceProvider
-Clide.Properties.Interfaces,Resources,2,1,4,0,0,59,1,0,0,0,0,0,,
+Clide,IRemovableNode,0,1,0,0,0,7,1,1,0,-1,0,0,,
+Clide,SolutionExtensions,0,11,0,0,11,33,11,0,0,-1,2,0,Clide.IFolderNode' Clide.IProjectItemNode,
+Clide,IFolderNode,0,0,0,0,0,3,0,2,1,-1,1,4,Clide.IProjectItemNode,Clide.IProjectItemContainerNode' Clide.SolutionVisitor' Clide.ISolutionVisitor' Clide.SolutionExtensions
+Clide,IGenericNode,0,0,0,0,0,3,0,1,1,-1,1,2,Clide.ISolutionExplorerNode,Clide.SolutionVisitor' Clide.ISolutionVisitor
+Clide,IItemNode,0,0,3,0,0,20,0,2,1,-1,1,3,Clide.IProjectItemNode,Clide.IProjectItemContainerNode' Clide.ISolutionVisitor' Clide.SolutionVisitor
+Clide,IProjectConfiguration,0,0,7,0,0,34,0,1,0,-1,2,1,Clide.Awaitable<T>' Clide.IProjectNode,Clide.IProjectNode
+Clide,IProjectItemNode,0,0,1,0,0,7,0,4,1,-1,2,5,Clide.IProjectNode' Clide.ISolutionExplorerNode,Clide.IItemNode' Clide.IReferenceNode' Clide.IFolderNode' Clide.SolutionExtensions' Clide.IReferencesNode
+Clide,IProjectNode,0,5,4,0,0,65,5,2,1,-1,3,8,Clide.IProjectConfiguration' Clide.ISolutionExplorerNode' Clide.KnownCapabilities,Clide.IProjectContainerNode' Clide.IReferenceContainerNode' Clide.IProjectConfiguration' Clide.IProjectItemNode' Clide.SolutionVisitor' Clide.IReferenceNode' Clide.ISolutionNode' Clide.ISolutionVisitor
+Clide,IReferenceNode,0,0,2,0,0,8,0,1,2,-1,2,2,Clide.IProjectItemNode' Clide.IProjectNode,Clide.SolutionVisitor' Clide.ISolutionVisitor
+Clide,IReferencesNode,0,0,0,0,0,3,0,1,2,-1,1,2,Clide.IProjectItemNode,Clide.ISolutionVisitor' Clide.SolutionVisitor
+Clide,ISolutionConfiguration,0,1,0,0,0,9,1,1,0,-1,0,1,,Clide.ISolutionNode
+Clide,ISolutionExplorer,0,0,2,0,0,14,0,2,1,-1,4,0,Clide.Awaitable<T>' Clide.IToolWindow' Clide.ISolutionExplorerNode' Clide.ISolutionNode,
+Clide,ISolutionExplorerNode,0,5,10,0,0,70,5,8,0,-1,3,9,Clide.ISolutionNode' Clide.ISolutionVisitor' Clide.SolutionNodeKind,Clide.ISolutionExplorer' Clide.IProjectNode' Clide.IProjectItemNode' Clide.ISolutionItemNode' Clide.IGenericNode' Clide.ISolutionFolderNode' Clide.ISolutionNode' Clide.SolutionVisitor' Clide.ITreeNodeExtensions
+Clide,ISolutionFolderNode,0,1,0,0,0,8,1,2,1,-1,1,4,Clide.ISolutionExplorerNode,Clide.ISolutionNode' Clide.ISolutionItemNode' Clide.ISolutionVisitor' Clide.SolutionVisitor
+Clide,ISolutionItemNode,0,0,3,0,0,16,0,2,1,-1,2,2,Clide.ISolutionExplorerNode' Clide.ISolutionFolderNode,Clide.SolutionVisitor' Clide.ISolutionVisitor
+Clide,ISolutionNode,0,6,5,0,0,53,6,2,1,-1,4,4,Clide.IProjectNode' Clide.ISolutionConfiguration' Clide.ISolutionExplorerNode' Clide.ISolutionFolderNode,Clide.ISolutionExplorerNode' Clide.ISolutionExplorer' Clide.SolutionVisitor' Clide.ISolutionVisitor
+Clide,ISolutionVisitor,0,18,0,0,0,111,18,1,0,-1,9,2,Clide.IFolderNode' Clide.IGenericNode' Clide.IItemNode' Clide.IProjectNode' Clide.IReferenceNode' Clide.IReferencesNode' Clide.ISolutionFolderNode' Clide.ISolutionItemNode' Clide.ISolutionNode,Clide.SolutionVisitor' Clide.ISolutionExplorerNode
+Clide,KnownCapabilities,0,0,0,0,0,5,0,0,0,-1,0,1,,Clide.IProjectNode
+Clide,SolutionNodeKind,0,0,0,0,0,40,0,0,0,-1,0,1,,Clide.ISolutionExplorerNode
+Clide,SolutionVisitor,0,20,0,0,20,156,20,0,1,-1,11,0,Clide.IFolderNode' Clide.IGenericNode' Clide.IItemNode' Clide.IProjectNode' Clide.IReferenceNode' Clide.IReferencesNode' Clide.ISolutionExplorerNode' Clide.ISolutionFolderNode' Clide.ISolutionItemNode' Clide.ISolutionNode' Clide.ISolutionVisitor,
+Clide,IStartable,0,1,0,0,0,7,1,1,0,-1,0,1,,Clide.StartableAttribute
+Clide,IStartableService,0,2,0,0,0,16,2,1,0,-1,0,0,,
+Clide,StartableAttribute,0,1,2,0,1,29,1,0,0,-1,1,0,Clide.IStartable,
+Clide.Events,ShellInitialized,0,0,0,0,0,3,0,0,0,-1,0,0,,
+Clide.Interop,NativeMethods,2,4,0,2,0,17,4,0,0,1,0,2,,Clide.OleServiceProvider' Clide.Interop.RunningObjects
+Clide.Interop,RunningObjects,2,4,0,0,3,86,12,0,0,0,1,1,Clide.Interop.NativeMethods,Clide.ServiceProvider
+Clide.Properties,Resources,2,1,11,0,0,122,1,0,0,0,0,0,,

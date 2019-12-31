@@ -1,7 +1,7 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Ractor,BaseActor,2,0,0,0,0,4,0,1,0,-1,1,0,System.Threading.Tasks.Schedulers.QueuedTaskScheduler,
-Ractor,Actor<TReq;TResp>,5,9,5,0,7,112,14,0,1,0.33,4,0,System.Threading.Tasks.Schedulers.QueuedTaskScheduler' Ractor.QueueReceiveResult' Ractor.QueueSendResult' Ractor.Redis,
-Ractor,EchoActor,0,1,0,0,1,6,1,0,0,-1,0,1,,Fredis.CS.Tests.ActorTests
-Ractor,PythonEchoActor,0,1,0,0,1,4,1,0,1,-1,0,1,,Fredis.CS.Tests.ActorTests
-Ractor,Message<T>,0,0,3,0,0,8,0,0,0,-1,0,0,,
-Ractor,PythonActor,3,3,0,0,2,52,4,1,0,0.67,0,0,,
+Ractor,BaseActor,2,0,0,0,0,4,0,1,0,-1,0,1,,Ractor.Actor<TReq;TResp>
+Ractor,Actor<TReq;TResp>,5,9,5,0,7,112,14,0,1,0.33,2,2,Ractor.BaseActor' Ractor.Message<T>,Ractor.EchoActor' Ractor.PythonActor
+Ractor,EchoActor,0,1,0,0,1,6,1,0,0,-1,1,0,Ractor.Actor<TReq;TResp>,
+Ractor,PythonEchoActor,0,1,0,0,1,4,1,0,1,-1,1,0,Ractor.PythonActor,
+Ractor,Message<T>,0,0,3,0,0,8,0,0,0,-1,0,1,,Ractor.Actor<TReq;TResp>
+Ractor,PythonActor,3,3,0,0,2,52,4,1,0,0.67,1,1,Ractor.Actor<TReq;TResp>,Ractor.PythonEchoActor

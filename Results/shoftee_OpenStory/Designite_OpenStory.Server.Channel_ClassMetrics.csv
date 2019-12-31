@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 OpenStory.Server.Channel,ChannelCharacter,0,1,0,0,1,6,1,0,1,-1,0,1,,OpenStory.Server.Channel.Player
-OpenStory.Server.Channel,ChannelClient,0,2,0,0,1,13,2,0,1,-1,3,1,OpenStory.Framework.Contracts.IServerSession' OpenStory.Server.Processing.IPacketFactory' OpenStory.Framework.Contracts.PacketProcessingEventArgs,OpenStory.Server.Channel.Player
-OpenStory.Server.Channel,ChannelOperator,1,4,3,0,3,46,5,0,1,0.75,6,1,OpenStory.Server.Channel.ChannelConfiguration' OpenStory.Server.Processing.IGameClientFactory' OpenStory.Server.Channel.IPlayerRegistry' OpenStory.Services.Contracts.OsServiceConfiguration' OpenStory.Server.Processing.ClientBase' OpenStory.Server.IPlayer,OpenStory.Server.Channel.ChannelServer
-OpenStory.Server.Channel,ChannelConfiguration,0,1,1,0,1,16,1,0,1,-1,1,1,OpenStory.Services.Contracts.OsServiceConfiguration,OpenStory.Server.Channel.ChannelOperator
-OpenStory.Server.Channel,ChannelPacketCodeTable,0,2,0,0,1,13,2,0,2,-1,0,0,,
-OpenStory.Server.Channel,ChannelServer,1,3,0,0,1,24,3,0,0,0,3,1,OpenStory.Services.Contracts.IServiceContainer' OpenStory.Services.Contracts.IServerProcess' OpenStory.Server.Channel.ChannelOperator,OpenStory.Services.Channel.ChannelService
-OpenStory.Server.Channel,ChannelServerModule,0,1,0,0,1,20,1,0,0,-1,0,0,,
-OpenStory.Server.Channel,IPlayerFacet,0,0,0,0,0,3,0,0,0,-1,0,1,,OpenStory.Server.Channel.PlayerFacetManager
-OpenStory.Server.Channel,IPlayerFacetFactory,0,1,0,0,0,8,1,0,0,-1,1,1,OpenStory.Framework.Model.Common.CharacterKey,OpenStory.Server.Channel.PlayerFacetManager
-OpenStory.Server.Channel,IPlayerRegistry,0,5,1,0,0,38,5,1,0,-1,1,1,OpenStory.Server.IPlayer,OpenStory.Server.Channel.ChannelOperator
-OpenStory.Server.Channel,Player,0,1,12,0,0,32,1,0,1,-1,2,0,OpenStory.Server.Channel.ChannelCharacter' OpenStory.Server.Channel.ChannelClient,
-OpenStory.Server.Channel,PlayerFacetManager,2,3,0,0,3,66,3,0,0,0,4,0,OpenStory.Server.Channel.IPlayerFacetFactory' OpenStory.Server.Channel.Key' OpenStory.Framework.Model.Common.CharacterKey' OpenStory.Server.Channel.IPlayerFacet,
+OpenStory.Server.Channel,ChannelClient,0,2,0,0,1,13,2,0,1,-1,0,3,,OpenStory.Server.Channel.ChannelOperator' OpenStory.Server.Channel.Player' OpenStory.Server.Channel.ChannelServerModule
+OpenStory.Server.Channel,ChannelOperator,1,4,3,0,3,42,5,0,1,0.75,3,2,OpenStory.Server.Channel.ChannelClient' OpenStory.Server.Channel.ChannelConfiguration' OpenStory.Server.Channel.IPlayerRegistry,OpenStory.Server.Channel.ChannelServerModule' OpenStory.Server.Channel.ChannelServer
+OpenStory.Server.Channel,ChannelConfiguration,0,1,1,0,1,16,1,0,1,-1,0,1,,OpenStory.Server.Channel.ChannelOperator
+OpenStory.Server.Channel,ChannelPacketCodeTable,0,2,0,0,1,13,2,0,2,-1,0,1,,OpenStory.Server.Channel.ChannelServerModule
+OpenStory.Server.Channel,ChannelServer,1,3,0,0,1,24,3,0,0,0,1,1,OpenStory.Server.Channel.ChannelOperator,OpenStory.Server.Channel.ChannelServerModule
+OpenStory.Server.Channel,ChannelServerModule,0,1,0,0,1,20,1,0,0,-1,6,0,OpenStory.Server.Channel.ChannelClient' OpenStory.Server.Channel.ChannelOperator' OpenStory.Server.Channel.ChannelPacketCodeTable' OpenStory.Server.Channel.ChannelServer' OpenStory.Server.Channel.IPlayerRegistry' OpenStory.Server.Channel.PlayerRegistry,
+OpenStory.Server.Channel,IPlayerFacet,0,0,0,0,0,3,0,0,0,-1,0,2,,OpenStory.Server.Channel.IPlayerFacetFactory' OpenStory.Server.Channel.PlayerFacetManager
+OpenStory.Server.Channel,IPlayerFacetFactory,0,1,0,0,0,8,1,0,0,-1,1,1,OpenStory.Server.Channel.IPlayerFacet,OpenStory.Server.Channel.PlayerFacetManager
+OpenStory.Server.Channel,IPlayerRegistry,0,5,1,0,0,38,5,1,0,-1,0,3,,OpenStory.Server.Channel.ChannelOperator' OpenStory.Server.Channel.ChannelServerModule' OpenStory.Server.Channel.PlayerRegistry
+OpenStory.Server.Channel,Player,0,1,12,0,0,29,1,0,1,-1,2,0,OpenStory.Server.Channel.ChannelCharacter' OpenStory.Server.Channel.ChannelClient,
+OpenStory.Server.Channel,PlayerFacetManager,2,3,0,0,3,65,3,0,0,0,3,0,OpenStory.Server.Channel.IPlayerFacet' OpenStory.Server.Channel.IPlayerFacetFactory' OpenStory.Server.Channel.Key,
 OpenStory.Server.Channel,Key,0,4,2,0,4,39,4,0,0,-1,0,1,,OpenStory.Server.Channel.PlayerFacetManager
-OpenStory.Server.Channel,PlayerRegistry,5,13,1,0,7,115,17,0,1,0,3,0,OpenStory.Server.IPlayer' OpenStory.Framework.Model.Common.CharacterKey' OpenStory.Common.Misc,
-OpenStory.Server.Channel.Data,BuddyListEntry,0,0,5,0,0,23,0,0,1,-1,0,0,,
-OpenStory.Server.Channel.Data,BuddyListEntryStatus,0,0,0,0,0,16,0,0,0,-1,0,0,,
+OpenStory.Server.Channel,PlayerRegistry,5,13,1,0,7,109,17,0,1,0,1,1,OpenStory.Server.Channel.IPlayerRegistry,OpenStory.Server.Channel.ChannelServerModule
+OpenStory.Server.Channel.Data,BuddyListEntry,0,0,5,0,0,23,0,0,1,-1,1,0,OpenStory.Server.Channel.Data.BuddyListEntryStatus,
+OpenStory.Server.Channel.Data,BuddyListEntryStatus,0,0,0,0,0,16,0,0,0,-1,0,1,,OpenStory.Server.Channel.Data.BuddyListEntry

@@ -1,26 +1,26 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NuGet,DebugConsoleMessageEventArgs,0,1,4,0,1,14,1,0,0,-1,0,2,,NuGetConsole.DebugConsoleController' NuGetConsole.Implementation.DebugConsoleToolWindow
-NuGet,IDebugConsoleController,0,1,0,0,0,8,1,1,0,-1,0,1,,NuGetConsole.Implementation.DebugConsoleToolWindow
+NuGet,DebugConsoleMessageEventArgs,0,1,4,0,1,14,1,0,0,-1,0,1,,NuGet.IDebugConsoleController
+NuGet,IDebugConsoleController,0,1,0,0,0,8,1,1,0,-1,1,0,NuGet.DebugConsoleMessageEventArgs,
 NuGetConsole,DisplayNameAttribute,0,1,1,0,1,25,2,0,0,-1,0,0,,
 NuGetConsole,HostNameAttribute,0,1,1,0,1,20,2,0,0,-1,0,0,,
-NuGetConsole,ICommandExpansion,0,1,0,0,0,10,1,1,0,-1,0,3,,NuGetConsole.Implementation.Console.WpfConsoleService' NuGetConsole.Implementation.Console.WpfConsoleKeyProcessor' NuGetConsole.Host.PowerShellProvider.CommandExpansionProvider
-NuGetConsole,ICommandExpansionProvider,0,1,0,0,0,9,1,1,0,-1,1,1,NuGetConsole.IHost,NuGetConsole.Implementation.Console.WpfConsoleService
-NuGetConsole,ICommandTokenizer,0,1,0,0,0,9,1,1,0,-1,0,2,,NuGetConsole.Implementation.Console.WpfConsoleClassifier' NuGetConsole.Implementation.Console.WpfConsoleService
-NuGetConsole,ICommandTokenizerProvider,0,1,0,0,0,9,1,1,0,-1,1,1,NuGetConsole.IHost,NuGetConsole.Implementation.Console.WpfConsoleService
-NuGetConsole,IConsole,0,6,4,0,0,52,6,2,0,-1,0,13,,NuGet.VisualStudio.VsTemplateWizard' NuGetConsole.OutputConsoleProvider' NuGetConsole.VSScriptExecutor' NuGetConsole.Implementation.PowerConsoleToolWindow' NuGetConsole.IHost' NuGetConsole.Host.PowerShell.Implementation.IRunspaceManager' NuGetConsole.Host.PowerShell.Implementation.RunspaceManager' NuGetConsole.Host.PowerShell.Implementation.Commander' NuGetConsole.Host.PowerShell.Implementation.NuGetRawUserInterface' NuGetConsole.Host.PowerShell.Implementation.NuGetHostUserInterface' NuGetConsole.Host.PowerShell.Implementation.PowerShellHost' NuGetConsole.Host.PowerShellProvider.UnsupportedHost' NuGetVSExtension.OutputConsoleLogger
-NuGetConsole,IConsoleDispatcher,0,4,4,0,0,37,4,2,0,-1,0,4,,NuGetConsole.VSScriptExecutor' NuGetConsole.Implementation.PowerConsoleToolWindow' NuGetConsole.Implementation.PowerConsole.PowerConsoleWindow' NuGetConsole.Host.PowerShell.Implementation.NuGetRawUserInterface
+NuGetConsole,ICommandExpansion,0,1,0,0,0,10,1,1,0,-1,1,1,NuGetConsole.SimpleExpansion,NuGetConsole.ICommandExpansionProvider
+NuGetConsole,ICommandExpansionProvider,0,1,0,0,0,9,1,1,0,-1,2,0,NuGetConsole.ICommandExpansion' NuGetConsole.IHost,
+NuGetConsole,ICommandTokenizer,0,1,0,0,0,9,1,1,0,-1,1,1,NuGetConsole.Token,NuGetConsole.ICommandTokenizerProvider
+NuGetConsole,ICommandTokenizerProvider,0,1,0,0,0,9,1,1,0,-1,2,0,NuGetConsole.ICommandTokenizer' NuGetConsole.IHost,
+NuGetConsole,IConsole,0,6,4,0,0,52,6,2,0,-1,2,2,NuGetConsole.IConsoleDispatcher' NuGetConsole.IHost,NuGetConsole.IWpfConsole' NuGetConsole.IHost
+NuGetConsole,IConsoleDispatcher,0,4,4,0,0,37,4,2,0,-1,1,1,NuGetConsole.VsKeyInfo,NuGetConsole.IConsole
 NuGetConsole,IConsoleInitializer,0,1,0,0,0,6,1,1,0,-1,0,0,,
-NuGetConsole,IHost,0,7,5,0,0,43,7,3,0,-1,1,13,NuGetConsole.IConsole,NuGetConsole.VSScriptExecutor' NuGetConsole.Implementation.Console.ConsoleDispatcher' NuGetConsole.Implementation.Console.Dispatcher' NuGetConsole.Implementation.Console.WpfConsole' NuGetConsole.Implementation.Console.WpfConsoleKeyProcessor' NuGetConsole.Implementation.PowerConsoleToolWindow' NuGetConsole.Implementation.PowerConsole.PowerConsoleWindow' NuGetConsole.ICommandExpansionProvider' NuGetConsole.ICommandTokenizerProvider' NuGetConsole.Host.PowerShell.Implementation.PowerShellHostService' NuGetConsole.Host.PowerShellProvider.CommandTokenizerProvider' NuGetConsole.Host.PowerShellProvider.CommandExpansionProvider' NuGetConsole.Host.PowerShellProvider.PowerShellHostProvider
-NuGetConsole,IAsyncHost,0,0,0,0,0,8,0,1,1,-1,0,3,,NuGetConsole.Implementation.Console.ConsoleDispatcher' NuGetConsole.Implementation.Console.AsyncHostConsoleDispatcher' NuGetConsole.Implementation.PowerConsoleToolWindow
+NuGetConsole,IHost,0,7,5,0,0,43,7,3,0,-1,1,5,NuGetConsole.IConsole,NuGetConsole.ICommandTokenizerProvider' NuGetConsole.IConsole' NuGetConsole.ICommandExpansionProvider' NuGetConsole.IAsyncHost' NuGetConsole.IHostProvider
+NuGetConsole,IAsyncHost,0,0,0,0,0,8,0,1,1,-1,1,0,NuGetConsole.IHost,
 NuGetConsole,IHostMetadata,0,0,2,0,0,11,0,0,0,-1,0,0,,
-NuGetConsole,IHostProvider,0,1,0,0,0,9,1,1,0,-1,0,1,,NuGetConsole.OutputConsoleProvider
-NuGetConsole,IConsoleStatus,0,0,1,0,0,7,0,1,0,-1,0,2,,NuGetConsole.Implementation.PowerConsoleToolWindow' NuGetVSExtension.NuGetPackage
-NuGetConsole,IPathExpansion,0,1,0,0,0,4,1,1,1,-1,0,1,,NuGetConsole.Host.CommandExpansion
+NuGetConsole,IHostProvider,0,1,0,0,0,9,1,1,0,-1,1,0,NuGetConsole.IHost,
+NuGetConsole,IConsoleStatus,0,0,1,0,0,7,0,1,0,-1,0,0,,
+NuGetConsole,IPathExpansion,0,1,0,0,0,4,1,1,1,-1,2,0,NuGetConsole.ITabExpansion' NuGetConsole.SimpleExpansion,
 NuGetConsole,IPowerConsoleWindow,0,1,0,0,0,7,1,1,0,-1,0,0,,
-NuGetConsole,ITabExpansion,0,1,0,0,0,4,1,1,0,-1,0,2,,NuGetConsole.Host.CommandExpansion' NuGetConsole.Host.PowerShellProvider.CommandExpansionProvider
-NuGetConsole,IWpfConsole,0,2,2,0,0,22,2,1,1,-1,0,5,,NuGetConsole.Implementation.Console.WpfConsoleService' NuGetConsole.Implementation.DebugConsoleToolWindow' NuGetConsole.Implementation.PowerConsoleToolWindow' NuGetConsole.Implementation.PowerConsole.HostInfo' NuGetConsole.Implementation.PowerConsole.PowerConsoleWindow
-NuGetConsole,IWpfConsoleService,0,3,0,0,0,24,3,1,0,-1,0,4,,NuGetConsole.Implementation.DebugClassifierProvider' NuGetConsole.Implementation.DebugConsoleToolWindow' NuGetConsole.Implementation.PowerConsole.ClassifierProvider' NuGetConsole.Implementation.PowerConsole.CompletionSourceProvider
-NuGetConsole,SimpleExpansion,0,1,3,0,1,27,1,0,0,-1,0,4,,NuGetConsole.Implementation.Console.WpfConsoleCompletionSource' NuGetConsole.Implementation.Console.WpfConsoleKeyProcessor' NuGetConsole.Host.PowerShell.Implementation.PowerShellHost' NuGetConsole.Host.CommandExpansion
-NuGetConsole,Token,0,1,5,0,1,43,1,0,0,-1,1,1,NuGetConsole.TokenType,NuGetConsole.Implementation.Console.WpfConsoleClassifier
-NuGetConsole,TokenType,0,0,0,0,0,67,0,0,0,-1,0,2,,NuGetConsole.Token' NuGetConsole.Host.PowerShell.Implementation.CommandTokenizer
-NuGetConsole,VsKeyInfo,1,2,10,0,1,45,2,0,0,1,0,4,,NuGetConsole.Implementation.Console.IPrivateConsoleDispatcher' NuGetConsole.Implementation.Console.ConsoleDispatcher' NuGetConsole.Implementation.Console.WpfConsoleKeyProcessor' NuGetConsole.Host.PowerShell.Implementation.NuGetRawUserInterface
+NuGetConsole,ITabExpansion,0,1,0,0,0,4,1,1,0,-1,0,1,,NuGetConsole.IPathExpansion
+NuGetConsole,IWpfConsole,0,2,2,0,0,22,2,1,1,-1,1,1,NuGetConsole.IConsole,NuGetConsole.IWpfConsoleService
+NuGetConsole,IWpfConsoleService,0,3,0,0,0,24,3,1,0,-1,1,0,NuGetConsole.IWpfConsole,
+NuGetConsole,SimpleExpansion,0,1,3,0,1,27,1,0,0,-1,0,2,,NuGetConsole.ICommandExpansion' NuGetConsole.IPathExpansion
+NuGetConsole,Token,0,1,5,0,1,43,1,0,0,-1,1,1,NuGetConsole.TokenType,NuGetConsole.ICommandTokenizer
+NuGetConsole,TokenType,0,0,0,0,0,67,0,0,0,-1,0,1,,NuGetConsole.Token
+NuGetConsole,VsKeyInfo,1,2,10,0,1,45,2,0,0,1,0,1,,NuGetConsole.IConsoleDispatcher

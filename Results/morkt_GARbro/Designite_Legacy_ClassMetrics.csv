@@ -1,31 +1,301 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-GameRes.Formats.ApplePie,ArcOpener,0,1,5,0,1,35,6,0,2,-1,5,0,GameRes.Entry' GameRes.Frame' GameRes.ArcView' GameRes.FormatCatalog' GameRes.ArcFile,
+GameRes.Formats.Csware,Dl1Opener,0,2,5,0,2,53,10,0,2,-1,0,0,,
+GameRes.Formats.Aaru,Fl2Opener,0,1,5,0,1,43,7,0,1,-1,1,0,GameRes.Formats.Aaru.Fl4Opener,
+GameRes.Formats.Aaru,Fl3Opener,0,1,5,0,1,45,7,0,1,-1,1,0,GameRes.Formats.Aaru.Fl4Opener,
+GameRes.Formats.Aaru,Fl4Opener,0,2,5,0,2,88,16,2,2,-1,1,2,GameRes.Formats.Aaru.RlePackedStream,GameRes.Formats.Aaru.Fl2Opener' GameRes.Formats.Aaru.Fl3Opener
+GameRes.Formats.Aaru,RlePackedStream,0,1,0,0,1,7,1,0,0,-1,1,1,GameRes.Formats.Aaru.RleDecompressor,GameRes.Formats.Aaru.Fl4Opener
+GameRes.Formats.Aaru,RleDecompressor,1,2,1,0,1,55,12,0,2,0,0,1,,GameRes.Formats.Aaru.RlePackedStream
+GameRes.Formats.Aaru,Wv1Audio,0,2,4,0,2,58,7,0,2,-1,1,0,GameRes.Formats.Aaru.Wv1Decoder,
+GameRes.Formats.Aaru,Wv1Decoder,4,1,0,0,1,68,8,0,0,0,0,1,,GameRes.Formats.Aaru.Wv1Audio
+GameRes.Formats.Aaru,Bm2Format,0,3,3,0,3,34,4,0,2,-1,1,0,GameRes.Formats.Aaru.Bm2Reader,
+GameRes.Formats.Aaru,Bm2Reader,4,4,3,0,2,60,7,0,0,0,0,1,,GameRes.Formats.Aaru.Bm2Format
+GameRes.Formats.Acme,ArdFormat,0,3,3,0,3,33,5,0,2,-1,0,0,,
+GameRes.Formats.Image,PmgFormat,0,4,3,0,4,46,7,0,2,-1,1,0,GameRes.Formats.Image.PmgReader,
+GameRes.Formats.Image,PmgReader,6,4,1,0,2,100,11,0,0,0,0,1,,GameRes.Formats.Image.PmgFormat
+GameRes.Formats.Ags32i,AgsAudio,0,2,4,0,2,28,4,0,2,-1,1,0,GameRes.Formats.Ags32i.Ags32Transform,
+GameRes.Formats.Ags32i,GssMetaData,3,0,0,3,0,6,0,0,1,-1,0,1,,GameRes.Formats.Ags32i.GssFormat
+GameRes.Formats.Ags32i,GssFormat,0,5,3,0,4,82,12,0,2,-1,2,0,GameRes.Formats.Ags32i.GssMetaData' GameRes.Formats.Ags32i.Ags32Transform,
+GameRes.Formats.Ags32i,Ags32Transform,3,4,4,0,4,51,7,0,0,0.5,0,2,,GameRes.Formats.Ags32i.AgsAudio' GameRes.Formats.Ags32i.GssFormat
+GameRes.Formats.Airyu,ChrOpener,0,2,5,0,2,39,5,0,2,-1,1,0,GameRes.Formats.Airyu.ChrImageDecoder,
+GameRes.Formats.Airyu,ChrImageDecoder,0,2,0,0,1,13,2,0,2,-1,0,1,,GameRes.Formats.Airyu.ChrOpener
+GameRes.Formats.Akatombo,XOpener,0,1,5,0,1,46,8,0,2,-1,0,0,,
+GameRes.Formats.Akatombo,FbFormat,0,3,3,0,3,31,4,0,2,-1,1,0,GameRes.Formats.Akatombo.FbReader,
+GameRes.Formats.Akatombo,FbReader,5,4,2,0,2,77,12,0,0,0,0,1,,GameRes.Formats.Akatombo.FbFormat
+GameRes.Formats.AlphaSystem,PakOpener,0,2,5,0,2,40,7,0,2,-1,0,0,,
+GameRes.Formats.AlphaSystem,SfgFormat,0,3,3,0,3,52,7,0,2,-1,0,0,,
+GameRes.Formats.Alterna,BinOpener,0,3,5,0,3,64,11,0,2,-1,0,0,,
+GameRes.Formats.Alterna,StrFormat,0,0,0,0,0,4,0,0,1,-1,0,0,,
+GameRes.Formats.Aquarium,AapOpener,0,2,5,0,2,46,7,0,2,-1,1,0,GameRes.Formats.Aquarium.Cp2Reader,
+GameRes.Formats.Aquarium,PakOpener,0,1,5,0,1,36,6,0,2,-1,0,0,,
+GameRes.Formats.Aquarium,Cp2MetaData,1,0,2,1,0,7,0,0,1,-1,0,2,,GameRes.Formats.Aquarium.Cp2Format' GameRes.Formats.Aquarium.Cp2Reader
+GameRes.Formats.Aquarium,Cp2Format,0,3,3,0,3,29,3,0,2,-1,2,0,GameRes.Formats.Aquarium.Cp2MetaData' GameRes.Formats.Aquarium.Cp2Reader,
+GameRes.Formats.Aquarium,Cp2Reader,3,4,3,0,2,124,19,0,0,0,1,2,GameRes.Formats.Aquarium.Cp2MetaData,GameRes.Formats.Aquarium.Cp2Format' GameRes.Formats.Aquarium.AapOpener
+GameRes.Formats.Ark,CmpMetaData,5,0,0,5,0,8,0,0,1,-1,0,2,,GameRes.Formats.Ark.CmpFormat' GameRes.Formats.Ark.CmpReader
+GameRes.Formats.Ark,CmpFormat,0,3,3,0,3,52,7,0,2,-1,2,0,GameRes.Formats.Ark.CmpMetaData' GameRes.Formats.Ark.CmpReader,
+GameRes.Formats.Ark,CmpReader,3,4,2,0,2,115,16,0,0,0,2,1,GameRes.Formats.Ark.CmpMetaData' GameRes.Formats.Ark.Node,GameRes.Formats.Ark.CmpFormat
+GameRes.Formats.Ark,Node,4,0,0,4,0,7,0,0,0,-1,0,1,,GameRes.Formats.Ark.CmpReader
+GameRes.Formats.Asura,PakOpener,0,3,5,0,3,49,8,0,2,-1,0,0,,
+GameRes.Formats.Asura,MtgMetaData,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Asura.MtgFormat
+GameRes.Formats.Asura,MtgFormat,0,3,3,0,3,53,8,0,2,-1,1,0,GameRes.Formats.Asura.MtgMetaData,
+GameRes.Formats.BRoom,CpcOpener,4,1,5,0,1,74,9,0,2,0,0,0,,
+GameRes.Formats.BRoom,PkOpener,0,2,5,0,2,44,8,0,2,-1,0,0,,
+GameRes.Formats.BRoom,EncryptedPkOpener,1,1,5,0,1,56,9,0,2,0,0,0,,
+GameRes.Formats.BRoom,EzsAudio,1,1,4,0,1,45,5,0,2,0,0,0,,
+GameRes.Formats.BRoom,ErpMetaData,3,0,0,3,0,6,0,0,1,-1,0,2,,GameRes.Formats.BRoom.ErpFormat' GameRes.Formats.BRoom.ErpReader
+GameRes.Formats.BRoom,ErpFormat,3,4,3,0,3,97,14,0,2,0.75,2,0,GameRes.Formats.BRoom.ErpMetaData' GameRes.Formats.BRoom.ErpReader,
+GameRes.Formats.BRoom,ErpReader,5,7,2,0,2,235,31,0,0,0,2,1,GameRes.Formats.BRoom.ErpMetaData' GameRes.Formats.BRoom.ErpKey,GameRes.Formats.BRoom.ErpFormat
+GameRes.Formats.BRoom,ErpKey,2,2,1,0,2,20,3,0,0,0,0,1,,GameRes.Formats.BRoom.ErpReader
+GameRes.Formats.Brownie,NgcMetaData,1,0,0,1,0,4,0,0,1,-1,0,2,,GameRes.Formats.Brownie.NgcFormat' GameRes.Formats.Brownie.NgcReader
+GameRes.Formats.Brownie,NgcFormat,0,3,3,0,3,30,3,0,2,-1,2,0,GameRes.Formats.Brownie.NgcMetaData' GameRes.Formats.Brownie.NgcReader,
+GameRes.Formats.Brownie,NgcReader,3,4,2,0,2,104,17,0,0,0,1,1,GameRes.Formats.Brownie.NgcMetaData,GameRes.Formats.Brownie.NgcFormat
+GameRes.Formats.Brownie,NgwFormat,0,2,4,0,2,22,3,0,2,-1,0,0,,
+GameRes.Formats.Brownie,NafOpener,0,1,5,0,1,35,5,0,2,-1,0,0,,
+GameRes.Formats.Brownie,WavAudio,0,1,4,0,1,24,3,0,2,-1,0,0,,
+GameRes.Formats.DigitalMonkey,DmOpener,0,2,5,0,2,52,8,0,2,-1,0,0,,
+GameRes.Formats.DigitalMonkey,PktMetaData,5,0,0,5,0,8,0,0,1,-1,0,2,,GameRes.Formats.DigitalMonkey.PktFormat' GameRes.Formats.DigitalMonkey.PktReader
+GameRes.Formats.DigitalMonkey,PktFormat,0,4,3,0,4,45,6,0,2,-1,2,0,GameRes.Formats.DigitalMonkey.PktMetaData' GameRes.Formats.DigitalMonkey.PktReader,
+GameRes.Formats.DigitalMonkey,PktReader,3,6,2,0,2,93,18,0,0,0,1,1,GameRes.Formats.DigitalMonkey.PktMetaData,GameRes.Formats.DigitalMonkey.PktFormat
+GameRes.Formats.Electriciteit,PkkOpener,1,4,5,0,3,100,11,0,2,0.75,0,0,,
+GameRes.Formats.Electriciteit,DatOpener,1,2,5,0,2,58,9,0,2,1,0,0,,
+GameRes.Formats.FazeX,FgpFormat,0,3,3,0,3,56,7,0,2,-1,0,0,,
+GameRes.Formats.HillField,ImaMetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.HillField.ImaFormat
+GameRes.Formats.HillField,ImaFormat,0,3,3,0,3,54,6,0,2,-1,1,0,GameRes.Formats.HillField.ImaMetaData,
+GameRes.Formats.HillField,ImgFormat,0,3,3,0,3,34,5,0,2,-1,0,0,,
+GameRes.Formats.KApp,AsdOpener,0,5,5,0,3,92,12,0,2,-1,3,0,GameRes.Formats.KApp.CgdMetaData' GameRes.Formats.KApp.KTool' GameRes.Formats.KApp.CgdDecoder,
+GameRes.Formats.KApp,CgdFormat,0,3,3,0,3,27,4,0,2,-1,2,0,GameRes.Formats.KApp.CgdMetaData' GameRes.Formats.KApp.CgdDecoder,
+GameRes.Formats.KApp,CgdMetaData,3,1,0,3,0,29,2,0,1,0,0,3,,GameRes.Formats.KApp.AsdOpener' GameRes.Formats.KApp.CgdFormat' GameRes.Formats.KApp.CgdDecoder
+GameRes.Formats.KApp,KTool,0,3,0,0,1,151,14,0,0,-1,2,2,GameRes.Formats.KApp.HuffmanNode' GameRes.Formats.KApp.HuffmanDecoder,GameRes.Formats.KApp.CgdDecoder' GameRes.Formats.KApp.AsdOpener
+GameRes.Formats.KApp,HuffmanNode,3,0,0,3,0,6,0,0,0,-1,0,1,,GameRes.Formats.KApp.KTool
+GameRes.Formats.KApp,HuffmanDecoder,2,4,0,0,2,88,16,0,0,0,0,1,,GameRes.Formats.KApp.KTool
+GameRes.Formats.KApp,CgdDecoder,0,2,0,0,1,16,2,0,2,-1,2,2,GameRes.Formats.KApp.CgdMetaData' GameRes.Formats.KApp.KTool,GameRes.Formats.KApp.CgdFormat' GameRes.Formats.KApp.AsdOpener
+GameRes.Formats.Kasane,Ar2Opener,0,2,5,0,2,53,8,0,2,-1,0,0,,
+GameRes.Formats.KeroQ,PacOpener,0,1,5,0,1,44,8,0,2,-1,0,0,,
+GameRes.Formats.KeroQ,CbmFormat,0,4,3,0,3,62,8,0,2,-1,0,0,,
+GameRes.Formats.KeroQ,KgdMetaData,2,0,0,2,0,5,0,0,1,-1,0,2,,GameRes.Formats.KeroQ.KgdFormat' GameRes.Formats.KeroQ.PngRestoreStream
+GameRes.Formats.KeroQ,KgdFormat,0,3,3,0,3,64,12,0,2,-1,2,0,GameRes.Formats.KeroQ.KgdMetaData' GameRes.Formats.KeroQ.PngRestoreStream,
+GameRes.Formats.KeroQ,PngRestoreStream,5,5,1,0,3,99,16,0,2,0,1,1,GameRes.Formats.KeroQ.KgdMetaData,GameRes.Formats.KeroQ.KgdFormat
+GameRes.Formats.KeroQ,Kgd1MetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.KeroQ.Kgd1Format
+GameRes.Formats.KeroQ,Kgd1Format,0,5,3,0,4,89,12,0,2,-1,1,0,GameRes.Formats.KeroQ.Kgd1MetaData,
+GameRes.Formats.Kurumi,GraFormat,0,4,3,0,3,54,7,0,2,-1,0,0,,
+GameRes.Formats.Kurumi,MpkOpener,0,3,5,0,2,63,11,0,2,-1,1,0,GameRes.Formats.Kurumi.MpkCompression,
+GameRes.Formats.Kurumi,MpkCompression,22,13,0,0,2,405,65,0,0,0,1,1,GameRes.Formats.Kurumi.ArrayPtr,GameRes.Formats.Kurumi.MpkOpener
+GameRes.Formats.Kurumi,ArrayPtr,2,1,1,0,1,17,1,0,0,0,0,1,,GameRes.Formats.Kurumi.MpkCompression
+GameRes.Formats.Lazycrew,DirEntry,3,0,0,3,0,6,0,0,0,-1,0,1,,GameRes.Formats.Lazycrew.DatOpener
+GameRes.Formats.Lazycrew,DatOpener,2,7,5,0,4,180,32,0,2,0.71,3,0,GameRes.Formats.Lazycrew.DirEntry' GameRes.Formats.Lazycrew.LcImageMetaData' GameRes.Formats.Lazycrew.LcImageDecoder,
+GameRes.Formats.Lazycrew,LcImageMetaData,3,0,2,3,0,9,0,0,1,-1,0,2,,GameRes.Formats.Lazycrew.LcImageDecoder' GameRes.Formats.Lazycrew.DatOpener
+GameRes.Formats.Lazycrew,LcImageDecoder,3,7,0,0,1,158,29,0,2,0,1,1,GameRes.Formats.Lazycrew.LcImageMetaData,GameRes.Formats.Lazycrew.DatOpener
+GameRes.Formats.Liddell,FlkOpener,0,1,5,0,1,40,7,0,2,-1,0,0,,
+GameRes.Formats.Liddell,BpaMetaData,3,0,0,3,0,6,0,0,1,-1,0,2,,GameRes.Formats.Liddell.BpaFormat' GameRes.Formats.Liddell.BpaDecoder
+GameRes.Formats.Liddell,BpaFormat,0,3,3,0,3,34,4,0,2,-1,2,0,GameRes.Formats.Liddell.BpaMetaData' GameRes.Formats.Liddell.BpaDecoder,
+GameRes.Formats.Liddell,BpaDecoder,6,6,0,0,2,203,37,0,0,0,1,1,GameRes.Formats.Liddell.BpaMetaData,GameRes.Formats.Liddell.BpaFormat
+GameRes.Formats.Melonpan,TtdOpener,0,2,5,0,2,53,8,0,2,-1,0,0,,
+GameRes.Formats.Mermaid,PwvAudio,0,2,4,0,1,74,13,0,2,-1,0,0,,
+GameRes.Formats.Mermaid,Gp1Format,0,4,3,0,3,70,10,0,2,-1,0,0,,
+GameRes.Formats.Mermaid,MgMetaData,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Mermaid.MgFormat
+GameRes.Formats.Mermaid,MgFormat,0,4,3,0,4,74,13,0,2,-1,1,0,GameRes.Formats.Mermaid.MgMetaData,
+GameRes.Formats.Mink,FcMetaData,1,0,0,1,0,4,0,0,1,-1,0,4,,GameRes.Formats.Mink.FdFormat' GameRes.Formats.Mink.FdReader' GameRes.Formats.Mink.FcFormat' GameRes.Formats.Mink.FcReader
+GameRes.Formats.Mink,FcFormat,0,4,3,0,4,42,7,0,2,-1,2,0,GameRes.Formats.Mink.FcMetaData' GameRes.Formats.Mink.FcReader,
+GameRes.Formats.Mink,FcReader,4,10,0,0,2,227,30,0,0,0,1,1,GameRes.Formats.Mink.FcMetaData,GameRes.Formats.Mink.FcFormat
+GameRes.Formats.Mink,FdFormat,0,4,3,0,4,39,6,0,2,-1,2,0,GameRes.Formats.Mink.FcMetaData' GameRes.Formats.Mink.FdReader,
+GameRes.Formats.Mink,FdReader,13,7,0,0,2,288,34,0,0,0,1,1,GameRes.Formats.Mink.FcMetaData,GameRes.Formats.Mink.FdFormat
+GameRes.Formats.Mink,MinkMetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.Mink.DatFormat
+GameRes.Formats.Mink,DatFormat,0,4,3,0,3,77,11,0,2,-1,1,0,GameRes.Formats.Mink.MinkMetaData,
+GameRes.Formats.Mink,GrpOpener,1,3,5,0,3,67,11,0,2,1,0,0,,
+GameRes.Formats.Mink,GdfFormat,0,2,4,0,2,23,3,0,2,-1,0,0,,
+GameRes.Formats.Mmfass,SdaOpener,0,2,5,0,2,45,9,0,2,-1,0,0,,
+GameRes.Formats.Nyoken,ZlkOpener,0,2,5,0,2,51,7,0,2,-1,0,0,,
+GameRes.Formats.PenguinWorks,PacOpener,1,2,5,0,2,69,9,0,2,1,1,0,GameRes.Formats.UMeSoft.IkeReader,
+GameRes.Formats.PineSoft,CmbOpener,2,4,5,0,2,304,17,0,2,0.5,0,0,,
+GameRes.Formats.PineSoft,CmbScheme,1,0,0,1,0,5,0,0,1,-1,0,0,,
+GameRes.Formats.PineSoft,CmbAudioOpener,0,2,5,0,2,46,7,0,2,-1,0,0,,
+GameRes.Formats.PineSoft,CmbAudio,0,2,4,0,2,34,4,0,2,-1,0,0,,
+GameRes.Formats.PineSoft,BpdFormat,0,3,3,0,3,30,3,0,2,-1,0,0,,
+GameRes.Formats.Pochette,PacOpener,0,2,5,0,2,55,11,0,2,-1,0,0,,
+GameRes.Formats.Pochette,GdtMetaData,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Pochette.GdtFormat
+GameRes.Formats.Pochette,GdtFormat,0,5,3,0,3,92,13,0,2,-1,1,0,GameRes.Formats.Pochette.GdtMetaData,
+GameRes.Formats.Powerd,NclFormat,0,3,3,0,3,64,8,0,2,-1,0,0,,
+GameRes.Formats.Prime,ThpFormat,0,3,3,0,3,51,8,0,2,-1,0,0,,
+GameRes.Formats.ProjectMu,GamFormat,0,4,3,0,3,31,4,0,2,-1,1,0,GameRes.Formats.ProjectMu.GamDecompressor,
+GameRes.Formats.ProjectMu,GamDecompressor,1,2,0,0,1,58,13,0,2,0,0,1,,GameRes.Formats.ProjectMu.GamFormat
+GameRes.Formats.Rina,RadMetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.Rina.RadFormat
+GameRes.Formats.Rina,RadFormat,0,6,3,0,4,92,17,0,2,-1,1,0,GameRes.Formats.Rina.RadMetaData,
+GameRes.Formats.RSystem,RadOpener,0,1,5,0,1,37,5,0,2,-1,0,0,,
+GameRes.Formats.RSystem,RsgMetaData,1,0,0,1,0,4,0,0,1,-1,0,2,,GameRes.Formats.RSystem.RsgFormat' GameRes.Formats.RSystem.RsgReader
+GameRes.Formats.RSystem,RsgFormat,0,3,3,0,3,30,3,0,2,-1,2,0,GameRes.Formats.RSystem.RsgMetaData' GameRes.Formats.RSystem.RsgReader,
+GameRes.Formats.RSystem,RsgReader,4,6,0,0,2,100,17,0,0,0,1,1,GameRes.Formats.RSystem.RsgMetaData,GameRes.Formats.RSystem.RsgFormat
+GameRes.Formats.Discovery,BDataEntry,5,0,0,5,0,8,0,0,2,-1,0,2,,GameRes.Formats.Discovery.DatOpener' GameRes.Formats.Discovery.BDataDecoder
+GameRes.Formats.Discovery,EDataEntry,5,0,0,5,0,8,0,0,2,-1,0,1,,GameRes.Formats.Discovery.DatOpener
+GameRes.Formats.Discovery,DatOpener,0,9,5,0,3,201,33,0,2,-1,3,0,GameRes.Formats.Discovery.BDataEntry' GameRes.Formats.Discovery.EDataEntry' GameRes.Formats.Discovery.BDataDecoder,
+GameRes.Formats.Discovery,BDataDecoder,6,3,7,0,2,62,7,0,1,0,1,1,GameRes.Formats.Discovery.BDataEntry,GameRes.Formats.Discovery.DatOpener
+GameRes.Formats.EbgSystem,BinOpener,1,2,5,0,2,58,6,0,2,1,1,0,GameRes.Formats.EbgSystem.BitmapDecoder,
+GameRes.Formats.EbgSystem,BitmapDecoder,0,2,0,0,1,13,2,0,2,-1,0,1,,GameRes.Formats.EbgSystem.BinOpener
+GameRes.Formats.AnotherRoom,WazAudio,0,1,4,0,1,27,3,0,2,-1,0,0,,
+GameRes.Formats.AnotherRoom,Gr1Format,0,3,3,0,3,36,4,0,2,-1,0,0,,
+GameRes.Formats.ApplePie,ArcOpener,0,1,5,0,1,36,6,0,2,-1,0,0,,
 GameRes.Formats.ApplePie,GtMetaData,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.ApplePie.GtFormat
-GameRes.Formats.ApplePie,GtFormat,0,5,3,0,4,67,8,0,2,-1,5,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.Formats.ApplePie.GtMetaData' GameRes.ImageData' GameRes.ImageMetaData,
-GameRes.Formats.Clio,PacOpener,0,1,5,0,1,32,5,0,2,-1,5,0,GameRes.Entry' GameRes.Frame' GameRes.ArcView' GameRes.FormatCatalog' GameRes.ArcFile,
+GameRes.Formats.ApplePie,GtFormat,0,5,3,0,4,72,9,0,2,-1,1,0,GameRes.Formats.ApplePie.GtMetaData,
+GameRes.Formats.Clio,PacOpener,0,1,5,0,1,34,5,0,2,-1,0,0,,
 GameRes.Formats.Clio,ExpMetaData,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Clio.ExpFormat
-GameRes.Formats.Clio,ExpFormat,0,3,3,0,3,41,3,0,2,-1,6,0,GameRes.IBinaryStream' GameRes.Formats.Clio.ExpReader' GameRes.ImageMetaData' GameRes.ImageFormat' GameRes.Formats.Clio.ExpMetaData' GameRes.ImageData,
-GameRes.Formats.Clio,ExpReader,2,2,0,0,2,77,8,0,0,0,1,1,GameRes.IBinaryStream,GameRes.Formats.Clio.ExpFormat
-GameRes.Formats.Dice,RlzOpener,0,3,5,0,2,82,11,0,2,-1,9,0,GameRes.PackedEntry' GameRes.Frame' GameRes.ArcView' GameRes.FormatCatalog' GameRes.ArcFile' GameRes.ArcViewStream' GameRes.Entry' GameRes.BinMemoryStream' GameRes.IBinaryStream,
-GameRes.Formats.Dice,KwfAudio,0,1,4,0,1,25,2,0,2,-1,5,0,GameRes.CowArray' GameRes.WaveFormat' GameRes.Formats.StreamRegion' GameRes.IBinaryStream' GameRes.RawPcmInput,
+GameRes.Formats.Clio,ExpFormat,0,3,3,0,3,44,4,0,2,-1,2,0,GameRes.Formats.Clio.ExpMetaData' GameRes.Formats.Clio.ExpReader,
+GameRes.Formats.Clio,ExpReader,2,2,0,0,2,79,9,0,0,0,0,1,,GameRes.Formats.Clio.ExpFormat
+GameRes.Formats.CrossNet,AdpAudio,0,1,4,0,1,85,12,0,2,-1,1,0,GameRes.Formats.CrossNet.AdpDecoder,
+GameRes.Formats.CrossNet,AdpDecoder,6,2,0,0,2,37,6,0,0,1,0,1,,GameRes.Formats.CrossNet.AdpAudio
+GameRes.Formats.CrossNet,GrbMetaData,2,0,0,2,0,5,0,0,1,-1,0,2,,GameRes.Formats.CrossNet.GrbFormat' GameRes.Formats.CrossNet.GrbReader
+GameRes.Formats.CrossNet,GrbFormat,0,4,3,0,4,45,5,0,2,-1,2,0,GameRes.Formats.CrossNet.GrbMetaData' GameRes.Formats.CrossNet.GrbReader,
+GameRes.Formats.CrossNet,GrbReader,6,2,4,0,2,83,9,0,0,0,1,1,GameRes.Formats.CrossNet.GrbMetaData,GameRes.Formats.CrossNet.GrbFormat
+GameRes.Formats.Dice,RlzOpener,0,3,5,0,2,86,12,0,2,-1,0,0,,
+GameRes.Formats.Dice,KwfAudio,0,1,4,0,1,26,2,0,2,-1,0,0,,
 GameRes.Formats.Dice,RbpMetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.Dice.RbpFormat
-GameRes.Formats.Dice,RbpFormat,0,3,3,0,3,50,5,0,2,-1,5,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.Formats.Dice.RbpMetaData' GameRes.ImageData' GameRes.ImageMetaData,
-GameRes.Formats.Factor,PackOpener,2,4,5,0,3,90,10,0,2,1,7,0,GameRes.Entry' GameRes.ArcView' GameRes.Frame' GameRes.FormatCatalog' GameRes.ArcFile' GameRes.VFS' GameRes.Encodings,
-GameRes.Formats.Nabe,YpfFormat,0,4,3,0,4,55,9,0,2,-1,4,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.ImageMetaData' GameRes.ImageData,
-GameRes.Formats.Nekotaro,NscOpener,0,1,5,0,1,38,7,0,2,-1,5,0,GameRes.Entry' GameRes.ArcView' GameRes.Frame' GameRes.Formats.AutoEntry' GameRes.ArcFile,
-GameRes.Formats.Nekotaro,GCmpFormat,0,3,3,0,3,28,4,0,2,-1,5,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.ImageMetaData' GameRes.Formats.Nekotaro.GCmpDecoder' GameRes.ImageData,
-GameRes.Formats.Nekotaro,GCmpDecoder,4,5,7,0,3,201,17,0,1,0,6,1,GameRes.IBinaryStream' GameRes.ImageData' GameRes.ImageMetaData' GameRes.ImageFormat' GameRes.Utility.LittleEndian' GameRes.Utility.Binary,GameRes.Formats.Nekotaro.GCmpFormat
-GameRes.Formats.QSoft,BpeFormat,0,4,3,0,3,96,18,0,2,-1,5,0,GameRes.IBinaryStream' GameRes.ImageFormat' GameRes.ImageMetaData' GameRes.ImageData' GameRes.Utility.Binary,
-GameRes.Formats.Rain,BinOpener,1,2,5,0,2,54,9,0,2,1,9,0,GameRes.Entry' GameRes.Frame' GameRes.ArcView' GameRes.FormatCatalog' GameRes.ArcFile' GameRes.ArcViewStream' GameRes.Compression.LzssStream' GameRes.ArchiveFormat' GameRes.Compression.LzssSettings,
-GameRes.Formats.Saiki,ObfuscatedImageFormat,1,1,0,0,0,30,5,2,2,0,3,0,GameRes.IBinaryStream' GameRes.Utility.Binary' GameRes.BinaryStream,
-GameRes.Formats.Saiki,JpxFormat,0,4,4,0,4,29,5,0,3,-1,5,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.ImageFormat' GameRes.ImageMetaData' GameRes.ImageData,
-GameRes.Formats.Saiki,BmxFormat,0,3,4,0,3,25,4,0,3,-1,5,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.ImageFormat' GameRes.ImageMetaData' GameRes.ImageData,
-GameRes.Formats.Sceplay,PakOpener,0,1,5,0,1,36,2,0,2,-1,6,0,GameRes.Entry' GameRes.Frame' GameRes.ArcView' GameRes.ArcViewStream' GameRes.FormatCatalog' GameRes.ArcFile,
+GameRes.Formats.Dice,RbpFormat,0,3,3,0,3,53,7,0,2,-1,1,0,GameRes.Formats.Dice.RbpMetaData,
+GameRes.Formats.Eve,GmDatOpener,0,3,5,0,2,81,11,0,2,-1,1,0,GameRes.Formats.Eve.BprDecompressor,
+GameRes.Formats.Eve,BprDecompressor,2,5,0,0,3,67,15,0,2,0.6,0,1,,GameRes.Formats.Eve.GmDatOpener
+GameRes.Formats.Eve,Wv3Audio,0,2,4,0,2,24,3,0,2,-1,1,0,GameRes.Formats.Eve.Wv3Decoder,
+GameRes.Formats.Eve,Wv3Decoder,6,2,1,0,2,79,8,0,0,0,0,1,,GameRes.Formats.Eve.Wv3Audio
+GameRes.Formats.Force,PaqOpener,0,1,5,0,1,34,5,0,2,-1,0,0,,
+GameRes.Formats.Force,DzpFormat,0,6,3,0,4,82,15,0,2,-1,0,0,,
+GameRes.Formats.Gaia,HiddenJpegFormat,0,4,3,0,3,32,5,0,2,-1,0,0,,
+GameRes.Formats.GPlay,YskOpener,1,3,5,0,3,100,17,0,2,1,1,0,GameRes.Formats.GPlay.DesTransform,
+GameRes.Formats.GPlay,DesTransform,21,6,4,0,4,286,30,0,0,0.33,0,1,,GameRes.Formats.GPlay.YskOpener
+GameRes.Formats.Hdl,HotOpener,0,1,5,0,1,51,10,0,2,-1,0,0,,
+GameRes.Formats.Hdl,HotFormat,0,3,3,0,3,47,7,0,2,-1,0,0,,
+GameRes.Formats.Libido,ArcOpener,0,2,5,0,2,53,9,0,2,-1,0,0,,
+GameRes.Formats.Logg,MbmOpener,1,3,5,0,1,57,7,0,2,0.67,0,0,,
+GameRes.Formats.MayBeSoft,HhpFormat,0,3,3,0,3,28,4,0,2,-1,1,0,GameRes.Formats.MayBeSoft.HhpReader,
+GameRes.Formats.MayBeSoft,HhpReader,6,3,3,0,3,79,14,0,0,0,0,1,,GameRes.Formats.MayBeSoft.HhpFormat
+GameRes.Formats.Muse,DatOpener,0,1,5,0,1,32,4,0,2,-1,0,0,,
+GameRes.Formats.Ocarina,RedFormat,0,3,3,0,3,33,5,0,2,-1,0,0,,
+GameRes.Formats.Pan,PanOpener,0,2,5,0,2,45,7,0,2,-1,0,0,,
+GameRes.Formats.Pan,NsfAudio,0,2,4,0,2,33,4,0,2,-1,0,0,,
+GameRes.Formats.Pan,TblFormat,0,3,3,0,3,29,3,0,2,-1,0,0,,
+GameRes.Formats.Pinky,A5Segment,5,0,1,5,0,10,0,0,0,-1,0,3,,GameRes.Formats.Pinky.A5rEntry' GameRes.Formats.Pinky.A5rOpener' GameRes.Formats.Pinky.A5rStream
+GameRes.Formats.Pinky,A5rEntry,1,0,0,1,0,4,0,0,2,-1,1,2,GameRes.Formats.Pinky.A5Segment,GameRes.Formats.Pinky.A5rOpener' GameRes.Formats.Pinky.A5rStream
+GameRes.Formats.Pinky,A5rOpener,0,3,5,0,3,123,18,0,2,-1,3,0,GameRes.Formats.Pinky.A5Segment' GameRes.Formats.Pinky.A5rEntry' GameRes.Formats.Pinky.A5rStream,
+GameRes.Formats.Pinky,A5rStream,7,10,5,0,8,116,21,0,0,0.6,2,1,GameRes.Formats.Pinky.A5Segment' GameRes.Formats.Pinky.A5rEntry,GameRes.Formats.Pinky.A5rOpener
+GameRes.Formats.Pisckiss,Audio1,0,3,4,0,1,57,10,0,2,-1,0,0,,
+GameRes.Formats.Pisckiss,Bm1Format,0,4,3,0,4,53,8,0,2,-1,0,0,,
+GameRes.Formats.Rune,YkArchive,1,1,0,1,1,10,1,0,1,0,0,1,,GameRes.Formats.Rune.YkOpener
+GameRes.Formats.Rune,YkOpener,0,3,5,0,2,72,12,0,2,-1,1,0,GameRes.Formats.Rune.YkArchive,
+GameRes.Formats.Sarang,AbcMetaData,3,0,0,3,0,6,0,0,1,-1,0,1,,GameRes.Formats.Sarang.AbcFormat
+GameRes.Formats.Sarang,AbcFormat,3,3,3,0,3,63,8,0,2,1,2,0,GameRes.Formats.Sarang.AbcMetaData' GameRes.Formats.Sarang.AbcDecoder,
+GameRes.Formats.Sarang,AbcDecoder,17,11,0,0,3,239,37,0,0,0,0,1,,GameRes.Formats.Sarang.AbcFormat
+GameRes.Formats.Sogna,SgsDatOpener,0,3,5,0,2,78,12,0,2,-1,0,0,,
+GameRes.Formats.Ebisu,Ep1MetaData,1,0,0,1,0,4,0,0,1,-1,0,3,,GameRes.Formats.Ebisu.Ep1Entry' GameRes.Formats.Ebisu.Ep1Opener' GameRes.Formats.Ebisu.Ep1BitmapDecoder
+GameRes.Formats.Ebisu,Ep1Entry,1,0,0,1,0,4,0,0,1,-1,1,1,GameRes.Formats.Ebisu.Ep1MetaData,GameRes.Formats.Ebisu.Ep1Opener
+GameRes.Formats.Ebisu,Ep1Opener,0,2,5,0,2,45,5,0,2,-1,3,0,GameRes.Formats.Ebisu.Ep1MetaData' GameRes.Formats.Ebisu.Ep1Entry' GameRes.Formats.Ebisu.Ep1BitmapDecoder,
+GameRes.Formats.Ebisu,Ep1BitmapDecoder,1,2,1,0,1,29,3,0,2,1,1,1,GameRes.Formats.Ebisu.Ep1MetaData,GameRes.Formats.Ebisu.Ep1Opener
+GameRes.Formats.System21,TexFormat,1,4,4,0,3,51,6,0,2,0.5,0,0,,
+GameRes.Formats.System21,PakOpener,1,3,5,0,2,59,10,0,2,0.67,0,0,,
+GameRes.Formats.System21,BetFormat,0,3,3,0,3,41,8,1,2,-1,0,1,,GameRes.Formats.System21.LzBetFormat
+GameRes.Formats.System21,LzBetFormat,0,4,4,0,3,37,5,0,3,-1,1,0,GameRes.Formats.System21.BetFormat,
+GameRes.Formats.Tako,MpkOpener,0,3,5,0,3,85,12,0,2,-1,0,0,,
+GameRes.Formats.Tetratech,BndOpener,0,2,5,0,2,41,7,0,2,-1,0,0,,
+GameRes.Formats.Tetratech,ScbFormat,0,0,0,0,0,4,0,0,1,-1,0,0,,
+GameRes.Formats.Tigerman,ChrOpener,0,2,5,0,2,46,6,0,2,-1,0,0,,
+GameRes.Formats.Tigerman,PacOpener,0,1,5,0,1,34,5,0,2,-1,0,0,,
+GameRes.Formats.Tigerman,ChrMetaData,3,0,0,3,0,6,0,0,1,-1,0,1,,GameRes.Formats.Tigerman.ChrFormat
+GameRes.Formats.Tigerman,ChrFormat,1,5,3,0,4,61,9,0,2,0.6,1,0,GameRes.Formats.Tigerman.ChrMetaData,
+GameRes.Formats.Types,ArcOpener,0,1,5,0,1,50,10,0,2,-1,0,0,,
+GameRes.Formats.Types,TpgFormat,0,3,3,0,3,36,5,0,2,-1,1,0,GameRes.Formats.Types.TpgfReader,
+GameRes.Formats.Types,TpgfReader,7,10,3,0,3,188,34,0,0,0.2,1,1,GameRes.Formats.Types.BitStreamEx,GameRes.Formats.Types.TpgFormat
+GameRes.Formats.Types,BitStreamEx,3,5,0,0,4,82,15,0,1,0.4,0,1,,GameRes.Formats.Types.TpgfReader
+GameRes.Formats.Uma,CdtOpener,0,3,5,0,3,49,8,0,2,-1,0,0,,
+GameRes.Formats.Uma,SdtEntry,1,0,0,1,0,4,0,0,2,-1,0,1,,GameRes.Formats.Uma.SdtOpener
+GameRes.Formats.Uma,SdtOpener,0,2,5,0,2,69,9,0,2,-1,1,0,GameRes.Formats.Uma.SdtEntry,
+GameRes.Formats.UMeSoft,IkeAudio,0,1,4,0,1,23,3,0,2,-1,1,0,GameRes.Formats.UMeSoft.IkeReader,
+GameRes.Formats.UMeSoft,WstrAudio,0,1,4,0,1,23,1,0,2,-1,0,0,,
+GameRes.Formats.UMeSoft,IkeMetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.UMeSoft.IkeFormat
+GameRes.Formats.UMeSoft,IkeFormat,0,3,3,0,3,39,5,0,2,-1,2,0,GameRes.Formats.UMeSoft.IkeMetaData' GameRes.Formats.UMeSoft.IkeReader,
+GameRes.Formats.UMeSoft,BinOpener,0,2,5,0,2,67,9,0,2,-1,1,0,GameRes.Formats.UMeSoft.IkeReader,
+GameRes.Formats.UMeSoft,IkeReader,3,5,0,0,4,149,33,0,0,0.4,0,4,,GameRes.Formats.UMeSoft.IkeAudio' GameRes.Formats.PenguinWorks.PacOpener' GameRes.Formats.UMeSoft.BinOpener' GameRes.Formats.UMeSoft.IkeFormat
+GameRes.Formats.Unknown,AqaOpener,0,1,5,0,1,39,5,0,2,-1,0,0,,
+GameRes.Formats.Unknown,MsfAudio,0,1,4,0,1,30,2,0,2,-1,0,0,,
+GameRes.Formats.Unknown,CtfMetaData,6,0,0,6,0,9,0,0,1,-1,0,2,,GameRes.Formats.Unknown.CtfFormat' GameRes.Formats.Unknown.CtfReader
+GameRes.Formats.Unknown,CtfFormat,0,3,3,0,3,39,4,0,2,-1,2,0,GameRes.Formats.Unknown.CtfMetaData' GameRes.Formats.Unknown.CtfReader,
+GameRes.Formats.Unknown,CtfReader,4,3,2,0,2,92,14,0,0,0,1,1,GameRes.Formats.Unknown.CtfMetaData,GameRes.Formats.Unknown.CtfFormat
+GameRes.Formats.Unknown,DatOpener,0,4,5,0,2,66,9,0,2,-1,0,0,,
+GameRes.Formats.Wing,GemMetaData,2,0,0,2,0,5,0,0,1,-1,0,2,,GameRes.Formats.Wing.GemFormat' GameRes.Formats.Wing.GemReader
+GameRes.Formats.Wing,GemFormat,0,4,3,0,4,43,6,0,2,-1,2,0,GameRes.Formats.Wing.GemMetaData' GameRes.Formats.Wing.GemReader,
+GameRes.Formats.Wing,GemReader,4,4,2,0,2,58,9,0,0,0,1,1,GameRes.Formats.Wing.GemMetaData,GameRes.Formats.Wing.GemFormat
+GameRes.Formats.Wing,CgrFormat,0,0,0,0,0,6,0,0,1,-1,0,0,,
+GameRes.Formats.Witch,DatOpener,0,1,5,0,1,43,5,0,1,-1,2,0,GameRes.Formats.Witch.PcdEntry' GameRes.Formats.Witch.ImageDataOpener,
+GameRes.Formats.Witch,PcdEntry,1,0,0,1,0,4,0,0,2,-1,0,3,,GameRes.Formats.Witch.DatOpener' GameRes.Formats.Witch.ImageDataOpener' GameRes.Formats.Witch.PsdFormatDecoder
+GameRes.Formats.Witch,ImageDataOpener,0,5,5,0,3,117,19,1,2,-1,2,2,GameRes.Formats.Witch.PcdEntry' GameRes.Formats.Witch.PsdFormatDecoder,GameRes.Formats.Witch.DatOpener' GameRes.Formats.Witch.SoundDataOpener
+GameRes.Formats.Witch,PsdFormatDecoder,0,2,0,0,1,15,2,0,2,-1,1,1,GameRes.Formats.Witch.PcdEntry,GameRes.Formats.Witch.ImageDataOpener
+GameRes.Formats.Witch,SoundDataOpener,0,1,5,0,1,42,7,0,2,-1,1,0,GameRes.Formats.Witch.ImageDataOpener,
+GameRes.Formats.Witch,ArcOpener,0,1,5,0,1,48,8,0,2,-1,0,0,,
+GameRes.Formats.Yaneurao,PackOpener,0,3,5,0,3,55,10,1,2,-1,0,1,,GameRes.Formats.Yaneurao.PackExOpener
+GameRes.Formats.Yaneurao,PackExOpener,0,2,5,0,2,40,6,0,3,-1,1,0,GameRes.Formats.Yaneurao.PackOpener,
+GameRes.Formats.Yaneurao,SdaOpener,0,2,5,0,2,51,8,0,2,-1,0,0,,
+GameRes.Formats.Yaneurao,GtoFormat,0,4,3,0,3,34,5,0,2,-1,1,0,GameRes.Formats.Yaneurao.SubFilterStream,
+GameRes.Formats.Yaneurao,SubFilterStream,1,3,1,0,3,34,5,0,1,0,0,1,,GameRes.Formats.Yaneurao.GtoFormat
+GameRes.Formats.Yaneurao,YgaMetaData,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Yaneurao.YgaFormat
+GameRes.Formats.Yaneurao,YgaFormat,0,4,3,0,4,48,6,0,2,-1,1,0,GameRes.Formats.Yaneurao.YgaMetaData,
+GameRes.Formats.Factor,PackOpener,2,4,5,0,3,97,14,0,2,1,0,0,,
+GameRes.Formats.Gsx,K3Opener,0,1,5,0,1,36,5,0,2,-1,0,0,,
+GameRes.Formats.Gsx,K2Format,0,6,3,0,4,83,10,0,2,-1,0,0,,
+GameRes.Formats.Hmp,MbpFormat,0,3,3,0,3,36,5,0,2,-1,0,0,,
+GameRes.Formats.Hyperspace,BmpDepthFixer,0,1,0,0,1,16,3,0,1,-1,0,0,,
+GameRes.Formats.Inspire,IdaEntry,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Inspire.PakOpener
+GameRes.Formats.Inspire,PakOpener,0,5,5,0,2,110,23,0,2,-1,2,0,GameRes.Formats.Inspire.IdaEntry' GameRes.Formats.Inspire.RleDecompressor,
+GameRes.Formats.Inspire,RleDecompressor,2,3,0,0,1,76,17,0,2,0,0,1,,GameRes.Formats.Inspire.PakOpener
+GameRes.Formats.Iris,DatOpener,0,1,5,0,1,37,7,0,2,-1,0,0,,
+GameRes.Formats.Jupiter,Lb5Opener,0,2,5,0,2,55,8,0,2,-1,2,0,GameRes.Formats.Jupiter.Lb5MetaData' GameRes.Formats.Jupiter.Lb5ImageDecoder,
+GameRes.Formats.Jupiter,Lb5MetaData,1,0,0,1,0,4,0,0,1,-1,0,2,,GameRes.Formats.Jupiter.Lb5Opener' GameRes.Formats.Jupiter.Lb5ImageDecoder
+GameRes.Formats.Jupiter,Lb5ImageDecoder,1,2,0,0,1,17,2,0,2,1,1,1,GameRes.Formats.Jupiter.Lb5MetaData,GameRes.Formats.Jupiter.Lb5Opener
+GameRes.Formats.Lune,PackOpener,0,4,5,0,4,84,14,0,2,-1,3,0,GameRes.Formats.Lune.PackImageDecoder' GameRes.Formats.Lune.PackMaskDecoder' GameRes.Formats.Lune.Pack2ImageDecoder,
+GameRes.Formats.Lune,PackImageDecoder,4,6,1,0,1,199,40,2,2,0,0,3,,GameRes.Formats.Lune.PackOpener' GameRes.Formats.Lune.PackMaskDecoder' GameRes.Formats.Lune.Pack2ImageDecoder
+GameRes.Formats.Lune,PackMaskDecoder,0,2,0,0,1,14,2,0,3,-1,1,1,GameRes.Formats.Lune.PackImageDecoder,GameRes.Formats.Lune.PackOpener
+GameRes.Formats.Lune,Pack2ImageDecoder,0,2,0,0,1,21,3,0,3,-1,1,1,GameRes.Formats.Lune.PackImageDecoder,GameRes.Formats.Lune.PackOpener
+GameRes.Formats.Marron,CpnArchive,1,1,0,1,1,10,1,0,1,0,0,1,,GameRes.Formats.Marron.DatOpener
+GameRes.Formats.Marron,DatOpener,1,2,5,0,2,61,11,0,2,1,1,0,GameRes.Formats.Marron.CpnArchive,
+GameRes.Formats.Mina,Ml2Opener,0,1,5,0,1,40,6,0,2,-1,0,0,,
+GameRes.Formats.Mina,MdFormat,0,4,3,0,3,33,5,0,2,-1,0,0,,
+GameRes.Formats.Mutation,DpfOpener,0,1,5,0,1,31,4,0,2,-1,0,0,,
+GameRes.Formats.Mutation,RbmFormat,0,3,3,0,3,55,6,0,2,-1,0,0,,
+GameRes.Formats.Pinpai,ArcOpener,0,2,5,0,2,49,9,0,2,-1,0,0,,
+GameRes.Formats.Sorciere,BizFormat,0,3,3,0,3,35,4,0,2,-1,0,0,,
+GameRes.Formats.Uncanny,CwvAudio,0,2,4,0,1,35,5,0,2,-1,0,0,,
+GameRes.Formats.Uncanny,CiiMetaData,1,0,0,1,0,4,0,0,1,-1,0,2,,GameRes.Formats.Uncanny.CiiFormat' GameRes.Formats.Uncanny.CiiReader
+GameRes.Formats.Uncanny,CiiFormat,0,3,3,0,3,50,9,0,2,-1,2,0,GameRes.Formats.Uncanny.CiiMetaData' GameRes.Formats.Uncanny.CiiReader,
+GameRes.Formats.Uncanny,CiiReader,4,5,4,0,2,112,17,0,0,0,1,1,GameRes.Formats.Uncanny.CiiMetaData,GameRes.Formats.Uncanny.CiiFormat
+GameRes.Formats.Melody,MgoMetaData,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Melody.MgoFormat
+GameRes.Formats.Melody,MgoFormat,0,3,3,0,3,55,5,0,2,-1,2,0,GameRes.Formats.Melody.MgoMetaData' GameRes.Formats.Melody.LzssDecompressor,
+GameRes.Formats.Melody,LzssDecompressor,2,3,0,0,1,56,12,0,2,0,0,1,,GameRes.Formats.Melody.MgoFormat
+GameRes.Formats.Nabe,YpfFormat,0,4,3,0,4,61,9,0,2,-1,0,0,,
+GameRes.Formats.Nekotaro,NscOpener,0,1,5,0,1,39,7,0,2,-1,0,0,,
+GameRes.Formats.Nekotaro,GCmpMetaData,1,0,0,1,0,4,0,0,1,-1,0,2,,GameRes.Formats.Nekotaro.GCmpFormat' GameRes.Formats.Nekotaro.GCmpDecoder
+GameRes.Formats.Nekotaro,GCmpFormat,0,3,3,0,3,33,4,0,2,-1,2,0,GameRes.Formats.Nekotaro.GCmpMetaData' GameRes.Formats.Nekotaro.GCmpDecoder,
+GameRes.Formats.Nekotaro,GCmpDecoder,6,5,7,0,3,733,32,0,1,0,1,1,GameRes.Formats.Nekotaro.GCmpMetaData,GameRes.Formats.Nekotaro.GCmpFormat
+GameRes.Formats.PlanTech,PacOpener,0,1,5,0,1,30,4,0,2,-1,0,0,,
+GameRes.Formats.ProjectMyu,KgrFormat,0,3,3,0,3,42,7,0,2,-1,0,0,,
+GameRes.Formats.QSoft,BpeFormat,0,4,3,0,3,101,21,0,2,-1,0,0,,
+GameRes.Formats.Rain,BinOpener,1,3,5,0,3,66,11,0,2,0.67,1,0,GameRes.Formats.Rain.CgdImageDecoder,
+GameRes.Formats.Rain,CgdImageDecoder,7,3,0,0,1,88,12,0,2,0,0,1,,GameRes.Formats.Rain.BinOpener
+GameRes.Formats.Saiki,ObfuscatedImageFormat,1,1,0,0,0,31,5,2,2,0,0,2,,GameRes.Formats.Saiki.JpxFormat' GameRes.Formats.Saiki.BmxFormat
+GameRes.Formats.Saiki,JpxFormat,0,4,4,0,4,33,5,0,3,-1,1,0,GameRes.Formats.Saiki.ObfuscatedImageFormat,
+GameRes.Formats.Saiki,BmxFormat,0,3,4,0,3,28,4,0,3,-1,1,0,GameRes.Formats.Saiki.ObfuscatedImageFormat,
+GameRes.Formats.Sceplay,PakOpener,0,1,5,0,1,37,7,0,2,-1,0,0,,
 GameRes.Formats.Sceplayer,G24MetaData,1,0,0,1,0,4,0,0,1,-1,0,1,,GameRes.Formats.Sceplayer.G2408Format
-GameRes.Formats.Sceplayer,G24AFormat,0,3,3,0,3,39,4,0,2,-1,5,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.ImageMetaData' GameRes.Formats.Sceplayer.G24Reader' GameRes.ImageData,
-GameRes.Formats.Sceplayer,G2408Format,0,4,3,0,4,45,7,0,2,-1,6,0,GameRes.CowArray' GameRes.IBinaryStream' GameRes.Formats.Sceplayer.G24MetaData' GameRes.Formats.Sceplayer.G24Reader' GameRes.ImageData' GameRes.ImageMetaData,
-GameRes.Formats.Sceplayer,G24Reader,1,4,0,0,2,66,7,0,0,0,3,2,GameRes.IBinaryStream' GameRes.Compression.LzssMode' GameRes.Compression.LzssStream,GameRes.Formats.Sceplayer.G24AFormat' GameRes.Formats.Sceplayer.G2408Format
-GameRes.Formats.ShapeShifter,BndOpener,0,2,5,0,1,54,9,0,2,-1,5,0,GameRes.PackedEntry' GameRes.Frame' GameRes.ArcView' GameRes.ArcFile' GameRes.Entry,
-GameRes.Formats.System21,PakOpener,0,2,5,0,2,37,5,0,2,-1,5,0,GameRes.Entry' GameRes.Frame' GameRes.ArcView' GameRes.FormatCatalog' GameRes.ArcFile,
-GameRes.Formats.System21,BetFormat,0,4,3,0,3,54,5,0,2,-1,7,0,GameRes.IBinaryStream' GameRes.BinaryStream' GameRes.ImageMetaData' GameRes.ImageData' GameRes.Compression.LzssStream' GameRes.Compression.LzssMode' GameRes.Compression.LzssSettings,
-GameRes.Formats.Tsd,McdOpener,0,2,5,0,2,68,11,0,2,-1,11,0,GameRes.Entry' GameRes.Frame' GameRes.ArcView' GameRes.AudioFormat' GameRes.ArcFile' GameRes.BinaryStream' GameRes.ImageMetaData' GameRes.ArchiveFormat' GameRes.ImageFormat' GameRes.IImageDecoder' GameRes.ImageFormatDecoder,
+GameRes.Formats.Sceplayer,G24AFormat,0,3,3,0,3,43,4,0,2,-1,1,0,GameRes.Formats.Sceplayer.G24Reader,
+GameRes.Formats.Sceplayer,G2408Format,0,4,3,0,4,49,7,0,2,-1,2,0,GameRes.Formats.Sceplayer.G24MetaData' GameRes.Formats.Sceplayer.G24Reader,
+GameRes.Formats.Sceplayer,G24Reader,1,4,0,0,2,70,12,0,0,0,0,2,,GameRes.Formats.Sceplayer.G24AFormat' GameRes.Formats.Sceplayer.G2408Format
+GameRes.Formats.ShapeShifter,BndOpener,0,3,5,0,2,71,11,0,2,-1,0,0,,
+GameRes.Formats.SystemAqua,DatOpener,0,7,5,0,3,154,24,0,2,-1,0,0,,
+GameRes.Formats.Tsd,McdOpener,0,2,5,0,2,70,12,0,2,-1,0,0,,
+GameRes.Formats.Unison,VctOpener,0,4,5,0,2,111,19,0,2,-1,0,0,,
+GameRes.Formats.Uran,NclEntry,1,0,0,1,0,4,0,0,2,-1,0,1,,GameRes.Formats.Uran.NclOpener
+GameRes.Formats.Uran,NclOpener,0,2,5,0,2,64,11,0,2,-1,2,0,GameRes.Formats.Uran.NclEntry' GameRes.Formats.Uran.NclSubStream,
+GameRes.Formats.Uran,NclSubStream,1,3,0,0,3,32,5,0,2,0,0,1,,GameRes.Formats.Uran.NclOpener
+GameRes.Formats.Uran,PhsOpener,0,1,5,0,1,32,4,0,2,-1,0,0,,
+GameRes.Formats.Weapon,CgEntry,2,0,0,2,0,5,0,0,1,-1,0,1,,GameRes.Formats.Weapon.DatOpener
+GameRes.Formats.Weapon,DatOpener,2,2,5,0,2,359,5,0,2,1,2,0,GameRes.Formats.Weapon.CgEntry' GameRes.Formats.Weapon.CgDecoder,
+GameRes.Formats.Weapon,CgDecoder,0,2,0,0,1,20,3,0,2,-1,0,1,,GameRes.Formats.Weapon.DatOpener
+GameRes.Formats.Weapon,VoiceOpener,0,1,5,0,1,42,7,0,2,-1,0,0,,
+GameRes.Formats.WestGate,UcaOpener,0,3,5,0,3,35,7,0,2,-1,2,0,GameRes.Formats.WestGate.UcaTool' GameRes.Formats.WestGate.UcaBitmapDecoder,
+GameRes.Formats.WestGate,UcaTool,0,1,0,0,1,30,6,0,0,-1,0,3,,GameRes.Formats.WestGate.UcaOpener' GameRes.Formats.WestGate.UwfOpener' GameRes.Formats.WestGate.UsfOpener
+GameRes.Formats.WestGate,UcaBitmapDecoder,0,3,0,0,1,69,8,0,2,-1,0,1,,GameRes.Formats.WestGate.UcaOpener
+GameRes.Formats.WestGate,UsfOpener,0,2,5,0,2,29,5,0,2,-1,1,0,GameRes.Formats.WestGate.UcaTool,
+GameRes.Formats.WestGate,UwfOpener,0,3,5,0,3,57,9,0,2,-1,1,0,GameRes.Formats.WestGate.UcaTool,
+GameRes.Formats.WestGate,NbmpFormat,0,3,3,0,3,40,6,0,2,-1,0,0,,
+GameRes.Formats.YellowCap,GefFormat,0,4,3,0,4,36,6,0,2,-1,0,0,,
+GameRes.Formats.YellowCap,GgfFormat,0,4,3,0,3,38,6,0,2,-1,0,0,,

@@ -1,0 +1,59 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Warewolf.Interfaces.Auditing,IAuditEntry,0,0,2,0,0,5,0,3,0,-1,0,1,,Warewolf.Interfaces.Auditing.IAudit
+Warewolf.Interfaces.Auditing,IAudit,0,0,22,0,0,25,0,2,1,-1,1,0,Warewolf.Interfaces.Auditing.IAuditEntry,
+Warewolf.Interfaces.Auditing,IAuditQueryable,0,4,0,0,0,7,4,0,0,-1,0,0,,
+Warewolf.Interfaces.Auditing,IWebSocketFactory,0,1,0,0,0,4,1,1,0,-1,1,0,Warewolf.Interfaces.Auditing.IWebSocketWrapper,
+Warewolf.Interfaces.Auditing,IWebSocketServerFactory,0,1,0,0,0,4,1,1,0,-1,1,1,Warewolf.Interfaces.Auditing.IWebSocketServerWrapper,Warewolf.Interfaces.Auditing.WebSocketServerFactory
+Warewolf.Interfaces.Auditing,WebSocketServerFactory,0,1,0,0,1,7,1,0,1,-1,3,0,Warewolf.Interfaces.Auditing.IWebSocketServerFactory' Warewolf.Interfaces.Auditing.IWebSocketServerWrapper' Warewolf.Interfaces.Auditing.WebSocketServerWrapper,
+Warewolf.Interfaces.Auditing,IWebSocketServerWrapper,0,2,0,0,0,5,2,1,0,-1,0,3,,Warewolf.Interfaces.Auditing.WebSocketServerWrapper' Warewolf.Interfaces.Auditing.IWebSocketServerFactory' Warewolf.Interfaces.Auditing.WebSocketServerFactory
+Warewolf.Interfaces.Auditing,WebSocketServerWrapper,1,3,0,0,3,19,3,0,1,0,1,1,Warewolf.Interfaces.Auditing.IWebSocketServerWrapper,Warewolf.Interfaces.Auditing.WebSocketServerFactory
+Warewolf.Interfaces.Auditing,IWebSocketWrapper,0,8,0,0,0,11,8,1,0,-1,0,1,,Warewolf.Interfaces.Auditing.IWebSocketFactory
+Warewolf,IPauseHelper,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Warewolf,IWriter,0,2,0,0,0,5,2,1,0,-1,0,1,,Warewolf.Writer
+Warewolf,Writer,0,2,0,0,2,8,2,0,1,-1,1,0,Warewolf.IWriter,
+Warewolf.Configuration,AuditingSettingsData,0,1,1,0,1,9,1,0,0,-1,0,0,,
+Warewolf.Configuration,ServerSettingsData,0,1,8,0,1,23,1,0,0,-1,0,0,,
+Warewolf.Configuration,StudioSettingsData,0,1,1,0,1,11,1,0,0,-1,0,0,,
+Warewolf.Data,ConsumerResult,0,0,0,0,0,5,0,0,0,-1,0,1,,Warewolf.Streams.IConsumer
+Warewolf.Data,IServiceInputBase,0,1,2,0,0,6,1,1,0,-1,0,1,,Warewolf.Triggers.ITriggerQueue
+Warewolf.Data,IOptionDataList,0,0,1,0,0,4,0,1,0,-1,0,0,,
+Warewolf.Logging,LogLevel,0,0,0,0,0,17,0,0,0,-1,0,0,,
+Warewolf.Logging,ILoggerConnection,0,2,0,0,0,5,2,1,0,-1,3,1,Warewolf.Logging.ILoggerConfig' Warewolf.Logging.ILoggerPublisher' Warewolf.Streams.IConsumer,Warewolf.Logging.ILoggerSource
+Warewolf.Logging,ILoggerConfig,0,0,1,0,0,4,0,1,0,-1,0,3,,Warewolf.Logging.ILoggerConnection' Warewolf.Logging.ILoggerContext' Warewolf.Logging.ILoggerSource
+Warewolf.Logging,ILoggerConsumer,0,0,0,0,0,3,0,1,1,-1,1,0,Warewolf.Streams.IConsumer,
+Warewolf.Logging,ILoggerContext,0,0,3,0,0,6,0,0,0,-1,2,0,Warewolf.Logging.ILoggerConfig' Warewolf.Logging.ILoggerSource,
+Warewolf.Logging,ILoggerPublisher,0,5,0,0,0,8,5,1,1,-1,1,1,Warewolf.Streams.IPublisher,Warewolf.Logging.ILoggerConnection
+Warewolf.Logging,ILoggerSource,0,1,0,0,0,4,1,1,0,-1,2,1,Warewolf.Logging.ILoggerConnection' Warewolf.Logging.ILoggerConfig,Warewolf.Logging.ILoggerContext
+Warewolf.Options,IOption,0,0,1,0,0,4,0,1,0,-1,0,2,,Warewolf.Options.IOptionBasic' Warewolf.Triggers.ITriggerQueue
+Warewolf.Options,IOptionBasic,0,0,2,0,0,5,0,3,1,-1,2,3,Warewolf.Options.IOption' Warewolf.Options.IOptionNotifyUpdate,Warewolf.Options.IOptionAutocomplete' Warewolf.Options.IOptionInt' Warewolf.Options.IOptionBool
+Warewolf.Options,IOptionAutocomplete,0,0,1,0,0,4,0,1,2,-1,1,0,Warewolf.Options.IOptionBasic,
+Warewolf.Options,IOptionInt,0,0,0,0,0,3,0,1,2,-1,1,0,Warewolf.Options.IOptionBasic,
+Warewolf.Options,IOptionBool,0,0,0,0,0,3,0,1,2,-1,1,0,Warewolf.Options.IOptionBasic,
+Warewolf.Options,IOptionNotifyUpdate,0,0,0,0,0,4,0,1,0,-1,1,1,Warewolf.Options.OptionValueChangedArgs<T>,Warewolf.Options.IOptionBasic
+Warewolf.Options,OptionValueChangedArgs<T>,0,1,3,0,1,12,1,0,0,-1,0,1,,Warewolf.Options.IOptionNotifyUpdate
+Warewolf.OS,IChildProcessTracker,0,1,0,0,0,4,1,1,0,-1,1,0,Warewolf.OS.IProcess,
+Warewolf.OS,IJobConfig,0,0,3,0,0,6,0,2,0,-1,0,2,,Warewolf.Triggers.ITrigger' Warewolf.OS.IProcessThreadList
+Warewolf.OS,IProcess,0,3,4,0,0,10,3,1,0,-1,0,2,,Warewolf.OS.IChildProcessTracker' Warewolf.OS.IProcessFactory
+Warewolf.OS,IProcessFactory,0,2,0,0,0,5,2,1,0,-1,1,0,Warewolf.OS.IProcess,
+Warewolf.OS,IProcessMonitor,0,2,0,0,0,6,2,2,0,-1,0,0,,
+Warewolf.OS,IProcessThread,0,2,1,0,0,7,2,2,0,-1,0,1,,Warewolf.OS.IProcessThreadList
+Warewolf.OS,IProcessThreadList,0,3,1,0,0,8,3,1,0,-1,2,0,Warewolf.OS.IJobConfig' Warewolf.OS.IProcessThread,
+Warewolf.OS.IO,IFileSystemWatcher,0,0,4,0,0,12,0,1,0,-1,0,0,,
+Warewolf.Streams,IConnection,0,2,0,0,0,5,2,2,0,-1,3,1,Warewolf.Streams.IConsumer' Warewolf.Streams.IPublisher' Warewolf.Streams.IStreamConfig,Warewolf.Triggers.IQueueConnection
+Warewolf.Streams,IConsumer,0,2,0,0,0,7,2,5,0,-1,1,4,Warewolf.Data.ConsumerResult,Warewolf.Streams.IConnection' Warewolf.Logging.ILoggerConnection' Warewolf.Triggers.IQueueConsumer' Warewolf.Logging.ILoggerConsumer
+Warewolf.Streams,IDeserializer,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Warewolf.Streams,IPublisher,0,2,0,0,0,7,2,3,0,-1,0,2,,Warewolf.Logging.ILoggerPublisher' Warewolf.Streams.IConnection
+Warewolf.Streams,ISerializer,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Warewolf.Streams,IStreamConfig,0,0,0,0,0,3,0,2,0,-1,0,3,,Warewolf.Triggers.IQueueConnectionFactory' Warewolf.Triggers.IQueueConnection' Warewolf.Streams.IConnection
+Warewolf.Triggers,ITrigger,0,0,1,0,0,4,0,1,1,-1,1,1,Warewolf.OS.IJobConfig,Warewolf.Triggers.ITriggerQueue
+Warewolf.Triggers,ITriggersCatalog,0,3,1,0,0,10,3,2,0,-1,1,0,Warewolf.Triggers.ITriggerQueue,
+Warewolf.Triggers,IExecutionHistory,0,0,4,0,0,7,0,1,0,-1,1,0,Warewolf.Triggers.IExecutionInfo,
+Warewolf.Triggers,IExecutionInfo,0,0,6,0,0,9,0,1,0,-1,1,1,Warewolf.Triggers.QueueRunStatus,Warewolf.Triggers.IExecutionHistory
+Warewolf.Triggers,IQueueConnection,0,1,1,0,0,5,1,1,1,-1,2,1,Warewolf.Streams.IConnection' Warewolf.Streams.IStreamConfig,Warewolf.Triggers.IQueueConnectionFactory
+Warewolf.Triggers,IQueueConsumer,0,0,0,0,0,3,0,0,1,-1,1,0,Warewolf.Streams.IConsumer,
+Warewolf.Triggers,IQueueConnectionFactory,0,1,0,0,0,4,1,1,0,-1,2,0,Warewolf.Streams.IStreamConfig' Warewolf.Triggers.IQueueConnection,
+Warewolf.Triggers,ITriggerQueue,0,0,12,0,0,15,0,2,2,-1,3,1,Warewolf.Data.IServiceInputBase' Warewolf.Options.IOption' Warewolf.Triggers.ITrigger,Warewolf.Triggers.ITriggersCatalog
+Warewolf.Triggers,QueueRunStatus,0,0,0,0,0,6,0,0,0,-1,0,1,,Warewolf.Triggers.IExecutionInfo
+Warewolf.VirtualFileSystem,IDirectoryBase,0,1,0,0,0,4,1,1,0,-1,0,0,,
+Warewolf.VirtualFileSystem,IFileBase,0,5,0,0,0,8,5,1,0,-1,0,0,,
+Warewolf.Web,IHttpClient,0,2,1,0,0,6,2,1,0,-1,0,0,,

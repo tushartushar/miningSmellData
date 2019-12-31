@@ -1,21 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-IKVM.Runtime,JavaVMOption,2,0,0,0,0,6,0,0,0,-1,0,2,,IKVM.Runtime.JavaVMInitArgs' IKVM.Runtime.JNI
+IKVM.Runtime,JavaVMOption,2,0,0,0,0,6,0,0,0,-1,0,1,,IKVM.Runtime.JavaVMInitArgs
 IKVM.Runtime,JavaVMInitArgs,4,0,0,0,0,8,0,0,0,-1,1,1,IKVM.Runtime.JavaVMOption,IKVM.Runtime.JNI
-IKVM.Runtime,JNI,3,4,0,0,3,216,11,0,0,0.5,4,4,IKVM.Runtime.JNIEnv' IKVM.Runtime.JavaVMInitArgs' IKVM.Runtime.JavaVMOption' IKVM.Runtime.JavaVM,IKVM.Runtime.JniHelper' IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv
-IKVM.Runtime,Frame,2,8,0,0,5,142,14,0,0,0.25,6,1,IKVM.Runtime.ManagedJNIEnv' IKVM.Runtime.FrameState' IKVM.Runtime.TlsHack' IKVM.Runtime.JNIEnv' IKVM.Runtime.JniHelper' IKVM.Runtime.NativeLibrary,IKVM.Runtime.JniHelper
-IKVM.Runtime,NativeLibrary,1,14,0,0,0,187,16,3,0,0.14,0,4,,IKVM.Runtime.Frame' IKVM.Runtime.JniHelper' IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM
-IKVM.Runtime,Win32_x86,1,12,0,0,0,40,12,0,1,0,0,0,,
-IKVM.Runtime,Win32_x64,1,12,0,0,0,40,12,0,1,0,0,0,,
-IKVM.Runtime,Classic,1,12,0,0,0,40,12,0,1,0,0,0,,
-IKVM.Runtime,JniHelper,2,4,0,0,0,108,4,0,0,0.75,4,1,IKVM.Runtime.Frame' IKVM.Runtime.NativeLibrary' IKVM.Runtime.JavaVM' IKVM.Runtime.JNI,IKVM.Runtime.Frame
+IKVM.Runtime,JNI,3,4,0,0,3,216,15,0,0,0.5,8,4,IKVM.Runtime.JavaVMInitArgs' IKVM.Runtime.NativeLibrary' IKVM.Runtime.JniHelper' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv' IKVM.Runtime.ManagedJNIEnv' IKVM.Runtime.FrameState' IKVM.Runtime.TlsHack,IKVM.Runtime.JniHelper' IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv
+IKVM.Runtime,Frame,2,8,0,0,5,142,28,0,0,0.25,0,1,,IKVM.Runtime.JniHelper
+IKVM.Runtime,NativeLibrary,1,14,0,0,0,187,16,3,0,0.14,3,4,IKVM.Runtime.Win32_x86' IKVM.Runtime.Win32_x64' IKVM.Runtime.Classic,IKVM.Runtime.JNI' IKVM.Runtime.JniHelper' IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM
+IKVM.Runtime,Win32_x86,1,12,0,0,0,40,12,0,1,0,0,1,,IKVM.Runtime.NativeLibrary
+IKVM.Runtime,Win32_x64,1,12,0,0,0,40,12,0,1,0,0,1,,IKVM.Runtime.NativeLibrary
+IKVM.Runtime,Classic,1,12,0,0,0,40,12,0,1,0,0,1,,IKVM.Runtime.NativeLibrary
+IKVM.Runtime,JniHelper,2,4,0,0,0,108,11,0,0,0.75,4,1,IKVM.Runtime.JNI' IKVM.Runtime.Frame' IKVM.Runtime.NativeLibrary' IKVM.Runtime.JavaVM,IKVM.Runtime.JNI
 IKVM.Runtime,GlobalRefs,3,1,0,0,0,24,2,0,0,0,0,2,,IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv
-IKVM.Runtime,VtableBuilder,2,1,0,0,0,340,3,0,0,0,3,1,IKVM.Runtime.JNI' IKVM.Runtime.NativeLibrary' IKVM.Runtime.JniMem,IKVM.Runtime.JNIEnv
+IKVM.Runtime,VtableBuilder,2,1,0,0,0,340,3,0,0,0,7,1,IKVM.Runtime.JNI' IKVM.Runtime.NativeLibrary' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv' IKVM.Runtime.jvalue' IKVM.Runtime.JNINativeMethod' IKVM.Runtime.JniMem,IKVM.Runtime.JNIEnv
 IKVM.Runtime,JavaVMAttachArgs,3,0,0,0,0,7,0,0,0,-1,0,1,,IKVM.Runtime.JavaVM
-IKVM.Runtime,JavaVM,4,7,0,0,0,119,18,0,0,0.71,8,3,IKVM.Runtime.JNI' IKVM.Runtime.JniMem' IKVM.Runtime.NativeLibrary' IKVM.Runtime.JNIEnv' IKVM.Runtime.ManagedJNIEnv' IKVM.Runtime.TlsHack' IKVM.Runtime.GlobalRefs' IKVM.Runtime.JavaVMAttachArgs,IKVM.Runtime.JNI' IKVM.Runtime.JniHelper' IKVM.Runtime.JNIEnv
-IKVM.Runtime,JNIEnv,21,192,0,0,0,2276,325,0,0,0.07,9,4,IKVM.Runtime.ManagedJNIEnv' IKVM.Runtime.TlsHack' IKVM.Runtime.VtableBuilder' IKVM.Runtime.GlobalRefs' IKVM.Runtime.jvalue' IKVM.Runtime.JniMem' IKVM.Runtime.JNINativeMethod' IKVM.Runtime.JNI' IKVM.Runtime.JavaVM,IKVM.Runtime.JNI' IKVM.Runtime.Frame' IKVM.Runtime.JavaVM' IKVM.Runtime.ManagedJNIEnv
-IKVM.Runtime,ManagedJNIEnv,12,10,0,0,0,230,30,0,0,0,3,3,IKVM.Runtime.JNIEnv' IKVM.Runtime.JniMem' IKVM.Runtime.FrameState,IKVM.Runtime.Frame' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv
-IKVM.Runtime,FrameState,3,1,0,0,0,12,1,0,0,0,0,2,,IKVM.Runtime.Frame' IKVM.Runtime.ManagedJNIEnv
-IKVM.Runtime,jvalue,9,0,0,9,0,22,0,0,0,-1,0,1,,IKVM.Runtime.JNIEnv
-IKVM.Runtime,JNINativeMethod,3,0,0,3,0,7,0,0,0,-1,0,1,,IKVM.Runtime.JNIEnv
-IKVM.Runtime,JniMem,0,2,0,0,0,11,2,0,0,-1,0,4,,IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv' IKVM.Runtime.ManagedJNIEnv
-IKVM.Runtime,TlsHack,1,0,0,0,0,5,0,0,0,-1,0,3,,IKVM.Runtime.Frame' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv
+IKVM.Runtime,JavaVM,4,7,0,0,0,119,18,0,0,0.71,8,4,IKVM.Runtime.JNI' IKVM.Runtime.NativeLibrary' IKVM.Runtime.GlobalRefs' IKVM.Runtime.JavaVMAttachArgs' IKVM.Runtime.JNIEnv' IKVM.Runtime.ManagedJNIEnv' IKVM.Runtime.JniMem' IKVM.Runtime.TlsHack,IKVM.Runtime.JNI' IKVM.Runtime.JniHelper' IKVM.Runtime.VtableBuilder' IKVM.Runtime.JNIEnv
+IKVM.Runtime,JNIEnv,21,192,0,0,0,2276,342,0,0,0.07,10,4,IKVM.Runtime.JNI' IKVM.Runtime.GlobalRefs' IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM' IKVM.Runtime.ManagedJNIEnv' IKVM.Runtime.FrameState' IKVM.Runtime.jvalue' IKVM.Runtime.JNINativeMethod' IKVM.Runtime.JniMem' IKVM.Runtime.TlsHack,IKVM.Runtime.JNI' IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM' IKVM.Runtime.TlsHack
+IKVM.Runtime,ManagedJNIEnv,12,10,0,0,0,230,30,0,0,0,0,4,,IKVM.Runtime.JNI' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv' IKVM.Runtime.TlsHack
+IKVM.Runtime,FrameState,3,1,0,0,0,12,1,0,0,0,0,2,,IKVM.Runtime.JNI' IKVM.Runtime.JNIEnv
+IKVM.Runtime,jvalue,9,0,0,9,0,22,0,0,0,-1,0,2,,IKVM.Runtime.VtableBuilder' IKVM.Runtime.JNIEnv
+IKVM.Runtime,JNINativeMethod,3,0,0,3,0,7,0,0,0,-1,0,2,,IKVM.Runtime.VtableBuilder' IKVM.Runtime.JNIEnv
+IKVM.Runtime,JniMem,0,2,0,0,0,11,2,0,0,-1,0,3,,IKVM.Runtime.VtableBuilder' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv
+IKVM.Runtime,TlsHack,1,0,0,0,0,5,0,0,0,-1,2,3,IKVM.Runtime.JNIEnv' IKVM.Runtime.ManagedJNIEnv,IKVM.Runtime.JNI' IKVM.Runtime.JavaVM' IKVM.Runtime.JNIEnv

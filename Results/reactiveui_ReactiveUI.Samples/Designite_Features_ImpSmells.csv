@@ -1,0 +1,2 @@
+Implementation smell,Namespace,Class,File,Method,Description
+Magic Number,Features.ComposeTweet,ComposeTweetViewModel,C:\research\architectureSmells\repos\reactiveui_ReactiveUI.Samples\OldSamples\ReactiveTwitter\Features\ComposeTweet\ComposeTweetViewModel.cs,ComposeTweetViewModel,The following statement contains a magic number: _charactersRemaining = this                 .WhenAnyValue(vm => vm.Message)                 .Select(message => message?.Length ?? 0)                 .Select(length => 240 - length)                 .ToProperty(this' vm => vm.CharactersRemaining);

@@ -1,14 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SimpleOAuth,EncryptionMethod,0,0,0,0,0,14,0,0,0,-1,0,4,,SimpleOAuth.OAuthRequestWrapper' SimpleOAuth.Internal.SignatureMethod' SimpleOAuthTwitter.Program' SimpleOAuthTester.Program
+SimpleOAuth,EncryptionMethod,0,0,0,0,0,14,0,0,0,-1,2,2,SimpleOAuth.Generators.HmacSha1Generator' SimpleOAuth.Internal.SignatureTypeAttribute,SimpleOAuth.Internal.SignatureMethod' SimpleOAuth.OAuthRequestWrapper
 SimpleOAuth,Extensions,0,4,0,0,4,142,5,0,0,-1,3,0,SimpleOAuth.OAuthRequestWrapper' SimpleOAuth.Tokens' SimpleOAuth.Utilities.UrlHelper,
-SimpleOAuth,OAuthRequestWrapper,5,10,7,0,7,232,21,0,0,0.7,6,3,SimpleOAuth.EncryptionMethod' SimpleOAuth.Tokens' SimpleOAuth.Utilities.UrlHelper' SimpleOAuth.Generators.NonceGenerator' SimpleOAuth.Generators.TimestampGenerator' SimpleOAuth.Internal.SignatureMethod,SimpleOAuth.Extensions' SimpleOAuthTwitter.Program' SimpleOAuthTester.Program
-SimpleOAuth,Tokens,0,1,4,0,1,45,5,0,0,-1,0,4,,SimpleOAuth.Extensions' SimpleOAuth.OAuthRequestWrapper' SimpleOAuthTwitter.Program' SimpleOAuthTester.Program
-SimpleOAuth.Generators,HmacSha1Generator,1,1,0,0,1,10,1,0,1,0,0,0,,
-SimpleOAuth.Generators,IGenerator,0,1,0,0,0,4,1,2,0,-1,0,0,,
-SimpleOAuth.Generators,NonceGenerator,0,1,0,0,1,10,1,0,1,-1,0,1,,SimpleOAuth.OAuthRequestWrapper
-SimpleOAuth.Generators,TimestampGenerator,0,1,0,0,1,10,1,0,1,-1,0,1,,SimpleOAuth.OAuthRequestWrapper
-SimpleOAuth.Generators,ISignatureGenerator,0,1,0,0,0,4,1,1,0,-1,0,1,,SimpleOAuth.Internal.SignatureMethod
+SimpleOAuth,OAuthRequestWrapper,5,10,7,0,7,232,21,0,0,0.7,6,1,SimpleOAuth.EncryptionMethod' SimpleOAuth.Tokens' SimpleOAuth.Generators.NonceGenerator' SimpleOAuth.Generators.TimestampGenerator' SimpleOAuth.Internal.SignatureMethod' SimpleOAuth.Utilities.UrlHelper,SimpleOAuth.Extensions
+SimpleOAuth,Tokens,0,1,4,0,1,45,5,0,0,-1,0,2,,SimpleOAuth.OAuthRequestWrapper' SimpleOAuth.Extensions
+SimpleOAuth.Generators,HmacSha1Generator,1,1,0,0,1,10,1,0,1,0,1,1,SimpleOAuth.Generators.ISignatureGenerator,SimpleOAuth.EncryptionMethod
+SimpleOAuth.Generators,IGenerator,0,1,0,0,0,4,1,2,0,-1,0,2,,SimpleOAuth.Generators.TimestampGenerator' SimpleOAuth.Generators.NonceGenerator
+SimpleOAuth.Generators,NonceGenerator,0,1,0,0,1,10,1,0,1,-1,1,1,SimpleOAuth.Generators.IGenerator,SimpleOAuth.OAuthRequestWrapper
+SimpleOAuth.Generators,TimestampGenerator,0,1,0,0,1,10,1,0,1,-1,1,1,SimpleOAuth.Generators.IGenerator,SimpleOAuth.OAuthRequestWrapper
+SimpleOAuth.Generators,ISignatureGenerator,0,1,0,0,0,4,1,1,0,-1,0,2,,SimpleOAuth.Generators.HmacSha1Generator' SimpleOAuth.Internal.SignatureMethod
 SimpleOAuth.Internal,AttributeExtensions,0,2,0,0,2,15,2,0,0,-1,1,0,SimpleOAuth.Internal.SignatureTypeAttribute,
-SimpleOAuth.Internal,SignatureTypeAttribute,1,1,1,0,1,13,1,0,0,0,0,1,,SimpleOAuth.Internal.AttributeExtensions
-SimpleOAuth.Internal,SignatureMethod,1,2,0,0,1,22,3,0,0,0,2,1,SimpleOAuth.Generators.ISignatureGenerator' SimpleOAuth.EncryptionMethod,SimpleOAuth.OAuthRequestWrapper
+SimpleOAuth.Internal,SignatureTypeAttribute,1,1,1,0,1,13,1,0,0,0,0,2,,SimpleOAuth.Internal.AttributeExtensions' SimpleOAuth.EncryptionMethod
+SimpleOAuth.Internal,SignatureMethod,1,2,0,0,1,22,3,0,0,0,2,1,SimpleOAuth.EncryptionMethod' SimpleOAuth.Generators.ISignatureGenerator,SimpleOAuth.OAuthRequestWrapper
 SimpleOAuth.Utilities,UrlHelper,0,5,0,0,5,37,7,0,0,-1,0,2,,SimpleOAuth.Extensions' SimpleOAuth.OAuthRequestWrapper

@@ -1,0 +1,22 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MassTransit,INewIdFormatter,0,1,0,0,0,4,1,3,0,-1,0,4,,MassTransit.NewIdFormatters.DashedHexFormatter' MassTransit.NewIdFormatters.Base32Formatter' MassTransit.NewIdFormatters.HexFormatter' MassTransit.NewId
+MassTransit,INewIdGenerator,0,3,0,0,0,7,3,1,0,-1,1,2,MassTransit.NewId,MassTransit.NewIdGenerator' MassTransit.NewId
+MassTransit,INewIdParser,0,1,0,0,0,4,1,1,0,-1,1,1,MassTransit.NewId,MassTransit.NewIdParsers.Base32Parser
+MassTransit,IProcessIdProvider,0,1,0,0,0,4,1,2,0,-1,0,3,,MassTransit.NewIdGenerator' MassTransit.NewIdProviders.CurrentProcessIdProvider' MassTransit.NewId
+MassTransit,ITickProvider,0,0,1,0,0,4,0,4,0,-1,0,4,,MassTransit.NewIdProviders.StopwatchTickProvider' MassTransit.NewIdProviders.DateTimeTickProvider' MassTransit.NewIdGenerator' MassTransit.NewId
+MassTransit,IWorkerIdProvider,0,1,0,0,0,4,1,4,0,-1,0,5,,MassTransit.NewIdProviders.HostNameHashWorkerIdProvider' MassTransit.NewIdProviders.NetworkAddressWorkerIdProvider' MassTransit.NewIdProviders.BestPossibleWorkerIdProvider' MassTransit.NewIdGenerator' MassTransit.NewId
+MassTransit,NewId,14,27,4,1,24,320,45,0,0,0.22,11,5,MassTransit.INewIdFormatter' MassTransit.INewIdGenerator' MassTransit.IProcessIdProvider' MassTransit.ITickProvider' MassTransit.IWorkerIdProvider' MassTransit.NewIdGenerator' MassTransit.NewIdFormatters.DashedHexFormatter' MassTransit.NewIdFormatters.HexFormatter' MassTransit.NewIdProviders.BestPossibleWorkerIdProvider' MassTransit.NewIdProviders.DateTimeTickProvider' MassTransit.NewIdProviders.StopwatchTickProvider,MassTransit.INewIdParser' MassTransit.NewIdParsers.Base32Parser' MassTransit.INewIdGenerator' MassTransit.NewIdExtensions' MassTransit.NewIdGenerator
+MassTransit,NewIdExtensions,0,1,0,0,1,7,1,0,0,-1,1,0,MassTransit.NewId,
+MassTransit,NewIdGenerator,10,5,0,0,4,122,13,0,1,0,5,1,MassTransit.INewIdGenerator' MassTransit.IProcessIdProvider' MassTransit.ITickProvider' MassTransit.IWorkerIdProvider' MassTransit.NewId,MassTransit.NewId
+MassTransit.NewIdFormatters,Base32Formatter,4,4,0,0,3,44,7,1,1,0.5,1,1,MassTransit.INewIdFormatter,MassTransit.NewIdFormatters.ZBase32Formatter
+MassTransit.NewIdFormatters,DashedHexFormatter,4,3,0,0,2,70,11,0,1,0,1,1,MassTransit.INewIdFormatter,MassTransit.NewId
+MassTransit.NewIdFormatters,HexFormatter,1,3,0,0,2,26,4,0,1,0,1,1,MassTransit.INewIdFormatter,MassTransit.NewId
+MassTransit.NewIdFormatters,ZBase32Formatter,2,1,0,0,1,11,1,0,2,0,1,0,MassTransit.NewIdFormatters.Base32Formatter,
+MassTransit.NewIdParsers,Base32Parser,5,4,0,0,3,61,12,1,1,0.75,2,1,MassTransit.INewIdParser' MassTransit.NewId,MassTransit.NewIdParsers.ZBase32Parser
+MassTransit.NewIdParsers,ZBase32Parser,2,1,0,0,1,10,1,0,2,0,1,0,MassTransit.NewIdParsers.Base32Parser,
+MassTransit.NewIdProviders,BestPossibleWorkerIdProvider,0,1,0,0,1,35,1,0,1,-1,3,1,MassTransit.IWorkerIdProvider' MassTransit.NewIdProviders.HostNameHashWorkerIdProvider' MassTransit.NewIdProviders.NetworkAddressWorkerIdProvider,MassTransit.NewId
+MassTransit.NewIdProviders,DateTimeTickProvider,0,0,1,0,0,5,0,0,1,-1,1,1,MassTransit.ITickProvider,MassTransit.NewId
+MassTransit.NewIdProviders,HostNameHashWorkerIdProvider,0,2,0,0,1,28,2,0,1,-1,1,1,MassTransit.IWorkerIdProvider,MassTransit.NewIdProviders.BestPossibleWorkerIdProvider
+MassTransit.NewIdProviders,NetworkAddressWorkerIdProvider,0,2,0,0,1,27,3,0,1,-1,1,1,MassTransit.IWorkerIdProvider,MassTransit.NewIdProviders.BestPossibleWorkerIdProvider
+MassTransit.NewIdProviders,CurrentProcessIdProvider,0,1,0,0,1,15,2,0,1,-1,1,0,MassTransit.IProcessIdProvider,
+MassTransit.NewIdProviders,StopwatchTickProvider,2,1,1,0,1,12,1,0,1,0,1,1,MassTransit.ITickProvider,MassTransit.NewId

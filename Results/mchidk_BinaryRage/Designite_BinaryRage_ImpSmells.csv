@@ -1,10 +1,10 @@
 Implementation smell,Namespace,Class,File,Method,Description
-Empty Catch Block,BinaryRage,Storage,C:\repos\mchidk_BinaryRage\Storage.cs,createDirectoriesBasedOnKeyAndFilelocation,The method has an empty catch block.
-Empty Catch Block,BinaryRage,Storage,C:\repos\mchidk_BinaryRage\Storage.cs,WritetoStorage,The method has an empty catch block.
-Magic Number,BinaryRage,DB,C:\repos\mchidk_BinaryRage\DB.cs,WaitForCompletion,The following statement contains a magic number: while (Cache.counter > 0)              {                  Thread.Sleep(10);              }
-Magic Number,BinaryRage,Key,C:\repos\mchidk_BinaryRage\Key.cs,generateFastUniqueKey,The following statement contains a magic number: const int size = 5;
-Magic Number,BinaryRage,Key,C:\repos\mchidk_BinaryRage\Key.cs,Splitkey,The following statement contains a magic number: return key.SplitByLength(key.Length / 4);
-Magic Number,BinaryRage,Key,C:\repos\mchidk_BinaryRage\Key.cs,GenerateUniqueKey,The following statement contains a magic number: TimeSpan span = DateTime.Now.Subtract(new DateTime(1970' 1' 1' 0' 0' 0' DateTimeKind.Utc));
-Magic Number,BinaryRage,Key,C:\repos\mchidk_BinaryRage\Key.cs,GenerateUniqueKey,The following statement contains a magic number: return generateFastUniqueKey() + ((int)span.TotalSeconds - 1332978141);
-Magic Number,BinaryRage,Storage,C:\repos\mchidk_BinaryRage\Storage.cs,WritetoStorage,The following statement contains a magic number: Thread.Sleep(value.Length / 100);
-Magic Number,BinaryRage.Functions,Compress,C:\repos\mchidk_BinaryRage\Functions\Compress.cs,DecompressGZip,The following statement contains a magic number: if(gzip !=null)  			{  			using (GZipStream stream = new GZipStream(new MemoryStream(gzip)' CompressionMode.Decompress))  			{  				const int size = 4096;  				byte[] buffer = new byte[size];  				using (MemoryStream memory = new MemoryStream())  				{  					int count = 0;  					do  					{  						count = stream.Read(buffer' 0' size);  						if (count > 0)  						{  							memory.Write(buffer' 0' count);  						}  					}  					while (count > 0);  					return memory.ToArray();  				}  			}  			}
+Empty Catch Block,BinaryRage,Storage,D:\research\architectureSmells\repos\mchidk_BinaryRage\Storage.cs,createDirectoriesBasedOnKeyAndFilelocation,The method has an empty catch block.
+Empty Catch Block,BinaryRage,Storage,D:\research\architectureSmells\repos\mchidk_BinaryRage\Storage.cs,WritetoStorage,The method has an empty catch block.
+Magic Number,BinaryRage,DB,D:\research\architectureSmells\repos\mchidk_BinaryRage\DB.cs,WaitForCompletion,The following statement contains a magic number: Thread.Sleep(10);
+Magic Number,BinaryRage,Key,D:\research\architectureSmells\repos\mchidk_BinaryRage\Key.cs,generateFastUniqueKey,The following statement contains a magic number: const int size = 5;
+Magic Number,BinaryRage,Key,D:\research\architectureSmells\repos\mchidk_BinaryRage\Key.cs,Splitkey,The following statement contains a magic number: return key.SplitByLength(key.Length / 4);
+Magic Number,BinaryRage,Key,D:\research\architectureSmells\repos\mchidk_BinaryRage\Key.cs,GenerateUniqueKey,The following statement contains a magic number: TimeSpan span = DateTime.Now.Subtract(new DateTime(1970' 1' 1' 0' 0' 0' DateTimeKind.Utc));
+Magic Number,BinaryRage,Key,D:\research\architectureSmells\repos\mchidk_BinaryRage\Key.cs,GenerateUniqueKey,The following statement contains a magic number: return generateFastUniqueKey() + ((int)span.TotalSeconds - 1332978141);
+Magic Number,BinaryRage,Storage,D:\research\architectureSmells\repos\mchidk_BinaryRage\Storage.cs,WritetoStorage,The following statement contains a magic number: Thread.Sleep(value.Length / 100);
+Magic Number,BinaryRage.Functions,Compress,D:\research\architectureSmells\repos\mchidk_BinaryRage\Functions\Compress.cs,DecompressGZip,The following statement contains a magic number: const int size = 4096;

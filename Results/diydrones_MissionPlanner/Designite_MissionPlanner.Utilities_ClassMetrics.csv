@@ -1,133 +1,259 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-MissionPlanner.Utilities,adsb,6,8,0,2,6,862,30,0,0,0.25,4,1,MissionPlanner.Utilities.Plane' MissionPlanner.Utilities.PointLatLngAltHdg' MissionPlanner.Utilities.ModeSMessage' MissionPlanner.Utilities.Crc32ModeS,MissionPlanner.MainV2
-MissionPlanner.Utilities,Plane,12,6,0,3,3,128,18,0,0,0,2,1,MissionPlanner.Utilities.ModeSMessage' MissionPlanner.Utilities.PointLatLngAlt,MissionPlanner.Utilities.adsb
-MissionPlanner.Utilities,ModeSMessage,9,2,7,7,2,152,4,0,0,1,0,2,,MissionPlanner.Utilities.adsb' MissionPlanner.Utilities.Plane
+MissionPlanner.Utilities,adsb,8,8,0,3,6,976,63,0,0,0.25,10,0,MissionPlanner.Utilities.Feed' MissionPlanner.Utilities.AcList' MissionPlanner.Utilities.RootObject' MissionPlanner.Utilities.Plane' MissionPlanner.Utilities.ModeSMessage' MissionPlanner.Utilities.Crc32ModeS' MissionPlanner.Utilities.PointLatLngAltHdg' MissionPlanner.Utilities.Download' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,Feed,0,0,3,0,0,6,0,0,0,-1,0,1,,MissionPlanner.Utilities.adsb
+MissionPlanner.Utilities,AcList,0,0,52,0,0,55,0,0,0,-1,0,1,,MissionPlanner.Utilities.adsb
+MissionPlanner.Utilities,RootObject,0,0,19,0,0,24,0,0,0,-1,0,2,,MissionPlanner.Utilities.adsb' MissionPlanner.Utilities.MissionFile
+MissionPlanner.Utilities,Plane,13,6,0,3,3,129,18,0,0,0,0,1,,MissionPlanner.Utilities.adsb
+MissionPlanner.Utilities,ModeSMessage,9,2,7,7,2,152,4,0,0,1,0,1,,MissionPlanner.Utilities.adsb
 MissionPlanner.Utilities,Crc32ModeS,2,6,0,0,5,95,17,0,0,0,0,1,,MissionPlanner.Utilities.adsb
-MissionPlanner.Utilities,PointLatLngAltHdg,0,2,5,0,2,25,2,0,1,-1,1,5,MissionPlanner.Utilities.PointLatLngAlt,MissionPlanner.MainV2' MissionPlanner.MAVLinkInterface' MissionPlanner.GCSViews.FlightData' MissionPlanner.Swarm.SRB.DroneGroup' MissionPlanner.Utilities.adsb
-MissionPlanner.Utilities,Airports,8,6,1,2,6,212,26,0,0,0,1,3,MissionPlanner.Utilities.PointLatLngAlt,MissionPlanner.MainV2' MissionPlanner.GCSViews.FlightData' MissionPlanner.GCSViews.FlightPlanner
-MissionPlanner.Utilities,AP_GeodesicGrid,3,7,0,0,1,555,30,0,0,0,3,1,MissionPlanner.Utilities.neighbor_umbrella' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Vector3,MissionPlanner.Utilities.CompassCalibrator
+MissionPlanner.Utilities,PointLatLngAltHdg,0,2,7,0,2,28,2,0,1,-1,0,1,,MissionPlanner.Utilities.adsb
+MissionPlanner.Utilities,Airports,8,6,1,2,6,212,33,0,0,0,1,0,MissionPlanner.Utilities.PointLatLngAlt,
+MissionPlanner.Utilities,apj_tool,0,2,0,0,2,65,8,0,0,-1,0,0,,
+MissionPlanner.Utilities,AP_GeodesicGrid,3,7,0,0,1,555,59,0,0,0,3,1,MissionPlanner.Utilities.neighbor_umbrella' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Vector3,MissionPlanner.Utilities.CompassCalibrator
 MissionPlanner.Utilities,neighbor_umbrella,6,1,0,6,1,34,1,0,0,0,0,1,,MissionPlanner.Utilities.AP_GeodesicGrid
 MissionPlanner.Utilities,AP_HAL,1,1,0,0,0,8,1,0,0,0,0,1,,MissionPlanner.Utilities.CompassCalibrator
-MissionPlanner.Utilities,CaptureMJPEG,6,5,0,1,3,157,15,0,0,0,0,1,,MissionPlanner.GCSViews.FlightData
+MissionPlanner.Utilities,AutoConnect,3,5,0,0,2,259,21,0,0,0.4,5,0,MissionPlanner.Utilities.ConnectionInfo' MissionPlanner.Utilities.ProtocolType' MissionPlanner.Utilities.Direction' MissionPlanner.Utilities.ConnectionFormat' MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,ConnectionInfo,7,1,0,7,1,21,1,0,0,0,0,1,,MissionPlanner.Utilities.AutoConnect
+MissionPlanner.Utilities,ProtocolType,0,0,0,0,0,6,0,0,0,-1,0,1,,MissionPlanner.Utilities.AutoConnect
+MissionPlanner.Utilities,Direction,0,0,0,0,0,5,0,0,0,-1,0,1,,MissionPlanner.Utilities.AutoConnect
+MissionPlanner.Utilities,ConnectionFormat,0,0,0,0,0,5,0,0,0,-1,0,1,,MissionPlanner.Utilities.AutoConnect
+MissionPlanner.Utilities,BinaryLog,6,8,0,2,3,464,61,0,0,0.25,3,1,MissionPlanner.Utilities.log_Format' MissionPlanner.Utilities.log_format_cache' MissionPlanner.Utilities.UnionArray,MissionPlanner.Utilities.CollectionBuffer
+MissionPlanner.Utilities,log_Format,5,0,0,5,0,9,0,0,0,-1,0,1,,MissionPlanner.Utilities.BinaryLog
+MissionPlanner.Utilities,log_format_cache,4,0,0,4,0,7,0,0,0,-1,0,1,,MissionPlanner.Utilities.BinaryLog
+MissionPlanner.Utilities,UnionArray,2,2,0,2,2,17,2,0,0,0,0,1,,MissionPlanner.Utilities.BinaryLog
+MissionPlanner.Utilities,CaptureMJPEG,6,5,0,1,3,161,9,0,0,0,0,0,,
+MissionPlanner.Utilities,CleanDrivers,0,3,0,0,2,92,7,0,0,-1,1,0,MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,CollectionBuffer,11,12,9,1,9,411,48,0,0,0.25,3,9,MissionPlanner.Utilities.BinaryLog' MissionPlanner.Utilities.DFLog' MissionPlanner.Utilities.DFItem,MissionPlanner.Utilities.DFLog' MissionPlanner.Log.DFLogScript' MissionPlanner.Utilities.Spectrogram' MissionPlanner.Utilities.dfgpslag' MissionPlanner.Utilities.Privacy' MissionPlanner.Utilities.DashWare' MissionPlanner.Log.LogMap' MissionPlanner.Log.MatLab' MissionPlanner.GeoRef.GeoRefImageBase
 MissionPlanner.Utilities,CollectionExtensions,0,3,0,0,3,36,6,0,0,-1,0,0,,
-MissionPlanner.Utilities,CompassCalibrator,24,29,1,0,11,769,78,0,1,0,9,1,MissionPlanner.Utilities.compass_cal_status_t' MissionPlanner.Utilities.param_t' MissionPlanner.Utilities.CompassSample' MissionPlanner.Utilities.AP_HAL' MissionPlanner.Utilities.Vector3f' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.AP_GeodesicGrid' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.Vector3,MissionPlanner.MagCalib
+MissionPlanner.Utilities,CompassCalibrator,24,29,1,0,11,769,107,0,1,0,8,0,MissionPlanner.Utilities.AP_GeodesicGrid' MissionPlanner.Utilities.AP_HAL' MissionPlanner.Utilities.compass_cal_status_t' MissionPlanner.Utilities.param_t' MissionPlanner.Utilities.CompassSample' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.Vector3f,
 MissionPlanner.Utilities,compass_cal_status_t,0,0,0,0,0,9,0,0,0,-1,0,1,,MissionPlanner.Utilities.CompassCalibrator
 MissionPlanner.Utilities,param_t,1,1,4,0,1,48,1,0,0,0,0,1,,MissionPlanner.Utilities.CompassCalibrator
-MissionPlanner.Utilities,CompassSample,5,4,0,3,2,28,4,0,0,0.5,1,1,MissionPlanner.Utilities.Vector3f,MissionPlanner.Utilities.CompassCalibrator
-MissionPlanner.Utilities,Crypto,3,9,0,1,8,145,10,0,0,0.33,0,1,,MissionPlanner.Mavlink.MAVAuthKeys
-MissionPlanner.Utilities,Device,0,0,0,0,0,118,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,BusType,0,0,0,0,0,7,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,CompassSample,5,4,0,3,2,28,4,0,0,0.5,0,1,,MissionPlanner.Utilities.CompassCalibrator
+MissionPlanner.Utilities,Crypto,3,9,0,1,8,145,10,0,0,0.33,0,0,,
+MissionPlanner.Utilities,DashWare,0,1,0,0,1,57,9,0,0,-1,1,0,MissionPlanner.Utilities.CollectionBuffer,
+MissionPlanner.Utilities,Device,0,0,0,0,0,133,0,0,0,-1,3,0,MissionPlanner.Utilities.BusType' MissionPlanner.Utilities.DevTypes' MissionPlanner.Utilities.imu_types,
+MissionPlanner.Utilities,BusType,0,0,0,0,0,8,0,0,0,-1,0,1,,MissionPlanner.Utilities.Device
 MissionPlanner.Utilities,Speed,0,0,0,0,0,5,0,0,0,-1,0,0,,
 MissionPlanner.Utilities,spi_dev_e,0,0,0,0,0,14,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,DeviceStructure,1,2,5,1,2,61,2,0,0,0,0,1,,MissionPlanner.Program
-MissionPlanner.Utilities,DevTypes,0,0,0,0,0,15,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,imu_types,0,0,0,0,0,12,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,DeviceStructure,1,2,5,1,2,79,2,0,0,0,0,0,,
+MissionPlanner.Utilities,DevTypes,0,0,0,0,0,19,0,0,0,-1,0,1,,MissionPlanner.Utilities.Device
+MissionPlanner.Utilities,imu_types,0,0,0,0,0,25,0,0,0,-1,0,1,,MissionPlanner.Utilities.Device
 MissionPlanner.Utilities,px4_i2c_bus,0,0,0,0,0,5,0,0,0,-1,0,0,,
 MissionPlanner.Utilities,px4_spi_bus,0,0,0,0,0,6,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,DisplayNames,0,0,0,0,0,6,0,0,0,-1,0,3,,MissionPlanner.GCSViews.ConfigurationView.ConfigPlanner' MissionPlanner.Utilities.DisplayView' MissionPlanner.Utilities.DisplayViewExtensions
-MissionPlanner.Utilities,DisplayView,0,1,61,0,1,144,1,0,0,-1,1,10,MissionPlanner.Utilities.DisplayNames,MissionPlanner.MainV2' MissionPlanner.GCSViews.ConfigurationView.ConfigFirmware' MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes' MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass' MissionPlanner.GCSViews.ConfigurationView.ConfigPlanner' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.GCSViews.InitialSetup' MissionPlanner.GCSViews.SoftwareConfig' MissionPlanner.Utilities.DisplayViewExtensions' MissionPlanner.Utilities.Settings
-MissionPlanner.Utilities,DisplayViewExtensions,0,4,0,0,4,176,4,0,0,-1,2,1,MissionPlanner.Utilities.DisplayView' MissionPlanner.Utilities.DisplayNames,MissionPlanner.Utilities.Settings
-MissionPlanner.Utilities,DownloadStream,8,10,6,0,6,153,14,0,0,0.4,1,0,MissionPlanner.Utilities.Download,
-MissionPlanner.Utilities,Download,1,7,0,0,6,159,17,0,0,0.57,0,1,,MissionPlanner.Utilities.DownloadStream
-MissionPlanner.Utilities,DTED,4,7,0,0,2,226,17,0,0,0.29,4,2,MissionPlanner.srtm' MissionPlanner.Utilities.DTEDdata' MissionPlanner.altresponce' MissionPlanner.tiletype,MissionPlanner.temp' MissionPlanner.srtm
-MissionPlanner.Utilities,DTEDdata,11,5,0,8,3,86,7,0,0,0.6,1,1,GMap.NET.RectLatLng,MissionPlanner.Utilities.DTED
-MissionPlanner.Utilities,dxf,1,1,0,1,1,36,9,0,0,0,0,1,,MissionPlanner.GCSViews.FlightPlanner
-MissionPlanner.Utilities,EnumTranslator,0,7,0,0,7,116,18,0,0,-1,2,1,MissionPlanner.Attributes.DisplayTextAttribute' MissionPlanner.Attributes.PrivateAttribute,MissionPlanner.GCSViews.FlightPlanner
-MissionPlanner.Utilities,ExpireType<T>,4,1,1,0,1,18,1,0,0,0,0,0,,
-MissionPlanner.Utilities,ExpireType,2,3,0,0,2,41,7,0,0,0,0,1,,MissionPlanner.SerialInjectGPS
-MissionPlanner.Utilities,Extensions,0,4,0,0,4,19,4,0,0,-1,0,0,,
-MissionPlanner.Utilities,FFT2,3,6,0,0,5,205,20,0,0,0.5,1,1,MissionPlanner.Utilities.FFTElement,MissionPlanner.Utilities.fftui
+MissionPlanner.Utilities,dfgpslag,0,6,0,0,5,125,20,0,0,-1,6,0,MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Utilities.DFLog' MissionPlanner.Utilities.DFItem' MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Vector3,
+MissionPlanner.Utilities,DFLog,6,10,0,1,10,563,37,0,0,0.4,7,4,MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Utilities.Label' MissionPlanner.Utilities.DFItem' MissionPlanner.Utilities.Log_Event' MissionPlanner.Utilities.LogErrorSubsystem' MissionPlanner.Utilities.rtcm3' MissionPlanner.Utilities.StaticUtils,MissionPlanner.Utilities.dfgpslag' MissionPlanner.Log.LogOutput' MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Log.DFLogScript
+MissionPlanner.Utilities,Label,5,0,0,5,0,8,0,0,0,-1,0,1,,MissionPlanner.Utilities.DFLog
+MissionPlanner.Utilities,DFItem,5,4,4,3,4,161,14,0,0,0,0,4,,MissionPlanner.Utilities.dfgpslag' MissionPlanner.Log.DFLogScript' MissionPlanner.Utilities.DFLog' MissionPlanner.Utilities.CollectionBuffer
+MissionPlanner.Utilities,Log_Event,0,0,0,0,0,67,0,0,0,-1,0,1,,MissionPlanner.Utilities.DFLog
+MissionPlanner.Utilities,LogErrorSubsystem,0,0,0,0,0,32,0,0,0,-1,0,1,,MissionPlanner.Utilities.DFLog
+MissionPlanner.Utilities,LogErrorCode,0,0,0,0,0,37,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,DigitalSky,2,7,1,1,6,86,11,0,0,0.29,1,0,MissionPlanner.Utilities.PointLatLngAlt,
+MissionPlanner.Utilities,DisplayNames,0,0,0,0,0,6,0,0,0,-1,0,2,,MissionPlanner.Utilities.DisplayView' MissionPlanner.Utilities.DisplayViewExtensions
+MissionPlanner.Utilities,DisplayView,0,1,62,0,1,157,1,0,0,-1,1,2,MissionPlanner.Utilities.DisplayNames,MissionPlanner.Utilities.Settings' MissionPlanner.Utilities.DisplayViewExtensions
+MissionPlanner.Utilities,DisplayViewExtensions,0,4,0,0,4,187,4,0,0,-1,2,1,MissionPlanner.Utilities.DisplayNames' MissionPlanner.Utilities.DisplayView,MissionPlanner.Utilities.Settings
+MissionPlanner.Utilities,DownloadStream,10,11,6,0,6,217,26,0,0,0.36,0,1,,MissionPlanner.Utilities.DownloadStream
+MissionPlanner.Utilities,Download,2,8,0,0,6,243,28,0,0,0.5,0,3,,MissionPlanner.Utilities.DownloadStream' MissionPlanner.Utilities.GStreamer' MissionPlanner.Utilities.adsb
+MissionPlanner.Utilities,DTED,4,7,0,0,2,226,20,0,0,0.29,4,1,MissionPlanner.Utilities.DTEDdata' MissionPlanner.Utilities.srtm' MissionPlanner.Utilities.tiletype' MissionPlanner.Utilities.altresponce,MissionPlanner.Utilities.srtm
+MissionPlanner.Utilities,DTEDdata,11,5,0,8,3,86,8,0,0,0.6,0,1,,MissionPlanner.Utilities.DTED
+MissionPlanner.Utilities,dxf,1,1,0,1,1,36,9,0,0,0,0,0,,
+MissionPlanner.Utilities,EnumTranslator,0,7,0,0,7,116,19,0,0,-1,2,0,MissionPlanner.Attributes.DisplayTextAttribute' MissionPlanner.Attributes.PrivateAttribute,
+MissionPlanner.Utilities,ExpireType<T>,3,1,1,0,1,17,1,0,0,0,0,0,,
+MissionPlanner.Utilities,ExpireType,2,3,0,0,2,41,7,0,0,0,0,0,,
+MissionPlanner.Utilities,Extensions,1,33,0,0,33,401,87,0,0,1,0,1,,MissionPlanner.Utilities.SightGen
+MissionPlanner.Utilities,FFT2,3,6,0,0,5,218,20,0,0,0.5,1,1,MissionPlanner.Utilities.FFTElement,MissionPlanner.Utilities.Spectrogram
+MissionPlanner.Utilities,datastate,10,0,0,10,0,13,0,0,0,-1,0,0,,
 MissionPlanner.Utilities,FFTElement,4,0,0,4,0,7,0,0,0,-1,0,1,,MissionPlanner.Utilities.FFT2
-MissionPlanner.Utilities,fontgen,2,2,0,2,1,105,10,0,0,1,0,0,,
-MissionPlanner.Utilities,GeoTiff,3,7,0,1,1,193,15,0,0,0.43,4,3,MissionPlanner.Utilities.geotiffdata' MissionPlanner.srtm' MissionPlanner.altresponce' MissionPlanner.tiletype,MissionPlanner.temp' MissionPlanner.Utilities.geotiffdata' MissionPlanner.srtm
-MissionPlanner.Utilities,geotiffdata,14,1,1,14,1,70,1,0,0,0,2,1,GMap.NET.RectLatLng' MissionPlanner.Utilities.GeoTiff,MissionPlanner.Utilities.GeoTiff
-MissionPlanner.Utilities,GitHubContent,2,3,0,1,2,95,10,0,0,0.67,1,3,MissionPlanner.Utilities.FileInfo,MissionPlanner.Controls.DefaultSettings' MissionPlanner.GCSViews.ConfigurationView.ConfigRawParams' MissionPlanner.GCSViews.ConfigurationView.ConfigRawParamsTree
-MissionPlanner.Utilities,FileInfo,10,0,1,10,0,14,0,0,0,-1,0,4,,MissionPlanner.Controls.DefaultSettings' MissionPlanner.GCSViews.ConfigurationView.ConfigRawParams' MissionPlanner.GCSViews.ConfigurationView.ConfigRawParamsTree' MissionPlanner.Utilities.GitHubContent
-MissionPlanner.Utilities,GStreamer,16,11,4,3,6,745,38,0,0,0.45,5,5,MissionPlanner.Utilities.GstMapInfo' MissionPlanner.Utilities.NativeMethods' MissionPlanner.Utilities.GstState' MissionPlanner.Utilities.GstMapFlags' MissionPlanner.Utilities.rtpheader,MissionPlanner.MainV2' MissionPlanner.temp' MissionPlanner.Controls.Video' MissionPlanner.GCSViews.FlightData' MissionPlanner.Utilities.UDPVideoShim
-MissionPlanner.Utilities,NativeMethods,0,34,0,0,34,96,34,0,0,-1,4,1,MissionPlanner.Utilities.GstState' MissionPlanner.Utilities.GstMessageType' MissionPlanner.Utilities.GstMapInfo' MissionPlanner.Utilities.GstMapFlags,MissionPlanner.Utilities.GStreamer
-MissionPlanner.Utilities,GstMapInfo,5,0,0,5,0,11,0,0,0,-1,1,2,MissionPlanner.Utilities.GstMapFlags,MissionPlanner.Utilities.GStreamer' MissionPlanner.Utilities.NativeMethods
-MissionPlanner.Utilities,GstMapFlags,0,0,0,0,0,6,0,0,0,-1,0,3,,MissionPlanner.Utilities.GStreamer' MissionPlanner.Utilities.NativeMethods' MissionPlanner.Utilities.GstMapInfo
-MissionPlanner.Utilities,GstState,0,0,0,0,0,8,0,0,0,-1,0,2,,MissionPlanner.Utilities.GStreamer' MissionPlanner.Utilities.NativeMethods
-MissionPlanner.Utilities,GstMessageType,0,0,0,0,0,31,0,0,0,-1,0,1,,MissionPlanner.Utilities.NativeMethods
+MissionPlanner.Utilities,GeoTiff,3,7,0,1,1,193,22,0,0,0.43,4,1,MissionPlanner.Utilities.geotiffdata' MissionPlanner.Utilities.srtm' MissionPlanner.Utilities.tiletype' MissionPlanner.Utilities.altresponce,MissionPlanner.Utilities.srtm
+MissionPlanner.Utilities,geotiffdata,14,1,1,14,1,70,1,0,0,0,0,1,,MissionPlanner.Utilities.GeoTiff
+MissionPlanner.Utilities,GitHubContent,2,3,0,1,2,95,11,0,0,0.67,1,0,MissionPlanner.Utilities.FileInfo,
+MissionPlanner.Utilities,FileInfo,10,0,1,10,0,14,0,0,0,-1,0,1,,MissionPlanner.Utilities.GitHubContent
+MissionPlanner.Utilities,Grid,3,19,5,1,8,758,101,0,0,0.37,10,1,MissionPlanner.Utilities.linelatlng' MissionPlanner.Utilities.StartPosition' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Rect' MissionPlanner.Utilities.utmpos' ClipperLib.PolyTree' ClipperLib.IntPoint' ClipperLib.JoinType' ClipperLib.EndType' ClipperLib.ClipperOffset,MissionPlanner.Utilities.MissionFile
+MissionPlanner.Utilities,linelatlng,3,0,0,3,0,9,0,0,0,-1,0,1,,MissionPlanner.Utilities.Grid
+MissionPlanner.Utilities,StartPosition,0,0,0,0,0,9,0,0,0,-1,0,1,,MissionPlanner.Utilities.Grid
+MissionPlanner.Utilities,GStreamer,17,12,4,3,7,936,47,0,0,0.5,14,0,MissionPlanner.Utilities.Download' MissionPlanner.Utilities.NativeMethods' MissionPlanner.Utilities.GstMapInfo' MissionPlanner.Utilities.GstAppSinkCallbacks' MissionPlanner.Utilities.GstFlowReturn' MissionPlanner.Utilities.GstDebugGraphDetails' MissionPlanner.Utilities.GstMapFlags' MissionPlanner.Utilities.GstState' MissionPlanner.Utilities.GstStateChangeReturn' MissionPlanner.Utilities.GstMessageType' MissionPlanner.Utilities.GError' MissionPlanner.Utilities.rtpheader' MissionPlanner.Utilities.Settings' System.CustomMessageBox,
+MissionPlanner.Utilities,NativeMethods,0,39,0,0,39,107,39,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstMapInfo,5,0,0,5,0,11,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstAppSinkCallbacks,4,0,0,4,0,8,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstFlowReturn,0,0,0,0,0,22,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstDebugGraphDetails,0,0,0,0,0,10,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstMapFlags,0,0,0,0,0,6,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstState,0,0,0,0,0,8,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstStateChangeReturn,0,0,0,0,0,7,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
+MissionPlanner.Utilities,GstMessageType,0,0,0,0,0,31,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
 MissionPlanner.Utilities,GstObject,8,0,0,5,0,12,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,GError,3,0,0,3,0,7,0,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
 MissionPlanner.Utilities,rtpheader,0,1,20,0,1,71,2,0,0,-1,0,1,,MissionPlanner.Utilities.GStreamer
-MissionPlanner.Utilities,ICorrections,0,1,2,0,0,16,1,4,0,-1,0,0,,
-MissionPlanner.Utilities,ImageProjection,0,8,0,0,2,225,15,0,0,-1,7,3,MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Vector3' MissionPlanner.Utilities.utmpos' MissionPlanner.altresponce' MissionPlanner.srtm,MissionPlanner.GridUI' MissionPlanner.GeoRef.Georefimage' MissionPlanner.Maps.GMapMarkerPhoto
+MissionPlanner.Utilities,ICorrections,0,1,2,0,0,16,1,4,0,-1,0,4,,MissionPlanner.Utilities.nmea' MissionPlanner.Utilities.sbp' MissionPlanner.Utilities.Ubx' MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,ImageProjection,0,8,0,0,2,225,15,0,0,-1,6,1,MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.srtm' MissionPlanner.Utilities.utmpos' MissionPlanner.Utilities.Vector3,MissionPlanner.GeoRef.GeoRefImageBase
+MissionPlanner.Utilities,IMAVLinkInterface,0,4,2,0,0,11,4,1,0,-1,0,1,,MissionPlanner.Utilities.TerrainFollow
+MissionPlanner.Utilities,IMAVLinkInterfaceLogRead,0,1,4,0,0,8,1,1,0,-1,0,0,,
+MissionPlanner.Utilities,IProgressReporterDialogue,0,4,1,0,0,17,4,2,0,-1,1,0,MissionPlanner.Utilities.ProgressWorkerEventArgs,
+MissionPlanner.Utilities,ProgressWorkerEventArgs,3,0,2,2,0,19,0,0,0,-1,0,1,,MissionPlanner.Utilities.IProgressReporterDialogue
+MissionPlanner.Utilities,ISpeech,0,2,2,0,0,7,2,1,0,-1,0,1,,MissionPlanner.Warnings.WarningEngine
 MissionPlanner.Utilities,Kalman3D,4,7,4,0,7,223,10,0,0,0,1,0,MissionPlanner.Utilities.Matrix,
-MissionPlanner.Utilities,KIndex,3,2,0,0,1,43,3,0,0,1,0,1,,MissionPlanner.MainV2
-MissionPlanner.Utilities,L10NU,1,2,0,1,1,43,8,0,0,0,1,0,MissionPlanner.Utilities.Properties.Resources,
+MissionPlanner.Utilities,KIndex,3,2,0,0,1,60,6,0,0,1,1,0,MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,L10NU,1,2,0,1,1,43,7,0,0,0,1,1,MissionPlanner.Utilities.Properties.Resources,MissionPlanner.Attributes.DisplayTextAttribute
 MissionPlanner.Utilities,LineOffset,0,1,0,0,1,32,6,0,0,-1,1,0,MissionPlanner.Utilities.PointLatLngAlt,
 MissionPlanner.Utilities,ListExtension,0,2,0,0,1,21,6,0,0,-1,0,0,,
-MissionPlanner.Utilities,Locationwp,12,2,0,10,1,148,3,0,0,0,0,11,,MissionPlanner.FollowMe' MissionPlanner.MAVLinkInterface' MissionPlanner.MovingBase' MissionPlanner.GCSViews.FlightData' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.Log.MavlinkLog' MissionPlanner.Utilities.AP_Terrain' MissionPlanner.Utilities.IO' MissionPlanner.Utilities.httpserver' MissionPlanner.Utilities.MissionFile' MissionPlanner.Utilities.PointLatLngAlt
-MissionPlanner.Utilities,MathHelper,2,3,0,2,3,17,3,0,0,1,0,34,,MissionPlanner.CurrentState' MissionPlanner.MagCalib' MissionPlanner.SerialInjectGPS' MissionPlanner.SerialOutputMD' MissionPlanner.Controls.OpenGLtest' MissionPlanner.Controls.OpenGLtest2' MissionPlanner.Controls.Waypoints.Spline2' MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.GeoRef.Georefimage' MissionPlanner.HIL.Aircraft' MissionPlanner.HIL.Motor' MissionPlanner.HIL.MultiCopter' MissionPlanner.HIL.XPlane' MissionPlanner.Maps.GMapMarkerAntennaTracker' MissionPlanner.Maps.GMapMarkerBoat' MissionPlanner.Maps.GMapMarkerHeli' MissionPlanner.Maps.GMapMarkerPlane' MissionPlanner.Maps.GMapMarkerQuad' MissionPlanner.Maps.GMapMarkerRover' MissionPlanner.Maps.GMapMarkerSingle' MissionPlanner.Maps.GMapMarkerSub' MissionPlanner.Swarm.DroneBase' MissionPlanner.Swarm.Formation' MissionPlanner.Swarm.FormationControl' MissionPlanner.Swarm.FollowLeader.DroneGroup' MissionPlanner.Swarm.TD.DroneGroup' MissionPlanner.Swarm.WaypointLeader.DroneGroup' MissionPlanner.Utilities.GimbalPoint' MissionPlanner.Wizard._6CompassCalib' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.utmpos
-MissionPlanner.Utilities,Matrix,2,29,4,0,29,446,56,0,0,0.21,0,1,,MissionPlanner.Utilities.Kalman3D
-MissionPlanner.Utilities,Matrix3,3,18,0,3,18,215,19,0,0,0,2,14,MissionPlanner.Utilities.Vector3' MissionPlanner.Utilities.Utils,MissionPlanner.MagCalib' MissionPlanner.Magfitrotation' MissionPlanner.Rotation' MissionPlanner.HIL.Aircraft' MissionPlanner.HIL.MultiCopter' MissionPlanner.HIL.Wind' MissionPlanner.HIL.XPlane' MissionPlanner.Log.DFLogScript' MissionPlanner.Swarm.TD.DroneGroup' MissionPlanner.Wizard._6CompassCalib' MissionPlanner.Utilities.AP_GeodesicGrid' MissionPlanner.Utilities.CompassCalibrator' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.Utils
-MissionPlanner.Utilities,MissionFile,0,7,0,0,7,150,15,0,0,-1,4,1,MissionPlanner.Utilities.RootObject' MissionPlanner.Utilities.Mission' MissionPlanner.Utilities.Locationwp' MissionPlanner.Utilities.Item,MissionPlanner.GCSViews.FlightPlanner
-MissionPlanner.Utilities,GeoFence,0,0,3,0,0,6,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,Camera,0,0,10,0,0,13,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,Grid,0,0,5,0,0,8,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,Item,0,0,17,0,0,20,0,0,0,-1,0,1,,MissionPlanner.Utilities.MissionFile
+MissionPlanner.Utilities,Locationwp,11,2,0,10,1,148,3,0,0,0,2,3,MissionPlanner.Utilities.MissionFile' MissionPlanner.Utilities.Item,MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.WaypointFile' MissionPlanner.Utilities.MissionFile
+MissionPlanner.Utilities,MathHelper,2,5,0,2,5,31,5,0,0,1,0,8,,MissionPlanner.Utilities.SightGen' MissionPlanner.Utilities.dfgpslag' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.utmpos' MissionPlanner.Controls.Waypoints.Spline2' MissionPlanner.GeoRef.GeoRefImageBase' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.ImageProjection
+MissionPlanner.Utilities,Matrix,2,29,4,0,29,446,57,0,0,0.21,0,1,,MissionPlanner.Utilities.Kalman3D
+MissionPlanner.Utilities,Matrix3,3,17,0,3,17,212,19,0,0,0.18,2,7,MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.Vector3,MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.dfgpslag' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Log.DFLogScript' MissionPlanner.Utilities.Quaternion' MissionPlanner.Utilities.CompassCalibrator' MissionPlanner.Utilities.AP_GeodesicGrid
+MissionPlanner.Utilities,mavgraph,3,3,0,1,1,287,19,0,0,0,4,0,MissionPlanner.Utilities.graphitem' MissionPlanner.Utilities.displayitem' MissionPlanner.Utilities.displaylist' MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,graphitem,3,0,0,3,0,6,0,0,0,-1,0,1,,MissionPlanner.Utilities.mavgraph
+MissionPlanner.Utilities,displayitem,4,0,0,4,0,7,0,0,0,-1,0,1,,MissionPlanner.Utilities.mavgraph
+MissionPlanner.Utilities,displaylist,2,1,0,2,1,9,1,0,0,0,0,1,,MissionPlanner.Utilities.mavgraph
+MissionPlanner.Utilities,WaypointFile,1,1,0,0,1,58,7,0,0,0,2,0,MissionPlanner.Utilities.Locationwp' System.CustomMessageBox,
+MissionPlanner.Utilities,MissionFile,0,7,0,0,7,150,15,0,0,-1,8,1,MissionPlanner.Utilities.RootObject' MissionPlanner.Utilities.Grid' MissionPlanner.Utilities.Locationwp' MissionPlanner.Utilities.GeoFence' MissionPlanner.Utilities.Camera' MissionPlanner.Utilities.Item' MissionPlanner.Utilities.Mission' MissionPlanner.Utilities.RallyPoints,MissionPlanner.Utilities.Locationwp
+MissionPlanner.Utilities,GeoFence,0,0,3,0,0,6,0,0,0,-1,0,1,,MissionPlanner.Utilities.MissionFile
+MissionPlanner.Utilities,Camera,0,0,10,0,0,13,0,0,0,-1,0,1,,MissionPlanner.Utilities.MissionFile
+MissionPlanner.Utilities,Item,0,0,17,0,0,20,0,0,0,-1,0,2,,MissionPlanner.Utilities.MissionFile' MissionPlanner.Utilities.Locationwp
 MissionPlanner.Utilities,Mission,0,0,7,0,0,10,0,0,0,-1,0,1,,MissionPlanner.Utilities.MissionFile
-MissionPlanner.Utilities,RallyPoints,0,0,2,0,0,5,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,RootObject,0,0,6,0,0,9,0,0,0,-1,0,2,,MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.Utilities.MissionFile
-MissionPlanner.Utilities,nmea,4,3,2,1,2,102,6,0,1,0.67,0,1,,MissionPlanner.SerialInjectGPS
-MissionPlanner.Utilities,PointLatLngAlt,9,24,0,7,24,245,32,1,0,0.12,8,45,GMap.NET.PointLatLng' MissionPlanner.Utilities.Locationwp' GeoUtility.GeoSystem.Geographic' GeoUtility.GeoSystem.MGRS' GeoUtility.GeoSystem.UTM' GeoUtility.GeoSystem.Base.Hemisphere' GeoUtility.GeoSystem.Base.Geocentric' MissionPlanner.Utilities.MathHelper,MissionPlanner.CurrentState' MissionPlanner.ElevationProfile' MissionPlanner.FollowMe' MissionPlanner.Grid' MissionPlanner.GridUI' MissionPlanner.MainV2' MissionPlanner.MAVLinkInterface' MissionPlanner.MovingBase' MissionPlanner.SerialInjectGPS' MissionPlanner.SerialOutputMD' MissionPlanner.SerialOutputNMEA' MissionPlanner.Controls.OpenGLtest' MissionPlanner.Controls.OpenGLtest2' MissionPlanner.Controls.Waypoints.Spline2' MissionPlanner.GCSViews.FlightData' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.Joystick.Joystick' MissionPlanner.Log.LogBrowse' MissionPlanner.Log.LogIndex' MissionPlanner.Log.LogMap' MissionPlanner.Log.LogOutput' MissionPlanner.Log.MavlinkLog' MissionPlanner.Swarm.DroneBase' MissionPlanner.Swarm.FollowPath' MissionPlanner.Swarm.Formation' MissionPlanner.Swarm.FollowLeader.DroneGroup' MissionPlanner.Swarm.SRB.DroneGroup' MissionPlanner.Swarm.TD.DroneGroup' MissionPlanner.Swarm.WaypointLeader.DroneGroup' MissionPlanner.Swarm.WaypointLeader.Path' MissionPlanner.Swarm.WaypointLeader.WPControl' MissionPlanner.Utilities.CircleSurveyMission' MissionPlanner.Utilities.GimbalPoint' MissionPlanner.Utilities.httpserver' MissionPlanner.Utilities.POI' MissionPlanner.Utilities.TerrainFollow' MissionPlanner.Utilities.Plane' MissionPlanner.Utilities.PointLatLngAltHdg' MissionPlanner.Utilities.Airports' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.LineOffset' MissionPlanner.Utilities.tfritem' MissionPlanner.Utilities.ubx_m8p' MissionPlanner.Utilities.ubx_cfg_tmode3' MissionPlanner.Utilities.utmpos
-MissionPlanner.Utilities,Rect,4,2,4,4,2,23,2,0,0,1,0,2,,MissionPlanner.Grid' MissionPlanner.Maps.GMapMarkerOverlapCount
-MissionPlanner.Utilities,rtcm3,42,13,2,2,4,1937,23,0,1,0.46,14,1,MissionPlanner.Utilities.rtcmpreamble' MissionPlanner.Utilities.rtcmheader' MissionPlanner.Utilities.type1002' MissionPlanner.Utilities.type1004' MissionPlanner.Utilities.type1012' MissionPlanner.Utilities.type1074' MissionPlanner.Utilities.type1077' MissionPlanner.Utilities.type1084' MissionPlanner.Utilities.type1087' MissionPlanner.Utilities.type1124' MissionPlanner.Utilities.type1127' MissionPlanner.Utilities.type1005' MissionPlanner.Utilities.type1006' MissionPlanner.Utilities.crc24,MissionPlanner.SerialInjectGPS
+MissionPlanner.Utilities,RallyPoints,0,0,2,0,0,5,0,0,0,-1,0,1,,MissionPlanner.Utilities.MissionFile
+MissionPlanner.Utilities,nmea,4,3,2,1,2,102,14,0,1,0.67,1,0,MissionPlanner.Utilities.ICorrections,
+MissionPlanner.Utilities,ParameterMetaDataConstants,18,0,0,18,0,27,0,0,0,-1,0,4,,MissionPlanner.Utilities.ParameterMetaDataRepositoryPX4' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPMpdef' MissionPlanner.Utilities.ParameterMetaDataRepository' MissionPlanner.Utilities.ParameterMetaDataParser
+MissionPlanner.Utilities,ParameterMetaDataParser,6,7,0,0,1,437,48,0,0,0.43,3,0,MissionPlanner.Utilities.ParameterMetaDataConstants' MissionPlanner.Utilities.NameComparer' MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,NameComparer,0,2,0,0,2,11,2,0,0,-1,0,1,,MissionPlanner.Utilities.ParameterMetaDataParser
+MissionPlanner.Utilities,ParameterMetaDataRepository,0,6,0,0,6,122,16,0,0,-1,3,3,MissionPlanner.Utilities.ParameterMetaDataConstants' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM' MissionPlanner.Utilities.ParameterMetaDataRepositoryPX4,MissionPlanner.Utilities.ParameterMetaDataRepositoryPX4' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPMpdef
+MissionPlanner.Utilities,ParameterMetaDataRepositoryAPM,2,3,0,0,3,81,11,0,0,0,2,1,MissionPlanner.Utilities.ParameterMetaDataRepository' MissionPlanner.Utilities.Settings,MissionPlanner.Utilities.ParameterMetaDataRepository
+MissionPlanner.Utilities,ParameterMetaDataRepositoryAPMpdef,2,3,0,0,3,108,22,0,0,0,3,0,MissionPlanner.Utilities.ParameterMetaDataConstants' MissionPlanner.Utilities.ParameterMetaDataRepository' MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,ParameterMetaDataRepositoryPX4,1,4,0,0,3,136,27,0,0,0,3,1,MissionPlanner.Utilities.ParameterMetaDataConstants' MissionPlanner.Utilities.ParameterMetaDataRepository' MissionPlanner.Utilities.Settings,MissionPlanner.Utilities.ParameterMetaDataRepository
+MissionPlanner.Utilities,ParamFile,2,2,0,1,2,78,18,0,0,1,0,0,,
+MissionPlanner.Utilities,Password,1,5,0,0,5,56,12,0,0,0.8,1,0,MissionPlanner.Utilities.Settings,
+MissionPlanner.Utilities,PointLatLngAlt,3,26,6,1,26,272,37,1,0,0.77,2,17,MissionPlanner.Utilities.Locationwp' MissionPlanner.Utilities.MathHelper,MissionPlanner.Utilities.Vector3<T>' MissionPlanner.GeoRef.GeoRefImageBase' MissionPlanner.Utilities.DigitalSky' MissionPlanner.Utilities.LineOffset' MissionPlanner.Utilities.utmpos' MissionPlanner.Log.LogOutput' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.TerrainFollow' MissionPlanner.Utilities.srtm' MissionPlanner.Log.LogMap' MissionPlanner.Controls.Waypoints.Spline2' MissionPlanner.Utilities.Airports' MissionPlanner.Utilities.adsb' MissionPlanner.Utilities.SightGen' MissionPlanner.Utilities.Grid' MissionPlanner.Utilities.Ubx' MissionPlanner.Utilities.tfr
+MissionPlanner.Utilities,Privacy,0,1,0,0,1,140,15,0,0,-1,1,0,MissionPlanner.Utilities.CollectionBuffer,
+MissionPlanner.Utilities,Quaternion,6,35,0,4,23,382,46,0,0,0.2,3,0,MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Vector3f' MissionPlanner.Utilities.Vector3,
+MissionPlanner.Utilities,Rect,4,2,4,4,2,23,2,0,0,1,0,1,,MissionPlanner.Utilities.Grid
+MissionPlanner.Utilities,rtcm3,45,15,2,5,4,2314,64,0,1,0.47,22,1,MissionPlanner.Utilities.ICorrections' MissionPlanner.Utilities.rtcmpreamble' MissionPlanner.Utilities.rtcmheader' MissionPlanner.Utilities.crc24' MissionPlanner.Utilities.type1002' MissionPlanner.Utilities.StaticUtils' MissionPlanner.Utilities.type1004' MissionPlanner.Utilities.type1012' MissionPlanner.Utilities.ob' MissionPlanner.Utilities.rawrtcm' MissionPlanner.Utilities.type1074' MissionPlanner.Utilities.type1077' MissionPlanner.Utilities.type1084' MissionPlanner.Utilities.type1087' MissionPlanner.Utilities.type1094' MissionPlanner.Utilities.type1097' MissionPlanner.Utilities.type1124' MissionPlanner.Utilities.type1127' MissionPlanner.Utilities.type1005' MissionPlanner.Utilities.type1006' MissionPlanner.Utilities.type1019' MissionPlanner.Utilities.gps_time_t,MissionPlanner.Utilities.DFLog
 MissionPlanner.Utilities,rtcmpreamble,3,2,0,3,2,27,2,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
 MissionPlanner.Utilities,rtcmheader,7,2,0,7,2,55,3,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
 MissionPlanner.Utilities,crc24,1,1,0,0,1,59,2,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1002,2,2,0,2,2,92,6,0,0,0,3,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils' MissionPlanner.Utilities.rawrtcm,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,StaticUtils,0,2,0,0,2,19,2,0,0,-1,0,9,,MissionPlanner.Utilities.type1002' MissionPlanner.Utilities.type1004' MissionPlanner.Utilities.type1012' MissionPlanner.Utilities.type1074' MissionPlanner.Utilities.type1077' MissionPlanner.Utilities.type1084' MissionPlanner.Utilities.type1087' MissionPlanner.Utilities.type1124' MissionPlanner.Utilities.type1127
-MissionPlanner.Utilities,type1004,2,2,0,2,2,118,6,0,0,0,3,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils' MissionPlanner.Utilities.rawrtcm,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1012,2,2,0,2,2,101,6,0,0,0,3,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils' MissionPlanner.Utilities.rawrtcm,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,ob,10,0,0,10,0,29,0,0,0,-1,1,10,MissionPlanner.Utilities.rawrtcm,MissionPlanner.SerialInjectGPS' MissionPlanner.Utilities.type1002' MissionPlanner.Utilities.type1004' MissionPlanner.Utilities.type1012' MissionPlanner.Utilities.type1074' MissionPlanner.Utilities.type1077' MissionPlanner.Utilities.type1084' MissionPlanner.Utilities.type1087' MissionPlanner.Utilities.type1124' MissionPlanner.Utilities.type1127
-MissionPlanner.Utilities,rawrtcm,13,0,0,13,0,16,0,0,0,-1,0,4,,MissionPlanner.Utilities.type1002' MissionPlanner.Utilities.type1004' MissionPlanner.Utilities.type1012' MissionPlanner.Utilities.ob
-MissionPlanner.Utilities,type1074,2,2,0,2,2,152,24,0,0,1,2,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1077,2,2,0,2,2,172,29,0,0,1,2,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1084,2,2,0,2,2,153,24,0,0,1,2,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1087,2,2,0,2,2,173,29,0,0,1,2,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1124,2,2,0,2,2,152,24,0,0,1,2,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1127,2,2,0,2,2,172,29,0,0,1,2,1,MissionPlanner.Utilities.ob' MissionPlanner.Utilities.StaticUtils,MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1005,12,2,1,12,2,78,2,0,0,0,0,2,,MissionPlanner.SerialInjectGPS' MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,type1006,13,2,1,13,2,83,2,0,0,0,0,2,,MissionPlanner.SerialInjectGPS' MissionPlanner.Utilities.rtcm3
-MissionPlanner.Utilities,sbp,5,2,2,0,2,168,3,0,1,0,3,1,MissionPlanner.Utilities.piksimsg' MissionPlanner.Utilities.Crc16Ccitt' MissionPlanner.Utilities.InitialCrcValue,MissionPlanner.SerialInjectGPS
+MissionPlanner.Utilities,type1002,2,2,0,2,2,87,5,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,StaticUtils,0,4,0,0,4,37,12,0,0,-1,0,2,,MissionPlanner.Utilities.DFLog' MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1004,2,2,0,2,2,113,5,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1012,2,2,0,2,2,93,5,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,ob,10,0,0,10,0,30,0,0,0,-1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,rawrtcm,13,0,0,13,0,16,0,0,0,-1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1074,2,2,0,2,2,152,24,0,0,1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1077,2,2,0,2,2,167,28,0,0,1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1084,2,2,0,2,2,157,24,1,0,1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1087,2,2,0,2,2,170,28,1,0,1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1094,0,1,0,0,1,11,2,0,1,-1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1097,0,1,0,0,1,11,2,0,1,-1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1124,2,2,0,2,2,152,24,0,0,1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1127,2,2,0,2,2,167,28,0,0,1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1005,12,2,1,12,2,78,2,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1006,13,2,1,13,2,83,2,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,type1019,36,4,0,36,3,320,7,0,0,0,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,gps_time_t,2,2,0,2,2,23,2,0,0,1,0,1,,MissionPlanner.Utilities.rtcm3
+MissionPlanner.Utilities,sbp,5,2,2,0,2,168,13,0,1,0,4,0,MissionPlanner.Utilities.ICorrections' MissionPlanner.Utilities.piksimsg' MissionPlanner.Utilities.InitialCrcValue' MissionPlanner.Utilities.Crc16Ccitt,
 MissionPlanner.Utilities,piksimsg,7,0,0,7,0,11,0,0,0,-1,0,1,,MissionPlanner.Utilities.sbp
-MissionPlanner.Utilities,InitialCrcValue,0,0,0,0,0,1,0,0,0,-1,0,2,,MissionPlanner.Utilities.sbp' MissionPlanner.Utilities.Crc16Ccitt
-MissionPlanner.Utilities,Crc16Ccitt,3,4,0,0,4,52,9,0,0,0,1,1,MissionPlanner.Utilities.InitialCrcValue,MissionPlanner.Utilities.sbp
-MissionPlanner.Utilities,Settings,3,17,7,1,15,301,33,0,0,0.12,2,50,MissionPlanner.Utilities.DisplayView' MissionPlanner.Utilities.DisplayViewExtensions,MissionPlanner.Antenna.Tracker' MissionPlanner.Common' MissionPlanner.CurrentState' MissionPlanner.GridUI' MissionPlanner.L10N' MissionPlanner.MagCalib' MissionPlanner.MainV2' MissionPlanner.MAVLinkInterface' MissionPlanner.MovingBase' MissionPlanner.Program' MissionPlanner.Script' MissionPlanner.SerialInjectGPS' MissionPlanner.temp' MissionPlanner.Controls.DefaultSettings' MissionPlanner.Controls.ServoOptions' MissionPlanner.Controls.ThemeColors' MissionPlanner.GCSViews.ConfigurationView.ConfigBatteryMonitoring' MissionPlanner.GCSViews.ConfigurationView.ConfigBatteryMonitoring2' MissionPlanner.GCSViews.ConfigurationView.ConfigPlanner' MissionPlanner.GCSViews.ConfigurationView.ConfigPlannerAdv' MissionPlanner.GCSViews.ConfigurationView.ConfigRawParams' MissionPlanner.GCSViews.ConfigurationView.ConfigRawParamsTree' MissionPlanner.GCSViews.ConfigurationView.ConfigSimplePids' MissionPlanner.GCSViews.FlightData' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.GCSViews.Help' MissionPlanner.GeoRef.Georefimage' MissionPlanner.Joystick.Joystick' MissionPlanner.Joystick.JoystickSetup' MissionPlanner.Log.LogBrowse' MissionPlanner.Log.LogDownload' MissionPlanner.Log.LogDownloadMavLink' MissionPlanner.Log.LogDownloadscp' MissionPlanner.Log.LogIndex' MissionPlanner.Log.LogOutput' MissionPlanner.Log.MatLab' MissionPlanner.Log.MavlinkLog' MissionPlanner.Log.Scan' MissionPlanner.Maps.MyImageCache' MissionPlanner.Plugin.PluginLoader' resedit.Form1' MissionPlanner.Utilities.AltitudeAngel.MissionPlannerAdaptor' MissionPlanner.Utilities.Firmware' MissionPlanner.Utilities.LogAnalyzer' MissionPlanner.Utilities.ParameterMetaDataParser' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPMpdef' MissionPlanner.Utilities.ParameterMetaDataRepositoryPX4' MissionPlanner.Utilities.Password' MissionPlanner.Utilities.ThemeManager
-MissionPlanner.Utilities,TCPConsole,3,3,0,0,1,50,6,0,0,0,0,2,,MissionPlanner.MainV2' MissionPlanner.MAVLinkInterface
-MissionPlanner.Utilities,tfr,7,2,0,3,1,274,6,0,0,1,1,2,MissionPlanner.Utilities.tfritem,MissionPlanner.MainV2' MissionPlanner.GCSViews.FlightData
-MissionPlanner.Utilities,tfritem,20,1,0,20,1,167,13,0,0,0,1,1,MissionPlanner.Utilities.PointLatLngAlt,MissionPlanner.Utilities.tfr
-MissionPlanner.Utilities,ubx_m8p,4,8,4,1,7,481,20,0,1,0.38,3,1,MissionPlanner.Comms.ICommsSerial' MissionPlanner.Utilities.ubx_cfg_tmode3' MissionPlanner.Utilities.PointLatLngAlt,MissionPlanner.SerialInjectGPS
+MissionPlanner.Utilities,InitialCrcValue,0,0,0,0,0,1,0,0,0,-1,0,1,,MissionPlanner.Utilities.sbp
+MissionPlanner.Utilities,Crc16Ccitt,3,4,0,0,4,52,9,0,0,0,0,1,,MissionPlanner.Utilities.sbp
+MissionPlanner.Utilities,Settings,3,20,9,1,18,342,43,0,0,0.1,2,18,MissionPlanner.Utilities.DisplayView' MissionPlanner.Utilities.DisplayViewExtensions,MissionPlanner.Utilities.CleanDrivers' MissionPlanner.Utilities.KIndex' MissionPlanner.Utilities.mavgraph' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPMpdef' MissionPlanner.Utilities.AutoConnect' MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM' MissionPlanner.Utilities.Password' MissionPlanner.Utilities.adsb' MissionPlanner.Utilities.ParameterMetaDataParser' MissionPlanner.Utilities.ParameterMetaDataRepositoryPX4' MissionPlanner.Warnings.WarningEngine' MissionPlanner.Utilities.tfr' MissionPlanner.Utilities.GStreamer' MissionPlanner.Log.LogOutput' MissionPlanner.Utilities.SightGen' MissionPlanner.Utilities.srtm' MissionPlanner.Utilities.DownloadStream' MissionPlanner.Utilities.Download
+MissionPlanner.Utilities,SightGen,5,2,0,0,1,115,7,0,0,0,5,0,MissionPlanner.Utilities.Extensions' MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Settings' MissionPlanner.Utilities.srtm,
+MissionPlanner.Utilities,Spectrogram,1,2,0,0,1,49,4,0,0,0,2,0,MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Utilities.FFT2,
+MissionPlanner.Utilities,srtm,11,14,1,0,3,588,74,0,0,0,7,5,MissionPlanner.Utilities.DTED' MissionPlanner.Utilities.GeoTiff' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Settings' MissionPlanner.Utilities.tiletype' MissionPlanner.Utilities.altresponce' MissionPlanner.Utilities.PointF,MissionPlanner.Utilities.SightGen' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.TerrainFollow' MissionPlanner.Utilities.DTED' MissionPlanner.Utilities.GeoTiff
+MissionPlanner.Utilities,tiletype,0,0,0,0,0,6,0,0,0,-1,0,4,,MissionPlanner.Utilities.DTED' MissionPlanner.Utilities.GeoTiff' MissionPlanner.Utilities.TerrainFollow' MissionPlanner.Utilities.srtm
+MissionPlanner.Utilities,altresponce,5,0,0,5,0,8,0,0,0,-1,0,3,,MissionPlanner.Utilities.GeoTiff' MissionPlanner.Utilities.DTED' MissionPlanner.Utilities.srtm
+MissionPlanner.Utilities,PointF,0,2,2,0,0,13,2,0,0,-1,0,1,,MissionPlanner.Utilities.srtm
+MissionPlanner.Utilities,StringRedirectWriter,1,37,1,0,36,173,38,0,0,0.92,0,0,,
+MissionPlanner.Utilities,TCPConsole,3,3,0,0,1,50,6,0,0,0,0,0,,
+MissionPlanner.Utilities,TerrainFollow,7,5,0,0,2,143,12,0,0,0,4,0,MissionPlanner.Utilities.IMAVLinkInterface' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.srtm' MissionPlanner.Utilities.tiletype,
+MissionPlanner.Utilities,tfr,7,2,0,3,1,281,7,0,0,1,3,0,MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Settings' MissionPlanner.Utilities.tfritem,
+MissionPlanner.Utilities,tfritem,20,1,0,20,1,167,23,0,0,0,0,1,,MissionPlanner.Utilities.tfr
+MissionPlanner.Utilities,Tracking,9,6,6,2,5,264,19,0,0,0.33,0,0,,
+MissionPlanner.Utilities,type,0,0,0,0,0,11,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,Ubx,4,8,4,1,7,510,33,0,1,0.38,3,0,MissionPlanner.Utilities.ICorrections' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.ubx_cfg_tmode3,
 MissionPlanner.Utilities,ubx_mon_ver,3,0,0,3,0,10,0,0,0,-1,0,0,,
 MissionPlanner.Utilities,ubx_mon_hw,17,0,0,17,0,22,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,ubx_nav_pvt,31,0,0,31,0,27,0,0,0,-1,0,2,,MissionPlanner.SerialInjectGPS' MissionPlanner.Swarm.SRB.DroneGroup
-MissionPlanner.Utilities,ubx_nav_svin,16,1,0,16,1,29,1,0,0,0,0,1,,MissionPlanner.SerialInjectGPS
-MissionPlanner.Utilities,ubx_nav_velned,9,0,0,9,0,13,0,0,0,-1,0,2,,MissionPlanner.SerialInjectGPS' MissionPlanner.Swarm.SRB.DroneGroup
-MissionPlanner.Utilities,ubx_cfg_tmode3,14,3,1,14,3,107,5,0,0,0,1,2,MissionPlanner.Utilities.PointLatLngAlt,MissionPlanner.SerialInjectGPS' MissionPlanner.Utilities.ubx_m8p
+MissionPlanner.Utilities,ubx_nav_pvt,31,0,0,31,0,27,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,ubx_nav_svin,16,1,0,16,1,29,1,0,0,0,0,0,,
+MissionPlanner.Utilities,ubx_nav_velned,9,0,0,9,0,13,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,ubx_cfg_nav5_getset_s,19,0,0,19,0,25,0,0,0,-1,0,0,,
+MissionPlanner.Utilities,ubx_cfg_tmode3,14,3,1,14,3,107,6,0,0,0,0,1,,MissionPlanner.Utilities.Ubx
 MissionPlanner.Utilities,modeflags,0,0,0,0,0,8,0,0,0,-1,0,0,,
-MissionPlanner.Utilities,Utils,9,42,0,9,42,661,55,8,0,0.57,3,3,MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.Vector3' MissionPlanner.Utilities.Matrix3,MissionPlanner.HIL.Wind' MissionPlanner.Utilities.CompassCalibrator' MissionPlanner.Utilities.Matrix3
-MissionPlanner.Utilities,utmpos,7,11,1,5,11,106,14,0,0,0,5,4,MissionPlanner.Utilities.PointLatLngAlt' GeoUtility.GeoSystem.UTM' GeoUtility.GeoSystem.Base.Hemisphere' GeoUtility.GeoSystem.Base.Geocentric' MissionPlanner.Utilities.MathHelper,MissionPlanner.Grid' MissionPlanner.linelatlng' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.Utilities.ImageProjection
-MissionPlanner.Utilities,Vario,3,4,1,2,4,53,7,0,0,0,0,2,,MissionPlanner.GCSViews.ConfigurationView.ConfigPlanner' MissionPlanner.GCSViews.FlightData
-MissionPlanner.Utilities,Vector3f,2,1,0,2,1,8,1,0,1,0,0,3,,MissionPlanner.MagCalib' MissionPlanner.Utilities.CompassCalibrator' MissionPlanner.Utilities.CompassSample
-MissionPlanner.Utilities,Vector3,2,2,0,2,2,7,2,1,0,1,0,30,,MissionPlanner.MagCalib' MissionPlanner.Magfitrotation' MissionPlanner.Controls.Waypoints.Spline2' MissionPlanner.HIL.Aircraft' MissionPlanner.HIL.MultiCopter' MissionPlanner.HIL.Wind' MissionPlanner.HIL.XPlane' MissionPlanner.Log.DFLogScript' MissionPlanner.Swarm.DroneBase' MissionPlanner.Swarm.Formation' MissionPlanner.Swarm.FormationControl' MissionPlanner.Swarm.FollowLeader.DroneGroup' MissionPlanner.Swarm.SRB.DroneGroup' MissionPlanner.Swarm.TD.DroneGroup' MissionPlanner.Swarm.WaypointLeader.DroneGroup' MissionPlanner.Swarm.WaypointLeader.Path' MissionPlanner.Utilities.AP_GPS_base' MissionPlanner.Utilities.GPS_State' MissionPlanner.Utilities.AP_GPS_GSOF' MissionPlanner.Utilities.AP_GPS_NOVA' MissionPlanner.Utilities.AP_Terrain' MissionPlanner.Utilities.IO' MissionPlanner.Utilities.Proximity' MissionPlanner.Wizard._6CompassCalib' MissionPlanner.Utilities.AP_GeodesicGrid' MissionPlanner.Utilities.CompassCalibrator' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.Vector3<T>
-MissionPlanner.Utilities,Vector3<T>,3,11,1,3,11,369,12,0,0,0.18,2,0,MissionPlanner.Utilities.Vector3' MissionPlanner.Utilities.Rotation,
-MissionPlanner.Utilities,Rotation,0,0,0,0,0,30,0,0,0,-1,0,4,,MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass' MissionPlanner.Utilities.Proximity' MissionPlanner.Wizard._6CompassCalib' MissionPlanner.Utilities.Vector3<T>
-MissionPlanner.Utilities,VersionDetection,1,1,0,0,1,49,6,0,0,0,0,1,,MissionPlanner.MainV2
-MissionPlanner.Utilities,vlcrender,14,7,0,2,2,106,14,0,0,0.29,1,2,LibVLC.NET.LibVLCLibrary,MissionPlanner.MainV2' MissionPlanner.temp
-MissionPlanner.Utilities,ZeroConf,1,3,0,1,2,42,8,0,0,1,0,2,,MissionPlanner.MainV2' MissionPlanner.Controls.Video
-MissionPlanner.Attributes,DisplayTextAttribute,1,1,1,0,1,28,2,0,0,0,0,2,,MissionPlanner.CurrentState' MissionPlanner.Utilities.EnumTranslator
+MissionPlanner.Utilities,Utils,9,43,0,9,43,571,59,6,0,0.58,3,4,MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Vector3,MissionPlanner.Log.DFLogScript' MissionPlanner.Controls.Waypoints.Spline2' MissionPlanner.Utilities.CompassCalibrator' MissionPlanner.Utilities.Matrix3
+MissionPlanner.Utilities,utmpos,7,11,1,5,11,106,14,0,0,0.18,2,2,MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.PointLatLngAlt,MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.Grid
+MissionPlanner.Utilities,Vario,3,4,1,2,4,53,7,0,0,0.5,0,0,,
+MissionPlanner.Utilities,Vector3f,2,1,0,2,1,9,1,0,1,0,1,3,MissionPlanner.Utilities.Vector3<T>,MissionPlanner.Utilities.Quaternion' MissionPlanner.Utilities.Vector3<T>' MissionPlanner.Utilities.CompassCalibrator
+MissionPlanner.Utilities,Vector3,2,2,0,2,2,12,2,1,0,1,1,9,MissionPlanner.Utilities.Vector3<T>,MissionPlanner.Utilities.Quaternion' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.AP_GeodesicGrid' MissionPlanner.Utilities.dfgpslag' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.Vector3<T>' MissionPlanner.Controls.Waypoints.Spline2' MissionPlanner.Log.DFLogScript' MissionPlanner.Utilities.Matrix3
+MissionPlanner.Utilities,Vector3<T>,3,11,7,3,10,399,36,0,0,0.45,4,2,MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Vector3f' MissionPlanner.Utilities.Vector3' MissionPlanner.Utilities.Rotation,MissionPlanner.Utilities.Vector3f' MissionPlanner.Utilities.Vector3
+MissionPlanner.Utilities,Rotation,0,0,0,0,0,30,0,0,0,-1,0,1,,MissionPlanner.Utilities.Vector3<T>
+MissionPlanner.Utilities,VersionDetection,1,1,0,0,1,49,6,0,0,0,0,0,,
+MissionPlanner.Utilities,vlcrender,14,7,0,2,2,106,14,0,0,0.29,0,0,,
+MissionPlanner.Utilities,XTermRBGColors,6,2,0,3,2,281,2,0,0,0,0,0,,
+MissionPlanner.Utilities,ZeroConf,1,3,0,1,2,41,8,0,0,1,0,0,,
+MissionPlanner,altitudes,0,0,0,0,0,5,0,0,0,-1,0,0,,
+MissionPlanner,CodeGen,3,12,0,0,12,301,27,0,0,0.42,0,0,,
+MissionPlanner,distances,0,0,0,0,0,5,0,0,0,-1,0,0,,
+MissionPlanner,speeds,0,0,0,0,0,8,0,0,0,-1,0,0,,
+MissionPlanner.Attributes,GroupText,0,1,0,0,1,6,1,0,0,-1,0,0,,
+MissionPlanner.Attributes,DisplayTextAttribute,1,1,1,0,1,28,2,0,0,0,1,1,MissionPlanner.Utilities.L10NU,MissionPlanner.Utilities.EnumTranslator
 MissionPlanner.Attributes,PrivateAttribute,1,1,1,0,1,23,1,0,0,0,0,1,,MissionPlanner.Utilities.EnumTranslator
-WebCamService,Capture,13,16,3,2,7,486,41,0,0,0.19,1,3,WebCamService.NativeMethods,MissionPlanner.MainV2' MissionPlanner.GCSViews.ConfigurationView.ConfigPlanner' MissionPlanner.GCSViews.FlightData
-WebCamService,NativeMethods,0,2,0,0,1,19,2,0,0,-1,0,1,,WebCamService.Capture
-CircularBuffer,CircularBuffer<T>,6,23,8,0,18,301,33,0,0,0.39,0,0,,
-CircularBuffer,CircularStream,1,10,6,0,10,78,10,0,0,0.4,0,0,,
+CircularBuffer,CircularBuffer<T>,6,23,8,0,18,301,44,0,0,0.43,0,1,,CircularBuffer.CircularStream
+CircularBuffer,CircularStream,1,10,6,0,10,78,10,0,0,0.6,1,0,CircularBuffer.CircularBuffer<T>,
+ClipperLib,DoublePoint,2,3,0,2,3,17,3,0,0,0,1,1,ClipperLib.IntPoint,ClipperLib.ClipperOffset
+ClipperLib,PolyTree,1,2,1,0,2,30,4,0,1,0,1,3,ClipperLib.PolyNode,MissionPlanner.Utilities.Grid' ClipperLib.Clipper' ClipperLib.ClipperOffset
+ClipperLib,PolyNode,6,4,6,0,1,64,8,1,0,0,2,4,ClipperLib.JoinType' ClipperLib.EndType,ClipperLib.PolyTree' ClipperLib.OutRec' ClipperLib.Clipper' ClipperLib.ClipperOffset
+ClipperLib,Int128,2,7,0,0,7,115,12,0,0,0.29,0,1,,ClipperLib.ClipperBase
+ClipperLib,IntPoint,2,5,0,2,5,63,7,0,0,0.6,0,9,,MissionPlanner.Utilities.Grid' ClipperLib.DoublePoint' ClipperLib.TEdge' ClipperLib.IntersectNode' ClipperLib.OutPt' ClipperLib.Join' ClipperLib.ClipperBase' ClipperLib.Clipper' ClipperLib.ClipperOffset
+ClipperLib,IntRect,4,2,0,4,2,17,2,0,0,0,0,2,,ClipperLib.ClipperBase' ClipperLib.ClipperOffset
+ClipperLib,ClipType,0,0,0,0,0,1,0,0,0,-1,0,2,,ClipperLib.Clipper' ClipperLib.ClipperOffset
+ClipperLib,PolyType,0,0,0,0,0,1,0,0,0,-1,0,4,,ClipperLib.TEdge' ClipperLib.ClipperBase' ClipperLib.Clipper' ClipperLib.ClipperOffset
+ClipperLib,PolyFillType,0,0,0,0,0,1,0,0,0,-1,0,2,,ClipperLib.Clipper' ClipperLib.ClipperOffset
+ClipperLib,JoinType,0,0,0,0,0,1,0,0,0,-1,0,3,,MissionPlanner.Utilities.Grid' ClipperLib.PolyNode' ClipperLib.ClipperOffset
+ClipperLib,EndType,0,0,0,0,0,1,0,0,0,-1,0,3,,MissionPlanner.Utilities.Grid' ClipperLib.PolyNode' ClipperLib.ClipperOffset
+ClipperLib,EdgeSide,0,0,0,0,0,1,0,0,0,-1,0,3,,ClipperLib.TEdge' ClipperLib.ClipperBase' ClipperLib.Clipper
+ClipperLib,Direction,0,0,0,0,0,1,0,0,0,-1,0,1,,ClipperLib.Clipper
+ClipperLib,TEdge,18,0,0,0,0,21,0,0,0,-1,3,4,ClipperLib.IntPoint' ClipperLib.PolyType' ClipperLib.EdgeSide,ClipperLib.IntersectNode' ClipperLib.LocalMinima' ClipperLib.ClipperBase' ClipperLib.Clipper
+ClipperLib,IntersectNode,3,0,0,0,0,6,0,0,0,-1,2,2,ClipperLib.IntPoint' ClipperLib.TEdge,ClipperLib.MyIntersectNodeSort' ClipperLib.Clipper
+ClipperLib,MyIntersectNodeSort,0,1,0,0,1,10,3,0,0,-1,1,1,ClipperLib.IntersectNode,ClipperLib.Clipper
+ClipperLib,LocalMinima,4,0,0,0,0,7,0,0,0,-1,1,2,ClipperLib.TEdge,ClipperLib.ClipperBase' ClipperLib.Clipper
+ClipperLib,Scanbeam,2,0,0,0,0,5,0,0,0,-1,0,1,,ClipperLib.ClipperBase
+ClipperLib,Maxima,3,0,0,0,0,6,0,0,0,-1,0,1,,ClipperLib.Clipper
+ClipperLib,OutRec,7,0,0,0,0,10,0,0,0,-1,2,2,ClipperLib.PolyNode' ClipperLib.OutPt,ClipperLib.ClipperBase' ClipperLib.Clipper
+ClipperLib,OutPt,4,0,0,0,0,7,0,0,0,-1,1,4,ClipperLib.IntPoint,ClipperLib.OutRec' ClipperLib.Join' ClipperLib.ClipperBase' ClipperLib.Clipper
+ClipperLib,Join,3,0,0,0,0,6,0,0,0,-1,2,1,ClipperLib.IntPoint' ClipperLib.OutPt,ClipperLib.Clipper
+ClipperLib,ClipperBase,14,35,1,2,5,747,165,1,0,0.29,11,2,ClipperLib.Int128' ClipperLib.IntPoint' ClipperLib.IntRect' ClipperLib.PolyType' ClipperLib.EdgeSide' ClipperLib.TEdge' ClipperLib.LocalMinima' ClipperLib.Scanbeam' ClipperLib.OutRec' ClipperLib.OutPt' ClipperLib.ClipperException,ClipperLib.Clipper' ClipperLib.ClipperOffset
+ClipperLib,Clipper,14,103,2,3,19,2862,551,0,1,0.16,19,1,ClipperLib.PolyTree' ClipperLib.PolyNode' ClipperLib.IntPoint' ClipperLib.ClipType' ClipperLib.PolyType' ClipperLib.PolyFillType' ClipperLib.EdgeSide' ClipperLib.Direction' ClipperLib.TEdge' ClipperLib.IntersectNode' ClipperLib.MyIntersectNodeSort' ClipperLib.LocalMinima' ClipperLib.Maxima' ClipperLib.OutRec' ClipperLib.OutPt' ClipperLib.Join' ClipperLib.ClipperBase' ClipperLib.NodeType' ClipperLib.ClipperException,ClipperLib.ClipperOffset
+ClipperLib,NodeType,0,0,0,0,0,1,0,0,0,-1,0,1,,ClipperLib.Clipper
+ClipperLib,ClipperOffset,14,14,2,0,6,429,75,0,0,0.21,12,1,ClipperLib.DoublePoint' ClipperLib.PolyTree' ClipperLib.PolyNode' ClipperLib.IntPoint' ClipperLib.IntRect' ClipperLib.ClipType' ClipperLib.PolyType' ClipperLib.PolyFillType' ClipperLib.JoinType' ClipperLib.EndType' ClipperLib.ClipperBase' ClipperLib.Clipper,MissionPlanner.Utilities.Grid
+ClipperLib,ClipperException,0,1,0,0,1,4,1,0,0,-1,0,2,,ClipperLib.ClipperBase' ClipperLib.Clipper
+MissionPlanner.Comms,CommsSerialScan,7,2,0,4,1,121,10,0,0,0,0,0,,
+System,CustomMessageBox,0,4,0,0,4,84,7,0,0,-1,3,2,System.DialogResult' System.MessageBoxButtons' System.MessageBoxIcon,MissionPlanner.Utilities.WaypointFile' MissionPlanner.Utilities.GStreamer
+System,DialogResult,0,0,0,0,0,19,0,0,0,-1,0,1,,System.CustomMessageBox
+System,MessageBoxButtons,0,0,0,0,0,15,0,0,0,-1,0,1,,System.CustomMessageBox
+System,MessageBoxIcon,0,0,0,0,0,21,0,0,0,-1,0,1,,System.CustomMessageBox
+MissionPlanner.Log,DFLogScript,2,6,0,0,6,528,71,0,1,0.33,13,0,MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Utilities.DFLog' MissionPlanner.Utilities.DFItem' MissionPlanner.Utilities.Matrix3' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.Vector3' MissionPlanner.Log.atan2' MissionPlanner.Log.lowpass' MissionPlanner.Log.deltaF' MissionPlanner.Log.ATT_t' MissionPlanner.Log.MAG_t' MissionPlanner.Log.IMU_t' MissionPlanner.Log.GPS_t,
+MissionPlanner.Log,atan2,2,7,0,0,7,38,11,0,0,0.57,0,1,,MissionPlanner.Log.DFLogScript
+MissionPlanner.Log,lowpass,4,7,0,0,7,43,14,0,0,0.71,0,1,,MissionPlanner.Log.DFLogScript
+MissionPlanner.Log,deltaF,5,7,0,0,7,58,15,0,0,0.71,0,1,,MissionPlanner.Log.DFLogScript
+MissionPlanner.Log,ATT_t,3,0,0,3,0,6,0,0,0,-1,0,1,,MissionPlanner.Log.DFLogScript
+MissionPlanner.Log,MAG_t,6,0,0,6,0,9,0,0,0,-1,0,1,,MissionPlanner.Log.DFLogScript
+MissionPlanner.Log,IMU_t,3,0,0,3,0,6,0,0,0,-1,0,1,,MissionPlanner.Log.DFLogScript
+MissionPlanner.Log,GPS_t,3,0,0,3,0,6,0,0,0,-1,0,1,,MissionPlanner.Log.DFLogScript
+MissionPlanner.Log,LogMap,0,6,0,0,2,210,28,0,0,-1,2,0,MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Utilities.PointLatLngAlt,
+MissionPlanner.Log,LogOutput,17,10,0,1,9,914,81,0,0,0.3,4,0,MissionPlanner.Utilities.DFLog' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Settings' MissionPlanner.Log.Data,
+MissionPlanner.Log,Data,5,0,0,5,0,8,0,0,0,-1,0,1,,MissionPlanner.Log.LogOutput
+MissionPlanner.Log,LogSort,1,2,0,0,1,157,4,0,0,0,0,0,,
+MissionPlanner.Log,MatLab,1,6,0,0,3,420,48,0,0,0.5,2,0,MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Log.DoubleList,
+MissionPlanner.Log,DoubleList,5,6,1,0,4,92,8,0,0,0.33,0,1,,MissionPlanner.Log.MatLab
 Simplify,Douglas,0,3,0,0,2,116,9,0,0,-1,0,0,,
+MissionPlanner.GeoRef,PROCESSING_MODE,0,0,0,0,0,6,0,0,0,-1,0,0,,
+MissionPlanner.GeoRef,GeoRefImageBase,9,24,0,9,13,1375,113,0,0,0.29,6,0,MissionPlanner.Utilities.CollectionBuffer' MissionPlanner.Utilities.ImageProjection' MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.GeoRef.PictureInformation' MissionPlanner.GeoRef.VehicleLocation,
+MissionPlanner.GeoRef,PictureInformation,4,1,4,0,1,32,1,0,1,0,1,1,MissionPlanner.GeoRef.SingleLocation,MissionPlanner.GeoRef.GeoRefImageBase
+MissionPlanner.GeoRef,Rational,2,2,1,0,2,33,2,0,0,1,0,0,,
+MissionPlanner.GeoRef,SingleLocation,10,2,10,0,2,73,3,2,0,1,0,2,,MissionPlanner.GeoRef.PictureInformation' MissionPlanner.GeoRef.VehicleLocation
+MissionPlanner.GeoRef,VehicleLocation,0,0,0,0,0,3,0,0,1,-1,1,1,MissionPlanner.GeoRef.SingleLocation,MissionPlanner.GeoRef.GeoRefImageBase
 hires,Stopwatch,3,3,1,0,2,38,3,0,0,1,1,0,hires.NativeMethods,
 hires,NativeMethods,0,2,0,0,0,9,2,0,0,-1,0,1,,hires.Stopwatch
 MissionPlanner.Utilities.Properties,Resources,2,1,3,0,0,77,1,0,0,0,0,1,,MissionPlanner.Utilities.L10NU
-MissionPlanner,srtm,10,11,1,0,2,484,33,0,0,0,4,14,MissionPlanner.altresponce' MissionPlanner.Utilities.GeoTiff' MissionPlanner.tiletype' MissionPlanner.Utilities.DTED,MissionPlanner.ElevationProfile' MissionPlanner.GridUI' MissionPlanner.MainV2' MissionPlanner.Controls.SITL' MissionPlanner.Controls.OpenGLtest' MissionPlanner.Controls.OpenGLtest2' MissionPlanner.GCSViews.FlightData' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.Utilities.AP_Terrain' MissionPlanner.Utilities.GimbalPoint' MissionPlanner.Utilities.TerrainFollow' MissionPlanner.Utilities.DTED' MissionPlanner.Utilities.GeoTiff' MissionPlanner.Utilities.ImageProjection
-MissionPlanner,tiletype,0,0,0,0,0,6,0,0,0,-1,0,5,,MissionPlanner.Utilities.TerrainFollow' MissionPlanner.Utilities.DTED' MissionPlanner.Utilities.GeoTiff' MissionPlanner.srtm' MissionPlanner.altresponce
-MissionPlanner,altresponce,5,0,0,5,0,8,0,0,0,-1,1,14,MissionPlanner.tiletype,MissionPlanner.ElevationProfile' MissionPlanner.GridUI' MissionPlanner.Controls.SITL' MissionPlanner.Controls.OpenGLtest' MissionPlanner.Controls.OpenGLtest2' MissionPlanner.GCSViews.FlightData' MissionPlanner.GCSViews.FlightPlanner' MissionPlanner.Utilities.AP_Terrain' MissionPlanner.Utilities.GimbalPoint' MissionPlanner.Utilities.TerrainFollow' MissionPlanner.Utilities.DTED' MissionPlanner.Utilities.GeoTiff' MissionPlanner.Utilities.ImageProjection' MissionPlanner.srtm
-AT.MIN,Tools,0,13,0,0,9,640,40,0,0,-1,0,1,,MissionPlanner.Utilities.IO
+MissionPlanner.Controls.Waypoints,Spline2,20,16,1,6,7,399,32,0,1,0.25,7,0,MissionPlanner.Utilities.MathHelper' MissionPlanner.Utilities.PointLatLngAlt' MissionPlanner.Utilities.Utils' MissionPlanner.Utilities.Vector3' MissionPlanner.Controls.Waypoints.spline_segment_end_type' MissionPlanner.Controls.Waypoints.SegmentType' MissionPlanner.Controls.Waypoints.wpnav_flags,
+MissionPlanner.Controls.Waypoints,spline_segment_end_type,0,0,0,0,0,6,0,0,0,-1,0,1,,MissionPlanner.Controls.Waypoints.Spline2
+MissionPlanner.Controls.Waypoints,SegmentType,0,0,0,0,0,5,0,0,0,-1,0,1,,MissionPlanner.Controls.Waypoints.Spline2
+MissionPlanner.Controls.Waypoints,wpnav_flags,3,0,0,3,0,9,0,0,0,-1,0,1,,MissionPlanner.Controls.Waypoints.Spline2
+AT.MIN,Tools,0,13,0,0,9,640,128,0,0,-1,0,0,,
+MissionPlanner.Warnings,CustomWarning,4,5,8,1,5,175,25,0,0,1,1,1,MissionPlanner.Warnings.Conditional,MissionPlanner.Warnings.WarningEngine
+MissionPlanner.Warnings,Conditional,0,0,0,0,0,10,0,0,0,-1,0,1,,MissionPlanner.Warnings.CustomWarning
+MissionPlanner.Warnings,WarningEngine,5,7,0,2,5,130,18,0,0,0.29,3,0,MissionPlanner.Utilities.ISpeech' MissionPlanner.Utilities.Settings' MissionPlanner.Warnings.CustomWarning,

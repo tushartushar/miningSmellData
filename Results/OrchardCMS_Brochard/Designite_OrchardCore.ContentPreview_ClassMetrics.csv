@@ -1,5 +1,15 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.ContentPreview.Controllers,PreviewController,8,3,3,0,3,84,7,0,0,0.67,5,0,OrchardCore.ContentManagement.IContentManager' OrchardCore.ContentManagement.Metadata.IContentDefinitionManager' OrchardCore.ContentManagement.Display.IContentItemDisplayManager' OrchardCore.ContentManagement.ContentItem' OrchardCore.ContentPreview.Permissions,
-OrchardCore.ContentPreview.Drivers,ContentPreviewDriver,0,1,0,0,1,7,1,0,2,-1,1,0,OrchardCore.ContentManagement.ContentItem,
-OrchardCore.ContentPreview,Permissions,1,2,0,1,2,19,2,0,0,0,0,1,,OrchardCore.ContentPreview.Controllers.PreviewController
-OrchardCore.ContentPreview,Startup,0,2,0,0,2,11,2,0,0,-1,0,0,,
+OrchardCore.ContentPreview.Controllers,PreviewController,6,3,1,0,3,86,9,0,0,0.67,3,0,OrchardCore.ContentPreview.Controllers.ValidationHelpers' OrchardCore.ContentPreview.Permissions' OrchardCore.ContentPreview.Models.PreviewAspect,
+OrchardCore.ContentPreview.Controllers,ValidationHelpers,0,4,0,0,3,92,17,0,0,-1,0,1,,OrchardCore.ContentPreview.Controllers.PreviewController
+OrchardCore.ContentPreview.Drivers,ContentPreviewDriver,0,1,0,0,1,7,1,0,2,-1,0,1,,OrchardCore.ContentPreview.Startup
+OrchardCore.ContentPreview.Handlers,PreviewPartHandler,2,3,0,0,2,44,4,0,0,0,4,1,OrchardCore.ContentPreview.Models.PreviewAspect' OrchardCore.ContentPreview.Models.PreviewPart' OrchardCore.ContentPreview.Models.PreviewPartSettings' OrchardCore.ContentPreview.ViewModels.PreviewPartViewModel,OrchardCore.ContentPreview.Startup
+OrchardCore.ContentPreview,Migrations,1,2,0,0,2,15,2,0,0,0,0,1,,OrchardCore.ContentPreview.Startup
+OrchardCore.ContentPreview,Permissions,1,2,0,1,2,19,2,0,0,0,0,2,,OrchardCore.ContentPreview.Controllers.PreviewController' OrchardCore.ContentPreview.Startup
+OrchardCore.ContentPreview,PreviewStartupFilter,0,2,0,0,2,40,2,0,0,-1,0,1,,OrchardCore.ContentPreview.Startup
+OrchardCore.ContentPreview,Startup,0,1,0,0,1,14,1,0,0,-1,7,0,OrchardCore.ContentPreview.Drivers.ContentPreviewDriver' OrchardCore.ContentPreview.Handlers.PreviewPartHandler' OrchardCore.ContentPreview.Migrations' OrchardCore.ContentPreview.Permissions' OrchardCore.ContentPreview.PreviewStartupFilter' OrchardCore.ContentPreview.Models.PreviewPart' OrchardCore.ContentPreview.Settings.PreviewPartSettingsDisplayDriver,
+OrchardCore.ContentPreview.Models,PreviewAspect,0,0,1,0,0,4,0,0,0,-1,0,2,,OrchardCore.ContentPreview.Controllers.PreviewController' OrchardCore.ContentPreview.Handlers.PreviewPartHandler
+OrchardCore.ContentPreview.Models,PreviewPart,0,0,0,0,0,3,0,0,3,-1,0,4,,OrchardCore.ContentPreview.ViewModels.PreviewPartViewModel' OrchardCore.ContentPreview.Handlers.PreviewPartHandler' OrchardCore.ContentPreview.Startup' OrchardCore.ContentPreview.Settings.PreviewPartSettingsDisplayDriver
+OrchardCore.ContentPreview.Models,PreviewPartSettings,0,0,1,0,0,7,0,0,0,-1,0,3,,OrchardCore.ContentPreview.ViewModels.PreviewPartSettingsViewModel' OrchardCore.ContentPreview.Handlers.PreviewPartHandler' OrchardCore.ContentPreview.Settings.PreviewPartSettingsDisplayDriver
+OrchardCore.ContentPreview.Settings,PreviewPartSettingsDisplayDriver,1,3,1,0,3,46,6,0,2,0.67,3,1,OrchardCore.ContentPreview.Models.PreviewPart' OrchardCore.ContentPreview.Models.PreviewPartSettings' OrchardCore.ContentPreview.ViewModels.PreviewPartSettingsViewModel,OrchardCore.ContentPreview.Startup
+OrchardCore.ContentPreview.ViewModels,PreviewPartSettingsViewModel,0,0,2,0,0,5,0,0,0,-1,1,1,OrchardCore.ContentPreview.Models.PreviewPartSettings,OrchardCore.ContentPreview.Settings.PreviewPartSettingsDisplayDriver
+OrchardCore.ContentPreview.ViewModels,PreviewPartViewModel,0,0,3,0,0,8,0,0,0,-1,1,1,OrchardCore.ContentPreview.Models.PreviewPart,OrchardCore.ContentPreview.Handlers.PreviewPartHandler

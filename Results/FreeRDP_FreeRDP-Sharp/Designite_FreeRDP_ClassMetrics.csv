@@ -1,71 +1,71 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-FreeRDP,FrameMarkerCommand,2,4,0,0,4,33,4,0,1,0.75,0,0,,
+FreeRDP,FrameMarkerCommand,2,4,0,0,4,33,4,0,1,0.75,1,1,FreeRDP.SurfaceCommand,FreeRDP.SurfaceCommand
 FreeRDP,Rfx,1,5,0,0,5,38,5,0,0,0.4,2,0,FreeRDP.RFX_PIXEL_FORMAT' FreeRDP.RfxMessage,
 FreeRDP,RFX_PIXEL_FORMAT,0,0,0,0,0,11,0,0,0,-1,0,1,,FreeRDP.Rfx
-FreeRDP,RfxMessage,6,12,2,0,11,112,12,0,0,0.17,2,1,FreeRDP.RFX_TILE' FreeRDP.RFX_RECT,FreeRDP.Rfx
+FreeRDP,RfxMessage,6,12,2,0,11,112,12,0,0,0.17,2,1,FreeRDP.RFX_RECT' FreeRDP.RFX_TILE,FreeRDP.Rfx
 FreeRDP,RFX_RECT,4,0,0,4,0,8,0,0,0,-1,0,1,,FreeRDP.RfxMessage
 FreeRDP,RFX_TILE,3,0,0,3,0,7,0,0,0,-1,0,1,,FreeRDP.RfxMessage
-FreeRDP,SetSurfaceBitsCommand,0,2,0,0,2,11,2,0,1,-1,0,0,,
-FreeRDP,StreamSurfaceBitsCommand,0,2,0,0,2,12,2,0,1,-1,0,0,,
-FreeRDP,SurfaceBitsCommand,13,5,0,0,5,87,5,2,1,0,1,1,FreeRDP.SurfaceBits,NFreeRDP.RdpClient
-FreeRDP,SurfaceCommand,7,5,0,1,5,53,6,2,0,0.8,0,0,,
-FreeRDP,RDP,17,30,3,0,23,231,35,0,0,0.27,11,1,FreeRDP.freerdp' FreeRDP.rdpContext' FreeRDP.rdpSettings' FreeRDP.IUpdate' FreeRDP.IPrimaryUpdate' FreeRDP.ISecondaryUpdate' FreeRDP.IAltSecUpdate' FreeRDP.Update' FreeRDP.PrimaryUpdate' FreeRDP.Tcp' FreeRDP.Memory,NFreeRDP.RdpClient
+FreeRDP,SetSurfaceBitsCommand,0,2,0,0,2,11,2,0,1,-1,1,1,FreeRDP.SurfaceBitsCommand,FreeRDP.SurfaceCommand
+FreeRDP,StreamSurfaceBitsCommand,0,2,0,0,2,12,2,0,1,-1,1,1,FreeRDP.SurfaceBitsCommand,FreeRDP.SurfaceCommand
+FreeRDP,SurfaceBitsCommand,13,5,0,0,5,87,5,2,1,0,2,2,FreeRDP.SurfaceCommand' FreeRDP.SurfaceBits,FreeRDP.SetSurfaceBitsCommand' FreeRDP.StreamSurfaceBitsCommand
+FreeRDP,SurfaceCommand,7,5,0,1,5,53,8,2,0,0.8,3,2,FreeRDP.FrameMarkerCommand' FreeRDP.SetSurfaceBitsCommand' FreeRDP.StreamSurfaceBitsCommand,FreeRDP.SurfaceBitsCommand' FreeRDP.FrameMarkerCommand
+FreeRDP,RDP,17,30,3,0,23,231,35,0,0,0.33,11,0,FreeRDP.Memory' FreeRDP.rdpSettings' FreeRDP.rdpContext' FreeRDP.freerdp' FreeRDP.ISecondaryUpdate' FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate' FreeRDP.IAltSecUpdate' FreeRDP.IUpdate' FreeRDP.Update' FreeRDP.Tcp,
 FreeRDP,Memory,0,8,0,0,8,33,8,0,0,-1,0,1,,FreeRDP.RDP
-FreeRDP,rdpSettings,147,0,0,147,0,193,0,0,0,-1,0,2,,FreeRDP.RDP' FreeRDP.freerdp
-FreeRDP,rdpContext,13,0,0,13,0,19,0,0,0,-1,1,18,FreeRDP.freerdp,FreeRDP.RDP' FreeRDP.freerdp' FreeRDP.rdpSecondaryUpdate' FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate' FreeRDP.rdpPrimaryUpdate' FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate' FreeRDP.rdpPointerUpdate' FreeRDP.rdpAltSecUpdate' FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate' FreeRDP.rdpWindowUpdate' FreeRDP.IUpdate' FreeRDP.Update' FreeRDP.rdpGraphics' FreeRDP.rdpInput' NFreeRDP.RdpClient
+FreeRDP,rdpSettings,147,0,0,147,0,193,0,0,0,-1,1,2,FreeRDP.freerdp,FreeRDP.freerdp' FreeRDP.RDP
+FreeRDP,rdpContext,13,0,0,13,0,19,0,0,0,-1,1,17,FreeRDP.freerdp,FreeRDP.rdpInput' FreeRDP.freerdp' FreeRDP.rdpGraphics' FreeRDP.RDP' FreeRDP.rdpPointerUpdate' FreeRDP.rdpWindowUpdate' FreeRDP.rdpSecondaryUpdate' FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate' FreeRDP.rdpAltSecUpdate' FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate' FreeRDP.IUpdate' FreeRDP.Update' FreeRDP.rdpPrimaryUpdate' FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
 FreeRDP,GDI,2,4,0,0,4,27,4,0,0,0.5,1,0,FreeRDP.freerdp,
-FreeRDP,freerdp,18,0,0,18,0,26,0,0,0,-1,3,7,FreeRDP.rdpContext' FreeRDP.rdpUpdate' FreeRDP.rdpSettings,FreeRDP.RDP' FreeRDP.rdpContext' FreeRDP.GDI' FreeRDP.SecondaryUpdate' FreeRDP.PrimaryUpdate' FreeRDP.AltSecUpdate' FreeRDP.Update
-FreeRDP,rdpCache,6,0,0,6,0,10,0,0,0,-1,6,0,FreeRDP.rdpGlyphCache' FreeRDP.rdpBrushCache' FreeRDP.rdpPointerCache' FreeRDP.rdpBitmapCache' FreeRDP.rdpOffscreenCache' FreeRDP.rdpPaletteCache,
+FreeRDP,freerdp,18,0,0,18,0,26,0,0,0,-1,3,8,FreeRDP.rdpSettings' FreeRDP.rdpContext' FreeRDP.rdpUpdate,FreeRDP.rdpContext' FreeRDP.rdpSettings' FreeRDP.Update' FreeRDP.AltSecUpdate' FreeRDP.PrimaryUpdate' FreeRDP.SecondaryUpdate' FreeRDP.GDI' FreeRDP.RDP
+FreeRDP,rdpCache,6,0,0,6,0,10,0,0,0,-1,6,0,FreeRDP.rdpGlyphCache' FreeRDP.rdpBitmapCache' FreeRDP.rdpPointerCache' FreeRDP.rdpBrushCache' FreeRDP.rdpPaletteCache' FreeRDP.rdpOffscreenCache,
 FreeRDP,rdpGlyphCache,0,0,0,0,0,4,0,0,0,-1,0,1,,FreeRDP.rdpCache
 FreeRDP,rdpBitmapCache,0,0,0,0,0,4,0,0,0,-1,0,1,,FreeRDP.rdpCache
 FreeRDP,rdpPointerCache,0,0,0,0,0,4,0,0,0,-1,0,1,,FreeRDP.rdpCache
 FreeRDP,rdpBrushCache,0,0,0,0,0,4,0,0,0,-1,0,1,,FreeRDP.rdpCache
 FreeRDP,rdpPaletteCache,0,0,0,0,0,4,0,0,0,-1,0,1,,FreeRDP.rdpCache
 FreeRDP,rdpOffscreenCache,0,0,0,0,0,4,0,0,0,-1,0,1,,FreeRDP.rdpCache
-FreeRDP,CacheBitmapOrder,8,0,0,8,0,12,0,0,0,-1,0,1,,FreeRDP.ISecondaryUpdate
-FreeRDP,CacheBitmapV2Order,12,0,0,12,0,16,0,0,0,-1,0,1,,FreeRDP.ISecondaryUpdate
+FreeRDP,CacheBitmapOrder,8,0,0,8,0,12,0,0,0,-1,0,2,,FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate
+FreeRDP,CacheBitmapV2Order,12,0,0,12,0,16,0,0,0,-1,0,2,,FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate
 FreeRDP,BitmapDataEx,6,0,0,6,0,10,0,0,0,-1,0,1,,FreeRDP.CacheBitmapV3Order
-FreeRDP,CacheBitmapV3Order,7,0,0,7,0,11,0,0,0,-1,1,1,FreeRDP.BitmapDataEx,FreeRDP.ISecondaryUpdate
-FreeRDP,CacheColorTableOrder,3,0,0,3,0,7,0,0,0,-1,0,1,,FreeRDP.ISecondaryUpdate
+FreeRDP,CacheBitmapV3Order,7,0,0,7,0,11,0,0,0,-1,1,2,FreeRDP.BitmapDataEx,FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate
+FreeRDP,CacheColorTableOrder,3,0,0,3,0,7,0,0,0,-1,0,2,,FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate
 FreeRDP,GlyphData,7,0,0,7,0,11,0,0,0,-1,0,0,,
-FreeRDP,CacheGlyphOrder,3,0,0,3,0,8,0,0,0,-1,0,1,,FreeRDP.ISecondaryUpdate
+FreeRDP,CacheGlyphOrder,3,0,0,3,0,8,0,0,0,-1,0,2,,FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate
 FreeRDP,GlyphDataV2,7,0,0,7,0,11,0,0,0,-1,0,0,,
-FreeRDP,CacheGlyphV2Order,4,0,0,4,0,9,0,0,0,-1,0,1,,FreeRDP.ISecondaryUpdate
-FreeRDP,CacheBrushOrder,7,0,0,7,0,11,0,0,0,-1,0,1,,FreeRDP.ISecondaryUpdate
+FreeRDP,CacheGlyphV2Order,4,0,0,4,0,9,0,0,0,-1,0,2,,FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate
+FreeRDP,CacheBrushOrder,7,0,0,7,0,11,0,0,0,-1,0,2,,FreeRDP.ISecondaryUpdate' FreeRDP.SecondaryUpdate
 FreeRDP,rdpSecondaryUpdate,10,0,0,10,0,15,0,0,0,-1,1,2,FreeRDP.rdpContext,FreeRDP.SecondaryUpdate' FreeRDP.rdpUpdate
 FreeRDP,ISecondaryUpdate,0,7,0,0,0,10,7,0,0,-1,8,2,FreeRDP.rdpContext' FreeRDP.CacheBitmapOrder' FreeRDP.CacheBitmapV2Order' FreeRDP.CacheBitmapV3Order' FreeRDP.CacheColorTableOrder' FreeRDP.CacheGlyphOrder' FreeRDP.CacheGlyphV2Order' FreeRDP.CacheBrushOrder,FreeRDP.RDP' FreeRDP.SecondaryUpdate
-FreeRDP,SecondaryUpdate,11,2,0,0,2,49,2,0,0,0,5,0,FreeRDP.freerdp' FreeRDP.rdpContext' FreeRDP.rdpUpdate' FreeRDP.rdpSecondaryUpdate' FreeRDP.ISecondaryUpdate,
+FreeRDP,SecondaryUpdate,11,2,0,0,2,49,2,0,0,0,12,0,FreeRDP.rdpContext' FreeRDP.freerdp' FreeRDP.CacheBitmapOrder' FreeRDP.CacheBitmapV2Order' FreeRDP.CacheBitmapV3Order' FreeRDP.CacheColorTableOrder' FreeRDP.CacheGlyphOrder' FreeRDP.CacheGlyphV2Order' FreeRDP.CacheBrushOrder' FreeRDP.rdpSecondaryUpdate' FreeRDP.ISecondaryUpdate' FreeRDP.rdpUpdate,
 FreeRDP,rdpBrush,8,0,0,8,0,12,0,0,0,-1,0,6,,FreeRDP.PatBltOrder' FreeRDP.MultiPatBltOrder' FreeRDP.Mem3BltOrder' FreeRDP.GlyphIndexOrder' FreeRDP.PolygonCBOrder' FreeRDP.EllipseCBOrder
 FreeRDP,OrderInfo,8,0,0,8,0,12,0,0,0,-1,1,0,FreeRDP.rdpBounds,
-FreeRDP,DstBltOrder,5,0,0,5,0,9,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,PatBltOrder,8,0,0,8,0,12,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,ScrBltOrder,7,0,0,7,0,11,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,OpaqueRectOrder,5,0,0,5,0,9,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,DrawNineGridOrder,5,0,0,5,0,9,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
+FreeRDP,DstBltOrder,5,0,0,5,0,9,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,PatBltOrder,8,0,0,8,0,12,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,ScrBltOrder,7,0,0,7,0,11,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,OpaqueRectOrder,5,0,0,5,0,9,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,DrawNineGridOrder,5,0,0,5,0,9,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
 FreeRDP,DeltaRect,4,0,0,4,0,8,0,0,0,-1,0,0,,
-FreeRDP,MultiDstBltOrder,7,0,0,7,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,MultiPatBltOrder,10,0,0,10,0,15,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,MultiScrBltOrder,9,0,0,9,0,14,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,MultiOpaqueRectOrder,7,0,0,7,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,MultiDrawNineGridOrder,8,0,0,8,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,LineToOrder,10,0,0,10,0,14,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
+FreeRDP,MultiDstBltOrder,7,0,0,7,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,MultiPatBltOrder,10,0,0,10,0,15,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,MultiScrBltOrder,9,0,0,9,0,14,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,MultiOpaqueRectOrder,7,0,0,7,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,MultiDrawNineGridOrder,8,0,0,8,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,LineToOrder,10,0,0,10,0,14,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
 FreeRDP,DeltaPoint,2,0,0,2,0,6,0,0,0,-1,0,1,,FreeRDP.PolylineOrder
-FreeRDP,PolylineOrder,7,0,0,7,0,11,0,0,0,-1,1,2,FreeRDP.DeltaPoint,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,MemBltOrder,11,0,0,11,0,15,0,0,0,-1,1,2,FreeRDP.rdpBitmap,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,Mem3BltOrder,14,0,0,14,0,18,0,0,0,-1,2,2,FreeRDP.rdpBrush' FreeRDP.rdpBitmap,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,SaveBitmapOrder,6,0,0,6,0,10,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
+FreeRDP,PolylineOrder,7,0,0,7,0,11,0,0,0,-1,1,2,FreeRDP.DeltaPoint,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,MemBltOrder,11,0,0,11,0,15,0,0,0,-1,1,2,FreeRDP.rdpBitmap,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,Mem3BltOrder,14,0,0,14,0,18,0,0,0,-1,2,2,FreeRDP.rdpBrush' FreeRDP.rdpBitmap,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,SaveBitmapOrder,6,0,0,6,0,10,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
 FreeRDP,GlyphFragmentIndex,2,0,0,2,0,6,0,0,0,-1,0,1,,FreeRDP.GlyphFragment
 FreeRDP,GlyphFragment,5,0,0,5,0,9,0,0,0,-1,1,0,FreeRDP.GlyphFragmentIndex,
-FreeRDP,GlyphIndexOrder,19,0,0,19,0,23,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,FastIndexOrder,18,0,0,18,0,22,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,FastGlyphOrder,18,0,0,18,0,22,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,PolygonSCOrder,8,0,0,8,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,PolygonCBOrder,10,0,0,10,0,14,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,EllipseSCOrder,7,0,0,7,0,11,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,EllipseCBOrder,9,0,0,9,0,13,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' NFreeRDP.RdpClient
-FreeRDP,rdpPrimaryUpdate,25,0,0,25,0,30,0,0,0,-1,1,2,FreeRDP.rdpContext,FreeRDP.PrimaryUpdate' FreeRDP.rdpUpdate
+FreeRDP,GlyphIndexOrder,19,0,0,19,0,23,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,FastIndexOrder,18,0,0,18,0,22,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,FastGlyphOrder,18,0,0,18,0,22,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,PolygonSCOrder,8,0,0,8,0,12,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,PolygonCBOrder,10,0,0,10,0,14,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,EllipseSCOrder,7,0,0,7,0,11,0,0,0,-1,0,2,,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,EllipseCBOrder,9,0,0,9,0,13,0,0,0,-1,1,2,FreeRDP.rdpBrush,FreeRDP.IPrimaryUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,rdpPrimaryUpdate,25,0,0,25,0,30,0,0,0,-1,1,2,FreeRDP.rdpContext,FreeRDP.rdpUpdate' FreeRDP.PrimaryUpdate
 FreeRDP,IPrimaryUpdate,0,22,0,0,0,25,22,1,0,-1,23,2,FreeRDP.rdpContext' FreeRDP.DstBltOrder' FreeRDP.PatBltOrder' FreeRDP.ScrBltOrder' FreeRDP.OpaqueRectOrder' FreeRDP.DrawNineGridOrder' FreeRDP.MultiDstBltOrder' FreeRDP.MultiPatBltOrder' FreeRDP.MultiScrBltOrder' FreeRDP.MultiOpaqueRectOrder' FreeRDP.MultiDrawNineGridOrder' FreeRDP.LineToOrder' FreeRDP.PolylineOrder' FreeRDP.MemBltOrder' FreeRDP.Mem3BltOrder' FreeRDP.SaveBitmapOrder' FreeRDP.GlyphIndexOrder' FreeRDP.FastIndexOrder' FreeRDP.FastGlyphOrder' FreeRDP.PolygonSCOrder' FreeRDP.PolygonCBOrder' FreeRDP.EllipseSCOrder' FreeRDP.EllipseCBOrder,FreeRDP.RDP' FreeRDP.PrimaryUpdate
-FreeRDP,PrimaryUpdate,26,2,0,0,2,132,2,0,0,0,5,1,FreeRDP.freerdp' FreeRDP.rdpContext' FreeRDP.rdpUpdate' FreeRDP.rdpPrimaryUpdate' FreeRDP.IPrimaryUpdate,FreeRDP.RDP
+FreeRDP,PrimaryUpdate,26,2,0,0,2,132,2,0,0,0,27,1,FreeRDP.rdpContext' FreeRDP.freerdp' FreeRDP.DstBltOrder' FreeRDP.PatBltOrder' FreeRDP.ScrBltOrder' FreeRDP.OpaqueRectOrder' FreeRDP.DrawNineGridOrder' FreeRDP.MultiDstBltOrder' FreeRDP.MultiPatBltOrder' FreeRDP.MultiScrBltOrder' FreeRDP.MultiOpaqueRectOrder' FreeRDP.MultiDrawNineGridOrder' FreeRDP.LineToOrder' FreeRDP.PolylineOrder' FreeRDP.MemBltOrder' FreeRDP.Mem3BltOrder' FreeRDP.SaveBitmapOrder' FreeRDP.GlyphIndexOrder' FreeRDP.FastIndexOrder' FreeRDP.FastGlyphOrder' FreeRDP.PolygonSCOrder' FreeRDP.PolygonCBOrder' FreeRDP.EllipseSCOrder' FreeRDP.EllipseCBOrder' FreeRDP.rdpPrimaryUpdate' FreeRDP.IPrimaryUpdate' FreeRDP.rdpUpdate,FreeRDP.RDP
 FreeRDP,PointerPositionUpdate,2,0,0,2,0,6,0,0,0,-1,0,0,,
 FreeRDP,PointerSystemUpdate,1,0,0,1,0,5,0,0,0,-1,0,0,,
 FreeRDP,PointerColorUpdate,9,0,0,9,0,13,0,0,0,-1,0,1,,FreeRDP.PointerNewUpdate
@@ -73,39 +73,39 @@ FreeRDP,PointerNewUpdate,2,0,0,2,0,6,0,0,0,-1,1,0,FreeRDP.PointerColorUpdate,
 FreeRDP,PointerCachedUpdate,1,0,0,1,0,5,0,0,0,-1,0,0,,
 FreeRDP,rdpPointerUpdate,8,0,0,8,0,13,0,0,0,-1,1,1,FreeRDP.rdpContext,FreeRDP.rdpUpdate
 FreeRDP,OffscreenDeleteList,2,0,0,2,0,6,0,0,0,-1,0,1,,FreeRDP.CreateOffscreenBitmapOrder
-FreeRDP,CreateOffscreenBitmapOrder,4,0,0,4,0,8,0,0,0,-1,1,1,FreeRDP.OffscreenDeleteList,FreeRDP.IAltSecUpdate
-FreeRDP,SwitchSurfaceOrder,1,0,0,1,0,5,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
+FreeRDP,CreateOffscreenBitmapOrder,4,0,0,4,0,8,0,0,0,-1,1,2,FreeRDP.OffscreenDeleteList,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,SwitchSurfaceOrder,1,0,0,1,0,5,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
 FreeRDP,NineGridBitmapInfo,6,0,0,6,0,10,0,0,0,-1,0,1,,FreeRDP.CreateNineGridBitmapOrder
-FreeRDP,CreateNineGridBitmapOrder,5,0,0,5,0,9,0,0,0,-1,1,1,FreeRDP.NineGridBitmapInfo,FreeRDP.IAltSecUpdate
-FreeRDP,FrameMarkerOrder,1,0,0,1,0,5,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,StreamBitmapFirstOrder,8,0,0,8,0,12,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,StreamBitmapNextOrder,4,0,0,4,0,8,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,DrawGdiPlusFirstOrder,4,0,0,4,0,8,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,DrawGdiPlusNextOrder,2,0,0,2,0,6,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,DrawGdiPlusEndOrder,4,0,0,4,0,8,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,DrawGdiPlusCacheFirstOrder,6,0,0,6,0,10,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,DrawGdiPlusCacheNextOrder,5,0,0,5,0,9,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
-FreeRDP,DrawGdiPlusCacheEndOrder,6,0,0,6,0,10,0,0,0,-1,0,1,,FreeRDP.IAltSecUpdate
+FreeRDP,CreateNineGridBitmapOrder,5,0,0,5,0,9,0,0,0,-1,1,2,FreeRDP.NineGridBitmapInfo,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,FrameMarkerOrder,1,0,0,1,0,5,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,StreamBitmapFirstOrder,8,0,0,8,0,12,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,StreamBitmapNextOrder,4,0,0,4,0,8,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,DrawGdiPlusFirstOrder,4,0,0,4,0,8,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,DrawGdiPlusNextOrder,2,0,0,2,0,6,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,DrawGdiPlusEndOrder,4,0,0,4,0,8,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,DrawGdiPlusCacheFirstOrder,6,0,0,6,0,10,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,DrawGdiPlusCacheNextOrder,5,0,0,5,0,9,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
+FreeRDP,DrawGdiPlusCacheEndOrder,6,0,0,6,0,10,0,0,0,-1,0,2,,FreeRDP.IAltSecUpdate' FreeRDP.AltSecUpdate
 FreeRDP,rdpAltSecUpdate,15,0,0,15,0,20,0,0,0,-1,1,2,FreeRDP.rdpContext,FreeRDP.AltSecUpdate' FreeRDP.rdpUpdate
-FreeRDP,IAltSecUpdate,0,12,0,0,0,15,12,0,0,-1,13,2,FreeRDP.rdpContext' FreeRDP.CreateOffscreenBitmapOrder' FreeRDP.SwitchSurfaceOrder' FreeRDP.CreateNineGridBitmapOrder' FreeRDP.FrameMarkerOrder' FreeRDP.StreamBitmapFirstOrder' FreeRDP.StreamBitmapNextOrder' FreeRDP.DrawGdiPlusFirstOrder' FreeRDP.DrawGdiPlusNextOrder' FreeRDP.DrawGdiPlusEndOrder' FreeRDP.DrawGdiPlusCacheFirstOrder' FreeRDP.DrawGdiPlusCacheNextOrder' FreeRDP.DrawGdiPlusCacheEndOrder,FreeRDP.RDP' FreeRDP.AltSecUpdate
-FreeRDP,AltSecUpdate,16,2,0,0,2,70,2,0,0,0,5,0,FreeRDP.freerdp' FreeRDP.rdpContext' FreeRDP.rdpUpdate' FreeRDP.rdpAltSecUpdate' FreeRDP.IAltSecUpdate,
+FreeRDP,IAltSecUpdate,0,12,0,0,0,15,12,0,0,-1,13,2,FreeRDP.rdpContext' FreeRDP.CreateOffscreenBitmapOrder' FreeRDP.SwitchSurfaceOrder' FreeRDP.CreateNineGridBitmapOrder' FreeRDP.FrameMarkerOrder' FreeRDP.StreamBitmapFirstOrder' FreeRDP.StreamBitmapNextOrder' FreeRDP.DrawGdiPlusFirstOrder' FreeRDP.DrawGdiPlusNextOrder' FreeRDP.DrawGdiPlusEndOrder' FreeRDP.DrawGdiPlusCacheFirstOrder' FreeRDP.DrawGdiPlusCacheNextOrder' FreeRDP.DrawGdiPlusCacheEndOrder,FreeRDP.AltSecUpdate' FreeRDP.RDP
+FreeRDP,AltSecUpdate,16,2,0,0,2,70,2,0,0,0,17,0,FreeRDP.rdpContext' FreeRDP.freerdp' FreeRDP.CreateOffscreenBitmapOrder' FreeRDP.SwitchSurfaceOrder' FreeRDP.CreateNineGridBitmapOrder' FreeRDP.FrameMarkerOrder' FreeRDP.StreamBitmapFirstOrder' FreeRDP.StreamBitmapNextOrder' FreeRDP.DrawGdiPlusFirstOrder' FreeRDP.DrawGdiPlusNextOrder' FreeRDP.DrawGdiPlusEndOrder' FreeRDP.DrawGdiPlusCacheFirstOrder' FreeRDP.DrawGdiPlusCacheNextOrder' FreeRDP.DrawGdiPlusCacheEndOrder' FreeRDP.rdpAltSecUpdate' FreeRDP.IAltSecUpdate' FreeRDP.rdpUpdate,
 FreeRDP,rdpWindowUpdate,13,0,0,13,0,18,0,0,0,-1,1,1,FreeRDP.rdpContext,FreeRDP.rdpUpdate
-FreeRDP,rdpBounds,4,0,0,4,0,8,0,0,0,-1,0,3,,FreeRDP.OrderInfo' FreeRDP.IUpdate' NFreeRDP.RdpClient
+FreeRDP,rdpBounds,4,0,0,4,0,8,0,0,0,-1,0,3,,FreeRDP.OrderInfo' FreeRDP.IUpdate' FreeRDP.Update
 FreeRDP,BitmapData,12,0,0,12,0,16,0,0,0,-1,0,1,,FreeRDP.BitmapUpdate
-FreeRDP,BitmapUpdate,3,0,0,3,0,7,0,0,0,-1,1,2,FreeRDP.BitmapData,FreeRDP.IUpdate' NFreeRDP.RdpClient
+FreeRDP,BitmapUpdate,3,0,0,3,0,7,0,0,0,-1,1,2,FreeRDP.BitmapData,FreeRDP.IUpdate' FreeRDP.Update
 FreeRDP,PaletteEntry,3,0,0,3,0,7,0,0,0,-1,0,2,,FreeRDP.PaletteUpdate' FreeRDP.rdpPalette
-FreeRDP,PaletteUpdate,2,0,0,2,0,6,0,0,0,-1,1,2,FreeRDP.PaletteEntry,FreeRDP.IUpdate' NFreeRDP.RdpClient
+FreeRDP,PaletteUpdate,2,0,0,2,0,6,0,0,0,-1,1,2,FreeRDP.PaletteEntry,FreeRDP.IUpdate' FreeRDP.Update
 FreeRDP,rdpPalette,2,0,0,2,0,6,0,0,0,-1,1,0,FreeRDP.PaletteEntry,
-FreeRDP,PlaySoundUpdate,2,0,0,2,0,6,0,0,0,-1,0,2,,FreeRDP.IUpdate' NFreeRDP.RdpClient
-FreeRDP,SurfaceBits,11,0,0,11,0,15,0,0,0,-1,0,3,,FreeRDP.SurfaceBitsCommand' FreeRDP.IUpdate' NFreeRDP.RdpClient
+FreeRDP,PlaySoundUpdate,2,0,0,2,0,6,0,0,0,-1,0,2,,FreeRDP.IUpdate' FreeRDP.Update
+FreeRDP,SurfaceBits,11,0,0,11,0,15,0,0,0,-1,0,3,,FreeRDP.SurfaceBitsCommand' FreeRDP.IUpdate' FreeRDP.Update
 FreeRDP,SurfaceFrameMarker,2,0,0,2,0,6,0,0,0,-1,0,0,,
-FreeRDP,rdpUpdate,23,0,0,23,0,31,0,0,0,-1,5,5,FreeRDP.rdpPointerUpdate' FreeRDP.rdpPrimaryUpdate' FreeRDP.rdpSecondaryUpdate' FreeRDP.rdpAltSecUpdate' FreeRDP.rdpWindowUpdate,FreeRDP.freerdp' FreeRDP.SecondaryUpdate' FreeRDP.PrimaryUpdate' FreeRDP.AltSecUpdate' FreeRDP.Update
-FreeRDP,IUpdate,0,9,0,0,0,12,9,1,0,-1,6,2,FreeRDP.rdpContext' FreeRDP.rdpBounds' FreeRDP.BitmapUpdate' FreeRDP.PaletteUpdate' FreeRDP.PlaySoundUpdate' FreeRDP.SurfaceBits,FreeRDP.RDP' FreeRDP.Update
-FreeRDP,Update,12,2,0,0,2,70,2,0,0,0,4,1,FreeRDP.freerdp' FreeRDP.rdpContext' FreeRDP.rdpUpdate' FreeRDP.IUpdate,FreeRDP.RDP
+FreeRDP,rdpUpdate,23,0,0,23,0,31,0,0,0,-1,5,5,FreeRDP.rdpSecondaryUpdate' FreeRDP.rdpPrimaryUpdate' FreeRDP.rdpPointerUpdate' FreeRDP.rdpAltSecUpdate' FreeRDP.rdpWindowUpdate,FreeRDP.freerdp' FreeRDP.SecondaryUpdate' FreeRDP.Update' FreeRDP.AltSecUpdate' FreeRDP.PrimaryUpdate
+FreeRDP,IUpdate,0,9,0,0,0,12,9,1,0,-1,6,2,FreeRDP.rdpContext' FreeRDP.rdpBounds' FreeRDP.BitmapUpdate' FreeRDP.PaletteUpdate' FreeRDP.PlaySoundUpdate' FreeRDP.SurfaceBits,FreeRDP.Update' FreeRDP.RDP
+FreeRDP,Update,12,2,0,0,2,70,2,0,0,0,9,1,FreeRDP.rdpContext' FreeRDP.freerdp' FreeRDP.rdpBounds' FreeRDP.BitmapUpdate' FreeRDP.PaletteUpdate' FreeRDP.PlaySoundUpdate' FreeRDP.SurfaceBits' FreeRDP.rdpUpdate' FreeRDP.IUpdate,FreeRDP.RDP
 FreeRDP,rdpBitmap,21,0,0,21,0,27,0,0,0,-1,0,2,,FreeRDP.MemBltOrder' FreeRDP.Mem3BltOrder
 FreeRDP,rdpPointer,15,0,0,15,0,20,0,0,0,-1,0,0,,
 FreeRDP,rdpGlyph,14,0,0,14,0,19,0,0,0,-1,0,0,,
 FreeRDP,rdpGraphics,5,0,0,5,0,9,0,0,0,-1,1,0,FreeRDP.rdpContext,
 FreeRDP,rdpInput,9,0,0,9,0,14,0,0,0,-1,1,0,FreeRDP.rdpContext,
-FreeRDP,Keyboard,1,12,0,0,12,68,12,0,0,0.42,0,0,,
+FreeRDP,Keyboard,1,12,0,0,12,68,12,0,0,0.5,0,0,,
 FreeRDP,Tcp,0,4,0,0,4,15,4,0,0,-1,0,1,,FreeRDP.RDP

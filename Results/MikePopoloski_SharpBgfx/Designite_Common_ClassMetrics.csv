@@ -1,36 +1,36 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 Common,Clock,3,4,0,0,4,21,4,0,0,0,0,0,,
 Common,Color4,4,25,0,4,25,387,27,0,0,0.2,1,1,Common.MathHelpers,Common.KnownColors
-Common,Cube,2,2,0,0,2,32,2,0,0,1,4,0,Common.PosColorVertex' SharpBgfx.MemoryBlock' SharpBgfx.VertexBuffer' SharpBgfx.IndexBuffer,
+Common,Cube,2,2,0,0,2,32,2,0,0,1,1,0,Common.PosColorVertex,
 Common,KnownColors,9,0,0,9,0,38,0,0,0,-1,1,0,Common.Color4,
 Common,MathHelpers,0,2,0,0,2,12,4,0,0,-1,0,1,,Common.Color4
-Common,Matrix4x4,17,10,0,17,10,213,11,0,0,0,1,2,Common.Vector3,Common.Mesh' Common.Vector3
+Common,Matrix4x4,17,10,0,17,10,213,11,0,0,0,1,2,Common.Vector3,Common.Vector3' Common.Mesh
 Common,IUniformGroup,0,1,0,0,0,3,1,0,0,-1,0,1,,Common.Mesh
-Common,RenderStateGroup,4,1,0,4,1,12,1,0,0,0,2,1,SharpBgfx.RenderState' SharpBgfx.StencilFlags,Common.Mesh
-Common,Mesh,2,5,0,0,4,39,9,0,0,0,10,1,SharpBgfx.VertexLayout' Common.MeshGroup' SharpBgfx.MemoryBlock' SharpBgfx.Program' Common.Matrix4x4' Common.RenderStateGroup' Common.IUniformGroup' SharpBgfx.Bgfx' SharpBgfx.Texture' SharpBgfx.Uniform,Common.ResourceLoader
-Common,MeshGroup,0,1,3,0,1,17,1,0,0,-1,0,2,,Common.Mesh' Common.ResourceLoader
-Common,Primitive,4,0,0,4,0,7,0,0,0,-1,0,1,,Common.ResourceLoader
+Common,RenderStateGroup,4,1,0,4,1,12,1,0,0,0,0,1,,Common.Mesh
+Common,Mesh,2,5,0,0,4,39,9,0,0,0,4,1,Common.Matrix4x4' Common.IUniformGroup' Common.RenderStateGroup' Common.MeshGroup,Common.ResourceLoader
+Common,MeshGroup,0,1,3,0,1,17,1,0,0,-1,1,2,Common.Primitive,Common.Mesh' Common.ResourceLoader
+Common,Primitive,4,0,0,4,0,7,0,0,0,-1,0,2,,Common.MeshGroup' Common.ResourceLoader
 Common,Kernel32,0,1,0,0,1,4,1,0,0,-1,0,1,,Common.Window
-Common,User32,0,15,0,0,15,57,15,0,0,-1,6,1,Common.WNDCLASSEXW' Common.WS' Common.WM' Common.MSG' Common.RECT' Common.SW,Common.Window
-Common,WNDCLASSEXW,12,0,0,12,0,16,0,0,0,-1,1,1,Common.CS,Common.User32
-Common,MSG,6,0,0,6,0,8,0,0,0,-1,2,2,Common.WM' Common.POINT,Common.User32' Common.Window
+Common,User32,0,15,0,0,15,57,15,0,0,-1,6,1,Common.WNDCLASSEXW' Common.MSG' Common.RECT' Common.WS' Common.WM' Common.SW,Common.Window
+Common,WNDCLASSEXW,12,0,0,12,0,16,0,0,0,-1,1,2,Common.CS,Common.User32' Common.Window
+Common,MSG,6,0,0,6,0,8,0,0,0,-1,2,2,Common.POINT' Common.WM,Common.Window' Common.User32
 Common,POINT,2,0,0,2,0,4,0,0,0,-1,0,1,,Common.MSG
 Common,RECT,4,0,0,4,0,6,0,0,0,-1,0,2,,Common.User32' Common.Window
 Common,CS,0,0,0,0,0,5,0,0,0,-1,0,2,,Common.WNDCLASSEXW' Common.Window
-Common,WS,0,0,0,0,0,9,0,0,0,-1,0,2,,Common.User32' Common.Window
+Common,WS,0,0,0,0,0,9,0,0,0,-1,0,2,,Common.Window' Common.User32
 Common,WM,0,0,0,0,0,10,0,0,0,-1,0,3,,Common.User32' Common.MSG' Common.Window
-Common,SW,0,0,0,0,0,3,0,0,0,-1,0,2,,Common.User32' Common.Window
+Common,SW,0,0,0,0,0,3,0,0,0,-1,0,2,,Common.Window' Common.User32
 Common,CW,1,0,0,1,0,3,0,0,0,-1,0,1,,Common.Window
 Common,IDI,1,0,0,1,0,3,0,0,0,-1,0,1,,Common.Window
 Common,IDC,1,0,0,1,0,3,0,0,0,-1,0,1,,Common.Window
-Common,ResourceLoader,7,8,0,0,5,140,12,0,0,0.25,13,0,SharpBgfx.Bgfx' SharpBgfx.RendererBackend' SharpBgfx.MemoryBlock' SharpBgfx.Shader' SharpBgfx.Program' SharpBgfx.Texture' SharpBgfx.TextureFlags' Common.MeshGroup' SharpBgfx.VertexLayout' Common.MemoryReader' Common.Primitive' Common.Mesh' Common.VertexElement,
+Common,ResourceLoader,8,8,0,0,5,136,18,0,0,0.38,5,0,Common.Mesh' Common.MeshGroup' Common.Primitive' Common.VertexElement' Common.MemoryReader,
 Common,VertexElement,6,0,0,6,0,9,0,0,0,-1,0,1,,Common.ResourceLoader
 Common,MemoryReader,3,5,1,0,5,33,5,0,0,0,0,1,,Common.ResourceLoader
-Common,Sample,2,3,2,0,3,51,6,0,0,0,4,0,Common.Window' SharpBgfx.Bgfx' Common.WindowEventType' SharpBgfx.ResetFlags,
-Common,Vector3,7,6,0,7,6,48,6,0,0,0,1,2,Common.Matrix4x4,Common.Matrix4x4' Common.Vector4
+Common,Sample,2,3,2,0,3,51,6,0,0,0,3,0,Common.Window' Common.WindowEvent' Common.WindowEventType,
+Common,Vector3,7,6,0,7,6,48,6,0,0,0,1,2,Common.Matrix4x4,Common.Vector4' Common.Matrix4x4
 Common,Vector4,8,3,0,8,3,25,3,0,0,0,1,0,Common.Vector3,
-Common,PosColorVertex,5,1,0,1,1,16,1,0,0,0,1,1,SharpBgfx.VertexLayout,Common.Cube
-Common,PosNormalTexcoordVertex,7,1,0,1,1,21,1,0,0,0,1,0,SharpBgfx.VertexLayout,
-Common,Window,5,9,1,0,5,103,15,0,0,0.44,13,2,Common.Kernel32' Common.User32' Common.IDI' Common.CS' Common.IDC' Common.WS' Common.RECT' Common.CW' Common.SW' Common.WindowEvent' Common.MSG' Common.WM' Common.WindowEventType,Common.Sample' Common.WindowEvent
-Common,WindowEvent,3,2,0,3,2,12,2,0,0,1,2,1,Common.WindowEventType' Common.Window,Common.Window
-Common,WindowEventType,0,0,0,0,0,4,0,0,0,-1,0,3,,Common.Sample' Common.Window' Common.WindowEvent
+Common,PosColorVertex,5,1,0,1,1,16,1,0,0,0,0,1,,Common.Cube
+Common,PosNormalTexcoordVertex,7,1,0,1,1,21,1,0,0,0,0,0,,
+Common,Window,5,9,1,0,5,103,19,0,0,0.56,14,2,Common.Kernel32' Common.User32' Common.WNDCLASSEXW' Common.MSG' Common.RECT' Common.CS' Common.WS' Common.WM' Common.SW' Common.CW' Common.IDI' Common.IDC' Common.WindowEvent' Common.WindowEventType,Common.Sample' Common.WindowEvent
+Common,WindowEvent,3,2,0,3,2,12,2,0,0,1,2,2,Common.Window' Common.WindowEventType,Common.Sample' Common.Window
+Common,WindowEventType,0,0,0,0,0,4,0,0,0,-1,0,3,,Common.Window' Common.WindowEvent' Common.Sample

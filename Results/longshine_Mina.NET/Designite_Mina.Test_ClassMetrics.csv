@@ -1,0 +1,58 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mina.Core.Buffer,ByteBufferTest,0,28,0,0,28,899,42,0,0,-1,0,0,,
+Mina.Core.Buffer,SocketAsyncEventArgsBufferTest,1,12,0,0,12,372,18,0,0,0,0,0,,
+Mina.Core,DefaultIoFilterChainBuilderTest,0,4,0,0,4,68,5,0,0,-1,0,0,,
+Mina.Core,FutureTest,0,7,0,0,7,183,7,0,0,-1,2,0,Mina.Core.TestThread' Mina.Core.TestThread,
+Mina.Core,TestThread,3,4,0,1,4,23,4,0,0,0.5,0,1,,Mina.Core.FutureTest
+Mina.Core,IoFilterChainTest,4,10,0,0,8,232,13,0,0,0,7,0,Mina.Core.DummyHandler' Mina.Core.EventOrderTestFilter' Mina.Core.AddRemoveTestFilter' Mina.Core.IoFilterChainTest' Mina.Core.DummyHandler' Mina.Core.EventOrderTestFilter' Mina.Core.AddRemoveTestFilter,
+Mina.Core,DummyHandler,1,8,0,0,8,36,8,0,2,0.25,0,1,,Mina.Core.IoFilterChainTest
+Mina.Core,EventOrderTestFilter,2,10,0,0,10,54,10,0,2,0.3,0,1,,Mina.Core.IoFilterChainTest
+Mina.Core,AddRemoveTestFilter,1,3,0,0,3,16,3,0,2,0.67,0,1,,Mina.Core.IoFilterChainTest
+Mina.Filter.Buffer,BufferedWriteFilterTest,0,2,0,0,2,58,3,0,0,-1,2,0,Mina.Filter.Buffer.DummyFilter' Mina.Filter.Buffer.DummyFilter,
+Mina.Filter.Buffer,DummyFilter,1,2,0,0,2,24,4,0,2,0,0,1,,Mina.Filter.Buffer.BufferedWriteFilterTest
+Mina.Filter.Codec,CumulativeProtocolDecoderTest,3,5,0,0,5,122,8,0,0,0,6,0,Mina.Filter.Codec.IntegerDecoder' Mina.Filter.Codec.WrongDecoder' Mina.Filter.Codec.DuplicatingIntegerDecoder' Mina.Filter.Codec.IntegerDecoder' Mina.Filter.Codec.WrongDecoder' Mina.Filter.Codec.DuplicatingIntegerDecoder,
+Mina.Filter.Codec,IntegerDecoder,0,1,0,0,0,11,2,1,2,-1,0,1,,Mina.Filter.Codec.CumulativeProtocolDecoderTest
+Mina.Filter.Codec,WrongDecoder,0,1,0,0,0,7,1,0,2,-1,0,1,,Mina.Filter.Codec.CumulativeProtocolDecoderTest
+Mina.Filter.Codec,DuplicatingIntegerDecoder,0,1,0,0,0,9,1,0,3,-1,0,1,,Mina.Filter.Codec.CumulativeProtocolDecoderTest
+Mina.Filter.Codec.Serialization,ObjectSerializationTest,0,2,0,0,1,26,2,0,0,-1,0,0,,
+Mina.Filter.Codec.TextLine,TextLineDecoderTest,0,4,0,0,4,287,5,0,0,-1,0,0,,
+Mina.Filter.Codec.TextLine,TextLineEncoderTest,0,1,0,0,1,20,1,0,0,-1,0,0,,
+Mina.Filter.Executor,ExecutorFilterRegressionTest,1,1,0,0,1,97,5,0,0,0,4,0,Mina.Filter.Executor.EventOrderCounter' Mina.Filter.Executor.EventOrderChecker' Mina.Filter.Executor.EventOrderCounter' Mina.Filter.Executor.EventOrderChecker,
+Mina.Filter.Executor,EventOrderCounter,1,0,1,0,0,14,0,0,3,-1,0,1,,Mina.Filter.Executor.ExecutorFilterRegressionTest
+Mina.Filter.Executor,EventOrderChecker,1,10,0,1,10,52,10,0,1,1,0,1,,Mina.Filter.Executor.ExecutorFilterRegressionTest
+Mina.Filter.Firewall,ConnectionThrottleFilterTest,3,3,0,0,3,27,3,0,0,0,0,0,,
+Mina.Filter.Firewall,SubnetTest,0,7,0,0,7,76,7,0,0,-1,0,0,,
+Mina.Filter.KeepAlive,KeepAliveFilterTest,6,8,0,0,5,132,8,0,0,0.38,4,0,Mina.Filter.KeepAlive.ServerFactory' Mina.Filter.KeepAlive.ClientFactory' Mina.Filter.KeepAlive.ServerFactory' Mina.Filter.KeepAlive.ClientFactory,
+Mina.Filter.KeepAlive,ServerFactory,0,4,0,0,4,27,6,0,1,-1,0,1,,Mina.Filter.KeepAlive.KeepAliveFilterTest
+Mina.Filter.KeepAlive,ClientFactory,0,4,0,0,4,27,6,0,1,-1,0,1,,Mina.Filter.KeepAlive.KeepAliveFilterTest
+Mina.Filter.Ssl,SslTest,1,7,0,0,2,150,9,0,0,0.29,0,0,,
+Mina.Filter.Stream,AbstractStreamWriteFilterTest<M;U>,0,4,0,0,2,149,5,0,0,-1,4,2,Mina.Filter.Stream.SenderHandler' Mina.Filter.Stream.ReceiverHandler' Mina.Filter.Stream.SenderHandler' Mina.Filter.Stream.ReceiverHandler,Mina.Filter.Stream.StreamWriteFilterTest' Mina.Filter.Stream.FileRegionWriteFilterTest
+Mina.Filter.Stream,SenderHandler,3,7,0,1,7,37,8,0,2,0.43,0,1,,Mina.Filter.Stream.AbstractStreamWriteFilterTest<M;U>
+Mina.Filter.Stream,ReceiverHandler,3,6,0,2,6,35,7,0,2,0.83,0,1,,Mina.Filter.Stream.AbstractStreamWriteFilterTest<M;U>
+Mina.Filter.Stream,FileRegionWriteFilterTest,1,4,0,0,2,24,4,0,0,0.5,2,0,Mina.Filter.Stream.AbstractStreamWriteFilterTest<M;U>' Mina.Filter.Stream.AbstractStreamWriteFilterTest<M;U>,
+Mina.Filter.Stream,StreamWriteFilterTest,0,2,0,0,0,12,2,0,0,-1,2,0,Mina.Filter.Stream.AbstractStreamWriteFilterTest<M;U>' Mina.Filter.Stream.AbstractStreamWriteFilterTest<M;U>,
+Mina.Handler.Chain,ChainedIoHandlerTest,0,1,0,0,1,30,1,0,0,-1,2,0,Mina.Handler.Chain.TestCommand' Mina.Handler.Chain.TestCommand,
+Mina.Handler.Chain,TestCommand,2,2,0,0,2,15,2,0,1,0,0,1,,Mina.Handler.Chain.ChainedIoHandlerTest
+Mina.Handler.Demux,DemuxingIoHandlerTest,0,1,0,0,1,8,1,0,0,-1,0,0,,
+Mina.Transport,AbstractBindTest,2,13,0,0,8,185,20,3,0,0.15,2,3,Mina.Transport.EchoProtocolHandler' Mina.Transport.EchoProtocolHandler,Mina.Transport.Loopback.LoopbackBindTest' Mina.Transport.Socket.DatagramBindTest' Mina.Transport.Socket.SocketBindTest
+Mina.Transport,EchoProtocolHandler,0,4,0,0,4,26,5,0,2,-1,0,1,,Mina.Transport.AbstractBindTest
+Mina.Transport,AbstractConnectorTest,0,6,0,0,3,110,6,3,0,-1,0,3,,Mina.Transport.Socket.DatagramConnectorTest' Mina.Transport.Loopback.LoopbackConnectorTest' Mina.Transport.Socket.SocketConnectorTest
+Mina.Transport,AbstractFileTest,2,7,0,0,3,103,9,1,0,0,0,1,,Mina.Transport.Socket.SocketFileTest
+Mina.Transport,AbstractTrafficControlTest,2,12,0,0,4,172,14,3,0,0.17,2,3,Mina.Transport.ClientIoHandler' Mina.Transport.ClientIoHandler,Mina.Transport.Loopback.LoopbackTrafficControlTest' Mina.Transport.Socket.SocketTrafficControlTest' Mina.Transport.Socket.DatagramTrafficControlTest
+Mina.Transport,ClientIoHandler,0,3,0,0,3,32,3,0,2,-1,0,1,,Mina.Transport.AbstractTrafficControlTest
+Mina.Transport.Loopback,LoopbackTrafficControlTest,0,4,0,0,1,21,4,0,1,-1,2,0,Mina.Transport.AbstractTrafficControlTest' Mina.Transport.AbstractTrafficControlTest,
+Mina.Transport.Loopback,LoopbackEventOrderTest,0,3,0,0,3,91,5,0,0,-1,0,0,,
+Mina.Transport.Loopback,LoopbackBindTest,0,4,0,0,1,19,4,0,1,-1,2,0,Mina.Transport.AbstractBindTest' Mina.Transport.AbstractBindTest,
+Mina.Transport.Loopback,LoopbackConnectorTest,0,3,0,0,0,16,3,0,1,-1,2,0,Mina.Transport.AbstractConnectorTest' Mina.Transport.AbstractConnectorTest,
+Mina.Transport.Socket,DatagramBindTest,0,4,0,0,1,19,4,0,1,-1,2,0,Mina.Transport.AbstractBindTest' Mina.Transport.AbstractBindTest,
+Mina.Transport.Socket,DatagramConfigTest,3,3,0,0,3,67,5,0,0,0,4,0,Mina.Transport.Socket.MockFilter' Mina.Transport.Socket.MockHandler' Mina.Transport.Socket.MockFilter' Mina.Transport.Socket.MockHandler,
+Mina.Transport.Socket,MockFilter,0,1,0,0,1,8,1,0,2,-1,0,1,,Mina.Transport.Socket.DatagramConfigTest
+Mina.Transport.Socket,MockHandler,2,8,0,2,8,46,8,0,2,0,0,2,,Mina.Transport.Socket.DatagramConfigTest' Mina.Transport.Socket.DatagramRecyclerTest
+Mina.Transport.Socket,DatagramConnectorTest,0,4,0,0,1,21,4,0,1,-1,2,0,Mina.Transport.AbstractConnectorTest' Mina.Transport.AbstractConnectorTest,
+Mina.Transport.Socket,DatagramRecyclerTest,2,4,0,0,4,154,9,0,0,0,2,0,Mina.Transport.Socket.MockHandler' Mina.Transport.Socket.MockHandler,
+Mina.Transport.Socket,DatagramSessionIdleTest,4,1,0,0,1,85,4,0,0,0,0,0,,
+Mina.Transport.Socket,DatagramTrafficControlTest,0,4,0,0,1,21,4,0,1,-1,2,0,Mina.Transport.AbstractTrafficControlTest' Mina.Transport.AbstractTrafficControlTest,
+Mina.Transport.Socket,SocketBindTest,0,4,0,0,1,19,4,0,1,-1,2,0,Mina.Transport.AbstractBindTest' Mina.Transport.AbstractBindTest,
+Mina.Transport.Socket,SocketConnectorTest,0,3,0,0,0,16,3,0,1,-1,2,0,Mina.Transport.AbstractConnectorTest' Mina.Transport.AbstractConnectorTest,
+Mina.Transport.Socket,SocketFileTest,0,3,0,0,0,16,3,0,1,-1,2,0,Mina.Transport.AbstractFileTest' Mina.Transport.AbstractFileTest,
+Mina.Transport.Socket,SocketTrafficControlTest,0,4,0,0,1,21,4,0,1,-1,2,0,Mina.Transport.AbstractTrafficControlTest' Mina.Transport.AbstractTrafficControlTest,

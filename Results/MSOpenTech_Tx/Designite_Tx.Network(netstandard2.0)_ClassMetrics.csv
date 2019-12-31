@@ -1,0 +1,66 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Tx.Network,ByteArrayExtentions,0,7,0,0,7,60,13,0,0,-1,0,0,,
+Tx.Network,IIpPacket,0,0,4,0,0,34,0,1,0,-1,1,3,Tx.Network.IpPacketHeader,Tx.Network.Extensions' Tx.Network.Snmp.SnmpCapture' Tx.Network.IpPacket
+Tx.Network,IpPacket,0,0,6,0,0,56,0,0,1,-1,2,8,Tx.Network.IIpPacket' Tx.Network.IpPacketHeader,Tx.Network.Syslogs.SyslogListener' Tx.Network.Snmp.SnmpTrapListener' Tx.Network.BaseUdpReceiver<T>' Tx.Network.UdpEnvelopeReceiver' Tx.Network.Snmp.Dynamic.TrapTypeMap' Tx.Network.Snmp.SnmpCapture' Tx.Network.UdpReceiver' Tx.Network.PacketParser
+Tx.Network,IpPacketHeader,12,1,0,12,1,105,1,0,0,0,0,5,,Tx.Network.IpPacket' Tx.Network.IIpPacket' Tx.Network.UdpDatagram' Tx.Network.PacketParser' Tx.Network.IUdpDatagram
+Tx.Network,PacketParser,0,2,0,0,2,124,9,0,0,-1,2,2,Tx.Network.IpPacket' Tx.Network.IpPacketHeader,Tx.Network.BaseUdpReceiver<T>' Tx.Network.Snmp.SnmpCapture
+Tx.Network,Pcap,0,1,0,0,1,55,4,0,0,-1,1,0,Tx.Network.PcapRecord,
+Tx.Network,PcapRecord,3,0,0,3,0,6,0,0,0,-1,0,1,,Tx.Network.Pcap
+Tx.Network,PcapNg,0,2,0,0,2,56,7,0,0,-1,6,0,Tx.Network.BlockType' Tx.Network.Block' Tx.Network.GenericBlock' Tx.Network.EnhancedPacketBlock' Tx.Network.SectionHeaderBlock' Tx.Network.InterfaceDescriptionBlock,
+Tx.Network,BlockType,0,0,0,0,0,13,0,0,0,-1,0,7,,Tx.Network.Snmp.SnmpCapture' Tx.Network.PcapNg' Tx.Network.Block' Tx.Network.GenericBlock' Tx.Network.EnhancedPacketBlock' Tx.Network.SectionHeaderBlock' Tx.Network.InterfaceDescriptionBlock
+Tx.Network,Block,0,4,2,0,0,37,5,4,0,-1,1,6,Tx.Network.BlockType,Tx.Network.Snmp.SnmpCapture' Tx.Network.PcapNg' Tx.Network.GenericBlock' Tx.Network.EnhancedPacketBlock' Tx.Network.SectionHeaderBlock' Tx.Network.InterfaceDescriptionBlock
+Tx.Network,GenericBlock,1,1,0,1,0,13,1,0,1,0,2,1,Tx.Network.BlockType' Tx.Network.Block,Tx.Network.PcapNg
+Tx.Network,EnhancedPacketBlock,0,1,5,0,0,27,1,0,1,-1,3,2,Tx.Network.BlockType' Tx.Network.Block' Tx.Network.InterfaceDescriptionBlock,Tx.Network.Snmp.SnmpCapture' Tx.Network.PcapNg
+Tx.Network,SectionHeaderBlock,0,1,3,0,0,19,1,0,1,-1,2,1,Tx.Network.BlockType' Tx.Network.Block,Tx.Network.PcapNg
+Tx.Network,LinkType,0,0,0,0,0,211,0,0,0,-1,0,2,,Tx.Network.Snmp.SnmpCapture' Tx.Network.InterfaceDescriptionBlock
+Tx.Network,InterfaceDescriptionBlock,0,1,5,0,0,64,7,0,1,-1,3,2,Tx.Network.BlockType' Tx.Network.Block' Tx.Network.LinkType,Tx.Network.PcapNg' Tx.Network.EnhancedPacketBlock
+Tx.Network,PcapNgWriter,3,5,0,0,5,76,9,0,0,0,0,0,,
+Tx.Network,Protocol,3,0,0,3,0,6,0,0,0,-1,0,4,,Tx.Network.Snmp.SnmpTrapListener' Tx.Network.UdpEnvelopeReceiver' Tx.Network.Syslogs.SyslogListener' Tx.Network.Snmp.Dynamic.SnmpTrapTypeMap
+Tx.Network,Enterprises,2,2,0,0,2,59,5,0,0,1,1,0,Tx.Network.Snmp.ObjectIdentifier,
+Tx.Network,BaseUdpReceiver<T>,6,7,4,0,2,179,17,0,0,0.29,2,4,Tx.Network.IpPacket' Tx.Network.PacketParser,Tx.Network.UdpEnvelopeReceiver' Tx.Network.Snmp.SnmpTrapListener' Tx.Network.Syslogs.SyslogListener' Tx.Network.UdpReceiver
+Tx.Network,Extensions,0,1,0,0,1,66,6,0,0,-1,3,0,Tx.Network.IIpPacket' Tx.Network.UdpDatagram' Tx.Network.UdpDatagramHeader,
+Tx.Network,IUdpDatagram,0,0,4,0,0,34,0,1,0,-1,2,6,Tx.Network.IpPacketHeader' Tx.Network.UdpDatagramHeader,Tx.Network.Snmp.UdpDatagramExtensions' Tx.Network.Syslogs.SyslogParser' Tx.Network.Snmp.SnmpCapture' Tx.Network.UdpDatagram' Tx.Network.NetworkTransformExtentions' Tx.Network.UdpReceiver
+Tx.Network,NetworkTransformExtentions,0,5,0,0,1,212,9,0,0,-1,1,0,Tx.Network.IUdpDatagram,
+Tx.Network,UdpDatagram,0,0,5,0,0,49,0,0,1,-1,3,3,Tx.Network.IpPacketHeader' Tx.Network.IUdpDatagram' Tx.Network.UdpDatagramHeader,Tx.Network.Snmp.Dynamic.TrapTypeMap' Tx.Network.UdpEnvelopeReceiver' Tx.Network.Extensions
+Tx.Network,UdpDatagramHeader,4,1,0,4,1,37,1,0,0,0,0,3,,Tx.Network.UdpDatagram' Tx.Network.IUdpDatagram' Tx.Network.Extensions
+Tx.Network,UdpEnvelopeReceiver,0,2,0,0,1,71,4,0,0,-1,5,0,Tx.Network.IpPacket' Tx.Network.Protocol' Tx.Network.BaseUdpReceiver<T>' Tx.Network.UdpDatagram' Tx.Network.UdpEnvelope,
+Tx.Network,UdpEnvelope,1,0,7,0,0,36,0,0,1,-1,0,1,,Tx.Network.UdpEnvelopeReceiver
+Tx.Network,UdpReceiver,0,3,0,0,2,33,5,0,0,-1,3,0,Tx.Network.IpPacket' Tx.Network.BaseUdpReceiver<T>' Tx.Network.IUdpDatagram,
+Tx.Network.Snmp,Asn1DecoderExtensions,0,13,0,0,6,345,41,0,0,-1,6,0,Tx.Network.Snmp.Asn1TagInfo' Tx.Network.Snmp.Asn1SnmpTag' Tx.Network.Snmp.Asn1Tag' Tx.Network.Snmp.ConstructType' Tx.Network.Snmp.ObjectIdentifier' Tx.Network.Snmp.VarBind,
+Tx.Network.Snmp,Asn1EncoderExtensions,5,16,0,0,8,429,55,0,0,0.19,6,0,Tx.Network.Snmp.Asn1Class' Tx.Network.Snmp.Asn1SnmpTag' Tx.Network.Snmp.Asn1Tag' Tx.Network.Snmp.ConstructType' Tx.Network.Snmp.ObjectIdentifier' Tx.Network.Snmp.VarBind,
+Tx.Network.Snmp,Asn1TagInfo,4,6,0,4,5,87,7,0,0,0.5,4,3,Tx.Network.Snmp.Asn1Class' Tx.Network.Snmp.Asn1SnmpTag' Tx.Network.Snmp.Asn1Tag' Tx.Network.Snmp.ConstructType,Tx.Network.Snmp.VarBind' Tx.Network.Snmp.Dynamic.Asn1TypeAttribute' Tx.Network.Snmp.Asn1DecoderExtensions
+Tx.Network.Snmp,Asn1Class,0,0,0,0,0,19,0,0,0,-1,0,4,,Tx.Network.Snmp.Dynamic.Asn1TypeAttribute' Tx.Network.Snmp.Asn1TagInfo' Tx.Network.Snmp.SnmpEncodeDecoder' Tx.Network.Snmp.Asn1EncoderExtensions
+Tx.Network.Snmp,Asn1SnmpTag,0,0,0,0,0,57,0,0,0,-1,0,5,,Tx.Network.Snmp.Dynamic.Asn1TypeAttribute' Tx.Network.Snmp.Asn1TagInfo' Tx.Network.Snmp.SnmpEncodeDecoder' Tx.Network.Snmp.Asn1DecoderExtensions' Tx.Network.Snmp.Asn1EncoderExtensions
+Tx.Network.Snmp,Asn1Tag,0,0,0,0,0,96,0,0,0,-1,0,6,,Tx.Network.Snmp.VarBind' Tx.Network.Snmp.Dynamic.Asn1TypeAttribute' Tx.Network.Snmp.Asn1TagInfo' Tx.Network.Snmp.Asn1EncoderExtensions' Tx.Network.Snmp.SnmpEncodeDecoder' Tx.Network.Snmp.Asn1DecoderExtensions
+Tx.Network.Snmp,ConstructType,0,0,0,0,0,11,0,0,0,-1,0,5,,Tx.Network.Snmp.Dynamic.Asn1TypeAttribute' Tx.Network.Snmp.Asn1DecoderExtensions' Tx.Network.Snmp.Asn1TagInfo' Tx.Network.Snmp.SnmpEncodeDecoder' Tx.Network.Snmp.Asn1EncoderExtensions
+Tx.Network.Snmp,PduType,0,0,0,0,0,40,0,0,0,-1,0,3,,Tx.Network.Snmp.SnmpDatagramV1' Tx.Network.Snmp.SnmpDatagramV2C' Tx.Network.Snmp.SnmpEncodeDecoder
+Tx.Network.Snmp,SnmpErrorStatus,0,0,0,0,0,79,0,0,0,-1,0,2,,Tx.Network.Snmp.SnmpDatagramV2C' Tx.Network.Snmp.SnmpEncodeDecoder
+Tx.Network.Snmp,SnmpVersion,0,0,0,0,0,15,0,0,0,-1,0,3,,Tx.Network.Snmp.SnmpHeader' Tx.Network.Snmp.SnmpTrapListener' Tx.Network.Snmp.SnmpEncodeDecoder
+Tx.Network.Snmp,ObjectIdentifier,1,8,0,1,7,206,35,0,0,0,0,11,,Tx.Network.Snmp.SnmpDatagramV1' Tx.Network.Snmp.VarBindExtensions' Tx.Network.Snmp.Asn1EncoderExtensions' Tx.Network.Snmp.Dynamic.SnmpOidAttribute' Tx.Network.Snmp.Dynamic.SnmpTrapAttribute' Tx.Network.Snmp.Dynamic.SnmpTrapTypeMap' Tx.Network.Snmp.VarBind' Tx.Network.Snmp.SnmpEncodeDecoder' Tx.Network.Enterprises' Tx.Network.Snmp.Asn1DecoderExtensions' Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp,SnmpCapture,0,3,0,0,3,73,5,0,0,-1,9,0,Tx.Network.IIpPacket' Tx.Network.IpPacket' Tx.Network.PacketParser' Tx.Network.BlockType' Tx.Network.Block' Tx.Network.EnhancedPacketBlock' Tx.Network.LinkType' Tx.Network.IUdpDatagram' Tx.Network.Snmp.SnmpDatagram,
+Tx.Network.Snmp,SnmpDatagram,0,1,4,0,1,14,1,2,0,-1,2,8,Tx.Network.Snmp.SnmpHeader' Tx.Network.Snmp.VarBind,Tx.Network.Snmp.SnmpEncodeDecoder' Tx.Network.Snmp.SnmpDatagramV1' Tx.Network.Snmp.SnmpDatagramV2C' Tx.Network.Snmp.Dynamic.SnmpTrapTypeMap' Tx.Network.Snmp.SnmpCapture' Tx.Network.Snmp.UdpDatagramExtensions' Tx.Network.Snmp.SnmpTrapListener' Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp,SnmpDatagramV1,6,1,0,6,1,38,1,0,1,0,6,1,Tx.Network.Snmp.PduType' Tx.Network.Snmp.ObjectIdentifier' Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.SnmpHeader' Tx.Network.Snmp.VarBind' Tx.Network.Snmp.Asn1Types.GenericTrap,Tx.Network.Snmp.SnmpEncodeDecoder
+Tx.Network.Snmp,SnmpDatagramV2C,4,1,0,4,1,47,1,0,1,0,5,1,Tx.Network.Snmp.PduType' Tx.Network.Snmp.SnmpErrorStatus' Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.SnmpHeader' Tx.Network.Snmp.VarBind,Tx.Network.Snmp.SnmpEncodeDecoder
+Tx.Network.Snmp,SnmpEncodeDecoder,1,3,0,0,2,186,11,0,0,1,14,0,Tx.Network.Snmp.Asn1Class' Tx.Network.Snmp.Asn1SnmpTag' Tx.Network.Snmp.Asn1Tag' Tx.Network.Snmp.ConstructType' Tx.Network.Snmp.PduType' Tx.Network.Snmp.SnmpErrorStatus' Tx.Network.Snmp.SnmpVersion' Tx.Network.Snmp.ObjectIdentifier' Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.SnmpDatagramV1' Tx.Network.Snmp.SnmpDatagramV2C' Tx.Network.Snmp.SnmpHeader' Tx.Network.Snmp.VarBind' Tx.Network.Snmp.Asn1Types.GenericTrap,
+Tx.Network.Snmp,SnmpHeader,2,1,0,2,1,27,1,0,0,0,1,4,Tx.Network.Snmp.SnmpVersion,Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.SnmpDatagramV1' Tx.Network.Snmp.SnmpDatagramV2C' Tx.Network.Snmp.SnmpEncodeDecoder
+Tx.Network.Snmp,SnmpTrapListener,0,2,0,0,1,84,6,0,0,-1,6,0,Tx.Network.IpPacket' Tx.Network.Protocol' Tx.Network.BaseUdpReceiver<T>' Tx.Network.Snmp.SnmpVersion' Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.SnmpTrapEnvelope,
+Tx.Network.Snmp,SnmpTrapEnvelope,1,0,7,0,0,36,0,0,1,-1,0,1,,Tx.Network.Snmp.SnmpTrapListener
+Tx.Network.Snmp,UdpDatagramExtensions,0,1,0,0,1,17,1,0,0,-1,2,0,Tx.Network.IUdpDatagram' Tx.Network.Snmp.SnmpDatagram,
+Tx.Network.Snmp,VarBind,3,2,0,3,2,37,2,0,0,0,3,8,Tx.Network.Snmp.Asn1TagInfo' Tx.Network.Snmp.Asn1Tag' Tx.Network.Snmp.ObjectIdentifier,Tx.Network.Snmp.Asn1EncoderExtensions' Tx.Network.Snmp.SnmpEncodeDecoder' Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.SnmpDatagramV1' Tx.Network.Snmp.SnmpDatagramV2C' Tx.Network.Snmp.VarBindExtensions' Tx.Network.Snmp.Asn1DecoderExtensions' Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp,VarBindExtensions,0,3,0,0,3,67,9,0,0,-1,2,1,Tx.Network.Snmp.ObjectIdentifier' Tx.Network.Snmp.VarBind,Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp.Asn1Types,GenericTrap,0,0,0,0,0,31,0,0,0,-1,0,2,,Tx.Network.Snmp.SnmpDatagramV1' Tx.Network.Snmp.SnmpEncodeDecoder
+Tx.Network.Snmp.Dynamic,Asn1TypeAttribute,1,4,0,1,4,25,4,0,0,0,5,0,Tx.Network.Snmp.Asn1TagInfo' Tx.Network.Snmp.Asn1Class' Tx.Network.Snmp.Asn1SnmpTag' Tx.Network.Snmp.Asn1Tag' Tx.Network.Snmp.ConstructType,
+Tx.Network.Snmp.Dynamic,IpAddressAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp.Dynamic,NotificationObjectsAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp.Dynamic,SnmpOidAttribute,0,1,1,0,1,20,2,0,0,-1,1,1,Tx.Network.Snmp.ObjectIdentifier,Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp.Dynamic,SnmpTrapAttribute,1,1,0,1,1,15,2,0,0,0,1,1,Tx.Network.Snmp.ObjectIdentifier,Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp.Dynamic,SnmpTrapTypeMap,2,4,2,0,3,47,6,0,2,0.5,4,0,Tx.Network.Protocol' Tx.Network.Snmp.ObjectIdentifier' Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.Dynamic.TrapTypeMap,
+Tx.Network.Snmp.Dynamic,StorageIndexAttribute,1,1,0,1,1,10,1,0,0,0,0,0,,
+Tx.Network.Snmp.Dynamic,TimestampAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,Tx.Network.Snmp.Dynamic.TrapTypeMap
+Tx.Network.Snmp.Dynamic,TrapTypeMap,2,7,2,0,5,175,24,0,2,0.86,11,1,Tx.Network.IpPacket' Tx.Network.UdpDatagram' Tx.Network.Snmp.ObjectIdentifier' Tx.Network.Snmp.SnmpDatagram' Tx.Network.Snmp.VarBind' Tx.Network.Snmp.VarBindExtensions' Tx.Network.Snmp.Dynamic.IpAddressAttribute' Tx.Network.Snmp.Dynamic.NotificationObjectsAttribute' Tx.Network.Snmp.Dynamic.SnmpOidAttribute' Tx.Network.Snmp.Dynamic.SnmpTrapAttribute' Tx.Network.Snmp.Dynamic.TimestampAttribute,Tx.Network.Snmp.Dynamic.SnmpTrapTypeMap
+Tx.Network.Syslogs,Facility,0,0,0,0,0,50,0,0,0,-1,0,2,,Tx.Network.Syslogs.Syslog' Tx.Network.Syslogs.SyslogParser
+Tx.Network.Syslogs,Severity,0,0,0,0,0,11,0,0,0,-1,0,2,,Tx.Network.Syslogs.Syslog' Tx.Network.Syslogs.SyslogParser
+Tx.Network.Syslogs,Syslog,0,2,6,0,2,70,4,0,0,-1,2,2,Tx.Network.Syslogs.Facility' Tx.Network.Syslogs.Severity,Tx.Network.Syslogs.SyslogListener' Tx.Network.Syslogs.SyslogParser
+Tx.Network.Syslogs,SyslogListener,1,2,0,0,1,87,4,0,0,1,6,0,Tx.Network.IpPacket' Tx.Network.Protocol' Tx.Network.BaseUdpReceiver<T>' Tx.Network.Syslogs.Syslog' Tx.Network.Syslogs.SyslogEnvelope' Tx.Network.Syslogs.SyslogParser,
+Tx.Network.Syslogs,SyslogEnvelope,1,0,7,0,0,36,0,0,1,-1,0,1,,Tx.Network.Syslogs.SyslogListener
+Tx.Network.Syslogs,SyslogParser,4,4,0,1,4,101,13,0,0,0.5,4,1,Tx.Network.IUdpDatagram' Tx.Network.Syslogs.Facility' Tx.Network.Syslogs.Severity' Tx.Network.Syslogs.Syslog,Tx.Network.Syslogs.SyslogListener

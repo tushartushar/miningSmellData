@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Rebel.Framework.IO.Config,ProviderConfigurationSection,3,0,3,0,0,26,0,0,1,-1,0,2,,Rebel.Framework.IO.FileSystemDemandBuilder' Rebel.Framework.IO.ProviderBootstrapper
-Rebel.Framework.IO,DataContext,6,4,5,0,3,50,4,0,0,1,1,3,Rebel.Framework.Context.IFrameworkContext,Rebel.Framework.IO.DataContextFactory' Rebel.Framework.IO.ReadWriteUnitOfWork' Rebel.Framework.IO.RepositoryReadWriter
-Rebel.Framework.IO,DataContextFactory,4,3,0,0,1,26,3,0,0,0.67,1,0,Rebel.Framework.IO.DataContext,
-Rebel.Framework.IO,EntityRelationCollectionExtensions,0,5,0,0,5,53,5,0,0,-1,2,0,Rebel.Framework.Mandate' Rebel.Framework.Persistence.Model.Constants.FixedRelationTypes,
-Rebel.Framework.IO,FileSystemDemandBuilder,0,1,0,0,1,58,5,0,0,-1,9,0,Rebel.Framework.Configuration.DeepConfigManager' Rebel.Framework.IO.Config.ProviderConfigurationSection' Rebel.Framework.Mandate' Rebel.Framework.Configuration.IConfigurationResolver' Rebel.Framework.DependencyManagement.IBuilderContext' Rebel.Framework.DependencyManagement.IScopeManager' Rebel.Framework.DependencyManagement.IDependencyRegistrar' Rebel.Framework.DependencyManagement.IContainerBuilder' Rebel.Framework.DependencyManagement.IResolutionContext,
+Rebel.Framework.IO.Config,ProviderConfigurationSection,3,0,3,0,0,26,0,0,1,-1,0,2,,Rebel.Framework.IO.ProviderBootstrapper' Rebel.Framework.IO.FileSystemDemandBuilder
+Rebel.Framework.IO,DataContext,6,4,5,0,3,50,4,0,0,1,1,3,Rebel.Framework.IO.Transaction,Rebel.Framework.IO.DataContextFactory' Rebel.Framework.IO.RepositoryReadWriter' Rebel.Framework.IO.ReadWriteUnitOfWork
+Rebel.Framework.IO,DataContextFactory,4,3,0,0,1,26,3,0,0,0.67,1,1,Rebel.Framework.IO.DataContext,Rebel.Framework.IO.FileSystemDemandBuilder
+Rebel.Framework.IO,EntityRelationCollectionExtensions,0,5,0,0,5,53,5,0,0,-1,0,0,,
+Rebel.Framework.IO,FileSystemDemandBuilder,0,1,0,0,1,58,5,0,0,-1,4,0,Rebel.Framework.IO.Config.ProviderConfigurationSection' Rebel.Framework.IO.DataContextFactory' Rebel.Framework.IO.ProviderBootstrapper' Rebel.Framework.IO.ReadWriteUnitOfWorkFactory,
 Rebel.Framework.IO,HiveReadWriteProvider,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Rebel.Framework.IO,ProviderBootstrapper,2,5,0,0,5,39,7,0,0,0.6,4,0,Rebel.Framework.IO.Config.ProviderConfigurationSection' Rebel.Framework.ProviderSupport.InstallStatus' Rebel.Framework.Dynamics.BendyObject' Rebel.Framework.ProviderSupport.InstallStatusType,
-Rebel.Framework.IO,ReadWriteUnitOfWork,1,3,2,0,2,30,3,0,0,1,2,1,Rebel.Framework.Mandate' Rebel.Framework.IO.DataContext,Rebel.Framework.IO.ReadWriteUnitOfWorkFactory
-Rebel.Framework.IO,ReadWriteUnitOfWorkFactory,0,2,0,0,2,11,2,0,0,-1,1,0,Rebel.Framework.IO.ReadWriteUnitOfWork,
-Rebel.Framework.IO,RepositoryReadWriter,5,23,1,0,13,349,47,0,1,0.35,13,0,Rebel.Framework.IO.DataContext' Rebel.Framework.HiveId' Rebel.Framework.Persistence.Model.IO.File' Rebel.Framework.Persistence.Model.Constants.FixedRelationTypes' Rebel.Framework.Persistence.Model.Associations.AbstractRelationType' Rebel.Framework.Persistence.Model.Associations.RelationMetaDatum' Rebel.Framework.RevisionStatusType' Rebel.Framework.Mandate' Rebel.Framework.Persistence.Model.AbstractEntity' Rebel.Framework.HiveIdExtensions' Rebel.Framework.Persistence.RelationSerializer' Rebel.Framework.HiveIdValue' Rebel.Framework.Persistence.Model.Associations.IRelationById,
-Rebel.Framework.IO,Transaction,0,3,0,0,0,15,3,0,0,-1,0,0,,
-Rebel.Framework.IO.Model,FileSchema,0,1,0,0,1,35,1,0,1,-1,2,0,Rebel.Framework.Persistence.Model.Constants.FixedSchemaTypes' Rebel.Framework.Persistence.Model.Constants.FixedGroupDefinitions,
-Rebel.Framework.IO.Model,FSFileInfo,0,0,7,0,0,24,0,0,1,-1,0,1,,Rebel.Framework.IO.Model.FSFileInfoExtensions
-Rebel.Framework.IO.Model,FSFileInfoExtensions,0,3,0,0,3,44,3,0,0,-1,3,0,Rebel.Framework.IO.Model.FSFileInfo' Rebel.Framework.Mandate' Rebel.Framework.IO.Model.IFileInfo,
-Rebel.Framework.IO.Model,IFileInfo,0,0,6,0,0,27,0,1,0,-1,0,1,,Rebel.Framework.IO.Model.FSFileInfoExtensions
+Rebel.Framework.IO,ProviderBootstrapper,2,5,0,0,5,39,7,0,0,0.6,1,1,Rebel.Framework.IO.Config.ProviderConfigurationSection,Rebel.Framework.IO.FileSystemDemandBuilder
+Rebel.Framework.IO,ReadWriteUnitOfWork,1,3,2,0,2,30,3,0,0,1,2,1,Rebel.Framework.IO.DataContext' Rebel.Framework.IO.RepositoryReadWriter,Rebel.Framework.IO.ReadWriteUnitOfWorkFactory
+Rebel.Framework.IO,ReadWriteUnitOfWorkFactory,0,2,0,0,2,11,2,0,0,-1,1,1,Rebel.Framework.IO.ReadWriteUnitOfWork,Rebel.Framework.IO.FileSystemDemandBuilder
+Rebel.Framework.IO,RepositoryReadWriter,5,23,1,0,13,349,50,0,1,0.35,1,1,Rebel.Framework.IO.DataContext,Rebel.Framework.IO.ReadWriteUnitOfWork
+Rebel.Framework.IO,Transaction,0,3,0,0,0,15,3,0,0,-1,0,1,,Rebel.Framework.IO.DataContext
+Rebel.Framework.IO.Model,FileSchema,0,1,0,0,1,35,1,0,1,-1,0,0,,
+Rebel.Framework.IO.Model,FSFileInfo,0,0,7,0,0,24,0,0,1,-1,1,1,Rebel.Framework.IO.Model.IFileInfo,Rebel.Framework.IO.Model.FSFileInfoExtensions
+Rebel.Framework.IO.Model,FSFileInfoExtensions,0,3,0,0,3,44,3,0,0,-1,2,0,Rebel.Framework.IO.Model.FSFileInfo' Rebel.Framework.IO.Model.IFileInfo,
+Rebel.Framework.IO.Model,IFileInfo,0,0,6,0,0,27,0,1,0,-1,0,2,,Rebel.Framework.IO.Model.FSFileInfo' Rebel.Framework.IO.Model.FSFileInfoExtensions

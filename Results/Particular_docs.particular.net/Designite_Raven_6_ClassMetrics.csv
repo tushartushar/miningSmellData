@@ -1,0 +1,8 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Raven_6,MultiTenantSupport,0,1,0,0,0,14,1,0,0,-1,0,0,,
+Raven_6,Outbox,0,1,0,0,0,10,1,0,0,-1,0,0,,
+Raven_6.Session,HandlerThatUsesSession,0,1,0,0,1,10,1,0,0,-1,2,0,Raven_6.Session.MyDocument' Raven_6.Session.MyMessage,
+Raven_6.Session,MyDocument,0,0,0,0,0,3,0,0,0,-1,0,2,,Raven_6.Session.HandlerThatUsesSession' Raven_6.Session.SagaThatUsesSession
+Raven_6.Session,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,2,,Raven_6.Session.SagaThatUsesSession' Raven_6.Session.HandlerThatUsesSession
+Raven_6.Session,SagaThatUsesSession,0,2,0,0,1,19,2,0,0,-1,3,0,Raven_6.Session.MyDocument' Raven_6.Session.MyMessage' Raven_6.Session.SagaData,
+Raven_6.Session,SagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Raven_6.Session.SagaThatUsesSession

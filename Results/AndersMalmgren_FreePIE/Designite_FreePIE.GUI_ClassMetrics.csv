@@ -2,96 +2,96 @@ Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out 
 FreePIE.GUI.Common.AvalonDock,AutobinderTemplateSelector,0,1,1,0,1,8,1,0,0,-1,0,0,,
 FreePIE.GUI.Common.AvalonDock,AutobinderTemplate,0,0,0,0,0,4,0,0,0,-1,0,0,,
 FreePIE.GUI.Common.AvalonDock,DocumentContext,0,1,0,0,1,21,1,0,0,-1,0,1,,FreePIE.GUI.Bootstrap.Bootstrapper
-FreePIE.GUI.Common.AvalonDock,IDockingManagerSource,0,0,1,0,0,4,0,1,0,-1,0,0,,
-FreePIE.GUI.Common.AvalonEdit,BindableScriptEditor,3,8,3,3,3,77,10,0,0,0.88,2,0,FreePIE.GUI.Shells.MainShellView' FreePIE.GUI.Common.AvalonEdit.Replacer,
+FreePIE.GUI.Common.AvalonDock,IDockingManagerSource,0,0,1,0,0,4,0,1,0,-1,0,2,,FreePIE.GUI.Shells.MainShellView' FreePIE.GUI.Shells.MainShellViewModel
+FreePIE.GUI.Common.AvalonEdit,BindableScriptEditor,3,8,3,3,3,77,11,0,0,0.88,2,0,FreePIE.GUI.Common.AvalonEdit.Replacer' FreePIE.GUI.Shells.MainShellView,
 FreePIE.GUI.Common.AvalonEdit,Replacer,0,0,1,0,0,4,0,0,0,-1,0,2,,FreePIE.GUI.Common.AvalonEdit.BindableScriptEditor' FreePIE.GUI.Views.Script.ScriptEditorViewModel
 FreePIE.GUI.Common.Caliburn,ActionMessageCommand,0,4,0,0,2,19,4,0,0,-1,0,1,,FreePIE.GUI.Common.Caliburn.GestureMenuItem
-FreePIE.GUI.Common.Caliburn,GestureMenuItem,4,3,2,2,1,47,6,0,0,0,2,0,FreePIE.GUI.Common.Caliburn.InputBindingTrigger' FreePIE.GUI.Common.Caliburn.ActionMessageCommand,
-FreePIE.GUI.Common.Caliburn,InputBindingTrigger,2,5,2,2,2,52,7,0,0,0.8,0,1,,FreePIE.GUI.Common.Caliburn.GestureMenuItem
-FreePIE.GUI.Common.CodeCompletion,CompletionItem,5,2,2,0,2,28,2,0,1,0,2,0,FreePIE.Core.ScriptEngine.CodeCompletion.ExpressionInfo' FreePIE.Core.Common.Range,
+FreePIE.GUI.Common.Caliburn,GestureMenuItem,4,3,2,2,1,47,6,0,0,0,2,0,FreePIE.GUI.Common.Caliburn.ActionMessageCommand' FreePIE.GUI.Common.Caliburn.InputBindingTrigger,
+FreePIE.GUI.Common.Caliburn,InputBindingTrigger,2,5,2,2,2,52,7,0,0,1,0,1,,FreePIE.GUI.Common.Caliburn.GestureMenuItem
+FreePIE.GUI.Common.CodeCompletion,CompletionItem,5,2,2,0,2,28,2,0,1,1,0,1,,FreePIE.GUI.Views.Script.ScriptEditorViewModel
 FreePIE.GUI.Common.CommandLine.Commands,Command,0,1,1,0,1,5,1,4,0,-1,0,2,,FreePIE.GUI.Common.CommandLine.Commands.Command<TEVent>' FreePIE.GUI.Common.CommandLine.Parser
-FreePIE.GUI.Common.CommandLine.Commands,Command<TEVent>,1,2,0,0,1,15,2,0,1,0,2,0,FreePIE.Core.Common.Events.IEventAggregator' FreePIE.GUI.Common.CommandLine.Commands.Command,
-FreePIE.GUI.Common.CommandLine.Commands,FileCommand,0,1,0,0,1,4,1,0,1,-1,1,0,FreePIE.Core.Common.Events.IEventAggregator,
-FreePIE.GUI.Common.CommandLine.Commands,RunCommand,0,1,1,0,1,8,1,0,1,-1,1,0,FreePIE.Core.Common.Events.IEventAggregator,
-FreePIE.GUI.Common.CommandLine.Commands,TrayCommand,0,1,1,0,1,10,1,0,1,-1,1,0,FreePIE.Core.Common.Events.IEventAggregator,
-FreePIE.GUI.Common.CommandLine,IParser,0,1,0,0,0,4,1,1,0,-1,0,1,,FreePIE.GUI.Shells.MainShellViewModel
-FreePIE.GUI.Common.CommandLine,Parser,1,2,0,0,2,22,3,0,1,0,1,0,FreePIE.GUI.Common.CommandLine.Commands.Command,
-FreePIE.GUI.Common.Resources,ResourceHelper,0,1,0,0,1,11,1,0,0,-1,0,0,,
+FreePIE.GUI.Common.CommandLine.Commands,Command<TEVent>,1,2,0,0,1,15,2,0,1,1,2,3,FreePIE.GUI.Common.CommandLine.Commands.Command' FreePIE.GUI.Events.Command.CommandEvent,FreePIE.GUI.Common.CommandLine.Commands.FileCommand' FreePIE.GUI.Common.CommandLine.Commands.RunCommand' FreePIE.GUI.Common.CommandLine.Commands.TrayCommand
+FreePIE.GUI.Common.CommandLine.Commands,FileCommand,0,1,0,0,1,4,1,0,1,-1,2,0,FreePIE.GUI.Common.CommandLine.Commands.Command<TEVent>' FreePIE.GUI.Events.Command.FileEvent,
+FreePIE.GUI.Common.CommandLine.Commands,RunCommand,0,1,1,0,1,8,1,0,1,-1,2,0,FreePIE.GUI.Common.CommandLine.Commands.Command<TEVent>' FreePIE.GUI.Events.Command.RunEvent,
+FreePIE.GUI.Common.CommandLine.Commands,TrayCommand,0,1,1,0,1,10,1,0,1,-1,2,0,FreePIE.GUI.Common.CommandLine.Commands.Command<TEVent>' FreePIE.GUI.Events.Command.TrayEvent,
+FreePIE.GUI.Common.CommandLine,IParser,0,1,0,0,0,4,1,1,0,-1,0,3,,FreePIE.GUI.Common.CommandLine.Parser' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Bootstrap.Bootstrapper
+FreePIE.GUI.Common.CommandLine,Parser,1,2,0,0,2,22,3,0,1,1,2,1,FreePIE.GUI.Common.CommandLine.Commands.Command' FreePIE.GUI.Common.CommandLine.IParser,FreePIE.GUI.Bootstrap.Bootstrapper
+FreePIE.GUI.Common.Resources,ResourceHelper,0,1,0,0,1,11,1,0,0,-1,0,2,,FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Script.Output.ErrorsViewModel
 FreePIE.GUI.Common.RichTextBox,RtfTextBox,1,3,1,1,2,30,5,0,0,1,0,0,,
-FreePIE.GUI.Common.Strategies,ScriptDialogStrategy,2,3,0,0,3,32,5,0,0,0,4,2,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.FileDialogResult' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Result.FileDialogMode,FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
-FreePIE.GUI.Common.Visiblox,MovePointBehaviour,4,10,0,0,5,157,22,0,0,0.2,2,0,FreePIE.GUI.Common.Visiblox.PointMoveEventArgs' FreePIE.Core.Model.Point,
-FreePIE.GUI.Common.Visiblox,PointMoveEventArgs,0,0,2,0,0,5,0,0,0,-1,0,3,,FreePIE.GUI.Common.Visiblox.MovePointBehaviour' FreePIE.GUI.Views.Curves.CurveView' FreePIE.GUI.Views.Curves.CurveViewModel
-FreePIE.GUI.Common.Visiblox,PointSelectedEventArgs,0,0,1,0,0,4,0,0,0,-1,0,2,,FreePIE.GUI.Views.Curves.CurveView' FreePIE.GUI.Views.Curves.CurveViewModel
-FreePIE.GUI.Events,ActiveScriptDocumentChangedEvent,0,1,1,0,1,8,1,0,0,-1,1,2,FreePIE.GUI.Views.Main.PanelViewModel,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel
-FreePIE.GUI.Events,DeleteCurveEvent,0,1,1,0,1,8,1,0,0,-1,1,1,FreePIE.GUI.Views.Curves.CurveViewModel,FreePIE.GUI.Shells.Curves.CurveSettingsViewModel
-FreePIE.GUI.Events,ScriptDocumentAddedEvent,0,1,1,0,1,8,1,0,0,-1,1,1,FreePIE.GUI.Views.Script.ScriptEditorViewModel,FreePIE.GUI.Shells.MainShellViewModel
-FreePIE.GUI.Events,ExitingEvent,0,0,0,0,0,1,0,0,0,-1,0,3,,FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel
-FreePIE.GUI.Events,ScriptEvent,0,1,1,0,1,8,1,1,0,-1,0,0,,
-FreePIE.GUI.Events,WindowStateChangedEvent,0,1,2,0,1,10,1,0,0,-1,0,1,,FreePIE.GUI.Views.Main.TrayIconViewModel
-FreePIE.GUI.Events,ScriptStateChangedEvent,0,1,2,0,1,10,1,0,0,-1,0,4,,FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Views.Script.Output.ErrorsViewModel' FreePIE.GUI.Views.Script.Output.WatchesViewModel' FreePIE.GUI.Views.Script.ScriptEditorViewModel
-FreePIE.GUI.Events,ScriptUpdatedEvent,0,1,0,0,1,4,1,0,1,-1,0,1,,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
-FreePIE.GUI.Events,StartedEvent,0,0,0,0,0,1,0,0,0,-1,0,1,,FreePIE.GUI.Views.Main.TrayIconViewModel
-FreePIE.GUI.Events.Command,CommandEvent,0,0,1,0,0,4,0,3,0,-1,0,0,,
-FreePIE.GUI.Events.Command,FileEvent,0,0,0,0,0,3,0,0,1,-1,0,1,,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
-FreePIE.GUI.Events.Command,RunEvent,0,0,0,0,0,3,0,0,1,-1,0,1,,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
-FreePIE.GUI.Events.Command,TrayEvent,0,0,0,0,0,3,0,0,1,-1,0,1,,FreePIE.GUI.Views.Main.TrayIconViewModel
-FreePIE.GUI.Result,CancelResult,0,1,0,0,1,7,1,1,1,-1,0,2,,FreePIE.GUI.Result.CloseAppResult' FreePIE.GUI.Result.ResultFactory
-FreePIE.GUI.Result,CloseAppResult,0,1,0,0,1,8,1,0,2,-1,1,0,FreePIE.GUI.Result.CancelResult,
-FreePIE.GUI.Result,CloseResult,0,1,0,0,1,10,1,0,1,-1,1,0,FreePIE.GUI.Result.Result,
-FreePIE.GUI.Result,FileDialogResult,3,2,2,0,2,25,2,0,1,0,2,2,FreePIE.GUI.Result.FileDialogMode' FreePIE.GUI.Result.Result,FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Result.ResultFactory
-FreePIE.GUI.Result,FileDialogMode,0,0,0,0,0,5,0,0,0,-1,0,4,,FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Result.FileDialogResult' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.ResultFactory
-FreePIE.GUI.Result,IResultFactory,0,8,0,0,0,11,8,1,0,-1,1,12,FreePIE.GUI.Result.FileDialogMode,FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Shells.AboutViewModel' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Shells.PluginHelpViewModel' FreePIE.GUI.Shells.PluginSettingsViewModel' FreePIE.GUI.Shells.ShellPresentationModel' FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Shells.Curves.NewCurveViewModel' FreePIE.GUI.Views.Curves.CurveViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Main.SettingsLoaderViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel
-FreePIE.GUI.Result,MessageBoxResult,3,3,1,0,3,19,3,0,1,0,1,4,FreePIE.GUI.Result.Result,FreePIE.GUI.Result.ResultFactory' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Curves.CurveViewModel' FreePIE.GUI.Views.Main.SettingsLoaderViewModel
-FreePIE.GUI.Result,Result,0,2,0,0,1,13,3,5,0,-1,0,4,,FreePIE.GUI.Result.CloseResult' FreePIE.GUI.Result.FileDialogResult' FreePIE.GUI.Result.MessageBoxResult' FreePIE.GUI.Result.ShowDialogResult<TModel>
-FreePIE.GUI.Result,ResultFactory,1,9,0,0,9,45,9,0,1,0.56,4,0,FreePIE.GUI.Result.FileDialogResult' FreePIE.GUI.Result.FileDialogMode' FreePIE.GUI.Result.MessageBoxResult' FreePIE.GUI.Result.CancelResult,
-FreePIE.GUI.Result,ShowDialogResult<TModel>,3,3,1,0,3,25,4,0,1,0,1,0,FreePIE.GUI.Result.Result,
-FreePIE.GUI.Shells,AboutView,3,4,0,0,2,76,6,0,0,0.5,1,0,FreePIE.GUI.Shells.AboutViewModel,
-FreePIE.GUI.Shells,AboutViewModel,1,3,3,0,2,43,3,0,1,1,1,1,FreePIE.GUI.Result.IResultFactory,FreePIE.GUI.Shells.AboutView
-FreePIE.GUI.Shells,MainShellViewModel,11,10,7,0,5,178,15,0,1,0.3,17,1,FreePIE.Core.Common.Events.IEventAggregator' FreePIE.Core.Persistence.IPersistanceManager' FreePIE.Core.Persistence.ISettingsManager' FreePIE.Core.Common.IFileSystem' FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.Core.Persistence.Paths.IPaths' FreePIE.GUI.Common.CommandLine.IParser' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.Core.Persistence.Paths.IPortable' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.ShellPresentationModel' FreePIE.Core.Model.Settings' FreePIE.GUI.Views.Script.ScriptEditorViewModel' FreePIE.GUI.Result.MessageBoxResult' FreePIE.GUI.Events.ScriptDocumentAddedEvent' FreePIE.GUI.Events.ExitingEvent,FreePIE.GUI.Views.Main.TrayIconViewModel
+FreePIE.GUI.Common.Strategies,ScriptDialogStrategy,2,3,0,0,3,32,6,0,0,0.67,3,2,FreePIE.GUI.Result.FileDialogMode' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Views.Main.PanelViewModel,FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Common.Visiblox,MovePointBehaviour,4,10,0,0,5,157,22,0,0,0.2,2,2,FreePIE.GUI.Common.Visiblox.PointMoveEventArgs' FreePIE.GUI.Common.Visiblox.PointSelectedEventArgs,FreePIE.GUI.Views.Curves.CurveView' FreePIE.GUI.Views.Curves.CurveViewModel
+FreePIE.GUI.Common.Visiblox,PointMoveEventArgs,0,0,2,0,0,5,0,0,0,-1,0,3,,FreePIE.GUI.Views.Curves.CurveView' FreePIE.GUI.Views.Curves.CurveViewModel' FreePIE.GUI.Common.Visiblox.MovePointBehaviour
+FreePIE.GUI.Common.Visiblox,PointSelectedEventArgs,0,0,1,0,0,4,0,0,0,-1,0,3,,FreePIE.GUI.Views.Curves.CurveView' FreePIE.GUI.Views.Curves.CurveViewModel' FreePIE.GUI.Common.Visiblox.MovePointBehaviour
+FreePIE.GUI.Events,ActiveScriptDocumentChangedEvent,0,1,1,0,1,8,1,0,0,-1,1,3,FreePIE.GUI.Views.Main.PanelViewModel,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Shells.MainShellViewModel
+FreePIE.GUI.Events,DeleteCurveEvent,0,1,1,0,1,8,1,0,0,-1,1,2,FreePIE.GUI.Views.Curves.CurveViewModel,FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Views.Curves.CurveViewModel
+FreePIE.GUI.Events,ScriptDocumentAddedEvent,0,1,1,0,1,8,1,0,0,-1,1,2,FreePIE.GUI.Views.Script.ScriptEditorViewModel,FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Events,ExitingEvent,0,0,0,0,0,1,0,0,0,-1,0,3,,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Shells.MainShellViewModel
+FreePIE.GUI.Events,ScriptEvent,0,1,1,0,1,8,1,1,0,-1,0,1,,FreePIE.GUI.Events.ScriptUpdatedEvent
+FreePIE.GUI.Events,WindowStateChangedEvent,0,1,2,0,1,10,1,0,0,-1,0,2,,FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel
+FreePIE.GUI.Events,ScriptStateChangedEvent,0,1,2,0,1,10,1,0,0,-1,0,5,,FreePIE.GUI.Views.Script.ScriptEditorViewModel' FreePIE.GUI.Views.Script.Output.ErrorsViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Script.Output.WatchesViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel
+FreePIE.GUI.Events,ScriptUpdatedEvent,0,1,0,0,1,4,1,0,1,-1,1,2,FreePIE.GUI.Events.ScriptEvent,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Script.ScriptEditorViewModel
+FreePIE.GUI.Events,StartedEvent,0,0,0,0,0,1,0,0,0,-1,0,2,,FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Shells.MainShellViewModel
+FreePIE.GUI.Events.Command,CommandEvent,0,0,1,0,0,4,0,3,0,-1,0,4,,FreePIE.GUI.Events.Command.FileEvent' FreePIE.GUI.Events.Command.TrayEvent' FreePIE.GUI.Common.CommandLine.Commands.Command<TEVent>' FreePIE.GUI.Events.Command.RunEvent
+FreePIE.GUI.Events.Command,FileEvent,0,0,0,0,0,3,0,0,1,-1,1,2,FreePIE.GUI.Events.Command.CommandEvent,FreePIE.GUI.Common.CommandLine.Commands.FileCommand' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Events.Command,RunEvent,0,0,0,0,0,3,0,0,1,-1,1,2,FreePIE.GUI.Events.Command.CommandEvent,FreePIE.GUI.Common.CommandLine.Commands.RunCommand' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Events.Command,TrayEvent,0,0,0,0,0,3,0,0,1,-1,1,2,FreePIE.GUI.Events.Command.CommandEvent,FreePIE.GUI.Common.CommandLine.Commands.TrayCommand' FreePIE.GUI.Views.Main.TrayIconViewModel
+FreePIE.GUI.Result,CancelResult,0,1,0,0,1,7,1,1,1,-1,1,2,FreePIE.GUI.Result.Result,FreePIE.GUI.Result.CloseAppResult' FreePIE.GUI.Result.ResultFactory
+FreePIE.GUI.Result,CloseAppResult,0,1,0,0,1,8,1,0,2,-1,1,1,FreePIE.GUI.Result.CancelResult,FreePIE.GUI.Result.ResultFactory
+FreePIE.GUI.Result,CloseResult,0,1,0,0,1,10,1,0,1,-1,1,1,FreePIE.GUI.Result.Result,FreePIE.GUI.Result.ResultFactory
+FreePIE.GUI.Result,FileDialogResult,3,2,2,0,2,25,2,0,1,1,2,2,FreePIE.GUI.Result.FileDialogMode' FreePIE.GUI.Result.Result,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.ResultFactory
+FreePIE.GUI.Result,FileDialogMode,0,0,0,0,0,5,0,0,0,-1,0,4,,FreePIE.GUI.Result.ResultFactory' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Result.FileDialogResult
+FreePIE.GUI.Result,IResultFactory,0,8,0,0,0,11,8,1,0,-1,5,14,FreePIE.GUI.Result.FileDialogResult' FreePIE.GUI.Result.FileDialogMode' FreePIE.GUI.Result.MessageBoxResult' FreePIE.GUI.Result.ShowDialogResult<TModel>' FreePIE.GUI.Shells.ShellPresentationModel,FreePIE.GUI.Result.ResultFactory' FreePIE.GUI.Shells.Curves.NewCurveViewModel' FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Shells.PluginSettingsViewModel' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Views.Main.SettingsLoaderViewModel' FreePIE.GUI.Shells.AboutViewModel' FreePIE.GUI.Shells.PluginHelpViewModel' FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Views.Curves.CurveViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Shells.ShellPresentationModel' FreePIE.GUI.Bootstrap.Bootstrapper
+FreePIE.GUI.Result,MessageBoxResult,3,3,1,0,3,19,3,0,1,1,1,2,FreePIE.GUI.Result.Result,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.ResultFactory
+FreePIE.GUI.Result,Result,0,2,0,0,1,13,3,5,0,-1,0,5,,FreePIE.GUI.Result.MessageBoxResult' FreePIE.GUI.Result.CancelResult' FreePIE.GUI.Result.CloseResult' FreePIE.GUI.Result.ShowDialogResult<TModel>' FreePIE.GUI.Result.FileDialogResult
+FreePIE.GUI.Result,ResultFactory,1,9,0,0,9,45,9,0,1,0.67,9,1,FreePIE.GUI.Result.CancelResult' FreePIE.GUI.Result.CloseAppResult' FreePIE.GUI.Result.CloseResult' FreePIE.GUI.Result.FileDialogResult' FreePIE.GUI.Result.FileDialogMode' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.MessageBoxResult' FreePIE.GUI.Result.ShowDialogResult<TModel>' FreePIE.GUI.Shells.ShellPresentationModel,FreePIE.GUI.Bootstrap.Bootstrapper
+FreePIE.GUI.Result,ShowDialogResult<TModel>,3,3,1,0,3,25,4,0,1,1,1,2,FreePIE.GUI.Result.Result,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.ResultFactory
+FreePIE.GUI.Shells,AboutView,3,4,0,0,2,76,7,0,0,0.5,1,0,FreePIE.GUI.Shells.AboutViewModel,
+FreePIE.GUI.Shells,AboutViewModel,1,3,3,0,2,43,3,0,1,1,2,2,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.ShellPresentationModel,FreePIE.GUI.Shells.AboutView' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Shells,MainShellViewModel,11,10,7,0,5,178,17,0,1,0.5,15,2,FreePIE.GUI.Common.AvalonDock.IDockingManagerSource' FreePIE.GUI.Common.CommandLine.IParser' FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Events.ActiveScriptDocumentChangedEvent' FreePIE.GUI.Events.ScriptDocumentAddedEvent' FreePIE.GUI.Events.ExitingEvent' FreePIE.GUI.Events.WindowStateChangedEvent' FreePIE.GUI.Events.StartedEvent' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.ShellPresentationModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Plugin.PluginHelpFileViewModel' FreePIE.GUI.Views.Plugin.PluginSettingsMenuViewModel' FreePIE.GUI.Views.Script.ScriptEditorViewModel,FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Bootstrap.Bootstrapper
 FreePIE.GUI.Shells,PluginHelpView,1,4,0,0,2,46,5,0,0,0.5,0,0,,
-FreePIE.GUI.Shells,PluginHelpViewModel,1,2,1,0,2,14,2,0,1,0,3,1,FreePIE.Core.Common.IFileSystem' FreePIE.GUI.Result.IResultFactory' FreePIE.Core.Model.PluginSetting,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Shells,PluginHelpViewModel,1,2,1,0,2,14,2,0,1,1,2,1,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.ShellPresentationModel,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
 FreePIE.GUI.Shells,PluginSettingsView,3,3,0,0,2,64,5,0,0,0,0,0,,
-FreePIE.GUI.Shells,PluginSettingsViewModel,0,3,1,0,3,16,3,0,1,-1,2,1,FreePIE.GUI.Result.IResultFactory' FreePIE.Core.Model.PluginSetting,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
-FreePIE.GUI.Shells,ShellPresentationModel,0,3,1,0,2,17,3,6,0,-1,1,1,FreePIE.GUI.Result.IResultFactory,FreePIE.GUI.Shells.MainShellViewModel
-FreePIE.GUI.Shells,MainShellView,1,3,1,0,1,27,4,0,1,0.67,0,1,,FreePIE.GUI.Common.AvalonEdit.BindableScriptEditor
-FreePIE.GUI.Shells.Curves,CurveSettingsView,4,3,0,0,2,75,5,0,0,0,0,0,,
-FreePIE.GUI.Shells.Curves,CurveSettingsViewModel,3,4,1,0,3,42,5,0,1,0,7,0,FreePIE.Core.Persistence.ISettingsManager' FreePIE.Core.Common.Events.IEventAggregator' FreePIE.GUI.Result.IResultFactory' FreePIE.Core.Model.Settings' FreePIE.GUI.Views.Curves.CurveViewModel' FreePIE.GUI.Events.DeleteCurveEvent' FreePIE.GUI.Shells.Curves.NewCurveViewModel,
-FreePIE.GUI.Shells.Curves,NewCurveView,6,3,0,0,2,97,5,0,0,0,0,0,,
-FreePIE.GUI.Shells.Curves,NewCurveViewModel,3,3,5,0,3,56,4,0,1,1,3,2,FreePIE.GUI.Result.IResultFactory' FreePIE.Core.Model.Curve' FreePIE.Core.Model.Point,FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Views.Curves.CurveViewModel
-FreePIE.GUI.Views.Curves,CurveView,8,6,0,0,2,134,8,0,0,0.67,3,0,FreePIE.GUI.Views.Curves.CurveViewModel' FreePIE.GUI.Common.Visiblox.PointMoveEventArgs' FreePIE.GUI.Common.Visiblox.PointSelectedEventArgs,
-FreePIE.GUI.Views.Curves,CurveViewModel,8,13,9,0,7,193,21,0,0,0,9,3,FreePIE.Core.Common.Events.IEventAggregator' FreePIE.GUI.Result.IResultFactory' FreePIE.Core.Model.Curve' FreePIE.GUI.Result.MessageBoxResult' FreePIE.GUI.Shells.Curves.NewCurveViewModel' FreePIE.GUI.Common.Visiblox.PointSelectedEventArgs' FreePIE.Core.Model.Point' FreePIE.GUI.Common.Visiblox.PointMoveEventArgs' FreePIE.Core.Common.CurveMath,FreePIE.GUI.Events.DeleteCurveEvent' FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Views.Curves.CurveView
+FreePIE.GUI.Shells,PluginSettingsViewModel,0,3,1,0,3,16,3,0,1,-1,3,1,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.ShellPresentationModel' FreePIE.GUI.Views.Plugin.PluginPropertyViewModel,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Shells,ShellPresentationModel,0,3,1,0,2,17,3,6,0,-1,1,8,FreePIE.GUI.Result.IResultFactory,FreePIE.GUI.Shells.AboutViewModel' FreePIE.GUI.Result.ResultFactory' FreePIE.GUI.Shells.PluginHelpViewModel' FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Shells.PluginSettingsViewModel' FreePIE.GUI.Shells.Curves.NewCurveViewModel' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.MainShellViewModel
+FreePIE.GUI.Shells,MainShellView,1,3,1,0,1,27,4,0,1,0.67,1,1,FreePIE.GUI.Common.AvalonDock.IDockingManagerSource,FreePIE.GUI.Common.AvalonEdit.BindableScriptEditor
+FreePIE.GUI.Shells.Curves,CurveSettingsView,4,3,0,0,2,75,6,0,0,0,0,0,,
+FreePIE.GUI.Shells.Curves,CurveSettingsViewModel,3,4,1,0,3,42,5,0,1,0,5,1,FreePIE.GUI.Events.DeleteCurveEvent' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.ShellPresentationModel' FreePIE.GUI.Shells.Curves.NewCurveViewModel' FreePIE.GUI.Views.Curves.CurveViewModel,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Shells.Curves,NewCurveView,6,3,0,0,2,97,8,0,0,0,0,0,,
+FreePIE.GUI.Shells.Curves,NewCurveViewModel,3,3,5,0,3,56,4,0,1,1,2,2,FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.ShellPresentationModel,FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Views.Curves.CurveViewModel
+FreePIE.GUI.Views.Curves,CurveView,8,6,0,0,2,134,13,0,0,0.67,4,0,FreePIE.GUI.Common.Visiblox.MovePointBehaviour' FreePIE.GUI.Common.Visiblox.PointMoveEventArgs' FreePIE.GUI.Common.Visiblox.PointSelectedEventArgs' FreePIE.GUI.Views.Curves.CurveViewModel,
+FreePIE.GUI.Views.Curves,CurveViewModel,8,13,9,0,7,193,21,0,0,0.15,6,3,FreePIE.GUI.Common.Visiblox.MovePointBehaviour' FreePIE.GUI.Common.Visiblox.PointMoveEventArgs' FreePIE.GUI.Common.Visiblox.PointSelectedEventArgs' FreePIE.GUI.Events.DeleteCurveEvent' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.Curves.NewCurveViewModel,FreePIE.GUI.Events.DeleteCurveEvent' FreePIE.GUI.Views.Curves.CurveView' FreePIE.GUI.Shells.Curves.CurveSettingsViewModel
 FreePIE.GUI.Common.TrayIcon,ITrayIcon,0,7,1,0,0,12,7,0,0,-1,0,0,,
 FreePIE.GUI.Views.Main.Menu,MainMenuView,0,1,0,0,1,7,1,0,0,-1,0,0,,
-FreePIE.GUI.Views.Main.Menu,MainMenuViewModel,10,28,12,0,23,205,34,0,1,0.14,21,2,FreePIE.GUI.Result.IResultFactory' FreePIE.Core.Common.Events.IEventAggregator' FreePIE.Core.Common.IFileSystem' FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.Core.Persistence.ISettingsManager' FreePIE.Core.ScriptEngine.IScriptEngine' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Script.ScriptEditorViewModel' FreePIE.GUI.Views.Main.Menu.RecentFileViewModel' FreePIE.Core.Model.Settings' FreePIE.GUI.Events.Command.FileEvent' FreePIE.GUI.Events.Command.RunEvent' FreePIE.GUI.Events.ScriptUpdatedEvent' FreePIE.GUI.Events.ExitingEvent' FreePIE.GUI.Events.ActiveScriptDocumentChangedEvent' FreePIE.Core.Model.Events.ScriptErrorEvent' FreePIE.Core.Model.Events.ErrorLevel' FreePIE.GUI.Shells.PluginSettingsViewModel' FreePIE.GUI.Views.Plugin.PluginSettingsMenuViewModel' FreePIE.GUI.Shells.PluginHelpViewModel' FreePIE.GUI.Views.Plugin.PluginHelpFileViewModel,FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel
+FreePIE.GUI.Views.Main.Menu,MainMenuViewModel,10,28,12,0,23,205,34,0,1,0.18,18,1,FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Events.ActiveScriptDocumentChangedEvent' FreePIE.GUI.Events.ScriptDocumentAddedEvent' FreePIE.GUI.Events.ExitingEvent' FreePIE.GUI.Events.ScriptStateChangedEvent' FreePIE.GUI.Events.ScriptUpdatedEvent' FreePIE.GUI.Events.Command.FileEvent' FreePIE.GUI.Events.Command.RunEvent' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.AboutViewModel' FreePIE.GUI.Shells.PluginHelpViewModel' FreePIE.GUI.Shells.PluginSettingsViewModel' FreePIE.GUI.Shells.Curves.CurveSettingsViewModel' FreePIE.GUI.Views.Main.Menu.RecentFileViewModel' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Plugin.PluginHelpFileViewModel' FreePIE.GUI.Views.Plugin.PluginSettingsMenuViewModel' FreePIE.GUI.Views.Script.ScriptEditorViewModel,FreePIE.GUI.Shells.MainShellViewModel
 FreePIE.GUI.Views.Main.Menu,RecentFileViewModel,2,2,2,0,1,20,3,0,0,0,0,1,,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
-FreePIE.GUI.Views.Main,PanelViewModel,4,2,11,0,2,77,3,4,0,1,0,5,,FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Events.ActiveScriptDocumentChangedEvent' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel
-FreePIE.GUI.Views.Main,SettingsLoaderViewModel,2,2,0,0,2,23,4,0,0,0,3,0,FreePIE.Core.Persistence.IPersistanceManager' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.MessageBoxResult,
+FreePIE.GUI.Views.Main,PanelViewModel,4,2,12,0,2,78,3,4,0,1,1,10,FreePIE.GUI.Common.Resources.ResourceHelper,FreePIE.GUI.Common.Strategies.ScriptDialogStrategy' FreePIE.GUI.Views.Script.Output.ErrorsViewModel' FreePIE.GUI.Views.Script.Output.ConsoleViewModel' FreePIE.GUI.Events.ActiveScriptDocumentChangedEvent' FreePIE.GUI.Views.Script.Output.WatchesViewModel' FreePIE.GUI.Views.Script.ScriptEditorViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Bootstrap.Bootstrapper' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Shells.MainShellViewModel
+FreePIE.GUI.Views.Main,SettingsLoaderViewModel,2,2,0,0,2,23,4,0,0,1,1,1,FreePIE.GUI.Result.IResultFactory,FreePIE.GUI.Bootstrap.Bootstrapper
 FreePIE.GUI.Views.Main,TrayIconView,0,1,0,0,1,8,1,0,0,-1,0,0,,
-FreePIE.GUI.Views.Main,TrayIconViewModel,8,26,11,0,21,285,41,0,1,0.65,16,0,FreePIE.Core.Common.Events.IEventAggregator' FreePIE.Core.Persistence.ISettingsManager' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Events.ScriptStateChangedEvent' FreePIE.GUI.Events.WindowStateChangedEvent' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.Core.Model.Settings' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.Core.Model.Events.TrayNotificationEvent' FreePIE.GUI.Events.Command.TrayEvent' FreePIE.GUI.Events.ActiveScriptDocumentChangedEvent' FreePIE.GUI.Events.StartedEvent' FreePIE.GUI.Events.ExitingEvent' FreePIE.Core.Model.Events.ScriptErrorEvent' FreePIE.Core.Model.Events.ErrorLevel,
-FreePIE.GUI.Views.Plugin,PluginHelpFileViewModel,0,1,3,0,1,10,1,0,0,-1,1,1,FreePIE.Core.Model.PluginSetting,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Views.Main,TrayIconViewModel,8,26,11,0,21,285,42,0,1,0.69,9,1,FreePIE.GUI.Events.ActiveScriptDocumentChangedEvent' FreePIE.GUI.Events.ExitingEvent' FreePIE.GUI.Events.WindowStateChangedEvent' FreePIE.GUI.Events.ScriptStateChangedEvent' FreePIE.GUI.Events.StartedEvent' FreePIE.GUI.Events.Command.TrayEvent' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.PanelViewModel,FreePIE.GUI.Bootstrap.Bootstrapper
+FreePIE.GUI.Views.Plugin,PluginHelpFileViewModel,0,1,3,0,1,10,1,0,0,-1,0,2,,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Shells.MainShellViewModel
 FreePIE.GUI.Views.Plugin,PluginPropertyView,3,3,0,0,2,64,5,0,0,0,0,0,,
-FreePIE.GUI.Views.Plugin,PluginPropertyViewModel,1,3,3,0,1,23,3,0,0,0,3,0,FreePIE.Core.Model.PluginProperty' FreePIE.GUI.Views.Plugin.PropertyValueTypes.ValueViewModel' FreePIE.Core.Common.Utils,
-FreePIE.GUI.Views.Plugin,PluginSettingsMenuViewModel,0,1,2,0,1,9,1,0,0,-1,1,1,FreePIE.Core.Model.PluginSetting,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
-FreePIE.GUI.Views.Plugin.PropertyValueTypes,BoolPropertyView,2,3,0,0,2,53,5,0,0,0,0,0,,
-FreePIE.GUI.Views.Plugin.PropertyValueTypes,BoolPropertyViewModel,0,2,0,0,2,10,2,0,1,-1,1,0,FreePIE.Core.Model.PluginProperty,
-FreePIE.GUI.Views.Plugin.PropertyValueTypes,ChoicesPropertyViewModel,1,2,2,0,2,26,2,0,1,0,2,0,FreePIE.Core.Model.Choice' FreePIE.Core.Model.PluginProperty,
-FreePIE.GUI.Views.Plugin.PropertyValueTypes,ChoicesPropertyView,2,3,0,0,2,53,5,0,0,0,0,0,,
-FreePIE.GUI.Views.Plugin.PropertyValueTypes,TextPropertyView,2,3,0,0,2,53,5,0,0,0,0,0,,
-FreePIE.GUI.Views.Plugin.PropertyValueTypes,TextPropertyViewModel,1,2,1,0,2,23,2,0,1,1,1,0,FreePIE.Core.Model.PluginProperty,
-FreePIE.GUI.Views.Plugin.PropertyValueTypes,ValueViewModel,1,1,1,0,0,13,1,3,0,0,1,1,FreePIE.Core.Model.PluginProperty,FreePIE.GUI.Views.Plugin.PluginPropertyViewModel
+FreePIE.GUI.Views.Plugin,PluginPropertyViewModel,1,3,3,0,1,23,3,0,0,0,1,1,FreePIE.GUI.Views.Plugin.PropertyValueTypes.ValueViewModel,FreePIE.GUI.Shells.PluginSettingsViewModel
+FreePIE.GUI.Views.Plugin,PluginSettingsMenuViewModel,0,1,2,0,1,9,1,0,0,-1,0,2,,FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Shells.MainShellViewModel
+FreePIE.GUI.Views.Plugin.PropertyValueTypes,BoolPropertyView,2,3,0,0,2,53,4,0,0,0,0,0,,
+FreePIE.GUI.Views.Plugin.PropertyValueTypes,BoolPropertyViewModel,0,2,0,0,2,10,2,0,1,-1,1,0,FreePIE.GUI.Views.Plugin.PropertyValueTypes.ValueViewModel,
+FreePIE.GUI.Views.Plugin.PropertyValueTypes,ChoicesPropertyViewModel,1,2,2,0,2,26,2,0,1,1,1,0,FreePIE.GUI.Views.Plugin.PropertyValueTypes.ValueViewModel,
+FreePIE.GUI.Views.Plugin.PropertyValueTypes,ChoicesPropertyView,2,3,0,0,2,53,4,0,0,0,0,0,,
+FreePIE.GUI.Views.Plugin.PropertyValueTypes,TextPropertyView,2,3,0,0,2,53,4,0,0,0,0,0,,
+FreePIE.GUI.Views.Plugin.PropertyValueTypes,TextPropertyViewModel,1,2,1,0,2,23,2,0,1,1,1,0,FreePIE.GUI.Views.Plugin.PropertyValueTypes.ValueViewModel,
+FreePIE.GUI.Views.Plugin.PropertyValueTypes,ValueViewModel,1,1,1,0,0,13,1,3,0,0,0,4,,FreePIE.GUI.Views.Plugin.PropertyValueTypes.BoolPropertyViewModel' FreePIE.GUI.Views.Plugin.PropertyValueTypes.TextPropertyViewModel' FreePIE.GUI.Views.Plugin.PropertyValueTypes.ChoicesPropertyViewModel' FreePIE.GUI.Views.Plugin.PluginPropertyViewModel
 FreePIE.GUI.Views.Script.Output,ConsoleView,0,1,0,0,1,12,1,0,0,-1,0,0,,
-FreePIE.GUI.Views.Script.Output,ConsoleViewModel,2,2,2,0,2,27,2,0,1,0,1,1,FreePIE.GUI.Views.Script.Output.ConsoleTextWriter,FreePIE.GUI.Views.Script.Output.ConsoleTextWriter
+FreePIE.GUI.Views.Script.Output,ConsoleViewModel,2,2,2,0,2,27,2,0,1,0,2,2,FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Script.Output.ConsoleTextWriter,FreePIE.GUI.Views.Script.Output.ConsoleTextWriter' FreePIE.GUI.Bootstrap.Bootstrapper
 FreePIE.GUI.Views.Script.Output,ConsoleTextWriter,2,4,1,0,3,39,7,0,0,0,1,1,FreePIE.GUI.Views.Script.Output.ConsoleViewModel,FreePIE.GUI.Views.Script.Output.ConsoleViewModel
-FreePIE.GUI.Views.Script.Output,ErrorsView,2,3,0,0,2,53,5,0,0,0,0,0,,
-FreePIE.GUI.Views.Script.Output,ErrorsViewModel,1,3,1,0,3,26,4,0,1,1,3,0,FreePIE.Core.Common.Events.IEventAggregator' FreePIE.Core.Model.Events.ScriptErrorEvent' FreePIE.GUI.Events.ScriptStateChangedEvent,
-FreePIE.GUI.Views.Script.Output,ErrorViewModel,0,1,3,0,1,13,1,0,0,-1,0,0,,
-FreePIE.GUI.Views.Script.Output,WatchesView,2,3,0,0,2,53,5,0,0,0,0,0,,
-FreePIE.GUI.Views.Script.Output,WatchesViewModel,2,4,1,0,3,52,6,0,1,0,3,0,FreePIE.Core.Common.Events.IEventAggregator' FreePIE.Core.Model.Events.WatchEvent' FreePIE.GUI.Events.ScriptStateChangedEvent,
-FreePIE.GUI.Views.Script.Output,WatchViewModel,1,0,2,0,0,14,0,0,0,-1,0,0,,
+FreePIE.GUI.Views.Script.Output,ErrorsView,2,3,0,0,2,53,4,0,0,0,0,0,,
+FreePIE.GUI.Views.Script.Output,ErrorsViewModel,1,3,1,0,3,26,4,0,1,1,4,1,FreePIE.GUI.Common.Resources.ResourceHelper' FreePIE.GUI.Events.ScriptStateChangedEvent' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Script.Output.ErrorViewModel,FreePIE.GUI.Bootstrap.Bootstrapper
+FreePIE.GUI.Views.Script.Output,ErrorViewModel,0,1,3,0,1,13,1,0,0,-1,0,1,,FreePIE.GUI.Views.Script.Output.ErrorsViewModel
+FreePIE.GUI.Views.Script.Output,WatchesView,2,3,0,0,2,53,4,0,0,0,0,0,,
+FreePIE.GUI.Views.Script.Output,WatchesViewModel,2,4,1,0,3,52,6,0,1,0,3,1,FreePIE.GUI.Events.ScriptStateChangedEvent' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Script.Output.WatchViewModel,FreePIE.GUI.Bootstrap.Bootstrapper
+FreePIE.GUI.Views.Script.Output,WatchViewModel,1,0,2,0,0,14,0,0,0,-1,0,1,,FreePIE.GUI.Views.Script.Output.WatchesViewModel
 FreePIE.GUI.Views.Script,ScriptEditorView,0,1,0,0,1,7,1,0,0,-1,0,0,,
-FreePIE.GUI.Views.Script,ScriptEditorViewModel,9,10,12,0,5,154,12,0,1,0.4,8,3,FreePIE.Core.Common.Events.IEventAggregator' FreePIE.Core.ScriptEngine.ICodeCompletionProvider' FreePIE.Core.Common.FileSystem' FreePIE.GUI.CodeCompletion.CompletionPopupViewModel' FreePIE.Core.ScriptEngine.CodeCompletion.CodeCompletionResult' FreePIE.Core.ScriptEngine.CodeCompletion.Token' FreePIE.GUI.Common.AvalonEdit.Replacer' FreePIE.GUI.Events.ScriptStateChangedEvent,FreePIE.GUI.Events.ScriptDocumentAddedEvent' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel
+FreePIE.GUI.Views.Script,ScriptEditorViewModel,9,10,13,0,5,156,12,0,1,0.4,5,3,FreePIE.GUI.Common.AvalonEdit.Replacer' FreePIE.GUI.Common.CodeCompletion.CompletionItem' FreePIE.GUI.Events.ScriptStateChangedEvent' FreePIE.GUI.Events.ScriptUpdatedEvent' FreePIE.GUI.Views.Main.PanelViewModel,FreePIE.GUI.Events.ScriptDocumentAddedEvent' FreePIE.GUI.Views.Main.Menu.MainMenuViewModel' FreePIE.GUI.Shells.MainShellViewModel
 FreePIE.GUI,App,1,2,0,0,2,37,3,0,0,0,0,0,,
-FreePIE.GUI.Bootstrap,Bootstrapper,1,9,0,0,1,69,9,0,0,0.33,2,0,FreePIE.Core.Services.ServiceBootstrapper' FreePIE.GUI.Common.AvalonDock.DocumentContext,
+FreePIE.GUI.Bootstrap,Bootstrapper,1,9,0,0,1,69,9,0,0,0.33,12,0,FreePIE.GUI.Common.AvalonDock.DocumentContext' FreePIE.GUI.Common.CommandLine.IParser' FreePIE.GUI.Common.CommandLine.Parser' FreePIE.GUI.Result.IResultFactory' FreePIE.GUI.Result.ResultFactory' FreePIE.GUI.Shells.MainShellViewModel' FreePIE.GUI.Views.Main.PanelViewModel' FreePIE.GUI.Views.Main.SettingsLoaderViewModel' FreePIE.GUI.Views.Main.TrayIconViewModel' FreePIE.GUI.Views.Script.Output.ConsoleViewModel' FreePIE.GUI.Views.Script.Output.ErrorsViewModel' FreePIE.GUI.Views.Script.Output.WatchesViewModel,
 FreePIE.GUI.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
 FreePIE.GUI.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
 XamlGeneratedNamespace,GeneratedInternalTypeHelper,0,5,0,0,0,44,5,0,0,-1,0,0,,

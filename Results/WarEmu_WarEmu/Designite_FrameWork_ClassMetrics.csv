@@ -2,101 +2,101 @@ Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out 
 FrameWork,aConfig,1,0,0,1,0,4,0,4,0,-1,0,1,,FrameWork.ConfigMgr
 FrameWork,aConfigMethod,0,0,0,0,0,4,0,0,0,-1,0,1,,FrameWork.ConfigMgr
 FrameWork,aConfigAttributes,1,1,1,0,1,16,1,0,0,0,0,1,,FrameWork.ConfigMgr
-FrameWork,ConfigMgr,1,2,0,1,2,92,14,0,0,0,4,4,FrameWork.aConfigAttributes' FrameWork.aConfig' FrameWork.aConfigMethod' FrameWork.Log,AccountCacher.Program' LauncherServer.Program' LobbyServer.Program' WorldServer.Program
+FrameWork,ConfigMgr,1,2,0,1,2,92,15,0,0,0,4,0,FrameWork.aConfig' FrameWork.aConfigMethod' FrameWork.aConfigAttributes' FrameWork.Log,
 FrameWork,ConsoleHandlerAttribute,3,1,3,0,1,25,1,0,0,0,0,1,,FrameWork.ConsoleMgr
-FrameWork,ConsoleMgr,4,10,1,1,4,155,28,0,0,0.4,3,4,FrameWork.Log' FrameWork.ConsoleHandlerAttribute' FrameWork.IConsoleHandler,AccountCacher.Program' LauncherServer.Program' LobbyServer.Program' WorldServer.Program
+FrameWork,ConsoleMgr,4,10,1,1,4,155,29,0,0,0.4,3,0,FrameWork.ConsoleHandlerAttribute' FrameWork.IConsoleHandler' FrameWork.Log,
 FrameWork,IConsoleHandler,0,1,0,0,0,4,1,2,0,-1,0,1,,FrameWork.ConsoleMgr
-FrameWork,DataElement,0,1,5,0,1,22,1,0,0,-1,0,35,,Common.Account' Common.Realm' Common.Character_quest' Common.Character_tok' Common.Character_ability' Common.Characters_influence' Common.Ability_Info' Common.Ability_Stats' Common.Chapter_Info' Common.Chapter_Reward' Common.Creature_loot' Common.Creature_proto' Common.Creature_spawn' Common.Creature_text' Common.GMCommandLog' Common.GameObject_loot' Common.GameObject_proto' Common.GameObject_spawn' Common.Mount_Info' Common.Tok_Info' Common.Zone_Area' Common.Zone_jump' Common.Zone_Respawn' Common.Zone_Taxi' Common.PQuest_Info' Common.PQuest_Objective' Common.Quest' Common.Quest_Creature_Finisher' Common.Quest_Creature_Starter' Common.Quest_Objectives' Common.TimedAnnounce' Common.Waypoint' FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase' FrameWork.BindingInfo
-FrameWork,DataTable,0,1,4,0,1,17,1,0,0,-1,0,2,,FrameWork.DataObject' FrameWork.DBManager
-FrameWork,PrimaryKey,0,1,2,0,1,12,1,0,0,-1,0,11,,Common.Ability_Info' Common.Chapter_Info' Common.GameObject_spawn' Common.Tok_Info' Common.Zone_Respawn' Common.PQuest_Info' Common.PQuest_Objective' Common.Quest' Common.Quest_Objectives' FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
+FrameWork,DataElement,0,1,5,0,1,22,1,0,0,-1,0,2,,FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
+FrameWork,DataTable,0,1,4,0,1,17,1,0,0,-1,0,2,,FrameWork.DBManager' FrameWork.DataObject
+FrameWork,PrimaryKey,0,1,2,0,1,12,1,0,0,-1,0,2,,FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
 FrameWork,ReadOnly,0,1,0,0,1,7,1,0,0,-1,0,1,,FrameWork.ObjectDatabase
-FrameWork,Relation,0,1,4,0,1,20,1,0,0,-1,0,2,,Common.Character' FrameWork.ObjectDatabase
-FrameWork,CacheException,0,2,0,0,2,13,2,0,1,-1,0,0,,
-FrameWork,ICache,0,0,1,0,0,7,0,1,0,-1,0,2,,FrameWork.DataTableHandler' FrameWork.ObjectDatabase
-FrameWork,SimpleCache,1,0,1,0,0,36,0,0,1,-1,0,0,,
-FrameWork,ConnectionType,0,0,0,0,0,11,0,0,0,-1,0,5,,AccountCacher.Program' FrameWork.DataConnection' FrameWork.DBManager' FrameWork.ObjectDatabase' WorldServer.Program
-FrameWork,DataConnection,3,14,2,0,11,676,51,0,0,0.21,3,2,FrameWork.ConnectionType' FrameWork.Log' FrameWork.IsolationLevel,FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
-FrameWork,DatabaseException,0,3,0,0,3,18,3,1,0,-1,0,0,,
-FrameWork,DataObject,2,5,8,0,4,113,10,56,0,1,2,4,FrameWork.IDGenerator' FrameWork.DataTable,FrameWork.DataTableHandler' FrameWork.MySQLObjectDatabase' FrameWork.IObjectDatabase' FrameWork.ObjectDatabase
-FrameWork,DataTableHandler,4,5,4,0,5,44,5,0,0,0,2,2,FrameWork.ICache' FrameWork.DataObject,FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
-FrameWork,DatabaseInfo,6,1,0,6,1,20,1,0,0,0,0,4,,AccountCacher.AccountConfigs' AccountCacher.Program' WorldServer.WorldConfigs' WorldServer.Program
-FrameWork,DBManager,1,2,0,0,2,45,7,0,0,0,6,2,FrameWork.IObjectDatabase' FrameWork.Log' FrameWork.ObjectDatabase' FrameWork.MySQLObjectDatabase' FrameWork.ConnectionType' FrameWork.DataTable,AccountCacher.Program' WorldServer.Program
-FrameWork,MySQLObjectDatabase,0,13,0,0,1,563,57,0,1,-1,10,16,FrameWork.DataConnection' FrameWork.DataObject' FrameWork.IDGenerator' FrameWork.Log' FrameWork.PrimaryKey' FrameWork.DataElement' FrameWork.Utils' FrameWork.BindingInfo' FrameWork.DataTableHandler' FrameWork.IsolationLevel,AccountCacher.CreateAccount' Common.AccountMgr' FrameWork.DBManager' FrameWork.ObjectDatabase' WorldServer.CharMgr' WorldServer.GmCommand' WorldServer.CharacterHandlers' WorldServer.AbilityMgr' WorldServer.MailInterface' WorldServer.Item' WorldServer.QuestsInterface' WorldServer.SocialInterface' WorldServer.TokInterface' WorldServer.WorldMgr' WorldServer.Program' WorldServer.Player
-FrameWork,IObjectDatabase,0,17,0,0,0,30,17,1,0,-1,2,1,FrameWork.DataObject' FrameWork.IsolationLevel,FrameWork.DBManager
-FrameWork,ObjectDatabase,7,43,0,0,20,732,119,1,1,0.19,13,1,FrameWork.DataConnection' FrameWork.DataTableHandler' FrameWork.PrimaryKey' FrameWork.DataElement' FrameWork.DataObject' FrameWork.Log' FrameWork.IsolationLevel' FrameWork.Relation' FrameWork.ICache' FrameWork.BindingInfo' FrameWork.ReadOnly' FrameWork.ConnectionType' FrameWork.MySQLObjectDatabase,FrameWork.DBManager
-FrameWork,BindingInfo,5,1,0,5,1,16,1,0,0,0,1,2,FrameWork.DataElement,FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
-FrameWork,IsolationLevel,0,0,0,0,0,9,0,0,0,-1,0,4,,FrameWork.DataConnection' FrameWork.MySQLObjectDatabase' FrameWork.IObjectDatabase' FrameWork.ObjectDatabase
-FrameWork,IDGenerator,0,1,0,0,1,8,1,0,0,-1,0,2,,FrameWork.DataObject' FrameWork.MySQLObjectDatabase
-FrameWork,LoaderMgr,6,8,0,2,8,115,20,0,0,0,3,1,FrameWork.TCPManager' FrameWork.LoadingFunctionAttribute' FrameWork.Log,WorldServer.Program
+FrameWork,Relation,0,1,4,0,1,20,1,0,0,-1,0,1,,FrameWork.ObjectDatabase
+FrameWork,CacheException,0,2,0,0,2,13,2,0,1,-1,1,0,FrameWork.DatabaseException,
+FrameWork,ICache,0,0,1,0,0,7,0,1,0,-1,0,3,,FrameWork.SimpleCache' FrameWork.DataTableHandler' FrameWork.ObjectDatabase
+FrameWork,SimpleCache,1,0,1,0,0,36,0,0,1,-1,1,1,FrameWork.ICache,FrameWork.DataTableHandler
+FrameWork,ConnectionType,0,0,0,0,0,11,0,0,0,-1,0,3,,FrameWork.DBManager' FrameWork.ObjectDatabase' FrameWork.DataConnection
+FrameWork,DataConnection,3,14,2,0,11,676,71,0,0,0.29,4,2,FrameWork.ConnectionType' FrameWork.DatabaseException' FrameWork.IsolationLevel' FrameWork.Log,FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
+FrameWork,DatabaseException,0,3,0,0,3,18,3,1,0,-1,0,4,,FrameWork.CacheException' FrameWork.MySQLObjectDatabase' FrameWork.DataConnection' FrameWork.ObjectDatabase
+FrameWork,DataObject,2,5,8,0,4,113,10,56,0,1,2,4,FrameWork.DataTable' FrameWork.IDGenerator,FrameWork.DataTableHandler' FrameWork.IObjectDatabase' FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
+FrameWork,DataTableHandler,4,5,4,0,5,44,5,0,0,0,3,2,FrameWork.ICache' FrameWork.SimpleCache' FrameWork.DataObject,FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
+FrameWork,DatabaseInfo,6,1,0,6,1,20,1,0,0,0,0,0,,
+FrameWork,DBManager,1,2,0,0,2,45,7,0,0,0,6,0,FrameWork.DataTable' FrameWork.ConnectionType' FrameWork.MySQLObjectDatabase' FrameWork.IObjectDatabase' FrameWork.ObjectDatabase' FrameWork.Log,
+FrameWork,MySQLObjectDatabase,0,13,0,0,1,563,98,0,1,-1,12,2,FrameWork.DataElement' FrameWork.PrimaryKey' FrameWork.DataConnection' FrameWork.DatabaseException' FrameWork.DataObject' FrameWork.DataTableHandler' FrameWork.ObjectDatabase' FrameWork.BindingInfo' FrameWork.IsolationLevel' FrameWork.IDGenerator' FrameWork.Log' FrameWork.Utils,FrameWork.DBManager' FrameWork.ObjectDatabase
+FrameWork,IObjectDatabase,0,17,0,0,0,30,17,1,0,-1,2,2,FrameWork.DataObject' FrameWork.IsolationLevel,FrameWork.ObjectDatabase' FrameWork.DBManager
+FrameWork,ObjectDatabase,7,43,0,0,20,732,140,1,1,0.19,15,2,FrameWork.DataElement' FrameWork.PrimaryKey' FrameWork.ReadOnly' FrameWork.Relation' FrameWork.ICache' FrameWork.ConnectionType' FrameWork.DataConnection' FrameWork.DatabaseException' FrameWork.DataObject' FrameWork.DataTableHandler' FrameWork.MySQLObjectDatabase' FrameWork.IObjectDatabase' FrameWork.BindingInfo' FrameWork.IsolationLevel' FrameWork.Log,FrameWork.DBManager' FrameWork.MySQLObjectDatabase
+FrameWork,BindingInfo,5,1,0,5,1,16,1,0,0,0,0,2,,FrameWork.ObjectDatabase' FrameWork.MySQLObjectDatabase
+FrameWork,IsolationLevel,0,0,0,0,0,9,0,0,0,-1,0,4,,FrameWork.IObjectDatabase' FrameWork.DataConnection' FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase
+FrameWork,IDGenerator,0,1,0,0,1,8,1,0,0,-1,0,2,,FrameWork.MySQLObjectDatabase' FrameWork.DataObject
+FrameWork,LoaderMgr,6,8,0,2,8,115,20,0,0,0.25,3,0,FrameWork.LoadingFunctionAttribute' FrameWork.Log' FrameWork.TCPManager,
 FrameWork,LoadingFunctionAttribute,1,1,0,1,1,9,1,0,0,0,0,1,,FrameWork.LoaderMgr
-FrameWork,Log,3,19,1,0,19,306,54,0,0,0,2,57,FrameWork.LogConfig' FrameWork.LogInfo,AccountCacher.CreateAccount' AccountCacher.Program' Common.AccountMgr' FrameWork.ConfigMgr' FrameWork.ConsoleMgr' FrameWork.DataConnection' FrameWork.DBManager' FrameWork.MySQLObjectDatabase' FrameWork.ObjectDatabase' FrameWork.LoaderMgr' FrameWork.BaseClient' FrameWork.PacketIn' FrameWork.PacketOut' FrameWork.TCPManager' FrameWork.ClientMgr' FrameWork.RpcClient' FrameWork.RpcObject' FrameWork.RpcServer' FrameWork.ServerMgr' FrameWork.ZlibMgr' LauncherServer.Program' LauncherServer.Client' LauncherServer.LauncherPackets' LobbyServer.Client' LobbyServer.Program' WorldServer.CharMgr' WorldServer.ClientZoneInfo' WorldServer.HeighMapInfo' WorldServer.ClientFileMgr' WorldServer.CommandMgr' WorldServer.CSharpScriptCompiler' WorldServer.AuthentificationHandlers' WorldServer.CharacterHandlers' WorldServer.GtoupHandlers' WorldServer.MovementHandlers' WorldServer.AbilityInterface' WorldServer.AbilityMgr' WorldServer.MailInterface' WorldServer.ScriptsInterface' WorldServer.GroupInvitation' WorldServer.Group' WorldServer.Item' WorldServer.ItemsInterface' WorldServer.QuestsInterface' WorldServer.SocialInterface' WorldServer.CellMgr' WorldServer.RegionMgr' WorldServer.WorldMgr' WorldServer.ZoneMgr' WorldServer.GameClient' WorldServer.Program' WorldServer.Object' WorldServer.Player' WorldServer.PQuestObject' WorldServer.Unit' WorldServer.MailBoxScript' WorldServer.CareerPackagesSender
-FrameWork,LogInfo,7,0,0,7,0,10,0,0,0,-1,0,6,,AccountCacher.AccountConfigs' FrameWork.Log' FrameWork.LogConfig' LauncherServer.LauncherConfig' LobbyServer.LobbyConfigs' WorldServer.WorldConfigs
-FrameWork,LogConfig,6,4,1,5,4,77,6,0,0,0.75,1,1,FrameWork.LogInfo,FrameWork.Log
-FrameWork,BaseClient,13,17,7,1,13,398,44,3,0,0.24,6,18,FrameWork.TCPManager' FrameWork.ICryptHandler' FrameWork.Log' FrameWork.CryptKey' FrameWork.PacketIn' FrameWork.PacketOut,FrameWork.ICryptHandler' FrameWork.TCPManager' LauncherServer.LauncherPackets' LobbyServer.NetWork.Handler.AuthentificationHandlers' WorldServer.AuthentificationHandlers' WorldServer.CharacterHandlers' WorldServer.ClientDatas' WorldServer.CombatHandlers' WorldServer.GtoupHandlers' WorldServer.InterfaceHandlers' WorldServer.InventoryHandlers' WorldServer.MailHandlers' WorldServer.MovementHandlers' WorldServer.QuestHandlers' WorldServer.SocialHandlers' WorldServer.TchatHandlers' WorldServer.Unk1' WorldServer.RC4Crypto
+FrameWork,Log,3,19,1,0,19,306,61,0,0,0,2,17,FrameWork.LogInfo' FrameWork.LogConfig,FrameWork.ZlibMgr' FrameWork.PacketOut' FrameWork.PacketIn' FrameWork.ObjectDatabase' FrameWork.DBManager' FrameWork.ClientMgr' FrameWork.LoaderMgr' FrameWork.ConfigMgr' FrameWork.RpcClient' FrameWork.ServerMgr' FrameWork.ConsoleMgr' FrameWork.RpcServer' FrameWork.RpcObject' FrameWork.MySQLObjectDatabase' FrameWork.DataConnection' FrameWork.TCPManager' FrameWork.BaseClient
+FrameWork,LogInfo,7,0,0,7,0,10,0,0,0,-1,0,2,,FrameWork.Log' FrameWork.LogConfig
+FrameWork,LogConfig,6,4,1,5,4,77,6,0,0,1,1,1,FrameWork.LogInfo,FrameWork.Log
+FrameWork,BaseClient,13,17,7,1,13,398,47,3,0,0.24,6,2,FrameWork.Log' FrameWork.PacketIn' FrameWork.PacketOut' FrameWork.CryptKey' FrameWork.ICryptHandler' FrameWork.TCPManager,FrameWork.ICryptHandler' FrameWork.TCPManager
 FrameWork,IPacketHandler,0,0,0,0,0,3,0,15,0,-1,0,0,,
 FrameWork,PacketHandlerType,0,0,0,0,0,5,0,0,0,-1,0,1,,FrameWork.PacketHandlerAttribute
 FrameWork,PacketHandlerAttribute,4,2,4,0,2,50,2,0,0,1,1,1,FrameWork.PacketHandlerType,FrameWork.TCPManager
-FrameWork,PacketIn,2,32,2,0,31,258,41,0,0,0.34,5,25,FrameWork.Marshal' FrameWork.Vector2' FrameWork.Vector3' FrameWork.Quaternion' FrameWork.Log,FrameWork.BaseClient' FrameWork.TCPManager' LauncherServer.Client' LauncherServer.LauncherPackets' LobbyServer.Client' LobbyServer.NetWork.Handler.AuthentificationHandlers' WorldServer.AuthentificationHandlers' WorldServer.CharacterHandlers' WorldServer.ClientDatas' WorldServer.InteractMenu' WorldServer.CombatHandlers' WorldServer.GtoupHandlers' WorldServer.InterfaceHandlers' WorldServer.InventoryHandlers' WorldServer.MailHandlers' WorldServer.MovementHandlers' WorldServer.QuestHandlers' WorldServer.SocialHandlers' WorldServer.TchatHandlers' WorldServer.Unk1' WorldServer.MailInterface' WorldServer.ItemsInterface' WorldServer.RC4Crypto' WorldServer.GameClient' WorldServer.Player
-FrameWork,PackStruct,0,0,0,0,0,5,0,0,0,-1,0,3,,FrameWork.PacketOut' LobbyServer.TCPServer' WorldServer.TCPServer
-FrameWork,PacketOut,9,39,0,9,38,402,82,0,0,0.54,5,33,FrameWork.PackStruct' FrameWork.Vector2' FrameWork.Vector3' FrameWork.Quaternion' FrameWork.Log,FrameWork.BaseClient' FrameWork.TCPManager' LauncherServer.LauncherPackets' LobbyServer.Client' LobbyServer.TCPServer' LobbyServer.NetWork.Handler.AuthentificationHandlers' WorldServer.CharMgr' WorldServer.Loot' WorldServer.AuthentificationHandlers' WorldServer.CharacterHandlers' WorldServer.MovementHandlers' WorldServer.TchatHandlers' WorldServer.Ability' WorldServer.AbilityInterface' WorldServer.MailInterface' WorldServer.Mount' WorldServer.Group' WorldServer.Item' WorldServer.ItemsInterface' WorldServer.QuestsInterface' WorldServer.SocialInterface' WorldServer.StatsInterface' WorldServer.TokInterface' WorldServer.WorldMgr' WorldServer.RC4Crypto' WorldServer.TCPServer' WorldServer.Creature' WorldServer.GameObject' WorldServer.Object' WorldServer.Player' WorldServer.PQuestObject' WorldServer.Unit' WorldServer.CareerPackagesSender
+FrameWork,PacketIn,2,32,2,0,31,258,41,0,0,0.34,5,3,FrameWork.Log' FrameWork.Marshal' FrameWork.Vector2' FrameWork.Vector3' FrameWork.Quaternion,FrameWork.ICryptHandler' FrameWork.TCPManager' FrameWork.BaseClient
+FrameWork,PackStruct,0,0,0,0,0,5,0,0,0,-1,0,1,,FrameWork.PacketOut
+FrameWork,PacketOut,9,39,0,9,38,402,101,0,0,0.54,5,2,FrameWork.Log' FrameWork.PackStruct' FrameWork.Vector2' FrameWork.Vector3' FrameWork.Quaternion,FrameWork.TCPManager' FrameWork.BaseClient
 FrameWork,CryptAttribute,1,1,0,1,1,9,1,0,0,0,0,1,,FrameWork.TCPManager
-FrameWork,CryptKey,2,6,0,0,6,29,6,0,0,0.33,0,3,,FrameWork.BaseClient' FrameWork.ICryptHandler' WorldServer.RC4Crypto
-FrameWork,ICryptHandler,0,3,0,0,0,6,3,1,0,-1,2,2,FrameWork.CryptKey' FrameWork.BaseClient,FrameWork.BaseClient' FrameWork.TCPManager
+FrameWork,CryptKey,2,6,0,0,6,29,6,0,0,0.33,0,2,,FrameWork.ICryptHandler' FrameWork.BaseClient
+FrameWork,ICryptHandler,0,3,0,0,0,6,3,1,0,-1,3,2,FrameWork.BaseClient' FrameWork.PacketIn' FrameWork.CryptKey,FrameWork.BaseClient' FrameWork.TCPManager
 FrameWork,Marshal,0,14,0,0,14,66,17,0,0,-1,0,1,,FrameWork.PacketIn
-FrameWork,AuthSessionTokenReplyProto,3,2,1,0,1,51,2,0,0,0,0,1,,FrameWork.AuthSessionTokenReply
-FrameWork,AuthSessionTokenReply,7,18,9,1,15,298,19,0,0,0.39,3,2,FrameWork.ResultCode' FrameWork.Builder' FrameWork.AuthSessionTokenReplyProto,FrameWork.Builder' LobbyServer.NetWork.Handler.AuthentificationHandlers
-FrameWork,Types,0,0,0,0,0,792,0,0,0,-1,0,2,,FrameWork.Builder' LobbyServer.NetWork.Handler.AuthentificationHandlers
-FrameWork,ResultCode,0,0,0,0,0,61,0,0,0,-1,0,8,,Common.AccountMgr' FrameWork.AuthSessionTokenReply' FrameWork.Builder' FrameWork.GetAcctPropListReply' FrameWork.GetCharSummaryListReply' FrameWork.GetClusterListReply' FrameWork.VerifyProtocolReply' LobbyServer.NetWork.Handler.AuthentificationHandlers
-FrameWork,Builder,24,215,130,0,191,2702,370,0,0,0,16,14,FrameWork.AuthSessionTokenReply' FrameWork.AuthSessionTokenReq' FrameWork.AcctProp' FrameWork.GetAcctPropListReply' FrameWork.CharSummary' FrameWork.GetCharSummaryListReply' FrameWork.ServerInfo' FrameWork.ClusterProp' FrameWork.ClusterInfo' FrameWork.GetClusterListReply' FrameWork.VerifyProtocolReply' FrameWork.VerifyProtocolReq' FrameWork.ResultCode' FrameWork.Types' FrameWork.ClusterPopStatus' FrameWork.ClusterStatus,Common.AccountMgr' FrameWork.AuthSessionTokenReply' FrameWork.AuthSessionTokenReq' FrameWork.GetAcctPropListReply' FrameWork.AcctProp' FrameWork.GetCharSummaryListReply' FrameWork.CharSummary' FrameWork.ServerInfo' FrameWork.ClusterProp' FrameWork.ClusterInfo' FrameWork.GetClusterListReply' FrameWork.VerifyProtocolReply' FrameWork.VerifyProtocolReq' LobbyServer.NetWork.Handler.AuthentificationHandlers
-FrameWork,AuthSessionTokenReqProto,3,2,1,0,1,42,2,0,0,0,0,1,,FrameWork.AuthSessionTokenReq
-FrameWork,AuthSessionTokenReq,7,18,9,1,15,271,19,0,0,0.39,2,2,FrameWork.Builder' FrameWork.AuthSessionTokenReqProto,FrameWork.Builder' LobbyServer.NetWork.Handler.AuthentificationHandlers
-FrameWork,GetAcctPropListReplyProto,5,2,1,0,1,59,2,0,0,0,0,2,,FrameWork.GetAcctPropListReply' FrameWork.AcctProp
-FrameWork,GetAcctPropListReply,9,19,11,2,16,689,21,0,0,0.32,4,1,FrameWork.ResultCode' FrameWork.AcctProp' FrameWork.Builder' FrameWork.GetAcctPropListReplyProto,FrameWork.Builder
-FrameWork,AcctProp,10,18,11,2,15,317,20,0,0,0.39,2,2,FrameWork.Builder' FrameWork.GetAcctPropListReplyProto,FrameWork.Builder' FrameWork.GetAcctPropListReply
-FrameWork,GetCharSummaryListReplyProto,5,2,1,0,1,61,2,0,0,0,0,2,,FrameWork.GetCharSummaryListReply' FrameWork.CharSummary
-FrameWork,GetCharSummaryListReply,9,19,11,2,16,780,21,0,0,0.32,4,1,FrameWork.ResultCode' FrameWork.CharSummary' FrameWork.Builder' FrameWork.GetCharSummaryListReplyProto,FrameWork.Builder
-FrameWork,CharSummary,16,18,15,4,15,408,22,0,0,0.39,2,2,FrameWork.Builder' FrameWork.GetCharSummaryListReplyProto,FrameWork.Builder' FrameWork.GetCharSummaryListReply
-FrameWork,GetClusterListReplyProto,9,2,1,0,1,85,2,0,0,0,0,4,,FrameWork.ServerInfo' FrameWork.ClusterProp' FrameWork.ClusterInfo' FrameWork.GetClusterListReply
-FrameWork,ClusterPopStatus,0,0,0,0,0,7,0,0,0,-1,0,3,,Common.AccountMgr' FrameWork.Builder' FrameWork.ClusterInfo
-FrameWork,ClusterStatus,0,0,0,0,0,7,0,0,0,-1,0,3,,Common.AccountMgr' FrameWork.Builder' FrameWork.ClusterInfo
-FrameWork,ServerInfo,10,18,11,2,15,318,20,0,0,0.39,2,3,FrameWork.Builder' FrameWork.GetClusterListReplyProto,Common.AccountMgr' FrameWork.Builder' FrameWork.ClusterInfo
-FrameWork,ClusterProp,10,18,11,2,15,316,20,0,0,0.39,2,3,FrameWork.Builder' FrameWork.GetClusterListReplyProto,Common.AccountMgr' FrameWork.Builder' FrameWork.ClusterInfo
-FrameWork,ClusterInfo,35,20,29,11,17,796,31,0,0,0.3,6,3,FrameWork.ClusterPopStatus' FrameWork.ClusterStatus' FrameWork.ServerInfo' FrameWork.ClusterProp' FrameWork.Builder' FrameWork.GetClusterListReplyProto,Common.AccountMgr' FrameWork.Builder' FrameWork.GetClusterListReply
-FrameWork,GetClusterListReply,9,19,11,2,16,351,21,0,0,0.32,4,2,FrameWork.ResultCode' FrameWork.ClusterInfo' FrameWork.Builder' FrameWork.GetClusterListReplyProto,Common.AccountMgr' FrameWork.Builder
-FrameWork,VerifyProtocolReplyProto,3,2,1,0,1,51,2,0,0,0,0,1,,FrameWork.VerifyProtocolReply
-FrameWork,VerifyProtocolReply,13,18,13,3,15,386,21,0,0,0.39,3,2,FrameWork.ResultCode' FrameWork.Builder' FrameWork.VerifyProtocolReplyProto,FrameWork.Builder' LobbyServer.NetWork.Handler.AuthentificationHandlers
-FrameWork,VerifyProtocolReqProto,3,2,1,0,1,43,2,0,0,0,0,1,,FrameWork.VerifyProtocolReq
-FrameWork,VerifyProtocolReq,13,18,13,3,15,365,21,0,0,0.39,2,1,FrameWork.Builder' FrameWork.VerifyProtocolReqProto,FrameWork.Builder
-FrameWork,TCPManager,15,33,1,7,27,492,80,3,0,0.09,7,21,FrameWork.BaseClient' FrameWork.Log' FrameWork.PacketOut' FrameWork.PacketHandlerAttribute' FrameWork.CryptAttribute' FrameWork.ICryptHandler' FrameWork.PacketIn,FrameWork.LoaderMgr' FrameWork.BaseClient' LauncherServer.Program' LauncherServer.Client' LobbyServer.Client' LobbyServer.Program' WorldServer.GmCommand' WorldServer.AuthentificationHandlers' WorldServer.Ability' WorldServer.AbilityInterface' WorldServer.AIInterface' WorldServer.CombatInterface' WorldServer.MailInterface' WorldServer.GroupInvitation' WorldServer.ItemsInterface' WorldServer.MovementInterface' WorldServer.RegionMgr' WorldServer.GameClient' WorldServer.Program' WorldServer.Player' WorldServer.Unit
-FrameWork,RpcClientInfo,5,2,0,5,2,20,2,0,0,0,0,7,,Common.Realm' Common.AccountMgr' FrameWork.ClientMgr' FrameWork.RpcClient' FrameWork.RpcObject' FrameWork.RpcServer' FrameWork.ServerMgr
-FrameWork,ClientMgr,0,6,0,0,6,27,6,0,1,-1,2,1,FrameWork.Log' FrameWork.RpcClientInfo,FrameWork.RpcServer
-FrameWork,RpcClientConfig,3,2,0,3,2,16,2,0,0,1,0,6,,LauncherServer.LauncherConfig' LauncherServer.Program' LobbyServer.LobbyConfigs' LobbyServer.Program' WorldServer.WorldConfigs' WorldServer.Program
-FrameWork,RpcClient,14,10,0,14,10,159,23,0,0,0,5,3,FrameWork.ServerMgr' FrameWork.RpcClientInfo' FrameWork.Log' FrameWork.RpcObject' FrameWork.RpcServer,LauncherServer.Program' LobbyServer.Program' WorldServer.Program
-FrameWork,RpcAttribute,3,1,0,3,1,13,1,0,0,0,0,1,,FrameWork.RpcObject
-FrameWork,RpcObject,1,6,0,1,6,58,13,3,0,1,3,3,FrameWork.RpcClientInfo' FrameWork.RpcAttribute' FrameWork.Log,FrameWork.RpcClient' FrameWork.RpcServer' FrameWork.ServerMgr
-FrameWork,RpcServerConfig,3,2,0,3,2,16,2,0,0,1,0,2,,AccountCacher.AccountConfigs' AccountCacher.Program
-FrameWork,RpcServer,10,9,0,10,9,122,21,0,0,0,5,3,FrameWork.ServerMgr' FrameWork.Log' FrameWork.RpcObject' FrameWork.RpcClientInfo' FrameWork.ClientMgr,AccountCacher.Program' FrameWork.RpcClient' FrameWork.ServerMgr
-FrameWork,ServerMgr,3,8,0,3,8,80,14,0,1,0.38,4,2,FrameWork.RpcServer' FrameWork.RpcClientInfo' FrameWork.Log' FrameWork.RpcObject,FrameWork.RpcClient' FrameWork.RpcServer
+FrameWork,AuthSessionTokenReplyProto,3,2,1,0,1,51,2,0,0,0,2,1,FrameWork.AuthSessionTokenReply' FrameWork.Builder,FrameWork.AuthSessionTokenReply
+FrameWork,AuthSessionTokenReply,7,18,9,1,15,298,19,0,0,0.39,4,1,FrameWork.AuthSessionTokenReplyProto' FrameWork.Types' FrameWork.ResultCode' FrameWork.Builder,FrameWork.AuthSessionTokenReplyProto
+FrameWork,Types,0,0,0,0,0,792,0,0,0,-1,0,6,,FrameWork.AuthSessionTokenReply' FrameWork.GetAcctPropListReplyProto' FrameWork.GetAcctPropListReply' FrameWork.GetCharSummaryListReplyProto' FrameWork.GetCharSummaryListReply' FrameWork.VerifyProtocolReply
+FrameWork,ResultCode,0,0,0,0,0,61,0,0,0,-1,0,5,,FrameWork.AuthSessionTokenReply' FrameWork.GetAcctPropListReply' FrameWork.GetCharSummaryListReply' FrameWork.GetClusterListReply' FrameWork.VerifyProtocolReply
+FrameWork,Builder,24,215,130,0,191,2702,474,0,0,0,0,17,,FrameWork.AuthSessionTokenReplyProto' FrameWork.AuthSessionTokenReply' FrameWork.AuthSessionTokenReqProto' FrameWork.AuthSessionTokenReq' FrameWork.GetAcctPropListReplyProto' FrameWork.GetAcctPropListReply' FrameWork.GetCharSummaryListReplyProto' FrameWork.GetCharSummaryListReply' FrameWork.GetClusterListReplyProto' FrameWork.ServerInfo' FrameWork.ClusterInfo' FrameWork.ClusterProp' FrameWork.GetClusterListReply' FrameWork.VerifyProtocolReplyProto' FrameWork.VerifyProtocolReply' FrameWork.VerifyProtocolReqProto' FrameWork.VerifyProtocolReq
+FrameWork,AuthSessionTokenReqProto,3,2,1,0,1,42,2,0,0,0,2,1,FrameWork.Builder' FrameWork.AuthSessionTokenReq,FrameWork.AuthSessionTokenReq
+FrameWork,AuthSessionTokenReq,7,18,9,1,15,271,19,0,0,0.39,2,1,FrameWork.Builder' FrameWork.AuthSessionTokenReqProto,FrameWork.AuthSessionTokenReqProto
+FrameWork,GetAcctPropListReplyProto,5,2,1,0,1,59,2,0,0,0,4,1,FrameWork.Types' FrameWork.Builder' FrameWork.GetAcctPropListReply' FrameWork.AcctProp,FrameWork.GetAcctPropListReply
+FrameWork,GetAcctPropListReply,9,19,11,2,16,689,21,0,0,0.32,5,1,FrameWork.Types' FrameWork.ResultCode' FrameWork.Builder' FrameWork.GetAcctPropListReplyProto' FrameWork.AcctProp,FrameWork.GetAcctPropListReplyProto
+FrameWork,AcctProp,10,18,11,2,15,317,20,0,0,0.39,0,2,,FrameWork.GetAcctPropListReplyProto' FrameWork.GetAcctPropListReply
+FrameWork,GetCharSummaryListReplyProto,5,2,1,0,1,61,2,0,0,0,4,1,FrameWork.Types' FrameWork.Builder' FrameWork.GetCharSummaryListReply' FrameWork.CharSummary,FrameWork.GetCharSummaryListReply
+FrameWork,GetCharSummaryListReply,9,19,11,2,16,780,21,0,0,0.32,5,1,FrameWork.Types' FrameWork.ResultCode' FrameWork.Builder' FrameWork.GetCharSummaryListReplyProto' FrameWork.CharSummary,FrameWork.GetCharSummaryListReplyProto
+FrameWork,CharSummary,16,18,15,4,15,408,22,0,0,0.39,0,2,,FrameWork.GetCharSummaryListReplyProto' FrameWork.GetCharSummaryListReply
+FrameWork,GetClusterListReplyProto,9,2,1,0,1,85,2,0,0,0,5,4,FrameWork.Builder' FrameWork.ServerInfo' FrameWork.ClusterProp' FrameWork.ClusterInfo' FrameWork.GetClusterListReply,FrameWork.ServerInfo' FrameWork.ClusterProp' FrameWork.ClusterInfo' FrameWork.GetClusterListReply
+FrameWork,ClusterPopStatus,0,0,0,0,0,7,0,0,0,-1,0,1,,FrameWork.ClusterInfo
+FrameWork,ClusterStatus,0,0,0,0,0,7,0,0,0,-1,0,1,,FrameWork.ClusterInfo
+FrameWork,ServerInfo,10,18,11,2,15,318,20,0,0,0.39,2,2,FrameWork.Builder' FrameWork.GetClusterListReplyProto,FrameWork.GetClusterListReplyProto' FrameWork.ClusterInfo
+FrameWork,ClusterProp,10,18,11,2,15,316,20,0,0,0.39,2,2,FrameWork.Builder' FrameWork.GetClusterListReplyProto,FrameWork.GetClusterListReplyProto' FrameWork.ClusterInfo
+FrameWork,ClusterInfo,35,20,29,11,17,796,31,0,0,0.3,6,2,FrameWork.Builder' FrameWork.GetClusterListReplyProto' FrameWork.ClusterPopStatus' FrameWork.ClusterStatus' FrameWork.ServerInfo' FrameWork.ClusterProp,FrameWork.GetClusterListReplyProto' FrameWork.GetClusterListReply
+FrameWork,GetClusterListReply,9,19,11,2,16,351,21,0,0,0.32,4,1,FrameWork.ResultCode' FrameWork.Builder' FrameWork.GetClusterListReplyProto' FrameWork.ClusterInfo,FrameWork.GetClusterListReplyProto
+FrameWork,VerifyProtocolReplyProto,3,2,1,0,1,51,2,0,0,0,2,1,FrameWork.Builder' FrameWork.VerifyProtocolReply,FrameWork.VerifyProtocolReply
+FrameWork,VerifyProtocolReply,13,18,13,3,15,386,21,0,0,0.39,4,1,FrameWork.Types' FrameWork.ResultCode' FrameWork.Builder' FrameWork.VerifyProtocolReplyProto,FrameWork.VerifyProtocolReplyProto
+FrameWork,VerifyProtocolReqProto,3,2,1,0,1,43,2,0,0,0,2,1,FrameWork.Builder' FrameWork.VerifyProtocolReq,FrameWork.VerifyProtocolReq
+FrameWork,VerifyProtocolReq,13,18,13,3,15,365,21,0,0,0.39,2,1,FrameWork.Builder' FrameWork.VerifyProtocolReqProto,FrameWork.VerifyProtocolReqProto
+FrameWork,TCPManager,15,33,1,7,27,492,85,3,0,0.09,7,2,FrameWork.Log' FrameWork.BaseClient' FrameWork.PacketHandlerAttribute' FrameWork.PacketIn' FrameWork.PacketOut' FrameWork.CryptAttribute' FrameWork.ICryptHandler,FrameWork.LoaderMgr' FrameWork.BaseClient
+FrameWork,RpcClientInfo,5,2,0,5,2,20,2,0,0,1,0,5,,FrameWork.ClientMgr' FrameWork.RpcObject' FrameWork.RpcClient' FrameWork.ServerMgr' FrameWork.RpcServer
+FrameWork,ClientMgr,0,6,0,0,6,27,6,0,1,-1,4,1,FrameWork.Log' FrameWork.RpcClientInfo' FrameWork.RpcAttribute' FrameWork.RpcObject,FrameWork.RpcServer
+FrameWork,RpcClientConfig,3,2,0,3,2,16,2,0,0,1,0,0,,
+FrameWork,RpcClient,14,10,0,14,10,159,23,0,0,0,5,0,FrameWork.Log' FrameWork.RpcClientInfo' FrameWork.RpcObject' FrameWork.RpcServer' FrameWork.ServerMgr,
+FrameWork,RpcAttribute,3,1,0,3,1,13,1,0,0,0,0,3,,FrameWork.RpcObject' FrameWork.ServerMgr' FrameWork.ClientMgr
+FrameWork,RpcObject,1,6,0,1,6,58,13,3,0,1,3,4,FrameWork.Log' FrameWork.RpcClientInfo' FrameWork.RpcAttribute,FrameWork.ClientMgr' FrameWork.ServerMgr' FrameWork.RpcServer' FrameWork.RpcClient
+FrameWork,RpcServerConfig,3,2,0,3,2,16,2,0,0,1,0,0,,
+FrameWork,RpcServer,10,9,0,10,9,122,21,0,0,0.22,5,2,FrameWork.Log' FrameWork.RpcClientInfo' FrameWork.ClientMgr' FrameWork.RpcObject' FrameWork.ServerMgr,FrameWork.ServerMgr' FrameWork.RpcClient
+FrameWork,ServerMgr,3,8,0,3,8,80,14,0,1,0.38,5,2,FrameWork.Log' FrameWork.RpcClientInfo' FrameWork.RpcAttribute' FrameWork.RpcObject' FrameWork.RpcServer,FrameWork.RpcServer' FrameWork.RpcClient
 FrameWork,Color,4,1,0,4,1,12,1,0,0,0,0,1,,FrameWork.Utils
-FrameWork,RandomMgr,1,3,0,1,3,19,3,0,0,0,0,6,,WorldServer.LootsMgr' WorldServer.AIInterface' WorldServer.WorldMgr' WorldServer.Creature' WorldServer.WorldOrderMountScript' WorldServer.WorldDestructionMountScript
-FrameWork,Utils,0,22,1,0,22,182,44,0,0,-1,2,1,FrameWork.Vector3' FrameWork.Color,FrameWork.MySQLObjectDatabase
-FrameWork,Vector2,2,1,0,2,1,11,1,1,0,0,0,2,,FrameWork.PacketIn' FrameWork.PacketOut
-FrameWork,Vector3,1,1,0,1,1,10,1,1,1,0,0,3,,FrameWork.PacketIn' FrameWork.PacketOut' FrameWork.Utils
-FrameWork,Quaternion,1,1,0,1,1,10,1,0,2,0,0,2,,FrameWork.PacketIn' FrameWork.PacketOut
-FrameWork,Adler32,2,1,0,0,0,58,5,0,0,0,0,4,,FrameWork.Deflate' FrameWork.InfBlocks' FrameWork.Inflate' FrameWork.ZStream
-FrameWork,Deflate,113,40,0,0,0,1751,149,0,0,0.05,6,2,FrameWork.Config' FrameWork.ZStream' FrameWork.Tree' FrameWork.StaticTree' FrameWork.SupportClass' FrameWork.Adler32,FrameWork.Tree' FrameWork.ZStream
+FrameWork,RandomMgr,1,3,0,1,3,19,3,0,0,0,0,0,,
+FrameWork,Utils,0,22,1,0,22,182,44,0,0,-1,2,1,FrameWork.Color' FrameWork.Vector3,FrameWork.MySQLObjectDatabase
+FrameWork,Vector2,2,1,0,2,1,11,1,1,0,0,0,3,,FrameWork.Vector3' FrameWork.PacketOut' FrameWork.PacketIn
+FrameWork,Vector3,1,1,0,1,1,10,1,1,1,0,1,4,FrameWork.Vector2,FrameWork.Quaternion' FrameWork.Utils' FrameWork.PacketOut' FrameWork.PacketIn
+FrameWork,Quaternion,1,1,0,1,1,10,1,0,2,0,1,2,FrameWork.Vector3,FrameWork.PacketOut' FrameWork.PacketIn
+FrameWork,Adler32,2,1,0,0,0,58,5,0,0,0,0,1,,FrameWork.ZStream
+FrameWork,Deflate,113,40,0,0,0,1751,170,0,0,0.05,5,2,FrameWork.Config' FrameWork.StaticTree' FrameWork.SupportClass' FrameWork.Tree' FrameWork.ZStream,FrameWork.Tree' FrameWork.ZStream
 FrameWork,Config,5,1,0,0,0,16,1,0,0,0,0,1,,FrameWork.Deflate
-FrameWork,InfBlocks,40,7,0,0,0,672,21,0,0,0,5,2,FrameWork.InfCodes' FrameWork.ZStream' FrameWork.Adler32' FrameWork.SupportClass' FrameWork.InfTree,FrameWork.InfCodes' FrameWork.Inflate
-FrameWork,InfCodes,34,5,0,0,0,668,7,0,0,0.4,3,1,FrameWork.ZStream' FrameWork.InfBlocks' FrameWork.SupportClass,FrameWork.InfBlocks
-FrameWork,Inflate,40,7,0,0,0,402,24,0,0,0,3,1,FrameWork.InfBlocks' FrameWork.ZStream' FrameWork.Adler32,FrameWork.ZStream
-FrameWork,InfTree,19,4,0,0,0,329,33,0,0,0,2,1,FrameWork.SupportClass' FrameWork.ZStream,FrameWork.InfBlocks
-FrameWork,StaticTree,17,2,0,0,0,45,2,0,0,1,1,2,FrameWork.Tree,FrameWork.Deflate' FrameWork.Tree
-FrameWork,SupportClass,0,12,0,0,12,146,20,0,0,-1,0,6,,FrameWork.Deflate' FrameWork.InfBlocks' FrameWork.InfCodes' FrameWork.InfTree' FrameWork.Tree' FrameWork.ZInputStream
-FrameWork,Tree,25,5,0,0,0,301,24,0,0,0.4,3,2,FrameWork.StaticTree' FrameWork.SupportClass' FrameWork.Deflate,FrameWork.Deflate' FrameWork.StaticTree
-FrameWork,ZInputStream,8,7,3,0,6,133,10,0,0,0.29,3,0,FrameWork.ZStream' FrameWork.zlibConst' FrameWork.SupportClass,
-FrameWork,zlibConst,22,1,0,21,1,35,1,0,0,0,0,3,,FrameWork.ZInputStream' FrameWork.ZlibMgr' FrameWork.ZOutputStream
-FrameWork,ZlibMgr,0,4,0,0,3,35,4,0,0,-1,3,0,FrameWork.zlibConst' FrameWork.ZOutputStream' FrameWork.Log,
-FrameWork,ZOutputStream,7,13,8,0,12,233,15,0,0,0.31,2,1,FrameWork.ZStream' FrameWork.zlibConst,FrameWork.ZlibMgr
-FrameWork,ZStream,31,15,0,10,13,185,30,0,0,0,3,7,FrameWork.Deflate' FrameWork.Inflate' FrameWork.Adler32,FrameWork.Deflate' FrameWork.InfBlocks' FrameWork.InfCodes' FrameWork.Inflate' FrameWork.InfTree' FrameWork.ZInputStream' FrameWork.ZOutputStream
-FrameWork,ZStreamException,0,2,0,0,2,9,2,0,0,-1,0,0,,
-ByteOperations,ByteSwap,0,22,0,0,22,161,24,0,0,-1,0,2,,WorldServer.MailHandlers' WorldServer.MailInterface
+FrameWork,InfBlocks,40,7,0,0,0,672,70,0,0,0,4,2,FrameWork.InfCodes' FrameWork.InfTree' FrameWork.SupportClass' FrameWork.ZStream,FrameWork.InfCodes' FrameWork.Inflate
+FrameWork,InfCodes,34,5,0,0,0,668,47,0,0,0.4,3,1,FrameWork.InfBlocks' FrameWork.SupportClass' FrameWork.ZStream,FrameWork.InfBlocks
+FrameWork,Inflate,40,7,0,0,0,402,57,0,0,0,3,1,FrameWork.InfBlocks' FrameWork.SupportClass' FrameWork.ZStream,FrameWork.ZStream
+FrameWork,InfTree,19,4,0,0,0,329,38,0,0,0,2,1,FrameWork.SupportClass' FrameWork.ZStream,FrameWork.InfBlocks
+FrameWork,StaticTree,17,2,0,0,0,45,2,0,0,1,1,2,FrameWork.Tree,FrameWork.Tree' FrameWork.Deflate
+FrameWork,SupportClass,0,12,0,0,12,146,20,0,0,-1,0,7,,FrameWork.InfCodes' FrameWork.ZInputStream' FrameWork.Tree' FrameWork.InfTree' FrameWork.Inflate' FrameWork.Deflate' FrameWork.InfBlocks
+FrameWork,Tree,25,5,0,0,0,301,24,0,0,0.4,3,2,FrameWork.Deflate' FrameWork.StaticTree' FrameWork.SupportClass,FrameWork.StaticTree' FrameWork.Deflate
+FrameWork,ZInputStream,8,7,3,0,6,133,10,0,0,0.29,4,0,FrameWork.SupportClass' FrameWork.zlibConst' FrameWork.ZStream' FrameWork.ZStreamException,
+FrameWork,zlibConst,22,1,0,21,1,35,1,0,0,0,0,3,,FrameWork.ZlibMgr' FrameWork.ZOutputStream' FrameWork.ZInputStream
+FrameWork,ZlibMgr,0,4,0,0,3,35,4,0,0,-1,3,0,FrameWork.Log' FrameWork.zlibConst' FrameWork.ZOutputStream,
+FrameWork,ZOutputStream,7,13,8,0,12,233,15,0,0,0.31,3,1,FrameWork.zlibConst' FrameWork.ZStream' FrameWork.ZStreamException,FrameWork.ZlibMgr
+FrameWork,ZStream,31,15,0,10,13,185,30,0,0,0,3,7,FrameWork.Adler32' FrameWork.Deflate' FrameWork.Inflate,FrameWork.ZInputStream' FrameWork.InfTree' FrameWork.ZOutputStream' FrameWork.InfBlocks' FrameWork.InfCodes' FrameWork.Inflate' FrameWork.Deflate
+FrameWork,ZStreamException,0,2,0,0,2,9,2,0,0,-1,0,2,,FrameWork.ZInputStream' FrameWork.ZOutputStream
+ByteOperations,ByteSwap,0,22,0,0,22,161,24,0,0,-1,0,0,,

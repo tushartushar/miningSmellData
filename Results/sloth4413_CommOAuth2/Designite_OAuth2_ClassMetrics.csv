@@ -1,69 +1,69 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OAuth2.Docking,IQuickAuth,0,1,1,0,0,10,1,0,0,-1,0,0,,
-OAuth2.Docking,IUserAuth,0,1,0,0,0,10,1,0,0,-1,0,0,,
-OAuth2.Entities,BaseError<TError>,0,3,0,0,3,15,3,0,0,-1,0,0,,
-OAuth2.Entities,ErrorCode,0,0,0,0,0,68,0,0,0,-1,0,3,,OAuth2.Entities.Qzone.QzoneErrorResult' OAuth2.Entities.Sina.SinaErrorResult' OAuth2.Entities.WeiXin.WxErrorResult
+OAuth2.Docking,IQuickAuth,0,1,1,0,0,10,1,0,0,-1,1,0,OAuth2.Docking.IUserAuth,
+OAuth2.Docking,IUserAuth,0,1,0,0,0,10,1,0,0,-1,0,1,,OAuth2.Docking.IQuickAuth
+OAuth2.Entities,BaseError<TError>,0,3,0,0,3,15,3,0,0,-1,0,6,,OAuth2.Entities.WeiXin.WxErrorResult' OAuth2.Entities.Qzone.QzoneErrorResult' OAuth2.HttpUtils.Post' OAuth2.HttpUtils.IHttpSupplier' OAuth2.Entities.Sina.SinaErrorResult' OAuth2.HttpUtils.Get
+OAuth2.Entities,ErrorCode,0,0,0,0,0,68,0,0,0,-1,0,3,,OAuth2.Entities.Qzone.QzoneErrorResult' OAuth2.Entities.WeiXin.WxErrorResult' OAuth2.Entities.Sina.SinaErrorResult
 OAuth2.Entities.Qzone,QzoneAccessTokenInteractive,0,0,2,0,0,6,0,0,0,-1,0,1,,OAuth2.Qzone.QzoneResourceSessionBuilder
-OAuth2.Entities.Qzone,QzoneErrorResult,0,3,2,0,3,20,3,0,0,-1,1,0,OAuth2.Entities.ErrorCode,
+OAuth2.Entities.Qzone,QzoneErrorResult,0,3,2,0,3,20,3,0,0,-1,2,2,OAuth2.Entities.BaseError<TError>' OAuth2.Entities.ErrorCode,OAuth2.Qzone.QzoneResourceSession' OAuth2.Qzone.QzoneResourceSessionBuilder
 OAuth2.Entities.Qzone,QzoneOpenIdResult,0,0,2,0,0,6,0,0,0,-1,0,1,,OAuth2.Qzone.QzoneResourceSessionBuilder
-OAuth2.Entities.Qzone,QzoneUserInfoResult,0,0,14,0,0,18,0,0,1,-1,0,2,,OAuth2.Example.Test.Qzone.QzoneOAuthHandler' OAuth2.Test.ErrorMechanism
+OAuth2.Entities.Qzone,QzoneUserInfoResult,0,0,14,0,0,18,0,0,1,-1,1,0,OAuth2.IResource,
 OAuth2.Entities.Sina,SinaAccessTokenInteractive,0,0,4,0,0,18,0,0,0,-1,0,1,,OAuth2.Sina.SinaResourceSessionBuilder
-OAuth2.Entities.Sina,SinaErrorResult,1,3,3,1,3,24,3,0,0,1,1,0,OAuth2.Entities.ErrorCode,
-OAuth2.Entities.Sina,SinaUserInfoResult,0,0,34,0,0,41,0,0,1,-1,0,1,,OAuth2.Example.Test.Sina.SinaOAuthHandler
+OAuth2.Entities.Sina,SinaErrorResult,1,3,3,1,3,24,3,0,0,1,2,2,OAuth2.Entities.BaseError<TError>' OAuth2.Entities.ErrorCode,OAuth2.Sina.SinaResourceSession' OAuth2.Sina.SinaResourceSessionBuilder
+OAuth2.Entities.Sina,SinaUserInfoResult,0,0,34,0,0,41,0,0,1,-1,1,0,OAuth2.IResource,
 OAuth2.Entities.WeiXin,WxAccessTokenInteractive,0,0,5,0,0,24,0,0,0,-1,0,1,,OAuth2.WeiXin.WxResourceSessionBuilder
-OAuth2.Entities.WeiXin,WxErrorResult,0,4,2,0,4,23,4,0,0,-1,1,0,OAuth2.Entities.ErrorCode,
-OAuth2.Entities.WeiXin,WxUserInfoResult,0,0,8,0,0,36,0,0,1,-1,0,1,,OAuth2.Example.Test.WeiXin.WxOAuthHandler
-OAuth2.Exceptions,JsonResultException,0,1,0,0,1,7,1,0,0,-1,0,0,,
-OAuth2.Extension,Controller,0,2,0,0,2,15,2,0,0,-1,2,0,OAuth2.MessageHandler.HandlerController' OAuth2.MessageHandler.IOAuthHandler,
+OAuth2.Entities.WeiXin,WxErrorResult,0,4,2,0,4,23,4,0,0,-1,2,2,OAuth2.Entities.BaseError<TError>' OAuth2.Entities.ErrorCode,OAuth2.WeiXin.WxResourceSession' OAuth2.WeiXin.WxResourceSessionBuilder
+OAuth2.Entities.WeiXin,WxUserInfoResult,0,0,8,0,0,36,0,0,1,-1,1,0,OAuth2.IResource,
+OAuth2.Exceptions,JsonResultException,0,1,0,0,1,7,1,0,0,-1,0,5,,OAuth2.HttpUtils.Get' OAuth2.HttpUtils.Post' OAuth2.WeiXin.WxResourceSessionBuilder' OAuth2.Sina.SinaResourceSessionBuilder' OAuth2.Qzone.QzoneResourceSessionBuilder
+OAuth2.Extension,Controller,0,2,0,0,2,15,2,0,0,-1,3,0,OAuth2.MessageHandler.HandlerController' OAuth2.MessageHandler.IOAuthHandler' OAuth2.MessageHandler.ContextBase,
 OAuth2.FileUtils,FileHelper,0,1,0,0,1,17,2,0,0,-1,0,1,,OAuth2.HttpUtils.RequestUtility
-OAuth2,IJsonConverter,0,1,0,0,0,4,1,2,0,-1,0,4,,OAuth2.HttpUtils.Get' OAuth2.HttpUtils.IHttpSupplier' OAuth2.HttpUtils.HttpSuppplier' OAuth2.HttpUtils.Post
-OAuth2,IForeverable,0,1,0,0,0,12,1,4,0,-1,0,0,,
+OAuth2,IJsonConverter,0,1,0,0,0,4,1,2,0,-1,0,6,,OAuth2.JsonConverter.UrlParamConverter' OAuth2.HttpUtils.Get' OAuth2.JsonConverter.CallbackConverter' OAuth2.HttpUtils.Post' OAuth2.HttpUtils.IHttpSupplier' OAuth2.HttpUtils.HttpSuppplier
+OAuth2,IForeverable,0,1,0,0,0,12,1,4,0,-1,0,5,,OAuth2.Qzone.QzoneResourceSession' OAuth2.IResourceSession' OAuth2.Sina.SinaResourceSession' OAuth2.WeiXin.WxResourceSession' OAuth2.WeiXin.WxResourceSessionBuilder
 OAuth2,IRevokable,0,1,0,0,0,4,1,0,0,-1,0,0,,
-OAuth2,ISession,0,1,2,0,0,15,1,2,0,-1,0,0,,
-OAuth2,IResource,0,0,0,0,0,4,0,3,0,-1,0,0,,
-OAuth2,IAuthenticationSession,0,0,1,0,0,7,0,4,1,-1,0,0,,
-OAuth2,IResourceSession,0,0,2,0,0,11,0,3,1,-1,0,0,,
-OAuth2,SessionBuilder<TSetting;TSession>,0,1,0,0,1,6,1,0,0,-1,0,0,,
-OAuth2,BuilderSetting,0,1,1,0,0,11,1,7,0,-1,0,0,,
-OAuth2,ISessionContainer,0,2,0,0,0,16,2,0,0,-1,0,0,,
-OAuth2,SessionLifetime,0,0,2,0,0,11,0,0,0,-1,0,3,,OAuth2.Qzone.QzoneResourceSession' OAuth2.Sina.SinaResourceSession' OAuth2.WeiXin.WxResourceSession
-OAuth2,TokenType,0,0,0,0,0,5,0,0,0,-1,0,0,,
-OAuth2,IToken,0,0,2,0,0,5,0,2,0,-1,0,3,,OAuth2.Protocols.QzoneProtocal' OAuth2.Protocols.SinaProtocal' OAuth2.Protocols.WxProtocol
-OAuth2,AccessToken,0,2,2,0,2,13,2,0,1,-1,0,3,,OAuth2.Qzone.QzoneResourceSession' OAuth2.Sina.SinaResourceSession' OAuth2.WeiXin.WxResourceSession
-OAuth2,RefrechToken,0,2,2,0,2,13,2,0,1,-1,0,3,,OAuth2.Qzone.QzoneResourceSession' OAuth2.Sina.SinaResourceSession' OAuth2.WeiXin.WxResourceSession
-OAuth2.JsonConverter,CallbackConverter,0,2,0,0,1,22,3,0,1,-1,0,0,,
-OAuth2.JsonConverter,UrlParamConverter,0,1,0,0,1,51,4,0,1,-1,1,0,OAuth2.JsonConverter.JsonFormatConverter,
+OAuth2,ISession,0,1,2,0,0,15,1,2,0,-1,2,4,OAuth2.IResource' OAuth2.SessionLifetime,OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.IAuthenticationSession' OAuth2.IResourceSession' OAuth2.ISessionContainer
+OAuth2,IResource,0,0,0,0,0,4,0,3,0,-1,0,10,,OAuth2.ISession' OAuth2.Entities.Qzone.QzoneUserInfoResult' OAuth2.Qzone.QzoneResourceSession' OAuth2.Entities.Sina.SinaUserInfoResult' OAuth2.WeiXin.WxResourceSession' OAuth2.Qzone.QzoneAuthenticationSession' OAuth2.Entities.WeiXin.WxUserInfoResult' OAuth2.WeiXin.WxAuthenticationSession' OAuth2.Sina.SinaResourceSession' OAuth2.Sina.SinaAuthenticationSession
+OAuth2,IAuthenticationSession,0,0,1,0,0,7,0,4,1,-1,1,3,OAuth2.ISession,OAuth2.Sina.SinaAuthenticationSession' OAuth2.WeiXin.WxAuthenticationSession' OAuth2.Qzone.QzoneAuthenticationSession
+OAuth2,IResourceSession,0,0,2,0,0,11,0,3,1,-1,3,3,OAuth2.IForeverable' OAuth2.ISession' OAuth2.IToken,OAuth2.Sina.SinaResourceSession' OAuth2.Qzone.QzoneResourceSession' OAuth2.WeiXin.WxResourceSession
+OAuth2,SessionBuilder<TSetting;TSession>,0,1,0,0,1,6,1,0,0,-1,2,6,OAuth2.ISession' OAuth2.BuilderSetting,OAuth2.Qzone.QzoneResourceSessionBuilder' OAuth2.Qzone.QzoneAuthenticationSessionBuilder' OAuth2.WeiXin.WxResourceSessionBuilder' OAuth2.Sina.SinaResourceSessionBuilder' OAuth2.Sina.SinaAuthenticationSessionBuilder' OAuth2.WeiXin.WxAuthenticationSessionBuilder
+OAuth2,BuilderSetting,0,1,1,0,0,11,1,7,0,-1,0,7,,OAuth2.Qzone.QzoneRequestAuthSetting' OAuth2.Qzone.QzoneRequestResSetting' OAuth2.Sina.SinaRequestResSetting' OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.WeiXin.WxRequestAuthSetting' OAuth2.WeiXin.WxRequestResSetting' OAuth2.Sina.SinaRequestAuthSetting
+OAuth2,ISessionContainer,0,2,0,0,0,16,2,0,0,-1,1,0,OAuth2.ISession,
+OAuth2,SessionLifetime,0,0,2,0,0,11,0,0,0,-1,0,7,,OAuth2.Qzone.QzoneAuthenticationSession' OAuth2.WeiXin.WxAuthenticationSession' OAuth2.WeiXin.WxResourceSession' OAuth2.Sina.SinaAuthenticationSession' OAuth2.Sina.SinaResourceSession' OAuth2.Qzone.QzoneResourceSession' OAuth2.ISession
+OAuth2,TokenType,0,0,0,0,0,5,0,0,0,-1,0,3,,OAuth2.IToken' OAuth2.AccessToken' OAuth2.RefrechToken
+OAuth2,IToken,0,0,2,0,0,5,0,2,0,-1,1,6,OAuth2.TokenType,OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.Sina.SinaResourceSession' OAuth2.Qzone.QzoneResourceSession' OAuth2.WeiXin.WxResourceSession' OAuth2.IResourceSession
+OAuth2,AccessToken,0,2,2,0,2,13,2,0,1,-1,2,6,OAuth2.TokenType' OAuth2.IToken,OAuth2.WeiXin.WxResourceSession' OAuth2.WeiXin.WxResourceSessionBuilder' OAuth2.Qzone.QzoneResourceSession' OAuth2.Qzone.QzoneResourceSessionBuilder' OAuth2.Sina.SinaResourceSession' OAuth2.Sina.SinaResourceSessionBuilder
+OAuth2,RefrechToken,0,2,2,0,2,13,2,0,1,-1,2,4,OAuth2.TokenType' OAuth2.IToken,OAuth2.Qzone.QzoneResourceSession' OAuth2.Sina.SinaResourceSession' OAuth2.WeiXin.WxResourceSession' OAuth2.WeiXin.WxResourceSessionBuilder
+OAuth2.JsonConverter,CallbackConverter,0,2,0,0,1,22,3,0,1,-1,1,1,OAuth2.IJsonConverter,OAuth2.Qzone.QzoneResourceSessionBuilder
+OAuth2.JsonConverter,UrlParamConverter,0,1,0,0,1,51,4,0,1,-1,2,1,OAuth2.IJsonConverter' OAuth2.JsonConverter.JsonFormatConverter,OAuth2.Qzone.QzoneResourceSessionBuilder
 OAuth2.JsonConverter,JsonFormatConverter,1,3,0,0,2,25,5,0,0,0,0,1,,OAuth2.JsonConverter.UrlParamConverter
-OAuth2.MessageHandler,HandlerController,2,1,2,0,1,29,3,0,0,0,1,3,OAuth2.MessageHandler.IOAuthHandler,OAuth2.Extension.Controller' OAuth2.Example.Test.ResponseAuthentication' OAuth2.Test.Handlers
-OAuth2.MessageHandler,IOAuthHandler,0,1,1,0,0,5,1,4,0,-1,0,2,,OAuth2.Extension.Controller' OAuth2.MessageHandler.HandlerController
-OAuth2.MessageHandler,ContextBase,0,0,0,0,0,3,0,4,0,-1,0,0,,
-OAuth2.HttpUtils,Get,0,2,0,0,2,33,6,0,0,-1,2,1,OAuth2.HttpUtils.RequestUtility' OAuth2.IJsonConverter,OAuth2.HttpUtils.HttpSuppplier
-OAuth2.HttpUtils,IHttpSupplier,0,2,0,0,0,5,2,1,0,-1,1,10,OAuth2.IJsonConverter,AliPay.Authorization.AlAuthenticationSession' OAuth2.Qzone.QzoneAuthenticationSession' OAuth2.Qzone.QzoneResourceSession' OAuth2.Qzone.QzoneResourceSessionBuilder' OAuth2.Sina.SinaAuthenticationSession' OAuth2.Sina.SinaResourceSession' OAuth2.Sina.SinaResourceSessionBuilder' OAuth2.WeiXin.WxAuthenticationSession' OAuth2.WeiXin.WxResourceSession' OAuth2.WeiXin.WxResourceSessionBuilder
-OAuth2.HttpUtils,HttpSuppplier,0,2,0,0,0,11,2,0,1,-1,3,0,OAuth2.HttpUtils.Get' OAuth2.IJsonConverter' OAuth2.HttpUtils.Post,
-OAuth2.HttpUtils,Post,0,4,0,0,4,71,7,0,0,-1,2,1,OAuth2.IJsonConverter' OAuth2.HttpUtils.RequestUtility,OAuth2.HttpUtils.HttpSuppplier
-OAuth2.HttpUtils,RequestUtility,0,10,0,0,10,230,22,0,0,-1,1,2,OAuth2.FileUtils.FileHelper,OAuth2.HttpUtils.Get' OAuth2.HttpUtils.Post
-OAuth2.Client,IUrlDirect,0,1,1,0,0,5,1,3,0,-1,0,0,,
-OAuth2.Protocols,QzoneProtocal,0,4,0,0,4,59,8,0,0,-1,4,0,OAuth2.Qzone.QzoneRequestAuthSetting' OAuth2.Qzone.QzoneRequestResSetting' OAuth2.IToken' OAuth2.Qzone.QzoneResourceSession,
-OAuth2.Protocols,QzoneScope,0,0,0,0,0,7,0,0,0,-1,0,1,,OAuth2.Example.Test.QzoneRequest
-OAuth2.Protocols,SinaProtocal,0,3,0,0,3,41,6,0,0,-1,4,0,OAuth2.Sina.SinaRequestAuthSetting' OAuth2.Sina.SinaRequestResSetting' OAuth2.IToken' OAuth2.Sina.SinaResourceSession,
-OAuth2.Protocols,SinaScope,0,0,0,0,0,12,0,0,0,-1,0,1,,OAuth2.Example.Test.SinaRequest
-OAuth2.Protocols,WxProtocol,0,3,0,0,3,49,6,0,0,-1,4,0,OAuth2.WeiXin.WxRequestAuthSetting' OAuth2.WeiXin.WxRequestResSetting' OAuth2.IToken' OAuth2.WeiXin.WxResourceSession,
-OAuth2.Protocols,WxScope,0,0,0,0,0,5,0,0,0,-1,0,1,,OAuth2.Example.Test.RequestAuthentication
-OAuth2.Qzone,QzoneAuthenticationSession,1,4,4,0,4,24,4,0,2,1,1,2,OAuth2.HttpUtils.IHttpSupplier,OAuth2.Qzone.QzoneAuthenticationSessionBuilder' OAuth2.Example.Test.QzoneRequest
-OAuth2.Qzone,QzoneAuthenticationSessionBuilder,0,1,0,0,1,8,1,0,0,-1,2,1,OAuth2.Qzone.QzoneAuthenticationSession' OAuth2.Qzone.QzoneRequestAuthSetting,OAuth2.Example.Test.QzoneRequest
-OAuth2.Qzone,QzoneRequestAuthSetting,0,1,2,0,1,12,1,0,1,-1,0,3,,OAuth2.Protocols.QzoneProtocal' OAuth2.Qzone.QzoneAuthenticationSessionBuilder' OAuth2.Example.Test.QzoneRequest
-OAuth2.Qzone,QzoneRequestResSetting,0,1,4,0,1,10,1,0,1,-1,0,2,,OAuth2.Protocols.QzoneProtocal' OAuth2.Qzone.QzoneResourceSessionBuilder
-OAuth2.Qzone,QzoneResourceSession,1,3,7,0,3,33,3,0,2,0.67,4,4,OAuth2.HttpUtils.IHttpSupplier' OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.SessionLifetime,OAuth2.Protocols.QzoneProtocal' OAuth2.Qzone.QzoneResourceSessionBuilder' OAuth2.Example.Test.Qzone.QzoneOAuthHandler' OAuth2.Test.ErrorMechanism
-OAuth2.Qzone,QzoneResourceSessionBuilder,1,1,0,0,1,23,1,0,0,0,5,1,OAuth2.HttpUtils.IHttpSupplier' OAuth2.Entities.Qzone.QzoneAccessTokenInteractive' OAuth2.Qzone.QzoneResourceSession' OAuth2.Entities.Qzone.QzoneOpenIdResult' OAuth2.Qzone.QzoneRequestResSetting,OAuth2.Example.Test.Qzone.QzoneOAuthHandler
-OAuth2.Sina,SinaAuthenticationSession,1,4,4,0,4,24,4,0,2,1,1,2,OAuth2.HttpUtils.IHttpSupplier,OAuth2.Sina.SinaAuthenticationSessionBuilder' OAuth2.Example.Test.SinaRequest
-OAuth2.Sina,SinaAuthenticationSessionBuilder,0,1,0,0,1,8,1,0,0,-1,2,1,OAuth2.Sina.SinaAuthenticationSession' OAuth2.Sina.SinaRequestAuthSetting,OAuth2.Example.Test.SinaRequest
-OAuth2.Sina,SinaRequestAuthSetting,0,2,6,0,1,37,2,0,1,-1,0,3,,OAuth2.Protocols.SinaProtocal' OAuth2.Sina.SinaAuthenticationSessionBuilder' OAuth2.Example.Test.SinaRequest
-OAuth2.Sina,SinaRequestResSetting,0,2,4,0,1,14,2,0,1,-1,0,2,,OAuth2.Protocols.SinaProtocal' OAuth2.Sina.SinaResourceSessionBuilder
-OAuth2.Sina,SinaResourceSession,1,3,6,0,3,32,3,0,2,0.67,4,3,OAuth2.HttpUtils.IHttpSupplier' OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.SessionLifetime,OAuth2.Protocols.SinaProtocal' OAuth2.Sina.SinaResourceSessionBuilder' OAuth2.Example.Test.Sina.SinaOAuthHandler
-OAuth2.Sina,SinaResourceSessionBuilder,1,1,0,0,1,19,1,0,0,0,4,1,OAuth2.HttpUtils.IHttpSupplier' OAuth2.Entities.Sina.SinaAccessTokenInteractive' OAuth2.Sina.SinaRequestResSetting' OAuth2.Sina.SinaResourceSession,OAuth2.Example.Test.Sina.SinaOAuthHandler
-OAuth2.WeiXin,WxAuthenticationSession,1,4,4,0,4,24,4,0,2,1,1,2,OAuth2.HttpUtils.IHttpSupplier,OAuth2.WeiXin.WxAuthenticationSessionBuilder' OAuth2.Example.Test.RequestAuthentication
-OAuth2.WeiXin,WxAuthenticationSessionBuilder,0,1,0,0,1,13,1,0,0,-1,2,1,OAuth2.WeiXin.WxRequestAuthSetting' OAuth2.WeiXin.WxAuthenticationSession,OAuth2.Example.Test.RequestAuthentication
-OAuth2.WeiXin,WxRequestAuthSetting,1,2,3,1,2,27,2,0,1,1,0,3,,OAuth2.Protocols.WxProtocol' OAuth2.WeiXin.WxAuthenticationSessionBuilder' OAuth2.Example.Test.RequestAuthentication
-OAuth2.WeiXin,WxRequestResSetting,0,2,4,0,1,20,2,0,1,-1,0,2,,OAuth2.Protocols.WxProtocol' OAuth2.WeiXin.WxResourceSessionBuilder
-OAuth2.WeiXin,WxResourceSession,1,3,5,0,3,32,3,0,2,0.67,4,3,OAuth2.HttpUtils.IHttpSupplier' OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.SessionLifetime,OAuth2.Protocols.WxProtocol' OAuth2.WeiXin.WxResourceSessionBuilder' OAuth2.Example.Test.WeiXin.WxOAuthHandler
-OAuth2.WeiXin,WxResourceSessionBuilder,1,1,0,0,1,23,1,0,0,0,4,1,OAuth2.HttpUtils.IHttpSupplier' OAuth2.Entities.WeiXin.WxAccessTokenInteractive' OAuth2.WeiXin.WxRequestResSetting' OAuth2.WeiXin.WxResourceSession,OAuth2.Example.Test.WeiXin.WxOAuthHandler
+OAuth2.MessageHandler,HandlerController,2,1,2,0,1,29,3,0,0,0,1,1,OAuth2.MessageHandler.ContextBase,OAuth2.Extension.Controller
+OAuth2.MessageHandler,IOAuthHandler,0,1,1,0,0,5,1,4,0,-1,1,1,OAuth2.MessageHandler.ContextBase,OAuth2.Extension.Controller
+OAuth2.MessageHandler,ContextBase,0,0,0,0,0,3,0,4,0,-1,0,3,,OAuth2.MessageHandler.HandlerController' OAuth2.MessageHandler.IOAuthHandler' OAuth2.Extension.Controller
+OAuth2.HttpUtils,Get,0,2,0,0,2,33,6,0,0,-1,4,1,OAuth2.Entities.BaseError<TError>' OAuth2.Exceptions.JsonResultException' OAuth2.IJsonConverter' OAuth2.HttpUtils.RequestUtility,OAuth2.HttpUtils.HttpSuppplier
+OAuth2.HttpUtils,IHttpSupplier,0,2,0,0,0,5,2,1,0,-1,2,10,OAuth2.Entities.BaseError<TError>' OAuth2.IJsonConverter,OAuth2.Sina.SinaAuthenticationSession' OAuth2.Qzone.QzoneAuthenticationSession' OAuth2.Qzone.QzoneResourceSession' OAuth2.Qzone.QzoneResourceSessionBuilder' OAuth2.WeiXin.WxAuthenticationSession' OAuth2.Sina.SinaResourceSession' OAuth2.Sina.SinaResourceSessionBuilder' OAuth2.WeiXin.WxResourceSession' OAuth2.WeiXin.WxResourceSessionBuilder' OAuth2.HttpUtils.HttpSuppplier
+OAuth2.HttpUtils,HttpSuppplier,0,2,0,0,0,11,2,0,1,-1,4,3,OAuth2.IJsonConverter' OAuth2.HttpUtils.Get' OAuth2.HttpUtils.IHttpSupplier' OAuth2.HttpUtils.Post,OAuth2.Qzone.QzoneResourceSessionBuilder' OAuth2.Sina.SinaResourceSessionBuilder' OAuth2.WeiXin.WxResourceSessionBuilder
+OAuth2.HttpUtils,Post,0,4,0,0,4,71,7,0,0,-1,4,1,OAuth2.Entities.BaseError<TError>' OAuth2.Exceptions.JsonResultException' OAuth2.IJsonConverter' OAuth2.HttpUtils.RequestUtility,OAuth2.HttpUtils.HttpSuppplier
+OAuth2.HttpUtils,RequestUtility,0,10,0,0,10,230,23,0,0,-1,1,2,OAuth2.FileUtils.FileHelper,OAuth2.HttpUtils.Get' OAuth2.HttpUtils.Post
+OAuth2.Client,IUrlDirect,0,1,1,0,0,5,1,3,0,-1,0,3,,OAuth2.Sina.SinaAuthenticationSession' OAuth2.WeiXin.WxAuthenticationSession' OAuth2.Qzone.QzoneAuthenticationSession
+OAuth2.Protocols,QzoneProtocal,0,4,0,0,4,59,8,0,0,-1,3,0,OAuth2.Qzone.QzoneRequestAuthSetting' OAuth2.Qzone.QzoneRequestResSetting' OAuth2.Qzone.QzoneResourceSession,
+OAuth2.Protocols,QzoneScope,0,0,0,0,0,7,0,0,0,-1,0,0,,
+OAuth2.Protocols,SinaProtocal,0,3,0,0,3,41,6,0,0,-1,3,0,OAuth2.Sina.SinaRequestAuthSetting' OAuth2.Sina.SinaRequestResSetting' OAuth2.Sina.SinaResourceSession,
+OAuth2.Protocols,SinaScope,0,0,0,0,0,12,0,0,0,-1,0,0,,
+OAuth2.Protocols,WxProtocol,0,3,0,0,3,49,6,0,0,-1,3,0,OAuth2.WeiXin.WxRequestAuthSetting' OAuth2.WeiXin.WxRequestResSetting' OAuth2.WeiXin.WxResourceSession,
+OAuth2.Protocols,WxScope,0,0,0,0,0,5,0,0,0,-1,0,0,,
+OAuth2.Qzone,QzoneAuthenticationSession,1,4,4,0,4,24,4,0,2,1,5,1,OAuth2.IResource' OAuth2.IAuthenticationSession' OAuth2.SessionLifetime' OAuth2.HttpUtils.IHttpSupplier' OAuth2.Client.IUrlDirect,OAuth2.Qzone.QzoneAuthenticationSessionBuilder
+OAuth2.Qzone,QzoneAuthenticationSessionBuilder,0,1,0,0,1,8,1,0,0,-1,3,0,OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.Qzone.QzoneAuthenticationSession' OAuth2.Qzone.QzoneRequestAuthSetting,
+OAuth2.Qzone,QzoneRequestAuthSetting,0,1,2,0,1,12,1,0,1,-1,1,2,OAuth2.BuilderSetting,OAuth2.Protocols.QzoneProtocal' OAuth2.Qzone.QzoneAuthenticationSessionBuilder
+OAuth2.Qzone,QzoneRequestResSetting,0,1,4,0,1,10,1,0,1,-1,1,2,OAuth2.BuilderSetting,OAuth2.Qzone.QzoneResourceSessionBuilder' OAuth2.Protocols.QzoneProtocal
+OAuth2.Qzone,QzoneResourceSession,1,3,7,0,3,33,3,0,2,0.67,9,2,OAuth2.Entities.Qzone.QzoneErrorResult' OAuth2.IForeverable' OAuth2.IResource' OAuth2.IResourceSession' OAuth2.SessionLifetime' OAuth2.IToken' OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.HttpUtils.IHttpSupplier,OAuth2.Protocols.QzoneProtocal' OAuth2.Qzone.QzoneResourceSessionBuilder
+OAuth2.Qzone,QzoneResourceSessionBuilder,1,1,0,0,1,23,1,0,0,0,12,0,OAuth2.Entities.Qzone.QzoneAccessTokenInteractive' OAuth2.Entities.Qzone.QzoneErrorResult' OAuth2.Entities.Qzone.QzoneOpenIdResult' OAuth2.Exceptions.JsonResultException' OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.AccessToken' OAuth2.JsonConverter.CallbackConverter' OAuth2.JsonConverter.UrlParamConverter' OAuth2.HttpUtils.IHttpSupplier' OAuth2.HttpUtils.HttpSuppplier' OAuth2.Qzone.QzoneRequestResSetting' OAuth2.Qzone.QzoneResourceSession,
+OAuth2.Sina,SinaAuthenticationSession,1,4,4,0,4,24,4,0,2,1,5,1,OAuth2.IResource' OAuth2.IAuthenticationSession' OAuth2.SessionLifetime' OAuth2.HttpUtils.IHttpSupplier' OAuth2.Client.IUrlDirect,OAuth2.Sina.SinaAuthenticationSessionBuilder
+OAuth2.Sina,SinaAuthenticationSessionBuilder,0,1,0,0,1,8,1,0,0,-1,3,0,OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.Sina.SinaAuthenticationSession' OAuth2.Sina.SinaRequestAuthSetting,
+OAuth2.Sina,SinaRequestAuthSetting,0,2,6,0,1,37,2,0,1,-1,1,2,OAuth2.BuilderSetting,OAuth2.Protocols.SinaProtocal' OAuth2.Sina.SinaAuthenticationSessionBuilder
+OAuth2.Sina,SinaRequestResSetting,0,2,4,0,1,14,2,0,1,-1,1,2,OAuth2.BuilderSetting,OAuth2.Protocols.SinaProtocal' OAuth2.Sina.SinaResourceSessionBuilder
+OAuth2.Sina,SinaResourceSession,1,3,6,0,3,32,3,0,2,0.67,9,2,OAuth2.Entities.Sina.SinaErrorResult' OAuth2.IForeverable' OAuth2.IResource' OAuth2.IResourceSession' OAuth2.SessionLifetime' OAuth2.IToken' OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.HttpUtils.IHttpSupplier,OAuth2.Protocols.SinaProtocal' OAuth2.Sina.SinaResourceSessionBuilder
+OAuth2.Sina,SinaResourceSessionBuilder,1,1,0,0,1,19,1,0,0,0,9,0,OAuth2.Entities.Sina.SinaAccessTokenInteractive' OAuth2.Entities.Sina.SinaErrorResult' OAuth2.Exceptions.JsonResultException' OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.AccessToken' OAuth2.HttpUtils.IHttpSupplier' OAuth2.HttpUtils.HttpSuppplier' OAuth2.Sina.SinaRequestResSetting' OAuth2.Sina.SinaResourceSession,
+OAuth2.WeiXin,WxAuthenticationSession,1,4,4,0,4,24,4,0,2,1,5,1,OAuth2.IResource' OAuth2.IAuthenticationSession' OAuth2.SessionLifetime' OAuth2.HttpUtils.IHttpSupplier' OAuth2.Client.IUrlDirect,OAuth2.WeiXin.WxAuthenticationSessionBuilder
+OAuth2.WeiXin,WxAuthenticationSessionBuilder,0,1,0,0,1,13,1,0,0,-1,3,0,OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.WeiXin.WxAuthenticationSession' OAuth2.WeiXin.WxRequestAuthSetting,
+OAuth2.WeiXin,WxRequestAuthSetting,1,2,3,1,2,27,2,0,1,1,1,2,OAuth2.BuilderSetting,OAuth2.Protocols.WxProtocol' OAuth2.WeiXin.WxAuthenticationSessionBuilder
+OAuth2.WeiXin,WxRequestResSetting,0,2,4,0,1,20,2,0,1,-1,1,2,OAuth2.BuilderSetting,OAuth2.Protocols.WxProtocol' OAuth2.WeiXin.WxResourceSessionBuilder
+OAuth2.WeiXin,WxResourceSession,1,3,5,0,3,32,3,0,2,0.67,9,2,OAuth2.Entities.WeiXin.WxErrorResult' OAuth2.IForeverable' OAuth2.IResource' OAuth2.IResourceSession' OAuth2.SessionLifetime' OAuth2.IToken' OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.HttpUtils.IHttpSupplier,OAuth2.Protocols.WxProtocol' OAuth2.WeiXin.WxResourceSessionBuilder
+OAuth2.WeiXin,WxResourceSessionBuilder,1,1,0,0,1,23,1,0,0,0,11,0,OAuth2.Entities.WeiXin.WxAccessTokenInteractive' OAuth2.Entities.WeiXin.WxErrorResult' OAuth2.Exceptions.JsonResultException' OAuth2.IForeverable' OAuth2.SessionBuilder<TSetting;TSession>' OAuth2.AccessToken' OAuth2.RefrechToken' OAuth2.HttpUtils.IHttpSupplier' OAuth2.HttpUtils.HttpSuppplier' OAuth2.WeiXin.WxRequestResSetting' OAuth2.WeiXin.WxResourceSession,

@@ -1,6 +1,6 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Tmx.Commands,AddBddScenarioCommand,0,1,0,0,0,16,2,0,1,-1,1,0,Tmx.BddAddScenarioCommand,
-Tmx.Commands,NewBddFeatureCommand,0,1,0,0,0,9,1,0,1,-1,1,0,Tmx.BddNewFeatureCommand,
+Tmx.Commands,AddBddScenarioCommand,0,1,0,0,0,16,2,0,1,-1,2,0,Tmx.BddScenarioCmdletBase' Tmx.BddAddScenarioCommand,
+Tmx.Commands,NewBddFeatureCommand,0,1,0,0,0,9,1,0,1,-1,2,0,Tmx.BddFeatureCmdletBase' Tmx.BddNewFeatureCommand,
 Tmx.Commands.Bdd,GetBDDCurrentFeatureDataCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,
 Tmx.Commands.Bdd,GetBDDCurrentFeatureTagsCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,
 Tmx.Commands.Bdd,GetBDDCurrentFeatureTitleCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,
@@ -9,15 +9,15 @@ Tmx.Commands.Bdd,GetBDDCurrentScenarioDataCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,
 Tmx.Commands.Bdd,GetBDDCurrentScenarioTagsCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,
 Tmx.Commands.Bdd,GetBDDCurrentScenarioTitleCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,
 Tmx.Commands.Bdd,SetBDDCurrentScenarioDataCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Tmx,BddCmdletBase,0,1,2,0,0,28,3,3,0,-1,0,0,,
-Tmx,BddFeatureCmdletBase,0,0,4,0,0,22,0,1,1,-1,0,2,,Tmx.BDDHelper' Tmx.BddNewFeatureCommand
-Tmx,BddScenarioCmdletBase,0,0,7,0,0,35,0,1,1,-1,0,3,,Tmx.BDDHelper' Tmx.BddAddScenarioCommand' Tmx.ScenarioProcessingClass
-Tmx,BddStepCmdletBase,0,1,0,0,1,6,1,0,1,-1,0,0,,
-Tmx,BDDHelper,0,11,0,0,10,75,12,0,0,-1,3,2,Tmx.ScenarioProcessingClass' Tmx.BddFeatureCmdletBase' Tmx.BddScenarioCmdletBase,Tmx.BddAddScenarioCommand' Tmx.BddNewFeatureCommand
-Tmx,BddCommand,0,2,1,0,0,10,2,2,0,-1,0,0,,
-Tmx,BddAddScenarioCommand,0,2,0,0,0,13,2,0,1,-1,2,1,Tmx.BddScenarioCmdletBase' Tmx.BDDHelper,Tmx.Commands.AddBddScenarioCommand
-Tmx,BddNewFeatureCommand,0,2,0,0,0,12,2,0,1,-1,2,1,Tmx.BddFeatureCmdletBase' Tmx.BDDHelper,Tmx.Commands.NewBddFeatureCommand
-Tmx,ScenarioProcessingClass,4,5,1,0,4,112,14,0,0,0.8,1,1,Tmx.BddScenarioCmdletBase,Tmx.BDDHelper
+Tmx,BddCmdletBase,0,1,2,0,0,28,3,3,0,-1,0,3,,Tmx.BddFeatureCmdletBase' Tmx.BddStepCmdletBase' Tmx.BddScenarioCmdletBase
+Tmx,BddFeatureCmdletBase,0,0,4,0,0,22,0,1,1,-1,1,3,Tmx.BddCmdletBase,Tmx.Commands.NewBddFeatureCommand' Tmx.BDDHelper' Tmx.BddNewFeatureCommand
+Tmx,BddScenarioCmdletBase,0,0,7,0,0,35,0,1,1,-1,1,4,Tmx.BddCmdletBase,Tmx.ScenarioProcessingClass' Tmx.BDDHelper' Tmx.Commands.AddBddScenarioCommand' Tmx.BddAddScenarioCommand
+Tmx,BddStepCmdletBase,0,1,0,0,1,6,1,0,1,-1,1,0,Tmx.BddCmdletBase,
+Tmx,BDDHelper,0,11,0,0,10,75,12,0,0,-1,3,2,Tmx.BddFeatureCmdletBase' Tmx.BddScenarioCmdletBase' Tmx.ScenarioProcessingClass,Tmx.BddNewFeatureCommand' Tmx.BddAddScenarioCommand
+Tmx,BddCommand,0,2,1,0,0,10,2,2,0,-1,0,2,,Tmx.BddNewFeatureCommand' Tmx.BddAddScenarioCommand
+Tmx,BddAddScenarioCommand,0,2,0,0,0,13,2,0,1,-1,3,1,Tmx.BddScenarioCmdletBase' Tmx.BDDHelper' Tmx.BddCommand,Tmx.Commands.AddBddScenarioCommand
+Tmx,BddNewFeatureCommand,0,2,0,0,0,12,2,0,1,-1,3,1,Tmx.BddFeatureCmdletBase' Tmx.BDDHelper' Tmx.BddCommand,Tmx.Commands.NewBddFeatureCommand
+Tmx,ScenarioProcessingClass,4,5,1,0,4,112,14,0,0,1,1,1,Tmx.BddScenarioCmdletBase,Tmx.BDDHelper
 Tmx,IBddFeature,0,0,2,0,0,5,0,0,0,-1,0,0,,
 Tmx,IBddScenario,0,0,0,0,0,4,0,0,0,-1,0,0,,
 Tmx.Helpers.UnderlyingCode.Commands,BddGetCurrentFeatureDataCommand,0,1,0,0,1,6,1,0,0,-1,0,0,,

@@ -1,6 +1,6 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Reactor.Divert,WINDIVERT_ADDRESS,3,0,0,0,0,7,0,0,0,-1,0,1,,Reactor.Divert.Socket
-Reactor.Divert,WINDIVERT_LAYER,0,0,0,0,0,5,0,0,0,-1,0,1,,Reactor.Divert.Socket
+Reactor.Divert,WINDIVERT_ADDRESS,3,0,0,0,0,7,0,0,0,-1,0,2,,Reactor.Divert.WinDivert' Reactor.Divert.Socket
+Reactor.Divert,WINDIVERT_LAYER,0,0,0,0,0,5,0,0,0,-1,0,2,,Reactor.Divert.WinDivert' Reactor.Divert.Socket
 Reactor.Divert,PWINDIVERT_PARAM,0,0,0,0,0,5,0,0,0,-1,0,0,,
 Reactor.Divert,WINDIVERT_IPHDR,16,0,0,0,0,20,0,0,0,-1,0,0,,
 Reactor.Divert,PWINDIVERT_IPV6HDR,14,0,0,0,0,18,0,0,0,-1,0,0,,
@@ -8,11 +8,11 @@ Reactor.Divert,PWINDIVERT_ICMPHDR,4,0,0,0,0,8,0,0,0,-1,0,0,,
 Reactor.Divert,PWINDIVERT_ICMPV6HDR,4,0,0,0,0,8,0,0,0,-1,0,0,,
 Reactor.Divert,PWINDIVERT_TCPHDR,9,0,0,0,0,22,0,0,0,-1,0,0,,
 Reactor.Divert,WINDIVERT_UDPHDR,4,0,0,0,0,8,0,0,0,-1,0,0,,
-Reactor.Divert,WinDivert,0,5,0,0,0,74,5,0,0,-1,0,1,,Reactor.Divert.Socket
-Reactor.Divert,ISocket,0,4,0,0,0,7,4,1,0,-1,0,0,,
-Reactor.Divert,Socket,10,9,0,0,7,98,14,0,1,0,4,0,Reactor.Divert.WINDIVERT_ADDRESS' Reactor.Divert.WinDivert' Reactor.Divert.WINDIVERT_LAYER' Reactor.Loop,
+Reactor.Divert,WinDivert,0,5,0,0,0,74,5,0,0,-1,2,1,Reactor.Divert.WINDIVERT_ADDRESS' Reactor.Divert.WINDIVERT_LAYER,Reactor.Divert.Socket
+Reactor.Divert,ISocket,0,4,0,0,0,7,4,1,0,-1,0,1,,Reactor.Divert.Socket
+Reactor.Divert,Socket,10,9,0,0,7,98,14,0,1,0.33,4,0,Reactor.Divert.WINDIVERT_ADDRESS' Reactor.Divert.WINDIVERT_LAYER' Reactor.Divert.WinDivert' Reactor.Divert.ISocket,
 Reactor.Divert.Parsers,DnsHeader,6,2,6,0,2,107,2,0,0,1,0,0,,
-Reactor.Divert.Parsers,ProtocolType,0,0,0,0,0,6,0,0,0,-1,0,0,,
-Reactor.Divert.Parsers,IpHeader,12,2,14,0,2,262,2,0,0,1,0,1,,Reactor.Divert.Parsers.TcpHeader
+Reactor.Divert.Parsers,ProtocolType,0,0,0,0,0,6,0,0,0,-1,0,1,,Reactor.Divert.Parsers.IpHeader
+Reactor.Divert.Parsers,IpHeader,12,2,14,0,2,262,2,0,0,1,1,1,Reactor.Divert.Parsers.ProtocolType,Reactor.Divert.Parsers.TcpHeader
 Reactor.Divert.Parsers,TcpHeader,11,2,11,0,2,237,2,0,0,1,1,0,Reactor.Divert.Parsers.IpHeader,
 Reactor.Divert.Parsers,Udpheader,5,2,5,0,2,96,2,0,0,1,0,0,,

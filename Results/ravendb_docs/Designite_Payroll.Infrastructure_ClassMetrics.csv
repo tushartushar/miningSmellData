@@ -1,7 +1,7 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Payroll.Infrastructure,Command,0,0,0,0,0,3,0,1,1,-1,0,0,,
-Payroll.Infrastructure,Event,0,1,1,0,0,8,1,1,1,-1,0,0,,
-Payroll.Infrastructure,IBus,0,3,0,0,0,6,3,1,0,-1,0,4,,Playground.Program' Payroll.Domain.CommandHandlers.RaiseEmployeeSalaryHandler' Payroll.Domain.CommandHandlers.UpdateEmployeeHomeAddressHandler' Payroll.Domain.CommandHandlers.RegisterEmployeeHandler
-Payroll.Infrastructure,IMessageHandler,0,1,0,0,0,5,1,6,0,-1,0,1,,Payroll.Infrastructure.InMemoryBus.NaiveInMemoryBus
-Payroll.Infrastructure,Message,0,1,1,0,0,8,1,2,0,-1,0,1,,Payroll.Infrastructure.RavenDbEmployeeRepository.EmployeeEventStore
-Payroll.Infrastructure,IDependencyInjector,0,2,0,0,0,5,2,1,0,-1,0,2,,Playground.Program' Payroll.Infrastructure.InMemoryBus.NaiveInMemoryBus
+Payroll.Infrastructure,Command,0,0,0,0,0,3,0,1,1,-1,1,1,Payroll.Infrastructure.Message,Payroll.Infrastructure.IBus
+Payroll.Infrastructure,Event,0,1,1,0,0,9,1,1,1,-1,1,1,Payroll.Infrastructure.Message,Payroll.Infrastructure.IBus
+Payroll.Infrastructure,IBus,0,3,0,0,0,6,3,1,0,-1,2,0,Payroll.Infrastructure.Command' Payroll.Infrastructure.Event,
+Payroll.Infrastructure,IMessageHandler,0,1,0,0,0,5,1,6,0,-1,1,0,Payroll.Infrastructure.Message,
+Payroll.Infrastructure,Message,0,1,1,0,0,9,1,2,0,-1,0,3,,Payroll.Infrastructure.Event' Payroll.Infrastructure.Command' Payroll.Infrastructure.IMessageHandler
+Payroll.Infrastructure,IDependencyInjector,0,2,0,0,0,5,2,1,0,-1,0,0,,

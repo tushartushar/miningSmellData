@@ -1,42 +1,42 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Snap,AspectContainer,0,1,1,0,1,13,1,5,1,-1,1,0,Snap.AspectConfiguration,
-Snap,AspectUtility,0,4,0,0,3,51,4,0,0,-1,3,0,Snap.MethodInterceptAttribute' Snap.ClassInterceptAttribute' Snap.AspectConfiguration,
-Snap,BindingPair,0,0,2,0,0,5,0,0,0,-1,0,1,,Snap.TypeScanner
-Snap,ClassInterceptAttribute,0,2,4,0,2,20,2,3,1,-1,1,2,Snap.MulticastOptions,Snap.AspectUtility' Snap.Interception
+Snap,AspectContainer,0,1,1,0,1,13,1,5,1,-1,3,0,Snap.IAspectContainer' Snap.IMasterProxy' Snap.AspectConfiguration,
+Snap,AspectUtility,0,4,0,0,3,51,4,0,0,-1,3,0,Snap.ClassInterceptAttribute' Snap.AspectConfiguration' Snap.MethodInterceptAttribute,
+Snap,BindingPair,0,0,2,0,0,5,0,0,0,-1,0,2,,Snap.Interfaces.IScanningConvention' Snap.DefaultConventionScanner
+Snap,ClassInterceptAttribute,0,2,4,0,2,20,2,3,1,-1,2,2,Snap.MulticastOptions' Snap.IInterceptAttribute,Snap.AspectUtility' Snap.Interception
 Snap,MulticastOptions,0,0,0,0,0,11,0,0,0,-1,0,2,,Snap.ClassInterceptAttribute' Snap.Interception
-Snap,ConfigurationSyntax<T>,1,3,0,0,3,29,3,0,1,0,1,0,Snap.AspectConfiguration,
-Snap,DefaultConventionScanner,0,1,0,0,1,31,1,0,1,-1,2,0,Snap.MethodInterceptor' Snap.IInterceptAttribute,
-Snap,AspectBookSyntax,1,2,0,0,2,21,3,0,1,0,1,1,Snap.AspectRegistration,Snap.AspectConfiguration
-Snap,IAspectBookSyntax,0,1,0,0,0,10,1,1,0,-1,0,5,,Snap.Tests.AutofacTests' Snap.Tests.CastleWindsorTests' Snap.Tests.LinFuTests' Snap.Tests.NinjectTests' Snap.Tests.StructureMapTests
-Snap,ProxyFactory,1,5,0,0,3,80,8,0,0,0,3,5,Snap.IMasterProxy' Snap.AspectConfiguration' Snap.PseudoInterceptor,Snap.Autofac.AutofacAspectModule' Snap.LinFu.AspectPostProcessor' Snap.Ninject.AspectProxyActivationStrategy' Snap.StructureMap.StructureMapAspectInterceptor' Snap.StructureMap.StructureMapDefinedAspectInterceptor
-Snap,ResolveInterceptorFromContainerCreationStrategy,1,2,0,0,2,23,2,0,1,0,2,0,Snap.IAttributeInterceptor' Snap.AspectRegistration,
-Snap,InstantiateInterceptorDirectlyCreationStrategy,0,1,0,0,1,18,1,0,1,-1,2,0,Snap.IAttributeInterceptor' Snap.AspectRegistration,
-Snap,IInterceptorCreationStrategy,0,1,0,0,0,11,1,2,0,-1,1,1,Snap.AspectRegistration,Snap.MasterProxy
-Snap,Interception,2,8,4,0,2,202,21,0,0,0.38,3,2,Snap.ClassInterceptAttribute' Snap.MulticastOptions' Snap.MethodSignatureFormatter,Snap.MasterProxy' Snap.MethodInterceptor
-Snap,AspectRegistration,0,2,4,0,2,31,2,0,0,-1,0,9,,Snap.AspectBookSyntax' Snap.ResolveInterceptorFromContainerCreationStrategy' Snap.InstantiateInterceptorDirectlyCreationStrategy' Snap.IInterceptorCreationStrategy' Snap.MasterProxy' Snap.AspectConfiguration' Snap.AttributedSortOrderStrategy' Snap.IndexSortOrderStrategy' Snap.SortOrderFactory
-Snap,ISortOrderStrategy,0,1,0,0,0,8,1,3,0,-1,0,1,,Snap.MasterProxy
-Snap,IOrderSyntax,0,1,0,0,0,8,1,1,1,-1,0,1,,Snap.Tests.AspectTests
-Snap,ITypeScanner,0,2,0,0,0,14,2,1,1,-1,0,1,,Snap.Tests.AspectTests
-Snap,ITypeScanningStrategy,0,2,0,0,0,14,2,1,1,-1,1,1,Snap.Interfaces.IScanningConvention,Snap.Tests.AspectTests
-Snap,PseudoInterceptor,0,2,1,0,2,19,3,0,0,-1,0,2,,Snap.ProxyFactory' Snap.CastleWindsor.CastleAspectFacility
-Snap,IAspectConfiguration,0,10,0,0,0,57,10,1,1,-1,0,7,,Snap.SnapFluentConfiguration' Snap.Tests.AspectTests' Snap.Tests.AutofacTests' Snap.Tests.CastleWindsorTests' Snap.Tests.LinFuTests' Snap.Tests.NinjectTests' Snap.Tests.StructureMapTests
-Snap,IAspectContainer,0,1,1,0,0,14,1,2,1,-1,1,1,Snap.AspectConfiguration,Snap.SnapConfiguration
-Snap,IAttributeInterceptor,0,3,2,0,0,22,3,1,1,-1,0,3,,Snap.ResolveInterceptorFromContainerCreationStrategy' Snap.InstantiateInterceptorDirectlyCreationStrategy' Snap.MasterProxy
-Snap,IConfigurationSyntax,0,1,0,0,0,9,1,1,1,-1,0,6,,Snap.Tests.AspectTests' Snap.Tests.AutofacTests' Snap.Tests.CastleWindsorTests' Snap.Tests.LinFuTests' Snap.Tests.NinjectTests' Snap.Tests.StructureMapTests
-Snap,IHideBaseTypes,0,4,0,0,0,16,4,9,0,-1,0,0,,
-Snap,IInterceptAttribute,0,0,1,0,0,8,0,2,0,-1,0,3,,Snap.DefaultConventionScanner' Snap.AttributedSortOrderStrategy' Snap.SortOrderFactory
-Snap,IMasterProxy,0,0,3,0,0,20,0,1,1,-1,0,7,,Snap.ProxyFactory' Snap.Autofac.AutofacAspectContainer' Snap.CastleWindsor.CastleAspectContainer' Snap.LinFu.LinFuAspectContainer' Snap.Ninject.NinjectAspectContainer' Snap.StructureMap.StructureMapAspectContainer' Snap.StructureMap.StructureMapDefinedAspectInterceptor
-Snap,MasterProxy,0,2,3,0,1,67,7,0,2,-1,7,4,Snap.AspectConfiguration' Snap.ISortOrderStrategy' Snap.SortOrderFactory' Snap.Interception' Snap.AspectRegistration' Snap.IInterceptorCreationStrategy' Snap.IAttributeInterceptor,Snap.Autofac.AutofacAspectModule' Snap.CastleWindsor.CastleAspectFacility' Snap.Ninject.AspectProxyActivationStrategy' Snap.StructureMap.StructureMapAspectInterceptor
-Snap,SnapConfiguration,0,2,0,0,2,23,2,0,0,-1,3,6,Snap.SnapFluentConfiguration' Snap.AspectConfiguration' Snap.IAspectContainer,Snap.Tests.AspectTests' Snap.Tests.AutofacTests' Snap.Tests.CastleWindsorTests' Snap.Tests.LinFuTests' Snap.Tests.NinjectTests' Snap.Tests.StructureMapTests
-Snap,AspectConfiguration,2,13,3,0,10,162,19,0,2,0.23,2,15,Snap.AspectRegistration' Snap.AspectBookSyntax,Snap.AspectContainer' Snap.AspectUtility' Snap.ConfigurationSyntax<T>' Snap.ProxyFactory' Snap.IAspectContainer' Snap.MasterProxy' Snap.SnapConfiguration' Snap.TypeScanner' Snap.Autofac.AutofacAspectContainer' Snap.CastleWindsor.CastleAspectContainer' Snap.LinFu.LinFuAspectContainer' Snap.Ninject.NinjectAspectContainer' Snap.StructureMap.StructureMapAspectContainer' Snap.Tests.AspectTests' Snap.Tests.Fakes.MockAspectContainer
-Snap,MethodInterceptAttribute,0,2,1,0,2,23,2,6,1,-1,0,2,,Snap.AspectUtility' Snap.Tests.Fakes.CustomPrefixScanner
-Snap,MethodInterceptor,0,5,2,0,5,56,5,7,2,-1,1,2,Snap.Interception,Snap.DefaultConventionScanner' Snap.Tests.Fakes.CustomPrefixScanner
+Snap,ConfigurationSyntax<T>,1,3,0,0,3,29,3,0,1,0,3,1,Snap.IOrderSyntax' Snap.IConfigurationSyntax' Snap.AspectConfiguration,Snap.AspectConfiguration
+Snap,DefaultConventionScanner,0,1,0,0,1,31,1,0,1,-1,4,1,Snap.BindingPair' Snap.IInterceptAttribute' Snap.MethodInterceptor' Snap.Interfaces.IScanningConvention,Snap.TypeScanner
+Snap,AspectBookSyntax,1,2,0,0,2,21,3,0,1,0,2,1,Snap.IAspectBookSyntax' Snap.AspectRegistration,Snap.AspectConfiguration
+Snap,IAspectBookSyntax,0,1,0,0,0,10,1,1,0,-1,0,3,,Snap.AspectConfiguration' Snap.AspectBookSyntax' Snap.IAspectConfiguration
+Snap,ProxyFactory,1,5,0,0,3,80,8,0,0,0,3,0,Snap.PseudoInterceptor' Snap.IMasterProxy' Snap.AspectConfiguration,
+Snap,ResolveInterceptorFromContainerCreationStrategy,1,2,0,0,2,23,2,0,1,0,3,1,Snap.IInterceptorCreationStrategy' Snap.AspectRegistration' Snap.IAttributeInterceptor,Snap.MasterProxy
+Snap,InstantiateInterceptorDirectlyCreationStrategy,0,1,0,0,1,18,1,0,1,-1,3,1,Snap.IInterceptorCreationStrategy' Snap.AspectRegistration' Snap.IAttributeInterceptor,Snap.MasterProxy
+Snap,IInterceptorCreationStrategy,0,1,0,0,0,11,1,2,0,-1,2,3,Snap.AspectRegistration' Snap.IAttributeInterceptor,Snap.ResolveInterceptorFromContainerCreationStrategy' Snap.InstantiateInterceptorDirectlyCreationStrategy' Snap.MasterProxy
+Snap,Interception,2,8,4,0,2,202,23,0,0,0.38,3,2,Snap.ClassInterceptAttribute' Snap.MulticastOptions' Snap.MethodSignatureFormatter,Snap.MethodInterceptor' Snap.MasterProxy
+Snap,AspectRegistration,0,2,4,0,2,31,2,0,0,-1,0,12,,Snap.InstantiateInterceptorDirectlyCreationStrategy' Snap.ResolveInterceptorFromContainerCreationStrategy' Snap.IInterceptorCreationStrategy' Snap.ISortOrderStrategy' Snap.MasterProxy' Snap.AspectBookSyntax' Snap.DefaultSortOrderStrategy' Snap.IndexSortOrderStrategy' Snap.SortOrderFactory' Snap.AttributedSortOrderStrategy' Snap.TypeScanner' Snap.AspectConfiguration
+Snap,ISortOrderStrategy,0,1,0,0,0,8,1,3,0,-1,1,4,Snap.AspectRegistration,Snap.DefaultSortOrderStrategy' Snap.IndexSortOrderStrategy' Snap.SortOrderFactory' Snap.AttributedSortOrderStrategy
+Snap,IOrderSyntax,0,1,0,0,0,8,1,1,1,-1,1,2,Snap.IHideBaseTypes,Snap.IConfigurationSyntax' Snap.ConfigurationSyntax<T>
+Snap,ITypeScanner,0,2,0,0,0,14,2,1,1,-1,2,3,Snap.ITypeScanningStrategy' Snap.IHideBaseTypes,Snap.TypeScanner' Snap.IAspectConfiguration' Snap.AspectConfiguration
+Snap,ITypeScanningStrategy,0,2,0,0,0,14,2,1,1,-1,2,2,Snap.IHideBaseTypes' Snap.Interfaces.IScanningConvention,Snap.TypeScanner' Snap.ITypeScanner
+Snap,PseudoInterceptor,0,2,1,0,2,19,3,0,0,-1,0,1,,Snap.ProxyFactory
+Snap,IAspectConfiguration,0,10,0,0,0,57,10,1,1,-1,5,3,Snap.IAspectBookSyntax' Snap.ITypeScanner' Snap.IAttributeInterceptor' Snap.IConfigurationSyntax' Snap.IHideBaseTypes,Snap.AspectConfiguration' Snap.SnapConfiguration' Snap.SnapFluentConfiguration
+Snap,IAspectContainer,0,1,1,0,0,14,1,2,1,-1,3,3,Snap.IHideBaseTypes' Snap.IMasterProxy' Snap.AspectConfiguration,Snap.AspectConfiguration' Snap.AspectContainer' Snap.SnapConfiguration
+Snap,IAttributeInterceptor,0,3,2,0,0,22,3,1,1,-1,1,6,Snap.IHideBaseTypes,Snap.IAspectConfiguration' Snap.IInterceptorCreationStrategy' Snap.AspectConfiguration' Snap.MethodInterceptor' Snap.InstantiateInterceptorDirectlyCreationStrategy' Snap.ResolveInterceptorFromContainerCreationStrategy
+Snap,IConfigurationSyntax,0,1,0,0,0,9,1,1,1,-1,2,3,Snap.IOrderSyntax' Snap.IHideBaseTypes,Snap.ConfigurationSyntax<T>' Snap.IAspectConfiguration' Snap.AspectConfiguration
+Snap,IHideBaseTypes,0,4,0,0,0,16,4,9,0,-1,0,9,,Snap.IOrderSyntax' Snap.ITypeScanner' Snap.IAspectConfiguration' Snap.ITypeScanningStrategy' Snap.IAspectContainer' Snap.IConfigurationSyntax' Snap.IAttributeInterceptor' Snap.SnapFluentConfiguration' Snap.IMasterProxy
+Snap,IInterceptAttribute,0,0,1,0,0,8,0,2,0,-1,0,5,,Snap.MethodInterceptAttribute' Snap.ClassInterceptAttribute' Snap.AttributedSortOrderStrategy' Snap.SortOrderFactory' Snap.DefaultConventionScanner
+Snap,IMasterProxy,0,0,3,0,0,20,0,1,1,-1,2,4,Snap.IHideBaseTypes' Snap.AspectConfiguration,Snap.AspectContainer' Snap.IAspectContainer' Snap.MasterProxy' Snap.ProxyFactory
+Snap,MasterProxy,0,2,3,0,1,67,8,0,2,-1,8,1,Snap.ResolveInterceptorFromContainerCreationStrategy' Snap.InstantiateInterceptorDirectlyCreationStrategy' Snap.IInterceptorCreationStrategy' Snap.Interception' Snap.AspectRegistration' Snap.IMasterProxy' Snap.AspectConfiguration' Snap.SortOrderFactory,Snap.MethodInterceptor
+Snap,SnapConfiguration,0,2,0,0,2,23,2,0,0,-1,4,0,Snap.IAspectConfiguration' Snap.IAspectContainer' Snap.AspectConfiguration' Snap.SnapFluentConfiguration,
+Snap,AspectConfiguration,2,13,3,0,10,162,19,0,2,0.23,10,9,Snap.ConfigurationSyntax<T>' Snap.AspectBookSyntax' Snap.IAspectBookSyntax' Snap.AspectRegistration' Snap.ITypeScanner' Snap.IAspectConfiguration' Snap.IAspectContainer' Snap.IAttributeInterceptor' Snap.IConfigurationSyntax' Snap.TypeScanner,Snap.AspectContainer' Snap.AspectUtility' Snap.IAspectContainer' Snap.ConfigurationSyntax<T>' Snap.TypeScanner' Snap.IMasterProxy' Snap.MasterProxy' Snap.ProxyFactory' Snap.SnapConfiguration
+Snap,MethodInterceptAttribute,0,2,1,0,2,23,2,6,1,-1,1,1,Snap.IInterceptAttribute,Snap.AspectUtility
+Snap,MethodInterceptor,0,5,2,0,5,56,5,7,2,-1,3,1,Snap.Interception' Snap.IAttributeInterceptor' Snap.MasterProxy,Snap.DefaultConventionScanner
 Snap,MethodSignature,0,0,5,0,0,28,0,0,0,-1,0,1,,Snap.MethodSignatureFormatter
-Snap,MethodSignatureFormatter,0,3,0,0,1,117,11,0,0,-1,1,2,Snap.MethodSignature,Snap.Interception' Snap.Tests.MethodFormatterTests
-Snap,SnapFluentConfiguration,1,2,0,0,2,20,2,0,1,0,1,6,Snap.IAspectConfiguration,Snap.SnapConfiguration' Snap.Tests.AspectTests' Snap.Tests.AutofacTests' Snap.Tests.CastleWindsorTests' Snap.Tests.LinFuTests' Snap.Tests.NinjectTests
-Snap,AttributedSortOrderStrategy,2,2,0,0,2,26,2,0,1,0,2,1,Snap.IInterceptAttribute' Snap.AspectRegistration,Snap.SortOrderFactory
-Snap,DefaultSortOrderStrategy,1,2,0,0,2,20,2,0,1,0,0,1,,Snap.SortOrderFactory
-Snap,IndexSortOrderStrategy,1,2,0,0,2,20,2,0,1,0,1,1,Snap.AspectRegistration,Snap.SortOrderFactory
-Snap,SortOrderFactory,0,1,0,0,1,26,3,0,0,-1,5,1,Snap.AspectRegistration' Snap.AttributedSortOrderStrategy' Snap.IndexSortOrderStrategy' Snap.DefaultSortOrderStrategy' Snap.IInterceptAttribute,Snap.MasterProxy
-Snap,TypeScanner,2,5,0,0,5,32,5,0,2,0,3,0,Snap.AspectConfiguration' Snap.Interfaces.IScanningConvention' Snap.BindingPair,
-Snap.Interfaces,IScanningConvention,0,1,0,0,0,9,1,2,0,-1,0,2,,Snap.ITypeScanningStrategy' Snap.TypeScanner
+Snap,MethodSignatureFormatter,0,3,0,0,1,117,11,0,0,-1,1,1,Snap.MethodSignature,Snap.Interception
+Snap,SnapFluentConfiguration,1,2,0,0,2,20,2,0,1,0,2,1,Snap.IAspectConfiguration' Snap.IHideBaseTypes,Snap.SnapConfiguration
+Snap,AttributedSortOrderStrategy,2,2,0,0,2,26,2,0,1,0,3,1,Snap.AspectRegistration' Snap.ISortOrderStrategy' Snap.IInterceptAttribute,Snap.SortOrderFactory
+Snap,DefaultSortOrderStrategy,1,2,0,0,2,20,2,0,1,0,2,1,Snap.AspectRegistration' Snap.ISortOrderStrategy,Snap.SortOrderFactory
+Snap,IndexSortOrderStrategy,1,2,0,0,2,20,2,0,1,0,2,1,Snap.AspectRegistration' Snap.ISortOrderStrategy,Snap.SortOrderFactory
+Snap,SortOrderFactory,0,1,0,0,1,26,3,0,0,-1,6,1,Snap.AspectRegistration' Snap.ISortOrderStrategy' Snap.IInterceptAttribute' Snap.AttributedSortOrderStrategy' Snap.DefaultSortOrderStrategy' Snap.IndexSortOrderStrategy,Snap.MasterProxy
+Snap,TypeScanner,2,5,0,0,5,32,5,0,2,0,6,1,Snap.DefaultConventionScanner' Snap.AspectRegistration' Snap.ITypeScanner' Snap.ITypeScanningStrategy' Snap.AspectConfiguration' Snap.Interfaces.IScanningConvention,Snap.AspectConfiguration
+Snap.Interfaces,IScanningConvention,0,1,0,0,0,9,1,2,0,-1,1,3,Snap.BindingPair,Snap.DefaultConventionScanner' Snap.TypeScanner' Snap.ITypeScanningStrategy

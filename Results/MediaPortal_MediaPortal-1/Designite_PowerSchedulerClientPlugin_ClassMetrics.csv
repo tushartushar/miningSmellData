@@ -1,0 +1,22 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MediaPortal.Plugins.Process.Handlers,NetworkAdapter,8,2,3,0,0,56,2,0,0,0,0,1,,MediaPortal.Plugins.Process.Handlers.ActiveNetworkStandbyHandler
+MediaPortal.Plugins.Process.Handlers,ActiveNetworkStandbyHandler,4,5,3,0,2,145,14,0,2,0.6,1,1,MediaPortal.Plugins.Process.Handlers.NetworkAdapter,MediaPortal.Plugins.Process.PowerSchedulerFactory
+MediaPortal.Plugins.Process.Handlers,ActiveSharesStandbyHandler,3,4,3,0,2,271,14,0,2,1,3,1,MediaPortal.Plugins.Process.Handlers.ShareMonitor' MediaPortal.Plugins.Process.Handlers.ShareType' MediaPortal.Plugins.Process.Handlers.ServerConnection,MediaPortal.Plugins.Process.PowerSchedulerFactory
+MediaPortal.Plugins.Process.Handlers,ShareMonitor,4,2,0,0,0,119,23,0,0,0,0,1,,MediaPortal.Plugins.Process.Handlers.ActiveSharesStandbyHandler
+MediaPortal.Plugins.Process.Handlers,ShareType,0,0,0,0,0,11,0,0,0,-1,0,1,,MediaPortal.Plugins.Process.Handlers.ActiveSharesStandbyHandler
+MediaPortal.Plugins.Process.Handlers,ServerConnection,4,1,0,4,1,14,1,0,0,0,0,1,,MediaPortal.Plugins.Process.Handlers.ActiveSharesStandbyHandler
+MediaPortal.Plugins.Process.Handlers,ProcessActiveStandbyHandler,4,4,3,0,2,138,15,0,2,0.75,0,1,,MediaPortal.Plugins.Process.PowerSchedulerFactory
+MediaPortal.Plugins.Process.Handlers,RebootWakeupHandler,0,7,1,0,3,233,34,0,1,-1,0,1,,MediaPortal.Plugins.Process.PowerSchedulerFactory
+MediaPortal.Plugins.Process.Handlers,WakeableStandbyHandler,1,1,2,0,1,40,1,0,1,0,0,1,,MediaPortal.Plugins.Process.PowerScheduler
+MediaPortal.Plugins.Process.Handlers,WakeableWakeupHandler,2,1,1,0,1,40,4,0,1,0,0,1,,MediaPortal.Plugins.Process.PowerScheduler
+MediaPortal.Plugins.Process,PowerScheduler,30,44,6,0,17,1519,150,0,2,0.07,5,1,MediaPortal.Plugins.Process.Handlers.WakeableStandbyHandler' MediaPortal.Plugins.Process.Handlers.WakeableWakeupHandler' MediaPortal.Plugins.Process.SuspendSystemThreadEnv' MediaPortal.Plugins.Process.LASTINPUTINFO' MediaPortal.Plugins.Process.PowerSchedulerFactory,MediaPortal.Plugins.Process.PowerSchedulerClientPlugin
+MediaPortal.Plugins.Process,SuspendSystemThreadEnv,4,0,0,4,0,7,0,0,0,-1,0,1,,MediaPortal.Plugins.Process.PowerScheduler
+MediaPortal.Plugins.Process,LASTINPUTINFO,2,0,0,2,0,5,0,0,0,-1,0,1,,MediaPortal.Plugins.Process.PowerScheduler
+MediaPortal.Plugins.Process,PowerSchedulerClientPlugin,1,13,0,0,13,82,15,0,2,0.77,2,0,MediaPortal.Plugins.Process.PowerScheduler' PowerScheduler.Setup.PowerSchedulerSetup,
+MediaPortal.Plugins.Process,PowerSchedulerFactory,2,3,0,0,3,60,7,0,0,0,4,1,MediaPortal.Plugins.Process.Handlers.ActiveNetworkStandbyHandler' MediaPortal.Plugins.Process.Handlers.ActiveSharesStandbyHandler' MediaPortal.Plugins.Process.Handlers.ProcessActiveStandbyHandler' MediaPortal.Plugins.Process.Handlers.RebootWakeupHandler,MediaPortal.Plugins.Process.PowerScheduler
+MediaPortal.Plugins.Process,UnattendedWindow,0,2,0,0,2,12,2,0,2,-1,0,0,,
+PowerScheduler.Setup,PowerSchedulerSetup,138,34,0,0,1,3162,108,0,1,0,4,1,PowerScheduler.Setup.PowerSettingsForm' PowerScheduler.Setup.PowerSettings' PowerScheduler.Setup.SelectProcessForm' PowerScheduler.Setup.SelectShareForm,MediaPortal.Plugins.Process.PowerSchedulerClientPlugin
+PowerScheduler.Setup,PowerSettingsForm,48,11,0,0,1,1190,65,0,0,0.27,1,1,PowerScheduler.Setup.PowerSettings,PowerScheduler.Setup.PowerSchedulerSetup
+PowerScheduler.Setup,PowerSettings,10,0,0,10,0,13,0,0,0,-1,0,2,,PowerScheduler.Setup.PowerSettingsForm' PowerScheduler.Setup.PowerSchedulerSetup
+PowerScheduler.Setup,SelectProcessForm,6,5,1,0,1,129,8,0,0,0.4,0,1,,PowerScheduler.Setup.PowerSchedulerSetup
+PowerScheduler.Setup,SelectShareForm,6,5,1,0,1,130,8,0,0,0.4,0,1,,PowerScheduler.Setup.PowerSchedulerSetup

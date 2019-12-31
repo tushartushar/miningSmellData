@@ -1,57 +1,57 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Xap,InvalidContentException,0,1,0,0,1,5,1,0,0,-1,0,0,,
-Xap,Category,7,1,1,7,1,55,2,0,1,0,3,3,Xap.CategoryEntry' Xap.InstanceLimit' Xap.Parser,Xap.CategoryEntry' Xap.GlobalSettings' Xap.Sound
-Xap,CategoryEntry,1,2,1,0,2,34,5,0,1,0,3,3,Xap.GlobalSettings' Xap.Project' Xap.Category,Xap.Category' Xap.Sound' Xap.Workspace
-Xap,CompressionPreset,12,1,0,12,1,64,2,0,1,0,1,1,Xap.Parser,Xap.GlobalSettings
-Xap,Cue,7,3,2,7,3,198,20,0,1,0,14,1,Xap.SoundBank' Xap.Variation' Xap.InstanceLimit' Xap.SoundEntry' Xap.TransitionEntry' Xap.Parser' Xap.Sound' Xap.PlayWaveEvent' Xap.Track' Xap.Rpc' Xap.RpcEntry' Xap.Variable' Xap.RpcCurve' Xap.RpcPoint,Xap.SoundBank
-Xap,TransitionEntry,9,1,0,9,1,52,2,0,1,0,2,1,Xap.Crossfade' Xap.Parser,Xap.Cue
-Xap,Effect,5,1,0,5,1,39,2,0,1,0,2,4,Xap.EffectParameter' Xap.Parser,Xap.EffectEntry' Xap.EffectParameterEntry' Xap.GlobalSettings' Xap.Sound
-Xap,EffectEntry,2,2,0,2,2,41,6,0,1,0,4,2,Xap.Parser' Xap.GlobalSettings' Xap.Project' Xap.Effect,Xap.Rpc' Xap.Sound
-Xap,EffectParameter,5,1,0,5,1,36,2,0,1,0,1,2,Xap.Parser,Xap.Effect' Xap.EffectParameterEntry
-Xap,EffectParameterEntry,4,2,0,4,2,55,8,0,1,0,5,1,Xap.Parser' Xap.GlobalSettings' Xap.Project' Xap.Effect' Xap.EffectParameter,Xap.RpcCurve
-Xap,EventBase,1,1,0,1,1,19,2,10,1,0,1,10,Xap.EventHeader,Xap.PlayWaveEvent' Xap.PlaySoundEvent' Xap.StopEvent' Xap.BranchEvent' Xap.WaitEvent' Xap.SetEffectParameterEvent' Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent' Xap.MarkerEvent
-Xap,PlayWaveEvent,11,1,0,11,1,63,2,0,2,0,6,2,Xap.PitchVariation' Xap.VolumeVariation' Xap.Variation' Xap.WaveEntry' Xap.Parser' Xap.EventBase,Xap.Cue' Xap.Track
-Xap,PlaySoundEvent,3,1,0,3,1,25,2,0,2,0,4,1,Xap.EventHeader' Xap.Variation' Xap.SoundEntry' Xap.EventBase,Xap.Track
-Xap,StopEvent,2,1,0,2,1,21,2,0,2,0,2,1,Xap.Parser' Xap.EventBase,Xap.Track
-Xap,BranchEvent,1,1,0,1,1,19,2,0,2,0,2,1,Xap.Conditional' Xap.EventBase,Xap.Track
-Xap,WaitEvent,2,1,0,2,1,22,2,0,2,0,3,1,Xap.Conditional' Xap.Parser' Xap.EventBase,Xap.Track
-Xap,SetEffectParameterEvent,5,1,0,5,1,33,2,0,2,0,2,1,Xap.Parser' Xap.EventBase,Xap.Track
-Xap,SetVariableEvent,3,1,0,3,1,29,2,0,2,0,4,1,Xap.VariableEntry' Xap.Equation' Xap.Recurrence' Xap.EventBase,Xap.Track
-Xap,SetPitchEvent,3,1,0,3,1,28,2,0,2,0,4,1,Xap.Ramp' Xap.Equation' Xap.Recurrence' Xap.EventBase,Xap.Track
-Xap,SetVolumeEvent,3,1,0,3,1,28,2,0,2,0,4,1,Xap.Ramp' Xap.Equation' Xap.Recurrence' Xap.EventBase,Xap.Track
-Xap,MarkerEvent,2,1,0,2,1,22,2,0,2,0,3,1,Xap.Recurrence' Xap.Parser' Xap.EventBase,Xap.Track
-Xap,EventHeader,7,1,0,7,1,41,2,0,1,0,1,2,Xap.Parser,Xap.EventBase' Xap.PlaySoundEvent
-Xap,Conditional,4,1,0,4,1,31,2,0,1,0,2,2,Xap.Operand' Xap.Parser,Xap.BranchEvent' Xap.WaitEvent
-Xap,Operand,4,1,0,4,1,31,2,0,1,0,2,2,Xap.VariableEntry' Xap.Parser,Xap.Conditional' Xap.Equation
-Xap,Equation,2,1,0,2,1,22,2,0,1,0,2,3,Xap.Operand' Xap.Parser,Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent
-Xap,Recurrence,4,1,0,4,1,29,2,0,1,0,1,4,Xap.Parser,Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent' Xap.MarkerEvent
-Xap,Ramp,4,1,0,4,1,29,2,0,1,0,1,2,Xap.Parser,Xap.SetPitchEvent' Xap.SetVolumeEvent
-Xap,GlobalSettings,13,1,2,11,1,91,2,0,1,0,6,9,Xap.Category' Xap.Variable' Xap.Effect' Xap.CompressionPreset' Xap.Rpc' Xap.Parser,Xap.CategoryEntry' Xap.EffectEntry' Xap.EffectParameterEntry' Xap.Project' Xap.RpcEntry' Xap.RpcCurveEntry' Xap.Sound' Xap.Track' Xap.VariableEntry
-Xap,Options,2,1,0,2,1,26,2,0,1,0,1,1,Xap.Parser,Xap.Project
-Xap,InstanceLimit,4,1,0,3,1,32,2,0,1,0,2,2,Xap.Crossfade' Xap.Parser,Xap.Category' Xap.Cue
-Xap,Crossfade,3,1,0,3,1,27,2,0,1,0,1,2,Xap.Parser,Xap.TransitionEntry' Xap.InstanceLimit
-Xap,Parser,0,6,0,0,0,125,15,0,0,-1,0,44,,Xap.Category' Xap.CompressionPreset' Xap.Cue' Xap.TransitionEntry' Xap.Effect' Xap.EffectEntry' Xap.EffectParameter' Xap.EffectParameterEntry' Xap.PlayWaveEvent' Xap.StopEvent' Xap.WaitEvent' Xap.SetEffectParameterEvent' Xap.MarkerEvent' Xap.EventHeader' Xap.Conditional' Xap.Operand' Xap.Equation' Xap.Recurrence' Xap.Ramp' Xap.GlobalSettings' Xap.Options' Xap.InstanceLimit' Xap.Crossfade' Xap.Project' Xap.Rpc' Xap.RpcCurve' Xap.RpcCurveEntry' Xap.RpcPoint' Xap.Sound' Xap.SoundEntry' Xap.Track' Xap.SoundBank' Xap.Entity' Xap.Variable' Xap.VariableEntry' Xap.PitchVariation' Xap.VolumeVariation' Xap.Variation' Xap.Wave' Xap.WaveEntry' Xap.WaveCache' Xap.WaveBank' Xap.Workspace' Xap.WorkspaceSoundEntry
-Xap,Project,10,2,0,10,2,90,7,0,0,0,6,11,Xap.Options' Xap.GlobalSettings' Xap.Parser' Xap.WaveBank' Xap.SoundBank' Xap.Workspace,Xap.CategoryEntry' Xap.EffectEntry' Xap.EffectParameterEntry' Xap.RpcEntry' Xap.RpcCurveEntry' Xap.Sound' Xap.Track' Xap.Entity' Xap.VariableEntry' Xap.WaveEntry' Xap.WorkspaceSoundEntry
-Xap,Rpc,5,1,0,5,1,43,2,0,1,0,4,5,Xap.EffectEntry' Xap.VariableEntry' Xap.RpcCurve' Xap.Parser,Xap.Cue' Xap.GlobalSettings' Xap.RpcEntry' Xap.RpcCurveEntry' Xap.Track
-Xap,RpcEntry,1,2,0,1,2,29,5,0,1,0,3,2,Xap.GlobalSettings' Xap.Project' Xap.Rpc,Xap.Cue' Xap.Sound
-Xap,RpcCurve,8,1,0,7,1,54,2,0,1,0,4,4,Xap.VariableEntry' Xap.EffectParameterEntry' Xap.RpcPoint' Xap.Parser,Xap.Cue' Xap.Rpc' Xap.RpcCurveEntry' Xap.Track
-Xap,RpcCurveEntry,4,2,0,4,2,55,8,0,1,0,5,1,Xap.Parser' Xap.GlobalSettings' Xap.Project' Xap.Rpc' Xap.RpcCurve,Xap.Track
-Xap,RpcPoint,3,1,0,3,1,27,2,0,1,0,1,2,Xap.Parser,Xap.Cue' Xap.RpcCurve
-Xap,Sound,9,1,0,9,1,68,2,0,1,0,9,4,Xap.Category' Xap.CategoryEntry' Xap.EffectEntry' Xap.RpcEntry' Xap.Track' Xap.Parser' Xap.GlobalSettings' Xap.Project' Xap.Effect,Xap.Cue' Xap.SoundEntry' Xap.SoundBank' Xap.WorkspaceSoundEntry
-Xap,SoundEntry,7,2,0,7,2,67,6,0,1,0,3,2,Xap.Parser' Xap.SoundBank' Xap.Sound,Xap.Cue' Xap.PlaySoundEvent
-Xap,Track,5,1,0,5,1,94,2,0,1,0,16,2,Xap.RpcCurveEntry' Xap.RpcCurve' Xap.PlayWaveEvent' Xap.PlaySoundEvent' Xap.StopEvent' Xap.BranchEvent' Xap.WaitEvent' Xap.SetEffectParameterEvent' Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent' Xap.MarkerEvent' Xap.Parser' Xap.Rpc' Xap.GlobalSettings' Xap.Project,Xap.Cue' Xap.Sound
-Xap,SoundBank,15,1,0,11,1,85,2,0,1,0,4,4,Xap.Clip' Xap.Sound' Xap.Cue' Xap.Parser,Xap.Cue' Xap.Project' Xap.SoundEntry' Xap.WorkspaceSoundEntry
-Xap,Clip,0,1,0,0,1,8,1,0,1,-1,0,1,,Xap.SoundBank
-Xap,ClipEntry,0,1,0,0,1,8,1,0,1,-1,0,0,,
-Xap,Entity,1,2,1,0,2,62,6,42,0,0,2,0,Xap.Project' Xap.Parser,
-Xap,Variable,14,1,0,14,1,72,2,0,1,0,1,3,Xap.Parser,Xap.Cue' Xap.GlobalSettings' Xap.VariableEntry
-Xap,VariableEntry,2,2,0,2,2,41,6,0,1,0,4,5,Xap.Parser' Xap.GlobalSettings' Xap.Project' Xap.Variable,Xap.SetVariableEvent' Xap.Operand' Xap.Rpc' Xap.RpcCurve' Xap.Variation
-Xap,PitchVariation,4,1,0,4,1,31,2,0,1,0,1,1,Xap.Parser,Xap.PlayWaveEvent
-Xap,VolumeVariation,4,1,0,4,1,31,2,0,1,0,1,1,Xap.Parser,Xap.PlayWaveEvent
-Xap,Variation,4,1,0,4,1,32,2,0,1,0,2,3,Xap.VariableEntry' Xap.Parser,Xap.Cue' Xap.PlayWaveEvent' Xap.PlaySoundEvent
-Xap,Wave,9,1,0,7,1,54,2,0,1,0,2,2,Xap.WaveCache' Xap.Parser,Xap.WaveEntry' Xap.WaveBank
-Xap,WaveEntry,6,2,0,6,2,63,8,0,1,0,4,1,Xap.Parser' Xap.Project' Xap.WaveBank' Xap.Wave,Xap.PlayWaveEvent
-Xap,WaveCache,13,1,0,11,1,68,2,0,1,0,1,1,Xap.Parser,Xap.Wave
-Xap,WaveBank,24,1,0,16,1,118,2,0,1,0,2,2,Xap.Wave' Xap.Parser,Xap.Project' Xap.WaveEntry
-Xap,Workspace,4,1,0,4,1,32,2,0,1,0,3,1,Xap.CategoryEntry' Xap.WorkspaceSoundEntry' Xap.Parser,Xap.Project
-Xap,WorkspaceSoundEntry,4,2,0,4,2,54,8,0,1,0,4,1,Xap.Parser' Xap.Project' Xap.SoundBank' Xap.Sound,Xap.Workspace
+Xap,InvalidContentException,0,1,0,0,1,5,1,0,0,-1,0,3,,Xap.Entity' Xap.Project' Xap.Parser
+Xap,Category,7,1,1,7,1,55,8,0,1,0,4,4,Xap.CategoryEntry' Xap.InstanceLimit' Xap.Parser' Xap.Entity,Xap.Sound' Xap.Cue' Xap.CategoryEntry' Xap.GlobalSettings
+Xap,CategoryEntry,1,2,1,0,2,34,5,0,1,0,2,3,Xap.Category' Xap.Entity,Xap.Category' Xap.Sound' Xap.Workspace
+Xap,CompressionPreset,12,1,0,12,1,64,13,0,1,0,2,1,Xap.Parser' Xap.Entity,Xap.GlobalSettings
+Xap,Cue,7,3,2,7,3,198,25,0,1,0,18,1,Xap.Category' Xap.TransitionEntry' Xap.EventBase' Xap.PlayWaveEvent' Xap.InstanceLimit' Xap.Parser' Xap.Rpc' Xap.RpcEntry' Xap.RpcCurve' Xap.RpcPoint' Xap.Sound' Xap.SoundEntry' Xap.Track' Xap.SoundBank' Xap.Entity' Xap.Variable' Xap.Variation' Xap.WaveEntry,Xap.SoundBank
+Xap,TransitionEntry,9,1,0,9,1,52,10,0,1,0,3,1,Xap.Crossfade' Xap.Parser' Xap.Entity,Xap.Cue
+Xap,Effect,5,1,0,5,1,39,6,0,1,0,3,4,Xap.EffectParameter' Xap.Parser' Xap.Entity,Xap.Sound' Xap.EffectEntry' Xap.EffectParameterEntry' Xap.GlobalSettings
+Xap,EffectEntry,2,2,0,2,2,41,7,0,1,0,3,2,Xap.Effect' Xap.Parser' Xap.Entity,Xap.Rpc' Xap.Sound
+Xap,EffectParameter,5,1,0,5,1,36,6,0,1,0,2,2,Xap.Parser' Xap.Entity,Xap.Effect' Xap.EffectParameterEntry
+Xap,EffectParameterEntry,4,2,0,4,2,55,11,0,1,0,4,1,Xap.Effect' Xap.EffectParameter' Xap.Parser' Xap.Entity,Xap.RpcCurve
+Xap,EventBase,1,1,0,1,1,19,2,10,1,0,2,12,Xap.EventHeader' Xap.Entity,Xap.Track' Xap.PlayWaveEvent' Xap.PlaySoundEvent' Xap.StopEvent' Xap.BranchEvent' Xap.WaitEvent' Xap.SetEffectParameterEvent' Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent' Xap.MarkerEvent' Xap.Cue
+Xap,PlayWaveEvent,11,1,0,11,1,63,12,0,2,0,6,2,Xap.EventBase' Xap.Parser' Xap.PitchVariation' Xap.VolumeVariation' Xap.Variation' Xap.WaveEntry,Xap.Track' Xap.Cue
+Xap,PlaySoundEvent,3,1,0,3,1,25,3,0,2,0,4,1,Xap.EventBase' Xap.EventHeader' Xap.SoundEntry' Xap.Variation,Xap.Track
+Xap,StopEvent,2,1,0,2,1,21,3,0,2,0,2,1,Xap.EventBase' Xap.Parser,Xap.Track
+Xap,BranchEvent,1,1,0,1,1,19,2,0,2,0,2,1,Xap.EventBase' Xap.Conditional,Xap.Track
+Xap,WaitEvent,2,1,0,2,1,22,3,0,2,0,3,1,Xap.EventBase' Xap.Conditional' Xap.Parser,Xap.Track
+Xap,SetEffectParameterEvent,5,1,0,5,1,33,6,0,2,0,2,1,Xap.EventBase' Xap.Parser,Xap.Track
+Xap,SetVariableEvent,3,1,0,3,1,29,4,0,2,0,4,1,Xap.EventBase' Xap.Equation' Xap.Recurrence' Xap.VariableEntry,Xap.Track
+Xap,SetPitchEvent,3,1,0,3,1,28,4,0,2,0,4,1,Xap.EventBase' Xap.Equation' Xap.Recurrence' Xap.Ramp,Xap.Track
+Xap,SetVolumeEvent,3,1,0,3,1,28,4,0,2,0,4,1,Xap.EventBase' Xap.Equation' Xap.Recurrence' Xap.Ramp,Xap.Track
+Xap,MarkerEvent,2,1,0,2,1,22,3,0,2,0,3,1,Xap.EventBase' Xap.Recurrence' Xap.Parser,Xap.Track
+Xap,EventHeader,7,1,0,7,1,41,8,0,1,0,2,2,Xap.Parser' Xap.Entity,Xap.EventBase' Xap.PlaySoundEvent
+Xap,Conditional,4,1,0,4,1,31,5,0,1,0,3,2,Xap.Operand' Xap.Parser' Xap.Entity,Xap.BranchEvent' Xap.WaitEvent
+Xap,Operand,4,1,0,4,1,31,5,0,1,0,3,2,Xap.Parser' Xap.Entity' Xap.VariableEntry,Xap.Conditional' Xap.Equation
+Xap,Equation,2,1,0,2,1,22,3,0,1,0,3,3,Xap.Operand' Xap.Parser' Xap.Entity,Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent
+Xap,Recurrence,4,1,0,4,1,29,5,0,1,0,2,4,Xap.Parser' Xap.Entity,Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent' Xap.MarkerEvent
+Xap,Ramp,4,1,0,4,1,29,5,0,1,0,2,2,Xap.Parser' Xap.Entity,Xap.SetPitchEvent' Xap.SetVolumeEvent
+Xap,GlobalSettings,13,1,2,11,1,91,14,0,1,0,7,1,Xap.Category' Xap.CompressionPreset' Xap.Effect' Xap.Parser' Xap.Rpc' Xap.Entity' Xap.Variable,Xap.Project
+Xap,Options,2,1,0,2,1,26,3,0,1,0,2,1,Xap.Parser' Xap.Entity,Xap.Project
+Xap,InstanceLimit,4,1,0,3,1,32,5,0,1,0,3,2,Xap.Crossfade' Xap.Parser' Xap.Entity,Xap.Category' Xap.Cue
+Xap,Crossfade,3,1,0,3,1,27,4,0,1,0,2,2,Xap.Parser' Xap.Entity,Xap.InstanceLimit' Xap.TransitionEntry
+Xap,Parser,0,6,0,0,0,125,17,0,0,-1,1,44,Xap.InvalidContentException,Xap.Category' Xap.Workspace' Xap.WorkspaceSoundEntry' Xap.InstanceLimit' Xap.Crossfade' Xap.GlobalSettings' Xap.Options' Xap.Cue' Xap.TransitionEntry' Xap.SoundBank' Xap.CompressionPreset' Xap.Effect' Xap.EffectEntry' Xap.EffectParameter' Xap.EffectParameterEntry' Xap.Rpc' Xap.RpcCurve' Xap.RpcCurveEntry' Xap.RpcPoint' Xap.Project' Xap.Sound' Xap.SoundEntry' Xap.Track' Xap.Entity' Xap.PitchVariation' Xap.VolumeVariation' Xap.Variation' Xap.Variable' Xap.VariableEntry' Xap.WaveBank' Xap.Wave' Xap.WaveEntry' Xap.WaveCache' Xap.PlayWaveEvent' Xap.StopEvent' Xap.WaitEvent' Xap.SetEffectParameterEvent' Xap.MarkerEvent' Xap.EventHeader' Xap.Conditional' Xap.Operand' Xap.Equation' Xap.Recurrence' Xap.Ramp
+Xap,Project,10,2,0,10,2,90,15,0,0,0,7,1,Xap.InvalidContentException' Xap.GlobalSettings' Xap.Options' Xap.Parser' Xap.SoundBank' Xap.WaveBank' Xap.Workspace,Xap.Entity
+Xap,Rpc,5,1,0,5,1,43,6,0,1,0,6,4,Xap.EffectEntry' Xap.Parser' Xap.RpcCurve' Xap.Entity' Xap.Variable' Xap.VariableEntry,Xap.Cue' Xap.RpcEntry' Xap.RpcCurveEntry' Xap.GlobalSettings
+Xap,RpcEntry,1,2,0,1,2,29,5,0,1,0,2,2,Xap.Rpc' Xap.Entity,Xap.Cue' Xap.Sound
+Xap,RpcCurve,8,1,0,7,1,54,9,0,1,0,5,4,Xap.EffectParameterEntry' Xap.Parser' Xap.RpcPoint' Xap.Entity' Xap.VariableEntry,Xap.Cue' Xap.Track' Xap.Rpc' Xap.RpcCurveEntry
+Xap,RpcCurveEntry,4,2,0,4,2,55,11,0,1,0,4,1,Xap.Parser' Xap.Rpc' Xap.RpcCurve' Xap.Entity,Xap.Track
+Xap,RpcPoint,3,1,0,3,1,27,4,0,1,0,2,2,Xap.Parser' Xap.Entity,Xap.Cue' Xap.RpcCurve
+Xap,Sound,9,1,0,9,1,68,12,0,1,0,8,4,Xap.Category' Xap.CategoryEntry' Xap.Effect' Xap.EffectEntry' Xap.Parser' Xap.RpcEntry' Xap.Track' Xap.Entity,Xap.SoundEntry' Xap.WorkspaceSoundEntry' Xap.SoundBank' Xap.Cue
+Xap,SoundEntry,7,2,0,7,2,67,12,0,1,0,4,2,Xap.Parser' Xap.Sound' Xap.SoundBank' Xap.Entity,Xap.PlaySoundEvent' Xap.Cue
+Xap,Track,5,1,0,5,1,94,16,0,1,0,15,2,Xap.EventBase' Xap.PlayWaveEvent' Xap.PlaySoundEvent' Xap.StopEvent' Xap.BranchEvent' Xap.WaitEvent' Xap.SetEffectParameterEvent' Xap.SetVariableEvent' Xap.SetPitchEvent' Xap.SetVolumeEvent' Xap.MarkerEvent' Xap.Parser' Xap.RpcCurve' Xap.RpcCurveEntry' Xap.Entity,Xap.Cue' Xap.Sound
+Xap,SoundBank,15,1,0,11,1,85,17,0,1,0,5,4,Xap.Cue' Xap.Parser' Xap.Sound' Xap.Clip' Xap.Entity,Xap.SoundEntry' Xap.Cue' Xap.WorkspaceSoundEntry' Xap.Project
+Xap,Clip,0,1,0,0,1,8,1,0,1,-1,1,1,Xap.Entity,Xap.SoundBank
+Xap,ClipEntry,0,1,0,0,1,8,1,0,1,-1,1,0,Xap.Entity,
+Xap,Entity,1,2,1,0,2,62,7,42,0,0,3,42,Xap.InvalidContentException' Xap.Parser' Xap.Project,Xap.CompressionPreset' Xap.Category' Xap.CategoryEntry' Xap.Workspace' Xap.WorkspaceSoundEntry' Xap.Cue' Xap.TransitionEntry' Xap.InstanceLimit' Xap.GlobalSettings' Xap.Options' Xap.Crossfade' Xap.Effect' Xap.EffectEntry' Xap.EffectParameter' Xap.EffectParameterEntry' Xap.Variable' Xap.VariableEntry' Xap.SoundBank' Xap.Clip' Xap.ClipEntry' Xap.Sound' Xap.SoundEntry' Xap.Track' Xap.PitchVariation' Xap.VolumeVariation' Xap.Variation' Xap.WaveBank' Xap.Rpc' Xap.RpcEntry' Xap.RpcCurve' Xap.RpcCurveEntry' Xap.RpcPoint' Xap.Wave' Xap.WaveEntry' Xap.WaveCache' Xap.EventBase' Xap.EventHeader' Xap.Conditional' Xap.Operand' Xap.Equation' Xap.Recurrence' Xap.Ramp
+Xap,Variable,14,1,0,14,1,72,15,0,1,0,2,4,Xap.Parser' Xap.Entity,Xap.Cue' Xap.Rpc' Xap.VariableEntry' Xap.GlobalSettings
+Xap,VariableEntry,2,2,0,2,2,41,7,0,1,0,3,5,Xap.Parser' Xap.Entity' Xap.Variable,Xap.Variation' Xap.Rpc' Xap.RpcCurve' Xap.SetVariableEvent' Xap.Operand
+Xap,PitchVariation,4,1,0,4,1,31,5,0,1,0,2,1,Xap.Parser' Xap.Entity,Xap.PlayWaveEvent
+Xap,VolumeVariation,4,1,0,4,1,31,5,0,1,0,2,1,Xap.Parser' Xap.Entity,Xap.PlayWaveEvent
+Xap,Variation,4,1,0,4,1,32,5,0,1,0,3,3,Xap.Parser' Xap.Entity' Xap.VariableEntry,Xap.Cue' Xap.PlayWaveEvent' Xap.PlaySoundEvent
+Xap,Wave,9,1,0,7,1,54,10,0,1,0,3,2,Xap.Parser' Xap.Entity' Xap.WaveCache,Xap.WaveEntry' Xap.WaveBank
+Xap,WaveEntry,6,2,0,6,2,63,13,0,1,0,4,2,Xap.Parser' Xap.Entity' Xap.Wave' Xap.WaveBank,Xap.Cue' Xap.PlayWaveEvent
+Xap,WaveCache,13,1,0,11,1,68,14,0,1,0,2,1,Xap.Parser' Xap.Entity,Xap.Wave
+Xap,WaveBank,24,1,0,16,1,118,26,0,1,0,3,2,Xap.Parser' Xap.Entity' Xap.Wave,Xap.WaveEntry' Xap.Project
+Xap,Workspace,4,1,0,4,1,32,5,0,1,0,4,1,Xap.CategoryEntry' Xap.Parser' Xap.Entity' Xap.WorkspaceSoundEntry,Xap.Project
+Xap,WorkspaceSoundEntry,4,2,0,4,2,54,11,0,1,0,4,1,Xap.Parser' Xap.Sound' Xap.SoundBank' Xap.Entity,Xap.Workspace

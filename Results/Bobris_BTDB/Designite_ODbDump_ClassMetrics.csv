@@ -1,6 +1,13 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-ODbDump,ToConsoleFastVisitor,2,3,0,0,2,25,5,3,1,1,2,0,BTDB.KVDBLayer.IKeyValueDBTransaction' BTDB.Buffer.ByteBuffer,
-ODbDump,ToConsoleVisitorNice,4,30,0,0,30,182,30,0,2,0.23,0,1,,ODbDump.Program
-ODbDump,ToConsoleVisitor,0,30,0,0,30,164,30,0,2,-1,0,1,,ODbDump.Program
-ODbDump,ToNullVisitor,0,30,0,0,30,135,30,0,2,-1,0,1,,ODbDump.Program
-ODbDump,Program,0,1,0,0,0,145,4,0,0,-1,14,0,ODbDump.ToConsoleVisitorNice' BTDB.ODBLayer.ODBIterator' ODbDump.ToConsoleVisitor' ODbDump.ToNullVisitor' BTDB.KVDBLayer.FileCollectionWithFileInfos' BTDB.KVDBLayer.IKeyIndex' BTDB.KVDBLayer.IFileTransactionLog' BTDB.ODBLayer.ObjectDB' BTDB.KVDBLayer.KeyValueDB' BTDB.ODBLayer.IObjectDBTransaction' BTDB.KVDBLayer.IKeyValueDBTransaction' BTDB.KVDBLayer.KVFileType' BTDB.KVDBLayer.IFileInfo' BTDB.KVDBLayer.KeyValueDBExportImporter,
+ODbDump,DataLeakExtension,0,2,0,0,1,57,8,0,0,-1,1,0,ODbDump.Visitor.ToConsoleVisitorNice,
+ODbDump,Program,0,2,0,0,0,464,43,0,0,-1,9,0,ODbDump.ConsoleKvdbLogger' ODbDump.Visitor.FrequencyVisitor' ODbDump.Visitor.ToConsoleVisitor' ODbDump.Visitor.ToConsoleVisitorForComparison' ODbDump.Visitor.ToConsoleVisitorNice' ODbDump.Visitor.HashType' ODbDump.Visitor.ToFilesVisitorForComparison' ODbDump.Visitor.ToFileVisitorNice' ODbDump.Visitor.ToNullVisitor,
+ODbDump,ConsoleKvdbLogger,0,4,0,0,4,22,4,0,1,-1,0,1,,ODbDump.Program
+ODbDump.Visitor,FrequencyVisitor,5,32,0,0,31,180,36,0,2,0.81,1,1,ODbDump.Visitor.ToConsoleFastVisitor,ODbDump.Program
+ODbDump.Visitor,ToConsoleFastVisitor,2,3,0,0,2,27,5,4,1,1,0,4,,ODbDump.Visitor.FrequencyVisitor' ODbDump.Visitor.ToNullVisitor' ODbDump.Visitor.ToConsoleVisitorNice' ODbDump.Visitor.ToConsoleVisitor
+ODbDump.Visitor,ToConsoleVisitor,0,30,0,0,30,164,30,0,2,-1,1,1,ODbDump.Visitor.ToConsoleFastVisitor,ODbDump.Program
+ODbDump.Visitor,ToConsoleVisitorForComparison,0,4,0,0,4,27,4,1,1,-1,1,2,ODbDump.Visitor.ToConsoleVisitorNice,ODbDump.Visitor.ToFilesVisitorForComparison' ODbDump.Program
+ODbDump.Visitor,ToConsoleVisitorNice,4,30,0,0,30,183,30,2,2,0.23,1,4,ODbDump.Visitor.ToConsoleFastVisitor,ODbDump.Visitor.ToConsoleVisitorForComparison' ODbDump.Visitor.ToFileVisitorNice' ODbDump.DataLeakExtension' ODbDump.Program
+ODbDump.Visitor,HashType,0,0,0,0,0,6,0,0,0,-1,0,2,,ODbDump.Program' ODbDump.Visitor.ToFilesVisitorForComparison
+ODbDump.Visitor,ToFilesVisitorForComparison,4,11,0,0,9,91,15,0,2,0.27,2,1,ODbDump.Visitor.ToConsoleVisitorForComparison' ODbDump.Visitor.HashType,ODbDump.Program
+ODbDump.Visitor,ToFileVisitorNice,1,2,0,0,2,14,2,0,3,0,1,1,ODbDump.Visitor.ToConsoleVisitorNice,ODbDump.Program
+ODbDump.Visitor,ToNullVisitor,0,30,0,0,30,136,30,0,2,-1,1,1,ODbDump.Visitor.ToConsoleFastVisitor,ODbDump.Program

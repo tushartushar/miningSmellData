@@ -1,183 +1,183 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Platform,AbstractRunnable,0,1,0,0,1,8,1,0,1,-1,0,0,,
-Platform,ActionUtils<T>,1,0,0,1,0,4,0,0,0,-1,0,0,,
-Platform,ActionUtils,0,27,0,0,27,424,29,0,0,-1,1,3,Platform.PredicateUtils,Platform.EnumerableUtils' Platform.IO.StreamCopier' Platform.References.TimedReference<T>
+Platform,AbstractRunnable,0,1,0,0,1,8,1,0,1,-1,1,0,Platform.IRunnable,
+Platform,ActionUtils<T>,1,0,0,1,0,4,0,0,0,-1,0,1,,Platform.EnumerableUtils
+Platform,ActionUtils,0,27,0,0,27,424,29,0,0,-1,1,2,Platform.PredicateUtils<T>,Platform.References.TimedReference<T>' Platform.IO.StreamCopier
 Platform,ActivatorUtils<T>,1,1,0,0,1,18,2,0,0,0,0,0,,
-Platform,BigEndianByteQuad,4,8,0,4,8,79,8,0,0,0,0,1,,Platform.Network.Time.NtpByteOctuple
-Platform,CachedValue,2,2,3,0,2,71,2,0,1,0,0,0,,
-Platform,ComparisonComparer<T>,1,2,0,0,2,17,2,0,0,0,0,0,,
-Platform,ConfigurationBlock<T>,1,3,0,0,2,30,3,0,0,0.67,0,0,,
+Platform,BigEndianByteQuad,4,8,0,4,8,79,8,0,0,0,0,2,,Platform.Network.Time.NtpByteOctuple' Platform.Network.Time.NtpPacket
+Platform,CachedValue,2,2,3,0,2,71,2,0,1,0,1,0,Platform.IValued,
+Platform,ComparisonComparer<T>,1,2,0,0,2,17,2,0,0,1,0,1,,Platform.Collections.ListUtils
+Platform,ConfigurationBlock<T>,1,3,0,0,2,30,5,0,0,0.67,0,0,,
 Platform,DataflowDirection,0,0,0,0,0,7,0,0,0,-1,0,0,,
 Platform,DateTimeFormats,3,0,0,3,0,15,0,0,0,-1,0,0,,
 Platform,Direction,0,0,0,0,0,13,0,0,0,-1,0,0,,
 Platform,EnvironmentUtils,0,5,1,0,1,97,6,0,0,-1,1,0,Platform.SYSTEMTIME,
 Platform,SYSTEMTIME,8,0,0,8,0,12,0,0,0,-1,0,1,,Platform.EnvironmentUtils
 Platform,FuncUtils,0,52,0,0,52,778,52,0,0,-1,0,0,,
-Platform,HashValue,0,7,8,0,7,150,13,0,1,-1,0,0,,
-Platform,IAutoLock,0,2,0,0,0,14,2,1,0,-1,0,0,,
-Platform,IWrapperObject,0,0,1,0,0,4,0,1,0,-1,0,0,,
+Platform,HashValue,0,7,8,0,7,150,13,0,1,-1,2,0,Platform.IValued' Platform.Text.TextConversion,
+Platform,IAutoLock,0,2,0,0,0,14,2,1,0,-1,0,2,,Platform.ISyncLocked' Platform.AutoLock
+Platform,IWrapperObject,0,0,1,0,0,4,0,1,0,-1,0,1,,Platform.IO.StreamWrapper
 Platform,LeftOrRight,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Platform,AbstractTask,2,19,12,0,11,493,19,2,1,0.26,3,0,Platform.TaskAsyncStateAndImplementationHelper' Platform.TaskState' Platform.TaskExceptionEventArgs,
-Platform,TaskAsyncStateAndImplementationHelper,4,11,4,0,6,290,17,0,0,0,5,2,Platform.TaskState' Platform.ITask' Platform.TaskEventArgs' Platform.TaskAsynchronisity' Platform.PredicateUtils,Platform.AbstractTask' Platform.Utilities.InvocationQueue
-Platform,MeterEventArgs,0,1,4,0,1,32,1,0,1,-1,0,3,,Platform.AbstractMeter' Platform.MeterWrapper' Platform.Threading.MeterValueEvent<V>
-Platform,NamedUtils,0,2,0,0,2,26,2,0,0,-1,0,0,,
+Platform,AbstractTask,2,19,12,0,11,493,19,2,1,0.26,10,3,Platform.TaskAsyncStateAndImplementationHelper' Platform.TaskExceptionEventArgs' Platform.StopRequestedException' Platform.AbstractMeter' Platform.IMeter' Platform.TaskState' Platform.TaskAsynchronisity' Platform.TaskEventArgs' Platform.ITask' Platform.PredicateUtils,Platform.IO.StreamCopier' Platform.Network.Time.NetworkTimeClient' Platform.Utilities.InvocationQueue
+Platform,TaskAsyncStateAndImplementationHelper,4,11,4,0,6,290,38,0,0,0,0,2,,Platform.AbstractTask' Platform.Utilities.InvocationQueue
+Platform,MeterEventArgs,0,1,4,0,1,32,1,0,1,-1,1,4,Platform.IValued,Platform.Threading.MeterValueEvent<V>' Platform.MeterWrapper' Platform.AbstractMeter' Platform.IMeter
+Platform,NamedUtils,0,2,0,0,2,26,2,0,0,-1,1,0,Platform.INamed,
 Platform,ObjectReferenceIdentityEqualityComparer<T>,1,2,0,1,2,18,3,0,0,1,0,0,,
-Platform,Pair,0,13,10,0,12,212,17,0,1,-1,0,5,,Platform.StringUtils' Platform.StringUriUtils' Platform.IO.StreamUtils' Platform.Text.TextConversion' Platform.Xml.Serialization.CachingXmlSerializerFactory
-Platform,PropertyWiseEqualityComparer<T>,4,5,0,2,5,53,9,0,0,0.8,0,0,,
-Platform,Quad,0,5,6,0,4,103,7,0,1,-1,0,0,,
-Platform,ReownedMeter,0,1,1,0,1,15,1,0,1,-1,1,0,Platform.IMeter,
-Platform,TaskExceptionEventArgs,0,1,1,0,1,12,1,0,0,-1,0,2,,Platform.AbstractTask' Platform.Network.Time.NtpNetworkTimeClient
-Platform,TaskUtils,0,5,0,0,5,71,7,0,0,-1,2,0,Platform.ITask' Platform.TaskState,
+Platform,Pair,0,13,10,0,12,212,18,0,1,-1,4,4,Platform.IKeyed' Platform.IKeyedValued' Platform.IValued' Platform.ITuple,Platform.IO.StreamUtils' Platform.Text.TextConversion' Platform.StringUtils' Platform.StringUriUtils
+Platform,PropertyWiseEqualityComparer<T>,4,5,0,2,5,53,9,0,0,1,1,0,Platform.TypeUtils,
+Platform,Quad,0,5,6,0,4,103,10,0,1,-1,1,0,Platform.ITuple,
+Platform,ReownedMeter,0,1,1,0,1,15,1,0,1,-1,2,0,Platform.IMeter' Platform.MeterWrapper,
+Platform,TaskExceptionEventArgs,0,1,1,0,1,12,1,0,0,-1,0,2,,Platform.Network.Time.NtpNetworkTimeClient' Platform.AbstractTask
+Platform,TaskUtils,0,5,0,0,5,71,9,0,0,-1,2,0,Platform.TaskState' Platform.ITask,
 Platform,NumericConstants,8,0,0,8,0,35,0,0,0,-1,0,0,,
-Platform,StopRequestedException,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Platform,ISyncLocked,0,2,1,0,0,17,2,0,0,-1,0,0,,
-Platform,Triple,0,5,6,0,4,110,8,0,1,-1,0,0,,
-Platform,TypeUtils,0,39,0,0,35,512,96,0,0,-1,0,4,,Platform.Reflection.ConstructorInfoUtils' Platform.Reflection.MethodInfoUtils' Platform.Tests.MethodInfoUtilsTests' Platform.Tests.TypeUtilsTests
-Platform,ArrayEqualityComparer<T>,2,3,0,1,3,42,9,0,0,0,0,0,,
-Platform,ValueBox<T>,0,3,2,0,3,36,3,0,1,-1,0,0,,
-Platform,ArrayUtils,0,13,0,0,13,217,22,0,0,-1,0,0,,
-Platform,AutoLock,1,7,0,0,4,57,7,0,1,0.43,0,0,,
-Platform,CharUtils,0,2,0,0,2,23,2,0,0,-1,0,0,,
-Platform,EnumerableUtils,0,32,0,0,31,492,71,0,0,-1,1,0,Platform.ActionUtils,
-Platform,IKeyed,0,0,2,0,0,20,0,3,0,-1,0,1,,Platform.Collections.ReferenceDictionary<K;V;R>
-Platform,IKeyedValued,0,0,0,0,0,7,0,1,1,-1,0,0,,
-Platform,INamed,0,0,1,0,0,7,0,2,0,-1,0,0,,
+Platform,StopRequestedException,0,0,0,0,0,4,0,0,0,-1,0,3,,Platform.AbstractTask' Platform.IO.StreamCopier' Platform.Utilities.InvocationQueue
+Platform,ISyncLocked,0,2,1,0,0,17,2,0,0,-1,1,0,Platform.IAutoLock,
+Platform,Triple,0,5,6,0,4,110,10,0,1,-1,1,0,Platform.ITuple,
+Platform,TypeUtils,0,39,0,0,35,512,110,0,0,-1,0,3,,Platform.PropertyWiseEqualityComparer<T>' Platform.Reflection.ConstructorInfoUtils' Platform.Reflection.MethodInfoUtils
+Platform,ArrayEqualityComparer<T>,2,3,0,1,3,42,9,0,0,0.67,0,0,,
+Platform,ValueBox<T>,0,3,2,0,3,36,3,0,1,-1,1,0,Platform.IValued,
+Platform,ArrayUtils,0,13,0,0,13,217,22,0,0,-1,1,0,Platform.ConverterUtils<I;O>,
+Platform,AutoLock,1,7,0,0,4,57,7,0,1,0.57,1,0,Platform.IAutoLock,
+Platform,CharUtils,0,2,0,0,2,23,2,0,0,-1,0,1,,Platform.Text.TextConversion
+Platform,EnumerableUtils,0,32,0,0,31,492,74,0,0,-1,2,0,Platform.ActionUtils<T>' Platform.Collections.ReadOnlyList<T>,
+Platform,IKeyed,0,0,2,0,0,20,0,3,0,-1,0,5,,Platform.Pair' Platform.IKeyedValued' Platform.Collections.TimedReferenceDictionary<K;V>' Platform.Collections.WeakReferenceDictionary<K;V>' Platform.Collections.ReferenceDictionary<K;V;R>
+Platform,IKeyedValued,0,0,0,0,0,7,0,1,1,-1,2,1,Platform.IKeyed' Platform.IValued,Platform.Pair
+Platform,INamed,0,0,1,0,0,7,0,2,0,-1,0,3,,Platform.Validation.BaseValidationAttribute' Platform.ITask' Platform.NamedUtils
 Platform,Int32Utils,0,2,0,0,1,30,4,0,0,-1,0,1,,Platform.Text.TextConversion
-Platform,IOwned,0,0,1,0,0,7,0,1,0,-1,0,0,,
+Platform,IOwned,0,0,1,0,0,7,0,1,0,-1,0,1,,Platform.IModel
 Platform,IRefreshable,0,1,0,0,0,7,1,0,0,-1,0,0,,
-Platform,IRunnable,0,1,0,0,0,7,1,2,0,-1,0,0,,
-Platform,IValued,0,0,2,0,0,8,0,7,0,-1,0,0,,
-Platform,LogicalOperation,0,0,0,0,0,12,0,0,0,-1,0,1,,Platform.Xml.Serialization.XmlVerifyRuntimeTypeAttribute
-Platform,MathUtils,0,15,0,0,15,153,19,0,0,-1,0,2,,Platform.IO.InteractiveCryptoStream' Platform.Tests.MathUtilsTests
-Platform,AbstractMeter,1,5,11,0,1,181,7,3,1,0.4,1,1,Platform.MeterEventArgs,Platform.MutableMeter
-Platform,NullMeter,0,0,4,0,0,8,0,0,2,-1,0,0,,
-Platform,AbstractModel,0,1,1,0,0,19,1,1,1,-1,0,0,,
-Platform,IMeter,0,0,5,0,0,30,0,2,1,-1,0,3,,Platform.ReownedMeter' Platform.MeterWrapper' Platform.Threading.MeterValueEvent<V>
-Platform,IModel,0,0,0,0,0,8,0,2,1,-1,0,0,,
-Platform,TaskState,0,0,0,0,0,41,0,0,0,-1,0,9,,Platform.AbstractTask' Platform.TaskAsyncStateAndImplementationHelper' Platform.TaskUtils' Platform.TaskEventArgs' Platform.ITask' Platform.IO.StreamCopier' Platform.Network.Time.NtpNetworkTimeClient' Platform.Utilities.InvocationQueue' Platform.Tests.InvocationQueueTests
-Platform,TaskAsynchronisity,0,0,0,0,0,28,0,0,0,-1,0,2,,Platform.TaskAsyncStateAndImplementationHelper' Platform.Utilities.InvocationQueue
-Platform,TaskEventArgs,0,1,3,0,1,33,1,0,0,-1,1,1,Platform.TaskState,Platform.TaskAsyncStateAndImplementationHelper
-Platform,ITask,0,9,10,0,0,202,9,2,1,-1,1,2,Platform.TaskState,Platform.TaskAsyncStateAndImplementationHelper' Platform.TaskUtils
-Platform,MeterWrapper,3,6,8,0,2,93,6,1,2,0.67,2,0,Platform.IMeter' Platform.MeterEventArgs,
-Platform,MutableMeter,5,10,6,0,10,149,11,1,2,0.3,1,1,Platform.AbstractMeter,Platform.IO.MeteringStream
-Platform,ITuple,0,1,1,0,0,14,1,3,0,-1,0,0,,
-Platform,PredicateUtils<T>,2,0,0,2,0,16,0,0,0,-1,0,0,,
-Platform,PredicateUtils,0,15,0,0,15,190,15,0,0,-1,1,6,Platform.Text.RegularExpressions.RegexBasedPredicateHelper,Platform.ActionUtils' Platform.TaskAsyncStateAndImplementationHelper' Platform.StringUtils' Platform.StringUriUtils' Platform.IO.TextReaderUtils' Platform.Xml.Serialization.SerializationMemberInfo
-Platform,StringUtils,0,54,0,0,54,568,109,0,0,-1,2,0,Platform.Pair' Platform.PredicateUtils,
-Platform,ConverterUtils<I;O>,0,0,1,0,0,4,0,0,0,-1,0,0,,
-Platform,StringUriUtils,2,22,0,1,21,355,49,0,0,0.59,3,0,Platform.Pair' Platform.PredicateUtils' Platform.Text.TextConversion,
-Platform,IObjectCache,0,3,2,0,0,27,3,1,0,-1,0,0,,
-Platform,WeakEventHandlerProxy<E;D>,5,3,2,0,1,124,8,0,0,0,0,0,,
-Platform.Collections,BoundedFifoBuffer<T>,2,21,8,0,18,280,31,0,0,0.76,0,0,,
-Platform.Collections,BufferOverflowException,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Platform.Collections,BufferUnderflowException,0,2,0,0,2,11,2,0,0,-1,0,0,,
-Platform.Collections,CircularFifoBuffer<T>,0,2,0,0,2,35,3,0,0,-1,0,0,,
-Platform.Collections,CollectionBase<T>,0,7,2,0,6,34,7,0,0,-1,0,0,,
+Platform,IRunnable,0,1,0,0,0,7,1,2,0,-1,0,2,,Platform.ITask' Platform.AbstractRunnable
+Platform,IValued,0,0,2,0,0,8,0,7,0,-1,0,9,,Platform.IMeter' Platform.AbstractMeter' Platform.ValueBox<T>' Platform.IKeyedValued' Platform.HashValue' Platform.MeterEventArgs' Platform.Network.Time.NetworkTimeClient' Platform.Pair' Platform.CachedValue
+Platform,LogicalOperation,0,0,0,0,0,12,0,0,0,-1,0,0,,
+Platform,MathUtils,0,15,0,0,15,153,19,0,0,-1,0,2,,Platform.Collections.BoundedFifoBuffer<T>' Platform.IO.InteractiveCryptoStream
+Platform,AbstractMeter,1,5,11,0,1,181,8,3,1,0.4,5,4,Platform.MeterEventArgs' Platform.IValued' Platform.NullMeter' Platform.AbstractModel' Platform.IMeter,Platform.IO.StreamCopier' Platform.MutableMeter' Platform.AbstractTask' Platform.Utilities.InvocationQueue
+Platform,NullMeter,0,0,4,0,0,8,0,0,2,-1,0,1,,Platform.AbstractMeter
+Platform,AbstractModel,0,1,1,0,0,19,1,1,1,-1,1,1,Platform.IModel,Platform.AbstractMeter
+Platform,IMeter,0,0,5,0,0,30,0,2,1,-1,3,10,Platform.MeterEventArgs' Platform.IValued' Platform.IModel,Platform.Network.Time.NtpNetworkTimeClient' Platform.ReownedMeter' Platform.ITask' Platform.Utilities.InvocationQueue' Platform.IO.MeteringStream' Platform.MeterWrapper' Platform.IO.StreamCopier' Platform.AbstractTask' Platform.AbstractMeter' Platform.Threading.MeterValueEvent<V>
+Platform,IModel,0,0,0,0,0,8,0,2,1,-1,1,2,Platform.IOwned,Platform.IMeter' Platform.AbstractModel
+Platform,TaskState,0,0,0,0,0,41,0,0,0,-1,0,7,,Platform.IO.StreamCopier' Platform.TaskUtils' Platform.TaskEventArgs' Platform.ITask' Platform.Network.Time.NtpNetworkTimeClient' Platform.Utilities.InvocationQueue' Platform.AbstractTask
+Platform,TaskAsynchronisity,0,0,0,0,0,28,0,0,0,-1,0,3,,Platform.Utilities.InvocationQueue' Platform.ITask' Platform.AbstractTask
+Platform,TaskEventArgs,0,1,3,0,1,33,1,0,0,-1,1,1,Platform.TaskState,Platform.AbstractTask
+Platform,ITask,0,9,10,0,0,202,9,2,1,-1,5,3,Platform.INamed' Platform.IRunnable' Platform.IMeter' Platform.TaskState' Platform.TaskAsynchronisity,Platform.Utilities.InvocationQueue' Platform.AbstractTask' Platform.TaskUtils
+Platform,MeterWrapper,3,6,8,0,2,93,6,1,2,0.67,2,1,Platform.MeterEventArgs' Platform.IMeter,Platform.ReownedMeter
+Platform,MutableMeter,5,10,6,0,10,149,11,1,2,0.9,1,2,Platform.AbstractMeter,Platform.Network.Time.NtpNetworkTimeClient' Platform.IO.MeteringStream
+Platform,ITuple,0,1,1,0,0,14,1,3,0,-1,0,3,,Platform.Triple' Platform.Pair' Platform.Quad
+Platform,PredicateUtils<T>,2,0,0,2,0,16,0,0,0,-1,0,2,,Platform.ActionUtils' Platform.StringUriUtils
+Platform,PredicateUtils,0,15,0,0,15,190,15,0,0,-1,1,6,Platform.Text.RegularExpressions.RegexBasedPredicateHelper,Platform.AbstractTask' Platform.Threading.MeterValueEvent<V>' Platform.StringUtils' Platform.Text.TextConversion' Platform.StringUriUtils' Platform.IO.TextReaderUtils
+Platform,StringUtils,0,54,0,0,54,568,110,0,0,-1,2,0,Platform.Pair' Platform.PredicateUtils,
+Platform,ConverterUtils<I;O>,0,0,1,0,0,4,0,0,0,-1,0,1,,Platform.ArrayUtils
+Platform,StringUriUtils,2,22,0,1,21,355,57,0,0,0.59,4,0,Platform.Pair' Platform.PredicateUtils<T>' Platform.PredicateUtils' Platform.Text.TextConversion,
+Platform,IObjectCache,0,3,2,0,0,27,3,1,0,-1,0,1,,Platform.Collections.ReferenceDictionary<K;V;R>
+Platform,WeakEventHandlerProxy<E;D>,5,3,2,0,1,124,11,0,0,0,2,0,Platform.References.NotifyingWeakReference<T>' Platform.References.WeakReference<T>,
+Platform.Collections,BoundedFifoBuffer<T>,2,21,8,0,18,280,43,0,0,0.76,3,1,Platform.MathUtils' Platform.Collections.BufferOverflowException' Platform.Collections.BufferUnderflowException,Platform.Collections.CircularFifoBuffer<T>
+Platform.Collections,BufferOverflowException,0,2,0,0,2,11,2,0,0,-1,0,1,,Platform.Collections.BoundedFifoBuffer<T>
+Platform.Collections,BufferUnderflowException,0,2,0,0,2,11,2,0,0,-1,0,1,,Platform.Collections.BoundedFifoBuffer<T>
+Platform.Collections,CircularFifoBuffer<T>,0,2,0,0,2,35,4,0,0,-1,1,0,Platform.Collections.BoundedFifoBuffer<T>,
+Platform.Collections,CollectionBase<T>,0,7,2,0,6,34,7,0,0,-1,0,1,,Platform.Collections.QueueBase<T>
 Platform.Collections,DictionaryExtensions,0,2,0,0,2,22,4,0,0,-1,0,0,,
-Platform.Collections,IReadOnlyCollection,0,0,1,0,0,5,0,1,0,-1,0,0,,
-Platform.Collections,IReadOnlyList,0,0,0,0,0,5,0,2,1,-1,0,0,,
-Platform.Collections,ListUtils,0,9,0,0,6,115,22,0,0,-1,0,0,,
-Platform.Collections,ReadOnlyCollectionReadOnlyListAdapter<T>,1,3,1,0,2,19,3,0,2,0.67,0,0,,
-Platform.Collections,ReadOnlyList<T>,1,5,1,0,4,28,5,0,2,0.8,0,0,,
-Platform.Collections,ReferenceDictionaryEventArgs<K;V>,0,1,2,0,1,11,1,0,0,-1,0,0,,
-Platform.Collections,QueueBase<T>,0,8,0,0,8,40,11,0,1,-1,0,0,,
-Platform.Collections,ArrayQueue<T>,4,8,1,0,7,104,16,0,0,0.25,0,0,,
-Platform.Collections,BlockingQueue<T>,3,11,1,1,11,108,12,0,1,0.55,1,0,Platform.Collections.IQueue,
-Platform.Collections,IBlockingQueue,0,3,0,0,0,25,3,1,1,-1,0,0,,
+Platform.Collections,IReadOnlyCollection,0,0,1,0,0,5,0,1,0,-1,0,1,,Platform.Collections.IReadOnlyList
+Platform.Collections,IReadOnlyList,0,0,0,0,0,5,0,2,1,-1,1,2,Platform.Collections.IReadOnlyCollection,Platform.Collections.ReadOnlyCollectionReadOnlyListAdapter<T>' Platform.Collections.ReadOnlyList<T>
+Platform.Collections,ListUtils,0,9,0,0,6,115,25,0,0,-1,1,0,Platform.ComparisonComparer<T>,
+Platform.Collections,ReadOnlyCollectionReadOnlyListAdapter<T>,1,3,1,0,2,19,3,0,2,1,1,0,Platform.Collections.IReadOnlyList,
+Platform.Collections,ReadOnlyList<T>,1,5,1,0,4,28,5,0,2,1,1,1,Platform.Collections.IReadOnlyList,Platform.EnumerableUtils
+Platform.Collections,ReferenceDictionaryEventArgs<K;V>,0,1,2,0,1,11,1,0,0,-1,0,1,,Platform.Collections.ReferenceDictionary<K;V;R>
+Platform.Collections,QueueBase<T>,0,8,0,0,8,40,11,0,1,-1,2,3,Platform.Collections.CollectionBase<T>' Platform.Collections.IQueue,Platform.Collections.ArrayQueue<T>' Platform.Collections.BlockingQueue<T>' Platform.References.ReferenceQueueBase<T>
+Platform.Collections,ArrayQueue<T>,4,8,1,0,7,104,16,0,0,0.25,1,1,Platform.Collections.QueueBase<T>,Platform.Collections.BlockingQueue<T>
+Platform.Collections,BlockingQueue<T>,3,11,1,1,11,108,16,0,1,0.55,4,1,Platform.Collections.QueueBase<T>' Platform.Collections.ArrayQueue<T>' Platform.Collections.IBlockingQueue' Platform.Collections.IQueue,Platform.Utilities.InvocationQueue
+Platform.Collections,IBlockingQueue,0,3,0,0,0,25,3,1,1,-1,1,1,Platform.Collections.IQueue,Platform.Collections.BlockingQueue<T>
 Platform.Collections,EnumerableCollectionAdapter<T>,2,9,2,0,8,76,10,0,0,0.78,0,0,,
-Platform.Collections,IQueue,0,6,0,0,0,42,6,2,0,-1,0,1,,Platform.Collections.BlockingQueue<T>
-Platform.Collections,ReferenceDictionary<K;V;R>,3,21,5,0,13,220,30,0,1,0.67,1,0,Platform.IKeyed,
-Platform.Collections,TimedReferenceDictionary<K;V>,4,10,1,0,6,298,13,0,0,0.7,1,0,Platform.Collections.KeyedTimedReference,
-Platform.Collections,KeyedTimedReference,0,3,5,0,3,56,5,0,1,-1,1,1,Platform.References.IReferenceQueue,Platform.Collections.TimedReferenceDictionary<K;V>
-Platform.Collections,WeakReferenceDictionary<K;V>,1,8,0,0,4,108,11,0,0,0.75,1,0,Platform.Collections.KeyedWeakReference,
-Platform.Collections,KeyedWeakReference,0,4,2,0,4,30,5,0,1,-1,1,1,Platform.References.IReferenceQueue,Platform.Collections.WeakReferenceDictionary<K;V>
-Platform.IO,ILineReader,0,2,0,0,0,16,2,1,0,-1,0,0,,
-Platform.IO,IStreamWithEvents,0,0,0,0,0,5,0,1,0,-1,0,0,,
-Platform.IO,MeteringStream,5,8,2,0,8,164,21,1,1,0.25,2,1,Platform.MutableMeter' Platform.IO.StreamWrapper,Platform.IO.ChunkingStream
-Platform.IO,ChunkingStream,6,5,2,1,5,171,20,0,2,0,1,0,Platform.IO.MeteringStream,
-Platform.IO,FifoStream,4,10,8,0,9,226,12,0,0,0.4,0,0,,
-Platform.IO,PartialStream,2,6,2,0,6,141,19,0,1,0,1,0,Platform.IO.StreamWrapper,
-Platform.IO,StreamCopier,10,10,4,1,8,311,14,0,2,0.4,4,3,Platform.IO.Meter' Platform.IO.IStreamProvider' Platform.TaskState' Platform.ActionUtils,Platform.IO.BytesReadMeter' Platform.IO.BytesWrittenMeter' Platform.IO.Meter
+Platform.Collections,IQueue,0,6,0,0,0,42,6,2,0,-1,0,3,,Platform.Collections.QueueBase<T>' Platform.Collections.IBlockingQueue' Platform.Collections.BlockingQueue<T>
+Platform.Collections,ReferenceDictionary<K;V;R>,3,21,5,0,13,220,33,0,1,0.67,5,2,Platform.IKeyed' Platform.IObjectCache' Platform.Collections.ReferenceDictionaryEventArgs<K;V>' Platform.References.Reference<T>' Platform.References.ReferenceQueueBase<T>,Platform.Collections.TimedReferenceDictionary<K;V>' Platform.Collections.WeakReferenceDictionary<K;V>
+Platform.Collections,TimedReferenceDictionary<K;V>,4,10,1,0,6,298,20,0,0,0.9,6,1,Platform.IKeyed' Platform.Collections.ReferenceDictionary<K;V;R>' Platform.Collections.KeyedTimedReference' Platform.Collections.WeakReferenceDictionary<K;V>' Platform.References.IReferenceQueue' Platform.References.WeakReference<T>,Platform.Text.RegularExpressions.RegexCache
+Platform.Collections,KeyedTimedReference,0,3,5,0,3,56,5,0,1,-1,0,1,,Platform.Collections.TimedReferenceDictionary<K;V>
+Platform.Collections,WeakReferenceDictionary<K;V>,1,8,0,0,4,108,11,0,0,0.75,5,1,Platform.IKeyed' Platform.Collections.ReferenceDictionary<K;V;R>' Platform.Collections.KeyedWeakReference' Platform.References.IReferenceQueue' Platform.References.WeakReference<T>,Platform.Collections.TimedReferenceDictionary<K;V>
+Platform.Collections,KeyedWeakReference,0,4,2,0,4,30,5,0,1,-1,0,1,,Platform.Collections.WeakReferenceDictionary<K;V>
+Platform.IO,ILineReader,0,2,0,0,0,16,2,1,0,-1,0,1,,Platform.IO.TextReaderUtils
+Platform.IO,IStreamWithEvents,0,0,0,0,0,5,0,1,0,-1,0,1,,Platform.IO.MeteringStream
+Platform.IO,MeteringStream,5,8,2,0,8,164,24,1,1,0.25,4,1,Platform.IMeter' Platform.MutableMeter' Platform.IO.IStreamWithEvents' Platform.IO.StreamWrapper,Platform.IO.ChunkingStream
+Platform.IO,ChunkingStream,6,5,2,1,5,171,25,0,2,0,1,0,Platform.IO.MeteringStream,
+Platform.IO,FifoStream,4,10,8,0,9,226,26,0,0,0.4,0,0,,
+Platform.IO,PartialStream,2,6,2,0,6,141,22,0,1,0.5,1,0,Platform.IO.StreamWrapper,
+Platform.IO,StreamCopier,10,10,4,1,8,311,14,0,2,0.7,10,0,Platform.ActionUtils' Platform.AbstractTask' Platform.StopRequestedException' Platform.AbstractMeter' Platform.IMeter' Platform.TaskState' Platform.IO.IStreamProvider' Platform.IO.StaticStreamProvider' Platform.IO.BytesReadMeter' Platform.IO.Meter,
 Platform.IO,IStreamProvider,0,4,0,0,0,7,4,1,0,-1,0,1,,Platform.IO.StreamCopier
-Platform.IO,StaticStreamProvider,2,5,0,0,5,41,7,0,1,0,0,0,,
-Platform.IO,BytesReadMeter,0,1,2,0,1,28,1,0,1,-1,1,0,Platform.IO.StreamCopier,
-Platform.IO,BytesWrittenMeter,0,1,2,0,1,28,1,0,1,-1,1,0,Platform.IO.StreamCopier,
-Platform.IO,Meter,1,3,3,0,2,39,3,2,2,1,1,1,Platform.IO.StreamCopier,Platform.IO.StreamCopier
+Platform.IO,StaticStreamProvider,2,5,0,0,5,41,7,0,1,0.6,0,1,,Platform.IO.StreamCopier
+Platform.IO,BytesReadMeter,0,1,2,0,1,28,1,0,1,-1,0,1,,Platform.IO.StreamCopier
+Platform.IO,BytesWrittenMeter,0,1,2,0,1,28,1,0,1,-1,0,0,,
+Platform.IO,Meter,1,3,3,0,2,39,3,2,2,1,0,1,,Platform.IO.StreamCopier
 Platform.IO,StreamUtils,2,6,0,0,6,166,17,0,0,0.67,1,0,Platform.Pair,
-Platform.IO,StreamWrapper,3,15,6,0,14,146,19,3,1,0.87,0,3,,Platform.IO.MeteringStream' Platform.IO.PartialStream' Platform.IO.InteractiveCryptoStream
-Platform.IO,InteractiveCryptoStream,14,10,5,0,8,279,45,0,2,0.2,2,0,Platform.IO.StreamWrapper' Platform.MathUtils,
-Platform.IO,TextReaderUtils,1,15,0,0,15,488,37,0,0,0.87,4,0,Platform.PredicateUtils' Platform.IO.CompositeTextReader' Platform.IO.MergedLineReader' Platform.IO.MergeTextReadersAsLineReaderParameters,
-Platform.IO,CompositeTextReader,3,5,0,0,4,52,9,0,0,0,0,1,,Platform.IO.TextReaderUtils
-Platform.IO,MergedLineReader,5,4,0,0,4,135,6,0,1,0,1,1,Platform.IO.MergeTextReadersAsLineReaderParameters,Platform.IO.TextReaderUtils
-Platform.IO,MergeTextReadersAsLineReaderParameters,0,0,0,0,0,11,0,0,0,-1,0,2,,Platform.IO.TextReaderUtils' Platform.IO.MergedLineReader
+Platform.IO,StreamWrapper,3,15,6,0,14,146,19,3,1,0.87,1,3,Platform.IWrapperObject,Platform.IO.InteractiveCryptoStream' Platform.IO.MeteringStream' Platform.IO.PartialStream
+Platform.IO,InteractiveCryptoStream,14,10,5,0,8,279,47,0,2,0.3,2,0,Platform.MathUtils' Platform.IO.StreamWrapper,
+Platform.IO,TextReaderUtils,1,15,0,0,15,488,38,0,0,0.87,5,0,Platform.PredicateUtils' Platform.IO.ILineReader' Platform.IO.CompositeTextReader' Platform.IO.MergedLineReader' Platform.IO.MergeTextReadersAsLineReaderParameters,
+Platform.IO,CompositeTextReader,3,5,0,0,4,52,9,0,0,0.4,0,1,,Platform.IO.TextReaderUtils
+Platform.IO,MergedLineReader,5,4,0,0,4,135,12,0,1,0,0,1,,Platform.IO.TextReaderUtils
+Platform.IO,MergeTextReadersAsLineReaderParameters,0,0,0,0,0,11,0,0,0,-1,0,1,,Platform.IO.TextReaderUtils
 Platform.Linq,ExpressionComparer,4,26,0,0,1,470,88,0,1,0,2,1,Platform.Linq.ExpressionComparerOptions' Platform.Linq.ExpressionVisitor,Platform.Linq.ExpressionEqualityComparer
-Platform.Linq,ExpressionComparerOptions,0,0,0,0,0,6,0,0,0,-1,0,3,,Platform.Linq.ExpressionComparer' Platform.Linq.ExpressionEqualityComparer' Platform.Linq.ExpressionHasher
-Platform.Linq,ExpressionEqualityComparer,2,4,0,1,4,22,4,0,0,0.5,3,0,Platform.Linq.ExpressionComparerOptions' Platform.Linq.ExpressionComparer' Platform.Linq.ExpressionHasher,
-Platform.Linq,ExpressionHasher,3,25,0,0,2,183,37,0,1,0.08,2,1,Platform.Linq.ExpressionComparerOptions' Platform.Linq.ExpressionVisitor,Platform.Linq.ExpressionEqualityComparer
-Platform.Linq,ExpressionVisitor,0,28,0,0,0,386,59,2,0,-1,0,2,,Platform.Linq.ExpressionComparer' Platform.Linq.ExpressionHasher
+Platform.Linq,ExpressionComparerOptions,0,0,0,0,0,6,0,0,0,-1,0,3,,Platform.Linq.ExpressionEqualityComparer' Platform.Linq.ExpressionHasher' Platform.Linq.ExpressionComparer
+Platform.Linq,ExpressionEqualityComparer,2,4,0,1,4,22,4,0,0,0.75,3,0,Platform.Linq.ExpressionComparer' Platform.Linq.ExpressionComparerOptions' Platform.Linq.ExpressionHasher,
+Platform.Linq,ExpressionHasher,3,25,0,0,2,183,37,0,1,0.12,2,1,Platform.Linq.ExpressionComparerOptions' Platform.Linq.ExpressionVisitor,Platform.Linq.ExpressionEqualityComparer
+Platform.Linq,ExpressionVisitor,0,28,0,0,0,386,86,2,0,-1,0,2,,Platform.Linq.ExpressionHasher' Platform.Linq.ExpressionComparer
 Platform.Reflection,ConstructorInfoUtils,0,2,0,0,2,44,6,0,0,-1,1,0,Platform.TypeUtils,
 Platform.Reflection,MethodInfoUtils,0,3,0,0,3,49,7,0,0,-1,1,0,Platform.TypeUtils,
-Platform.Reflection,MemberInfoUtils,0,2,0,0,2,119,9,0,0,-1,0,0,,
-Platform.Network.Time,NtpNetworkTimeClient,3,6,2,1,4,136,9,0,1,0.33,6,0,Platform.Network.Time.ProgressMeter' Platform.Network.Time.NtpPacket' Platform.TaskState' Platform.Network.Time.NtpMode' Platform.TaskExceptionEventArgs' Platform.Network.Time.NetworkTimeClient,
-Platform.Network.Time,ProgressMeter,1,3,0,0,3,20,3,0,3,0,0,1,,Platform.Network.Time.NtpNetworkTimeClient
-Platform.Network.Time,NtpByteOctuple,2,4,0,2,4,41,4,0,0,0,1,0,Platform.BigEndianByteQuad,
-Platform.Network.Time,NtpLeapIndicator,0,0,0,0,0,7,0,0,0,-1,0,0,,
+Platform.Reflection,MemberInfoUtils,0,2,0,0,2,119,17,0,0,-1,0,0,,
+Platform.Network.Time,NtpNetworkTimeClient,3,6,2,1,4,136,9,0,1,0.33,8,0,Platform.TaskExceptionEventArgs' Platform.IMeter' Platform.TaskState' Platform.MutableMeter' Platform.Network.Time.ProgressMeter' Platform.Network.Time.NtpMode' Platform.Network.Time.NtpPacket' Platform.Network.Time.NetworkTimeClient,
+Platform.Network.Time,ProgressMeter,1,3,0,0,3,20,3,0,3,1,0,1,,Platform.Network.Time.NtpNetworkTimeClient
+Platform.Network.Time,NtpByteOctuple,2,4,0,2,4,41,4,0,0,0,1,1,Platform.BigEndianByteQuad,Platform.Network.Time.NtpPacket
+Platform.Network.Time,NtpLeapIndicator,0,0,0,0,0,7,0,0,0,-1,0,1,,Platform.Network.Time.NtpPacket
 Platform.Network.Time,NtpMode,0,0,0,0,0,9,0,0,0,-1,0,2,,Platform.Network.Time.NtpNetworkTimeClient' Platform.Network.Time.NtpPacket
-Platform.Network.Time,NtpStratum,0,0,0,0,0,7,0,0,0,-1,0,0,,
-Platform.Network.Time,NtpPacket,12,8,13,1,8,366,11,0,0,0.5,2,1,Platform.Runtime.Interop.MarshalUtils' Platform.Network.Time.NtpMode,Platform.Network.Time.NtpNetworkTimeClient
-Platform.Network.Time,NetworkTimeClient,0,1,4,0,0,31,1,1,2,-1,0,1,,Platform.Network.Time.NtpNetworkTimeClient
-Platform.References,NotifyingWeakReference<T>,0,3,0,0,2,59,3,0,0,-1,0,0,,
-Platform.References,GarbageCollectionListener,1,1,0,0,1,20,1,0,0,0,0,0,,
-Platform.References,IReferenceQueue,0,1,0,0,0,10,1,1,0,-1,0,5,,Platform.Collections.KeyedTimedReference' Platform.Collections.KeyedWeakReference' Platform.References.Reference<T>' Platform.References.TimedReference<T>' Platform.References.WeakReference<T>
-Platform.References,Reference<T>,2,5,2,0,1,87,7,0,0,0.4,1,0,Platform.References.IReferenceQueue,
-Platform.References,FinalizerListener,1,1,0,0,1,22,1,0,0,0,0,0,,
-Platform.References,ReferenceQueueBase<T>,2,9,1,0,9,109,10,0,1,0.78,0,0,,
-Platform.References,TimedReference<T>,5,9,2,0,4,171,9,0,0,0.44,2,0,Platform.References.IReferenceQueue' Platform.ActionUtils,
-Platform.References,WeakReference<T>,1,4,2,0,4,41,4,0,0,0.75,1,0,Platform.References.IReferenceQueue,
+Platform.Network.Time,NtpStratum,0,0,0,0,0,7,0,0,0,-1,0,1,,Platform.Network.Time.NtpPacket
+Platform.Network.Time,NtpPacket,12,8,13,1,8,366,11,0,0,0.5,6,1,Platform.BigEndianByteQuad' Platform.Network.Time.NtpByteOctuple' Platform.Network.Time.NtpLeapIndicator' Platform.Network.Time.NtpMode' Platform.Network.Time.NtpStratum' Platform.Runtime.Interop.MarshalUtils,Platform.Network.Time.NtpNetworkTimeClient
+Platform.Network.Time,NetworkTimeClient,0,1,4,0,0,31,1,1,2,-1,2,1,Platform.AbstractTask' Platform.IValued,Platform.Network.Time.NtpNetworkTimeClient
+Platform.References,NotifyingWeakReference<T>,0,3,0,0,2,59,3,0,0,-1,2,1,Platform.References.GarbageCollectionListener' Platform.References.WeakReference<T>,Platform.WeakEventHandlerProxy<E;D>
+Platform.References,GarbageCollectionListener,1,1,0,0,1,20,1,0,0,0,0,1,,Platform.References.NotifyingWeakReference<T>
+Platform.References,IReferenceQueue,0,1,0,0,0,10,1,1,0,-1,1,6,Platform.References.Reference<T>,Platform.Collections.TimedReferenceDictionary<K;V>' Platform.References.ReferenceQueueBase<T>' Platform.Collections.WeakReferenceDictionary<K;V>' Platform.References.WeakReference<T>' Platform.References.TimedReference<T>' Platform.References.Reference<T>
+Platform.References,Reference<T>,2,5,2,0,1,87,7,0,0,0.6,2,5,Platform.References.IReferenceQueue' Platform.References.FinalizerListener,Platform.References.IReferenceQueue' Platform.References.TimedReference<T>' Platform.References.WeakReference<T>' Platform.Collections.ReferenceDictionary<K;V;R>' Platform.References.ReferenceQueueBase<T>
+Platform.References,FinalizerListener,1,1,0,0,1,22,1,0,0,0,0,1,,Platform.References.Reference<T>
+Platform.References,ReferenceQueueBase<T>,2,9,1,0,9,109,17,0,1,0.78,3,1,Platform.Collections.QueueBase<T>' Platform.References.IReferenceQueue' Platform.References.Reference<T>,Platform.Collections.ReferenceDictionary<K;V;R>
+Platform.References,TimedReference<T>,5,9,2,0,4,171,12,0,0,0.44,4,0,Platform.ActionUtils' Platform.References.IReferenceQueue' Platform.References.Reference<T>' Platform.References.WeakReference<T>,
+Platform.References,WeakReference<T>,1,4,2,0,4,41,4,0,0,0.75,2,5,Platform.References.IReferenceQueue' Platform.References.Reference<T>,Platform.Collections.WeakReferenceDictionary<K;V>' Platform.Collections.TimedReferenceDictionary<K;V>' Platform.References.NotifyingWeakReference<T>' Platform.References.TimedReference<T>' Platform.WeakEventHandlerProxy<E;D>
 Platform.Text.RegularExpressions,RegexBasedPredicateHelper,0,6,1,0,4,54,7,0,0,-1,0,1,,Platform.PredicateUtils
-Platform.Text.RegularExpressions,RegexCache,2,2,0,1,2,48,2,0,0,0,2,0,Platform.Text.RegularExpressions.CacheKeyEqualityComparer' Platform.Text.RegularExpressions.CacheKey,
-Platform.Text.RegularExpressions,CacheKey,2,1,0,0,1,10,1,0,0,0,0,2,,Platform.Text.RegularExpressions.RegexCache' Platform.Text.RegularExpressions.CacheKeyEqualityComparer
-Platform.Text.RegularExpressions,CacheKeyEqualityComparer,1,2,0,1,2,13,2,0,0,1,1,1,Platform.Text.RegularExpressions.CacheKey,Platform.Text.RegularExpressions.RegexCache
+Platform.Text.RegularExpressions,RegexCache,2,2,0,1,2,48,3,0,0,0,3,0,Platform.Collections.TimedReferenceDictionary<K;V>' Platform.Text.RegularExpressions.CacheKey' Platform.Text.RegularExpressions.CacheKeyEqualityComparer,
+Platform.Text.RegularExpressions,CacheKey,2,1,0,0,1,10,1,0,0,0,0,1,,Platform.Text.RegularExpressions.RegexCache
+Platform.Text.RegularExpressions,CacheKeyEqualityComparer,1,2,0,1,2,13,2,0,0,1,0,1,,Platform.Text.RegularExpressions.RegexCache
 Platform.Runtime.Interop,MarshalUtils,0,4,0,0,4,59,5,0,0,-1,0,1,,Platform.Network.Time.NtpPacket
-Platform.Text,CharArrayReader,3,8,0,0,7,75,12,0,0,0,0,0,,
-Platform.Text,TextConversion,6,37,0,5,35,544,69,0,0,0.38,2,2,Platform.Int32Utils' Platform.Pair,Platform.StringUriUtils' Platform.Tests.TextConversionTests
+Platform.Text,CharArrayReader,3,8,0,0,7,75,12,0,0,0.38,0,0,,
+Platform.Text,TextConversion,6,37,0,5,35,544,80,0,0,0.38,4,2,Platform.Pair' Platform.CharUtils' Platform.Int32Utils' Platform.PredicateUtils,Platform.StringUriUtils' Platform.HashValue
 Platform.Threading,ThreadPriorityContext,1,2,0,0,1,24,2,0,0,0,0,0,,
-Platform.Threading,MeterValueEvent<V>,2,9,3,0,5,115,9,0,0,0.67,2,0,Platform.IMeter' Platform.MeterEventArgs,
-Platform.Validation,BaseValidationAttribute,0,1,1,0,1,24,1,3,1,-1,1,3,Platform.Validation.IPropertyValidationContext,Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationException' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
-Platform.Validation,DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>,1,3,0,0,3,17,3,0,0,0,3,0,Platform.Validation.ValidationAttribute' Platform.Validation.ValidationResult' Platform.Validation.PropertyValidationContext,
-Platform.Validation,DefaultPropertyValidatorProvider,0,1,0,0,1,8,1,0,1,-1,1,0,Platform.Validation.ValidationAttribute,
-Platform.Validation,DefaultValueAttribute,0,2,2,0,2,14,2,0,2,-1,0,1,,Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
-Platform.Validation,IPropertyValidationContext,0,0,4,0,0,7,0,1,0,-1,0,9,,Platform.Validation.BaseValidationAttribute' Platform.Validation.SizeConstraintAttribute' Platform.Validation.ValidationException' Platform.Validation.ValidationResult' Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.ValuePatternConstraint' Platform.Validation.ValueRangeConstraintAttribute' Platform.Validation.ValueRequiredAttribute' Platform.Tests.Validation.TestBasicValidation
-Platform.Validation,IValidator,0,1,0,0,0,4,1,1,0,-1,0,4,,Platform.Validation.Validator' Platform.Validation.Validator<T>' Platform.Validation.ValidatorFactory' Platform.Tests.Validation.TestBasicValidation
-Platform.Validation,ObjectExtensions,0,2,0,0,2,13,2,0,0,-1,3,0,Platform.Validation.Validator' Platform.Validation.ValidationResult' Platform.Validation.ValidatorOptions,
-Platform.Validation,PropertyValidationContext,0,2,7,0,2,23,2,0,1,-1,1,9,Platform.Validation.BaseValidationAttribute,Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.SizeConstraintAttribute' Platform.Validation.ValidationAttribute' Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.ValuePatternConstraint' Platform.Validation.ValueRangeConstraintAttribute' Platform.Validation.ValueRequiredAttribute' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
-Platform.Validation,PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>,2,2,0,2,2,7,2,0,0,1,1,0,Platform.Validation.PropertyValidationContext,
-Platform.Validation,PropertyValidatorProvider,0,1,0,0,1,4,1,1,0,-1,1,0,Platform.Validation.ValidationAttribute,
-Platform.Validation,SizeConstraintAttribute,2,2,3,0,2,77,3,0,1,1,3,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.ValidationResult' Platform.Validation.PropertyValidationContext,
-Platform.Validation,SizeFlexibility,0,0,0,0,0,6,0,0,0,-1,0,0,,
-Platform.Validation,UniqueAttribute,0,2,1,0,2,14,2,0,1,-1,0,0,,
-Platform.Validation,UnsetValueAttribute,0,3,2,0,3,18,3,0,2,-1,0,1,,Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
-Platform.Validation,ValidationAttribute,0,3,0,0,2,17,3,6,2,-1,1,4,Platform.Validation.PropertyValidationContext,Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.DefaultPropertyValidatorProvider' Platform.Validation.PropertyValidatorProvider' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
-Platform.Validation,ValidationContext<OBJECT_TYPE>,0,2,3,0,2,14,2,0,0,-1,0,0,,
-Platform.Validation,ValidationException,0,2,2,0,2,15,2,0,0,-1,2,3,Platform.Validation.IPropertyValidationContext' Platform.Validation.BaseValidationAttribute,Platform.Validation.ValidationResult' Platform.Validation.ValueRequiredAttribute' Platform.Tests.Validation.TestBasicValidation
-Platform.Validation,ValidationResult,3,6,2,3,6,50,9,0,0,1,2,10,Platform.Validation.IPropertyValidationContext' Platform.Validation.ValidationException,Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.ObjectExtensions' Platform.Validation.SizeConstraintAttribute' Platform.Validation.Validator<T>' Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.ValuePatternConstraint' Platform.Validation.ValueRangeConstraintAttribute' Platform.Validation.ValueRequiredAttribute' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>' Platform.Tests.Validation.TestBasicValidation
-Platform.Validation,Validator,0,2,0,0,2,11,2,1,0,-1,3,4,Platform.Validation.ValidatorFactory' Platform.Validation.IValidator' Platform.Validation.ValidatorOptions,Platform.Validation.ObjectExtensions' Platform.Validation.Validator<T>' Platform.Validation.ValidatorFactory' Platform.Tests.Validation.TestBasicValidation
-Platform.Validation,Validator<T>,0,6,1,0,5,30,6,0,1,-1,5,0,Platform.Validation.Validator' Platform.Validation.ValidatorOptions' Platform.Validation.ValidationResult' Platform.Validation.ValidatorFactory' Platform.Validation.IValidator,
-Platform.Validation,ValidatorFactory,2,3,0,1,2,71,6,1,0,0.67,4,2,Platform.Validation.IValidator' Platform.Validation.ValidatorOptions' Platform.Validation.ValidatorKey' Platform.Validation.Validator,Platform.Validation.Validator' Platform.Validation.Validator<T>
-Platform.Validation,ValidatorKey,2,1,0,2,1,10,1,0,0,0,1,2,Platform.Validation.ValidatorOptions,Platform.Validation.ValidatorFactory' Platform.Validation.ValidatorKeyEqualityComparer
-Platform.Validation,ValidatorKeyEqualityComparer,1,2,0,1,2,14,2,0,0,1,2,0,Platform.Validation.ValidatorKey' Platform.Validation.ValidatorOptions,
-Platform.Validation,ValidatorCacheContainer<T>,1,0,0,1,0,4,0,0,0,-1,0,0,,
-Platform.Validation,ValidatorOptions,1,3,2,1,3,53,11,0,0,1,0,9,,Platform.Validation.ObjectExtensions' Platform.Validation.Validator' Platform.Validation.Validator<T>' Platform.Validation.ValidatorFactory' Platform.Validation.ValidatorKey' Platform.Validation.ValidatorKeyEqualityComparer' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>' Platform.Validation.Validators.ExpressionTreeBasedValidatorFactory' Platform.Tests.Validation.TestBasicValidation
-Platform.Validation,ValueExpressionConstraintAttribute,0,3,1,0,3,28,3,0,3,-1,4,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.Validators.StringExpressionParser' Platform.Validation.ValidationResult' Platform.Validation.PropertyValidationContext,
-Platform.Validation,ValuePatternConstraint,2,4,2,0,4,41,4,0,3,0.75,3,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationResult,
-Platform.Validation,ValueRangeConstraintAttribute,0,3,3,0,2,99,10,0,3,-1,3,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.ValidationResult' Platform.Validation.PropertyValidationContext,
-Platform.Validation,ValueRequiredAttribute,0,4,1,0,4,45,5,0,3,-1,4,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationResult' Platform.Validation.ValidationException,
-Platform.Validation.Validators,ExpressionTreeBasedValidator<T>,1,6,0,0,4,350,28,0,1,0.83,8,0,Platform.Validation.ValidatorOptions' Platform.Validation.ValidationAttribute' Platform.Validation.DefaultValueAttribute' Platform.Validation.UnsetValueAttribute' Platform.Validation.ValidationResult' Platform.Validation.PropertyValidationContext' Platform.Validation.BaseValidationAttribute' Platform.Validation.Validators.StringExpressionParser,
-Platform.Validation.Validators,ExpressionTreeBasedValidatorFactory,0,1,0,0,0,8,1,0,1,-1,1,0,Platform.Validation.ValidatorOptions,
-Platform.Validation.Validators,StringExpressionParser,8,11,0,0,3,333,26,0,0,0,1,2,Platform.Validation.Validators.Token,Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Threading,MeterValueEvent<V>,2,9,3,0,5,115,10,0,0,0.78,3,0,Platform.MeterEventArgs' Platform.IMeter' Platform.PredicateUtils,
+Platform.Validation,BaseValidationAttribute,0,1,1,0,1,24,1,3,1,-1,2,6,Platform.INamed' Platform.Validation.IPropertyValidationContext,Platform.Validation.DefaultValueAttribute' Platform.Validation.ValidationAttribute' Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.UnsetValueAttribute' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Validation,DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>,1,3,0,0,3,17,3,0,0,0.67,4,1,Platform.Validation.PropertyValidationContext' Platform.Validation.PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.ValidationAttribute' Platform.Validation.ValidationResult,Platform.Validation.DefaultPropertyValidatorProvider
+Platform.Validation,DefaultPropertyValidatorProvider,0,1,0,0,1,8,1,0,1,-1,4,1,Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.PropertyValidatorProvider' Platform.Validation.ValidationAttribute,Platform.Validation.ValidatorOptions
+Platform.Validation,DefaultValueAttribute,0,2,2,0,2,14,2,0,2,-1,1,1,Platform.Validation.BaseValidationAttribute,Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Validation,IPropertyValidationContext,0,0,4,0,0,7,0,1,0,-1,1,9,Platform.Validation.BaseValidationAttribute,Platform.Validation.BaseValidationAttribute' Platform.Validation.ValidationResult' Platform.Validation.ValidationException' Platform.Validation.ValuePatternConstraint' Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.PropertyValidationContext' Platform.Validation.ValueRequiredAttribute' Platform.Validation.ValueRangeConstraintAttribute' Platform.Validation.SizeConstraintAttribute
+Platform.Validation,IValidator,0,1,0,0,0,4,1,1,0,-1,1,3,Platform.Validation.ValidationResult,Platform.Validation.Validator' Platform.Validation.Validator<T>' Platform.Validation.ValidatorFactory
+Platform.Validation,ObjectExtensions,0,2,0,0,2,13,2,0,0,-1,3,0,Platform.Validation.ValidationResult' Platform.Validation.Validator<T>' Platform.Validation.ValidatorOptions,
+Platform.Validation,PropertyValidationContext,0,2,7,0,2,23,2,0,1,-1,3,9,Platform.Validation.BaseValidationAttribute' Platform.Validation.IPropertyValidationContext' Platform.Validation.ValidationContext<OBJECT_TYPE>,Platform.Validation.ValidationAttribute' Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.ValueRequiredAttribute' Platform.Validation.ValuePatternConstraint' Platform.Validation.ValueRangeConstraintAttribute' Platform.Validation.SizeConstraintAttribute' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Validation,PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>,2,2,0,2,2,7,2,0,0,1,2,3,Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationResult,Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.DefaultPropertyValidatorProvider' Platform.Validation.PropertyValidatorProvider
+Platform.Validation,PropertyValidatorProvider,0,1,0,0,1,4,1,1,0,-1,2,2,Platform.Validation.PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.ValidationAttribute,Platform.Validation.DefaultPropertyValidatorProvider' Platform.Validation.ValidatorOptions
+Platform.Validation,SizeConstraintAttribute,2,2,3,0,2,77,3,0,1,1,5,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.SizeFlexibility' Platform.Validation.ValidationAttribute' Platform.Validation.ValidationResult,
+Platform.Validation,SizeFlexibility,0,0,0,0,0,6,0,0,0,-1,0,1,,Platform.Validation.SizeConstraintAttribute
+Platform.Validation,UniqueAttribute,0,2,1,0,2,14,2,0,1,-1,1,0,Platform.Validation.ValidationAttribute,
+Platform.Validation,UnsetValueAttribute,0,3,2,0,3,18,3,0,2,-1,1,1,Platform.Validation.BaseValidationAttribute,Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Validation,ValidationAttribute,0,3,0,0,2,17,3,6,2,-1,3,10,Platform.Validation.BaseValidationAttribute' Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationResult,Platform.Validation.UniqueAttribute' Platform.Validation.DefaultPropertyValidatorProvider' Platform.Validation.PropertyValidatorProvider' Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.SizeConstraintAttribute' Platform.Validation.ValueRequiredAttribute' Platform.Validation.ValueRangeConstraintAttribute' Platform.Validation.ValuePatternConstraint' Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Validation,ValidationContext<OBJECT_TYPE>,0,2,3,0,2,14,2,0,0,-1,1,2,Platform.Validation.ValidatorOptions,Platform.Validation.PropertyValidationContext' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Validation,ValidationException,0,2,2,0,2,15,2,0,0,-1,1,3,Platform.Validation.IPropertyValidationContext,Platform.Validation.ValuePatternConstraint' Platform.Validation.ValidationResult' Platform.Validation.ValueRequiredAttribute
+Platform.Validation,ValidationResult,3,6,2,3,6,50,9,0,0,1,2,12,Platform.Validation.IPropertyValidationContext' Platform.Validation.ValidationException,Platform.Validation.IValidator' Platform.Validation.DefaultPropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.ObjectExtensions' Platform.Validation.PropertyValidator<OBJECT_TYPE;PROPERTY_TYPE>' Platform.Validation.ValidationAttribute' Platform.Validation.Validator<T>' Platform.Validation.ValuePatternConstraint' Platform.Validation.ValueRangeConstraintAttribute' Platform.Validation.SizeConstraintAttribute' Platform.Validation.ValueExpressionConstraintAttribute' Platform.Validation.ValueRequiredAttribute' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>
+Platform.Validation,Validator,0,2,0,0,2,11,2,1,0,-1,4,0,Platform.Validation.IValidator' Platform.Validation.Validator<T>' Platform.Validation.ValidatorFactory' Platform.Validation.ValidatorOptions,
+Platform.Validation,Validator<T>,0,6,1,0,5,30,6,0,1,-1,4,5,Platform.Validation.IValidator' Platform.Validation.ValidationResult' Platform.Validation.ValidatorFactory' Platform.Validation.ValidatorOptions,Platform.Validation.Validators.ExpressionTreeBasedValidatorFactory' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>' Platform.Validation.Validator' Platform.Validation.ObjectExtensions' Platform.Validation.ValidatorFactory
+Platform.Validation,ValidatorFactory,2,3,0,1,2,71,6,1,0,0.67,7,3,Platform.Validation.IValidator' Platform.Validation.Validator<T>' Platform.Validation.ValidatorKey' Platform.Validation.ValidatorKeyEqualityComparer' Platform.Validation.ValidatorCacheContainer<T>' Platform.Validation.ValidatorOptions' Platform.Validation.Validators.ExpressionTreeBasedValidatorFactory,Platform.Validation.Validators.ExpressionTreeBasedValidatorFactory' Platform.Validation.Validator' Platform.Validation.Validator<T>
+Platform.Validation,ValidatorKey,2,1,0,2,1,10,1,0,0,0,0,1,,Platform.Validation.ValidatorFactory
+Platform.Validation,ValidatorKeyEqualityComparer,1,2,0,1,2,14,2,0,0,1,0,1,,Platform.Validation.ValidatorFactory
+Platform.Validation,ValidatorCacheContainer<T>,1,0,0,1,0,4,0,0,0,-1,0,1,,Platform.Validation.ValidatorFactory
+Platform.Validation,ValidatorOptions,1,3,2,1,3,53,11,0,0,1,2,7,Platform.Validation.DefaultPropertyValidatorProvider' Platform.Validation.PropertyValidatorProvider,Platform.Validation.Validators.ExpressionTreeBasedValidatorFactory' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>' Platform.Validation.ObjectExtensions' Platform.Validation.ValidationContext<OBJECT_TYPE>' Platform.Validation.Validator' Platform.Validation.Validator<T>' Platform.Validation.ValidatorFactory
+Platform.Validation,ValueExpressionConstraintAttribute,0,3,1,0,3,28,3,0,3,-1,5,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationAttribute' Platform.Validation.ValidationResult' Platform.Validation.Validators.StringExpressionParser,
+Platform.Validation,ValuePatternConstraint,2,4,2,0,4,41,4,0,3,1,5,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationAttribute' Platform.Validation.ValidationException' Platform.Validation.ValidationResult,
+Platform.Validation,ValueRangeConstraintAttribute,0,3,3,0,2,99,11,0,3,-1,4,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationAttribute' Platform.Validation.ValidationResult,
+Platform.Validation,ValueRequiredAttribute,0,4,1,0,4,45,7,0,3,-1,5,0,Platform.Validation.IPropertyValidationContext' Platform.Validation.PropertyValidationContext' Platform.Validation.ValidationAttribute' Platform.Validation.ValidationException' Platform.Validation.ValidationResult,
+Platform.Validation.Validators,ExpressionTreeBasedValidator<T>,1,6,0,0,4,350,39,0,1,0.83,10,1,Platform.Validation.BaseValidationAttribute' Platform.Validation.DefaultValueAttribute' Platform.Validation.PropertyValidationContext' Platform.Validation.UnsetValueAttribute' Platform.Validation.ValidationAttribute' Platform.Validation.ValidationContext<OBJECT_TYPE>' Platform.Validation.ValidationResult' Platform.Validation.Validator<T>' Platform.Validation.ValidatorOptions' Platform.Validation.Validators.StringExpressionParser,Platform.Validation.Validators.ExpressionTreeBasedValidatorFactory
+Platform.Validation.Validators,ExpressionTreeBasedValidatorFactory,0,1,0,0,0,8,1,0,1,-1,4,1,Platform.Validation.Validator<T>' Platform.Validation.ValidatorFactory' Platform.Validation.ValidatorOptions' Platform.Validation.Validators.ExpressionTreeBasedValidator<T>,Platform.Validation.ValidatorFactory
+Platform.Validation.Validators,StringExpressionParser,8,11,0,0,3,333,51,0,0,0,3,2,Platform.Validation.Validators.Token' Platform.Validation.Validators.TokenizerException' Platform.Validation.Validators.ParserException,Platform.Validation.Validators.ExpressionTreeBasedValidator<T>' Platform.Validation.ValueExpressionConstraintAttribute
 Platform.Validation.Validators,Token,0,0,0,0,0,24,0,0,0,-1,0,1,,Platform.Validation.Validators.StringExpressionParser
-Platform.Validation.Validators,TokenizerException,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Platform.Validation.Validators,ParserException,0,1,0,0,1,8,1,0,0,-1,0,0,,
-Platform.Utilities,InvocationQueue,1,15,13,0,12,340,19,0,2,0.2,3,1,Platform.TaskAsyncStateAndImplementationHelper' Platform.TaskAsynchronisity' Platform.TaskState,Platform.Tests.InvocationQueueTests
+Platform.Validation.Validators,TokenizerException,0,1,0,0,1,8,1,0,0,-1,0,1,,Platform.Validation.Validators.StringExpressionParser
+Platform.Validation.Validators,ParserException,0,1,0,0,1,8,1,0,0,-1,0,1,,Platform.Validation.Validators.StringExpressionParser
+Platform.Utilities,InvocationQueue,1,15,13,0,12,340,19,0,2,0.2,9,0,Platform.AbstractTask' Platform.TaskAsyncStateAndImplementationHelper' Platform.StopRequestedException' Platform.AbstractMeter' Platform.IMeter' Platform.TaskState' Platform.TaskAsynchronisity' Platform.ITask' Platform.Collections.BlockingQueue<T>,
 Platform.Utilities,RecylingObjectPool<V>,1,15,2,0,14,207,27,0,0,0.73,1,0,Platform.Utilities.NullKey,
 Platform.Utilities,NullKey,1,0,0,1,0,4,0,0,0,-1,0,1,,Platform.Utilities.RecylingObjectPool<V>

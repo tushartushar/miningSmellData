@@ -1,0 +1,38 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TestEasy.Core.Abstractions,AssemblyResolver,1,1,1,0,1,31,2,0,1,0,1,0,TestEasy.Core.Abstractions.IAssemblyResolver,
+TestEasy.Core.Abstractions,IAssemblyResolver,0,1,0,0,0,4,1,1,0,-1,0,1,,TestEasy.Core.Abstractions.AssemblyResolver
+TestEasy.Core.Abstractions,RegistrySystem,0,3,0,0,3,33,7,0,1,-1,1,1,TestEasy.Core.Abstractions.IRegistrySystem,TestEasy.Core.AbstractionsLocator
+TestEasy.Core.Abstractions,IRegistrySystem,0,3,0,0,0,6,3,1,0,-1,0,2,,TestEasy.Core.Abstractions.RegistrySystem' TestEasy.Core.AbstractionsLocator
+TestEasy.Core.Abstractions,WebRequestor,0,1,0,0,1,23,1,0,1,-1,2,1,TestEasy.Core.Abstractions.IWebRequestor' TestEasy.Core.TestEasyLog,TestEasy.Core.AbstractionsLocator
+TestEasy.Core.Abstractions,IWebRequestor,0,1,0,0,0,4,1,1,0,-1,0,3,,TestEasy.Core.Helpers.WebHelper' TestEasy.Core.Abstractions.WebRequestor' TestEasy.Core.AbstractionsLocator
+TestEasy.Core.Abstractions,EnvironmentSystem,0,3,3,0,2,58,3,0,1,-1,1,1,TestEasy.Core.Abstractions.IEnvironmentSystem,TestEasy.Core.AbstractionsLocator
+TestEasy.Core.Abstractions,FileSystem,0,26,0,0,26,165,33,0,1,-1,1,2,TestEasy.Core.Abstractions.IFileSystem,TestEasy.Core.AbstractionsLocator' TestEasy.Core.Helpers.XmlHelper
+TestEasy.Core.Abstractions,IEnvironmentSystem,0,2,3,0,0,8,2,1,0,-1,0,4,,TestEasy.Core.Abstractions.EnvironmentSystem' TestEasy.Core.AbstractionsLocator' TestEasy.Core.Helpers.ToolsHelper' TestEasy.Core.Helpers.BuildHelper
+TestEasy.Core.Abstractions,IFileSystem,0,26,0,0,0,29,26,1,0,-1,0,5,,TestEasy.Core.Abstractions.FileSystem' TestEasy.Core.Helpers.XmlHelper' TestEasy.Core.AbstractionsLocator' TestEasy.Core.Helpers.ToolsHelper' TestEasy.Core.Helpers.BuildHelper
+TestEasy.Core.Abstractions,INuGetCore,0,2,0,0,0,7,2,1,0,-1,0,0,,
+TestEasy.Core.Abstractions,IProcessRunner,0,5,0,0,0,8,5,1,0,-1,0,5,,TestEasy.Core.Abstractions.ProcessRunner' TestEasy.Core.Helpers.BuildHelper' TestEasy.Core.AbstractionsLocator' TestEasy.Core.Helpers.ToolsHelper' TestEasy.Core.Helpers.FirewallHelper
+TestEasy.Core.Abstractions,ProcessRunner,0,5,0,0,5,24,5,0,1,-1,1,1,TestEasy.Core.Abstractions.IProcessRunner,TestEasy.Core.AbstractionsLocator
+TestEasy.Core,AbstractionsLocator,6,0,6,0,0,39,0,0,0,-1,10,4,TestEasy.Core.Abstractions.RegistrySystem' TestEasy.Core.Abstractions.IRegistrySystem' TestEasy.Core.Abstractions.WebRequestor' TestEasy.Core.Abstractions.IWebRequestor' TestEasy.Core.Abstractions.EnvironmentSystem' TestEasy.Core.Abstractions.FileSystem' TestEasy.Core.Abstractions.IEnvironmentSystem' TestEasy.Core.Abstractions.IFileSystem' TestEasy.Core.Abstractions.IProcessRunner' TestEasy.Core.Abstractions.ProcessRunner,TestEasy.Core.Helpers.FirewallHelper' TestEasy.Core.Helpers.WebHelper' TestEasy.Core.Helpers.BuildHelper' TestEasy.Core.Helpers.ToolsHelper
+TestEasy.Core,TestEasyHelpers,5,0,5,0,0,33,0,0,0,-1,5,0,TestEasy.Core.Helpers.BuildHelper' TestEasy.Core.Helpers.FirewallHelper' TestEasy.Core.Helpers.WebHelper' TestEasy.Core.Helpers.XmlHelper' TestEasy.Core.Helpers.ToolsHelper,
+TestEasy.Core,TestEasyConsoleLogProvider,2,9,0,0,8,52,11,0,1,0.22,1,1,TestEasy.Core.ITestEasyLogProvider,TestEasy.Core.TestEasyLog
+TestEasy.Core,ITestEasyLogProvider,0,7,0,0,0,10,7,1,0,-1,0,2,,TestEasy.Core.TestEasyConsoleLogProvider' TestEasy.Core.TestEasyLog
+TestEasy.Core,TestEasyLog,2,9,2,0,7,85,10,0,0,1,2,3,TestEasy.Core.TestEasyConsoleLogProvider' TestEasy.Core.ITestEasyLogProvider,TestEasy.Core.Helpers.RetryHelper' TestEasy.Core.Abstractions.WebRequestor' TestEasy.Core.Helpers.FtpHelper
+TestEasy.Core,WebTestcase,0,0,1,0,0,7,0,2,0,-1,1,0,TestEasy.Core.Configuration.TestEasyConfig,
+TestEasy.Core.Configuration,AzureSection,0,0,2,0,0,29,0,0,0,-1,1,1,TestEasy.Core.Configuration.SubscriptionsCollection,TestEasy.Core.Configuration.TestEasyConfig
+TestEasy.Core.Configuration,SubscriptionsCollection,0,4,2,0,0,48,4,0,0,-1,1,1,TestEasy.Core.Configuration.SubscriptionElement,TestEasy.Core.Configuration.AzureSection
+TestEasy.Core.Configuration,SubscriptionElement,0,0,2,0,0,33,0,0,0,-1,0,1,,TestEasy.Core.Configuration.SubscriptionsCollection
+TestEasy.Core.Configuration,WebServerTypeElement,0,0,2,0,0,33,0,0,0,-1,0,1,,TestEasy.Core.Configuration.WebServerTypeCollection
+TestEasy.Core.Configuration,WebServerTypeCollection,0,4,2,0,0,48,4,0,0,-1,1,1,TestEasy.Core.Configuration.WebServerTypeElement,TestEasy.Core.Configuration.WebServerSection
+TestEasy.Core.Configuration,ClientSection,0,0,3,0,0,48,0,0,0,-1,0,1,,TestEasy.Core.Configuration.TestEasyConfig
+TestEasy.Core.Configuration,TestEasyConfig,12,5,5,3,2,177,13,0,0,0.4,4,3,TestEasy.Core.Configuration.AzureSection' TestEasy.Core.Configuration.ClientSection' TestEasy.Core.Configuration.ToolsSection' TestEasy.Core.Configuration.WebServerSection,TestEasy.Core.WebTestcase' TestEasy.Core.Configuration.ToolsSection' TestEasy.Core.Helpers.ToolsHelper
+TestEasy.Core.Configuration,ToolElement,0,0,3,0,0,48,0,0,0,-1,0,1,,TestEasy.Core.Configuration.ToolsCollection
+TestEasy.Core.Configuration,ToolsCollection,0,4,2,0,0,48,4,0,0,-1,1,1,TestEasy.Core.Configuration.ToolElement,TestEasy.Core.Configuration.ToolsSection
+TestEasy.Core.Configuration,ToolsSection,0,0,3,0,0,44,0,0,0,-1,2,1,TestEasy.Core.Configuration.TestEasyConfig' TestEasy.Core.Configuration.ToolsCollection,TestEasy.Core.Configuration.TestEasyConfig
+TestEasy.Core.Configuration,WebServerSection,0,0,3,0,0,44,0,0,0,-1,1,1,TestEasy.Core.Configuration.WebServerTypeCollection,TestEasy.Core.Configuration.TestEasyConfig
+TestEasy.Core.Helpers,FtpHelper,0,33,4,0,14,682,58,0,0,-1,2,0,TestEasy.Core.TestEasyLog' TestEasy.Core.Helpers.RetryHelper,
+TestEasy.Core.Helpers,RetryHelper,0,4,0,0,4,63,7,0,0,-1,1,1,TestEasy.Core.TestEasyLog,TestEasy.Core.Helpers.FtpHelper
+TestEasy.Core.Helpers,BuildHelper,3,4,0,0,2,78,12,0,0,0.5,4,1,TestEasy.Core.Abstractions.IEnvironmentSystem' TestEasy.Core.Abstractions.IFileSystem' TestEasy.Core.Abstractions.IProcessRunner' TestEasy.Core.AbstractionsLocator,TestEasy.Core.TestEasyHelpers
+TestEasy.Core.Helpers,FirewallHelper,1,5,0,0,3,27,5,0,0,0,2,2,TestEasy.Core.Abstractions.IProcessRunner' TestEasy.Core.AbstractionsLocator,TestEasy.Core.TestEasyHelpers' TestEasy.Core.Helpers.ToolsHelper
+TestEasy.Core.Helpers,WebHelper,1,3,0,0,2,24,3,0,0,0,2,1,TestEasy.Core.Abstractions.IWebRequestor' TestEasy.Core.AbstractionsLocator,TestEasy.Core.TestEasyHelpers
+TestEasy.Core.Helpers,XmlHelper,1,9,0,0,5,165,27,0,0,0,2,1,TestEasy.Core.Abstractions.FileSystem' TestEasy.Core.Abstractions.IFileSystem,TestEasy.Core.TestEasyHelpers
+TestEasy.Core.Helpers,ToolsHelper,3,6,0,0,4,117,15,0,0,0,6,1,TestEasy.Core.Abstractions.IEnvironmentSystem' TestEasy.Core.Abstractions.IFileSystem' TestEasy.Core.Abstractions.IProcessRunner' TestEasy.Core.AbstractionsLocator' TestEasy.Core.Configuration.TestEasyConfig' TestEasy.Core.Helpers.FirewallHelper,TestEasy.Core.TestEasyHelpers

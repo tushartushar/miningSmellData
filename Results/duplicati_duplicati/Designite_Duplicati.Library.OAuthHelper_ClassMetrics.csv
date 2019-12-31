@@ -1,8 +1,11 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Duplicati.Library,OAuthContextSettings,0,1,1,0,1,35,1,0,0,-1,0,2,,Duplicati.Library.OAuthHelper' Duplicati.Library.Modules.Builtin.HttpOptions
-Duplicati.Library,OAuthSettings,1,0,0,1,0,7,0,0,0,-1,0,0,,
-Duplicati.Library,OAuthHelper,5,6,3,1,6,117,9,2,1,0.5,4,7,Duplicati.Library.Utility.Uri' Duplicati.Library.OAuthContextSettings' Duplicati.Library.Strings.OAuthHelper' Duplicati.Library.JSONWebHelper,Duplicati.Library.Backend.AmazonCloudDrive.AmzCD' Duplicati.Library.Backend.DropboxHelper' Duplicati.Library.Backend.GoogleCloudStorage.GoogleCloudStorage' Duplicati.Library.Backend.GoogleServices.GoogleCommon' Duplicati.Library.Backend.GoogleDrive.GoogleDrive' Duplicati.Library.Backend.HubiC.OpenStackHelper' Duplicati.Library.Backend.OneDrive
-Duplicati.Library,OAuth_Service_Response,0,0,3,0,0,8,0,0,0,-1,0,0,,
-Duplicati.Library,JSONWebHelper,2,18,2,1,17,236,30,3,0,0.22,3,4,Duplicati.Library.MultipartItem' Duplicati.Library.Utility.AsyncHttpRequest' Duplicati.Library.Utility.Utility,Duplicati.Library.Backend.Backblaze.B2AuthHelper' Duplicati.Library.OAuthHelper' Duplicati.Library.Backend.OpenStack.OpenStackStorage' Duplicati.Library.Backend.OpenStack.WebHelper
-Duplicati.Library,MultipartItem,0,9,5,0,9,104,10,0,0,-1,1,1,Duplicati.Library.Utility.Uri,Duplicati.Library.JSONWebHelper
-Duplicati.Library.Strings,OAuthHelper,0,4,2,0,4,8,4,0,0,-1,1,1,Duplicati.Library.Localization.Short.LC,Duplicati.Library.OAuthHelper
+Duplicati.Library,OAuthHttpClient,2,6,0,0,3,95,11,0,0,0.5,1,0,Duplicati.Library.OAuthHttpMessageHandler,
+Duplicati.Library,OAuthHttpMessageHandler,2,3,0,1,2,30,4,0,0,0,1,1,Duplicati.Library.OAuthHelper,Duplicati.Library.OAuthHttpClient
+Duplicati.Library,OAuthContextSettings,0,1,1,0,1,35,1,0,0,-1,2,1,Duplicati.Library.OAuthSettings' Duplicati.Library.OAuthHelper,Duplicati.Library.OAuthHelper
+Duplicati.Library,OAuthSettings,1,0,0,1,0,7,0,0,0,-1,0,1,,Duplicati.Library.OAuthContextSettings
+Duplicati.Library,OAuthHelper,4,6,3,1,6,115,9,2,1,0.5,4,2,Duplicati.Library.OAuthContextSettings' Duplicati.Library.OAuth_Service_Response' Duplicati.Library.JSONWebHelper' Duplicati.Library.Strings.OAuthHelper,Duplicati.Library.OAuthHttpMessageHandler' Duplicati.Library.OAuthContextSettings
+Duplicati.Library,OAuth_Service_Response,0,0,3,0,0,8,0,0,0,-1,0,1,,Duplicati.Library.OAuthHelper
+Duplicati.Library,JSONWebHelper,3,26,2,1,23,353,45,3,0,0.15,2,1,Duplicati.Library.HeaderPart' Duplicati.Library.MultipartItem,Duplicati.Library.OAuthHelper
+Duplicati.Library,HeaderPart,2,1,0,2,1,10,1,0,0,0,0,1,,Duplicati.Library.JSONWebHelper
+Duplicati.Library,MultipartItem,0,10,5,0,10,108,11,0,0,-1,0,1,,Duplicati.Library.JSONWebHelper
+Duplicati.Library.Strings,OAuthHelper,0,4,2,0,4,8,4,0,0,-1,0,1,,Duplicati.Library.OAuthHelper

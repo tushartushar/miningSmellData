@@ -1,0 +1,21 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OpenBastard.Environments,HttpListenerEnvironment,1,3,1,0,3,22,3,0,1,0.67,2,0,OpenBastard.Environments.HttpListenerHostWithConfiguration' OpenBastard.Environments.HttpWebRequestEnvironment,
+OpenBastard.Environments,HttpListenerHostWithConfiguration,1,2,0,0,2,15,3,0,0,0,0,1,,OpenBastard.Environments.HttpListenerEnvironment
+OpenBastard.Environments,HttpWebRequestEnvironment,0,6,2,0,5,61,10,2,1,-1,3,2,OpenBastard.Environments.InMemoryClientRequest' OpenBastard.Environments.WebRequestResponse' OpenBastard.Environments.IEnvironment,OpenBastard.Environments.HttpListenerEnvironment' OpenBastard.Environments.Iis7.FileBasedAspNetEnvironment
+OpenBastard.Environments,InMemoryEnvironment,1,6,1,0,4,67,11,0,1,0.33,2,0,OpenBastard.Environments.InMemoryClientRequest' OpenBastard.Environments.IEnvironment,
+OpenBastard.Environments,InMemoryClientRequest,0,0,1,0,0,4,0,0,0,-1,0,2,,OpenBastard.Environments.InMemoryEnvironment' OpenBastard.Environments.HttpWebRequestEnvironment
+OpenBastard.Environments,WebRequestResponse,1,2,10,0,2,51,4,0,0,1,0,1,,OpenBastard.Environments.HttpWebRequestEnvironment
+OpenBastard.Environments,IEnvironment,0,3,1,0,0,22,3,2,0,-1,0,2,,OpenBastard.Environments.InMemoryEnvironment' OpenBastard.Environments.HttpWebRequestEnvironment
+OpenBastard.Environments.Iis7,FileBasedAspNetEnvironment,1,7,2,0,2,55,10,1,2,0.86,1,1,OpenBastard.Environments.HttpWebRequestEnvironment,OpenBastard.Environments.Iis7.Iis7Environment
+OpenBastard.Environments.Iis7,Iis7ClassicEnvironment,0,0,2,0,0,11,0,0,1,-1,1,0,OpenBastard.Environments.Iis7.Iis7Environment,
+OpenBastard.Environments.Iis7,Iis7Environment,3,9,1,0,2,74,11,2,3,0,2,2,OpenBastard.Environments.Iis7.FileBasedAspNetEnvironment' OpenBastard.IisConfigFiles,OpenBastard.Environments.Iis7.Iis7ClassicEnvironment' OpenBastard.Environments.Iis7.Iis7IntegratedEnvironment
+OpenBastard.Environments.Iis7,Iis7IntegratedEnvironment,0,0,2,0,0,11,0,0,4,-1,1,0,OpenBastard.Environments.Iis7.Iis7Environment,
+OpenBastard,IisConfigFiles,2,1,4,0,0,94,1,0,0,0,0,1,,OpenBastard.Environments.Iis7.Iis7Environment
+OpenBastard.Scenarios,accessing_the_homepage,0,1,0,0,1,15,1,0,0,-1,1,0,context.accessing_the_homepage,
+OpenBastard.Scenarios,manipulating_users,1,6,1,0,3,54,6,0,0,0.5,2,0,context.manipulating_users' OpenBastard.Infrastructure.FormData,
+OpenBastard.Scenarios,uploading_files,1,8,0,0,5,50,8,0,0,0.38,2,0,context.uploading_files' OpenBastard.Infrastructure.FormData,
+context,accessing_the_homepage,0,0,0,0,0,3,0,0,0,-1,0,1,,OpenBastard.Scenarios.accessing_the_homepage
+context,manipulating_users,0,0,0,0,0,3,0,0,0,-1,0,1,,OpenBastard.Scenarios.manipulating_users
+context,uploading_files,1,1,0,0,0,10,1,0,0,0,0,1,,OpenBastard.Scenarios.uploading_files
+OpenBastard.Infrastructure,RequestExtensions,0,12,0,0,12,72,13,0,0,-1,1,0,OpenBastard.Infrastructure.FormData,
+OpenBastard.Infrastructure,FormData,2,4,0,0,3,24,4,0,0,0.75,0,3,,OpenBastard.Scenarios.manipulating_users' OpenBastard.Scenarios.uploading_files' OpenBastard.Infrastructure.RequestExtensions

@@ -1,0 +1,27 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TsPacketChecker,BufferedTsFileReader,4,6,0,0,6,71,12,0,0,0,1,1,TsPacketChecker.TsHeader,TsPacketChecker.Form1
+TsPacketChecker,CatParser,2,2,0,1,2,33,6,0,1,0,3,1,TsPacketChecker.Section' TsPacketChecker.SectionDecoder' TsPacketChecker.StringUtils,TsPacketChecker.Form1
+TsPacketChecker,BaseChannel,3,0,0,3,0,6,0,2,0,-1,0,2,,TsPacketChecker.LinkedChannel' TsPacketChecker.PortalChannel
+TsPacketChecker,LinkedChannel,1,0,0,1,0,4,0,0,1,-1,1,2,TsPacketChecker.BaseChannel,TsPacketChecker.PortalChannel' TsPacketChecker.ChannelLinkageParser
+TsPacketChecker,PortalChannel,1,1,0,1,1,11,1,0,1,0,2,1,TsPacketChecker.BaseChannel' TsPacketChecker.LinkedChannel,TsPacketChecker.ChannelLinkageParser
+TsPacketChecker,ChannelLinkageParser,2,2,0,1,2,62,12,0,1,0,4,1,TsPacketChecker.LinkedChannel' TsPacketChecker.PortalChannel' TsPacketChecker.Section' TsPacketChecker.SectionDecoder,TsPacketChecker.Form1
+TsPacketChecker,Form1,24,19,0,0,4,503,44,0,0,0.16,10,2,TsPacketChecker.BufferedTsFileReader' TsPacketChecker.CatParser' TsPacketChecker.ChannelLinkageParser' TsPacketChecker.NodeSorter' TsPacketChecker.EitParser' TsPacketChecker.NITParser' TsPacketChecker.PacketChecker' TsPacketChecker.PatParser' TsPacketChecker.SdtParser' TsPacketChecker.TsHeader,TsPacketChecker.EitParser' TsPacketChecker.Program
+TsPacketChecker,NodeSorter,0,1,0,0,1,27,4,0,0,-1,0,1,,TsPacketChecker.Form1
+TsPacketChecker,EitParser,1,7,0,0,3,106,19,0,1,0.29,3,1,TsPacketChecker.Form1' TsPacketChecker.Section' TsPacketChecker.SectionDecoder,TsPacketChecker.Form1
+TsPacketChecker,NetworkType,0,0,0,0,0,7,0,0,0,-1,0,2,,TsPacketChecker.NetworkInfo' TsPacketChecker.NITParser
+TsPacketChecker,NetworkInfo,22,12,0,22,2,226,45,0,0,0,1,1,TsPacketChecker.NetworkType,TsPacketChecker.NITParser
+TsPacketChecker,NITParser,5,8,0,0,4,214,32,0,0,0,5,1,TsPacketChecker.NetworkType' TsPacketChecker.NetworkInfo' TsPacketChecker.Section' TsPacketChecker.SectionDecoder' TsPacketChecker.StringUtils,TsPacketChecker.Form1
+TsPacketChecker,PacketChecker,7,10,0,0,5,157,37,0,0,0,4,1,TsPacketChecker.Pcr' TsPacketChecker.PcrUtils' TsPacketChecker.PidInfo' TsPacketChecker.TsHeader,TsPacketChecker.Form1
+TsPacketChecker,PatParser,6,5,0,1,5,82,17,0,1,0,3,1,TsPacketChecker.PmtParser' TsPacketChecker.Section' TsPacketChecker.SectionDecoder,TsPacketChecker.Form1
+TsPacketChecker,Pcr,3,5,0,3,5,51,5,0,0,0,0,3,,TsPacketChecker.PidInfo' TsPacketChecker.PacketChecker' TsPacketChecker.PcrUtils
+TsPacketChecker,PcrUtils,0,4,0,0,4,66,8,0,0,-1,1,1,TsPacketChecker.Pcr,TsPacketChecker.PacketChecker
+TsPacketChecker,PidInfo,7,2,0,7,2,24,2,0,0,0,1,1,TsPacketChecker.Pcr,TsPacketChecker.PacketChecker
+TsPacketChecker,PmtParser,5,3,0,2,3,117,24,0,1,0,3,1,TsPacketChecker.Section' TsPacketChecker.SectionDecoder' TsPacketChecker.StringUtils,TsPacketChecker.PatParser
+TsPacketChecker,Program,0,1,0,0,0,13,1,0,0,-1,1,0,TsPacketChecker.Form1,
+TsPacketChecker,SdtParser,4,5,0,0,4,87,11,0,0,0,3,1,TsPacketChecker.Section' TsPacketChecker.SectionDecoder' TsPacketChecker.StringUtils,TsPacketChecker.Form1
+TsPacketChecker,Section,10,5,0,10,5,76,13,0,0,0,0,8,,TsPacketChecker.EitParser' TsPacketChecker.CatParser' TsPacketChecker.PmtParser' TsPacketChecker.PatParser' TsPacketChecker.NITParser' TsPacketChecker.ChannelLinkageParser' TsPacketChecker.SdtParser' TsPacketChecker.SectionDecoder
+TsPacketChecker,SectionDecoder,4,8,2,1,5,166,26,5,0,0,2,7,TsPacketChecker.Section' TsPacketChecker.TsHeader,TsPacketChecker.CatParser' TsPacketChecker.ChannelLinkageParser' TsPacketChecker.PatParser' TsPacketChecker.PmtParser' TsPacketChecker.EitParser' TsPacketChecker.NITParser' TsPacketChecker.SdtParser
+TsPacketChecker,StringUtils,0,4,0,0,4,335,149,0,0,-1,0,4,,TsPacketChecker.NITParser' TsPacketChecker.SdtParser' TsPacketChecker.CatParser' TsPacketChecker.PmtParser
+TsPacketChecker,TsHeader,12,3,0,12,3,50,6,0,0,0,0,4,,TsPacketChecker.Form1' TsPacketChecker.SectionDecoder' TsPacketChecker.PacketChecker' TsPacketChecker.BufferedTsFileReader
+WindowsApplication13.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
+WindowsApplication13.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,

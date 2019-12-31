@@ -1,0 +1,51 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TodoCognitive,App,1,4,1,0,1,32,4,0,0,1,4,2,TodoCognitive.ITodoItemRepository' TodoCognitive.TodoItemRepository' TodoCognitive.IFileHelper' TodoCognitive.TodoListPage,TodoCognitive.TodoListPage' TodoCognitive.TodoItemPage
+TodoCognitive,Constants,11,0,0,11,0,14,0,0,0,-1,0,6,,TodoCognitive.TextTranslationService' TodoCognitive.AuthenticationService' TodoCognitive.BingSpellCheckService' TodoCognitive.BingSpeechService' TodoCognitive.TodoItemPage' TodoCognitive.Services.FaceRecognitionService
+TodoCognitive,SpeechResult,0,0,4,0,0,8,0,0,0,-1,0,2,,TodoCognitive.IBingSpeechService' TodoCognitive.BingSpeechService
+TodoCognitive,SpellCheckSuggestion,0,0,2,0,0,5,0,0,0,-1,0,1,,TodoCognitive.FlaggedToken
+TodoCognitive,FlaggedToken,0,0,4,0,0,7,0,0,0,-1,1,1,TodoCognitive.SpellCheckSuggestion,TodoCognitive.SpellCheckResult
+TodoCognitive,SpellCheckResult,0,0,2,0,0,6,0,0,0,-1,1,2,TodoCognitive.FlaggedToken,TodoCognitive.IBingSpellCheckService' TodoCognitive.BingSpellCheckService
+TodoCognitive,TodoItem,0,0,3,0,0,8,0,0,0,-1,0,4,,TodoCognitive.ITodoItemRepository' TodoCognitive.TodoListPage' TodoCognitive.TodoItemRepository' TodoCognitive.TodoItemPage
+TodoCognitive,ITodoItemRepository,0,4,0,0,0,7,4,1,0,-1,1,2,TodoCognitive.TodoItem,TodoCognitive.TodoItemRepository' TodoCognitive.App
+TodoCognitive,TodoItemRepository,1,5,0,0,5,32,6,0,1,0,2,1,TodoCognitive.TodoItem' TodoCognitive.ITodoItemRepository,TodoCognitive.App
+TodoCognitive,AuthenticationService,5,6,0,0,3,57,6,0,1,0,3,1,TodoCognitive.Constants' TodoCognitive.IAuthenticationService' TodoCognitive.Timer,TodoCognitive.TodoItemPage
+TodoCognitive,BingSpeechService,3,4,0,0,2,51,6,0,1,0.5,4,1,TodoCognitive.Constants' TodoCognitive.SpeechResult' TodoCognitive.IAuthenticationService' TodoCognitive.IBingSpeechService,TodoCognitive.TodoItemPage
+TodoCognitive,BingSpellCheckService,1,4,0,0,2,28,4,0,1,0,4,1,TodoCognitive.Constants' TodoCognitive.SpellCheckResult' TodoCognitive.IBingSpellCheckService' TodoCognitive.SpellCheckMode,TodoCognitive.TodoItemPage
+TodoCognitive,IAudioRecorderService,0,2,0,0,0,5,2,3,0,-1,0,1,,TodoCognitive.TodoItemPage
+TodoCognitive,IAuthenticationService,0,2,0,0,0,5,2,1,0,-1,0,3,,TodoCognitive.AuthenticationService' TodoCognitive.TextTranslationService' TodoCognitive.BingSpeechService
+TodoCognitive,IBingSpeechService,0,1,0,0,0,4,1,1,0,-1,1,2,TodoCognitive.SpeechResult,TodoCognitive.TodoItemPage' TodoCognitive.BingSpeechService
+TodoCognitive,IBingSpellCheckService,0,1,0,0,0,4,1,1,0,-1,1,2,TodoCognitive.SpellCheckResult,TodoCognitive.BingSpellCheckService' TodoCognitive.TodoItemPage
+TodoCognitive,IFileHelper,0,1,0,0,0,4,1,3,0,-1,0,1,,TodoCognitive.App
+TodoCognitive,ITextTranslationService,0,1,0,0,0,4,1,1,0,-1,0,2,,TodoCognitive.TextTranslationService' TodoCognitive.TodoItemPage
+TodoCognitive,SpellCheckMode,0,0,0,0,0,5,0,0,0,-1,0,1,,TodoCognitive.BingSpellCheckService
+TodoCognitive,TextTranslationService,2,4,0,0,2,39,6,0,1,0,3,1,TodoCognitive.Constants' TodoCognitive.IAuthenticationService' TodoCognitive.ITextTranslationService,TodoCognitive.TodoItemPage
+TodoCognitive,Timer,7,8,0,0,5,81,11,0,0,0.25,0,1,,TodoCognitive.AuthenticationService
+TodoCognitive,RateAppPage,2,2,0,0,1,61,6,0,0,0,5,1,TodoCognitive.Exceptions.FaceAPIException' TodoCognitive.Models.Face' TodoCognitive.Models.FaceAttributeType' TodoCognitive.Services.FaceRecognitionService' TodoCognitive.Services.IFaceRecognitionService,TodoCognitive.TodoListPage
+TodoCognitive,TodoItemPage,6,7,2,2,1,124,14,0,0,0.57,11,1,TodoCognitive.App' TodoCognitive.Constants' TodoCognitive.TodoItem' TodoCognitive.AuthenticationService' TodoCognitive.BingSpeechService' TodoCognitive.BingSpellCheckService' TodoCognitive.IAudioRecorderService' TodoCognitive.IBingSpeechService' TodoCognitive.IBingSpellCheckService' TodoCognitive.ITextTranslationService' TodoCognitive.TextTranslationService,TodoCognitive.TodoListPage
+TodoCognitive,TodoListPage,0,5,0,0,1,30,5,0,0,-1,4,1,TodoCognitive.App' TodoCognitive.TodoItem' TodoCognitive.RateAppPage' TodoCognitive.TodoItemPage,TodoCognitive.App
+TodoCognitive.Exceptions,FaceAPIException,0,1,3,0,1,13,1,0,0,-1,0,2,,TodoCognitive.Services.FaceRecognitionService' TodoCognitive.RateAppPage
+TodoCognitive.Models,AccessoryType,0,0,0,0,0,7,0,0,0,-1,0,1,,TodoCognitive.Models.Accessory
+TodoCognitive.Models,Accessory,0,0,2,0,0,5,0,0,0,-1,1,1,TodoCognitive.Models.AccessoryType,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,BlurLevel,0,0,0,0,0,7,0,0,0,-1,0,1,,TodoCognitive.Models.Blur
+TodoCognitive.Models,Blur,0,0,2,0,0,5,0,0,0,-1,1,1,TodoCognitive.Models.BlurLevel,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,EmotionScores,0,1,8,0,1,28,1,0,0,-1,0,1,,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,ExposureLevel,0,0,0,0,0,7,0,0,0,-1,0,1,,TodoCognitive.Models.Exposure
+TodoCognitive.Models,Exposure,0,0,2,0,0,5,0,0,0,-1,1,1,TodoCognitive.Models.ExposureLevel,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,Face,0,0,4,0,0,7,0,0,0,-1,3,3,TodoCognitive.Models.FaceAttributes' TodoCognitive.Models.FaceLandmarks' TodoCognitive.Models.FaceRectangle,TodoCognitive.Services.IFaceRecognitionService' TodoCognitive.RateAppPage' TodoCognitive.Services.FaceRecognitionService
+TodoCognitive.Models,FaceAttributes,0,0,14,0,0,18,0,0,0,-1,10,1,TodoCognitive.Models.Accessory' TodoCognitive.Models.Blur' TodoCognitive.Models.EmotionScores' TodoCognitive.Models.Exposure' TodoCognitive.Models.HeadPose' TodoCognitive.Models.FacialHair' TodoCognitive.Models.Glasses' TodoCognitive.Models.Makeup' TodoCognitive.Models.Noise' TodoCognitive.Models.Occlusion,TodoCognitive.Models.Face
+TodoCognitive.Models,HeadPose,0,0,3,0,0,6,0,0,0,-1,0,1,,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,FacialHair,0,0,3,0,0,6,0,0,0,-1,0,1,,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,FaceAttributeType,0,0,0,0,0,17,0,0,0,-1,0,3,,TodoCognitive.Services.IFaceRecognitionService' TodoCognitive.Services.FaceRecognitionService' TodoCognitive.RateAppPage
+TodoCognitive.Models,FeatureCoordinate,0,0,2,0,0,5,0,0,0,-1,0,1,,TodoCognitive.Models.FaceLandmarks
+TodoCognitive.Models,FaceLandmarks,0,0,27,0,0,30,0,0,0,-1,1,1,TodoCognitive.Models.FeatureCoordinate,TodoCognitive.Models.Face
+TodoCognitive.Models,FaceRectangle,0,0,4,0,0,7,0,0,0,-1,0,1,,TodoCognitive.Models.Face
+TodoCognitive.Models,Glasses,0,0,0,0,0,7,0,0,0,-1,0,1,,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,Makeup,0,0,2,0,0,5,0,0,0,-1,0,1,,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,NoiseLevel,0,0,0,0,0,7,0,0,0,-1,0,1,,TodoCognitive.Models.Noise
+TodoCognitive.Models,Noise,0,0,2,0,0,5,0,0,0,-1,1,1,TodoCognitive.Models.NoiseLevel,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Models,Occlusion,0,0,3,0,0,6,0,0,0,-1,0,1,,TodoCognitive.Models.FaceAttributes
+TodoCognitive.Services,FaceRecognitionService,2,6,0,0,3,109,16,0,1,0.33,7,1,TodoCognitive.Constants' TodoCognitive.Exceptions.FaceAPIException' TodoCognitive.Models.Face' TodoCognitive.Models.FaceAttributeType' TodoCognitive.Services.IFaceRecognitionService' TodoCognitive.Utils.ClientError' TodoCognitive.Utils.ServiceError,TodoCognitive.RateAppPage
+TodoCognitive.Services,IFaceRecognitionService,0,1,0,0,0,4,1,1,0,-1,2,2,TodoCognitive.Models.Face' TodoCognitive.Models.FaceAttributeType,TodoCognitive.RateAppPage' TodoCognitive.Services.FaceRecognitionService
+TodoCognitive.Utils,ClientExceptionMessage,0,0,2,0,0,8,0,0,0,-1,0,1,,TodoCognitive.Utils.ClientError
+TodoCognitive.Utils,ClientError,0,0,1,0,0,6,0,0,0,-1,1,1,TodoCognitive.Utils.ClientExceptionMessage,TodoCognitive.Services.FaceRecognitionService
+TodoCognitive.Utils,ServiceError,0,0,2,0,0,8,0,0,0,-1,0,1,,TodoCognitive.Services.FaceRecognitionService

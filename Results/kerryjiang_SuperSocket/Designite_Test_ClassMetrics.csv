@@ -1,0 +1,21 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Tests,CommandTest,0,2,0,0,2,85,2,0,1,-1,4,0,Tests.ADD' Tests.MULT' Tests.SUB' Tests.TestClassBase,
+Tests,ADD,0,1,2,0,1,12,1,0,2,-1,0,1,,Tests.CommandTest
+Tests,MULT,0,1,2,0,1,12,1,0,2,-1,0,1,,Tests.CommandTest
+Tests,SUB,0,1,2,0,1,12,1,0,2,-1,0,1,,Tests.CommandTest
+Tests,ConsoleWriter,1,2,0,0,2,12,2,0,0,1,0,1,,Tests.ProtocolTestBase
+Tests,FixedHeaderProtocolTest,0,3,0,0,1,35,3,0,1,-1,2,0,Tests.MyFixedHeaderPipelineFilter' Tests.ProtocolTestBase,
+Tests,MyFixedHeaderPipelineFilter,0,3,0,0,1,16,3,0,0,-1,0,1,,Tests.FixedHeaderProtocolTest
+Tests,FixedSizeProtocolTest,0,3,0,0,1,32,3,0,1,-1,2,0,Tests.MyFixedSizePipelineFilter' Tests.ProtocolTestBase,
+Tests,MyFixedSizePipelineFilter,0,2,0,0,1,11,2,0,0,-1,0,1,,Tests.FixedSizeProtocolTest
+Tests,MainTest,0,3,0,0,3,62,3,0,1,-1,1,0,Tests.TestClassBase,
+Tests,ObjectPipeTest,0,5,0,0,4,56,9,0,1,-1,1,0,Tests.TestClassBase,
+Tests,ProtocolTestBase,1,10,0,0,6,155,19,3,1,0.3,2,3,Tests.ConsoleWriter' Tests.TestClassBase,Tests.FixedHeaderProtocolTest' Tests.FixedSizeProtocolTest' Tests.TerminatorProtocolTest
+Tests,ServerOptionsTest,0,2,0,0,2,45,3,0,1,-1,1,0,Tests.TestClassBase,
+Tests,SessionContanerTest,0,2,0,0,2,71,2,0,1,-1,3,0,Tests.SESS' Tests.MyPipelineFilter' Tests.TestClassBase,
+Tests,SESS,0,1,2,0,1,9,1,0,2,-1,0,1,,Tests.SessionContanerTest
+Tests,MyPipelineFilter,0,2,0,0,1,17,2,0,0,-1,0,1,,Tests.SessionContanerTest
+Tests,TerminatorProtocolTest,0,3,0,0,1,20,3,0,2,-1,1,0,Tests.ProtocolTestBase,
+Tests,TestClassBase,2,5,0,0,0,45,5,7,0,1,0,7,,Tests.ProtocolTestBase' Tests.ServerOptionsTest' Tests.ObjectPipeTest' Tests.MainTest' Tests.SessionContanerTest' Tests.WebSocket.WebSocketServerTestBase' Tests.CommandTest
+Tests.WebSocket,WebSocketBasicTest,1,3,0,0,3,63,4,0,1,0.67,1,0,Tests.WebSocket.WebSocketServerTestBase,
+Tests.WebSocket,WebSocketServerTestBase,0,2,0,0,1,15,3,1,1,-1,1,1,Tests.TestClassBase,Tests.WebSocket.WebSocketBasicTest

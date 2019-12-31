@@ -1,23 +1,23 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-UserSimulation,AnalysisType,0,0,0,0,0,9,0,0,0,-1,0,3,,UserSimulation.LogEntry' UserSimulation.Config' UserSimulation.Simulation
-UserSimulation,Classification,2,14,0,0,14,229,23,0,0,0.43,0,9,,CheckCell.WorkbookState' CheckCell.RibbonHelper' UserSimulation.ErrorGenerator' UserSimulation.Config' UserSimulation.Simulation' UserSimulation.Utility' CheckCellTests.ErrorGeneratorTests' CheckCellTests.LCSTests' CheckCellTests.ClassificationTests
-UserSimulation,CutoffKind,0,1,2,0,1,11,1,3,0,-1,0,2,,UserSimulation.Simulation' UserSimulation.SimulationStep
-UserSimulation,NormalCutoff,1,2,1,0,2,58,5,0,1,0,0,0,,
-UserSimulation,QuantileCutoff,1,2,1,0,2,54,7,0,1,0,0,0,,
-UserSimulation,NumberCutoff,1,2,2,0,2,24,2,0,1,0,0,0,,
+UserSimulation,AnalysisType,0,0,0,0,0,9,0,0,0,-1,0,3,,UserSimulation.LogEntry' UserSimulation.Simulation' UserSimulation.Config
+UserSimulation,Classification,2,14,0,0,14,229,24,0,0,0.43,0,4,,UserSimulation.Utility' UserSimulation.Config' UserSimulation.ErrorGenerator' UserSimulation.Simulation
+UserSimulation,CutoffKind,0,1,2,0,1,11,1,3,0,-1,0,5,,UserSimulation.SimulationStep' UserSimulation.NormalCutoff' UserSimulation.QuantileCutoff' UserSimulation.NumberCutoff' UserSimulation.Simulation
+UserSimulation,NormalCutoff,1,2,1,0,2,58,8,0,1,0,1,1,UserSimulation.CutoffKind,UserSimulation.Config
+UserSimulation,QuantileCutoff,1,2,1,0,2,54,7,0,1,0,1,1,UserSimulation.CutoffKind,UserSimulation.Config
+UserSimulation,NumberCutoff,1,2,2,0,2,24,2,0,1,0,1,0,UserSimulation.CutoffKind,
 UserSimulation,EnumerableExtensions,0,3,0,0,2,25,6,0,0,-1,0,0,,
 UserSimulation,ErrorDB,0,4,1,0,4,38,4,0,0,-1,1,1,UserSimulation.Error,UserSimulation.Utility
-UserSimulation,Error,6,1,0,6,1,14,1,0,0,0,0,2,,UserSimulation.ErrorDB' UserSimulation.Utility
+UserSimulation,Error,6,1,0,6,1,14,1,0,0,0,0,2,,UserSimulation.Utility' UserSimulation.ErrorDB
 UserSimulation,ErrorCondition,0,0,0,0,0,7,0,0,0,-1,0,1,,UserSimulation.Simulation
-UserSimulation,ErrorGenerator,3,16,0,0,8,410,32,0,0,0.31,2,4,UserSimulation.Classification' UserSimulation.Utility,UserSimulation.Config' UserSimulation.Simulation' UserSimulation.Utility' CheckCellTests.ErrorGeneratorTests
-UserSimulation,NoRangeInputs,0,0,0,0,0,1,0,0,0,-1,0,0,,
-UserSimulation,NoFormulas,0,0,0,0,0,1,0,0,0,-1,0,0,,
-UserSimulation,SimulationNotRunException,0,1,0,0,1,4,1,0,0,-1,0,0,,
+UserSimulation,ErrorGenerator,3,16,0,0,8,410,34,0,0,0.31,2,3,UserSimulation.Classification' UserSimulation.Utility,UserSimulation.Utility' UserSimulation.Simulation' UserSimulation.Config
+UserSimulation,NoRangeInputs,0,0,0,0,0,1,0,0,0,-1,0,2,,UserSimulation.Simulation' UserSimulation.Prep
+UserSimulation,NoFormulas,0,0,0,0,0,1,0,0,0,-1,0,2,,UserSimulation.Prep' UserSimulation.Simulation
+UserSimulation,SimulationNotRunException,0,1,0,0,1,4,1,0,0,-1,0,1,,UserSimulation.Simulation
 UserSimulation,LogEntry,12,3,0,0,3,80,4,0,0,0,1,1,UserSimulation.AnalysisType,UserSimulation.Simulation
-UserSimulation,PrepData,5,0,0,5,0,8,0,0,0,-1,1,2,DataDebugMethods.DAG,UserSimulation.Prep' UserSimulation.Config
-UserSimulation,Prep,0,1,0,0,1,40,4,0,0,-1,4,1,DataDebugMethods.DAG' DataDebugMethods.ProgBar' UserSimulation.Utility' UserSimulation.PrepData,UserSimulation.Config
-UserSimulation,Config,0,4,0,0,4,200,9,0,0,-1,9,1,UserSimulation.PrepData' DataDebugMethods.ProgBar' UserSimulation.Prep' UserSimulation.Utility' UserSimulation.Classification' UserSimulation.ErrorGenerator' DataDebugMethods.DAG' UserSimulation.Simulation' UserSimulation.AnalysisType,CheckCell.WorkbookState
-UserSimulation,Simulation,25,22,0,0,21,555,35,0,0,0.36,11,2,UserSimulation.ErrorCondition' UserSimulation.UserResults' UserSimulation.AnalysisType' UserSimulation.ErrorGenerator' UserSimulation.Classification' UserSimulation.Utility' DataDebugMethods.DAG' UserSimulation.CutoffKind' DataDebugMethods.ProgBar' UserSimulation.LogEntry' UserSimulation.SimulationStep,UserSimulation.Config' CheckCellTests.SimulationTests
-UserSimulation,SimulationStep,0,3,0,0,3,122,15,0,0,-1,6,1,DataDebugMethods.Analysis' UserSimulation.CutoffKind' UserSimulation.UserResults' DataDebugMethods.DAG' DataDebugMethods.ProgBar' DataDebugMethods.NormalDistribution,UserSimulation.Simulation
-UserSimulation,UserResults,6,0,0,6,0,11,0,0,0,-1,0,2,,UserSimulation.Simulation' UserSimulation.SimulationStep
-UserSimulation,Utility,0,17,0,0,17,318,44,0,0,-1,5,4,UserSimulation.ErrorDB' UserSimulation.Error' DataDebugMethods.DAG' UserSimulation.ErrorGenerator' UserSimulation.Classification,UserSimulation.ErrorGenerator' UserSimulation.Prep' UserSimulation.Config' UserSimulation.Simulation
+UserSimulation,PrepData,5,0,0,5,0,8,0,0,0,-1,0,2,,UserSimulation.Config' UserSimulation.Prep
+UserSimulation,Prep,0,1,0,0,1,40,4,0,0,-1,4,1,UserSimulation.NoRangeInputs' UserSimulation.NoFormulas' UserSimulation.PrepData' UserSimulation.Utility,UserSimulation.Config
+UserSimulation,Config,0,4,0,0,4,200,9,0,0,-1,9,0,UserSimulation.AnalysisType' UserSimulation.Classification' UserSimulation.NormalCutoff' UserSimulation.QuantileCutoff' UserSimulation.ErrorGenerator' UserSimulation.PrepData' UserSimulation.Prep' UserSimulation.Simulation' UserSimulation.Utility,
+UserSimulation,Simulation,25,22,0,0,21,555,40,0,0,0.36,12,1,UserSimulation.AnalysisType' UserSimulation.Classification' UserSimulation.CutoffKind' UserSimulation.ErrorCondition' UserSimulation.ErrorGenerator' UserSimulation.NoRangeInputs' UserSimulation.NoFormulas' UserSimulation.SimulationNotRunException' UserSimulation.LogEntry' UserSimulation.SimulationStep' UserSimulation.UserResults' UserSimulation.Utility,UserSimulation.Config
+UserSimulation,SimulationStep,0,3,0,0,3,122,15,0,0,-1,2,1,UserSimulation.CutoffKind' UserSimulation.UserResults,UserSimulation.Simulation
+UserSimulation,UserResults,6,0,0,6,0,11,0,0,0,-1,0,2,,UserSimulation.SimulationStep' UserSimulation.Simulation
+UserSimulation,Utility,0,17,0,0,17,318,47,0,0,-1,4,4,UserSimulation.Classification' UserSimulation.ErrorDB' UserSimulation.Error' UserSimulation.ErrorGenerator,UserSimulation.ErrorGenerator' UserSimulation.Config' UserSimulation.Prep' UserSimulation.Simulation

@@ -1,0 +1,56 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TestContracts,SimpleArgument,0,0,2,0,0,5,0,0,0,-1,0,4,,TestContracts.OverarchingArgument' TestContracts.ArrayArgument' MassTransit.Tests.Using_contract_info_to_generate_a_contract' MassTransit.Tests.Generating_a_contract
+TestContracts,OverarchingArgument,0,0,2,0,0,6,0,0,0,-1,1,3,TestContracts.SimpleArgument,TestContracts.DictionaryArgument' MassTransit.Tests.Using_contract_info_to_generate_a_contract' MassTransit.Tests.Generating_a_contract
+TestContracts,ArrayArgument,0,0,3,0,0,6,0,0,0,-1,1,1,TestContracts.SimpleArgument,MassTransit.Tests.Generating_a_contract
+TestContracts,DictionaryArgument,0,0,3,0,0,6,0,0,0,-1,1,2,TestContracts.OverarchingArgument,TestContracts.NestedArgument' MassTransit.Tests.Generating_a_contract
+TestContracts,NestedArgument,0,0,1,0,0,4,0,0,0,-1,1,1,TestContracts.DictionaryArgument,MassTransit.Tests.Generating_a_contract
+MassTransit.Tests,Using_contract_info_to_generate_a_contract,0,2,0,0,2,54,2,0,0,-1,2,0,TestContracts.SimpleArgument' TestContracts.OverarchingArgument,
+MassTransit.Tests,Generating_a_contract,0,7,0,0,7,110,7,0,0,-1,5,0,TestContracts.SimpleArgument' TestContracts.OverarchingArgument' TestContracts.ArrayArgument' TestContracts.DictionaryArgument' TestContracts.NestedArgument,
+MassTransit.Tests,An_empty_hash,0,3,0,0,2,77,3,0,0,-1,1,0,MassTransit.Tests.Endpoint,
+MassTransit.Tests,Endpoint,0,0,4,0,0,8,0,0,1,-1,0,1,,MassTransit.Tests.An_empty_hash
+MassTransit.Tests,Linking_a_service_endpoint,2,10,0,0,8,161,10,0,1,0.7,4,0,Contracts.DeployHappiness' Contracts.DeployPayload' Contracts.PayloadDeployed' TestService.DeployPayloadConsumer,
+MassTransit.Tests,Linking_a_service_with_the_new_syntax,0,2,0,0,1,28,2,0,1,-1,3,0,Contracts.DeployPayload' Contracts.PayloadDeployed' TestService.DeployPayloadConsumer,
+MassTransit.Tests,Linking_a_service_that_later_gets_a_second_instance,0,3,0,0,1,76,3,0,0,-1,3,0,Contracts.DeployPayload' Contracts.PayloadDeployed' TestService.DeployPayloadConsumer,
+MassTransit.Tests,ServiceEndpoint_Specs,0,2,0,0,1,351,2,0,1,-1,15,2,MassTransit.Tests.EndpointSettings' MassTransit.Tests.ServiceEndpointSettings' MassTransit.Tests.LinkConsumer' MassTransit.Tests.ClientInfo' MassTransit.Tests.IEndpointRuntime' MassTransit.Tests.EndpointRuntime' MassTransit.Tests.AskConsumer' MassTransit.Tests.RequestLimitFilter<T>' MassTransit.Tests.RequestClientContext' MassTransit.Tests.RequestConsumeContextProxy<TMessage>' MassTransit.Tests.RequestClientContextImpl' MassTransit.Tests.DeployPayloadConsumer' MassTransit.Tests.RequestSendEndpoint' Subjects.DeployPayload' Subjects.PayloadDeployed,MassTransit.Tests.RequestSendContextPipe' MassTransit.Tests.RequestSendEndpoint
+MassTransit.Tests,EndpointSettings,0,0,1,0,0,8,0,1,1,-1,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,ServiceEndpointSettings,0,0,5,0,0,9,0,0,2,-1,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,LinkConsumer,2,2,0,0,2,26,3,0,1,0,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,ClientInfo,1,2,2,0,2,22,2,0,0,0,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,Accepted,1,1,0,1,1,9,1,0,0,0,0,0,,
+MassTransit.Tests,IEndpointRuntime,0,3,0,0,0,10,3,1,0,-1,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,EndpointRuntime,3,5,0,0,4,50,5,0,1,0.4,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,AskConsumer,2,2,0,0,2,22,3,0,1,0,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,RequestLimitFilter<T>,1,3,0,0,3,38,6,0,0,0.67,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,RequestClientContext,0,0,3,0,0,7,0,1,0,-1,0,3,,MassTransit.Tests.ServiceEndpoint_Specs' MassTransit.Tests.RequestSendContextPipe' MassTransit.Tests.RequestSendEndpoint
+MassTransit.Tests,RequestConsumeContextProxy<TMessage>,1,2,0,0,2,19,2,0,4,0,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,RequestClientContextImpl,0,1,3,0,1,14,1,0,1,-1,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,DeployPayloadConsumer,0,1,0,0,1,10,1,0,1,-1,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests,RequestSendContextPipe,2,5,0,0,4,41,5,0,0,0,2,1,MassTransit.Tests.ServiceEndpoint_Specs' MassTransit.Tests.RequestClientContext,MassTransit.Tests.RequestSendEndpoint
+MassTransit.Tests,RequestSendEndpoint,2,12,0,0,12,134,29,0,2,0.67,3,1,MassTransit.Tests.ServiceEndpoint_Specs' MassTransit.Tests.RequestClientContext' MassTransit.Tests.RequestSendContextPipe,MassTransit.Tests.ServiceEndpoint_Specs
+Contracts,DeployHappiness,0,0,1,0,0,4,0,0,0,-1,0,1,,MassTransit.Tests.Linking_a_service_endpoint
+Contracts,DeployPayload,0,0,1,0,0,4,0,0,0,-1,0,4,,MassTransit.Tests.Linking_a_service_endpoint' MassTransit.Tests.Linking_a_service_with_the_new_syntax' MassTransit.Tests.Linking_a_service_that_later_gets_a_second_instance' TestService.DeployPayloadConsumer
+Contracts,PayloadDeployed,0,0,2,0,0,5,0,0,0,-1,0,4,,MassTransit.Tests.Linking_a_service_endpoint' MassTransit.Tests.Linking_a_service_with_the_new_syntax' MassTransit.Tests.Linking_a_service_that_later_gets_a_second_instance' TestService.DeployPayloadConsumer
+TestService,DeployPayloadConsumer,0,1,0,0,1,14,1,0,1,-1,2,3,Contracts.DeployPayload' Contracts.PayloadDeployed,MassTransit.Tests.Linking_a_service_endpoint' MassTransit.Tests.Linking_a_service_with_the_new_syntax' MassTransit.Tests.Linking_a_service_that_later_gets_a_second_instance
+Subjects,DeployPayload,0,0,1,0,0,4,0,0,0,-1,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+Subjects,PayloadDeployed,0,0,0,0,0,3,0,0,0,-1,0,1,,MassTransit.Tests.ServiceEndpoint_Specs
+MassTransit.Tests.Steward,Performance_Specs,0,2,0,0,2,128,12,0,0,-1,1,0,MassTransit.Tests.Steward.Server,
+MassTransit.Tests.Steward,Server,1,2,2,0,2,18,2,0,0,0,0,1,,MassTransit.Tests.Steward.Performance_Specs
+MassTransit.Tests.Steward,When_a_command_delegate_is_used,0,1,0,0,1,16,1,0,0,-1,1,0,MassTransit.Tests.Steward.TestCommand,
+MassTransit.Tests.Steward,TestCommand,0,0,1,0,0,4,0,0,0,-1,0,1,,MassTransit.Tests.Steward.When_a_command_delegate_is_used
+MassTransit.Tests.Steward,DispatchTestContext,0,1,1,0,0,5,1,1,0,-1,0,2,,MassTransit.Tests.Steward.DispatchTestContext<TConsumer;T>' MassTransit.Tests.Steward.InMemoryDispatchTestFixture
+MassTransit.Tests.Steward,DispatchTestContext<TConsumer;T>,2,5,3,0,2,35,5,0,1,0.8,1,1,MassTransit.Tests.Steward.DispatchTestContext,MassTransit.Tests.Steward.InMemoryDispatchTestFixture
+MassTransit.Tests.Steward,InMemoryDispatchTestFixture,0,6,2,0,0,60,7,2,1,-1,3,2,MassTransit.Tests.Steward.DispatchTestContext' MassTransit.Tests.Steward.DispatchTestContext<TConsumer;T>' MassTransit.Tests.Steward.BusFactoryConfigurator,MassTransit.Tests.Steward.When_executing_a_command' MassTransit.Tests.Steward.When_contacting_an_http_url
+MassTransit.Tests.Steward,BusFactoryConfigurator,1,2,0,0,2,13,2,0,1,0,0,1,,MassTransit.Tests.Steward.InMemoryDispatchTestFixture
+MassTransit.Tests.Steward,When_contacting_an_http_url,1,3,0,0,1,42,3,0,2,0.67,6,0,MassTransit.Tests.Steward.InMemoryDispatchTestFixture' MassTransit.Tests.Steward.ExecuteHttpRequestCommand' MassTransit.Tests.Steward.HttpProxyConsumer' MassTransit.Tests.Steward.HttpRequestSucceeded' MassTransit.Tests.Steward.HttpRequestFaulted' MassTransit.Tests.Steward.ExecuteHttpRequest,
+MassTransit.Tests.Steward,ExecuteHttpRequestCommand,0,1,1,0,1,9,1,0,1,-1,0,1,,MassTransit.Tests.Steward.When_contacting_an_http_url
+MassTransit.Tests.Steward,HttpProxyConsumer,1,2,0,0,1,54,3,0,1,0,5,1,MassTransit.Tests.Steward.HttpRequestFaultedEvent' MassTransit.Tests.Steward.HttpRequestSucceededEvent' MassTransit.Tests.Steward.HttpRequestSucceeded' MassTransit.Tests.Steward.HttpRequestFaulted' MassTransit.Tests.Steward.ExecuteHttpRequest,MassTransit.Tests.Steward.When_contacting_an_http_url
+MassTransit.Tests.Steward,HttpRequestFaultedEvent,0,1,1,0,1,9,1,0,1,-1,0,1,,MassTransit.Tests.Steward.HttpProxyConsumer
+MassTransit.Tests.Steward,HttpRequestSucceededEvent,0,1,1,0,1,9,1,0,1,-1,0,1,,MassTransit.Tests.Steward.HttpProxyConsumer
+MassTransit.Tests.Steward,HttpRequestSucceeded,0,0,1,0,0,4,0,1,0,-1,0,2,,MassTransit.Tests.Steward.HttpProxyConsumer' MassTransit.Tests.Steward.When_contacting_an_http_url
+MassTransit.Tests.Steward,HttpRequestFaulted,0,0,1,0,0,4,0,1,0,-1,0,2,,MassTransit.Tests.Steward.HttpProxyConsumer' MassTransit.Tests.Steward.When_contacting_an_http_url
+MassTransit.Tests.Steward,ExecuteHttpRequest,0,0,1,0,0,4,0,1,0,-1,0,2,,MassTransit.Tests.Steward.HttpProxyConsumer' MassTransit.Tests.Steward.When_contacting_an_http_url
+MassTransit.Tests.Steward,When_executing_a_command,1,3,0,0,1,36,3,0,2,0.67,5,0,MassTransit.Tests.Steward.InMemoryDispatchTestFixture' MassTransit.Tests.Steward.MakeMagicHappenCommand' MassTransit.Tests.Steward.MakeMagicHappen' MassTransit.Tests.Steward.MagicMade' MassTransit.Tests.Steward.MagicMakingConsumer,
+MassTransit.Tests.Steward,MakeMagicHappenCommand,0,1,1,0,1,9,1,0,1,-1,0,1,,MassTransit.Tests.Steward.When_executing_a_command
+MassTransit.Tests.Steward,MakeMagicHappen,0,0,1,0,0,4,0,1,0,-1,0,2,,MassTransit.Tests.Steward.When_executing_a_command' MassTransit.Tests.Steward.MagicMakingConsumer
+MassTransit.Tests.Steward,MagicMade,0,0,0,0,0,3,0,0,0,-1,0,2,,MassTransit.Tests.Steward.When_executing_a_command' MassTransit.Tests.Steward.MagicMakingConsumer
+MassTransit.Tests.Steward,MagicMakingConsumer,0,1,0,0,1,8,1,0,1,-1,2,1,MassTransit.Tests.Steward.MakeMagicHappen' MassTransit.Tests.Steward.MagicMade,MassTransit.Tests.Steward.When_executing_a_command

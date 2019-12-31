@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-AzurePortable,BusinessEntityBase,0,1,1,0,1,11,1,0,1,-1,0,0,,
-AzurePortable,IBusinessEntity,0,0,1,0,0,3,0,2,0,-1,0,0,,
-AzurePortable,TodoItem,0,1,4,0,1,11,1,0,1,-1,0,2,,AzurePortable.TodoItemRepository' AzurePortable.TodoItemManager
-AzurePortable,TodoItemDatabase,2,5,0,0,5,53,5,0,0,0,1,1,SQLiteBase.SQLiteConnection,AzurePortable.TodoItemRepository
-AzurePortable,TodoItemRepository,2,5,0,0,5,27,5,0,0,0,3,1,AzurePortable.TodoItemDatabase' SQLiteBase.SQLiteConnection' AzurePortable.TodoItem,AzurePortable.TodoItemManager
-AzurePortable,TodoItemManager,1,5,0,0,5,28,5,0,0,0,3,0,AzurePortable.TodoItemRepository' SQLiteBase.SQLiteConnection' AzurePortable.TodoItem,
-SQLiteBase,PrimaryKeyAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SQLiteBase,AutoIncrementAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
+AzurePortable,BusinessEntityBase,0,1,1,0,1,11,1,0,1,-1,3,0,AzurePortable.IBusinessEntity' SQLiteBase.PrimaryKeyAttribute' SQLiteBase.AutoIncrementAttribute,
+AzurePortable,IBusinessEntity,0,0,1,0,0,3,0,2,0,-1,0,3,,AzurePortable.TodoItem' AzurePortable.BusinessEntityBase' AzurePortable.TodoItemDatabase
+AzurePortable,TodoItem,0,1,4,0,1,11,1,0,1,-1,3,3,AzurePortable.IBusinessEntity' SQLiteBase.PrimaryKeyAttribute' SQLiteBase.AutoIncrementAttribute,AzurePortable.TodoItemDatabase' AzurePortable.TodoItemManager' AzurePortable.TodoItemRepository
+AzurePortable,TodoItemDatabase,2,5,0,0,5,53,6,0,0,0,3,1,AzurePortable.IBusinessEntity' AzurePortable.TodoItem' SQLiteBase.SQLiteConnection,AzurePortable.TodoItemRepository
+AzurePortable,TodoItemRepository,2,5,0,0,5,27,5,0,0,0,3,1,AzurePortable.TodoItem' AzurePortable.TodoItemDatabase' SQLiteBase.SQLiteConnection,AzurePortable.TodoItemManager
+AzurePortable,TodoItemManager,1,5,0,0,5,28,5,0,0,0,3,0,AzurePortable.TodoItem' AzurePortable.TodoItemRepository' SQLiteBase.SQLiteConnection,
+SQLiteBase,PrimaryKeyAttribute,0,0,0,0,0,3,0,0,0,-1,0,2,,AzurePortable.BusinessEntityBase' AzurePortable.TodoItem
+SQLiteBase,AutoIncrementAttribute,0,0,0,0,0,3,0,0,0,-1,0,2,,AzurePortable.TodoItem' AzurePortable.BusinessEntityBase
 SQLiteBase,IndexedAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SQLiteBase,IgnoreAttribute,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SQLiteBase,MaxLengthAttribute,0,2,2,0,2,13,2,0,0,-1,0,0,,
 SQLiteBase,CollationAttribute,0,2,2,0,2,13,2,0,0,-1,0,0,,
-SQLiteBase,SQLiteConnection,0,48,8,0,48,111,48,0,0,-1,1,3,SQLiteBase.TableMapping,AzurePortable.TodoItemDatabase' AzurePortable.TodoItemRepository' AzurePortable.TodoItemManager
+SQLiteBase,SQLiteConnection,0,48,8,0,48,111,48,0,0,-1,3,3,SQLiteBase.TableMapping' SQLiteBase.SQLiteCommand' SQLiteBase.TableQuery<T>,AzurePortable.TodoItemRepository' AzurePortable.TodoItemManager' AzurePortable.TodoItemDatabase
 SQLiteBase,TableMapping,0,0,0,0,0,1,0,0,0,-1,0,1,,SQLiteBase.SQLiteConnection
-SQLiteBase,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,0,,
-SQLiteBase,TableQuery<T>,0,4,0,0,2,19,4,0,0,-1,0,0,,
+SQLiteBase,SQLiteCommand,0,0,0,0,0,1,0,0,0,-1,0,1,,SQLiteBase.SQLiteConnection
+SQLiteBase,TableQuery<T>,0,4,0,0,2,19,4,0,0,-1,0,1,,SQLiteBase.SQLiteConnection

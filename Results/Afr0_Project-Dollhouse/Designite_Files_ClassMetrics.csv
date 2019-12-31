@@ -1,112 +1,113 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Files.AudioFiles,ISoundCodec,0,2,0,0,0,13,2,4,0,-1,0,4,,Files.Manager.FileManager' Sound.HITTVOn' Sound.HITNoteEntry' Sound.SubRoutine
-Files.AudioFiles,MP3Channels,0,0,0,0,0,7,0,0,0,-1,0,0,,
-Files.AudioFiles,MP3File,2,5,0,1,5,48,6,0,1,0,1,3,MP3Sharp.MP3Stream,Files.Manager.FileManager' Sound.ActiveSound' Sound.SoundPlayer
-Files.AudioFiles,UTKFile2,24,15,0,1,7,401,45,0,1,0,1,0,Files.FileReader,
-Files.AudioFiles,WavFile,15,7,0,0,6,99,13,0,1,0,1,0,Files.FileReader,
+Files.AudioFiles,ISoundCodec,0,2,0,0,0,13,2,4,0,-1,0,5,,Files.AudioFiles.WavFile' Files.AudioFiles.MP3File' Files.AudioFiles.XAFile' Files.AudioFiles.UTKFile2' Files.Manager.FileManager
+Files.AudioFiles,MP3File,6,7,0,3,6,120,15,0,1,0,4,1,Files.AudioFiles.ISoundCodec' Files.AudioFiles.MP3Exception' Files.AudioFiles.ReadFullyStream' Files.Manager.FileManager,Files.Manager.FileManager
+Files.AudioFiles,MP3Exception,0,1,0,0,1,7,1,0,0,-1,0,1,,Files.AudioFiles.MP3File
+Files.AudioFiles,ReadFullyStream,5,6,5,0,6,84,9,0,0,0.83,0,1,,Files.AudioFiles.MP3File
+Files.AudioFiles,UTKFile2,25,15,0,1,7,416,55,0,1,0.13,2,1,Files.AudioFiles.ISoundCodec' Files.FileReader,Files.Manager.FileManager
+Files.AudioFiles,WavFile,16,7,0,0,6,114,13,0,1,0,2,1,Files.AudioFiles.ISoundCodec' Files.FileReader,Files.Manager.FileManager
 Files.AudioFiles,SoundType,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Files.AudioFiles,XAFile,16,14,1,0,8,293,25,0,1,0,1,2,Files.FileReader,Files.Manager.FileManager' Sound.HITTVOn
-Files.AudioLogic,HITEvents,0,0,0,0,0,35,0,0,0,-1,0,4,,Files.AudioLogic.TrackEvent' Files.AudioLogic.EVT' Sound.HitVM' Sound.RegisteredEvent
-Files.AudioLogic,TrackEvent,7,0,0,7,0,10,0,0,0,-1,1,2,Files.AudioLogic.HITEvents,Files.AudioLogic.EVT' Sound.HitVM
-Files.AudioLogic,EVT,2,4,0,1,2,72,11,0,0,0,3,2,Files.FileReader' Files.AudioLogic.TrackEvent' Files.AudioLogic.HITEvents,Sound.HitResourcegroup' Sound.HitVM
-Files.AudioLogic,HLS,2,3,0,1,2,67,9,0,0,0,1,2,Files.FileReader,Files.Manager.FileManager' Sound.SubRoutine
-Files.AudioLogic,HSM,1,1,0,1,1,23,4,0,0,0,0,2,,Sound.HitResourcegroup' Sound.HitVM
-Files.AudioLogic,IniSection,2,0,0,2,0,5,0,0,0,-1,0,2,,Files.AudioLogic.Ini' Sound.HitVM
-Files.AudioLogic,Ini,2,3,0,1,2,65,7,0,0,0,2,1,Files.FileReader' Files.AudioLogic.IniSection,Sound.HitVM
+Files.AudioFiles,XAFile,17,14,1,0,8,309,28,0,1,0,2,1,Files.AudioFiles.ISoundCodec' Files.FileReader,Files.Manager.FileManager
+Files.AudioLogic,HITEvents,0,0,0,0,0,35,0,0,0,-1,0,2,,Files.AudioLogic.TrackEvent' Files.AudioLogic.EVT
+Files.AudioLogic,TrackEvent,7,0,0,7,0,10,0,0,0,-1,2,1,Files.AudioLogic.HITEvents' Files.AudioLogic.HITEvents,Files.AudioLogic.EVT
+Files.AudioLogic,EVT,3,4,0,1,2,87,12,0,0,0,6,0,Files.AudioLogic.HITEvents' Files.AudioLogic.TrackEvent' Files.FileReader' Files.FileReader' Files.AudioLogic.HITEvents' Files.AudioLogic.TrackEvent,
+Files.AudioLogic,HLS,3,3,0,1,2,82,12,0,0,0,2,1,Files.FileReader' Files.FileReader,Files.Manager.FileManager
+Files.AudioLogic,HSM,1,1,0,1,1,23,4,0,0,0,0,0,,
+Files.AudioLogic,IniSection,2,0,0,2,0,5,0,0,0,-1,0,1,,Files.AudioLogic.Ini
+Files.AudioLogic,Ini,3,5,0,1,3,93,13,0,0,0,2,0,Files.AudioLogic.IniSection' Files.FileReader,
 Files.AudioLogic,HITTrackArguments,0,0,0,0,0,7,0,0,0,-1,0,1,,Files.AudioLogic.TRK
 Files.AudioLogic,HITControlGroup,0,0,0,0,0,6,0,0,0,-1,0,1,,Files.AudioLogic.TRK
-Files.AudioLogic,TRK,9,3,0,7,2,61,14,0,0,0,3,2,Files.FileReader' Files.AudioLogic.HITTrackArguments' Files.AudioLogic.HITControlGroup,Files.Manager.FileManager' Sound.SubRoutine
-Files.AudioLogic,TRKException,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Files,ByteArrayComparer,0,2,0,0,2,32,6,0,0,-1,0,0,,
-Files,Endian,1,7,2,0,6,56,7,0,0,0.43,0,3,,Files.FileReader' Files.IFF.IFFChunk' Files.Vitaboy.Outfit
-Files,UniqueFileID,3,4,4,0,4,81,7,0,0,0.75,0,13,,Files.DBPF.DBPFArchive' Files.DBPF.DBPFEntry' Files.FAR3.FAR3Archive' Files.Manager.FileManager' Files.Vitaboy.Appearance' Files.Vitaboy.Binding' Files.Vitaboy.Gesture' Files.Vitaboy.Outfit' Files.Vitaboy.PurchasableOutfit' Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser' Gonzo.Elements.OutfitContainer' Vitaboy.AvatarBase
-Files,FileIDs,0,0,0,0,0,28269,0,0,0,-1,0,8,,Gonzo.Dialogs.UIDialog' Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser' Gonzo.Elements.UISkinBrowser' Gonzo.Elements.UIButton' Gonzo.Elements.UITextEdit' Gonzo.Elements.UIButton' Gonzo.Elements.UITextEdit
+Files.AudioLogic,TRK,10,3,0,7,2,76,14,0,0,0,7,1,Files.AudioLogic.HITTrackArguments' Files.AudioLogic.HITControlGroup' Files.AudioLogic.TRKException' Files.FileReader' Files.FileReader' Files.AudioLogic.HITTrackArguments' Files.AudioLogic.HITControlGroup,Files.Manager.FileManager
+Files.AudioLogic,TRKException,0,1,0,0,1,7,1,0,0,-1,0,1,,Files.AudioLogic.TRK
+Files,ByteArrayComparer,0,2,0,0,2,32,6,0,0,-1,0,1,,Files.Manager.FileManager
+Files,Endian,1,7,2,0,6,56,7,0,0,0.43,0,3,,Files.Vitaboy.Outfit' Files.IFF.IFFChunk' Files.FileReader
+Files,UniqueFileID,3,4,4,0,4,81,7,0,0,0.75,1,10,Files.UniqueFileID,Files.DBPF.DBPFEntry' Files.Vitaboy.PurchasableOutfit' Files.FAR3.FAR3Archive' Files.Vitaboy.Collection' Files.Vitaboy.Appearance' Files.Vitaboy.Gesture' Files.Vitaboy.Outfit' Files.Vitaboy.Binding' Files.DBPF.DBPFArchive' Files.Manager.FileManager
+Files,FileIDs,0,0,0,0,0,28269,0,0,0,-1,0,1,,Files.Manager.FileManager
 Files,AppearancesFileIDs,0,0,0,0,0,5456,0,0,0,-1,0,0,,
 Files,BindingsFileIDs,0,0,0,0,0,6440,0,0,0,-1,0,0,,
 Files,CitiesFileIDs,0,0,0,0,0,213,0,0,0,-1,0,1,,Files.Manager.FileManager
-Files,CollectionsFileIDs,0,0,0,0,0,47,0,0,0,-1,0,2,,Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser
+Files,CollectionsFileIDs,0,0,0,0,0,47,0,0,0,-1,0,0,,
 Files,HandgroupsFileIDs,0,0,0,0,0,51,0,0,0,-1,0,0,,
-Files,HintsFileIDs,0,0,0,0,0,36,0,0,0,-1,0,2,,Files.Manager.FileManager' Files.Manager.FileManager
+Files,HintsFileIDs,0,0,0,0,0,36,0,0,0,-1,0,1,,Files.Manager.FileManager
 Files,MeshFileIDs,0,0,0,0,0,2170,0,0,0,-1,0,0,,
 Files,OutfitsFileIDs,0,0,0,0,0,1487,0,0,0,-1,0,0,,
 Files,PurchasablesFileIDs,0,0,0,0,0,1474,0,0,0,-1,0,0,,
-Files,TerrainFileIDs,0,0,0,0,0,101,0,0,0,-1,0,2,,Files.Manager.FileManager' Files.Manager.FileManager
+Files,TerrainFileIDs,0,0,0,0,0,101,0,0,0,-1,0,1,,Files.Manager.FileManager
 Files,TextureFileIDs,0,0,0,0,0,4907,0,0,0,-1,0,0,,
 Files,ThumbnailsFileIDs,0,0,0,0,0,4303,0,0,0,-1,0,0,,
-Files,UIFileIDs,0,0,0,0,0,1557,0,0,0,-1,0,9,,Files.Manager.FileManager' Gonzo.Dialogs.UIDialog' Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser' Gonzo.Elements.UISkinBrowser' Gonzo.Elements.UIButton' Gonzo.Elements.UITextEdit' Gonzo.Elements.UIButton' Gonzo.Elements.UITextEdit
-Files,FileReader,3,26,2,0,25,365,29,0,0,0,1,52,Files.Endian,Files.AudioFiles.UTKFile2' Files.AudioFiles.WavFile' Files.AudioFiles.XAFile' Files.AudioLogic.EVT' Files.AudioLogic.HLS' Files.AudioLogic.Ini' Files.AudioLogic.TRK' Files.DBPF.DBPFArchive' Files.FAR1.FAR1Archive' Files.FAR3.FAR3Archive' Files.IFF.BCON' Files.IFF.BMP_' Files.IFF.CST' Files.IFF.CTSS' Files.IFF.DGRP' Files.IFF.DGRPImg' Files.IFF.SpriteInfo' Files.IFF.FBMP' Files.IFF.FCNS' Files.IFF.FWAV' Files.IFF.GLOB' Files.IFF.Iff' Files.IFF.IFFChunk' Files.IFF.OBJD' Files.IFF.OBJf' Files.IFF.PALT' Files.IFF.SPR' Files.IFF.SPRFrame' Files.IFF.SPR2' Files.IFF.SPR2Frame' Files.IFF.STR' Files.IFF.TTAs' Files.Vitaboy.Anim' Files.Vitaboy.Appearance' Files.Vitaboy.Binding' Files.Vitaboy.BlendVertexProperty' Files.Vitaboy.Bone' Files.Vitaboy.BoneBinding' Files.Vitaboy.Collection' Files.Vitaboy.Gesture' Files.Vitaboy.Hand' Files.Vitaboy.HandGroup' Files.Vitaboy.HandSet' Files.Vitaboy.Mesh' Files.Vitaboy.Motion' Files.Vitaboy.Outfit' Files.Vitaboy.Property' Files.Vitaboy.PurchasableOutfit' Files.Vitaboy.Skeleton' Files.Vitaboy.TimeProperty' Sound.ExportTable' Sound.Hit
+Files,UIFileIDs,0,0,0,0,0,1557,0,0,0,-1,0,1,,Files.Manager.FileManager
+Files,FileReader,4,26,2,0,25,382,43,0,0,0,4,53,Files.Endian' Files.ReadingException' Files.Endian' Files.ReadingException,Files.AudioLogic.HLS' Files.AudioLogic.EVT' Files.FAR3.FAR3Archive' Files.Vitaboy.TimeProperty' Files.DBPF.DBPFArchive' Files.AudioLogic.TRK' Files.AudioLogic.Ini' Files.FAR1.FAR1Archive' Files.AudioFiles.XAFile' Files.IFF.BCON' Files.Vitaboy.Skeleton' Files.IFF.BHAV' Files.IFF.BMP_' Files.AudioFiles.WavFile' Files.IFF.FBMP' Files.IFF.FCNS' Files.Vitaboy.PurchasableOutfit' Files.IFF.FWAV' Files.IFF.DGRP' Files.IFF.DGRPImg' Files.IFF.SpriteInfo' Files.IFF.CST' Files.IFF.Iff' Files.IFF.CTSS' Files.Vitaboy.Property' Files.IFF.OBJf' Files.IFF.PALT' Files.IFF.TTAB' Files.IFF.TPRP' Files.Vitaboy.Outfit' Files.Vitaboy.Anim' Files.Vitaboy.Appearance' Files.IFF.STR' Files.Vitaboy.BoneBinding' Files.Vitaboy.Bone' Files.Vitaboy.Motion' Files.Vitaboy.Binding' Files.IFF.TTAs' Files.IFF.GLOB' Files.Vitaboy.HandSet' Files.Vitaboy.Hand' Files.IFF.IFFChunk' Files.AudioFiles.UTKFile2' Files.Vitaboy.BlendVertexProperty' Files.IFF.SPR2' Files.IFF.SPR2Frame' Files.IFF.OBJD' Files.Vitaboy.HandGroup' Files.Vitaboy.Collection' Files.Vitaboy.Gesture' Files.Vitaboy.Mesh' Files.IFF.SPR' Files.IFF.SPRFrame
 Files,FileUtilities,0,3,0,0,3,65,9,0,0,-1,0,1,,Files.FAR1.FAR1Archive
-Files,ReadingException,0,1,0,0,1,7,1,0,0,-1,0,0,,
+Files,ReadingException,0,1,0,0,1,7,1,0,0,-1,0,1,,Files.FileReader
 Files.DBPF,GroupIDs,0,0,0,0,0,27,0,0,0,-1,0,1,,Files.Manager.FileManager
 Files.DBPF,TypeIDs,0,0,0,0,0,10,0,0,0,-1,0,1,,Files.Manager.FileManager
-Files.DBPF,DBPFArchive,7,8,0,3,7,148,18,0,0,0,3,1,Files.FileReader' Files.DBPF.DBPFEntry' Files.UniqueFileID,Files.Manager.FileManager
-Files.DBPF,DBPFEntry,6,0,0,6,0,9,0,0,0,-1,1,1,Files.UniqueFileID,Files.DBPF.DBPFArchive
-Files.DBPF,DBPFException,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Files.FAR1,EntryContainer,1,3,0,0,3,47,5,0,0,0.67,1,1,Files.FAR1.FAR1Entry,Files.FAR1.FAR1Archive
-Files.FAR1,FAR1Archive,3,8,0,0,7,115,17,0,0,0,4,1,Files.FAR1.EntryContainer' Files.FileReader' Files.FAR1.FAR1Entry' Files.FileUtilities,Files.Manager.FileManager
-Files.FAR1,FAR1Entry,5,0,0,5,0,8,0,0,0,-1,0,2,,Files.FAR1.EntryContainer' Files.FAR1.FAR1Archive
-Files.FAR1,FAR1Exception,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Files.FAR3,Decompresser,2,4,2,0,2,349,29,0,0,0,0,1,,Files.FAR3.FAR3Archive
-Files.FAR3,FAR3Archive,4,8,0,0,6,158,15,0,0,0,4,2,Files.FileReader' Files.FAR3.FAR3Entry' Files.UniqueFileID' Files.FAR3.Decompresser,Mr.Shipper.Program' Files.Manager.FileManager
+Files.DBPF,DBPFArchive,8,8,0,3,7,163,21,0,0,0,8,1,Files.UniqueFileID' Files.FileReader' Files.DBPF.DBPFEntry' Files.DBPF.DBPFException' Files.UniqueFileID' Files.FileReader' Files.DBPF.DBPFEntry' Files.DBPF.DBPFException,Files.Manager.FileManager
+Files.DBPF,DBPFEntry,6,0,0,6,0,9,0,0,0,-1,2,1,Files.UniqueFileID' Files.UniqueFileID,Files.DBPF.DBPFArchive
+Files.DBPF,DBPFException,0,1,0,0,1,7,1,0,0,-1,0,1,,Files.DBPF.DBPFArchive
+Files.FAR1,EntryContainer,1,3,0,0,3,47,6,0,0,0.67,2,1,Files.FAR1.FAR1Entry' Files.FAR1.FAR1Entry,Files.FAR1.FAR1Archive
+Files.FAR1,FAR1Archive,4,8,0,0,7,132,21,0,0,0,10,1,Files.FileReader' Files.FileUtilities' Files.FAR1.EntryContainer' Files.FAR1.FAR1Entry' Files.FAR1.FAR1Exception' Files.FileReader' Files.FileUtilities' Files.FAR1.EntryContainer' Files.FAR1.FAR1Entry' Files.FAR1.FAR1Exception,Files.Manager.FileManager
+Files.FAR1,FAR1Entry,5,0,0,5,0,8,0,0,0,-1,0,2,,Files.FAR1.FAR1Archive' Files.FAR1.EntryContainer
+Files.FAR1,FAR1Exception,0,1,0,0,1,7,1,0,0,-1,0,1,,Files.FAR1.FAR1Archive
+Files.FAR3,Decompresser,2,4,2,0,2,349,42,0,0,0,0,1,,Files.FAR3.FAR3Archive
+Files.FAR3,FAR3Archive,5,8,0,0,6,173,20,0,0,0,10,1,Files.UniqueFileID' Files.FileReader' Files.FAR3.Decompresser' Files.FAR3.FAR3Entry' Files.FAR3.FAR3Exception' Files.UniqueFileID' Files.FileReader' Files.FAR3.Decompresser' Files.FAR3.FAR3Entry' Files.FAR3.FAR3Exception,Files.Manager.FileManager
 Files.FAR3,FAR3TypeIDs,0,0,0,0,0,17,0,0,0,-1,0,1,,Files.Manager.FileManager
-Files.FAR3,FAR3Entry,8,0,0,8,0,11,0,0,0,-1,0,3,,Mr.Shipper.HelperFuncs' Mr.Shipper.Program' Files.FAR3.FAR3Archive
-Files.FAR3,FAR3Exception,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Files.FAR3,FAR3Entry,8,0,0,8,0,11,0,0,0,-1,0,1,,Files.FAR3.FAR3Archive
+Files.FAR3,FAR3Exception,0,1,0,0,1,11,1,0,0,-1,0,1,,Files.FAR3.FAR3Archive
 TSOClient,FileIDs,0,0,0,0,0,5460,0,0,0,-1,0,0,,
 TSOClient,AnimationsFileIDs,0,0,0,0,0,5457,0,0,0,-1,0,0,,
-Files.Manager,FileManager,20,32,2,1,18,1052,132,0,0,0.06,27,18,Files.FAR3.FAR3Archive' Files.FAR1.FAR1Archive' Files.DBPF.DBPFArchive' Files.FAR3.FAR3TypeIDs' Files.Manager.Asset' Files.Vitaboy.Outfit' Files.Vitaboy.PurchasableOutfit' Files.Vitaboy.Skeleton' Files.Vitaboy.HandGroup' Files.Vitaboy.Appearance' Files.Vitaboy.Binding' Files.UniqueFileID' Files.Vitaboy.Collection' Files.Vitaboy.Mesh' Files.Vitaboy.Anim' Files.AudioFiles.ISoundCodec' Files.DBPF.TypeIDs' Files.AudioLogic.TRK' Files.AudioLogic.HLS' Files.IFF.Iff' Files.DBPF.GroupIDs' Files.TerrainFileIDs' Files.CitiesFileIDs' Files.UIFileIDs' Files.HintsFileIDs' Files.AudioFiles.MP3File' Files.AudioFiles.XAFile,Gonzo.Dialogs.UIDialog' Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser' Gonzo.Elements.OutfitContainer' Gonzo.Elements.UISkinBrowser' Gonzo.Elements.UIButton' Gonzo.Elements.UIImage' Gonzo.Elements.UITextEdit' Gonzo.Elements.UIButton' Gonzo.Elements.UIImage' Gonzo.Elements.UITextEdit' Vitaboy.AvatarBase' SimAntics.ObjectModule' SimAntics.XPerson' Sound.HITTVOn' Sound.HitVM' Sound.SoundPlayer' Sound.SubRoutine
-Files.Manager,Asset,6,4,5,0,3,90,5,0,0,0,0,1,,Files.Manager.FileManager
-Files.IFF,BCON,1,1,0,1,1,12,2,0,1,0,2,1,Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,BHAV,0,1,0,0,1,7,1,0,1,-1,1,1,Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,BMP_,1,3,0,1,2,23,5,0,1,0,2,1,Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,CST,2,2,0,1,2,115,4,0,1,0,4,1,Files.IFF.TranslatedString' Files.IFF.LanguageCodes' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,CTSS,2,3,0,1,3,130,5,0,1,0,4,1,Files.IFF.TranslatedString' Files.IFF.LanguageCodes' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,DGRP,3,1,0,2,1,32,3,0,1,0,2,1,Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,DGRPImg,4,1,0,4,1,26,3,0,0,0,1,0,Files.FileReader,
-Files.IFF,SpriteInfo,9,1,0,9,1,36,2,0,0,0,1,0,Files.FileReader,
-Files.IFF,FBMP,1,3,0,1,2,23,5,0,1,0,2,1,Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.Manager,FileManager,21,32,2,2,18,1068,156,0,0,0.12,58,1,Files.AudioFiles.ISoundCodec' Files.AudioFiles.MP3File' Files.AudioFiles.UTKFile2' Files.AudioFiles.WavFile' Files.AudioFiles.XAFile' Files.AudioLogic.HLS' Files.AudioLogic.TRK' Files.ByteArrayComparer' Files.UniqueFileID' Files.FileIDs' Files.CitiesFileIDs' Files.HintsFileIDs' Files.TerrainFileIDs' Files.UIFileIDs' Files.DBPF.GroupIDs' Files.DBPF.TypeIDs' Files.DBPF.DBPFArchive' Files.FAR1.FAR1Archive' Files.FAR3.FAR3Archive' Files.FAR3.FAR3TypeIDs' Files.Manager.Asset' Files.IFF.Iff' Files.Vitaboy.Anim' Files.Vitaboy.Appearance' Files.Vitaboy.Binding' Files.Vitaboy.Collection' Files.Vitaboy.HandGroup' Files.Vitaboy.Mesh' Files.Vitaboy.Outfit' Files.Vitaboy.PurchasableOutfit' Files.Vitaboy.Skeleton' Files.UniqueFileID' Files.FileIDs' Files.CitiesFileIDs' Files.UIFileIDs' Files.AudioFiles.ISoundCodec' Files.AudioFiles.UTKFile2' Files.AudioFiles.XAFile' Files.AudioLogic.HLS' Files.AudioLogic.TRK' Files.DBPF.GroupIDs' Files.DBPF.TypeIDs' Files.DBPF.DBPFArchive' Files.FAR1.FAR1Archive' Files.FAR3.FAR3Archive' Files.FAR3.FAR3TypeIDs' Files.Manager.Asset' Files.IFF.Iff' Files.Vitaboy.Anim' Files.Vitaboy.Appearance' Files.Vitaboy.Binding' Files.Vitaboy.Collection' Files.Vitaboy.HandGroup' Files.Vitaboy.Mesh' Files.Vitaboy.Outfit' Files.Vitaboy.PurchasableOutfit' Files.Vitaboy.Skeleton' Paloma.TargaImage,Files.AudioFiles.MP3File
+Files.Manager,Asset,7,4,5,0,3,107,5,0,0,0,0,1,,Files.Manager.FileManager
+Files.IFF,BCON,1,1,0,1,1,12,2,0,1,0,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,BHAV,0,1,0,0,1,7,1,0,1,-1,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,BMP_,2,3,0,1,2,38,5,0,1,0,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,CST,2,2,0,1,2,115,18,0,1,0,8,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString,Files.IFF.Iff
+Files.IFF,CTSS,2,3,0,1,3,130,19,0,1,0,8,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString,Files.IFF.Iff
+Files.IFF,DGRP,3,1,0,2,1,32,5,0,1,0,6,1,Files.FileReader' Files.IFF.DGRPImg' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.DGRPImg' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,DGRPImg,4,1,0,4,1,26,4,0,0,0,4,1,Files.FileReader' Files.IFF.SpriteInfo' Files.FileReader' Files.IFF.SpriteInfo,Files.IFF.DGRP
+Files.IFF,SpriteInfo,9,1,0,9,1,36,3,0,0,0,2,1,Files.FileReader' Files.FileReader,Files.IFF.DGRPImg
+Files.IFF,FBMP,2,3,0,1,2,38,5,0,1,0,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
 Files.IFF,FCNSConstant,2,0,0,2,0,5,0,0,0,-1,0,1,,Files.IFF.FCNS
-Files.IFF,FCNS,0,1,0,0,1,30,3,0,1,-1,3,1,Files.FileReader' Files.IFF.FCNSConstant' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,FWAV,1,1,0,1,1,11,1,0,1,0,2,1,Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,GLOB,1,1,0,1,1,13,1,0,1,0,2,2,Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff' SimAntics.XPerson
-Files.IFF,Iff,21,9,2,0,7,225,15,0,0,0,22,6,Files.FileReader' Files.IFF.PALT' Files.IFF.STR' Files.IFF.BHAV' Files.IFF.GLOB' Files.IFF.IFFChunk' Files.IFF.FBMP' Files.IFF.FWAV' Files.IFF.BMP_' Files.IFF.DGRP' Files.IFF.BCON' Files.IFF.OBJD' Files.IFF.TTAs' Files.IFF.TTAB' Files.IFF.TPRP' Files.IFF.OBJf' Files.IFF.FCNS' Files.IFF.SPR' Files.IFF.SPR2' Files.IFF.CTSS' Files.IFF.CST' Files.IFF.IFFChunkTypes,Files.Manager.FileManager' Files.IFF.IFFChunk' SimAntics.ObjectModule' SimAntics.XMTObject' SimAntics.XObject' SimAntics.XPerson
-Files.IFF,IFFChunkTypes,0,0,0,0,0,25,0,0,0,-1,0,2,,Files.IFF.Iff' Files.IFF.IFFChunk
-Files.IFF,IFFChunk,6,4,0,3,3,38,5,19,0,0,4,20,Files.IFF.Iff' Files.IFF.IFFChunkTypes' Files.FileReader' Files.Endian,Files.IFF.BCON' Files.IFF.BHAV' Files.IFF.BMP_' Files.IFF.CST' Files.IFF.CTSS' Files.IFF.DGRP' Files.IFF.FBMP' Files.IFF.FCNS' Files.IFF.FWAV' Files.IFF.GLOB' Files.IFF.Iff' Files.IFF.OBJD' Files.IFF.OBJf' Files.IFF.PALT' Files.IFF.SPR' Files.IFF.SPR2' Files.IFF.STR' Files.IFF.TPRP' Files.IFF.TTAB' Files.IFF.TTAs
-Files.IFF,IFFException,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Files.IFF,OBJDType,0,0,0,0,0,19,0,0,0,-1,0,2,,Files.IFF.OBJD' SimAntics.ObjectModule
-Files.IFF,OBJD,89,1,2,88,1,235,3,0,1,0,3,4,Files.IFF.OBJDType' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff' SimAntics.ObjectModule' SimAntics.XObject' SimAntics.XPerson
+Files.IFF,FCNS,0,1,0,0,1,30,3,0,1,-1,6,1,Files.FileReader' Files.IFF.FCNSConstant' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.FCNSConstant' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,FWAV,1,1,0,1,1,11,1,0,1,0,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,GLOB,1,1,0,1,1,13,1,0,1,0,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,Iff,22,9,2,0,8,250,33,0,0,0.22,46,2,Files.FileReader' Files.IFF.BCON' Files.IFF.BHAV' Files.IFF.BMP_' Files.IFF.CST' Files.IFF.CTSS' Files.IFF.DGRP' Files.IFF.FBMP' Files.IFF.FCNS' Files.IFF.FWAV' Files.IFF.GLOB' Files.IFF.IFFChunkTypes' Files.IFF.IFFChunk' Files.IFF.IFFException' Files.IFF.OBJD' Files.IFF.OBJf' Files.IFF.PALT' Files.IFF.SPR' Files.IFF.SPR2' Files.IFF.STR' Files.IFF.TPRP' Files.IFF.TTAB' Files.IFF.TTAs' Files.FileReader' Files.IFF.BCON' Files.IFF.BHAV' Files.IFF.BMP_' Files.IFF.CST' Files.IFF.CTSS' Files.IFF.DGRP' Files.IFF.FBMP' Files.IFF.FCNS' Files.IFF.FWAV' Files.IFF.GLOB' Files.IFF.IFFChunkTypes' Files.IFF.IFFChunk' Files.IFF.IFFException' Files.IFF.OBJD' Files.IFF.OBJf' Files.IFF.PALT' Files.IFF.SPR' Files.IFF.SPR2' Files.IFF.STR' Files.IFF.TPRP' Files.IFF.TTAB' Files.IFF.TTAs,Files.IFF.IFFChunk' Files.Manager.FileManager
+Files.IFF,IFFChunkTypes,0,0,0,0,0,25,0,0,0,-1,0,2,,Files.IFF.IFFChunk' Files.IFF.Iff
+Files.IFF,IFFChunk,6,4,0,3,3,38,5,19,0,0,9,20,Files.Endian' Files.FileReader' Files.IFF.Iff' Files.IFF.IFFChunkTypes' Files.Endian' Files.FileReader' Files.IFF.IFFChunkTypes' Files.IFF.IFFChunk' Files.IFF.Iff,Files.IFF.FWAV' Files.IFF.FCNS' Files.IFF.GLOB' Files.IFF.BMP_' Files.IFF.CST' Files.IFF.BHAV' Files.IFF.BCON' Files.IFF.FBMP' Files.IFF.DGRP' Files.IFF.CTSS' Files.IFF.TTAs' Files.IFF.PALT' Files.IFF.OBJf' Files.IFF.SPR' Files.IFF.SPR2' Files.IFF.OBJD' Files.IFF.TTAB' Files.IFF.STR' Files.IFF.TPRP' Files.IFF.Iff
+Files.IFF,IFFException,0,1,0,0,1,7,1,0,0,-1,0,1,,Files.IFF.Iff
+Files.IFF,OBJDType,0,0,0,0,0,19,0,0,0,-1,0,1,,Files.IFF.OBJD
+Files.IFF,OBJD,89,1,2,88,1,235,7,0,1,0,6,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.OBJDType' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.OBJDType,Files.IFF.Iff
 Files.IFF,OBJfFunctionPair,2,0,0,2,0,13,0,0,0,-1,0,1,,Files.IFF.OBJf
-Files.IFF,OBJf,1,1,0,1,1,21,2,0,1,0,3,1,Files.FileReader' Files.IFF.OBJfFunctionPair' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,PALT,1,1,0,0,1,27,2,0,1,0,2,5,Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff' Files.IFF.SPR' Files.IFF.SPRFrame' Files.IFF.SPR2' Files.IFF.SPR2Frame
-Files.IFF,SPR,5,2,0,3,1,57,6,0,1,0,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.SPRFrame' Files.IFF.PALT,Files.IFF.Iff
-Files.IFF,SPRFrame,5,3,0,5,2,89,8,0,0,0,2,1,Files.FileReader' Files.IFF.PALT,Files.IFF.SPR
-Files.IFF,SPR2,3,2,0,1,1,49,4,0,1,0,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.SPR2Frame' Files.IFF.PALT,Files.IFF.Iff
-Files.IFF,SPR2Frame,9,3,0,9,2,166,8,0,0,0,2,1,Files.FileReader' Files.IFF.PALT,Files.IFF.SPR2
-Files.IFF,LanguageCodes,0,0,0,0,0,24,0,0,0,-1,0,5,,Files.IFF.CST' Files.IFF.CTSS' Files.IFF.TranslatedString' Files.IFF.STR' Files.IFF.TTAs
-Files.IFF,TranslatedString,2,0,0,2,0,5,0,0,0,-1,1,4,Files.IFF.LanguageCodes,Files.IFF.CST' Files.IFF.CTSS' Files.IFF.STR' Files.IFF.TTAs
-Files.IFF,STR,2,3,0,1,3,130,5,0,1,0,4,1,Files.IFF.TranslatedString' Files.IFF.LanguageCodes' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,TPRP,0,1,0,0,1,7,1,0,1,-1,1,1,Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,TTAB,0,1,0,0,1,7,1,0,1,-1,1,1,Files.IFF.IFFChunk,Files.IFF.Iff
-Files.IFF,TTAs,2,2,0,1,2,115,4,0,1,0,4,1,Files.IFF.TranslatedString' Files.IFF.LanguageCodes' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
-Files.Vitaboy,VitaboyVertex,5,3,1,5,3,63,5,0,0,0.67,0,1,,Files.Vitaboy.Mesh
-Files.Vitaboy,Anim,11,3,0,10,2,59,8,0,0,0,1,4,Files.FileReader,Files.Manager.FileManager' Shared.Sim' Vitaboy.AvatarBase' Shared.Sim
-Files.Vitaboy,Appearance,2,1,0,2,1,19,2,0,0,0,2,6,Files.UniqueFileID' Files.FileReader,Files.Manager.FileManager' Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser' Gonzo.Elements.OutfitContainer' Shared.Avatar' Vitaboy.AvatarBase
-Files.Vitaboy,Binding,3,1,0,3,1,40,3,0,0,0,2,2,Files.UniqueFileID' Files.FileReader,Files.Manager.FileManager' Vitaboy.AvatarBase
-Files.Vitaboy,BlendVertexProperty,2,1,0,2,1,10,1,0,0,0,1,0,Files.FileReader,
-Files.Vitaboy,Bone,13,1,0,13,1,41,3,0,0,0,1,2,Files.FileReader,Files.Vitaboy.Skeleton' Vitaboy.AvatarBase
-Files.Vitaboy,BoneBinding,5,1,0,5,1,16,1,0,0,0,1,1,Files.FileReader,Vitaboy.AvatarBase
-Files.Vitaboy,Collection,2,3,0,1,2,31,6,0,0,0,1,3,Files.FileReader,Files.Manager.FileManager' Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser
-Files.Vitaboy,Gesture,1,1,0,1,1,14,1,0,0,0,2,2,Files.UniqueFileID' Files.FileReader,Files.Vitaboy.Hand' Vitaboy.AvatarBase
-Files.Vitaboy,Hand,3,1,0,3,1,14,1,0,0,0,2,2,Files.Vitaboy.Gesture' Files.FileReader,Files.Vitaboy.HandSet' Vitaboy.AvatarBase
-Files.Vitaboy,HandGroup,4,3,0,3,2,30,5,0,0,0,2,2,Files.FileReader' Files.Vitaboy.HandSet,Files.Manager.FileManager' Vitaboy.AvatarBase
-Files.Vitaboy,HandSet,2,1,0,2,1,13,1,0,0,0,2,2,Files.Vitaboy.Hand' Files.FileReader,Files.Vitaboy.HandGroup' Vitaboy.AvatarBase
-Files.Vitaboy,Mesh,14,3,0,13,2,66,12,0,0,0,2,2,Files.FileReader' Files.Vitaboy.VitaboyVertex,Files.Manager.FileManager' Vitaboy.AvatarBase
+Files.IFF,OBJf,1,1,0,1,1,21,2,0,1,0,6,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.OBJfFunctionPair' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.OBJfFunctionPair,Files.IFF.Iff
+Files.IFF,PALT,1,1,0,0,1,27,2,0,1,0,4,5,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.SPR2' Files.IFF.SPR2Frame' Files.IFF.SPR' Files.IFF.SPRFrame' Files.IFF.Iff
+Files.IFF,SPR,5,2,0,3,1,57,6,0,1,0,8,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.PALT' Files.IFF.SPRFrame' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.PALT' Files.IFF.SPRFrame,Files.IFF.Iff
+Files.IFF,SPRFrame,6,3,0,5,2,104,16,0,0,0,4,1,Files.FileReader' Files.IFF.PALT' Files.FileReader' Files.IFF.PALT,Files.IFF.SPR
+Files.IFF,SPR2,3,2,0,1,1,49,4,0,1,0,8,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.PALT' Files.IFF.SPR2Frame' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.PALT' Files.IFF.SPR2Frame,Files.IFF.Iff
+Files.IFF,SPR2Frame,10,3,0,9,2,181,19,0,0,0,4,1,Files.FileReader' Files.IFF.PALT' Files.FileReader' Files.IFF.PALT,Files.IFF.SPR2
+Files.IFF,LanguageCodes,0,0,0,0,0,24,0,0,0,-1,0,5,,Files.IFF.CST' Files.IFF.TTAs' Files.IFF.CTSS' Files.IFF.TranslatedString' Files.IFF.STR
+Files.IFF,TranslatedString,2,0,0,2,0,5,0,0,0,-1,2,4,Files.IFF.LanguageCodes' Files.IFF.LanguageCodes,Files.IFF.CST' Files.IFF.TTAs' Files.IFF.CTSS' Files.IFF.STR
+Files.IFF,STR,2,3,0,1,3,130,19,0,1,0,8,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString,Files.IFF.Iff
+Files.IFF,TPRP,0,1,0,0,1,7,1,0,1,-1,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,TTAB,0,1,0,0,1,7,1,0,1,-1,4,1,Files.FileReader' Files.IFF.IFFChunk' Files.FileReader' Files.IFF.IFFChunk,Files.IFF.Iff
+Files.IFF,TTAs,2,2,0,1,2,115,18,0,1,0,8,1,Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString' Files.FileReader' Files.IFF.IFFChunk' Files.IFF.LanguageCodes' Files.IFF.TranslatedString,Files.IFF.Iff
+Files.Vitaboy,VitaboyVertex,5,4,1,5,4,71,6,0,0,0.5,0,1,,Files.Vitaboy.Mesh
+Files.Vitaboy,Anim,12,3,0,10,2,74,8,0,0,0,4,1,Files.FileReader' Files.Vitaboy.Motion' Files.FileReader' Files.Vitaboy.Motion,Files.Manager.FileManager
+Files.Vitaboy,Appearance,2,1,0,2,1,19,2,0,0,0,4,1,Files.UniqueFileID' Files.FileReader' Files.UniqueFileID' Files.FileReader,Files.Manager.FileManager
+Files.Vitaboy,Binding,3,1,0,3,1,40,3,0,0,0,4,1,Files.UniqueFileID' Files.FileReader' Files.UniqueFileID' Files.FileReader,Files.Manager.FileManager
+Files.Vitaboy,BlendVertexProperty,2,1,0,2,1,10,1,0,0,0,2,1,Files.FileReader' Files.FileReader,Files.Vitaboy.Mesh
+Files.Vitaboy,Bone,13,1,0,13,1,41,3,0,0,0,5,1,Files.FileReader' Files.Vitaboy.Property' Files.FileReader' Files.Vitaboy.Bone' Files.Vitaboy.Property,Files.Vitaboy.Skeleton
+Files.Vitaboy,BoneBinding,5,1,0,5,1,16,1,0,0,0,2,1,Files.FileReader' Files.FileReader,Files.Vitaboy.Mesh
+Files.Vitaboy,Collection,3,3,0,1,2,46,6,0,0,0,4,1,Files.UniqueFileID' Files.FileReader' Files.UniqueFileID' Files.FileReader,Files.Manager.FileManager
+Files.Vitaboy,Gesture,1,1,0,1,1,14,1,0,0,0,4,1,Files.UniqueFileID' Files.FileReader' Files.UniqueFileID' Files.FileReader,Files.Vitaboy.Hand
+Files.Vitaboy,Hand,3,1,0,3,1,14,1,0,0,0,4,1,Files.FileReader' Files.Vitaboy.Gesture' Files.FileReader' Files.Vitaboy.Gesture,Files.Vitaboy.HandSet
+Files.Vitaboy,HandGroup,5,3,0,3,2,45,5,0,0,0,4,1,Files.FileReader' Files.Vitaboy.HandSet' Files.FileReader' Files.Vitaboy.HandSet,Files.Manager.FileManager
+Files.Vitaboy,HandSet,2,1,0,2,1,13,1,0,0,0,4,1,Files.FileReader' Files.Vitaboy.Hand' Files.FileReader' Files.Vitaboy.Hand,Files.Vitaboy.HandGroup
+Files.Vitaboy,Mesh,15,3,0,13,2,81,12,0,0,0,7,1,Files.FileReader' Files.Vitaboy.VitaboyVertex' Files.Vitaboy.BlendVertexProperty' Files.Vitaboy.BoneBinding' Files.FileReader' Files.Vitaboy.BlendVertexProperty' Files.Vitaboy.BoneBinding,Files.Manager.FileManager
 Files.Vitaboy,BlendData,2,0,0,2,0,5,0,0,0,-1,0,1,,Files.Vitaboy.MeshVertexData
 Files.Vitaboy,MeshVertex,5,0,0,5,0,15,0,0,0,-1,0,1,,Files.Vitaboy.MeshVertexData
-Files.Vitaboy,MeshVertexData,3,0,0,3,0,6,0,0,0,-1,2,0,Files.Vitaboy.MeshVertex' Files.Vitaboy.BlendData,
-Files.Vitaboy,Motion,11,1,0,11,1,49,7,0,0,0,1,1,Files.FileReader,Vitaboy.AvatarBase
-Files.Vitaboy,OutfitRegion,0,0,0,0,0,5,0,0,0,-1,0,2,,Files.Vitaboy.Outfit' Vitaboy.AvatarBase
-Files.Vitaboy,Outfit,6,4,1,4,2,44,6,0,0,0,4,6,Files.FileReader' Files.UniqueFileID' Files.Vitaboy.OutfitRegion' Files.Endian,Files.Manager.FileManager' Gonzo.Elements.OutfitContainer' Gonzo.Elements.UISkinButtonClickedEventArgs' Shared.Sim' Vitaboy.AvatarBase' Shared.Sim
-Files.Vitaboy,Property,1,1,0,1,1,14,2,0,0,0,1,0,Files.FileReader,
-Files.Vitaboy,PurchasableOutfit,3,3,0,2,2,40,6,0,0,0,2,3,Files.FileReader' Files.UniqueFileID,Files.Manager.FileManager' Gonzo.Elements.UIBodyBrowser' Gonzo.Elements.UIHeadBrowser
-Files.Vitaboy,Skeleton,5,4,0,4,3,46,8,0,0,0,2,3,Files.FileReader' Files.Vitaboy.Bone,Files.Manager.FileManager' Shared.Sim' Vitaboy.AvatarBase
-Files.Vitaboy,TimeProperty,2,1,0,2,1,16,2,0,0,0,1,0,Files.FileReader,
+Files.Vitaboy,MeshVertexData,3,0,0,3,0,6,0,0,0,-1,4,0,Files.Vitaboy.BlendData' Files.Vitaboy.MeshVertex' Files.Vitaboy.BlendData' Files.Vitaboy.MeshVertex,
+Files.Vitaboy,Motion,11,1,0,11,1,49,7,0,0,0,6,1,Files.FileReader' Files.Vitaboy.Property' Files.Vitaboy.TimeProperty' Files.FileReader' Files.Vitaboy.Property' Files.Vitaboy.TimeProperty,Files.Vitaboy.Anim
+Files.Vitaboy,OutfitRegion,0,0,0,0,0,5,0,0,0,-1,0,1,,Files.Vitaboy.Outfit
+Files.Vitaboy,Outfit,7,4,1,4,2,59,6,0,0,0,8,1,Files.Endian' Files.UniqueFileID' Files.FileReader' Files.Vitaboy.OutfitRegion' Files.Endian' Files.UniqueFileID' Files.FileReader' Files.Vitaboy.OutfitRegion,Files.Manager.FileManager
+Files.Vitaboy,Property,1,1,0,1,1,14,2,0,0,0,2,3,Files.FileReader' Files.FileReader,Files.Vitaboy.Bone' Files.Vitaboy.TimeProperty' Files.Vitaboy.Motion
+Files.Vitaboy,PurchasableOutfit,4,3,0,2,2,55,6,0,0,0,4,1,Files.UniqueFileID' Files.FileReader' Files.UniqueFileID' Files.FileReader,Files.Manager.FileManager
+Files.Vitaboy,Skeleton,6,4,0,4,3,61,8,0,0,0,4,1,Files.FileReader' Files.Vitaboy.Bone' Files.FileReader' Files.Vitaboy.Bone,Files.Manager.FileManager
+Files.Vitaboy,TimeProperty,2,1,0,2,1,16,2,0,0,0,4,1,Files.FileReader' Files.Vitaboy.Property' Files.FileReader' Files.Vitaboy.Property,Files.Vitaboy.Motion

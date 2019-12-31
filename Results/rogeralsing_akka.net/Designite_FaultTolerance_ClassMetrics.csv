@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-FaultTolerance,Program,0,1,0,0,0,16,1,0,0,-1,4,0,Akka.Configuration.Config' Akka.Actor.ActorSystem' Akka.Actor.IActorRef' Akka.Configuration.ConfigurationFactory,
-FaultTolerance,Listener,1,2,0,0,0,33,4,0,3,1,5,0,Akka.Event.ILoggingAdapter' Akka.Actor.IUntypedActorContext' FaultTolerance.Progress' Akka.Actor.ActorSystem' Akka.Actor.ReceiveTimeout,
-FaultTolerance,Progress,0,2,1,0,2,12,2,0,0,-1,0,1,,FaultTolerance.Listener
-FaultTolerance,Worker,4,2,0,0,0,41,3,0,3,1,8,0,Akka.Event.ILoggingAdapter' Akka.Actor.IActorRef' Akka.Actor.Directive' Akka.Actor.OneForOneStrategy' FaultTolerance.ServiceUnavailableException' Akka.Actor.IScheduler' Akka.Actor.ActorSystem' Akka.Actor.IUntypedActorContext,
-FaultTolerance,CurrentCount,0,2,2,0,2,14,2,0,0,-1,0,0,,
-FaultTolerance,Increment,0,2,1,0,2,12,2,0,0,-1,0,2,,FaultTolerance.CounterService' FaultTolerance.Counter
-FaultTolerance,ServiceUnavailableException,0,1,0,0,1,6,1,0,0,-1,0,1,,FaultTolerance.Worker
-FaultTolerance,CounterService,6,5,0,0,0,106,11,0,3,0.4,12,0,Akka.Event.ILoggingAdapter' Akka.Actor.IActorRef' Akka.Actor.Directive' Akka.Actor.OneForOneStrategy' FaultTolerance.StorageException' Akka.Actor.IUntypedActorContext' FaultTolerance.Entry' Akka.Actor.Props' Akka.Actor.IScheduler' Akka.Actor.ActorSystem' FaultTolerance.Increment' Akka.Actor.Terminated,
-FaultTolerance,SenderMessagePair,0,1,2,0,1,10,1,0,0,-1,1,0,Akka.Actor.IActorRef,
-FaultTolerance,UseStorage,0,2,1,0,2,12,2,0,0,-1,1,1,Akka.Actor.IActorRef,FaultTolerance.Counter
-FaultTolerance,Counter,4,3,0,0,1,42,5,0,3,0,4,0,Akka.Event.ILoggingAdapter' Akka.Actor.IActorRef' FaultTolerance.UseStorage' FaultTolerance.Increment,
-FaultTolerance,Store,0,2,1,0,2,12,2,0,0,-1,1,1,FaultTolerance.Entry,FaultTolerance.Storage
-FaultTolerance,Entry,0,2,2,0,2,14,2,0,0,-1,0,3,,FaultTolerance.CounterService' FaultTolerance.Store' FaultTolerance.Storage
-FaultTolerance,Get,0,2,1,0,2,12,2,0,0,-1,0,1,,FaultTolerance.Storage
-FaultTolerance,Storage,0,1,0,0,0,21,2,0,3,-1,5,0,FaultTolerance.Entry' FaultTolerance.Store' FaultTolerance.DummyDB' FaultTolerance.Get' Akka.Actor.IActorRef,
-FaultTolerance,DummyDB,1,2,0,0,2,23,3,0,0,0,0,1,,FaultTolerance.Storage
-FaultTolerance,StorageException,0,1,0,0,1,6,1,0,0,-1,0,1,,FaultTolerance.CounterService
+FaultTolerance,Program,0,1,0,0,0,16,1,0,0,-1,2,0,FaultTolerance.Listener' FaultTolerance.Worker,
+FaultTolerance,Listener,1,2,0,0,0,33,5,0,3,1,1,1,FaultTolerance.Progress,FaultTolerance.Program
+FaultTolerance,Progress,0,2,1,0,2,12,2,0,0,-1,0,2,,FaultTolerance.Listener' FaultTolerance.Worker
+FaultTolerance,Worker,4,2,0,0,0,41,4,0,3,1,5,1,FaultTolerance.Progress' FaultTolerance.CurrentCount' FaultTolerance.Increment' FaultTolerance.ServiceUnavailableException' FaultTolerance.CounterService,FaultTolerance.Program
+FaultTolerance,CurrentCount,0,2,2,0,2,14,2,0,0,-1,0,2,,FaultTolerance.Worker' FaultTolerance.Counter
+FaultTolerance,Increment,0,2,1,0,2,12,2,0,0,-1,0,3,,FaultTolerance.Worker' FaultTolerance.CounterService' FaultTolerance.Counter
+FaultTolerance,ServiceUnavailableException,0,1,0,0,1,6,1,0,0,-1,0,2,,FaultTolerance.Worker' FaultTolerance.CounterService
+FaultTolerance,CounterService,6,5,0,0,0,106,14,0,3,0.4,9,1,FaultTolerance.Increment' FaultTolerance.ServiceUnavailableException' FaultTolerance.SenderMessagePair' FaultTolerance.UseStorage' FaultTolerance.Counter' FaultTolerance.Entry' FaultTolerance.Get' FaultTolerance.Storage' FaultTolerance.StorageException,FaultTolerance.Worker
+FaultTolerance,SenderMessagePair,0,1,2,0,1,10,1,0,0,-1,0,1,,FaultTolerance.CounterService
+FaultTolerance,UseStorage,0,2,1,0,2,12,2,0,0,-1,0,2,,FaultTolerance.CounterService' FaultTolerance.Counter
+FaultTolerance,Counter,4,3,0,0,1,42,7,0,3,0,5,1,FaultTolerance.CurrentCount' FaultTolerance.Increment' FaultTolerance.UseStorage' FaultTolerance.Store' FaultTolerance.Entry,FaultTolerance.CounterService
+FaultTolerance,Store,0,2,1,0,2,12,2,0,0,-1,1,2,FaultTolerance.Entry,FaultTolerance.Counter' FaultTolerance.Storage
+FaultTolerance,Entry,0,2,2,0,2,14,2,0,0,-1,0,4,,FaultTolerance.CounterService' FaultTolerance.Counter' FaultTolerance.Store' FaultTolerance.Storage
+FaultTolerance,Get,0,2,1,0,2,12,2,0,0,-1,0,2,,FaultTolerance.CounterService' FaultTolerance.Storage
+FaultTolerance,Storage,0,1,0,0,0,21,3,0,3,-1,4,1,FaultTolerance.Store' FaultTolerance.Entry' FaultTolerance.Get' FaultTolerance.DummyDB,FaultTolerance.CounterService
+FaultTolerance,DummyDB,1,2,0,0,2,23,4,0,0,0,1,1,FaultTolerance.StorageException,FaultTolerance.Storage
+FaultTolerance,StorageException,0,1,0,0,1,6,1,0,0,-1,0,2,,FaultTolerance.CounterService' FaultTolerance.DummyDB

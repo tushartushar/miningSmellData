@@ -1,16 +1,16 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-HelloSwagger.App_Start,AppStartFubuMVC,0,1,0,0,1,22,1,0,0,-1,0,0,,
-HelloSwagger,ApiConvention,0,1,0,0,1,9,1,0,0,-1,0,0,,
-HelloSwagger,ConfigureFubuMVC,0,1,0,0,1,10,1,0,0,-1,0,0,,
-HelloSwagger.Handlers.api.lists,get_handler,0,1,0,0,1,7,1,0,0,-1,3,0,HelloSwagger.Handlers.api.lists.show.ListsOf' HelloSwagger.Handlers.api.lists.ListsModel' HelloSwagger.Handlers.api.lists.ListsRequest,
+HelloSwagger.App_Start,AppStartFubuMVC,0,1,0,0,1,22,1,0,0,-1,1,0,HelloSwagger.ConfigureFubuMVC,
+HelloSwagger,ApiConvention,0,1,0,0,1,9,1,0,0,-1,0,1,,HelloSwagger.ConfigureFubuMVC
+HelloSwagger,ConfigureFubuMVC,0,1,0,0,1,10,1,0,0,-1,3,1,HelloSwagger.ApiConvention' HelloSwagger.Handlers.HandlerMarker' HelloSwagger.Handlers.home.HomeRequest,HelloSwagger.App_Start.AppStartFubuMVC
+HelloSwagger.Handlers.api.lists,get_handler,0,1,0,0,1,7,1,0,0,-1,3,0,HelloSwagger.Handlers.api.lists.ListsRequest' HelloSwagger.Handlers.api.lists.ListsModel' HelloSwagger.Handlers.api.lists.show.ListsOf,
 HelloSwagger.Handlers.api.lists,ListsRequest,0,0,0,0,0,4,0,0,1,-1,0,1,,HelloSwagger.Handlers.api.lists.get_handler
 HelloSwagger.Handlers.api.lists,ListsModel,0,0,1,0,0,4,0,0,0,-1,0,1,,HelloSwagger.Handlers.api.lists.get_handler
-HelloSwagger.Handlers.api.lists.show,ListsOf,0,1,1,0,0,13,1,0,0,-1,0,2,,HelloSwagger.Handlers.api.lists.get_handler' HelloSwagger.Handlers.api.lists.show.get_Name_handler
-HelloSwagger.Handlers.api.lists.show,get_Name_handler,0,1,0,0,1,14,2,0,0,-1,3,0,HelloSwagger.Handlers.api.lists.show.ShowModel' HelloSwagger.Handlers.api.lists.show.ShowRequest' HelloSwagger.Handlers.api.lists.show.ListsOf,
+HelloSwagger.Handlers.api.lists.show,ListsOf,0,1,1,0,0,13,1,0,0,-1,1,2,HelloSwagger.Handlers.api.lists.show.ListElement,HelloSwagger.Handlers.api.lists.get_handler' HelloSwagger.Handlers.api.lists.show.get_Name_handler
+HelloSwagger.Handlers.api.lists.show,get_Name_handler,0,1,0,0,1,14,2,0,0,-1,3,0,HelloSwagger.Handlers.api.lists.show.ListsOf' HelloSwagger.Handlers.api.lists.show.ShowRequest' HelloSwagger.Handlers.api.lists.show.ShowModel,
 HelloSwagger.Handlers.api.lists.show,ShowRequest,0,0,1,0,0,6,0,0,1,-1,0,1,,HelloSwagger.Handlers.api.lists.show.get_Name_handler
-HelloSwagger.Handlers.api.lists.show,ShowModel,0,1,2,0,1,9,1,0,0,-1,0,1,,HelloSwagger.Handlers.api.lists.show.get_Name_handler
-HelloSwagger.Handlers.api.lists.show,ListElement,0,1,3,0,1,11,1,0,0,-1,0,0,,
-HelloSwagger.Handlers,HandlerMarker,0,0,0,0,0,3,0,0,0,-1,0,0,,
-HelloSwagger.Handlers.home,get_handler,0,1,0,0,1,7,1,0,0,-1,2,0,HelloSwagger.Handlers.home.HomeModel' HelloSwagger.Handlers.home.HomeRequest,
-HelloSwagger.Handlers.home,HomeRequest,0,0,0,0,0,1,0,0,0,-1,0,1,,HelloSwagger.Handlers.home.get_handler
+HelloSwagger.Handlers.api.lists.show,ShowModel,0,1,2,0,1,9,1,0,0,-1,1,1,HelloSwagger.Handlers.api.lists.show.ListElement,HelloSwagger.Handlers.api.lists.show.get_Name_handler
+HelloSwagger.Handlers.api.lists.show,ListElement,0,1,3,0,1,11,1,0,0,-1,0,2,,HelloSwagger.Handlers.api.lists.show.ListsOf' HelloSwagger.Handlers.api.lists.show.ShowModel
+HelloSwagger.Handlers,HandlerMarker,0,0,0,0,0,3,0,0,0,-1,0,1,,HelloSwagger.ConfigureFubuMVC
+HelloSwagger.Handlers.home,get_handler,0,1,0,0,1,7,1,0,0,-1,2,0,HelloSwagger.Handlers.home.HomeRequest' HelloSwagger.Handlers.home.HomeModel,
+HelloSwagger.Handlers.home,HomeRequest,0,0,0,0,0,1,0,0,0,-1,0,2,,HelloSwagger.Handlers.home.get_handler' HelloSwagger.ConfigureFubuMVC
 HelloSwagger.Handlers.home,HomeModel,0,0,0,0,0,3,0,0,0,-1,0,1,,HelloSwagger.Handlers.home.get_handler

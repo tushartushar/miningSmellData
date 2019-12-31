@@ -1,52 +1,52 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 MessageBoard.iOS,Application,0,1,0,0,0,10,1,0,0,-1,0,0,,
 MessageBoard.iOS,AppDelegate,1,1,0,0,1,14,1,0,0,0,1,0,MessageBoard.iOS.ViewController10,
-MessageBoard.iOS,ViewController01,1,4,0,0,2,24,4,1,1,0,2,0,MessageBoard.MessageBoardClient' MessageBoard.iOS.ViewController00,
-MessageBoard.iOS,ViewController00,1,2,0,0,1,45,2,1,0,1,0,2,,MessageBoard.iOS.ViewController01' MessageBoard.iOS.DataSource
-MessageBoard.iOS,DataSource,1,4,0,0,4,31,5,0,0,0.5,2,0,MessageBoard.iOS.ViewController00' MessageBoard.Message,
-MessageBoard.iOS,ViewController02,0,3,0,0,1,23,3,1,2,-1,1,0,MessageBoard.MessageBoardClient,
-MessageBoard.iOS,ViewController03,0,2,0,0,1,16,2,1,3,-1,1,1,MessageBoard.MessageBoardClient,MessageBoard.iOS.ViewController04
-MessageBoard.iOS,ViewController04,0,3,0,0,1,37,4,1,4,-1,2,0,MessageBoard.iOS.ViewController03' MessageBoard.MessageBoardClient,
-MessageBoard.iOS,ViewController05,0,1,0,0,1,12,1,1,5,-1,0,1,,MessageBoard.iOS.ViewController06
-MessageBoard.iOS,ViewController06,2,5,0,0,1,78,6,1,6,0,2,1,MessageBoard.iOS.RefreshView' MessageBoard.iOS.ViewController05,MessageBoard.iOS.ViewController07
+MessageBoard.iOS,ViewController01,1,4,0,0,2,24,4,1,1,0,2,1,MessageBoard.iOS.ViewController00' MessageBoard.MessageBoardClient,MessageBoard.iOS.ViewController02
+MessageBoard.iOS,ViewController00,1,2,0,0,1,45,2,1,0,1,2,1,MessageBoard.iOS.DataSource' MessageBoard.Message,MessageBoard.iOS.ViewController01
+MessageBoard.iOS,DataSource,1,4,0,0,4,31,5,0,0,0.5,0,1,,MessageBoard.iOS.ViewController00
+MessageBoard.iOS,ViewController02,0,3,0,0,1,23,3,1,2,-1,1,1,MessageBoard.iOS.ViewController01,MessageBoard.iOS.ViewController03
+MessageBoard.iOS,ViewController03,0,2,0,0,1,16,2,1,3,-1,1,1,MessageBoard.iOS.ViewController02,MessageBoard.iOS.ViewController04
+MessageBoard.iOS,ViewController04,0,3,0,0,1,37,4,1,4,-1,1,1,MessageBoard.iOS.ViewController03,MessageBoard.iOS.ViewController05
+MessageBoard.iOS,ViewController05,0,1,0,0,1,12,1,1,5,-1,1,1,MessageBoard.iOS.ViewController04,MessageBoard.iOS.ViewController06
+MessageBoard.iOS,ViewController06,2,5,0,0,1,78,6,1,6,0,3,1,MessageBoard.iOS.ViewController05' MessageBoard.iOS.RefreshView' MessageBoard.Message,MessageBoard.iOS.ViewController07
 MessageBoard.iOS,RefreshView,2,3,0,0,3,31,3,0,0,0,0,1,,MessageBoard.iOS.ViewController06
-MessageBoard.iOS,ViewController07,2,5,0,0,3,38,6,1,7,0.4,2,1,MessageBoard.iOS.ViewController06' MessageBoard.MessageBoardClient,MessageBoard.iOS.ViewController08
-MessageBoard.iOS,ViewController08,1,2,0,0,1,16,2,1,8,0,2,0,MessageBoard.iOS.LocalStorage' MessageBoard.iOS.ViewController07,
-MessageBoard.iOS,LocalStorage,1,3,0,0,3,27,3,0,0,0,2,1,SQLite.SQLiteConnection' MessageBoard.Message,MessageBoard.iOS.ViewController08
-MessageBoard.iOS,NewMessageController,1,1,0,0,1,31,1,0,0,0,0,1,,MessageBoard.iOS.ViewController09
-MessageBoard.iOS,Outbox,1,4,0,0,4,28,4,0,0,0,2,1,SQLite.SQLiteConnection' MessageBoard.Message,MessageBoard.iOS.OutboxService
+MessageBoard.iOS,ViewController07,2,5,0,0,3,38,6,1,7,0.4,3,1,MessageBoard.iOS.ViewController06' MessageBoard.Message' MessageBoard.MessageBoardClient,MessageBoard.iOS.ViewController08
+MessageBoard.iOS,ViewController08,1,2,0,0,1,16,2,1,8,0,3,1,MessageBoard.iOS.ViewController07' MessageBoard.iOS.LocalStorage' MessageBoard.Message,MessageBoard.iOS.ViewController09
+MessageBoard.iOS,LocalStorage,1,3,0,0,3,27,3,0,0,0,2,1,MessageBoard.Message' SQLite.SQLiteConnection,MessageBoard.iOS.ViewController08
+MessageBoard.iOS,NewMessageController,1,1,0,0,1,31,1,0,0,0,1,1,MessageBoard.Message,MessageBoard.iOS.ViewController09
+MessageBoard.iOS,Outbox,1,4,0,0,4,28,4,0,0,0,2,1,MessageBoard.Message' SQLite.SQLiteConnection,MessageBoard.iOS.OutboxService
 MessageBoard.iOS,OutboxService,4,4,0,0,3,49,6,0,0,0,3,1,MessageBoard.iOS.Outbox' MessageBoard.Message' MessageBoard.MessageBoardClient,MessageBoard.iOS.ViewController10
-MessageBoard.iOS,ViewController09,0,2,0,0,1,30,2,1,9,-1,3,0,MessageBoard.iOS.NewMessageController' MessageBoard.MessageBoardClient' MessageBoard.Message,
-MessageBoard.iOS,ViewController10,1,3,0,0,1,34,3,0,10,0,3,1,MessageBoard.iOS.OutboxService' MessageBoard.MessageBoardClient' MessageBoard.Message,MessageBoard.iOS.AppDelegate
-MessageBoard,Message,0,5,4,0,5,57,10,0,0,-1,0,7,,MessageBoard.iOS.DataSource' MessageBoard.iOS.LocalStorage' MessageBoard.iOS.Outbox' MessageBoard.iOS.OutboxService' MessageBoard.iOS.ViewController09' MessageBoard.iOS.ViewController10' MessageBoard.MessageBoardClient
-MessageBoard,MessageBoardClient,2,5,0,1,5,60,7,0,0,0,1,8,MessageBoard.Message,MessageBoard.iOS.ViewController01' MessageBoard.iOS.ViewController02' MessageBoard.iOS.ViewController03' MessageBoard.iOS.ViewController04' MessageBoard.iOS.ViewController07' MessageBoard.iOS.OutboxService' MessageBoard.iOS.ViewController09' MessageBoard.iOS.ViewController10
-SQLite,SQLiteException,0,2,1,0,1,12,2,0,0,-1,1,4,SQLite.Result,SQLite.SQLiteConnection' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand' SQLite.SQLite3
+MessageBoard.iOS,ViewController09,0,2,0,0,1,30,2,1,9,-1,3,1,MessageBoard.iOS.ViewController08' MessageBoard.iOS.NewMessageController' MessageBoard.Message,MessageBoard.iOS.ViewController10
+MessageBoard.iOS,ViewController10,1,3,0,0,1,34,3,0,10,0,3,1,MessageBoard.iOS.OutboxService' MessageBoard.iOS.ViewController09' MessageBoard.Message,MessageBoard.iOS.AppDelegate
+MessageBoard,Message,0,5,4,0,5,57,13,0,0,-1,0,12,,MessageBoard.iOS.ViewController08' MessageBoard.iOS.ViewController09' MessageBoard.iOS.ViewController07' MessageBoard.iOS.ViewController06' MessageBoard.iOS.ViewController00' MessageBoard.iOS.ViewController10' MessageBoard.iOS.OutboxService' MessageBoard.Message' MessageBoard.iOS.NewMessageController' MessageBoard.MessageBoardClient' MessageBoard.iOS.Outbox' MessageBoard.iOS.LocalStorage
+MessageBoard,MessageBoardClient,2,5,0,1,5,60,7,0,0,0,0,3,,MessageBoard.iOS.ViewController07' MessageBoard.iOS.OutboxService' MessageBoard.iOS.ViewController01
+SQLite,SQLiteException,0,2,1,0,1,12,2,0,0,-1,2,4,SQLite.SQLite3' SQLite.Result,SQLite.SQLiteConnection' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand' SQLite.SQLite3
 SQLite,SQLiteOpenFlags,0,0,0,0,0,10,0,0,0,-1,0,1,,SQLite.SQLiteConnection
-SQLite,SQLiteConnection,10,41,8,0,36,923,87,0,0,0.07,13,6,SQLite.SQLite3' SQLite.Result' SQLite.SQLiteException' SQLite.SQLiteOpenFlags' SQLite.TableInfo' SQLite.TableMapping' SQLite.IndexInfo' SQLite.Orm' SQLite.Column' SQLite.IndexedAttribute' SQLite.IndexedColumn' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand,MessageBoard.iOS.LocalStorage' MessageBoard.iOS.Outbox' SQLite.TableMapping' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand' SQLite.TableQuery<T>
+SQLite,SQLiteConnection,10,41,8,0,36,923,88,0,0,0.07,12,6,SQLite.SQLiteException' SQLite.SQLiteOpenFlags' SQLite.IndexedColumn' SQLite.IndexInfo' SQLite.TableInfo' SQLite.TableMapping' SQLite.Column' SQLite.Orm' SQLite.SQLiteCommand' SQLite.TableQuery<T>' SQLite.SQLite3' SQLite.Result,MessageBoard.iOS.Outbox' MessageBoard.iOS.LocalStorage' SQLite.TableMapping' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand' SQLite.TableQuery<T>
 SQLite,IndexedColumn,2,0,0,2,0,5,0,0,0,-1,0,1,,SQLite.SQLiteConnection
 SQLite,IndexInfo,4,0,0,4,0,7,0,0,0,-1,0,1,,SQLite.SQLiteConnection
 SQLite,TableInfo,0,0,6,0,0,9,0,0,0,-1,0,1,,SQLite.SQLiteConnection
 SQLite,SQLiteConnectionString,0,1,3,0,1,19,1,0,0,-1,0,0,,
 SQLite,TableAttribute,0,1,1,0,1,9,1,0,0,-1,0,1,,SQLite.TableMapping
-SQLite,ColumnAttribute,0,1,1,0,1,9,1,0,0,-1,0,2,,SQLite.TableMapping' SQLite.PropColumn
+SQLite,ColumnAttribute,0,1,1,0,1,9,1,0,0,-1,0,1,,SQLite.TableMapping
 SQLite,PrimaryKeyAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,SQLite.Orm
 SQLite,AutoIncrementAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,SQLite.Orm
-SQLite,IndexedAttribute,0,2,3,0,2,17,2,1,0,-1,0,2,,SQLite.SQLiteConnection' SQLite.Orm
+SQLite,IndexedAttribute,0,2,3,0,2,17,2,1,0,-1,0,3,,SQLite.UniqueAttribute' SQLite.TableMapping' SQLite.Orm
 SQLite,IgnoreAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,SQLite.TableMapping
-SQLite,UniqueAttribute,0,0,1,0,0,8,0,0,1,-1,0,0,,
+SQLite,UniqueAttribute,0,0,1,0,0,8,0,0,1,-1,1,0,SQLite.IndexedAttribute,
 SQLite,MaxLengthAttribute,0,1,1,0,1,9,1,0,0,-1,0,1,,SQLite.Orm
 SQLite,CollationAttribute,0,1,1,0,1,9,1,0,0,-1,0,1,,SQLite.Orm
-SQLite,TableMapping,4,6,7,0,4,165,16,0,0,0.5,6,3,SQLite.Column' SQLite.PreparedSqlLiteInsertCommand' SQLite.TableAttribute' SQLite.IgnoreAttribute' SQLite.ColumnAttribute' SQLite.SQLiteConnection,SQLite.SQLiteConnection' SQLite.SQLiteCommand' SQLite.TableQuery<T>
+SQLite,TableMapping,4,6,7,0,4,165,17,0,0,0.5,9,4,SQLite.SQLiteConnection' SQLite.TableAttribute' SQLite.ColumnAttribute' SQLite.IndexedAttribute' SQLite.IgnoreAttribute' SQLite.Column' SQLite.PropColumn' SQLite.Orm' SQLite.PreparedSqlLiteInsertCommand,SQLite.SQLiteConnection' SQLite.Orm' SQLite.SQLiteCommand' SQLite.TableQuery<T>
 SQLite,Column,0,2,8,0,2,13,2,1,0,-1,0,4,,SQLite.SQLiteConnection' SQLite.TableMapping' SQLite.Orm' SQLite.SQLiteCommand
-SQLite,PropColumn,1,3,0,0,3,26,3,0,1,0,2,0,SQLite.ColumnAttribute' SQLite.Orm,
-SQLite,Orm,1,7,0,1,7,105,14,0,0,0.86,6,2,SQLite.Column' SQLite.PrimaryKeyAttribute' SQLite.CollationAttribute' SQLite.AutoIncrementAttribute' SQLite.IndexedAttribute' SQLite.MaxLengthAttribute,SQLite.SQLiteConnection' SQLite.PropColumn
-SQLite,SQLiteCommand,3,16,1,0,9,257,30,0,0,0,8,3,SQLite.SQLiteConnection' SQLite.Result' SQLite.SQLite3' SQLite.SQLiteException' SQLite.TableMapping' SQLite.Column' SQLite.ColType' SQLite.Binding,SQLite.SQLiteConnection' SQLite.PreparedSqlLiteInsertCommand' SQLite.TableQuery<T>
+SQLite,PropColumn,1,3,0,0,3,26,3,0,1,0,0,1,,SQLite.TableMapping
+SQLite,Orm,1,7,0,1,7,105,21,0,0,0.86,7,2,SQLite.PrimaryKeyAttribute' SQLite.AutoIncrementAttribute' SQLite.IndexedAttribute' SQLite.MaxLengthAttribute' SQLite.CollationAttribute' SQLite.TableMapping' SQLite.Column,SQLite.SQLiteConnection' SQLite.TableMapping
+SQLite,SQLiteCommand,3,16,1,0,9,257,59,0,0,0,8,3,SQLite.SQLiteException' SQLite.SQLiteConnection' SQLite.TableMapping' SQLite.Column' SQLite.Binding' SQLite.SQLite3' SQLite.Result' SQLite.ColType,SQLite.SQLiteConnection' SQLite.PreparedSqlLiteInsertCommand' SQLite.TableQuery<T>
 SQLite,Binding,0,0,3,0,0,6,0,0,0,-1,0,1,,SQLite.SQLiteCommand
-SQLite,PreparedSqlLiteInsertCommand,1,5,4,0,2,71,11,0,0,0.6,5,2,SQLite.SQLiteConnection' SQLite.Result' SQLite.SQLite3' SQLite.SQLiteCommand' SQLite.SQLiteException,SQLite.SQLiteConnection' SQLite.TableMapping
-SQLite,TableQuery<T>,5,22,2,0,14,365,37,0,0,0.68,5,0,SQLite.SQLiteConnection' SQLite.TableMapping' SQLite.CompileResult' SQLite.Ordering' SQLite.SQLiteCommand,
+SQLite,PreparedSqlLiteInsertCommand,1,5,4,0,2,71,12,0,0,0.6,5,1,SQLite.SQLiteException' SQLite.SQLiteConnection' SQLite.SQLiteCommand' SQLite.SQLite3' SQLite.Result,SQLite.TableMapping
+SQLite,TableQuery<T>,5,22,2,0,14,365,69,0,0,0.68,5,1,SQLite.SQLiteConnection' SQLite.TableMapping' SQLite.SQLiteCommand' SQLite.Ordering' SQLite.CompileResult,SQLite.SQLiteConnection
 SQLite,Ordering,0,0,2,0,0,5,0,0,0,-1,0,1,,SQLite.TableQuery<T>
 SQLite,CompileResult,0,0,2,0,0,5,0,0,0,-1,0,1,,SQLite.TableQuery<T>
-SQLite,SQLite3,0,37,0,0,36,276,39,0,0,-1,3,3,SQLite.ConfigOption' SQLite.Result' SQLite.SQLiteException,SQLite.SQLiteConnection' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand
+SQLite,SQLite3,0,37,0,0,36,276,39,0,0,-1,4,4,SQLite.SQLiteException' SQLite.Result' SQLite.ConfigOption' SQLite.ColType,SQLite.SQLiteException' SQLite.SQLiteConnection' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand
 SQLite,Result,0,0,0,0,0,32,0,0,0,-1,0,5,,SQLite.SQLiteException' SQLite.SQLiteConnection' SQLite.SQLiteCommand' SQLite.PreparedSqlLiteInsertCommand' SQLite.SQLite3
 SQLite,ConfigOption,0,0,0,0,0,6,0,0,0,-1,0,1,,SQLite.SQLite3
-SQLite,ColType,0,0,0,0,0,8,0,0,0,-1,0,1,,SQLite.SQLiteCommand
+SQLite,ColType,0,0,0,0,0,8,0,0,0,-1,0,2,,SQLite.SQLiteCommand' SQLite.SQLite3

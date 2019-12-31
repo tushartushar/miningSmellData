@@ -1,28 +1,28 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 XOutput,OutputState,21,0,0,21,0,6,0,0,0,-1,0,1,,XOutput.ControllerDevice
-XOutput,ControllerDevice,9,11,0,5,4,187,17,0,0,0,2,3,XOutput.OutputState' XOutput.SaveManager,XOutput.ControllerManager' XOutput.ControllerOptions' XOutput.XOut
-XOutput,ControllerManager,9,16,0,3,14,309,61,0,1,0.19,3,1,XOutput.ControllerDevice' XOutput.ContData' XOutput.ScpDevice,XOutput.XOut
+XOutput,ControllerDevice,9,11,0,5,4,187,28,0,0,0,2,3,XOutput.OutputState' XOutput.SaveManager,XOutput.ControllerOptions' XOutput.XOut' XOutput.ControllerManager
+XOutput,ControllerManager,9,16,0,3,14,309,64,0,1,0.19,3,1,XOutput.ControllerDevice' XOutput.ContData' XOutput.ScpDevice,XOutput.XOut
 XOutput,ContData,2,0,0,2,0,5,0,0,0,-1,0,1,,XOutput.ControllerManager
-XOutput,ControllerOptions,45,6,0,0,1,713,13,0,0,0.33,3,1,XOutput.ControllerDevice' XOutput.MultiLevelComboBox' XOutput.XOut,XOutput.XOut
+XOutput,ControllerOptions,45,6,0,0,1,713,13,0,0,0.33,2,1,XOutput.ControllerDevice' XOutput.MultiLevelComboBox,XOutput.XOut
 XOutput,Logger,1,1,0,0,1,13,2,0,0,0,0,1,,XOutput.SaveManager
-XOutput,MultiLevelComboBox,2,7,2,0,3,88,13,0,0,0.29,0,1,,XOutput.ControllerOptions
-XOutput,Program,0,1,0,0,0,13,1,0,0,-1,0,0,,
-XOutput,SaveManager,2,4,0,0,2,120,17,0,0,0,1,1,XOutput.Logger,XOutput.ControllerDevice
-XOutput,ScpDevice,41,37,2,17,9,434,49,1,0,0.38,7,1,XOutput.DEV_BROADCAST_DEVICEINTERFACE' XOutput.SP_DEVICE_INTERFACE_DATA' XOutput.USB_INTERFACE_DESCRIPTOR' XOutput.WINUSB_PIPE_INFORMATION' XOutput.USBD_PIPE_TYPE' XOutput.WINUSB_SETUP_PACKET' XOutput.SP_PROPCHANGE_PARAMS,XOutput.ControllerManager
+XOutput,MultiLevelComboBox,2,7,2,0,3,88,15,0,0,0.29,0,1,,XOutput.ControllerOptions
+XOutput,Program,0,1,0,0,0,13,1,0,0,-1,1,0,XOutput.XOut,
+XOutput,SaveManager,2,4,0,0,2,120,27,0,0,0,1,1,XOutput.Logger,XOutput.ControllerDevice
+XOutput,ScpDevice,41,37,2,17,9,434,52,1,0,0.38,8,1,XOutput.DEV_BROADCAST_DEVICEINTERFACE' XOutput.SP_DEVICE_INTERFACE_DATA' XOutput.USBD_PIPE_TYPE' XOutput.USB_INTERFACE_DESCRIPTOR' XOutput.WINUSB_PIPE_INFORMATION' XOutput.WINUSB_SETUP_PACKET' XOutput.SP_CLASSINSTALL_HEADER' XOutput.SP_PROPCHANGE_PARAMS,XOutput.ControllerManager
 XOutput,DEV_BROADCAST_DEVICEINTERFACE,5,0,0,0,0,9,0,0,0,-1,0,1,,XOutput.ScpDevice
 XOutput,DEV_BROADCAST_DEVICEINTERFACE_M,5,0,0,5,0,11,0,0,0,-1,0,0,,
 XOutput,DEV_BROADCAST_HDR,3,0,0,3,0,7,0,0,0,-1,0,0,,
 XOutput,SP_DEVICE_INTERFACE_DATA,4,0,0,0,0,8,0,0,0,-1,0,1,,XOutput.ScpDevice
 XOutput,POLICY_TYPE,0,0,0,0,0,10,0,0,0,-1,0,0,,
-XOutput,USBD_PIPE_TYPE,0,0,0,0,0,7,0,0,0,-1,0,2,,XOutput.ScpDevice' XOutput.WINUSB_PIPE_INFORMATION
+XOutput,USBD_PIPE_TYPE,0,0,0,0,0,7,0,0,0,-1,0,1,,XOutput.ScpDevice
 XOutput,USB_DEVICE_SPEED,0,0,0,0,0,6,0,0,0,-1,0,0,,
 XOutput,USB_CONFIGURATION_DESCRIPTOR,8,0,0,0,0,12,0,0,0,-1,0,0,,
 XOutput,USB_INTERFACE_DESCRIPTOR,9,0,0,0,0,13,0,0,0,-1,0,1,,XOutput.ScpDevice
-XOutput,WINUSB_PIPE_INFORMATION,4,0,0,0,0,8,0,0,0,-1,1,1,XOutput.USBD_PIPE_TYPE,XOutput.ScpDevice
+XOutput,WINUSB_PIPE_INFORMATION,4,0,0,0,0,8,0,0,0,-1,0,1,,XOutput.ScpDevice
 XOutput,WINUSB_SETUP_PACKET,5,0,0,0,0,9,0,0,0,-1,0,1,,XOutput.ScpDevice
-XOutput,SP_CLASSINSTALL_HEADER,2,0,0,0,0,6,0,0,0,-1,0,1,,XOutput.SP_PROPCHANGE_PARAMS
-XOutput,SP_PROPCHANGE_PARAMS,4,0,0,0,0,8,0,0,0,-1,1,1,XOutput.SP_CLASSINSTALL_HEADER,XOutput.ScpDevice
+XOutput,SP_CLASSINSTALL_HEADER,2,0,0,0,0,6,0,0,0,-1,0,1,,XOutput.ScpDevice
+XOutput,SP_PROPCHANGE_PARAMS,4,0,0,0,0,8,0,0,0,-1,0,1,,XOutput.ScpDevice
 XOutput,Notified,0,0,0,0,0,1,0,0,0,-1,0,0,,
-XOutput,XOut,26,13,0,0,1,457,24,0,0,0.15,4,1,XOutput.ControllerOptions' XOutput.ControllerManager' XOutput.ControllerDevice' XOutput.Properties.Resources,XOutput.ControllerOptions
-XOutput.Properties,Resources,2,1,5,0,0,71,1,0,0,0,0,1,,XOutput.XOut
+XOutput,XOut,26,13,0,0,1,457,27,0,0,0.15,3,1,XOutput.ControllerDevice' XOutput.ControllerManager' XOutput.ControllerOptions,XOutput.Program
+XOutput.Properties,Resources,2,1,5,0,0,71,1,0,0,0,0,0,,
 XOutput.Properties,Settings,1,0,1,0,0,13,0,0,0,-1,0,0,,

@@ -1,97 +1,97 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 VEngine,ExpressionEvaluator,0,1,0,0,1,86,4,0,0,-1,1,0,VEngine.Game,
-VEngine,KeyboardController,1,6,0,0,3,48,6,0,0,0.5,3,0,VEngine.Game' VEngine.BindType' VEngine.Bind,
-VEngine,Bind,3,0,0,3,0,6,0,0,0,-1,1,1,VEngine.BindType,VEngine.KeyboardController
-VEngine,BindType,0,0,0,0,0,7,0,0,0,-1,0,2,,VEngine.KeyboardController' VEngine.Bind
+VEngine,KeyboardController,1,6,0,0,3,48,6,0,0,0.5,3,0,VEngine.Bind' VEngine.BindType' VEngine.Game,
+VEngine,Bind,3,0,0,3,0,6,0,0,0,-1,0,1,,VEngine.KeyboardController
+VEngine,BindType,0,0,0,0,0,7,0,0,0,-1,0,1,,VEngine.KeyboardController
 VEngine,ObjectIDGenerator,1,1,0,0,1,8,1,0,0,0,0,1,,VEngine.Mesh3dInstance
-VEngine,PhysicalBody,4,7,0,3,7,42,7,0,1,0,4,2,VEngine.TransformationManager' VEngine.Physics' VEngine.World' VEngine.Game,VEngine.Physics' VEngine.FileFormats.GameScene
-VEngine,Physics,8,11,1,0,10,162,26,0,0,0.45,5,4,VEngine.Mesh3dInstance' VEngine.PhysicalBody' VEngine.TransformationManager' VEngine.Object3dManager' VEngine.AxisAlignedBoundingBox,VEngine.PhysicalBody' VEngine.World' VEngine.AbsDisplayAdapter' VEngine.FileFormats.GameScene
-VEngine,RainSystem,7,4,0,0,3,67,5,0,0,0,4,0,VEngine.ShaderStorageBuffer' VEngine.Game' VEngine.ShaderProgram' VEngine.RainDrop,
+VEngine,PhysicalBody,4,7,0,3,7,42,7,0,1,0,3,2,VEngine.Game' VEngine.ITransformable' VEngine.TransformationManager,VEngine.Physics' VEngine.FileFormats.GameScene
+VEngine,Physics,8,11,1,0,10,162,26,0,0,0.45,5,2,VEngine.PhysicalBody' VEngine.Mesh3dInstance' VEngine.Mesh3d' VEngine.Object3dManager' VEngine.TransformationManager,VEngine.World' VEngine.FileFormats.GameScene
+VEngine,RainSystem,7,4,0,0,3,67,7,0,0,0,4,0,VEngine.RainDrop' VEngine.Game' VEngine.ShaderStorageBuffer' VEngine.ShaderProgram,
 VEngine,RainDrop,2,1,0,2,1,10,1,0,0,0,0,1,,VEngine.RainSystem
-VEngine,Camera,15,22,0,10,22,251,26,0,1,0.14,4,13,VEngine.TransformationManager' VEngine.FrustumCone' VEngine.ShaderProgram' VEngine.ConeInfo,VEngine.CubeMapDepthFramebuffer' VEngine.CubeMapFramebuffer' VEngine.LodLevel' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.TransformationJoint' VEngine.Renderer' VEngine.World' VEngine.AbsDisplayAdapter' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.DynamicCubeMapController' ShadowsTester.FreeCamera
-VEngine,FrustumCone,5,3,0,5,2,33,3,0,0,0,0,1,,VEngine.Camera
+VEngine,Camera,15,22,0,10,22,251,28,0,1,0.14,5,10,VEngine.FrustumCone' VEngine.ConeInfo' VEngine.ITransformable' VEngine.TransformationManager' VEngine.ShaderProgram,VEngine.LodLevel' VEngine.FileFormats.GameScene' VEngine.TransformationJoint' VEngine.World' VEngine.ShadowMapper' VEngine.AbsDisplayAdapter' VEngine.Voxel3dTextureWriter' VEngine.CubeMapDepthFramebuffer' VEngine.CubeMapFramebuffer' VEngine.Renderer
+VEngine,FrustumCone,5,3,0,5,2,33,3,0,0,0.67,0,1,,VEngine.Camera
 VEngine,ConeInfo,3,0,0,3,0,4,0,0,0,-1,0,1,,VEngine.Camera
-VEngine,ComputeShader,8,22,0,3,19,218,44,0,0,0.09,3,3,VEngine.Game' VEngine.ShaderPreparser' VEngine.Media,VEngine.Voxel3dTextureWriter' ShadowsTester.Commons' ShadowsTester.PhysicsTest
-VEngine,CubeMapDepthFramebuffer,11,10,0,8,9,128,18,0,1,0,2,1,VEngine.TransformationManager' VEngine.Camera,VEngine.ShadowMapper
-VEngine,CubeMapFramebuffer,18,12,0,13,11,158,21,0,1,0.17,4,2,VEngine.TransformationManager' VEngine.CubeMapTexture' VEngine.Camera' VEngine.ShaderProgram,VEngine.Renderer' ShadowsTester.DynamicCubeMapController
-VEngine,InternalRenderingState,1,0,0,1,0,12,0,0,0,-1,1,4,VEngine.State,VEngine.LodLevel' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.Renderer
-VEngine,State,0,0,0,0,0,8,0,0,0,-1,0,5,,VEngine.InternalRenderingState' VEngine.LodLevel' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.Renderer
-VEngine,Light,11,5,0,9,5,65,8,0,1,0,5,5,VEngine.ShadowMapper' VEngine.TransformationManager' VEngine.ShadowMapTypeEnum' VEngine.ShadowMapQuality' VEngine.ShaderProgram,VEngine.Voxel3dTextureWriter' VEngine.Renderer' VEngine.Scene' VEngine.FileFormats.GameScene' ShadowsTester.Commons
-VEngine,ShadowMapTypeEnum,0,0,0,0,0,5,0,0,0,-1,0,2,,VEngine.Light' ShadowsTester.Commons
-VEngine,GenericMaterial,23,11,0,21,11,137,22,0,0,0.18,9,16,VEngine.ShaderPack' VEngine.Texture' VEngine.MaterialType' VEngine.ShaderProgram' VEngine.BlendingEnum' VEngine.ShaderPool' VEngine.Game' VEngine.Media' VEngine.SwitchResult,MeshConverter.Program' VEngine.LodLevel' VEngine.Mesh3d' VEngine.Object3dManager' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.Renderer' VEngine.Scene' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
-VEngine,BlendingEnum,0,0,0,0,0,5,0,0,0,-1,0,2,,VEngine.GenericMaterial' VEngine.LodLevel
+VEngine,ComputeShader,8,22,0,3,19,218,44,0,0,0.09,3,1,VEngine.Game' VEngine.Media' VEngine.ShaderPreparser,VEngine.Voxel3dTextureWriter
+VEngine,CubeMapDepthFramebuffer,11,10,0,8,9,128,18,0,1,0,3,1,VEngine.Camera' VEngine.ITransformable' VEngine.TransformationManager,VEngine.ShadowMapper
+VEngine,CubeMapFramebuffer,18,12,0,13,11,158,21,0,1,0.17,5,1,VEngine.Camera' VEngine.CubeMapTexture' VEngine.ITransformable' VEngine.TransformationManager' VEngine.ShaderProgram,VEngine.Renderer
+VEngine,InternalRenderingState,1,0,0,1,0,12,0,0,0,-1,1,4,VEngine.State,VEngine.ShadowMapper' VEngine.Voxel3dTextureWriter' VEngine.Renderer' VEngine.LodLevel
+VEngine,State,0,0,0,0,0,8,0,0,0,-1,0,5,,VEngine.ShadowMapper' VEngine.Voxel3dTextureWriter' VEngine.LodLevel' VEngine.Renderer' VEngine.InternalRenderingState
+VEngine,Light,11,5,0,9,5,65,10,0,1,0,6,2,VEngine.ShadowMapTypeEnum' VEngine.ShadowMapQuality' VEngine.ShadowMapper' VEngine.ITransformable' VEngine.TransformationManager' VEngine.ShaderProgram,VEngine.FileFormats.GameScene' VEngine.Scene
+VEngine,ShadowMapTypeEnum,0,0,0,0,0,5,0,0,0,-1,0,1,,VEngine.Light
+VEngine,GenericMaterial,23,11,0,21,11,137,22,0,0,0.18,9,8,VEngine.BlendingEnum' VEngine.MaterialType' VEngine.ShaderPool' VEngine.ShaderPack' VEngine.Game' VEngine.Media' VEngine.ShaderProgram' VEngine.SwitchResult' VEngine.Texture,VEngine.Renderer' VEngine.Scene' VEngine.Voxel3dTextureWriter' VEngine.LodLevel' VEngine.FileFormats.GameScene' VEngine.Object3dManager' VEngine.ShadowMapper' VEngine.Mesh3d
+VEngine,BlendingEnum,0,0,0,0,0,5,0,0,0,-1,0,2,,VEngine.LodLevel' VEngine.GenericMaterial
 VEngine,DrawMode,0,0,0,0,0,7,0,0,0,-1,0,0,,
-VEngine,MaterialType,0,0,0,0,0,10,0,0,0,-1,0,2,,VEngine.GenericMaterial' VEngine.FileFormats.GameScene
-VEngine,LodLevel,13,9,0,7,5,200,22,0,0,0,13,8,VEngine.Object3dInfo' VEngine.GenericMaterial' VEngine.ShaderStorageBuffer' VEngine.Object3dManager' VEngine.Generators.Object3dGenerator' VEngine.Mesh3d' VEngine.InternalRenderingState' VEngine.State' VEngine.BlendingEnum' VEngine.ShaderProgram' VEngine.Camera' VEngine.Mesh3dInstance' VEngine.Game,MeshConverter.Program' VEngine.Mesh3d' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.DragonScene' ShadowsTester.VictorianHouseScene' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
-VEngine,Mesh3dInstance,3,2,0,3,2,16,2,0,1,0,2,14,VEngine.TransformationManager' VEngine.ObjectIDGenerator,MeshConverter.Program' VEngine.Physics' VEngine.LodLevel' VEngine.Mesh3d' VEngine.Object3dManager' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.BigTerrainScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
-VEngine,Mesh3d,6,21,1,2,20,180,33,0,1,0,6,15,VEngine.Mesh3dInstance' VEngine.TransformationManager' VEngine.Object3dInfo' VEngine.GenericMaterial' VEngine.LodLevel' VEngine.ShaderProgram,MeshConverter.Program' VEngine.LodLevel' VEngine.Object3dManager' VEngine.TransformationJoint' VEngine.Scene' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.DragonScene' ShadowsTester.BigTerrainScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
-VEngine,MRTFramebuffer,11,9,0,9,7,121,21,0,0,0.22,0,2,,VEngine.Renderer' ShadowsTester.Commons
-VEngine,GraphicsSettings,9,2,0,9,2,18,2,0,0,1,1,4,VEngine.ShaderProgram,VEngine.Game' VEngine.Renderer' ShadowsTester.Commons' ShadowsTester.DynamicCubeMapController
-VEngine,Interpolator,1,2,0,0,2,146,5,0,0,0,1,2,VEngine.Easing,VEngine.AbsDisplayAdapter' ShadowsTester.Commons
-VEngine,SingleInterpolation<T>,8,2,0,8,1,106,5,0,0,1,1,0,VEngine.Easing,
-VEngine,Easing,0,0,0,0,0,10,0,0,0,-1,0,3,,VEngine.Interpolator' VEngine.SingleInterpolation<T>' ShadowsTester.Commons
-VEngine,Framebuffer,18,13,1,14,12,201,29,0,0,0.15,0,5,,VEngine.PassiveVoxelizer' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.Renderer' VEngine.AbsDisplayAdapter
-VEngine,CubeMapTexture,10,7,0,2,6,91,8,0,0,0,0,3,,VEngine.CubeMapFramebuffer' VEngine.Renderer' VEngine.CubeMapInfo
-VEngine,VertexInfo,3,4,0,3,4,42,7,0,0,0,0,6,,MeshConverter.Program' VEngine.Object3dManager' VEngine.Renderer' VEngine.Object3dInfo' VEngine.FileFormats.GameScene' VEngine.Generators.Object3dGenerator
-VEngine,Object3dManager,4,47,1,3,38,887,119,0,0,0.06,11,17,VEngine.AxisAlignedBoundingBox' VEngine.VertexInfo' VEngine.Object3dInfo' VEngine.NormalRecalculationType' VEngine.ObjFileData' VEngine.MaterialInfo' VEngine.GenericMaterial' VEngine.Mesh3d' VEngine.Media' VEngine.TransformationManager' VEngine.Mesh3dInstance,MeshConverter.Program' ObjToSceneConverter.Form1' VEngine.Physics' VEngine.LodLevel' VEngine.PassiveVoxelizer' VEngine.Renderer' VEngine.Object3dInfo' VEngine.FileFormats.GameScene' VEngine.Generators.Object3dGenerator' ShadowsTester.DragonScene' ShadowsTester.BigTerrainScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
-VEngine,AxisAlignedBoundingBox,2,0,0,2,0,4,0,0,0,-1,0,2,,VEngine.Physics' VEngine.Object3dManager
+VEngine,MaterialType,0,0,0,0,0,10,0,0,0,-1,0,2,,VEngine.FileFormats.GameScene' VEngine.GenericMaterial
+VEngine,LodLevel,13,9,0,7,5,200,22,0,0,0,12,2,VEngine.Camera' VEngine.InternalRenderingState' VEngine.State' VEngine.GenericMaterial' VEngine.BlendingEnum' VEngine.Mesh3dInstance' VEngine.Mesh3d' VEngine.Game' VEngine.Object3dInfo' VEngine.ShaderStorageBuffer' VEngine.ShaderProgram' VEngine.Generators.Object3dGenerator,VEngine.FileFormats.GameScene' VEngine.Mesh3d
+VEngine,Mesh3dInstance,3,2,0,3,2,16,2,0,1,0,3,4,VEngine.ObjectIDGenerator' VEngine.ITransformable' VEngine.TransformationManager,VEngine.Physics' VEngine.LodLevel' VEngine.FileFormats.GameScene' VEngine.Mesh3d
+VEngine,Mesh3d,6,21,1,2,20,180,33,0,1,0,7,6,VEngine.GenericMaterial' VEngine.LodLevel' VEngine.Mesh3dInstance' VEngine.IRenderable' VEngine.Object3dInfo' VEngine.TransformationManager' VEngine.ShaderProgram,VEngine.Physics' VEngine.LodLevel' VEngine.Scene' VEngine.TransformationJoint' VEngine.Object3dManager' VEngine.FileFormats.GameScene
+VEngine,MRTFramebuffer,11,9,0,9,7,121,21,0,0,0.22,0,1,,VEngine.Renderer
+VEngine,GraphicsSettings,9,2,0,9,2,18,2,0,0,1,1,1,VEngine.ShaderProgram,VEngine.Renderer
+VEngine,Interpolator,1,2,0,0,2,146,5,0,0,0,3,1,VEngine.SingleInterpolation<T>' VEngine.Easing' VEngine.ValuePointer<T>,VEngine.AbsDisplayAdapter
+VEngine,SingleInterpolation<T>,8,2,0,8,1,106,15,0,0,1,0,1,,VEngine.Interpolator
+VEngine,Easing,0,0,0,0,0,10,0,0,0,-1,0,1,,VEngine.Interpolator
+VEngine,Framebuffer,18,13,1,14,12,201,31,0,0,0.15,1,5,VEngine.Game,VEngine.AbsDisplayAdapter' VEngine.Voxel3dTextureWriter' VEngine.PassiveVoxelizer' VEngine.ShadowMapper' VEngine.Renderer
+VEngine,CubeMapTexture,10,7,0,2,6,91,9,0,0,0,0,2,,VEngine.CubeMapFramebuffer' VEngine.Renderer
+VEngine,VertexInfo,3,5,0,3,5,61,9,0,0,0,0,4,,VEngine.Renderer' VEngine.Object3dInfo' VEngine.Generators.Object3dGenerator' VEngine.Object3dManager
+VEngine,Object3dManager,4,47,1,3,38,887,133,0,0,0.11,9,6,VEngine.GenericMaterial' VEngine.Mesh3d' VEngine.VertexInfo' VEngine.AxisAlignedBoundingBox' VEngine.MaterialInfo' VEngine.ObjFileData' VEngine.NormalRecalculationType' VEngine.Media' VEngine.Object3dInfo,VEngine.Renderer' VEngine.Object3dInfo' VEngine.PassiveVoxelizer' VEngine.Physics' VEngine.FileFormats.GameScene' VEngine.Generators.Object3dGenerator
+VEngine,AxisAlignedBoundingBox,2,0,0,2,0,4,0,0,0,-1,0,1,,VEngine.Object3dManager
 VEngine,MaterialInfo,11,1,0,11,1,21,1,0,0,0,0,1,,VEngine.Object3dManager
 VEngine,ObjFileData,3,0,0,3,0,5,0,0,0,-1,0,1,,VEngine.Object3dManager
-VEngine,NormalRecalculationType,0,0,0,0,0,5,0,0,0,-1,0,3,,MeshConverter.Program' VEngine.Object3dManager' ShadowsTester.LightningTestScene
-VEngine,PassiveVoxelizer,3,2,0,0,2,110,10,0,0,0,6,0,VEngine.ShaderStorageBuffer' VEngine.Framebuffer' VEngine.ShaderProgram' VEngine.Voxel' VEngine.Object3dInfo' VEngine.Object3dManager,
+VEngine,NormalRecalculationType,0,0,0,0,0,5,0,0,0,-1,0,1,,VEngine.Object3dManager
+VEngine,PassiveVoxelizer,3,2,0,0,2,110,10,0,0,0,6,0,VEngine.Framebuffer' VEngine.Object3dManager' VEngine.Voxel' VEngine.Object3dInfo' VEngine.ShaderStorageBuffer' VEngine.ShaderProgram,
 VEngine,Voxel,5,0,0,5,0,5,0,0,0,-1,0,1,,VEngine.PassiveVoxelizer
-VEngine,Voxel3dTextureWriter,20,7,0,0,5,227,12,0,0,0.29,15,1,VEngine.Texture3D' VEngine.Framebuffer' VEngine.Camera' VEngine.ShaderPack' VEngine.ComputeShader' VEngine.Light' VEngine.ShaderProgram' VEngine.Scene' VEngine.World' VEngine.Game' VEngine.TransformationManager' VEngine.GenericMaterial' VEngine.AbsDisplayAdapter' VEngine.InternalRenderingState' VEngine.State,VEngine.Renderer
-VEngine,ShaderPool,5,5,0,0,5,58,5,0,0,0,1,6,VEngine.ShaderPack,VEngine.GenericMaterial' VEngine.ShadowMapper' VEngine.Game' VEngine.Renderer' VEngine.Scene' VEngine.World
-VEngine,ShaderPack,5,1,0,5,1,29,5,0,0,0,1,5,VEngine.ShaderProgram,VEngine.GenericMaterial' VEngine.Voxel3dTextureWriter' VEngine.ShaderPool' VEngine.Renderer' VEngine.World
+VEngine,Voxel3dTextureWriter,20,7,0,0,5,227,12,0,0,0.29,11,1,VEngine.Camera' VEngine.ComputeShader' VEngine.InternalRenderingState' VEngine.State' VEngine.GenericMaterial' VEngine.Framebuffer' VEngine.ShaderPool' VEngine.ShaderPack' VEngine.Texture3D' VEngine.Game' VEngine.ShaderProgram,VEngine.Renderer
+VEngine,ShaderPool,5,5,0,0,5,58,5,0,0,0,2,4,VEngine.ShaderPack' VEngine.ShaderProgram,VEngine.GenericMaterial' VEngine.World' VEngine.Game' VEngine.Voxel3dTextureWriter
+VEngine,ShaderPack,5,1,0,5,1,29,5,0,0,0,0,4,,VEngine.GenericMaterial' VEngine.World' VEngine.Voxel3dTextureWriter' VEngine.ShaderPool
 VEngine,ShadowMapQuality,0,0,0,0,0,4,0,0,0,-1,0,2,,VEngine.Light' VEngine.ShadowMapper
-VEngine,ShadowMapper,7,6,0,0,5,90,18,0,0,0,12,1,VEngine.CubeMapDepthFramebuffer' VEngine.Framebuffer' VEngine.Camera' VEngine.TransformationManager' VEngine.ShadowMapQuality' VEngine.GenericMaterial' VEngine.ShaderPool' VEngine.Game' VEngine.World' VEngine.AbsDisplayAdapter' VEngine.InternalRenderingState' VEngine.State,VEngine.Light
+VEngine,ShadowMapper,7,6,0,0,5,90,18,0,0,0,9,1,VEngine.Camera' VEngine.CubeMapDepthFramebuffer' VEngine.InternalRenderingState' VEngine.State' VEngine.GenericMaterial' VEngine.Framebuffer' VEngine.ShadowMapQuality' VEngine.Game' VEngine.TransformationManager,VEngine.Light
 VEngine,Texture3D,8,7,0,7,6,58,8,0,0,0.29,0,1,,VEngine.Voxel3dTextureWriter
-VEngine,Game,9,24,0,8,23,195,46,0,0,0.67,6,29,VEngine.AbsDisplayAdapter' VEngine.World' VEngine.ShaderPool' VEngine.Media' VEngine.GraphicsSettings' VEngine.Renderer,GLSLLint.Linter' VEngine.ExpressionEvaluator' VEngine.KeyboardController' VEngine.PhysicalBody' VEngine.RainSystem' VEngine.ComputeShader' VEngine.GenericMaterial' VEngine.LodLevel' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.Renderer' VEngine.Object3dInfo' VEngine.Scene' VEngine.World' VEngine.ShaderProgram' VEngine.AbsDisplayAdapter' VEngine.VEngineWindowAdapter' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.DragonScene' ShadowsTester.BigTerrainScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene' ShadowsTester.FreeCamera' ShadowsTester.Program
-VEngine,MathExtensions,0,8,0,0,8,53,9,0,0,-1,1,3,VEngine.TangentDirection,VEngine.Renderer' VEngine.World' ShadowsTester.Commons
-VEngine,TangentDirection,0,0,0,0,0,7,0,0,0,-1,0,4,,VEngine.MathExtensions' VEngine.Renderer' VEngine.World' ShadowsTester.Commons
-VEngine,TransformationJoint,1,3,0,0,3,53,6,0,0,0,5,0,VEngine.LinkInfo' VEngine.ITransformable' VEngine.Mesh3d' VEngine.TransformationManager' VEngine.Camera,
-VEngine,LinkInfo,5,0,0,5,0,7,0,0,0,-1,1,1,VEngine.ITransformable,VEngine.TransformationJoint
-VEngine,Renderer,33,26,0,17,5,567,52,0,0,0.08,27,5,VEngine.MRTFramebuffer' VEngine.GraphicsSettings' VEngine.Voxel3dTextureWriter' VEngine.ShaderProgram' VEngine.Framebuffer' VEngine.Object3dInfo' VEngine.Texture' VEngine.Media' VEngine.Object3dManager' VEngine.VertexInfo' VEngine.Camera' VEngine.CubeMapFramebuffer' VEngine.BlitMode' VEngine.TransformationManager' VEngine.TangentDirection' VEngine.MathExtensions' VEngine.Game' VEngine.World' VEngine.Light' VEngine.Scene' VEngine.CubeMapInfo' VEngine.CubeMapTexture' VEngine.GenericMaterial' VEngine.ShaderPool' VEngine.InternalRenderingState' VEngine.State' VEngine.ShaderPack,VEngine.Game' VEngine.World' VEngine.AbsDisplayAdapter' ShadowsTester.Commons' ShadowsTester.DynamicCubeMapController
-VEngine,CubeMapInfo,3,0,0,3,0,6,0,0,0,-1,1,2,VEngine.CubeMapTexture,VEngine.Renderer' ShadowsTester.DynamicCubeMapController
+VEngine,Game,9,24,0,8,23,195,46,0,0,0.67,5,18,VEngine.ShaderPool' VEngine.Media' VEngine.World' VEngine.AbsDisplayAdapter' VEngine.VEngineWindowAdapter,VEngine.PhysicalBody' VEngine.GenericMaterial' VEngine.LodLevel' VEngine.Object3dInfo' VEngine.Scene' VEngine.ShadowMapper' VEngine.VEngineWindowAdapter' VEngine.World' VEngine.ComputeShader' VEngine.ExpressionEvaluator' VEngine.FileFormats.GameScene' VEngine.ShaderProgram' VEngine.Voxel3dTextureWriter' VEngine.Renderer' VEngine.AbsDisplayAdapter' VEngine.RainSystem' VEngine.KeyboardController' VEngine.Framebuffer
+VEngine,MathExtensions,0,8,0,0,8,53,11,0,0,-1,1,2,VEngine.TangentDirection,VEngine.Renderer' VEngine.World
+VEngine,TangentDirection,0,0,0,0,0,7,0,0,0,-1,0,3,,VEngine.World' VEngine.Renderer' VEngine.MathExtensions
+VEngine,TransformationJoint,1,3,0,0,3,53,9,0,0,0,4,0,VEngine.Camera' VEngine.Mesh3d' VEngine.LinkInfo' VEngine.ITransformable,
+VEngine,LinkInfo,5,0,0,5,0,7,0,0,0,-1,0,1,,VEngine.TransformationJoint
+VEngine,Renderer,33,26,0,17,5,567,56,0,0,0.08,21,3,VEngine.Camera' VEngine.CubeMapFramebuffer' VEngine.InternalRenderingState' VEngine.State' VEngine.GenericMaterial' VEngine.MRTFramebuffer' VEngine.GraphicsSettings' VEngine.Framebuffer' VEngine.CubeMapTexture' VEngine.VertexInfo' VEngine.Object3dManager' VEngine.Voxel3dTextureWriter' VEngine.Game' VEngine.MathExtensions' VEngine.TangentDirection' VEngine.CubeMapInfo' VEngine.BlitMode' VEngine.Media' VEngine.Object3dInfo' VEngine.ShaderProgram' VEngine.Texture,VEngine.AbsDisplayAdapter' VEngine.World' VEngine.VEngineWindowAdapter
+VEngine,CubeMapInfo,3,0,0,3,0,6,0,0,0,-1,0,1,,VEngine.Renderer
 VEngine,BlitMode,0,0,0,0,0,6,0,0,0,-1,0,1,,VEngine.Renderer
 VEngine,MixRange,2,0,0,2,0,4,0,0,0,-1,0,0,,
 VEngine,LightMixMode,0,0,0,0,0,4,0,0,0,-1,0,0,,
 VEngine,IControllable,0,1,0,0,0,4,1,0,0,-1,0,0,,
 VEngine,IHasMass,0,1,0,0,0,4,1,0,0,-1,0,0,,
 VEngine,IPhysical,0,2,0,0,0,5,2,0,0,-1,0,0,,
-VEngine,IRenderable,0,1,0,0,0,4,1,1,0,-1,0,1,,VEngine.Scene
-VEngine,ITransformable,0,1,0,0,0,4,1,6,0,-1,0,4,,VEngine.TransformationJoint' VEngine.LinkInfo' VEngine.TransformationManagerExtensions' ShadowsTester.Commons
-VEngine,Media,6,5,0,1,4,87,15,0,0,0,0,18,,GLSLLint.Program' MeshConverter.Program' ObjToSceneConverter.Form1' VEngine.ComputeShader' VEngine.GenericMaterial' VEngine.Object3dManager' VEngine.Game' VEngine.Renderer' VEngine.ShaderPreparser' VEngine.ShaderProgram' VEngine.FileFormats.GameScene' ShadowsTester.BigTerrainScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
-VEngine,Object3dInfo,10,11,1,6,5,242,22,0,0,0,4,12,VEngine.Object3dManager' VEngine.VertexInfo' VEngine.Game' VEngine.ShaderProgram,MeshConverter.Program' VEngine.LodLevel' VEngine.Mesh3d' VEngine.Object3dManager' VEngine.PassiveVoxelizer' VEngine.Renderer' VEngine.FileFormats.GameScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
-VEngine,Scene,18,10,0,1,10,90,14,0,0,0.2,9,13,VEngine.ShaderStorageBuffer' VEngine.Light' VEngine.IRenderable' VEngine.GenericMaterial' VEngine.ShaderPool' VEngine.Game' VEngine.World' VEngine.AbsDisplayAdapter' VEngine.Mesh3d,VEngine.Voxel3dTextureWriter' VEngine.Renderer' VEngine.World' ShadowsTester.Commons' ShadowsTester.DragonScene' ShadowsTester.BigTerrainScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene' ShadowsTester.FreeCamera
-VEngine,ShaderCache,1,2,0,0,2,16,2,0,0,0,1,0,VEngine.ShaderProgram,
-VEngine,ShaderPreparser,0,3,0,0,3,84,11,0,0,-1,1,3,VEngine.Media,GLSLLint.Linter' VEngine.ComputeShader' VEngine.ShaderProgram
-VEngine,ShaderStorageBuffer,5,9,0,3,9,131,15,0,0,0.33,1,6,VEngine.BufferPointer,VEngine.RainSystem' VEngine.LodLevel' VEngine.PassiveVoxelizer' VEngine.Scene' ShadowsTester.Commons' ShadowsTester.PhysicsTest
-VEngine,BufferPointer,1,2,0,0,2,19,2,0,0,0,0,1,,VEngine.ShaderStorageBuffer
-VEngine,TransformationManagerExtensions,0,15,0,0,15,87,15,0,0,-1,2,0,VEngine.TransformationManager' VEngine.ITransformable,
-VEngine,TransformationManager,2,31,3,0,30,262,32,0,0,0.16,0,20,,MeshConverter.Program' VEngine.PhysicalBody' VEngine.Physics' VEngine.Camera' VEngine.CubeMapDepthFramebuffer' VEngine.CubeMapFramebuffer' VEngine.Light' VEngine.Mesh3dInstance' VEngine.Mesh3d' VEngine.Object3dManager' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.TransformationJoint' VEngine.Renderer' VEngine.TransformationManagerExtensions' VEngine.World' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.HotelScene' ShadowsTester.FreeCamera
-VEngine,ValuePointer<T>,2,12,0,1,12,61,12,0,0,0.5,0,0,,
-VEngine,VEngineInvisibleAdapter,0,1,0,0,1,7,1,0,1,-1,0,1,,GLSLLint.Linter
-VEngine,World,3,5,0,3,5,46,8,0,0,0.4,11,18,VEngine.Scene' VEngine.Physics' VEngine.ShaderPool' VEngine.ShaderPack' VEngine.Game' VEngine.Renderer' VEngine.ShaderProgram' VEngine.Camera' VEngine.TransformationManager' VEngine.TangentDirection' VEngine.MathExtensions,VEngine.PhysicalBody' VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.Game' VEngine.Renderer' VEngine.Scene' VEngine.AbsDisplayAdapter' VEngine.FileFormats.GameScene' ShadowsTester.Commons' ShadowsTester.DragonScene' ShadowsTester.BigTerrainScene' ShadowsTester.DynamicCubeMapController' ShadowsTester.HotelScene' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene' ShadowsTester.FreeCamera
-VEngine,ShaderProgram,18,32,1,4,27,391,75,0,0,0.06,6,17,VEngine.ShaderPreparser' VEngine.Media' VEngine.Game' VEngine.SwitchResult' VEngine.VendorEnum' VEngine.AbsDisplayAdapter,VEngine.RainSystem' VEngine.Camera' VEngine.CubeMapFramebuffer' VEngine.Light' VEngine.GenericMaterial' VEngine.LodLevel' VEngine.Mesh3d' VEngine.GraphicsSettings' VEngine.PassiveVoxelizer' VEngine.Voxel3dTextureWriter' VEngine.ShaderPack' VEngine.Renderer' VEngine.Object3dInfo' VEngine.ShaderCache' VEngine.World' VEngine.Texture' ShadowsTester.Commons
+VEngine,IRenderable,0,1,0,0,0,4,1,1,0,-1,0,2,,VEngine.Mesh3d' VEngine.Scene
+VEngine,ITransformable,0,1,0,0,0,4,1,6,0,-1,1,8,VEngine.TransformationManager,VEngine.Light' VEngine.Mesh3dInstance' VEngine.PhysicalBody' VEngine.Camera' VEngine.CubeMapDepthFramebuffer' VEngine.CubeMapFramebuffer' VEngine.TransformationJoint' VEngine.TransformationManagerExtensions
+VEngine,Media,6,5,0,1,4,87,19,0,0,0,0,8,,VEngine.ComputeShader' VEngine.Game' VEngine.ShaderProgram' VEngine.ShaderPreparser' VEngine.GenericMaterial' VEngine.Object3dManager' VEngine.FileFormats.GameScene' VEngine.Renderer
+VEngine,Object3dInfo,10,11,1,6,5,245,22,0,0,0.27,4,6,VEngine.VertexInfo' VEngine.Object3dManager' VEngine.Game' VEngine.ShaderProgram,VEngine.PassiveVoxelizer' VEngine.Mesh3d' VEngine.LodLevel' VEngine.FileFormats.GameScene' VEngine.Renderer' VEngine.Object3dManager
+VEngine,Scene,18,10,0,1,10,90,14,0,0,0.2,6,1,VEngine.Light' VEngine.GenericMaterial' VEngine.Mesh3d' VEngine.Game' VEngine.IRenderable' VEngine.ShaderStorageBuffer,VEngine.World
+VEngine,ShaderCache,1,2,0,0,2,16,3,0,0,0,1,0,VEngine.ShaderProgram,
+VEngine,ShaderPreparser,0,3,0,0,3,84,11,0,0,-1,1,2,VEngine.Media,VEngine.ComputeShader' VEngine.ShaderProgram
+VEngine,ShaderStorageBuffer,5,9,0,3,9,124,15,0,0,0.33,1,4,VEngine.BufferPointer,VEngine.Scene' VEngine.PassiveVoxelizer' VEngine.RainSystem' VEngine.LodLevel
+VEngine,BufferPointer,1,2,0,0,2,12,2,0,0,1,0,1,,VEngine.ShaderStorageBuffer
+VEngine,TransformationManagerExtensions,0,15,0,0,15,87,15,0,0,-1,2,0,VEngine.ITransformable' VEngine.TransformationManager,
+VEngine,TransformationManager,2,31,3,0,30,262,32,0,0,0.16,1,12,VEngine.ValuePointer<T>,VEngine.ITransformable' VEngine.Physics' VEngine.ShadowMapper' VEngine.Mesh3dInstance' VEngine.PhysicalBody' VEngine.Light' VEngine.CubeMapDepthFramebuffer' VEngine.FileFormats.GameScene' VEngine.CubeMapFramebuffer' VEngine.Mesh3d' VEngine.Camera' VEngine.TransformationManagerExtensions
+VEngine,ValuePointer<T>,2,12,0,1,12,61,12,0,0,0.5,0,2,,VEngine.Interpolator' VEngine.TransformationManager
+VEngine,VEngineInvisibleAdapter,0,1,0,0,1,7,1,0,1,-1,1,0,VEngine.AbsDisplayAdapter,
+VEngine,World,3,5,0,3,5,46,8,0,0,0.4,9,1,VEngine.Physics' VEngine.Camera' VEngine.ShaderPool' VEngine.ShaderPack' VEngine.Game' VEngine.MathExtensions' VEngine.TangentDirection' VEngine.Renderer' VEngine.Scene,VEngine.Game
+VEngine,ShaderProgram,18,32,1,4,27,391,76,0,0,0.09,4,15,VEngine.Game' VEngine.Media' VEngine.ShaderPreparser' VEngine.SwitchResult,VEngine.Camera' VEngine.Mesh3d' VEngine.RainSystem' VEngine.CubeMapFramebuffer' VEngine.PassiveVoxelizer' VEngine.Light' VEngine.LodLevel' VEngine.GraphicsSettings' VEngine.GenericMaterial' VEngine.Object3dInfo' VEngine.ShaderPool' VEngine.Voxel3dTextureWriter' VEngine.ShaderCache' VEngine.Texture' VEngine.Renderer
 VEngine,SwitchResult,0,0,0,0,0,6,0,0,0,-1,0,2,,VEngine.GenericMaterial' VEngine.ShaderProgram
-VEngine,Texture,10,18,0,3,14,189,26,0,0,0.11,2,4,VEngine.ImageDDS' VEngine.ShaderProgram,MeshConverter.Program' VEngine.GenericMaterial' VEngine.Renderer' VEngine.FileFormats.GameScene
+VEngine,Texture,10,18,0,3,14,189,26,0,0,0.11,2,3,VEngine.ShaderProgram' VEngine.ImageDDS,VEngine.GenericMaterial' VEngine.Renderer' VEngine.FileFormats.GameScene
 VEngine,TextureLoaderParameters,10,0,0,10,0,23,0,0,0,-1,0,1,,VEngine.ImageDDS
-VEngine,ImageDDS,24,11,0,0,2,966,59,0,0,0,6,1,VEngine.TextureLoaderParameters' VEngine.eDDSD' VEngine.eDDSCAPS' VEngine.eDDSCAPS2' VEngine.eDDPF' VEngine.eFOURCC,VEngine.Texture
+VEngine,ImageDDS,24,11,0,0,2,966,81,0,0,0,6,1,VEngine.TextureLoaderParameters' VEngine.eDDSD' VEngine.eDDPF' VEngine.eFOURCC' VEngine.eDDSCAPS' VEngine.eDDSCAPS2,VEngine.Texture
 VEngine,eDDSD,0,0,0,0,0,12,0,0,0,-1,0,1,,VEngine.ImageDDS
 VEngine,eDDPF,0,0,0,0,0,9,0,0,0,-1,0,1,,VEngine.ImageDDS
 VEngine,eFOURCC,0,0,0,0,0,46,0,0,0,-1,0,1,,VEngine.ImageDDS
 VEngine,eDDSCAPS,0,0,0,0,0,8,0,0,0,-1,0,1,,VEngine.ImageDDS
 VEngine,eDDSCAPS2,0,0,0,0,0,14,0,0,0,-1,0,1,,VEngine.ImageDDS
-VEngine,AbsDisplayAdapter,3,14,1,2,1,189,22,2,0,0.79,8,8,VEngine.Renderer' VEngine.VendorEnum' VEngine.Game' VEngine.Physics' VEngine.World' VEngine.Interpolator' VEngine.Framebuffer' VEngine.Camera,VEngine.Voxel3dTextureWriter' VEngine.ShadowMapper' VEngine.Game' VEngine.Scene' VEngine.ShaderProgram' ShadowsTester.Commons' ShadowsTester.DynamicCubeMapController' ShadowsTester.FreeCamera
-VEngine,VendorEnum,0,0,0,0,0,7,0,0,0,-1,0,2,,VEngine.ShaderProgram' VEngine.AbsDisplayAdapter
-VEngine,VEngineWindowAdapter,0,1,0,0,1,8,1,0,1,-1,1,0,VEngine.Game,
-VEngine.FileFormats,GameScene,5,5,0,5,3,453,21,0,0,0.4,17,4,VEngine.Media' VEngine.Mesh3dInstance' VEngine.Object3dManager' VEngine.Mesh3d' VEngine.LodLevel' VEngine.GenericMaterial' VEngine.Texture' VEngine.Object3dInfo' VEngine.VertexInfo' VEngine.Light' VEngine.Camera' VEngine.PhysicalBody' VEngine.Physics' VEngine.World' VEngine.Game' VEngine.TransformationManager' VEngine.MaterialType,MeshConverter.Program' ObjToSceneConverter.Form1' ShadowsTester.VictorianHouseScene' ShadowsTester.OldCityScene
-VEngine.GUI.Drawables,Container,1,1,0,0,1,9,1,0,1,0,0,0,,
-VEngine.GUI,GUIDrawable,3,1,0,3,1,12,1,1,0,0,0,0,,
+VEngine,AbsDisplayAdapter,3,14,1,2,1,191,24,2,0,0.79,6,3,VEngine.Camera' VEngine.Interpolator' VEngine.Framebuffer' VEngine.Game' VEngine.Renderer' VEngine.VendorEnum,VEngine.VEngineWindowAdapter' VEngine.VEngineInvisibleAdapter' VEngine.Game
+VEngine,VendorEnum,0,0,0,0,0,7,0,0,0,-1,0,1,,VEngine.AbsDisplayAdapter
+VEngine,VEngineWindowAdapter,0,1,0,0,1,8,1,0,1,-1,3,1,VEngine.Game' VEngine.Renderer' VEngine.AbsDisplayAdapter,VEngine.Game
+VEngine.FileFormats,GameScene,5,5,0,5,3,453,92,0,0,0.4,15,0,VEngine.PhysicalBody' VEngine.Physics' VEngine.Camera' VEngine.Light' VEngine.GenericMaterial' VEngine.MaterialType' VEngine.LodLevel' VEngine.Mesh3dInstance' VEngine.Mesh3d' VEngine.Object3dManager' VEngine.Game' VEngine.Media' VEngine.Object3dInfo' VEngine.TransformationManager' VEngine.Texture,
+VEngine.GUI.Drawables,Container,1,1,0,0,1,9,1,0,1,0,1,0,VEngine.GUI.GUIDrawable,
+VEngine.GUI,GUIDrawable,3,1,0,3,1,12,1,1,0,0,0,1,,VEngine.GUI.Drawables.Container
 VEngine.GUI,LayoutType,0,0,0,0,0,5,0,0,0,-1,0,0,,
 VEngine.GUI,GUIRenderer,0,0,0,0,0,3,0,0,0,-1,0,0,,
 VEngine.PathTracing,JitterRandomSequenceGenerator,2,6,0,0,2,55,12,0,0,0,0,0,,
 VEngine.UI,AbsUIElement,0,0,0,0,0,3,0,0,0,-1,0,0,,
 VEngine.UI,UIMLTree,0,0,0,0,0,3,0,0,0,-1,0,0,,
-VEngine.Generators,Object3dGenerator,1,8,0,1,5,258,25,0,0,0.62,2,6,VEngine.VertexInfo' VEngine.Object3dManager,MeshConverter.Program' VEngine.LodLevel' ShadowsTester.VictorianHouseScene' ShadowsTester.PhysicsTest' ShadowsTester.LightningTestScene' ShadowsTester.OldCityScene
+VEngine.Generators,Object3dGenerator,1,8,0,1,5,258,25,0,0,0.62,2,1,VEngine.VertexInfo' VEngine.Object3dManager,VEngine.LodLevel

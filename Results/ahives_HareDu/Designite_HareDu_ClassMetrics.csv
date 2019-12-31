@@ -1,112 +1,112 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-HareDu,HareDuClient,0,2,0,0,0,13,2,1,0,-1,0,14,,HareDu.Tests.AsyncTests' HareDu.Tests.ChannelTests' HareDu.Tests.ParameterTests' HareDu.Tests.ConnectionTests' HareDu.Tests.ExchangeTests' HareDu.Tests.ScenarioTests' HareDu.Tests.NodeTests' HareDu.Tests.OverviewTests' HareDu.Tests.PermissionsTests' HareDu.Tests.PolicyTests' HareDu.Tests.QueueBindingTests' HareDu.Tests.QueueTests' HareDu.Tests.UserTests' HareDu.Tests.VirtualHostTests
-HareDu,HareDuClientImpl,0,3,2,0,3,40,4,0,1,-1,2,1,HareDu.HareDuClientBehaviorImpl' HareDu.Internal.UserCredentialsImpl,HareDu.HareDuFactory
-HareDu,HareDuFactory,0,1,0,0,1,17,1,0,0,-1,2,2,HareDu.HareDuClientBehaviorImpl' HareDu.HareDuClientImpl,HareDu.Tests.HareDuTestBase' HareDu.Tests.ScenarioTests
-HareDu,Logging,0,4,2,0,0,25,7,2,0,-1,0,0,,
-HareDu,AsyncExtensions,0,5,0,0,4,73,7,0,0,-1,0,0,,
+HareDu,HareDuClient,0,2,0,0,0,13,2,1,0,-1,2,2,HareDu.Contracts.UserCredentials' HareDu.Resources.ResourceClient,HareDu.HareDuClientImpl' HareDu.HareDuFactory
+HareDu,HareDuClientImpl,0,3,2,0,3,40,4,0,1,-1,6,1,HareDu.HareDuClient' HareDu.Logging' HareDu.HareDuClientBehaviorImpl' HareDu.Contracts.UserCredentials' HareDu.Internal.UserCredentialsImpl' HareDu.Resources.ResourceClient,HareDu.HareDuFactory
+HareDu,HareDuFactory,0,1,0,0,1,17,1,0,0,-1,5,0,HareDu.HareDuClient' HareDu.HareDuClientImpl' HareDu.HareDuClientInitException' HareDu.HareDuClientBehaviorImpl' HareDu.Contracts.HareDuClientBehavior,
+HareDu,Logging,0,4,2,0,0,25,7,2,0,-1,0,2,,HareDu.HareDuClientImpl' HareDu.Resources.HareDuResourcesBase
+HareDu,AsyncExtensions,0,5,0,0,4,73,7,0,0,-1,1,0,HareDu.Async.AsyncResponse,
 HareDu,ValidationExtensions,2,4,0,0,3,44,10,0,0,0.5,0,0,,
 HareDu,CannotDeleteSessionLoginUserException,0,1,0,0,1,8,1,0,0,-1,0,0,,
-HareDu,CannotDeleteVirtualHostException,0,1,0,0,1,8,1,0,0,-1,0,0,,
+HareDu,CannotDeleteVirtualHostException,0,1,0,0,1,8,1,0,0,-1,0,1,,HareDu.Resources.VirtualHostResourcesImpl
 HareDu,RabbitMqSanitizationExtensions,0,2,0,0,0,15,3,0,0,-1,0,0,,
-HareDu,HareDuClientInitException,0,1,0,0,1,8,1,0,0,-1,0,0,,
-HareDu,HareDuClientBehaviorImpl,0,3,3,0,3,24,4,0,1,-1,1,2,HareDu.Internal.LoggingCharacteristicsImpl,HareDu.HareDuClientImpl' HareDu.HareDuFactory
-HareDu,ExchangeType,6,0,0,6,0,9,0,0,0,-1,0,2,,HareDu.Internal.ExchangeRoutingBehaviorImpl' HareDu.Internal.ExchangeBehaviorImpl
+HareDu,HareDuClientInitException,0,1,0,0,1,8,1,0,0,-1,0,1,,HareDu.HareDuFactory
+HareDu,HareDuClientBehaviorImpl,0,3,3,0,3,24,4,0,1,-1,3,2,HareDu.Contracts.LoggingCharacteristics' HareDu.Contracts.HareDuClientBehavior' HareDu.Internal.LoggingCharacteristicsImpl,HareDu.HareDuClientImpl' HareDu.HareDuFactory
+HareDu,ExchangeType,6,0,0,6,0,9,0,0,0,-1,0,2,,HareDu.Internal.ExchangeBehaviorImpl' HareDu.Internal.ExchangeRoutingBehaviorImpl
 HareDu,ValueExtensions,0,2,0,0,2,12,2,0,0,-1,0,0,,
-HareDu,UserPermissionTag,4,0,0,4,0,7,0,0,0,-1,0,2,,HareDu.Internal.UserAccessCharacteristicsImpl' HareDu.Internal.UserCharacteristicsImpl
-HareDu.Contracts,ExchangeTarget,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,LoggingCharacteristics,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,PolicyTarget,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,PropertiesKeyTarget,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,UserTarget,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,BindingDirection,0,2,0,0,0,11,2,1,0,-1,0,0,,
-HareDu.Contracts,ExchangeRoutingBehavior,0,6,0,0,0,27,6,1,0,-1,0,0,,
-HareDu.Contracts,Arguments,0,9,0,0,0,52,9,1,0,-1,0,0,,
+HareDu,UserPermissionTag,4,0,0,4,0,7,0,0,0,-1,0,2,,HareDu.Internal.UserCharacteristicsImpl' HareDu.Internal.UserAccessCharacteristicsImpl
+HareDu.Contracts,ExchangeTarget,0,1,0,0,0,4,1,1,0,-1,0,5,,HareDu.Internal.ExchangeTargetImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.QueueBindingResources' HareDu.Resources.ExchangeResources' HareDu.Resources.ExchangeResourcesImpl
+HareDu.Contracts,LoggingCharacteristics,0,1,0,0,0,4,1,1,0,-1,0,3,,HareDu.Contracts.HareDuClientBehavior' HareDu.Internal.LoggingCharacteristicsImpl' HareDu.HareDuClientBehaviorImpl
+HareDu.Contracts,PolicyTarget,0,1,0,0,0,4,1,1,0,-1,0,3,,HareDu.Internal.PolicyTargetImpl' HareDu.Resources.PolicyResources' HareDu.Resources.PolicyResourcesImpl
+HareDu.Contracts,PropertiesKeyTarget,0,1,0,0,0,4,1,1,0,-1,0,3,,HareDu.Internal.PropertiesKeyTargetImpl' HareDu.Resources.QueueBindingResources' HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Contracts,UserTarget,0,1,0,0,0,4,1,1,0,-1,0,5,,HareDu.Internal.UserTargetImpl' HareDu.Resources.UserResources' HareDu.Resources.UserResourcesImpl' HareDu.Resources.PermissionsResources' HareDu.Resources.PermissionsResourcesImpl
+HareDu.Contracts,BindingDirection,0,2,0,0,0,11,2,1,0,-1,0,3,,HareDu.Resources.ExchangeResources' HareDu.Internal.BindingDirectionImpl' HareDu.Resources.ExchangeResourcesImpl
+HareDu.Contracts,ExchangeRoutingBehavior,0,6,0,0,0,27,6,1,0,-1,0,3,,HareDu.Internal.ExchangeBehaviorImpl' HareDu.Contracts.ExchangeBehavior' HareDu.Internal.ExchangeRoutingBehaviorImpl
+HareDu.Contracts,Arguments,0,9,0,0,0,52,9,1,0,-1,0,7,,HareDu.Contracts.ExchangeBehavior' HareDu.Contracts.QueueBehavior' HareDu.Internal.ArgumentsImpl' HareDu.Contracts.QueueBindingBehavior' HareDu.Internal.QueueBehaviorImpl' HareDu.Internal.QueueBindingBehaviorImpl' HareDu.Internal.ExchangeBehaviorImpl
 HareDu.Contracts,PolicyBehavior,0,1,0,0,0,4,1,0,0,-1,0,0,,
-HareDu.Contracts,PolicyCharacteristics,0,3,0,0,0,18,3,1,0,-1,0,0,,
-HareDu.Contracts,PolicyDefinition,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,QueueBinding,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,QueueTarget,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,UserCredentials,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,UserAccessCharacteristics,0,4,0,0,0,7,4,1,0,-1,0,0,,
-HareDu.Contracts,VirtualHostTarget,0,1,0,0,0,4,1,1,0,-1,0,0,,
-HareDu.Contracts,QueueBehavior,0,5,0,0,0,26,5,1,0,-1,0,0,,
-HareDu.Contracts,QueueBindingBehavior,0,3,0,0,0,18,3,1,0,-1,0,0,,
-HareDu.Contracts,ExchangeBehavior,0,6,0,0,0,30,6,1,0,-1,0,0,,
-HareDu.Contracts,HareDuClientBehavior,0,3,0,0,0,18,3,1,0,-1,0,0,,
-HareDu.Contracts,UserCharacteristics,0,2,0,0,0,13,2,1,0,-1,0,0,,
-HareDu.Contracts,UserPermissionsBehavior,0,3,0,0,0,18,3,1,0,-1,0,0,,
-HareDu.Internal,ExchangeTargetImpl,0,1,0,0,1,9,1,0,1,-1,0,2,,HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.ExchangeResourcesImpl
-HareDu.Internal,LoggingCharacteristicsImpl,0,1,0,0,1,9,1,0,1,-1,0,1,,HareDu.HareDuClientBehaviorImpl
-HareDu.Internal,PolicyTargetImpl,0,1,0,0,1,9,1,0,1,-1,0,1,,HareDu.Resources.PolicyResourcesImpl
-HareDu.Internal,PropertiesKeyTargetImpl,0,1,0,0,1,9,1,0,1,-1,0,1,,HareDu.Resources.QueueBindingResourcesImpl
-HareDu.Internal,QueueBindingImpl,0,1,2,0,1,11,1,0,1,-1,0,1,,HareDu.Resources.QueueBindingResourcesImpl
-HareDu.Internal,TargetBase,0,0,1,0,0,4,0,7,0,-1,0,0,,
-HareDu.Internal,UserTargetImpl,0,1,0,0,1,9,1,0,1,-1,0,2,,HareDu.Resources.UserResourcesImpl' HareDu.Resources.PermissionsResourcesImpl
-HareDu.Internal,BindingDirectionImpl,0,2,1,0,2,13,2,0,1,-1,0,1,,HareDu.Resources.ExchangeResourcesImpl
-HareDu.Internal,ExchangeRoutingBehaviorImpl,0,6,1,0,6,29,6,0,1,-1,1,1,HareDu.ExchangeType,HareDu.Internal.ExchangeBehaviorImpl
-HareDu.Internal,ArgumentsImpl,0,10,1,0,10,45,10,0,1,-1,0,3,,HareDu.Internal.ExchangeBehaviorImpl' HareDu.Internal.QueueBehaviorImpl' HareDu.Internal.QueueBindingBehaviorImpl
-HareDu.Internal,PolicyCharacteristicsImpl,0,3,3,0,3,21,3,0,1,-1,1,1,HareDu.Internal.PolicyDefinitionImpl,HareDu.Resources.PolicyResourcesImpl
-HareDu.Internal,PolicyDefinitionImpl,0,2,1,0,2,13,2,0,1,-1,0,1,,HareDu.Internal.PolicyCharacteristicsImpl
-HareDu.Internal,QueueTargetImpl,0,1,0,0,1,9,1,0,1,-1,0,2,,HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.QueueResourcesImpl
-HareDu.Internal,UserCredentialsImpl,0,1,2,0,1,11,1,0,1,-1,0,1,,HareDu.HareDuClientImpl
-HareDu.Internal,UserAccessCharacteristicsImpl,0,6,1,0,6,31,7,0,1,-1,1,1,HareDu.UserPermissionTag,HareDu.Internal.UserCharacteristicsImpl
-HareDu.Internal,VirtualHostTargetImpl,0,1,0,0,1,9,1,0,1,-1,0,7,,HareDu.Resources.ParameterResourcesImpl' HareDu.Resources.PolicyResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.PermissionsResourcesImpl
-HareDu.Internal,ExchangeBehaviorImpl,0,7,5,0,7,51,9,0,1,-1,3,1,HareDu.ExchangeType' HareDu.Internal.ArgumentsImpl' HareDu.Internal.ExchangeRoutingBehaviorImpl,HareDu.Resources.ExchangeResourcesImpl
-HareDu.Internal,QueueBehaviorImpl,0,6,4,0,6,43,8,0,1,-1,1,1,HareDu.Internal.ArgumentsImpl,HareDu.Resources.QueueResourcesImpl
-HareDu.Internal,QueueBindingBehaviorImpl,0,4,2,0,4,31,6,0,1,-1,1,1,HareDu.Internal.ArgumentsImpl,HareDu.Resources.QueueBindingResourcesImpl
-HareDu.Internal,UserCharacteristicsImpl,0,3,2,0,3,22,3,0,1,-1,2,1,HareDu.UserPermissionTag' HareDu.Internal.UserAccessCharacteristicsImpl,HareDu.Resources.UserResourcesImpl
-HareDu.Internal,UserPermissionsBehaviorImpl,0,4,3,0,4,28,4,0,1,-1,0,1,,HareDu.Resources.PermissionsResourcesImpl
-HareDu.Model,HareDuModel,0,0,0,0,0,3,0,21,0,-1,0,0,,
-HareDu.Model,ConnectionDetails,0,0,3,0,0,10,0,0,1,-1,0,0,,
-HareDu.Model,Context,0,0,4,0,0,12,0,0,1,-1,0,0,,
-HareDu.Model,Details,0,0,3,0,0,10,0,3,1,-1,0,0,,
-HareDu.Model,Listener,0,0,4,0,0,12,0,0,1,-1,0,0,,
-HareDu.Model,MessagesDetails,0,0,0,0,0,4,0,0,2,-1,0,0,,
-HareDu.Model,MessagesReadyDetails,0,0,0,0,0,4,0,0,2,-1,0,0,,
-HareDu.Model,MessagesUnacknowledgedDetails,0,0,0,0,0,4,0,0,2,-1,0,0,,
-HareDu.Model,Application,0,0,3,0,0,10,0,0,1,-1,0,0,,
-HareDu.Model,AuthenticationMechanism,0,0,3,0,0,10,0,0,1,-1,0,0,,
-HareDu.Model,ExchangeType,0,0,3,0,0,10,0,0,1,-1,0,0,,
-HareDu.Model,Channel,0,0,16,0,0,36,0,0,1,-1,0,0,,
-HareDu.Model,Connection,0,0,20,0,0,44,0,0,1,-1,0,0,,
-HareDu.Model,Exchange,0,0,6,0,0,16,0,0,1,-1,0,0,,
-HareDu.Model,Node,0,0,31,0,0,66,0,0,1,-1,0,0,,
-HareDu.Model,Overview,0,0,9,0,0,22,0,0,1,-1,0,0,,
-HareDu.Model,Parameter,0,0,4,0,0,12,0,0,1,-1,0,0,,
-HareDu.Model,Policy,0,1,3,0,1,14,1,0,1,-1,0,0,,
-HareDu.Model,QueueTotals,0,0,6,0,0,16,0,0,1,-1,0,0,,
-HareDu.Model,MessageStats,0,0,4,0,0,12,0,0,1,-1,0,0,,
-HareDu.Model,Queue,0,0,10,0,0,24,0,0,1,-1,0,0,,
-HareDu.Model,Permissions,0,0,5,0,0,14,0,0,1,-1,0,0,,
-HareDu.Model,Binding,0,0,6,0,0,16,0,0,1,-1,0,0,,
-HareDu.Model,User,0,0,3,0,0,10,0,0,1,-1,0,0,,
-HareDu.Model,VirtualHost,0,0,2,0,0,8,0,0,1,-1,0,0,,
-HareDu.Resources,ChannelResources,0,2,0,0,0,16,2,1,0,-1,0,1,,HareDu.Tests.ChannelTests
-HareDu.Resources,ChannelResourcesImpl,0,3,0,0,3,26,3,0,1,-1,1,0,HareDu.Resources.HareDuResourcesBase,
-HareDu.Resources,ConnectionResources,0,3,1,0,0,29,3,1,1,-1,0,2,,HareDu.Tests.ChannelTests' HareDu.Tests.ConnectionTests
-HareDu.Resources,ConnectionResourcesImpl,0,4,1,0,4,40,4,0,2,-1,1,0,HareDu.Resources.HareDuResourcesBase,
-HareDu.Resources,HareDuResourcesBase,0,6,1,0,0,91,12,12,1,-1,0,12,,HareDu.Resources.ChannelResourcesImpl' HareDu.Resources.ConnectionResourcesImpl' HareDu.Resources.ParameterResourcesImpl' HareDu.Resources.PolicyResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.NodeResourcesImpl' HareDu.Resources.OverviewResourcesImpl' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.UserResourcesImpl' HareDu.Resources.PermissionsResourcesImpl
-HareDu.Resources,ParameterResources,0,6,0,0,0,57,6,1,1,-1,0,1,,HareDu.Tests.ParameterTests
-HareDu.Resources,ParameterResourcesImpl,0,7,0,0,7,82,7,0,2,-1,2,0,HareDu.Internal.VirtualHostTargetImpl' HareDu.Resources.HareDuResourcesBase,
-HareDu.Resources,PolicyResources,0,5,0,0,0,47,5,1,1,-1,0,1,,HareDu.Tests.PolicyTests
-HareDu.Resources,PolicyResourcesImpl,0,6,0,0,6,78,6,0,2,-1,4,0,HareDu.Resources.HareDuResourcesBase' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.PolicyTargetImpl' HareDu.Internal.PolicyCharacteristicsImpl,
-HareDu.Resources,QueueBindingResources,0,4,0,0,0,46,4,1,0,-1,0,2,,HareDu.Tests.ScenarioTests' HareDu.Tests.QueueBindingTests
-HareDu.Resources,QueueBindingResourcesImpl,0,5,0,0,5,93,5,0,2,-1,7,0,HareDu.Internal.QueueBindingBehaviorImpl' HareDu.Internal.QueueBindingImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Resources.HareDuResourcesBase' HareDu.Internal.QueueTargetImpl' HareDu.Internal.ExchangeTargetImpl' HareDu.Internal.PropertiesKeyTargetImpl,
-HareDu.Resources,ResourceClient,0,0,0,0,0,3,0,7,0,-1,0,0,,
-HareDu.Resources,ExchangeResources,0,5,0,0,0,49,5,1,0,-1,0,2,,HareDu.Tests.ExchangeTests' HareDu.Tests.ScenarioTests
-HareDu.Resources,ExchangeResourcesImpl,0,6,0,0,6,88,6,0,2,-1,5,0,HareDu.Resources.HareDuResourcesBase' HareDu.Internal.ExchangeTargetImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.BindingDirectionImpl' HareDu.Internal.ExchangeBehaviorImpl,
-HareDu.Resources,NodeResources,0,2,0,0,0,19,2,1,1,-1,0,1,,HareDu.Tests.NodeTests
-HareDu.Resources,NodeResourcesImpl,0,3,0,0,3,23,3,0,2,-1,1,0,HareDu.Resources.HareDuResourcesBase,
-HareDu.Resources,OverviewResources,0,1,0,0,0,10,1,1,1,-1,0,2,,HareDu.Tests.ScenarioTests' HareDu.Tests.OverviewTests
-HareDu.Resources,OverviewResourcesImpl,0,2,0,0,2,16,2,0,2,-1,1,0,HareDu.Resources.HareDuResourcesBase,
-HareDu.Resources,QueueResources,0,5,0,0,0,46,5,1,0,-1,0,3,,HareDu.Tests.AsyncTests' HareDu.Tests.ScenarioTests' HareDu.Tests.QueueTests
-HareDu.Resources,QueueResourcesImpl,0,6,0,0,6,79,6,0,2,-1,4,0,HareDu.Resources.HareDuResourcesBase' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.QueueTargetImpl' HareDu.Internal.QueueBehaviorImpl,
-HareDu.Resources,VirtualHostResources,0,4,3,0,0,46,4,1,1,-1,0,6,,HareDu.Tests.AsyncTests' HareDu.Tests.ExchangeTests' HareDu.Tests.ScenarioTests' HareDu.Tests.QueueBindingTests' HareDu.Tests.QueueTests' HareDu.Tests.VirtualHostTests
-HareDu.Resources,VirtualHostResourcesImpl,0,5,3,0,5,74,6,0,2,-1,2,0,HareDu.Resources.HareDuResourcesBase' HareDu.Internal.VirtualHostTargetImpl,
-HareDu.Resources,UserResources,0,4,1,0,0,40,4,1,1,-1,0,3,,HareDu.Tests.ScenarioTests' HareDu.Tests.PermissionsTests' HareDu.Tests.UserTests
-HareDu.Resources,UserResourcesImpl,0,5,1,0,5,51,5,0,2,-1,3,0,HareDu.Resources.HareDuResourcesBase' HareDu.Internal.UserTargetImpl' HareDu.Internal.UserCharacteristicsImpl,
-HareDu.Resources,PermissionsResources,0,4,0,0,0,38,4,1,0,-1,0,2,,HareDu.Tests.ScenarioTests' HareDu.Tests.PermissionsTests
-HareDu.Resources,PermissionsResourcesImpl,0,5,0,0,5,68,5,0,2,-1,4,0,HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.UserTargetImpl' HareDu.Resources.HareDuResourcesBase' HareDu.Internal.UserPermissionsBehaviorImpl,
-HareDu.Async,AlivenessTestResponse,0,0,1,0,0,6,0,0,1,-1,0,0,,
-HareDu.Async,AsyncResponse,0,0,2,0,0,5,0,1,0,-1,0,0,,
-HareDu.Async,ServerResponse,0,0,2,0,0,8,0,1,1,-1,0,0,,
+HareDu.Contracts,PolicyCharacteristics,0,3,0,0,0,18,3,1,0,-1,1,3,HareDu.Contracts.PolicyDefinition,HareDu.Internal.PolicyCharacteristicsImpl' HareDu.Resources.PolicyResources' HareDu.Resources.PolicyResourcesImpl
+HareDu.Contracts,PolicyDefinition,0,1,0,0,0,4,1,1,0,-1,0,3,,HareDu.Internal.PolicyDefinitionImpl' HareDu.Internal.PolicyCharacteristicsImpl' HareDu.Contracts.PolicyCharacteristics
+HareDu.Contracts,QueueBinding,0,1,0,0,0,4,1,1,0,-1,0,3,,HareDu.Internal.QueueBindingImpl' HareDu.Resources.QueueBindingResources' HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Contracts,QueueTarget,0,1,0,0,0,4,1,1,0,-1,0,5,,HareDu.Internal.QueueTargetImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.QueueBindingResources' HareDu.Resources.QueueResources' HareDu.Resources.QueueResourcesImpl
+HareDu.Contracts,UserCredentials,0,1,0,0,0,4,1,1,0,-1,0,3,,HareDu.HareDuClient' HareDu.HareDuClientImpl' HareDu.Internal.UserCredentialsImpl
+HareDu.Contracts,UserAccessCharacteristics,0,4,0,0,0,7,4,1,0,-1,0,3,,HareDu.Contracts.UserCharacteristics' HareDu.Internal.UserAccessCharacteristicsImpl' HareDu.Internal.UserCharacteristicsImpl
+HareDu.Contracts,VirtualHostTarget,0,1,0,0,0,4,1,1,0,-1,0,15,,HareDu.Internal.VirtualHostTargetImpl' HareDu.Resources.PolicyResources' HareDu.Resources.QueueBindingResources' HareDu.Resources.ParameterResources' HareDu.Resources.ParameterResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.PermissionsResourcesImpl' HareDu.Resources.QueueResources' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.ExchangeResources' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.VirtualHostResources' HareDu.Resources.PermissionsResources' HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.PolicyResourcesImpl
+HareDu.Contracts,QueueBehavior,0,5,0,0,0,26,5,1,0,-1,1,3,HareDu.Contracts.Arguments,HareDu.Internal.QueueBehaviorImpl' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.QueueResources
+HareDu.Contracts,QueueBindingBehavior,0,3,0,0,0,18,3,1,0,-1,1,3,HareDu.Contracts.Arguments,HareDu.Resources.QueueBindingResources' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Internal.QueueBindingBehaviorImpl
+HareDu.Contracts,ExchangeBehavior,0,6,0,0,0,30,6,1,0,-1,2,3,HareDu.Contracts.ExchangeRoutingBehavior' HareDu.Contracts.Arguments,HareDu.Resources.ExchangeResources' HareDu.Internal.ExchangeBehaviorImpl' HareDu.Resources.ExchangeResourcesImpl
+HareDu.Contracts,HareDuClientBehavior,0,3,0,0,0,18,3,1,0,-1,1,2,HareDu.Contracts.LoggingCharacteristics,HareDu.HareDuClientBehaviorImpl' HareDu.HareDuFactory
+HareDu.Contracts,UserCharacteristics,0,2,0,0,0,13,2,1,0,-1,1,3,HareDu.Contracts.UserAccessCharacteristics,HareDu.Internal.UserCharacteristicsImpl' HareDu.Resources.UserResources' HareDu.Resources.UserResourcesImpl
+HareDu.Contracts,UserPermissionsBehavior,0,3,0,0,0,18,3,1,0,-1,0,3,,HareDu.Internal.UserPermissionsBehaviorImpl' HareDu.Resources.PermissionsResources' HareDu.Resources.PermissionsResourcesImpl
+HareDu.Internal,ExchangeTargetImpl,0,1,0,0,1,9,1,0,1,-1,2,2,HareDu.Contracts.ExchangeTarget' HareDu.Internal.TargetBase,HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.ExchangeResourcesImpl
+HareDu.Internal,LoggingCharacteristicsImpl,0,1,0,0,1,9,1,0,1,-1,2,1,HareDu.Contracts.LoggingCharacteristics' HareDu.Internal.TargetBase,HareDu.HareDuClientBehaviorImpl
+HareDu.Internal,PolicyTargetImpl,0,1,0,0,1,9,1,0,1,-1,2,1,HareDu.Contracts.PolicyTarget' HareDu.Internal.TargetBase,HareDu.Resources.PolicyResourcesImpl
+HareDu.Internal,PropertiesKeyTargetImpl,0,1,0,0,1,9,1,0,1,-1,2,1,HareDu.Contracts.PropertiesKeyTarget' HareDu.Internal.TargetBase,HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Internal,QueueBindingImpl,0,1,2,0,1,11,1,0,1,-1,1,1,HareDu.Contracts.QueueBinding,HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Internal,TargetBase,0,0,1,0,0,4,0,7,0,-1,0,7,,HareDu.Internal.ExchangeTargetImpl' HareDu.Internal.LoggingCharacteristicsImpl' HareDu.Internal.UserTargetImpl' HareDu.Internal.QueueTargetImpl' HareDu.Internal.PropertiesKeyTargetImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.PolicyTargetImpl
+HareDu.Internal,UserTargetImpl,0,1,0,0,1,9,1,0,1,-1,2,2,HareDu.Contracts.UserTarget' HareDu.Internal.TargetBase,HareDu.Resources.UserResourcesImpl' HareDu.Resources.PermissionsResourcesImpl
+HareDu.Internal,BindingDirectionImpl,0,2,1,0,2,13,2,0,1,-1,1,1,HareDu.Contracts.BindingDirection,HareDu.Resources.ExchangeResourcesImpl
+HareDu.Internal,ExchangeRoutingBehaviorImpl,0,6,1,0,6,29,6,0,1,-1,2,1,HareDu.ExchangeType' HareDu.Contracts.ExchangeRoutingBehavior,HareDu.Internal.ExchangeBehaviorImpl
+HareDu.Internal,ArgumentsImpl,0,10,1,0,10,45,10,0,1,-1,1,3,HareDu.Contracts.Arguments,HareDu.Internal.ExchangeBehaviorImpl' HareDu.Internal.QueueBindingBehaviorImpl' HareDu.Internal.QueueBehaviorImpl
+HareDu.Internal,PolicyCharacteristicsImpl,0,3,3,0,3,21,3,0,1,-1,3,1,HareDu.Contracts.PolicyCharacteristics' HareDu.Contracts.PolicyDefinition' HareDu.Internal.PolicyDefinitionImpl,HareDu.Resources.PolicyResourcesImpl
+HareDu.Internal,PolicyDefinitionImpl,0,2,1,0,2,13,2,0,1,-1,1,1,HareDu.Contracts.PolicyDefinition,HareDu.Internal.PolicyCharacteristicsImpl
+HareDu.Internal,QueueTargetImpl,0,1,0,0,1,9,1,0,1,-1,2,2,HareDu.Contracts.QueueTarget' HareDu.Internal.TargetBase,HareDu.Resources.QueueResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Internal,UserCredentialsImpl,0,1,2,0,1,11,1,0,1,-1,1,1,HareDu.Contracts.UserCredentials,HareDu.HareDuClientImpl
+HareDu.Internal,UserAccessCharacteristicsImpl,0,6,1,0,6,31,7,0,1,-1,2,1,HareDu.UserPermissionTag' HareDu.Contracts.UserAccessCharacteristics,HareDu.Internal.UserCharacteristicsImpl
+HareDu.Internal,VirtualHostTargetImpl,0,1,0,0,1,9,1,0,1,-1,2,7,HareDu.Contracts.VirtualHostTarget' HareDu.Internal.TargetBase,HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.PolicyResourcesImpl' HareDu.Resources.PermissionsResourcesImpl' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.ParameterResourcesImpl' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Internal,ExchangeBehaviorImpl,0,7,5,0,7,51,9,0,1,-1,6,1,HareDu.ExchangeType' HareDu.Contracts.ExchangeRoutingBehavior' HareDu.Contracts.Arguments' HareDu.Contracts.ExchangeBehavior' HareDu.Internal.ExchangeRoutingBehaviorImpl' HareDu.Internal.ArgumentsImpl,HareDu.Resources.ExchangeResourcesImpl
+HareDu.Internal,QueueBehaviorImpl,0,6,4,0,6,43,8,0,1,-1,3,1,HareDu.Contracts.Arguments' HareDu.Contracts.QueueBehavior' HareDu.Internal.ArgumentsImpl,HareDu.Resources.QueueResourcesImpl
+HareDu.Internal,QueueBindingBehaviorImpl,0,4,2,0,4,31,6,0,1,-1,3,1,HareDu.Contracts.Arguments' HareDu.Contracts.QueueBindingBehavior' HareDu.Internal.ArgumentsImpl,HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Internal,UserCharacteristicsImpl,0,3,2,0,3,22,3,0,1,-1,4,1,HareDu.UserPermissionTag' HareDu.Contracts.UserAccessCharacteristics' HareDu.Contracts.UserCharacteristics' HareDu.Internal.UserAccessCharacteristicsImpl,HareDu.Resources.UserResourcesImpl
+HareDu.Internal,UserPermissionsBehaviorImpl,0,4,3,0,4,28,4,0,1,-1,1,1,HareDu.Contracts.UserPermissionsBehavior,HareDu.Resources.PermissionsResourcesImpl
+HareDu.Model,HareDuModel,0,0,0,0,0,3,0,21,0,-1,0,21,,HareDu.Model.Details' HareDu.Model.ConnectionDetails' HareDu.Model.Context' HareDu.Model.Listener' HareDu.Model.VirtualHost' HareDu.Model.AuthenticationMechanism' HareDu.Model.Connection' HareDu.Model.Channel' HareDu.Model.ExchangeType' HareDu.Model.Node' HareDu.Model.Exchange' HareDu.Model.Overview' HareDu.Model.QueueTotals' HareDu.Model.Application' HareDu.Model.Parameter' HareDu.Model.MessageStats' HareDu.Model.User' HareDu.Model.Queue' HareDu.Model.Binding' HareDu.Model.Permissions' HareDu.Model.Policy
+HareDu.Model,ConnectionDetails,0,0,3,0,0,10,0,0,1,-1,1,1,HareDu.Model.HareDuModel,HareDu.Model.Channel
+HareDu.Model,Context,0,0,4,0,0,12,0,0,1,-1,1,1,HareDu.Model.HareDuModel,HareDu.Model.Overview
+HareDu.Model,Details,0,0,3,0,0,10,0,3,1,-1,1,3,HareDu.Model.HareDuModel,HareDu.Model.MessagesReadyDetails' HareDu.Model.MessagesUnacknowledgedDetails' HareDu.Model.MessagesDetails
+HareDu.Model,Listener,0,0,4,0,0,12,0,0,1,-1,1,1,HareDu.Model.HareDuModel,HareDu.Model.Overview
+HareDu.Model,MessagesDetails,0,0,0,0,0,4,0,0,2,-1,1,1,HareDu.Model.Details,HareDu.Model.QueueTotals
+HareDu.Model,MessagesReadyDetails,0,0,0,0,0,4,0,0,2,-1,1,1,HareDu.Model.Details,HareDu.Model.QueueTotals
+HareDu.Model,MessagesUnacknowledgedDetails,0,0,0,0,0,4,0,0,2,-1,1,1,HareDu.Model.Details,HareDu.Model.QueueTotals
+HareDu.Model,Application,0,0,3,0,0,10,0,0,1,-1,1,1,HareDu.Model.HareDuModel,HareDu.Model.Node
+HareDu.Model,AuthenticationMechanism,0,0,3,0,0,10,0,0,1,-1,1,1,HareDu.Model.HareDuModel,HareDu.Model.Node
+HareDu.Model,ExchangeType,0,0,3,0,0,10,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Model.Overview' HareDu.Model.Node
+HareDu.Model,Channel,0,0,16,0,0,36,0,0,1,-1,3,2,HareDu.Model.HareDuModel' HareDu.Model.ConnectionDetails' HareDu.Model.MessageStats,HareDu.Resources.ChannelResources' HareDu.Resources.ChannelResourcesImpl
+HareDu.Model,Connection,0,0,20,0,0,44,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.ConnectionResources' HareDu.Resources.ConnectionResourcesImpl
+HareDu.Model,Exchange,0,0,6,0,0,16,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.ExchangeResources' HareDu.Resources.ExchangeResourcesImpl
+HareDu.Model,Node,0,0,31,0,0,66,0,0,1,-1,4,2,HareDu.Model.HareDuModel' HareDu.Model.Application' HareDu.Model.AuthenticationMechanism' HareDu.Model.ExchangeType,HareDu.Resources.NodeResources' HareDu.Resources.NodeResourcesImpl
+HareDu.Model,Overview,0,0,9,0,0,22,0,0,1,-1,6,2,HareDu.Model.HareDuModel' HareDu.Model.Context' HareDu.Model.Listener' HareDu.Model.ExchangeType' HareDu.Model.QueueTotals' HareDu.Model.MessageStats,HareDu.Resources.OverviewResources' HareDu.Resources.OverviewResourcesImpl
+HareDu.Model,Parameter,0,0,4,0,0,12,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.ParameterResources' HareDu.Resources.ParameterResourcesImpl
+HareDu.Model,Policy,0,1,3,0,1,14,1,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.PolicyResources' HareDu.Resources.PolicyResourcesImpl
+HareDu.Model,QueueTotals,0,0,6,0,0,16,0,0,1,-1,4,1,HareDu.Model.HareDuModel' HareDu.Model.MessagesDetails' HareDu.Model.MessagesReadyDetails' HareDu.Model.MessagesUnacknowledgedDetails,HareDu.Model.Overview
+HareDu.Model,MessageStats,0,0,4,0,0,12,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Model.Overview' HareDu.Model.Channel
+HareDu.Model,Queue,0,0,10,0,0,24,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.QueueResources' HareDu.Resources.QueueResourcesImpl
+HareDu.Model,Permissions,0,0,5,0,0,14,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.PermissionsResources' HareDu.Resources.PermissionsResourcesImpl
+HareDu.Model,Binding,0,0,6,0,0,16,0,0,1,-1,1,4,HareDu.Model.HareDuModel,HareDu.Resources.ExchangeResources' HareDu.Resources.QueueBindingResources' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl
+HareDu.Model,User,0,0,3,0,0,10,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.UserResources' HareDu.Resources.UserResourcesImpl
+HareDu.Model,VirtualHost,0,0,2,0,0,8,0,0,1,-1,1,2,HareDu.Model.HareDuModel,HareDu.Resources.VirtualHostResources' HareDu.Resources.VirtualHostResourcesImpl
+HareDu.Resources,ChannelResources,0,2,0,0,0,16,2,1,0,-1,1,3,HareDu.Model.Channel,HareDu.Resources.ConnectionResourcesImpl' HareDu.Resources.ChannelResourcesImpl' HareDu.Resources.ConnectionResources
+HareDu.Resources,ChannelResourcesImpl,0,3,0,0,3,26,3,0,1,-1,3,1,HareDu.Model.Channel' HareDu.Resources.ChannelResources' HareDu.Resources.HareDuResourcesBase,HareDu.Resources.ConnectionResourcesImpl
+HareDu.Resources,ConnectionResources,0,3,1,0,0,29,3,1,1,-1,4,1,HareDu.Model.Connection' HareDu.Resources.ChannelResources' HareDu.Resources.ResourceClient' HareDu.Async.ServerResponse,HareDu.Resources.ConnectionResourcesImpl
+HareDu.Resources,ConnectionResourcesImpl,0,4,1,0,4,40,4,0,2,-1,6,0,HareDu.Model.Connection' HareDu.Resources.ChannelResources' HareDu.Resources.ChannelResourcesImpl' HareDu.Resources.ConnectionResources' HareDu.Resources.HareDuResourcesBase' HareDu.Async.ServerResponse,
+HareDu.Resources,HareDuResourcesBase,0,6,1,0,0,91,12,12,1,-1,1,12,HareDu.Logging,HareDu.Resources.NodeResourcesImpl' HareDu.Resources.OverviewResourcesImpl' HareDu.Resources.ConnectionResourcesImpl' HareDu.Resources.PolicyResourcesImpl' HareDu.Resources.ParameterResourcesImpl' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.ChannelResourcesImpl' HareDu.Resources.PermissionsResourcesImpl' HareDu.Resources.UserResourcesImpl
+HareDu.Resources,ParameterResources,0,6,0,0,0,57,6,1,1,-1,4,1,HareDu.Contracts.VirtualHostTarget' HareDu.Model.Parameter' HareDu.Resources.ResourceClient' HareDu.Async.ServerResponse,HareDu.Resources.ParameterResourcesImpl
+HareDu.Resources,ParameterResourcesImpl,0,7,0,0,7,82,7,0,2,-1,6,0,HareDu.Contracts.VirtualHostTarget' HareDu.Internal.VirtualHostTargetImpl' HareDu.Model.Parameter' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.ParameterResources' HareDu.Async.ServerResponse,
+HareDu.Resources,PolicyResources,0,5,0,0,0,47,5,1,1,-1,6,1,HareDu.Contracts.PolicyTarget' HareDu.Contracts.PolicyCharacteristics' HareDu.Contracts.VirtualHostTarget' HareDu.Model.Policy' HareDu.Resources.ResourceClient' HareDu.Async.ServerResponse,HareDu.Resources.PolicyResourcesImpl
+HareDu.Resources,PolicyResourcesImpl,0,6,0,0,6,78,6,0,2,-1,10,0,HareDu.Contracts.PolicyTarget' HareDu.Contracts.PolicyCharacteristics' HareDu.Contracts.VirtualHostTarget' HareDu.Internal.PolicyTargetImpl' HareDu.Internal.PolicyCharacteristicsImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Model.Policy' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.PolicyResources' HareDu.Async.ServerResponse,
+HareDu.Resources,QueueBindingResources,0,4,0,0,0,46,4,1,0,-1,8,3,HareDu.Contracts.ExchangeTarget' HareDu.Contracts.PropertiesKeyTarget' HareDu.Contracts.QueueBinding' HareDu.Contracts.QueueTarget' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.QueueBindingBehavior' HareDu.Model.Binding' HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.VirtualHostResources
+HareDu.Resources,QueueBindingResourcesImpl,0,5,0,0,5,93,5,0,2,-1,16,1,HareDu.Contracts.ExchangeTarget' HareDu.Contracts.PropertiesKeyTarget' HareDu.Contracts.QueueBinding' HareDu.Contracts.QueueTarget' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.QueueBindingBehavior' HareDu.Internal.ExchangeTargetImpl' HareDu.Internal.PropertiesKeyTargetImpl' HareDu.Internal.QueueBindingImpl' HareDu.Internal.QueueTargetImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.QueueBindingBehaviorImpl' HareDu.Model.Binding' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.QueueBindingResources' HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResourcesImpl
+HareDu.Resources,ResourceClient,0,0,0,0,0,3,0,7,0,-1,0,9,,HareDu.Resources.NodeResources' HareDu.Resources.ConnectionResources' HareDu.Resources.ParameterResources' HareDu.Resources.VirtualHostResources' HareDu.Resources.OverviewResources' HareDu.Resources.UserResources' HareDu.Resources.PolicyResources' HareDu.HareDuClientImpl' HareDu.HareDuClient
+HareDu.Resources,ExchangeResources,0,5,0,0,0,49,5,1,0,-1,7,3,HareDu.Contracts.ExchangeTarget' HareDu.Contracts.BindingDirection' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.ExchangeBehavior' HareDu.Model.Exchange' HareDu.Model.Binding' HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.VirtualHostResources' HareDu.Resources.ExchangeResourcesImpl
+HareDu.Resources,ExchangeResourcesImpl,0,6,0,0,6,88,6,0,2,-1,13,1,HareDu.Contracts.ExchangeTarget' HareDu.Contracts.BindingDirection' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.ExchangeBehavior' HareDu.Internal.ExchangeTargetImpl' HareDu.Internal.BindingDirectionImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.ExchangeBehaviorImpl' HareDu.Model.Exchange' HareDu.Model.Binding' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.ExchangeResources' HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResourcesImpl
+HareDu.Resources,NodeResources,0,2,0,0,0,19,2,1,1,-1,2,1,HareDu.Model.Node' HareDu.Resources.ResourceClient,HareDu.Resources.NodeResourcesImpl
+HareDu.Resources,NodeResourcesImpl,0,3,0,0,3,23,3,0,2,-1,3,0,HareDu.Model.Node' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.NodeResources,
+HareDu.Resources,OverviewResources,0,1,0,0,0,10,1,1,1,-1,2,1,HareDu.Model.Overview' HareDu.Resources.ResourceClient,HareDu.Resources.OverviewResourcesImpl
+HareDu.Resources,OverviewResourcesImpl,0,2,0,0,2,16,2,0,2,-1,3,0,HareDu.Model.Overview' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.OverviewResources,
+HareDu.Resources,QueueResources,0,5,0,0,0,46,5,1,0,-1,5,3,HareDu.Contracts.QueueTarget' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.QueueBehavior' HareDu.Model.Queue' HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.VirtualHostResources
+HareDu.Resources,QueueResourcesImpl,0,6,0,0,6,79,6,0,2,-1,10,1,HareDu.Contracts.QueueTarget' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.QueueBehavior' HareDu.Internal.QueueTargetImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.QueueBehaviorImpl' HareDu.Model.Queue' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.QueueResources' HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResourcesImpl
+HareDu.Resources,VirtualHostResources,0,4,3,0,0,46,4,1,1,-1,8,1,HareDu.Contracts.VirtualHostTarget' HareDu.Model.VirtualHost' HareDu.Resources.QueueBindingResources' HareDu.Resources.ResourceClient' HareDu.Resources.ExchangeResources' HareDu.Resources.QueueResources' HareDu.Async.AlivenessTestResponse' HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResourcesImpl
+HareDu.Resources,VirtualHostResourcesImpl,0,5,3,0,5,74,6,0,2,-1,14,0,HareDu.CannotDeleteVirtualHostException' HareDu.Contracts.VirtualHostTarget' HareDu.Internal.VirtualHostTargetImpl' HareDu.Model.VirtualHost' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.QueueBindingResources' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.ExchangeResources' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.QueueResources' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.VirtualHostResources' HareDu.Async.AlivenessTestResponse' HareDu.Async.ServerResponse,
+HareDu.Resources,UserResources,0,4,1,0,0,40,4,1,1,-1,6,1,HareDu.Contracts.UserTarget' HareDu.Contracts.UserCharacteristics' HareDu.Model.User' HareDu.Resources.ResourceClient' HareDu.Resources.PermissionsResources' HareDu.Async.ServerResponse,HareDu.Resources.UserResourcesImpl
+HareDu.Resources,UserResourcesImpl,0,5,1,0,5,51,5,0,2,-1,10,0,HareDu.Contracts.UserTarget' HareDu.Contracts.UserCharacteristics' HareDu.Internal.UserTargetImpl' HareDu.Internal.UserCharacteristicsImpl' HareDu.Model.User' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.UserResources' HareDu.Resources.PermissionsResources' HareDu.Resources.PermissionsResourcesImpl' HareDu.Async.ServerResponse,
+HareDu.Resources,PermissionsResources,0,4,0,0,0,38,4,1,0,-1,5,3,HareDu.Contracts.UserTarget' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.UserPermissionsBehavior' HareDu.Model.Permissions' HareDu.Async.ServerResponse,HareDu.Resources.PermissionsResourcesImpl' HareDu.Resources.UserResources' HareDu.Resources.UserResourcesImpl
+HareDu.Resources,PermissionsResourcesImpl,0,5,0,0,5,68,5,0,2,-1,10,1,HareDu.Contracts.UserTarget' HareDu.Contracts.VirtualHostTarget' HareDu.Contracts.UserPermissionsBehavior' HareDu.Internal.UserTargetImpl' HareDu.Internal.VirtualHostTargetImpl' HareDu.Internal.UserPermissionsBehaviorImpl' HareDu.Model.Permissions' HareDu.Resources.HareDuResourcesBase' HareDu.Resources.PermissionsResources' HareDu.Async.ServerResponse,HareDu.Resources.UserResourcesImpl
+HareDu.Async,AlivenessTestResponse,0,0,1,0,0,6,0,0,1,-1,1,2,HareDu.Async.ServerResponse,HareDu.Resources.VirtualHostResources' HareDu.Resources.VirtualHostResourcesImpl
+HareDu.Async,AsyncResponse,0,0,2,0,0,5,0,1,0,-1,0,2,,HareDu.Async.ServerResponse' HareDu.AsyncExtensions
+HareDu.Async,ServerResponse,0,0,2,0,0,8,0,1,1,-1,1,19,HareDu.Async.AsyncResponse,HareDu.Resources.ConnectionResources' HareDu.Resources.ExchangeResources' HareDu.Resources.PolicyResources' HareDu.Resources.QueueBindingResources' HareDu.Resources.QueueResources' HareDu.Async.AlivenessTestResponse' HareDu.Resources.ConnectionResourcesImpl' HareDu.Resources.UserResources' HareDu.Resources.VirtualHostResources' HareDu.Resources.PermissionsResources' HareDu.Resources.ParameterResourcesImpl' HareDu.Resources.QueueBindingResourcesImpl' HareDu.Resources.PolicyResourcesImpl' HareDu.Resources.ExchangeResourcesImpl' HareDu.Resources.ParameterResources' HareDu.Resources.VirtualHostResourcesImpl' HareDu.Resources.UserResourcesImpl' HareDu.Resources.QueueResourcesImpl' HareDu.Resources.PermissionsResourcesImpl

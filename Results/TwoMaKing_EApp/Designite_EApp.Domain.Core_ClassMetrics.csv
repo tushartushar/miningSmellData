@@ -1,50 +1,50 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-EApp.Domain.Core,AggregateRoot,0,1,0,0,0,19,3,5,1,-1,3,0,EApp.Core.ServiceLocator' EApp.Domain.Core.Events.IEventHandler' EApp.Domain.Core.Events.HandleAsynchronizationAttribute,
-EApp.Domain.Core,ConfigSourceHandlerProvider,0,1,0,0,1,7,1,0,1,-1,0,0,,
-EApp.Domain.Core,EntityBase<TIdentityKey>,4,5,2,0,3,92,11,0,1,1,2,0,EApp.Domain.Core.EntityBase' EApp.Domain.Core.PropertyChangedEventArgs,
-EApp.Domain.Core,EntityBase,0,2,0,0,2,8,2,1,1,-1,0,1,,EApp.Domain.Core.EntityBase<TIdentityKey>
-EApp.Domain.Core,IAggregateRoot,0,0,0,0,0,5,0,1,1,-1,0,0,,
-EApp.Domain.Core,IEntity,0,0,1,0,0,6,0,7,0,-1,0,3,,EApp.Domain.Core.Events.DomainEvent' Xpress.Chat.Domain.Events.OrderConfirmEvent' Xpress.Chat.Domain.Events.PostDomainEvent
-EApp.Domain.Core,IHandler,0,1,0,0,0,4,1,2,0,-1,0,2,,EApp.Domain.Core.DirectBus.IMessageDispatcher' EApp.Domain.Core.DirectBus.MessageDispatchercs
-EApp.Domain.Core,IHandlerProvider,0,1,0,0,0,9,1,2,0,-1,0,0,,
+EApp.Domain.Core,AggregateRoot,0,1,0,0,0,19,3,5,1,-1,5,0,EApp.Domain.Core.EntityBase' EApp.Domain.Core.IAggregateRoot' EApp.Domain.Core.Events.HandleAsynchronizationAttribute' EApp.Domain.Core.Events.IEvent' EApp.Domain.Core.Events.IEventHandler,
+EApp.Domain.Core,ConfigSourceHandlerProvider,0,1,0,0,1,7,1,0,1,-1,1,0,EApp.Domain.Core.IHandlerProvider,
+EApp.Domain.Core,EntityBase<TIdentityKey>,4,5,2,0,3,92,12,0,1,1,2,1,EApp.Domain.Core.IEntity' EApp.Domain.Core.PropertyChangedEventArgs,EApp.Domain.Core.EntityBase
+EApp.Domain.Core,EntityBase,0,2,0,0,2,8,2,1,1,-1,2,1,EApp.Domain.Core.EntityBase<TIdentityKey>' EApp.Domain.Core.IEntity,EApp.Domain.Core.AggregateRoot
+EApp.Domain.Core,IAggregateRoot,0,0,0,0,0,5,0,1,1,-1,1,5,EApp.Domain.Core.IEntity,EApp.Domain.Core.Repositories.IRepositoryContext' EApp.Domain.Core.Repositories.Repository<TAggregateRoot>' EApp.Domain.Core.Repositories.IRepository' EApp.Domain.Core.Repositories.RepositoryContext' EApp.Domain.Core.AggregateRoot
+EApp.Domain.Core,IEntity,0,0,1,0,0,6,0,7,0,-1,0,10,,EApp.Domain.Core.Application.DataTransferObjectBase<TModel;TIdentity>' EApp.Domain.Core.Events.IEvent' EApp.Domain.Core.EntityBase<TIdentityKey>' EApp.Domain.Core.Commands.ICommand' EApp.Domain.Core.Application.IDataTransferObject' EApp.Domain.Core.IAggregateRoot' EApp.Domain.Core.Events.IDomainEvent' EApp.Domain.Core.Application.DataTransferObjectBase<TModel>' EApp.Domain.Core.EntityBase' EApp.Domain.Core.Events.DomainEvent
+EApp.Domain.Core,IHandler,0,1,0,0,0,4,1,2,0,-1,0,4,,EApp.Domain.Core.Events.IEventHandler' EApp.Domain.Core.Commands.ICommandHandler' EApp.Domain.Core.DirectBus.MessageDispatchercs' EApp.Domain.Core.DirectBus.IMessageDispatcher
+EApp.Domain.Core,IHandlerProvider,0,1,0,0,0,9,1,2,0,-1,0,2,,EApp.Domain.Core.Commands.ICommandHandlerProvider' EApp.Domain.Core.ConfigSourceHandlerProvider
 EApp.Domain.Core,PropertyChangedEventArgs,0,1,2,0,1,18,1,0,0,-1,0,1,,EApp.Domain.Core.EntityBase<TIdentityKey>
 EApp.Domain.Core,Utils,2,1,0,0,1,24,1,0,0,0,0,1,,EApp.Domain.Core.Commands.Command
-EApp.Domain.Core,ValueObjectBase<TValueObject>,0,4,0,0,3,96,11,0,0,-1,0,0,,
+EApp.Domain.Core,ValueObjectBase<TValueObject>,0,4,0,0,3,96,16,0,0,-1,0,0,,
 EApp.Domain.Core.Application,ApplicationService,1,3,1,0,2,20,3,1,0,0.67,1,0,EApp.Domain.Core.Repositories.IRepositoryContext,
-EApp.Domain.Core.Application,DataTransferObjectBase<TModel;TIdentity>,0,4,0,0,2,16,4,0,1,-1,0,0,,
-EApp.Domain.Core.Application,DataTransferObjectBase<TModel>,0,0,0,0,0,6,0,0,1,-1,0,0,,
-EApp.Domain.Core.Application,IDataTransferObject,0,2,0,0,0,8,2,2,0,-1,0,0,,
-EApp.Domain.Core.DirectBus,DirectBus,0,6,3,0,6,39,6,2,1,-1,0,0,,
-EApp.Domain.Core.DirectBus,DirectCommandBus,0,0,0,0,0,3,0,0,2,-1,0,0,,
-EApp.Domain.Core.DirectBus,DirectEventBus,0,0,0,0,0,3,0,0,2,-1,0,0,,
-EApp.Domain.Core.DirectBus,IBus,0,3,1,0,0,18,3,3,1,-1,0,0,,
-EApp.Domain.Core.DirectBus,ICommandBus,0,0,0,0,0,3,0,1,2,-1,0,0,,
-EApp.Domain.Core.DirectBus,IEventBus,0,0,0,0,0,3,0,1,2,-1,0,0,,
-EApp.Domain.Core.DirectBus,IMessageDispatcher,0,4,0,0,0,7,4,1,0,-1,1,0,EApp.Domain.Core.IHandler,
-EApp.Domain.Core.DirectBus,MessageDispatchercs,1,4,0,0,4,33,7,0,1,1,1,0,EApp.Domain.Core.IHandler,
-EApp.Domain.Core.Bus,EventBus,0,6,2,0,6,35,6,0,1,-1,0,0,,
-EApp.Domain.Core.Bus,CommandBus,5,7,2,0,7,78,12,0,1,0,2,0,EApp.Domain.Core.Commands.ICommand' EApp.Domain.Core.Commands.ICommandDispatcher,
-EApp.Domain.Core.Bus,ICommandBus,0,3,0,0,0,6,3,1,1,-1,0,1,,Xpress.Chat.Application.PostCommandService
-EApp.Domain.Core.Bus,IEventBus,0,3,0,0,0,6,3,1,1,-1,0,0,,
-EApp.Domain.Core.Commands,Command,0,2,1,0,2,27,4,1,1,-1,1,0,EApp.Domain.Core.Utils,
-EApp.Domain.Core.Commands,CommandDispatcher,3,9,0,0,8,126,17,0,1,0.33,6,0,EApp.Domain.Core.Commands.ICommandDispatcher' EApp.Domain.Core.Commands.ICommandHandlerProvider' EApp.Core.IObjectContainer' EApp.Core.Application.IApp' EApp.Core.Application.EAppRuntime' EApp.Domain.Core.Commands.ICommandHandler,
-EApp.Domain.Core.Commands,CommandHandler<TCommand>,0,1,0,0,1,5,1,0,1,-1,0,0,,
-EApp.Domain.Core.Commands,ConfigSourceCommandHandlerProvider,0,1,0,0,1,32,5,0,1,-1,8,0,EApp.Core.Configuration.HandlerElementCollection' EApp.Core.Configuration.HandlerElement' EApp.Core.Configuration.EAppConfigurationSection' EApp.Core.Configuration.IConfigSource' EApp.Core.Application.IApp' EApp.Core.Application.EAppRuntime' EApp.Domain.Core.Commands.ICommandHandler' EApp.Domain.Core.Commands.ICommand,
-EApp.Domain.Core.Commands,ICommand,0,0,0,0,0,3,0,1,1,-1,0,3,,EApp.Domain.Core.Bus.CommandBus' EApp.Domain.Core.Commands.ConfigSourceCommandHandlerProvider' Xpress.Chat.Application.PostCommandService
-EApp.Domain.Core.Commands,ICommandDispatcher,0,5,0,0,0,9,5,1,0,-1,1,2,EApp.Domain.Core.Commands.ICommandHandler,EApp.Domain.Core.Bus.CommandBus' EApp.Domain.Core.Commands.CommandDispatcher
-EApp.Domain.Core.Commands,ICommandHandler,0,0,0,0,0,3,0,2,1,-1,0,3,,EApp.Domain.Core.Commands.CommandDispatcher' EApp.Domain.Core.Commands.ConfigSourceCommandHandlerProvider' EApp.Domain.Core.Commands.ICommandDispatcher
-EApp.Domain.Core.Commands,ICommandHandlerProvider,0,0,0,0,0,3,0,1,1,-1,0,1,,EApp.Domain.Core.Commands.CommandDispatcher
-EApp.Domain.Core.Events,DomainEvent,2,1,3,0,1,28,1,2,1,0,1,0,EApp.Domain.Core.IEntity,
-EApp.Domain.Core.Events,IDomainEvent,0,0,1,0,0,7,0,1,1,-1,0,0,,
-EApp.Domain.Core.Events,IDomainEventHandler,0,0,0,0,0,5,0,1,1,-1,0,0,,
-EApp.Domain.Core.Events,ActionDelegateEventHandler<TEvent>,1,4,0,0,4,37,8,0,1,0,0,0,,
-EApp.Domain.Core.Events,EventAggregator,3,12,0,0,12,160,21,1,1,0.25,2,0,EApp.Domain.Core.Events.IEventHandler' EApp.Domain.Core.Events.HandleAsynchronizationAttribute,
+EApp.Domain.Core.Application,DataTransferObjectBase<TModel;TIdentity>,0,4,0,0,2,16,4,0,1,-1,2,1,EApp.Domain.Core.IEntity' EApp.Domain.Core.Application.IDataTransferObject,EApp.Domain.Core.Application.DataTransferObjectBase<TModel>
+EApp.Domain.Core.Application,DataTransferObjectBase<TModel>,0,0,0,0,0,6,0,0,1,-1,3,0,EApp.Domain.Core.IEntity' EApp.Domain.Core.Application.DataTransferObjectBase<TModel;TIdentity>' EApp.Domain.Core.Application.IDataTransferObject,
+EApp.Domain.Core.Application,IDataTransferObject,0,2,0,0,0,8,2,2,0,-1,1,2,EApp.Domain.Core.IEntity,EApp.Domain.Core.Application.DataTransferObjectBase<TModel;TIdentity>' EApp.Domain.Core.Application.DataTransferObjectBase<TModel>
+EApp.Domain.Core.DirectBus,DirectBus,0,6,3,0,6,39,6,2,1,-1,1,2,EApp.Domain.Core.DirectBus.IBus,EApp.Domain.Core.DirectBus.DirectCommandBus' EApp.Domain.Core.DirectBus.DirectEventBus
+EApp.Domain.Core.DirectBus,DirectCommandBus,0,0,0,0,0,3,0,0,2,-1,2,0,EApp.Domain.Core.DirectBus.DirectBus' EApp.Domain.Core.DirectBus.ICommandBus,
+EApp.Domain.Core.DirectBus,DirectEventBus,0,0,0,0,0,3,0,0,2,-1,2,0,EApp.Domain.Core.DirectBus.DirectBus' EApp.Domain.Core.DirectBus.IEventBus,
+EApp.Domain.Core.DirectBus,IBus,0,3,1,0,0,18,3,3,1,-1,0,3,,EApp.Domain.Core.DirectBus.IEventBus' EApp.Domain.Core.DirectBus.DirectBus' EApp.Domain.Core.DirectBus.ICommandBus
+EApp.Domain.Core.DirectBus,ICommandBus,0,0,0,0,0,3,0,1,2,-1,1,1,EApp.Domain.Core.DirectBus.IBus,EApp.Domain.Core.DirectBus.DirectCommandBus
+EApp.Domain.Core.DirectBus,IEventBus,0,0,0,0,0,3,0,1,2,-1,1,1,EApp.Domain.Core.DirectBus.IBus,EApp.Domain.Core.DirectBus.DirectEventBus
+EApp.Domain.Core.DirectBus,IMessageDispatcher,0,4,0,0,0,7,4,1,0,-1,1,1,EApp.Domain.Core.IHandler,EApp.Domain.Core.DirectBus.MessageDispatchercs
+EApp.Domain.Core.DirectBus,MessageDispatchercs,1,4,0,0,4,33,7,0,1,1,2,0,EApp.Domain.Core.IHandler' EApp.Domain.Core.DirectBus.IMessageDispatcher,
+EApp.Domain.Core.Bus,EventBus,0,6,2,0,6,35,6,0,1,-1,2,0,EApp.Domain.Core.Bus.IEventBus' EApp.Domain.Core.Events.IEvent,
+EApp.Domain.Core.Bus,CommandBus,5,7,2,0,7,78,12,0,1,0,3,0,EApp.Domain.Core.Bus.ICommandBus' EApp.Domain.Core.Commands.ICommand' EApp.Domain.Core.Commands.ICommandDispatcher,
+EApp.Domain.Core.Bus,ICommandBus,0,3,0,0,0,6,3,1,1,-1,1,1,EApp.Domain.Core.Commands.ICommand,EApp.Domain.Core.Bus.CommandBus
+EApp.Domain.Core.Bus,IEventBus,0,3,0,0,0,6,3,1,1,-1,1,1,EApp.Domain.Core.Events.IEvent,EApp.Domain.Core.Bus.EventBus
+EApp.Domain.Core.Commands,Command,0,2,1,0,2,27,4,1,1,-1,2,0,EApp.Domain.Core.Utils' EApp.Domain.Core.Commands.ICommand,
+EApp.Domain.Core.Commands,CommandDispatcher,3,9,0,0,8,126,22,0,1,0.33,4,0,EApp.Domain.Core.Commands.ICommand' EApp.Domain.Core.Commands.ICommandDispatcher' EApp.Domain.Core.Commands.ICommandHandler' EApp.Domain.Core.Commands.ICommandHandlerProvider,
+EApp.Domain.Core.Commands,CommandHandler<TCommand>,0,1,0,0,1,5,1,0,1,-1,2,0,EApp.Domain.Core.Commands.ICommand' EApp.Domain.Core.Commands.ICommandHandler,
+EApp.Domain.Core.Commands,ConfigSourceCommandHandlerProvider,0,1,0,0,1,32,5,0,1,-1,3,0,EApp.Domain.Core.Commands.ICommand' EApp.Domain.Core.Commands.ICommandHandler' EApp.Domain.Core.Commands.ICommandHandlerProvider,
+EApp.Domain.Core.Commands,ICommand,0,0,0,0,0,3,0,1,1,-1,1,8,EApp.Domain.Core.IEntity,EApp.Domain.Core.Commands.Command' EApp.Domain.Core.Commands.CommandHandler<TCommand>' EApp.Domain.Core.Commands.ICommandHandler' EApp.Domain.Core.Bus.ICommandBus' EApp.Domain.Core.Commands.ICommandDispatcher' EApp.Domain.Core.Commands.CommandDispatcher' EApp.Domain.Core.Commands.ConfigSourceCommandHandlerProvider' EApp.Domain.Core.Bus.CommandBus
+EApp.Domain.Core.Commands,ICommandDispatcher,0,5,0,0,0,9,5,1,0,-1,2,2,EApp.Domain.Core.Commands.ICommand' EApp.Domain.Core.Commands.ICommandHandler,EApp.Domain.Core.Bus.CommandBus' EApp.Domain.Core.Commands.CommandDispatcher
+EApp.Domain.Core.Commands,ICommandHandler,0,0,0,0,0,3,0,2,1,-1,2,4,EApp.Domain.Core.IHandler' EApp.Domain.Core.Commands.ICommand,EApp.Domain.Core.Commands.CommandHandler<TCommand>' EApp.Domain.Core.Commands.ICommandDispatcher' EApp.Domain.Core.Commands.ConfigSourceCommandHandlerProvider' EApp.Domain.Core.Commands.CommandDispatcher
+EApp.Domain.Core.Commands,ICommandHandlerProvider,0,0,0,0,0,3,0,1,1,-1,1,2,EApp.Domain.Core.IHandlerProvider,EApp.Domain.Core.Commands.ConfigSourceCommandHandlerProvider' EApp.Domain.Core.Commands.CommandDispatcher
+EApp.Domain.Core.Events,DomainEvent,2,1,3,0,1,28,1,2,1,0,2,0,EApp.Domain.Core.IEntity' EApp.Domain.Core.Events.IDomainEvent,
+EApp.Domain.Core.Events,IDomainEvent,0,0,1,0,0,7,0,1,1,-1,2,2,EApp.Domain.Core.IEntity' EApp.Domain.Core.Events.IEvent,EApp.Domain.Core.Events.IDomainEventHandler' EApp.Domain.Core.Events.DomainEvent
+EApp.Domain.Core.Events,IDomainEventHandler,0,0,0,0,0,5,0,1,1,-1,2,0,EApp.Domain.Core.Events.IDomainEvent' EApp.Domain.Core.Events.IEventHandler,
+EApp.Domain.Core.Events,ActionDelegateEventHandler<TEvent>,1,4,0,0,4,37,8,0,1,0.5,2,1,EApp.Domain.Core.Events.IEvent' EApp.Domain.Core.Events.IEventHandler,EApp.Domain.Core.Events.EventAggregator
+EApp.Domain.Core.Events,EventAggregator,3,12,0,0,12,160,28,1,1,0.25,5,0,EApp.Domain.Core.Events.ActionDelegateEventHandler<TEvent>' EApp.Domain.Core.Events.HandleAsynchronizationAttribute' EApp.Domain.Core.Events.IEvent' EApp.Domain.Core.Events.IEventAggregator' EApp.Domain.Core.Events.IEventHandler,
 EApp.Domain.Core.Events,HandleAsynchronizationAttribute,0,0,0,0,0,4,0,0,0,-1,0,2,,EApp.Domain.Core.AggregateRoot' EApp.Domain.Core.Events.EventAggregator
-EApp.Domain.Core.Events,IEvent,0,0,1,0,0,7,0,1,1,-1,0,0,,
-EApp.Domain.Core.Events,IEventAggregator,0,11,0,0,0,23,11,1,0,-1,1,0,EApp.Domain.Core.Events.IEventHandler,
-EApp.Domain.Core.Events,IEventHandler,0,0,0,0,0,3,0,3,1,-1,0,3,,EApp.Domain.Core.AggregateRoot' EApp.Domain.Core.Events.EventAggregator' EApp.Domain.Core.Events.IEventAggregator
-EApp.Domain.Core.Repositories,IRepository,0,18,1,0,0,104,18,5,0,-1,2,7,EApp.Core.QuerySepcifications.ISpecification' EApp.Core.Query.SortOrder,EApp.Domain.Core.Repositories.RepositoryContext' EApp.Repositories.MongoDB.MongoDBRepositoryContext' EApp.Repositories.SQL.SqlRepositoryContext' EApp.Respositories.Dapper.DapperRepositoryContext' Xpress.Chat.Application.PostQueryService' Xpress.Chat.Services.QueryService' EApp.Tests.EAppRepositoryTests
-EApp.Domain.Core.Repositories,IRepositoryContext,0,4,1,0,0,9,4,5,1,-1,1,16,EApp.Domain.Core.Repositories.IRepositoryPersistence,EApp.Domain.Core.Application.ApplicationService' EApp.Domain.Core.Repositories.Repository<TAggregateRoot>' EApp.Repositories.MongoDB.MongoDBRepository<TAggregateRoot>' EApp.Repositories.SQL.SqlRepository<TAggregateRoot>' EApp.Respositories.Dapper.DapperRepository<TAggregateRoot>' Xpress.Chat.Application.PostQueryService' Xpress.Chat.Application.PostService' Xpress.Chat.Domain.Events.PostDomainEventHandler' Xpress.Chat.Domain.Services.DomainService' Xpress.Chat.Repositories.CommentRepository' Xpress.Chat.Repositories.PostRepository' Xpress.Chat.Repositories.TopicRepository' Xpress.Chat.Repositories.UserRepository' Xpress.Chat.Services.QueryService' Xpress.Chat.Commands.PostPublishCommandHandler' EApp.Tests.EAppRepositoryTests
-EApp.Domain.Core.Repositories,IRepositoryPersistence,0,3,0,0,0,15,3,1,0,-1,0,2,,EApp.Domain.Core.Repositories.IRepositoryContext' EApp.Domain.Core.Repositories.RepositoryContext
-EApp.Domain.Core.Repositories,Repository<TAggregateRoot>,1,36,1,0,22,171,39,0,1,1,4,0,EApp.Domain.Core.Repositories.IRepositoryContext' EApp.Core.QuerySepcifications.ISpecification' EApp.Core.Query.SortOrder' EApp.Core.Query.IPagingResult,
-EApp.Domain.Core.Repositories,RepositoryContext,7,12,6,0,7,164,24,3,2,0,2,3,EApp.Domain.Core.Repositories.IRepository' EApp.Domain.Core.Repositories.IRepositoryPersistence,EApp.Repositories.MongoDB.MongoDBRepositoryContext' EApp.Repositories.SQL.SqlRepositoryContext' EApp.Respositories.Dapper.DapperRepositoryContext
+EApp.Domain.Core.Events,IEvent,0,0,1,0,0,7,0,1,1,-1,1,8,EApp.Domain.Core.IEntity,EApp.Domain.Core.Events.IDomainEvent' EApp.Domain.Core.Events.ActionDelegateEventHandler<TEvent>' EApp.Domain.Core.AggregateRoot' EApp.Domain.Core.Events.IEventHandler' EApp.Domain.Core.Bus.IEventBus' EApp.Domain.Core.Bus.EventBus' EApp.Domain.Core.Events.EventAggregator' EApp.Domain.Core.Events.IEventAggregator
+EApp.Domain.Core.Events,IEventAggregator,0,11,0,0,0,23,11,1,0,-1,2,1,EApp.Domain.Core.Events.IEvent' EApp.Domain.Core.Events.IEventHandler,EApp.Domain.Core.Events.EventAggregator
+EApp.Domain.Core.Events,IEventHandler,0,0,0,0,0,3,0,3,1,-1,2,5,EApp.Domain.Core.IHandler' EApp.Domain.Core.Events.IEvent,EApp.Domain.Core.Events.IDomainEventHandler' EApp.Domain.Core.Events.ActionDelegateEventHandler<TEvent>' EApp.Domain.Core.Events.IEventAggregator' EApp.Domain.Core.AggregateRoot' EApp.Domain.Core.Events.EventAggregator
+EApp.Domain.Core.Repositories,IRepository,0,18,1,0,0,104,18,5,0,-1,2,3,EApp.Domain.Core.IAggregateRoot' EApp.Domain.Core.Repositories.IRepositoryContext,EApp.Domain.Core.Repositories.Repository<TAggregateRoot>' EApp.Domain.Core.Repositories.IRepositoryContext' EApp.Domain.Core.Repositories.RepositoryContext
+EApp.Domain.Core.Repositories,IRepositoryContext,0,4,1,0,0,9,4,5,1,-1,3,4,EApp.Domain.Core.IAggregateRoot' EApp.Domain.Core.Repositories.IRepository' EApp.Domain.Core.Repositories.IRepositoryPersistence,EApp.Domain.Core.Repositories.IRepository' EApp.Domain.Core.Repositories.RepositoryContext' EApp.Domain.Core.Repositories.Repository<TAggregateRoot>' EApp.Domain.Core.Application.ApplicationService
+EApp.Domain.Core.Repositories,IRepositoryPersistence,0,3,0,0,0,15,3,1,0,-1,0,3,,EApp.Domain.Core.Repositories.Repository<TAggregateRoot>' EApp.Domain.Core.Repositories.IRepositoryContext' EApp.Domain.Core.Repositories.RepositoryContext
+EApp.Domain.Core.Repositories,Repository<TAggregateRoot>,1,36,1,0,22,171,39,0,1,1,4,0,EApp.Domain.Core.IAggregateRoot' EApp.Domain.Core.Repositories.IRepository' EApp.Domain.Core.Repositories.IRepositoryContext' EApp.Domain.Core.Repositories.IRepositoryPersistence,
+EApp.Domain.Core.Repositories,RepositoryContext,7,12,6,0,7,164,25,3,2,0,4,0,EApp.Domain.Core.IAggregateRoot' EApp.Domain.Core.Repositories.IRepository' EApp.Domain.Core.Repositories.IRepositoryContext' EApp.Domain.Core.Repositories.IRepositoryPersistence,

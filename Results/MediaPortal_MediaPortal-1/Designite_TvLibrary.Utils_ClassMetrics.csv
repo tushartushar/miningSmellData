@@ -1,0 +1,49 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+OSInfo,OSInfo,4,27,9,0,18,936,82,0,0,0.11,0,1,,OSPrerequisites.OSPrerequisites
+OSInfo,OSVERSIONINFOEX,11,0,0,11,0,15,0,0,0,-1,0,1,,OSInfo.OSInfo
+OSInfo,NTProductType,0,0,0,0,0,6,0,0,0,-1,0,1,,OSInfo.OSInfo
+OSInfo,SuiteFlags,0,0,0,0,0,20,0,0,0,-1,0,1,,OSInfo.OSInfo
+OSInfo,ProductType,0,0,0,0,0,142,0,0,0,-1,0,1,,OSInfo.OSInfo
+OSInfo,VersionTypeFlags,0,0,0,0,0,12,0,0,0,-1,0,1,,OSInfo.OSInfo
+OSInfo,ConditionType,0,0,0,0,0,10,0,0,0,-1,0,1,,OSInfo.OSInfo
+OSInfo,OSList,0,0,0,0,0,63,0,0,0,-1,0,1,,OSInfo.OSInfo
+OSInfo,OsSupport,0,0,0,0,0,15,0,0,0,-1,0,2,,OSInfo.OSInfo' OSPrerequisites.OSPrerequisites
+OSInfo,GenericDescriptionExtension,0,1,0,0,1,9,1,0,0,-1,0,0,,
+OSPrerequisites,OSPrerequisites,3,1,0,0,1,50,8,0,0,0,0,0,,
+MediaPortal.Utils.Time,BasicTime,2,6,2,0,5,285,14,0,0,0,0,1,,MediaPortal.Utils.Time.TimeRange
+MediaPortal.Utils.Time,TimeZoneDate,4,0,0,4,0,7,0,0,0,-1,0,2,,MediaPortal.Utils.Time.TimeZoneInfo' MediaPortal.Utils.Time.WorldTimeZone
+MediaPortal.Utils.Time,TimeZoneInfo,8,0,0,8,0,12,0,0,0,-1,1,1,MediaPortal.Utils.Time.TimeZoneDate,MediaPortal.Utils.Time.WorldTimeZone
+MediaPortal.Utils.Time,TimeRange,3,5,2,0,5,110,13,0,0,0,1,0,MediaPortal.Utils.Time.BasicTime,
+MediaPortal.Utils.Time,WorldDateTime,7,21,8,0,18,474,41,0,0,0.24,1,0,MediaPortal.Utils.Time.WorldTimeZone,
+MediaPortal.Utils.Time,WorldTimeZone,13,12,2,0,9,383,42,0,0,0.17,2,1,MediaPortal.Utils.Time.TimeZoneDate' MediaPortal.Utils.Time.TimeZoneInfo,MediaPortal.Utils.Time.WorldDateTime
+Mediaportal.Util,FileUtils,0,1,0,0,1,43,8,0,0,-1,0,0,,
+MediaPortal.Utils.Web,CheckConnections,2,2,4,0,0,95,2,0,0,0,1,0,MediaPortal.Utils.Web.ConnectionState,
+MediaPortal.Utils.Web,ConnectionState,0,0,0,0,0,10,0,0,0,-1,0,1,,MediaPortal.Utils.Web.CheckConnections
+MediaPortal.Utils.Web,MatchTagCollection,0,1,0,0,1,15,1,0,0,-1,1,3,MediaPortal.Utils.Web.MatchTag,MediaPortal.Utils.Web.HtmlString' MediaPortal.Utils.Web.HtmlSectionParser' MediaPortal.Utils.Web.HtmlProfiler
+MediaPortal.Utils.Web,HtmlString,0,6,0,0,4,141,18,0,0,-1,2,3,MediaPortal.Utils.Web.MatchTagCollection' MediaPortal.Utils.Web.MatchTag,MediaPortal.Utils.Web.HtmlProfiler' MediaPortal.Utils.Web.HtmlSectionParser' MediaPortal.Utils.Web.HtmlParser
+MediaPortal.Utils.Web,MatchTag,5,3,5,0,3,69,6,0,0,0,0,4,,MediaPortal.Utils.Web.HtmlSectionParser' MediaPortal.Utils.Web.MatchTagCollection' MediaPortal.Utils.Web.HtmlProfiler' MediaPortal.Utils.Web.HtmlString
+MediaPortal.Utils.Web,AsyncGetRequest,2,4,0,1,2,117,9,0,0,0,0,0,,
+MediaPortal.Utils.Web,IHttpStatistics,0,4,1,0,0,37,4,1,0,-1,1,2,MediaPortal.Utils.Web.SiteStatistics,MediaPortal.Utils.Web.HttpStatistics' MediaPortal.Utils.Web.HTTPTransaction
+MediaPortal.Utils.Web,HTTPRequest,9,14,11,0,13,182,19,0,0,0.14,0,5,,MediaPortal.Utils.Web.HTTPTransaction' MediaPortal.Utils.Web.HtmlParser' MediaPortal.Utils.Web.IHtmlCache' MediaPortal.Utils.Web.HTMLCache' MediaPortal.Utils.Web.HTMLPage
+MediaPortal.Utils.Web,HTTPAuth,1,3,0,0,3,41,5,0,1,0.67,1,0,MediaPortal.Utils.Web.IHttpAuthentication,
+MediaPortal.Utils.Web,HTMLCache,4,9,2,0,6,147,17,0,1,0.22,3,1,MediaPortal.Utils.Web.HTTPRequest' MediaPortal.Utils.Web.Mode' MediaPortal.Utils.Web.IHtmlCache,MediaPortal.Utils.Web.IHtmlCache
+MediaPortal.Utils.Web,Mode,0,0,0,0,0,6,0,0,0,-1,0,2,,MediaPortal.Utils.Web.IHtmlCache' MediaPortal.Utils.Web.HTMLCache
+MediaPortal.Utils.Web,HTMLPage,7,7,3,0,5,221,20,0,0,0,3,1,MediaPortal.Utils.Web.HTTPRequest' MediaPortal.Utils.Web.HTTPTransaction' MediaPortal.Utils.Web.IHtmlCache,MediaPortal.Utils.Web.HtmlParser
+MediaPortal.Utils.Web,HttpStatistics,1,5,1,0,5,101,10,0,1,0.4,2,0,MediaPortal.Utils.Web.IHttpStatistics' MediaPortal.Utils.Web.SiteStatistics,
+MediaPortal.Utils.Web,HTTPTransaction,9,7,1,0,6,236,23,0,0,0,3,1,MediaPortal.Utils.Web.IHttpStatistics' MediaPortal.Utils.Web.HTTPRequest' MediaPortal.Utils.Web.IHttpAuthentication,MediaPortal.Utils.Web.HTMLPage
+MediaPortal.Utils.Web,IHtmlCache,0,4,2,0,0,39,4,1,0,-1,3,2,MediaPortal.Utils.Web.HTTPRequest' MediaPortal.Utils.Web.HTMLCache' MediaPortal.Utils.Web.Mode,MediaPortal.Utils.Web.HTMLCache' MediaPortal.Utils.Web.HTMLPage
+MediaPortal.Utils.Web,IHttpAuthentication,0,2,0,0,0,15,2,1,0,-1,0,2,,MediaPortal.Utils.Web.HTTPAuth' MediaPortal.Utils.Web.HTTPTransaction
+MediaPortal.Utils.Web,SiteStatistics,4,4,4,0,4,98,5,0,0,0,0,2,,MediaPortal.Utils.Web.IHttpStatistics' MediaPortal.Utils.Web.HttpStatistics
+MediaPortal.Utils.Web,HtmlSectionMatch,2,0,0,2,0,8,0,0,0,-1,0,1,,MediaPortal.Utils.Web.HtmlSectionTemplate
+MediaPortal.Utils.Web,HtmlSectionTemplate,3,0,0,3,0,9,0,0,0,-1,1,3,MediaPortal.Utils.Web.HtmlSectionMatch,MediaPortal.Utils.Web.HtmlParserTemplate' MediaPortal.Utils.Web.HtmlProfiler' MediaPortal.Utils.Web.HtmlSectionParser
+MediaPortal.Utils.Web,HtmlParserTemplate,4,0,0,4,0,10,0,0,0,-1,1,1,MediaPortal.Utils.Web.HtmlSectionTemplate,MediaPortal.Utils.Web.HtmlParser
+MediaPortal.Utils.Web,HtmlParser,6,8,0,0,7,307,40,0,0,0,7,0,MediaPortal.Utils.Web.HtmlString' MediaPortal.Utils.Web.HTTPRequest' MediaPortal.Utils.Web.HTMLPage' MediaPortal.Utils.Web.HtmlParserTemplate' MediaPortal.Utils.Web.HtmlProfiler' MediaPortal.Utils.Web.IParserData' MediaPortal.Utils.Web.HtmlSectionParser,
+MediaPortal.Utils.Web,HtmlProfiler,5,4,0,0,3,133,14,0,0,0,5,1,MediaPortal.Utils.Web.MatchTagCollection' MediaPortal.Utils.Web.HtmlString' MediaPortal.Utils.Web.MatchTag' MediaPortal.Utils.Web.HtmlSectionTemplate' MediaPortal.Utils.Web.Profile,MediaPortal.Utils.Web.HtmlParser
+MediaPortal.Utils.Web,Profile,2,0,0,2,0,5,0,0,0,-1,0,1,,MediaPortal.Utils.Web.HtmlProfiler
+MediaPortal.Utils.Web,IParserData,0,1,0,0,0,9,1,1,0,-1,0,3,,MediaPortal.Utils.Web.ParserData' MediaPortal.Utils.Web.HtmlSectionParser' MediaPortal.Utils.Web.HtmlParser
+MediaPortal.Utils.Web,ParserData,1,5,1,0,5,77,7,0,1,0,1,0,MediaPortal.Utils.Web.IParserData,
+MediaPortal.Utils.Web,HtmlSectionParser,3,6,0,0,2,400,53,0,0,0,8,1,MediaPortal.Utils.Web.MatchTagCollection' MediaPortal.Utils.Web.HtmlString' MediaPortal.Utils.Web.MatchTag' MediaPortal.Utils.Web.HtmlSectionTemplate' MediaPortal.Utils.Web.IParserData' MediaPortal.Utils.Web.DataField' MediaPortal.Utils.Web.Sections' MediaPortal.Utils.Web.ElementData,MediaPortal.Utils.Web.HtmlParser
+MediaPortal.Utils.Web,DataField,5,1,0,5,1,19,2,0,0,0,0,1,,MediaPortal.Utils.Web.HtmlSectionParser
+MediaPortal.Utils.Web,Sections,4,0,0,4,0,7,0,0,0,-1,0,1,,MediaPortal.Utils.Web.HtmlSectionParser
+MediaPortal.Utils.Web,ElementData,3,0,0,3,0,6,0,0,0,-1,0,1,,MediaPortal.Utils.Web.HtmlSectionParser
+MediaPortal.Utils.Xml,XmlNoNamespaceWriter,1,6,0,0,6,89,9,0,0,0.67,0,0,,

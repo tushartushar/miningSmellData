@@ -1,17 +1,17 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 _01aScaffolding,BundleConfig,0,1,0,0,1,21,1,0,0,-1,0,1,,_01aScaffolding.MvcApplication
 _01aScaffolding,FilterConfig,0,1,0,0,1,7,1,0,0,-1,0,1,,_01aScaffolding.MvcApplication
-_01aScaffolding,EmailService,0,1,0,0,1,8,1,0,0,-1,0,0,,
-_01aScaffolding,SmsService,0,1,0,0,1,8,1,0,0,-1,0,0,,
-_01aScaffolding,ApplicationUserManager,0,2,0,0,2,50,3,0,0,-1,0,4,,_01aScaffolding.ApplicationSignInManager' _01aScaffolding.Startup' _01aScaffolding.Controllers.AccountController' _01aScaffolding.Controllers.ManageController
+_01aScaffolding,EmailService,0,1,0,0,1,8,1,0,0,-1,0,1,,_01aScaffolding.ApplicationUserManager
+_01aScaffolding,SmsService,0,1,0,0,1,8,1,0,0,-1,0,1,,_01aScaffolding.ApplicationUserManager
+_01aScaffolding,ApplicationUserManager,0,2,0,0,2,50,3,0,0,-1,4,4,_01aScaffolding.EmailService' _01aScaffolding.SmsService' _01aScaffolding.Models.ApplicationUser' _01aScaffolding.Models.ApplicationDbContext,_01aScaffolding.Controllers.ManageController' _01aScaffolding.Controllers.AccountController' _01aScaffolding.Startup' _01aScaffolding.ApplicationSignInManager
 _01aScaffolding,ApplicationSignInManager,0,3,0,0,3,15,3,0,0,-1,2,3,_01aScaffolding.ApplicationUserManager' _01aScaffolding.Models.ApplicationUser,_01aScaffolding.Startup' _01aScaffolding.Controllers.AccountController' _01aScaffolding.Controllers.ManageController
 _01aScaffolding,RouteConfig,0,1,0,0,1,12,1,0,0,-1,0,1,,_01aScaffolding.MvcApplication
-_01aScaffolding,Startup,0,2,0,0,2,55,2,0,0,-1,3,0,_01aScaffolding.Models.ApplicationDbContext' _01aScaffolding.ApplicationUserManager' _01aScaffolding.ApplicationSignInManager,
-_01aScaffolding,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,_01aScaffolding.FilterConfig' _01aScaffolding.RouteConfig' _01aScaffolding.BundleConfig,
-_01aScaffolding.Controllers,AccountController,3,25,3,0,22,425,53,0,0,0.84,11,0,_01aScaffolding.ApplicationSignInManager' _01aScaffolding.ApplicationUserManager' _01aScaffolding.Models.LoginViewModel' _01aScaffolding.Models.VerifyCodeViewModel' _01aScaffolding.Models.ApplicationUser' _01aScaffolding.Models.RegisterViewModel' _01aScaffolding.Models.ForgotPasswordViewModel' _01aScaffolding.Models.ResetPasswordViewModel' _01aScaffolding.Controllers.ChallengeResult' _01aScaffolding.Models.SendCodeViewModel' _01aScaffolding.Models.ExternalLoginConfirmationViewModel,
-_01aScaffolding.Controllers,ChallengeResult,0,3,3,0,3,25,4,0,0,-1,0,2,,_01aScaffolding.Controllers.AccountController' _01aScaffolding.Controllers.ManageController
+_01aScaffolding,Startup,0,2,0,0,2,55,2,0,0,-1,4,0,_01aScaffolding.ApplicationUserManager' _01aScaffolding.ApplicationSignInManager' _01aScaffolding.Models.ApplicationUser' _01aScaffolding.Models.ApplicationDbContext,
+_01aScaffolding,MvcApplication,0,1,0,0,0,10,1,0,0,-1,3,0,_01aScaffolding.BundleConfig' _01aScaffolding.FilterConfig' _01aScaffolding.RouteConfig,
+_01aScaffolding.Controllers,AccountController,3,25,3,0,22,425,58,0,0,0.84,11,1,_01aScaffolding.ApplicationUserManager' _01aScaffolding.ApplicationSignInManager' _01aScaffolding.Controllers.ChallengeResult' _01aScaffolding.Models.ExternalLoginConfirmationViewModel' _01aScaffolding.Models.SendCodeViewModel' _01aScaffolding.Models.VerifyCodeViewModel' _01aScaffolding.Models.LoginViewModel' _01aScaffolding.Models.RegisterViewModel' _01aScaffolding.Models.ResetPasswordViewModel' _01aScaffolding.Models.ForgotPasswordViewModel' _01aScaffolding.Models.ApplicationUser,_01aScaffolding.Controllers.ManageController
+_01aScaffolding.Controllers,ChallengeResult,0,3,3,0,3,25,4,0,0,-1,0,2,,_01aScaffolding.Controllers.ManageController' _01aScaffolding.Controllers.AccountController
 _01aScaffolding.Controllers,HomeController,0,3,0,0,3,17,3,0,0,-1,0,0,,
-_01aScaffolding.Controllers,ManageController,3,22,3,0,18,343,45,0,0,0.95,9,0,_01aScaffolding.ApplicationSignInManager' _01aScaffolding.ApplicationUserManager' _01aScaffolding.Models.IndexViewModel' _01aScaffolding.Controllers.ManageMessageId' _01aScaffolding.Models.AddPhoneNumberViewModel' _01aScaffolding.Models.VerifyPhoneNumberViewModel' _01aScaffolding.Models.ChangePasswordViewModel' _01aScaffolding.Models.SetPasswordViewModel' _01aScaffolding.Controllers.ChallengeResult,
+_01aScaffolding.Controllers,ManageController,3,22,3,0,18,343,45,0,0,0.95,11,0,_01aScaffolding.ApplicationUserManager' _01aScaffolding.ApplicationSignInManager' _01aScaffolding.Controllers.AccountController' _01aScaffolding.Controllers.ChallengeResult' _01aScaffolding.Controllers.ManageMessageId' _01aScaffolding.Models.IndexViewModel' _01aScaffolding.Models.ManageLoginsViewModel' _01aScaffolding.Models.SetPasswordViewModel' _01aScaffolding.Models.ChangePasswordViewModel' _01aScaffolding.Models.AddPhoneNumberViewModel' _01aScaffolding.Models.VerifyPhoneNumberViewModel,
 _01aScaffolding.Controllers,ManageMessageId,0,0,0,0,0,10,0,0,0,-1,0,1,,_01aScaffolding.Controllers.ManageController
 _01aScaffolding.Models,ExternalLoginConfirmationViewModel,0,0,1,0,0,6,0,0,0,-1,0,1,,_01aScaffolding.Controllers.AccountController
 _01aScaffolding.Models,ExternalLoginListViewModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
@@ -22,10 +22,10 @@ _01aScaffolding.Models,LoginViewModel,0,0,3,0,0,13,0,0,0,-1,0,1,,_01aScaffolding
 _01aScaffolding.Models,RegisterViewModel,0,0,3,0,0,16,0,0,0,-1,0,1,,_01aScaffolding.Controllers.AccountController
 _01aScaffolding.Models,ResetPasswordViewModel,0,0,4,0,0,17,0,0,0,-1,0,1,,_01aScaffolding.Controllers.AccountController
 _01aScaffolding.Models,ForgotPasswordViewModel,0,0,1,0,0,7,0,0,0,-1,0,1,,_01aScaffolding.Controllers.AccountController
-_01aScaffolding.Models,ApplicationUser,0,1,0,0,1,10,1,0,0,-1,0,2,,_01aScaffolding.ApplicationSignInManager' _01aScaffolding.Controllers.AccountController
-_01aScaffolding.Models,ApplicationDbContext,0,2,0,0,2,11,2,0,0,-1,0,1,,_01aScaffolding.Startup
+_01aScaffolding.Models,ApplicationUser,0,1,0,0,1,10,1,0,0,-1,0,5,,_01aScaffolding.Startup' _01aScaffolding.Models.ApplicationDbContext' _01aScaffolding.Controllers.AccountController' _01aScaffolding.ApplicationUserManager' _01aScaffolding.ApplicationSignInManager
+_01aScaffolding.Models,ApplicationDbContext,0,2,0,0,2,11,2,0,0,-1,1,2,_01aScaffolding.Models.ApplicationUser,_01aScaffolding.Startup' _01aScaffolding.ApplicationUserManager
 _01aScaffolding.Models,IndexViewModel,0,0,5,0,0,8,0,0,0,-1,0,1,,_01aScaffolding.Controllers.ManageController
-_01aScaffolding.Models,ManageLoginsViewModel,0,0,2,0,0,5,0,0,0,-1,0,0,,
+_01aScaffolding.Models,ManageLoginsViewModel,0,0,2,0,0,5,0,0,0,-1,0,1,,_01aScaffolding.Controllers.ManageController
 _01aScaffolding.Models,FactorViewModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
 _01aScaffolding.Models,SetPasswordViewModel,0,0,2,0,0,12,0,0,0,-1,0,1,,_01aScaffolding.Controllers.ManageController
 _01aScaffolding.Models,ChangePasswordViewModel,0,0,3,0,0,16,0,0,0,-1,0,1,,_01aScaffolding.Controllers.ManageController

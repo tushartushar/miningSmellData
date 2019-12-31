@@ -1,47 +1,47 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-TfsHipChat.Configuration,ConfigurationProvider,1,2,2,0,1,38,2,0,1,0,1,2,TfsHipChat.Configuration.TfsHipChatConfig,TfsHipChat.Console.Program' TfsHipChat.WindowsService.TfsHipChatService
-TfsHipChat.Configuration,IConfigurationProvider,0,1,1,0,0,5,1,1,0,-1,0,4,,TfsHipChat.HipChatNotifier' TfsHipChat.NotificationHandler' TfsHipChat.Console.Program' TfsHipChat.Tests.NotificationHandlerTests
-TfsHipChat.Configuration,TfsHipChatConfig,0,0,3,0,0,6,0,0,0,-1,0,4,,TfsHipChat.Configuration.ConfigurationProvider' TfsHipChat.HipChatNotifier' TfsHipChat.NotificationHandler' TfsHipChat.Tests.NotificationHandlerTests
-TfsHipChat.Configuration,TeamProjectMapping,0,1,3,0,1,24,1,0,0,-1,0,2,,TfsHipChat.NotificationHandler' TfsHipChat.Tests.Configuration.TeamProjectMappingTests
-TfsHipChat.Configuration,Notification,0,0,0,0,0,6,0,0,0,-1,0,2,,TfsHipChat.NotificationHandler' TfsHipChat.Tests.NotificationHandlerTests
-TfsHipChat,HipChatNotifier,2,4,0,0,4,39,4,0,1,0,4,2,TfsHipChat.Configuration.IConfigurationProvider' TfsHipChat.Configuration.TfsHipChatConfig' TfsHipChat.Tfs.Events.CheckinEvent' TfsHipChat.Tfs.Events.BuildCompletionEvent,TfsHipChat.Console.Program' TfsHipChat.WindowsService.TfsHipChatService
-TfsHipChat,IEventService,0,1,0,0,0,7,1,1,0,-1,0,0,,
-TfsHipChat,INotificationHandler,0,2,0,0,0,5,2,1,0,-1,2,1,TfsHipChat.Tfs.Events.CheckinEvent' TfsHipChat.Tfs.Events.BuildCompletionEvent,TfsHipChat.TfsHipChatEventService
-TfsHipChat,IHipChatNotifier,0,3,0,0,0,6,3,1,0,-1,2,1,TfsHipChat.Tfs.Events.CheckinEvent' TfsHipChat.Tfs.Events.BuildCompletionEvent,TfsHipChat.NotificationHandler
-TfsHipChat,NotificationHandler,2,5,0,0,3,56,10,0,1,0,7,3,TfsHipChat.IHipChatNotifier' TfsHipChat.Configuration.IConfigurationProvider' TfsHipChat.Configuration.TeamProjectMapping' TfsHipChat.Tfs.Events.CheckinEvent' TfsHipChat.Configuration.Notification' TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Configuration.TfsHipChatConfig,TfsHipChat.Console.Program' TfsHipChat.WindowsService.TfsHipChatService' TfsHipChat.Tests.NotificationHandlerTests
-TfsHipChat,TfsHipChatEventService,1,5,0,0,2,87,6,0,1,0.4,7,1,TfsHipChat.INotificationHandler' TfsHipChat.Tfs.Events.BuildCompletedEvent' TfsHipChat.Tfs.Events.BuildDetail' TfsHipChat.Tfs.Events.BuildStatus' TfsHipChat.Tfs.Events.BuildController' TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Tfs.Events.BuildCompletionEvent2,TfsHipChat.Tests.TfsHipChatEventServiceTests
-TfsHipChat.Tfs.Events,BuildCompletedEvent,0,0,14,0,0,18,0,0,0,-1,0,1,,TfsHipChat.TfsHipChatEventService
-TfsHipChat.Tfs.Events,BuildCompletionEvent,0,1,14,0,1,23,1,0,0,-1,1,7,TfsHipChat.Tfs.StandardDomainUserNameFormatter,TfsHipChat.HipChatNotifier' TfsHipChat.INotificationHandler' TfsHipChat.IHipChatNotifier' TfsHipChat.NotificationHandler' TfsHipChat.TfsHipChatEventService' TfsHipChat.Tests.NotificationHandlerTests' TfsHipChat.Tests.Tfs.Events.BuildCompletionEventTests
+TfsHipChat.Configuration,ConfigurationProvider,1,2,2,0,1,38,2,0,1,0,2,0,TfsHipChat.Configuration.IConfigurationProvider' TfsHipChat.Configuration.TfsHipChatConfig,
+TfsHipChat.Configuration,IConfigurationProvider,0,1,1,0,0,5,1,1,0,-1,1,3,TfsHipChat.Configuration.TfsHipChatConfig,TfsHipChat.NotificationHandler' TfsHipChat.HipChatNotifier' TfsHipChat.Configuration.ConfigurationProvider
+TfsHipChat.Configuration,TfsHipChatConfig,0,0,3,0,0,6,0,0,0,-1,1,2,TfsHipChat.Configuration.TeamProjectMapping,TfsHipChat.Configuration.IConfigurationProvider' TfsHipChat.Configuration.ConfigurationProvider
+TfsHipChat.Configuration,TeamProjectMapping,0,1,3,0,1,24,1,0,0,-1,1,2,TfsHipChat.Configuration.Notification,TfsHipChat.NotificationHandler' TfsHipChat.Configuration.TfsHipChatConfig
+TfsHipChat.Configuration,Notification,0,0,0,0,0,6,0,0,0,-1,0,2,,TfsHipChat.Configuration.TeamProjectMapping' TfsHipChat.NotificationHandler
+TfsHipChat,HipChatNotifier,2,4,0,0,4,39,4,0,1,0,4,0,TfsHipChat.Configuration.IConfigurationProvider' TfsHipChat.IHipChatNotifier' TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Tfs.Events.CheckinEvent,
+TfsHipChat,IEventService,0,1,0,0,0,7,1,1,0,-1,0,1,,TfsHipChat.TfsHipChatEventService
+TfsHipChat,INotificationHandler,0,2,0,0,0,5,2,1,0,-1,2,2,TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Tfs.Events.CheckinEvent,TfsHipChat.NotificationHandler' TfsHipChat.TfsHipChatEventService
+TfsHipChat,IHipChatNotifier,0,3,0,0,0,6,3,1,0,-1,2,2,TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Tfs.Events.CheckinEvent,TfsHipChat.HipChatNotifier' TfsHipChat.NotificationHandler
+TfsHipChat,NotificationHandler,2,5,0,0,3,56,10,0,1,0,7,0,TfsHipChat.Configuration.IConfigurationProvider' TfsHipChat.Configuration.TeamProjectMapping' TfsHipChat.Configuration.Notification' TfsHipChat.INotificationHandler' TfsHipChat.IHipChatNotifier' TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Tfs.Events.CheckinEvent,
+TfsHipChat,TfsHipChatEventService,1,5,0,0,2,87,9,0,1,0.4,7,0,TfsHipChat.IEventService' TfsHipChat.INotificationHandler' TfsHipChat.Tfs.Events.BuildCompletedEvent' TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Tfs.Events.BuildCompletionEvent2' TfsHipChat.Tfs.Events.BuildStatus' TfsHipChat.Tfs.Events.CheckinEvent,
+TfsHipChat.Tfs.Events,BuildCompletedEvent,0,0,14,0,0,18,0,0,0,-1,4,1,TfsHipChat.Tfs.Events.BuildController' TfsHipChat.Tfs.Events.BuildDefinition' TfsHipChat.Tfs.Events.BuildDetail' TfsHipChat.Tfs.Events.QueuedBuild,TfsHipChat.TfsHipChatEventService
+TfsHipChat.Tfs.Events,BuildCompletionEvent,0,1,14,0,1,23,1,0,0,-1,1,5,TfsHipChat.Tfs.StandardDomainUserNameFormatter,TfsHipChat.INotificationHandler' TfsHipChat.NotificationHandler' TfsHipChat.HipChatNotifier' TfsHipChat.IHipChatNotifier' TfsHipChat.TfsHipChatEventService
 TfsHipChat.Tfs.Events,BuildCompletionEvent2,0,0,27,0,0,31,0,0,0,-1,0,1,,TfsHipChat.TfsHipChatEventService
-TfsHipChat.Tfs.Events,BuildController,0,0,15,0,0,32,0,0,0,-1,0,1,,TfsHipChat.TfsHipChatEventService
-TfsHipChat.Tfs.Events,BuildDefinition,0,0,19,0,0,35,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,BuildDefinitionSourceProvider,0,0,3,0,0,8,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,BuildDetail,0,0,25,0,0,50,0,0,0,-1,0,1,,TfsHipChat.TfsHipChatEventService
-TfsHipChat.Tfs.Events,BuildInformationNode,0,0,6,0,0,14,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,BuildPhaseStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,BuildReason,0,0,0,0,0,17,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,BuildStatus,0,0,0,0,0,12,0,0,0,-1,0,1,,TfsHipChat.TfsHipChatEventService
-TfsHipChat.Tfs.Events,CheckinEvent,0,2,17,0,2,47,3,0,0,-1,1,6,TfsHipChat.Tfs.StandardDomainUserNameFormatter,TfsHipChat.HipChatNotifier' TfsHipChat.INotificationHandler' TfsHipChat.IHipChatNotifier' TfsHipChat.NotificationHandler' TfsHipChat.Tests.NotificationHandlerTests' TfsHipChat.Tests.Tfs.Events.CheckinEventTests
-TfsHipChat.Tfs.Events,NameValuePair,0,0,2,0,0,7,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,ClientArtifact,0,0,8,0,0,19,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,ControllerStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,DefinitionQueueStatus,0,0,0,0,0,6,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,DefinitionTriggerType,0,0,0,0,0,12,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,DeleteOptions,0,0,0,0,0,11,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,GetOption,0,0,0,0,0,6,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,InformationField,0,0,2,0,0,7,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,NameValueField,0,0,2,0,0,6,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,ProcessTemplate,0,0,9,0,0,19,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,ProcessTemplateType,0,0,0,0,0,6,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,QueuedBuild,0,1,20,0,1,45,1,0,0,-1,1,0,TfsHipChat.Tfs.Events.QueuePriority,
+TfsHipChat.Tfs.Events,BuildController,0,0,15,0,0,32,0,0,0,-1,1,1,TfsHipChat.Tfs.Events.ControllerStatus,TfsHipChat.Tfs.Events.BuildCompletedEvent
+TfsHipChat.Tfs.Events,BuildDefinition,0,0,19,0,0,35,0,0,0,-1,7,1,TfsHipChat.Tfs.Events.BuildDefinitionSourceProvider' TfsHipChat.Tfs.Events.DefinitionQueueStatus' TfsHipChat.Tfs.Events.DefinitionTriggerType' TfsHipChat.Tfs.Events.ProcessTemplate' TfsHipChat.Tfs.Events.RetensionPolicy' TfsHipChat.Tfs.Events.Schedule' TfsHipChat.Tfs.Events.WorkspaceTemplate,TfsHipChat.Tfs.Events.BuildCompletedEvent
+TfsHipChat.Tfs.Events,BuildDefinitionSourceProvider,0,0,3,0,0,8,0,0,0,-1,2,1,TfsHipChat.Tfs.Events.DefinitionTriggerType' TfsHipChat.Tfs.Events.NameValueField,TfsHipChat.Tfs.Events.BuildDefinition
+TfsHipChat.Tfs.Events,BuildDetail,0,0,25,0,0,50,0,0,0,-1,4,1,TfsHipChat.Tfs.Events.BuildInformationNode' TfsHipChat.Tfs.Events.BuildPhaseStatus' TfsHipChat.Tfs.Events.BuildReason' TfsHipChat.Tfs.Events.BuildStatus,TfsHipChat.Tfs.Events.BuildCompletedEvent
+TfsHipChat.Tfs.Events,BuildInformationNode,0,0,6,0,0,14,0,0,0,-1,1,1,TfsHipChat.Tfs.Events.InformationField,TfsHipChat.Tfs.Events.BuildDetail
+TfsHipChat.Tfs.Events,BuildPhaseStatus,0,0,0,0,0,6,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.BuildDetail
+TfsHipChat.Tfs.Events,BuildReason,0,0,0,0,0,17,0,0,0,-1,0,4,,TfsHipChat.Tfs.Events.RetensionPolicy' TfsHipChat.Tfs.Events.ProcessTemplate' TfsHipChat.Tfs.Events.BuildDetail' TfsHipChat.Tfs.Events.QueuedBuild
+TfsHipChat.Tfs.Events,BuildStatus,0,0,0,0,0,12,0,0,0,-1,0,3,,TfsHipChat.Tfs.Events.RetensionPolicy' TfsHipChat.Tfs.Events.BuildDetail' TfsHipChat.TfsHipChatEventService
+TfsHipChat.Tfs.Events,CheckinEvent,0,2,17,0,2,47,3,0,0,-1,3,5,TfsHipChat.Tfs.Events.NameValuePair' TfsHipChat.Tfs.Events.ClientArtifact' TfsHipChat.Tfs.StandardDomainUserNameFormatter,TfsHipChat.INotificationHandler' TfsHipChat.HipChatNotifier' TfsHipChat.NotificationHandler' TfsHipChat.IHipChatNotifier' TfsHipChat.TfsHipChatEventService
+TfsHipChat.Tfs.Events,NameValuePair,0,0,2,0,0,7,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.CheckinEvent
+TfsHipChat.Tfs.Events,ClientArtifact,0,0,8,0,0,19,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.CheckinEvent
+TfsHipChat.Tfs.Events,ControllerStatus,0,0,0,0,0,6,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.BuildController
+TfsHipChat.Tfs.Events,DefinitionQueueStatus,0,0,0,0,0,6,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.BuildDefinition
+TfsHipChat.Tfs.Events,DefinitionTriggerType,0,0,0,0,0,12,0,0,0,-1,0,2,,TfsHipChat.Tfs.Events.BuildDefinitionSourceProvider' TfsHipChat.Tfs.Events.BuildDefinition
+TfsHipChat.Tfs.Events,DeleteOptions,0,0,0,0,0,11,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.RetensionPolicy
+TfsHipChat.Tfs.Events,GetOption,0,0,0,0,0,6,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.QueuedBuild
+TfsHipChat.Tfs.Events,InformationField,0,0,2,0,0,7,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.BuildInformationNode
+TfsHipChat.Tfs.Events,NameValueField,0,0,2,0,0,6,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.BuildDefinitionSourceProvider
+TfsHipChat.Tfs.Events,ProcessTemplate,0,0,9,0,0,19,0,0,0,-1,2,1,TfsHipChat.Tfs.Events.BuildReason' TfsHipChat.Tfs.Events.ProcessTemplateType,TfsHipChat.Tfs.Events.BuildDefinition
+TfsHipChat.Tfs.Events,ProcessTemplateType,0,0,0,0,0,6,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.ProcessTemplate
+TfsHipChat.Tfs.Events,QueuedBuild,0,1,20,0,1,45,1,0,0,-1,4,1,TfsHipChat.Tfs.Events.BuildReason' TfsHipChat.Tfs.Events.GetOption' TfsHipChat.Tfs.Events.QueuePriority' TfsHipChat.Tfs.Events.QueueStatus,TfsHipChat.Tfs.Events.BuildCompletedEvent
 TfsHipChat.Tfs.Events,QueuePriority,0,0,0,0,0,8,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.QueuedBuild
-TfsHipChat.Tfs.Events,QueueStatus,0,0,0,0,0,12,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,RetensionPolicy,0,0,4,0,0,11,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,Schedule,0,0,3,0,0,9,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,ScheduleDays,0,0,0,0,0,13,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,WorkspaceMapping,0,0,4,0,0,11,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,WorkspaceMappingType,0,0,0,0,0,5,0,0,0,-1,0,0,,
-TfsHipChat.Tfs.Events,WorkspaceTemplate,0,0,4,0,0,10,0,0,0,-1,0,0,,
-TfsHipChat.Tfs,IUserNameFormatter,0,2,0,0,0,5,2,1,0,-1,0,0,,
-TfsHipChat.Tfs,StandardDomainUserNameFormatter,1,2,0,0,2,20,3,0,1,0,0,3,,TfsHipChat.Tfs.Events.BuildCompletionEvent' TfsHipChat.Tfs.Events.CheckinEvent' TfsHipChat.Tests.Tfs.StandardDomainUserNameFormatterTests
-TfsHipChat.Tfs,TfsIdentity,0,0,1,0,0,7,0,0,0,-1,0,1,,TfsHipChat.Tests.Tfs.TfsIdentityTests
+TfsHipChat.Tfs.Events,QueueStatus,0,0,0,0,0,12,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.QueuedBuild
+TfsHipChat.Tfs.Events,RetensionPolicy,0,0,4,0,0,11,0,0,0,-1,3,1,TfsHipChat.Tfs.Events.BuildReason' TfsHipChat.Tfs.Events.BuildStatus' TfsHipChat.Tfs.Events.DeleteOptions,TfsHipChat.Tfs.Events.BuildDefinition
+TfsHipChat.Tfs.Events,Schedule,0,0,3,0,0,9,0,0,0,-1,1,1,TfsHipChat.Tfs.Events.ScheduleDays,TfsHipChat.Tfs.Events.BuildDefinition
+TfsHipChat.Tfs.Events,ScheduleDays,0,0,0,0,0,13,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.Schedule
+TfsHipChat.Tfs.Events,WorkspaceMapping,0,0,4,0,0,11,0,0,0,-1,1,1,TfsHipChat.Tfs.Events.WorkspaceMappingType,TfsHipChat.Tfs.Events.WorkspaceTemplate
+TfsHipChat.Tfs.Events,WorkspaceMappingType,0,0,0,0,0,5,0,0,0,-1,0,1,,TfsHipChat.Tfs.Events.WorkspaceMapping
+TfsHipChat.Tfs.Events,WorkspaceTemplate,0,0,4,0,0,10,0,0,0,-1,1,1,TfsHipChat.Tfs.Events.WorkspaceMapping,TfsHipChat.Tfs.Events.BuildDefinition
+TfsHipChat.Tfs,IUserNameFormatter,0,2,0,0,0,5,2,1,0,-1,0,1,,TfsHipChat.Tfs.StandardDomainUserNameFormatter
+TfsHipChat.Tfs,StandardDomainUserNameFormatter,1,2,0,0,2,20,3,0,1,0,1,2,TfsHipChat.Tfs.IUserNameFormatter,TfsHipChat.Tfs.Events.CheckinEvent' TfsHipChat.Tfs.Events.BuildCompletionEvent
+TfsHipChat.Tfs,TfsIdentity,0,0,1,0,0,7,0,0,0,-1,0,0,,

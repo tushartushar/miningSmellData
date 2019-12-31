@@ -1,0 +1,20 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+MassTransit.Transports.Tests,Credentials,6,0,0,6,0,10,0,0,0,-1,0,1,,MassTransit.Transports.Tests.TransportTest
+MassTransit.Transports.Tests,TransportTest,0,2,3,0,2,68,7,5,0,-1,1,5,MassTransit.Transports.Tests.Credentials,ErrorHandling.A_published_fault' ErrorHandling.A_serialization_exception' Publishing.Publishing_a_message' MassTransit.Transports.Tests.TypeCastRetry_Specs' Sending.Sending_a_message_to_an_endpoint
+MassTransit.Transports.Tests,TypeCastRetry_Specs,1,3,0,0,3,68,3,0,1,0.67,5,0,MassTransit.Transports.Tests.TransportTest' MassTransit.Transports.Tests.CreateCommand' MassTransit.Transports.Tests.ICommand' MassTransit.Transports.Tests.Command' MassTransit.Transports.Tests.CreateCommandConsumer,
+MassTransit.Transports.Tests,CreateCommand,0,1,2,0,1,11,1,0,1,-1,0,1,,MassTransit.Transports.Tests.TypeCastRetry_Specs
+MassTransit.Transports.Tests,ICommand,0,0,0,0,0,3,0,1,0,-1,0,1,,MassTransit.Transports.Tests.TypeCastRetry_Specs
+MassTransit.Transports.Tests,Command,0,0,0,0,0,4,0,1,1,-1,0,1,,MassTransit.Transports.Tests.TypeCastRetry_Specs
+MassTransit.Transports.Tests,CreateCommandConsumer,0,1,0,0,1,7,1,0,1,-1,0,1,,MassTransit.Transports.Tests.TypeCastRetry_Specs
+ErrorHandling,FailingCommand,0,0,1,0,0,4,0,0,0,-1,0,2,,ErrorHandling.A_published_fault' ErrorHandling.A_serialization_exception
+ErrorHandling,A_serialization_exception,4,19,0,0,19,187,21,0,1,0.16,3,0,MassTransit.Transports.Tests.TransportTest' ErrorHandling.FailingCommand' ErrorHandling.TestCommandConsumer,
+ErrorHandling,TestCommandConsumer,0,2,0,0,2,15,2,0,1,-1,0,2,,ErrorHandling.A_serialization_exception' ErrorHandling.A_published_fault
+ErrorHandling,A_published_fault,3,10,0,0,10,108,11,0,1,0.3,3,0,MassTransit.Transports.Tests.TransportTest' ErrorHandling.FailingCommand' ErrorHandling.TestCommandConsumer,
+MassTransit.Transports.Tests.Observers,PublishObserver,3,4,3,0,4,47,4,0,1,0,0,1,,Publishing.Publishing_a_message
+MassTransit.Transports.Tests.Observers,SendObserver,3,3,3,0,3,31,3,0,1,1,0,1,,Publishing.Publishing_a_message
+Publishing,TestEvent,0,0,1,0,0,4,0,0,0,-1,0,1,,Publishing.Publishing_a_message
+Publishing,Publishing_a_message,4,9,0,0,9,99,9,0,1,0.33,5,0,MassTransit.Transports.Tests.TransportTest' MassTransit.Transports.Tests.Observers.PublishObserver' MassTransit.Transports.Tests.Observers.SendObserver' Publishing.TestEvent' Publishing.TestCommandConsumer,
+Publishing,TestCommandConsumer,0,1,0,0,1,8,1,0,1,-1,0,1,,Publishing.Publishing_a_message
+Sending,TestCommand,0,0,1,0,0,4,0,0,0,-1,0,1,,Sending.Sending_a_message_to_an_endpoint
+Sending,Sending_a_message_to_an_endpoint,1,4,0,0,4,52,4,0,1,0.75,3,0,MassTransit.Transports.Tests.TransportTest' Sending.TestCommand' Sending.TestCommandConsumer,
+Sending,TestCommandConsumer,0,1,0,0,1,8,1,0,1,-1,0,1,,Sending.Sending_a_message_to_an_endpoint

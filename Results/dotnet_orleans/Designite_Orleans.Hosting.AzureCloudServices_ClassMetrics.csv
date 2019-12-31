@@ -1,13 +1,6 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Orleans.Runtime.Host,AzureClient,3,10,2,2,6,175,18,0,0,0.2,6,0,Orleans.Runtime.Host.IServiceRuntimeWrapper' Orleans.Runtime.Configuration.ClientConfiguration' Orleans.GrainClient' Orleans.Runtime.Configuration.GatewayProviderType' Orleans.Runtime.LogFormatter' Orleans.Runtime.Host.AzureConstants,
-Orleans.Runtime.Host,AzureConfigUtils,1,2,3,0,0,136,5,0,0,1,1,0,Orleans.Runtime.Utils,
-Orleans.Runtime.Host,AzureConstants,5,0,0,5,0,8,0,0,0,-1,0,2,,Orleans.Runtime.Host.AzureClient' Orleans.Runtime.Host.AzureSilo
-Orleans.Runtime.Host,AzureSilo,7,16,5,0,10,302,27,0,0,0.19,18,0,Orleans.Runtime.Host.SiloHost' Orleans.AzureUtils.OrleansSiloInstanceManager' Orleans.AzureUtils.SiloInstanceTableEntry' Orleans.Runtime.Host.IServiceRuntimeWrapper' Orleans.Runtime.ConsoleText' Orleans.Runtime.Host.AzureConstants' Orleans.Runtime.Configuration.GlobalConfiguration' Orleans.Runtime.Configuration.ClusterConfiguration' Orleans.Runtime.Configuration.LivenessProviderType' Orleans.Runtime.LogFormatter' Orleans.AzureUtils.Utilities.AzureSiloErrorCode' Orleans.Runtime.RuntimeVersion' Orleans.Runtime.SiloType' Orleans.Runtime.Silo' Orleans.Runtime.Configuration.NodeConfiguration' Orleans.Hosting.AzureCloudServices.AzureTableDefaultPolicies' Orleans.Runtime.Configuration.ReminderServiceProviderType' Orleans.ErrorCode,
-Orleans.Runtime.Host,IServiceRuntimeWrapper,0,4,6,0,0,52,4,1,0,-1,0,2,,Orleans.Runtime.Host.AzureClient' Orleans.Runtime.Host.AzureSilo
-Orleans.Runtime.Host,ServiceRuntimeWrapper,10,8,7,0,6,122,13,0,1,0,1,0,Orleans.ErrorCode,
-Orleans.Streams.Azure,DynamicAzureDeploymentBalancer,0,1,0,0,1,9,1,0,1,-1,1,0,Orleans.Runtime.ISiloStatusOracle,
-Orleans.Streams.Azure,StaticAzureDeploymentBalancer,0,1,0,0,1,9,1,0,1,-1,1,0,Orleans.Runtime.ISiloStatusOracle,
-Orleans.Streams.Azure,AzureDeploymentLeaseBasedBalancer,0,1,0,0,1,8,1,0,1,-1,1,0,Orleans.Runtime.ISiloStatusOracle,
-Orleans.Streams.Azure,StreamQueueBalancerType,3,0,0,3,0,24,0,0,0,-1,0,0,,
-Orleans.AzureUtils.Utilities,AzureSiloErrorCode,0,0,0,0,0,7,0,0,0,-1,0,1,,Orleans.Runtime.Host.AzureSilo
-Orleans.Hosting.AzureCloudServices,AzureTableDefaultPolicies,1,1,11,1,0,35,2,0,0,0,0,1,,Orleans.Runtime.Host.AzureSilo
+Orleans.Runtime.Host,IServiceRuntimeWrapper,0,4,6,0,0,52,4,1,0,-1,0,1,,Orleans.Runtime.Host.ServiceRuntimeWrapper
+Orleans.Runtime.Host,ServiceRuntimeWrapper,10,8,7,0,6,122,13,0,1,0,1,1,Orleans.Runtime.Host.IServiceRuntimeWrapper,Orleans.Hosting.SiloPersistentStreamConfiguratorExtension
+Orleans.Hosting,SiloPersistentStreamConfiguratorExtension,0,2,0,0,2,40,2,0,0,-1,1,0,Orleans.Runtime.Host.ServiceRuntimeWrapper,
+Orleans.AzureUtils.Utilities,AzureSiloErrorCode,0,0,0,0,0,7,0,0,0,-1,0,0,,
+Orleans.Hosting.AzureCloudServices,AzureTableDefaultPolicies,1,1,11,1,0,35,1,0,0,0,0,4,,Orleans.Runtime.MembershipService.AzureBasedMembershipTable' Orleans.Runtime.MultiClusterNetwork.GossipTableInstanceManager' Orleans.AzureUtils.OrleansSiloInstanceManager' Orleans.Clustering.AzureStorage.AzureTableDataManager<T>

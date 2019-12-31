@@ -1,0 +1,40 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Mvc.Core.Tests,TestCache,0,0,0,0,0,2,0,0,0,-1,0,1,,Mvc.Core.Tests.CachedHtmlServices
+Mvc.Core.Tests,TestCacheOptimizedResult,0,0,0,0,0,2,0,0,0,-1,0,1,,Mvc.Core.Tests.CachedHtmlServices
+Mvc.Core.Tests,TestCacheError,0,0,0,0,0,2,0,0,0,-1,0,1,,Mvc.Core.Tests.CachedHtmlServices
+Mvc.Core.Tests,AlwaysThrows,0,0,0,0,0,2,0,0,0,-1,0,1,,Mvc.Core.Tests.CachedHtmlServices
+Mvc.Core.Tests,AlwaysThrowsResponse,0,0,1,0,0,4,0,0,0,-1,0,0,,
+Mvc.Core.Tests,AlwaysThrowsRaw,0,0,0,0,0,2,0,0,0,-1,0,1,,Mvc.Core.Tests.CachedHtmlServices
+Mvc.Core.Tests,CachedHtmlServices,0,5,0,0,5,30,5,0,0,-1,5,0,Mvc.Core.Tests.TestCache' Mvc.Core.Tests.TestCacheOptimizedResult' Mvc.Core.Tests.TestCacheError' Mvc.Core.Tests.AlwaysThrows' Mvc.Core.Tests.AlwaysThrowsRaw,
+Mvc.Core.Tests,Program,0,1,0,0,1,13,1,0,0,-1,1,0,Mvc.Core.Tests.Startup,
+Mvc.Core.Tests,CachedRockstarsGateway,0,0,0,0,0,3,0,0,0,-1,1,1,RazorRockstars.RockstarsResponse,Mvc.Core.Tests.CachedServices
+Mvc.Core.Tests,CachedRockstars,0,0,0,0,0,3,0,0,0,-1,1,1,RazorRockstars.RockstarsResponse,Mvc.Core.Tests.CachedServices
+Mvc.Core.Tests,CachedServices,0,2,0,0,2,12,2,0,0,-1,5,0,Mvc.Core.Tests.CachedRockstarsGateway' Mvc.Core.Tests.CachedRockstars' RazorRockstars.SearchRockstars' RazorRockstars.RockstarsResponse' RazorRockstars.Rockstar,
+Mvc.Core.Tests,HomeViewModel,0,0,3,0,0,6,0,0,0,-1,1,1,Mvc.Core.Tests.CustomUserSession,Mvc.Core.Tests.Controllers.HomeController
+Mvc.Core.Tests,CustomUserSession,0,1,2,0,1,14,2,0,0,-1,1,7,Mvc.Core.Tests.UnAuthInfo,Mvc.Core.Tests.Controllers.HomeController' Mvc.Core.Tests.Controllers.RequiresRoleController' Mvc.Core.Tests.Controllers.AuthOnlyController' Mvc.Core.Tests.AppHost' Mvc.Core.Tests.HomeViewModel' Mvc.Core.Tests.GetSessionResponse' Mvc.Core.Tests.SessionService
+Mvc.Core.Tests,UnAuthInfo,0,0,1,0,0,4,0,0,0,-1,0,3,,Mvc.Core.Tests.CustomUserSession' Mvc.Core.Tests.GetSessionResponse' Mvc.Core.Tests.SessionService
+Mvc.Core.Tests,GetSession,0,0,0,0,0,4,0,0,0,-1,1,1,Mvc.Core.Tests.GetSessionResponse,Mvc.Core.Tests.SessionService
+Mvc.Core.Tests,UpdateSession,0,0,1,0,0,5,0,0,0,-1,1,1,Mvc.Core.Tests.GetSessionResponse,Mvc.Core.Tests.SessionService
+Mvc.Core.Tests,GetSessionResponse,0,0,3,0,0,6,0,0,0,-1,2,3,Mvc.Core.Tests.CustomUserSession' Mvc.Core.Tests.UnAuthInfo,Mvc.Core.Tests.GetSession' Mvc.Core.Tests.UpdateSession' Mvc.Core.Tests.SessionService
+Mvc.Core.Tests,SessionService,0,4,0,0,3,52,4,0,0,-1,5,1,Mvc.Core.Tests.CustomUserSession' Mvc.Core.Tests.UnAuthInfo' Mvc.Core.Tests.GetSession' Mvc.Core.Tests.UpdateSession' Mvc.Core.Tests.GetSessionResponse,Mvc.Core.Tests.AppHost
+Mvc.Core.Tests,Startup,0,3,1,0,3,55,4,0,0,-1,3,1,Mvc.Core.Tests.AppHost' RazorRockstars.Rockstar' RazorRockstars.RockstarsService,Mvc.Core.Tests.Program
+Mvc.Core.Tests,Hello,0,0,1,0,0,6,0,0,0,-1,1,1,Mvc.Core.Tests.HelloResponse,Mvc.Core.Tests.MyServices
+Mvc.Core.Tests,HelloResponse,0,0,1,0,0,4,0,0,0,-1,0,2,,Mvc.Core.Tests.Hello' Mvc.Core.Tests.MyServices
+Mvc.Core.Tests,MyServices,0,1,0,0,1,5,1,0,0,-1,2,1,Mvc.Core.Tests.Hello' Mvc.Core.Tests.HelloResponse,Mvc.Core.Tests.AppHost
+Mvc.Core.Tests,Test,0,0,1,0,0,4,0,0,0,-1,0,2,,Mvc.Core.Tests.TestGet' Mvc.Core.Tests.TestService
+Mvc.Core.Tests,TestGet,0,0,0,0,0,4,0,0,0,-1,1,1,Mvc.Core.Tests.Test,Mvc.Core.Tests.TestService
+Mvc.Core.Tests,TestService,0,1,0,0,1,8,1,0,0,-1,2,0,Mvc.Core.Tests.Test' Mvc.Core.Tests.TestGet,
+Mvc.Core.Tests,GetRequestInfo,0,0,0,0,0,2,0,0,0,-1,0,1,,Mvc.Core.Tests.RequestInfoServices
+Mvc.Core.Tests,RequestInfoServices,0,1,0,0,1,13,1,0,0,-1,1,0,Mvc.Core.Tests.GetRequestInfo,
+Mvc.Core.Tests,AppHost,0,2,0,0,2,38,2,0,0,-1,3,1,Mvc.Core.Tests.CustomUserSession' Mvc.Core.Tests.SessionService' Mvc.Core.Tests.MyServices,Mvc.Core.Tests.Startup
+Mvc.Core.Tests.Controllers,AuthOnlyController,0,1,0,0,1,9,1,0,0,-1,1,0,Mvc.Core.Tests.CustomUserSession,
+Mvc.Core.Tests.Controllers,RedirectTestFilterAttribute,1,2,0,0,2,12,2,0,0,1,0,2,,Mvc.Core.Tests.Controllers.HomeController' Mvc.Core.Tests.Controllers.TestController
+Mvc.Core.Tests.Controllers,HomeController,0,6,0,0,6,64,9,0,0,-1,3,0,Mvc.Core.Tests.HomeViewModel' Mvc.Core.Tests.CustomUserSession' Mvc.Core.Tests.Controllers.RedirectTestFilterAttribute,
+Mvc.Core.Tests.Controllers,RequiresRoleController,0,1,0,0,1,9,1,0,0,-1,1,0,Mvc.Core.Tests.CustomUserSession,
+Mvc.Core.Tests.Controllers,TestController,0,1,0,0,1,9,1,0,0,-1,1,0,Mvc.Core.Tests.Controllers.RedirectTestFilterAttribute,
+RazorRockstars,SearchRockstars,0,0,2,0,0,8,0,0,0,-1,1,2,RazorRockstars.RockstarsResponse,Mvc.Core.Tests.CachedServices' RazorRockstars.RockstarsService
+RazorRockstars,DeleteRockstar,0,0,1,0,0,5,0,0,0,-1,0,1,,RazorRockstars.RockstarsService
+RazorRockstars,ResetRockstars,0,0,0,0,0,2,0,0,0,-1,0,1,,RazorRockstars.RockstarsService
+RazorRockstars,RockstarsResponse,0,0,3,0,0,7,0,0,0,-1,1,5,RazorRockstars.Rockstar,Mvc.Core.Tests.CachedRockstarsGateway' Mvc.Core.Tests.CachedRockstars' Mvc.Core.Tests.CachedServices' RazorRockstars.SearchRockstars' RazorRockstars.RockstarsService
+RazorRockstars,Rockstar,0,2,6,0,2,20,2,0,0,-1,0,4,,Mvc.Core.Tests.CachedServices' Mvc.Core.Tests.Startup' RazorRockstars.RockstarsResponse' RazorRockstars.RockstarsService
+RazorRockstars,RockstarsService,1,4,0,1,4,44,4,0,0,0,5,1,RazorRockstars.SearchRockstars' RazorRockstars.DeleteRockstar' RazorRockstars.ResetRockstars' RazorRockstars.RockstarsResponse' RazorRockstars.Rockstar,Mvc.Core.Tests.Startup

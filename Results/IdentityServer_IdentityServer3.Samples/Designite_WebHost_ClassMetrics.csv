@@ -1,33 +1,33 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 IdentityServer3.Host.Config,Clients,0,1,0,0,1,452,1,0,0,-1,0,1,,WebHost.IdSvr.Factory
 IdentityServer3.Host.Config,Scopes,0,1,0,0,1,58,1,0,0,-1,0,1,,WebHost.IdSvr.Factory
-IdentityServer3.AspNetIdentity,AspNetIdentityUserService<TUser;TKey>,2,24,2,0,5,360,73,0,0,0.46,0,0,,
-WebHost.AspId,CustomUser,0,0,0,0,0,1,0,0,0,-1,0,0,,
-WebHost.AspId,CustomUserLogin,0,0,0,0,0,1,0,0,0,-1,0,0,,
-WebHost.AspId,CustomUserRole,0,0,0,0,0,1,0,0,0,-1,0,0,,
-WebHost.AspId,CustomUserClaim,0,0,0,0,0,1,0,0,0,-1,0,0,,
-WebHost.AspId,CustomRole,0,0,0,0,0,1,0,0,0,-1,0,0,,
-WebHost.AspId,CustomContext,0,1,0,0,1,7,1,0,0,-1,0,2,,WebHost.AspId.CustomUserStore' WebHost.AspId.CustomRoleStore
-WebHost.AspId,CustomUserStore,0,1,0,0,1,7,1,0,1,-1,1,1,WebHost.AspId.CustomContext,WebHost.AspId.CustomUserManager
-WebHost.AspId,CustomUserManager,0,1,0,0,1,7,1,0,1,-1,1,2,WebHost.AspId.CustomUserStore,WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeys' WebHost.IdSvr.CustomUserService
-WebHost.AspId,CustomRoleStore,0,1,0,0,1,7,1,0,1,-1,1,1,WebHost.AspId.CustomContext,WebHost.AspId.CustomRoleManager
-WebHost.AspId,CustomRoleManager,0,1,0,0,1,7,1,0,1,-1,1,1,WebHost.AspId.CustomRoleStore,WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeys
-WebHost.AspId,User,0,0,2,0,0,5,0,0,0,-1,0,2,,WebHost.AspId.ClaimsFactory' WebHost.IdSvr.UserService
-WebHost.AspId,Role,0,0,0,0,0,1,0,0,0,-1,0,0,,
-WebHost.AspId,Context,0,1,0,0,1,7,1,0,0,-1,0,2,,WebHost.AspId.UserStore' WebHost.AspId.RoleStore
-WebHost.AspId,UserStore,0,1,0,0,1,7,1,1,0,-1,1,1,WebHost.AspId.Context,WebHost.AspId.UserManager
-WebHost.AspId,UserManager,0,1,0,0,1,8,1,1,0,-1,1,3,WebHost.AspId.UserStore,WebHost.AspId.ClaimsFactory' WebHost.IdMgr.SimpleIdentityManagerService' WebHost.IdSvr.UserService
-WebHost.AspId,ClaimsFactory,0,2,0,0,2,22,4,0,0,-1,2,0,WebHost.AspId.User' WebHost.AspId.UserManager,
-WebHost.AspId,RoleStore,0,1,0,0,1,7,1,1,0,-1,1,1,WebHost.AspId.Context,WebHost.AspId.RoleManager
-WebHost.AspId,RoleManager,0,1,0,0,1,7,1,1,0,-1,1,1,WebHost.AspId.RoleStore,WebHost.IdMgr.SimpleIdentityManagerService
-WebHost.IdMgr,CustomIdentityManagerServiceWithIntKeysExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
-WebHost.IdMgr,CustomIdentityManagerServiceWithIntKeys,0,1,0,0,1,7,1,0,0,-1,2,0,WebHost.AspId.CustomUserManager' WebHost.AspId.CustomRoleManager,
-WebHost.IdMgr,SimpleIdentityManagerServiceExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
-WebHost.IdMgr,SimpleIdentityManagerService,0,1,0,0,1,7,1,0,0,-1,2,0,WebHost.AspId.UserManager' WebHost.AspId.RoleManager,
-WebHost.IdSvr,Certificate,0,2,0,0,1,24,2,0,0,-1,0,1,,WebHost.Startup
-WebHost.IdSvr,CustomUserServiceExtensions,0,1,0,0,1,10,1,0,0,-1,0,0,,
-WebHost.IdSvr,CustomUserService,0,1,0,0,1,7,1,0,0,-1,1,0,WebHost.AspId.CustomUserManager,
-WebHost.IdSvr,Factory,0,1,0,0,1,13,1,0,0,-1,2,1,IdentityServer3.Host.Config.Scopes' IdentityServer3.Host.Config.Clients,WebHost.Startup
-WebHost.IdSvr,UserServiceExtensions,0,1,0,0,1,10,1,0,0,-1,0,0,,
-WebHost.IdSvr,UserService,0,2,0,0,1,19,4,0,0,-1,2,0,WebHost.AspId.UserManager' WebHost.AspId.User,
-WebHost,Startup,0,2,0,0,2,65,2,0,0,-1,2,0,WebHost.IdSvr.Factory' WebHost.IdSvr.Certificate,
+IdentityServer3.AspNetIdentity,AspNetIdentityUserService<TUser;TKey>,2,24,2,0,5,360,79,0,0,0.46,0,2,,WebHost.IdSvr.UserService' WebHost.IdSvr.CustomUserService
+WebHost.AspId,CustomUser,0,0,0,0,0,1,0,0,0,-1,3,5,WebHost.AspId.CustomUserLogin' WebHost.AspId.CustomUserRole' WebHost.AspId.CustomUserClaim,WebHost.IdSvr.CustomUserService' WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeys' WebHost.AspId.CustomContext' WebHost.AspId.CustomUserStore' WebHost.AspId.CustomUserManager
+WebHost.AspId,CustomUserLogin,0,0,0,0,0,1,0,0,0,-1,0,3,,WebHost.AspId.CustomUser' WebHost.AspId.CustomContext' WebHost.AspId.CustomUserStore
+WebHost.AspId,CustomUserRole,0,0,0,0,0,1,0,0,0,-1,0,5,,WebHost.AspId.CustomUser' WebHost.AspId.CustomRole' WebHost.AspId.CustomContext' WebHost.AspId.CustomUserStore' WebHost.AspId.CustomRoleStore
+WebHost.AspId,CustomUserClaim,0,0,0,0,0,1,0,0,0,-1,0,3,,WebHost.AspId.CustomUser' WebHost.AspId.CustomContext' WebHost.AspId.CustomUserStore
+WebHost.AspId,CustomRole,0,0,0,0,0,1,0,0,0,-1,1,5,WebHost.AspId.CustomUserRole,WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeys' WebHost.AspId.CustomContext' WebHost.AspId.CustomUserStore' WebHost.AspId.CustomRoleStore' WebHost.AspId.CustomRoleManager
+WebHost.AspId,CustomContext,0,1,0,0,1,7,1,0,0,-1,5,4,WebHost.AspId.CustomUser' WebHost.AspId.CustomUserLogin' WebHost.AspId.CustomUserRole' WebHost.AspId.CustomUserClaim' WebHost.AspId.CustomRole,WebHost.AspId.CustomUserStore' WebHost.AspId.CustomRoleStore' WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeysExtensions' WebHost.IdSvr.CustomUserServiceExtensions
+WebHost.AspId,CustomUserStore,0,1,0,0,1,7,1,0,1,-1,7,3,WebHost.AspId.CustomUser' WebHost.AspId.CustomUserLogin' WebHost.AspId.CustomUserRole' WebHost.AspId.CustomUserClaim' WebHost.AspId.CustomRole' WebHost.AspId.CustomContext' WebHost.AspId.UserStore,WebHost.AspId.CustomUserManager' WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeysExtensions' WebHost.IdSvr.CustomUserServiceExtensions
+WebHost.AspId,CustomUserManager,0,1,0,0,1,7,1,0,1,-1,3,4,WebHost.AspId.CustomUser' WebHost.AspId.CustomUserStore' WebHost.AspId.UserManager,WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeysExtensions' WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeys' WebHost.IdSvr.CustomUserServiceExtensions' WebHost.IdSvr.CustomUserService
+WebHost.AspId,CustomRoleStore,0,1,0,0,1,7,1,0,1,-1,4,2,WebHost.AspId.CustomUserRole' WebHost.AspId.CustomRole' WebHost.AspId.CustomContext' WebHost.AspId.RoleStore,WebHost.AspId.CustomRoleManager' WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeysExtensions
+WebHost.AspId,CustomRoleManager,0,1,0,0,1,7,1,0,1,-1,3,2,WebHost.AspId.CustomRole' WebHost.AspId.CustomRoleStore' WebHost.AspId.RoleManager,WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeysExtensions' WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeys
+WebHost.AspId,User,0,0,2,0,0,5,0,0,0,-1,0,6,,WebHost.IdMgr.SimpleIdentityManagerService' WebHost.IdSvr.UserService' WebHost.AspId.Context' WebHost.AspId.UserStore' WebHost.AspId.UserManager' WebHost.AspId.ClaimsFactory
+WebHost.AspId,Role,0,0,0,0,0,1,0,0,0,-1,0,5,,WebHost.IdMgr.SimpleIdentityManagerService' WebHost.AspId.Context' WebHost.AspId.UserStore' WebHost.AspId.RoleStore' WebHost.AspId.RoleManager
+WebHost.AspId,Context,0,1,0,0,1,7,1,0,0,-1,2,4,WebHost.AspId.User' WebHost.AspId.Role,WebHost.AspId.UserStore' WebHost.AspId.RoleStore' WebHost.IdMgr.SimpleIdentityManagerServiceExtensions' WebHost.IdSvr.UserServiceExtensions
+WebHost.AspId,UserStore,0,1,0,0,1,7,1,1,0,-1,3,4,WebHost.AspId.User' WebHost.AspId.Role' WebHost.AspId.Context,WebHost.IdMgr.SimpleIdentityManagerServiceExtensions' WebHost.IdSvr.UserServiceExtensions' WebHost.AspId.CustomUserStore' WebHost.AspId.UserManager
+WebHost.AspId,UserManager,0,1,0,0,1,8,1,1,0,-1,3,6,WebHost.AspId.User' WebHost.AspId.UserStore' WebHost.AspId.ClaimsFactory,WebHost.AspId.ClaimsFactory' WebHost.AspId.CustomUserManager' WebHost.IdSvr.UserServiceExtensions' WebHost.IdSvr.UserService' WebHost.IdMgr.SimpleIdentityManagerServiceExtensions' WebHost.IdMgr.SimpleIdentityManagerService
+WebHost.AspId,ClaimsFactory,0,2,0,0,2,22,4,0,0,-1,2,1,WebHost.AspId.User' WebHost.AspId.UserManager,WebHost.AspId.UserManager
+WebHost.AspId,RoleStore,0,1,0,0,1,7,1,1,0,-1,2,3,WebHost.AspId.Role' WebHost.AspId.Context,WebHost.AspId.CustomRoleStore' WebHost.IdMgr.SimpleIdentityManagerServiceExtensions' WebHost.AspId.RoleManager
+WebHost.AspId,RoleManager,0,1,0,0,1,7,1,1,0,-1,2,3,WebHost.AspId.Role' WebHost.AspId.RoleStore,WebHost.AspId.CustomRoleManager' WebHost.IdMgr.SimpleIdentityManagerServiceExtensions' WebHost.IdMgr.SimpleIdentityManagerService
+WebHost.IdMgr,CustomIdentityManagerServiceWithIntKeysExtensions,0,1,0,0,1,12,1,0,0,-1,6,0,WebHost.AspId.CustomContext' WebHost.AspId.CustomUserStore' WebHost.AspId.CustomUserManager' WebHost.AspId.CustomRoleStore' WebHost.AspId.CustomRoleManager' WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeys,
+WebHost.IdMgr,CustomIdentityManagerServiceWithIntKeys,0,1,0,0,1,7,1,0,0,-1,4,1,WebHost.AspId.CustomUser' WebHost.AspId.CustomRole' WebHost.AspId.CustomUserManager' WebHost.AspId.CustomRoleManager,WebHost.IdMgr.CustomIdentityManagerServiceWithIntKeysExtensions
+WebHost.IdMgr,SimpleIdentityManagerServiceExtensions,0,1,0,0,1,12,1,0,0,-1,6,0,WebHost.AspId.Context' WebHost.AspId.UserStore' WebHost.AspId.UserManager' WebHost.AspId.RoleStore' WebHost.AspId.RoleManager' WebHost.IdMgr.SimpleIdentityManagerService,
+WebHost.IdMgr,SimpleIdentityManagerService,0,1,0,0,1,7,1,0,0,-1,4,1,WebHost.AspId.User' WebHost.AspId.Role' WebHost.AspId.UserManager' WebHost.AspId.RoleManager,WebHost.IdMgr.SimpleIdentityManagerServiceExtensions
+WebHost.IdSvr,Certificate,0,2,0,0,1,24,3,0,0,-1,0,1,,WebHost.Startup
+WebHost.IdSvr,CustomUserServiceExtensions,0,1,0,0,1,10,1,0,0,-1,4,0,WebHost.AspId.CustomContext' WebHost.AspId.CustomUserStore' WebHost.AspId.CustomUserManager' WebHost.IdSvr.CustomUserService,
+WebHost.IdSvr,CustomUserService,0,1,0,0,1,7,1,0,0,-1,3,1,IdentityServer3.AspNetIdentity.AspNetIdentityUserService<TUser;TKey>' WebHost.AspId.CustomUser' WebHost.AspId.CustomUserManager,WebHost.IdSvr.CustomUserServiceExtensions
+WebHost.IdSvr,Factory,0,1,0,0,1,13,1,0,0,-1,2,1,IdentityServer3.Host.Config.Clients' IdentityServer3.Host.Config.Scopes,WebHost.Startup
+WebHost.IdSvr,UserServiceExtensions,0,1,0,0,1,10,1,0,0,-1,4,0,WebHost.AspId.Context' WebHost.AspId.UserStore' WebHost.AspId.UserManager' WebHost.IdSvr.UserService,
+WebHost.IdSvr,UserService,0,2,0,0,1,19,4,0,0,-1,3,1,IdentityServer3.AspNetIdentity.AspNetIdentityUserService<TUser;TKey>' WebHost.AspId.User' WebHost.AspId.UserManager,WebHost.IdSvr.UserServiceExtensions
+WebHost,Startup,0,2,0,0,2,65,2,0,0,-1,2,0,WebHost.IdSvr.Certificate' WebHost.IdSvr.Factory,

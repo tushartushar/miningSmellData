@@ -1,50 +1,50 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Loggly,EventOptions,0,1,1,0,1,11,1,0,0,-1,0,2,,Loggly.LogglyClient' Loggly.Example.LogglyExample
-Loggly,IMessageData,0,3,1,0,0,12,3,2,0,-1,0,6,,Loggly.LogglyClient' Loggly.Example.LogglyExample' Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Events.MessageDataFixture' Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Events.MessageDataFixture
-Loggly,LogglyEvent,0,1,4,0,1,17,1,0,0,-1,0,7,,Loggly.ILogglyClient' Loggly.LogglyClient' Loggly.Example.LogglyExample' Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Events.MessageDataFixture' Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Events.MessageDataFixture
-Loggly,MessageData,0,6,1,0,6,50,9,0,1,-1,0,2,,Loggly.Tests.Loggly.LogglyMessageDataFixture' Loggly.Tests.Loggly.LogglyMessageDataFixture
-Loggly,SyslogHeader,0,1,2,0,1,9,1,0,0,-1,1,1,Loggly.Transports.Syslog.Level,Loggly.Transports.Syslog.SyslogTransportBase
-Loggly,IEnvironmentProvider,0,0,2,0,0,5,0,1,0,-1,0,1,,Loggly.Transports.Syslog.SyslogMessage
-Loggly,LogglyEventSource,2,2,1,0,1,19,2,0,0,0,2,2,Loggly.LogglyMessage' Loggly.LogResponse,Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase
-Loggly,FieldQuery,0,1,1,0,1,10,1,0,1,-1,1,4,Loggly.SearchQuery,Loggly.ISearchClient' Loggly.LogglySearchClient' Loggly.ISearchTransport' Loggly.SearchTransport
-Loggly,MessageType,0,0,0,0,0,5,0,0,0,-1,0,2,,Loggly.LogglyClient' Loggly.HttpMessageTransport
-Loggly,LogglyMessage,0,2,5,0,2,17,2,0,0,-1,0,8,,Loggly.LogglyEventSource' Loggly.LogglyClient' Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.Tests.Loggly.Transports.HttpTransports.HttpMessageTransportFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogTransportBaseFixture' Loggly.Tests.Loggly.Transports.HttpTransports.HttpMessageTransportFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogTransportBaseFixture
+Loggly,EventOptions,0,1,1,0,1,11,1,0,0,-1,0,1,,Loggly.LogglyEvent
+Loggly,IMessageData,0,3,1,0,0,12,3,2,0,-1,0,2,,Loggly.MessageData' Loggly.LogglyEvent
+Loggly,LogglyEvent,0,2,4,0,2,21,2,0,0,-1,4,2,Loggly.EventOptions' Loggly.IMessageData' Loggly.MessageData' Loggly.SyslogHeader,Loggly.ILogglyClient' Loggly.LogglyClient
+Loggly,MessageData,0,11,1,0,11,116,20,0,1,-1,1,1,Loggly.IMessageData,Loggly.LogglyEvent
+Loggly,SyslogHeader,0,1,2,0,1,9,1,0,0,-1,1,2,Loggly.Transports.Syslog.Level,Loggly.LogglyEvent' Loggly.LogglyMessage
+Loggly,IEnvironmentProvider,0,0,2,0,0,5,0,1,0,-1,0,2,,Loggly.EnvironmentProvider' Loggly.Transports.Syslog.SyslogMessage
+Loggly,LogglyEventSource,2,2,1,0,1,19,2,0,0,0,2,2,Loggly.LogglyMessage' Loggly.LogResponse,Loggly.Transports.Syslog.SyslogTransportBase' Loggly.HttpMessageTransport
+Loggly,FieldQuery,0,1,1,0,1,10,1,0,1,-1,1,4,Loggly.SearchQuery,Loggly.ISearchClient' Loggly.ISearchTransport' Loggly.SearchTransport' Loggly.LogglySearchClient
+Loggly,MessageType,0,0,0,0,0,5,0,0,0,-1,0,3,,Loggly.LogglyMessage' Loggly.HttpMessageTransport' Loggly.LogglyClient
+Loggly,LogglyMessage,0,2,5,0,2,17,2,0,0,-1,2,5,Loggly.SyslogHeader' Loggly.MessageType,Loggly.IMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.LogglyEventSource' Loggly.HttpMessageTransport' Loggly.LogglyClient
 Loggly,HttpRequestType,0,0,0,0,0,5,0,0,0,-1,0,0,,
 Loggly,LogglyExtensions,0,3,0,0,3,16,3,0,0,-1,0,0,,
-Loggly,ILogglyClient,0,2,0,0,0,5,2,1,0,-1,1,1,Loggly.LogglyEvent,Loggly.Example.LogglyExample
-Loggly,ISearchClient,0,9,0,0,0,12,9,1,0,-1,2,0,Loggly.SearchQuery' Loggly.FieldQuery,
-Loggly,LogglyClient,1,8,0,0,3,85,13,0,1,0.25,17,2,Loggly.IMessageTransport' Loggly.LogResponse' Loggly.LogglyEvent' Loggly.ResponseCode' Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig' Loggly.Config.ITransportConfiguration' Loggly.Config.LogTransport' Loggly.IMessageData' Loggly.LogglyException' Loggly.MessageType' Loggly.EventOptions' Loggly.LogglyMessage' Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogUdpTransport' Loggly.Transports.Syslog.SyslogTcpTransport' Loggly.Transports.Syslog.SyslogSecureTransport,Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Events.SerializationDataFixture
-Loggly,LogglyException,0,6,0,0,3,49,7,0,0,-1,2,5,Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig,Loggly.LogglyClient' Loggly.HttpMessageTransport' Loggly.SearchTransport' Loggly.Transports.Syslog.SyslogTcpTransport' Loggly.Transports.Syslog.SyslogUdpTransport
-Loggly,ResponseCode,0,0,0,0,0,8,0,0,0,-1,0,8,,Loggly.LogglyClient' Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.Example.LogglyExample' Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Transports.HttpTransports.HttpMessageTransportFixture' Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Transports.HttpTransports.HttpMessageTransportFixture
-Loggly,LogResponse,0,1,2,0,1,9,1,0,0,-1,0,7,,Loggly.LogglyEventSource' Loggly.LogglyClient' Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.Example.LogglyExample' Loggly.Tests.Loggly.Events.SerializationDataFixture' Loggly.Tests.Loggly.Transports.HttpTransports.HttpMessageTransportFixture
-Loggly,LogglySearchClient,1,11,0,0,11,48,11,0,1,0.27,6,1,Loggly.ISearchTransport' Loggly.Config.ISearchConfiguration' Loggly.Responses.SearchResponse' Loggly.SearchQuery' Loggly.Responses.FieldResponse' Loggly.FieldQuery,Loggly.Example.MainForm
-Loggly,SearchQuery,0,1,4,0,1,17,1,1,0,-1,0,6,,Loggly.FieldQuery' Loggly.ISearchClient' Loggly.LogglySearchClient' Loggly.ISearchTransport' Loggly.SearchTransport' Loggly.Example.MainForm
-Loggly,EnvironmentProvider,0,0,2,0,0,17,0,0,1,-1,0,0,,
-Loggly,HttpMessageTransport,4,7,2,0,2,140,16,0,1,0.43,8,3,Loggly.LogResponse' Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig' Loggly.ResponseCode' Loggly.LogglyEventSource' Loggly.LogglyException' Loggly.MessageType' Loggly.LogglyMessage,Loggly.LogglyClient' Loggly.Tests.Loggly.Transports.HttpTransports.HttpMessageTransportFixture' Loggly.Tests.Loggly.Transports.HttpTransports.HttpMessageTransportFixture
-Loggly,IMessageTransport,0,1,0,0,0,4,1,2,0,-1,0,1,,Loggly.LogglyClient
-Loggly,ISearchTransport,0,4,0,0,0,7,4,1,0,-1,3,3,Loggly.SearchQuery' Loggly.Responses.EventQuery' Loggly.FieldQuery,Loggly.LogglySearchClient' Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse
-Loggly,SearchTransport,2,7,0,0,5,91,10,0,1,0,9,0,Loggly.Config.ISearchConfiguration' Loggly.SearchQuery' Loggly.Responses.SearchResponse' Loggly.Responses.EventQuery' Loggly.Responses.EntryJsonResponse' Loggly.FieldQuery' Loggly.Responses.FieldResponse' Loggly.Responses.SearchResponseBase' Loggly.LogglyException,
-Loggly.Responses,EntryJsonResponseBase,0,0,3,0,0,9,0,2,0,-1,0,2,,Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse
-Loggly.Responses,EntryJsonResponse<TMessage>,0,0,1,0,0,5,0,0,1,-1,0,0,,
-Loggly.Responses,EntryJsonResponse,0,0,1,0,0,5,0,0,1,-1,0,3,,Loggly.SearchTransport' Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse
+Loggly,ILogglyClient,0,2,0,0,0,5,2,1,0,-1,2,1,Loggly.LogglyEvent' Loggly.LogResponse,Loggly.LogglyClient
+Loggly,ISearchClient,0,9,0,0,0,12,9,1,0,-1,5,1,Loggly.FieldQuery' Loggly.SearchQuery' Loggly.Responses.FieldResponse' Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse,Loggly.LogglySearchClient
+Loggly,LogglyClient,1,8,0,0,3,85,16,0,1,0.25,12,0,Loggly.LogglyEvent' Loggly.MessageType' Loggly.LogglyMessage' Loggly.ILogglyClient' Loggly.LogglyException' Loggly.ResponseCode' Loggly.LogResponse' Loggly.HttpMessageTransport' Loggly.IMessageTransport' Loggly.Transports.Syslog.SyslogTcpTransport' Loggly.Transports.Syslog.SyslogUdpTransport' Loggly.Transports.Syslog.SyslogSecureTransport,
+Loggly,LogglyException,0,6,0,0,3,47,7,0,0,-1,0,5,,Loggly.LogglyClient' Loggly.Transports.Syslog.SyslogUdpTransport' Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogTcpTransport' Loggly.SearchTransport
+Loggly,ResponseCode,0,0,0,0,0,8,0,0,0,-1,0,4,,Loggly.LogResponse' Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.LogglyClient
+Loggly,LogResponse,0,1,2,0,1,9,1,0,0,-1,1,6,Loggly.ResponseCode,Loggly.LogglyEventSource' Loggly.ILogglyClient' Loggly.IMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.LogglyClient' Loggly.HttpMessageTransport
+Loggly,LogglySearchClient,1,11,0,0,11,48,11,0,1,0.27,8,0,Loggly.FieldQuery' Loggly.ISearchClient' Loggly.SearchQuery' Loggly.ISearchTransport' Loggly.SearchTransport' Loggly.Responses.FieldResponse' Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse,
+Loggly,SearchQuery,0,1,4,0,1,17,1,1,0,-1,0,5,,Loggly.FieldQuery' Loggly.ISearchClient' Loggly.ISearchTransport' Loggly.SearchTransport' Loggly.LogglySearchClient
+Loggly,EnvironmentProvider,0,0,2,0,0,17,0,0,1,-1,1,1,Loggly.IEnvironmentProvider,Loggly.Transports.Syslog.SyslogMessage
+Loggly,HttpMessageTransport,4,7,2,0,2,141,17,0,1,0.43,8,1,Loggly.LogglyEventSource' Loggly.MessageType' Loggly.LogglyMessage' Loggly.LogglyException' Loggly.ResponseCode' Loggly.LogResponse' Loggly.IMessageTransport' Loggly.Transports.TransportBase,Loggly.LogglyClient
+Loggly,IMessageTransport,0,1,0,0,0,4,1,2,0,-1,2,3,Loggly.LogglyMessage' Loggly.LogResponse,Loggly.HttpMessageTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.LogglyClient
+Loggly,ISearchTransport,0,4,0,0,0,7,4,1,0,-1,7,3,Loggly.FieldQuery' Loggly.SearchQuery' Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EventQuery' Loggly.Responses.FieldResponse' Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse,Loggly.LogglySearchClient' Loggly.Responses.SearchResponseBase' Loggly.SearchTransport
+Loggly,SearchTransport,2,7,0,0,5,91,12,0,1,0,11,1,Loggly.FieldQuery' Loggly.LogglyException' Loggly.SearchQuery' Loggly.ISearchTransport' Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EntryJsonResponse' Loggly.Responses.EventQuery' Loggly.Responses.FieldResponse' Loggly.Responses.SearchResponseBase' Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse,Loggly.LogglySearchClient
+Loggly.Responses,EntryJsonResponseBase,0,0,3,0,0,9,0,2,0,-1,0,7,,Loggly.ISearchTransport' Loggly.Responses.SearchResponse' Loggly.Responses.SearchResponse<TMessage>' Loggly.SearchTransport' Loggly.Responses.EntryJsonResponse<TMessage>' Loggly.Responses.EntryJsonResponse' Loggly.Responses.SearchResponseBase
+Loggly.Responses,EntryJsonResponse<TMessage>,0,0,1,0,0,5,0,0,1,-1,2,1,Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EventMessage<TMessage>,Loggly.Responses.SearchResponse<TMessage>
+Loggly.Responses,EntryJsonResponse,0,0,1,0,0,5,0,0,1,-1,2,2,Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EventMessage,Loggly.SearchTransport' Loggly.Responses.SearchResponse
 Loggly.Responses,ErrorMessage,0,0,2,0,0,5,0,0,0,-1,0,1,,Loggly.Responses.Response
-Loggly.Responses,EventBase,0,0,2,0,0,7,0,2,0,-1,0,0,,
+Loggly.Responses,EventBase,0,0,2,0,0,7,0,2,0,-1,0,2,,Loggly.Responses.EventMessage' Loggly.Responses.EventMessage<TMessage>
 Loggly.Responses,Response,0,3,3,0,2,20,3,0,0,-1,1,0,Loggly.Responses.ErrorMessage,
-Loggly.Responses,EventMessage,0,1,1,0,1,9,1,0,1,-1,0,0,,
-Loggly.Responses,EventMessage<TMessage>,0,1,2,0,1,11,1,0,1,-1,0,0,,
-Loggly.Responses,EventQuery,0,1,2,0,1,13,1,0,0,-1,0,4,,Loggly.ISearchTransport' Loggly.SearchTransport' Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse
-Loggly.Responses,FieldResponse,0,1,1,0,1,12,1,0,0,-1,0,2,,Loggly.LogglySearchClient' Loggly.SearchTransport
-Loggly.Responses,Field,0,0,2,0,0,7,0,0,0,-1,0,0,,
-Loggly.Responses,Rsid,0,1,5,0,1,18,1,0,0,-1,0,2,,Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse
-Loggly.Responses,SearchResponseBase,0,2,4,0,1,25,2,2,0,-1,0,1,,Loggly.SearchTransport
-Loggly.Responses,SearchResponse<TMessage>,0,3,0,0,1,32,6,0,1,-1,6,0,Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EntryJsonResponse' Loggly.Responses.EventQuery' Loggly.Responses.Rsid' Loggly.Responses.SearchResponse' Loggly.ISearchTransport,
-Loggly.Responses,SearchResponse,0,3,0,0,1,32,6,0,1,-1,5,4,Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EntryJsonResponse' Loggly.Responses.EventQuery' Loggly.Responses.Rsid' Loggly.ISearchTransport,Loggly.LogglySearchClient' Loggly.SearchTransport' Loggly.Responses.SearchResponse<TMessage>' Loggly.Example.MainForm
-Loggly.Transports.Syslog,Level,0,0,0,0,0,11,0,0,0,-1,0,4,,Loggly.SyslogHeader' Loggly.Transports.Syslog.SyslogMessage' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogMessageFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogMessageFixture
-Loggly.Transports.Syslog,Facility,0,0,0,0,0,21,0,0,0,-1,0,4,,Loggly.Transports.Syslog.SyslogMessage' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogMessageFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogMessageFixture
-Loggly.Transports.Syslog,SyslogMessage,0,4,7,0,3,47,4,0,0,-1,3,7,Loggly.Transports.Syslog.Facility' Loggly.Transports.Syslog.Level' Loggly.IEnvironmentProvider,Loggly.Transports.Syslog.SyslogTcpTransport' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.Transports.Syslog.SyslogUdpTransport' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogMessageFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogTransportBaseFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogMessageFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogTransportBaseFixture
-Loggly.Transports.Syslog,SyslogTcpTransport,0,2,1,0,0,35,2,1,1,-1,5,3,Loggly.Config.ITransportConfiguration' Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig' Loggly.Transports.Syslog.SyslogMessage' Loggly.LogglyException,Loggly.LogglyClient' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogTransportBaseFixture' Loggly.Tests.Loggly.Transports.SyslogTransports.SyslogTransportBaseFixture
-Loggly.Transports.Syslog,SyslogTransportBase,0,4,0,0,1,56,7,2,1,-1,9,0,Loggly.Transports.Syslog.SyslogMessage' Loggly.LogResponse' Loggly.ResponseCode' Loggly.LogglyEventSource' Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig' Loggly.Transports.Syslog.Facility' Loggly.LogglyMessage' Loggly.SyslogHeader,
-Loggly.Transports.Syslog,SyslogUdpTransport,1,3,1,0,2,48,4,0,2,0,6,1,Loggly.Transports.Syslog.UdpClientEx' Loggly.Transports.Syslog.SyslogMessage' Loggly.Config.ITransportConfiguration' Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig' Loggly.LogglyException,Loggly.LogglyClient
-Loggly.Transports.Syslog,SyslogSecureTransport,0,2,0,0,0,22,2,0,2,-1,0,1,,Loggly.LogglyClient
+Loggly.Responses,EventMessage,0,1,1,0,1,9,1,0,1,-1,1,2,Loggly.Responses.EventBase,Loggly.Responses.EntryJsonResponse' Loggly.Responses.SearchResponse
+Loggly.Responses,EventMessage<TMessage>,0,1,2,0,1,11,1,0,1,-1,1,2,Loggly.Responses.EventBase,Loggly.Responses.EntryJsonResponse<TMessage>' Loggly.Responses.SearchResponse<TMessage>
+Loggly.Responses,EventQuery,0,1,2,0,1,13,1,0,0,-1,0,4,,Loggly.ISearchTransport' Loggly.SearchTransport' Loggly.Responses.SearchResponse' Loggly.Responses.SearchResponse<TMessage>
+Loggly.Responses,FieldResponse,0,1,1,0,1,12,1,0,0,-1,1,4,Loggly.Responses.Field,Loggly.ISearchTransport' Loggly.LogglySearchClient' Loggly.ISearchClient' Loggly.SearchTransport
+Loggly.Responses,Field,0,0,2,0,0,7,0,0,0,-1,0,1,,Loggly.Responses.FieldResponse
+Loggly.Responses,Rsid,0,1,5,0,1,18,1,0,0,-1,0,1,,Loggly.Responses.SearchResponseBase
+Loggly.Responses,SearchResponseBase,0,2,4,0,1,25,2,2,0,-1,3,3,Loggly.ISearchTransport' Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.Rsid,Loggly.Responses.SearchResponse<TMessage>' Loggly.Responses.SearchResponse' Loggly.SearchTransport
+Loggly.Responses,SearchResponse<TMessage>,0,3,0,0,1,32,6,0,1,-1,5,4,Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EntryJsonResponse<TMessage>' Loggly.Responses.EventMessage<TMessage>' Loggly.Responses.EventQuery' Loggly.Responses.SearchResponseBase,Loggly.ISearchTransport' Loggly.ISearchClient' Loggly.LogglySearchClient' Loggly.SearchTransport
+Loggly.Responses,SearchResponse,0,3,0,0,1,32,6,0,1,-1,5,4,Loggly.Responses.EntryJsonResponseBase' Loggly.Responses.EntryJsonResponse' Loggly.Responses.EventMessage' Loggly.Responses.EventQuery' Loggly.Responses.SearchResponseBase,Loggly.ISearchTransport' Loggly.SearchTransport' Loggly.ISearchClient' Loggly.LogglySearchClient
+Loggly.Transports.Syslog,Level,0,0,0,0,0,11,0,0,0,-1,0,2,,Loggly.Transports.Syslog.SyslogMessage' Loggly.SyslogHeader
+Loggly.Transports.Syslog,Facility,0,0,0,0,0,21,0,0,0,-1,0,2,,Loggly.Transports.Syslog.SyslogTransportBase' Loggly.Transports.Syslog.SyslogMessage
+Loggly.Transports.Syslog,SyslogMessage,0,4,7,0,3,47,4,0,0,-1,4,3,Loggly.IEnvironmentProvider' Loggly.EnvironmentProvider' Loggly.Transports.Syslog.Level' Loggly.Transports.Syslog.Facility,Loggly.Transports.Syslog.SyslogUdpTransport' Loggly.Transports.Syslog.SyslogTcpTransport' Loggly.Transports.Syslog.SyslogTransportBase
+Loggly.Transports.Syslog,SyslogTcpTransport,3,3,1,0,1,65,4,1,1,0,3,2,Loggly.LogglyException' Loggly.Transports.Syslog.SyslogMessage' Loggly.Transports.Syslog.SyslogTransportBase,Loggly.Transports.Syslog.SyslogSecureTransport' Loggly.LogglyClient
+Loggly.Transports.Syslog,SyslogTransportBase,0,4,0,0,1,56,7,2,1,-1,8,2,Loggly.LogglyEventSource' Loggly.LogglyMessage' Loggly.ResponseCode' Loggly.LogResponse' Loggly.IMessageTransport' Loggly.Transports.Syslog.Facility' Loggly.Transports.Syslog.SyslogMessage' Loggly.Transports.TransportBase,Loggly.Transports.Syslog.SyslogUdpTransport' Loggly.Transports.Syslog.SyslogTcpTransport
+Loggly.Transports.Syslog,SyslogUdpTransport,1,3,1,0,2,48,4,0,2,0,4,1,Loggly.LogglyException' Loggly.Transports.Syslog.SyslogMessage' Loggly.Transports.Syslog.SyslogTransportBase' Loggly.Transports.Syslog.UdpClientEx,Loggly.LogglyClient
+Loggly.Transports.Syslog,SyslogSecureTransport,0,2,0,0,0,22,2,0,2,-1,1,1,Loggly.Transports.Syslog.SyslogTcpTransport,Loggly.LogglyClient
 Loggly.Transports.Syslog,UdpClientEx,0,2,1,0,2,18,2,0,0,-1,0,1,,Loggly.Transports.Syslog.SyslogUdpTransport
-Loggly.Transports,TransportBase,0,2,0,0,1,14,2,2,0,-1,3,0,Loggly.Config.ITagConfiguration' Loggly.Config.ILogglyConfig' Loggly.Config.LogglyConfig,
+Loggly.Transports,TransportBase,0,2,0,0,1,14,2,2,0,-1,0,2,,Loggly.Transports.Syslog.SyslogTransportBase' Loggly.HttpMessageTransport

@@ -1,1 +1,8 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Raven_4,Outbox,0,1,0,0,0,15,1,0,0,-1,0,0,,
+Raven_4,UnversionedSubscriptions,0,1,0,0,0,10,1,0,0,-1,0,0,,
+Raven_4.Session,HandlerThatUsesSession,0,1,0,0,1,10,1,0,0,-1,2,0,Raven_4.Session.MyDocument' Raven_4.Session.MyMessage,
+Raven_4.Session,MyDocument,0,0,0,0,0,3,0,0,0,-1,0,2,,Raven_4.Session.HandlerThatUsesSession' Raven_4.Session.SagaThatUsesSession
+Raven_4.Session,MyMessage,0,0,0,0,0,3,0,0,0,-1,0,2,,Raven_4.Session.HandlerThatUsesSession' Raven_4.Session.SagaThatUsesSession
+Raven_4.Session,SagaThatUsesSession,0,2,0,0,1,19,2,0,0,-1,3,0,Raven_4.Session.MyDocument' Raven_4.Session.MyMessage' Raven_4.Session.SagaData,
+Raven_4.Session,SagaData,0,0,0,0,0,4,0,0,0,-1,0,1,,Raven_4.Session.SagaThatUsesSession

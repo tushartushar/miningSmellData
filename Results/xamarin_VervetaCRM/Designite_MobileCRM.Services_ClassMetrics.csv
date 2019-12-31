@@ -1,25 +1,25 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-MobileCRM.Services,IAuthenticationResponse,0,0,3,0,0,6,0,0,0,-1,0,0,,
-MobileCRM.Services,IAuthenticationService,0,1,0,0,0,4,1,0,0,-1,0,0,,
-MobileCRM.Services,IRepository,0,6,0,0,0,38,6,3,0,-1,0,0,,
-MobileCRM.Services,AccountRepository,0,1,0,0,1,8,1,0,0,-1,0,0,,
-MobileCRM.Services,ContactRepository,0,1,0,0,1,9,1,0,0,-1,0,0,,
-MobileCRM.Services,LeadRepository,0,1,0,0,1,7,1,0,1,-1,0,0,,
-MobileCRM.Services,OpportunityRepository,0,1,0,0,1,10,1,0,0,-1,0,0,,
-MobileCRM.Services,InMemoryRepository<T>,1,9,1,0,9,55,11,0,1,1,0,0,,
-MobileCRM.Services,DisplayAttribute,0,1,1,0,1,8,1,0,0,-1,0,0,,
-MobileCRM.Services,CurrencyAttribute,0,0,0,0,0,1,0,0,0,-1,0,0,,
-MobileCRM.Services,IGeoService,0,1,0,0,0,4,1,0,0,-1,0,0,,
-MobileCRM.Services,IUser,0,0,2,0,0,5,0,1,0,-1,0,1,,MobileCRM.Models.DefaultContact
-MobileCRM.Services,User,0,2,2,0,2,19,2,0,1,-1,1,0,MobileCRM.Models.IContact,
-MobileCRM.Services,UserRepository,0,1,0,0,1,8,1,0,1,-1,0,0,,
-MobileCRM.Models,Account,0,3,0,0,3,9,3,0,1,-1,1,0,MobileCRM.Models.IContact,
-MobileCRM.Models,Address,0,1,9,0,1,19,1,0,1,-1,0,0,,
-MobileCRM.Models,Contact,1,4,20,0,3,183,5,4,1,1,1,0,MobileCRM.Models.IContact,
-MobileCRM.Models,DefaultContact,1,2,19,0,1,102,3,0,1,1,1,0,MobileCRM.Services.IUser,
-MobileCRM.Models,IContact,0,0,19,0,0,22,0,2,0,-1,0,5,,MobileCRM.Services.User' MobileCRM.Models.Account' MobileCRM.Models.Contact' MobileCRM.Models.Lead' MobileCRM.Models.Opportunity
-MobileCRM.Models,ILead,0,0,0,0,0,3,0,1,0,-1,0,1,,MobileCRM.Models.Opportunity
-MobileCRM.Models,ILocatable,0,0,2,0,0,5,0,1,0,-1,0,0,,
-MobileCRM.Models,Lead,0,2,0,0,2,5,2,0,2,-1,1,0,MobileCRM.Models.IContact,
-MobileCRM.Models,Opportunity,0,4,2,0,4,17,4,0,2,-1,2,0,MobileCRM.Models.IContact' MobileCRM.Models.ILead,
+MobileCRM.Services,IAuthenticationResponse,0,0,3,0,0,6,0,0,0,-1,1,1,MobileCRM.Services.IAuthenticationService,MobileCRM.Services.IAuthenticationService
+MobileCRM.Services,IAuthenticationService,0,1,0,0,0,4,1,0,0,-1,1,1,MobileCRM.Services.IAuthenticationResponse,MobileCRM.Services.IAuthenticationResponse
+MobileCRM.Services,IRepository,0,6,0,0,0,38,6,3,0,-1,0,3,,MobileCRM.Services.UserRepository' MobileCRM.Services.LeadRepository' MobileCRM.Services.InMemoryRepository<T>
+MobileCRM.Services,AccountRepository,0,1,0,0,1,8,1,0,0,-1,3,0,MobileCRM.Services.InMemoryRepository<T>' MobileCRM.Models.Account' MobileCRM.Models.Address,
+MobileCRM.Services,ContactRepository,0,1,0,0,1,9,1,0,0,-1,3,0,MobileCRM.Services.InMemoryRepository<T>' MobileCRM.Models.Address' MobileCRM.Models.Contact,
+MobileCRM.Services,LeadRepository,0,1,0,0,1,7,1,0,1,-1,4,0,MobileCRM.Services.IRepository' MobileCRM.Services.InMemoryRepository<T>' MobileCRM.Models.Address' MobileCRM.Models.Lead,
+MobileCRM.Services,OpportunityRepository,0,1,0,0,1,10,1,0,0,-1,6,0,MobileCRM.Services.InMemoryRepository<T>' MobileCRM.Services.User' MobileCRM.Services.UserRepository' MobileCRM.Models.Address' MobileCRM.Models.Contact' MobileCRM.Models.Opportunity,
+MobileCRM.Services,InMemoryRepository<T>,1,9,1,0,9,55,11,0,1,1,2,5,MobileCRM.Services.IRepository' MobileCRM.Models.IContact,MobileCRM.Services.LeadRepository' MobileCRM.Services.OpportunityRepository' MobileCRM.Services.AccountRepository' MobileCRM.Services.ContactRepository' MobileCRM.Services.UserRepository
+MobileCRM.Services,DisplayAttribute,0,1,1,0,1,8,1,0,0,-1,0,3,,MobileCRM.Models.Opportunity' MobileCRM.Models.Address' MobileCRM.Models.Contact
+MobileCRM.Services,CurrencyAttribute,0,0,0,0,0,1,0,0,0,-1,0,1,,MobileCRM.Models.Opportunity
+MobileCRM.Services,IGeoService,0,1,0,0,0,4,1,0,0,-1,1,0,MobileCRM.Models.Address,
+MobileCRM.Services,IUser,0,0,2,0,0,5,0,1,0,-1,0,4,,MobileCRM.Services.User' MobileCRM.Models.IContact' MobileCRM.Models.Contact' MobileCRM.Models.DefaultContact
+MobileCRM.Services,User,0,2,2,0,2,19,2,0,1,-1,3,2,MobileCRM.Services.IUser' MobileCRM.Models.Contact' MobileCRM.Models.IContact,MobileCRM.Services.OpportunityRepository' MobileCRM.Services.UserRepository
+MobileCRM.Services,UserRepository,0,1,0,0,1,8,1,0,1,-1,4,1,MobileCRM.Services.IRepository' MobileCRM.Services.InMemoryRepository<T>' MobileCRM.Services.User' MobileCRM.Models.Contact,MobileCRM.Services.OpportunityRepository
+MobileCRM.Models,Account,0,3,0,0,3,9,3,0,1,-1,2,1,MobileCRM.Models.Contact' MobileCRM.Models.IContact,MobileCRM.Services.AccountRepository
+MobileCRM.Models,Address,0,1,9,0,1,19,1,0,1,-1,2,8,MobileCRM.Services.DisplayAttribute' MobileCRM.Models.ILocatable,MobileCRM.Services.IGeoService' MobileCRM.Models.IContact' MobileCRM.Services.OpportunityRepository' MobileCRM.Services.LeadRepository' MobileCRM.Services.AccountRepository' MobileCRM.Services.ContactRepository' MobileCRM.Models.Contact' MobileCRM.Models.DefaultContact
+MobileCRM.Models,Contact,1,4,20,0,3,183,5,4,1,1,5,7,MobileCRM.Services.DisplayAttribute' MobileCRM.Services.IUser' MobileCRM.Models.Address' MobileCRM.Models.DefaultContact' MobileCRM.Models.IContact,MobileCRM.Services.UserRepository' MobileCRM.Services.OpportunityRepository' MobileCRM.Services.ContactRepository' MobileCRM.Models.Account' MobileCRM.Models.Lead' MobileCRM.Models.Opportunity' MobileCRM.Services.User
+MobileCRM.Models,DefaultContact,1,2,19,0,1,102,3,0,1,1,3,1,MobileCRM.Services.IUser' MobileCRM.Models.Address' MobileCRM.Models.IContact,MobileCRM.Models.Contact
+MobileCRM.Models,IContact,0,0,19,0,0,22,0,2,0,-1,2,7,MobileCRM.Services.IUser' MobileCRM.Models.Address,MobileCRM.Models.Account' MobileCRM.Services.User' MobileCRM.Models.Lead' MobileCRM.Models.Opportunity' MobileCRM.Models.Contact' MobileCRM.Models.DefaultContact' MobileCRM.Services.InMemoryRepository<T>
+MobileCRM.Models,ILead,0,0,0,0,0,3,0,1,0,-1,0,2,,MobileCRM.Models.Opportunity' MobileCRM.Models.Lead
+MobileCRM.Models,ILocatable,0,0,2,0,0,5,0,1,0,-1,0,1,,MobileCRM.Models.Address
+MobileCRM.Models,Lead,0,2,0,0,2,5,2,0,2,-1,3,1,MobileCRM.Models.Contact' MobileCRM.Models.IContact' MobileCRM.Models.ILead,MobileCRM.Services.LeadRepository
+MobileCRM.Models,Opportunity,0,4,2,0,4,17,4,0,2,-1,5,1,MobileCRM.Services.DisplayAttribute' MobileCRM.Services.CurrencyAttribute' MobileCRM.Models.Contact' MobileCRM.Models.IContact' MobileCRM.Models.ILead,MobileCRM.Services.OpportunityRepository
 MobileCRM.Models,Proposal,0,1,1,0,1,7,1,0,0,-1,0,0,,

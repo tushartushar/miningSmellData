@@ -1,116 +1,116 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Tavis,ILink,0,2,11,0,0,16,2,1,0,-1,0,10,,GitHubLib.GithubDocument' Tavis.ILinkFactoryExtensions' Tavis.InlineRequestBuilder' Tavis.DefaultRequestBuilder' Tavis.DelegatingRequestBuilder' Tavis.HttpHeaderExtensions' Tavis.LinkExtensions' Tavis.LinkHeaderParser' Tavis.LinkFactory' LinkTests.AcceptHeaderRequestBuilder
-Tavis,ILinkFactory,0,1,0,0,0,4,1,1,0,-1,0,4,,GitHubLib.GithubDocument' Tavis.ILinkFactoryExtensions' Tavis.HttpHeaderExtensions' Tavis.LinkHeaderParser
-Tavis,IRequestFactory,0,1,1,0,0,5,1,3,0,-1,0,2,,LinkTests.LinkStory' Tavis.HttpClientExtensions
-Tavis,IResponseHandler,0,1,0,0,0,4,1,6,0,-1,0,3,,LinkTests.LinkStory' Tavis.TaskExtensions' Tavis.HttpClientExtensions
-Tavis,TaskExtensions,0,1,0,0,1,21,3,0,0,-1,2,0,Tavis.HttpClientExtensions' Tavis.IResponseHandler,
-Tavis,LinkAttributes,1,3,11,0,3,29,3,1,1,0.67,0,0,,
-Tavis,ILinkFactoryExtensions,0,1,0,0,1,9,1,0,0,-1,3,0,Tavis.LinkHelper' Tavis.ILinkFactory' Tavis.ILink,
-Tavis,InlineRequestBuilder,1,2,0,0,1,12,2,0,1,0,1,0,Tavis.ILink,
-Tavis,InlineResponseHandler,1,2,0,0,2,15,2,0,1,0,1,1,Tavis.DelegatingResponseHandler,LinkTests.LinkRegistryTests
-Tavis,DefaultRequestBuilder,0,4,0,0,1,79,12,0,1,-1,5,0,Tavis.Link' Tavis.ParameterInfo' Tavis.ILink' Tavis.RequestBuilders.LinkParameterAttribute' Tavis.Hint,
+Tavis,ILink,0,2,11,0,0,16,2,1,0,-1,0,11,,Tavis.ILinkFactoryExtensions' Tavis.ILinkFactory' Tavis.DelegatingRequestBuilder' Tavis.LinkExtensions' Tavis.DefaultRequestBuilder' Tavis.InlineRequestBuilder' Tavis.LinkHeaderParser' Tavis.ILinkExtractor' Tavis.LinkFactory' Tavis.HttpHeaderExtensions' Tavis.LinkAttributes
+Tavis,ILinkFactory,0,1,0,0,0,4,1,1,0,-1,1,4,Tavis.ILink,Tavis.LinkFactory' Tavis.ILinkFactoryExtensions' Tavis.LinkHeaderParser' Tavis.HttpHeaderExtensions
+Tavis,IRequestFactory,0,1,1,0,0,5,1,3,0,-1,0,2,,Tavis.Link' Tavis.HttpClientExtensions
+Tavis,IResponseHandler,0,1,0,0,0,4,1,6,0,-1,0,5,,Tavis.InlineResponseHandler' Tavis.TaskExtensions' Tavis.HttpResponseMachine<T>' Tavis.DelegatingResponseHandler' Tavis.HttpClientExtensions
+Tavis,TaskExtensions,0,1,0,0,1,21,3,0,0,-1,2,0,Tavis.IResponseHandler' Tavis.HttpClientExtensions,
+Tavis,LinkAttributes,1,3,11,0,3,29,3,1,1,0.67,1,1,Tavis.ILink,Tavis.Link
+Tavis,ILinkFactoryExtensions,0,1,0,0,1,9,1,0,0,-1,3,0,Tavis.ILink' Tavis.ILinkFactory' Tavis.LinkHelper,
+Tavis,InlineRequestBuilder,1,2,0,0,1,12,2,0,1,0,2,2,Tavis.ILink' Tavis.DelegatingRequestBuilder,Tavis.Link' Tavis.IANA.HubLink
+Tavis,InlineResponseHandler,1,2,0,0,2,15,2,0,1,0,2,0,Tavis.IResponseHandler' Tavis.DelegatingResponseHandler,
+Tavis,DefaultRequestBuilder,0,4,0,0,1,79,12,0,1,-1,6,1,Tavis.ILink' Tavis.ParameterInfo' Tavis.DelegatingRequestBuilder' Tavis.Hint' Tavis.Link' Tavis.RequestBuilders.LinkParameterAttribute,Tavis.Link
 Tavis,ParameterInfo,0,0,2,0,0,5,0,0,0,-1,0,1,,Tavis.DefaultRequestBuilder
-Tavis,DelegatingRequestBuilder,0,2,1,0,1,15,3,3,0,-1,1,2,Tavis.ILink,Tavis.Link' Tavis.LinkFactory
-Tavis,Hint,0,0,3,0,0,7,0,10,0,-1,0,3,,Tavis.DefaultRequestBuilder' Tavis.HintFactory' Tavis.Link
-Tavis,HintFactory,1,6,0,0,5,48,6,0,0,0,2,1,Tavis.HintRegistration' Tavis.Hint,LinkTests.HintTests
-Tavis,HintRegistration,0,0,2,0,0,6,0,0,0,-1,0,1,,Tavis.HintFactory
-Tavis,HttpClientExtensions,1,1,0,1,1,14,1,0,0,0,2,2,Tavis.IRequestFactory' Tavis.IResponseHandler,Tavis.TaskExtensions' GitHubLibTests.CodeSearchLinkTests
-Tavis,DelegatingResponseHandler,0,3,1,0,1,22,4,3,1,-1,0,3,,Tavis.InlineResponseHandler' LinkTests.NotFoundHandler' LinkTests.OkHandler
+Tavis,DelegatingRequestBuilder,0,2,1,0,1,15,3,3,0,-1,1,5,Tavis.ILink,Tavis.DefaultRequestBuilder' Tavis.InlineRequestBuilder' Tavis.Link' Tavis.LinkFactory' Tavis.LinkRegistration
+Tavis,Hint,0,0,3,0,0,7,0,10,0,-1,0,14,,Tavis.DefaultRequestBuilder' Tavis.IANA.AllowHint' Tavis.IANA.FormatsHint' Tavis.IANA.LinksHint' Tavis.IANA.AcceptPostHint' Tavis.IANA.AcceptPatchHint' Tavis.IANA.AcceptRanges' Tavis.IANA.AcceptPreferHint' Tavis.IANA.PreconditionReqHint' Tavis.IANA.AuthSchemesHint' Tavis.IANA.StatusHint' Tavis.HintFactory' Tavis.HintRegistration' Tavis.Link
+Tavis,HintFactory,1,6,0,0,5,48,6,0,0,0,12,1,Tavis.Hint' Tavis.HintRegistration' Tavis.IANA.AllowHint' Tavis.IANA.FormatsHint' Tavis.IANA.LinksHint' Tavis.IANA.AcceptPostHint' Tavis.IANA.AcceptPatchHint' Tavis.IANA.AcceptRanges' Tavis.IANA.AcceptPreferHint' Tavis.IANA.PreconditionReqHint' Tavis.IANA.AuthSchemesHint' Tavis.IANA.StatusHint,Tavis.LinkFactory
+Tavis,HintRegistration,0,0,2,0,0,6,0,0,0,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis,HttpClientExtensions,1,1,0,1,1,14,1,0,0,0,2,1,Tavis.IRequestFactory' Tavis.IResponseHandler,Tavis.TaskExtensions
+Tavis,DelegatingResponseHandler,0,3,1,0,1,22,4,3,1,-1,1,1,Tavis.IResponseHandler,Tavis.InlineResponseHandler
 Tavis,HttpHeaderExtensions,0,5,0,0,5,43,7,0,0,-1,3,0,Tavis.ILink' Tavis.ILinkFactory' Tavis.LinkHeaderParser,
-Tavis,ILinkExtractor,0,2,1,0,0,6,2,0,0,-1,0,0,,
-Tavis,Link,3,7,4,0,7,76,8,88,2,0.29,3,8,Tavis.DelegatingRequestBuilder' Tavis.LinkHelper' Tavis.Hint,Samples.SkyDriveApiTests' Tavis.DefaultRequestBuilder' Tavis.LinkFactory' Tavis.Search.OpenSearchDescription' Tavis.Search.SearchMission' LinkTests.HintTests' LinkTests.LinkFixture' LinkTests.ResponseHandlerTests
+Tavis,ILinkExtractor,0,2,1,0,0,6,2,0,0,-1,1,0,Tavis.ILink,
+Tavis,Link,3,7,4,0,7,76,8,86,2,0.29,7,68,Tavis.IRequestFactory' Tavis.LinkAttributes' Tavis.InlineRequestBuilder' Tavis.DefaultRequestBuilder' Tavis.DelegatingRequestBuilder' Tavis.Hint' Tavis.LinkHelper,Tavis.DefaultRequestBuilder' Tavis.LinkFactory' Tavis.IANA.AboutLink' Tavis.IANA.AlternateLink' Tavis.IANA.AppendixLink' Tavis.IANA.ArchivesLink' Tavis.IANA.AuthorLink' Tavis.IANA.BookmarkLink' Tavis.IANA.CanonicalLink' Tavis.IANA.ChapterLink' Tavis.IANA.CollectionLink' Tavis.IANA.ContentsLink' Tavis.IANA.CopyrightLink' Tavis.IANA.CreateFormLink' Tavis.IANA.CurrentLink' Tavis.IANA.DescribedByLink' Tavis.IANA.DescribesLink' Tavis.IANA.DisclosureLink' Tavis.IANA.DuplicateLink' Tavis.IANA.EditLink' Tavis.IANA.EditFormLink' Tavis.IANA.EditMediaLink' Tavis.IANA.EnclosureLink' Tavis.IANA.FirstLink' Tavis.IANA.GlossaryLink' Tavis.IANA.HelpLink' Tavis.IANA.HostsLink' Tavis.IANA.HubLink' Tavis.IANA.IconLink' Tavis.IANA.IndexLink' Tavis.IANA.ItemLink' Tavis.IANA.LastLink' Tavis.IANA.LatestVersionLink' Tavis.IANA.LicenseLink' Tavis.IANA.LrddLink' Tavis.IANA.MonitorLink' Tavis.IANA.MonitorGroupLink' Tavis.IANA.NextLink' Tavis.IANA.NextArchiveLink' Tavis.IANA.NoFollowLink' Tavis.IANA.NoReferrerLink' Tavis.IANA.PaymentLink' Tavis.IANA.PredecessorVersionLink' Tavis.IANA.PrefetchLink' Tavis.IANA.PrevLink' Tavis.IANA.PreviewLink' Tavis.IANA.PreviousLink' Tavis.IANA.PrevArchiveLink' Tavis.IANA.PrivacyPolicyLink' Tavis.IANA.ProfileLink' Tavis.IANA.RelatedLink' Tavis.IANA.RepliesLink' Tavis.IANA.SearchLink' Tavis.IANA.SectionLink' Tavis.IANA.SelfLink' Tavis.IANA.ServiceLink' Tavis.IANA.StartLink' Tavis.IANA.StylesheetLink' Tavis.IANA.SubSectionLink' Tavis.IANA.SuccessorVersionLink' Tavis.IANA.TagLink' Tavis.IANA.TermsOfServiceLink' Tavis.IANA.TypeLink' Tavis.IANA.UpLink' Tavis.IANA.VersionHistoryLink' Tavis.IANA.ViaLink' Tavis.IANA.WorkingCopyLink' Tavis.IANA.WorkingCopyOfLink
 Tavis,LinkExtensions,0,1,0,0,1,59,10,0,0,-1,1,0,Tavis.ILink,
-Tavis,LinkHeaderParser,1,14,4,0,2,264,49,0,0,0,5,1,Tavis.ILinkFactory' Tavis.Token' Tavis.TokenType' Tavis.ILink' Tavis.HeaderEncodingParser,Tavis.HttpHeaderExtensions
+Tavis,LinkHeaderParser,1,14,4,0,2,264,54,0,0,0,5,1,Tavis.ILink' Tavis.ILinkFactory' Tavis.TokenType' Tavis.Token' Tavis.HeaderEncodingParser,Tavis.HttpHeaderExtensions
 Tavis,TokenType,0,0,0,0,0,1,0,0,0,-1,0,1,,Tavis.LinkHeaderParser
 Tavis,Token,0,0,2,0,0,5,0,0,0,-1,0,1,,Tavis.LinkHeaderParser
-Tavis,HeaderEncodingParser,0,5,0,0,3,129,11,0,0,-1,0,1,,Tavis.LinkHeaderParser
-Tavis,LinkFactory,1,9,2,0,8,168,14,0,1,0,4,7,Tavis.LinkRegistration' Tavis.DelegatingRequestBuilder' Tavis.ILink' Tavis.Link,GitHubLib.GitHubHelper' GitHubLib.GitHubLink' GitHubLib.HttpContentExtensions' GitHubLibTests.ClientState' LinkTests.ExampleTests' LinkTests.LinkHeaderTests' LinkTests.LinkRegistryTests
-Tavis,LinkRegistration,0,0,2,0,0,5,0,0,0,-1,0,1,,Tavis.LinkFactory
-Tavis,LinkHelper,0,2,0,0,2,30,3,0,0,-1,1,3,Tavis.LinkRelationTypeAttribute,GitHubLib.GithubDocument' Tavis.ILinkFactoryExtensions' Tavis.Link
-Tavis,LinkRelationTypeAttribute,1,1,1,0,1,17,1,0,0,0,0,1,,Tavis.LinkHelper
-Tavis,HttpResponseMachine,0,2,0,0,2,11,2,0,0,-1,0,8,,GitHubLibTests.CodeSearchLinkTests' LinkTests.GuidServiceLinkTest' LinkTests.LinkRegistryTests' LinkTests.LinkFixture' LinkTests.MachineTests' LinkTests.Controller' LinkTests.ModelMachineControllerTests' LinkTests.ResponseHandlerTests
-Tavis,HttpResponseMachine<T>,2,5,0,0,3,102,7,0,1,0.6,2,0,Tavis.HandlerKey' Tavis.HandlerResult,
+Tavis,HeaderEncodingParser,0,5,0,0,3,129,15,0,0,-1,0,1,,Tavis.LinkHeaderParser
+Tavis,LinkFactory,1,9,2,0,8,168,14,0,1,0,71,0,Tavis.ILink' Tavis.ILinkFactory' Tavis.DelegatingRequestBuilder' Tavis.HintFactory' Tavis.Link' Tavis.LinkRegistration' Tavis.IANA.AboutLink' Tavis.IANA.AlternateLink' Tavis.IANA.AppendixLink' Tavis.IANA.ArchivesLink' Tavis.IANA.AuthorLink' Tavis.IANA.BookmarkLink' Tavis.IANA.CanonicalLink' Tavis.IANA.ChapterLink' Tavis.IANA.CollectionLink' Tavis.IANA.ContentsLink' Tavis.IANA.CopyrightLink' Tavis.IANA.CreateFormLink' Tavis.IANA.CurrentLink' Tavis.IANA.DescribedByLink' Tavis.IANA.DescribesLink' Tavis.IANA.DisclosureLink' Tavis.IANA.DuplicateLink' Tavis.IANA.EditLink' Tavis.IANA.EditFormLink' Tavis.IANA.EnclosureLink' Tavis.IANA.FirstLink' Tavis.IANA.GlossaryLink' Tavis.IANA.HelpLink' Tavis.IANA.HostsLink' Tavis.IANA.HubLink' Tavis.IANA.IconLink' Tavis.IANA.IndexLink' Tavis.IANA.ItemLink' Tavis.IANA.LastLink' Tavis.IANA.LatestVersionLink' Tavis.IANA.LicenseLink' Tavis.IANA.LrddLink' Tavis.IANA.MonitorLink' Tavis.IANA.MonitorGroupLink' Tavis.IANA.NextLink' Tavis.IANA.NextArchiveLink' Tavis.IANA.NoFollowLink' Tavis.IANA.NoReferrerLink' Tavis.IANA.PaymentLink' Tavis.IANA.PredecessorVersionLink' Tavis.IANA.PrefetchLink' Tavis.IANA.PrevLink' Tavis.IANA.PreviewLink' Tavis.IANA.PreviousLink' Tavis.IANA.PrevArchiveLink' Tavis.IANA.PrivacyPolicyLink' Tavis.IANA.ProfileLink' Tavis.IANA.RelatedLink' Tavis.IANA.RepliesLink' Tavis.IANA.SearchLink' Tavis.IANA.SectionLink' Tavis.IANA.SelfLink' Tavis.IANA.ServiceLink' Tavis.IANA.StartLink' Tavis.IANA.StylesheetLink' Tavis.IANA.SubSectionLink' Tavis.IANA.SuccessorVersionLink' Tavis.IANA.TagLink' Tavis.IANA.TermsOfServiceLink' Tavis.IANA.TypeLink' Tavis.IANA.UpLink' Tavis.IANA.VersionHistoryLink' Tavis.IANA.ViaLink' Tavis.IANA.WorkingCopyLink' Tavis.IANA.WorkingCopyOfLink,
+Tavis,LinkRegistration,0,0,2,0,0,5,0,0,0,-1,1,1,Tavis.DelegatingRequestBuilder,Tavis.LinkFactory
+Tavis,LinkHelper,0,2,0,0,2,30,3,0,0,-1,1,2,Tavis.LinkRelationTypeAttribute,Tavis.ILinkFactoryExtensions' Tavis.Link
+Tavis,LinkRelationTypeAttribute,1,1,1,0,1,17,1,0,0,0,0,67,,Tavis.LinkHelper' Tavis.IANA.AboutLink' Tavis.IANA.AlternateLink' Tavis.IANA.AppendixLink' Tavis.IANA.ArchivesLink' Tavis.IANA.AuthorLink' Tavis.IANA.BookmarkLink' Tavis.IANA.CanonicalLink' Tavis.IANA.ChapterLink' Tavis.IANA.CollectionLink' Tavis.IANA.ContentsLink' Tavis.IANA.CopyrightLink' Tavis.IANA.CreateFormLink' Tavis.IANA.CurrentLink' Tavis.IANA.DescribedByLink' Tavis.IANA.DescribesLink' Tavis.IANA.DisclosureLink' Tavis.IANA.DuplicateLink' Tavis.IANA.EditLink' Tavis.IANA.EditFormLink' Tavis.IANA.EditMediaLink' Tavis.IANA.EnclosureLink' Tavis.IANA.FirstLink' Tavis.IANA.GlossaryLink' Tavis.IANA.HelpLink' Tavis.IANA.HostsLink' Tavis.IANA.HubLink' Tavis.IANA.IconLink' Tavis.IANA.IndexLink' Tavis.IANA.ItemLink' Tavis.IANA.LastLink' Tavis.IANA.LatestVersionLink' Tavis.IANA.LicenseLink' Tavis.IANA.LrddLink' Tavis.IANA.MonitorLink' Tavis.IANA.MonitorGroupLink' Tavis.IANA.NextLink' Tavis.IANA.NextArchiveLink' Tavis.IANA.NoFollowLink' Tavis.IANA.NoReferrerLink' Tavis.IANA.PaymentLink' Tavis.IANA.PredecessorVersionLink' Tavis.IANA.PrefetchLink' Tavis.IANA.PrevLink' Tavis.IANA.PreviewLink' Tavis.IANA.PreviousLink' Tavis.IANA.PrevArchiveLink' Tavis.IANA.PrivacyPolicyLink' Tavis.IANA.ProfileLink' Tavis.IANA.RelatedLink' Tavis.IANA.RepliesLink' Tavis.IANA.SearchLink' Tavis.IANA.SectionLink' Tavis.IANA.SelfLink' Tavis.IANA.ServiceLink' Tavis.IANA.StartLink' Tavis.IANA.StylesheetLink' Tavis.IANA.SubSectionLink' Tavis.IANA.SuccessorVersionLink' Tavis.IANA.TagLink' Tavis.IANA.TermsOfServiceLink' Tavis.IANA.TypeLink' Tavis.IANA.UpLink' Tavis.IANA.VersionHistoryLink' Tavis.IANA.ViaLink' Tavis.IANA.WorkingCopyLink' Tavis.IANA.WorkingCopyOfLink
+Tavis,HttpResponseMachine,0,2,0,0,2,11,2,0,0,-1,1,0,Tavis.HttpResponseMachine<T>,
+Tavis,HttpResponseMachine<T>,2,5,0,0,3,102,10,0,1,0.6,3,1,Tavis.IResponseHandler' Tavis.HandlerKey' Tavis.HandlerResult,Tavis.HttpResponseMachine
 Tavis,HandlerKey,0,2,5,0,2,21,3,0,0,-1,0,1,,Tavis.HttpResponseMachine<T>
 Tavis,HandlerResult,0,0,2,0,0,5,0,0,0,-1,0,1,,Tavis.HttpResponseMachine<T>
 Tavis,Model<T>,0,0,1,0,0,4,0,0,0,-1,0,0,,
 Tavis,StringBuilderExtensions,0,2,0,0,2,15,2,0,0,-1,0,0,,
-Tavis,UriExtensions,0,6,0,0,6,99,16,0,0,-1,0,1,,LinkTests.DerivedLinkTests
+Tavis,UriExtensions,0,6,0,0,6,99,17,0,0,-1,0,0,,
 Tavis.RequestBuilders,LinkParameterAttribute,1,1,2,0,1,22,1,0,0,0,0,1,,Tavis.DefaultRequestBuilder
-Tavis.IANA,AllowHint,2,2,1,0,2,21,3,0,1,0,0,1,,LinkTests.HintTests
-Tavis.IANA,FormatsHint,0,2,0,0,2,17,3,0,1,-1,0,1,,LinkTests.HintTests
-Tavis.IANA,LinksHint,0,1,0,0,1,8,1,0,1,-1,0,0,,
-Tavis.IANA,AcceptPostHint,0,2,0,0,2,17,3,0,1,-1,0,0,,
-Tavis.IANA,AcceptPatchHint,0,2,0,0,2,18,3,0,1,-1,0,0,,
-Tavis.IANA,AcceptRanges,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Tavis.IANA,AcceptPreferHint,0,2,0,0,2,12,2,0,1,-1,0,1,,LinkTests.HintTests
-Tavis.IANA,PreconditionReqHint,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Tavis.IANA,AuthSchemesHint,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Tavis.IANA,StatusHintValues,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Tavis.IANA,StatusHint,0,1,1,0,1,30,1,0,1,-1,0,0,,
-Tavis.IANA,AboutLink,0,0,0,0,0,4,0,0,3,-1,0,3,,LinkTests.ExampleTests' LinkTests.LinkHeaderTests' LinkTests.LinkRegistryTests
-Tavis.IANA,AlternateLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,AppendixLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,ArchivesLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,AuthorLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,BookmarkLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,CanonicalLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,ChapterLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,CollectionLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,ContentsLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,CopyrightLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,CreateFormLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,CurrentLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,DescribedByLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,DescribesLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,DisclosureLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,DuplicateLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,EditLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,EditFormLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,EditMediaLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,EnclosureLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,FirstLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,GlossaryLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,HelpLink,0,0,0,0,0,4,0,0,3,-1,0,1,,LinkTests.LinkHeaderTests
-Tavis.IANA,HostsLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,HubLink,0,2,5,0,2,38,2,0,3,-1,1,0,Tavis.IANA.SubscribeMode,
+Tavis.IANA,AllowHint,2,2,1,0,2,21,3,0,1,0,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,FormatsHint,0,2,0,0,2,17,3,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,LinksHint,0,1,0,0,1,8,1,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,AcceptPostHint,0,2,0,0,2,17,3,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,AcceptPatchHint,0,2,0,0,2,18,3,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,AcceptRanges,0,1,0,0,1,7,1,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,AcceptPreferHint,0,2,0,0,2,12,2,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,PreconditionReqHint,0,1,0,0,1,7,1,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,AuthSchemesHint,0,1,0,0,1,7,1,0,1,-1,1,1,Tavis.Hint,Tavis.HintFactory
+Tavis.IANA,StatusHintValues,0,0,0,0,0,5,0,0,0,-1,0,1,,Tavis.IANA.StatusHint
+Tavis.IANA,StatusHint,0,1,1,0,1,30,1,0,1,-1,2,1,Tavis.Hint' Tavis.IANA.StatusHintValues,Tavis.HintFactory
+Tavis.IANA,AboutLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,AlternateLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,AppendixLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,ArchivesLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,AuthorLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,BookmarkLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,CanonicalLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,ChapterLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,CollectionLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,ContentsLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,CopyrightLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,CreateFormLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,CurrentLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,DescribedByLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,DescribesLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,DisclosureLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,DuplicateLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,EditLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,EditFormLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,EditMediaLink,0,0,0,0,0,4,0,0,3,-1,2,0,Tavis.Link' Tavis.LinkRelationTypeAttribute,
+Tavis.IANA,EnclosureLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,FirstLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,GlossaryLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,HelpLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,HostsLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,HubLink,0,2,5,0,2,38,2,0,3,-1,4,1,Tavis.InlineRequestBuilder' Tavis.Link' Tavis.LinkRelationTypeAttribute' Tavis.IANA.SubscribeMode,Tavis.LinkFactory
 Tavis.IANA,SubscribeMode,0,0,0,0,0,5,0,0,0,-1,0,1,,Tavis.IANA.HubLink
-Tavis.IANA,IconLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,IndexLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,ItemLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,LastLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,LatestVersionLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,LicenseLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,LrddLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,MonitorLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,MonitorGroupLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,NextLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,NextArchiveLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,NoFollowLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,NoReferrerLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PaymentLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PredecessorVersionLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PrefetchLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PrevLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PreviewLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PreviousLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PrevArchiveLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,PrivacyPolicyLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,ProfileLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,RelatedLink,0,0,0,0,0,4,0,0,3,-1,0,1,,LinkTests.ExampleTests
-Tavis.IANA,RepliesLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,SearchLink,0,0,0,0,0,4,0,0,3,-1,0,2,,Samples.SearchTests' Tavis.Search.SearchMission
-Tavis.IANA,SectionLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,SelfLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,ServiceLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,StartLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,StylesheetLink,0,0,0,0,0,4,0,0,3,-1,0,1,,LinkTests.ExampleTests
-Tavis.IANA,SubSectionLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,SuccessorVersionLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,TagLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,TermsOfServiceLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,TypeLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,UpLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,VersionHistoryLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,ViaLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,WorkingCopyLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
-Tavis.IANA,WorkingCopyOfLink,0,0,0,0,0,4,0,0,3,-1,0,0,,
+Tavis.IANA,IconLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,IndexLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,ItemLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,LastLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,LatestVersionLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,LicenseLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,LrddLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,MonitorLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,MonitorGroupLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,NextLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,NextArchiveLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,NoFollowLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,NoReferrerLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PaymentLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PredecessorVersionLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PrefetchLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PrevLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PreviewLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PreviousLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PrevArchiveLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,PrivacyPolicyLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,ProfileLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,RelatedLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,RepliesLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,SearchLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,SectionLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,SelfLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,ServiceLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,StartLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,StylesheetLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,SubSectionLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,SuccessorVersionLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,TagLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,TermsOfServiceLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,TypeLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,UpLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,VersionHistoryLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,ViaLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,WorkingCopyLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory
+Tavis.IANA,WorkingCopyOfLink,0,0,0,0,0,4,0,0,3,-1,2,1,Tavis.Link' Tavis.LinkRelationTypeAttribute,Tavis.LinkFactory

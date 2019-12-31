@@ -1,6 +1,24 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SimplyMobile.Device,AccelerometerImpl,0,0,2,0,0,29,0,0,1,-1,0,0,,
-SimplyMobile.Device,Battery,0,4,3,0,0,106,4,0,0,-1,0,0,,
-SimplyMobile.Device,BatteryImpl,0,0,3,0,0,40,0,0,1,-1,0,0,,
-SimplyMobile.Device,WifiMonitor,1,3,3,0,3,45,3,0,2,1,0,0,,
-SimplyMobile.Device,Accelometer,0,4,2,0,0,36,4,0,0,-1,0,0,,
+SimplyMobile.Device,Battery,4,10,3,0,0,231,18,0,0,0.6,2,1,SimplyMobile.Device.Battery' SimplyMobile.Device.Battery,SimplyMobile.Device.BatteryImpl
+SimplyMobile.Device,BatteryImpl,0,0,3,0,0,40,0,0,1,-1,3,1,SimplyMobile.Device.Battery' SimplyMobile.Device.Battery' SimplyMobile.Device.Battery,SimplyMobile.Device.AndroidDevice
+SimplyMobile.Device,Gyroscope,3,6,1,1,1,98,6,0,1,0.83,0,0,,
+SimplyMobile.Device,WifiMonitor,4,5,5,0,5,160,9,0,2,1,0,0,,
+SimplyMobile.Device,LevelMonitor,0,2,1,0,2,21,3,0,2,-1,0,0,,
+SimplyMobile.Device,ChargerMonitor,0,1,1,0,1,16,1,0,2,-1,0,0,,
+SimplyMobile.Device,GyroscopeListener,1,3,0,0,3,21,4,0,0,0.67,0,0,,
+SimplyMobile.Device,WifiApState,0,0,0,0,0,9,0,0,0,-1,0,0,,
+SimplyMobile.Device,Accelometer,1,4,4,0,0,131,4,0,0,1,0,2,,SimplyMobile.Device.AccelerometerImpl' SimplyMobile.Device.AccelometerMonitor
+SimplyMobile.Device,AccelometerMonitor,2,4,1,0,4,65,9,0,1,0.75,1,0,SimplyMobile.Device.Accelometer,
+SimplyMobile.Device,IBtAdapter,0,0,0,0,0,3,0,0,0,-1,0,0,,
+SimplyMobile.Device,Display,0,0,1,0,0,14,0,0,0,-1,0,0,,
+SimplyMobile.Device,DisplayMetricsExtensions,0,1,0,0,0,12,1,0,0,-1,0,0,,
+SimplyMobile.Device,Info,0,0,1,0,0,15,0,0,0,-1,0,0,,
+SimplyMobile.Device,AccelerometerImpl,0,0,2,0,0,29,0,0,1,-1,3,0,SimplyMobile.Device.Accelometer' SimplyMobile.Device.Accelometer' SimplyMobile.Device.Accelometer,
+SimplyMobile.Device,AndroidPhone,0,1,8,0,1,65,1,0,1,-1,0,1,,SimplyMobile.Device.AndroidDevice
+SimplyMobile.Device,BTConnector,0,2,0,0,2,20,2,0,0,-1,0,0,,
+SimplyMobile.Device,BluetoothHub,1,4,1,0,4,27,4,0,1,1,1,1,SimplyMobile.Device.AndroidBluetoothDevice,SimplyMobile.Device.AndroidDevice
+SimplyMobile.Device,AndroidBluetoothDevice,3,3,4,0,3,68,5,0,1,0.67,0,1,,SimplyMobile.Device.BluetoothHub
+SimplyMobile.Device,AndroidDevice,1,2,9,0,1,57,4,0,1,1,4,0,SimplyMobile.Device.BatteryImpl' SimplyMobile.Device.AndroidPhone' SimplyMobile.Device.BluetoothHub' SimplyMobile.Device.Screen,
+SimplyMobile.Device,Screen,0,1,4,0,1,34,1,0,1,-1,0,1,,SimplyMobile.Device.AndroidDevice
+SimplyMobile.Device.BT,AdapterStatus,0,0,0,0,0,19,0,0,0,-1,0,1,,SimplyMobile.Device.BT.BluetoothAdapterMonitor
+SimplyMobile.Device.BT,BluetoothAdapterMonitor,0,2,1,0,2,37,4,0,2,-1,1,0,SimplyMobile.Device.BT.AdapterStatus,

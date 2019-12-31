@@ -1,0 +1,15 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+EasyNetQ.Tests.Tasks,CommandLineTaskRunner,2,6,0,0,2,65,6,0,0,0,1,1,EasyNetQ.Tests.Tasks.Program,EasyNetQ.Tests.Tasks.Program
+EasyNetQ.Tests.Tasks,Program,0,1,0,0,0,19,1,0,0,-1,1,1,EasyNetQ.Tests.Tasks.CommandLineTaskRunner,EasyNetQ.Tests.Tasks.CommandLineTaskRunner
+EasyNetQ.Tests.Tasks,NoDebugLogger,1,4,0,0,4,19,4,0,0,0.5,0,4,,EasyNetQ.Tests.Performance.Consumer.TestPerformanceConsumer' EasyNetQ.Tests.SimpleRequester.SimpleRequester' EasyNetQ.Tests.Tasks.Tasks.TestSimpleService' EasyNetQ.Tests.Performance.Producer.TestPerformanceProducer
+EasyNetQ.Tests.Tasks,TestScheduledMessages,2,4,0,0,3,29,4,0,0,0.5,1,0,EasyNetQ.Tests.Tasks.ScheduleTestMessage,
+EasyNetQ.Tests.Tasks,ScheduleTestMessage,0,1,1,0,1,8,1,0,0,-1,0,1,,EasyNetQ.Tests.Tasks.TestScheduledMessages
+EasyNetQ.Tests.Performance.Consumer,TestPerformanceConsumer,2,2,0,0,2,28,2,0,0,0,1,0,EasyNetQ.Tests.Tasks.NoDebugLogger,
+EasyNetQ.Tests.Performance.Producer,TestPerformanceParameters,0,1,2,0,1,9,1,0,0,-1,0,1,,EasyNetQ.Tests.Performance.Producer.TestPerformanceProducer
+EasyNetQ.Tests.Performance.Producer,TestPerformanceProducer,4,2,0,0,2,66,2,0,0,0,2,0,EasyNetQ.Tests.Tasks.NoDebugLogger' EasyNetQ.Tests.Performance.Producer.TestPerformanceParameters,
+EasyNetQ.Tests.SimpleRequester,ILatencyRecorder,0,2,0,0,0,5,2,1,0,-1,0,2,,EasyNetQ.Tests.SimpleRequester.LatencyRecorder' EasyNetQ.Tests.SimpleRequester.SimpleRequester
+EasyNetQ.Tests.SimpleRequester,LatencyRecorder,3,5,0,0,5,44,7,0,1,0.4,2,1,EasyNetQ.Tests.SimpleRequester.ILatencyRecorder' EasyNetQ.Tests.SimpleRequester.RequestRecord,EasyNetQ.Tests.SimpleRequester.SimpleRequester
+EasyNetQ.Tests.SimpleRequester,RequestRecord,0,2,4,0,2,17,2,0,0,-1,0,1,,EasyNetQ.Tests.SimpleRequester.LatencyRecorder
+EasyNetQ.Tests.SimpleRequester,SimpleRequester,6,4,0,0,2,51,4,0,0,0,3,0,EasyNetQ.Tests.Tasks.NoDebugLogger' EasyNetQ.Tests.SimpleRequester.ILatencyRecorder' EasyNetQ.Tests.SimpleRequester.LatencyRecorder,
+EasyNetQ.Tests.Tasks.Tasks,TestSimpleService,4,7,0,0,5,104,12,0,0,0.57,2,0,EasyNetQ.Tests.Tasks.NoDebugLogger' EasyNetQ.Tests.Tasks.Tasks.SomeRandomException,
+EasyNetQ.Tests.Tasks.Tasks,SomeRandomException,0,3,0,0,3,12,3,0,0,-1,0,1,,EasyNetQ.Tests.Tasks.Tasks.TestSimpleService

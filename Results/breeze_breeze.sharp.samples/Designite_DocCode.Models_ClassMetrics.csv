@@ -1,53 +1,53 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-FooBar.Models,Foo,0,0,4,0,0,14,0,0,0,-1,0,3,,DocCode.DataAccess.FooBarRepository' DocCode.DataAccess.FooBarInMemDb' DocCode.Controllers.FoosController
-FooBar.Models,RoleType,0,0,0,0,0,7,0,0,0,-1,0,0,,
-Inheritance.Models,Vehicle,0,0,3,0,0,7,0,2,0,-1,0,0,,
-Inheritance.Models,Bus,0,0,1,0,0,4,0,0,1,-1,0,0,,
-Inheritance.Models,Car,0,0,1,0,0,4,0,0,1,-1,0,0,,
-Inheritance.Models,IBillingDetail,0,0,6,0,0,10,0,5,0,-1,0,0,,
-Inheritance.Models,IBankAccount,0,0,4,0,0,7,0,3,1,-1,0,0,,
-Inheritance.Models,ICreditCard,0,0,4,0,0,7,0,3,1,-1,0,0,,
-Inheritance.Models,IDeposit,0,0,4,0,0,7,0,3,0,-1,0,0,,
-Inheritance.Models,IStatus,0,0,2,0,0,5,0,2,0,-1,0,0,,
-Inheritance.Models,AccountType,0,0,2,0,0,5,0,0,1,-1,0,0,,
-Inheritance.Models,EntityBase,0,1,3,0,1,14,1,9,0,-1,0,0,,
-Inheritance.Models,BillingDetailTPH,0,0,12,0,0,20,0,2,1,-1,0,0,,
-Inheritance.Models,BankAccountTPH,0,0,3,0,0,6,0,0,2,-1,0,0,,
-Inheritance.Models,CreditCardTPH,0,0,2,0,0,5,0,0,2,-1,0,0,,
-Inheritance.Models,DepositTPH,0,0,5,0,0,8,0,0,1,-1,0,0,,
-Inheritance.Models,StatusTPH,0,0,3,0,0,6,0,0,1,-1,0,0,,
-Inheritance.Models,BillingDetailTPT,0,0,9,0,0,13,0,2,1,-1,0,0,,
-Inheritance.Models,BankAccountTPT,0,0,3,0,0,6,0,0,2,-1,0,0,,
-Inheritance.Models,CreditCardTPT,0,0,2,0,0,5,0,0,2,-1,0,0,,
-Inheritance.Models,DepositTPT,0,0,5,0,0,8,0,0,1,-1,0,0,,
-Inheritance.Models,StatusTPT,0,0,3,0,0,6,0,0,1,-1,0,0,,
-Inheritance.Models,BillingDetailTPC,0,0,6,0,0,10,0,2,1,-1,0,0,,
-Inheritance.Models,BankAccountTPC,0,0,5,0,0,8,0,0,2,-1,0,0,,
-Inheritance.Models,CreditCardTPC,0,0,4,0,0,7,0,0,2,-1,0,0,,
-Inheritance.Models,DepositTPC,0,0,5,0,0,8,0,0,1,-1,0,0,,
-Inheritance.Models,ProjectBase,0,1,5,0,0,18,1,2,0,-1,0,0,,
-Inheritance.Models,SoftProject,0,0,1,0,0,4,0,0,1,-1,0,1,,DocCode.DataAccess.InheritanceRepository
-Inheritance.Models,HardProject,0,0,1,0,0,4,0,0,1,-1,0,1,,DocCode.DataAccess.InheritanceRepository
-Northwind.Models,ISaveable,0,1,1,0,0,5,1,5,0,-1,0,1,,DocCode.DataAccess.NorthwindEntitySaveGuard
-Northwind.Models,Category,0,0,5,0,0,9,0,0,0,-1,0,0,,
-Northwind.Models,Customer,0,1,15,0,1,35,1,0,1,-1,0,0,,
-Northwind.Models,Employee,0,1,26,0,1,78,1,0,1,-1,0,0,,
-Northwind.Models,EmployeeTerritory,0,0,5,0,0,19,0,0,0,-1,0,0,,
-Northwind.Models,Location,0,0,6,0,0,22,0,0,0,-1,0,0,,
-Northwind.Models,InternationalOrder,0,0,2,0,0,17,0,0,1,-1,0,0,,
-Northwind.Models,Order,1,2,14,1,2,51,2,1,1,1,0,0,,
-Northwind.Models,OrderDetail,0,1,9,0,1,25,1,0,1,-1,0,0,,
+FooBar.Models,Foo,0,0,4,0,0,14,0,0,0,-1,1,0,FooBar.Models.RoleType,
+FooBar.Models,RoleType,0,0,0,0,0,7,0,0,0,-1,0,1,,FooBar.Models.Foo
+Inheritance.Models,Vehicle,0,0,3,0,0,7,0,2,0,-1,0,2,,Inheritance.Models.Bus' Inheritance.Models.Car
+Inheritance.Models,Bus,0,0,1,0,0,4,0,0,1,-1,1,0,Inheritance.Models.Vehicle,
+Inheritance.Models,Car,0,0,1,0,0,4,0,0,1,-1,1,0,Inheritance.Models.Vehicle,
+Inheritance.Models,IBillingDetail,0,0,6,0,0,10,0,5,0,-1,0,5,,Inheritance.Models.IBankAccount' Inheritance.Models.ICreditCard' Inheritance.Models.BillingDetailTPH' Inheritance.Models.BillingDetailTPT' Inheritance.Models.BillingDetailTPC
+Inheritance.Models,IBankAccount,0,0,4,0,0,7,0,3,1,-1,2,3,Inheritance.Models.IBillingDetail' Inheritance.Models.AccountType,Inheritance.Models.BankAccountTPH' Inheritance.Models.BankAccountTPT' Inheritance.Models.BankAccountTPC
+Inheritance.Models,ICreditCard,0,0,4,0,0,7,0,3,1,-1,2,3,Inheritance.Models.IBillingDetail' Inheritance.Models.AccountType,Inheritance.Models.CreditCardTPH' Inheritance.Models.CreditCardTPT' Inheritance.Models.CreditCardTPC
+Inheritance.Models,IDeposit,0,0,4,0,0,7,0,3,0,-1,0,3,,Inheritance.Models.DepositTPH' Inheritance.Models.DepositTPT' Inheritance.Models.DepositTPC
+Inheritance.Models,IStatus,0,0,2,0,0,5,0,2,0,-1,0,2,,Inheritance.Models.StatusTPH' Inheritance.Models.StatusTPT
+Inheritance.Models,AccountType,0,0,2,0,0,5,0,0,1,-1,1,6,Inheritance.Models.EntityBase,Inheritance.Models.IBankAccount' Inheritance.Models.ICreditCard' Inheritance.Models.BillingDetailTPH' Inheritance.Models.BillingDetailTPT' Inheritance.Models.BankAccountTPC' Inheritance.Models.CreditCardTPC
+Inheritance.Models,EntityBase,0,1,3,0,1,14,1,9,0,-1,0,9,,Inheritance.Models.AccountType' Inheritance.Models.BillingDetailTPH' Inheritance.Models.DepositTPH' Inheritance.Models.StatusTPH' Inheritance.Models.BillingDetailTPT' Inheritance.Models.DepositTPT' Inheritance.Models.StatusTPT' Inheritance.Models.BillingDetailTPC' Inheritance.Models.DepositTPC
+Inheritance.Models,BillingDetailTPH,0,0,12,0,0,20,0,2,1,-1,4,3,Inheritance.Models.IBillingDetail' Inheritance.Models.AccountType' Inheritance.Models.EntityBase' Inheritance.Models.StatusTPH,Inheritance.Models.BankAccountTPH' Inheritance.Models.CreditCardTPH' Inheritance.Models.StatusTPH
+Inheritance.Models,BankAccountTPH,0,0,3,0,0,6,0,0,2,-1,3,1,Inheritance.Models.IBankAccount' Inheritance.Models.BillingDetailTPH' Inheritance.Models.DepositTPH,Inheritance.Models.DepositTPH
+Inheritance.Models,CreditCardTPH,0,0,2,0,0,5,0,0,2,-1,2,0,Inheritance.Models.ICreditCard' Inheritance.Models.BillingDetailTPH,
+Inheritance.Models,DepositTPH,0,0,5,0,0,8,0,0,1,-1,3,1,Inheritance.Models.IDeposit' Inheritance.Models.EntityBase' Inheritance.Models.BankAccountTPH,Inheritance.Models.BankAccountTPH
+Inheritance.Models,StatusTPH,0,0,3,0,0,6,0,0,1,-1,3,1,Inheritance.Models.IStatus' Inheritance.Models.EntityBase' Inheritance.Models.BillingDetailTPH,Inheritance.Models.BillingDetailTPH
+Inheritance.Models,BillingDetailTPT,0,0,9,0,0,13,0,2,1,-1,4,3,Inheritance.Models.IBillingDetail' Inheritance.Models.AccountType' Inheritance.Models.EntityBase' Inheritance.Models.StatusTPT,Inheritance.Models.BankAccountTPT' Inheritance.Models.CreditCardTPT' Inheritance.Models.StatusTPT
+Inheritance.Models,BankAccountTPT,0,0,3,0,0,6,0,0,2,-1,3,1,Inheritance.Models.IBankAccount' Inheritance.Models.BillingDetailTPT' Inheritance.Models.DepositTPT,Inheritance.Models.DepositTPT
+Inheritance.Models,CreditCardTPT,0,0,2,0,0,5,0,0,2,-1,2,0,Inheritance.Models.ICreditCard' Inheritance.Models.BillingDetailTPT,
+Inheritance.Models,DepositTPT,0,0,5,0,0,8,0,0,1,-1,3,1,Inheritance.Models.IDeposit' Inheritance.Models.EntityBase' Inheritance.Models.BankAccountTPT,Inheritance.Models.BankAccountTPT
+Inheritance.Models,StatusTPT,0,0,3,0,0,6,0,0,1,-1,3,1,Inheritance.Models.IStatus' Inheritance.Models.EntityBase' Inheritance.Models.BillingDetailTPT,Inheritance.Models.BillingDetailTPT
+Inheritance.Models,BillingDetailTPC,0,0,6,0,0,10,0,2,1,-1,2,2,Inheritance.Models.IBillingDetail' Inheritance.Models.EntityBase,Inheritance.Models.BankAccountTPC' Inheritance.Models.CreditCardTPC
+Inheritance.Models,BankAccountTPC,0,0,5,0,0,8,0,0,2,-1,4,1,Inheritance.Models.IBankAccount' Inheritance.Models.AccountType' Inheritance.Models.BillingDetailTPC' Inheritance.Models.DepositTPC,Inheritance.Models.DepositTPC
+Inheritance.Models,CreditCardTPC,0,0,4,0,0,7,0,0,2,-1,3,0,Inheritance.Models.ICreditCard' Inheritance.Models.AccountType' Inheritance.Models.BillingDetailTPC,
+Inheritance.Models,DepositTPC,0,0,5,0,0,8,0,0,1,-1,3,1,Inheritance.Models.IDeposit' Inheritance.Models.EntityBase' Inheritance.Models.BankAccountTPC,Inheritance.Models.BankAccountTPC
+Inheritance.Models,ProjectBase,0,1,5,0,0,18,1,2,0,-1,0,2,,Inheritance.Models.SoftProject' Inheritance.Models.HardProject
+Inheritance.Models,SoftProject,0,0,1,0,0,4,0,0,1,-1,1,0,Inheritance.Models.ProjectBase,
+Inheritance.Models,HardProject,0,0,1,0,0,4,0,0,1,-1,1,0,Inheritance.Models.ProjectBase,
+Northwind.Models,ISaveable,0,1,1,0,0,5,1,5,0,-1,0,5,,Northwind.Models.Customer' Northwind.Models.Employee' Northwind.Models.Order' Northwind.Models.OrderDetail' Northwind.Models.User
+Northwind.Models,Category,0,0,5,0,0,9,0,0,0,-1,0,1,,Northwind.Models.Product
+Northwind.Models,Customer,0,1,15,0,1,35,1,0,1,-1,2,1,Northwind.Models.ISaveable' Northwind.Models.Order,Northwind.Models.Order
+Northwind.Models,Employee,0,1,26,0,1,78,1,0,1,-1,4,2,Northwind.Models.ISaveable' Northwind.Models.EmployeeTerritory' Northwind.Models.Order' Northwind.Models.Territory,Northwind.Models.Order' Northwind.Models.Territory
+Northwind.Models,EmployeeTerritory,0,0,5,0,0,19,0,0,0,-1,1,2,Northwind.Models.Territory,Northwind.Models.Employee' Northwind.Models.Territory
+Northwind.Models,Location,0,0,6,0,0,22,0,0,0,-1,0,2,,Northwind.Models.Order' Northwind.Models.Supplier
+Northwind.Models,InternationalOrder,0,0,2,0,0,17,0,0,1,-1,1,0,Northwind.Models.Order,
+Northwind.Models,Order,1,2,14,1,2,51,2,1,1,1,5,4,Northwind.Models.ISaveable' Northwind.Models.Customer' Northwind.Models.Employee' Northwind.Models.Location' Northwind.Models.OrderDetail,Northwind.Models.Customer' Northwind.Models.Employee' Northwind.Models.InternationalOrder' Northwind.Models.OrderDetail
+Northwind.Models,OrderDetail,0,1,9,0,1,25,1,0,1,-1,3,1,Northwind.Models.ISaveable' Northwind.Models.Order' Northwind.Models.Product,Northwind.Models.Order
 Northwind.Models,PreviousEmployee,0,0,19,0,0,46,0,0,0,-1,0,0,,
-Northwind.Models,Product,0,0,14,0,0,27,0,0,0,-1,0,0,,
-Northwind.Models,Region,0,0,4,0,0,9,0,0,0,-1,0,0,,
-Northwind.Models,RoleType,0,0,0,0,0,7,0,0,0,-1,0,0,,
-Northwind.Models,Role,0,0,5,0,0,12,0,0,0,-1,0,0,,
-Northwind.Models,Supplier,0,1,10,0,1,41,1,0,0,-1,0,0,,
-Northwind.Models,Territory,0,0,7,0,0,15,0,0,0,-1,0,0,,
-Northwind.Models,TimeLimit,0,0,5,0,0,13,0,0,0,-1,0,0,,
-Northwind.Models,TimeGroup,0,0,3,0,0,8,0,0,0,-1,0,0,,
-Northwind.Models,User,0,1,15,0,1,29,1,0,1,-1,0,0,,
-Northwind.Models,UserRole,0,0,5,0,0,11,0,0,0,-1,0,0,,
+Northwind.Models,Product,0,0,14,0,0,27,0,0,0,-1,2,2,Northwind.Models.Category' Northwind.Models.Supplier,Northwind.Models.OrderDetail' Northwind.Models.Supplier
+Northwind.Models,Region,0,0,4,0,0,9,0,0,0,-1,1,1,Northwind.Models.Territory,Northwind.Models.Territory
+Northwind.Models,RoleType,0,0,0,0,0,7,0,0,0,-1,0,1,,Northwind.Models.Role
+Northwind.Models,Role,0,0,5,0,0,12,0,0,0,-1,2,2,Northwind.Models.RoleType' Northwind.Models.UserRole,Northwind.Models.UserPartial' Northwind.Models.UserRole
+Northwind.Models,Supplier,0,1,10,0,1,41,1,0,0,-1,2,1,Northwind.Models.Location' Northwind.Models.Product,Northwind.Models.Product
+Northwind.Models,Territory,0,0,7,0,0,15,0,0,0,-1,3,3,Northwind.Models.Employee' Northwind.Models.EmployeeTerritory' Northwind.Models.Region,Northwind.Models.Employee' Northwind.Models.EmployeeTerritory' Northwind.Models.Region
+Northwind.Models,TimeLimit,0,0,5,0,0,13,0,0,0,-1,1,1,Northwind.Models.TimeGroup,Northwind.Models.TimeGroup
+Northwind.Models,TimeGroup,0,0,3,0,0,8,0,0,0,-1,1,1,Northwind.Models.TimeLimit,Northwind.Models.TimeLimit
+Northwind.Models,User,0,1,15,0,1,29,1,0,1,-1,2,1,Northwind.Models.ISaveable' Northwind.Models.UserRole,Northwind.Models.UserRole
+Northwind.Models,UserRole,0,0,5,0,0,11,0,0,0,-1,2,2,Northwind.Models.Role' Northwind.Models.User,Northwind.Models.Role' Northwind.Models.User
 Northwind.Models,ProductDto,0,0,2,0,0,5,0,0,0,-1,0,0,,
-Northwind.Models,UserPartial,0,1,7,0,1,27,1,0,0,-1,0,1,,DocCode.Controllers.NorthwindController
+Northwind.Models,UserPartial,0,1,7,0,1,27,1,0,0,-1,1,0,Northwind.Models.Role,
 Todo.Models,TodoItem,0,1,5,0,1,12,1,0,0,-1,0,0,,

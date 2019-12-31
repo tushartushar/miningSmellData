@@ -1,11 +1,11 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Visitor,Clerk,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Visitor,Director,0,1,0,0,1,7,1,0,1,-1,0,0,,
-Visitor,Element,0,1,0,0,1,4,1,1,0,-1,1,3,Visitor.IVisitor,Visitor.IncomeVisitor' Visitor.IVisitor' Visitor.VacationVisitor
-Visitor,Employee,0,2,3,0,2,16,2,3,1,-1,1,3,Visitor.IVisitor,Visitor.Employees' Visitor.IncomeVisitor' Visitor.VacationVisitor
+Visitor,Clerk,0,1,0,0,1,7,1,0,1,-1,1,1,Visitor.Employee,Visitor.Program
+Visitor,Director,0,1,0,0,1,7,1,0,1,-1,1,1,Visitor.Employee,Visitor.Program
+Visitor,Element,0,1,0,0,1,4,1,1,0,-1,1,4,Visitor.IVisitor,Visitor.VacationVisitor' Visitor.IncomeVisitor' Visitor.Employee' Visitor.IVisitor
+Visitor,Employee,0,2,3,0,2,16,2,3,1,-1,2,6,Visitor.Element' Visitor.IVisitor,Visitor.President' Visitor.Clerk' Visitor.Director' Visitor.IncomeVisitor' Visitor.VacationVisitor' Visitor.Employees
 Visitor,Employees,1,3,0,0,3,20,4,0,0,0,2,1,Visitor.Employee' Visitor.IVisitor,Visitor.Program
-Visitor,IncomeVisitor,0,1,0,0,1,14,2,0,1,-1,2,0,Visitor.Employee' Visitor.Element,
-Visitor,IVisitor,0,1,0,0,0,4,1,2,0,-1,1,3,Visitor.Element,Visitor.Element' Visitor.Employee' Visitor.Employees
-Visitor,President,0,1,0,0,1,7,1,0,2,-1,0,0,,
-Visitor,Program,0,1,0,0,0,14,1,0,0,-1,1,0,Visitor.Employees,
-Visitor,VacationVisitor,0,1,0,0,1,14,2,0,1,-1,2,0,Visitor.Employee' Visitor.Element,
+Visitor,IncomeVisitor,0,1,0,0,1,14,2,0,1,-1,3,1,Visitor.Element' Visitor.Employee' Visitor.IVisitor,Visitor.Program
+Visitor,IVisitor,0,1,0,0,0,4,1,2,0,-1,1,5,Visitor.Element,Visitor.VacationVisitor' Visitor.IncomeVisitor' Visitor.Employees' Visitor.Employee' Visitor.Element
+Visitor,President,0,1,0,0,1,7,1,0,2,-1,1,1,Visitor.Employee,Visitor.Program
+Visitor,Program,0,1,0,0,0,14,1,0,0,-1,6,0,Visitor.Clerk' Visitor.Director' Visitor.Employees' Visitor.IncomeVisitor' Visitor.President' Visitor.VacationVisitor,
+Visitor,VacationVisitor,0,1,0,0,1,14,2,0,1,-1,3,1,Visitor.Element' Visitor.Employee' Visitor.IVisitor,Visitor.Program

@@ -1,0 +1,34 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Deveel.Data.Sql.Expressions,SqlExpressionSerializationVisitor,1,1,0,0,1,6,1,0,1,0,0,1,,Deveel.Data.Sql.Expressions.SqlExpressionSerializer
+Deveel.Data.Sql.Expressions,SqlExpressionSerializer,0,3,0,0,2,13,3,0,0,-1,1,1,Deveel.Data.Sql.Expressions.SqlExpressionSerializationVisitor,Deveel.Data.Sql.Tables.TableInfoSerializer
+Deveel.Data.Sql.Indexes,IndexSetInfoSerializer,0,1,0,0,1,34,2,0,0,-1,1,1,Deveel.Data.Sql.Indexes.IndexInfoSerializer,Deveel.Data.Sql.Tables.TableSource
+Deveel.Data.Sql.Indexes,IndexInfoSerializer,0,1,0,0,1,15,2,0,0,-1,0,1,,Deveel.Data.Sql.Indexes.IndexSetInfoSerializer
+Deveel.Data.Sql.Tables,CommitTable,0,13,7,0,9,49,13,0,2,-1,1,0,Deveel.Data.Sql.Tables.TableEventRegistry,
+Deveel.Data.Sql.Tables,DirtySelectException,0,2,1,0,2,10,2,0,2,-1,0,1,,Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,DroppedModifiedObjectConflictException,0,2,1,0,2,10,2,0,2,-1,0,1,,Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,FixedRecordList,7,14,2,0,12,140,22,0,0,0.21,0,2,,Deveel.Data.Storage.LargeObjectStore' Deveel.Data.Sql.Tables.TableSource
+Deveel.Data.Sql.Tables,IMappedBlock,0,2,4,0,0,9,2,1,1,-1,0,1,,Deveel.Data.Sql.Tables.IndexSetStore
+Deveel.Data.Sql.Tables,IndexSetStore,5,14,1,0,8,775,41,0,0,0.21,6,1,Deveel.Data.Sql.Tables.IMappedBlock' Deveel.Data.Sql.Tables.SnapshotIndexSet' Deveel.Data.Sql.Tables.Index' Deveel.Data.Sql.Tables.MappedBlock' Deveel.Data.Sql.Tables.IndexBlock' Deveel.Data.Sql.Util.BytesUtil,Deveel.Data.Sql.Tables.TableSource
+Deveel.Data.Sql.Tables,SnapshotIndexSet,5,6,0,0,4,69,15,0,1,0,0,1,,Deveel.Data.Sql.Tables.IndexSetStore
+Deveel.Data.Sql.Tables,Index,2,7,5,0,3,214,11,0,2,0.29,0,1,,Deveel.Data.Sql.Tables.IndexSetStore
+Deveel.Data.Sql.Tables,MappedBlock,3,7,9,0,5,162,18,0,2,0.57,0,1,,Deveel.Data.Sql.Tables.IndexSetStore
+Deveel.Data.Sql.Tables,IndexBlock,5,9,5,0,5,136,25,0,0,0.22,0,1,,Deveel.Data.Sql.Tables.IndexSetStore
+Deveel.Data.Sql.Tables,NonCommittedConflictException,0,2,1,0,2,10,2,0,2,-1,0,1,,Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,ObjectCommitState,0,1,3,0,1,10,1,0,0,-1,0,2,,Deveel.Data.Sql.Tables.TableSystemV2' Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,ObjectDuplicatedConflictException,0,2,2,0,2,13,2,0,2,-1,0,1,,Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,RowRemoveConflictException,0,2,2,0,2,12,2,0,2,-1,0,1,,Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,TableCommitEvent,0,1,2,0,1,9,1,0,3,-1,0,1,,Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,TableEventRegistry,1,5,5,0,4,48,9,0,1,0.6,0,1,,Deveel.Data.Sql.Tables.CommitTable
+Deveel.Data.Sql.Tables,TableInfoSerializer,0,1,0,0,1,33,3,0,0,-1,3,1,Deveel.Data.Sql.Expressions.SqlExpressionSerializer' Deveel.Data.Sql.Tables.ColumnInfoSerializer' Deveel.Data.Sql.Types.SqlTypeSerializer,Deveel.Data.Sql.Tables.TableSource
+Deveel.Data.Sql.Tables,ColumnInfoSerializer,0,1,0,0,1,14,2,0,0,-1,0,1,,Deveel.Data.Sql.Tables.TableInfoSerializer
+Deveel.Data.Sql.Tables,TableSource,9,36,21,0,10,571,82,0,1,0.33,6,3,Deveel.Data.Sql.Indexes.IndexSetInfoSerializer' Deveel.Data.Sql.Tables.FixedRecordList' Deveel.Data.Sql.Tables.IndexSetStore' Deveel.Data.Sql.Tables.TableInfoSerializer' Deveel.Data.Sql.Tables.TableSourceGC' Deveel.Data.Sql.Tables.TableSystemV2,Deveel.Data.Sql.Tables.TableSourceGC' Deveel.Data.Sql.Tables.TableSystemV2' Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Tables,TableSourceGC,3,3,0,0,3,69,13,0,0,0,1,1,Deveel.Data.Sql.Tables.TableSource,Deveel.Data.Sql.Tables.TableSource
+Deveel.Data.Sql.Tables,TableStateStore,9,17,1,0,13,237,33,0,0,0.29,1,1,Deveel.Data.Sql.Tables.TableState,Deveel.Data.Sql.Tables.TableSystemV2
+Deveel.Data.Sql.Tables,TableState,0,1,2,0,1,8,1,0,0,-1,0,2,,Deveel.Data.Sql.Tables.TableSystemV2' Deveel.Data.Sql.Tables.TableStateStore
+Deveel.Data.Sql.Tables,TableSystemV2,7,26,9,0,12,366,71,0,1,0.15,6,2,Deveel.Data.Sql.Tables.ObjectCommitState' Deveel.Data.Sql.Tables.TableSource' Deveel.Data.Sql.Tables.TableStateStore' Deveel.Data.Sql.Tables.TableState' Deveel.Data.Sql.Tables.TransactionCommit' Deveel.Data.Storage.LargeObjectStore,Deveel.Data.Sql.Tables.TransactionCommit' Deveel.Data.Sql.Tables.TableSource
+Deveel.Data.Sql.Tables,TransactionCommit,0,10,12,0,2,431,45,0,0,-1,10,1,Deveel.Data.Sql.Tables.DirtySelectException' Deveel.Data.Sql.Tables.DroppedModifiedObjectConflictException' Deveel.Data.Sql.Tables.NonCommittedConflictException' Deveel.Data.Sql.Tables.ObjectCommitState' Deveel.Data.Sql.Tables.ObjectDuplicatedConflictException' Deveel.Data.Sql.Tables.RowRemoveConflictException' Deveel.Data.Sql.Tables.TableCommitEvent' Deveel.Data.Sql.Tables.TableSource' Deveel.Data.Sql.Tables.TableSystemV2' Deveel.Data.Sql.Tables.CommitTableInfo,Deveel.Data.Sql.Tables.TableSystemV2
+Deveel.Data.Sql.Tables,CommitTableInfo,6,0,0,6,0,17,0,0,0,-1,0,1,,Deveel.Data.Sql.Tables.TransactionCommit
+Deveel.Data.Sql.Types,SqlTypeSerializer,0,2,0,0,2,47,9,0,0,-1,0,1,,Deveel.Data.Sql.Tables.TableInfoSerializer
+Deveel.Data.Storage,LargeObjectStore,7,13,1,0,6,521,47,0,1,0,2,1,Deveel.Data.Sql.Tables.FixedRecordList' Deveel.Data.Storage.LargeObject,Deveel.Data.Sql.Tables.TableSystemV2
+Deveel.Data.Storage,LargeObject,1,8,5,0,8,40,9,0,1,0.5,0,1,,Deveel.Data.Storage.LargeObjectStore
+Deveel.Data.Sql.Util,BytesUtil,0,4,0,0,4,26,5,0,0,-1,0,1,,Deveel.Data.Sql.Tables.IndexSetStore

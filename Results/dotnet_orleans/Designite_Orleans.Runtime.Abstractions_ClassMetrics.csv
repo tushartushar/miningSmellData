@@ -1,0 +1,33 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Orleans.Configuration,SiloConnectionOptions,3,6,0,0,3,18,6,0,1,0.5,1,0,Orleans.Configuration.ISiloConnectionBuilderOptions,
+Orleans.Configuration,ISiloConnectionBuilderOptions,0,3,0,0,3,6,3,1,0,-1,0,1,,Orleans.Configuration.SiloConnectionOptions
+Orleans.Configuration,ProcessExitHandlingOptions,0,0,1,0,0,7,0,0,0,-1,0,0,,
+Orleans.Configuration,SiloOptions,0,0,1,0,0,7,0,0,0,-1,0,0,,
+Orleans.Runtime,IAttributeToFactoryMapper,0,1,0,0,0,8,1,1,0,-1,1,0,Orleans.IFacetMetadata,
+Orleans.Runtime,IPersistentState,0,0,0,0,0,4,0,1,0,-1,0,1,,Orleans.Runtime.IPersistentStateFactory
+Orleans.Runtime,IPersistentStateConfiguration,0,0,2,0,0,5,0,2,0,-1,0,2,,Orleans.Runtime.PersistentStateAttribute' Orleans.Runtime.IPersistentStateFactory
+Orleans.Runtime,IPersistentStateFactory,0,1,0,0,0,4,1,1,0,-1,2,0,Orleans.Runtime.IPersistentState' Orleans.Runtime.IPersistentStateConfiguration,
+Orleans.Runtime,PersistentStateAttribute,0,1,2,0,1,11,1,0,1,-1,2,0,Orleans.Runtime.IPersistentStateConfiguration' Orleans.IFacetMetadata,
+Orleans.Runtime,ISiloLifecycle,0,0,2,0,0,11,0,1,0,-1,0,3,,Orleans.Runtime.ISiloLifecycleSubject' Orleans.Hosting.SiloPersistentStreamConfigurator' Orleans.Hosting.SiloBuilderStartupExtensions
+Orleans.Runtime,ISiloLifecycleSubject,0,0,0,0,0,3,0,1,1,-1,1,0,Orleans.Runtime.ISiloLifecycle,
+Orleans.Runtime,IStartupTask,0,1,0,0,0,9,1,0,0,-1,0,1,,Orleans.Hosting.SiloBuilderStartupExtensions
+Orleans.Runtime,IMultiClusterGossipService,0,3,0,0,0,21,3,1,0,-1,1,0,Orleans.Runtime.IMultiClusterGossipData,
+Orleans.Runtime,IMultiClusterGossipData,0,0,3,0,0,6,0,1,0,-1,1,3,Orleans.Runtime.MultiClusterNetwork.GatewayEntry,Orleans.Runtime.IMultiClusterGossipService' Orleans.Runtime.MultiClusterNetwork.IGossipChannel' Orleans.Runtime.MultiClusterNetwork.MultiClusterData
+Orleans,IFacetMetadata,0,0,0,0,0,3,0,1,0,-1,0,2,,Orleans.Runtime.PersistentStateAttribute' Orleans.Runtime.IAttributeToFactoryMapper
+Orleans.Hosting,ISiloHost,0,2,2,0,0,27,2,1,0,-1,0,2,,Orleans.Hosting.SiloHostBuilderExtensions' Orleans.Hosting.ISiloHostBuilder
+Orleans.Hosting,ISiloHostBuilder,0,6,1,0,0,51,6,1,0,-1,1,4,Orleans.Hosting.ISiloHost,Orleans.Hosting.HostingGrainExtensions' Orleans.Hosting.StreamHostingExtensions' Orleans.Hosting.SiloBuilderStartupExtensions' Orleans.Hosting.SiloHostBuilderExtensions
+Orleans.Hosting,SiloHostBuilderExtensions,0,11,0,0,11,131,14,0,0,-1,2,0,Orleans.Hosting.ISiloHost' Orleans.Hosting.ISiloHostBuilder,
+Orleans.Hosting,HostingGrainExtensions,0,2,0,0,2,27,2,0,0,-1,2,0,Orleans.Hosting.ISiloHostBuilder' Orleans.Hosting.ISiloBuilder,
+Orleans.Hosting,ISiloBuilder,0,1,1,0,0,14,1,1,0,-1,0,4,,Orleans.Hosting.HostingGrainExtensions' Orleans.Hosting.StreamHostingExtensions' Orleans.Hosting.SiloBuilderStartupExtensions' Orleans.Hosting.SiloBuilderExtensions
+Orleans.Hosting,SiloBuilderExtensions,0,7,0,0,7,80,9,0,0,-1,1,0,Orleans.Hosting.ISiloBuilder,
+Orleans.Hosting,SiloBuilderStartupExtensions,0,6,0,0,6,170,6,0,0,-1,5,0,Orleans.Runtime.ISiloLifecycle' Orleans.Runtime.IStartupTask' Orleans.Hosting.ISiloHostBuilder' Orleans.Hosting.ISiloBuilder' Orleans.Hosting.StartupTask,
+Orleans.Hosting,StartupTask,3,2,0,0,2,22,2,0,0,1,0,1,,Orleans.Hosting.SiloBuilderStartupExtensions
+Orleans.Hosting,StreamHostingExtensions,0,8,0,0,8,87,8,0,0,-1,4,0,Orleans.Hosting.ISiloHostBuilder' Orleans.Hosting.ISiloBuilder' Orleans.Hosting.ISiloPersistentStreamConfigurator' Orleans.Hosting.SiloPersistentStreamConfigurator,
+Orleans.Hosting,ISiloPersistentStreamConfigurator,0,0,0,0,0,1,0,3,2,-1,0,3,,Orleans.Hosting.SiloPersistentStreamConfigurator' Orleans.Hosting.StreamHostingExtensions' Orleans.Hosting.SiloPersistentStreamConfiguratorExtensions
+Orleans.Hosting,SiloPersistentStreamConfiguratorExtensions,0,4,0,0,4,21,4,0,0,-1,1,0,Orleans.Hosting.ISiloPersistentStreamConfigurator,
+Orleans.Hosting,PersistentStreamStorageConfigurationValidator,3,3,0,0,2,27,5,0,1,1,0,1,,Orleans.Hosting.SiloPersistentStreamConfigurator
+Orleans.Hosting,SiloPersistentStreamConfigurator,0,1,0,0,1,12,1,4,3,-1,3,1,Orleans.Runtime.ISiloLifecycle' Orleans.Hosting.ISiloPersistentStreamConfigurator' Orleans.Hosting.PersistentStreamStorageConfigurationValidator,Orleans.Hosting.StreamHostingExtensions
+Orleans.Runtime.MultiClusterNetwork,IGossipChannel,0,3,1,0,0,30,3,1,0,-1,1,0,Orleans.Runtime.IMultiClusterGossipData,
+Orleans.Runtime.MultiClusterNetwork,MultiClusterData,1,10,3,0,10,187,17,0,1,0.8,2,0,Orleans.Runtime.IMultiClusterGossipData' Orleans.Runtime.MultiClusterNetwork.GatewayEntry,
+Orleans.Runtime.MultiClusterNetwork,GatewayEntry,1,4,5,1,4,70,5,0,1,0.75,0,2,,Orleans.Runtime.IMultiClusterGossipData' Orleans.Runtime.MultiClusterNetwork.MultiClusterData
+Orleans.Transactions,ITransactionAgent,0,3,0,0,0,25,3,1,0,-1,0,0,,

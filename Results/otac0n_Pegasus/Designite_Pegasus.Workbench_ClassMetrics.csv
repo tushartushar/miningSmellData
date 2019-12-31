@@ -1,18 +1,25 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Pegasus.Workbench,Commands,1,0,0,1,0,9,0,0,0,-1,0,0,,
-Pegasus.Workbench,FileUtilities,1,2,0,0,2,20,2,0,0,0,0,1,,Pegasus.Workbench.AppViewModel
-Pegasus.Workbench,Tutorial,1,3,4,0,2,60,3,0,0,1,0,2,,Pegasus.Workbench.AppViewModel' Pegasus.Tests.Workbench.TutorialTests
-Pegasus.Workbench,App,0,1,0,0,0,7,1,0,0,-1,0,0,,
-Pegasus.Workbench,AppViewModel,8,2,12,0,2,200,2,0,0,0,6,1,Pegasus.Workbench.Tutorial' Pegasus.Workbench.Pipeline.PegParser' Pegasus.Workbench.Pipeline.PegCompiler' Pegasus.Workbench.Pipeline.CsCompiler' Pegasus.Workbench.Pipeline.TestParser' Pegasus.Workbench.FileUtilities,Pegasus.Workbench.MainWindow
-Pegasus.Workbench,CompilerErrorListEqualityComparer,0,2,0,0,2,15,3,0,0,-1,0,0,,
-Pegasus.Workbench,PathToFileNameConverter,0,3,0,0,3,37,4,0,0,-1,0,0,,
-Pegasus.Workbench,MainWindow,0,11,1,0,4,199,21,0,0,-1,2,0,Pegasus.Workbench.AppViewModel' Pegasus.Workbench.Properties.Resources,
-Pegasus.Workbench,PegasusHighlightingStrategy,2,6,3,0,4,126,16,0,0,0.33,2,0,Pegasus.Common.Cursor' Pegasus.Parser.PegParser,
-Pegasus.Workbench.Pipeline,CsCompiler,1,2,2,1,1,77,4,0,0,1,4,1,Pegasus.Workbench.Pipeline.PegParser' Pegasus.Expressions.Grammar' Pegasus.Workbench.Pipeline.Result' Pegasus.Common.Cursor,Pegasus.Workbench.AppViewModel
+Pegasus.Workbench.Pipeline.Model,ExportedRuleEntrypoint,1,2,0,0,2,18,3,0,1,1,1,1,Pegasus.Workbench.Pipeline.Model.ParserEntrypoint,Pegasus.Workbench.Pipeline.RuleSelector
+Pegasus.Workbench.Pipeline.Model,ParserEntrypoint,0,2,2,0,2,29,2,3,0,-1,0,5,,Pegasus.Workbench.Pipeline.Model.ExportedRuleEntrypoint' Pegasus.Workbench.Pipeline.Model.PublicRuleEntrypoint' Pegasus.Workbench.Pipeline.Model.StartRuleEntrypoint' Pegasus.Workbench.Pipeline.TestParser' Pegasus.Workbench.Pipeline.RuleSelector
+Pegasus.Workbench.Pipeline.Model,PublicRuleEntrypoint,2,2,0,0,2,20,3,0,1,0,1,1,Pegasus.Workbench.Pipeline.Model.ParserEntrypoint,Pegasus.Workbench.Pipeline.RuleSelector
+Pegasus.Workbench.Pipeline.Model,StartRuleEntrypoint,1,2,0,0,2,25,3,0,1,1,1,1,Pegasus.Workbench.Pipeline.Model.ParserEntrypoint,Pegasus.Workbench.Pipeline.RuleSelector
+Pegasus.Workbench.Pipeline,CsCompiler,1,2,2,1,1,78,4,0,0,1,2,1,Pegasus.Workbench.Pipeline.Result' Pegasus.Workbench.Pipeline.PegParser,Pegasus.Workbench.AppViewModel
 Pegasus.Workbench.Pipeline,Result,0,0,2,0,0,5,0,0,0,-1,0,1,,Pegasus.Workbench.Pipeline.CsCompiler
-Pegasus.Workbench.Pipeline,PegCompiler,0,1,2,0,1,15,1,0,0,-1,1,1,Pegasus.Compiler.PegCompiler,Pegasus.Workbench.AppViewModel
-Pegasus.Workbench.Pipeline,PegParser,1,2,3,1,1,59,2,0,0,1,3,2,Pegasus.Expressions.Grammar' Pegasus.Parser.PegParser' Pegasus.Workbench.Pipeline.ParseResult,Pegasus.Workbench.AppViewModel' Pegasus.Workbench.Pipeline.CsCompiler
+Pegasus.Workbench.Pipeline,PegCompiler,0,1,2,0,1,34,1,0,0,-1,0,1,,Pegasus.Workbench.AppViewModel
+Pegasus.Workbench.Pipeline,PegParser,1,2,3,1,1,59,2,0,0,1,1,2,Pegasus.Workbench.Pipeline.ParseResult,Pegasus.Workbench.AppViewModel' Pegasus.Workbench.Pipeline.CsCompiler
 Pegasus.Workbench.Pipeline,ParseResult,0,0,5,0,0,10,0,0,0,-1,0,2,,Pegasus.Workbench.Pipeline.PegParser' Pegasus.Workbench.Pipeline.TestParser
-Pegasus.Workbench.Pipeline,TestParser,1,2,2,1,1,59,3,0,0,1,1,1,Pegasus.Workbench.Pipeline.ParseResult,Pegasus.Workbench.AppViewModel
-Pegasus.Workbench.Properties,Resources,2,1,4,0,0,59,1,0,0,0,0,1,,Pegasus.Workbench.MainWindow
+Pegasus.Workbench.Pipeline,RuleSelector,3,2,3,0,2,83,2,0,0,0,5,1,Pegasus.Workbench.Pipeline.Model.ExportedRuleEntrypoint' Pegasus.Workbench.Pipeline.Model.ParserEntrypoint' Pegasus.Workbench.Pipeline.Model.PublicRuleEntrypoint' Pegasus.Workbench.Pipeline.Model.StartRuleEntrypoint' Pegasus.Workbench.Pipeline.ParserEntrypointEqualityComparer,Pegasus.Workbench.AppViewModel
+Pegasus.Workbench.Pipeline,ParserEntrypointEqualityComparer,1,3,0,1,2,11,3,0,0,1,0,1,,Pegasus.Workbench.Pipeline.RuleSelector
+Pegasus.Workbench.Pipeline,TestParser,1,2,2,1,1,78,3,0,0,1,3,1,Pegasus.Workbench.Pipeline.Model.ParserEntrypoint' Pegasus.Workbench.Pipeline.ParseResult' Pegasus.Workbench.Pipeline.WarningsPerformanceTracer,Pegasus.Workbench.AppViewModel
+Pegasus.Workbench.Pipeline,WarningsPerformanceTracer,0,1,1,0,0,13,1,0,2,-1,0,1,,Pegasus.Workbench.Pipeline.TestParser
+Pegasus.Workbench.Properties,Resources,2,1,4,0,0,59,1,0,0,0,0,2,,Pegasus.Workbench.MainWindow' Pegasus.Workbench.Commands
 Pegasus.Workbench.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
+Pegasus.Workbench,App,0,1,0,0,0,7,1,0,0,-1,1,0,Pegasus.Workbench.PegasusHighlightingStrategy,
+Pegasus.Workbench,AppViewModel,8,2,13,0,2,203,2,0,0,0,8,1,Pegasus.Workbench.Pipeline.CsCompiler' Pegasus.Workbench.Pipeline.PegCompiler' Pegasus.Workbench.Pipeline.PegParser' Pegasus.Workbench.Pipeline.RuleSelector' Pegasus.Workbench.Pipeline.TestParser' Pegasus.Workbench.CompilerErrorListEqualityComparer' Pegasus.Workbench.FileUtilities' Pegasus.Workbench.Tutorial,Pegasus.Workbench.MainWindow
+Pegasus.Workbench,CompilerErrorListEqualityComparer,0,2,0,0,2,15,3,0,0,-1,0,1,,Pegasus.Workbench.AppViewModel
+Pegasus.Workbench,Commands,1,0,0,1,0,9,0,0,0,-1,1,0,Pegasus.Workbench.Properties.Resources,
+Pegasus.Workbench,FileUtilities,1,2,0,0,2,20,2,0,0,0,0,1,,Pegasus.Workbench.AppViewModel
+Pegasus.Workbench,MainWindow,0,11,1,0,4,199,22,0,0,-1,2,0,Pegasus.Workbench.Properties.Resources' Pegasus.Workbench.AppViewModel,
+Pegasus.Workbench,PathToFileNameConverter,0,3,0,0,3,37,4,0,0,-1,0,0,,
+Pegasus.Workbench,PegasusHighlightingStrategy,2,6,3,0,4,124,18,0,0,0.33,0,1,,Pegasus.Workbench.App
+Pegasus.Workbench,Tutorial,1,3,4,0,2,60,3,0,0,1,0,1,,Pegasus.Workbench.AppViewModel

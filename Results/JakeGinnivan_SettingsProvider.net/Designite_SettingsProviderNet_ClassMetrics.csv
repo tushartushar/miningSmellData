@@ -1,14 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 SettingsProviderNet,EnumHelper,0,2,0,0,2,17,3,0,0,-1,0,1,,SettingsProviderNet.SettingsProvider
-SettingsProviderNet,ISettingDescriptor,0,3,7,0,0,17,3,1,0,-1,0,1,,SettingsProviderNet.SettingsProvider
-SettingsProviderNet,ISettingsProvider,0,5,0,0,0,14,5,1,0,-1,0,0,,
-SettingsProviderNet,ISettingsStorage,0,2,0,0,0,5,2,1,0,-1,0,1,,SettingsProviderNet.SettingsProvider
-SettingsProviderNet,IsolatedStorageSettingsStore,1,2,0,0,0,24,2,0,1,0,0,0,,
-SettingsProviderNet,JsonSettingsStoreBase,0,4,0,0,2,27,5,4,1,-1,0,0,,
+SettingsProviderNet,ISettingDescriptor,0,3,7,0,0,17,3,1,0,-1,0,3,,SettingsProviderNet.SettingDescriptor' SettingsProviderNet.ISettingsProvider' SettingsProviderNet.SettingsProvider
+SettingsProviderNet,ISettingsProvider,0,5,0,0,0,14,5,1,0,-1,1,1,SettingsProviderNet.ISettingDescriptor,SettingsProviderNet.SettingsProvider
+SettingsProviderNet,ISettingsStorage,0,2,0,0,0,5,2,1,0,-1,0,2,,SettingsProviderNet.SettingsProvider' SettingsProviderNet.JsonSettingsStoreBase
+SettingsProviderNet,IsolatedStorageSettingsStore,1,2,0,0,0,24,3,0,1,0,1,1,SettingsProviderNet.JsonSettingsStoreBase,SettingsProviderNet.SettingsProvider
+SettingsProviderNet,JsonSettingsStoreBase,0,4,0,0,2,27,5,4,1,-1,1,3,SettingsProviderNet.ISettingsStorage,SettingsProviderNet.PortableStorage' SettingsProviderNet.IsolatedStorageSettingsStore' SettingsProviderNet.RoamingAppDataStorage
 SettingsProviderNet,KeyAttribute,0,1,1,0,1,8,1,0,0,-1,0,1,,SettingsProviderNet.SettingDescriptor
-SettingsProviderNet,PortableStorage,0,4,0,0,1,20,4,0,2,-1,0,0,,
+SettingsProviderNet,PortableStorage,0,4,0,0,1,20,4,0,2,-1,1,0,SettingsProviderNet.JsonSettingsStoreBase,
 SettingsProviderNet,ProtectedDataUtils,0,4,0,0,4,69,4,0,0,-1,0,2,,SettingsProviderNet.SettingDescriptor' SettingsProviderNet.SettingsProvider
-SettingsProviderNet,ProtectedStringAttribute,0,0,0,0,0,4,0,0,0,-1,0,0,,
-SettingsProviderNet,RoamingAppDataStorage,1,4,0,0,1,26,5,0,2,0,0,0,,
-SettingsProviderNet,SettingDescriptor,2,7,7,0,4,73,9,0,1,0.29,2,1,SettingsProviderNet.KeyAttribute' SettingsProviderNet.ProtectedDataUtils,SettingsProviderNet.SettingsProvider
-SettingsProviderNet,SettingsProvider,3,13,0,0,6,142,28,0,1,0,5,1,SettingsProviderNet.ISettingsStorage' SettingsProviderNet.ISettingDescriptor' SettingsProviderNet.ProtectedDataUtils' SettingsProviderNet.SettingDescriptor' SettingsProviderNet.EnumHelper,SettingsProviderNet.Tests.SettingsProviderTests
+SettingsProviderNet,ProtectedStringAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,SettingsProviderNet.SettingDescriptor
+SettingsProviderNet,RoamingAppDataStorage,1,4,0,0,1,26,5,0,2,0.5,1,0,SettingsProviderNet.JsonSettingsStoreBase,
+SettingsProviderNet,SettingDescriptor,2,7,7,0,4,73,9,0,1,0.29,4,1,SettingsProviderNet.ISettingDescriptor' SettingsProviderNet.KeyAttribute' SettingsProviderNet.ProtectedDataUtils' SettingsProviderNet.ProtectedStringAttribute,SettingsProviderNet.SettingsProvider
+SettingsProviderNet,SettingsProvider,3,13,0,0,6,142,30,0,1,0.15,7,0,SettingsProviderNet.EnumHelper' SettingsProviderNet.ISettingDescriptor' SettingsProviderNet.ISettingsProvider' SettingsProviderNet.ISettingsStorage' SettingsProviderNet.IsolatedStorageSettingsStore' SettingsProviderNet.ProtectedDataUtils' SettingsProviderNet.SettingDescriptor,

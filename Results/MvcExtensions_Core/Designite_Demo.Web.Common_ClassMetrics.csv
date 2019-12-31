@@ -1,36 +1,36 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Demo.Web,AccountController,0,13,2,0,10,157,22,0,0,-1,5,0,Demo.Web.IFormsAuthenticationService' Demo.Web.IMembershipService' Demo.Web.ChangePasswordModel' Demo.Web.LogOnModel' Demo.Web.RegisterModel,
+Demo.Web,AccountController,0,13,2,0,10,157,30,0,0,-1,7,0,Demo.Web.IMembershipService' Demo.Web.AccountMembershipService' Demo.Web.IFormsAuthenticationService' Demo.Web.FormsAuthenticationService' Demo.Web.ChangePasswordModel' Demo.Web.LogOnModel' Demo.Web.RegisterModel,
 Demo.Web,HomeController,0,2,0,0,2,13,2,0,0,-1,0,0,,
-Demo.Web,ProductController,1,9,0,0,9,58,11,0,0,0.22,3,0,Demo.Web.IRepository' Demo.Web.Product' Demo.Web.ProductEditModel,
-Demo.Web,PopulateCategories,1,2,0,0,2,16,3,0,1,0,2,0,Demo.Web.IRepository' Demo.Web.ProductEditModel,
-Demo.Web,PopulateModel,0,2,2,0,2,12,2,2,0,-1,0,0,,
-Demo.Web,PopulateSuppliers,1,2,0,0,2,16,3,0,1,0,2,0,Demo.Web.IRepository' Demo.Web.ProductEditModel,
-Demo.Web,ConfigureModelBinders,0,2,0,0,1,13,2,0,0,-1,0,0,,
-Demo.Web,ProductEditModelBinder,2,3,0,0,1,30,5,0,0,0,1,0,Demo.Web.IRepository,
-Demo.Web,ConfigureFilters,0,2,0,0,1,13,2,0,0,-1,0,0,,
+Demo.Web,ProductController,1,9,0,0,9,58,11,0,0,0.33,3,1,Demo.Web.IRepository' Demo.Web.Product' Demo.Web.ProductEditModel,Demo.Web.ConfigureFilters
+Demo.Web,PopulateCategories,1,2,0,0,2,16,3,0,1,1,4,1,Demo.Web.PopulateModel' Demo.Web.Category' Demo.Web.IRepository' Demo.Web.ProductEditModel,Demo.Web.ConfigureFilters
+Demo.Web,PopulateModel,0,2,2,0,2,12,2,2,0,-1,0,2,,Demo.Web.PopulateCategories' Demo.Web.PopulateSuppliers
+Demo.Web,PopulateSuppliers,1,2,0,0,2,16,3,0,1,1,4,1,Demo.Web.PopulateModel' Demo.Web.IRepository' Demo.Web.ProductEditModel' Demo.Web.Supplier,Demo.Web.ConfigureFilters
+Demo.Web,ConfigureModelBinders,0,2,0,0,1,13,2,0,0,-1,2,0,Demo.Web.ProductEditModelBinder' Demo.Web.ProductEditModel,
+Demo.Web,ProductEditModelBinder,2,3,0,0,1,30,5,0,0,0.67,4,1,Demo.Web.Category' Demo.Web.EntityBase' Demo.Web.IRepository' Demo.Web.Supplier,Demo.Web.ConfigureModelBinders
+Demo.Web,ConfigureFilters,0,2,0,0,1,13,2,0,0,-1,3,0,Demo.Web.ProductController' Demo.Web.PopulateCategories' Demo.Web.PopulateSuppliers,
 Demo.Web,RegisterRoutes,0,2,0,0,1,12,2,0,0,-1,0,0,,
 Demo.Web,LocalizedTexts,2,1,22,0,0,221,1,0,0,0,0,2,,Demo.Web.ProductDisplayModelConfiguration' Demo.Web.ProductEditModelConfiguration
-Demo.Web,IMembershipService,0,3,1,0,0,7,3,1,0,-1,0,1,,Demo.Web.AccountController
-Demo.Web,AccountMembershipService,1,5,1,0,5,55,5,0,1,0.4,1,0,Demo.Web.ValidationUtil,
-Demo.Web,IFormsAuthenticationService,0,2,0,0,0,5,2,1,0,-1,0,1,,Demo.Web.AccountController
-Demo.Web,FormsAuthenticationService,0,2,0,0,2,12,2,0,1,-1,1,0,Demo.Web.ValidationUtil,
+Demo.Web,IMembershipService,0,3,1,0,0,7,3,1,0,-1,0,2,,Demo.Web.AccountMembershipService' Demo.Web.AccountController
+Demo.Web,AccountMembershipService,1,5,1,0,5,55,5,0,1,0.4,2,1,Demo.Web.IMembershipService' Demo.Web.ValidationUtil,Demo.Web.AccountController
+Demo.Web,IFormsAuthenticationService,0,2,0,0,0,5,2,1,0,-1,0,2,,Demo.Web.FormsAuthenticationService' Demo.Web.AccountController
+Demo.Web,FormsAuthenticationService,0,2,0,0,2,12,2,0,1,-1,2,1,Demo.Web.IFormsAuthenticationService' Demo.Web.ValidationUtil,Demo.Web.AccountController
 Demo.Web,ValidationUtil,1,1,0,0,1,11,2,0,0,0,0,2,,Demo.Web.AccountMembershipService' Demo.Web.FormsAuthenticationService
-Demo.Web,ChangePasswordModel,0,0,3,0,0,16,0,0,0,-1,0,1,,Demo.Web.AccountController
+Demo.Web,ChangePasswordModel,0,0,3,0,0,16,0,0,0,-1,2,1,Demo.Web.PropertiesMustMatchAttribute' Demo.Web.ValidatePasswordLengthAttribute,Demo.Web.AccountController
 Demo.Web,LogOnModel,0,0,2,0,0,10,0,0,0,-1,0,1,,Demo.Web.AccountController
-Demo.Web,RegisterModel,0,0,4,0,0,19,0,0,0,-1,0,1,,Demo.Web.AccountController
-Demo.Web,PropertiesMustMatchAttribute,1,3,2,0,3,33,3,0,0,1,0,0,,
-Demo.Web,ValidatePasswordLengthAttribute,2,3,0,0,3,24,4,0,0,0.67,0,0,,
-Demo.Web,Category,0,0,1,0,0,5,0,0,1,-1,0,2,,Demo.Web.InMemoryDatabase' Demo.Web.ModelExtensions
-Demo.Web,EntityBase,0,1,1,0,1,8,1,3,0,-1,0,0,,
-Demo.Web,EntityConverter,0,1,0,0,1,7,1,0,0,-1,0,0,,
-Demo.Web,IDatabase,0,1,0,0,0,4,1,1,0,-1,0,1,,Demo.Web.Repository<TEntity>
-Demo.Web,InMemoryDatabase,1,5,0,0,1,63,8,0,1,0.4,3,0,Demo.Web.Category' Demo.Web.Supplier' Demo.Web.Product,
-Demo.Web,IRepository,0,5,0,0,0,8,5,1,0,-1,0,4,,Demo.Web.ProductController' Demo.Web.PopulateCategories' Demo.Web.PopulateSuppliers' Demo.Web.ProductEditModelBinder
-Demo.Web,ModelExtensions,0,3,0,0,3,36,3,0,0,-1,5,0,Demo.Web.Product' Demo.Web.Category' Demo.Web.Supplier' Demo.Web.ProductDisplayModel' Demo.Web.ProductEditModel,
-Demo.Web,Product,0,0,4,0,0,7,0,0,1,-1,0,3,,Demo.Web.ProductController' Demo.Web.InMemoryDatabase' Demo.Web.ModelExtensions
-Demo.Web,ProductDisplayModel,0,0,5,0,0,8,0,0,0,-1,0,1,,Demo.Web.ModelExtensions
-Demo.Web,ProductDisplayModelConfiguration,0,1,0,0,1,11,1,0,0,-1,1,0,Demo.Web.LocalizedTexts,
-Demo.Web,ProductEditModel,0,0,5,0,0,8,0,0,0,-1,0,4,,Demo.Web.ProductController' Demo.Web.PopulateCategories' Demo.Web.PopulateSuppliers' Demo.Web.ModelExtensions
-Demo.Web,ProductEditModelConfiguration,0,1,0,0,1,20,1,0,0,-1,1,0,Demo.Web.LocalizedTexts,
-Demo.Web,Repository<TEntity>,1,6,0,0,6,31,6,0,1,0,1,0,Demo.Web.IDatabase,
-Demo.Web,Supplier,0,0,1,0,0,5,0,0,1,-1,0,2,,Demo.Web.InMemoryDatabase' Demo.Web.ModelExtensions
+Demo.Web,RegisterModel,0,0,4,0,0,19,0,0,0,-1,2,1,Demo.Web.PropertiesMustMatchAttribute' Demo.Web.ValidatePasswordLengthAttribute,Demo.Web.AccountController
+Demo.Web,PropertiesMustMatchAttribute,1,3,2,0,3,33,3,0,0,1,0,2,,Demo.Web.ChangePasswordModel' Demo.Web.RegisterModel
+Demo.Web,ValidatePasswordLengthAttribute,2,3,0,0,3,24,4,0,0,0.67,0,2,,Demo.Web.ChangePasswordModel' Demo.Web.RegisterModel
+Demo.Web,Category,0,0,1,0,0,5,0,0,1,-1,2,5,Demo.Web.EntityBase' Demo.Web.EntityConverter,Demo.Web.Product' Demo.Web.ProductEditModel' Demo.Web.PopulateCategories' Demo.Web.ProductEditModelBinder' Demo.Web.InMemoryDatabase
+Demo.Web,EntityBase,0,1,1,0,1,8,1,3,0,-1,0,8,,Demo.Web.Category' Demo.Web.Product' Demo.Web.Supplier' Demo.Web.IDatabase' Demo.Web.InMemoryDatabase' Demo.Web.Repository<TEntity>' Demo.Web.ProductEditModelBinder' Demo.Web.IRepository
+Demo.Web,EntityConverter,0,1,0,0,1,7,1,0,0,-1,0,2,,Demo.Web.Category' Demo.Web.Supplier
+Demo.Web,IDatabase,0,1,0,0,0,4,1,1,0,-1,1,2,Demo.Web.EntityBase,Demo.Web.InMemoryDatabase' Demo.Web.Repository<TEntity>
+Demo.Web,InMemoryDatabase,1,5,0,0,1,63,8,0,1,0.4,5,0,Demo.Web.Category' Demo.Web.EntityBase' Demo.Web.IDatabase' Demo.Web.Product' Demo.Web.Supplier,
+Demo.Web,IRepository,0,5,0,0,0,8,5,1,0,-1,1,5,Demo.Web.EntityBase,Demo.Web.Repository<TEntity>' Demo.Web.PopulateSuppliers' Demo.Web.PopulateCategories' Demo.Web.ProductController' Demo.Web.ProductEditModelBinder
+Demo.Web,ModelExtensions,0,3,0,0,3,36,3,0,0,-1,3,0,Demo.Web.Product' Demo.Web.ProductDisplayModel' Demo.Web.ProductEditModel,
+Demo.Web,Product,0,0,4,0,0,7,0,0,1,-1,3,3,Demo.Web.Category' Demo.Web.EntityBase' Demo.Web.Supplier,Demo.Web.ModelExtensions' Demo.Web.ProductController' Demo.Web.InMemoryDatabase
+Demo.Web,ProductDisplayModel,0,0,5,0,0,8,0,0,0,-1,0,2,,Demo.Web.ProductDisplayModelConfiguration' Demo.Web.ModelExtensions
+Demo.Web,ProductDisplayModelConfiguration,0,1,0,0,1,11,1,0,0,-1,2,0,Demo.Web.LocalizedTexts' Demo.Web.ProductDisplayModel,
+Demo.Web,ProductEditModel,0,0,5,0,0,8,0,0,0,-1,2,6,Demo.Web.Category' Demo.Web.Supplier,Demo.Web.ProductEditModelConfiguration' Demo.Web.ConfigureModelBinders' Demo.Web.PopulateCategories' Demo.Web.PopulateSuppliers' Demo.Web.ModelExtensions' Demo.Web.ProductController
+Demo.Web,ProductEditModelConfiguration,0,1,0,0,1,20,1,0,0,-1,2,0,Demo.Web.LocalizedTexts' Demo.Web.ProductEditModel,
+Demo.Web,Repository<TEntity>,1,6,0,0,6,31,6,0,1,0.33,3,0,Demo.Web.EntityBase' Demo.Web.IDatabase' Demo.Web.IRepository,
+Demo.Web,Supplier,0,0,1,0,0,5,0,0,1,-1,2,5,Demo.Web.EntityBase' Demo.Web.EntityConverter,Demo.Web.ProductEditModel' Demo.Web.ProductEditModelBinder' Demo.Web.Product' Demo.Web.PopulateSuppliers' Demo.Web.InMemoryDatabase

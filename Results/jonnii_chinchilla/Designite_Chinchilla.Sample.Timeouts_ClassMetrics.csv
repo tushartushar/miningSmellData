@@ -1,9 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Chinchilla.Sample.Timeouts.Consumer,ConsumerService,1,5,0,0,3,31,5,0,0,0.6,1,1,Chinchilla.Sample.Timeouts.Messages.TimeoutMessage,Chinchilla.Sample.Timeouts.TimeoutSample
-Chinchilla.Sample.Timeouts.Consumer,DeadLetterTopology,0,1,0,0,1,16,1,0,0,-1,0,0,,
-Chinchilla.Sample.Timeouts.Messages,TimeoutMessage,0,1,4,0,1,14,1,0,0,-1,0,2,,Chinchilla.Sample.Timeouts.Consumer.ConsumerService' Chinchilla.Sample.Timeouts.Publisher.PublisherService
-Chinchilla.Sample.Timeouts.Messages,TimeoutResponse,0,1,1,0,1,8,1,0,0,-1,0,1,,Chinchilla.Sample.Timeouts.Publisher.PublisherService
+Chinchilla.Sample.Timeouts.Consumer,ConsumerService,1,5,0,0,3,31,5,0,0,0.6,3,1,Chinchilla.Sample.Timeouts.Consumer.DeadLetterTopology' Chinchilla.Sample.Timeouts.Messages.TimeoutMessage' Chinchilla.Sample.Timeouts.Messages.TimeoutResponse,Chinchilla.Sample.Timeouts.TimeoutSample
+Chinchilla.Sample.Timeouts.Consumer,DeadLetterTopology,0,1,0,0,1,16,1,0,1,-1,0,1,,Chinchilla.Sample.Timeouts.Consumer.ConsumerService
+Chinchilla.Sample.Timeouts.Messages,TimeoutMessage,0,1,4,0,1,14,1,0,1,-1,0,2,,Chinchilla.Sample.Timeouts.Consumer.ConsumerService' Chinchilla.Sample.Timeouts.Publisher.PublisherService
+Chinchilla.Sample.Timeouts.Messages,TimeoutResponse,0,1,1,0,1,8,1,0,1,-1,0,2,,Chinchilla.Sample.Timeouts.Publisher.PublisherService' Chinchilla.Sample.Timeouts.Consumer.ConsumerService
 Chinchilla.Sample.Timeouts,Program,0,1,0,0,1,14,1,0,0,-1,1,0,Chinchilla.Sample.Timeouts.TimeoutSample,
-Chinchilla.Sample.Timeouts,TimeoutSample,2,2,0,0,2,17,2,0,0,0,2,1,Chinchilla.Sample.Timeouts.Publisher.PublisherService' Chinchilla.Sample.Timeouts.Consumer.ConsumerService,Chinchilla.Sample.Timeouts.Program
-Chinchilla.Sample.Timeouts.Publisher,PublisherService,2,6,0,0,3,61,6,0,0,0.67,2,1,Chinchilla.Sample.Timeouts.Messages.TimeoutMessage' Chinchilla.Sample.Timeouts.Messages.TimeoutResponse,Chinchilla.Sample.Timeouts.TimeoutSample
-Chinchilla.Sample.Timeouts.Publisher,TimeoutSubscriptionTopology,0,1,0,0,1,14,1,0,0,-1,0,0,,
+Chinchilla.Sample.Timeouts,TimeoutSample,2,2,0,0,2,17,2,0,0,0,2,1,Chinchilla.Sample.Timeouts.Consumer.ConsumerService' Chinchilla.Sample.Timeouts.Publisher.PublisherService,Chinchilla.Sample.Timeouts.Program
+Chinchilla.Sample.Timeouts.Publisher,PublisherService,2,6,0,0,3,61,7,0,0,0.67,3,1,Chinchilla.Sample.Timeouts.Messages.TimeoutMessage' Chinchilla.Sample.Timeouts.Messages.TimeoutResponse' Chinchilla.Sample.Timeouts.Publisher.TimeoutSubscriptionTopology,Chinchilla.Sample.Timeouts.TimeoutSample
+Chinchilla.Sample.Timeouts.Publisher,TimeoutSubscriptionTopology,0,1,0,0,1,14,1,0,1,-1,0,1,,Chinchilla.Sample.Timeouts.Publisher.PublisherService

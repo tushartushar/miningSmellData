@@ -1,0 +1,376 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Orleans.SqlUtils.StorageProvider.GrainInterfaces,ICustomerGrain,0,4,0,0,0,8,4,1,3,-1,1,1,Orleans.SqlUtils.StorageProvider.GrainInterfaces.IDeviceGrain,Orleans.SqlUtils.StorageProvider.GrainInterfaces.IDeviceGrain
+Orleans.SqlUtils.StorageProvider.GrainInterfaces,IDeviceGrain,0,2,0,0,0,5,2,1,3,-1,1,1,Orleans.SqlUtils.StorageProvider.GrainInterfaces.ICustomerGrain,Orleans.SqlUtils.StorageProvider.GrainInterfaces.ICustomerGrain
+One,Command,0,0,0,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISameNameParameterTypeGrain
+One,Outsider,0,0,0,0,0,1,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISomeGrain
+UnitTests.GrainInterfaces,ISameNameParameterTypeGrain,0,4,0,0,0,9,4,0,3,-1,2,0,One.Command' Two.Command,
+UnitTests.GrainInterfaces,IInternalPingGrain,0,2,0,0,0,7,2,0,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISomeGrain,0,2,0,0,0,7,2,0,3,-1,3,0,One.Outsider' UnitTests.GrainInterfaces.Outsider' Two.Outsider,
+UnitTests.GrainInterfaces,ISomeGrainWithInvocationOptions,0,2,0,0,0,11,2,0,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISerializationGenerationGrain,0,14,0,0,0,19,14,1,3,-1,4,0,UnitTests.GrainInterfaces.SomeStruct' UnitTests.GrainInterfaces.ISomeInterface' UnitTests.GrainInterfaces.SomeAbstractClass' UnitTests.GrainInterfaces.SomeEnum,
+UnitTests.GrainInterfaces,Outsider,0,0,0,0,0,1,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISomeGrain
+UnitTests.GrainInterfaces,CaseInsensitiveStringEquality,0,4,0,0,4,23,4,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,Mod5IntegerComparer,0,4,0,0,4,23,4,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,CaseInsensitiveStringComparer,0,2,0,0,2,19,2,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,RootType,0,6,2,0,6,61,12,0,0,-1,1,0,UnitTests.GrainInterfaces.InnerType,
+UnitTests.GrainInterfaces,SomeStruct,2,10,12,2,10,63,10,0,0,0.9,1,1,UnitTests.GrainInterfaces.IEchoGrain,UnitTests.GrainInterfaces.ISerializationGenerationGrain
+UnitTests.GrainInterfaces,ISomeInterface,0,0,2,0,0,1,0,1,0,-1,0,2,,UnitTests.GrainInterfaces.ISerializationGenerationGrain' UnitTests.GrainInterfaces.SomeAbstractClass
+UnitTests.GrainInterfaces,SomeAbstractClass,2,4,16,0,4,81,4,2,1,1,3,3,UnitTests.GrainInterfaces.ISomeInterface' UnitTests.GrainInterfaces.SomeEnum' UnitTests.GrainInterfaces.IEchoGrain,UnitTests.GrainInterfaces.ISerializationGenerationGrain' UnitTests.GrainInterfaces.OuterClass' UnitTests.GrainInterfaces.AnotherConcreteClass
+UnitTests.GrainInterfaces,SomeEnum,0,0,0,0,0,13,0,0,0,-1,0,2,,UnitTests.GrainInterfaces.ISerializationGenerationGrain' UnitTests.GrainInterfaces.SomeAbstractClass
+UnitTests.GrainInterfaces,OuterClass,0,4,0,0,4,57,4,0,0,-1,3,0,UnitTests.GrainInterfaces.SomeAbstractClass' UnitTests.GrainInterfaces.SomeConcreteClass' UnitTests.GrainInterfaces.PrivateConcreteClass,
+UnitTests.GrainInterfaces,SomeConcreteClass,2,4,4,0,4,29,4,1,2,0,0,1,,UnitTests.GrainInterfaces.OuterClass
+UnitTests.GrainInterfaces,PrivateConcreteClass,2,2,0,2,2,17,2,0,3,0,0,1,,UnitTests.GrainInterfaces.OuterClass
+UnitTests.GrainInterfaces,AnotherConcreteClass,0,0,4,0,0,11,0,0,2,-1,1,0,UnitTests.GrainInterfaces.SomeAbstractClass,
+UnitTests.GrainInterfaces,InnerType,0,6,4,0,6,47,8,0,0,-1,0,1,,UnitTests.GrainInterfaces.RootType
+UnitTests.GrainInterfaces,ClassWithStructConstraint<T>,0,0,2,0,0,11,0,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,ClassWithNestedPrivateClassInListField,2,0,2,0,0,23,0,0,0,-1,1,0,UnitTests.GrainInterfaces.NestedPrivateClass,
+UnitTests.GrainInterfaces,NestedPrivateClass,0,0,0,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ClassWithNestedPrivateClassInListField
+UnitTests.GrainInterfaces,ReadOnlyStructWithReadOnlyArray,2,2,2,0,2,17,2,0,0,1,0,0,,
+UnitTests.GrainInterfaces,ICustomPlacementTestGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IHashBasedPlacementGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,CustomPlacementScenario,0,0,0,0,0,6,0,0,0,-1,0,2,,UnitTests.GrainInterfaces.TestCustomPlacementStrategy' UnitTests.GrainInterfaces.TestPlacementStrategyAttribute
+UnitTests.GrainInterfaces,TestCustomPlacementStrategy,0,1,4,0,0,12,1,0,1,-1,1,1,UnitTests.GrainInterfaces.CustomPlacementScenario,UnitTests.GrainInterfaces.TestPlacementStrategyAttribute
+UnitTests.GrainInterfaces,TestPlacementStrategyAttribute,0,2,1,0,1,24,5,0,1,-1,2,0,UnitTests.GrainInterfaces.CustomPlacementScenario' UnitTests.GrainInterfaces.TestCustomPlacementStrategy,
+UnitTests.GrainInterfaces,IBase,0,1,0,0,0,4,1,2,3,-1,0,1,,UnitTests.GrainInterfaces.IDerivedFromBase
+UnitTests.GrainInterfaces,IDerivedFromBase,0,1,0,0,0,4,1,1,4,-1,1,0,UnitTests.GrainInterfaces.IBase,
+UnitTests.GrainInterfaces,IBase1,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IBase2,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IBase3,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IBase4,0,1,0,0,0,4,1,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStringGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGuidGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISimpleActivateDeactivateTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ITailCallActivateDeactivateTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ILongRunningActivateDeactivateTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IBadActivateDeactivateTestGrain,0,2,0,0,0,5,2,1,3,-1,0,1,,UnitTests.GrainInterfaces.ICreateGrainReferenceTestGrain
+UnitTests.GrainInterfaces,IBadConstructorTestGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ITaskActionActivateDeactivateTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ICreateGrainReferenceTestGrain,0,2,0,0,0,5,2,1,3,-1,1,0,UnitTests.GrainInterfaces.IBadActivateDeactivateTestGrain,
+UnitTests.GrainInterfaces,IDeactivatingWhileActivatingTestGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IActivateDeactivateWatcherGrain,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ICatalogTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IChainedGrain,0,11,0,0,0,16,11,1,3,-1,1,1,UnitTests.GrainInterfaces.ChainGrainHolder,UnitTests.GrainInterfaces.ChainGrainHolder
+UnitTests.GrainInterfaces,ChainGrainHolder,0,0,1,0,0,4,0,0,0,-1,1,1,UnitTests.GrainInterfaces.IChainedGrain,UnitTests.GrainInterfaces.IChainedGrain
+UnitTests.GrainInterfaces,IClientAddressableTestConsumer,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ICollectionTestGrain,0,8,0,0,0,11,8,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IConcurrentGrain,0,7,0,0,0,12,7,1,3,-1,1,0,UnitTests.GrainInterfaces.IConcurrentReentrantGrain,
+UnitTests.GrainInterfaces,IConcurrentReentrantGrain,0,3,0,0,0,6,3,1,3,-1,0,1,,UnitTests.GrainInterfaces.IConcurrentGrain
+UnitTests.GrainInterfaces,SomeTypeUsedInGrainInterface,0,0,1,0,0,4,0,1,0,-1,0,2,,UnitTests.GrainInterfaces.SomeTypeDerivedFromTypeUsedInGrainInterface' UnitTests.GrainInterfaces.IConsiderForCodeGenerationGrain
+UnitTests.GrainInterfaces,SomeTypeDerivedFromTypeUsedInGrainInterface,0,0,1,0,0,4,0,0,1,-1,1,0,UnitTests.GrainInterfaces.SomeTypeUsedInGrainInterface,
+UnitTests.GrainInterfaces,IConsiderForCodeGenerationGrain,0,1,0,0,0,4,1,0,2,-1,1,0,UnitTests.GrainInterfaces.SomeTypeUsedInGrainInterface,
+UnitTests.GrainInterfaces,IConsumerEventCountingGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IDeadlockNonReentrantGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IDeadlockReentrantGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IEchoGrain,0,4,0,0,0,7,4,1,3,-1,0,2,,UnitTests.GrainInterfaces.SomeStruct' UnitTests.GrainInterfaces.SomeAbstractClass
+UnitTests.GrainInterfaces,IEchoTaskGrain,0,10,0,0,0,13,10,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IBlockingEchoTaskGrain,0,7,0,0,0,10,7,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrantBlockingEchoTaskGrain,0,7,0,0,0,10,7,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IErrorGrain,0,16,0,0,0,19,16,1,1,-1,1,0,UnitTests.GrainInterfaces.ISimpleGrain,
+UnitTests.GrainInterfaces,IExceptionGrain,0,11,0,0,0,14,11,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IMessageSerializationGrain,0,13,0,0,0,16,13,1,3,-1,3,0,UnitTests.GrainInterfaces.IMessageSerializationClientObject' UnitTests.GrainInterfaces.UndeserializableType' UnitTests.GrainInterfaces.UnserializableType,
+UnitTests.GrainInterfaces,IMessageSerializationClientObject,0,4,0,0,0,7,4,0,1,-1,2,1,UnitTests.GrainInterfaces.UndeserializableType' UnitTests.GrainInterfaces.UnserializableType,UnitTests.GrainInterfaces.IMessageSerializationGrain
+UnitTests.GrainInterfaces,UndeserializableType,1,4,1,1,4,27,4,0,0,1,0,3,,UnitTests.GrainInterfaces.IMessageSerializationGrain' UnitTests.GrainInterfaces.IMessageSerializationClientObject' UnitTests.GrainInterfaces.UnserializableType
+UnitTests.GrainInterfaces,UnserializableType,0,3,0,0,3,19,3,0,0,-1,1,2,UnitTests.GrainInterfaces.UndeserializableType,UnitTests.GrainInterfaces.IMessageSerializationGrain' UnitTests.GrainInterfaces.IMessageSerializationClientObject
+UnitTests.GrainInterfaces,IExtensionTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericExtensionTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericGrainWithNonGenericExtension,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,INoOpTestGrain,0,0,0,0,0,3,0,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,EnumClass,0,0,1,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.IExternalTypeGrain
+UnitTests.GrainInterfaces,IExternalTypeGrain,0,2,0,0,0,5,2,1,3,-1,1,0,UnitTests.GrainInterfaces.EnumClass,
+UnitTests.GrainInterfaces,IFaultableConsumerGrain,0,6,0,0,0,9,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IFilteredImplicitSubscriptionGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IFilteredImplicitSubscriptionWithExtensionGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IFSharpParametersGrain,0,0,0,0,0,3,0,0,3,-1,0,0,,
+UnitTests.GrainInterfaces,ReplaceArguments,0,1,2,0,1,11,1,0,0,-1,0,1,,UnitTests.GrainInterfaces.IGeneratorTestDerivedDerivedGrain
+UnitTests.GrainInterfaces,IGeneratorTestDerivedDerivedGrain,0,2,0,0,0,5,2,1,1,-1,2,0,UnitTests.GrainInterfaces.ReplaceArguments' UnitTests.GrainInterfaces.IGeneratorTestDerivedGrain2,
+UnitTests.GrainInterfaces,IGeneratorTestDerivedFromCSharpInterfaceInExternalAssemblyGrain,0,0,0,0,0,3,0,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGeneratorTestDerivedFromFSharpInterfaceInExternalAssemblyGrain,0,0,0,0,0,3,0,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGeneratorTestDerivedGrain1,0,1,0,0,0,4,1,1,1,-1,1,0,UnitTests.GrainInterfaces.IGeneratorTestGrain,
+UnitTests.GrainInterfaces,IGeneratorTestDerivedGrain2,0,1,0,0,0,4,1,2,1,-1,1,1,UnitTests.GrainInterfaces.IGeneratorTestGrain,UnitTests.GrainInterfaces.IGeneratorTestDerivedDerivedGrain
+UnitTests.GrainInterfaces,ReturnCode,0,0,0,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.MemberVariables
+UnitTests.GrainInterfaces,MemberVariables,3,1,0,3,1,13,1,0,0,0,1,1,UnitTests.GrainInterfaces.ReturnCode,UnitTests.GrainInterfaces.IGeneratorTestGrain
+UnitTests.GrainInterfaces,IGeneratorTestGrain,0,5,0,0,0,8,5,3,3,-1,1,2,UnitTests.GrainInterfaces.MemberVariables,UnitTests.GrainInterfaces.IGeneratorTestDerivedGrain1' UnitTests.GrainInterfaces.IGeneratorTestDerivedGrain2
+UnitTests.GrainInterfaces,IGenericGrainWithGenericState,0,1,0,0,0,4,1,1,3,-1,0,1,,UnitTests.GrainInterfaces.GenericGrainWithGenericState<TFirstTypeParam;TStateType;TLastTypeParam>
+UnitTests.GrainInterfaces,GenericGrainWithGenericState<TFirstTypeParam;TStateType;TLastTypeParam>,0,1,0,0,1,5,1,0,4,-1,1,0,UnitTests.GrainInterfaces.IGenericGrainWithGenericState,
+UnitTests.GrainInterfaces,IGenericGrain,0,2,0,0,0,5,2,3,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISimpleGenericGrain1,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISimpleGenericGrainUsingAzureStorageAndLongGrainName,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ITinyNameGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISimpleGenericGrainU,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISimpleGenericGrain2,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericGrainWithNoProperties,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainWithNoProperties,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainWithListFields,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericGrainWithListFields,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericReader1,0,1,0,0,0,4,1,1,3,-1,0,1,,UnitTests.GrainInterfaces.IGenericReaderWriterGrain1
+UnitTests.GrainInterfaces,IGenericWriter1,0,1,0,0,0,4,1,1,3,-1,0,1,,UnitTests.GrainInterfaces.IGenericReaderWriterGrain1
+UnitTests.GrainInterfaces,IGenericReaderWriterGrain1,0,0,0,0,0,3,0,1,4,-1,2,0,UnitTests.GrainInterfaces.IGenericReader1' UnitTests.GrainInterfaces.IGenericWriter1,
+UnitTests.GrainInterfaces,IGenericReader2,0,2,0,0,0,5,2,2,3,-1,0,2,,UnitTests.GrainInterfaces.IGenericReaderWriterGrain2' UnitTests.GrainInterfaces.IGenericReader3
+UnitTests.GrainInterfaces,IGenericWriter2,0,2,0,0,0,5,2,2,3,-1,0,2,,UnitTests.GrainInterfaces.IGenericReaderWriterGrain2' UnitTests.GrainInterfaces.IGenericWriter3
+UnitTests.GrainInterfaces,IGenericReaderWriterGrain2,0,0,0,0,0,3,0,1,4,-1,2,0,UnitTests.GrainInterfaces.IGenericReader2' UnitTests.GrainInterfaces.IGenericWriter2,
+UnitTests.GrainInterfaces,IGenericReader3,0,1,0,0,0,4,1,1,4,-1,1,1,UnitTests.GrainInterfaces.IGenericReader2,UnitTests.GrainInterfaces.IGenericReaderWriterGrain3
+UnitTests.GrainInterfaces,IGenericWriter3,0,1,0,0,0,4,1,1,4,-1,1,1,UnitTests.GrainInterfaces.IGenericWriter2,UnitTests.GrainInterfaces.IGenericReaderWriterGrain3
+UnitTests.GrainInterfaces,IGenericReaderWriterGrain3,0,0,0,0,0,3,0,1,5,-1,2,0,UnitTests.GrainInterfaces.IGenericReader3' UnitTests.GrainInterfaces.IGenericWriter3,
+UnitTests.GrainInterfaces,IBasicGenericGrain,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IHubGrain,0,1,0,0,0,5,1,2,3,-1,0,1,,UnitTests.GrainInterfaces.IEchoHubGrain
+UnitTests.GrainInterfaces,IEchoHubGrain,0,2,0,0,0,5,2,1,4,-1,1,0,UnitTests.GrainInterfaces.IHubGrain,
+UnitTests.GrainInterfaces,IEchoGenericChainGrain,0,6,0,0,0,9,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,INonGenericBase,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGeneric1Argument,0,1,0,0,0,4,1,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGeneric2Arguments,0,1,0,0,0,4,1,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IDbGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericPingSelf,0,7,0,0,0,10,7,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ILongRunningTaskGrain,0,12,0,0,0,16,12,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericGrainWithConstraints,0,3,0,0,0,7,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,INonGenericCastableGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericCastableGrain,0,0,0,0,0,2,0,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainSayingHello,0,1,0,0,0,4,1,2,3,-1,0,2,,UnitTests.GrainInterfaces.ISomeGenericGrain' UnitTests.GrainInterfaces.INonGenericCastGrain
+UnitTests.GrainInterfaces,ISomeGenericGrain,0,0,0,0,0,2,0,3,4,-1,1,2,UnitTests.GrainInterfaces.IGrainSayingHello,UnitTests.GrainInterfaces.IIndependentlyConcretizedGrain' UnitTests.GrainInterfaces.IIndependentlyConcretizedGenericGrain
+UnitTests.GrainInterfaces,INonGenericCastGrain,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IGrainSayingHello,
+UnitTests.GrainInterfaces,IIndependentlyConcretizedGrain,0,0,0,0,0,2,0,2,5,-1,1,0,UnitTests.GrainInterfaces.ISomeGenericGrain,
+UnitTests.GrainInterfaces,IIndependentlyConcretizedGenericGrain,0,0,0,0,0,2,0,2,5,-1,1,0,UnitTests.GrainInterfaces.ISomeGenericGrain,
+UnitTests.GrainInterfaces,IGrainServiceTestGrain,0,6,0,0,0,9,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IEchoExtension,0,1,0,0,0,4,1,0,2,-1,0,0,,
+UnitTests.GrainInterfaces,IInitialStateGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IJsonEchoGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IKeyExtensionTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ILivenessTestGrain,0,6,0,0,0,10,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ILogTestGrain,0,21,0,0,0,36,21,1,3,-1,1,0,UnitTests.GrainInterfaces.AB,
+UnitTests.GrainInterfaces,AB,2,0,0,2,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ILogTestGrain
+UnitTests.GrainInterfaces,IMethodInterceptionGrain,0,6,0,0,0,12,6,1,3,-1,1,1,UnitTests.GrainInterfaces.IMethodFromAnotherInterface,UnitTests.GrainInterfaces.IOutgoingMethodInterceptionGrain
+UnitTests.GrainInterfaces,IOutgoingMethodInterceptionGrain,0,1,0,0,0,5,1,1,3,-1,1,0,UnitTests.GrainInterfaces.IMethodInterceptionGrain,
+UnitTests.GrainInterfaces,IGenericMethodInterceptionGrain,0,1,0,0,0,4,1,2,3,-1,1,1,UnitTests.GrainInterfaces.IMethodFromAnotherInterface,UnitTests.GrainInterfaces.ITrickyMethodInterceptionGrain
+UnitTests.GrainInterfaces,IMethodFromAnotherInterface,0,1,0,0,0,4,1,2,0,-1,0,2,,UnitTests.GrainInterfaces.IMethodInterceptionGrain' UnitTests.GrainInterfaces.IGenericMethodInterceptionGrain
+UnitTests.GrainInterfaces,ITrickyMethodInterceptionGrain,0,1,0,0,0,4,1,1,4,-1,1,0,UnitTests.GrainInterfaces.IGenericMethodInterceptionGrain,
+UnitTests.GrainInterfaces,GrainCallFilterTestConstants,1,0,0,1,0,4,0,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainCallFilterTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IHungryGrain,0,2,0,0,0,7,2,1,3,-1,1,1,UnitTests.GrainInterfaces.TestMethodTagAttribute,UnitTests.GrainInterfaces.ICaterpillarGrain
+UnitTests.GrainInterfaces,IOmnivoreGrain,0,1,0,0,0,5,1,1,3,-1,1,1,UnitTests.GrainInterfaces.TestMethodTagAttribute,UnitTests.GrainInterfaces.ICaterpillarGrain
+UnitTests.GrainInterfaces,Apple,0,0,0,0,0,2,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ICaterpillarGrain
+UnitTests.GrainInterfaces,ICaterpillarGrain,0,1,0,0,0,5,1,1,4,-1,4,0,UnitTests.GrainInterfaces.IHungryGrain' UnitTests.GrainInterfaces.IOmnivoreGrain' UnitTests.GrainInterfaces.Apple' UnitTests.GrainInterfaces.TestMethodTagAttribute,
+UnitTests.GrainInterfaces,TestMethodTagAttribute,0,1,1,0,1,6,1,0,0,-1,0,3,,UnitTests.GrainInterfaces.IHungryGrain' UnitTests.GrainInterfaces.IOmnivoreGrain' UnitTests.GrainInterfaces.ICaterpillarGrain
+UnitTests.GrainInterfaces,IMultifacetReader,0,1,0,0,0,6,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IMultifacetWriter,0,1,0,0,0,6,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IMultipleImplicitSubscriptionGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IMultipleSubscriptionConsumerGrain,0,7,0,0,0,10,7,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,NullableState,0,0,1,0,0,4,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.INullStateGrain
+UnitTests.GrainInterfaces,INullStateGrain,0,2,0,0,0,5,2,1,3,-1,1,0,UnitTests.GrainInterfaces.NullableState,
+UnitTests.GrainInterfaces,IObserverGrain,0,2,0,0,0,5,2,1,3,-1,2,0,UnitTests.GrainInterfaces.ISimpleObserverableGrain' UnitTests.GrainInterfaces.ISimpleGrainObserver,
+UnitTests.GrainInterfaces,IServiceIdGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IPersistenceTestGrain,0,7,0,0,0,10,7,2,3,-1,0,1,,UnitTests.GrainInterfaces.IPersistenceTestGenericGrain
+UnitTests.GrainInterfaces,IPersistenceTestGenericGrain,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IPersistenceTestGrain,
+UnitTests.GrainInterfaces,IMemoryStorageTestGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainStorageTestGrain,0,4,0,0,0,7,4,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainStorageGenericGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainStorageTestGrain_GuidExtendedKey,0,5,0,0,0,8,5,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainStorageTestGrain_LongKey,0,4,0,0,0,7,4,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGrainStorageTestGrain_LongExtendedKey,0,5,0,0,0,8,5,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,IAWSStorageTestGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IAWSStorageGenericGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IAWSStorageTestGrain_GuidExtendedKey,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IAWSStorageTestGrain_LongKey,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IAWSStorageTestGrain_LongExtendedKey,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IPersistenceErrorGrain,0,5,0,0,0,8,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IPersistenceProviderErrorGrain,0,4,0,0,0,7,4,1,3,-1,0,1,,UnitTests.GrainInterfaces.IPersistenceProviderErrorProxyGrain
+UnitTests.GrainInterfaces,IPersistenceProviderErrorProxyGrain,0,4,0,0,0,7,4,1,3,-1,1,0,UnitTests.GrainInterfaces.IPersistenceProviderErrorGrain,
+UnitTests.GrainInterfaces,IPersistenceUserHandledErrorGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IBadProviderTestGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IPersistenceNoStateTestGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IUser,0,7,0,0,0,10,7,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrentGrainWithState,0,6,0,0,0,9,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,INonReentrentStressGrainWithoutState,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IInternalGrainWithState,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStateInheritanceTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISerializationTestGrain,0,4,0,0,0,7,4,1,3,-1,1,0,UnitTests.GrainInterfaces.IMyPredicate,
+UnitTests.GrainInterfaces,IMyPredicate,0,1,0,0,0,4,1,1,0,-1,0,2,,UnitTests.GrainInterfaces.ISerializationTestGrain' UnitTests.GrainInterfaces.MyPredicate
+UnitTests.GrainInterfaces,MyPredicate,1,2,0,0,2,13,2,0,1,0,1,0,UnitTests.GrainInterfaces.IMyPredicate,
+UnitTests.GrainInterfaces,IPlacementTestGrain,0,13,0,0,0,16,13,4,3,-1,0,4,,UnitTests.GrainInterfaces.IActivationCountBasedPlacementTestGrain' UnitTests.GrainInterfaces.IRandomPlacementTestGrain' UnitTests.GrainInterfaces.IPreferLocalPlacementTestGrain' UnitTests.GrainInterfaces.ILocalPlacementTestGrain
+UnitTests.GrainInterfaces,IActivationCountBasedPlacementTestGrain,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IPlacementTestGrain,
+UnitTests.GrainInterfaces,IRandomPlacementTestGrain,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IPlacementTestGrain,
+UnitTests.GrainInterfaces,IPreferLocalPlacementTestGrain,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IPlacementTestGrain,
+UnitTests.GrainInterfaces,ILocalPlacementTestGrain,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IPlacementTestGrain,
+UnitTests.GrainInterfaces,IDefaultPlacementTestGrain,0,1,0,0,0,4,1,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,ILocalContentGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ITestContentGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IPolymorphicTestGrain,0,0,0,0,0,3,0,1,1,-1,1,0,UnitTests.GrainInterfaces.IF,
+UnitTests.GrainInterfaces,IProducerEventCountingGrain,0,3,0,0,0,10,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IPromiseForwardGrain,0,0,0,0,0,3,0,1,1,-1,2,0,UnitTests.GrainInterfaces.ISimpleGrain' UnitTests.GrainInterfaces.ISimpleGrainAsync,
+UnitTests.GrainInterfaces,IProxyGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IFirstGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISecondGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IThirdGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrantGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,INonReentrantGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IMayInterleavePredicateGrain,0,7,0,0,0,10,7,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IUnorderedNonReentrantGrain,0,3,0,0,0,7,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrantSelfManagedGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,INonReentrantSelfManagedGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrantTaskGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,INonReentrantTaskGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IFanOutGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IFanOutACGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrantTestSupportGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrantStressTestGrain,0,9,0,0,0,12,9,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReentrantLocalStressTestGrain,0,8,0,0,0,11,8,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReminderTestGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReminderTestGrain2,0,8,0,0,0,11,8,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReminderTestCopyGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IReminderGrainWrong,0,1,0,0,0,6,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IRequestContextTestGrain,0,6,0,0,0,9,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IRequestContextTaskGrain,0,8,0,0,0,11,8,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IRequestContextProxyGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISampleStreaming_ProducerGrain,0,6,0,0,0,9,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISampleStreaming_ConsumerGrain,0,3,0,0,0,6,3,2,3,-1,0,1,,UnitTests.GrainInterfaces.ISampleStreaming_InlineConsumerGrain
+UnitTests.GrainInterfaces,ISampleStreaming_InlineConsumerGrain,0,0,0,0,0,3,0,1,4,-1,1,0,UnitTests.GrainInterfaces.ISampleStreaming_ConsumerGrain,
+UnitTests.GrainInterfaces,IGrainWithGenericMethodsValue,0,1,0,0,0,4,1,0,3,-1,0,0,,
+UnitTests.GrainInterfaces,SerializerTestClass1,0,0,2,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISerializationGeneratorTaskTest
+UnitTests.GrainInterfaces,SerializerTestClass2,0,0,2,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISerializationGeneratorTaskTest
+UnitTests.GrainInterfaces,SerializerTestClass3,0,0,2,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISerializationGeneratorTaskTest
+UnitTests.GrainInterfaces,SerializerTestClass4,0,0,2,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISerializationGeneratorPromiseTest
+UnitTests.GrainInterfaces,SerializerTestClass5,0,0,2,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISerializationGeneratorPromiseTest
+UnitTests.GrainInterfaces,SerializerTestClass6,0,0,2,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISerializationGeneratorPromiseTest
+UnitTests.GrainInterfaces,ISerializationGeneratorTaskTest,0,2,0,0,0,5,2,0,3,-1,3,0,UnitTests.GrainInterfaces.SerializerTestClass1' UnitTests.GrainInterfaces.SerializerTestClass2' UnitTests.GrainInterfaces.SerializerTestClass3,
+UnitTests.GrainInterfaces,ISerializationGeneratorPromiseTest,0,2,0,0,0,5,2,0,3,-1,3,0,UnitTests.GrainInterfaces.SerializerTestClass4' UnitTests.GrainInterfaces.SerializerTestClass5' UnitTests.GrainInterfaces.SerializerTestClass6,
+UnitTests.GrainInterfaces,ISimpleDIGrain,0,3,0,0,0,6,3,2,3,-1,0,1,,UnitTests.GrainInterfaces.IDIGrainWithInjectedServices
+UnitTests.GrainInterfaces,IDIGrainWithInjectedServices,0,4,0,0,0,7,4,1,4,-1,1,0,UnitTests.GrainInterfaces.ISimpleDIGrain,
+UnitTests.GrainInterfaces,ISimpleGenericGrain,0,4,0,0,0,7,4,2,3,-1,0,0,,
+UnitTests.GrainInterfaces,ISimpleGrain,0,6,0,0,0,9,6,6,3,-1,0,4,,UnitTests.GrainInterfaces.IPromiseForwardGrain' UnitTests.GrainInterfaces.IErrorGrain' UnitTests.GrainInterfaces.ISimplePersistentGrain' UnitTests.GrainInterfaces.ISimpleObserverableGrain
+UnitTests.GrainInterfaces,ISimpleGrainAsync,0,6,0,0,0,9,6,2,3,-1,0,2,,UnitTests.GrainInterfaces.ISimpleGrainWithAsyncMethods' UnitTests.GrainInterfaces.IPromiseForwardGrain
+UnitTests.GrainInterfaces,ISimpleGrainWithAsyncMethods,0,2,0,0,0,5,2,1,4,-1,1,0,UnitTests.GrainInterfaces.ISimpleGrainAsync,
+UnitTests.GrainInterfaces,ISimpleObserverableGrain,0,3,0,0,0,6,3,1,4,-1,2,1,UnitTests.GrainInterfaces.ISimpleGrain' UnitTests.GrainInterfaces.ISimpleGrainObserver,UnitTests.GrainInterfaces.IObserverGrain
+UnitTests.GrainInterfaces,ISimpleGrainObserver,0,1,0,0,0,4,1,2,2,-1,0,4,,UnitTests.GrainInterfaces.IObserverGrain' UnitTests.GrainInterfaces.IOneWayGrain' UnitTests.GrainInterfaces.ICanBeOneWayGrain' UnitTests.GrainInterfaces.ISimpleObserverableGrain
+UnitTests.GrainInterfaces,ISimplePersistentGrain,0,4,0,0,0,7,4,1,4,-1,1,0,UnitTests.GrainInterfaces.ISimpleGrain,
+UnitTests.GrainInterfaces,IStatelessWorkerExceptionGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStatelessWorkerGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,StreamBatchingTestConst,3,0,0,3,0,6,0,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,ConsumptionReport,0,0,2,0,0,5,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.IStreamBatchingTestConsumerGrain
+UnitTests.GrainInterfaces,IStreamBatchingTestConsumerGrain,0,1,0,0,0,4,1,1,3,-1,1,0,UnitTests.GrainInterfaces.ConsumptionReport,
+UnitTests.GrainInterfaces,IStreaming_ConsumerGrain,0,5,0,0,0,8,5,6,3,-1,0,5,,UnitTests.GrainInterfaces.IPersistentStreaming_ConsumerGrain' UnitTests.GrainInterfaces.IStreaming_ProducerConsumerGrain' UnitTests.GrainInterfaces.IStreaming_Reentrant_ProducerConsumerGrain' UnitTests.GrainInterfaces.IStreaming_ImplicitlySubscribedConsumerGrain' UnitTests.GrainInterfaces.IStreaming_ImplicitlySubscribedGenericConsumerGrain
+UnitTests.GrainInterfaces,IPersistentStreaming_ProducerGrain,0,0,0,0,0,3,0,0,1,-1,1,0,UnitTests.GrainInterfaces.IStreaming_ProducerGrain,
+UnitTests.GrainInterfaces,IPersistentStreaming_ConsumerGrain,0,0,0,0,0,3,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IStreaming_ConsumerGrain,
+UnitTests.GrainInterfaces,IStreaming_ProducerConsumerGrain,0,0,0,0,0,3,0,1,4,-1,2,0,UnitTests.GrainInterfaces.IStreaming_ConsumerGrain' UnitTests.GrainInterfaces.IStreaming_ProducerGrain,
+UnitTests.GrainInterfaces,IStreaming_Reentrant_ProducerConsumerGrain,0,0,0,0,0,3,0,1,4,-1,2,0,UnitTests.GrainInterfaces.IStreaming_ConsumerGrain' UnitTests.GrainInterfaces.IStreaming_ProducerGrain,
+UnitTests.GrainInterfaces,IStreaming_ImplicitlySubscribedConsumerGrain,0,0,0,0,0,3,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IStreaming_ConsumerGrain,
+UnitTests.GrainInterfaces,IStreaming_ImplicitlySubscribedGenericConsumerGrain,0,0,0,0,0,3,0,0,4,-1,1,0,UnitTests.GrainInterfaces.IStreaming_ConsumerGrain,
+UnitTests.GrainInterfaces,Streaming_ProducerGrain_State,0,0,1,0,0,5,0,0,0,-1,1,0,UnitTests.GrainInterfaces.IProducerObserver,
+UnitTests.GrainInterfaces,Streaming_ConsumerGrain_State,0,0,1,0,0,5,0,0,0,-1,1,0,UnitTests.GrainInterfaces.IConsumerObserver,
+UnitTests.GrainInterfaces,Streaming_ProducerConsumerGrain_State,0,0,2,0,0,6,0,0,0,-1,2,0,UnitTests.GrainInterfaces.IProducerObserver' UnitTests.GrainInterfaces.IConsumerObserver,
+UnitTests.GrainInterfaces,IProducerObserver,0,8,4,0,0,15,8,1,0,-1,0,2,,UnitTests.GrainInterfaces.Streaming_ProducerGrain_State' UnitTests.GrainInterfaces.Streaming_ProducerConsumerGrain_State
+UnitTests.GrainInterfaces,IConsumerObserver,0,3,3,0,0,9,3,1,0,-1,0,2,,UnitTests.GrainInterfaces.Streaming_ConsumerGrain_State' UnitTests.GrainInterfaces.Streaming_ProducerConsumerGrain_State
+UnitTests.GrainInterfaces,IStreamingImmutabilityTestGrain,0,6,0,0,0,9,6,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStreaming_ProducerGrain,0,11,0,0,0,15,11,5,3,-1,0,3,,UnitTests.GrainInterfaces.IPersistentStreaming_ProducerGrain' UnitTests.GrainInterfaces.IStreaming_ProducerConsumerGrain' UnitTests.GrainInterfaces.IStreaming_Reentrant_ProducerConsumerGrain
+UnitTests.GrainInterfaces,IStreamInterceptionGrain,0,1,0,0,0,4,1,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStreamLifecycleConsumerGrain,0,7,0,0,0,10,7,3,3,-1,0,2,,UnitTests.GrainInterfaces.IStreamLifecycleConsumerInternalGrain' UnitTests.GrainInterfaces.IFilteredStreamConsumerGrain
+UnitTests.GrainInterfaces,IFilteredStreamConsumerGrain,0,2,0,0,0,5,2,1,4,-1,1,0,UnitTests.GrainInterfaces.IStreamLifecycleConsumerGrain,
+UnitTests.GrainInterfaces,IStreamLifecycleProducerGrain,0,7,0,0,0,10,7,2,3,-1,0,1,,UnitTests.GrainInterfaces.IStreamLifecycleProducerInternalGrain
+UnitTests.GrainInterfaces,IStreamLifecycleProducerInternalGrain,0,2,0,0,0,5,2,1,4,-1,1,0,UnitTests.GrainInterfaces.IStreamLifecycleProducerGrain,
+UnitTests.GrainInterfaces,IStreamLifecycleConsumerInternalGrain,0,1,0,0,0,4,1,1,4,-1,1,0,UnitTests.GrainInterfaces.IStreamLifecycleConsumerGrain,
+UnitTests.GrainInterfaces,IStreamReliabilityTestGrain,0,16,0,0,0,30,16,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStreamUnsubscribeTestGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStuckGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IStuckCleanGrain,0,2,0,0,0,5,2,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ITestExtension,0,2,0,0,0,5,2,1,2,-1,0,0,,
+UnitTests.GrainInterfaces,IGenericTestExtension,0,2,0,0,0,5,2,1,2,-1,0,0,,
+UnitTests.GrainInterfaces,ISimpleExtension,0,1,0,0,0,4,1,1,2,-1,0,0,,
+UnitTests.GrainInterfaces,IAutoExtension,0,1,0,0,0,4,1,1,2,-1,0,0,,
+UnitTests.GrainInterfaces,ITestGrain,0,11,0,0,0,16,11,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IGuidTestGrain,0,5,0,0,0,10,5,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IOneWayGrain,0,10,0,0,0,15,10,1,3,-1,1,0,UnitTests.GrainInterfaces.ISimpleGrainObserver,
+UnitTests.GrainInterfaces,ICanBeOneWayGrain,0,3,0,0,0,6,3,1,3,-1,1,0,UnitTests.GrainInterfaces.ISimpleGrainObserver,
+UnitTests.GrainInterfaces,ITimerGrain,0,8,0,0,0,11,8,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ITimerCallGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ITimerRequestGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,ValueTypeTestData,1,2,0,0,2,13,2,0,0,0,0,1,,UnitTests.GrainInterfaces.IValueTypeTestGrain
+UnitTests.GrainInterfaces,TestEnum,0,0,0,0,0,7,0,0,0,-1,0,2,,UnitTests.GrainInterfaces.ClassWithEnumTestData' UnitTests.GrainInterfaces.LargeTestData
+UnitTests.GrainInterfaces,CampaignEnemyTestType,0,0,0,0,0,9,0,0,0,-1,0,3,,UnitTests.GrainInterfaces.ClassWithEnumTestData' UnitTests.GrainInterfaces.LargeTestData' UnitTests.GrainInterfaces.IRoundtripSerializationGrain
+UnitTests.GrainInterfaces,ClassWithEnumTestData,0,0,2,0,0,9,0,0,0,-1,2,1,UnitTests.GrainInterfaces.TestEnum' UnitTests.GrainInterfaces.CampaignEnemyTestType,UnitTests.GrainInterfaces.LargeTestData
+UnitTests.GrainInterfaces,LargeTestData,3,7,3,0,7,74,8,0,0,0,3,0,UnitTests.GrainInterfaces.TestEnum' UnitTests.GrainInterfaces.CampaignEnemyTestType' UnitTests.GrainInterfaces.ClassWithEnumTestData,
+UnitTests.GrainInterfaces,NestedGeneric<T>,2,3,0,0,3,20,3,0,0,0,0,0,,
+UnitTests.GrainInterfaces,IValueTypeTestGrain,0,2,0,0,0,5,2,1,3,-1,1,0,UnitTests.GrainInterfaces.ValueTypeTestData,
+UnitTests.GrainInterfaces,IRoundtripSerializationGrain,0,2,0,0,0,5,2,1,3,-1,1,0,UnitTests.GrainInterfaces.CampaignEnemyTestType,
+UnitTests.GrainInterfaces,ImmutableType,2,1,2,0,1,14,1,0,0,0,0,0,,
+UnitTests.GrainInterfaces,EmbeddedImmutable,1,1,2,0,1,14,1,0,0,0,0,0,,
+UnitTests.GrainInterfaces,IPassive_ConsumerGrain,0,3,0,0,0,6,3,2,3,-1,0,1,,UnitTests.GrainInterfaces.IImplicitSubscribeGrain
+UnitTests.GrainInterfaces,IJerk_ConsumerGrain,0,0,0,0,0,3,0,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,IImplicitSubscribeGrain,0,0,0,0,0,3,0,1,4,-1,1,0,UnitTests.GrainInterfaces.IPassive_ConsumerGrain,
+UnitTests.GrainInterfaces,ITypedProducerGrain,0,6,0,0,0,9,6,3,3,-1,0,2,,UnitTests.GrainInterfaces.ITypedProducerGrainProducingInt' UnitTests.GrainInterfaces.ITypedProducerGrainProducingApple
+UnitTests.GrainInterfaces,ITypedProducerGrainProducingInt,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.ITypedProducerGrain,
+UnitTests.GrainInterfaces,ITypedProducerGrainProducingApple,0,0,0,0,0,2,0,1,4,-1,1,0,UnitTests.GrainInterfaces.ITypedProducerGrain,
+UnitTests.GrainInterfaces,IFruit,0,1,0,0,0,4,1,1,0,-1,0,0,,
+UnitTests.GrainInterfaces,IReferenceRecursiveTypeGrain,0,1,0,0,0,4,1,0,3,-1,1,0,UnitTests.GrainInterfaces.RecursiveType,
+UnitTests.GrainInterfaces,RecursiveType,0,0,0,0,0,4,0,0,0,-1,1,1,UnitTests.GrainInterfaces.SelfTyped<T>,UnitTests.GrainInterfaces.IReferenceRecursiveTypeGrain
+UnitTests.GrainInterfaces,SelfTyped<T>,0,0,0,0,0,3,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.RecursiveType
+UnitTests.GrainInterfaces,RedStreamNamespacePredicate,0,1,0,0,1,8,1,0,1,-1,0,0,,
+UnitTests.GrainInterfaces,TypeWithOnDeserializedHook,1,1,1,1,0,11,1,0,1,0,0,0,,
+UnitTests.GrainInterfaces,BaseClassWithAutoProp,0,0,1,0,0,5,0,1,0,-1,0,1,,UnitTests.GrainInterfaces.SubClassOverridingAutoProp
+UnitTests.GrainInterfaces,SubClassOverridingAutoProp,0,0,1,0,0,5,0,0,1,-1,1,0,UnitTests.GrainInterfaces.BaseClassWithAutoProp,
+UnitTests.GrainInterfaces,WellKnownBaseClass,0,0,0,0,0,2,0,1,0,-1,0,1,,UnitTests.GrainInterfaces.DescendantOfWellKnownBaseClass
+UnitTests.GrainInterfaces,DescendantOfWellKnownBaseClass,0,0,1,0,0,4,0,0,1,-1,1,0,UnitTests.GrainInterfaces.WellKnownBaseClass,
+UnitTests.GrainInterfaces,IWellKnownBase,0,0,0,0,0,2,0,1,0,-1,0,1,,UnitTests.GrainInterfaces.ImplementsWellKnownInterface
+UnitTests.GrainInterfaces,ImplementsWellKnownInterface,0,0,1,0,0,4,0,0,1,-1,1,0,UnitTests.GrainInterfaces.IWellKnownBase,
+UnitTests.GrainInterfaces,NotDescendantOfWellKnownBaseType,0,0,1,0,0,4,0,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,ISlowConsumingGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+UnitTests.GrainInterfaces,TestTypeA,0,0,1,0,0,5,0,0,0,-1,0,0,,
+UnitTests.GrainInterfaces,IA,0,3,0,0,0,6,3,1,3,-1,0,1,,UnitTests.GrainInterfaces.IC
+UnitTests.GrainInterfaces,IB,0,3,0,0,0,6,3,1,3,-1,0,1,,UnitTests.GrainInterfaces.IC
+UnitTests.GrainInterfaces,IC,0,3,0,0,0,6,3,1,4,-1,2,1,UnitTests.GrainInterfaces.IA' UnitTests.GrainInterfaces.IB,UnitTests.GrainInterfaces.ID
+UnitTests.GrainInterfaces,ID,0,3,0,0,0,6,3,1,5,-1,1,1,UnitTests.GrainInterfaces.IC,UnitTests.GrainInterfaces.IF
+UnitTests.GrainInterfaces,IE,0,3,0,0,0,6,3,1,3,-1,0,1,,UnitTests.GrainInterfaces.IF
+UnitTests.GrainInterfaces,IF,0,3,0,0,0,6,3,2,6,-1,2,2,UnitTests.GrainInterfaces.ID' UnitTests.GrainInterfaces.IE,UnitTests.GrainInterfaces.IServiceType' UnitTests.GrainInterfaces.IPolymorphicTestGrain
+UnitTests.GrainInterfaces,IG,0,1,0,0,0,4,1,0,3,-1,0,0,,
+UnitTests.GrainInterfaces,IH,0,3,0,0,0,6,3,1,3,-1,0,1,,UnitTests.GrainInterfaces.IDerivedServiceType
+UnitTests.GrainInterfaces,IServiceType,0,3,0,0,0,6,3,2,7,-1,1,1,UnitTests.GrainInterfaces.IF,UnitTests.GrainInterfaces.IDerivedServiceType
+UnitTests.GrainInterfaces,IDerivedServiceType,0,1,0,0,0,4,1,1,8,-1,2,0,UnitTests.GrainInterfaces.IH' UnitTests.GrainInterfaces.IServiceType,
+UnitTests.GrainInterfaces,VersionAwareStrategyAttribute,0,1,0,0,1,8,1,0,1,-1,1,0,UnitTests.GrainInterfaces.VersionAwarePlacementStrategy,
+UnitTests.GrainInterfaces,VersionAwarePlacementStrategy,0,0,1,0,0,5,0,0,1,-1,0,1,,UnitTests.GrainInterfaces.VersionAwareStrategyAttribute
+Two,Command,0,0,0,0,0,3,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISameNameParameterTypeGrain
+Two,Outsider,0,0,0,0,0,1,0,0,0,-1,0,1,,UnitTests.GrainInterfaces.ISomeGrain
+TestGrainInterfaces,IAccountGrain,0,4,0,0,0,7,4,1,3,-1,1,0,TestGrainInterfaces.Transaction,
+TestGrainInterfaces,Transaction,0,0,3,0,0,10,0,2,0,-1,0,3,,TestGrainInterfaces.IAccountGrain' TestGrainInterfaces.DepositTransaction' TestGrainInterfaces.WithdrawalTransaction
+TestGrainInterfaces,DepositTransaction,0,0,1,0,0,5,0,0,1,-1,1,0,TestGrainInterfaces.Transaction,
+TestGrainInterfaces,WithdrawalTransaction,0,0,1,0,0,5,0,0,1,-1,1,0,TestGrainInterfaces.Transaction,
+TestGrainInterfaces,IChatGrain,0,4,0,0,0,11,4,1,3,-1,0,0,,
+TestGrainInterfaces,XDocumentSerialization,0,3,0,0,3,23,3,0,0,-1,0,0,,
+TestGrainInterfaces,ICountersGrain,0,6,0,0,0,15,6,1,3,-1,0,0,,
+TestGrainInterfaces,GenderType,0,0,0,0,0,5,0,0,0,-1,0,1,,TestGrainInterfaces.PersonAttributes
+TestGrainInterfaces,PersonAttributes,0,0,3,0,0,7,0,0,0,-1,1,1,TestGrainInterfaces.GenderType,TestGrainInterfaces.IPersonGrain
+TestGrainInterfaces,IPersonGrain,0,4,0,0,0,8,4,1,3,-1,1,0,TestGrainInterfaces.PersonAttributes,
+TestGrainInterfaces,ISeatReservationGrain,0,1,0,0,0,5,1,1,3,-1,0,0,,
+TestGrainInterfaces,IDoSomething,0,4,0,0,0,7,4,2,0,-1,0,2,,TestGrainInterfaces.IDoSomethingWithMoreGrain' TestGrainInterfaces.IDoSomethingEmptyGrain
+TestGrainInterfaces,IDoSomethingWithMoreGrain,0,4,0,0,0,7,4,2,3,-1,1,1,TestGrainInterfaces.IDoSomething,TestGrainInterfaces.IDoSomethingCombinedGrain
+TestGrainInterfaces,IDoSomethingEmptyGrain,0,0,0,0,0,3,0,2,3,-1,1,1,TestGrainInterfaces.IDoSomething,TestGrainInterfaces.IDoSomethingEmptyWithMoreGrain
+TestGrainInterfaces,IDoSomethingEmptyWithMoreGrain,0,1,0,0,0,4,1,2,4,-1,1,1,TestGrainInterfaces.IDoSomethingEmptyGrain,TestGrainInterfaces.IDoSomethingWithMoreEmptyGrain
+TestGrainInterfaces,IDoSomethingWithMoreEmptyGrain,0,0,0,0,0,3,0,2,5,-1,1,1,TestGrainInterfaces.IDoSomethingEmptyWithMoreGrain,TestGrainInterfaces.IDoSomethingCombinedGrain
+TestGrainInterfaces,IDoSomethingCombinedGrain,0,3,0,0,0,6,3,1,6,-1,2,0,TestGrainInterfaces.IDoSomethingWithMoreGrain' TestGrainInterfaces.IDoSomethingWithMoreEmptyGrain,
+TestGrainInterfaces,ICircularStateTestGrain,0,1,0,0,0,4,1,1,3,-1,1,0,TestGrainInterfaces.CircularTest1,
+TestGrainInterfaces,CircularStateTestState,0,0,1,0,0,5,0,0,0,-1,1,0,TestGrainInterfaces.CircularTest1,
+TestGrainInterfaces,CircularTest1,0,0,1,0,0,5,0,0,0,-1,1,3,TestGrainInterfaces.CircularTest2,TestGrainInterfaces.ICircularStateTestGrain' TestGrainInterfaces.CircularStateTestState' TestGrainInterfaces.CircularTest2
+TestGrainInterfaces,CircularTest2,0,1,1,0,1,9,1,0,0,-1,1,1,TestGrainInterfaces.CircularTest1,TestGrainInterfaces.CircularTest1
+TestGrainInterfaces,IClusterTestGrain,0,5,0,0,0,8,5,1,3,-1,1,0,TestGrainInterfaces.IClusterTestListener,
+TestGrainInterfaces,IClusterTestListener,0,1,0,0,0,4,1,0,2,-1,0,1,,TestGrainInterfaces.IClusterTestGrain
+TestGrainInterfaces,ISimpleGlobalSingleInstanceGrain,0,3,0,0,0,6,3,1,3,-1,0,0,,
+TestGrainInterfaces,IGeneratedEventCollectorGrain,0,0,0,0,0,3,0,4,3,-1,0,0,,
+TestGrainInterfaces,IGeneratedEventReporterGrain,0,4,0,0,0,7,4,1,3,-1,0,0,,
+Generic.EdgeCases,IBasicGrain,0,2,0,0,0,5,2,0,3,-1,0,12,,Generic.EdgeCases.IGrainWithTwoGenArgs' Generic.EdgeCases.IGrainWithThreeGenArgs' Generic.EdgeCases.IGrainReceivingRepeatedGenArgs' Generic.EdgeCases.IReceivingRepeatedGenArgsAmongstOthers' Generic.EdgeCases.IReceivingRepeatedGenArgsFromOtherInterface' Generic.EdgeCases.IReceivingRearrangedGenArgs' Generic.EdgeCases.IReceivingRearrangedGenArgsViaCast' Generic.EdgeCases.IArbitraryInterface' Generic.EdgeCases.IInterfaceUnrelatedToConcreteGenArgs' Generic.EdgeCases.IInterfaceTakingFurtherSpecializedGenArg' Generic.EdgeCases.IAnotherReceivingFurtherSpecializedGenArg' Generic.EdgeCases.IYetOneMoreReceivingFurtherSpecializedGenArg
+Generic.EdgeCases,IGrainWithTwoGenArgs,0,0,0,0,0,2,0,0,0,-1,1,1,Generic.EdgeCases.IBasicGrain,Generic.EdgeCases.IPartiallySpecifyingInterface
+Generic.EdgeCases,IGrainWithThreeGenArgs,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IGrainReceivingRepeatedGenArgs,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IPartiallySpecifyingInterface,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IGrainWithTwoGenArgs,
+Generic.EdgeCases,IReceivingRepeatedGenArgsAmongstOthers,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IReceivingRepeatedGenArgsFromOtherInterface,0,0,0,0,0,2,0,0,0,-1,1,1,Generic.EdgeCases.IBasicGrain,Generic.EdgeCases.ISpecifyingGenArgsRepeatedlyToParentInterface
+Generic.EdgeCases,ISpecifyingGenArgsRepeatedlyToParentInterface,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IReceivingRepeatedGenArgsFromOtherInterface,
+Generic.EdgeCases,IReceivingRearrangedGenArgs,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IReceivingRearrangedGenArgsViaCast,0,0,0,0,0,2,0,0,0,-1,1,1,Generic.EdgeCases.IBasicGrain,Generic.EdgeCases.ISpecifyingRearrangedGenArgsToParentInterface
+Generic.EdgeCases,ISpecifyingRearrangedGenArgsToParentInterface,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IReceivingRearrangedGenArgsViaCast,
+Generic.EdgeCases,IArbitraryInterface,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IInterfaceUnrelatedToConcreteGenArgs,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IInterfaceTakingFurtherSpecializedGenArg,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IAnotherReceivingFurtherSpecializedGenArg,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+Generic.EdgeCases,IYetOneMoreReceivingFurtherSpecializedGenArg,0,0,0,0,0,2,0,0,0,-1,1,0,Generic.EdgeCases.IBasicGrain,
+UnitTests.Stats,IStatsCollectorGrain,0,2,0,0,0,6,2,1,3,-1,0,0,,
+Orleans.UnitTest.GrainInterfaces,MyTypeWithAPrivateTypeField,1,1,0,0,1,11,1,0,0,0,1,1,Orleans.UnitTest.GrainInterfaces.MyPrivateDependency,Orleans.UnitTest.GrainInterfaces.IPrivateReturnType
+Orleans.UnitTest.GrainInterfaces,MyPrivateDependency,0,0,0,0,0,3,0,0,0,-1,0,1,,Orleans.UnitTest.GrainInterfaces.MyTypeWithAPrivateTypeField
+Orleans.UnitTest.GrainInterfaces,MyTypeWithAnInternalTypeField,1,1,0,0,1,12,1,0,0,0,1,1,Orleans.UnitTest.GrainInterfaces.MyInternalDependency,Orleans.UnitTest.GrainInterfaces.IInternalReturnType
+Orleans.UnitTest.GrainInterfaces,MyInternalDependency,0,0,0,0,0,3,0,0,0,-1,0,1,,Orleans.UnitTest.GrainInterfaces.MyTypeWithAnInternalTypeField
+Orleans.UnitTest.GrainInterfaces,IPrivateReturnType,0,1,0,0,0,4,1,0,3,-1,1,0,Orleans.UnitTest.GrainInterfaces.MyTypeWithAPrivateTypeField,
+Orleans.UnitTest.GrainInterfaces,IInternalReturnType,0,1,0,0,0,4,1,0,3,-1,1,0,Orleans.UnitTest.GrainInterfaces.MyTypeWithAnInternalTypeField,

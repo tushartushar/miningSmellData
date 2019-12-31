@@ -1,9 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Builder.Builders,CarBuilder,0,5,0,0,5,23,5,0,1,-1,0,0,,
-Builder.Builders,MotorCycleBuilder,0,5,0,0,5,23,5,0,1,-1,0,0,,
-Builder.Builders,ScooterBuilder,0,5,0,0,5,23,5,0,1,-1,0,0,,
-Builder.Builders,VehicleBuilder,0,4,1,0,4,11,4,3,0,-1,0,3,,Builder.IVehicleConstructor' Builder.Program' Builder.Directors.VehicleConstructor
-Builder,IVehicleConstructor,0,1,0,0,0,4,1,1,0,-1,1,1,Builder.Builders.VehicleBuilder,Builder.Program
-Builder,Program,0,1,0,0,1,18,1,0,0,-1,3,0,Builder.IVehicleConstructor' Builder.Builders.VehicleBuilder' Builder.Vehicle,
-Builder,Vehicle,2,2,0,0,2,23,2,0,0,0,0,1,,Builder.Program
-Builder.Directors,VehicleConstructor,0,1,0,0,1,11,1,0,1,-1,1,0,Builder.Builders.VehicleBuilder,
+Builder.Builders,CarBuilder,0,5,0,0,5,23,5,0,1,-1,2,1,Builder.Builders.VehicleBuilder' Builder.Vehicle,Builder.Program
+Builder.Builders,MotorCycleBuilder,0,5,0,0,5,23,5,0,1,-1,2,1,Builder.Builders.VehicleBuilder' Builder.Vehicle,Builder.Program
+Builder.Builders,ScooterBuilder,0,5,0,0,5,23,5,0,1,-1,2,1,Builder.Builders.VehicleBuilder' Builder.Vehicle,Builder.Program
+Builder.Builders,VehicleBuilder,0,4,1,0,4,11,4,3,0,-1,1,6,Builder.Vehicle,Builder.Builders.CarBuilder' Builder.Builders.MotorCycleBuilder' Builder.Directors.VehicleConstructor' Builder.IVehicleConstructor' Builder.Builders.ScooterBuilder' Builder.Program
+Builder,IVehicleConstructor,0,1,0,0,0,4,1,1,0,-1,1,2,Builder.Builders.VehicleBuilder,Builder.Directors.VehicleConstructor' Builder.Program
+Builder,Program,0,1,0,0,1,18,1,0,0,-1,6,0,Builder.Builders.CarBuilder' Builder.Builders.MotorCycleBuilder' Builder.Builders.ScooterBuilder' Builder.Builders.VehicleBuilder' Builder.IVehicleConstructor' Builder.Directors.VehicleConstructor,
+Builder,Vehicle,2,2,0,0,2,23,2,0,0,1,0,4,,Builder.Builders.VehicleBuilder' Builder.Builders.MotorCycleBuilder' Builder.Builders.CarBuilder' Builder.Builders.ScooterBuilder
+Builder.Directors,VehicleConstructor,0,1,0,0,1,11,1,0,1,-1,2,1,Builder.Builders.VehicleBuilder' Builder.IVehicleConstructor,Builder.Program

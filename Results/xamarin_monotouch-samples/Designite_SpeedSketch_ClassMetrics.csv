@@ -1,0 +1,26 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+SpeedSketch,Application,0,1,0,0,0,10,1,0,0,-1,0,0,,
+SpeedSketch,AppDelegate,0,1,1,0,1,14,1,0,0,-1,1,0,SpeedSketch.CanvasMainViewController,
+SpeedSketch,RingControl,1,8,2,0,4,144,22,0,0,0.38,1,1,SpeedSketch.RingView,SpeedSketch.CanvasMainViewController
+SpeedSketch,RingControlState,0,0,0,0,0,7,0,0,0,-1,0,1,,SpeedSketch.RingView
+SpeedSketch,RingView,0,2,6,0,2,43,2,0,0,-1,1,1,SpeedSketch.RingControlState,SpeedSketch.RingControl
+SpeedSketch,StrokeViewDisplayOptions,0,0,0,0,0,6,0,0,0,-1,0,2,,SpeedSketch.CanvasMainViewController' SpeedSketch.StrokeCGView
+SpeedSketch,EstimatedSample,0,0,2,0,0,5,0,0,0,-1,1,1,SpeedSketch.StrokeSample,SpeedSketch.StrokeCGView
+SpeedSketch,StrokeCGView,4,6,4,0,4,342,26,0,0,0.33,6,1,SpeedSketch.StrokeViewDisplayOptions' SpeedSketch.EstimatedSample' SpeedSketch.StrokeCollection' SpeedSketch.StrokeSample' SpeedSketch.StrokeSegment' SpeedSketch.Stroke,SpeedSketch.CanvasMainViewController
+SpeedSketch,StrokeCollection,0,1,2,0,1,13,2,0,0,-1,1,2,SpeedSketch.Stroke,SpeedSketch.StrokeCGView' SpeedSketch.CanvasMainViewController
+SpeedSketch,CGContextExtensions,0,2,0,0,2,11,2,0,0,-1,0,0,,
+SpeedSketch,StrokeGestureRecognizer,6,12,3,0,8,213,45,0,0,0.25,5,1,SpeedSketch.Callback' SpeedSketch.StrokeIndex' SpeedSketch.StrokeSample' SpeedSketch.StrokeState' SpeedSketch.Stroke,SpeedSketch.CanvasMainViewController
+SpeedSketch,Callback,1,2,0,0,1,16,2,0,0,1,0,1,,SpeedSketch.StrokeGestureRecognizer
+SpeedSketch,StrokeIndex,0,0,2,0,0,5,0,0,0,-1,0,1,,SpeedSketch.StrokeGestureRecognizer
+SpeedSketch,StrokeSample,0,3,9,0,3,42,3,0,0,-1,0,5,,SpeedSketch.StrokeSegment' SpeedSketch.StrokeGestureRecognizer' SpeedSketch.Stroke' SpeedSketch.EstimatedSample' SpeedSketch.StrokeCGView
+SpeedSketch,StrokeSegment,0,3,10,0,2,71,7,0,0,-1,1,2,SpeedSketch.StrokeSample,SpeedSketch.StrokeCGView' SpeedSketch.Stroke
+SpeedSketch,StrokeState,0,0,0,0,0,6,0,0,0,-1,0,2,,SpeedSketch.Stroke' SpeedSketch.StrokeGestureRecognizer
+SpeedSketch,Stroke,4,8,6,1,6,95,22,0,0,0.38,4,4,SpeedSketch.StrokeSample' SpeedSketch.StrokeSegment' SpeedSketch.StrokeState' SpeedSketch.CountableClosedRange,SpeedSketch.StrokeCollection' SpeedSketch.CanvasMainViewController' SpeedSketch.StrokeCGView' SpeedSketch.StrokeGestureRecognizer
+SpeedSketch,CanvasContainerView,2,2,1,0,1,46,2,0,0,1,0,1,,SpeedSketch.CanvasMainViewController
+SpeedSketch,CanvasMainViewController,15,15,2,0,7,277,28,0,0,0.13,7,1,SpeedSketch.RingControl' SpeedSketch.StrokeViewDisplayOptions' SpeedSketch.StrokeCGView' SpeedSketch.StrokeCollection' SpeedSketch.StrokeGestureRecognizer' SpeedSketch.Stroke' SpeedSketch.CanvasContainerView,SpeedSketch.AppDelegate
+SpeedSketch,CGMathExtensions,0,7,0,0,7,37,8,0,0,-1,0,0,,
+SpeedSketch,CGVectorExtensions,0,7,0,0,7,39,8,0,0,-1,0,0,,
+SpeedSketch,CGPointExtensions,0,3,0,0,3,15,3,0,0,-1,0,0,,
+SpeedSketch,CGSizeExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+SpeedSketch,CountableClosedRange,0,3,2,0,2,19,4,0,0,-1,0,1,,SpeedSketch.Stroke
+SpeedSketch,Helpers,0,1,0,0,1,7,1,0,0,-1,0,0,,

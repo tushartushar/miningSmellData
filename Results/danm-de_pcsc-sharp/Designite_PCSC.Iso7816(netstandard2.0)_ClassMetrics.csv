@@ -1,0 +1,26 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+PCSC.Iso7816,Apdu,0,1,3,0,1,20,1,2,0,-1,1,3,PCSC.Iso7816.IsoCase,PCSC.Iso7816.ResponseApdu' PCSC.Iso7816.CommandApdu' PCSC.Iso7816.InvalidApduException
+PCSC.Iso7816,ClaHighPart,0,0,0,0,0,37,0,0,0,-1,1,1,PCSC.Iso7816.SecureMessagingFormat,PCSC.Iso7816.ClassByte
+PCSC.Iso7816,ClassByte,2,2,4,0,2,93,3,0,0,1,2,1,PCSC.Iso7816.ClaHighPart' PCSC.Iso7816.SecureMessagingFormat,PCSC.Iso7816.CommandApdu
+PCSC.Iso7816,CommandApdu,2,6,12,0,6,465,35,0,1,0.67,5,4,PCSC.Iso7816.Apdu' PCSC.Iso7816.ClassByte' PCSC.Iso7816.InstructionByte' PCSC.Iso7816.InstructionCode' PCSC.Iso7816.IsoCase,PCSC.Iso7816.IIsoReader' PCSC.Iso7816.ResponseApdu' PCSC.Iso7816.SW1Code' PCSC.Iso7816.IsoReader
+PCSC.Iso7816,ExtendedFileType,0,0,0,0,0,11,0,0,0,-1,0,2,,PCSC.Iso7816.FileType' PCSC.Iso7816.FileDescriptor
+PCSC.Iso7816,FileDescriptor,8,2,5,7,2,80,5,0,0,1,4,0,PCSC.Iso7816.ExtendedFileType' PCSC.Iso7816.FileShareMode' PCSC.Iso7816.FileStructureInfo' PCSC.Iso7816.FileType,
+PCSC.Iso7816,FileShareMode,0,0,0,0,0,7,0,0,0,-1,0,1,,PCSC.Iso7816.FileDescriptor
+PCSC.Iso7816,FileStructureInfo,10,2,5,9,1,76,12,0,0,0,2,1,PCSC.Iso7816.FileStructureType' PCSC.Iso7816.RecordInfo,PCSC.Iso7816.FileDescriptor
+PCSC.Iso7816,FileStructureType,0,0,0,0,0,19,0,0,0,-1,0,1,,PCSC.Iso7816.FileStructureInfo
+PCSC.Iso7816,FileType,0,0,0,0,0,8,0,0,0,-1,1,1,PCSC.Iso7816.ExtendedFileType,PCSC.Iso7816.FileDescriptor
+PCSC.Iso7816,IIsoReader,0,4,5,0,0,29,4,1,0,-1,4,1,PCSC.Iso7816.CommandApdu' PCSC.Iso7816.IsoCase' PCSC.Iso7816.Response' PCSC.Iso7816.ResponseApdu,PCSC.Iso7816.IsoReader
+PCSC.Iso7816,InstructionByte,0,2,2,0,1,37,2,0,0,-1,1,1,PCSC.Iso7816.InstructionCode,PCSC.Iso7816.CommandApdu
+PCSC.Iso7816,InstructionCode,0,0,0,0,0,57,0,0,0,-1,0,3,,PCSC.Iso7816.CommandApdu' PCSC.Iso7816.InstructionByte' PCSC.Iso7816.IsoReader
+PCSC.Iso7816,InvalidApduException,1,4,2,0,3,43,4,0,0,1,1,2,PCSC.Iso7816.Apdu,PCSC.Iso7816.ResponseApdu' PCSC.Iso7816.IsoReader
+PCSC.Iso7816,IsoCase,0,0,0,0,0,66,0,0,0,-1,0,5,,PCSC.Iso7816.Apdu' PCSC.Iso7816.IIsoReader' PCSC.Iso7816.ResponseApdu' PCSC.Iso7816.IsoReader' PCSC.Iso7816.CommandApdu
+PCSC.Iso7816,IsoReader,6,15,5,0,10,316,29,0,1,0.2,8,0,PCSC.Iso7816.CommandApdu' PCSC.Iso7816.IIsoReader' PCSC.Iso7816.InstructionCode' PCSC.Iso7816.InvalidApduException' PCSC.Iso7816.IsoCase' PCSC.Iso7816.Response' PCSC.Iso7816.ResponseApdu' PCSC.Iso7816.SW1Code,
+PCSC.Iso7816,RecordInfo,4,1,6,4,1,61,6,0,0,0,0,1,,PCSC.Iso7816.FileStructureInfo
+PCSC.Iso7816,Response,2,9,6,0,5,95,13,0,0,0.22,2,2,PCSC.Iso7816.ResponseApdu' PCSC.Iso7816.ResponseApduEnumerator,PCSC.Iso7816.IIsoReader' PCSC.Iso7816.IsoReader
+PCSC.Iso7816,ResponseApdu,0,8,8,0,7,179,19,0,1,-1,4,4,PCSC.Iso7816.Apdu' PCSC.Iso7816.CommandApdu' PCSC.Iso7816.InvalidApduException' PCSC.Iso7816.IsoCase,PCSC.Iso7816.IIsoReader' PCSC.Iso7816.ResponseApduEnumerator' PCSC.Iso7816.IsoReader' PCSC.Iso7816.Response
+PCSC.Iso7816,ResponseApduEnumerator,2,9,2,0,7,90,9,0,0,0.44,1,1,PCSC.Iso7816.ResponseApdu,PCSC.Iso7816.Response
+PCSC.Iso7816,SecureMessagingFormat,0,0,0,0,0,11,0,0,0,-1,0,2,,PCSC.Iso7816.ClaHighPart' PCSC.Iso7816.ClassByte
+PCSC.Iso7816,SW1Code,0,0,0,0,0,108,0,0,0,-1,1,1,PCSC.Iso7816.CommandApdu,PCSC.Iso7816.IsoReader
+PCSC.Iso7816,TlvDataType,0,0,0,0,0,7,0,0,0,-1,0,0,,
+PCSC.Iso7816.Extensions,ByteExt,0,1,0,0,1,6,1,0,0,-1,0,0,,
+PCSC.Iso7816.Extensions,SCardErrorExt,0,1,0,0,1,7,1,0,0,-1,0,0,,

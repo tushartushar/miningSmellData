@@ -1,36 +1,36 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
 NFeature,FeatureSettingAttribute,0,0,1,0,0,5,0,0,0,-1,0,1,,NFeature.FeatureEnumExtensions
-NFeature,FeatureSettingService<TFeatureEnum;TAvailabilityCheckArgs>,2,2,0,0,2,25,2,0,1,0,1,0,NFeature.IFeatureSettingAvailabilityChecker,
-NFeature,FeatureSettingService<TFeatureEnum>,2,2,0,0,2,22,2,0,1,0,2,0,NFeature.IFeatureSettingAvailabilityChecker' NFeature.EmptyArgs,
-NFeature,FeatureSettingAvailabilityChecker<TFeatureEnum>,0,1,0,0,1,10,1,0,1,-1,0,0,,
-NFeature,EmptyArgs,0,0,0,0,0,1,0,0,0,-1,0,3,,NFeature.FeatureSettingService<TFeatureEnum>' NFeature.Test.Slow.FeatureEnumExtensionsTests' NFeature.DefaultTenant.Test.Slow.FeatureEnumExtensionsTests
-NFeature,FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs>,0,1,0,0,1,9,1,0,0,-1,0,0,,
-NFeature,FeatureVisibilityMode,0,0,0,0,0,5,0,0,0,-1,0,5,,NFeature.FeatureSettingExtensions' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>' NFeature.DefaultImplementations.DefaultFunctions' NFeature.Example.Console.Program' NFeature.Test.Fast.FeatureSettingAvailabilityCheckerTests
-NFeature,FeatureDescriptor<TFeatureEnum>,1,1,5,0,1,21,1,0,1,0,0,0,,
-NFeature,FeatureEnumExtensions,0,3,0,0,2,61,5,0,0,-1,3,0,NFeature.IFeatureManifest' NFeature.IFeatureDescriptor' NFeature.FeatureSettingAttribute,
-NFeature,FeatureManifest<TFeatureEnum>,0,0,0,0,0,3,0,0,1,-1,0,0,,
-NFeature,FeatureManifestService<TFeatureEnum>,1,2,0,0,2,15,2,0,1,0,2,0,NFeature.IFeatureManifestCreationStrategy' NFeature.IFeatureManifest,
-NFeature,FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs;TTenant>,1,2,0,0,2,58,6,0,1,0,0,0,,
+NFeature,FeatureSettingService<TFeatureEnum;TAvailabilityCheckArgs>,2,2,0,0,2,25,2,0,1,0,2,0,NFeature.IFeatureSettingAvailabilityChecker' NFeature.IFeatureSettingService,
+NFeature,FeatureSettingService<TFeatureEnum>,2,2,0,0,2,22,2,0,1,0,3,0,NFeature.EmptyArgs' NFeature.IFeatureSettingAvailabilityChecker' NFeature.IFeatureSettingService,
+NFeature,FeatureSettingAvailabilityChecker<TFeatureEnum>,0,1,0,0,1,10,1,0,1,-1,3,0,NFeature.EmptyArgs' NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs>' NFeature.IFeatureSettingAvailabilityChecker,
+NFeature,EmptyArgs,0,0,0,0,0,1,0,0,0,-1,0,5,,NFeature.FeatureSettingService<TFeatureEnum>' NFeature.IFeatureSettingService' NFeature.IFeatureSettingAvailabilityChecker' NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>
+NFeature,FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs>,0,1,0,0,1,9,1,0,0,-1,1,1,NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs;TTenant>,NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum>
+NFeature,FeatureVisibilityMode,0,0,0,0,0,5,0,0,0,-1,0,3,,NFeature.DefaultImplementations.DefaultFunctions' NFeature.FeatureSettingExtensions' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>
+NFeature,FeatureDescriptor<TFeatureEnum>,1,1,5,0,1,21,1,0,1,0,2,2,NFeature.IFeatureDescriptor' NFeature.Exceptions.EstablishedFeatureAvailabilityCheckException<TFeature>,NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>
+NFeature,FeatureEnumExtensions,0,3,0,0,2,61,5,0,0,-1,4,0,NFeature.FeatureSettingAttribute' NFeature.IFeatureManifest' NFeature.Exceptions.FeatureNotAvailableException' NFeature.Exceptions.FeatureNotConfiguredException<TFeatureEnum>,
+NFeature,FeatureManifest<TFeatureEnum>,0,0,0,0,0,3,0,0,1,-1,2,2,NFeature.IFeatureDescriptor' NFeature.IFeatureManifest,NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>
+NFeature,FeatureManifestService<TFeatureEnum>,1,2,0,0,2,15,2,0,1,0,3,0,NFeature.IFeatureManifest' NFeature.IFeatureManifestCreationStrategy' NFeature.IFeatureManifestService,
+NFeature,FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs;TTenant>,1,2,0,0,2,58,6,0,1,0,4,1,NFeature.IFeatureSettingAvailabilityChecker' NFeature.Exceptions.CircularFeatureSettingDependencyException' NFeature.Exceptions.EstablishedFeatureDependencyException<TFeature>' NFeature.Exceptions.FeatureNotConfiguredException<TFeatureEnum>,NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs>
 NFeature,FeatureSettingExtensions,0,1,0,0,1,17,1,0,0,-1,1,0,NFeature.FeatureVisibilityMode,
-NFeature,FeatureSettingService<TFeatureEnum;TTenantEnum;TAvailabilityCheckArgs>,2,2,0,0,2,26,2,0,1,0,1,0,NFeature.IFeatureSettingAvailabilityChecker,
-NFeature,IApplicationClock,0,0,1,0,0,4,0,2,0,-1,0,1,,NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>
-NFeature,IFeatureDescriptor,0,0,3,0,0,9,0,1,0,-1,0,1,,NFeature.FeatureEnumExtensions
-NFeature,IFeatureManifest,0,0,0,0,0,3,0,1,0,-1,0,6,,NFeature.FeatureEnumExtensions' NFeature.FeatureManifestService<TFeatureEnum>' NFeature.Example.Console.Program' NFeature.Test.Fast.DefaultFeatureManifestCreationStrategyTests' NFeature.Test.Slow.FeatureEnumExtensionsTests' NFeature.DefaultTenant.Test.Slow.FeatureEnumExtensionsTests
-NFeature,IFeatureManifestCreationStrategy,0,1,0,0,0,5,1,2,0,-1,0,1,,NFeature.FeatureManifestService<TFeatureEnum>
-NFeature,IFeatureManifestService,0,1,0,0,0,5,1,1,0,-1,0,0,,
-NFeature,IFeatureSettingAvailabilityChecker,0,1,0,0,0,17,1,2,0,-1,0,3,,NFeature.FeatureSettingService<TFeatureEnum;TAvailabilityCheckArgs>' NFeature.FeatureSettingService<TFeatureEnum>' NFeature.FeatureSettingService<TFeatureEnum;TTenantEnum;TAvailabilityCheckArgs>
-NFeature,IFeatureSettingService,0,1,0,0,0,13,1,3,0,-1,0,4,,NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>' NFeature.Test.Fast.DefaultFeatureManifestCreationStrategyTests
-NFeature,ITenancyContext,0,0,1,0,0,5,0,0,0,-1,0,2,,NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>' NFeature.Test.Fast.DefaultFeatureManifestCreationStrategyTests
-NFeature.DefaultImplementations,ManifestCreationStrategyDefault<TFeatureEnum>,0,1,0,0,1,9,1,0,0,-1,1,0,NFeature.IFeatureSettingService,
-NFeature.DefaultImplementations,ApplicationClockWithOffset,0,2,2,0,2,13,2,0,1,-1,0,1,,NFeature.DefaultImplementations.ApplicationClockWithOffsetFactory
+NFeature,FeatureSettingService<TFeatureEnum;TTenantEnum;TAvailabilityCheckArgs>,2,2,0,0,2,26,2,0,1,0,2,0,NFeature.IFeatureSettingAvailabilityChecker' NFeature.IFeatureSettingService,
+NFeature,IApplicationClock,0,0,1,0,0,4,0,2,0,-1,0,3,,NFeature.DefaultImplementations.ApplicationClock' NFeature.DefaultImplementations.ApplicationClockWithOffset' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>
+NFeature,IFeatureDescriptor,0,0,3,0,0,9,0,1,0,-1,0,3,,NFeature.FeatureDescriptor<TFeatureEnum>' NFeature.FeatureManifest<TFeatureEnum>' NFeature.IFeatureManifest
+NFeature,IFeatureManifest,0,0,0,0,0,3,0,1,0,-1,1,7,NFeature.IFeatureDescriptor,NFeature.FeatureManifest<TFeatureEnum>' NFeature.FeatureEnumExtensions' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>' NFeature.FeatureManifestService<TFeatureEnum>' NFeature.IFeatureManifestCreationStrategy' NFeature.IFeatureManifestService' NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>
+NFeature,IFeatureManifestCreationStrategy,0,1,0,0,0,5,1,2,0,-1,1,3,NFeature.IFeatureManifest,NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>' NFeature.FeatureManifestService<TFeatureEnum>
+NFeature,IFeatureManifestService,0,1,0,0,0,5,1,1,0,-1,1,1,NFeature.IFeatureManifest,NFeature.FeatureManifestService<TFeatureEnum>
+NFeature,IFeatureSettingAvailabilityChecker,0,1,0,0,0,17,1,2,0,-1,1,5,NFeature.EmptyArgs,NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum>' NFeature.FeatureSettingService<TFeatureEnum>' NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs;TTenant>' NFeature.FeatureSettingService<TFeatureEnum;TAvailabilityCheckArgs>' NFeature.FeatureSettingService<TFeatureEnum;TTenantEnum;TAvailabilityCheckArgs>
+NFeature,IFeatureSettingService,0,1,0,0,0,13,1,3,0,-1,1,6,NFeature.EmptyArgs,NFeature.FeatureSettingService<TFeatureEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum>' NFeature.FeatureSettingService<TFeatureEnum;TAvailabilityCheckArgs>' NFeature.FeatureSettingService<TFeatureEnum;TTenantEnum;TAvailabilityCheckArgs>' NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>' NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>
+NFeature,ITenancyContext,0,0,1,0,0,5,0,0,0,-1,0,1,,NFeature.DefaultImplementations.ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>
+NFeature.DefaultImplementations,ManifestCreationStrategyDefault<TFeatureEnum>,0,1,0,0,1,9,1,0,0,-1,2,0,NFeature.IFeatureSettingService' NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>,
+NFeature.DefaultImplementations,ApplicationClockWithOffset,0,2,2,0,2,13,2,0,1,-1,1,1,NFeature.IApplicationClock,NFeature.DefaultImplementations.ApplicationClockWithOffsetFactory
 NFeature.DefaultImplementations,ApplicationClockWithOffsetFactory,0,1,0,0,1,17,2,0,0,-1,1,0,NFeature.DefaultImplementations.ApplicationClockWithOffset,
-NFeature.DefaultImplementations,ApplicationClock,0,0,1,0,0,6,0,0,1,-1,0,0,,
-NFeature.DefaultImplementations,ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>,2,2,0,0,2,31,3,0,1,0,1,0,NFeature.IFeatureSettingService,
-NFeature.DefaultImplementations,ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>,6,2,0,1,2,53,3,0,1,0,4,0,NFeature.IApplicationClock' NFeature.IFeatureSettingService' NFeature.ITenancyContext' NFeature.FeatureVisibilityMode,
-NFeature.DefaultImplementations,DefaultFunctions,0,2,0,0,2,29,2,0,0,-1,1,2,NFeature.FeatureVisibilityMode,NFeature.Example.Console.Program' NFeature.Test.Fast.DefaultFeatureManifestCreationStrategyTests
-NFeature.Exceptions,EstablishedFeatureAvailabilityCheckException<TFeature>,2,1,0,0,1,13,1,0,0,0,0,0,,
-NFeature.Exceptions,CircularFeatureSettingDependencyException,0,0,0,0,0,1,0,0,0,-1,0,0,,
-NFeature.Exceptions,EstablishedFeatureDependencyException<TFeature>,2,1,0,0,1,13,1,0,0,0,0,0,,
+NFeature.DefaultImplementations,ApplicationClock,0,0,1,0,0,6,0,0,1,-1,1,0,NFeature.IApplicationClock,
+NFeature.DefaultImplementations,ManifestCreationStrategyDefault<TFeatureEnum;TTenantEnum>,2,2,0,0,2,31,3,0,1,0,6,1,NFeature.EmptyArgs' NFeature.FeatureDescriptor<TFeatureEnum>' NFeature.FeatureManifest<TFeatureEnum>' NFeature.IFeatureManifest' NFeature.IFeatureManifestCreationStrategy' NFeature.IFeatureSettingService,NFeature.DefaultImplementations.ManifestCreationStrategyDefault<TFeatureEnum>
+NFeature.DefaultImplementations,ManifestCreationStrategyConsideringStateCookieTenantAndTime<TFeatureEnum;TTenantEnum>,6,2,0,1,2,53,3,0,1,0,8,0,NFeature.FeatureVisibilityMode' NFeature.FeatureDescriptor<TFeatureEnum>' NFeature.FeatureManifest<TFeatureEnum>' NFeature.IApplicationClock' NFeature.IFeatureManifest' NFeature.IFeatureManifestCreationStrategy' NFeature.IFeatureSettingService' NFeature.ITenancyContext,
+NFeature.DefaultImplementations,DefaultFunctions,0,2,0,0,2,29,2,0,0,-1,1,0,NFeature.FeatureVisibilityMode,
+NFeature.Exceptions,EstablishedFeatureAvailabilityCheckException<TFeature>,2,1,0,0,1,13,1,0,0,0,0,1,,NFeature.FeatureDescriptor<TFeatureEnum>
+NFeature.Exceptions,CircularFeatureSettingDependencyException,0,0,0,0,0,1,0,0,0,-1,0,1,,NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs;TTenant>
+NFeature.Exceptions,EstablishedFeatureDependencyException<TFeature>,2,1,0,0,1,13,1,0,0,0,0,1,,NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs;TTenant>
 NFeature.Exceptions,FeatureDependencyConfigurationException,0,1,0,0,1,5,1,0,0,-1,0,0,,
-NFeature.Exceptions,FeatureNotAvailableException,0,1,0,0,1,7,1,0,0,-1,0,0,,
-NFeature.Exceptions,FeatureNotConfiguredException<TFeatureEnum>,0,1,0,0,1,9,1,0,0,-1,0,0,,
+NFeature.Exceptions,FeatureNotAvailableException,0,1,0,0,1,7,1,0,0,-1,0,1,,NFeature.FeatureEnumExtensions
+NFeature.Exceptions,FeatureNotConfiguredException<TFeatureEnum>,0,1,0,0,1,9,1,0,0,-1,0,2,,NFeature.FeatureSettingAvailabilityChecker<TFeatureEnum;TAvailabilityCheckArgs;TTenant>' NFeature.FeatureEnumExtensions

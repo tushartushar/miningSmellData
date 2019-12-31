@@ -1,48 +1,48 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Voat.Data.Models,VoatEntityContext,0,1,44,0,0,82,1,1,0,-1,0,1,,Voat.Data.Models.VoatDataContext
+Voat.Data.Models,VoatEntityContext,0,1,44,0,0,82,1,1,0,-1,7,0,Voat.Data.Models.CommentRemovalLog' Voat.Data.Models.DefaultSubverse' Voat.Data.Models.SessionTracker' Voat.Data.Models.StickiedSubmission' Voat.Data.Models.SubmissionRemovalLog' Voat.Data.Models.UserPreference' Voat.Data.Models.ViewStatistic,
 Voat.Data.Models,UnintentionalCodeFirstException,0,0,0,0,0,1,0,0,0,-1,0,0,,
 Voat.Data.Models,Ad,0,0,10,0,0,13,0,0,0,-1,0,0,,
-Voat.Data.Models,ApiClient,0,0,15,0,0,19,0,0,0,-1,0,5,,Voat.Data.Repository' Voat.Domain.Command.DeleteApiKeyCommand' Voat.Domain.Command.EditApiKeyCommand' Voat.Domain.Command.UpdateApiClientLastAccessDateCommand' Voat.Domain.Query.QueryAPIKey
+Voat.Data.Models,ApiClient,0,0,15,0,0,19,0,0,0,-1,2,2,Voat.Data.Models.ApiPermissionPolicy' Voat.Data.Models.ApiThrottlePolicy,Voat.Data.Models.ApiPermissionPolicy' Voat.Data.Models.ApiThrottlePolicy
 Voat.Data.Models,ApiCorsPolicy,0,0,11,0,0,14,0,0,0,-1,0,0,,
-Voat.Data.Models,ApiLog,0,0,7,0,0,10,0,0,0,-1,0,1,,Voat.Data.Repository
-Voat.Data.Models,ApiPermissionPolicy,0,1,4,0,1,15,1,0,0,-1,0,1,,Voat.Domain.Query.QueryApiPermissionSet
-Voat.Data.Models,ApiThrottlePolicy,0,1,4,0,1,15,1,0,0,-1,0,2,,Voat.Domain.Query.QueryApiThrottlePolicy' Voat.Domain.Query.QueryUserApiKeys
-Voat.Data.Models,Badge,0,1,5,0,1,16,1,0,0,-1,0,0,,
+Voat.Data.Models,ApiLog,0,0,7,0,0,10,0,0,0,-1,0,0,,
+Voat.Data.Models,ApiPermissionPolicy,0,1,4,0,1,15,1,0,0,-1,1,1,Voat.Data.Models.ApiClient,Voat.Data.Models.ApiClient
+Voat.Data.Models,ApiThrottlePolicy,0,1,4,0,1,15,1,0,0,-1,1,1,Voat.Data.Models.ApiClient,Voat.Data.Models.ApiClient
+Voat.Data.Models,Badge,0,1,5,0,1,16,1,0,0,-1,1,1,Voat.Data.Models.UserBadge,Voat.Data.Models.UserBadge
 Voat.Data.Models,BannedDomain,0,0,5,0,0,8,0,0,0,-1,0,0,,
 Voat.Data.Models,BannedUser,0,0,5,0,0,8,0,0,0,-1,0,0,,
-Voat.Data.Models,Comment,0,1,17,0,1,30,1,0,0,-1,0,5,,Voat.Data.Repository' Voat.Domain.Command.EditCommentCommand' Voat.Domain.DomainMaps' Voat.Notifications.NotificationManager' Voat.Rules.Posting.EditCommentRule
-Voat.Data.Models,CommentRemovalLog,0,0,5,0,0,9,0,0,0,-1,0,1,,Voat.Data.Repository
-Voat.Data.Models,CommentSaveTracker,0,0,4,0,0,7,0,0,0,-1,0,0,,
-Voat.Data.Models,CommentVoteTracker,0,0,7,0,0,12,0,0,0,-1,0,1,,Voat.Data.Repository
-Voat.Data.Models,DefaultSubverse,0,0,2,0,0,9,0,0,0,-1,0,0,,
-Voat.Data.Models,EventLog,0,0,11,0,0,14,0,0,0,-1,0,2,,Voat.Data.DatabaseLogger' Voat.Data.Repository
+Voat.Data.Models,Comment,0,1,17,0,1,30,1,0,0,-1,4,2,Voat.Data.Models.CommentRemovalLog' Voat.Data.Models.CommentSaveTracker' Voat.Data.Models.CommentVoteTracker' Voat.Data.Models.Submission,Voat.Data.Models.CommentRemovalLog' Voat.Data.Models.Submission
+Voat.Data.Models,CommentRemovalLog,0,0,5,0,0,9,0,0,0,-1,1,2,Voat.Data.Models.Comment,Voat.Data.Models.Comment' Voat.Data.Models.VoatEntityContext
+Voat.Data.Models,CommentSaveTracker,0,0,4,0,0,7,0,0,0,-1,0,1,,Voat.Data.Models.Comment
+Voat.Data.Models,CommentVoteTracker,0,0,7,0,0,12,0,0,0,-1,0,1,,Voat.Data.Models.Comment
+Voat.Data.Models,DefaultSubverse,0,0,2,0,0,9,0,0,0,-1,0,1,,Voat.Data.Models.VoatEntityContext
+Voat.Data.Models,EventLog,0,0,11,0,0,14,0,0,0,-1,0,0,,
 Voat.Data.Models,Featured,0,0,8,0,0,11,0,0,0,-1,0,0,,
 Voat.Data.Models,Filter,0,0,9,0,0,12,0,0,0,-1,0,0,,
-Voat.Data.Models,Message,0,0,18,0,0,21,0,0,0,-1,0,1,,Voat.Domain.DomainMaps
+Voat.Data.Models,Message,0,0,18,0,0,21,0,0,0,-1,0,0,,
 Voat.Data.Models,ModeratorInvitation,0,0,6,0,0,9,0,0,0,-1,0,0,,
-Voat.Data.Models,RuleReport,0,0,11,0,0,15,0,0,0,-1,0,0,,
-Voat.Data.Models,RuleSet,0,1,10,0,1,21,1,0,0,-1,0,0,,
-Voat.Data.Models,SessionTracker,0,0,3,0,0,6,0,0,0,-1,0,0,,
-Voat.Data.Models,StickiedSubmission,0,0,5,0,0,11,0,0,0,-1,0,1,,Voat.Data.Repository
-Voat.Data.Models,Submission,0,1,25,0,1,49,1,0,0,-1,0,9,,Voat.Caching.Submission_Legacy' Voat.Data.Repository' Voat.Domain.Command.DeleteSubmissionCommand' Voat.Domain.Command.EditSubmissionCommand' Voat.Domain.DomainMaps' Voat.Domain.Query.QuerySubmission' Voat.Notifications.NotificationManager' Voat.Rules.Posting.PostSubmissionRecentlySubmittedRule' Voat.Utilities.Ranking
-Voat.Data.Models,SubmissionRemovalLog,0,0,5,0,0,9,0,0,0,-1,0,1,,Voat.Data.Repository
-Voat.Data.Models,SubmissionSaveTracker,0,0,5,0,0,9,0,0,0,-1,0,0,,
-Voat.Data.Models,SubmissionVoteTracker,0,0,8,0,0,12,0,0,0,-1,0,1,,Voat.Data.Repository
-Voat.Data.Models,Subverse,0,1,20,0,1,44,1,0,0,-1,0,20,,Voat.Caching.Subverse' Voat.Data.Repository' Voat.Domain.DomainMaps' Voat.Domain.Models.DomainReferenceDetails' Voat.Domain.Query.QuerySubverse' Voat.Domain.Query.QuerySubverseInformation' Voat.Rules.BaseSubverseMinimumCCPRule' Voat.Rules.BaseSubverseRule' Voat.Rules.VoatRuleContext' Voat.Rules.Posting.Base.SubmissionBannedDomainRule' Voat.Rules.Posting.EditCommentBannedDomainRule' Voat.Rules.Posting.PostCommentBannedDomainRule' Voat.Rules.Posting.PostCommentCCPRule' Voat.Rules.Posting.PostSubmissionRecentlySubmittedRule' Voat.Rules.Posting.PostSubmissionThrottleRule' Voat.Utilities.BanningUtility' Voat.Controllers.AjaxGatewayController' Voat.Controllers.CommentController' Voat.Controllers.ModLogController' Voat.Controllers.SubverseModerationController
-Voat.Data.Models,SubverseBan,0,0,6,0,0,12,0,0,0,-1,0,1,,Voat.Data.Repository
+Voat.Data.Models,RuleReport,0,0,11,0,0,15,0,0,0,-1,1,1,Voat.Data.Models.RuleSet,Voat.Data.Models.RuleSet
+Voat.Data.Models,RuleSet,0,1,10,0,1,21,1,0,0,-1,1,1,Voat.Data.Models.RuleReport,Voat.Data.Models.RuleReport
+Voat.Data.Models,SessionTracker,0,0,3,0,0,6,0,0,0,-1,0,1,,Voat.Data.Models.VoatEntityContext
+Voat.Data.Models,StickiedSubmission,0,0,5,0,0,11,0,0,0,-1,1,1,Voat.Data.Models.Submission,Voat.Data.Models.VoatEntityContext
+Voat.Data.Models,Submission,0,1,25,0,1,49,1,0,0,-1,2,6,Voat.Data.Models.Comment' Voat.Data.Models.SubmissionVoteTracker,Voat.Data.Models.Comment' Voat.Data.Models.ViewStatistic' Voat.Data.Models.SubmissionRemovalLog' Voat.Data.Models.SubmissionSaveTracker' Voat.Data.Models.SubmissionVoteTracker' Voat.Data.Models.StickiedSubmission
+Voat.Data.Models,SubmissionRemovalLog,0,0,5,0,0,9,0,0,0,-1,1,1,Voat.Data.Models.Submission,Voat.Data.Models.VoatEntityContext
+Voat.Data.Models,SubmissionSaveTracker,0,0,5,0,0,9,0,0,0,-1,1,0,Voat.Data.Models.Submission,
+Voat.Data.Models,SubmissionVoteTracker,0,0,8,0,0,12,0,0,0,-1,1,1,Voat.Data.Models.Submission,Voat.Data.Models.Submission
+Voat.Data.Models,Subverse,0,1,20,0,1,44,1,0,0,-1,0,0,,
+Voat.Data.Models,SubverseBan,0,0,6,0,0,12,0,0,0,-1,0,0,,
 Voat.Data.Models,SubverseFlair,0,0,4,0,0,8,0,0,0,-1,0,0,,
-Voat.Data.Models,SubverseModerator,0,0,6,0,0,12,0,0,0,-1,0,5,,Voat.Data.Repository' Voat.Domain.Command.AddModeratorCommand' Voat.Domain.Command.RemoveModeratorCommand' Voat.Voting.Outcomes.AddModeratorOutcome' Voat.Voting.Outcomes.RemoveModeratorOutcome
-Voat.Data.Models,SubverseSet,0,1,11,0,1,24,1,0,0,-1,0,4,,Voat.Data.Repository' Voat.Domain.DomainMaps' Voat.Domain.Query.QuerySet' Voat.Controllers.SetController
-Voat.Data.Models,SubverseSetList,0,0,5,0,0,9,0,0,0,-1,0,0,,
-Voat.Data.Models,SubverseSetSubscription,0,0,5,0,0,9,0,0,0,-1,0,1,,Voat.Data.Repository
-Voat.Data.Models,UserBadge,0,0,5,0,0,9,0,0,0,-1,0,0,,
+Voat.Data.Models,SubverseModerator,0,0,6,0,0,12,0,0,0,-1,0,0,,
+Voat.Data.Models,SubverseSet,0,1,11,0,1,24,1,0,0,-1,2,2,Voat.Data.Models.SubverseSetList' Voat.Data.Models.SubverseSetSubscription,Voat.Data.Models.SubverseSetList' Voat.Data.Models.SubverseSetSubscription
+Voat.Data.Models,SubverseSetList,0,0,5,0,0,9,0,0,0,-1,1,1,Voat.Data.Models.SubverseSet,Voat.Data.Models.SubverseSet
+Voat.Data.Models,SubverseSetSubscription,0,0,5,0,0,9,0,0,0,-1,1,1,Voat.Data.Models.SubverseSet,Voat.Data.Models.SubverseSet
+Voat.Data.Models,UserBadge,0,0,5,0,0,9,0,0,0,-1,1,1,Voat.Data.Models.Badge,Voat.Data.Models.Badge
 Voat.Data.Models,UserBlockedUser,0,0,4,0,0,7,0,0,0,-1,0,0,,
 Voat.Data.Models,UserContribution,0,0,9,0,0,12,0,0,0,-1,0,0,,
-Voat.Data.Models,UserPreference,0,0,19,0,0,22,0,0,0,-1,0,3,,Voat.Data.Repository' Voat.Domain.DomainMaps' Voat.Domain.Query.QueryUserPreferences
-Voat.Data.Models,usp_CommentTree_Result,0,0,17,0,0,20,0,0,0,-1,0,3,,Voat.Domain.Command.CreateCommentCommand' Voat.Domain.Command.EditCommentCommand' Voat.Domain.DomainMaps
-Voat.Data.Models,ViewStatistic,0,0,3,0,0,7,0,0,0,-1,0,0,,
-Voat.Data.Models,Vote,0,0,15,0,0,18,0,0,0,-1,0,2,,Voat.Data.Repository' Voat.Domain.VoteDomainMaps
-Voat.Data.Models,VoteOption,0,0,7,0,0,11,0,0,0,-1,0,2,,Voat.Data.Repository' Voat.Domain.VoteDomainMaps
-Voat.Data.Models,VoteOutcome,0,0,4,0,0,8,0,0,0,-1,0,2,,Voat.Data.Repository' Voat.Domain.VoteDomainMaps
-Voat.Data.Models,VoteRestriction,0,0,4,0,0,8,0,0,0,-1,0,2,,Voat.Data.Repository' Voat.Domain.VoteDomainMaps
+Voat.Data.Models,UserPreference,0,0,19,0,0,22,0,0,0,-1,0,1,,Voat.Data.Models.VoatEntityContext
+Voat.Data.Models,usp_CommentTree_Result,0,0,17,0,0,20,0,0,0,-1,0,0,,
+Voat.Data.Models,ViewStatistic,0,0,3,0,0,7,0,0,0,-1,1,1,Voat.Data.Models.Submission,Voat.Data.Models.VoatEntityContext
+Voat.Data.Models,Vote,0,0,15,0,0,18,0,0,0,-1,2,0,Voat.Data.Models.VoteOption' Voat.Data.Models.VoteRestriction,
+Voat.Data.Models,VoteOption,0,0,7,0,0,11,0,0,0,-1,1,1,Voat.Data.Models.VoteOutcome,Voat.Data.Models.Vote
+Voat.Data.Models,VoteOutcome,0,0,4,0,0,8,0,0,0,-1,0,1,,Voat.Data.Models.VoteOption
+Voat.Data.Models,VoteRestriction,0,0,4,0,0,8,0,0,0,-1,0,1,,Voat.Data.Models.Vote
 Voat.Data.Models,VoteTracker,0,0,6,0,0,9,0,0,0,-1,0,0,,

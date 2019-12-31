@@ -1,8 +1,15 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Orleans.Hosting,SiloBuilderExtensions,0,4,0,0,4,35,4,0,0,-1,1,0,Orleans.Transactions.AzureStorage.AzureTransactionLogStorage,
-Orleans.Transactions.AzureStorage,AzureTransactionLogConfiguration,0,1,2,0,0,11,2,0,0,-1,0,0,,
-Orleans.Transactions.AzureStorage,AzureTransactionLogOptions,0,0,2,0,0,5,0,0,0,-1,0,2,,Orleans.Transactions.AzureStorage.AzureTransactionLogOptionsValidator' Orleans.Transactions.AzureStorage.AzureTransactionLogStorage
-Orleans.Transactions.AzureStorage,AzureTransactionLogOptionsValidator,1,2,0,0,2,19,4,0,0,0,1,0,Orleans.Transactions.AzureStorage.AzureTransactionLogOptions,
-Orleans.Transactions.AzureStorage,AzureTransactionLogStorage,17,12,0,0,9,270,27,0,1,0,3,2,Orleans.Transactions.AzureStorage.AzureTransactionLogOptions' Orleans.Transactions.AzureStorage.StartRow' Orleans.Transactions.AzureStorage.CommitRow,Orleans.Hosting.SiloBuilderExtensions' Benchmarks.TransactionManager.TransactionManagerBenchmarks
-Orleans.Transactions.AzureStorage,CommitRow,0,3,1,0,2,17,3,0,0,-1,0,1,,Orleans.Transactions.AzureStorage.AzureTransactionLogStorage
-Orleans.Transactions.AzureStorage,StartRow,0,2,1,0,2,15,2,0,0,-1,0,1,,Orleans.Transactions.AzureStorage.AzureTransactionLogStorage
+Orleans.Hosting,AzureTableSiloBuilderExtensions,0,9,0,0,8,68,9,0,0,-1,2,0,Orleans.Configuration.AzureTableTransactionalStateOptions' Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorageFactory,
+Orleans.Configuration,AzureTableTransactionalStateOptions,1,0,3,1,0,17,0,0,0,-1,0,2,,Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorageFactory' Orleans.Hosting.AzureTableSiloBuilderExtensions
+Orleans.Transactions.AzureStorage,AzureTableTransactionalStateStorage<TState>,6,6,0,0,3,281,36,0,1,0,5,1,Orleans.Transactions.AzureStorage.BatchOperation' Orleans.Transactions.AzureStorage.KeyEntity' Orleans.Transactions.AzureStorage.StateEntity' Orleans.Transactions.AzureStorage.AzureTableConstants' Orleans.Transactions.AzureStorage.AzureTableUtils,Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorageFactory
+Orleans.Transactions.AzureStorage,BatchOperation,5,3,0,0,3,64,10,0,0,0,0,1,,Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorage<TState>
+Orleans.Transactions.AzureStorage,AzureTableTransactionalStateStorageFactory,6,7,0,0,4,49,7,0,1,0.29,4,1,Orleans.Configuration.AzureTableTransactionalStateOptions' Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorage<TState>' Orleans.Transactions.AzureStorage.AzureTableDataManager<T>' Orleans.Transactions.AzureStorage.AzureTableUtils,Orleans.Hosting.AzureTableSiloBuilderExtensions
+Orleans.Transactions.AzureStorage,KeyEntity,1,1,2,1,1,10,1,0,0,0,0,1,,Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorage<TState>
+Orleans.Transactions.AzureStorage,StateEntity,9,11,9,3,6,138,15,0,0,0.36,0,1,,Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorage<TState>
+Orleans.Transactions.AzureStorage,AzureTableDataManager<T>,1,21,4,0,14,654,46,0,0,0.48,0,2,,Orleans.Clustering.AzureStorage.AzureTableDataManager<T>' Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorageFactory
+Orleans.Transactions.AzureStorage,TableQueryFilterBuilder,0,3,0,0,3,32,3,0,0,-1,0,1,,Orleans.Clustering.AzureStorage.AzureTableDataManager<T>
+Orleans.Transactions.AzureStorage,TableDataManagerInternalExtensions,0,2,0,0,0,16,3,0,0,-1,0,0,,
+Orleans.Transactions.AzureStorage,AzureTableDefaultPolicies,1,1,11,1,0,35,1,0,0,0,0,1,,Orleans.Clustering.AzureStorage.AzureTableDataManager<T>
+Orleans.Transactions.AzureStorage,AzureTableConstants,4,0,0,4,0,7,0,0,0,-1,0,2,,Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorage<TState>' Orleans.Clustering.AzureStorage.AzureTableUtils
+Orleans.Transactions.AzureStorage,AzureTableUtils,1,13,0,1,6,255,36,0,0,0.69,0,4,,Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorageFactory' Orleans.Clustering.AzureStorage.AzureTableUtils' Orleans.Transactions.AzureStorage.AzureTableTransactionalStateStorage<TState>' Orleans.Clustering.AzureStorage.AzureTableDataManager<T>
+Orleans.Transactions.AzureStorage.Utilities,ErrorCode,0,0,0,0,0,25,0,0,0,-1,0,2,,Orleans.Clustering.AzureStorage.AzureTableUtils' Orleans.Clustering.AzureStorage.AzureTableDataManager<T>

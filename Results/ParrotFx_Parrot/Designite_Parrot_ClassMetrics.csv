@@ -1,65 +1,65 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Parrot.Debugger,Debug,1,2,0,0,2,39,2,0,0,0,1,0,Parrot.Debugger.ILogger,
-Parrot.Debugger,Logger,0,4,0,0,4,27,4,0,1,-1,0,0,,
+Parrot.Debugger,Debug,1,2,0,0,2,39,2,0,0,0,2,0,Parrot.Debugger.Logger' Parrot.Debugger.ILogger,
+Parrot.Debugger,Logger,0,4,0,0,4,27,4,0,1,-1,0,1,,Parrot.Debugger.Debug
 Parrot.Debugger,ILogger,0,4,0,0,0,7,4,1,0,-1,0,1,,Parrot.Debugger.Debug
-Parrot.Infrastructure,IParrotWriter,0,2,0,0,0,5,2,1,0,-1,0,14,,Parrot.Renderers.BaseRenderer' Parrot.Renderers.ConditionalRenderer' Parrot.Renderers.DocTypeRenderer' Parrot.Renderers.DocumentView' Parrot.Renderers.ForeachRenderer' Parrot.Renderers.FuncRenderer' Parrot.Renderers.HtmlRenderer' Parrot.Renderers.IfRenderer' Parrot.Renderers.InputRenderer' Parrot.Renderers.ListRenderer' Parrot.Renderers.ScriptRenderer' Parrot.Renderers.SelfClosingRenderer' Parrot.Renderers.StringLiteralRenderer' Parrot.Renderers.Infrastructure.IRenderer
-Parrot.Infrastructure,Locals,3,3,0,1,3,47,7,0,0,0,0,3,,Parrot.Renderers.ForeachRenderer' Parrot.Renderers.ListRenderer' Parrot.Renderers.Infrastructure.ObjectModelValueProvider
-Parrot.Infrastructure,PrettyStringWriter,2,3,0,0,2,78,9,0,1,0,2,0,Parrot.Infrastructure.PrettyPrintWriteType' Parrot.Infrastructure.StandardWriter,
+Parrot.Infrastructure,IParrotWriter,0,2,0,0,0,5,2,1,0,-1,0,1,,Parrot.Infrastructure.StandardWriter
+Parrot.Infrastructure,Locals,3,3,0,1,3,47,7,0,0,0,0,0,,
+Parrot.Infrastructure,PrettyStringWriter,2,3,0,0,2,78,13,0,1,0,2,0,Parrot.Infrastructure.PrettyPrintWriteType' Parrot.Infrastructure.StandardWriter,
 Parrot.Infrastructure,PrettyPrintWriteType,0,0,0,0,0,8,0,0,0,-1,0,1,,Parrot.Infrastructure.PrettyStringWriter
-Parrot.Infrastructure,StandardWriter,2,3,0,0,3,18,3,1,1,0,0,2,,Parrot.Infrastructure.PrettyStringWriter' Parrot.Renderers.BaseRenderer
-Parrot.Infrastructure,ValueType,0,0,0,0,0,7,0,0,0,-1,0,6,,Parrot.Infrastructure.ValueTypeProvider' Parrot.Nodes.StringLiteral' Parrot.Renderers.BaseRenderer' Parrot.Renderers.Infrastructure.ExpandoObjectModelValueProvider' Parrot.Renderers.Infrastructure.IModelValueProvider' Parrot.Renderers.Infrastructure.ObjectModelValueProvider
-Parrot.Infrastructure,ValueTypeProvider,1,5,0,0,1,64,7,0,1,0.4,2,0,Parrot.Infrastructure.ValueType' Parrot.Infrastructure.ValueTypeResult,
-Parrot.Infrastructure,IValueTypeProvider,0,1,0,0,0,4,1,1,0,-1,0,3,,Parrot.Renderers.Infrastructure.ModelValueProviderFactory' Parrot.Renderers.Infrastructure.ExpandoObjectModelValueProvider' Parrot.Renderers.Infrastructure.ObjectModelValueProvider
-Parrot.Infrastructure,ValueTypeResult,0,0,2,0,0,5,0,0,0,-1,0,3,,Parrot.Infrastructure.ValueTypeProvider' Parrot.Renderers.Infrastructure.ExpandoObjectModelValueProvider' Parrot.Renderers.Infrastructure.ObjectModelValueProvider
-Parrot.Lexer,TokenFactory,2,3,0,0,2,38,3,0,0,0,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.Tokenizer
-Parrot.Lexer,CloseBracesToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,CloseBracketToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,CloseParenthesisToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,AtToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,CommaToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,EqualToken,0,0,1,0,0,7,0,0,1,-1,0,1,,Parrot.Parser.Parser
-Parrot.Lexer,GreaterThanToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,IdentifierToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,OpenBracesToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,OpenBracketToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,OpenParenthesisToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,PlusToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,QuotedStringLiteralToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Lexer,StringLiteralPipeToken,0,0,1,0,0,7,0,0,1,-1,0,1,,Parrot.Parser.Parser
-Parrot.Lexer,Token,0,0,3,0,0,6,0,15,0,-1,0,6,,Parrot.Lexer.TokenFactory' Parrot.Lexer.Tokenizer' Parrot.ParserException' Parrot.Parser.ErrorTypes.UnexpectedToken' Parrot.Parser.Parser' Parrot.Parser.Stream
-Parrot.Lexer,Tokenizer,6,20,0,0,2,220,32,0,0,0,3,1,Parrot.Lexer.TokenType' Parrot.Lexer.Token' Parrot.Lexer.TokenFactory,Parrot.Parser.Parser
-Parrot.Lexer,TokenType,0,0,0,0,0,23,0,0,0,-1,0,4,,Parrot.Lexer.TokenFactory' Parrot.Lexer.Tokenizer' Parrot.Parser.Parser' Parrot.Parser.Stream
-Parrot.Lexer,UnexpectedTokenException,0,1,0,0,1,6,1,0,0,-1,0,0,,
-Parrot.Lexer,WhitespaceToken,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Nodes,AbstractNode,0,0,0,0,0,3,0,6,0,-1,0,1,,Parrot.Nodes.AbstractNodeList
+Parrot.Infrastructure,StandardWriter,2,3,0,0,3,18,3,1,1,0,1,1,Parrot.Infrastructure.IParrotWriter,Parrot.Infrastructure.PrettyStringWriter
+Parrot.Infrastructure,ValueType,0,0,0,0,0,7,0,0,0,-1,0,3,,Parrot.Infrastructure.ValueTypeResult' Parrot.Nodes.StringLiteral' Parrot.Infrastructure.ValueTypeProvider
+Parrot.Infrastructure,ValueTypeProvider,1,5,0,0,1,64,8,0,1,0.4,3,0,Parrot.Infrastructure.ValueType' Parrot.Infrastructure.IValueTypeProvider' Parrot.Infrastructure.ValueTypeResult,
+Parrot.Infrastructure,IValueTypeProvider,0,1,0,0,0,4,1,1,0,-1,1,1,Parrot.Infrastructure.ValueTypeResult,Parrot.Infrastructure.ValueTypeProvider
+Parrot.Infrastructure,ValueTypeResult,0,0,2,0,0,5,0,0,0,-1,1,2,Parrot.Infrastructure.ValueType,Parrot.Infrastructure.ValueTypeProvider' Parrot.Infrastructure.IValueTypeProvider
+Parrot.Lexer,TokenFactory,2,3,0,0,2,41,3,0,0,0,17,1,Parrot.Lexer.CloseBracesToken' Parrot.Lexer.CloseBracketToken' Parrot.Lexer.CloseParenthesisToken' Parrot.Lexer.AtToken' Parrot.Lexer.CommaToken' Parrot.Lexer.EqualToken' Parrot.Lexer.GreaterThanToken' Parrot.Lexer.IdentifierToken' Parrot.Lexer.OpenBracesToken' Parrot.Lexer.OpenBracketToken' Parrot.Lexer.OpenParenthesisToken' Parrot.Lexer.PlusToken' Parrot.Lexer.QuotedStringLiteralToken' Parrot.Lexer.StringLiteralPipeToken' Parrot.Lexer.Token' Parrot.Lexer.TokenType' Parrot.Lexer.WhitespaceToken,Parrot.Lexer.Tokenizer
+Parrot.Lexer,CloseBracesToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,CloseBracketToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,CloseParenthesisToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,AtToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,CommaToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,EqualToken,0,0,1,0,0,7,0,0,1,-1,2,2,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory' Parrot.Parser.Parser
+Parrot.Lexer,GreaterThanToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,IdentifierToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,OpenBracesToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,OpenBracketToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,OpenParenthesisToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,PlusToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,QuotedStringLiteralToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Lexer,StringLiteralPipeToken,0,0,1,0,0,7,0,0,1,-1,2,2,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory' Parrot.Parser.Parser
+Parrot.Lexer,Token,0,0,3,0,0,6,0,15,0,-1,1,21,Parrot.Lexer.TokenType,Parrot.Lexer.CloseBracesToken' Parrot.Lexer.CommaToken' Parrot.Lexer.GreaterThanToken' Parrot.Lexer.CloseParenthesisToken' Parrot.Lexer.AtToken' Parrot.Lexer.EqualToken' Parrot.ParserException' Parrot.Lexer.IdentifierToken' Parrot.Lexer.CloseBracketToken' Parrot.Lexer.OpenParenthesisToken' Parrot.Lexer.StringLiteralPipeToken' Parrot.Lexer.OpenBracesToken' Parrot.Lexer.PlusToken' Parrot.Parser.ErrorTypes.UnexpectedToken' Parrot.Lexer.WhitespaceToken' Parrot.Parser.Stream' Parrot.Lexer.QuotedStringLiteralToken' Parrot.Lexer.OpenBracketToken' Parrot.Lexer.TokenFactory' Parrot.Parser.Parser' Parrot.Lexer.Tokenizer
+Parrot.Lexer,Tokenizer,6,20,0,0,2,220,34,0,0,0,4,1,Parrot.Lexer.TokenFactory' Parrot.Lexer.Token' Parrot.Lexer.TokenType' Parrot.Lexer.UnexpectedTokenException,Parrot.Parser.Parser
+Parrot.Lexer,TokenType,0,0,0,0,0,23,0,0,0,-1,0,21,,Parrot.Lexer.CloseBracketToken' Parrot.Lexer.CloseParenthesisToken' Parrot.Lexer.CloseBracesToken' Parrot.Lexer.EqualToken' Parrot.Lexer.CommaToken' Parrot.Lexer.AtToken' Parrot.Lexer.GreaterThanToken' Parrot.Lexer.Token' Parrot.Lexer.IdentifierToken' Parrot.Lexer.PlusToken' Parrot.Lexer.OpenParenthesisToken' Parrot.Lexer.QuotedStringLiteralToken' Parrot.Lexer.WhitespaceToken' Parrot.Parser.ErrorTypes.UnexpectedToken' Parrot.Lexer.OpenBracesToken' Parrot.Lexer.OpenBracketToken' Parrot.Lexer.StringLiteralPipeToken' Parrot.Lexer.Tokenizer' Parrot.Parser.Stream' Parrot.Lexer.TokenFactory' Parrot.Parser.Parser
+Parrot.Lexer,UnexpectedTokenException,0,1,0,0,1,6,1,0,0,-1,0,1,,Parrot.Lexer.Tokenizer
+Parrot.Lexer,WhitespaceToken,0,0,1,0,0,7,0,0,1,-1,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Lexer.TokenFactory
+Parrot.Nodes,AbstractNode,0,0,0,0,0,3,0,6,0,-1,0,6,,Parrot.Nodes.Parameter' Parrot.Nodes.StatementTail' Parrot.Nodes.Statement' Parrot.Nodes.Attribute' Parrot.Nodes.AbstractNodeList' Parrot.Nodes.AbstractNodeList<T>
 Parrot.Nodes,AbstractNodeList,1,11,2,0,10,63,11,3,1,0,1,0,Parrot.Nodes.AbstractNode,
-Parrot.Nodes,AbstractNodeList<T>,1,11,2,0,10,63,11,0,1,0.18,0,0,,
-Parrot.Nodes,Attribute,0,1,2,0,1,11,1,0,1,-1,1,5,Parrot.Nodes.Statement,Parrot.Nodes.AttributeList' Parrot.Nodes.Statement' Parrot.Parser.Parser' Parrot.Renderers.HtmlRenderer' Parrot.Renderers.InputRenderer
-Parrot.Nodes,AttributeList,0,2,0,0,2,12,2,0,2,-1,1,3,Parrot.Nodes.Attribute,Parrot.Nodes.Statement' Parrot.Parser.Parser' Parrot.Renderers.InputRenderer
-Parrot.Nodes,Identifier,0,0,4,0,0,7,0,0,0,-1,0,1,,Parrot.Nodes.Statement
-Parrot.Nodes,IdentifierType,0,0,0,0,0,8,0,0,0,-1,0,1,,Parrot.Nodes.Statement
-Parrot.Nodes,Statement,0,9,8,0,2,172,22,1,1,-1,5,18,Parrot.Nodes.Identifier' Parrot.Nodes.IdentifierType' Parrot.Nodes.AttributeList' Parrot.Nodes.Attribute' Parrot.Nodes.StatementTail,Parrot.Nodes.Attribute' Parrot.Nodes.StatementList' Parrot.Nodes.Document' Parrot.Parser.Parser' Parrot.Renderers.BaseRenderer' Parrot.Renderers.ConditionalRenderer' Parrot.Renderers.DocTypeRenderer' Parrot.Renderers.DocumentView' Parrot.Renderers.ForeachRenderer' Parrot.Renderers.FuncRenderer' Parrot.Renderers.HtmlRenderer' Parrot.Renderers.IfRenderer' Parrot.Renderers.InputRenderer' Parrot.Renderers.ListRenderer' Parrot.Renderers.ScriptRenderer' Parrot.Renderers.SelfClosingRenderer' Parrot.Renderers.StringLiteralRenderer' Parrot.Renderers.Infrastructure.IRenderer
-Parrot.Nodes,StatementList,0,2,0,0,2,18,4,0,2,-1,1,5,Parrot.Nodes.Statement,Parrot.Nodes.Document' Parrot.Parser.Parser' Parrot.Renderers.ConditionalRenderer' Parrot.Renderers.HtmlRenderer' Parrot.Renderers.ScriptRenderer
-Parrot.Nodes,Document,0,2,2,0,2,15,2,0,0,-1,2,2,Parrot.Nodes.StatementList' Parrot.Nodes.Statement,Parrot.Parser.Parser' Parrot.Renderers.DocumentView
-Parrot.Nodes,Parameter,0,1,2,0,1,10,1,0,1,-1,0,4,,Parrot.Nodes.ParameterList' Parrot.Parser.Parser' Parrot.Renderers.BaseRenderer' Parrot.Renderers.DocTypeRenderer
-Parrot.Nodes,EncodedOutput,0,2,1,0,2,12,2,0,1,-1,1,1,Parrot.Nodes.StatementTail,Parrot.Parser.Parser
-Parrot.Nodes,StringLiteral,0,9,2,0,3,144,15,3,2,-1,4,3,Parrot.Infrastructure.ValueType' Parrot.Nodes.StatementTail' Parrot.Nodes.StringLiteralPart' Parrot.Nodes.StringLiteralPartType,Parrot.Parser.Parser' Parrot.Renderers.BaseRenderer' Parrot.Renderers.StringLiteralRenderer
-Parrot.Nodes,ParameterList,0,3,0,0,3,15,3,0,2,-1,1,5,Parrot.Nodes.Parameter,Parrot.Parser.Parser' Parrot.Renderers.BaseRenderer' Parrot.Renderers.DocTypeRenderer' Parrot.Renderers.HtmlRenderer' Parrot.Renderers.ListRenderer
-Parrot.Nodes,StringLiteralPart,0,1,4,0,1,14,1,0,0,-1,1,2,Parrot.Nodes.StringLiteralPartType,Parrot.Nodes.StringLiteral' Parrot.Renderers.StringLiteralRenderer
-Parrot.Nodes,StringLiteralPartType,0,0,0,0,0,6,0,0,0,-1,0,3,,Parrot.Nodes.StringLiteral' Parrot.Nodes.StringLiteralPart' Parrot.Renderers.StringLiteralRenderer
-Parrot.Nodes,StringLiteralPipe,0,2,0,0,2,9,2,0,3,-1,1,1,Parrot.Nodes.StatementTail,Parrot.Parser.Parser
-Parrot.Nodes,StatementTail,0,0,3,0,0,6,0,0,1,-1,0,6,,Parrot.Nodes.Statement' Parrot.Nodes.EncodedOutput' Parrot.Nodes.StringLiteral' Parrot.Nodes.StringLiteralPipe' Parrot.Nodes.RawOutput' Parrot.Parser.Parser
-Parrot.Nodes,RawOutput,0,2,1,0,2,11,2,0,3,-1,1,1,Parrot.Nodes.StatementTail,Parrot.Parser.Parser
+Parrot.Nodes,AbstractNodeList<T>,1,11,2,0,10,63,11,0,1,0.18,1,3,Parrot.Nodes.AbstractNode,Parrot.Nodes.StatementList' Parrot.Nodes.AttributeList' Parrot.Nodes.ParameterList
+Parrot.Nodes,Attribute,0,1,2,0,1,11,1,0,1,-1,2,3,Parrot.Nodes.AbstractNode' Parrot.Nodes.Statement,Parrot.Nodes.AttributeList' Parrot.Parser.Parser' Parrot.Nodes.Statement
+Parrot.Nodes,AttributeList,0,2,0,0,2,12,2,0,2,-1,2,3,Parrot.Nodes.AbstractNodeList<T>' Parrot.Nodes.Attribute,Parrot.Nodes.StatementTail' Parrot.Nodes.Statement' Parrot.Parser.Parser
+Parrot.Nodes,Identifier,0,0,4,0,0,7,0,0,0,-1,1,1,Parrot.Nodes.IdentifierType,Parrot.Nodes.Statement
+Parrot.Nodes,IdentifierType,0,0,0,0,0,8,0,0,0,-1,0,2,,Parrot.Nodes.Identifier' Parrot.Nodes.Statement
+Parrot.Nodes,Statement,0,9,8,0,2,172,28,1,1,-1,13,5,Parrot.Nodes.AbstractNode' Parrot.Nodes.Attribute' Parrot.Nodes.AttributeList' Parrot.Nodes.Identifier' Parrot.Nodes.IdentifierType' Parrot.Nodes.StatementList' Parrot.Nodes.StringLiteral' Parrot.Nodes.ParameterList' Parrot.Nodes.StatementTail' Parrot.Parser.ErrorTypes.MissingClassDeclaration' Parrot.Parser.ErrorTypes.MissingIdDeclaration' Parrot.Parser.ErrorTypes.MultipleIdDeclarations' Parrot.Parser.ErrorTypes.ParserError,Parrot.Nodes.StringLiteral' Parrot.Nodes.Document' Parrot.Nodes.Attribute' Parrot.Nodes.StatementList' Parrot.Parser.Parser
+Parrot.Nodes,StatementList,0,2,0,0,2,18,4,0,2,-1,2,4,Parrot.Nodes.AbstractNodeList<T>' Parrot.Nodes.Statement,Parrot.Nodes.StatementTail' Parrot.Nodes.Statement' Parrot.Nodes.Document' Parrot.Parser.Parser
+Parrot.Nodes,Document,0,2,2,0,2,15,2,0,0,-1,3,1,Parrot.Nodes.Statement' Parrot.Nodes.StatementList' Parrot.Parser.ErrorTypes.ParserError,Parrot.Parser.Parser
+Parrot.Nodes,Parameter,0,1,2,0,1,10,1,0,1,-1,1,2,Parrot.Nodes.AbstractNode,Parrot.Nodes.ParameterList' Parrot.Parser.Parser
+Parrot.Nodes,EncodedOutput,0,2,1,0,2,12,2,0,1,-1,2,1,Parrot.Nodes.StringLiteral' Parrot.Nodes.StatementTail,Parrot.Parser.Parser
+Parrot.Nodes,StringLiteral,0,9,2,0,3,144,23,3,2,-1,5,5,Parrot.Infrastructure.ValueType' Parrot.Nodes.Statement' Parrot.Nodes.StringLiteralPart' Parrot.Nodes.StringLiteralPartType' Parrot.Nodes.StatementTail,Parrot.Nodes.StringLiteralPipe' Parrot.Nodes.EncodedOutput' Parrot.Nodes.RawOutput' Parrot.Nodes.Statement' Parrot.Parser.Parser
+Parrot.Nodes,ParameterList,0,3,0,0,3,15,3,0,2,-1,2,3,Parrot.Nodes.AbstractNodeList<T>' Parrot.Nodes.Parameter,Parrot.Nodes.StatementTail' Parrot.Nodes.Statement' Parrot.Parser.Parser
+Parrot.Nodes,StringLiteralPart,0,1,4,0,1,14,1,0,0,-1,1,1,Parrot.Nodes.StringLiteralPartType,Parrot.Nodes.StringLiteral
+Parrot.Nodes,StringLiteralPartType,0,0,0,0,0,6,0,0,0,-1,0,2,,Parrot.Nodes.StringLiteralPart' Parrot.Nodes.StringLiteral
+Parrot.Nodes,StringLiteralPipe,0,2,0,0,2,9,2,0,3,-1,2,1,Parrot.Nodes.StringLiteral' Parrot.Nodes.StatementTail,Parrot.Parser.Parser
+Parrot.Nodes,StatementTail,0,0,3,0,0,6,0,0,1,-1,4,6,Parrot.Nodes.AbstractNode' Parrot.Nodes.AttributeList' Parrot.Nodes.StatementList' Parrot.Nodes.ParameterList,Parrot.Nodes.EncodedOutput' Parrot.Nodes.StringLiteralPipe' Parrot.Nodes.StringLiteral' Parrot.Nodes.Statement' Parrot.Nodes.RawOutput' Parrot.Parser.Parser
+Parrot.Nodes,RawOutput,0,2,1,0,2,11,2,0,3,-1,2,1,Parrot.Nodes.StringLiteral' Parrot.Nodes.StatementTail,Parrot.Parser.Parser
 Parrot,ParserException,0,2,0,0,2,9,2,0,0,-1,1,0,Parrot.Lexer.Token,
-Parrot.Parser.ErrorTypes,AttributeIdentifierMissing,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Parser.ErrorTypes,AttributeListEmpty,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Parser.ErrorTypes,AttributeValueMissing,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Parser.ErrorTypes,EndOfStreamException,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Parser.ErrorTypes,MissingClassDeclaration,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Parser.ErrorTypes,MissingIdDeclaration,0,0,1,0,0,7,0,0,1,-1,0,0,,
-Parrot.Parser.ErrorTypes,MultipleIdDeclarations,0,1,2,0,1,12,1,0,1,-1,0,0,,
-Parrot.Parser.ErrorTypes,ParserError,0,0,3,0,0,6,0,8,0,-1,0,1,,Parrot.Parser.Parser
-Parrot.Parser.ErrorTypes,UnexpectedToken,0,1,3,0,1,15,1,0,1,-1,1,0,Parrot.Lexer.Token,
-Parrot.Parser,Parser,0,15,1,0,3,447,52,0,0,-1,19,0,Parrot.Lexer.Tokenizer' Parrot.Parser.Stream' Parrot.Nodes.StatementList' Parrot.Nodes.Document' Parrot.Nodes.Statement' Parrot.Parser.ErrorTypes.ParserError' Parrot.Lexer.Token' Parrot.Lexer.TokenType' Parrot.Nodes.StatementTail' Parrot.Lexer.StringLiteralPipeToken' Parrot.Nodes.StringLiteral' Parrot.Nodes.StringLiteralPipe' Parrot.Nodes.EncodedOutput' Parrot.Nodes.RawOutput' Parrot.Nodes.ParameterList' Parrot.Nodes.Parameter' Parrot.Nodes.AttributeList' Parrot.Lexer.EqualToken' Parrot.Nodes.Attribute,
+Parrot.Parser.ErrorTypes,AttributeIdentifierMissing,0,0,1,0,0,7,0,0,1,-1,1,1,Parrot.Parser.ErrorTypes.ParserError,Parrot.Parser.Parser
+Parrot.Parser.ErrorTypes,AttributeListEmpty,0,0,1,0,0,7,0,0,1,-1,1,1,Parrot.Parser.ErrorTypes.ParserError,Parrot.Parser.Parser
+Parrot.Parser.ErrorTypes,AttributeValueMissing,0,0,1,0,0,7,0,0,1,-1,1,1,Parrot.Parser.ErrorTypes.ParserError,Parrot.Parser.Parser
+Parrot.Parser.ErrorTypes,EndOfStreamException,0,0,1,0,0,7,0,0,1,-1,1,1,Parrot.Parser.ErrorTypes.ParserError,Parrot.Parser.Parser
+Parrot.Parser.ErrorTypes,MissingClassDeclaration,0,0,1,0,0,7,0,0,1,-1,1,1,Parrot.Parser.ErrorTypes.ParserError,Parrot.Nodes.Statement
+Parrot.Parser.ErrorTypes,MissingIdDeclaration,0,0,1,0,0,7,0,0,1,-1,1,1,Parrot.Parser.ErrorTypes.ParserError,Parrot.Nodes.Statement
+Parrot.Parser.ErrorTypes,MultipleIdDeclarations,0,1,2,0,1,12,1,0,1,-1,1,1,Parrot.Parser.ErrorTypes.ParserError,Parrot.Nodes.Statement
+Parrot.Parser.ErrorTypes,ParserError,0,0,3,0,0,6,0,8,0,-1,0,11,,Parrot.Parser.ErrorTypes.AttributeIdentifierMissing' Parrot.Parser.ErrorTypes.AttributeListEmpty' Parrot.Parser.ErrorTypes.AttributeValueMissing' Parrot.Parser.ErrorTypes.MissingClassDeclaration' Parrot.Parser.ErrorTypes.EndOfStreamException' Parrot.Parser.ErrorTypes.MissingIdDeclaration' Parrot.Parser.ErrorTypes.MultipleIdDeclarations' Parrot.Parser.ErrorTypes.UnexpectedToken' Parrot.Nodes.Statement' Parrot.Nodes.Document' Parrot.Parser.Parser
+Parrot.Parser.ErrorTypes,UnexpectedToken,0,1,3,0,1,15,1,0,1,-1,3,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType' Parrot.Parser.ErrorTypes.ParserError,Parrot.Parser.Parser
+Parrot.Parser,Parser,0,15,1,0,3,447,67,0,0,-1,24,0,Parrot.Lexer.EqualToken' Parrot.Lexer.StringLiteralPipeToken' Parrot.Lexer.Token' Parrot.Lexer.Tokenizer' Parrot.Lexer.TokenType' Parrot.Nodes.Attribute' Parrot.Nodes.AttributeList' Parrot.Nodes.Statement' Parrot.Nodes.StatementList' Parrot.Nodes.Document' Parrot.Nodes.Parameter' Parrot.Nodes.EncodedOutput' Parrot.Nodes.StringLiteral' Parrot.Nodes.ParameterList' Parrot.Nodes.StringLiteralPipe' Parrot.Nodes.StatementTail' Parrot.Nodes.RawOutput' Parrot.Parser.ErrorTypes.AttributeIdentifierMissing' Parrot.Parser.ErrorTypes.AttributeListEmpty' Parrot.Parser.ErrorTypes.AttributeValueMissing' Parrot.Parser.ErrorTypes.EndOfStreamException' Parrot.Parser.ErrorTypes.ParserError' Parrot.Parser.ErrorTypes.UnexpectedToken' Parrot.Parser.Stream,
 Parrot.Parser,Production,0,0,0,0,0,12,0,0,0,-1,0,0,,
 Parrot.Parser,Stream,3,5,0,0,5,50,10,0,0,0,2,1,Parrot.Lexer.Token' Parrot.Lexer.TokenType,Parrot.Parser.Parser

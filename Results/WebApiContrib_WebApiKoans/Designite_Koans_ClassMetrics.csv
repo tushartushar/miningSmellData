@@ -4,20 +4,20 @@ Koans,AboutAuthentication,0,1,0,0,1,36,1,0,0,-1,0,0,,
 Koans,AuthenticationKoanController,0,1,0,0,1,7,1,0,0,-1,0,0,,
 Koans,AboutBasics,0,3,0,0,3,32,3,0,0,-1,1,0,Koans.WebApiKoans,
 Koans,AboutClients,0,5,0,0,3,84,5,0,0,-1,1,0,Koans.DelegateHandler,
-Koans,AboutContentNegotiation,0,2,0,0,2,38,2,0,0,-1,2,0,Koans.TraceConfig' Koans.Person,
+Koans,AboutContentNegotiation,0,2,0,0,2,38,2,0,0,-1,2,0,Koans.Person' Koans.TraceConfig,
 Koans,NegotiateXmlController,0,1,0,0,1,11,1,0,0,-1,1,0,Koans.Person,
 Koans,ManuallyNegotiateXmlController,0,1,0,0,1,20,1,0,0,-1,1,0,Koans.Person,
-Koans,Person,0,0,2,0,0,6,0,0,0,-1,0,4,,Koans.AboutContentNegotiation' Koans.NegotiateXmlController' Koans.ManuallyNegotiateXmlController' Koans.AboutMediaTypeFormatters
+Koans,Person,0,0,2,0,0,6,0,0,0,-1,0,4,,Koans.AboutMediaTypeFormatters' Koans.NegotiateXmlController' Koans.AboutContentNegotiation' Koans.ManuallyNegotiateXmlController
 Koans,AboutMediaTypeFormatters,0,3,0,0,3,33,3,0,0,-1,2,0,Koans.Person' Koans.PlainTextBufferedFormatter,
 Koans,PlainTextBufferedFormatter,0,5,0,0,5,35,5,0,0,-1,0,1,,Koans.AboutMediaTypeFormatters
-Koans,AboutMessageHandlers,0,4,0,0,4,94,4,0,0,-1,2,0,Koans.DelegateHandler' Koans.TraceConfig,
+Koans,AboutMessageHandlers,0,4,0,0,4,94,4,0,0,-1,5,0,Koans.DelegateHandler' Koans.HeadMessageHandler' Koans.UriFormatExtensionHandler' Koans.UriExtensionMappings' Koans.TraceConfig,
 Koans,DelegateHandler,1,5,0,0,4,58,5,0,0,0,0,2,,Koans.AboutClients' Koans.AboutMessageHandlers
-Koans,HeadMessageHandler,0,1,0,0,0,19,3,0,0,-1,0,0,,
-Koans,HeadContent,0,4,0,0,1,25,5,0,0,-1,0,0,,
-Koans,UriFormatExtensionHandler,1,2,0,0,1,28,4,0,0,0,1,0,Koans.UriFormatExtensionMapping,
-Koans,UriFormatExtensionMapping,0,0,2,0,0,5,0,0,0,-1,0,1,,Koans.UriFormatExtensionHandler
-Koans,UriExtensionMappings,0,1,0,0,1,11,1,0,0,-1,0,0,,
-Koans,UriFormatExtensionMappingExtensions,0,1,0,0,1,11,1,0,0,-1,0,0,,
+Koans,HeadMessageHandler,0,1,0,0,0,19,3,0,0,-1,1,1,Koans.HeadContent,Koans.AboutMessageHandlers
+Koans,HeadContent,0,4,0,0,1,25,5,0,0,-1,0,1,,Koans.HeadMessageHandler
+Koans,UriFormatExtensionHandler,1,2,0,0,1,28,4,0,0,0,1,1,Koans.UriFormatExtensionMapping,Koans.AboutMessageHandlers
+Koans,UriFormatExtensionMapping,0,0,2,0,0,5,0,0,0,-1,0,3,,Koans.UriFormatExtensionHandler' Koans.UriExtensionMappings' Koans.UriFormatExtensionMappingExtensions
+Koans,UriExtensionMappings,0,1,0,0,1,11,1,0,0,-1,1,1,Koans.UriFormatExtensionMapping,Koans.AboutMessageHandlers
+Koans,UriFormatExtensionMappingExtensions,0,1,0,0,1,11,1,0,0,-1,1,0,Koans.UriFormatExtensionMapping,
 Koans,AboutContent,0,4,0,0,4,53,4,0,0,-1,0,0,,
 Koans,AboutControllers,0,3,0,0,3,75,3,0,0,-1,1,0,Koans.TraceConfig,
 Koans,HelloWorldController,0,1,0,0,1,13,1,0,0,-1,0,0,,
@@ -25,12 +25,12 @@ Koans,EchoController,0,1,0,0,1,7,1,0,0,-1,0,0,,
 Koans,TestFixedController,0,1,0,0,1,26,2,0,0,-1,0,0,,
 Koans,AboutModelBinding,0,0,0,0,0,4,0,0,0,-1,0,0,,
 Koans,AboutOData,0,3,0,0,3,79,3,0,0,-1,1,0,Koans.TraceConfig,
-Koans,CustomerController,1,1,0,0,1,31,1,0,0,0,0,0,,
-Koans,OrderController,1,2,0,0,1,29,4,0,0,1,0,0,,
-Koans,ResponseController,1,1,0,0,1,35,1,0,0,0,0,0,,
-Koans,Customer,0,0,4,0,0,7,0,0,0,-1,0,0,,
-Koans,Order,0,0,3,0,0,6,0,0,0,-1,0,0,,
-Koans,TraceConfig,0,1,0,0,1,23,2,0,0,-1,0,5,,Koans.AboutContentNegotiation' Koans.AboutMessageHandlers' Koans.AboutControllers' Koans.AboutOData' Koans.GlobalConfiguration
-Koans,GlobalConfiguration,1,3,0,1,2,27,4,0,0,0,1,0,Koans.TraceConfig,
-Koans,WebApiKoans,2,1,0,2,1,17,2,0,0,0,0,1,,Koans.AboutBasics
-Koans,Program,0,1,0,0,0,34,2,0,0,-1,0,0,,
+Koans,CustomerController,1,1,0,0,1,31,1,0,0,0,2,0,Koans.Customer' Koans.Order,
+Koans,OrderController,1,2,0,0,1,29,4,0,0,1,1,0,Koans.Order,
+Koans,ResponseController,1,1,0,0,1,35,1,0,0,0,2,0,Koans.Customer' Koans.Order,
+Koans,Customer,0,0,4,0,0,7,0,0,0,-1,1,2,Koans.Order,Koans.CustomerController' Koans.ResponseController
+Koans,Order,0,0,3,0,0,6,0,0,0,-1,0,4,,Koans.CustomerController' Koans.OrderController' Koans.ResponseController' Koans.Customer
+Koans,TraceConfig,0,1,0,0,1,23,2,0,0,-1,0,5,,Koans.AboutContentNegotiation' Koans.AboutOData' Koans.AboutControllers' Koans.AboutMessageHandlers' Koans.GlobalConfiguration
+Koans,GlobalConfiguration,1,3,0,1,2,27,4,0,0,0,1,1,Koans.TraceConfig,Koans.WebApiKoans
+Koans,WebApiKoans,2,1,0,2,1,17,2,0,0,0,1,1,Koans.GlobalConfiguration,Koans.AboutBasics
+Koans,Program,0,1,0,0,0,34,3,0,0,-1,0,0,,

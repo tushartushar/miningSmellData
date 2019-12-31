@@ -1,64 +1,64 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-AppHarbor,AccessTokenConfiguration,2,3,0,0,3,17,3,0,1,0,0,0,,
-AppHarbor,AliasMatcher,1,3,0,0,3,36,4,0,1,0,1,1,AppHarbor.CommandHelpAttribute,AppHarbor.Tests.AliasMatcherTest
-AppHarbor,ApiException,0,2,0,0,2,10,2,0,0,-1,0,1,,AppHarbor.CommandDispatcher
-AppHarbor,AppHarborCliClient,1,14,0,0,13,146,23,0,1,0.14,0,1,,AppHarbor.AppHarborInstaller
-AppHarbor,AppHarborInstaller,0,1,0,0,1,62,1,0,0,-1,2,0,AppHarbor.AppHarborCliClient' AppHarbor.Command,
-AppHarbor,ApplicationConfiguration,3,4,2,0,4,83,4,0,1,0,3,1,AppHarbor.IFileSystem' AppHarbor.IGitRepositoryConfigurer' AppHarbor.RepositoryConfigurationException,AppHarbor.Tests.ApplicationConfigurationTest
-AppHarbor,ApplicationConfigurationException,0,2,0,0,2,10,2,0,1,-1,0,0,,
-AppHarbor,CommandDispatcher,3,2,0,0,2,51,3,0,0,0,6,1,AppHarbor.IAliasMatcher' AppHarbor.ITypeNameMatcher' AppHarbor.Command' AppHarbor.ApiException' AppHarbor.CommandException' AppHarbor.HelpException,AppHarbor.Tests.CommandDispatcherTest
-AppHarbor,CommandException,0,2,0,0,2,10,2,2,0,-1,0,1,,AppHarbor.CommandDispatcher
-AppHarbor,CommandHelpAttribute,0,1,3,0,1,24,1,0,0,-1,0,3,,AppHarbor.AliasMatcher' AppHarbor.Command' AppHarbor.Commands.HelpCommand
-AppHarbor,Command,3,4,1,0,3,39,5,10,0,0.75,1,2,AppHarbor.CommandHelpAttribute,AppHarbor.AppHarborInstaller' AppHarbor.CommandDispatcher
+AppHarbor,AccessTokenConfiguration,2,3,0,0,3,17,3,0,1,0,1,1,AppHarbor.IAccessTokenConfiguration,AppHarbor.AppHarborInstaller
+AppHarbor,AliasMatcher,1,3,0,0,3,36,4,0,1,0,2,1,AppHarbor.CommandHelpAttribute' AppHarbor.IAliasMatcher,AppHarbor.AppHarborInstaller
+AppHarbor,ApiException,0,2,0,0,2,10,2,0,0,-1,0,3,,AppHarbor.Commands.LinkAppCommand' AppHarbor.CommandDispatcher' AppHarbor.AppHarborCliClient
+AppHarbor,AppHarborCliClient,1,14,0,0,13,146,24,0,1,0.14,3,1,AppHarbor.ApiException' AppHarbor.CommandException' AppHarbor.IAppHarborClient,AppHarbor.AppHarborInstaller
+AppHarbor,AppHarborInstaller,0,1,0,0,1,62,1,0,0,-1,20,1,AppHarbor.AccessTokenConfiguration' AppHarbor.AliasMatcher' AppHarbor.AppHarborCliClient' AppHarbor.ApplicationConfiguration' AppHarbor.CommandDispatcher' AppHarbor.Command' AppHarbor.GitCommand' AppHarbor.GitRepositoryConfigurer' AppHarbor.IAccessTokenConfiguration' AppHarbor.IAliasMatcher' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.IFileSystem' AppHarbor.IGitCommand' AppHarbor.IGitRepositoryConfigurer' AppHarbor.IMaskedInput' AppHarbor.ITypeNameMatcher' AppHarbor.MaskedConsoleInput' AppHarbor.PhysicalFileSystem' AppHarbor.TypeNameMatcher<T>,AppHarbor.Program
+AppHarbor,ApplicationConfiguration,3,4,2,0,4,83,4,0,1,0,5,1,AppHarbor.ApplicationConfigurationException' AppHarbor.IApplicationConfiguration' AppHarbor.IFileSystem' AppHarbor.IGitRepositoryConfigurer' AppHarbor.RepositoryConfigurationException,AppHarbor.AppHarborInstaller
+AppHarbor,ApplicationConfigurationException,0,2,0,0,2,10,2,0,1,-1,1,2,AppHarbor.CommandException,AppHarbor.ApplicationConfiguration' AppHarbor.Commands.CreateAppCommand
+AppHarbor,CommandDispatcher,3,2,0,0,2,51,4,0,0,0,7,2,AppHarbor.ApiException' AppHarbor.CommandException' AppHarbor.Command' AppHarbor.DispatchException' AppHarbor.HelpException' AppHarbor.IAliasMatcher' AppHarbor.ITypeNameMatcher,AppHarbor.Program' AppHarbor.AppHarborInstaller
+AppHarbor,CommandException,0,2,0,0,2,10,2,2,0,-1,0,14,,AppHarbor.CommandDispatcher' AppHarbor.Commands.AddHostnameCommand' AppHarbor.Commands.CreateAppCommand' AppHarbor.Commands.AddConfigCommand' AppHarbor.Commands.LogAppCommand' AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.AddDrainCommand' AppHarbor.Commands.RemoveConfigCommand' AppHarbor.Commands.RemoveHostnameCommand' AppHarbor.Commands.LinkAppCommand' AppHarbor.Commands.LoginUserCommand' AppHarbor.ApplicationConfigurationException' AppHarbor.AppHarborCliClient' AppHarbor.HelpException
+AppHarbor,CommandHelpAttribute,0,1,3,0,1,24,1,0,0,-1,0,25,,AppHarbor.Command' AppHarbor.AliasMatcher' AppHarbor.Commands.DeleteAppCommand' AppHarbor.Commands.AddConfigCommand' AppHarbor.Commands.HostnameCommand' AppHarbor.Commands.DrainCommand' AppHarbor.Commands.CreateAppCommand' AppHarbor.Commands.InfoAppCommand' AppHarbor.Commands.LinkAppCommand' AppHarbor.Commands.LoginUserCommand' AppHarbor.Commands.LogoutUserCommand' AppHarbor.Commands.LogAppCommand' AppHarbor.Commands.OpenAppCommand' AppHarbor.Commands.RemoveConfigCommand' AppHarbor.Commands.RemoveHostnameCommand' AppHarbor.Commands.UnlinkAppCommand' AppHarbor.Commands.AppCommand' AppHarbor.Commands.ConfigCommand' AppHarbor.Commands.HelpCommand' AppHarbor.Commands.AddHostnameCommand' AppHarbor.Commands.UserCommand' AppHarbor.Commands.AddDrainCommand' AppHarbor.Commands.DeployAppCommand' AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.BuildCommand
+AppHarbor,Command,3,4,1,0,3,39,5,10,0,0.75,2,11,AppHarbor.CommandHelpAttribute' AppHarbor.HelpException,AppHarbor.Commands.ApplicationCommand' AppHarbor.Commands.AppCommand' AppHarbor.Commands.CreateAppCommand' AppHarbor.Commands.HelpCommand' AppHarbor.Commands.LinkAppCommand' AppHarbor.Commands.LoginUserCommand' AppHarbor.Commands.UnlinkAppCommand' AppHarbor.Commands.LogoutUserCommand' AppHarbor.Commands.UserCommand' AppHarbor.CommandDispatcher' AppHarbor.AppHarborInstaller
 AppHarbor,CompressionExtensions,0,2,0,0,1,26,3,0,0,-1,1,0,AppHarbor.MegaByteProgressBar,
-AppHarbor,ConsoleProgressBar,6,5,0,0,2,92,10,1,0,0,0,0,,
-AppHarbor,DispatchException,0,2,0,0,2,10,2,0,0,-1,0,1,,AppHarbor.Program
+AppHarbor,ConsoleProgressBar,6,5,0,0,2,92,10,1,0,0,1,1,AppHarbor.ForegroundColor,AppHarbor.MegaByteProgressBar
+AppHarbor,DispatchException,0,2,0,0,2,10,2,0,0,-1,0,2,,AppHarbor.Program' AppHarbor.CommandDispatcher
 AppHarbor,FederatedUploadCredentials,0,1,5,0,1,12,1,0,0,-1,0,1,,AppHarbor.Commands.DeployAppCommand
-AppHarbor,ForegroundColor,1,2,0,0,2,13,2,0,0,0,0,0,,
-AppHarbor,GitCommand,1,2,1,0,2,52,2,0,1,0,0,0,,
-AppHarbor,GitCommandException,0,2,0,0,2,10,2,0,0,-1,0,0,,
-AppHarbor,GitRepositoryConfigurer,5,4,0,1,4,78,5,0,1,0,2,1,AppHarbor.IFileSystem' AppHarbor.IGitCommand,AppHarbor.Tests.GitRepositoryConfigurerTest
-AppHarbor,HelpException,0,0,0,0,0,3,0,0,1,-1,0,1,,AppHarbor.CommandDispatcher
-AppHarbor,IAccessTokenConfiguration,0,3,0,0,0,6,3,1,0,-1,0,7,,AppHarbor.Commands.AddDrainCommand' AppHarbor.Commands.DeployAppCommand' AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.DrainCommand' AppHarbor.Commands.LogAppCommand' AppHarbor.Commands.LoginUserCommand' AppHarbor.Commands.LogoutUserCommand
-AppHarbor,IAliasMatcher,0,0,0,0,0,3,0,1,1,-1,0,1,,AppHarbor.CommandDispatcher
-AppHarbor,IAppHarborClient,0,12,0,0,0,15,12,1,0,-1,0,13,,AppHarbor.Commands.AddConfigCommand' AppHarbor.Commands.AddHostnameCommand' AppHarbor.Commands.AppCommand' AppHarbor.Commands.BuildCommand' AppHarbor.Commands.ConfigCommand' AppHarbor.Commands.DeleteAppCommand' AppHarbor.Commands.CreateAppCommand' AppHarbor.Commands.HostnameCommand' AppHarbor.Commands.InfoAppCommand' AppHarbor.Commands.LinkAppCommand' AppHarbor.Commands.RemoveConfigCommand' AppHarbor.Commands.RemoveHostnameCommand' AppHarbor.Commands.UserCommand
-AppHarbor,IApplicationConfiguration,0,3,0,0,0,6,3,1,0,-1,0,19,,AppHarbor.Commands.AddConfigCommand' AppHarbor.Commands.AddDrainCommand' AppHarbor.Commands.AddHostnameCommand' AppHarbor.Commands.ApplicationCommand' AppHarbor.Commands.BuildCommand' AppHarbor.Commands.ConfigCommand' AppHarbor.Commands.DeleteAppCommand' AppHarbor.Commands.CreateAppCommand' AppHarbor.Commands.DeployAppCommand' AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.DrainCommand' AppHarbor.Commands.HostnameCommand' AppHarbor.Commands.InfoAppCommand' AppHarbor.Commands.LinkAppCommand' AppHarbor.Commands.LogAppCommand' AppHarbor.Commands.OpenAppCommand' AppHarbor.Commands.RemoveConfigCommand' AppHarbor.Commands.RemoveHostnameCommand' AppHarbor.Commands.UnlinkAppCommand
-AppHarbor,ICommandMatcher,0,2,0,0,0,5,2,2,0,-1,0,0,,
-AppHarbor,IFileSystem,0,3,0,0,0,6,3,2,0,-1,0,2,,AppHarbor.ApplicationConfiguration' AppHarbor.GitRepositoryConfigurer
-AppHarbor,IGitCommand,0,1,0,0,0,4,1,1,0,-1,0,1,,AppHarbor.GitRepositoryConfigurer
-AppHarbor,IGitRepositoryConfigurer,0,3,0,0,0,6,3,1,0,-1,0,2,,AppHarbor.ApplicationConfiguration' AppHarbor.Tests.ApplicationConfigurationTest
-AppHarbor,IMaskedInput,0,1,0,0,0,4,1,1,0,-1,0,1,,AppHarbor.Commands.LoginUserCommand
-AppHarbor,ITypeNameMatcher,0,0,0,0,0,3,0,1,1,-1,0,1,,AppHarbor.CommandDispatcher
-AppHarbor,MaskedConsoleInput,0,1,0,0,1,24,1,0,1,-1,0,0,,
-AppHarbor,MegaByteProgressBar,0,1,0,0,1,7,1,0,1,-1,0,2,,AppHarbor.CompressionExtensions' AppHarbor.Commands.DeployAppCommand
-AppHarbor,PhysicalFileSystem,0,3,0,0,3,35,7,0,1,-1,0,0,,
-AppHarbor,Program,0,1,0,0,0,21,1,0,0,-1,1,0,AppHarbor.DispatchException,
-AppHarbor,RepositoryConfigurationException,0,2,0,0,2,10,2,0,0,-1,0,1,,AppHarbor.ApplicationConfiguration
+AppHarbor,ForegroundColor,1,2,0,0,2,13,2,0,0,0,0,3,,AppHarbor.Program' AppHarbor.ConsoleProgressBar' AppHarbor.Commands.DeployAppCommand
+AppHarbor,GitCommand,1,2,1,0,2,52,4,0,1,0,2,1,AppHarbor.GitCommandException' AppHarbor.IGitCommand,AppHarbor.AppHarborInstaller
+AppHarbor,GitCommandException,0,2,0,0,2,10,2,0,0,-1,0,2,,AppHarbor.GitCommand' AppHarbor.GitRepositoryConfigurer
+AppHarbor,GitRepositoryConfigurer,5,4,0,1,4,78,5,0,1,0,5,1,AppHarbor.GitCommandException' AppHarbor.IFileSystem' AppHarbor.IGitCommand' AppHarbor.IGitRepositoryConfigurer' AppHarbor.RepositoryConfigurationException,AppHarbor.AppHarborInstaller
+AppHarbor,HelpException,0,0,0,0,0,3,0,0,1,-1,1,2,AppHarbor.CommandException,AppHarbor.CommandDispatcher' AppHarbor.Command
+AppHarbor,IAccessTokenConfiguration,0,3,0,0,0,6,3,1,0,-1,0,9,,AppHarbor.AccessTokenConfiguration' AppHarbor.Commands.AddDrainCommand' AppHarbor.Commands.DeployAppCommand' AppHarbor.Commands.DrainCommand' AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.LogAppCommand' AppHarbor.Commands.LogoutUserCommand' AppHarbor.Commands.LoginUserCommand' AppHarbor.AppHarborInstaller
+AppHarbor,IAliasMatcher,0,0,0,0,0,3,0,1,1,-1,1,3,AppHarbor.ICommandMatcher,AppHarbor.AliasMatcher' AppHarbor.CommandDispatcher' AppHarbor.AppHarborInstaller
+AppHarbor,IAppHarborClient,0,12,0,0,0,15,12,1,0,-1,0,15,,AppHarbor.AppHarborCliClient' AppHarbor.AppHarborInstaller' AppHarbor.Commands.UserCommand' AppHarbor.Commands.AppCommand' AppHarbor.Commands.CreateAppCommand' AppHarbor.Commands.HostnameCommand' AppHarbor.Commands.ConfigCommand' AppHarbor.Commands.BuildCommand' AppHarbor.Commands.LinkAppCommand' AppHarbor.Commands.RemoveConfigCommand' AppHarbor.Commands.InfoAppCommand' AppHarbor.Commands.RemoveHostnameCommand' AppHarbor.Commands.AddConfigCommand' AppHarbor.Commands.AddHostnameCommand' AppHarbor.Commands.DeleteAppCommand
+AppHarbor,IApplicationConfiguration,0,3,0,0,0,6,3,1,0,-1,0,21,,AppHarbor.Commands.AddDrainCommand' AppHarbor.Commands.AddConfigCommand' AppHarbor.Commands.AddHostnameCommand' AppHarbor.ApplicationConfiguration' AppHarbor.Commands.ConfigCommand' AppHarbor.Commands.BuildCommand' AppHarbor.Commands.ApplicationCommand' AppHarbor.Commands.DeployAppCommand' AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.DrainCommand' AppHarbor.Commands.CreateAppCommand' AppHarbor.Commands.DeleteAppCommand' AppHarbor.Commands.InfoAppCommand' AppHarbor.Commands.HostnameCommand' AppHarbor.AppHarborInstaller' AppHarbor.Commands.RemoveConfigCommand' AppHarbor.Commands.OpenAppCommand' AppHarbor.Commands.LogAppCommand' AppHarbor.Commands.RemoveHostnameCommand' AppHarbor.Commands.LinkAppCommand' AppHarbor.Commands.UnlinkAppCommand
+AppHarbor,ICommandMatcher,0,2,0,0,0,5,2,2,0,-1,0,2,,AppHarbor.ITypeNameMatcher' AppHarbor.IAliasMatcher
+AppHarbor,IFileSystem,0,3,0,0,0,6,3,2,0,-1,0,4,,AppHarbor.PhysicalFileSystem' AppHarbor.ApplicationConfiguration' AppHarbor.GitRepositoryConfigurer' AppHarbor.AppHarborInstaller
+AppHarbor,IGitCommand,0,1,0,0,0,4,1,1,0,-1,0,3,,AppHarbor.GitCommand' AppHarbor.AppHarborInstaller' AppHarbor.GitRepositoryConfigurer
+AppHarbor,IGitRepositoryConfigurer,0,3,0,0,0,6,3,1,0,-1,0,3,,AppHarbor.AppHarborInstaller' AppHarbor.GitRepositoryConfigurer' AppHarbor.ApplicationConfiguration
+AppHarbor,IMaskedInput,0,1,0,0,0,4,1,1,0,-1,0,3,,AppHarbor.Commands.LoginUserCommand' AppHarbor.MaskedConsoleInput' AppHarbor.AppHarborInstaller
+AppHarbor,ITypeNameMatcher,0,0,0,0,0,3,0,1,1,-1,1,3,AppHarbor.ICommandMatcher,AppHarbor.AppHarborInstaller' AppHarbor.TypeNameMatcher<T>' AppHarbor.CommandDispatcher
+AppHarbor,MaskedConsoleInput,0,1,0,0,1,24,1,0,1,-1,1,1,AppHarbor.IMaskedInput,AppHarbor.AppHarborInstaller
+AppHarbor,MegaByteProgressBar,0,1,0,0,1,7,1,0,1,-1,1,2,AppHarbor.ConsoleProgressBar,AppHarbor.CompressionExtensions' AppHarbor.Commands.DeployAppCommand
+AppHarbor,PhysicalFileSystem,0,3,0,0,3,35,7,0,1,-1,1,1,AppHarbor.IFileSystem,AppHarbor.AppHarborInstaller
+AppHarbor,Program,0,1,0,0,0,21,1,0,0,-1,4,0,AppHarbor.AppHarborInstaller' AppHarbor.CommandDispatcher' AppHarbor.DispatchException' AppHarbor.ForegroundColor,
+AppHarbor,RepositoryConfigurationException,0,2,0,0,2,10,2,0,0,-1,0,2,,AppHarbor.ApplicationConfiguration' AppHarbor.GitRepositoryConfigurer
 AppHarbor,TemporaryFileStream,0,1,0,0,1,7,1,0,0,-1,0,0,,
-AppHarbor,TimeSpanExtensions,0,1,0,0,1,33,2,0,0,-1,0,0,,
-AppHarbor,TypeNameMatcher<T>,1,3,0,0,3,36,4,0,2,0.67,0,0,,
-AppHarbor.Commands,AddConfigCommand,1,2,0,0,1,22,4,0,1,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.AddConfigCommandTest
-AppHarbor.Commands,AddDrainCommand,2,2,0,0,1,27,3,0,1,0,2,0,AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration,
-AppHarbor.Commands,AddHostnameCommand,1,2,0,0,1,18,3,0,1,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.AddHostnameCommandTest
-AppHarbor.Commands,AppCommand,2,2,0,0,1,19,3,0,1,0,1,1,AppHarbor.IAppHarborClient,AppHarbor.Tests.Commands.AppCommandTest
-AppHarbor.Commands,ApplicationCommand,2,1,1,0,1,17,1,15,1,0,1,0,AppHarbor.IApplicationConfiguration,
-AppHarbor.Commands,BuildCommand,3,3,0,1,1,33,5,0,2,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.BuildCommandTest
-AppHarbor.Commands,ConfigCommand,2,2,0,0,1,24,4,0,2,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.ConfigCommandTest
-AppHarbor.Commands,DeleteAppCommand,2,2,0,0,1,17,2,0,2,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.DeleteAppCommandTest
-AppHarbor.Commands,CreateAppCommand,4,2,0,0,1,34,3,0,1,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.CreateAppCommandTest
-AppHarbor.Commands,DeployAppCommand,8,4,0,0,1,103,6,0,2,0,4,0,AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration' AppHarbor.FederatedUploadCredentials' AppHarbor.MegaByteProgressBar,
-AppHarbor.Commands,RemoveDrainCommand,2,2,0,0,1,42,4,0,2,0,2,0,AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration,
-AppHarbor.Commands,Drain,0,0,6,0,0,11,0,0,0,-1,0,0,,
-AppHarbor.Commands,DrainCommand,3,2,0,0,1,36,4,0,2,0,2,0,AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration,
-AppHarbor.Commands,HelpCommand,2,5,0,0,1,88,13,0,1,0.4,1,1,AppHarbor.CommandHelpAttribute,AppHarbor.Tests.Commands.HelpCommandTest
-AppHarbor.Commands,HostnameCommand,2,2,0,0,1,26,4,0,2,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.HostnameCommandTest
-AppHarbor.Commands,InfoAppCommand,2,2,0,0,1,19,2,0,2,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.InfoAppCommandTest
-AppHarbor.Commands,LinkAppCommand,2,2,0,0,1,29,3,0,1,0,2,1,AppHarbor.IApplicationConfiguration' AppHarbor.IAppHarborClient,AppHarbor.Tests.Commands.LinkAppCommandTest
-AppHarbor.Commands,LogAppCommand,9,3,0,0,1,96,5,0,2,0,2,0,AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration,
-AppHarbor.Commands,LoginUserCommand,5,3,0,0,2,46,5,0,1,0,2,1,AppHarbor.IAccessTokenConfiguration' AppHarbor.IMaskedInput,AppHarbor.Tests.Commands.LoginUserCommandTest
-AppHarbor.Commands,LogoutUserCommand,2,2,0,0,1,16,2,0,1,0,1,1,AppHarbor.IAccessTokenConfiguration,AppHarbor.Tests.Commands.LogoutUserCommandTest
-AppHarbor.Commands,OpenAppCommand,0,2,0,0,1,12,2,0,2,-1,1,0,AppHarbor.IApplicationConfiguration,
-AppHarbor.Commands,RemoveConfigCommand,1,2,0,0,1,21,4,0,2,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.RemoveConfigCommandTest
-AppHarbor.Commands,RemoveHostnameCommand,1,2,0,0,1,18,3,0,2,0,2,1,AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.RemoveHostnameCommandTest
-AppHarbor.Commands,UnlinkAppCommand,2,2,0,0,1,16,2,0,1,0,1,1,AppHarbor.IApplicationConfiguration,AppHarbor.Tests.Commands.UnlinkAppCommandTest
-AppHarbor.Commands,UserCommand,2,2,0,0,1,17,2,0,1,0,1,1,AppHarbor.IAppHarborClient,AppHarbor.Tests.Commands.UserCommandTest
+AppHarbor,TimeSpanExtensions,0,1,0,0,1,33,4,0,0,-1,0,0,,
+AppHarbor,TypeNameMatcher<T>,1,3,0,0,3,36,4,0,2,0.67,1,1,AppHarbor.ITypeNameMatcher,AppHarbor.AppHarborInstaller
+AppHarbor.Commands,AddConfigCommand,1,2,0,0,1,22,4,0,1,0,5,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,AddDrainCommand,2,2,0,0,1,27,3,0,1,0,5,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,AddHostnameCommand,1,2,0,0,1,18,3,0,1,0,5,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,AppCommand,2,2,0,0,1,19,3,0,1,0,3,0,AppHarbor.CommandHelpAttribute' AppHarbor.Command' AppHarbor.IAppHarborClient,
+AppHarbor.Commands,ApplicationCommand,2,1,1,0,1,17,1,15,1,0,2,15,AppHarbor.Command' AppHarbor.IApplicationConfiguration,AppHarbor.Commands.BuildCommand' AppHarbor.Commands.AddHostnameCommand' AppHarbor.Commands.ConfigCommand' AppHarbor.Commands.DeleteAppCommand' AppHarbor.Commands.HostnameCommand' AppHarbor.Commands.DrainCommand' AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.InfoAppCommand' AppHarbor.Commands.DeployAppCommand' AppHarbor.Commands.AddConfigCommand' AppHarbor.Commands.AddDrainCommand' AppHarbor.Commands.RemoveHostnameCommand' AppHarbor.Commands.OpenAppCommand' AppHarbor.Commands.LogAppCommand' AppHarbor.Commands.RemoveConfigCommand
+AppHarbor.Commands,BuildCommand,3,3,0,1,1,33,5,0,2,0,4,0,AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,ConfigCommand,2,2,0,0,1,24,4,0,2,0,4,0,AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,DeleteAppCommand,2,2,0,0,1,17,2,0,2,0,4,0,AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,CreateAppCommand,4,2,0,0,1,34,3,0,1,0,6,0,AppHarbor.ApplicationConfigurationException' AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.Command' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,
+AppHarbor.Commands,DeployAppCommand,8,4,0,0,1,103,6,0,2,0,7,0,AppHarbor.CommandHelpAttribute' AppHarbor.FederatedUploadCredentials' AppHarbor.ForegroundColor' AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration' AppHarbor.MegaByteProgressBar' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,RemoveDrainCommand,2,2,0,0,1,42,4,0,2,0,6,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand' AppHarbor.Commands.Drain,
+AppHarbor.Commands,Drain,0,0,6,0,0,11,0,0,0,-1,0,2,,AppHarbor.Commands.RemoveDrainCommand' AppHarbor.Commands.DrainCommand
+AppHarbor.Commands,DrainCommand,3,2,0,0,1,36,4,0,2,0,5,0,AppHarbor.CommandHelpAttribute' AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand' AppHarbor.Commands.Drain,
+AppHarbor.Commands,HelpCommand,2,5,0,0,1,88,13,0,1,0.4,2,0,AppHarbor.CommandHelpAttribute' AppHarbor.Command,
+AppHarbor.Commands,HostnameCommand,2,2,0,0,1,26,4,0,2,0,4,0,AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,InfoAppCommand,2,2,0,0,1,19,2,0,2,0,4,0,AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,LinkAppCommand,2,2,0,0,1,29,3,0,1,0,6,0,AppHarbor.ApiException' AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.Command' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration,
+AppHarbor.Commands,LogAppCommand,9,3,0,0,1,96,8,0,2,0,5,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.IAccessTokenConfiguration' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,LoginUserCommand,5,3,0,0,2,46,5,0,1,0,5,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.Command' AppHarbor.IAccessTokenConfiguration' AppHarbor.IMaskedInput,
+AppHarbor.Commands,LogoutUserCommand,2,2,0,0,1,16,2,0,1,0,3,0,AppHarbor.CommandHelpAttribute' AppHarbor.Command' AppHarbor.IAccessTokenConfiguration,
+AppHarbor.Commands,OpenAppCommand,0,2,0,0,1,12,2,0,2,-1,3,0,AppHarbor.CommandHelpAttribute' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,RemoveConfigCommand,1,2,0,0,1,21,4,0,2,0,5,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,RemoveHostnameCommand,1,2,0,0,1,18,3,0,2,0,5,0,AppHarbor.CommandException' AppHarbor.CommandHelpAttribute' AppHarbor.IAppHarborClient' AppHarbor.IApplicationConfiguration' AppHarbor.Commands.ApplicationCommand,
+AppHarbor.Commands,UnlinkAppCommand,2,2,0,0,1,16,2,0,1,0,3,0,AppHarbor.CommandHelpAttribute' AppHarbor.Command' AppHarbor.IApplicationConfiguration,
+AppHarbor.Commands,UserCommand,2,2,0,0,1,17,2,0,1,0,3,0,AppHarbor.CommandHelpAttribute' AppHarbor.Command' AppHarbor.IAppHarborClient,

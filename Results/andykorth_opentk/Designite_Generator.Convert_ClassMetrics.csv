@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-CHeaderToXML,EnumTokenComparer,0,2,0,0,2,26,3,0,0,-1,0,0,,
+CHeaderToXML,EnumTokenComparer,0,2,0,0,2,26,4,0,0,-1,0,1,,CHeaderToXML.EntryPoint
 CHeaderToXML,HeaderType,0,0,0,0,0,5,0,0,0,-1,0,1,,CHeaderToXML.EntryPoint
-CHeaderToXML,EntryPoint,0,3,0,0,0,121,10,0,0,-1,3,0,CHeaderToXML.HeaderType' Mono.Options.OptionSet' CHeaderToXML.Parser,
-CHeaderToXML,ESCLParser,4,3,0,0,1,295,7,0,1,0,1,0,CHeaderToXML.Parameter,
+CHeaderToXML,EntryPoint,0,3,0,0,0,121,10,0,0,-1,6,0,CHeaderToXML.EnumTokenComparer' CHeaderToXML.HeaderType' CHeaderToXML.ESCLParser' CHeaderToXML.Parser' CHeaderToXML.GLParser' Mono.Options.OptionSet,
+CHeaderToXML,ESCLParser,4,3,0,0,1,295,10,0,1,0,2,1,CHeaderToXML.Parameter' CHeaderToXML.Parser,CHeaderToXML.EntryPoint
 CHeaderToXML,Parameter,0,0,4,0,0,7,0,0,0,-1,0,1,,CHeaderToXML.ESCLParser
-CHeaderToXML,Parser,0,2,2,0,2,31,3,2,0,-1,0,1,,CHeaderToXML.EntryPoint
-CHeaderToXML,GLParser,3,4,0,0,1,149,10,0,1,0,1,0,CHeaderToXML.ParserModes,
+CHeaderToXML,Parser,0,2,2,0,2,31,3,2,0,-1,0,3,,CHeaderToXML.GLParser' CHeaderToXML.ESCLParser' CHeaderToXML.EntryPoint
+CHeaderToXML,GLParser,3,4,0,0,1,149,27,0,1,0,2,1,CHeaderToXML.Parser' CHeaderToXML.ParserModes,CHeaderToXML.EntryPoint
 CHeaderToXML,ParserModes,0,0,0,0,0,1,0,0,0,-1,0,1,,CHeaderToXML.GLParser
-Mono.Options,OptionValueCollection,2,22,5,0,12,76,25,0,0,0,4,3,Mono.Options.OptionContext' Mono.Options.Option' Mono.Options.OptionValueType' Mono.Options.OptionSet,Mono.Options.OptionContext' Mono.Options.Option' Mono.Options.OptionSet
-Mono.Options,OptionContext,5,1,5,0,1,30,1,0,0,0,3,6,Mono.Options.Option' Mono.Options.OptionSet' Mono.Options.OptionValueCollection,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet' Mono.Options.ActionOption' Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>
+Mono.Options,OptionValueCollection,2,22,5,0,12,76,25,0,0,0.09,3,2,Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.OptionException,Mono.Options.OptionContext' Mono.Options.OptionSet
+Mono.Options,OptionContext,5,1,5,0,1,30,1,0,0,0,3,3,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
 Mono.Options,OptionValueType,0,0,0,0,0,5,0,0,0,-1,0,3,,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
-Mono.Options,Option,7,10,6,0,4,158,29,3,0,0.4,4,3,Mono.Options.OptionValueType' Mono.Options.OptionSet' Mono.Options.OptionContext' Mono.Options.OptionValueCollection,Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.OptionSet
-Mono.Options,OptionException,1,5,1,0,4,31,5,0,0,0.4,0,0,,
-Mono.Options,OptionSet,3,35,1,0,13,540,93,0,0,0.23,4,4,Mono.Options.Option' Mono.Options.OptionContext' Mono.Options.OptionValueCollection' Mono.Options.OptionValueType,CHeaderToXML.EntryPoint' Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.Option
-Mono.Options,ActionOption,1,2,0,0,1,14,3,0,1,0,1,2,Mono.Options.OptionContext,Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>
-Mono.Options,ActionOption<T>,1,2,0,0,1,14,3,0,1,0,2,0,Mono.Options.ActionOption' Mono.Options.OptionContext,
-Mono.Options,ActionOption<TKey;TValue>,1,2,0,0,1,16,3,0,1,0,2,0,Mono.Options.ActionOption' Mono.Options.OptionContext,
+Mono.Options,Option,7,10,6,0,4,158,34,3,0,0.5,3,2,Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.OptionException,Mono.Options.OptionContext' Mono.Options.OptionSet
+Mono.Options,OptionException,1,5,1,0,4,31,5,0,0,0.4,0,3,,Mono.Options.OptionValueCollection' Mono.Options.Option' Mono.Options.OptionSet
+Mono.Options,OptionSet,3,35,1,0,13,540,103,0,0,0.26,8,2,Mono.Options.OptionValueCollection' Mono.Options.OptionContext' Mono.Options.OptionValueType' Mono.Options.Option' Mono.Options.OptionException' Mono.Options.ActionOption' Mono.Options.ActionOption<T>' Mono.Options.ActionOption<TKey;TValue>,Mono.Options.OptionContext' CHeaderToXML.EntryPoint
+Mono.Options,ActionOption,1,2,0,0,1,14,3,0,1,1,0,1,,Mono.Options.OptionSet
+Mono.Options,ActionOption<T>,1,2,0,0,1,14,3,0,1,1,0,1,,Mono.Options.OptionSet
+Mono.Options,ActionOption<TKey;TValue>,1,2,0,0,1,16,3,0,1,1,0,1,,Mono.Options.OptionSet

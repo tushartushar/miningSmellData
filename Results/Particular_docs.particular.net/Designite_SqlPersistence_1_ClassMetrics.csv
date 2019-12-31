@@ -1,1 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+UpgradeGuides._1to2.Correlation,MyMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,UpgradeGuides._1to2.Correlation.MySaga
+UpgradeGuides._1to2.Correlation,MySaga,0,1,0,0,1,18,1,0,0,-1,2,0,UpgradeGuides._1to2.Correlation.MyMessage' UpgradeGuides._1to2.Correlation.SagaData,
+UpgradeGuides._1to2.Correlation,SagaData,0,0,1,0,0,5,0,0,0,-1,0,1,,UpgradeGuides._1to2.Correlation.MySaga
+UpgradeGuides._1to2.Mapping,MyMessage,0,0,1,0,0,4,0,0,0,-1,0,1,,UpgradeGuides._1to2.Mapping.MySaga
+UpgradeGuides._1to2.Mapping,MySaga,0,2,0,0,1,20,2,0,0,-1,2,0,UpgradeGuides._1to2.Mapping.MyMessage' UpgradeGuides._1to2.Mapping.SagaData,
+UpgradeGuides._1to2.Mapping,SagaData,0,0,1,0,0,5,0,0,0,-1,0,1,,UpgradeGuides._1to2.Mapping.MySaga
+UpgradeGuides._1to2,FakeSaga,0,0,0,0,0,8,0,0,0,-1,0,0,,
+SqlPersistence_1.UsingSaga,OrderSaga,1,2,0,0,1,24,2,0,0,1,1,0,SqlPersistence_1.UsingSaga.SagaData,
+SqlPersistence_1.UsingSaga,SagaData,0,0,4,0,0,17,0,0,0,-1,0,4,,SqlPersistence_1.UsingSaga.OrderSaga' SqlPersistence_1.UsingSaga.SagaWithCorrelation' SqlPersistence_1.UsingSaga.SagaWithCorrelationAndTransitional' SqlPersistence_1.UsingSaga.SagaWithNoMessageMapping
+SqlPersistence_1.UsingSaga,SagaWithCorrelation,0,2,0,0,1,21,2,0,0,-1,2,0,SqlPersistence_1.UsingSaga.SagaData' SqlPersistence_1.UsingSaga.StartSagaMessage,
+SqlPersistence_1.UsingSaga,SagaWithCorrelationAndTransitional,0,2,0,0,1,24,2,0,0,-1,2,0,SqlPersistence_1.UsingSaga.SagaData' SqlPersistence_1.UsingSaga.StartSagaMessage,
+SqlPersistence_1.UsingSaga,SagaWithNoMessageMapping,0,1,0,0,0,12,1,0,0,-1,1,0,SqlPersistence_1.UsingSaga.SagaData,
+SqlPersistence_1.UsingSaga,StartSagaMessage,0,0,2,0,0,6,0,0,0,-1,0,2,,SqlPersistence_1.UsingSaga.SagaWithCorrelation' SqlPersistence_1.UsingSaga.SagaWithCorrelationAndTransitional

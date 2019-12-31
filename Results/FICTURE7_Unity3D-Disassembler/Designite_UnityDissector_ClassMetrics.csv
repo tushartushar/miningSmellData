@@ -1,45 +1,45 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-UnityDissector.CommandLine,CommandLineHandler,0,5,2,0,4,82,13,0,0,-1,1,3,UnityDissector.CommandLine.Option,UnityDissector.CommandLine.Option' UnityDissector.CommandLine.OptionHandlers' UnityDissector.Program
-UnityDissector.CommandLine,Option,0,4,4,0,4,31,4,0,0,-1,1,1,UnityDissector.CommandLine.CommandLineHandler,UnityDissector.CommandLine.CommandLineHandler
-UnityDissector.CommandLine,OptionHandlers,0,3,0,0,3,30,4,0,0,-1,3,1,UnityDissector.Unity.WebArchive' UnityDissector.CommandLine.CommandLineHandler' UnityDissector.Unity.WebArchiveFile,UnityDissector.Program
+UnityDissector.CommandLine,CommandLineHandler,0,5,2,0,4,82,15,0,0,-1,1,3,UnityDissector.CommandLine.Option,UnityDissector.CommandLine.OptionHandlers' UnityDissector.CommandLine.Option' UnityDissector.Program
+UnityDissector.CommandLine,Option,0,4,4,0,4,31,4,0,0,-1,1,2,UnityDissector.CommandLine.CommandLineHandler,UnityDissector.CommandLine.CommandLineHandler' UnityDissector.Program
+UnityDissector.CommandLine,OptionHandlers,0,3,0,0,3,30,4,0,0,-1,2,1,UnityDissector.CommandLine.CommandLineHandler' UnityDissector.Unity.WebArchive,UnityDissector.Program
 UnityDissector.Compression.Common,CRC,2,7,0,1,4,42,11,0,0,0,0,1,,UnityDissector.Compression.LZ.BinTree
-UnityDissector.Compression.LZ,IInWindowStream,0,6,0,0,0,9,6,1,0,-1,0,0,,
-UnityDissector.Compression.LZ,IMatchFinder,0,3,0,0,0,7,3,1,1,-1,0,1,,UnityDissector.Compression.LZMA.Encoder
-UnityDissector.Compression.LZ,BinTree,19,14,0,0,12,317,45,0,2,0.43,2,1,UnityDissector.Compression.LZ.InWindow' UnityDissector.Compression.Common.CRC,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZ,IInWindowStream,0,6,0,0,0,9,6,1,0,-1,0,1,,UnityDissector.Compression.LZ.IMatchFinder
+UnityDissector.Compression.LZ,IMatchFinder,0,3,0,0,0,7,3,1,1,-1,1,2,UnityDissector.Compression.LZ.IInWindowStream,UnityDissector.Compression.LZ.BinTree' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZ,BinTree,19,14,0,0,12,317,46,0,2,0.43,3,1,UnityDissector.Compression.Common.CRC' UnityDissector.Compression.LZ.IMatchFinder' UnityDissector.Compression.LZ.InWindow,UnityDissector.Compression.LZMA.Encoder
 UnityDissector.Compression.LZ,InWindow,11,12,0,5,11,107,26,1,0,0,0,1,,UnityDissector.Compression.LZ.BinTree
 UnityDissector.Compression.LZ,OutWindow,5,8,0,0,8,72,18,0,0,0,0,1,,UnityDissector.Compression.LZMA.Decoder
 UnityDissector.IO,FileReader,0,14,2,0,14,97,16,0,0,-1,0,2,,UnityDissector.Unity.WebArchiveFile' UnityDissector.Unity.WebArchive
 UnityDissector.IO,FileWriter,0,15,2,0,15,96,15,0,0,-1,0,2,,UnityDissector.Unity.WebArchiveFile' UnityDissector.Unity.WebArchive
 UnityDissector.IO,ConsoleIO,2,5,3,2,4,70,11,0,0,0,1,0,UnityDissector.IO.LogType,
 UnityDissector.IO,LogType,0,0,0,0,0,6,0,0,0,-1,0,1,,UnityDissector.IO.ConsoleIO
-UnityDissector.Unity,WebArchiveFile,0,3,4,0,3,36,4,0,0,-1,2,2,UnityDissector.IO.FileReader' UnityDissector.IO.FileWriter,UnityDissector.CommandLine.OptionHandlers' UnityDissector.Unity.WebArchive
-UnityDissector.Unity,WebArchive,0,8,7,0,7,164,26,0,0,-1,4,1,UnityDissector.Unity.WebArchiveFile' UnityDissector.IO.FileReader' UnityDissector.Compression.LZMA.LzmaUtils' UnityDissector.IO.FileWriter,UnityDissector.CommandLine.OptionHandlers
-UnityDissector,Program,0,1,1,0,1,27,1,0,0,-1,2,0,UnityDissector.CommandLine.OptionHandlers' UnityDissector.CommandLine.CommandLineHandler,
-UnityDissector.Compression.LZMA,Base,27,1,0,27,1,59,2,0,0,0,0,5,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.LenDecoder' UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.LenEncoder' UnityDissector.Compression.LZMA.LenPriceTableEncoder
-UnityDissector.Compression.LZMA,State,1,6,0,1,6,15,7,0,0,0,0,3,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.Optimal
-UnityDissector.Compression.LZMA,Decoder,17,7,0,0,3,351,24,0,1,0,9,1,UnityDissector.Compression.LZ.OutWindow' UnityDissector.Compression.RangeCoder.Decoder' UnityDissector.Compression.RangeCoder.BitDecoder' UnityDissector.Compression.RangeCoder.BitTreeDecoder' UnityDissector.Compression.LZMA.LenDecoder' UnityDissector.Compression.LZMA.LiteralDecoder' UnityDissector.Compression.LZMA.Base' UnityDissector.Compression.LZMA.State' UnityDissector.Compression.ICodeProgress,UnityDissector.Compression.LZMA.LzmaUtils
-UnityDissector.Compression.LZMA,LenDecoder,6,3,0,0,3,46,6,0,0,0,4,1,UnityDissector.Compression.RangeCoder.BitDecoder' UnityDissector.Compression.RangeCoder.BitTreeDecoder' UnityDissector.Compression.LZMA.Base' UnityDissector.Compression.RangeCoder.Decoder,UnityDissector.Compression.LZMA.Decoder
-UnityDissector.Compression.LZMA,LiteralDecoder,4,5,0,0,4,67,8,0,0,0,2,1,UnityDissector.Compression.LZMA.Decoder2' UnityDissector.Compression.RangeCoder.Decoder,UnityDissector.Compression.LZMA.Decoder
-UnityDissector.Compression.LZMA,Decoder2,1,4,0,0,4,33,5,0,0,0,2,1,UnityDissector.Compression.RangeCoder.BitDecoder' UnityDissector.Compression.RangeCoder.Decoder,UnityDissector.Compression.LZMA.LiteralDecoder
-UnityDissector.Compression.LZMA,Encoder,57,31,0,0,5,1318,139,0,1,0.06,14,1,UnityDissector.Compression.LZMA.State' UnityDissector.Compression.LZMA.Optimal' UnityDissector.Compression.LZ.IMatchFinder' UnityDissector.Compression.RangeCoder.Encoder' UnityDissector.Compression.RangeCoder.BitEncoder' UnityDissector.Compression.RangeCoder.BitTreeEncoder' UnityDissector.Compression.LZMA.LenPriceTableEncoder' UnityDissector.Compression.LZMA.LiteralEncoder' UnityDissector.Compression.LZMA.EMatchFinderType' UnityDissector.Compression.LZMA.Base' UnityDissector.Compression.LZ.BinTree' UnityDissector.Compression.LZMA.Encoder2' UnityDissector.Compression.ICodeProgress' UnityDissector.Compression.CoderPropID,UnityDissector.Compression.LZMA.LzmaUtils
+UnityDissector.Unity,WebArchiveFile,0,3,4,0,3,36,4,0,0,-1,2,1,UnityDissector.IO.FileReader' UnityDissector.IO.FileWriter,UnityDissector.Unity.WebArchive
+UnityDissector.Unity,WebArchive,0,8,7,0,7,164,26,0,0,-1,4,1,UnityDissector.IO.FileReader' UnityDissector.IO.FileWriter' UnityDissector.Unity.WebArchiveFile' UnityDissector.Compression.LZMA.LzmaUtils,UnityDissector.CommandLine.OptionHandlers
+UnityDissector,Program,0,1,1,0,1,27,1,0,0,-1,3,0,UnityDissector.CommandLine.CommandLineHandler' UnityDissector.CommandLine.Option' UnityDissector.CommandLine.OptionHandlers,
+UnityDissector.Compression.LZMA,Base,27,1,0,27,1,59,2,0,0,0,0,2,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZMA,State,1,6,0,1,6,15,8,0,0,0,0,2,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZMA,Decoder,17,7,0,0,3,351,33,0,1,0,14,1,UnityDissector.Compression.LZ.OutWindow' UnityDissector.Compression.LZMA.Base' UnityDissector.Compression.LZMA.State' UnityDissector.Compression.LZMA.LenDecoder' UnityDissector.Compression.LZMA.LiteralDecoder' UnityDissector.Compression.LZMA.Decoder2' UnityDissector.Compression.RangeCoder.Decoder' UnityDissector.Compression.RangeCoder.BitDecoder' UnityDissector.Compression.RangeCoder.BitTreeDecoder' UnityDissector.Compression.DataErrorException' UnityDissector.Compression.InvalidParamException' UnityDissector.Compression.ICodeProgress' UnityDissector.Compression.ICoder' UnityDissector.Compression.ISetDecoderProperties,UnityDissector.Compression.LZMA.LzmaUtils
+UnityDissector.Compression.LZMA,LenDecoder,6,3,0,0,3,46,7,0,0,0,0,1,,UnityDissector.Compression.LZMA.Decoder
+UnityDissector.Compression.LZMA,LiteralDecoder,4,5,0,0,4,67,8,0,0,0,0,1,,UnityDissector.Compression.LZMA.Decoder
+UnityDissector.Compression.LZMA,Decoder2,1,4,0,0,4,33,5,0,0,0,0,1,,UnityDissector.Compression.LZMA.Decoder
+UnityDissector.Compression.LZMA,Encoder,57,31,0,0,5,1318,179,0,1,0.06,19,1,UnityDissector.Compression.LZ.IMatchFinder' UnityDissector.Compression.LZ.BinTree' UnityDissector.Compression.LZMA.Base' UnityDissector.Compression.LZMA.State' UnityDissector.Compression.LZMA.EMatchFinderType' UnityDissector.Compression.LZMA.LiteralEncoder' UnityDissector.Compression.LZMA.Encoder2' UnityDissector.Compression.LZMA.LenEncoder' UnityDissector.Compression.LZMA.LenPriceTableEncoder' UnityDissector.Compression.LZMA.Optimal' UnityDissector.Compression.RangeCoder.Encoder' UnityDissector.Compression.RangeCoder.BitEncoder' UnityDissector.Compression.RangeCoder.BitTreeEncoder' UnityDissector.Compression.InvalidParamException' UnityDissector.Compression.ICodeProgress' UnityDissector.Compression.ICoder' UnityDissector.Compression.CoderPropID' UnityDissector.Compression.ISetCoderProperties' UnityDissector.Compression.IWriteCoderProperties,UnityDissector.Compression.LZMA.LzmaUtils
 UnityDissector.Compression.LZMA,EMatchFinderType,0,0,0,0,0,5,0,0,0,-1,0,1,,UnityDissector.Compression.LZMA.Encoder
-UnityDissector.Compression.LZMA,LiteralEncoder,4,3,0,0,3,89,6,0,0,0,1,1,UnityDissector.Compression.LZMA.Encoder2,UnityDissector.Compression.LZMA.Encoder
-UnityDissector.Compression.LZMA,Encoder2,1,5,0,0,5,62,13,0,0,0,2,2,UnityDissector.Compression.RangeCoder.BitEncoder' UnityDissector.Compression.RangeCoder.Encoder,UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.LiteralEncoder
-UnityDissector.Compression.LZMA,LenEncoder,5,4,0,0,4,72,12,1,0,0,4,1,UnityDissector.Compression.RangeCoder.BitEncoder' UnityDissector.Compression.RangeCoder.BitTreeEncoder' UnityDissector.Compression.LZMA.Base' UnityDissector.Compression.RangeCoder.Encoder,UnityDissector.Compression.LZMA.LenPriceTableEncoder
-UnityDissector.Compression.LZMA,LenPriceTableEncoder,3,5,0,0,4,27,7,0,1,0,3,1,UnityDissector.Compression.LZMA.Base' UnityDissector.Compression.LZMA.LenEncoder' UnityDissector.Compression.RangeCoder.Encoder,UnityDissector.Compression.LZMA.Encoder
-UnityDissector.Compression.LZMA,Optimal,12,3,0,12,3,18,3,0,0,0,1,1,UnityDissector.Compression.LZMA.State,UnityDissector.Compression.LZMA.Encoder
-UnityDissector.Compression.LZMA,LzmaUtils,4,2,0,0,2,96,8,0,0,1,3,1,UnityDissector.Compression.CoderPropID' UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.Decoder,UnityDissector.Unity.WebArchive
-UnityDissector.Compression.RangeCoder,Encoder,7,11,0,3,11,101,19,0,0,0,0,6,,UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.Encoder2' UnityDissector.Compression.LZMA.LenEncoder' UnityDissector.Compression.LZMA.LenPriceTableEncoder' UnityDissector.Compression.RangeCoder.BitEncoder' UnityDissector.Compression.RangeCoder.BitTreeEncoder
-UnityDissector.Compression.RangeCoder,Decoder,4,9,0,4,9,100,15,0,0,0,0,6,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.LenDecoder' UnityDissector.Compression.LZMA.LiteralDecoder' UnityDissector.Compression.LZMA.Decoder2' UnityDissector.Compression.RangeCoder.BitDecoder' UnityDissector.Compression.RangeCoder.BitTreeDecoder
-UnityDissector.Compression.RangeCoder,BitEncoder,7,7,0,3,6,58,12,0,0,0,1,4,UnityDissector.Compression.RangeCoder.Encoder,UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.Encoder2' UnityDissector.Compression.LZMA.LenEncoder' UnityDissector.Compression.RangeCoder.BitTreeEncoder
-UnityDissector.Compression.RangeCoder,BitDecoder,4,3,0,2,3,42,6,0,0,0,1,4,UnityDissector.Compression.RangeCoder.Decoder,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.LenDecoder' UnityDissector.Compression.LZMA.Decoder2' UnityDissector.Compression.RangeCoder.BitTreeDecoder
-UnityDissector.Compression.RangeCoder,BitTreeEncoder,2,8,0,0,8,89,15,0,0,0,2,2,UnityDissector.Compression.RangeCoder.BitEncoder' UnityDissector.Compression.RangeCoder.Encoder,UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.LenEncoder
-UnityDissector.Compression.RangeCoder,BitTreeDecoder,2,5,0,0,5,49,9,0,0,0,2,2,UnityDissector.Compression.RangeCoder.BitDecoder' UnityDissector.Compression.RangeCoder.Decoder,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.LenDecoder
-UnityDissector.Compression,DataErrorException,0,1,0,0,1,4,1,0,0,-1,0,0,,
-UnityDissector.Compression,InvalidParamException,0,1,0,0,1,4,1,0,0,-1,0,0,,
-UnityDissector.Compression,ICodeProgress,0,1,0,0,0,13,1,0,0,-1,0,3,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.ICoder
-UnityDissector.Compression,ICoder,0,1,0,0,0,26,1,2,0,-1,1,0,UnityDissector.Compression.ICodeProgress,
-UnityDissector.Compression,CoderPropID,0,0,0,0,0,51,0,0,0,-1,0,3,,UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.LZMA.LzmaUtils' UnityDissector.Compression.ISetCoderProperties
-UnityDissector.Compression,ISetCoderProperties,0,1,0,0,0,4,1,1,0,-1,1,0,UnityDissector.Compression.CoderPropID,
-UnityDissector.Compression,IWriteCoderProperties,0,1,0,0,0,4,1,1,0,-1,0,0,,
-UnityDissector.Compression,ISetDecoderProperties,0,1,0,0,0,4,1,1,0,-1,0,0,,
+UnityDissector.Compression.LZMA,LiteralEncoder,4,3,0,0,3,89,6,0,0,0,0,1,,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZMA,Encoder2,1,5,0,0,5,62,13,0,0,0,0,1,,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZMA,LenEncoder,5,4,0,0,4,72,13,1,0,0,0,1,,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZMA,LenPriceTableEncoder,3,5,0,0,4,27,7,0,1,0,0,1,,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZMA,Optimal,12,3,0,12,3,18,3,0,0,0,0,1,,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.LZMA,LzmaUtils,4,2,0,0,2,96,8,0,0,1,3,1,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.Encoder' UnityDissector.Compression.CoderPropID,UnityDissector.Unity.WebArchive
+UnityDissector.Compression.RangeCoder,Encoder,7,11,0,3,11,101,19,0,0,0,0,3,,UnityDissector.Compression.RangeCoder.BitTreeEncoder' UnityDissector.Compression.RangeCoder.BitEncoder' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.RangeCoder,Decoder,4,9,0,4,9,100,15,0,0,0,0,3,,UnityDissector.Compression.RangeCoder.BitTreeDecoder' UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.RangeCoder.BitDecoder
+UnityDissector.Compression.RangeCoder,BitEncoder,7,7,0,3,6,58,12,0,0,0,1,2,UnityDissector.Compression.RangeCoder.Encoder,UnityDissector.Compression.RangeCoder.BitTreeEncoder' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.RangeCoder,BitDecoder,4,3,0,2,3,42,7,0,0,0,1,2,UnityDissector.Compression.RangeCoder.Decoder,UnityDissector.Compression.RangeCoder.BitTreeDecoder' UnityDissector.Compression.LZMA.Decoder
+UnityDissector.Compression.RangeCoder,BitTreeEncoder,2,8,0,0,8,89,15,0,0,0.38,2,1,UnityDissector.Compression.RangeCoder.Encoder' UnityDissector.Compression.RangeCoder.BitEncoder,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression.RangeCoder,BitTreeDecoder,2,5,0,0,5,49,9,0,0,0.4,2,1,UnityDissector.Compression.RangeCoder.Decoder' UnityDissector.Compression.RangeCoder.BitDecoder,UnityDissector.Compression.LZMA.Decoder
+UnityDissector.Compression,DataErrorException,0,1,0,0,1,4,1,0,0,-1,0,1,,UnityDissector.Compression.LZMA.Decoder
+UnityDissector.Compression,InvalidParamException,0,1,0,0,1,4,1,0,0,-1,0,2,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression,ICodeProgress,0,1,0,0,0,13,1,0,0,-1,0,3,,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.ICoder' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression,ICoder,0,1,0,0,0,26,1,2,0,-1,1,2,UnityDissector.Compression.ICodeProgress,UnityDissector.Compression.LZMA.Decoder' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression,CoderPropID,0,0,0,0,0,51,0,0,0,-1,0,3,,UnityDissector.Compression.ISetCoderProperties' UnityDissector.Compression.LZMA.LzmaUtils' UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression,ISetCoderProperties,0,1,0,0,0,4,1,1,0,-1,1,1,UnityDissector.Compression.CoderPropID,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression,IWriteCoderProperties,0,1,0,0,0,4,1,1,0,-1,0,1,,UnityDissector.Compression.LZMA.Encoder
+UnityDissector.Compression,ISetDecoderProperties,0,1,0,0,0,4,1,1,0,-1,0,1,,UnityDissector.Compression.LZMA.Decoder

@@ -1,0 +1,17 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Warewolf.Logger,AuditCommandConsumer,3,4,0,0,2,62,9,0,0,0.75,0,1,,Warewolf.Logger.LogServer
+Warewolf.Logger,IArgs,0,0,1,0,0,4,0,1,0,-1,0,3,,Warewolf.Logger.Args' Warewolf.Logger.Program' Warewolf.Logger.LoggerContext
+Warewolf.Logger,Args,0,0,1,0,0,5,0,0,1,-1,1,1,Warewolf.Logger.IArgs,Warewolf.Logger.Program
+Warewolf.Logger,IConsoleWindowWrapper,0,0,0,0,0,3,0,1,0,-1,0,3,,Warewolf.Logger.ConsoleWindowWrapper' Warewolf.Logger.IConsoleWindowFactory' Warewolf.Logger.ConsoleWindowFactory
+Warewolf.Logger,ConsoleWindowWrapper,0,1,0,0,1,7,1,0,1,-1,1,1,Warewolf.Logger.IConsoleWindowWrapper,Warewolf.Logger.ConsoleWindowFactory
+Warewolf.Logger,IConsoleWindowFactory,0,1,0,0,0,4,1,1,0,-1,1,2,Warewolf.Logger.IConsoleWindowWrapper,Warewolf.Logger.ConsoleWindowFactory' Warewolf.Logger.Program
+Warewolf.Logger,ConsoleWindowFactory,0,1,0,0,1,7,1,0,1,-1,3,1,Warewolf.Logger.IConsoleWindowWrapper' Warewolf.Logger.ConsoleWindowWrapper' Warewolf.Logger.IConsoleWindowFactory,Warewolf.Logger.Program
+Warewolf.Logger,LoggerContext,1,1,4,0,1,22,1,0,0,0,1,1,Warewolf.Logger.IArgs,Warewolf.Logger.Program
+Warewolf.Logger,ILogServerFactory,0,1,0,0,0,4,1,1,0,-1,1,2,Warewolf.Logger.ILogServer,Warewolf.Logger.LogServerFactory' Warewolf.Logger.Program
+Warewolf.Logger,LogServerFactory,0,2,0,0,2,10,2,0,1,-1,3,1,Warewolf.Logger.ILogServerFactory' Warewolf.Logger.ILogServer' Warewolf.Logger.LogServer,Warewolf.Logger.Program
+Warewolf.Logger,ILogServer,0,1,0,0,0,4,1,1,0,-1,0,3,,Warewolf.Logger.ILogServerFactory' Warewolf.Logger.LogServerFactory' Warewolf.Logger.LogServer
+Warewolf.Logger,LogServer,5,4,0,0,3,46,5,0,1,0,2,1,Warewolf.Logger.AuditCommandConsumer' Warewolf.Logger.ILogServer,Warewolf.Logger.LogServerFactory
+Warewolf.Logger,Ext,0,1,0,0,1,12,1,0,0,-1,0,0,,
+Warewolf.Logger,Program,0,1,0,0,0,65,1,0,0,-1,9,0,Warewolf.Logger.IArgs' Warewolf.Logger.Args' Warewolf.Logger.IConsoleWindowFactory' Warewolf.Logger.ConsoleWindowFactory' Warewolf.Logger.LoggerContext' Warewolf.Logger.ILogServerFactory' Warewolf.Logger.LogServerFactory' Warewolf.Logger.Impl' Warewolf.Logger.Implementation,
+Warewolf.Logger,Impl,1,2,0,0,2,16,2,0,0,0,0,1,,Warewolf.Logger.Program
+Warewolf.Logger,Implementation,7,3,0,0,3,39,5,0,0,0,0,1,,Warewolf.Logger.Program

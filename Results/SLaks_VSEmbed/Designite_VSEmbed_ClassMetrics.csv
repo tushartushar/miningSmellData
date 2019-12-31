@@ -1,67 +1,51 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-VSEmbed.Editor,ChainedKeyProcessor,0,10,0,0,10,42,10,2,0,-1,0,1,,VSEmbed.Exports.KeyProcessorInvoker
-VSEmbed.Editor,IChainedKeyProcessorProvider,0,1,0,0,0,4,1,3,0,-1,0,1,,VSEmbed.Exports.KeyProcessorInvoker
+VSEmbed.Editor,ChainedKeyProcessor,0,10,0,0,10,42,10,2,0,-1,0,4,,VSEmbed.Exports.BaseShortcutKeyProcessor' VSEmbed.Exports.StandardKeyProcessorProvider' VSEmbed.Editor.IChainedKeyProcessorProvider' VSEmbed.Exports.KeyProcessorInvoker
+VSEmbed.Editor,IChainedKeyProcessorProvider,0,1,0,0,0,4,1,3,0,-1,1,1,VSEmbed.Editor.ChainedKeyProcessor,VSEmbed.Exports.StandardKeyProcessorProvider
 VSEmbed.Exports,BasicTextUndoHistoryRegistry,1,7,0,0,0,59,13,0,0,0.29,1,0,VSEmbed.Exports.BasicUndoHistory,
-VSEmbed.Exports,BasicUndoHistory,6,10,15,0,0,181,18,0,0,0.2,1,2,VSEmbed.Exports.BasicUndoTransaction,VSEmbed.Exports.BasicTextUndoHistoryRegistry' VSEmbed.Exports.BasicUndoTransaction
+VSEmbed.Exports,BasicUndoHistory,6,10,15,0,0,181,19,0,0,0.2,1,2,VSEmbed.Exports.BasicUndoTransaction,VSEmbed.Exports.BasicTextUndoHistoryRegistry' VSEmbed.Exports.BasicUndoTransaction
 VSEmbed.Exports,BasicUndoTransaction,2,7,10,0,0,73,9,0,0,0.29,1,1,VSEmbed.Exports.BasicUndoHistory,VSEmbed.Exports.BasicUndoHistory
-VSEmbed.Exports,KeyProcessorInvoker,2,12,0,0,11,66,12,0,0,0,2,1,VSEmbed.Editor.IChainedKeyProcessorProvider' VSEmbed.Editor.ChainedKeyProcessor,VSEmbed.Exports.KeyProcessorInvokerProvider
+VSEmbed.Exports,KeyProcessorInvoker,2,12,0,0,11,66,12,0,0,0.17,1,1,VSEmbed.Editor.ChainedKeyProcessor,VSEmbed.Exports.KeyProcessorInvokerProvider
 VSEmbed.Exports,KeyProcessorInvokerProvider,0,2,2,0,2,18,2,0,0,-1,1,0,VSEmbed.Exports.KeyProcessorInvoker,
-VSEmbed.Exports,BaseShortcutKeyProcessor,1,10,0,0,1,46,11,2,1,0,0,0,,
-VSEmbed.Exports,StandardKeyProcessor,3,6,0,0,4,94,10,0,2,0,0,1,,VSEmbed.Exports.StandardKeyProcessorProvider
-VSEmbed.Exports,StandardKeyProcessorProvider,0,1,2,0,1,13,1,0,1,-1,1,0,VSEmbed.Exports.StandardKeyProcessor,
+VSEmbed.Exports,BaseShortcutKeyProcessor,1,10,0,0,1,46,11,2,1,0,1,1,VSEmbed.Editor.ChainedKeyProcessor,VSEmbed.Exports.StandardKeyProcessor
+VSEmbed.Exports,StandardKeyProcessor,3,6,0,0,4,94,10,0,2,0,1,1,VSEmbed.Exports.BaseShortcutKeyProcessor,VSEmbed.Exports.StandardKeyProcessorProvider
+VSEmbed.Exports,StandardKeyProcessorProvider,0,1,2,0,1,13,1,0,1,-1,3,0,VSEmbed.Editor.ChainedKeyProcessor' VSEmbed.Editor.IChainedKeyProcessorProvider' VSEmbed.Exports.StandardKeyProcessor,
 VSEmbed.Exports,SimpleErrorReporter,0,1,0,0,1,6,1,0,0,-1,0,0,,
-VSEmbed.Exports,SimpleDataStorage,1,2,0,0,2,20,3,0,0,0,0,0,,
-VSEmbed.Exports,DataStorageService,2,1,0,0,1,18,2,0,0,0,0,0,,
-VSEmbed,NativeMethods,0,2,0,0,1,8,2,0,0,-1,1,3,VSEmbed.NONCLIENTMETRICS,VSEmbed.VsThemeDictionary' VSEmbed.Controls.VsResizeGrip' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary
-VSEmbed,NONCLIENTMETRICS,16,0,0,16,0,18,0,0,0,-1,1,3,VSEmbed.LOGFONT,VSEmbed.NativeMethods' VSEmbed.VsThemeDictionary' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary
-VSEmbed,LOGFONT,14,0,0,14,0,18,0,0,0,-1,0,3,,VSEmbed.NONCLIENTMETRICS' VSEmbed.VsThemeDictionary' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary
+VSEmbed.Exports,SimpleDataStorage,1,2,0,0,2,20,4,0,0,1,0,1,,VSEmbed.Exports.DataStorageService
+VSEmbed.Exports,DataStorageService,2,1,0,0,1,18,2,0,0,0,1,0,VSEmbed.Exports.SimpleDataStorage,
+VSEmbed,NativeMethods,0,2,0,0,1,8,2,0,0,-1,1,2,VSEmbed.NONCLIENTMETRICS,VSEmbed.Controls.VsResizeGrip' VSEmbed.VsThemeDictionary
+VSEmbed,NONCLIENTMETRICS,16,0,0,16,0,18,0,0,0,-1,1,2,VSEmbed.LOGFONT,VSEmbed.NativeMethods' VSEmbed.VsThemeDictionary
+VSEmbed,LOGFONT,14,0,0,14,0,18,0,0,0,-1,0,1,,VSEmbed.NONCLIENTMETRICS
 VSEmbed,TextViewExtensions,0,2,0,0,2,16,4,0,0,-1,0,0,,
-VSEmbed,VsLoader,3,9,4,0,3,155,18,0,0,0.33,0,9,,VSEmbed.VsMefContainerBuilder' VSEmbed.VsServiceProvider' VSEmbed.VsThemeDictionary' VSEmbed.Controls.TextViewHost' VSEmbed.Services.SimpleVsAppId' Microsoft.Internal.VisualStudio.Shell.Interop.SimpleVsAppId' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary' VSEmbed.DemoApp.App' VSEmbed.Roslyn.RoslynSetup
-VSEmbed,VsMefContainerBuilder,3,10,0,0,9,193,12,2,0,0.2,4,2,VSEmbed.VsLoader' VSEmbed.V3' VSEmbed.V1' VSEmbed.VsServiceProvider,VSEmbed.V3' VSEmbed.DemoApp.App
-VSEmbed,V1,1,4,0,0,2,28,4,0,1,0.5,1,1,VSEmbed.ComponentModel,VSEmbed.VsMefContainerBuilder
-VSEmbed,ComponentModel,1,8,6,1,8,29,8,0,0,0.75,0,2,,VSEmbed.V1' VSEmbed.V3
-VSEmbed,V3,2,4,0,0,1,51,4,0,1,0.5,2,1,VSEmbed.VsMefContainerBuilder' VSEmbed.ComponentModel,VSEmbed.VsMefContainerBuilder
-VSEmbed,VsResourceKeys,0,0,4,0,0,16,0,0,0,-1,0,0,,
-VSEmbed,VsServiceProvider,1,7,3,0,5,121,13,0,0,0,1,6,VSEmbed.VsLoader,VSEmbed.VsMefContainerBuilder' VSEmbed.VsThemeDictionary' VSEmbed.Controls.TextViewHost' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary' VSEmbed.DemoApp.App' VSEmbed.Roslyn.RoslynKeyProcessorProvider
-VSEmbed,VsThemeDictionary,14,14,4,0,1,187,24,0,0,0.36,8,0,VSEmbed.VsServiceProvider' VSEmbed.VsLoader' VSEmbed.Services.ThemedVsUIShell' Microsoft.Internal.VisualStudio.Shell.Interop.IVsColorEntry' Microsoft.Internal.VisualStudio.Shell.Interop.ColorName' VSEmbed.NONCLIENTMETRICS' VSEmbed.NativeMethods' VSEmbed.LOGFONT,
-VSEmbed,ColorTheme,0,1,2,0,0,21,3,0,0,-1,0,0,,
-VSEmbed,IVsColorTheme,0,1,3,0,0,15,1,0,0,-1,0,0,,
-VSEmbed,IVsColorEntry,0,0,7,0,0,11,0,0,0,-1,0,0,,
-VSEmbed,ColorName,2,0,0,2,0,7,0,0,0,-1,0,0,,
-VSEmbed.Controls,TextViewHost,3,3,4,2,1,63,6,0,0,1,2,0,VSEmbed.VsServiceProvider' VSEmbed.VsLoader,
+VSEmbed,VsLoader,3,9,4,0,3,155,19,0,0,0.33,0,6,,VSEmbed.Controls.TextViewHost' VSEmbed.VsResourceKeys' VSEmbed.Services.SimpleVsAppId' VSEmbed.VsThemeDictionary' VSEmbed.VsMefContainerBuilder' VSEmbed.VsServiceProvider
+VSEmbed,VsMefContainerBuilder,3,10,0,0,9,193,12,2,0,0.2,5,1,VSEmbed.VsLoader' VSEmbed.V1' VSEmbed.ComponentModel' VSEmbed.V3' VSEmbed.VsServiceProvider,VSEmbed.Controls.TextViewHost
+VSEmbed,V1,1,4,0,0,2,28,4,0,1,0.75,0,1,,VSEmbed.VsMefContainerBuilder
+VSEmbed,ComponentModel,1,8,6,1,8,29,8,0,0,0.75,0,1,,VSEmbed.VsMefContainerBuilder
+VSEmbed,V3,2,4,0,0,1,51,4,0,1,0.75,0,1,,VSEmbed.VsMefContainerBuilder
+VSEmbed,VsResourceKeys,0,0,4,0,0,16,0,0,0,-1,1,0,VSEmbed.VsLoader,
+VSEmbed,VsServiceProvider,1,7,3,0,5,121,13,0,0,0,13,3,VSEmbed.VsLoader' VSEmbed.Services.StubDTE' VSEmbed.Services.SettingsManagerWrapper' VSEmbed.Services.ThemedVsUIShell' VSEmbed.Services.BaseWaitDialogFactory' VSEmbed.Services.AppDispatcherInvoker' VSEmbed.Services.SimpleVsAppId' VSEmbed.Services.SystemUIHostLocale' VSEmbed.Services.SimpleVsWindowManager' VSEmbed.Services.StubVsActivityLog' VSEmbed.Services.StubVsShell' VSEmbed.Services.StubVsFontAndColorCacheManager' VSEmbed.Services.StubVsMonitorSelection,VSEmbed.VsMefContainerBuilder' VSEmbed.VsThemeDictionary' VSEmbed.Controls.TextViewHost
+VSEmbed,VsThemeDictionary,14,14,4,0,1,187,24,0,0,0.36,7,1,VSEmbed.NativeMethods' VSEmbed.NONCLIENTMETRICS' VSEmbed.VsLoader' VSEmbed.VsServiceProvider' VSEmbed.ColorTheme' Microsoft.Internal.VisualStudio.Shell.Interop.IVsColorEntry' Microsoft.Internal.VisualStudio.Shell.Interop.ColorName,VSEmbed.Services.ThemedVsUIShell
+VSEmbed,ColorTheme,0,1,2,0,0,21,3,0,0,-1,0,1,,VSEmbed.VsThemeDictionary
+VSEmbed.Controls,TextViewHost,3,3,4,2,1,63,6,0,0,1,3,0,VSEmbed.VsLoader' VSEmbed.VsMefContainerBuilder' VSEmbed.VsServiceProvider,
 VSEmbed.Controls,VsResizeGrip,3,3,0,0,1,47,6,0,0,0.67,1,0,VSEmbed.NativeMethods,
-VSEmbed.Services,StubDTE,0,8,38,0,8,57,8,0,0,-1,0,0,,
-VSEmbed.Services,StubCommands,0,8,3,0,8,13,8,0,0,-1,0,0,,
-VSEmbed.Services,SettingsManagerWrapper,1,8,0,0,8,144,9,0,0,0,0,0,,
-VSEmbed.Services,StoreWrapper,1,22,0,0,22,106,24,0,0,0,0,0,,
-VSEmbed.Services,ThemedVsUIShell,0,7,1,0,7,31,7,0,0,-1,0,2,,VSEmbed.VsThemeDictionary' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary
-VSEmbed.Services,BaseWaitDialogFactory,0,1,0,0,1,42,1,0,0,-1,0,0,,
-VSEmbed.Services,WaitDialog,0,11,0,0,6,36,11,0,0,-1,0,0,,
-VSEmbed.Services,SyncContextInvoker,1,2,0,0,2,8,2,0,1,0,1,1,Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokablePrivate,Microsoft.Internal.VisualStudio.Shell.Interop.SyncContextInvoker
-VSEmbed.Services,AppDispatcherInvoker,0,1,0,0,1,5,1,0,1,-1,1,0,Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokablePrivate,
-VSEmbed.Services,SimpleVsAppId,0,6,0,0,6,33,7,0,0,-1,1,0,VSEmbed.VsLoader,
-VSEmbed.Services,SystemUIHostLocale,0,6,0,0,6,21,6,0,0,-1,0,0,,
-VSEmbed.Services,SimpleVsWindowManager,0,2,0,0,2,15,4,0,1,-1,0,0,,
-VSEmbed.Services,IVsWindowManager2,0,2,0,0,0,8,2,0,0,-1,0,0,,
-VSEmbed.Services,IVsInvokerPrivate,0,1,0,0,0,6,1,0,0,-1,0,0,,
-VSEmbed.Services,IVsInvokablePrivate,0,1,0,0,0,6,1,0,0,-1,0,0,,
-VSEmbed.Services,StubVsActivityLog,0,8,0,0,8,26,8,0,0,-1,0,0,,
-VSEmbed.Services,StubVsShell,0,12,0,0,12,48,13,0,0,-1,0,0,,
-VSEmbed.Services,StubVsFontAndColorCacheManager,0,5,0,0,5,19,5,0,0,-1,0,0,,
-VSEmbed.Services,StubVsMonitorSelection,0,7,0,0,7,31,7,0,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,ThemedVsUIShell,0,7,1,0,7,31,7,0,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,BaseWaitDialogFactory,0,1,0,0,1,42,1,0,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,WaitDialog,0,11,0,0,6,36,11,0,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,SyncContextInvoker,1,2,0,0,2,8,2,0,1,0,2,0,VSEmbed.Services.SyncContextInvoker' Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokablePrivate,
-Microsoft.Internal.VisualStudio.Shell.Interop,AppDispatcherInvoker,0,1,0,0,1,5,1,0,1,-1,1,0,Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokablePrivate,
-Microsoft.Internal.VisualStudio.Shell.Interop,SimpleVsAppId,0,6,0,0,6,33,7,0,0,-1,1,0,VSEmbed.VsLoader,
-Microsoft.Internal.VisualStudio.Shell.Interop,SystemUIHostLocale,0,6,0,0,6,21,6,0,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,SimpleVsWindowManager,0,2,0,0,2,15,4,0,1,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,IVsWindowManager2,0,2,0,0,0,8,2,2,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,IVsInvokerPrivate,0,1,0,0,0,6,1,4,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,IVsInvokablePrivate,0,1,0,0,0,6,1,0,0,-1,0,4,,VSEmbed.Services.SyncContextInvoker' VSEmbed.Services.AppDispatcherInvoker' Microsoft.Internal.VisualStudio.Shell.Interop.SyncContextInvoker' Microsoft.Internal.VisualStudio.Shell.Interop.AppDispatcherInvoker
-Microsoft.Internal.VisualStudio.Shell.Interop,VsThemeDictionary,14,14,4,0,1,187,24,0,0,0.86,8,0,VSEmbed.VsServiceProvider' VSEmbed.VsLoader' VSEmbed.Services.ThemedVsUIShell' Microsoft.Internal.VisualStudio.Shell.Interop.IVsColorEntry' Microsoft.Internal.VisualStudio.Shell.Interop.ColorName' VSEmbed.NONCLIENTMETRICS' VSEmbed.NativeMethods' VSEmbed.LOGFONT,
-Microsoft.Internal.VisualStudio.Shell.Interop,ColorTheme,0,1,2,0,0,21,3,0,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,IVsColorTheme,0,1,3,0,0,15,1,0,0,-1,0,0,,
-Microsoft.Internal.VisualStudio.Shell.Interop,IVsColorEntry,0,0,7,0,0,11,0,0,0,-1,0,2,,VSEmbed.VsThemeDictionary' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary
-Microsoft.Internal.VisualStudio.Shell.Interop,ColorName,2,0,0,2,0,7,0,0,0,-1,0,2,,VSEmbed.VsThemeDictionary' Microsoft.Internal.VisualStudio.Shell.Interop.VsThemeDictionary
+VSEmbed.Services,StubDTE,0,8,38,0,8,57,8,0,0,-1,1,1,VSEmbed.Services.StubCommands,VSEmbed.VsServiceProvider
+VSEmbed.Services,StubCommands,0,8,3,0,8,13,8,0,0,-1,0,1,,VSEmbed.Services.StubDTE
+VSEmbed.Services,SettingsManagerWrapper,1,8,0,0,8,144,9,0,0,0.25,1,1,VSEmbed.Services.StoreWrapper,VSEmbed.VsServiceProvider
+VSEmbed.Services,StoreWrapper,1,22,0,0,22,106,24,0,0,0.09,0,1,,VSEmbed.Services.SettingsManagerWrapper
+VSEmbed.Services,ThemedVsUIShell,0,7,1,0,7,31,7,0,0,-1,1,1,VSEmbed.VsThemeDictionary,VSEmbed.VsServiceProvider
+VSEmbed.Services,BaseWaitDialogFactory,0,1,0,0,1,42,1,0,0,-1,1,1,VSEmbed.Services.WaitDialog,VSEmbed.VsServiceProvider
+VSEmbed.Services,WaitDialog,0,11,0,0,6,36,11,0,0,-1,0,1,,VSEmbed.Services.BaseWaitDialogFactory
+VSEmbed.Services,SyncContextInvoker,1,2,0,0,2,8,2,0,1,1,2,0,Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokerPrivate' Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokablePrivate,
+VSEmbed.Services,AppDispatcherInvoker,0,1,0,0,1,5,1,0,1,-1,2,1,Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokerPrivate' Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokablePrivate,VSEmbed.VsServiceProvider
+VSEmbed.Services,SimpleVsAppId,0,6,0,0,6,33,8,0,0,-1,1,1,VSEmbed.VsLoader,VSEmbed.VsServiceProvider
+VSEmbed.Services,SystemUIHostLocale,0,6,0,0,6,21,6,0,0,-1,0,1,,VSEmbed.VsServiceProvider
+VSEmbed.Services,SimpleVsWindowManager,0,2,0,0,2,15,4,0,1,-1,1,1,Microsoft.Internal.VisualStudio.Shell.Interop.IVsWindowManager2,VSEmbed.VsServiceProvider
+VSEmbed.Services,StubVsActivityLog,0,8,0,0,8,26,8,0,0,-1,0,1,,VSEmbed.VsServiceProvider
+VSEmbed.Services,StubVsShell,0,12,0,0,12,48,13,0,0,-1,0,1,,VSEmbed.VsServiceProvider
+VSEmbed.Services,StubVsFontAndColorCacheManager,0,5,0,0,5,19,5,0,0,-1,0,1,,VSEmbed.VsServiceProvider
+VSEmbed.Services,StubVsMonitorSelection,0,7,0,0,7,31,7,0,0,-1,0,1,,VSEmbed.VsServiceProvider
+Microsoft.Internal.VisualStudio.Shell.Interop,IVsWindowManager2,0,2,0,0,0,8,2,1,0,-1,0,1,,VSEmbed.Services.SimpleVsWindowManager
+Microsoft.Internal.VisualStudio.Shell.Interop,IVsInvokerPrivate,0,1,0,0,0,6,1,2,0,-1,1,2,Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokablePrivate,VSEmbed.Services.SyncContextInvoker' VSEmbed.Services.AppDispatcherInvoker
+Microsoft.Internal.VisualStudio.Shell.Interop,IVsInvokablePrivate,0,1,0,0,0,6,1,0,0,-1,0,3,,VSEmbed.Services.SyncContextInvoker' VSEmbed.Services.AppDispatcherInvoker' Microsoft.Internal.VisualStudio.Shell.Interop.IVsInvokerPrivate
+Microsoft.Internal.VisualStudio.Shell.Interop,IVsColorTheme,0,1,3,0,0,15,1,0,0,-1,2,0,Microsoft.Internal.VisualStudio.Shell.Interop.IVsColorEntry' Microsoft.Internal.VisualStudio.Shell.Interop.ColorName,
+Microsoft.Internal.VisualStudio.Shell.Interop,IVsColorEntry,0,0,7,0,0,11,0,0,0,-1,1,2,Microsoft.Internal.VisualStudio.Shell.Interop.ColorName,VSEmbed.VsThemeDictionary' Microsoft.Internal.VisualStudio.Shell.Interop.IVsColorTheme
+Microsoft.Internal.VisualStudio.Shell.Interop,ColorName,2,0,0,2,0,7,0,0,0,-1,0,3,,VSEmbed.VsThemeDictionary' Microsoft.Internal.VisualStudio.Shell.Interop.IVsColorTheme' Microsoft.Internal.VisualStudio.Shell.Interop.IVsColorEntry

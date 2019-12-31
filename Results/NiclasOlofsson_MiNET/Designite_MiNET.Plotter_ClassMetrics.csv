@@ -1,10 +1,14 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-MiNET.Plotter,Plot,0,0,2,0,0,5,0,0,0,-1,0,2,,MiNET.Plotter.PlotCommands' MiNET.Plotter.PlotManager
-MiNET.Plotter,PlotCommands,1,5,0,0,5,43,8,0,0,0.8,7,0,MiNET.Plotter.PlotManager' MiNET.Utils.BlockCoordinates' MiNET.Player' MiNET.Plotter.PlotWorldGenerator' MiNET.Plotter.PlotCoordinates' MiNET.Plotter.Plot' MiNET.Worlds.Level,
-MiNET.Plotter,PlotCoordinates,0,6,2,0,5,47,9,0,0,-1,0,2,,MiNET.Plotter.PlotCommands' MiNET.Plotter.PlotManager
-MiNET.Plotter,PlotManager,2,4,0,0,4,72,8,0,0,0.5,7,3,MiNET.Utils.BlockCoordinates' MiNET.Utils.BoundingBox' MiNET.Worlds.Level' MiNET.Player' MiNET.Plotter.PlotWorldGenerator' MiNET.Plotter.PlotCoordinates' MiNET.Plotter.Plot,MiNET.Plotter.PlotCommands' MiNET.Plotter.PlotterPlugin' MiNET.PlotterTest
-MiNET.Plotter,PlotterLevelManager,0,1,0,0,1,47,2,0,1,-1,6,0,MiNET.Worlds.Level' MiNET.Worlds.AnvilWorldProvider' MiNET.Utils.Config' MiNET.Worlds.GameMode' MiNET.Worlds.Difficulty' MiNET.Player,
-MiNET.Plotter,PlotterPlugin,1,2,0,0,1,15,2,0,2,1,4,0,MiNET.MiNetServer' MiNET.Plotter.PlotManager' MiNET.Plugins.PluginContext' MiNET.Plugins.PluginManager,
-MiNET.Plotter,PlotWorldGenerator,6,5,2,6,5,177,24,0,1,0.6,11,3,MiNET.Plotter.Pattern' MiNET.Blocks.Gravel' MiNET.Blocks.Dirt' MiNET.Blocks.Stone' MiNET.Blocks.Grass' MiNET.Worlds.ChunkColumn' MiNET.Blocks.Block' MiNET.Blocks.Leaves' MiNET.Utils.ChunkCoordinates' MiNET.Blocks.RedstoneBlock' MiNET.Blocks.LapisBlock,MiNET.Plotter.PlotCommands' MiNET.Plotter.PlotManager' MiNET.PlotterTest
-MiNET.Plotter,Pattern,2,5,2,0,4,49,7,0,0,0.6,4,1,MiNET.Plotter.BlockDataEntry' MiNET.Blocks.Block' MiNET.Blocks.BlockFactory' MiNET.Utils.BlockCoordinates,MiNET.Plotter.PlotWorldGenerator
-MiNET.Plotter,BlockDataEntry,0,0,4,0,0,7,0,0,0,-1,0,1,,MiNET.Plotter.Pattern
+MiNET.Plotter,PlotConfig,0,0,2,0,0,5,0,0,0,-1,2,1,MiNET.Plotter.PlotPlayer' MiNET.Plotter.Plot,MiNET.Plotter.PlotManager
+MiNET.Plotter,PlotPlayer,0,0,6,0,0,9,0,0,0,-1,0,3,,MiNET.Plotter.PlotConfig' MiNET.Plotter.PlotCommands' MiNET.Plotter.PlotManager
+MiNET.Plotter,Plot,0,0,9,0,0,12,0,0,0,-1,1,5,MiNET.Plotter.PlotCoordinates,MiNET.Plotter.PlotConfig' MiNET.Plotter.PlotterPlugin' MiNET.Plotter.PlotterPluginStore' MiNET.Plotter.PlotManager' MiNET.Plotter.PlotCommands
+MiNET.Plotter,UuidConverter,0,3,0,0,3,17,3,0,0,-1,0,1,,MiNET.Plotter.PlotManager
+MiNET.Plotter,PlotCommands,1,19,0,0,18,284,79,0,0,0.16,5,1,MiNET.Plotter.PlotPlayer' MiNET.Plotter.Plot' MiNET.Plotter.PlotCoordinates' MiNET.Plotter.PlotManager' MiNET.Plotter.PlotWorldGenerator,MiNET.Plotter.PlotterPlugin
+MiNET.Plotter,PlotCoordinates,0,6,2,0,5,52,9,0,0,-1,1,4,MiNET.Plotter.PlotWorldGenerator,MiNET.Plotter.Plot' MiNET.Plotter.PlotManager' MiNET.Plotter.PlotterPlugin' MiNET.Plotter.PlotCommands
+MiNET.Plotter,PlotManager,5,17,0,0,16,218,40,0,0,0,6,2,MiNET.Plotter.PlotConfig' MiNET.Plotter.PlotPlayer' MiNET.Plotter.Plot' MiNET.Plotter.UuidConverter' MiNET.Plotter.PlotCoordinates' MiNET.Plotter.PlotWorldGenerator,MiNET.Plotter.PlotterPlugin' MiNET.Plotter.PlotCommands
+MiNET.Plotter,PlotterLevelManager,0,1,0,0,1,49,2,0,1,-1,1,1,MiNET.Plotter.PlotWorldGenerator,MiNET.Plotter.PlotterPlugin
+MiNET.Plotter,PlotterPlugin,2,10,0,0,1,146,23,0,2,0.3,6,0,MiNET.Plotter.Plot' MiNET.Plotter.PlotCommands' MiNET.Plotter.PlotCoordinates' MiNET.Plotter.PlotManager' MiNET.Plotter.PlotterLevelManager' MiNET.Plotter.PlotterPluginStore,
+MiNET.Plotter,PlotterPluginStore,0,0,1,0,0,4,0,0,0,-1,1,1,MiNET.Plotter.Plot,MiNET.Plotter.PlotterPlugin
+MiNET.Plotter,PlotWorldGenerator,6,7,2,6,7,251,43,0,1,0.57,2,4,MiNET.Plotter.Pattern' MiNET.Plotter.BlockDataEntry,MiNET.Plotter.PlotCommands' MiNET.Plotter.PlotterLevelManager' MiNET.Plotter.PlotCoordinates' MiNET.Plotter.PlotManager
+MiNET.Plotter,Pattern,2,5,2,0,4,49,7,0,0,0.6,0,1,,MiNET.Plotter.PlotWorldGenerator
+MiNET.Plotter,BlockDataEntry,0,0,4,0,0,7,0,0,0,-1,0,1,,MiNET.Plotter.PlotWorldGenerator

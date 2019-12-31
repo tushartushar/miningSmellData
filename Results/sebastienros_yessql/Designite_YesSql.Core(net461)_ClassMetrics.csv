@@ -1,0 +1,71 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+YesSql.Collections,Collection,1,4,0,0,4,31,7,3,0,0.75,1,6,YesSql.Collections.CollectionHelper,YesSql.Collections.CollectionHelper' YesSql.Collections.CollectionExtensions' YesSql.Collections.DefaultCollection' YesSql.Collections.TypeCollection<T>' YesSql.Collections.NamedCollection' YesSql.Collections.CollectionStack
+YesSql.Collections,CollectionExtensions,0,1,0,0,1,12,2,0,0,-1,1,0,YesSql.Collections.Collection,
+YesSql.Collections,DefaultCollection,0,2,0,0,2,10,2,0,1,-1,1,1,YesSql.Collections.Collection,YesSql.Collections.CollectionStack
+YesSql.Collections,TypeCollection<T>,1,2,0,0,2,16,3,0,1,0,1,0,YesSql.Collections.Collection,
+YesSql.Collections,NamedCollection,1,2,0,0,2,16,3,0,1,0,1,0,YesSql.Collections.Collection,
+YesSql.Collections,CollectionHelper,1,2,2,0,0,66,3,0,0,0,3,11,YesSql.Collections.Collection' YesSql.Collections.ScopeLease' YesSql.Collections.CollectionStack,YesSql.Collections.Collection' YesSql.Commands.CreateDocumentCommand' YesSql.Commands.DeleteDocumentCommand' YesSql.Commands.CreateIndexCommand' YesSql.Commands.DeleteReduceIndexCommand' YesSql.Commands.UpdateDocumentCommand' YesSql.Commands.UpdateIndexCommand' YesSql.Store' YesSql.Sql.SchemaBuilder' YesSql.Session' YesSql.Services.QueryState
+YesSql.Collections,ScopeLease,1,2,0,0,2,12,2,0,0,0,0,1,,YesSql.Collections.CollectionHelper
+YesSql.Collections,CollectionStack,3,4,0,1,2,26,5,0,0,0.75,2,1,YesSql.Collections.Collection' YesSql.Collections.DefaultCollection,YesSql.Collections.CollectionHelper
+YesSql.Commands,CreateDocumentCommand,1,2,1,0,2,16,2,0,1,0,3,1,YesSql.Collections.CollectionHelper' YesSql.Commands.DocumentCommand' YesSql.Store,YesSql.Session
+YesSql.Commands,CreateIndexCommand,1,2,1,0,2,36,3,0,1,0,3,1,YesSql.Collections.CollectionHelper' YesSql.Commands.IndexCommand' YesSql.Store,YesSql.Session
+YesSql.Commands,DeleteDocumentCommand,1,2,1,0,2,16,2,0,1,0,3,1,YesSql.Collections.CollectionHelper' YesSql.Commands.DocumentCommand' YesSql.Store,YesSql.Session
+YesSql.Commands,DeleteMapIndexCommand,3,2,1,0,2,19,2,0,1,0,1,1,YesSql.Commands.IIndexCommand,YesSql.Session
+YesSql.Commands,DeleteReduceIndexCommand,0,2,1,0,2,19,2,0,1,-1,3,1,YesSql.Collections.CollectionHelper' YesSql.Commands.IndexCommand' YesSql.Store,YesSql.Session
+YesSql.Commands,DocumentCommand,2,2,2,0,2,18,2,3,1,1,1,3,YesSql.Commands.IIndexCommand,YesSql.Commands.DeleteDocumentCommand' YesSql.Commands.UpdateDocumentCommand' YesSql.Commands.CreateDocumentCommand
+YesSql.Commands,IIndexCommand,0,1,1,0,0,5,1,3,0,-1,0,4,,YesSql.Commands.DocumentCommand' YesSql.Commands.DeleteMapIndexCommand' YesSql.Commands.IndexCommand' YesSql.Session
+YesSql.Commands,IndexCommand,5,7,3,0,3,138,17,3,1,0.43,2,4,YesSql.Commands.IIndexCommand' YesSql.Commands.CompoundKey,YesSql.Commands.CreateIndexCommand' YesSql.Commands.DeleteReduceIndexCommand' YesSql.Commands.UpdateIndexCommand' YesSql.Store
+YesSql.Commands,CompoundKey,3,4,0,0,4,42,5,0,0,0.5,0,1,,YesSql.Commands.IndexCommand
+YesSql.Commands,UpdateDocumentCommand,2,2,1,0,2,27,3,0,2,0,3,1,YesSql.Collections.CollectionHelper' YesSql.Commands.DocumentCommand' YesSql.Store,YesSql.Session
+YesSql.Commands,UpdateIndexCommand,2,2,1,0,2,35,3,0,2,0,3,1,YesSql.Collections.CollectionHelper' YesSql.Commands.IndexCommand' YesSql.Store,YesSql.Session
+YesSql,Configuration,0,1,10,0,1,25,1,0,1,-1,3,3,YesSql.Data.DefaultIdentifierFactory' YesSql.Serialization.JsonContentSerializer' YesSql.Services.DefaultIdGenerator,YesSql.StoreFactory' Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions' YesSql.Store
+YesSql,ConfigurationExtensions,0,2,0,0,2,13,2,0,0,-1,2,0,YesSql.Services.DbBlockIdGenerator' YesSql.Services.DefaultIdGenerator,
+YesSql,IndexProviderRegisterExtensions,0,5,0,0,5,34,7,0,0,-1,0,0,,
+YesSql,Session,19,32,1,0,15,874,123,0,1,0,16,2,YesSql.Collections.CollectionHelper' YesSql.Commands.CreateDocumentCommand' YesSql.Commands.CreateIndexCommand' YesSql.Commands.DeleteDocumentCommand' YesSql.Commands.DeleteMapIndexCommand' YesSql.Commands.DeleteReduceIndexCommand' YesSql.Commands.IIndexCommand' YesSql.Commands.UpdateDocumentCommand' YesSql.Commands.UpdateIndexCommand' YesSql.Store' YesSql.Data.MapState' YesSql.Data.MapStates' YesSql.Data.WorkerQueryKey' YesSql.Indexes.IdentityMap' YesSql.Services.DefaultQuery' YesSql.Services.Query<T>,YesSql.Store' YesSql.Services.DefaultQuery
+YesSql,IdString,2,0,0,2,0,7,0,0,0,-1,0,0,,
+YesSql,Store,10,19,3,1,9,312,32,0,1,0.47,9,10,YesSql.Collections.CollectionHelper' YesSql.Commands.IndexCommand' YesSql.Configuration' YesSql.Session' YesSql.Data.WorkerQueryKey' YesSql.Services.QueryState' YesSql.Services.TypeService' YesSql.Sql.SchemaBuilder' Roslyn.Utilities.ObjectPool<T>,YesSql.Commands.CreateDocumentCommand' YesSql.Commands.DeleteDocumentCommand' YesSql.Commands.CreateIndexCommand' YesSql.Commands.UpdateDocumentCommand' YesSql.Commands.DeleteReduceIndexCommand' YesSql.Commands.UpdateIndexCommand' YesSql.StoreFactory' YesSql.Sql.SchemaBuilder' YesSql.Session' YesSql.Services.QueryState
+YesSql,StoreFactory,0,2,0,0,2,23,2,0,0,-1,2,1,YesSql.Configuration' YesSql.Store,Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+YesSql.Data,DefaultIdentifierFactory,0,1,0,0,1,19,2,0,1,-1,1,1,YesSql.Data.IdAccessor<T;TU>,YesSql.Configuration
+YesSql.Data,IdAccessor<T;TU>,2,3,0,0,1,18,3,0,1,0,0,1,,YesSql.Data.DefaultIdentifierFactory
+YesSql.Data,MapState,0,1,4,0,1,14,1,0,0,-1,1,1,YesSql.Data.MapStates,YesSql.Session
+YesSql.Data,MapStates,0,0,0,0,0,6,0,0,0,-1,0,2,,YesSql.Data.MapState' YesSql.Session
+YesSql.Data,WorkerQueryKey,4,6,0,0,5,138,25,0,0,0.33,0,3,,YesSql.Store' YesSql.Session' YesSql.Services.DefaultQuery
+YesSql.Indexes,IdentityMap,3,9,0,0,9,47,9,0,0,0,0,1,,YesSql.Session
+Microsoft.Extensions.DependencyInjection,ServiceCollectionExtensions,0,1,0,0,1,20,3,0,0,-1,2,0,YesSql.Configuration' YesSql.StoreFactory,
+YesSql.Serialization,JsonContentSerializer,1,3,0,0,3,19,3,0,1,0,0,1,,YesSql.Configuration
+YesSql.Services,DbBlockIdGenerator,10,6,1,1,5,209,10,0,1,0.33,2,1,YesSql.Services.Range' YesSql.Sql.SchemaBuilder,YesSql.ConfigurationExtensions
+YesSql.Services,Range,4,3,0,4,3,23,3,0,0,0,0,1,,YesSql.Services.DbBlockIdGenerator
+YesSql.Services,DefaultIdGenerator,4,3,0,0,3,49,4,0,1,0,0,2,,YesSql.ConfigurationExtensions' YesSql.Configuration
+YesSql.Services,QueryState,6,2,0,6,2,27,2,0,0,0,2,2,YesSql.Collections.CollectionHelper' YesSql.Store,YesSql.Store' YesSql.Services.DefaultQuery
+YesSql.Services,DefaultQuery,5,24,0,1,6,1071,87,0,1,0,8,1,YesSql.Session' YesSql.Data.WorkerQueryKey' YesSql.Services.QueryState' YesSql.Services.Query<T>' YesSql.Services.QueryIndex<T>' YesSql.Services.Query<T;TIndex>' YesSql.Services.DefaultQueryExtensions' YesSql.Services.DefaultQueryExtensionsIndex,YesSql.Session
+YesSql.Services,Query<T>,1,11,0,0,2,190,23,0,1,0.36,0,2,,YesSql.Session' YesSql.Services.DefaultQuery
+YesSql.Services,QueryIndex<T>,0,17,0,0,1,100,20,0,1,-1,0,1,,YesSql.Services.DefaultQuery
+YesSql.Services,Query<T;TIndex>,0,13,0,0,1,69,13,0,1,-1,0,1,,YesSql.Services.DefaultQuery
+YesSql.Services,DefaultQueryExtensions,0,2,0,0,2,11,2,0,0,-1,0,1,,YesSql.Services.DefaultQuery
+YesSql.Services,DefaultQueryExtensionsIndex,0,2,0,0,2,11,2,0,0,-1,0,1,,YesSql.Services.DefaultQuery
+YesSql.Services,TypeService,2,1,0,0,0,45,1,0,1,0,0,1,,YesSql.Store
+System,EnumerableExtensions,0,1,0,0,1,17,3,0,0,-1,0,0,,
+YesSql.Sql,BaseCommandInterpreter,2,15,0,0,14,242,41,4,1,0.13,8,0,YesSql.Sql.Schema.AddColumnCommand' YesSql.Sql.Schema.AddIndexCommand' YesSql.Sql.Schema.AlterColumnCommand' YesSql.Sql.Schema.CreateColumnCommand' YesSql.Sql.Schema.DropColumnCommand' YesSql.Sql.Schema.DropIndexCommand' YesSql.Sql.Schema.RenameColumnCommand' YesSql.Sql.Schema.SchemaCommand,
+YesSql.Sql,SchemaBuilderExtensions,0,1,0,0,1,7,1,0,0,-1,0,0,,
+YesSql.Sql,MappingFunction,1,2,0,0,2,12,2,0,1,0,0,0,,
+YesSql.Sql,SchemaBuilder,2,15,5,0,13,257,18,0,1,0,7,2,YesSql.Collections.CollectionHelper' YesSql.Store' YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.Schema.CreateForeignKeyCommand' YesSql.Sql.Schema.CreateTableCommand' YesSql.Sql.Schema.DropForeignKeyCommand' YesSql.Sql.Schema.DropTableCommand,YesSql.Services.DbBlockIdGenerator' YesSql.Store
+YesSql.Sql,TemplateFunction,1,2,0,0,2,12,2,0,1,0,0,0,,
+YesSql.Sql.Schema,AddColumnCommand,0,1,0,0,1,6,1,0,2,-1,1,2,YesSql.Sql.Schema.CreateColumnCommand,YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,AddIndexCommand,0,1,2,0,1,11,1,0,2,-1,1,2,YesSql.Sql.Schema.TableCommand,YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,AlterColumnCommand,0,6,0,0,6,33,6,0,2,-1,1,2,YesSql.Sql.Schema.ColumnCommand,YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,AlterTableCommand,2,8,0,0,8,58,10,0,2,0.62,8,1,YesSql.Sql.Schema.AddColumnCommand' YesSql.Sql.Schema.AddIndexCommand' YesSql.Sql.Schema.AlterColumnCommand' YesSql.Sql.Schema.DropColumnCommand' YesSql.Sql.Schema.DropIndexCommand' YesSql.Sql.Schema.RenameColumnCommand' YesSql.Sql.Schema.SchemaCommand' YesSql.Sql.Schema.SchemaUtils,YesSql.Sql.SchemaBuilder
+YesSql.Sql.Schema,ColumnCommand,0,5,6,0,5,37,5,4,2,-1,1,4,YesSql.Sql.Schema.TableCommand,YesSql.Sql.Schema.AlterColumnCommand' YesSql.Sql.Schema.CreateColumnCommand' YesSql.Sql.Schema.DropColumnCommand' YesSql.Sql.Schema.RenameColumnCommand
+YesSql.Sql.Schema,CreateColumnCommand,0,13,4,0,13,75,13,1,3,-1,1,3,YesSql.Sql.Schema.ColumnCommand,YesSql.Sql.Schema.AddColumnCommand' YesSql.Sql.Schema.CreateTableCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,CreateForeignKeyCommand,0,1,4,0,1,14,1,0,2,-1,1,1,YesSql.Sql.Schema.SchemaCommand,YesSql.Sql.SchemaBuilder
+YesSql.Sql.Schema,CreateTableCommand,0,3,0,0,3,20,3,0,2,-1,3,1,YesSql.Sql.Schema.CreateColumnCommand' YesSql.Sql.Schema.SchemaCommand' YesSql.Sql.Schema.SchemaUtils,YesSql.Sql.SchemaBuilder
+YesSql.Sql.Schema,DropColumnCommand,0,1,0,0,1,7,1,0,3,-1,1,2,YesSql.Sql.Schema.ColumnCommand,YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,DropForeignKeyCommand,0,1,1,0,1,9,1,0,2,-1,1,1,YesSql.Sql.Schema.SchemaCommand,YesSql.Sql.SchemaBuilder
+YesSql.Sql.Schema,DropIndexCommand,0,1,1,0,1,9,1,0,2,-1,1,2,YesSql.Sql.Schema.TableCommand,YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,DropTableCommand,0,1,0,0,1,7,1,0,2,-1,1,1,YesSql.Sql.Schema.SchemaCommand,YesSql.Sql.SchemaBuilder
+YesSql.Sql.Schema,RenameColumnCommand,0,1,1,0,1,8,1,0,3,-1,1,2,YesSql.Sql.Schema.ColumnCommand,YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,SchemaCommand,0,2,3,0,1,17,2,6,1,-1,0,7,,YesSql.Sql.Schema.CreateForeignKeyCommand' YesSql.Sql.Schema.AlterTableCommand' YesSql.Sql.Schema.CreateTableCommand' YesSql.Sql.Schema.DropForeignKeyCommand' YesSql.Sql.Schema.DropTableCommand' YesSql.Sql.Schema.SqlStatementCommand' YesSql.Sql.BaseCommandInterpreter
+YesSql.Sql.Schema,SchemaUtils,1,1,0,0,1,43,4,0,0,0,0,2,,YesSql.Sql.Schema.CreateTableCommand' YesSql.Sql.Schema.AlterTableCommand
+YesSql.Sql.Schema,SqlStatementCommand,1,2,2,0,2,17,2,0,2,0,1,0,YesSql.Sql.Schema.SchemaCommand,
+YesSql.Sql.Schema,TableCommand,0,1,2,0,1,9,1,3,2,-1,0,3,,YesSql.Sql.Schema.DropIndexCommand' YesSql.Sql.Schema.AddIndexCommand' YesSql.Sql.Schema.ColumnCommand
+Roslyn.Utilities,ObjectPool<T>,3,9,0,0,0,204,18,0,0,0.33,1,1,Roslyn.Utilities.Element,YesSql.Store
+Roslyn.Utilities,Element,1,0,0,0,0,5,0,0,0,-1,0,1,,Roslyn.Utilities.ObjectPool<T>

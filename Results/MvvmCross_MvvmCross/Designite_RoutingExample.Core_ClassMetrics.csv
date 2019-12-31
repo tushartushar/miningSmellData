@@ -1,0 +1,16 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+RoutingExample.Core,App,0,1,0,0,1,11,1,0,0,-1,1,0,RoutingExample.Core.AppStart,
+RoutingExample.Core,User,0,2,2,0,2,13,2,0,0,-1,0,4,,RoutingExample.Core.ViewModels.MainViewModel' RoutingExample.Core.ViewModels.SecondHostViewModel' RoutingExample.Core.ViewModels.TestAViewModel' RoutingExample.Core.ViewModels.TestBViewModel
+RoutingExample.Core,AppStart,1,2,0,0,2,18,2,0,0,0,1,1,RoutingExample.Core.ViewModels.MainViewModel,RoutingExample.Core.App
+RoutingExample.Core.RoutingFacades,RandomRoutingFacade,0,1,0,0,1,10,1,0,0,-1,2,0,RoutingExample.Core.ViewModels.TestBViewModel' RoutingExample.Core.ViewModels.TestAViewModel,
+RoutingExample.Core.RoutingFacades,PrePopulateRoutingFacade,0,1,0,0,1,15,2,0,0,-1,1,0,RoutingExample.Core.ViewModels.TestCViewModel,
+RoutingExample.Core.ViewModels,MainViewModel,6,3,5,0,3,76,3,0,0,1,4,2,RoutingExample.Core.User' RoutingExample.Core.ViewModels.TestBViewModel' RoutingExample.Core.ViewModels.ViewModelA' RoutingExample.Core.ViewModels.ViewModelDialogA,RoutingExample.Core.AppStart' RoutingExample.Core.ViewModels.TestBViewModel
+RoutingExample.Core.ViewModels,TestBViewModel,3,3,5,0,3,32,3,0,0,0.67,3,4,RoutingExample.Core.User' RoutingExample.Core.ViewModels.MainViewModel' RoutingExample.Core.ViewModels.TestAViewModel,RoutingExample.Core.ViewModels.TestAViewModel' RoutingExample.Core.ViewModels.MainViewModel' RoutingExample.Core.RoutingFacades.RandomRoutingFacade' RoutingExample.Core.ViewModels.SecondHostViewModel
+RoutingExample.Core.ViewModels,TestAViewModel,0,3,1,0,3,16,3,0,0,-1,2,3,RoutingExample.Core.User' RoutingExample.Core.ViewModels.TestBViewModel,RoutingExample.Core.RoutingFacades.RandomRoutingFacade' RoutingExample.Core.ViewModels.TestBViewModel' RoutingExample.Core.ViewModels.SecondHostViewModel
+RoutingExample.Core.ViewModels,SecondHostViewModel,4,1,3,0,1,44,1,0,0,0,3,0,RoutingExample.Core.User' RoutingExample.Core.ViewModels.TestBViewModel' RoutingExample.Core.ViewModels.TestAViewModel,
+RoutingExample.Core.ViewModels,ViewModelA,5,2,5,0,2,40,2,0,0,1,2,1,RoutingExample.Core.ViewModels.ViewModelB' RoutingExample.Core.ViewModels.ViewModelNested,RoutingExample.Core.ViewModels.MainViewModel
+RoutingExample.Core.ViewModels,ViewModelB,6,2,6,0,2,47,2,0,0,1,1,3,RoutingExample.Core.ViewModels.ViewModelC,RoutingExample.Core.ViewModels.ViewModelA' RoutingExample.Core.ViewModels.ViewModelNested' RoutingExample.Core.ViewModels.ViewModelDialogA
+RoutingExample.Core.ViewModels,ViewModelC,2,2,3,0,2,23,2,0,0,1,0,1,,RoutingExample.Core.ViewModels.ViewModelB
+RoutingExample.Core.ViewModels,TestCViewModel,2,2,2,0,2,21,2,0,0,1,0,1,,RoutingExample.Core.RoutingFacades.PrePopulateRoutingFacade
+RoutingExample.Core.ViewModels,ViewModelDialogA,6,2,6,0,2,46,2,0,0,1,1,1,RoutingExample.Core.ViewModels.ViewModelB,RoutingExample.Core.ViewModels.MainViewModel
+RoutingExample.Core.ViewModels,ViewModelNested,5,1,4,0,1,33,1,0,0,0,1,1,RoutingExample.Core.ViewModels.ViewModelB,RoutingExample.Core.ViewModels.ViewModelA

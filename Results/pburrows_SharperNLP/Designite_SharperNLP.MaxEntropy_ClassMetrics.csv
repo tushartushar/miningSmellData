@@ -1,12 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-SharperNLP.MaxEntropy.MaxEnt,BasicContextGenerator,1,2,0,0,2,33,3,0,1,0,0,0,,
-SharperNLP.MaxEntropy.MaxEnt,BasicEventStream,4,6,0,0,4,87,10,0,1,0.33,3,0,SharperNLP.MaxEntropy.MaxEnt.IContextGenerator' SharperNLP.MaxEntropy.MaxEnt.IDataStream' SharperNLP.MaxEntropy.Model.Event,
+SharperNLP.MaxEntropy.MaxEnt,BasicContextGenerator,1,2,0,0,2,33,3,0,1,0,1,1,SharperNLP.MaxEntropy.MaxEnt.IContextGenerator,SharperNLP.MaxEntropy.MaxEnt.BasicEventStream
+SharperNLP.MaxEntropy.MaxEnt,BasicEventStream,4,6,0,0,4,87,10,0,1,0.33,5,0,SharperNLP.MaxEntropy.MaxEnt.BasicContextGenerator' SharperNLP.MaxEntropy.MaxEnt.IContextGenerator' SharperNLP.MaxEntropy.MaxEnt.IDataStream' SharperNLP.MaxEntropy.Model.AbstractEventStream' SharperNLP.MaxEntropy.Model.Event,
 SharperNLP.MaxEntropy.MaxEnt,BinToAscii,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.MaxEnt,IContextGenerator,0,1,0,0,0,9,1,1,0,-1,0,1,,SharperNLP.MaxEntropy.MaxEnt.BasicEventStream
+SharperNLP.MaxEntropy.MaxEnt,IContextGenerator,0,1,0,0,0,9,1,1,0,-1,0,2,,SharperNLP.MaxEntropy.MaxEnt.BasicEventStream' SharperNLP.MaxEntropy.MaxEnt.BasicContextGenerator
 SharperNLP.MaxEntropy.MaxEnt,Counter,0,3,1,0,3,38,3,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.MaxEnt,IDataStream,0,2,0,0,0,17,2,0,0,-1,0,1,,SharperNLP.MaxEntropy.MaxEnt.BasicEventStream
+SharperNLP.MaxEntropy.MaxEnt,IDataStream,0,2,0,0,0,18,2,0,0,-1,0,1,,SharperNLP.MaxEntropy.MaxEnt.BasicEventStream
 SharperNLP.MaxEntropy.MaxEnt,DomainToModelMap,2,3,1,0,3,66,5,0,0,0,2,0,SharperNLP.MaxEntropy.MaxEnt.IModelDomain' SharperNLP.MaxEntropy.Model.IMaxentModel,
-SharperNLP.MaxEntropy.MaxEnt,IEvalable,0,2,1,0,0,33,2,0,0,-1,1,0,SharperNLP.MaxEntropy.Model.IMaxentModel,
+SharperNLP.MaxEntropy.MaxEnt,IEvalable,0,2,1,0,0,39,2,0,0,-1,2,0,SharperNLP.MaxEntropy.Model.IEventCollector' SharperNLP.MaxEntropy.Model.IMaxentModel,
 SharperNLP.MaxEntropy.MaxEnt,GIS,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.MaxEnt,GISModel,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.MaxEnt,GISTrainer,0,0,0,0,0,3,0,0,0,-1,0,0,,
@@ -33,41 +33,41 @@ SharperNLP.MaxEntropy.MaxEnt.Io,PlainTextGISModelWriter,0,0,0,0,0,3,0,0,0,-1,0,0
 SharperNLP.MaxEntropy.MaxEnt.Io,PooledGISModelReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.MaxEnt.Io,SuffixSensitiveGISModelReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.MaxEnt.Io,SuffixSensitiveGISModelWriter,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,AbstractDataIndexer,0,6,8,0,0,131,16,1,1,-1,1,0,SharperNLP.MaxEntropy.Model.ComparableEvent,
-SharperNLP.MaxEntropy.Model,AbstractEventStream,0,4,0,0,4,23,4,1,1,-1,0,0,,
-SharperNLP.MaxEntropy.Model,AbstractModel,0,11,7,0,10,186,15,0,1,-1,1,1,SharperNLP.MaxEntropy.Model.Context,SharperNLP.MaxEntropy.Model.ISequenceStream
-SharperNLP.MaxEntropy.Model,ModelType,0,0,0,0,0,5,0,0,0,-1,0,0,,
+SharperNLP.MaxEntropy.Model,AbstractDataIndexer,0,6,8,0,0,131,16,1,1,-1,2,1,SharperNLP.MaxEntropy.Model.ComparableEvent' SharperNLP.MaxEntropy.Model.IDataIndexer,SharperNLP.MaxEntropy.Model.OnePassDataIndexer
+SharperNLP.MaxEntropy.Model,AbstractEventStream,0,4,0,0,4,23,4,1,1,-1,2,1,SharperNLP.MaxEntropy.Model.Event' SharperNLP.MaxEntropy.Model.IEventStream,SharperNLP.MaxEntropy.MaxEnt.BasicEventStream
+SharperNLP.MaxEntropy.Model,AbstractModel,0,11,7,0,10,186,15,0,1,-1,6,1,SharperNLP.MaxEntropy.Model.ModelType' SharperNLP.MaxEntropy.Model.Context' SharperNLP.MaxEntropy.Model.EvalParameters' SharperNLP.MaxEntropy.Model.IndexHashTable<T>' SharperNLP.MaxEntropy.Model.IMaxentModel' SharperNLP.MaxEntropy.Model.IPrior,SharperNLP.MaxEntropy.Model.ISequenceStream
+SharperNLP.MaxEntropy.Model,ModelType,0,0,0,0,0,5,0,0,0,-1,0,1,,SharperNLP.MaxEntropy.Model.AbstractModel
 SharperNLP.MaxEntropy.Model,AbstractModelReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Model,AbstractModelWriter,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Model,BinaryFileDataReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,ComparableEvent,0,5,4,0,5,158,23,0,0,-1,0,1,,SharperNLP.MaxEntropy.Model.AbstractDataIndexer
+SharperNLP.MaxEntropy.Model,ComparableEvent,0,5,4,0,5,158,23,0,0,-1,0,2,,SharperNLP.MaxEntropy.Model.AbstractDataIndexer' SharperNLP.MaxEntropy.Model.OnePassDataIndexer
 SharperNLP.MaxEntropy.Model,ComparablePredicate,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,Context,0,1,2,0,1,32,1,1,0,-1,0,2,,SharperNLP.MaxEntropy.Model.AbstractModel' SharperNLP.MaxEntropy.Model.EvalParameters
-SharperNLP.MaxEntropy.Model,IDataIndexer,0,0,8,0,0,42,0,1,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,IDataReader,0,3,0,0,0,18,3,0,0,-1,0,0,,
+SharperNLP.MaxEntropy.Model,Context,0,1,2,0,1,32,1,1,0,-1,0,3,,SharperNLP.MaxEntropy.Model.MutableContext' SharperNLP.MaxEntropy.Model.EvalParameters' SharperNLP.MaxEntropy.Model.AbstractModel
+SharperNLP.MaxEntropy.Model,IDataIndexer,0,0,8,0,0,49,0,1,0,-1,0,1,,SharperNLP.MaxEntropy.Model.AbstractDataIndexer
+SharperNLP.MaxEntropy.Model,IDataReader,0,3,0,0,0,20,3,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Model,DynamicEvalParameters,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,EvalParameters,2,2,5,0,2,79,3,0,0,1,1,0,SharperNLP.MaxEntropy.Model.Context,
-SharperNLP.MaxEntropy.Model,Event,0,3,3,0,3,49,5,0,0,-1,0,4,,SharperNLP.MaxEntropy.MaxEnt.BasicEventStream' SharperNLP.MaxEntropy.Model.OnePassDataIndexer' SharperNLP.MaxEntropy.Model.Sequence<T>' SharperNLP.MaxEntropy.Model.SequenceStreamEventStream
-SharperNLP.MaxEntropy.Model,IEventCollector,0,1,1,0,0,21,1,0,0,-1,0,0,,
+SharperNLP.MaxEntropy.Model,EvalParameters,2,2,5,0,2,79,3,0,0,1,1,1,SharperNLP.MaxEntropy.Model.Context,SharperNLP.MaxEntropy.Model.AbstractModel
+SharperNLP.MaxEntropy.Model,Event,0,3,3,0,3,49,5,0,0,-1,0,8,,SharperNLP.MaxEntropy.Model.AbstractEventStream' SharperNLP.MaxEntropy.Model.Sequence<T>' SharperNLP.MaxEntropy.Model.SequenceStreamEventStream' SharperNLP.MaxEntropy.Model.OnePassDataIndexer' SharperNLP.MaxEntropy.Model.ISequenceStream' SharperNLP.MaxEntropy.MaxEnt.BasicEventStream' SharperNLP.MaxEntropy.Model.IEventStream' SharperNLP.MaxEntropy.Model.IEventCollector
+SharperNLP.MaxEntropy.Model,IEventCollector,0,1,1,0,0,26,1,0,0,-1,1,1,SharperNLP.MaxEntropy.Model.Event,SharperNLP.MaxEntropy.MaxEnt.IEvalable
 SharperNLP.MaxEntropy.Model,EventCollectorAsStream,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,IEventStream,0,2,0,0,0,21,2,2,0,-1,0,1,,SharperNLP.MaxEntropy.Model.OnePassDataIndexer
+SharperNLP.MaxEntropy.Model,IEventStream,0,2,0,0,0,22,2,2,0,-1,1,3,SharperNLP.MaxEntropy.Model.Event,SharperNLP.MaxEntropy.Model.AbstractEventStream' SharperNLP.MaxEntropy.Model.SequenceStreamEventStream' SharperNLP.MaxEntropy.Model.OnePassDataIndexer
 SharperNLP.MaxEntropy.Model,FileEventStream,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Model,GenericModelReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Model,GenericModelWriter,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,IndexHashTable<T>,3,4,1,0,2,120,14,0,0,0.5,0,0,,
-SharperNLP.MaxEntropy.Model,IMaxentModel,0,7,2,0,0,70,7,1,0,-1,0,2,,SharperNLP.MaxEntropy.MaxEnt.DomainToModelMap' SharperNLP.MaxEntropy.MaxEnt.IEvalable
-SharperNLP.MaxEntropy.Model,MutableContext,0,4,0,0,4,47,4,0,1,-1,0,0,,
+SharperNLP.MaxEntropy.Model,IndexHashTable<T>,3,4,1,0,2,120,14,0,0,0.5,0,1,,SharperNLP.MaxEntropy.Model.AbstractModel
+SharperNLP.MaxEntropy.Model,IMaxentModel,0,7,2,0,0,82,7,1,0,-1,0,3,,SharperNLP.MaxEntropy.Model.AbstractModel' SharperNLP.MaxEntropy.MaxEnt.IEvalable' SharperNLP.MaxEntropy.MaxEnt.DomainToModelMap
+SharperNLP.MaxEntropy.Model,MutableContext,0,4,0,0,4,47,4,0,1,-1,1,0,SharperNLP.MaxEntropy.Model.Context,
 SharperNLP.MaxEntropy.Model,ObjectDataReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,OnePassDataIndexer,0,5,0,0,1,123,12,0,2,-1,2,0,SharperNLP.MaxEntropy.Model.IEventStream' SharperNLP.MaxEntropy.Model.Event,
+SharperNLP.MaxEntropy.Model,OnePassDataIndexer,0,5,0,0,1,123,12,0,2,-1,4,0,SharperNLP.MaxEntropy.Model.AbstractDataIndexer' SharperNLP.MaxEntropy.Model.ComparableEvent' SharperNLP.MaxEntropy.Model.Event' SharperNLP.MaxEntropy.Model.IEventStream,
 SharperNLP.MaxEntropy.Model,OnePassRealValueDataIndexer,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Model,PlainTextFileDataReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,IPrior,0,3,0,0,0,34,3,1,0,-1,0,0,,
+SharperNLP.MaxEntropy.Model,IPrior,0,3,0,0,0,36,3,1,0,-1,0,2,,SharperNLP.MaxEntropy.Model.UniformPrior' SharperNLP.MaxEntropy.Model.AbstractModel
 SharperNLP.MaxEntropy.Model,RealValueFileEventStream,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,Sequence<T>,0,1,2,0,1,28,1,0,0,-1,1,0,SharperNLP.MaxEntropy.Model.Event,
-SharperNLP.MaxEntropy.Model,ISequenceStream,0,1,0,0,0,10,1,0,0,-1,1,1,SharperNLP.MaxEntropy.Model.AbstractModel,SharperNLP.MaxEntropy.Model.SequenceStreamEventStream
-SharperNLP.MaxEntropy.Model,SequenceStreamEventStream,1,4,2,0,4,82,5,0,1,0.75,2,0,SharperNLP.MaxEntropy.Model.ISequenceStream' SharperNLP.MaxEntropy.Model.Event,
+SharperNLP.MaxEntropy.Model,Sequence<T>,0,1,2,0,1,28,1,0,0,-1,2,2,SharperNLP.MaxEntropy.Model.Event' SharperNLP.MaxEntropy.Model.ISequenceStream,SharperNLP.MaxEntropy.Model.SequenceStreamEventStream' SharperNLP.MaxEntropy.Model.ISequenceStream
+SharperNLP.MaxEntropy.Model,ISequenceStream,0,1,0,0,0,10,1,0,0,-1,3,2,SharperNLP.MaxEntropy.Model.AbstractModel' SharperNLP.MaxEntropy.Model.Event' SharperNLP.MaxEntropy.Model.Sequence<T>,SharperNLP.MaxEntropy.Model.SequenceStreamEventStream' SharperNLP.MaxEntropy.Model.Sequence<T>
+SharperNLP.MaxEntropy.Model,SequenceStreamEventStream,1,4,2,0,4,82,6,0,1,0.75,4,0,SharperNLP.MaxEntropy.Model.Event' SharperNLP.MaxEntropy.Model.IEventStream' SharperNLP.MaxEntropy.Model.Sequence<T>' SharperNLP.MaxEntropy.Model.ISequenceStream,
 SharperNLP.MaxEntropy.Model,TwoPassDataIndexer,0,0,0,0,0,3,0,0,0,-1,0,0,,
-SharperNLP.MaxEntropy.Model,UniformPrior,2,3,0,0,3,49,4,0,1,0,0,0,,
+SharperNLP.MaxEntropy.Model,UniformPrior,2,3,0,0,3,49,4,0,1,0,1,0,SharperNLP.MaxEntropy.Model.IPrior,
 SharperNLP.MaxEntropy.Perceptron,BinaryPerceptronModelReader,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Perceptron,BinaryPerceptronModelWriter,0,0,0,0,0,3,0,0,0,-1,0,0,,
 SharperNLP.MaxEntropy.Perceptron,PerceptronModel,0,0,0,0,0,3,0,0,0,-1,0,0,,

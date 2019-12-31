@@ -1,0 +1,150 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+TradeLink.Common,Account,4,7,5,0,7,45,8,0,0,0.57,0,1,,TradeLink.Common.Broker
+TradeLink.Common,AsyncResponse,16,9,8,1,5,272,37,0,0,0.33,1,0,TradeLink.Common.RingBuffer,
+TradeLink.Common,BarImpl,12,26,18,0,25,303,39,0,1,0.38,3,8,TradeLink.Common.BarRequest' TradeLink.Common.TickImpl' TradeLink.Common.Util,TradeLink.Common.MessageTracker' TradeLink.Common.BrokerFeed' TradeLink.Common.VolIntervalData' TradeLink.Common.TimeIntervalData' TradeLink.Common.TikUtil' TradeLink.Common.TickIntervalData' TradeLink.Common.Calc' TradeLink.Common.BarListImpl
+TradeLink.Common,BarRequest,9,2,2,9,2,34,2,0,0,0,1,3,TradeLink.Common.Util,TradeLink.Common.MessageTracker' TradeLink.Common.BrokerFeed' TradeLink.Common.BarImpl
+TradeLink.Common,IntervalData,0,16,0,0,0,20,16,3,0,-1,0,4,,TradeLink.Common.TickIntervalData' TradeLink.Common.TimeIntervalData' TradeLink.Common.VolIntervalData' TradeLink.Common.BarListImpl
+TradeLink.Common,BarListImpl,18,100,13,4,89,1118,194,0,1,0.18,15,4,TradeLink.Common.BarImpl' TradeLink.Common.IntervalData' TradeLink.Common.BarListDownload' TradeLink.Common.BarListTracker' TradeLink.Common.TickIntervalData' TradeLink.Common.TimeIntervalData' TradeLink.Common.VolIntervalData' TradeLink.Common.Calc' TradeLink.Common.TaskStatus' TradeLink.Common.eSigTick' TradeLink.Common.TikConst' TradeLink.Common.TikWriter' TradeLink.Common.SecurityImpl' TradeLink.Common.TickImpl' TradeLink.Common.Util,TradeLink.Common.Calc' TradeLink.Common.MessageTracker' TradeLink.Common.SparkLine' TradeLink.Common.BarListTracker
+TradeLink.Common,BarListDownload,3,1,1,3,1,13,1,0,0,0,0,1,,TradeLink.Common.BarListImpl
+TradeLink.Common,BarListTracker,4,13,5,0,12,175,20,0,1,0.38,1,2,TradeLink.Common.BarListImpl,TradeLink.Common.MessageTracker' TradeLink.Common.BarListImpl
+TradeLink.Common,TickIntervalData,12,19,0,0,18,155,36,0,1,0,2,1,TradeLink.Common.BarImpl' TradeLink.Common.IntervalData,TradeLink.Common.BarListImpl
+TradeLink.Common,TimeIntervalData,13,20,0,0,18,163,37,0,1,0.1,3,1,TradeLink.Common.BarImpl' TradeLink.Common.IntervalData' TradeLink.Common.Util,TradeLink.Common.BarListImpl
+TradeLink.Common,VolIntervalData,12,19,0,0,18,148,36,0,1,0.11,2,1,TradeLink.Common.BarImpl' TradeLink.Common.IntervalData,TradeLink.Common.BarListImpl
+TradeLink.Common,Book,12,7,1,11,7,109,20,0,1,0.43,0,3,,TradeLink.Common.MessageTracker' TradeLink.Common.BrokerFeed' TradeLink.Common.BookTracker
+TradeLink.Common,BookTracker,5,2,1,0,2,89,10,0,1,0,1,0,TradeLink.Common.Book,
+TradeLink.Common,BrokerFeed,30,55,20,0,26,784,141,0,1,0.25,7,0,TradeLink.Common.BarImpl' TradeLink.Common.BarRequest' TradeLink.Common.Book' TradeLink.Common.RingBuffer' TradeLink.Common.TLClient_IP' TradeLink.Common.IPUtil' TradeLink.Common.TLClient_WM,
+TradeLink.Common,Calc,1,213,0,0,203,2358,365,0,0,0.44,8,9,TradeLink.Common.BarImpl' TradeLink.Common.BarListImpl' TradeLink.Common.GenericTracker<T>' TradeLink.Common.LimitOrder' TradeLink.Common.OffsetInfo' TradeLink.Common.PositionTracker' TradeLink.Common.OrderImpl' TradeLink.Common.StopOrder,TradeLink.Common.PositionImpl' TradeLink.Common.MarketOrderFlat' TradeLink.Common.OffsetInfo' TradeLink.Common.SparkLine' TradeLink.Common.OversellTracker' TradeLink.Common.Broker' TradeLink.Common.OffsetTracker' TradeLink.Common.Util' TradeLink.Common.BarListImpl
+TradeLink.Common,Broker,10,33,5,1,31,520,102,0,0,0.06,6,3,TradeLink.Common.Account' TradeLink.Common.Calc' TradeLink.Common.FillMode' TradeLink.Common.OrderImpl' TradeLink.Common.PositionImpl' TradeLink.Common.TradeImpl,TradeLink.Common.GauntletEngine' TradeLink.Common.MultiSimImpl' TradeLink.Common.SingleSimImpl
+TradeLink.Common,FillMode,0,0,0,0,0,5,0,0,0,-1,0,1,,TradeLink.Common.Broker
+TradeLink.Common,SendorderTracker,17,10,9,0,4,250,36,0,0,0.2,5,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.GenericTracker' TradeLink.Common.BasketImpl' TradeLink.Common.RingBuffer' TradeLink.Common.Util,
+TradeLink.Common,TaskStatus,5,15,3,5,15,107,20,0,0,0.13,1,1,TradeLink.Common.Util,TradeLink.Common.BarListImpl
+TradeLink.Common,TIFTracker,11,14,2,0,12,156,32,0,1,0.36,3,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.IdTracker' TradeLink.Common.Util,
+TradeLink.Common,IndicationImpl,6,4,6,0,4,66,8,0,1,0.5,0,0,,
+TradeLink.Common,HaltResumeImpl,5,4,5,0,4,53,5,0,1,0.5,0,0,,
+TradeLink.Common,MOCOrder,0,1,0,0,1,9,1,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,OnceTracker,0,7,0,0,6,31,7,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,OversellTracker,7,10,5,0,6,136,19,0,0,0.2,4,0,TradeLink.Common.Calc' TradeLink.Common.IdTracker' TradeLink.Common.PositionTracker' TradeLink.Common.OrderImpl,
+TradeLink.Common,PresentlyTickingTracker,1,6,2,0,6,20,7,0,1,0.67,2,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.GenericTracker,
+TradeLink.Common,DebugImpl,2,9,3,0,9,18,9,0,1,0.56,0,0,,
+TradeLink.Common,Email,3,4,0,0,2,50,5,0,0,0,0,0,,
+TradeLink.Common,eSigTick,2,8,0,0,6,135,21,0,0,0.62,4,1,TradeLink.Common.Q' TradeLink.Common.T' TradeLink.Common.SecurityImpl' TradeLink.Common.TickImpl,TradeLink.Common.BarListImpl
+TradeLink.Common,Q,0,0,0,0,0,1,0,0,0,-1,0,1,,TradeLink.Common.eSigTick
+TradeLink.Common,T,0,0,0,0,0,1,0,0,0,-1,0,1,,TradeLink.Common.eSigTick
+TradeLink.Common,FlipTracker,4,20,1,0,18,182,22,0,1,0.5,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,GauntletEngine,4,8,2,1,2,48,8,0,0,0.25,3,0,TradeLink.Common.Broker' TradeLink.Common.MultiSimImpl' TradeLink.Common.TickFileFilter,
+TradeLink.Common,GenericTracker<T>,7,22,4,1,22,269,29,0,1,0.45,0,29,,TradeLink.Common.TIFTracker' TradeLink.Common.OnceTracker' TradeLink.Common.OffsetTracker' TradeLink.Common.PresentlyTickingTracker' TradeLink.Common.HighTracker' TradeLink.Common.LowTracker' TradeLink.Common.PositionTracker' TradeLink.Common.ResponseTemplate' TradeLink.Common.TIFTracker_Ticks' TradeLink.Common.RejectTracker' TradeLink.Common.OCOTracker' TradeLink.Common.FlipTracker' TradeLink.Common.IdTracker' TradeLink.Common.TrailTracker' TradeLink.Common.SendorderTracker' TradeLink.Common.SingleSimImpl' TradeLink.Common.OrderTracker' TradeLink.Common.TickTracker' TradeLink.Common.BidTracker' TradeLink.Common.AskTracker' TradeLink.Common.LastTracker' TradeLink.Common.SizeTracker' TradeLink.Common.BidSizeTracker' TradeLink.Common.AskSizeTracker' TradeLink.Common.IsTradeTracker' TradeLink.Common.IsBidTracker' TradeLink.Common.IsAskTracker' TradeLink.Common.Calc' TradeLink.Common.GenericTracker
+TradeLink.Common,GenericTracker,4,82,0,1,77,1066,154,22,0,0.23,2,4,TradeLink.Common.GenericTracker<T>' TradeLink.Common.gt,TradeLink.Common.PresentlyTickingTracker' TradeLink.Common.OrderTracker' TradeLink.Common.SendorderTracker' TradeLink.Common.gt
+TradeLink.Common,gt,0,0,0,0,0,3,0,0,1,-1,1,1,TradeLink.Common.GenericTracker,TradeLink.Common.GenericTracker
+TradeLink.Common,GZip,0,2,0,0,2,50,2,0,0,-1,0,1,,TradeLink.Common.Util
+TradeLink.Common,HighTracker,0,12,0,0,12,72,17,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,LowTracker,0,12,0,0,12,73,17,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,MultiSimImpl,23,22,12,2,9,396,55,0,1,0.23,6,2,TradeLink.Common.Broker' TradeLink.Common.simworker' TradeLink.Common.TikConst' TradeLink.Common.SecurityImpl' TradeLink.Common.TickFileFilter' TradeLink.Common.Util,TradeLink.Common.SingleSimImpl' TradeLink.Common.GauntletEngine
+TradeLink.Common,simworker,5,8,3,2,4,75,11,0,0,0.25,1,1,TradeLink.Common.SecurityImpl,TradeLink.Common.MultiSimImpl
+TradeLink.Common,IdTracker,14,27,3,5,11,339,32,0,1,0.78,3,9,TradeLink.Common.GenericTracker<T>' TradeLink.Common.IdTrackerOverflow' TradeLink.Common.OrderImpl,TradeLink.Common.TIFTracker' TradeLink.Common.OversellTracker' TradeLink.Common.TIFTracker_Ticks' TradeLink.Common.LatencyTracker' TradeLink.Common.OCOTracker' TradeLink.Common.RejectTracker' TradeLink.Common.TrailTracker' TradeLink.Common.PapertradeTracker' TradeLink.Common.OffsetTracker
+TradeLink.Common,IdTrackerOverflow,0,2,0,0,2,5,2,0,0,-1,0,1,,TradeLink.Common.IdTracker
+TradeLink.Common,ImbalanceImpl,7,4,10,0,4,72,9,0,1,0.5,0,4,,TradeLink.Common.TLServer_IP' TradeLink.Common.TLClient_WM' TradeLink.Common.TLClient_IP' TradeLink.Common.TLServer_WM
+TradeLink.Common,InvalidResponse,2,7,5,0,7,33,7,0,1,1,0,0,,
+TradeLink.Common,LatencyTracker,7,12,0,0,10,150,29,0,0,0.25,1,0,TradeLink.Common.IdTracker,
+TradeLink.Common,LimitOrder,0,4,0,0,4,7,4,0,1,-1,1,1,TradeLink.Common.OrderImpl,TradeLink.Common.Calc
+TradeLink.Common,BuyLimit,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,SellLimit,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,BuyOPG,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,SellOPG,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,OPGOrder,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,BasketImpl,2,30,3,0,28,211,58,0,1,0.33,1,6,TradeLink.Common.SecurityImpl,TradeLink.Common.TLServer_WM' TradeLink.Common.TLServer_IP' TradeLink.Common.ResponseTemplate' TradeLink.Common.TLCS' TradeLink.Common.SendorderTracker' TradeLink.Common.TLClient_IP
+TradeLink.Common,MarketOrderFlat,0,3,0,0,3,24,3,0,1,-1,2,2,TradeLink.Common.Calc' TradeLink.Common.OrderImpl,TradeLink.Common.TrailTracker' TradeLink.Common.ResponseTemplate
+TradeLink.Common,Message,8,12,1,5,12,179,20,0,0,0,0,2,,TradeLink.Common.TLClient_IP' TradeLink.Common.TLServer_IP
+TradeLink.Common,MessageTracker,6,8,1,4,7,266,40,0,0,0.38,6,0,TradeLink.Common.BarImpl' TradeLink.Common.BarRequest' TradeLink.Common.BarListImpl' TradeLink.Common.BarListTracker' TradeLink.Common.Book' TradeLink.Common.WMUtil,
+TradeLink.Common,OCOTracker,4,18,2,0,11,251,39,0,1,0.22,3,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.IdTracker' TradeLink.Common.OCOGroup,
+TradeLink.Common,OCOGroup,3,4,2,3,4,64,8,0,0,0,0,1,,TradeLink.Common.OCOTracker
+TradeLink.Common,OffsetInfo,12,13,2,12,13,98,14,0,0,0.46,2,3,TradeLink.Common.Calc' TradeLink.Common.OffsetInfoFields,TradeLink.Common.Calc' TradeLink.Common.TrailTracker' TradeLink.Common.OffsetTracker
+TradeLink.Common,OffsetInfoFields,0,0,0,0,0,9,0,0,0,-1,0,1,,TradeLink.Common.OffsetInfo
+TradeLink.Common,OffsetTracker,17,30,13,0,19,532,94,0,1,0.3,6,0,TradeLink.Common.Calc' TradeLink.Common.GenericTracker<T>' TradeLink.Common.IdTracker' TradeLink.Common.OffsetInfo' TradeLink.Common.PositionTracker' TradeLink.Common.PositionImpl,
+TradeLink.Common,TIFTracker_Ticks,14,17,2,1,14,210,35,0,1,0.29,2,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.IdTracker,
+TradeLink.Common,OrderTracker,8,29,5,0,23,253,51,1,1,0.14,3,1,TradeLink.Common.GenericTracker<T>' TradeLink.Common.GenericTracker' TradeLink.Common.OrderImpl,TradeLink.Common.REGSHO_ShortTracker
+TradeLink.Common,PapertradeTracker,5,8,3,0,5,166,25,0,0,0.25,2,0,TradeLink.Common.IdTracker' TradeLink.Common.TickTracker,
+TradeLink.Common,Peg2Midpoint,7,5,1,6,5,47,6,0,0,0.4,1,0,TradeLink.Common.MessagePeg2Midpoint,
+TradeLink.Common,MessagePeg2Midpoint,0,0,0,0,0,9,0,0,0,-1,0,1,,TradeLink.Common.Peg2Midpoint
+TradeLink.Common,PositionTracker,2,11,3,0,10,166,16,5,1,0.45,2,12,TradeLink.Common.GenericTracker<T>' TradeLink.Common.PositionImpl,TradeLink.Common.OversellTracker' TradeLink.Common.TrailTracker' TradeLink.Common.PositionSizeTracker' TradeLink.Common.PositionPriceTracker' TradeLink.Common.FlatPositionTracker' TradeLink.Common.LongPositionTracker' TradeLink.Common.ShortPositionTracker' TradeLink.Common.REGSHO_ShortTracker' TradeLink.Common.OffsetTracker' TradeLink.Common.ResponseTemplate' TradeLink.Common.Util' TradeLink.Common.Calc
+TradeLink.Common,PositionSizeTracker,0,5,0,0,5,10,5,0,2,-1,1,0,TradeLink.Common.PositionTracker,
+TradeLink.Common,PositionPriceTracker,0,5,0,0,5,10,5,0,2,-1,1,0,TradeLink.Common.PositionTracker,
+TradeLink.Common,FlatPositionTracker,0,5,0,0,5,8,5,0,2,-1,1,0,TradeLink.Common.PositionTracker,
+TradeLink.Common,LongPositionTracker,0,5,0,0,5,8,5,0,2,-1,1,0,TradeLink.Common.PositionTracker,
+TradeLink.Common,ShortPositionTracker,0,5,0,0,5,8,5,0,2,-1,1,0,TradeLink.Common.PositionTracker,
+TradeLink.Common,REGSHO_ShortTracker,3,7,3,0,5,110,18,0,2,0.29,2,0,TradeLink.Common.OrderTracker' TradeLink.Common.PositionTracker,
+TradeLink.Common,RejectTracker,6,18,3,0,15,193,37,0,1,0.28,2,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.IdTracker,
+TradeLink.Common,ResponseTemplate,6,39,5,1,39,334,54,27,1,0.59,4,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.BasketImpl' TradeLink.Common.MarketOrderFlat' TradeLink.Common.PositionTracker,
+TradeLink.Common,RingBuffer,6,3,5,0,3,83,7,0,0,0,0,4,,TradeLink.Common.TLServer_IP' TradeLink.Common.SendorderTracker' TradeLink.Common.AsyncResponse' TradeLink.Common.BrokerFeed
+TradeLink.Common,SingleSimImpl,27,18,12,2,12,372,46,0,1,0.39,8,0,TradeLink.Common.Broker' TradeLink.Common.GenericTracker<T>' TradeLink.Common.MultiSimImpl' TradeLink.Common.TikConst' TradeLink.Common.TikUtil' TradeLink.Common.SecurityImpl' TradeLink.Common.TickFileFilter' TradeLink.Common.Util,
+TradeLink.Common,SkinImpl,8,36,5,4,28,312,47,0,1,0.17,0,0,,
+TradeLink.Common,StopLimitOrder,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,BuyStopLimit,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,SellStopLimit,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,ThroughputTracker<T>,3,4,2,0,4,33,5,0,0,0.5,0,0,,
+TradeLink.Common,TickTracker,13,35,3,0,34,364,49,0,1,0.31,2,1,TradeLink.Common.GenericTracker<T>' TradeLink.Common.TickImpl,TradeLink.Common.PapertradeTracker
+TradeLink.Common,BidTracker,0,6,0,0,6,14,7,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,AskTracker,0,6,0,0,6,14,7,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,LastTracker,0,6,0,0,6,14,7,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,SizeTracker,0,6,0,0,6,14,7,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,BidSizeTracker,0,6,0,0,6,14,7,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,AskSizeTracker,0,6,0,0,6,14,7,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,IsTradeTracker,0,6,0,0,6,13,6,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,IsBidTracker,0,6,0,0,6,13,6,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,IsAskTracker,0,6,0,0,6,13,6,0,1,-1,1,0,TradeLink.Common.GenericTracker<T>,
+TradeLink.Common,TikConst,13,0,0,13,0,18,0,0,0,-1,0,8,,TradeLink.Common.SingleSimImpl' TradeLink.Common.MultiSimImpl' TradeLink.Common.TikUtil' TradeLink.Common.SecurityImpl' TradeLink.Common.Util' TradeLink.Common.BarListImpl' TradeLink.Common.TikWriter' TradeLink.Common.TikReader
+TradeLink.Common,TikReader,8,4,3,2,3,175,17,0,0,0,4,1,TradeLink.Common.TikConst' TradeLink.Common.BadTikFile' TradeLink.Common.SecurityImpl' TradeLink.Common.TickImpl,TradeLink.Common.SecurityImpl
+TradeLink.Common,BadTikFile,0,2,0,0,2,5,2,0,0,-1,0,1,,TradeLink.Common.TikReader
+TradeLink.Common,TikUtil,1,13,0,0,12,165,24,0,0,0.46,6,2,TradeLink.Common.BarImpl' TradeLink.Common.TikConst' TradeLink.Common.TikWriter' TradeLink.Common.SecurityImpl' TradeLink.Common.TickImpl' TradeLink.Common.Util,TradeLink.Common.SingleSimImpl' TradeLink.Common.TickArchiver
+TradeLink.Common,TikWriter,6,11,4,1,10,217,21,0,0,0.55,3,3,TradeLink.Common.TikConst' TradeLink.Common.TickImpl' TradeLink.Common.Util,TradeLink.Common.TickArchiver' TradeLink.Common.TikUtil' TradeLink.Common.BarListImpl
+TradeLink.Common,TLClient_IP,29,54,9,2,39,820,121,0,1,0.13,9,1,TradeLink.Common.ImbalanceImpl' TradeLink.Common.BasketImpl' TradeLink.Common.Message' TradeLink.Common.OrderImpl' TradeLink.Common.PositionImpl' TradeLink.Common.TickImpl' TradeLink.Common.IPUtil' TradeLink.Common.TradeImpl' TradeLink.Common.Util,TradeLink.Common.BrokerFeed
+TradeLink.Common,Packet,6,8,0,6,8,68,9,0,0,0.5,1,1,TradeLink.Common.PacketOffset,TradeLink.Common.Listener
+TradeLink.Common,PacketOffset,0,0,0,0,0,7,0,0,0,-1,0,1,,TradeLink.Common.Packet
+TradeLink.Common,TLCS,1,24,10,0,24,202,24,0,1,1,1,0,TradeLink.Common.BasketImpl,
+TradeLink.Common,TLServer_IP,23,51,10,0,25,814,137,0,1,0.1,11,0,TradeLink.Common.ImbalanceImpl' TradeLink.Common.BasketImpl' TradeLink.Common.Message' TradeLink.Common.RingBuffer' TradeLink.Common.socketinfo' TradeLink.Common.OrderImpl' TradeLink.Common.PositionImpl' TradeLink.Common.TickImpl' TradeLink.Common.IPUtil' TradeLink.Common.TradeImpl' TradeLink.Common.Util,
+TradeLink.Common,socketinfo,3,4,2,0,0,33,4,0,0,0,0,1,,TradeLink.Common.TLServer_IP
+TradeLink.Common,Listener,0,2,0,0,2,5,2,0,0,-1,1,0,TradeLink.Common.Packet,
+TradeLink.Common,MarketOrder,0,4,0,0,4,7,4,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,BuyMarket,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,SellMarket,0,3,0,0,3,6,3,0,1,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,OrderImpl,8,18,18,0,18,271,36,18,1,0.72,1,27,TradeLink.Common.TradeImpl,TradeLink.Common.MarketOrderFlat' TradeLink.Common.MOCOrder' TradeLink.Common.IdTracker' TradeLink.Common.OversellTracker' TradeLink.Common.TLClient_IP' TradeLink.Common.LimitOrder' TradeLink.Common.BuyLimit' TradeLink.Common.SellLimit' TradeLink.Common.BuyOPG' TradeLink.Common.SellOPG' TradeLink.Common.OPGOrder' TradeLink.Common.TLServer_IP' TradeLink.Common.MarketOrder' TradeLink.Common.BuyMarket' TradeLink.Common.SellMarket' TradeLink.Common.StopOrder' TradeLink.Common.BuyStop' TradeLink.Common.SellStop' TradeLink.Common.TrailStop' TradeLink.Common.OrderTracker' TradeLink.Common.Calc' TradeLink.Common.TLClient_WM' TradeLink.Common.StopLimitOrder' TradeLink.Common.BuyStopLimit' TradeLink.Common.SellStopLimit' TradeLink.Common.TLServer_WM' TradeLink.Common.Broker
+TradeLink.Common,ParamPrompt,3,9,0,0,4,115,16,0,0,0.33,0,0,,
+TradeLink.Common,PositionImpl,7,30,13,0,15,192,44,0,1,0.77,3,7,TradeLink.Common.Calc' TradeLink.Common.TradeImpl' TradeLink.Common.Util,TradeLink.Common.TLServer_WM' TradeLink.Common.TLServer_IP' TradeLink.Common.OffsetTracker' TradeLink.Common.TLClient_WM' TradeLink.Common.TLClient_IP' TradeLink.Common.PositionTracker' TradeLink.Common.Broker
+TradeLink.Common,ResponseLoader,0,5,0,0,4,105,7,0,0,-1,0,0,,
+TradeLink.Common,ScreenCapture,0,4,0,0,4,110,4,0,0,-1,3,0,TradeLink.Common.GDI32' TradeLink.Common.User32' TradeLink.Common.RECT,
+TradeLink.Common,GDI32,1,6,0,1,6,19,6,0,0,1,0,1,,TradeLink.Common.ScreenCapture
+TradeLink.Common,User32,0,4,0,0,4,19,4,0,0,-1,0,1,,TradeLink.Common.ScreenCapture
+TradeLink.Common,RECT,4,0,0,4,0,8,0,0,0,-1,0,1,,TradeLink.Common.ScreenCapture
+TradeLink.Common,SecurityImpl,10,26,17,1,20,439,64,0,1,0.38,3,10,TradeLink.Common.TikConst' TradeLink.Common.TikReader' TradeLink.Common.Util,TradeLink.Common.TickImpl' TradeLink.Common.TikReader' TradeLink.Common.TikUtil' TradeLink.Common.eSigTick' TradeLink.Common.TradeImpl' TradeLink.Common.MultiSimImpl' TradeLink.Common.simworker' TradeLink.Common.BasketImpl' TradeLink.Common.BarListImpl' TradeLink.Common.SingleSimImpl
+TradeLink.Common,EndSecurityTicks,0,0,0,0,0,1,0,0,0,-1,0,0,,
+TradeLink.Common,SparkLine,4,8,0,0,8,43,9,0,0,0,2,0,TradeLink.Common.BarListImpl' TradeLink.Common.Calc,
+TradeLink.Common,StopOrder,0,4,0,0,4,7,4,0,2,-1,1,1,TradeLink.Common.OrderImpl,TradeLink.Common.Calc
+TradeLink.Common,BuyStop,0,3,0,0,3,7,3,0,2,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,SellStop,0,3,0,0,3,7,3,0,2,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,TrailStop,0,2,0,0,2,5,2,0,2,-1,1,0,TradeLink.Common.OrderImpl,
+TradeLink.Common,TickImpl,16,20,27,0,20,335,38,0,1,0.6,3,12,TradeLink.Common.SecurityImpl' TradeLink.Common.TickField' TradeLink.Common.Util,TradeLink.Common.TikUtil' TradeLink.Common.TikWriter' TradeLink.Common.eSigTick' TradeLink.Common.TLServer_IP' TradeLink.Common.TickArchiver' TradeLink.Common.TLClient_IP' TradeLink.Common.TLClient_WM' TradeLink.Common.TLServer_WM' TradeLink.Common.TikReader' TradeLink.Common.BarListImpl' TradeLink.Common.TickTracker' TradeLink.Common.BarImpl
+TradeLink.Common,TickField,0,0,0,0,0,17,0,0,0,-1,0,1,,TradeLink.Common.TickImpl
+TradeLink.Common,TickArchiver,4,4,0,0,4,89,13,0,0,0.5,4,0,TradeLink.Common.TikUtil' TradeLink.Common.TikWriter' TradeLink.Common.TickImpl' TradeLink.Common.Util,
+TradeLink.Common,TickFileFilter,9,22,6,0,21,302,41,0,0,0.41,5,3,TradeLink.Common.TLDateFilter' TradeLink.Common.Util' TradeLink.Common.TickFileType' TradeLink.Common.TickFileInfo' TradeLink.Common.DateMatchType,TradeLink.Common.GauntletEngine' TradeLink.Common.MultiSimImpl' TradeLink.Common.SingleSimImpl
+TradeLink.Common,TLDateFilter,3,3,0,2,3,23,5,0,0,0.67,0,1,,TradeLink.Common.TickFileFilter
+TradeLink.Common,MessageTickFileFilter,0,0,0,0,0,5,0,0,0,-1,0,0,,
+TradeLink.Common,TickWatcher,25,16,20,1,15,321,44,0,1,0.19,1,1,TradeLink.Common.Util,TradeLink.Common.TLTracker
+TradeLink.Common,TLTracker,9,9,5,2,7,147,21,0,0,0.33,1,0,TradeLink.Common.TickWatcher,
+TradeLink.Common,TLTransportType,0,0,0,0,0,6,0,0,0,-1,0,0,,
+TradeLink.Common,IPUtil,9,2,0,9,2,40,3,0,0,0,0,3,,TradeLink.Common.TLClient_IP' TradeLink.Common.TLServer_IP' TradeLink.Common.BrokerFeed
+TradeLink.Common,TradeImpl,13,15,19,0,15,141,19,2,1,0.67,2,8,TradeLink.Common.SecurityImpl' TradeLink.Common.Util,TradeLink.Common.OrderImpl' TradeLink.Common.TLClient_WM' TradeLink.Common.TLClient_IP' TradeLink.Common.PositionImpl' TradeLink.Common.TLServer_WM' TradeLink.Common.TLServer_IP' TradeLink.Common.Broker' TradeLink.Common.Util
+TradeLink.Common,TLClient_WM,9,34,8,0,29,399,75,0,1,0.26,7,1,TradeLink.Common.ImbalanceImpl' TradeLink.Common.OrderImpl' TradeLink.Common.PositionImpl' TradeLink.Common.TickImpl' TradeLink.Common.TradeImpl' TradeLink.Common.WMUtil' TradeLink.Common.TradeLinkMessage,TradeLink.Common.BrokerFeed
+TradeLink.Common,TLServer_WM,8,30,4,0,18,364,85,1,1,0.13,9,0,TradeLink.Common.ImbalanceImpl' TradeLink.Common.BasketImpl' TradeLink.Common.OrderImpl' TradeLink.Common.PositionImpl' TradeLink.Common.TickImpl' TradeLink.Common.TradeImpl' TradeLink.Common.Util' TradeLink.Common.WMUtil' TradeLink.Common.TradeLinkMessage,
+TradeLink.Common,TrailTracker,15,9,7,1,6,287,32,0,0,0.22,5,0,TradeLink.Common.GenericTracker<T>' TradeLink.Common.IdTracker' TradeLink.Common.MarketOrderFlat' TradeLink.Common.OffsetInfo' TradeLink.Common.PositionTracker,
+TradeLink.Common,Util,9,86,4,2,79,1193,130,0,0,0.31,13,21,TradeLink.Common.Calc' TradeLink.Common.GZip' TradeLink.Common.PositionTracker' TradeLink.Common.TikConst' TradeLink.Common.TradeImpl' TradeLink.Common.PlatFormInvoke' TradeLink.Common.SterlingSubmitOrderError' TradeLink.Common.LightspeedDesktopSendOrderMsg' TradeLink.Common.AnvilSendOrderError' TradeLink.Common.TickFileType' TradeLink.Common.TickFileInfo' TradeLink.Common.DateMatchType' TradeLink.Common.TradePLField,TradeLink.Common.TIFTracker' TradeLink.Common.TikWriter' TradeLink.Common.SendorderTracker' TradeLink.Common.MultiSimImpl' TradeLink.Common.TimeIntervalData' TradeLink.Common.TikUtil' TradeLink.Common.TLClient_IP' TradeLink.Common.PositionImpl' TradeLink.Common.TickArchiver' TradeLink.Common.TLServer_IP' TradeLink.Common.TaskStatus' TradeLink.Common.SecurityImpl' TradeLink.Common.TradeImpl' TradeLink.Common.TickFileFilter' TradeLink.Common.TLServer_WM' TradeLink.Common.SingleSimImpl' TradeLink.Common.TickImpl' TradeLink.Common.TickWatcher' TradeLink.Common.BarImpl' TradeLink.Common.BarRequest' TradeLink.Common.BarListImpl
+TradeLink.Common,PlatFormInvoke,0,3,0,0,0,51,3,0,0,-1,0,1,,TradeLink.Common.Util
+TradeLink.Common,SterlingSubmitOrderError,0,0,0,0,0,52,0,0,0,-1,0,1,,TradeLink.Common.Util
+TradeLink.Common,LightspeedDesktopSendOrderMsg,0,0,0,0,0,33,0,0,0,-1,0,1,,TradeLink.Common.Util
+TradeLink.Common,AnvilSendOrderError,0,0,0,0,0,61,0,0,0,-1,0,1,,TradeLink.Common.Util
+TradeLink.Common,TickFileType,0,0,0,0,0,7,0,0,0,-1,0,3,,TradeLink.Common.TickFileFilter' TradeLink.Common.Util' TradeLink.Common.TickFileInfo
+TradeLink.Common,TickFileInfo,3,0,0,3,0,6,0,0,0,-1,1,2,TradeLink.Common.TickFileType,TradeLink.Common.TickFileFilter' TradeLink.Common.Util
+TradeLink.Common,DateMatchType,0,0,0,0,0,7,0,0,0,-1,0,2,,TradeLink.Common.TickFileFilter' TradeLink.Common.Util
+TradeLink.Common,TradePLField,0,0,0,0,0,15,0,0,0,-1,0,1,,TradeLink.Common.Util
+TradeLink.Common,WMUtil,8,13,0,7,9,155,21,0,0,0.23,3,3,TradeLink.Common.COPYDATASTRUCT' TradeLink.Common.SendMessageTimeoutFlags' TradeLink.Common.TradeLinkMessage,TradeLink.Common.MessageTracker' TradeLink.Common.TLServer_WM' TradeLink.Common.TLClient_WM
+TradeLink.Common,COPYDATASTRUCT,3,0,0,3,0,6,0,0,0,-1,0,1,,TradeLink.Common.WMUtil
+TradeLink.Common,SendMessageTimeoutFlags,0,0,0,0,0,8,0,0,0,-1,0,1,,TradeLink.Common.WMUtil
+TradeLink.Common,TradeLinkMessage,3,0,0,3,0,6,0,0,0,-1,0,3,,TradeLink.Common.WMUtil' TradeLink.Common.TLClient_WM' TradeLink.Common.TLServer_WM

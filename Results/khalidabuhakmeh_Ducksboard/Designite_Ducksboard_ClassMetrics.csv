@@ -1,31 +1,31 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Ducksboard,DashboardClient,2,6,0,0,6,127,18,0,0,0,0,1,,Ducksboard.Tests.DashboardTests
-Ducksboard,GetCollectionResponse<T>,0,0,2,0,0,8,0,0,0,-1,0,0,,
-Ducksboard,DucksboardClient,2,4,0,0,3,55,7,0,0,0.5,0,1,,Ducksboard.Tests.ClientTests
-Ducksboard.Objects,Completion,0,1,1,0,1,20,1,0,1,-1,0,1,,Ducksboard.Tests.Objects.CompletionTests
-Ducksboard.Objects,Payload,0,4,21,0,4,140,4,0,0,-1,0,10,,Ducksboard.Objects.Funnel' Ducksboard.Objects.Leaderboard' Ducksboard.Objects.StatusLeaderboard' Ducksboard.Objects.TrendLeaderboard' Ducksboard.Tests.ClientTests' Ducksboard.Tests.Objects.TimelineTests' Ducksboard.Tests.Objects.ImageTests' Ducksboard.Tests.Objects.TextTests' Ducksboard.Tests.Objects.CompletionTests' Ducksboard.Tests.Objects.PinTests
-Ducksboard.Objects,Dashboard,0,0,4,0,0,12,0,0,1,-1,0,1,,Ducksboard.Tests.DashboardTests
-Ducksboard.Objects,Pin,0,1,1,0,1,28,1,0,1,-1,0,1,,Ducksboard.Tests.Objects.PinTests
-Ducksboard.Objects,Slot,0,0,4,0,0,12,0,0,1,-1,0,0,,
-Ducksboard.Objects,SlotData,0,0,22,0,0,60,0,0,1,-1,0,0,,
-Ducksboard.Objects,WidgetProperties,0,0,9,0,0,22,0,0,1,-1,0,1,,Ducksboard.Tests.DashboardTests
-Ducksboard.Objects,Status,4,1,1,4,1,23,1,0,1,0,1,2,Ducksboard.Objects.StatusCode,Ducksboard.Objects.BoardItem' Ducksboard.Tests.Objects.StatusLeaderboardTests
+Ducksboard,DashboardClient,2,6,0,0,6,127,18,0,0,0,3,0,Ducksboard.GetCollectionResponse<T>' Ducksboard.Serializers.RestSharpDataContractJsonSerializer' Ducksboard.Serializers.RestSharpDataContractJsonDeserializer,
+Ducksboard,GetCollectionResponse<T>,0,0,2,0,0,8,0,0,0,-1,0,1,,Ducksboard.DashboardClient
+Ducksboard,DucksboardClient,2,4,0,0,3,55,7,0,0,0.5,2,0,Ducksboard.Objects.DucksboardObjectBase' Ducksboard.Serializers.RestSharpDataContractJsonSerializer,
+Ducksboard.Objects,Completion,0,1,1,0,1,20,1,0,1,-1,2,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,Payload,0,4,21,0,4,140,4,0,0,-1,0,9,,Ducksboard.Objects.Completion' Ducksboard.Objects.Pin' Ducksboard.Objects.Funnel' Ducksboard.Objects.Image' Ducksboard.Objects.Leaderboard' Ducksboard.Objects.StatusLeaderboard' Ducksboard.Objects.Text' Ducksboard.Objects.Timeline' Ducksboard.Objects.TrendLeaderboard
+Ducksboard.Objects,Dashboard,0,0,4,0,0,12,0,0,1,-1,1,0,Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,Pin,0,1,1,0,1,28,1,0,1,-1,2,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,Slot,0,0,4,0,0,12,0,0,1,-1,2,1,Ducksboard.Objects.SlotData' Ducksboard.Objects.DucksboardObjectBase,Ducksboard.Objects.Widget
+Ducksboard.Objects,SlotData,0,0,22,0,0,60,0,0,1,-1,1,1,Ducksboard.Objects.DucksboardObjectBase,Ducksboard.Objects.Slot
+Ducksboard.Objects,WidgetProperties,0,0,9,0,0,22,0,0,1,-1,1,1,Ducksboard.Objects.DucksboardObjectBase,Ducksboard.Objects.Widget
+Ducksboard.Objects,Status,4,1,1,4,1,23,1,0,1,0,2,1,Ducksboard.Objects.StatusCode' Ducksboard.Objects.DucksboardObjectBase,Ducksboard.Objects.StatusLeaderboard
 Ducksboard.Objects,StatusCode,0,0,0,0,0,7,0,0,0,-1,0,1,,Ducksboard.Objects.Status
-Ducksboard.Objects,DucksboardObjectBase,1,1,0,0,1,10,1,17,0,0,1,0,Ducksboard.Serializers.RestSharpDataContractJsonSerializer,
-Ducksboard.Objects,Funnel,0,2,1,0,2,38,2,0,1,-1,1,1,Ducksboard.Objects.Payload,Ducksboard.Tests.Objects.FunnelTests
-Ducksboard.Objects,FunnelItem,0,1,2,0,1,13,1,0,0,-1,0,0,,
-Ducksboard.Objects,Gauges,0,0,1,0,0,6,0,0,1,-1,0,1,,Ducksboard.Tests.Objects.GaugesTests
-Ducksboard.Objects,Image,0,2,1,0,2,22,2,0,1,-1,0,1,,Ducksboard.Tests.Objects.ImageTests
-Ducksboard.Objects,Leaderboard,0,2,1,0,2,41,3,0,1,-1,2,1,Ducksboard.Objects.BoardItem' Ducksboard.Objects.Payload,Ducksboard.Tests.Objects.LeaderboardTests
-Ducksboard.Objects,BoardItem,0,3,8,0,3,39,3,0,0,-1,2,3,Ducksboard.Objects.Status' Ducksboard.Objects.StatusLeaderboard,Ducksboard.Objects.Leaderboard' Ducksboard.Objects.StatusLeaderboard' Ducksboard.Objects.TrendLeaderboard
-Ducksboard.Objects,Numbers,0,3,4,0,3,46,4,0,1,-1,0,1,,Ducksboard.Tests.Objects.NumbersTests
-Ducksboard.Objects,StatusLeaderboard,0,2,1,0,2,55,4,0,1,-1,2,2,Ducksboard.Objects.BoardItem' Ducksboard.Objects.Payload,Ducksboard.Objects.BoardItem' Ducksboard.Tests.Objects.StatusLeaderboardTests
-Ducksboard.Objects,Text,0,1,1,0,1,16,1,0,1,-1,0,1,,Ducksboard.Tests.Objects.TextTests
-Ducksboard.Objects,Timeline,0,1,1,0,1,22,1,0,1,-1,0,2,,Ducksboard.Tests.ClientTests' Ducksboard.Tests.Objects.TimelineTests
-Ducksboard.Objects,TrendLeaderboard,0,2,1,0,2,53,4,0,1,-1,2,1,Ducksboard.Objects.BoardItem' Ducksboard.Objects.Payload,Ducksboard.Tests.Objects.TrendLeaderboardTests
-Ducksboard.Objects,Trends,3,0,0,3,0,6,0,0,0,-1,0,1,,Ducksboard.Tests.Objects.TrendLeaderboardTests
-Ducksboard.Objects,Widget,0,0,3,0,0,12,0,0,1,-1,0,1,,Ducksboard.Tests.DashboardTests
-Ducksboard.Serializers,RestSharpDataContractJsonSerializer,0,2,4,0,2,31,2,0,0,-1,0,12,,Ducksboard.Objects.DucksboardObjectBase' Ducksboard.Tests.Objects.NumbersTests' Ducksboard.Tests.Objects.GaugesTests' Ducksboard.Tests.Objects.TimelineTests' Ducksboard.Tests.Objects.ImageTests' Ducksboard.Tests.Objects.TextTests' Ducksboard.Tests.Objects.LeaderboardTests' Ducksboard.Tests.Objects.TrendLeaderboardTests' Ducksboard.Tests.Objects.StatusLeaderboardTests' Ducksboard.Tests.Objects.FunnelTests' Ducksboard.Tests.Objects.CompletionTests' Ducksboard.Tests.Objects.PinTests
-Ducksboard.Serializers,RestSharpDataContractJsonDeserializer,0,1,3,0,1,17,1,0,0,-1,0,0,,
+Ducksboard.Objects,DucksboardObjectBase,1,1,0,0,1,10,1,17,0,0,1,18,Ducksboard.Serializers.RestSharpDataContractJsonSerializer,Ducksboard.Objects.Pin' Ducksboard.Objects.Widget' Ducksboard.Objects.Completion' Ducksboard.Objects.WidgetProperties' Ducksboard.Objects.Status' Ducksboard.Objects.Dashboard' Ducksboard.Objects.Gauges' Ducksboard.Objects.Image' Ducksboard.Objects.Funnel' Ducksboard.Objects.Leaderboard' Ducksboard.Objects.Numbers' Ducksboard.Objects.TrendLeaderboard' Ducksboard.Objects.StatusLeaderboard' Ducksboard.Objects.Text' Ducksboard.Objects.Timeline' Ducksboard.Objects.Slot' Ducksboard.Objects.SlotData' Ducksboard.DucksboardClient
+Ducksboard.Objects,Funnel,0,2,1,0,2,38,2,0,1,-1,3,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase' Ducksboard.Objects.FunnelItem,
+Ducksboard.Objects,FunnelItem,0,1,2,0,1,13,1,0,0,-1,0,1,,Ducksboard.Objects.Funnel
+Ducksboard.Objects,Gauges,0,0,1,0,0,6,0,0,1,-1,1,0,Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,Image,0,2,1,0,2,22,2,0,1,-1,2,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,Leaderboard,0,2,1,0,2,41,3,0,1,-1,3,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase' Ducksboard.Objects.BoardItem,
+Ducksboard.Objects,BoardItem,0,3,8,0,3,39,3,0,0,-1,0,3,,Ducksboard.Objects.Leaderboard' Ducksboard.Objects.StatusLeaderboard' Ducksboard.Objects.TrendLeaderboard
+Ducksboard.Objects,Numbers,0,3,4,0,3,46,4,0,1,-1,1,0,Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,StatusLeaderboard,0,2,1,0,2,55,4,0,1,-1,4,0,Ducksboard.Objects.Payload' Ducksboard.Objects.Status' Ducksboard.Objects.DucksboardObjectBase' Ducksboard.Objects.BoardItem,
+Ducksboard.Objects,Text,0,1,1,0,1,16,1,0,1,-1,2,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,Timeline,0,1,1,0,1,22,1,0,1,-1,2,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Objects,TrendLeaderboard,0,2,1,0,2,53,4,0,1,-1,3,0,Ducksboard.Objects.Payload' Ducksboard.Objects.DucksboardObjectBase' Ducksboard.Objects.BoardItem,
+Ducksboard.Objects,Trends,3,0,0,3,0,6,0,0,0,-1,0,0,,
+Ducksboard.Objects,Widget,0,0,3,0,0,12,0,0,1,-1,3,0,Ducksboard.Objects.Slot' Ducksboard.Objects.WidgetProperties' Ducksboard.Objects.DucksboardObjectBase,
+Ducksboard.Serializers,RestSharpDataContractJsonSerializer,0,2,4,0,2,31,2,0,0,-1,0,3,,Ducksboard.DucksboardClient' Ducksboard.DashboardClient' Ducksboard.Objects.DucksboardObjectBase
+Ducksboard.Serializers,RestSharpDataContractJsonDeserializer,0,1,3,0,1,17,1,0,0,-1,0,1,,Ducksboard.DashboardClient
 Ducksboard.TypeExtensions,ColorExtensions,0,1,0,0,1,11,1,0,0,-1,0,0,,
 Ducksboard.TypeExtensions,DataContractNameTypeExtension,0,1,0,0,1,13,2,0,0,-1,0,0,,

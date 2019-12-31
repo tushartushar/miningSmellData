@@ -1,11 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-RtspMulticaster,Forwarder,7,8,8,0,2,236,12,2,0,0.38,0,2,,RtspMulticaster.RTSPDispatcher' RtspMulticaster.RtspSession
-RtspMulticaster,RTCPType,0,0,0,0,0,9,0,0,0,-1,0,0,,
-RtspMulticaster,OriginContext,0,1,2,0,1,8,1,0,0,-1,0,1,,RtspMulticaster.RTSPDispatcher
-RtspMulticaster,Program,1,1,0,0,0,18,2,0,0,0,2,0,RtspMulticaster.RtspServer' RtspMulticaster.RTSPDispatcher,
-RtspMulticaster,RTSPDispatcher,10,21,1,0,4,743,62,0,0,0.14,18,3,Rtsp.Messages.RtspMessage' RtspMulticaster.RtspSession' Rtsp.RtspListener' Rtsp.RtspChunkEventArgs' RtspMulticaster.OriginContext' Rtsp.Messages.RtspResponse' Rtsp.Messages.RtspRequest' Rtsp.Messages.RtspRequestSetup' Rtsp.Messages.RtspRequestPlay' Rtsp.Messages.RequestType' RtspMulticaster.Forwarder' Rtsp.Messages.RtspTransport' RtspMulticaster.UDPForwarder' RtspMulticaster.SessionState' Rtsp.Messages.RtspHeaderNames' Rtsp.Messages.PortCouple' Rtsp.Messages.LowerTransportType' RtspMulticaster.TCPtoUDPForwader,RtspMulticaster.Program' RtspMulticaster.RtspServer' RtspMulticaster.RtspSession
-RtspMulticaster,RtspServer,4,6,0,0,4,81,9,0,0,0,3,1,Rtsp.RtspUtils' Rtsp.RtspListener' RtspMulticaster.RTSPDispatcher,RtspMulticaster.Program
-RtspMulticaster,RtspSession,6,11,6,0,2,182,22,0,0,0.27,5,1,RtspMulticaster.SessionState' RtspMulticaster.Forwarder' Rtsp.Messages.RtspRequest' Rtsp.Messages.RequestType' RtspMulticaster.RTSPDispatcher,RtspMulticaster.RTSPDispatcher
-RtspMulticaster,SessionState,0,0,0,0,0,21,0,0,0,-1,0,2,,RtspMulticaster.RTSPDispatcher' RtspMulticaster.RtspSession
-RtspMulticaster,TCPtoUDPForwader,2,7,3,0,4,151,13,0,1,0.43,3,1,Rtsp.RtspListener' Rtsp.Messages.RtspData' Rtsp.RtspChunkEventArgs,RtspMulticaster.RTSPDispatcher
-RtspMulticaster,UDPForwarder,5,7,5,0,3,231,15,0,1,0,0,1,,RtspMulticaster.RTSPDispatcher
+RtspMulticaster,Forwarder,7,8,8,0,2,257,18,2,0,0.38,1,4,RtspMulticaster.RTCPType,RtspMulticaster.TCPtoUDPForwader' RtspMulticaster.UDPForwarder' RtspMulticaster.RtspSession' RtspMulticaster.RTSPDispatcher
+RtspMulticaster,RTCPType,0,0,0,0,0,10,0,0,0,-1,0,1,,RtspMulticaster.Forwarder
+RtspMulticaster,OriginContext,0,1,2,0,1,9,1,0,0,-1,0,1,,RtspMulticaster.RTSPDispatcher
+RtspMulticaster,Program,1,1,0,0,0,22,2,0,0,0,2,0,RtspMulticaster.RTSPDispatcher' RtspMulticaster.RtspServer,
+RtspMulticaster,RTSPDispatcher,11,23,1,0,4,945,99,0,0,0.13,7,3,RtspMulticaster.Forwarder' RtspMulticaster.OriginContext' RtspMulticaster.RtspPushManager' RtspMulticaster.RtspSession' RtspMulticaster.SessionState' RtspMulticaster.TCPtoUDPForwader' RtspMulticaster.UDPForwarder,RtspMulticaster.RtspServer' RtspMulticaster.RtspSession' RtspMulticaster.Program
+RtspMulticaster,RtspPushManager,2,11,1,0,0,224,25,0,0,0.64,1,1,RtspMulticaster.UDPForwarder,RtspMulticaster.RTSPDispatcher
+RtspMulticaster,RtspServer,4,6,0,0,4,92,9,0,0,0,1,1,RtspMulticaster.RTSPDispatcher,RtspMulticaster.Program
+RtspMulticaster,RtspSession,6,11,6,0,2,216,22,0,0,0.27,3,1,RtspMulticaster.Forwarder' RtspMulticaster.RTSPDispatcher' RtspMulticaster.SessionState,RtspMulticaster.RTSPDispatcher
+RtspMulticaster,SessionState,0,0,0,0,0,21,0,0,0,-1,0,2,,RtspMulticaster.RtspSession' RtspMulticaster.RTSPDispatcher
+RtspMulticaster,TCPtoUDPForwader,2,7,3,0,4,169,13,0,1,0.43,1,1,RtspMulticaster.Forwarder,RtspMulticaster.RTSPDispatcher
+RtspMulticaster,UDPForwarder,5,7,5,0,3,254,15,0,1,0,1,2,RtspMulticaster.Forwarder,RtspMulticaster.RtspPushManager' RtspMulticaster.RTSPDispatcher

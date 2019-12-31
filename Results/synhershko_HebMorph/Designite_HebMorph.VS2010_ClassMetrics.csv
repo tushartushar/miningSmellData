@@ -1,29 +1,29 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-HebMorph,HebrewToken,0,5,5,0,5,50,9,0,1,-1,3,2,HebMorph.HSpell.DMask' HebMorph.Token' HebMorph.HSpell.LingInfo,HebMorph.Lemmatizer' HebMorph.LemmaFilters.BasicLemmaFilter
-HebMorph,LookupTolerators,1,3,0,1,3,106,15,0,0,1,0,1,,HebMorph.Lemmatizer
-HebMorph,MorphData,0,4,2,0,4,51,8,0,0,-1,1,2,HebMorph.Entry,HebMorph.Lemmatizer' HebMorph.HSpell.Loader
-HebMorph,DescFlag,0,0,0,0,0,9,0,0,0,-1,0,1,,HebMorph.Entry
-HebMorph,Entry,0,1,3,0,1,12,1,0,0,-1,2,2,HebMorph.DescFlag' HebMorph.HSpell.PrefixType,HebMorph.MorphData' HebMorph.Lemmatizer
+HebMorph,HebrewToken,0,5,5,0,5,50,10,0,1,-1,0,4,,HebMorph.HebrewToken' HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.StreamLemmatizer' HebMorph.Lemmatizer
+HebMorph,LookupTolerators,1,3,0,1,3,106,16,0,0,1,0,1,,HebMorph.Lemmatizer
+HebMorph,MorphData,0,4,2,0,4,51,8,0,0,-1,0,4,,HebMorph.StreamLemmatizer' HebMorph.MorphData' HebMorph.Lemmatizer' HebMorph.HSpell.Loader
+HebMorph,DescFlag,0,0,0,0,0,9,0,0,0,-1,0,2,,HebMorph.HSpell.Loader' HebMorph.MorphData
+HebMorph,Entry,0,1,3,0,1,12,1,0,0,-1,0,2,,HebMorph.MorphData' HebMorph.HSpell.Loader
 HebMorph,StopWords,1,0,0,1,0,8,0,0,0,-1,0,0,,
-HebMorph,Lemmatizer,3,10,1,0,10,185,47,1,0,0.4,7,0,HebMorph.HSpell.LingInfo' HebMorph.Tokenizer' HebMorph.MorphData' HebMorph.Entry' HebMorph.LookupTolerators' HebMorph.DataStructures.LookupResult' HebMorph.HebrewToken,
-HebMorph,StreamLemmatizer,4,8,2,1,7,146,21,0,1,0.5,3,0,HebMorph.Tokenizer' HebMorph.TokenType' HebMorph.HSpell.DMask,
-HebMorph,Token,2,2,0,2,2,16,2,1,0,1,0,4,,HebMorph.HebrewToken' HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.LemmaFilters.ChainedLemmaFilter' HebMorph.LemmaFilters.LemmaFilterBase
-HebMorph,Tokenizer,14,7,2,5,7,200,24,0,0,0.29,1,2,HebMorph.TokenType,HebMorph.Lemmatizer' HebMorph.StreamLemmatizer
+HebMorph,Lemmatizer,3,10,1,0,10,185,50,1,0,0.4,0,1,,HebMorph.StreamLemmatizer
+HebMorph,StreamLemmatizer,4,8,2,1,7,146,26,0,1,0.5,0,0,,
+HebMorph,Token,2,2,0,2,2,16,2,1,0,1,0,5,,HebMorph.HebrewToken' HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.LemmaFilters.ChainedLemmaFilter' HebMorph.LemmaFilters.LemmaFilterBase' HebMorph.StreamLemmatizer
+HebMorph,Tokenizer,14,7,2,5,7,200,36,0,0,0.29,0,2,,HebMorph.Lemmatizer' HebMorph.StreamLemmatizer
 HebMorph,TokenType,0,0,0,0,0,9,0,0,0,-1,0,2,,HebMorph.StreamLemmatizer' HebMorph.Tokenizer
-HebMorph.LemmaFilters,BasicLemmaFilter,0,2,0,0,2,21,5,0,1,-1,3,0,HebMorph.HebrewToken' HebMorph.HSpell.DMask' HebMorph.Token,
-HebMorph.LemmaFilters,ChainedLemmaFilter,1,3,1,0,3,36,9,0,1,1,2,0,HebMorph.LemmaFilters.LemmaFilterBase' HebMorph.Token,
-HebMorph.LemmaFilters,LemmaFilterBase,0,4,0,0,4,24,8,2,0,-1,1,1,HebMorph.Token,HebMorph.LemmaFilters.ChainedLemmaFilter
-HebMorph.HSpell,Loader,0,4,0,0,2,296,10,0,0,-1,5,0,HebMorph.HSpell.Constants' HebMorph.MorphData' HebMorph.HSpell.MorphDataLoader' HebMorph.HSpell.PrefixType' HebMorph.HSpell.DMask,
-HebMorph.HSpell,MorphDataLoader,7,6,0,0,1,121,16,0,0,0,1,1,HebMorph.HSpell.DMask,HebMorph.HSpell.Loader
-HebMorph.HSpell,Constants,11,0,0,11,0,1218,0,0,0,-1,0,2,,HebMorph.HSpell.Loader' HebMorph.HSpell.LingInfo
-HebMorph.HSpell,DMask,0,0,0,0,0,50,0,0,0,-1,0,6,,HebMorph.HebrewToken' HebMorph.StreamLemmatizer' HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.HSpell.Loader' HebMorph.HSpell.MorphDataLoader' HebMorph.HSpell.LingInfo
-HebMorph.HSpell,PrefixType,0,0,0,0,0,13,0,0,0,-1,0,3,,HebMorph.Entry' HebMorph.HSpell.Loader' HebMorph.HSpell.LingInfo
-HebMorph.HSpell,LingInfo,0,4,0,0,4,194,33,0,0,-1,3,2,HebMorph.HSpell.Constants' HebMorph.HSpell.PrefixType' HebMorph.HSpell.DMask,HebMorph.HebrewToken' HebMorph.Lemmatizer
-HebMorph.DataStructures,DictRadix<T>,3,11,3,0,8,446,28,0,0,0.73,2,0,HebMorph.DataStructures.DictNode' HebMorph.DataStructures.TolerantLookupCrawler,
-HebMorph.DataStructures,DictNode,3,0,0,3,0,6,0,0,0,-1,0,3,,HebMorph.DataStructures.DictRadix<T>' HebMorph.DataStructures.TolerantLookupCrawler' HebMorph.DataStructures.RadixEnumerator
-HebMorph.DataStructures,TolerantLookupCrawler,4,4,0,0,2,101,16,0,0,0,2,1,HebMorph.DataStructures.DictNode' HebMorph.DataStructures.MatchCandidate,HebMorph.DataStructures.DictRadix<T>
-HebMorph.DataStructures,MatchCandidate,3,1,0,3,1,12,1,0,0,0,0,1,,HebMorph.DataStructures.TolerantLookupCrawler
-HebMorph.DataStructures,LookupResult,3,1,0,3,1,12,1,0,0,0,0,1,,HebMorph.Lemmatizer
-HebMorph.DataStructures,RadixEnumerator,2,4,3,0,4,81,10,0,0,0.5,1,0,HebMorph.DataStructures.DictNode,
+HebMorph.LemmaFilters,BasicLemmaFilter,0,2,0,0,2,21,5,0,1,-1,0,0,,
+HebMorph.LemmaFilters,ChainedLemmaFilter,1,3,1,0,3,36,9,0,1,1,0,0,,
+HebMorph.LemmaFilters,LemmaFilterBase,0,4,0,0,4,24,8,2,0,-1,0,2,,HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.LemmaFilters.ChainedLemmaFilter
+HebMorph.HSpell,Loader,0,4,0,0,2,296,23,0,0,-1,0,1,,HebMorph.Lemmatizer
+HebMorph.HSpell,MorphDataLoader,7,6,0,0,1,121,20,0,0,0,0,1,,HebMorph.HSpell.Loader
+HebMorph.HSpell,Constants,11,0,0,11,0,1218,0,0,0,-1,0,3,,HebMorph.Tokenizer' HebMorph.HSpell.LingInfo' HebMorph.HSpell.Loader
+HebMorph.HSpell,DMask,0,0,0,0,0,50,0,0,0,-1,0,6,,HebMorph.StreamLemmatizer' HebMorph.HebrewToken' HebMorph.LemmaFilters.BasicLemmaFilter' HebMorph.Lemmatizer' HebMorph.HSpell.Loader' HebMorph.HSpell.LingInfo
+HebMorph.HSpell,PrefixType,0,0,0,0,0,13,0,0,0,-1,0,3,,HebMorph.MorphData' HebMorph.HSpell.LingInfo' HebMorph.HSpell.Loader
+HebMorph.HSpell,LingInfo,0,4,0,0,4,194,58,0,0,-1,0,2,,HebMorph.HebrewToken' HebMorph.Lemmatizer
+HebMorph.DataStructures,DictRadix<T>,3,11,3,0,8,446,36,0,0,0.73,0,5,,HebMorph.StreamLemmatizer' HebMorph.Lemmatizer' HebMorph.HSpell.LingInfo' HebMorph.HSpell.Loader' HebMorph.DataStructures.DictRadix<T>
+HebMorph.DataStructures,DictNode,3,0,0,3,0,6,0,0,0,-1,0,1,,HebMorph.DataStructures.DictRadix<T>
+HebMorph.DataStructures,TolerantLookupCrawler,4,4,0,0,2,101,16,0,0,0,0,1,,HebMorph.DataStructures.DictRadix<T>
+HebMorph.DataStructures,MatchCandidate,3,1,0,3,1,12,1,0,0,0,0,1,,HebMorph.DataStructures.DictRadix<T>
+HebMorph.DataStructures,LookupResult,3,1,0,3,1,12,1,0,0,0,0,2,,HebMorph.Lemmatizer' HebMorph.DataStructures.DictRadix<T>
+HebMorph.DataStructures,RadixEnumerator,2,4,3,0,4,81,11,0,0,0.5,0,1,,HebMorph.DataStructures.DictRadix<T>
 HebMorph.DataStructures,SortOrder,0,0,0,0,0,1,0,0,0,-1,0,1,,HebMorph.DataStructures.RealSortedList<T>
-HebMorph.DataStructures,RealSortedList<T>,1,8,0,0,8,68,13,0,0,0.62,1,0,HebMorph.DataStructures.SortOrder,
+HebMorph.DataStructures,RealSortedList<T>,1,8,0,0,8,68,13,0,0,0.62,0,0,,

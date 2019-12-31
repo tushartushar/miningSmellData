@@ -1,10 +1,9 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-WorkingWithFiles,App,0,1,0,0,1,12,1,0,0,-1,0,0,,
-WorkingWithFiles,LoadResourceText,0,1,0,0,1,29,1,0,0,-1,0,2,,WorkingWithFiles.LoadResourceXml' WorkingWithFiles.LoadResourceJson
-WorkingWithFiles,LoadResourceXml,0,1,0,0,1,31,1,0,0,-1,1,0,WorkingWithFiles.LoadResourceText,
-WorkingWithFiles,Monkey,0,1,3,0,1,10,1,0,0,-1,0,0,,
-WorkingWithFiles,SaveAndLoadText,3,1,0,0,1,48,1,0,0,0,0,0,,
-WorkingWithFiles,ISaveAndLoad,0,3,0,0,0,6,3,2,0,-1,0,0,,
-WorkingWithFiles,LoadResourceJson,0,1,0,0,1,35,1,0,0,-1,1,0,WorkingWithFiles.LoadResourceText,
-WorkingWithFiles,Earthquake,0,1,8,0,1,18,1,0,0,-1,0,0,,
-WorkingWithFiles,Rootobject,0,0,1,0,0,4,0,0,0,-1,0,0,,
+WorkingWithFiles,App,0,1,0,0,1,12,1,0,0,-1,4,0,WorkingWithFiles.LoadResourceJson' WorkingWithFiles.LoadResourceText' WorkingWithFiles.LoadResourceXml' WorkingWithFiles.SaveAndLoadText,
+WorkingWithFiles,Earthquake,0,1,8,0,1,18,1,0,0,-1,0,2,,WorkingWithFiles.Rootobject' WorkingWithFiles.LoadResourceJson
+WorkingWithFiles,Rootobject,0,0,1,0,0,4,0,0,0,-1,1,1,WorkingWithFiles.Earthquake,WorkingWithFiles.LoadResourceJson
+WorkingWithFiles,LoadResourceJson,0,1,0,0,1,41,1,0,0,-1,3,1,WorkingWithFiles.Earthquake' WorkingWithFiles.Rootobject' WorkingWithFiles.LoadResourceText,WorkingWithFiles.App
+WorkingWithFiles,LoadResourceText,0,1,0,0,1,32,1,0,0,-1,0,3,,WorkingWithFiles.LoadResourceJson' WorkingWithFiles.App' WorkingWithFiles.LoadResourceXml
+WorkingWithFiles,LoadResourceXml,0,1,0,0,1,40,1,0,0,-1,2,1,WorkingWithFiles.LoadResourceText' WorkingWithFiles.Monkey,WorkingWithFiles.App
+WorkingWithFiles,Monkey,0,0,3,0,0,6,0,0,0,-1,0,1,,WorkingWithFiles.LoadResourceXml
+WorkingWithFiles,SaveAndLoadText,3,1,0,0,1,48,1,0,0,0,0,1,,WorkingWithFiles.App

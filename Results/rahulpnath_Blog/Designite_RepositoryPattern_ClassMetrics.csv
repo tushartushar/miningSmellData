@@ -1,18 +1,18 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-RepositoryPattern,Article,0,0,5,0,0,8,0,0,1,-1,0,1,,RepositoryPattern.Program
-RepositoryPattern,ArticleRepository,1,2,0,0,2,13,2,0,1,0,2,0,RepositoryPattern.IArticleDataStoreStrategy' RepositoryPattern.ICacheStrategy,
-RepositoryPattern,ArticleSqlDataStoreStrategy,0,2,0,0,2,12,2,0,1,-1,1,0,RepositoryPattern.IDataStoreContext,
-RepositoryPattern,Blog,0,0,4,0,0,7,0,0,1,-1,0,0,,
-RepositoryPattern,GenericRepository<T>,2,6,0,0,6,44,7,0,1,0,2,0,RepositoryPattern.ICacheStrategy' RepositoryPattern.IDataStoreStrategy,
-RepositoryPattern,IArticleDataStoreStrategy,0,0,0,0,0,3,0,1,1,-1,0,1,,RepositoryPattern.ArticleRepository
-RepositoryPattern,IArticleRepository,0,1,0,0,0,4,1,2,1,-1,0,1,,RepositoryPattern.Program
-RepositoryPattern,ICacheStrategy,0,3,0,0,0,6,3,0,0,-1,0,2,,RepositoryPattern.ArticleRepository' RepositoryPattern.GenericRepository<T>
-RepositoryPattern,IDataStoreContext,0,1,0,0,0,4,1,1,0,-1,0,3,,RepositoryPattern.ArticleSqlDataStoreStrategy' RepositoryPattern.SqlDataStoreStrategy<T>' RepositoryPattern.UnitOfWork
-RepositoryPattern,IDataStoreStrategy,0,0,0,0,0,3,0,2,1,-1,0,1,,RepositoryPattern.GenericRepository<T>
-RepositoryPattern,IIdentifiable,0,0,1,0,0,4,0,2,0,-1,0,0,,
-RepositoryPattern,IRepository,0,5,0,0,0,8,5,3,0,-1,0,0,,
-RepositoryPattern,IUnitOfWork,0,1,2,0,0,6,1,1,0,-1,0,1,,RepositoryPattern.Program
-RepositoryPattern,Program,0,1,0,0,0,12,1,0,0,-1,3,0,RepositoryPattern.IUnitOfWork' RepositoryPattern.Article' RepositoryPattern.IArticleRepository,
-RepositoryPattern,SqlDataStoreContext,0,0,2,0,0,5,0,0,1,-1,0,1,,RepositoryPattern.SqlDataStoreStrategy<T>
-RepositoryPattern,SqlDataStoreStrategy<T>,2,6,0,0,2,37,6,0,2,0,2,0,RepositoryPattern.SqlDataStoreContext' RepositoryPattern.IDataStoreContext,
-RepositoryPattern,UnitOfWork,2,3,2,0,3,38,3,0,1,0,1,0,RepositoryPattern.IDataStoreContext,
+RepositoryPattern,Article,0,0,5,0,0,8,0,0,1,-1,1,7,RepositoryPattern.IIdentifiable,RepositoryPattern.Blog' RepositoryPattern.IArticleRepository' RepositoryPattern.IArticleDataStoreStrategy' RepositoryPattern.SqlDataStoreContext' RepositoryPattern.UnitOfWork' RepositoryPattern.ArticleSqlDataStoreStrategy' RepositoryPattern.ArticleRepository
+RepositoryPattern,ArticleRepository,1,2,0,0,2,13,2,0,1,1,5,1,RepositoryPattern.Article' RepositoryPattern.GenericRepository<T>' RepositoryPattern.IArticleDataStoreStrategy' RepositoryPattern.IArticleRepository' RepositoryPattern.ICacheStrategy,RepositoryPattern.UnitOfWork
+RepositoryPattern,ArticleSqlDataStoreStrategy,0,2,0,0,2,12,2,0,1,-1,4,1,RepositoryPattern.Article' RepositoryPattern.IArticleDataStoreStrategy' RepositoryPattern.IDataStoreContext' RepositoryPattern.SqlDataStoreStrategy<T>,RepositoryPattern.UnitOfWork
+RepositoryPattern,Blog,0,0,4,0,0,7,0,0,1,-1,2,3,RepositoryPattern.Article' RepositoryPattern.IIdentifiable,RepositoryPattern.SqlDataStoreContext' RepositoryPattern.IUnitOfWork' RepositoryPattern.UnitOfWork
+RepositoryPattern,GenericRepository<T>,2,6,0,0,6,44,7,0,1,0.33,4,2,RepositoryPattern.ICacheStrategy' RepositoryPattern.IDataStoreStrategy' RepositoryPattern.IIdentifiable' RepositoryPattern.IRepository,RepositoryPattern.ArticleRepository' RepositoryPattern.UnitOfWork
+RepositoryPattern,IArticleDataStoreStrategy,0,0,0,0,0,3,0,1,1,-1,3,2,RepositoryPattern.Article' RepositoryPattern.IArticleRepository' RepositoryPattern.IDataStoreStrategy,RepositoryPattern.ArticleSqlDataStoreStrategy' RepositoryPattern.ArticleRepository
+RepositoryPattern,IArticleRepository,0,1,0,0,0,4,1,2,1,-1,2,4,RepositoryPattern.Article' RepositoryPattern.IRepository,RepositoryPattern.IArticleDataStoreStrategy' RepositoryPattern.UnitOfWork' RepositoryPattern.ArticleRepository' RepositoryPattern.IUnitOfWork
+RepositoryPattern,ICacheStrategy,0,3,0,0,0,6,3,0,0,-1,1,3,RepositoryPattern.IIdentifiable,RepositoryPattern.ArticleRepository' RepositoryPattern.GenericRepository<T>' RepositoryPattern.UnitOfWork
+RepositoryPattern,IDataStoreContext,0,1,0,0,0,4,1,1,0,-1,0,4,,RepositoryPattern.ArticleSqlDataStoreStrategy' RepositoryPattern.SqlDataStoreContext' RepositoryPattern.SqlDataStoreStrategy<T>' RepositoryPattern.UnitOfWork
+RepositoryPattern,IDataStoreStrategy,0,0,0,0,0,3,0,2,1,-1,2,3,RepositoryPattern.IIdentifiable' RepositoryPattern.IRepository,RepositoryPattern.SqlDataStoreStrategy<T>' RepositoryPattern.IArticleDataStoreStrategy' RepositoryPattern.GenericRepository<T>
+RepositoryPattern,IIdentifiable,0,0,1,0,0,4,0,2,0,-1,0,7,,RepositoryPattern.Article' RepositoryPattern.Blog' RepositoryPattern.IDataStoreStrategy' RepositoryPattern.ICacheStrategy' RepositoryPattern.IRepository' RepositoryPattern.SqlDataStoreStrategy<T>' RepositoryPattern.GenericRepository<T>
+RepositoryPattern,IRepository,0,5,0,0,0,8,5,3,0,-1,1,6,RepositoryPattern.IIdentifiable,RepositoryPattern.GenericRepository<T>' RepositoryPattern.UnitOfWork' RepositoryPattern.IUnitOfWork' RepositoryPattern.IArticleRepository' RepositoryPattern.IDataStoreStrategy' RepositoryPattern.SqlDataStoreStrategy<T>
+RepositoryPattern,IUnitOfWork,0,1,2,0,0,6,1,1,0,-1,3,2,RepositoryPattern.Blog' RepositoryPattern.IArticleRepository' RepositoryPattern.IRepository,RepositoryPattern.UnitOfWork' RepositoryPattern.Program
+RepositoryPattern,Program,0,1,0,0,0,12,1,0,0,-1,1,0,RepositoryPattern.IUnitOfWork,
+RepositoryPattern,SqlDataStoreContext,0,0,2,0,0,5,0,0,1,-1,3,1,RepositoryPattern.Article' RepositoryPattern.Blog' RepositoryPattern.IDataStoreContext,RepositoryPattern.SqlDataStoreStrategy<T>
+RepositoryPattern,SqlDataStoreStrategy<T>,2,6,0,0,2,37,6,0,2,0,5,2,RepositoryPattern.IDataStoreContext' RepositoryPattern.IDataStoreStrategy' RepositoryPattern.IIdentifiable' RepositoryPattern.IRepository' RepositoryPattern.SqlDataStoreContext,RepositoryPattern.ArticleSqlDataStoreStrategy' RepositoryPattern.UnitOfWork
+RepositoryPattern,UnitOfWork,2,3,2,0,3,38,3,0,1,0.67,11,0,RepositoryPattern.Article' RepositoryPattern.ArticleRepository' RepositoryPattern.ArticleSqlDataStoreStrategy' RepositoryPattern.Blog' RepositoryPattern.GenericRepository<T>' RepositoryPattern.IArticleRepository' RepositoryPattern.ICacheStrategy' RepositoryPattern.IDataStoreContext' RepositoryPattern.IRepository' RepositoryPattern.IUnitOfWork' RepositoryPattern.SqlDataStoreStrategy<T>,

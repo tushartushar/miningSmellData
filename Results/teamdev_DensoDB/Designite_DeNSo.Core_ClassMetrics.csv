@@ -1,26 +1,26 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-DeNSo,Configuration,1,1,11,0,0,75,1,0,0,0,1,10,DeNSo.DensoExtensions,WebApp.DensoConfig' ConsoleApplication1.Program' DeNSo.EventStore' DeNSo.JournalWriter' DeNSo.ObjectStore' DeNSo.StoreManager' DeNSo.P2P.Mesh' DeNSo.P2P.EventP2PDispatcher' DeNSo.P2P.InitExtension' DeNSo.P2P.Messages.NodeInfo
-DeNSo,DensoExtensions,1,4,2,0,3,48,6,0,0,0,4,6,DeNSo.IExtensionPlugin' DeNSo.EventHandlerManager' DeNSo.LogWriter' DeNSo.LogEntryType,DeNSo.Configuration' DeNSo.StoreManager' DeNSo.P2P.ConfigurationExtensions' DeNSo.P2P.Mesh' DeNSo.P2P.EventP2PDispatcher' DeNSo.P2P.Messages.NodeInfo
-DeNSo,JournalReader,2,6,4,0,1,120,14,0,0,0,4,1,DeNSo.LogWriter' DeNSo.LogEntryType' DeNSo.JournalWriter' DeNSo.DiskIO.EventCommand,DeNSo.EventStore
-DeNSo,EventHandlerManager,2,5,0,0,2,75,14,0,0,0,7,3,DeNSo.LogWriter' DeNSo.LogEntryType' DeNSo.ICommandHandler' DeNSo.HandlesCommandAttribute' DeNSo.ObjectStoreWrapper' DeNSo.DiskIO.EventCommand' DeNSo.CommandKeyword,DeNSo.DensoExtensions' DeNSo.EventStore' DeNSo.P2P.EventP2PDispatcher
-DeNSo,EventStore,5,6,2,0,3,92,16,0,0,0.33,6,3,DeNSo.JournalWriter' DeNSo.Configuration' DeNSo.JournalReader' DeNSo.DiskIO.EventCommand' DeNSo.StoreManager' DeNSo.EventHandlerManager,DeNSo.StoreManager' DeNSo.CQRS.Command' DeNSo.P2P.Services.EventP2PServices
-DeNSo,JournalWriter,8,10,4,0,1,234,18,0,0,0.2,4,3,DeNSo.Configuration' DeNSo.DiskIO.EventCommand' DeNSo.LogWriter' DeNSo.LogEntryType,DeNSo.JournalReader' DeNSo.EventStore' DeNSo.StoreManager
-DeNSo,ObjectStore,3,19,2,0,10,212,40,0,1,0,2,3,DeNSo.Configuration' DeNSo.DocumentMetadata,DeNSo.ObjectStoreWrapper' DeNSo.StoreManager' DeNSo.CQRS.Query
+DeNSo,Configuration,1,1,11,0,0,75,1,0,0,0,1,4,DeNSo.DensoExtensions,DeNSo.JournalWriter' DeNSo.ObjectStore' DeNSo.StoreManager' DeNSo.EventStore
+DeNSo,DensoExtensions,1,4,2,0,3,48,6,0,0,0,3,2,DeNSo.EventHandlerManager' DeNSo.LogWriter' DeNSo.LogEntryType,DeNSo.StoreManager' DeNSo.Configuration
+DeNSo,JournalReader,2,6,4,0,1,120,14,0,0,0,4,1,DeNSo.JournalWriter' DeNSo.LogWriter' DeNSo.LogEntryType' DeNSo.DiskIO.EventCommand,DeNSo.EventStore
+DeNSo,EventHandlerManager,2,5,0,0,2,75,14,0,0,0,4,2,DeNSo.ObjectStoreWrapper' DeNSo.LogWriter' DeNSo.LogEntryType' DeNSo.DiskIO.EventCommand,DeNSo.EventStore' DeNSo.DensoExtensions
+DeNSo,EventStore,5,6,2,0,3,92,16,0,0,0.33,6,1,DeNSo.Configuration' DeNSo.JournalReader' DeNSo.EventHandlerManager' DeNSo.JournalWriter' DeNSo.StoreManager' DeNSo.DiskIO.EventCommand,DeNSo.StoreManager
+DeNSo,JournalWriter,8,10,4,0,1,234,27,0,0,0.2,4,3,DeNSo.Configuration' DeNSo.LogWriter' DeNSo.LogEntryType' DeNSo.DiskIO.EventCommand,DeNSo.StoreManager' DeNSo.JournalReader' DeNSo.EventStore
+DeNSo,ObjectStore,3,19,2,0,10,212,57,0,1,0,2,1,DeNSo.Configuration' DeNSo.Core.Filters.BloomFilter<T>,DeNSo.StoreManager
 DeNSo,ObjectStoreKeyType,0,0,0,0,0,6,0,0,0,-1,0,0,,
-DeNSo,ObjectStoreWrapper,1,2,1,0,1,13,2,0,1,0,2,1,DeNSo.StoreManager' DeNSo.ObjectStore,DeNSo.EventHandlerManager
-DeNSo,StoreManager,8,13,1,0,5,230,29,0,0,0.15,8,6,DeNSo.DensoExtensions' DeNSo.EventStore' DeNSo.ObjectStore' DeNSo.LogWriter' DeNSo.LogEntryType' DeNSo.JournalWriter' DeNSo.Configuration' DeNSo.IObjectStore,DeNSo.Session' DeNSo.EventStore' DeNSo.ObjectStoreWrapper' DeNSo.CQRS.Command' DeNSo.CQRS.Query' DeNSo.P2P.Services.EventP2PServices
-DeNSo,LogWriter,3,7,3,0,7,141,19,0,0,0.29,1,6,DeNSo.LogEntryType,DeNSo.DensoExtensions' DeNSo.JournalReader' DeNSo.EventHandlerManager' DeNSo.JournalWriter' DeNSo.StoreManager' DeNSo.CQRS.Command
-DeNSo,LogEntryType,0,0,0,0,0,8,0,0,0,-1,0,7,,DeNSo.DensoExtensions' DeNSo.JournalReader' DeNSo.EventHandlerManager' DeNSo.JournalWriter' DeNSo.StoreManager' DeNSo.LogWriter' DeNSo.CQRS.Command
-DeNSo.CQRS,Command,0,1,0,0,1,9,1,0,0,-1,4,1,DeNSo.EventStore' DeNSo.LogWriter' DeNSo.LogEntryType' DeNSo.StoreManager,DeNSo.Session
-DeNSo.CQRS,Query,0,5,0,0,5,27,7,0,0,-1,2,1,DeNSo.ObjectStore' DeNSo.StoreManager,DeNSo.Session
-DeNSo.EventHandlers,BaseCommandHandler,0,3,0,0,2,41,5,5,1,-1,3,0,DeNSo.CommandKeyword' DeNSo.IStore' DeNSo.DocumentMetadata,
-DeNSo.EventHandlers,CollectionFlushHandler,0,1,0,0,1,15,3,0,1,-1,3,0,DeNSo.IObjectStore' DeNSo.CommandKeyword' DeNSo.IStore,
-DeNSo.EventHandlers,DeleteHandler,0,1,0,0,1,26,4,0,2,-1,4,0,DeNSo.IObjectStore' DeNSo.IStore' DeNSo.CommandKeyword' DeNSo.DocumentMetadata,
-DeNSo.EventHandlers,DeleteManyHandler,0,1,0,0,1,24,2,0,2,-1,2,0,DeNSo.IObjectStore' DeNSo.IStore,
-DeNSo.EventHandlers,SetHandler,0,1,0,0,1,18,2,0,2,-1,3,0,DeNSo.IObjectStore' DeNSo.IStore' DeNSo.CommandKeyword,
-DeNSo.EventHandlers,SetManyHandler,0,1,0,0,1,29,5,0,2,-1,3,0,DeNSo.IObjectStore' DeNSo.IStore' DeNSo.DocumentMetadata,
-DeNSo.EventHandlers,UpdateHandler,0,3,0,0,1,35,7,0,2,-1,4,0,DeNSo.IObjectStore' DeNSo.IStore' DeNSo.DocumentMetadata' DeNSo.CommandKeyword,
-DeNSo.DiskIO,EventCommand,0,3,3,0,3,66,4,0,0,-1,0,6,,DeNSo.JournalReader' DeNSo.EventHandlerManager' DeNSo.EventStore' DeNSo.JournalWriter' DeNSo.P2P.EventP2PDispatcher' DeNSo.P2P.Services.EventP2PServices
-DeNSo.Core.Filters,BloomFilter<T>,4,14,2,0,7,199,26,0,0,0.71,0,0,,
+DeNSo,ObjectStoreWrapper,1,2,1,0,1,13,2,0,1,0,1,1,DeNSo.StoreManager,DeNSo.EventHandlerManager
+DeNSo,StoreManager,8,13,1,0,5,230,39,0,0,0.15,7,4,DeNSo.Configuration' DeNSo.DensoExtensions' DeNSo.EventStore' DeNSo.JournalWriter' DeNSo.ObjectStore' DeNSo.LogWriter' DeNSo.LogEntryType,DeNSo.CQRS.Command' DeNSo.ObjectStoreWrapper' DeNSo.CQRS.Query' DeNSo.EventStore
+DeNSo,LogWriter,3,7,3,0,7,141,23,0,0,0.29,1,6,DeNSo.LogEntryType,DeNSo.CQRS.Command' DeNSo.DensoExtensions' DeNSo.StoreManager' DeNSo.EventHandlerManager' DeNSo.JournalReader' DeNSo.JournalWriter
+DeNSo,LogEntryType,0,0,0,0,0,8,0,0,0,-1,0,7,,DeNSo.DensoExtensions' DeNSo.CQRS.Command' DeNSo.JournalReader' DeNSo.StoreManager' DeNSo.EventHandlerManager' DeNSo.JournalWriter' DeNSo.LogWriter
+DeNSo.CQRS,Command,0,1,0,0,1,9,1,0,0,-1,3,0,DeNSo.StoreManager' DeNSo.LogWriter' DeNSo.LogEntryType,
+DeNSo.CQRS,Query,0,5,0,0,5,27,7,0,0,-1,1,0,DeNSo.StoreManager,
+DeNSo.EventHandlers,BaseCommandHandler,0,3,0,0,2,41,5,5,1,-1,0,5,,DeNSo.EventHandlers.UpdateHandler' DeNSo.EventHandlers.SetHandler' DeNSo.EventHandlers.SetManyHandler' DeNSo.EventHandlers.DeleteManyHandler' DeNSo.EventHandlers.DeleteHandler
+DeNSo.EventHandlers,CollectionFlushHandler,0,1,0,0,1,15,3,0,1,-1,0,0,,
+DeNSo.EventHandlers,DeleteHandler,0,1,0,0,1,26,4,0,2,-1,1,0,DeNSo.EventHandlers.BaseCommandHandler,
+DeNSo.EventHandlers,DeleteManyHandler,0,1,0,0,1,24,2,0,2,-1,1,0,DeNSo.EventHandlers.BaseCommandHandler,
+DeNSo.EventHandlers,SetHandler,0,1,0,0,1,18,2,0,2,-1,1,0,DeNSo.EventHandlers.BaseCommandHandler,
+DeNSo.EventHandlers,SetManyHandler,0,1,0,0,1,29,6,0,2,-1,1,0,DeNSo.EventHandlers.BaseCommandHandler,
+DeNSo.EventHandlers,UpdateHandler,0,3,0,0,1,35,7,0,2,-1,1,0,DeNSo.EventHandlers.BaseCommandHandler,
+DeNSo.DiskIO,EventCommand,0,3,3,0,3,66,4,0,0,-1,0,4,,DeNSo.JournalWriter' DeNSo.EventHandlerManager' DeNSo.JournalReader' DeNSo.EventStore
+DeNSo.Core.Filters,BloomFilter<T>,4,14,2,0,7,199,27,0,0,0.71,0,1,,DeNSo.ObjectStore
 DeNSo.Struct,StoreGuid,1,4,0,1,4,40,7,0,0,0,0,0,,
 DeNSo.Struct,StoreKey,1,0,0,1,0,16,0,0,0,-1,0,0,,

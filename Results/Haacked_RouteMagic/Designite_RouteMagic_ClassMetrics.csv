@@ -1,21 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-RouteMagic.HttpHandlers,DelegateHttpHandler,2,2,1,0,2,28,4,0,0,0,0,1,,RouteMagic.Internals.RedirectRoute
+RouteMagic.HttpHandlers,DelegateHttpHandler,2,2,1,0,2,28,4,0,0,0,0,2,,RouteMagic.Internals.RedirectRoute' RouteMagic.RouteExtensions
 RouteMagic.HttpHandlers,RedirectHttpHandler,0,4,3,0,3,44,5,0,0,-1,0,1,,RouteMagic.Internals.RedirectRoute
 RouteMagic,IncomingOnlyRouteConstraint,0,1,0,0,1,7,1,0,0,-1,0,0,,
 RouteMagic,IRouteRegistrar,0,1,0,0,0,4,1,0,0,-1,0,1,,RouteMagic.RouteRegistrationExtensions
-RouteMagic,RedirectRouteExtensions,0,1,0,0,1,26,3,0,0,-1,1,0,RouteMagic.Internals.RedirectRoute,
-RouteMagic,GroupRoute,3,6,2,0,6,62,9,0,0,0.5,2,1,RouteMagic.Internals.IVirtualPathResolver' RouteMagic.Internals.VirtualPathResolver,RouteMagicDemo.Web.MvcApplication
-RouteMagic,RouteExtensions,0,11,0,0,11,82,15,0,0,-1,0,0,,
-RouteMagic,RouteRegistrationExtensions,0,2,0,0,1,26,3,0,0,-1,2,0,RouteMagic.Internals.ConfigFileChangeNotifier' RouteMagic.IRouteRegistrar,
+RouteMagic,RedirectRouteExtensions,0,1,0,0,1,26,3,0,0,-1,2,0,RouteMagic.Internals.NormalizeRoute' RouteMagic.Internals.RedirectRoute,
+RouteMagic,GroupRoute,3,6,2,0,6,62,9,0,0,0.5,3,0,RouteMagic.Internals.IVirtualPathResolver' RouteMagic.Internals.VirtualPathResolver' RouteMagic.Internals.ChildHttpContextWrapper,
+RouteMagic,RouteExtensions,0,11,0,0,11,82,15,0,0,-1,4,0,RouteMagic.HttpHandlers.DelegateHttpHandler' RouteMagic.Internals.NormalizeRoute' RouteMagic.RouteHandlers.HttpHandlerRouteHandler<THttpHandler>' RouteMagic.RouteHandlers.HttpHandlerRouteHandler,
+RouteMagic,RouteRegistrationExtensions,0,2,0,0,1,26,4,0,0,-1,2,0,RouteMagic.IRouteRegistrar' RouteMagic.Internals.ConfigFileChangeNotifier,
 RouteMagic,RouteValueDictionaryExtensions,1,5,0,0,5,52,10,0,0,0.6,0,0,,
 RouteMagic.Internals,ConfigFileChangeNotifier,2,5,0,0,1,47,6,0,0,0.4,0,1,,RouteMagic.RouteRegistrationExtensions
-RouteMagic.Internals,IVirtualPathResolver,0,1,0,0,0,4,1,1,0,-1,0,1,,RouteMagic.GroupRoute
-RouteMagic.Internals,NormalizeRoute,0,4,3,0,4,72,11,0,0,-1,0,1,,RouteMagic.MvcRouteExtenstions
-RouteMagic.Internals,RedirectRoute,0,9,5,0,9,114,17,0,0,-1,2,2,RouteMagic.HttpHandlers.RedirectHttpHandler' RouteMagic.HttpHandlers.DelegateHttpHandler,RouteMagic.RedirectRouteExtensions' RouteMagicDemo.Web.MvcApplication
+RouteMagic.Internals,IVirtualPathResolver,0,1,0,0,0,4,1,1,0,-1,0,2,,RouteMagic.Internals.VirtualPathResolver' RouteMagic.GroupRoute
+RouteMagic.Internals,NormalizeRoute,0,4,3,0,4,72,11,0,0,-1,0,2,,RouteMagic.RedirectRouteExtensions' RouteMagic.RouteExtensions
+RouteMagic.Internals,RedirectRoute,0,9,5,0,9,114,17,0,0,-1,2,1,RouteMagic.HttpHandlers.DelegateHttpHandler' RouteMagic.HttpHandlers.RedirectHttpHandler,RouteMagic.RedirectRouteExtensions
 RouteMagic.Internals,StringExtensions,0,3,0,0,3,32,7,0,0,-1,0,0,,
-RouteMagic.Internals,VirtualPathResolver,1,2,0,1,1,11,2,0,1,1,0,1,,RouteMagic.GroupRoute
-RouteMagic.Internals,ChildHttpContextWrapper,2,18,22,0,18,248,18,0,0,0,0,0,,
-RouteMagic.Internals,ChildHttpRequestWrapper,3,10,40,0,10,360,12,0,0,0,0,0,,
+RouteMagic.Internals,VirtualPathResolver,1,2,0,1,1,11,2,0,1,1,1,1,RouteMagic.Internals.IVirtualPathResolver,RouteMagic.GroupRoute
+RouteMagic.Internals,ChildHttpContextWrapper,2,18,22,0,18,248,18,0,0,0,1,1,RouteMagic.Internals.ChildHttpRequestWrapper,RouteMagic.GroupRoute
+RouteMagic.Internals,ChildHttpRequestWrapper,3,10,40,0,10,360,12,0,0,0,0,1,,RouteMagic.Internals.ChildHttpContextWrapper
 RouteMagic.RouteHandlers,DelegateRouteHandler,0,2,1,0,2,21,3,0,0,-1,0,0,,
-RouteMagic.RouteHandlers,HttpHandlerRouteHandler<THttpHandler>,1,2,0,0,2,12,2,0,0,0,0,0,,
-RouteMagic.RouteHandlers,HttpHandlerRouteHandler,0,2,1,0,2,16,2,1,0,-1,0,0,,
+RouteMagic.RouteHandlers,HttpHandlerRouteHandler<THttpHandler>,1,2,0,0,2,12,2,0,0,0,0,1,,RouteMagic.RouteExtensions
+RouteMagic.RouteHandlers,HttpHandlerRouteHandler,0,2,1,0,2,16,2,1,0,-1,0,1,,RouteMagic.RouteExtensions

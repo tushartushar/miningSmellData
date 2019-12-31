@@ -1,17 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Liquid.Drivers,LiquidPartDisplay,2,5,0,0,4,36,5,0,0,0.8,4,0,OrchardCore.ContentManagement.Metadata.IContentDefinitionManager' OrchardCore.Liquid.Model.LiquidPart' OrchardCore.DisplayManagement.Views.IDisplayResult' OrchardCore.Liquid.ViewModels.LiquidPartViewModel,
-OrchardCore.Liquid.Filters,ContainerFilter,1,2,0,0,2,26,5,0,0,0,2,0,OrchardCore.ContentManagement.IContentManager' OrchardCore.ContentManagement.ContentItem,
-OrchardCore.Liquid.Filters,ContentUrlFilter,0,1,0,0,1,11,2,0,0,-1,0,0,,
-OrchardCore.Liquid.Filters,DisplayTextFilter,1,2,0,0,2,18,3,0,0,0,3,0,OrchardCore.ContentManagement.IContentManager' OrchardCore.ContentManagement.ContentItem' OrchardCore.ContentManagement.ContentItemMetadata,
-OrchardCore.Liquid.Filters,DisplayUrlFilter,1,2,0,0,2,22,4,0,0,0,3,0,OrchardCore.ContentManagement.IContentManager' OrchardCore.ContentManagement.ContentItem' OrchardCore.ContentManagement.ContentItemMetadata,
-OrchardCore.Liquid.Filters,SlugifyFilter,1,2,0,0,2,13,2,0,0,0,0,0,,
-OrchardCore.Liquid.Filters,TimeZoneFilter,3,2,0,0,2,48,4,0,0,0,0,0,,
-OrchardCore.Liquid.Handlers,LiquidPartHandler,1,2,0,0,2,23,2,0,0,1,3,0,OrchardCore.ContentManagement.Metadata.IContentDefinitionManager' OrchardCore.ContentManagement.Handlers.ContentItemAspectContext' OrchardCore.Liquid.Model.LiquidPart,
-OrchardCore.Liquid.Indexing,LiquidPartIndexHandler,0,1,0,0,1,12,1,0,0,-1,6,0,OrchardCore.Indexing.DocumentIndexOptions' OrchardCore.Indexing.ContentIndexSettings' OrchardCore.Indexing.BuildPartIndexContext' OrchardCore.Indexing.DocumentIndex' OrchardCore.Liquid.Model.LiquidPart' OrchardCore.Indexing.Types,
-OrchardCore.Liquid,Migrations,1,2,0,0,2,15,2,0,0,0,2,0,OrchardCore.ContentManagement.Metadata.IContentDefinitionManager' OrchardCore.ContentManagement.Metadata.Builders.ContentPartDefinitionBuilder,
-OrchardCore.Liquid,Startup,0,2,0,0,1,32,2,0,0,-1,0,0,,
-OrchardCore.Liquid.Model,LiquidPart,0,0,1,0,0,4,0,0,3,-1,0,4,,OrchardCore.Liquid.Drivers.LiquidPartDisplay' OrchardCore.Liquid.Handlers.LiquidPartHandler' OrchardCore.Liquid.Indexing.LiquidPartIndexHandler' OrchardCore.Liquid.Services.LiquidShapes
-OrchardCore.Liquid.Services,LiquidShapes,0,2,0,0,1,27,2,0,1,-1,5,0,OrchardCore.Liquid.ViewModels.LiquidPartViewModel' OrchardCore.Liquid.Model.LiquidPart' OrchardCore.DisplayManagement.Implementation.ShapeDisplayContext' OrchardCore.DisplayManagement.Descriptors.ShapeAlterationBuilder' OrchardCore.DisplayManagement.Descriptors.ShapeTableBuilder,
-OrchardCore.Liquid.Services,LiquidTemplateManager,3,2,0,0,2,43,4,0,0,0,1,0,OrchardCore.DisplayManagement.Liquid.LiquidViewTemplate,
-OrchardCore.Liquid.Services,SlugService,0,1,0,0,1,61,10,0,0,-1,0,0,,
-OrchardCore.Liquid.ViewModels,LiquidPartViewModel,0,0,4,0,0,9,0,0,0,-1,0,2,,OrchardCore.Liquid.Drivers.LiquidPartDisplay' OrchardCore.Liquid.Services.LiquidShapes
+OrchardCore.Liquid.Drivers,LiquidPartDisplay,1,5,1,0,4,45,7,0,0,0.6,2,1,OrchardCore.Liquid.Models.LiquidPart' OrchardCore.Liquid.ViewModels.LiquidPartViewModel,OrchardCore.Liquid.LiquidPartStartup
+OrchardCore.Liquid.Filters,AbsoluteUrlFilter,0,1,0,0,1,17,3,0,0,-1,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,ContainerFilter,1,2,0,0,2,26,5,0,0,0,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,ContentUrlFilter,0,1,0,0,1,11,2,0,0,-1,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,DisplayTextFilter,0,1,0,0,1,12,2,0,0,-1,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,DisplayUrlFilter,1,2,0,0,2,22,4,0,0,0,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,JsonFilter,0,1,0,0,1,29,7,0,0,-1,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,LiquidFilter,2,2,0,0,2,22,3,0,0,0,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,SlugifyFilter,1,2,0,0,2,13,2,0,0,0,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Filters,TimeZoneFilter,1,2,0,0,2,42,7,0,0,0,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Handlers,LiquidPartHandler,3,2,0,0,2,40,2,0,0,0,2,1,OrchardCore.Liquid.Models.LiquidPart' OrchardCore.Liquid.ViewModels.LiquidPartViewModel,OrchardCore.Liquid.LiquidPartStartup
+OrchardCore.Liquid.Indexing,LiquidPartIndexHandler,0,1,0,0,1,15,2,0,0,-1,1,1,OrchardCore.Liquid.Models.LiquidPart,OrchardCore.Liquid.LiquidPartStartup
+OrchardCore.Liquid,Migrations,1,2,0,0,2,15,2,0,0,0,0,1,,OrchardCore.Liquid.LiquidPartStartup
+OrchardCore.Liquid,Startup,0,2,0,0,1,34,2,0,0,-1,11,0,OrchardCore.Liquid.Filters.AbsoluteUrlFilter' OrchardCore.Liquid.Filters.ContainerFilter' OrchardCore.Liquid.Filters.ContentUrlFilter' OrchardCore.Liquid.Filters.DisplayTextFilter' OrchardCore.Liquid.Filters.DisplayUrlFilter' OrchardCore.Liquid.Filters.JsonFilter' OrchardCore.Liquid.Filters.LiquidFilter' OrchardCore.Liquid.Filters.SlugifyFilter' OrchardCore.Liquid.Filters.TimeZoneFilter' OrchardCore.Liquid.Services.LiquidTemplateManager' OrchardCore.Liquid.Services.SlugService,
+OrchardCore.Liquid,LiquidPartStartup,0,1,0,0,1,14,1,0,0,-1,6,0,OrchardCore.Liquid.Drivers.LiquidPartDisplay' OrchardCore.Liquid.Handlers.LiquidPartHandler' OrchardCore.Liquid.Indexing.LiquidPartIndexHandler' OrchardCore.Liquid.Migrations' OrchardCore.Liquid.Models.LiquidPart' OrchardCore.Liquid.Services.LiquidShapes,
+OrchardCore.Liquid.Models,LiquidPart,0,0,1,0,0,4,0,0,3,-1,0,5,,OrchardCore.Liquid.ViewModels.LiquidPartViewModel' OrchardCore.Liquid.Indexing.LiquidPartIndexHandler' OrchardCore.Liquid.LiquidPartStartup' OrchardCore.Liquid.Drivers.LiquidPartDisplay' OrchardCore.Liquid.Handlers.LiquidPartHandler
+OrchardCore.Liquid.Services,LiquidShapes,1,3,0,0,2,24,3,0,1,0.67,1,1,OrchardCore.Liquid.ViewModels.LiquidPartViewModel,OrchardCore.Liquid.LiquidPartStartup
+OrchardCore.Liquid.Services,LiquidTemplateManager,3,5,0,0,4,57,7,0,0,0.4,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.Services,SlugService,0,1,0,0,1,61,11,0,0,-1,0,1,,OrchardCore.Liquid.Startup
+OrchardCore.Liquid.ViewModels,LiquidPartViewModel,0,0,4,0,0,9,0,0,0,-1,1,3,OrchardCore.Liquid.Models.LiquidPart,OrchardCore.Liquid.Services.LiquidShapes' OrchardCore.Liquid.Handlers.LiquidPartHandler' OrchardCore.Liquid.Drivers.LiquidPartDisplay

@@ -1,28 +1,28 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Libuv,UVStream,2,14,0,0,4,119,19,0,0,0.21,6,4,Libuv.uv_handle_t' Libuv.Util' Libuv.uv_buf_t' Libuv.uv_req_t' Libuv.Sizes' Libuv.uv_shutdown_t,Libuv.ChildProcess' Libuv.PipeSocket' Libuv.TcpSocket' Libuv.Tests.webserver
+Libuv,UVStream,2,14,0,0,4,119,19,0,0,0.36,6,3,Libuv.Util' Libuv.uv_handle_t' Libuv.uv_req_t' Libuv.uv_shutdown_t' Libuv.Sizes' Libuv.uv_buf_t,Libuv.TcpSocket' Libuv.PipeSocket' Libuv.ChildProcess
 Libuv,uv_process_options_t,9,0,0,9,0,12,0,0,0,-1,0,1,,Libuv.ChildProcess
-Libuv,ChildProcess,5,8,4,2,6,68,10,0,0,0.5,4,1,Libuv.UVStream' Libuv.uv_process_options_t' Libuv.Sizes' Libuv.Util,Libuv.Tests.webserver
-Libuv,PipeSocket,3,11,1,0,4,75,12,0,0,0.18,5,1,Libuv.uv_connect_t' Libuv.uv_handle_t' Libuv.Util' Libuv.UVStream' Libuv.Sizes,Libuv.Tests.webserver
-Libuv,PipeServer,4,7,0,0,3,39,7,0,0,0,3,1,Libuv.Sizes' Libuv.Util' Libuv.uv_handle_t,Libuv.Tests.webserver
-Libuv,TcpSocket,3,12,1,0,4,78,13,0,0,0.17,6,1,Libuv.uv_connect_t' Libuv.uv_handle_t' Libuv.Util' Libuv.UVStream' Libuv.Sizes' Libuv.sockaddr_in,Libuv.Tests.webserver
-Libuv,TcpServer,4,8,0,0,3,42,8,0,0,0,4,1,Libuv.sockaddr_in' Libuv.Sizes' Libuv.Util' Libuv.uv_handle_t,Libuv.Tests.webserver
-Libuv,Watcher,3,9,0,0,4,50,9,4,0,0.33,2,0,Libuv.Util' Libuv.uv_handle_t,
-Libuv,PrepareWatcher,0,7,0,0,1,21,7,0,1,-1,0,1,,Libuv.Tests.webserver
-Libuv,CheckWatcher,0,7,0,0,1,21,7,0,1,-1,0,1,,Libuv.Tests.webserver
-Libuv,IdleWatcher,0,7,0,0,1,21,7,0,1,-1,0,1,,Libuv.Tests.webserver
-Libuv,TimerWatcher,2,11,1,0,3,48,11,0,1,0.18,1,1,Libuv.Util,Libuv.Tests.webserver
-Libuv,Util,0,3,0,0,3,10,4,0,0,-1,1,8,Libuv.uv_err_t,Libuv.UVStream' Libuv.ChildProcess' Libuv.PipeSocket' Libuv.PipeServer' Libuv.TcpSocket' Libuv.TcpServer' Libuv.Watcher' Libuv.TimerWatcher
-Libuv,uv_handle_t,3,0,0,3,0,6,0,0,0,-1,1,6,Libuv.uv_handle_type,Libuv.UVStream' Libuv.PipeSocket' Libuv.PipeServer' Libuv.TcpSocket' Libuv.TcpServer' Libuv.Watcher
+Libuv,ChildProcess,5,8,4,2,6,68,10,0,0,0.5,4,0,Libuv.UVStream' Libuv.uv_process_options_t' Libuv.Util' Libuv.Sizes,
+Libuv,PipeSocket,3,11,1,0,4,75,12,0,0,0.18,5,1,Libuv.UVStream' Libuv.Util' Libuv.uv_handle_t' Libuv.uv_connect_t' Libuv.Sizes,Libuv.PipeServer
+Libuv,PipeServer,4,7,0,0,3,39,7,0,0,0,4,0,Libuv.PipeSocket' Libuv.Util' Libuv.uv_handle_t' Libuv.Sizes,
+Libuv,TcpSocket,3,12,1,0,4,78,13,0,0,0.17,6,1,Libuv.UVStream' Libuv.Util' Libuv.uv_handle_t' Libuv.uv_connect_t' Libuv.Sizes' Libuv.sockaddr_in,Libuv.TcpServer
+Libuv,TcpServer,4,8,0,0,3,42,8,0,0,0,5,0,Libuv.TcpSocket' Libuv.Util' Libuv.uv_handle_t' Libuv.Sizes' Libuv.sockaddr_in,
+Libuv,Watcher,3,9,0,0,4,50,9,4,0,0.44,2,4,Libuv.Util' Libuv.uv_handle_t,Libuv.PrepareWatcher' Libuv.TimerWatcher' Libuv.CheckWatcher' Libuv.IdleWatcher
+Libuv,PrepareWatcher,0,7,0,0,1,21,7,0,1,-1,2,0,Libuv.Watcher' Libuv.Sizes,
+Libuv,CheckWatcher,0,7,0,0,1,21,7,0,1,-1,2,0,Libuv.Watcher' Libuv.Sizes,
+Libuv,IdleWatcher,0,7,0,0,1,21,7,0,1,-1,2,0,Libuv.Watcher' Libuv.Sizes,
+Libuv,TimerWatcher,2,11,1,0,3,48,11,0,1,0.27,3,0,Libuv.Watcher' Libuv.Util' Libuv.Sizes,
+Libuv,Util,0,3,0,0,3,10,4,0,0,-1,1,8,Libuv.uv_err_t,Libuv.Watcher' Libuv.ChildProcess' Libuv.PipeServer' Libuv.TcpServer' Libuv.TimerWatcher' Libuv.TcpSocket' Libuv.PipeSocket' Libuv.UVStream
+Libuv,uv_handle_t,3,0,0,3,0,6,0,0,0,-1,1,6,Libuv.uv_handle_type,Libuv.Watcher' Libuv.TcpServer' Libuv.PipeServer' Libuv.PipeSocket' Libuv.UVStream' Libuv.TcpSocket
 Libuv,uv_req_t,2,0,0,2,0,5,0,0,0,-1,1,1,Libuv.uv_req_type,Libuv.UVStream
-Libuv,uv_connect_t,8,0,0,4,0,13,0,0,0,-1,2,2,Libuv.uv_req_type' Libuv.uv_err_t,Libuv.PipeSocket' Libuv.TcpSocket
-Libuv,uv_shutdown_t,8,0,0,4,0,13,0,0,0,-1,2,1,Libuv.uv_req_type' Libuv.uv_err_t,Libuv.UVStream
+Libuv,uv_connect_t,8,0,0,4,0,13,0,0,0,-1,2,2,Libuv.uv_err_t' Libuv.uv_req_type,Libuv.TcpSocket' Libuv.PipeSocket
+Libuv,uv_shutdown_t,8,0,0,4,0,13,0,0,0,-1,2,1,Libuv.uv_err_t' Libuv.uv_req_type,Libuv.UVStream
 Libuv,uv_err_t,2,0,0,1,0,6,0,0,0,-1,1,3,Libuv.uv_err_code,Libuv.Util' Libuv.uv_connect_t' Libuv.uv_shutdown_t
 Libuv,uv_err_code,0,0,0,0,0,44,0,0,0,-1,0,1,,Libuv.uv_err_t
 Libuv,uv_handle_type,0,0,0,0,0,16,0,0,0,-1,0,1,,Libuv.uv_handle_t
 Libuv,uv_req_type,0,0,0,0,0,10,0,0,0,-1,0,3,,Libuv.uv_req_t' Libuv.uv_connect_t' Libuv.uv_shutdown_t
-Libuv,Sizes,8,0,0,8,0,23,0,0,0,-1,0,6,,Libuv.UVStream' Libuv.ChildProcess' Libuv.PipeSocket' Libuv.PipeServer' Libuv.TcpSocket' Libuv.TcpServer
+Libuv,Sizes,8,0,0,8,0,23,0,0,0,-1,0,10,,Libuv.PrepareWatcher' Libuv.IdleWatcher' Libuv.TimerWatcher' Libuv.CheckWatcher' Libuv.TcpServer' Libuv.TcpSocket' Libuv.PipeServer' Libuv.PipeSocket' Libuv.ChildProcess' Libuv.UVStream
 Libuv,uv_buf_t,2,0,0,2,0,13,0,0,0,-1,0,1,,Libuv.UVStream
-Libuv,sockaddr_in,4,0,0,4,0,22,0,0,0,-1,1,2,Libuv.in_addr,Libuv.TcpSocket' Libuv.TcpServer
-Libuv,in_addr,3,0,0,3,0,14,0,0,0,-1,2,1,Libuv._S_un_b' Libuv._S_un_w,Libuv.sockaddr_in
-Libuv,_S_un_b,4,0,0,4,0,4,0,0,0,-1,0,1,,Libuv.in_addr
-Libuv,_S_un_w,2,0,0,2,0,4,0,0,0,-1,0,1,,Libuv.in_addr
+Libuv,sockaddr_in,4,0,0,4,0,22,0,0,0,-1,3,2,Libuv.in_addr' Libuv._S_un_b' Libuv._S_un_w,Libuv.TcpSocket' Libuv.TcpServer
+Libuv,in_addr,3,0,0,3,0,14,0,0,0,-1,0,1,,Libuv.sockaddr_in
+Libuv,_S_un_b,4,0,0,4,0,4,0,0,0,-1,0,1,,Libuv.sockaddr_in
+Libuv,_S_un_w,2,0,0,2,0,4,0,0,0,-1,0,1,,Libuv.sockaddr_in

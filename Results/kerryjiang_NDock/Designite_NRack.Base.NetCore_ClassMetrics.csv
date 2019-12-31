@@ -1,51 +1,49 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-NRack.Base,IConfigValueChangeNotifier,0,1,0,0,0,4,1,1,0,-1,0,1,,NRack.Base.AppServer
+NRack.Base,IConfigValueChangeNotifier,0,1,0,0,0,4,1,1,0,-1,0,2,,NRack.Base.ConfigValueChangeNotifier' NRack.Base.AppServer
 NRack.Base,ConfigValueChangeNotifier,1,2,0,0,2,12,2,0,1,0,0,1,,NRack.Base.AppServer
-NRack.Base,AppServer,3,22,10,0,4,294,40,0,1,0.55,12,0,NRack.Base.StatusInfoCollection' NRack.Base.AppServerMetadata' NRack.Base.ConfigValueChangeNotifier' NRack.Base.Config.IServerConfig' NRack.Base.IConfigValueChangeNotifier' NRack.Base.Config.ServerConfig' NRack.Base.Config.HotUpdateAttribute' System.ComponentModel.Composition.CompositionContainer' NRack.Base.ServerState' NRack.Base.IBootstrap' System.ComponentModel.Composition.Hosting.ExportProvider' NRack.Base.Metadata.StatusInfoKeys,
+NRack.Base,AppServer,3,22,10,0,4,294,40,0,1,0.55,0,0,,
 NRack.Base,ErrorEventArgs,0,1,1,0,1,8,1,0,0,-1,0,0,,
-NRack.Base,Extensions,0,6,0,0,5,133,14,0,0,-1,2,0,System.ComponentModel.Composition.CompositionContainer' NRack.Base.IAppServer,
-NRack.Base,ReflectionExtensions,0,5,0,0,5,48,5,0,0,-1,0,0,,
-NRack.Base,IAppEndPoint,0,0,1,0,0,10,0,0,0,-1,0,1,,NRack.Base.IMessageBus
-NRack.Base,IAppServer,0,0,3,0,0,6,0,1,1,-1,0,6,,NRack.Base.Extensions' NRack.Base.ICompositeTarget' NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>' System.Reflection.Extensions
-NRack.Base,IBootstrap,0,3,2,0,0,27,3,0,0,-1,0,2,,NRack.Base.AppServer' NRack.Base.IManagedApp
-NRack.Base,ICompositeTarget,0,1,0,0,0,10,1,1,0,-1,2,0,NRack.Base.IAppServer' System.ComponentModel.Composition.Hosting.ExportProvider,
-NRack.Base,IManagedApp,0,1,3,0,0,7,1,1,1,-1,2,0,NRack.Base.IBootstrap' NRack.Base.Config.IServerConfig,
-NRack.Base,IManagedAppBase,0,6,0,0,0,9,6,1,0,-1,1,0,NRack.Base.Config.IServerConfig,
-NRack.Base,IMessageBus,0,3,0,0,0,23,3,0,0,-1,1,0,NRack.Base.IAppEndPoint,
-NRack.Base,IsolationMode,0,0,0,0,0,15,0,0,0,-1,0,0,,
-NRack.Base,AppServerStatus,0,1,2,0,1,10,1,0,0,-1,2,1,NRack.Base.AppServerMetadata' NRack.Base.StatusInfoCollection,NRack.Base.IStatusCollector
-NRack.Base,IStatusCollector,0,1,0,0,0,4,1,0,0,-1,1,0,NRack.Base.AppServerStatus,
-NRack.Base,AppServerMetadata,0,3,3,0,3,41,7,0,0,-1,3,2,NRack.Base.Metadata.IAppServerMetadata' NRack.Base.Metadata.StatusInfoAttribute' NRack.Base.Metadata.AppServerMetadataAttribute,NRack.Base.AppServer' NRack.Base.AppServerStatus
+NRack.Base,Extensions,0,6,0,0,5,133,14,0,0,-1,0,0,,
+NRack.Base,IAppEndPoint,0,0,1,0,0,10,0,0,0,-1,0,2,,NRack.Base.IMessageBus' NRack.Base.IAppServer
+NRack.Base,IAppServer,0,0,3,0,0,6,0,1,1,-1,0,6,,NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>' NRack.Base.Metadata.AppServerMetadataAttribute' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.ICompositeTarget' NRack.Base.Extensions
+NRack.Base,IBootstrap,0,3,2,0,0,27,3,0,0,-1,0,1,,NRack.Base.IManagedApp
+NRack.Base,ICompositeTarget,0,1,0,0,0,10,1,1,0,-1,0,1,,NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>
+NRack.Base,IManagedApp,0,1,3,0,0,7,1,1,1,-1,0,2,,NRack.Base.IAppServer' NRack.Base.IBootstrap
+NRack.Base,IManagedAppBase,0,6,0,0,0,9,6,1,0,-1,0,2,,NRack.Base.AppServer' NRack.Base.IManagedApp
+NRack.Base,IMessageBus,0,3,0,0,0,23,3,0,0,-1,0,1,,NRack.Base.IAppServer
+NRack.Base,IsolationMode,0,0,0,0,0,15,0,0,0,-1,0,2,,NRack.Base.Config.IConfigSource' NRack.Base.Config.NRackConfig
+NRack.Base,AppServerStatus,0,1,2,0,1,10,1,0,0,-1,0,1,,NRack.Base.IStatusCollector
+NRack.Base,IStatusCollector,0,1,0,0,0,4,1,0,0,-1,0,0,,
+NRack.Base,AppServerMetadata,0,3,3,0,3,41,7,0,0,-1,0,3,,NRack.Base.AppServerStatus' NRack.Base.IManagedAppBase' NRack.Base.AppServerMetadata
 NRack.Base,NRackEnv,1,1,0,1,0,12,1,0,0,0,0,0,,
-NRack.Base,ServerState,0,0,0,0,0,27,0,0,0,-1,0,1,,NRack.Base.AppServer
-NRack.Base,ServerStateConst,6,0,0,6,0,9,0,0,0,-1,0,0,,
-NRack.Base,StartupType,0,0,0,0,0,15,0,0,0,-1,0,0,,
-NRack.Base,StatusInfoCollection,2,6,5,0,4,119,11,0,0,0.67,2,2,System.Runtime.Serialization.NonSerializedAttribute' System.Runtime.Serialization.StreamingContext,NRack.Base.AppServer' NRack.Base.AppServerStatus
-NRack.Base.CompositeTargets,CompositeTargetBase<TTarget>,1,3,0,0,1,34,4,0,1,0.67,2,0,NRack.Base.IAppServer' System.ComponentModel.Composition.Hosting.ExportProvider,
-NRack.Base.CompositeTargets,MultipleResultCompositeTarget<TTarget>,0,1,0,0,0,13,1,0,0,-1,0,0,,
-NRack.Base.CompositeTargets,MultipleResultCompositeTarget<TTarget;TMetadata>,0,2,0,0,0,24,2,0,0,-1,0,0,,
-NRack.Base.CompositeTargets,MultipleResultCompositeTargetCore<TTarget;TMetadata>,0,4,2,0,0,105,13,0,0,-1,3,0,NRack.Base.Config.IServerConfig' NRack.Base.IAppServer' System.ComponentModel.Composition.Hosting.ExportProvider,
-NRack.Base.CompositeTargets,SingleResultCompositeTarget<TTarget>,0,1,0,0,0,13,1,0,0,-1,0,0,,
-NRack.Base.CompositeTargets,SingleResultCompositeTarget<TTarget;TMetadata>,0,2,0,0,0,25,2,0,0,-1,0,0,,
-NRack.Base.CompositeTargets,SingleResultCompositeTargetCore<TTarget;TMetadata>,0,5,2,0,0,92,9,0,0,-1,3,0,NRack.Base.Config.IServerConfig' NRack.Base.IAppServer' System.ComponentModel.Composition.Hosting.ExportProvider,
-System.ComponentModel.Composition,CompositionContainer,0,0,0,0,0,4,0,0,1,-1,0,3,,NRack.Base.AppServer' NRack.Base.Extensions' System.Reflection.Extensions
-System.ComponentModel.Composition.Hosting,ExportProvider,0,1,0,0,1,7,1,1,0,-1,0,17,,NRack.Base.AppServer' NRack.Base.ICompositeTarget' NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.AppServer' NRack.Base.ICompositeTarget' NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.AppServer' NRack.Base.ICompositeTarget' NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Server.BootstrapBase' NRack.Server.BootstrapBase
-System.Runtime.Serialization,SerializableAttribute,0,0,0,0,0,5,0,0,0,-1,0,0,,
+NRack.Base,ServerState,0,0,0,0,0,27,0,0,0,-1,0,1,,NRack.Base.IManagedApp
+NRack.Base,ServerStateConst,6,0,0,6,0,9,0,0,0,-1,0,1,,NRack.Base.ServerState
+NRack.Base,StartupType,0,0,0,0,0,15,0,0,0,-1,0,2,,NRack.Base.Config.ServerConfig' NRack.Base.Config.IServerConfig
+NRack.Base,StatusInfoCollection,2,6,5,0,4,119,11,0,0,0.67,0,2,,NRack.Base.IManagedAppBase' NRack.Base.AppServerStatus
+NRack.Base.CompositeTargets,CompositeTargetBase<TTarget>,1,3,0,0,1,34,4,0,1,0.67,0,3,,NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>
+NRack.Base.CompositeTargets,MultipleResultCompositeTarget<TTarget>,0,1,0,0,0,13,1,0,0,-1,0,1,,NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget>
+NRack.Base.CompositeTargets,MultipleResultCompositeTarget<TTarget;TMetadata>,0,2,0,0,0,24,2,0,0,-1,0,2,,NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget;TMetadata>
+NRack.Base.CompositeTargets,MultipleResultCompositeTargetCore<TTarget;TMetadata>,0,4,2,0,0,105,13,0,0,-1,0,2,,NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget;TMetadata>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>
+NRack.Base.CompositeTargets,SingleResultCompositeTarget<TTarget>,0,1,0,0,0,13,1,0,0,-1,0,1,,NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget>
+NRack.Base.CompositeTargets,SingleResultCompositeTarget<TTarget;TMetadata>,0,2,0,0,0,25,2,0,0,-1,0,2,,NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget>' NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget;TMetadata>
+NRack.Base.CompositeTargets,SingleResultCompositeTargetCore<TTarget;TMetadata>,0,5,2,0,0,92,9,0,0,-1,0,2,,NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>
+System.ComponentModel.Composition,CompositionContainer,0,0,0,0,0,4,0,0,1,-1,1,1,System.ComponentModel.Composition.Hosting.ExportProvider,NRack.Base.Extensions
+System.ComponentModel.Composition.Hosting,ExportProvider,0,1,0,0,1,7,1,1,0,-1,0,5,,System.ComponentModel.Composition.CompositionContainer' NRack.Base.ICompositeTarget' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.CompositeTargetBase<TTarget>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>
+System.Runtime.Serialization,SerializableAttribute,0,0,0,0,0,5,0,0,0,-1,0,4,,NRack.Base.Metadata.AppServerMetadataAttribute' NRack.Base.Metadata.StatusInfoAttribute' NRack.Base.AppServerMetadata' NRack.Base.StatusInfoCollection
 System.Runtime.Serialization,NonSerializedAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,NRack.Base.StatusInfoCollection
-System.Runtime.Serialization,OnSerializingAttribute,0,0,0,0,0,5,0,0,0,-1,0,0,,
-System.Runtime.Serialization,OnDeserializedAttribute,0,0,0,0,0,5,0,0,0,-1,0,0,,
-System.Runtime.Serialization,StreamingContext,0,0,0,0,0,4,0,0,0,-1,0,3,,NRack.Base.StatusInfoCollection' NRack.Base.StatusInfoCollection' NRack.Base.StatusInfoCollection
+System.Runtime.Serialization,OnSerializingAttribute,0,0,0,0,0,5,0,0,0,-1,0,1,,NRack.Base.StatusInfoCollection
+System.Runtime.Serialization,OnDeserializedAttribute,0,0,0,0,0,5,0,0,0,-1,0,1,,NRack.Base.StatusInfoCollection
+System.Runtime.Serialization,StreamingContext,0,0,0,0,0,4,0,0,0,-1,0,1,,NRack.Base.StatusInfoCollection
 Microsoft.Extensions.Logging,LoggingExtensions,0,3,0,0,3,17,3,0,0,-1,0,0,,
-System.Reflection,Extensions,0,6,0,0,5,133,14,0,0,-1,2,0,System.ComponentModel.Composition.CompositionContainer' NRack.Base.IAppServer,
 System.Reflection,ReflectionExtensions,0,5,0,0,5,48,5,0,0,-1,0,0,,
 NRack.Base.Metadata,AppServerMetadataAttribute,0,2,1,0,2,17,2,0,1,-1,0,1,,NRack.Base.AppServerMetadata
-NRack.Base.Metadata,IAppServerMetadata,0,0,1,0,0,4,0,1,0,-1,0,1,,NRack.Base.AppServerMetadata
-NRack.Base.Metadata,StatusInfoAttribute,0,3,7,0,3,76,3,0,0,-1,0,1,,NRack.Base.AppServerMetadata
-NRack.Base.Metadata,StatusInfoKeys,8,0,0,8,0,39,0,0,0,-1,0,1,,NRack.Base.AppServer
-NRack.Base.Provider,IProviderMetadata,0,0,1,0,0,10,0,1,0,-1,0,0,,
+NRack.Base.Metadata,IAppServerMetadata,0,0,1,0,0,4,0,1,0,-1,0,2,,NRack.Base.AppServerMetadata' NRack.Base.Metadata.AppServerMetadataAttribute
+NRack.Base.Metadata,StatusInfoAttribute,0,3,7,0,3,76,3,0,0,-1,0,3,,NRack.Base.Metadata.AppServerMetadataAttribute' NRack.Base.AppServerMetadata' NRack.Base.Metadata.StatusInfoAttribute
+NRack.Base.Metadata,StatusInfoKeys,8,0,0,8,0,39,0,0,0,-1,0,1,,NRack.Base.Metadata.AppServerMetadataAttribute
+NRack.Base.Provider,IProviderMetadata,0,0,1,0,0,10,0,1,0,-1,0,5,,NRack.Base.Provider.ProviderMetadataAttribute' NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget>' NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget;TMetadata>
 NRack.Base.Provider,ProviderMetadataAttribute,0,1,1,0,1,10,1,0,1,-1,0,0,,
-NRack.Base.Config,IServerConfig,0,0,7,0,0,10,0,1,0,-1,0,6,,NRack.Base.AppServer' NRack.Base.IManagedApp' NRack.Base.IManagedAppBase' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.Config.ServerConfig
+NRack.Base.Config,IServerConfig,0,0,7,0,0,10,0,1,0,-1,0,12,,NRack.Base.Config.IConfigSource' NRack.Base.AppServer' NRack.Base.Config.NRackConfig' NRack.Base.Config.ServerConfig' NRack.Base.IManagedApp' NRack.Base.IManagedAppBase' NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget>' NRack.Base.CompositeTargets.SingleResultCompositeTarget<TTarget;TMetadata>' NRack.Base.CompositeTargets.SingleResultCompositeTargetCore<TTarget;TMetadata>' NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget>' NRack.Base.CompositeTargets.MultipleResultCompositeTarget<TTarget;TMetadata>' NRack.Base.CompositeTargets.MultipleResultCompositeTargetCore<TTarget;TMetadata>
 NRack.Base.Config,IConfigSource,0,0,5,0,0,8,0,1,0,-1,0,1,,NRack.Base.Config.NRackConfig
-NRack.Base.Config,NRackConfig,1,2,5,1,2,23,3,0,1,1,1,0,NRack.Base.Config.IConfigSource,
-NRack.Base.Config,ServerConfig,0,2,7,0,2,32,2,0,1,-1,1,1,NRack.Base.Config.IServerConfig,NRack.Base.AppServer
+NRack.Base.Config,NRackConfig,1,2,5,1,2,23,3,0,1,1,0,0,,
+NRack.Base.Config,ServerConfig,0,2,7,0,2,32,2,0,1,-1,0,2,,NRack.Base.AppServer' NRack.Base.Config.NRackConfig
 NRack.Base.Config,HotUpdateAttribute,0,0,0,0,0,4,0,0,0,-1,0,1,,NRack.Base.AppServer

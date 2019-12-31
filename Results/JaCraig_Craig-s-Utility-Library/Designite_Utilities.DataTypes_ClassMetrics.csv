@@ -1,122 +1,122 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Utilities.DataTypes.Caching.Default,Cache,0,11,5,0,10,127,13,0,1,-1,0,0,,
-Utilities.DataTypes.Caching.Default,CacheCache,0,11,5,0,10,193,21,0,1,-1,0,0,,
-Utilities.DataTypes.Caching.Default,ItemCache,0,10,4,0,9,182,20,0,1,-1,0,0,,
-Utilities.DataTypes.Caching.Default,SessionCache,0,10,4,0,9,182,20,0,1,-1,0,0,,
-Utilities.DataTypes.Caching.Interfaces,ICache,0,3,2,0,0,29,3,1,0,-1,0,2,,Utilities.DataTypes.Caching.Manager' Utilities.DataTypes.CacheExtensions
-Utilities.DataTypes.Caching,Manager,0,4,1,0,3,63,11,0,1,-1,1,1,Utilities.DataTypes.Caching.Interfaces.ICache,Utilities.DataTypes.CacheExtensions
-Utilities.DataTypes.Caching.Module,CachingModule,0,1,1,0,1,19,1,0,1,-1,1,0,Utilities.IoC.Interfaces.IBootstrapper,
-Utilities.DataTypes.AI,NaiveBayes<T>,0,4,12,0,3,180,9,0,0,-1,0,0,,
-Utilities.DataTypes.AOP.Interfaces,IAspect,0,6,3,0,0,54,6,0,0,-1,0,5,,Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.AOP.Generators.ClassGenerator' Utilities.DataTypes.AOP.Generators.ConstructorGenerator' Utilities.DataTypes.AOP.Generators.MethodGenerator' Utilities.DataTypes.AOP.Generators.PropertyGenerator
-Utilities.DataTypes.AOP.Interfaces,IAOPModule,0,1,0,0,0,8,1,0,0,-1,1,1,Utilities.DataTypes.AOP.Manager,Utilities.DataTypes.AOP.Manager
-Utilities.DataTypes.AOP.Interfaces,IClassGenerator,0,1,0,0,0,13,1,1,0,-1,0,0,,
-Utilities.DataTypes.AOP,Manager,2,14,1,0,6,334,34,0,0,0.21,6,2,Utilities.DataTypes.CodeGen.Compiler' Utilities.DataTypes.AOP.Interfaces.IAOPModule' Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Generators.ClassGenerator' Utilities.DataTypes.AOP.Generators.PropertyGenerator' Utilities.DataTypes.AOP.Generators.MethodGenerator,Utilities.DataTypes.AOP.Interfaces.IAOPModule' Utilities.DataTypes.Dynamo
-Utilities.DataTypes.AOP.Module,AOPModule,0,1,1,0,1,20,1,0,1,-1,1,0,Utilities.IoC.Interfaces.IBootstrapper,
-Utilities.DataTypes,Bag<T>,0,8,3,0,7,99,10,0,0,-1,0,0,,
-Utilities.DataTypes,BinaryTree<T>,0,12,7,0,8,304,36,0,0,-1,0,0,,
-Utilities.DataTypes,TreeNode<T>,0,2,7,0,2,61,2,0,0,-1,0,0,,
+Utilities.DataTypes.Caching.Default,Cache,0,11,5,0,10,127,13,0,1,-1,1,1,Utilities.DataTypes.Caching.BaseClasses.CacheBase,Utilities.DataTypes.Caching.Manager
+Utilities.DataTypes.Caching.Default,CacheCache,0,11,5,0,10,193,21,0,1,-1,1,1,Utilities.DataTypes.Caching.BaseClasses.CacheBase,Utilities.DataTypes.Caching.Manager
+Utilities.DataTypes.Caching.Default,ItemCache,0,10,4,0,9,182,20,0,1,-1,1,1,Utilities.DataTypes.Caching.BaseClasses.CacheBase,Utilities.DataTypes.Caching.Manager
+Utilities.DataTypes.Caching.Default,SessionCache,0,10,4,0,9,182,20,0,1,-1,1,1,Utilities.DataTypes.Caching.BaseClasses.CacheBase,Utilities.DataTypes.Caching.Manager
+Utilities.DataTypes.Caching.Interfaces,ICache,0,3,2,0,0,29,3,1,0,-1,0,3,,Utilities.DataTypes.Caching.BaseClasses.CacheBase' Utilities.DataTypes.Caching.Manager' Utilities.DataTypes.Caching.Module.CachingModule
+Utilities.DataTypes.Caching,Manager,0,4,1,0,3,63,11,0,1,-1,6,2,Utilities.DataTypes.Caching.Default.Cache' Utilities.DataTypes.Caching.Default.CacheCache' Utilities.DataTypes.Caching.Default.ItemCache' Utilities.DataTypes.Caching.Default.SessionCache' Utilities.DataTypes.Caching.Interfaces.ICache' Utilities.DataTypes.Patterns.BaseClasses.SafeDisposableBaseClass,Utilities.DataTypes.Caching.Module.CachingModule' Utilities.DataTypes.CacheExtensions
+Utilities.DataTypes.Caching.Module,CachingModule,0,1,1,0,1,19,1,0,1,-1,2,0,Utilities.DataTypes.Caching.Interfaces.ICache' Utilities.DataTypes.Caching.Manager,
+Utilities.DataTypes.AI,NaiveBayes<T>,0,4,12,0,3,180,9,0,0,-1,1,0,Utilities.DataTypes.Bag<T>,
+Utilities.DataTypes.AOP.Interfaces,IAspect,0,6,3,0,0,54,6,0,0,-1,0,6,,Utilities.DataTypes.AOP.Generators.ConstructorGenerator' Utilities.DataTypes.AOP.Generators.ClassGenerator' Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.AOP.Generators.MethodGenerator' Utilities.DataTypes.AOP.Generators.PropertyGenerator' Utilities.DataTypes.AOP.Module.AOPModule
+Utilities.DataTypes.AOP.Interfaces,IAOPModule,0,1,0,0,0,8,1,0,0,-1,1,2,Utilities.DataTypes.AOP.Manager,Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.AOP.Module.AOPModule
+Utilities.DataTypes.AOP.Interfaces,IClassGenerator,0,1,0,0,0,13,1,1,0,-1,0,1,,Utilities.DataTypes.AOP.Generators.ClassGenerator
+Utilities.DataTypes.AOP,Manager,2,14,1,0,6,334,37,0,0,0.21,6,3,Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Interfaces.IAOPModule' Utilities.DataTypes.CodeGen.Compiler' Utilities.DataTypes.AOP.Generators.ClassGenerator' Utilities.DataTypes.AOP.Generators.MethodGenerator' Utilities.DataTypes.AOP.Generators.PropertyGenerator,Utilities.DataTypes.AOP.Interfaces.IAOPModule' Utilities.DataTypes.AOP.Module.AOPModule' Utilities.DataTypes.Dynamo
+Utilities.DataTypes.AOP.Module,AOPModule,0,1,1,0,1,20,1,0,1,-1,4,0,Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Interfaces.IAOPModule' Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.CodeGen.Compiler,
+Utilities.DataTypes,Bag<T>,0,8,3,0,7,99,10,0,0,-1,0,2,,Utilities.DataTypes.MathExtensions' Utilities.DataTypes.AI.NaiveBayes<T>
+Utilities.DataTypes,BinaryTree<T>,0,12,7,0,8,304,38,0,0,-1,1,0,Utilities.DataTypes.TreeNode<T>,
+Utilities.DataTypes,TreeNode<T>,0,2,7,0,2,61,2,0,0,-1,0,1,,Utilities.DataTypes.BinaryTree<T>
 Utilities.DataTypes,DateSpan,0,6,9,0,6,168,8,0,0,-1,0,0,,
-Utilities.DataTypes,Change,0,1,2,0,1,21,1,0,0,-1,0,0,,
-Utilities.DataTypes,Dynamo<T>,0,6,2,0,0,111,10,0,1,-1,1,0,Utilities.DataTypes.Dynamo,
-Utilities.DataTypes,Dynamo,3,38,9,0,31,602,63,1,0,0.39,5,1,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping' Utilities.DataTypes.DataMapper.Manager' Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.EventArgs.OnEndEventArgs' Utilities.DataTypes.EventArgs.OnStartEventArgs,Utilities.DataTypes.Dynamo<T>
+Utilities.DataTypes,Change,0,1,2,0,1,21,1,0,0,-1,0,1,,Utilities.DataTypes.Dynamo
+Utilities.DataTypes,Dynamo<T>,0,6,2,0,0,111,11,0,1,-1,1,0,Utilities.DataTypes.Dynamo,
+Utilities.DataTypes,Dynamo,3,38,9,0,31,602,68,1,0,0.39,5,1,Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.Change' Utilities.DataTypes.DataMapper.Manager' Utilities.DataTypes.EventArgs.OnEndEventArgs' Utilities.DataTypes.EventArgs.OnStartEventArgs,Utilities.DataTypes.Dynamo<T>
 Utilities.DataTypes,ArrayExtensions,0,3,0,0,3,48,5,0,0,-1,0,0,,
-Utilities.DataTypes,CacheExtensions,0,2,0,0,2,31,4,0,0,-1,4,0,Utilities.IoC.Manager' Utilities.DataTypes.Caching.Interfaces.ICache' Utilities.DataTypes.Caching.Manager' Utilities.IoC.Interfaces.IBootstrapper,
+Utilities.DataTypes,CacheExtensions,0,2,0,0,2,31,4,0,0,-1,1,0,Utilities.DataTypes.Caching.Manager,
 Utilities.DataTypes,DateCompare,0,0,0,0,0,24,0,0,0,-1,0,1,,Utilities.DataTypes.DateTimeExtensions
 Utilities.DataTypes,TimeFrame,0,0,0,0,0,23,0,0,0,-1,0,1,,Utilities.DataTypes.DateTimeExtensions
-Utilities.DataTypes,DateTimeExtensions,0,20,0,0,20,322,49,0,0,-1,2,0,Utilities.DataTypes.TimeFrame' Utilities.DataTypes.DateCompare,
+Utilities.DataTypes,DateTimeExtensions,0,20,0,0,20,322,53,0,0,-1,2,0,Utilities.DataTypes.DateCompare' Utilities.DataTypes.TimeFrame,
 Utilities.DataTypes,DelegateExtensions,0,4,0,0,4,51,7,0,0,-1,0,0,,
 Utilities.DataTypes,ExceptionExtensions,0,1,0,0,1,35,4,0,0,-1,0,0,,
-Utilities.DataTypes,GenericObjectExtensions,0,27,0,0,27,391,38,0,0,-1,0,0,,
+Utilities.DataTypes,GenericObjectExtensions,0,27,0,0,27,391,38,0,0,-1,1,0,Utilities.DataTypes.Comparison.GenericEqualityComparer<T>,
 Utilities.DataTypes,ICollectionExtensions,0,13,0,0,13,226,30,0,0,-1,0,0,,
-Utilities.DataTypes,IComparableExtensions,0,4,0,0,4,65,6,0,0,-1,0,0,,
-Utilities.DataTypes,IDictionaryExtensions,0,5,0,0,5,93,7,0,0,-1,0,0,,
-Utilities.DataTypes,IEnumerableExtensions,0,33,0,0,33,690,73,0,0,-1,0,0,,
+Utilities.DataTypes,IComparableExtensions,0,4,0,0,4,65,6,0,0,-1,1,0,Utilities.DataTypes.Comparison.GenericComparer<T>,
+Utilities.DataTypes,IDictionaryExtensions,0,5,0,0,5,93,7,0,0,-1,1,0,Utilities.DataTypes.Comparison.GenericComparer<T>,
+Utilities.DataTypes,IEnumerableExtensions,0,33,0,0,33,690,73,0,0,-1,2,0,Utilities.DataTypes.ObservableList<T>' Utilities.DataTypes.Comparison.GenericEqualityComparer<T>,
 Utilities.DataTypes,MatchCollectionExtensions,0,1,0,0,1,21,4,0,0,-1,0,0,,
 Utilities.DataTypes,ProcessExtensions,0,5,0,0,4,68,7,0,0,-1,0,0,,
-Utilities.DataTypes,ReflectionExtensions,0,46,0,0,46,863,101,0,0,-1,2,0,Utilities.DataTypes.TypeConversionExtensions' Utilities.DataTypes.VersionInfo,
+Utilities.DataTypes,ReflectionExtensions,0,46,0,0,46,863,105,0,0,-1,2,0,Utilities.DataTypes.VersionInfo' Utilities.DataTypes.TypeConversionExtensions,
 Utilities.DataTypes,VersionInfo,0,0,0,0,0,11,0,0,0,-1,0,1,,Utilities.DataTypes.ReflectionExtensions
 Utilities.DataTypes,StackTraceExtensions,0,2,0,0,2,38,4,0,0,-1,0,0,,
-Utilities.DataTypes,StreamExtensions,0,2,0,0,2,45,3,0,0,-1,0,0,,
+Utilities.DataTypes,StreamExtensions,0,2,0,0,2,45,5,0,0,-1,0,0,,
 Utilities.DataTypes,StringCase,0,0,0,0,0,15,0,0,0,-1,0,1,,Utilities.DataTypes.StringExtensions
-Utilities.DataTypes,StringCompare,0,0,0,0,0,15,0,0,0,-1,0,2,,Utilities.DataTypes.StringExtensions' Utilities.DataTypes.ValueTypeExtensions
+Utilities.DataTypes,StringCompare,0,0,0,0,0,15,0,0,0,-1,0,2,,Utilities.DataTypes.ValueTypeExtensions' Utilities.DataTypes.StringExtensions
 Utilities.DataTypes,StringFilter,0,0,0,0,0,20,0,0,0,-1,0,1,,Utilities.DataTypes.StringExtensions
-Utilities.DataTypes,StringExtensions,0,32,0,0,31,574,83,0,0,-1,5,0,Utilities.DataTypes.StringCompare' Utilities.DataTypes.CharIs' Utilities.DataTypes.StringFilter' Utilities.DataTypes.StringCase' Utilities.DataTypes.Formatters.Interfaces.IStringFormatter,
+Utilities.DataTypes,StringExtensions,0,32,0,0,31,574,89,0,0,-1,6,0,Utilities.DataTypes.StringCase' Utilities.DataTypes.StringCompare' Utilities.DataTypes.StringFilter' Utilities.DataTypes.CharIs' Utilities.DataTypes.Formatters.GenericStringFormatter' Utilities.DataTypes.Formatters.Interfaces.IStringFormatter,
 Utilities.DataTypes,TimeSpanExtensions,0,5,0,0,5,59,11,0,0,-1,0,0,,
-Utilities.DataTypes,TypeConversionExtensions,0,7,0,0,7,122,15,0,0,-1,5,1,Utilities.DataTypes.DataMapper.Manager' Utilities.IoC.Interfaces.IBootstrapper' Utilities.IoC.Manager' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping' Utilities.DataTypes.Conversion.Manager,Utilities.DataTypes.ReflectionExtensions
+Utilities.DataTypes,TypeConversionExtensions,0,7,0,0,7,122,15,0,0,-1,3,1,Utilities.DataTypes.Conversion.Manager' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping' Utilities.DataTypes.DataMapper.Manager,Utilities.DataTypes.ReflectionExtensions
 Utilities.DataTypes,CharIs,0,0,0,0,0,56,0,0,0,-1,0,2,,Utilities.DataTypes.StringExtensions' Utilities.DataTypes.ValueTypeExtensions
-Utilities.DataTypes,ValueTypeExtensions,0,4,0,0,4,88,20,0,0,-1,2,0,Utilities.DataTypes.CharIs' Utilities.DataTypes.StringCompare,
-Utilities.DataTypes,ListMapping<T1;T2>,0,17,5,0,16,251,33,0,0,-1,0,0,,
-Utilities.DataTypes,MathExtensions,0,44,0,0,44,507,55,0,0,-1,0,0,,
-Utilities.DataTypes,PermutationExtensions,0,1,0,0,1,49,7,0,0,-1,0,0,,
+Utilities.DataTypes,ValueTypeExtensions,0,4,0,0,4,88,20,0,0,-1,2,0,Utilities.DataTypes.StringCompare' Utilities.DataTypes.CharIs,
+Utilities.DataTypes,ListMapping<T1;T2>,0,17,5,0,16,251,33,0,0,-1,0,2,,Utilities.DataTypes.Caching.BaseClasses.CacheBase' Utilities.DataTypes.PermutationExtensions
+Utilities.DataTypes,MathExtensions,0,44,0,0,44,507,55,0,0,-1,1,0,Utilities.DataTypes.Bag<T>,
+Utilities.DataTypes,PermutationExtensions,0,1,0,0,1,49,7,0,0,-1,1,0,Utilities.DataTypes.ListMapping<T1;T2>,
 Utilities.DataTypes,PredicateExtensions,0,7,0,0,7,82,7,0,0,-1,0,0,,
 Utilities.DataTypes,Fraction,0,9,2,0,9,344,16,0,0,-1,0,0,,
 Utilities.DataTypes,Matrix,2,6,3,0,6,325,18,0,0,1,0,0,,
 Utilities.DataTypes,Set<T>,0,9,0,0,9,184,21,0,0,-1,0,0,,
 Utilities.DataTypes,Vector3,0,9,5,0,9,331,10,0,0,-1,0,0,,
 Utilities.DataTypes,PriorityQueue<T>,0,18,6,0,17,260,40,0,0,-1,0,0,,
-Utilities.DataTypes,RingBuffer<T>,1,17,9,0,16,330,42,0,0,1,0,0,,
+Utilities.DataTypes,RingBuffer<T>,1,17,9,0,16,330,42,0,0,1,1,0,Utilities.DataTypes.Comparison.GenericEqualityComparer<T>,
 Utilities.DataTypes,StringTemplate,0,4,3,0,3,66,4,0,0,-1,0,0,,
-Utilities.DataTypes,Row,0,1,3,0,1,62,1,0,0,-1,0,0,,
-Utilities.DataTypes,Table,0,3,3,0,3,88,10,0,0,-1,0,0,,
-Utilities.DataTypes,TagDictionary<Key;Value>,0,13,6,0,12,224,16,0,0,-1,0,0,,
-Utilities.DataTypes,TaggedItem<TKey;TValue>,0,2,2,0,2,31,2,0,0,-1,0,0,,
+Utilities.DataTypes,Row,0,1,3,0,1,62,1,0,0,-1,0,1,,Utilities.DataTypes.Table
+Utilities.DataTypes,Table,0,3,3,0,3,88,10,0,0,-1,1,0,Utilities.DataTypes.Row,
+Utilities.DataTypes,TagDictionary<Key;Value>,0,13,6,0,12,224,16,0,0,-1,1,0,Utilities.DataTypes.TaggedItem<TKey;TValue>,
+Utilities.DataTypes,TaggedItem<TKey;TValue>,0,2,2,0,2,31,2,0,0,-1,0,1,,Utilities.DataTypes.TagDictionary<Key;Value>
 Utilities.DataTypes,TaskQueue<T>,0,5,6,0,3,133,11,0,0,-1,0,0,,
-Utilities.DataTypes,ConcurrentBagExtensions,0,12,0,0,12,203,23,0,0,-1,0,0,,
+Utilities.DataTypes,ConcurrentBagExtensions,0,12,0,0,12,203,23,0,0,-1,1,0,Utilities.DataTypes.Comparison.GenericEqualityComparer<T>,
 Utilities.DataTypes,ConcurrentDictionaryExtensions,0,3,0,0,3,56,3,0,0,-1,0,0,,
-Utilities.DataTypes,ObservableList<T>,4,21,3,0,18,320,24,0,0,0.86,0,0,,
-Utilities.DataTypes,Edge<T>,0,2,2,0,2,35,2,0,0,-1,0,0,,
-Utilities.DataTypes,Graph<T>,0,7,1,0,6,87,10,0,0,-1,0,0,,
-Utilities.DataTypes,Vertex<T>,0,4,4,0,4,73,5,0,0,-1,0,0,,
-Utilities.DataTypes.CodeGen.BaseClasses,CompilerBase,0,8,6,0,1,162,13,1,1,-1,0,0,,
-Utilities.DataTypes.CodeGen,Compiler,0,4,0,0,4,43,4,0,2,-1,0,1,,Utilities.DataTypes.AOP.Manager
-Utilities.DataTypes.CodeGen.Module,CompilerModule,0,1,1,0,1,18,1,0,1,-1,1,0,Utilities.IoC.Interfaces.IBootstrapper,
-Utilities.DataTypes.Comparison,GenericComparer<T>,0,1,0,0,1,27,6,0,0,-1,0,0,,
-Utilities.DataTypes.Comparison,GenericEqualityComparer<T>,0,2,0,0,2,60,13,0,0,-1,0,0,,
+Utilities.DataTypes,ObservableList<T>,4,21,3,0,18,320,24,0,0,0.86,0,1,,Utilities.DataTypes.IEnumerableExtensions
+Utilities.DataTypes,Edge<T>,0,2,2,0,2,35,2,0,0,-1,1,2,Utilities.DataTypes.Vertex<T>,Utilities.DataTypes.Graph<T>' Utilities.DataTypes.Vertex<T>
+Utilities.DataTypes,Graph<T>,0,7,1,0,6,87,10,0,0,-1,2,1,Utilities.DataTypes.Edge<T>' Utilities.DataTypes.Vertex<T>,Utilities.DataTypes.Vertex<T>
+Utilities.DataTypes,Vertex<T>,0,4,4,0,4,73,5,0,0,-1,2,2,Utilities.DataTypes.Edge<T>' Utilities.DataTypes.Graph<T>,Utilities.DataTypes.Edge<T>' Utilities.DataTypes.Graph<T>
+Utilities.DataTypes.CodeGen.BaseClasses,CompilerBase,0,8,6,0,1,162,14,1,1,-1,1,1,Utilities.DataTypes.Patterns.BaseClasses.SafeDisposableBaseClass,Utilities.DataTypes.CodeGen.Compiler
+Utilities.DataTypes.CodeGen,Compiler,0,4,0,0,4,43,4,0,2,-1,1,3,Utilities.DataTypes.CodeGen.BaseClasses.CompilerBase,Utilities.DataTypes.CodeGen.Module.CompilerModule' Utilities.DataTypes.AOP.Module.AOPModule' Utilities.DataTypes.AOP.Manager
+Utilities.DataTypes.CodeGen.Module,CompilerModule,0,1,1,0,1,18,1,0,1,-1,1,0,Utilities.DataTypes.CodeGen.Compiler,
+Utilities.DataTypes.Comparison,GenericComparer<T>,0,1,0,0,1,27,6,0,0,-1,0,2,,Utilities.DataTypes.IDictionaryExtensions' Utilities.DataTypes.IComparableExtensions
+Utilities.DataTypes.Comparison,GenericEqualityComparer<T>,0,2,0,0,2,60,13,0,0,-1,0,4,,Utilities.DataTypes.ConcurrentBagExtensions' Utilities.DataTypes.RingBuffer<T>' Utilities.DataTypes.IEnumerableExtensions' Utilities.DataTypes.GenericObjectExtensions
 Utilities.DataTypes.Comparison,SimpleComparer<T>,0,2,1,0,2,26,2,0,0,-1,0,0,,
 Utilities.DataTypes.Comparison,SimpleEqualityComparer<T>,0,3,2,0,3,42,3,0,0,-1,0,0,,
-Utilities.DataTypes.Conversion.Converters.BaseClasses,TypeConverterBase<T>,0,5,4,0,4,80,9,0,1,-1,0,0,,
-Utilities.DataTypes.Conversion.Converters,DbTypeTypeConverter,0,5,1,0,1,131,12,0,0,-1,0,0,,
-Utilities.DataTypes.Conversion.Converters,SqlDbTypeTypeConverter,0,5,2,0,1,137,11,0,0,-1,0,0,,
-Utilities.DataTypes.Conversion.Converters.Interfaces,IConverter,0,0,1,0,0,7,0,1,0,-1,0,1,,Utilities.DataTypes.Conversion.Manager
-Utilities.DataTypes.Conversion,Manager,0,4,0,0,4,100,16,0,0,-1,2,1,Utilities.DataTypes.Conversion.Converters.Interfaces.IConverter' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.TypeConversionExtensions
-Utilities.DataTypes.Conversion.Module,ConversionModule,0,1,1,0,1,19,1,0,1,-1,1,0,Utilities.IoC.Interfaces.IBootstrapper,
-Utilities.DataTypes.DataMapper.BaseClasses,DataMapperBase,0,6,2,0,3,68,6,1,1,-1,1,0,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,
-Utilities.DataTypes.DataMapper.BaseClasses,MappingBase<Left;Right>,0,1,0,0,0,9,1,0,1,-1,0,0,,
-Utilities.DataTypes.DataMapper.BaseClasses,TypeMappingBase<Left;Right>,0,14,1,0,10,226,16,0,1,-1,0,0,,
-Utilities.DataTypes.DataMapper.Default,DataMapper,0,2,1,0,0,29,2,0,2,-1,1,0,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,
-Utilities.DataTypes.DataMapper.Default,Mapping<Left;Right>,0,8,4,0,8,113,12,0,0,-1,0,0,,
-Utilities.DataTypes.DataMapper.Default,TypeMapping<Left;Right>,0,8,0,0,8,108,12,0,0,-1,0,0,,
-Utilities.DataTypes.DataMapper.Interfaces,IDataMapper,0,2,0,0,0,18,2,2,0,-1,0,1,,Utilities.DataTypes.DataMapper.Manager
-Utilities.DataTypes.DataMapper.Interfaces,IMapperModule,0,1,0,0,0,9,1,1,0,-1,1,1,Utilities.DataTypes.DataMapper.Manager,Utilities.DataTypes.DataMapper.Manager
-Utilities.DataTypes.DataMapper.Interfaces,IMapping,0,0,0,0,0,5,0,1,0,-1,0,0,,
-Utilities.DataTypes.DataMapper.Interfaces,ITypeMapping,0,10,0,0,0,71,10,3,0,-1,0,6,,Utilities.DataTypes.Dynamo' Utilities.DataTypes.TypeConversionExtensions' Utilities.DataTypes.Conversion.Manager' Utilities.DataTypes.DataMapper.BaseClasses.DataMapperBase' Utilities.DataTypes.DataMapper.Default.DataMapper' Utilities.DataTypes.DataMapper.Manager
-Utilities.DataTypes.DataMapper,Manager,0,4,1,0,4,49,5,0,0,-1,3,4,Utilities.DataTypes.DataMapper.Interfaces.IDataMapper' Utilities.DataTypes.DataMapper.Interfaces.IMapperModule' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.Dynamo' Utilities.DataTypes.TypeConversionExtensions' Utilities.DataTypes.DataMapper.Interfaces.IMapperModule' Utilities.DataTypes.DataMapper.Interfaces.Contracts.IMapperModuleContract
-Utilities.DataTypes.DataMapper.Module,DataMapperModule,0,1,1,0,1,20,1,0,1,-1,1,0,Utilities.IoC.Interfaces.IBootstrapper,
-Utilities.DataTypes.EventArgs,BaseEventArgs,0,0,2,0,0,11,0,10,0,-1,0,0,,
-Utilities.DataTypes.EventArgs,ChangedEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.EventArgs,DeletedEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.EventArgs,DeletingEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.EventArgs,LoadedEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.EventArgs,LoadingEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.EventArgs,OnEndEventArgs,0,0,0,0,0,3,0,0,1,-1,0,1,,Utilities.DataTypes.Dynamo
-Utilities.DataTypes.EventArgs,OnErrorEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.EventArgs,OnStartEventArgs,0,0,0,0,0,3,0,0,1,-1,0,1,,Utilities.DataTypes.Dynamo
-Utilities.DataTypes.EventArgs,SavedEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.EventArgs,SavingEventArgs,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Utilities.DataTypes.Formatters,GenericStringFormatter,0,6,3,0,4,124,15,0,1,-1,0,0,,
-Utilities.DataTypes.Formatters.Interfaces,IStringFormatter,0,1,0,0,0,10,1,1,0,-1,0,1,,Utilities.DataTypes.StringExtensions
-Utilities.DataTypes.Patterns.BaseClasses,SafeDisposableBaseClass,0,3,0,0,1,31,3,3,0,-1,0,0,,
+Utilities.DataTypes.Conversion.Converters.BaseClasses,TypeConverterBase<T>,0,5,4,0,4,80,9,0,1,-1,1,2,Utilities.DataTypes.Conversion.Converters.Interfaces.IConverter,Utilities.DataTypes.Conversion.Converters.SqlDbTypeTypeConverter' Utilities.DataTypes.Conversion.Converters.DbTypeTypeConverter
+Utilities.DataTypes.Conversion.Converters,DbTypeTypeConverter,0,5,1,0,1,131,62,0,0,-1,1,0,Utilities.DataTypes.Conversion.Converters.BaseClasses.TypeConverterBase<T>,
+Utilities.DataTypes.Conversion.Converters,SqlDbTypeTypeConverter,0,5,2,0,1,137,28,0,0,-1,1,0,Utilities.DataTypes.Conversion.Converters.BaseClasses.TypeConverterBase<T>,
+Utilities.DataTypes.Conversion.Converters.Interfaces,IConverter,0,0,1,0,0,7,0,1,0,-1,0,3,,Utilities.DataTypes.Conversion.Converters.BaseClasses.TypeConverterBase<T>' Utilities.DataTypes.Conversion.Module.ConversionModule' Utilities.DataTypes.Conversion.Manager
+Utilities.DataTypes.Conversion,Manager,0,4,0,0,4,100,16,0,0,-1,1,2,Utilities.DataTypes.Conversion.Converters.Interfaces.IConverter,Utilities.DataTypes.Conversion.Module.ConversionModule' Utilities.DataTypes.TypeConversionExtensions
+Utilities.DataTypes.Conversion.Module,ConversionModule,0,1,1,0,1,19,1,0,1,-1,2,0,Utilities.DataTypes.Conversion.Converters.Interfaces.IConverter' Utilities.DataTypes.Conversion.Manager,
+Utilities.DataTypes.DataMapper.BaseClasses,DataMapperBase,0,6,2,0,3,68,6,1,1,-1,2,1,Utilities.DataTypes.DataMapper.Interfaces.IDataMapper' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.DataMapper.Default.DataMapper
+Utilities.DataTypes.DataMapper.BaseClasses,MappingBase<Left;Right>,0,1,0,0,0,9,1,0,1,-1,1,1,Utilities.DataTypes.DataMapper.Interfaces.IMapping,Utilities.DataTypes.DataMapper.Default.Mapping<Left;Right>
+Utilities.DataTypes.DataMapper.BaseClasses,TypeMappingBase<Left;Right>,0,14,1,0,10,226,18,0,1,-1,2,1,Utilities.DataTypes.DataMapper.Interfaces.IMapping' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.DataMapper.Default.TypeMapping<Left;Right>
+Utilities.DataTypes.DataMapper.Default,DataMapper,0,2,1,0,0,29,2,0,2,-1,3,0,Utilities.DataTypes.DataMapper.BaseClasses.DataMapperBase' Utilities.DataTypes.DataMapper.Default.TypeMapping<Left;Right>' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,
+Utilities.DataTypes.DataMapper.Default,Mapping<Left;Right>,0,8,4,0,8,113,12,0,0,-1,1,1,Utilities.DataTypes.DataMapper.BaseClasses.MappingBase<Left;Right>,Utilities.DataTypes.DataMapper.Default.TypeMapping<Left;Right>
+Utilities.DataTypes.DataMapper.Default,TypeMapping<Left;Right>,0,8,0,0,8,108,12,0,0,-1,3,1,Utilities.DataTypes.DataMapper.BaseClasses.TypeMappingBase<Left;Right>' Utilities.DataTypes.DataMapper.Default.Mapping<Left;Right>' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.DataMapper.Default.DataMapper
+Utilities.DataTypes.DataMapper.Interfaces,IDataMapper,0,2,0,0,0,18,2,2,0,-1,2,4,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping' Utilities.DataTypes.DataMapper.Interfaces.Contracts.IDataMapperContract,Utilities.DataTypes.DataMapper.BaseClasses.DataMapperBase' Utilities.DataTypes.DataMapper.Manager' Utilities.DataTypes.DataMapper.Interfaces.Contracts.IDataMapperContract' Utilities.DataTypes.DataMapper.Module.DataMapperModule
+Utilities.DataTypes.DataMapper.Interfaces,IMapperModule,0,1,0,0,0,9,1,1,0,-1,2,3,Utilities.DataTypes.DataMapper.Manager' Utilities.DataTypes.DataMapper.Interfaces.Contracts.IMapperModuleContract,Utilities.DataTypes.DataMapper.Manager' Utilities.DataTypes.DataMapper.Interfaces.Contracts.IMapperModuleContract' Utilities.DataTypes.DataMapper.Module.DataMapperModule
+Utilities.DataTypes.DataMapper.Interfaces,IMapping,0,0,0,0,0,5,0,1,0,-1,0,2,,Utilities.DataTypes.DataMapper.BaseClasses.MappingBase<Left;Right>' Utilities.DataTypes.DataMapper.BaseClasses.TypeMappingBase<Left;Right>
+Utilities.DataTypes.DataMapper.Interfaces,ITypeMapping,0,10,0,0,0,71,10,3,0,-1,2,10,Utilities.DataTypes.DataMapper.Interfaces.Contracts.ITypeMappingContract' Utilities.DataTypes.DataMapper.Interfaces.Contracts.ITypeMappingContract<Left;Right>,Utilities.DataTypes.DataMapper.Interfaces.IDataMapper' Utilities.DataTypes.DataMapper.Manager' Utilities.DataTypes.DataMapper.BaseClasses.TypeMappingBase<Left;Right>' Utilities.DataTypes.TypeConversionExtensions' Utilities.DataTypes.DataMapper.Default.DataMapper' Utilities.DataTypes.DataMapper.Interfaces.Contracts.IDataMapperContract' Utilities.DataTypes.DataMapper.BaseClasses.DataMapperBase' Utilities.DataTypes.DataMapper.Interfaces.Contracts.ITypeMappingContract' Utilities.DataTypes.DataMapper.Interfaces.Contracts.ITypeMappingContract<Left;Right>' Utilities.DataTypes.DataMapper.Default.TypeMapping<Left;Right>
+Utilities.DataTypes.DataMapper,Manager,0,4,1,0,4,49,5,0,0,-1,3,5,Utilities.DataTypes.DataMapper.Interfaces.IDataMapper' Utilities.DataTypes.DataMapper.Interfaces.IMapperModule' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.DataMapper.Interfaces.IMapperModule' Utilities.DataTypes.DataMapper.Module.DataMapperModule' Utilities.DataTypes.DataMapper.Interfaces.Contracts.IMapperModuleContract' Utilities.DataTypes.Dynamo' Utilities.DataTypes.TypeConversionExtensions
+Utilities.DataTypes.DataMapper.Module,DataMapperModule,0,1,1,0,1,20,1,0,1,-1,3,0,Utilities.DataTypes.DataMapper.Interfaces.IDataMapper' Utilities.DataTypes.DataMapper.Interfaces.IMapperModule' Utilities.DataTypes.DataMapper.Manager,
+Utilities.DataTypes.EventArgs,BaseEventArgs,0,0,2,0,0,11,0,10,0,-1,0,10,,Utilities.DataTypes.EventArgs.ChangedEventArgs' Utilities.DataTypes.EventArgs.DeletedEventArgs' Utilities.DataTypes.EventArgs.DeletingEventArgs' Utilities.DataTypes.EventArgs.LoadedEventArgs' Utilities.DataTypes.EventArgs.LoadingEventArgs' Utilities.DataTypes.EventArgs.OnEndEventArgs' Utilities.DataTypes.EventArgs.OnErrorEventArgs' Utilities.DataTypes.EventArgs.OnStartEventArgs' Utilities.DataTypes.EventArgs.SavedEventArgs' Utilities.DataTypes.EventArgs.SavingEventArgs
+Utilities.DataTypes.EventArgs,ChangedEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.EventArgs,DeletedEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.EventArgs,DeletingEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.EventArgs,LoadedEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.EventArgs,LoadingEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.EventArgs,OnEndEventArgs,0,0,0,0,0,3,0,0,1,-1,1,1,Utilities.DataTypes.EventArgs.BaseEventArgs,Utilities.DataTypes.Dynamo
+Utilities.DataTypes.EventArgs,OnErrorEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.EventArgs,OnStartEventArgs,0,0,0,0,0,3,0,0,1,-1,1,1,Utilities.DataTypes.EventArgs.BaseEventArgs,Utilities.DataTypes.Dynamo
+Utilities.DataTypes.EventArgs,SavedEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.EventArgs,SavingEventArgs,0,0,0,0,0,3,0,0,1,-1,1,0,Utilities.DataTypes.EventArgs.BaseEventArgs,
+Utilities.DataTypes.Formatters,GenericStringFormatter,0,6,3,0,4,124,17,0,1,-1,1,1,Utilities.DataTypes.Formatters.Interfaces.IStringFormatter,Utilities.DataTypes.StringExtensions
+Utilities.DataTypes.Formatters.Interfaces,IStringFormatter,0,1,0,0,0,10,1,1,0,-1,0,2,,Utilities.DataTypes.Formatters.GenericStringFormatter' Utilities.DataTypes.StringExtensions
+Utilities.DataTypes.Patterns.BaseClasses,SafeDisposableBaseClass,0,3,0,0,1,31,3,3,0,-1,0,3,,Utilities.DataTypes.Caching.BaseClasses.CacheBase' Utilities.DataTypes.CodeGen.BaseClasses.CompilerBase' Utilities.DataTypes.Caching.Manager
 Utilities.DataTypes.Patterns.BaseClasses,Singleton<T>,2,1,1,0,0,35,1,0,0,0,0,0,,
 Utilities.DataTypes.Patterns,Factory<Key;T>,0,5,1,0,5,50,5,0,0,-1,0,0,,
 Utilities.DataTypes.Patterns,IFluentInterface,0,4,0,0,0,28,4,0,0,-1,0,0,,
-Utilities.DataTypes.Caching.BaseClasses,CacheBase,0,15,7,0,13,185,19,4,1,-1,0,0,,
-Utilities.DataTypes.DataMapper.Interfaces.Contracts,IDataMapperContract,0,2,0,0,2,32,2,0,1,-1,0,0,,
-Utilities.DataTypes.DataMapper.Interfaces.Contracts,IMapperModuleContract,0,1,0,0,1,12,1,0,1,-1,1,0,Utilities.DataTypes.DataMapper.Manager,
-Utilities.DataTypes.DataMapper.Interfaces.Contracts,ITypeMappingContract,0,2,0,0,2,23,2,0,1,-1,0,0,,
-Utilities.DataTypes.DataMapper.Interfaces.Contracts,ITypeMappingContract<Left;Right>,0,10,0,0,10,43,10,0,1,-1,0,0,,
-Utilities.DataTypes.AOP.Generators.BaseClasses,GeneratorBase,0,3,0,0,0,66,7,5,0,-1,0,0,,
-Utilities.DataTypes.AOP.Generators,ClassGenerator,0,2,2,0,2,112,8,0,1,-1,4,1,Utilities.DataTypes.AOP.Generators.ConstructorGenerator' Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Generators.PropertyGenerator' Utilities.DataTypes.AOP.Generators.MethodGenerator,Utilities.DataTypes.AOP.Manager
-Utilities.DataTypes.AOP.Generators,ConstructorGenerator,0,2,2,0,2,43,2,0,1,-1,1,1,Utilities.DataTypes.AOP.Interfaces.IAspect,Utilities.DataTypes.AOP.Generators.ClassGenerator
-Utilities.DataTypes.AOP.Generators,ParameterGenerator,0,3,1,0,3,38,4,0,1,-1,0,1,,Utilities.DataTypes.AOP.Generators.MethodGenerator
-Utilities.DataTypes.AOP.Generators,MethodGenerator,0,4,2,0,3,99,7,0,1,-1,2,2,Utilities.DataTypes.AOP.Generators.ParameterGenerator' Utilities.DataTypes.AOP.Interfaces.IAspect,Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.AOP.Generators.ClassGenerator
-Utilities.DataTypes.AOP.Generators,PropertyGenerator,0,5,2,0,3,131,10,0,1,-1,1,2,Utilities.DataTypes.AOP.Interfaces.IAspect,Utilities.DataTypes.AOP.Manager' Utilities.DataTypes.AOP.Generators.ClassGenerator
+Utilities.DataTypes.Caching.BaseClasses,CacheBase,0,15,7,0,13,185,19,4,1,-1,3,4,Utilities.DataTypes.Caching.Interfaces.ICache' Utilities.DataTypes.ListMapping<T1;T2>' Utilities.DataTypes.Patterns.BaseClasses.SafeDisposableBaseClass,Utilities.DataTypes.Caching.Default.ItemCache' Utilities.DataTypes.Caching.Default.Cache' Utilities.DataTypes.Caching.Default.CacheCache' Utilities.DataTypes.Caching.Default.SessionCache
+Utilities.DataTypes.DataMapper.Interfaces.Contracts,IDataMapperContract,0,2,0,0,2,32,2,0,1,-1,2,1,Utilities.DataTypes.DataMapper.Interfaces.IDataMapper' Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.DataMapper.Interfaces.IDataMapper
+Utilities.DataTypes.DataMapper.Interfaces.Contracts,IMapperModuleContract,0,1,0,0,1,12,1,0,1,-1,2,1,Utilities.DataTypes.DataMapper.Interfaces.IMapperModule' Utilities.DataTypes.DataMapper.Manager,Utilities.DataTypes.DataMapper.Interfaces.IMapperModule
+Utilities.DataTypes.DataMapper.Interfaces.Contracts,ITypeMappingContract,0,2,0,0,2,23,2,0,1,-1,1,1,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping
+Utilities.DataTypes.DataMapper.Interfaces.Contracts,ITypeMappingContract<Left;Right>,0,10,0,0,10,43,10,0,1,-1,1,1,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping,Utilities.DataTypes.DataMapper.Interfaces.ITypeMapping
+Utilities.DataTypes.AOP.Generators.BaseClasses,GeneratorBase,0,3,0,0,0,66,7,5,0,-1,0,5,,Utilities.DataTypes.AOP.Generators.ClassGenerator' Utilities.DataTypes.AOP.Generators.MethodGenerator' Utilities.DataTypes.AOP.Generators.ParameterGenerator' Utilities.DataTypes.AOP.Generators.PropertyGenerator' Utilities.DataTypes.AOP.Generators.ConstructorGenerator
+Utilities.DataTypes.AOP.Generators,ClassGenerator,0,2,2,0,2,112,11,0,1,-1,6,1,Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Interfaces.IClassGenerator' Utilities.DataTypes.AOP.Generators.BaseClasses.GeneratorBase' Utilities.DataTypes.AOP.Generators.ConstructorGenerator' Utilities.DataTypes.AOP.Generators.MethodGenerator' Utilities.DataTypes.AOP.Generators.PropertyGenerator,Utilities.DataTypes.AOP.Manager
+Utilities.DataTypes.AOP.Generators,ConstructorGenerator,0,2,2,0,2,43,2,0,1,-1,2,1,Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Generators.BaseClasses.GeneratorBase,Utilities.DataTypes.AOP.Generators.ClassGenerator
+Utilities.DataTypes.AOP.Generators,ParameterGenerator,0,3,1,0,3,38,4,0,1,-1,1,1,Utilities.DataTypes.AOP.Generators.BaseClasses.GeneratorBase,Utilities.DataTypes.AOP.Generators.MethodGenerator
+Utilities.DataTypes.AOP.Generators,MethodGenerator,0,4,2,0,3,99,8,0,1,-1,3,2,Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Generators.BaseClasses.GeneratorBase' Utilities.DataTypes.AOP.Generators.ParameterGenerator,Utilities.DataTypes.AOP.Generators.ClassGenerator' Utilities.DataTypes.AOP.Manager
+Utilities.DataTypes.AOP.Generators,PropertyGenerator,0,5,2,0,3,131,11,0,1,-1,2,2,Utilities.DataTypes.AOP.Interfaces.IAspect' Utilities.DataTypes.AOP.Generators.BaseClasses.GeneratorBase,Utilities.DataTypes.AOP.Generators.ClassGenerator' Utilities.DataTypes.AOP.Manager

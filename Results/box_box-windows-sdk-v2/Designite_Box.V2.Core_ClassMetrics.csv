@@ -1,200 +1,217 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Box.V2.Auth,AuthRepository,5,10,1,0,5,202,15,0,1,0.2,10,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.OAuthSession' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Config.Constants' Box.V2.RequestMethod' Box.V2.Config.RequestParameters' Box.V2.ResponseStatus,
-Box.V2.Auth,SessionAuthenticatedEventArgs,0,1,1,0,1,8,1,0,0,-1,1,0,Box.V2.Auth.OAuthSession,
-Box.V2.Auth,IAuthRepository,0,3,1,0,0,34,3,2,0,-1,0,22,,Box.V2.BoxClient' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager
-Box.V2.Auth,OAuthSession,5,2,6,0,2,73,2,0,0,1,1,7,Box.V2.Auth.AuthVersion,Box.V2.Auth.AuthRepository' Box.V2.Auth.SessionAuthenticatedEventArgs' Box.V2.Auth.Token.TokenExchange' Box.V2.BoxClient' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.JWTAuth.JWTAuthRepository' Box.V2.Managers.BoxResourceManager
+Box.V2.Auth,AuthRepository,5,10,1,0,5,202,15,0,1,0.2,0,1,,Box.V2.BoxClient
+Box.V2.Auth,SessionAuthenticatedEventArgs,0,1,1,0,1,8,1,0,0,-1,0,3,,Box.V2.Auth.IAuthRepository' Box.V2.JWTAuth.JWTAuthRepository' Box.V2.Auth.AuthRepository
+Box.V2.Auth,IAuthRepository,0,3,1,0,0,34,3,2,0,-1,0,26,,Box.V2.JWTAuth.JWTAuthRepository' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.BoxClient' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Auth.AuthRepository' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Auth,OAuthSession,5,2,6,0,2,73,2,0,0,1,0,8,,Box.V2.BoxClient' Box.V2.Auth.SessionAuthenticatedEventArgs' Box.V2.Auth.IAuthRepository' Box.V2.Managers.BoxResourceManager' Box.V2.Auth.Token.TokenExchange' Box.V2.JWTAuth.JWTAuthRepository' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Auth.AuthRepository
 Box.V2.Auth,AuthVersion,0,0,0,0,0,5,0,0,0,-1,0,2,,Box.V2.Auth.OAuthSession' Box.V2.Managers.BoxResourceManager
-Box.V2.Auth.Token,ActorTokenBuilder,6,3,0,0,3,49,3,0,0,0,1,0,Box.V2.Utility.Helper,
-Box.V2.Auth.Token,TokenExchange,4,5,0,0,5,70,6,0,0,0,9,0,Box.V2.BoxRequest' Box.V2.Request.HttpRequestHandler' Box.V2.Converter.BoxJsonConverter' Box.V2.Services.BoxService' Box.V2.IBoxResponse' Box.V2.Config.Constants' Box.V2.RequestMethod' Box.V2.Config.RequestParameters' Box.V2.Auth.OAuthSession,
-Box.V2,BoxClient,5,6,23,0,5,211,6,0,0,0,7,1,Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Request.IRequestHandler' Box.V2.Config.IBoxConfig' Box.V2.Auth.OAuthSession' Box.V2.Auth.IAuthRepository' Box.V2.Plugins.BoxResourcePlugins,Box.V2.JWTAuth.BoxJWTAuth
-Box.V2,IResourcePlugin,0,0,0,0,0,3,0,1,0,-1,0,0,,
-Box.V2,BoxBinaryRequest,0,1,1,0,1,12,1,0,1,-1,0,2,,Box.V2.Managers.BoxFilesManager' Box.V2.Request.HttpRequestHandler
-Box.V2,BoxError,0,0,5,0,0,28,0,2,0,-1,0,2,,Box.V2.Exceptions.BoxException' Box.V2.Extensions.BoxResponseExtensions
-Box.V2,BoxConflictError<T>,0,0,1,0,0,10,0,0,1,-1,0,0,,
-Box.V2,BoxPreflightCheckConflictError<T>,0,0,1,0,0,10,0,0,1,-1,0,0,,
-Box.V2,BoxConflictErrorContextInfo<T>,0,0,1,0,0,9,0,0,0,-1,0,0,,
-Box.V2,BoxPreflightCheckConflictErrorContextInfo<T>,0,0,1,0,0,9,0,0,0,-1,0,0,,
-Box.V2,BoxStringFormPart,0,0,2,0,0,5,0,0,1,-1,0,1,,Box.V2.Request.HttpRequestHandler
-Box.V2,BoxFileFormPart,0,0,3,0,0,9,0,0,1,-1,0,1,,Box.V2.Request.HttpRequestHandler
-Box.V2,BoxMultiPartRequest,0,2,2,0,2,32,2,0,1,-1,0,2,,Box.V2.Managers.BoxFilesManager' Box.V2.Request.HttpRequestHandler
-Box.V2,BoxFilePart,0,0,1,0,0,4,0,0,1,-1,0,1,,Box.V2.Request.HttpRequestHandler
-Box.V2,BoxRequest,0,3,14,0,3,69,4,2,1,-1,0,24,,Box.V2.Auth.AuthRepository' Box.V2.Auth.Token.TokenExchange' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager
-Box.V2,RequestMethod,0,0,0,0,0,8,0,0,0,-1,0,22,,Box.V2.Auth.AuthRepository' Box.V2.Auth.Token.TokenExchange' Box.V2.Extensions.BoxRequestExtensions' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Request.HttpRequestHandler
-Box.V2,BoxResponse<T>,0,0,6,0,0,28,0,0,1,-1,0,0,,
-Box.V2,ResponseStatus,0,0,0,0,0,11,0,0,0,-1,0,17,,Box.V2.Auth.AuthRepository' Box.V2.Extensions.BoxResponseExtensions' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Request.HttpRequestHandler
-Box.V2,IBoxFormPart,0,0,2,0,0,13,0,2,0,-1,0,1,,Box.V2.Extensions.BoxRequestExtensions
-Box.V2,IBoxPart,0,0,1,0,0,8,0,1,0,-1,0,1,,Box.V2.Extensions.BoxRequestExtensions
-Box.V2,IBoxRequest,0,1,14,0,0,64,1,1,0,-1,0,5,,Box.V2.Managers.BoxResourceManager' Box.V2.Request.HttpRequestHandler' Box.V2.Request.IRequestHandler' Box.V2.Services.BoxService' Box.V2.Services.IBoxService
-Box.V2,IBoxResponse,0,0,6,0,0,28,0,1,0,-1,0,24,,Box.V2.Auth.AuthRepository' Box.V2.Auth.Token.TokenExchange' Box.V2.Extensions.BoxResponseExtensions' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager
-Box.V2.Config,BoxConfig,1,4,53,0,4,193,12,0,1,0.75,1,0,Box.V2.Config.IBoxConfig,
-Box.V2.Config,CompressionType,0,0,0,0,0,5,0,0,0,-1,0,0,,
-Box.V2.Config,Constants,131,0,0,131,0,268,0,0,0,-1,0,20,,Box.V2.Auth.AuthRepository' Box.V2.Auth.Token.TokenExchange' Box.V2.Converter.BoxItemConverter' Box.V2.Converter.BoxJsonConverter' Box.V2.Extensions.BoxRequestExtensions' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxUsersManager' Box.V2.Request.HttpRequestHandler
-Box.V2.Config,RequestParameters,42,0,0,42,0,48,0,0,0,-1,0,9,,Box.V2.Auth.AuthRepository' Box.V2.Auth.Token.TokenExchange' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxResourceManager' Box.V2.Request.HttpRequestHandler
+Box.V2.Auth.Token,ActorTokenBuilder,6,3,0,0,3,49,3,0,0,1,0,1,,Box.V2.Auth.Token.ActorTokenBuilder
+Box.V2.Auth.Token,TokenExchange,4,5,0,0,5,70,6,0,0,0.8,0,1,,Box.V2.Auth.Token.TokenExchange
+Box.V2,BoxClient,5,6,25,0,5,221,6,0,0,0,0,2,,Box.V2.BoxClient' Box.V2.JWTAuth.BoxJWTAuth
+Box.V2,IResourcePlugin,0,0,0,0,0,3,0,1,0,-1,0,1,,Box.V2.Plugins.Managers.IBoxMetadataManager
+Box.V2,BoxBinaryRequest,0,1,1,0,1,12,1,0,1,-1,0,3,,Box.V2.Extensions.BoxRequestExtensions' Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxFilesManager
+Box.V2,BoxError,0,0,6,0,0,33,0,2,0,-1,0,6,,Box.V2.IBoxResponse' Box.V2.BoxConflictError<T>' Box.V2.BoxPreflightCheckConflictError<T>' Box.V2.BoxResponse<T>' Box.V2.Exceptions.BoxException' Box.V2.Extensions.BoxResponseExtensions
+Box.V2,BoxConflictError<T>,0,0,1,0,0,10,0,0,1,-1,0,2,,Box.V2.Exceptions.BoxConflictException<T>' Box.V2.Extensions.BoxResponseExtensions
+Box.V2,BoxPreflightCheckConflictError<T>,0,0,1,0,0,10,0,0,1,-1,0,2,,Box.V2.Exceptions.BoxPreflightCheckConflictException<T>' Box.V2.Extensions.BoxResponseExtensions
+Box.V2,BoxConflictErrorContextInfo<T>,0,0,1,0,0,9,0,0,0,-1,0,1,,Box.V2.BoxConflictError<T>
+Box.V2,BoxPreflightCheckConflictErrorContextInfo<T>,0,0,1,0,0,9,0,0,0,-1,0,1,,Box.V2.BoxPreflightCheckConflictError<T>
+Box.V2,BoxStringFormPart,0,0,2,0,0,5,0,0,1,-1,0,2,,Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxFilesManager
+Box.V2,BoxFileFormPart,0,0,3,0,0,9,0,0,1,-1,0,2,,Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxFilesManager
+Box.V2,BoxMultiPartRequest,0,2,2,0,2,32,2,0,1,-1,0,3,,Box.V2.Extensions.BoxRequestExtensions' Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxFilesManager
+Box.V2,BoxFilePart,0,0,1,0,0,4,0,0,1,-1,0,2,,Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxFilesManager
+Box.V2,BoxRequest,0,3,14,0,3,69,4,2,1,-1,0,28,,Box.V2.Managers.BoxResourceManager' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Auth.Token.TokenExchange' Box.V2.Managers.BoxDevicePinManager' Box.V2.BoxMultiPartRequest' Box.V2.BoxBinaryRequest' Box.V2.Auth.AuthRepository' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxFilesManager
+Box.V2,RequestMethod,0,0,0,0,0,8,0,0,0,-1,0,27,,Box.V2.IBoxRequest' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Auth.AuthRepository' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Extensions.BoxRequestExtensions' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxCommentsManager' Box.V2.BoxRequest' Box.V2.BoxMultiPartRequest' Box.V2.Managers.BoxCollectionsManager' Box.V2.Auth.Token.TokenExchange' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxUsersManager
+Box.V2,BoxResponse<T>,0,0,6,0,0,28,0,0,1,-1,0,1,,Box.V2.Request.HttpRequestHandler
+Box.V2,ResponseStatus,0,0,0,0,0,11,0,0,0,-1,0,21,,Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Auth.AuthRepository' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.BoxResponse<T>' Box.V2.IBoxResponse' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Request.HttpRequestHandler' Box.V2.Extensions.BoxResponseExtensions' Box.V2.Managers.BoxFilesManager
+Box.V2,IBoxFormPart,0,0,2,0,0,13,0,2,0,-1,0,5,,Box.V2.IBoxFormPart' Box.V2.Extensions.BoxRequestExtensions' Box.V2.BoxMultiPartRequest' Box.V2.BoxStringFormPart' Box.V2.BoxFileFormPart
+Box.V2,IBoxPart,0,0,1,0,0,8,0,1,0,-1,0,4,,Box.V2.BoxBinaryRequest' Box.V2.Extensions.BoxRequestExtensions' Box.V2.IBoxPart' Box.V2.BoxFilePart
+Box.V2,IBoxRequest,0,1,14,0,0,64,1,1,0,-1,0,8,,Box.V2.BoxRequest' Box.V2.Request.IRequestHandler' Box.V2.Services.IBoxService' Box.V2.Services.BoxService' Box.V2.Request.HttpRequestHandler' Box.V2.Extensions.BoxRequestExtensions' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxFilesManager
+Box.V2,IBoxResponse,0,0,6,0,0,28,0,1,0,-1,0,32,,Box.V2.Exceptions.BoxException' Box.V2.Auth.Token.TokenExchange' Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxResourceManager' Box.V2.Request.IRequestHandler' Box.V2.Services.BoxService' Box.V2.BoxResponse<T>' Box.V2.Services.IBoxService' Box.V2.Auth.AuthRepository' Box.V2.Extensions.BoxResponseExtensions' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Config,BoxConfig,1,4,58,0,4,201,12,0,1,0.75,0,1,,Box.V2.Config.BoxConfig
+Box.V2.Config,CompressionType,0,0,0,0,0,5,0,0,0,-1,0,2,,Box.V2.Config.BoxConfig' Box.V2.Config.IBoxConfig
+Box.V2.Config,Constants,144,0,0,144,0,757,0,0,0,-1,0,25,,Box.V2.Converter.BoxJsonConverter' Box.V2.Extensions.BoxRequestExtensions' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Models.BoxPromoteVersionRequest' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Auth.Token.TokenExchange' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Auth.AuthRepository' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxFilesManager' Box.V2.Config.BoxConfig' Box.V2.Managers.BoxFoldersManager' Box.V2.Converter.BoxItemConverter
+Box.V2.Config,RequestParameters,42,0,0,42,0,48,0,0,0,-1,0,9,,Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Auth.Token.TokenExchange' Box.V2.Auth.AuthRepository' Box.V2.Request.HttpRequestHandler' Box.V2.Managers.BoxFilesManager
 Box.V2.Config,ErrorCodes,1,0,0,1,0,4,0,0,0,-1,0,0,,
 Box.V2.Config,RepresentationTypes,5,0,0,5,0,25,0,0,0,-1,0,0,,
 Box.V2.Config,ContentDispositionTypes,2,0,0,2,0,12,0,0,0,-1,0,0,,
+Box.V2.Config,UserEventTypes,31,0,0,31,0,127,0,0,0,-1,0,0,,
+Box.V2.Config,AdminEventTypes,83,0,0,83,0,335,0,0,0,-1,0,0,,
 Box.V2.Config,WhitelistDirections,3,0,0,3,0,15,0,0,0,-1,0,0,,
-Box.V2.Config,IBoxConfig,0,0,51,0,0,94,0,1,0,-1,0,25,,Box.V2.Auth.AuthRepository' Box.V2.BoxClient' Box.V2.Config.BoxConfig' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager
-Box.V2.Converter,BoxItemConverter,3,2,0,0,0,95,4,0,0,0,35,0,Box.V2.Config.Constants' Box.V2.Models.BoxFile' Box.V2.Models.BoxFolder' Box.V2.Models.BoxWebLink' Box.V2.Models.BoxRetentionPolicy' Box.V2.Models.BoxRetentionPolicyAssignment' Box.V2.Models.BoxFileVersionRetention' Box.V2.Models.BoxComment' Box.V2.Models.BoxFileVersion' Box.V2.Models.BoxGroup' Box.V2.Models.BoxGroupMembership' Box.V2.Models.BoxUser' Box.V2.Models.BoxEnterprise' Box.V2.Models.BoxCollaboration' Box.V2.Models.BoxFileLock' Box.V2.Models.BoxUserInvite' Box.V2.Models.BoxWebhook' Box.V2.Models.BoxTask' Box.V2.Models.BoxEmailAlias' Box.V2.Models.BoxTaskAssignment' Box.V2.Models.BoxCollectionItem' Box.V2.Models.BoxDevicePin' Box.V2.Models.BoxLegalHoldPolicy' Box.V2.Models.BoxLegalHoldPolicyAssignment' Box.V2.Models.BoxFileUploadSession' Box.V2.Models.BoxRecentItem' Box.V2.Models.BoxCollaborationWhitelistEntry' Box.V2.Models.BoxCollaborationWhitelistTargetEntry' Box.V2.Models.BoxMetadataTemplate' Box.V2.Models.BoxTermsOfService' Box.V2.Models.BoxTermsOfServiceUserStatuses' Box.V2.Models.BoxFileEventSource' Box.V2.Models.BoxFolderEventSource' Box.V2.Models.BoxWatermarkResponse' Box.V2.Models.BoxEntity,
-Box.V2.Converter,JsonCreationConverter<T>,0,4,0,0,3,31,5,0,0,-1,1,0,Box.V2.Utility.CrossPlatform,
-Box.V2.Converter,BoxJsonConverter,1,3,0,0,3,35,3,0,1,0.67,1,2,Box.V2.Config.Constants,Box.V2.Auth.Token.TokenExchange' Box.V2.JWTAuth.BoxJWTAuth
-Box.V2.Converter,IBoxConverter,0,2,0,0,0,17,2,1,0,-1,0,24,,Box.V2.Auth.AuthRepository' Box.V2.BoxClient' Box.V2.Extensions.BoxResponseExtensions' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager
-Box.V2.Exceptions,BoxSessionInvalidatedException,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Box.V2.Exceptions,BoxException,0,4,3,0,4,40,4,3,0,-1,1,1,Box.V2.BoxError,Box.V2.Extensions.BoxResponseExtensions
-Box.V2.Exceptions,BoxConflictException<T>,1,1,1,0,1,18,1,0,1,0,0,0,,
-Box.V2.Exceptions,BoxPreflightCheckConflictException<T>,1,1,1,0,1,18,1,0,1,0,0,0,,
-Box.V2.Extensions,BoxExtensions,0,2,0,0,0,27,4,0,0,-1,0,0,,
-Box.V2.Extensions,BoxRequestExtensions,0,9,0,0,9,77,16,0,0,-1,4,0,Box.V2.RequestMethod' Box.V2.Config.Constants' Box.V2.IBoxFormPart' Box.V2.IBoxPart,
-Box.V2.Extensions,BoxResponseExtensions,0,2,0,0,2,107,6,0,0,-1,5,0,Box.V2.Exceptions.BoxException' Box.V2.BoxError' Box.V2.IBoxResponse' Box.V2.ResponseStatus' Box.V2.Converter.IBoxConverter,
-Box.V2.Extensions,UriExtensions,0,1,0,0,1,18,1,0,0,-1,1,0,Box.V2.Utility.Helper,
-Box.V2.JWTAuth,BoxJWTAuth,7,8,0,0,6,144,12,0,0,0,13,1,Box.V2.Config.IBoxConfig' Box.V2.JWTAuth.RSAUtilities' Box.V2.Auth.OAuthSession' Box.V2.JWTAuth.JWTAuthRepository' Box.V2.BoxClient' Box.V2.BoxRequest' Box.V2.Request.HttpRequestHandler' Box.V2.Converter.BoxJsonConverter' Box.V2.Services.BoxService' Box.V2.IBoxResponse' Box.V2.Config.Constants' Box.V2.RequestMethod' Box.V2.Config.RequestParameters,Box.V2.JWTAuth.JWTAuthRepository
-Box.V2.JWTAuth,PEMPasswordFinder,1,2,0,0,2,6,2,0,0,0,0,0,,
-Box.V2.JWTAuth,JWTAuthRepository,0,5,3,0,4,76,6,0,1,-1,2,1,Box.V2.Auth.OAuthSession' Box.V2.JWTAuth.BoxJWTAuth,Box.V2.JWTAuth.BoxJWTAuth
+Box.V2.Config,ConflictResolution,2,0,0,2,0,11,0,0,0,-1,0,0,,
+Box.V2.Config,IBoxConfig,0,0,56,0,0,102,0,1,0,-1,0,27,,Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Config.BoxConfig' Box.V2.Auth.AuthRepository' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.BoxClient' Box.V2.Managers.BoxFilesManager
+Box.V2.Converter,BoxItemConverter,7,2,0,0,0,132,45,0,0,0,0,1,,Box.V2.Converter.BoxJsonConverter
+Box.V2.Converter,JsonCreationConverter<T>,0,4,0,0,3,31,5,0,0,-1,0,1,,Box.V2.Converter.BoxItemConverter
+Box.V2.Converter,BoxJsonConverter,1,3,0,0,3,35,3,0,1,0.67,0,4,,Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Exceptions.BoxException' Box.V2.Auth.Token.TokenExchange' Box.V2.BoxClient
+Box.V2.Converter,IBoxConverter,0,2,0,0,0,17,2,1,0,-1,0,27,,Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Converter.BoxJsonConverter' Box.V2.Extensions.BoxResponseExtensions' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.BoxClient' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Auth.AuthRepository' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Exceptions,BoxSessionInvalidatedException,0,0,0,0,0,3,0,0,1,-1,0,1,,Box.V2.Auth.AuthRepository
+Box.V2.Exceptions,BoxException,0,6,3,0,5,97,11,3,0,-1,0,9,,Box.V2.Exceptions.BoxSessionInvalidatedException' Box.V2.Managers.BoxMetadataManager' Box.V2.Extensions.BoxResponseExtensions' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Exceptions.BoxException' Box.V2.Exceptions.BoxConflictException<T>' Box.V2.Exceptions.BoxPreflightCheckConflictException<T>' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.UploadUsingSessionInternal
+Box.V2.Exceptions,BoxConflictException<T>,1,1,1,0,1,18,1,0,1,0,0,1,,Box.V2.Extensions.BoxResponseExtensions
+Box.V2.Exceptions,BoxPreflightCheckConflictException<T>,1,1,1,0,1,18,1,0,1,0,0,1,,Box.V2.Extensions.BoxResponseExtensions
+Box.V2.Extensions,BoxExtensions,0,3,0,0,0,43,6,0,0,-1,0,0,,
+Box.V2.Extensions,BoxRequestExtensions,0,9,0,0,9,77,16,0,0,-1,0,0,,
+Box.V2.Extensions,BoxResponseExtensions,0,2,0,0,2,100,13,0,0,-1,0,0,,
+Box.V2.Extensions,UriExtensions,0,1,0,0,1,18,1,0,0,-1,0,0,,
+Box.V2.JWTAuth,BoxJWTAuth,8,10,0,0,7,180,16,0,0,0.2,0,1,,Box.V2.JWTAuth.JWTAuthRepository
+Box.V2.JWTAuth,PEMPasswordFinder,1,2,0,0,2,6,2,0,0,0,0,1,,Box.V2.JWTAuth.BoxJWTAuth
+Box.V2.JWTAuth,JWTAuthRepository,0,5,3,0,4,76,6,0,1,-1,0,1,,Box.V2.JWTAuth.BoxJWTAuth
 Box.V2.JWTAuth,RSAUtilities,0,4,0,0,1,49,6,0,0,-1,0,1,,Box.V2.JWTAuth.BoxJWTAuth
-Box.V2.Managers,BoxCollaborationsManager,0,6,0,0,6,93,7,0,1,-1,15,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxRequestEntity' Box.V2.Models.BoxCollaborationRequest' Box.V2.Models.BoxCollaborationUserRequest' Box.V2.RequestMethod' Box.V2.Models.BoxCollaboration' Box.V2.ResponseStatus' Box.V2.Config.RequestParameters' Box.V2.Config.Constants' Box.V2.Models.BoxCollection,
-Box.V2.Managers,BoxCollaborationWhitelistManager,0,9,0,0,9,146,11,0,1,-1,11,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.RequestMethod' Box.V2.Models.BoxCollaborationWhitelistEntry' Box.V2.Models.BoxCollectionMarkerBased' Box.V2.ResponseStatus' Box.V2.Models.BoxCollaborationWhitelistTargetEntry,
-Box.V2.Managers,BoxCollectionsManager,0,5,0,0,5,85,8,0,1,-1,12,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxCollectionsRequest' Box.V2.RequestMethod' Box.V2.Models.BoxFolder' Box.V2.Models.BoxFile' Box.V2.Models.BoxCollection' Box.V2.Config.Constants,
-Box.V2.Managers,BoxCommentsManager,0,5,0,0,5,74,6,0,1,-1,11,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxRequestEntity' Box.V2.Models.BoxCommentRequest' Box.V2.RequestMethod' Box.V2.Models.BoxComment' Box.V2.ResponseStatus,
-Box.V2.Managers,BoxDevicePinManager,0,4,0,0,4,56,5,0,1,-1,12,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Config.Constants' Box.V2.Models.BoxSortDirection' Box.V2.Models.BoxCollectionMarkerBased' Box.V2.Models.BoxDevicePin' Box.V2.RequestMethod' Box.V2.ResponseStatus,
-Box.V2.Managers,BoxEventsManager,2,4,0,2,4,141,10,0,1,0.5,11,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxEventCollection' Box.V2.Models.UserEventsStreamType' Box.V2.RequestMethod' Box.V2.Models.BoxLongPollInfoCollection' Box.V2.Models.BoxLongPollMessage,
-Box.V2.Managers,BoxFilesManager,0,49,0,0,44,1004,71,0,1,-1,37,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxFile' Box.V2.Config.Constants' Box.V2.Models.BoxPreflightCheckRequest' Box.V2.Models.BoxRequestEntity' Box.V2.RequestMethod' Box.V2.Config.RequestParameters' Box.V2.Models.BoxPreflightCheck' Box.V2.ResponseStatus' Box.V2.BoxMultiPartRequest' Box.V2.Models.BoxFileRequest' Box.V2.Models.BoxCollection' Box.V2.Models.BoxFileUploadSession' Box.V2.Models.BoxFileUploadSessionRequest' Box.V2.BoxBinaryRequest' Box.V2.Models.BoxSessionParts' Box.V2.Models.BoxSessionUploadStatus' Box.V2.Models.BoxSessionEndpoint' Box.V2.Managers.UploadUsingSessionInternal' Box.V2.Utility.Helper' Box.V2.Utility.Retry' Box.V2.Utility.BoxProgress' Box.V2.Models.BoxSharedLinkRequest' Box.V2.Models.BoxFilePreview' Box.V2.Models.BoxFileLock' Box.V2.Models.BoxFileLockRequest' Box.V2.Models.BoxWatermarkResponse' Box.V2.Models.BoxWatermark' Box.V2.Models.BoxApplyWatermarkRequest' Box.V2.Models.BoxFileVersion' Box.V2.Models.BoxRepresentationRequest' Box.V2.Models.BoxRepresentationCollection,
+Box.V2.Managers,BoxCollaborationsManager,0,6,0,0,6,93,7,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxCollaborationWhitelistManager,0,9,0,0,9,146,11,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxCollectionsManager,0,5,0,0,5,85,8,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxCommentsManager,0,5,0,0,5,74,6,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxDevicePinManager,0,4,0,0,4,56,5,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxEventsManager,2,4,0,2,4,131,8,0,1,0.5,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxFilesManager,0,54,0,0,48,1147,89,0,1,-1,0,1,,Box.V2.BoxClient
 Box.V2.Managers,UploadUsingSessionInternal,0,2,0,0,2,45,4,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Managers,BoxFoldersManager,0,19,0,0,19,362,24,0,1,-1,18,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxFolder' Box.V2.Config.Constants' Box.V2.Models.BoxCollection' Box.V2.Models.BoxFolderRequest' Box.V2.Models.BoxRequestEntity' Box.V2.RequestMethod' Box.V2.Config.RequestParameters' Box.V2.ResponseStatus' Box.V2.Models.BoxSharedLinkRequest' Box.V2.Models.BoxWatermarkResponse' Box.V2.Models.BoxWatermark' Box.V2.Models.BoxApplyWatermarkRequest,
-Box.V2.Managers,BoxGroupsManager,0,13,0,0,13,269,25,0,1,-1,15,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxCollection' Box.V2.Models.BoxGroup' Box.V2.Models.Request.BoxGroupRequest' Box.V2.RequestMethod' Box.V2.ResponseStatus' Box.V2.Models.Request.BoxGroupMembershipRequest' Box.V2.Models.BoxRequestEntity' Box.V2.Models.BoxGroupMembership' Box.V2.Config.Constants,
-Box.V2.Managers,BoxLegalHoldPoliciesManager,1,12,0,0,12,213,15,0,1,0.17,15,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.RequestMethod' Box.V2.Models.BoxLegalHoldPolicy' Box.V2.Models.BoxCollectionMarkerBased' Box.V2.Models.BoxLegalHoldPolicyRequest' Box.V2.ResponseStatus' Box.V2.Models.BoxLegalHoldPolicyAssignment' Box.V2.Config.Constants' Box.V2.Models.BoxLegalHoldPolicyAssignmentRequest' Box.V2.Models.BoxRequestEntity,
-Box.V2.Managers,BoxMetadataManager,0,20,0,0,16,223,21,0,1,-1,14,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Config.Constants' Box.V2.Models.BoxMetadataTemplate' Box.V2.RequestMethod' Box.V2.Config.RequestParameters' Box.V2.Models.BoxMetadataTemplateCollection' Box.V2.Models.BoxEnterpriseMetadataTemplateCollection' Box.V2.Models.BoxMetadataUpdate' Box.V2.ResponseStatus,
-Box.V2.Managers,BoxRecentItemsManager,0,2,0,0,2,29,3,0,1,-1,5,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest,
-Box.V2.Managers,BoxResourceManager,7,9,0,0,1,166,13,20,0,0,14,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.IBoxRequest' Box.V2.Config.RequestParameters' Box.V2.Config.Constants' Box.V2.IBoxResponse' Box.V2.ResponseStatus' Box.V2.Auth.OAuthSession' Box.V2.Auth.AuthVersion' Box.V2.Models.BoxCollection' Box.V2.BoxRequest' Box.V2.Models.BoxCollectionMarkerBased,
-Box.V2.Managers,BoxRetentionPoliciesManager,0,10,0,0,10,171,13,0,1,-1,13,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.RequestMethod' Box.V2.Models.BoxRetentionPolicy' Box.V2.Models.Request.BoxRetentionPolicyRequest' Box.V2.Models.BoxCollectionMarkerBased' Box.V2.Config.Constants' Box.V2.Models.BoxRetentionPolicyAssignment' Box.V2.Models.Request.BoxRetentionPolicyAssignmentRequest,
-Box.V2.Managers,BoxSearchManager,0,5,0,0,2,98,7,0,1,-1,8,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxCollection' Box.V2.Config.Constants,
-Box.V2.Managers,BoxSharedItemsManager,0,2,0,0,2,28,2,0,1,-1,7,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxItem,
-Box.V2.Managers,BoxTasksManager,0,10,0,0,10,142,12,0,1,-1,19,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.Request.BoxTaskRequest' Box.V2.Models.BoxTaskAssignmentRequest' Box.V2.Models.Request.BoxAssignmentRequest' Box.V2.RequestMethod' Box.V2.Models.BoxTaskAssignment' Box.V2.Models.BoxTaskAssignmentUpdateRequest' Box.V2.ResponseStatus' Box.V2.Models.BoxRequestEntity' Box.V2.Models.BoxTaskCreateRequest' Box.V2.Models.BoxTask' Box.V2.Models.BoxTaskUpdateRequest' Box.V2.Config.Constants' Box.V2.Models.BoxCollection,
-Box.V2.Managers,BoxTermsOfServiceManager,0,8,0,0,8,101,8,0,1,-1,13,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxTermsOfService' Box.V2.Models.BoxTermsOfServiceCollection' Box.V2.RequestMethod' Box.V2.Models.BoxTermsOfServicesRequest' Box.V2.Models.BoxTermsOfServiceUserStatusesCollection' Box.V2.Models.BoxTermsOfServiceUserStatuses' Box.V2.Models.BoxTermsOfServiceUserStatusesRequest,
-Box.V2.Managers,BoxUsersManager,0,15,0,0,15,266,18,0,1,-1,18,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxUser' Box.V2.Models.BoxUserRequest' Box.V2.RequestMethod' Box.V2.Models.BoxCollection' Box.V2.Models.BoxRequestEntity' Box.V2.Models.BoxUserInviteRequest' Box.V2.Models.BoxActionableByRequest' Box.V2.Models.BoxUserInvite' Box.V2.Config.Constants' Box.V2.ResponseStatus' Box.V2.Models.BoxEmailAlias' Box.V2.Models.BoxFolder,
-Box.V2.Managers,BoxWebhooksManager,0,7,0,0,7,115,8,0,1,-1,11,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.RequestMethod' Box.V2.Models.BoxWebhook' Box.V2.Models.BoxWebhookRequest' Box.V2.ResponseStatus' Box.V2.Models.BoxCollectionMarkerBased,
-Box.V2.Managers,BoxWebLinksManager,0,5,0,0,5,63,5,0,1,-1,11,0,Box.V2.Config.IBoxConfig' Box.V2.Services.IBoxService' Box.V2.Converter.IBoxConverter' Box.V2.Auth.IAuthRepository' Box.V2.BoxRequest' Box.V2.IBoxResponse' Box.V2.Models.BoxRequestEntity' Box.V2.Models.BoxWebLinkRequest' Box.V2.RequestMethod' Box.V2.Models.BoxWebLink' Box.V2.ResponseStatus,
-Box.V2.Models,BoxAssignmentCounts,4,0,4,4,0,27,0,0,0,-1,0,0,,
-Box.V2.Models,BoxCollaboration,10,0,10,10,0,65,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCollaborationsManager
+Box.V2.Managers,BoxFoldersManager,0,19,0,0,19,366,24,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxGroupsManager,0,13,0,0,13,269,25,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxLegalHoldPoliciesManager,1,12,0,0,12,213,15,0,1,0.17,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxMetadataCascadePolicyManager,0,6,0,0,6,102,7,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxMetadataManager,0,23,0,0,19,306,24,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxRecentItemsManager,0,2,0,0,2,29,3,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxResourceManager,9,13,0,0,1,268,28,22,0,0.15,0,23,,Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.BoxClient' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Managers,BoxRetentionPoliciesManager,0,10,0,0,10,171,13,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxSearchManager,0,6,0,0,3,175,9,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxSharedItemsManager,0,2,0,0,2,28,2,0,1,-1,0,2,,Box.V2.Managers.BoxSharedItemsManager' Box.V2.BoxClient
+Box.V2.Managers,BoxStoragePoliciesManager,0,9,0,0,9,155,12,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxTasksManager,0,10,0,0,10,142,12,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxTermsOfServiceManager,0,8,0,0,8,100,8,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxUsersManager,0,16,0,0,16,280,19,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxWebhooksManager,0,7,0,0,7,115,9,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Managers,BoxWebLinksManager,0,8,0,0,8,119,8,0,1,-1,0,1,,Box.V2.BoxClient
+Box.V2.Models,BoxApplication,2,0,2,2,0,15,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
+Box.V2.Models,BoxAssignmentCounts,4,0,4,4,0,27,0,0,0,-1,0,1,,Box.V2.Models.BoxLegalHoldPolicy
+Box.V2.Models,BoxCollaboration,11,0,11,11,0,71,0,0,1,-1,0,5,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxCollaborationWhitelistEntry,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCollaborationWhitelistManager
 Box.V2.Models,BoxCollaborationWhitelistTargetEntry,4,0,4,4,0,27,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCollaborationWhitelistManager
-Box.V2.Models,BoxCollection,6,0,0,6,0,9,0,1,0,-1,0,9,,Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxUsersManager
-Box.V2.Models,BoxCollectionMarkerBased,4,0,0,4,0,7,0,2,0,-1,0,6,,Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxWebhooksManager
-Box.V2.Models,BoxEventCollection,3,0,0,3,0,6,0,1,0,-1,0,1,,Box.V2.Managers.BoxEventsManager
-Box.V2.Models,BoxLongPollInfoCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Managers.BoxEventsManager
+Box.V2.Models,BoxCollection,6,0,0,6,0,9,0,1,0,-1,0,1,,Box.V2.Models.BoxCollection<T>
+Box.V2.Models,BoxCollectionMarkerBased,4,0,0,4,0,7,0,2,0,-1,0,2,,Box.V2.Models.BoxCollectionMarkerBased<T>' Box.V2.Models.BoxCollectionMarkerBasedV2<T>
+Box.V2.Models,BoxEventCollection,3,0,0,3,0,6,0,1,0,-1,0,1,,Box.V2.Models.BoxEventCollection<T>
+Box.V2.Models,BoxLongPollInfoCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Models.BoxLongPollInfoCollection<T>
 Box.V2.Models,BoxWebhookCollection,3,0,0,3,0,6,0,0,0,-1,0,0,,
-Box.V2.Models,BoxRepresentationCollection,1,0,0,1,0,4,0,1,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxTermsOfServiceCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Managers.BoxTermsOfServiceManager
-Box.V2.Models,BoxTermsOfServiceUserStatusesCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Managers.BoxTermsOfServiceManager
-Box.V2.Models,BoxMetadataTemplateCollection,1,0,0,1,0,4,0,1,0,-1,0,1,,Box.V2.Managers.BoxMetadataManager
-Box.V2.Models,BoxEnterpriseMetadataTemplateCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Managers.BoxMetadataManager
-Box.V2.Models,BoxCollection<T>,0,0,5,0,0,13,0,0,1,-1,0,0,,
-Box.V2.Models,BoxCollectionMarkerBased<T>,0,0,4,0,0,23,0,0,1,-1,0,0,,
-Box.V2.Models,BoxCollectionMarkerBasedV2<T>,0,0,4,0,0,23,0,0,1,-1,0,0,,
-Box.V2.Models,BoxEventCollection<T>,0,0,3,0,0,9,0,0,1,-1,0,0,,
-Box.V2.Models,BoxLongPollInfoCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,0,,
-Box.V2.Models,BoxMetadataTemplateCollection<T>,0,0,1,0,0,5,0,0,1,-1,0,0,,
-Box.V2.Models,BoxRepresentationCollection<T>,0,0,1,0,0,5,0,0,1,-1,0,0,,
-Box.V2.Models,BoxTermsOfServiceCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,0,,
-Box.V2.Models,BoxTermsOfServiceUserStatusesCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,0,,
-Box.V2.Models,BoxEnterpriseMetadataTemplateCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,0,,
-Box.V2.Models,BoxCollectionItem,2,0,2,0,0,12,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
-Box.V2.Models,BoxComment,7,0,7,7,0,46,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCommentsManager
+Box.V2.Models,BoxRepresentationCollection,1,0,0,1,0,4,0,1,0,-1,0,1,,Box.V2.Models.BoxRepresentationCollection<T>
+Box.V2.Models,BoxTermsOfServiceCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Models.BoxTermsOfServiceCollection<T>
+Box.V2.Models,BoxTermsOfServiceUserStatusesCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Models.BoxTermsOfServiceUserStatusesCollection<T>
+Box.V2.Models,BoxMetadataTemplateCollection,1,0,0,1,0,4,0,1,0,-1,0,1,,Box.V2.Models.BoxMetadataTemplateCollection<T>
+Box.V2.Models,BoxEnterpriseMetadataTemplateCollection,2,0,0,2,0,5,0,1,0,-1,0,1,,Box.V2.Models.BoxEnterpriseMetadataTemplateCollection<T>
+Box.V2.Models,BoxCollection<T>,0,0,5,0,0,13,0,0,1,-1,0,13,,Box.V2.Models.BoxTask' Box.V2.Extensions.BoxResponseExtensions' Box.V2.Models.BoxFolder' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Models.BoxItem' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxCollectionMarkerBased<T>,0,0,4,0,0,23,0,0,1,-1,0,8,,Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxRetentionPoliciesManager
+Box.V2.Models,BoxCollectionMarkerBasedV2<T>,0,0,4,0,0,23,0,0,1,-1,0,3,,Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxEventCollection<T>,0,0,3,0,0,9,0,0,1,-1,0,1,,Box.V2.Managers.BoxEventsManager
+Box.V2.Models,BoxLongPollInfoCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,1,,Box.V2.Managers.BoxEventsManager
+Box.V2.Models,BoxMetadataTemplateCollection<T>,0,0,1,0,0,5,0,0,1,-1,0,1,,Box.V2.Managers.BoxMetadataManager
+Box.V2.Models,BoxRepresentationCollection<T>,0,0,1,0,0,5,0,0,1,-1,0,2,,Box.V2.Models.BoxFile' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxTermsOfServiceCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,1,,Box.V2.Managers.BoxTermsOfServiceManager
+Box.V2.Models,BoxTermsOfServiceUserStatusesCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,1,,Box.V2.Managers.BoxTermsOfServiceManager
+Box.V2.Models,BoxEnterpriseMetadataTemplateCollection<T>,0,0,2,0,0,7,0,0,1,-1,0,1,,Box.V2.Managers.BoxMetadataManager
+Box.V2.Models,BoxCollectionItem,2,0,2,0,0,12,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCollectionsManager
+Box.V2.Models,BoxComment,7,0,7,7,0,46,0,0,1,-1,0,3,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxDevicePin,4,0,4,4,0,27,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxDevicePinManager
-Box.V2.Models,BoxEmail,2,0,2,2,0,15,0,0,0,-1,0,0,,
+Box.V2.Models,BoxEmail,2,0,2,2,0,15,0,0,0,-1,0,1,,Box.V2.Models.BoxFolder
 Box.V2.Models,BoxEmailAlias,2,0,2,2,0,15,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxUsersManager
-Box.V2.Models,BoxEnterprise,1,0,1,1,0,9,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
-Box.V2.Models,BoxEnterpriseEvent,9,0,9,9,0,61,0,0,0,-1,0,0,,
-Box.V2.Models,BoxLongPollInfo,5,0,5,5,0,18,0,0,0,-1,0,0,,
+Box.V2.Models,BoxEnterprise,1,0,1,1,0,9,0,0,1,-1,0,6,,Box.V2.Models.BoxTermsOfService' Box.V2.Models.BoxCollaborationWhitelistTargetEntry' Box.V2.Models.BoxUserInvite' Box.V2.Models.BoxUser' Box.V2.Models.BoxCollaborationWhitelistEntry' Box.V2.Converter.BoxItemConverter
+Box.V2.Models,BoxEnterpriseEvent,10,0,10,10,0,67,0,0,0,-1,0,2,,Box.V2.Models.BoxEventCollection<T>' Box.V2.Managers.BoxEventsManager
+Box.V2.Models,BoxLongPollInfo,5,0,5,5,0,18,0,0,0,-1,0,2,,Box.V2.Models.BoxLongPollInfoCollection<T>' Box.V2.Managers.BoxEventsManager
 Box.V2.Models,BoxLongPollMessage,1,0,1,1,0,6,0,0,0,-1,0,1,,Box.V2.Managers.BoxEventsManager
-Box.V2.Models,BoxEntity,2,0,2,0,0,16,0,32,0,-1,0,1,,Box.V2.Converter.BoxItemConverter
-Box.V2.Models,BoxSharedLinkAccessType,0,0,0,0,0,6,0,0,0,-1,0,0,,
-Box.V2.Models,BoxSyncStateType,0,0,0,0,0,6,0,0,0,-1,0,0,,
-Box.V2.Models,BoxSortBy,0,0,0,0,0,12,0,0,0,-1,0,0,,
-Box.V2.Models,BoxSortDirection,0,0,0,0,0,5,0,0,0,-1,0,1,,Box.V2.Managers.BoxDevicePinManager
-Box.V2.Models,MetadataUpdateOp,0,0,0,0,0,9,0,0,0,-1,0,0,,
-Box.V2.Models,ResolutionStateType,0,0,0,0,0,7,0,0,0,-1,0,0,,
-Box.V2.Models,MetadataTemplateUpdateOp,0,0,0,0,0,12,0,0,0,-1,0,0,,
+Box.V2.Models,BoxEntity,2,0,2,0,0,16,0,42,0,-1,0,45,,Box.V2.Models.BoxEnterprise' Box.V2.Models.BoxCollaborationWhitelistEntry' Box.V2.Models.BoxCollectionItem' Box.V2.Models.BoxCollaborationWhitelistTargetEntry' Box.V2.Models.BoxApplication' Box.V2.Models.BoxDevicePin' Box.V2.Models.BoxEmailAlias' Box.V2.Models.BoxComment' Box.V2.Models.BoxCollaboration' Box.V2.Models.BoxFileEventSource' Box.V2.Models.BoxEnterpriseEvent' Box.V2.Models.BoxFileUploadSession' Box.V2.Models.BoxFileVersion' Box.V2.Models.BoxFileVersionRetention' Box.V2.Models.BoxGroup' Box.V2.Models.BoxFolderEventSource' Box.V2.Models.BoxFileVersionLegalHold' Box.V2.Models.BoxGroupEventSource' Box.V2.Models.BoxGroupFileCollaborationEventSource' Box.V2.Models.BoxGroupMembership' Box.V2.Models.BoxGroupFolderCollaborationEventSource' Box.V2.Models.BoxItem' Box.V2.Models.BoxLegalHoldPolicy' Box.V2.Managers.BoxResourceManager' Box.V2.Models.BoxLegalHoldPolicyAssignment' Box.V2.Models.BoxRecentItem' Box.V2.Models.BoxMetadataTemplate' Box.V2.Models.BoxRetentionPolicy' Box.V2.Models.BoxStoragePolicy' Box.V2.Converter.BoxItemConverter' Box.V2.Models.BoxRetentionPolicyAssignment' Box.V2.Models.BoxMetadataCascadePolicy' Box.V2.Models.BoxTask' Box.V2.Models.BoxTermsOfService' Box.V2.Models.BoxTaskAssignment' Box.V2.Models.BoxStoragePolicyAssignment' Box.V2.Models.BoxUserFileCollaborationEventSource' Box.V2.Models.BoxUser' Box.V2.Models.BoxTermsOfServiceUserStatuses' Box.V2.Models.BoxWatermarkResponse' Box.V2.Models.BoxUserInvite' Box.V2.Models.BoxFileLock' Box.V2.Models.BoxUserFolderCollaborationEventSource' Box.V2.Models.BoxWebLinkEventSource' Box.V2.Models.BoxWebhook
+Box.V2.Models,BoxSharedLinkAccessType,0,0,0,0,0,6,0,0,0,-1,0,2,,Box.V2.Models.BoxSharedLinkRequest' Box.V2.Models.BoxSharedLink
+Box.V2.Models,BoxSyncStateType,0,0,0,0,0,6,0,0,0,-1,0,1,,Box.V2.Models.BoxFolderRequest
+Box.V2.Models,BoxSortBy,0,0,0,0,0,12,0,0,0,-1,0,1,,Box.V2.Models.BoxSortOrder
+Box.V2.Models,BoxSortDirection,0,0,0,0,0,5,0,0,0,-1,0,4,,Box.V2.Managers.BoxDevicePinManager' Box.V2.Models.BoxSortOrder' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxSearchManager
+Box.V2.Models,MetadataUpdateOp,0,0,0,0,0,9,0,0,0,-1,0,2,,Box.V2.Models.BoxMetadataUpdate' Box.V2.Managers.BoxMetadataManager
+Box.V2.Models,ResolutionStateType,0,0,0,0,0,7,0,0,0,-1,0,2,,Box.V2.Models.BoxTaskAssignmentUpdateRequest' Box.V2.Models.BoxTaskAssignment
+Box.V2.Models,MetadataTemplateUpdateOp,0,0,0,0,0,12,0,0,0,-1,0,1,,Box.V2.Models.BoxMetadataTemplateUpdate
 Box.V2.Models,UserEventsStreamType,0,0,0,0,0,6,0,0,0,-1,0,1,,Box.V2.Managers.BoxEventsManager
-Box.V2.Models,BoxExpiringEmbedLink,1,0,1,1,0,6,0,0,0,-1,0,0,,
-Box.V2.Models,BoxFile,13,0,15,13,0,93,0,0,1,-1,0,3,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxExpiringEmbedLink,1,0,1,1,0,6,0,0,0,-1,0,1,,Box.V2.Models.BoxFile
+Box.V2.Models,BoxFile,17,0,19,17,0,117,0,0,1,-1,0,7,,Box.V2.Models.BoxFileVersionRetention' Box.V2.Models.BoxFileVersionLegalHold' Box.V2.Models.BoxFileLock' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCollectionsManager' Box.V2.Extensions.BoxResponseExtensions' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxFileEventSource,4,0,4,4,0,27,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
-Box.V2.Models,BoxFileLock,4,0,4,4,0,27,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxFileLock,5,0,5,5,0,34,0,0,1,-1,0,4,,Box.V2.Models.BoxFileLockRequest' Box.V2.Models.BoxFile' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxFilePreview,0,0,4,0,0,19,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxFileUploadSession,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxFileVersion,6,0,6,6,0,40,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxFileVersionLegalHold,4,0,4,4,0,27,0,0,1,-1,0,0,,
-Box.V2.Models,BoxFileVersionRetention,5,0,5,5,0,33,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
-Box.V2.Models,BoxFolder,13,0,15,13,0,92,0,0,1,-1,0,4,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxUsersManager
+Box.V2.Models,BoxFileVersion,11,0,11,11,0,72,0,0,1,-1,0,5,,Box.V2.Models.BoxFileVersionLegalHold' Box.V2.Models.BoxFileVersionRetention' Box.V2.Models.BoxFile' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxFileVersionLegalHold,4,0,4,4,0,27,0,0,1,-1,0,1,,Box.V2.Managers.BoxLegalHoldPoliciesManager
+Box.V2.Models,BoxFileVersionRetention,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxRetentionPoliciesManager
+Box.V2.Models,BoxFolder,15,0,17,15,0,104,0,0,1,-1,0,12,,Box.V2.Models.BoxWebLinkEventSource' Box.V2.Models.BoxFileEventSource' Box.V2.Models.BoxUserFolderCollaborationEventSource' Box.V2.Models.BoxFolderEventSource' Box.V2.Models.BoxGroupFileCollaborationEventSource' Box.V2.Models.BoxGroupFolderCollaborationEventSource' Box.V2.Models.BoxUserFileCollaborationEventSource' Box.V2.Models.BoxItem' Box.V2.Managers.BoxCollectionsManager' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxFoldersManager
 Box.V2.Models,BoxFolderEventSource,4,0,4,4,0,27,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
-Box.V2.Models,BoxGroup,3,0,3,3,0,21,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxGroupsManager
-Box.V2.Models,BoxGroupMembership,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxGroupsManager
-Box.V2.Models,BoxItem,16,0,15,16,0,96,0,3,1,-1,0,1,,Box.V2.Managers.BoxSharedItemsManager
-Box.V2.Models,BoxLegalHoldPolicy,11,0,11,11,0,69,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxLegalHoldPoliciesManager
+Box.V2.Models,BoxGroup,8,0,8,8,0,51,0,0,1,-1,0,3,,Box.V2.Models.BoxGroupMembership' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxGroupsManager
+Box.V2.Models,BoxGroupEventSource,2,0,3,2,0,19,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
+Box.V2.Models,BoxGroupFileCollaborationEventSource,5,0,6,5,0,37,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
+Box.V2.Models,BoxGroupFolderCollaborationEventSource,5,0,6,5,0,37,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
+Box.V2.Models,BoxGroupMembership,5,0,5,5,0,33,0,0,1,-1,0,3,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxGroupsManager
+Box.V2.Models,BoxItem,16,0,15,16,0,96,0,3,1,-1,0,12,,Box.V2.Models.BoxFile' Box.V2.Models.BoxRestrictedTo' Box.V2.Models.BoxTask' Box.V2.Models.BoxCollaboration' Box.V2.Models.BoxRecentItem' Box.V2.Models.BoxFolder' Box.V2.Models.BoxWebLink' Box.V2.Models.BoxTaskAssignment' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxFoldersManager
+Box.V2.Models,BoxLegalHoldPolicy,11,0,11,11,0,69,0,0,1,-1,0,3,,Box.V2.Models.BoxLegalHoldPolicyAssignment' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxLegalHoldPoliciesManager
 Box.V2.Models,BoxLegalHoldPolicyAssignment,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxLegalHoldPoliciesManager
-Box.V2.Models,BoxMetadataTemplate,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxMetadataManager
-Box.V2.Models,BoxMetadataTemplateField,5,0,5,5,0,33,0,0,0,-1,0,0,,
-Box.V2.Models,BoxMetadataTemplateFieldOption,1,0,1,1,0,9,0,0,0,-1,0,0,,
-Box.V2.Models,BoxMetadataTemplateUpdate,6,0,6,6,0,22,0,0,0,-1,0,0,,
+Box.V2.Models,BoxMetadataCascadePolicy,4,0,4,4,0,27,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxMetadataCascadePolicyManager
+Box.V2.Models,BoxMetadataFieldFilter,2,0,2,2,0,15,0,0,0,-1,0,1,,Box.V2.Models.BoxRetentionPolicyAssignment
+Box.V2.Models,BoxMetadataTemplate,5,0,5,5,0,33,0,0,1,-1,0,3,,Box.V2.Models.BoxEnterpriseMetadataTemplateCollection<T>' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxMetadataManager
+Box.V2.Models,BoxMetadataTemplateField,5,0,5,5,0,33,0,0,0,-1,0,1,,Box.V2.Models.BoxMetadataTemplate
+Box.V2.Models,BoxMetadataTemplateFieldOption,1,0,1,1,0,9,0,0,0,-1,0,1,,Box.V2.Models.BoxMetadataTemplateField
+Box.V2.Models,BoxMetadataTemplateUpdate,6,0,6,6,0,22,0,0,0,-1,0,1,,Box.V2.Managers.BoxMetadataManager
 Box.V2.Models,BoxMetadataUpdate,4,0,4,4,0,28,0,0,0,-1,0,1,,Box.V2.Managers.BoxMetadataManager
-Box.V2.Models,BoxPermission,0,0,2,0,0,13,0,0,0,-1,0,0,,
-Box.V2.Models,BoxPreflightCheck,2,0,4,2,0,32,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxRecentItem,0,0,4,0,0,24,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
-Box.V2.Models,BoxRepresentation,5,0,5,5,0,33,0,0,0,-1,0,0,,
-Box.V2.Models,BoxRepresentationContent,1,0,1,1,0,9,0,0,0,-1,0,0,,
-Box.V2.Models,BoxRepresentationInfo,1,0,1,1,0,9,0,0,0,-1,0,0,,
-Box.V2.Models,BoxRepresentationProperties,3,0,3,3,0,21,0,0,0,-1,0,0,,
-Box.V2.Models,BoxRepresentationStatus,1,0,1,1,0,9,0,0,0,-1,0,0,,
-Box.V2.Models,BoxRestrictedTo,2,0,2,0,0,29,0,0,0,-1,0,0,,
-Box.V2.Models,BoxRetentionPolicy,8,0,8,8,0,51,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxRetentionPoliciesManager
-Box.V2.Models,BoxRetentionPolicyAssignment,4,0,4,4,0,27,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxRetentionPoliciesManager
-Box.V2.Models,BoxSessionEndpoint,6,0,6,6,0,39,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxPermission,0,0,2,0,0,13,0,0,0,-1,0,1,,Box.V2.Models.BoxSharedLink
+Box.V2.Models,BoxPreflightCheck,2,0,4,2,0,32,0,0,0,-1,0,2,,Box.V2.Extensions.BoxResponseExtensions' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxRecentItem,0,0,4,0,0,24,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxRecentItemsManager
+Box.V2.Models,BoxRepresentation,5,0,5,5,0,33,0,0,0,-1,0,3,,Box.V2.Models.BoxRepresentationCollection<T>' Box.V2.Models.BoxFile' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxRepresentationContent,1,0,1,1,0,9,0,0,0,-1,0,1,,Box.V2.Models.BoxRepresentation
+Box.V2.Models,BoxRepresentationInfo,1,0,1,1,0,9,0,0,0,-1,0,1,,Box.V2.Models.BoxRepresentation
+Box.V2.Models,BoxRepresentationProperties,3,0,3,3,0,21,0,0,0,-1,0,1,,Box.V2.Models.BoxRepresentation
+Box.V2.Models,BoxRepresentationStatus,1,0,1,1,0,9,0,0,0,-1,0,1,,Box.V2.Models.BoxRepresentation
+Box.V2.Models,BoxRestrictedTo,2,0,2,0,0,29,0,0,0,-1,0,1,,Box.V2.Auth.OAuthSession
+Box.V2.Models,BoxRetentionPolicy,11,0,11,11,0,70,0,0,1,-1,0,4,,Box.V2.Models.BoxFileVersionRetention' Box.V2.Models.BoxRetentionPolicyAssignment' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxRetentionPoliciesManager
+Box.V2.Models,BoxRetentionPolicyAssignment,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxRetentionPoliciesManager
+Box.V2.Models,BoxSessionEndpoint,6,0,6,6,0,39,0,0,0,-1,0,1,,Box.V2.Models.BoxFileUploadSession
 Box.V2.Models,BoxSessionParts,0,0,1,0,0,8,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxUploadPartResponse,0,0,1,0,0,8,0,0,0,-1,0,0,,
-Box.V2.Models,BoxSessionPartInfo,0,0,4,0,0,23,0,0,0,-1,0,0,,
+Box.V2.Models,BoxUploadPartResponse,0,0,1,0,0,8,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxSessionPartInfo,0,0,4,0,0,23,0,0,0,-1,0,3,,Box.V2.Models.BoxSessionParts' Box.V2.Models.BoxUploadPartResponse' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxSessionUploadStatus,4,0,4,4,0,28,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxSharedLink,9,0,9,9,0,58,0,0,0,-1,0,0,,
-Box.V2.Models,BoxSortOrder,0,0,3,0,0,9,0,0,0,-1,0,0,,
-Box.V2.Models,BoxTask,7,0,7,7,0,46,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTasksManager
-Box.V2.Models,BoxTaskAssignment,8,0,8,8,0,52,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTasksManager
-Box.V2.Models,BoxTermsOfService,6,0,6,6,0,39,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTermsOfServiceManager
-Box.V2.Models,BoxTermsOfServiceUserStatuses,5,0,5,5,0,33,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTermsOfServiceManager
-Box.V2.Models,BoxUser,21,0,21,21,0,129,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxUsersManager
+Box.V2.Models,BoxSharedLink,9,0,9,9,0,58,0,0,0,-1,0,1,,Box.V2.Models.BoxItem
+Box.V2.Models,BoxSortOrder,0,0,3,0,0,9,0,0,0,-1,0,3,,Box.V2.Models.BoxCollection<T>' Box.V2.Models.BoxCollectionMarkerBased<T>' Box.V2.Models.BoxCollectionMarkerBasedV2<T>
+Box.V2.Models,BoxStoragePolicy,1,0,1,1,0,9,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxStoragePoliciesManager
+Box.V2.Models,BoxStoragePolicyAssignment,2,0,2,2,0,15,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxStoragePoliciesManager
+Box.V2.Models,BoxTask,7,0,7,7,0,46,0,0,1,-1,0,3,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxTaskAssignment,9,0,10,9,0,67,0,0,1,-1,0,3,,Box.V2.Models.BoxTask' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTasksManager
+Box.V2.Models,BoxTermsOfService,6,0,6,6,0,39,0,0,1,-1,0,4,,Box.V2.Models.BoxTermsOfServiceUserStatusesRequest' Box.V2.Models.BoxTermsOfServiceCollection<T>' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTermsOfServiceManager
+Box.V2.Models,BoxTermsOfServiceUserStatuses,5,0,5,5,0,33,0,0,1,-1,0,3,,Box.V2.Models.BoxTermsOfServiceUserStatusesCollection<T>' Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxTermsOfServiceManager
+Box.V2.Models,BoxTrackingCode,3,1,3,3,1,33,1,0,0,0,0,2,,Box.V2.Models.BoxUserRequest' Box.V2.Models.BoxUser
+Box.V2.Models,BoxUser,26,0,26,26,0,160,0,0,1,-1,0,21,,Box.V2.Models.BoxDevicePin' Box.V2.Models.BoxFileLock' Box.V2.Models.BoxLegalHoldPolicyAssignment' Box.V2.Models.BoxCollaborationWhitelistTargetEntry' Box.V2.Models.BoxCollaboration' Box.V2.Models.BoxLegalHoldPolicy' Box.V2.Models.BoxComment' Box.V2.Models.BoxEnterpriseEvent' Box.V2.Models.BoxFileVersion' Box.V2.Models.BoxTask' Box.V2.Models.BoxRetentionPolicyAssignment' Box.V2.Models.BoxWebhook' Box.V2.Models.BoxUserInvite' Box.V2.Models.BoxTaskAssignment' Box.V2.Models.BoxRetentionPolicy' Box.V2.Models.BoxTermsOfServiceUserStatusesRequest' Box.V2.Converter.BoxItemConverter' Box.V2.Models.BoxItem' Box.V2.Models.BoxTermsOfServiceUserStatuses' Box.V2.Models.BoxGroupMembership' Box.V2.Managers.BoxUsersManager
+Box.V2.Models,BoxUserFileCollaborationEventSource,5,0,6,5,0,37,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
+Box.V2.Models,BoxUserFolderCollaborationEventSource,5,0,6,5,0,37,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
 Box.V2.Models,BoxUserInvite,7,0,6,7,0,40,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxUsersManager
-Box.V2.Models,BoxWatermark,2,0,2,2,0,15,0,0,0,-1,0,2,,Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager
-Box.V2.Models,BoxWatermarkInfo,1,0,1,1,0,9,0,0,0,-1,0,0,,
-Box.V2.Models,BoxWatermarkResponse,1,0,1,1,0,9,0,0,1,-1,0,3,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager
+Box.V2.Models,BoxWatermark,2,0,2,2,0,15,0,0,0,-1,0,3,,Box.V2.Models.BoxWatermarkResponse' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxWatermarkInfo,1,0,1,1,0,9,0,0,0,-1,0,2,,Box.V2.Models.BoxFolder' Box.V2.Models.BoxFile
+Box.V2.Models,BoxWatermarkResponse,1,0,1,1,0,9,0,0,1,-1,0,3,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxWebhook,5,0,5,5,0,34,0,0,1,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxWebhooksManager
 Box.V2.Models,BoxWebLink,1,0,1,1,0,6,0,0,2,-1,0,2,,Box.V2.Converter.BoxItemConverter' Box.V2.Managers.BoxWebLinksManager
-Box.V2.Models,BoxFilePermission,0,0,1,0,0,8,0,0,1,-1,0,0,,
-Box.V2.Models,BoxFolderPermission,0,0,1,0,0,9,0,0,1,-1,0,0,,
-Box.V2.Models,BoxItemPermission,0,0,7,0,0,39,0,2,0,-1,0,0,,
-Box.V2.Models,BoxActionableByRequest,0,0,1,0,0,8,0,0,0,-1,0,1,,Box.V2.Managers.BoxUsersManager
-Box.V2.Models,BoxApplyWatermarkRequest,0,0,1,0,0,8,0,0,0,-1,0,2,,Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager
-Box.V2.Models,BoxCollaborationRequest,0,0,5,0,0,31,0,0,1,-1,0,1,,Box.V2.Managers.BoxCollaborationsManager
+Box.V2.Models,BoxWebLinkEventSource,4,0,4,4,0,27,0,0,1,-1,0,1,,Box.V2.Converter.BoxItemConverter
+Box.V2.Models,BoxFilePermission,0,0,1,0,0,8,0,0,1,-1,0,1,,Box.V2.Models.BoxFile
+Box.V2.Models,BoxFolderPermission,0,0,1,0,0,9,0,0,1,-1,0,1,,Box.V2.Models.BoxFolder
+Box.V2.Models,BoxItemPermission,0,0,7,0,0,39,0,2,0,-1,0,2,,Box.V2.Models.BoxFolderPermission' Box.V2.Models.BoxFilePermission
+Box.V2.Models,BoxActionableByRequest,0,0,1,0,0,8,0,0,0,-1,0,1,,Box.V2.Models.BoxUserInviteRequest
+Box.V2.Models,BoxApplyWatermarkRequest,0,0,1,0,0,8,0,0,0,-1,0,2,,Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxCollaborationRequest,0,0,6,0,0,37,0,0,1,-1,0,1,,Box.V2.Managers.BoxCollaborationsManager
 Box.V2.Models,BoxCollaborationRoles,8,0,0,8,0,11,0,0,0,-1,0,0,,
-Box.V2.Models,BoxCollaborationUserRequest,0,0,1,0,0,8,0,0,1,-1,0,1,,Box.V2.Managers.BoxCollaborationsManager
+Box.V2.Models,BoxCollaborationUserRequest,0,0,1,0,0,8,0,0,1,-1,0,1,,Box.V2.Models.BoxCollaborationRequest
 Box.V2.Models,BoxCollectionsRequest,0,0,1,0,0,11,0,0,0,-1,0,1,,Box.V2.Managers.BoxCollectionsManager
 Box.V2.Models,BoxCommentRequest,0,0,3,0,0,19,0,0,0,-1,0,1,,Box.V2.Managers.BoxCommentsManager
-Box.V2.Models,BoxDeleteSharedLinkRequest,0,0,1,0,0,8,0,0,1,-1,0,0,,
-Box.V2.Models,BoxEmailAliasRequest,1,0,1,0,0,6,0,0,0,-1,0,0,,
-Box.V2.Models,BoxEmailRequest,0,0,1,0,0,5,0,0,0,-1,0,0,,
+Box.V2.Models,BoxDeleteSharedLinkRequest,0,0,1,0,0,8,0,0,1,-1,0,3,,Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Models,BoxEmailAliasRequest,1,0,1,0,0,6,0,0,0,-1,0,1,,Box.V2.Managers.BoxUsersManager
+Box.V2.Models,BoxEmailRequest,0,0,1,0,0,5,0,0,0,-1,0,1,,Box.V2.Models.BoxFolderRequest
 Box.V2.Models,BoxFileLockRequest,0,0,1,0,0,8,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxFileRequest,0,0,2,0,0,16,0,0,1,-1,0,1,,Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxFileUploadSessionRequest,0,0,3,0,0,18,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxFolderRequest,0,0,3,0,0,21,0,0,1,-1,0,1,,Box.V2.Managers.BoxFoldersManager
-Box.V2.Models,BoxItemRequest,0,0,5,0,0,28,0,7,1,-1,0,0,,
+Box.V2.Models,BoxFolderRequest,0,0,4,0,0,26,0,0,1,-1,0,1,,Box.V2.Managers.BoxFoldersManager
+Box.V2.Models,BoxItemRequest,0,0,5,0,0,28,0,7,1,-1,0,10,,Box.V2.Models.BoxFileRequest' Box.V2.Models.BoxWebhookRequest' Box.V2.Models.BoxFolderRequest' Box.V2.Models.BoxTermsOfServicesRequest' Box.V2.Models.BoxTermsOfServiceUserStatusesRequest' Box.V2.Models.BoxWebLinkRequest' Box.V2.Models.BoxPreflightCheckRequest' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxLegalHoldPolicyAssignmentRequest,0,0,2,0,0,13,0,0,0,-1,0,1,,Box.V2.Managers.BoxLegalHoldPoliciesManager
 Box.V2.Models,BoxLegalHoldPolicyRequest,6,0,6,6,0,39,0,0,0,-1,0,1,,Box.V2.Managers.BoxLegalHoldPoliciesManager
-Box.V2.Models,BoxPermissionsRequest,0,0,2,0,0,16,0,0,0,-1,0,0,,
-Box.V2.Models,BoxPermissionType,0,0,0,0,0,5,0,0,0,-1,0,0,,
+Box.V2.Models,BoxPermissionsRequest,0,0,2,0,0,16,0,0,0,-1,0,1,,Box.V2.Models.BoxSharedLinkRequest
+Box.V2.Models,BoxPermissionType,0,0,0,0,0,5,0,0,0,-1,0,1,,Box.V2.Models.BoxPermissionsRequest
 Box.V2.Models,BoxPreflightCheckRequest,0,0,1,0,0,8,0,0,2,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxPromoteVersionRequest,0,0,2,0,0,19,0,0,0,-1,0,0,,
+Box.V2.Models,BoxPromoteVersionRequest,0,0,2,0,0,19,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxRepresentationRequest,0,0,5,0,0,29,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Models,BoxRequestEntity,0,0,2,0,0,14,0,6,0,-1,0,9,,Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebLinksManager
-Box.V2.Models,BoxType,0,0,0,0,0,13,0,0,0,-1,0,0,,
+Box.V2.Models,BoxRequestEntity,0,0,2,0,0,14,0,6,0,-1,0,15,,Box.V2.Models.BoxCommentRequest' Box.V2.Models.BoxCollectionsRequest' Box.V2.Models.BoxCollaborationUserRequest' Box.V2.Models.BoxLegalHoldPolicyAssignmentRequest' Box.V2.Models.BoxDeleteSharedLinkRequest' Box.V2.Models.BoxFolderRequest' Box.V2.Models.Request.BoxRetentionPolicyAssignmentRequest' Box.V2.Models.BoxItemRequest' Box.V2.Models.BoxCollaborationRequest' Box.V2.Models.Request.BoxRetentionPolicyRequest' Box.V2.Models.BoxTaskCreateRequest' Box.V2.Models.BoxWebhookRequest' Box.V2.Models.BoxUserRequest' Box.V2.Models.BoxUserInviteRequest' Box.V2.Models.Request.BoxGroupMembershipRequest
+Box.V2.Models,BoxType,0,0,0,0,0,14,0,0,0,-1,0,2,,Box.V2.Models.BoxRequestEntity' Box.V2.Managers.BoxTasksManager
 Box.V2.Models,BoxCollaborationRole,0,0,0,0,0,10,0,0,0,-1,0,1,,Box.V2.Models.BoxRequestEnums
-Box.V2.Models,BoxRequestEnums,0,1,0,0,1,25,2,0,0,-1,1,0,Box.V2.Models.BoxCollaborationRole,
-Box.V2.Models,BoxSharedLinkRequest,0,0,4,0,0,24,0,0,0,-1,0,2,,Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager
+Box.V2.Models,BoxRequestEnums,0,1,0,0,1,25,8,0,0,-1,0,0,,
+Box.V2.Models,BoxSharedLinkRequest,2,1,4,0,1,41,1,0,0,0,0,5,,Box.V2.Models.BoxDeleteSharedLinkRequest' Box.V2.Models.BoxItemRequest' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxTaskAssignmentRequest,0,0,2,0,0,13,0,0,0,-1,0,1,,Box.V2.Managers.BoxTasksManager
 Box.V2.Models,BoxTaskAssignmentUpdateRequest,0,0,3,0,0,19,0,0,0,-1,0,1,,Box.V2.Managers.BoxTasksManager
 Box.V2.Models,BoxTaskCreateRequest,0,0,4,0,0,29,0,0,0,-1,0,1,,Box.V2.Managers.BoxTasksManager
@@ -202,33 +219,34 @@ Box.V2.Models,BoxTaskUpdateRequest,0,0,4,0,0,23,0,0,0,-1,0,1,,Box.V2.Managers.Bo
 Box.V2.Models,BoxTermsOfServicesRequest,0,0,3,0,0,18,0,0,2,-1,0,1,,Box.V2.Managers.BoxTermsOfServiceManager
 Box.V2.Models,BoxTermsOfServiceUserStatusesRequest,0,0,3,0,0,18,0,0,2,-1,0,1,,Box.V2.Managers.BoxTermsOfServiceManager
 Box.V2.Models,BoxUserInviteRequest,0,0,2,0,0,13,0,0,1,-1,0,1,,Box.V2.Managers.BoxUsersManager
-Box.V2.Models,BoxUserRequest,0,0,18,0,0,93,0,0,1,-1,0,1,,Box.V2.Managers.BoxUsersManager
-Box.V2.Models,BoxWatermarkRequest,2,0,1,1,0,20,0,0,0,-1,0,0,,
+Box.V2.Models,BoxUserRequest,0,0,19,0,0,98,0,0,1,-1,0,2,,Box.V2.Models.Request.BoxMoveUserFolderRequest' Box.V2.Managers.BoxUsersManager
+Box.V2.Models,BoxWatermarkRequest,2,0,1,1,0,20,0,0,0,-1,0,3,,Box.V2.Models.BoxApplyWatermarkRequest' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxFilesManager
 Box.V2.Models,BoxWebhookRequest,0,0,3,0,0,18,0,0,2,-1,0,1,,Box.V2.Managers.BoxWebhooksManager
 Box.V2.Models,BoxWebLinkRequest,0,0,1,0,0,8,0,0,2,-1,0,1,,Box.V2.Managers.BoxWebLinksManager
-Box.V2.Models.Request,BoxAssignmentRequest,0,0,2,0,0,13,0,0,0,-1,0,1,,Box.V2.Managers.BoxTasksManager
+Box.V2.Models.Request,BoxAssignmentRequest,0,0,2,0,0,13,0,0,0,-1,0,1,,Box.V2.Models.BoxTaskAssignmentRequest
 Box.V2.Models.Request,BoxFileVersionRetentionRequest,0,1,8,0,1,41,1,0,0,-1,0,0,,
 Box.V2.Models.Request,BoxGroupMembershipRequest,0,0,3,0,0,18,0,0,0,-1,0,1,,Box.V2.Managers.BoxGroupsManager
-Box.V2.Models.Request,BoxGroupRequest,0,0,4,0,0,23,0,0,0,-1,0,1,,Box.V2.Managers.BoxGroupsManager
-Box.V2.Models.Request,BoxMetadataFilterRequest,0,0,3,0,0,18,0,0,0,-1,0,0,,
-Box.V2.Models.Request,BoxMoveUserFolderRequest,1,0,1,1,0,6,0,0,0,-1,0,0,,
-Box.V2.Models.Request,BoxRetentionPolicyAssignmentRequest,0,0,2,0,0,13,0,0,0,-1,0,1,,Box.V2.Managers.BoxRetentionPoliciesManager
-Box.V2.Models.Request,BoxRetentionPolicyRequest,0,0,5,0,0,28,0,0,0,-1,0,1,,Box.V2.Managers.BoxRetentionPoliciesManager
-Box.V2.Models.Request,BoxTaskRequest,0,0,2,0,0,19,0,0,0,-1,0,1,,Box.V2.Managers.BoxTasksManager
-Box.V2.Plugins,BoxResourcePlugins,2,2,0,0,2,44,3,0,0,0,1,1,Box.V2.Plugins.ResourceBuilder,Box.V2.BoxClient
+Box.V2.Models.Request,BoxGroupRequest,0,0,7,0,0,38,0,0,0,-1,0,2,,Box.V2.Models.Request.BoxGroupMembershipRequest' Box.V2.Managers.BoxGroupsManager
+Box.V2.Models.Request,BoxMetadataFilterRequest,0,0,3,0,0,18,0,0,0,-1,0,1,,Box.V2.Managers.BoxSearchManager
+Box.V2.Models.Request,BoxMoveUserFolderRequest,1,0,1,1,0,6,0,0,0,-1,0,1,,Box.V2.Managers.BoxUsersManager
+Box.V2.Models.Request,BoxRetentionPolicyAssignmentRequest,0,0,3,0,0,18,0,0,0,-1,0,1,,Box.V2.Managers.BoxRetentionPoliciesManager
+Box.V2.Models.Request,BoxRetentionPolicyRequest,0,0,8,0,0,43,0,0,0,-1,0,1,,Box.V2.Managers.BoxRetentionPoliciesManager
+Box.V2.Models.Request,BoxTaskRequest,0,0,2,0,0,19,0,0,0,-1,0,1,,Box.V2.Models.BoxTaskAssignmentRequest
+Box.V2.Plugins,BoxResourcePlugins,2,2,0,0,2,44,3,0,0,0,0,1,,Box.V2.BoxClient
 Box.V2.Plugins,ResourceBuilder,2,2,1,0,2,21,2,0,0,0,0,1,,Box.V2.Plugins.BoxResourcePlugins
 Box.V2.Plugins.Managers,IBoxMetadataManager,0,0,0,0,0,3,0,0,1,-1,0,0,,
-Box.V2.Request,HttpRequestHandler,1,7,0,0,1,274,21,0,1,0.29,11,2,Box.V2.IBoxRequest' Box.V2.Config.RequestParameters' Box.V2.Config.Constants' Box.V2.ResponseStatus' Box.V2.BoxMultiPartRequest' Box.V2.BoxBinaryRequest' Box.V2.Request.ClientFactory' Box.V2.BoxFilePart' Box.V2.RequestMethod' Box.V2.BoxFileFormPart' Box.V2.BoxStringFormPart,Box.V2.Auth.Token.TokenExchange' Box.V2.JWTAuth.BoxJWTAuth
-Box.V2.Request,ClientFactory,3,2,2,0,1,34,2,0,0,0,0,1,,Box.V2.Request.HttpRequestHandler
-Box.V2.Request,IRequestHandler,0,1,0,0,0,11,1,1,0,-1,1,2,Box.V2.IBoxRequest,Box.V2.BoxClient' Box.V2.Services.BoxService
-Box.V2.Services,BoxService,3,3,0,0,3,46,3,0,1,0,2,2,Box.V2.Request.IRequestHandler' Box.V2.IBoxRequest,Box.V2.Auth.Token.TokenExchange' Box.V2.JWTAuth.BoxJWTAuth
-Box.V2.Services,IBoxService,0,2,0,0,0,19,2,1,0,-1,1,23,Box.V2.IBoxRequest,Box.V2.Auth.AuthRepository' Box.V2.BoxClient' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.Managers.BoxFilesManager' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxWebLinksManager
-Box.V2.Utility,AssemblyInfo,5,0,0,5,0,8,0,0,0,-1,0,0,,
+Box.V2.Request,HttpRequestHandler,2,8,0,0,2,305,33,0,1,0.38,0,3,,Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Auth.Token.TokenExchange' Box.V2.BoxClient
+Box.V2.Request,ClientFactory,3,2,3,0,1,55,4,0,0,0,0,1,,Box.V2.Request.HttpRequestHandler
+Box.V2.Request,IRequestHandler,0,1,0,0,0,11,1,1,0,-1,0,3,,Box.V2.Services.BoxService' Box.V2.BoxClient' Box.V2.Request.HttpRequestHandler
+Box.V2.Services,BoxService,3,3,0,0,3,46,3,0,1,0,0,3,,Box.V2.JWTAuth.BoxJWTAuth' Box.V2.Auth.Token.TokenExchange' Box.V2.BoxClient
+Box.V2.Services,IBoxService,0,2,0,0,0,19,2,1,0,-1,0,27,,Box.V2.Services.BoxService' Box.V2.Managers.BoxCollectionsManager' Box.V2.Managers.BoxCommentsManager' Box.V2.Managers.BoxCollaborationsManager' Box.V2.Managers.BoxDevicePinManager' Box.V2.Managers.BoxEventsManager' Box.V2.JWTAuth.BoxJWTAuth' Box.V2.BoxClient' Box.V2.Auth.AuthRepository' Box.V2.Managers.BoxFoldersManager' Box.V2.Managers.BoxRecentItemsManager' Box.V2.Managers.BoxWebLinksManager' Box.V2.Managers.BoxMetadataCascadePolicyManager' Box.V2.Managers.BoxSharedItemsManager' Box.V2.Managers.BoxCollaborationWhitelistManager' Box.V2.Managers.BoxGroupsManager' Box.V2.Managers.BoxRetentionPoliciesManager' Box.V2.Managers.BoxMetadataManager' Box.V2.Managers.BoxSearchManager' Box.V2.Managers.BoxTermsOfServiceManager' Box.V2.Managers.BoxResourceManager' Box.V2.Managers.BoxWebhooksManager' Box.V2.Managers.BoxStoragePoliciesManager' Box.V2.Managers.BoxTasksManager' Box.V2.Managers.BoxUsersManager' Box.V2.Managers.BoxLegalHoldPoliciesManager' Box.V2.Managers.BoxFilesManager
+Box.V2.Utility,AssemblyInfo,5,0,0,5,0,8,0,0,0,-1,0,2,,Box.V2.Managers.BoxResourceManager' Box.V2.Config.BoxConfig
 Box.V2.Utility,BoxProgress,1,0,0,1,0,7,0,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
-Box.V2.Utility,CrossPlatform,0,2,0,0,2,31,2,0,0,-1,0,2,,Box.V2.Converter.JsonCreationConverter<T>' Box.V2.Utility.Retry
-Box.V2.Utility,Helper,0,4,0,0,4,53,4,0,0,-1,0,3,,Box.V2.Auth.Token.ActorTokenBuilder' Box.V2.Extensions.UriExtensions' Box.V2.Managers.BoxFilesManager
-Box.V2.Utility,LRUCache<K;V>,8,10,3,0,5,256,22,0,0,0.2,1,0,Box.V2.Utility.CacheNode,
+Box.V2.Utility,CrossPlatform,0,2,0,0,2,31,2,0,0,-1,0,2,,Box.V2.Utility.Retry' Box.V2.Converter.JsonCreationConverter<T>
+Box.V2.Utility,ExponentialBackoff,0,1,0,0,1,15,1,0,0,-1,0,1,,Box.V2.Request.HttpRequestHandler
+Box.V2.Utility,Helper,0,4,0,0,4,53,4,0,0,-1,0,3,,Box.V2.Extensions.UriExtensions' Box.V2.Auth.Token.ActorTokenBuilder' Box.V2.Managers.BoxFilesManager
+Box.V2.Utility,LRUCache<K;V>,8,10,3,0,5,256,25,0,0,0.2,0,1,,Box.V2.Managers.BoxEventsManager
 Box.V2.Utility,CacheNode,0,0,5,0,0,8,0,0,0,-1,0,1,,Box.V2.Utility.LRUCache<K;V>
-Box.V2.Utility,Retry,0,9,0,0,4,195,14,0,0,-1,1,1,Box.V2.Utility.CrossPlatform,Box.V2.Managers.BoxFilesManager
-Box.V2.Utility,SimpleRetryArgumentException,0,4,0,0,4,32,4,0,0,-1,0,0,,
+Box.V2.Utility,Retry,0,9,0,0,4,195,14,0,0,-1,0,1,,Box.V2.Managers.BoxFilesManager
+Box.V2.Utility,SimpleRetryArgumentException,0,4,0,0,4,32,4,0,0,-1,0,2,,Box.V2.Utility.Retry' Box.V2.Utility.SimpleRetryArgumentException
 Box.V2.BoxWrappers,IBoxResponse,0,0,0,0,0,3,0,0,0,-1,0,0,,

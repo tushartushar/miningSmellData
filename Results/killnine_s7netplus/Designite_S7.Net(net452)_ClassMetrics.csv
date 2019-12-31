@@ -1,0 +1,43 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+S7.Net,TcpClientMixins,0,0,0,0,0,13,0,0,0,-1,0,0,,
+S7.Net,Conversion,0,12,0,0,12,228,37,0,0,-1,3,0,S7.Net.Types.Double' S7.Net.Types.DWord' S7.Net.Types.Single,
+S7.Net,COTP,0,0,0,0,0,121,0,0,0,-1,2,0,S7.Net.TPDU' S7.Net.TPKT,
+S7.Net,TPDU,5,4,1,5,4,63,8,0,0,0.75,0,1,,S7.Net.COTP
+S7.Net,TSDU,0,2,0,0,2,49,6,0,0,-1,0,0,,
+S7.Net,CpuType,0,0,0,0,0,27,0,0,0,-1,0,2,,S7.Net.Plc' S7.Net.Protocol.ConnectionRequest
+S7.Net,ErrorCode,0,0,0,0,0,39,0,0,0,-1,0,2,,S7.Net.Types.StringEx' S7.Net.PlcException
+S7.Net,DataType,0,0,0,0,0,27,0,0,0,-1,0,2,,S7.Net.Types.DataItem' S7.Net.PLCAddress
+S7.Net,VarType,0,0,0,0,0,51,0,0,0,-1,0,4,,S7.Net.Protocol.Serialization' S7.Net.Types.StringEx' S7.Net.Types.DataItem' S7.Net.PLCAddress
+S7.Net,InvalidDataException,0,3,3,0,1,33,4,0,0,-1,0,0,,
+S7.Net,Plc,6,59,10,0,39,1325,148,0,0,0.05,2,0,S7.Net.CpuType' S7.Net.Types.DataItem,
+S7.Net,PLCAddress,5,2,5,0,2,182,25,0,0,0,3,1,S7.Net.DataType' S7.Net.VarType' S7.Net.InvalidAddressException,S7.Net.Types.DataItem
+S7.Net,PlcException,0,5,1,0,4,28,5,0,0,-1,1,1,S7.Net.ErrorCode,S7.Net.Types.StringEx
+S7.Net,WrongNumberOfBytesException,0,4,0,0,3,17,4,0,0,-1,0,0,,
+S7.Net,InvalidAddressException,0,4,0,0,3,17,4,0,0,-1,0,1,,S7.Net.PLCAddress
+S7.Net,InvalidVariableTypeException,0,4,0,0,3,17,4,0,0,-1,0,1,,S7.Net.Protocol.Serialization
+S7.Net,TPKTInvalidException,0,4,0,0,3,17,4,0,0,-1,0,1,,S7.Net.TPKT
+S7.Net,TPKT,4,3,0,4,3,64,9,0,0,0,1,1,S7.Net.TPKTInvalidException,S7.Net.COTP
+S7.Net.Protocol,ConnectionRequest,0,1,0,0,1,63,5,0,0,-1,1,0,S7.Net.CpuType,
+S7.Net.Protocol,S7WriteMultiple,0,2,0,0,2,125,14,0,0,-1,6,0,S7.Net.Protocol.Header' S7.Net.Protocol.Offsets' S7.Net.Protocol.Parameter' S7.Net.Protocol.Serialization' S7.Net.Types.ByteArray' S7.Net.Types.DataItem,
+S7.Net.Protocol,Header,0,0,1,0,0,23,0,0,0,-1,0,1,,S7.Net.Protocol.S7WriteMultiple
+S7.Net.Protocol,Offsets,9,0,0,9,0,14,0,0,0,-1,0,1,,S7.Net.Protocol.S7WriteMultiple
+S7.Net.Protocol,Parameter,0,0,1,0,0,22,0,0,0,-1,0,1,,S7.Net.Protocol.S7WriteMultiple
+S7.Net.Protocol,Serialization,0,5,0,0,5,76,24,0,0,-1,14,1,S7.Net.VarType' S7.Net.InvalidVariableTypeException' S7.Net.Types.Byte' S7.Net.Types.ByteArray' S7.Net.Types.DataItem' S7.Net.Types.DateTime' S7.Net.Types.DInt' S7.Net.Types.Double' S7.Net.Types.DWord' S7.Net.Types.Int' S7.Net.Types.Single' S7.Net.Types.String' S7.Net.Types.StringEx' S7.Net.Types.Word,S7.Net.Protocol.S7WriteMultiple
+S7.Net.Types,Bit,0,3,0,0,3,30,5,0,0,-1,0,0,,
+S7.Net.Types,Boolean,0,3,0,0,3,24,3,0,0,-1,0,0,,
+S7.Net.Types,Byte,0,2,0,0,2,25,3,0,0,-1,0,1,,S7.Net.Protocol.Serialization
+S7.Net.Types,ByteArray,1,7,2,0,7,44,7,0,0,0,0,9,,S7.Net.Protocol.Serialization' S7.Net.Types.Double' S7.Net.Types.DWord' S7.Net.Types.Counter' S7.Net.Types.DInt' S7.Net.Protocol.S7WriteMultiple' S7.Net.Types.Single' S7.Net.Types.Timer' S7.Net.Types.Word
+S7.Net.Types,Class,0,7,0,0,3,304,55,0,0,-1,6,0,S7.Net.Types.DInt' S7.Net.Types.Double' S7.Net.Types.DWord' S7.Net.Types.Int' S7.Net.Types.Single' S7.Net.Types.Word,
+S7.Net.Types,Counter,0,4,0,0,4,49,7,0,0,-1,1,0,S7.Net.Types.ByteArray,
+S7.Net.Types,DataItem,0,3,7,0,3,71,4,0,0,-1,3,3,S7.Net.DataType' S7.Net.VarType' S7.Net.PLCAddress,S7.Net.Protocol.Serialization' S7.Net.Protocol.S7WriteMultiple' S7.Net.Plc
+S7.Net.Types,DateTime,2,5,0,2,4,125,11,0,0,0.4,0,1,,S7.Net.Protocol.Serialization
+S7.Net.Types,DInt,0,4,0,0,4,49,7,0,0,-1,1,5,S7.Net.Types.ByteArray,S7.Net.Types.Double' S7.Net.Types.Single' S7.Net.Protocol.Serialization' S7.Net.Types.Class' S7.Net.Types.Struct
+S7.Net.Types,Double,0,6,0,0,6,73,11,0,0,-1,3,4,S7.Net.Types.ByteArray' S7.Net.Types.DInt' S7.Net.Types.DWord,S7.Net.Protocol.Serialization' S7.Net.Conversion' S7.Net.Types.Class' S7.Net.Types.Struct
+S7.Net.Types,DWord,0,5,0,0,5,55,7,0,0,-1,1,6,S7.Net.Types.ByteArray,S7.Net.Types.Double' S7.Net.Types.Single' S7.Net.Protocol.Serialization' S7.Net.Conversion' S7.Net.Types.Class' S7.Net.Types.Struct
+S7.Net.Types,Int,0,5,0,0,5,69,9,0,0,-1,0,3,,S7.Net.Protocol.Serialization' S7.Net.Types.Struct' S7.Net.Types.Class
+S7.Net.Types,Single,0,6,0,0,6,73,11,0,0,-1,3,4,S7.Net.Types.ByteArray' S7.Net.Types.DInt' S7.Net.Types.DWord,S7.Net.Conversion' S7.Net.Protocol.Serialization' S7.Net.Types.Struct' S7.Net.Types.Class
+S7.Net.Types,String,0,2,0,0,2,27,4,0,0,-1,0,1,,S7.Net.Protocol.Serialization
+S7.Net.Types,StringEx,0,2,0,0,2,42,6,0,0,-1,3,1,S7.Net.ErrorCode' S7.Net.VarType' S7.Net.PlcException,S7.Net.Protocol.Serialization
+S7.Net.Types,Struct,0,3,0,0,3,249,43,0,0,-1,6,0,S7.Net.Types.DInt' S7.Net.Types.Double' S7.Net.Types.DWord' S7.Net.Types.Int' S7.Net.Types.Single' S7.Net.Types.Word,
+S7.Net.Types,Timer,0,4,0,0,4,64,9,0,0,-1,1,0,S7.Net.Types.ByteArray,
+S7.Net.Types,Word,0,5,0,0,5,54,8,0,0,-1,1,3,S7.Net.Types.ByteArray,S7.Net.Protocol.Serialization' S7.Net.Types.Class' S7.Net.Types.Struct

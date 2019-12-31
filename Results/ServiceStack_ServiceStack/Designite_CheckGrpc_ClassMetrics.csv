@@ -1,0 +1,14 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+CheckGrpc.ServiceModel,Hello,0,0,1,0,0,8,0,0,1,-1,1,1,CheckGrpc.ServiceModel.HelloResponse,CheckGrpc.ServiceInterface.MyServices
+CheckGrpc.ServiceModel,HelloResponse,0,0,2,0,0,9,0,0,0,-1,0,2,,CheckGrpc.ServiceModel.Hello' CheckGrpc.ServiceInterface.MyServices
+CheckGrpc.ServiceModel,HelloAllTypes,0,0,3,0,0,10,0,0,1,-1,3,1,CheckGrpc.ServiceModel.HelloAllTypesResponse' CheckGrpc.ServiceModel.AllTypes' CheckGrpc.ServiceModel.AllCollectionTypes,CheckGrpc.ServiceInterface.MyServices
+CheckGrpc.ServiceModel,HelloAllTypesResponse,0,0,4,0,0,12,0,0,0,-1,2,2,CheckGrpc.ServiceModel.AllTypes' CheckGrpc.ServiceModel.AllCollectionTypes,CheckGrpc.ServiceModel.HelloAllTypes' CheckGrpc.ServiceInterface.MyServices
+CheckGrpc.ServiceModel,AllTypes,0,0,28,0,0,60,0,0,1,-1,2,3,CheckGrpc.ServiceModel.SubType' CheckGrpc.ServiceModel.Point,CheckGrpc.ServiceModel.HelloAllTypes' CheckGrpc.ServiceModel.HelloAllTypesResponse' CheckGrpc.ServiceInterface.MyServices
+CheckGrpc.ServiceModel,AllCollectionTypes,0,0,10,0,0,28,0,0,0,-1,1,2,CheckGrpc.ServiceModel.Poco,CheckGrpc.ServiceModel.HelloAllTypes' CheckGrpc.ServiceModel.HelloAllTypesResponse
+CheckGrpc.ServiceModel,Poco,0,0,1,0,0,6,0,0,0,-1,0,1,,CheckGrpc.ServiceModel.AllCollectionTypes
+CheckGrpc.ServiceModel,SubType,0,0,2,0,0,8,0,0,0,-1,0,1,,CheckGrpc.ServiceModel.AllTypes
+CheckGrpc.ServiceModel,Point,0,3,2,0,3,23,3,0,0,-1,0,1,,CheckGrpc.ServiceModel.AllTypes
+CheckGrpc.ServiceInterface,MyServices,0,3,0,0,3,20,3,0,3,-1,5,1,CheckGrpc.ServiceModel.Hello' CheckGrpc.ServiceModel.HelloResponse' CheckGrpc.ServiceModel.HelloAllTypes' CheckGrpc.ServiceModel.HelloAllTypesResponse' CheckGrpc.ServiceModel.AllTypes,CheckGrpc.AppHost
+CheckGrpc,Program,0,2,0,0,2,12,2,0,0,-1,1,0,CheckGrpc.Startup,
+CheckGrpc,Startup,0,2,0,0,2,21,3,0,0,-1,1,1,CheckGrpc.AppHost,CheckGrpc.Program
+CheckGrpc,AppHost,0,2,0,0,2,18,2,0,2,-1,1,1,CheckGrpc.ServiceInterface.MyServices,CheckGrpc.Startup

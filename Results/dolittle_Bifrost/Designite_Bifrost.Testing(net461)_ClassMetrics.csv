@@ -1,0 +1,31 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Bifrost.Testing,CommandScenario<T>,20,12,3,0,11,174,14,0,0,0.17,1,0,Bifrost.Testing.Exceptions.CommandScenarioNotRunException,
+Bifrost.Testing,TestExtensions,0,3,0,0,3,17,3,0,0,-1,1,0,Bifrost.Testing.Fakes.Configuration.TestInstancesOf<T>,
+Bifrost.Testing.Exceptions,CommandScenarioNotRunException,0,3,0,0,3,16,3,0,0,-1,0,1,,Bifrost.Testing.CommandScenario<T>
+Bifrost.Testing.Fakes.Commands,AnotherSimpleCommand,0,0,3,0,0,8,0,0,2,-1,0,0,,
+Bifrost.Testing.Fakes.Commands,SimpleCommand,0,0,3,0,0,8,0,0,2,-1,0,1,,Bifrost.Testing.Fakes.Security.SecurityDescriptor
+Bifrost.SomeRandomNamespace,CommandInADifferentNamespace,0,0,1,0,0,4,0,0,2,-1,0,0,,
+Bifrost.Testing.Fakes.Concepts,ConceptAsGuid,0,0,0,0,0,7,0,0,0,-1,0,1,,Bifrost.Testing.Fakes.Entities.SimpleEntity
+Bifrost.Testing.Fakes.Concepts,ConceptAsLong,0,0,0,0,0,7,0,0,0,-1,0,1,,Bifrost.Testing.Fakes.Entities.AnotherSimpleEntity
+Bifrost.Testing.Fakes.Concepts,ConceptAsString,0,0,0,0,0,7,0,0,0,-1,0,1,,Bifrost.Testing.Fakes.Entities.YetAnotherSimpleEntity
+Bifrost.Testing.Fakes.Configuration,EntityContextConfiguration,0,0,2,0,0,6,0,0,1,-1,0,0,,
+Bifrost.Testing.Fakes.Configuration,TestInstancesOf<T>,1,4,0,0,3,24,4,0,1,0.5,0,1,,Bifrost.Testing.TestExtensions
+Bifrost.Testing.Fakes.Domain,AnotherStatefulAggregatedRoot,0,3,4,0,1,24,3,0,2,-1,2,0,Bifrost.Testing.Fakes.Events.AnotherSimpleEvent' Bifrost.Testing.Fakes.Events.SimpleEventWithOneProperty,
+Bifrost.Testing.Fakes.Domain,StatefulAggregatedRoot,2,4,2,2,3,30,4,0,2,1,1,0,Bifrost.Testing.Fakes.Events.SimpleEvent,
+Bifrost.Testing.Fakes.Domain,StatelessAggregatedRoot,0,1,0,0,1,4,1,0,2,-1,0,0,,
+Bifrost.Testing.Fakes.Domain,StatelessAggregatedRootWithOneMethod,0,4,1,0,3,23,4,0,2,-1,0,0,,
+Bifrost.Testing.Fakes.Entities,AnotherSimpleEntity,1,0,2,1,0,6,0,0,0,-1,1,0,Bifrost.Testing.Fakes.Concepts.ConceptAsLong,
+Bifrost.Testing.Fakes.Entities,EntityContext<T>,3,12,1,1,12,74,13,0,1,0.58,0,0,,
+Bifrost.Testing.Fakes.Entities,EntityContextConnection,1,1,0,0,1,10,1,0,1,0,0,0,,
+Bifrost.Testing.Fakes.Entities,SimpleEntity,0,0,2,0,0,5,0,0,0,-1,1,0,Bifrost.Testing.Fakes.Concepts.ConceptAsGuid,
+Bifrost.Testing.Fakes.Entities,YetAnotherSimpleEntity,0,0,2,0,0,5,0,0,0,-1,1,0,Bifrost.Testing.Fakes.Concepts.ConceptAsString,
+Bifrost.Testing.Fakes.Events,AnotherSimpleEvent,0,1,1,0,1,7,1,0,2,-1,0,1,,Bifrost.Testing.Fakes.Domain.AnotherStatefulAggregatedRoot
+Bifrost.Testing.Fakes.Events,SimpleEvent,0,1,1,0,1,9,1,0,2,-1,0,3,,Bifrost.Testing.Fakes.Domain.StatefulAggregatedRoot' Bifrost.Testing.Fakes.Events.v2.SimpleEvent' Bifrost.Testing.Fakes.Events.SimpleEventV1ToV2Migrator
+Bifrost.Testing.Fakes.Events,SimpleEventV1ToV2Migrator,0,1,0,0,1,8,1,0,2,-1,2,0,Bifrost.Testing.Fakes.Events.SimpleEvent' Bifrost.Testing.Fakes.Events.v2.SimpleEvent,
+Bifrost.Testing.Fakes.Events,SimpleEventV2ToV3Migrator,0,1,0,0,1,8,1,0,2,-1,2,0,Bifrost.Testing.Fakes.Events.v2.SimpleEvent' Bifrost.Testing.Fakes.Events.v3.SimpleEvent,
+Bifrost.Testing.Fakes.Events,SimpleEventWithDefaultConstructor,0,0,1,0,0,4,0,0,2,-1,0,0,,
+Bifrost.Testing.Fakes.Events,SimpleEventWithOneProperty,0,2,1,0,2,7,2,0,2,-1,0,1,,Bifrost.Testing.Fakes.Domain.AnotherStatefulAggregatedRoot
+Bifrost.Testing.Fakes.Events.v2,SimpleEvent,1,1,1,1,1,12,1,0,1,0,1,3,Bifrost.Testing.Fakes.Events.SimpleEvent,Bifrost.Testing.Fakes.Events.v3.SimpleEvent' Bifrost.Testing.Fakes.Events.SimpleEventV1ToV2Migrator' Bifrost.Testing.Fakes.Events.SimpleEventV2ToV3Migrator
+Bifrost.Testing.Fakes.Events.v3,SimpleEvent,1,1,1,1,1,11,1,0,1,0,1,1,Bifrost.Testing.Fakes.Events.v2.SimpleEvent,Bifrost.Testing.Fakes.Events.SimpleEventV2ToV3Migrator
+Bifrost.Testing.Fakes.Security,MySecurityAction,2,4,2,0,4,28,4,0,1,0.5,0,0,,
+Bifrost.Testing.Fakes.Security,SecurityDescriptor,3,1,0,3,1,14,1,0,2,0,1,0,Bifrost.Testing.Fakes.Commands.SimpleCommand,

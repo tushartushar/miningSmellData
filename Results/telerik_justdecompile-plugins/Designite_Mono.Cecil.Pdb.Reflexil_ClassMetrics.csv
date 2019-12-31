@@ -1,5 +1,5 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Microsoft.Cci.Pdb,BitAccess,2,24,2,0,0,200,33,0,0,0,0,13,,Microsoft.Cci.Pdb.BitSet' Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.DbiDbgHdr' Microsoft.Cci.Pdb.DbiHeader' Microsoft.Cci.Pdb.DbiModuleInfo' Microsoft.Cci.Pdb.DbiSecCon' Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.PdbConstant' Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbFileHeader' Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbScope' Microsoft.Cci.Pdb.PdbSlot
+Microsoft.Cci.Pdb,BitAccess,2,24,2,0,0,200,33,0,0,0,0,13,,Microsoft.Cci.Pdb.PdbConstant' Microsoft.Cci.Pdb.PdbFileHeader' Microsoft.Cci.Pdb.DbiDbgHdr' Microsoft.Cci.Pdb.DbiModuleInfo' Microsoft.Cci.Pdb.DbiHeader' Microsoft.Cci.Pdb.DbiSecCon' Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.BitSet' Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.PdbSlot' Microsoft.Cci.Pdb.PdbScope' Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbFile
 Microsoft.Cci.Pdb,BitSet,2,3,1,0,0,50,4,0,0,0,1,1,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.PdbFile
 Microsoft.Cci.Pdb,FLOAT10,10,0,0,0,0,12,0,0,0,-1,0,2,,Microsoft.Cci.Pdb.LeafReal80' Microsoft.Cci.Pdb.LeafCmplx80
 Microsoft.Cci.Pdb,CV_SIGNATURE,0,0,0,0,0,7,0,0,0,-1,0,0,,
@@ -29,9 +29,9 @@ Microsoft.Cci.Pdb,CV_PMFR32_NVSA,1,0,0,0,0,3,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,CV_PMFR32_NVMA,2,0,0,0,0,4,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,CV_PMFR32_VBASE,4,0,0,0,0,6,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,LeafModifier,2,0,0,0,0,5,0,0,0,-1,1,0,Microsoft.Cci.Pdb.CV_modifier,
-Microsoft.Cci.Pdb,LeafPointerAttr,0,0,0,0,0,10,0,0,0,-1,0,1,,Microsoft.Cci.Pdb.LeafPointerBody
-Microsoft.Cci.Pdb,LeafPointer,0,0,0,0,0,21,0,0,0,-1,0,0,,
-Microsoft.Cci.Pdb,LeafPointerBody,2,0,0,0,0,5,0,0,0,-1,1,0,Microsoft.Cci.Pdb.LeafPointerAttr,
+Microsoft.Cci.Pdb,LeafPointerAttr,0,0,0,0,0,10,0,0,0,-1,0,1,,Microsoft.Cci.Pdb.LeafPointer
+Microsoft.Cci.Pdb,LeafPointer,0,0,0,0,0,21,0,0,0,-1,1,0,Microsoft.Cci.Pdb.LeafPointerAttr,
+Microsoft.Cci.Pdb,LeafPointerBody,2,0,0,0,0,5,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,LeafArray,4,0,0,0,0,7,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,LeafClass,7,0,0,0,0,10,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,LeafUnion,5,0,0,0,0,8,0,0,0,-1,0,0,,
@@ -100,7 +100,7 @@ Microsoft.Cci.Pdb,LeafNestType,3,0,0,0,0,6,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,LeafNestTypeEx,3,0,0,0,0,6,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,LeafMemberModify,3,0,0,0,0,6,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,LeafPad,1,0,0,0,0,3,0,0,0,-1,0,0,,
-Microsoft.Cci.Pdb,SYM,0,0,0,0,0,120,0,0,0,-1,0,2,,Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbScope
+Microsoft.Cci.Pdb,SYM,0,0,0,0,0,120,0,0,0,-1,0,2,,Microsoft.Cci.Pdb.PdbScope' Microsoft.Cci.Pdb.PdbFunction
 Microsoft.Cci.Pdb,CV_CFL_DATA,0,0,0,0,0,5,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,CV_CFL_CODE,0,0,0,0,0,5,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,CV_CFL_FPKG,0,0,0,0,0,5,0,0,0,-1,0,0,,
@@ -187,43 +187,43 @@ Microsoft.Cci.Pdb,FRAMEDATA_FLAGS,0,0,0,0,0,6,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,FrameData,9,0,0,0,0,11,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,XFixupData,4,0,0,0,0,6,0,0,0,-1,0,0,,
 Microsoft.Cci.Pdb,DEBUG_S_SUBSECTION,0,0,0,0,0,7,0,0,0,-1,0,1,,Microsoft.Cci.Pdb.PdbFile
-Microsoft.Cci.Pdb,DataStream,2,4,1,0,0,80,11,0,0,0.5,2,2,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.PdbReader,Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,DataStream,2,4,1,0,0,80,11,0,0,0.5,3,1,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.PdbException' Microsoft.Cci.Pdb.PdbReader,Microsoft.Cci.Pdb.MsfDirectory
 Microsoft.Cci.Pdb,DbiDbgHdr,11,1,0,0,0,26,1,0,0,0,1,1,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.PdbFile
 Microsoft.Cci.Pdb,DbiHeader,20,1,0,0,0,44,1,0,0,0,1,1,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.PdbFile
-Microsoft.Cci.Pdb,DbiModuleInfo,13,1,0,0,0,42,2,0,0,0,1,1,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.PdbFile
-Microsoft.Cci.Pdb,DbiSecCon,9,1,0,0,0,27,1,0,0,0,1,0,Microsoft.Cci.Pdb.BitAccess,
-Microsoft.Cci.Pdb,IntHashTable,7,10,0,0,0,452,23,0,0,0.2,1,1,Microsoft.Cci.Pdb.bucket,Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,DbiModuleInfo,13,1,0,0,0,42,2,0,0,0,2,1,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.DbiSecCon,Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,DbiSecCon,9,1,0,0,0,27,1,0,0,0,1,1,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.DbiModuleInfo
+Microsoft.Cci.Pdb,IntHashTable,7,10,0,0,0,452,24,0,0,0.2,1,1,Microsoft.Cci.Pdb.bucket,Microsoft.Cci.Pdb.PdbFile
 Microsoft.Cci.Pdb,bucket,3,0,0,0,0,5,0,0,0,-1,0,1,,Microsoft.Cci.Pdb.IntHashTable
-Microsoft.Cci.Pdb,MsfDirectory,1,1,0,0,0,37,4,0,0,0,4,1,Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbFileHeader' Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.PdbFile
-Microsoft.Cci.Pdb,PdbConstant,3,1,0,0,0,73,2,0,0,0,1,2,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbScope
-Microsoft.Cci.Pdb,PdbDebugException,0,1,0,0,0,5,1,0,0,-1,0,0,,
-Microsoft.Cci.Pdb,PdbException,0,1,0,0,0,5,1,0,0,-1,0,0,,
-Microsoft.Cci.Pdb,PdbFile,1,10,0,0,0,352,34,0,0,0.2,21,1,Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.BitSet' Microsoft.Cci.Pdb.IntHashTable' Microsoft.Cci.Pdb.CV_FileCheckSum' Microsoft.Cci.Pdb.PdbSource' Microsoft.Cci.Pdb.CV_LineSection' Microsoft.Cci.Pdb.CV_SourceFile' Microsoft.Cci.Pdb.PdbLines' Microsoft.Cci.Pdb.PdbLine' Microsoft.Cci.Pdb.CV_Line' Microsoft.Cci.Pdb.CV_Column' Microsoft.Cci.Pdb.DEBUG_S_SUBSECTION' Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.CV_Line_Flags' Microsoft.Cci.Pdb.PdbReader' Microsoft.Cci.Pdb.DbiModuleInfo' Microsoft.Cci.Pdb.DbiHeader' Microsoft.Cci.Pdb.DbiDbgHdr' Microsoft.Cci.Pdb.PdbFileHeader,Mono.Cecil.Pdb.PdbReader
+Microsoft.Cci.Pdb,MsfDirectory,1,1,0,0,0,37,4,0,0,0,4,1,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.PdbFileHeader' Microsoft.Cci.Pdb.PdbReader,Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,PdbConstant,3,1,0,0,0,73,14,0,0,0,1,2,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbScope
+Microsoft.Cci.Pdb,PdbDebugException,0,1,0,0,0,5,1,0,0,-1,0,2,,Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbFunction
+Microsoft.Cci.Pdb,PdbException,0,1,0,0,0,5,1,0,0,-1,0,2,,Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,PdbFile,1,10,0,0,0,352,46,0,0,0.2,22,1,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.BitSet' Microsoft.Cci.Pdb.CV_LineSection' Microsoft.Cci.Pdb.CV_SourceFile' Microsoft.Cci.Pdb.CV_Line_Flags' Microsoft.Cci.Pdb.CV_Line' Microsoft.Cci.Pdb.CV_Column' Microsoft.Cci.Pdb.CV_FileCheckSum' Microsoft.Cci.Pdb.DEBUG_S_SUBSECTION' Microsoft.Cci.Pdb.DbiDbgHdr' Microsoft.Cci.Pdb.DbiHeader' Microsoft.Cci.Pdb.DbiModuleInfo' Microsoft.Cci.Pdb.IntHashTable' Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.PdbDebugException' Microsoft.Cci.Pdb.PdbException' Microsoft.Cci.Pdb.PdbFileHeader' Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbLine' Microsoft.Cci.Pdb.PdbLines' Microsoft.Cci.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbSource,Mono.Cecil.Pdb.PdbReader
 Microsoft.Cci.Pdb,PdbFileHeader,7,1,0,0,0,64,1,0,0,0,1,2,Microsoft.Cci.Pdb.BitAccess,Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.PdbFile
-Microsoft.Cci.Pdb,PdbFunction,16,9,0,0,0,375,28,0,0,0.33,9,5,Microsoft.Cci.Pdb.PdbScope' Microsoft.Cci.Pdb.PdbSlot' Microsoft.Cci.Pdb.PdbConstant' Microsoft.Cci.Pdb.PdbLines' Microsoft.Cci.Pdb.ManProcSym' Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.SYM' Microsoft.Cci.Pdb.BlockSym32' Microsoft.Cci.Pdb.OemSymbol,Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbFunctionsByAddress' Microsoft.Cci.Pdb.PdbFunctionsByAddressAndToken' Microsoft.Cci.Pdb.PdbScope' Mono.Cecil.Pdb.PdbReader
-Microsoft.Cci.Pdb,PdbFunctionsByAddress,0,1,0,0,1,17,2,0,0,-1,1,0,Microsoft.Cci.Pdb.PdbFunction,
-Microsoft.Cci.Pdb,PdbFunctionsByAddressAndToken,0,1,0,0,1,22,2,0,0,-1,1,0,Microsoft.Cci.Pdb.PdbFunction,
-Microsoft.Cci.Pdb,PdbLine,5,1,0,0,0,14,1,0,0,0,0,3,,Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbLines' Mono.Cecil.Pdb.PdbReader
-Microsoft.Cci.Pdb,PdbLines,2,1,0,0,0,8,1,0,0,0,2,3,Microsoft.Cci.Pdb.PdbSource' Microsoft.Cci.Pdb.PdbLine,Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbFunction' Mono.Cecil.Pdb.PdbReader
-Microsoft.Cci.Pdb,PdbReader,2,4,0,0,0,20,4,0,0,0,0,3,,Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.PdbFile
-Microsoft.Cci.Pdb,PdbScope,7,2,0,0,0,91,6,0,0,0,6,2,Microsoft.Cci.Pdb.PdbConstant' Microsoft.Cci.Pdb.PdbSlot' Microsoft.Cci.Pdb.BlockSym32' Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.SYM,Microsoft.Cci.Pdb.PdbFunction' Mono.Cecil.Pdb.PdbReader
-Microsoft.Cci.Pdb,PdbSlot,3,1,0,0,0,22,1,0,0,0,2,3,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.AttrSlotSym,Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbScope' Mono.Cecil.Pdb.PdbReader
-Microsoft.Cci.Pdb,PdbSource,4,1,0,0,0,14,1,0,0,0,0,3,,Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbLines' Mono.Cecil.Pdb.PdbReader
-Microsoft.Cci,ILocalScope,0,0,2,0,0,10,0,1,0,-1,0,0,,
-Microsoft.Cci,INamespaceScope,0,0,1,0,0,6,0,0,0,-1,0,0,,
-Microsoft.Cci,IUsedNamespace,0,0,2,0,0,10,0,0,0,-1,0,0,,
-Microsoft.Cci,IName,0,0,3,0,0,22,0,0,0,-1,0,0,,
-Microsoft.Cci,PdbIteratorScope,2,1,2,0,0,14,1,0,1,0,0,0,,
-Mono.Cecil.Pdb,ISymUnmanagedDocumentWriter,0,0,0,0,0,5,0,0,0,-1,0,2,,Mono.Cecil.Pdb.SymDocumentWriter' Mono.Cecil.Pdb.SymWriter
-Mono.Cecil.Pdb,ISymUnmanagedWriter2,0,25,0,0,0,59,25,0,0,-1,0,1,,Mono.Cecil.Pdb.SymWriter
+Microsoft.Cci.Pdb,PdbFunction,16,9,0,0,0,375,46,0,0,0.33,15,3,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.SYM' Microsoft.Cci.Pdb.ManProcSym' Microsoft.Cci.Pdb.BlockSym32' Microsoft.Cci.Pdb.OemSymbol' Microsoft.Cci.Pdb.PdbConstant' Microsoft.Cci.Pdb.PdbDebugException' Microsoft.Cci.Pdb.PdbFunctionsByAddress' Microsoft.Cci.Pdb.PdbFunctionsByAddressAndToken' Microsoft.Cci.Pdb.PdbLines' Microsoft.Cci.Pdb.PdbScope' Microsoft.Cci.Pdb.PdbSlot' Microsoft.Cci.ILocalScope' Microsoft.Cci.INamespaceScope' Microsoft.Cci.PdbIteratorScope,Microsoft.Cci.Pdb.PdbScope' Mono.Cecil.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,PdbFunctionsByAddress,0,1,0,0,1,17,5,0,0,-1,0,1,,Microsoft.Cci.Pdb.PdbFunction
+Microsoft.Cci.Pdb,PdbFunctionsByAddressAndToken,0,1,0,0,1,22,7,0,0,-1,0,1,,Microsoft.Cci.Pdb.PdbFunction
+Microsoft.Cci.Pdb,PdbLine,5,1,0,0,0,14,1,0,0,0,0,3,,Mono.Cecil.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbLines' Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,PdbLines,2,1,0,0,0,8,1,0,0,0,2,3,Microsoft.Cci.Pdb.PdbLine' Microsoft.Cci.Pdb.PdbSource,Microsoft.Cci.Pdb.PdbFunction' Mono.Cecil.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,PdbReader,2,4,0,0,0,20,4,0,0,0.5,0,3,,Microsoft.Cci.Pdb.MsfDirectory' Microsoft.Cci.Pdb.DataStream' Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci.Pdb,PdbScope,7,2,0,0,0,91,10,0,0,0,6,2,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.SYM' Microsoft.Cci.Pdb.BlockSym32' Microsoft.Cci.Pdb.PdbConstant' Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbSlot,Mono.Cecil.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbFunction
+Microsoft.Cci.Pdb,PdbSlot,3,1,0,0,0,22,1,0,0,0,2,3,Microsoft.Cci.Pdb.BitAccess' Microsoft.Cci.Pdb.AttrSlotSym,Mono.Cecil.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbScope
+Microsoft.Cci.Pdb,PdbSource,4,1,0,0,0,14,1,0,0,0,0,3,,Microsoft.Cci.Pdb.PdbLines' Mono.Cecil.Pdb.PdbReader' Microsoft.Cci.Pdb.PdbFile
+Microsoft.Cci,ILocalScope,0,0,2,0,0,10,0,1,0,-1,0,2,,Microsoft.Cci.PdbIteratorScope' Microsoft.Cci.Pdb.PdbFunction
+Microsoft.Cci,INamespaceScope,0,0,1,0,0,6,0,0,0,-1,1,1,Microsoft.Cci.IUsedNamespace,Microsoft.Cci.Pdb.PdbFunction
+Microsoft.Cci,IUsedNamespace,0,0,2,0,0,10,0,0,0,-1,1,1,Microsoft.Cci.IName,Microsoft.Cci.INamespaceScope
+Microsoft.Cci,IName,0,0,3,0,0,22,0,0,0,-1,0,1,,Microsoft.Cci.IUsedNamespace
+Microsoft.Cci,PdbIteratorScope,2,1,2,0,0,14,1,0,1,0,1,1,Microsoft.Cci.ILocalScope,Microsoft.Cci.Pdb.PdbFunction
+Mono.Cecil.Pdb,ISymUnmanagedDocumentWriter,0,0,0,0,0,5,0,0,0,-1,0,3,,Mono.Cecil.Pdb.ISymUnmanagedWriter2' Mono.Cecil.Pdb.SymDocumentWriter' Mono.Cecil.Pdb.SymWriter
+Mono.Cecil.Pdb,ISymUnmanagedWriter2,0,25,0,0,0,59,25,0,0,-1,1,1,Mono.Cecil.Pdb.ISymUnmanagedDocumentWriter,Mono.Cecil.Pdb.SymWriter
 Mono.Cecil.Pdb,IMetaDataEmit,0,49,0,0,0,56,49,1,0,-1,1,1,Mono.Cecil.Pdb.IMetaDataImport,Mono.Cecil.Pdb.ModuleMetadata
 Mono.Cecil.Pdb,IMetaDataImport,0,62,0,0,0,78,62,1,0,-1,0,2,,Mono.Cecil.Pdb.IMetaDataEmit' Mono.Cecil.Pdb.ModuleMetadata
-Mono.Cecil.Pdb,ModuleMetadata,3,118,0,0,112,518,127,0,1,0.92,7,0,Mono.Cecil.ModuleDefinition' Mono.Cecil.TypeDefinition' Mono.Cecil.MethodDefinition' Mono.Cecil.MetadataToken' Mono.Cecil.Pdb.IMetaDataImport' Mono.Cecil.Pdb.IMetaDataEmit' Mono.Cecil.TypeReference,
+Mono.Cecil.Pdb,ModuleMetadata,3,118,0,0,112,518,127,0,1,0.93,2,1,Mono.Cecil.Pdb.IMetaDataEmit' Mono.Cecil.Pdb.IMetaDataImport,Mono.Cecil.Pdb.PdbHelper
 Mono.Cecil.Pdb,SymDocumentWriter,1,2,0,0,2,12,2,0,0,0,1,2,Mono.Cecil.Pdb.ISymUnmanagedDocumentWriter,Mono.Cecil.Pdb.SymWriter' Mono.Cecil.Pdb.PdbWriter
-Mono.Cecil.Pdb,SymWriter,4,17,0,0,16,103,18,0,0,0.12,6,2,Mono.Cecil.Pdb.ISymUnmanagedWriter2' Mono.Cecil.Cil.ImageDebugDirectory' Mono.Cecil.FieldAttributes' Mono.Cecil.Pdb.ISymUnmanagedDocumentWriter' Mono.Cecil.Pdb.SymDocumentWriter' Mono.Cecil.ParameterAttributes,Mono.Cecil.Pdb.PdbWriter' Mono.Cecil.Pdb.PdbHelper
-Mono.Cecil.Pdb,PdbReader,5,18,0,0,4,187,40,0,1,0,17,1,Mono.Cecil.Cil.ImageDebugDirectory' Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbFunction' Mono.Cecil.MetadataToken' Mono.Cecil.MethodDefinition' Mono.Cecil.Cil.MethodBody' Microsoft.Cci.Pdb.PdbScope' Mono.Cecil.Cil.Scope' Mono.Cecil.Cil.VariableDefinition' Microsoft.Cci.Pdb.PdbSlot' Mono.Cecil.Cil.Document' Microsoft.Cci.Pdb.PdbLines' Mono.Cecil.Cil.Instruction' Mono.Cecil.Cil.SequencePoint' Microsoft.Cci.Pdb.PdbLine' Microsoft.Cci.Pdb.PdbSource' Mono.Cecil.Cil.MethodSymbols,Mono.Cecil.Pdb.PdbReaderProvider
-Mono.Cecil.Pdb,PdbWriter,3,12,0,0,4,144,24,0,1,0,16,1,Mono.Cecil.ModuleDefinition' Mono.Cecil.Pdb.SymWriter' Mono.Cecil.Cil.ImageDebugDirectory' Mono.Cecil.MetadataToken' Mono.Cecil.MethodDefinition' Mono.Cecil.Cil.MethodBody' Mono.Cecil.Cil.Instruction' Mono.Cecil.Cil.SequencePoint' Mono.Cecil.Cil.VariableDefinition' Mono.Cecil.Pdb.SymDocumentWriter' Mono.Cecil.Cil.Document' Mono.Cecil.Cil.DocumentLanguage' Mono.Cecil.Cil.DocumentLanguageVendor' Mono.Cecil.Cil.DocumentType' Mono.Cecil.Cil.MethodSymbols' Mono.Cecil.Cil.InstructionSymbol,Mono.Cecil.Pdb.PdbWriterProvider
-Mono.Cecil.Pdb,PdbHelper,0,2,0,0,2,16,3,0,0,-1,2,2,Mono.Cecil.Pdb.SymWriter' Mono.Cecil.ModuleDefinition,Mono.Cecil.Pdb.PdbReaderProvider' Mono.Cecil.Pdb.PdbWriterProvider
-Mono.Cecil.Pdb,PdbReaderProvider,0,2,0,0,2,10,2,0,1,-1,3,0,Mono.Cecil.Pdb.PdbHelper' Mono.Cecil.Pdb.PdbReader' Mono.Cecil.ModuleDefinition,
-Mono.Cecil.Pdb,PdbWriterProvider,0,2,0,0,2,10,2,0,1,-1,3,0,Mono.Cecil.Pdb.PdbHelper' Mono.Cecil.Pdb.PdbWriter' Mono.Cecil.ModuleDefinition,
-Mono.Cecil.Pdb,GuidMapping,6,10,0,0,8,82,20,0,0,0.4,4,0,Mono.Cecil.Cil.DocumentLanguage' Mono.Cecil.Cil.DocumentType' Mono.Cecil.Cil.DocumentHashAlgorithm' Mono.Cecil.Cil.DocumentLanguageVendor,
+Mono.Cecil.Pdb,SymWriter,4,17,0,0,16,103,18,0,0,0.12,3,2,Mono.Cecil.Pdb.ISymUnmanagedDocumentWriter' Mono.Cecil.Pdb.ISymUnmanagedWriter2' Mono.Cecil.Pdb.SymDocumentWriter,Mono.Cecil.Pdb.PdbWriter' Mono.Cecil.Pdb.PdbHelper
+Mono.Cecil.Pdb,PdbReader,5,18,0,0,4,187,42,0,1,0,7,1,Microsoft.Cci.Pdb.PdbFile' Microsoft.Cci.Pdb.PdbFunction' Microsoft.Cci.Pdb.PdbLine' Microsoft.Cci.Pdb.PdbLines' Microsoft.Cci.Pdb.PdbScope' Microsoft.Cci.Pdb.PdbSlot' Microsoft.Cci.Pdb.PdbSource,Mono.Cecil.Pdb.PdbReaderProvider
+Mono.Cecil.Pdb,PdbWriter,3,12,0,0,4,144,24,0,1,0,2,1,Mono.Cecil.Pdb.SymDocumentWriter' Mono.Cecil.Pdb.SymWriter,Mono.Cecil.Pdb.PdbWriterProvider
+Mono.Cecil.Pdb,PdbHelper,0,2,0,0,2,16,3,0,0,-1,2,2,Mono.Cecil.Pdb.ModuleMetadata' Mono.Cecil.Pdb.SymWriter,Mono.Cecil.Pdb.PdbReaderProvider' Mono.Cecil.Pdb.PdbWriterProvider
+Mono.Cecil.Pdb,PdbReaderProvider,0,2,0,0,2,10,2,0,1,-1,2,0,Mono.Cecil.Pdb.PdbReader' Mono.Cecil.Pdb.PdbHelper,
+Mono.Cecil.Pdb,PdbWriterProvider,0,2,0,0,2,10,2,0,1,-1,2,0,Mono.Cecil.Pdb.PdbWriter' Mono.Cecil.Pdb.PdbHelper,
+Mono.Cecil.Pdb,GuidMapping,6,10,0,0,8,82,20,0,0,0.4,0,0,,

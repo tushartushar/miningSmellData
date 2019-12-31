@@ -1,21 +1,21 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OpenUO.Core.Net.Compression,HuffmanDecompression,1,5,0,0,2,381,16,0,0,0.4,0,1,,ParadoxUO.Net.NetworkClient
-OpenUO.Core.Net.Compression,ZlibCompression,12,6,0,1,5,172,11,0,0,0.5,3,0,OpenUO.Core.Net.Compression.IZLibCompressor' OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,
-OpenUO.Core.Net.Compression,IZLibCompressor,0,3,1,0,0,10,3,3,0,-1,1,1,OpenUO.Core.Net.Compression.ZLibQuality,OpenUO.Core.Net.Compression.ZlibCompression
-OpenUO.Core.Net.Compression,Compressor32,0,7,1,0,3,27,7,0,1,-1,2,0,OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,
-OpenUO.Core.Net.Compression,Compressor64,0,7,1,0,3,27,7,0,1,-1,2,0,OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,
-OpenUO.Core.Net.Compression,CompressorUnix,0,7,1,0,3,27,7,0,1,-1,2,0,OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,
-OpenUO.Core.Net.Compression,ZLibError,0,0,0,0,0,12,0,0,0,-1,0,4,,OpenUO.Core.Net.Compression.ZlibCompression' OpenUO.Core.Net.Compression.Compressor32' OpenUO.Core.Net.Compression.Compressor64' OpenUO.Core.Net.Compression.CompressorUnix
+OpenUO.Core.Net.Compression,HuffmanDecompression,1,5,0,0,2,381,16,0,0,0.4,0,0,,
+OpenUO.Core.Net.Compression,ZlibCompression,12,6,0,1,5,172,11,0,0,0.5,4,0,OpenUO.Core.Net.Compression.IZLibCompressor' OpenUO.Core.Net.Compression.Compressor32' OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,
+OpenUO.Core.Net.Compression,IZLibCompressor,0,3,1,0,0,10,3,3,0,-1,2,4,OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,OpenUO.Core.Net.Compression.ZlibCompression' OpenUO.Core.Net.Compression.Compressor32' OpenUO.Core.Net.Compression.Compressor64' OpenUO.Core.Net.Compression.CompressorUnix
+OpenUO.Core.Net.Compression,Compressor32,0,7,1,0,3,27,7,0,1,-1,3,1,OpenUO.Core.Net.Compression.IZLibCompressor' OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,OpenUO.Core.Net.Compression.ZlibCompression
+OpenUO.Core.Net.Compression,Compressor64,0,7,1,0,3,27,7,0,1,-1,3,0,OpenUO.Core.Net.Compression.IZLibCompressor' OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,
+OpenUO.Core.Net.Compression,CompressorUnix,0,7,1,0,3,27,7,0,1,-1,3,0,OpenUO.Core.Net.Compression.IZLibCompressor' OpenUO.Core.Net.Compression.ZLibError' OpenUO.Core.Net.Compression.ZLibQuality,
+OpenUO.Core.Net.Compression,ZLibError,0,0,0,0,0,12,0,0,0,-1,0,5,,OpenUO.Core.Net.Compression.ZlibCompression' OpenUO.Core.Net.Compression.IZLibCompressor' OpenUO.Core.Net.Compression.Compressor32' OpenUO.Core.Net.Compression.Compressor64' OpenUO.Core.Net.Compression.CompressorUnix
 OpenUO.Core.Net.Compression,ZLibQuality,0,0,0,0,0,7,0,0,0,-1,0,5,,OpenUO.Core.Net.Compression.ZlibCompression' OpenUO.Core.Net.Compression.IZLibCompressor' OpenUO.Core.Net.Compression.Compressor32' OpenUO.Core.Net.Compression.Compressor64' OpenUO.Core.Net.Compression.CompressorUnix
-OpenUO.Core.Net,INetworkClient,0,9,4,0,0,29,9,1,0,-1,1,1,OpenUO.Core.Net.ISendPacket,ParadoxUO.Client
-OpenUO.Core.Net,PacketReader,1,30,3,0,30,455,84,0,0,0.63,0,2,,OpenUO.Core.Net.PacketHandler' ParadoxUO.Net.NetworkClient
-OpenUO.Core.Net,PacketWriter,3,26,3,0,26,319,38,0,0,0.62,0,2,,OpenUO.Core.Net.Packets.SendPacket' OpenUO.Core.Net.Packets.SendRecvPacket
-OpenUO.Core.Net,IRecvPacket,0,0,2,0,0,11,0,2,0,-1,0,2,,OpenUO.Core.Net.PacketHandler' OpenUO.Core.Net.PacketHandler<TPacket>
-OpenUO.Core.Net,ISendPacket,0,2,3,0,0,17,2,2,0,-1,0,2,,OpenUO.Core.Net.INetworkClient' ParadoxUO.Net.NetworkClient
+OpenUO.Core.Net,INetworkClient,0,9,4,0,0,29,9,1,0,-1,2,0,OpenUO.Core.Net.IRecvPacket' OpenUO.Core.Net.ISendPacket,
+OpenUO.Core.Net,PacketReader,1,30,3,0,30,455,88,0,0,0.63,0,1,,OpenUO.Core.Net.PacketHandler
+OpenUO.Core.Net,PacketWriter,3,26,3,0,26,319,41,0,0,0.62,0,2,,OpenUO.Core.Net.Packets.SendRecvPacket' OpenUO.Core.Net.Packets.SendPacket
+OpenUO.Core.Net,IRecvPacket,0,0,2,0,0,11,0,2,0,-1,0,5,,OpenUO.Core.Net.Packets.RecvPacket' OpenUO.Core.Net.Packets.SendRecvPacket' OpenUO.Core.Net.INetworkClient' OpenUO.Core.Net.PacketHandler' OpenUO.Core.Net.PacketHandler<TPacket>
+OpenUO.Core.Net,ISendPacket,0,2,3,0,0,17,2,2,0,-1,0,3,,OpenUO.Core.Net.Packets.SendPacket' OpenUO.Core.Net.INetworkClient' OpenUO.Core.Net.Packets.SendRecvPacket
 OpenUO.Core.Net,NetworkException,0,1,0,0,1,7,1,0,0,-1,0,0,,
-OpenUO.Core.Net,PacketHandler,1,5,5,0,5,50,5,1,0,0.6,2,1,OpenUO.Core.Net.IRecvPacket' OpenUO.Core.Net.PacketReader,ParadoxUO.Net.NetworkClient
-OpenUO.Core.Net,PacketHandler<TPacket>,1,3,1,0,3,21,3,0,1,0,1,0,OpenUO.Core.Net.IRecvPacket,
-OpenUO.Core.Net,SocketState,0,1,3,0,1,23,1,0,0,-1,0,1,,ParadoxUO.Net.NetworkClient
-OpenUO.Core.Net.Packets,RecvPacket,0,2,2,0,1,20,2,0,1,-1,1,0,OpenUO.Core.Diagnostics.Tracing.Tracer,
-OpenUO.Core.Net.Packets,SendPacket,2,5,3,0,5,86,6,0,1,0.4,1,0,OpenUO.Core.Net.PacketWriter,
-OpenUO.Core.Net.Packets,SendRecvPacket,2,6,3,0,6,59,7,0,1,0.5,2,0,OpenUO.Core.Net.PacketWriter' OpenUO.Core.Diagnostics.Tracing.Tracer,
+OpenUO.Core.Net,PacketHandler,1,5,5,0,5,50,5,1,0,0.6,2,1,OpenUO.Core.Net.PacketReader' OpenUO.Core.Net.IRecvPacket,OpenUO.Core.Net.PacketHandler<TPacket>
+OpenUO.Core.Net,PacketHandler<TPacket>,1,3,1,0,3,21,3,0,1,0,2,0,OpenUO.Core.Net.IRecvPacket' OpenUO.Core.Net.PacketHandler,
+OpenUO.Core.Net,SocketState,0,1,3,0,1,23,1,0,0,-1,0,0,,
+OpenUO.Core.Net.Packets,RecvPacket,0,2,2,0,1,20,2,0,1,-1,1,0,OpenUO.Core.Net.IRecvPacket,
+OpenUO.Core.Net.Packets,SendPacket,2,5,3,0,5,86,6,0,1,0.4,2,0,OpenUO.Core.Net.PacketWriter' OpenUO.Core.Net.ISendPacket,
+OpenUO.Core.Net.Packets,SendRecvPacket,2,6,3,0,6,59,7,0,1,0.5,3,0,OpenUO.Core.Net.PacketWriter' OpenUO.Core.Net.IRecvPacket' OpenUO.Core.Net.ISendPacket,

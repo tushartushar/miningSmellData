@@ -1,0 +1,18 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+GitHubAPI.Tests,AbstractBaseClass,0,2,0,0,1,11,2,1,0,-1,0,3,,GitHubAPI.Tests.SomeClass' GitHubAPI.Tests.MyInterceptor<TTarget>' GitHubAPI.Tests.CastleTests
+GitHubAPI.Tests,SomeClass,0,1,0,0,1,7,1,0,1,-1,1,1,GitHubAPI.Tests.AbstractBaseClass,GitHubAPI.Tests.CastleTests
+GitHubAPI.Tests,MyInterceptor<TTarget>,1,1,0,0,1,27,1,0,0,0,3,1,GitHubAPI.Tests.AbstractBaseClass' GitHubAPI.Tests.Interceptor' GitHubAPI.Tests.ProxyGenerationHook,GitHubAPI.Tests.CastleTests
+GitHubAPI.Tests,Interceptor,1,2,0,0,2,15,2,0,0,0,0,1,,GitHubAPI.Tests.MyInterceptor<TTarget>
+GitHubAPI.Tests,ProxyGenerationHook,0,3,0,0,3,13,3,0,0,-1,0,1,,GitHubAPI.Tests.MyInterceptor<TTarget>
+GitHubAPI.Tests,CastleTests,0,1,0,0,1,12,1,0,0,-1,3,0,GitHubAPI.Tests.AbstractBaseClass' GitHubAPI.Tests.SomeClass' GitHubAPI.Tests.MyInterceptor<TTarget>,
+GitHubAPI.Tests,MiscTests,0,2,0,0,2,34,2,0,0,-1,1,0,GitHubAPI.Tests.DynamicJsonDeserializer,
+GitHubAPI.Tests,DynamicJsonDeserializer,0,1,3,0,1,10,1,0,0,-1,1,1,GitHubAPI.Tests.SimpleJson,GitHubAPI.Tests.MiscTests
+GitHubAPI.Tests,RestRequestFactoryTests,2,5,0,0,5,69,5,0,0,0,0,0,,
+GitHubAPI.Tests,JsonArray,0,6,0,0,6,53,6,0,0,-1,1,1,GitHubAPI.Tests.SimpleJson,GitHubAPI.Tests.SimpleJson
+GitHubAPI.Tests,JsonObject,2,30,8,0,26,675,42,0,0,0.23,1,2,GitHubAPI.Tests.SimpleJson,GitHubAPI.Tests.SimpleJson' GitHubAPI.Tests.PocoJsonSerializerStrategy
+GitHubAPI.Tests,SimpleJson,30,50,4,0,18,1265,280,0,0,0.18,5,3,GitHubAPI.Tests.JsonArray' GitHubAPI.Tests.JsonObject' GitHubAPI.Tests.IJsonSerializerStrategy' GitHubAPI.Tests.PocoJsonSerializerStrategy' Reflection.ReflectionUtils,GitHubAPI.Tests.DynamicJsonDeserializer' GitHubAPI.Tests.JsonArray' GitHubAPI.Tests.JsonObject
+GitHubAPI.Tests,IJsonSerializerStrategy,0,4,0,0,0,13,4,1,0,-1,0,2,,GitHubAPI.Tests.SimpleJson' GitHubAPI.Tests.PocoJsonSerializerStrategy
+GitHubAPI.Tests,PocoJsonSerializerStrategy,12,18,0,0,6,439,100,0,1,0.39,4,1,GitHubAPI.Tests.JsonObject' GitHubAPI.Tests.IJsonSerializerStrategy' Reflection.ReflectionUtils' Reflection.ThreadSafeDictionary<TKey;TValue>,GitHubAPI.Tests.SimpleJson
+Reflection,ReflectionUtils,1,34,0,0,34,425,45,0,0,1,1,2,Reflection.Assigner<T>,GitHubAPI.Tests.SimpleJson' GitHubAPI.Tests.PocoJsonSerializerStrategy
+Reflection,Assigner<T>,0,1,0,0,1,7,1,0,0,-1,0,1,,Reflection.ReflectionUtils
+Reflection,ThreadSafeDictionary<TKey;TValue>,3,14,4,0,11,107,18,0,0,0.64,0,1,,GitHubAPI.Tests.PocoJsonSerializerStrategy

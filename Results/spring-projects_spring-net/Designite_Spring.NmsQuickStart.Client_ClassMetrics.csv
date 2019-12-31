@@ -1,10 +1,12 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Spring.NmsQuickStart.Client.Gateways,IStockService,0,1,0,0,0,4,1,1,0,-1,1,1,Spring.NmsQuickStart.Common.Data.TradeRequest,Spring.NmsQuickStart.Client.UI.StockController
-Spring.NmsQuickStart.Client.Gateways,NmsStockServiceGateway,1,1,1,0,1,18,1,0,1,0,1,0,Spring.NmsQuickStart.Common.Data.TradeRequest,
-Spring.NmsQuickStart.Client.Gateways,RequestReplyNmsTemplate,0,1,0,0,1,25,1,0,0,-1,0,0,,
-Spring.NmsQuickStart.Client.Handlers,StockAppHandler,2,3,1,0,3,29,3,0,0,0,2,0,Spring.NmsQuickStart.Client.UI.StockController' Spring.NmsQuickStart.Common.Data.TradeResponse,
+Spring.NmsQuickStart.Client.Gateways,IStockService,0,1,0,0,0,4,1,1,0,-1,0,2,,Spring.NmsQuickStart.Client.UI.StockController' Spring.NmsQuickStart.Client.Gateways.NmsStockServiceGateway
+Spring.NmsQuickStart.Client.Gateways,ISyncStockService,0,1,0,0,0,4,1,1,0,-1,0,1,,Spring.NmsQuickStart.Client.Gateways.NmsSyncStockServiceGateway
+Spring.NmsQuickStart.Client.Gateways,NmsStockServiceGateway,1,1,1,0,1,18,1,0,1,0,1,0,Spring.NmsQuickStart.Client.Gateways.IStockService,
+Spring.NmsQuickStart.Client.Gateways,NmsSyncStockServiceGateway,0,1,0,0,1,8,1,0,1,-1,2,0,Spring.NmsQuickStart.Client.Gateways.ISyncStockService' Spring.NmsQuickStart.Client.Gateways.RequestReplyNmsTemplate,
+Spring.NmsQuickStart.Client.Gateways,RequestReplyNmsTemplate,0,1,0,0,1,25,1,0,0,-1,0,1,,Spring.NmsQuickStart.Client.Gateways.NmsSyncStockServiceGateway
+Spring.NmsQuickStart.Client.Handlers,StockAppHandler,2,3,1,0,3,29,3,0,0,0,1,0,Spring.NmsQuickStart.Client.UI.StockController,
 Spring.NmsQuickStart.Client,Program,1,2,0,0,0,32,2,0,0,0,1,0,Spring.NmsQuickStart.Client.UI.StockForm,
 Spring.NmsQuickStart.Client.Properties,Resources,2,1,2,0,0,41,1,0,0,0,0,0,,
 Spring.NmsQuickStart.Client.Properties,Settings,1,0,1,0,0,12,0,0,0,-1,0,0,,
-Spring.NmsQuickStart.Client.UI,StockController,2,3,2,0,3,39,3,0,0,0.67,4,2,Spring.NmsQuickStart.Client.UI.StockForm' Spring.NmsQuickStart.Client.Gateways.IStockService' Spring.NmsQuickStart.Common.Data.TradeRequest' Spring.NmsQuickStart.Common.Data.TradeResponse,Spring.NmsQuickStart.Client.Handlers.StockAppHandler' Spring.NmsQuickStart.Client.UI.StockForm
-Spring.NmsQuickStart.Client.UI,StockForm,9,7,1,0,3,163,8,0,0,0.43,2,2,Spring.NmsQuickStart.Client.UI.StockController' Spring.NmsQuickStart.Common.Data.TradeResponse,Spring.NmsQuickStart.Client.Program' Spring.NmsQuickStart.Client.UI.StockController
+Spring.NmsQuickStart.Client.UI,StockController,2,3,2,0,3,39,3,0,0,0.67,2,2,Spring.NmsQuickStart.Client.Gateways.IStockService' Spring.NmsQuickStart.Client.UI.StockForm,Spring.NmsQuickStart.Client.UI.StockForm' Spring.NmsQuickStart.Client.Handlers.StockAppHandler
+Spring.NmsQuickStart.Client.UI,StockForm,9,7,1,0,3,163,8,0,0,0.43,1,2,Spring.NmsQuickStart.Client.UI.StockController,Spring.NmsQuickStart.Client.UI.StockController' Spring.NmsQuickStart.Client.Program

@@ -1,1 +1,41 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+Zeroconf,AdapterInformation,0,5,2,0,5,38,6,0,0,-1,0,3,,Zeroconf.INetworkInterface' Zeroconf.ServiceAnnouncement' Zeroconf.NetworkInterface
+Zeroconf,AsyncLock,2,2,0,0,2,36,2,0,0,0,1,0,Zeroconf.Releaser,
+Zeroconf,Releaser,1,2,0,0,1,10,3,0,0,0,0,1,,Zeroconf.AsyncLock
+Zeroconf,DomainService,0,4,2,0,4,34,5,0,0,-1,0,0,,
+Zeroconf,INetworkInterface,0,2,0,0,0,10,2,1,0,-1,1,1,Zeroconf.AdapterInformation,Zeroconf.NetworkInterface
+Zeroconf,ServiceAnnouncement,0,4,2,0,4,35,6,0,0,-1,2,1,Zeroconf.AdapterInformation' Zeroconf.IZeroconfHost,Zeroconf.ZeroconfResolver
+Zeroconf,ZeroconfOptions,1,2,5,0,2,30,2,2,0,1,1,2,Zeroconf.ScanQueryType,Zeroconf.BrowseDomainsOptions' Zeroconf.ResolveOptions
+Zeroconf,ScanQueryType,0,0,0,0,0,5,0,0,0,-1,0,1,,Zeroconf.ZeroconfOptions
+Zeroconf,BrowseDomainsOptions,0,1,0,0,1,6,1,0,1,-1,1,1,Zeroconf.ZeroconfOptions,Zeroconf.ZeroconfResolver
+Zeroconf,ResolveOptions,0,2,0,0,2,9,2,0,1,-1,1,1,Zeroconf.ZeroconfOptions,Zeroconf.ZeroconfResolver
+Zeroconf,IZeroconfHost,0,0,4,0,0,20,0,1,0,-1,1,3,Zeroconf.IService,Zeroconf.ServiceAnnouncement' Zeroconf.ZeroconfHost' Zeroconf.ZeroconfResolver
+Zeroconf,IService,0,0,5,0,0,21,0,1,0,-1,0,3,,Zeroconf.IZeroconfHost' Zeroconf.ZeroconfHost' Zeroconf.Service
+Zeroconf,ZeroconfHost,1,6,4,0,5,70,14,0,1,0.67,2,0,Zeroconf.IZeroconfHost' Zeroconf.IService,
+Zeroconf,Service,1,2,5,0,1,37,6,0,1,0,1,0,Zeroconf.IService,
+Zeroconf,ZeroconfResolver,2,20,0,0,15,480,49,0,0,0.45,5,0,Zeroconf.ServiceAnnouncement' Zeroconf.BrowseDomainsOptions' Zeroconf.ResolveOptions' Zeroconf.IZeroconfHost' Heijden.DNS.Response,
+Zeroconf,NetworkInterface,0,4,0,0,2,199,10,0,1,-1,2,0,Zeroconf.AdapterInformation' Zeroconf.INetworkInterface,
+Heijden.DNS,Header,6,7,9,5,2,203,9,0,0,0.71,3,3,Heijden.DNS.RecordReader' Heijden.DNS.RCode' Heijden.DNS.OPCode,Heijden.DNS.Question' Heijden.DNS.Request' Heijden.DNS.Response
+Heijden.DNS,Question,3,5,2,2,3,72,9,0,0,0.8,4,2,Heijden.DNS.Header' Heijden.DNS.RecordReader' Heijden.DNS.QType' Heijden.DNS.QClass,Heijden.DNS.Request' Heijden.DNS.Response
+Heijden.DNS,Record,1,0,0,1,0,7,0,7,0,-1,1,9,Heijden.DNS.RR,Heijden.DNS.RecordSRV' Heijden.DNS.RecordTXT' Heijden.DNS.RecordPTR' Heijden.DNS.RecordUnknown' Heijden.DNS.RecordNSEC' Heijden.DNS.RecordReader' Heijden.DNS.RecordAAAA' Heijden.DNS.RR' Heijden.DNS.RecordA
+Heijden.DNS,RecordA,1,2,0,1,2,17,2,0,1,0,2,2,Heijden.DNS.Record' Heijden.DNS.RecordReader,Heijden.DNS.RecordReader' Heijden.DNS.Response
+Heijden.DNS,RecordAAAA,1,2,0,1,2,20,2,0,1,0,2,2,Heijden.DNS.Record' Heijden.DNS.RecordReader,Heijden.DNS.RecordReader' Heijden.DNS.Response
+Heijden.DNS,RecordNSEC,1,2,0,1,2,14,2,0,1,1,2,1,Heijden.DNS.Record' Heijden.DNS.RecordReader,Heijden.DNS.RecordReader
+Heijden.DNS,RecordPTR,1,2,0,1,2,12,2,0,1,0,2,2,Heijden.DNS.Record' Heijden.DNS.RecordReader,Heijden.DNS.RecordReader' Heijden.DNS.Response
+Heijden.DNS,RecordReader,2,10,2,0,10,123,24,0,0,0.2,9,14,Heijden.DNS.Record' Heijden.DNS.RecordA' Heijden.DNS.RecordAAAA' Heijden.DNS.RecordNSEC' Heijden.DNS.RecordPTR' Heijden.DNS.RecordSRV' Heijden.DNS.RecordTXT' Heijden.DNS.RecordUnknown' Heijden.DNS.Type,Heijden.DNS.RecordA' Heijden.DNS.RecordSRV' Heijden.DNS.RecordPTR' Heijden.DNS.Header' Heijden.DNS.Response' Heijden.DNS.RecordTXT' Heijden.DNS.Question' Heijden.DNS.RecordUnknown' Heijden.DNS.RR' Heijden.DNS.AnswerRR' Heijden.DNS.AuthorityRR' Heijden.DNS.AdditionalRR' Heijden.DNS.RecordNSEC' Heijden.DNS.RecordAAAA
+Heijden.DNS,RecordSRV,4,2,0,4,2,22,2,0,1,0,2,1,Heijden.DNS.Record' Heijden.DNS.RecordReader,Heijden.DNS.RecordReader
+Heijden.DNS,RecordTXT,1,2,0,1,2,23,4,0,1,0,2,2,Heijden.DNS.Record' Heijden.DNS.RecordReader,Heijden.DNS.RecordReader' Heijden.DNS.Response
+Heijden.DNS,RecordUnknown,1,1,0,1,1,10,1,0,1,0,2,1,Heijden.DNS.Record' Heijden.DNS.RecordReader,Heijden.DNS.RecordReader
+Heijden.DNS,Request,2,2,1,1,2,28,2,0,0,0,3,0,Heijden.DNS.Header' Heijden.DNS.Question' Heijden.DNS.OPCode,
+Heijden.DNS,Response,8,2,6,8,2,240,6,0,0,0,11,1,Heijden.DNS.Header' Heijden.DNS.Question' Heijden.DNS.RecordA' Heijden.DNS.RecordAAAA' Heijden.DNS.RecordPTR' Heijden.DNS.RecordReader' Heijden.DNS.RecordTXT' Heijden.DNS.RR' Heijden.DNS.AnswerRR' Heijden.DNS.AuthorityRR' Heijden.DNS.AdditionalRR,Zeroconf.ZeroconfResolver
+Heijden.DNS,RR,7,2,1,6,2,60,2,3,0,0,4,5,Heijden.DNS.Record' Heijden.DNS.RecordReader' Heijden.DNS.Type' Heijden.DNS.Class,Heijden.DNS.Record' Heijden.DNS.AnswerRR' Heijden.DNS.AuthorityRR' Heijden.DNS.AdditionalRR' Heijden.DNS.Response
+Heijden.DNS,AnswerRR,0,1,0,0,1,7,1,0,1,-1,2,1,Heijden.DNS.RecordReader' Heijden.DNS.RR,Heijden.DNS.Response
+Heijden.DNS,AuthorityRR,0,1,0,0,1,7,1,0,1,-1,2,1,Heijden.DNS.RecordReader' Heijden.DNS.RR,Heijden.DNS.Response
+Heijden.DNS,AdditionalRR,0,1,0,0,1,7,1,0,1,-1,2,1,Heijden.DNS.RecordReader' Heijden.DNS.RR,Heijden.DNS.Response
+Heijden.DNS,Type,0,0,0,0,0,64,0,0,0,-1,0,3,,Heijden.DNS.RR' Heijden.DNS.RecordReader' Heijden.DNS.QType
+Heijden.DNS,QType,0,0,0,0,0,69,0,0,0,-1,1,1,Heijden.DNS.Type,Heijden.DNS.Question
+Heijden.DNS,Class,0,0,0,0,0,7,0,0,0,-1,0,2,,Heijden.DNS.QClass' Heijden.DNS.RR
+Heijden.DNS,QClass,0,0,0,0,0,8,0,0,0,-1,1,1,Heijden.DNS.Class,Heijden.DNS.Question
+Heijden.DNS,RCode,0,0,0,0,0,35,0,0,0,-1,0,1,,Heijden.DNS.Header
+Heijden.DNS,OPCode,0,0,0,0,0,20,0,0,0,-1,0,2,,Heijden.DNS.Request' Heijden.DNS.Header
+Heijden.DNS,TransportType,0,0,0,0,0,5,0,0,0,-1,0,0,,

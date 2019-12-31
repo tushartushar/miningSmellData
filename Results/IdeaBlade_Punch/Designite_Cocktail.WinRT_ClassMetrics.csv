@@ -1,89 +1,89 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Cocktail,IAuthenticationServiceConfigurator,0,1,0,0,0,8,1,1,0,-1,0,0,,
-Cocktail,AuthenticationService,2,12,7,0,6,196,15,0,1,0,7,0,Cocktail.AuthenticationServiceConfiguration' Cocktail.LoggedOutAuthenticationContext' Cocktail.ConnectionOptions' Cocktail.StringResources' Cocktail.EventFns' Cocktail.Restoring' Cocktail.Suspending,
-Cocktail,LoggedOutAuthenticationContext,2,1,5,0,0,31,1,0,0,0,0,1,,Cocktail.AuthenticationService
-Cocktail,AnonymousAuthenticationContext,4,1,5,0,0,53,1,0,0,0,0,1,,Cocktail.EntityManagerProvider<T>
+Cocktail,IAuthenticationServiceConfigurator,0,1,0,0,0,8,1,1,0,-1,0,3,,Cocktail.IAuthenticationServiceConfigurator' Cocktail.AuthenticationService' Cocktail.AuthenticationServiceConfiguration
+Cocktail,AuthenticationService,2,12,7,0,6,196,15,0,1,0.17,0,1,,Cocktail.AuthenticationService
+Cocktail,LoggedOutAuthenticationContext,2,1,5,0,0,31,1,0,0,0,0,2,,Cocktail.AuthenticationService' Cocktail.LoggedOutAuthenticationContext
+Cocktail,AnonymousAuthenticationContext,4,1,5,0,0,53,1,0,0,0,0,2,,Cocktail.EntityManagerProvider<T>' Cocktail.AnonymousAuthenticationContext
 Cocktail,AuthenticationServiceConfiguration,0,1,1,0,1,11,1,0,1,-1,0,1,,Cocktail.AuthenticationService
-Cocktail,ReadOnlyDictionary<TKey;TValue>,1,12,4,0,11,75,12,0,0,0.5,1,0,Cocktail.StringResources,
-Cocktail,SerializableLoginOptions,0,1,4,0,0,19,1,0,0,-1,0,1,,Cocktail.SerializableAuthenticationContext
-Cocktail,SerializableAuthenticationContext,0,3,5,0,0,66,7,0,0,-1,1,0,Cocktail.SerializableLoginOptions,
-Cocktail,BusyWatcher,1,3,1,0,3,75,6,0,1,0.67,2,0,Cocktail.BusyWatcherTicket' Cocktail.StringResources,
-Cocktail,BusyWatcherTicket,1,2,0,0,2,23,2,0,0,0,1,1,Cocktail.IBusyWatcher,Cocktail.BusyWatcher
-Cocktail,CocktailWindowsStoreApplication,2,22,1,0,0,220,30,1,0,0.27,5,1,Cocktail.DefaultDebugLogger' Cocktail.DesignTime' Cocktail.INavigator' Cocktail.SuspensionManager' Cocktail.Composition,Cocktail.CocktailMefWindowsStoreApplication
-Cocktail,CocktailMefWindowsStoreApplication,1,7,0,0,0,75,9,0,1,0,5,0,Cocktail.MefCompositionProvider' Cocktail.CocktailWindowsStoreApplication' Cocktail.Composition' Cocktail.Navigator' Cocktail.StringResources,
-Cocktail,Composition,1,14,1,0,12,134,17,0,0,0.86,4,7,Cocktail.ICompositionProvider' Cocktail.IAuthenticationService' Cocktail.StringResources' Cocktail.ICompositionFactory,Cocktail.CocktailWindowsStoreApplication' Cocktail.CocktailMefWindowsStoreApplication' Cocktail.ConnectionOptions' Cocktail.EntityManagerProvider<T>' Cocktail.Navigator' Cocktail.ObjectManager<TKey;T>' Cocktail.PartLocator<T>
-Cocktail,ConnectionOptions,5,11,8,3,10,195,18,0,0,0.64,4,4,Cocktail.Composition' Cocktail.DefaultConnectionOptionsResolver' Cocktail.IConnectionOptionsResolver' Cocktail.StringResources,Cocktail.AuthenticationService' Cocktail.DefaultConnectionOptionsResolver' Cocktail.EntityManagerProvider<T>' Cocktail.FakeStoreEntityManagerProviderFns
-Cocktail,DefaultConnectionOptionsResolver,1,2,1,0,1,24,5,0,1,1,1,1,Cocktail.ConnectionOptions,Cocktail.ConnectionOptions
-Cocktail,DataChangedEventArgs,1,3,1,0,3,28,3,0,0,0,0,0,,
-Cocktail,DefaultDebugLogger,3,11,1,1,3,103,15,0,0,0.36,0,1,,Cocktail.CocktailWindowsStoreApplication
-Cocktail,DefaultEntityManagerSyncInterceptor,0,2,0,0,2,16,2,0,1,-1,0,0,,
-Cocktail,DesignTime,2,2,0,1,2,32,4,0,0,0,0,3,,Cocktail.CocktailWindowsStoreApplication' Cocktail.EntityManagerProvider<T>' Cocktail.MefCompositionProvider
+Cocktail,ReadOnlyDictionary<TKey;TValue>,1,12,4,0,11,75,12,0,0,0.5,0,2,,Cocktail.LoggedOutAuthenticationContext' Cocktail.AnonymousAuthenticationContext
+Cocktail,SerializableLoginOptions,0,1,4,0,0,19,1,0,0,-1,0,2,,Cocktail.SuspensionManager' Cocktail.SerializableAuthenticationContext
+Cocktail,SerializableAuthenticationContext,0,3,5,0,0,66,7,0,0,-1,1,1,Cocktail.SerializableLoginOptions,Cocktail.SuspensionManager
+Cocktail,BusyWatcher,1,3,1,0,3,75,6,0,1,0.67,0,0,,
+Cocktail,BusyWatcherTicket,1,2,0,0,2,23,2,0,0,0,0,1,,Cocktail.BusyWatcher
+Cocktail,CocktailWindowsStoreApplication,2,22,1,0,0,220,30,1,0,0.36,9,1,Cocktail.Composition' Cocktail.DefaultDebugLogger' Cocktail.DesignTime' Cocktail.INavigationTarget' Cocktail.Page<T>' Cocktail.INavigator' Cocktail.SuspensionManager' Cocktail.SuspensionManagerException' Cocktail.Suspending,Cocktail.CocktailMefWindowsStoreApplication
+Cocktail,CocktailMefWindowsStoreApplication,1,7,0,0,0,75,9,0,1,0,6,0,Cocktail.CocktailWindowsStoreApplication' Cocktail.Composition' Cocktail.MefCompositionProvider' Cocktail.INavigator' Cocktail.Navigator' Cocktail.StringResources,
+Cocktail,Composition,1,14,1,0,12,134,17,0,0,0.86,0,6,,Cocktail.ObjectManager<TKey;T>' Cocktail.ConnectionOptions' Cocktail.CocktailWindowsStoreApplication' Cocktail.CocktailMefWindowsStoreApplication' Cocktail.PartLocator<T>' Cocktail.EntityManagerProvider<T>
+Cocktail,ConnectionOptions,5,11,8,3,10,195,18,0,0,0.64,0,9,,Cocktail.IAuthenticationService' Cocktail.IEntityManagerProvider' Cocktail.IConnectionOptionsResolver' Cocktail.IAuthenticationServiceConfigurator' Cocktail.AuthenticationService' Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.ConnectionOptions' Cocktail.DefaultConnectionOptionsResolver
+Cocktail,DefaultConnectionOptionsResolver,1,2,1,0,1,24,5,0,1,1,0,2,,Cocktail.ConnectionOptions' Cocktail.DefaultConnectionOptionsResolver
+Cocktail,DataChangedEventArgs,1,3,1,0,3,28,3,0,0,0,0,2,,Cocktail.IEntityManagerProvider' Cocktail.EntityManagerProvider<T>
+Cocktail,DefaultDebugLogger,3,11,1,1,3,103,15,0,0,0.55,0,2,,Cocktail.CocktailWindowsStoreApplication' Cocktail.DefaultDebugLogger
+Cocktail,DefaultEntityManagerSyncInterceptor,0,2,0,0,2,16,2,0,1,-1,0,1,,Cocktail.EntityManagerProvider<T>
+Cocktail,DesignTime,2,2,0,1,2,32,4,0,0,0,0,3,,Cocktail.CocktailWindowsStoreApplication' Cocktail.EntityManagerProvider<T>' Cocktail.DesignTime
 Cocktail,DesignTimeViewModelLocatorBase<T>,0,1,1,0,0,10,1,0,0,-1,0,0,,
-Cocktail,EntityManagerDelegate,0,0,0,0,0,4,0,1,0,-1,0,3,,Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerProviderConfiguration<T>
-Cocktail,EntityManagerDelegate<T>,0,12,0,0,10,106,21,0,1,-1,1,0,Cocktail.EventFns,
-Cocktail,EntityManagerEventMessage<T>,0,1,2,0,1,10,1,0,0,-1,0,0,,
-Cocktail,IEntityManagerProviderConfigurator,0,5,0,0,0,32,5,1,0,-1,4,0,Cocktail.ISampleDataProvider' Cocktail.IEntityManagerSyncInterceptor' Cocktail.EntityManagerDelegate' Cocktail.IValidationErrorNotification,
-Cocktail,EntityManagerProvider<T>,4,20,9,0,2,389,47,0,1,0.65,12,0,Cocktail.SyncDataMessage' Cocktail.IEntityManagerSyncInterceptor' Cocktail.FakeBackingStore' Cocktail.ConnectionOptions' Cocktail.StringResources' Cocktail.ISupportsRecomposition' Cocktail.Composition' Cocktail.EventFns' Cocktail.AnonymousAuthenticationContext' Cocktail.PrincipalChangedMessage' Cocktail.DesignTime' Cocktail.EntityManagerDelegate,
-Cocktail,EntityManagerProviderConfiguration<T>,0,5,5,0,5,33,5,0,1,-1,4,0,Cocktail.ISampleDataProvider' Cocktail.IEntityManagerSyncInterceptor' Cocktail.EntityManagerDelegate' Cocktail.IValidationErrorNotification,
-Cocktail,EntityManagerSyncInterceptor,0,2,1,0,2,25,2,0,1,-1,0,0,,
-Cocktail,EntityManagerWrapper<T>,0,3,1,0,2,46,7,0,0,-1,1,0,Cocktail.EventFns,
-Cocktail,EntityNotFoundException,0,1,0,0,1,10,1,0,0,-1,0,0,,
-Cocktail,EventFns,1,7,0,0,7,97,12,0,0,0.57,0,5,,Cocktail.AuthenticationService' Cocktail.EntityManagerDelegate<T>' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerWrapper<T>' Cocktail.SuspensionManager
-Cocktail,Factory<T>,1,6,1,0,3,86,10,0,1,1,2,0,Cocktail.IEntityManagerProvider' Cocktail.StringResources,
-Cocktail,FakeBackingStore,3,5,3,0,5,49,5,0,0,0.6,0,2,,Cocktail.EntityManagerProvider<T>' Cocktail.FakeStoreEntityManagerProviderFns
-Cocktail,FakeStoreEntityManagerProviderFns,0,2,0,0,2,33,5,0,0,-1,4,0,Cocktail.ConnectionOptions' Cocktail.IEntityManagerProvider' Cocktail.StringResources' Cocktail.FakeBackingStore,
-Cocktail,IAuthenticationService,0,4,4,0,0,39,4,1,0,-1,0,1,,Cocktail.Composition
-Cocktail,IBusyWatcher,0,3,1,0,0,27,3,1,0,-1,0,1,,Cocktail.BusyWatcherTicket
-Cocktail,ICompositionFactory,0,1,0,0,0,8,1,1,0,-1,0,3,,Cocktail.Composition' Cocktail.ObjectManager<TKey;T>' Cocktail.PartLocator<T>
-Cocktail,ICompositionProvider,0,9,0,0,0,54,9,2,0,-1,0,1,,Cocktail.Composition
+Cocktail,EntityManagerDelegate,0,0,0,0,0,4,0,1,0,-1,0,3,,Cocktail.EntityManagerDelegate' Cocktail.EntityManagerDelegate<T>' Cocktail.EntityManagerProvider<T>
+Cocktail,EntityManagerDelegate<T>,0,12,0,0,10,106,21,0,1,-1,0,3,,Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerProviderConfiguration<T>
+Cocktail,EntityManagerEventMessage<T>,0,1,2,0,1,10,1,0,0,-1,0,2,,Cocktail.EntityManagerDelegate<T>' Cocktail.EntityManagerWrapper<T>
+Cocktail,IEntityManagerProviderConfigurator,0,5,0,0,0,32,5,1,0,-1,0,3,,Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerProviderConfiguration<T>
+Cocktail,EntityManagerProvider<T>,4,20,9,0,2,389,47,0,1,0.65,47,1,Cocktail.AnonymousAuthenticationContext' Cocktail.DesignTime' Cocktail.EntityManagerProvider<T>' Cocktail.FakeBackingStore' Cocktail.ISupportsRecomposition' Cocktail.Composition' Cocktail.ConnectionOptions' Cocktail.DataChangedEventArgs' Cocktail.DefaultEntityManagerSyncInterceptor' Cocktail.EntityManagerDelegate' Cocktail.EntityManagerDelegate<T>' Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProviderConfiguration<T>' Cocktail.EntityManagerSyncInterceptor' Cocktail.EntityManagerWrapper<T>' Cocktail.EventFns' Cocktail.IEntityManagerProvider' Cocktail.IEntityManagerSyncInterceptor' Cocktail.ISampleDataProvider' Cocktail.IValidationErrorNotification' Cocktail.PartLocator<T>' Cocktail.PrincipalChangedMessage' Cocktail.StringResources' Cocktail.SyncDataMessage' Cocktail.AnonymousAuthenticationContext' Cocktail.Composition' Cocktail.ConnectionOptions' Cocktail.DataChangedEventArgs' Cocktail.DefaultEntityManagerSyncInterceptor' Cocktail.DesignTime' Cocktail.EntityManagerDelegate' Cocktail.EntityManagerDelegate<T>' Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProviderConfiguration<T>' Cocktail.EntityManagerSyncInterceptor' Cocktail.EntityManagerWrapper<T>' Cocktail.EventFns' Cocktail.FakeBackingStore' Cocktail.ISupportsRecomposition' Cocktail.IEntityManagerProvider' Cocktail.IEntityManagerSyncInterceptor' Cocktail.ISampleDataProvider' Cocktail.IValidationErrorNotification' Cocktail.PartLocator<T>' Cocktail.PrincipalChangedMessage' Cocktail.StringResources' Cocktail.SyncDataMessage,Cocktail.FakeStoreEntityManagerProviderFns
+Cocktail,EntityManagerProviderConfiguration<T>,0,5,5,0,5,33,5,0,1,-1,0,1,,Cocktail.EntityManagerProvider<T>
+Cocktail,EntityManagerSyncInterceptor,0,2,1,0,2,25,2,0,1,-1,0,1,,Cocktail.EntityManagerProvider<T>
+Cocktail,EntityManagerWrapper<T>,0,3,1,0,2,46,7,0,0,-1,0,1,,Cocktail.EntityManagerProvider<T>
+Cocktail,EntityNotFoundException,0,1,0,0,1,10,1,0,0,-1,0,2,,Cocktail.IRepository' Cocktail.Repository<T>
+Cocktail,EventFns,1,7,0,0,7,97,12,0,0,0.57,0,5,,Cocktail.EntityManagerDelegate<T>' Cocktail.AuthenticationService' Cocktail.EntityManagerWrapper<T>' Cocktail.EntityManagerProvider<T>' Cocktail.SuspensionManager
+Cocktail,Factory<T>,1,6,1,0,3,86,10,0,1,1,0,1,,Cocktail.UnitOfWork<T>
+Cocktail,FakeBackingStore,3,5,3,0,5,49,5,0,0,0.6,1,2,Cocktail.FakeBackingStore,Cocktail.FakeStoreEntityManagerProviderFns' Cocktail.EntityManagerProvider<T>
+Cocktail,FakeStoreEntityManagerProviderFns,0,2,0,0,2,33,5,0,0,-1,8,0,Cocktail.EntityManagerProvider<T>' Cocktail.FakeBackingStore' Cocktail.IEntityManagerProvider' Cocktail.StringResources' Cocktail.EntityManagerProvider<T>' Cocktail.FakeBackingStore' Cocktail.IEntityManagerProvider' Cocktail.StringResources,
+Cocktail,IAuthenticationService,0,4,4,0,0,39,4,1,0,-1,2,3,Cocktail.ConnectionOptions' Cocktail.ConnectionOptions,Cocktail.AuthenticationService' Cocktail.SuspensionManager' Cocktail.Composition
+Cocktail,IBusyWatcher,0,3,1,0,0,27,3,1,0,-1,0,1,,Cocktail.BusyWatcher
+Cocktail,ICompositionFactory,0,1,0,0,0,8,1,1,0,-1,0,4,,Cocktail.ObjectManager<TKey;T>' Cocktail.MefCompositionFactory<T>' Cocktail.Composition' Cocktail.ICompositionProvider
+Cocktail,ICompositionProvider,0,9,0,0,0,54,9,2,0,-1,0,2,,Cocktail.ISupportsRecomposition' Cocktail.Composition
 Cocktail,ISupportsRecomposition,0,0,1,0,0,11,0,0,1,-1,0,1,,Cocktail.EntityManagerProvider<T>
-Cocktail,IConnectionOptionsResolver,0,1,0,0,0,10,1,1,0,-1,0,1,,Cocktail.ConnectionOptions
-Cocktail,IDiscoverableViewModel,0,0,0,0,0,4,0,0,0,-1,0,0,,
-Cocktail,IEntityManagerProvider,0,0,5,0,0,39,0,1,0,-1,0,7,,Cocktail.Factory<T>' Cocktail.FakeStoreEntityManagerProviderFns' Cocktail.PagerRepository<T>' Cocktail.Repository<T>' Cocktail.SyncDataMessage' Cocktail.UnitOfWork' Cocktail.UnitOfWork<T>
-Cocktail,IEntityManagerSyncInterceptor,0,2,0,0,0,7,2,2,0,-1,0,3,,Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerProviderConfiguration<T>
-Cocktail,IFactory,0,2,0,0,0,14,2,1,0,-1,0,0,,
+Cocktail,IConnectionOptionsResolver,0,1,0,0,0,10,1,1,0,-1,0,3,,Cocktail.IConnectionOptionsResolver' Cocktail.ConnectionOptions' Cocktail.DefaultConnectionOptionsResolver
+Cocktail,IDiscoverableViewModel,0,0,0,0,0,4,0,0,0,-1,0,1,,Cocktail.IDiscoverableViewModel
+Cocktail,IEntityManagerProvider,0,0,5,0,0,39,0,1,0,-1,0,11,,Cocktail.PagerRepository<T>' Cocktail.IEntityManagerProvider' Cocktail.AuthenticationService' Cocktail.Factory<T>' Cocktail.UnitOfWork' Cocktail.UnitOfWork<T>' Cocktail.SyncDataMessage' Cocktail.EntityManagerProvider<T>' Cocktail.Repository<T>' Cocktail.FakeStoreEntityManagerProviderFns' Cocktail.DesignTimeViewModelLocatorBase<T>
+Cocktail,IEntityManagerSyncInterceptor,0,2,0,0,0,7,2,2,0,-1,0,5,,Cocktail.DefaultEntityManagerSyncInterceptor' Cocktail.EntityManagerSyncInterceptor' Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerProviderConfiguration<T>
+Cocktail,IFactory,0,2,0,0,0,14,2,1,0,-1,0,3,,Cocktail.UnitOfWork<T>' Cocktail.IUnitOfWork' Cocktail.Factory<T>
 Cocktail,IHarnessAware,0,1,0,0,0,5,1,0,0,-1,0,0,,
-Cocktail,NavigationCancelArgs,1,5,2,0,4,58,7,1,0,0,0,2,,Cocktail.INavigationTarget' Cocktail.NavigationTargetHelper
+Cocktail,NavigationCancelArgs,1,5,2,0,4,58,7,1,0,0,0,3,,Cocktail.NavigationArgs' Cocktail.INavigationTarget' Cocktail.NavigationTargetHelper
 Cocktail,NavigationArgs,0,1,1,0,1,15,1,0,1,-1,0,2,,Cocktail.INavigationTarget' Cocktail.NavigationTargetHelper
-Cocktail,INavigationTarget,0,5,1,0,0,42,5,0,0,-1,2,2,Cocktail.NavigationArgs' Cocktail.NavigationCancelArgs,Cocktail.NavigationTargetHelper' Cocktail.Navigator
-Cocktail,NavigationTargetHelper,0,5,0,0,0,73,13,0,0,-1,4,0,Cocktail.NavigationArgs' Cocktail.INavigationTarget' Cocktail.NavigationCancelArgs' Cocktail.SuspensionManager,
-Cocktail,Page<T>,0,1,3,0,1,27,1,0,0,-1,0,0,,
-Cocktail,IPager,0,10,6,0,0,103,10,1,0,-1,0,1,,Cocktail.ObsoleteRepositoryMethods
-Cocktail,IPagerRepository,0,2,0,0,0,26,2,1,1,-1,0,1,,Cocktail.ObsoleteRepositoryMethods
-Cocktail,IRepository,0,34,0,0,0,318,34,2,0,-1,0,1,,Cocktail.ObsoleteRepositoryMethods
-Cocktail,IFetchOptions,0,9,0,0,0,51,9,2,0,-1,0,1,,Cocktail.ObsoleteRepositoryMethods
-Cocktail,ISampleDataProvider,0,1,0,0,0,9,1,0,0,-1,0,2,,Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProviderConfiguration<T>
-Cocktail,IUnitOfWork,0,5,2,0,0,38,5,2,0,-1,0,0,,
-Cocktail,IValidationErrorNotification,0,1,0,0,0,7,1,0,0,-1,0,2,,Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProviderConfiguration<T>
+Cocktail,INavigationTarget,0,5,1,0,0,42,5,0,0,-1,1,4,Cocktail.INavigationTarget,Cocktail.CocktailWindowsStoreApplication' Cocktail.INavigator' Cocktail.Navigator' Cocktail.NavigationTargetHelper
+Cocktail,NavigationTargetHelper,0,5,0,0,0,73,13,0,0,-1,0,0,,
+Cocktail,Page<T>,0,1,3,0,1,27,1,0,0,-1,0,3,,Cocktail.CocktailWindowsStoreApplication' Cocktail.IPager' Cocktail.Pager<T>
+Cocktail,IPager,0,10,6,0,0,103,10,1,0,-1,0,4,,Cocktail.Pager<T>' Cocktail.PagerRepository<T>' Cocktail.IPagerRepository' Cocktail.ObsoleteRepositoryMethods
+Cocktail,IPagerRepository,0,2,0,0,0,26,2,1,1,-1,0,2,,Cocktail.PagerRepository<T>' Cocktail.ObsoleteRepositoryMethods
+Cocktail,IRepository,0,34,0,0,0,318,34,2,0,-1,0,5,,Cocktail.IPagerRepository' Cocktail.UnitOfWork<T>' Cocktail.IUnitOfWork' Cocktail.Repository<T>' Cocktail.ObsoleteRepositoryMethods
+Cocktail,IFetchOptions,0,9,0,0,0,51,9,2,0,-1,0,8,,Cocktail.IRepository' Cocktail.IFetchOptions' Cocktail.Repository<T>' Cocktail.FetchOptions' Cocktail.IPagerRepository' Cocktail.PagerRepository<T>' Cocktail.FetchOptions<T>' Cocktail.ObsoleteRepositoryMethods
+Cocktail,ISampleDataProvider,0,1,0,0,0,9,1,0,0,-1,0,3,,Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerProviderConfiguration<T>
+Cocktail,IUnitOfWork,0,5,2,0,0,38,5,2,0,-1,0,3,,Cocktail.IUnitOfWork' Cocktail.UnitOfWork' Cocktail.UnitOfWork<T>
+Cocktail,IValidationErrorNotification,0,1,0,0,0,7,1,0,0,-1,0,4,,Cocktail.IValidationErrorNotification' Cocktail.IEntityManagerProviderConfigurator' Cocktail.EntityManagerProvider<T>' Cocktail.EntityManagerProviderConfiguration<T>
 Cocktail,LogFns,0,6,0,0,4,67,8,0,0,-1,0,0,,
-Cocktail,MefCompositionFactory<T>,0,2,1,0,1,25,3,0,1,-1,1,0,Cocktail.StringResources,
-Cocktail,MefCompositionProvider,4,13,3,0,12,140,18,0,1,1,3,1,Cocktail.ValueExportDescriptorProvider' Cocktail.StringResources' Cocktail.DesignTime,Cocktail.CocktailMefWindowsStoreApplication
-Cocktail,ValueExportDescriptorProvider,1,3,0,0,3,27,5,0,0,0,0,1,,Cocktail.MefCompositionProvider
-Cocktail,INavigatorConfigurator,0,2,0,0,0,21,2,1,0,-1,0,0,,
-Cocktail,INavigator,0,8,3,0,0,73,8,1,0,-1,0,1,,Cocktail.CocktailWindowsStoreApplication
-Cocktail,Navigator,5,23,3,0,12,358,62,0,1,0.13,8,1,Cocktail.NavigatorConfiguration' Cocktail.FrameAdapterFix' Cocktail.TaskFns' Cocktail.StringResources' Cocktail.SuspensionManager' Cocktail.INavigationTarget' Cocktail.Composition' Cocktail.Suspending,Cocktail.CocktailMefWindowsStoreApplication
+Cocktail,MefCompositionFactory<T>,0,2,1,0,1,25,3,0,1,-1,0,0,,
+Cocktail,MefCompositionProvider,4,13,3,0,12,140,18,0,1,1,0,1,,Cocktail.CocktailMefWindowsStoreApplication
+Cocktail,ValueExportDescriptorProvider,1,3,0,0,3,27,5,0,0,0,0,0,,
+Cocktail,INavigatorConfigurator,0,2,0,0,0,21,2,1,0,-1,1,1,Cocktail.INavigatorConfigurator,Cocktail.Navigator
+Cocktail,INavigator,0,8,3,0,0,73,8,1,0,-1,2,4,Cocktail.INavigationTarget' Cocktail.INavigationTarget,Cocktail.Navigator' Cocktail.CocktailWindowsStoreApplication' Cocktail.CocktailMefWindowsStoreApplication' Cocktail.SuspensionManager
+Cocktail,Navigator,5,23,3,0,12,358,62,0,1,0.26,11,1,Cocktail.INavigationTarget' Cocktail.INavigatorConfigurator' Cocktail.INavigator' Cocktail.Navigator' Cocktail.NavigatorConfiguration' Cocktail.TaskFns' Cocktail.INavigationTarget' Cocktail.INavigatorConfigurator' Cocktail.INavigator' Cocktail.NavigatorConfiguration' Cocktail.TaskFns,Cocktail.CocktailMefWindowsStoreApplication
 Cocktail,NavigatorConfiguration,0,2,2,0,2,21,2,0,1,-1,0,1,,Cocktail.Navigator
-Cocktail,FrameAdapterFix,1,3,2,0,1,33,3,0,0,0.67,0,1,,Cocktail.Navigator
-Cocktail,ObjectManager<TKey;T>,2,8,0,0,8,66,9,0,0,0,2,0,Cocktail.ICompositionFactory' Cocktail.Composition,
-Cocktail,Pager<T>,1,12,6,0,11,194,18,0,1,0.58,1,0,Cocktail.StringResources,
-Cocktail,PagerRepository<T>,0,3,0,0,3,59,7,0,2,-1,1,0,Cocktail.IEntityManagerProvider,
-Cocktail,PartLocator<T>,5,7,4,0,0,74,13,0,0,0.29,3,0,Cocktail.Composition' Cocktail.StringResources' Cocktail.ICompositionFactory,
-Cocktail,PrincipalChangedMessage,0,1,1,0,1,8,1,0,0,-1,0,1,,Cocktail.EntityManagerProvider<T>
+Cocktail,FrameAdapterFix,1,3,2,0,1,33,3,0,0,0.67,0,0,,
+Cocktail,ObjectManager<TKey;T>,2,8,0,0,8,66,9,0,0,0,0,0,,
+Cocktail,Pager<T>,1,12,6,0,11,194,18,0,1,0.58,0,1,,Cocktail.PagerRepository<T>
+Cocktail,PagerRepository<T>,0,3,0,0,3,59,7,0,2,-1,0,0,,
+Cocktail,PartLocator<T>,5,7,4,0,0,74,13,0,0,0.29,0,5,,Cocktail.Composition' Cocktail.EventFns' Cocktail.EntityManagerProvider<T>' Cocktail.PartLocator<T>' Cocktail.SuspensionManager
+Cocktail,PrincipalChangedMessage,0,1,1,0,1,8,1,0,0,-1,0,2,,Cocktail.AuthenticationService' Cocktail.EntityManagerProvider<T>
 Cocktail,ReflectionExtensions,0,4,0,0,4,25,4,0,0,-1,0,0,,
-Cocktail,Repository<T>,2,42,2,0,35,602,62,0,1,1,3,0,Cocktail.IEntityManagerProvider' Cocktail.FetchOptions' Cocktail.StringResources,
-Cocktail,FetchOptions,0,5,1,0,5,28,5,0,1,-1,0,2,,Cocktail.Repository<T>' Cocktail.FetchOptions<T>
-Cocktail,FetchOptions<T>,0,6,1,0,6,34,7,0,1,-1,1,0,Cocktail.FetchOptions,
-Cocktail,ObsoleteRepositoryMethods,0,11,0,0,9,176,12,0,0,-1,4,0,Cocktail.IRepository' Cocktail.IPagerRepository' Cocktail.IPager' Cocktail.IFetchOptions,
-Cocktail,StringResources,2,1,54,0,0,509,1,0,0,0,0,16,,Cocktail.AuthenticationService' Cocktail.ReadOnlyDictionary<TKey;TValue>' Cocktail.BusyWatcher' Cocktail.CocktailMefWindowsStoreApplication' Cocktail.Composition' Cocktail.ConnectionOptions' Cocktail.EntityManagerProvider<T>' Cocktail.Factory<T>' Cocktail.FakeStoreEntityManagerProviderFns' Cocktail.MefCompositionFactory<T>' Cocktail.MefCompositionProvider' Cocktail.Navigator' Cocktail.Pager<T>' Cocktail.PartLocator<T>' Cocktail.Repository<T>' Cocktail.WeakRefDictionary<TKey;TValue>
-Cocktail,SyncDataMessage,3,2,3,0,2,33,2,0,0,0,1,1,Cocktail.IEntityManagerProvider,Cocktail.EntityManagerProvider<T>
-Cocktail,TaskFns,0,10,0,0,10,129,10,0,0,-1,0,1,,Cocktail.Navigator
+Cocktail,Repository<T>,2,42,2,0,35,602,62,0,1,1,0,2,,Cocktail.PagerRepository<T>' Cocktail.UnitOfWork<T>
+Cocktail,FetchOptions,0,5,1,0,5,28,5,0,1,-1,0,1,,Cocktail.Repository<T>
+Cocktail,FetchOptions<T>,0,6,1,0,6,34,7,0,1,-1,0,1,,Cocktail.Repository<T>
+Cocktail,ObsoleteRepositoryMethods,0,11,0,0,9,176,12,0,0,-1,0,0,,
+Cocktail,StringResources,2,1,54,0,0,509,1,0,0,0,0,14,,Cocktail.BusyWatcher' Cocktail.MefCompositionFactory<T>' Cocktail.Composition' Cocktail.FakeStoreEntityManagerProviderFns' Cocktail.WeakRefDictionary<TKey;TValue>' Cocktail.Pager<T>' Cocktail.ConnectionOptions' Cocktail.PartLocator<T>' Cocktail.Factory<T>' Cocktail.CocktailMefWindowsStoreApplication' Cocktail.AuthenticationService' Cocktail.ReadOnlyDictionary<TKey;TValue>' Cocktail.Repository<T>' Cocktail.EntityManagerProvider<T>
+Cocktail,SyncDataMessage,3,2,3,0,2,33,2,0,0,0,0,1,,Cocktail.EntityManagerProvider<T>
+Cocktail,TaskFns,0,10,0,0,10,129,10,0,0,-1,0,2,,Cocktail.NavigationCancelArgs' Cocktail.Navigator
 Cocktail,TraceLogger,2,4,1,1,1,54,5,0,0,0.75,0,1,,Cocktail.TraceLoggerProvider
-Cocktail,TraceLoggerProvider,0,1,0,0,0,13,1,0,0,-1,1,0,Cocktail.TraceLogger,
-Cocktail,UnitOfWork,1,7,1,0,5,75,10,1,1,1,1,0,Cocktail.IEntityManagerProvider,
-Cocktail,UnitOfWork<T>,0,1,2,0,1,23,1,0,2,-1,1,0,Cocktail.IEntityManagerProvider,
-Cocktail,WeakRefDictionary<TKey;TValue>,2,10,1,0,6,165,18,0,0,0.5,2,0,Cocktail.StringResources' Cocktail.NullObject,
+Cocktail,TraceLoggerProvider,0,1,0,0,0,13,1,0,0,-1,0,0,,
+Cocktail,UnitOfWork,1,7,1,0,5,75,10,1,1,1,0,1,,Cocktail.UnitOfWork<T>
+Cocktail,UnitOfWork<T>,0,1,2,0,1,23,1,0,2,-1,0,0,,
+Cocktail,WeakRefDictionary<TKey;TValue>,2,10,1,0,6,165,18,0,0,0.5,0,1,,Cocktail.ObjectManager<TKey;T>
 Cocktail,NullObject,0,0,0,0,0,3,0,0,0,-1,0,1,,Cocktail.WeakRefDictionary<TKey;TValue>
-Cocktail,SuspensionManager,8,7,3,0,5,237,21,0,0,0,1,3,Cocktail.EventFns,Cocktail.CocktailWindowsStoreApplication' Cocktail.NavigationTargetHelper' Cocktail.Navigator
-Cocktail,SuspensionManagerException,0,2,0,0,2,16,2,0,0,-1,0,0,,
-Cocktail,Suspending,0,1,1,0,1,8,1,0,0,-1,0,2,,Cocktail.AuthenticationService' Cocktail.Navigator
-Cocktail,Restoring,0,1,1,0,1,8,1,0,0,-1,0,1,,Cocktail.AuthenticationService
+Cocktail,SuspensionManager,8,7,3,0,5,237,21,0,0,0,9,2,Cocktail.SerializableLoginOptions' Cocktail.SerializableAuthenticationContext' Cocktail.EventFns' Cocktail.IAuthenticationService' Cocktail.INavigator' Cocktail.PartLocator<T>' Cocktail.SuspensionManagerException' Cocktail.Suspending' Cocktail.Restoring,Cocktail.NavigationTargetHelper' Cocktail.CocktailWindowsStoreApplication
+Cocktail,SuspensionManagerException,0,2,0,0,2,16,2,0,0,-1,0,2,,Cocktail.SuspensionManager' Cocktail.CocktailWindowsStoreApplication
+Cocktail,Suspending,0,1,1,0,1,8,1,0,0,-1,0,2,,Cocktail.SuspensionManager' Cocktail.CocktailWindowsStoreApplication
+Cocktail,Restoring,0,1,1,0,1,8,1,0,0,-1,0,1,,Cocktail.SuspensionManager

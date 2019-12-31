@@ -1,0 +1,40 @@
+Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
+XLabs.Platform.Device,Accelerometer,4,7,3,1,1,239,10,0,1,0.86,0,1,,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Device,AndroidDevice,5,3,21,0,2,290,8,0,1,1,10,0,XLabs.Platform.Device.Accelerometer' XLabs.Platform.Device.Battery' XLabs.Platform.Device.BluetoothHub' XLabs.Platform.Device.Display' XLabs.Platform.Device.Gyroscope' XLabs.Platform.Services.Network' XLabs.Platform.Services.PhoneService' XLabs.Platform.Services.Media.MediaPicker' XLabs.Platform.Services.Media.Microphone' XLabs.Platform.Services.IO.FileManager,
+XLabs.Platform.Device,Battery,4,10,2,0,0,355,18,0,1,0.6,3,1,XLabs.Platform.Device.LevelMonitor' XLabs.Platform.Device.ChargerMonitor' XLabs.Platform.Device.BroadcastMonitor,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Device,LevelMonitor,1,3,1,0,3,84,4,0,1,0,0,1,,XLabs.Platform.Device.Battery
+XLabs.Platform.Device,ChargerMonitor,1,2,1,0,2,74,2,0,1,0,0,1,,XLabs.Platform.Device.Battery
+XLabs.Platform.Device,AndroidBluetoothDevice,4,3,4,0,3,104,5,0,1,0,0,1,,XLabs.Platform.Device.BluetoothHub
+XLabs.Platform.Device,BluetoothHub,1,4,1,0,4,51,4,0,1,0.75,1,1,XLabs.Platform.Device.AndroidBluetoothDevice,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Device,BroadcastMonitor,0,2,1,0,2,26,3,4,0,-1,0,3,,XLabs.Platform.Services.Network' XLabs.Platform.Services.NfcDevice' XLabs.Platform.Device.Battery
+XLabs.Platform.Device,Display,0,4,6,0,4,75,4,0,1,-1,0,1,,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Device,Gyroscope,3,7,3,0,1,195,10,0,1,0.86,0,1,,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform,BroadcastReceiverExtensions,0,2,0,0,2,21,2,0,0,-1,0,0,,
+XLabs.Platform,IntentExtensions,0,1,0,0,1,30,4,0,0,-1,0,0,,
+XLabs.Platform,IntentFilterExtensions,0,1,0,0,1,12,1,0,0,-1,0,0,,
+XLabs.Platform,ObjectExtensions,0,2,0,0,2,32,3,0,0,-1,1,0,XLabs.Platform.JavaObject<T>,
+XLabs.Platform,JavaObject<T>,0,1,1,0,1,15,1,0,0,-1,0,1,,XLabs.Platform.ObjectExtensions
+XLabs.Platform,UriExtensions,0,2,0,0,2,21,2,0,0,-1,0,0,,
+XLabs.Platform,ViewExtensions,0,3,0,0,3,40,3,0,0,-1,0,0,,
+XLabs.Platform,ViewGroupExtensions,0,1,0,0,1,34,5,0,0,-1,0,0,,
+XLabs.Platform,Resource,0,1,0,0,0,28,1,0,0,-1,0,0,,
+XLabs.Platform,String,2,2,0,2,0,18,2,0,0,1,0,0,,
+XLabs.Platform.Services.Email,EmailService,0,2,1,0,2,71,5,0,1,-1,0,0,,
+XLabs.Platform.Services.Geolocation,GeolocationContinuousListener,6,7,0,0,5,278,23,0,0,0,1,1,XLabs.Platform.Services.Geolocation.Geolocator,XLabs.Platform.Services.Geolocation.Geolocator
+XLabs.Platform.Services.Geolocation,GeolocationSingleListener,7,8,1,0,6,286,20,0,0,0,1,1,XLabs.Platform.Services.Geolocation.Geolocator,XLabs.Platform.Services.Geolocation.Geolocator
+XLabs.Platform.Services.Geolocation,Geolocator,6,13,5,0,10,364,31,0,1,0.23,2,2,XLabs.Platform.Services.Geolocation.GeolocationContinuousListener' XLabs.Platform.Services.Geolocation.GeolocationSingleListener,XLabs.Platform.Services.Geolocation.GeolocationSingleListener' XLabs.Platform.Services.Geolocation.GeolocationContinuousListener
+XLabs.Platform.Services,KeyVaultStorage,4,6,1,0,5,109,8,0,1,0,1,0,XLabs.Platform.Services.SecureData,
+XLabs.Platform.Services,SecureData,2,2,2,0,2,23,2,0,0,0,0,1,,XLabs.Platform.Services.KeyVaultStorage
+XLabs.Platform.Services,Network,2,4,1,0,4,120,8,0,1,0,1,1,XLabs.Platform.Device.BroadcastMonitor,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Services,NfcDevice,3,7,5,0,5,324,10,0,1,0.57,2,0,XLabs.Platform.Device.BroadcastMonitor' XLabs.Platform.Services.NfcMonitor,
+XLabs.Platform.Services,NfcMonitor,1,2,1,0,2,111,2,0,1,1,0,1,,XLabs.Platform.Services.NfcDevice
+XLabs.Platform.Services,PhoneService,0,2,10,0,2,145,2,0,1,-1,0,1,,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Services,Reachability,0,2,2,0,2,60,6,0,0,-1,0,0,,
+XLabs.Platform.Services,SharedPreferencesStorage,1,5,0,0,5,61,6,0,1,0,0,0,,
+XLabs.Platform.Services,TextToSpeechService,3,3,1,0,3,62,5,0,1,0,0,0,,
+XLabs.Platform.Services.Media,MediaPicker,2,8,6,0,5,202,16,0,1,0.25,2,1,XLabs.Platform.Services.Media.MediaPickerActivity' XLabs.Platform.Services.Media.MediaPickedEventArgs,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Services.Media,MediaPickerActivity,17,12,0,0,0,561,37,0,0,0.17,1,1,XLabs.Platform.Services.Media.MediaPickedEventArgs,XLabs.Platform.Services.Media.MediaPicker
+XLabs.Platform.Services.Media,MediaPickedEventArgs,0,3,4,0,3,73,7,0,0,-1,0,2,,XLabs.Platform.Services.Media.MediaPicker' XLabs.Platform.Services.Media.MediaPickerActivity
+XLabs.Platform.Services.Media,Microphone,2,5,7,0,3,157,5,0,1,0.4,0,1,,XLabs.Platform.Device.AndroidDevice
+XLabs.Platform.Services.Media,SoundService,4,8,4,0,7,198,15,0,1,0,0,0,,
+XLabs.Platform.Services.IO,FileManager,1,11,0,0,11,124,15,0,1,0.36,1,1,XLabs.Platform.Services.IO.FileManager,XLabs.Platform.Device.AndroidDevice

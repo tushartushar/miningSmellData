@@ -1,49 +1,49 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Cruncher.Caching,CacheManager,2,5,0,0,5,196,8,0,0,0,0,4,,Cruncher.Helpers.ResourceHelper' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor' Cruncher.ProcessorBase
+Cruncher.Caching,CacheManager,2,5,0,0,5,196,16,0,0,0,0,4,,Cruncher.CssProcessor' Cruncher.JavaScriptProcessor' Cruncher.ProcessorBase' Cruncher.Helpers.ResourceHelper
 Cruncher.Extensions,AssemblyExtensions,0,1,0,0,1,28,2,0,0,-1,0,0,,
 Cruncher.Extensions,DirectoryInfoExtensions,0,3,0,0,3,87,3,0,0,-1,0,0,,
 Cruncher.Extensions,StringExtensions,0,3,0,0,3,46,4,0,0,-1,0,0,,
 Cruncher.Helpers,AsyncHelper,1,2,0,0,2,45,2,0,0,0,0,1,,Cruncher.CruncherBundler
-Cruncher.Helpers,AsyncDuplicateLock,1,3,0,0,2,177,3,0,0,0,1,2,Cruncher.Helpers.Releaser,Cruncher.JavaScriptProcessor' Cruncher.CssProcessor
-Cruncher.Helpers,RefCounted<T>,0,1,2,0,1,22,1,0,0,-1,0,0,,
-Cruncher.Helpers,Releaser,2,3,0,0,2,83,5,0,0,0,0,1,,Cruncher.Helpers.AsyncDuplicateLock
-Cruncher.Helpers,ResourceHelper,1,4,0,0,4,236,19,0,0,0.75,2,5,Cruncher.Configuration.CruncherConfiguration' Cruncher.Caching.CacheManager,Cruncher.JavaScriptCruncher' Cruncher.CssCruncher' Cruncher.CruncherBundler' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor
-Cruncher,JavaScriptCruncher,2,4,0,0,2,126,11,0,1,0.5,5,1,Cruncher.CruncherOptions' Cruncher.Compression.JavaScriptMinifier' Cruncher.Compression.VariableMinification' Cruncher.CruncherBase' Cruncher.Helpers.ResourceHelper,Cruncher.JavaScriptProcessor
-Cruncher,CruncherBase,1,11,2,0,3,176,16,2,0,0.36,4,7,Cruncher.CruncherOptions' Cruncher.Preprocessors.PreprocessorManager' Cruncher.Preprocessors.IPreprocessor' Cruncher.RemoteFile,Cruncher.JavaScriptCruncher' Cruncher.CssCruncher' Cruncher.Preprocessors.Coffee.CoffeeScriptPreprocessor' Cruncher.Preprocessors.Less.DotLessPreprocessor' Cruncher.Preprocessors.ResourcePreprocessor' Cruncher.Preprocessors.IPreprocessor' Cruncher.Preprocessors.Sass.SassPreprocessor
-Cruncher,CruncherOptions,0,0,7,0,0,33,0,0,0,-1,0,7,,Cruncher.JavaScriptCruncher' Cruncher.CruncherBase' Cruncher.CssCruncher' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor' Cruncher.Preprocessors.Less.DotLessPreprocessor' Cruncher.Preprocessors.Sass.SassPreprocessor
-Cruncher,CssCruncher,3,6,0,0,3,179,14,0,1,0.5,8,1,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor' Cruncher.CruncherOptions' Cruncher.Compression.CssMinifier' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.CruncherBase' Cruncher.Preprocessors.IPreprocessor' Cruncher.Preprocessors.PreprocessorManager' Cruncher.Helpers.ResourceHelper,Cruncher.CssProcessor
-Cruncher,CruncherBundler,4,4,0,0,4,146,8,0,0,0.5,5,0,Cruncher.CssProcessor' Cruncher.JavaScriptProcessor' Cruncher.Helpers.AsyncHelper' Cruncher.Helpers.ResourceHelper' Cruncher.JavaScriptLoadBehaviour,
+Cruncher.Helpers,AsyncDuplicateLock,1,3,0,0,2,177,4,0,0,0,2,2,Cruncher.Helpers.RefCounted<T>' Cruncher.Helpers.Releaser,Cruncher.CssProcessor' Cruncher.JavaScriptProcessor
+Cruncher.Helpers,RefCounted<T>,0,1,2,0,1,22,1,0,0,-1,0,1,,Cruncher.Helpers.AsyncDuplicateLock
+Cruncher.Helpers,Releaser,2,3,0,0,2,83,6,0,0,0.67,0,1,,Cruncher.Helpers.AsyncDuplicateLock
+Cruncher.Helpers,ResourceHelper,1,4,0,0,4,236,21,0,0,0.75,2,5,Cruncher.Caching.CacheManager' Cruncher.Configuration.CruncherConfiguration,Cruncher.CssCruncher' Cruncher.JavaScriptCruncher' Cruncher.CruncherBundler' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor
+Cruncher,JavaScriptCruncher,2,4,0,0,2,126,11,0,1,0.75,5,1,Cruncher.Helpers.ResourceHelper' Cruncher.CruncherBase' Cruncher.CruncherOptions' Cruncher.Compression.JavaScriptMinifier' Cruncher.Compression.VariableMinification,Cruncher.JavaScriptProcessor
+Cruncher,CruncherBase,1,11,2,0,3,176,17,2,0,0.36,3,7,Cruncher.CruncherOptions' Cruncher.RemoteFile' Cruncher.Preprocessors.PreprocessorManager,Cruncher.CssCruncher' Cruncher.JavaScriptCruncher' Cruncher.Preprocessors.Coffee.CoffeeScriptPreprocessor' Cruncher.Preprocessors.Less.DotLessPreprocessor' Cruncher.Preprocessors.Sass.SassPreprocessor' Cruncher.Preprocessors.ResourcePreprocessor' Cruncher.Preprocessors.IPreprocessor
+Cruncher,CruncherOptions,0,0,7,0,0,33,0,0,0,-1,0,5,,Cruncher.CssProcessor' Cruncher.JavaScriptCruncher' Cruncher.CssCruncher' Cruncher.CruncherBase' Cruncher.JavaScriptProcessor
+Cruncher,CssCruncher,3,6,0,0,3,179,14,0,1,0.67,7,1,Cruncher.Helpers.ResourceHelper' Cruncher.CruncherBase' Cruncher.CruncherOptions' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor' Cruncher.Preprocessors.PreprocessorManager' Cruncher.Compression.CssMinifier,Cruncher.CssProcessor
+Cruncher,CruncherBundler,4,4,0,0,4,146,8,0,0,0.5,5,0,Cruncher.Helpers.AsyncHelper' Cruncher.Helpers.ResourceHelper' Cruncher.JavaScriptLoadBehaviour' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor,
 Cruncher,JavaScriptLoadBehaviour,0,0,0,0,0,18,0,0,0,-1,0,1,,Cruncher.CruncherBundler
-Cruncher,JavaScriptProcessor,1,1,0,0,1,112,2,0,1,0,7,1,Cruncher.Helpers.AsyncDuplicateLock' Cruncher.CruncherOptions' Cruncher.JavaScriptCruncher' Cruncher.Caching.CacheManager' Cruncher.Configuration.CruncherConfiguration' Cruncher.Preprocessors.PreprocessorManager' Cruncher.Helpers.ResourceHelper,Cruncher.CruncherBundler
-Cruncher,CssProcessor,1,1,0,0,1,111,2,0,1,0,8,1,Cruncher.Helpers.AsyncDuplicateLock' Cruncher.CruncherOptions' Cruncher.CssCruncher' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Caching.CacheManager' Cruncher.Configuration.CruncherConfiguration' Cruncher.Preprocessors.PreprocessorManager' Cruncher.Helpers.ResourceHelper,Cruncher.CruncherBundler
-Cruncher,ProcessorBase,0,2,0,0,0,46,5,2,0,-1,4,0,Cruncher.Configuration.WhiteListElementCollection' Cruncher.Configuration.SafeUrl' Cruncher.Configuration.CruncherConfiguration' Cruncher.Caching.CacheManager,
-Cruncher,RemoteFile,1,4,3,0,0,144,10,0,0,0.5,0,1,,Cruncher.CruncherBase
-Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerOptions,0,1,4,0,1,40,1,0,0,-1,0,5,,Cruncher.CssCruncher' Cruncher.CssProcessor' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerProcessor' Cruncher.Configuration.CruncherConfiguration
-Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerPostprocessor,0,1,0,0,1,28,2,0,0,-1,3,1,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Configuration.CruncherConfiguration' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerProcessor,Cruncher.CssCruncher
-Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerProcessingException,0,2,0,0,2,20,2,0,0,-1,0,0,,
-Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerProcessor,7,7,0,0,3,188,13,0,0,0.29,1,1,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor
-Cruncher.Preprocessors.Coffee,CoffeeScriptCompilingException,0,2,0,0,2,20,2,0,0,-1,0,0,,
-Cruncher.Preprocessors.Coffee,CoffeeScriptCompiler,7,6,0,0,3,172,12,0,0,0.33,0,1,,Cruncher.Preprocessors.Coffee.CoffeeScriptPreprocessor
-Cruncher.Preprocessors.Coffee,CoffeeScriptPreprocessor,0,1,1,0,1,22,1,0,1,-1,3,0,Cruncher.Configuration.CruncherConfiguration' Cruncher.Preprocessors.Coffee.CoffeeScriptCompiler' Cruncher.CruncherBase,
-Cruncher.Preprocessors.Less,LessCompilingException,0,2,0,0,2,21,2,0,0,-1,0,0,,
+Cruncher,JavaScriptProcessor,1,1,0,0,1,112,12,0,1,0,8,1,Cruncher.Caching.CacheManager' Cruncher.Helpers.AsyncDuplicateLock' Cruncher.Helpers.ResourceHelper' Cruncher.JavaScriptCruncher' Cruncher.CruncherOptions' Cruncher.ProcessorBase' Cruncher.Preprocessors.PreprocessorManager' Cruncher.Configuration.CruncherConfiguration,Cruncher.CruncherBundler
+Cruncher,CssProcessor,1,1,0,0,1,111,12,0,1,0,9,1,Cruncher.Caching.CacheManager' Cruncher.Helpers.AsyncDuplicateLock' Cruncher.Helpers.ResourceHelper' Cruncher.CruncherOptions' Cruncher.CssCruncher' Cruncher.ProcessorBase' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Preprocessors.PreprocessorManager' Cruncher.Configuration.CruncherConfiguration,Cruncher.CruncherBundler
+Cruncher,ProcessorBase,0,2,0,0,0,46,5,2,0,-1,5,2,Cruncher.Caching.CacheManager' Cruncher.Configuration.CruncherConfiguration' Cruncher.Configuration.CruncherSecuritySection' Cruncher.Configuration.WhiteListElementCollection' Cruncher.Configuration.SafeUrl,Cruncher.JavaScriptProcessor' Cruncher.CssProcessor
+Cruncher,RemoteFile,1,4,3,0,0,144,11,0,0,0.5,0,1,,Cruncher.CruncherBase
+Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerOptions,0,1,4,0,1,40,1,0,0,-1,0,5,,Cruncher.CssCruncher' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerProcessor' Cruncher.CssProcessor' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor' Cruncher.Configuration.CruncherConfiguration
+Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerPostprocessor,0,1,0,0,1,28,2,0,0,-1,3,1,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerProcessor' Cruncher.Configuration.CruncherConfiguration,Cruncher.CssCruncher
+Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerProcessingException,0,2,0,0,2,20,2,0,0,-1,0,1,,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerProcessor
+Cruncher.Postprocessors.AutoPrefixer,AutoPrefixerProcessor,7,7,0,0,3,188,14,0,0,0.29,2,1,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerProcessingException,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor
+Cruncher.Preprocessors.Coffee,CoffeeScriptCompilingException,0,2,0,0,2,20,2,0,0,-1,0,1,,Cruncher.Preprocessors.Coffee.CoffeeScriptCompiler
+Cruncher.Preprocessors.Coffee,CoffeeScriptCompiler,7,6,0,0,3,172,13,0,0,0.33,1,1,Cruncher.Preprocessors.Coffee.CoffeeScriptCompilingException,Cruncher.Preprocessors.Coffee.CoffeeScriptPreprocessor
+Cruncher.Preprocessors.Coffee,CoffeeScriptPreprocessor,0,1,1,0,1,22,1,0,1,-1,4,0,Cruncher.CruncherBase' Cruncher.Preprocessors.Coffee.CoffeeScriptCompiler' Cruncher.Preprocessors.IPreprocessor' Cruncher.Configuration.CruncherConfiguration,
+Cruncher.Preprocessors.Less,LessCompilingException,0,2,0,0,2,21,2,0,0,-1,0,1,,Cruncher.Preprocessors.Less.DotLessPreprocessor
 Cruncher.Preprocessors.Less,DotLessPathResolver,2,2,2,0,2,76,4,0,0,1,0,1,,Cruncher.Preprocessors.Less.DotLessPreprocessor
-Cruncher.Preprocessors.Less,DotLessPreprocessor,0,1,1,0,1,50,5,0,1,-1,3,0,Cruncher.Preprocessors.Less.DotLessPathResolver' Cruncher.CruncherOptions' Cruncher.CruncherBase,
-Cruncher.Preprocessors,PreprocessorManager,1,4,3,0,0,129,13,0,0,0,1,4,Cruncher.Preprocessors.IPreprocessor,Cruncher.CruncherBase' Cruncher.CssCruncher' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor
-Cruncher.Preprocessors,ResourcePreprocessor,1,5,1,0,1,164,13,0,1,0,1,0,Cruncher.CruncherBase,
-Cruncher.Preprocessors,IPreprocessor,0,1,1,0,0,15,1,4,0,-1,1,3,Cruncher.CruncherBase,Cruncher.CruncherBase' Cruncher.CssCruncher' Cruncher.Preprocessors.PreprocessorManager
+Cruncher.Preprocessors.Less,DotLessPreprocessor,0,1,1,0,1,50,5,0,1,-1,4,0,Cruncher.CruncherBase' Cruncher.Preprocessors.Less.LessCompilingException' Cruncher.Preprocessors.Less.DotLessPathResolver' Cruncher.Preprocessors.IPreprocessor,
+Cruncher.Preprocessors,PreprocessorManager,1,4,3,0,0,129,13,0,0,0,1,4,Cruncher.Preprocessors.IPreprocessor,Cruncher.CssCruncher' Cruncher.CruncherBase' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor
+Cruncher.Preprocessors,ResourcePreprocessor,1,5,1,0,1,164,14,0,1,0,2,0,Cruncher.CruncherBase' Cruncher.Preprocessors.IPreprocessor,
+Cruncher.Preprocessors,IPreprocessor,0,1,1,0,0,15,1,4,0,-1,1,5,Cruncher.CruncherBase,Cruncher.Preprocessors.Coffee.CoffeeScriptPreprocessor' Cruncher.Preprocessors.Sass.SassPreprocessor' Cruncher.Preprocessors.ResourcePreprocessor' Cruncher.Preprocessors.Less.DotLessPreprocessor' Cruncher.Preprocessors.PreprocessorManager
 Cruncher.Compression,ColorNamesRange,0,0,0,0,0,17,0,0,0,-1,0,1,,Cruncher.Compression.CssMinifier
-Cruncher.Compression,CssMinifier,1,3,3,0,2,78,7,0,0,0.67,1,1,Cruncher.Compression.ColorNamesRange,Cruncher.CssCruncher
-Cruncher.Compression,JavaScriptMinifier,1,3,5,0,2,111,7,0,0,0.67,1,1,Cruncher.Compression.VariableMinification,Cruncher.JavaScriptCruncher
+Cruncher.Compression,CssMinifier,1,3,3,0,2,78,8,0,0,0.67,1,1,Cruncher.Compression.ColorNamesRange,Cruncher.CssCruncher
+Cruncher.Compression,JavaScriptMinifier,1,3,5,0,2,111,8,0,0,0.67,1,1,Cruncher.Compression.VariableMinification,Cruncher.JavaScriptCruncher
 Cruncher.Compression,VariableMinification,0,0,0,0,0,16,0,0,0,-1,0,2,,Cruncher.JavaScriptCruncher' Cruncher.Compression.JavaScriptMinifier
-Cruncher.Preprocessors.Sass,SassAndScssCompilingException,0,2,0,0,2,20,2,0,0,-1,0,0,,
-Cruncher.Preprocessors.Sass,SassCompiler,2,2,0,0,1,69,3,0,0,0,1,1,Cruncher.Preprocessors.Sass.CompilerMode,Cruncher.Preprocessors.Sass.SassPreprocessor
+Cruncher.Preprocessors.Sass,SassAndScssCompilingException,0,2,0,0,2,20,2,0,0,-1,0,1,,Cruncher.Preprocessors.Sass.SassCompiler
+Cruncher.Preprocessors.Sass,SassCompiler,2,2,0,0,1,69,3,0,0,0,2,1,Cruncher.Preprocessors.Sass.SassAndScssCompilingException' Cruncher.Preprocessors.Sass.CompilerMode,Cruncher.Preprocessors.Sass.SassPreprocessor
 Cruncher.Preprocessors.Sass,CompilerMode,0,0,0,0,0,12,0,0,0,-1,0,1,,Cruncher.Preprocessors.Sass.SassCompiler
-Cruncher.Preprocessors.Sass,SassPreprocessor,1,2,1,0,1,74,8,0,1,0,3,0,Cruncher.Preprocessors.Sass.SassCompiler' Cruncher.CruncherOptions' Cruncher.CruncherBase,
-Cruncher.Configuration,CruncherConfiguration,7,4,11,0,0,201,5,0,0,0.75,4,6,Cruncher.Configuration.CruncherSecuritySection' Cruncher.Configuration.CruncherProcessingSection' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Configuration.AutoPrefixerElement,Cruncher.Helpers.ResourceHelper' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor' Cruncher.ProcessorBase' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor' Cruncher.Preprocessors.Coffee.CoffeeScriptPreprocessor
-Cruncher.Configuration,CruncherProcessingSection,0,1,4,0,1,207,2,0,0,-1,0,1,,Cruncher.Configuration.CruncherConfiguration
-Cruncher.Configuration,VirtualPathsElement,0,0,2,0,0,41,0,0,0,-1,0,0,,
-Cruncher.Configuration,PhysicalFilesElement,0,0,2,0,0,38,0,0,0,-1,0,0,,
-Cruncher.Configuration,AutoPrefixerElement,0,0,4,0,0,52,0,0,0,-1,0,1,,Cruncher.Configuration.CruncherConfiguration
-Cruncher.Configuration,CruncherSecuritySection,0,1,4,0,1,148,2,0,0,-1,0,1,,Cruncher.Configuration.CruncherConfiguration
-Cruncher.Configuration,WhiteListElementCollection,0,2,0,0,0,42,2,0,0,-1,1,1,Cruncher.Configuration.SafeUrl,Cruncher.ProcessorBase
-Cruncher.Configuration,SafeUrl,0,0,2,0,0,23,0,0,0,-1,0,2,,Cruncher.ProcessorBase' Cruncher.Configuration.WhiteListElementCollection
+Cruncher.Preprocessors.Sass,SassPreprocessor,1,2,1,0,1,74,8,0,1,0,3,0,Cruncher.CruncherBase' Cruncher.Preprocessors.IPreprocessor' Cruncher.Preprocessors.Sass.SassCompiler,
+Cruncher.Configuration,CruncherConfiguration,7,4,11,0,0,201,5,0,0,0.75,4,6,Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerOptions' Cruncher.Configuration.CruncherProcessingSection' Cruncher.Configuration.CruncherSecuritySection' Cruncher.Configuration.WhiteListElementCollection,Cruncher.ProcessorBase' Cruncher.Preprocessors.Coffee.CoffeeScriptPreprocessor' Cruncher.Postprocessors.AutoPrefixer.AutoPrefixerPostprocessor' Cruncher.Helpers.ResourceHelper' Cruncher.JavaScriptProcessor' Cruncher.CssProcessor
+Cruncher.Configuration,CruncherProcessingSection,0,1,4,0,1,207,2,0,0,-1,3,1,Cruncher.Configuration.VirtualPathsElement' Cruncher.Configuration.PhysicalFilesElement' Cruncher.Configuration.AutoPrefixerElement,Cruncher.Configuration.CruncherConfiguration
+Cruncher.Configuration,VirtualPathsElement,0,0,2,0,0,41,0,0,0,-1,0,1,,Cruncher.Configuration.CruncherProcessingSection
+Cruncher.Configuration,PhysicalFilesElement,0,0,2,0,0,38,0,0,0,-1,0,1,,Cruncher.Configuration.CruncherProcessingSection
+Cruncher.Configuration,AutoPrefixerElement,0,0,4,0,0,52,0,0,0,-1,0,1,,Cruncher.Configuration.CruncherProcessingSection
+Cruncher.Configuration,CruncherSecuritySection,0,1,4,0,1,148,2,0,0,-1,2,2,Cruncher.Configuration.WhiteListElementCollection' Cruncher.Configuration.SafeUrl,Cruncher.ProcessorBase' Cruncher.Configuration.CruncherConfiguration
+Cruncher.Configuration,WhiteListElementCollection,0,2,0,0,0,42,2,0,0,-1,0,3,,Cruncher.Configuration.CruncherConfiguration' Cruncher.ProcessorBase' Cruncher.Configuration.CruncherSecuritySection
+Cruncher.Configuration,SafeUrl,0,0,2,0,0,23,0,0,0,-1,0,2,,Cruncher.ProcessorBase' Cruncher.Configuration.CruncherSecuritySection

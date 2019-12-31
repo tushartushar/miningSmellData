@@ -1,6 +1,7 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-Wyam.Images,AnchorPosition,0,0,0,0,0,12,0,0,0,-1,0,2,,Wyam.Images.Image' Wyam.Images.ImageInstruction
-Wyam.Images,Image,2,20,1,0,17,411,32,0,1,0.15,11,0,Wyam.Images.ImageInstruction' Wyam.Images.AnchorPosition' Wyam.Images.ImageFilter' Wyam.Common.IO.FilePath' Wyam.Common.Meta.Keys' Wyam.Common.IO.IReadOnlyFileSystem' Wyam.Common.Execution.IExecutionContext' Wyam.Common.IO.DirectoryPath' Wyam.Common.Tracing.Trace' Wyam.Common.Documents.IDocument' Wyam.Images.HueInstruction,
-Wyam.Images,ImageFilter,0,0,0,0,0,13,0,0,0,-1,0,2,,Wyam.Images.Image' Wyam.Images.ImageInstruction
-Wyam.Images,HueInstruction,0,0,2,0,0,5,0,0,0,-1,0,2,,Wyam.Images.Image' Wyam.Images.ImageInstruction
-Wyam.Images,ImageInstruction,0,4,18,0,4,133,20,0,0,-1,3,1,Wyam.Images.HueInstruction' Wyam.Images.ImageFilter' Wyam.Images.AnchorPosition,Wyam.Images.Image
+Wyam.Images.Operations,ActionOperation,2,3,0,0,3,16,3,0,1,0,1,1,Wyam.Images.Operations.IImageOperation,Wyam.Images.Image
+Wyam.Images.Operations,IImageOperation,0,2,0,0,0,5,2,2,0,-1,0,4,,Wyam.Images.Operations.ActionOperation' Wyam.Images.Operations.ResizeOperation' Wyam.Images.ImageOperations' Wyam.Images.Image
+Wyam.Images.Operations,OutputAction,2,3,0,0,3,16,3,0,0,0,1,2,Wyam.Images.Image,Wyam.Images.ImageOperations' Wyam.Images.Image
+Wyam.Images.Operations,ResizeOperation,4,4,0,0,3,60,11,0,1,0,1,1,Wyam.Images.Operations.IImageOperation,Wyam.Images.Image
+Wyam.Images,Image,1,19,0,0,19,290,21,0,1,0,5,1,Wyam.Images.Operations.ActionOperation' Wyam.Images.Operations.IImageOperation' Wyam.Images.Operations.OutputAction' Wyam.Images.Operations.ResizeOperation' Wyam.Images.ImageOperations,Wyam.Images.Operations.OutputAction
+Wyam.Images,ImageOperations,0,1,2,0,1,6,1,0,0,-1,2,1,Wyam.Images.Operations.IImageOperation' Wyam.Images.Operations.OutputAction,Wyam.Images.Image

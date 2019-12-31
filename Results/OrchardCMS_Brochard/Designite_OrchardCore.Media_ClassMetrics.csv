@@ -1,21 +1,50 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-OrchardCore.Media,AdminMenu,0,2,1,0,2,23,3,0,1,-1,2,0,OrchardCore.Environment.Navigation.NavigationBuilder' OrchardCore.Media.Permissions,
-OrchardCore.Media,Permissions,2,2,0,2,2,33,2,0,1,0,2,2,OrchardCore.Security.Permissions.Permission' OrchardCore.Security.Permissions.PermissionStereotype,OrchardCore.Media.AdminMenu' OrchardCore.Media.Controllers.AdminController
-OrchardCore.Media,Startup,3,4,0,1,2,123,5,0,2,0.75,3,0,OrchardCore.FileStorage.FileSystem.FileSystemStore' OrchardCore.Media.Services.MediaFileStore' OrchardCore.Environment.Shell.ShellOptions,
-OrchardCore.Media.Controllers,AdminController,3,11,0,0,11,184,32,0,0,0.18,2,0,OrchardCore.Media.IMediaFileStore' OrchardCore.Media.Permissions,
-OrchardCore.Media.Drivers,MediaFieldDisplayDriver,0,4,1,0,4,48,7,0,0,-1,8,0,OrchardCore.DisplayManagement.Views.ShapeResult' OrchardCore.ContentManagement.Display.Models.BuildFieldDisplayContext' OrchardCore.Media.Fields.MediaField' OrchardCore.ContentManagement.Display.Models.BuildFieldEditorContext' OrchardCore.Media.ViewModels.EditMediaFieldViewModel' OrchardCore.ContentManagement.Metadata.Models.ContentPartFieldDefinition' OrchardCore.ContentManagement.Display.Models.UpdateFieldEditorContext' OrchardCore.DisplayManagement.Views.IDisplayResult,
-OrchardCore.Media.Fields,MediaField,0,0,1,0,0,4,0,0,3,-1,0,1,,OrchardCore.Media.Drivers.MediaFieldDisplayDriver
-OrchardCore.Media.Filters,MediaUrlFilter,1,2,0,0,2,14,2,0,1,0,1,0,OrchardCore.Media.IMediaFileStore,
-OrchardCore.Media.Filters,ImageTagFilter,0,1,0,0,1,14,2,0,1,-1,0,0,,
-OrchardCore.Media.Filters,ResizeUrlFilter,0,1,0,0,1,27,5,0,1,-1,0,0,,
-OrchardCore.Media.Processing,MediaFileSystemResolver,2,3,2,0,3,42,4,0,0,0,1,0,OrchardCore.Media.IMediaFileStore,
-OrchardCore.Media.Recipes,MediaStep,2,2,0,0,2,27,4,0,1,0,2,0,OrchardCore.Media.IMediaFileStore' OrchardCore.Recipes.Models.RecipeExecutionContext,
-OrchardCore.Media.Recipes,MediaStepModel,0,0,1,0,0,4,0,0,0,-1,0,0,,
-OrchardCore.Media.Recipes,MediaStepFile,0,0,2,0,0,8,0,0,0,-1,0,0,,
-OrchardCore.Media.RemotePublishing,MediaMetaWeblogDriver,0,1,0,0,1,7,1,0,2,-1,0,0,,
-OrchardCore.Media.RemotePublishing,RemotePublishingStartup,0,1,0,0,1,8,1,0,2,-1,0,0,,
-OrchardCore.Media.Services,MediaFileStore,2,14,0,0,14,68,15,0,2,0,0,2,,OrchardCore.Media.Startup' OrchardCore.Media.Azure.Startup
-OrchardCore.Media.Settings,MediaFieldSettings,0,0,3,0,0,6,0,0,0,-1,0,1,,OrchardCore.Media.Settings.MediaFieldSettingsDriver
-OrchardCore.Media.Settings,MediaFieldSettingsDriver,0,2,0,0,2,15,2,0,2,-1,5,0,OrchardCore.ContentManagement.Metadata.Models.ContentPartFieldDefinition' OrchardCore.Media.Settings.MediaFieldSettings' OrchardCore.ContentTypes.Editors.UpdatePartFieldEditorContext' OrchardCore.ContentManagement.Metadata.Builders.ContentPartFieldDefinitionBuilder' OrchardCore.DisplayManagement.Views.IDisplayResult,
-OrchardCore.Media.ViewModels,DisplayMediaFieldViewModel,0,0,3,0,0,6,0,0,0,-1,0,0,,
-OrchardCore.Media.ViewModels,EditMediaFieldViewModel,0,0,4,0,0,8,0,0,0,-1,0,1,,OrchardCore.Media.Drivers.MediaFieldDisplayDriver
+OrchardCore.Media,AdminMenu,0,2,1,0,2,24,3,0,1,-1,1,2,OrchardCore.Media.Permissions,OrchardCore.Media.MediaCacheAdminMenu' OrchardCore.Media.Startup
+OrchardCore.Media,MediaCacheAdminMenu,0,2,1,0,2,22,3,0,1,-1,2,1,OrchardCore.Media.AdminMenu' OrchardCore.Media.MediaCachePermissions,OrchardCore.Media.MediaCacheStartup
+OrchardCore.Media,Migrations,1,2,0,0,2,15,2,0,2,0,2,1,OrchardCore.Media.Fields.MediaField' OrchardCore.Media.Settings.MediaFieldSettings,OrchardCore.Media.Startup
+OrchardCore.Media,Permissions,3,2,0,3,2,40,2,0,0,0,0,4,,OrchardCore.Media.Startup' OrchardCore.Media.Services.AttachedMediaFieldsFolderAuthorizationHandler' OrchardCore.Media.AdminMenu' OrchardCore.Media.Controllers.AdminController
+OrchardCore.Media,MediaCachePermissions,1,2,0,1,2,19,2,0,0,0,0,3,,OrchardCore.Media.MediaCacheAdminMenu' OrchardCore.Media.MediaCacheStartup' OrchardCore.Media.Controllers.MediaCacheController
+OrchardCore.Media,Startup,1,5,0,0,3,123,6,0,0,0.8,25,0,OrchardCore.Media.AdminMenu' OrchardCore.Media.Migrations' OrchardCore.Media.Permissions' OrchardCore.Media.Controllers.AdminController' OrchardCore.Media.Controllers.MediaCacheController' OrchardCore.Media.Drivers.MediaFieldDisplayDriver' OrchardCore.Media.Fields.MediaField' OrchardCore.Media.Filters.MediaUrlFilter' OrchardCore.Media.Filters.ImageTagFilter' OrchardCore.Media.Filters.ResizeUrlFilter' OrchardCore.Media.Handlers.AttachedMediaFieldContentHandler' OrchardCore.Media.Processing.ImageVersionProcessor' OrchardCore.Media.Processing.MediaImageSharpConfiguration' OrchardCore.Media.Processing.MediaResizingFileProvider' OrchardCore.Media.Recipes.MediaStep' OrchardCore.Media.Services.AttachedMediaFieldFileService' OrchardCore.Media.Services.AttachedMediaFieldsFolderAuthorizationHandler' OrchardCore.Media.Services.MediaFileProvider' OrchardCore.Media.Services.MediaFileStoreResolverMiddleware' OrchardCore.Media.Services.MediaOptionsConfiguration' OrchardCore.Media.Services.TempDirCleanerService' OrchardCore.Media.Settings.MediaFieldSettingsDriver' OrchardCore.Media.TagHelpers.ImageResizeTagHelper' OrchardCore.Media.TagHelpers.ImageTagHelper' OrchardCore.Media.ViewModels.DisplayMediaFieldViewModel,
+OrchardCore.Media,MediaCacheStartup,0,1,0,0,1,9,1,0,0,-1,2,0,OrchardCore.Media.MediaCacheAdminMenu' OrchardCore.Media.MediaCachePermissions,
+OrchardCore.Media,DeploymentStartup,0,1,0,0,1,10,1,0,0,-1,3,0,OrchardCore.Media.Deployment.MediaDeploymentSource' OrchardCore.Media.Deployment.MediaDeploymentStep' OrchardCore.Media.Deployment.MediaDeploymentStepDriver,
+OrchardCore.Media.Controllers,AdminController,6,14,0,0,14,332,58,0,0,0.14,1,1,OrchardCore.Media.Permissions,OrchardCore.Media.Startup
+OrchardCore.Media.Controllers,MediaCacheController,4,3,0,0,3,57,7,0,0,0,2,1,OrchardCore.Media.MediaCachePermissions' OrchardCore.Media.ViewModels.MediaCacheViewModel,OrchardCore.Media.Startup
+OrchardCore.Media.Deployment,MediaDeploymentSource,1,2,0,0,2,56,6,0,1,0,1,1,OrchardCore.Media.Deployment.MediaDeploymentStep,OrchardCore.Media.DeploymentStartup
+OrchardCore.Media.Deployment,MediaDeploymentStep,0,1,3,0,1,10,1,0,1,-1,0,3,,OrchardCore.Media.Deployment.MediaDeploymentStepDriver' OrchardCore.Media.Deployment.MediaDeploymentSource' OrchardCore.Media.DeploymentStartup
+OrchardCore.Media.Deployment,MediaDeploymentStepDriver,1,5,0,0,4,62,7,0,0,0.4,3,1,OrchardCore.Media.Deployment.MediaDeploymentStep' OrchardCore.Media.ViewModels.MediaDeploymentStepViewModel' OrchardCore.Media.ViewModels.MediaStoreEntryViewModel,OrchardCore.Media.DeploymentStartup
+OrchardCore.Media.Drivers,MediaFieldDisplayDriver,1,4,1,0,4,71,8,0,0,0.5,6,1,OrchardCore.Media.Fields.MediaField' OrchardCore.Media.Services.AttachedMediaFieldFileService' OrchardCore.Media.Settings.MediaFieldSettings' OrchardCore.Media.ViewModels.DisplayMediaFieldViewModel' OrchardCore.Media.ViewModels.EditMediaFieldViewModel' OrchardCore.Media.ViewModels.EditMediaFieldItemInfo,OrchardCore.Media.Startup
+OrchardCore.Media.Fields,MediaField,0,0,1,0,0,4,0,0,3,-1,0,8,,OrchardCore.Media.Settings.MediaFieldSettingsDriver' OrchardCore.Media.ViewModels.DisplayMediaFieldViewModel' OrchardCore.Media.ViewModels.EditMediaFieldViewModel' OrchardCore.Media.Migrations' OrchardCore.Media.GraphQL.Startup' OrchardCore.Media.GraphQL.MediaFieldQueryObjectType' OrchardCore.Media.Startup' OrchardCore.Media.Drivers.MediaFieldDisplayDriver
+OrchardCore.Media.Filters,MediaUrlFilter,1,2,0,0,2,14,2,0,1,0,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Filters,ImageTagFilter,0,1,0,0,1,14,2,0,1,-1,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Filters,ResizeUrlFilter,0,1,0,0,1,27,5,0,1,-1,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.GraphQL,MediaAssetObjectType,0,1,0,0,1,19,1,0,0,-1,0,2,,OrchardCore.Media.GraphQL.Startup' OrchardCore.Media.GraphQL.MediaAssetQuery
+OrchardCore.Media.GraphQL,MediaAssetQuery,1,3,0,0,2,47,4,0,1,0.67,1,1,OrchardCore.Media.GraphQL.MediaAssetObjectType,OrchardCore.Media.GraphQL.Startup
+OrchardCore.Media.GraphQL,MediaFieldQueryObjectType,0,1,0,0,1,24,1,0,0,-1,1,1,OrchardCore.Media.Fields.MediaField,OrchardCore.Media.GraphQL.Startup
+OrchardCore.Media.GraphQL,Startup,0,1,0,0,1,10,1,0,0,-1,4,0,OrchardCore.Media.Fields.MediaField' OrchardCore.Media.GraphQL.MediaAssetObjectType' OrchardCore.Media.GraphQL.MediaAssetQuery' OrchardCore.Media.GraphQL.MediaFieldQueryObjectType,
+OrchardCore.Media.Handlers,AttachedMediaFieldContentHandler,1,2,0,0,2,15,3,0,2,0,1,1,OrchardCore.Media.Services.AttachedMediaFieldFileService,OrchardCore.Media.Startup
+OrchardCore.Media.Processing,ResizeMode,0,0,0,0,0,10,0,0,0,-1,0,2,,OrchardCore.Media.TagHelpers.ImageResizeTagHelper' OrchardCore.Media.Processing.ImageSharpUrlFormatter
+OrchardCore.Media.Processing,ImageSharpUrlFormatter,0,1,0,0,1,25,5,0,0,-1,1,1,OrchardCore.Media.Processing.ResizeMode,OrchardCore.Media.TagHelpers.ImageResizeTagHelper
+OrchardCore.Media.Processing,ImageVersionProcessor,1,1,1,0,1,7,1,0,0,0,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Processing,MediaImageSharpConfiguration,1,2,0,0,2,36,2,0,0,0,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Processing,MediaResizingFileProvider,5,4,1,0,3,76,11,0,0,0,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Recipes,MediaStep,1,2,0,0,2,70,7,0,1,0,2,1,OrchardCore.Media.Recipes.MediaStepModel' OrchardCore.Media.Recipes.MediaStepFile,OrchardCore.Media.Startup
+OrchardCore.Media.Recipes,MediaStepModel,0,0,1,0,0,7,0,0,0,-1,0,1,,OrchardCore.Media.Recipes.MediaStep
+OrchardCore.Media.Recipes,MediaStepFile,0,0,4,0,0,27,0,0,0,-1,0,1,,OrchardCore.Media.Recipes.MediaStep
+OrchardCore.Media.RemotePublishing,MediaMetaWeblogDriver,0,1,0,0,1,7,1,0,2,-1,0,1,,OrchardCore.Media.RemotePublishing.RemotePublishingStartup
+OrchardCore.Media.RemotePublishing,RemotePublishingStartup,0,1,0,0,1,8,1,0,0,-1,1,0,OrchardCore.Media.RemotePublishing.MediaMetaWeblogDriver,
+OrchardCore.Media.Services,AttachedMediaFieldFileService,3,11,2,0,4,119,19,0,0,0.27,1,5,OrchardCore.Media.ViewModels.EditMediaFieldItemInfo,OrchardCore.Media.Handlers.AttachedMediaFieldContentHandler' OrchardCore.Media.Services.TempDirCleanerService' OrchardCore.Media.Services.AttachedMediaFieldsFolderAuthorizationHandler' OrchardCore.Media.Drivers.MediaFieldDisplayDriver' OrchardCore.Media.Startup
+OrchardCore.Media.Services,AttachedMediaFieldsFolderAuthorizationHandler,5,4,0,0,1,59,9,0,0,0,2,1,OrchardCore.Media.Permissions' OrchardCore.Media.Services.AttachedMediaFieldFileService,OrchardCore.Media.Startup
+OrchardCore.Media.Services,MediaFileProvider,0,2,1,0,2,12,2,0,0,-1,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Services,MediaFileStoreResolverMiddleware,6,2,0,0,2,88,6,0,0,0,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Services,MediaOptionsConfiguration,8,2,0,0,2,60,2,0,0,0,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.Services,TempDirCleanerService,4,5,0,0,5,58,9,0,0,0.8,1,1,OrchardCore.Media.Services.AttachedMediaFieldFileService,OrchardCore.Media.Startup
+OrchardCore.Media.Settings,MediaFieldSettings,0,0,3,0,0,7,0,0,0,-1,0,3,,OrchardCore.Media.Migrations' OrchardCore.Media.Settings.MediaFieldSettingsDriver' OrchardCore.Media.Drivers.MediaFieldDisplayDriver
+OrchardCore.Media.Settings,MediaFieldSettingsDriver,0,2,0,0,2,15,2,0,2,-1,2,1,OrchardCore.Media.Fields.MediaField' OrchardCore.Media.Settings.MediaFieldSettings,OrchardCore.Media.Startup
+OrchardCore.Media.TagHelpers,ImageResizeTagHelper,4,1,4,0,1,33,3,0,0,0,2,1,OrchardCore.Media.Processing.ResizeMode' OrchardCore.Media.Processing.ImageSharpUrlFormatter,OrchardCore.Media.Startup
+OrchardCore.Media.TagHelpers,ImageTagHelper,5,2,3,0,2,43,4,0,0,0,0,1,,OrchardCore.Media.Startup
+OrchardCore.Media.ViewModels,DisplayMediaFieldViewModel,0,0,4,0,0,7,0,0,0,-1,1,2,OrchardCore.Media.Fields.MediaField,OrchardCore.Media.Startup' OrchardCore.Media.Drivers.MediaFieldDisplayDriver
+OrchardCore.Media.ViewModels,EditMediaFieldViewModel,0,0,5,0,0,10,0,0,0,-1,1,1,OrchardCore.Media.Fields.MediaField,OrchardCore.Media.Drivers.MediaFieldDisplayDriver
+OrchardCore.Media.ViewModels,EditMediaFieldItemInfo,0,0,3,0,0,8,0,0,0,-1,0,2,,OrchardCore.Media.Services.AttachedMediaFieldFileService' OrchardCore.Media.Drivers.MediaFieldDisplayDriver
+OrchardCore.Media.ViewModels,MediaCacheViewModel,0,0,1,0,0,4,0,0,0,-1,0,1,,OrchardCore.Media.Controllers.MediaCacheController
+OrchardCore.Media.ViewModels,MediaDeploymentStepViewModel,0,0,5,0,0,8,0,0,0,-1,1,1,OrchardCore.Media.ViewModels.MediaStoreEntryViewModel,OrchardCore.Media.Deployment.MediaDeploymentStepDriver
+OrchardCore.Media.ViewModels,MediaStoreEntryViewModel,0,0,4,0,0,7,0,0,0,-1,0,2,,OrchardCore.Media.ViewModels.MediaDeploymentStepViewModel' OrchardCore.Media.Deployment.MediaDeploymentStepDriver

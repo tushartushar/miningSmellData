@@ -1,30 +1,30 @@
 Namespace,Type,NOF,NOM,NOP,NOPF,NOPM,LOC,WMC,NC,DIT,LCOM,Fan-Out,Fan-In,Fan-Out types,Fan-In types
-dotless.Core.Abstractions,Clock,0,1,0,0,1,7,1,0,1,-1,0,0,,
-dotless.Core.Abstractions,Http,1,0,1,0,0,13,0,0,1,-1,0,0,,
-dotless.Core.Abstractions,IClock,0,1,0,0,0,4,1,1,0,-1,0,1,,dotless.Core.Response.CachedCssResponse
-dotless.Core.Abstractions,IHttp,0,0,1,0,0,4,0,1,0,-1,0,7,,dotless.Core.HandlerImpl' dotless.Core.Cache.HttpCache' dotless.Core.Loggers.AspNetTraceLogger' dotless.Core.Parameters.QueryStringParameterSource' dotless.Core.Response.CachedCssResponse' dotless.Core.Response.CssResponse' dotless.Test.Config.AspNetConfigurationFixture
-dotless.Core,AspNetContainerFactory,0,3,0,0,0,30,5,1,0,-1,0,1,,dotless.Test.Config.AspNetConfigurationFixture
-dotless.Core,AspNetHttpHandlerContainerFactory,0,1,0,0,0,10,2,0,1,-1,0,2,,dotless.Core.LessCssHttpHandlerBase' dotless.Test.Config.AspNetConfigurationFixture
-dotless.Core,HandlerImpl,4,2,0,4,2,21,2,0,0,0,2,0,dotless.Core.Abstractions.IHttp' dotless.Core.Response.IResponse,
-dotless.Core,LessWeb,0,2,0,0,2,15,3,0,0,-1,1,0,dotless.Core.configuration.WebConfigConfigurationLoader,
-dotless.Core,LessCssWithSessionHttpHandler,0,0,0,0,0,3,0,0,1,-1,0,0,,
-dotless.Core,LessCssHttpHandler,0,1,1,0,1,41,1,1,1,-1,0,0,,
-dotless.Core,LessCssHttpHandlerBase,2,1,2,0,0,25,1,2,0,0,1,0,dotless.Core.AspNetHttpHandlerContainerFactory,
-dotless.Core,LessCssHttpHandlerFactory,0,3,0,0,1,32,4,0,1,-1,0,1,,dotless.Test.Unit.HttpHandlerFixture
-dotless.Core.Cache,HttpCache,2,5,1,0,4,38,6,0,0,0,1,0,dotless.Core.Abstractions.IHttp,
+dotless.Core.Abstractions,Clock,0,1,0,0,1,7,1,0,1,-1,1,2,dotless.Core.Abstractions.IClock,dotless.Core.AspNetContainerFactory' dotless.Core.Response.CachedCssResponse
+dotless.Core.Abstractions,Http,1,0,1,0,0,13,0,0,1,-1,1,1,dotless.Core.Abstractions.IHttp,dotless.Core.AspNetContainerFactory
+dotless.Core.Abstractions,IClock,0,1,0,0,0,4,1,1,0,-1,0,3,,dotless.Core.AspNetContainerFactory' dotless.Core.Abstractions.Clock' dotless.Core.Response.CachedCssResponse
+dotless.Core.Abstractions,IHttp,0,0,1,0,0,4,0,1,0,-1,0,9,,dotless.Core.Abstractions.Http' dotless.Core.Loggers.AspNetTraceLogger' dotless.Core.Parameters.QueryStringParameterSource' dotless.Core.AspNetContainerFactory' dotless.Core.HandlerImpl' dotless.Core.Cache.HttpCache' dotless.Core.Response.CachedCssResponse' dotless.Core.Response.CssResponse' dotless.Core.LessCssHttpHandlerFactory
+dotless.Core,AspNetContainerFactory,0,3,0,0,0,30,5,1,1,-1,12,2,dotless.Core.Abstractions.Clock' dotless.Core.Abstractions.Http' dotless.Core.Abstractions.IClock' dotless.Core.Abstractions.IHttp' dotless.Core.HandlerImpl' dotless.Core.Cache.HttpCache' dotless.Core.Input.AspRelativePathResolver' dotless.Core.Input.AspServerPathResolver' dotless.Core.Loggers.AspResponseLogger' dotless.Core.Response.CachedCssResponse' dotless.Core.Response.CssResponse' dotless.Core.Response.IResponse,dotless.Core.AspNetHttpHandlerContainerFactory' dotless.Core.LessWeb
+dotless.Core,AspNetHttpHandlerContainerFactory,0,1,0,0,0,10,2,0,2,-1,2,1,dotless.Core.AspNetContainerFactory' dotless.Core.Parameters.QueryStringParameterSource,dotless.Core.LessCssHttpHandlerBase
+dotless.Core,HandlerImpl,4,2,0,4,2,21,2,0,0,0,2,2,dotless.Core.Abstractions.IHttp' dotless.Core.Response.IResponse,dotless.Core.AspNetContainerFactory' dotless.Core.LessCssHttpHandler
+dotless.Core,LessWeb,0,2,0,0,2,15,3,0,0,-1,2,0,dotless.Core.AspNetContainerFactory' dotless.Core.configuration.WebConfigConfigurationLoader,
+dotless.Core,LessCssWithSessionHttpHandler,0,0,0,0,0,3,0,0,1,-1,1,1,dotless.Core.LessCssHttpHandler,dotless.Core.LessCssHttpHandlerFactory
+dotless.Core,LessCssHttpHandler,0,1,1,0,1,41,1,1,1,-1,2,2,dotless.Core.HandlerImpl' dotless.Core.LessCssHttpHandlerBase,dotless.Core.LessCssWithSessionHttpHandler' dotless.Core.LessCssHttpHandlerFactory
+dotless.Core,LessCssHttpHandlerBase,2,1,2,0,0,25,1,2,0,0,2,2,dotless.Core.AspNetHttpHandlerContainerFactory' dotless.Core.configuration.WebConfigConfigurationLoader,dotless.Core.LessCssHttpHandler' dotless.Core.LessCssHttpHandlerFactory
+dotless.Core,LessCssHttpHandlerFactory,0,3,0,0,1,32,5,0,1,-1,4,0,dotless.Core.Abstractions.IHttp' dotless.Core.LessCssWithSessionHttpHandler' dotless.Core.LessCssHttpHandler' dotless.Core.LessCssHttpHandlerBase,
+dotless.Core.Cache,HttpCache,2,5,1,0,4,38,6,0,1,0,1,1,dotless.Core.Abstractions.IHttp,dotless.Core.AspNetContainerFactory
 dotless.Core.configuration,DotlessConfigurationSectionHandler,0,1,0,0,1,17,1,0,0,-1,1,0,dotless.Core.configuration.XmlConfigurationInterpreter,
-dotless.Core.configuration,IConfigurationManager,0,1,0,0,0,4,1,1,0,-1,0,1,,dotless.Core.configuration.WebConfigConfigurationLoader
-dotless.Core.configuration,ConfigurationManagerWrapper,0,1,0,0,1,7,1,0,1,-1,0,0,,
-dotless.Core.configuration,WebConfigConfigurationLoader,1,1,1,0,1,24,2,0,0,0,1,3,dotless.Core.configuration.IConfigurationManager,dotless.Core.LessWeb' dotless.Core.Parameters.QueryStringParameterSource' dotless.Test.HttpFixtureBase
-dotless.Core.configuration,XmlConfigurationInterpreter,0,6,0,0,1,141,23,0,0,-1,0,2,,dotless.Core.configuration.DotlessConfigurationSectionHandler' dotless.Test.Config.XmlConfigurationFixture
-dotless.Core.Input,AspRelativePathResolver,0,1,0,0,1,8,1,0,0,-1,0,0,,
-dotless.Core.Input,AspServerPathResolver,0,1,0,0,1,7,1,0,0,-1,0,0,,
-dotless.Core.Input,VirtualFileReader,0,3,1,0,3,29,3,0,0,-1,0,0,,
-dotless.Core.Loggers,AspNetTraceLogger,1,2,0,0,1,12,2,0,0,0,1,0,dotless.Core.Abstractions.IHttp,
-dotless.Core.Loggers,AspResponseLogger,0,3,1,0,2,16,3,0,0,-1,1,0,dotless.Core.Response.IResponse,
-dotless.Core.Parameters,QueryStringParameterSource,3,2,0,0,2,31,6,0,0,0,2,1,dotless.Core.Abstractions.IHttp' dotless.Core.configuration.WebConfigConfigurationLoader,dotless.Test.Unit.Parameters.ParameterSourceFixture
-dotless.Core.Response,CachedCssResponse,2,4,0,0,4,34,5,0,1,0.75,3,2,dotless.Core.Abstractions.IClock' dotless.Core.Abstractions.IHttp' dotless.Core.Response.CssResponse,dotless.Test.Config.AspNetConfigurationFixture' dotless.Test.Unit.Response.CachedCssResponseFixture
-dotless.Core.Response,CssResponse,1,5,1,1,4,70,9,1,1,0.4,3,3,dotless.Core.Abstractions.IHttp' dotless.Core.Response.QValueList' dotless.Core.Response.QValue,dotless.Core.Response.CachedCssResponse' dotless.Test.Config.AspNetConfigurationFixture' dotless.Test.Unit.Response.CssResponseFixture
-dotless.Core.Response,IResponse,0,2,1,0,0,15,2,1,0,-1,0,2,,dotless.Core.HandlerImpl' dotless.Core.Loggers.AspResponseLogger
+dotless.Core.configuration,IConfigurationManager,0,1,0,0,0,4,1,1,0,-1,0,2,,dotless.Core.configuration.WebConfigConfigurationLoader' dotless.Core.configuration.ConfigurationManagerWrapper
+dotless.Core.configuration,ConfigurationManagerWrapper,0,1,0,0,1,7,1,0,1,-1,1,1,dotless.Core.configuration.IConfigurationManager,dotless.Core.configuration.WebConfigConfigurationLoader
+dotless.Core.configuration,WebConfigConfigurationLoader,1,1,1,0,1,24,2,0,0,0,2,3,dotless.Core.configuration.IConfigurationManager' dotless.Core.configuration.ConfigurationManagerWrapper,dotless.Core.LessCssHttpHandlerBase' dotless.Core.LessWeb' dotless.Core.Parameters.QueryStringParameterSource
+dotless.Core.configuration,XmlConfigurationInterpreter,0,6,0,0,1,141,26,0,0,-1,0,1,,dotless.Core.configuration.DotlessConfigurationSectionHandler
+dotless.Core.Input,AspRelativePathResolver,0,1,0,0,1,8,1,0,1,-1,0,1,,dotless.Core.AspNetContainerFactory
+dotless.Core.Input,AspServerPathResolver,0,1,0,0,1,7,1,0,1,-1,0,1,,dotless.Core.AspNetContainerFactory
+dotless.Core.Input,VirtualFileReader,0,3,1,0,3,29,3,0,1,-1,0,0,,
+dotless.Core.Loggers,AspNetTraceLogger,1,2,0,0,1,12,2,0,1,1,1,0,dotless.Core.Abstractions.IHttp,
+dotless.Core.Loggers,AspResponseLogger,0,3,1,0,2,16,3,0,1,-1,1,1,dotless.Core.Response.IResponse,dotless.Core.AspNetContainerFactory
+dotless.Core.Parameters,QueryStringParameterSource,3,2,0,0,2,31,6,0,1,1,2,1,dotless.Core.Abstractions.IHttp' dotless.Core.configuration.WebConfigConfigurationLoader,dotless.Core.AspNetHttpHandlerContainerFactory
+dotless.Core.Response,CachedCssResponse,2,4,0,0,4,34,5,0,1,0.75,4,1,dotless.Core.Abstractions.Clock' dotless.Core.Abstractions.IClock' dotless.Core.Abstractions.IHttp' dotless.Core.Response.CssResponse,dotless.Core.AspNetContainerFactory
+dotless.Core.Response,CssResponse,1,5,1,1,4,70,10,1,1,0.4,4,2,dotless.Core.Abstractions.IHttp' dotless.Core.Response.IResponse' dotless.Core.Response.QValue' dotless.Core.Response.QValueList,dotless.Core.Response.CachedCssResponse' dotless.Core.AspNetContainerFactory
+dotless.Core.Response,IResponse,0,2,1,0,0,15,2,1,0,-1,0,4,,dotless.Core.HandlerImpl' dotless.Core.Response.CssResponse' dotless.Core.Loggers.AspResponseLogger' dotless.Core.AspNetContainerFactory
 dotless.Core.Response,QValue,5,8,4,0,7,151,11,0,0,0.25,0,2,,dotless.Core.Response.CssResponse' dotless.Core.Response.QValueList
 dotless.Core.Response,QValueList,3,10,2,0,8,184,15,0,0,0.4,1,1,dotless.Core.Response.QValue,dotless.Core.Response.CssResponse
